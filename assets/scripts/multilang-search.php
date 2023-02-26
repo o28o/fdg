@@ -7,12 +7,33 @@ $p = "-ru";
 }
 
 if (preg_match('/\p{Thai}/u', $string) && ( $p != "-th" )) {
- $p = "-th";
+  $p = "-th";
+  if ( $mode == "offline" ) {
+    
   $command = escapeshellcmd("$adapterscriptlocation $string");
   $convertedStr = shell_exec($command);
   afterAkhsaramukhaResponse($convertedStr);
   $output = shell_exec("bash ./scripts/finddhamma.sh $extra $convertedStr");
   echo "<p>$output</p>";
+  
+      } else {
+        
+      $cURLConnection = curl_init();
+ $param = urlencode($string);
+curl_setopt($cURLConnection, CURLOPT_URL, "https://aksharamukha-plugin.appspot.com/api/public?target=IASTPali&text=$param");
+curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
+    'Content-Type: text/plain'
+));
+$convertedStr = curl_exec($cURLConnection);
+curl_close($cURLConnection);
+echo "str ". $string;
+echo "cnvrtstr ". $convertedStr;
+afterAkhsaramukhaResponse($convertedStr);
+  $output = shell_exec("nice -19 ./scripts/finddhamma.sh $extra $convertedStr");
+  echo "<p>$output</p>";
+      }
+  
 }
 
 			$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 

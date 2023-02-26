@@ -32,7 +32,7 @@ ln -s $PREFIX/bin/python3.9 $PREFIX/bin/python
 
 echo "install aksharamukha. needed if youll make requests in Thai"
 cd 
-python3.11 -m venv aksharamukha 
+python -m venv aksharamukha 
 aksharamukha/bin/pip install aksharamukha
         break;;
         [Nn]* ) break;;
@@ -128,4 +128,11 @@ ln -s ../assets ./assets
 ln -s ../sc ./sc
 ln -s ../scripts ./scripts
 ln -s ../result ./result
+
+#tests
+exit 0
+curl http://localhost:8080/sc/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
+curl http://localhost:8080/sc/api.php?fromjs=sutta/dn/dn22&type=A
+
+
 

@@ -1,1 +1,0 @@
-../scripts/api-emulator-for-sc-light.php

@@ -60,6 +60,9 @@ LoadModule php_module /data/data/com.termux/files/usr/libexec/apache2/libphp.so
 cd $httpdtdir
 rm ./index.html
 echo "removed apache demo page"
+mkdir result 
+cd ru 
+ln -s ../result ./result
 
 #current suttacentral.net
 echo "downloading suttacentral.net"

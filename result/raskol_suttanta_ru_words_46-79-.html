@@ -1,0 +1,117 @@
+раскол
+расколол
+раскололась
+расколе/единстве
+расколол
+раскол
+раскол
+раскола
+расколу
+расколу
+расколу
+расколу
+расколу
+расколу
+раскол
+раскол
+раскол
+раскол
+раскола
+раскол
+раскол
+раскол
+расколоть
+расколоть
+раскол
+раскол
+раскол
+расколется»
+расколется
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+раскол
+расколотую
+расколы
+расколы
+расколов
+расколов
+расколется
+расколю
+расколы
+раскололо
+расколы
+раскололись
+раскололись…
+расколотый
+расколол
+расколы
+раскол
+раскол
+раскол
+раскололась
+раскололась
+расколю
+расколоть
+расколю
+расколоть
+расколол
+расколол
+расколол
+расколол
+расколол
+раскола
+раскололась
+раскол
+раскол
+раскола
+расколоть
+расколоть
+раскола
+</tbody>
+</table>
+<a href='/' id='back'>Main</a>&nbsp;
+<a href='/ru/sc'>Read</a>&nbsp;
+<a href='/assets/diff'>SuttaDiff</a>&nbsp;
+<a href='/history.php'>History</a>&nbsp;
+<a href="/result/raskol_suttanta_ru_46-79.html">Quotes</a>
+
+</div>
+
+    <script type='text/javascript'>
+$(document).ready(function (){
+	 var table = $('#pali').DataTable({
+	   'autoWidth': true,
+	   'stateSave': true,
+	    'paging'  : true,
+	  'responsive': true,
+	  'columnDefs': [
+	            { type: "html", target: [0] },
+	            { type: 'natural', targets: 2 }
+					]				
+    });
+
+    // Handle click on "Expand All" button
+    $('#btn-show-all-children').on('click', function(){
+        // Expand row details
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+    // Handle click on "Collapse All" button
+    $('#btn-hide-all-children').on('click', function(){
+        // Collapse row details
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+  </script>
+
+</body>
+</html>

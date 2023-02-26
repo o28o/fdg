@@ -1,0 +1,1 @@
+../assets/js/randPlaceholder.js

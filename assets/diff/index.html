@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="64x64" href="/sc/images/favicon-diff-mn.png">
+    <title>Sutta Diff</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Sutta Differ | ReadingFaithfully" />
+    <meta property="og:description" content="Find the difference between two suttas." />
+    <meta property="og:url" content="https://diff.readingfaithfully.org/" />
+    <meta property="og:site_name" content="diff.ReadingFaithfully.org" />
+    <meta property="og:image" itemprop="image"
+        content="https://diff.readingfaithfully.org/images/featuredImage-sutta-diff.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="diff.ReadingFaithfully.org" />
+    <meta name="twitter:creator" content="ReadingFaithfully.org" />
+</head>
+
+<body class="red-green">
+    <div class="instructions-heading">Choose two suttas to compare</div>
+    <div class="options">
+        <div id="settings">
+
+            <label><input type="radio" name="diff_type" value="diffWords" checked> By Word</label>
+            <label><input type="radio" name="diff_type" value="diffLines"> By Line</label>
+        </div>
+        <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="pl">Pāli</option>
+            <!-- <option value="de">German</option>
+            <option value="fr">French</option> -->
+        </select>
+        <select name="color-scheme" id="color-scheme">
+            <option value="red-green">Red/Green</option>
+            <option value="red-blue">Red/Blue</option>
+            <option value="monochrome">B/W</option>
+        </select>
+    </div>
+
+    <div id="comparison-area">
+        <div id="sutta-one" class="sutta-area sutta-one">
+            <form id="sutta-one-form"><input class="input-area" id="sutta-one-citation" type="text"
+                    placeholder="Enter citation"><input class="go-button" type="submit" value="Load"><img id="trash-one"
+                    height="19px" class="icon-trash" src="/sc/images/icon-trash.png"></form>
+            <div id="sutta-one-content" class="content-area"></div>
+        </div>
+        <div id="sutta-two" class="sutta-area sutta-two">
+            <form id="sutta-two-form"><input class="input-area" id="sutta-two-citation" type="text"
+                    placeholder="Enter citation"><input class="go-button" type="submit" value="Load"><img id="trash-two"
+                    height="19px" class="icon-trash" src="/sc/images/icon-trash.png"></form>
+            <div id="sutta-two-content" class="content-area"></div>
+        </div>
+        <div id="comparison" class="sutta-area comparison">
+            <button id="compare-button" class="compare-button">Compare</button>
+            <div id="comparidon-content" class="content-area"></div>
+        </div>
+    </div>
+    <div class="links-area" style="text-align: center;">
+    <div class="links-area" style="text-align: center;">
+
+        <a href="https://find.dhamma.gift" title="Sutta and Vinaya search" rel="noreferrer"
+
+            ><img width="20px" alt="find.dhamma.gift icon" src="/assets/gray.png"></a>
+      
+
+<a href="/sc/" title="SC Light" rel="noreferrer"
+            ><img width="20px" alt="SC icon" src="/sc/images/favicon-sc-mn.png"></a>
+
+        <a href="http://r.readingfaithfully.org" title="Random Suttas" rel="noreferrer" target="_blank"><img
+                width="20px" alt="Random Sutta icon" src="/sc/images/favicon-random-white.png"></a>
+        <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer" target="_blank"><img
+                width="20px" src="/sc/images/favicon-citaton-helper-white.png" alt="Citation Lookup tool icon"></a>
+        <a href="https://name.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer"
+            target="_blank"><img width="20px" src="/sc/images/favicon-name-white.png" alt="Sutta Name Search icon"></a>
+        <a href="https://ped.readingfaithfully.org" title="A lightweight interface for the PED" rel="noreferrer"
+            target="_blank"><img width="20px" src="/sc/images/favicon-ped-white.png"
+                alt="Lightweight interface icon"></a>
+        <a href="https://dppn.readingfaithfully.org" title="A lightweight interface the Dictionary of Pali Proper Names"
+            rel="noreferrer" target="_blank"><img width="20px" src="/sc/images/favicon-dppn-white.png"
+                alt="DPPN search icon"></a>
+        <a href="https://github.com/o28o/mini-sc-pali#readme" title="The source code for this site" rel="noreferrer"
+            target="_blank"><img width="20px" src="/sc/images/GitHub-Mark-64px-white.png" alt="GitHub icon"></a>
+    </div>
+    <script src="diff.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

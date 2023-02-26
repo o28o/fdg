@@ -1,0 +1,27 @@
+
+.searchbar {
+  z-index:1;
+}
+::-webkit-scrollbar {
+width: 16px;
+height: 16px; }
+
+::-webkit-scrollbar-thumb {
+background-color: rgba(0, 0, 0, 0.2);
+-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07); }
+
+	 .ui-autocomplete { 
+max-height: 220px; 
+min-height: 38px;
+overflow-y: auto; 
+overflow-x: hidden;
+scrollbar-color: #10806A #10806A;
+border-radius: 1rem;
+max-width: 274px;
+}
+
+.roundedborder{
+  position: absolute; 
+  right :35px; 
+  z-index:999999;
+}

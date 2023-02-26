@@ -1,0 +1,39 @@
+เพราะเหตุนั้นแหละ อานนท์ เหตุ นิทาน สมุทัย ปัจจัยแห่งเวทนา ก็คือผัสสะ นั่นเอง
+</tbody>
+</table>
+<a href='/' id='back'>Main</a>&nbsp;
+<a href='/ru/sc'>Read</a>&nbsp;
+<a href='/assets/diff'>SuttaDiff</a>&nbsp;
+<a href='/history.php'>History</a>&nbsp;
+<a href="/result/เพราะเหตุนั้นแหละ-อานนท์-เหตุ-นิทาน-สมุทัย-ปัจจัยแห่งเวทนา-ก็คือผัสสะ-นั่นเอง_suttanta_th_1-1.html">Quotes</a>
+
+</div>
+
+    <script type='text/javascript'>
+$(document).ready(function (){
+	 var table = $('#pali').DataTable({
+	   'autoWidth': true,
+	   'stateSave': true,
+	    'paging'  : true,
+	  'responsive': true,
+	  'columnDefs': [
+	            { type: "html", target: [0] },
+	            { type: 'natural', targets: 2 }
+					]				
+    });
+
+    // Handle click on "Expand All" button
+    $('#btn-show-all-children').on('click', function(){
+        // Expand row details
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+    // Handle click on "Collapse All" button
+    $('#btn-hide-all-children').on('click', function(){
+        // Collapse row details
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+  </script>
+
+</body>
+</html>

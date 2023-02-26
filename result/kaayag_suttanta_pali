@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TitletoReplace</title>
+<link rel="icon" type="image/png" href="/assets/favico-noglass.png" />
+ <meta http-equiv="Cache-control" content="public">
+<meta property="og:type" content="article" />
+<meta property="og:title" content="TitletoReplace - find.Dhamma.gift" />
+<meta property="og:description" content="TitletoReplace - find.Dhamma.gift" />
+<meta name="description" content="TitletoReplace - find.Dhamma.gift">
+<meta name="twitter:title" content="TitletoReplace - find.Dhamma.gift">
+<meta name="twitter:description" content="TitletoReplace - find.Dhamma.gift">
+<meta property="og:image" itemprop="image" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="/assets/css/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/langswitch.css"/>
+
+<script type="text/javascript" src="/assets/js/datatables.min.js"></script>
+<script type="text/javascript" src="/assets/js/natural.js"></script>
+<script type="text/javascript" src="/assets/js/strip-html.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/diacritics.js"></script> -->
+
+
+
+<link href="/assets/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/bootstrap.min.5.2.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<link href="/assets/css/table.css" rel="stylesheet" />
+<!-- <script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=verse"></script>-->
+</head>
+<body>
+<div class="container-fluid mt-2">    
+    <h3 class="pl-2 ml-2">TitletoReplace</h3>
+        <button class="btn btn-light" type="button">
+           <a href="../">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="20" height="15">
+                <g transform="matrix(0.13384491 0 0 0.13384491 1.7765683 -0)">
+                    <g>
+                        <path
+                            d="M61.44 0L0 60.18L14.99 68.05L61.04 19.7L107.89 68.06L122.88 60.19L61.44 0zM18.26 69.63L61.5 26.38L104.61 69.63L104.61 112.06L73.12 112.06L73.12 82.09L49.49 82.09L49.49 112.06L18.26 112.06L18.26 69.63z"
+                            stroke="none" fill="#989898" fill-rule="nonzero" />
+                    </g>
+                </g>
+            </svg>
+                       </a>
+      </button>    
+      
+    <button id="btn-hide-all-children" class="btn btn-light" type="button">Saṁvaṭṭo</button>
+<button id="btn-show-all-children" class="btn btn-light" type="button">Vivaṭṭo</button>
+<button id="language-button" class="hide-button btn btn-light" type="button">Pāḷi / Eng</button>
+<hr>
+<!--<div class="button-area"><button id="language-button" class="hide-button">Pāḷi / Eng</button></div>   --> 
+<table id="pali" class="display table table table-striped table-hover table-responsive " cellspacing="0" width="100%">
+   <thead class="thead-light">
+        <tr>
+            <th>Sutta</th>
+            <th>Title</th>
+            <th>Words</th>
+            <th>Count</th>
+            <th>Mtphr</th>
+            <th>Links</th>
+            <th class="none">Quote</th>
+        <!-- <th class="none">Audio</th> -->
+        </tr>
+    </thead>
+    <tbody id="sutta">
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=an1.296-305&lang=pli>an1.296-305</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">an1.297-305 </strong>296–305 </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsati</div></td>
+<td>1</td>   
+<td>0</td>
+<td>
+ 
+<a target=_blank href=/legacy.suttacentral.net/sc/ru/an1.296-305.html>Rus</a> 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/an1.296-305.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=an1.296-305&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Dhammānussati …pe… saṅghānussati … sīlānussati … cāgānussati … devatānussati … ānāpānassati … maraṇassati … <b>kāyag</b>atāsati … upasamānussati. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Recollection of the teaching … Recollection of the Saṅgha … Recollection of ethical conduct … Recollection of generosity … Recollection of the deities … Mindfulness of breathing … Mindfulness of death … Mindfulness of the body … Recollection of peace. </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=an1.296-305">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=an1.394-574&lang=pli>an1.394-574</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">an1.493 </strong>394–574 </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsatiṁ</div></td>
+<td>1</td>   
+<td>0</td>
+<td>
+ 
+<a target=_blank href=/legacy.suttacentral.net/sc/ru/an1.394-574.html>Rus</a> 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/an1.394-574.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=an1.394-574&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>kāyag</b>atāsatiṁ bhāveti … </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">mindfulness of the body … </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=an1.394-574">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=an1.575-615&lang=pli>an1.575-615</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">an1.575 an1.576-582 an1.583 an1.584 an1.585 an1.586-590 an1.591-592 an1.593-595 an1.596-599 an1.600-615 </strong>575–615 </td>
+<td><div class="wordwrap"><b>kāyag</b>atā <b>kāyag</b>atāsativagga <b>kāyag</b>atāsativaggo <b>kāyag</b>atāya</div></td>
+<td>12</td>   
+<td>0</td>
+<td>
+ 
+<a target=_blank href=/legacy.suttacentral.net/sc/ru/an1.575-615.html>Rus</a> 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/an1.575-615.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=an1.575-615&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">30. <b>Kāyag</b>atāsativagga </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">30. Mindfulness of the Body </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evamevaṁ, bhikkhave, yassa kassaci <b>kāyag</b>atā sati bhāvitā bahulīkatā antogadhā tassa kusalā dhammā ye keci vijjābhāgiyā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">In the same way, anyone who has developed and cultivated mindfulness of the body includes all of the skillful qualities that play a part in realization.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atā sati. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāya satiyā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāya satiyā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāya satiyā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāya satiyā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atā sati. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāya satiyā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atā sati. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atā sati. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">(<b>Kāyag</b>atāsativaggo.) "</span><br class="btwntrn">
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=an1.575-615">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=an1.616-627&lang=pli>an1.616-627</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">an1.616 an1.617 an1.618 an1.619 an1.620 an1.621 an1.622 an1.623 an1.624 an1.625 an1.626 an1.627 </strong>616–627 </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsati <b>kāyag</b>atāsatiṁ</div></td>
+<td>24</td>   
+<td>0</td>
+<td>
+ 
+<a target=_blank href=/legacy.suttacentral.net/sc/ru/an1.616-627.html>Rus</a> 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/an1.616-627.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=an1.616-627&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ te, bhikkhave, na paribhuñjanti ye <b>kāyag</b>atāsatiṁ na paribhuñjanti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who don’t enjoy mindfulness of the body don’t enjoy the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ te, bhikkhave, paribhuñjanti ye <b>kāyag</b>atāsatiṁ paribhuñjantī”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who enjoy mindfulness of the body enjoy the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, aparibhuttaṁ yesaṁ <b>kāyag</b>atāsati aparibhuttā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who haven’t enjoyed mindfulness of the body haven’t enjoyed the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, paribhuttaṁ yesaṁ <b>kāyag</b>atāsati paribhuttā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have enjoyed mindfulness of the body have enjoyed the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, parihīnaṁ yesaṁ <b>kāyag</b>atāsati parihīnā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who have lost mindfulness of the body have lost the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, aparihīnaṁ yesaṁ <b>kāyag</b>atāsati aparihīnā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who haven’t lost mindfulness of the body haven’t lost the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, viraddhaṁ yesaṁ <b>kāyag</b>atāsati viraddhā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who have missed out on mindfulness of the body have missed out on the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, āraddhaṁ yesaṁ <b>kāyag</b>atāsati āraddhā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have undertaken mindfulness of the body have not missed out on the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ te, bhikkhave, pamādiṁsu ye <b>kāyag</b>atāsatiṁ pamādiṁsu. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who have neglected mindfulness of the body have neglected the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ te, bhikkhave, na pamādiṁsu ye <b>kāyag</b>atāsatiṁ na pamādiṁsu”. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have not neglected mindfulness of the body have not neglected the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, pamuṭṭhaṁ yesaṁ <b>kāyag</b>atāsati pamuṭṭhā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who have forgotten mindfulness of the body have forgotten the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, appamuṭṭhaṁ yesaṁ <b>kāyag</b>atāsati appamuṭṭhā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who haven’t forgotten mindfulness of the body haven’t forgotten the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, anāsevitaṁ yesaṁ <b>kāyag</b>atāsati anāsevitā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who haven’t cultivated mindfulness of the body haven’t cultivated the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, āsevitaṁ yesaṁ <b>kāyag</b>atāsati āsevitā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have cultivated mindfulness of the body have cultivated the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, abhāvitaṁ yesaṁ <b>kāyag</b>atāsati abhāvitā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who haven’t developed mindfulness of the body haven’t developed the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, bhāvitaṁ yesaṁ <b>kāyag</b>atāsati bhāvitā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have developed mindfulness of the body have developed the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, abahulīkataṁ yesaṁ <b>kāyag</b>atāsati abahulīkatā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who haven’t practiced mindfulness of the body haven’t practiced the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, bahulīkataṁ yesaṁ <b>kāyag</b>atāsati bahulīkatā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have practiced mindfulness of the body have practiced the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, anabhiññātaṁ yesaṁ <b>kāyag</b>atāsati anabhiññātā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who haven’t had insight into mindfulness of the body haven’t had insight into the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, abhiññātaṁ yesaṁ <b>kāyag</b>atāsati abhiññātā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have had insight into mindfulness of the body have had insight into the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, apariññātaṁ yesaṁ <b>kāyag</b>atāsati apariññātā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who haven’t completely understood mindfulness of the body haven’t completely understood the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, pariññātaṁ yesaṁ <b>kāyag</b>atāsati pariññātā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have completely understood mindfulness of the body have completely understood the deathless.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Amataṁ tesaṁ, bhikkhave, asacchikataṁ yesaṁ <b>kāyag</b>atāsati asacchikatā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Mendicants, those who haven’t realized mindfulness of the body haven’t realized the deathless. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Amataṁ tesaṁ, bhikkhave, sacchikataṁ yesaṁ <b>kāyag</b>atāsati sacchikatā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Those who have realized mindfulness of the body have realized the deathless.” </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=an1.616-627">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=an9.11&lang=pli>an9.11</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Sīhanādasutta </strong>Sāriputta’s Lion’s Roar </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsati</div></td>
+<td>10</td>   
+<td>9</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/an9_11-sihanada-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/an9.11.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=an9.11&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“Sir, someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa nūna, bhante, kāye <b>kāyag</b>atāsati anupaṭṭhitā assa, so idha aññataraṁ sabrahmacāriṁ āsajja appaṭinissajja cārikaṁ pakkameyyā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Someone who had not established mindfulness of the body might well attack one of their spiritual companions and leave without saying sorry.” </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=an9.11">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=dn33&lang=pli>dn33</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Saṅgītisutta </strong>Reciting in Concert </td>
+<td><div class="wordwrap"><b>kāyag</b>antho</div></td>
+<td>4</td>   
+<td>20</td>
+<td>
+<a target=_blank href=/tipitaka.theravada.su/dn33.html>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/dn33.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=dn33&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">abhijjhā <b>kāyag</b>antho, byāpādo <b>kāyag</b>antho, sīlabbataparāmāso <b>kāyag</b>antho, idaṁsaccābhiniveso <b>kāyag</b>antho. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">the personal ties to covetousness, ill will, misapprehension of precepts and observances, and the insistence that this is the only truth. </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=dn33">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=dn34&lang=pli>dn34</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dasuttarasutta </strong>Up to Ten </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsati</div></td>
+<td>1</td>   
+<td>14</td>
+<td>
+<a target=_blank href=/tipitaka.theravada.su/dn34.html>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/dn34.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=dn34&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāsati sātasahagatā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body that is full of pleasure. </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=dn34">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=ud3.5&lang=pli>ud3.5</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahāmoggallānasutta </strong>With Mahāmoggallāna </td>
+<td><div class="wordwrap"><b>kāyag</b>atā <b>kāyag</b>atāya</div></td>
+<td>3</td>   
+<td>0</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/ud3_5-kolita-sutta-alokananda.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/ud3.5.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=ud3.5&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Tena kho pana samayena āyasmā mahāmoggallāno bhagavato avidūre nisinno hoti pallaṅkaṁ ābhujitvā ujuṁ kāyaṁ paṇidhāya <b>kāyag</b>atāya satiyā ajjhattaṁ sūpaṭṭhitāya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Now at that time Venerable Mahāmoggallāna was sitting not far from the Buddha, cross-legged, with his body straight and mindfulness of the body well-established in himself. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Addasā kho bhagavā āyasmantaṁ mahāmoggallānaṁ avidūre nisinnaṁ pallaṅkaṁ ābhujitvā ujuṁ kāyaṁ paṇidhāya <b>kāyag</b>atāya satiyā ajjhattaṁ sūpaṭṭhitāya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">The Buddha saw him meditating there. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Sati <b>kāyag</b>atā upaṭṭhitā, </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“With mindfulness of the body established, </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=ud3.5">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=ud7.8&lang=pli>ud7.8</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kaccānasutta </strong>Kaccāna </td>
+<td><div class="wordwrap"><b>kāyag</b>atā <b>kāyag</b>atāya</div></td>
+<td>3</td>   
+<td>0</td>
+<td>
+ 
+<a target=_blank href=/legacy.suttacentral.net/sc/ru/ud7.8.html>Rus</a> 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/ud7.8.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=ud7.8&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Tena kho pana samayena āyasmā mahākaccāno bhagavato avidūre nisinno hoti pallaṅkaṁ ābhujitvā ujuṁ kāyaṁ paṇidhāya <b>kāyag</b>atāya satiyā ajjhattaṁ parimukhaṁ sūpaṭṭhitāya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Now at that time Venerable Mahākaccāna was sitting not far from the Buddha, cross-legged, with his body straight and mindfulness of the body well-established in himself. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Addasā kho bhagavā āyasmantaṁ mahākaccānaṁ avidūre nisinnaṁ pallaṅkaṁ ābhujitvā ujuṁ kāyaṁ paṇidhāya <b>kāyag</b>atāya satiyā ajjhattaṁ parimukhaṁ sūpaṭṭhitāya. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">The Buddha saw him meditating there. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Satataṁ <b>kāyag</b>atā upaṭṭhitā; </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">be established in the body, constant: </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=ud7.8">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=mn119&lang=pli>mn119</a></td>
+<td><strong class="pli-lang inputscript-ISOPali"><b>Kāyag</b>atāsatisutta </strong>Mindfulness of the Body </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsati <b>kāyag</b>atāsatisutta <b>kāyag</b>atāsatisuttaṁ <b>kāyag</b>atāsatiṁ <b>kāyag</b>atāya</div></td>
+<td>34</td>   
+<td>20</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/mn119-kayagatasati-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/mn119.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=mn119&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāsatisutta </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the Body </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yāvañcidaṁ tena bhagavatā jānatā passatā arahatā sammāsambuddhena <b>kāyag</b>atāsati bhāvitā bahulīkatā mahapphalā vuttā mahānisaṁsā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">how the Blessed One, who knows and sees, the perfected one, the fully awakened Buddha has said that mindfulness of the body, when developed and cultivated, is very fruitful and beneficial.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yāvañcidaṁ tena bhagavatā jānatā passatā arahatā sammāsambuddhena <b>kāyag</b>atāsati bhāvitā bahulīkatā mahapphalā vuttā mahānisaṁsā’ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">  mn119 </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Kathaṁ bhāvitā ca, bhikkhave, <b>kāyag</b>atāsati kathaṁ bahulīkatā mahapphalā hoti mahānisaṁsā? </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“And how, mendicants, is mindfulness of the body developed and cultivated to be very fruitful and beneficial? </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evaṁ, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That’s how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">  mn119 </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evampi, bhikkhave, bhikkhu <b>kāyag</b>atāsatiṁ bhāveti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">That too is how a mendicant develops mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa kassaci, bhikkhave, <b>kāyag</b>atāsati bhāvitā bahulīkatā, antogadhāvāssa kusalā dhammā ye keci vijjābhāgiyā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Anyone who has developed and cultivated mindfulness of the body includes all of the skillful qualities that play a part in realization. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati bhāvitā bahulīkatā, antogadhāvāssa kusalā dhammā ye keci vijjābhāgiyā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">In the same way, anyone who has developed and cultivated mindfulness of the body includes all of the skillful qualities that play a part in realization. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa kassaci, bhikkhave, <b>kāyag</b>atāsati abhāvitā abahulīkatā, labhati tassa māro otāraṁ, labhati tassa māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">When a mendicant has not developed or cultivated mindfulness of the body, Māra finds a vulnerability and gets hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati abhāvitā abahulīkatā, labhati tassa māro otāraṁ, labhati tassa māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has not developed or cultivated mindfulness of the body, Māra finds a vulnerability and gets hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati abhāvitā abahulīkatā, labhati tassa māro otāraṁ, labhati tassa māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has not developed or cultivated mindfulness of the body, Māra finds a vulnerability and gets hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati abhāvitā abahulīkatā, labhati tassa māro otāraṁ, labhati tassa māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has not developed or cultivated mindfulness of the body, Māra finds a vulnerability and gets hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa kassaci, bhikkhave, <b>kāyag</b>atāsati bhāvitā bahulīkatā, na tassa labhati māro otāraṁ, na tassa labhati māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">When a mendicant has developed and cultivated mindfulness of the body, Māra cannot find a vulnerability and doesn’t get hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati bhāvitā bahulīkatā, na tassa labhati māro otāraṁ, na tassa labhati māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has developed and cultivated mindfulness of the body, Māra cannot find a vulnerability and doesn’t get hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati bhāvitā bahulīkatā, na tassa labhati māro otāraṁ, na tassa labhati māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has developed and cultivated mindfulness of the body, Māra cannot find a vulnerability and doesn’t get hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati bhāvitā bahulīkatā, na tassa labhati māro otāraṁ, na tassa labhati māro ārammaṇaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has developed and cultivated mindfulness of the body, Māra cannot find a vulnerability and doesn’t get hold of them. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yassa kassaci, bhikkhave, <b>kāyag</b>atāsati bhāvitā bahulīkatā, so yassa yassa abhiññāsacchikaraṇīyassa dhammassa cittaṁ abhininnāmeti abhiññāsacchikiriyāya, tatra tatreva sakkhibhabbataṁ pāpuṇāti sati satiāyatane. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">When a mendicant has developed and cultivated mindfulness of the body, they become capable of realizing anything that can be realized by insight to which they extend the mind, in each and every case. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati bhāvitā bahulīkatā so, yassa yassa abhiññāsacchikaraṇīyassa dhammassa cittaṁ abhininnāmeti abhiññāsacchikiriyāya, tatra tatreva sakkhibhabbataṁ pāpuṇāti sati satiāyatane. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has developed and cultivated mindfulness of the body, they become capable of realizing anything that can be realized by insight to which they extend the mind, in each and every case. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati bhāvitā bahulīkatā, so yassa yassa abhiññāsacchikaraṇīyassa dhammassa cittaṁ abhininnāmeti abhiññāsacchikiriyāya, tatra tatreva sakkhibhabbataṁ pāpuṇāti sati satiāyatane. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“In the same way, when a mendicant has developed and cultivated mindfulness of the body, they become capable of realizing anything that can be realized by insight to which they extend the mind, in each and every case. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">evameva kho, bhikkhave, yassa kassaci <b>kāyag</b>atāsati bhāvitā bahulīkatā, so yassa yassa abhiññāsacchikaraṇīyassa dhammassa cittaṁ abhininnāmeti abhiññāsacchikiriyāya, tatra tatreva sakkhibhabbataṁ pāpuṇāti sati satiāyatane. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">In the same way, when a mendicant has developed and cultivated mindfulness of the body, they become capable of realizing anything that can be realized by insight to which they extend the mind, in each and every case. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāya, bhikkhave, satiyā āsevitāya bhāvitāya bahulīkatāya yānīkatāya vatthukatāya anuṭṭhitāya paricitāya susamāraddhāya dasānisaṁsā pāṭikaṅkhā. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">You can expect ten benefits when mindfulness of the body has been cultivated, developed, and practiced, made a vehicle and a basis, kept up, consolidated, and properly implemented. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāya, bhikkhave, satiyā āsevitāya bhāvitāya bahulīkatāya yānīkatāya vatthukatāya anuṭṭhitāya paricitāya susamāraddhāya ime dasānisaṁsā pāṭikaṅkhā”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">You can expect these ten benefits when mindfulness of the body has been cultivated, developed, and practiced, made a vehicle and a basis, kept up, consolidated, and properly implemented.” </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāsatisuttaṁ niṭṭhitaṁ navamaṁ. "</span><br class="btwntrn">
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=mn119">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=mn120&lang=pli>mn120</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Saṅkhārupapattisutta </strong>Rebirth by Choice </td>
+<td><div class="wordwrap"><b>kāyag</b>ato</div></td>
+<td>1</td>   
+<td>4</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/mn120-sankharupapatti-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/mn120.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=mn120&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Ānāpāno <b>kāyag</b>ato upapatti. "</span><br class="btwntrn">
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=mn120">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=sn7.11&lang=pli>sn7.11</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kasibhāradvājasutta Brāhmaṇasaṁyuttaṁ </strong>With Bhāradvāja the Farmer </td>
+<td><div class="wordwrap"><b>kāyag</b>utto</div></td>
+<td>1</td>   
+<td>0</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/sn7_11-kasi-bharadvaja-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/sn7.11.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=sn7.11&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>utto vacīgutto, </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Guarded in body and speech, </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=sn7.11">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=sn8.4&lang=pli>sn8.4</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Ānandasutta Vaṅgīsasaṁyuttaṁ </strong>With Ānanda </td>
+<td><div class="wordwrap"><b>kāyag</b>atā</div></td>
+<td>1</td>   
+<td>0</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/sn8_4-ananda-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/sn8.4.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=sn8.4&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Sati <b>kāyag</b>atā tyatthu, </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">With mindfulness immersed in the body, </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=sn8.4">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=sn16.11&lang=pli>sn16.11</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Cīvarasutta Kassapasaṁyuttaṁ </strong>Robes </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsati</div></td>
+<td>1</td>   
+<td>0</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/sn16_11-civara-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/sn16.11.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=sn16.11&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">“sātasahagatā ca me <b>kāyag</b>atāsati na vijahissatī”ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">“I will never neglect mindfulness of the body that is full of pleasure.” </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=sn16.11">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=sn35.247&lang=pli>sn35.247</a></td>
+<td><strong class="pli-lang inputscript-ISOPali">Chappāṇakopamasutta Saḷāyatanasaṁyuttaṁ </strong>The Simile of Six Animals </td>
+<td><div class="wordwrap"><b>kāyag</b>atā <b>kāyag</b>atāsati <b>kāyag</b>atāya</div></td>
+<td>4</td>   
+<td>5</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/sn35_247-chappanopama-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/sn35.247.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=sn35.247&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evameva kho, bhikkhave, yassa kassaci bhikkhuno <b>kāyag</b>atāsati abhāvitā abahulīkatā, taṁ cakkhu āviñchati manāpiyesu rūpesu, amanāpiyā rūpā paṭikūlā honti …pe… </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">In the same way, when a mendicant has not developed or cultivated mindfulness of the body, their eye pulls towards pleasant sights, but is put off by unpleasant sights. Their ear … nose … tongue … body … </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">Evameva kho, bhikkhave, yassa kassaci bhikkhuno <b>kāyag</b>atāsati bhāvitā bahulīkatā, taṁ cakkhu nāviñchati manāpiyesu rūpesu, amanāpiyā rūpā nappaṭikūlā honti …pe… jivhā nāviñchati manāpiyesu rasesu …pe… </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">In the same way, when a mendicant has developed and cultivated mindfulness of the body, their eye doesn’t pull towards pleasant sights, and isn’t put off by unpleasant sights. Their ear … nose … tongue … body … </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">‘Daḷhe khīle vā thambhe vā’ti kho, bhikkhave, <b>kāyag</b>atāya satiyā etaṁ adhivacanaṁ. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">‘A strong post or pillar’ is a term for mindfulness of the body. </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">‘<b>kāyag</b>atā no sati bhāvitā bhavissati bahulīkatā yānīkatā vatthukatā anuṭṭhitā paricitā susamāraddhā’ti. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">‘We will develop mindfulness of the body. We’ll cultivate it, make it our vehicle and our basis, keep it up, consolidate it, and properly implement it.’ </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=sn35.247">mp3</a></td> -->
+</tr>
+<tr>
+<td><a class="freebutton" target="_blank" href=/sc/?q=sn43.1&lang=pli>sn43.1</a></td>
+<td><strong class="pli-lang inputscript-ISOPali"><b>Kāyag</b>atāsatisutta Asaṅkhatasaṁyuttaṁ </strong>Mindfulness of the Body </td>
+<td><div class="wordwrap"><b>kāyag</b>atāsati <b>kāyag</b>atāsatisutta</div></td>
+<td>2</td>   
+<td>0</td>
+<td>
+<a target=_blank href=/theravada.ru/Teaching/Canon/Suttanta/Texts/sn43_1-kayagatasati-sutta-sv.htm>Rus</a> 
+ 
+  <a target=_blank href=/legacy.suttacentral.net/sc/th/sn43.1.html>ไทย</a> 
+<a target="_blank" href=/sc/?q=sn43.1&lang=pli-eng>SC</a> 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāsatisutta </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the Body </span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi"><b>Kāyag</b>atāsati. </span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Mindfulness of the body. </span>
+<br class="styled">
+</p></td>
+<!-- <td><a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=sn43.1">mp3</a></td> -->
+</tr>

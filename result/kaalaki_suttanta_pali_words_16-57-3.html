@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kālaki 3 related words in 16 texts and 57 matches in Suttanta Pali</title>
+<link rel="icon" type="image/png" href="/assets/favico-noglass.png" />
+ <meta http-equiv="Cache-control" content="public">
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Kālaki 3 related words in 16 texts and 57 matches in Suttanta Pali - find.Dhamma.gift" />
+<meta property="og:description" content="Kālaki 3 related words in 16 texts and 57 matches in Suttanta Pali - find.Dhamma.gift" />
+<meta name="description" content="Kālaki 3 related words in 16 texts and 57 matches in Suttanta Pali - find.Dhamma.gift">
+<meta name="twitter:title" content="Kālaki 3 related words in 16 texts and 57 matches in Suttanta Pali - find.Dhamma.gift">
+<meta name="twitter:description" content="Kālaki 3 related words in 16 texts and 57 matches in Suttanta Pali - find.Dhamma.gift">
+<meta property="og:image" itemprop="image" content="" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="/assets/css/datatables.min.css"/>
+
+<script type="text/javascript" src="/assets/js/datatables.min.js"></script>
+<script type="text/javascript" src="/assets/js/natural.js"></script>
+<script type="text/javascript" src="/assets/js/strip-html.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/diacritics.js"></script> -->
+
+
+
+<link href="/assets/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/bootstrap.min.5.2.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<link href="/assets/css/table.css" rel="stylesheet" />
+ <!-- <script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=inputscript-IASTPali"></script>
+  -->
+</head>
+<body>
+<div class="container-fluid mt-2">    
+    <h3 class="pl-2 ml-2">Kālaki 3 related words in 16 texts and 57 matches in Suttanta Pali</h3>
+    <button id="btn-hide-all-children" class="btn btn-light" type="button">Saṁvaṭṭo</button>    
+<button id="btn-show-all-children" class="btn btn-light" type="button">Vivaṭṭo</button>
+<hr>
+<table id="pali" class="display table table table-striped table-hover table-responsive " cellspacing="0" width="100%">
+   <thead class="thead-light">
+        <tr>
+            <th>Word</th>
+            <th>Texts</th>
+            <th>Matches</th>
+            <th class="none"></th>
+        </tr>
+    </thead>
+    <tbody><tr>
+<td class="longword"><b>kālaki</b>riyā</td>
+<td>15</td>   
+<td>51</td>   
+<td><a target=_blank href=/suttacentral/sc/pi/an1.170-187.html>an1.170-187</a> <a target=_blank href=/suttacentral/sc/pi/an2.52-63.html>an2.52-63</a> <a target=_blank href=/suttacentral/sc/pi/an3.109.html>an3.109</a> <a target=_blank href=/suttacentral/sc/pi/an3.110.html>an3.110</a> <a target=_blank href=/suttacentral/sc/pi/an6.14.html>an6.14</a> <a target=_blank href=/suttacentral/sc/pi/an6.15.html>an6.15</a> <a target=_blank href=/suttacentral/sc/pi/an6.16.html>an6.16</a> <a target=_blank href=/suttacentral/sc/pi/an6.20.html>an6.20</a> <a target=_blank href=/suttacentral/sc/pi/an8.74.html>an8.74</a> <a target=_blank href=/suttacentral/sc/pi/dn22.html>dn22</a> <a target=_blank href=/suttacentral/sc/pi/sn12.2.html>sn12.2</a> <a target=_blank href=/suttacentral/sc/pi/sn12.27.html>sn12.27</a> <a target=_blank href=/suttacentral/sc/pi/sn12.28.html>sn12.28</a> <a target=_blank href=/suttacentral/sc/pi/sn12.33.html>sn12.33</a> <a target=_blank href=/suttacentral/sc/pi/sn22.87.html>sn22.87</a></td>
+</tr>
+<tr>
+<td class="longword"><b>kālaki</b>riyāya</td>
+<td>1</td>   
+<td>4</td>   
+<td><a target=_blank href=/suttacentral/sc/pi/mn87.html>mn87</a></td>
+</tr>
+</tbody>
+</table>
+<a href='/' id='back'>Main</a>&nbsp;
+<a href='/sc'>Read</a>&nbsp;
+<a href='/diff'>SuttaDiff</a>&nbsp;
+<a href='/history.php'>History</a>&nbsp;
+<a href="/result/kaalaki_suttanta_pali_16-57.html">Quotes</a>
+
+</div>
+
+    <script type='text/javascript'>
+$(document).ready(function (){
+	 var table = $('#pali').DataTable({
+	   'autoWidth': true,
+	   'stateSave': true,
+	    'paging'  : true,
+	  'responsive': true,
+	  'columnDefs': [
+	            { type: "html", target: [0] },
+	            { type: 'natural', targets: 2 }
+					]				
+    });
+
+    // Handle click on "Expand All" button
+    $('#btn-show-all-children').on('click', function(){
+        // Expand row details
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+    // Handle click on "Collapse All" button
+    $('#btn-hide-all-children').on('click', function(){
+        // Collapse row details
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+  </script>
+
+</body>
+</html>

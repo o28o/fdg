@@ -1,0 +1,1 @@
+../sc/reader-rus-translations.js

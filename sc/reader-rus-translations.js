@@ -76,7 +76,7 @@ function buildSutta(slug) {
     }
   }
 
-  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Англ</button></div>`;
+  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
   
   const slugReady = parseSlug(slug);
   console.log("slugReady is " + slugReady + " slug is " + slug); 
@@ -326,17 +326,15 @@ function toggleThePali() {
 
   languageButton.addEventListener("click", () => {
     if (language === "pli") {
-      showPali();
-      language = "pli-eng";      
+      showPaliEnglish();
+      language = "pli-eng";    
     } else if (language === "pli-eng") {
-     showPaliEnglish();
-      language = "pli";
-    } 
-    
-    /*else if (language === "eng") {
      showEnglish();
       language = "eng";
-    }*/
+    } else if (language === "eng") {
+     showPali();
+      language = "pli";
+    }
   });
 }
 

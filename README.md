@@ -1,18 +1,18 @@
-# find-dhamma and find-dhamma-offline
-# find-dhamma
-Little script that will change Buddhism to better.
-Search all matches for the word in Pali, (later English and Russian) in Suttas, (later Vinaya or Adhidhamma).
-Web implementation of bash script that generates comfortables datatables 
+# fdg 
+# find.dhamma.gift - Liberation Search Engine.
+# online version
+Grep-based search in all Texts of Pali Suttanta and Vinaya in 4 languages: Pali, English, Russian and Thai. Little script that will or at least might change Buddhism to better.
+Search all matches for the word in Suttas and Vinaya.
+Web implementation of bash script that generates comfortables datatables. 
 
 https://find.dhamma.gift/
 
 Perfect for those who are looking for Awakening and study Pali.
 You can get all occurrences of the definition, metaphor, practice etc.
-Script ignores doubdful chapters of textx. Using only DN, MN, SN, AN and KN (snp, iti, thag, thig)
+Script ignores later chapters of texts using only DN, MN, SN, AN and UD. But user has option to add other books of KN to search.
 
-# find-dhamma-offline
-Offline version of find.dhamma.gift - Liberation Search Engine.
-Grep-based search in all Texts of Pali Suttanta and Vinaya in 4 languages: Pali, English, Russian and Thai.
+# fdg.offline
+Offline version of fdg 
 
 This instruction is only for Android devices. Check possible options for IOS in the end of this instruction. if you'll find out how to run it on IOS please let me know.
 

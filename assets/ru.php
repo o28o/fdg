@@ -450,7 +450,7 @@ include 'scripts/multilang-search.php';
           $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
         $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
       echo '
-  <a href="https://github.com/o28o/find-dhamma-offline" target="_blank" style="z-index:1" class="list-group-item list-group-item-action active">
+  <a href="https://github.com/o28o/fdg" target="_blank" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">find.dhamma.gift Offline Edition</h5>
       <small class="text-muted">онлайн и оффлайн</small>

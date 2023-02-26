@@ -339,7 +339,7 @@ include 'scripts/multilang-search.php';
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/find-dhamma">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
                 
                    <i class="fa-brands fa-github"></i>     Project on GitHub
                     </a>
@@ -377,7 +377,7 @@ include 'scripts/multilang-search.php';
           $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
         $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
       echo '
-  <a href="https://github.com/o28o/find-dhamma-offline" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
+  <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">find.dhamma.gift Offline Edition</h5>
       <small class="text-muted">offline</small>
@@ -555,7 +555,7 @@ include 'scripts/multilang-search.php';
 							Understand the Four Noble Truths.<br>Dhamma - is Actuality.
                       
                         </p>
-							   <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/find-dhamma#readme"><i class="fa-brands fa-github"></i></a>
+							   <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
                         <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:o@dhamma.gift"><i class="fa-solid fa-at"></i></a>
 												<a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
                     </div>

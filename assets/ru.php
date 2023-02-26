@@ -413,7 +413,7 @@ include 'scripts/multilang-search.php';
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/find-dhamma">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
                 
                    <i class="fa-brands fa-github"></i>     Проект на GitHub
                     </a>

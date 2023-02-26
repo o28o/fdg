@@ -4,7 +4,7 @@
 # apt install git
 # mkdir -p $PREFIX/share/apache2/default-site/htdocs
 # cd $PREFIX/share/apache2/default-site/htdocs
-# git clone https://github.com/o28o/find-dhamma-offline.git ./
+# git clone https://github.com/o28o/fdg.git ./
 # bash ./scripts/install.sh
 
 #PREFIX=/data/data/com.termux/files/usr/

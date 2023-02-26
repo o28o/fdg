@@ -28,7 +28,7 @@ This instruction is only for Android devices. Check possible options for IOS in 
     apt install git
     mkdir -p $PREFIX/share/apache2/default-site/htdocs
     cd $PREFIX/share/apache2/default-site/htdocs
-    git clone https://github.com/o28o/find-dhamma-offline.git ./
+    git clone https://github.com/o28o/fdg.git ./
     bash ./scripts/install.sh
 
 
@@ -72,7 +72,7 @@ and if needed
 
     cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 
-    git clone https://github.com/o28o/find-dhamma-offline.git ./
+    git clone https://github.com/o28o/fdg.git ./
 
 
 offline resources part

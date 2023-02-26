@@ -163,7 +163,7 @@ echo "<p>Wait for 20-30 minutes and check results below</p>";
 	</div>
 </section>
 <a href="/">Normal Mode</a>
-<a href="https://github.com/o28o/find-dhamma">GitHub</a>
+<a href="https://github.com/o28o/fdg">GitHub</a>
 </body>
 </html>
 

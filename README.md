@@ -1,5 +1,5 @@
 # fdg 
-# find.dhamma.gift - Liberation Search Engine.
+# find.dhamma.gift - Liberation Search Engine
 # online version
 Grep-based search in all Texts of Pali Suttanta and Vinaya in 4 languages: Pali, English, Russian and Thai. Little script that will or at least might change Buddhism to better.
 Search all matches for the word in Suttas and Vinaya.

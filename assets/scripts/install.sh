@@ -63,25 +63,27 @@ echo "removed apache demo page"
 
 #current suttacentral.net
 echo "downloading suttacentral.net"
-rm suttacentral.net
+cd ..
+rm -rf suttacentral.net
 mkdir suttacentral.net 
 cd suttacentral.net 
 git clone https://github.com/suttacentral/sc-data.git ./
 
 #accesstoinsight.org 
+cd ..
 echo "downloading accesstoinsight.org"
-rm accesstoinsight.org 
+rm -rf accesstoinsight.org 
 wget http://accesstoinsight.org/tech/download/ati.zip
 echo "unzipping"
 unzip ati.zip ./accesstoinsight.org
+rm ati.zip
 
 #legacy suttacentral.net 
 echo "downloading legacy.suttacentral.net"
-rm legacy.suttacentral.net
+rm -rf legacy.suttacentral.net
 wget https://legacy.suttacentral.net/exports/sc-offline-2016-11-30_16:03:42.zip
 echo "unzipping"
 unzip sc-offline-2016-11-30_16\:03\:42.zip ./legacy.suttacentral.net
-
 
 #test run
 echo "test run"
@@ -103,7 +105,8 @@ if localhost:8080 is unavailable. you may run
 
 apachectl stop && apachectl start
 
-without restarting Termux 
+without restarting Termux
+press anykey to finish the setup
 "
 read 
 apachectl start
@@ -130,7 +133,6 @@ ln -s ../scripts ./scripts
 ln -s ../result ./result
 
 #tests
-exit 0
 curl http://localhost:8080/sc/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
 curl http://localhost:8080/sc/api.php?fromjs=sutta/dn/dn22&type=A
 

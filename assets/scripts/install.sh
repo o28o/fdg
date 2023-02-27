@@ -11,8 +11,8 @@
 httpdconf=$PREFIX/etc/apache2/httpd.conf
 httpdtdir=$PREFIX/share/apache2/default-site/htdocs
 
-echo "installing php-apache apache2 pv wget git iconv w3m"
-apt install php-apache apache2 pv wget git iconv w3m
+echo "installing php-apache apache2 zip pv wget git iconv w3m"
+apt install php-apache apache2 zip pv wget git iconv w3m
 
 while true; do
     read -p "Are you going to perform searches in Thai? Y or N" yn
@@ -60,6 +60,9 @@ LoadModule php_module /data/data/com.termux/files/usr/libexec/apache2/libphp.so
 cd $httpdtdir
 rm ./index.html
 echo "removed apache demo page"
+mkdir result 
+cd ru 
+ln -s ../result ./result
 
 #current suttacentral.net
 echo "downloading suttacentral.net"

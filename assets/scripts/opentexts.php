@@ -77,7 +77,6 @@ $forthsu = preg_replace("/dn/i","","$string");
 $forthsu = preg_replace("/s/i","","$forthsu");
 
 $link = shell_exec("ls $thsulocation/dn | grep \"dn{$forthsu}.html\" | awk '{print \"$linkforthsu\"$0}'");
-$link = str_replace(PHP_EOL, '', $link);
       } else {
 
 $forthsu = preg_replace("/s$/i","","$string");
@@ -112,12 +111,14 @@ switch (strtolower($nikaya)) {
     echo "Your favorite color is neither red, blue, nor green! ";
 
 }
-$link = str_replace(PHP_EOL, '', $link);
 
+}
+$link = str_replace(PHP_EOL, '', $link);
 echo '<script>window.open("' . $link . '", "_self");</script>';
   exit();
+  
 }
-}
+
 if( $p == "-ru" ) 
 {
     if(preg_match("/^(mn|dn)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}.[0-9]*$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}.[0-9]{0,3}-[0-9].*$/i",$string)) 

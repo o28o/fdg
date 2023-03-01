@@ -1,10 +1,17 @@
 <?php
 include_once('../config/config.php');
 
+if ( preg_match('/\/ru/', $actual_link)) {
+  $outputlang = "-oru";
+} else {
+    $outputlang = "";
+    }
+    
 /* single search no radiobuttons */
 if (preg_match('/[А-Яа-яЁё]/u', $string) && ( $p != "-ru" )) {
 $p = "-ru";
 }
+
 
 if (preg_match('/\p{Thai}/u', $string) && ( $p != "-th" )) {
   $p = "-th";
@@ -13,7 +20,7 @@ if (preg_match('/\p{Thai}/u', $string) && ( $p != "-th" )) {
   $command = escapeshellcmd("$adapterscriptlocation $string");
   $convertedStr = shell_exec($command);
   afterAkhsaramukhaResponse($convertedStr);
-  $output = shell_exec("bash ./scripts/finddhamma.sh $extra $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $extra $outputlang $convertedStr");
   echo "<p>$output</p>";
   
       } else {
@@ -28,7 +35,7 @@ curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
 $convertedStr = curl_exec($cURLConnection);
 curl_close($cURLConnection);
 afterAkhsaramukhaResponse($convertedStr);
-  $output = shell_exec("bash ./scripts/finddhamma.sh $extra $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $extra $outputlang $convertedStr");
   echo "<p>$output</p>";
       }
   

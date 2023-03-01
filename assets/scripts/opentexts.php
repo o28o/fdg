@@ -69,18 +69,55 @@ $q = $p = $arg = $string = $sutta = "";
 			
 /* ru with arg */ 
 /* for th.su dn */
-  if (preg_match("/^dn[0-9]{1,2}s$/i",$string)) {
+  if (preg_match("/^(dn|mn)[0-9]{1,3}s$/i",$string)) {
 
+if ( $mode == "offline" ) {
+  
 $forthsu = preg_replace("/dn/i","","$string");
 $forthsu = preg_replace("/s/i","","$forthsu");
 
 $link = shell_exec("ls $thsulocation/dn | grep \"dn{$forthsu}.html\" | awk '{print \"$linkforthsu\"$0}'");
 $link = str_replace(PHP_EOL, '', $link);
+      } else {
+
+$forthsu = preg_replace("/s$/i","","$string");
+$nikaya = preg_replace("/[0-9]/i","","$forthsu");
+$forthsu = preg_replace("/[a-z]/i","","$string");
+$locationTocThsu = "/home/a0092061/domains/find.dhamma.gift/public_html/assets/";
+
+
+switch (strtolower($nikaya)) {
+  case "dn":
+    $thsulink = "https://tipitaka.theravada.su/toc/translations/1098";
+    $grepfor = "ДН";
+     // curl -s $thsulink
+    //$sourcefile = "$locationTocThsu/dn_toc_thsu.txt";
+    // cat $sourcefile
+    $link = shell_exec("curl -s $thsulink | grep \"$grepfor $forthsu \" | grep translations | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");
+    break;
+  case "mn":
+    $thsulink = "https://tipitaka.theravada.su/toc/translations/1549";
+    $grepfor = "МН";
+    $sourcefile = "$locationTocThsu/mn_toc_thsu.txt";
+    $link = shell_exec("curl -s $thsulink | grep -A3 \"$grepfor $forthsu \" | grep Таблица | sed 's#href=\"/node/table/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");
+    break;
+  case "sn":
+    $thsulink = "https://tipitaka.theravada.su/toc/translations/1549";
+    $grepfor = "СН";
+  case "an":
+    $thsulink = "https://tipitaka.theravada.su/toc/translations/1549";
+    $grepfor = "СН";
+  default:
+    echo $nikaya;
+    echo "Your favorite color is neither red, blue, nor green! ";
+
+}
+$link = str_replace(PHP_EOL, '', $link);
 
 echo '<script>window.open("' . $link . '", "_self");</script>';
   exit();
 }
-
+}
 if( $p == "-ru" ) 
 {
     if(preg_match("/^(mn|dn)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}.[0-9]*$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}.[0-9]{0,3}-[0-9].*$/i",$string)) 
@@ -94,7 +131,12 @@ if( $p == "-ru" )
   elseif (preg_match("/^dn[0-9]{1,2}$/i",$string)) {
 
 $forthsu = preg_replace("/dn/i","","$string");
+
+if ( $mode == "offline" ) {
+    $link = shell_exec("ls $thsulocation | grep \"dn{$forthsu}.html\" | awk '{print \"$linkforthsu\"$0}'");
+      } else {
 $link = shell_exec("ls $thsulocation | grep \"dn{$forthsu}.html\" | awk '{print \"$linkforthsu\"$0}'");
+}
 
 $link = str_replace(PHP_EOL, '', $link);
 

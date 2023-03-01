@@ -41,8 +41,14 @@ $translatorlocation = $basedir. '/o/';
 $indexesfile = $basedir. '/assets/texts/text_indexes.txt';
 $scriptfile = $basedir. '/scripts/ranges.sh';
 
-$thsulocation = '/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/tipitaka.theravada.su/';
-$thrulocation = '/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/theravada.ru/Teaching/Canon';
+$thsulocation = $basedir. '/assets/offline/tipitaka.theravada.su/';
+$thrulocation = $basedir. '/assets/offline/theravada.ru/Teaching/Canon';
+
+$linkforthsu = 'https://tipitaka.theravada.su/dn/';
+$linkforthru = 'https://theravada.ru/Teaching/Canon/Suttanta/Texts/';
+$linkforthai = "https://suttacentral.net/"; 
+$linkforthaiend = '/th/siam_rath';
+
 
 //extralinks.php
 $locationru = $basedir. '/theravada.ru/Teaching/Canon/Suttanta/Texts';

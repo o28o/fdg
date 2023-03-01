@@ -22,6 +22,7 @@ cd $output
 
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
+defaultlang='lang=pli'
 excluderesponse="исключая"
 function bgswitch {
   removefilenames
@@ -69,6 +70,7 @@ echo "Слишком коротко. Мин $minlength символа"
 
 else #eng
 pagelang=
+defaultlang='lang=pli-eng'
 excluderesponse="excluding"
 function bgswitch {
   removefilenames

@@ -28,7 +28,7 @@ curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
 $convertedStr = curl_exec($cURLConnection);
 curl_close($cURLConnection);
 afterAkhsaramukhaResponse($convertedStr);
-  $output = shell_exec("nice -19 ./scripts/finddhamma.sh $extra $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $extra $convertedStr");
   echo "<p>$output</p>";
       }
   

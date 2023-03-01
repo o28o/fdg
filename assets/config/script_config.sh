@@ -13,6 +13,7 @@
 if [[ "`uname -a`" == *"Android"* ]]; then 
 
 sitename=http://localhost:8080
+nicevalue=1
 mode=offline
 apachesitepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 rootpath=$apachesitepath/scripts
@@ -44,6 +45,7 @@ elif [[ "`uname -a`" == *"rym.from.sh"* ]]; then
 
 sitename=https://find.dhamma.gift
 mode=online
+nicevalue=19
 apachesitepath=/home/a0092061/domains/find.dhamma.gift/public_html/
 rootpath=$apachesitepath/scripts
 suttapath=/home/a0092061/data/suttacentral.net/

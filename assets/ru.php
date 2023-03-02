@@ -834,6 +834,11 @@ include 'scripts/multilang-search.php';
 								   "Sn20.1" (включая кавычки) выведет Sn20.1 sn20.10 sn20.11 и тд в одну таблицу<br>
 								   "Sn20.1\\b" (включая кавычки) выведет только одну Сутту
 								   <br><br>
+
+									<strong>Как работает опция "Опр" - Определение</strong><br>
+									Если эта опция активирована поиск выполняется по следующим критериям:<br>
+grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
+Создайте issue на github или напишите по почте, если вы найдёте другие критерии.<br><br>
 								</p>
 								
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -907,12 +912,21 @@ include 'scripts/multilang-search.php';
 				
 									<strong>Совет #9</strong><br>
                                    Если запрос завершается ошибкой из-за таймаута, попробуйте более длинный поисковый запрос или более специфичное слово.  <br><br>
-								  		<strong>Совет #10 Быстрые переходы</strong><br>
-                                   Также как на sc.dhamma.gift или find.dhamma.gift/sc вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
-                                   Через строку поиска можно перейти в сутты dn, mn, sn, an и ud. Для остальных текстов Суттанты и Винаи вы можете использовать <a href="https://sc.dhamma.gift">sc.Dhamma.gift</a><br><br>
-								  
-								  <strong>Совет #11</strong><br>
-                                   !!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  
+	<strong>Совет #10 Быстрые переходы</strong><br>
+   Также как на <a href="https://sc.dhamma.gift">sc.Dhamma.gift</a> или <a href="https://find.dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
+   Через строку поиска можно перейти в сутты dn, mn, sn, an, ud из kn и тексты Винаи. <br><br>
+    								  
+<!--								  <strong>Совет #11</strong><br>
+                                   !!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  -->
+                                   
+                                                    <p class="mb-4"><strong>Что именно подсчитывается в колонке Mtphr?</strong><br>
+										Подсчитываются совпадения по всему тексту, без привязки к критерию поиска:<br>
+										"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
+										Игнорируются:<br>
+    "adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
+    Создайте issue на github или напишите по почте, если вы найдёте другие критерии.
+    <br><br>                    
+                                   
 									</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>

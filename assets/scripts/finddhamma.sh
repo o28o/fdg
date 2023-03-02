@@ -143,7 +143,7 @@ if [[ "$@" == *"-h"* ]]; then
     -ru - to search in Russian <br>
     -th - to search in thai <br>
     -pli - to search in pali (default option) <br>
-    -ply - output in pali only (without English translator) <br>    
+    -plb - search in pali Bhukkhu Bodhi translations<br>    
     -nbg - no background <br>
   	-oru - output messages in Russian<br>"
     exit 0
@@ -162,7 +162,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-ply" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-plb" ]] 
 then   
 #emptypattern
    exit 3
@@ -270,13 +270,12 @@ elif [[ "$@" == *"-ru"* ]]; then
     metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
     nonmetaphorkeys="подобного|подоба"
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
-elif [[ "$@" == *"-ply"* ]]; then
+elif [[ "$@" == *"-plb"* ]]; then
     fnlang=_pali-only
     pali_or_lang=sc-data/sc_bilara_data/root/pli/ms
     directlink=/pli/ms
-    #directlink=/en/?layout=linebyline
     language="Pali Only"
-    type=json
+    type=html
     metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"
     nonmetaphorkeys="adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"
     definitionkeys="Kata.*${pattern}.{0,4}\\?|${pattern}.*vucati|${pattern}.*adhivacan|${pattern}.{0,4}, ${pattern}.*vucca"

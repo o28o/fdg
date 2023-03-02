@@ -7,7 +7,7 @@ header("Content-Type:text/plain");
 function translatorLookup($fromjs) {
   include_once('../config/config.php');
   
-  $output = shell_exec("ls $translatorlocation/$fromjs* | awk -F'-' '{print \$NF}' | sed 's@.json@@g' ");
+  $output = shell_exec("ls $translatorlocation/{$fromjs}_* | awk -F'-' '{print \$NF}' | sed 's@.json@@g' ");
  $result = str_replace(PHP_EOL, '', $output);
 return $result;
 }

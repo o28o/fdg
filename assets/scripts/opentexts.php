@@ -13,12 +13,14 @@ if (empty($check)) {
 }
 
 if ( preg_match('/\/ru/', $actual_link)) {
+  $defaultlang = 'lang=pli';
   $outputlang = "-oru";
   $readerlang = "/ru";
   function afterAkhsaramukhaResponse($convertedStr) {
     echo "На латинице вы искали $convertedStr<br><br>";
   }
 } else {
+    $defaultlang = 'lang=pli-eng';
     $outputlang = "";
     $readerlang = "";
     function afterAkhsaramukhaResponse($convertedStr) {
@@ -82,8 +84,6 @@ $link = shell_exec("ls $thsulocation/dn | grep \"dn{$forthsu}.html\" | awk '{pri
 $forthsu = preg_replace("/s$/i","","$string");
 $nikaya = preg_replace("/[0-9]/i","","$forthsu");
 $forthsu = preg_replace("/[a-z]/i","","$string");
-$locationTocThsu = "/home/a0092061/domains/find.dhamma.gift/public_html/assets/";
-
 
 switch (strtolower($nikaya)) {
   case "dn":
@@ -218,7 +218,7 @@ if (empty($check)) {
   $string = trim(shell_exec($command));
 }	  
 
-echo "<script>window.location.href='$readerlang/sc/?q={$string}&lang=pli';</script>";
+echo "<script>window.location.href='$readerlang/sc/?q={$string}&$defaultlang';</script>";
   exit();
 }
   

@@ -23,13 +23,14 @@ echo '
 
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
        <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
-    <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net">Suttacentral.net</a></li>
    <li><a class="dropdown-item" target="_blank" href="/legacy.suttacentral.net/sc/su.html">Legacy.Suttacentral.net</a></li>  
    <li><a class="dropdown-item" target="_blank" href="/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm">Translations by M. Olds</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SC.net Voice</a></li>
+            <li><a class="dropdown-item" target="_blank" href="/bw/">The Buddha\'s Words</a></li>    
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
     <li><a class="dropdown-item" target="_blank" href="/en.dhammadana.org/sangha/dhutanga.htm">Asceticism in Dhamma</a></li>
+
     <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">Sc.net Vinaya</a></li>    
      <li><a class="dropdown-item" target="_blank" href="/accesstoinsight.org/tipitaka/vin/sv/index.html">Accesstoinsight.org patimokkha</a></li>
   </ul>

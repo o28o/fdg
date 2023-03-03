@@ -221,6 +221,14 @@ if (empty($check)) {
 echo "<script>window.location.href='$readerlang/sc/?q={$string}&$defaultlang';</script>";
   exit();
 }
+
+if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}-[0-9]{0,3}b$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$string)){
+  $forbwlink = strtolower(preg_replace("/b$/i","","$string"));
+  $bwprefix = strtolower(substr($forbwlink,0,2));
   
+  echo "<script>window.location.href='/bw/{$bwprefix}/{$forbwlink}.html';</script>";
+  exit();
+  
+}
 ?> 
 

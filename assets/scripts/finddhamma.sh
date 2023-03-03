@@ -586,7 +586,8 @@ fi
 linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=pli"}' ` 
 if [[ $mode == "offline" ]]
 then 
-linken=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli-eng"}' `
+forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
+linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
 linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
 else 
 linken=`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/en/'$translatorsname'?layout=linebyline"}' `
@@ -627,7 +628,7 @@ echo "<tr>
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Rus</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Rus</a>"` 
   `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"` 
-<a target=\"_blank\" href="$linken">SC</a> 
+<a target=\"_blank\" href="$linken">Eng</a> 
 </td>" | tohtml 
 
 #quote part `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"` <a target=\"_blank\" href="$linkpli">Pāḷi</a> 
@@ -748,12 +749,18 @@ else
 linklang=`curl -s https://tipitaka.theravada.su/toc/translations/1098 | grep "ДН $dnnumber" | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
 fi
   fi    
-        
-#translatorsname=`echo $translation | awk -F'/ru/' '{print $2}' | awk -F'/' '{print $1}'`
-#linken=`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/en/'$translatorsname'?layout=linebyline"}' `
-#linkpli=`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/pli/ms"}' `
+  
+  if [[ $mode == "offline" ]]
+then 
+forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
+linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
+linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
+else 
 linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
 linken=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli-eng"}' `
+
+fi
+  
 
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
 
@@ -774,14 +781,14 @@ echo "<tr>
 <td>$word</td>
 <td>$count</td>   
 <td>$metaphorcount</td>
-<td><a target=\"_blank\" href="$linkgeneral">Pāḷi</a>&nbsp;<a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`&nbsp;<a target=\"_blank\" href="$linken">"Eng"</a>
+<td><a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`&nbsp;<a target=\"_blank\" href="$linken">"Eng"</a>
 </td>
 <td>" | tohtml
 nice -$nicevalue grep -E -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
 echo "$line"
 echo '<br class="styled">'
 done | tohtml
-
+#<a target=\"_blank\" href="$linkgeneral">Pāḷi</a>&nbsp;
 #<!-- <td><a target=\"_blank\" href=\"https://voice.suttacentral.net/scv/index.html?#/sutta?search=${filenameblock}\">mp3</a></td> -->
 echo "</td>
 </tr>" | tohtml

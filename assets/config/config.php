@@ -1,5 +1,4 @@
 <?php
-
 $uname = shell_exec("uname -a"); 
 
 //

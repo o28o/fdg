@@ -68,4 +68,4 @@ return $output;
 //$fromjs = "dn34";
 echo rusLinks($_GET['fromjs']);
 
->
+?>

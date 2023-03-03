@@ -295,7 +295,7 @@ include 'scripts/multilang-search.php';
    и положите конец боли. <br> 
    </p>
                                                 </div> 
-     <div class="container alert alert-warning float-start text-left mb-3" role="alert">
+     <div class="container-xl alert alert-warning float-start text-left mb-3" role="alert">
  <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Чаще всего содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1e-uFcjBzmCf08t7BUR-Ffnz3ZlSzhLNUnIWbMbvg3go" class="alert-link"> Примеры ошибок</a> -->
  <br><br>

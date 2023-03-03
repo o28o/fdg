@@ -118,19 +118,25 @@ termux-open-url http://localhost:8080/
 exit 0
 
 
+fix bw
+
 cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/config/
 
-replace in bw index to disable the lookup
+for i in `grep -rl mousetrap   /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/bw`
+do 
+sed -i 's@<script src="../js/mousetrap.min.js"></script>@<?php $uname = shell_exec("uname -a"); if ( preg_match(\'/\!Android\/', $uname)) {  echo "<script src="../js/mousetrap.min.js"></script>"; } ?>@' /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/bw/vi/kd9.html
+
+done 
 
 			<?php 
-
 			$uname = shell_exec("uname -a"); 
+			if ( preg_match('/!Android/', $uname)) {  
+			echo '<script src=../js/mousetrap.min.js></script>'; 
+			} 
+			?>
+replace in bw index to disable the lookup
 
-			if ( preg_match('/!Android/', $uname)  ) { 
-   <script src="../js/mousetrap.min.js"></script>
-   <script src="../js/mousetrap.min.js"></script>
-   }
-   ?>
+			<?php $uname = shell_exec("uname -a"); if ( preg_match('/!Android/', $uname)) {  <script src="../js/mousetrap.min.js"></script> } ?>
 
 #to refresh theravada.ru run
 mkdir theravada.ru && cd theravada.ru

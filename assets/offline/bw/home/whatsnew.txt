@@ -1,0 +1,13 @@
+--- What's New? ---
+
+Early 2023: 
+
+The option to turn Dark Mode on and off was added.
+
+Feb 2023:
+The option to turn Pali Lookup on and off was added
+
+Keyboard shortcuts added for Next sutta, Previous sutta, Home Page, Contact Page, Help Page, turn showing Pali on and off, navigating to the next higher level of navigation and finally, to turn Pali Lookup on and off.
+
+Ajahn Brahmali's translations of the Vinaya are replacing the older ones based on I B Horner's translations. The Khandakas are the first to be updated with most of them now completed.
+  

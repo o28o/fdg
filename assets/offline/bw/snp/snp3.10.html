@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 3:10</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	<link href="../css/all.css" rel="stylesheet" type="text/css">
+  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ </button>
+ <span class="box-lbl">Light\Dark</span>
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 		<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 
+ 		</div>
+ </div>
+ <!-- Top menu -->
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="snp.html" class="pressed w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+  
+ 
+		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Khuddaka Nikaya - The Minor Texts</h2>
+ 
+ <div class="w3-bar-white bwnav"><!-- Div for lower Dhp sub-navigation -->
+ 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
+ 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
+ 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sutta Nipata</a>
+ 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
+ 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
+ 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Theragatha</a>
+ 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
+ </div><!-- End div for lower Dhp sub-navigation -->
+ 
+ <h2>Sutta Nipata</h2>
+ <div class="w3-bar-white bwnav"><!-- Div for lower Snp sub-navigation -->
+ 	<a href="../snp/snp1.html#content" title="1: Serpent Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">1: Serpent Chapter<br>(verses 1:1 to 1:12)</a>
+ 	<a href="../snp/snp2.html#content" title="2: Lesser Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">2: Lesser Chapter<br>(verses 2:1 to 2:14)</a>
+ 	<a href="../snp/snp3.html#content" title="3: Great Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button active">3: Great Chapter<br>(verses 3:1 to 3:12)</a>
+ 	<a href="../snp/snp4.html#content" title="4: The Eights" class="w3-bar-item w3-hover-white w3-border-white w3-button">4: The Eights<br>(verses 4:1 to 4:16)</a>
+ 	<a href="../snp/snp5.html#content" title="5: Way to the Beyond" class="w3-bar-item w3-hover-white w3-border-white w3-button">5: Way to the Beyond<br>(verses 5:1 to 5:18)</a>
+ </div><!-- End div for lower Snp sub-navigation -->
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata Chapter 3: The Great Chapter</h2>
+
+	<h3>3:10 To Kokāliya on the Results of Slander</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li>©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+</div><!-- End div for sub-heading and translator div -->
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h2>3:10 To Kokāliya on the Results of Slander</h2>
+
+<p>So I have heard:</p>
+
+<p>
+At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery. 
+Then the mendicant Kokālika went up to the Buddha, bowed, sat down to one side, and said to him: 
+“Sir, Sāriputta and Moggallāna have wicked desires. They’ve fallen under the sway of wicked desires.” </p>
+
+<p>When this was said, the Buddha said to Kokālika: “Don’t say that, Kokālika! Don’t say that, Kokālika! Have confidence in Sāriputta and Moggallāna, they’re good monks.” </p>
+
+<hr>
+<p>For a second time … For a third time Kokālika said to the Buddha: “Despite my faith and trust in the Buddha, Sāriputta and Moggallāna have wicked desires. They’ve fallen under the sway of wicked desires.” For a third time, the Buddha said to Kokālika: “Don’t say that, Kokālika! Don’t say that, Kokālika! Have confidence in Sāriputta and Moggallāna, they’re good monks.” </p>
+
+<p>Then Kokālika got up from his seat, bowed, and respectfully circled the Buddha, keeping him on his right, before leaving. Not long after he left his body erupted with boils the size of mustard seeds. The boils grew to the size of mung beans, then chickpeas, then jujube seeds, then jujubes, then myrobalans, then unripe wood apples, then ripe wood apples. Finally they burst open, and pus and blood oozed out. Then the mendicant Kokālika died of that illness. He was reborn in the Pink Lotus hell because of his resentment for Sāriputta and Moggallāna. </p>
+
+<hr>
+
+<p>Then, late at night, the beautiful Brahmā Sahampati, lighting up the entire Jeta’s Grove, went up to the Buddha, bowed, stood to one side, and said to him: 
+“Sir, the mendicant Kokālika has passed away. He was reborn in the Pink Lotus hell because of his resentment for Sāriputta and Moggallāna.” That’s what Brahmā Sahampati said. Then he bowed and respectfully circled the Buddha, keeping him on his right side, before vanishing right there. </p>
+
+<hr>
+
+<p>Then, when the night had passed, the Buddha told the mendicants all that had happened. </p>
+
+<hr>
+
+<p>When he said this, one of the mendicants said to the Buddha: “Sir, how long is the life span in the Pink Lotus hell?” </p>
+
+<p>“It’s long, mendicant. It’s not easy to calculate how many years, how many hundreds or thousands or hundreds of thousands of years it lasts.” </p>
+<p>“But sir, is it possible to give a simile?”</p>
+
+<hr>
+
+<p>“It’s possible,” said the Buddha. </p>
+
+<hr>
+
+<p>“Suppose there was a Kosalan cartload of twenty bushels of sesame seed. And at the end of every hundred years someone would remove a single seed from it. 
+By this means the Kosalan cartload of twenty bushels of sesame seed would run out faster than a single lifetime in the Abbuda hell. Now, twenty lifetimes in the Abbuda hell equal one lifetime in the Nirabbuda hell. Twenty lifetimes in the Nirabbuda hell equal one lifetime in the Ababa hell. Twenty lifetimes in the Ababa hell equal one lifetime in the Aṭaṭa hell. Twenty lifetimes in the Aṭaṭa hell equal one lifetime in the Ahaha hell. Twenty lifetimes in the Ahaha hell equal one lifetime in the Yellow Lotus hell. Twenty lifetimes in the Yellow Lotus hell equal one lifetime in the Sweet-Smelling hell. Twenty lifetimes in the Sweet-Smelling hell equal one lifetime in the Blue Water Lily hell. Twenty lifetimes in the Blue Water Lily hell equal one lifetime in the White Lotus hell. Twenty lifetimes in the White Lotus hell equal one lifetime in the Pink Lotus hell. The mendicant Kokālika has been reborn in the Pink Lotus hell because of his resentment for Sāriputta and Moggallāna.” </p>
+
+<p>That is what the Buddha said. Then the Holy One, the Teacher, went on to say: </p>
+
+<hr>
+
+	<div class="verse">
+			<p id="p657"><span class="parno">657</span>
+			“A person is born 
+			<br>with an axe in their mouth. 
+			<br>A fool cuts themselves with it 
+			<br>when they say bad words. </p>
+			
+			<p id="p658"><span class="parno">658</span>
+			When you praise someone worthy of criticism, 
+			<br>or criticize someone worthy of praise, 
+			<br>you choose bad luck with your own mouth: 
+			<br>you’ll never find happiness that way. </p>
+			
+			<p id="p659"><span class="parno">659</span>
+			Bad luck at dice is a trivial thing, 
+			<br>if all you lose is your money 
+			<br>and all you own, even yourself. 
+			<br>What’s really terrible luck 
+			<br>is to hate the holy ones. </p>
+			
+			<p id="p660"><span class="parno">660</span>
+			For more than two quinquadecillion years, 
+			<br>and another five quattuordecillion years, 
+			<br>a slanderer of noble ones goes to hell, 
+			<br>having aimed bad words and thoughts at them. </p>
+			
+			<p id="p661"><span class="parno">661</span>
+			A liar goes to hell, 
+			<br>as does one who denies what they did. 
+			<br>Both are equal in the hereafter, 
+			<br>those men of base deeds. </p>
+			
+			<p id="662"><span class="parno">662</span>
+			Whoever wrongs a man who has done no wrong, 
+			<br>a pure man who has not a blemish, 
+			<br>the evil backfires on the fool, 
+			<br>like fine dust thrown upwind. </p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p id="p663"><span class="parno">663</span>
+			One addicted to the way of greed, 
+			<br>abuses others with their speech, 
+			<br>faithless, miserly, uncharitable, 
+			<br>stingy, addicted to backbiting. </p>
+			
+			<p id="p664"><span class="parno">664</span>
+			Foul-mouthed, divisive, ignoble, 
+			<br>a life-destroyer, wicked, wrongdoer, 
+			<br>worst of men, cursed, base-born—
+			<br>quiet now, for you are bound for hell. </p>
+			
+			<p id="p665"><span class="parno">665</span>
+			You stir up dust, causing harm, 
+			<br>when you, evildoer, malign the good. 
+			<br>Having done many bad deeds, 
+			<br>you’ll go to the pit for a long time. </p>
+			
+			
+			<p id="p666"><span class="parno">666</span>
+			For no-one’s deeds are ever lost, 
+			<br>they return to their owner. 
+			<br>In the next life that stupid evildoer 
+			<br>sees suffering in themselves. </p>
+			
+			<p id="p667"><span class="parno">667</span>
+			They approach the place of impalement, 
+			<br>with its iron spikes, sharp blades, and iron stakes. 
+			<br>Then there is the food, which appropriately, 
+			<br>is like a red-hot iron ball. </p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p id="p668"><span class="parno">668</span>
+			For the speakers speak not sweetly, 
+			<br>they don’t hurry there, or find shelter. 
+			<br>They lie upon a spread of coals, 
+			<br>they enter a blazing mass of fire. </p>
+			
+			<p id="p669"><span class="parno">669</span>
+			Wrapping them in a net, 
+			<br>they strike them there with iron hammers. 
+			<br>They come to blinding darkness, 
+			<br>which spreads about them like a fog. </p>
+			
+			<p id="p670"><span class="parno">670</span>
+			Next they enter a copper pot, 
+			<br>a blazing mass of fire. 
+			<br>There they roast for a long time, 
+			<br>writhing in the masses of fire. </p>
+			
+			<p id="p671"><span class="parno">671</span>
+			Then the evildoer roasts there 
+			<br>in a mixture of pus and blood. 
+			<br>No matter where they settle, 
+			<br>everything they touch there hurts them. </p>
+			
+			<p id="p672"><span class="parno">672</span>
+			The evildoer roasts in 
+			<br>worm-infested water. 
+			<br>There’s not even a shore to go to, 
+			<br>for all around are the same kind of pots. </p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p id="p673"><span class="parno">673</span>
+			They enter the Wood of Sword-Leaves, 
+			<br>so sharp they cut their body to pieces. 
+			<br>Having grabbed the tongue with a hook, 
+			<br>they stab it, slashing back and forth. </p>
+			
+			<p id="p674"><span class="parno">674</span>
+			Then they approach the impassable  Vetaraṇi River, 
+			<br>with its sharp blades, its razor blades. 
+			<br>Idiots fall into it, 
+			<br>the wicked who have done wicked deeds. </p>
+			
+			<p id="p675"><span class="parno">675</span>
+			There dogs all brown and spotted, 
+			<br>and raven flocks, and greedy jackals 
+			<br>devour them as they wail, 
+			<br>while hawks and crows attack them. </p>
+			
+			<p id="p676"><span class="parno">676</span>
+			Hard, alas, is the life here 
+			<br>that evildoers endure. 
+			<br>That’s why for the rest of this life 
+			<br>a person ought do their duty without fail. </p>
+			
+			<p id="p677"><span class="parno">677</span>
+			Experts have counted the loads of sesame 
+			<br>as compared to the Pink Lotus Hell. 
+			<br>They amount to 50,000,000 times 10,000, 
+			<br>plus another 12,000,000,000. </p>
+			
+			<p id="p678"><span class="parno">678</span>
+			As painful as life is said to be in hell, 
+			<br>that’s how long one must dwell there. 
+			<br>That’s why, for those who are pure, well-behaved, full of good qualities, 
+			<br>one should always guard one’s speech and mind.” </p>
+	</div>
+
+</div>
+
+<div lang="pi">
+<h2>Kokālikasutta</h2>
+
+<p>Evaṁ me sutaṁ:</p>
+
+<p>Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Atha kho kokāliko bhikkhu yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho kokāliko bhikkhu bhagavantaṁ etadavoca:  "pāpicchā, bhante, sāriputtamoggallānā, pāpikānaṁ icchānaṁ vasaṁ gatā"ti.</p>
+
+<p>Evaṁ vutte, bhagavā kokālikaṁ bhikkhuṁ etadavoca:  "mā hevaṁ, kokālika, mā hevaṁ, kokālika. Pasādehi, kokālika, sāriputtamoggallānesu cittaṁ. Pesalā sāriputtamoggallānā"ti.</p>
+
+<hr>
+
+<p>Dutiyampi kho … pe … tatiyampi kho kokāliko bhikkhu bhagavantaṁ etadavoca:  "kiñcāpi me, bhante, bhagavā saddhāyiko paccayiko, atha kho pāpicchāva sāriputtamoggallānā, pāpikānaṁ icchānaṁ vasaṁ gatā"ti. Tatiyampi kho bhagavā kokālikaṁ bhikkhuṁ etadavoca:  "mā hevaṁ, kokālika, mā hevaṁ, kokālika. Pasādehi, kokālika, sāriputtamoggallānesu cittaṁ. Pesalā sāriputtamoggallānā"ti.</p>
+
+<p>Atha kho kokāliko bhikkhu uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi. Acirappakkantassa ca kokālikassa bhikkhuno sāsapamattīhi piḷakāhi sabbo kāyo phuṭo ahosi; sāsapamattiyo hutvā muggamattiyo ahesuṁ; muggamattiyo hutvā kaḷāyamattiyo ahesuṁ; kaḷāyamattiyo hutvā kolaṭṭhimattiyo ahesuṁ; kolaṭṭhimattiyo hutvā kolamattiyo ahesuṁ; kolamattiyo hutvā āmalakamattiyo ahesuṁ; āmalakamattiyo hutvā beḷuvasalāṭukamattiyo ahesuṁ; beḷuvasalāṭukamattiyo hutvā billamattiyo ahesuṁ; billamattiyo hutvā pabhijjiṁsu; pubbañca lohitañca pagghariṁsu. Atha kho kokāliko bhikkhu tenevābādhena kālamakāsi. Kālankato ca kokāliko bhikkhu padumaṁ nirayaṁ upapajji sāriputtamoggallānesu cittaṁ āghātetvā.</p>
+
+<hr>
+<p>Atha kho brahmā sahampati abhikkantāya rattiyā abhikkantavaṇṇo kevalakappaṁ jetavanaṁ obhāsetvā yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho brahmā sahampati bhagavantaṁ etadavoca:  "kokāliko, bhante, bhikkhu kālankato; kālankato ca, bhante, kokāliko bhikkhu padumaṁ nirayaṁ upapanno sāriputtamoggallānesu cittaṁ āghātetvā"ti. Idamavoca brahmā sahampati; idaṁ vatvā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyi.</p>
+
+<hr>
+
+<p>Atha kho bhagavā tassā rattiyā accayena bhikkhū āmantesi:  "imaṁ, bhikkhave, rattiṁ brahmā sahampati abhikkantāya rattiyā … pe … idamavoca, bhikkhave, brahmā sahampati, idaṁ vatvā maṁ padakkhiṇaṁ katvā tatthevantaradhāyī"ti.</p>
+
+
+<hr>
+
+<p>Evaṁ vutte, aññataro bhikkhu bhagavantaṁ etadavoca:  "kīvadīghaṁ nu kho, bhante, padume niraye āyuppamāṇan"ti? </p>
+
+<p>"Dīghaṁ kho, bhikkhu, padume niraye āyuppamāṇaṁ; taṁ na sukaraṁ sankhātuṁ ettakāni vassāni iti vā ettakāni vassasatāni iti vā ettakāni vassasahassāni iti vā ettakāni vassasatasahassāni iti vā"ti. </p>
+
+<p>"Sakkā pana, bhante, upamā kātun"ti? </p>
+
+<hr>
+
+<p>"Sakkā, bhikkhū"ti bhagavā avoca: </p>
+
+<hr>
+
+<p>"Seyyathāpi, bhikkhu, vīsatikhāriko kosalako tilavāho; tato puriso vassasatassa vassasatassa accayena ekamekaṁ tilaṁ uddhareyya. Khippataraṁ kho so bhikkhu vīsatikhāriko kosalako tilavāho iminā upakkamena parikkhayaṁ pariyādānaṁ gaccheyya, na tveva eko abbudo nirayo. Seyyathāpi, bhikkhu, vīsati abbudā nirayā evameko nirabbudo nirayo. Seyyathāpi, bhikkhu, vīsati nirabbudā nirayā evameko ababo nirayo. Seyyathāpi, bhikkhu, vīsati ababā nirayā evameko aṭaṭo nirayo. Seyyathāpi, bhikkhu, vīsati aṭaṭā nirayā evameko ahaho nirayo. Seyyathāpi, bhikkhu, vīsati ahahā nirayā evameko kumudo nirayo. Seyyathāpi, bhikkhu, vīsati kumudā nirayā evameko sogandhiko nirayo. Seyyathāpi, bhikkhu, vīsati sogandhikā nirayā evameko uppalako nirayo. Seyyathāpi, bhikkhu, vīsati uppalakā nirayā evameko puṇḍarīko nirayo. Seyyathāpi, bhikkhu, vīsati puṇḍarīkā nirayā evameko padumo nirayo. Padumaṁ kho pana bhikkhu nirayaṁ kokāliko bhikkhu upapanno sāriputtamoggallānesu cittaṁ āghātetvā"ti. </p>
+
+<p>Idamavoca bhagavā. Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: </p>
+
+<hr>
+<div class="verse">
+<p><span class="parno">657</span>"Purisassa hi jātassa,<br> kuṭhārī jāyate mukhe;
+<br>Yāya chindati attānaṁ,
+<br>bālo dubbhāsitaṁ bhaṇaṁ.</p>
+
+<p><span class="parno">658</span><a class="brnum" id="br2"></a>
+Yo nindiyaṁ pasaṁsati,<br> Taṁ vā nindati yo pasaṁsiyo;
+<br>Vicināti mukhena so kaliṁ,
+<br>Kalinā tena sukhaṁ na vindati.</p>
+
+<p><span class="parno">659</span><a class="brnum" id="br3"></a>
+Appamatto ayaṁ kali,<br> Yo akkhesu dhanaparājayo;
+<br>Sabbassāpi sahāpi attanā,
+<br>Ayameva mahattaro kali;
+<br>Yo sugatesu manaṁ padosaye.</p>
+
+<p><span class="parno">660</span><a class="brnum" id="br4"></a>
+Sataṁ sahassānaṁ nirabbudānaṁ,<br> Chattiṁsati pañca ca abbudāni;
+<br>Yamariyagarahī nirayaṁ upeti,
+<br>Vācaṁ manañca paṇidhāya pāpakaṁ.</p>
+
+<p><span class="parno">661</span><a class="brnum" id="br5"></a>
+Abhūtavādī nirayaṁ upeti,<br> Yo vāpi katvā na karomicāha;
+<br>Ubhopi te pecca samā bhavanti,
+<br>Nihīnakammā manujā parattha.</p>
+
+<p><span class="parno">662</span><a class="brnum" id="br6"></a>
+Yo appaduṭṭhassa narassa dussati,<br> Suddhassa posassa anangaṇassa;
+<br>Tameva bālaṁ pacceti pāpaṁ,
+<br>Sukhumo rajo paṭivātaṁva khitto.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">663</span><a class="brnum" id="br7"></a>
+Yo lobhaguṇe anuyutto,<br> So vacasā paribhāsati aññe;
+<br>Asaddho kadariyo avadaññū,
+<br>Macchari pesuṇiyaṁ anuyutto.</p>
+
+<p><span class="parno">664</span><a class="brnum" id="br8"></a>
+Mukhadugga vibhūta anariya,<br> Bhūnahu pāpaka dukkaṭakāri;
+<br>Purisanta kalī avajāta,
+<br>Mā bahubhāṇidha nerayikosi.</p>
+
+<p><span class="parno">665</span><a class="brnum" id="br9"></a>
+Rajamākirasī ahitāya,<br> Sante garahasi kibbisakārī;
+<br>Bahūni duccaritāni caritvā,
+<br>Gacchasi kho papataṁ cirarattaṁ.</p>
+
+<p><span class="parno">666</span><a class="brnum" id="br10"></a>
+Na hi nassati kassaci kammaṁ,<br> Eti hataṁ labhateva suvāmi;
+<br>Dukkhaṁ mando paraloke,
+<br>Attani passati kibbisakārī.</p>
+
+<p><span class="parno">667</span><a class="brnum" id="br11"></a>
+Ayosankusamāhataṭṭhānaṁ,<br> Tiṇhadhāramayasūlamupeti;
+<br>Atha tattaayoguḷasannibhaṁ,
+<br>Bhojanamatthi tathā patirūpaṁ.</p>
+
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">668</span><a class="brnum" id="br12"></a>
+Na hi vaggu vadanti vadantā,<br> Nābhijavanti na tāṇamupenti;
+<br>Angāre santhate sayanti,
+<br>Ginisampajjalitaṁ pavisanti.</p>
+
+<p><span class="parno">669</span><a class="brnum" id="br13"></a>
+Jālena ca onahiyāna,<br> Tattha hananti ayomayakuṭebhi;
+<br>Andhaṁva timisamāyanti,
+<br>Taṁ vitatañhi yathā mahikāyo.</p>
+
+<p><span class="parno">670</span><a class="brnum" id="br14"></a>
+Atha lohamayaṁ pana kumbhiṁ,<br> Ginisampajjalitaṁ pavisanti;
+<br>Paccanti hi tāsu cirarattaṁ,
+<br>Agginisamāsu samuppilavāte.</p>
+
+<p><span class="parno">671</span><a class="brnum" id="br15"></a>
+Atha pubbalohitamisse,<br> Tattha kiṁ paccati kibbisakārī;
+<br>Yaṁ yaṁ disakaṁ adhiseti,
+<br>Tattha kilissati samphusamāno.</p>
+
+<p><span class="parno">672</span><a class="brnum" id="br16"></a>
+Puḷavāvasathe salilasmiṁ,<br> Tattha kiṁ paccati kibbisakārī;
+<br>Gantuṁ na hi tīramapatthi,
+<br>Sabbasamā hi samantakapallā.</p>
+
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">673</span><a class="brnum" id="br17"></a>
+Asipattavanaṁ pana tiṇhaṁ,<br> Taṁ pavisanti samucchidagattā;
+<br>Jivhaṁ balisena gahetvā,
+<br>Ārajayārajayā vihananti.</p>
+
+<p><span class="parno">674</span><a class="brnum" id="br18"></a>
+Atha vetaraṇiṁ pana duggaṁ,<br> Tiṇhadhārakhuradhāramupenti;
+<br>Tattha mandā papatanti,
+<br>Pāpakarā pāpāni karitvā.</p>
+
+<p><span class="parno">675</span><a class="brnum" id="br19"></a>
+Khādanti hi tattha rudante,<br> Sāmā sabalā kākolagaṇā ca;
+<br>Soṇā singālā paṭigiddhā,
+<br>Kulalā vāyasā ca vitudanti.</p>
+
+<p><span class="parno">676</span><a class="brnum" id="br20"></a>
+Kicchā vatayaṁ idha vutti,<br> Yaṁ jano phusati kibbisakārī;
+<br>Tasmā idha jīvitasese,
+<br>Kiccakaro siyā naro na cappamajje.</p>
+
+<p><span class="parno">677</span><a class="brnum" id="br21"></a>
+Te gaṇitā vidūhi tilavāhā,<br> Ye padume niraye upanītā;
+<br>Nahutāni hi koṭiyo pañca bhavanti,
+<br>Dvādasa koṭisatāni punaññā.</p>
+
+<p><span class="parno">678</span><a class="brnum" id="br22"></a>
+Yāva dukhā nirayā idha vuttā,<br> Tatthapi tāva ciraṁ vasitabbaṁ;
+<br>Tasmā sucipesalasādhuguṇesu,
+<br>Vācaṁ manaṁ satataṁ parirakkhe"ti.</p>
+</div>
+<p class="endsection">Kokālikasuttaṁ dasamaṁ.</p>
+
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp3.9.html#content"></a><a id="next-sutta" href="../snp/snp3.11.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp3.html">Chapter 3: The Great Chapter</a>3:10 To Kokāliya on the Results of Slander
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+ 
+ <script>
+ // Script to open and close sidebar
+  	function w3_open() {
+  	document.getElementById("mySidebar").style.display = "block";
+  	}
+  		function w3_close() {
+  		document.getElementById("mySidebar").style.display = "none";
+  	}
+ </script>
+ 
+ <script>
+  		var app = document.getElementsByTagName("BODY")[0];
+  		if (localStorage.lightMode == "dark") {
+  			app.setAttribute("light-mode", "dark");
+  	}
+ </script>
+ 
+ <script>
+  		function toggle_light_mode() {
+  			var app = document.getElementsByTagName("BODY")[0];
+  				if (localStorage.lightMode == "dark") {
+  					localStorage.lightMode = "light";
+  					app.setAttribute("light-mode", "light");
+  				} else {
+  					localStorage.lightMode = "dark";
+  					app.setAttribute("light-mode", "dark");
+  	}
+  		}
+ 
+  		window.addEventListener("storage", function () {
+  			if (localStorage.lightMode == "dark") {
+  				app.setAttribute("light-mode", "dark");
+  			} else {
+  				app.setAttribute("light-mode", "light");
+  		}
+  		}, false);
+  </script>
+  <script src="../js/footer.js"></script>
+   </body>
+  </html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Pācittiya&nbsp;57</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Pācittiya&nbsp;57: Not to wash more than twice per month if the body is not dirty.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by I.B. Horner.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>… at Rājagaha in the Bamboo Grove at the squirrels’ feeding-place. Now at that time monks used to bathe in the Tapodā. Now at that time King Seniya Bimbisāra of Magadha, thinking: "I will bathe (my) head," having gone to the Tapodā, waited for (them) at a respectful distance, thinking: "(I will wait) as long as the masters bathe." The monks bathed until the dark of the night. Then King Seniya Bimbisāra of Magadha, bathing (his) head at the wrong time, staying outside the town because the town gate was closed, when it was early morning approached the lord, anointed, perfumed; having approached, having greeted the lord, he sat down at a respectful distance. As he was sitting down at a respectful distance, the lord spoke thus to King Seniya Bimbisāra of Magadha:</p>
+
+<hr>
+<p>"Why do you, sire, come in the early morning, anointed, perfumed?"</p>
+
+<p>Then King Seniya Bimbisāra of Magadha told this matter to the lord. Then the lord roused … delighted King Seniya Bimbisāra of Magadha with dhamma-talk. Then King Seniya Bimbisāra of Magadha, having been roused … delighted by the lord with dhamma-talk, rising from his seat, greeting the lord, departed keeping his right side towards him.</p>
+
+<p id="p2"><span class="parno">2</span>Then the lord on this occasion, in this connection, having had the Order of monks convened, questioned the monks, saying:</p>
+
+<p>"Is it true, as is said, monks, that monks, though having seen the king, not knowing moderation, bathed?"</p>
+
+<p>"It is true, lord."</p>
+
+<p>The enlightened one, the lord, rebuked them, saying: "How, monks, can these foolish men, though having seen the king, not knowing moderation, bathe? It is not, monks, for pleasing those who are not (yet) pleased … And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span><span class="rule">"Whatever monk should bathe (at intervals of) less than half a month, there is an offence of expiation."</span></p>
+
+<p id="p4"><span class="parno">4</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<p id="p5"><span class="parno">5</span>Now at that time monks, being scrupulous, did not bathe in the hot weather, in the fever weather; they lay down with limbs covered with sweat; robes and lodgings got soiled. They told this matter to the lord. He said:</p>
+
+<p>"I allow you, monks, in the hot weather, in the fever weather, to bathe (at intervals of) less than half a month. And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p6"><span class="parno">6</span><span class="rule">"Whatever monk should bathe (at intervals of) less than half a month, except at a right time, there is an offence of expiation. This is a right time in this case: thinking, ‘a month and a half of the summer remains,’ (and) ‘the first month of the rains’—these are the two and a half months when there is hot weather, when there is fever weather. In this case this is a right time."
+</span></p>
+
+<p id="p7"><span class="parno">7</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>Now at that time monks became ill. Monks, inquiring after the ill ones, spoke thus to the ill monks: "We hope that your reverences are better, we hope that you are keeping going."</p>
+
+<p>Formerly, your reverences, we used to bathe (at intervals of) less than half a month; thus there came to be comfort for us. But now it is forbidden by the lord, (and) being scrupulous, we do not bathe; thus there comes to be no comfort for us."</p>
+
+<p>They told this matter to the lord. He said: "I allow you, monks, when a monk is ill, to bathe (at intervals of) less than half a month. And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p9"><span class="parno">9</span><span class="rule">"Whatever monk should bathe (at intervals of) less than half a month, except at a right time, there is an offence of expiation. This is a right time in this case … when there is fever weather, at a time of illness. In this case this is a right time."</span></p>
+
+<p id="p10"><span class="parno">10</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<p id="p11"><span class="parno">11</span>Now at that time monks making repairs, being scrupulous, did not bathe; they lay down with limbs covered with sweat; robes and lodgings got soiled. They told this matter to the lord. He said:</p>
+
+<p>"I allow you, monks, at a time of work, to bathe (at intervals of) less than half a month. And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p12"><span class="parno">12</span><span class="rule">"Whatever monk should bathe (at intervals of) less than half a month, except at a right time, there is an offence of expiation … "</span></p>
+
+<hr>
+<p id="p13"><span class="parno">13</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<p id="p14"><span class="parno">14</span>Now at that time monks, having gone on a journey, being scrupulous, did not bathe; they lay down with limbs covered with sweat … They told this matter to the lord. He said:</p>
+
+<p>"I allow you, monks, at a time of going on a journey, to bathe (at intervals of) less than half a month. And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p15"><span class="parno">15</span><span class="rule">"Whatever monk should bathe (at intervals of) less than half a month, except at a right time, there is an offence of expiation. This is a right time in this case: … "</span></p>
+
+<hr>
+<p id="p16"><span class="parno">16</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<p id="p17"><span class="parno">17</span>Now at that time several monks, making robes in the open air, became assailed by a dusty wind, and the god was raining little by little. The monks, being scrupulous, did not-bathe; they lay down with damp limbs; robes and lodgings got soiled. They told this matter to the lord. He said:</p>
+
+<p>"I allow you, monks, at a time of wind and rain, to bathe (at intervals of) less than half a month. And thus, monks, this rule of training should be set forth:</p>
+
+<p id="p18"><span class="parno">18</span><span class="rule">"Whatever monk should bathe (at intervals of) less than half a month, except at a right time, there is an offence of expiation. In this case this is a right time: thinking, ‘a month and a half of the summer remains,’ (and) ‘the first month of the rains’—these are the two and a half months when there is hot weather, when there is fever weather; at a time of illness, at a time of work, at a time of going on a journey, at a time of wind and rain. This is a right time in this case."</span></p>
+
+<hr>
+<p id="p19"><span class="parno">19</span><span class="term">Whatever</span> means: <span class="gloss"> … is monk to be understood in this case.</span></p>
+
+<p id="p20"><span class="parno">20</span><span class="term">Less than half a month</span> means: <span class="gloss">less than half a month.</span></p>
+
+<hr>
+<p id="p21"><span class="parno">21</span><span class="term">Should bathe</span> means: <span class="gloss">if he bathes with chunam or with clay, in each action there is an offence of wrong-doing; when the bathing is completed there is an offence of expiation.</span></p>
+
+<p id="p22"><span class="parno">22</span><span class="term">Except at a right time</span> means: <span class="gloss">setting a right time to one side.</span></p>
+
+<hr>
+<p id="p23"><span class="parno">23</span><span class="term">Hot weather</span> means: <span class="gloss">a month and a half of the summer remains.</span><span class="term">Fever weather</span> means: <span class="gloss">the first month of the rains.</span> Thinking, ‘these are the two and a half months when there is hot weather, when there is fever weather,’ there may be bathing.</p>
+
+<hr>
+<p id="p24"><span class="parno">24</span><span class="term">Time of illness</span> means: <span class="gloss">if there comes to be no comfort for one without bathing;</span> thinking, ‘it is a time of illness,’ there may be bathing.</p>
+
+<p id="p25"><span class="parno">25</span><span class="term">Time of work</span> means: <span class="gloss">even a cell comes to be cleaned;</span> thinking, ‘it is a time of work,’ there may be bathing.</p>
+
+<p id="p26"><span class="parno">26</span><span class="term">Time of going on a journey</span> means: <span class="gloss">saying, ‘we will go half a <i>yojana</i>,’ there may be bathing; there may be bathing when going, there may be bathing when gone.</span></p>
+
+<p id="p27"><span class="parno">27</span><span class="term">Time of wind and rain</span> means: <span class="gloss">if monks become assailed by a dusty wind, if two or three drops of rain come to be fallen on the body,</span> thinking, ‘it is a time of wind and rain,’ there may be bathing.</p>
+
+<p id="p28"><span class="parno">28</span>If he thinks that it is less when it is less than half a month, (and) bathes, except at a right time, there is an offence of expiation. If he is in doubt as to whether it is less than half a month … If he thinks that it is more when it is less than half a month … offence of expiation.</p>
+
+<p id="p29"><span class="parno">29</span>If he thinks that it is less when it is more than half a month, there is an offence of wrong-doing. If he is in doubt as to whether it is more than half a month, there is an offence of wrong-doing. If he thinks that it is more when it is more than half a month, there is no offence.</p>
+
+<hr>
+<p id="p30"><span class="parno">30</span>There is no offence if it is at a right time; if he bathes at (intervals of) the half-month; if he bathes (at intervals of) more than half a month; if he bathes going to the further bank; if he is in nothing but bordering districts; if there are accidents; if he is mad, if he is the first wrong-doer.</p>
+
+<hr>
+<p class="endsutta">The Seventh</p>
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p><span class="parno">1</span><span class="ms">p_2V_1088, msdiv357</span>Tena samayena buddho bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tena kho pana samayena bhikkhū tapode nahāyanti. Tena kho pana samayena rājā māgadho seniyo bimbisāro "sīsaṁ nahāyissāmī"ti tapodaṁ gantvā— "yāvāyyā nahāyantī"ti ekamantaṁ paṭimānesi. Bhikkhū yāva samandhakārā nahāyiṁsu. Atha kho rājā māgadho seniyo bimbisāro vikāle sīsaṁ nahāyitvā, nagaradvāre thakite bahinagare vasitvā, kālasseva asambhinnena vilepanena yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho rājānaṁ māgadhaṁ seniyaṁ bimbisāraṁ bhagavā etadavoca:</p>
+
+<hr>
+<p>"Kissa tvaṁ, mahārāja, kālasseva āgato asambhinnena vilepanenā"ti?</p>
+
+<p>Atha kho rājā māgadho seniyo bimbisāro bhagavato etamatthaṁ ārocesi. Atha kho bhagavā rājānaṁ māgadhaṁ seniyaṁ bimbisāraṁ dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho rājā māgadho seniyo bimbisāro bhagavatā dhammiyā kathāya sandassito samādapito samuttejito sampahaṁsito uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi.</p>
+
+<p><span class="parno">2</span><span class="ms">p_2V_1089</span>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusaṇghaṁ sannipātāpetvā bhikkhū paṭipucchi:</p>
+
+<p>"Saccaṁ kira, bhikkhave, bhikkhū rājānampi passitvā na mattaṁ jānitvā nahāyantī"ti?</p>
+
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma te, bhikkhave, moghapurisā rājānampi passitvā na mattaṁ jānitvā nahāyissanti. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_2V_1090</span><span class="rule">"Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya, pācittiyan"</span>ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_2V_1091</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_1092, msdiv358</span>Tena kho pana samayena bhikkhū uṇhasamaye pariḷāhasamaye kukkuccāyantā na nahāyanti, sedagatena gattena sayanti. Cīvarampi senāsanampi dussati. Bhagavato etamatthaṁ ārocesuṁ … pe …</p>
+
+<p>anujānāmi, bhikkhave, uṇhasamaye pariḷāhasamaye orenaddhamāsaṁ nahāyituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">6</span><span class="ms">p_2V_1093</span><span class="rule">"Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya, aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo. Diyaḍḍho māso seso gimhānanti vassānassa paṭhamo māso iccete aḍḍhateyyamāsā uṇhasamayo pariḷāhasamayo— ayaṁ tattha samayo"</span>ti.</p>
+
+<p><span class="parno">7</span><span class="ms">p_2V_1094</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<hr>
+<p><span class="parno">8</span><span class="ms">p_2V_1095, msdiv359</span>Tena kho pana samayena bhikkhū gilānā honti. Gilānapucchakā bhikkhū gilāne bhikkhū etadavocuṁ: "kaccāvuso, khamanīyaṁ, kacci yāpanīyan"ti?</p>
+
+<p>"Pubbe mayaṁ, āvuso, orenaddhamāsaṁ nahāyāma, tena no phāsu hoti; idāni pana ‘bhagavatā paṭikkhittan’ti kukkuccāyantā na nahāyāma, tena no na phāsu hotī"ti.</p>
+
+<p>Bhagavato etamatthaṁ ārocesuṁ … pe … anujānāmi, bhikkhave, gilānena bhikkhunā orenaddhamāsaṁ nahāyituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">9</span><span class="ms">p_2V_1096</span><span class="rule">"Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya, aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo. Diyaḍḍho māso seso gimhānanti vassānassa paṭhamo māso iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo— ayaṁ tattha samayo"</span>ti.</p>
+
+<p><span class="parno">10</span><span class="ms">p_2V_1097</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<p><span class="parno">11</span><span class="ms">p_2V_1098, msdiv360</span>Tena kho pana samayena bhikkhū navakammaṁ katvā kukkuccāyantā na nahāyanti. Te sedagatena gattena sayanti. Cīvarampi senāsanampi dussati. Bhagavato etamatthaṁ ārocesuṁ … pe …</p>
+
+<p>anujānāmi, bhikkhave, kammasamaye orenaddhamāsaṁ nahāyituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">12</span><span class="ms">p_2V_1099</span><span class="rule">"Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya, aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo. Diyaḍḍho māso seso gimhānanti vassānassa paṭhamo māso iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo, kammasamayo— ayaṁ tattha samayo"</span>ti.</p>
+
+<hr>
+<p><span class="parno">13</span><span class="ms">p_2V_1100</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<p><span class="parno">14</span><span class="ms">p_2V_1101, msdiv361</span>Tena kho pana samayena bhikkhū addhānaṁ gantvā kukkuccāyantā na nahāyanti. Te sedagatena gattena sayanti. Cīvarampi senāsanampi dussati. Bhagavato etamatthaṁ ārocesuṁ … pe …</p>
+
+<p>anujānāmi, bhikkhave, addhānagamanasamaye orenaddhamāsaṁ nahāyituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">15</span><span class="ms">p_2V_1102</span><span class="rule">"Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya, aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo. Diyaḍḍho māso seso gimhānanti vassānassa paṭhamo māso iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo, kammasamayo, addhānagamanasamayo— ayaṁ tattha samayo"</span>ti.</p>
+
+<hr>
+<p><span class="parno">16</span><span class="ms">p_2V_1103</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<p><span class="parno">17</span><span class="ms">p_2V_1104, msdiv362</span>Tena kho pana samayena sambahulā bhikkhū ajjhokāse cīvarakammaṁ karontā sarajena vātena okiṇṇā honti. Devo ca thokaṁ thokaṁ phusāyati. Bhikkhū kukkuccāyantā na nahāyanti, kilinnena gattena sayanti. Cīvarampi senāsanampi dussati. Bhagavato etamatthaṁ ārocesuṁ … pe …</p>
+
+<p>anujānāmi, bhikkhave, vātavuṭṭhisamaye orenaddhamāsaṁ nahāyituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<p><span class="parno">18</span><span class="ms">p_2V_1105, msdiv363</span><span class="rule">"Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya, aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo. Diyaḍḍho māso seso gimhānanti vassānassa paṭhamo māso iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo, kammasamayo, addhānagamanasamayo, vātavuṭṭhisamayo— ayaṁ tattha samayo"</span>ti.</p>
+
+<hr>
+<p><span class="parno">19</span><span class="ms">p_2V_1106, msdiv364</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<p><span class="parno">20</span><span class="ms">p_2V_1107</span><b>Orenaddhamāsan</b>'ti ūnakaddhamāsaṁ.</p>
+
+<hr>
+<p><span class="parno">21</span><span class="ms">p_2V_1108</span><b>Nahāyeyyā</b>'ti cuṇṇena vā mattikāya vā nahāyati, payoge payoge dukkaṭaṁ. Nahānapariyosāne, āpatti pācittiyassa.</p>
+
+<p><span class="parno">22</span><span class="ms">p_2V_1109</span><b>Aññatra samayā</b>'ti ṭhapetvā samayaṁ.</p>
+
+<hr>
+<p><span class="parno">23</span><span class="ms">p_2V_1110</span><b>Uṇhasamayo</b> nāma diyaḍḍho māso seso gimhānaṁ. <b>Pariḷāhasamayo</b> nāma vassānassa paṭhamo māso "iccete aḍḍhateyyamāsā uṇhasamayo pariḷāhasamayo"ti nahāyitabbaṁ.</p>
+
+<hr>
+<p><span class="parno">24</span><span class="ms">p_2V_1111</span><b>Gilānasamayo</b> nāma yassa vinā nahānena na phāsu hoti. Gilānasamayoti nahāyitabbaṁ.</p>
+
+<p><span class="parno">25</span><span class="ms">p_2V_1112</span><b>Kammasamayo</b> nāma antamaso pariveṇampi sammaṭṭhaṁ hoti. "Kammasamayo"ti nahāyitabbaṁ.</p>
+
+<p><span class="parno">26</span><span class="ms">p_2V_1113</span><b>Addhānagamanasamayo</b> nāma "addhayojanaṁ gacchissāmī"ti nahāyitabbaṁ, gacchantena nahāyitabbaṁ, gatena nahāyitabbaṁ.</p>
+
+<p><span class="parno">27</span><span class="ms">p_2V_1114</span><b>Vātavuṭṭhisamayo</b> nāma bhikkhū sarajena vātena okiṇṇā honti, dve vā tīṇi vā udakaphusitāni kāye patitāni honti. "Vātavuṭṭhisamayo"ti nahāyitabbaṁ.</p>
+
+<p><span class="parno">28</span><span class="ms">p_2V_1115, msdiv365</span> Ūnakaddhamāse ūnakasaññī, aññatra samayā, nahāyati, āpatti pācittiyassa. Ūnakaddhamāse vematiko, aññatra samayā, nahāyati, āpatti pācittiyassa. Ūnakaddhamāse atirekasaññī, aññatra samayā, nahāyati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">29</span><span class="ms">p_2V_1116</span>Atirekaddhamāse ūnakasaññī, āpatti dukkaṭassa. Atirekaddhamāse vematiko, āpatti dukkaṭassa. Atirekaddhamāse atirekasaññī, anāpatti.</p>
+
+<hr>
+<p><span class="parno">30</span><span class="ms">p_2V_1117, msdiv366</span>Anāpatti— samaye, addhamāsaṁ nahāyati, atirekaddhamāsaṁ nahāyati, pāraṁ gacchanto nahāyati, sabbapaccantimesu janapadesu, āpadāsu, ummattakassa, ādikammikassāti.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">31</span><span class="ms">p_2V_1118</span>Nahānasikkhāpadaṁ niṭṭhitaṁ sattamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-pc56.html#content"></a><a id="next-sutta" href="../vi/bu-vb-pc58.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-pc.html">Pācittiyas</a>Pācittiya&nbsp;57
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

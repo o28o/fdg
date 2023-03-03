@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Sanghādisesa 1</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Sanghādisesa 1: Intentional Emission of semen</h2>
+
+ 
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p class="endsutta"><span class="parno">1</span>Venerables, these thirteen rules involving a formal meeting of the order come up for recitation.</p>
+
+<hr>
+<div>
+<h3>Origin story</h3>
+<h4>First sub-story</h4>
+</div>
+
+<p id="p2"><span class="parno">2</span>At one time the Buddha, the Master, was staying at Sāvatthī, in the Jeta Grove, Anāthapiṇḍikaʼs Park. At that time Venerable Seyyasaka was discontent with the spiritual life, and he became thin, haggard, pale, with veins protruding from his limbs. Venerable Udāyī saw Venerable Seyyasaka in this condition and said to him: "Seyyasaka, you are not looking well. Could it be that you are discontent with the spiritual life?"</p>
+
+<p>"Yes."</p>
+
+<hr>
+<p>"Well then, eat as much as you like, sleep as much as you like, and bathe as much as you like, and whenever you become discontent and lustful, emit semen with your hand."</p>
+
+<p>"But is that allowable?"</p>
+
+<p>"Yes, I do it too."</p>
+
+<p id="p3"><span class="parno">3</span>Then Venerable Seyyasaka ate, slept, and bathed as much as he liked, and whenever he became discontent and lustful, he emitted semen with his hand. After some time Venerable Seyyasaka became handsome, with fresh features, a bright complexion, and clear skin. Monks who were his friends said to him: "Seyyasaka, you used to be thin, haggard, pale, with veins protruding from your limbs. Now you are handsome, with fresh features, a bright complexion, and clear skin. Have you been taking medicine?"</p>
+
+<p>"No, I havenʼt. I just eat, sleep, and bathe as much as I like, and whenever I become discontent and lustful, I emit semen with my hand."</p>
+
+<p>"Do you eat the almsfood of the faithful with the same hand you use to emit semen?"</p>
+
+<hr>
+<p>"Yes."</p>
+
+<p>The monks of few desires … complained and criticised him: "How can Venerable Seyyasaka emit semen with his hand?"</p>
+
+<hr>
+<p id="p4"><span class="parno">4</span>They rebuked Venerable Seyyasaka in many ways and then informed the Master. The Master then convened the Saṅgha and questioned Venerable Seyyasaka: "Is it true, Seyyasaka, that you emit semen with your hand?"</p>
+
+<hr>
+<p>"Yes, Master."</p>
+
+<p>The Master rebuked him: "Foolish man, itʼs not suitable, itʼs not becoming, itʼs not proper, itʼs not worthy of an ascetic, itʼs not allowable, itʼs not to be done. How could you emit semen with your hand? Have I not taught the Dhamma in many ways for the sake of dispassion, not for the sake of passion; for freedom from bondage, not for the sake of bondage; for the sake of non-grasping, not for the sake of grasping? When I have taught the Dhamma in this way, how can you intentionally act to continue in lust, bondage, and clinging? Have I not taught the Dhamma in many ways for the fading away of lust, for the clearing away of intoxication, for the removal of thirst, for the uprooting of attachment, for the cutting off of the round of birth and death, for the ending of craving, for dispassion, for cessation, for extinguishment? Havenʼt I declared in many ways the abandoning of sense pleasures, the full understanding of the perceptions of sense pleasure, the removal Seyyasaka in many ways for being difficult to support … the Master said: "And, monks, this training rule should be recited thus:</p>
+
+<h4>Preliminary ruling</h4>
+
+<p class="rule"><span class="parno">5</span>"Intentional emission of semen is an offence entailing suspension."</p>
+
+<p class="endsection"><span class="parno">6</span>In this way the Master laid down this training rule for the monks.</p>
+
+<h4>Second sub-story</h4>
+
+<p id="p7"><span class="parno">7</span>At one time monks ate delicious food, fell asleep without mindfulness and clear comprehension, and emitted semen while dreaming. They became anxious: "The Master has laid down a training rule that intentional emission of semen is an offence entailing suspension. We had an emission of semen while dreaming, and that involves intention. Could it be that we have committed an offence entailing suspension?" They informed the Master. He said: "Monks, there is intention involved, but it is negligible. And so, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">8</span>"Intentional emission of semen, except while dreaming, is an offence entailing suspension."</p>
+
+<h3 >Definitions</h3>
+
+<p id="p9"><span class="parno">9</span><span class="term">Intentional</span>: <span class="gloss">knowing, perceiving, having willed, having decided, there is a transgression.</span></p>
+
+<p id="p10"><span class="parno">10</span><span class="term">Semen</span>: <span class="gloss">ten kinds of semen: blue, yellow, red, white, the colour of whey, the colour of water, the colour of oil, the colour of milk, the colour of curd, the colour of ghee.</span></p>
+
+<p id="p11"><span class="parno">11</span><span class="term">Emission</span>: <span class="gloss">making it move from its base, this is called emission.</span></p>
+
+<p id="p12"><span class="parno">12</span><span class="term">Except while dreaming</span>: <span class="gloss">setting aside that which occurs while dreaming.</span></p>
+
+<p id="p13"><span class="parno">13</span><span class="term">An offence entailing suspension</span>: only the Saṅgha gives probation for that offence, sends back to the beginning, places under deference,<span class="note"><span class="details"><span class="p"><i>Mānatta</i>, usually translated as "penance," a term that may be too closely associated with Christianity to be suitable in a Buddhist context. The meaning of <i>mānatta</i> is not clear, but it is taken by the commentaries to be related to <i>māneti</i>, "to honour" or "to defer to;" see<span class="ref"> Kkh 87,1</span>. Thus my translation.</span></span></span> and rehabilitates—not several monks, not an individual. Therefore it is said that he commits an offence entailing suspension.<span class="note"><span class="details"><span class="p">With the present translation it is not clear how the name of the offence relates to the explanation given here. With the Pali term <i>sanghādisesa</i>, however, it is clearer what the connection is, that is, that the Saṅgha is involved.</span></span></span> This is the name and designation of this class of offence. Therefore, too, it is said that he commits an offence entailing suspension.</p>
+
+<h3 >Permutations</h3>
+<h4>Permutations Part 1</h4>
+<h5>Summary</h5>
+
+<p id="p14"><span class="parno">14</span>One emits with oneʼs own body; one emits with an external body; one emits both with oneʼs own body and with an external body;<span class="note"><span class="details"><span class="p">The locative case of the Pali is here translated as "with" in accordance with the commentarial explanation, see <span class="ref">Sp 3.522,30</span>.</span></span></span> one emits shaking the pelvis in the air.</p>
+
+<p>When it is stiff through lust one emits; when it is stiff due to faeces one emits; when it is stiff due to urine one emits; when it is stiff through wind one emits;<span class="note"><span class="details"><span class="p">That is, the internal wind of the body, according to the ancient Indian system of physiology.</span></span></span> when it is stiff because of being bitten by caterpillars one emits.</p>
+
+<p>One emits for the sake of health; one emits for the sake of pleasure; one emits for the sake of medicine; one emits for the sake of a gift; one emits for the sake of merit; one emits for the sake of sacrifice; one emits for the sake of heaven; one emits for the sake of seed; one emits for the sake of investigating; one emits for the sake of fun.</p>
+
+<p>One emits blue; one emits yellow; one emits red; one emits white; one emits the colour of whey; one emits the colour of water; one emits the colour of oil; one emits the colour of milk; one emits the colour of curd; one emits the colour of ghee.</p>
+
+<h5>Definitions</h5>
+
+<p id="p15"><span class="parno">15</span><span class="term">With oneʼs own body</span>: <span class="gloss">with oneʼs own physical body.</span></p>
+
+<p id="p16"><span class="parno">16</span><span class="term">With an external body</span>: <span class="gloss">with an external physical body, whether organic or inorganic.</span></p>
+
+<hr>
+<p id="p17"><span class="parno">17</span><span class="term">Both with oneʼs own body and with an external body</span>: <span class="gloss">with both.</span></p>
+
+<p id="p18"><span class="parno">18</span><span class="term">Shaking the pelvis in the air</span>: <span class="gloss">when one makes an effort in the air, the penis becomes erect.</span></p>
+
+<p id="p19"><span class="parno">19</span><span class="term">When it is stiff through lust</span>: <span class="gloss">for one oppressed by lust, the penis becomes erect.</span></p>
+
+<p id="p20"><span class="parno">20</span><span class="term">When it is stiff due to faeces</span>: <span class="gloss">for one oppressed by faeces, the penis becomes erect.</span></p>
+
+<p id="p21"><span class="parno">21</span><span class="term">When it is stiff due to urine</span>: <span class="gloss">for one oppressed by urine, the penis becomes erect.</span></p>
+
+<p id="p22"><span class="parno">22</span><span class="term">When it is stiff through wind</span>: <span class="gloss">for one oppressed by wind, the penis becomes erect.</span></p>
+
+<p id="p23"><span class="parno">23</span><span class="term">When it is stiff because of being bitten by caterpillars</span>: <span class="gloss">when bitten by caterpillars, the penis becomes erect.</span></p>
+
+<p id="p24"><span class="parno">24</span><span class="term">For the sake of health</span>: <span class="gloss">thinking, "I will be healthy."</span></p>
+
+<p id="p25"><span class="parno">25</span><span class="term">For the sake of pleasure</span>: <span class="gloss">thinking, "I will produce a pleasant feeling."</span></p>
+
+<p id="p26"><span class="parno">26</span><span class="term">For the sake of medicine</span>: <span class="gloss">thinking, "There will be medicine."</span></p>
+
+<hr>
+<p id="p27"><span class="parno">27</span><span class="term">For the sake of a gift</span>: <span class="gloss">thinking, "I will give a gift."</span></p>
+
+<p id="p28"><span class="parno">28</span><span class="term">For the sake of merit</span>: <span class="gloss">thinking, "There will be merit ."</span></p>
+
+<hr>
+<p id="p29"><span class="parno">29</span><span class="term">For the sake of sacrifice</span>: <span class="gloss">thinking, "I will offer a sacrifice."</span></p>
+
+<p id="p30"><span class="parno">30</span><span class="term">For the sake of heaven</span>: <span class="gloss">thinking, "I will go to heaven."</span></p>
+
+<hr>
+<p id="p31"><span class="parno">31</span><span class="term">For the sake of seed</span>: <span class="gloss">thinking, "There will be seed."</span></p>
+
+<p id="p32"><span class="parno">32</span><span class="term">For the sake of investigating</span>: <span class="gloss">thinking, "Will it be blue? Will it be yellow? … Will it be the colour of ghee?"</span></p>
+
+<hr>
+<p id="p33"><span class="parno">33</span><span class="term">For the sake of fun</span>: <span class="gloss">desiring to play.</span></p>
+
+<h4>Exposition part 1</h4>
+
+<p id="p34"><span class="parno">34</span>If, with his own body, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p35"><span class="parno">35</span>If, with an external body, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p36"><span class="parno">36</span>If, both with his own body and an external body, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p37"><span class="parno">37</span>If, shaking the pelvis in the air, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p38"><span class="parno">38</span>If, when it is stiff through lust, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p39"><span class="parno">39</span>If, when it is stiff due to faeces, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p40"><span class="parno">40</span>If, when it is stiff due to urine, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p41"><span class="parno">41</span>If, when it is stiff through wind, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p42"><span class="parno">42</span>If, when it is stiff because of being bitten by caterpillars, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<h4>Exposition part 2 - A single purpose</h4>
+
+<p id="p43"><span class="parno">43</span>If for the sake of health, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p44"><span class="parno">44</span>If for the sake of pleasure … If for the sake of medicine … If for the sake of a gift … If for the sake of merit … If for the sake of sacrifice … If for the sake of heaven … If for the sake of seed … If for the sake of investigating … If for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<h5>One kind of semen</h5>
+
+<p id="p45"><span class="parno">45</span>If he intends blue, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p46"><span class="parno">46</span>If he intends yellow … If he intends red … If he intends white … If he intends the colour of whey … If he intends the colour of water … If he intends the colour of oil … If he intends the colour of milk … If he intends the colour of curd … If he intends the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">47</span>The basic permutation series is finished.<span class="note"><span class="details"><span class="p">For an explanation of the term ʻbasicʼ see <span class="ref">Sp 2.497,6</span>.</span></span></span></p>
+
+<h5>Two purposes</h5>
+
+<p id="p48"><span class="parno">48</span>If for the sake of health and for the sake of pleasure, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p49"><span class="parno">49</span>If for the sake of health and for the sake of medicine … If for the sake of health and for the sake of a gift … If for the sake of health and for the sake of merit … If for the sake of health and for the sake of sacrifice … If for the sake of health and for the sake of heaven … If for the sake of health and for the sake of seed … If for the sake of health and for the sake of investigating … If for the sake of health and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">50</span>The unconnected permutation series for one root item is finished.<span class="note"><span class="details"><span class="p">Although two motives are given in the above paragraph, it seems only the one which remains unchanged from case to case (here "for the sake of health") is considered the root item. For an explanation of the term ʻunconnectedʼ see <span class="ref">Sp 2.497,10</span>.</span></span></span></p>
+
+<hr>
+<p id="p51"><span class="parno">51</span>If for the sake of pleasure and for the sake of medicine, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p52"><span class="parno">52</span>If for the sake of pleasure and for the sake of a gift … If for the sake of pleasure and for the sake of merit … If for the sake of pleasure and for the sake of sacrifice … If for the sake of pleasure and for the sake of heaven … If for the sake of pleasure and for the sake of seed … If for the sake of pleasure and for the sake of investigating … If for the sake of pleasure and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p53"><span class="parno">53</span>If for the sake of pleasure and for the sake of health, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p54"><span class="parno">54</span>If for the sake of medicine and for the sake of a gift … If for the sake of medicine and for the sake of merit … If for the sake of medicine and for the sake of sacrifice … If for the sake of medicine and for the sake of heaven … If for the sake of medicine and for the sake of seed … If for the sake of medicine and for the sake of investigating … If for the sake of medicine and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p55"><span class="parno">55</span>If for the sake of medicine and for the sake of health … If for the sake of medicine and for the sake of pleasure, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p56"><span class="parno">56</span>If for the sake of a gift and for the sake of merit … If for the sake of a gift and for the sake of sacrifice … If for the sake of a gift and for the sake of heaven … If for the sake of a gift and for the sake of seed … If for the sake of a gift and for the sake of investigating … If for the sake of a gift and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p57"><span class="parno">57</span>If for the sake a gift and for the sake of health … If for the sake of a gift and for the sake of pleasure … If for the sake of a gift and for the sake of medicine, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p58"><span class="parno">58</span>If for the sake of merit and for the sake of sacrifice … If for the sake of merit and for the sake of heaven … If for the sake of merit and for the sake of seed … If for the sake of merit and for the sake of investigating … If for the sake of merit and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p59"><span class="parno">59</span>If for the sake merit and for the sake of health … If for the sake of merit and for the sake of pleasure … If for the sake of merit and for the sake of medicine … If for the sake of merit and for the sake of a gift, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p60"><span class="parno">60</span>If for the sake of sacrifice and for the sake of heaven … If for the sake of sacrifice and for the sake of seed … If for the sake of sacrifice and for the sake of investigating … If for the sake of sacrifice and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p61"><span class="parno">61</span>If for the sake sacrifice and for the sake of health … If for the sake of sacrifice and for the sake of pleasure … If for the sake of sacrifice and for the sake of medicine … If for the sake of sacrifice and for the sake of a gift … If for the sake of sacrifice and for the sake of merit, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p62"><span class="parno">62</span>If for the sake of heaven and for the sake of seed … If for the sake of heaven and for the sake of investigating … If for the sake of heaven and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p63"><span class="parno">63</span>If for the sake heaven and for the sake of health … If for the sake of heaven and for the sake of pleasure … If for the sake of heaven and for the sake of medicine … If for the sake of heaven and for the sake of a gift … If for the sake of heaven and for the sake of merit … If for the sake of heaven and for the sake of sacrifice, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p64"><span class="parno">64</span>If for the sake of seed and for the sake of investigating … If for the sake of seed and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p65"><span class="parno">65</span>If for the sake seed and for the sake of health … If for the sake of seed and for the sake of pleasure … If for the sake of seed and for the sake of medicine … If for the sake of seed and for the sake of a gift … If for the sake of seed and for the sake of merit … If for the sake of seed and for the sake of sacrifice … If for the sake of seed and for the sake of heaven, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p66"><span class="parno">66</span>If for the sake of investigating and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p67"><span class="parno">67</span>If for the sake investigating and for the sake of health … If for the sake of investigating and for the sake of pleasure … If for the sake of investigating and for the sake of medicine … If for the sake of investigating and for the sake of a gift … If for the sake of investigating and for the sake of merit … If for the sake of investigating and for the sake of sacrifice … If for the sake of investigating and for the sake of heaven … If for the sake of investigating and for the sake of seed, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p68"><span class="parno">68</span>If for the sake fun and for the sake of health … If for the sake of fun and for the sake of pleasure … If for the sake of fun and for the sake of medicine … If for the fun of seed and for the sake of a gift … If for the sake of fun and for the sake of merit … If for the sake of fun and for the sake of sacrifice … If for the sake of fun and for the sake of heaven … If for the sake of fun and for the sake of seed … If for the sake of fun and for the sake of investigating, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">69</span>The linked permutation series for one root item is finished.<span class="note"><span class="details"><span class="p">For an explanation of the term ʻlinkedʼ see <span class="ref">Sp 2.497,14</span>.</span></span></span></p>
+
+<h5>Three purposes</h5>
+
+<p id="p70"><span class="parno">70</span>If for the sake of health and for the sake of pleasure and for the sake of medicine, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension. … If for the sake of health and for the sake of pleasure and for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">71</span>The unconnected permutation series for two root items.</p>
+
+<hr>
+<p id="p72"><span class="parno">72</span>If for the sake of pleasure and for the sake of medicine and for the sake of a gift, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension. … If for the sake of pleasure and for the sake of medicine and for the sake of health, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<hr>
+<p id="p73"><span class="parno">73</span>The linked permutation series for two root items, in brief.</p>
+
+<p id="p74"><span class="parno">74</span>If for the sake of investigating and for the sake of fun and for the sake of a health, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension. … If for the sake of investigating and for the sake of fun and for the sake of seed, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">75</span>The section based on two root items is finished.</p>
+
+<h5>More than three purposes</h5>
+
+<p id="p76"><span class="parno">76</span>Three root items, four root items, five root items, six root items, seven root items, eight root items, and nine root items is to be expanded in the same way.</p>
+
+<h5>Ten purposes</h5>
+
+<p class="endsutta"><span class="parno">77</span>This is the section based on all root items:</p>
+
+<p id="p78"><span class="parno">78</span>If for the sake of health, for the sake of pleasure, for the sake of medicine, for the sake of a gift, for the sake of merit, for the sake of sacrifice, for the sake of heaven, for the sake of seed, for the sake of investigating, for the sake of fun, he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">79</span>The section based on all root items is finished.</p>
+
+<h5>Two kinds of semen</h5>
+
+<p id="p80"><span class="parno">80</span>If he intends blue and yellow, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p81"><span class="parno">81</span>If he intends blue and red … If he intends blue and white … If he intends blue and the colour of whey … If he intends blue and the colour of water … If he intends blue and the colour of oil … If he intends blue and the colour of milk … If he intends blue and the colour of curd … If he intends blue and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">82</span>The unconnected permutation series for one root item is finished.</p>
+
+<p id="p83"><span class="parno">83</span>If he intends yellow and red, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p84"><span class="parno">84</span>If he intends yellow and white … If he intends yellow and the colour of whey … If he intends yellow and the colour of water … If he intends yellow and the colour of oil … If he intends yellow and the colour of milk … If he intends yellow and the colour of curd … If he intends yellow and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p85"><span class="parno">85</span>If he intends yellow and blue, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">86</span>The linked permutation series for one root item.</p>
+
+<p id="p87"><span class="parno">87</span>If he intends red and white, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p88"><span class="parno">88</span>If he intends red and the colour of whey … If he intends red and the colour of water … If he intends red and the colour of oil … If he intends red and the colour of milk … If he intends red and the colour of curd … If he intends red and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p89"><span class="parno">89</span>If he intends red and blue … If he intends red and yellow, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p90"><span class="parno">90</span>If he intends white and the colour of whey … If he intends white and the colour of water … If he intends white and the colour of oil … If he intends white and the colour of milk … If he intends white and the colour of curd … If he intends white and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p91"><span class="parno">91</span>If he intends white and blue … If he intends white and yellow … If he intends white and red, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p92"><span class="parno">92</span>If he intends the colour of whey and the colour of water … If he intends the colour of whey and the colour of oil … If he intends the colour of whey and the colour of milk … If he intends the colour of whey and the colour of curd … If he intends the colour of whey and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p93"><span class="parno">93</span>If he intends the colour of whey and blue … If he intends the colour of whey and yellow … If he intends the colour of whey and red … If he intends the colour of whey and white, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p94"><span class="parno">94</span>If he intends the colour of water and the colour of oil … If he intends the colour of water and the colour of milk … If he intends the colour of water and the colour of curd … If he intends the colour of water and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p95"><span class="parno">95</span>If he intends the colour of water and blue … If he intends the colour of water and yellow … If he intends the colour of water and red … If he intends the colour of water and white … If he intends the colour of water and the colour of whey, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p96"><span class="parno">96</span>If he intends the colour of oil and the colour of milk … If he intends the colour of oil and the colour of curd … If he intends the colour of oil and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p97"><span class="parno">97</span>If he intends the colour of oil and blue … If he intends the colour of oil and yellow … If he intends the colour of oil and red … If he intends the colour of oil and white … If he intends the colour of oil and the colour of whey … If he intends the colour of oil and the colour of water, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p98"><span class="parno">98</span>If he intends the colour of milk and the colour of curd … If he intends the colour of milk and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p99"><span class="parno">99</span>If he intends the colour of milk and blue … If he intends the colour of milk and yellow … If he intends the colour of milk and red … If he intends the colour of milk and white … If he intends the colour of milk and the colour of whey … If he intends the colour of milk and the colour of water … If he intends the colour of milk and the colour of oil, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p100"><span class="parno">100</span>If he intends the colour of curd and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p101"><span class="parno">101</span>If he intends the colour of curd and blue … If he intends the colour of curd and yellow … If he intends the colour of curd and red … If he intends the colour of curd and white … If he intends the colour of curd and the colour of whey … If he intends the colour of curd and the colour of water … If he intends the colour of curd and the colour of oil … If he intends the colour of curd and the colour of milk, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p><span class="parno">102–103</span>If he intends the colour of ghee and blue … If he intends the colour of ghee and yellow … If he intends the colour of ghee and red … If he intends the colour of ghee and white … If he intends the colour of ghee and the colour of whey … If he intends the colour of ghee and the colour of water … If he intends the colour of ghee and the colour of oil … If he intends the colour of ghee and the colour of milk … If he intends the colour of ghee and the colour of curd, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">104</span>The linked permutation series for one root item is finished.</p>
+
+<h5>Three kinds of semen</h5>
+
+<p id="p105"><span class="parno">105</span>If he intends blue and yellow and red, makes an effort, and semen is emitted, he commits an offence entailing suspension. … If he intends blue and yellow and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">106</span>The unconnected permutation series for two root items.</p>
+
+<p id="p107"><span class="parno">107</span>If he intends yellow and red and white, makes an effort, and semen is emitted, he commits an offence entailing suspension. … If he intends yellow and red and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<hr>
+<p id="p108"><span class="parno">108</span>The linked permutation series for two root items, in brief.</p>
+
+<p id="p109"><span class="parno">109</span>If he intends the colour of curd and the colour of ghee and blue, makes an effort, and semen is emitted, he commits an offence entailing suspension. … If he intends the colour of curd and the colour of ghee and the colour of milk, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">110</span>The section on two root items is finished.</p>
+
+<h5>More than three kinds of semen</h5>
+
+<p id="p111"><span class="parno">111</span>The sections based on three root items, four root items, five root items, six root items, seven root items, eight root items, and nine root items is to be expanded in the same way.</p>
+
+<h5>Ten kinds of semen</h5>
+<p id="p112"><span class="parno">112</span>This is the section based on all root items:</p>
+
+<p id="p113"><span class="parno">113</span>If he intends blue and yellow and red and white and the colour of whey and the colour of water and the colour of oil and the colour of milk and the colour of curd and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">114</span>The section based on all root items is finished.</p>
+
+<h5>Purposes combined with kinds of semen</h5>
+
+<p id="p115"><span class="parno">115</span>If he intends for the sake of health and blue, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p116"><span class="parno">116</span>If he intends for the sake of health and for the sake of pleasure and blue and yellow, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p117"><span class="parno">117</span>If he intends for the sake of health and for the sake of pleasure and for the sake of medicine and blue and yellow and red, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">118</span>In this way both are to be expanded.</p>
+
+<p id="p119"><span class="parno">119</span>If he intends for the sake of health and for the sake of pleasure and for the sake of medicine and for the sake of a gift and for the sake of merit and for the sake of sacrifice and for the sake of heaven and for the sake of seed and for the sake of investigating and for the sake of fun and blue and yellow and red and white and the colour of whey and the colour of water and the colour of oil and the colour of milk and the colour of curd and the colour of ghee, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">120</span>The mixed permutation series is finished.</p>
+
+<h5>Intending one kind of semen, emitting another kind</h5>
+
+<p id="p121"><span class="parno">121</span>If he intends, "I will emit blue," makes an effort, and emits yellow, he commits an offence entailing suspension.</p>
+
+<p id="p122"><span class="parno">122</span>If he intends, "I will emit blue," makes an effort, and emits red … white … the colour of whey … the colour of water … the colour of oil … the colour of milk … the colour of curd … the colour of ghee, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">123</span>The unconnected permutation series is finished.</p>
+
+<p id="p124"><span class="parno">124</span>If he intends, "I will emit yellow," makes an effort, and emits red, he commits an offence entailing suspension.</p>
+
+<p id="p125"><span class="parno">125</span>If he intends, "I will emit yellow," makes an effort, and emits white … the colour of whey … the colour of water … the colour of oil … the colour of milk … the colour of curd … the colour of ghee … blue, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">126</span>The basis of the linked permutation series, in brief.</p>
+
+<p id="p127"><span class="parno">127</span>… If he intends, "I will emit the colour of ghee," makes an effort, and emits blue, he commits an offence entailing suspension.</p>
+
+<p id="p128"><span class="parno">128</span>If he intends, "I will emit the colour of ghee," makes an effort, and emits yellow … red … white … the colour of whey … the colour of water … the colour of oil … the colour of milk … the colour of curd, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">129</span>The inner permutation series is finished.</p>
+
+<p id="p130"><span class="parno">130</span>If he intends, "I will emit yellow," makes an effort, and emits blue, he commits an offence entailing suspension.</p>
+
+<p id="p131"><span class="parno">131</span>If he intends, "I will emit red … white … the colour of whey … the colour of water … the colour of oil … the colour of milk … the colour of curd … the colour of ghee," makes an effort, and emits blue, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">132</span>The first round of the outer permutation series is finished.<span class="note"><span class="details"><span class="p">This is really just an educated guess at the meaning of a very technical Pali phrase.</span></span></span></p>
+
+<p id="p133"><span class="parno">133</span>If he intends, "I will emit red," makes an effort, and emits yellow, he commits an offence entailing suspension.</p>
+
+<p id="p134"><span class="parno">134</span>If he intends, "I will emit white … the colour of whey … the colour of water … the colour of oil … the colour of milk … the colour of curd … the colour of ghee … blue," makes an effort, and emits yellow, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">135</span>The second round of the outer permutation series is finished.</p>
+
+<p id="p136"><span class="parno">136</span>If he intends, "I will emit white," makes an effort, and emits red, he commits an offence entailing suspension.</p>
+
+<p id="p137"><span class="parno">137</span>If he intends, "I will emit the colour of whey … the colour of water … the colour of oil … the colour of milk … the colour of curd … the colour of ghee … blue … yellow," makes an effort, and emits red, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">138</span>The third round of the outer permutation series is finished.</p>
+
+<p id="p139"><span class="parno">139</span>If he intends, "I will emit the colour of whey," makes an effort, and emits white, he commits an offence entailing suspension.</p>
+
+<p id="p140"><span class="parno">140</span>If he intends, "I will emit the colour of water … the colour of oil … the colour of milk … the colour of curd … the colour of ghee … blue … yellow … red," makes an effort, and emits white, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">141</span>The fourth round of the outer permutation series is finished.</p>
+
+<p id="p142"><span class="parno">142</span>If he intends, "I will emit the colour of water," makes an effort, and emits the colour of whey, he commits an offence entailing suspension.</p>
+
+<p id="p143"><span class="parno">143</span>If he intends, "I will emit the colour of oil … the colour of milk … the colour of curd … the colour of ghee … blue … yellow … red … white," makes an effort, and emits the colour of whey, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">144</span>The fifth round of the outer permutation series is finished.</p>
+
+<p id="p145"><span class="parno">145</span>If he intends, "I will emit the colour of oil," makes an effort, and emits the colour of water, he commits an offence entailing suspension.</p>
+
+<p id="p146"><span class="parno">146</span>If he intends, "I will emit the colour of milk … the colour of curd … the colour of ghee … blue … yellow … red … white … the colour of whey," makes an effort, and emits the colour of water, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">147</span>The sixth round of the outer
+<br>permutation series is finished.</p>
+
+<p id="p148"><span class="parno">148</span>If he intends, "I will emit the colour of milk," makes an effort, and emits the colour of oil, he commits an offence entailing suspension.</p>
+
+<p id="p149"><span class="parno">149</span>If he intends, "I will emit the colour of curd … the colour of ghee … blue … yellow … red … white … the colour of whey … the colour of water," makes an effort, and emits the colour of oil, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">150</span>The seventh round of the outer
+<br>permutation series is finished.</p>
+
+<p id="p151"><span class="parno">151</span>If he intends, "I will emit the colour of curd," makes an effort, and emits the colour of milk, he commits an offence entailing suspension.</p>
+
+<p id="p152"><span class="parno">152</span>If he intends, "I will emit the colour of ghee … blue … yellow … red … white … the colour of whey … the colour of water … the colour of oil," makes an effort, and emits the colour of milk, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">153</span>The eighth round of the outer permutation series is finished.</p>
+
+<p id="p154"><span class="parno">154</span>If he intends, "I will emit the colour of ghee," makes an effort, and emits the colour of curd, he commits an offence entailing suspension.</p>
+
+<p id="p155"><span class="parno">155</span>If he intends, "I will emit blue … yellow … red … white … the colour of whey … the colour of water … the colour of oil … the colour of milk," makes an effort, and emits the colour of curd, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">156</span>The ninth round of the outer permutation series is finished.</p>
+
+<p id="p157"><span class="parno">157</span>If he intends, "I will emit blue," makes an effort, and emits the colour of ghee," makes an effort, and emits the colour of ghee, he commits an offence entailing suspension.</p>
+
+<p id="p158"><span class="parno">158</span>If he intends, "I will emit yellow … red … white … the colour of whey … the colour of water … the colour of oil … the colour of milk … the colour of curd," makes an effort, and emits the colour of ghee, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">159</span>The tenth round of the outer permutation series is finished.</p>
+
+<p class="endsutta">The outer permutation series is finished.</p>
+
+<h4>Permutations part 2</h4>
+
+<p id="p160"><span class="parno">160</span><span class="ms">Bu-Ss.1.4, Vin.3.116. MS.933"</span>If he intends, makes an effort, and semen is emitted, he commits an offence entailing suspension.</p>
+
+<p id="p161"><span class="parno">161</span>If he intends, makes an effort, and semen is not emitted, he commits a serious offence.</p>
+
+<p id="p162"><span class="parno">162</span>If he intends, but does not make an effort, and semen is emitted, there is no offence.</p>
+
+<p id="p163"><span class="parno">163</span>If he intends, but does not make an effort, and semen is not emitted, there is no offence.</p>
+
+<p id="p164"><span class="parno">164</span>If he does not intend, but he makes an effort, and semen is emitted, there is no offence.</p>
+
+<p id="p165"><span class="parno">165</span>If he does not intend, but he makes an effort, and semen is not emitted, there is no offence.</p>
+
+<p id="p166"><span class="parno">166</span>If he does not intend, nor makes an effort, and semen is emitted, there is no offence.</p>
+
+<p id="p167"><span class="parno">167</span>If he does not intend, nor makes an effort, and semen is not emitted, there is no offence.</p>
+
+<h3 >Non-offences</h3>
+
+<p id="p168"><span class="parno">168</span>There is no offence: if it is while dreaming; if he is not aiming at emission; if he is insane; if he is deranged; if he is overwhelmed by pain; if he is the first offender.</p>
+
+<h3>Case rulings</h3>
+<h4>Mnemonic list</h4>
+
+<p id="p169" class="verse"><span class="parno">169</span>Dream, faeces, urine,
+<br>Thought, with warm water;
+<br>Medicine, scratching, path,
+<br>Foreskin, sauna, rubbing.</p>
+
+<p id="p170" class="verse"><span class="parno">170</span>Novice, asleep,
+<br>Thigh, pressed with the fist;
+<br>In the air, stretching, staring,
+<br>Keyhole, rubbed with wood.</p>
+
+<p id="p171" class="verse"><span class="parno">171</span>Current, wet mud, running,<br><i>Pupphāvali</i>, lotus;
+<br>Sand, mud, water,
+<br>Bed, with the thumb.</p>
+
+<h4>Case details</h4>
+
+<p id="p172"><span class="parno">172</span>At one time a certain monk had an emission of semen while dreaming. He became anxious, "Could it be that I have committed an offence entailing suspension?" He informed the Master. "There is no offence, monk, since it occurred while dreaming."</p>
+
+<p id="p173"><span class="parno">173</span>At one time a certain monk was defecating and semen was emitted. He became anxious … "What was your intention, monk?"</p>
+
+<p>"I was not aiming at emission, Master."</p>
+
+<p>"There is no offence for one who is not aiming at emission."</p>
+
+<p id="p174"><span class="parno">174</span>At one time a certain monk was urinating and semen was emitted. He became anxious … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p175"><span class="parno">175</span>At one time a certain monk was thinking a sensual thought and semen was emitted. He became anxious … "There is no offence for one thinking a sensual thought."</p>
+
+<p id="p176"><span class="parno">176</span>At one time a certain monk was bathing with warm water and semen was emitted. He became anxious … "What was your intention, monk?"</p>
+
+<p>"I was not aiming at emission, Master."</p>
+
+<p>"There is no offence for one who is not aiming at emission."</p>
+
+<p id="p177"><span class="parno">177</span>At one time a certain monk, aiming at emission, bathed with warm water and semen was emitted. He became anxious … "Monk, you have committed an offence entailing suspension."</p>
+
+<p id="p178"><span class="parno">178</span>At one time a certain monk, aiming at emission, bathed with warm water and semen was not emitted. He became anxious … "Monk, there is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p179"><span class="parno">179</span>At one time a certain monk had a sore on his penis. While he was applying medicine, semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p180"><span class="parno">180</span>At one time a certain monk had a sore on his penis. Aiming at emission, he applied medicine and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p181"><span class="parno">181</span>At one time a certain monk was scratching his scrotum and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p182"><span class="parno">182</span>At one time a certain monk, aiming at emission, scratched his scrotum and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p183"><span class="parno">183</span>At one time a certain monk was walking along a path and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p184"><span class="parno">184</span>At one time a certain monk, aiming at emission, walked along a path and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p185"><span class="parno">185</span>At one time a certain monk, took hold of his foreskin, urinated, and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p186"><span class="parno">186</span>At one time a certain monk, aiming at emission, took hold of his foreskin, urinated, and semen was emitted. … semen was not emitted. "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p187"><span class="parno">187</span>At one time a certain monk was having his belly heated in the sauna and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p188"><span class="parno">188</span>At one time a certain monk, aiming at emission, had his belly heated in the sauna and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p189"><span class="parno">189</span>At one time a certain monk was rubbing his preceptorʼs back in the sauna and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p190"><span class="parno">190</span>At one time a certain monk, aiming at emission, rubbed his preceptorʼs back in the sauna and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p191"><span class="parno">191</span>At one time a certain monk was having his thigh massaged and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p192"><span class="parno">192</span>At one time a certain monk, aiming at emission, had his thigh massaged and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p193"><span class="parno">193</span>At one time a certain monk, aiming at emission, said to a novice, "Take hold of my penis." The novice took hold of his penis, and the monk emitted semen. … "There is an offence entailing suspension."</p>
+
+<p id="p194"><span class="parno">194</span>"There is no offence entailing suspension, but there is an offence of bad conduct."</p>
+
+<hr>
+<p id="p195"><span class="parno">195</span><span class="ms">Bu-Ss.1.5.10, MS.968</span>At one time a certain monk, aiming at emission, pressed his penis between his thighs and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p196"><span class="parno">196</span>At one time a certain monk, aiming at emission, pressed his penis with his fist and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p197"><span class="parno">197</span>At one time a certain monk, aiming at emission, shook his pelvis in the air and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p198"><span class="parno">198</span><span class="ms">Bu-Ss.1.5.11, MS.971</span>At one time a certain monk was stretching his body and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p199"><span class="parno">199</span>At one time a certain monk, aiming at emission, stretched his body and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p200"><span class="parno">200</span>At one time a certain monk, being lustful, stared at the private parts of a woman and semen was emitted. … "There is no offence entailing suspension. <span class="rule">But when filled with lust one should not stare at the private parts of a woman. If one does, there is an offence of bad conduct.</span>"</p>
+
+<p id="p201"><span class="parno">201</span>At one time a certain monk, aiming at emission, inserted his penis into a keyhole and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p202"><span class="parno">202</span>At one time a certain monk, aiming at emission, rubbed his penis against a piece of wood and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p203"><span class="parno">203</span>At one time a certain monk was bathing against the current and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p204"><span class="parno">204</span>At one time a certain monk, aiming at emission, bathed against the current and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p205"><span class="parno">205</span>At one time a certain monk was playing in wet mud <span class="fn"><i>Udañjala</i>; the exact meaning is uncertain.</span> and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p206"><span class="parno">206</span>At one time a certain monk, aiming at emission, played in wet mud and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p207"><span class="parno">207</span>At one time a certain monk was running in water and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p208"><span class="parno">208</span>At one time a certain monk, aiming at emission, ran in water and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p209"><span class="parno">209</span>At one time a certain monk was playing <i>pupphāvali</i><span class="note"><span class="details"><span class="p">According to the sub-commentary this is a game of sliding down a muddy slope into water.</span></span></span> and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p210"><span class="parno">210</span>At one time a certain monk, aiming at emission, played <i>pupphāvali</i> and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p211"><span class="parno">211</span>At one time a certain monk was running in a lotus grove and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p212"><span class="parno">212</span>At one time a certain monk, aiming at emission, ran in a lotus grove and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p213"><span class="parno">213</span>At one time a certain monk, aiming at emission, inserted his penis into sand and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p214"><span class="parno">214</span>At one time a certain monk, aiming at emission, inserted his penis into mud and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p215"><span class="parno">215</span>At one time a certain monk sprinkled water on his penis and semen was emitted. … "There is no offence for one who is not aiming at emission."</p>
+
+<p id="p216"><span class="parno">216</span>At one time a certain monk, aiming at emission, sprinkled water on his penis and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p217"><span class="parno">217</span>At one time a certain monk, aiming at emission, rubbed his penis against his bed and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p id="p218"><span class="parno">218</span>At one time a certain monk, aiming at emission, rubbed his penis with his thumb and semen was emitted. … "There is an offence entailing suspension." … semen was not emitted. … "There is no offence entailing suspension, but there is a serious offence."</p>
+
+<p class="endsutta"><span class="parno">219</span>The first training rule on emission of semen is finished.</p>
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p class="endsutta"><span class="parno">1</span><span class="ms">p_1V_774</span>Ime kho panāyasmanto terasa sanghādisesā
+<br>dhammā uddesaṁ āgacchanti.</p>
+
+<hr>
+<div>
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+</div>
+
+<p><span class="parno">2</span><span class="ms">p_1V_775, msdiv234</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena āyasmā seyyasako anabhirato brahmacariyaṁ carati. So tena kiso hoti lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto. Addasa kho āyasmā udāyī āyasmantaṁ seyyasakaṁ kisaṁ lūkhaṁ dubbaṇṇaṁ uppaṇḍuppaṇḍukajātaṁ dhamanisanthatagattaṁ. Disvāna āyasmantaṁ seyyasakaṁ etadavoca: "Kissa tvaṁ, āvuso seyyasaka, kiso lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto? Kacci no tvaṁ, āvuso seyyasaka, anabhirato brahmacariyaṁ carasī"ti?</p>
+
+<p>"Evamāvuso"ti.</p>
+
+<hr>
+<p>"Tena hi tvaṁ, āvuso seyyasaka, yāvadatthaṁ bhuñja yāvadatthaṁ supa yāvadatthaṁ nhāya. Yāvadatthaṁ bhuñjitvā yāvadatthaṁ supitvā yāvadatthaṁ nhāyitvā yadā te anabhirati uppajjati rāgo cittaṁ anuddhaṁseti tadā hatthena upakkamitvā asuciṁ mocehī"ti.</p>
+
+<p>"Kiṁ nu kho, āvuso, kappati evarūpaṁ kātun"ti?</p>
+
+<p>"Āma, āvuso. Ahampi evaṁ karomī"ti.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_776</span>Atha kho āyasmā seyyasako yāvadatthaṁ bhuñji yāvadatthaṁ supi yāvadatthaṁ nhāyi. Yāvadatthaṁ bhuñjitvā yāvadatthaṁ supitvā yāvadatthaṁ nhāyitvā yadā anabhirati uppajjati rāgo cittaṁ anuddhaṁseti tadā hatthena upakkamitvā asuciṁ mocesi. Atha kho āyasmā seyyasako aparena samayena vaṇṇavā ahosi pīṇindriyo pasannamukhavaṇṇo vippasannachavivaṇṇo. Atha kho āyasmato seyyasakassa sahāyakā bhikkhū āyasmantaṁ seyyasakaṁ etadavocuṁ: "Pubbe kho tvaṁ, āvuso seyyasaka, kiso ahosi lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto. So dāni tvaṁ etarahi vaṇṇavā pīṇindriyo pasannamukhavaṇṇo vippasannachavivaṇṇo. Kiṁ nu kho tvaṁ, āvuso seyyasaka, bhesajjaṁ karosī"ti?</p>
+
+<p>"Na kho ahaṁ, āvuso, bhesajjaṁ karomi. Api cāhaṁ yāvadatthaṁ bhuñjāmi yāvadatthaṁ supāmi yāvadatthaṁ nhāyāmi. Yāvadatthaṁ bhuñjitvā yāvadatthaṁ supitvā yāvadatthaṁ nhāyitvā yadā me anabhirati uppajjati rāgo cittaṁ anuddhaṁseti tadā hatthena upakkamitvā asuciṁ mocemī"ti.</p>
+
+<p>"Kiṁ pana tvaṁ, āvuso seyyasaka, yeneva hatthena saddhādeyyaṁ bhuñjasi teneva hatthena upakkamitvā asuciṁ mocesī"ti?</p>
+
+<hr>
+<p>"Evamāvuso"ti.</p>
+
+<p>Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma āyasmā seyyasako hatthena upakkamitvā asuciṁ mocessatī"ti.</p>
+
+<hr>
+<p><span class="parno">4</span><span class="ms">p_1V_777</span>Atha kho te bhikkhū āyasmantaṁ seyyasakaṁ anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusanghaṁ sannipātāpetvā āyasmantaṁ seyyasakaṁ paṭipucchi: "Saccaṁ kira tvaṁ, seyyasaka, hatthena upakkamitvā asuciṁ mocesī"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā: "Ananucchavikaṁ, moghapurisa, ananulomikaṁ appatirūpaṁ assāmaṇakaṁ akappiyaṁ akaraṇīyaṁ. Kathañhi nāma tvaṁ, moghapurisa, hatthena upakkamitvā asuciṁ mocessasi. Nanu mayā, moghapurisa, anekapariyāyena virāgāya dhammo desito no sarāgāya, visaññogāya dhammo desito no saññogāya, anupādānāya dhammo desito no saupādānāya. Tattha nāma tvaṁ, moghapurisa, mayā virāgāya dhamme desite sarāgāya cetessasi, visaññogāya dhamme desite saññogāya cetessasi, anupādānāya dhamme desite saupādānāya cetessasi. Nanu mayā, moghapurisa, anekapariyāyena rāgavirāgāya dhammo desito, madanimmadanāya pipāsavinayāya ālayasamugghātāya vaṭṭupacchedāya taṇhākkhayāya virāgāya nirodhāya nibbānāya dhammo desito? Nanu mayā, moghapurisa, anekapariyāyena kāmānaṁ pahānaṁ akkhātaṁ, kāmasaññānaṁ pariññā akkhātā, kāmapipāsānaṁ paṭivinayo akkhāto, kāmavitakkānaṁ samugghāto akkhāto, kāmapariḷāhānaṁ vūpasamo akkhāto? Netaṁ, moghapurisa, appasannānaṁ vā pasādāya, pasannānaṁ vā bhiyyobhāvāya. Atha khvetaṁ, moghapurisa, appasannānañceva appasādāya, pasannānañca ekaccānaṁ aññathattāyā"ti. Atha kho bhagavā āyasmantaṁ seyyasakaṁ anekapariyāyena vigarahitvā dubbharatāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">5</span><span class="ms">p_1V_778</span><span class="rule">"Sañcetanikā sukkavissaṭṭhi Sanghādiseso"</span>ti.</p>
+
+<p><span class="parno">6</span><span class="ms">p_1V_779</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">7</span><span class="ms">p_1V_780, msdiv235</span>Tena kho pana samayena bhikkhū paṇītabhojanāni bhuñjitvā muṭṭhassatī asampajānā niddaṁ okkamanti. Tesaṁ muṭṭhassatīnaṁ asampajānānaṁ niddaṁ okkamantānaṁ supinantena asuci muccati. Tesaṁ kukkuccaṁ ahosi— "bhagavatā sikkhāpadaṁ paññattaṁ— ‘sañcetanikā sukkavissaṭṭhi Sanghādiseso’ti. Amhākañca supinantena asuci muccati. Atthi cettha cetanā labbhati. Kacci nu kho mayaṁ sanghādisesaṁ āpattiṁ āpannā"ti? Bhagavato etamatthaṁ ārocesuṁ. "Atthesā, bhikkhave, cetanā; sā ca kho abbohārikāti. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">8</span><span class="ms">p_1V_781, msdiv236</span><span class="rule">"Sañcetanikā sukkavissaṭṭhi aññatra supinantā Sanghādiseso"</span>ti. (<i>1</i>:<b>5</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">9</span><span class="ms">p_1V_782, msdiv237</span><b>Sañcetanikā</b>'ti jānanto sañjānanto cecca abhivitaritvā vītikkamo.</p>
+
+<p><span class="parno">10</span><span class="ms">p_1V_783</span><b>Sukkan</b>'ti dasa sukkāni— nīlaṁ pītakaṁ lohitakaṁ odātaṁ takkavaṇṇaṁ dakavaṇṇaṁ telavaṇṇaṁ khīravaṇṇaṁ dadhivaṇṇaṁ sappivaṇṇaṁ.</p>
+
+<p><span class="parno">11</span><span class="ms">p_1V_784</span><b>Vissaṭṭhī</b>'ti ṭhānato cāvanā vuccati vissaṭṭhīti.</p>
+
+<p><span class="parno">12</span><span class="ms">p_1V_785</span><b>Aññatra supinantā</b>'ti ṭhapetvā supinantaṁ.</p>
+
+<p><span class="parno">13</span><span class="ms">p_1V_786</span><b>Sanghādiseso</b>'ti sanghova tassā āpattiyā parivāsaṁ deti, mūlāya paṭikassati, mānattaṁ deti, abbheti; na sambahulā, na ekapuggalo. Tena vuccati— "Sanghādiseso"ti. Tasseva āpattinikāyassa nāmakammaṁ adhivacanaṁ. Tenapi vuccati— "Sanghādiseso"ti.</p>
+
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+<h5>&nbsp;</h5>
+
+<p><span class="parno">14</span><span class="ms">p_1V_787</span>Ajjhattarūpe moceti, bahiddhārūpe moceti, ajjhattabahiddhārūpe moceti, ākāse kaṭiṁ kampento moceti;</p>
+
+<p>rāgūpatthambhe moceti, vaccūpatthambhe moceti, passāvūpatthambhe moceti, vātūpatthambhe moceti, uccālingapāṇakadaṭṭhūpatthambhe moceti;</p>
+
+<p>ārogyatthāya moceti, sukhatthāya moceti, bhesajjatthāya moceti, dānatthāya moceti, puññatthāya moceti, yaññatthāya moceti, saggatthāya moceti, bījatthāya moceti, vīmaṁsatthāya moceti, davatthāya moceti;</p>
+
+<p>nīlaṁ moceti, pītakaṁ moceti, lohitakaṁ moceti, odātaṁ moceti, takkavaṇṇaṁ moceti, dakavaṇṇaṁ moceti, telavaṇṇaṁ moceti, khīravaṇṇaṁ moceti, dadhivaṇṇaṁ moceti, sappivaṇṇaṁ moceti.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">15</span><span class="ms">p_1V_788, msdiv238</span><b>Ajjhattarūpe</b>'ti ajjhattaṁ upādinne rūpe.</p>
+
+<p><span class="parno">16</span><span class="ms">p_1V_789</span><b>Bahiddhārūpe</b>'ti bahiddhā upādinne vā anupādinne vā.</p>
+
+<hr>
+<p><span class="parno">17</span><span class="ms">p_1V_790</span><b>Ajjhattabahiddhārūpe</b>'ti tadubhaye.</p>
+
+<p><span class="parno">18</span><span class="ms">p_1V_791</span><b>Ākāse kaṭiṁ kampento</b>'ti ākāse vāyamantassa angajātaṁ kammaniyaṁ hoti.</p>
+
+<p><span class="parno">19</span><span class="ms">p_1V_792</span><b>Rāgūpatthambhe</b>'ti rāgena pīḷitassa angajātaṁ kammaniyaṁ hoti.</p>
+
+<p><span class="parno">20</span><span class="ms">p_1V_793</span><b>Vaccūpatthambhe</b>'ti vaccena pīḷitassa angajātaṁ kammaniyaṁ hoti.</p>
+
+<p><span class="parno">21</span><span class="ms">p_1V_794</span><b>Passāvūpatthambhe</b>'ti passāvena pīḷitassa angajātaṁ kammaniyaṁ hoti.</p>
+
+<p><span class="parno">22</span><span class="ms">p_1V_795</span><b>Vātūpatthambhe</b>'ti vātena pīḷitassa angajātaṁ kammaniyaṁ hoti.</p>
+
+<p><span class="parno">23</span><span class="ms">p_1V_796</span><b>Uccālingapāṇakadaṭṭhūpatthambhe</b>'ti uccālingapāṇakadaṭṭhena angajātaṁ kammaniyaṁ hoti.</p>
+
+<p><span class="parno">24</span><span class="ms">p_1V_797, msdiv239</span><b>Ārogyatthāyā</b>'ti arogo bhavissāmi.</p>
+
+<p><span class="parno">25</span><span class="ms">p_1V_798</span><b>Sukhatthāyā</b>'ti sukhaṁ vedanaṁ uppādessāmi.</p>
+
+<p><span class="parno">26</span><span class="ms">p_1V_799</span><b>Bhesajjatthāyā</b>'ti bhesajjaṁ bhavissati.</p>
+
+<hr>
+<p><span class="parno">27</span><span class="ms">p_1V_800</span><b>Dānatthāyā</b>'ti dānaṁ dassāmi.</p>
+
+<p><span class="parno">28</span><span class="ms">p_1V_801</span><b>Puññatthāyā</b>'ti puññaṁ bhavissati.</p>
+
+<hr>
+<p><span class="parno">29</span><span class="ms">p_1V_802</span><b>Yaññatthāyā</b>'ti yaññaṁ yajissāmi.</p>
+
+<p><span class="parno">30</span><span class="ms">p_1V_803</span><b>Saggatthāyā</b>'ti saggaṁ gamissāmi.</p>
+
+<hr>
+<p><span class="parno">31</span><span class="ms">p_1V_804</span><b>Bījatthāyā</b>'ti bījaṁ bhavissati.</p>
+
+<p><span class="parno">32</span><span class="ms">p_1V_805</span><b>Vīmaṁsatthāyā</b>'ti nīlaṁ bhavissati, pītakaṁ bhavissati, lohitakaṁ bhavissati, odātaṁ bhavissati, takkavaṇṇaṁ bhavissati, dakavaṇṇaṁ bhavissati, telavaṇṇaṁ bhavissati, khīravaṇṇaṁ bhavissati, dadhivaṇṇaṁ bhavissati, sappivaṇṇaṁ bhavissatīti.</p>
+
+<hr>
+<p><span class="parno">33</span><span class="ms">p_1V_806</span><b>Davatthāyā</b>'ti khiḍḍādhippāyo.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">34</span><span class="ms">p_1V_807, msdiv240</span>Ajjhattarūpe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">35</span><span class="ms">p_1V_808</span>Bahiddhārūpe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">36</span><span class="ms">p_1V_809</span>Ajjhattabahiddhārūpe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">37</span><span class="ms">p_1V_810</span>Ākāse kaṭiṁ kampento ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">38</span><span class="ms">p_1V_811</span>Rāgūpatthambhe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">39</span><span class="ms">p_1V_812</span>Vaccūpatthambhe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">40</span><span class="ms">p_1V_813</span>Passāvūpatthambhe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">41</span><span class="ms">p_1V_814</span>Vātūpatthambhe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">42</span><span class="ms">p_1V_815</span>Uccālingapāṇakadaṭṭhūpatthambhe ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">43</span><span class="ms">p_1V_816</span>Ārogyatthāya ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">44</span><span class="ms">p_1V_817</span>Sukhatthāya … pe … bhesajjatthāya … dānatthāya … puññatthāya … yaññatthāya … saggatthāya … bījatthāya … vīmaṁsatthāya … davatthāya ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">45</span><span class="ms">p_1V_818</span>Nīlaṁ ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">46</span><span class="ms">p_1V_819</span>Pītakaṁ … lohitakaṁ … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">47</span><span class="ms">p_1V_820</span>Suddhikaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">48</span><span class="ms">p_1V_821</span>Ārogyatthañca sukhatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">49</span><span class="ms">p_1V_822</span>Ārogyatthañca bhesajjatthañca … pe … ārogyatthañca dānatthañca … ārogyatthañca puññatthañca … ārogyatthañca yaññatthañca … ārogyatthañca saggatthañca … ārogyatthañca bījatthañca … ārogyatthañca vīmaṁsatthañca … ārogyatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">50</span><span class="ms">p_1V_823</span>Ekamūlakassa khaṇḍacakkaṁ niṭṭhitaṁ.</p>
+
+<hr>
+<p><span class="parno">51</span><span class="ms">p_1V_824, msdiv241</span>Sukhatthañca bhesajjatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">52</span><span class="ms">p_1V_825</span>Sukhatthañca dānatthañca … pe … sukhatthañca puññatthañca … sukhatthañca yaññatthañca … sukhatthañca saggatthañca … sukhatthañca bījatthañca … sukhatthañca vīmaṁsatthañca … sukhatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">53</span><span class="ms">p_1V_826</span>Sukhatthañca ārogyatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">54</span><span class="ms">p_1V_827, msdiv242</span>Bhesajjatthañca dānatthañca … pe … bhesajjatthañca puññatthañca … bhesajjatthañca yaññatthañca … bhesajjatthañca saggatthañca … bhesajjatthañca bījatthañca … bhesajjatthañca vīmaṁsatthañca … bhesajjatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">55</span><span class="ms">p_1V_828</span>Bhesajjatthañca ārogyatthañca … pe … bhesajjatthañca sukhatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">56</span><span class="ms">p_1V_829</span>Dānatthañca puññatthañca … pe … dānatthañca yaññatthañca … dānatthañca saggatthañca … dānatthañca bījatthañca … dānatthañca vīmaṁsatthañca … dānatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">57</span><span class="ms">p_1V_830</span>Dānatthañca ārogyatthañca … pe … dānatthañca sukhatthañca … dānatthañca bhesajjatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">58</span><span class="ms">p_1V_831</span>Puññatthañca yaññatthañca … pe … puññatthañca saggatthañca … puññatthañca bījatthañca … puññatthañca vīmaṁsatthañca … puññatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">59</span><span class="ms">p_1V_832</span>Puññatthañca ārogyatthañca … pe … puññatthañca sukhatthañca … puññatthañca bhesajjatthañca … puññatthañca dānatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">60</span><span class="ms">p_1V_833</span>Yaññatthañca saggatthañca … pe … yaññatthañca bījatthañca … yaññatthañca vīmaṁsatthañca … yaññatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">61</span><span class="ms">p_1V_834</span>Yaññatthañca ārogyatthañca … pe … yaññatthañca sukhatthañca … yaññatthañca bhesajjatthañca … yaññatthañca dānatthañca … yaññatthañca puññatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">62</span><span class="ms">p_1V_835</span>Saggatthañca bījatthañca … pe … saggatthañca vīmaṁsatthañca … saggatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">63</span><span class="ms">p_1V_836</span>Saggatthañca ārogyatthañca … pe … saggatthañca sukhatthañca … saggatthañca bhesajjatthañca … saggatthañca dānatthañca … saggatthañca puññatthañca … saggatthañca yaññatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">64</span><span class="ms">p_1V_837</span>Bījatthañca vīmaṁsatthañca … pe … bījatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">65</span><span class="ms">p_1V_838</span>Bījatthañca ārogyatthañca … pe … bījatthañca sukhatthañca … bījatthañca bhesajjatthañca … bījatthañca dānatthañca … bījatthañca puññatthañca … bījatthañca yaññatthañca … bījatthañca saggatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">66</span><span class="ms">p_1V_839</span>Vīmaṁsatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">67</span><span class="ms">p_1V_840</span>Vīmaṁsatthañca ārogyatthañca … pe … vīmaṁsatthañca sukhatthañca … vīmaṁsatthañca bhesajjatthañca … vīmaṁsatthañca dānatthañca … vīmaṁsatthañca puññatthañca … vīmaṁsatthañca yaññatthañca … vīmaṁsatthañca saggatthañca … vīmaṁsatthañca bījatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">68</span><span class="ms">p_1V_841</span>Davatthañca ārogyatthañca … pe … davatthañca sukhatthañca … davatthañca bhesajjatthañca … davatthañca dānatthañca … davatthañca puññatthañca … davatthañca yaññatthañca … davatthañca saggatthañca … davatthañca bījatthañca … davatthañca vīmaṁsatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">69</span><span class="ms">p_1V_842</span>Ekamūlakassa baddhacakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">70</span><span class="ms">p_1V_843</span>Ārogyatthañca sukhatthañca bhesajjatthañca ceteti upakkamati muccati, āpatti sanghādisesassa … pe … ārogyatthañca sukhatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">71</span><span class="ms">p_1V_844</span>Dumūlakassa khaṇḍacakkaṁ.</p>
+
+<hr>
+<p><span class="parno">72</span><span class="ms">p_1V_845</span>Sukhatthañca bhesajjatthañca dānatthañca ceteti upakkamati muccati, āpatti sanghādisesassa … pe … sukhatthañca bhesajjatthañca davatthañca … pe … sukhatthañca bhesajjatthañca ārogyatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">73</span><span class="ms">p_1V_846</span>Dumūlakassa baddhacakkaṁ, saṁkhittaṁ.</p>
+
+<p><span class="parno">74</span><span class="ms">p_1V_847</span>Vīmaṁsatthañca davatthañca ārogyatthañca ceteti upakkamati muccati, āpatti sanghādisesassa … pe … vīmaṁsatthañca davatthañca bījatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">75</span><span class="ms">p_1V_848</span>Dumūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">76</span><span class="ms">p_1V_849</span>Timūlakampi catumūlakampi pañcamūlakampi chamūlakampi sattamūlakampi aṭṭhamūlakampi navamūlakampi evameva vitthāretabbaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">77</span><span class="ms">p_1V_850</span>Idaṁ sabbamūlakaṁ.</p>
+
+<p><span class="parno">78</span><span class="ms">p_1V_851, msdiv243</span>Ārogyatthañca sukhatthañca bhesajjatthañca dānatthañca puññatthañca yaññatthañca saggatthañca bījatthañca vīmaṁsatthañca davatthañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">79</span><span class="ms">p_1V_852</span>Sabbamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">80</span><span class="ms">p_1V_853, msdiv244</span>Nīlañca pītakañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">81</span><span class="ms">p_1V_854</span>Nīlañca lohitakañca … pe … nīlañca odātañca … nīlañca takkavaṇṇañca … nīlañca dakavaṇṇañca … nīlañca telavaṇṇañca … nīlañca khīravaṇṇañca … nīlañca dadhivaṇṇañca … nīlañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">82</span><span class="ms">p_1V_855</span>Ekamūlakassa khaṇḍacakkaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">83</span><span class="ms">p_1V_856, msdiv245</span>Pītakañca lohitakañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">84</span><span class="ms">p_1V_857</span>Pītakañca odātañca … pe … pītakañca takkavaṇṇañca … pītakañca dakavaṇṇañca … pītakañca telavaṇṇañca … pītakañca khīravaṇṇañca … pītakañca dadhivaṇṇañca … pītakañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">85</span><span class="ms">p_1V_858</span>Pītakañca nīlañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">86</span><span class="ms">p_1V_859</span>Ekamūlakassa baddhacakkaṁ.</p>
+
+<p><span class="parno">87</span><span class="ms">p_1V_860, msdiv246</span>Lohitakañca odātañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">88</span><span class="ms">p_1V_861</span>Lohitakañca takkavaṇṇañca … pe … lohitakañca dakavaṇṇañca … lohitakañca telavaṇṇañca … lohitakañca khīravaṇṇañca … lohitakañca dadhivaṇṇañca … lohitakañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">89</span><span class="ms">p_1V_862</span>Lohitakañca nīlañca … pe … lohitakañca pītakañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">90</span><span class="ms">p_1V_863</span>Odātañca takkavaṇṇañca … pe … odātañca dakavaṇṇañca … odātañca telavaṇṇañca … odātañca khīravaṇṇañca … odātañca dadhivaṇṇañca … odātañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">91</span><span class="ms">p_1V_864</span>Odātañca nīlañca … pe … odātañca pītakañca … odātañca lohitakañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">92</span><span class="ms">p_1V_865</span>Takkavaṇṇañca dakavaṇṇañca … pe … takkavaṇṇañca telavaṇṇañca … takkavaṇṇañca khīravaṇṇañca … takkavaṇṇañca dadhivaṇṇañca … takkavaṇṇañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">93</span><span class="ms">p_1V_866</span>Takkavaṇṇañca nīlañca … pe … takkavaṇṇañca pītakañca … takkavaṇṇañca lohitakañca … takkavaṇṇañca odātañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">94</span><span class="ms">p_1V_867</span>Dakavaṇṇañca telavaṇṇañca … pe … dakavaṇṇañca khīravaṇṇañca … dakavaṇṇañca dadhivaṇṇañca … dakavaṇṇañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">95</span><span class="ms">p_1V_868</span>Dakavaṇṇañca nīlañca … pe … dakavaṇṇañca pītakañca … dakavaṇṇañca lohitakañca … dakavaṇṇañca odātañca … dakavaṇṇañca takkavaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">96</span><span class="ms">p_1V_869</span>Telavaṇṇañca khīravaṇṇañca … pe … telavaṇṇañca dadhivaṇṇañca … telavaṇṇañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">97</span><span class="ms">p_1V_870</span>Telavaṇṇañca nīlañca … pe … telavaṇṇañca pītakañca … telavaṇṇañca lohitakañca … telavaṇṇañca odātañca … telavaṇṇañca takkavaṇṇañca … telavaṇṇañca dakavaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">98</span><span class="ms">p_1V_871</span>Khīravaṇṇañca dadhivaṇṇañca … pe … khīravaṇṇañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">99</span><span class="ms">p_1V_872</span>Khīravaṇṇañca nīlañca … pe … khīravaṇṇañca pītakañca … khīravaṇṇañca lohitakañca … khīravaṇṇañca odātañca … khīravaṇṇañca takkavaṇṇañca … khīravaṇṇañca dakavaṇṇañca … khīravaṇṇañca telavaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">100</span><span class="ms">p_1V_873</span>Dadhivaṇṇañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">101</span><span class="ms">p_1V_874</span>Dadhivaṇṇañca nīlañca … pe … dadhivaṇṇañca pītakañca … dadhivaṇṇañca lohitakañca … dadhivaṇṇañca odātañca … dadhivaṇṇañca takkavaṇṇañca … dadhivaṇṇañca dakavaṇṇañca … dadhivaṇṇañca telavaṇṇañca … dadhivaṇṇañca khīravaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">102</span><span class="ms">p_1V_875</span>Sappivaṇṇañca nīlañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">103</span><span class="ms">p_1V_876</span>Sappivaṇṇañca pītakañca … pe … sappivaṇṇañca lohitakañca … sappivaṇṇañca odātañca … sappivaṇṇañca takkavaṇṇañca … sappivaṇṇañca dakavaṇṇañca … sappivaṇṇañca telavaṇṇañca … sappivaṇṇañca khīravaṇṇañca … sappivaṇṇañca dadhivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">104</span><span class="ms">p_1V_877</span>Ekamūlakassa baddhacakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">105</span><span class="ms">p_1V_878</span>Nīlañca pītakañca lohitakañca ceteti upakkamati muccati, āpatti sanghādisesassa … pe … nīlañca pītakañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">106</span><span class="ms">p_1V_879</span>Dumūlakassa khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">107</span><span class="ms">p_1V_880</span>Pītakañca lohitakañca odātañca ceteti upakkamati muccati, āpatti sanghādisesassa … pe … pītakañca lohitakañca sappivaṇṇañca … pe … pītakañca lohitakañca nīlañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">108</span><span class="ms">p_1V_881</span>Dumūlakassa baddhacakkaṁ, saṁkhittaṁ.</p>
+
+<p><span class="parno">109</span><span class="ms">p_1V_882</span>Dadhivaṇṇañca sappivaṇṇañca nīlañca ceteti upakkamati muccati, āpatti sanghādisesassa … pe … dadhivaṇṇañca sappivaṇṇañca khīravaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">110</span><span class="ms">p_1V_883</span>Dumūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">111</span><span class="ms">p_1V_884</span>Timūlakampi catumūlakampi pañcamūlakampi chamūlakampi sattamūlakampi aṭṭhamūlakampi navamūlakampi evameva vitthāretabbaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">112</span><span class="ms">p_1V_885</span>Idaṁ sabbamūlakaṁ.</p>
+
+<p><span class="parno">113</span><span class="ms">p_1V_886, msdiv247</span>Nīlañca pītakañca lohitakañca odātañca takkavaṇṇañca dakavaṇṇañca telavaṇṇañca khīravaṇṇañca dadhivaṇṇañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">114</span><span class="ms">p_1V_887</span>Sabbamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">115</span><span class="ms">p_1V_888, msdiv248</span>Ārogyatthañca nīlañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">116</span><span class="ms">p_1V_889</span>Ārogyatthañca sukhatthañca nīlañca pītakañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">117</span><span class="ms">p_1V_890</span>Ārogyatthañca sukhatthañca bhesajjatthañca nīlañca pītakañca lohitakañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">118</span><span class="ms">p_1V_891</span>(Ubhatovaḍḍhakaṁ evameva vaḍḍhetabbaṁ.)</p>
+
+<p><span class="parno">119</span><span class="ms">p_1V_892</span>Ārogyatthañca sukhatthañca bhesajjatthañca dānatthañca puññatthañca yaññatthañca saggatthañca bījatthañca vīmaṁsatthañca davatthañca nīlañca pītakañca lohitakañca odātañca takkavaṇṇañca dakavaṇṇañca telavaṇṇañca khīravaṇṇañca dadhivaṇṇañca sappivaṇṇañca ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">120</span><span class="ms">p_1V_893</span>Missakacakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">121</span><span class="ms">p_1V_894, msdiv249</span>Nīlaṁ mocessāmīti ceteti upakkamati pītakaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">122</span><span class="ms">p_1V_895</span>Nīlaṁ mocessāmīti ceteti upakkamati lohitakaṁ … pe … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">123</span><span class="ms">p_1V_896</span>Khaṇḍacakkaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">124</span><span class="ms">p_1V_897, msdiv250</span>Pītakaṁ mocessāmīti ceteti upakkamati lohitakaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">125</span><span class="ms">p_1V_898</span>Pītakaṁ mocessāmīti ceteti upakkamati odātaṁ … pe … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ … nīlaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">126</span><span class="ms">p_1V_899</span>Baddhacakkamūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">127</span><span class="ms">p_1V_900, msdiv251</span> Sappivaṇṇaṁ mocessāmīti ceteti upakkamati nīlaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">128</span><span class="ms">p_1V_901</span>Sappivaṇṇaṁ mocessāmīti ceteti upakkamati pītakaṁ … pe … lohitakaṁ … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">129</span><span class="ms">p_1V_902</span>Kucchicakkaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">130</span><span class="ms">p_1V_903, msdiv252</span>Pītakaṁ mocessāmīti ceteti upakkamati nīlaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">131</span><span class="ms">p_1V_904</span>Lohitakaṁ … pe … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ mocessāmīti ceteti upakkamati nīlaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">132</span><span class="ms">p_1V_905</span>Piṭṭhicakkassa paṭhamaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">133</span><span class="ms">p_1V_906, msdiv253</span>Lohitakaṁ mocessāmīti ceteti upakkamati pītakaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">134</span><span class="ms">p_1V_907</span>Odātaṁ … pe … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ … nīlaṁ mocessāmīti ceteti upakkamati pītakaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">135</span><span class="ms">p_1V_908</span>Piṭṭhicakkassa dutiyaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">136</span><span class="ms">p_1V_909, msdiv254</span>Odātaṁ mocessāmīti ceteti upakkamati lohitakaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">137</span><span class="ms">p_1V_910</span>Takkavaṇṇaṁ … pe … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ … nīlaṁ … pītakaṁ mocessāmīti ceteti upakkamati lohitakaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">138</span><span class="ms">p_1V_911</span>Piṭṭhicakkassa tatiyaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">139</span><span class="ms">p_1V_912, msdiv255</span>Takkavaṇṇaṁ mocessāmīti ceteti upakkamati odātaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">140</span><span class="ms">p_1V_913</span>Dakavaṇṇaṁ … pe … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ … nīlaṁ … pītakaṁ … lohitakaṁ mocessāmīti ceteti upakkamati odātaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">141</span><span class="ms">p_1V_914</span>Piṭṭhicakkassa catutthaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">142</span><span class="ms">p_1V_915, msdiv256</span>Dakavaṇṇaṁ mocessāmīti ceteti upakkamati takkavaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">143</span><span class="ms">p_1V_916</span>Telavaṇṇaṁ … pe … khīravaṇṇaṁ … dadhivaṇṇaṁ … sappivaṇṇaṁ … nīlaṁ … pītakaṁ … lohitakaṁ … odātaṁ mocessāmīti ceteti upakkamati takkavaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">144</span><span class="ms">p_1V_917</span>Piṭṭhicakkassa pañcamaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">145</span><span class="ms">p_1V_918, msdiv257</span>Telavaṇṇaṁ mocessāmīti ceteti upakkamati dakavaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">146</span><span class="ms">p_1V_919</span>Khīravaṇṇaṁ … pe … dadhivaṇṇaṁ … sappivaṇṇaṁ … nīlaṁ … pītakaṁ … lohitakaṁ … odātaṁ … takkavaṇṇaṁ mocessāmīti ceteti upakkamati dakavaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">147</span><span class="ms">p_1V_920</span>Piṭṭhicakkassa chaṭṭhaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">148</span><span class="ms">p_1V_921, msdiv258</span>Khīravaṇṇaṁ mocessāmīti ceteti upakkamati telavaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">149</span><span class="ms">p_1V_922</span>Dadhivaṇṇaṁ … pe … sappivaṇṇaṁ … nīlaṁ … pītakaṁ … lohitakaṁ … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ mocessāmīti ceteti upakkamati telavaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">150</span><span class="ms">p_1V_923</span>Piṭṭhicakkassa sattamaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">151</span><span class="ms">p_1V_924, msdiv259</span>Dadhivaṇṇaṁ mocessāmīti ceteti upakkamati khīravaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">152</span><span class="ms">p_1V_925</span>Sappivaṇṇaṁ … pe … nīlaṁ … pītakaṁ … lohitakaṁ … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ mocessāmīti ceteti upakkamati khīravaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">153</span><span class="ms">p_1V_926</span>Piṭṭhicakkassa aṭṭhamaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">154</span><span class="ms">p_1V_927, msdiv260</span>Sappivaṇṇaṁ mocessāmīti ceteti upakkamati dadhivaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">155</span><span class="ms">p_1V_928</span>Nīlaṁ … pe … pītakaṁ … lohitakaṁ … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ mocessāmīti ceteti upakkamati dadhivaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">156</span><span class="ms">p_1V_929</span>Piṭṭhicakkassa navamaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p><span class="parno">157</span><span class="ms">p_1V_930, msdiv261</span>Nīlaṁ mocessāmīti ceteti upakkamati sappivaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">158</span><span class="ms">p_1V_931</span>Pītakaṁ … pe … lohitakaṁ … odātaṁ … takkavaṇṇaṁ … dakavaṇṇaṁ … telavaṇṇaṁ … khīravaṇṇaṁ … dadhivaṇṇaṁ mocessāmīti ceteti upakkamati sappivaṇṇaṁ muccati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">159</span><span class="ms">p_1V_932</span>Piṭṭhicakkassa dasamaṁ gamanaṁ niṭṭhitaṁ.</p>
+
+<p class="endsutta">Piṭṭhicakkaṁ niṭṭhitaṁ.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">160</span><span class="ms">p_1V_933, msdiv262</span>Ceteti upakkamati muccati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">161</span><span class="ms">p_1V_934</span>Ceteti upakkamati na muccati, āpatti thullaccayassa.</p>
+
+<p><span class="parno">162</span><span class="ms">p_1V_935</span>Ceteti na upakkamati muccati, anāpatti.</p>
+
+<p><span class="parno">163</span><span class="ms">p_1V_936</span>Ceteti na upakkamati na muccati, anāpatti.</p>
+
+<p><span class="parno">164</span><span class="ms">p_1V_937</span>Na ceteti upakkamati muccati, anāpatti.</p>
+
+<p><span class="parno">165</span><span class="ms">p_1V_938</span>Na ceteti upakkamati na muccati, anāpatti.</p>
+
+<p><span class="parno">166</span><span class="ms">p_1V_939</span>Na ceteti na upakkamati muccati, anāpatti.</p>
+
+<p><span class="parno">167</span><span class="ms">p_1V_940</span>Na ceteti na upakkamati na muccati, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">168</span><span class="ms">p_1V_941</span>Anāpatti— supinantena, namocanādhippāyassa, ummattakassa, khittacittassa, vedanāṭṭassa, ādikammikassāti.</p>
+
+<h3>&nbsp;</h3>
+
+<h4>1.1 Vinītavatthuuddānagāthā</h4>
+
+<p class="verse"><span class="parno">169</span><span class="ms">p_1V_942</span>Supinoccārapassāvo,
+<br>vitakkuṇhodakena ca;
+<br>Bhesajjaṁ kaṇḍuvaṁ maggo,
+<br>vatthi jantāgharupakkamo.</p>
+
+<p class="verse"><span class="parno">170</span><span class="ms">p_1V_943</span>Sāmaṇero ca sutto ca,
+<br>ūru muṭṭhinā pīḷayi;
+<br>Ākāse thambhaṁ nijjhāyi,
+<br>chiddaṁ kaṭṭhena ghaṭṭayi.</p>
+
+<p class="verse"><span class="parno">171</span><span class="ms">p_1V_944</span>Soto udañjalaṁ dhāvaṁ,
+<br>pupphāvaliyaṁ pokkharaṁ;
+<br>Vālikā kaddamusseko,
+<br>sayananguṭṭhakena cāti.</p>
+
+<h4>1.2 Vinītavatthu</h4>
+
+<p><span class="parno">172</span><span class="ms">p_1V_945, msdiv263</span>Tena kho pana samayena aññatarassa bhikkhuno supinantena asuci mucci. Tassa kukkuccaṁ ahosi— "bhagavatā sikkhāpadaṁ paññattaṁ, kacci nu kho ahaṁ sanghādisesaṁ āpattiṁ āpanno"ti? Bhagavato etamatthaṁ ārocesi. "Anāpatti, bhikkhu, supinantenā"ti. (1)</p>
+
+<p><span class="parno">173</span><span class="ms">p_1V_946</span>Tena kho pana samayena aññatarassa bhikkhuno uccāraṁ karontassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "kiṁcitto tvaṁ, bhikkhū"ti?</p>
+
+<p>"Nāhaṁ, bhagavā, mocanādhippāyo"ti.</p>
+
+<p>"Anāpatti, bhikkhu, namocanādhippāyassā"ti. (2)</p>
+
+<p><span class="parno">174</span><span class="ms">p_1V_947</span>Tena kho pana samayena aññatarassa bhikkhuno passāvaṁ karontassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (3)</p>
+
+<p><span class="parno">175</span><span class="ms">p_1V_948</span>Tena kho pana samayena aññatarassa bhikkhuno kāmavitakkaṁ vitakkentassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, vitakkentassā"ti. (4)</p>
+
+<p><span class="parno">176</span><span class="ms">p_1V_949</span>Tena kho pana samayena aññatarassa bhikkhuno uṇhodakena nhāyantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "kiṁcitto tvaṁ, bhikkhū"ti?</p>
+
+<p>"Nāhaṁ, bhagavā, mocanādhippāyo"ti.</p>
+
+<p>"Anāpatti, bhikkhu, namocanādhippāyassā"ti. (5)</p>
+
+<p><span class="parno">177</span><span class="ms">p_1V_950</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa uṇhodakena nhāyantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno sanghādisesan"ti. (6)</p>
+
+<p><span class="parno">178</span><span class="ms">p_1V_951</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa uṇhodakena nhāyantassa asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (7)</p>
+
+<p><span class="parno">179</span><span class="ms">p_1V_952</span>Tena kho pana samayena aññatarassa bhikkhuno angajāte vaṇo hoti. Bhesajjena ālimpentassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (8)</p>
+
+<p><span class="parno">180</span><span class="ms">p_1V_953</span>Tena kho pana samayena aññatarassa bhikkhuno angajāte vaṇo hoti. Mocanādhippāyassa bhesajjena ālimpentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (9 –⁠10)</p>
+
+<p><span class="parno">181</span><span class="ms">p_1V_954</span>Tena kho pana samayena aññatarassa bhikkhuno aṇḍaṁ kaṇḍuvantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (11)</p>
+
+<p><span class="parno">182</span><span class="ms">p_1V_955</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa aṇḍaṁ kaṇḍuvantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (12 –⁠13)</p>
+
+<p><span class="parno">183</span><span class="ms">p_1V_956, msdiv264</span>Tena kho pana samayena aññatarassa bhikkhuno maggaṁ gacchantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (14)</p>
+
+<p><span class="parno">184</span><span class="ms">p_1V_957</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa maggaṁ gacchantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (15 –⁠16)</p>
+
+<p><span class="parno">185</span><span class="ms">p_1V_958</span>Tena kho pana samayena aññatarassa bhikkhuno vatthiṁ gahetvā passāvaṁ karontassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (17)</p>
+
+<p><span class="parno">186</span><span class="ms">p_1V_959</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa vatthiṁ gahetvā passāvaṁ karontassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (18 –⁠19)</p>
+
+<p><span class="parno">187</span><span class="ms">p_1V_960</span>Tena kho pana samayena aññatarassa bhikkhuno jantāghare udaravaṭṭiṁ tāpentassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (20)</p>
+
+<p><span class="parno">188</span><span class="ms">p_1V_961</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa jantāghare udaravaṭṭiṁ tāpentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (21 –⁠22)</p>
+
+<p><span class="parno">189</span><span class="ms">p_1V_962</span>Tena kho pana samayena aññatarassa bhikkhuno jantāghare upajjhāyassa piṭṭhiparikammaṁ karontassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (23)</p>
+
+<p><span class="parno">190</span><span class="ms">p_1V_963</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa jantāghare upajjhāyassa piṭṭhiparikammaṁ karontassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (24 –⁠25)</p>
+
+<p><span class="parno">191</span><span class="ms">p_1V_964, msdiv265</span>Tena kho pana samayena aññatarassa bhikkhuno ūruṁ ghaṭṭāpentassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (26)</p>
+
+<p><span class="parno">192</span><span class="ms">p_1V_965</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa ūruṁ ghaṭṭāpentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (27 –⁠28)</p>
+
+<p><span class="parno">193</span><span class="ms">p_1V_966</span>Tena kho pana samayena aññataro bhikkhu mocanādhippāyo aññataraṁ sāmaṇeraṁ etadavoca: "ehi me tvaṁ, āvuso sāmaṇera, angajātaṁ gaṇhāhī"ti. So tassa angajātaṁ aggahesi. Tasseva asuci mucci. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno sanghādisesan"ti. (29)</p>
+
+<p><span class="parno">194</span><span class="ms">p_1V_967</span>Tena kho pana samayena aññataro bhikkhu suttassa sāmaṇerassa angajātaṁ aggahesi. Tasseva asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti dukkaṭassā"ti. (30)</p>
+
+<hr>
+<p><span class="parno">195</span><span class="ms">p_1V_968, msdiv266</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa ūrūhi angajātaṁ pīḷentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (31 –⁠32)</p>
+
+<p><span class="parno">196</span><span class="ms">p_1V_969</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa muṭṭhinā angajātaṁ pīḷentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (33 –⁠34)</p>
+
+<p><span class="parno">197</span><span class="ms">p_1V_970</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa ākāse kaṭiṁ kampentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (35 –⁠36)</p>
+
+<p><span class="parno">198</span><span class="ms">p_1V_971</span>Tena kho pana samayena aññatarassa bhikkhuno kāyaṁ thambhentassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (37)</p>
+
+<p><span class="parno">199</span><span class="ms">p_1V_972</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa kāyaṁ thambhentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (38 –⁠39)</p>
+
+<p><span class="parno">200</span><span class="ms">p_1V_973</span>Tena kho pana samayena aññataro bhikkhu sāratto mātugāmassa angajātaṁ upanijjhāyi. Tassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa. Na ca, bhikkhave, sārattena mātugāmassa angajātaṁ upanijjhāyitabbaṁ. Yo upanijjhāyeyya, āpatti dukkaṭassā"ti. (40)</p>
+
+<p><span class="parno">201</span><span class="ms">p_1V_974, msdiv267</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa tāḷacchiddaṁ angajātaṁ pavesentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (41 –⁠42)</p>
+
+<p><span class="parno">202</span><span class="ms">p_1V_975</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa kaṭṭhena angajātaṁ ghaṭṭentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (43 –⁠44)</p>
+
+<p><span class="parno">203</span><span class="ms">p_1V_976</span>Tena kho pana samayena aññatarassa bhikkhuno paṭisote nhāyantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (45)</p>
+
+<p><span class="parno">204</span><span class="ms">p_1V_977</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa paṭisote nhāyantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (46 –⁠47)</p>
+
+<p><span class="parno">205</span><span class="ms">p_1V_978</span>Tena kho pana samayena aññatarassa bhikkhuno udañjalaṁ kīḷantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (48)</p>
+
+<p><span class="parno">206</span><span class="ms">p_1V_979</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa udañjalaṁ kīḷantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (49 –⁠50)</p>
+
+<p><span class="parno">207</span><span class="ms">p_1V_980</span>Tena kho pana samayena aññatarassa bhikkhuno udake dhāvantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (51)</p>
+
+<p><span class="parno">208</span><span class="ms">p_1V_981</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa udake dhāvantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (52 –⁠53)</p>
+
+<p><span class="parno">209</span><span class="ms">p_1V_982</span>Tena kho pana samayena aññatarassa bhikkhuno pupphāvaliyaṁ kīḷantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (54)</p>
+
+<p><span class="parno">210</span><span class="ms">p_1V_983</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa pupphāvaliyaṁ kīḷantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (55 –⁠56)</p>
+
+<p><span class="parno">211</span><span class="ms">p_1V_984, msdiv268</span>Tena kho pana samayena aññatarassa bhikkhuno pokkharavane dhāvantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (57)</p>
+
+<p><span class="parno">212</span><span class="ms">p_1V_985</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa pokkharavane dhāvantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (58 –⁠59)</p>
+
+<p><span class="parno">213</span><span class="ms">p_1V_986</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa vālikaṁ angajātaṁ pavesentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (60 –⁠61)</p>
+
+<p><span class="parno">214</span><span class="ms">p_1V_987</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa kaddamaṁ angajātaṁ pavesentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (62 –⁠63)</p>
+
+<p><span class="parno">215</span><span class="ms">p_1V_988</span>Tena kho pana samayena aññatarassa bhikkhuno udakena angajātaṁ osiñcantassa asuci mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namocanādhippāyassā"ti. (64)</p>
+
+<p><span class="parno">216</span><span class="ms">p_1V_989</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa udakena angajātaṁ osiñcantassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (65 –⁠66)</p>
+
+<p><span class="parno">217</span><span class="ms">p_1V_990</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa sayane angajātaṁ ghaṭṭentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (67 –⁠68)</p>
+
+<p><span class="parno">218</span><span class="ms">p_1V_991</span>Tena kho pana samayena aññatarassa bhikkhuno mocanādhippāyassa anguṭṭhena angajātaṁ ghaṭṭentassa asuci mucci … pe … asuci na mucci. Tassa kukkuccaṁ ahosi— "bhagavatā sikkhāpadaṁ paññattaṁ, kacci nu kho ahaṁ sanghādisesaṁ āpattiṁ āpanno"ti? Bhagavato etamatthaṁ ārocesi. "Anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (69 –⁠70)</p>
+
+<p class="endsutta"><span class="parno">219</span><span class="ms">p_1V_992</span>Sukkavissaṭṭhisikkhāpadaṁ niṭṭhitaṁ paṭhamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-pj4.html#content"></a><a id="next-sutta" href="../vi/bu-vb-sn2.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-sn.html">Sanghādisesas</a>Sanghādisesa 1
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

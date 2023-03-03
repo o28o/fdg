@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Nissaggiya Pācittiya&nbsp;17</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Nissaggiya Pācittiya&nbsp;17: The Training Rule on Washing Wool.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.&nbsp; &nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying in the Sakyan country at Kapilavatthu in the Banyan Tree Monastery. At that time some monks belonging to the group of six got nuns to wash, dye, and comb wool. Because of this work, the nuns neglected recitation, examination, the higher morality, the higher mind, and the higher wisdom.</p>
+
+<p>Then Mahāpajāpati Gotamī approached the Master, paid homage to him, and stood to one side. And the Master said to her: “Gotamī, I hope the nuns are heedful, energetic, and diligent?"</p>
+
+<p>“How, bhante, could the nuns be heedful? The Venerables of the group of six get the nuns to wash, dye, and comb wool. Because of this work, the nuns neglect recitation, examination, the higher morality, the higher mind, and the higher wisdom."</p>
+
+<p id="p2"><span class="parno">2</span>The Master then instructed, inspired and gladdened her with a Dhamma talk. She paid homage to him, circumambulated him with her right side towards him, and departed.</p>
+
+<p id="p3"><span class="parno">3</span>The Master then convened the Saṅgha and questioned the monks belonging to the group of six: “Is it true, monks, that you got nuns to wash, dye, and comb wool?"</p>
+
+<hr>
+<p>“It’s true, Master."</p>
+
+<p>“Are they your relatives?"</p>
+
+<p>“No, Master."</p>
+
+<hr>
+<p>“Foolish men, people who are not related do not know what is appropriate and what is inappropriate in dealing with each other, what is inspiring behaviour and what is not. And still you got unrelated nuns to wash, dye, and comb wool. This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">4</span>“If a monk gets an unrelated nun to wash, dye, or comb wool, he commits an offence entailing relinquishment and confession."</p>
+
+<h3>Definitions</h3>
+
+<p id="p5"><span class="parno">5</span>A: whoever … Monk: … The monk who is ordained by a complete Saṅgha through a procedure of one motion and three announcements, which is unchallengeable and fit to stand; this sort of monk is meant in this case.</p>
+
+<p id="p6"><span class="parno">6</span>Unrelated: anyone who is not a descendent of one’s male ancestors going back seven generations, either on the mother’s side or on the father’s side.</p>
+
+<hr>
+<p id="p7"><span class="parno">7</span>Nun: fully ordained by both Sanghas.</p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>If he tells her to wash it, he commits an offence of bad conduct. When it has been washed, it becomes subject to relinquishment. If he tells her to dye it, he commits an offence of bad conduct. When it has been dyed, it becomes subject to relinquishment. If he tells her to comb it, he commits an offence of bad conduct. When it has been combed, it becomes subject to relinquishment.</p>
+
+<p>The wool is to be relinquished to a Saṅgha, a group, or an individual. “And, monks, it is to be relinquished in this way. … <span class="add">To be expanded as in <a href="../vi/bu-vb-np1.html#p13">Nissaggiya Pācittiya&nbsp;1, verses 13 to 17</a> with appropriate substitutions.</span> … ‘<span>Bhante, this wool which I got washed by an unrelated nun is to be relinquished. I relinquish it to the Saṅgha.</span>’ … the Saṅgha should give … the Venerables should give … “<span>I give this wool back to the Venerable.</span>"</p>
+
+<h3>Permutations</h3>
+
+<p id="p9"><span class="parno">9</span>If she is unrelated and he perceives her as unrelated, and he gets her to wash wool, he commits an offence entailing relinquishment and confession. If she is unrelated and he perceives her as unrelated, and he gets her to wash and dye wool, he commits one offence entailing relinquishment and one offence of bad conduct. If she is unrelated and he perceives her as unrelated, and he gets her to wash and comb wool, he commits one offence entailing relinquishment and one offence of bad conduct. If she is unrelated and he perceives her as unrelated, and he gets her to wash, dye, and comb wool, he commits one offence entailing relinquishment and two offences of bad conduct.</p>
+
+<p id="p10"><span class="parno">10</span>If she is unrelated and he perceives her as unrelated, and he gets her to dye wool, he commits an offence entailing relinquishment and confession. If she is unrelated and he perceives her as unrelated, and he gets her to dye and comb wool, he commits one offence entailing relinquishment and one offence of bad conduct. If she is unrelated and he perceives her as unrelated, and he gets her to dye and wash wool, he commits one offence entailing relinquishment and one offence of bad conduct. If she is unrelated and he perceives her as unrelated, and he gets her to dye, comb, and wash wool, he commits one offence entailing relinquishment and two offences of bad conduct.</p>
+
+<p id="p11"><span class="parno">11</span>If she is unrelated and he perceives her as unrelated, and he gets her to comb wool, he commits an offence entailing relinquishment and confession. If she is unrelated and he perceives her as unrelated, and he gets her to comb and wash wool, he commits one offence entailing relinquishment and one offence of bad conduct. If she is unrelated and he perceives her as unrelated, and he gets her to comb and dye wool, he commits one offence entailing relinquishment and one offence of bad conduct. If she is unrelated and he perceives her as unrelated, and he gets her to comb, wash, and dye wool, he commits one offence entailing relinquishment and two offences of bad conduct.</p>
+
+<p id="p12"><span class="parno">12</span>If she is unrelated, but he has doubts about it … If she is unrelated, but he perceives her as related … If he gets her to wash wool belonging to someone else, he commits an offence of bad conduct. If he gets a nun ordained only on one side to do the washing, he commits an offence of bad conduct. If she is related, but he perceives her as unrelated, he commits an offence of bad conduct. If she is related, but he has doubts about it, he commits an offence of bad conduct. If she is related and he perceives her as related, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p13"><span class="parno">13</span>There is no offence: if a related nun does the washing and an unrelated nun helps her; if a nun does the washing without being asked; if one gets a nun to wash an unused and finished article; if it is a trainee nun; if it is a female novice; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">14</span>The seventh rule, the training rule on washing wool, is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_2189, msdiv576</span>Tena samayena buddho bhagavā sakkesu viharati kapilavatthusmiṁ nigrodhārāme. Tena kho pana samayena chabbaggiyā bhikkhū bhikkhunīhi eḷakalomāni dhovāpentipi rajāpentipi vijaṭāpentipi. Bhikkhuniyo eḷakalomāni dhovantiyo rajantiyo vijaṭentiyo riñcanti uddesaṁ paripucchaṁ adhisīlaṁ adhicittaṁ adhipaññaṁ.</p>
+
+<p>Atha kho mahāpajāpati gotamī yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho mahāpajāpatiṁ gotamiṁ bhagavā etadavoca: "Kacci, gotami, bhikkhuniyo appamattā ātāpiniyo pahitattā viharantī"ti?</p>
+
+<p>"Kuto, bhante, bhikkhunīnaṁ appamādo. Ayyā chabbaggiyā bhikkhunīhi eḷakalomāni dhovāpentipi rajāpentipi vijaṭāpentipi. Bhikkhuniyo eḷakalomāni dhovantiyo rajantiyo vijaṭentiyo riñcanti uddesaṁ paripucchaṁ adhisīlaṁ adhicittaṁ adhipaññan"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_1V_2190</span>Atha kho bhagavā mahāpajāpatiṁ gotamiṁ dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho mahāpajāpati gotamī bhagavatā dhammiyā kathāya sandassitā samādapitā samuttejitā sampahaṁsitā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_2191</span>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusaṇghaṁ sannipātāpetvā chabbaggiye bhikkhū paṭipucchi: "Saccaṁ kira tumhe, bhikkhave, bhikkhunīhi eḷakalomāni dhovāpethapi rajāpethapi vijaṭāpethapī"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>"Ñātikāyo tumhākaṁ, bhikkhave, aññātikāyo"ti?</p>
+
+<p>"Aññātikāyo, bhagavā"ti.</p>
+
+<hr>
+<p>"Aññātakā, moghapurisā, aññātikānaṁ na jānanti patirūpaṁ vā appatirūpaṁ vā pāsādikaṁ vā apāsādikaṁ vā. Tattha nāma tumhe, moghapurisā, aññātikāhi bhikkhunīhi eḷakalomāni dhovāpessathapi rajāpessathapi vijaṭāpessathapi. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">4</span><span class="ms">p_1V_2192, msdiv577</span><span class="rule">"Yo pana bhikkhu aññātikāya bhikkhuniyā eḷakalomāni dhovāpeyya vā rajāpeyya vā vijaṭāpeyya vā, nissaggiyaṁ pācittiyan"</span>ti. (<i>17</i>:<b>36</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">5</span><span class="ms">p_1V_2193, msdiv578</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<p><span class="parno">6</span><span class="ms">p_1V_2194</span><b>Aññātikā</b> nāma mātito vā pitito vā yāva sattamā pitāmahayugā asambaddhā.</p>
+
+<hr>
+<p><span class="parno">7</span><span class="ms">p_1V_2195</span><b>Bhikkhunī</b> nāma ubhatosaṇghe upasampannā.</p>
+
+<hr>
+<p><span class="parno">8</span><span class="ms">p_1V_2196</span>Dhovāti āṇāpeti, āpatti dukkaṭassa. Dhotāni nissaggiyāni honti. Rajāti āṇāpeti,
+āpatti dukkaṭassa. Rattāni nissaggiyāni honti. Vijaṭehīti āṇāpeti, āpatti dukkaṭassa. Vijaṭitāni nissaggiyāni honti.</p>
+
+<p>Nissajjitabbāni sanghassa vā gaṇassa vā puggalassa vā. Evañca pana, bhikkhave, nissajjitabbāni … pe … "imāni me, bhante, eḷakalomāni aññātikāya bhikkhuniyā dhovāpitāni nissaggiyāni. Imānāhaṁ sanghassa nissajjāmī"ti … pe … dadeyyāti … pe … dadeyyunti … pe … āyasmato dammīti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">9</span><span class="ms">p_1V_2197, msdiv579</span>Aññātikāya aññātikasaññī eḷakalomāni dhovāpeti, nissaggiyaṁ pācittiyaṁ. Aññātikāya aññātikasaññī eḷakalomāni dhovāpeti rajāpeti, nissaggiyena āpatti dukkaṭassa. Aññātikāya aññātikasaññī eḷakalomāni dhovāpeti vijaṭāpeti, nissaggiyena āpatti dukkaṭassa. Aññātikāya aññātikasaññī eḷakalomāni dhovāpeti rajāpeti vijaṭāpeti, nissaggiyena āpatti dvinnaṁ dukkaṭānaṁ.</p>
+
+<p><span class="parno">10</span><span class="ms">p_1V_2198</span>Aññātikāya aññātikasaññī eḷakalomāni rajāpeti, nissaggiyaṁ pācittiyaṁ. Aññātikāya aññātikasaññī eḷakalomāni rajāpeti vijaṭāpeti, nissaggiyena āpatti dukkaṭassa. Aññātikāya aññātikasaññī eḷakalomāni rajāpeti dhovāpeti, nissaggiyena āpatti dukkaṭassa. Aññātikāya aññātikasaññī eḷakalomāni rajāpeti vijaṭāpeti dhovāpeti, nissaggiyena āpatti dvinnaṁ dukkaṭānaṁ.</p>
+
+<p><span class="parno">11</span><span class="ms">p_1V_2199</span>Aññātikāya aññātikasaññī eḷakalomāni vijaṭāpeti, nissaggiyaṁ pācittiyaṁ. Aññātikāya aññātikasaññī eḷakalomāni vijaṭāpeti dhovāpeti, nissaggiyena āpatti dukkaṭassa. Aññātikāya aññātikasaññī eḷakalomāni vijaṭāpeti rajāpeti, nissaggiyena āpatti dukkaṭassa. Aññātikāya aññātikasaññī eḷakalomāni vijaṭāpeti dhovāpeti rajāpeti, nissaggiyena āpatti dvinnaṁ dukkaṭānaṁ.</p>
+
+<p><span class="parno">12</span><span class="ms">p_1V_2200, msdiv580</span>Aññātikāya vematiko … pe … aññātikāya ñātikasaññī … pe … aññassa eḷakalomāni dhovāpeti, āpatti dukkaṭassa. Ekato upasampannāya dhovāpeti, āpatti dukkaṭassa.
+Ñātikāya aññātikasaññī, āpatti dukkaṭassa. Ñātikāya vematiko, āpatti dukkaṭassa. Ñātikāya ñātikasaññī, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">13</span><span class="ms">p_1V_2201, msdiv581</span>Anāpatti— ñātikāya dhovantiyā aññātikā dutiyā hoti, avuttā dhovati, aparibhuttaṁ katabhaṇḍaṁ dhovāpeti, sikkhamānāya sāmaṇeriyā ummattakassa
+ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">14</span><span class="ms">p_1V_2202</span>Eḷakalomadhovāpanasikkhāpadaṁ niṭṭhitaṁ sattamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-np16.html#content"></a><a id="next-sutta" href="../vi/bu-vb-np18.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya&nbsp;17
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Sanghādisesa 9</title>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<!-- Loading third party fonts -->
+ 			 			<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 			<!-- Loading main and menu stylesheets -->
+ 			<link rel="stylesheet" href="../css/w3.css">
+ 			<link rel="stylesheet" href="../css/css.css">
+ 			<link rel="stylesheet" href="../css/menu.css">
+ 			<script src="../js/jquery-1.10.2.min.js"></script>
+ 			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+ <body>
+ 
+ <!-- header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 		<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 				<ul id="css3menu0">
+ 					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 					<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 				<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 					<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 						<ul>
+ 							<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 							<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 							<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 							<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 							<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 							<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 							<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 							<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 							<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 							<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 							<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 						<ul>
+ 							<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 							<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 							<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 							<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 							<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 							<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 							<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 						<ul>
+ 							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 							<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 							<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 
+ 						</ul>
+ 					</li>
+ 				</ul>
+ 				</div>
+ 			</div> <!--navbar-->
+ 
+ <!-- Sidebar (hidden by default) -->
+ 	<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 			<div class="w3-bar-block w3-white">
+ 				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 				<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 				<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 			</div>
+ 	</nav>
+ 
+ 		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <p>&nbsp;</p>
+ 
+ <h3 id="#BI-VBheading">Bhikkhuni Vibhanga</h3>
+ 		<div class="w3-bar-white bwnav"><!-- Div for lower BI-VB-SN sub-navigation -->
+ 		<a href="../vi/bi-vb-pj.html#BI-VBheading" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 		<a href="../vi/bi-vb-sn.html#BI-VBheading" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sanghādisesas</a>
+ 		<a href="../vi/bi-vb-np.html#BI-VBheading" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pc.html#BI-VBheading" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pd.html#BI-VBheading" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 		<a href="../vi/bi-vb-sk.html#BI-VBheading" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 		<a href="../vi/bi-vb-as.html#BI-VBheading" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+ 	</div><!-- End div for lower BI-VB-SN sub-navigation -->
+ 
+ <!--      BI-VB-SN content begins here      -->
+ 
+ <div id="content">
+
+<h2>Bhikkhuni Vibhanga - Sanghādisesa 9:<span class="note"><span class="details"><span class="p">The Bhikkhu's Sanghādisesa 9</span></span></span> Falsely Accusing Another Bhikkhuni of a Pārājika Offence Using A Ploy.</h2>
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Rājagaha in the Bamboo Grove, the Squirrel Sanctuary. At that time, while they were descending from Mount Vulture Peak, some monks who were followers of Mettiya and Bhummaja saw two goats copulating. They said to each other: "Let’s give the he-goat the name Dabba the Mallian and the she-goat the name Mettiya the nun. We can then say: ‘Formerly we spoke based on what we had heard about Dabba the Mallian, but now we have seen him ourselves copulating with the nun Mettiya.’" They then gave them those names and informed the monks: "Earlier we spoke about what we had heard, but now we have seen Dabba the Mallian copulating with the nun Mettiya."</p>
+
+<p>The monks replied: "Don’t say such things. Venerable Dabba the Mallian wouldn’t do that."</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>The monks informed the Master. The Master convened the Saṅgha and asked Venerable Dabba the Mallian: "Dabba, do you remember doing as these monks say?"</p>
+
+<p>"Bhante, the Master knows about me."</p>
+
+<hr>
+<p>A second and a third time the Master asked the same question and got the same response. He then said:</p>
+
+<p>"Dabba, the Dabbas do not give such evasive answers. If it was done by you, say so; if it was not done by you, then say that."</p>
+
+<p>"Bhante, since I was born I do not recall having sexual intercourse even in a dream, much less when I was awake."</p>
+
+<p>"Well then, monks, call those monks to account," and he rose from his seat and entered his dwelling.</p>
+
+<p id="p3"><span class="parno">3</span>The monks then questioned the monks who were followers of Mettiya and Bhummaja, who told them what had happened. The monks said: "Did you accuse Venerable Dabba the Mallian of an offence entailing expulsion, using an unrelated issue as a pretext?"</p>
+
+<p>"Yes."</p>
+
+<p>The monks of few desires … complained and criticised them: "How can the monks who are followers of Mettiya and Bhummaja accuse Venerable Dabba in this way?"</p>
+
+<p id="p4"><span class="parno">4</span>They rebuked those monks in many ways and then informed the Master. He said: "Is it true, monks, that you accused Dabba the Mallian of an offence entailing expulsion, using an unrelated issue as a pretext?"</p>
+
+<p>"Itʼs true, Master."</p>
+
+<p>The Buddha, the Master, rebuked them: " … Foolish men, how could you accuse Dabba in this way? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p id="p5"><span class="parno">5</span><span class="rule">"If a monk who is angry and displeased, using an unrelated issue as a pretext, accuses another monk of an offence entailing expulsion, aiming to make him leave the monastic life, and then after some time, whether he is questioned or not, it is clear that the issue is unrelated and used as a pretext, and he admits his anger, he commits an offence entailing suspension."</span></p>
+
+<h3 >Definitions</h3>
+
+<p id="p6"><span class="parno">6</span><span class="term">Monk</span>: <span class="gloss"> … The monk ordained by a complete Saṅgha through a procedure of one motion and three announcements, which is unchallengeable and fit to stand—this sort of monk is meant in this case.</span></p>
+
+<p id="p7"><span class="parno">7</span><span class="term">Another monk</span>: <span class="gloss">a different monk.</span></p>
+
+<p id="p8"><span class="parno">8</span><span class="term">Angry</span>: <span class="gloss">upset, dissatisfied, discontent, having ill-will, hostile.</span></p>
+
+<p id="p9"><span class="parno">9</span><span class="term">Displeased</span>: <span class="gloss">because of that upset, that anger, that dissatisfaction, and that discontent, he is displeased.</span></p>
+
+<hr>
+<p id="p10"><span class="parno">10</span><span class="term">An unrelated issue</span>:</p>
+
+<hr>
+<p>It is either unrelated in regard to offences or unrelated in regard to issues.</p>
+
+<p>How is an issue unrelated to an issue? An issue due to a dispute is unrelated to an issue due to an accusation, an issue due to an offence, and an issue due to a proceeding. An issue due to an accusation is unrelated to an issue due to an offence, an issue due to a proceeding, and an issue due to a dispute. An issue due to an offence is unrelated to an issue due to a proceeding, an issue due to a dispute, and an issue due to an accusation. An issue due to a proceeding is unrelated to an issue due to a dispute, an issue due to an accusation, and an issue due to an offence. It is in this way that an issue is unrelated to an issue.</p>
+
+<hr>
+<p id="p11"><span class="parno">11</span>How is an issue related to an issue? An issue due to a dispute is related to an issue due to a dispute. An issue due to an accusation is related to an issue due to an accusation. An issue due to an offence may be either related or unrelated to an issue due to an offence.</p>
+
+<p id="p12"><span class="parno">12</span>How is an issue due to an offence unrelated to an issue due to an offence? An offence entailing expulsion in regard to sexual intercourse is unrelated to an offence entailing expulsion in regard to stealing, an offence entailing expulsion in regard to a human being, and an offence entailing expulsion in regard to a super-human achievement. An offence entailing expulsion in regard to stealing is unrelated to an offence entailing expulsion in regard to a human being, an offence entailing expulsion in regard to a super-human achievement, and an offence entailing expulsion in regard to sexual intercourse. An offence entailing expulsion in regard to a human being is unrelated to an offence entailing expulsion in regard to a super-human achievement, an offence entailing expulsion in regard to sexual intercourse, and an offence entailing expulsion in regard to stealing. An offence entailing expulsion in regard to a super-human achievement is unrelated to an offence entailing expulsion in regard to sexual intercourse, an offence entailing expulsion in regard to stealing, and an offence entailing expulsion in regard to a human being. It is in this way that an issue due to an offence is unrelated to an issue due to an offence.</p>
+
+<hr>
+<p id="p13"><span class="parno">13</span>How is an issue due to an offence related to an issue due to an offence? An offence entailing expulsion in regard to sexual intercourse is related to an offence entailing expulsion in regard to sexual intercourse. An offence entailing expulsion in regard to stealing is related to an offence entailing expulsion in regard to stealing. An offence entailing expulsion in regard to a human being is related to an offence entailing expulsion in regard to a human being. An offence entailing expulsion in regard to a super-human achievement is related to an offence entailing expulsion in regard to a super-human achievement. It is in this way that an issue due to an offence is related to an issue due to an offence.</p>
+
+<hr>
+<p id="p14"><span class="parno">14</span>An issue due to a proceeding is related to an issue due to a proceeding. It is in this way that an issue is related to an issue.</p>
+
+<hr>
+<p id="p15"><span class="parno">15</span><span class="term">Using as a pretext</span>:</p>
+
+<hr>
+<p><span class="term">A pretext</span>: <span class="gloss">there are ten pretexts—the pretext of caste, the pretext of name, the pretext of family, the pretext of characteristic, the pretext of offence, the pretext of bowl, the pretext of robe, the pretext of preceptor, the pretext of teacher, the pretext of lodging.</span></p>
+
+<hr>
+<p id="p16"><span class="parno">16</span>You are no longer an ascetic, not a son of the Sakyan; you are excluded from the <i>uposatha</i> ceremony, from the invitation ceremony, from acts of the Saṅgha," he commits an offence entailing suspension for each statements.</p>
+
+<p id="p17"><span class="parno">17</span>A brahmin is seen … a merchant is seen … a low-caste person is seen … he commits an offence entailing suspension for each statements.</p>
+
+<hr>
+<p id="p18"><span class="parno">18</span><span class="term">The pretext of name</span>: someone whose name is Buddharakkhita … Dhammarakkhita … Sangharakkhita is seen committing an offence entailing expulsion. If one then charges another person called Sangharakkhita, saying, "I have seen Sangharakkhita. You have committed an offence entailing expulsion. … " he commits an offence entailing suspension for each statements.</p>
+
+<p id="p19"><span class="parno">19</span><span class="term">The pretext of family</span>: <span class="gloss">someone whose family name is Gotama … Moggallāna … Kaccāyana … Vāsiṭṭha is seen committing an offence entailing expulsion. If one then charges another person called Vāsiṭṭha, saying, "I have seen Vāsiṭṭha. You have committed an offence entailing expulsion. … " he commits an offence entailing suspension for each statements.</span></p>
+
+<p id="p20"><span class="parno">20</span><span class="term">The pretext of characteristic</span>: someone tall … short … dark-skinned … light-skinned is seen committing an offence entailing expulsion. If one then charges another light-skinned person, saying, "I have seen a light-skinned person. You have committed an offence entailing expulsion. … " he commits an offence entailing suspension for each statements.</p>
+
+<p id="p21"><span class="parno">21</span><span class="term">The pretext of offence</span>: someone is seen committing a light offence. If one then charges him with an offence entailing expulsion, saying, "You are no longer an ascetic, not a son of the Sakyan … " he commits an offence entailing suspension for each statements.</p>
+
+<hr>
+<p id="p22"><span class="parno">22</span><span class="term">The pretext of bowl</span>: <span class="gloss">someone carrying a metal bowl … a black clay bowl … a clay bowl<span class="note"><span class="details"><span class="p">See <span class="ref">Sp 3.602,1</span></span></span></span> is seen committing an offence entailing expulsion. If one then charges another person carrying a clay bowl, saying, "I have seen someone carrying a clay bowl. You have committed an offence entailing expulsion. … " he commits an offence entailing suspension for each statements.</span></p>
+
+<p id="p23"><span class="parno">23</span><span class="term">The pretext of robe</span>: <span class="gloss">someone wearing a rag robe … a given robe is seen committing an offence entailing expulsion. If one then charges another person wearing a given robe, saying, "I have seen someone wearing a given robe. You have committed an offence entailing expulsion. … " he commits an offence entailing suspension for each statements.</span></p>
+
+<p id="p24"><span class="parno">24</span><span class="term">The pretext of preceptor</span>: <span class="gloss">a disciple of so-and-so is seen committing an offence entailing expulsion. If one then charges another disciple of that person, saying, "I have seen a disciple of so-and-so. You have committed an offence entailing expulsion. … " he commits an offence entailing suspension for each statements.</span></p>
+
+<p id="p25"><span class="parno">25</span><span class="term">The pretext of teacher</span>: <span class="gloss">a student of so-and-so is seen committing an offence entailing expulsion. If one then charges another student of that person, saying, "I have seen a student of so-and-so. You have committed an offence entailing expulsion. … " he commits an offence entailing suspension for each statements.</span></p>
+
+<p id="p26"><span class="parno">26</span><span class="term">The pretext of lodging</span>: <span class="gloss">one who dwells in such-and-such a lodging is seen committing an offence entailing expulsion. If one then charges someone else who dwells in that lodging, saying, "I have seen one who dwells in such-and-such a lodging. You have committed an offence entailing expulsion. You are no longer an ascetic, not a son of the Sakyan; you are excluded from the <i>uposatha</i> ceremony, from the invitation ceremony, from acts of the Saṅgha," he commits an offence entailing suspension for each statements.</span></p>
+
+<hr>
+<p id="p27"><span class="parno">27</span><span class="term">An offence entailing expulsion</span>: <span class="gloss">one of the four.</span></p>
+
+<p id="p28"><span class="parno">28</span><span class="term">Accuses</span>: <span class="gloss">charges or causes to be charged.</span></p>
+
+<p id="p29"><span class="parno">29</span><span class="term">Aiming to make him leave the monastic life</span>: <span class="gloss">aiming to make him leave the state of a monk, leave the state of an ascetic, leave his virtue, leave the benefits of asceticism.</span></p>
+
+<p id="p30"><span class="parno">30</span><span class="term">And then after some time</span>: <span class="gloss">the moment, the instant, the second after he has made the accusation.</span></p>
+
+<p id="p31"><span class="parno">31</span><span class="term">He is questioned</span>: <span class="gloss">he is questioned about the grounds of his accusation.</span></p>
+
+<p id="p32"><span class="parno">32</span><span class="term">Not</span>: <span class="gloss">he is not spoken to by anyone.</span></p>
+
+<hr>
+<p id="p33"><span class="parno">33</span><span class="term">Issue</span>: <span class="gloss">there are four kinds of issues: issues due to disputes, issues due to accusations, issues due to offences, issues due to proceedings.</span></p>
+
+<p id="p34"><span class="parno">34</span><span class="term">Used as a pretext</span>: <span class="gloss">he has used a certain pretext among those (listed above).</span></p>
+
+<p id="p35"><span class="parno">35</span><span class="term">And he admits his anger</span>: <span class="gloss">what I said was empty, what I said was false, what I said was untruthful; I said it without knowing.</span></p>
+
+<hr>
+<p id="p36"><span class="parno">36</span><span class="gloss"> … This is the name and designation of this class of offence. Therefore, too, it is said that he commits an offence entailing suspension.</span></p>
+
+<h3 >Permutations</h3>
+<h4>Doing the accusing oneself</h4>
+
+<p id="p37"><span class="parno">37</span>A monk is seen committing an offence entailing suspension, and one thinks it is an offence entailing suspension. If one then charges him with an offence entailing expulsion, saying, "You are no longer an ascetic, not a son of the Sakyan; you are excluded from the <i>uposatha</i> ceremony, from the invitation ceremony, from acts of the Saṅgha," thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<p id="p38"><span class="parno">38</span>A monk is seen committing an offence entailing suspension, but one thinks it is a serious offence … an offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct … an offence of bad speech. If one then charges him with an offence entailing expulsion, saying, "You are no longer an ascetic … " thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<p id="p39"><span class="parno">39</span>A monk is seen committing a serious offence, and one thinks it is a serious offence … but one thinks it is a offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct … an offence of bad speech … an offence entailing suspension. If one then charges him with an offence entailing expulsion, saying, "You are no longer an ascetic … " thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<p id="p40"><span class="parno">40</span>A monk is seen committing an offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct … an offence of bad speech, and one thinks it is an offence of bad speech … but one thinks it is an offence entailing suspension … a serious offence … an offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct. If one then charges him with an offence entailing expulsion, saying, "You are no longer an ascetic, not a son of the Sakyan; you are excluded from the <i>uposatha</i> ceremony, from the invitation ceremony, from acts of the Saṅgha," thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<p id="p41"><span class="parno">41</span>The permutation series is to be linked by doing the items one by one.</p>
+
+<h4>Getting someone else to do the accusing</h4>
+
+<p id="p42"><span class="parno">42</span>A monk is seen committing an offence entailing suspension and one thinks it is an offence entailing suspension. If one then has him charged with an offence entailing expulsion, saying, "You are no longer an ascetic … " thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<p id="p43"><span class="parno">43</span>A monk is seen committing an offence entailing suspension, but one thinks it is a serious offence … an offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct … an offence of bad speech. If one then has him charged with an offence entailing expulsion, saying, "You are no longer an ascetic … " thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<p id="p44"><span class="parno">44</span>A monk is seen committing a serious offence, and one thinks it is a serious offence … but one thinks it is an offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct … an offence of bad speech … an offence entailing suspension. If one then has him charged with an offence entailing expulsion, saying, "You are no longer an ascetic … " thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<p id="p45"><span class="parno">45</span>A monk is seen committing an offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct … an offence of bad speech, and one thinks it is an offence of bad speech … but one thinks it is an offence entailing suspension … a serious offence … an offence entailing confession … an offence entailing acknowledgement … an offence of bad conduct. If one then has him charged with an offence entailing expulsion, saying, "You are no longer an ascetic, not a son of the Sakyan; you are excluded from the <i>uposatha</i> ceremony, from the invitation ceremony, from acts of the Saṅgha," thus using an unrelated offence as a pretext, he commits an offence entailing suspension for each statement.</p>
+
+<h3 >Non-offences</h3>
+
+<p id="p46"><span class="parno">46</span>There is no offence: if he charges or causes someone to be charged in accordance with his own perception; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">47</span>The ninth rule, the second training rule on anger, is finished.</p>
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_1626, msdiv391</span>Tena samayena buddho bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tena kho pana samayena mettiyabhūmajakā bhikkhū gijjhakūṭā pabbatā orohantā addasaṁsu chagalakaṁ ajikāya vippaṭipajjantaṁ. Disvāna evamāhaṁsu— "handa mayaṁ, āvuso, imaṁ chagalakaṁ dabbaṁ mallaputtaṁ nāma karoma. Imaṁ ajikaṁ mettiyaṁ nāma bhikkhuniṁ karoma. Evaṁ mayaṁ voharissāma. Pubbe mayaṁ, āvuso, dabbaṁ mallaputtaṁ sutena avocumhā. Idāni pana amhehi sāmaṁ diṭṭho mettiyāya bhikkhuniyā vippaṭipajjanto"ti. Te taṁ chagalakaṁ dabbaṁ mallaputtaṁ nāma akaṁsu. Taṁ ajikaṁ mettiyaṁ nāma bhikkhuniṁ akaṁsu. Te bhikkhūnaṁ ārocesuṁ— "Pubbe mayaṁ, āvuso, dabbaṁ mallaputtaṁ sutena avocumhā. Idāni pana amhehi sāmaṁ diṭṭho mettiyāya bhikkhuniyā vippaṭipajjanto"ti. Bhikkhū evamāhaṁsu—</p>
+
+<p>"māvuso, evaṁ avacuttha. Nāyasmā dabbo mallaputto evaṁ karissatī"ti.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_1V_1627</span>Atha kho te bhikkhū bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusanghaṁ sannipātāpetvā āyasmantaṁ dabbaṁ mallaputtaṁ paṭipucchi: "sarasi tvaṁ, dabba, evarūpaṁ kattā yathayime bhikkhū āhaṁsū"ti?</p>
+
+<p>"Yathā maṁ, bhante, bhagavā jānātī"ti.</p>
+
+<hr>
+<p>Dutiyampi kho bhagavā … pe … tatiyampi kho bhagavā āyasmantaṁ dabbaṁ mallaputtaṁ etadavoca:</p>
+
+<p>"sarasi tvaṁ, dabba, evarūpaṁ kattā yathayime bhikkhū āhaṁsū"ti? "Yathā maṁ, bhante, bhagavā jānātī"ti.</p>
+
+<p>"Na kho, dabba, dabbā evaṁ nibbeṭhenti. Sace tayā kataṁ katanti vadehi, sace tayā akataṁ akatanti vadehī"ti.</p>
+
+<p>"Yato ahaṁ, bhante, jāto nābhijānāmi supinantenapi methunadhammaṁ paṭisevitā, pageva jāgaro"ti. Atha kho bhagavā bhikkhū āmantesi: </p>
+
+<p>"Tena hi, bhikkhave, ime bhikkhū anuyuñjathā"ti. Idaṁ vatvā bhagavā uṭṭhāyāsanā vihāraṁ pāvisi.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_1628</span>Atha kho te bhikkhū mettiyabhūmajake bhikkhū anuyuñjiṁsu. Te bhikkhūhi anuyuñjīyamānā bhikkhūnaṁ etamatthaṁ ārocesuṁ— "Kiṁ pana tumhe, āvuso, āyasmantaṁ dabbaṁ mallaputtaṁ aññabhāgiyassa adhikaraṇassa kiñci desaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁsethā"ti?</p>
+
+<p>"Evamāvuso"ti</p>
+
+<p>Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma mettiyabhūmajakā bhikkhū āyasmantaṁ dabbaṁ mallaputtaṁ aññabhāgiyassa adhikaraṇassa kiñci desaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁsessantī"ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_1V_1629</span>Atha kho te bhikkhū mettiyabhūmajake bhikkhū anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira tumhe, bhikkhave, dabbaṁ mallaputtaṁ aññabhāgiyassa adhikaraṇassa kiñci desaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁsethā"ti?</p>
+
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … "Kathañhi nāma tumhe, moghapurisā, dabbaṁ mallaputtaṁ aññabhāgiyassa adhikaraṇassa kiñci desaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁsessatha. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">5</span><span class="ms">p_1V_1630, msdiv392</span><span class="rule">"Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto aññabhāgiyassa adhikaraṇassa kiñci desaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁseyya— ‘appeva nāma naṁ imamhā brahmacariyā cāveyyan’ti. Tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā aññabhāgiyañceva taṁ adhikaraṇaṁ hoti koci deso lesamatto upādinno, bhikkhu ca dosaṁ patiṭṭhāti, Sanghādiseso"</span>ti. (<i>9</i>:<b>13</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">6</span><span class="ms">p_1V_1631, msdiv393</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<p><span class="parno">7</span><span class="ms">p_1V_1632</span><b>Bhikkhun</b>'ti aññaṁ bhikkhuṁ.</p>
+
+<p><span class="parno">8</span><span class="ms">p_1V_1633</span><b>Duṭṭho doso</b>'ti kupito anattamano anabhiraddho āhatacitto khilajāto.</p>
+
+<p><span class="parno">9</span><span class="ms">p_1V_1634</span><b>Appatīto</b>'ti tena ca kopena, tena ca dosena, tāya ca anattamanatāya, tāya ca anabhiraddhiyā appatīto hoti.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_1V_1635</span><b>Aññabhāgiyassa adhikaraṇassā</b> ti.</p>
+
+<hr>
+<p>āpattaññabhāgiyaṁ vā hoti adhikaraṇaññabhāgiyaṁ vā.</p>
+
+<p>Kathaṁ adhikaraṇaṁ adhikaraṇassa aññabhāgiyaṁ? Vivādādhikaraṇaṁ anuvādādhikaraṇassa āpattādhikaraṇassa kiccādhikaraṇassa aññabhāgiyaṁ. Anuvādādhikaraṇaṁ āpattādhikaraṇassa kiccādhikaraṇassa vivādādhikaraṇassa aññabhāgiyaṁ. Āpattādhikaraṇaṁ kiccādhikaraṇassa vivādādhikaraṇassa anuvādādhikaraṇassa aññabhāgiyaṁ. Kiccādhikaraṇaṁ vivādādhikaraṇassa anuvādādhikaraṇassa āpattādhikaraṇassa aññabhāgiyaṁ. Evaṁ adhikaraṇaṁ adhikaraṇassa aññabhāgiyaṁ.</p>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_1V_1636</span>Kathaṁ adhikaraṇaṁ adhikaraṇassa tabbhāgiyaṁ? Vivādādhikaraṇaṁ vivādādhikaraṇassa tabbhāgiyaṁ. Anuvādādhikaraṇaṁ anuvādādhikaraṇassa tabbhāgiyaṁ. Āpattādhikaraṇaṁ āpattādhikaraṇassa siyā tabbhāgiyaṁ siyā aññabhāgiyaṁ.</p>
+
+<p><span class="parno">12</span><span class="ms">p_1V_1637</span>Kathaṁ āpattādhikaraṇaṁ āpattādhikaraṇassa aññabhāgiyaṁ? Methunadhammapārājikāpatti adinnādānapārājikāpattiyā manussaviggahapārājikāpattiyā uttarimanussadhammapārājikāpattiyā aññabhāgiyā. Adinnādānapārājikāpatti manussaviggahapārājikāpattiyā uttarimanussadhammapārājikāpattiyā methunadhammapārājikāpattiyā aññabhāgiyā. Manussaviggahapārājikāpatti uttarimanussadhammapārājikāpattiyā methunadhammapārājikāpattiyā adinnādānapārājikāpattiyā aññabhāgiyā. Uttarimanussadhammapārājikāpatti methunadhammapārājikāpattiyā adinnādānapārājikāpattiyā manussaviggahapārājikāpattiyā aññabhāgiyā. Evaṁ āpattādhikaraṇaṁ āpattādhikaraṇassa aññabhāgiyaṁ.</p>
+
+<hr>
+<p><span class="parno">13</span><span class="ms">p_1V_1638</span>Kathaṁ āpattādhikaraṇaṁ āpattādhikaraṇassa tabbhāgiyaṁ? Methunadhammapārājikāpatti methunadhammapārājikāpattiyā tabbhāgiyā. Adinnādānapārājikāpatti adinnādānapārājikāpattiyā tabbhāgiyā. Manussaviggahapārājikāpatti manussaviggahapārājikāpattiyā tabbhāgiyā. Uttarimanussadhammapārājikāpatti uttarimanussadhammapārājikāpattiyā tabbhāgiyā. Evaṁ āpattādhikaraṇaṁ āpattādhikaraṇassa tabbhāgiyaṁ.</p>
+
+<hr>
+<p><span class="parno">14</span><span class="ms">p_1V_1639</span>Kiccādhikaraṇaṁ kiccādhikaraṇassa tabbhāgiyaṁ. Evaṁ adhikaraṇaṁ adhikaraṇassa tabbhāgiyaṁ.</p>
+
+<hr>
+<p><span class="parno">15</span><span class="ms">p_1V_1640, msdiv394</span><b>Kiñci desaṁ lesamattaṁ upādāyā</b></p>
+
+<hr>
+<p>ti leso nāma dasa lesā— jātileso, nāmaleso, gottaleso, lingaleso, āpattileso, pattaleso, cīvaraleso, upajjhāyaleso, ācariyaleso, senāsanaleso.</p>
+
+<hr>
+<p><span class="parno">16</span><span class="ms">p_1V_1641, msdiv395</span><b>Jātileso</b> nāma khattiyo diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ khattiyaṁ passitvā codeti— "khattiyo mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi, natthi tayā saddhiṁ uposatho vā pavāraṇā vā saṇghakammaṁ vā"ti, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">17</span><span class="ms">p_1V_1642</span>Brāhmaṇo diṭṭho hoti … pe … vesso diṭṭho hoti … pe … suddo diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ suddaṁ passitvā codeti— "suddo mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">18</span><span class="ms">p_1V_1643, msdiv396</span><b>Nāmaleso</b> nāma buddharakkhito diṭṭho hoti … pe … dhammarakkhito diṭṭho hoti … pe … saṇgharakkhito diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ saṇgharakkhitaṁ passitvā codeti— "saṇgharakkhito mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">19</span><span class="ms">p_1V_1644, msdiv397</span><b>Gottaleso</b> nāma gotamo diṭṭho hoti … pe … moggallāno diṭṭho hoti … pe … kaccāyano diṭṭho hoti … pe … vāsiṭṭho diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ vāsiṭṭhaṁ passitvā codeti— "vāsiṭṭho mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">20</span><span class="ms">p_1V_1645, msdiv398</span><b>Lingaleso</b> nāma dīgho diṭṭho hoti … pe … rasso diṭṭho hoti … pe … kaṇho diṭṭho hoti … pe … odāto diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ odātaṁ passitvā codeti— "odāto mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">21</span><span class="ms">p_1V_1646, msdiv399</span><b>Āpattileso</b> nāma lahukaṁ āpattiṁ āpajjanto diṭṭho hoti. Tañce pārājikena codeti— "assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">22</span><span class="ms">p_1V_1647, msdiv400</span><b>Pattaleso</b> nāma lohapattadharo diṭṭho hoti … pe … sāṭakapattadharo diṭṭho hoti … pe … sumbhakapattadharo diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ sumbhakapattadharaṁ passitvā codeti— "sumbhakapattadharo mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">23</span><span class="ms">p_1V_1648, msdiv401</span><b>Cīvaraleso</b> nāma paṁsukūliko diṭṭho hoti … pe … gahapaticīvaradharo diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ gahapaticīvaradharaṁ passitvā codeti— "gahapaticīvaradharo mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">24</span><span class="ms">p_1V_1649, msdiv402</span><b>Upajjhāyaleso</b> nāma itthannāmassa saddhivihāriko diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ itthannāmassa saddhivihārikaṁ passitvā codeti— "itthannāmassa saddhivihāriko mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">25</span><span class="ms">p_1V_1650, msdiv403</span><b>Ācariyaleso</b> nāma itthannāmassa antevāsiko diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ itthannāmassa antevāsikaṁ passitvā codeti— "itthannāmassa antevāsiko mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi … pe … āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">26</span><span class="ms">p_1V_1651, msdiv404</span><b>Senāsanaleso</b> nāma itthannāmasenāsanavāsiko diṭṭho hoti pārājikaṁ dhammaṁ ajjhāpajjanto. Aññaṁ itthannāmasenāsanavāsikaṁ passitvā codeti— "itthannāmasenāsanavāsiko mayā diṭṭho. Pārājikaṁ dhammaṁ ajjhāpannosi, assamaṇosi, asakyaputtiyosi, natthi tayā saddhiṁ uposatho vā pavāraṇā vā saṇghakammaṁ vā"ti, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">27</span><span class="ms">p_1V_1652, msdiv405</span><b>Pārājikena dhammenā</b>'ti catunnaṁ aññatarena.</p>
+
+<p><span class="parno">28</span><span class="ms">p_1V_1653</span><b>Anuddhaṁseyyā</b>'ti codeti vā codāpeti vā.</p>
+
+<p><span class="parno">29</span><span class="ms">p_1V_1654</span><b>Appeva nāma naṁ imamhā brahmacariyā cāveyyan</b>'ti bhikkhubhāvā cāveyyaṁ, samaṇadhammā cāveyyaṁ, sīlakkhandhā cāveyyaṁ, tapoguṇā cāveyyaṁ.</p>
+
+<p><span class="parno">30</span><span class="ms">p_1V_1655</span><b>Tato aparena samayenā</b>'ti yasmiṁ khaṇe anuddhaṁsito hoti, taṁ khaṇaṁ taṁ layaṁ taṁ muhuttaṁ vītivatte.</p>
+
+<p><span class="parno">31</span><span class="ms">p_1V_1656</span><b>Samanuggāhīyamāno</b>'ti yena vatthunā anuddhaṁsito hoti tasmiṁ vatthusmiṁ samanuggāhīyamāno.</p>
+
+<p><span class="parno">32</span><span class="ms">p_1V_1657</span><b>Asamanuggāhīyamāno</b>'ti na kenaci vuccamāno.</p>
+
+<hr>
+<p><span class="parno">33</span><span class="ms">p_1V_1658</span><b>Adhikaraṇaṁ</b> nāma cattāri adhikaraṇāni— vivādādhikaraṇaṁ, anuvādādhikaraṇaṁ, āpattādhikaraṇaṁ, kiccādhikaraṇaṁ.</p>
+
+<p><span class="parno">34</span><span class="ms">p_1V_1659</span><b>Koci deso lesamatto upādinno</b>'ti tesaṁ lesānaṁ aññataro leso upādinno hoti.</p>
+
+<p><span class="parno">35</span><span class="ms">p_1V_1660</span><b>Bhikkhu ca dosaṁ patiṭṭhātī</b>'ti tucchakaṁ mayā bhaṇitaṁ, musā mayā bhaṇitaṁ, abhūtaṁ mayā bhaṇitaṁ, ajānantena mayā bhaṇitaṁ.</p>
+
+<hr>
+<p><span class="parno">36</span><span class="ms">p_1V_1661</span><b>Sanghādiseso</b>'ti … pe … tenapi vuccati "Sanghādiseso"ti.</p>
+
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+
+<p><span class="parno">37</span><span class="ms">p_1V_1662, msdiv406</span>Bhikkhu sanghādisesaṁ ajjhāpajjanto diṭṭho hoti, sanghādisese sanghādisesadiṭṭhi hoti. Tañce pārājikena codeti— "assamaṇosi, asakyaputtiyosi, natthi tayā saddhiṁ uposatho vā pavāraṇā vā saṇghakammaṁ vā"ti, evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">38</span><span class="ms">p_1V_1663</span>Bhikkhu sanghādisesaṁ ajjhāpajjanto diṭṭho hoti, sanghādisese thullaccayadiṭṭhi hoti … pe … pācittiyadiṭṭhi hoti … pāṭidesanīyadiṭṭhi hoti … dukkaṭadiṭṭhi hoti … dubbhāsitadiṭṭhi hoti. Tañce pārājikena codeti— "assamaṇosi … pe … evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">39</span><span class="ms">p_1V_1664</span>Bhikkhu thullaccayaṁ ajjhāpajjanto diṭṭho hoti thullaccaye thullaccayadiṭṭhi hoti … pe … thullaccaye pācittiyadiṭṭhi hoti … pāṭidesanīyadiṭṭhi hoti … dukkaṭadiṭṭhi hoti … dubbhāsitadiṭṭhi hoti … sanghādisesadiṭṭhi hoti. Tañce pārājikena codeti— "assamaṇosi … pe … evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">40</span><span class="ms">p_1V_1665</span>Bhikkhu pācittiyaṁ … pe … pāṭidesanīyaṁ … dukkaṭaṁ … dubbhāsitaṁ ajjhāpajjanto diṭṭho hoti, dubbhāsite dubbhāsitadiṭṭhi hoti … pe … dubbhāsite sanghādisesadiṭṭhi hoti … thullaccayadiṭṭhi hoti … pācittiyadiṭṭhi hoti … pāṭidesanīyadiṭṭhi hoti … dukkaṭadiṭṭhi hoti. Tañce pārājikena codeti— "assamaṇosi, asakyaputtiyosi, natthi tayā saddhiṁ uposatho vā pavāraṇā vā saṇghakammaṁ vā"ti, evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">41</span><span class="ms">p_1V_1666</span>Ekekaṁ mūlaṁ kātuna cakkaṁ bandhitabbaṁ.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">42</span><span class="ms">p_1V_1667, msdiv407</span>Bhikkhu sanghādisesaṁ ajjhāpajjanto diṭṭho hoti sanghādisese sanghādisesadiṭṭhi hoti. Tañce pārājikena codāpeti— "assamaṇosi … pe … evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">43</span><span class="ms">p_1V_1668</span>Bhikkhu sanghādisesaṁ ajjhāpajjanto diṭṭho hoti, sanghādisese thullaccayadiṭṭhi hoti … pe … pācittiyadiṭṭhi hoti … pāṭidesanīyadiṭṭhi hoti … dukkaṭadiṭṭhi hoti … dubbhāsitadiṭṭhi hoti. Tañce pārājikena codāpeti— "assamaṇosi … pe … evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">44</span><span class="ms">p_1V_1669</span>Bhikkhu thullaccayaṁ ajjhāpajjanto diṭṭho hoti thullaccaye thullaccayadiṭṭhi hoti … pe … thullaccaye pācittiyadiṭṭhi hoti … pāṭidesanīyadiṭṭhi hoti … dukkaṭadiṭṭhi hoti … dubbhāsitadiṭṭhi hoti … sanghādisesadiṭṭhi hoti. Tañce pārājikena codāpeti— "assamaṇosi … pe … evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<p><span class="parno">45</span><span class="ms">p_1V_1670</span>Bhikkhu pācittiyaṁ … pe … pāṭidesanīyaṁ … dukkaṭaṁ … dubbhāsitaṁ ajjhāpajjanto diṭṭho hoti dubbhāsite dubbhāsitadiṭṭhi hoti … pe … dubbhāsite sanghādisesadiṭṭhi hoti … thullaccayadiṭṭhi hoti … pācittiyadiṭṭhi hoti … pāṭidesanīyadiṭṭhi hoti … dukkaṭadiṭṭhi hoti. Tañce pārājikena codāpeti— "assamaṇosi, asakyaputtiyosi, natthi tayā saddhiṁ uposatho vā pavāraṇā vā saṇghakammaṁ vā"ti, evampi āpattaññabhāgiyaṁ hoti leso ca upādinno, āpatti vācāya, vācāya sanghādisesassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">46</span><span class="ms">p_1V_1671, msdiv408</span>Anāpatti— tathāsaññī codeti vā codāpeti vā, ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">47</span><span class="ms">p_1V_1672</span>(Aññabhāgiya) Kiñcilesasikkhāpadaṁ niṭṭhitaṁ navamaṁ.</p>
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-sn8.html#content"></a><a id="next-sutta" href="../vi/bi-vb-sn10.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-sn.html">Sanghādisesas</a>Sanghādisesa 9
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nikāya - Connected Discourses with Devatas 1.75</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 			</button>
+<span class="box-lbl">Light/Dark</span>
+
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="pressed w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+  
+   <!-- !PAGE CONTENT! -->
+  	<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 	<h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 				<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+					<div id="snheading">
+ 					<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div><!-- End snheading div -->
+</div>  <!-- End div for SN sub-navigation -->
+
+
+
+
+<p>&nbsp;</p>
+
+<h3 id="SN1heading">SN1: Connected Discourses with Devatas</h3>
+ 
+ 			<div class="w3-bar-white bwnav"><!-- Div for lower SN sub-navigation -->
+ 		<a href="sn1.html#SN1heading" title="Connected Discourses with Devatas" class="w3-bar-item w3-hover-white w3-border-white w3-button active">SN1</a>
+ 		<a href="sn2.html#SN2heading" title="Connected Discourses with Young Devas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN2</a>
+ 		<a href="sn3.html#SN3heading" title="Connected Discourses with the Kosalan" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN3</a>
+ 		<a href="sn4.html#SN4heading" title="Connected Discourses with Māra" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN4</a>
+ 		<a href="sn5.html#SN5heading" title="Connected Discourses with Bhikkhunis" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN5</a>
+ 		<a href="sn6.html#SN6heading" title="Connected Discourses with Brahmas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN6</a>
+ 		<a href="sn7.html#SN7heading" title="Connected Discourses with Brahmins" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN7</a>
+ 		<a href="sn8.html#SN8heading" title="Connected Discourses with Vangisa" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN8</a>
+ 		<a href="sn9.html#SN9heading" title="Connected Discourses in the Woods" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN9</a>
+ 		<a href="sn10.html#SN10heading" title="Connected Discourses with Yakkhas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN10</a>
+ 		<a href="sn11.html#SN11heading" title="Connected Discourses with Sakka" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN11</a>
+ 	</div><!-- End div for lower SN sub-navigation -->
+ 
+ <!--      SN content begins here      -->
+  
+ <div id="content">
+
+
+<h3>SN1:75 Afraid</h3>
+
+<div id="metaarea">
+ <ul class="translator">
+ <li>&copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">
+<div lang="en">
+<div class="verse">
+<p id="p1"><span class="parno" id="v232">1</span><span class="add">v.232</span> "Why are so many people here afraid
+<br>When the path has been taught with many bases?<span class="note" id="n133"><span class="details"><span class="p">[n.133] <i>Maggo c’ anekayatanappavutto.</i> <a href="sn0-abbr.html" title="Abbreviations">Spk</a>: He says, "The path is explained by many methods <i>(karaṇehi,)</i> by way of the thirty-eight meditation objects. Such being the case, why have these people become frightened and grasped hold of the sixty-two views?" The thirty-eight meditation objects <i>(aṭṭhatiṁarammaṇa)</i> are identical with the classical forty <i>kammaṭṭhana</i> (e.g., in Vism) except that the list of kasiṇas is drawn from the Nikāyas (e.g., <a href="../mn/mn77.html">MN&nbsp;II 14,29–15,2</a>), in which the last two (the space <i>kasiṇa</i> and the consciousness <i>kasiṇa</i>) are the same as the first two formless attainments <i>(aruppa)</i> and hence are not reckoned twice. In the Vism system these two are replaced by the limited space <i>kasiṇa</i> and the light <i>kasiṇa</i>, which brings the number up to forty.</span></span></span>
+<br>I ask you, O Gotama, broad of wisdom:
+<br>On what should one take a stand
+<br>To have no fear of the other world?"</p>
+
+<p id="p2"><span class="parno" id="v233">2</span><span class="add">v.233</span> "Having directed speech and mind rightly,
+<br>Doing no evil deeds with the body,
+<br>Dwelling at home with ample food and drink, <a class="pts_pn">sn.i.43</a>
+<br>Faithful, gentle, generous, amiable:
+<br>When one stands on these four things,
+<br>Standing firmly on the Dhamma,
+<br>One need not fear the other world."<span class="note" id="n134"><span class="details"><span class="p">[n.134] The last line should be read with Be, Se, and Ee2 as <i>dhamme ṭhito paralokaṁ na bhaye.</i> Ee1 omits <i>dhamme ṭhito,</i> apparently by oversight. <a href="sn0-abbr.html" title="Abbreviations">Spk</a> interprets "rightly directed speech and mind" and "doing no evil deeds with the body" as the preliminary factors of purification, and takes the four qualities mentioned in pāda d to be the "four things" on which one should stand. But it also suggests another interpretation: right bodily, verbal, and mental conduct are the first three things, and the four qualities in pāda d taken together are the fourth. The first alternative sounds more plausible.</span></span></span></p>
+</div>
+</div>
+
+<div lang="pi">
+<div class="verse">
+<p><span class="parno">1</span>"Kiṁsūdha bhītā janatā anekā,
+<br>Maggo canekāyatanappavutto;
+<br>Pucchāmi taṁ gotama bhūripañña,
+<br>Kismiṁ ṭhito paralokaṁ na bhāye"ti.</p>
+
+<p><span class="parno">2</span>"Vācaṁ manañca paṇidhāya sammā,
+<br>Kāyena pāpāni akubbamāno;
+<br>Bahvannapānaṁ gharamāvasanto,
+<br>Saddho mudū saṁvibhāgī vadaññū;
+<br>Etesu dhammesu ṭhito catūsu,
+<br>Dhamme ṭhito paralokaṁ na bhāye"ti.</p>
+</div>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="./sn1.74.html#content"></a><a id="next-sutta" href="./sn1.76.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div class="w3-white .bwcontainer2">
+<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn1.html">Connected Discourses with Devatas</a>SN1:75 Afraid
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </div>
+</footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

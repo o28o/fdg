@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.11</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+ 	<p>&nbsp;</p>
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc2.1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Personal Grooming</a>
+<a href="../bmc/bmc2.2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Cloth Requisites</a>
+<a href="../bmc/bmc2.3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Alms Bowls and Other Requisites</a>
+<a href="../bmc/bmc2.4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Food</a>
+<a href="../bmc/bmc2.5.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Medicine</a>
+<a href="../bmc/bmc2.6.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Lodgings</a>
+<a href="../bmc/bmc2.7.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Monastery Buildings and Property</a>
+<a href="../bmc/bmc2.8.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Respect</a>
+<a href="../bmc/bmc2.9.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Protocols</a>
+<a href="../bmc/bmc2.10.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Misbehavior</a>
+<a href="../bmc/bmc2.11.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Rains Residence</a>
+</div>
+
+ 	<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;11: Rains Residence</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p>Well before the Buddha&rsquo;s time there was a custom in India that wanderers would stay in place for the rainy season, both to avoid having to negotiate muddy roads and to avoid trampling plants. Bhikkhus in the early years of the Buddha&rsquo;s teaching career were criticized by the Jains for not observing this custom, so the Buddha gave his permission for them to stop their wandering for three months of the Rains. Later he imposed a penalty for not observing this custom.</p>
+
+<p><b>Periods of residence.</b> Because the rainy season in South Asia is roughly four months, bhikkhus are allowed to choose between two periods of Rains-residence: the first, starting the day after the full moon of the month of Asāḷhi (roughly July); and the second, starting the day after the following full moon. At present, the first Rains-residence starts on the full moon in July, or the second if there are two. Why the Buddha formulated two periods of Rains-residence, the Canon does not say. From the Commentary’s discussion of Mv.II.21.4, it would appear that if one enters the first Rains and then, for one reason or another: “breaks” the Rains (see below) within the first month, one would still be eligible to enter the second Rains so as to receive the privileges contingent on its successful completion.</p>
+
+<p>In the Buddha&rsquo;s time, the determination of the lunar calendar was one of the responsibilities of the government in each kingdom or republic. Thus, to avoid controversy, the Buddha allowed that the wishes of kings be respected in this matter: If a king wanted to postpone the designation of the Asāḷhi full moon another month, bhikkhus were allowed to comply. (The rule coming from this origin story is stated in more general terms — “I allow that kings be complied with” — showing the general principle that we noted under <a href="../bmc/bmc2.7.html">Chapter&nbsp;7</a>, that the Buddha was not so foolish as to try to legislate for kings. The Commentary notes, however, that this principle applies only in matters in which the king’s wish is in line with the Dhamma. No one, it says, should be complied with in matters where their wishes are not in line with the Dhamma.) At present, the governments of only a few countries concern themselves with calculating the lunar calendar for the sake of the general population. In other countries this point is not an issue, and the bhikkhus are free to calculate the lunar calendar without regard to the government’s calculations.</p>
+
+<p><b>Entering for the Rains.</b> The first day of the Rains-residence is when lodgings in a monastery are assigned for the duration of the Rains, so the Commentary recommends that a bhikkhu planning to spend the Rains in another monastery should start heading there a month before the start of the Rains so as not to inconvenience the assigner of lodgings and other bhikkhus there. As for bhikkhus planning to stay on in the monastery where they are already residing, they should spend the month before the beginning of the Rains preparing any worn-down buildings so that those who come for the Rains will study and/or practice meditation in comfort. The assigner of lodgings should assign lodgings for the Rains at dawn of the day the Rains begins. If other bhikkhus come later in the day and there are no extra spaces for them, they should be told that the lodgings have been assigned and that they should go to other lodgings, such as the foot of a tree. (What this means, apparently, is that they should enter the second Rains somewhere else, as the Canon contains a rule against entering the Rains in anything less than a proper dwelling. See below.)</p>
+
+<p>Mv.III.4.2 states that on a day for beginning the Rains one should not pass by a residence/monastery not desiring to enter for the Rains. How this applies to the beginning of the second Rains period is obvious: A bhikkhu must stop for the Rains on that day. As for the beginning of the first Rains period, the Commentary notes simply that if there are obstacles (see below), one may choose to enter the second Rains period instead. One obstacle not mentioned in the list below, however, is discussed in Mv.II.21.4. This is the case of a monastery where many (i.e., four or more) bhikkhus — “inexperienced and incompetent” — are staying for the Rains and none of them knows the uposatha or the uposatha transaction, the Pāṭimokkha or the recital of the Pāṭimokkha. One of them should be sent to a neighboring monastery immediately to master the Pāṭimokkha in brief or in its full extent. If he can manage it immediately, well and good. If not, one of them should be sent to a neighboring monastery for a period of seven days to master the Pāṭimokkha in brief or in its full extent. If he can manage it within seven days, well and good. If not, then all the bhikkhus should go stay for the Rains in the neighboring monastery. If they stay where they are, they all incur a dukkaṭa. None of the texts discuss the point, but apparently “going to stay for the Rains” in the neighboring monastery means entering the second Rains there.</p>
+
+<p>The Commentary adds here that if a monastery has only one bhikkhu who knows the Pāṭimokkha and he dies, leaves, or disrobes in the first month of the first Rains, the remainder should go where there is someone who knows the Pāṭimokkha and stay there for the second Rains. If the knowledgeable bhikkhu dies, leaves, or disrobes in the latter two months of the first Rains, the remainder may stay there for the remainder of the Rains without offense.</p>
+
+<p>However, one does not have to spend the Rains in a monastery. One may also live alone or in a small, ad hoc group as long as one stays in a proper lodging and knows the uposatha transaction appropriate for one’s number (see <a href="../bmc/bmc2.15.html">Chapter&nbsp;15</a>). In general, the Commentary says that a proper lodging is one with a door that can be opened and closed. Improper lodging arrangements listed in the Canon include living in the hollow of a tree (“like goblins”), in the fork of a tree (“like hunters”), in the open air, in a non-lodging (according to the Commentary, this means a place covered with the five kinds of allowable facing/roofing but lacking a door that can be opened and closed), in a charnel house (a place for keeping corpses, says the Commentary, adding that other proper lodgings within a charnel ground are all right), under a canopy, or in a large storage vessel (the Commentary interprets this as a shield). The Commentary notes that if one fixes up a hut in the hollow of a tree or the fork of a tree with a platform, a proper roof, walls, and a door, it is all right to stay there. The same holds true with a canopy or a shield if it is fitted with walls nailed to four posts and provided with a door that can be opened and closed. Yurts would thus be allowable.</p>
+
+<p>The Canon also gives permission to stay in a cowherd camp, with a caravan, or in a boat. If, during the Rains, any of these picks up and moves, one is allowed to go along. The Commentary adds that if one is planning to stay with a caravan, one should inform the caravan people that one needs a small hut on one of the carts. If they provide that, one may take that hut as one’s residence for the Rains. If not, one may take as one’s residence the space under a tall cart. If that is not possible, one should not enter the Rains with that caravan. If one is joining the caravan in hopes of arriving at a particular destination, then if the caravan reaches that destination one is allowed to remain there even if the caravan continues on its way. If the caravan breaks up, one should remain at the spot where it breaks up until the end of the Rains. If one has entered the Rains in a boat, then if the boat ends its trip, one should stay at that spot. If the boat is following the river bank or sea coast and arrives at one’s destination, one may stay there even if the boat continues its journey.</p>
+
+<p>At present, these allowances would extend to caravan/trailers, mobile homes, and other similar vehicles.</p>
+
+<p><b>Breaking one’s promise.</b> If a bhikkhu has accepted an invitation to stay at a certain place for the Rains but then does not fulfill his promise by not staying at the place, he incurs a dukkaṭa for the broken promise and becomes ineligible for the privileges contingent on having completed that Rains-residence. (Literally, the rule says that his first Rains “isn’t discerned,” which means that it doesn’t count.) The Sub-commentary misses the point of this rule, which has led to its general misinterpretation. In the origin story, Ven. Upananda accepts an invitation to spend the Rains at one spot and then decides to spend the Rains at two other locations. The Sub-commentary maintains that his Rains was invalidated by the fact that he determined two locations for his Rains; however, <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.4 shows that spending the Rains in two locations, spending half of one’s time at one and half at the other, is perfectly legitimate. Thus the only possible reason for Ven. Upananda’s first Rains not to count is because he broke his promise.</p>
+
+<p>The Canon also states that one also incurs the dukkaṭa for breaking one’s promise in this situation if one goes to the agreed location and then “breaks” one’s Rains (see below). The Commentary notes in either case that if one originally made the promise with the intention of breaking it, one incurs both the dukkaṭa for the broken promise and a pācittiya for lying. From the way these rules are phrased in the Canon — “one’s first (Rains) isn’t discerned” — it would appear that if one promised to stay for the first Rains but then broke the promise, one would still be eligible to stay at the promised place, or elsewhere, for the second Rains and be eligible for the lesser privileges contingent on having completed the second Rains, but none of the commentaries mention this point.</p>
+
+<p><b>Determination.</b> The only formality mentioned in the Canon for starting a Rains-residence is that one prepares one’s lodging, sets out drinking-water and washing-water, and sweeps the area. The Commentary, however, recommends making a formal determination: After paying respects to the cetiya, etc., one should say one or two times:</p>
+
+<ul class="circ">
+<li><i>&quot;Imasmiṁ vihāre imaṁ te-māsaṁ vassaṁ upemi.</i> (I am entering this three-month Rains in this dwelling.)”</li>
+</ul>
+
+<p>If staying in a place that does not qualify as a vihāra — as in a hut on a cart in a caravan — one should say three times:</p>
+
+<ul class="circ">
+<li><i>&quot;Idha vassaṁ upemi.</i> (I am entering the Rains here.)”</li>
+</ul>
+
+<p>If staying under a cart, one need only think: “I am going to stay here for the Rains.”</p>
+
+<p>Different Communities have developed the Commentary’s recommendations in different ways. In some, the phrase “paying respects to the cetiya, etc.,” has been expanded to a tradition where the bhikkhus formally ask forgiveness of the Triple Gem and of one another in line with seniority. Because the word vihāra can be translated either as “dwelling” or as “monastery,” some Communities have avoided ambiguity first by formally announcing the boundaries of the area of one’s residence for the three months — usually covering the entire territory of the monastery — and by changing the determination to:</p>
+
+<ul class="circ">
+<li><i>&quot;Imasmiṁ āvāse imaṁ te-māsaṁ vassaṁ upemi. (</i>I am entering this three-month Rains in this monastery.)”</li>
+</ul>
+
+<p>A common practice is to say this three times, instead of the one or two times recommended in the Commentary.</p>
+
+<p>If, however, a bhikkhu prefers to limit his boundaries to the area around his hut, he is free to make that determination on his own.</p>
+
+<p><b>Duration.</b> Once a bhikkhu has entered the Rains, he must not go wandering off for the next three months. According to the Commentary, this means that he must greet the dawn of every day during those three months within the area he has determined for his residence. If he greets even one dawn outside of his determined area, his residence is broken. In breaking his residence, he both incurs a dukkaṭa and becomes ineligible for the privileges contingent on having completed the Rains.</p>
+
+<p>There are, however, two exceptions to this rule: going on legitimate seven-day business and breaking the residence because of valid obstacles.</p>
+
+<p><b>Seven-day business.</b> The first exception to the rule concerning duration is that if one has legitimate business, one is allowed to go away for up to seven days. In the Commentary’s terms, this means that one may be away from one’s residence for up to six dawns and must return to greet the seventh dawn within the area that one has determined for one’s residence.</p>
+
+<p>The legitimacy of the business is determined by the nature of the business, the person who needs one’s help, and whether that person sends for one to come.</p>
+
+<p>If any one of seven classes of people asks for one’s help — a fellow bhikkhu, a bhikkhunī, a female trainee, a male novice, a female novice, a male lay follower, a female lay follower — one may go if sent for, but not if not sent for, if the business concerns that person’s desire to make merit, to hear the Dhamma, or to see the bhikkhus. The Canon gives a long list of situations in which a person — lay or ordained — might want a bhikkhu to come for these purposes. The list is not meant to be exhaustive, but it provides an interesting glimpse of the merit-making occasions of the time: The donor has arranged the construction of a building, either for the Community, for a group of bhikkhus, or a single bhikkhu; he/she has arranged the construction of a building for his/her own use. Other occasions, given only in the case of a lay follower, include the following: His/her son or daughter is getting married; he/she has fallen ill; or he/she has memorized an important discourse and wants to pass it on so that it does not disappear with his/her death (which, in the days before written transmission, could easily have happened). In all these cases, the Sub-commentary says that if one goes without being sent for, one has broken one’s Rains-residence and incurred an offense.</p>
+
+<p>There are other cases in which one may go, even if not sent for — all the more if sent for — if any of the following situations arises concerning a fellow bhikkhu, a bhikkhunī, a female trainee, a novice, or a female novice, and one plans to be of help:</p>
+
+<ul class="circ">
+<li>he/she has fallen ill,</li>
+<li>he/she is suffering from dissatisfaction with the holy life,</li>
+<li>he/she is suffering from anxiety over the possibility of having broken a training rule, or</li>
+<li>he/she has fallen into a viewpoint (<i>diṭṭhigata —</i> see the discussion in <a href="../bmc/bmc2.9.html">Chapter&nbsp;9</a>).</li>
+</ul>
+
+<p>Furthermore, in the case of a bhikkhu or bhikkhunī, one may go if he/she has committed a saṅghādisesa offense and needs help in the steps leading to rehabilitation, is about to become the object of a Community disciplinary transaction (such as censure), or has had a Community disciplinary transaction imposed on him/her. In the case of a female trainee, one may go if she has broken her training rules and interrupted her training, and one wants to help her undertake her training again. In the case of a male novice or female trainee, one may also go if he/she wants to determine his/her eligibility for ordination or wants to be ordained. In the case of a female novice, one may go if she wants to determine her eligibility to become a female trainee or to take on the female trainee’s training.</p>
+
+<p>If either of one’s parents falls ill, one may go even if not sent for, all the more if sent for. If any of one’s other relatives fall ill, or if a person who lives in dependence on the bhikkhus falls ill, one may go only if sent for, not if not sent for.</p>
+
+<p>In all of the cases where one may go if not sent for, the Canon depicts the person in question as sending a messenger with a general invitation for bhikkhus to come. The Commentary notes, though, that the invitation is not a prerequisite for being allowed to go. Even if no message or messenger is sent, one may still go on seven-day business as long as one goes with the purpose of being of help.</p>
+
+<p>One may also go on Community business. The example given in the Canon: A Community dwelling has fallen into disrepair and a lay follower has taken the goods from the dwelling and stashed them away in the wilderness. He asks for bhikkhus to come and take them to put them into safe keeping. Examples given in the Commentary: One may go to help with construction work on a cetiya, a hall, or even the hut of an individual bhikkhu. However, this last example — because it is for individual rather than Community business — seems to go beyond the Canon’s intent.</p>
+
+<p>Finally, as noted above, if one has started spending the Rains in a residence with four or more bhikkhus, none of whom knows the Pāṭimokkha in full or in brief, one of the bhikkhus may go to a neighboring residence for up to seven days to learn the Pāṭimokkha.</p>
+
+<p>Under the heading of seven-day business, the Commentary gives some extra allowances that it admits do not come from the Canon. If, before the Rains, a group of bhikkhus set a date for a meeting during the Rains — the context of the Commentary’s allowance suggests that the meeting would be to listen to a Dhamma talk — one may treat it as seven-day business, but not if one’s intention in going is simply to wash one’s belongings. However, if one’s mentor sends one there for whatever purpose (even for washing one’s robes, says the Sub-commentary) one may go for seven days. If one goes to a monastery that is not far away, intending to return that day, but for some reason cannot return in time, one may treat it as seven-day business. One may not use the seven-day allowance for recitation and interrogation — i.e., memorizing and studying the meaning of the Dhamma — yet if one goes with the purpose of visiting one’s mentor and returning that day, but the mentor tells one to stay on, it is all right to stay. The Sub-commentary adds here that one may even stay on for more than seven days without incurring an offense, although one’s Rains will be broken. Because these allowances have no basis in the Canon, many Communities do not recognize them as valid.</p>
+
+<p>The Commentary notes, citing a passage in Mv.III.14.6, that one may leave for seven-day business even on the first day of the Rains, and there is apparently no limit to the number of times one may go for seven-day business during the following three months. This opens the possibility of taking up Rains-residence in more than one place, alternating short periods in one residence and then the other. We will deal with the implications of this possibility below. Mv.III.14.7 indicates that if one leaves on seven-day business less than seven days before the end of the Rains-residence, one need not return.</p>
+
+<p>None of the texts make exemption for the case where a bhikkhu, going on legitimate seven-day business and planning to return in time, ends up spending more than seven days, either through forgetfulness or through circumstances beyond his control. In other words, whether he intends to or not, if he overstays his seven-day limit, his Rains-residence is broken and he incurs an offense.</p>
+
+<p><b>Obstacles.</b> The second exception to the rule concerning duration is that a bhikkhu may break his Rains-residence at any time if there are valid obstacles for doing so. He does not incur an offense, but does relinquish his right to the privileges that come with having completed the Rains.</p>
+
+<p>Mv.III.9.1—Mv.III.11.13 gives a long list of valid obstacles, which Parivara VI.4 divides into four sorts: dangers to life, dangers to the holy life, a threatened split in the Community, and an actual split in the Community.</p>
+
+<p><i>Dangers to life.</i> Bhikkhus may break the Rains without offense if they are</p>
+
+<ul class="circ">
+<li>harassed by beasts who seize and attack them;</li>
+<li>harassed by creeping things who bite and attack them;</li>
+<li>harassed by criminals who rob them and beat them;</li>
+<li>harassed by demons who possess them and sap their vitality.</li>
+</ul>
+
+<p>With regard to the beasts, the Commentary notes that “seize and attack” also includes cases where the beasts, having surrounded one, chase one away, frighten one, or kill someone else in the vicinity.</p>
+
+<p>Also, if the village where the bhikkhus have entered for the Rains is burned or carried away by a flood, and the bhikkhus suffer in terms of alms; or if their own lodgings are burned or carried away by a flood and they suffer in terms of lodgings, they may leave without offense.</p>
+
+<p>If the village on which they depend moves to a new location, the bhikkhus may follow along. If the village splits, they are to go to the location where the majority of villagers have gone or to the location where the faithful supporters have gone. However, the Commentary recommends that if the village moves only a short distance away and is still within range for alms-going, one should stay in place. If it goes farther than that, one may follow the village to its new location but should try to return to one’s original place every seven dawns to keep the Rains. If that isn’t possible, one should stay with congenial bhikkhus in the village’s new location.</p>
+
+<p>If the bhikkhus do not get enough food for their needs; or if the food is plentiful but uncongenial to them; or if the food is plentiful and congenial, but they don’t receive congenial medicine; of it they don’t get a suitable attendant, they may leave without offense. The Vinaya-mukha interprets the allowance in these instances as valid only if one’s health is in serious jeopardy.</p>
+
+<p><i>Dangers to the holy life.</i> If anyone tries to tempt a bhikkhu, offering him wealth or a wife (or to be his wife), or if he sees abandoned treasure, and in any of these cases he reflects: “The Blessed One says that the mind is easily changed. This could be an obstacle to my holy life,” he may break the Rains without offense.</p>
+
+<p><i>A threatened split in the Community.</i> If many bhikkhus are striving for a schism in the Community where one is living and one doesn’t want the Community to be split in one’s presence, one may leave. However, if bhikkhus in another residence are striving for a schism in their Community and one feels that one might be able to talk them out of it, one may go to their residence. The same holds true if bhikkhunīs are striving for a split in the Community. The Commentary — assuming that <i>Community</i> here means the Bhikkhu Saṅgha — objects to this allowance on the grounds that bhikkhunīs cannot split the Bhikkhu Saṅgha. However, the original meaning of the Pali may have been that the bhikkhunīs were striving for a schism in their own Community. In this case, one may break the Rains without offense in order to try to prevent the split.</p>
+
+<p><i>A split in the Community.</i> If bhikkhus or bhikkhunīs in another residence have split their Community, one may break the Rains to go there. The Commentary raises another objection here, on the grounds that once the Community has split nothing can be done; and that the Pali should thus read: “the bhikkhus are about to split the Community.” This, however, ignores the very real possibility that both sides of the split have been acting in good faith, and that one may bring them to a reconciliation. (See <a href="../bmc/bmc2.21.html">Chapter&nbsp;21</a>, especially Mv.X.5.14 &amp; Mv.X.6.1.)</p>
+
+<p>If any of these four kinds of obstacles arises and one can handle the situation by going away for no more than seven days, the Commentary recommends returning within seven days so as not to break the Rains. In other words, the situation is to be treated as legitimate seven-day business. If this cannot be managed, one commits no offense, but one becomes ineligible for the privileges that come with having completed the Rains.</p>
+
+<p>In addition to these four categories, there is also the rule mentioned above that if many bhikkhus have begun the Rains in a residence where none of them knows the Pāṭimokkha and they cannot arrange for one of their number to memorize the Pāṭimokkha in a nearby residence within seven days, they are to leave their original to residence to spend the Rains in the neighboring residence.</p>
+
+<p><b>Non-dhamma agreements.</b> Traditionally, the Rains-residence is a time for becoming more stringent in one’s practice. Often, bhikkhus staying together will make group vows as a way of offering encouragement to one another. However, there is a rule against making agreements that are not in accord with the Dhamma. In the origin story for this rule, a group of bhikkhus agreed not to ordain any new bhikkhus during the Rains. A relative of Lady Visākhā wanted to ordain during that period but the bhikkhus refused, telling him to wait to the end of the Rains. Yet when the Rains had ended, he had abandoned his desire to ordain. So the Buddha made a ruling that “This sort of agreement should not be made: 'During the Rains, the Going-forth is not to be given.’”</p>
+
+<p>The Commentary to Mv.III.13.2 cites two other agreements that are of this sort: taking a vow of silence and agreeing that those who go away for seven-day business should not get a share of the Community’s gains distributed while they are away. The rule against taking a vow of silence comes in Mv.IV.1.13. In the origin story to that rule, the Buddha learns that a group of bhikkhus have observed a vow of silence for the duration of the Rains and his response is this: “These worthless men, having spent the Rains uncomfortably, claim to have spent the Rains comfortably. Having spent the Rains in cattle (-like) affiliation, they claim to have spent the Rains comfortably. Having spent the Rains in sheep (-like) affiliation, they claim to have spent the Rains comfortably. Having spent the Rains in heedless-affiliation, they claim to have spent the Rains comfortably. How can these worthless men undertake a vow of dumb silence, the undertaking of sectarians?”</p>
+
+<p>More generally, the Commentary says that agreements “of this sort” are the non-dhamma agreements that the Buddha criticized in the Sutta Vibhaṅga. Apparently, this is a reference to the origin story to <a href="../vi/bu-vb-np15.html">Nissaggiya Pācittiya&nbsp;15</a>, in which the Buddha, criticizing a group of bhikkhus for inventing their own pācittiya rule, says: “What has not been formulated (as a rule) should not be formulated, and what has been formulated should not be rescinded, but one should dwell in conformity and in accordance with the rules that have been formulated.”</p>
+
+<p>The Commentary to Pārājika 4 expands on this point with a long list of agreements that should not be made for the Rains: refusing to give the Going-forth, prohibiting the study or teaching of the Dhamma, deciding to share in-season gifts to the Community with bhikkhus staying outside the monastery precincts, or compelling the observance of the dhutaṅga (ascetic) practices. The Commentary to Cv.VI.11.3 adds other agreements to this list: refusing to give Acceptance, refusing to give dependence, refusing to give the opportunity to listen to the Dhamma, and not sharing Community gains with those who go away on seven-day business. It then adds a list of agreements that <i>would</i> accord with the Dhamma, such as encouraging one another to know moderation in speech, to converse on the ten proper subjects of conversation (<a href="../an/an10.69.html">AN10.69</a>), to show consideration to meditators when one is reciting the Dhamma, to willingly undertake any of the dhutaṅga practices in line with one’s abilities, and to be heedful at all times.</p>
+
+<p><b>Gifts of cloth.</b> <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a> lists eight ways in which a donor may designate gifts of cloth, and one of them is that a gift of cloth may be for the bhikkhus who are residing or have resided in a particular residence for the Rains. We will discuss this arrangement in more detail in <a href="../bmc/bmc2.18.html">Chapter&nbsp;18</a>, but here we will simply note the Commentary’s observation that, during the Rains-residence, this arrangement applies only to bhikkhus who have kept the residence up to that point without break; for one month after the Rains, it applies only to the bhikkhus who have successfully kept the entire Rains-residence. According to the Canon, if the kaṭhina has been spread, this arrangement extends until the end of the kaṭhina privileges.</p>
+
+<p>The Canon also adds that, if a donor has designated a gift of cloth for the bhikkhus who are residing/have resided for the Rains, a bhikkhu who is not residing/has not resided for the Rains in that residence should not accept a portion. To do so is to incur a dukkaṭa. The Commentary adds that if he does accept such a portion, he should return it. If it gets worn out or lost before he returns it, he should make compensation. If, when the Community asks for its return, he doesn’t return it, the offense is to be determined by the value of the cloth, which could well amount to a pārājika. In saying this, the Commentary is following the theory of bhaṇḍadeyya, which — as we stated in the discussion of <a href="../bmc/bmc1.4.html#pr2">Pārājika 2</a> — has no basis in the Canon. Here in particular it seems excessive punishment for what the Canon explicitly says is an act incurring only a dukkaṭa. If we follow the Canon, the bhikkhu who has accepted such a portion need not return it. Once it has been given to him, it is his — even though he incurs an offense in accepting it.</p>
+
+<p>As mentioned above, under the topic of seven-day business, there is the technical possibility that a bhikkhu may enter the Rains in two residences. If donors at both places designate gifts of Rains-residence cloth, then if the bhikkhu spends half the time at one residence and half the time at the other, he should be given half a portion here and half a portion there. Or if he spends more time at one than the other, he should be given a full portion at his main residence and nothing at the other.</p>
+
+<p><b>Privileges.</b> The Commentary, in scattered places, explicitly mentions five privileges to which a bhikkhu who completes the first period of Rains-residence without break is entitled. The first four are:</p>
+
+<ul class="circ">
+<li>he may participate in the Invitation (<i>pavāraṇā</i>) transaction marking the end of the Rains-residence (see <a href="../bmc/bmc2.16.html">Chapter&nbsp;16</a>);</li>
+<li>he may continue receiving gifts of Rains-residence cloth at that residence for a month after the end of the Rains-residence;</li>
+<li>he may keep one of his robes in his alms-village if he is staying in a wilderness area (see <a href="../bmc/bmc1.7-3.html#np29">Nissaggiya Pācittiya&nbsp;29</a>); and</li>
+</ul> <ul class="circ">
+<li>he may participate in the spreading of a kaṭhina (see <a href="../bmc/bmc2.17.html">Chapter&nbsp;17</a>).</li>
+</ul>
+
+<p>In each of these cases, the Commentary is basing its judgment on the fact that the Canon’s permission for these activities is given for “bhikkhus who have lived for (i.e., completed) the Rains-residence.”</p>
+
+<p>The fifth privilege is based on three passages in <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a> (sections 2, 5, &amp; 6). In each of the three, donors present gifts of cloth “to the Community” and in each case the bhikkhus who have spent the Rains in that residence have sole rights to these gifts until their kaṭhina privileges are ended (see <a href="../bmc/bmc2.17.html">Chapter&nbsp;17</a>). If the bhikkhus do not spread a kaṭhina, the Commentary states that they hold this right for the month after the end of the Rains-residence.</p>
+
+<p>A bhikkhu who completes the second period of Rains-residence without break is entitled to one privilege: He may participate in the Invitation transaction marking the end of his period of Rains-residence. If the bhikkhus in his residence have delayed their Invitation to that date, he may join in their Invitation. If not, he may participate in an Invitation with any fellow bhikkhus who have completed the second period of Rains-residence along with him. Because Parivara XIV.4 limits the period for receiving a kaṭhina to last month of the rainy season, and because a bhikkhu can participate in the spreading of a kaṭhina only after having completed his Rains-residence, this means that a bhikkhu who has completed the second period of Rains-residence is not entitled to this privilege.</p>
+
+<p>The Vinaya-mukha follows an old tradition that NP <a href="../bmc/bmc1.7-1.html#np1">1</a>, <a href="../bmc/bmc1.7-1.html#np2">2</a>, &amp; <a href="../bmc/bmc1.7-1.html#np3">3</a>; and Pācittiya <a href="../bmc/bmc1.8-4.html#pc32">32</a>, <a href="../bmc/bmc1.8-4.html#pc33">33</a>, &amp; <a href="../bmc/bmc1.8-5.html#pc46">46</a> are also rescinded for one month for a bhikkhu who has completed the first period of Rains-residence. I have tried to trace the source of this tradition in the Canon and commentaries, but without success. The Vibhaṅgas to <a href="../bmc/bmc1.7-1.html#np3">Nissaggiya Pācittiya&nbsp;3</a>, Pācittiya <a href="../bmc/bmc1.8-4.html#pc32">32</a>, <a href="../bmc/bmc1.8-4.html#pc33">33</a>, &amp; <a href="../bmc/bmc1.8-5.html#pc46">46</a> make clear that the fourth month of the rainy season — the month after the first period of Rains-residence, and the last month of the second period of Rains-residence — is the <i>cīvara-kāla,</i> the robe season (also called the <i>cīvara-dāna-samaya,</i> the occasion for giving robe-cloth), during which those rules, along with <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>, are rescinded. However, neither the Canon nor the commentaries to these rules make these privileges contingent on having completed the Rains.</p>
+
+<p>As for rescinding <a href="../bmc/bmc1.7-1.html#np2">Nissaggiya Pācittiya&nbsp;2</a>, the texts mention this only as one of the privileges for participating in the spreading of a kaṭhina. It might seem reasonable to regard <a href="../bmc/bmc1.7-1.html#np2">Nissaggiya Pācittiya&nbsp;2</a> as rescinded during the cīvara-kāla, as all of the other privileges for participating in the kaṭhina are simply extensions of other cīvara-kāla privileges, but neither the Canon nor the commentaries support this idea. For instance, <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.3 allows a bhikkhu to enter a village without his full set of robes if he has spread a kaṭhina, but does not extend the same privilege to a bhikkhu who has simply completed the Rains. Furthermore, the Commentary to Mv.7indicates that the Buddha&rsquo;s purpose in instituting the kaṭhina was to give the bhikkhus the privilege of traveling without their full set of robes during the last month of the rains, when roads were still wet. If this privilege came automatically with the completion of the Rains-residence, there would be no need to institute the kaṭhina for this purpose.</p>
+
+<p>Thus the only privileges contingent on completing the Rains-residence without break are:</p>
+
+<ul class="circ">
+<li>the five for completing the first period of Rains-residence (participating in the Invitation transaction; receiving gifts of Rains-residence robe-cloth for an extra month; having sole rights to cloth presented “to the Community” in that residence for an extra month; keeping one of one’s robes in a village while living in a wilderness; and participating in the spreading of a kaṭhina); and</li>
+<li>the one — participating in the Invitation — for completing the second.</li>
+</ul> <h2>Rules</h2>
+<p>“I allow that you enter for the Rains.” — Mv.III.1.3</p>
+
+<p>“I allow that you enter for the Rains during the rainy season.” — Mv.III.2.1</p>
+
+<p>“There are these two beginnings for the Rains: the earlier and the later. The earlier is to be entered the day after (the full moon of ) Asāḷhi, the later is to be entered a month after (the full moon of) Asāḷhi. These are the two beginnings for the Rains.” — Mv.III.2.2</p>
+
+<p>“One should not not enter for the Rains. Whoever does not enter: an offense of wrong doing.” — Mv.III.4.1</p>
+
+<p>“On a day for beginning the Rains, one should not pass by a residence not desiring to enter for the Rains. Whoever should pass by: an offense of wrong doing.” — Mv.III.4.2</p>
+
+<p>“I allow that kings be complied with.” — Mv.III.4.2</p>
+
+<h3>Places</h3>
+<p>“There is the case where many bhikkhus — inexperienced, incompetent — are staying for the Rains in a certain residence. They do not know the uposatha or the uposatha transaction, the Pāṭimokkha or the recital of the Pāṭimokkha… One bhikkhu should be sent by the bhikkhus to a neighboring residence immediately: 'Go, friend. Having mastered the Pāṭimokkha in brief or in its full extent, come back.' If he manages it, well and good. If not, then one bhikkhu should be sent by the bhikkhus to a neighboring residence for a period of seven days: 'Go, friend. Having mastered the Pāṭimokkha in brief or in its full extent, come back.' If he manages it, well and good. If not, then the bhikkhus should go stay for the Rains in that (neighboring) residence. If they stay (where they are): an offense of wrong doing.” — Mv.II.21.4</p>
+
+<p>“I allow that you enter for the Rains in a cowherd camp (§)… I allow that you go wherever the cowherd camp is moved.” — Mv.III.12.1</p>
+
+<p>“I allow that you enter for the Rains in a caravan… I allow that you enter for the Rains in a boat.” — Mv.III.12.2</p>
+
+<p>“One should not enter for the Rains in the hollow of a tree … in the fork of a tree … in the open air … in a non-lodging … in a charnel house … under a canopy … in a large storage vessel. Whoever should do so: an offense of wrong doing.” — Mv.III.12.3–9</p>
+
+<h3>Breaking Promises</h3>
+<p>“There is the case where a bhikkhu has assented to the Rains-residence for the earlier period. While going to that residence he sees two residences along the way with much cloth. The thought occurs to him, ’What if I were to stay for the Rains in these two residences? That way a lot of cloth would accrue to me.' He spends the Rains in those two residences. That bhikkhu’s earlier period is not discerned (i.e., doesn’t count), and there is an offense of wrong doing in the assent.” — Mv.III.14.4</p>
+
+<p>“… While going to that residence he performs the uposatha outside it, reaches the dwelling on the day after the uposatha day. He prepares his lodging, sets out drinking-water and washing-water, sweeps the area. Having no business he departs that very day… That bhikkhu’s earlier period is not discerned, and there is an offense of wrong doing in the assent.” — Mv.III.14.5</p>
+
+<p>“… While going to that residence he performs the uposatha outside it, reaches the dwelling on the day after the uposatha day … having some business he departs that very day… That bhikkhu’s earlier period is not discerned, and there is an offense of wrong doing in the assent.” — Mv.III.14.5</p>
+
+<p>“… While going to that residence he performs the uposatha outside it, reaches the dwelling on the day after the uposatha day … having entered (the Rains) for two or three days and having no business he departs … having some business he departs … having some seven-day business he departs, but he overstays seven days outside. That bhikkhu’s earlier period is not discerned, and there is an offense of wrong doing in the assent.” — Mv.III.14.6</p>
+
+<p>“… having some seven-day business he departs, and he returns within seven days. That bhikkhu’s earlier period is discerned, and there is no offense in the assent.” — Mv.III.14.6</p>
+
+<p>“… seven days before the Invitation he departs on some business. Whether or not he returns to that residence, his earlier period is discerned, and there is no offense in the assent.” — Mv.III.14.7</p>
+
+<p>“… performs the uposatha at the residence to which he had given assent” (all other details identical to Mv.III.14.5–7) — Mv.III.14.8–10</p>
+
+<p>“… has assented to the Rains for the later period” (all other details identical to Mv.III.14.5–10) — Mv.III.14.11</p>
+
+<h3>Seven-day Business</h3>
+<p>“Having entered for the Rains, one should not set out on tour without having stayed either the first three months or the last three months. Whoever should set out: an offense of wrong doing.” — Mv.III.3.2</p>
+
+<p>“I allow you to go for seven-day business (§) when sent for by seven (classes of people) but not if not sent for: a bhikkhu, a bhikkhunī, a female trainee, a novice, a female novice, a male lay follower, a female lay follower. I allow you to go for seven-day business when sent for by these seven (classes of people), but not if not sent for. The return should be made in seven days.” — Mv.III.5.4</p>
+
+<p>“There is the case where a dwelling dedicated to the Community has been built by a male lay follower. If he should send a messenger to the presence of the bhikkhus, saying, ’May the reverend ones please come; I want to give a gift, to hear the Dhamma, to see the bhikkhus,’ one may go on seven-day business if sent for, but not if not sent for. The return should be made in seven days. (Similarly if the lay follower has arranged to have other kinds of buildings, a cave, a lotus pond, a monastery, a monastery site for the Community, for several bhikkhus, for one bhikkhu; for the Community of bhikkhunīs, for several bhikkhunīs, for one bhikkhunī; for several female trainees, for one female trainee; for several male novices, for one male novice; for several female novices, for one female novice; for himself.) … or his son’s marriage takes place or his daughter’s marriage takes place or he falls ill or he recites a well-known discourse. If he should send a messenger to the presence of the bhikkhus, saying, ’May the reverend ones please come. They will master this discourse before it disappears.' Or he has some duty, some business. If he should send a messenger to the presence of the bhikkhus, saying, ’May the reverend ones please come; I want to give a gift, to hear the Dhamma, to see the bhikkhus,’ one may go on seven-day business if sent for, but not if not sent for. The return should be made in seven days.” — Mv.III.5.5–9</p>
+
+<p>(The above is then repeated, substituting “female lay follower” for “male lay follower.”) — Mv.III.5.10–12</p>
+
+<p>(The above, except for the section on marriage, falling ill, and reciting a well-known discourse is repeated, substituting for “lay male follower” the following: a bhikkhu, a bhikkhunī, a female trainee, a male novice, a female novice). — Mv.III.5.13</p>
+
+<p>“I allow you to go for seven-day business even when not sent for by five (classes of people), all the more if sent for: a bhikkhu, a bhikkhunī, a female trainee, a novice, a female novice. I allow you to go for seven-day business even when not sent for by these five (classes of people), all the more if sent for. The return should be made in seven days.” — Mv.III.6.1</p>
+
+<p>“There is a case where a bhikkhu falls ill. If he should send a messenger to the presence of the bhikkhus, saying, ’Because I am ill, may the bhikkhus come. I want bhikkhus to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’I will look for a meal for the sick person or a meal for the nurse or medicine; I will ask after his health or will tend to him.' The return should be made in seven days.</p>
+
+<p>“There is the case where dissatisfaction (with the holy life) has arisen in a bhikkhu. If he should send a messenger to the presence of the bhikkhus, saying, ’Because dissatisfaction has arisen in me, may the bhikkhus come. I want bhikkhus to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’I will allay his dissatisfaction, or get someone to allay it, or I will give a Dhamma talk.' The return should be made in seven days.</p>
+
+<p>(Similarly if anxiety over the rules or a viewpoint (<i>diṭṭhigata</i>) has arisen in a bhikkhu.)</p>
+
+<p>“There is the case where a bhikkhu has committed a heavy offense (a saṅghādisesa) and deserves probation. If he should send a messenger to the presence of the bhikkhus, saying, ’Because I have committed a heavy offense and deserve probation, I want bhikkhus to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’I will make an effort to grant him probation or will make the proclamation or will complete the group (needed to grant him probation).' The return should be made in seven days.</p>
+
+<p>(Similarly if a bhikkhu deserves to be sent back to the beginning, deserves penance, deserves rehabilitation.)</p>
+
+<p>“There is the case where a Community desires to carry out a transaction against a bhikkhu — one of censure or of demotion or of banishment or of reconciliation or of suspension. If he should send a messenger to the presence of the bhikkhus, saying, ’Because the Community desires to carry out a transaction against me … may the bhikkhus come. I want bhikkhus to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’How then may the Community not carry out the transaction or change it to something lighter?' The return should be made in seven days.</p>
+
+<p>“There is the case where a Community has carried out a transaction against a bhikkhu… If he should send a messenger to the presence of the bhikkhus, saying, ’Because the Community has carried out a transaction against me, may the bhikkhus come. I want bhikkhus to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’How then may he conduct himself properly, lower his hackles, and mend his ways so that the Community can rescind the transaction?' The return should be made in seven days.” — Mv.III.6.2–11</p>
+
+<p>(Mv.III.6.2–5 is then repeated, substituting “bhikkhunī” for “bhikkhu,” down to the case where a viewpoint has arisen. Then — ) “There is the case where a bhikkhunī has committed a heavy offense (a saṅghādisesa) and deserves penance. If she should send a messenger to the presence of the bhikkhus, saying, ’Because I have committed a heavy offense and deserve penance, may the masters come. I want the masters to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’I will make an effort to grant her penance.' The return should be made in seven days.</p>
+
+<p>(Similarly if a bhikkhunī deserves to be sent back to the beginning or deserves rehabilitation.)</p>
+
+<p>“There is the case where a Community desires to carry out a transaction against a bhikkhunī — one of censure or of demotion or of banishment or of reconciliation or of suspension. If she should send a messenger to the presence of the bhikkhus, saying, ’Because the Community desires to carry out a transaction against me … may the masters come. I want the masters to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’How then may the Community not carry out the transaction or change it to something lighter?' The return should be made in seven days.</p>
+
+<p>“There is the case where a Community has carried out a transaction against a bhikkhunī… If she should send a messenger to the presence of the bhikkhus, saying, ’Because the Community has carried out a transaction against me, may the masters come. I want the masters to come,’ one may go on seven-day business even if not sent for, all the more if sent for, thinking, ’How then may she conduct herself properly, lower her hackles, and mend her ways so that the Community can rescind the transaction?' The return should be made in seven days.” — Mv.III.6.12–20</p>
+
+<p>(Mv.III.6.2–5 is then repeated, substituting “female trainee” for “bhikkhu,” down to the case where a viewpoint has arisen. Then — ) “There is the case where a female trainee’s training has been interrupted… 'I will make an effort for her to undertake the training (again)'… There is the case where a female trainee desires Acceptance… 'I will make an effort for her Acceptance or will make the proclamation or will complete the group (needed for her Acceptance)'… “</p>
+
+<p>(Mv.III.6.2–5 is then repeated, substituting “male novice” for “bhikkhu,” down to the case where a viewpoint has arisen. Then — ) “There is the case where a male novice wants to ask about his age (in preparation for ordination)… 'I will ask or I will explain'… There is the case where a male novice desires Acceptance… 'I will make an effort for his Acceptance or will make the proclamation or will complete the group (needed for his Acceptance)'… “</p>
+
+<p>(Mv.III.6.2–5 is then repeated, substituting “female novice” for “bhikkhu,” down to the case where a viewpoint has arisen. Then — ) “There is the case where a female novice wants to ask about her age (in preparation for undertaking the female trainee’s training)… There is the case where a female novice desires to undertake the (female trainee's) training… 'I will make an effort for her to undertake the training'… “ — Mv.III.6.21–29</p>
+
+<p>“I allow you to go for seven-day business even when not sent for by seven (classes of people), all the more if sent for: a bhikkhu, a bhikkhunī, a female trainee, a novice, a female novice, mother, father. I allow you to go for seven-day business even when not sent for by these seven (classes of people), all the more if sent for. The return should be made in seven days.” — Mv.III.7.2</p>
+
+<p>“There is the case where a bhikkhu’s mother falls ill. If she should send a messenger to her son, saying, ’Because I am ill, may my son come. I want my son to come,’ one may go for seven-day business even if not sent for, all the more if sent for, thinking, ’I will look for a meal for the sick person or a meal for the nurse or medicine; I will ask after her health or will tend to her.' The return should be made in seven days.” — Mv.III.7.3</p>
+
+<p>“There is the case where a bhikkhu’s father falls ill. If he should send a messenger to his son, saying, ’Because I am ill, may my son come. I want my son to come,’ one may go for seven-day business even if not sent for, all the more if sent for, thinking, ’I will look for a meal for the sick person or a meal for the nurse or medicine; I will ask after his health or will tend to him.' The return should be made in seven days.” — Mv.III.7.4</p>
+
+<p>“There is the case where a bhikkhu’s brother falls ill. If he should send a messenger to his brother, saying, ’I am ill. May my brother come. I want my brother to come,’ one may go for seven-day business if sent for, but not if not sent for… The return should be made in seven days.” — Mv.III.7.5</p>
+
+<p>“… a bhikkhu’s sister falls ill … a bhikkhu’s relative falls ill … a person living with the bhikkhus falls ill. If he should send a messenger to his brother, saying, ’I am ill. May the bhikkhus come. I want the bhikkhus to come,’ one may go for seven-day business if sent for, but not if not sent for… The return should be made in seven days.” — Mv.III.7.6–8</p>
+
+<p>“I allow that you go on Community business. The return should be made in seven days.” — Mv.III.8</p>
+
+<p>See also Mv.II.21.4 under “Places,” above.</p>
+
+<h3>Leaving without Breaking the Rains</h3>
+<p>“There is the case where bhikkhus who have entered for the Rains are harassed by beasts who seize them and attack them. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains. There is the case where bhikkhus who have entered for the Rains are harassed by creeping things who bite and attack them. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains.” — Mv.III.9.1</p>
+
+<p>“There is the case where bhikkhus who have entered for the Rains are harassed by criminals who rob them and beat them. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains. There is the case where bhikkhus who have entered for the Rains are harassed by demons who possess them and sap their vitality. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains.” — Mv.III.9.2</p>
+
+<p>“… the village where bhikkhus have entered for the Rains is burned. The bhikkhus suffer in terms of alms … the lodgings where bhikkhus have entered for the Rains are burned. The bhikkhus suffer in terms of lodging … the village where bhikkhus have entered for the Rains is carried away by water. The bhikkhus suffer in terms of alms … the lodgings where bhikkhus have entered for the Rains are carried away by water. The bhikkhus suffer in terms of lodging. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains.” — Mv.III.9.3–4</p>
+
+<p>(The village where bhikkhus have entered for the Rains has moved because of robbers:) “I allow you to go where the village moves.” “I allow you to go where there is more of the village (when the village is split in two).” “I allow you to go where the people are faithful and confident.” — Mv.III.10</p>
+
+<p>“There is the case where bhikkhus who have entered for the Rains do not get enough coarse or refined foods for their needs. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains. There is the case where bhikkhus who have entered for the Rains get enough coarse or refined foods for their needs, but no congenial food. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains.” — Mv.III.11.1</p>
+
+<p>“There is the case where bhikkhus who have entered for the Rains get enough coarse or refined foods for their needs, get congenial food, but no congenial medicine … (or) they get congenial medicines but not a suitable attendant. (Thinking,) 'This is indeed an obstacle,’ one may depart. There is no offense for breaking the Rains.” — Mv.III.11.2</p>
+
+<p>“There is the case where a woman invites a bhikkhu, saying, ’I will give you silver, I will give you gold … a field … a building site … a bull … a cow … a male slave … a female slave … I will give a daughter to be your wife, I will be your wife, or I will get another wife for you;' … where a “fat princess” (male transvestite? — this term is uncertain, but from the context it clearly does not denote an actual woman) invites a bhikkhu … a paṇḍaka invites a bhikkhu … where relatives invite a bhikkhu … kings … robbers … mischief-makers invite a bhikkhu, saying, ’I will give you silver, I will give you gold … a field … a building site … a bull … a cow … a male slave … a female slave … I will give a daughter to be your wife or I will get another wife for you'… He sees abandoned treasure. If the thought occurs to the bhikkhu, ’The Blessed One says that the mind is quick to reverse itself (<a href="../an/an1.48.html">AN1.48</a>); this could be an obstacle to my holy life,’ he may depart. There is no offense for breaking the Rains.” — Mv.III.11.3–4</p>
+
+<p>“He sees many bhikkhus striving for a schism in the Community. If the thought occurs to him, ’The Blessed One says that schism is a serious thing. Don’t let the Community be split in my presence,’ he may depart. There is no offense for breaking the Rains.” “He hears many bhikkhus striving for a schism in the Community … no offense for breaking the Rains.” — Mv.III.11.5</p>
+
+<p>“He hears, ’They say that many bhikkhus in that residence over there (§) are striving for a schism in the Community. Now, these bhikkhus are my friends. I will speak to them, saying: “The Blessed One says that schism is a serious thing. Don’t be pleased by a schism in the Community.” They will follow my words, they will listen, they will lend ear,’ he may depart. There is no offense for breaking the Rains.” — Mv.III.11.6</p>
+
+<p>“Now these bhikkhus are not my friends, but friends of theirs are friends of mine … they will listen …” — Mv.III.11.7</p>
+
+<p>“Many bhikkhus have split the Community … they are my friends …” — Mv.III.11.8</p>
+
+<p>“Many bhikkhus have split the Community … they are not my friends, but friends of theirs are friends of mine … — Mv.III.11.9</p>
+
+<p>(The same as Mv.III.11.6–9, substituting “bhikkhunīs” for “bhikkhus”) — Mv.III.11.10–13</p>
+
+<p>See also Mv.II.21.4, under “Places,” above.</p>
+
+<h3>Non-dhamma Agreements</h3>
+<p>“This sort of agreement should not be made: 'During the Rains, the Going-forth is not to be given.' Whoever should make this agreement: an offense of wrong doing.” — Mv.III.13.2</p>
+
+<p>“The vow of dumb silence, the undertaking of sectarians, is not to be undertaken. Whoever should undertake it: an offense of wrong doing.” — Mv.IV.1.13</p>
+
+<h3>Gifts of Cloth</h3>
+<p>(One of the eight standards for the arising of robe-cloth:) “One gives to the Community that has spent the Rains… It is to be divided among however many bhikkhus have spent the Rains in that residence.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a></p>
+
+<p>“One who has entered the Rains in one place should not consent to a portion of robe-cloth from another place. Whoever should do so: an offense of wrong doing.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.3</p>
+
+<p>“There is the case where a bhikkhu enters the Rains in two residences, thinking, ’In this way a great deal of robe-cloth will come to me.' If he spends half the time here and half the time there, he should be given half a portion here and half a portion there. Or wherever he spends more time, he should be given a portion there.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.4</p>
+
+<p>“There is the case where a bhikkhu is spending the Rains-residence alone. There, people (saying,) 'We are giving to the Community,’ give robe-cloths. I allow that those robe-cloths be his alone until the dismantling of the kaṭhina.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.2</p>
+
+<p>Now at that time two elder brothers, Ven. Isidāsa and Ven. Isibhatta, having spent the Rains-residence in Sāvatthī, went to a certain village monastery. People (saying): “At long last the elders have come,” gave food together with robe-cloths. The resident bhikkhus asked the elders: “Venerable sirs, these Community robe-cloths have arisen because of your coming. Will you consent to a portion?” The elders said: “As we understand the Dhamma taught by the Blessed One, these robe-cloths are yours alone until the dismantling of the kaṭhina.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.5</p>
+
+<p>Now at that time three bhikkhus were spending the Rains-residence in Rājagaha. There, people (saying): “We are giving to the Community,” gave robe-cloths. The thought occurred to the bhikkhus: “It has been laid down by the Blessed One that a Community is at least a group of four, but we are three people. Yet these people (saying), ’We are giving to the Community,’ have given robe-cloths. So how are these to be treated by us?” Now at that time a number of elders — Ven. Nīlvāsī, Ven. Sāṇavāsī, Ven. Gopaka, Ven. Bhagu, and Ven. Phalidasandāna were staying in Pāṭaliputta at the Rooster Park. So the bhikkhus, having gone to Pāṭaliputta, asked the elders. The elders said: “As we understand the Dhamma taught by the Blessed One, these robe-cloths are yours alone until the dismantling of the kaṭhina.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a></p>
+
+<h3>Other Privileges</h3>
+<p>“I allow that bhikkhus who have come out of the Rains-residence invite (one another) with respect to three things: what is seen, what is heard, and what is suspected. That will be for your mutual conformity (§), for your arising out of offenses, for your esteem for the Vinaya.” — Mv.IV.1.13</p>
+
+<p>“I allow that the kaṭhina be spread (§) by bhikkhus when they have come out of the Rains-residence.” — <a href="../vi/kd7.html">Khandhaka&nbsp;7 (Mv.&nbsp;7)</a></p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.10.html#content"></a><a id="next-sutta" href="../bmc/bmc2.12.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;2.11: Rains Residence</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

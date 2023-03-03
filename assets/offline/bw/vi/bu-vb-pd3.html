@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Pāṭidesanīya 3</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Pāṭidesanīya 3: Not to accept food from poor people who show remarkable fervor towards the dhamma, without having been invited by them.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by I.B. Horner.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>… at Sāvatthī in the Jeta Grove in Anāthapiṇḍika’s monastery. Now at that time there was in Sāvatthī a certain family which on both sides came to be pleased, it grew in faith, it decreased in wealth; whatever solid food or soft food accrued to that family before a meal, having given it all away to monks, sometimes they went without food. People … spread it about, saying:</p>
+
+<p>"How can the recluses, sons of the Sakyans, not knowing moderation, accept? These (people), having given to these (monks), sometimes go without food." Monks heard these people who … spread it about.</p>
+
+<p id="p2"><span class="parno">2</span>Then these monks told this matter to the lord. Then the lord on this occasion, in this connection, having given reasoned talk, addressed the monks, saying:</p>
+
+<p>"I allow you, monks, when a family is growing in faith, is decreasing in wealth, to give such a family an agreement as to learners by a (formal) act at which the motion is followed by one proclamation. And thus, monks, should it be given: The Order should be informed by an experienced, competent monk, saying:</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>‘Honoured sirs, let the Order listen to me. Such and such a family is growing in faith, is decreasing in wealth. If it seems right to the Order, let the Order give the agreement as to learners to such and such a family. This is the motion.</p>
+
+<p id="p4"><span class="parno">4</span>Honoured sirs, let the Order listen to me. Such and such a family … in wealth. The Order gives the agreement as to learners to such and such a family. If the giving of the agreement as to learners to such and such a family is pleasing to the venerable ones, let them be silent; if it is not pleasing, they should speak.</p>
+
+<p id="p5"><span class="parno">5</span>The agreement as to learners is given by the Order to such and such a family, and it is right … So do I understand this.’</p>
+
+<p id="p6"><span class="parno">6</span>And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p7"><span class="parno">7</span><span class="rule">Whatever are those families that are agreed upon as learners, whatever monk having accepted among such families as are agreed upon as learners solid food or soft food with his own hand, should eat it or partake of it, it should be confessed by that monk, saying: ‘I have fallen, your reverences, into a blameworthy matter, unbecoming, which ought to be confessed; I confess it.’"</span></p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<p id="p9"><span class="parno">9</span>Now at that time there came to be a festival at Sāvatthī. People, having invited monks, offered them food. The monks, being scrupulous, did not consent, thinking: "It is forbidden by the lord, having accepted among families that are agreed upon as learners solid food or soft food with one’s own hand, to eat it, to partake of it." These looked down upon, criticised, spread it about, saying: "But how is it that because of our way of living, the masters do not accept from us?"</p>
+
+<p id="p10"><span class="parno">10</span>Monks heard these people who … spread it about. Then these monks told this matter to the lord. Then the lord, on this occasion, in this connection, having given reasoned talk, addressed the monks, saying:</p>
+
+<p>"I allow you, monks, when invited, having accepted among families agreed upon as learners solid food or soft food with your own hand, to eat it, to partake of it. And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p11"><span class="parno">11</span><span class="rule">Whatever are those families that are agreed upon as learners, whatever monk if he is not invited beforehand, having accepted among such families as are agreed upon as learners solid food or soft food with his own hand, should eat it or partake of it, it should be confessed by that monk, saying: ‘I have fallen, your reverences, into a blameworthy matter, unbecoming, which ought to be confessed; I confess it.’"</span></p>
+
+<hr>
+<p id="p12"><span class="parno">12</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<p id="p13"><span class="parno">13</span>Now at that time a certain monk came to frequent that family. Then that monk, having dressed in the morning, taking his bowl and robe, approached that family, and having approached he sat down on the appointed seat. At that time this monk came to be ill. Then these people spoke thus to this monk: "Eat, honoured sir." Then that monk, thinking: "It is forbidden by the lord, not being invited, having accepted among families agreed upon as learners solid food or soft food with one’s own hand, to eat it, to partake of it," and being scrupulous, he did not accept; he was not able to walk for alms, he became famished.</p>
+
+<p id="p14"><span class="parno">14</span>Then that monk, having gone to the monastery, told this matter to the monks. The monks told this matter to the lord. Then the lord, on this occasion, in this connection, having given reasoned talk, addressed the monks, saying:</p>
+
+<p>"I allow you, monks, when a monk is ill, having accepted among families agreed upon as learners solid food or soft food with his own hand, to eat it, to partake of it. And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p15"><span class="parno">15</span><span class="rule">Whatever are those families that are agreed upon as learners, whatever monk, if he is not invited beforehand (and) not ill, having accepted among such families as are agreed upon as learners solid food or soft food with his own hand, should eat it or partake of it, it should be confessed by that monk, saying: ‘Your reverences, I have fallen into a blameworthy matter, unbecoming, which ought to be confessed; I confess it.’"</span></p>
+
+<p id="p16"><span class="parno">16</span><span class="term">Whatever are those families that are agreed upon as learners</span> means: <span class="gloss">a family agreed upon as learners is called that family which is growing in faith, decreasing in wealth; for such a family an agreement as to learners comes to be given by a (formal) act at which the motion is followed by one proclamation.</span></p>
+
+<hr>
+<p id="p17"><span class="parno">17</span><span class="term">Whatever</span> means: <span class="gloss"> … monk is to be understood in this case.</span></p>
+
+<hr>
+<p id="p18"><span class="parno">18</span><span class="term">Among such families as are agreed, upon as learners</span> means: <span class="gloss">among families like these agreed upon as learners.</span></p>
+
+<p id="p19"><span class="parno">19</span><span class="term">Not invited</span> means: not invited for today or tomorrow. If he invites him as he is entering the precincts of the house, this means not invited.</p>
+
+<p id="p20"><span class="parno">20</span>Invited means: invited for today or tomorrow. If he invites him not as he is entering the precincts of the house, this means invited.</p>
+
+<p id="p21"><span class="parno">21</span><span class="term">Not ill</span> means: he is able to walk for alms.</p>
+
+<p id="p22"><span class="parno">22</span><span class="term">Ill</span> means: he is not able to walk for alms.</p>
+
+<p id="p23"><span class="parno">23</span><span class="term">Solid food</span> means: <span class="gloss">setting aside the five (kinds of) meals, (food that may be eaten) during a watch of the night, during seven days, during life, the rest means solid food.</span></p>
+
+<hr>
+<p id="p24"><span class="parno">24</span><span class="term">Soft food</span> means: <span class="gloss">the five kinds of meals: cooked rice, food made with flour, barley-meal, fish, meat.</span></p>
+
+<p id="p25"><span class="parno">25</span>If he is not invited, not ill, (and) accepts, thinking: "I will eat, I will partake of," there is an offence of wrong-doing. For every mouthful there is an offence which ought to be confessed.</p>
+
+<p id="p26"><span class="parno">26</span>If he thinks that they are agreed upon as learners when they are agreed upon as learners, (and) not invited, not ill, having accepted with his own hand solid food or soft food, eats it or partakes of it, there is an offence which ought to be confessed. If he is in doubt as to whether they are agreed upon as learners … If he thinks that they are not agreed upon as learners when they are agreed upon as learners … offence which ought to be confessed.</p>
+
+<p id="p27"><span class="parno">27</span>If he accepts for the sake of nutriment (food that may be eaten) during a watch of the night, during seven days, during life, there is an offence of wrong-doing. For every mouthful there is an offence of wrong-doing. If he thinks that they are agreed upon as learners when they are not agreed upon as learners, there is an offence of wrong-doing. If he is in doubt as to whether they are not agreed upon as learners, there is an offence of wrong-doing. If he thinks that they are not agreed upon as learners when they are not agreed upon as learners, there is no offence.</p>
+
+<hr>
+<p id="p28"><span class="parno">28</span>There is no offence if he is invited; if he is ill; if he eats the remainder (of a meal) of one who was invited, or one who is ill; if there come to be alms there prepared for others; if having taken it out from the house, they give; if he is a regular diner; if it is (food allowed) by ticket; if it is food (given on) a day of the waxing or waning of the moon, on an Observance day, on the day after an Observance day; if, when there is a reason, he gives (food that may be eaten) during a watch of the night, during seven days, during life, and he makes use of it; if he is mad, if he is the first wrong-doer.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">29</span>The Third</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p><span class="parno">1</span><span class="ms">p_2V_1627, msdiv562</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena sāvatthiyaṁ aññataraṁ kulaṁ ubhatopasannaṁ hoti. Saddhāya vaḍḍhati, bhogena hāyati, yaṁ tasmiṁ kule uppajjati purebhattaṁ khādanīyaṁ vā bhojanīyaṁ vā taṁ sabbaṁ bhikkhūnaṁ vissajjetvā appekadā anasitā acchanti. Manussā ujjhāyanti khiyyanti vipācenti: </p>
+
+<p>"Kathañhi nāma samaṇā sakyaputtiyā na mattaṁ jānitvā paṭiggahessanti. Ime imesaṁ datvā appekadā anasitā acchantī"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_2V_1628</span>Assosuṁ kho bhikkhū tesaṁ manussānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Atha kho te bhikkhū bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi: </p>
+
+<p>"Anujānāmi, bhikkhave, yaṁ kulaṁ saddhāya vaḍḍhati, bhogena hāyati evarūpassa kulassa ñattidutiyena kammena sekkhasammutiṁ dātuṁ. Evañca pana, bhikkhave, dātabbā. Byattena bhikkhunā paṭibalena saṇgho ñāpetabbo:</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_2V_1629, msdiv563</span>‘Suṇātu me, bhante, saṇgho. Itthannāmaṁ kulaṁ saddhāya vaḍḍhati, bhogena hāyati. Yadi saṇghassa pattakallaṁ, saṇgho itthannāmassa kulassa sekkhasammutiṁ dadeyya. Esā ñatti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_2V_1630</span>Suṇātu me, bhante, saṇgho. Itthannāmaṁ kulaṁ saddhāya vaḍḍhati, bhogena hāyati. Saṇgho itthannāmassa kulassa sekkhasammutiṁ deti. Yassāyasmato khamati itthannāmassa kulassa sekkhasammutiyā dānaṁ, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_1631</span>Dinnā saṇghena itthannāmassa kulassa sekkhasammuti. Khamati saṇghassa, tasmā tuṇhī, evametaṁ dhārayāmī’ti.</p>
+
+<p><span class="parno">6</span><span class="ms">p_2V_1632</span>Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">7</span><span class="ms">p_2V_1633</span><span class="rule">"Yāni kho pana tāni sekkhasammatāni kulāni, yo pana bhikkhu tathārūpesu sekkhasammatesu kulesu khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā— ‘gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ taṁ paṭidesemī’"</span> ti.</p>
+
+<hr>
+<p><span class="parno">8</span><span class="ms">p_2V_1634</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<p><span class="parno">9</span><span class="ms">p_2V_1635, msdiv564</span>Tena kho pana samayena sāvatthiyaṁ ussavo hoti. Manussā bhikkhū nimantetvā bhojenti. Tampi kho kulaṁ bhikkhū nimantesi. Bhikkhū kukkuccāyantā nādhivāsenti— "paṭikkhittaṁ bhagavatā sekkhasammatesu kulesu khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādituṁ bhuñjitun"ti. Te ujjhāyanti khiyyanti vipācenti:  "Kiṁ nu kho nāma amhākaṁ jīvitena yaṁ ayyā amhākaṁ na paṭiggaṇhantī"ti.</p>
+
+<p><span class="parno">10</span><span class="ms">p_2V_1636</span>Assosuṁ kho bhikkhū tesaṁ manussānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Atha kho te bhikkhū bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi: </p>
+
+<p>"Anujānāmi, bhikkhave, nimantitena sekkhasammatesu kulesu khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādituṁ bhuñjituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_2V_1637</span><span class="rule">"Yāni kho pana tāni sekkhasammatāni kulāni, yo pana bhikkhu tathārūpesu sekkhasammatesu kulesu pubbe animantito khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā— ‘gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī’"</span> ti.</p>
+
+<hr>
+<p><span class="parno">12</span><span class="ms">p_2V_1638</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<p><span class="parno">13</span><span class="ms">p_2V_1639, msdiv565</span>Tena kho pana samayena aññataro bhikkhu tassa kulassa kulūpako hoti. Atha kho so bhikkhu pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya yena taṁ kulaṁ tenupasankami; upasankamitvā paññatte āsane nisīdi. Tena kho pana samayena so bhikkhu gilāno hoti. Atha kho te manussā taṁ bhikkhuṁ etadavocuṁ: "bhuñjatha, bhante"ti. Atha kho so bhikkhu— "bhagavatā paṭikkhittaṁ animantitena sekkhasammatesu kulesu khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādituṁ bhuñjitun"ti kukkuccāyanto na paṭiggahesi; nāsakkhi piṇḍāya carituṁ; chinnabhatto ahosi.</p>
+
+<p><span class="parno">14</span><span class="ms">p_2V_1640</span>Atha kho so bhikkhu ārāmaṁ gantvā bhikkhūnaṁ etamatthaṁ ārocesi. Bhikkhū bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi: </p>
+
+<p>"Anujānāmi, bhikkhave, gilānena bhikkhunā sekkhasammatesu kulesu khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādituṁ bhuñjituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">15</span><span class="ms">p_2V_1641, msdiv566</span><span class="rule">"Yāni kho pana tāni sekkhasammatāni kulāni, yo pana bhikkhu tathārūpesu sekkhasammatesu kulesu pubbe animantito agilāno khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā— ‘gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī’"</span> ti</p>
+
+<p><span class="parno">16</span><span class="ms">p_2V_1642, msdiv567</span><b>Yāni kho pana tāni sekkhasammatāni kulānī</b>'ti sekkhasammataṁ nāma kulaṁ yaṁ kulaṁ saddhāya vaḍḍhati, bhogena hāyati. Evarūpassa kulassa ñattidutiyena kammena sekkhasammuti dinnā hoti.</p>
+
+<hr>
+<p><span class="parno">17</span><span class="ms">p_2V_1643</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<hr>
+<p><span class="parno">18</span><span class="ms">p_2V_1644</span><b>Tathārūpesu sekkhasammatesu kulesū</b>'ti evarūpesu sekkhasammatesu kulesu.</p>
+
+<p><span class="parno">19</span><span class="ms">p_2V_1645</span><b>Animantito</b> nāma ajjatanāya vā svātanāya vā animantito, gharūpacāraṁ okkamante nimanteti, eso animantito nāma.</p>
+
+<p><span class="parno">20</span><span class="ms">p_2V_1646</span><b>Nimantito</b> nāma ajjatanāya vā svātanāya vā nimantito, gharūpacāraṁ anokkamante nimanteti, eso nimantito nāma.</p>
+
+<p><span class="parno">21</span><span class="ms">p_2V_1647</span><b>Agilāno</b> nāma sakkoti piṇḍāya carituṁ.</p>
+
+<p><span class="parno">22</span><span class="ms">p_2V_1648</span><b>Gilāno</b> nāma na sakkoti piṇḍāya carituṁ.</p>
+
+<p><span class="parno">23</span><span class="ms">p_2V_1649</span><b>Khādanīyaṁ</b> nāma pañca bhojanāni— yāmakālikaṁ sattāhakālikaṁ yāvajīvikaṁ ṭhapetvā avasesaṁ khādanīyaṁ nāma.</p>
+
+<hr>
+<p><span class="parno">24</span><span class="ms">p_2V_1650</span><b>Bhojanīyaṁ</b> nāma pañca bhojanāni— odano, kummāso, sattu, maccho, maṁsaṁ.</p>
+
+<p><span class="parno">25</span><span class="ms">p_2V_1651</span>Animantito agilāno "khādissāmi bhuñjissāmī"ti paṭiggaṇhāti, āpatti dukkaṭassa. Ajjhohāre ajjhohāre āpatti pāṭidesanīyassa.</p>
+
+<p><span class="parno">26</span><span class="ms">p_2V_1652, msdiv568</span>Sekkhasammate sekkhasammatasaññī animantito agilāno khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādati vā bhuñjati vā, āpatti pāṭidesanīyassa. Sekkhasammate vematiko … pe … sekkhasammate asekkhasammatasaññī animantito agilāno khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādati vā bhuñjati vā, āpatti pāṭidesanīyassa.</p>
+
+<p><span class="parno">27</span><span class="ms">p_2V_1653</span>Yāmakālikaṁ sattāhakālikaṁ yāvajīvikaṁ āhāratthāya paṭiggaṇhāti, āpatti dukkaṭassa. Ajjhohāre ajjhohāre āpatti dukkaṭassa. Asekkhasammate sekkhasammatasaññī, āpatti dukkaṭassa. Asekkhasammate vematiko, āpatti dukkaṭassa. Asekkhasammate asekkhasammatasaññī, anāpatti.</p>
+
+<hr>
+<p><span class="parno">28</span><span class="ms">p_2V_1654, msdiv569</span>Anāpatti— nimantitassa, gilānassa, nimantitassa vā gilānassa vā sesakaṁ bhuñjati, aññesaṁ bhikkhā tattha paññattā hoti, gharato nīharitvā denti, niccabhatte, salākabhatte, pakkhike, uposathike, pāṭipadike, yāmakālikaṁ sattāhakālikaṁ yāvajīvikaṁ— "sati paccaye paribhuñjā"ti deti, ummattakassa, ādikammikassāti.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">29</span><span class="ms">p_2V_1655</span>Tatiyapāṭidesanīyasikkhāpadaṁ niṭṭhitaṁ.</p>
+
+</div><!--End Pali-->
+</section>
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-pd2.html#content"></a><a id="next-sutta" href="../vi/bu-vb-pd4.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga Pāṭidesanīyas</a>Pāṭidesanīya 3
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

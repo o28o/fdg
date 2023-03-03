@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC 1.8</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+<p>&nbsp;</p>
+
+<h2>Buddhist Monastic Code Book 1 - The Pāṭimokkha Rules Translated and Explained</h2>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc1.intro.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Introduction</a>
+<a href="../bmc/bmc1.1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭimokkha</a>
+<a href="../bmc/bmc1.2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaya</a>
+<a href="../bmc/bmc1.3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disrobing</a>
+<a href="../bmc/bmc1.4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pārājika</a>
+<a href="../bmc/bmc1.5.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Saṅghādisesa</a>
+<a href="../bmc/bmc1.6.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Aniyatas</a>
+<a href="../bmc/bmc1.7.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaggiya Pācittiyas</a>
+<a href="../bmc/bmc1.8.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pācittiyas</a>
+<a href="../bmc/bmc1.9.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭidesanīyas</a>
+<a href="../bmc/bmc1.10.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Sekhiyas</a>
+<a href="../bmc/bmc1.11.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Adhikaraṇa-Samathās</a>
+<a href="../bmc/bmc1.12.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Appendix</a>
+<a href="../bmc/bmc1.rule-index.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Index</a>
+<a href="../bmc/bmc1.glossary.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Glossary</a>
+<a href="../bmc/bmc1.biblio.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bibliography</a>
+</div>
+<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;8: Pācittiyas</h3>
+	<div class="w3-bar w3-center">
+			<a href="../bmc/bmc1.8-1.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.1:<br>Lying</a>
+			<a href="../bmc/bmc1.8-2.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.2:<br>Living Plants</a>
+			<a href="../bmc/bmc1.8-3.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.3:<br>Exhortation</a>
+			<a href="../bmc/bmc1.8-4.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.4:<br>Food</a>
+			<a href="../bmc/bmc1.8-5.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.5:<br>Naked Ascetics</a>
+			<a href="../bmc/bmc1.8-6.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.6:<br>Alcoholic Drinks</a>
+			<a href="../bmc/bmc1.8-7.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.7:<br>Animals</a>
+			<a href="../bmc/bmc1.8-8.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.8:<br>In-accordance</a>
+			<a href="../bmc/bmc1.8-9.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.9:<br>Valuables</a>
+	</div>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc1.7-3.html#content"></a><a id="next-sutta" href="../bmc/bmc1.8-1.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc1.html">BMC 1</a>Chapter&nbsp;1.8: Pācittiyas</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

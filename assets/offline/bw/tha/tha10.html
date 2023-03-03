@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Theragatha 10</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small pressed">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Khuddaka Nikaya - The Minor Texts</h2>
+ 
+ <div class="w3-bar-white bwnav"><!-- Div for lower Kn sub-navigation -->
+ 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
+ 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
+ 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sutta Nipata</a>
+ 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
+ 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
+ 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Theragatha</a>
+ 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
+ </div><!-- End div for lower Kn sub-navigation -->
+ 
+ <!--     Theragatha content begins here     -->
+ 
+ <div id="content">
+
+
+<h2>Theragatha - The Verses of the Senior Monks</h2>
+<h3>Chapter 10: Groups of Ten Verses</h3>
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhante Sujato and Jessica Walton</li>
+</ul>
+
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<h5>Kāḷudāyi</h5>
+<div class="verse">
+<p id="p527"><span class="parno">527</span>"The trees are now crimson, venerable sir,
+<br>They’ve shed their foliage, and are ready to fruit.
+<br>They’re splendid, as if on fire;
+<br>Great hero, this period is full of flavour.</p>
+
+<p id="p528"><span class="parno">528</span>The blossoming trees are delightful,
+<br>Wafting their scent all around, in all directions,
+<br>They’ve shed their leaves and wish to fruit,
+<br>Hero, it is time to depart from here.</p>
+
+<p id="p529"><span class="parno">529</span>It is neither too hot nor too cold,
+<br>Venerable sir, it’s a pleasant season for travelling.
+<br>Let the Sākiyas and Koḷiyas see you,
+<br>Facing west as you cross the Rohiṇī river.</p>
+
+<p id="p530"><span class="parno">530</span>In hope, the field is ploughed;
+<br>The seed is sown in hope;
+<br>In hope, merchants travel the seas,
+<br>Carrying rich cargoes.
+<br>The hope that I stand for:
+<br>May it succeed!</p>
+
+<p id="p531"><span class="parno">531</span>Again and again, they sow the seed;
+<br>Again and again, the king of gods sends rain;
+<br>Again and again, farmers plough the field;
+<br>Again and again, grain is produced for the nation.</p>
+
+<p id="p532"><span class="parno">532</span>Again and again, the beggars wander,
+<br>Again and again, the donors give,
+<br>Again and again, when the donors have given,
+<br>Again and again, they go to their place in heaven.</p>
+
+<p id="p533"><span class="parno">533</span>A hero of vast wisdom purifies seven generations
+<br>Of the family in which they’re born.
+<br>Sakya, I believe you’re the king of kings,
+<br>Since you fathered the one who is truly called a sage.</p>
+
+<p id="p534"><span class="parno">534</span>The father of the great sage is named Suddhodana;
+<br>But the Buddha’s mother is named Māyā.
+<br>Having borne the Bodhisatta in her womb,
+<br>She rejoices in the heaven of the Thirty-Three.</p>
+
+<p id="p535"><span class="parno">535</span>When she died and passed away from here,
+<br>She was blessed with divine sensual pleasures;
+<br>Rejoicing in the five kinds of sensual pleasures,
+<br>Gotamī is surrounded by those hosts of gods."</p>
+
+<p id="p536"><span class="parno">536</span>"I’m the son of the Buddha, the incomparable Angīrasa, the poised—
+<br>I bear the unbearable.
+<br>You, Sakya, are my father’s father;
+<br>Gotama, you are my grandfather in the Dhamma."</p>
+</div>
+<h5>Ekavihāriya</h5>
+<div class="verse">
+<p id="p537"><span class="parno">537</span>If no-one else is found
+<br>In front or behind,
+<br>It’s extremely pleasant,
+<br>Dwelling alone in a forest grove.</p>
+
+<p id="p538"><span class="parno">538</span>Come now, I’ll go alone
+<br>To the wilderness praised by the Buddha.
+<br>It’s pleasant for a monk
+<br>Dwelling alone and resolute.</p>
+
+<p id="p539"><span class="parno">539</span>Alone and self-disciplined,
+<br>I’ll quickly enter the delightful forest,
+<br>Which gives joy to meditators,
+<br>And is frequented by rutting elephants.</p>
+
+<p id="p540"><span class="parno">540</span>In Sītavana, so full of flowers,
+<br>In a cool mountain cave,
+<br>I’ll bathe my limbs
+<br>And walk meditation alone.</p>
+
+<p id="p541"><span class="parno">541</span>When will I dwell alone,
+<br>Without a companion,
+<br>In the great wood, so delightful,
+<br>My task complete, free of defilements?</p>
+
+<p id="p542"><span class="parno">542</span>This is what I want to do:
+<br>May my wish succeed!
+<br>I’ll make it happen myself:
+<br>No-one can do someone else’s duty.</p>
+
+<p id="p543"><span class="parno">543</span>Fastening my armour,
+<br>I’ll enter the forest.
+<br>I won’t leave here
+<br>Until I have attained the end of defilements.</p>
+
+<p id="p544"><span class="parno">544</span>As the cool breeze blows
+<br>With fragrant scent,
+<br>I’ll split ignorance apart,
+<br>Sitting on the mountain-peak.</p>
+
+<p id="p545"><span class="parno">545</span>In a forest grove covered with blossoms,
+<br>In a cave so very cool,
+<br>I take pleasure in Giribbaja,
+<br>Happy with the happiness of freedom.</p>
+
+<p id="p546"><span class="parno">546</span>My intentions are fulfilled
+<br>Like the moon on the fifteenth day.
+<br>With the utter ending of all defilements,
+<br>Now there is no more rebirth into any state of existence.</p>
+</div>
+<h5>Mahākappina</h5>
+<div class="verse">
+<p id="p547"><span class="parno">547</span>If you’re prepared for the future,
+<br>Both the good and the bad,
+<br>Then those who look for your weakness,
+<br>Whether enemies or well-wishers, will find none.</p>
+
+<p id="p548"><span class="parno">548</span>One who has fulfilled, developed,
+<br>And gradually consolidated
+<br>Mindfulness of breathing
+<br>As taught by the Buddha:
+<br>They light up the world,
+<br>Like the moon freed from a cloud.</p>
+
+<p id="p549"><span class="parno">549</span>Yes, my mind is clean,
+<br>Measureless, and well-developed;
+<br>It is broken through and uplifted—
+<br>It radiates in every direction.</p>
+
+<p id="p550"><span class="parno">550</span>The wise person lives on
+<br>Even after loss of wealth;
+<br>But without gaining wisdom
+<br>Even a rich person doesn’t really live.</p>
+
+<p id="p551"><span class="parno">551</span>Understanding questions what is learned;
+<br>Understanding grows fame and reputation;
+<br>A person who has understanding
+<br>Finds happiness even among sufferings.</p>
+
+<p id="p552"><span class="parno">552</span>It’s not something just for today;
+<br>It isn’t incredible or astonishing.
+<br>When you’re born, you die—
+<br>What’s astonishing about that?</p>
+
+<p id="p553"><span class="parno">553</span>For anyone who is born,
+<br>Death always follows after living.
+<br>Everyone who is born here dies here;
+<br>Such is the nature of living beings.</p>
+
+<p id="p554"><span class="parno">554</span>The things that are useful for the living
+<br>Are of no use for the dead—
+<br>Not fame, not celebrity,
+<br>Not praise by ascetics and brahmins;
+<br>For the dead, there is only weeping.</p>
+
+<p id="p555"><span class="parno">555</span>And weeping impairs the eye and the body;
+<br>Complexion, health, and intelligence decline.
+<br>Your enemies rejoice;
+<br>But your well-wishers are not happy.</p>
+
+<p id="p556"><span class="parno">556</span>So you should wish that those who stay in your family
+<br>Have understanding and learning,
+<br>And do their duty though the power of understanding,
+<br>Just as you’d cross a full river by boat.</p>
+</div>
+<h5>Cūḷapanthaka</h5>
+<div class="verse">
+<p id="p557"><span class="parno">557</span>My progress was slow,
+<br>I was despised in the past;
+<br>My brother turned me away,
+<br>Saying, "Go home now".</p>
+
+<p id="p558"><span class="parno">558</span>Turned away at the gate
+<br>Of the Saṅgha’s monastery,
+<br>I stood there sadly,
+<br>Longing for the teaching.</p>
+
+<p id="p559"><span class="parno">559</span>Then Blessed One came
+<br>And touched my head.
+<br>Taking me by the arm,
+<br>He brought me into the Saṅgha’s monastery.</p>
+
+<p id="p560"><span class="parno">560</span>The teacher, out of compassion,
+<br>Gave me a foot-wiping cloth, saying:
+<br>"Focus your awareness
+<br>Exclusively on this clean cloth."</p>
+
+<p id="p561"><span class="parno">561</span>After I had listened to his words,
+<br>I dwelt delighting in his teaching,
+<br>Practising <i>samādhi</i>
+<br>For the attainment of the highest goal.</p>
+
+<p id="p562"><span class="parno">562</span>I know my past life;
+<br>My divine eye is clarified;
+<br>I’ve attained the three knowledges,
+<br>And fulfilled the Buddha’s instructions.</p>
+
+<p id="p563"><span class="parno">563</span>I, Panthaka, created a thousand
+<br>Images of myself,
+<br>And sat in the delightful mango grove
+<br>Until the time for the meal offering was announced.</p>
+
+<p id="p564"><span class="parno">564</span>Then the teacher sent to me
+<br>A messenger to announce the time.
+<br>When the time was announced,
+<br>I flew to him through the air.</p>
+
+<p id="p565"><span class="parno">565</span>I paid homage to the teacher’s feet,
+<br>And sat to one side.
+<br>When he knew I was seated,
+<br>The teacher received the offering.</p>
+
+<p id="p566"><span class="parno">566</span>Recipient of gifts from the whole world,
+<br>Receiver of sacrifices,
+<br>Field of merit for humanity,
+<br>He received the offering.</p>
+</div>
+<h5>Kappa</h5>
+<div class="verse">
+<p id="p567"><span class="parno">567</span>Filled with different kinds of dirt,
+<br>A great producer of dung,
+<br>Like a stagnant cesspool,
+<br>A great boil, a great wound,</p>
+
+<p id="p568"><span class="parno">568</span>Full of pus and blood,
+<br>Sunk in a toilet-pit,
+<br>Trickling with fluids
+<br>This putrid body always oozes.</p>
+
+<p id="p569"><span class="parno">569</span>Bound by sixty tendons,
+<br>Coated with a fleshy coating,
+<br>Clothed in a jacket of skin,
+<br>This putrid body is worthless.</p>
+
+<p id="p570"><span class="parno">570</span>Held together by a skeleton of bones,
+<br>And bound by sinews;
+<br>It assumes postures
+<br>Due to a complex of many things.</p>
+
+<p id="p571"><span class="parno">571</span>We set out in the certainty of death,
+<br>In the presence of the king of death;
+<br>And having discarded the body right here,
+<br>A person goes where he likes.</p>
+
+<p id="p572"><span class="parno">572</span>Enveloped by ignorance,
+<br>Tied by the four ties,
+<br>This body is sinking in the flood,
+<br>Caught in the net of underlying tendencies.</p>
+
+<p id="p573"><span class="parno">573</span>Yoked with the five hindrances,
+<br>Afflicted by thought,
+<br>Accompanied by the root of craving,
+<br>Hidden by delusion.</p>
+
+<p id="p574"><span class="parno">574</span>So the body goes on,
+<br>Propelled by the mechanism of deeds.
+<br>But existence ends in perishing;
+<br>Separated, the body perishes.</p>
+
+<p id="p575"><span class="parno">575</span>Those blind, unawakened people
+<br>Who think of this body as theirs,
+<br>Swell the horrors of the charnel-ground,
+<br>And take up rebirth again in some state of existence.</p>
+
+<p id="p576"><span class="parno">576</span>Those who avoid this body,
+<br>Like a snake smeared with dung,
+<br>They expel the root of rebirth,
+<br>And realise <i>nibbāna</i>, without defilements.</p>
+</div>
+<h5>Vangantaputtaupasena</h5>
+<div class="verse">
+<p id="p577"><span class="parno">577</span>In order to go on retreat,
+<br>A monk should stay in lodgings
+<br>That are secluded and quiet,
+<br>Frequented by beasts of prey.</p>
+
+<p id="p578"><span class="parno">578</span>Having gathered scraps from rubbish heaps,
+<br>Cemeteries and streets,
+<br>And making an outer robe from them,
+<br>He should wear that coarse robe.</p>
+
+<p id="p579"><span class="parno">579</span>Humbling his mind,
+<br>A monk should walk for alms
+<br>From family to family without exception,
+<br>With sense doors guarded, well-restrained .</p>
+
+<p id="p580"><span class="parno">580</span>He should be content even with coarse food,
+<br>Not hoping for lots of flavours.
+<br>The mind that is greedy for flavours
+<br>Doesn’t delight in <i>jhāna</i>.</p>
+
+<p id="p581"><span class="parno">581</span>With few wishes, content,
+<br>A sage should live secluded.
+<br>Socializing with neither
+<br>Householders nor the homeless.</p>
+
+<p id="p582"><span class="parno">582</span>He should appear
+<br>To be stupid or dumb;
+<br>A wise person would not speak overly long
+<br>In the midst of the Saṅgha.</p>
+
+<p id="p583"><span class="parno">583</span>He would not insult anyone,
+<br>And would avoid causing harm.
+<br>Restrained in accordance with the Pātimokkha,
+<br>He would eat in moderation.</p>
+
+<p id="p584"><span class="parno">584</span>Skilled in the arising of thought,
+<br>He would grasp well the character of the mind.
+<br>He would be devoted to practicing
+<br>Serenity and insight at the right time.</p>
+
+<p id="p585"><span class="parno">585</span>Though endowed with energy and perseverance,
+<br>And always devoted to meditation,
+<br>A wise person would not be too sure of themselves,
+<br>Until they have attained the end of suffering.</p>
+
+<p id="p586"><span class="parno">586</span>For a monk who dwells in this way,
+<br>Longing for purification,
+<br>All his defilements wither away,
+<br>And he attains <i>nibbāna</i>.</p>
+</div>
+<h5>(Apara) Gotama</h5>
+<div class="verse">
+<p id="p587"><span class="parno">587</span>You should understand your own purpose,
+<br>And consider the teachings carefully,
+<br>As well as what’s appropriate,
+<br>For one who has entered the ascetic life.</p>
+
+<p id="p588"><span class="parno">588</span>Good friendship in the community,
+<br>Undertaking lots of training,
+<br>Listening well to the teacher—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p589"><span class="parno">589</span>Respect for the Buddha,
+<br>Reverence for the Dhamma as it really is,
+<br>Esteem for the Saṅgha—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p590"><span class="parno">590</span>Devotion to good conduct and resort,
+<br>A livelihood that is pure and blameless,
+<br>And settling the mind—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p591"><span class="parno">591</span>A pleasing manner in things that should be done,
+<br>And those that should be avoided;
+<br>Devotion to the higher mind—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p592"><span class="parno">592</span>Wilderness lodgings
+<br>Remote, with little noise,
+<br>Fit for use by a sage—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p593"><span class="parno">593</span>Ethics, learning,
+<br>Investigation of Dhamma as it really is,
+<br>And penetration of the truths—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p594"><span class="parno">594</span>Developing the perceptions
+<br>Of impermanence, non-self, and unattractiveness,
+<br>And displeasure with the whole world—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p595"><span class="parno">595</span>Developing the factors of awakening,
+<br>The bases for psychic power, the spiritual faculties and powers,
+<br>And the noble eight-fold path—
+<br>This is appropriate for an ascetic.</p>
+
+<p id="p596"><span class="parno">596</span>A sage should abandon craving,
+<br>With defilements split apart, root and all,
+<br>They should live liberated—
+<br>This is appropriate for an ascetic.</p>
+</div>
+
+</div><!--end English-->
+
+<div lang="pi">
+<h5>Kāḷudāyittheragāthā</h5>
+<div class="verse">
+<p><span class="parno">527</span><a class="pts1" id="pts56"></a>
+<span class="ms">p_19Th1_830</span>"Angārino dāni dumā bhadante,
+<br>Phalesino chadanaṁ vippahāya;
+<br>Te accimantova pabhāsayanti,
+<br>Samayo mahāvīra bhāgī rasānaṁ.</p>
+
+<p><span class="parno">528</span><span class="ms">p_19Th1_831</span>Dumāni phullāni manoramāni,
+<br>Samantato sabbadisā pavanti;
+<br>Pattaṁ pahāya Kālo ito pakkamanāya vīra.</p>
+
+<p><span class="parno">529</span><span class="ms">p_19Th1_832</span>Nevātisītaṁ na panātiuṇhaṁ,
+<br>Sukhā utu addhaniyā bhadante;
+<br>Passantu taṁ sākiyā koḷiyā ca,
+<br>Pacchāmukhaṁ rohiniyaṁ tarantaṁ.</p>
+
+<p><span class="parno">530</span><span class="ms">p_19Th1_833</span>Āsāya kasate khettaṁ,
+<br>bījaṁ āsāya vappati;
+<br>Āsāya vāṇijā yanti,
+<br>samuddaṁ dhanahārakā;
+<br>Yāya āsāya tiṭṭhāmi,
+<br>sā me āsā samijjhatu.</p>
+
+<p><span class="parno">531</span><span class="ms">p_19Th1_834</span>Punappunaṁ ceva vapanti bījaṁ,
+<br>Punappunaṁ vassati devarājā;
+<br>Punappunaṁ khettaṁ kasanti kassakā,
+<br>Punappunaṁ dhaññamupeti raṭṭhaṁ.</p>
+
+<p><span class="parno">532</span><span class="ms">p_19Th1_835</span>Punappunaṁ yācanakā caranti,
+<br>Punappunaṁ dānapatī dadanti;
+<br>Punappunaṁ dānapatī daditvā,
+<br>Punappunaṁ saggamupenti ṭhānaṁ.</p>
+
+<p><span class="parno">533</span><a class="pts1" id="pts57"></a>
+<span class="ms">p_19Th1_836</span>Yasmiṁ kule jāyati bhūripañño;
+<br>Maññāmahaṁ sakkati devadevo,
+
+<br>
+<p><span class="parno">534</span><span class="ms">p_19Th1_837</span>Suddhodano nāma pitā mahesino,
+<br>Buddhassa mātā pana māyanāmā;
+<br>Yā bodhisattaṁ parihariya kucchinā,
+<br>Kāyassa bhedā tidivamhi modati.</p>
+
+<p><span class="parno">535</span><span class="ms">p_19Th1_838</span>Sā gotamī kālakatā ito cutā,
+<br>Dibbehi kāmehi samangibhūtā;
+<br>Sā modati kāmaguṇehi pañcahi,
+<br>Parivāritā devagaṇehi tehi".</p>
+
+<p><span class="parno">536</span><span class="ms">p_19Th1_839</span>"Buddhassa puttomhi asayhasāhino,
+<br>Angīrasassappaṭimassa tādino;
+<br>Pitupitā mayhaṁ tuvaṁsi sakka,
+<br>Dhammena me gotama ayyakosī"ti.</p>
+</div>
+<h5>Ekavihāriyattheragāthā</h5>
+<div class="verse">
+<p><span class="parno">537</span><span class="ms">p_19Th1_841</span>"Purato pacchato vāpi,
+<br>aparo ce na vijjati;
+<br>Atīva phāsu bhavati,
+<br>ekassa vasato vane.</p>
+
+<p><span class="parno">538</span><span class="ms">p_19Th1_842</span>Handa eko gamissāmi,
+<br>araññaṁ buddhavaṇṇitaṁ;
+<br>pahitattassa bhikkhuno.</p>
+
+<p><span class="parno">539</span><span class="ms">p_19Th1_843</span>Yogi-pītikaraṁ rammaṁ,
+<br>mattakuñjarasevitaṁ;
+<br>Eko attavasī khippaṁ,
+<br>pavisissāmi kānanaṁ.</p>
+
+<p><span class="parno">540</span><span class="ms">p_19Th1_844</span>Supupphite sītavane,
+<br>sītale girikandare;
+<br>Gattāni parisiñcitvā,
+<br>cankamissāmi ekako.</p>
+
+<p><span class="parno">541</span><span class="ms">p_19Th1_845</span>Ekākiyo adutiyo,
+<br>ramaṇīye mahāvane;
+<br>Kadāhaṁ viharissāmi,
+<br>katakicco anāsavo.</p>
+
+<p><span class="parno">542</span><span class="ms">p_19Th1_846</span>Evaṁ me kattukāmassa,
+<br>adhippāyo samijjhatu;
+<br>Sādhayissāmahaṁyeva,
+<br>nāñño aññassa kārako.</p>
+
+<p><span class="parno">543</span><span class="ms">p_19Th1_847</span>Esa bandhāmi sannāhaṁ,
+<br>pavisissāmi kānanaṁ;
+<br>Na tato nikkhamissāmi,
+<br>appatto āsavakkhayaṁ.</p>
+
+<p><span class="parno">544</span><span class="ms">p_19Th1_848</span>Mālute upavāyante,
+<br>sīte Avijjaṁ dālayissāmi,
+<br>nisinno nagamuddhani.</p>
+
+<p><span class="parno">545</span><span class="ms">p_19Th1_849</span>Vane kusumasañchanne,
+<br>pabbhāre nūna sītale;
+<br>Vimuttisukhena sukhito,
+<br>ramissāmi giribbaje.</p>
+
+<p><span class="parno">546</span><a class="pts1" id="pts58"></a>
+<span class="ms">p_19Th1_850</span>Sohaṁ paripuṇṇasankappo,
+<br>cando Sabbāsavaparikkhīṇo,
+<br>natthi dāni punabbhavo"ti.</p>
+</div>
+<h5>Mahākappinattheragāthā</h5>
+<div class="verse">
+<p><span class="parno">547</span><span class="ms">p_19Th1_852</span>"Anāgataṁ yo Hitañca atthaṁ ahitañca taṁ dvayaṁ;
+<br>Viddesino tassa hitesino vā,
+<br>Randhaṁ na passanti samekkhamānā.</p>
+
+<p><span class="parno">548</span><span class="ms">p_19Th1_853</span>paripuṇṇā subhāvitā;
+<br>Anupubbaṁ paricitā,
+<br>yathā buddhena desitā;
+<br>Somaṁ lokaṁ pabhāseti,
+<br>abbhā muttova candimā.</p>
+
+<p><span class="parno">549</span><span class="ms">p_19Th1_854</span>Odātaṁ vata me cittaṁ,
+<br>appamāṇaṁ subhāvitaṁ;
+<br>Nibbiddhaṁ paggahītañca,
+<br>sabbā obhāsate disā.</p>
+
+<p><span class="parno">550</span><span class="ms">p_19Th1_855</span>Jīvate vāpi sappañño,
+<br>api vittaparikkhayo;
+<br>Paññāya ca alābhena,
+<br>vittavāpi na jīvati.</p>
+
+<p><span class="parno">551</span><span class="ms">p_19Th1_856</span>Paññā sutavinicchinī,
+<br>Paññā kittisilokavaddhanī;
+<br>Paññāsahito naro idha,
+<br>Api dukkhesu sukhāni vindati.</p>
+
+<p><span class="parno">552</span><span class="ms">p_19Th1_857</span>Nāyaṁ ajjatano dhammo,
+<br>nacchero napi abbhuto;
+<br>Yattha jāyetha mīyetha,
+<br>tattha kiṁ viya abbhutaṁ.</p>
+
+<p><span class="parno">553</span><span class="ms">p_19Th1_858</span>Anantaraṁ hi jātassa,
+<br>jīvitā maraṇaṁ dhuvaṁ;
+<br>Jātā jātā marantīdha,
+<br>evaṁdhammā hi pāṇino.</p>
+
+<p><span class="parno">554</span><span class="ms">p_19Th1_859</span>Na hetadatthāya matassa hoti,
+<br>Yaṁ jīvitatthaṁ paraporisānaṁ;
+<br>Matamhi ruṇṇaṁ na yaso na lokyaṁ,
+<br>Na vaṇṇitaṁ samaṇabrāhmaṇehi.</p>
+
+<p><span class="parno">555</span><span class="ms">p_19Th1_860</span>Cakkhuṁ sarīraṁ Nihīyati vaṇṇabalaṁ matī ca;
+<br>Ānandino tassa disā bhavanti,
+<br>Hitesino nāssa sukhī bhavanti.</p>
+
+<p><span class="parno">556</span><a class="pts1" id="pts59"></a>
+<span class="ms">p_19Th1_861</span>Tasmā hi iccheyya kule vasante,
+<br>Medhāvino ceva bahussute ca;
+<br>Yesaṁ hi paññāvibhavena kiccaṁ,
+<br>Taranti nāvāya nadiṁva puṇṇan"ti.</p>
+</div>
+<h5>Cūḷapanthakattheragāthā</h5>
+<div class="verse">
+<p><span class="parno">557</span><span class="ms">p_19Th1_863</span>"Dandhā mayhaṁ gatī āsi,
+<br>paribhūto pure ahaṁ;
+<br>Bhātā ca maṁ paṇāmesi,
+<br>‘gaccha dāni tuvaṁ gharaṁ’.</p>
+
+<p><span class="parno">558</span><span class="ms">p_19Th1_864</span>Sohaṁ paṇāmito santo,
+<br>saṁghārāmassa koṭṭhake;
+<br>Dummano tattha aṭṭhāsiṁ,
+<br>sāsanasmiṁ apekkhavā.</p>
+
+<p><span class="parno">559</span><span class="ms">p_19Th1_865</span>Bhagavā tattha sīsaṁ mayhaṁ parāmasi;
+<br>Bāhāya maṁ gahetvāna,
+<br>saṁghārāmaṁ pavesayi.</p>
+
+<p><span class="parno">560</span><span class="ms">p_19Th1_866</span>Anukampāya me satthā,
+<br>pādāsi pādapuñchaniṁ;
+<br>‘Etaṁ suddhaṁ adhiṭṭhehi,
+<br>ekamantaṁ svadhiṭṭhitaṁ’.</p>
+
+<p><span class="parno">561</span><span class="ms">p_19Th1_867</span>Tassāhaṁ vacanaṁ sutvā,
+<br>vihāsiṁ sāsane rato;
+<br>Samādhiṁ paṭipādesiṁ,
+<br>uttamatthassa pattiyā.</p>
+
+<p><span class="parno">562</span><span class="ms">p_19Th1_868</span>Pubbenivāsaṁ jānāmi,
+<br>dibbacakkhu visodhitaṁ;
+<br>Tisso vijjā anuppattā,
+<br>kataṁ buddhassa sāsanaṁ.</p>
+
+<p><span class="parno">563</span><span class="ms">p_19Th1_869</span>Sahassakkhattumattānaṁ,
+<br>nimminitvāna panthako;
+<br>Nisīdambavane ramme,
+<br>yāva
+<p><span class="parno">564</span><span class="ms">p_19Th1_870</span>Tato me satthā pāhesi,
+<br>dūtaṁ kālappavedakaṁ;
+<br>Paveditamhi kālamhi,
+
+<br>
+<p><span class="parno">565</span><span class="ms">p_19Th1_871</span>Vanditvā satthuno pāde,
+<br>ekamantaṁ nisīdahaṁ;
+<br>Nisinnaṁ maṁ viditvāna,
+<br>atha satthā paṭiggahi.</p>
+
+<p><span class="parno">566</span><span class="ms">p_19Th1_872</span>Āyāgo sabbalokassa,
+<br>āhutīnaṁ paṭiggaho;
+<br>Puññakkhettaṁ manussānaṁ,
+<br>paṭiggaṇhittha dakkhiṇan"ti.</p>
+</div>
+<h5>Kappattheragāthā</h5>
+<div class="verse">
+<p><span class="parno">567</span><span class="ms">p_19Th1_874</span>"Nānākulamalasampuṇṇo,
+<br>mahāukkārasambhavo;
+<br>Candanikaṁva paripakkaṁ,
+<br>mahāgaṇḍo mahāvaṇo.</p>
+
+<p><span class="parno">568</span><span class="ms">p_19Th1_875</span>Pubbaruhirasampuṇṇo,
+<br>sadā sandati pūtikaṁ.</p>
+
+<p><span class="parno">569</span><a class="pts1" id="pts60"></a>
+<span class="ms">p_19Th1_876</span>Saṭṭhikaṇḍarasambandho,
+<br>maṁsalepanalepito;
+<br>Cammakañcukasannaddho,
+<br>pūtikāyo niratthako.</p>
+
+<p><span class="parno">570</span><span class="ms">p_19Th1_877</span>Aṭṭhisanghātaghaṭito,
+<br>nhārusuttanibandhano;
+<br>Nekesaṁ sangatībhāvā,
+<br>kappeti iriyāpathaṁ.</p>
+
+<p><span class="parno">571</span><span class="ms">p_19Th1_878</span>Dhuvappayāto maccurājassa santike;
+<br>Idheva chaḍḍayitvāna,
+<br>yenakāmangamo naro.</p>
+
+<p><span class="parno">572</span><span class="ms">p_19Th1_879</span>Avijjāya nivuto kāyo,
+<br>catuganthena ganthito;
+<br>Oghasaṁsīdano kāyo,
+<br>anusayajālamotthato.</p>
+
+<p><span class="parno">573</span><span class="ms">p_19Th1_880</span>Pañcanīvaraṇe yutto,
+<br>vitakkena samappito;
+<br>Taṇhāmūlenānugato,
+<br>mohacchādanachādito.</p>
+
+<p><span class="parno">574</span><span class="ms">p_19Th1_881</span>Evāyaṁ vattate kāyo,
+<br>kammayantena yantito;
+<br>Sampatti ca vipatyantā,
+<br>nānābhāvo vipajjati.</p>
+
+<p><span class="parno">575</span><span class="ms">p_19Th1_882</span>Yemaṁ kāyaṁ mamāyanti,
+<br>andhabālā puthujjanā;
+<br>Vaḍḍhenti kaṭasiṁ ghoraṁ,
+<br>ādiyanti punabbhavaṁ.</p>
+
+<p><span class="parno">576</span><span class="ms">p_19Th1_883</span>Yemaṁ kāyaṁ vivajjenti,
+<br>Gūthalittaṁva pannagaṁ;
+<br>Bhavamūlaṁ vamitvāna,
+<br></div>
+<h5>Vangantaputtaupasenatheragāthā</h5>
+<div class="verse">
+<p><span class="parno">577</span><span class="ms">p_19Th1_885</span>"Vivittaṁ appanigghosaṁ,
+<br>vāḷamiganisevitaṁ;
+<br>Seve senāsanaṁ bhikkhu,
+<br>paṭisallānakāraṇā.</p>
+
+<p><span class="parno">578</span><span class="ms">p_19Th1_886</span>Sankārapuñjā susānā rathiyāhi ca;
+<br>Tato sanghāṭikaṁ katvā,
+<br>lūkhaṁ dhāreyya cīvaraṁ.</p>
+
+<p><span class="parno">579</span><span class="ms">p_19Th1_887</span>Nīcaṁ manaṁ karitvāna,
+<br>sapadānaṁ kulā kulaṁ;
+<br>Piṇḍikāya care bhikkhu,
+<br>guttadvāro susaṁvuto.</p>
+
+<p><span class="parno">580</span><span class="ms">p_19Th1_888</span>nāññaṁ patthe rasaṁ bahuṁ;
+<br>Rasesu anugiddhassa,
+<br>jhāne na ramatī mano.</p>
+
+<p><span class="parno">581</span><span class="ms">p_19Th1_889</span>Appiccho ceva santuṭṭho,
+<br>pavivitto vase muni;
+<br>Asaṁsaṭṭho gahaṭṭhehi,
+<br>anāgārehi cūbhayaṁ.</p>
+
+<p><span class="parno">582</span><span class="ms">p_19Th1_890</span>Yathā jaḷo attānaṁ dassaye tathā;
+<br>Nātivelaṁ sambhāseyya,
+<br>saṁghamajjhamhi paṇḍito.</p>
+
+<p><span class="parno">583</span><span class="ms">p_19Th1_891</span>Na so upavade kañci,
+<br>upaghātaṁ vivajjaye;
+<br>Saṁvuto pātimokkhasmiṁ,
+<br>mattaññū cassa bhojane.</p>
+
+<p><span class="parno">584</span><span class="ms">p_19Th1_892</span>Suggahītanimittassa,
+<br>cittassuppādakovido;
+<br>Samathaṁ anuyuñjeyya,
+<br>kālena ca vipassanaṁ.</p>
+
+<p><span class="parno">585</span><a class="pts1" id="pts61"></a>
+<span class="ms">p_19Th1_893</span>Vīriyasātaccasampanno,
+<br>yuttayogo sadā siyā;
+<br>Na ca appatvā dukkhantaṁ,
+<br>vissāsaṁ eyya paṇḍito.</p>
+
+<p><span class="parno">586</span><span class="ms">p_19Th1_894</span>Evaṁ viharamānassa,
+<br>suddhikāmassa bhikkhuno;
+<br>Khīyanti āsavā sabbe,
+<br>nibbutiñcādhigacchatī"ti.</p>
+</div>
+<h5>(Apara) Gotamattheragāthā</h5>
+<div class="verse">
+<p><span class="parno">587</span><span class="ms">p_19Th1_896</span>"Vijāneyya sakaṁ atthaṁ,
+<br>Avalokeyyātha pāvacanaṁ;
+<br>Yañcettha assa patirūpaṁ,
+<br>Sāmaññaṁ ajjhupagatassa.</p>
+
+<p><span class="parno">588</span><span class="ms">p_19Th1_897</span>Mittaṁ idha ca kalyāṇaṁ,
+<br>Sikkhā vipulaṁ samādānaṁ;
+<br>Sussūsā ca garūnaṁ,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">589</span><span class="ms">p_19Th1_898</span>Buddhesu sagāravatā,
+<br>Dhamme apaciti yathābhūtaṁ;
+<br>Saṁghe ca cittikāro,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">590</span><span class="ms">p_19Th1_899</span>Ācāragocare yutto,
+<br>Ājīvo sodhito agārayho;
+<br>Cittassa ca saṇṭhapanaṁ,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">591</span><span class="ms">p_19Th1_900</span>Cārittaṁ atha vārittaṁ,
+<br>Iriyāpathiyaṁ pasādaniyaṁ;
+<br>Adhicitte ca āyogo,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">592</span><span class="ms">p_19Th1_901</span>Āraññakāni senāsanāni,
+<br>Pantāni appasaddāni;
+<br>Bhajitabbāni muninā,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">593</span><span class="ms">p_19Th1_902</span>Sīlañca bāhusaccañca,
+<br>Dhammānaṁ pavicayo yathābhūtaṁ;
+<br>Saccānaṁ abhisamayo,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">594</span><span class="ms">p_19Th1_903</span>Bhāveyya ca aniccanti,
+<br>Anattasaññaṁ asubhasaññañca;
+<br>Lokamhi ca anabhiratiṁ,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">595</span><span class="ms">p_19Th1_904</span>Bhāveyya ca bojjhange,
+<br>Iddhipādāni indriyāni balāni;
+<br>Aṭṭhangamaggamariyaṁ,
+<br>Etaṁ samaṇassa patirūpaṁ.</p>
+
+<p><span class="parno">596</span><span class="ms">p_19Th1_905</span>Taṇhaṁ pajaheyya muni,
+<br>Samūlake āsave padāleyya;
+<br>Vihareyya Etaṁ samaṇassa patirūpan"ti.</p>
+</div>
+
+</div><!--end Pali-->
+
+</section>
+
+</div>
+
+<div id="nextprev"><a id="previous-sutta" href="../tha/tha9.html#content"></a><a id="next-sutta" href="../tha/tha11.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../tha/tha.html">Theragatha</a>Chapter 10
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

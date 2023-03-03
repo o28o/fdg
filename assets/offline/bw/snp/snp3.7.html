@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 3.7</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	<link href="../css/all.css" rel="stylesheet" type="text/css">
+  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ </button>
+ <span class="box-lbl">Light\Dark</span>
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 		<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 
+ 		</div>
+ </div>
+ <!-- Top menu -->
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="snp.html" class="pressed w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+  
+ 
+		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Khuddaka Nikaya - The Minor Texts</h2>
+ 
+ <div class="w3-bar-white bwnav"><!-- Div for lower Dhp sub-navigation -->
+ 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
+ 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
+ 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sutta Nipata</a>
+ 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
+ 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
+ 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Theragatha</a>
+ 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
+ </div><!-- End div for lower Dhp sub-navigation -->
+ 
+ <h2>Sutta Nipata</h2>
+ <div class="w3-bar-white bwnav"><!-- Div for lower Snp sub-navigation -->
+ 	<a href="../snp/snp1.html#content" title="1: Serpent Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">1: Serpent Chapter<br>(verses 1:1 to 1:12)</a>
+ 	<a href="../snp/snp2.html#content" title="2: Lesser Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">2: Lesser Chapter<br>(verses 2:1 to 2:14)</a>
+ 	<a href="../snp/snp3.html#content" title="3: Great Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button active">3: Great Chapter<br>(verses 3:1 to 3:12)</a>
+ 	<a href="../snp/snp4.html#content" title="4: The Eights" class="w3-bar-item w3-hover-white w3-border-white w3-button">4: The Eights<br>(verses 4:1 to 4:16)</a>
+ 	<a href="../snp/snp5.html#content" title="5: Way to the Beyond" class="w3-bar-item w3-hover-white w3-border-white w3-button">5: Way to the Beyond<br>(verses 5:1 to 5:18)</a>
+ </div><!-- End div for lower Snp sub-navigation -->
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata Chapter 3: The Great Chapter</h2>
+
+	<h3>3:7 With Sela</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li>©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+</div><!-- End div for sub-heading and translator div -->
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h2>3:7 With Sela</h2>
+
+<p>So I have heard:</p>
+
+<p>At one time the Buddha was wandering in the land of the Northern Āpaṇas together with a large Saṅgha of 1,250 mendicants when he arrived at a town of the Northern Āpaṇas named Āpaṇa.</p>
+
+<p>The matted-hair ascetic Keṇiya heard: “It seems the ascetic Gotama—a Sakyan, gone forth from a Sakyan family—has arrived at Āpaṇa, together with a large Saṅgha of 1,250 mendicants. He has this good reputation: ‘That Blessed One is perfected, a fully awakened Buddha, accomplished in knowledge and conduct, holy, knower of the world, supreme guide for those who wish to train, teacher of gods and humans, awakened, blessed.’ He has realized with his own insight this world—with its gods, Māras and Brahmās, this population with its ascetics and brahmins, gods and humans—and he makes it known to others. He teaches Dhamma that’s good in the beginning, good in the middle, and good in the end, meaningful and well-phrased. And he reveals a spiritual practice that’s entirely full and pure. It’s good to see such perfected ones.” </p>
+
+<p>So Keṇiya approached the Buddha and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side. The Buddha educated, encouraged, fired up, and inspired him with a Dhamma talk. Then he said to the Buddha: “Would Master Gotama together with the mendicant Saṅgha please accept tomorrow’s meal from me?”</p>
+
+<p>When he said this, the Buddha said to him: “The Saṅgha is large, Keṇiya; there are 1,250 mendicants. And you are devoted to the brahmins.” </p>
+
+<hr>
+<p>For a second time, Keṇiya asked the Buddha to accept a meal offering. “Never mind that the Saṅgha is large, with 1,250 mendicants, and that I am devoted to the brahmins. Would Master Gotama together with the mendicant Saṅgha please accept tomorrow’s meal from me?” And for a second time, the Buddha gave the same reply. </p>
+
+<hr>
+<p>For a third time, Keṇiya asked the Buddha to accept a meal offering. “Never mind that the Saṅgha is large, with 1,250 mendicants, and that I am devoted to the brahmins. Would Master Gotama together with the mendicant Saṅgha please accept tomorrow’s meal from me?” The Buddha consented in silence. </p>
+
+<hr>
+
+<p>Then, knowing that the Buddha had consented, Keṇiya got up from his seat and went to his own hermitage. There he addressed his friends and colleagues, relatives and family members: “My friends and colleagues, relatives and family members: please listen! The ascetic Gotama together with the mendicant Saṅgha has been invited by me for tomorrow’s meal. Please help me with the preparations.” </p>
+
+<p>“Yes, sir,” they replied. Some dug ovens, some chopped wood, some washed dishes, some set out a water jar, and some spread out seats. Meanwhile, Keṇiya set up the pavilion himself. </p>
+
+<p> Now at that time the brahmin Sela was residing in Āpaṇa. He had mastered the three Vedas, together with their vocabularies, ritual, phonology and etymology, and the testament as fifth. He knew philology and grammar, and was well versed in cosmology and the marks of a great man. And he was teaching three hundred students to recite the hymns. </p>
+
+<p>And at that time Keṇiya was devoted to Sela. Then Sela, while going for a walk escorted by the three hundred students, approached Keṇiya’s hermitage. He saw the preparations going on, and said to Keṇiya: “Keṇiya, is your son or daughter being married? Or are you setting up a big sacrifice? Or has King Seniya Bimbisāra of Magadha been invited for tomorrow’s meal?” </p>
+
+<p>“There is no marriage, Sela, and the king is not coming. Rather, I am setting up a big sacrifice. The ascetic Gotama has arrived at Āpaṇa, together with a large Saṅgha of 1,250 mendicants. He has this good reputation: ‘That Blessed One is perfected, a fully awakened Buddha, accomplished in knowledge and conduct, holy, knower of the world, supreme guide for those who wish to train, teacher of gods and humans, awakened, blessed.’ He has been invited by me for tomorrow’s meal together with the mendicant Saṅgha.” </p>
+
+<p>“Mister Keṇiya, did you say ‘the awakened one’?”</p>
+
+<p>“I said ‘the awakened one’.”</p>
+
+<p>“Mister Keṇiya, did you say ‘the awakened one’?” </p>
+
+<p>“I said ‘the awakened one’.” </p>
+
+<hr>
+
+<p>Then Sela thought: “It’s hard to even find the word ‘awakened one’ in the world. The thirty-two marks of a great man have been handed down in our hymns. A great man who possesses these has only two possible destinies, no other. If he stays at home he becomes a king, a wheel-turning monarch, a just and principled king. His dominion extends to all four sides, he achieves stability in the country, and he possesses the seven treasures. He has the following seven treasures: the wheel, the elephant, the horse, the jewel, the woman, the treasurer, and the counselor as the seventh treasure. He has over a thousand sons who are valiant and heroic, crushing the armies of his enemies. After conquering this land girt by sea, he reigns by principle, without rod or sword. But if he goes forth from the lay life to homelessness, he becomes a perfected one, a fully awakened Buddha, who draws back the veil from the world. “But Keṇiya, where is the Blessed One at present, the perfected one, the fully awakened Buddha?” </p>
+
+<p>When he said this, Keṇiya pointed with his right arm and said: “There, Mister Sela, at that line of blue forest.” Then Sela, together with his students, approached the Buddha. He said to his students: “Come quietly, gentlemen, tread gently. For the Buddhas are intimidating, like a lion living alone. When I’m consulting with the ascetic Gotama, don’t interrupt. Wait until I’ve finished speaking.” </p>
+
+<p>Then Sela went up to the Buddha, and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side. and scrutinized the Buddha’s body for the thirty-two marks of a great man. He saw all of them except for two, which he had doubts about: whether the private parts were covered in a foreskin, and the largeness of the tongue. </p>
+
+<hr>
+<p>Then it occurred to the Buddha: “Sela sees all the marks except for two, which he has doubts about: whether the private parts are covered in a foreskin, and the largeness of the tongue.” The Buddha used his psychic power to will that Sela would see his private parts covered in a foreskin. And he stuck out his tongue and stroked back and forth on his ear holes and nostrils, and covered his entire forehead with his tongue. </p>
+
+<p>Then Sela thought: “The ascetic Gotama possesses the thirty-two marks completely, lacking none. But I don’t know whether or not he is an awakened one. I have heard that brahmins of the past who were elderly and senior, the teachers of teachers, said, ‘Those who are perfected ones, fully awakened Buddhas reveal themselves when praised.’ Why don’t I extoll him in his presence with fitting verses?” Then Sela extolled the Buddha in his presence with fitting verses: </p>
+
+<hr>
+
+<p><span class="speaker">Sela</span></p>
+
+	<div class="verse">
+			<p><span class="parno">548</span>
+			“O Blessed One, your body’s perfect, 
+			<br>you’re radiant, handsome, lovely to behold; 
+			<br>golden colored, 
+			<br>with teeth so white; you’re strong. </p>
+			
+			<p id="p549"><span class="parno">549</span>
+			The characteristics 
+			<br>of a handsome man, 
+			<br>the marks of a great man, 
+			<br>are all found on your body. </p>
+			
+			<p id="p550"><span class="parno">550</span>
+			Your eyes are clear, your face is fair, 
+			<br>you’re formidable, upright, majestic. 
+			<br>In the midst of the Saṅgha of ascetics, 
+			<br>you shine like the sun. </p>
+			
+			<p id="p551"><span class="parno">551</span>
+			You’re a mendicant fine to see, 
+			<br>with skin of golden sheen. 
+			<br>But with such excellent appearance, 
+			<br>what do you want with the ascetic life? </p>
+			
+			<p id="p552"><span class="parno">552</span>
+			You’re fit to be a king, 
+			<br>a wheel-turning monarch, chief of charioteers, 
+			<br>victorious in the four quarters, 
+			<br>lord of all India. </p>
+			
+			<p id="p553"><span class="parno">553</span>
+			Aristocrats, nobles, and kings 
+			<br>ought follow your rule. 
+			<br>Gotama, you should reign 
+			<br>as king of kings, lord of men!” </p>
+	</div>
+<hr>
+
+<p><span class="speaker">Buddha</span></p>
+
+	<div class="verse">
+			<p><span class="parno">554</span>
+			“I am a king, Sela”, 
+			<br>said the Buddha, 
+			<br>“the supreme king of the teaching. 
+			<br>By the teaching I roll forth the wheel 
+			<br>which cannot be rolled back.” </p>
+	</div>
+
+<p><span class="speaker">Sela</span></p>
+
+	<div class="verse">
+			<p><span class="parno">555</span>
+			“You claim to be awakened,” 
+			<br>said Sela the brahmin, 
+			<br>“the supreme king of the teaching. 
+			<br>‘I roll forth the teaching’: 
+			<br>so you say, Gotama. </p>
+			
+			<p id="p556"><span class="parno">556</span>
+			Then who is your general, 
+			<br>the disciple who follows the Teacher’s way? 
+			<br>Who keeps rolling the wheel 
+			<br>of the teaching you rolled forth?” </p>
+	</div>
+
+<p><span class="speaker">Buddha</span></p>
+
+<div class="verse">
+<p><span class="parno">557</span>
+“By me the wheel was rolled forth,” 
+<br>said the Buddha, 
+<br>“the supreme wheel of the teaching. 
+<br>Sāriputta, taking after the Realized One, 
+<br>keeps it rolling on. </p>
+
+</div>
+<hr>
+	<div class="verse">
+			<p id="p558"><span class="parno">558</span>
+			I have known what should be known, 
+			<br>and developed what should be developed, 
+			<br>and given up what should be given up: 
+			<br>and so, brahmin, I am a Buddha. </p>
+			
+			<p id="p559"><span class="parno">559</span>
+			Dispel your doubt in me—
+			<br>make up your mind, brahmin! 
+			<br>The sight of a Buddha 
+			<br>is hard to find again. </p>
+			
+			<p id="p560"><span class="parno">560</span>
+			I am a Buddha, brahmin, 
+			<br>the supreme surgeon, 
+			<br>one of those whose appearance in the world 
+			<br>is hard to find again. </p>
+			
+			<p id="p561"><span class="parno">561</span>
+			Holy, unequaled, 
+			<br>crusher of Māra’s army; 
+			<br>having subdued all my opponents, 
+			<br>I rejoice, fearing nothing from any quarter.” </p>
+	</div>
+
+<hr>
+
+<p><span class="speaker">Sela</span></p>
+
+	<div class="verse">
+			<p><span class="parno">562</span>
+			“Pay heed, sirs, to what 
+			<br>is spoken by the seer. 
+			<br>The surgeon, the great hero, 
+			<br>roars like a lion in the jungle. </p>
+			
+			<p id="p563"><span class="parno">563</span>
+			Holy, unequaled, 
+			<br>crusher of Māra’s army; 
+			<br>who would not be inspired by him, 
+			<br>even one whose nature is dark? </p>
+			
+			<p id="p564"><span class="parno">564</span>
+			Those who wish may follow me; 
+			<br>those who don’t may go. 
+			<br>Right here, I’ll go forth in his presence, 
+			<br>the one of such splendid wisdom.” </p>
+	</div>
+
+<hr>
+
+<p><span class="speaker">Pupils</span></p>
+
+	<div class="verse">
+			<p><span class="parno">565</span>
+			“Sir, if you like 
+			<br>in the teaching of the Buddha, 
+			<br>we’ll also go forth in his presence, 
+			<br>the one of such splendid wisdom.” </p>
+	</div>
+
+<p><span class="speaker">Narrator</span></p>
+
+	<div class="verse">
+			<p><span class="parno">566</span>
+			“These three hundred brahmins 
+			<br>with joined palms held up, ask: 
+			<br>‘May we lead the spiritual life 
+			<br>in your presence, Blessed One?’” </p>
+	</div>
+
+<hr>
+
+<p><span class="speaker">Buddha</span></p>
+
+	<div class="verse">
+			<p><span class="parno">567</span>
+			“The spiritual life is well explained,” 
+			<br>said the Buddha, 
+			<br>“visible in this very life, immediately effective. 
+			<br>Here the going forth isn’t in vain 
+			<br>for one who trains with diligence.” </p>
+	</div>
+
+<p>And the brahmin Sela together with his assembly received the going forth, the ordination in the Buddha’s presence. And when the night had passed Keṇiya had a variety of delicious foods prepared in his own home. Then he had the Buddha informed of the time, saying: “It’s time, Master Gotama, the meal is ready.” Then the Buddha robed up in the morning and, taking his bowl and robe, went to Keṇiya’s hermitage, where he sat on the seat spread out, together with the Saṅgha of mendicants. </p>
+
+<p>Then Keṇiya served and satisfied the mendicant Saṅgha headed by the Buddha with his own hands with a variety of delicious foods. When the Buddha had eaten and washed his hand and bowl, Keṇiya took a low seat and sat to one side. The Buddha expressed his appreciation with these verses: </p>
+
+<hr>
+
+<p><span class="speaker">Buddha</span></p>
+
+	<div class="verse">
+			<p><span class="parno">568</span>
+			“The foremost of sacrifices is the offering to the sacred flame; 
+			<br>the Gāyatrī Mantra is the foremost of poetic meters; 
+			<br>of humans, the king is the foremost; 
+			<br>the ocean’s the foremost of rivers; </p>
+			
+			<p id="p569"><span class="parno">569</span>
+			the foremost of stars is the moon; 
+			<br>the sun is the foremost of lights; 
+			<br>for those who sacrifice seeking merit, 
+			<br>the Saṅgha is the foremost.” </p>
+	</div>
+
+<p>When the Buddha had expressed his appreciation to Keṇiya the matted-hair ascetic with these verses, he got up from his seat and left.</p>
+
+<p>Then Venerable Sela and his assembly, living alone, withdrawn, diligent, keen, and resolute, soon realized the supreme end of the spiritual path in this very life. They lived having achieved with their own insight the goal for which gentlemen rightly go forth from the lay life to homelessness. And Venerable Sela together with his assembly became perfected. </p>
+
+<hr>
+
+<p>Then Sela with his assembly went to see the Buddha. He arranged his robe over one shoulder, raised his joined palms toward the Buddha, and said: </p>
+
+<hr>
+
+<p><span class="speaker">Sela</span></p>
+
+	<div class="verse">
+			<p><span class="parno">570</span>
+			“This is the eighth day since 
+			<br>we went for refuge, O seer. 
+			<br>In these seven days, Blessed One, 
+			<br>we’ve become tamed in your teaching. </p>
+			
+			<p id="p571"><span class="parno">571</span>
+			You are the Buddha, you are the Teacher, 
+			<br>you are the sage who has overcome Māra; 
+			<br>you have cut off the underlying tendencies, 
+			<br>you’ve crossed over, and you bring humanity across. </p>
+			
+			<p id="p572"><span class="parno">572</span>
+			
+			You have transcended attachments, 
+			<br>your defilements are shattered; 
+			<br>you are a lion, free of grasping, 
+			<br>with fear and dread given up. </p>
+			
+			<p id="p573"><span class="parno">573</span>
+			These three hundred mendicants 
+			<br>stand with joined palms raised. 
+			<br>Stretch out your feet, great hero: 
+			<br>let these giants bow to the Teacher.” </p>
+	</div>
+
+<p class="endsutta"></p>
+
+</div>
+
+<div lang="pi">
+<h2>Selasutta</h2>
+
+<p>Evaṁ me sutaṁ:</p>
+
+<p>Ekaṁ samayaṁ bhagavā anguttarāpesu cārikaṁ caramāno mahatā bhikkhusanghena saddhiṁ aḍḍhateḷasehi bhikkhusatehi yena āpaṇaṁ nāma anguttarāpānaṁ nigamo tadavasari. </p>
+
+<p>Assosi kho keṇiyo jaṭilo "Samaṇo khalu, bho, gotamo sakyaputto sakyakulā pabbajito anguttarāpesu cārikaṁ caramāno mahatā bhikkhusanghena saddhiṁ aḍḍhateḷasehi bhikkhusatehi āpaṇaṁ anuppatto. Taṁ kho pana bhavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato:  ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Sādhu kho pana tathārūpānaṁ arahataṁ dassanaṁ hotī"ti.</p>
+
+<p>
+
+Atha kho keṇiyo jaṭilo yena bhagavā tenupasankami; upasankamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho keṇiyaṁ jaṭilaṁ bhagavā dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho keṇiyo jaṭilo bhagavatā dhammiyā kathāya sandassito samādapito samuttejito sampahaṁsito bhagavantaṁ etadavoca:  "adhivāsetu me bhavaṁ gotamo svātanāya bhattaṁ saddhiṁ bhikkhusanghenā"ti. </p>
+
+<p>Evaṁ vutte, bhagavā keṇiyaṁ jaṭilaṁ etadavoca:  "mahā kho, keṇiya, bhikkhusangho aḍḍhateḷasāni bhikkhusatāni; tvañca brāhmaṇesu abhippasanno"ti.</p>
+
+<hr>
+<p>
+
+Dutiyampi kho keṇiyo jaṭilo bhagavantaṁ etadavoca:  "kiñcāpi, bho gotama, mahā bhikkhusangho aḍḍhateḷasāni bhikkhusatāni, ahañca brāhmaṇesu abhippasanno; adhivāsetu me bhavaṁ gotamo svātanāya bhattaṁ saddhiṁ bhikkhusanghenā"ti. Dutiyampi kho bhagavā keṇiyaṁ jaṭilaṁ etadavoca:  "mahā kho, keṇiya, bhikkhusangho aḍḍhateḷasāni bhikkhusatāni; tvañca brāhmaṇesu abhippasanno"ti.</p>
+
+<hr>
+<p>
+
+Tatiyampi kho keṇiyo jaṭilo bhagavantaṁ etadavoca:  "kiñcāpi, bho gotama, mahā bhikkhusangho aḍḍhateḷasāni bhikkhusatāni, ahañca brāhmaṇesu abhippasanno, adhivāsetu me bhavaṁ gotamo svātanāya bhattaṁ saddhiṁ bhikkhusanghenā"ti. Adhivāsesi bhagavā tuṇhībhāvena. </p>
+
+<hr>
+
+<p>Atha kho keṇiyo jaṭilo bhagavato adhivāsanaṁ viditvā uṭṭhāyāsanā yena sako assamo tenupasankami; upasankamitvā mittāmacce ñātisālohite āmantesi:  "suṇantu me bhavanto mittāmaccā ñātisālohitā, samaṇo me gotamo nimantito svātanāya bhattaṁ saddhiṁ bhikkhusanghena, yena me kāyaveyyāvaṭikaṁ kareyyāthā"ti. </p>
+
+<p>"Evaṁ, bho"ti kho keṇiyassa jaṭilassa mittāmaccā ñātisālohitā keṇiyassa jaṭilassa paṭissutvā appekacce uddhanāni khaṇanti, appekacce kaṭṭhāni phālenti, appekacce bhājanāni dhovanti, appekacce udakamaṇikaṁ patiṭṭhāpenti, appekacce āsanāni paññāpenti. Keṇiyo pana jaṭilo sāmaṁyeva maṇḍalamāḷaṁ paṭiyādeti.</p>
+
+<p>
+
+Tena kho pana samayena selo brāhmaṇo āpaṇe paṭivasati, tiṇṇaṁ vedānaṁ pāragū sanighaṇḍukeṭubhānaṁ sākkharappabhedānaṁ itihāsapañcamānaṁ padako veyyākaraṇo lokāyatamahāpurisalakkhaṇesu anavayo, tīṇi ca māṇavakasatāni mante vāceti.</p>
+
+<p>
+
+Tena kho pana samayena keṇiyo jaṭilo sele brāhmaṇe abhippasanno hoti. Atha kho selo brāhmaṇo tīhi māṇavakasatehi parivuto janghāvihāraṁ anucankamamāno anuvicaramāno yena keṇiyassa jaṭilassa assamo tenupasankami. Addasā kho selo brāhmaṇo keṇiyassa jaṭilassa assame appekacce uddhanāni khaṇante … pe … appekacce āsanāni paññapente, keṇiyaṁ pana jaṭilaṁ sāmaṁyeva maṇḍalamāḷaṁ paṭiyādentaṁ. Disvāna keṇiyaṁ jaṭilaṁ etadavoca:  "Kiṁ nu kho bhoto keṇiyassa āvāho vā bhavissati, vivāho vā bhavissati, mahāyañño vā paccupaṭṭhito, rājā vā māgadho seniyo bimbisāro nimantito svātanāya saddhiṁ balakāyenā"ti?</p>
+
+<p>"Na me, bho sela, āvāho vā bhavissati vivāho vā, nāpi rājā māgadho seniyo bimbisāro nimantito svātanāya saddhiṁ balakāyena; api ca kho me mahāyañño paccupaṭṭhito. Atthi samaṇo gotamo sakyaputto sakyakulā pabbajito anguttarāpesu cārikaṁ caramāno mahatā bhikkhusanghena saddhiṁ aḍḍhateḷasehi bhikkhusatehi āpaṇaṁ anuppatto. Taṁ kho pana bhavantaṁ gotamaṁ … pe … buddho bhagavāti. So me nimantito svātanāya bhattaṁ saddhiṁ bhikkhusanghenā"ti.</p>
+
+<p> "Buddhoti, bho keṇiya, vadesi"?</p>
+
+<p> "Buddhoti, bho sela, vadāmi". </p>
+
+<p>"Buddhoti, bho keṇiya, vadesi"? </p>
+
+<p>"Buddhoti, bho sela, vadāmī"ti.</p>
+
+<hr>
+
+<p>Atha kho selassa brāhmaṇassa etadahosi:  "ghosopi kho eso dullabho lokasmiṁ yadidaṁ buddhoti. Āgatāni kho panamhākaṁ mantesu dvattiṁsamahāpurisalakkhaṇāni, yehi samannāgatassa mahāpurisassa dveva gatiyo bhavanti anaññā. Sace agāraṁ ajjhāvasati rājā hoti cakkavattī dhammiko dhammarājā cāturanto vijitāvī janapadatthāvariyappatto sattaratanasamannāgato. Tassimāni satta ratanāni bhavanti, seyyathidaṁ – cakkaratanaṁ, hatthiratanaṁ, assaratanaṁ, maṇiratanaṁ, itthiratanaṁ, gahapatiratanaṁ, pariṇāyakaratanameva sattamaṁ. Parosahassaṁ kho panassa puttā bhavanti sūrā vīrangarūpā parasenappamaddanā. So imaṁ pathaviṁ sāgarapariyantaṁ adaṇḍena asatthena dhammena abhivijiya ajjhāvasati. Sace kho pana agārasmā anagāriyaṁ pabbajati, arahaṁ hoti sammāsambuddho loke vivaṭṭacchado. Kahaṁ pana, bho keṇiya, etarahi so bhavaṁ gotamo viharati arahaṁ sammāsambuddho"ti?</p>
+
+<p>Evaṁ vutte, keṇiyo jaṭilo dakkhiṇaṁ bāhuṁ paggahetvā selaṁ brāhmaṇaṁ etadavoca:  "yenesā, bho sela, nīlavanarājī"ti. Atha kho selo brāhmaṇo tīhi māṇavakasatehi saddhiṁ yena bhagavā tenupasankami. Atha kho selo brāhmaṇo te māṇavake āmantesi:  "appasaddā bhonto āgacchantu, pade padaṁ nikkhipantā. Durāsadā hi te bhagavanto sīhāva ekacarā. Yadā cāhaṁ, bho, samaṇena gotamena saddhiṁ manteyyaṁ, mā me bhonto antarantarā kathaṁ opātetha; kathāpariyosānaṁ me bhavanto āgamentū"ti.</p>
+
+<p>Atha kho selo brāhmaṇo yena bhagavā tenupasankami; upasankamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho selo brāhmaṇo bhagavato kāye dvattiṁsamahāpurisalakkhaṇāni samannesi. Addasā kho selo brāhmaṇo bhagavato kāye dvattiṁsamahāpurisalakkhaṇāni yebhuyyena ṭhapetvā dve. Dvīsu mahāpurisalakkhaṇesu kankhati vicikicchati nādhimuccati na sampasīdati – kosohite ca vatthaguyhe pahūtajivhatāya cāti.</p>
+
+<hr>
+<p>Atha kho bhagavato etadahosi:  "passati kho me ayaṁ selo brāhmaṇo dvattiṁsamahāpurisalakkhaṇāni yebhuyyena ṭhapetvā dve. Dvīsu mahāpurisalakkhaṇesu kankhati vicikicchati nādhimuccati na sampasīdati – kosohite ca vatthaguyhe pahūtajivhatāya cā"ti. Atha kho bhagavā tathārūpaṁ iddhābhisankhāraṁ abhisankhāsi, yathā addasa selo brāhmaṇo bhagavato kosohitaṁ vatthaguyhaṁ. Atha kho bhagavā jivhaṁ ninnāmetvā ubhopi kaṇṇasotāni anumasi paṭimasi, ubhopi nāsikasotāni anumasi paṭimasi, kevalampi nalāṭamaṇḍalaṁ jivhāya chādesi.</p>
+
+<p>Atha kho selassa brāhmaṇassa etadahosi:  "samannāgato kho samaṇo gotamo dvattiṁsamahāpurisalakkhaṇehi paripuṇṇehi, no aparipuṇṇehi. No ca kho naṁ jānāmi buddho vā no vā. Sutaṁ kho pana metaṁ brāhmaṇānaṁ vuḍḍhānaṁ mahallakānaṁ ācariyapācariyānaṁ bhāsamānānaṁ:  ‘ye te bhavanti arahanto sammāsambuddhā, te sake vaṇṇe bhaññamāne attānaṁ pātukarontī’ti. Yannūnāhaṁ samaṇaṁ gotamaṁ sammukhā sāruppāhi gāthāhi abhitthaveyyan"ti. Atha kho selo brāhmaṇo bhagavantaṁ sammukhā sāruppāhi gāthāhi abhitthavi: </p>
+
+<hr>
+
+	<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">548</span>"Paripuṇṇakāyo suruci,<br> Sujāto cārudassano;
+			<br>Suvaṇṇavaṇṇosi bhagavā,
+			<br>Susukkadāṭhosi vīriyavā.</p>
+			
+			<p><span class="parno">549</span><a class="brnum" id="br2"></a>
+			Narassa hi sujātassa,<br> ye bhavanti viyañjanā;
+			<br>Sabbe te tava kāyasmiṁ,
+			<br>mahāpurisalakkhaṇā.</p>
+			
+			<p><span class="parno">550</span><a class="brnum" id="br3"></a>
+			Pasannanetto sumukho,<br> brahā uju patāpavā;
+			<br>Majjhe samaṇasanghassa,
+			<br>ādiccova virocasi.</p>
+			
+			<p><span class="parno">551</span><a class="brnum" id="br4"></a>
+			Kalyāṇadassano bhikkhu,<br> kañcanasannibhattaco;
+			<br>Kiṁ te samaṇabhāvena,
+			<br>evaṁ uttamavaṇṇino.</p>
+			
+			<p><span class="parno">552</span><a class="brnum" id="br5"></a>
+			Rājā arahasi bhavituṁ,<br> cakkavattī rathesabho;
+			<br>Cāturanto vijitāvī,
+			<br>jambusaṇḍassa issaro.</p>
+			
+			<p><span class="parno">553</span><a class="brnum" id="br6"></a>
+			Khattiyā bhogirājāno,<br> anuyantā bhavantu te;
+			<br>Rājābhirājā manujindo,
+			<br>rajjaṁ kārehi gotama".</p>
+	</div>
+
+<hr>
+
+	<p><span class="speaker">(bhagavā):</span></p>
+
+	<div class="verse">
+			<p><span class="parno">554</span><a class="brnum" id="br7"></a> "Rājāhamasmi selāti,<br> Dhammarājā anuttaro;
+			<br>Dhammena cakkaṁ vattemi,
+			<br>Cakkaṁ appaṭivattiyaṁ".</p>
+			</div>
+
+			<p><span class="speaker">(iti selo brāhmaṇo):</span></p>
+<div class="verse">
+<p><span class="parno">555</span><a class="brnum" id="br8"></a> "Sambuddho paṭijānāsi,<br> Dhammarājā anuttaro;
+			<br><span class="squo">‘</span> Dhammena cakkaṁ vattemi’,<br> Iti bhāsasi gotama.</p>
+
+			<p><span class="parno">556</span><a class="brnum" id="br9"></a>
+			Ko nu senāpati bhoto,<br> Sāvako satthuranvayo;
+			<br>Ko te tamanuvatteti,
+			<br>Dhammacakkaṁ pavattitaṁ".</p>
+	</div>
+
+		<p><span class="speaker">(selāti bhagavā):</span></p>
+
+	<div class="verse">
+			<p><span class="parno">557</span><a class="brnum" id="br10"></a> "Mayā pavattitaṁ cakkaṁ,<br> Dhammacakkaṁ anuttaraṁ;
+			<br>Sāriputto anuvatteti,
+			<br>Anujāto tathāgataṁ.</p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p><span class="parno">558</span><a class="brnum" id="br11"></a>
+			Abhiññeyyaṁ abhiññātaṁ,<br> Bhāvetabbañca bhāvitaṁ;
+			<br>Pahātabbaṁ pahīnaṁ me,
+			<br>Tasmā buddhosmi brāhmaṇa.</p>
+			
+			<p><span class="parno">559</span><a class="brnum" id="br12"></a>
+			Vinayassu mayi kankhaṁ,<br> Adhimuccassu brāhmaṇa;
+			<br>Dullabhaṁ dassanaṁ hoti,
+			<br>Sambuddhānaṁ abhiṇhaso.</p>
+			
+			<p><span class="parno">560</span><a class="brnum" id="br13"></a>
+			Yesaṁ ve dullabho loke,<br> Pātubhāvo abhiṇhaso;
+			<br>Sohaṁ brāhmaṇa sambuddho,
+			<br>Sallakatto anuttaro.</p>
+			
+			<p><span class="parno">561</span><a class="brnum" id="br14"></a>
+			Brahmabhūto atitulo,<br> Mārasenappamaddano;
+			<br>Sabbāmitte vasīkatvā,
+			<br>Modāmi akutobhayo".</p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">562</span><a class="brnum" id="br15"></a>
+			"Imaṁ bhavanto nisāmetha,<br> Yathā bhāsati cakkhumā;
+			<br>Sallakatto mahāvīro,
+			<br>Sīhova nadatī vane.</p>
+			
+			<p><span class="parno">563</span><a class="brnum" id="br16"></a>
+			Brahmabhūtaṁ atitulaṁ,<br> Mārasenappamaddanaṁ;
+			<br>Ko disvā nappasīdeyya,
+			<br>Api kaṇhābhijātiko.</p>
+			
+			<p><span class="parno">564</span><a class="brnum" id="br17"></a>
+			Yo maṁ icchati anvetu,<br> Yo vā nicchati gacchatu;
+			<br>Idhāhaṁ pabbajissāmi,
+			<br>Varapaññassa santike".</p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">565</span><a class="brnum" id="br18"></a>
+			"Evañce ruccati bhoto,<br> Sammāsambuddhasāsane;
+			<br>Mayampi pabbajissāma,
+			<br>Varapaññassa santike".</p>
+			<p>&nbsp;</p>
+			<p><span class="parno">566</span><a class="brnum" id="br19"></a>
+			Brāhmaṇā tisatā ime,<br> Yācanti pañjalīkatā;
+			<br>"Brahmacariyaṁ carissāma,<br> Bhagavā tava santike".</p>
+	</div>
+
+<hr>
+
+<p><span class="speaker">(selāti bhagavā):</span></p>
+
+	<div class="verse">
+			<p><span class="parno">567</span><a class="brnum" id="br20"></a> "Svākkhātaṁ brahmacariyaṁ,<br> Sandiṭṭhikamakālikaṁ;
+			<br>Yattha amoghā pabbajjā,
+			<br>Appamattassa sikkhato"ti.</p>
+	</div>
+
+<p>
+
+Alattha kho selo brāhmaṇo sapariso bhagavato santike pabbajjaṁ, alattha upasampadaṁ. Atha kho keṇiyo jaṭilo tassā rattiyā accayena sake assame paṇītaṁ khādanīyaṁ bhojanīyaṁ paṭiyādāpetvā bhagavato kālaṁ ārocāpesi:  "kālo, bho gotama, niṭṭhitaṁ bhattan"ti. Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya yena keṇiyassa jaṭilassa assamo tenupasankami; upasankamitvā paññatte āsane nisīdi saddhiṁ bhikkhusanghena.</p>
+
+<p>
+
+Atha kho keṇiyo jaṭilo buddhappamukhaṁ bhikkhusanghaṁ paṇītena khādanīyena bhojanīyena sahatthā santappesi sampavāresi. Atha kho keṇiyo jaṭilo bhagavantaṁ bhuttāviṁ onītapattapāṇiṁ aññataraṁ nīcaṁ āsanaṁ gahetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho keṇiyaṁ jaṭilaṁ bhagavā imāhi gāthāhi anumodi: </p>
+
+<hr>
+
+	<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">568</span><a class="brnum" id="br21"></a>
+			"Aggihuttamukhā yaññā,<br> Sāvittī chandaso mukhaṁ;
+			<br>Rājā mukhaṁ manussānaṁ,
+			<br>Nadīnaṁ sāgaro mukhaṁ.</p>
+			
+			<p><span class="parno">569</span><a class="brnum" id="br22"></a>
+			Nakkhattānaṁ mukhaṁ cando,<br> Ādicco tapataṁ mukhaṁ;
+			<br>Puññaṁ ākankhamānānaṁ,
+			<br>Sangho ve yajataṁ mukhan"ti.</p>
+	</div>
+
+<p>Atha kho bhagavā keṇiyaṁ jaṭilaṁ imāhi gāthāhi anumoditvā uṭṭhāyāsanā pakkāmi. </p>
+
+<p>Atha kho āyasmā selo sapariso eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva … pe … aññataro kho panāyasmā selo sapariso arahataṁ ahosi.</p>
+
+<hr>
+
+<p>Atha kho āyasmā selo sapariso yena bhagavā tenupasankami, upasankamitvā ekaṁsaṁ cīvaraṁ katvā yena bhagavā tenañjaliṁ paṇāmetvā bhagavantaṁ gāthāya ajjhabhāsi: </p>
+
+<hr>
+
+	<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">570</span><a class="brnum" id="br23"></a>
+			"Yaṁ taṁ saraṇamāgamha,<br> Ito aṭṭhami cakkhuma;
+			<br>Sattarattena bhagavā,
+			<br>Dantamha tava sāsane.</p>
+			
+			<p><span class="parno">571</span><a class="brnum" id="br24"></a>
+			Tuvaṁ buddho tuvaṁ satthā,<br> Tuvaṁ mārābhibhū muni;
+			<br>Tuvaṁ anusaye chetvā,
+			<br>Tiṇṇo tāresimaṁ pajaṁ.</p>
+			
+			<p><span class="parno">572</span><a class="brnum" id="br25"></a>
+			Upadhī te samatikkantā,<br> Āsavā te padālitā;
+			<br>Sīhosi anupādāno,
+			<br>Pahīnabhayabheravo.</p>
+			
+			<p><span class="parno">573</span><a class="brnum" id="br26"></a>
+			Bhikkhavo tisatā ime,<br> Tiṭṭhanti pañjalīkatā;
+			<br>Pāde vīra pasārehi,
+			<br>Nāgā vandantu satthuno"ti.</p>
+	</div>
+
+<p class="endsection">Selasuttaṁ sattamaṁ.</p>
+
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp3.6.html#content"></a><a id="next-sutta" href="../snp/snp3.8.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp3.html">Chapter 3: The Great Chapter</a>3:7 With Sela
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+ 
+ <script>
+ // Script to open and close sidebar
+  	function w3_open() {
+  	document.getElementById("mySidebar").style.display = "block";
+  	}
+  		function w3_close() {
+  		document.getElementById("mySidebar").style.display = "none";
+  	}
+ </script>
+ 
+ <script>
+  		var app = document.getElementsByTagName("BODY")[0];
+  		if (localStorage.lightMode == "dark") {
+  			app.setAttribute("light-mode", "dark");
+  	}
+ </script>
+ 
+ <script>
+  		function toggle_light_mode() {
+  			var app = document.getElementsByTagName("BODY")[0];
+  				if (localStorage.lightMode == "dark") {
+  					localStorage.lightMode = "light";
+  					app.setAttribute("light-mode", "light");
+  				} else {
+  					localStorage.lightMode = "dark";
+  					app.setAttribute("light-mode", "dark");
+  	}
+  		}
+ 
+  		window.addEventListener("storage", function () {
+  			if (localStorage.lightMode == "dark") {
+  				app.setAttribute("light-mode", "dark");
+  			} else {
+  				app.setAttribute("light-mode", "light");
+  		}
+  		}, false);
+  </script>
+  <script src="../js/footer.js"></script>
+   </body>
+  </html>

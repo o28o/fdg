@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 1.4</title>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<!-- Loading third party fonts -->
+ 			<link href="../css/all.css" rel="stylesheet" type="text/css">
+ 			<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 			<!-- Loading main and menu stylesheets -->
+ 			<link rel="stylesheet" href="../css/w3.css">
+ 			<link rel="stylesheet" href="../css/css.css">
+ 			<link rel="stylesheet" href="../css/menu.css">
+ 			<script src="../js/jquery-1.10.2.min.js"></script>
+ 			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+ <body>
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ </button>
+ <span class="box-lbl">Light\Dark</span>
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 		<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 
+ 		</div>
+ </div>
+ <!-- Top menu -->
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 		<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 				<ul id="css3menu0">
+ 					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 					<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 				<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 					<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 						<ul>
+ 							<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 							<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 							<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 							<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 							<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 							<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 							<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 							<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 							<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 							<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 							<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 						<ul>
+ 							<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 							<li><a href="../dhp/dhp.html" class="pressed w3-hide-small">The Dhammapada</a></li>
+ 							<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 							<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 							<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 							<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 							<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 						<ul>
+ 							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 							<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 							<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 
+ 						</ul>
+ 					</li>
+ 				</ul>
+ 				</div>
+ 			</div> <!--navbar-->
+ 
+ <!-- Sidebar (hidden by default) -->
+ 	<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 			<div class="w3-bar-block w3-white">
+ 				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 				<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 				<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 			</div>
+ 	</nav>
+ 
+ 				<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Khuddaka Nikaya - The Minor Texts</h2>
+ 
+ <div class="w3-bar-white bwnav"><!-- Div for lower Dhp sub-navigation -->
+ 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
+ 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
+ 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sutta Nipata</a>
+ 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
+ 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
+ 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Theragatha</a>
+ 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
+ </div><!-- End div for lower Dhp sub-navigation -->
+ 
+ <h2>Sutta Nipata</h2>
+ <div class="w3-bar-white bwnav"><!-- Div for lower Snp sub-navigation -->
+ 	<a href="../snp/snp1.html#content" title="1: Serpent Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button active">1: Serpent Chapter<br>(verses 1:1 to 1:12)</a>
+ 	<a href="../snp/snp2.html#content" title="2: Lesser Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">2: Lesser Chapter<br>(verses 2:1 to 2:14)</a>
+ 	<a href="../snp/snp3.html#content" title="3: Great Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">3: Great Chapter<br>(verses 3:1 to 3:12)</a>
+ 	<a href="../snp/snp4.html#content" title="4: The Eights" class="w3-bar-item w3-hover-white w3-border-white w3-button">4: The Eights<br>(verses 4:1 to 4:16)</a>
+ 	<a href="../snp/snp5.html#content" title="5: Way to the Beyond" class="w3-bar-item w3-hover-white w3-border-white w3-button">5: Way to the Beyond<br>(verses 5:1 to 5:18)</a>
+ </div><!-- End div for lower Snp sub-navigation -->
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata Chapter 1: The Serpent Chapter - Uragavagga</h2>
+
+
+	<h3>1:4 With Bharadvaja the Farmer</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li>©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+</div><!-- End div for sub-heading and translator div -->
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h2>1:4 With Bharadvaja the Farmer</h2>
+
+<p><span class="evam">So I have heard</span>:</p>
+
+<p>At one time the Buddha was staying in the land of the Magadhans in the Southern Hills near the brahmin village of Ekanāḷa. Now at that time the brahmin Bhāradvāja the Farmer had harnessed around five hundred plows, it being the season for sowing. Then the Buddha robed up in the morning and, taking his bowl and robe, went to where Bhāradvāja the Farmer was working.</p> 
+
+<hr>
+
+<p>Now at that time Bhāradvāja the Farmer was distributing food. Then the Buddha went to where the distribution was taking place and stood to one side. </p>
+
+<p>Bhāradvāja the Farmer saw him standing for alms and said to him:</p>
+
+<p>“I plough and sow, ascetic, and then I eat. You too should plough and sow, then you may eat.” </p>
+
+<p>“I too plough and sow, brahmin, and then I eat.”</p>
+
+<hr>
+
+<p>“I don’t see Master Gotama with a yoke or plow or plowshare or goad or oxen, yet he says: ‘I too plough and sow, brahmin, and then I eat.’” </p>
+
+<p>Then Bhāradvāja the Farmer addressed the Buddha in verse: </p>
+
+<hr>
+
+<div class="verse">
+<p><span class="speaker">Kasī-Bhāradvāja</span></p>
+<p><span class="parno">76</span>“You claim to be a farmer, 
+<br>but I don’t see you farming. 
+<br>Tell me your farming when asked, 
+<br>so I can recognize your farming.” </p>
+
+<p><span class="speaker">Buddha</span></p>
+
+<p><span class="parno">77</span>“Faith is my seed, austerity my rain, 
+<br>and wisdom is my yoke and plough. 
+<br>Conscience is my pole, mind my strap, 
+<br>mindfulness my plowshare and goad. </p>
+
+<p id="p78"><span class="parno">78</span>Guarded in body and speech, 
+<br>I restrict my intake of food. 
+<br>I use truth as my scythe, 
+<br>and gentleness is my release. </p>
+
+<p id="p79"><span class="parno">79</span>Energy is my beast of burden, 
+<br>transporting me to a place of sanctuary. 
+<br>It goes without turning back 
+<br>where there is no sorrow. </p>
+
+<p id="p80"><span class="parno">80</span>That’s how to do the farming 
+<br>that has the Deathless as its fruit. 
+<br>When you finish this farming 
+<br>you’re released from all suffering.” </p>
+</div>
+
+<hr>
+
+<p> Then Bhāradvāja the Farmer filled a large bronze dish with milk-rice and presented it to the Buddha: “Eat the milk-rice, Master Gotama, you are truly a farmer. For Master Gotama does the farming that has the Deathless as its fruit.” </p>
+
+<div class="verse">
+<p><span class="speaker">Buddha</span></p>
+
+<p><span class="parno">82</span>“Food enchanted by a spell isn’t fit for me to eat. 
+<br>That’s not the principle of those who see, brahmin. 
+<br>The Buddhas reject things enchanted with spells. 
+<br>Since there is such a principle, brahmin, that’s how they live.</p>
+
+<p id="p83"><span class="parno">83</span>Serve with other food and drink 
+<br>the consummate one, the great hermit, 
+<br>with defilements ended and remorse stilled. 
+<br>For he is the field for the seeker of merit.” </p>
+</div>
+
+<hr>
+
+<p>“Then, Master Gotama, to whom should I give the milk-rice?” “Brahmin, I don’t see anyone in this world—with its gods, Māras, and Brahmās, this population with its ascetics and brahmins, its gods and humans—who can properly digest this milk-rice, except for the Realized One or one of his disciples. Well then, brahmin, throw out the milk-rice where there is little that grows, or drop it into water that has no living creatures.” </p>
+
+<p>So Bhāradvāja the Farmer dropped the milk-rice in water that had no living creatures.</p>
+
+<p>And when the milk-rice was placed in the water, it sizzled and hissed, steaming and fuming. Suppose there was an iron cauldron that had been heated all day. If you placed it in the water, it would sizzle and hiss, steaming and fuming. In the same way, when the milk-rice was placed in the water, it sizzled and hissed, steaming and fuming.</p>
+
+<p>Then Bhāradvāja the Farmer, shocked and awestruck,  went up to the Buddha, bowed down with his head at the Buddha’s feet, and said: “Excellent, Master Gotama! Excellent! As if he were righting the overturned, or revealing the hidden, or pointing out the path to the lost, or lighting a lamp in the dark so people with good eyes can see what’s there, Master Gotama has made the teaching clear in many ways. I go for refuge to Master Gotama, to the teaching, and to the mendicant Saṅgha. Sir, may I receive the going forth, the ordination in the Buddha’s presence?”  And Bhāradvāja the Farmer received the going forth, the ordination in the Buddha’s presence.</p>
+
+<p>Not long after his ordination, Venerable Bhāradvāja, living alone, withdrawn, diligent, keen, and resolute, soon realized the supreme end of the spiritual path in this very life. He lived having achieved with his own insight the goal for which gentlemen rightly go forth from the lay life to homelessness. He understood: “Rebirth is ended; the spiritual journey has been completed; what had to be done has been done; there is no return to any state of existence.” And Venerable Bhāradvāja became one of the perfected. </p>
+
+</div>
+
+<div lang="pi">
+<h2>Kasibhāradvājasutta</h2>
+
+<p>Evaṁ me sutaṁ—</p>
+
+<p>ekaṁ samayaṁ bhagavā magadhesu viharati dakkhiṇāgirismiṁ ekanāḷāyaṁ brāhmaṇagāme. Tena kho pana samayena kasibhāradvājassa brāhmaṇassa pañcamattāni nangalasatāni payuttāni honti vappakāle. Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya yena kasibhāradvājassa brāhmaṇassa kammanto tenupasankami. </p>
+
+<hr>
+
+<p>Tena kho pana samayena kasibhāradvājassa brāhmaṇassa parivesanā vattati. Atha kho bhagavā yena parivesanā tenupasankami; upasankamitvā ekamantaṁ aṭṭhāsi.</p>
+
+<p>Addasā kho kasibhāradvājo brāhmaṇo bhagavantaṁ piṇḍāya ṭhitaṁ. Disvāna bhagavantaṁ etadavoca:  </p>
+
+<p>" ahaṁ kho, samaṇa, kasāmi ca vapāmi ca; kasitvā ca vapitvā ca bhuñjāmi. Tvampi, samaṇa, kasassu ca vapassu ca; kasitvā ca vapitvā ca bhuñjassū"ti.</p>
+
+<p>"Ahampi kho, brāhmaṇa, kasāmi ca vapāmi ca; kasitvā ca vapitvā ca bhuñjāmī"ti. </p>
+
+<hr>
+
+<p>" Na kho pana mayaṁ passāma bhoto gotamassa yugaṁ vā nangalaṁ vā phālaṁ vā pācanaṁ vā balībadde vā. Atha ca pana bhavaṁ gotamo evamāha:  ‘ahampi kho, brāhmaṇa, kasāmi ca vapāmi ca; kasitvā ca vapitvā ca bhuñjāmī’"ti.</p>
+
+<p>Atha kho kasibhāradvājo brāhmaṇo bhagavantaṁ gāthāya ajjhabhāsi: </p>
+<hr>
+<div class="verse">
+<p>&nbsp;</p>
+<p><span class="parno">76</span>"Kassako paṭijānāsi,<br> na ca passāma te kasiṁ;
+<br>Kasiṁ no pucchito brūhi,
+<br>yathā jānemu te kasiṁ".</p>
+<p>&nbsp;</p>
+<p><span class="parno">77</span><a class="brnum" id="br2"></a>
+"Saddhā bījaṁ tapo vuṭṭhi,<br> paññā me yuganangalaṁ;
+<br>Hirī īsā mano yottaṁ,
+<br>sati me phālapācanaṁ.</p>
+
+<p><span class="parno">78</span><a class="brnum" id="br3"></a>
+Kāyagutto vacīgutto,<br> āhāre udare yato;
+<br>Saccaṁ karomi niddānaṁ,
+<br>soraccaṁ me pamocanaṁ.</p>
+
+<p><span class="parno">79</span><a class="brnum" id="br4"></a>
+Vīriyaṁ me dhuradhorayhaṁ,<br> yogakkhemādhivāhanaṁ;
+<br>Gacchati anivattantaṁ,
+<br>yattha gantvā na socati.</p>
+
+<p><span class="parno">80</span><a class="brnum" id="br5"></a>
+Evamesā kasī kaṭṭhā,<br> Sā hoti amatapphalā;
+<br>Etaṁ kasiṁ kasitvāna,
+<br>Sabbadukkhā pamuccatī"ti.</p>
+</div>
+
+<hr>
+
+<p>Atha kho kasibhāradvājo brāhmaṇo mahatiyā kaṁsapātiyā pāyasaṁ vaḍḍhetvā bhagavato upanāmesi:  "bhuñjatu bhavaṁ gotamo pāyasaṁ. Kassako bhavaṁ; yañhi bhavaṁ gotamo amatapphalaṁ kasiṁ kasatī"ti.</p>
+
+<div class="verse">
+
+<p>&nbsp;</p>
+
+<p><span class="parno">82</span><a class="brnum" id="br6"></a>
+"Gāthābhigītaṁ me abhojaneyyaṁ,<br> Sampassataṁ brāhmaṇa nesa dhammo;
+<br>Gāthābhigītaṁ panudanti buddhā,
+<br>Dhamme satī brāhmaṇa vuttiresā.</p>
+
+<p><span class="parno">83</span><a class="brnum" id="br7"></a>
+Aññena ca kevalinaṁ mahesiṁ,<br> Khīṇāsavaṁ kukkuccavūpasantaṁ;
+<br>Annena pānena upaṭṭhahassu,
+<br>Khettaṁ hi taṁ puññapekkhassa hotī"ti.</p>
+</div>
+
+<hr>
+
+<p>"Atha kassa cāhaṁ, bho gotama, imaṁ pāyasaṁ dammī"ti? "Na khvāhaṁ taṁ, brāhmaṇa, passāmi sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya, yassa so pāyaso bhutto sammā pariṇāmaṁ gaccheyya, aññatra tathāgatassa vā tathāgatasāvakassa vā. Tena hi tvaṁ, brāhmaṇa, taṁ pāyasaṁ appaharite vā chaḍḍehi appāṇake vā udake opilāpehī"ti.</p>
+
+<p>Atha kho kasibhāradvājo brāhmaṇo taṁ pāyasaṁ appāṇake udake opilāpesi. </p>
+
+<p>Atha kho so pāyaso udake pakkhitto cicciṭāyati ciṭiciṭāyati sandhūpāyati sampadhūpāyati. Seyyathāpi nāma phālo divasaṁ santatto udake pakkhitto cicciṭāyati ciṭiciṭāyati sandhūpāyati sampadhūpāyati; evamevaṁ so pāyaso udake pakkhitto cicciṭāyati ciṭiciṭāyati sandhūpāyati sampadhūpāyati.</p>
+
+<p>Atha kho kasibhāradvājo brāhmaṇo saṁviggo lomahaṭṭhajāto yena bhagavā tenupasankami; upasankamitvā bhagavato pādesu sirasā nipatitvā bhagavantaṁ etadavoca:  "Abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya, ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito. Esāhaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusanghañca, labheyyāhaṁ bhoto gotamassa santike pabbajjaṁ, labheyyaṁ upasampadan"ti.</p>
+<p>Alattha kho kasibhāradvājo brāhmaṇo bhagavato santike pabbajjaṁ, alattha upasampadaṁ. Acirūpasampanno kho panāyasmā bhāradvājo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva – yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ – brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. "Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā"ti abbhaññāsi. Aññataro ca panāyasmā bhāradvājo arahataṁ ahosīti.</p>
+
+<p class="endsection">Kasibhāradvājasuttaṁ catutthaṁ.</p>
+
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp1.3.html#content"></a><a id="next-sutta" href="../snp/snp1.5.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp1.html">1: The Serpent Chapter</a>1:4 With Bharadvaja the Farmer
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+ 
+ <script>
+ // Script to open and close sidebar
+  	function w3_open() {
+  	document.getElementById("mySidebar").style.display = "block";
+  	}
+  		function w3_close() {
+  		document.getElementById("mySidebar").style.display = "none";
+  	}
+ </script>
+ 
+ <script>
+  		var app = document.getElementsByTagName("BODY")[0];
+  		if (localStorage.lightMode == "dark") {
+  			app.setAttribute("light-mode", "dark");
+  	}
+ </script>
+ 
+ <script>
+  		function toggle_light_mode() {
+  			var app = document.getElementsByTagName("BODY")[0];
+  				if (localStorage.lightMode == "dark") {
+  					localStorage.lightMode = "light";
+  					app.setAttribute("light-mode", "light");
+  				} else {
+  					localStorage.lightMode = "dark";
+  					app.setAttribute("light-mode", "dark");
+  	}
+  		}
+ 
+  		window.addEventListener("storage", function () {
+  			if (localStorage.lightMode == "dark") {
+  				app.setAttribute("light-mode", "dark");
+  			} else {
+  				app.setAttribute("light-mode", "light");
+  		}
+  		}, false);
+  </script>
+  <script src="../js/footer.js"></script>
+   </body>
+  </html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC 1.7–1</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+<p>&nbsp;</p>
+
+<h2>Buddhist Monastic Code Book 1 - The Pāṭimokkha Rules Translated and Explained</h2>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc1.intro.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Introduction</a>
+<a href="../bmc/bmc1.1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭimokkha</a>
+<a href="../bmc/bmc1.2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaya</a>
+<a href="../bmc/bmc1.3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disrobing</a>
+<a href="../bmc/bmc1.4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pārājika</a>
+<a href="../bmc/bmc1.5.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Saṅghādisesa</a>
+<a href="../bmc/bmc1.6.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Aniyatas</a>
+<a href="../bmc/bmc1.7.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaggiya Pācittiyas</a>
+<a href="../bmc/bmc1.8.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pācittiyas</a>
+<a href="../bmc/bmc1.9.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭidesanīyas</a>
+<a href="../bmc/bmc1.10.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Sekhiyas</a>
+<a href="../bmc/bmc1.11.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Adhikaraṇa-Samathās</a>
+<a href="../bmc/bmc1.12.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Appendix</a>
+<a href="../bmc/bmc1.rule-index.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Index</a>
+<a href="../bmc/bmc1.glossary.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Glossary</a>
+<a href="../bmc/bmc1.biblio.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bibliography</a>
+</div>
+
+<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;7: Nissaggiya Pācittiyas</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc1.7-1.html" class="w3-button w3-border w3-hover-yellow w3-yellow" style="width:220px">7.1:<br>The Robe-cloth Chapter</a>
+			<a href="../bmc/bmc1.7-2.html" class="w3-button w3-white w3-border w3-hover-yellow" style="width:190px">7.2:<br>The Silk Chapter</a>
+			<a href="../bmc/bmc1.7-3.html" class="w3-button w3-white w3-border w3-hover-yellow" style="width:190px">7.3:<br>The Bowl Chapter</a>
+	</div>
+</div>
+
+<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;7.1: Nissaggiya Pācittiya - The Robe-cloth Chapter</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro bhikkhu</li>
+		</ul>
+
+<p>The term <i>nissaggiya,</i> used in connection with training rules, means “entailing forfeiture.” Used in connection with articles, it means “to be forfeited.” <i>Pācittiya</i> is a word of uncertain etymology. The Parivāra gives a didactic derivation — that it means letting skillful qualities fall away (<i>patati</i>) with a deluded mind (<i>citta</i>) — but the term is more likely related to the verb <i>pacinati</i> (pp. <i>pacita</i>), which means to discern, distinguish, or know.</p>
+
+<p>Each of the rules in this category involves an object that a bhikkhu has acquired or used wrongly, and that he must forfeit before he may “make the offense known” — confess it — to a fellow bhikkhu or group of bhikkhus. Once he has made his confession, he is absolved from the offense. In most cases, the forfeiture is symbolic — after his confession, he receives the article in return — although three of the rules require that the offender give up the article for good.</p>
+
+<p>There are thirty rules in this category, divided into three chapters (<i>vagga</i>) of ten rules each.</p>
+
+<p class="rule" id="np1">Nissaggiya Pācittiya&nbsp;1 - When a bhikkhu has finished his robe and the frame is dismantled (his kaṭhina privileges are ended), he is to keep extra robe-cloth ten days at most. Beyond that, it is to be forfeited and confessed.</p>
+
+<p>The origin story for this rule is retold as part of a larger narrative in <a href="../vi/kd8.html#87">Khandhaka&nbsp;8 (Mv&nbsp;8) </a>. Because the context provided by the larger narrative is what makes it interesting, that is the version translated here.</p>
+
+<p>“(The Buddha addresses the bhikkhus:) 'As I was traveling on the road from Rājagaha to Vesālī, I saw many bhikkhus coming along loaded down with robe-cloth, having made a mattress of robe-cloth on their heads and a mattress of robe-cloth on their backs/shoulders and a mattress of robe-cloth on their hips. Seeing them, I thought: “All too quickly have these worthless men been spun around into abundance in terms of robe-cloth. What if I were to tie off a boundary, to set a limit on robe-cloth for the bhikkhus?”</p>
+
+<p>“‘Now at that time, during the cold winter middle-eight nights (the four nights on either side of the full moon in February, the coldest time of the year in northern India) when snow was falling, I sat in the open air wearing one robe and was not cold. Toward the end of the first watch I became cold. I put on a second robe and was not cold. Toward the end of the middle watch I became cold. I put on a third robe and was not cold. Toward the end of the final watch, as dawn rose and the night smiled, I became cold. I put on a fourth robe and was not cold. The thought occurred to me: “Those in this doctrine and discipline who are sons of respectable families — sensitive to cold and afraid of the cold — even they are able to get by with three robes. Suppose I were to tie off a boundary, to set a limit on robe-cloth for the bhikkhus and were to allow three robes.” Bhikkhus, I allow you three robes: a double-layer outer robe, a single-thickness upper robe, and a single-thickness lower robe (thus, four layers of cloth).’</p>
+
+<p>“Now at that time, some group-of-six bhikkhus, thinking, ’The Blessed One allows three robes,’ entered the village wearing one set of three robes, stayed in the monastery wearing another set, and went down to bathe in still another. Modest bhikkhus… criticized and complained and spread it about, ’How can the group-of-six bhikkhus wear extra robe-cloth?' They told this matter to the Blessed One. He… addressed the bhikkhus, saying, ’Bhikkhus, extra robe-cloth is not to be kept'…</p>
+
+<p>“Now at that time extra robe-cloth accrued to Ven. Ānanda, and he wanted to give it to Ven. Sāriputta, but Ven. Sāriputta was at Sāketa. He thought, ’… Now what line of conduct should I follow?' He told this matter to the Blessed One, (who said,) 'But how long is it, Ānanda, before Sāriputta will come here?’</p>
+
+<p>“‘Nine days or ten.’
+<br>
+&quot;Then the Blessed One… addressed the bhikkhus, ’I allow that extra robe-cloth to be kept at most ten days.’</p>
+
+<p>“Now at that time extra robe-cloth accrued to the bhikkhus. They thought, ’Now what line of conduct should we follow?' They told this matter to the Blessed One, (who said,) 'I allow that extra robe-cloth be placed under shared ownership.’”</p>
+
+<p>The offense under this rule involves two factors.</p>
+
+<ol>
+<li><i>Object:</i> a piece of extra robe-cloth, i.e., a piece of cloth suitable to be made into a robe or other cloth requisite, measuring at least four by eight inches (fingerbreadths), that has not been formally determined for use or placed under shared ownership. This category includes finished requisites as well as simple pieces of cloth, but does not include robe-cloth belonging to the Community.</li>
+
+<li><i>Effort:</i> One keeps it for more than ten days (except during the allowed period) without determining it for use, placing it under shared ownership, abandoning it (giving or throwing it away); and without the cloth’s being lost, destroyed, burnt, snatched away, or taken by someone else on trust within that time.</li>
+</ol>
+
+<p><b>Object.</b> According to <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.1, six kinds of cloth are suitable for making into cloth requisites: linen, cotton, silk, wool, jute (§), or hemp (§). The Sub-commentary adds that cloth made of any mixture of hemp with any of the other types of thread would be allowed under “hemp.” Applying the Great Standards, nylon, rayon, and other synthetic fibers would count as suitable as well. Unsuitable materials — such as cloth made of hair, horse-hair, grass, bark, wood-shavings, or antelope hide (and by extension, leather) — do not come under this rule. (For a full list of unsuitable materials, see <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a> — <a href="../bmc/bmc2.2.html">BMC2, Chapter&nbsp;2</a>.) <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a> gives a list of colors — such as black, blue, and crimson — and patterns that are not suitable for robes but that, according to the Commentary, are suitable for things like bed sheets or for linings (inside layers?) in double-layer robes (see <a href="../bmc/bmc2.2.html">BMC2, Chapter&nbsp;2</a>). Pieces of cloth dyed these colors or printed with these patterns <i>would</i> come under this rule.</p>
+
+<p><a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.1 states that if a bhikkhu receives a piece of suitable cloth measuring four by eight fingerbreadths or more but does not yet plan to use it, he may place it under shared ownership (<i>vikappana</i>) until he has need for it. Once he decides to make use of the cloth, he must rescind the shared ownership (see <a href="../bmc/bmc1.8-6.html#pc59">Pācittiya&nbsp;59</a>) before making it into a finished requisite (if it isn’t already). Once it is finished, he may then determine it for use (<i>adhiṭṭhāna</i>) or place it under shared ownership again, depending on the nature of the article:</p>
+
+<p>Each of the <i>three basic robes, handkerchiefs, bed sheets, and the sitting cloth</i> are to be determined, and may not be placed under shared ownership.
+<br> A rains-bathing cloth (see <a href="../bmc/bmc1.7-3.html#np24">Nissaggiya Pācittiya&nbsp;24</a>) may be determined for the four months of the rainy season and is to be placed under shared ownership for the remainder of the year.</p>
+
+<p>A <i>skin-eruption cloth</i> (see <a href="../bmc/bmc1.8-9.html#pc90">Pācittiya&nbsp;90</a>) may be determined when needed and is to be placed under shared ownership when not.</p>
+
+<p><i>Other items of cloth</i> may be determined as “requisite cloths.”</p>
+
+<p>(The procedures for determining and placing under shared ownership are given in <a href="../bmc/bmc1.12.html#app4">Appendices 4</a> &amp; <a href="../bmc/bmc1.12.html#app5">5</a>.)</p>
+
+<p>Any cloth made of any of the suitable materials and of the requisite size counts as an extra cloth if —</p>
+
+<ul class="circ">
+<li>it has not been determined for use or placed under shared ownership,</li>
+<li>it has been improperly determined or placed under shared ownership, or</li>
+<li>its determination or shared ownership has lapsed.</li>
+</ul>
+
+<p>Many of the cases in which determination and shared ownership lapse also exempt the cloth from this rule: e.g., the owner disrobes or dies, he gives the cloth away, it gets snatched away, destroyed (bitten by things such as termites, says the Commentary), burnt, lost, or someone else takes it on trust. There are a few cases, however, where determination and shared ownership lapse and the cloth <i>does</i> fall under this rule. They are —</p>
+
+<ul class="circ">
+<li><i>Under shared ownership:</i> The first owner takes the cloth on trust, or the second owner formally rescinds the shared ownership.</li>
+
+<li><p><i>Under determination:</i> The owner rescinds the determination, or (if the cloth has been determined as one of the three basic robes) the cloth develops a hole. This latter case comes in the Commentary, which gives precise standards for deciding what kind of hole does and does not make the determination of the robe lapse:</p>
+
+<ol>
+<li><i>Size.</i> The hole has to be a full break (through both layers of cloth, if in the outer robe) at least the size of the nail on one’s little finger. If one or more threads remain across the hole, then the hole makes the determination lapse only if either of the two “halves” divided by the thread(s) is the requisite size.</li>
+
+<li><i>Location.</i> On an upper robe or outer robe, the hole has to be at least one span (25 cm.) from the longer side and eight fingerbreadths from the shorter; on a lower robe, at least one span from the longer side and four fingerbreadths from the shorter. Any hole closer to the edge of the robe than these measurements does not make the determination lapse.</li>
+</ol></li>
+</ul>
+
+<p>Because of these stipulations, the Commentary notes that if one is patching a worn spot — not a hole as defined above — more than the maximum distance away from the edge of one’s robe, the determination lapses if one cuts out the worn spot before applying the patch, but not if one applies the patch before cutting out the worn spot. If the determination lapses, it is an easy matter to re-determine the robe, but one must be mindful to do it within the time span allotted by this rule.</p>
+
+<p><b>Effort.</b> According to the Vibhaṅga, if one keeps a piece of extra robe-cloth past the eleventh dawnrise (except when the robe-season privileges are in effect), one commits the full offense under this rule. The Commentary explains this by saying that the dawnrise at the morning of the day on which one receives the cloth, or lets its determinationshared ownership lapse, counts as the first dawn. Thus the eleventh dawnrise would actually be the tenth dawnrise after one receives, etc., the cloth.</p>
+
+<p>Because neither the Canon nor the Commentary gives a precise definition of dawn or dawnrise, their exact meaning is a controversial point. The clearest definition of dawnrise — and the one that seems most consistent with the Canon’s use of the term — is in a sub-commentary called the Vinayālaṅkāra, which states that at dawnrise “a red band in the eastern direction and a whiteness in the remaining directions, due to the diffusion of sunlight, can be discerned.” In modern terminology, this corresponds to the onset of civil twilight. This is the definition followed in this book. For further discussion, see <a href="../bmc/bmc1.12.html#app-1">Appendix 1</a>.</p>
+
+<p><a href="../vi/kd5.html">Khandhaka&nbsp;5 (Mv&nbsp;5)</a> states that if one is informed of a gift of robe-cloth, the counting of the time span does not begin until the cloth has reached one’s hand. The Commentary to that passage insists that this means either physically coming to one’s possession or when one is informed by the donors that the robe-cloth is with so-and-so or when one is informed by another to the same effect. However, this interpretation seems to contradict the Vibhaṅga, which expressly says: “There is no counting of the time span as long as it has not come to his hand” — “his” in this case meaning the bhikkhu's.</p>
+
+<p>Perception is not a mitigating factor here. Even if one miscounts the days or perceives a robe to be determined when it actually is not, one is not immune from the offense. The robe is to be forfeited and the offense confessed.</p>
+
+<p>If, before it has been forfeited, one uses a robe or piece of robe-cloth that deserves to be forfeited under this rule, the penalty is a dukkaṭa. This is one of only six nissaggiya pācittiya rules where the Vibhaṅga mentions this penalty — the others are NP <a href="../bmc/bmc1.7-1.html#np2">2</a>, <a href="../bmc/bmc1.7-1.html#np3">3</a>, <a href="../bmc/bmc1.7-3.html#np21">21</a>, <a href="../bmc/bmc1.7-3.html#np28">28</a>, &amp; <a href="../bmc/bmc1.7-3.html#np29">29</a> — but the KCommentary extends the principle to all nissaggiya pācittiya rules: To use an unforfeited item that deserves to be forfeited incurs a dukkaṭa in every case. (We should add, though, that the use of gold or money acquired in defiance of <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a> or <a href="../bmc/bmc1.7-2.html#np19">19</a> would carry a nissaggiya pācittiya if used in defiance of <a href="../bmc/bmc1.7-2.html#np19">Nissaggiya Pācittiya&nbsp;19</a> or <a href="../bmc/bmc1.7-2.html#np20">20</a>.)</p>
+
+<p>The Vibhaṅga also states that, in the case of an extra robe that has not been kept more than ten days, if one perceives it to have been kept more than ten days or if one is in doubt about it, the penalty is a dukkaṭa. This can be interpreted in one of two ways: There is a dukkaṭa simply in continuing to keep the robe, or a dukkaṭa in using it. The Commentary opts for the second interpretation.</p>
+
+<p><b>Robe-season privileges.</b> The fourth lunar month of the rainy season — beginning the day after the first full moon in October and lasting to dawnrise of the day following the next full moon — is termed the robe season, a period traditionally devoted to robe-making. In the early days, when most bhikkhus spent the cold and hot seasons wandering, and stayed put in one place only during the Rains-residence, this would have been the ideal period for them to prepare robes for their wandering, and for lay people who had come to know the bhikkhus during the Rains-residence to show their gratitude and respect for them by presenting them with gifts of cloth for this purpose.</p>
+
+<p>During this robe season, five of the training rules — <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a> &amp; <a href="../bmc/bmc1.7-1.html#np3">3</a>; Pācittiya <a href="../bmc/bmc1.8-4.html#pc32">32</a>, <a href="../bmc/bmc1.8-4.html#pc33">33</a>, &amp; <a href="../bmc/bmc1.8-5.html#pc46">46</a> — are relaxed to make it more convenient for the bhikkhus to make robes. Also, any cloth accruing to a particular monastery during this period may be shared only among the bhikkhus who spent the Rains-residence there, and not with any incoming visitors.</p>
+
+<p>Under certain circumstances (see <a href="../bmc/bmc2.17.html">BMC2, Chapter&nbsp;17</a>) bhikkhus who have spent the Rains-residence are also entitled to participate in a <i>kaṭhina</i> ceremony in which they receive a gift of cloth from lay people, bestow it on one of their members, and then as a group make it into a robe before dawnrise of the following day. (<i>Kaṭhina</i> means frame, and refers to the frame over which the robe-cloth is stretched while sewing it, much like the frame used in America to make a quilt.) After participating in this ceremony, the bhikkhus may extend their robe season for an additional four lunar months, up to the dawn after the full-moon day that ends the cold season in late February or early-to-mid March (called Phagguna in Pali). During this period they may also take advantage of the additional privilege of not having to observe <a href="../bmc/bmc1.7-1.html#np2">Nissaggiya Pācittiya&nbsp;2</a>. However, a bhikkhu’s kaṭhina privileges may be rescinded — and his robe season ended — earlier than that for either of two reasons:</p>
+
+<ol>
+<li>He participates in a meeting in which all the bhikkhus in the monastery, as a Community transaction, voluntarily relinquish their kaṭhina privileges. (This act is discussed under Bhikkhunīs' <a href="../bmc/bmc1.8-3.html#pc30">Pācittiya&nbsp;30</a> — see <a href="../bmc/bmc2.17.html">BMC2 Chapter&nbsp;17</a> and <a href="../bmc/bmc1.12.html#app-1">Appendix 1</a>.)</li>
+
+<li><p>He comes to the end both of his constraint with regard to the monastery (<i>āvāsa-palibodha</i>) and of his constraint with regard to making a robe (<i>cīvara-palibodha</i>). (See <a href="../vi/kd7.html">Khandhaka&nbsp;7 (Mv.&nbsp;7)</a>; <a href="../vi/kd7.html">Khandhaka&nbsp;7 (Mv.&nbsp;7)</a> &amp; Parivara XIV.6.)</p>
+
+<ul class="alph">
+<li><p>A constraint with regard to a monastery ends when either of the following things happens:</p>
+
+<ul class="circ">
+<li>One leaves the monastery without intending to return.</li>
+<li>One has left the monastery, planning to return, but learns that the bhikkhus in the monastery have formally decided to relinquish their kaṭhina privileges.</li></ul></li>
+
+<li><p>A constraint with regard to making a robe ends when any of the following occurs:</p>
+
+<ul class="circ">
+<li>One finishes making a robe.</li>
+<li>One decides not to make a robe.</li>
+<li>One’s robe-cloth gets lost, snatched away, or destroyed.</li>
+<li>One expects to obtain robe-cloth, but — after not obtaining it as expected — one abandons one’s expectation.</li>
+</ul></li>
+</ul></li>
+</ol>
+
+<p>Only if Point 1 happens, or <i>both</i> Points 2a and 2b happen, do one’s kaṭhina privileges lapse before the dawn after the full moon day marking the end of the cold season.</p>
+
+<p>During the robe season, one may keep an extra piece of robe-cloth for more than ten days without committing an offense under this rule. Once these privileges lapse, though, one must determine the cloth, place it under shared ownership, or abandon it within ten days. If one fails to do so by the 'eleventh dawn' after the privileges lapse, the cloth is to be forfeited and the offense confessed.</p>
+
+<p><b>Forfeiture &amp; confession.</b> To be absolved of the offense under this rule, one must first forfeit the robe-cloth kept more than ten days and then confess the offense. This may be done in the presence of one other bhikkhu, a group of two or three, or a Community of four or more. After confessing the offense, one receives the robe-cloth in return. This is the pattern followed under all the nissaggiya pācittiya rules except for the few in which forfeiture must be done in the presence of a full Community and under which the article may not be returned to the offender. (We will note these rules as we come to them.)</p>
+
+<p>The Pali formulae to use in forfeiture, confession, and return of the article for this and all the following rules are given in <a href="../bmc/bmc1.12.html#app5">Appendix 5</a>. We should note, though, that according to the Commentary one may conduct these procedures in any language at all.</p>
+
+<p>In this and every other rule under which the article may be returned to the offender, it <i>must</i> be returned to him. According to the Vibhaṅga, a bhikkhu who receives the article being forfeited without returning it incurs a dukkaṭa. The Commentary qualifies this by saying that this penalty applies only to the bhikkhu who assumes that, in receiving an article being forfeited in this way, it is his to take as he likes. For the bhikkhu who knows that it is not his to take, the offense is to be treated under <a href="../bmc/bmc1.4.html#pr2">Pārājika 2</a>, with the penalty determined by the value of the article. In passing this judgment, the Commentary is treating the act of accepting the forfeited article as a species of accepting an object placed in safekeeping. However, it has neglected to note that the act of forfeiture is worded in such a way that the offender is actually giving up ownership of the cloth; because the cloth then has no owner, it would not fulfill the factors for an offense under <a href="../bmc/bmc1.4.html#pr2">Pārājika 2</a>. Thus it seems preferable to stick with the Vibhaṅga in saying that, in all cases, a bhikkhu who does not return the article being forfeited incurs a dukkaṭa.</p>
+
+<p>A bhikkhu who has received the robe-cloth in return after forfeiting it and confessing the offense may use it again without penalty, unless he keeps it as a piece of extra robe-cloth beyond ten more dawns. Thus the wise policy is to determine the cloth or place it under shared ownership immediately after receiving it in return.</p>
+
+<p><b>Non-offenses.</b> In addition to the allowance to keep extra robe-cloth more than ten days during the robe season, the Vibhaṅga says that there is no offense if within ten days the cloth is determined, placed under shared ownership, lost, snatched away, destroyed, burnt, taken by someone else on trust, thrown away, or given away.</p>
+
+<p>In connection with this last point, the Commentary discusses proper and improper ways of giving things away. The article counts as having been properly given if one says: “I give this to you,” or “I give this to so-and-so,” or “Take this, it’s yours,” but not if one says things like: “Make this yours,” or “May this be yours.” Apparently, if one simply hands the article over without saying anything to show that one is transferring ownership, it again does not count. As we noted above, perception is not a mitigating factor under this rule. If one gives extra robe-cloth away in an improper manner, then even though one may assume that the cloth has been given away it still counts as one’s own extra robe-cloth under this rule.</p>
+
+<p><b>Current practice.</b> As the origin story shows, the purpose of this rule was to prevent bhikkhus from having more than one set of the three robes at any one time. With the passage of time, though, gifts of cloth to the Community became more numerous, and the need for stringency in this matter became less and less felt. Exactly when spare robes became accepted is not recorded, although a passage in the pupil’s duties to his preceptor (Mv.I.25.9) shows that the practice of having a spare lower robe was already current when that part of the Canon was compiled (see <a href="../bmc/bmc1.12.html#app5">Appendix 5</a>). <a href="../vi/kd7.html">Khandhaka&nbsp;7 (Mv.&nbsp;7)</a> also mentions a group of wilderness dwelling bhikkhus who were “wearers of the three robes,” as if this were a special distinguishing characteristic. A number of passages in the Canon — including <a href="../sn/sn16.8.html#2">SN16.8</a> mention the practice of using only one set of three robes as special, and the Visuddhimagga (5th century C.E.) classes this practice as one of the thirteen optional <i>dhutaṅga</i> (ascetic) practices.</p>
+
+<p>As we will see below, <a href="../bmc/bmc1.8-9.html#pc92">Pācittiya&nbsp;92</a> suggests that in the early days the under, upper, and outer robes were all nearly the same size, so there would have been no difficulty in washing one robe and using the other two while the first one dried. Later, when the compilers of the ancient commentaries greatly enlarged the size of the upper and outer robes after deciding that the Buddha was of superhuman height, getting by with just one set of three robes became less convenient. Thus many teachers at present suggest that even a frugal bhikkhu, when staying in monasteries, should use one spare under robe or a spare under and upper robe — so that he will have no trouble keeping his robes clean and presenting an acceptable appearance at all times — and save the three-robe dhutaṅga practice for when he is alone in the wilderness.</p>
+
+<p>At any rate, because only one set of three robes may be determined as such, spare robes — once they became generally accepted — were determined as “requisite cloths.” This point may be inferred from the Commentary’s explanation of this rule, and the Sub-commentary’s explanation of <a href="../bmc/bmc1.7-1.html#np7">Nissaggiya Pācittiya&nbsp;7</a>. The Commentary even contains a discussion of the views of various elders as to whether a bhikkhu who wishes to avoid the special rules surrounding the use of the three robes (such as the following rule) may determine his basic set as requisite cloths as well. The majority opinion — with only one dissenting voice — was Yes, although at present many Communities do not agree with this opinion.</p>
+
+<p>The Sub-commentary suggests an alternative way of dealing with spare robes: placing them under shared ownership and — because none of the three robes may be placed under shared ownership — calling them simply “cloth” (<i>cīvara</i>). This, however, plays havoc with <a href="../bmc/bmc1.8-6.html#pc59">Pācittiya&nbsp;59</a> and the general purpose of shared ownership in the Canon as a way of keeping cloth that is not being used. Thus the previous method — determining spare robes as requisite cloth — seems preferable.</p>
+
+<p>In any event, ever since spare robes have been accepted, the effect of this rule has been mainly to deter a bhikkhu from hoarding up robe-cloth in secret and from letting a hole in any of his basic set of three robes go unmended for more than ten days. Nevertheless, the spirit of the rule makes it incumbent on each bhikkhu to keep his cloth requisites to a minimum.</p>
+
+<p>Keeping a piece of robe-cloth for more than ten days without determining it for use or placing it under shared ownership — except when the robe-season privileges are in effect — is a nissaggiya pācittiya offense.</p>
+
+<p class="rule" id="np2">Nissaggiya Pācittiya&nbsp;2 - When a bhikkhu has finished his robe and the frame is dismantled (his kaṭhina privileges are ended): If he dwells apart from (any of) his three robes even for one night — unless authorized by the bhikkhus — it is to be forfeited and confessed.</p>
+
+<p>In the origin story here, a number of bhikkhus went off on tour, leaving their outer robes with their friends at the monastery. Eventually the robes became moldy, and the bhikkhus at the monastery were burdened with having to sun them to get rid of the mold. The Buddha thus formulated this rule so that bhikkhus would be responsible for looking after their own robes.</p>
+
+<p>The offense here consists of two factors: object and effort.</p>
+
+<p><b>Object.</b> any one of the robes that a bhikkhu has determined as his basic set of three — the <i>antaravāsaka</i> (lower robe), <i>uttarāsaṅga</i> (upper robe), and <i>saṅghāṭi</i> (outer robe). This rule thus does not apply to spare robes or other cloth requisites.</p>
+
+<p><b>Effort.</b> greeting dawnrise at a place outside of the zone in which any of one’s robes are located, except when the exemptions mentioned in the rule are in effect.</p>
+
+<p><i>Dawnrise,</i> as stated under the preceding rule, corresponds to the onset of civil twilight. In Thailand, this point is often measured in a practical way by looking at the palm of one’s hand as it is held out at full arm’s length: Dawnrise is the point in time when the major lines of the hand are visible by natural light. On a bright moonlit night, dawnrise is measured by looking at the foliage of trees: Dawnrise is the point when one can detect the green in the color of the leaves. For further discussion of some of the controversies surrounding dawn and dawnrise, see <a href="../bmc/bmc1.12.html#app-1">Appendix 1</a>.</p>
+
+<p><b><i>Zones. </i></b>This is the most complex facet of this rule. The zone where a bhikkhu must be at dawnrise depends on the type of location where his robes are placed, whether the property around the location is enclosed, and — if it is enclosed — whether it belongs to one or more than one <i>kula.</i></p>
+
+<p>“Enclosed,” according to the Commentary, means surrounded with a wall, a fence, or a moat. The Sub-commentary adds that a river or lake would also qualify as a type of enclosure, under the term <i>moat.</i></p>
+
+<p>The term <i>kula</i> normally means clan or family, but in the context of this rule it has different meanings for the different types of locations. According to the Commentary, a village is single-kula if ruled by a single ruler, and multi-kula if ruled by a council — as in the case of Vesālī and Kusinārā during the time of the Buddha. (In the time of the Canon and Commentary, rulers were assumed to “own” or have the right to “consume” the territories they ruled.) At present, towns governed under a social contract — such as a town charter — would count as multi-kula even if the highest authority in the government is invested in a single individual.</p>
+
+<p>A building, a vehicle or a piece of land is single-kula if it belongs to one family, and multi-kula if it belongs to more than one (as in an apartment house).</p>
+
+<p>According to the Sub-commentary, a monastery is single-kula if the people who initiated it belong to one kula — of either type, apparently — and multi-kula if they belong to several.</p>
+
+<p>In some of the cases, the Vibhaṅga states that one should greet dawnrise within a particular area “or not more than a <i>hatthapāsa</i> (1.25 meter) away.” Unfortunately, it does not explicitly state what the hatthapāsa is measured from — the robes or the area — so there are different opinions as to what this passage means. The Commentary’s position is that in cases where the Vibhaṅga says that if the robes are kept in a certain area, one should either stay in that area or not more than a hatthapāsa away, the hatthapāsa is measured from the outside boundary of the area. For instance, if the robes are kept in a house in an unenclosed village, one is allowed to greet dawnrise anywhere in the house or in an area one hatthapāsa around the house. (This would allow for a bhikkhu to go outside to relieve himself at dawn without having to carry along his full set of robes.) However, in cases where the Vibhaṅga does not mention that one should stay in a certain area, and instead says simply that one should not be more than a hatthapāsa away — as in an unenclosed field or under a multi-kula tree — the hatthapāsa is measured from the robes themselves.</p>
+
+<p>Some have objected to the Commentary’s position as inconsistent and serving no purpose, and have proposed instead that the hatthapāsa be measured from the robes in every case. This, however, leads to redundancies: If, for instance, the robes are kept in a room and one is allowed (1) to stay in the room or (2) to be no further than a hatthapāsa from the robes, then either (2) negates (1) — in other words, one must stay within a hatthapāsa of the robes and not go elsewhere in the room — or else (1) makes (2) superfluous: One may stay anywhere in the room, without worrying about precisely where in the room the robes are located. In contrast, the Commentary’s position not only avoids these redundancies but also actually serves a purpose. In addition to the convenience mentioned above, there is another convenience in a multi-kula dwelling or a larger multi-kula building: If there is a small bathroom next to the room where the robes are kept, one may use the bathroom at dawn without having to take one’s robes into the bathroom. For these reasons, we will stick to the Commentary’s interpretation here.</p>
+
+<div style="margin-left:1.5em">
+<p><i>1. A village:</i></p>
+
+<ol class="alph">
+<li>Enclosed and single-kula: Having kept the robes within the enclosure, greet dawnrise in the enclosure. (The Vibhaṅga actually says: “in the village,” but as the Commentary to Mv.II.12.3 notes, when a village is enclosed, everything in the enclosure counts as “village,” and that is the most sensible interpretation for the Vibhaṅga’s statement here. This is the pattern followed throughout all cases of “enclosed and single-kula.”)</li>
+
+<li>Enclosed and multi-kula: Greet dawnrise in the house where the robes are kept, in the public meeting hall, at the town gate, or one hatthapāsa around any of these places (§). If the robes are kept within a hatthapāsa of the path going to the public meeting hall, greet dawnrise in the public meeting hall, at the town gate, or in the area one hatthapāsa around either of the two. If the robes are kept in the public meeting hall, greet dawnrise in the public meeting hall, at the town gate, or in the area one hatthapāsa around either of the two.</li>
+
+<li>Unenclosed: Greet dawnrise in the house where the robes are kept or in the area one hatthapāsa around it (§). (See 2 &amp; 3 below for further details.)</li>
+</ol>
+
+<p><i>2. A dwelling with a yard:</i></p>
+
+<ol class="alph">
+<li>Enclosed and single-kula: Having kept the robes within the enclosure, greet dawnrise within the enclosure.</li>
+
+<li>Enclosed and multi-kula: Greet dawnrise in the room where the robes are kept, at the entrance to the enclosure, or in the area one hatthapāsa around either of the two (§).</li>
+
+<li>Unenclosed: Greet dawnrise in the room where the robes are kept, or in the area one hatthapāsa around it (§).</li>
+</ol>
+
+<p><i>3. A monastic dwelling (vihāra — according to the Sub-commentary, this includes entire monasteries</i>):</p>
+
+<ol class="alph">
+<li>a. Enclosed and single-kula: Having kept the robes within the enclosure, greet dawnrise within the enclosure.</li>
+
+<li>Enclosed and multi-kula: Greet dawnrise in the dwelling where the robes are kept, at the entrance to the enclosure, or in the area one hatthapāsa around either of the two (§).</li>
+
+<li>Unenclosed: Greet dawnrise in the dwelling where the robes are kept or in the area one hatthapāsa around it (§).</li>
+</ol>
+
+<p><i>4. A field, orchard, garden (park), or threshing floor:</i></p>
+
+<ol class="alph">
+<li>Enclosed and single-kula: Having kept the robes within the enclosure, greet dawnrise within the enclosure.</li>
+
+<li>Enclosed and multi-kula (e.g., many fields, etc., within a single enclosure): Having kept the robes within the enclosure, greet dawnrise in the enclosure, at the entrance to the field, etc., where the robe is kept, or in the area one hatthapāsa around either (§).</li>
+
+<li>Unenclosed: Greet dawnrise within one hatthapāsa of the robes.</li>
+</ol>
+
+<p><i>5. Buildings with no yard (such as a fortress or city apartment block</i>):</p>
+
+<ol class="alph">
+<li>Single-kula: Having kept the robes within the building, greet dawnrise within the building.</li>
+
+<li>Multi-kula: Greet dawnrise within the room where the robes are kept, at the entrance (to the building), or in the area one hatthapāsa around either (§).</li>
+</ol>
+
+<p><i>6. A boat (and by extension, other vehicles</i>):</p>
+
+<ol class="alph">
+<li>Single-kula: Having kept the robes within the vehicle, greet dawnrise within the vehicle.</li>
+
+<li>Multi-kula (as in a commercial airplane or bus): Greet dawnrise in the room where the robes are kept or in the area one hatthapāsa around it (§). (For this reason, a bhikkhu traveling in an airplane overnight should wear his complete set of robes or have it with him in his cabin baggage, rather than in his checked baggage.) The Thai edition of the Canon, unlike the others, adds that one may also greet dawnrise at the entrance to the boat or in the area one hatthapāsa around it.</li>
+</ol>
+
+<p><i>7. A caravan (according to the Sub-commentary, this includes groups traveling by foot as well as by cart; group hiking trips would thus be included here</i>):</p>
+
+<ol class="alph">
+<li>Single-kula: Having kept the robes within the caravan, greet dawnrise anywhere up to seven abbhantaras (98 meters) in front of or behind the caravan, and up to one abbhantara (14 meters) to either side.</li>
+
+<li>Multi-kula: Having kept the robes within the caravan, greet dawnrise within one hatthapāsa of the caravan.</li>
+</ol>
+
+<p><i>8. At the foot of a tree:</i></p>
+
+<ol class="alph">
+<li>Single-kula: Having kept the robes within the area shaded by the tree at noon, greet dawnrise within that area. According to the Commentary, this doesn’t include spots where sunlight leaks through gaps in the foliage, but many Communities regard this stipulation as excessive.</li>
+
+<li>Multi-kula (e.g., a tree on the boundary between two pieces of land): Greet dawnrise within one hatthapāsa of the robes.</li>
+</ol>
+
+<p><i>9. In the open air </i>(according to the Vibhaṅga, this means a wilderness area where there are no villages; the Commentary adds that this includes dense forests and uninhabited islands):</p>
+</div>
+
+<p>Greet dawnrise within a seven-abbhantara (98 meter) radius of the robes. (Some have argued that this allowance should apply only when one is staying outside of a dwelling in the wilderness; as for a hut in the wilderness, they say, the zone under (3) should apply. The problem with this interpretation is what it would mean in practice: If a bhikkhu keeping his robes in a wilderness hut wanted to greet dawnrise in the open air, he would have to take his robes out of the hut. Then he would be free to wander 98 meters away from them. This would actually expose the robes to more dangers than if they were left in the hut. Thus it seems preferable to stick with the Vibhaṅga’s definition for this zone: any wilderness area where there are no villages.)</p>
+
+<p><b>Exemptions.</b></p>
+
+<ol>
+	<li>As with the preceding rule, this rule is not in force when the kaṭhina privileges are in effect. However — unlike the preceding rule — it is in force during the first month after the Rains-residence unless one has participated in a kaṭhina.</li>
+
+<li><p>In the origin story to this rule, the Buddha gives permission for a Community of bhikkhus to authorize an ill bhikkhu to be separated from his robes at dawnrise throughout the course of his illness without penalty. This authorization is to be given as a Community transaction with one motion and one announcement (<i>ñatti-dutiya-kamma</i>).</p>
+
+<p>The Commentary discusses how long this authorization lasts, and concludes that once the bhikkhu has recovered he should make every reasonable effort to get back to his robes as soon as possible without jeopardizing his health. The authorization then automatically subsides, with no further transaction being required to rescind it. If his illness returns, the authorization is automatically reinstated.</p></li>
+
+<li>In <a href="../vi/kd2.html#12">Khandhaka&nbsp;2 (Mv.&nbsp;2)</a>, the Buddha directs the bhikkhus to declare a <i>sīmā —</i> or territory in which Community transactions are enacted — as a <i>ticīvara-avippavāsa,</i> which means that if a bhikkhu’s robes are anywhere within the territory, he may greet dawnrise at any other part of that territory without committing an offense under this rule. In the early days, when such a territory might cover many monasteries (the maximum allowable size is 3x3 <i>yojanas</i>, approximately 48x48 kilometers), this was a definite convenience for bhikkhus who had to leave their monastery to join in Community meetings at another monastery in the same territory. Because it was possible for such territories to include villages and homes as well, the Buddha added the extra stipulation that robes left in the houses of lay people lying in such a territory were not covered by this exemption. For further details, see <a href="../bmc/bmc2.13.html">BMC2, Chapter&nbsp;13</a>.</li>
+</ol>
+
+<p>At present the custom is to designate much smaller areas as territories — usually only a fraction of the land in one monastery — and although these can also be designated as ticīvara-avippavāsa, this arrangement in such cases is not the great convenience it is in the larger territories.</p>
+
+<p><b>Forfeiture &amp; confession.</b> If a bhikkhu greets dawnrise outside of the zone where any one of his three determined robes is placed — except when the exemptions are in effect — the robe is to be forfeited and the offense confessed. Perception and intention are not mitigating factors here. If he thinks that he is in the same zone when he actually isn’t, if he thinks the robe is not determined when it actually is, or if he means to be in the same zone when circumstances prevent him, he incurs the penalty all the same. If he then uses the robe before forfeiting it and confessing the offense, he incurs a dukkaṭa.</p>
+
+<p>The Vibhaṅga adds that, with regard to a robe that hasn’t been apart from one, if one perceives it to have been apart or one is in doubt about it, the penalty is a dukkaṭa. The Commentary does not explain these statements, but from the parallel situations under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a> it would seem that the dukkaṭa here is for <i>using</i> the robe.</p>
+
+<p>The procedures for forfeiture, confession, and return of the robe are the same as in the preceding rule. For the Pali formula to use in forfeiture, see <a href="../bmc/bmc1.12.html#app5">Appendix 5</a>. Once the robe has been forfeited, its determination lapses, so when the bhikkhu receives it in return he must re-determine it for use or give it away within ten days so as not to commit an offense under the preceding rule.</p>
+
+<p><b>Non-offenses.</b> In addition to the above-mentioned exemptions, there is no offense if, before dawnrise, the robe is lost, destroyed, burnt, or snatched away; if someone else takes it on trust; or if the bhikkhu gives it away or rescinds its determination. Because of this last allowance, the Commentary recommends that if a bhikkhu realizes he will not be able to get back to his robe before dawnrise, he should rescind the robe’s determination before dawnrise so as to avoid an offense, and then re-determine the robe after dawnrise has passed.</p>
+
+<p><b>A note on Thai practice.</b> The author of the Vinaya-mukha missed the Sub-commentary’s discussion of monastic residences under this rule and so came to the conclusion that none of the texts discuss the question of zones in a monastery. As a result, he formulated his own system, treating each separate monastic dwelling as a lay dwelling with a yard. Furthermore, he neglected to discuss the question of what counts as single-kula and multi-kula in such a dwelling. In the absence of any other standard, Thai bhikkhus have come to view a dwelling of two or more bhikkhus, in which the bhikkhus come from different families, as a multi-kula dwelling. If the bhikkhus live in separate rooms, then the room where the robes are placed, plus a radius of one hatthapāsa around it, is the bhikkhu’s zone. If two or more bhikkhus are spending the night in a single room, each bhikkhu must greet dawnrise within one hatthapāsa of his robes.</p>
+
+<p>Although there is no basis in the Canon or commentaries for this practice, it is so widely accepted in Thailand that the wise policy for anyone spending the night in the same dwelling or the same room with a Thai bhikkhu is to be aware of it and abide by it, to avoid the useless controversies that can arise over minor matters like this.</p>
+
+<p>Being in a separate zone from any of one’s three robes at dawnrise — except when one’s kaṭhina privileges are in effect or one has received formal authorization from the Community — is a nissaggiya pācittiya offense.</p>
+
+<p class="rule" id="np3">Nissaggiya Pācittiya&nbsp;3 - When a bhikkhu has finished his robe and the frame is dismantled (his kaṭhina privileges are ended): Should out-of-season robe-cloth accrues to him, he may accept it if he so desires. Having accepted it, he is to make it up immediately (into a cloth requisite). If it should not be enough (§), he may lay it aside for a month at most when he has an expectation for filling the lack. If he should he keep it beyond that, even when he has an expectation (for further cloth), it is to be forfeited and confessed.</p>
+
+<p>There are two factors for an offense here:</p>
+
+<ol>
+<li><i>Object:</i>
+<ol class='alph'>
+<li>out-of-season robe-cloth, made of any of the proper six kinds of material, in pieces measuring at least four by eight fingerbreadths;</li>
+
+<li>the cloth is not enough to make the cloth requisite one has in mind, but one expects to receive more.</li>
+</ol></li>
+
+<li><i>Effort:</i> One keeps the cloth for more than 30 days, except when the kaṭhina privileges are in effect.</li>
+</ol>
+
+<p><b>Object.</b> The Vibhaṅga defines in-season robe-cloth as any robe-cloth accruing to a bhikkhu — either from the Community, from a group, from relatives, from friends, from cast-off cloth, or from his own resources — during the first month after the Rains-residence if he has not yet participated in a kaṭhina, or during the time when his kaṭhina privileges are in effect if he has. Thus out-of-season cloth is any cloth accruing to him at any other time. However, the Vibhaṅga also notes that cloth accruing to a bhikkhu during the one-month or five-month robe season can count as out-of-season cloth if the donors dedicate it to that purpose. There are two reasons why they might want to do so.</p>
+
+<ol>
+<li>Given the way “extra robe-cloth” is defined under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>, a gift of in-season robe-cloth can be kept — if it is neither determined nor placed under shared ownership — for ten days after the robe season ends. However, if the cloth is not enough to make into a robe, it cannot be kept — if neither determined nor placed under shared ownership — for the month allowed by this rule. However, as the KCommentary to <a href="../bmc/bmc1.7-3.html#np24">Nissaggiya Pācittiya&nbsp;24</a> notes, a gift of out-of-season cloth <i>can</i> be kept for the extra month under this rule. Thus if the donors want to provide the recipient(s) with that extra amount of time — which would be especially useful if they give the cloth toward the end of the robe season — they can dedicate the cloth given in-season as out-of-season cloth.</li>
+
+<li>According to <a href="../vi/kd8.html#139">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>, in-season cloth given to a Community may be shared among only the bhikkhus who spent the Rains-residence in that particular Community, and not among any visiting bhikkhus. The Bhikkhunīs' <a href="../bmc/bmc1.7-1.html#np2">Nissaggiya Pācittiya&nbsp;2</a> tells of a case where well-behaved but shabbily dressed bhikkhunīs visited a Community of bhikkhunīs when the robe-season privileges were in effect; lay donors, wishing to help them, gave cloth to the Community with the stipulation that it be treated as out-of-season robe-cloth so that the visiting bhikkhunīs would also have a share.</li>
+</ol>
+
+<p>Out-of-season cloth, if it is enough to make the cloth requisite one has in mind, is treated as extra robe-cloth under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>: During the period outside of the robe season it can be kept for at most ten days. If, however, it is not enough, and one expects to get further cloth from any source — again, from the Community, from a group, from relatives, from friends, from cast-off cloth, or from one’s own resources — it may be kept for up to 30 days with no need to be determined or placed under shared ownership.</p>
+
+<p>The further cloth, when received, has a life span of ten days, as under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>, and one must finish making one’s requisite within the time period determined by whichever cloth has the shorter life span. Thus, if one obtains the expected cloth during the first 20 days, the requisite must be made within ten days, this being the life span of the second cloth. If one obtains it after the 21st day, the requisite must be made before the original 30 days are up.</p>
+
+<p>If the second cloth turns out to be of different quality from the first, one is under no compulsion to put the two cloths together to make up the requisite if one does not want to, and may continue waiting for further cloth, if one has further expectation of cloth, as long as the life span of the first cloth allows. The Commentary recommends that if the second cloth is of poorer quality than the first, one may determine it as requisite cloth; if the second cloth is of better quality, one may determine the first cloth as requisite cloth and start a new 30-day countdown from the day of receiving the second cloth.</p>
+
+<p><b>Effort.</b> Days are counted by dawns. If, by the 30th dawnrise after one receives the original cloth, one has not determined it, placed it under shared ownership, or abandoned it, it is to be forfeited and the offense confessed. The Sub-commentary adds that if at any time after the first ten days have elapsed one abandons any expectation for further cloth, one must determine the original cloth, place it under shared ownership, or abandon it before the following dawnrise. Otherwise, one commits an offense under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>.</p>
+
+<p>As noted under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>, <a href="../vi/kd5.html">Khandhaka&nbsp;5 (Mv&nbsp;5)</a> states that if one is informed of a gift of robe-cloth, the counting of the time span does not begin until the cloth has reached one’s hand.</p>
+
+<p>As in the preceding rules, perception is not a mitigating factor. If one miscounts the dawns or thinks the cloth is properly determined, etc., when in fact it isn’t, there is an offense all the same. The Vibhaṅga states that, with regard to a robe that has not been kept beyond the allowable time, if one perceives it to have been kept beyond that time or if one is in doubt about it, the penalty is a dukkaṭa. As under the preceding rules, this penalty apparently applies to <i>using</i> the robe.</p>
+
+<p>As for out-of-season cloth received shortly before the beginning of the robe season, the countdown would begin when it is received, would be suspended throughout the robe season, and would resume at the robe season’s end.</p>
+
+<p>However, as with many of the above issues, this situation rarely comes up in practice, as it is a simple enough matter to determine the original cloth as requisite cloth or place it under shared ownership until one has enough cloth to make one’s requisite, remove it from those arrangements to make the requisite, and so avoid having to worry about this rule at all.</p>
+
+<p><b>Forfeiture &amp; confession.</b> The procedures for forfeiture, confession, and return of the cloth are the same as in the preceding rules. For the Pali formula to use in forfeiting the cloth, see <a href="../bmc/bmc1.12.html#app6">Appendix 6</a>. Once the cloth is received in return and is now enough for the requisite one has in mind, it is classed as extra robe-cloth under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>. If not, the 30-day countdown starts all over again.</p>
+
+<p><b>Non-offenses.</b> There is no offense if, before the 30 days are up, the original cloth is lost, destroyed, burnt, or snatched away; if someone else takes it on trust; or if the owner determines it for use, places it under shared ownership, or abandons it. And, as stated above, this rule does not apply when the robe-season privileges are in effect.</p>
+
+<p>Keeping out-of-season robe-cloth for more than 30 days when it is not enough to make a requisite and one has expectation for more — except when the robe-season privileges are in effect — is a nissaggiya pācittiya offense.</p>
+
+<p class="rule"><a id="np4"></a>Nissaggiya Pācittiya&nbsp;4 - Should any bhikkhu have a used robe washed, dyed, or beaten by a bhikkhunī unrelated to him, it is to be forfeited and confessed.</p>
+
+<p>The origin story here is one of the classics of Vinaya literature, although it is hard to say which is more memorable — the dry, matter-of-fact style with which the narrative relates the improbable events, or the reaction of the bhikkhunīs when they hear what has happened.</p>
+
+<p>“Now at that time Ven. Udāyin’s wife had gone forth among the bhikkhunīs. She often went to his place, and he often went to hers. One day he went to her place for a meal-donation. Dressing (§) early in the morning, taking his bowl and (outer) robe, he went to her and on arrival sat down in front of her, exposing his penis. She sat down in front of him, exposing her vagina. He, impassioned, stared at her vagina. Semen was released from his penis (§). He said to her, ’Go and fetch some water, sister. I'll wash my lower robe.’</p>
+
+<p>“‘Give it here, master. <i>I'll</i> wash it.’</p>
+
+<p>“Then she took some of the semen (§) in her mouth and inserted some of it in her vagina. With that, she conceived a child.</p>
+
+<p>“The bhikkhunīs said, ’This bhikkhunī has been practicing unchastity. She’s pregnant.’</p>
+
+<p>“‘It’s not that I've been practicing unchastity.' And she told them what had happened. The bhikkhunīs criticized and complained and spread it about, ’How can this Master Udāyin get a bhikkhunī to wash his used robe?’”</p>
+
+<p>There are three factors for an offense here: object, effort, and result.</p>
+
+<p><b>Object.</b> a used robe. <i>Robe,</i> here, according to the Commentary, means any robe that has been dyed and properly marked (see <a href="../bmc/bmc1.8-6.html#pc58">Pācittiya&nbsp;58</a>). This is its way of saying that the robe must be a finished cloth requisite of the type suitable for wearing, but need not be determined as one of one’s basic three robes. In other words, it could also be as yet undetermined, or a spare robe determined as a requisite cloth.</p>
+
+<p><i>Used,</i> according to the Vibhaṅga, means worn around the body at least once. According to the Commentary, it can mean used in other ways — e.g., rolled up as a pillow or worn draped over the shoulder or head — as well.</p>
+
+<p>The Vibhaṅga adds that sitting cloths and bed sheets are grounds for a dukkaṭa; other requisites, grounds for no offense.</p>
+
+<p><b>Effort.</b> One tells an unrelated bhikkhunī to wash, dye, or beat the robe.</p>
+
+<p>A <i>bhikkhunī,</i> here, means one who has received the double ordination, first in the Bhikkhunī Saṅgha and secondly in the Bhikkhu Saṅgha (see BMC2, <a href="../bmc/bmc2.23.html">Chapter&nbsp;23</a>). A bhikkhunī who has received only her first ordination is grounds for a dukkaṭa. Female trainees and female novices are not grounds for an offense.</p>
+
+<p><i>Unrelated</i> is explained by the Vibhaṅga as meaning unrelated back through seven grandfathers, either on the father’s or the mother’s side. The Commentary explains further that this means seven generations counted back starting from one’s grandfather. Thus all descendants of one’s great-great-great-great-great-great-great-grandfathers are counted as one’s relatives. In-laws, however, are not. This definition of <i>unrelated</i> applies wherever the Vibhaṅga mentions the word. At the time of the Buddha, perceived ties of kinship extended more widely than they do today, and a bhikkhu at present would be well advised to regard as his relatives only those blood-relations with whom ties of kinship are actually felt.</p>
+
+<p>Perception is not an issue here. If a bhikkhu perceives a bhikkhunī as related when in fact she isn’t, he is subject to the full penalty all the same. If he perceives a related bhikkhunī as unrelated, or if he is in doubt as to whether she is related, he incurs a dukkaṭa in getting her to wash, etc., a robe.</p>
+
+<p><i>Telling,</i> according to the Commentary, includes gesturing as well. Thus if a bhikkhunī is washing her robes, and a bhikkhu throws his used robe down next to her, that would fulfill the factor here.</p>
+
+<p><b>Result.</b> The bhikkhunī washes, dyes, or beats the robe as requested.</p>
+
+<p><b>Offenses.</b> A bhikkhu who tells an unrelated bhikkhunī to wash, etc., his used robe incurs a dukkaṭa in the telling. (For every effort she then makes toward washing it, the Commentary adds, he incurs an extra dukkaṭa.) If he tells her to wash it, then when the robe is washed it is to be forfeited and the nissaggiya pācittiya offense confessed. If he tells her to dye it, then when the robe is dyed it is to be forfeited and the nissaggiya pācittiya offense confessed. If he tells her to beat it, then when she has beaten the robe at least once with a stick or her hand, it is to be forfeited and the nissaggiya pācittiya offense confessed. The bhikkhu incurs a nissaggiya pācittiya and a dukkaṭa if he gets her to do two of the three actions mentioned in the rule — e.g., washing and dyeing the robe; and a nissaggiya pācittiya and two dukkaṭas if he gets her to do all three.</p>
+
+<p>The procedures for forfeiture, confession, and return of the robe are the same as in the preceding rules. Once the robe is returned, it counts as an extra robe-cloth under <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>.</p>
+
+<p><b>Non-offenses.</b> There is no offense if the bhikkhunī is related to the bhikkhu, if an unrelated bhikkhunī washes the robe unasked, if an unrelated bhikkhunī helps a related bhikkhunī wash it, if the robe has not yet been used, if one gets an unrelated bhikkhunī to wash another type of requisite (aside from a robe, a sitting cloth, or a bed sheet), or if one gets an unrelated female trainee or female novice to wash a used robe.</p>
+
+<p>The Commentary discusses the case of a bhikkhu who gives a used robe to a female trainee to wash: She takes it, becomes ordained as a bhikkhunī in the meantime, and then washes it. The verdict: He incurs the full penalty under this rule. For the fun of it, the Commentary then discusses the case of a bhikkhu who gives his used robe to a lay man to wash. The lay man undergoes a spontaneous sex change and becomes a bhikkhunī before washing the robe, and again, the bhikkhu incurs the full penalty. What lesson is intended here is hard to say.</p>
+
+<p>Getting an unrelated bhikkhunī to wash, dye, or beat a robe that has been used at least once is a nissaggiya pācittiya offense.</p>
+
+<p class="rule"><a id="np5"></a>Nissaggiya Pācittiya&nbsp;5 - Should any bhikkhu accept robe-cloth from the hand of a bhikkhunī unrelated to him — except in exchange — it is to be forfeited and confessed.</p>
+
+<p>The reason behind this rule is expressed by a single sentence in the origin story: 'It’s hard for us women to come by things.' In the original version of the rule, the Buddha made no allowance for accepting robe-cloth in exchange, but this point was later added at the request of the bhikkhunīs. They had tried to exchange robe-cloth with the bhikkhus, who refused because of the rule as it stood at that time, and this upset the bhikkhunīs. As the Commentary explains, their poverty was what made them complain, ’If the Masters are not on familiar terms with us even to this extent, how are we supposed to keep going?’</p>
+
+<p>The offense under this rule is composed of two factors: object and effort.</p>
+
+<p><b>Object.</b> any piece of robe-cloth of the six suitable kinds, measuring at least four by eight fingerbreadths. Other requisites are not grounds for an offense.</p>
+
+<p><b>Effort.</b> The bhikkhu receives such cloth from an unrelated bhikkhunī and does not give her anything in exchange.</p>
+
+<p><i>Unrelated bhikkhunī</i> here is defined in the same terms as under the preceding rule: a bhikkhunī who has received the double ordination and is not related to the bhikkhu back through their great x 7 grandfathers. A bhikkhunī who has received only her first ordination, from the bhikkhunīs, is grounds for a dukkaṭa. Female trainees and female novices are not grounds for an offense.</p>
+
+<p>Perception here is not a mitigating factor: According to the Vibhaṅga, even if a bhikkhu perceives an unrelated bhikkhunī as related he is still subject to the penalty. If he perceives a related bhikkhunī as unrelated or if he is in doubt about whether she is related, he incurs a dukkaṭa in receiving a robe from her.</p>
+
+<p>The Commentary adds that even if one does not know that the robe comes from a bhikkhunī — as when many donors place robes in a pile for a bhikkhu, and one of the donors, unbeknownst to him, is a bhikkhunī — this factor is fulfilled all the same. If a bhikkhunī gives robe-cloth to someone else to present to a bhikkhu, though, the bhikkhu commits no offense in accepting it.</p>
+
+<p>The Commentary also states that receiving need not be hand-to-hand. If a bhikkhunī simply places robe-cloth near a bhikkhu as her way of giving it to him and he accepts it as given, this factor is fulfilled.</p>
+
+<p>As for the item given in exchange for the cloth, the Vibhaṅga states that it can be worth much more than the cloth or much less. Buddhaghosa quotes the Mahā Paccarī, one of the ancient commentaries, as saying that even if, in return for the cloth, the bhikkhu gives the bhikkhunī a piece of yellow myrobalan — a medicinal fruit, one of the cheapest things imaginable in India — he escapes the penalty under this rule.</p>
+
+<p><b>Offenses.</b> If both factors of the offense here are fulfilled, the bhikkhu incurs a dukkaṭa in making an effort (e.g., extending his hand) to receive the cloth. Once he has received it, he must forfeit it and confess the nissaggiya pācittiya offense. The procedures for forfeiture, confession, and return of the cloth are the same as in the preceding rules.</p>
+
+<p><b>Non-offenses.</b> There is no offense:</p>
+
+<ul class="circ">
+<li>if the bhikkhunī is related;</li>
+<li>if the bhikkhunī is not related but the bhikkhu gives her something in exchange;</li>
+<li>if the bhikkhu takes the cloth on trust;</li>
+<li>if he borrows the cloth;</li>
+<li>if he accepts a non-cloth requisite; or</li>
+<li>if he accepts robe-cloth from a female trainee or female novice.</li>
+</ul>
+
+<p><b>Exchange.</b> The origin story to this rule is where the Buddha explicitly gives permission for bhikkhus, bhikkhunīs, female trainees, male novices, and female novices to trade items with one another. <a href="../bmc/bmc1.7-2.html#np20">Nissaggiya Pācittiya&nbsp;20</a> forbids bhikkhus from trading items with lay people and people ordained in other religions.</p>
+
+<p>Accepting robe-cloth from an unrelated bhikkhunī without giving her anything in exchange is a nissaggiya pācittiya offense.</p>
+
+<p class="rule"><a id="np6"></a>Nissaggiya Pācittiya&nbsp;6 - Should any bhikkhu ask for robe-cloth from a man or woman householder unrelated to him, except at the proper occasion, it is to be forfeited and confessed. Here the proper occasion is this: The bhikkhu’s robe has been snatched away or destroyed. This is the proper occasion here.</p>
+
+<p>“Now at that time Ven. Upananda the Sakyan was accomplished in giving Dhamma talks. A certain financier’s son went to him and, on arrival, bowed down to him and sat to one side. As he was sitting there, Ven. Upananda the Sakyan instructed, urged, roused, and encouraged him with a Dhamma talk. Then the financier’s son… said to him: ’Tell me, venerable sir, what I would be capable of giving you that you need: Robe-cloth? Almsfood? Lodgings? Medicines for the sick?’</p>
+
+<p>“‘If you want to give me something, friend, then give me one of those cloths (you are wearing).’</p>
+
+<p>“‘I'm the son of a good family, venerable sir. How can I go about wearing one cloth? Wait till I go home. After going home, I will send you one of these cloths or a more beautiful one.’</p>
+
+<p>“A second time… A third time, Ven. Upananda said to him: ’If you want to give me something, friend, then give me one of those cloths.’</p>
+
+<p>“‘I'm the son of a good family, venerable sir. How can I go about wearing one cloth? Wait till I go home. After going home, I will send you one of these cloths or a more beautiful one.’</p>
+
+<p>“‘What’s with this offer without wanting to give, friend, in that having made the offer you don’t give?’</p>
+
+<p>“So the financier’s son, being pressured by Ven. Upananda, left having given him one cloth. People seeing him said to him: ’Why, master, are you going around wearing only one cloth?’</p>
+
+<p>“He told them what had happened. So the people criticized and complained and spread it about, ’They’re arrogant, these Sakyan-son monks, and malcontent. It’s no simple matter to make a reasonable offer to them. How can they, after being made a reasonable offer by the financier’s son, take his cloth?’”</p>
+
+<p>The factors for an offense here are three.</p>
+
+<ol><li><i>Object:</i> a piece of any of the six suitable kinds of robe-cloth, measuring at least four by eight fingerbreadths.</li>
+<li><i>Effort:</i> One asks, except at the proper time, for such cloth from a lay person who is not related back through one’s great x 7 grandfathers. Perception is not a mitigating factor here. Even if one perceives the lay person to be related when in fact he/she isn’t, that fulfills the factor here.</li>
+<li><i>Result:</i> One receives the cloth.</li>
+</ol>
+
+<p><b>The proper occasions.</b> <i>Snatched away,</i> according to the Vibhaṅga, refers to a robe snatched by anyone at all, even a king. This would cover cases not only where the robe has been stolen but also where it has been confiscated by a government official. <i>Destroyed</i> means burnt, carried away by water, eaten by such things as rats or termites, or worn out by use — although the Sub-commentary adds here that worn out by use means worn to the point where the robe can no longer offer proper covering for the body.</p>
+
+<p>If all of a bhikkhu’s robes are snatched away or destroyed, the Vibhaṅga says that he is not to “come” naked, which apparently means that he should not approach other people while naked. To do so incurs a dukkaṭa (as opposed to the thullaccaya <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.1 imposes on a bhikkhu who chooses to go about naked when he has robes to wear). If a bhikkhu with no cloth to cover his body happens on an unoccupied Saṅgha residence, he is permitted to take any cloth he finds there — robes, sheets, mats, pillow cases, or whatever — to wear as a makeshift robe as long as he has the intention of returning it when he obtains a proper robe. Otherwise he should make a covering of grass and leaves.</p>
+
+<p>The Commentary adds several points here:</p>
+
+<ol>
+<li>If one picks leaves or cuts grass to make a covering for oneself under these circumstances, one is exempt from the penalty for damaging plant life under <a href="../bmc/bmc1.8-2.html#pc11">Pācittiya&nbsp;11</a>. In other words, the allowance here takes precedence over the prohibition in that rule, rather than <i>vice versa.</i> (The Vibhaṅga does not clearly state which takes precedence over which.) Other bhikkhus are also exempt from that penalty if they pick grass and leaves to help make a covering for a bhikkhu whose robes have been snatched away or destroyed.</li>
+
+<li>If, after getting one’s makeshift robe from an unoccupied Saṅgha residence, one has to go a great distance before getting a proper robe, one may leave the makeshift robe with any convenient monastery as property of the Saṅgha.</li>
+
+<li>If, under these circumstances, one asks lay people for cloth and receives cloth of a type or color that normally is not allowed, there is no offense in wearing it until one can obtain suitable cloth.</li>
+
+<li>If one’s robes have been taken on trust by another bhikkhu or novice, they count as “snatched away” for the purpose of this and the following rule.</li>
+</ol>
+
+<p>The following rule adds extra stipulations on how much cloth one may ask for in circumstances like this.</p>
+
+<p><b>Offenses.</b> The act of asking for robe-cloth from an unrelated lay person not at the proper time entails a dukkaṭa. The cloth, once received, is to be forfeited and the nissaggiya pācittiya offense confessed. The procedures for forfeiture, confession, and return of the cloth are the same as in the preceding rules. The Pali formula to use in forfeiting the cloth is given in <a href="../bmc/bmc1.12.html#app6">Appendix 6</a>.</p>
+
+<p>If one perceives a related householder as unrelated, or if one is in doubt about whether he/she is related, one incurs a dukkaṭa in asking for and receiving a robe from him/her.</p>
+
+<p><b>Non-offenses.</b> According to the Vibhaṅga, there is no offense if —</p>
+
+<ul class="circ">
+<li>one asks at the right time,</li>
+<li>one asks from one’s relations,</li>
+<li>one asks from people who have invited one to ask for cloth,</li>
+<li>one obtains cloth through one’s own resources, or</li>
+<li>one asks for the sake of another. (None of the texts state specifically whether <i>another</i> here includes only other bhikkhus, or bhikkhunīs and novices as well. We will assume that all co-religionists are covered under this exemption.)</li>
+</ul>
+
+<p>The Commentary explains that this last point means two things: One may ask for cloth for the sake of another (co-religionist) (1) from one’s own relations or from people who have invited one to ask for cloth <i>or</i> (2) from the relatives of that (co-religionist) or from people who have invited him/her to ask. This point applies for all rules where one is allowed to ask for the sake of another.</p>
+
+<p>On the surface, it would seem that the allowance to ask for another should mean that one should also be allowed to ask from anyone for the sake of another bhikkhu whose robe has been snatched away or destroyed. However, the origin story to the following rule shows why this is not so: Lay donors can be extremely generous when they learn that a bhikkhu’s robes have been snatched away or destroyed, and it is important to place limits on how much cloth can be requested, and on how many bhikkhus can do the requesting, so as not to take unfair advantage of that generosity.</p>
+
+<p>As for obtaining cloth through one’s own resources, the Sub-commentary notes that one should be careful to do it in such a way as not to commit an offense under <a href="../bmc/bmc1.7-2.html#np20">Nissaggiya Pācittiya&nbsp;20</a>. Again, this applies to all rules that contain this exemption.</p>
+
+<p>Asking for and receiving robe-cloth from an unrelated lay person, except when one’s robes have been snatched away or destroyed, is a nissaggiya pācittiya offense.</p>
+
+<p class="rule"><a id="np7"></a>Nissaggiya Pācittiya&nbsp;7 - If that unrelated man or woman householder presents the bhikkhu with many robes (pieces of robe-cloth), he is to accept at most (enough for) an upper and a lower robe. If he accepts more than that, it is to be forfeited and confessed.</p>
+
+<p>This rule is a continuation of the preceding one, dealing with the protocol in asking for robe-cloth when one’s robes have been snatched away or destroyed. The origin story is as follows:</p>
+
+<p>“At that time some group-of-six bhikkhus, having approached bhikkhus whose robes had been snatched away, said, ’Friends, the Blessed One has allowed those whose robes are snatched away or destroyed to ask an unrelated man or woman householder for robe-cloth. Ask for robe-cloth, friends.’</p>
+
+<p>“‘Never mind, friends. We have already received (enough) robe-cloth.’</p>
+
+<p>“‘We are asking for your sake, friends' (§ — reading <i>āyasmantānaṁ atthāya</i> with the Thai and Sri Lankan editions of the Canon).</p>
+
+<p>“‘Then go ahead and ask.’</p>
+
+<p>“So the group-of-six bhikkhus, having approached unrelated householders, said, ’Bhikkhus have come whose robes were snatched away. Give robe-cloth for them.' And they asked for a lot of robe-cloth. Then a certain man, sitting in a meeting hall, said to another man, ’Master, bhikkhus have come whose robes were snatched away. I gave robe-cloth for them.’</p>
+
+<p>“And he said, ’I gave, too.’</p>
+
+<p>“And another said, ’I gave, too.’</p>
+
+<p>“So they criticized and complained and spread it about: 'How can these Sakyan-son monks, not knowing moderation, ask for a lot of robe-cloth? Will the Sakyan-son monks deal in the cloth business? Or will they set up a shop?’”</p>
+
+<p><b>Protocol.</b> The Vibhaṅga states that when a bhikkhu’s robes are snatched away or destroyed, the amount of cloth he may ask for and accept from an unrelated householder who has not previously invited him to ask for cloth depends on the number of robes snatched away or destroyed. If three, he may ask for and accept only enough for two. If two, he may ask for and accept only enough for one. If one, he should not ask for any cloth at all.</p>
+
+<p>The KCommentary mentions that these stipulations apply only when robes from one’s determined set of three are snatched away or destroyed. The way it phrases this restriction suggests that if one’s spare robes are snatched away or destroyed, one has no right to ask for robe-cloth at all. The Sub-commentary, though, interprets this restriction not as a restriction but as an allowance opening a loophole so that if one loses any of one’s spare robes, one may ask for as much cloth as one likes. It then accuses the KCommentary of contradicting the Canon and Commentary, and of ignoring the purpose of the rule, which is to teach moderation and fewness of wants. Its conclusion: The protocol applies when any of one’s robes are snatched away or destroyed — whether undetermined, determined as the basic set of three, or determined as requisite cloths.</p>
+
+<p>If, however, we recall that originally each bhikkhu had only one set of three robes, and that the allowance in the preceding rule was to relieve the hardship of having little or nothing to wear, we can agree with the KCommentary’s interpretation: that the allowance in the preceding rule applies <i>only</i> when robes from one’s basic set of three are snatched away or destroyed, and that this is the case we are concerned with here. If one’s spare robes get snatched away or destroyed, one may not make use of the allowance to ask for robe-cloth at all.</p>
+
+<p>The Vibhaṅga states further that if the householder presents one with a great deal of cloth, with the invitation to take as much as one likes, one should take only enough cloth to make the allowable number of robes. The non-offense clauses add that one may take excess cloth if one promises to return the excess when one has finished making one’s robe(s). And if the donor tells one to keep the excess, one may do so without penalty.</p>
+
+<p>The factors of the offense for overstepping the bounds of this protocol are three.</p>
+
+<ol>
+<li><i>Object:</i> any piece of the six kinds of suitable robe-cloth, measuring at least four by eight fingerbreadths.</li>
+
+<li><i>Effort:</i> One asks for more than the allowable amount of robe-cloth from an unrelated householder who has not previously made an invitation to ask. Perception is not a mitigating factor here: Even if one perceives the householder to be related when in fact he/she isn’t — or feels that he/she would be happy to offer the excess cloth even though he/she has given no previous invitation to ask — this factor is fulfilled all the same.</li>
+
+<li><i>Result:</i> One gets the excess robe-cloth.</li>
+</ol>
+
+<p>The offenses here are as follows: a dukkaṭa for asking in the way that fulfills the factor of effort, and a nissaggiya pācittiya when all three factors are fulfilled. The procedures to follow in forfeiture, confession, and receiving the cloth in return are the same as in the preceding rules. For the Pali formula to use in forfeiting the cloth, see <a href="../bmc/bmc1.12.html#app6">Appendix 6</a>.</p>
+
+<p>If one perceives a related householder as unrelated, or if one is in doubt about whether he/she is related, one incurs a dukkaṭa in asking for and receiving excess robe-cloth from him/her.</p>
+
+<p><b>Non-offenses.</b> In addition to the two cases mentioned above — one takes excess cloth with the promise to return the excess when one has finished one’s robe(s), and the donors tell one to keep the excess — there is no offense in taking excess cloth if:</p>
+
+<p>
+
+the donors are offering cloth for reasons other than that one’s robes were snatched away or destroyed (e.g., they are impressed with one’s learning, says the Commentary);
+<br>one is asking from one’s relatives or people who have previously made one an invitation to ask for cloth (<i>before</i> one’s robes were snatched away or destroyed, says the Sub-commentary);
+<br>or one gets the cloth by means of one’s own resources.</p>
+
+<p>The Commentary calls attention to the fact that the Vibhaṅga’s non-offense clauses make no mention of asking for the sake of another. It then draws the conclusion, based on the fact that the rule was formulated in response to bhikkhus' requesting excess cloth for the sake of others, that in the circumstances mentioned in this rule, one may not ask for excess cloth for the sake of others. The Sub-commentary takes issue with this, and presents three arguments for its case, with the third argument being the most compelling: If asking for another’s sake is not allowable here, it should also not be allowable in the preceding rule. However, the Sub-commentary misses the point of the origin story, which is that lay donors can be especially generous when they learn that a bhikkhu’s robes have been snatched away or lost. If all other bhikkhus could request cloth for his sake, there is no limit to the amount of cloth they could request, and this would be an unfair exploitation of the donors' generosity.</p>
+
+<p>Asking for and receiving excess robe-cloth from unrelated lay people when one’s robes have been snatched away or destroyed is a nissaggiya pācittiya offense.</p>
+
+<p class="rule"><a id="np8"></a>Nissaggiya Pācittiya&nbsp;8 - In case a man or woman householder unrelated (to the bhikkhu) prepares a robe fund for the sake of a bhikkhu, thinking: “Having purchased a robe with this robe fund, I will clothe the bhikkhu named so-and-so with a robe&quot;: If the bhikkhu, not previously invited, approaching (the householder) should make a stipulation with regard to the robe, saying: “It would be good indeed, sir, if you clothed me (with a robe), having purchased a robe of such-and-such a sort with this robe fund” — out of a desire for something fine — it is to be forfeited and confessed.</p>
+
+<p>“Now at that time a certain householder said to his wife, ’I will clothe Master Upananda with a robe.' A certain bhikkhu on his alms round overheard the man saying this. So he went to Ven. Upananda the Sakyan and on arrival said to him: ’You have a lot of merit, friend Upananda. In that place over there a certain man said to his wife, ’I will clothe Master Upananda with a robe.’</p>
+
+<p>“‘He’s my supporter, my friend.’</p>
+
+ <p>“So Ven. Upananda the Sakyan went to the man and on arrival said to him: ’My friend, is it true that you want to clothe me with a robe?’</p>
+
+ <p>“‘Now, wasn’t I just thinking: “I will clothe Master Upananda with a robe&quot;?’</p>
+
+<p>“‘Well, if you want to clothe me with a robe, clothe me with a robe like this. What use is it to me to be clothed with a robe I won’t use?’</p>
+
+<p>“So the man criticized and complained and spread it about, ‘They’re arrogant, these Sakyan-son monks, and malcontent. It’s no simple matter to clothe them with a robe. How can this Master Upananda, without having first been invited by me, make a stipulation concerning a robe?’”</p>
+
+<p>The situation covered by this rule is this: An unrelated lay person has put aside resources for purchasing a robe to present to a bhikkhu but without yet asking the bhikkhu what kind of robe he wants. The factors for the offense here are four.</p>
+
+<p><b>Object.</b> The texts mention only that this rule concerns funds for a robe <i>(cīvara),</i> but without specifying whether this means funds only for finished robes or pieces of robe-cloth suitable for making into robes as well. However, as the rule concerns “clothing” a bhikkhu in a robe: “robe” here would probably mean a finished robe.</p>
+
+<p>The texts also do not mention whether funds for other requisites would be grounds for a lesser offense or no offense under this rule, although given the spirit of the rule it would be a wise policy for a bhikkhu not to make stipulations, when uninvited, to a lay person who has prepared funds for purchasing any kind of requisite for his use.</p>
+
+<p><b>Intention.</b> One wants to get a better robe than the lay person is planning to buy. The Vibhaṅga defines <i>better</i> as “better quality, higher price.” The Commentary, for some reason, limits “better” to “higher price,” but there is nothing in the Vibhaṅga to support this.</p>
+
+<p><b>Effort.</b> One requests the unrelated lay person to improve the robe. Example statements in the Vibhaṅga are: “Make it long, make it broad, make it tightly-woven, make it soft.” As in the previous rules, perception is not a factor here. Even if one perceives the lay person to be related when he/she actually isn’t, that would fulfill the factor here all the same.</p>
+
+<p><b>Result.</b> One gets the long, broad, etc., robe that the householder bought in line with one’s request. The way the Vibhaṅga defines this factor suggests that whether the lay person actually spends more on the robe than he/she actually planned is not an issue here.</p>
+
+<p><b>Offenses.</b> When the donor buys the robe in line with one’s request, the penalty is a dukkaṭa. When one receives the robe it is to be forfeited and the nissaggiya pācittiya offense confessed. The procedures to follow in forfeiture, confession, and receiving the cloth in return are the same as in the preceding rules. For the Pali formula to use in forfeiting the cloth, see <a href="../bmc/bmc1.12.html#app6">Appendix 6</a>.</p>
+
+<p>If one perceives a related householder as unrelated, or if one is in doubt about whether he/she is related, one incurs a dukkaṭa in making a request and receiving a robe from him/her in the manner forbidden by this rule.</p>
+
+<p><b>Non-offenses.</b> According to the Vibhaṅga, there is no offense if:</p>
+
+<ul class="circ">
+<li>the lay person is a relative or has invited one to ask for cloth;</li>
+<li>one asks for another’s sake;</li>
+<li>one is getting the robe with one’s own resources; or</li>
+<li>one asks the lay person to get a robe less expensive than the one he/she is planning to get.</li>
+</ul>
+
+<p>The Commentary adds here that there is also no offense if one’s request would result in a robe equal in price to the one the lay person has in mind, but the Vibhaṅga, as noted above, does not support this.</p>
+
+<p>When a lay person who is not a relative is planning to get a robe for one but has yet to ask one what kind of robe one wants: Receiving the robe after making a request that would improve it is a nissaggiya pācittiya offense.</p>
+
+<p class="rule"><a id="np9"></a>Nissaggiya Pācittiya&nbsp;9 - In case two householders — men or women — unrelated (to the bhikkhu) prepare separate robe funds for the sake of a bhikkhu, thinking: “Having purchased separate robes with these separate robe funds of ours, we will clothe the bhikkhu named so-and-so with robes&quot;: If the bhikkhu, not previously invited, approaching (them) should make a stipulation with regard to the robe, saying: “It would be good indeed, sirs, if you clothed me (with a robe), having purchased a robe of such-and-such a sort with these separate robe funds, the two (funds) together for one (robe)” — out of a desire for something fine — it is to be forfeited and confessed.</p>
+
+<p>Explanations for this training rule are the same as those for the preceding one, the only difference being in the factor of effort: One asks the two donors to put their funds together to purchase one robe. The question of whether the request would raise the amount of money they would have to spend is not an issue here, although the Vibhaṅga says that if one makes a request that would <i>reduce</i> the amount of money they would spend, there is no offense.</p>
+
+<p>The Commentary adds that, under the conditions mentioned here, making requests of three or more people to combine their robe funds into one is also covered by this rule.</p>
+
+<p>When two or more lay people who are not one’s relatives are planning to get separate robes for one but have yet to ask one what kind of robe one wants: Receiving a robe from them after asking them to pool their funds to get one robe — out of a desire for something fine — is a nissaggiya pācittiya offense.</p>
+
+<p class="rule"><a id="np10"></a>Nissaggiya Pācittiya&nbsp;10 - In case a king, a royal official, a brahman, or a householder sends a robe fund for the sake of a bhikkhu via a messenger, (saying,) “Having purchased a robe with this robe fund, clothe the bhikkhu named so-and-so with a robe&quot;: If the messenger, approaching the bhikkhu, should say: “This is a robe fund being delivered for the sake of the venerable one. May the venerable one accept this robe fund,” then the bhikkhu is to tell the messenger: “We do not accept robe funds, my friend. We accept robes (robe-cloth) as are proper according to season.&quot;
+<br>
+<br>If the messenger should say to the bhikkhu: “Does the venerable one have a steward?” then, bhikkhus, if the bhikkhu desires a robe, he may indicate a steward — either a monastery attendant or a lay follower — (saying,) “That, my friend, is the bhikkhus' steward.&quot;
+<br>
+<br>If the messenger, having instructed the steward and going to the bhikkhu, should say: “I have instructed the steward the venerable one indicated. May the venerable one go (to him) and he will clothe you with a robe in season,” then the bhikkhu, desiring a robe and approaching the steward, may prompt and remind him two or three times: “I have need of a robe.” Should (the steward) produce the robe after being prompted and reminded two or three times, that is good.
+<br>
+<br>If he should not produce the robe, (the bhikkhu) should stand in silence four times, five times, six times at most for that purpose. Should (the steward) produce the robe after (the bhikkhu) has stood in silence for that purpose four, five, six times at most, that is good.
+<br>
+<br>If he should not produce the robe (at that point), should he then produce the robe after (the bhikkhu) has endeavored further than that, it is to be forfeited and confessed.
+<br>
+<br>If he should not produce (the robe), then the bhikkhu himself should go to the place from which the robe fund was brought, or a messenger should be sent (to say): “The robe fund that you, venerable sirs, sent for the sake of the bhikkhu has given no benefit to the bhikkhu at all. May you be united with what is yours. May what is yours not be lost.” This is the proper course here.</p>
+
+<p>The protocols surrounding gifts of money and their proper use are quite complex — much more complex than even this long training rule would indicate — and require a detailed explanation. What follows is an attempt to make them clear. If it seems long and involved, remember that the purpose of the protocols is to free bhikkhus from the even more bothersome worries and complexities that come with participating in buying, selling, and monetary matters in general.</p>
+
+<p>This rule is one of four nissaggiya pācittiya rules covering a bhikkhu’s proper relationship to money. The others are NP <a href="../bmc/bmc1.7-2.html#np18">18</a>, <a href="../bmc/bmc1.7-2.html#np19">19</a>, &amp; <a href="../bmc/bmc1.7-2.html#np20">20</a>. Although they sometimes seem to be splitting hairs, they focus precisely on the two acts involving money that are most burdensome to a sensitive mind: In the act of accepting money, or having it accepted in one’s name, one is accepting all the cares, responsibilities, and dangers that come with its ownership; in the act of arranging a trade, one is accepting responsibility for the fairness of the trade — that it undervalues neither the generosity of the person who donated the money nor the goods or services of the person receiving the money in exchange.</p>
+
+<p>Thus to protect a bhikkhu from these mental burdens, this rule sets up protocols so that lay donors may have the convenience of dedicating amounts of money and other valuables to provide for a bhikkhu’s needs, and so that the bhikkhu may benefit from such gifts without having to bear the responsibilities of ownership or of having to arrange fair trades.</p>
+
+<p>If a bhikkhu follows the protocols recommended here, the money placed with the steward still belongs to the donor, and the responsibility for making a fair trade lies with the steward. The bhikkhu’s only responsibility is to inform the original donor if, after a reasonable number of promptings, the steward entrusted with the money does not provide him with the requisite the donor had in mind, and then let the donor look after the matter if he/she cares to.</p>
+
+<p>Although the rule itself mentions only funds for robe-cloth intended for individual bhikkhus, we should note from the outset that the Commentary uses the Great Standards to extend it to cover all funds — composed of money, jewels, commodities, land, livestock, or other valuables that bhikkhus are not allowed to accept — not only for an individual bhikkhu’s robe-cloth but also for any type of requisite. And it further extrapolates from this rule to cover funds for Communities and groups of bhikkhus, as well as impersonal funds for such things as buildings and — in the modern world — the printing of books.</p>
+
+<p><b>The money rules &amp; allowances: an overview.</b> <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a> forbids a bhikkhu from accepting gifts of money, from getting others to accept them, and from consenting to gifts of money meant for him being placed down next to him. <a href="../bmc/bmc1.7-2.html#np19">Nissaggiya Pācittiya&nbsp;19</a> &amp; <a href="../bmc/bmc1.7-2.html#np20">20</a> forbid him from engaging in buying, selling, or bartering, regardless of whether it involves money. <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a>, however, contains the following allowance, called the Meṇḍaka Allowance, after the donor who inspired it:</p>
+
+<p>“There are people of conviction and confidence, bhikkhus, who place gold in the hand of stewards, (saying,) 'With this, give the master whatever is allowable.' I allow you, bhikkhus, to accept whatever is allowable coming from that. But in no way at all do I say that gold or silver is to be accepted or sought for.”</p>
+
+<p>Even given this allowance, though, it is important that the bhikkhu, in his dealings with the steward, does not say or do anything that would transgress <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a>-<a href="../bmc/bmc1.7-2.html#np20">20</a>. At the same time, it is important that he not abuse the steward’s services. Otherwise the steward will never want to perform this service for bhikkhus again. This is the main point of the origin story to this rule:</p>
+
+<p>“Then Ven. Upananda the Sakyan approached the lay follower (his steward) and on arrival said, ‘My friend, I have need of a robe.’</p>
+
+<p>“‘Wait for the rest of today, venerable sir. Today there is a town meeting, and the town has made an agreement that whoever comes late is fined 50 (kahāpaṇas).’</p>
+
+<p>“‘Friend, give me the robe this very day!' (Saying this,) he grabbed hold of him by the belt. So the lay follower, being pressured by Ven. Upananda the Sakyan, purchased a robe for him and came late. The people said to the lay follower, ’Why, master, have you come late? You've lost 50!' So he told them what had happened. They criticized and complained and spread it about, ’They’re arrogant, these Sakyan-son monks, and malcontent. It’s no simple matter even to render them a service. How can Upananda the Sakyan, being told by a layman: “Wait for the rest of today, venerable sir,” not wait?’”</p>
+
+<p><b>Stewards.</b> According to the Commentary, there are three types of steward with whom money might be placed: (1) indicated by the bhikkhu, (2) indicated by the donor or his/her messenger, and (3) indicated by neither.</p>
+
+<ol>
+<li><p><i>Indicated by the bhikkhu</i> covers two sorts of cases:</p>
+
+<ol class="alph">
+<li>The donor asks the bhikkhu who his steward is, and the bhikkhu points him/her out, as mentioned in the training rule.</li>
+<li>The donor, knowing that a particular lay person has volunteered to act as a steward or is on familiar terms with the bhikkhu, gives the money to the lay person and informs the bhikkhu — or has someone else inform him — either before or after the fact.</li>
+</ol></li>
+
+<li><i>Indicated by the donor</i> covers cases where the donor chooses one of his/her own friends or employees to act as the steward for that particular gift, and informs the bhikkhu — or has someone else inform him — either before or after the fact.</li>
+
+<li><p><i>Indicated by neither</i> covers two separate cases:</p>
+
+<ol class="alph">
+<li>The donor asks the bhikkhu who his steward is, and the bhikkhu says that he has none. Another person happens to overhear the conversation and volunteers — in the presence of both — to act as the steward for that particular gift.</li>
+<li>The donor gives the gift to the lay person who is normally the bhikkhu’s steward or is on familiar terms with the bhikkhu, but does not inform the bhikkhu or have him informed of the fact.</li>
+</ol></li>
+</ol>
+
+<p>According to the Commentary, this training rule covers only cases of the first sort — the steward is indicated by the bhikkhu — but not of the other two. This, however, is a controversial point. To understand the controversy, though, we will first have to discuss the protocols for accepting funds and obtaining requisites from stewards as set forth in this rule. Then we will revisit this issue in the section: “range of application,” below.</p>
+
+<p><b>The protocol in accepting.</b> The Vibhaṅga gives the following guidelines:</p>
+
+<p>If donors offer money, they are to be told that bhikkhus do not accept money.</p>
+
+<p>If they ask who the bhikkhus' steward is, one may point out any lay person at all, saying: “That’s the steward.” One is <i>not</i> to say: “Give it to him/her,” or “He/she will keep (the money),” for that would be to accept ownership and responsibility for the money, and thus be an infraction of the rule against accepting money. Also, one is not to say: “He/she will buy (the requisite),” or “He/she will get it in exchange,” for even this much would be an infraction of the rule against trading.</p>
+
+<p>The KCommentary adds that if the donor asks: “To whom should I give this?” or “Who will keep this?” one is not to point anyone out. It doesn’t say what one <i>may</i> do in such a situation, although a wise policy would be to broach the topic of stewards so that the donor will ask a question to which one may give an allowable answer.</p>
+
+<p><b>The protocol in obtaining requisites from the fund.</b> The rule states that a bhikkhu may give his steward up to three verbal and six silent promptings in order to get a requisite from the fund. The Vibhaṅga works out an arrangement whereby he may exchange two silent promptings for one verbal prompting, which leads the Commentary to lay out the following scheme: A bhikkhu may make up to —</p>
+
+<p style="padding-left:1.5em;"> 6 verbal &amp; 0 silent promptings
+<br>5 verbal &amp; 2 silent promptings
+<br>4 verbal &amp; 4 silent promptings
+<br>3 verbal &amp; 6 silent promptings
+<br>2 verbal &amp; 8 silent promptings
+<br>1 verbal &amp; 10 silent promptings, or
+<br>0 verbal &amp; 12 silent promptings.</p>
+
+<p>The Vibhaṅga adds that when giving a verbal prompting, one may say only: “I need a robe (or whatever the requisite may be),” or statements to that effect. One may not say: “Give me a robe,” “Get me a robe,” “Buy me a robe,” or “Get a robe in exchange for me,” for these last two statements in particular would incur a penalty under <a href="../bmc/bmc1.7-2.html#np20">Nissaggiya Pācittiya&nbsp;20</a>.</p>
+
+<p>According to the Commentary, promptings are counted not by the number of visits to the steward but by the number of times the bhikkhu states his needdesire for the requisite. Thus if, in one visit, he states his need for a robe three times, that counts as three verbal promptings.</p>
+
+<p>As for silent promptings — or “standings” — the bhikkhu merely stands in the steward’s presence. If the steward asks: “What have you come for?' the bhikkhu should say: “You know,” or “You should know.”</p>
+
+<p>The Vibhaṅga also notes that during the period when a bhikkhu has yet to receive the requisite, he should not accept an invitation to sit down at the steward’s place, to accept alms, or to teach Dhamma there. If he does any of these things, that cuts back his number of allowed standings. The Sub-commentary raises the question as to what precisely this means: When a bhikkhu does several of these actions in one visit, does each action take away one standing, or is just that one visit struck from his allowed number of standings? After a long discussion, it sides with the decision in the Three Gaṇṭhipadas: Each time a bhikkhu sits, receives alms, or teaches one sentence of Dhamma (see <a href="../bmc/bmc1.8-1.html#pc7">Pācittiya&nbsp;7</a>) under these circumstances, even in one visit, he cuts down his allowed number of standings by one.</p>
+
+<p>If one obtains the requisite after making the allowable number of verbal and silent promptings — or fewer — there is no offense. If one does not obtain the requisite after the maximum allowable number of promptings, one should inform the original donor and then leave the issue up to him/her. If the donor, being informed, then makes arrangements to get the requisite for the bhikkhu, there is no offense.</p>
+
+<p>The Commentary states that not to inform the donor here entails a dukkaṭa on the grounds that one is neglecting a duty. This statement, however, should be qualified to apply only in cases where one knows which donor gave which fund to which steward. If a single fund administered by a steward contains donations from many donors, one is unlikely to be in a position to inform all the donors if the steward does not respond to one’s request. In such cases one should be duty bound to inform only one of the donors.</p>
+
+<p><b>Range of application.</b> As mentioned above, the Commentary maintains that this rule applies only in the first of the three cases listed there: The steward has been indicated by the bhikkhu. As for the second case — the steward has been indicated by the donor — it maintains that one may make any number of promptings without committing an offense. If the article is not forthcoming, one may get another lay person to handle the issue (although one should be careful to phrase one’s request to this lay person so as not to transgress the rules against accepting money or trading). If the article is not forthcoming, one is not duty-bound to inform the original donor. Although there is nothing in the Canon to contradict any of these points, there is nothing to confirm them, either. Simple etiquette would suggest that one not harass the steward excessively and that one should inform the donor if the article is not forthcoming, so as to let the donor decide what, if anything, should be done. Thus it would make sense, using the Great Standards, to apply this rule even in cases of this sort.</p>
+
+<p>As for the third case, in which the steward is not indicated either by the donor or by a bhikkhu, the Commentary says that, as far as that fund is concerned, the steward should be treated as a person who is not related and has not made an invitation to ask. In other words, one may not make any requests of the steward at all unless he/she happens to invite one to make a request. The Commentary gives no reasons for these positions, and they are hard to infer. In the first of the two instances under this sub-category — the volunteer temporary steward — the Commentary depicts the steward as volunteering in the presence of both the bhikkhu and the donor, and this would seem to place the steward under some obligation to both. Thus the bhikkhu would seem to have the right to make a reasonable number of promptings; and the donor, the right to know if the article is not forthcoming.</p>
+
+<p>As for the second of the two instances — the donor gives the gift to the bhikkhu’s normal steward but does not inform the bhikkhu or have him informed — the steward can either inform the bhikkhu or not. If he/she chooses to inform the bhikkhu, then according to the Commentary the bhikkhu would have the right to make any number of promptings, as the steward now counts as having given an invitation. Thus the steward would not be protected by the protocol under this rule, which doesn’t seem proper. If, however, the steward chooses not to inform the bhikkhu, there are two further possibilities: Either the bhikkhu never learns of the arrangement, in which case the issue is moot; or else he learns through a third party, in which case the bhikkhu would seem to have the right to ask the steward if the third party’s report is true. If the steward lies and says No, then that’s the steward’s kamma. If the steward truthfully reports Yes, then it would seem reasonable to apply the protocol under this rule.</p>
+
+<p>Thus, given these considerations, there would seem to be little reason to limit the protocols under this rule to cases where the steward is indicated by the bhikkhu, and stronger reason, using the Great Standards, to apply the protocols to all three cases: where the steward is indicated by the bhikkhu, by the donor, or by neither.</p>
+
+<p>As we will note under <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a>, a bank can serve as a steward for a bhikkhu. However, because of the protocols surrounding a bhikkhu’s relationship to his steward, he may not sign a check — which is an order to pay money to the order of the payee — even if the check draws on an account set up in his name. Nor may he present the bank with a withdrawal statement to remove money from the account.</p>
+
+<p><b>The factors of an offense</b> here are three.</p>
+
+<ol>
+<li><i>Object:</i> a fund for the purchase of robe-cloth left with a steward. As noted above, the Commentary extends this factor to cover any fund set aside for one’s own requisites.</li>
+<li><i>Effort:</i> One makes an excessive number of promptings.</li>
+<li><i>Result:</i> One obtains the requested requisite.</li>
+</ol>
+
+<p>There is a dukkaṭa for the excessive promptings. The requisite, when obtained, is to be forfeited and the nissaggiya pācittiya offense confessed. The procedures for forfeiture, confession, and receiving the requisite in return are the same as in the preceding rules. For the Pali formula to use in forfeiture, see <a href="../bmc/bmc1.12.html#app6">Appendix 6</a>.</p>
+
+<p>If one has not given excessive promptings but perceives that one has, or is in doubt about the matter, the penalty for accepting the requisite is a dukkaṭa.</p>
+
+<p><b>Other funds.</b> The Commentary includes a long discussion of how this rule applies to funds other than those intended for an individual bhikkhu’s requisites, such as funds for Community or group requisites, building funds, etc. (book-printing funds would come under here). Some have suggested that because this rule applies only to funds for one’s own use, the Commentary has erred in discussing other funds in this context, and that they should instead be discussed under <a href="../bmc/bmc1.8-9.html#pc84">Pācittiya&nbsp;84</a>, the rule dealing with valuables that lay people have left behind in the monastery. However, because the Canon does not discuss such funds at all, they must be treated under the Great Standards, which means that they must be treated in line with the rule(s) that cover situations bearing the greatest similarity to them. The protocols under <a href="../bmc/bmc1.8-9.html#pc84">Pācittiya&nbsp;84</a> deal with the issue of how to return lost articles safely to an owner who did not intend them as a gift and still claims ownership of them; the protocols here deal with how to get the money to a steward and how to get the steward to provide what is needed with the money. Because these latter issues are the ones most relevant to the proper management of these other funds, there seems every reason to agree with the Commentary’s discussing them under this rule.</p>
+
+<p>A few of the more relevant cases in the Commentary’s discussion:</p>
+
+<p><i>Monetary funds for Saṅgha or group requisites.</i> If a donor comes with a gift of money and says that it is being offered to the Saṅgha or to a group for whatever purpose, one should follow the protocol for accepting as under this rule. For instance, if the donor says: “I'm giving this to the Saṅgha for you to make use of the four requisites,” one may not accept it in any of the three ways covered by <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a>. (For details, see the discussion under that rule.) There is also a dukkaṭa, says the Sub-commentary, for every bhikkhu who uses any article bought with the money.</p>
+
+<p>If, however, the donor says: “The money will be with your steward” or “with my people” or “with me: All you need to do is make use of the four requisites,” then there is no offense in accepting and making use of this arrangement. The etiquette to follow in obtaining requisites depends on who the money is left with: If the bhikkhus' steward, follow the protocol under this rule; if the donor’s workers, one may make any number of promptings; if the donor, follow the guidelines under <a href="../bmc/bmc1.8-5.html#pc47">Pācittiya&nbsp;47</a>. (In the first two cases here, the Commentary is following its decision, discussed above, that the protocols to be followed with the donor’s workers are different from those to be followed with one’s own steward. In light of our above discussion, however, both cases would come under the protocols stipulated by this rule.)</p>
+
+<p><i>Non-monetary funds for Saṅgha or group requisites.</i> <a href="../dn/dn2.html">DN2</a> contains a list of other articles that a bhikkhu consummate in virtue does not receive. The Commentary — perhaps in light of the general rule against misbehavior (Cv.V.36) — imposes a dukkaṭa on the act of receiving any of them. These articles include uncooked grain and raw meat; women and girls; male and female slaves; goats and sheep, fowl and pigs, elephants, cattle, steeds, and mares; fields and property. Extrapolating from the Vibhaṅga to <a href="../bmc/bmc1.8-9.html#pc84">Pācittiya&nbsp;84</a>, which forbids bhikkhus from picking up pearls and precious stones except in certain circumstances — and which does not allow such items to be taken on trust, borrowed, or picked up with the perception that they have been thrown away — the Commentary also assigns a dukkaṭa for receiving these items. These two lists of objects will surface again under <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a> &amp; <a href="../bmc/bmc1.7-2.html#np19">19</a>; for ease of reference, we will call them dukkaṭa objects.</p>
+
+<p>If a donor wants to make a gift of such things to the Saṅgha, the Commentary says, the question of whether they may be accepted depends on how the donation is phrased. If the donor says: “I'm giving this to the Saṅgha,” for whatever the purpose, the gift may not be accepted. As in the previous case, there is a dukkaṭa for whoever receives it and also for whoever uses an article obtained from proceeds coming from the gift.</p>
+
+<p>If the donor says: “This is for the purpose of the four requisites,” or “Accept whatever is allowable coming from this,” without mentioning the Saṅgha or any bhikkhu as custodians or recipients of the unallowable object, the arrangement may be accepted without penalty. For instance, if a donor wants to present a herd of cows, saying: “These are for the purpose of milk products for the Saṅgha,” this is an acceptable arrangement: Cows are not acceptable for bhikkhus to receive, whereas milk products are. But if the donor says: “I am giving these cows to the Saṅgha to provide milk products for the Saṅgha,” then it is not.</p>
+
+<p>If a donor proposes to give pigs, chickens, or other animals used only for their meat to the Saṅgha, the bhikkhus are to say: “We can’t accept gifts like this, but we will be glad to set them free for you.”</p>
+
+<p>If, after setting up an allowable arrangement, the donor asks the bhikkhus to appoint a steward to look after it, they may. If not, they are to do nothing about the arrangement at all.</p>
+
+<p>How the proceeds from such arrangements are to be used depends on what they are: If money, and a bhikkhu tells the steward: “Use this money to buy such-and-such,” no bhikkhu may make use of what is bought with the money. If the proceeds are commodities, such as unhusked rice, and a bhikkhu tells the steward: “Use this rice to trade for such-and-such,” the bhikkhu who makes the order may not use whatever is obtained from the trade, but other bhikkhus may without incurring a penalty. If the proceeds are allowable goods, such as fruit, and a bhikkhu tells the steward: “Use this fruit to trade for such-and-such,” the Commentary says that any bhikkhu may use what is obtained from the trade.</p>
+
+<p>Apparently the Commentary views this arrangement as acceptable because of its interpretation that <a href="../bmc/bmc1.7-2.html#np20">Nissaggiya Pācittiya&nbsp;20</a> applies only to cases where the bhikkhu tells a steward to conduct a trade with the bhikkhu’s own personal resources. However, as we will note in the discussion of that rule, this interpretation seems mistaken, and the rule applies to any funds for which a bhikkhu assumes responsibility. This means that, in the context of this last arrangement, the bhikkhu who orders the steward would have to forfeit the proceeds of the trade, but all bhikkhus could use them after the forfeiture.</p>
+
+<p><i>Impersonal funds.</i> If a donor comes with money or any other unallowable gift and says: “I'm giving this to the Saṅgha for the meditation hall (or any other impersonal purpose, such as a book fund or a general building fund),” the gift may not be accepted. But if the donor says: “I am giving this to (or for) the meditation hall,” without mentioning any individual bhikkhu, group of bhikkhus, or the Saṅgha as custodians or recipients of the gift, then this arrangement is not to be refused, and the monastery steward is to be informed of what the donor said.</p>
+
+<p>In the context of <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a>, this means that the bhikkhus are not to take the money directly, or to get anyone else to take it, but may consent to its being placed next to them, as it is not meant as a gift for them.</p>
+
+<p>Many monasteries have donation boxes, and there is a question as to whether the bhikkhus may tell a donor in this case to put the money in the box. The Commentary to <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a> states that when a donation has been placed down for a bhikkhu — over his protests — and someone aside from the donor offers to put it in a safe place, the bhikkhu may point out a safe place to put the money but may not tell him/her to put it there, as that would imply that he is accepting responsibility for the money. If this stipulation also applies to funds given “to a building,” then the bhikkhus should be able to say to the donor of such funds: “The donation box is over there,” but not: “Put it there.”</p>
+
+<p>After the donor has placed the money, the bhikkhus may then tell the monastery steward what the donor said, but are not to tell him/her to take the money, as this would violate <a href="../bmc/bmc1.7-2.html#np18">Nissaggiya Pācittiya&nbsp;18</a>. They are also to follow the protocol in this rule when telling the steward of their need for building materials, wages for the workers, and other necessities that come up in the course of the building’s construction or maintenance.</p>
+
+<p>The Commentary mentions two other acceptable arrangements:</p>
+
+<ol>
+<li>The donor places the money with the workmen and tells the bhikkhus that their only responsibility is to check on whether the work is being done poorly or well.</li>
+
+<li>The donor says that the money will be kept with him/her or with his/her employees and that the bhikkhus' only responsibility is to inform them of whom the money is to be given to.</li>
+</ol>
+
+<p>This second arrangement, however, essentially makes the bhikkhu responsible for arranging a trade: He is telling the donor or his/her employees who deserves to be paid in exchange for goods or labor, which again would be a violation of <a href="../bmc/bmc1.7-2.html#np20">Nissaggiya Pācittiya&nbsp;20</a>. At most, a bhikkhu may tell the donor, etc., how much work the laborers did or what construction materials were delivered to the site, and leave it up to the donor, etc., to figure out who deserves to be paid how much. Also, if a checking account is set up for impersonal purposes such as the construction and upkeep of monastery buildings, a bhikkhu may not sign a check drawing on the account.</p>
+
+<p>The Commentary says that because the steward in arrangements (1) and (2) is indicated by the donor, the bhikkhus may make as many requests as they like — i.e., in the first case, telling the workers what to do; in the second case, telling the steward or donor who is to be paid — but as we noted above, there seems no reason to follow the Commentary in making this allowance.</p>
+
+<p>In addition to building funds, it would seem that any charitable fund for schools, hospitals, etc. — such as some wealthy monasteries have — would come under the category of impersonal funds, as long as the fund is not for requisites for the Saṅgha, either as a group or individually.</p>
+
+<p><b>Fund management.</b> The Commentary states that if a Community fund has been set up for a particular requisite, it should as a general principle be used to buy only that requisite. If, however, the Community has enough of one kind of <i>lahubhaṇḍa</i> — goods that may be shared among the bhikkhus — but not enough of another, the fund for the first kind may be diverted to the second kind by an <i>apalokana-kamma:</i> a Community transaction in which the motion is phrased in one’s own words and unanimously accepted.</p>
+
+<p>Funds for lodgings and furniture, though, because they are <i>garubhaṇḍa</i> (heavy or expensive goods that may not be shared among the bhikkhus), may not be diverted to lahubhaṇḍa at all. But if Saṅgha furniture is going unused and is in danger of deteriorating before it gets used, the Community may arrange to have it exchanged — using the procedure allowed under <a href="../bmc/bmc1.7-2.html#np20">Nissaggiya Pācittiya&nbsp;20</a>, and making sure not to let it go for less than its full value — and then use the proceeds for lahubhaṇḍa. The Commentary adds that proceeds of this sort should be used “frugally, just enough to keep life going.” In other words, if the Community is not in straitened circumstances, the proceeds should not be used for lahubhaṇḍa at all, and instead should be reserved for garubhaṇḍa as the need arises. If, however, the Community is suffering from such catastrophes as disease or famine, they may allow the proceeds to be used for lahubhaṇḍa as needed, but not to splurge on anything excessive.</p>
+
+<p>When a fund for one’s individual use has been set up with a steward, obtaining an article from the fund as a result of having prompted the steward more than the allowable number of times is a nissaggiya pācittiya offense.</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc1.7.html#content"></a><a id="next-sutta" href="../bmc/bmc1.7-2.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc1.html">BMC 1</a>Chapter&nbsp;1.7.1: Nissaggiya Pācittiya - The Robe-cloth Chapter</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+	</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

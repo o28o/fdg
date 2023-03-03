@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 3.4</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	<link href="../css/all.css" rel="stylesheet" type="text/css">
+  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ </button>
+ <span class="box-lbl">Light\Dark</span>
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 		<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 
+ 		</div>
+ </div>
+ <!-- Top menu -->
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="snp.html" class="pressed w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+  
+ 
+		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Khuddaka Nikaya - The Minor Texts</h2>
+ 
+ <div class="w3-bar-white bwnav"><!-- Div for lower Dhp sub-navigation -->
+ 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
+ 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
+ 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sutta Nipata</a>
+ 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
+ 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
+ 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Theragatha</a>
+ 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
+ </div><!-- End div for lower Dhp sub-navigation -->
+ 
+ <h2>Sutta Nipata</h2>
+ <div class="w3-bar-white bwnav"><!-- Div for lower Snp sub-navigation -->
+ 	<a href="../snp/snp1.html#content" title="1: Serpent Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">1: Serpent Chapter<br>(verses 1:1 to 1:12)</a>
+ 	<a href="../snp/snp2.html#content" title="2: Lesser Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">2: Lesser Chapter<br>(verses 2:1 to 2:14)</a>
+ 	<a href="../snp/snp3.html#content" title="3: Great Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button active">3: Great Chapter<br>(verses 3:1 to 3:12)</a>
+ 	<a href="../snp/snp4.html#content" title="4: The Eights" class="w3-bar-item w3-hover-white w3-border-white w3-button">4: The Eights<br>(verses 4:1 to 4:16)</a>
+ 	<a href="../snp/snp5.html#content" title="5: Way to the Beyond" class="w3-bar-item w3-hover-white w3-border-white w3-button">5: Way to the Beyond<br>(verses 5:1 to 5:18)</a>
+ </div><!-- End div for lower Snp sub-navigation -->
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata Chapter 3: The Great Chapter</h2>
+
+	<h3>3:4 With Bhāradvāja of Sundarikā on the Sacrificial Cake</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li>©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+</div><!-- End div for sub-heading and translator div -->
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h2>3:4 With Bhāradvāja of Sundarikā on the Sacrificial Cake</h2>
+
+<p><span class="evam">So I have heard</span>:</p>
+
+<p>At one time the Buddha was staying in the Kosalan lands on the bank of the Sundarikā river. Now at that time the brahmin Sundarikabhāradvāja was serving the sacred flame and performing the fire sacrifice on the bank of the Sundarikā. Then he looked all around the four quarters, wondering: “Now who might eat the leftovers of this offering?” He saw the Buddha meditating at the root of a certain tree with his robe pulled over his head. Taking the leftovers of the offering in his left hand and a pitcher in the right he approached the Buddha. </p>
+
+<p>When he heard Sundarikabhāradvāja’s footsteps the Buddha uncovered his head. Sundarikabhāradvāja thought: “This man is shaven, he is shaven!” And he wanted to turn back. </p>
+
+<p>But he thought: “Even some brahmins are shaven. Why don’t I go to him and ask about his birth?” Then the brahmin Sundarikabhāradvāja went up to the Buddha, and said to him: “Sir, in what caste were you born?” </p>
+
+<p>Then the Buddha addressed Sundarikabhāradvāja in verse: </p>
+
+<hr>
+<div class="verse">
+<p id="p455"><span class="parno">455</span>
+“I am no brahmin, nor am I a prince, 
+<br>nor merchant nor anything else. 
+<br>Fully understanding the clan of ordinary people, 
+<br>I wander in the world owning nothing, reflective. </p>
+
+<p id="p456"><span class="parno">456</span>
+Clad in my cloak, I wander without home, 
+<br>my hair shorn, quenched. 
+<br>Since I’m unburdened by youngsters, 
+<br>it’s inappropriate to ask me about clan.” </p>
+</div>
+
+<p><span class="speaker">Sundarika</span></p>
+
+	<div class="verse">
+		<p><span class="parno">457</span>
+		“Actually sir, when brahmins meet they politely 
+		<br>ask each other whether they are brahmins.” </p>
+
+			<p>“Well, if you say that you’re a brahmin, 
+			<br>and that I am not, 
+			<br>I shall question you on the Gāyatrī Mantra, 
+			<br>with its three lines and twenty-four syllables.” </p>
+	</div>
+
+<hr>
+
+<p><span class="speaker">Buddha</span></p>
+
+<div class="verse">
+<p><span class="parno">458</span>
+“On what grounds have hermits and men, 
+<br>aristocrats and brahmins here in the world 
+<br>performed so many different sacrifices to the gods?”</p>
+
+<p>“During a sacrifice, should a past-master, a knowledge master, 
+<br>receive an oblation, it profits the donor, I say.” </p>
+</div>
+
+<hr>
+
+<p><span class="speaker">Sundarika</span></p>
+
+	<div class="verse">
+			<p>“Then clearly my oblation will be profitable,” 
+			<br>said the brahmin, 
+			<br>“since I have met such a knowledge master. 
+			<br>It’s because I’d never met anyone like you 
+			<br>that others ate the sacrificial cake.” </p>
+	</div>
+
+<p><span class="speaker">Buddha</span><p>
+
+	<div class="verse">
+			<p><span class="parno">460</span>
+			“So then, brahmin, since you have approached me 
+			<br>as a seeker of the good, ask. 
+			<br>Perhaps you may find here someone intelligent, 
+			<br>peaceful, unclouded, untroubled, with no need for hope.” </p>
+	</div>
+<p><span class="speaker">Sundarika</span></p>
+
+	<div class="verse">
+			<p><span class="parno">461</span>
+			“Master Gotama, I like to sacrifice 
+			<br>and wish to perform a sacrifice. Please advise me, 
+			<br>for I do not understand 
+			<br>where an oblation is profitable; tell me this.” </p>
+	</div>
+<hr>
+<p><span class="speaker">Buddha</span></p>
+
+<p>“Well then, brahmin, lend an ear, I will teach you the Dhamma. </p>
+
+	<div class="verse">
+			<p id="p462"><span class="parno">462</span>
+			Don’t ask about birth, ask about conduct; 
+			<br>for any wood can surely generate fire. 
+			<br>A steadfast sage, even though from a low class family, 
+			<br>is a thoroughbred checked by conscience. </p>
+			
+			<p id="p463"><span class="parno">463</span>
+			Tamed by truth, fulfilled by taming, 
+			<br>a complete knowledge master who has completed the spiritual journey—
+			<br>that is where a brahmin seeking merit 
+			<br>should bestow a timely offering as sacrifice. </p>
+			
+			<p id="p464"><span class="parno">464</span>
+			Those who have left sensuality behind, wandering homeless, 
+			<br>self-controlled, straight as a shuttle—
+			<br>that is where a brahmin seeking merit 
+			<br>should bestow a timely offering as sacrifice. </p>
+			
+			<p id="p465"><span class="parno">465</span>
+			Those freed of greed, with senses stilled, 
+			<br>like the moon released from the eclipse—
+			<br>that is where a brahmin seeking merit 
+			<br>should bestow a timely offering as sacrifice. </p>
+			<p id="p466"><span class="parno">466</span>
+			They wander the world unimpeded, 
+			<br>always mindful, calling nothing their own—
+			<br>that is where a brahmin seeking merit 
+			<br>should bestow a timely offering as sacrifice. </p>
+			
+			<p id="p467"><span class="parno">467</span>
+			Having left sensuality behind, wandering triumphant, 
+			<br>knowing the end of rebirth and death, 
+			<br>extinguished and cool as a lake: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p468"><span class="parno">468</span>
+			Good among the good, far from the bad, 
+			<br>the Realized One has infinite wisdom. 
+			<br>Unsullied in this world and the next: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p469"><span class="parno">469</span>
+			In whom dwells no deceit or conceit, 
+			<br>rid of greed, unselfish, with no need for hope, 
+			<br>with anger eliminated, quenched, 
+			<br>a brahmin rid of sorrow’s stain: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p470"><span class="parno">470</span>
+			He has given up the mind’s home, 
+			<br>and has no possessions at all. 
+			<br>Not grasping to this world or the next: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p471"><span class="parno">471</span>
+			Serene, he has crossed the flood, 
+			<br>and has understood the teaching with ultimate view. 
+			<br>With defilements ended, bearing his final body: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p472"><span class="parno">472</span>
+			In whom desire to be reborn, and caustic speech 
+			<br>are cleared and ended, they are no more; 
+			<br>that knowledge master, everywhere free: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p id="p473"><span class="parno">473</span>
+			He has escaped his chains, he’s chained no more, 
+			<br>among those caught in conceit he is free of conceit; 
+			<br>he has fully understood suffering with its field and ground: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p474"><span class="parno">474</span>
+			Not relying on hope, seeing seclusion, 
+			<br>well past the views proclaimed by others. 
+			<br>In him there are no supporting conditions at all: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p475"><span class="parno">475</span>
+			He has comprehended all things, high and low, 
+			<br>cleared them and ended them, so they are no more. 
+			<br>Peaceful, freed in the ending of grasping: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p476"><span class="parno">476</span>
+			He sees the ending of rebirth’s fetter, 
+			<br>and has swept away all manner of desire. 
+			<br>Pure, stainless, immaculate, flawless: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p477"><span class="parno">477</span>
+			Not seeing himself in terms of a self, 
+			<br>he is stilled, upright, and steadfast. 
+			<br>Imperturbable, kind, wishless: 
+			<br>the Realized One is worthy of the sacrificial cake. </p>
+			
+			<p id="p478"><span class="parno">478</span>
+			He harbors no delusions within at all, 
+			<br>he has insight into all things. 
+			<br>He bears his final body, 
+			<br>attained to the state of grace, the supreme awakening. 
+			<br>That’s how the purity of a spirit is defined: 
+			<br>the Realized One is worthy of the sacrificial cake.” </p>
+			
+			<p><span class="speaker">Sundarika</span>
+			<br><span class="parno">479</span>
+			“Let my oblation be a true offering, 
+			<br>since I have found such a knowledge master! 
+			<br>I see Brahmā in person! Accept my offering, Blessed One: 
+			<br>please eat my sacrificial cake.” </p>
+			
+			<p><span class="speaker">Buddha</span>
+			<br><span class="parno">480</span>
+			“Food enchanted by a spell isn’t fit for me to eat. 
+			<br>That’s not the principle of those who see, brahmin. 
+			<br>The Buddhas reject things enchanted with spells. 
+			<br>Since there is such a principle, brahmin, that’s how they live. </p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p id="p481"><span class="parno">481</span>
+			Serve with other food and drink 
+			<br>the consummate one, the great hermit, 
+			<br>with defilements ended and remorse stilled. 
+			<br>For he is the field for the seeker of merit.” </p>
+	</div>
+
+<p><span class="speaker">Sundarika</span></p>
+
+	<div class="verse">
+			<p><span class="parno">482</span>“Please, Blessed One, help me understand: 
+			<br>now that I have encountered your teaching, 
+			<br>when I look for someone during a sacrifice, 
+			<br>who should eat the religious donation of one like me?” </p>
+	</div>
+
+<p><span class="speaker">Buddha</span></p>
+
+	<div class="verse">
+			<p><span class="parno">483</span>Whose anger’s disappeared,
+			<br>who has unclouded mind,
+			<br>who’s free from lustfulness,
+			<br>whose sloth is thrust aside,</p>
+			
+			<p id="p484"><span class="parno">484</span>
+			“One who is rid of aggression, 
+			<br>whose mind is unclouded, 
+			<br>who is liberated from sensual pleasures, 
+			<br>and who has dispelled dullness. </p>
+			
+			<p id="p485"><span class="parno">485</span>
+			One who has erased boundaries and limits, 
+			<br>expert in birth and death, 
+			<br>a sage, blessed with sagacity. 
+			<br>When such a person comes to the sacrifice, </p>
+	</div>
+
+<p><span class="speaker">Sundarika</span></p>
+
+	<div class="verse">
+			<p><span class="parno">486</span>
+			get rid of your scowl! 
+			<br>Honor them with joined palms, 
+			<br>and venerate them with food and drink, 
+			<br>and in this way your religious donation will succeed.” </p>
+	</div>
+
+<hr>
+
+<p>Then the brahmin Sundarikabhāradvāja said to the Buddha: “Excellent, Master Gotama! Excellent! As if he were righting the overturned, or revealing the hidden, or pointing out the path to the lost, or lighting a lamp in the dark so people with good eyes can see what’s there, Master Gotama has made the teaching clear in many ways. I go for refuge to Master Gotama, to the teaching, and to the mendicant Saṅgha. Sir, may I receive the going forth, the ordination in the Buddha’s presence?” And the brahmin Sundarika Bhāradvāja received the going forth, the ordination in the Buddha’s presence. And soon after, he became one of the perfected. </p>
+
+</div>
+
+<div lang="pi">
+<h2>Pūraḷāsa (sundarikabhāradvāja) sutta</h2>
+
+<p>Evaṁ me sutaṁ​:</p>
+
+<p>Ekaṁ samayaṁ bhagavā kosalesu viharati sundarikāya nadiyā tīre. Tena kho pana samayena sundarikabhāradvājo brāhmaṇo sundarikāya nadiyā tīre aggiṁ juhati, aggihuttaṁ paricarati. Atha kho sundarikabhāradvājo brāhmaṇo aggiṁ juhitvā aggihuttaṁ paricaritvā uṭṭhāyāsanā samantā catuddisā anuvilokesi:  "ko nu kho imaṁ habyasesaṁ bhuñjeyyā"ti? Addasā kho sundarikabhāradvājo brāhmaṇo bhagavantaṁ avidūre aññatarasmiṁ rukkhamūle sasīsaṁ pārutaṁ nisinnaṁ; disvāna vāmena hatthena habyasesaṁ gahetvā dakkhiṇena hatthena kamaṇḍaluṁ gahetvā yena bhagavā tenupasankami.</p>
+
+<p>Atha kho bhagavā sundarikabhāradvājassa brāhmaṇassa padasaddena sīsaṁ vivari. Atha kho sundarikabhāradvājo brāhmaṇo:  "muṇḍo ayaṁ bhavaṁ, muṇḍako ayaṁ bhavan"ti tatova puna nivattitukāmo ahosi. </p>
+
+<p>Atha kho sundarikabhāradvājassa brāhmaṇassa etadahosi:  "muṇḍāpi hi idhekacce brāhmaṇā bhavanti, yannūnāhaṁ upasankamitvā jātiṁ puccheyyan"ti. Atha kho sundarikabhāradvājo brāhmaṇo yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ etadavoca:  "kiṁjacco bhavan"ti?</p>
+
+<p>Atha kho bhagavā sundarikabhāradvājaṁ brāhmaṇaṁ gāthāhi ajjhabhāsi: </p>
+
+<hr>
+	<div class="verse">
+			<p><span class="parno">455</span>"Na brāhmaṇo nomhi na rājaputto,<br> Na vessāyano uda koci nomhi;
+			<br>Gottaṁ pariññāya puthujjanānaṁ,
+			<br>Akiñcano manta carāmi loke.</p>
+			
+			<p><span class="parno">456</span><a class="brnum" id="br2"></a>
+			Sanghāṭivāsī agaho carāmi,<br> Nivuttakeso abhinibbutatto;
+			<br>Alippamāno idha māṇavehi,
+			<br>Akallaṁ maṁ brāhmaṇa pucchasi gottapañhaṁ".</p>
+	</div>
+
+	<div class="verse">
+			<p><span class="parno">457</span><a class="brnum" id="br3"></a>
+			"Pucchanti ve bho brāhmaṇā brāhmaṇebhi,<br> Saha brāhmaṇo no bhavan"ti.</p>
+
+<p><a class="brnum" id="br4"></a>
+			"Brāhmaṇo hi ce tvaṁ brūsi,<br> Mañca brūsi abrāhmaṇaṁ;
+			<br>Taṁ taṁ sāvittiṁ pucchāmi,
+			<br>Tipadaṁ catuvīsatakkharaṁ".</p>
+	</div>
+
+	<hr>
+	
+<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">458</span><a class="brnum" id="br5"></a>
+			"Kiṁ nissitā isayo manujā,<br> Khattiyā brāhmaṇā devatānaṁ;
+			<br>Yaññamakappayiṁsu puthū idha loke".</p>
+			
+			<p><a class="brnum" id="br6"></a>
+			"Yadantagū vedagū yaññakāle,
+				<br> Yassāhutiṁ labhe tassijjheti brūmi".</p>
+	</div>
+
+<hr>
+
+	<div class="verse">
+			<p><span class="speaker">(iti brāhmaṇo):</span></p>
+			
+			<p><span class="parno">459</span><a class="brnum" id="br7"></a> "Addhā hi tassa hutamijjhe,<br> Yaṁ tādisaṁ vedagumaddasāma;
+			<br>Tumhādisānañhi adassanena,
+			<br>Añño jano bhuñjati pūraḷāsaṁ".</p>
+	</div>
+	<div class="verse">
+			<p>&nbsp;</p>
+			<p><span class="parno">460</span><a class="brnum" id="br8"></a>
+			"Tasmātiha tvaṁ brāhmaṇa atthena,<br> Atthiko upasankamma puccha;
+			<br>Santaṁ vidhūmaṁ anīghaṁ nirāsaṁ,
+			<br>Appevidha abhivinde sumedhaṁ".</p>
+			
+			<p>&nbsp;</p>
+			<p><span class="parno">461</span><a class="brnum" id="br9"></a>
+			"Yaññe ratohaṁ bho gotama,<br> Yaññaṁ yiṭṭhukāmo nāhaṁ pajānāmi;
+			<br>Anusāsatu maṁ bhavaṁ,
+			<br>Yattha hutaṁ ijjhate brūhi me taṁ".</p>
+	</div>
+<hr>
+
+<p>&nbsp;</p>
+<p>"Tena hi tvaṁ, brāhmaṇa, odahassu sotaṁ; dhammaṁ te desessāmi – </p>
+
+<div class="verse">
+<p><span class="parno">462</span><a class="brnum" id="br10"></a>
+Mā jātiṁ pucchī caraṇañca puccha,<br> Kaṭṭhā have jāyati jātavedo;
+<br>Nīcākulīnopi munī dhitīmā,
+<br>Ājāniyo hoti hirīnisedho.</p>
+
+<p><span class="parno">463</span><a class="brnum" id="br11"></a>
+Saccena danto damasā upeto,<br> Vedantagū vūsitabrahmacariyo;
+<br>Kālena tamhi habyaṁ pavecche,
+<br>Yo brāhmaṇo puññapekkho yajetha.</p>
+
+<p><span class="parno">464</span><a class="brnum" id="br12"></a>
+Ye kāme hitvā agahā caranti,<br> Susaññatattā tasaraṁva ujjuṁ;
+<br>Kālena tesu habyaṁ pavecche,
+<br>Yo brāhmaṇo puññapekkho yajetha.</p>
+
+<p><span class="parno">465</span><a class="brnum" id="br13"></a>
+Ye vītarāgā susamāhitindriyā,<br> Candova rāhuggahaṇā pamuttā;
+<br>Kālena tesu habyaṁ pavecche,
+<br>Yo brāhmaṇo puññapekkho yajetha.</p>
+
+<p><span class="parno">466</span><a class="brnum" id="br14"></a>
+Asajjamānā vicaranti loke,<br> Sadā satā hitvā mamāyitāni;
+<br>Kālena tesu habyaṁ pavecche,
+<br>Yo brāhmaṇo puññapekkho yajetha.</p>
+
+<p><span class="parno">467</span><a class="brnum" id="br15"></a>
+Yo kāme hitvā abhibhuyyacārī,<br> Yo vedi jātīmaraṇassa antaṁ;
+<br>Parinibbuto udakarahadova sīto,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">468</span><a class="brnum" id="br16"></a>
+Samo samehi visamehi dūre,<br> Tathāgato hoti anantapañño;
+<br>Anūpalitto idha vā huraṁ vā,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">469</span><a class="brnum" id="br17"></a>
+Yamhi na māyā vasati na māno,<br> Yo vītalobho amamo nirāso;
+<br>Paṇunnakodho abhinibbutatto,
+<br>Yo brāhmaṇo sokamalaṁ ahāsi;
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">470</span><a class="brnum" id="br18"></a>
+Nivesanaṁ yo manaso ahāsi,<br> Pariggahā yassa na santi keci;
+<br>Anupādiyāno idha vā huraṁ vā,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">471</span><a class="brnum" id="br19"></a>
+Samāhito yo udatāri oghaṁ,<br> Dhammaṁ caññāsi paramāya diṭṭhiyā;
+<br>Khīṇāsavo antimadehadhārī,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">472</span><a class="brnum" id="br20"></a>
+Bhavāsavā yassa vacī kharā ca,<br> Vidhūpitā atthagatā na santi;
+<br>Sa vedagū sabbadhi vippamutto,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">473</span><a class="brnum" id="br21"></a>
+Sangātigo yassa na santi sangā,<br> Yo mānasattesu amānasatto;
+<br>Dukkhaṁ pariññāya sakhettavatthuṁ,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">474</span><a class="brnum" id="br22"></a>
+Āsaṁ anissāya vivekadassī,<br> Paravediyaṁ diṭṭhimupātivatto;
+<br>Ārammaṇā yassa na santi keci,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">475</span><a class="brnum" id="br23"></a>
+Paroparā yassa samecca dhammā,<br> Vidhūpitā atthagatā na santi;
+<br>Santo upādānakhaye vimutto,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">476</span><a class="brnum" id="br24"></a>
+Saṁyojanaṁ jātikhayantadassī,<br> Yopānudi rāgapathaṁ asesaṁ;
+<br>Suddho nidoso vimalo akāco,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">477</span><a class="brnum" id="br25"></a>
+Yo attano attānaṁ nānupassati,<br> Samāhito ujjugato ṭhitatto;
+<br>Sa ve anejo akhilo akankho,
+<br>Tathāgato arahati pūraḷāsaṁ.</p>
+
+<p><span class="parno">478</span><a class="brnum" id="br26"></a>
+Mohantarā yassa na santi keci,<br> Sabbesu dhammesu ca ñāṇadassī;
+<br>Sarīrañca antimaṁ dhāreti,
+<br>Patto ca sambodhimanuttaraṁ sivaṁ;
+<br>Ettāvatā yakkhassa suddhi,
+<br>Tathāgato arahati pūraḷāsaṁ".</p>
+<p>&nbsp;</p>
+<p><span class="parno">479</span><a class="brnum" id="br27"></a>
+"Hutañca mayhaṁ hutamatthu saccaṁ,<br> Yaṁ tādisaṁ vedagunaṁ alatthaṁ;
+<br>Brahmā hi sakkhi paṭigaṇhātu me bhagavā,
+<br>Bhuñjatu me bhagavā pūraḷāsaṁ".</p>
+<p>&nbsp;</p>
+<p><span class="parno">480</span><a class="brnum" id="br28"></a>
+"Gāthābhigītaṁ me abhojaneyyaṁ,<br> Sampassataṁ brāhmaṇa nesa dhammo;
+<br>Gāthābhigītaṁ panudanti buddhā,
+<br>Dhamme satī brāhmaṇa vuttiresā.</p>
+
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">481</span><a class="brnum" id="br29"></a>
+Aññena ca kevalinaṁ mahesiṁ,<br> Khīṇāsavaṁ kukkuccavūpasantaṁ;
+<br>Annena pānena upaṭṭhahassu,
+<br>Khettañhi taṁ puññapekkhassa hoti".</p>
+
+<p>
+<br><span class="parno">482</span><a class="brnum" id="br30"></a>
+"Sādhāhaṁ bhagavā tathā vijaññaṁ,<br> Yo dakkhiṇaṁ bhuñjeyya mādisassa;
+<br>Yaṁ yaññakāle pariyesamāno,
+<br>Pappuyya tava sāsanaṁ".</p>
+
+<p>
+<br><span class="parno">483</span><a class="brnum" id="br31"></a>
+"Sārambhā yassa vigatā,<br> Cittaṁ yassa anāvilaṁ;
+<br>Vippamutto ca kāmehi,
+<br>Thinaṁ yassa panūditaṁ.</p>
+
+<p><span class="parno">484</span><a class="brnum" id="br32"></a>
+Sīmantānaṁ vinetāraṁ,<br> Jātimaraṇakovidaṁ;
+<br>Muniṁ moneyyasampannaṁ,
+<br>Tādisaṁ yaññamāgataṁ.</p>
+
+<p><span class="parno">485</span><a class="brnum" id="br33"></a>
+Bhakuṭiṁ vinayitvāna,<br> Pañjalikā namassatha;
+<br>Pūjetha annapānena,
+<br>Evaṁ ijjhanti dakkhiṇā".</p>
+
+<p>&nbsp;</p>
+<p><span class="parno">486</span><a class="brnum" id="br34"></a>
+"Buddho bhavaṁ arahati pūraḷāsaṁ,<br> Puññakhettamanuttaraṁ;
+<br>Āyāgo sabbalokassa,
+<br>Bhoto dinnaṁ mahapphalan"ti.</p>
+</div>
+
+<hr>
+
+<p>Atha kho sundarikabhāradvājo brāhmaṇo bhagavantaṁ etadavoca:  "Abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya:  ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito. Esāhaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusanghañca. Labheyyāhaṁ bhoto gotamassa santike pabbajjaṁ, labheyyaṁ upasampadan"ti. Alattha kho sundarikabhāradvājo brāhmaṇo … pe … arahataṁ ahosīti.</p>
+<p class="endsection">Sundarikabhāradvājasuttaṁ catutthaṁ.</p>
+
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp3.3.html#content"></a><a id="next-sutta" href="../snp/snp3.5.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp3.html">Chapter 3: The Great Chapter</a>3:4 With Bhāradvāja of Sundarikā on the Sacrificial Cake
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+ 
+ <script>
+ // Script to open and close sidebar
+  	function w3_open() {
+  	document.getElementById("mySidebar").style.display = "block";
+  	}
+  		function w3_close() {
+  		document.getElementById("mySidebar").style.display = "none";
+  	}
+ </script>
+ 
+ <script>
+  		var app = document.getElementsByTagName("BODY")[0];
+  		if (localStorage.lightMode == "dark") {
+  			app.setAttribute("light-mode", "dark");
+  	}
+ </script>
+ 
+ <script>
+  		function toggle_light_mode() {
+  			var app = document.getElementsByTagName("BODY")[0];
+  				if (localStorage.lightMode == "dark") {
+  					localStorage.lightMode = "light";
+  					app.setAttribute("light-mode", "light");
+  				} else {
+  					localStorage.lightMode = "dark";
+  					app.setAttribute("light-mode", "dark");
+  	}
+  		}
+ 
+  		window.addEventListener("storage", function () {
+  			if (localStorage.lightMode == "dark") {
+  				app.setAttribute("light-mode", "dark");
+  			} else {
+  				app.setAttribute("light-mode", "light");
+  		}
+  		}, false);
+  </script>
+  <script src="../js/footer.js"></script>
+   </body>
+  </html>

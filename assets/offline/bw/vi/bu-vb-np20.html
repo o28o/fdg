@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Nissaggiya Pācittiya&nbsp;20</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Nissaggiya Pācittiya&nbsp;20: The Training Rule on Bartering.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.&nbsp; &nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍika’s Monastery. At that time Venerable Upananda the Sakyan had become skilled at making robes. He made an outer robe of rags, well-dyed and beautifully executed, and he wore it.</p>
+
+<p>Then a certain wanderer put on an expensive robe, approached Venerable Upananda, and said: “This outer robe of yours is beautiful. Give it to me in exchange for my robe."</p>
+
+<hr>
+<p>“Do you know what you’re doing?"</p>
+
+<hr>
+<p>“I do."</p>
+
+<p>“Ok then," and he gave it.</p>
+
+<hr>
+<p>That wanderer put on the upper robe and went to the wanderer’s park. Some of the wanderers said to him: “This outer robe of yours is beautiful. How did you get it?"</p>
+
+<p>“I got it in exchanged for my cloak."</p>
+
+<p>“But how long will this outer robe last you? That robe of yours was better."</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>Then that wanderer thought: “These wanderers are speaking the truth," and he went to Venerable Upananda and said: “Here is your outer robe; give me back my robe. "</p>
+
+<hr>
+<p>“Didn’t I ask you if you knew what you were doing? I will not give it back."</p>
+
+<p>Then that wanderer grumbled and complained: “Even householders give things back to a householder who has regrets; how then can a wanderer not give back to a wanderer?"</p>
+
+<p id="p3"><span class="parno">3</span>Monks heard the complaints of that wanderer, and the monks of few desires … complained and criticised Venerable Upananda: “How can Venerable Upananda engage in bartering with a wanderer?"</p>
+
+<p id="p4"><span class="parno">4</span>After criticising him in many ways, they informed the Master. … “Is it true, Upananda, that you engaged in bartering with a wanderer?" “It’s true, Master." The Buddha, the Master, criticised him: “ … Foolish man, how can you engage in bartering with a wanderer? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">5</span>“If a monk engages in various kinds of bartering, he commits an offence entailing relinquishment and confession."</p>
+
+<h3>Definitions</h3>
+
+<p id="p6"><span class="parno">6</span>A: whoever … Monk: … The monk who is ordained by a complete Saṅgha through a procedure of one motion and three announcements, which is unchallengeable and fit to stand; this sort of monk is meant in this case.
+
+<hr>
+<p id="p7"><span class="parno">7</span>Various kinds: robes, almsfood, lodging requisites, or medicines; even a piece of chunam, a toothwood, or a piece of thread.</p>
+
+<p id="p8"><span class="parno">8</span>Engages in [ … ] bartering: if he transgresses, saying: “Give that for this": “Bring that for this": “Purchase that with this": “Exchange that for this," he commits an offence of bad conduct. When it has been bartered—one’s own goods are in the hands of the other and the other’s goods are in one’s own hands—it becomes subject to relinquishment.</p>
+
+<p>The goods are to be relinquished to a Saṅgha, a group, with appropriate substitutions. … ‘<span>Bhante, I engaged in various kinds of bartering. This is to be relinquished. I relinquish it to the Saṅgha.</span>’ … the Saṅgha should give … the Venerables should give … “<span>I give this back to the Venerable.</span>"</p>
+
+<h3>Permutations</h3>
+
+<p id="p9"><span class="parno">9</span>If it is bartering, and he perceives it as bartering, he commits an offence entailing relinquishment and confession. If it is bartering, but he has doubt about it, he commits an offence entailing relinquishment and confession. If it is bartering, but he does not perceive it as bartering, he commits an offence entailing relinquishment and confession.</p>
+
+<p id="p10"><span class="parno">10</span>If it is not bartering, but he perceives it as bartering, he commits an offence of bad conduct. If it is not bartering, but he has doubt about it, he commits an offence of bad conduct. If it is not bartering, and he does not perceive it as bartering, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p11"><span class="parno">11</span>There is no offence: if he asks for the price; if he tells an attendant; if he says: “I have this, and I have need of such-and-such"; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">12</span>The tenth rule, the training rule on bartering, is finished.</p>
+
+<p>The second chapter on silk is finished.</p>
+
+<hr>
+<p id="p13"><span class="parno">13</span>This is the summary:</p>
+
+<p id="p14" class="verse"><span class="parno">14</span>Silk, entirely, two parts,
+<br>Six years, sitting cloth;
+<br>And two on hair, on taking,
+<br>Two on various kinds.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_2238, msdiv593</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena āyasmā upanando sakyaputto paṭṭo hoti cīvarakammaṁ kātuṁ. So paṭapilotikānaṁ sanghāṭiṁ karitvā surattaṁ suparikammakataṁ katvā pārupi.</p>
+
+<p>Atha kho aññataro paribbājako mahagghaṁ paṭaṁ pārupitvā yenāyasmā upanando sakyaputto tenupasankami; upasankamitvā āyasmantaṁ upanandaṁ sakyaputtaṁ etadavoca: "sundarā kho tyāyaṁ, āvuso, sanghāṭi; dehi me paṭenā"ti.</p>
+
+<hr>
+<p>"Jānāhi, āvuso"ti.</p>
+
+<hr>
+<p>"Āmāvuso, jānāmī"ti.</p>
+
+<p>"Handāvuso"ti, adāsi.</p>
+
+<hr>
+<p>Atha kho so paribbājako taṁ sanghāṭiṁ pārupitvā paribbājakārāmaṁ agamāsi. Paribbājakā taṁ paribbājakaṁ etadavocuṁ: "sundarā kho tyāyaṁ, āvuso, sanghāṭi; kuto tayā laddhā"ti?</p>
+
+<p>"Tena me, āvuso, paṭena parivattitā"ti.</p>
+
+<p>"Katihipi tyāyaṁ, āvuso, sanghāṭi bhavissati, soyeva te paṭo varo"ti.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_1V_2239</span>Atha kho so paribbājako— "Saccaṁ kho paribbājakā āhaṁsu— ‘katihipi myāyaṁ sanghāṭi bhavissati. Soyeva me paṭo varo’"ti yenāyasmā upanando sakyaputto tenupasankami; upasankamitvā āyasmantaṁ upanandaṁ sakyaputtaṁ etadavoca: "handa te, āvuso, sanghāṭi; dehi me paṭan"ti.</p>
+
+<hr>
+<p>"Nanu tvaṁ, āvuso, mayā vutto— ‘jānāhi, āvuso’ti. Nāhaṁ dassāmī"ti.</p>
+
+<p>Atha kho so paribbājako ujjhāyati khiyyati vipāceti— "gihīpi naṁ gihissa vippaṭisārissa denti, kiṁ pana pabbajito pabbajitassa na dassatī"ti.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_2240</span>Assosuṁ kho bhikkhū tassa paribbājakassa ujjhāyantassa khiyyantassa vipācentassa. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma āyasmā upanando sakyaputto paribbājakena saddhiṁ kayavikkayaṁ samāpajjissatī"ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_1V_2241</span>Atha kho te bhikkhū āyasmantaṁ upanandaṁ sakyaputtaṁ anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira tvaṁ, upananda, paribbājakena saddhiṁ kayavikkayaṁ samāpajjasī"ti? "Saccaṁ, bhagavā"ti. Vigarahi buddho bhagavā … pe … kathañhi nāma tvaṁ, moghapurisa, paribbājakena saddhiṁ kayavikkayaṁ samāpajjissasi. Netaṁ, moghapurisa, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">5</span><span class="ms">p_1V_2242, msdiv594</span><span class="rule">"Yo pana bhikkhu nānappakārakaṁ kayavikkayaṁ samāpajjeyya, nissaggiyaṁ pācittiyan"</span>ti. (<i>20</i>:<b>39</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">6</span><span class="ms">p_1V_2243, msdiv595</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<hr>
+<p><span class="parno">7</span><span class="ms">p_1V_2244</span><b>Nānappakārakaṁ</b> nāma cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānappaccaya&shy;bhesajja&shy;parikkhārā, antamaso cuṇṇapiṇḍopi dantakaṭṭhampi dasikasuttampi.</p>
+
+<p><span class="parno">8</span><span class="ms">p_1V_2245</span><b>Kayavikkayaṁ samāpajjeyyā</b>'ti iminā imaṁ dehi, iminā imaṁ āhara, iminā imaṁ parivattehi, iminā imaṁ cetāpehīti. Ajjhācarati, āpatti dukkaṭassa. Yato kayitañca hoti vikkayitañca attano bhaṇḍaṁ parahatthagataṁ parabhaṇḍaṁ attano hatthagataṁ, nissaggiyaṁ hoti.</p>
+
+<p>Nissajjitabbaṁ sanghassa vā gaṇassa vā puggalassa vā. Evañca pana, bhikkhave, nissajjitabbaṁ … pe … "Ahaṁ, bhante, nānappakārakaṁ kayavikkayaṁ samāpajjiṁ. Idaṁ me nissaggiyaṁ. Imāhaṁ sanghassa nissajjāmī"ti … pe … dadeyyāti … pe … dadeyyunti … pe … āyasmato dammīti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">9</span><span class="ms">p_1V_2246, msdiv596</span>Kayavikkaye kayavikkayasaññī, nissaggiyaṁ pācittiyaṁ. Kayavikkaye vematiko, nissaggiyaṁ pācittiyaṁ. Kayavikkaye nakayavikkayasaññī, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p><span class="parno">10</span><span class="ms">p_1V_2247</span>Nakayavikkaye kayavikkayasaññī, āpatti dukkaṭassa. Nakayavikkaye vematiko, āpatti dukkaṭassa. Nakayavikkaye nakayavikkayasaññī, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">11</span><span class="ms">p_1V_2248, msdiv597</span>Anāpatti— agghaṁ pucchati, kappiyakārakassa ācikkhati, "Idaṁ amhākaṁ atthi, amhākañca iminā ca iminā ca attho"ti bhaṇati, ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">12</span><span class="ms">p_1V_2249</span>Kayavikkayasikkhāpadaṁ niṭṭhitaṁ dasamaṁ.</p>
+
+<p>Kosiyavaggo dutiyo.</p>
+
+<hr>
+<p><span class="parno">13</span><span class="ms">p_1V_2250</span>Tassuddānaṁ</p>
+
+<p class="verse"><span class="parno">14</span><span class="ms">p_1V_2251</span>Kosiyā suddhadvebhāgā,
+<br>chabbassāni nisīdanaṁ;
+<br>Dve ca lomāni uggaṇhe,
+<br>ubho nānappakārakāti.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-np19.html#content"></a><a id="next-sutta" href="../vi/bu-vb-np21.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya&nbsp;20
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Pācittiya 110</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h3>Vinaya Pitaka - Monastic Rules</h3>
+
+	<ul id="vbnav">
+		<li><a href="../vi/bi-vb-pj.html#content">Pārājikas</a></li>
+		<li><a href="../vi/bi-vb-sn.html#content">Sanghādisesas</a></li>
+		<li><a href="../vi/bi-vb-np.html#content">Nissaggiya Pācittiyas</a></li>
+		<li id="active"><a href="../vi/bi-vb-pc.html#content">Pācittiyas</a></li>
+		<li><a href="../vi/bi-vb-pd.html#content">Pāṭidesanīyas</a></li>
+		<li><a href="../vi/bi-vb-sk.html#content">Sekhiyas</a></li>
+		<li><a href="../vi/bi-vb-as.html#content">Adhikaraṇa-Samathās</a></li>
+	</ul>
+
+<div id="content">
+
+<h3>Bhikkhuni Vibhanga - Pācittiya 110:<span class="note"><span class="details"><span class="p">Bhikkhu's Pc 14</span></span></span> Not to Leave a Mattress or a Chair Outside Without Arranging it Back Suitably.</h3>
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Brahmali Bhikkhu.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<div>
+<h3>Origin story</h3>
+<h4>First sub-story</h4>
+</div>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍika’s Monastery. At that time it was winter and some monks put furniture out in the open in order to warm themselves in the sun. But when the time for departure was announced, they left without putting it away, getting it put away, or informing anyone. And the furniture was rained on.</p>
+
+<p>The monks of few desires … complained and criticised them: “How can these monks put furniture out in the open, and then leave without putting it away, getting it put away, or informing anyone? The furniture was rained on."</p>
+
+<p id="p2"><span class="parno">2</span>After criticising those monks in many ways, they informed the Master. … “Is it true, monks, that you put furniture out in the open … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">3</span>“If a monk takes a bed, bench, mattress, or stool belonging to the Saṅgha, and he puts it out or gets it put out in the open, and he then leaves without putting it away, getting it put away, or informing anyone, he commits an offence entailing confession."</p>
+
+<p id="p4"><span class="parno">4</span>In this way the Master laid down this training rule for the monks.</p>
+
+<h4>Second sub-story</h4>
+
+<p id="p5"><span class="parno">5</span>Soon afterwards, some monks who were staying out in the open brought the furnishings back even in the appropriate season. The Master saw this, and after speaking on the Dhamma, he addressed the monks: “<span class="rule">Monks, during the eight months outside of the rainy season, I allow you to store furnishings under a roof cover or at the foot of a tree or wherever crows or ravens do not leave droppings.</span>"</p>
+
+<h3>Definitions</h3>
+
+<p id="p6"><span class="parno">6</span><span class="term">A</span>: whoever … Monk: … The monk who is ordained by a complete Saṅgha through a procedure of one motion and three announcements, which is unchallengeable and fit to stand; this sort of monk is meant in this case.</p>
+
+<p id="p7"><span class="parno">7</span><span class="term">Belonging to the Saṅgha</span>: given to the Saṅgha, given up to the Saṅgha.</p>
+
+<hr>
+<p id="p8"><span class="parno">8</span><span class="term">Bed</span>: there are four kinds of bed: one with legs and frame called <i>masāraka</i>, one with legs and frame called <i>bundikābaddha</i>, one with crooked legs, one with detachable legs.</p>
+
+<p id="p9"><span class="parno">9</span><span class="term">Bench</span>: there are four kinds of benches: one with legs and frame called <i>masāraka</i>, one with legs and frame called <i>bundikābaddha</i>, one with crooked legs, one with detachable legs.</p>
+
+<p id="p10"><span class="parno">10</span><span class="term">Mattress</span>: there are fiver kinds of mattresses: a mattress stuffed with wool, a mattress stuffed with cloth, a mattress stuffed with bark, a mattress stuffed with grass, a mattress stuffed with leaves.</p>
+
+<hr>
+<p id="p11"><span class="parno">11</span><span class="term">Stool</span>: one made of bark, one made of <i>usīra</i> grass, one made of <i>muñja</i> grass, one made of reed; it is stuffed and then bound together.</p>
+
+<p id="p12"><span class="parno">12</span><span class="term">Puts</span>: puts oneself.</p>
+
+<hr>
+<p id="p13"><span class="parno">13</span><span class="term">Gets put</span>: gets another to put. If he gets one who is not fully ordained to put it out, it is the responsibility of the monk. If he gets one who is fully ordained to put it out, it is the responsibility of the one who puts it outside.</p>
+
+<p id="p14"><span class="parno">14</span><span class="term">Leaves without putting it away</span>: he does not put it away himself.</p>
+
+<p id="p15"><span class="parno">15</span><span class="term">Getting it put away</span>: he does not get another to put it away.</p>
+
+<p id="p16"><span class="parno">16</span><span class="term">Or informing anyone</span>: if he does not inform a monk, a novice monk, or a monastery worker, then when he goes beyond the distance of the stone-throw of an average man, he commits an offence entailing confession.</p>
+
+<h3>Permutations</h3>
+
+<p id="p17"><span class="parno">17</span>If it belongs to the Saṅgha, and he perceives it as belonging to the Saṅgha, and he puts it out or gets it put out in the open, and he then leaves without putting it away or getting it put away or informing anyone, he commits an offence entailing confession. If it belongs to the Saṅgha, but he has doubts about it … If it belongs to the Saṅgha, but he perceives it as belonging to an individual, and he puts it out or gets it put out in the open, and he then leaves without putting it away or getting it put away or informing anyone, he commits an offence entailing confession.</p>
+
+<p id="p18"><span class="parno">18</span>If it is a ground-cover, a blanket, a carpet, a straw mat, a leather mat, a foot-wiping cloth, or a bench made of wood, and he puts it out or gets it put out in the open, and he then leaves without putting it away or getting it put away or informing anyone, he commits an offence of bad conduct.</p>
+
+<p>If it belongs to an individual, but he perceives it as belonging to the Saṅgha, he commits an offence of bad conduct. If it belongs to an individual, but has doubt about it, he commits an offence of bad conduct. If it belongs to an individual, and he perceives it as belonging to an individual, but that individual is not himself, he commits an offence of bad conduct. If it belongs to himself, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p19"><span class="parno">19</span>There is no offence: if he leaves after putting it away; if he leaves after getting it put away; if he leaves after informing someone; if he leaves while he is sunning it; if anyone obstructs it; if there are dangers; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">20</span>The fourth rule, the training rule on lodging requisites, is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<div>
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+</div>
+
+<p><span class="parno">1</span><span class="ms">p_2V_380, msdiv108</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena bhikkhū hemantike kāle ajjhokāse senāsanaṁ paññapetvā kāyaṁ otāpentā kāle ārocite taṁ pakkamantā neva uddhariṁsu na uddharāpesuṁ, anāpucchā pakkamiṁsu. Senāsanaṁ ovaṭṭhaṁ hoti.</p>
+
+<p>Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathaṁ hi nāma bhikkhū ajjhokāse senāsanaṁ paññapetvā taṁ pakkamantā neva uddharissanti na uddharāpessanti, anāpucchā pakkamissanti, senāsanaṁ ovaṭṭhan"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_2V_381</span>Atha kho te bhikkhū te anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira, bhikkhave, bhikkhū ajjhokāse … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">3</span><span class="ms">p_2V_382, msdiv109</span><span class="rule">"Yo pana bhikkhu saṇghikaṁ mañcaṁ vā pīṭhaṁ vā bhisiṁ vā kocchaṁ vā ajjhokāse santharitvā vā santharāpetvā vā taṁ pakkamanto neva uddhareyya na uddharāpeyya, anāpucchaṁ vā gaccheyya, pācittiyan"</span> ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_2V_383</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<h4>&nbsp;</h4> <p><span class="parno">5</span><span class="ms">p_2V_384, msdiv110</span>Tena kho pana samayena bhikkhū ajjhokāse vasitvā kālasseva senāsanaṁ abhiharanti. Addasā kho bhagavā te bhikkhū kālasseva senāsanaṁ abhiharante. Disvāna etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi:  "Anujānāmi, bhikkhave, aṭṭha māse avassikasankete maṇḍape vā rukkhamūle vā yattha kākā vā kulalā vā na ūhadanti tattha senāsanaṁ nikkhipitun"ti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">6</span><span class="ms">p_2V_385, msdiv111</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<p><span class="parno">7</span><span class="ms">p_2V_386</span><b>Saṇghikaṁ</b> nāma saṇghassa dinnaṁ hoti pariccattaṁ.</p>
+
+<hr>
+<p><span class="parno">8</span><span class="ms">p_2V_387</span><b>Mañco</b> nāma cattāro mañcā— masārako, bundikābaddho, kuḷīrapādako, āhaccapādako.</p>
+
+<p><span class="parno">9</span><span class="ms">p_2V_388</span><b>Pīṭhaṁ</b> nāma cattāri pīṭhāni— masārakaṁ, bundikābaddhaṁ, kuḷīrapādakaṁ, āhaccapādakaṁ.</p>
+
+<p><span class="parno">10</span><span class="ms">p_2V_389</span><b>Bhisi</b> nāma pañca bhisiyo— uṇṇabhisi, coḷabhisi, vākabhisi, tiṇabhisi, paṇṇabhisi.</p>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_2V_390</span><b>Kocchaṁ</b> nāma— vākamayaṁ vā usīramayaṁ vā muñjamayaṁ vā pabbajamayaṁ vā anto saṁveṭhetvā baddhaṁ hoti.</p>
+
+<p><span class="parno">12</span><span class="ms">p_2V_391</span><b>Santharitvā</b>'ti sayaṁ santharitvā.</p>
+
+<hr>
+<p><span class="parno">13</span><span class="ms">p_2V_392</span><b>Santharāpetvā</b>'ti aññaṁ santharāpetvā. Anupasampannaṁ santharāpeti, tassa palibodho. Upasampannaṁ santharāpeti, santhārakassa palibodho.</p>
+
+<p><span class="parno">14</span><span class="ms">p_2V_393</span><b>Taṁ pakkamanto neva uddhareyyā</b>'ti na sayaṁ uddhareyya.</p>
+
+<p><span class="parno">15</span><span class="ms">p_2V_394</span><b>Na uddharāpeyyā</b>'ti na aññaṁ uddharāpeyya.</p>
+
+<p><span class="parno">16</span><span class="ms">p_2V_395</span><b>Anāpucchaṁ vā gaccheyyā</b>'ti bhikkhuṁ vā sāmaṇeraṁ vā ārāmikaṁ vā anāpucchā majjhimassa purisassa leḍḍupātaṁ atikkamantassa āpatti pācittiyassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">17</span><span class="ms">p_2V_396, msdiv112</span>Saṇghike saṇghikasaññī ajjhokāse santharitvā vā santharāpetvā vā taṁ pakkamanto neva uddhareyya na uddharāpeyya anāpucchaṁ vā gaccheyya, āpatti pācittiyassa. Saṇghike vematiko … pe … saṇghike puggalikasaññī ajjhokāse santharitvā vā santharāpetvā vā taṁ pakkamanto neva uddhareyya na uddharāpeyya, anāpucchaṁ vā gaccheyya, āpatti pācittiyassa.</p>
+
+<p><span class="parno">18</span><span class="ms">p_2V_397</span>Cimilikaṁ vā uttarattharaṇaṁ vā bhūmattharaṇaṁ vā taṭṭikaṁ vā cammakhaṇḍaṁ vā pādapuñchaniṁ vā phalakapīṭhaṁ vā ajjhokāse santharitvā vā santharāpetvā vā taṁ pakkamanto neva uddhareyya na uddharāpeyya, anāpucchaṁ vā gaccheyya, āpatti dukkaṭassa.</p>
+
+<p>Puggalike saṇghikasaññī, āpatti dukkaṭassa. Puggalike vematiko, āpatti dukkaṭassa. Puggalike puggalikasaññī aññassa puggalike, āpatti dukkaṭassa. Attano puggalike anāpatti.</p>
+
+<hr>
+<p><span class="parno">19</span><span class="ms">p_2V_398, msdiv113</span>Anāpatti— uddharitvā gacchati, uddharāpetvā gacchati, āpucchaṁ gacchati, otāpento gacchati, kenaci palibuddhaṁ hoti, āpadāsu, ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">20</span><span class="ms">p_2V_399</span>Senāsanasikkhāpadaṁ niṭṭhitaṁ catutthaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-pc109.html#content"></a><a id="next-sutta" href="../vi/bi-vb-pc111.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-pc.html">Pācittiyas</a>Pācittiya 110
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

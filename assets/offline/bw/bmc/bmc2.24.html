@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.24</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+ 	<p>&nbsp;</p>
+
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-center">
+	<div class="w3-bar">
+<a href="../bmc/bmc2.23.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bhikkunis</a>
+<a href="../bmc/bmc2.24.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Novices</a>
+</div>
+</div>
+
+ 	<p>&nbsp;</p>
+
+
+<h3>Chapter&nbsp;24: Novices</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p>The word <i>sāmaṇera</i> — translated here as “novice” — literally means a young contemplative. When the Buddha discontinued the going-for-refuge as a method of admission into the Bhikkhu Saṅgha, he retained it as the method by which boys too young for Acceptance could go forth. Ven. Rāhula, the Buddha&rsquo;s own son, was the first to receive the Going-forth in this way.</p>
+
+<p>The qualifications and procedure for Going-forth are described in <a href="../bmc/bmc2.14.html">Chapter&nbsp;14</a>. As was mentioned there, the customary pattern is for the new novice, immediately after his Going-forth, to take the ten rules of training.</p>
+
+<p><b>Training.</b> The novice’s basic training consists of the ten training rules:</p>
+
+<ul class="circ">
+<li>refraining from killing living beings,</li>
+<li>refraining from taking what is not given,</li>
+<li>refraining from sexual intercourse,</li>
+<li>refraining from speaking lies,</li>
+<li>refraining from alcohol and fermented liquors that cause heedlessness,</li>
+<li>refraining from eating in the wrong time (after noon and before dawn),</li>
+<li>refraining from watching dancing, singing, and music (see <a href="../bmc/bmc2.10.html">Chapter&nbsp;10</a>),</li>
+<li>refraining from adorning oneself with garlands, scents, cosmetics, and ornaments (see <a href="../bmc/bmc2.1.html">Chapter&nbsp;1</a>),</li>
+<li>refraining from high and great seats and beds (see <a href="../bmc/bmc2.6.html">Chapter&nbsp;6</a>),</li>
+<li>refraining from accepting gold and silver (money).</li>
+</ul>
+
+<p>According to the Commentary, a novice who breaks any of the first five training rules has cut himself off from the Triple Refuge, from his preceptor, from his right to Community gains, and from his right to a lodging in a monastery. He is still a novice, though, and if he sees the error of his ways and is determined to restrain himself in the future, he may take the Triple Refuge from his preceptor again and so be restored to his former status.</p>
+
+<p>The customary practice is for novices also to receive training in the Sekhiya rules and Khandhaka protocols, but there is no established standard for imposing offenses on them for breaking any of these rules.</p>
+
+<p><b>Dependence.</b> A novice must live in dependence on a mentor. Both mentor and novice are expected to follow the appropriate protocols with regard to the other (see <a href="../bmc/bmc2.9.html">Chapter&nbsp;9</a>). One bhikkhu is allowed to have more than one novice attend to him only if he is competent to ensure that the novices do not misbehave with one another. (In the origin story to this rule, two novices attending on Ven. Upananda sexually molested each other; in a later story, one of them molested a bhikkhunī.) A bhikkhu is also forbidden from luring another bhikkhu’s following away. The Commentary states that <i>following</i> means student novices or bhikkhus. Even if the other bhikkhu is unvirtuous, it says, one may not directly lure his following away but one may make a statement so that they will realize the undesirability of staying on with their mentor. The example it offers shows that the indirect statement does not have to be subtle: “Your living in dependence on an unvirtuous person is like coming to bathe but smearing yourself with excrement.” If the people to whom this remark is addressed realize its truth and then ask to take dependence on one, one may accept them as one’s following without offense.</p>
+
+<p><b>Punishment.</b> There are five grounds for punishing a novice:</p>
+
+<ul class="circ">
+<li>he strives for the bhikkhus' loss,</li>
+<li>he strives for the bhikkhus' harm,</li>
+<li>he strives for the bhikkhus' non-dwelling,</li>
+<li>he insults and reviles bhikkhus, or</li>
+<li>he causes bhikkhus to split from bhikkhus.</li>
+</ul>
+
+<p>Punishment is primarily the responsibility of the novice’s mentor. Another bhikkhu may inflict punishment on the novice only with the preceptor’s permission. The Commentary says that if the preceptor is informed three times of his pupil’s misbehavior and does nothing, one is allowed to make a prohibition oneself, but the Sub-commentary cautions that one should inform the Community before doing so.</p>
+
+<p>The mode of punishment is to place a prohibition on the novice — in other words, to place certain locales off limits to him. One is not allowed to place the entire monastery off limits. Instead, one may place off limits the areas where the novice normally lives and normally congregates. Also, one should not impose a prohibition concerning food. The Commentary advises that other forms of punishment suitable to the novice’s offense — such as carrying water, carrying firewood, or carrying sand — are allowable. One may also promise food to the novice as a reward if he willingly undergoes the punishment. Punishment must be given with the intention: “He'll reform. He'll stop misbehaving.” It should not be given with such malicious intent as: “He'll be done in. He'll disrobe.” Cruel and unusual punishments, such as making him carry bricks or stones on his head, submerging him in water, etc., are forbidden.</p>
+
+<p>The texts do not state how long the prohibition should be imposed. This is left up to the discretion of the bhikkhu imposing it. When he sees that the novice has learned his lesson and mended his ways, the punishment should be rescinded.</p>
+
+<p>Physical punishment is not allowed. A bhikkhu may not hit or lift his hand against a novice any more than he can do so to any other unordained person (see <a href="../bmc/bmc1.8-8.html#pc74">Pācittiya&nbsp;74</a> &amp; <a href="../bmc/bmc1.8-8.html#pc75">75</a>). Even playful rough-housing is forbidden. A bhikkhu incurs a dukkaṭa under <a href="../bmc/bmc1.8-6.html#pc52">Pācittiya&nbsp;52</a> for tickling a novice, and a dukkaṭa under <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a> for flicking a novice with his tooth wood.</p>
+
+<p><b>Expulsion.</b> As stated under <a href="../bmc/bmc1.8-7.html#pc70">Pācittiya&nbsp;70</a>, a misbehaving novice may be subject to two types of expulsion: expulsion from his status as a novice and expulsion as a punishment. As with punishment, expulsion is the responsibility of the novice’s mentor. <a href="../bmc/bmc1.8-7.html#pc70">Pācittiya&nbsp;70</a> covers the second form of expulsion. Here we will discuss the first.</p>
+
+<p>There are ten grounds for a novice’s expulsion:</p>
+
+<ul class="circ">
+<li>he is a taker of life,</li>
+<li>he is a taker of what is not given,</li>
+<li>he engages in unchastity,</li>
+<li>he is a speaker of lies,</li>
+<li>he is a drinker of intoxicants,</li>
+<li>he speaks dispraise of the Buddha,</li>
+<li>he speaks dispraise of the Dhamma,</li>
+<li>he speaks dispraise of the Saṅgha,</li>
+<li>he holds wrong views, or</li>
+<li>he is a molester of a bhikkhunī.</li>
+</ul>
+
+<p>The Commentary details the extent to which any of these acts would subject the novice to expulsion: with regard to the first precept, killing ants or smashing bed bug eggs; with regard to the second, stealing a blade of grass; with regard to the third, genital, anal, or oral intercourse; with regard to the fourth, telling a lie even in jest; with regard to the fifth, intentionally drinking alcohol. As stated above, a novice who commits any of these acts has broken his Triple Refuge. If he sees the error of his ways, he may take the Triple Refuge again. If not, he should be expelled from his status as a novice.</p>
+
+<p>Dispraise of the Buddha, Dhamma, and Saṅgha, the Commentary says, means speaking in terms contradictory to those used in the standard chant of praise to the Triple Gem — asserting, for instance, that the Buddha&rsquo;s Dhamma is poorly taught, or that his disciples practice crookedly. An offender in this case should be reprimanded. If he sees the error of his ways, he should be punished with an appropriate prohibition and then given the training rules again. If he doesn’t, he should be expelled. The same holds for a novice espousing wrong views — which, according to the Commentary, means espousing either the extreme of eternalism or the extreme of annihilationism. Only a molester of a bhikkhunī is automatically expelled without further ado. Such a novice also makes himself ineligible from taking the Going-forth or receiving Acceptance ever again in this lifetime.</p>
+
+<h2>Rules</h2> <h3>Going-forth</h3>
+<p>“A boy less than 15 years old should not be given the Going-forth. Whoever should give it: an offense of wrong doing.” — Mv.I.50.1 “I allow that a boy less than 15 years old be given the Going-forth if he is capable of chasing crows.” — Mv.I.51.1</p>
+
+<p>“A son without permission from his parents should not be given the Going-forth. Whoever should give it: an offense of wrong doing.” — Mv.I.54.6</p>
+
+<p>How a novice is to be ordained — Mv.I.54.3</p>
+
+<p>“Bhikkhus, I allow the Going-forth for a novice by means of these three goings for refuge.” — Mv.I.54.3</p>
+
+<h3>Training Rules</h3>
+<p>“I allow these ten training rules for novices, and for novices to train in them.” — Mv.I.56.1</p>
+
+<h3>Attendance</h3>
+<p>“One (bhikkhu) should not get two novices to attend to him. Whoever should get them to attend to him: an offense of wrong doing.” — Mv.I.52.1 “I allow a single bhikkhu, if experienced and competent, to get two novices — or as many as he is capable of instructing and exhorting — to attend to him.” — Mv.I.55</p>
+
+<p>“Another’s following should not be lured away. Whoever should lure it away: an offense of wrong doing.” — Mv.I.59</p>
+
+<h3>Punishment</h3>
+<p>“I allow a punishment to be imposed on a novice endowed with five qualities: He strives for the bhikkhus' loss, he strives for the bhikkhus' harm, he strives for the bhikkhus' non-dwelling, he insults and reviles bhikkhus, he causes bhikkhus to split from bhikkhus. I allow a punishment to be imposed on a novice endowed with these five qualities.” — Mv.I.57.1</p>
+
+<p>“I allow a prohibition (placing something off limits) to be made.” “The entire monastery of the Community is not to be made off limits. Whoever should make it off limits: an offense of wrong doing. I allow wherever he (normally) lives, wherever he (normally) returns to, to be made off limits.” — Mv.I.57.2</p>
+
+<p>“A prohibition is not to be made regarding food to be taken by the mouth. Whoever should make (such a prohibition): an offense of wrong doing.” — Mv.I.57.3</p>
+
+<p>“A prohibition is not to be made without having taken leave of (the novice's/young bhikkhu's) preceptor. Whoever should make (such a prohibition): an offense of wrong doing.” — Mv.I.58</p>
+
+<p>“And novices are not to be flicked with tooth wood. Whoever should do so: an offense of wrong doing.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a></p>
+
+<h3>Expulsion</h3>
+<p>“I allow a novice endowed with ten qualities to be expelled: He is a taker of life, he is a taker of what is not given, he engages in unchastity, he is a speaker of lies, he is a drinker of intoxicants, he speaks dispraise of the Buddha, he speaks dispraise of the Dhamma, he speaks dispraise of the Saṅgha, he holds wrong views, he is a molester of a bhikkhunī. I allow that a novice endowed with these ten qualities be expelled.” — Mv.I.60</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.23.html#content"></a><a id="next-sutta" href="../bmc/bmc2.app1.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;2.24: Novices</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

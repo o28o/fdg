@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.23</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+ 	<p>&nbsp;</p>
+
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-center">
+	<div class="w3-bar">
+<a href="../bmc/bmc2.23.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bhikkunis</a>
+<a href="../bmc/bmc2.24.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Novices</a>
+</div>
+</div>
+
+ 	<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;23: Bhikkhunīs</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p>Rules governing the life of the bhikkhunīs are scattered throughout the Vinaya. Here we will focus on the rules in <a href="../vi/kd20.html">Khandhaka&nbsp;20 (Cv 10)</a> that govern the interaction of the bhikkhus with the bhikkhunīs. The rules in this Khandhaka that affect only the bhikkhunīs and not the bhikkhus are best understood in the context of the training rules in the <a href="../vi/bi-pt.html">Bhikkhunī Pāṭimokkha</a> and so are not discussed here.</p>
+
+<p>The rules governing relations between bhikkhus and bhikkhunīs fall into two categories: those governing formal relations between the two Communities, and those governing relations between individual bhikkhus and bhikkhunīs. Although some of these relations — those dealing with the sharing of material gains — are reciprocal, most of them favor the bhikkhus. To understand why, we should first consider the story of the founding of the Bhikkhunī Saṅgha.</p>
+
+<p>Now at that time, the Awakened One, the Blessed One, was staying near Kapilavatthu in the Banyan Grove. Then Mahāpajāpatī Gotamī went to the Blessed One and, on arrival, having bowed to him, stood to one side. As she was standing there, she said to him: “It would be good, venerable sir, if women might obtain the Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>“Enough, Gotamī. Don’t advocate women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata (§).”</p>
+
+<p>A second time… A third time she said to him: “It would be good, venerable sir, if women might obtain the Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>“Enough, Gotamī. Don’t advocate women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>So Mahāpajāpatī Gotamī, (thinking,) “The Blessed One does not allow women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata” — sad and unhappy, crying, her face in tears — bowed to the Blessed One, circumambulated him, keeping him to her right, and then went away.</p>
+
+<p>The Blessed One, having stayed as long as he liked in Kapilavatthu, set out for Vesālī. After wandering in stages, he arrived at Vesālī. There he stayed near Vesālī at the Gabled Hall in the Great Wood.</p>
+
+<p>Then Mahāpajāpatī Gotamī, having had her hair cut off, having donned ochre robes, set out for Vesālī together with a large number of Sakyan women. After wandering in stages, she arrived at Vesālī and went to the Gabled Hall in the Great Wood. Then she stood there outside the porch, her feet swollen, her limbs covered with dust, sad and unhappy, crying, her face in tears. Ven. Ānanda saw her standing there … and so asked her: “Why, Gotamī, why are you standing here … your face in tears?”</p>
+
+<p>“Because, venerable sir, the Blessed One does not allow women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>“In that case, Gotamī, stay right here for a moment (§) while I ask the Blessed One to allow women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>Then Ven. Ānanda went to the Blessed One and, on arrival, having bowed down to him, sat to one side. As he was sitting there he said to the Blessed One: “Venerable sir, Mahāpajāpatī Gotamī is standing outside the porch … her face in tears, because the Blessed One does not allow women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata. It would be good if women might obtain the Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>“Enough, Ānanda. Don’t advocate women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>A second time… A third time, Ven. Ānanda said: “… It would be good, venerable sir, if women might obtain the Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>“Enough, Ānanda. Don’t advocate women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p>Then the thought occurred to Ven. Ānanda: “The Blessed One does not allow women’s Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata. What if I were to find some other way to ask the Blessed One to allow women’s Going-forth …” So he said to the Blessed One: “Venerable sir, if a woman were to go forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata, would she be able to realize the fruit of stream-entry, once-returning, non-returning, or arahantship?”</p>
+
+<p>“Yes, Ānanda, she would…”</p>
+
+<p>“In that case, venerable sir, Mahāpajāpatī Gotamī has been of great service to the Blessed One. She was the Blessed One’s aunt, foster mother, nurse, giver of milk. When the Blessed One’s mother passed away, she gave him milk. It would be good if women might obtain the Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata.”</p>
+
+<p><a id="garudhammas"></a>&quot;Ānanda, if Mahāpajāpatī Gotamī accepts eight rules of respect, that will be her full Acceptance.</p>
+
+<ol>
+<li>“A bhikkhunī who has been fully accepted even for more than a century must bow down, rise up from her seat, salute with hands palm-to-palm over her heart, and perform the duties of respect to a bhikkhu even if he has been fully accepted on that very day. This rule is to be honored, respected, revered, venerated, never to be transgressed as long as she lives.</li>
+
+<li>“A bhikkhunī must not spend the rains in a residence where there is no bhikkhu (nearby)…</li>
+
+<li>“Every half-month a bhikkhunī should expect two things from the Bhikkhu Saṅgha: (permission to) ask for the date of the uposatha and (permission to) approach for an exhortation…</li>
+
+<li>“At the end of the Rains-residence, a bhikkhunī should invite (accusations from) both Saṅghas (the Bhikkhu and Bhikkhunī Saṅghas) on any of three grounds: what they have seen, what they have heard, what they have suspected…</li>
+
+<li>“A bhikkhunī who has broken any of the rules of respect must undergo penance for half a month under both Saṅghas…</li>
+
+<li>“Only after a trainee has trained in the six precepts for two years can she request Acceptance from both Saṅghas…</li>
+
+<li>“A bhikkhu must not in any way be insulted or reviled by a bhikkhunī…</li>
+
+<li>“From this day forward, the admonition of a bhikkhu by a bhikkhunī is forbidden, but the admonition of a bhikkhunī by a bhikkhu is not forbidden. This rule, too, is to be honored, respected, revered, venerated, never to be transgressed as long as she lives.</li>
+</ol>
+
+<p>“If Mahāpajāpatī Gotamī accepts these eight rules of respect, that will be her full Acceptance.”</p>
+
+<p>Then Ven. Ānanda, having learned the eight rules of respect in the Blessed One’s presence, went to Mahāpajāpatī Gotamī and, on arrival, said to her: “Gotamī, if you accept these eight rules of respect, that will be your full Acceptance…”</p>
+
+<p>“Ven. Ānanda, just as if a young woman — or man — fond of ornamentation, having been given a garland of lotuses or jasmine or scented creepers, having accepted it in both hands, were to place it on her head, in the same way I accept the eight rules of respect, never to transgress them as long as I live.”</p>
+
+<p>Then Ven. Ānanda returned to the Blessed One and, having bowed down, sat to one side. As he was sitting there he said: “Venerable sir, Mahāpajāpatī Gotamī has accepted the eight rules of respect. The Blessed One’s foster mother is fully accepted.”</p>
+
+<p>“But, Ānanda, if women had not obtained the Going-forth from the home life into homelessness in the doctrine and discipline made known by the Tathāgata, the holy life would have lasted long, the true Dhamma would have lasted 1,000 years. But now that they have gotten to go forth… this holy life will not last long, the true Dhamma will last only 500 years. Just as a clan in which there are many women and few men is easily plundered by robbers and thieves, in the same way, in whatever doctrine and discipline women get to go forth, the holy life does not last long… Just as a man might make an embankment in advance around a great reservoir to keep the waters from overflowing, in the same way I have set forth in advance the eight rules of respect for bhikkhunīs that they are not to transgress as long as they live.” <a href="../vi/kd20.html#28">Khandhaka&nbsp;20 (Cv 10) verse 28</a></p>
+
+<p>As the story makes clear, gender is not an issue in determining a person’s ability to practice the Dhamma and attain release. But from the Buddha&rsquo;s point of view it <i>was</i> an issue in his design of the Saṅgha as an institution. His concerns were pragmatic and strategic, aimed at the long-term survival of two things: the true Dhamma and the holy life. As <a href="../sn/sn16.13.html">SN16.13</a> explains, the survival of the true Dhamma meant not simply the brute survival of the teachings but the survival of the teaching unadulterated with “synthetic Dhamma” (<i>saddhamma-paṭirūpa</i>), later improvements that would call the authenticity of the true Dhamma into question. Why the existence of a women’s Community would speed up the appearance of synthetic Dhamma, the Buddha didn’t say, but he was willing to make the sacrifice so that women would have a chance to gain the noble attainments. The survival of the holy life, however, <i>is</i> a matter of the simple survival of the practice, even after the true Dhamma no longer has total monopoly in the Community. The analogy of the clan predominantly female shows that, in the Buddha&rsquo;s eyes, the survival of the holy life required a Community predominantly male. That was why he delayed granting Acceptance to his aunt, so that she would be willing to accept the eight rules of respect; that was why the requirements for Acceptance in the Bhikkhunī Saṅgha were more difficult and complicated than the requirements for Acceptance in the Bhikkhu Saṅgha; and that was why many of the rules governing relationships between the two Communities favored the bhikkhus over the bhikkhunīs.</p>
+
+<p>The bhikkhunīs did not accept this situation docilely. Soon after vowing to adhere to the eight rules of respect for the rest of her life, Mahāpajāpatī Gotamī requested that the bhikkhunīs be relieved of the most onerous one — the first. The fact that she was asking to renege on her word to the Buddha doomed the request to failure.</p>
+
+<p>Despite the imbalance in the relations between the two Communities, it is important to remember that, for more than a thousand years, the Bhikkhunī Saṅgha afforded the opportunity for countless women to reach the noble attainments. No other institution can come near to matching that claim.</p>
+
+<p><b>Communal relations.</b> When the Bhikkhunī Saṅgha was first founded, the bhikkhus were instructed to teach them the Vinaya and to conduct their Community transactions. With time, however, problems arose, as people suspected the bhikkhus and bhikkhunīs of meeting for clandestine purposes. A typical story is this:</p>
+
+<p>Now at that time bhikkhunīs, on seeing a bhikkhu along a main road, in a side road, or at a crossroads, having placed their bowls on the ground, having arranged their upper robes over one shoulder, kneeling down with hands raised palm-to-palm over the heart, confessed their offenses. People were offended and annoyed and spread it about: “Those are the mistresses of these; these are the lovers of those. Having scorned them last night, they are now asking their forgiveness.”</p>
+
+<p>As a result, the Buddha forbade the bhikkhus from conducting the bhikkhunīs' transactions, and placed the bhikkhunīs in charge of many of their own Community transactions. For instance, they chanted their own Pāṭimokkha and confessed their own offenses to one another. The bhikkhus' sole role in these transactions was to teach the bhikkhunīs how to do them.</p>
+
+<p>In other areas, however, the bhikkhus continued to play a role in the bhikkhunī’s Community transactions. If the bhikkhunīs were planning to impose a disciplinary transaction on another bhikkhunī, they were to consult with the bhikkhus as to what the precise punishment should be and were bound by the bhikkhus' decision. The Commentary to Khandhaka&nbsp;20 (Cv 10) notes that if they imposed a different transaction from that determined by the bhikkhus, they incurred a dukkaṭa under <a href="../vi/kd9.html">Khandhaka&nbsp;9 (Mv&nbsp;9)</a>. If the bhikkhunīs wanted to give full Acceptance to a female trainee, they first conducted an Acceptance transaction of their own and then sent a messenger to the bhikkhus, who conducted a second transaction. In other words, the candidate’s Acceptance had to be ratified by both Communities in order to be valid.</p>
+
+<p>Bhikkhunīs were not allowed to cancel the uposatha or Invitation of a bhikkhu, or to set in motion or to participate in any investigation of a bhikkhu’s offense. Bhikkhus, however, were allowed to cancel the uposatha or Invitation of a bhikkhunī, and could set in motion and participate in an investigation of a bhikkhunī’s offense.</p>
+
+<p><i>Exhortation.</i> The third rule of respect was that the bhikkhunīs request permission to approach the bhikkhus for exhortation every half-month. A bhikkhunī who did not go — unless she was ill or her exhortation had been canceled (see below) — incurred an offense under Bhikkhunīs' <a href="../bmc/bmc1.8-6.html#pc58">Pācittiya&nbsp;58</a>. The procedure was as follows: Two or three bhikkhunīs would approach a bhikkhu and, in the name of their Community, ask permission to approach one of the bhikkhus for the exhortation. The first bhikkhu, in turn, would join the bhikkhus who had met for the Pāṭimokkha and inform the bhikkhu who was reciting the Pāṭimokkha that the bhikkhunīs had requested permission to approach for an exhortation. Prior to his recitation (see <a href="../bmc/bmc2.15.html">Chapter&nbsp;15</a>), the bhikkhu reciting the Pāṭimokkha would first ask if there were any bhikkhus present who had already been authorized to exhort the bhikkhunīs. If there were, one of them was to exhort the bhikkhunīs. If there weren’t, the bhikkhus were to find out if any one among them was able and willing to exhort the bhikkhunīs (for the qualifications, see <a href="../bmc/bmc1.8-3.html#pc21">Pācittiya&nbsp;21</a>). If there was such a bhikkhu, he was to be authorized. If not, the bhikkhunīs were to be told to “attain consummation (in the practice) in an amicable way.”</p>
+
+<p>Once a bhikkhu had been authorized to exhort the bhikkhunīs, he incurred a dukkaṭa if he did not undertake the exhortation. The only bhikkhus exempt from this duty were those who were unqualified, those who were ill, and those setting out on a journey. (According to the Commentary, this last exemption applied only to a bhikkhu who planned to take a journey on the day of the uposatha or the day after.) If a bhikkhu, having undertaken the exhortation, did not have it announced to the bhikkhunīs or did not go to the exhortation as announced, he incurred a dukkaṭa. (BD states that these last two rules apply only in the case of a bhikkhu living alone in the wilderness, mentioned below, but the Commentary insists that they apply regardless of whether the exhortation has been arranged by a Community of bhikkhus or by a single bhikkhu.)</p>
+
+<p>If a bhikkhu living alone in the wilderness was approached by bhikkhunīs requesting permission to approach for an exhortation, he was to make an appointment to meet them in a more appropriate location for giving the exhortation. Any bhikkhunīs who did not keep the appointment incurred a dukkaṭa as well. This last ruling does not seem to fit with Bhikkhunīs' <a href="../bmc/bmc1.8-6.html#pc58">Pācittiya&nbsp;58</a>, which imposes a pācittiya on any bhikkhunī who does not attend an exhortation, but perhaps the pācittiya applies only when the exhortation has been arranged by a Community of bhikkhus. None of the texts discuss this point.</p>
+
+<p><i>Invitation.</i> The fourth rule of respect was that bhikkhunīs at the end of the Rains-residence would invite accusations both from their own Community and from the Community of bhikkhus. Not to invite among themselves was to incur a dukkaṭa offense; not to invite the bhikkhus was to incur an offense under Bhikkhunīs' <a href="../bmc/bmc1.8-6.html#pc57">Pācittiya&nbsp;57</a>. After experimenting with various ways of inviting together — including one instance when all the bhikkhus and all the bhikkhunīs held their Invitation as one, resulting in an uproar — the following procedure was worked out: After the bhikkhunīs had invited among themselves, they chose one of their members who was experienced and competent to go later in the day or on the next day to invite criticism from the Community of bhikkhus on behalf of the entire Community of bhikkhunīs.</p>
+
+<p><b>Individual relations.</b> <a href="../vi/kd20.html#7">Khandhaka&nbsp;20 (Cv10)</a> repeats <a href="../vi/kd16.html#87">Khandhaka&nbsp;16 (Cv&nbsp;6)</a> to reinforce the first rule of respect: that a bhikkhu may not bow down, rise up to greet, perform añjali, or perform other forms of respect due to superiors to a woman, even if she is a bhikkhunī.</p>
+
+<p>The etiquette if a bhikkhu and a bhikkhunī met on the road was that she was to step aside while still at a distance and make way for him. She was not to give him a blow. This rule was formulated when “a woman formerly from the Mallan clan (according to the Commentary, formerly the wife of a wrestler) went forth among the bhikkhunīs. Seeing a weak bhikkhu along the main road, she gave him a blow with the point of her shoulder and set him spinning (§).”</p>
+
+<p>If both of them were out for alms, the bhikkhunī was to show her bowl to the bhikkhu (this rule followed on the origin story reported in BMC1 with regard to <a href="../bmc/bmc1.9.html#Pd1">Pd 1</a>). If, in order to insult him, she showed him her bowl upside down, she incurred a dukkaṭa. She was to offer him food from her bowl, but only under certain circumstances was he allowed to accept it (see <a href="../bmc/bmc1.9.html#Pd1">Pd 1</a>). The origin story to these rules indicates that this protocol was something of a policing action, to make sure that the bhikkhunīs were not carrying contraband.</p>
+
+<p>One of the few rules of reciprocity was that a bhikkhu or bhikkhunī could not take gifts given for his/her own consumption and give them to a member of the other Community. (“People criticized and complained and spread it about, ’How can the masters give to others what is given for the purpose of their own consumption? Don’t we know how to give a gift?'”) However, an over-abundance of food — belonging either to the Community itself or to individuals within the Community — could be given to the other Community. This allowance applied to stored-up food (food formally given on a previous day — see <a href="../bmc/bmc1.8-4.html#pc38">Pācittiya&nbsp;38</a>) as well. The Commentary explains this latter part of the allowance by saying that food formally accepted by a member of one of the two Communities did not count as accepted for the other. Thus, for instance, food accepted yesterday by a bhikkhu did not count as “stored-up” from the point of view of a bhikkhunī who ate it today. The Commentary also states that if there were no unordained people around, the bhikkhus themselves could formally offer the food to the bhikkhunīs, and vice versa.</p>
+
+<p>If the bhikkhus had an abundance of lodgings (i.e., furniture) while the bhikkhunīs had none, the lodgings could be given to the bhikkhunīs on a temporary basis.</p>
+
+<p>The bhikkhunīs were not totally without recourse in case a bhikkhu mistreated them. The Bhikkhu Pāṭimokkha contains two rules — <a href="../bmc/bmc1.7-1.html#np4">Nissaggiya Pācittiya&nbsp;4</a> and <a href="../bmc/bmc1.7-2.html#np17">Nissaggiya Pācittiya&nbsp;17</a> — to prevent bhikkhus from getting the bhikkhunīs to perform personal services for them. Bhikkhunīs were also protected from sexual harassment by the bhikkhus. A bhikkhu who, with lustful thoughts, touched a bhikkhunī, spoke lewd words to her, or spoke in praise of her having sexual intercourse with him, would incur a saṅghādisesa offense under the relevant rules (<a href="../bmc/bmc1.5.html#sg2">Sanghādisesa 2</a>-<a href="../bmc/bmc1.5.html#sg4">4</a>). In addition, bhikkhunīs were allowed to inflict a formal punishment on a bhikkhu who had behaved toward a bhikkhunī in an unseemly manner. In the origin story to the relevant rules, some group-of-six bhikkhus had sprinkled muddy water on bhikkhunīs in hopes of attracting the bhikkhunīs to them (!); they had exposed their bodies, their thighs, and their genitals to the bhikkhunīs; had flirted with them or propositioned them. (According to the Commentary, this means that they suggested that the bhikkhunīs perform an indiscretion with them or with other men — although if they spoke lewd words or suggested sexual intercourse with themselves, they would be breaking the saṅghādisesa rules mentioned above.) In all of these cases, the bhikkhunīs were allowed to impose a punishment on the offending bhikkhu, even if he had performed any of these indiscretions with only one bhikkhunī: The Community of bhikkhunīs could formally agree that they would not pay homage to him.</p>
+
+<p>Parivara XV.8 gives additional reasons why the Community of bhikkhunīs could impose this punishment on a bhikkhu:</p>
+
+<ol class="alph">
+<li>he exposes both of his shoulders to bhikkhunīs,</li>
+<li>he strives for the material loss of bhikkhunīs,</li>
+<li>he strives for the detriment of bhikkhunīs,</li>
+<li>he strives for the non-residence of bhikkhunīs,</li>
+<li>he insults and reviles bhikkhunīs,</li>
+<li>he gets bhikkhus to break with bhikkhunīs.</li>
+</ol>
+
+<p>The Commentary explains that the bhikkhunīs were to meet in their nunnery and give notice, by means of an announcement stated three times, that they are not going to pay homage to the offender. The offender was then required to ask forgiveness of the bhikkhunīs, but he was not to do so directly. Instead, he was to go to the Community of bhikkhus or to an individual bhikkhu in his own monastery, bow down, and inform them/him that he asked the bhikkhunīs' forgiveness. The messenger then went to the bhikkhunīs and informed them, which lifted the punishment. In other words, the bhikkhunīs had no voice in whether or not to accept the request for forgiveness — although if the bhikkhu misbehaved again, the bhikkhunīs could reimpose the punishment, and the bhikkhus could meet to impose a censure transaction on the offender.</p>
+
+<p>However, if a bhikkhunī behaved in a similar manner to a bhikkhu — such as exposing her breasts, her genitals, or her thighs to a bhikkhu; striving for a bhikkhu’s material loss, etc. — the punishment was heavier. The Community of bhikkhus would meet to impose a restriction on her — forbidding her, for instance, from entering their monastery. If she didn’t abide by it, they could cancel her exhortation. According to the Commentary, the bhikkhus were not to go to the nunnery to announce this. Instead, when the bhikkhunīs came for the exhortation, they were to be told: “I cancel the exhortation of that bhikkhunī. Do not perform the Pāṭimokkha with her.” As the Canon says, the bhikkhunīs were then not allowed to include her in their Pāṭimokkha until the case was settled (which could involve a disciplinary transaction). There is a rule against an inexperienced, incompetent bhikkhu’s canceling a bhikkhunī’s exhortation, which implies that an individual bhikkhu, if knowledgeable and competent, was allowed to do so. There is also a rule against canceling a bhikkhunī’s exhortation without grounds. As long as the issue had not been settled, the bhikkhu in question could not go off on tour. He was duty-bound to reach a final verdict on the matter. If a disciplinary transaction was imposed on the bhikkhunī, this would require going before the rest of the bhikkhus to get their approval.</p>
+
+<p>Finally, the Buddha provided one further protection against the bhikkhunīs' being abused by bhikkhus or sāmaṇeras: Any man who had ever molested a bhikkhunī was, for the rest of his life, denied the opportunity of taking the Going-forth.</p>
+
+<h2>Rules</h2> <h3>Communal Transactions</h3>
+<p>“I allow that the discipline be taught to bhikkhunīs by bhikkhus.” <a href="../vi/kd20.html#52">Khandhaka&nbsp;20 (Cv 10)</a>.</p>
+
+<p>“Bhikkhunīs' offenses are not to be acknowledged by bhikkhus. I allow that bhikkhunīs' offenses be acknowledged by bhikkhunīs&quot;… “I allow bhikkhus to inform bhikkhunīs: 'This is how an offense is to be acknowledged.'” <a href="../vi/kd20.html#47">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>“The Pāṭimokkha is not to be recited to bhikkhunīs by bhikkhus. Whoever should recite it: an offense of wrong doing. I allow that the Pāṭimokkha be recited to bhikkhunīs by bhikkhunīs&quot;… “I allow bhikkhus to inform bhikkhunīs: 'This is how the Pāṭimokkha is to be recited.'” <a href="../vi/kd20.html#45">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>“Bhikkhunīs' transactions [C: the seven disciplinary transactions beginning with censure] are not to be done by bhikkhus. I allow that bhikkhunīs' transactions be done by bhikkhunīs&quot;… “I allow bhikkhus to inform bhikkhunīs: 'This is how the transaction is to be done.'” <a href="../vi/kd20.html#47">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>“I allow the bhikkhus, having determined the transaction, to give it over to the bhikkhunīs, and that the bhikkhunīs perform the transactions of the bhikkhunīs. I allow the bhikkhus, having determined the offense, to give it over to the bhikkhunīs, and that the bhikkhunīs acknowledge bhikkhunīs' offenses.” (§) <a href="../vi/kd20.html#51">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>Procedure and transaction statement for the acceptance of women into the Bhikkhunī Saṅgha — Cv.X.17</p>
+
+<p>Procedure and transaction statement for accepting a bhikkhunī through a messenger — Cv.X.22</p>
+
+<p>“A bhikkhunī should not cancel a bhikkhu’s uposatha. Even though she has canceled it, it is not (really) canceled. And for she who cancels it: an offense of wrong doing. A bhikkhunī should not cancel (a bhikkhu's) Invitation. Even though she has canceled it, it is not (really) canceled. And for she who cancels it: an offense of wrong doing. A bhikkhunī should not do an investigation (against a bhikkhu). Even though she has done it, it is not (really) done. And for she who does it: an offense of wrong doing. A bhikkhunī should not have an accusation set in motion (against a bhikkhu). Even though she has set it in motion, it is not (really) set in motion. And for she who sets it in motion: an offense of wrong doing. A bhikkhunī should not get (a bhikkhu) to give her leave. Even though she gets it, she has not (really) gotten it. And for she who gets it: an offense of wrong doing. A bhikkhunī should not make a formal charge (against a bhikkhu). Even though she has made it, it is not (really) made. And for she who makes it: an offense of wrong doing. A bhikkhunī should not make (a bhikkhu) testify. Even though she has made him testify, he is not (really) made to testify. And for she who makes him testify: an offense of wrong doing.</p>
+
+<p>“I allow that a bhikkhu cancel a bhikkhunī’s uposatha. When he has canceled it, it is properly canceled. And for he who cancels it: no offense. I allow that a bhikkhu cancel (a bhikkhunī's) Invitation. When he has canceled it, it is properly canceled. And for he who cancels it: no offense. I allow that a bhikkhu do an investigation (against a bhikkhunī). When he has done it, it is properly done. And for he who does it: no offense. I allow that a bhikkhu have an accusation set in motion (against a bhikkhunī). When he has set it in motion, it is properly set in motion. And for he who sets it in motion: no offense. I allow that a bhikkhu get (a bhikkhunī) to give him leave. When he gets it, he has properly gotten it. And for he who gets it: no offense. I allow that a bhikkhu make a formal charge (against a bhikkhunī). When he has made it, it is properly made. And for he who makes it: no offense. I allow that a bhikkhu make (a bhikkhunī) testify. When he has made her testify, she is properly made to testify. And for he who makes her testify: no offense.”</p><a href="../vi/kd20.html#133">Khandhaka&nbsp;20 (Cv 10)</a>
+
+<h3>Exhortation</h3>
+<p>“The entire Community of bhikkhunīs should not go for the exhortation. Whoever should do so: an offense of wrong doing&quot;… “I allow two or three bhikkhunīs to go for the exhortation. Approaching a single bhikkhu (!), arranging their robes over one shoulder, paying homage to his feet, kneeling with hands raised palm-to-palm in front of the heart, they are to say this: 'Master, the Community of bhikkhunīs pays homage to the feet of the Community of bhikkhus and requests permission to approach for the exhortation (§). May the Community of bhikkhus grant permission to approach for the exhortation.’</p>
+
+<p>“That bhikkhu should approach the bhikkhu reciting the Pāṭimokkha and say, ’Venerable sir, the Community of bhikkhunīs pays homage to the feet of the Community of bhikkhus and requests permission to approach for the exhortation. May the Community of bhikkhus grant permission to approach for the exhortation.' [This last sentence is missing in BD.] The bhikkhu reciting the Pāṭimokkha should say, ’Is there a bhikkhu who has been authorized as the one who exhorts the Community of bhikkhunīs?' If there is, the bhikkhu reciting the Pāṭimokkha should say, ’The bhikkhu named such-and-such is authorized as the one who exhorts the Community of bhikkhunīs. The Community of bhikkhunīs may approach him.’</p>
+
+<p>“If there is no bhikkhu who has been authorized as the one who exhorts the Community of bhikkhunīs, the bhikkhu reciting the Pāṭimokkha should say, ’Which venerable one is able/willing to exhort the bhikkhunīs?' If one is able/willing to exhort the bhikkhunīs and is endowed with the eight qualifications (see <a href="../bmc/bmc1.8-3.html#pc21">Pācittiya&nbsp;21</a>), then having authorized him, he should say, ’The bhikkhu named such-and-such is authorized as the one who exhorts the Community of bhikkhunīs. The Community of bhikkhunīs may approach him.’</p>
+
+<p>“If there is no one able/willing to exhort the bhikkhunīs, the bhikkhu reciting the Pāṭimokkha should say, ’There is no bhikkhu who has been authorized to exhort the bhikkhunīs. May the Community of bhikkhunīs strive for consummation in an amicable way.'” <a href="../vi/kd20.html">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>“The exhortation is not not to be given. Whoever (i.e., the bhikkhu authorized to give it) should not give it: an offense of wrong doing” … “I allow that the exhortation be given except by one who is incompetent, one who is ill, one who is setting out on a journey (§)&quot;… “I allow that a bhikkhu living in the wilderness give the exhortation, and that he make an appointment: 'I will bring it (§) to that place'&quot;… “The exhortation is not not to be announced. Whoever does not announce it: an offense of wrong doing&quot;… “One is not not to bring the exhortation. Whoever does not bring it: an offense of wrong doing&quot;… “Bhikkhunīs should not not go to the appointment. Whoever should not go: an offense of wrong doing.” <a href="../vi/kd20.html">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>“Having swept the area (for the exhortation), having set out water for drinking and washing, having arranged seats, having taken a companion (any male, according to the Commentary), the authorized bhikkhu is to sit down. The bhikkhunīs, having gone there, having bowed down to him, should sit to one side. The authorized bhikkhu is to ask them, ’Have you all come, sisters?' If they say, ’We have all come,’ (he is to ask them) 'Are the eight rules of respect memorized?' If they say, ’They are memorized,’ he is to present (the statement), ’This, sisters, is the exhortation.' If they say, ’They are not memorized,’ he is to recite (the eight rules)… If they say, ’We have all come' and he speaks of another Dhamma, he incurs a dukkaṭa. If they say, ’We have not all come,’ and he speaks of the eight rules of respect, he incurs a dukkaṭa. If, without having presented the exhortation, he speaks of another Dhamma, he incurs a dukkaṭa.” — <a href="../bmc/bmc1.8-3.html#pc21">Pācittiya&nbsp;21</a></p>
+
+<h3>Invitation</h3>
+<p>“The bhikkhunīs should not not invite. Whoever does not invite: an offense of wrong doing&quot;… “The bhikkhunīs, having invited among themselves, should not not invite the Community of bhikkhus. Whoever does not invite is to be dealt with in accordance with the rule (Bhikkhunīs' <a href="../bmc/bmc1.8-6.html#pc57">Pācittiya&nbsp;57</a>)&quot;… Now at that time, bhikkhunīs inviting together as one (§) with the bhikkhus created an uproar… “Bhikkhunīs should not invite together as one with the bhikkhus. Whoever should do so: an offense of wrong doing&quot;… “I allow the bhikkhunīs to invite after mealtime&quot;… “I allow them, having invited the Community of bhikkhunīs on one day, to invite the Community of bhikkhus the next day.” — Cv.X.19.1</p>
+
+<p>“I allow that one bhikkhunī — experienced and capable — be authorized to invite the Community of bhikkhus on behalf of the Community of bhikkhunīs.” Procedure and transaction statement — Cv.X.19.2</p>
+
+<h3>Inheritance</h3>
+<p>“If a bhikkhunī, as she is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhus is not the owner there. They belong to the Community of bhikkhunīs. If a female trainee … If a female novice, as she is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhus is not the owner there. They belong to the Community of bhikkhunīs.</p>
+
+<p>“If a bhikkhu, as he is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhunīs is not the owner there. They belong to the Community of bhikkhus. If a male novice … If a male lay follower … If a female lay follower … If anyone else, as he is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhunīs is not the owner there. They belong to the Community of bhikkhus.” — Cv.X.11</p>
+
+<h3>Personal Relations</h3>
+<p>“Bowing down, rising up to greet, greeting with hands raised palm-to-palm in front of the heart, or performing other forms of respect due to superiors are not to be done to a woman. Whoever should do so: an offense of wrong doing.” — Cv.X.3 (See Cv.VI.6.5)</p>
+
+<p>“A bhikkhunī should not give a blow to a bhikkhu. Whoever should give one: an offense of wrong doing. I allow that a bhikkhunī, on seeing a bhikkhu, should step aside while still at a distance and make way for him.” — Cv.X.12</p>
+
+<p>“A bhikkhunī should not take a fetus in a bowl. Whoever should do so: an offense of wrong doing. I allow a bhikkhunī, when seeing a bhikkhu, to take out her bowl and show it to him.” — Cv.X.13.1</p>
+
+<p>“I allow a bhikkhunī, when seeing a bhikkhu, to show him her bowl right side up. And she is to offer him whatever food there is in the bowl.” — Cv.X.13.2</p>
+
+<p>Now at that time people gave food to the bhikkhus, and the bhikkhus gave it to the bhikkhunīs. The people were offended and annoyed and spread it about: “How can the ladies give to others what is given for the purpose of their own consumption? Don’t we know how to give a gift?&quot;… “One should not give to others what is given for the purpose of one’s own consumption. Whoever should do so: an offense of wrong doing.”</p>
+
+<p>Now at that time the bhikkhus had an abundance of food… “I allow that what belongs to the Community be given (§).” There was an even greater abundance. “I allow that what belongs to an individual be given.” Now at that time the bhikkhus had an abundance of stored up food. “I allow that it be consumed by the bhikkhunīs when the bhikkhus have arranged for them to formally accept it.” — Cv.X.15.1</p>
+
+<p>Now at that time people gave food to the bhikkhunīs, and the bhikkhunīs gave it to the bhikkhus. The people were offended and annoyed and spread it about: “How can the masters give to others what is given for the purpose of their own consumption? Don’t we know how to give a gift?&quot;… “One should not give to others what is given for the purpose of one’s own consumption. Whoever should do so: an offense of wrong doing.”</p>
+
+<p>Now at that time the bhikkhunīs had an abundance of food… “I allow that what belongs to the Community be given.” There was an even greater abundance. “I allow that what belongs to an individual be given.” Now at that time the bhikkhunīs had an abundance of stored up food. “I allow that it be consumed by the bhikkhus when the bhikkhunīs have arranged for them to formally accept it.” — Cv.X.15.2</p>
+
+<p>Now at that time the bhikkhus had an abundance of lodgings while the bhikkhunīs had none… “I allow that lodgings be given to the bhikkhunīs on a temporary basis.” — Cv.X.16.1</p>
+
+<h3>Punishments</h3>
+<p>“A bhikkhu should not sprinkle muddy water on a bhikkhunī. Whoever should do so: an offense of wrong doing. I allow that a punishment be inflicted on that bhikkhu… He should not be paid homage by the Community of bhikkhunīs&quot;… “A bhikkhu, having exposed his body, should not show it to a bhikkhunī; having exposed his thigh … his genitals, he should not show them to a bhikkhunī. He should not flirt (§) with a bhikkhunī. He should not proposition (§) a bhikkhunī. Whoever should do so: an offense of wrong doing. I allow that a punishment be inflicted on that bhikkhu… He should not be paid homage by the Community of bhikkhunīs.” <a href="../vi/kd20.html">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>“A bhikkhunī should not sprinkle muddy water on a bhikkhu. Whoever should do so: an offense of wrong doing. I allow that a punishment be inflicted on that bhikkhunī… I allow that a restriction be placed on her.” (She didn’t abide by it) “I allow that the exhortation be canceled for her&quot;… “A bhikkhunī, having exposed her body, should not show it to a bhikkhu; having exposed her breast … her thigh … her genitals, she should not show them to a bhikkhu. She should not flirt (§) with a bhikkhu. She should not proposition (§) a bhikkhu. Whoever should do so: an offense of wrong doing. I allow that a punishment be inflicted on that bhikkhunī… I allow that a restriction be placed on her.” (She didn’t abide by it) “I allow that the exhortation be canceled for her.” <a href="../vi/kd20.html">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<p>“The bhikkhunīs should not carry out the uposatha together with a bhikkhunī whose exhortation has been canceled as long as the issue has not been settled&quot;… (BD has Ven. Upāli in the origin story for the following rule, whereas all four major editions of the Canon have Ven. Udāyin) “Having canceled (a bhikkhunī's) exhortation, one should not set out on a tour. Whoever should do so: an offense of wrong doing&quot;… “(A bhikkhunī's) exhortation is not to be canceled by an inexperienced, incompetent bhikkhu. Whoever should do so: an offense of wrong doing&quot;… “(A bhikkhunī's) exhortation is not to be canceled without grounds, without reason. Whoever should do so: an offense of wrong doing&quot;… “Having canceled (a bhikkhunī's) exhortation, one should not not give a final verdict. Whoever does not give one: an offense of wrong doing.” <a href="../vi/kd20.html">Khandhaka&nbsp;20 (Cv 10)</a></p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.22.html#content"></a><a id="next-sutta" href="../bmc/bmc2.24.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;23: Bhikkhunīs</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.4</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+ 	<p>&nbsp;</p>
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc2.1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Personal Grooming</a>
+<a href="../bmc/bmc2.2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Cloth Requisites</a>
+<a href="../bmc/bmc2.3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Alms Bowls and Other Requisites</a>
+<a href="../bmc/bmc2.4.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Food</a>
+<a href="../bmc/bmc2.5.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Medicine</a>
+<a href="../bmc/bmc2.6.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Lodgings</a>
+<a href="../bmc/bmc2.7.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Monastery Buildings and Property</a>
+<a href="../bmc/bmc2.8.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Respect</a>
+<a href="../bmc/bmc2.9.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Protocols</a>
+<a href="../bmc/bmc2.10.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Misbehavior</a>
+<a href="../bmc/bmc2.11.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Rains Residence</a>
+</div>
+
+ 	<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;4: Food</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p>The three main classes of food — staple foods, non-staple foods, and juice drinks — have already been discussed in BMC1 under the <a href="../bmc/bmc1.8-4.html">Food Chapter</a> of the pācittiya rules. The question of making fruit allowable has been discussed under <a href="../bmc/bmc1.8-2.html#pc11">Pācittiya&nbsp;11</a>. Here we will discuss aspects of the topic of food not covered in those passages.</p>
+
+<p><b>Cooking &amp; storing foods.</b> One may not consume food stored indoors, cooked indoors, or cooked by oneself. There is a separate dukkaṭa for each of these actions. Thus, if one consumes food stored indoors that one has cooked oneself, one incurs two dukkaṭas. According to the Commentary, <i>indoors</i> here means in an <i>akappiya-kuṭi</i> (a building that has not been designated as a food storage place) that would count as a “same lodging” with a bhikkhu under <a href="../bmc/bmc1.8-1.html#pc5">Pācittiya&nbsp;5</a> &amp; <a href="../bmc/bmc1.8-1.html#pc6">6</a>. <i>Stored</i> means kept overnight, even if the food has not been formally offered. (<a href="../bmc/bmc1.8-4.html#pc38">Pācittiya&nbsp;38</a> imposes a pācittiya on eating food kept overnight after it has been formally offered, regardless of where it has been kept.) Food stored or cooked in a food storage place <i>(kappiya-kuṭi</i> — see <a href="../bmc/bmc2.7.html">Chapter&nbsp;7</a>) doesn’t count as stored or cooked indoors. A lay person’s residence automatically counts as a kappiya-kuṭi, so a bhikkhu staying in such a place would be able to eat food that the lay person had stored and cooked there. These storing and cooking prohibitions apply only to staple foods, non-staple foods, and juice drinks, and not to medicines and tonics. However, if a medicine or tonic stored indoors is later mixed with food that has been kept in a kappiya-kuṭi, the resulting mixture counts as food stored indoors.</p>
+
+<p>Although a bhikkhu may not cook his food himself, the Canon allows him to reheat for his own use food that has already been cooked by another.</p>
+
+<p>The Meṇḍaka allowance (<a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a>) for gathering provisions for a journey is discussed under <a href="../bmc/bmc1.8-4.html#pc39">Pācittiya&nbsp;39</a>.</p>
+
+<p><b>Eating.</b> A bhikkhu should not eat from the same dish or drink from the same cup with anyone else at all, lay or ordained. The Commentary adds here, however, that if Bhikkhu X takes fruit from a dish and goes away, Bhikkhu Y may then take food from the same dish. After Bhikkhu Y goes away, Bhikkhu X may then come back for more. In other words, the prohibition is against using the same dish, etc., in the presence of another person who is also using it.</p>
+
+<p>There is also a prohibition against eating from a food warmer (made of metal or wood, says the Commentary), which the V/Sub-commentary explains as a bowl-like container into which hot water is poured, and over which is placed a bowl for keeping the food. A bhikkhu who is ill, however, may eat from a raised tray. The Commentary says that this allowance extends to trays made of wickerware or wood.</p>
+
+<p>A bhikkhu who regurgitates his food is allowed to swallow it again as long as it has not come out of his mouth. The Commentary defines <i>out of his mouth</i> as meaning sticking in the mouth. In other words, when regurgitated food comes into the mouth, one may swallow it if it flows back down the throat, but not if it stays in the mouth. The Commentary here is interpreting <i>mukha-dvāra,</i> literally the door of the face, as the larynx, and not the opening of the lips. Under <a href="../bmc/bmc1.8-4.html#pc40">Pācittiya&nbsp;40</a> I argued against this interpretation, noting that <a href="../mn/mn140.html">MN140</a> treats the mukha-dvāra as separate from the space “whereby what has been eaten, drunk, consumed, and savored gets swallowed.” The larynx belongs to the second space; this leaves the mouth for the first. The awkwardness of the Commentary’s interpretation here is yet another argument against taking mukha-dvāra to mean larynx — why food stuck in the mouth would be counted as outside the larynx but food that doesn’t get stuck would not, is hard to explain. A more reasonable interpretation would be the common-sense one: Regurgitated food may be swallowed again, even if it gets stuck in the mouth, but not if brought out of the mouth.</p>
+
+<p><b>Famine allowances.</b> The following actions, normally not allowed, are allowable during a famine: One may eat what has been stored indoors, cooked indoors, and cooked by oneself. If there is non-staple fruit and there is no one to make it allowable, one may pick it up and carry it away. If one meets an unordained person who can make it allowable, one may put the fruit on the ground and then consume it after having formally received it from that person. If one has eaten and turned down an offer of further food, one may still consume food that has not been made “leftover” (see <a href="../bmc/bmc1.8-4.html#pc35">Pācittiya&nbsp;35</a>) if it was brought back from where the meal was, if it was formally accepted before the meal, or if it is food that has grown in the woods or in a lotus pond — apparently these last two were places where people would go foraging during a famine.</p>
+
+<p><b>Garlic.</b> There is a prohibition against eating garlic unless one is ill. According to the Commentary, <i>ill</i> here means any illness for which garlic is a cure. Traditionally, garlic is used as an antibiotic and to ward off colds and flu. According to current medical knowledge, it also helps prevent high blood cholesterol. Although Asian food often contains garlic as an ingredient, none of the texts mention the use of garlic mixed in with food. Perhaps it is allowable on the grounds of being a digestive aid. An alternative interpretation, accepted by many Communities, is that the original prohibition is against eating garlic by itself. Following this interpretation, garlic mixed with other ingredients would be allowable even when one is not ill.</p>
+
+<p><b>Green gram.</b> <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a> tells of an incident in which Ven. Kaṅkha-Revata saw a heap of excrement out of which green gram (a mung bean) had sprouted. Noting that green gram, even when digested, can still sprout, he wondered if it might be allowable. The Buddha assured him that it was.</p>
+
+<h2>Rules</h2>
+<p>“I allow anything falling while being presented to be picked up by oneself and eaten. Why is that? Because it has been relinquished by the benefactors.” — Cv.V.26</p>
+
+<p>“One should not consume human flesh. Whoever should do so: a grave offense. And one should not consume meat without having reflected on it (on what it is). Whoever should do so: an offense of wrong doing.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“One should not consume elephant flesh … horse flesh … dog flesh … snake flesh … lion flesh … tiger flesh … leopard flesh … bear flesh … hyena flesh. Whoever should do so: an offense of wrong doing.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a>-15</p>
+
+<p>“One should not knowingly consume meat killed on purpose (for a bhikkhu). Whoever should consume it: an offense of wrong doing. I allow fish and meat that is pure in three respects: One has not seen, heard, or suspected (that it was killed on purpose for a bhikkhu).” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow all fruit that is non-staple.” — Mv.VI.38</p>
+
+<p>“A mango is not to be consumed. Whoever should consume one: an offense of wrong doing.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a> (This rule was later repealed by the rules at <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a>)</p>
+
+<p>“I allow mango peels.” … “I allow that fruit made allowable for contemplatives in any of five ways be consumed: damaged by fire, damaged by a knife, damaged by a fingernail, seedless, or with the seeds removed. I allow that fruit made allowable for contemplatives in any of these five ways be consumed.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a></p>
+
+<p>“I allow that fruit that has not been made allowable be consumed if it is without seeds, or if the seeds are discharged.” — Mv.VI.21</p>
+
+<p>“Although green gram, even when digested, sprouts, I allow that green gram be consumed as much as you like (§).” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow conjey and honey-lumps.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“When invited to a certain place, one should not consume the eating-conjey of another (donor). Whoever should consume it is to be dealt with in accordance with the rule (<a href="../bmc/bmc1.8-4.html#pc33">Pācittiya&nbsp;33</a>).” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow the five products of a cow: milk, curds, buttermilk, butter, ghee.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow eight juice drinks: mango juice drink, rose apple juice drink, seed-banana juice drink, seedless banana juice drink, <i>madhu</i> (<i>Bassia pierrei? Bassia latifolia?</i>) juice drink, grape juice drink, water-lily root juice drink, <i>phārusaka</i> (<i>Bouea burmanica (Anacardiaceae)?</i>) juice drink. I allow all fruit juice except for the juice of grain. I allow all leaf-juice except for the juice of cooked (§) vegetables. I allow all flower juice except for the juice of liquorice flowers. I allow fresh sugar cane juice.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow all vegetables and all non-staple foods made with flour.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“Garlic should not be eaten. Whoever should eat it: an offense of wrong doing.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a></p>
+
+<p>“I allow that garlic be eaten in the event of illness.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a></p>
+
+<h3>Cooking &amp; Storing</h3>
+<p>“One should not consume what is stored (§) indoors (in one’s dwelling), cooked indoors, or cooked by oneself.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow reheating.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“There are badland roads with little water, little food. It is not easy to go along them without provisions for a journey. I allow that provisions for a journey be sought out: husked rice by one who has need of husked rice, green-gram by one who has need of green gram, black-eye peas (§) by one who has need of black-eye peas, salt by one who has need of salt, sugar-lumps by one who has need of sugar-lumps, oil by one who has need of oil, ghee by one who has need of ghee.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<h3>Eating</h3>
+<p>“One should not eat from the same dish (with another person) (or) drink from the same cup… Whoever should do so: an offense of wrong doing.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a></p>
+
+<p>“One should not eat from a food-warmer (§). Whoever should do so: an offense of wrong doing&quot;… (A sick bhikkhu couldn’t hold his bowl in his hand while eating) “I allow a raised tray.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a></p>
+
+<p>“I allow ruminating for a ruminator. But one should not take in (ingest) anything brought outside of the mouth. Whoever should do so is to be dealt with in accordance with the rule (<a href="../bmc/bmc1.8-4.html#pc37">Pācittiya&nbsp;37</a>).” — Cv.V.25</p>
+
+<h3>Famine Allowances</h3>
+<p>“I allow storing indoors… I allow cooking indoors… I allow that one cook for oneself… I allow what is stored indoors, cooked indoors, and cooked by oneself.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow that where one sees non-staple fruit, and there is no one to make it allowable, having picked it up and carried it away, having seen someone to make it allowable, having placed it on the ground, having formally received it, one may consume it. I allow that one formally accept what one has picked up.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow that, having eaten and been satisfied, one may consume what has not been made left over if it is brought back from there (where the meal was).” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow that, having eaten and been satisfied, one may consume what has not been made left over if it was formally accepted before the meal.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow that, having eaten and been satisfied, one may consume what has not been made left over if it grows in the woods, if it grows in a lotus pond.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“Those things that were allowed by me for the bhikkhus when food was scarce, crops bad, and almsfood difficult to obtain: what was stored indoors, cooked indoors, cooked by oneself, accepting formally what was picked up; what was taken back from there; what was formally accepted before the meal; what grows in the woods; what grows in a lotus pond: From this day forward I rescind them. One should not consume what is stored indoors, cooked indoors, cooked by oneself; or what was formally accepted after having been picked up: Whoever should consume it: an offense of wrong doing. Nor should one, having eaten and been satisfied, consume food that is not left over if it is brought back from there (the place where the meal was offered), if it was formally accepted before the meal, if it grows in the woods or a lotus pond. Whoever should consume these is to be dealt with in accordance with the rule (<a href="../bmc/bmc1.8-4.html#pc35">Pācittiya&nbsp;35</a>).” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“Day-long food (juice drinks) mixed with time-period (morning) food, when received that day, is allowable in the time period, but not outside of the time period. Seven-day medicine (tonics) mixed with time-period food, when received that day, is allowable in the time period, but not outside of the time period. Life-long medicine mixed with time-period food, when received that day, is allowable in the time period, but not outside of the time period. Seven-day medicine mixed with day-long food, when received that day, is allowable through the watches of the night, but not when the watches of the night have passed. Life-long medicine mixed with day-long food, when received that day, is allowable through the watches of the night, but not when the watches of the night have passed. Life-long medicine mixed with seven-day medicine, when received, is allowable for seven days, but not when the seven days have passed.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<h3>From the Second Council</h3>
+
+<ol>
+	<li><p>Is the permission for a salt horn permissible?</p>
+
+<p class="verse">What is the permission for a salt horn?
+<br> “It is permissible to carry a salt horn, (thinking,) 'I will enjoy whatever is unsalted.'&quot;
+<br> That is not permissible.
+<br> Where is it objected to?
+<br> In Sāvatthī, in the Sutta Vibhaṅga (<a href="../bmc/bmc1.8-4.html#pc38">Pācittiya&nbsp;38</a>).
+<br> What offense is committed?
+<br> A pācittiya for stored-up food.</p></li>
+
+<li><p>Is the permission for two fingerbreadths permissible?</p>
+
+<p class="verse">What is the permission for two fingerbreadths?
+<br> “When the sun’s shadow has passed two fingerbreadths into the 'wrong time,’ it is still permissible to eat food.&quot;
+<br> That is not permissible.
+<br> Where is it objected to?
+<br> In Rājagaha, in the Sutta Vibhaṅga (<a href="../bmc/bmc1.8-4.html#pc37">Pācittiya&nbsp;37</a>).
+<br> What offense is committed?
+<br> A pācittiya for eating in the wrong time.</p></li>
+
+<li><p>Is the permission for among villages permissible?</p>
+
+<p class="verse">What is the permission for among villages?
+<br>“Having eaten and turned down an offer of further food, it is permissible for one who thinks, ’I will now go among villages/into the village,’ to eat food that is not left over.&quot;
+<br> That is not permissible.
+<br> Where is it objected to?
+<br> In Sāvatthī, in the Sutta Vibhaṅga (<a href="../bmc/bmc1.8-4.html#pc35">Pācittiya&nbsp;35</a>).
+<br> What offense is committed?
+<br> A pācittiya for eating what is not left over.</p></li>
+
+<li><p>Is the permission for thin sour milk (§) permissible?</p>
+<p class="verse">What is the permission for thin sour milk?
+<br> “Having eaten and turned down an offer of further food, it is permissible to drink milk that is not left over that has passed the state of being milk but not yet arrived at the state of being buttermilk.&quot;
+<br> That is not permissible.
+<br> Where is it objected to?
+<br> In Sāvatthī, in the Sutta Vibhaṅga (<a href="../bmc/bmc1.8-4.html#pc35">Pācittiya&nbsp;35</a>).
+<br> What offense is committed?
+<br> A pācittiya for eating what is not left over.</p></li>
+
+<li><p>Is the permission for unfermented toddy permissible?
+<br>
+<p class="verse"> What is the permission for unfermented toddy?
+<br> “It is permissible to drink toddy which is not yet alcoholic, which has not yet become an intoxicant.&quot;
+<br> That is not permissible.
+<br> Where is it objected to?
+<br> In Kosambī, in the Sutta Vibhaṅga (<a href="../bmc/bmc1.8-6.html#pc51">Pācittiya&nbsp;51</a>).
+<br> What offense is committed?
+<br> A pācittiya for drinking alcohol and fermented liquor. — Cv. XII.1.10</p></li>
+</ol>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.3.html#content"></a><a id="next-sutta" href="../bmc/bmc2.5.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;2.4: Food</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

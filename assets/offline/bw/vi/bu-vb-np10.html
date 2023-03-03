@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Nissaggiya Pācittiya&nbsp;10</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Nissaggiya Pācittiya&nbsp;10: Not to appoint a kappiya on his own, nor to be too pushy with a kappiya who is supposed to provide something.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.&nbsp; &nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+
+<div lang="en">
+
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍikaʼs Park. At that time a minister who was a supporter of Venerable Upananda sent a robe fund for Venerable Upananda by messenger, saying, "Buy a robe with this fund and give it to Venerable Upananda."</p>
+
+<hr>
+<p>The messenger went to Venerable Upananda and said: "Bhante, I have brought a robe fund for you. Please accept it."</p>
+
+<p>"We do not receive robe funds, but we do receive allowable robes at the right time."</p>
+
+<hr>
+<p>"Is there anyone who provides services for you?"</p>
+
+<p>Just then a certain lay disciple had come to the monastery on some business. Venerable Upananda told the messenger: "This lay disciple provides services for the monks."</p>
+
+<p>The messenger instructed that lay disciple and then returned to Venerable Upananda and said: "I have instructed the lay disciple you pointed out for me. Please approach him at the right time and he will give you a robe."</p>
+
+<p id="p2"><span class="parno">2</span>Later on that minister sent a messenger to Venerable Upananda, saying, "May the Venerable use the robe; we wish you to use the robe." But Venerable Upananda did not say anything to that lay disciple. The minister sent the same message a second time, but again Venerable Upananda did nothing. The minister then sent the message a third time.</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>"I need a robe."</p>
+
+<p>"Bhante, please wait one day, for today there is a community meeting, and an agreement has been made that whoever comes late gets fined fifty coins."</p>
+
+<hr>
+<p>"Give me the robe today," and he grabbed him by the belt.</p>
+
+<p>Being pressured by Venerable Upananda, the lay disciple bought him a robe, and as a consequence he was late for the meeting. People asked him: "Sir, why are you late? You have just lost fifty coins."</p>
+
+<p id="p4"><span class="parno">4</span>Even to provide them with a service is not easy. How can Venerable Upananda not agree when he is asked by a lay disciple to wait for a day?"</p>
+
+<p id="p5"><span class="parno">5</span>The monks heard the complaints of those people, and the monks of few desires … complained and criticised him: "How could Venerable Upananda not agree when asked by a lay disciple to wait for a day?"</p>
+
+<p id="p6"><span class="parno">6</span>After criticising Venerable Upananda in many ways, they informed the Master … "Is it true, Upananda, that you did not agree when asked by a lay disciple to wait for a day?"</p>
+
+<hr>
+<p>"Itʼs true, Master."</p>
+
+<p>The Buddha, the Master, rebuked him: " … Foolish man, how could you not agree when asked by a lay disciple to wait for a day? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p id="p7"><span class="parno">7</span><span class="rule">“If a king, a king’s employee, a brahman, or a householder sends a robe fund for a monk by messenger, saying, ‘Buy a robe with this robe fund and give it to monk so-and-so,’ and the messenger goes to that monk and says, ‘Bhante, I have brought a robe fund for you; please accept it,’ then that monk should reply, ‘We do not receive robe funds, but we do receive allowable robes at the right time.’ If that messenger then says, ‘Is there anyone who provides services for you?’, the monk, if he needs a robe, should point out a monastery attendant or a lay follower and say, ‘He provides services for the monks.’ If the messenger instructs that service-provider and then returns to the monk and says, ‘Bhante, I have instructed the service-provider you pointed out; please approach him at the right time and he will give you a robe,’ then, if that monk needs a robe, he should approach that service provider and prompt him and remind him two or three times, saying, ʻI need a robe.ʼ If he then gets a robe, good. If he does not get it, he should stand in silence for it at most six times. If he then gets a robe, good. If he makes any further effort and then gets the robe, he commits an offence entailing relinquishment and confession. If he does not get a robe, he should go to the owner of that robe fund, or send a messenger: ʻSirs, that monk has not received any benefit from the robe fund you sent for him. May you get back what is yours; may it not be lost.ʼ This is the proper procedure."</span></p>
+
+<h3>Definitions</h3>
+
+<p id="p8"><span class="parno">8</span><span class="term">For a monk</span>: <span class="gloss">for the benefit of a monk; making a monk the object of consideration, they desire to supply him.</span></p>
+
+<p id="p9"><span class="parno">9</span><span class="term">A king</span>: <span class="gloss">whoever rules.</span></p>
+
+<p id="p10"><span class="parno">10</span><span class="term">A kingʼs employee</span>: <span class="gloss">whoever gets food and wages from a king.</span></p>
+
+<p id="p11"><span class="parno">11</span><span class="term">A brahmin</span>: <span class="gloss">a brahmin by birth.</span></p>
+
+<hr>
+<p id="p12"><span class="parno">12</span><span class="term">A householder</span>: <span class="gloss">anyone apart from a king, a kingʼs employee, and a brahmin.</span></p>
+
+<p id="p13"><span class="parno">13</span><span class="term">A robe fund</span>: <span class="gloss">gold, a pearl, or a gem.</span></p>
+
+<p id="p14"><span class="parno">14</span><span class="term">With this robe fund</span>: <span class="gloss">with that which is at his disposal.</span></p>
+
+<p id="p15"><span class="parno">15</span><span class="term">Buy</span>: <span class="gloss">having exchanged.</span></p>
+
+<hr>
+<p id="p16"><span class="parno">16</span><span class="term">Give</span>: <span class="gloss">donate.</span></p>
+
+<p id="p17"><span class="parno">17</span><span class="term">And the messenger goes to that monk and says, "Bhante, I have brought a robe fund for you; please accept it," then that monk should reply, "We do not receive robe funds, but we do receive allowable robes at the right time." If that messenger then says, "Is there anyone who provides services for you?", the monk, if he needs a robe, should point out a monastery attendant or a lay disciple and say, "He provides services for the monks"</span>: <span class="gloss">he should not say, "Give it to him," or "He will put it aside," or, "He will do the exchange," or, "He will buy it."</span></p>
+
+<p id="p18"><span class="parno">18</span><span class="term">If the messenger instructs that service provider and then returns to the monk and says, "Bhante, I have instructed the service provider you pointed out; please approach him at the right time and he will give you a robe," then, if that monk needs a robe, he should approach that service provider and prompt him and remind him two or three times, saying, "I need a robe"</span>: he should not say, "Give me a robe," or "Get me a robe," or, "Get a robe in exchange for me," or, "Buy me a robe."</p>
+
+<hr>
+<p id="p19"><span class="parno">19</span>He should say it a second and a third time. If he gets it, good. If he does not get it, he should go there and ‒</p>
+
+<hr>
+<p><span class="term">He should stand in silence for it</span>:</p>
+
+<p>He should not sit down on a seat. He should not accept a gift. He should not or he accepts a gift, or he speaks on Dhamma, he loses one allowance to stand.</p>
+
+<hr>
+<p id="p20"><span class="parno">20</span>He should stand a second and a third time. If he prompts four times, he can stand four times. If he prompts five times, he can stand twice. If he prompts six times, he cannot stand at all.</p>
+
+<p>If he make any further effort and the robe then appears, he commits an offence of bad conduct for the effort. When he gets the robe, he commits an offence entailing relinquishment. The robe is to be relinquished to a Saṅgha, a group, or an individual.</p>
+
+<p>"And, monks, it is to be relinquished in this way. … <span class="add">To be expanded as in Relinquishment 1, MS paragraphs <span class="ref">1873–1877</span>, with appropriate substitutions.</span> … ʻBhante, this robe of mine, which I got after prompting more than three times and standing more than six times, is to be relinquished. I relinquish it to the Saṅgha.ʼ … the Saṅgha should give … the Venerables should give … ʻI give this robe back to the Venerable.ʼ"</p>
+
+<p id="p21"><span class="parno">21</span>If he does not get a robe, he should go to the owner of that robe fund, or send a messenger: ʻSirs, that monk has not received any benefit from the robe fund you sent for him. May you get back what is yours; may it not be lost.ʼ</p>
+
+<p id="p22"><span class="parno">22</span>This is the proper procedure: this is the right method.</p>
+
+<h3>Permutations</h3>
+
+<p id="p23"><span class="parno">23</span>If he prompts more than three times and stands more than six times, and he perceives that he has, and he gets the robe, he commits an offence entailing relinquishment and confession. If he prompts more than three times and stands more than six times, but he has doubts about it, and he gets the robe, he commits an offence entailing relinquishment and confession. If he prompts more than three times and stands more than six times, but he perceives that it is less, and he gets the robe, he commits an offence entailing relinquishment and confession.</p>
+
+<p id="p24"><span class="parno">24</span>If he prompts less than three times and stands less than six times, but he perceives that it is more, he commits an offence of bad conduct. If he prompts less than three times and stands less than six times, but he has doubts about it, he commits an offence of bad conduct. If he prompts less than three times and stands less than six times, and he perceives that it is less, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p25"><span class="parno">25</span>There is no offence: if he prompts three times; if he stands six time; if he prompts less than three times; if he stands less than six times; if it is given without prompting; if he prompts the owners and they give; if he is insane; if he is the first offender.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">26</span>The tenth rule, the training rule on kings, is finished.</p>
+
+<p class="endsutta">The first chapter on the <i>kathina</i> frame is finished.</p>
+
+<hr>
+<p id="p27"><span class="parno">27</span>This is the summary:</p>
+
+<p id="p28" class="verse"><span class="parno">28</span>Three on the ended <i>kathina</i> period,
+<br>Washing, receiving;
+<br>Three on those who are unrelated,
+<br>Of both, by messenger.</p>
+
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali--> <h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_2070, msdiv537</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena āyasmato upanandassa sakyaputtassa upaṭṭhāko mahāmatto āyasmato upanandassa sakyaputtassa dūtena cīvaracetāpannaṁ pāhesi— "iminā cīvaracetāpannena cīvaraṁ cetāpetvā ayyaṁ upanandaṁ cīvarena acchādehī"ti.</p>
+
+<hr>
+<p>Atha kho so dūto yenāyasmā upanando sakyaputto tenupasankami; upasankamitvā āyasmantaṁ upanandaṁ sakyaputtaṁ etadavoca: "Idaṁ kho, bhante, āyasmantaṁ uddissa cīvaracetāpannaṁ ābhataṁ. Paṭiggaṇhātu āyasmā cīvaracetāpannan"ti.</p>
+
+<p>Evaṁ vutte āyasmā upanando sakyaputto taṁ dūtaṁ etadavoca: "na kho mayaṁ, āvuso, cīvaracetāpannaṁ paṭiggaṇhāma, cīvarañca kho mayaṁ paṭiggaṇhāma kālena kappiyan"ti.</p>
+
+<hr>
+<p>Evaṁ vutte, so dūto āyasmantaṁ upanandaṁ sakyaputtaṁ etadavoca: "atthi panāyasmato koci veyyāvaccakaro"ti?</p>
+
+<p>Tena kho pana samayena aññataro upāsako ārāmaṁ agamāsi kenacideva karaṇīyena. Atha kho āyasmā upanando sakyaputto taṁ dūtaṁ etadavoca: "eso kho, āvuso, upāsako bhikkhūnaṁ veyyāvaccakaro"ti.</p>
+
+<p>Atha kho so dūto taṁ upāsakaṁ saññāpetvā yenāyasmā upanando sakyaputto tenupasankami; upasankamitvā āyasmantaṁ upanandaṁ sakyaputtaṁ etadavoca: "yaṁ kho, bhante, āyasmā veyyāvaccakaraṁ niddisi saññatto so mayā. Upasankamatu āyasmā kālena, cīvarena taṁ acchādessatī"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_1V_2071</span>Tena kho pana samayena so mahāmatto āyasmato upanandassa sakyaputtassa santike dūtaṁ pāhesi— "paribhuñjatu ayyo taṁ cīvaraṁ, icchāma mayaṁ ayyena taṁ cīvaraṁ paribhuttan"ti. Atha kho āyasmā upanando sakyaputto taṁ upāsakaṁ na kiñci avacāsi. Dutiyampi kho so mahāmatto āyasmato upanandassa sakyaputtassa santike dūtaṁ pāhesi— "paribhuñjatu ayyo taṁ cīvaraṁ, icchāma mayaṁ ayyena taṁ cīvaraṁ paribhuttan"ti. Dutiyampi kho āyasmā upanando sakyaputto taṁ upāsakaṁ na kiñci avacāsi. Tatiyampi kho so mahāmatto āyasmato upanandassa sakyaputtassa santike dūtaṁ pāhesi— "paribhuñjatu ayyo taṁ cīvaraṁ, icchāma mayaṁ ayyena taṁ cīvaraṁ paribhuttan"ti.</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_1V_2072</span>Tena kho pana samayena negamassa samayo hoti. Negamena ca katikā katā hoti— "yo pacchā āgacchati paññāsaṁ baddho"ti. Atha kho āyasmā upanando sakyaputto yena so upāsako tenupasankami; upasankamitvā taṁ upāsakaṁ etadavoca: "attho me, āvuso, cīvarenā"ti.</p>
+
+<p>"Ajjaṇho, bhante, āgamehi, ajja negamassa samayo. Negamena ca katikā katā hoti— ‘yo pacchā āgacchati paññāsaṁ baddho’"ti.<span class="parno">[[%ask:ParaNo:]]</span></p>
+
+<hr>
+<p>"Ajjeva me, āvuso, cīvaraṁ dehī"ti ovaṭṭikāya parāmasi.</p>
+
+<p>Atha kho so upāsako āyasmatā upanandena sakyaputtena nippīḷiyamāno āyasmato upanandassa sakyaputtassa cīvaraṁ cetāpetvā pacchā agamāsi. Manussā taṁ upāsakaṁ etadavocuṁ: "Kissa tvaṁ, ayyo, pacchā āgato, paññāsaṁ jīnosī"ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_1V_2073</span>Atha kho so upāsako tesaṁ manussānaṁ etamatthaṁ ārocesi. Manussā ujjhāyanti khiyyanti vipācenti:  "mahicchā ime samaṇā sakyaputtiyā asantuṭṭhā. Nayimesaṁ sukaraṁ veyyāvaccampi kātuṁ. Kathañhi nāma āyasmā upanando upāsakena— ‘ajjaṇho, bhante, āgamehī’ti vuccamāno nāgamessatī"ti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_1V_2074</span>Assosuṁ kho bhikkhū tesaṁ manussānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma āyasmā upanando sakyaputto upāsakena— ‘ajjaṇho, bhante, āgamehī’ti vuccamāno nāgamessatī"ti.</p>
+
+<p><span class="parno">6</span><span class="ms">p_1V_2075</span>Atha kho te bhikkhū āyasmantaṁ upanandaṁ sakyaputtaṁ anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira tvaṁ, upananda, upāsakena— ‘ajjaṇho, bhante, āgamehī’ti vuccamāno nāgamesī"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … katañhi nāma tvaṁ, moghapurisa, upāsakena ‘ajjaṇho, bhante, āgamehī’ti vuccamāno nāgamessasi. Netaṁ, moghapurisa, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">7</span><span class="ms">p_1V_2076, msdiv538</span><span class="rule">"Bhikkhuṁ paneva uddissa rājā vā rājabhoggo vā brāhmaṇo vā gahapatiko vā dūtena cīvaracetāpannaṁ pahiṇeyya— ‘iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuṁ cīvarena acchādehī’ti. So ce dūto taṁ bhikkhuṁ upasankamitvā evaṁ vadeyya— ‘idaṁ kho, bhante, āyasmantaṁ uddissa cīvaracetāpannaṁ ābhataṁ, paṭiggaṇhātu āyasmā cīvaracetāpannan’ti, tena bhikkhunā so dūto evamassa vacanīyo: ‘Na kho mayaṁ, āvuso, cīvaracetāpannaṁ paṭiggaṇhāma. Cīvarañca kho mayaṁ paṭiggaṇhāma, kālena kappiyan’ti. So ce dūto taṁ bhikkhuṁ evaṁ vadeyya— ‘atthi panāyasmato koci veyyāvaccakaro’ti, cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro niddisitabbo ārāmiko vā upāsako vā— ‘eso kho, āvuso, bhikkhūnaṁ veyyāvaccakaro’ti. So ce dūto taṁ veyyāvaccakaraṁ saññāpetvā taṁ bhikkhuṁ upasankamitvā evaṁ vadeyya— ‘Yaṁ kho, bhante, āyasmā veyyāvaccakaraṁ niddisi saññatto so mayā, upasankamatu āyasmā kālena, cīvarena taṁ acchādessatī’ti, cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro upasankamitvā dvattikkhattuṁ codetabbo sāretabbo— ‘attho me, āvuso, cīvarenā’ti. Dvattikkhattuṁ codayamāno sārayamāno taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ; no ce abhinipphādeyya, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtena uddissa ṭhātabbaṁ. Catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūto uddissa tiṭṭhamāno taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ; tato ce uttari vāyamamāno taṁ cīvaraṁ abhinipphādeyya, nissaggiyaṁ pācittiyaṁ. No ce abhinipphādeyya, yatassa cīvaracetāpannaṁ ābhataṁ, tattha sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— ‘Yaṁ kho tumhe āyasmanto bhikkhuṁ uddissa cīvaracetāpannaṁ pahiṇittha, na taṁ tassa bhikkhuno kiñci atthaṁ anubhoti, yuñjantāyasmanto sakaṁ, mā vo sakaṁ vinassā’ti, ayaṁ tattha sāmīcī"</span>ti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">8</span><span class="ms">p_1V_2077, msdiv539</span><b>Bhikkhuṁ paneva uddissā</b>'ti bhikkhussatthāya, bhikkhuṁ ārammaṇaṁ karitvā, bhikkhuṁ acchādetukāmo.</p>
+
+<p><span class="parno">9</span><span class="ms">p_1V_2078</span><b>Rājā</b> nāma yo koci rajjaṁ kāreti.</p>
+
+<p><span class="parno">10</span><span class="ms">p_1V_2079</span><b>Rājabhoggo</b> nāma yo koci rañño bhattavetanāhāro.</p>
+
+<p><span class="parno">11</span><span class="ms">p_1V_2080</span><b>Brāhmaṇo</b> nāma jātiyā brāhmaṇo.</p>
+
+<hr>
+<p><span class="parno">12</span><span class="ms">p_1V_2081</span><b>Gahapatiko</b> nāma ṭhapetvā rājaṁ rājabhoggaṁ brāhmaṇaṁ avaseso gahapatiko nāma.</p>
+
+<p><span class="parno">13</span><span class="ms">p_1V_2082</span><b>Cīvaracetāpannaṁ</b> nāma hiraññaṁ vā suvaṇṇaṁ vā muttā vā maṇi vā.</p>
+
+<p><span class="parno">14</span><span class="ms">p_1V_2083</span><b>Iminā cīvaracetāpannenā</b>'ti paccupaṭṭhitena.</p>
+
+<p><span class="parno">15</span><span class="ms">p_1V_2084</span><b>Cetāpetvā</b>'ti parivattetvā.</p>
+
+<hr>
+<p><span class="parno">16</span><span class="ms">p_1V_2085</span><b>Acchādehī</b>'ti dajjehi.</p>
+
+<p><span class="parno">17</span><span class="ms">p_1V_2086</span>So ce dūto taṁ bhikkhuṁ upasankamitvā evaṁ vadeyya— "Idaṁ kho, bhante, āyasmantaṁ uddissa cīvaracetāpannaṁ ābhataṁ. Paṭiggaṇhātu āyasmā cīvaracetāpannan"ti, tena bhikkhunā so dūto evamassa vacanīyo: "na kho mayaṁ, āvuso, cīvaracetāpannaṁ paṭiggaṇhāma. Cīvarañca kho mayaṁ paṭiggaṇhāma, kālena kappiyan"ti. So ce dūto taṁ bhikkhuṁ evaṁ vadeyya— "atthi panāyasmato koci veyyāvaccakaro"ti? Cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro niddisitabbo ārāmiko vā upāsako vā— "eso kho, āvuso, bhikkhūnaṁ veyyāvaccakaro"ti. Na vattabbo— "tassa dehīti vā, so vā nikkhipissati, so vā parivattessati, so vā cetāpessatī"ti.</p>
+
+<p><span class="parno">18</span><span class="ms">p_1V_2087</span>So ce dūto taṁ veyyāvaccakaraṁ saññāpetvā taṁ bhikkhuṁ upasankamitvā evaṁ vadeyya— "yaṁ kho, bhante, āyasmā veyyāvaccakaraṁ niddisi saññatto so mayā. Upasankamatu āyasmā kālena, cīvarena taṁ acchādessatī"ti. Cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro upasankamitvā dvattikkhattuṁ codetabbo sāretabbo— "attho me, āvuso, cīvarenā"ti. Na vattabbo— "dehi me cīvaraṁ, āhara me cīvaraṁ, parivattehi me cīvaraṁ, cetāpehi me cīvaran"ti.</p>
+
+<hr>
+<p><span class="parno">19</span><span class="ms">p_1V_2088</span>Dutiyampi vattabbo. Tatiyampi vattabbo. Sace abhinipphādeti, iccetaṁ kusalaṁ; no ce abhinipphādeti,</p>
+
+<hr>
+<p>tattha gantvā tuṇhībhūtena uddissa ṭhātabbaṁ.</p>
+
+<p>Na āsane nisīditabbaṁ. Na āmisaṁ paṭiggahetabbaṁ. Na dhammo bhāsitabbo. "Kiṁ kāraṇā āgatosī"ti pucchiyamāno "jānāhi, āvuso"ti vattabbo. Sace āsane vā nisīdati, āmisaṁ vā paṭiggaṇhāti, dhammaṁ vā bhāsati, ṭhānaṁ bhañjati.</p>
+
+<hr>
+<p><span class="parno">20</span><span class="ms">p_1V_2089</span>Dutiyampi ṭhātabbaṁ. Tatiyampi ṭhātabbaṁ. Catukkhattuṁ codetvā catukkhattuṁ ṭhātabbaṁ. Pañcakkhattuṁ codetvā dvikkhattuṁ ṭhātabbaṁ. Chakkhattuṁ codetvā na ṭhātabbaṁ.</p>
+
+<p>Tato ce uttari vāyamamāno taṁ cīvaraṁ abhinipphādeti, payoge dukkaṭaṁ. Paṭilābhena nissaggiyaṁ hoti.</p>
+
+<p>Nissajjitabbaṁ sanghassa vā gaṇassa vā puggalassa vā. Evañca pana, bhikkhave, nissajjitabbaṁ … pe … "Idaṁ me, bhante, cīvaraṁ atirekatikkhattuṁ codanāya atirekachakkhattuṁ ṭhānena abhinipphāditaṁ nissaggiyaṁ. Imāhaṁ sanghassa nissajjāmī"ti … pe … dadeyyāti … pe … dadeyyunti … pe … āyasmato dammīti.</p>
+
+<p><span class="parno">21</span><span class="ms">p_1V_2090</span>No ce abhinipphādeyya, yatassa cīvaracetāpannaṁ ābhataṁ tattha sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "yaṁ kho tumhe, āyasmanto, bhikkhuṁ uddissa cīvaracetāpannaṁ pahiṇittha na taṁ tassa bhikkhuno kiñci atthaṁ anubhoti. Yuñjantāyasmanto sakaṁ, mā vo sakaṁ vinassā"ti.</p>
+
+<p><span class="parno">22</span><span class="ms">p_1V_2091</span><b>Ayaṁ tattha sāmīcī</b>'ti ayaṁ tattha anudhammatā.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">23</span><span class="ms">p_1V_2092, msdiv540</span>Atirekatikkhattuṁ codanāya atirekachakkhattuṁ ṭhānena atirekasaññī abhinipphādeti, nissaggiyaṁ pācittiyaṁ. Atirekatikkhattuṁ codanāya atirekachakkhattuṁ ṭhānena vematiko abhinipphādeti, nissaggiyaṁ pācittiyaṁ. Atirekatikkhattuṁ codanāya atirekachakkhattuṁ ṭhānena ūnakasaññī abhinipphādeti, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p><span class="parno">24</span><span class="ms">p_1V_2093</span>Ūnakatikkhattuṁ codanāya ūnakachakkhattuṁ ṭhānena atirekasaññī, āpatti dukkaṭassa. Ūnakatikkhattuṁ codanāya ūnakachakkhattuṁ ṭhānena vematiko, āpatti dukkaṭassa. Ūnakatikkhattuṁ codanāya ūnakachakkhattuṁ ṭhānena ūnakasaññī anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">25</span><span class="ms">p_1V_2094, msdiv541</span>Anāpatti— tikkhattuṁ codanāya, chakkhattuṁ ṭhānena, ūnakatikkhattuṁ codanāya, ūnakachakkhattuṁ ṭhānena, acodiyamāno deti, sāmikā codetvā denti, ummattakassa, ādikammikassāti.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">26</span><span class="ms">p_1V_2095</span>Rājasikkhāpadaṁ niṭṭhitaṁ dasamaṁ.</p>
+
+<p class="endsutta">Kaṭhinavaggo paṭhamo.</p>
+
+<hr>
+<p><span class="parno">27</span><span class="ms">p_1V_2096</span>Tassuddānaṁ</p>
+
+<p class="verse"><span class="parno">28</span><span class="ms">p_1V_2097</span>Ubbhataṁ kathinaṁ tīṇi,
+<br>dhovanañca paṭiggaho;
+<br>Aññātakāni tīṇeva,
+<br>ubhinnaṁ dūtakena cāti.</p>
+
+</div><!--End Pali-->
+
+</section>
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-np9.html#content"></a><a id="next-sutta" href="../vi/bu-vb-np11.html#content"></a></div>
+
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya&nbsp;10
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

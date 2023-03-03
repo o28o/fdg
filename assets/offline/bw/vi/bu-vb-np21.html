@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Nissaggiya Pācittiya&nbsp;21</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Nissaggiya Pācittiya&nbsp;21: The Training Rule on Bowls.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.&nbsp; &nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<div>
+<h3>Origin story</h3>
+<h4>First sub-story</h4>
+</div>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍika’s Monastery. At that time some monks belonging to the group of six were storing up many bowls. People who were touring the lodgings saw this, and they grumbled and complained: “How can the Sakyan ascetics store up many bowls? Will they start up as bowl merchants or set up a bowl shop?"</p>
+
+<p id="p2"><span class="parno">2</span>Monks heard the complaints of those people, and the monks of few desires … complained and criticised those monks: “How can those monks belonging to the group of six keep extra bowls?"</p>
+
+<p id="p3"><span class="parno">3</span>After criticising those monks in many ways, they informed the Master. … “Is it true, monks, that you are keeping extra bowls?" “It’s true, Master." The Buddha, the Master, criticised them: “ … Foolish men, how can you keep extra bowls? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h4>Preliminary ruling</h4>
+
+<p class="rule"><span class="parno">4</span>“If a monk keeps an extra bowl, he commits an offence entailing relinquishment and confession."</p>
+
+<p id="p5"><span class="parno">5</span>In this way the Master laid down this training rule for the monks.</p>
+
+<h4>Second sub-story</h4>
+
+<p id="p6"><span class="parno">6</span>Soon afterwards a bowl was offered to Venerable Ānanda, but he wished to give it to Venerable Sāriputta who was staying at Sāketa. Knowing that the Buddha had laid down a rule against keeping an extra bowl, Venerable Ānanda thought: “What should I do in this situation?" He informed the Master, who said: “How long is it, Ānanda, before Sāriputta returns?"</p>
+
+<hr>
+<p>“Nine or ten days, Master."</p>
+
+<p>The Master then spoke on the Dhamma and addressed the monks: “Monks, I allow you to keep an extra bowl for ten days at the most. And so, monks, this training rule should be recited thus:"</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">7</span>“A monk should keep an extra bowl for ten days at the most. If he keeps it beyond that, he commits an offence entailing relinquishment and confession."</p>
+
+<h3>Definitions</h3>
+
+<p id="p8"><span class="parno">8</span>Ten days at the most: it is to be kept at most ten days.</p>
+
+<p id="p9"><span class="parno">9</span>An extra bowl: a bowl that is not determined, nor placed under shared ownership.</p>
+
+<p id="p10"><span class="parno">10</span>Bowl: there are two kinds of bowl: the iron bowl and the clay bowl.</p>
+
+<p id="p11"><span class="parno">11</span>And there are three kinds of bowl: the large bowl, the medium bowl, and the small bowl. Anything larger than this is not a bowl, nor anything smaller. The large bowl: it takes half an <i>āḷhaka</i> measure of rice, a fourth part of non-staple food, and suitable curry. The medium bowl: it takes a <i>nāḷika</i> measure of rice, a fourth part of non-staple food, and suitable curry. The small bowl: it takes a <i>pattha</i> measure of rice, a fourth part of non-staple food, and suitable curry.</p>
+
+<p id="p12"><span class="parno">12</span>If he keeps it beyond that, it becomes subject to relinquishment: At dawn on the eleventh day, it becomes subject to relinquishment.<span class="note"><span class="details"><span class="p">According to the commentary this means the tenth dawn after one received the bowl, see Sp 3.639.27</span></span></span></p>
+
+<p>The bowl is to be relinquished to a Saṅgha, a group, or an individual. “And, monks, it is to be relinquished in this way. After approaching the Saṅgha, that monk should put his upper robe over one shoulder and pay homage at the feet of the senior monks. He should then squat on his haunches, have kept over ten days is to be relinquished. I relinquish it to the Saṅgha.’" After relinquishing it, he is to confess the offence. The confession should be received by an experienced and competent monk. The relinquished bowl is then to be given back:</p>
+
+<p id="p13"><span class="parno">13</span>“‘<span>Bhante, let the Saṅgha listen to me. This bowl belonging to monk so-and-so, which was to be relinquished, has been relinquished to the Saṅgha. If it seems appropriate to the Saṅgha, the Saṅgha should give this bowl back to monk so-and-so.</span>’</p>
+
+<p id="p14"><span class="parno">14</span>“After approaching several monks, that monk should put his upper robe over one shoulder and pay homage at the feet of the senior monks. He should then squat on his haunches, put the palms of his hands together, and say: ‘<span>Bhante, this bowl which I have kept over ten days is to be relinquished. I relinquish it to the Venerables.</span>’" After relinquishing it, he is to confess the offence. The confession should be received by an experienced and competent monk. The relinquished bowl is then to be given back:</p>
+
+<p id="p15"><span class="parno">15</span>“‘<span>Let the Venerables listen to me. This bowl belonging to monk so-and-so, which was to be relinquished, has been relinquished to the Venerables. If it seems appropriate to the Venerables, the Venerables should give this bowl back to monk so-and-so.</span>’</p>
+
+<p id="p16"><span class="parno">16</span>“After approaching a single monk, that monk should put his upper robe over one shoulder, squat on his haunches, put the palms of his hands together, and say: ‘<span>This bowl which I have kept over ten days is to be relinquished. I relinquish it to the Venerable One.</span>’" After relinquishing it, he is to confess the offence. The confession should be received by that monk. The relinquished bowl is then to be given back: “<span>I give this bowl back to the Venerable.</span>"</p>
+
+<h3>Permutations</h3>
+
+<p id="p17"><span class="parno">17</span>If it is more than ten days and he perceives it as more than ten days, he commits an offence entailing relinquishment and confession. If it is more than ten days, but he has doubts about it, he commits an offence entailing relinquishment and confession. If it is more than ten days, but he perceives it as less than ten days, he commits an offence entailing relinquishment and confession.</p>
+
+<p>If it is undetermined, but he perceives it as determined, he commits an offence entailing relinquishment and confession. If it is not placed under shared ownership, but he perceives it as placed under shared ownership, he commits an offence entailing relinquishment and confession. If it is not given away, but he perceives it as given away, he commits an offence entailing relinquishment and confession. If it is not lost, but he perceives it as lost, he commits an offence entailing relinquishment and confession. If it is not destroyed, but he perceives it as destroyed, he commits an offence entailing relinquishment and confession. If it is not broken, but he perceives it as broken, he commits an offence entailing relinquishment and confession. If it is not stolen, but he perceives it as stolen, he commits an offence entailing relinquishment and confession.</p>
+
+<p id="p18"><span class="parno">18</span><span class="rule">If he uses a bowl which is to be relinquished without first relinquishing it, he commits an offence of bad conduct.</span> If it is less than ten days, but he perceives it as more than ten days, he commits an offence of bad conduct. If it is less than ten days, but he has doubts about it, he commits an offence of bad conduct. If it is less than ten days and he perceives it as less than ten days, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p19"><span class="parno">19</span>There is no offence: if within ten days it is determined, placed under shared ownership, given away, lost, destroyed, broken, stolen, or taken on trust; if he is insane; if he is the first offender.</p>
+
+<p id="p20"><span class="parno">20</span>At that time some monks belonging to the group six did not give back a relinquished bowl. They informed the Master. “<span class="rule">Monks, a relinquished bowl is not not to be given back. If one does not give it back, there is an offence of bad conduct.</span>"</p>
+
+<p class="endsutta"><span class="parno">21</span>The first rule, the training rule
+<br>on bowls, is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<div>
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+</div>
+
+<p><span class="parno">1</span><span class="ms">p_1V_2252, msdiv598</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena chabbaggiyā bhikkhū bahū patte sannicayaṁ karonti. Manussā vihāracārikaṁ āhiṇḍantā passitvā ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma samaṇā sakyaputtiyā bahū patte sannicayaṁ karissanti, pattavāṇijjaṁ vā samaṇā sakyaputtiyā karissanti āmattikāpaṇaṁ vā pasāressantī"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_1V_2253</span>Assosuṁ kho bhikkhū tesaṁ manussānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma chabbaggiyā bhikkhū atirekapattaṁ dhāressantī"ti.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_2254</span>Atha kho te bhikkhū chabbaggiye bhikkhū anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira tumhe, bhikkhave, atirekapattaṁ dhārethā"ti? "Saccaṁ, bhagavā"ti. Vigarahi buddho bhagavā … pe … kathañhi nāma tumhe, moghapurisā, atirekapattaṁ dhāressatha. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">4</span><span class="ms">p_1V_2255, msdiv599</span><span class="rule">"Yo pana bhikkhu atirekapattaṁ dhāreyya, nissaggiyaṁ pācittiyan"</span> ti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_1V_2256</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">6</span><span class="ms">p_1V_2257, msdiv600</span>Tena kho pana samayena āyasmato ānandassa atirekapatto uppanno hoti. Āyasmā ca ānando taṁ pattaṁ āyasmato sāriputtassa dātukāmo hoti. Āyasmā ca sāriputto sākete viharati. Atha kho āyasmato ānandassa etadahosi: "bhagavatā sikkhāpadaṁ paññattaṁ— ‘Na atirekapatto dhāretabbo’ti. Ayañca me atirekapatto uppanno. Ahañcimaṁ pattaṁ āyasmato sāriputtassa dātukāmo. Āyasmā ca sāriputto sākete viharati. Kathaṁ nu kho mayā paṭipajjitabban"ti? Bhagavato etamatthaṁ ārocesi. "Kīvaciraṁ panānanda, sāriputto āgacchissatī"ti?</p>
+
+<hr>
+<p>"Navamaṁ vā, bhagavā, divasaṁ dasamaṁ vā"ti.</p>
+
+<p>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi:  "Anujānāmi, bhikkhave, dasāhaparamaṁ atirekapattaṁ dhāretuṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">7</span><span class="ms">p_1V_2258, msdiv601</span><span class="rule">"Dasāhaparamaṁ atirekapatto dhāretabbo. Taṁ atikkāmayato nissaggiyaṁ pācittiyan"</span>ti. (<i>21</i>:<b>40</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">8</span><span class="ms">p_1V_2259, msdiv602</span><b>Dasāhaparaman</b>'ti dasāhaparamatā dhāretabbo.</p>
+
+<p><span class="parno">9</span><span class="ms">p_1V_2260</span><b>Atirekapatto</b> nāma anadhiṭṭhito avikappito.</p>
+
+<p><span class="parno">10</span><span class="ms">p_1V_2261</span><b>Patto</b> nāma dve pattā ayopatto mattikāpattoti.</p>
+
+<p><span class="parno">11</span><span class="ms">p_1V_2262</span>Tayo pattassa vaṇṇā ukkaṭṭho patto majjhimo patto omako patto. <b>Ukkaṭṭho</b> nāma <b>patto</b> aḍḍhāḷhakodanaṁ gaṇhāti catubhāgaṁ khādanaṁ tadupiyaṁ byañjanaṁ. <b>Majjhimo</b> nāma <b>patto</b> nāḷikodanaṁ gaṇhāti catubhāgaṁ khādanaṁ tadupiyaṁ byañjanaṁ. <b>Omako</b> nāma <b>patto</b> patthodanaṁ gaṇhāti catubhāgaṁ khādanaṁ tadupiyaṁ byañjanaṁ. Tato ukkaṭṭho apatto, omako apatto.</p>
+
+<p><span class="parno">12</span><span class="ms">p_1V_2263</span><b>Taṁ atikkāmayato nissaggiyo hotī</b>'ti ekādase aruṇuggamane nissaggiyo hoti.</p>
+
+<p>Nissajjitabbo sanghassa vā gaṇassa vā puggalassa vā. Evañca pana, bhikkhave, nissajjitabbo. Tena bhikkhunā saṇghaṁ upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā vuḍḍhānaṁ bhikkhūnaṁ pāde vanditvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassa vacanīyo: "Ayaṁ me, bhante, patto dasāhātikkanto nissaggiyo. Imāhaṁ sanghassa nissajjāmī"ti. Nissajjitvā āpatti desetabbā. Byattena bhikkhunā paṭibalena āpatti paṭiggahetabbā, nissaṭṭhapatto dātabbo—</p>
+
+<p><span class="parno">13</span><span class="ms">p_1V_2264, msdiv603</span> "Suṇātu me, bhante, sangho. Ayaṁ patto itthannāmassa bhikkhuno nissaggiyo sanghassa nissaṭṭho. Yadi sanghassa pattakallaṁ, sangho imaṁ pattaṁ itthannāmassa bhikkhuno dadeyyā"ti.</p>
+
+<p><span class="parno">14</span><span class="ms">p_1V_2265, msdiv604</span>Tena bhikkhunā sambahule bhikkhū upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā vuḍḍhānaṁ bhikkhūnaṁ pāde vanditvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassu vacanīyā— "Ayaṁ me, bhante, patto dasāhātikkanto nissaggiyo. Imāhaṁ āyasmantānaṁ nissajjāmī"ti. Nissajjitvā āpatti desetabbā. Byattena bhikkhunā paṭibalena āpatti paṭiggahetabbā, nissaṭṭhapatto dātabbo—</p>
+
+<p><span class="parno">15</span><span class="ms">p_1V_2266, msdiv605</span> "Suṇantu me āyasmantā. Ayaṁ patto itthannāmassa bhikkhuno nissaggiyo āyasmantānaṁ nissaṭṭho. Yadāyasmantānaṁ pattakallaṁ, āyasmantā imaṁ pattaṁ itthannāmassa bhikkhuno dadeyyun"ti.</p>
+
+<p><span class="parno">16</span><span class="ms">p_1V_2267, msdiv606</span>Tena bhikkhunā ekaṁ bhikkhuṁ upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassa vacanīyo: "Ayaṁ me, āvuso, patto dasāhātikkanto nissaggiyo. Imāhaṁ āyasmato nissajjāmī"ti. Nissajjitvā āpatti desetabbā. Tena bhikkhunā āpatti paṭiggahetabbā, nissaṭṭhapatto dātabbo— "imaṁ pattaṁ āyasmato dammī"ti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">17</span><span class="ms">p_1V_2268, msdiv607</span>Dasāhātikkante atikkantasaññī, nissaggiyaṁ pācittiyaṁ. Dasāhātikkante vematiko, nissaggiyaṁ pācittiyaṁ. Dasāhātikkante anatikkantasaññī, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p>Anadhiṭṭhite adhiṭṭhitasaññī, nissaggiyaṁ pācittiyaṁ. Avikappite vikappitasaññī, nissaggiyaṁ pācittiyaṁ. Avissajjite vissajjitasaññī, nissaggiyaṁ pācittiyaṁ. Anaṭṭhe naṭṭhasaññī nissaggiyaṁ pācittiyaṁ. Avinaṭṭhe vinaṭṭhasaññī, nissaggiyaṁ pācittiyaṁ. Abhinne bhinnasaññī, nissaggiyaṁ pācittiyaṁ. Avilutte viluttasaññī, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p><span class="parno">18</span><span class="ms">p_1V_2269</span>Nissaggiyaṁ pattaṁ anissajjitvā paribhuñjati, āpatti dukkaṭassa. Dasāhānatikkante atikkantasaññī, āpatti dukkaṭassa. Dasāhānatikkante vematiko, āpatti dukkaṭassa. Dasāhānatikkante anatikkantasaññī, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">19</span><span class="ms">p_1V_2270, msdiv608</span>Anāpatti— antodasāhaṁ adhiṭṭheti, vikappeti, vissajjeti, nassati, vinassati, bhijjati, acchinditvā gaṇhanti, vissāsaṁ gaṇhanti, ummattakassa, ādikammikassāti.</p>
+
+<p><span class="parno">20</span><span class="ms">p_1V_2271</span>Tena kho pana samayena chabbaggiyā bhikkhū nissaṭṭhapattaṁ na denti. Bhagavato etamatthaṁ ārocesuṁ. "Na, bhikkhave, nissaṭṭhapatto na dātabbo. Yo na dadeyya, āpatti dukkaṭassā"ti.</p>
+
+<p class="endsutta"><span class="parno">21</span><span class="ms">p_1V_2272</span>Pattasikkhāpadaṁ niṭṭhitaṁ paṭhamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-np20.html#content"></a><a id="next-sutta" href="../vi/bu-vb-np22.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya&nbsp;21
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

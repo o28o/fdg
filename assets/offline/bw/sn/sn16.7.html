@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nikāya - Connected Discourses with Kassapa 16.7</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 			</button>
+<span class="box-lbl">Light/Dark</span>
+
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="pressed w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+ 
+ <h2>Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+					<div id="snheading">
+ 					<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div><!-- End snheading div -->
+</div>  <!-- End div for SN sub-navigation -->
+
+
+
+
+ <p>&nbsp;</p>
+
+ 
+ <h3 id="SN16heading">SN16: Connected Discourses with Kassapa</h3>
+ 
+ 			<div class="w3-bar-white bwnav"><!-- Div for lower SN sub-navigation -->
+ 		<a href="sn12.html#SN12heading" title="Connected Discourses on Causation" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN12</a>
+ 		<a href="sn13.html#SN13heading" title="Connected Discourses on the Breakthrough" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN13</a>
+ 		<a href="sn14.html#SN14heading" title="Connected Discourses on Elements" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN14</a>
+ 		<a href="sn15.html#SN15heading" title="Connected Discourses on Without Discoverable Beginning" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN15</a>
+ 		<a href="sn16.html#SN16heading" title="Connected Discourses with Kassapa" class="w3-bar-item w3-hover-white w3-border-white w3-button active">SN16</a>
+ 		<a href="sn17.html#SN17heading" title="Connected Discourses on Gains and Honour" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN17</a>
+ 		<a href="sn18.html#SN18heading" title="Connected Discourses with Rahula" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN18</a>
+ 		<a href="sn19.html#SN19heading" title="Connected Discourses with Lakkhaṇa" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN19</a>
+ 		<a href="sn20.html#SN20heading" title="Connected Discourses with Similes" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN20</a>
+ 		<a href="sn21.html#SN21heading" title="Connected Discourses with Bhikkhus" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN21</a>
+ 	</div><!-- End div for lower SN sub-navigation -->
+ 
+ <!--      SN content begins here      -->
+  
+ <div id="content">
+
+
+<h3>SN16:7 Exhortation (2)</h3>
+
+<div id="metaarea">
+ <ul class="translator">
+ <li>&copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>At Rājagaha in the Bamboo Grove. Then the Venerable Mahākassapa approached the Blessed One, paid homage to him, and sat down to one side. The Blessed One then said to him: "Exhort the bhikkhus, Kassapa, give them a Dhamma talk. Either I should exhort the bhikkhus, Kassapa, <a class="pts_pn">sn.ii.206</a> or you should. Either I should give them a Dhamma talk or you should."</p>
+
+<p id="p2"><span class="parno">2</span>"Venerable sir, the bhikkhus are difficult to admonish now, and they have qualities which make them difficult to admonish. They are impatient and do not accept instruction respectfully. Venerable sir,<span class="note" id="n283"><span class="details"><span class="p">[n.283] The following, slightly expanded and including the simile of the moon, is also at <a href="../an/an10.67.html">AN V 123,10–124,19</a>, ascribed to Sāriputta. There too the Buddha approves of the disciple's statement and repeats it in full.</span></span></span> for one who has no faith in regard to wholesome states, no sense of shame, no fear of wrongdoing, no energy, and no wisdom, whether day or night comes only decline is to be expected in regard to wholesome states, not growth.</p>
+
+<p id="p3"><span class="parno">3</span>Just as, during the dark fortnight, whether day or night comes the moon declines in colour, circularity, and luminosity, in diameter and circumference, so too, venerable sir, for one who has no faith in wholesome states, no sense of shame, no fear of wrongdoing, no energy, and no wisdom, whether day or night comes only decline is to be expected in regard to wholesome states, not growth.</p>
+
+<p id="p4"><span class="parno">4</span>"A person without faith, venerable sir: this is a case of decline. A person without a sense of shame … who is unafraid of wrongdoing … who is lazy … unwise … angry … malicious: this is a case of decline. When there are no bhikkhus who are exhorters: this is a case of decline.</p>
+
+<p id="p5"><span class="parno">5</span>"Venerable sir, for one who has faith in regard to wholesome states, a sense of shame, fear of wrongdoing, energy, and wisdom, whether day or night comes only growth is to be expected in regard to wholesome states, not decline.</p>
+
+<p id="p6"><span class="parno">6</span>Just as, during the bright fortnight, whether day or night comes the moon grows in colour, circularity, <a class="pts_pn">sn.ii.207</a> and luminosity, in diameter and circumference, so too, venerable sir, for one who has faith in wholesome states, a sense of shame, fear of wrongdoing, energy, and wisdom, whether day or night comes only growth is to be expected in regard to wholesome states, not decline.</p>
+
+<p id="p7"><span class="parno">7</span>"A person with faith, venerable sir: this is a case of nondecline. A person with a sense of shame … who is afraid of wrongdoing … energetic … wise … without anger … without malice: this is a case of nondecline. When there are bhikkhus who are exhorters: this is a case of nondecline."</p>
+
+<hr>
+<p><span class="parno">8–12</span>"Good, good, Kassapa!"
+
+<br class="half"><span class="add">The Buddha then repeats the entire statement of the Venerable Mahākassapa.</span> <a class="pts_pn">sn.ii.208</a></p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Rājagahe vihārati veḷuvane. Atha kho āyasmā mahākassapo yena bhagavā tenupasankami … pe … ekamantaṁ nisinnaṁ kho āyasmantaṁ mahākassapaṁ bhagavā etadavoca: "ovada, kassapa, bhikkhū; karohi, kassapa, bhikkhūnaṁ dhammiṁ kathaṁ. Ahaṁ vā, kassapa, bhikkhū ovadeyyaṁ tvaṁ vā; ahaṁ vā bhikkhūnaṁ dhammiṁ kathaṁ kareyyaṁ tvaṁ vā"ti.</p>
+
+<p><span class="parno">2</span>"Dubbacā kho, bhante, etarahi bhikkhū, dovacassakaraṇehi dhammehi samannāgatā akkhamā appadakkhiṇaggāhino anusāsaniṁ. Yassa kassaci, bhante, saddhā natthi kusalesu dhammesu, hirī natthi kusalesu dhammesu, ottappaṁ natthi kusalesu dhammesu, vīriyaṁ natthi kusalesu dhammesu, paññā natthi kusalesu dhammesu, tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikankhā kusalesu dhammesu, no vuddhi.</p>
+
+<p><span class="parno">3</span>Seyyathāpi, bhante, kāḷapakkhe candassa yā ratti vā divaso vā āgacchati, hāyateva vaṇṇena, hāyati maṇḍalena, hāyati ābhāya, hāyati ārohapariṇāhena. Evameva kho, bhante, yassa kassaci saddhā natthi kusalesu dhammesu … pe … hirī natthi … ottappaṁ natthi … vīriyaṁ natthi … paññā natthi … kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikankhā kusalesu dhammesu, no vuddhi.</p>
+
+<p><span class="parno">4</span>‘Assaddho purisapuggalo’ti, bhante, parihānametaṁ; ‘ahiriko purisapuggalo’ti, bhante, parihānametaṁ; ‘anottappī purisapuggalo’ti, bhante, parihānametaṁ; ‘kusīto purisapuggalo’ti, bhante, parihānametaṁ; ‘duppañño purisapuggalo’ti, bhante, parihānametaṁ; ‘kodhano purisapuggalo’ti, bhante, parihānametaṁ; ‘upanāhī purisapuggalo’ti, bhante, parihānametaṁ; ‘Na santi bhikkhū ovādakā’ti, bhante, parihānametaṁ.</p>
+
+<p><span class="parno">5</span>Yassa kassaci, bhante, saddhā atthi kusalesu dhammesu, hirī atthi kusalesu dhammesu, ottappaṁ atthi kusalesu dhammesu, vīriyaṁ atthi kusalesu dhammesu, paññā atthi kusalesu dhammesu, tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikankhā kusalesu dhammesu, no parihāni.</p>
+
+<p><span class="parno">6</span>Seyyathāpi, bhante, juṇhapakkhe candassa yā ratti vā divaso vā āgacchati, vaḍḍhateva vaṇṇena, vaḍḍhati maṇḍalena, vaḍḍhati ābhāya, vaḍḍhati ārohapariṇāhena. Evameva kho, bhante, yassa kassaci saddhā atthi kusalesu dhammesu … hirī atthi … pe … ottappaṁ atthi … vīriyaṁ atthi … paññā atthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikankhā kusalesu dhammesu, no parihāni.</p>
+
+<p><span class="parno">7</span>‘Saddho purisapuggalo’ti, bhante, aparihānametaṁ; ‘hirimā purisapuggalo’ti, bhante, aparihānametaṁ; ‘ottappī purisapuggalo’ti, bhante, aparihānametaṁ; ‘āraddhavīriyo purisapuggalo’ti, bhante, aparihānametaṁ; ‘paññavā purisapuggalo’ti, bhante, aparihānametaṁ; ‘akkodhano purisapuggalo’ti, bhante, aparihānametaṁ; ‘anupanāhī purisapuggalo’ti, bhante, aparihānametaṁ; ‘santi bhikkhū ovādakā’ti, bhante, aparihānametan"ti.</p>
+
+<hr>
+<p><span class="parno">8</span>"Sādhu sādhu, kassapa. Yassa kassaci, kassapa, saddhā natthi kusalesu dhammesu … pe … hirī natthi … ottappaṁ natthi … vīriyaṁ natthi … paññā natthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikankhā kusalesu dhammesu, no vuddhi.</p>
+
+<p><span class="parno">9</span>Seyyathāpi, kassapa, kāḷapakkhe candassa yā ratti vā divaso vā āgacchati, hāyateva vaṇṇena … pe … hāyati ārohapariṇāhena. Evameva kho, kassapa, yassa kassaci saddhā natthi kusalesu dhammesu … pe … hirī natthi … ottappaṁ natthi … vīriyaṁ natthi … paññā natthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, hāniyeva pāṭikankhā kusalesu dhammesu, no vuddhi. ‘Assaddho purisapuggalo’ti, kassapa, parihānametaṁ; ahiriko … pe … anottappī … kusīto … duppañño … kodhano … ‘upanāhī purisapuggalo’ti, kassapa, parihānametaṁ; ‘Na santi bhikkhū ovādakā’ti, kassapa, parihānametaṁ.</p>
+
+<p><span class="parno">10</span>Yassa kassaci, kassapa, saddhā atthi kusalesu dhammesu … pe … hirī atthi … ottappaṁ atthi … vīriyaṁ atthi … paññā atthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikankhā kusalesu dhammesu, no parihāni.</p>
+
+<p><span class="parno">11</span>Seyyathāpi, kassapa, juṇhapakkhe candassa yā ratti vā divaso vā āgacchati, vaḍḍhateva vaṇṇena, vaḍḍhati maṇḍalena, vaḍḍhati ābhāya, vaḍḍhati ārohapariṇāhena. Evameva kho, kassapa, yassa kassaci saddhā atthi kusalesu dhammesu hirī atthi … ottappaṁ atthi … vīriyaṁ atthi … paññā atthi kusalesu dhammesu tassa yā ratti vā divaso vā āgacchati, vuddhiyeva pāṭikankhā kusalesu dhammesu, no parihāni.</p>
+
+<p><span class="parno">12</span>‘Saddho purisapuggalo’ti, kassapa, aparihānametaṁ; hirimā … pe … ottappī … āraddhavīriyo … paññavā … akkodhano … ‘anupanāhī purisapuggalo’ti, kassapa, aparihānametaṁ; ‘santi bhikkhū ovādakā’ti, kassapa, aparihānametan"ti.</p>
+<p class="endsection">Sattamaṁ.</p>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="./sn16.6.html#content"></a><a id="next-sutta" href="./sn16.8.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div class="w3-white .bwcontainer2">
+<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn16.html">Connected Discourses with Kassapa</a>SN16:7 Exhortation (2)
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </div>
+</footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

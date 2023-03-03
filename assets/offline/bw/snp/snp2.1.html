@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 2.1</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	<link href="../css/all.css" rel="stylesheet" type="text/css">
+  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ </button>
+ <span class="box-lbl">Light\Dark</span>
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 		<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 
+ 		</div>
+ </div>
+ <!-- Top menu -->
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="snp.html" class="pressed w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+  
+<p>&nbsp;</p>
+ 
+		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Khuddaka Nikaya - The Minor Texts</h2>
+ 
+ <div class="w3-bar-white bwnav"><!-- Div for lower Dhp sub-navigation -->
+ 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
+ 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
+ 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sutta Nipata</a>
+ 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
+ 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
+ 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Theragatha</a>
+ 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
+ </div><!-- End div for lower Dhp sub-navigation -->
+ 
+ <h2>Sutta Nipata</h2>
+ <div class="w3-bar-white bwnav"><!-- Div for lower Snp sub-navigation -->
+ 	<a href="../snp/snp1.html#content" title="1: Serpent Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">1: Serpent Chapter<br>(verses 1:1 to 1:12)</a>
+ 	<a href="../snp/snp2.html#content" title="2: Lesser Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button active">2: Lesser Chapter<br>(verses 2:1 to 2:14)</a>
+ 	<a href="../snp/snp3.html#content" title="3: Great Chapter" class="w3-bar-item w3-hover-white w3-border-white w3-button">3: Great Chapter<br>(verses 3:1 to 3:12)</a>
+ 	<a href="../snp/snp4.html#content" title="4: The Eights" class="w3-bar-item w3-hover-white w3-border-white w3-button">4: The Eights<br>(verses 4:1 to 4:16)</a>
+ 	<a href="../snp/snp5.html#content" title="5: Way to the Beyond" class="w3-bar-item w3-hover-white w3-border-white w3-button">5: Way to the Beyond<br>(verses 5:1 to 5:18)</a>
+ </div><!-- End div for lower Snp sub-navigation -->
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata 2: The Lesser Chapter</h2>
+
+	<h3>2:1 Ratana Sutta - Gems</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li>©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+</div><!-- End div for sub-heading and translator div -->
+
+<section class="raw_sutta">
+<div lang="en">
+<h2>2:1 Gems</h2>
+<div class="verse">
+			<p id="p222"><span class="parno">222</span>
+			Whatever beings have gathered here, 
+			<br>on the ground or in the sky: 
+			<br>may beings all be of happy heart, 
+			<br>and listen carefully to what is said. </p>
+			
+			<p id="p223"><span class="parno">223</span>
+			So pay heed, all you beings, 
+			<br>have love for humankind, 
+			<br>who day and night bring offerings; 
+			<br>please protect them diligently. </p>
+			
+			<p id="p224"><span class="parno">224</span>
+			There’s no wealth here or beyond, 
+			<br>no sublime gem in the heavens, 
+			<br>that equals the Realized One. 
+			<br>This sublime gem is in the Buddha: 
+			<br>by this truth, may you be well! </p>
+</div>
+
+<hr>
+
+<div class="verse">
+			<p id="226"><span class="parno">225</span>
+			Ending, dispassion, the undying, the sublime, 
+			<br>attained by the Sakyan Sage immersed in samādhi; 
+			<br>there is nothing equal to that Dhamma. 
+			<br>This sublime gem is in the Dhamma: 
+			<br>by this truth, may you be well! </p>
+			
+			<p id="p226"><span class="parno">226</span>
+			The purity praised by the highest Buddha 
+			<br>is said to be the “immersion with immediate fruit”; 
+			<br>no equal to that immersion is found. 
+			<br>This sublime gem is in the Dhamma: 
+			<br>by this truth, may you be well! </p>
+			
+			<p id="p227"><span class="parno">227</span>
+			The eight individuals praised by the good, 
+			<br>are the four pairs of the Holy One’s disciples; 
+			<br>they are worthy of religious donations, 
+			<br>what’s given to them is very fruitful. 
+			<br>This sublime gem is in the Saṅgha: 
+			<br>by this truth, may you be well! </p>
+			
+			<p id="p228"><span class="parno">228</span>
+			Dedicated to Gotama’s dispensation, 
+			<br>strong-minded, free of sense desire, 
+			<br>they’ve attained the goal, plunged into the deathless, 
+			<br>and enjoy the quenching they’ve freely gained. 
+			<br>This sublime gem is in the Saṅgha: 
+			<br>by this truth, may you be well! </p>
+</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p229"><span class="parno">229</span>
+			As a well planted boundary-pillar 
+			<br>is not shaken by the four winds, 
+			<br>I say a good person is like this, 
+			<br>who sees the noble truths in experience. 
+			<br>This sublime gem is in the Saṅgha: 
+			<br>by this truth, may you be well! </p>
+			
+			<p id="p230"><span class="parno">230</span>
+			Those who fathom the noble truths 
+			<br>taught by the one of deep wisdom, 
+			<br>do not take an eighth life, 
+			<br>even if they are hugely negligent. 
+			<br>This sublime gem is in the Saṅgha: 
+			<br>by this truth, may you be well! </p>
+</div>
+
+<hr>
+
+<div class="verse">			
+			<p id="p231"><span class="parno">231</span>
+			When they attain to vision 
+			<br>they give up three things: 
+			<br>identity view, doubt, and any 
+			<br>attachment to precepts and observances. 
+			<br>They’re freed from the four places of loss, 
+			<br>and unable to perform the six grave crimes. 
+			<br>This sublime gem is in the Saṅgha: 
+			<br>by this truth, may you be well! </p>
+</div>
+<hr>
+
+<div class="verse">
+			<p id="p232"><span class="parno">232</span>
+			Even if they do a bad deed 
+			<br>by body, speech, or mind, 
+			<br>they are unable to conceal it; 
+			<br>this inability applies to one who has seen the truth, they say. 
+			<br>This sublime gem is in the Saṅgha: 
+			<br>by this truth, may you be well! </p>
+</div>
+<hr>
+<div class="verse">
+			<p id="p233"><span class="parno">233</span>
+			Like a tall forest tree crowned with flowers 
+			<br>in the first month of summer; 
+			<br>that’s how he taught the superb Dhamma, 
+			<br>leading to quenching, the ultimate benefit. 
+			<br>This sublime gem is in the Buddha: 
+			<br>by this truth, may you be well! </p>
+			
+			<p id="p234"><span class="parno">234</span>
+			The superb, knower of the superb, giver of the superb, bringer of the superb; 
+			<br>taught the superb Dhamma supreme. 
+			<br>This sublime gem is in the Buddha: 
+			<br>by this truth, may you be well! </p>
+			
+			<p id="p235"><span class="parno">235</span>
+			The old is ended, nothing new is produced. 
+			<br>their minds have no desire for future rebirth. 
+			<br>Withered are the seeds, there’s no desire for growth, 
+			<br>those wise ones are extinguished just like this lamp. 
+			<br>This sublime gem is in the Saṅgha: 
+			<br>by this truth, may you be well! </p>
+</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p236"><span class="parno">236</span>
+			Whatever beings have gathered here, 
+			<br>on the ground or in the sky: 
+			<br>the Realized One is honored by gods and humans! 
+			<br>We bow to the Buddha! May you be safe! </p>
+			
+			<p id="p237"><span class="parno">237</span>
+			Whatever beings have gathered here, 
+			<br>on the ground or in the sky: 
+			<br>the Realized One is honored by gods and humans! 
+			<br>We bow to the Dhamma! May you be safe! </p>
+			
+			<p id="p238"><span class="parno">238</span>
+			Whatever beings have gathered here, 
+			<br>on the ground or in the sky: 
+			<br>the Realized One is honored by gods and humans! 
+			<br>We bow to the Saṅgha! May you be safe! </p>
+</div>
+</div>
+
+<div lang="pi">
+<h2>2:1 Ratanasutta</h2>
+<div class="verse">
+<p><span class="parno">222</span>Yānīdha bhūtāni samāgatāni,<br> Bhummāni vā yāni va antalikkhe;
+<br>Sabbeva bhūtā sumanā bhavantu,
+<br>Athopi sakkacca suṇantu bhāsitaṁ.</p>
+
+<p><span class="parno">223</span><a class="brnum" id="br2"></a>
+Tasmā hi bhūtā nisāmetha sabbe,<br> Mettaṁ karotha mānusiyā pajāya;
+<br>Divā ca ratto ca haranti ye baliṁ,
+<br>Tasmā hi ne rakkhatha appamattā.</p>
+
+<p><span class="parno">224</span><a class="brnum" id="br3"></a>
+Yaṁ kiñci vittaṁ idha vā huraṁ vā,<br> Saggesu vā yaṁ ratanaṁ paṇītaṁ;
+<br>Na no samaṁ atthi tathāgatena,
+<br>Idampi buddhe ratanaṁ paṇītaṁ;
+<br>Etena saccena suvatthi hotu.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">225</span><a class="brnum" id="br4"></a>
+Khayaṁ virāgaṁ amataṁ paṇītaṁ,<br> Yadajjhagā sakyamunī samāhito;
+<br>Na tena dhammena samatthi kiñci,
+<br>Idampi dhamme ratanaṁ paṇītaṁ;
+<br>Etena saccena suvatthi hotu.</p>
+
+<p><span class="parno">226</span><a class="brnum" id="br5"></a>
+Yaṁ buddhaseṭṭho parivaṇṇayī suciṁ,<br> Samādhimānantarikaññamāhu;
+<br>Samādhinā tena samo na vijjati,
+<br>Idampi dhamme ratanaṁ paṇītaṁ;
+<br>Etena saccena suvatthi hotu.</p>
+
+<p><span class="parno">227</span><a class="brnum" id="br6"></a>
+Ye puggalā aṭṭha sataṁ pasatthā,<br> Cattāri etāni yugāni honti;
+<br>Te dakkhiṇeyyā sugatassa sāvakā,
+<br>Etesu dinnāni mahapphalāni;
+<br>Idampi sanghe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+
+<p><span class="parno">228</span><a class="brnum" id="br7"></a>
+Ye suppayuttā manasā daḷhena,<br> Nikkāmino gotamasāsanamhi;
+<br>Te pattipattā amataṁ vigayha,
+<br>Laddhā mudhā nibbutiṁ bhuñjamānā;
+<br>Idampi sanghe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">229</span><a class="brnum" id="br8"></a>
+Yathindakhīlo pathavissito siyā,<br> Catubbhi vātehi asampakampiyo;
+<br>Tathūpamaṁ sappurisaṁ vadāmi,
+<br>Yo ariyasaccāni avecca passati;
+<br>Idampi sanghe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+
+<p><span class="parno">230</span><a class="brnum" id="br9"></a>
+Ye ariyasaccāni vibhāvayanti,<br> Gambhīrapaññena sudesitāni;
+<br>Kiñcāpi te honti bhusaṁ pamattā,
+<br>Na te bhavaṁ aṭṭhamamādiyanti;
+<br>Idampi sanghe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">231</span><a class="brnum" id="br10"></a>
+Sahāvassa dassanasampadāya,<br> Tayassu dhammā jahitā bhavanti;
+<br>Sakkāyadiṭṭhī vicikicchitañca,
+<br>Sīlabbataṁ vāpi yadatthi kiñci.
+<br><a class="brnum" id="br11"></a>
+Catūhapāyehi ca vippamutto,<br> Chaccābhiṭhānāni abhabba kātuṁ;
+<br>Idampi sanghe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">232</span><a class="brnum" id="br12"></a>
+Kiñcāpi so kamma karoti pāpakaṁ,<br> Kāyena vācā uda cetasā vā;
+<br>Abhabba so tassa paṭicchadāya,
+<br>Abhabbatā diṭṭhapadassa vuttā;
+<br>Idampi sanghe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+</div>
+
+<hr>
+
+<div class="verse">
+<p><span class="parno">233</span><a class="brnum" id="br13"></a>
+Vanappagumbe yatha phussitagge,<br> Gimhānamāse paṭhamasmiṁ gimhe;
+<br>Tathūpamaṁ dhammavaraṁ adesayi,
+<br>Nibbānagāmiṁ paramaṁ hitāya;
+<br>Idampi buddhe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+
+<p><span class="parno">234</span><a class="brnum" id="br14"></a>
+Varo varaññū varado varāharo,<br> Anuttaro dhammavaraṁ adesayi;
+<br>Idampi buddhe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+
+<p><span class="parno">235</span><a class="brnum" id="br15"></a>
+Khīṇaṁ purāṇaṁ nava natthi sambhavaṁ,<br> Virattacittāyatike bhavasmiṁ;
+<br>Te khīṇabījā avirūḷhichandā,
+<br>Nibbanti dhīrā yathāyaṁ padīpo;
+<br>Idampi sanghe ratanaṁ paṇītaṁ,
+<br>Etena saccena suvatthi hotu.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">236</span><a class="brnum" id="br16"></a>
+Yānīdha bhūtāni samāgatāni,<br> Bhummāni vā yāni va antalikkhe;
+<br>Tathāgataṁ devamanussapūjitaṁ,
+<br>Buddhaṁ namassāma suvatthi hotu.</p>
+
+<p><span class="parno">237</span><a class="brnum" id="br17"></a>
+Yānīdha bhūtāni samāgatāni,<br> Bhummāni vā yāni va antalikkhe;
+<br>Tathāgataṁ devamanussapūjitaṁ,
+<br>Dhammaṁ namassāma suvatthi hotu.</p>
+
+<p><span class="parno">238</span><a class="brnum" id="br18"></a>
+Yānīdha bhūtāni samāgatāni,<br> Bhummāni vā yāni va antalikkhe;
+<br>Tathāgataṁ devamanussapūjitaṁ,
+<br>Saṅghaṁ namassāma suvatthi hotūti.</p>
+</div>
+<p class="endsection">Ratanasuttaṁ paṭhamaṁ.</p>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp2.html#content"></a><a id="next-sutta" href="../snp/snp2.2.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp2.html">2: The Lesser Chapter</a>2:1 Ratana Sutta - Gems
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+ 
+ <script>
+ // Script to open and close sidebar
+  	function w3_open() {
+  	document.getElementById("mySidebar").style.display = "block";
+  	}
+  		function w3_close() {
+  		document.getElementById("mySidebar").style.display = "none";
+  	}
+ </script>
+ 
+ <script>
+  		var app = document.getElementsByTagName("BODY")[0];
+  		if (localStorage.lightMode == "dark") {
+  			app.setAttribute("light-mode", "dark");
+  	}
+ </script>
+ 
+ <script>
+  		function toggle_light_mode() {
+  			var app = document.getElementsByTagName("BODY")[0];
+  				if (localStorage.lightMode == "dark") {
+  					localStorage.lightMode = "light";
+  					app.setAttribute("light-mode", "light");
+  				} else {
+  					localStorage.lightMode = "dark";
+  					app.setAttribute("light-mode", "dark");
+  	}
+  		}
+ 
+  		window.addEventListener("storage", function () {
+  			if (localStorage.lightMode == "dark") {
+  				app.setAttribute("light-mode", "dark");
+  			} else {
+  				app.setAttribute("light-mode", "light");
+  		}
+  		}, false);
+  </script>
+  <script src="../js/footer.js"></script>
+   </body>
+  </html>

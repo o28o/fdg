@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nikāya - Connected Discourses on the Undeclared 44.9</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 			</button>
+<span class="box-lbl">Light/Dark</span>
+
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="pressed w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+ 
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+					<div id="snheading">
+ 					<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div><!-- End snheading div -->
+</div>  <!-- End div for SN sub-navigation -->
+
+
+
+
+ <p>&nbsp;</p>
+
+ 
+ <h3 id="SN44heading">SN44: Connected Discourses on the Undeclared</h3>
+ 
+ 	<div class="w3-bar-white bwnav"><!-- Div for lower SN sub-navigation -->
+ 		<a href="sn35.html#SN35heading" title="Connected Discourses on the Six Sense Bases" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN35</a>
+ 		<a href="sn36.html#SN36heading" title="Connected Discourses on Feeling" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN36</a>
+ 		<a href="sn37.html#SN37heading" title="Connected Discourses on Women" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN37</a>
+ 		<a href="sn38.html#SN38heading" title="Connected Discourses with Jambukhadaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN38</a>
+ 		<a href="sn39.html#SN39heading" title="Connected Discourses with Samaṇḍaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN39</a>
+ 		<a href="sn40.html#SN40heading" title="Connected Discourses with Moggallana" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN40</a>
+ 		<a href="sn41.html#SN41heading" title="Connected Discourses with Citta" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN41</a>
+ 		<a href="sn42.html#SN42heading" title="Connected Discourses to Headmen" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN42</a>
+ 		<a href="sn43.html#SN43heading" title="Connected Discourses on the Unconditioned" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN43</a>
+ 		<a href="sn44.html#SN44heading" title="Connected Discourses on the Undeclared" class="w3-bar-item w3-hover-white w3-border-white w3-button active">SN44</a>
+ 	</div><!-- End div for lower SN sub-navigation -->
+ 
+ <!--      SN content begins here      -->
+  
+ <div id="content">
+
+
+<h3>SN44:9 The Debating Hall</h3>
+
+<div id="metaarea">
+ <ul class="translator">
+ <li>&copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>Then the wanderer Vacchagotta approached the Blessed One and exchanged greetings with him. When they had concluded their greetings and cordial talk, he sat down to one side and said to the Blessed One:</p>
+
+<p id="p2"><span class="parno">2</span>"In recent days, Master Gotama, a number of ascetics, brahmins, and wanderers of various sects had assembled in the debating hall and were sitting together when this conversation arose among them:<span class="note" id="n380"><span class="details"><span class="p">[n.380] <a href="sn0-abbr.html" title="Abbreviations">Spk</a> explains <i>kutūhalasālā</i> (lit. "commotion hall") as a place where ascetics and brahmins of other sects engage in various discussions. It is so named because commotion arises as they say, "What does this one say? What does that one say?"
+
+<br class="half">The teachers mentioned are the famous "six heretics," the rivals of Gotama (see SN3:1 n <a href="sn3.1.html#n200">200</a>). It is strange that predictions about rebirth are ascribed to Ajita, since elsewhere he is reported to have taught materialism and to have denied an afterlife. Even Sañjaya is reported to have been a sceptic about such issues.</span></span></span> ‘This Pūraṇa Kassapa—the leader of an order, the leader of a group, the teacher of a group, the well known and famous spiritual guide considered holy by many people—declares the rebirth of a disciple who has passed away and died thus: "That one was reborn there, that one was reborn there." And in the case of a disciple who was a person of the highest kind, a supreme person, one who had attained the supreme attainment, when that disciple has passed away and died he also declares his rebirth thus: "That one was reborn there, that one was reborn there."</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>This Makkhali Gosāla … This Nigaṇṭha Nataputta … This Sañjaya Belaṭṭhiputta … This Pakudha Kaccāyana … This Ajita Kesakambalī … when that disciple has passed away <a class="pts_pn">sn.iv.399</a> and died he also declares his rebirth thus: "That one was reborn there, that one was reborn there."</p>
+
+<hr>
+<p id="p4"><span class="parno">4</span>This ascetic Gotama—the leader of an order, the leader of a group, the teacher of a group, the well known and famous spiritual guide considered holy by many people—declares the rebirth of a disciple who has passed away and died thus: "That one was reborn there, that one was reborn there." But in the case of a disciple who was a person of the highest kind, a supreme person, one who had attained the supreme attainment, when that disciple has passed away and died he does not declare his rebirth thus: "That one was reborn there, that one was reborn there." Rather, he declares of him: "He cut off craving, severed the fetter, and, by completely breaking through conceit, he has made an end to suffering."’</p>
+
+<hr>
+<p>"There was perplexity in me, Master Gotama, there was doubt: ‘How is the Dhamma of the ascetic Gotama to be understood?’"</p>
+
+<p id="p5"><span class="parno">5</span>"It is fitting for you to be perplexed, Vaccha, it is fitting for you to doubt. Doubt has arisen in you about a perplexing matter. I declare, Vaccha, rebirth for one with fuel, not for one without fuel. Just as a fire burns with fuel, but not without fuel, so, Vaccha, I declare rebirth for one with fuel, not for one without fuel."<span class="note" id="n381"><span class="details"><span class="p">[n.381] <i>Sa-upādānassa khvāhaṃ Vaccha upapattiṃ paññāpemi no anupādānassa.</i> There is a double meaning here, with <i>upādāna</i> meaning both "fuel" and subjective "clinging," but I have translated the sentence in consonance with the following simile. It was also in a discourse to Vacchagotta that the Buddha used his famous simile of the fire that goes out from lack of fuel to illustrate the status of one who has attained Nibbāna; see <a href="../mn/mn72.html#p20">MN72</a> (MN&nbsp;I 487,11–30).</span></span></span></p>
+
+<hr>
+<p id="p6"><span class="parno">6</span>"Master Gotama, when a flame is flung by the wind and goes some distance, what does Master Gotama declare to be its fuel on that occasion?"</p>
+
+<p>"When, Vaccha, a flame is flung by the wind and goes some distance, I declare that it is fuelled by the wind. For on that occasion the wind is its fuel." <a class="pts_pn">sn.iv.400</a></p>
+
+<p>"And, Master Gotama, when a being has laid down this body but has not yet been reborn in another body, what does Master Gotama declare to be its fuel on that occasion?"</p>
+
+<p>"When, Vaccha, a being has laid down this body but has not yet been reborn in another body, I declare that it is fuelled by craving.<span class="note" id="n382"><span class="details"><span class="p">[n.382] <i>Tam ahaṃ taṇhūpādānaṃ vadāmi.</i> The Buddha’s statement seems to imply that a temporal gap can intervene between the death moment and reconception. Since this contradicts Theravada orthodoxy, <a href="sn0-abbr.html" title="Abbreviations">Spk</a> contends that at the death moment itself the being is said to be "not yet reborn" because the rebirth-consciousness has not yet arisen.</span></span></span> For on that occasion craving is its fuel."</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Atha kho vacchagotto paribbājako yena bhagavā tenupasankami; upasankamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho vacchagotto paribbājako bhagavantaṁ etadavoca: </p>
+
+<p><span class="parno">2</span>"Purimāni, bho gotama, divasāni purimatarāni sambahulānaṁ nānātitthiyānaṁ samaṇabrāhmaṇānaṁ paribbājakānaṁ kutūhalasālāyaṁ sannisinnānaṁ sannipatitānaṁ ayamantarākathā udapādi: ‘Ayaṁ kho pūraṇo kassapo sanghī ceva gaṇī ca gaṇācariyo ca ñāto yasassī titthakaro sādhusammato bahujanassa. Sopi sāvakaṁ abbhatītaṁ kālankataṁ upapattīsu byākaroti: "asu amutra upapanno, asu amutra upapanno"ti. Yopissa sāvako uttamapuriso paramapuriso paramapattipatto tampi sāvakaṁ abbhatītaṁ kālankataṁ upapattīsu byākaroti: "asu amutra upapanno, asu amutra upapanno"ti.</p>
+
+<hr>
+<p><span class="parno">3</span>Ayampi kho makkhali gosālo … pe … ayampi kho nigaṇṭho nāṭaputto … pe … ayampi kho sañcayo belaṭṭhaputto … pe … ayampi kho pakudho kaccāno … pe … ayampi kho ajito kesakambalo sanghī ceva gaṇī ca gaṇācariyo ca ñāto yasassī titthakaro sādhusammato bahujanassa. Sopi sāvakaṁ abbhatītaṁ kālankataṁ upapattīsu byākaroti: "asu amutra upapanno, asu amutra upapanno"ti. Yopissa sāvako uttamapuriso paramapuriso paramapattipatto tampi sāvakaṁ abbhatītaṁ kālankataṁ upapattīsu byākaroti: "asu amutra upapanno, asu amutra upapanno"’ti.</p>
+
+<hr>
+<p><span class="parno">4</span>Ayampi kho samaṇo gotamo sanghī ceva gaṇī ca gaṇācariyo ca ñāto yasassī titthakaro sādhusammato bahujanassa. Sopi sāvakaṁ abbhatītaṁ kālankataṁ upapattīsu byākaroti: ‘asu amutra upapanno, asu amutra upapanno’ti. Yopissa sāvako uttamapuriso paramapuriso paramapattipatto tañca sāvakaṁ abbhatītaṁ kālankataṁ upapattīsu na byākaroti: ‘asu amutra upapanno, asu amutra upapanno’ti. Api ca kho naṁ evaṁ byākaroti: ‘acchecchi taṇhāṁ, vivattayi saṁyojanaṁ, sammā mānābhisamayā antamakāsi dukkhassā’ti. </p>
+
+<hr>
+<p>Tassa mayhaṁ, bho gotama, ahu deva kankhā, ahu vicikicchā: ‘kathaṁ nāma samaṇassa gotamassa dhammo abhiññeyyo’"ti?</p>
+
+<p><span class="parno">5</span>"Alañhi te, vaccha, kankhituṁ, alaṁ vicikicchituṁ. Kankhanīye ca pana te ṭhāne vicikicchā uppannā. Saupādānassa khvāhaṁ, vaccha, upapattiṁ paññāpemi no anupādānassa. Seyyathāpi, vaccha, aggi saupādāno jalati, no anupādāno; evameva khvāhaṁ, vaccha, saupādānassa upapattiṁ paññāpemi, no anupādānassā"ti.</p>
+
+<hr>
+<p><span class="parno">6</span>"Yasmiṁ, bho gotama, samaye acci vātena khittā dūrampi gacchati, imassa pana bhavaṁ gotamo kiṁ upādānasmiṁ paññāpetī"ti? </p>
+
+<p>"Yasmiṁ kho, vaccha, samaye acci vātena khittā dūrampi gacchati, tamahaṁ vātūpādānaṁ paññāpemi. Vāto hissa, vaccha, tasmiṁ samaye upādānaṁ hotī"ti. </p>
+
+<p>"Yasmiñca pana, bho gotama, samaye imañca kāyaṁ nikkhipati, satto ca aññataraṁ kāyaṁ anupapanno hoti, imassa pana bhavaṁ gotamo kiṁ upādānasmiṁ paññāpetī"ti? </p>
+
+<p>"Yasmiṁ kho, vaccha, samaye imañca kāyaṁ nikkhipati, satto ca aññataraṁ kāyaṁ anupapanno hoti, tamahaṁ taṇhūpādānaṁ vadāmi. Taṇhā hissa, vaccha, tasmiṁ samaye upādānaṁ hotī"ti.</p>
+<p class="endsection">Navamaṁ.</p>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="./sn44.8.html#content"></a><a id="next-sutta" href="./sn44.10.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div class="w3-white .bwcontainer2">
+<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn44.html">Connected Discourses on the Undeclared</a>SN44:9 The Debating Hall
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </div>
+</footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

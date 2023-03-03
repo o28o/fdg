@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Nissaggiya Pācittiya 1</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Nissaggiya Pācittiya 1: Not to keep an extra robe more than ten days at a time.</h2>
+
+ 
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.&nbsp; &nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>Venerables, these thirty rules entailing relinquishment and confession come up for recitation.</p>
+
+<h4>First sub-story</h4>
+
+<p id="p2"><span class="parno">2</span>At one time the Buddha, the Master, was staying at Vesālī at the Gotamaka Shrine. At that time the Master had allowed the three robes to the monks. Being aware of this, some monks belonging to the group of six entered the village with one set of three robes, remained in the forest with another set, and went to bathe with yet another set. The monk of few desires … complained and criticised them: "How can these monks keep extra robes?"</p>
+
+<p id="p3"><span class="parno">3</span>After rebuking those monks in many ways they informed the Master. … "Is it true, monks, that you keep extra robes?"</p>
+
+<p>"Itʼs true, Master."</p>
+
+<hr>
+<p>The Buddha, the Master, rebuked them: " … Foolish men, how can you keep extra robes? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h4 >Preliminary ruling</h4>
+
+<p class="rule"><span class="parno">4</span>"If a monk keeps an extra robe, he commits an offence entailing relinquishment and confession."</p>
+
+<p id="p5"><span class="parno">5</span>In this way the Master laid down this training rule for the monks.</p>
+
+<h4>Second sub-story</h4>
+
+<p id="p6"><span class="parno">6</span>Soon afterwards a robe was offered to Venerable Ānanda, but he wished to give it to Venerable Sāriputta who was staying at Saketa. Knowing that the Buddha had laid down a rule against keeping an extra robe, Venerable Ānanda thought, "What should I do in this situation?" He informed the Master, who said: "How long is it, Ānanda, before Sāriputta returns?"</p>
+
+<p>"Nine or ten days, Master."</p>
+
+<p>The Master then spoke on the Dhamma and addressed the monks: "Monks, I allow you to keep an extra robe for ten days at the most. And so, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">7</span>"When his robe is finished and the <i>kathina</i> period has ended, a monk should keep an extra robe for ten days at the most. If he keeps it beyond that, he commits an offence entailing relinquishment and confession."</p>
+
+<h3>Definitions</h3>
+
+<p id="p8"><span class="parno">8</span><span class="term">When his robe is finished</span>: <span class="gloss">the monk has made a robe, or it has been lost, destroyed, or burnt, or he abandons his expectation of receiving robe cloth.<span class="note"><span class="details"><span class="p">This refers to the <i>kathina</i> season robe. For details see <a id="kathina" class="back" href="../vi/kd7.html#.html">Khandhaka 7"</a>.</span></span></span></span></p>
+
+<p id="p9"><span class="parno">9</span><span class="term">The <i>kathina</i> period has ended</span>: it has ended according to one of the eight headings or it is ended by the Saṅgha, whichever comes first.<span class="note"><span class="details"><span class="p">For an explanation of this see <a id="kathina." class="back" href="../vi/kd7.html#.html">Khandhaka 7"</a>.</span></span></span></p>
+
+<p id="p10"><span class="parno">10</span><span class="term">Ten days at the most</span>: <span class="gloss">it is to be kept at most ten days.</span></p>
+
+<p id="p11"><span class="parno">11</span><span class="term">An extra robe</span>: <span class="gloss">a robe that is not determined, nor placed under shared ownership.</span></p>
+
+<p id="p12"><span class="parno">12</span><span class="term">Robe</span>: <span class="gloss">one of the six kinds of robes,<span class="note"><span class="details"><span class="p">For the six kinds, see <a id="robes" class="back" href="../vi/kd8.html#Kd8.3.1">Khandhaka 8.3.1"</a>.</span></span></span> but not smaller than what can be placed under shared ownership.<span class="note"><span class="details"><span class="p">This means not smaller than 16 by 8 cm; see <span class="ref">Kkh 94,4</span>.</span></span></span></span></p>
+
+<p id="p13"><span class="parno">13</span><span class="term">If he keeps it beyond that, he commits an offence entailing relinquishment</span>: He commits the offence entailing relinquishment on the dawn of the eleventh day.<span class="note"><span class="details"><span class="p">According to the commentary this means the tenth dawn after one receives the robe, see <span class="ref">Sp 3.639.27</span>.</span></span></span> The robe is to be relinquished to a Saṅgha, a group, or an individual.</p>
+
+<p>"And, monks, it is to be relinquished in this way. After approaching the Saṅgha, that monk should put his upper robe over one shoulder and pay homage at the feet of the senior monks. He should then squat on his haunches, put the palms of his hands together, and say: ʻ<span class="kamma">Bhante, this robe of mine has been kept over ten days and is to be relinquished. I relinquish it to the Saṅgha.</span>ʼ After relinquishing it, he is to confess the offence. The confession should be received by an experienced and competent monk. The relinquished robe is then to be given back:</p>
+
+<p id="p14"><span class="parno">14</span>"ʻ<span class="kamma">Bhante, let the Saṅgha listen to me. This robe belonging to monk so-and-so, which was to be relinquished, has been relinquished to the Saṅgha. If it seems appropriate to the Saṅgha, the Saṅgha should give this robe back to monk so-and-so.</span>ʼ</p>
+
+<p id="p15"><span class="parno">15</span>"After approaching several monks, that monk should put his upper robe over one shoulder and pay homage at the feet of the senior monks. He should then squat on his haunches, put the palms of his hands together, and say: ʻBhante, this robe of mine has been kept over ten days and is to be relinquished. I relinquish it to the Venerables.ʼ After relinquishing it, he is to confess the offence. The confession should be received by an experienced and competent monk. The relinquished robe is then to be given back:</p>
+
+<p id="p16"><span class="parno">16</span>"ʻLet the Venerables listen to me. This robe belonging to monk so-and-so, which was to be relinquished, has been relinquished to the Venerables. If it seems appropriate to the Venerables, the Venerables should give this robe back to monk so-and-so.ʼ</p>
+
+<p id="p17"><span class="parno">17</span>"After approaching a single monk, that monk should put his upper robe over one shoulder, squat on his haunches, put the palms of his hands together, and say: ʻThis robe of mine has been kept over ten days and is to be relinquished. I relinquish it to the Venerable One.ʼ After relinquishing it, he is to confess the offence. The confession should be received by that monk. The relinquished robe is then to be given back: ʻI give this robe back to the Venerable.ʼ"</p>
+
+<h3>Permutations</h3>
+
+<p id="p18"><span class="parno">18</span>If it is more than ten days and he perceives it as more than ten days, he commits an offence entailing relinquishment and confession. If it is more than ten days, but he has doubts about it, he commits an offence entailing relinquishment and confession. If it is more than ten days, but he perceives it as less than ten days, he commits an offence entailing relinquishment and confession.</p>
+
+<p>If it is undetermined, but he perceives it as determined, he commits an offence entailing relinquishment and confession. If it is not placed under shared ownership, but he perceives it as placed under shared ownership, he commits an offence entailing relinquishment and confession. If it is not given away, but he perceives it as given away, he commits an offence entailing relinquishment and confession. If it is not lost, but he perceives it as lost, he commits an offence entailing relinquishment and confession. If it is not destroyed, but he perceives it as destroyed, he commits an offence entailing relinquishment and confession. If it is not burnt, but he perceives it as burnt, he commits an offence entailing relinquishment and confession. If it is not stolen, but he perceives it as stolen, he commits an offence entailing relinquishment and confession.</p>
+
+<p id="p19"><span class="parno">19</span>If he uses a robe which is to be relinquished without first relinquishing it, he commits an offence of bad conduct. If it is less than ten days, but he perceives it as more than ten days, he commits an offence of bad conduct. If it is less than ten days, but he has doubts about it, he commits an offence of bad conduct. If it is less than ten days and he perceives it as less than ten days, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p20"><span class="parno">20</span>There is no offence: if within ten days it is determined, placed under shared ownership, given away, lost, destroyed, burnt, stolen, or taken on trust; if he is insane; if he is the first offender.</p>
+
+<p id="p21"><span class="parno">21</span>At that time some monks belonging to the group six did not give back a relinquished robe. They informed the Master. "Monks, a relinquished robe is not not to be given back. If one does not give it back, there is an offence of bad conduct."</p>
+
+<p class="endsutta"><span class="parno">22</span>The first rule, the training rule
+<br>on the <i>kathina</i> period, is finished.</p>
+
+ 	
+</div><!--End English-->
+<div lang="pi"><!--Pali-->
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_1861</span> Ime kho panāyasmanto tiṁsa nissaggiyā pācittiyā dhammā uddesaṁ āgacchanti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">2</span><span class="ms">p_1V_1862, msdiv459</span> Tena samayena buddho bhagavā vesāliyaṁ viharati gotamake cetiye. Tena kho pana samayena bhagavatā bhikkhūnaṁ ticīvaraṁ anuññātaṁ hoti. Chabbaggiyā bhikkhū—
+"bhagavatā ticīvaraṁ anuññātan"ti aññeneva ticīvarena gāmaṁ pavisanti, aññena ticīvarena ārāme acchanti, aññena ticīvarena nahānaṁ otaranti. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma chabbaggiyā bhikkhū atirekacīvaraṁ dhāressantī"ti.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_1863</span> Atha kho te bhikkhū chabbaggiye bhikkhū anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira tumhe, bhikkhave, atirekacīvaraṁ dhārethā"ti?</p>
+
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<hr>
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma tumhe, moghapurisā, atirekacīvaraṁ dhāressatha. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h4>&nbsp;</h4>
+
+<p class="rule"><span class="parno">4</span><span class="ms">p_1V_1864, msdiv460</span>"Yo pana bhikkhu atirekacīvaraṁ dhāreyya, nissaggiyaṁ pācittiyan"ti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_1V_1865</span> Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">6</span><span class="ms">p_1V_1866, msdiv461</span> Tena kho pana samayena āyasmato ānandassa atirekacīvaraṁ uppannaṁ hoti. Āyasmā ca ānando taṁ cīvaraṁ āyasmato sāriputtassa dātukāmo hoti. Āyasmā ca sāriputto sākete viharati. Atha kho āyasmato ānandassa etadahosi: "bhagavatā sikkhāpadaṁ paññattaṁ— ‘Na atirekacīvaraṁ dhāretabban’ti. Idañca me atirekacīvaraṁ uppannaṁ. Ahañcimaṁ cīvaraṁ āyasmato sāriputtassa dātukāmo. Āyasmā ca sāriputto sākete viharati. Kathaṁ nu kho mayā paṭipajjitabban"ti?Atha kho āyasmā ānando bhagavato etamatthaṁ ārocesi. "Kīvaciraṁ panānanda, sāriputto āgacchissatī"ti?</p>
+
+<p>"Navamaṁ vā, bhagavā, divasaṁ dasamaṁ vā"ti.</p>
+
+<p>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi:  "Anujānāmi, bhikkhave, dasāhaparamaṁ atirekacīvaraṁ dhāretuṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">7</span><span class="ms">p_1V_1867, msdiv462</span><span class="rule">"Niṭṭhitacīvarasmiṁ bhikkhunā ubbhatasmiṁ kathine dasāhaparamaṁ atirekacīvaraṁ dhāretabbaṁ. Taṁ atikkāmayato nissaggiyaṁ pācittiyan"</span>ti. (<i>1</i>:<b>20</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">8</span><span class="ms">p_1V_1868, msdiv463</span><b>Niṭṭhitacīvarasmin</b>'ti bhikkhuno cīvaraṁ kataṁ vā hoti naṭṭhaṁ vā vinaṭṭhaṁ vā daḍḍhaṁ vā cīvarāsā vā upacchinnā.</p>
+
+<p><span class="parno">9</span><span class="ms">p_1V_1869</span><b>Ubbhatasmiṁ kathine</b>'ti aṭṭhannaṁ mātikānaṁ aññatarāya mātikāya ubbhataṁ hoti, saṇghena vā antarā ubbhataṁ hoti.</p>
+
+<p><span class="parno">10</span><span class="ms">p_1V_1870</span><b>Dasāhaparaman</b>'ti dasāhaparamatā dhāretabbaṁ.</p>
+
+<p><span class="parno">11</span><span class="ms">p_1V_1871</span><b>Atirekacīvaraṁ</b> nāma anadhiṭṭhitaṁ avikappitaṁ.</p>
+
+<p><span class="parno">12</span><span class="ms">p_1V_1872</span><b>Cīvaraṁ</b> nāma channaṁ cīvarānaṁ aññataraṁ cīvaraṁ, vikappanupagaṁ pacchimaṁ.</p>
+
+<p><span class="parno">13</span><span class="ms">p_1V_1873</span><b>Taṁ atikkāmayato nissaggiyaṁ hotīti</b> ekādase aruṇuggamane nissaggiyaṁ hoti. Nissajjitabbaṁ sanghassa vā gaṇassa vā puggalassa vā.</p>
+
+<p>Evañca pana, bhikkhave, nissajjitabbaṁ. Tena bhikkhunā saṇghaṁ upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā vuḍḍhānaṁ bhikkhūnaṁ pāde vanditvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassa vacanīyo: "Idaṁ me, bhante, cīvaraṁ dasāhātikkantaṁ nissaggiyaṁ, imāhaṁ sanghassa nissajjāmī"ti. Nissajjitvā āpatti desetabbā. Byattena bhikkhunā paṭibalena āpatti paṭiggahetabbā. Nissaṭṭhacīvaraṁ dātabbaṁ—</p>
+
+<p><span class="parno">14</span><span class="ms">p_1V_1874, msdiv464</span>"Suṇātu me, bhante, sangho. Idaṁ cīvaraṁ itthannāmassa bhikkhuno nissaggiyaṁ sanghassa nissaṭṭhaṁ. Yadi sanghassa pattakallaṁ, sangho imaṁ cīvaraṁ itthannāmassa bhikkhuno dadeyyā"ti.</p>
+
+<p><span class="parno">15</span><span class="ms">p_1V_1875, msdiv465</span> Tena bhikkhunā sambahule bhikkhū upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā vuḍḍhānaṁ bhikkhūnaṁ pāde vanditvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassu vacanīyā— "Idaṁ me, bhante, cīvaraṁ dasāhātikkantaṁ nissaggiyaṁ. Imāhaṁ āyasmantānaṁ nissajjāmī"ti. Nissajjitvā āpatti desetabbā. Byattena bhikkhunā paṭibalena āpatti paṭiggahetabbā. Nissaṭṭhacīvaraṁ dātabbaṁ—</p>
+
+<p><span class="parno">16</span><span class="ms">p_1V_1876, msdiv466</span>"Suṇantu me āyasmantā. Idaṁ cīvaraṁ itthannāmassa bhikkhuno nissaggiyaṁ
+āyasmantānaṁ nissaṭṭhaṁ. Yadāyasmantānaṁ pattakallaṁ, āyasmantā imaṁ cīvaraṁ itthannāmassa bhikkhuno dadeyyun"ti.</p>
+
+<p><span class="parno">17</span><span class="ms">p_1V_1877, msdiv467</span> Tena bhikkhunā ekaṁ bhikkhuṁ upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassa vacanīyo: "Idaṁ me, āvuso, cīvaraṁ dasāhātikkantaṁ nissaggiyaṁ. Imāhaṁ āyasmato nissajjāmī"ti. Nissajjitvā
+āpatti desetabbā. Tena bhikkhunā āpatti paṭiggahetabbā. Nissaṭṭhacīvaraṁ dātabbaṁ— "imaṁ cīvaraṁ āyasmato dammī"ti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">18</span><span class="ms">p_1V_1878, msdiv468</span> Dasāhātikkante atikkantasaññī, nissaggiyaṁ pācittiyaṁ. Dasāhātikkante vematiko, nissaggiyaṁ pācittiyaṁ. Dasāhātikkante anatikkantasaññī, nissaggiyaṁ pācittiyaṁ. Anadhiṭṭhite adhiṭṭhitasaññī, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p>Avikappite vikappitasaññī, nissaggiyaṁ pācittiyaṁ. Avissajjite vissajjitasaññī, nissaggiyaṁ pācittiyaṁ. Anaṭṭhe naṭṭhasaññī, nissaggiyaṁ pācittiyaṁ. Avinaṭṭhe vinaṭṭhasaññī, nissaggiyaṁ pācittiyaṁ. Adaḍḍhe daḍḍhasaññī, nissaggiyaṁ pācittiyaṁ. Avilutte viluttasaññī, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p><span class="parno">19</span><span class="ms">p_1V_1879</span> Nissaggiyaṁ cīvaraṁ anissajjitvā paribhuñjati, āpatti dukkaṭassa. Dasāhānatikkante atikkantasaññī, āpatti dukkaṭassa. Dasāhānatikkante vematiko,
+āpatti dukkaṭassa. Dasāhānatikkante anatikkantasaññī, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">20</span><span class="ms">p_1V_1880, msdiv469</span> Anāpatti— antodasāhaṁ adhiṭṭheti, vikappeti, vissajjeti, nassati, vinassati,
+ḍayhati, acchinditvā gaṇhanti, vissāsaṁ gaṇhanti, ummattakassa,
+ādikammikassāti.</p>
+
+<p><span class="parno">21</span><span class="ms">p_1V_1881, msdiv470</span> Tena kho pana samayena chabbaggiyā bhikkhū nissaṭṭhacīvaraṁ na denti. Bhagavato etamatthaṁ ārocesuṁ. "Na, bhikkhave, nissaṭṭhacīvaraṁ na dātabbaṁ. Yo na dadeyya, āpatti dukkaṭassā"ti.</p>
+
+<p class="endsutta"><span class="parno">22</span><span class="ms">p_1V_1882</span> Kaṭhinasikkhāpadaṁ niṭṭhitaṁ paṭhamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-np1.html#content"></a><a id="next-sutta" href="../vi/bu-vb-np2.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya 1
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

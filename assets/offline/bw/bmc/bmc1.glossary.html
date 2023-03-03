@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC1 Glossary</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+<p>&nbsp;</p>
+
+<h2>Buddhist Monastic Code Book 1 - The Pāṭimokkha Rules Translated and Explained</h2>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc1.intro.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Introduction</a>
+<a href="../bmc/bmc1.1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭimokkha</a>
+<a href="../bmc/bmc1.2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaya</a>
+<a href="../bmc/bmc1.3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disrobing</a>
+<a href="../bmc/bmc1.4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pārājika</a>
+<a href="../bmc/bmc1.5.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Saṅghādisesa</a>
+<a href="../bmc/bmc1.6.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Aniyatas</a>
+<a href="../bmc/bmc1.7.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaggiya Pācittiyas</a>
+<a href="../bmc/bmc1.8.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pācittiyas</a>
+<a href="../bmc/bmc1.9.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭidesanīyas</a>
+<a href="../bmc/bmc1.10.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Sekhiyas</a>
+<a href="../bmc/bmc1.11.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Adhikaraṇa-Samathās</a>
+<a href="../bmc/bmc1.12.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Appendix</a>
+<a href="../bmc/bmc1.rule-index.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Index</a>
+<a href="../bmc/bmc1.glossary.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Glossary</a>
+<a href="../bmc/bmc1.biblio.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bibliography</a>
+</div>
+
+<p>&nbsp;</p>
+
+<h3>BMC1 Glossary</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro bhikkhu</li>
+		</ul>
+</div>
+
+<p>This glossary is designed to help the reader in two sorts of situations: (1)
+when encountering a Pali term in this book in a passage where it is not
+explained; and (2) when encountering Vinaya terminology in other books or conversations
+and wanting to know how it is defined andor where it is discussed here. For
+terms that have entire chapters devoted to them — such as <i>nissaya</i> and <i>pācittiya</i>
+— see the relevant chapter.</p>
+
+<p><b><i>Ācariya: </i></b> teacher. See <a href="../bmc/bmc1.2.html">Chapter&nbsp;2</a>
+and <a href="../bmc/bmc1.12.html#app10">Appendices - Appendix 10</a>.</p>
+
+<p><b><i>Acittaka: </i></b> a class of offenses carrying a penalty even when
+committed unintentionally or with incorrect perception.</p>
+
+<p><b><i>Adhikaraṇa: </i></b> issue. See <a href="../bmc/bmc1.8-7.html#pc63">Pācittiya&nbsp;63</a>,
+<a href="../bmc/bmc1.11.html">Chapter&nbsp;11</a>, and <a href="../bmc/bmc2.12.html">BMC2,
+Chapter&nbsp;12</a>.</p>
+
+<p><b><i>Adhiṭṭhāna: </i></b> determining for use. See NP <a
+href="../bmc/bmc1.7-1.html#np1">1</a>, <a href="../bmc/bmc1.7-1.html#np3">3</a>, <a
+href="../bmc/bmc1.7-3.html#np21">21</a>, &amp; <a href="../bmc/bmc1.7-3.html#np24">24</a>
+and <a href="../bmc/bmc1.12.html#app4">Appendices - Appendix 4</a>.</p>
+
+<p><b><i>Akkosa-vatthu: </i></b> a topic for abuse. See <a
+href="../bmc/bmc1.8-1.html#pc2">Pācittiya&nbsp;2</a> &amp; <a href="../bmc/bmc1.8-1.html#pc3">3</a>.</p>
+
+<p><b><i>Anupasampanna: </i></b> anyone who has not received full Acceptance
+(ordination). With some rules, this includes bhikkhunīs; with others, it
+doesn’t.</p>
+
+<p><b><i>Apalokana: </i></b> declaration; the simplest form for a Community
+transaction, in which a decision is proposed to the Community in the
+announcer’s own words. See <a href="../bmc/bmc2.12.html">BMC2, Chapter&nbsp;12</a>.</p>
+
+<p><b><i>Bhattuddesaka: </i></b> the meal distributor — the Community official
+in charge of distributing meals and invitations to meals. See <a
+href="../bmc/bmc1.8-4.html#pc32">Pācittiya&nbsp;32</a>, <a href="../bmc/bmc1.12.html#app-III">Appendix
+III</a>, and <a href="../bmc/bmc2.18.html">BMC2, Chapter&nbsp;18</a>.</p>
+
+<p><b><i>Bhikkhu: </i></b> a male mendicant ordained in the Bhikkhu Saṅgha, subject
+to the training rules of the Bhikkhu Pāṭimokkha and the Khandhakas (the
+Mahāvagga and Cullavagga).</p>
+
+<p><b><i>Bhikkhunī: </i></b> a female mendicant ordained by both the Bhikkhunī
+and the Bhikkhu Saṅghas, subject to the training rules of the Bhikkhunī Pāṭimokkha
+and the eight rules of respect (<i>garu-dhamma</i>). See <a
+href="../bmc/bmc1.8-3.html#pc21">Pācittiya&nbsp;21</a> and <a href="../bmc/bmc2.23.html">BMC2,
+Chapter&nbsp;23</a>.</p>
+
+<p><b><i>Bhojana/Bhojaniya: </i></b> staple food. See the introduction to the <a
+href="../bmc/bmc1.8-4.html">Food Chapter in Chapter&nbsp;8</a>.</p>
+
+<p><b><i>Bhūtagāma: </i></b> a living plant in its place. See <a
+href="../bmc/bmc1.8-2.html#pc11">Pācittiya&nbsp;11</a>.</p>
+
+<p><b><i>Bījagāma: </i></b> a plant or part of a plant removed from its place
+but capable of growing again if replanted. See <a href="../bmc/bmc1.8-2.html#pc11">Pācittiya
+11</a>.</p>
+
+<p><b><i>Chanda: </i></b> consent by proxy. See <a href="../bmc/bmc1.8-8.html#pc79">Pācittiya
+79</a>.</p>
+
+<p><b><i>Deva (devatā</i>):</b> literally, a “shining one” — a
+terrestrial spirit or celestial being.</p>
+
+<p><b><i>Dubbhāsita: </i></b> wrong speech. See <a href="../bmc/bmc1.8-1.html#pc2">Pācittiya
+2</a>.</p>
+
+<p><b><i>Dukkaṭa: </i></b> wrong doing, the lightest penalty.</p>
+
+<p><b><i>Garu-bhaṇḍa: </i></b> a heavy or expensive article. Garu-bhaṇḍa
+belonging to the Saṅgha includes monasteries and monastery land; dwellings,
+land on which dwellings are built; furnishings such as beds, chairs, and
+mattresses; metal vessels and tools; building materials, except for such things
+as rushes, reeds, grass, and clay; and articles made of pottery or wood. See <a
+href="../bmc/bmc1.4.html#pr2">Pārājika 2</a>, <a href="../bmc/bmc1.5.html#sg6">Saṅghādisesa&nbsp;6</a>, <a
+href="../bmc/bmc1.8-8.html#pc81">Pācittiya&nbsp;81</a>, and <a href="../bmc/bmc2.7.html">BMC2,
+Chapter&nbsp;7</a>.</p>
+
+<p><b><i>Garu-dhamma: </i></b> any of eight rules of respect observed by
+bhikkhunīs. See <a href="../bmc/bmc1.8-3.html#pc21">Pācittiya&nbsp;21</a> and <a
+href="../bmc/bmc2.23.html">BMC2, Chapter&nbsp;23</a>.</p>
+
+<p><b><i>Hatthapāsa: </i></b> a distance of 2 12 cubits, or 1.25 meters.</p>
+
+<p><b><i>Jhāna: </i></b> mental absorption. See <a href="../bmc/bmc1.4.html#pr4">Pārājika
+4</a>.</p>
+
+<p><b><i>Kappiya-vohāra: </i></b> a proper expression, i.e., a way of expressing
+a hint or desire allowable in the context of a rule where an outright command
+would be a breach of the rule.</p>
+
+<p><b><i>Kaṭhina: </i></b> a ceremony, held in the fourth month of the rainy
+season, in which a Community of bhikkhus receives a gift of cloth from lay
+people, bestows it on one of their members, and then makes it into a robe
+before dawn of the following day. See <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>-<a
+href="../bmc/bmc1.7-1.html#np3">3</a>, <a href="../bmc/bmc1.8-8.html#pc81">Pācittiya&nbsp;81</a>,
+and <a href="../bmc/bmc2.17.html">BMC2, Chapter&nbsp;17</a>.</p>
+
+<p><b><i>Khādaniya: </i></b> non-staple food. See the introduction to the Food
+Chapter in <a href="../bmc/bmc1.8-4.html">Chapter&nbsp;8</a>.</p>
+
+<p><b><i>Lahu-bhaṇḍa: </i></b> a light or inexpensive article. Lahu-bhaṇḍa of
+the Saṅgha includes such things as cloth, food, and medicine; small personal
+accessories such as scissors, sandals, and water strainers; and light building
+materials, such as rushes, reeds, grass, and clay. See <a
+href="../bmc/bmc1.4.html#pr2">Pārājika 2</a>, <a href="../bmc/bmc1.5.html#sg6">Saṅghādisesa&nbsp;6</a>, and <a
+href="../bmc/bmc1.8-8.html#pc81">Pācittiya&nbsp;81</a>.</p>
+
+<p><b><i>Leḍḍupāta: </i></b> the distance a man of average height can toss a
+clod of dirt underarm — approximately 18 meters.</p>
+
+<p><b><i>Loka-vajja: </i></b> acts criticized by people in general. See <a
+href="../bmc/bmc1.1.html">Chapter&nbsp;1</a>.</p>
+
+<p><b><i>Lokuttara-dhamma: </i></b> a transcendent state. See <a
+href="../bmc/bmc1.4.html#pr4">Pārājika 4</a>.</p>
+
+<p><b><i>Mahāpadesa: </i></b> Great Standard for deciding what is and is not in
+line with the Dhamma and Vinaya. See <a href="../bmc/bmc1.1.html">Chapter&nbsp;1</a>.</p>
+
+<p><b><i>Mānatta: </i></b> penance. See the conclusion to <a
+href="../bmc/bmc1.5.html">Chapter&nbsp;5</a> and <a href="../bmc/bmc2.19.html">BMC2, Chapter
+19</a>.</p>
+
+<p><b><i>Nāga: </i></b> a special kind of serpent, classed as a common animal
+but having magical powers, including the ability to assume human appearance. Nāgas
+have long been regarded as protectors of the Buddha&rsquo;s teachings. See <a href="../bmc/bmc2.14.html#naga">BMC2, Chapter&nbsp;14</a>.</p>
+
+<p><b><i>Ñatti-kamma: </i></b> a form for a Community transaction in which a
+decision is proposed to the Community in a motion following a set wording. See <a
+href="../bmc/bmc2.12.html">BMC2, Chapter&nbsp;12</a>.</p>
+
+<p><b><i>Ñatti-dutiya-kamma: </i></b> a form for a Community transaction in
+which a decision is proposed to the Community in a motion and one announcement.
+See <a href="../bmc/bmc2.12.html">BMC2, Chapter&nbsp;12</a>.</p>
+
+<p><b><i>Ñatti-catuttha-kamma: </i></b> a form for a Community transaction in
+which a decision is proposed to the Community in a motion and three
+announcements. See <a href="../bmc/bmc2.12.html">BMC2, Chapter&nbsp;12</a>.</p>
+
+<p><b><i>Niyasa-kamma: </i></b> demotion (also called <i>nissaya-kamma,</i> an
+act of dependence) — a transaction whereby a bhikkhu released from dependence
+is required to return to dependence under a mentor until he mends his ways. See
+<a href="../bmc/bmc1.2.html">Chapter&nbsp;2</a> and <a href="../bmc/bmc2.20.html">BMC2,
+Chapter&nbsp;20</a>.</p>
+
+<p><b><i>Pabbājanīya-kamma: </i></b> banishment — a transaction whereby a
+bhikkhu is denied membership in a particular Community until he mends his ways.
+See <a href="../bmc/bmc1.5.html#sg13">Saṅghādisesa&nbsp;13</a> and <a href="../bmc/bmc2.20.html">BMC2, Chapter
+20</a>.</p>
+
+<p><b><i>Pabbajjā: </i></b> Going-forth — ordination as a sāmaṇera. See <a
+href="../bmc/bmc2.14.html">BMC2 Chapters 14</a> and <a href="bmc2.24.html">24</a>.</p>
+
+<p><b><i>Paccuddharaṇa: </i></b> rescinding from use. See <a
+href="../bmc/bmc1.12.html#app4">Appendices - Appendix 4</a>.</p>
+
+<p><b><i>Palibodha: </i></b> sonstraint. See <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>.</p>
+
+<p><b><i>Pāna: </i></b> juice drink. See the introduction to the Food Chapter in
+<a href="../bmc/bmc1.8-4.html">Chapter&nbsp;8</a>, and <a href="../bmc/bmc1.8-4.html#pc38">Pācittiya
+38</a>.</p>
+
+<p><b><i>Paṇḍaka: </i></b> a eunuch or person born neuter. See <a
+href="../bmc/bmc1.5.html#sg2">Saṅghādisesa&nbsp;2</a>.</p>
+
+<p><b><i>Paṇṇatti-vajja: </i></b> acts criticized by the training rules. See <a
+href="../bmc/bmc1.1.html">Chapter&nbsp;1</a>.</p>
+
+<p><b><i>Parivāsa: </i></b> probation. See the conclusion to <a
+href="../bmc/bmc1.5.html">Chapter&nbsp;5</a> and <a href="../bmc/bmc2.19.html">BMC2, Chapter
+19</a>.</p>
+
+<p><b><i>Pavāraṇā: </i></b> (1) an invitation whereby a donor gives permission
+to a bhikkhu or a Community of bhikkhus to ask for requisites. See <a
+href="../bmc/bmc1.8-5.html#pc47">Pācittiya&nbsp;47</a>. (2) a ceremony, held at the end of the
+Rains-residence (see <i>vassa</i>), in which each bhikkhu invites the rest of
+the Community to confront him with any transgressions they may have seen,
+heard, or suspected that he has committed. See <a href="../bmc/bmc2.16.html">BMC2,
+Chapter&nbsp;16</a>.</p>
+
+<p><b><i>Peta: </i></b> a hungry shade — one of a class of beings in the lower
+realms, sometimes capable of appearing to human beings.</p>
+
+<p><b><i>Pubbayoga: </i></b> a preliminary effort leading up to the commission
+of an offense.</p>
+
+<p><b><i>Sacittaka: </i></b> a class of offenses that carry a penalty only when
+committed intentionally and with correct perception.</p>
+
+<p><b><i>Samaṇa: </i></b> contemplative; monk. This word is derived from the
+adjective <i>sama,</i> which means “in tune” or “in
+harmony.” The samaṇas in ancient India were wanderers who tried through direct
+contemplation to find the true nature of reality — as opposed to the
+conventions taught in the Vedas — and to live in tune or in harmony with that
+reality. Buddhism is one of several samaṇa movements. Others included Jainism,
+Ājivakan fatalism, and Lokāyata, or hedonism.</p>
+
+<p><b><i>Sāmaṇera: </i></b> literally, a small samaṇa — a novice monk observing
+ten precepts. See <a href="../bmc/bmc1.8-7.html#pc70">Pācittiya&nbsp;70</a>.</p>
+
+<p><b><i>Saṅgha: </i></b> Community. This may refer to the entire Community of
+bhikkhus or of bhikkhunīs, or to the Community living in a particular location.
+In this book I have tried to distinguish between the two by calling the first <i>Saṅgha,</i>
+and the second <i>Community,</i> but there are some contexts where it is
+difficult to draw a clear line between the two.</p>
+
+<p><b><i>Saṅgha-bheda: </i></b> a schism in the Saṅgha. See <a
+href="../bmc/bmc1.5.html#sg10">Saṅghādisesa&nbsp;10</a> &amp; <a href="../bmc/bmc1.5.html#sg11">11</a>
+and <a href="../bmc/bmc2.21.html">BMC2, Chapter&nbsp;21</a> and <a
+href="../bmc/bmc1.12.html#app5">Appendices - Appendix 5</a>.</p>
+
+<p><b><i>Saṅgha-rāji: </i></b> a crack in the Saṅgha. See <a
+href="../bmc/bmc1.5.html#sg10">Saṅghādisesa&nbsp;10</a>.</p>
+
+<p><b><i>Sīmā: </i></b> boundary or territory related to the performance of
+transactions of the Community. See <a href="../bmc/bmc1.8-8.html#pc79">Pācittiya&nbsp;79</a>
+and <a href="../bmc/bmc2.13.html">BMC2, Chapter&nbsp;13</a>.</p>
+
+<p><b><i>Sugata: </i></b> Well-gone, an epithet for the Buddha. Sugata measures
+are discussed in <a href="../bmc/bmc1.12.html#app2">Appendices - Appendix 2</a>.</p>
+
+<p><b><i>Sutta (suttanta</i>):</b>discourse.</p>
+
+<p><b><i>Tajjanīya-kamma: </i></b> an act of censure, whereby a Community may
+strip a bhikkhu of some of his communal rights if he is a maker of strife; if
+his virtue, behavior, or views are corrupt; or if he criticizes the Buddha,
+Dhamma, or Saṅgha. If he mends his ways, the act can be repealed. See <a
+href="../bmc/bmc1.5.html#sg8">Saṅghādisesa&nbsp;8</a>, <a href="../bmc/bmc1.6.html#an1">Aniyata 1</a>, <a
+href="../bmc/bmc1.11.html">Chapter&nbsp;11</a>, and <a href="../bmc/bmc2.19.html">BMC2,
+Chapter&nbsp;19</a>.</p>
+
+<p><b><i>Thullaccaya: </i></b> grave offense, the most serious derived offense
+and the most serious offense not included in the Pāṭimokkha rules. See <a
+href="../bmc/bmc1.12.html#app9">Appendix 9</a>.</p>
+
+<p><b><i>Tiracchāna-kathā: </i></b> “animal talk,” topics of
+conversation inappropriate for bhikkhus. See <a href="../bmc/bmc1.8-5.html#pc46">Pācittiya
+46</a> &amp; <a href="../bmc/bmc1.8-9.html#pc85">85</a>.</p>
+
+<p><b><i>Tiracchāna-vijjā: </i></b> “animal knowledge,” occult
+abilities or other traditional skills inappropriate for bhikkhus to study or
+practice. See <a href="../bmc/bmc1.4.html#pr4">Pārājika 4</a> and <a href="../bmc/bmc2.10.html">BMC2,
+Chapter&nbsp;10</a>.</p>
+
+<p><b><i>Ukkhepanīya-kamma: </i></b> suspension — a transaction whereby a
+Community deprives a bhikkhu of his right to associate with the Saṅgha as a
+whole until he mends his ways. See <a href="../bmc/bmc1.8-7.html#pc68">Pācittiya&nbsp;68</a>
+&amp; <a href="../bmc/bmc1.8-7.html#pc69">69</a> and <a href="../bmc/bmc2.19.html">BMC2,
+Chapter&nbsp;19</a>.</p>
+
+<p><b><i>Upajjhāya: </i></b> preceptor (literally: “supervisor” or
+&quot;overseer”). See <a href="../bmc/bmc1.2.html">Chapter&nbsp;2</a>, <a
+href="../bmc/bmc1.12.html#app10">Appendix 10</a>, and <a href="../bmc/bmc2.14.html">BMC2,
+Chapter&nbsp;14</a>.</p>
+
+<p><b><i>Upasampadā: </i></b> Full Acceptance — ordination as a bhikkhu or
+bhikkhunī. See <a href="../bmc/bmc2.14.html">BMC2, Chapter&nbsp;14</a>.</p>
+
+<p><b><i>Uposatha: </i></b> Observance day, the day of the new and of the full
+moon; traditionally, in India, a time of special spiritual practices. The
+Buddha adopted this as the day for reciting the Pāṭimokkha. See <a
+href="../bmc/bmc2.15.html">BMC2, Chapter&nbsp;15</a>.</p>
+
+<p><b><i>Vassa: </i></b> Rains-residence — a three-month period, generally
+beginning the day after the full moon in July (or the second, if there are
+two), during which certain restrictions are placed on the bhikkhus' wanderings;
+usually considered a time to accelerate one’s efforts in study or practice. See
+<a href="../bmc/bmc2.11.html">BMC2, Chapter&nbsp;11</a>.</p>
+
+<p><b><i>Vikappana: </i></b> an arrangement whereby an item not in use is placed
+under shared ownership. See <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>, <a
+href="../bmc/bmc1.8-6.html#pc59">Pācittiya&nbsp;59</a>, and <a href="../bmc/bmc1.12.html#app5">Appendix 5</a>.</p>
+
+<p><b><i>Vissāsa: </i></b> trust between friends. See <a
+href="../bmc/bmc1.4.html#pr2">Pārājika 2</a> and <a href="../bmc/bmc1.8-6.html#pc59">Pācittiya&nbsp;59</a>.</p>
+
+<p><b><i>Yakkha: </i></b> one of a class of powerful “non-human&quot;
+beings — sometimes kindly, sometimes murderous and cruel — corresponding
+roughly to the fairies and ogres of Western fairy tales. The female (<i>yakkhinī</i>)
+is generally considered more treacherous than the male.</p>
+
+<p><b><i>Yojana: </i></b> a league — a distance of approximately ten miles or
+sixteen kilometers.</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc1.rule-index.html#content"></a><a id="next-sutta" href="../bmc/bmc1.biblio.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc1.html">BMC 1</a>Glossary</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Sanghādisesa 10</title>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<!-- Loading third party fonts -->
+ 			 			<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 			<!-- Loading main and menu stylesheets -->
+ 			<link rel="stylesheet" href="../css/w3.css">
+ 			<link rel="stylesheet" href="../css/css.css">
+ 			<link rel="stylesheet" href="../css/menu.css">
+ 			<script src="../js/jquery-1.10.2.min.js"></script>
+ 			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+ <body>
+ 
+ <!-- header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 		<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 				<ul id="css3menu0">
+ 					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 					<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 				<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 					<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 						<ul>
+ 							<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 							<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 							<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 							<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 							<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 							<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 							<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 							<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 							<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 							<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 							<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 						<ul>
+ 							<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 							<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 							<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 							<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 							<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 							<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 							<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 						<ul>
+ 							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 							<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 							<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 
+ 						</ul>
+ 					</li>
+ 				</ul>
+ 				</div>
+ 			</div> <!--navbar-->
+ 
+ <!-- Sidebar (hidden by default) -->
+ 	<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 			<div class="w3-bar-block w3-white">
+ 				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 				<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 				<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 			</div>
+ 	</nav>
+ 
+ 		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <p>&nbsp;</p>
+ 
+ <h3 id="#BI-VBheading">Bhikkhuni Vibhanga</h3>
+ 		<div class="w3-bar-white bwnav"><!-- Div for lower BI-VB-SN sub-navigation -->
+ 		<a href="../vi/bi-vb-pj.html#BI-VBheading" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 		<a href="../vi/bi-vb-sn.html#BI-VBheading" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sanghādisesas</a>
+ 		<a href="../vi/bi-vb-np.html#BI-VBheading" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pc.html#BI-VBheading" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pd.html#BI-VBheading" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 		<a href="../vi/bi-vb-sk.html#BI-VBheading" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 		<a href="../vi/bi-vb-as.html#BI-VBheading" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+ 	</div><!-- End div for lower BI-VB-SN sub-navigation -->
+ 
+ <!--      BI-VB-SN content begins here      -->
+ 
+ <div id="content">
+
+<h2>Bhikkhuni Vibhanga - Sanghādisesa 10: Denouncing the Buddha, Dhamma or Saṅgha.</h2>
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.</li>
+</ul>
+</div>
+
+
+
+<section class="raw_sutta">
+<div lang="en">
+	
+<p><span class="note"><span class="details"><span class="p"> Note by Sujato: <i>Saṅghādisesa</i> 7 in I.B. Horner’s edition.</span></span></span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove in Anāthapiṇḍika’s monastery. Now at that time the nun Caṇḍakālī, having quarrelled with nuns,<span class="note"><span class="details"><span class="p"> See <a class="cr" href="#Bi-Sn.4">Bi-Sn.4</a>, where she is again shown as quarrelsome.</span></span></span> angry, displeased, spoke thus: “I repudiate<span class="note"><span class="details"><span class="p"> <i>paccācikkhati</i>, intensive of <i>paccakkhāti</i>, on which see <a class="cr">BD.1.40, n.2</a>.</span></span></span> the enlightened one, I repudiate dhamma, I repudiate the Order, I repudiate the training. What indeed are these recluses who are recluses, daughters of the Sakyans? For there are other recluses, conscientious, scrupulous, desirous of training; I will lead the Brahma-life among these."</p>
+
+<p id="p2"><span class="parno">2</span>Those who were modest nuns … spread it about, saying: “How can the lady Caṇḍakālī, a nun, angry, displeased, speak thus: ‘I repudiate … I will lead the Brahma-life among these’?" …</p>
+
+<p>"Is it true, as is said, monks, that the nun Caṇḍakālī, angry, displeased, spoke thus: ‘I repudiate … I will lead the Brahma-life among these’?"</p>
+
+<hr>
+<p>"It is true, lord."</p>
+
+<p>The enlightened one, the lord, rebuked them, saying:</p>
+
+<p>"How, monks, can the nun Caṇḍakālī, angry, displeased, speak thus: ‘I repudiate … I will lead the Brahma-life among these’? It is not, monks, for pleasing those who are not (yet) pleased … this rule of training:</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>"<span class="rule">Whatever nun, angry, displeased, should speak thus: ‘I repudiate the enlightened one … I repudiate the training. What indeed are these recluses who are recluses, daughters of the Sakyans? For there are other recluses, conscientious, scrupulous,’ desirous of training; I will lead the Brahma-life among these,’ that nun should be spoken to thus by the nuns: ‘Do not, lady, angry, displeased, speak thus: “I repudiate the enlightened one … I will lead the Brahma-life among these." Be satisfied, lady, dhamma is well preached, lead the Brahma-life for the utter ending of ill.’ And if that nun, being spoken to thus by the nuns, persists as before, that nun should be admonished by the nuns up to a third time<span class="note"><span class="details"><span class="p"> <i>yāvatatiyaṁ</i>.</span></span></span> for giving up that (course). If, being admonished up to a third time, she should give it up, that is good. If she should not give it up, that nun also has fallen into a matter that is an offence on the third (admonition),<span class="note"><span class="details"><span class="p"> <i>yāvatatiyakaṁ</i>. <i>Cf.</i> <a class="cr" href="#BD.1.328">BD.1.328, n.2</a>.</span></span></span> entailing a formal meeting of the Order involving being sent away."</span></p>
+
+<hr>
+<p id="p4"><span class="parno">4</span><span class="term">Whatever</span> means: <span class="gloss"> … nun is to be understood in this case.</span></p>
+
+<p id="p5"><span class="parno">5</span><span class="term">Angry, displeased</span> means: <span class="gloss">dissatisfied, the mind worsened, stubborn.</span><span class="note"><span class="details"><span class="p"> = <a class="cr" href="#Vin.3.255">Vin.3.255</a> (<a class="cr" href="#BD.2.140"></a>), <a class="cr" href="#Vin.4.146">Vin.4.146</a> (above, <a class="cr"></a>), <a class="cr" href="#Vin.4.238">Vin.4.238</a> (below, <a class="cr" href="#BD.3.206"></a>); <i>cf.</i> <a class="cr" href="#Vin.3.163">Vin.3.163</a> (<a class="cr" href="#BD.1.281"></a>).</span></span></span></p>
+
+<p id="p6"><span class="parno">6</span><span class="term">Should speak thus</span> means: <span class="gloss">‘I repudiate … I will lead the Brahma-life among these.’</span></p>
+
+<hr>
+<p id="p7"><span class="parno">7</span><span class="term">That nun</span> means: <span class="gloss">whatever nun speaks thus.</span></p>
+
+<p id="p8"><span class="parno">8</span><span class="term">By the nuns</span> means: by other nuns who see, who hear; she should be told by these: “Do not, lady, angry, displeased … for the utter ending of ill." And a second time she should be told, and a third time she should be told. If she gives it up, that is good. If she does not give it up, there is an offence of wrong-doing. If, having heard, they do not speak, there is an offence of wrong-doing. And that nun, having been pulled into the midst of the Order, should be told: <span>“Do not, lady, angry, displeased, speak thus: ‘I repudiate the enlightened one, I repudiate, dhamma, I repudiate the Order, I repudiate the training … I will lead the Brahma-life among these.’ Be satisfied, lady, … lead the Brahma-life for the utter ending of ill."</span> And a second time she should be told, and a third time she should be told. If she gives it up, that is good. If she does not give it up, there is an offence of wrong-doing. That nun should be admonished. And thus, monks should she be admonished: the Order should be informed by an experienced, competent nun, saying:</p>
+
+<hr>
+<p id="p9"><span class="parno">9</span>“Ladies, let the Order listen to me. This nun so and so, angry, displeased, spoke thus: ‘I repudiate … I will lead the Brahma-life among these.’ She does not give up this course. If it seems right to the Order, let the Order admonish the nun so and so for giving up this course. This is the motion.</p>
+
+<hr>
+<p id="p10"><span class="parno">10</span>Ladies, let the Order listen to me. This nun so and so … She does not give up this course. The Order admonishes the nun so and so for the giving up of this course. If the admonition of the mm so and so for the giving up of this course is pleasing to the ladies, let them be silent. If it is not pleasing, then you should speak.</p>
+
+<hr>
+<p><span class="parno">11–12</span>And a second time I speak forth this matter … And a third time I speak forth this matter … The nun so and so is admonished by the Order for the giving up of this course. It is pleasing … Thus do I understand this."</p>
+
+<p id="p13"><span class="parno">13</span>As a result of the motion, there is an offence of wrong-doing; as a result of two proclamations, there are grave offences. At the end of the proclamations, there is an offence entailing a formal meeting of the Order. If she is committing an offence entailing a formal meeting of the Order, the offence of wrong-doing according to the motion and the grave offences according to the two proclamations, subside.<span class="note"><span class="details"><span class="p"> <i>Cf.</i> <a class="cr" href="#BD.1.302"></a>, <a class="cr" href="#BD.1.307"></a>, <a class="cr" href="#BD.1.313"></a>, <a class="cr" href="#BD.1.327"></a>.</span></span></span></p>
+
+<hr>
+<p id="p14"><span class="parno">14</span><span class="term">She also</span> means: <span class="gloss">she is so called in reference to the former.</span></p>
+
+<p id="p15"><span class="parno">15</span><span class="term">Up to the third time</span> means: <span class="gloss">she falls on the third admonition, not through transgression of a course.</span><span class="note"><span class="details"><span class="p"> <i>Cf.</i> above, <a class="cr" href="#BD.3.180"></a>.</span></span></span></p>
+
+<p id="p16"><span class="parno">16</span><span class="term">Involving being sent away</span> means: <span class="gloss">she is caused to be sent away by the Order.</span></p>
+
+<hr>
+<p id="p17"><span class="parno">17</span><span class="term">Offence entailing a formal meeting of the Order</span> means: <span class="gloss"> … therefore again it is called an offence entailing a formal meeting of the Order.</span></p>
+
+<p><span class="parno">18–19</span>If she thinks that it is a legally valid act when it is a legally valid act (and) does not give it up, there is an offence entailing a formal meeting of the Order. If she is in doubt as to whether it is a legally valid act … If she thinks that it is not a legally valid act when it is a legally valid act (and) does not give it up, there is an offence entailing a formal meeting of the Order. If she thinks that it is a legally valid act when it is not a legally valid act, there is an offence of wrong-doing. If she is in doubt as to whether it is not a legally valid act, there is an offence of wrong-doing. If she thinks that it is not a legally valid act when it is not a legally valid act, there is an offence of wrong-doing.</p>
+
+<hr>
+<p id="p20"><span class="parno">20</span>There is no offence if she is not admonished, if she gives it up; if she is mad, if she is the first wrong-doer.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+<p><span class="parno">1</span><span class="ms">p_2V_2323, msdiv709</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena caṇḍakāḷī bhikkhunī bhikkhunīhi saddhiṁ bhaṇḍitvā kupitā anattamanā evaṁ vadeti: “buddhaṁ paccācikkhāmi, dhammaṁ paccācikkhāmi, saṁghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā tāsāhaṁ santike brahmacariyaṁ carissāmī”ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_2V_2324</span>Yā tā bhikkhuniyo appicchā … pe … tā ujjhāyanti khiyyanti vipācenti:  “kathañhi nāma ayyā caṇḍakāḷī kupitā anattamanā evaṁ vakkhati— ‘buddhaṁ paccācikkhāmi … pe … sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā tāsāhaṁ santike brahmacariyaṁ carissāmī’”ti … pe …</p>
+
+<p>“saccaṁ kira, bhikkhave, caṇḍakāḷī bhikkhunī kupitā anattamanā evaṁ vadeti: ‘buddhaṁ paccācikkhāmi … pe … sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’”ti?</p>
+
+<hr>
+<p>“Saccaṁ, bhagavā”ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe …</p>
+
+<p>Kathañhi nāma, bhikkhave, caṇḍakāḷī bhikkhunī kupitā anattamanā evaṁ vakkhati— ‘buddhaṁ paccācikkhāmi … pe … sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, bhikkhuniyo imaṁ sikkhāpadaṁ uddisantu—</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_2V_2325, msdiv710</span><span class="rule">“Yā pana bhikkhunī kupitā anattamanā evaṁ vadeyya— ‘buddhaṁ paccācikkhāmi, dhammaṁ paccācikkhāmi, saṁghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro. Santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā— ‘māyye, kupitā anattamanā evaṁ avaca— buddhaṁ paccācikkhāmi, dhammaṁ paccācikkhāmi, saṁghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro. Santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmīti, abhiramāyye, svākkhāto dhammo; cara brahmacariyaṁ sammā dukkhassa antakiriyāyā’ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya. Yāvatatiyañce samanubhāsīyamānā taṁ paṭinissajjeyya iccetaṁ kusalaṁ; no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṁghādisesan”</span>ti. (<i>10</i>:<b>18</b>)</p>
+
+<hr>
+<p><span class="parno">4</span><span class="ms">p_2V_2326, msdiv711</span><b>Yā panā</b>'ti yā yādisā … pe … <b>bhikkhunī</b>'ti … pe … ayaṁ imasmiṁ atthe adhippetā bhikkhunīti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_2327</span><b>Kupitā anattamanā</b>'ti anabhiraddhā āhatacittā khilajātā.</p>
+
+<p><span class="parno">6</span><span class="ms">p_2V_2328</span><b>Evaṁ vadeyyā</b> ti— “buddhaṁ paccācikkhāmi … pe … sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro. Santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī”ti.</p>
+
+<hr>
+<p><span class="parno">7</span><span class="ms">p_2V_2329</span><b>Sā bhikkhunī</b>'ti yā sā evaṁvādinī bhikkhunī. <b>Bhikkhunīhī</b>'ti aññāhi bhikkhunīhi.</p>
+
+<p><span class="parno">8</span><span class="ms">p_2V_2330</span>Yā passanti yā suṇanti tāhi vattabbā— “māyye, kupitā anattamanā evaṁ avaca— ‘buddhaṁ paccācikkhāmi … pe … sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro. Santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti. Abhiramāyye, svākkhāto dhammo; cara brahmacariyaṁ sammā dukkhassa antakiriyāyā”ti. Dutiyampi vattabbā. Tatiyampi vattabbā. Sace paṭinissajjati iccetaṁ kusalaṁ, no ce paṭinissajjati āpatti dukkaṭassa. Sutvā na vadanti, āpatti dukkaṭassa. Sā bhikkhunī saṁghamajjhampi ākaḍḍhitvā vattabbā— “māyye, kupitā anattamanā evaṁ avaca— ‘buddhaṁ paccācikkhāmi … pe … sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro. Santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti. Abhiramāyye, svākkhāto dhammo; cara brahmacariyaṁ sammā dukkhassa antakiriyāyā”ti. Dutiyampi vattabbā. Tatiyampi vattabbā. Sace paṭinissajjati iccetaṁ kusalaṁ, no ce paṭinissajjati āpatti dukkaṭassa. Sā bhikkhunī samanubhāsitabbā. Evañca pana, bhikkhave, samanubhāsitabbā. Byattāya bhikkhuniyā paṭibalāya saṁgho ñāpetabbo—</p>
+
+<hr>
+<p><span class="parno">9</span><span class="ms">p_2V_2331, msdiv712</span>“Suṇātu me, ayye, saṁgho. Ayaṁ itthannāmā bhikkhunī kupitā anattamanā evaṁ vadeti: ‘buddhaṁ paccācikkhāmi, dhammaṁ paccācikkhāmi, saṁghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro. Santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā tāsāhaṁ santike brahmacariyaṁ carissāmī’ti. Sā taṁ vatthuṁ na paṭinissajjati. Yadi saṁghassa pattakallaṁ, saṁgho itthannāmaṁ bhikkhuniṁ samanubhāseyya tassa vatthussa paṭinissaggāya. Esā ñatti.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_2V_2332</span>Suṇātu me, ayye, saṁgho. Ayaṁ itthannāmā bhikkhunī kupitā anattamanā evaṁ vadeti: ‘buddhaṁ paccācikkhāmi … pe … sikkhaṁ paccācikkhāmi. Kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro. Santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti. Sā taṁ vatthuṁ na paṭinissajjati. Saṁgho itthannāmaṁ bhikkhuniṁ samanubhāsati tassa vatthussa paṭinissaggāya. Yassā ayyāya khamati itthannāmāya bhikkhuniyā samanubhāsanā tassa vatthussa paṭinissaggāya, sā tuṇhassa; yassā nakkhamati sā, bhāseyya.</p>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_2V_2333</span>Dutiyampi etamatthaṁ vadāmi … pe … tatiyampi etamatthaṁ vadāmi … pe … .</p>
+
+<p><span class="parno">12</span><span class="ms">p_2V_2334</span>Samanubhaṭṭhā saṁghena itthannāmā bhikkhunī tassa vatthussa paṭinissaggāya. Khamati saṁghassa, tasmā tuṇhī, evametaṁ dhārayāmī”ti.</p>
+
+<p><span class="parno">13</span><span class="ms">p_2V_2335</span>Ñattiyā dukkaṭaṁ. Dvīhi kammavācāhi thullaccayā. Kammavācāpariyosāne āpatti saṁghādisesassa. Saṁghādisesaṁ ajjhāpajjantiyā ñattiyā dukkaṭaṁ, dvīhi kammavācāhi thullaccayā paṭippassambhanti.</p>
+
+<hr>
+<p><span class="parno">14</span><span class="ms">p_2V_2336</span><b>Ayampī</b>'ti purimāyo upādāya vuccati.</p>
+
+<p><span class="parno">15</span><span class="ms">p_2V_2337</span><b>Yāvatatiyakan</b>'ti yāvatatiyaṁ samanubhāsanāya āpajjati, na saha vatthujjhācārā.</p>
+
+<p><span class="parno">16</span><span class="ms">p_2V_2338</span><b>Nissāraṇīyan</b>'ti saṁghamhā nissārīyati.</p>
+
+<hr>
+<p><span class="parno">17</span><span class="ms">p_2V_2339</span><b>Saṁghādiseso</b>'ti … pe … tenapi vuccati saṁghādisesoti.</p>
+
+<p><span class="parno">18</span><span class="ms">p_2V_2340, msdiv713</span>Dhammakamme dhammakammasaññā na paṭinissajjati, āpatti saṁghādisesassa. Dhammakamme vematikā na paṭinissajjati, āpatti saṁghādisesassa. Dhammakamme adhammakammasaññā na paṭinissajjati, āpatti saṁghādisesassa.</p>
+
+<p><span class="parno">19</span><span class="ms">p_2V_2341</span>Adhammakamme dhammakammasaññā, āpatti dukkaṭassa. Adhammakamme vematikā, āpatti dukkaṭassa. Adhammakamme adhammakammasaññā, āpatti dukkaṭassa.</p>
+
+<hr>
+<p><span class="parno">20</span><span class="ms">p_2V_2342, msdiv714</span>Anāpatti— asamanubhāsantiyā, paṭinissajjantiyā, ummattikāya, ādikammikāyāti.</p>
+
+<p class="endsutta"><span class="parno">21</span><span class="ms">p_2V_2343</span>Sattamasaṁghādisesasikkhāpadaṁ niṭṭhitaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-sn9.html#content"></a><a id="next-sutta" href="../vi/bi-vb-sn11.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-sn.html">Sanghādisesas</a>Sanghādisesa 10
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

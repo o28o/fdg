@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vinaya - Khandhaka&nbsp;21</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small pressed">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! -->
+  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+<h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+
+<p>&nbsp;</p>
+
+<h2 id="Kd.21">Khandhaka&nbsp;21 <span class="minor">(Culavagga 11)</span> - Council of the Five Hundred</h2>
+
+<div id="metaarea">
+<ul class="translator">
+	<li>&copy;&nbsp;Translated from the Pali by Bikkhu Brahmali for Sutta Central&nbsp;<a href="../home/copyright.html">(More copyright information)</a></li>
+</ul>
+</div>
+
+ <section class="raw_sutta">
+ <div lang="en">
+
+<p id="p1"><span class="parno">1</span>Then Venerable Mahākassapa addressed the monks: “On one occasion I was traveling from Pāvā to Kusināra with a large sangha of five hundred monks. And I left the road and sat down at the foot of a tree. </p>
+
+<p id="p2"><span class="parno">2</span>Just then a follower of the Ājīvakas was traveling toward Pāvā on the same road, holding a coral-tree flower that he had picked up in Kusināra. When I saw him coming, I asked him, ‘Do you know anything about our Teacher?’ </p>
+
+<p>‘I do. Today it’s seven days since the ascetic Gotama attained final extinguishment. That’s why I carry this coral-tree flower.’ </p>
+
+<hr>
+
+<p>Some of the monks there who were not yet free from desire threw up their arms and cried, collapsed on the ground, and rolled back and forth, lamenting, ‘The Buddha, the Happy One, has attained final extinguishment too soon; too soon has the eye of the world been put out.’ But the monks there who were free from desire bore it patiently with mindfulness and full awareness, saying, ‘All phenomena are impermanent. How could it be any different?’ </p>
+
+<p id="p3"><span class="parno">3</span>I said, ‘Please stop grieving, stop lamenting. Didn’t the Buddha warn us that we must be separated from everyone and everything dear and agreeable to us? How could that which is born, become, made up, and of a nature to fall apart, not fall apart? That’s impossible.’ </p>
+
+<p id="p4"><span class="parno">4</span>On that occasion a monk called Subhadda, who had gone forth when old, was part of that group. He said to the monks, ‘Please stop grieving, stop lamenting. It’s good that we are freed from that great ascetic. We were oppressed, always being told what’s allowable and what isn’t. Now we can do what we like and not do what we don’t like.’ </p>
+
+<p>So then, let’s recite the Teaching and the Monastic Law together before what is contrary to the Teaching shines forth and the Teaching is obstructed; before what is contrary to the Monastic Law shines forth and the Monastic Law is obstructed; before those who speak contrary to the Teaching become strong and those who speak in accordance with it become weak; before those who speak contrary to the Monastic Law become strong and those who speak in accordance with it become weak.” </p>
+
+<hr>
+
+<p id="p5"><span class="parno">5</span>“Well then, Venerable, please select the monks.” Mahākassapa then selected four hundred and ninety-nine perfected ones. The monks said to him, “There is Venerable Ānanda who, although still a trainee, is incapable of acting out of desire, ill will, confusion, or fear. He’s learned many teachings and much Monastic Law from the Buddha. Please invite him as well.” And he did. </p>
+
+<hr>
+
+<p id="p6"><span class="parno">6</span>The senior monks thought, “Where should we recite the Teaching and the Monastic Law together?” And it occurred to them, “Rājagaha has much almsfood and many dwellings. Let’s spend the rainy season at Rājagaha and recite the Teaching and the Monastic Law together there. No other monk should enter the rainy-season residence at Rājagaha.” </p>
+
+<p id="p7"><span class="parno">7</span>And Venerable Mahākassapa informed the Sangha: </p>
+
+<hr>
+
+<p id="p8"><span class="parno">8</span>“Please, Venerables, I ask the Sangha to listen. If it seems appropriate to the Sangha, the Sangha should appoint these five hundred monks to spend the rainy season at Rājagaha and to recite the Teaching and the Monastic Law together there. No other monk should enter the rainy-season residence at Rājagaha. This is the motion. </p>
+
+<p id="p9"><span class="parno">9</span>Please, Venerables, I ask the Sangha to listen. The Sangha appoints these five hundred monks to spend the rainy season at Rājagaha in order to recite the Teaching and the Monastic Law together. No other monk should spend the rainy-season residence at Rājagaha. Any monk who approves of appointing these five hundred monks, to spend the rainy season at Rājagaha in order to recite the Teaching and the Monastic Law together, with no other monk spending the rainy-season residence at Rājagaha, should remain silent. Any monk who doesn’t approve should speak up. </p>
+
+<hr>
+
+<p id="p10"><span class="parno">10</span>The Sangha has appointed these five hundred monks to spend the rainy season at Rājagaha in order to recite the Teaching and the Monastic Law together. No other monk should enter the rainy-season residence at Rājagaha. The Sangha approves and is therefore silent. I will remember it thus.” </p>
+
+
+
+<p>11The senior monks then went to Rājagaha to recite the Teaching and the Monastic Law. They thought, “The Buddha has praised repairing what’s defective and broken. Well then, let’s spend the first month doing repairs, and then gather for the middle month to recite the Teaching and the Monastic Law.” </p>
+
+<p>12They then spent the first month doing repairs. Venerable Ānanda thought, “It would not be proper for me to go to the assembly tomorrow if I’m still a trainee.” And after spending most of the night with mindfulness directed to the body, early in the morning he bent over to lie down. In the interval between his feet coming off the ground and his head hitting the pillow his mind was freed from the corruptions through letting go. </p>
+
+<p>13And Venerable Ānanda went to the assembly as a perfected one.  Venerable Mahākassapa informed the Sangha: </p>
+
+<p>14“Please, Venerables, I ask the Sangha to listen. If it seems appropriate to the Sangha, I will ask Upāli about the Monastic Law.” </p>
+
+<p>15Venerable Upāli informed the Sangha: </p>
+
+<hr>
+
+<p>16“Please, Venerables, I ask the Sangha to listen. If it seems appropriate to the Sangha, I will reply when asked by Venerable Mahākassapa about the Monastic Law.” </p>
+
+<hr>
+
+<p>17And Mahākassapa asked Upāli, “Where was the first offense entailing expulsion laid down?” </p>
+
+<p>“At Vesālī.” </p>
+
+<p>“Who is it about?” </p>
+
+<p>“Sudinna the Kalandian.” </p>
+
+<p>“What is it about?” </p>
+
+<p>“Sexual intercourse.” </p>
+
+<hr>
+
+<p>Mahākassapa asked Upāli about the topic of the first offense entailing expulsion, about the origin story, about the person, about the rule, about the additions to the rule, about the offense, and about the non-offenses. </p>
+
+
+
+<hr>
+
+<p>18“And where was the second offense entailing expulsion laid down?” </p>
+
+<hr>
+
+<p>“At Rājagaha.” </p>
+
+<p>“Who is it about?” </p>
+
+<p>“Dhaniya the potter.” </p>
+
+<p>“What is it about?” </p>
+
+<p>“Stealing.” </p>
+
+<hr>
+
+<p>Mahākassapa asked Upāli about the topic of the second offense entailing expulsion, about the origin story, about the person, about the rule, about the additions to the rule, about the offense, and about the non-offenses. </p>
+
+
+
+<p>19“And where was the third offense entailing expulsion laid down?” </p>
+
+<p>“At Vesālī.” </p>
+
+<p>“Who is it about?” </p>
+
+<p>“A number of monks.” </p>
+
+<p>“What is it about?” </p>
+
+<p>“Human beings.” </p>
+
+<hr>
+
+<p>Mahākassapa asked Upāli about the topic of the third offense entailing expulsion, about the origin story, about the person, about the rule, about the additions to the rule, about the offense, and about the non-offenses. </p>
+
+
+
+<p>20“And where was the fourth offense entailing expulsion laid down?” </p>
+
+<p>“At Vesālī.” </p>
+
+<p>“Who is it about?” </p>
+
+<hr>
+
+<p>“The monks from the banks of the Vaggumudā.” </p>
+
+<p>“What is it about?” </p>
+
+<p>“Superhuman qualities.” </p>
+
+<hr>
+
+<p>Mahākassapa asked Upāli about the topic of the fourth offense entailing expulsion, about the origin story, about the person, about the rule, about the additions to the rule, about the offense, and about the non-offenses. </p>
+
+<p>21In this way he asked about the analyses of both Monastic Codes. And Upāli was able to reply to every question. </p>
+
+
+
+<hr>
+
+<p>22Venerable Mahākassapa informed the Sangha: </p>
+
+<p>23“Please, Venerables, I ask the Sangha to listen. If it seems appropriate to the Sangha, I will ask Ānanda about the Teaching.” </p>
+
+<p>24Venerable Ānanda informed the Sangha: </p>
+
+<hr>
+
+<p>25“Please, Venerables, I ask the Sangha to listen. If it seems appropriate to the Sangha, I will reply when asked by Venerable Mahākassapa about the Teaching.” </p>
+
+<hr>
+
+<p>26And Mahākassapa asked Ānanda: “Where was the Prime Net spoken?” </p>
+
+<p>“At the royal rest-house at Ambalaṭṭhikā, between Rājagaha and Nāḷanda.” </p>
+
+<p>“Who is it about?” </p>
+
+<hr>
+
+<p>“The wanderer Suppiya and the young brahmin Brahmadatta.” </p>
+
+<hr>
+
+<p>And Mahākassapa asked Ānanda about the origin story of the Prime Net and about the person. </p>
+
+
+
+<p>“Where was the Fruits of the Monastic Life spoken?” </p>
+
+<p>“In Jīvaka’s mango grove at Rājagaha.” </p>
+
+<p>“Who is it with?” </p>
+
+<p>“Ajātasattu of Videha.” </p>
+
+<p>And Mahākassapa asked Ānanda about the origin story of the Fruits of the Monastic Life and about the person. </p>
+
+<p>In this way he asked about the five collections. And Ānanda was able to reply to every question. </p>
+
+<h4>2. Discussion of the lesser training rules </h4>
+
+<p>27Ānanda said to the senior monks, “At the time of his final extinguishment, the Buddha said to me, ‘After my passing away, Ānanda, if the Sangha wishes, it may abolish the lesser training rules.’” </p>
+
+<hr>
+
+<p>“But, Ānanda, did you ask the Buddha which are the lesser training rules?” </p>
+
+<hr>
+
+<p>“No, I didn’t.” </p>
+
+<hr>
+
+<p>Some senior monks said: “Apart from the four rules entailing expulsion, the rest are the lesser training rules.” Others said: “Apart from the four rules entailing expulsion and the thirteen rules entailing suspension, the rest are the lesser training rules.” Still others said: “Apart from the four rules entailing expulsion, the thirteen rules entailing suspension, and the two undetermined rules, the rest are the lesser training rules.” Still others said: “Apart from the four rules entailing expulsion, the thirteen rules entailing suspension, the two undetermined rules, and the thirty rules entailing relinquishment and confession, the rest are the lesser training rules.” Still others said: “Apart from the four rules entailing expulsion, the thirteen rules entailing suspension, the two undetermined rules, the thirty rules entailing relinquishment and confession, and the ninety-two rules entailing confession, the rest are the lesser training rules.” Still others said: “Apart from the four rules entailing expulsion, the thirteen rules entailing suspension, the two undetermined rules, the thirty rules entailing relinquishment and confession, the ninety-two rules entailing confession, and the four rules entailing acknowledgment, the rest are the lesser training rules.” </p>
+
+<hr>
+
+<p>28Then Venerable Mahākassapa informed the Sangha: </p>
+
+<p>29“Please, Venerables, I ask the Sangha to listen. We have training rules that relate to householders. The householders know what is allowable for us and what is not. If we abolish the lesser training rules, some people will say, ‘The ascetic Gotama laid down training rules for his disciples until the time of his death. But they practice the training rules only as long as their teacher is alive. Since their teacher has now attained final extinguishment, they no longer practice the training rules.’ If it seems appropriate to the Sangha, the Sangha should not lay down new rules, nor get rid of the existing ones, and it should undertake to practice the training rules as they are. This is the motion. </p>
+
+<p>30Please, Venerables, I ask the Sangha to listen. We have training rules that relate to householders. The householders know what is allowable for us and what is not. If we abolish the lesser training rules, some people will say, ‘The ascetic Gotama laid down training rules for his disciples until the time of his death. But they practice the training rules only as long as their teacher is alive. Since their teacher has now attained final extinguishment, they no longer practice the training rules.’ The Sangha doesn’t lay down new rules or get rid of the existing ones, and it undertakes to practice the training rules as they are. Any monk who approves of not laying down new rules, nor of getting rid of the existing ones, and of undertaking to practice the training rules as they are should remain silent. Any monk who doesn’t approve should speak up. </p>
+
+<p>31The Sangha doesn’t lay down new rules or get rid of the existing ones, and it undertakes to practice the training rules as they are. The Sangha approves and is therefore silent. I will remember it thus.” </p>
+
+
+
+<hr>
+
+<p>32The senior monks said: “You have committed an act of wrong conduct, Ānanda, in that you didn’t ask the Buddha which are the lesser training rules. Confess that wrong conduct.” </p>
+
+<p>“It was because of lack of mindfulness that I didn’t ask which are the lesser training rules. I can’t see that I have committed any wrong conduct, but I’ll confess it out of faith in the venerables.” </p>
+
+<p>“You have also committed an act of wrong conduct in that you stepped on the Buddha’s rainy-season robe when you were sewing it. Confess that wrong conduct.” </p>
+
+<p>“I didn’t step on it because of disrespect. I can’t see that I’ve committed any wrong conduct, but I’ll confess it out of faith in the venerables.” </p>
+
+<p>“You have also committed an act of wrong conduct in that you had women pay respect to the Buddha’s dead body first. They soiled the Buddha’s body with tears. Confess that wrong conduct.” </p>
+
+<p>“I did this so that it wouldn’t get too late for them. I can’t see that I’ve committed any wrong conduct, but I’ll confess it out of faith in the venerables.” </p>
+
+<hr>
+
+<p>“You have also committed an act of wrong conduct in that you didn’t, even when he gave you a broad hint, ask the Buddha, ‘Please live on for an eon—for the benefit and happiness of humanity, out of compassion for the world, for the good, the benefit, and the happiness of gods and humans.’ Confess that wrong conduct.” </p>
+
+<p>“I didn’t ask because my mind was possessed by the Lord of Death. 
+
+I can’t see that I’ve committed any wrong conduct, but I’ll confess it out of faith in the venerables.” </p>
+
+<p>“You have also committed an act of wrong conduct in that you made an effort for women to be given the going forth on the spiritual path proclaimed by the Buddha. Confess that wrong conduct.” </p>
+
+<p>“I made this effort because Mahāpajāpati Gotamī was the Buddha’s aunt who nurtured him, brought him up, and breastfed him when his own mother died. I can’t see that I’ve committed any wrong conduct, but I’ll confess it out of faith in the venerables.” </p>
+
+
+
+<hr>
+
+<p>33At that time Venerable Purāṇa was wandering in the Southern Hills with a large sangha of five hundred monks. When the senior monks had concluded the communal recitation of the Teaching and the Monastic Law, and when Purāṇa had stayed in the Southern Hills for as long as he liked, he went to the Bamboo Grove at Rājagaha. There he went up to the senior monks, exchanged pleasantries with them, and sat down. And they said to him, “Purāṇa, the senior monks have jointly recited the Teaching and the Monastic Law. Please accept that communal recitation.” </p>
+
+<p>“The Teaching and the Monastic Law have been well-recited by the senior monks. Nevertheless, I’ll remember what I myself have received from the Buddha.” </p>
+
+<h4>3. Discussion of the supreme penalty </h4>
+
+<p>And Venerable Ānanda said to the senior monks, “At the time of his final extinguishment, the Buddha said to me, ‘After my passing away, Ānanda, the Sangha should impose the supreme penalty on the monk Channa.’” </p>
+
+<p>“Did you ask the Buddha what the supreme penalty is?” </p>
+
+<p>“I did, and he replied, ‘Whatever Channa says, the monks should not correct him, instruct him, or teach him.’” </p>
+
+<p>“Well then, Ānanda, impose the supreme penalty on Channa.” </p>
+
+<p>“But how should I do it? Channa is violent and harsh.” </p>
+
+<p>“Go together with many monks.” </p>
+
+<p>Saying, “Yes, Venerables,” he traveled by boat upstream to Kosambī with a large sangha of five hundred monks. After disembarking, he sat down at the foot of a tree not far from King Udena’s park. </p>
+
+
+
+<p>Just then King Udena was enjoying himself in the park together with his harem. The harem women had heard that their teacher, Venerable Ānanda, was seated at the foot of a tree not far from the park. They told the King, 
+
+adding, “Sir, we would like to see Venerable Ānanda.” </p>
+
+<p>“Well then, go ahead.” </p>
+
+<p>The harem women then went to Ānanda, bowed, and sat down. And Ānanda instructed, inspired, and gladdened them with a teaching, at the end of which they gave him five hundred upper robes. After rejoicing and expressing their appreciation for his teaching, they got up from their seats, bowed down, circumambulated him with their right side toward him, and went to King Udena. </p>
+
+<p>When King Udena saw them coming, he said to them, “Did you see the ascetic Ānanda?” </p>
+
+<p>“We did.” </p>
+
+<p>“Did you give him anything?” </p>
+
+<p>“We gave him five hundred upper robes.” </p>
+
+<p>King Udena complained and criticized him, “How can the ascetic Ānanda receive so many robes? Is he starting up as cloth merchant or setting up shop?” </p>
+
+<p>King Udena then went to Ānanda, exchanged pleasantries with him, sat down, and said: “Sir Ānanda, did our harem women come here?” </p>
+
+<p>“They did.” </p>
+
+<p>“Did they give you anything?” </p>
+
+<p>“They gave me five hundred upper robes.” </p>
+
+<p>“But what will you do with five hundred robes?” </p>
+
+<p>“I’ll share them with those monks whose robes are worn.” </p>
+
+<p>“And what will you do with the worn robes?” </p>
+
+<p>“We’ll make them into bedspreads.” </p>
+
+<p>“And what will you do with the old bedspreads?” </p>
+
+<p>“We’ll make them into mattress covers.” </p>
+
+<p>“And what will you do with the old mattress covers?” </p>
+
+<p>“We’ll make them into floor covers.” </p>
+
+<p>“And what will you do with the old floor covers?” </p>
+
+<p>“We’ll make them into doormats.” </p>
+
+<p>“And what will you do with the old doormats?” </p>
+
+<p>“We’ll make them into dustcloths.” </p>
+
+<p>“And what will you do with the old dustcloths?” </p>
+
+<p>“We’ll cut them up, mix them with mud, and smear the floors.” </p>
+
+<p>King Udena thought, “These Sakyan monastics are clever at putting things to use; nothing is wasted,” and he gave another five hundred pieces of cloth to Ānanda. Together with the first offering of robes, Ānanda was given a total of a thousand robes. </p>
+
+
+
+<p>Ānanda then went to Ghosita’s Monastery, where he sat down on the prepared seat. Venerable Channa went up to Ānanda, bowed, and sat down. And Ānanda said: “Channa, the Sangha has imposed the supreme penalty on you.” </p>
+
+<p>“What’s the supreme penalty?” </p>
+
+<p>“Whatever you say to the monks, the monks should not correct you, instruct you, or teach you.” </p>
+
+<p>Saying, “I’m ruined!” he fainted on the spot. </p>
+
+<p>Being troubled, ashamed, and disgusted by the supreme penalty, Channa stayed by himself, secluded, heedful, energetic, and diligent. And in this very life, he soon realized with his own insight the supreme goal of the spiritual life for which gentlemen rightly go forth into homelessness. 
+
+He understood that birth had come to an end, that the spiritual life had been fulfilled, that the job had been done, that there was no further state of existence. And Venerable Channa became one of the perfected ones. </p>
+
+<p>He then went to Ānanda and said: “Venerable Ānanda, please lift the supreme penalty.” </p>
+
+<p>“The moment you realized perfection, the supreme penalty was lifted.” </p>
+
+
+
+<p>At this communal recitation of the Monastic Law there were five hundred monks, neither more nor less. This is why this communal recitation is called “The group of five hundred”. </p>
+
+<p class="endsutta">The eleventh chapter on the group of five hundred is finished. In this chapter there are twenty-three topics. </p>
+
+<p class="endsutta">The chapter on the group of five hundred is finished. </p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p><span class="parno">1</span><a class="ms" id="p_4V_2176"></a><a class="msdiv" id="msdiv437"></a>Atha kho āyasmā mahākassapo bhikkhū āmantesi:  "ekamidāhaṁ, āvuso, samayaṁ pāvāya kusināraṁ addhānamaggappaṭipanno mahatā bhikkhusaṇghena saddhiṁ pañcamattehi bhikkhusatehi. Atha khvāhaṁ, āvuso, maggā okkamma aññatarasmiṁ rukkhamūle nisīdiṁ.</p>
+
+<p><span class="parno">2</span><a class="ms" id="p_4V_2177"></a>Tena kho pana samayena aññataro ājīvako kusinārāya mandāravapupphaṁ gahetvā pāvaṁ addhānamaggappaṭipanno hoti. Addasaṁ kho ahaṁ, āvuso, taṁ ājīvakaṁ dūratova āgacchantaṁ. Disvāna taṁ ājīvakaṁ etadavocaṁ— ‘apāvuso, amhākaṁ satthāraṁ jānāsī’ti? </p>
+
+<p>‘Āmāvuso, jānāmi. Ajja sattāhaparinibbuto samaṇo gotamo. Tato me idaṁ mandāravapupphaṁ gahitan’ti.</p>
+
+<hr>
+
+<p>Tatrāvuso, ye te bhikkhū avītarāgā appekacce bāhā paggayha kandanti, chinnapātaṁ papatanti, āvaṭṭanti, vivaṭṭanti— atikhippaṁ bhagavā parinibbuto, atikhippaṁ sugato parinibbuto, atikhippaṁ cakkhuṁ loke antarahitanti. Ye pana te bhikkhū vītarāgā te satā sampajānā adhivāsenti— aniccā sankhārā, taṁ kutettha labbhāti.</p>
+
+
+<p><span class="parno">3</span><a class="ms" id="p_4V_2178"></a>Atha khvāhaṁ, āvuso, te bhikkhū etadavocaṁ— ‘alaṁ, āvuso, mā socittha; mā paridevittha. Nanvetaṁ, āvuso, bhagavatā paṭikacceva akkhātaṁ— sabbeheva piyehi manāpehi nānābhāvo vinābhāvo aññathābhāvo. Taṁ kutettha āvuso labbhā, yaṁ taṁ jātaṁ bhūtaṁ sankhataṁ palokadhammaṁ, taṁ vata mā palujjīti— netaṁ ṭhānaṁ vijjatī’ti.</p>
+
+
+<p><span class="parno">4</span><a class="ms" id="p_4V_2179"></a>Tena kho panāvuso, samayena subhaddo nāma vuḍḍhapabbajito tassaṁ parisāyaṁ nisinno hoti. Atha kho, āvuso, subhaddo vuḍḍhapabbajito te bhikkhū etadavoca: ‘alaṁ, āvuso, mā socittha; mā paridevittha. Sumuttā mayaṁ tena mahāsamaṇena; upaddutā ca mayaṁ homa— idaṁ vo kappati, idaṁ vo na kappatīti. Idāni pana mayaṁ yaṁ icchissāma taṁ karissāma, yaṁ na icchissāma na taṁ karissāmā’ti.</p>
+
+<p>Handa mayaṁ, āvuso, dhammañca vinayañca sangāyāma. Pure adhammo dippati, dhammo paṭibāhiyyati; pure avinayo dippati vinayo paṭibāhiyyati; pure adhammavādino balavanto honti, dhammavādino dubbalā honti; pure avinayavādino balavanto honti, vinayavādino dubbalā hontī"ti.</p>
+
+<hr>
+
+<p><span class="parno">5</span><a class="ms" id="p_4V_2180"></a>"Tena hi, bhante, thero bhikkhū uccinatū"ti. Atha kho āyasmā mahākassapo ekenūnapañcaarahantasatāni uccini. Bhikkhū āyasmantaṁ mahākassapaṁ etadavocuṁ:</p>
+
+<p>"Ayaṁ, bhante, āyasmā ānando kiñcāpi sekkho, abhabbo chandā dosā mohā bhayā agatiṁ gantuṁ. Bahu ca anena bhagavato santike dhammo ca vinayo ca pariyatto. Tena hi, bhante, thero āyasmantampi ānandaṁ uccinatū"ti. Atha kho āyasmā mahākassapo āyasmantampi ānandaṁ uccini.</p>
+
+<hr>
+
+<p><span class="parno">6</span><a class="ms" id="p_4V_2181"></a>Atha kho therānaṁ bhikkhūnaṁ etadahosi: "kattha nu kho mayaṁ dhammañca vinayañca sangāyeyyāmā"ti? Atha kho therānaṁ bhikkhūnaṁ etadahosi: "rājagahaṁ kho mahāgocaraṁ pahūtasenāsanaṁ, yannūna mayaṁ rājagahe vassaṁ vasantā dhammañca vinayañca sangāyeyyāma. Na aññe bhikkhū rājagahe vassaṁ upagaccheyyun"ti.</p>
+
+
+<p><span class="parno">7</span><a class="ms" id="p_4V_2182"></a>Atha kho āyasmā mahākassapo saṇghaṁ ñāpesi—</p>
+
+<hr>
+
+<p><span class="parno">8</span><a class="ms" id="p_4V_2183"></a><a class="msdiv" id="msdiv438"></a>"Suṇātu me, āvuso, saṇgho. Yadi saṇghassa pattakallaṁ, saṇgho imāni pañca bhikkhusatāni sammanneyya— rājagahe vassaṁ vasantāni dhammañca vinayañca sangāyituṁ, na aññehi bhikkhūhi rājagahe vassaṁ vasitabbanti. Esā ñatti.</p>
+
+<p><span class="parno">9</span><a class="ms" id="p_4V_2184"></a>Suṇātu me, āvuso, saṇgho. Imāni pañca bhikkhusatāni sammannati— rājagahe vassaṁ vasantāni dhammañca vinayañca sangāyituṁ, na aññehi bhikkhūhi rājagahe vassaṁ vasitabbanti. Yassāyasmato khamati imesaṁ pañcannaṁ bhikkhusatānaṁ sammuti— rājagahe vassaṁ vasantānaṁ dhammañca vinayañca sangāyituṁ, na aññehi bhikkhūhi rājagahe vassaṁ vasitabbanti— so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<hr>
+
+<p><span class="parno">10</span><a class="ms" id="p_4V_2185"></a>Sammatāni saṇghena imāni pañca bhikkhusatāni rājagahe vassaṁ vasantāni dhammañca vinayañca sangāyituṁ, na aññehi bhikkhūhi rājagahe vassaṁ vasitabbanti. Khamati saṇghassa, tasmā tuṇhī, evametaṁ dhārayāmī"ti.</p>
+
+
+<p><span class="parno">11</span><a class="ms" id="p_4V_2186"></a>Atha kho therā bhikkhū rājagahaṁ agamaṁsu dhammañca vinayañca sangāyituṁ. Atha kho therānaṁ bhikkhūnaṁ etadahosi: "bhagavatā kho, āvuso, khaṇḍaphullapaṭisankharaṇaṁ vaṇṇitaṁ. Handa mayaṁ, āvuso, paṭhamaṁ māsaṁ khaṇḍaphullaṁ paṭisankharoma; majjhimaṁ māsaṁ sannipatitvā dhammañca vinayañca sangāyissāmā"ti.</p>
+
+
+<p><span class="parno">12</span><a class="ms" id="p_4V_2187"></a>Atha kho therā bhikkhū paṭhamaṁ māsaṁ khaṇḍaphullaṁ paṭisankhariṁsu. Atha kho āyasmā ānando— "sve sannipāto na kho metaṁ patirūpaṁ, yohaṁ sekkho samāno sannipātaṁ gaccheyyan"ti— bahudeva rattiṁ kāyagatāya satiyā vītināmetvā rattiyā paccūsasamayaṁ "nipajjissāmī"ti kāyaṁ āvajjesi. Appattañca sīsaṁ bibbohanaṁ, bhūmito ca pādā muttā. Etasmiṁ antare anupādāya āsavehi cittaṁ vimucci.</p>
+
+
+<p><span class="parno">13</span><a class="ms" id="p_4V_2188"></a><a class="msdiv" id="msdiv439"></a>Atha kho āyasmā ānando arahā samāno sannipātaṁ agamāsi. Atha kho āyasmā mahākassapo saṇghaṁ ñāpesi—</p>
+
+<p><span class="parno">14</span><a class="ms" id="p_4V_2189"></a>"Suṇātu me, āvuso, saṇgho. Yadi saṇghassa pattakallaṁ, ahaṁ upāliṁ vinayaṁ puccheyyan"ti.</p>
+
+
+<p><span class="parno">15</span><a class="ms" id="p_4V_2190"></a>Āyasmā upāli saṇghaṁ ñāpesi—</p>
+
+<hr>
+
+<p><span class="parno">16</span><a class="ms" id="p_4V_2191"></a>"Suṇātu me, bhante, saṇgho. Yadi saṇghassa pattakallaṁ, ahaṁ āyasmatā mahākassapena vinayaṁ puṭṭho vissajjeyyan"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">17</span><a class="ms" id="p_4V_2192"></a>Atha kho āyasmā mahākassapo āyasmantaṁ upāliṁ etadavoca: "paṭhamaṁ, āvuso upāli, pārājikaṁ kattha paññattan"ti?</p>
+
+<p>"Vesāliyaṁ, bhante"ti.</p>
+
+<p>"Kaṁ ārabbhā"ti?</p>
+
+<p>"Sudinnaṁ kalandaputtaṁ ārabbhā"ti.</p>
+
+<p>"Kismiṁ vatthusmin"ti?</p>
+
+<p>"Methunadhamme"ti.</p>
+
+
+<hr>
+
+<p>Atha kho āyasmā mahākassapo āyasmantaṁ upāliṁ paṭhamassa pārājikassa vatthumpi pucchi, nidānampi pucchi, puggalampi pucchi, paññattimpi pucchi, anupaññattimpi pucchi, āpattimpi pucchi, anāpattimpi pucchi.</p>
+
+
+<hr>
+
+<p><span class="parno">18</span><a class="ms" id="p_4V_2193"></a>"Dutiyaṁ panāvuso upāli, pārājikaṁ kattha paññattan"ti?</p>
+
+<hr>
+
+<p>"Rājagahe, bhante"ti.</p>
+
+<p>"Kaṁ ārabbhā"ti?</p>
+
+<p>"Dhaniyaṁ kumbhakāraputtaṁ ārabbhā"ti.</p>
+
+<p>"Kismiṁ vatthusmin"ti?</p>
+
+<p>"Adinnādāne"ti.</p>
+
+
+<hr>
+
+<p>Atha kho āyasmā mahākassapo āyasmantaṁ upāliṁ dutiyassa pārājikassa vatthumpi pucchi, nidānampi pucchi, puggalampi pucchi, paññattimpi pucchi, anupaññattimpi pucchi, āpattimpi pucchi, anāpattimpi pucchi.</p>
+
+<p><span class="parno">19</span><a class="ms" id="p_4V_2194"></a>"Tatiyaṁ panāvuso upāli, pārājikaṁ kattha paññattan"ti?</p>
+
+
+<p>"Vesāliyaṁ, bhante"ti.</p>
+
+<p>"Kaṁ ārabbhā"ti?</p>
+
+<p>"Sambahule bhikkhū ārabbhā"ti.</p>
+
+<p>"Kismiṁ vatthusmin"ti?</p>
+
+<p>"Manussaviggahe"ti.</p>
+
+<hr>
+
+<p>Atha kho āyasmā mahākassapo āyasmantaṁ upāliṁ tatiyassa pārājikassa vatthumpi pucchi, nidānampi pucchi, puggalampi pucchi, paññattimpi pucchi, anupaññattimpi pucchi, āpattimpi pucchi, anāpattimpi pucchi.</p>
+
+
+<p><span class="parno">20</span><a class="ms" id="p_4V_2195"></a>"Catutthaṁ panāvuso upāli, pārājikaṁ kattha paññattan"ti?</p>
+
+<p>"Vesāliyaṁ, bhante"ti.</p>
+
+<p>"Kaṁ ārabbhā"ti?</p>
+
+<hr>
+
+<p>"Vaggumudātīriye bhikkhū ārabbhā"ti.</p>
+
+<p>"Kismiṁ vatthusmin"ti?=</p>
+
+<p>"Uttarimanussadhamme"ti.</p>
+
+<hr>
+
+<p>Atha kho āyasmā mahākassapo āyasmantaṁ upāliṁ catutthassa pārājikassa vatthumpi pucchi, nidānampi pucchi, puggalampi pucchi, paññattimpi pucchi, anupaññattimpi pucchi, āpattimpi pucchi, anāpattimpi pucchi.</p>
+
+
+<p><span class="parno">21</span><a class="ms" id="p_4V_2196"></a>Eteneva upāyena ubhatovibhange pucchi. Puṭṭho puṭṭho āyasmā upāli vissajjesi.</p>
+
+<hr>
+
+<p><span class="parno">22</span><a class="ms" id="p_4V_2197"></a><a class="msdiv" id="msdiv440"></a>Atha kho āyasmā mahākassapo saṇghaṁ ñāpesi—</p>
+
+<p><span class="parno">23</span><a class="ms" id="p_4V_2198"></a>"Suṇātu me, āvuso, saṇgho. Yadi saṇghassa pattakallaṁ, ahaṁ ānandaṁ dhammaṁ puccheyyan"ti.</p>
+
+<p><span class="parno">24</span><a class="ms" id="p_4V_2199"></a>Āyasmā ānando saṇghaṁ ñāpesi—</p>
+
+<hr>
+
+<p><span class="parno">25</span><a class="ms" id="p_4V_2200"></a>"Suṇātu me, bhante, saṇgho. Yadi saṇghassa pattakallaṁ, ahaṁ āyasmatā mahākassapena dhammaṁ puṭṭho vissajjeyyan"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">26</span><a class="ms" id="p_4V_2201"></a>Atha kho āyasmā mahākassapo āyasmantaṁ ānandaṁ etadavoca: "Brahmajālaṁ, āvuso ānanda, kattha bhāsitan"ti?</p>
+
+<p>"Antarā ca, bhante, rājagahaṁ antarā ca nāḷandaṁ rājāgārake ambalaṭṭhikāyā"ti.</p>
+
+<p>"Kaṁ ārabbhā"ti?</p>
+
+<hr>
+
+<p>"Suppiyañca paribbājakaṁ brahmadattañca māṇavan"ti.</p>
+
+<hr>
+
+<p>Atha kho āyasmā mahākassapo āyasmantaṁ ānandaṁ brahmajālassa nidānampi pucchi, puggalampi pucchi.</p>
+
+<p>"Sāmaññaphalaṁ panāvuso ānanda, kattha bhāsitan"ti?</p>
+
+<p>"Rājagahe, bhante, jīvakambavane"ti.</p>
+
+<p>"Kena saddhin"ti?</p>
+
+<p>"Ajātasattunā vedehiputtena saddhin"ti.</p>
+
+<p>Atha kho āyasmā mahākassapo āyasmantaṁ ānandaṁ sāmaññaphalassa nidānampi pucchi, puggalampi pucchi. </p>
+
+<p>Eteneva upāyena pañcapi nikāye pucchi. Puṭṭho puṭṭho āyasmā ānando vissajjesi.</p>
+
+<h4>2 Khuddānukhuddakasikkhāpadakathā</h4>
+
+<p><span class="parno">27</span><a class="ms" id="p_4V_2202"></a><a class="msdiv" id="msdiv441"></a>Atha kho āyasmā ānando there bhikkhū etadavoca: "Bhagavā maṁ, bhante, parinibbānakāle evamāha— ‘ākankhamāno, ānanda, saṇgho mamaccayena khuddānukhuddakāni sikkhāpadāni samūhaneyyā’"ti.</p>
+
+<hr>
+
+<p>"Pucchi pana tvaṁ, āvuso ānanda, bhagavantaṁ— ‘Katamāni pana, bhante, khuddānukhuddakāni sikkhāpadānī’"ti?</p>
+
+<hr>
+
+<p>"Na khohaṁ, bhante, bhagavantaṁ pucchiṁ— ‘Katamāni pana, bhante, khuddānukhuddakāni sikkhāpadānī’"ti.</p>
+
+<hr>
+
+<p>Ekacce therā evamāhaṁsu— "cattāri parajikani ṭhapetvā, avasesāni khuddānukhuddakāni sikkhāpadānī"ti. Ekacce therā evamāhaṁsu— "cattāri parajikani ṭhapetvā, terasa saṇghādisese ṭhapetvā, avasesāni khuddānukhuddakāni sikkhāpadānī"ti. Ekacce therā evamāhaṁsu— "cattāri parajikani ṭhapetvā, terasa saṇghādisese ṭhapetvā, dve aniyate ṭhapetvā, avasesāni khuddānukhuddakāni sikkhāpadānī"ti. Ekacce therā evamāhaṁsu— "cattāri parajikani ṭhapetvā, terasa saṇghādisese ṭhapetvā, dve aniyate ṭhapetvā, tiṁsa nissaggiye pācittiye ṭhapetvā, avasesāni khuddānukhuddakāni sikkhāpadānī"ti. Ekacce therā evamāhaṁsu— "cattāri parajikani ṭhapetvā, terasa saṇghādisese ṭhapetvā, dve aniyate ṭhapetvā, tiṁsa nissaggiye pācittiye ṭhapetvā, dvenavuti pācittiye ṭhapetvā, avasesāni khuddānukhuddakāni sikkhāpadānī"ti. Ekacce therā evamāhaṁsu— "cattāri parajikani ṭhapetvā, terasa saṇghādisese ṭhapetvā, dve aniyate ṭhapetvā, tiṁsa nissaggiye pācittiye ṭhapetvā, dvenavuti pācittiye ṭhapetvā, cattāro pāṭidesanīye ṭhapetvā, avasesāni khuddānukhuddakāni sikkhāpadānī"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">28</span><a class="ms" id="p_4V_2203"></a><a class="msdiv" id="msdiv442"></a>Atha kho āyasmā mahākassapo saṇghaṁ ñāpesi—</p>
+
+<p><span class="parno">29</span><a class="ms" id="p_4V_2204"></a>"Suṇātu me, āvuso, saṇgho. Santamhākaṁ sikkhāpadāni gihigatāni. Gihinopi jānanti— ‘idaṁ vo samaṇānaṁ sakyaputtiyānaṁ kappati, idaṁ vo na kappatī’ti. Sace mayaṁ khuddānukhuddakāni sikkhāpadāni samūhanissāma, bhavissanti vattāro— ‘dhūmakālikaṁ samaṇena gotamena sāvakānaṁ sikkhāpadaṁ paññattaṁ. Yāvimesaṁ satthā aṭṭhāsi tāvime sikkhāpadesu sikkhiṁsu. Yato imesaṁ satthā parinibbuto, na dānime sikkhāpadesu sikkhantī’ti. Yadi saṇghassa pattakallaṁ, saṇgho apaññattaṁ nappaññapeyya, paññattaṁ na samucchindeyya, yathāpaññattesu sikkhāpadesu samādāya vatteyya. Esā ñatti.</p>
+
+<p><span class="parno">30</span><a class="ms" id="p_4V_2205"></a>Suṇātu me, āvuso, saṇgho. Santamhākaṁ sikkhāpadāni gihigatāni. Gihinopi jānanti— ‘idaṁ vo samaṇānaṁ sakyaputtiyānaṁ kappati, idaṁ vo na kappatī’ti. Sace mayaṁ khuddānukhuddakāni sikkhāpadāni samūhanissāma, bhavissanti vattāro— ‘dhūmakālikaṁ samaṇena gotamena sāvakānaṁ sikkhāpadaṁ paññattaṁ. Yāvimesaṁ satthā aṭṭhāsi tāvime sikkhāpadesu sikkhiṁsu. Yato imesaṁ satthā parinibbuto, na dānime sikkhāpadesu sikkhantī’ti. Saṇgho apaññattaṁ nappaññapeti, paññattaṁ na samucchindati, yathāpaññattesu sikkhāpadesu samādāya vattati. Yassāyasmato khamati apaññattassa appaññāpanā, paññattassa asamucchedo, yathāpaññattesu sikkhāpadesu samādāya vattanā, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+
+<p><span class="parno">31</span><a class="ms" id="p_4V_2206"></a>Saṇgho apaññattaṁ nappaññapeti, paññattaṁ na samucchindati, yathāpaññattesu sikkhāpadesu samādāya vattati. Khamati saṇghassa, tasmā tuṇhī, evametaṁ dhārayāmī"ti.</p>
+
+<hr>
+
+<p><span class="parno">32</span><a class="ms" id="p_4V_2207"></a><a class="msdiv" id="msdiv443"></a>Atha kho therā bhikkhū āyasmantaṁ ānandaṁ etadavocuṁ: "Idaṁ te, āvuso ānanda, dukkaṭaṁ, yaṁ tvaṁ bhagavantaṁ na pucchi— ‘Katamāni pana, bhante, khuddānukhuddakāni sikkhāpadānī’ti. Desehi taṁ dukkaṭan"ti. </p>
+
+<p>"Ahaṁ kho, bhante, assatiyā bhagavantaṁ na pucchiṁ— ‘Katamāni pana, bhante, khuddānukhuddakāni sikkhāpadānī’ti. Nāhaṁ taṁ dukkaṭaṁ passāmi, api cāyasmantānaṁ saddhāya desemi taṁ dukkaṭan"ti.</p>
+
+
+<p>"Idampi te, āvuso ānanda, dukkaṭaṁ, yaṁ tvaṁ bhagavato vassikasāṭikaṁ akkamitvā sibbesi. Desehi taṁ dukkaṭan"ti.</p>
+
+<p>"Ahaṁ kho, bhante, na agāravena bhagavato vassikasāṭikaṁ akkamitvā sibbesiṁ. Nāhaṁ taṁ dukkaṭaṁ passāmi, api cāyasmantānaṁ saddhāya desemi taṁ dukkaṭan"ti.</p>
+
+<p>"Idampi te, āvuso ānanda, dukkaṭaṁ, yaṁ tvaṁ mātugāmehi bhagavato sarīraṁ paṭhamaṁ vandāpesi, tāsaṁ rodantīnaṁ bhagavato sarīraṁ assukena makkhitaṁ. Desehi taṁ dukkaṭan"ti.</p>
+
+<p>"Ahaṁ kho, bhante— māyimāsaṁ vikāle ahesunti— mātugāmehi bhagavato sarīraṁ paṭhamaṁ vandāpesiṁ. Nāhaṁ taṁ dukkaṭaṁ passāmi, api cāyasmantānaṁ saddhāya desemi taṁ dukkaṭan"ti.</p>
+
+
+<hr>
+
+<p>"Idampi te, āvuso ānanda, dukkaṭaṁ, yaṁ tvaṁ bhagavatā oḷārike nimitte kayiramāne, oḷārike obhāse kayiramāne, na bhagavantaṁ yāci— ‘tiṭṭhatu bhagavā kappaṁ, tiṭṭhatu sugato kappaṁ, bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānan’ti. Desehi taṁ dukkaṭan"ti.</p>
+
+
+<p>"Ahaṁ kho, bhante, mārena pariyuṭṭhitacitto na bhagavantaṁ yāciṁ— ‘tiṭṭhatu bhagavā kappaṁ, tiṭṭhatu sugato kappaṁ, bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānan’ti. Nāhaṁ taṁ dukkaṭaṁ passāmi, api cāyasmantānaṁ saddhāya desemi taṁ dukkaṭan"ti.</p>
+
+
+<p>"Idampi te, āvuso ānanda, dukkaṭaṁ yaṁ tvaṁ mātugāmassa tathāgatappavedite dhammavinaye pabbajjaṁ ussukkaṁ akāsi. Desehi taṁ dukkaṭan"ti.</p>
+
+
+<p>"Ahaṁ kho, bhante, ayaṁ mahāpajāpati gotamī bhagavato mātucchā āpādikā posikā khīrassa dāyikā bhagavantaṁ janettiyā kālankatāya thaññaṁ pāyesīti mātugāmassa tathāgatappavedite dhammavinaye pabbajjaṁ ussukkaṁ akāsiṁ. Nāhaṁ taṁ dukkaṭaṁ passāmi, api cāyasmantānaṁ saddhāya desemi taṁ dukkaṭan"ti.</p>
+
+<hr>
+
+<p><span class="parno">33</span><a class="ms" id="p_4V_2208"></a><a class="msdiv" id="msdiv444"></a>Tena kho pana samayena āyasmā purāṇo dakkhiṇāgirismiṁ cārikaṁ carati mahatā bhikkhusaṇghena saddhiṁ pañcamattehi bhikkhusatehi. Atha kho āyasmā purāṇo therehi bhikkhūhi dhamme ca vinaye ca sangīte dakkhiṇāgirismiṁ yathābhirantaṁ viharitvā yena rājagahaṁ yena veḷuvanaṁ kalandakanivāpo yena therā bhikkhū tenupasankami, upasankamitvā therehi bhikkhūhi saddhiṁ paṭisammoditvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ purāṇaṁ therā bhikkhū etadavocuṁ:</p>
+
+<p>"therehi, āvuso purāṇa, dhammo ca vinayo ca sangīto. Upehi taṁ sangītin"ti.</p>
+
+<p>"Susangītāvuso, therehi dhammo ca vinayo ca. Api ca yatheva mayā bhagavato sammukhā sutaṁ, sammukhā paṭiggahitaṁ, tathevāhaṁ dhāressāmī"ti.</p>
+
+<h4>3 Brahmadaṇḍakathā</h4>
+
+<p><span class="parno">34</span><a class="ms" id="p_4V_2209"></a><a class="msdiv" id="msdiv445"></a>Atha kho āyasmā ānando there bhikkhū etadavoca: "Bhagavā maṁ, bhante, parinibbānakāle evamāha— ‘tena hānanda, saṇgho mamaccayena channassa bhikkhuno brahmadaṇḍaṁ āṇāpetū’"ti.</p>
+
+<p>"Pucchi pana tvaṁ, āvuso ānanda, bhagavantaṁ— ‘katamo pana, bhante, brahmadaṇḍo’"ti?</p>
+
+<p>"Pucchiṁ khohaṁ, bhante, bhagavantaṁ— ‘katamo pana, bhante, brahmadaṇḍo’ti? ‘Channo, ānanda, bhikkhu yaṁ iccheyya taṁ vadeyya. Bhikkhūhi channo bhikkhu neva vattabbo, na ovaditabbo, nānusāsitabbo’"ti.</p>
+
+<p>"Tena hāvuso ānanda, tvaṁyeva channassa bhikkhuno brahmadaṇḍaṁ āṇāpehī"ti.</p>
+
+<p>"Kathāhaṁ, bhante, channassa bhikkhuno brahmadaṇḍaṁ āṇāpemi, caṇḍo so bhikkhu pharuso"ti?</p>
+
+<p>"Tena hāvuso ānanda, bahukehi bhikkhūhi saddhiṁ gacchāhī"ti.</p>
+
+<p>"Evaṁ, bhante"ti kho āyasmā ānando therānaṁ bhikkhūnaṁ paṭissutvā mahatā bhikkhusaṇghena saddhiṁ pañcamattehi bhikkhusatehi nāvāya ujjavanikāya kosambiṁ ujjavi, nāvāya paccorohitvā rañño udenassa uyyānassa avidūre aññatarasmiṁ rukkhamūle nisīdi.</p>
+
+<p>Tena kho pana samayena rājā udeno uyyāne paricāresi saddhiṁ orodhena. Assosi kho rañño udenassa orodho— "amhākaṁ kira ācariyo ayyo ānando uyyānassa avidūre aññatarasmiṁ rukkhamūle nisinno"ti. Atha kho rañño udenassa orodho rājānaṁ udenaṁ etadavoca: "amhākaṁ kira, deva, ācariyo ayyo ānando uyyānassa avidūre aññatarasmiṁ rukkhamūle nisinno. Icchāma mayaṁ, deva, ayyaṁ ānandaṁ passitun"ti.</p>
+
+<p>"Tena hi tumhe samaṇaṁ ānandaṁ passathā"ti.</p>
+
+<p><span class="parno">35</span><a class="ms" id="p_4V_2210"></a>Atha kho rañño udenassa orodho yenāyasmā ānando tenupasankami, upasankamitvā āyasmantaṁ ānandaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho rañño udenassa orodhaṁ āyasmā ānando dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho rañño udenassa orodho āyasmatā ānandena dhammiyā kathāya sandassito samādapito samuttejito sampahaṁsito āyasmato ānandassa pañca uttarāsangasatāni pādāsi. Atha kho rañño udenassa orodho āyasmato ānandassa bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā āyasmantaṁ ānandaṁ abhivādetvā padakkhiṇaṁ katvā yena rājā udeno tenupasankami.</p>
+
+<p>Addasā kho rājā udeno orodhaṁ dūratova āgacchantaṁ. Disvāna orodhaṁ etadavoca: "api nu kho tumhe samaṇaṁ ānandaṁ passitthā"ti?</p>
+
+<p>"Apassimhā kho mayaṁ, deva, ayyaṁ ānandan"ti.</p>
+
+<p>"Api nu tumhe samaṇassa ānandassa kiñci adatthā"ti?</p>
+
+<p>"Adamhā kho mayaṁ, deva, ayyassa ānandassa pañca uttarāsangasatānī"ti.</p>
+
+<p>Rājā udeno ujjhāyati khiyyati vipāceti— "Kathañhi nāma samaṇo ānando tāva bahuṁ cīvaraṁ paṭiggahessati. Dussavāṇijjaṁ vā samaṇo ānando karissati, paggāhikasālaṁ vā pasāressatī"ti.</p>
+
+
+<p><span class="parno">36</span><a class="ms" id="p_4V_2211"></a>Atha kho rājā udeno yenāyasmā ānando tenupasankami, upasankamitvā āyasmatā ānandena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho rājā udeno āyasmantaṁ ānandaṁ etadavoca:</p>
+
+
+<p>"āgamā nu khvidha, bho ānanda, amhākaṁ orodho"ti?</p>
+
+<p>"Āgamāsi kho te idha, mahārāja, orodho"ti.</p>
+
+<p>"Api pana bhoto ānandassa kiñci adāsī"ti?</p>
+
+<p>"Adāsi kho me, mahārāja, pañca uttarāsangasatānī"ti.</p>
+
+<p>"Kiṁ pana bhavaṁ ānando tāva bahuṁ cīvaraṁ karissatī"ti?</p>
+
+<p>"Ye te, mahārāja, bhikkhū dubbalacīvarā tehi saddhiṁ saṁvibhajissāmī"ti.</p>
+
+<p>"Yāni kho pana, bho ānanda, porāṇakāni dubbalacīvarāni tāni kathaṁ karissathā"ti?</p>
+
+<p>"Tāni, mahārāja, uttarattharaṇaṁ karissāmā"ti.</p>
+
+<p>"Yāni pana, bho ānanda, porāṇakāni uttarattharaṇāni tāni kathaṁ karissathā"ti?</p>
+
+<p>"Tāni, mahārāja, bhisicchaviyo karissāmā"ti.</p>
+
+<p>"Yā pana, bho ānanda, porāṇakā bhisicchaviyo tā kathaṁ karissathā"ti?</p>
+
+<p>"Tā, mahārāja, bhūmattharaṇaṁ karissāmā"ti.</p>
+
+<p>"Yāni pana, bho ānanda, porāṇakāni bhūmattharaṇāni tāni kathaṁ karissathā"ti?</p>
+
+<p>"Tāni, mahārāja, pādapuñchaniyo karissāmā"ti.</p>
+
+<p>"Yā pana, bho ānanda, porāṇakā pādapuñchaniyo tā kathaṁ karissathā"ti?</p>
+
+<p>"Tā, mahārāja, rajoharaṇaṁ karissāmā"ti.</p>
+
+<p>"Yāni pana, bho ānanda, porāṇakāni rajoharaṇāni tāni kathaṁ karissathā"ti?</p>
+
+<p>"Tāni, mahārāja, koṭṭetvā cikkhallena madditvā paribhaṇḍaṁ limpissāmā"ti.</p>
+
+
+<p><span class="parno">37</span><a class="ms" id="p_4V_2212"></a>Atha kho rājā udeno— "sabbevime samaṇā sakyaputtiyā yoniso upanenti, na kulavaṁ gamentī"ti— āyasmato ānandassa aññānipi pañca dussasatāni pādāsi. Ayañcarahi āyasmato ānandassa paṭhamaṁ cīvarabhikkhā uppajji cīvarasahassaṁ.</p>
+
+<p>Atha kho āyasmā ānando yena ghositārāmo tenupasankami, upasankamitvā paññatte āsane nisīdi. Atha kho āyasmā channo yenāyasmā ānando tenupasankami, upasankamitvā āyasmantaṁ ānandaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ channaṁ āyasmā ānando etadavoca: "saṇghena te, āvuso channa, brahmadaṇḍo āṇāpito"ti.</p>
+
+<p><span class="parno">38</span><a class="ms" id="p_4V_2213"></a>"Katamo pana, bhante ānanda, brahmadaṇḍo āṇāpito"ti?</p>
+
+<p>"Tvaṁ, āvuso channa, bhikkhū yaṁ iccheyyāsi taṁ vadeyyāsi. Bhikkhūhi tvaṁ neva vattabbo, na ovaditabbo, nānusāsitabbo"ti.</p>
+
+<p>"Nanvāhaṁ, bhante ānanda, hato ettāvatā, yatohaṁ bhikkhūhi neva vattabbo, na ovaditabbo, nānusāsitabbo"ti tattheva mucchito papato. Atha kho āyasmā channo brahmadaṇḍena aṭṭīyamāno harāyamāno jigucchamāno eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva— yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ— brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi. "Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā"ti abbhaññāsi. Aññataro ca panāyasmā channo arahataṁ ahosi. Atha kho āyasmā channo arahattaṁ patto yenāyasmā ānando tenupasankami, upasankamitvā āyasmantaṁ ānandaṁ etadavoca: "paṭippassambhehi dāni me, bhante ānanda, brahmadaṇḍan"ti.</p>
+
+<p>"Yadaggena tayā, āvuso channa, arahattaṁ sacchikataṁ tadaggena te brahmadaṇḍo paṭippassaddho"ti.</p>
+
+<p>Imāya kho pana vinayasangītiyā pañca bhikkhusatāni anūnāni anadhikāni ahesuṁ. Tasmā ayaṁ vinayasangīti "pañcasatikā"ti vuccatīti.</p>
+
+
+<p class="endsutta"> <span class="parno">39</span><a class="ms" id="p_4V_2214"></a>Pañcasatikakkhandhako ekādasamo.
+<br>Imamhi khandhake vatthū tevīsati.</p>
+
+<p class="endsutta"><span class="parno">40</span><a class="ms" id="p_4V_2215"></a>Tassuddānaṁ</p>
+
+
+<p><span class="parno">41</span><a class="ms" id="p_4V_2216"></a>Parinibbute sambuddhe,
+<br>thero kassapasavhayo;
+<br>Āmantayi bhikkhugaṇaṁ,
+<br>saddhammamanupālako.</p>
+
+<p><span class="parno">42</span><a class="ms" id="p_4V_2217"></a>Pāvāyaddhānamaggamhi,
+<br>subhaddena paveditaṁ;
+<br>Sangāyissāma saddhammaṁ,
+<br>adhammo pure dippati.</p>
+
+<p><span class="parno">43</span><a class="ms" id="p_4V_2218"></a>Ekenūna pañcasataṁ,
+<br>ānandampi ca uccini;
+<br>Dhammavinayasangītiṁ,
+<br>vasanto guhamuttame.</p>
+
+<p><span class="parno">44</span><a class="ms" id="p_4V_2219"></a>Upāliṁ vinayaṁ pucchi,
+<br>suttantānandapaṇḍitaṁ;
+<br>Piṭakaṁ tīṇi sangītiṁ,
+<br>akaṁsu jinasāvakā.</p>
+
+
+<p><span class="parno">45</span><a class="ms" id="p_4V_2220"></a>Khuddānukhuddake nānā,
+<br>yathāpaññattivattanā;
+<br>Na pucchi akkamitvāna,
+<br>vandāpesi na yāci ca.</p>
+
+<p><span class="parno">46</span><a class="ms" id="p_4V_2221"></a>Pabbajjaṁ mātugāmassa,
+<br>saddhāya dukkaṭāni me;
+<br>Purāṇo brahmadaṇḍañca,
+<br>orodho udenena saha.</p>
+
+<p><span class="parno">47</span><a class="ms" id="p_4V_2222"></a>Tāva bahu dubbalañca,
+<br>uttarattharaṇā bhisi;
+<br>Bhūmattharaṇā puñchaniyo,
+<br>rajo cikkhallamaddanā.</p>
+
+<p><span class="parno">48</span><a class="ms" id="p_4V_2223"></a>Sahassacīvaraṁ uppajji,
+<br>paṭhamānandasavhayo;
+<br>Tajjito brahmadaṇḍena,
+<br>catussaccaṁ apāpuṇi;
+<br>Vasībhūtā pañcasatā,
+<br>tasmā pañcasatī iti.</p>
+
+<p class="endsection">
+<span class="parno">49</span><a class="ms" id="p_4V_2224"></a>Pañcasatikakkhandhako niṭṭhito.</p>
+
+</div><!--End Pali-->
+</section>
+
+<div id="nextprev"><a id="previous-sutta" href="kd20.html#content"></a><a id="next-sutta" href="kd22.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/kd.html">Khandhaka</a>Khandhaka 21 - Council of the Five Hundred
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

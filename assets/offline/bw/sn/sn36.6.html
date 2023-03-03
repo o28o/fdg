@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nikāya - Connected Discourses on Feeling 36.6</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 			</button>
+<span class="box-lbl">Light/Dark</span>
+
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="pressed w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+ 
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+					<div id="snheading">
+ 					<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div><!-- End snheading div -->
+</div>  <!-- End div for SN sub-navigation -->
+
+
+
+
+ <p>&nbsp;</p>
+
+ 
+ <h3 id="SN36heading">SN36: Connected Discourses on Feeling</h3>
+ 
+ 	<div class="w3-bar-white bwnav"><!-- Div for lower SN sub-navigation -->
+ 		<a href="sn35.html#SN35heading" title="Connected Discourses on the Six Sense Bases" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN35</a>
+ 		<a href="sn36.html#SN36heading" title="Connected Discourses on Feeling" class="w3-bar-item w3-hover-white w3-border-white w3-button active">SN36</a>
+ 		<a href="sn37.html#SN37heading" title="Connected Discourses on Women" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN37</a>
+ 		<a href="sn38.html#SN38heading" title="Connected Discourses with Jambukhadaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN38</a>
+ 		<a href="sn39.html#SN39heading" title="Connected Discourses with Samaṇḍaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN39</a>
+ 		<a href="sn40.html#SN40heading" title="Connected Discourses with Moggallana" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN40</a>
+ 		<a href="sn41.html#SN41heading" title="Connected Discourses with Citta" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN41</a>
+ 		<a href="sn42.html#SN42heading" title="Connected Discourses to Headmen" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN42</a>
+ 		<a href="sn43.html#SN43heading" title="Connected Discourses on the Unconditioned" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN43</a>
+ 		<a href="sn44.html#SN44heading" title="Connected Discourses on the Undeclared" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN44</a>
+ 	</div><!-- End div for lower SN sub-navigation -->
+ 
+ <!--      SN content begins here      -->
+  
+ <div id="content">
+
+
+<h3>SN36:6 The Dart</h3>
+
+<div id="metaarea">
+ <ul class="translator">
+ <li>&copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>"Bhikkhus, the uninstructed worldling feels a pleasant feeling, a painful feeling, and a neither-painful-nor-pleasant feeling. The instructed noble disciple too feels a pleasant feeling, <a class="pts_pn">sn.iv.208</a> a painful feeling, and a neither-painful-nor-pleasant feeling. Therein, bhikkhus, what is the distinction, the disparity, the difference between the instructed noble disciple and the uninstructed worldling?"</p>
+
+<p>"Venerable sir, our teachings are rooted in the Blessed One, guided by the Blessed One, take recourse in the Blessed One. It would be good if the Blessed One would clear up the meaning of this statement. Having heard it from him, the bhikkhus will remember it."</p>
+
+<p>"Then listen and attend closely, bhikkhus, I will speak."</p>
+
+<p>"Yes, venerable sir," the bhikkhus replied. The Blessed One said this:</p>
+
+<hr>
+<p>"Bhikkhus, when the uninstructed worldling is being contacted by a painful feeling, he sorrows, grieves, and laments; he weeps beating his breast and becomes distraught. He feels two feelings—a bodily one and a mental one. Suppose they were to strike a man with a dart, and then they would strike him immediately afterwards with a second dart,<span class="note" id="n234"><span class="details"><span class="p">[n.234] I prefer the reading in Se: <i>tam enaṃ dutiyena sallena anuvedhaṃ vijjheyyuṃ.</i> Be differs only in having a singular verb. <a href="sn0-abbr.html" title="Abbreviations">Spk</a>: The second wound <i>(anugatavedhaṁ)</i> would be only one or two inches away from the opening of the first. For one wounded thus, the subsequent feeling would be worse than the first.</span></span></span> so that the man would feel a feeling caused by two darts. So too, when the uninstructed worldling is being contacted by a painful feeling … he feels two feelings—a bodily one and a mental one.</p>
+
+<p>"Being contacted by that same painful feeling, he harbours aversion towards it. When he harbours aversion towards painful feeling, the underlying tendency to aversion towards painful feeling lies behind this. Being contacted by painful feeling, he seeks delight in sensual pleasure. For what reason? Because the uninstructed worldling does not know of any escape from painful feeling other than sensual pleasure.<span class="note" id="n235"><span class="details"><span class="p">[n.235] <a href="sn0-abbr.html" title="Abbreviations">Spk</a>: The escape is concentration, path, and fruit. This he does not know; the only escape of which he knows is sensual pleasure.</span></span></span> When he seeks delight in sensual pleasure, the underlying tendency to lust for pleasant feeling lies behind this. He does not understand as it really is the origin and the passing away, the gratification, the danger, and the escape in the case of these feelings. When he does not understand these things, the underlying tendency to ignorance in regard to neither-painful-nor-pleasant feeling lies behind this.</p>
+
+<p>"If he feels a pleasant feeling, he feels it attached. If he feels a painful feeling, he feels it attached. <a class="pts_pn">sn.iv.209</a> If he feels a neither-painful-nor-pleasant feeling, he feels it attached. This, bhikkhus, is called an uninstructed worldling who is attached to birth, aging, and death; who is attached to sorrow, lamentation, pain, displeasure, and despair; who is attached to suffering, I say.</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>"Bhikkhus, when the instructed noble disciple is contacted by a painful feeling, he does not sorrow, grieve, or lament; he does not weep beating his breast and become distraught.<span class="note" id="n236"><span class="details"><span class="p">[n.236] <a href="sn0-abbr.html" title="Abbreviations">Spk</a> says that among the noble disciples, here the stress is on the arahant, though the nonreturner would also be appropriate. According to the commentarial system, both have abandoned <i>paṭigha</i> or <i>dosa</i> and thus are no longer subject to displeasure <i>(domanassa)</i>, painful mental feeling. Everyone with a body, including the Buddhas, is subject to bodily painful feeling (here, <i>kayikā dukkhā vedanā</i>).</span></span></span> He feels one feeling—a bodily one, not a mental one.</p>
+
+<p id="p3"><span class="parno">3</span>Suppose they were to strike a man with a dart, but they would not strike him immediately afterwards with a second dart, so that the man would feel a feeling caused by one dart only. So too, when the instructed noble disciple is contacted by a painful feeling … he feels one feeling—a bodily one, not a mental one.</p>
+
+<p>"Being contacted by that same painful feeling, he harbours no aversion towards it. Since he harbours no aversion towards painful feeling, the underlying tendency to aversion towards painful feeling does not lie behind this. Being contacted by painful feeling, he does not seek delight in sensual pleasure. For what reason? Because the instructed noble disciple knows of an escape from painful feeling other than sensual pleasure. Since he does not seek delight in sensual pleasure, the underlying tendency to lust for pleasant feeling does not lie behind this. He understands as it really is the origin and the passing away, the gratification, the danger, and the escape in the case of these feelings. Since he understands these things, the underlying tendency to ignorance in regard to neither-painful-nor-pleasant feeling does not lie behind this.</p>
+
+<p>"If he feels a pleasant feeling, he feels it detached. If he feels a painful feeling, <a class="pts_pn">sn.iv.210</a> he feels it detached. If he feels a neither-painful-nor-pleasant feeling, he feels it detached. This, bhikkhus, is called a noble disciple who is detached from birth, aging, and death; who is detached from sorrow, lamentation, pain, displeasure, and despair; who is detached from suffering, I say.</p>
+
+<p>"This, bhikkhus, is the distinction, the disparity, the difference between the instructed noble disciple and the uninstructed worldling."</p>
+
+<p id="p4" class="verse"><span class="parno">4</span>The wise one, learned, does not feel
+<br>The pleasant and painful <span class="add">mental</span> feeling.
+<br>This is the great difference between
+<br>The wise one and the worldling.</p>
+
+<p id="p5" class="verse"><span class="parno">5</span>For the learned one who has comprehended Dhamma,
+<br>Who clearly sees this world and the next,
+<br>Desirable things do not provoke his mind,
+<br>Towards the undesired he has no aversion.</p>
+
+<p id="p6" class="verse"><span class="parno">6</span>For him attraction and repulsion no more exist;
+<br>Both have been extinguished, brought to an end.
+<br>Having known the dust-free, sorrowless state,
+<br>The transcender of existence rightly understands.</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>"Assutavā, bhikkhave, puthujjano sukhampi vedanāṁ vedayati, dukkhampi vedanāṁ vedayati, adukkhamasukhampi vedanāṁ vedayati. Sutavā, bhikkhave, ariyasāvako sukhampi vedanāṁ vedayati, dukkhampi vedanāṁ vedayati, adukkhamasukhampi vedanāṁ vedayati. Tatra, bhikkhave, ko viseso ko adhippayāso kiṁ nānākaraṇaṁ sutavato ariyasāvakassa assutavatā puthujjanenā"ti? </p>
+
+<p>Bhagavaṁmūlakā no, bhante, dhammā … pe … </p>
+
+<hr>
+<p>… assutavā, bhikkhave, puthujjano dukkhāya vedanāya phuṭṭho samāno socati kilamati paridevati urattāḷiṁ kandati sammohaṁ āpajjati. So dve vedanā vedayati – kāyikañca, cetasikañca. Seyyathāpi, bhikkhave, purisaṁ sallena vijjheyya. Tamenaṁ dutiyena sallena anuvedhaṁ vijjheyya. Evañhi so, bhikkhave, puriso dvisallena vedanāṁ vedayati. Evameva kho, bhikkhave, assutavā puthujjano dukkhāya vedanāya phuṭṭho samāno socati kilamati paridevati urattāḷiṁ kandati sammohaṁ āpajjati. So dve vedanā vedayati – kāyikañca, cetasikañca. </p>
+
+<p>Tassāyeva kho pana dukkhāya vedanāya phuṭṭho samāno paṭighavā hoti. Tamenaṁ dukkhāya vedanāya paṭighavantaṁ, yo dukkhāya vedanāya paṭighānusayo, so anuseti. So dukkhāya vedanāya phuṭṭho samāno kāmasukhaṁ abhinandati. Taṁ kissa hetu? Na hi so, bhikkhave, pajānāti assutavā puthujjano aññatra kāmasukhā dukkhāya vedanāya nissaraṇaṁ, tassa kāmasukhañca abhinandato, yo sukhāya vedanāya rāgānusayo, so anuseti. So tāsaṁ vedanānaṁ samudayañca atthangamañca assādañca ādīnavañca nissaraṇañca yathābhūtaṁ nappajānāti. Tassa tāsaṁ vedanānaṁ samudayañca atthangamañca assādañca ādīnavañca nissaraṇañca yathābhūtaṁ appajānato, yo adukkhamasukhāya vedanāya avijjānusayo, so anuseti. </p>
+
+<p>So sukhañce vedanāṁ vedayati, saññutto naṁ vedayati. Dukkhañce vedanāṁ vedayati, saññutto naṁ vedayati. Adukkhamasukhañce vedanāṁ vedayati, saññutto naṁ vedayati. Ayaṁ vuccati, bhikkhave, ‘assutavā puthujjano saññutto jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, saññutto dukkhasmā’ti vadāmi.</p>
+
+<hr>
+<p><span class="parno">2</span>Sutavā ca kho, bhikkhave, ariyasāvako dukkhāya vedanāya phuṭṭho samāno na socati, na kilamati, na paridevati, na urattāḷiṁ kandati, na sammohaṁ āpajjati. So ekaṁ vedanāṁ vedayati – kāyikaṁ, na cetasikaṁ.</p>
+
+<p><span class="parno">3</span>Seyyathāpi, bhikkhave, purisaṁ sallena vijjheyya. Tamenaṁ dutiyena sallena anuvedhaṁ na vijjheyya. Evañhi so, bhikkhave, puriso ekasallena vedanāṁ vedayati. Evameva kho, bhikkhave, sutavā ariyasāvako dukkhāya vedanāya phuṭṭho samāno na socati, na kilamati, na paridevati, na urattāḷiṁ kandati, na sammohaṁ āpajjati. So ekaṁ vedanāṁ vedayati – kāyikaṁ, na cetasikaṁ. </p>
+
+<p>Tassāyeva kho pana dukkhāya vedanāya phuṭṭho samāno paṭighavā na hoti. Tamenaṁ dukkhāya vedanāya appaṭighavantaṁ, yo dukkhāya vedanāya paṭighānusayo, so nānuseti. So dukkhāya vedanāya phuṭṭho samāno kāmasukhaṁ nābhinandati. Taṁ kissa hetu? Pajānāti hi so, bhikkhave, sutavā ariyasāvako aññatra kāmasukhā dukkhāya vedanāya nissaraṇaṁ. Tassa kāmasukhaṁ nābhinandato yo sukhāya vedanāya rāgānusayo, so nānuseti. So tāsaṁ vedanānaṁ samudayañca atthangamañca assādañca ādīnavaṁ ca nissaraṇañca yathābhūtaṁ pajānāti. Tassa tāsaṁ vedanānaṁ samudayañca atthangamañca assādañca ādīnavañca nissaraṇañca yathābhūtaṁ pajānato, yo adukkhamasukhāya vedanāya avijjānusayo, so nānuseti. </p>
+
+<p>So sukhañce vedanāṁ vedayati, visaññutto naṁ vedayati. Dukkhañce vedanāṁ vedayati, visaññutto naṁ vedayati. Adukkhamasukhañce vedanāṁ vedayati, visaññutto naṁ vedayati. Ayaṁ vuccati, bhikkhave, ‘sutavā ariyasāvako visaññutto jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, visaññutto dukkhasmā’ti vadāmi. </p>
+
+<p>Ayaṁ kho, bhikkhave, viseso, ayaṁ adhippayāso, idaṁ nānākaraṇaṁ sutavato ariyasāvakassa assutavatā puthujjanenāti.</p>
+
+<p class="verse"><span class="parno">4</span>Na vedanāṁ vedayati sapañño,
+<br>Sukhampi dukkhampi bahussutopi;
+<br>Ayañca dhīrassa puthujjanena,
+<br>Mahā viseso kusalassa hoti.</p>
+
+<p class="verse"><span class="parno">5</span>Sankhātadhammassa bahussutassa,
+<br>Vipassato lokamimaṁ parañca;
+<br>Iṭṭhassa dhammā na mathenti cittaṁ,
+<br>Aniṭṭhato no paṭighātameti.</p>
+
+<p class="verse"><span class="parno">6</span>Tassānurodhā athavā virodhā,
+<br>Vidhūpitā atthagatā na santi;
+<br>Padañca ñatvā virajaṁ asokaṁ,
+<br>Sammā pajānāti bhavassa pāragū"ti.</p>
+
+<p class="endsection">Chaṭṭhaṁ.</p>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="./sn36.5.html#content"></a><a id="next-sutta" href="./sn36.7.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div class="w3-white .bwcontainer2">
+<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn36.html">Connected Discourses on Feeling</a>SN36:6 The Dart
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </div>
+</footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

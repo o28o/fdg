@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Sanghādisesa 13</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<H3>Vinaya Pitaka - Monastic Rules</H3>
+
+<div>
+	<ul id="vbnav">
+	 <li><a href="../vi/bu-vb-pj.html#content">Pārājikas</a></li>
+ <li id="active"><a href="../vi/bu-vb-sn.html">Sanghādisesas</a></li>
+ <li><a href="../vi/bu-vb-an.html">Aniyatas</a></li>
+ <li><a href="../vi/bu-vb-np.html">Nissaggiya Pācittiyas</a></li>
+ <li><a href="../vi/bu-vb-pc.html">Pācittiyas</a></li>
+ <li><a href="../vi/bu-vb-pd.html">Pāṭidesanīyas</a></li>
+ <li><a href="../vi/bu-vb-sk.html">Sekhiyas</a></li>
+	<li><a href="../vi/bu-vb-as.html">Adhikaraṇa-Samathās</a></li>
+	</ul>
+</div>
+
+<div id="content">
+
+<H3>Bhikkhu Vibhanga - Sanghādisesa 13: Criticising a Saṅgha Decision of Banishment for Corrupting Lay People</H3>
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<!-- <h1>Monksʼ Suspension 13: Corrupters of Families</h1> -->
+
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍikaʼs Park. At that time some bad and shameless monks who were followers of Assaji and Punabbasu were staying at Kīṭāgiri. They engaged in these kinds of improper behaviour:</p>
+
+<p>They planted flowering trees, and then watered them and plucked them. They tied the flowers into garlands, both garlands with stalks on one side and garlands with stalks on both sides. They made flower arrangements, wreaths, ornaments for the head, ornaments for the ears and ornaments for the chest. And they had others do the same. They then took these things, or sent them, to the women, the daughters, the girls, the daughter-in-laws and the female slaves of good families.</p>
+
+<p>They ate from the same dish as these women and drank from the same vessels. They sat on the same seats as them and lay down on the same beds, the same mats, the same blankets, the same mats and blankets. They ate at the wrong time, drank alcohol, and used garlands, perfumes and cosmetics. They danced, sang, played instruments, and performed. While the women were dancing, singing, playing instruments, and performing, so would they.</p>
+
+<p>They played various games: board games with eight or ten rows, imaginary board games, hopscotch, spillikins, dice games, tip-cat, painting-with-the-hand games, ball games, toy pipe games, toy plough games, turning somersaults, toy windmill games, toy measure games, toy chariot games, toy bow games, letter-guessing games, thought-guessing games, games of mimicking deformities.</p>
+
+<p>They trained in elephant riding, in horsemanship, in carriage riding, in archery, in swordsmanship. And they ran in front of elephants, in front of horses, in front of carriages, and they ran backwards and forwards. They whistled, clapped their hands, wrestled, and boxed. They spread an outer robe on a stage and said to the dancing girls, "Dance here, sister," and they made gestures of approval. And they engaged in many forms of improper behaviour.</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>At that time a certain monk who had spent the rains in Kāsī was travelling to see the Master in Sāvatthī when he arrived at Kīṭāgiri. Then, after dressing in the morning, he took his bowl and robe and entered Kīṭāgiri to collect almsfood. He was pleasing in the way he entered and returned, in looking towards and in looking away, in stretching out (his bowl) and in drawing (it) back, his eyes lowered, perfect in his deportment. When people saw him, they said: “Who is this, acting like a fool, like a dullard, continuously frowning? Who will give almsfood to him when he approaches? Almsfood should instead be given to the Venerables who are followers of Assaji and Punabbasu, for they are gentle, congenial, pleasant to speak with, greeting one with a smile, welcoming, friendly, open, the first to speak.”</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>A certain lay follower saw that monk walking for almsfood in Kīṭāgiri. He approached him, paid homage to him, and said: “Bhante, have you received any almsfood?”</p>
+
+<hr>
+<p>“No, I havenʼt.”</p>
+
+<hr>
+<p>“Come, letʼs go to my house.”</p>
+
+<p>He took that monk to his house and fed him. He then said: “Where are you going, bhante?”</p>
+
+<hr>
+<p>“I am going to Sāvatthī to see the Master.”</p>
+
+<p>“Well then, bhante, would you please bow down at the feet of the Master in my name and say: ʻBhante, the monastery in Kīṭāgiri has been corrupted. Bad and shameless monks who are followers of Assaji and Punabbasu are staying there. They engage in the these kinds of improper behaviour: They plant flowering trees … And they engage in many forms of improper behaviour. Those people who previously had faith and confidence have now lost it, and there is no longer any support for the Saṅgha. The good monks have left and the bad monks are staying on. Master, please send monks to stay at the monastery in Kīṭāgiri.ʼ”</p>
+
+<p id="p4"><span class="parno">4</span>The monk replied: “Yes,” and he left for Sāvatthī. He walked to Sāvatthī by stages, and then went to the Master in the Jeta Grove, Anāthapiṇḍikaʼs Park. He paid homage to the Master and sat down to one side. It is the custom for Buddhas, for Masters, to greet visiting monks, and so the Master said to him: “I hope you are keeping well, monk, I hope you are comfortable; I hope you are not tired from travelling. Where have you come from?” “I am keeping well, Master, I am comfortable; I am not tired from travelling.” And he then told the Master all that had happened at Kīṭāgiri, and finished by saying: “Master, that is where I have come from.”</p>
+
+<hr>
+<p id="p5"><span class="parno">5</span>The Master then convened the Saṅgha and questioned them: “Is it true, monks, that some bad and shameless monks staying at Kīṭāgiri, who are followers of Assaji and Punabbasu, are engaging in such kinds of improper behaviour? And is it true that those people who previously had faith and confidence have now lost it, that there is no longer any support for the Saṅgha, and that the good monks have left and the bad monks are staying on?”</p>
+
+<hr>
+<p>“Itʼs true, Master.”</p>
+
+<p>The Buddha, the Master, criticised them … “Monks, how can these foolish men engage in such kinds of improper behaviour? This will not give rise to confidence in those without it … ” … He spoke on the Dhamma and then addressed Sāriputta and Moggallāna: “Sāriputta, the two of you should go to Kīṭāgiri and do an act to banish the monks who are followers of Assaji and Punabbasu from Kīṭāgiri. They are your disciples.”</p>
+
+<hr>
+<p id="p6"><span class="parno">6</span>“Bhante, how can we do an act to banish these monks from Kīṭāgiri? They are fierce and harsh.”</p>
+
+<p>“Well, Sāriputta, go together with many other monks.”</p>
+
+<p>“Yes, bhante.”</p>
+
+<hr>
+<p>“And, monks, this is how it should be done. First you should rebuke the monks who are followers of Assaji and Punabbasu. They should then confess, and then they should be charged with an offence. Then an experienced and competent monk should inform the Saṅgha:</p>
+
+<p id="p7"><span class="parno">7</span>ʻBhante, let the Saṅgha listen to me. These monks who are followers of Assaji and Punabbasu are corrupters of families and badly behaved. Their bad behaviour is seen and heard about, and the families corrupted by them are seen and heard about. If it seems appropriate to the Saṅgha, the Saṅgha should do an act to banish these monks from Kīṭāgiri. This is the motion.</p>
+
+<p id="p8"><span class="parno">8</span>ʻBhante, let the Saṅgha listen to me. These monks who are followers of Assaji and Punabbasu are corrupters of families and badly behaved. Their bad behaviour is seen and heard about, and the families corrupted by them are seen and heard about. The Saṅgha is doing an act to banish these monks from Kīṭāgiri. Any monk who agrees to doing an act to banish these monks from Kīṭāgiri, should remain silent. Any monk who does not agree should say so.</p>
+
+<hr>
+<p id="p9"><span class="parno">9</span>ʻFor a second time … For a third time I speak on this matter. Bhante, let the Saṅgha listen to me. These monks who are followers of Assaji and Punabbasu are corrupters of families and badly behaved. Their bad behaviour is seen and heard about, and the families corrupted by them are seen and heard about. The Saṅgha is doing an act to banish these monks from Kīṭāgiri. Any monk who agrees to doing an act to banish these monks from Kīṭāgiri, should remain silent. Any monk who does not agree should say so.</p>
+
+<hr>
+<p id="p10"><span class="parno">10</span>ʻThe act to banish the monks who are followers of Assaji and Punabbasu from Kīṭāgiri has been performed. The Saṅgha approves and is therefore silent. I will remember it thus.ʼ"</p>
+
+<hr>
+<p id="p11"><span class="parno">11</span>Then a Saṅgha of monks headed by Sāriputta and Moggallāna went to Kiṭāgiri and did an act to banish those monks from Kīṭāgiri. After the Saṅgha had performed the act to banish them, those monks did not act properly or suitably so as to deserve to be absolved, nor did they ask the monks for forgiveness. Instead they abused and reviled them, and they defamed them as acting from desire, anger, confusion, and fear. And they left and they disrobed. The monks of few desires … complained and criticised them: “When the Saṅgha has performed an act to banish them, how can these monks act in this way?”</p>
+
+<p id="p12"><span class="parno">12</span>They informed the Master. …“Is it true, monks, that when the Saṅgha had performed an act to banish them, the monks who are followers of Assaji and Punabbasu did not act properly … and they disrobed?”</p>
+
+<hr>
+<p>“Itʼs true, Master.”</p>
+
+<p>The Buddha, the Master, criticised them … “And, monks, this training rule should be recited thus:</p>
+
+<H3>Final ruling</H3>
+
+<p id="p13"><span class="parno">13</span><span class="rule">“If a monk who lives in dependence on a certain village or town is a corrupter of families and badly behaved, and his bad behaviour is seen and heard about, and the families corrupted by him are seen and heard about, then the monks should admonish him in this way: ʻVenerable, you are a corrupter of families and badly behaved. Your bad behaviour is seen and heard about, and the families corrupted by you are seen and heard about. Leave this monastery; you have stayed here long enough.ʼ If he replies, ʻYou are acting out of desire, anger, confusion, and fear; because of this sort of offence, you banish some, but not others,ʼ the monks should admonish him in this way: ʻVenerable, do not say that. The monks are not acting out of desire, anger, confusion, and fear. Venerable, you are a corrupter of families and badly behaved. Your bad behaviour is seen and heard about, and the families corrupted by you are seen and heard about. Venerable, leave this monastery; you have stayed here long enough.ʼ If that monk continues as before, he should be admonished up to three times to make him stop. If he stops, good. If not, he commits an offence entailing suspension.”</span></p>
+
+<H3>Definitions</H3>
+
+<p id="p14"><span class="parno">14</span><span class="term">A monk … a certain village or town</span>: <span class="gloss">a village and a town and a city are (included in) just a village and a town.</span></p>
+
+<p id="p15"><span class="parno">15</span><span class="term">If (a monk) lives in dependence on</span>: <span class="gloss">robes, almsfood, lodging requisites, and medicines can be obtained in that place.</span></p>
+
+<p id="p16"><span class="parno">16</span><span class="term">A family</span>: <span class="gloss">there are four kinds of families: noble families, brahmin families, merchant families, low-caste families.</span></p>
+
+<p id="p17"><span class="parno">17</span><span class="term">A corrupter of families</span>: <span class="gloss">he corrupts families by means of flowers, fruit, aromatic powder, clay, tooth-wood, bamboo, medical treatment, or by taking messages on foot.</span></p>
+
+<p id="p18"><span class="parno">18</span><span class="term">Badly behaved</span>: <span class="gloss">he plants flowering trees and gets it done; he waters them and gets it done; he plucks them and gets it done; he ties (the flowers into garlands) and gets it done.</span></p>
+
+<p id="p19"><span class="parno">19</span><span class="term">Is seen and heard about</span>: <span class="gloss">those who are present see it; those who are absent hear about it.</span></p>
+
+<p id="p20"><span class="parno">20</span><span class="term">The families corrupted by him</span>: <span class="gloss">they have lost their faith because of him; they have lost their confidence because of him.</span></p>
+
+<p id="p21"><span class="parno">21</span><span class="term">Are seen and heard about</span>: <span class="gloss">those who are present see it; those who are absent hear about it.</span></p>
+
+<p id="p22"><span class="parno">22</span><span class="term">Him</span>: <span class="gloss">that monk who is a corrupter of families.</span></p>
+
+<hr>
+<p id="p23"><span class="parno">23</span><span class="term">The monks</span>: Other monks, those who see it or hear about it. They should say: <span class="kamma">“Venerable, you are a corrupter of families and badly behaved. Your bad behaviour is seen and heard about, and the families corrupted by you are seen and heard about. Leave this monastery; you have stayed here long enough.”</span></p>
+
+<p id="p24"><span class="parno">24</span>If he replies: “You are acting out of desire, anger, confusion and fear; because of this sort of offence, you banish some, but not others.”</p>
+
+<p id="p25"><span class="parno">25</span><span class="term">Him</span>: <span class="gloss">that monk who is having an act done against him.</span></p>
+
+<hr>
+<p><span class="parno">26–27</span><span class="term">The monks</span>: Other monks, those who see it or hear about it. They should say: <span>“Venerable, do not say that. The monks are not acting out of desire, anger, confusion, and fear. Venerable, you are a corrupter of families and badly behaved. Your bad behaviour is seen and heard about, and the families corrupted by you are seen and heard about. Venerable, leave this monastery; you have stayed here long enough.” And they should say this a second and a third time.</span></p>
+
+<p id="p28"><span class="parno">28</span>If he stops, good. If he does not stop, he commits an offence of bad conduct. If those who hear about it do not say anything, they commit an offence of bad conduct.</p>
+
+<p>That monk, even if he has to be dragged into the middle of the Saṅgha, should be to spoken to thus: <span class="kamma">“Venerable, do not say that. The monks are not acting out of desire, anger, confusion, and fear. Venerable, you are a corrupter of families and badly behaved. Your bad behaviour is seen and heard about, and the families corrupted by you are seen and heard about. Venerable, leave this monastery; you have stayed here long enough.” And they should say this a second and a third time.</span></p>
+
+<p>If he stops, good. If he does not stop, he commits an offence of bad conduct.</p>
+
+<p><span class="term">He should be admonished</span>:</p>
+
+<hr>
+<p id="p29"><span class="parno">29</span>“And, monks, he should be admonished in this way. An experienced and competent monk should inform the Saṅgha:</p>
+
+<p id="p30"><span class="parno">30</span>‘Bhante, let the Saṅgha listen to me. This monk so-and-so, who has had an act of banishment done against him, is defaming the monks as acting out of desire, anger, confusion, and fear. He is not stopping that action. If it seems appropriate to the Saṅgha, the Saṅgha should admonish him to make him stop. This is the motion.</p>
+
+<p id="p31"><span class="parno">31</span>‘Bhante, let the Saṅgha listen to me. This monk so-and-so, who has had an act of banishment done against him, is defaming the monks as acting out of desire, anger, confusion, and fear. He is not stopping that action. The Saṅgha admonishes him to make him stop. Any monk who agrees to admonishing him to make him stop should remain silent. Any monk who does not agree should say so.</p>
+
+<hr>
+<p id="p32"><span class="parno">32</span>‘For a second time … For a third time I speak on this matter: Bhante, let the Saṅgha listen to me. This monk so-and-so, who has had an act of banishment done against him, is defaming the monks as acting out of desire, anger, confusion, and fear. He is not stopping that action. The Saṅgha admonishes him to make him stop. Any monk who agrees to admonishing him to make him stop should remain silent. Any monk who does not agree should say so.</p>
+
+<hr>
+<p id="p33"><span class="parno">33</span>‘This monk has been admonished by the Saṅgha to make him stop that action. The Saṅgha approves and is therefore silent. I will remember it thus.’”</p>
+
+<hr>
+<p id="p343"><span class="parno">343</span>After the motion, he commits an offence of bad conduct. After two proclamations, he commits a serious offence. When the proclamation is finished, he commits an offence entailing suspension. For one who commits the offence entailing suspension, the offence of bad conduct and the serious offence are annulled.</p>
+
+<p id="p35"><span class="parno">35</span><span class="term">He commits an offence entailing suspension</span>: <span class="gloss">only the Saṅgha gives probation for that offence, sends back to the beginning, places under deference, and rehabilitates—not several monks, not an individual. Therefore it is said that he commits an offence entailing suspension. This is the name and designation of this class of offence. Therefore, too, it is said that he commits an offence entailing suspension.</span></p>
+
+<H3>Permutations</H3>
+
+<p id="p36"><span class="parno">36</span>If it is a legitimate act of the Saṅgha, and he perceives it as legitimate, but he does not stop, he commits an offence entailing suspension.</p>
+
+<p id="p37"><span class="parno">37</span>If it is a legitimate act of the Saṅgha, but he has doubts about it, and he does not stop, he commits an offence entailing suspension.</p>
+
+<p id="p38"><span class="parno">38</span>If it is a legitimate act of the Saṅgha, but he perceives it as illegitimate, and he does not stop, he commits an offence entailing suspension.</p>
+
+<p id="p39"><span class="parno">39</span>If it is an illegitimate act of the Saṅgha, but he perceives it as legitimate, he commits an offence of bad conduct.</p>
+
+<p id="p40"><span class="parno">40</span>If it is an illegitimate act of the Saṅgha, but he has doubts about it, he commits an offence of bad conduct.</p>
+
+<p id="p41"><span class="parno">41</span>If it is an illegitimate act of the Saṅgha, and he perceives it as illegitimate, he commits an offence of bad conduct.</p>
+
+<H3>Non-offences</H3>
+
+<p id="p42"><span class="parno">42</span>There is no offence: if he is not admonished; if he stops; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">43</span>The thirteenth training rule on corrupters of families is finished.</p>
+
+<hr>
+<p id="p44"><span class="parno">44</span>“Venerables, the thirteen rules entailing suspension have been recited, nine being immediate offences, four after the third announcement.</p>
+
+<p>If a monk commits any one of them, he is to undergo probation for the same number of days as he knowingly concealed that offence. When this is completed, he must practice deference for a further six days. When this is completed, he is to be rehabilitated wherever there is a Saṅgha of at least twenty monks. If that monk is rehabilitated by a Saṅgha of even one less than twenty, that monk is not rehabilitated and those monks are at fault. This is proper procedure.</p>
+
+<p>In regard to this I ask the Venerables: ʻAre you pure in this?ʼ A second time I ask: ʻAre you pure in this?ʼ A third time I ask: ʻAre you pure in this?ʼ You are pure in this and therefore silent. I will remember it thus.”</p>
+
+<p class="endsutta"><span class="parno">45</span>The group of thirteen is finished.</p>
+
+<hr>
+<p id="p46"><span class="parno">46</span>This is the summary:</p>
+
+	<blockquote>
+		<p id="p47"><span class="parno">47</span>Emission, physical contact,
+<br>	Lewd, his own desire;
+<br>	Acting as a go-between, a hut,
+<br>	A dwelling, groundlessly.</p>
+		
+		<p id="p48"><span class="parno">48</span>A pretext, schism,
+<br>	Those who agree with him;
+<br>	Difficult to admonish, corrupters of families;
+<br>	The thirteen offences entailing suspension.</p>
+	</blockquote>
+
+<p class="endsutta"><span class="parno">49</span>The chapter on offences entailing suspension is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_1753, msdiv431</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena assajipunabbasukā nāma kīṭāgirismiṁ āvāsikā honti alajjino pāpabhikkhū. Te evarūpaṁ anācāraṁ ācaranti—</p>
+
+<p>mālāvacchaṁ ropentipi ropāpentipi, siñcantipi siñcāpentipi, ocinantipi ocināpentipi, ganthentipi ganthāpentipi, ekatovaṇṭikamālaṁ karontipi kārāpentipi, ubhatovaṇṭikamālaṁ karontipi kārāpentipi, mañjarikaṁ karontipi kārāpentipi, vidhūtikaṁ karontipi kārāpentipi, vaṭaṁsakaṁ karontipi kārāpentipi, āveḷaṁ karontipi kārāpentipi, uracchadaṁ karontipi kārāpentipi. Te kulitthīnaṁ kuladhītānaṁ kulakumārīnaṁ kulasuṇhānaṁ kuladāsīnaṁ ekatovaṇṭikamālaṁ harantipi harāpentipi, ubhatovaṇṭikamālaṁ harantipi harāpentipi, mañjarikaṁ harantipi harāpentipi, vidhūtikaṁ harantipi harāpentipi, vaṭaṁsakaṁ harantipi harāpentipi, āveḷaṁ harantipi harāpentipi, uracchadaṁ harantipi harāpentipi.</p>
+
+<p>Te kulitthīhi kuladhītāhi kulakumārīhi kulasuṇhāhi kuladāsīhi saddhiṁ ekabhājanepi bhuñjanti, ekathālakepi pivanti, ekāsanepi nisīdanti, ekamañcepi tuvaṭṭenti, ekattharaṇāpi tuvaṭṭenti, ekapāvuraṇāpi tuvaṭṭenti, ekattharaṇapāvuraṇāpi tuvaṭṭenti, vikālepi bhuñjanti, majjampi pivanti, mālāgandhavilepanampi dhārenti, naccantipi gāyantipi vādentipi lāsentipi, naccantiyāpi naccanti, naccantiyāpi gāyanti, naccantiyāpi vādenti, naccantiyāpi lāsenti, gāyantiyāpi naccanti, gāyantiyāpi gāyanti, gāyantiyāpi vādenti, gāyantiyāpi lāsenti, vādentiyāpi naccanti, vādentiyāpi gāyanti, vādentiyāpi vādenti, vādentiyāpi lāsenti, lāsentiyāpi naccanti, lāsentiyāpi gāyanti, lāsentiyāpi vādenti, lāsentiyāpi lāsenti;</p>
+
+<p>aṭṭhapadepi kīḷanti, dasapadepi kīḷanti, ākāsepi kīḷanti, parihārapathepi kīḷanti, santikāyapi kīḷanti, khalikāyapi kīḷanti, ghaṭikāyapi kīḷanti, salākahatthenapi kīḷanti, akkhenapi kīḷanti, pangacīrenapi kīḷanti, vankakenapi kīḷanti, mokkhacikāyapi kīḷanti, cingulakenapi kīḷanti, pattāḷhakenapi kīḷanti, rathakenapi kīḷanti, dhanukenapi kīḷanti, akkharikāyapi kīḷanti, manesikāyapi kīḷanti, yathāvajjenapi kīḷanti.</p>
+
+<p>Hatthismimpi sikkhanti, assasmimpi sikkhanti, rathasmimpi sikkhanti, dhanusmimpi sikkhanti, tharusmimpi sikkhanti, hatthissapi purato dhāvanti, assassapi purato dhāvanti, rathassapi purato dhāvantipi ādhāvantipi, usseḷentipi, apphoṭentipi, nibbujjhantipi, muṭṭhīhipi yujjhanti, rangamajjhepi sanghāṭiṁ pattharitvā naccakiṁ evaṁ vadanti— "idha, bhagini, naccassū"ti, nalāṭikampi denti, vividhampi anācāraṁ ācaranti.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_1V_1754, msdiv432</span>Tena kho pana samayena aññataro bhikkhu kāsīsu vassaṁvuṭṭho sāvatthiṁ gacchanto bhagavantaṁ dassanāya, yena kīṭāgiri tadavasari. Atha kho so bhikkhu pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya kīṭāgiriṁ piṇḍāya pāvisi pāsādikena abhikkantena paṭikkantena ālokitena vilokitena samiñjitena pasāritena okkhittacakkhu iriyāpathasampanno. Manussā taṁ bhikkhuṁ passitvā evamāhaṁsu— "kvāyaṁ abalabalo viya mandamando viya bhākuṭikabhākuṭiko viya? Ko imassa upagatassa piṇḍakaṁ dassati? Amhākaṁ pana ayyā assajipunabbasukā saṇhā sakhilā sukhasambhāsā mihitapubbangamā ehisvāgatavādino abbhākuṭikā uttānamukhā pubbabhāsino. Tesaṁ kho nāma piṇḍo dātabbo"ti.</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_1V_1755</span>Addasā kho aññataro upāsako taṁ bhikkhuṁ kīṭāgirismiṁ piṇḍāya carantaṁ. Disvāna yena so bhikkhu tenupasankami; upasankamitvā taṁ bhikkhuṁ abhivādetvā etadavoca: "api, bhante, piṇḍo labbhatī"ti?</p>
+
+<hr>
+<p>"Na kho, āvuso, piṇḍo labbhatī"ti.</p>
+
+<hr>
+<p>"Ehi, bhante, gharaṁ gamissāmā"ti.</p>
+
+<p>Atha kho so upāsako taṁ bhikkhuṁ gharaṁ netvā bhojetvā etadavoca: "kahaṁ, bhante, ayyo gamissatī"ti?</p>
+
+<hr>
+<p>"Sāvatthiṁ kho ahaṁ, āvuso, gamissāmi bhagavantaṁ dassanāyā"ti.</p>
+
+<p>"Tena hi, bhante, mama vacanena bhagavato pāde sirasā vanda, evañca vadehi— ‘duṭṭho, bhante, kīṭāgirismiṁ āvāso. Assajipunabbasukā nāma kīṭāgirismiṁ āvāsikā alajjino pāpabhikkhū. Te evarūpaṁ anācāraṁ ācaranti— mālāvacchaṁ ropentipi ropāpentipi, siñcantipi siñcāpentipi … pe … vividhampi anācāraṁ ācaranti. Yepi te, bhante, manussā pubbe saddhā ahesuṁ pasannā tepi etarahi assaddhā appasannā. Yānipi tāni sanghassa pubbe dānapathāni tānipi etarahi upacchinnāni. Riñcanti pesalā bhikkhū, nivasanti pāpabhikkhū. Sādhu, bhante, bhagavā kīṭāgiriṁ bhikkhū pahiṇeyya yathāyaṁ kīṭāgirismiṁ āvāso saṇṭhaheyyā’"ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_1V_1756</span>"Evamāvuso"ti kho so bhikkhu tassa upāsakassa paṭissutvā yena sāvatthi tena pakkāmi. Anupubbena yena sāvatthi jetavanaṁ anāthapiṇḍikassa ārāmo yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Āciṇṇaṁ kho panetaṁ buddhānaṁ bhagavantānaṁ āgantukehi bhikkhūhi saddhiṁ paṭisammodituṁ. Atha kho bhagavā taṁ bhikkhuṁ etadavoca: "Kacci, bhikkhu, khamanīyaṁ kacci yāpanīyaṁ, kaccisi appakilamathena addhānaṁ āgato, kuto ca tvaṁ, bhikkhu, āgacchasī"ti? "Khamanīyaṁ, bhagavā, yāpanīyaṁ, bhagavā. Appakilamathena cāhaṁ, bhante, addhānaṁ āgato. Idhāhaṁ, bhante, kāsīsu vassaṁvuṭṭho sāvatthiṁ āgacchanto bhagavantaṁ dassanāya yena kīṭāgiri tadavasariṁ. Atha khvāhaṁ, bhante, pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya kīṭāgiriṁ piṇḍāya pāvisiṁ. Addasā kho maṁ, bhante, aññataro upāsako kīṭāgirismiṁ piṇḍāya carantaṁ. Disvāna yenāhaṁ tenupasankami; upasankamitvā maṁ abhivādetvā etadavoca: ‘api, bhante, piṇḍo labbhatī’ti? ‘Na kho, āvuso, piṇḍo labbhatī’ti. ‘Ehi, bhante, gharaṁ gamissāmā’ti. Atha kho, bhante, so upāsako maṁ gharaṁ netvā bhojetvā etadavoca: ‘kahaṁ, bhante, ayyo gamissatī’ti? ‘Sāvatthiṁ kho ahaṁ, āvuso, gamissāmi bhagavantaṁ dassanāyā’ti. Tena hi, bhante, mama vacanena bhagavato pāde sirasā vanda, evañca vadehi— ‘duṭṭho, bhante, kīṭāgirismiṁ āvāso, assajipunabbasukā nāma kīṭāgirismiṁ āvāsikā alajjino pāpabhikkhū. Te evarūpaṁ anācāraṁ ācaranti— mālāvacchaṁ ropentipi ropāpentipi, siñcantipi siñcāpentipi … pe … vividhampi anācāraṁ ācaranti. Yepi te, bhante, manussā pubbe saddhā ahesuṁ pasannā tepi etarahi assaddhā appasannā, yānipi tāni sanghassa pubbe dānapathāni tānipi etarahi upacchinnāni, riñcanti pesalā bhikkhū nivasanti pāpabhikkhū. Sādhu, bhante, bhagavā kīṭāgiriṁ bhikkhū pahiṇeyya yathāyaṁ kīṭāgirismiṁ āvāso saṇṭhaheyyā’ti. Tato ahaṁ, bhagavā, āgacchāmī"ti.</p>
+
+<hr>
+<p><span class="parno">5</span><span class="ms">p_1V_1757, msdiv433</span>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusanghaṁ sannipātāpetvā bhikkhū paṭipucchi: "Saccaṁ kira, bhikkhave, assajipunabbasukā nāma kīṭāgirismiṁ āvāsikā alajjino pāpabhikkhū te evarūpaṁ anācāraṁ ācaranti— mālāvacchaṁ ropentipi ropāpentipi, siñcantipi siñcāpentipi … pe … vividhampi anācāraṁ ācaranti, yepi te, bhikkhave, manussā pubbe saddhā ahesuṁ pasannā tepi etarahi assaddhā appasannā; yānipi tāni sanghassa pubbe dānapathāni tānipi etarahi upacchinnāni; riñcanti pesalā bhikkhū nivasanti pāpabhikkhū"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma te, bhikkhave, moghapurisā evarūpaṁ anācāraṁ ācarissanti— mālāvacchaṁ ropessantipi ropāpessantipi, sañcissantipi siñcāpessantipi, ocinissantipi ocināpessantipi, ganthissantipi ganthāpessantipi, ekatovaṇṭikamālaṁ karissantipi kārāpessantipi, ubhatovaṇṭikamālaṁ karissantipi kārāpessantipi, mañjarikaṁ karissantipi kārāpessantipi, vidhūtikaṁ karissantipi kārāpessantipi, vaṭaṁsakaṁ karissantipi kārāpessantipi, āveḷaṁ karissantipi kārāpessantipi, uracchadaṁ karissantipi kārāpessantipi. Te kulitthīnaṁ kuladhītānaṁ kulakumārīnaṁ kulasuṇhānaṁ kuladāsīnaṁ ekatovaṇṭikamālaṁ harissantipi hārāpessantipi, ubhatovaṇṭikamālaṁ harissantipi hārāpessantipi, mañjarikaṁ harissantipi hārāpessantipi, vidhūtikaṁ harissantipi hārāpessantipi, vaṭaṁsakaṁ harissantipi hārāpessantipi, āveḷaṁ harissantipi hārāpessantipi, uracchadaṁ harissantipi hārāpessantipi. Te kulitthīhi kuladhītāhi kulakumārīhi kulasuṇhāhi kuladāsīhi saddhiṁ ekabhājanepi bhuñjissanti, ekathālakepi pivissanti, ekāsanepi nisīdissanti, ekamañcepi tuvaṭṭissanti, ekattharaṇāpi tuvaṭṭissanti, ekapāvuraṇāpi tuvaṭṭissanti, ekattharaṇapāvuraṇāpi tuvaṭṭissanti, vikālepi bhuñjissanti, majjampi pivissanti, mālāgandhavilepanampi dhārissanti, naccissantipi gāyissantipi vādessantipi lāsessantipi, naccantiyāpi naccissanti naccantiyāpi gāyissanti naccantiyāpi vādessanti naccantiyāpi lāsessanti, gāyantiyāpi naccissanti gāyantiyāpi gāyissanti gāyantiyāpi vādessanti gāyantiyāpi lāsessanti, vādentiyāpi naccissanti vādentiyāpi gāyissanti vādentiyāpi vādessanti vādentiyāpi lāsessanti, lāsentiyāpi naccissanti lāsentiyāpi gāyissanti lāsentiyāpi vādessanti lāsentiyāpi lāsessanti, aṭṭhapadepi kīḷissanti dasapadepi kīḷissanti, ākāsepi kīḷissanti, parihārapathepi kīḷissanti, santikāyapi kīḷissanti, khalikāyapi kīḷissanti, ghaṭikāyapi kīḷissanti, salākahatthenapi kīḷissanti, akkhenapi kīḷissanti, pangacīrenapi kīḷissanti, vankakenapi kīḷissanti, mokkhacikāyapi kīḷissanti, cingulakenapi kīḷissanti, pattāḷhakenapi kīḷissanti, rathakenapi kīḷissanti, dhanukenapi kīḷissanti, akkharikāyapi kīḷissanti, manesikāyapi kīḷissanti, yathāvajjenapi kīḷissanti, hatthismimpi sikkhissanti, assasmimpi sikkhissanti, rathasmimpi sikkhissanti, dhanusmimpi sikkhissanti, tharusmimpi sikkhissanti, hatthissapi purato dhāvissanti, assassapi purato dhāvissanti, rathassapi purato dhāvissantipi ādhāvissantipi, usseḷessantipi, apphoṭessantipi, nibbujjhissantipi, muṭṭhīhipi yujjhissanti, rangamajjhepi sanghāṭiṁ pattharitvā naccakiṁ evaṁ vakkhanti "idha, bhagini, naccassū"ti nalāṭikampi dassanti, vividhampi anācāraṁ ācarissanti. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … vigarahitvā dhammiṁ kathaṁ katvā sāriputtamoggallāne āmantesi:  "Gacchatha tumhe, sāriputtā, kīṭāgiriṁ gantvā assajipunabbasukānaṁ bhikkhūnaṁ kīṭāgirismā pabbājanīyakammaṁ karotha. Tumhākaṁ ete saddhivihārikā"ti.</p>
+
+<hr>
+<p><span class="parno">6</span><span class="ms">p_1V_1758</span>"Kathaṁ mayaṁ, bhante, assajipunabbasukānaṁ bhikkhūnaṁ kīṭāgirismā pabbājanīyakammaṁ karoma? Caṇḍā te bhikkhū pharusā"ti.</p>
+
+<p>"Tena hi tumhe, sāriputtā, bahukehi bhikkhūhi saddhiṁ gacchathā"ti.</p>
+
+<p>"Evaṁ, bhante"ti kho sāriputtamoggallānā bhagavato paccassosuṁ.</p>
+
+<hr>
+<p>"Evañca pana, bhikkhave, kātabbaṁ. Paṭhamaṁ assajipunabbasukā bhikkhū codetabbā. Codetvā sāretabbā. Sāretvā āpattiṁ ropetabbā. Āpattiṁ ropetvā byattena bhikkhunā paṭibalena sangho ñāpetabbo—</p>
+
+<p><span class="parno">7</span><span class="ms">p_1V_1759, msdiv434</span>"na assajipunabbasukehi bhikkhūhi kīṭāgirismiṁ vatthabban"ti. Esā ñatti. ‘Suṇātu me, bhante, sangho. Ime assajipunabbasukā bhikkhū kuladūsakā pāpasamācārā. Imesaṁ pāpakā samācārā dissanti ceva suyyanti ca. Kulāni ca imehi duṭṭhāni dissanti ceva suyyanti ca. Yadi sanghassa pattakallaṁ, sangho assajipunabbasukānaṁ bhikkhūnaṁ kīṭāgirismā pabbājanīyakammaṁ kareyya—</p>
+
+<p><span class="parno">8</span><span class="ms">p_1V_1760</span>"na assajipunabbasukehi bhikkhūhi kīṭāgirismiṁ vatthabban"ti. Yassāyasmato khamati assajipunabbasukānaṁ bhikkhūnaṁ kīṭāgirismā pabbājanīyakammassa karaṇaṁ: "Na assajipunabbasukehi bhikkhūhi kīṭāgirismiṁ vatthabban"ti, so tuṇhassa; yassa nakkhamati, so bhāseyya. Suṇātu me, bhante, sangho. Ime assajipunabbasukā bhikkhū kuladūsakā pāpasamācārā. Imesaṁ pāpakā samācārā dissanti ceva suyyanti ca. Kulāni ca imehi duṭṭhāni dissanti ceva suyyanti ca. sangho assajipunabbasukānaṁ bhikkhūnaṁ kīṭāgirismā pabbājanīyakammaṁ karoti—</p>
+
+<hr>
+<p><span class="parno">9</span><span class="ms">p_1V_1761</span>Dutiyampi etamatthaṁ vadāmi … pe … tatiyampi etamatthaṁ vadāmi— suṇātu me, bhante, sangho … pe … so bhāseyya.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_1V_1762</span>"na assajipunabbasukehi bhikkhūhi kīṭāgirismiṁ vatthabban"ti. Khamati sanghassa, tasmā tuṇhī, evametaṁ dhārayāmī’"ti. Kataṁ saṇghena assajipunabbasukānaṁ bhikkhūnaṁ kīṭāgirismā pabbājanīyakammaṁ—</p>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_1V_1763, msdiv435</span>Atha kho sāriputtamoggallānappamukho bhikkhusangho kīṭāgiriṁ gantvā assajipunabbasukānaṁ bhikkhūnaṁ kīṭāgirismā pabbājanīyakammaṁ akāsi: "Na assajipunabbasukehi bhikkhūhi kīṭāgirismiṁ vatthabban"ti. Te saṇghena pabbājanīyakammakatā na sammā vattanti, na lomaṁ pātenti, na netthāraṁ vattanti, na bhikkhū khamāpenti, akkosanti paribhāsanti chandagāmitā dosagāmitā mohagāmitā bhayagāmitā pāpenti, pakkamantipi, vibbhamantipi. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma assajipunabbasukā bhikkhū saṇghena pabbājanīyakammakatā na sammā vattissanti, na lomaṁ pātessanti, na netthāraṁ vattissanti, na bhikkhū khamāpessanti, akkosissanti paribhāsissanti, chandagāmitā dosagāmitā mohagāmitā bhayagāmitā pāpessanti pakkamissantipi vibbhamissantipī"ti.</p>
+
+<p><span class="parno">12</span><span class="ms">p_1V_1764</span>Atha kho te bhikkhū assajipunabbasuke bhikkhū anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira, bhikkhave, assajipunabbasukā bhikkhū saṇghena pabbājanīyakammakatā na sammā vattanti … pe … vibbhamantipī"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">13</span><span class="ms">p_1V_1765, msdiv436</span><span class="rule">"Bhikkhu paneva aññataraṁ gāmaṁ vā nigamaṁ vā upanissāya viharati kuladūsako pāpasamācāro. Tassa kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tena duṭṭhāni dissanti ceva suyyanti ca. So bhikkhu bhikkhūhi evamassa vacanīyo: ‘āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca. Pakkamatāyasmā imamhā āvāsā. Alaṁ te idha vāsenā’ti. Evañca so bhikkhu bhikkhūhi vuccamāno te bhikkhū evaṁ vadeyya— ‘chandagāmino ca bhikkhū dosagāmino ca bhikkhū mohagāmino ca bhikkhū bhayagāmino ca bhikkhū tādisikāya āpattiyā ekaccaṁ pabbājenti ekaccaṁ na pabbājentī’ti, so bhikkhu bhikkhūhi evamassa vacanīyo: ‘māyasmā evaṁ avaca. Na ca bhikkhū chandagāmino. Na ca bhikkhū dosagāmino. Na ca bhikkhū mohagāmino. Na ca bhikkhū bhayagāmino. Āyasmā kho kuladūsako pāpasamācāro. Āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca. Kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca. Pakkamatāyasmā imamhā āvāsā. Alaṁ te idha vāsenā’ti. Evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya. Yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ; no ce paṭinissajjeyya, Sanghādiseso"</span>ti.(<i>13</i>:<b>17</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">14</span><span class="ms">p_1V_1766, msdiv437</span><b>Bhikkhu paneva aññataraṁ gāmaṁ vā nigamaṁ vā</b>'ti gāmopi nigamopi nagarampi gāmo ceva nigamo ca.</p>
+
+<p><span class="parno">15</span><span class="ms">p_1V_1767</span><b>Upanissāya viharatī</b>'ti tattha paṭibaddhā honti cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānappaccaya&shy;bhesajja&shy;parikkhārā.</p>
+
+<p><span class="parno">16</span><span class="ms">p_1V_1768</span><b>Kulaṁ</b> nāma cattāri kulāni— khattiyakulaṁ, brāhmaṇakulaṁ, vessakulaṁ, suddakulaṁ.</p>
+
+<p><span class="parno">17</span><span class="ms">p_1V_1769</span><b>Kuladūsako</b>'ti kulāni dūseti pupphena vā phalena vā cuṇṇena vā mattikāya vā dantakaṭṭhena vā veḷuyā vā vejjikāya vā janghapesanikena vā.</p>
+
+<p><span class="parno">18</span><span class="ms">p_1V_1770</span><b>Pāpasamācāro</b>'ti mālāvacchaṁ ropetipi ropāpetipi, siñcatipi siñcāpetipi, ocinātipi ocināpetipi, ganthetipi ganthāpetipi.</p>
+
+<p><span class="parno">19</span><span class="ms">p_1V_1771</span><b>Dissanti ceva suyyanti cā</b>'ti ye saṁmukhā te passanti, ye tirokkhā te suṇanti.</p>
+
+<p><span class="parno">20</span><span class="ms">p_1V_1772</span><b>Kulāni ca tena duṭṭhānī</b>'ti pubbe saddhā hutvā taṁ āgamma assaddhā honti, pasannā hutvā appasannā honti.</p>
+
+<p><span class="parno">21</span><span class="ms">p_1V_1773</span><b>Dissanti ceva suyyanti cā</b>'ti ye saṁmukhā te passanti, ye tirokkhā te suṇanti.</p>
+
+<p><span class="parno">22</span><span class="ms">p_1V_1774</span><b>So bhikkhū</b>'ti yo so kuladūsako bhikkhu.</p>
+
+<hr>
+<p><span class="parno">23</span><span class="ms">p_1V_1775</span><b>Bhikkhūhī</b>'ti aññehi bhikkhūhi. Ye passanti ye suṇanti. Tehi vattabbo— "āyasmā kho kuladūsako pāpasamācāro. Āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca. Kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca. Pakkamatāyasmā imamhā āvāsā. Alaṁ te idha vāsenā"ti.</p>
+
+<p><span class="parno">24</span><span class="ms">p_1V_1776</span>Evañca so bhikkhu bhikkhūhi vuccamāno te bhikkhū evaṁ vadeyya— "chandagāmino ca bhikkhū, dosagāmino ca bhikkhū, mohagāmino ca bhikkhū, bhayagāmino ca bhikkhū. Tādisikāya āpattiyā ekaccaṁ pabbājenti ekaccaṁ na pabbājentī"ti.</p>
+
+<p><span class="parno">25</span><span class="ms">p_1V_1777</span><b>So bhikkhū</b>'ti yo so kammakato bhikkhu.</p>
+
+<hr>
+<p><span class="parno">26</span><span class="ms">p_1V_1778</span><b>Bhikkhūhī</b>'ti aññehi bhikkhūhi.</p>
+
+<p><span class="parno">27</span><span class="ms">p_1V_1779</span>Ye passanti ye suṇanti tehi vattabbo— "māyasmā evaṁ avaca. Na ca bhikkhū chandagāmino, na ca bhikkhū dosagāmino, na ca bhikkhū mohagāmino, na ca bhikkhū bhayagāmino. Āyasmā kho kuladūsako pāpasamācāro. Āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca. Kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca. Pakkamatāyasmā imamhā āvāsā. Alaṁ te idha vāsenā"ti. Dutiyampi vattabbo. Tatiyampi vattabbo.</p>
+
+<p><span class="parno">28</span><span class="ms">p_1V_1780</span>Sace paṭinissajjati, iccetaṁ kusalaṁ. No ce paṭinissajjati, āpatti dukkaṭassa.</p>
+
+<p>Sutvā na vadanti, āpatti dukkaṭassa. So bhikkhu saṇghamajjhampi ākaḍḍhitvā vattabbo— "māyasmā evaṁ avaca. Na ca bhikkhū chandagāmino, na ca bhikkhū dosagāmino, na ca bhikkhū mohagāmino, na ca bhikkhū bhayagāmino. Āyasmā kho kuladūsako pāpasamācāro. Āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca. Kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca. Pakkamatāyasmā imamhā āvāsā. Alaṁ te idha vāsenā"ti. Dutiyampi vattabbo. Tatiyampi vattabbo.</p>
+
+<p>Sace paṭinissajjati, iccetaṁ kusalaṁ. No ce paṭinissajjati, āpatti dukkaṭassa.</p>
+
+<p>So bhikkhu samanubhāsitabbo.</p>
+
+<hr>
+<p><span class="parno">29</span><span class="ms">p_1V_1781</span>"Evañca pana, bhikkhave, samanubhāsitabbo. Byattena bhikkhunā paṭibalena sangho ñāpetabbo—</p>
+
+<p><span class="parno">30</span><span class="ms">p_1V_1782, msdiv438</span>‘Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu saṇghena pabbājanīyakammakato bhikkhū chandagāmitā dosagāmitā mohagāmitā bhayagāmitā pāpeti. So taṁ vatthuṁ na paṭinissajjati. Yadi sanghassa pattakallaṁ, sangho itthannāmaṁ bhikkhuṁ samanubhāseyya tassa vatthussa paṭinissaggāya. Esā ñatti.</p>
+
+<p><span class="parno">31</span><span class="ms">p_1V_1783</span>Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu saṇghena pabbājanīyakammakato bhikkhū chandagāmitā dosagāmitā mohagāmitā bhayagāmitā pāpeti. So taṁ vatthuṁ na paṭinissajjati. sangho itthannāmaṁ bhikkhuṁ samanubhāsati tassa vatthussa paṭinissaggāya. Yassāyasmato khamati itthannāmassa bhikkhuno samanubhāsanā tassa vatthussa paṭinissaggāya, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<hr>
+<p><span class="parno">32</span><span class="ms">p_1V_1784</span>Dutiyampi etamatthaṁ vadāmi … pe … tatiyampi etamatthaṁ vadāmi … pe … .</p>
+
+<hr>
+<p><span class="parno">33</span><span class="ms">p_1V_1785</span>Samanubhaṭṭho saṇghena itthannāmo bhikkhu tassa vatthussa paṭinissaggāya. Khamati sanghassa, tasmā tuṇhī, evametaṁ dhārayāmī’"ti.</p>
+
+<hr>
+<p><span class="parno">34</span><span class="ms">p_1V_1786, msdiv439</span>Ñattiyā dukkaṭaṁ, dvīhi kammavācāhi thullaccayā, kammavācāpariyosāne āpatti sanghādisesassa. sanghādisesaṁ ajjhāpajjantassa ñattiyā dukkaṭaṁ, dvīhi kammavācāhi thullaccayā paṭippassambhanti.</p>
+
+<p><span class="parno">35</span><span class="ms">p_1V_1787</span><b>Sanghādiseso</b>'ti sanghova tassā āpattiyā parivāsaṁ deti, mūlāya paṭikassati, mānattaṁ deti, abbheti; na sambahulā, na ekapuggalo. Tena vuccati— "Sanghādiseso"ti, tasseva āpattinikāyassa nāmakammaṁ adhivacanaṁ. Tenapi vuccati "Sanghādiseso"ti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">36</span><span class="ms">p_1V_1788, msdiv440</span>Dhammakamme dhammakammasaññī na paṭinissajjati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">37</span><span class="ms">p_1V_1789</span>Dhammakamme vematiko na paṭinissajjati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">38</span><span class="ms">p_1V_1790</span>Dhammakamme adhammakammasaññī na paṭinissajjati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">39</span><span class="ms">p_1V_1791</span>Adhammakamme dhammakammasaññī, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">40</span><span class="ms">p_1V_1792</span>Adhammakamme vematiko, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">41</span><span class="ms">p_1V_1793</span>Adhammakamme adhammakammasaññī, āpatti dukkaṭassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">42</span><span class="ms">p_1V_1794, msdiv441</span>Anāpatti— asamanubhāsantassa, paṭinissajjantassa, ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">43</span><span class="ms">p_1V_1795</span>Kuladūsakasikkhāpadaṁ niṭṭhitaṁ terasamaṁ.</p>
+
+<hr>
+<p><span class="parno">44</span><span class="ms">p_1V_1796, msdiv442</span>"Uddiṭṭhā kho, āyasmanto, terasa sanghādisesā dhammā, nava paṭhamāpattikā, cattāro yāvatatiyakā.</p>
+
+<p>Yesaṁ bhikkhu aññataraṁ vā aññataraṁ vā āpajjitvā yāvatīhaṁ jānaṁ paṭicchādeti tāvatīhaṁ tena bhikkhunā akāmā parivattabbaṁ. Parivutthaparivāsena bhikkhunā uttari chārattaṁ bhikkhumānattāya paṭipajjitabbaṁ. Ciṇṇamānatto bhikkhu yattha siyā vīsatigaṇo bhikkhusangho tattha so bhikkhu abbhetabbo. Ekenapi ce ūno vīsatigaṇo bhikkhusangho taṁ bhikkhuṁ abbheyya, so ca bhikkhu anabbhito, te ca bhikkhū gārayhā, ayaṁ tattha sāmīci.</p>
+
+<p>Tatthāyasmante pucchāmi— ‘kaccittha parisuddhā’? Dutiyampi pucchāmi— ‘kaccittha parisuddhā’? Tatiyampi pucchāmi— ‘kaccittha parisuddhā’? Parisuddhetthāyasmanto. Tasmā tuṇhī, evametaṁ dhārayāmī"ti.</p>
+
+<p class="endsutta"><span class="parno">45</span><span class="ms">p_1V_1797</span>Terasakaṁ niṭṭhitaṁ.</p>
+
+<hr>
+<p><span class="parno">46</span><span class="ms">p_1V_1798</span>Tassuddānaṁ</p>
+
+<blockquote>
+	<p><span class="parno">47</span><span class="ms">p_1V_1799</span>Vissaṭṭhi kāyasaṁsaggaṁ,
+<br>duṭṭhullaṁ attakāmañca;
+<br>Sañcarittaṁ kuṭī ceva,
+<br>vihāro ca amūlakaṁ.</p>
+	
+	<p><span class="parno">48</span><span class="ms">p_1V_1800</span>Kiñcilesañca bhedo ca,
+<br>tasseva anuvattakā;
+<br>Dubbacaṁ kuladūsañca,
+<br>sanghādisesā terasāti.</p>
+</blockquote>
+
+<p class="endsection"><span class="parno">49</span><span class="ms">p_1V_1801</span>sanghādisesakaṇḍaṁ niṭṭhitaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-sn12.html#content"></a><a id="next-sutta" href="../vi/bu-vb-an.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-sn.html">Sanghādisesas</a>Sanghādisesa 13
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

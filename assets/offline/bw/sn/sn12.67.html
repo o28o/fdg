@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nikāya - Connected Discourses on Causation 12.67</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 			</button>
+<span class="box-lbl">Light/Dark</span>
+
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="pressed w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+ 
+ <h2>Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+					<div id="snheading">
+ 					<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div><!-- End snheading div -->
+</div>  <!-- End div for SN sub-navigation -->
+
+
+
+
+ <p>&nbsp;</p>
+
+ 
+ <h3 id="SN12heading">SN12: Connected Discourses on Causation</h3>
+ 
+ 			<div class="w3-bar-white bwnav"><!-- Div for lower SN sub-navigation -->
+ 		<a href="sn12.html#SN12heading" title="Connected Discourses on Causation" class="w3-bar-item w3-hover-white w3-border-white w3-button active">SN12</a>
+ 		<a href="sn13.html#SN13heading" title="Connected Discourses on the Breakthrough" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN13</a>
+ 		<a href="sn14.html#SN14heading" title="Connected Discourses on Elements" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN14</a>
+ 		<a href="sn15.html#SN15heading" title="Connected Discourses on Without Discoverable Beginning" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN15</a>
+ 		<a href="sn16.html#SN16heading" title="Connected Discourses with Kassapa" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN16</a>
+ 		<a href="sn17.html#SN17heading" title="Connected Discourses on Gains and Honour" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN17</a>
+ 		<a href="sn18.html#SN18heading" title="Connected Discourses with Rahula" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN18</a>
+ 		<a href="sn19.html#SN19heading" title="Connected Discourses with Lakkhaṇa" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN19</a>
+ 		<a href="sn20.html#SN20heading" title="Connected Discourses with Similes" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN20</a>
+ 		<a href="sn21.html#SN21heading" title="Connected Discourses with Bhikkhus" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN21</a>
+ 	</div><!-- End div for lower SN sub-navigation -->
+ 
+ <!--      SN content begins here      -->
+  
+ <div id="content">
+
+
+<h3>SN12:67 The Sheaves of Reeds</h3>
+
+<div id="metaarea">
+ <ul class="translator">
+ <li>&copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>On one occasion the Venerable Sāriputta and the Venerable Mahakoṭṭhita were dwelling at Baraṇasī in the Deer Park at Isipatana.<span class="note" id="n193"><span class="details"><span class="p">[n.193] Mahakoṭṭhita was the foremost disciple in the analytical knowledges <i>(paṭisambhidā)</i>. He often appears in dialogue with Sāriputta. As C.Rh.D remarks (KS 2:79, n. 1), since both elders were arahants it is likely these dialogues were intended as "lessons" for their students rather than as genuine inquiries.</span></span></span> Then, in the evening, the Venerable Mahakoṭṭhita emerged from seclusion and approached the Venerable Sāriputta. He exchanged greetings with the Venerable Sāriputta and, when they had concluded their greetings and cordial talk, he sat down to one side and said to him:</p>
+
+<p>"How is it, friend Sāriputta: Is aging-and-death created by oneself, or is it created by another, <a class="pts_pn">sn.ii.113</a> or is it created both by oneself and by another, or has it arisen fortuitously, being created neither by oneself nor by another?"<span class="note" id="n194"><span class="details"><span class="p">[n.194] The underlying presuppositions of the four alternatives are eternalism, annihilationism, partial-eternalism, and fortuitous origination; see n. <a href="sn12.17.html#n37">37</a>.</span></span></span></p>
+
+<p>"Friend Koṭṭhita, aging-and-death is not created by oneself, nor is it created by another, nor is it created both by oneself and by another, nor has it arisen fortuitously, being created neither by oneself nor by another. But rather, with birth as condition, aging-and-death <span class="add">comes to be</span>."</p>
+
+<hr>
+<p id="p2"><span class="parno">2–3</span>"How is it, friend Sāriputta: Is birth created by oneself … Is existence … clinging … craving … feeling … contact … the six sense bases … name-and-form created by oneself, or is it created by another, or is it created both by oneself and by another, or has it arisen fortuitously, being created neither by oneself nor by another?"
+
+<br class="half">"Name-and-form, friend Koṭṭhita, is not created by oneself, nor is it created by another, nor is it created both by oneself and by another, nor has it arisen fortuitously, being created neither by oneself nor by another; but rather, with consciousness as condition, name-and-form <span class="add">comes to be</span>."</p>
+
+<hr>
+<p id="p4"><span class="parno">4</span>"How is it, friend Sāriputta: Is consciousness created by oneself, or is it created by another, or is it created both by oneself and by another, or has it arisen fortuitously, being created neither by oneself nor by another?"</p>
+
+<p>"Consciousness, friend Koṭṭhita, is not created by oneself, nor is it created by another, nor is it created both by oneself and by another, nor has it arisen fortuitously, being created neither by oneself nor by another; but rather, with name-and-form as condition, consciousness <span class="add">comes to be</span>."<span class="note" id="n195"><span class="details"><span class="p">[n.195] On the reciprocal conditionality of consciousness and name-and-form, see <a href="sn12.65.html">SN12.65</a>.</span></span></span> <a class="pts_pn">sn.ii.114</a></p>
+
+<hr>
+<p><span class="parno">5–6</span>"Now we understand the Venerable Sāriputta's statement thus: ‘Name-and-form, friend Koṭṭhita, is not created by oneself … but rather, with consciousness as condition, name-and-form <span class="add">comes to be</span>.’ Now we also understand the Venerable Sāriputta's <span class="add">other</span> statement thus: ‘Consciousness, friend Koṭṭhita, is not created by oneself … but rather, with name-and-form as condition, consciousness <span class="add">comes to be</span>.’</p>
+
+<hr>
+<p id="p7"><span class="parno">7</span>But how, friend Sāriputta, should the meaning of this statement be seen?"</p>
+
+<p>"Well then, friend, I will make up a simile for you, for some intelligent people here understand the meaning of a statement by means of a simile. Just as two sheaves of reeds might stand leaning against each other, so too, with name-and-form as condition, consciousness <span class="add">comes to be</span>; with consciousness as condition, name-and-form <span class="add">comes to be</span>. With name-and-form as condition, the six sense bases <span class="add">come to be</span>; with the six sense bases as condition, contact … . Such is the origin of this whole mass of suffering.</p>
+
+<p>"If, friend, one were to remove one of those sheaves of reeds, the other would fall, and if one were to remove the other sheaf, the first would fall. So too, with the cessation of name-and-form comes cessation of consciousness; with the cessation of consciousness comes cessation of name-and-form. With the cessation of name-and-form comes cessation of the six sense bases; with the cessation of the six sense bases, cessation of contact … . Such is the cessation of this whole mass of suffering."</p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>"It is wonderful, friend Sāriputta! It is amazing, friend Sāriputta! How well this has been stated by the Venerable Sāriputta. We rejoice in the Venerable Sāriputta's statement on these thirty-six grounds:<span class="note" id="n196"><span class="details"><span class="p">[n.196] Cp. <a href="sn12.16.html">SN12.16</a>. <a href="sn0-abbr.html" title="Abbreviations">Spk</a>: On thirty-six grounds: for thirty-six reasons, obtained by taking three cases in relation to each of the twelve terms. The first is the quality of being a speaker on the Dhamma, the second the practice, the third the fruit of the practice. By the first method the excellence of the teaching is discussed, by the second the plane of the trainee <i>(sekha)</i>, by the third the plane of the arahant (<i>asekha</i>, one beyond training).</span></span></span></p>
+
+<p id="p9"><span class="parno">9</span>If, friend, a bhikkhu teaches the Dhamma for the purpose of revulsion towards aging-and-death, for its fading away and cessation, he can be called a bhikkhu who is a speaker on the Dhamma. <a class="pts_pn">sn.ii.115</a> If a bhikkhu is practising for the purpose of revulsion towards aging-and-death, for its fading away and cessation, he can be called a bhikkhu who is practising in accordance with the Dhamma. If through revulsion towards aging-and-death, through its fading away and cessation, a bhikkhu is liberated by nonclinging, he can be called a bhikkhu who has attained Nibbāna in this very life.</p>
+
+<p>"If, friend, a bhikkhu teaches the Dhamma for the purpose of revulsion towards birth … existence … clinging … craving … feeling … contact … the six sense bases … name-and-form … consciousness … volitional formations … ignorance, for its fading away and cessation, he can be called a bhikkhu who is a speaker on the Dhamma. If a bhikkhu is practising for the purpose of revulsion towards ignorance, for its fading away and cessation, he can be called a bhikkhu who is practising in accordance with the Dhamma. If through revulsion towards ignorance, through its fading away and cessation, a bhikkhu is liberated by nonclinging, he can be called a bhikkhu who has attained Nibbāna in this very life."</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Ekaṁ samayaṁ āyasmā ca sāriputto āyasmā ca mahākoṭṭhiko bārāṇasiyaṁ vihāranti isipatane migadāye. Atha kho āyasmā mahākoṭṭhiko sāyanhasamayaṁ paṭisallānā vuṭṭhito yenāyasmā sāriputto tenupasankami; upasankamitvā āyasmatā sāriputtena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā mahākoṭṭhiko āyasmantaṁ sāriputtaṁ etadavoca: </p>
+
+<p>"Kiṁ nu kho, āvuso sāriputta, sayankataṁ jarāmaraṇaṁ, parankataṁ jarāmaraṇaṁ, sayankatañca parankatañca jarāmaraṇaṁ, udāhu asayankāraṁ aparankāraṁ adhiccasamuppannaṁ jarāmaraṇan"ti? </p>
+
+<p>"Na kho, āvuso koṭṭhika, sayankataṁ jarāmaraṇaṁ, na parankataṁ jarāmaraṇaṁ, na sayankatañca parankatañca jarāmaraṇaṁ, nāpi asayankāraṁ aparankāraṁ adhiccasamuppannaṁ jarāmaraṇaṁ. Api ca jātipaccayā jarāmaraṇan"ti.</p>
+
+<hr>
+<p><span class="parno">2</span>"Kiṁ nu kho, āvuso sāriputta, sayankatā jāti, parankatā jāti, sayankatā ca parankatā ca jāti, udāhu asayankārā aparankārā adhiccasamuppannā jātī"ti? </p>
+
+<p>"Na kho, āvuso koṭṭhika, sayankatā jāti, na parankatā jāti, na sayankatā ca parankatā ca jāti, nāpi asayankārā aparankārā adhiccasamuppannā jāti. Api ca bhavapaccayā jātī"ti.</p>
+
+<p><span class="parno">3</span>"Kiṁ nu kho, āvuso sāriputta, sayankato bhavo … pe … sayankataṁ upādānaṁ … sayankatā taṇhā … sayankatā vedanā … sayankato phasso … sayankataṁ saḷāyatanaṁ … sayankataṁ nāmarūpaṁ, parankataṁ nāmarūpaṁ, sayankatañca parankatañca nāmarūpaṁ, udāhu asayankāraṁ aparankāraṁ adhiccasamuppannaṁ nāmarūpan"ti? "Na kho, āvuso koṭṭhika, sayankataṁ nāmarūpaṁ, na parankataṁ nāmarūpaṁ, na sayankatañca parankatañca nāmarūpaṁ, nāpi asayankāraṁ aparankāraṁ, adhiccasamuppannaṁ nāmarūpaṁ. Api ca viññāṇapaccayā nāmarūpan"ti.</p>
+
+<hr>
+<p><span class="parno">4</span>"Kiṁ nu kho, āvuso sāriputta, sayankataṁ viññāṇaṁ, parankataṁ viññāṇaṁ, sayankatañca parankatañca viññāṇaṁ, udāhu asayankāraṁ aparankāraṁ adhiccasamuppannaṁ viññāṇan"ti? </p>
+
+<p>"Na kho, āvuso koṭṭhika, sayankataṁ viññāṇaṁ, na parankataṁ viññāṇaṁ, na sayankatañca parankatañca viññāṇaṁ, nāpi asayankāraṁ aparankāraṁ adhiccasamuppannaṁ viññāṇaṁ. Api ca nāmarūpapaccayā viññāṇan"ti.</p>
+
+<hr>
+<p><span class="parno">5</span>"Idāneva kho mayaṁ āyasmato sāriputtassa bhāsitaṁ evaṁ ājānāma: ‘Na khvāvuso koṭṭhika, sayankataṁ nāmarūpaṁ, na parankataṁ nāmarūpaṁ, na sayankatañca parankatañca nāmarūpaṁ, nāpi asayankāraṁ aparankāraṁ adhiccasamuppannaṁ nāmarūpaṁ. Api ca viññāṇapaccayā nāmarūpan’ti.</p>
+
+<p><span class="parno">6</span>Idāneva ca pana mayaṁ āyasmato sāriputtassa bhāsitaṁ evaṁ ājānāma: ‘Na khvāvuso koṭṭhika, sayankataṁ viññāṇaṁ, na parankataṁ viññāṇaṁ, na sayankatañca parankatañca viññāṇaṁ, nāpi asayankāraṁ aparankāraṁ adhiccasamuppannaṁ viññāṇaṁ. Api ca nāmarūpapaccayā viññāṇan’ti.</p>
+
+<hr>
+<p><span class="parno">7</span>Yathā kathaṁ panāvuso sāriputta, imassa bhāsitassa attho daṭṭhabbo"ti? </p>
+
+<p>"Tenahāvuso, upamaṁ te karissāmi. Upamāyapidhekacce viññū purisā bhāsitassa atthaṁ jānanti. Seyyathāpi, āvuso, dve naḷakalāpiyo aññamaññaṁ nissāya tiṭṭheyyuṁ. Evameva kho, āvuso, nāmarūpapaccayā viññāṇaṁ; viññāṇapaccayā nāmarūpaṁ; nāmarūpapaccayā saḷāyatanaṁ; saḷāyatanapaccayā phasso … pe … evametassa kevalassa dukkhakkhandhassa samudayo hoti. </p>
+
+<p>Tāsañce, āvuso, naḷakalāpīnaṁ ekaṁ ākaḍḍheyya, ekā papateyya; aparañce ākaḍḍheyya, aparā papateyya. Evameva kho, āvuso, nāmarūpanirodhā viññāṇanirodho; viññāṇanirodhā nāmarūpanirodho; nāmarūpanirodhā saḷāyatananirodho; saḷāyatananirodhā phassanirodho … pe … evametassa kevalassa dukkhakkhandhassa nirodho hotī"ti.</p>
+
+<hr>
+<p><span class="parno">8</span>"Acchariyaṁ, āvuso sāriputta; abbhutaṁ, āvuso sāriputta. Yāvasubhāsitañcidaṁ āyasmatā sāriputtena. Idañca pana mayaṁ āyasmato sāriputtassa bhāsitaṁ imehi chattiṁsāya vatthūhi anumodāma: </p>
+
+<p><span class="parno">9</span>‘Jarāmaraṇassa ce, āvuso, bhikkhu nibbidāya virāgāya nirodhāya dhammaṁ deseti, dhammakathiko bhikkhūti alaṁvacanāya. Jarāmaraṇassa ce, āvuso, bhikkhu nibbidāya virāgāya nirodhāya paṭipanno hoti, dhammānudhammappaṭipanno bhikkhūti alaṁvacanāya. Jarāmaraṇassa ce, āvuso, bhikkhu nibbidā virāgā nirodhā anupādā vimutto hoti, diṭṭhadhammanibbānappatto bhikkhūti alaṁvacanāya.</p>
+
+<p>Jātiyā ce … bhavassa ce … upādānassa ce … taṇhāya ce … vedanāya ce … phassassa ce … saḷāyatanassa ce … nāmarūpassa ce … viññāṇassa ce … sankhārānañce … avijjāya ce, āvuso, bhikkhu nibbidāya virāgāya nirodhāya dhammaṁ deseti, dhammakathiko bhikkhūti alaṁvacanāya. Avijjāya ce, āvuso, bhikkhu nibbidāya virāgāya nirodhāya paṭipanno hoti, dhammānudhammappaṭipanno bhikkhūti alaṁvacanāya. Avijjāya ce, āvuso, bhikkhu nibbidā virāgā nirodhā anupādā vimutto hoti, diṭṭhadhammanibbānappatto bhikkhūti alaṁvacanāyā’"ti.</p>
+<p class="endsection">Sattamaṁ.</p>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="./sn12.66.html#content"></a><a id="next-sutta" href="./sn12.68.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div class="w3-white .bwcontainer2">
+<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn12.html">Connected Discourses on Causation</a>SN12:67 The Sheaves of Reeds
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </div>
+</footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

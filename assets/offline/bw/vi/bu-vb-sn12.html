@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Sanghādisesa 12</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h3>Vinaya Pitaka - Monastic Rules</h3>
+
+<div>
+	<ul id="vbnav">
+		<li><a href="../vi/bu-vb-pj.html#content">Pārājikas</a></li>
+		<li id="active"><a href="../vi/bu-vb-sn.html">Sanghādisesas</a></li>
+		<li><a href="../vi/bu-vb-an.html">Aniyatas</a></li>
+		<li><a href="../vi/bu-vb-np.html">Nissaggiya Pācittiyas</a></li>
+		<li><a href="../vi/bu-vb-pc.html">Pācittiyas</a></li>
+		<li><a href="../vi/bu-vb-pd.html">Pāṭidesanīyas</a></li>
+		<li><a href="../vi/bu-vb-sk.html">Sekhiyas</a></li>
+		<li><a href="../vi/bu-vb-as.html">Adhikaraṇa-Samathās</a></li>
+	</ul>
+</div>
+
+<div id="content">
+
+<h3>Bhikkhu Vibhanga - Sanghādisesa 12: Admonishment of a Bhikkhu who is Difficult to Admonish</h3>
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Kosambī, in Ghosita’s Park. At that time Venerable Channa was behaving improperly. The monks would tell him, "Don’t do that; it’s not allowable," and he would reply:</p>
+
+<p>"Who are you to admonish me? I should admonish you! The Buddha is mine, the Dhamma is mine; the Dhamma was attained by the young Master because of me. Just as a great wind lifts up grass, sticks, and fallen leaves all at once, just as a mountain stream lifts up the leaves of various water plants all at once, so too you – having various names, various families, various castes, various clans – having gone forth, are lifted up all at once. Who are you to admonish me? … the Dhamma was attained by the young Master because of me."</p>
+
+<p>The monks of few desires … complained and criticised him: "How can Venerable Channa make himself intractable when he is legitimately admonished by the monks?"</p>
+
+<p id="p2"><span class="parno">2</span>They informed the Master … and he questioned him: "Is it true, Channa, that you make yourself intractable when you are legitimately admonished by the monks?</p>
+
+<p>"Itʼs true, Master."</p>
+
+<p>The Buddha, the Master, rebuked him: " … Foolish man, how can you act in this way? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p id="p3"><span class="parno">3</span><span class="rule">"If a monk is difficult to admonish, and he makes himself intractable when he is legitimately admonished by the monks concerning the training rules that are recited, saying, ‘Venerables, do not give me either positive or negative admonishment, and I will not give positive or negative admonishment to you; please refrain from admonishing me,’ then the monks should admonish him in this way: ‘Venerable, be easy to admonish, not intractable. And please give legitimate admonishment to the monks, and the monks will do the same to you. For it is in this way that the Masterʼs community has grown, that is, through mutual admonishment and mutual rehabilitation.’ If that monk continues as before, he should be admonished up to three times to make him stop. If he stops, good. If not, he commits an offence entailing suspension."</span></p>
+
+<h3 >Definitions</h3>
+
+<p id="p4"><span class="parno">4</span><span class="term">If a monk is difficult to admonish</span>: <span class="gloss">if he is difficult to admonish, endowed with qualities that make him hard to admonish, resistant, not receiving instructions respectfully.</span></p>
+
+<p id="p5"><span class="parno">5</span><span class="term">Concerning the training rules that are recited</span>: <span class="gloss">concerning the training rules of the <i>pātimokkha</i>.</span></p>
+
+<p id="p6"><span class="parno">6</span><span class="term">The monks</span>: <span class="gloss">other monks.</span></p>
+
+<p id="p7"><span class="parno">7</span><span class="ms">MS.1735</span><span class="term">Legitimately</span>: whatever training rule has been laid down by the Master, this is called legitimate.<span class="ms">MS.1736</span></p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>When he is admonished concerning that, he makes himself intractable, saying: "Venerables, do not give me either positive or negative admonishment, and I will not give positive or negative admonishment to you; please refrain from admonishing me."</p>
+
+<p id="p9"><span class="parno">9</span><span class="term">Him</span>: <span class="gloss">the monk who is difficult to admonish.</span></p>
+
+<hr>
+<p id="p10"><span class="parno">10</span><span class="term">The monks</span>:</p>
+
+<p>Other monks, those who see it or hear about it. They should say: <span class="kamma">"Venerable, be easy to admonish, not intractable. And please give legitimate admonishment to the monks, and the monks will do the same to you. For it is in this way that the Masterʼs community has grown, that is, through mutual admonishment and mutual rehabilitation." And they should say this a second and a third time.</span> If he stops, good. If he does not stop, he commits an offence of bad conduct. If those who hear about it do not say anything, they commit an offence of bad conduct.</p>
+
+<p>That monk, even if he has to be dragged into the middle of the Saṅgha, should be spoken to thus: <span class="kamma">"Venerable, be easy to admonish, not intractable. And please give legitimate admonishment to the monks, and the monks will do the same to you. For it is in this way that the Masterʼs community has grown, that is, through mutual admonishment and mutual rehabilitation." And they should say this a second and a third time.</span> If he stops, good. If he does not stop, he commits an offence of bad conduct.</p>
+
+<hr>
+<p><span class="term">He should be admonished</span>:</p>
+
+<p>"And, monks, he should be admonished in this way. An experienced and competent monk should inform the Saṅgha:</p>
+
+<hr>
+<p id="p11"><span class="parno">11</span>‘Bhante, let the Saṅgha listen to me. This monk so-and-so makes himself intractable when he is legitimately admonished by the monks. He is not stopping that action. If it seems appropriate to the Saṅgha, the Saṅgha should admonish him to make him stop. This is the motion.</p>
+
+<p id="p12"><span class="parno">12</span>‘Bhante, let the Saṅgha listen to me. This monk so-and-so makes himself intractable when he is legitimately admonished by the monks. He is not stopping that action. The Saṅgha admonishes him to make him stop. Any monk who agrees to admonishing him to make him stop should remain silent. Any monk who does not agree should say so.</p>
+
+<p id="p13"><span class="parno">13</span>‘For a second time … For a third time I speak on this matter: Bhante, let the Saṅgha listen to me. This monk so-and-so makes himself intractable when he is legitimately admonished by the monks. He is not stopping that action. The Saṅgha admonishes him to make him stop. Any monk who agrees to admonishing him to make him stop should remain silent. Any monk who does not agree should say so.</p>
+
+<p id="p14"><span class="parno">14</span>‘This monk has been admonished by the Saṅgha to make him stop that action. The Saṅgha approves and is therefore silent. I will remember it thus.’"</p>
+
+<hr>
+<p id="p15"><span class="parno">15</span>After the motion, he commits an offence of bad conduct. After two proclamations, he commits a serious offence. When the proclamation is finished, he commits an offence entailing suspension. For one who commits the offence entailing suspension, the offence of bad conduct and the serious offence are annulled.</p>
+
+<p id="p16"><span class="parno">16</span><span class="term">He commits an offence entailing suspension</span>: <span class="gloss"> … This is the name and designation of this class of offence. Therefore, too, it is said that he commits an offence entailing suspension.</span></p>
+
+<h3 >Permutations</h3>
+
+<p id="p17"><span class="parno">17</span>If it is a legitimate act of the Saṅgha, and he perceives it as legitimate, but he does not stop, he commits an offence entailing suspension.</p>
+
+<p id="p18"><span class="parno">18</span>If it is a legitimate act of the Saṅgha, but he has doubts about it, and he does not stop, he commits an offence entailing suspension.</p>
+
+<p id="p19"><span class="parno">19</span>If it is a legitimate act of the Saṅgha, but he perceives it as illegitimate, and he does not stop, he commits an offence entailing suspension.</p>
+
+<p id="p20"><span class="parno">20</span>If it is an illegitimate act of the Saṅgha, but he perceives it as legitimate, he commits an offence of bad conduct.</p>
+
+<p id="p21"><span class="parno">21</span>If it is an illegitimate act of the Saṅgha, but he has doubts about it, he commits an offence of bad conduct.</p>
+
+<p id="p22"><span class="parno">22</span>If it is an illegitimate act of the Saṅgha, and he perceives it as illegitimate, he commits an offence of bad conduct.</p>
+
+<h3 >Non-offences</h3>
+
+<p id="p23"><span class="parno">23</span>There is no offence: if he is not admonished; if he stops; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">24</span>The twelfth training rule on being difficult to admonish is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_1729, msdiv424</span>Tena samayena buddho bhagavā kosambiyaṁ viharati ghositārāme. Tena kho pana samayena āyasmā channo anācāraṁ ācarati. Bhikkhū evamāhaṁsu— "māvuso channa, evarūpaṁ akāsi. Netaṁ kappatī"ti. So evaṁ vadeti:</p>
+
+<p>"Kiṁ nu kho nāma tumhe, āvuso, maṁ vattabbaṁ maññatha? Ahaṁ kho nāma tumhe vadeyyaṁ. Amhākaṁ buddho amhākaṁ dhammo amhākaṁ ayyaputtena dhammo abhisamito. Seyyathāpi nāma mahāvāto vāyanto tiṇakaṭṭhapaṇṇasaṭaṁ ekato ussāreyya, seyyathā vā pana nadī pabbateyyā sankhasevālapaṇakaṁ ekato ussāreyya; evameva tumhe nānānāmā nānāgottā nānājaccā nānākulā pabbajitā ekato ussāritā. Kiṁ nu kho nāma tumhe, āvuso, maṁ vattabbaṁ maññatha? Ahaṁ kho nāma tumhe vadeyyaṁ. Amhākaṁ buddho amhākaṁ dhammo amhākaṁ ayyaputtena dhammo abhisamito"ti.</p>
+
+<p>Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma āyasmā channo bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karissatī"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_1V_1730</span>Atha kho te bhikkhū āyasmantaṁ channaṁ anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe … "Saccaṁ kira tvaṁ, channa, bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karosī"ti?</p>
+
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma tvaṁ, moghapurisa, bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karissasi. Netaṁ, moghapurisa, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">3</span><span class="ms">p_1V_1731, msdiv425</span><span class="rule">"Bhikkhu paneva dubbacajātiko hoti uddesapariyāpannesu sikkhāpadesu bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karoti— ‘mā maṁ āyasmanto kiñci avacuttha kalyāṇaṁ vā pāpakaṁ vā, ahampāyasmante na kiñci vakkhāmi kalyāṇaṁ vā pāpakaṁ vā, viramathāyasmanto mama vacanāyā’ti, so bhikkhu bhikkhūhi evamassa vacanīyo: ‘māyasmā attānaṁ avacanīyaṁ akāsi, vacanīyamevāyasmā attānaṁ karotu, āyasmāpi bhikkhū vadetu sahadhammena, bhikkhūpi āyasmantaṁ vakkhanti sahadhammena. Evaṁ saṁvaddhā hi tassa bhagavato parisā yadidaṁ aññamaññavacanena aññamaññavuṭṭhāpanenā’ti. Evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya. Yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ; no ce paṭinissajjeyya, Sanghādiseso"</span>ti.(<i>12</i>:<b>16</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">4</span><span class="ms">p_1V_1732, msdiv426</span><b>Bhikkhū paneva dubbacajātiko hotī</b>'ti dubbaco hoti dovacassakaraṇehi dhammehi samannāgato akkhamo appadakkhiṇaggāhī anusāsaniṁ.</p>
+
+<p><span class="parno">5</span><span class="ms">p_1V_1733</span><b>Uddesapariyāpannesu sikkhāpadesū</b>'ti pātimokkhapariyāpannesu sikkhāpadesu.</p>
+
+<p><span class="parno">6</span><span class="ms">p_1V_1734</span><b>Bhikkhūhī</b>'ti aññehi bhikkhūhi.</p>
+
+<p><span class="parno">7</span><span class="ms">p_1V_1735</span><b>Sahadhammikaṁ</b> nāma yaṁ bhagavatā paññattaṁ sikkhāpadaṁ, etaṁ sahadhammikaṁ nāma.</p>
+
+<hr>
+<p><span class="parno">8</span><span class="ms">p_1V_1736</span>Tena vuccamāno attānaṁ avacanīyaṁ karoti— "mā maṁ āyasmanto kiñci avacuttha kalyāṇaṁ vā pāpakaṁ vā, ahampāyasmante na kiñci vakkhāmi kalyāṇaṁ vā pāpakaṁ vā. Viramathāyasmanto mama vacanāyā"ti.</p>
+
+<p><span class="parno">9</span><span class="ms">p_1V_1737</span><b>So bhikkhū</b>'ti yo so dubbacajātiko bhikkhu.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_1V_1738</span><b>Bhikkhūhī</b>'ti</p>
+
+<p>aññehi bhikkhūhi. Ye passanti ye suṇanti tehi vattabbo— "māyasmā attānaṁ avacanīyaṁ akāsi. Vacanīyameva āyasmā attānaṁ karotu. Āyasmāpi bhikkhū vadetu sahadhammena, bhikkhūpi āyasmantaṁ vakkhanti sahadhammena. Evaṁ saṁvaddhā hi tassa bhagavato parisā yadidaṁ aññamaññavacanena aññamaññavuṭṭhāpanenā"ti. Dutiyampi vattabbo. Tatiyampi vattabbo. Sace paṭinissajjati, iccetaṁ kusalaṁ; no ce paṭinissajjati, āpatti dukkaṭassa. Sutvā na vadanti, āpatti dukkaṭassa.</p>
+
+<p>So bhikkhu saṇghamajjhampi ākaḍḍhitvā vattabbo— "māyasmā attānaṁ avacanīyaṁ akāsi … pe … aññamaññavuṭṭhāpanenā"ti. Dutiyampi vattabbo. Tatiyampi vattabbo. Sace paṭinissajjati, iccetaṁ kusalaṁ; no ce paṭinissajjati, āpatti dukkaṭassa.</p>
+
+<hr>
+<p>So bhikkhu samanubhāsitabbo.</p>
+
+<p>"Evañca pana, bhikkhave, samanubhāsitabbo. Byattena bhikkhunā paṭibalena sangho ñāpetabbo—</p>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_1V_1739, msdiv427</span>‘Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karoti. So taṁ vatthuṁ na paṭinissajjati. Yadi sanghassa pattakallaṁ, sangho itthannāmaṁ bhikkhuṁ samanubhāseyya tassa vatthussa paṭinissaggāya. Esā ñatti.</p>
+
+<p><span class="parno">12</span><span class="ms">p_1V_1740</span>Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karoti. So taṁ vatthuṁ na paṭinissajjati. sangho itthannāmaṁ bhikkhuṁ samanubhāsati tassa vatthussa paṭinissaggāya. Yassāyasmato khamati itthannāmassa bhikkhuno samanubhāsanā tassa vatthussa paṭinissaggāya, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<p><span class="parno">13</span><span class="ms">p_1V_1741</span>Dutiyampi etamatthaṁ vadāmi … pe … tatiyampi etamatthaṁ vadāmi— suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karoti. So taṁ vatthuṁ na paṭinissajjati. sangho itthannāmaṁ bhikkhuṁ samanubhāsati tassa vatthussa paṭinissaggāya. Yassāyasmato khamati itthannāmassa bhikkhuno samanubhāsanā tassa vatthussa paṭinissaggāya, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<p><span class="parno">14</span><span class="ms">p_1V_1742</span>Samanubhaṭṭho saṇghena itthannāmo bhikkhu tassa vatthussa paṭinissaggāya. Khamati sanghassa, tasmā tuṇhī, evametaṁ dhārayāmī’"ti.</p>
+
+<hr>
+<p><span class="parno">15</span><span class="ms">p_1V_1743, msdiv428</span>Ñattiyā dukkaṭaṁ, dvīhi kammavācāhi thullaccayā, kammavācāpariyosāne āpatti sanghādisesassa. sanghādisesaṁ ajjhāpajjantassa ñattiyā dukkaṭaṁ, dvīhi kammavācāhi thullaccayā paṭippassambhanti.</p>
+
+<p><span class="parno">16</span><span class="ms">p_1V_1744</span><b>Sanghādiseso</b>'ti … pe … tenapi vuccati "Sanghādiseso"ti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">17</span><span class="ms">p_1V_1745, msdiv429</span>Dhammakamme dhammakammasaññī na paṭinissajjati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">18</span><span class="ms">p_1V_1746</span>Dhammakamme vematiko na paṭinissajjati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">19</span><span class="ms">p_1V_1747</span>Dhammakamme adhammakammasaññī na paṭinissajjati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">20</span><span class="ms">p_1V_1748</span>Adhammakamme dhammakammasaññī, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">21</span><span class="ms">p_1V_1749</span>Adhammakamme vematiko, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">22</span><span class="ms">p_1V_1750</span>Adhammakamme adhammakammasaññī, āpatti dukkaṭassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">23</span><span class="ms">p_1V_1751, msdiv430</span>Anāpatti— asamanubhāsantassa, paṭinissajjantassa, ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">24</span><span class="ms">p_1V_1752</span>Dubbacasikkhāpadaṁ niṭṭhitaṁ dvādasamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-sn11.html#content"></a><a id="next-sutta" href="../vi/bu-vb-sn13.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-sn.html">Sanghādisesas</a>Sanghādisesa 12
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

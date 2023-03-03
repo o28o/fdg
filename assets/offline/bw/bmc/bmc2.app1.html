@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2 Appendix 1</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+ 	<p>&nbsp;</p>
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-center">
+	<div class="w3-bar">
+	<a href="../bmc/bmc2.app1.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Appendix</a>
+	<a href="../bmc/bmc2.app2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Going-forth and Acceptance</a>
+	<a href="../bmc/bmc2.app3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Vuṭṭhāna-vidhī </a>
+	<a href="../bmc/bmc2.app4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disciplinary Transactions</a>
+	<a href="../bmc/bmc2.app5.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Technical Terms</a>
+	<a href="../bmc/bmc2.glossary.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Glossary</a>
+	<a href="../bmc/bmc2.biblio.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bibliography</a>
+	</div>
+</div>
+
+<h3>Appendix 1: General Transaction Statements</h3>
+
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<h4>A. Territories (sīmā)</h4>
+<h5><i>To remove a ti-cīvara-avippavāsa: (Mv.II.12.5</i>)</h5>
+
+<p>Suṇātu me bhante saṅgho. Yo so saṅghena ti-cīvarena avippavāso sammato, yadi saṅghassa pattakallaṁ, saṅgho taṁ ti-cīvarena avippavāsaṁ samūhaneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Yo so saṅghena ti-cīvarena avippavāso sammato, saṅgho taṁ ti-cīvarena avippavāsaṁ samūhanati. Yass'āyasmato khamati, etassa ti-cīvarena avippavāsassa samugghāto, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Samūhato so saṅghena ti-cīvarena avippavāso. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, it should revoke what was authorized as not being without one’s triple robe. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is revoking the not being without one’s triple robe. He to whom the revoking of the not being without one’s triple robe is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The not being without one’s triple robe has been revoked by the Community. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h4>To remove a territory of common community: (Mv.II.12.6)</h4>
+<p>Suṇātu me bhante saṅgho. Yā sā saṅghena sīmā sammatā samāna-saṁvāsā ek'uposathā, yadi saṅghassa pattakallaṁ, saṅgho taṁ sīmaṁ samūhaneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Yā sā saṅghena sīmā sammatā samāna-saṁvāsā ek'uposathā, saṅgho taṁ sīmaṁ samūhanati. Yass'āyasmato khamati, etissā sīmāya samāna-saṁvāsāya ek'uposathāya samugghāto, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Samūhatā sā sīmā saṅghena samāna-saṁvāsā ek'uposathā. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, it should revoke the territory authorized as one of common affiliation, of a single Uposatha. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is revoking the territory authorized as one of common affiliation, of a single Uposatha. He to whom the revoking of the territory of common affiliation, of a single Uposatha, is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The territory of common affiliation, of a single Uposatha, has been revoked by the Community. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h4>Dhammayut version:</h4>
+<p>Suṇātu me bhante saṅgho. Yā sā saṅghena sīmā sammatā samāna-saṁvāsā ek'uposathā, yadi saṅghassa pattakallaṁ, saṅgho taṁ sīmaṁ samūhaneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Yā sā saṅghena sīmā sammatā samāna-saṁvāsā ek'uposathā, saṅgho taṁ sīmaṁ samūhanati. Yass'āyasmato khamati, etissā sīmāya samugghāto, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Samūhatā sā saṅghena sīmā. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Noting the boundary markers: “In the — — direction, what is the marker?”</i></p>
+
+<ul style="list-style-type:disc;">
+	<li><i>Eastern</i> Puratthimāya disāya kiṁ nimittaṁ.</li>
+ <li><i>Southeastern</i> Puratthimāya anudisāya kiṁ nimittaṁ.</li>
+ <li><i>Southern</i> Dakkhiṇāya disāya kiṁ nimittaṁ.</li>
+ <li><i>Southwestern</i> Dakkhiṇāya anudisāya kiṁ nimittaṁ.</li>
+ <li><i>Western</i> Pacchimāya disāya kiṁ nimittaṁ.</li>
+ <li><i>Northwestern</i> Pacchimāya anudisāya kiṁ nimittaṁ.</li>
+ <li><i>Northern</i> Uttarāya disāya kiṁ nimittaṁ.</li>
+ <li><i>Northeastern</i> Uttarāya anudisāya kiṁ nimittaṁ.</li>
+ <li><i>Eastern</i> Puratthimāya disāya kiṁ nimittaṁ.</li>
+</ul>
+
+<p><i>Replies: “A — —, venerable sir.” </i></p>
+
+<ul style="list-style-type:disc;"> <li>Stone: Pāsāṇo, bhante.</li>
+ <li>Hill: Pabbato, bhante.</li>
+ <li>Grove: Vanaṁ, bhante.</li>
+ <li>Tree: Rukkho, bhante.</li>
+ <li>Path: Maggo, bhante.</li>
+ <li>Termite nest: Vammiko, bhante.</li>
+ <li>River: Nadī, bhante.</li>
+ <li>Water: Udakaṁ, bhante.</li>
+</ul>
+
+<p><i>Responses: “This — — is the marker.”</i></p>
+
+<ul style="list-style-type:disc;"> <li>Stone: Eso pāsāṇo nimittaṁ.</li>
+ <li>Hill: Eso pabbato nimittaṁ.</li>
+ <li>Grove: Etaṁ vanaṁ nimittaṁ.</li>
+ <li>Tree: Eso rukkho nimittaṁ.</li>
+ <li>Path: Eso maggo nimittaṁ.</li>
+ <li><span lang=DE>Termite nest: Eso vammiko nimittaṁ.</span></li>
+ <li>River: Esā nadī nimittaṁ.</li>
+ <li>Water: Etaṁ udakaṁ nimittaṁ.</li>
+</ul> <h4>Authorizing the territory: (Mv.II.6.2)</h4>
+<p>Suṇātu me bhante saṅgho. Yāvatā samantā nimittā kittitā, yadi saṅghassa pattakallaṁ, saṅgho etehi nimittehi sīmaṁ sammanneyya samāna-saṁvāsaṁ ek'uposathaṁ. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Yāvatā samantā nimittā kittitā, saṅgho etehi nimittehi sīmaṁ sammannati samāna-saṁvāsaṁ ek'uposathaṁ. Yass'āyasmato khamati, etehi nimittehi sīmāya sammati samāna-saṁvāsāya ek'uposathāya, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Sammatā sīmā saṅghena etehi nimittehi, samāna-saṁvāsā ek'uposathā. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, then — as far as those markers that have been determined all around — it should authorize a territory of common affiliation, of a single Uposatha. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. As far as those markers that have been determined all around, the Community authorizes a territory of common affiliation, of a single Uposatha. He to whom the authorization of the territory as far as those markers as one of common affiliation, of a single Uposatha, is agreeable, should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The territory as far as those markers has been authorized by the Community as one of common affiliation, of a single Uposatha. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h4>Dhammayut version (final paragraph):</h4>
+<p>Sammatā saṅghena sīmā etehi nimittehi, samāna-saṁvāsā ek'uposathā. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<h4>Determining a ti-cīvara-avippavāsa: (Mv.II.12.4)</h4>
+<p>Suṇātu me bhante saṅgho. Yā sā saṅghena sīmā sammatā samāna-saṁvāsā ek'uposathā, yadi saṅghassa pattakallaṁ, saṅgho taṁ sīmaṁ ti-cīvarena-avippavāsaṁ sammanneyya ṭhapetvā gāmañca gāmūpacārañca. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Yā sā saṅghena sīmā sammatā samāna-saṁvāsā ek'uposathā, saṅgho taṁ sīmaṁ ti-cīvarena- avippavāsaṁ sammannati, ṭhapetvā gāmañca gāmūpacārañca. Yass'āyasmato khamati, etissā sīmāya ti-cīvarena-avippavāsassa sammati, ṭhapetvā gāmañca gāmūpacārañca, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Sammatā sā sīmā saṅghena ti-cīvarena-avippavāso, ṭhapetvā gāmañca gāmūpacārañca. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, it should authorize the territory — (already) authorized as one of common affiliation, of a single Uposatha — except for any village or village area, as a (territory) of not being without one’s triple robe. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is authorizing the territory — (already) authorized as one of common affiliation, of a single Uposatha — except for any village or village area, as a (territory) of not being without one’s triple robe. He to whom the authorization of the territory, except for any village or village area, as one of not being without one’s triple robe should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The territory, except for any village or village area, has been authorized by the Community as one of not being without one’s triple robe. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h4>Dhammayut version (final paragraph):</h4>
+<p>Sammatā sā saṅghena sīmā ti-cīvarena-avippavāso, ṭhapetvā gāmañca gāmūpacārañca. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<h3>B. Uposatha Halls</h3> <h4>Authorizing an uposatha hall: (Mv.II.8.2)</h4>
+<p>Suṇātu me bhante saṅgho. Yadi saṅghassa pattakallaṁ, saṅgho itthannāmaṁ vihāraṁ uposathāgāraṁ sammanneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Saṅgho itthannāmaṁ vihāraṁ uposathāgāraṁ sammannati. Yass'āyasmato khamati, itthannāmassa vihārassa uposathāgārassa sammati, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Sammato saṅghena itthannāmo vihāro uposathāgāraṁ. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, then it should authorize the building of this name as the Uposatha hall. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is authorizing</i> <i>the building of this name as the Uposatha hall. He to whom the authorization of</i> <i>the building of this name as the Uposatha hall is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The building of this name has been authorized by the Community as the Uposatha hall. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h4>Revoking an uposatha hall: (Mv.II.8.4)</h4>
+<p>Suṇātu me bhante saṅgho. Yadi saṅghassa pattakallaṁ, saṅgho itthannāmaṁ uposathāgāraṁ samūhaneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Saṅgho itthannāmaṁ uposathāgāraṁ samūhanati. Yass'āyasmato khamati, itthannāmassa uposathāgārassa samugghāto, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Samūhataṁ saṅghena itthannāmaṁ uposathāgāraṁ. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, then it should revoke the Uposatha hall of this name. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is revoking</i> <i>the Uposatha hall of this name. He to whom the revoking of</i> <i>the Uposatha hall of this name is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The Uposatha hall of this name has been revoked by the Community. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h4>Authorizing an area in front of the uposatha hall: (Mv.II.9.2)</h4>
+<p>Suṇātu me bhante saṅgho. Yāvatā samantā nimittā kittitā, yadi saṅghassa pattakallaṁ, saṅgho etehi nimittehi uposatha-pamukhaṁ<a id="fnt-1"></a><a href="#fn-1">[1]</a> sammanneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Yāvatā samantā nimittā kittitā, saṅgho etehi nimittehi uposatha-pamukhaṁ sammannati. Yass'āyasmato khamati, etehi nimittehi uposatha-pamukhassa sammati, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Sammataṁ saṅghena etehi nimittehi uposatha-pamukhaṁ. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, then it should authorize an area in front of the Uposatha (hall) as far as those markers that have been determined all around. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is authorizing an area in front of the Uposatha (hall) as far as those markers that have been determined all around. He to whom the authorization of an area in front of the Uposatha (hall) as far as those markers is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>An area in front of the Uposatha (hall) has been authorized by the Community as far as those markers. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h1>Note</h1>
+<p id="fn-1"><a href="#fnt-1">1</a>. Following the Sri Lankan, Burmese, and PTS editions. The Thai edition reads: “uposatha-mukhaṁ.”</p>
+
+<h3>C. A Food Storage Place (<i><a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></i>)</h3>
+
+<p>Suṇātu me bhante saṅgho. Yadi saṅghassa pattakallaṁ, saṅgho itthannāmaṁ vihāraṁ kappiya-bhūmiṁ sammanneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Saṅgho itthannāmaṁ vihāraṁ kappiya-bhūmiṁ sammannati. Yass'āyasmato khamati, itthannāmassa vihārassa kappiya-bhūmiyā sammati, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Sammato saṅghena itthannāmo vihāro kappiya-bhūmi. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, then it should authorize the dwelling (name) as an allowable place (to store food). This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is authorizing the dwelling (name) as an allowable place (to store food). He to whom the authorization of the dwelling (name) as an allowable place (to store food) is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The dwelling (name) has been authorized by the Community as an allowable place (to store food). This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h3>D. Community Officials</h3>
+<p>In these and all the following statements in which a bhikkhu is mentioned by name, the word, Itthannāmo — “So-and-so” — should be replaced by the bhikkhu’s actual name. If he is a senior bhikkhu, the phrase, Itthannāmo bhikkhu should be replaced as follows (supposing that his name is Mahindo):</p>
+
+<ul style="list-style-type:disc;"> <li>Itthannāmo bhikkhu — āyasmā Mahindo</li>
+ <li>Itthannāmaṁ bhikkhuṁ — āyasmantaṁ Mahindaṁ</li>
+ <li>Itthannāmassa bhikkhuno — āyasmato Mahindassa</li>
+ <li>Itthannāmena bhikkhuna — āyasmatā Mahindena</li>
+</ul>
+
+<p>For the patterns to use when the bhikkhu’s name has a different stem-form (-i, -u, etc.), see the introduction to Appendix II.</p>
+
+<h4>Meal distributor: (Cv.VI.21.1)</h4>
+<p>Suṇātu me bhante saṅgho. Yadi saṅghassa pattakallaṁ, saṅgho Itthannāmaṁ bhikkhuṁ <b><i>bhattuddesakaṁ</i></b> sammanneyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Saṅgho Itthannāmaṁ bhikkhuṁ bhattuddesakaṁ sammannati. Yass'āyasmato khamati, Itthannāmassa bhikkhuno <b><i>bhattuddesakassa</i></b> sammati, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Sammato saṅghena Itthannāmo bhikkhu <b><i>bhattuddesako.</i></b> Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, it should authorize Bhikkhu (name) as meal distributor. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is authorizing Bhikkhu (name) as meal distributor. He to whom the authorization of Bhikkhu (name) as meal distributor is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>Bhikkhu (name) has been authorized by the Community as meal distributor. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<p><i>For other positions, replace</i> <b><i>bhattuddesakaṁ / bhattuddesakassa / bhattuddesako</i></b> <i>with the appropriate name for the position, as follows:</i></p>
+
+<p><b>Robe-cloth receiver:</b> (<a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.2)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Cīvara-paṭiggāhakaṁ / cīvara-paṭiggāhakassa / cīvara-paṭiggāhako</i></b></li>
+</ul>
+
+<p><b>Robe-cloth keeper:</b> (<a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.2)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Cīvara-nidāhakaṁ / cīvara-nidāhakassa / cīvara-nidāhako</i></b></li>
+</ul>
+
+<p><b>Robe-cloth distributor:</b> (<a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.1)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Cīvara-bhājakaṁ / cīvara-bhājakassa / cīvara-bhājako</i></b></li>
+</ul>
+
+<p><b>Bathing cloth bestower:</b> (Cv.VI.21.3)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>sāṭiya-gāhāpakaṁ / sāṭiya-gāhāpakassa / sāṭiya-gāhāpako</i></b></li>
+</ul>
+
+<p><b>Lodging claim-giver:</b> (Cv.VI.11.2)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Senāsana-gāhāpakaṁ / senāsana-gāhāpakassa / senāsana-gāhāpako</i></b></li>
+</ul>
+
+<p><b>Lodging assignor:</b> (Cv.VI.21.2)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Senāsana-paññāpakaṁ / senāsana-paññāpakassa / senāsana-paññāpako</i></b></li>
+</ul>
+
+<p><b>Storekeeper:</b> (<a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.1)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Bhaṇḍāgārikaṁ / bhaṇḍāgārikassa / bhaṇḍāgāriko</i></b></li>
+</ul>
+
+<p><b>Supervisor of monastery attendants:</b> (Cv.VI.21.3)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>ārāmika-pesakaṁ / ārāmika-pesakassa / ārāmika-pesako</i></b></li>
+</ul>
+
+<p><b>Supervisor of novices:</b> (Cv.VI.21.3)</p>
+
+<ul style="list-style-type:disc;"> <li><b><i>sāmaṇera-pesakaṁ / sāmaṇera -pesakassa / sāmaṇera -pesako</i></b></li>
+</ul>
+
+<p><i>To appoint one person to more than one position at once:</i></p>
+
+<p><b>Robe-cloth receiver, distributor, &amp; storer:</b></p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Cīvara-bhājakañca cīvara-paṭiggāhakañca cīvara-nidāhakañca / cīvara-bhājakassa ca cīvara-paṭiggāhakassa ca cīvara-nidāhakassa ca / cīvara-bhājako ca cīvara-paṭiggāhako ca cīvara-nidāhako ca</i></b></li>
+</ul>
+
+<p><b>Storekeeper &amp; dispenser of minor articles:</b></p>
+
+<ul style="list-style-type:disc;"> <li><b><i>Bhaṇḍāgārikañca appamattaka-visajjakañca / bhaṇḍāgārikassa ca appamattaka-visajjakassa ca / bhaṇḍāgāriko ca appamattaka-visajjako ca</i></b></li>
+</ul> <h4>Building responsibility: (Cv.VI.5.3)</h4>
+<p>Suṇātu me bhante saṅgho. Yadi saṅghassa pattakallaṁ, saṅgho Itthannāmassa gahapatino vihāraṁ Itthannāmassa bhikkhuno nava-kammaṁ dadeyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Saṅgho Itthannāmassa gahapatino vihāraṁ Itthannāmassa bhikkhuno nava-kammaṁ deti. Yass'āyasmato khamati, Itthannāmassa gahapatino vihārassa Itthannāmassa bhikkhuno nava-kammassa dānaṁ, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Dinno saṅghena Itthannāmassa gahapatino vihāro Itthannāmassa bhikkhuno nava-kammaṁ. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, it should give the dwelling of householder (donor’s name) to Bhikkhu (name) as his building responsibility. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is giving the dwelling of householder (donor’s name) to Bhikkhu (name) as his building responsibility. He to whom the giving of the dwelling of householder (donor’s name) to Bhikkhu (name) as his building responsibility is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The dwelling of householder (donor’s name) has been given by the Community to Bhikkhu (name) as his building responsibility. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h3>E. Kaṭhina</h3> <h4>Optional preliminary statements:</h4>
+<p>Offering the cloth</p>
+
+<p>Namo tassa bhagavato arahato sammā-sambuddhassa (three times).</p>
+
+<p>Imaṁ bhante sapparivāraṁ kaṭhina-dussaṁ saṅghassa oṇojayāma. Sādhu no bhante saṅgho, imaṁ sapparivāraṁ kaṭhina-dussaṁ paṭiggaṇhātu, paṭiggahetvā ca iminā dussena kaṭhinaṁ attharatu, amhākaṁ dīgha-rattaṁ hitāya sukhāya.</p>
+
+<p><i>Homage to the Blessed One, the Worthy One, the Rightly Self-awakened One.</i></p>
+
+<p><i>Venerable sirs, we present this kaṭhina-cloth, together with its accessories, to the Community. It would be good if the Community would accept this kaṭhina-cloth together with its accessories, and having accepted it, would spread the kaṭhina with it, for our long-term welfare and happiness.</i></p>
+
+<h4>Formal consultation</h4>
+<p>First bhikkhu:</p>
+
+<p>Idāni kho bhante idaṁ sapparivāraṁ kaṭhina-dussaṁ saṅghassa kaṭhinatthārāraha-kāleyeva uppannaṁ. īdise ca kāle evaṁ uppannena dussena kaṭhinatthāro vassaṁ vutthānaṁ bhikkhūnaṁ bhagavatā anuññāto. Yena ākaṅkhamānassa saṅghassa pañca kappissanti: anāmantacāro, asamādānacāro, gaṇa-bhojanaṁ, yāva-d-attha-cīvaraṁ, yo ca tattha cīvaruppādo so nesaṁ bhavissati. Catūsupi hemantikesu māsesu cīvara-kālo mahantī-kato bhavissati. Idāni pana saṅgho ākaṅkhati nu kho kaṭhinatthāraṁ, udāhu nākaṅkhati.</p>
+
+<p><i>Venerable sirs, this kaṭhina-cloth, together with its accessories, has arisen for the Community in the season appropriate for spreading the kaṭhina. And in a season like this the spreading of the kaṭhina has been allowed by the Blessed One for bhikkhus who have completed the Rains-residence. By this means, five things are proper for a Community that desires them: going without taking leave, going without one’s complete set of robes, a group meal, keeping robe-cloth as long as is wanted, and any robe-cloth arising there (in the residence where they spent the Rains) will be theirs. Also, the robe-season will be extended throughout the four months of the cold season. Now, does the Community want the spreading of the kaṭhina, or not?</i></p>
+
+<p><b>The bhikkhus respond:</b> Ākaṅkhāma, bhante.</p>
+
+<p>(<i>We want it, venerable sir.</i>)</p>
+
+<p>Second bhikkhu:</p>
+
+<p>So kho pana bhante kaṭhinatthāro bhagavatā puggalassa atthāra-vasen'eva anuññāto. Nāññatra puggalassa atthārā atthataṁ hoti kaṭhinanti hi vuttaṁ bhagavatā. Na saṅgho vā gaṇo vā kaṭhinaṁ attharati. Saṅghassa ca gaṇassa ca sāmaggiyā puggalass'eva atthārā, saṅghassapi gaṇassapi tasseva puggalassapi atthataṁ hoti kaṭhinaṁ. Idāni kass'imaṁ kaṭhina-dussaṁ dassāma kaṭhinaṁ attharituṁ. Yo jiṇṇa-cīvaro vā dubbala-cīvaro vā, yo vā pana ussahissati ajj'eva cīvara-kammaṁ niṭṭhāpetvā, sabba-vidhānaṁ aparihāpetvā kaṭhinaṁ attharituṁ samattho bhavissati.</p>
+
+<p><i>Venerable sirs, the Blessed One has allowed the spreading of the kaṭhina only by an individual, for he said, ’Not otherwise than through the spreading by an individual is the kaṭhina spread.' Neither a Community nor a group spreads the kaṭhina. Through the concord of the Community and the group, and through the spreading by the individual is the kaṭhina of the Community, the group, and the individual spread. Now, to whom do we give the kaṭhina-cloth to spread the kaṭhina? To whoever has an old robe or a threadbare robe, or to whoever will strive and — finishing the making of the robe today, without omitting any of the procedures — is capable of spreading the kaṭhina.</i></p>
+
+<p><b>The bhikkhus remain silent.</b></p>
+
+<p>Third bhikkhu:</p>
+
+<p>Idha amhesu āyasmā Itthannāmo sabba-mahallako bahussuto dhamma-dharo vinaya-dharo, sabrahmacārīnaṁ sandassako samādapako samuttejako sampahaṁsako, bahunnaṁ ācariyo [vā upajjhāyo vā] hutvā, ovādako anusāsako, samattho ca taṁ taṁ vinaya-kammaṁ avikopetvā kaṭhinaṁ attharituṁ. Maññām'aham-evaṁ “Sabbo'yaṁ saṅgho imaṁ sapparivāraṁ kaṭhina-dussaṁ āyasmato Itthannāmassa dātu-kāmo, tasmiṁ kaṭhinaṁ attharante sabbo'yaṁ saṅgho sammadeva anumodissati.” Āyasmato Itthannāmasseva imaṁ sapparivāraṁ kaṭhina-dussaṁ dātuṁ, ruccati vā no vā sabbass'imassa saṅghassa.</p>
+
+<p><i>Of us here, Venerable (name) is the senior. He is learned, one who remembers the Dhamma, who remembers the Vinaya, one who instructs, urges, rouses, and encourages his fellows in the holy life. Being the teacher [or preceptor] of many, he is one who teaches and expounds (to them). He is also capable of spreading the kaṭhina without spoiling any of the disciplinary requirements. I think that this entire Community wants to give this kaṭhina-cloth, together with its accessories, to Venerable (name), and that when the kaṭhina is spread, this entire Community will rightly give its approval. Is it pleasing to the Community to give the kaṭhina-cloth, together with its accessories, to Venerable (name), or is it not? </i></p>
+
+<p><b>The bhikkhus respond:</b> Ruccati, bhante.</p>
+
+<p>(<i>It is pleasing, venerable sir.</i>)</p>
+
+<p>Fourth bhikkhu:</p>
+
+<p>Yadi āyasmato Itthannāmassa imaṁ sapparivāraṁ kaṭhina-dussaṁ dātuṁ, sabbass'imassa saṅghassa ruccati, sādhu bhante saṅgho imaṁ kaṭhina-dussa-parivāra-bhūtaṁ ti-cīvaraṁ vassāvāsikaṭṭhitikāya agāhetvā, āyasmato Itthannāmass'eva iminā apalokanena dadātu. Kaṭhina-dussaṁ pana apalokanena diyyamānam-pi na rūhati. Tasmā “Taṁ idāni ñatti-dutiyena kammena akuppena ṭhānārahena āyasmato Itthannāmassa demāti” kamma-sanniṭṭhānaṁ karotu.</p>
+
+<p><i>If the giving of this kaṭhina-cloth, together with its accessories, to Venerable (name) is pleasing to this entire Community, it would (also) be good to give this set of three robes, which has come into being as part of the accessories of the kaṭhina cloth, without regard to the order for receiving Rains-retreat cloth. As for the kaṭhina-cloth, even if it were given by announcement it would not be effective. So may (the Community) make this transaction-resolution: 'We now give it to Venerable (name) by means of a motion and seconding announcement that is irreversible and fit to stand.'</i></p>
+
+<p><b>The bhikkhus respond:</b> Sādhu, bhante.</p>
+
+<p>(<i>Very good, venerable sir.</i>)</p>
+
+<h4>Transaction statement: (<a href="../vi/kd7.html">Khandhaka&nbsp;7 (Mv.&nbsp;7)</a>)</h4>
+<p>(<i>Because the kaṭhina-cloth is usually given to a senior bhikkhu, the form for addressing a senior bhikkhu is given here.</i>)</p>
+
+<p>Suṇātu me bhante saṅgho. Idaṁ saṅghassa kaṭhina-dussaṁ uppannaṁ. Yadi saṅghassa pattakallaṁ, saṅgho imaṁ kaṭhina-dussaṁ āyasmato Itthannāmassa dadeyya, kaṭhinaṁ attharituṁ. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Idaṁ saṅghassa kaṭhina-dussaṁ uppannaṁ. Saṅgho imaṁ kaṭhina-dussaṁ āyasmato Itthannāmassa deti, kaṭhinaṁ attharituṁ. Yass'āyasmato khamati, imassa kaṭhina-dussassa āyasmato Itthannāmassa dānaṁ, kaṭhinaṁ attharituṁ, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Dinnaṁ idaṁ saṅghena kaṭhina-dussaṁ āyasmato Itthannāmassa, kaṭhinaṁ attharituṁ. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. This kaṭhina-cloth has arisen for the Community. If the Community is ready, it should give this kaṭhina-cloth to Venerable (name) to spread the kaṭhina. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. This kaṭhina-cloth has arisen for the Community. The Community is giving this kaṭhina-cloth to Venerable (name) to spread the kaṭhina. He to whom the giving of this kaṭhina-cloth to Venerable (name) to spread the kaṭhina is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>This kaṭhina-cloth is given by the Community to Venerable (name) to spread the kaṭhina. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h4>Removing kaṭhina privileges: (Bhī Pācittiya&nbsp;30)</h4>
+<p>Suṇātu me bhante saṅgho. Yadi saṅghassa pattakallaṁ, saṅgho kaṭhinaṁ uddhareyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Saṅgho kaṭhinaṁ uddharati. Yass'āyasmato khamati, kaṭhinassa ubbhāro, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Ubbhataṁ saṅghena kaṭhinaṁ. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. If the Community is ready, it should dismantle the kaṭhina (rescind the kaṭhina privileges). This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. The Community is dismantling the kaṭhina. He to whom the dismantling of the kaṭhina is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>The kaṭhina has been dismantled by the Community. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<h3>F. Giving Robes &amp; Bowl To Those Who Tended The Sick</h3> <h4>Announcement of the bhikkhu’s death: (<a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.2)</h4> <ul style="list-style-type:disc;"> <li>Itthannāmo bhante bhikkhu kāla-kato. Idaṁ tassa ti-cīvarañca patto ca.</li>
+</ul>
+
+<p><i>Venerable sirs, Bhikkhu (name) has died. This is his triple-robe and bowl.</i></p>
+
+<h4>Transaction statement: (<a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.2)</h4>
+<p>Suṇātu me bhante saṅgho. Itthannāmo bhikkhu kāla-kato. Idaṁ tassa ti-cīvarañca patto ca. Yadi saṅghassa pattakallaṁ, saṅgho imaṁ ti-cīvarañca pattañca gilān'upaṭṭhākānaṁ dadeyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Itthannāmo bhikkhu kāla-kato. Idaṁ tassa ti-cīvarañca patto ca. Saṅgho imaṁ ti-cīvarañca pattañca gilānupaṭṭhākānaṁ deti. Yass'āyasmato khamati, imassa ti-cīvarassa ca pattassa ca gilān'upaṭṭhākānaṁ dānaṁ, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Dinnaṁ idaṁ saṅghena ti-cīvarañca patto ca gilān'upaṭṭhākānaṁ. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. Bhikkhu (name) has died. This is his triple-robe and bowl. If the Community is ready, it should give this triple-robe and bowl to those who tended the sick. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. Bhikkhu (name) has died. This is his triple-robe and bowl. The Community is giving this triple-robe and bowl to those who tended the sick. He to whom the giving of this triple-robe and bowl to those who tended the sick is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>This triple-robe and bowl has been given by the Community to those who tended the sick. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<p>(<i>In the case of a deceased novice, replace</i> <b><i>Itthannāmo bhikkhu</i></b> <i>with</i> <b><i>Itthannāmo sāmaṇero,</i></b> <i>and</i> <b><i>ti-cīvarañca</i></b> <i>with</i> <b><i>cīvarañca,</i></b> <i>both in the announcement and in the transaction statement.) </i></p>
+
+<h3>G. Complete Motions For Shortened Community Invitations</h3> <h4>When many lay people have been bringing gifts: (Mv.IV.15.3)</h4>
+<p>Suṇātu me bhante saṅgho. Manussehi dānaṁ dentehi yebhuyyena ratti khepitā. Sace saṅgho te-vācikaṁ pavāressati, appavārito va saṅgho bhavissati athāyaṁ ratti vibhāyissati. Yadi saṅghassa pattakallaṁ, saṅgho dve-vācikaṁ [eka-vācikaṁ] {samāna-vassikaṁ} pavāreyya.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. The night is almost spent with people giving gifts. If the Community invites with the threefold statement, the Community will not be (fully) invited by the time the night is over. If the Community is ready, it should invite with two statements [with one statement] {in the manner of equal Rains}.</i></p>
+
+<h4>When the bhikkhus have been engaged in many activities: (Mv.IV.15.4)</h4>
+<p><i>Follow the above pattern, changing <b>”</b></i>Manussehi dānaṁ dentehi,” with “Bhikkhūhi kalahaṁ karontehi,” <i>which means: “with the bhikkhus making an uproar.”</i></p>
+
+<h4>When rains threatens, and there is not enough shelter for the bhikkhus: (Mv.IV.15.6)</h4>
+<p>Suṇātu me bhante saṅgho. Ayaṁ mahā-bhikkhu-saṅgho sannipatito, parittañca anovassikaṁ, mahā ca megho uggato. Sace saṅgho te-vācikaṁ pavāressati, appavārito va saṅgho bhavissati athāyaṁ megho pavassissati. Yadi saṅghassa pattakallaṁ, saṅgho dve-vācikaṁ [eka-vācikaṁ] {samāna-vassikaṁ} pavāreyya.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. This large Community of bhikkhus has met, but the shelter is small, and a large cloud has risen up. If the Community invites with the threefold statement, the Community will not be (fully) invited by the time the cloud rains. If the Community is ready, it should invite with two statements [with one statement] {in the manner of equal Rains}.</i></p>
+
+<h4>When there are obstructions: (Mv.IV.15.7)</h4>
+<p>Suṇātu me bhante saṅgho. Ayaṁ rājantarāyo. Sace saṅgho te-vācikaṁ pavāressati, appavārito va saṅgho bhavissati athāyaṁ rājantarāyo bhavissati. Yadi saṅghassa pattakallaṁ, saṅgho dve-vācikaṁ [eka-vācikaṁ] {samāna-vassikaṁ} pavāreyya.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. This is a king obstruction. If the Community invites with the threefold statement, the Community will not be (fully) invited when the king obstruction comes. If the Community is ready, it should invite with two statements [with one statement] {in the manner of equal Rains}.</i></p>
+
+<p><i>For other obstructions, replace</i> <b><i>rājantarāyo</i></b> <i>with:</i></p>
+
+<p>
+
+<b><i>corantarāyo:</i></b> <i>a thief obstruction</i>
+<br><b><i>agyantarāyo:</i></b> <i>a fire obstruction</i>
+<br><b><i>udakantarāyo:</i></b> <i>a water obstruction</i>
+<br><b><i>manussantarāyo:</i></b> <i>a human being obstruction</i>
+<br><b><i>amanussantarāyo:</i></b> <i>a non-human being obstruction</i>
+<br><b><i>vāḶantarāyo:</i></b> <i>a beast obstruction</i>
+<br><b><i>siriṁsapantarāyo:</i></b> <i>a creeping-pest obstruction</i>
+<br><b><i>jīvitantarāyo:</i></b> <i>a life obstruction</i>
+<br><b><i>brahma-cariyantarāyo:</i></b> <i>a celibacy obstruction</i><br></p>
+
+<h3>H. Invitation-Delay</h3>
+<h4>To delay the Invitation to the next full moon: (Mv.IV.18.3–4)</h4>
+<p>Suṇātu me bhante saṅgho. Amhākaṁ samaggānaṁ sammodamānānaṁ avivadamānānaṁ viharataṁ aññataro phāsu-vihāro adhigato. Sace mayaṁ idāni pavāressāma, siyāpi bhikkhū pavāretvā cārikaṁ pakkameyyuṁ, evaṁ mayaṁ imamhā phāsu-vihārā paribāhirā bhavissāma. Yadi saṅghassa pattakallaṁ, saṅgho pavāraṇā-saṅgahaṁ kareyya, idāni uposathaṁ kareyya pāṭimokkhaṁ uddiseyya, āgame <b><i>komudiyā cātu-māsiniyā</i></b> pavāreyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Amhākaṁ samaggānaṁ sammodamānānaṁ avivadamānānaṁ viharataṁ aññataro phāsu-vihāro adhigato. Sace mayaṁ idāni pavāressāma, siyāpi bhikkhū pavāretvā cārikaṁ pakkameyyuṁ, evaṁ mayaṁ imamhā phāsu-vihārā paribāhirā bhavissāma. Saṅgho pavāraṇā-saṅgahaṁ karoti, idāni uposathaṁ karissati pāṭimokkhaṁ uddisissati, āgame <b><i>komudiyā cātu-māsiniyā</i></b> pavāressati. Yass'āyasmato khamati, pavāraṇā-saṅgahassa karaṇaṁ, idāni uposathaṁ karissati pāṭimokkhaṁ uddisissati, āgame <b><i>komudiyā cātu-māsiniyā</i></b> pavāressati, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Kato saṅghena pavāraṇā-saṅgaho, idāni uposathaṁ karissati pāṭimokkhaṁ uddisissati, āgame <b><i>komudiyā cātu-māsiniyā</i></b> pavāressati. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. While we have been living together in unity, courteously, without dispute, a certain level of comfort has been achieved. If we were to invite now, and if there are bhikkhus who, having invited, would leave to go wandering, we would be deprived of our level of comfort. If the Community is ready, it should make an Invitation-delay so that it might now perform the uposatha and recite the Pāṭimokkha, and then invite when the “water-lily” fourth month arrives. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. While we have been living together in unity, courteously, without dispute, a certain level of comfort has been achieved. If we were to invite now, and if there are bhikkhus who, having invited, would leave to go wandering, we would be deprived of our level of comfort. The Community is making an Invitation-delay so that it will now perform the uposatha and recite the Pāṭimokkha, and then invite when the “water-lily” fourth month arrives. He to whom the making of an Invitation-delay — so that (the Community) will now perform the uposatha and recite the Pāṭimokkha, and then invite when the “water-lily” fourth month arrives — is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>An Invitation-delay has been made by the Community so that it will now perform the uposatha and recite the Pāṭimokkha, and then invite when the “water-lily” fourth month arrives. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<p>To delay the Invitation to the new moon (see Mv.IV.17.4):</p>
+
+<p>Replace <b>komudiyā cātu-māsiniyā</b> with <b>kāḶe,</b> “the dark (moon).”</p>
+
+<h3>I. An Insanity Authorization (Mv.II.25.3–4)</h3>
+
+<p>Suṇātu me bhante saṅgho. Itthannāmo bhikkhu ummattako sarati pi uposathaṁ na pi sarati, sarati pi saṅgha-kammaṁ na pi sarati, āgacchati pi uposathaṁ na pi āgacchati, āgacchati pi saṅgha-kammaṁ na pi āgacchati. Yadi saṅghassa pattakallaṁ, saṅgho Itthannāmassa bhikkhuno ummattakassa ummattaka- sammatiṁ dadeyya, sareyya vā Itthannāmo bhikkhu uposathaṁ na vā sareyya, sareyya vā saṅgha-kammaṁ na vā sareyya, āgaccheyya vā uposathaṁ na vā āgaccheyya, āgaccheyya vā saṅgha-kammaṁ na vā āgaccheyya, saṅgho saha vā Itthannāmena vinā vā Itthannāmena uposathaṁ kareyya saṅgha-kammaṁ kareyya. Esā ñatti.</p>
+
+<p>Suṇātu me bhante saṅgho. Itthannāmo bhikkhu ummattako sarati pi uposathaṁ na pi sarati, sarati pi saṅgha-kammaṁ na pi sarati, āgacchati pi uposathaṁ na pi āgacchati, āgacchati pi saṅgha-kammaṁ na pi āgacchati. Saṅgho Itthannāmassa bhikkhuno ummattakassa ummattaka-sammatiṁ deti, sareyya vā Itthannāmo bhikkhu uposathaṁ na vā sareyya, sareyya vā saṅgha-kammaṁ na vā sareyya, āgaccheyya vā uposathaṁ na vā āgaccheyya, āgaccheyya vā saṅgha-kammaṁ na vā āgaccheyya, saṅgho saha vā Itthannāmena vinā vā Itthannāmena uposathaṁ karissati saṅgha-kammaṁ karissati. Yass'āyasmato khamati, Itthannāmassa bhikkhuno ummattakassa ummattaka-sammatiyā dānaṁ, sareyya vā Itthannāmo bhikkhu uposathaṁ na vā sareyya, sareyya vā saṅgha-kammaṁ na vā sareyya, āgaccheyya vā uposathaṁ na vā āgaccheyya, āgaccheyya vā saṅgha-kammaṁ na vā āgaccheyya, saṅgho saha vā Itthannāmena vinā vā Itthannāmena uposathaṁ karissati saṅgha-kammaṁ karissati, so tuṇh'assa. Yassa nakkhamati, so bhāseyya.</p>
+
+<p>Dinnā saṅghena Itthannāmassa bhikkhuno ummattakassa ummattaka-sammati, sareyya vā Itthannāmo bhikkhu uposathaṁ na vā sareyya, sareyya vā saṅgha-kammaṁ na vā sareyya, āgaccheyya vā uposathaṁ na vā āgaccheyya, āgaccheyya vā saṅgha-kammaṁ na vā āgaccheyya, saṅgho saha vā Itthannāmena vinā vā Itthannāmena uposathaṁ karissati saṅgha-kammaṁ karissati. Khamati saṅghassa, tasmā tuṇhī. Evam-etaṁ dhārayāmi.</p>
+
+<p><i>Venerable sirs, may the Community listen to me. Bhikkhu (name) is insane. He sometimes remembers the Uposatha and sometimes doesn’t. He sometimes remembers a Community transaction and sometimes doesn’t. He sometimes comes to the Uposatha and sometimes doesn’t. He sometimes comes to a Community transaction and sometimes doesn’t. If the Community is ready, it should give Bhikkhu (name), who is insane, an insanity authorization, so that whether he remembers the Uposatha or not, whether he remembers the Community transaction or not, whether he comes to the Uposatha or not, whether he comes to the Community transaction or not, the Community may perform the Uposatha, may perform a Community transaction, with (name) or without him. This is the motion.</i></p>
+
+<p><i>Venerable sirs, may the Community listen to me. Bhikkhu (name) is insane. He sometimes remembers the Uposatha and sometimes doesn’t. He sometimes remembers a Community transaction and sometimes doesn’t. He sometimes comes to the Uposatha and sometimes doesn’t. He sometimes comes to a Community transaction and sometimes doesn’t. The Community is giving Bhikkhu (name), who is insane, an insanity authorization, so that whether he remembers the Uposatha or not, whether he remembers the Community transaction or not, whether he comes to the Uposatha or not, whether he comes to the Community transaction or not, the Community will perform the Uposatha, will perform a Community transaction, with (name) or without him.</i></p>
+
+<p><i>He to whom the giving of an insanity authorization to Bhikkhu (name), who is insane — so that whether he remembers the Uposatha or not, whether he remembers the Community transaction or not, whether he comes to the Uposatha or not, whether he comes to the Community transaction or not, the Community will perform the Uposatha, will perform a Community transaction, with (name) or without him — is agreeable should remain silent. He to whom it is not agreeable should speak.</i></p>
+
+<p><i>An insanity authorization has been given by the Community to Bhikkhu (name), who is insane, so that whether he remembers the Uposatha or not, whether he remembers the Community transaction or not, whether he comes to the Uposatha or not, whether he comes to the Community transaction or not, the Community will perform the Uposatha, will perform a Community transaction, with (name) or without him. This is agreeable to the Community, therefore it is silent. Thus do I hold it.</i></p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.24.html#content"></a><a id="next-sutta" href="../bmc/bmc2.app2.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Appendix 1</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

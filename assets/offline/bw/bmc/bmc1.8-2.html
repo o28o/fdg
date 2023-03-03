@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC 1.8–2</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile bwsubnav">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+<p>&nbsp;</p>
+
+<h2>Buddhist Monastic Code Book 1 - The Pāṭimokkha Rules Translated and Explained</h2>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc1.intro.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Introduction</a>
+<a href="../bmc/bmc1.1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭimokkha</a>
+<a href="../bmc/bmc1.2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaya</a>
+<a href="../bmc/bmc1.3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disrobing</a>>
+<a href="../bmc/bmc1.4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pārājika</a>
+<a href="../bmc/bmc1.5.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Saṅghādisesa</a>
+<a href="../bmc/bmc1.6.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Aniyatas</a>
+<a href="../bmc/bmc1.7.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Nissaggiya Pācittiyas</a>
+<a href="../bmc/bmc1.8.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pācittiyas</a>
+<a href="../bmc/bmc1.9.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Pāṭidesanīyas</a>
+<a href="../bmc/bmc1.10.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Sekhiyas</a>
+<a href="../bmc/bmc1.11.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Adhikaraṇa-Samathās</a>
+<a href="../bmc/bmc1.12.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Appendix</a>
+<a href="../bmc/bmc1.rule-index.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Index</a>
+<a href="../bmc/bmc1.glossary.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Glossary</a>
+<a href="../bmc/bmc1.biblio.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bibliography</a>
+</div>
+
+<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;8: Pācittiyas</h3>
+	<div class="w3-bar w3-center">
+			<a href="../bmc/bmc1.8-1.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.1:<br>Lying</a>
+			<a href="../bmc/bmc1.8-2.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-mobile">8.2:<br>Living Plants</a>
+			<a href="../bmc/bmc1.8-3.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.3:<br>Exhortation</a>
+			<a href="../bmc/bmc1.8-4.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.4:<br>Food</a>
+			<a href="../bmc/bmc1.8-5.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.5:<br>Naked Ascetics</a>
+			<a href="../bmc/bmc1.8-6.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.6:<br>Alcoholic Drinks</a>
+			<a href="../bmc/bmc1.8-7.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.7:<br>Animals</a>
+			<a href="../bmc/bmc1.8-8.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.8:<br>In-accordance</a>
+			<a href="../bmc/bmc1.8-9.html" class="w3-bar-item w3-border w3-sand w3-hover-yellow w3-mobile">8.9:<br>Valuables</a>
+	</div>
+
+<p>&nbsp;</p>
+
+
+<h3>Chapter&nbsp;8.2: Pācittiya - The Living Plant Chapter</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro bhikkhu</li>
+		</ul>
+</div>
+	
+<p class="rule"><a id="pc11"></a>Pācittiya&nbsp;11 - The damaging of a living plant is to be confessed.</p>
+
+<p>“A certain Āḷavī bhikkhu was chopping down a tree. The devatā living in the tree said to the bhikkhu, ’Venerable sir, do not chop down my home to build a home for yourself.' The bhikkhu, disregarding her, kept right on chopping and injured the arm of the devatā’s child. The devatā thought: 'What if I were to kill this bhikkhu right here?' Then another thought occurred to her: 'But no, that wouldn’t be proper… What if I were to tell the Blessed One of what has happened?' So she went to the Blessed One and… told him of what had happened.</p>
+
+<p>“‘Very good, devatā, very good. It’s very good that you didn’t kill the bhikkhu. If you had killed him today, you would have produced much demerit for yourself. Now go, devatā. Over there is a vacant tree. Go into it.' (The Commentary adds here that the tree, being in Jeta’s Grove, was a definite move up for the devatā. She had a front-row seat for overhearing the Buddha&rsquo;s teachings well into the night; unlike other lesser devas she wasn’t pushed out to the far reaches of the galaxy when large groups of major devas met with the Buddha; and when the Four Great Kings came to attend to the Buddha, they always made a point of visiting her before leaving. However:)</p>
+
+<p>“People criticized and complained and spread it about, ’How can these Sakyan-son monks cut down trees and have them cut down? They are mistreating one-facultied life.’”</p>
+
+<p>This is another offense with the four factors of object, effort, perception, and intention.</p>
+
+<p><b>Object.</b> The Pali term for living plant — <i>bhūtagāma</i> — literally means the home of a being. This the Sub-commentary explains by saying that devatās may take up residence in plants standing in place by means of a longing on which their consciousness fastens (at the end of their previous lives) as in a dream. This rule is justified, it says, in that the etiquette of a contemplative precludes doing harm to the abodes of living beings. As the origin story shows, though, the reason this rule was laid down in the first place was to prevent bhikkhus from offending people who held to the animist belief that regarded plants as one-facultied life having the sense of touch.</p>
+
+<p>The Vibhaṅga defines <i>bhūtagāma</i> as vegetation arising from any of five sources:</p>
+
+<ol>
+<li>from bulbs, rhizomes, or tubers (e.g., potatoes, tulips),</li>
+
+<li>from cuttings or stakes (e.g., willows, rose bushes),</li>
+
+<li>from joints (e.g., sugar cane, bamboo),</li>
+
+<li>from runners (e.g., strawberries, couch grass), or</li>
+
+<li>from seeds (e.g., corn, beans).</li>
+</ol>
+
+<p>According to the Commentary, a whole plant or part of one that has been removed from its original place is no longer classed as bhūtagāma. If it is capable of growing again when placed in the ground, it is classed as <i>bījagāma,</i> which means “home of a seed.” When a seed is sown, it is regarded as bījagāma until the first shoot turns a fresh green color and the first leaf appears. After that it is regarded as bhūtagāma.</p>
+
+<p>In line with this criterion, the Commentary classifies as bījagāma such lower forms of plant life as mushrooms that still have their spores, fungi, lichens without leaves, and molds, in that they do not pass through a fresh green stage, have no discernable leaves, and yet are capable of regeneration. Mushrooms that have lost their spores, and parts of any plants that have been removed from place and will not grow, or that have been cooked or otherwise damaged to the point where they are incapable of generation, are not grounds for an offense under this rule.</p>
+
+<p>The Commentary asserts further that to damage bījagāma entails a dukkaṭa. The Vibhaṅga does not mention this point, but the Commentary cites as its justification a passage occurring in a number of suttas (such as <a href="../dn/dn2.html">DN2</a>) saying that a bhikkhu consummate in virtue refrains from harming both bhūtagāma and bījagāma. In doing so, the Commentary is utilizing the Cullavagga’s blanket rule assigning a dukkaṭa to all bad habits (Cv.V.36). The Mahāvagga and Cullavagga give further but partial justification to the Commentary’s assertion in two passages, dealing with bhikkhus eating fruit, which we will discuss below. The Jain ascetics follow similar observances, which suggests that both the Buddhists and the Jains adopted this point from the ancient Indian ascetics who predated both religions.</p>
+
+<p>Furthermore, according to the Commentary, there are certain kinds of plants that do not count either as bhūtagāma or bījagāma under this rule, and to damage them entails no offense. To justify this point it quotes a passage from Cv.VIII.1.3: “If a wall treated with ochre…(or) a finished floor is moldy (§), one should moisten a rag, wring it out, and wipe it clean.” The Commentary extends the Canon’s instructions here to cover not only mold on walls but also other lower forms of plant life — such as algae on the inside of water jars, fungus on toothbrushes, and mold on food — that would count as filth if they were allowed to continue growing.</p>
+
+<p><b>Effort.</b> According to the Vibhaṅga, the term <i>damaging</i> includes such actions as cutting, breaking, and cooking, as well as getting other people to perform these actions. The Commentary defines <i>damaging</i> as “dealing with a plant as one likes by cutting it, breaking it, and so on.” Although the word for <i>dealing with,</i> — <i>paribhuñjati</i> — literally means “making use of,” the Commentary’s illustrations of what this covers include even such things as shaking a tree limb to get the dry leaves to fall off so that one can sweep them up. Thus, it says, <i>damaging</i> would include picking flowers or leaves, uprooting a plant, engraving one’s initials in a tree trunk, etc. Because no exception is made for doing such things with “benevolent” intentions toward the plant, pruning would be included as well. Given the catch-all nature of the Commentary’s definition, using herbicides to kill plants would also come under <i>damaging.</i></p>
+
+<p>The Commentary adds that plants growing in water, such as water hyacinths, whose roots do not extend to the earth beneath the water, have the water as their base. To remove them from the water is to damage them, although there is no offense in moving them around in the water. To move them from one body of water to another without incurring a penalty, one may take them together with some of the water in which they originally lived and place them together with that water into the new body of water.</p>
+
+<p>Also, says the Commentary, plants such as mistletoe, orchids, and bird vine that grow on trees have the tree as their base. To remove them from the tree is to damage them and so entails a pācittiya.</p>
+
+<p><b>Perception.</b> If one damages a living plant (§) perceiving it to be something else — say, a dead plant — there is no offense. If one damages a plant in doubt as to whether it is living or dead, then regardless of what it actually is, the offense is a dukkaṭa.</p>
+
+<p><b>Intention</b> is discussed in detail under the non-offenses, below.</p>
+
+<p><b>Making fruit allowable.</b> Because fruit seeds are bījagāma, the question arises as to how bhikkhus should go about eating fruit. The Commentary to this rule discusses in detail two passages, one each in the Mahāvagga (VI. 21) and the Cullavagga (V.5.2), dealing with precisely this question. The Cullavagga passage reads: “I allow you, bhikkhus, to consume fruit that has been made allowable for monks in any of five ways: if it is damaged by fire, by a knife, by a fingernail, if it is seedless, and the fifth is if the seeds are discharged.” The Mahāvagga passage reads: “Now at that time there was a great quantity of fruit at Sāvatthī, but there was no one to make it allowable… (The Buddha said,) 'I allow that fruit that is seedless or whose seeds are discharged be consumed (even if) it has not been made allowable.”</p>
+
+<p>First, to summarize the commentaries' discussion of seedless fruit and fruit whose seeds have been discharged: According to the Commentary to the Mahāvagga, <i>seedless fruit</i> includes fruit whose seeds are too immature to grow. As for fruit whose seeds have been discharged, the Sub-commentary states that this means: “Fruit, such as mangoes or jackfruit, which it is possible to eat having removed the seeds and separating them entirely (from the flesh).”</p>
+
+<p>The question sometimes arises as to whether bhikkhus may remove the seeds themselves before eating fruit of this sort, or if an unordained person has to remove them first. Given the context of the Mahāvagga passage and the wording of the Sub-commentary’s explanation, it seems clear that the bhikkhus themselves may discharge the seeds before or while eating the fruit. As the Commentary notes, both these kinds of fruit are allowable in and of themselves, and need not go through any other procedure to make them allowable.</p>
+
+<p>Other kinds of fruit, though, such as those with numerous seeds (such as tomatoes and blackberries) or whose seeds would be difficult to remove undamaged (such as grapes) must be damaged by fire, a knife, or a fingernail before a bhikkhu may eat them. The Commentary’s description of how to do this shows that the damaging need only be symbolic: An unordained person draws a hot object or a knife across the skin of the fruit, or pokes it with a fingernail, saying “allowable” (<i>kappiyaṁ</i>) either while doing the damaging or immediately afterward. The Sub-commentary notes that the word for “allowable” may be stated in any language.</p>
+
+<p>If a heap of fruit, such as grapes, is brought to a bhikkhu, he should say: “Make it allowable,” (<i>Kappiyaṁ karohi,</i>) either to the donor or to any other unordained person who knows how. The unordained person need only make one of the grapes allowable in line with the above procedures for the entire heap to be considered allowable, although he/she should not remove the grape from the heap while doing so.</p>
+
+<p>The Sub-commentary claims that the ceremony of making fruit allowable must always be performed in the presence of a bhikkhu, but the Commentary mentions this factor only in connection with this last case — making an entire heap of fruit allowable by “damaging” only one piece — and not in its basic description of how the procedure is done.</p>
+
+<p>In Communities that follow the Sub-commentary, the custom is as follows: When a donor brings grapes, tomatoes, or similar fruit to a bhikkhu, the bhikkhu says, <i>&quot;Kappiyaṁ karohi</i> (Make it allowable).” The donor damages the fruit in any of the three specified ways and says, <i>&quot;Kappiyaṁ bhante</i> (It is allowable, venerable sir),” while doing the damaging, and then presents the fruit to the bhikkhu.</p>
+
+<p>In Communities that do not follow the Sub-commentary, the donor may perform the act of damaging the fruit beforehand and simply inform the bhikkhu that the fruit has been made allowable when presenting it to him. In either case, the act of making a heap of fruit allowable by damaging only one piece <i>must</i> be done in the presence of a bhikkhu. And we should note again that seedless fruit or fruit whose seeds may be removed entirely from the flesh of the fruit are allowable in and of themselves, and do not have to go through any procedure before a bhikkhu may accept and eat them.</p>
+
+<p>The two passages in the Mahāvagga and Cullavagga that we have been discussing deal specifically only with fruit, but the Commentary extrapolates from them to say that the same conditions apply to other forms of bījagāma, such as sugar cane and bean sprouts as well.</p>
+
+<p><b>Non-offenses.</b> There is no offense for a bhikkhu who cuts a living plant —</p>
+
+<ul class='circ'>
+<li><i>unknowingly</i> — e.g., thinking it to be dead,</li>
+<li><i>unthinkingly</i> — e.g., absent-mindedly pulling grass while talking with someone, or</li>
+<li><i>unintentionally</i> — e.g., inadvertently uprooting grass while raking leaves, or grabbing onto a plant for support while climbing a hill and inadvertently uprooting it.</li>
+</ul>
+
+<p>Also, there is no penalty in telling an unordained person to make an item allowable; in asking for leaves, flowers, etc., without specifically saying <i>which</i> leaves or flowers are to be picked; or in indicating indirectly that, e.g., the grass needs cutting (“Look at how long the grass is”) or that a tree needs pruning (“This branch is in the way”) without expressly giving the command to cut. In other words, this is another rule where one may avoid an offense by using <i>kappiya-vohāra:</i> “wording it right.”</p>
+
+<p><a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a> says that if a brush fire is approaching a dwelling, one may light a counter-fire to ward it off. In doing so, one is exempt from any penalty imposed by this rule.</p>
+
+<p>Also, according to the Sub-commentary to <a href="../bmc/bmc1.7-1.html#np6">Nissaggiya Pācittiya&nbsp;6</a>, a bhikkhu whose robes have been snatched away and who cannot find any other cloth to cover himself may pick grass and leaves to cover himself without incurring a penalty here.</p>
+
+<p>Intentionally cutting, burning, or killing a living plant is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc12"></a>Pācittiya&nbsp;12 - Evasive speech and causing frustration are to be confessed.</p>
+
+<p>This rule deals with a bhikkhu’s behavior in a Community meeting when being formally questioned about a charge made against him. The factors for the full offense here are three.</p>
+
+<ol>
+<li><i>Intention:</i> One’s motive is to hide one’s offenses.</li>
+
+<li><i>Effort:</i> One continues engaging in evasive speech or in causing frustration</li>
+
+<li><i>Object:</i> when being questioned in the Community about a rule or an offense after the Community has brought a formal charge of evasive speech or causing frustration against one.</li>
+</ol>
+
+<p><b>Effort.</b> Evasive speech is illustrated in the origin story as follows:</p>
+
+<p>“Now at that time Ven. Channa, having misbehaved and being examined about the offense in the midst of the Community, wandered around (§) one thing by way of another: 'Who has committed the offense? What was committed? With regard to what matter was it committed? How was it committed? What are you saying? Why do you say it?’”</p>
+
+<p>The Vibhaṅga, following the lead of the origin story, gives examples of evasive speech that are all in the form of questions. However, the Commentary argues that the Vibhaṅga’s examples are not intended to be exhaustive, and that evasive speech covers any and all forms of speaking beside the point when being formally questioned. The Sub-commentary agrees and gives an entertaining example of its own:</p>
+
+<p>“Have you committed this offense?”</p>
+
+<p>“I've been to Pāṭaliputta.”</p>
+
+<p>“But we’re not asking about your going to Pāṭaliputta. We’re asking about an offense.”</p>
+
+<p>“From there I went to Rājagaha.”</p>
+
+<p>“Well, Rājagaha or Brahmaṇāgaha, did you commit the offense?”</p>
+
+<p>“I got some pork there.”</p>
+
+<p>As for causing frustration:</p>
+
+<p>“Now at a later time Ven. Channa, being examined about an offense in the midst of the Community, (thinking), ’By evading one question with another, I will fall into an offense,’ remained silent and frustrated the Community.”</p>
+
+<p>Thus, the texts say, causing frustration means remaining silent when being formally questioned in the midst of the Community.</p>
+
+<p><b>Intention.</b> This factor is fulfilled only if one’s motive is to conceal one’s own offenses. If one has other motives for remaining silent, or speaking not to the point while being questioned, there is no penalty. For example, there is no offense for a bhikkhu who, when being examined,</p>
+
+<ul class="circ">
+<li>asks questions or gives answers not to the point because he does not understand what is being said,
+<br></li>
+<li>is too ill to speak,</li>
+<li>feels that in speaking he will create conflict or dissension in the Community, or</li>
+<li>feels that the Community will carry out its transactions unfairly or not in accordance with the rule.</li>
+</ul>
+
+<p><b>Object.</b> If a bhikkhu speaks evasively or remains silent out of a desire to conceal his offenses, he incurs a dukkaṭa. If the Community sees fit, it may then bring a formal charge of evasive speech or causing frustration against him in order to restrain him from persisting in such behavior. If he then continues speaking evasively or remaining silent, he incurs a pācittiya.</p>
+
+<p>Perception is not a factor here. Once a formal charge of evasive speech or causing frustration has been rightfully brought against a bhikkhu, and he continues to speak evasively or remain silent, he incurs a pācittiya regardless of whether he sees the charge as rightful or not. If the charge has been wrongfully brought against him, then regardless of whether he perceives the charge as wrongful, rightful, or doubtful, the offenses or lack of offenses are allotted as if the Community transaction bringing the charge had not happened at all. This covers two situations. In the first, the bhikkhu actually deserves the charge, but the transaction was not carried out strictly in accordance with formal procedure. In this case, if the bhikkhu continues to be evasive or remain silent out of a desire to hide his offenses, he incurs another dukkaṭa. In the second situation, the bhikkhu does not deserve the charge — for instance, he has asked questions or remained silent for one of the allowable reasons, but the Community has abused its powers in bringing the charge against him. In this case, if he continues to ask questions or remain silent for the allowable reasons, he incurs no offense.</p>
+
+<p>As for the case in which the Community rightly brings a formal charge of evasive speech or causing frustration against a bhikkhu, and he incurs a pācittiya for continuing to speak evasively or remain silent: If he finally admits to his actions, then — regardless of whether he admits that they actually constituted an offense — he may further be subject to a more severe penalty, a censure transaction (tajjanīya-kamma) for being a maker of trouble and strife for the Community (Cv.I.1–8 — <a href="../bmc/bmc2.20.html">BMC2, Chapter&nbsp;20</a>). If he admits the action and confesses the offense, he is subject to what is essentially the same thing: an act of further punishment (tassa-pāpiyasikā-kamma) for not admitting to a true charge right from the start (see the discussion under the Adhikaraṇa-samatha rules, <a href="../bmc/bmc1.11.html">Chapter&nbsp;11</a>).</p>
+
+<p><b>Non-offenses.</b> If a bhikkhu answers not to the point or remains silent for any of the allowable reasons, he incurs no penalty even after a transaction of evasive speech or causing frustration has for some reason been enacted against him.</p>
+
+<p>Persistently replying evasively or keeping silent in order to conceal one’s own offenses when being questioned in a meeting of the Community — after a formal charge of evasive speech or causing frustration has been brought against one — is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc13"></a>Pācittiya&nbsp;13 - Criticizing or complaining (about a Community official) is to be confessed.</p>
+
+<p><b>Community officials.</b> In the Cullavagga (VI.11.2–4; VI.21.1–3), the Buddha gives allowances for a Community of bhikkhus to designate various of its members as Community officials to handle such business as distributing food, deciding who will stay in which dwelling, keeping the rosters that decide who will receive the invitations to which meals, etc. Ven. Dabba Mallaputta was the first such official and was well-equipped for the job:</p>
+
+<p>“As for those bhikkhus who came at night, he would enter the fire element for them and by that light would assign them dwellings — so much so that bhikkhus arrived at night on purpose, thinking, ’We will see the marvel of Ven. Dabba Mallaputta’s psychic power.' Approaching him, they said, ’Friend Dabba, assign us dwellings.’</p>
+
+<p>“Ven. Dabba Mallaputta said, ’Where would you like? Where shall I assign them?’</p>
+
+<p>“Then they named a distant place on purpose: 'Friend Dabba, assign us a dwelling on Vulture’s Peak Mountain. Friend Dabba, assign us a dwelling on Robber’s Cliff…’</p>
+
+<p>“So Ven. Dabba Mallaputta, entering the fire element for them, went before them with his finger glowing, while they followed right behind him with the help of his light.” — Cv.IV.4.4</p>
+
+<p>Even with his special skills, there were bhikkhus who were dissatisfied with the dwellings and meals he assigned to them — as we saw under <a href="../bmc/bmc1.5.html#sg8">Saṅghādisesa&nbsp;8</a> &amp; <a href="../bmc/bmc1.5.html#sg9">9</a> — and in the origin story to this rule they criticize and complain about him.</p>
+
+<p>The factors for a full offense here are three: object, intention, and effort — although the Vibhaṅga makes intention an integral part of its definition of the factor of effort.</p>
+
+<p><b>Object.</b> This factor is fulfilled only by (1) a bhikkhu who (2) has been properly authorized as a Community official and (3) does not habitually act out of the four causes for bias: desire, aversion, delusion, or fear. With regard to the first two of these sub-factors, other people — and the Vibhaṅga’s list of “others” here is interesting — are grounds for a dukkaṭa. The list is: an unordained person, an ordained person who acts as a Community official without having been authorized, an ordained person who acts as a Community official having been improperly authorized, and an unordained person who acts as a Community official whether authorized or not. With regard to the third sub-factor, anyone who would otherwise be grounds for a pācittiya or a dukkaṭa is not grounds for an offense if he/she behaves in a biased way.</p>
+
+<p>Perception is not a factor here. Thus, if the official is actually properly authorized, he fulfills this factor whether one perceives his authorization as proper, improper, or doubtful. If he is improperly authorized, he is grounds for a dukkaṭa whether one perceives his authorization as proper, improper, or doubtful. In other words, this is another case where the pattern set out under <a href="../bmc/bmc1.8-1.html#pc4">Pācittiya&nbsp;4</a> does not hold.</p>
+
+<p>(The PTS edition of the Canon says that if one perceives an improper authorization as improper, there is no offense, but the Thai, Sri Lankan, and Burmese editions of the Canon, together with the PTS edition of the KCommentary, all agree with the above reading.)</p>
+
+<p><b>Intention.</b> One’s motive is to make him lose face, lose status, or feel abashed.</p>
+
+<p><b>Effort.</b> The Vibhaṅga defines “criticizing” as criticizing or complaining about a Community official to a fellow bhikkhu with the desire of making the official lose face, lose status, or feel abashed. The line between effort and intention appears blurred here, in that the intention is a part of the definition of “effort,” but the non-offense clauses provide an exemption for critical remarks that are motivated simply by a desire to tell the truth.</p>
+
+<p>The Commentary and Sub-commentary give the clearest description of the distinction between criticizing and complaining: To criticize means to speak critically of a person in the presence of one or more other people so as to make them form a low opinion of him/her. To complain means simply to give vent to one’s criticisms of the person within earshot of someone else.</p>
+
+<p>According to the Vibhaṅga, the penalty for criticizing or complaining about a Community official is a pācittiya if one’s listener is a fellow bhikkhu, and a dukkaṭa if one’s listener is an unordained person (§). The question of who one’s remarks are addressed to is irrelevant if one is criticizing or complaining about an unordained person or a bhikkhu who is not a Community official: The penalty is a dukkaṭa, regardless.</p>
+
+<p><b>Non-offenses.</b> As mentioned above, if a Community official acts habitually out of any of the four causes for bias — desire, aversion, delusion, or fear — there is no offense in criticizing or complaining about him. For example, if he assigns the best dwellings to certain bhikkhus simply because he likes them, gives the poorest food to certain bhikkhus simply because he dislikes them, habitually sends the wrong bhikkhus to the wrong meals because he is too stupid to handle the rotating rosters properly, or gives the best treatment to certain bhikkhus because he is afraid of them or their supporters, there is no offense in criticizing his behavior in the presence of others.</p>
+
+<p>The reason for this allowance is that one of the qualifying factors for a Community official is that he be unbiased (see <a href="../bmc/bmc2.18.html">BMC2, Chapter&nbsp;18</a>). Thus any complaint of bias would be tantamount to an accusation that the Community transaction authorizing him as an official was invalid, and the Community would then be duty bound to look into the matter.</p>
+
+<p>However, one should be very sure of the facts of the case before taking advantage of this allowance, for — as noted above — perception is not a mitigating factor under this rule. Disappointment and anger have a way of coloring one’s perceptions, making another person’s perfectly blameless behavior look biased and unjust. If one criticizes or complains about an official, thoroughly convinced that he has been acting out of bias, one is still guilty of an offense if it turns out that in fact the official’s behavior has been fair. The same considerations apply also to complaints or criticisms concerning anyone, ordained or not.</p>
+
+<p>To criticize a Community official to his face, simply for the sake of hurting his feelings, would be an offense under <a href="../bmc/bmc1.8-1.html#pc2">Pācittiya&nbsp;2</a>, regardless of whether his behavior has in fact been biased or not.</p>
+
+<p>The job of a Community official is often a thankless one. The procedures he must follow in distributing invitations, etc., can be fairly complex and, in large Communities, quite time-consuming. Because there is no way he can guarantee equal treatment to all, there may be times when he seems to be acting out of bias when he is simply following standard procedure. If he cannot receive the benefit of the doubt from his fellow bhikkhus, there is no incentive for him to undertake these duties in the first place. The Buddha likened material gains to excrement (see <a href="../an/an5.196.html">AN5.196</a>), and when excrement is shared out there is rarely any point in complaining about who gets the choicest portions.</p>
+
+<p>If a Community official is innocent of bias: Criticizing him within earshot of another bhikkhu is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc14"></a>Pācittiya&nbsp;14 - Should any bhikkhu set a bed, bench, mattress, or stool belonging to the Community out in the open — or have it set out — and then on departing neither put it away nor have it put away, or should he go without taking leave, it is to be confessed.</p>
+
+<p>During the four months of the rains, furniture belonging to the Community — when not in use — is to be kept in a place where it will not be rained on, such as a fully-roofed storeroom or dwelling. The Vibhaṅga to this rule contains an allowance whereby during the remainder of the year it may also be kept in an open pavilion roofed with slats or branches, or under a tree where birds do not leave droppings. (At present, tents would fit under “pavilions” here.) The Commentary implies, though, that this latter allowance holds only in those regions with a distinct dry season; and, according to the Sub-commentary, even where there is a dry season, if a bhikkhu sees an unseasonable rain storm approaching he should not leave furniture in such semi-open places. And as we can infer from the Vibhaṅga to the next rule, even during the dry season this allowance applies only as long as one continues to reside in the monastery.</p>
+
+<p>This rule deals with a bhikkhu who sets furnishings of the Community out in the open and then leaves without taking leave or getting them put away in the proper place. The factors for the full offense are three.</p>
+
+<ol>
+<li><i>Object:</i> any bed, bench, mattress, or stool belonging to the Community.</li>
+
+<li><i>Effort:</i> One sets such furnishings out in the open and then departs without taking leave, putting the furnishings away, or getting them put away in the proper place.</li>
+
+<li><i>Intention:</i> One has set them out for some purpose other than sunning them (§).</li>
+</ol>
+
+<p><b>Object.</b> Any bed, bench, mattress, or stool belonging to the Community is grounds for a pācittiya. Perception as to whether the item belongs to the Community is not a mitigating factor here (see <a href="../bmc/bmc1.8-1.html#pc4">Pācittiya&nbsp;4</a>). Carpets, bedspreads, mats, ground-covering under-pads, foot-wiping cloths, and wooden chairs belonging to the Community are grounds for a dukkaṭa, as are both classes of furnishings — beds, etc., and carpets, etc., — belonging to another individual. One’s own furnishings are not grounds for an offense.</p>
+
+<p>According to the Commentary, if one has made an arrangement with someone else to take his/her belongings on trust, there is no offense in leaving that person’s furnishings out in the open. The Sub-commentary adds that any furnishings a donor presents for the Community to use out in the open — e.g., stone or concrete benches — are likewise not grounds for an offense.</p>
+
+<p>Under this rule, the Commentary contains a long essay on the proper storage of brooms. Because its remarks are based on an improper application of the Great Standards — brooms were known in the time of the Buddha and yet he chose not to include them under this rule — there is no reason to regard them as binding.</p>
+
+<p><b>Effort.</b> The Vibhaṅga defines <i>departing the furnishings</i> as going further than one <i>leḍḍupāta</i> — approximately 18 meters — from them. It does not define “taking leave,” aside from stating that one may take leave from a bhikkhu, a novice, or a monastery attendant. This much, however, establishes that even though the Pali verb for taking leave, <i>āpucchati,</i> is etymologically related to the verb for asking, <i>pucchati,</i> the act of taking leave does <i>not</i> mean asking permission, for nothing in the Canon suggests that a bhikkhu has to get a novice’s or a lay attendant’s permission for his actions. The Commentary expands on this point, saying that <i>taking leave</i> means informing a bhikkhu, a novice, or a temple attendant whom one assumes will take responsibility for the furnishings. Unlike the following rule, where the intent to return is a mitigating factor, here it is not: Once a bhikkhu has departed from the furnishings, he has completed the factor of effort here even if he intends to return immediately.</p>
+
+<p><b>Responsibility.</b> A bhikkhu is held responsible for putting away furnishings that he has ordered another person to place in the open, unless the other person is also a bhikkhu, in which case <i>he</i> is the one responsible. The Commentary states that if a senior bhikkhu requests a junior bhikkhu to place out in the open any furnishings that may be grounds for a penalty, then the junior bhikkhu is responsible for them until the senior bhikkhu sits down on them, places an article of his use (such as a robe or a shoulder bag) on them, or gives the junior bhikkhu permission to leave, after which point the senior bhikkhu is responsible.</p>
+
+<p>If there is to be an open-air meeting, the host bhikkhus are responsible for any seats set out in the open, until the visiting bhikkhus claim their places, from which point the visitors are responsible. If there is to be a series of Dhamma talks, each speaker is responsible for the sermon seat from the moment he sits in it until the moment the next speaker does.</p>
+
+<p><b>Non-offenses.</b> As stated above, there is no offense if one departs having set furnishings belonging to the Community or another individual out in the sun with the purpose of drying them, and thinking: “I will put them away when I come back (§).” Also, there is no offense:</p>
+
+<ul class="circ">
+<li>if one departs after someone else takes possession of or responsibility for furnishings one has left out in the open;</li>
+<li>if there are constraints on the furnishings — the Commentary mentions a senior bhikkhu making one get up from them and taking possession of them, tigers or lions lying down on them, or ghosts or ogres taking possession of them; or</li>
+<li>if there are dangers — which according to the Commentary means dangers to one’s life or to one’s remaining in the celibate life — that leave one no time to put the furnishings away.</li>
+</ul>
+
+<p>The Vinaya-mukha, extracting a general principle from this rule, says: “This training rule was formulated to prevent negligence and to teach one to care for things. It should be taken as a general model.”</p>
+
+<p>When one has set a bed, bench, mattress, or stool belonging to the Community out in the open: Leaving its immediate vicinity without putting it away, arranging to have it put away, or taking leave is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc15"></a>Pācittiya&nbsp;15 - Should any bhikkhu set out bedding in a dwelling belonging to the Community — or have it set out — and then on departing neither put it away nor have it put away, or should he go without taking leave, it is to be confessed.</p>
+
+<p>Here again the three factors for a full offense are object, effort, and intention.</p>
+
+<p><b>Object.</b> <i>Bedding</i> here includes mattresses, pillows, rugs, sheets, mats, sitting cloths, blankets, bedspreads, animal skins, throw rugs, etc., but not the beds or benches on which they may be placed. Unlike the preceding rule, the question of whom the bedding belongs to is not an issue in determining the offense under this rule.</p>
+
+<p>The place where it is left, though, <i>is</i> an issue. Bedding left in a dwelling belonging to the Community is grounds for a pācittiya. Bedding (§) left in a dwelling belonging to another individual is grounds for a dukkaṭa, as is bedding left in the area around a dwelling, in an assembly hall, an open pavilion, or at the foot of a tree — these last three places belonging to the Community or to another individual.</p>
+
+<p>A bed or a bench taken from its original place and left in any of the above places is grounds for a dukkaṭa. Given that this rule covers a different kind of “departing” from the preceding rule, this penalty applies even during the periods when one is allowed to keep such things under trees, etc., through the allowance given in the Vibhaṅga to that rule.</p>
+
+<p>Bedding left in a dwelling, etc., belonging to oneself is not grounds for an offense.</p>
+
+<p>Perception as to whether the dwelling belongs to the Community or to another individual is not a mitigating factor here (see <a href="../bmc/bmc1.8-1.html#pc4">Pācittiya&nbsp;4</a>).</p>
+
+<p><b>Effort.</b> The Commentary’s discussion of <i>putting the item away</i> shows that it essentially means putting it back in the safe place where it was kept before being spread out. Thus, if the bedding was hanging in a bundle from a clothesline before being spread out, it should be wrapped in a bundle and hung from the line as before. If it was taken from another room, it should be returned to the room from which it was taken.</p>
+
+<p><i>Having the item put away</i> and <i>taking leave</i> are defined as under the preceding rule, with one exception: A bhikkhu who orders someone else to spread the item is responsible for it even if the other person is also ordained.</p>
+
+<p>To <i>depart</i> is defined as going outside the grounds of the monastery: beyond the wall of the monastery if it is walled, beyond its vicinity if it is not. (In all rules mentioning this point, the Commentary defines a monastery’s vicinity as a distance of two leḍḍupātas — approximately 36 meters — from the buildings.) However, the absence of any reference to this rule in the protocols to be done before one’s alms round (Cv.VIII.5 — see <a href="../bmc/bmc2.9.html">BMC2, Chapter&nbsp;9</a>) indicates that temporary excursions outside the monastery are not counted as “departing.” This conclusion is seconded by one of the non-offense clauses here, discussed below, which says that when a bhikkhu goes with the expectation of returning but then sends word back to the monastery that he is taking leave, he avoids any penalty under this rule. This implies that a bhikkhu who leaves his bedding spread out in a dwelling belonging to the Community, leaves the monastery temporarily with the intent of returning, and returns as planned, incurs no penalty as well.</p>
+
+<p>The question arises, though, as to how long a temporary period of absence is allowable. The Vibhaṅga itself sets no time limit. The Commentary illustrates the non-offense clause we have just mentioned with the case of a bhikkhu who leaves, thinking: “I will return today,” but makes no specific statement that longer periods are not allowed.</p>
+
+<p>Because the texts give no specific guidelines here, this is a matter that each Community should decide for itself, taking the following considerations into account:</p>
+
+<ol>
+<li>The origin story suggests that the purpose of the rule is to prevent the bedding’s being left so long in an unoccupied dwelling that it attracts ants, termites, or other pests.</li>
+<li>Another consideration, raised by the Vinaya-mukha, is that if a bhikkhu goes for a long excursion, leaving his bedding and other belongings scattered about in a dwelling, this might inconvenience the resident bhikkhus in that they could not easily allot the dwelling to another bhikkhu in the interim.</li>
+</ol>
+
+<p><b>Intention</b> is a factor here, in that — as mentioned above — if one plans to return within the allowable space of time, there is no offense. This point is conveyed by a passage in the non-offense clauses that reads: “having gone with the desire (to return), staying there one takes leave; he is constrained by something or another.” The Commentary, reasonably, reads this passage as two exemptions governed by the first phrase. In other words, (1) if one leaves the monastery with the intent to return and then, after reaching the opposite bank of a river or going the interval of one village away, one changes one’s mind and decides not to return, one can avoid an offense by sending word back to the monastery with the message that one is taking leave. Or, (2) if one leaves the monastery with the intent to return but encounters physical constraints — such as flooded rivers, kings, and robbers — that prevent one’s return, that in and of itself exempts one from an offense, and there is no need to send word.</p>
+
+<p><b>Non-offenses.</b> In addition to these two exemptions, the Vibhaṅga says that there is no offense in departing having left bedding spread out in a dwelling if someone else has taken responsibility for the bedding or if one has taken leave of a bhikkhu, a novice, or a monastery attendant. According to the protocols to be done before leaving a monastery to live elsewhere (Cv.VIII.3.2), if there is no one from whom to take leave: “then having set the bed on four stones, having stacked bed on bed, bench on bench, having placed the lodgings (including the bedding) in a heap on top, having put away the wooden goods and clay goods, having closed the windows and doors, he may set out.”</p>
+
+<p>And as under the preceding rule, there is no offense if there is a constraint on the bedding or there are dangers — i.e., constraints or dangers that would prevent one from putting them away before leaving.</p>
+
+<p>When one has spread bedding out in a dwelling belonging to the Community: Departing from the monastery without putting it away, arranging to have it put away, or taking leave is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc16"></a>Pācittiya&nbsp;16 - Should any bhikkhu knowingly lie down in a dwelling belonging to the Community so as to intrude on a bhikkhu who arrived there first, (thinking): “Whoever finds it confining will go away” — doing it for just that reason and no other — it is to be confessed.</p>
+
+<p>There are four factors for an offense here.</p>
+
+<ol>
+<li><i>Object</i> a bhikkhu who should not be forced to move.</li>
+
+<li><i>Perception:</i> One perceives him as such.</li>
+
+<li><i>Effort:</i> One intrudes on his space in a dwelling belonging to the Community</li>
+
+<li><i>Intention:</i> with the sole purpose of forcing him out.</li>
+</ol>
+
+<p><b>Object &amp; perception.</b> <i>Knowingly</i> is defined in the Vibhaṅga as knowing that the dwelling’s current occupant is a senior bhikkhu, a sick one, or one to whom the Community (or its official) has assigned the dwelling. The Commentary interprets this definition as a list of examples and generalizes from it to include any case where one knows: “This bhikkhu shouldn’t be forced to move.”</p>
+
+<p><b>Effort.</b> To <i>intrude</i> means to lie down or sit down in the area immediately adjacent to the bhikkhu’s sleeping or sitting place — which the Commentary defines as anywhere within 75 cm. of the sleeping or sitting place — or on a 75 cm. wide path from either of those places to the dwelling’s entrance. There is a dukkaṭa for placing one’s bedding or seat in such an area, and a pācittiya for each time one sits or lies down there. To place one’s bedding or seat in any other part of the dwelling entails a dukkaṭa; and to sit or lie down there, another dukkaṭa — assuming in all of these cases that the dwelling belongs to the Community.</p>
+
+<p>Perception with regard to the dwelling is not an issue here (see <a href="../bmc/bmc1.8-1.html#pc4">Pācittiya&nbsp;4</a>). If the dwelling actually belongs to the Community, this part of the factor is fulfilled regardless of whether one perceives it as belonging to the Community or not.</p>
+
+<p>There is a dukkaṭa for intruding on the space of a bhikkhu — intending to force him out — in the area immediately adjacent to such a dwelling, in a place belonging to the Community that is not the dwelling of a particular person (e.g., an open pavilion or a meal hall), the shade of a tree, in the open air, or in a dwelling belonging to another individual. To do so in a dwelling belonging to oneself entails no offense. According to the Commentary, this last allowance also applies to a dwelling belonging to anyone who has offered to let one take his/her belongings on trust.</p>
+
+<p><b>Intention.</b> If there is a compelling reason — one is ill or suffering from the cold or heat, or there are dangers outside — one may intrude on the space of another bhikkhu without penalty. The reason for these allowances would appear obvious — one is not aiming at forcing the other bhikkhu out — but the matter is not as simple as that. The Sub-commentary reports the Three Gaṇṭhipadas as saying that because of this allowance, one may make an excuse of one’s illness, etc., as a pretext for intruding on the other bhikkhu’s space so as to force him out of the dwelling. The Sub-commentary tries to argue with this ruling, but the Gaṇṭhipadas have the support of the Vibhaṅga here: Only if one’s <i>sole</i> motive is to force the other bhikkhu out is one subject to an offense under this rule. If one has mixed motives, one may take advantage of one’s illness, etc., to move in on the other bhikkhu.</p>
+
+<p>However, once the illness, etc., has passed, one would commit an offense each time one continued to sit or lie down intruding on his space.</p>
+
+<p>All of this may seem very strange on the surface, but it is likely that the original occupant would not feel unduly pressured if an ill bhikkhu or one escaping dangers were to move into his dwelling, while he <i>would</i> start feeling pressured by the continued presence of the bhikkhu after the illness or dangers had passed, which is why the penalties are allotted as they are.</p>
+
+<p>Intruding on another bhikkhu’s sleeping or sitting place in a dwelling belonging to the Community, with the sole purpose of making him uncomfortable and forcing him to leave, is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc17"></a>Pācittiya&nbsp;17 - Should any bhikkhu, angered and displeased, evict a bhikkhu from a dwelling belonging to the Community — or have him evicted — it is to be confessed.</p>
+
+<p>“At that time some group-of-seventeen bhikkhus (see <a href="../bmc/bmc1.8-7.html#pc65">Pācittiya&nbsp;65</a>) were fixing up a large dwelling on the fringes of the monastery, thinking, ’We will spend the Rains here.' Some group-of-six bhikkhus… seeing them, said, ’These group-of-seventeen bhikkhus are fixing up a dwelling place. Let’s drive them out.' But others of them said, ’Wait, friends, while they fix it up. When it’s fixed up, then we'll drive them out.’</p>
+
+<p>“Then the group-of-six bhikkhus said to the group-of-seventeen bhikkhus, ’Get out, friends. The dwelling is ours.’</p>
+
+<p>“‘Shouldn’t this have been mentioned beforehand so that we could have fixed up another one?’</p>
+
+<p>“‘Isn’t this a dwelling belonging to the Community?’</p>
+
+<p>“‘Yes…’</p>
+
+<p>“‘Then get out. The dwelling is ours.’</p>
+
+<p>“‘The dwelling is large, friends. You can stay here, and we'll stay here, too.’</p>
+
+<p>“‘Get out. The dwelling is ours.' And, angered and displeased, seizing them by the throat, they threw them out. The group-of-seventeen bhikkhus, having been thrown out, began to cry.”</p>
+
+<p>The three factors for the full offense here are:</p>
+
+<ol>
+<li><i>Object:</i> a bhikkhu.</li>
+
+<li><i>Effort:</i> One evicts him from a dwelling belonging to the Community.</li>
+
+<li><i>Intention:</i> One’s prime impulse is anger.</li>
+</ol>
+
+<p><b>Object.</b> A bhikkhu is grounds for a pācittiya here, while the following are grounds for a dukkaṭa: a bhikkhu’s belongings, an unordained person, and an unordained person’s belongings.</p>
+
+<p><b>Effort.</b> According to the Commentary, this rule covers both physical eviction — picking up the bhikkhu and throwing him out — as well as verbal eviction — ordering him to leave. The penalty in both cases is the same. (The Mahāsāṁghikas and Sarvāstivādins write this point into their version of the rule.) The Vibhaṅga counts offenses here as follows: a pācittiya for evicting the bhikkhu from the room to the porch, and another pācittiya for evicting him off the porch. If, with a single effort, one evicts him through many doors, one incurs a single pācittiya.</p>
+
+<p>There is a dukkaṭa in telling someone else to evict the bhikkhu — no allowances for <i>kappiya-vohāra</i> are given here — and, assuming that all the other factors are fulfilled, a pācittiya once the bhikkhu has been evicted, regardless of how many efforts it takes. (The Thai edition of the Canon assigns a pācittiya for the orderrequest for someone else to do the eviction, but even the Thai edition of the Commentary assigns only a dukkaṭa here, as do all the other major editions of the Canon, so the Thai reading here is probably mistaken.)</p>
+
+<p>To evict a bhikkhu from a dwelling belonging to the Community entails a pācittiya. As under the preceding rule, perception with regard to the ownership of the dwelling is not an issue here. To evict anyone — bhikkhu or not — from an area immediately adjacent to a dwelling belonging to the Community, from a place belonging to the Community that is not the dwelling of a particular person, from the shade of a tree, from a spot in the open air, or from a dwelling belonging to another individual entails a dukkaṭa. There is also a dukkaṭa for throwing a person’s belongings out from any of these places. (In all the cases mentioned in this paragraph, the assumption is that one is motivated by anger.)</p>
+
+<p>To evict anyone or anyone’s belongings from one’s own dwelling — or from one that belongs to an individual who has offered to let one take his/her belongings on trust — is not grounds for an offense.</p>
+
+<p>Perception as to whether the dwelling belongs to the Community is not a mitigating factor here (see <a href="../bmc/bmc1.8-1.html#pc4">Pācittiya&nbsp;4</a>).</p>
+
+<p><b>Intention.</b> There is no offense in evicting anyone when one’s primary impulse is not anger. Examples given in the non-offense clauses include evicting anyone — or the requisites of anyone — who is insane, unconscientious in his/her behavior, or a maker of quarrels, strife, and dissension in the Community. The Commentary adds here that one also has the right to throw the person out of the monastery as a whole if he/she is a maker of quarrels, strife, and dissension, but not if he/she is simply unconscientious.</p>
+
+<p>Also, one may without penalty evict one’s student or his belongings from his dwelling if he is not properly observing his duties.</p>
+
+<p>In all of these cases, the Sub-commentary notes, if anger happens to arise in one’s mind in the course of evicting the person, there is no offense as long as it is not the primary impulse.</p>
+
+<p>The texts do not mention the case where one’s primary motive is greed, and the origin story suggests why: The group-of-six bhikkhus' anger was simply a function of frustrated greed, and the two emotions would easily go together in any infraction of this rule.</p>
+
+<p>Causing a bhikkhu to be evicted from a dwelling belonging to the Community — when one’s primary impulse is anger — is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc18"></a>Pācittiya&nbsp;18 - Should any bhikkhu sit or lie down on a bed or bench with detachable legs on an (unplanked) loft in a dwelling belonging to the Community, it is to be confessed.</p>
+
+<p><b>Object.</b> A loft is a partial second story in a dwelling; an unplanked loft is one whose joists have not been covered with floorboards. A bed or bench with detachable legs on an unplanked loft is grounds for a pācittiya under this rule if it is in a dwelling belonging to a Community, a dukkaṭa if in a dwelling belonging to another individual, and no offense if in a dwelling belonging to oneself or to anyone who has offered to let one take his/her belongings on trust. Perception of the ownership of the dwelling, as in the preceding rules, is not an issue here.</p>
+
+<p>The purpose of this rule, as indicated by the origin story, is to guard against injury to a bhikkhu living under the loft: He might get hit on the head if any of the detachable legs fall down through the joists of the loft. Thus there is no offense if the loft is not high enough off the ground for a man of medium height to stand under it without hitting his head; if the floor of the loft is completely planked; if there is no one under the loft; if the area under the loft cannot be used as a dwelling (e.g., it is used solely for storage space, says the Commentary); if the bed or bench with detachable legs is on the ground; or if the legs of the bed or bench are securely fixed to their frame.</p>
+
+<p><b>Effort.</b> There is a question as to whether <i>sitting</i> and <i>lying down</i> would include standing as well, inasmuch as the non-offense clauses allow one “to stand there and hang things up or take them down.” The Commentary interprets “there” as a bed or bench with detachable legs, but standing on such a thing would seem to be even more dangerous than sitting or lying down on it. More probably: “there” refers to the unplanked loft.</p>
+
+<p>Some people have noted that although the bhikkhu in the origin story sat down hurriedly, the word <i>hurriedly</i> does not appear in the rule, and they speculate that it may have been dropped by mistake. If one is not allowed at all to sit or lie down on a bed or bench with detachable legs on an unplanked loft, they say, there would be no reason to have one there. Actually, beds with detachable legs do not sound like wise things to have on an unplanked loft, and perhaps the Buddha&rsquo;s purpose in formulating this rule was to discourage their being placed there in the first place.</p>
+
+<p>Sitting or lying down on a bed or bench with detachable legs on an unplanked loft in a dwelling belonging to the Community is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc19"></a>Pācittiya&nbsp;19 - When a bhikkhu is having a large dwelling built, he may supervise two or three layers of facing to plaster the area around the window frame and reinforce the area around the door frame the width of the door opening, while standing where there are no crops to speak of. Should he supervise more than that, even if standing where there are no crops to speak of, it is to be confessed.</p>
+
+<p>“Now at that time a chief minister who was Ven. Channa’s supporter was having a dwelling built for Ven. Channa. Ven. Channa had the finished dwelling covered with roofing material again and again, plastered again and again, so that the dwelling, overloaded, caved in. Then Ven. Channa, collecting grass and sticks, despoiled the barley field of a certain brahman. The brahman criticized and complained and spread it about, ’How can their reverences despoil our barley field?'… Bhikkhus… criticized and complained and spread it about, ’How can Ven. Channa have a finished dwelling covered with roofing material again and again, plastered again and again, so that the dwelling gets overloaded and caves in?’”</p>
+
+<p>This rule is an extension of <a href="../bmc/bmc1.5.html#sg7">Saṅghādisesa&nbsp;7</a>, giving further directions for how to go about building a dwelling for one’s own use when sponsored by another person. Because the rule deals with techniques used in building wattle and daub dwellings 2,500 years ago, the rule and its explanations in the Canon and commentaries contain terms whose meaning is uncertain at present. The syntax of the rule suggests one interpretation, the Commentary another, while the Vibhaṅga is non-committal on the points where the two interpretations differ. Because both interpretations make sense, we will present them both.</p>
+
+<p><b>What the rule seems to say.</b> The area 1.25 meters around the door frame is to be covered with up to three layers of plaster or roofing material to reinforce it so that when the door is blown open or shut it will not damage the wall or be loosened from its hinges. Five kinds of roofing material are mentioned in the Vibhaṅga: tiles, stones, lime (cement), grass, and leaves.</p>
+
+<p>Similarly, around the windows, an area the width of the window shutters is to be reinforced with up to three layers of plaster to protect it from being damaged when the shutters are blown open or shut. Three kinds of plaster were used in the Buddha&rsquo;s time — white, black, and ochre — and bhikkhus were allowed to apply them in a number of geometrical patterns, but not to use them to make obscene pictures of men and women on the walls (!) (Cv.VI.3.1–2). Although the bhikkhus were allowed to cover the entire walls and floor with this plaster, this rule gives directions only for the minimum area that should be covered to keep the walls strong.</p>
+
+<p><b>What the Commentary says.</b> Because the rule refers to roofing material, the Commentary assumes that it must refer to the roof of the dwelling, even though this assumption does violence to the syntax of the rule. Its interpretation: One may reinforce the door and window frames with as much plaster or roofing material as one likes, but may cover the roof with only three layers of roofing material. A relevant point from the Canon is the passage at Cv.VIII.3.3 stating that if at a later date the roof begins to leak, the resident bhikkhu — if he can — should re-roof it himself or arrange for someone else to do it for him. If he can do neither, though, there is no offense.</p>
+
+<p><b>The reasons for this rule.</b> The origin story suggests that the Buddha imposed the three-layer limit in order to prevent the dwelling from collapsing under the weight of too much roofing material, but the non-offense clauses show clearly that the rule is aimed at preventing bhikkhus from abusing the generosity of the person sponsoring the building work. In either case, the Commentary’s interpretation has its logic, in that an overloaded roof would be more burdensome to the dwelling and to the sponsor than an overloaded window or door frame would be.</p>
+
+<p>A supplementary regulation arising from the origin story is that one should not perform any building operations, including supervising, where crops are growing.</p>
+
+<p>The offenses here are as follows: a pācittiya for each piece of roofing beyond the allowable three layers, and a dukkaṭa for doing or directing the work while standing where crops are growing. These offenses apply regardless of whether one is doing the work oneself or having it done. They also apply whether one is building a new dwelling or having an old one repaired.</p>
+
+<p>Perception as to whether one has exceeded the allowable number of layers is not a factor here (see <a href="../bmc/bmc1.8-1.html#pc4">Pācittiya&nbsp;4</a>).</p>
+
+<p><b>Non-offenses.</b> According to the Vibhaṅga, these regulations do not apply to “an abode in a cave, a grass hut, (a dwelling) for the use of another, (a dwelling built) by means of one’s own resources, or anything other than a dwelling.” The Sub-commentary argues from the wording of the rule — its reference to “a large dwelling” — that the regulations also do not apply to small dwellings built to the standard measurement specified under <a href="../bmc/bmc1.5.html#sg6">Saṅghādisesa&nbsp;6</a>: i.e., no larger than 3 by 1.75 meters.</p>
+
+<p>When a bhikkhu is building or repairing a large dwelling for his own use, using resources donated by another, he may not reinforce the window or door frames with more than three layers of roofing material or plaster. To exceed this is a pācittiya offense.</p>
+
+<p class="rule"><a id="pc20"></a>Pācittiya&nbsp;20 - Should any bhikkhu knowingly pour water containing living beings — or have it poured — on grass or on clay, it is to be confessed.</p>
+
+<p>This is an offense with four factors.</p>
+
+<p><b>Object.</b> water containing living creatures. The KCommentary’s contribution to the next factor shows that this includes things like mosquito larvae, but not beings so small they cannot be seen.</p>
+
+<p><b>Perception.</b> <i>Knowing,</i> according to the Vibhaṅga, means that one either knows on one’s own or has been told that the living creatures are there. The KCommentary adds two points: (1) <i>knowing on one’s own</i> means that one has either seen or heard them; and (2) <i>knowing</i> also includes knowing that they will die from the factor of effort, defined below.</p>
+
+<p>If one is in doubt as to whether water contains living beings (e.g., the water is murky or in a dark place; it contains seeds that bear a resemblance to insects), then to use it in a way that would cause their death if they <i>were</i> there is to commit a dukkaṭa. If one thinks that the water contains living beings when it actually doesn’t, the penalty for using it in such a way is also a dukkaṭa.</p>
+
+<p><b>Effort.</b> Because of a peculiarity of Pali grammar, the Commentary states that, in addition to the above reading, this rule can also be interpreted as reading: “Should any bhikkhu knowingly pour grass or clay — or have it poured — in water containing living beings, it is to be confessed.” It also states that <i>grass and clay</i> in the context of this second reading would include any material that would cause death to living beings in the water. There are two objections to the Commentary’s second reading: One is that it defies the natural word order of a prose sentence in canonical Pali; the other is that the Pali word for “pour” — <i>siñcati</i> — is used only for water and not for solids like grass and clay. Still, even if this second reading is not quite grammatical, the Great Standards could be invoked for including it under this rule to prevent the pouring of lethal pollutants into water. Thus actions covered by this rule would include, under the first reading, such things as emptying old water from a flower vase onto the ground or pouring water into a basin filled with cement-mix; and, under the second reading, pouring a toxic chemical into the water.</p>
+
+<p>Unlike some of the other rules that deal with giving orders, simply giving the order to pour is enough to fulfill this factor. Thus, for example, a bhikkhu who tells someone else to dump an aquarium of fish on the floor incurs a pācittiya for giving the order and another pācittiya when the other person does as told.</p>
+
+<p><b>Intention.</b> This factor is fulfilled simply by the immediate aim of pouring the water or having it poured (or of pouring “grass and clay” into the water or having it poured).</p>
+
+<p>As the KCommentary notes, one need not have murderous motives toward the living beings in order to fulfill this factor. For example, if after perceiving that the water contains insects, one chooses to ignore their existence and pours the water on a burning log — not to kill the insects, but to put out the fire — one commits an offense all the same.</p>
+
+<p>Result is not a factor here. Whether the living beings actually die is of no consequence in determining the offense.</p>
+
+<p><b>Non-offenses.</b> There is no offense in using water containing living beings in any of the ways covered by this rule —</p>
+
+<p><i>unknowingly</i> — e.g., not knowing that it contains living beings; pouring a toxic chemical into the water thinking it to be harmless;
+<br><i>unthinkingly</i> — e.g., heating a kettle of water on the stove, seeing that it has tadpoles in it and in a knee-jerk reaction dumping the water out on the ground so that they won’t be boiled to death; or
+<br><i>unintentionally</i> — e.g., accidentally knocking over a goldfish bowl.</p>
+
+<p>However, a bhikkhu should always check water before using it. Water strainers are discussed in BMC2, <a href="../bmc/bmc2.3.html">Chapter&nbsp;3</a>.</p>
+
+<p><b>Watering plants.</b> The topic of watering plants comes up in the Commentary’s discussion of the bad habits of the bhikkhus at Kīṭāgiri mentioned under <a href="../bmc/bmc1.5.html#sg13">Saṅghādisesa&nbsp;13</a>. There it says that even if the water has no discernable life, to use it or have someone else use it to water plants with the purpose of corrupting families with gifts from the plant entails a dukkaṭa. In cases of this sort, one is not allowed to use <i>kappiya-vohāra</i> or any other way of indicating one’s desire that the plant be watered.</p>
+
+<p>If one wants to use the fruits or flowers of the plant in other ways — to eat the fruit oneself, to make a gift of fruit to the Community, to use the flowers as an offering to a Buddha image, etc. — one may not water it oneself, but there is no offense in getting someone else to water it if one uses <i>kappiya- vohāra.</i> (“Look at how dry this plant is !” “If it doesn’t get any water, it’s going to die.”)</p>
+
+<p>If one wants the plant to grow for other reasons — for the sake of its shade or as part of a decorative garden or forest — there is no offense in watering it oneself as long as one uses water with no discernable life in it. Two of the ancient commentaries add that if one simply desires shade, a garden, or a forest, one may plant the plant oneself as long as one places it in earth that would not count as “genuine soil” (<i>jātā paṭhavī</i>) under <a href="../bmc/bmc1.8-1.html#pc10">Pācittiya&nbsp;10</a>.</p>
+
+<p>Pouring water that one knows to contain living beings — or having it poured — on grass or clay is a pācittiya offense. Pouring into such water anything that would kill the beings — or having it poured — is also a pācittiya offense.</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc1.8-1.html#content"></a><a id="next-sutta" href="../bmc/bmc1.8-3.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc1.html">BMC 1</a>Chapter&nbsp;1.8.2: Pācittiya - The Living Plant Chapter</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

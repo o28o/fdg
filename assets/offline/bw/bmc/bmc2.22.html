@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.22</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+  	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+ 	<p>&nbsp;</p>
+
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc2.12.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Community Transactions</a>
+<a href="../bmc/bmc2.13.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Territories</a>
+<a href="../bmc/bmc2.14.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Ordination</a>
+<a href="../bmc/bmc2.15.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Uposatha</a>
+<a href="../bmc/bmc2.16.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Invitation</a>
+<a href="../bmc/bmc2.17.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Kaṭhina</a>
+<a href="../bmc/bmc2.18.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Community Officials</a>
+<a href="../bmc/bmc2.19.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Penance and Probation</a>
+<a href="../bmc/bmc2.20.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disciplinary Transactions</a>
+<a href="../bmc/bmc2.21.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Schism</a>
+<a href="../bmc/bmc2.22.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Inheritance</a>
+</div>
+
+ 	<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;22: Inheritance</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p><b>Belongings.</b> The Canon states that when a bhikkhu passes away, his belongings all go to the Community of bhikkhus. The Commentary adds that this principle holds regardless of where the bhikkhu dies. If he happens to die while visiting a nunnery, his belongings still go to the Community of bhikkhus. Similarly, if a bhikkhunī dies while visiting a monastery, her belongings go to the Community of bhikkhunīs. Furthermore, according to the Canon, the belongings of a dead male novice all go to the Community of bhikkhus; the belongings of a dead female trainee or female novice, to the Community of bhikkhunīs.</p>
+
+<p>The Commentary to Cv.X.11 adds that even if the dying bhikkhu or novice says: “After my death, may my belongings go to so-and-so,” the request is invalid. Thus, from the point of view of the Vinaya, a bhikkhu’s last will and testament would have no force. The civil law in Buddhist countries recognizes the Community’s claim on a dead bhikkhu’s property, but this claim has yet to be adequately tested in courts of law in non-Buddhist countries. (If the highest court in the land were to rule against the Community’s claim here, this would be an appropriate area to apply the principle of “complying with kings,” stated in Mv.III.4.2, and not to further contest the issue.)</p>
+
+<p>The Vinaya-mukha discusses a tradition, based on a loophole included in the Commentary to <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>, designed to get around the Commentary’s own ruling against last wills and testaments: A bhikkhu, on his death-bed, may say: “I give my belongings to so-and-so.” As long as he does not add the condition: “after my death,” the gift is valid. If he happens to recover from his illness after giving the gift, the recipient is free to return the items or not, as he sees fit. If the ill bhikkhu dies, the belongings go to the recipient and not to the Community. If, however, the bhikkhu adds the condition “after my death” to his statement, his belongings after his death go to the Community, and the intended recipient has no rights over them.</p>
+
+<p>When the Community receives a dead bhikkhu’s belongings, it may bestow his bowl and three robes on those who cared for him, in honor of their service not only to him but also to the Community in fulfilling the bhikkhus' obligation to care for one another (see <a href="../bmc/bmc2.5.html">Chapter&nbsp;5</a>). The procedure is as follows: One of the bhikkhus who acted as the dying bhikkhu’s nurses approaches the Community, carrying the dead bhikkhu’s robes and bowl. After he informs them of the death, he presents the robes and bowl to them. One of the members of the Community recites the transaction statement, consisting of a motion and proclamation, bestowing the robes and bowl on those who cared for the bhikkhu when he was sick. This statement is given in Appendix I.</p>
+
+<p>The Commentary here discusses the question of who has a right to a share in the robes and bowl. If the whole Community had set up a roster for nurses, it says, there are differing opinions as to who counts as caring for the sick. Some teachers say that everyone in the Community deserves a share, even those who were not put on the roster. Others (and this makes more sense) say that shares should go only to those put on the roster who actually observed their duties. All sides agree that whoever helps — whether bhikkhu, novice, or lay person — should get a share. (The Canon states that each novice involved has a right to a share equal to that of a bhikkhu.) If one person took on a special burden in looking after the sick bhikkhu, he/she should get a special share. Bhikkhus who simply sent medicine don’t count as “caring for the sick.” Those who helped the nurses in washing robes, boiling medicine, etc., do.</p>
+
+<p>As for the dead bhikkhu’s remaining belongings, the Canon says that all his light/inexpensive articles (<i>lahubhaṇḍa</i>) and light requisites should be divided among the Community that is present. His heavy/expensive articles (<i>garubhaṇḍa</i>) — this would include any buildings belonging to him — belong to the Saṅgha of all four directions, both those who have come and those who haven’t, so they are not to be divided up or distributed.</p>
+
+<p>Here the Commentary adds that if the dead bhikkhu’s bowl and robes are of low value and the remaining goods of high value, the Community should take funds from the remaining goods to provide a decent bowl and set of robes to the nurse-bhikkhu. Belongings left by a dead bhikkhu in another monastery belong to the Community in that monastery. If he held ownership of items in common with someone else, those items go to the other owner, not to the Community.</p>
+
+<p>The same principles hold true for the belongings of a dead novice.</p>
+
+<p>One exemption to this arrangement is that if a bhikkhu has sent an item through a second bhikkhu to a third bhikkhu, saying: “Give this to so-and-so,” and then dies before the item reaches the hand of the third bhikkhu, the second bhikkhu may take the item as an inheritance from the first. Similarly, if the first bhikkhu sends the item saying: “I give this to so-and-so,” and the third bhikkhu dies before the second bhikkhu can get the item to him, the second bhikkhu can take the item as an inheritance from the third. For further details on this arrangement, see <a href="../bmc/bmc1.4.html#pr2">Pārājika 2</a>.</p>
+
+<p><b>Funerals.</b> Unlike some of the other early Vinayas, the Pali Vinaya contains no rules on how to conduct the funeral of a dead bhikkhu or novice. Writers have speculated as to why this is so, but the speculation tends to say more about the writers than about the Vinaya. The practical upshot is that the Community (or the bhikkhu’s friends, relatives, etc.) may dispose of his body as they see fit in line with local custom and law. <a href="../dn/dn16.html">DN16</a> states that an arahant, after death, deserves to have a stūpa built over his/her remains, but the Vinaya contains no rule to enforce this.</p>
+
+<p>One issue that arises at present is the custom of willing one’s body to medical science. Because there is no rule that the bhikkhu’s body (as opposed to his belongings) belongs to the Community, if he has willed his body in this way his wishes should be honored.</p>
+
+<p>Another issue arising at present is the cost of a funeral. In the Buddha&rsquo;s time, funerals could cost nothing. The body would either be cremated, in which case wood was easy to find in the ubiquitous forest, or the body would be exposed in a charnel ground, which involved little effort and no expense. At present, with the high cost of funerals, the tradition in Thailand is a useful adaptation of the Vinaya’s rules. There, if no one else volunteers to sponsor a dead bhikkhu’s funeral, the Community itself is the sponsor, and the funds for the funeral come first from his belongings. Only if any of his light articles and requisites remain after the funeral are they divided among the Community’s members.</p>
+
+<h2>Rules</h2>
+<p>“The Community is the owner of the robes and bowl of a bhikkhu who has passed away. But those who tend to the sick are of great service. I allow that the Community give the three robes and the bowl to those who tend to the sick.” Transaction statement — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.2</p>
+
+<p>“The Community is the owner of the robe and bowl of a novice who has passed away. But those who tend to the sick are of great service. I allow that the Community give the robe and bowl to those who tend to the sick.” Transaction statement — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.3</p>
+
+<p>“I allow that a novice who tends to the sick be given an equal share.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.4</p>
+
+<p>“I allow that the Community give the three robes and the bowl to those who tend to the sick. Whatever light goods and light requisites (§) are there may be divided among the Community that is present.</p>
+
+<p>“Whatever heavy goods and heavy requisites are there are for the Community of the four directions, both those who have come and those who haven’t. They should not be transferred, they should not be divided up.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.5</p>
+
+<p>“If a bhikkhunī, as she is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhus is not the owner there. They belong to the Community of bhikkhunīs. If a female trainee… If a female novice, as she is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhus is not the owner there. They belong to the Community of bhikkhunīs.</p>
+
+<p>“If a bhikkhu, as he is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhunīs is not the owner there. They belong to the Community of bhikkhus. If a male novice… If a male lay follower… If a female lay follower… If anyone else, as he is dying, should say, ’After I am gone, may my requisites belong to the Community,’ the Community of bhikkhunīs is not the owner there. They belong to the Community of bhikkhus.” — Cv.X.11</p>
+
+<p>“There is the case where a bhikkhu sends robe-cloth in the hand of (another) bhikkhu, (saying,) 'Give this robe-cloth to so-and-so.' Along the way, he (the second bhikkhu) hears that he who sent it has died. If he determines it as inherited robe-cloth (§) from the one who sent it, it is rightly determined. If he takes it on trust (§) in the one for whom it was sent, it is wrongly taken.</p>
+
+<p>“There is the case where a bhikkhu sends robe-cloth in the hand of a bhikkhu, (saying,) 'Give this robe-cloth to so-and-so.' Along the way, he (the second bhikkhu) hears that the one for whom it was sent has died. If he determines it as inherited robe-cloth from the one for whom it was sent, it is wrongly determined. If he takes it on trust in the one who sent it, it is rightly taken.</p>
+
+<p>“There is the case where a bhikkhu sends robe-cloth in the hand of a bhikkhu, (saying,) 'Give this robe-cloth to so-and-so.' Along the way, he (the second bhikkhu) hears that both have died. If he determines it as inherited robe-cloth from the one who sent it, it is rightly determined. If he determines it as inherited robe-cloth from the one for whom it was sent, it is wrongly determined …</p>
+
+<p>“There is the case where a bhikkhu sends robe-cloth in the hand of a bhikkhu, (saying,) 'I give this robe-cloth to so-and-so.' Along the way, he (the second bhikkhu) hears that he who sent it has died. If he determines it as inherited robe-cloth from the one who sent it, it is wrongly determined. If he takes it on trust in the one for whom it was sent, it is rightly taken.</p>
+
+<p>“There is the case where a bhikkhu sends robe-cloth in the hand of a bhikkhu, (saying,) 'I give this robe-cloth to so-and-so.' Along the way, he (the second bhikkhu) hears that the one for whom it was sent has died. If he determines it as inherited robe-cloth from the one for whom it was sent, it is rightly determined. If he takes it on trust in the one who sent it, it is wrongly taken.</p>
+
+<p>“There is the case where a bhikkhu sends robe-cloth in the hand of a bhikkhu, (saying,) 'I give this robe-cloth to so-and-so.' Along the way, he (the second bhikkhu) hears that both have died. If he determines it as inherited robe-cloth from the one who sent it, it is wrongly determined. If he determines it as inherited robe-cloth from the one for whom it was sent, it is rightly determined.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.21.html#content"></a><a id="next-sutta" href="../bmc/bmc2.23.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;22: Inheritance</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

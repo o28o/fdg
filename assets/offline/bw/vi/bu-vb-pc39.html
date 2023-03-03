@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Pācittiya&nbsp;39</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Pācittiya&nbsp;39: Not to ask for food of superior quality for oneself.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by I.B. Horner.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p><span class="parno">1.</span><span class="ms"> Bu-Pc.39, Bu-Pc.39.1, Bu-Pc.39.1.1, BD.2.341</span>… at Sāvatthī in the Jeta Grove in Anāthapiṇḍika’s monastery. Now at that time the group of six monks, having asked for sumptuous foods for themselves, ate them. People … spread it about, saying:</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>"How can the recluses, sons of the Sakyans, having asked for sumptuous foods for themselves, eat them? Who is not fond of well-cooked things? Who does not like sweet things?" Monks heard these people who … spread it about. Those who were modest monks … spread it about, saying:</p>
+
+<hr>
+<p>"How can this group of six monks, having asked for … eat them?"
+ …</p>
+
+<p>"Is it true, as is said, that you, monks, having asked for … ate them?"</p>
+
+<hr>
+<p>"It is true, lord."</p>
+
+<p>The enlightened one, the lord, rebuked them, saying:</p>
+
+<p>"How can you, foolish men, having asked for … eat them? It is not, foolish men, for pleasing those who are not (yet) pleased … And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>Whatever are sumptuous foods, that is to say, ghee, fresh butter, oil, honey, molasses, fish, meat, milk, curds—whatever monk, having asked for sumptuous foods such as these for himself, should eat them, there is an offence of expiation."</p>
+
+<p id="p4"><span class="parno">4</span>And thus this rule of training for monks came to be laid down by the lord.</p>
+
+<p id="p5"><span class="parno">5</span>Now at that time monks became ill. Monks, enquiring after the ill ones, spoke thus to the ill monks:</p>
+
+<p>"We hope that your reverences are better, we hope that you are keeping going."</p>
+
+<p>"Formerly, your reverences, we, having asked for sumptuous foods for ourselves, ate them. Therefore there came to be comfort for us. But now it is forbidden by the lord, and being scrupulous, we do not ask, therefore there comes to be no comfort for us."</p>
+
+<p>They told this matter to the lord. Then the lord, on this occasion, having given reasoned talk, addressed the monks, saying:</p>
+
+<p>"I allow you, monks, when a monk is ill, having asked for sumptuous foods for himself, to eat them. And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p6"><span class="parno">6</span><span class="rule">"Whatever are sumptuous foods, that is to say, ghee, fresh butter, oil, honey, molasses, fish, meat, milk, curds—whatever monk who is not ill, having asked for sumptuous foods such as these for himself, should eat them, there is an offence of expiation."</span></p>
+
+<p><span class="parno">7&ndash;16.</span><span style="display:none" class="ms">Bu-Pc.39.3, Bu-Pc.39.3.1</span> Whatever are sumptuous foods: <span class="term">ghee</span> is called <span class="gloss">ghee from cows or ghee from she-goats or ghee from buffaloes, ghee from those whose meat is allowable.</span> <span class="term">Fresh butter</span> means <span class="gloss">fresh butter from just these.</span> <span class="term">Oil</span> means <span class="gloss">sesamum oil, oil of mustard seeds, oil containing honey, oil of the castor-oil plant, oil from tallow.</span> <span class="term">Honey</span> means <span class="gloss">honey of bees.</span> <span class="term">Molasses</span> means <span class="gloss">what is produced from sugar-cane.</span> <span class="term">Fish</span> means <span class="gloss">it is called one that lives in water.</span> <span class="term">Meat</span> means <span class="gloss">the meat of those whose meat is allowable.</span> <span class="term">Milk</span> means <span class="gloss">milk of cows or milk of she-goats or milk of buffaloes, milk of those whose meat is allowable.</span> <span class="term">Curds</span> means <span class="gloss">curds from just these.</span></p>
+
+<p><span class="term">Whatever</span> means: <span class="gloss"> … is monk to be understood in this case.</span></p>
+
+<p id="p17"><span class="parno">17</span><span class="term">Sumptuous foods such as these</span> means: <span class="gloss">sumptuous foods like these.</span></p>
+
+<hr>
+<p><span class="parno">18&ndash;20</span><span class="term">Not ill</span> means: <span class="gloss">for whom there comes to be comfort without sumptuous foods.</span><span class="term">Ill</span> means: <span class="gloss">for whom there does not come to be comfort without sumptuous foods.</span><span class="term">Not ill, asks for himself</span>,<span class="gloss">for every request, there is an offence of wrong-doing. If he accepts (alms) thinking, "I will eat on acquisition," there is an offence of wrong-doing. For every mouthful, there is an offence of expiation.</span></p>
+
+<p><span class="parno">21&ndash;22</span>If he thinks that he is not ill when he is not ill, (and) having asked for sumptuous foods for himself, eats them, there is an offence of expiation. If he is in doubt as-to whether he is not ill … If he thinks that he is ill when he is not ill … expiation. If he thinks that he is not ill when he is ill, there is an offence of wrong-doing. If he is in doubt as to whether he is ill, there is an offence of wrong-doing. If he thinks that he is ill when he is ill, there is no offence.</p>
+
+<p id="p23"><span class="parno">23</span>There is no offence if he is ill; if having become ill, having asked, one who is not ill eats (the alms); if he eats the remainder of an ill (monk’s meal); if they belong to relations; if they are invited; if it is for the good of another; if it is by means of his own property; if he is mad, if he is the first wrong-doer.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">24</span>The Ninth</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p><span class="parno">1</span><span class="ms">p_2V_824, msdiv257</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena chabbaggiyā bhikkhū paṇītabhojanāni attano atthāya viññāpetvā bhuñjanti. Manussā ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma samaṇā sakyaputtiyā paṇītabhojanāni attano atthāya viññāpetvā bhuñjissanti. Kassa sampannaṁ na manāpaṁ, kassa sāduṁ na ruccatī"ti.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_2V_825</span>Assosuṁ kho bhikkhū tesaṁ manussānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti: </p>
+
+<hr>
+<p>"Kathañhi nāma chabbaggiyā bhikkhū paṇītabhojanāni attano atthāya viññāpetvā bhuñjissantī"ti … pe …</p>
+
+<p>"Saccaṁ kira tumhe, bhikkhave, paṇītabhojanāni attano atthāya viññāpetvā bhuñjathā"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe …</p>
+
+<p>Kathañhi nāma tumhe, moghapurisā, paṇītabhojanāni attano atthāya viññāpetvā bhuñjissatha. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_2V_826</span><span class="rule">"Yāni kho pana tāni paṇītabhojanāni, seyyathidaṁ— sappi navanītaṁ telaṁ madhu phāṇitaṁ maccho maṁsaṁ khīraṁ dadhi. Yo pana bhikkhu evarūpāni paṇītabhojanāni attano atthāya viññāpetvā bhuñjeyya, pācittiyan"</span>ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_2V_827</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_828, msdiv258</span>Tena kho pana samayena bhikkhū gilānā honti. Gilānapucchakā bhikkhū gilāne bhikkhū etadavocuṁ:</p>
+
+<p>"kaccāvuso, khamanīyaṁ, kacci yāpanīyan"ti?</p>
+
+<p>"Pubbe mayaṁ, āvuso, paṇītabhojanāni attano atthāya viññāpetvā bhuñjāma, tena no phāsu hoti; idāni pana ‘bhagavatā paṭikkhittan’ti kukkuccāyantā na viññāpema, tena no na phāsu hotī"ti.</p>
+
+<p>Bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi: </p>
+
+<p>"Anujānāmi, bhikkhave, gilānena bhikkhunā paṇītabhojanāni attano atthāya viññāpetvā bhuñjituṁ. Evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p class="rule"><span class="parno">6</span><span class="ms">p_2V_829, msdiv259</span>"Yāni kho pana tāni paṇītabhojanāni, seyyathidaṁ— sappi navanītaṁ telaṁ madhu phāṇitaṁ maccho maṁsaṁ khīraṁ dadhi. Yo pana bhikkhu evarūpāni paṇītabhojanāni agilāno attano atthāya viññāpetvā bhuñjeyya, pācittiyan" ti</p>
+
+<p><span class="parno">7</span><span class="ms">p_2V_830, msdiv260</span><b>Yāni kho pana tāni paṇītabhojanānī</b>'ti <b>sappi</b> nāma gosappi vā ajikāsappi vā mahiṁsasappi vā, yesaṁ maṁsaṁ kappati tesaṁ sappi.</p>
+
+<p><span class="parno">8</span><span class="ms">p_2V_831</span><b>Navanītaṁ</b> nāma tesaññeva navanītaṁ.</p>
+
+<p><span class="parno">9</span><span class="ms">p_2V_832</span><b>Telaṁ</b> nāma tilatelaṁ sāsapatelaṁ madhukatelaṁ eraṇḍatelaṁ vasātelaṁ.</p>
+
+<p><span class="parno">10</span><span class="ms">p_2V_833</span><b>Madhu</b> nāma makkhikāmadhu.</p>
+
+<p><span class="parno">11</span><span class="ms">p_2V_834</span><b>Phāṇitaṁ</b> nāma ucchumhā nibbattaṁ.</p>
+
+<p><span class="parno">12</span><span class="ms">p_2V_835</span><b>Maccho</b> nāma udako vuccati.</p>
+
+<p><span class="parno">13</span><span class="ms">p_2V_836</span><b>Maṁsaṁ</b> nāma yesaṁ maṁsaṁ kappati, tesaṁ maṁsaṁ.</p>
+
+<p><span class="parno">14</span><span class="ms">p_2V_837</span><b>Khīraṁ</b> nāma gokhīraṁ vā ajikākhīraṁ vā mahiṁsakhīraṁ vā, yesaṁ maṁsaṁ kappati, tesaṁ khīraṁ.</p>
+
+<p><span class="parno">15</span><span class="ms">p_2V_838</span><b>Dadhi</b> nāma tesaññeva dadhi.</p>
+
+<p><span class="parno">16</span><span class="ms">p_2V_839</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<p><span class="parno">17</span><span class="ms">p_2V_840</span><b>Evarūpāni paṇītabhojanānī</b>'ti tathārūpāni paṇītabhojanāni.</p>
+
+<hr>
+<p><span class="parno">18</span><span class="ms">p_2V_841</span><b>Agilāno</b> nāma yassa vinā paṇītabhojanāni phāsu hoti.</p>
+
+<p><span class="parno">19</span><span class="ms">p_2V_842</span><b>Gilāno</b> nāma yassa vinā paṇītabhojanāni na phāsu hoti.</p>
+
+<p><span class="parno">20</span><span class="ms">p_2V_843</span>Agilāno attano atthāya viññāpeti, payoge dukkaṭaṁ. Paṭilābhena "bhuñjissāmī"ti paṭiggaṇhāti, āpatti dukkaṭassa. Ajjhohāre ajjhohāre āpatti pācittiyassa.</p>
+
+<p><span class="parno">21</span><span class="ms">p_2V_844, msdiv261</span>Agilāno agilānasaññī paṇītabhojanāni attano atthāya viññāpetvā bhuñjati, āpatti pācittiyassa. Agilāno vematiko paṇītabhojanāni attano atthāya viññāpetvā bhuñjati, āpatti pācittiyassa. Agilāno gilānasaññī paṇītabhojanāni attano atthāya viññāpetvā bhuñjati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">22</span><span class="ms">p_2V_845</span>Gilāno agilānasaññī, āpatti dukkaṭassa. Gilāno vematiko, āpatti dukkaṭassa. Gilāno gilānasaññī anāpatti.</p>
+
+<p><span class="parno">23</span><span class="ms">p_2V_846, msdiv262</span>Anāpatti— gilānassa, gilāno hutvā viññāpetvā agilāno bhuñjati, gilānassa sesakaṁ bhuñjati, ñātakānaṁ pavāritānaṁ aññassatthāya attano dhanena, ummattakassa, ādikammikassāti.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">24</span><span class="ms">p_2V_847</span>Paṇītabhojanasikkhāpadaṁ niṭṭhitaṁ navamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-pc38.html#content"></a><a id="next-sutta" href="../vi/bu-vb-pc40.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-pc.html">Pācittiyas</a>Pācittiya&nbsp;39
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

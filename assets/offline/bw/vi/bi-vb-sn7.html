@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Sanghādisesa 7</title>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<!-- Loading third party fonts -->
+ 			 			<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 			<!-- Loading main and menu stylesheets -->
+ 			<link rel="stylesheet" href="../css/w3.css">
+ 			<link rel="stylesheet" href="../css/css.css">
+ 			<link rel="stylesheet" href="../css/menu.css">
+ 			<script src="../js/jquery-1.10.2.min.js"></script>
+ 			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+ <body>
+ 
+ <!-- header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 		<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 				<ul id="css3menu0">
+ 					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 					<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 				<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 					<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 						<ul>
+ 							<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 							<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 							<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 							<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 							<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 							<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 							<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 							<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 							<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 							<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 							<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 						<ul>
+ 							<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 							<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 							<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 							<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 							<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 							<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 							<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 						<ul>
+ 							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 							<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 							<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 
+ 						</ul>
+ 					</li>
+ 				</ul>
+ 				</div>
+ 			</div> <!--navbar-->
+ 
+ <!-- Sidebar (hidden by default) -->
+ 	<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 			<div class="w3-bar-block w3-white">
+ 				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 				<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 				<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 			</div>
+ 	</nav>
+ 
+ 		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <p>&nbsp;</p>
+ 
+ <h3 id="#BI-VBheading">Bhikkhuni Vibhanga</h3>
+ 		<div class="w3-bar-white bwnav"><!-- Div for lower BI-VB-SN sub-navigation -->
+ 		<a href="../vi/bi-vb-pj.html#BI-VBheading" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 		<a href="../vi/bi-vb-sn.html#BI-VBheading" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Sanghādisesas</a>
+ 		<a href="../vi/bi-vb-np.html#BI-VBheading" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pc.html#BI-VBheading" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pd.html#BI-VBheading" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 		<a href="../vi/bi-vb-sk.html#BI-VBheading" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 		<a href="../vi/bi-vb-as.html#BI-VBheading" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+ 	</div><!-- End div for lower BI-VB-SN sub-navigation -->
+ 
+ <!--      BI-VB-SN content begins here      -->
+ 
+ <div id="content">
+
+
+<h3>Bhikkhuni Vibhanga - Sanghādisesa 7:<span class="note"><span class="details"><span class="p">The Bhikkhu's Sanghādisesa 5</span></span></span> Acting as a Go-between.</h3>
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<div>
+<h3>Origin story</h3>
+<h4>First sub-story</h4>
+</div>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍika’s Park. At that time Venerable Udāyī associated with and visited a number of families in Sāvatthī. When he saw a young man without a wife or a young woman without a husband, he would praise the young woman in the presence of the parents of the young man: "The young woman of such-and such a family is beautiful, intelligent, skilled, and diligent. She is suitable for your son." They said: "Bhante, they don’t know who we are. If you would persuade them to give the girl, we would take her for our son."</p>
+
+<p>And he praised the young man in the presence of the parents of the young woman: "The young man of such-and-such a family is handsome, intelligent, skilled, and diligent. He is suitable for your daughter." They said: "Bhante, they don’t know who we are, and we would be ashamed to speak to them for the sake of the girl. But if you would persuade them to ask us, we would give our girl to the young man." In this way he arranged for the taking of a bride, for the giving of a bride, and for marriage.</p>
+
+<p id="p2"><span class="parno">2</span>At that time a certain former courtesan had a beautiful daughter. Then some Ājīvaka lay-disciples came from another village and said to that courtesan: "Lady, give your girl for our boy." She replied, "Sirs, I don’t know who you are. And I will not give my only daughter to be taken to another village."</p>
+
+<hr>
+<p>Some people asked them, "Sirs, why have you come here?"</p>
+
+<p>"We are here because we have asked that courtesan to give her daughter for our son, but she refused."</p>
+
+<p>"Why did you ask the courtesan? You should speak to Venerable Udāyī. He will persuade her."</p>
+
+<p id="p3"><span class="parno">3</span>Ājīvaka disciples approached Venerable Udāyī and said: "Bhante, we have asked that courtesan here to give her daughter for our son, but she has refused. It would be good, bhante, if you would persuade her to give her daughter."</p>
+
+<hr>
+<p id="p4"><span class="parno">4</span>Venerable Udāyī went to that courtesan and said: "Why didn’t you give your daughter to them?"</p>
+
+<p>"I don’t know who they are, Venerable, and I will not give my only daughter to be taken to another village."</p>
+
+<hr>
+<p>"Give her to them. I know them."</p>
+
+<p>"If you know them, bhante, I will give her."</p>
+
+<p>She then gave her daughter to those Ājīvaka disciples, and they took her away. For a month they treated her like a daughter-in-law, but thereafter like a slave.</p>
+
+<p id="p5"><span class="parno">5</span>The girl sent a messenger to her mother, saying, "I am miserable and suffering; I have no happiness. For a month they treated me like a daughter-in-law, but after that like a slave. Come, mother, and take me away."</p>
+
+<p>The courtesan went to those Ājīvaka and said: "Sirs, do not treat my girl like a slave; treat her like a daughter-in-law."</p>
+
+<p>"We deal with the ascetic, not with you. Go away! We donʼt know you." Being dismissed she returned to Sāvatthī.</p>
+
+<hr>
+<p id="p6"><span class="parno">6</span>A second time the girl sent a messenger to her mother, saying, "I am miserable … take me away."</p>
+
+<p>Then that courtesan approached Venerable Udāyī and said: "Bhante, my girl is miserable and suffering; she has no happiness. They treated her like a daughter-in-law for a month, but then like a slave. Bhante, please tell them to treat her like a daughter-in-law."</p>
+
+<p id="p7"><span class="parno">7</span>Venerable Udāyī then went to the Ājīvakas and said: "Sirs, do not treat this girl like a slave, but like a daughter-in-law."</p>
+
+<p>"We deal with the courtesan, not with you. An ascetic should not get involved. An ascetic should be a good ascetic. Go away! We donʼt know you." Being dismissed he returned to Sāvatthī.</p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>For a third time that girl sent a messenger to her mother, saying, "I am miserable … take me away." For a second time the courtesan approached Venerable Udāyī and said: "Bhante … tell them to treat her like a daughter-in-law."</p>
+
+<hr>
+<p>"When I went the first time, they dismissed me. Go yourself. I am not going."</p>
+
+<hr>
+<p id="p9"><span class="parno">9</span>Then that courtesan complained and criticised him: "May Venerable Udāyī be miserable, may he suffer, may hehave no happiness, just as my girl is miserable, suffering, and has no happiness, because of her nasty mother-in-law, nasty father-in-law, and nasty husband."</p>
+
+<hr>
+<p><span class="parno">10–11</span>And the girl, too, complained and criticized him in the same way, as did other women who were unhappy with their mothers-in-law, their fathers-in-law, and their husbands.</p>
+
+<hr>
+<p id="p12"><span class="parno">12</span>But those women who were happy with their mothers-in-law, their fathers-in-law, and their husbands wished him well: "May Venerable Udāyī be happy and well, just as we are happy and well, because of our good mothers-in-law, good fathers-in-law, and good husbands."</p>
+
+<p id="p13"><span class="parno">13</span>The monks heard that some women were criticising him whereas others were wishing him well. Then the monks of few desires … complained and criticised him: "How can Venerable Udāyī act as a go-between?"</p>
+
+<p id="p14"><span class="parno">14</span>They informed the Master. The Master convened the Saṅgha and questioned Venerable Udāyī:</p>
+
+<hr>
+<p>Is it true, Udāyī, that you acted as a matchmaker?”
+
+<br><br>“It’s true, Master.”
+
+<br><br>The Buddha, the Master, rebuked him: " … Foolish man, how could you act as a go-between for a one-off relationship? This will not give rise to confidence in those without it … And so, monks, this training rule should be recited thus:</p>
+
+<h4 >Preliminary ruling</h4>
+<p class="rule"><span class="parno">15</span>"If a monk acts as a go-between on behalf of a man or on behalf of a woman, for marriage or for an affair, he commits an offence entailing suspension."</p>
+
+<p class="endsutta"><span class="parno">16</span>In this way the Master laid down this training rule for the monks.</p>
+
+<h4 >Second sub-story</h4>
+
+<p id="p17"><span class="parno">17</span>At one time a number of low-minded men who were amusing themselves in a pleasure grove sent a messenger to a prostitute: "Come, let us enjoy ourselves in the pleasure grove."</p>
+
+<p>She replied: "Sirs, I don’t know who you are. I have much property and many belongings, and I don’t wish to go outside the city. I won’t go."</p>
+
+<hr>
+<p id="p18"><span class="parno">18</span>The messenger informed those men. Then a certain man said to them: "Sirs, why did you ask the prostitute? You should have spoken to Venerable Udāyī. He will persuade her."</p>
+
+<p>A certain lay-follower said: "Donʼt say that. Thatʼs not allowable for the Sakyan ascetics. Venerable Udāyī wonʼt do it." And they made a bet on whether he would.</p>
+
+<p id="p19"><span class="parno">19</span>"Bhante, while we were enjoying ourselves in the pleasure grove, we sent a messenger to such-and-such a prostitute, asking her to come, but she refused. Would you please persuade her?"</p>
+
+<hr>
+<p id="p20"><span class="parno">20</span>Venerable Udāyī went to that prostitute and said: "Why donʼt you go to those men?"</p>
+
+<hr>
+<p>"I donʼt know them, bhante."</p>
+
+<hr>
+<p>"Go to them. I know them."</p>
+
+<hr>
+<p>"If you know them, bhante, I will go." And those low-minded men took her to the pleasure grove.</p>
+
+<p>Then that lay-follower complained and criticised him: "How can Venerable Udāyī act as a go-between for a one-off relationship?"</p>
+
+<p id="p21"><span class="parno">21</span>The monks heard it, and the monks of few desires complained and criticised him: "How can Venerable Udāyī act as a go-between for a one-off relationship?"</p>
+
+<hr>
+<p id="p22"><span class="parno">22</span>… informed the Master. …</p>
+
+<hr>
+<p>"Is it true, Udāyī, that you acted as a go-between for a one-off relationship?"</p>
+
+<hr>
+<p>"Itʼs true, Master."</p>
+
+<p>The Buddha, the Master, rebuked him: " … Foolish man, how could you act as a go-between for a one-off relationship? This will not give rise to confidence in those without it … And so, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">23</span>"If a monk acts as a go-between on behalf of a man or on behalf of a woman, for marriage or for an affair, or even for a one-off relationship, he commits an offence entailing suspension."</p>
+
+<h3>Definitions</h3>
+
+<p id="p24"><span class="parno">24</span><span class="term">A</span>: <span class="gloss">whoever … </span> <span class="term">Monk</span>: <span class="gloss"> … The monk ordained by a complete Saṅgha through a procedure of one motion and three announcements, which is unchallengeable and fit to stand—this sort of monk is meant in this case.</span></p>
+
+<p id="p25"><span class="parno">25</span><span class="term">If (he) acts as a go-between</span>: <span class="gloss">sent by a woman he goes to a man or sent by a man he goes to a woman.</span></p>
+
+<p id="p26"><span class="parno">26</span><span class="term">On behalf of a man</span>: <span class="gloss">he informs a woman of a manʼs intention.</span></p>
+
+<p id="p27"><span class="parno">27</span><span class="term">On behalf of a woman</span>: <span class="gloss">he informs a man of a womanʼs intention.</span></p>
+
+<p id="p28"><span class="parno">28</span><span class="term">For marriage</span>: <span class="gloss">you will be a wife.</span></p>
+
+<p id="p29"><span class="parno">29</span><span class="term">For an affair</span>: <span class="gloss">you will be a mistress.</span></p>
+
+<p id="p30"><span class="parno">30</span><span class="term">Or even for a one-off relationship</span>: <span class="gloss">you will be in a short-term relationship.</span></p>
+
+<hr>
+<p id="p31"><span class="parno">31</span><span class="term">He commits an offence entailing suspension</span> <span class="gloss"> … This is the name and designation of this class of offence. Therefore, too, it is said that he commits an offence entailing suspension.</span></p>
+
+<div>
+<h3>Permutations</h3>
+<h4>Permutations part 1</h4>
+<h5>Summary</h5>
+</div>
+
+<hr>
+<p id="p32"><span class="parno">32</span>There are ten kinds of women: the one protected by her mother, the one protected by her father, the one protected by her parents, the one protected by her brother, the one protected by her sister, the one protected by her relatives, the one protected by her kinsmen, the one protected by her fellow believers, the one otherwise protected, the one protected by the threat of punishment.</p>
+
+<p id="p33"><span class="parno">33</span>There are ten kinds of wives: the bought wife, the wife by choice, the wife through property, the wife through clothes, the wife through the bowl-of-water ritual, the wife through removing the head pad, the slave wife, the servant wife, the captured wife, the short-term wife.</p>
+
+<h4>Definitions</h4>
+
+<p id="p34"><span class="parno">34</span><span class="term">The one protected by her mother</span>: <span class="gloss">her mother protects, guards, wields authority, controls.</span></p>
+
+<hr>
+<p id="p35"><span class="parno">35</span><span class="term">The one protected by her father</span>: <span class="gloss">her father protects … </span></p>
+
+<hr>
+<p id="p36"><span class="parno">36</span><span class="term">The one protected by her parents</span>: <span class="gloss">her parents protect … </span></p>
+
+<p id="p37"><span class="parno">37</span><span class="term">The one protected by her brother</span>: <span class="gloss">her brother protects … </span></p>
+
+<p id="p38"><span class="parno">38</span><span class="term">The one protected by her sister</span>: <span class="gloss">her sister protects … </span></p>
+
+<hr>
+<p id="p39"><span class="parno">39</span><span class="term">The one protected by her relatives</span>: <span class="gloss">her relatives protect … </span></p>
+
+<p id="p40"><span class="parno">40</span><span class="term">The one protected by her kinsmen</span>: <span class="gloss">her kinsmen protect … </span></p>
+
+<hr>
+<p id="p41"><span class="parno">41</span><span class="term">The one protected by her religion</span>: <span class="gloss">her fellow believers protect … </span></p>
+
+<p id="p42"><span class="parno">42</span><span class="term">The one otherwise protected</span>: <span class="gloss">even when she is in the womb, there is a master who thinks, "This is mine"; and even when she is engaged for marriage.</span></p>
+
+<p id="p43"><span class="parno">43</span>will punish anyone going to her.</p>
+
+<hr>
+<p id="p44"><span class="parno">44</span><span class="term">The bought wife</span>: <span class="gloss">having bought her with money, they live together.</span></p>
+
+<hr>
+<p id="p45"><span class="parno">45</span><span class="term">The wife by choice</span>: <span class="gloss">being dear to each other, they live together.</span></p>
+
+<hr>
+<p id="p46"><span class="parno">46</span><span class="term">The wife through property</span>: <span class="gloss">after giving wealth, they live together.</span></p>
+
+<hr>
+<p id="p47"><span class="parno">47</span><span class="term">The wife through clothes</span>: <span class="gloss">after giving clothes, they live together.</span></p>
+
+<p id="p48"><span class="parno">48</span><span class="term">The wife through the bowl-of-water ritual</span>: <span class="gloss">after touching a bowl of water, they live together.</span></p>
+
+<p id="p49"><span class="parno">49</span><span class="term">The wife through removing the head pad</span>: <span class="gloss">after taking down the head pad, they live together.</span></p>
+
+<p id="p50"><span class="parno">50</span><span class="term">The slave wife</span>: <span class="gloss">she is a slave and a wife.</span></p>
+
+<p id="p51"><span class="parno">51</span><span class="term">The servant wife</span>: <span class="gloss">she is a servant and a wife.</span></p>
+
+<p id="p52"><span class="parno">52</span><span class="term">The captured wife</span>: <span class="gloss">this refers to one brought back as a captive.</span></p>
+
+<p id="p53"><span class="parno">53</span><span class="term">The short-term wife</span>: <span class="gloss">this refers to a wife for one occasion.</span></p>
+
+<div>
+<h4>Exposition</h4>
+<h5>Acting as a go-between for a man and a single bought wife</h5>
+</div>
+
+<p id="p54"><span class="parno">54</span>ʻPlease be the bought wife of so-and-so.’" If he accepts the mission, finds out the response,<span class="note"><span class="details"><span class="p"><i>Vīmaṁsati</i>, "to investigate" or "to find out". That is, he is to investigate or find out the response of the other party.</span></span></span> and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p55"><span class="parno">55</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father … so-and-so protected by her parents … so-and-so protected by her brother … so-and-so protected by her sister … so-and-so protected by her relatives … so-and-so protected by her kinsmen … so-and-so protected by her fellow believers … so-and-so otherwise protected … so-and-so protected by the threat of punishment and say, ʻPlease be the bought wife of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p56"><span class="parno">56</span>The setting out of the steps.</p>
+
+<h5>Acting as a go-between for a man and two bought wives</h5>
+
+<p id="p57"><span class="parno">57</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her father and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p58"><span class="parno">58</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her parents … so-and-so protected by her mother and so-and-so protected by her brother … so-and-so protected by her mother and so-and-so protected by her sister … so-and-so protected by her mother and so-and-so protected by her relatives … so-and-so protected by her mother and so-and-so protected by her kinsmen … so-and-so protected by her mother and so-and-so protected by her fellow believers … so-and-so protected by her mother and so-and-so otherwise protected … so-and-so protected by her mother and so-and-so protected by the threat of punishment and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">59</span>The unconnected permutation series.<span class="note"><span class="details"><span class="p">For an explanation of this phrase see <span class="ref">Sp 2.497,10</span>.</span></span></span></p>
+
+<p id="p60"><span class="parno">60</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father and so-and-so protected by her parents and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p61"><span class="parno">61</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father and so-and-so protected by her brother … so-and-so protected by her father and so-and-so protected by her sister … so-and-so protected by her father and so-and-so protected by her relatives … so-and-so protected by her father and so-and-so protected by her kinsmen … so-and-so protected by her father and so-and-so protected by her fellow believers … so-and-so protected by her father and so-and-so otherwise protected … so-and-so protected by her father and so-and-so protected by the threat of punishment and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p62"><span class="parno">62</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father and so-and-so protected by her mother and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">63</span>The linked permutation series,<br/>
+the basis in brief.<span class="note"><span class="details"><span class="p">For an explanation see <span class="ref">Sp 2.497,14</span>.</span></span></span></p>
+
+<p id="p64"><span class="parno">64</span>… A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and so-and-so protected by her mother and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p65"><span class="parno">65</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and so-and-so protected by her father … so-and-so protected by the threat of punishment and so-and-so protected by her parents … so-and-so protected by the threat of punishment and so-and-so protected by her brother … so-and-so protected by the threat of punishment and so-and-so protected by her sister … so-and-so protected by the threat of punishment and so-and-so protected by her relatives … so-and-so protected by the threat of punishment and so-and-so protected by her kinsmen … so-and-so protected by the threat of punishment and so-and-so protected by her fellow believers … so-and-so protected by the threat of punishment and so-and-so otherwise protected and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p66"><span class="parno">66</span>The section based on one root item is finished.</p>
+
+<h5>Acting as a go-between for a man and more than two bought wives</h5>
+
+<p id="p67"><span class="parno">67</span>The sections based on two root items, three root items, up to nine root items, are to be done in the same way.</p>
+
+<h5>Acting as a go-between for a man and ten bought wives</h5>
+
+<p class="endsutta"><span class="parno">68</span>This is the section<br/>
+based on ten root items:</p>
+
+<p id="p69"><span class="parno">69</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her father and so-and-so protected by her parents and so-and-so protected by her brother and so-and-so protected by her sister and so-and-so protected by her relatives and so-and-so protected by her kinsmen and so-and-so protected by her fellow believers and so-and-so otherwise protected and so-and-so protected by the threat of punishment and say, ʻPlease be the bought wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">70</span>The permutation series<br/>
+on bought wives is finished.</p>
+
+<h5>Acting as a go-between for a man and other kinds of wives</h5>
+
+<p id="p71"><span class="parno">71</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ‘Please be the wife by choice of so-and-so … his wife through property … his wife through clothes … his wife through the bowl-of-water ritual … his wife through removing the head pad … his slave wife … his servant wife … his captured wife … his short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<h5>Acting as a go-between for a man and a single short-term wife</h5>
+
+<p id="p72"><span class="parno">72</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father and say … so-and-so protected by her parents … so-and-so protected by her brother … so-and-so protected by her sister … so-and-so protected by her relatives … so-and-so protected by her kinsmen … so-and-so protected by her fellow believers … so-and-so otherwise protected … so-and-so protected by the threat of punishment and say, ʻPlease be the short-term wife of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">73</span>The setting out of the steps.</p>
+
+<h5>Acting as a go-between for a man and two short-term wives</h5>
+
+<p id="p74"><span class="parno">74</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her father and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p75"><span class="parno">75</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her parents … so-and-so protected by her mother and so-and-so protected by the threat of punishment and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">76</span>The unconnected permutation series.</p>
+
+<p id="p77"><span class="parno">77</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father and so-and-so protected by her parents and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p78"><span class="parno">78</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father and so-and-so protected by her brother … so-and-so protected by her father and so-and-so protected by the threat of punishment and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p79"><span class="parno">79</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father and so-and-so protected by her mother and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">80</span>The linked permutation series,<br/>
+the basis in brief.</p>
+
+<p id="p81"><span class="parno">81</span>… A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and so-and-so protected by her mother and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p82"><span class="parno">82</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and so-and-so protected by her father … so-and-so protected by the threat of punishment and so-and-so otherwise protected and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">83</span>The section based on<br/>
+one root item is finished.</p>
+
+<h5>Acting as a go-between for a man and<br/>
+more than two short-term wives</h5>
+
+<p id="p84"><span class="parno">84</span>The sections based on two root items, etc., are to be done in the same way.</p>
+
+<h5>Acting as a go-between for a man and<br/>
+ten short-term wives</h5>
+
+<p id="p85"><span class="parno">85</span>This is the section based on ten root items:</p>
+
+<p id="p86"><span class="parno">86</span>protected by her mother and so-and-so protected by her father and so-and-so protected by her parents and so-and-so protected by her brother and so-and-so protected by her sister and so-and-so protected by her relatives and so-and-so protected by her kinsmen and so-and-so protected by her fellow believers and so-and-so otherwise protected and so-and-so protected by the threat of punishment and say, ʻPlease be the short-term wives of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">87</span>The permutation series<br/>
+on short-term wives is finished.</p>
+
+<h5>Acting as a go-between for a man<br/>
+and one protected by<br/>
+her mother: a single motive</h5>
+
+<p id="p88"><span class="parno">88</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ʻPlease be the bought wife of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p89"><span class="parno">89</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ʻPlease be the wife of so-and-so by choice … his wife through property … his wife through clothes … his wife through the bowl-of-water ritual … his wife through removing the head pad … his slave wife … his servant wife … his captured wife … his short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">90</span>The setting out of the steps is finished.</p>
+
+<h5>Acting as a go-between for a man<br/>
+and one protected by her mother:<br/>
+combinations of two motives</h5>
+
+<p id="p91"><span class="parno">91</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ʻPlease be the bought wife of so-and-so and his wife by choice.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p92"><span class="parno">92</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ʻPlease be the bought wife of so-and-so and his wife through property … his bought wife and his wife through clothes … his bought wife and his wife through the bowl-of-water ritual … his bought wife and his wife through removing the head pad … his bought wife and his slave wife … his bought wife and his servant wife … his bought wife and his captured wife … his bought wife and his short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">93</span>The unconnected permutation series.</p>
+
+<p id="p94"><span class="parno">94</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ʻPlease be the wife by choice of so-and-so and his wife through property … his wife by choice and his short-term wife … his wife by choice and his bought wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">95</span>The linked permutation series,<br/>
+the basis in brief.</p>
+
+<p id="p96"><span class="parno">96</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ʻPlease be the short-term wife of so-and-so and his bought wife … his short-term wife and his wife by choice … his short-term wife and his captured wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">97</span>The section based on one root<br/>
+item is finished.</p>
+
+<h5>Acting as a go-between for a man and<br/>
+one protected by her mother:<br/>
+combinations of more than two motives</h5>
+
+<p id="p98"><span class="parno">98</span>The sections based on two root items, etc., are to be done in the same way.</p>
+
+<h5>Acting as a go-between for a man and one protected by her mother: ten motives</h5>
+
+<p id="p99"><span class="parno">99</span>This is the section based on ten root items:</p>
+
+<p id="p100"><span class="parno">100</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ʻPlease be the bought wife of so-and-so and his wife by choice and his wife through property and his wife through clothes and his wife through the bowl-of-water ritual and his wife through removing the head pad and his slave wife and his servant wife and his captured wife and his short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">101</span>The permutation series on the one<br/>
+guarded by her mother is finished.</p>
+
+<h5>Acting as a go-between for a man<br/>
+and one protected in various ways:<br/>
+any combination of motivations</h5>
+
+<p id="p102"><span class="parno">102</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her father … so-and-so protected by her parents … so-and-so protected by her brother … so-and-so protected by her sister … so-and-so protected by her relatives … so-and-so protected by her kinsmen … so-and-so protected by her fellow believers … so-and-so otherwise protected … so-and-so protected by the threat of punishment and say, ʻPlease be the bought wife of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<h5>Acting as a go-between for a man and<br/>
+one protected by the threat<br/>
+of punishment: a single motive</h5>
+
+<p id="p103"><span class="parno">103</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and say, ʻPlease be the wife by choice of so-and-so … his wife through property … his wife through clothes … his wife through the bowl-of-water ritual … his wife through removing the head pad … his slave wife … his servant wife … his captured wife … his short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">104</span>The setting out of the steps is finished.</p>
+
+<h5>Acting as a go-between for a man and one protected by the threat of punishment: combinations of two motives</h5>
+
+<p id="p105"><span class="parno">105</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and say, ʻPlease be the bought wife of so-and-so and his wife by choice.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p106"><span class="parno">106</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and say, ʻPlease be the bought wife of so-and-so and his wife through property … his bought wife and his short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">107</span>The unconnected permutation series.</p>
+
+<p id="p108"><span class="parno">108</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and say, ʻPlease be the wife by choice of so-and-so and his wife through property … his wife by choice and his short-term wife … his wife by choice and his bought wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">109</span>The linked permutation series,<br/>
+the basis in brief.</p>
+
+<p id="p110"><span class="parno">110</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and say, ʻPlease be the short-term wife of so-and-so and his bought wife … his short-term wife and his wife by choice … his short-term wife and his captured wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">111</span>The section based on one root item<br/>
+is finished.</p>
+
+<h5>Acting as a go-between for a man and<br/>
+one protected by the threat of punishment:<br/>
+combinations of more than two motives</h5>
+
+<p id="p112"><span class="parno">112</span>The sections based on two root items, three root items, up to nine root items, are to be done in the same way.</p>
+
+<h5>Acting as a go-between for a man and<br/>
+one protected by the threat of punishment:<br/>
+ten motives</h5>
+
+<p class="endsutta"><span class="parno">113</span>This is the section<br/>
+based on ten root items:</p>
+
+<p id="p114"><span class="parno">114</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by the threat of punishment and say, ‘Please be the bought wife of so-and-so and his wife by choice and his wife through property and his wife through clothes and his wife through the bowl-of-water ritual and his wife through removing the head pad and his slave wife and his servant wife and his captured wife and his short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">115</span>The permutation series for the one<br/>
+protected by the threat of<br/>
+punishment is finished.</p>
+
+<h5>Incremental increase<br/>
+in both wives and motives</h5>
+
+<p id="p116"><span class="parno">116</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and say, ‘Please be the bought wife of so-and-so.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p117"><span class="parno">117</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her father and say, ‘Please be the bought wives of so-and-so and his wives by choice.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p118"><span class="parno">118</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her father and so-and-so protected by her parents and say, ‘Please be the bought wives of so-and-so and his wives by choice and his wives through property.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p id="p119"><span class="parno">119</span>In this way the increase of both items is to be done.</p>
+
+<p id="p120"><span class="parno">120</span>A man sends a monk, saying: "Bhante, go to so-and-so protected by her mother and so-and-so protected by her father and so-and-so protected by her parents and so-and-so protected by her brother and so-and-so protected by her sister and so-and-so protected by her relatives and so-and-so protected by her kinsmen and so-and-so protected by her fellow believers and so-and-so otherwise protected and so-and-so protected by the threat of punishment and say, ʻPlease be the bought wives of so-and-so and his wives by choice and his wives through property and his wives through clothes and his wives through the bowl-of-water ritual and his wives through removing the head pad and his slave wives and his servant wives and his captured wives and his short-term wives.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">121</span>The increase of both items<br/>
+is finished.</p>
+
+<h5>Relationships arranged for a man</h5>
+
+<p id="p122"><span class="parno">122</span>A man’s mother sends a monk … a man’s father sends a monk … a man’s parents send a monk … a man’s brother sends a monk … a man’s sister sends a monk … a man’s relatives send a monk … a man’s kinsmen send a monk … a man’s fellow believers send a monk …</p>
+
+<hr>
+<p class="endsutta"><span class="parno">123</span>The abbreviation for a man<br/>
+is to be expanded.</p>
+
+<p class="endsutta"><span class="parno">124</span>The increase of both items<br/>
+is to be expanded as before.</p>
+
+<h5>Relationships arranged by the mother:<br/>
+a single motive</h5>
+
+<p id="p125"><span class="parno">125</span>The mother of one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your bought wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p126"><span class="parno">126</span>The mother of one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your wife by choice … your wife through property … your wife through clothes … your wife through the bowl-of-water ritual … your wife through removing the head pad … your slave wife … your servant wife … your captured wife … your short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">127</span>The setting out of the steps is finished.</p>
+
+<h5>Relationships arranged by the mother:<br/>
+combinations of two motives</h5>
+
+<p id="p128"><span class="parno">128</span>The mother of one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your bought wife and your wife by choice … your bought wife and your wife through property … your bought wife and your short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">129</span>The unconnected permutation series.</p>
+
+<p id="p130"><span class="parno">130</span>The mother of one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your wife by choice and your wife through property … your wife by choice and your short-term wife … your wife by choice and your bought wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">131</span>The linked permutation series,<br/>
+the basis in brief.</p>
+
+<p id="p132"><span class="parno">132</span>The mother of one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your short-term wife and your bought wife … your short-term wife and your wife by choice … your short-term wife and your captured wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">133</span>The section based on one root item<br/>
+is finished.</p>
+
+<h5>Relationships arranged by the mother:<br/>
+combinations of more than two motives</h5>
+
+<p id="p134"><span class="parno">134</span>The sections based on two root items, three root items, up to nine root items, are to be done in the same way.</p>
+
+<h5>Relationships arranged by the mother:<br/>
+ten motives</h5>
+
+<p class="endsutta"><span class="parno">135</span>This is the section based on ten root items:</p>
+
+<p id="p136"><span class="parno">136</span>The mother of one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your bought wife and your wife by choice and your wife through property and your wife through clothes and your wife through the bowl-of-water ritual and your wife through removing the head pad and your slave wife and your servant wife and your captured wife and your short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">137</span>The permutation series on the mother<br/>
+is finished.</p>
+
+<h5>Relationships arranged by various people:<br/>
+any combination of motivations</h5>
+
+<p id="p138"><span class="parno">138</span>The father of one protected by her father sends a monk … the parents of one protected by her parents sends a monk … the brother of one protected by her brother sends a monk … the sister of one protected by her sister sends a monk … the relatives of one protected by her relatives send a monk … the kinsmen of one protected by her kinsmen send a monk … the fellow believers of one protected by her religion send a monk … the master of one otherwise protected sends a monk … the one who punishes in relation to one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your bought wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<h5>Relationships arranged by the one<br/>
+who punishes: a single motive</h5>
+
+<p id="p139"><span class="parno">139</span>The one who punishes in relation to one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your wife … your wife through property … your through clothes … your through the bowl-of-water ritual … your through removing the head pad … your slave wife for you … your servant wife … your captured wife … your short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">140</span>The setting out of the steps is finished.</p>
+
+<h5>Relationships arranged by the one<br/>
+who punishes: two motives</h5>
+
+<p id="p141"><span class="parno">141</span>The one who punishes in relation to one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your bought wife and your wife by choice … your bought wife and your wife through property … your bought wife and your short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">142</span>The unconnected permutation series.</p>
+
+<p id="p143"><span class="parno">143</span>The one who punishes in relation to one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your wife by choice and your wife through property … your wife by choice and your short-term wife … your wife by choice and your bought wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">144</span>The linked permutation series,<br/>
+the basis in brief.</p>
+
+<p id="p145"><span class="parno">145</span>The one who punishes in relation to one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your short-term wife and your bought wife … who can be your short-term wife and your wife by choice … who can be your short-term wife and your captured wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">146</span>The section based on one root item<br/>
+is finished.</p>
+
+<h5>Relationships arranged by the one<br/>
+who punishes: more than two motives</h5>
+
+<p id="p147"><span class="parno">147</span>The sections based on two root items, three root items, up to nine root items, are to be done in the same way.</p>
+
+<h5>Relationships arranged by the one<br/>
+who punishes: ten motives</h5>
+
+<p class="endsutta"><span class="parno">148</span>This is the section<br/>
+based on ten root items:</p>
+
+<p id="p149"><span class="parno">149</span>The one who punishes in relation to one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say, ʻI have a wife for you who can be your bought wife and your wife by choice and your wife through property and your wife through clothes and your wife through the bowl-of-water ritual and your wife through removing the head pad and your slave wife and your servant wife and your captured wife and your short-term wife.’" If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">150</span>The permutation series on the one<br/>
+who punishes is finished.</p>
+
+<h5>The one protected by her mother taking the initiative: a single motive</h5>
+
+<p id="p151"><span class="parno">151</span>The one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say that I will be his bought wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p152"><span class="parno">152</span>The one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say that I will be his wife by choice … his wife through property … his wife through clothes … his wife through the bowl-of-water ritual … his wife through removing the head pad … his slave wife … his servant wife … his captured wife … his short-term wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">153</span>The setting out of the steps is finished.</p>
+
+<h5>The one protected by her mother taking<br/>
+the initiative: two motives</h5>
+
+<p id="p154"><span class="parno">154</span>The one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say that I will be his bought wife and his wife by choice." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p155"><span class="parno">155</span>The one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say that I will be his bought wife and his wife through property … his bought wife and his wife through clothes … his bought wife and his short-term wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">156</span>The unconnected permutation series.</p>
+
+<p id="p157"><span class="parno">157</span>The one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say that I will be his wife by choice and his wife though property … his wife by choice and his short-term wife … his wife by choice and his bought wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">158</span>The linked permutation series, the basis in brief.</p>
+
+<p id="p159"><span class="parno">159</span>The one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say that I will be his short-term wife and his bought wife … his short-term wife and his wife by choice … his short-term wife and his captured wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">160</span>The section on one root item is finished.</p>
+
+<h5>The one protected by her mother taking<br/>
+the initiative: more than two motives</h5>
+
+<p id="p161"><span class="parno">161</span>The sections based on two root items, etc., are to be done in the same way.</p>
+
+<h5>The one protected by her mother taking<br/>
+the initiative: ten motives</h5>
+
+<p class="endsutta"><span class="parno">162</span>This is the section based on ten root items:</p>
+
+<p id="p163"><span class="parno">163</span>The one protected by her mother sends a monk, saying: "Bhante, go to so-and-so and say that I will be his bought wife and his wife by choice and his wife through property and his wife through clothes and his wife through the bowl-of-water ritual and his wife through removing the head pad and his slave wife and his servant wife and his captured wife and his short-term wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">164</span>The further permutation series on<br/>
+the one guarded by her mother is finished.</p>
+
+<h5>The ones protected by various people taking<br/>
+the initiative: any combination of motives</h5>
+
+<p id="p165"><span class="parno">165</span>The one protected by her father sends a monk … the one protected by her parents sends a monk … the one protected by her brother sends a monk … the one protected by her sister sends a monk … the one protected by her relatives send a monk … the one protected by her kinsmen send a monk … the one protected by her religion send a monk … the one otherwise protected sends a monk … the one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say that I will be his bought wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<h5>The one protected by the threat of punishment<br/>
+taking the initiative: a single motive</h5>
+
+<p id="p166"><span class="parno">166</span>The one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say that I will be his wife by choice … his wife through property … his wife through clothes … his wife through the bowl-of-water ritual … his wife through removing the head pad … his slave wife … his servant wife … his captured wife … his short-term wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">167</span>The setting out of the steps is finished.</p>
+
+<h5>The one protected by the threat of punishment taking the initiative: two motives</h5>
+
+<p id="p168"><span class="parno">168</span>The one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say that I will be his bought wife and his wife by choice … his bought wife and his short-term wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">169</span>The unconnected permutation series.</p>
+
+<p id="p170"><span class="parno">170</span>The one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say that I will be his wife by choice and his wife though property … his wife by choice and his short-term wife … his wife by choice and his bought wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">171</span>The linked permutation series,<br/>
+the basis in brief.</p>
+
+<p id="p172"><span class="parno">172</span>The one protected by the threat of punishment sends a monk, saying: "Bhante, go to so-and-so and say that I will be his short-term wife and his bought wife … his short-term wife and his wife by choice … his short-term wife and his captured wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">173</span>The section on one root item is finished.</p>
+
+<h5>The one protected by the threat of punishment<br/>
+taking the initiative: more than two motives</h5>
+
+<p id="p174"><span class="parno">174</span>The sections based on two root items, etc., are to be done in the same way.</p>
+
+<h5>The one protected by the threat of punishment<br/>
+taking the initiative: ten motives</h5>
+
+<p class="endsutta"><span class="parno">175</span>This is the section based on ten root items:</p>
+
+<p id="p176"><span class="parno">176</span>The one protected by her mother sends a monk, saying: “Venerable, go to so-and-so and say that I’ll be his bought wife and his wife by choice and his wife through property and his wife through clothes and his wife through the bowl-of-water ritual and his wife through removing the head pad and his slave wife and his servant wife and his captured wife and his short-term wife." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p class="endsutta"><span class="parno">177</span>The further permutation series on the one protected by the law is finished.</p>
+
+<p class="endsutta">The whole successive permutation series is finished</p>
+
+<h4>Permutations part 2</h4>
+
+<p id="p178"><span class="parno">178</span>If he accepts the mission, and finds out the response, but does not report back, he commits a serious offence. If he accepts the mission, but does not find out the response, yet reports back, he commits a serious offence. If he accepts the mission, but neither finds out the response, nor reports back, he commits an offence of bad conduct. If he does not accept the mission, yet finds out the response and reports back, he commits a serious offence. If he does not accept the mission, yet finds out the response, but does not report back, he commits an offence of bad conduct. If he neither accepts the mission, nor finds out the response, yet reports back, he commits an offence of bad conduct. If he does not accept the mission, nor finds out the response, nor reports back, there is no offence.</p>
+
+<hr>
+<p id="p179"><span class="parno">179</span>A man tells a number of monks, "Bhantes, find out about such-and-such a woman." If they all accept the mission, all find out the response, and all report back, they all commit an offence entailing suspension.</p>
+
+<p id="p180"><span class="parno">180</span>A man tells a number of monks, "Bhantes, find out about such-and-such a woman." If they all accept the mission, all find out the response, but only one reports back, they all commit an offence entailing suspension.</p>
+
+<p id="p181"><span class="parno">181</span>A man tells a number of monks, "Bhantes, find out about such-and-such a woman." If they all accept the mission, but only one finds out the response, yet all report back, they all commit an offence entailing suspension.</p>
+
+<p id="p182"><span class="parno">182</span>A man tells a number of monks, "Bhantes, find out about such-and-such a woman." If they all accept the mission, but only one finds out the response, and only one reports back, they all commit an offence entailing suspension.</p>
+
+<hr>
+<p id="p183"><span class="parno">183</span>A man tells a monk: "Bhante, find out about such-and-such a woman." If he accepts the mission, finds out the response, and reports back, he commits an offence entailing suspension.</p>
+
+<p id="p184"><span class="parno">184</span>A man tells a monk: “Venerable, find out about such-and-such a woman.” If he accepts the mission, finds out the response, but gets a pupil to report back, he commits an offence entailing suspension.</p>
+
+<hr>
+<p id="p185"><span class="parno">185</span>A man tells a monk: "Bhante, find out about such-and-such a woman." If he accepts the mission, but gets a pupil to find out the response, and then reports back himself, he commits an offence entailing suspension.</p>
+
+<p id="p186"><span class="parno">186</span>A man tells a monk: "Bhante, find out about such-and-such a woman." If he accepts the mission, but gets a pupil to find out the response, and the pupil then reports back on his own initiative, they both commit a serious offence.</p>
+
+<h4>Permutations part 3</h4>
+
+<p id="p187"><span class="parno">187</span>If he fulfils the agreement when he goes, but not when he returns,<span class="note"><span class="details"><span class="p">The Pali word behind ʻnot (fulfilling the agreement)ʼ is <i>visaṁvādeti</i>. The usual meaning of this word in Pali texts is to deceive, but this does not fit the present context well. According to Monier-Williamsʼ Sanskrit-English Dictionary, this word may also mean to break a promise or fail in an agreement. This fits the present context, and I have chosen to translate accordingly.</span></span></span> he commits a serious offence.</p>
+
+<p id="p188"><span class="parno">188</span>If he does not fulfil the agreement when he goes, but he does when he returns, he commits a serious offence.</p>
+
+<p id="p189"><span class="parno">189</span>If he fulfils the agreement both when he goes and when he returns, he commits an offence entailing suspension.</p>
+
+<p id="p190"><span class="parno">190</span>If he neither fulfils the agreement when he goes nor when he returns, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p191"><span class="parno">191</span>There is no offence: if he is doing business for the Saṅgha, for a shrine, or for one who is ill; if he is insane; if he is the first offender.</p>
+
+<div>
+<h3>Case rulings</h3>
+<h4>Mnemonic list</h4>
+</div>
+
+<p id="p192" class="verse"><span class="parno">192</span>Asleep, dead, gone out,
+<br>Not a woman, a female <i>paṇḍaka</i>;
+<br>He reconciled them after quarrelling,
+<br>He was a go-between for <i>paṇḍakas</i>.</p>
+
+<h4>Case details</h4>
+
+<p id="p193"><span class="parno">193</span>At one time a man told a certain monk, "Bhante, find out about such-and-such a woman."</p>
+
+<hr>
+<p>When he arrived he asked some people, "Where is such-and-such?"</p>
+
+<hr>
+<p>"She is asleep, bhante."</p>
+
+<p>He became anxious, thinking, "The Master has laid down a training rule. Could it be that I have committed an offence entailing suspension?" He informed the Master.</p>
+
+<p>"Monk, there is no offence entailing suspension, but there is an offence of bad conduct."</p>
+
+<p id="p194"><span class="parno">194</span>At one time a certain man told a certain monk, "Bhante, find out about such-and-such a woman."</p>
+
+<hr>
+<p>When he arrived he asked some people, "Where is such-and-such?"</p>
+
+<p>"She is dead, bhante." … "She has gone out, bhante." … "Thatʼs not a woman, bhante." … "Thatʼs a female <i>paṇḍaka</i>, bhante."</p>
+
+<p>He became anxious …</p>
+
+<p>"Monk, there is no offence entailing suspension, but there is an offence of bad conduct."</p>
+
+<p id="p195"><span class="parno">195</span>At one time a certain woman, having quarrelled with her husband, went to her mother’s house. A monk who was supported by that family reconciled them. He became anxious …</p>
+
+<p>"Were they divorced, monk?"</p>
+
+<p>"They were not divorced, Master."</p>
+
+<p>"There is no offence when they are not divorced."</p>
+
+<p id="p196"><span class="parno">196</span>At one time a certain monk acted as a go-between for <i>paṇḍakas</i>. He became anxious …</p>
+
+<p>"Monk, there is no offence entailing suspension, but there is a serious offence."</p>
+
+<p class="endsutta"><span class="parno">197</span>The fifth training rule on acting as a go-between is finished.</p>
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<div>
+<h3>&nbsp;</h3> <h4>&nbsp;</h4> </div>
+
+<p><span class="parno">1</span><span class="ms">p_1V_1220, msdiv296</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena āyasmā udāyī sāvatthiyaṁ kulūpako hoti. Bahukāni kulāni upasankamati. Yattha passati kumārakaṁ vā apajāpatikaṁ, kumārikaṁ vā apatikaṁ, kumārakassa mātāpitūnaṁ santike kumārikāya vaṇṇaṁ bhaṇati— "amukassa kulassa kumārikā abhirūpā dassanīyā pāsādikā paṇḍitā byattā medhāvinī dakkhā analasā. Channā sā kumārikā imassa kumārakassā"ti. Te evaṁ vadanti— "ete kho, bhante, amhe na jānanti— ‘ke vā ime kassa vā’ti. Sace, bhante, ayyo dāpeyya āneyyāma mayaṁ taṁ kumārikaṁ imassa kumārakassā"ti.</p>
+
+<p>Kumārikāya mātāpitūnaṁ santike kumārakassa vaṇṇaṁ bhaṇati— "amukassa kulassa kumārako abhirūpo dassanīyo pāsādiko paṇḍito byatto medhāvī dakkho analaso. Channāyaṁ kumārikā tassa kumārakassā"ti. Te evaṁ vadanti— "ete kho, bhante, amhe na jānanti— ‘ke vā ime kassa vā’ti, kismiṁ viya kumārikāya vattuṁ. Sace, bhante, ayyo yācāpeyya dajjeyyāma mayaṁ imaṁ kumārikaṁ tassa kumārakassā"ti. Eteneva upāyena āvāhānipi kārāpeti, vivāhānipi kārāpeti, vāreyyānipi kārāpeti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_1V_1221, msdiv297</span>Tena kho pana samayena aññatarissā purāṇagaṇakiyā dhītā abhirūpā hoti dassanīyā pāsādikā. Tirogāmakā ājīvakasāvakā āgantvā taṁ gaṇakiṁ etadavocuṁ: "dehāyye, imaṁ kumārikaṁ amhākaṁ kumārakassā"ti. Sā evamāha— "ahaṁ khvayyo, tumhe na jānāmi— ‘ke vā ime kassa vā’ti. Ayañca me ekadhītikā, tirogāmo ca gantabbo, nāhaṁ dassāmī"ti.</p>
+
+<hr>
+<p>Manussā te ājīvakasāvake etadavocuṁ: "Kissa tumhe, ayyo, āgatatthā"ti?</p>
+
+<p>"Idha mayaṁ, ayyo, amukaṁ nāma gaṇakiṁ dhītaraṁ yācimhā amhākaṁ kumārakassa. Sā evamāha— ‘Ahaṁ khvayyo, tumhe na jānāmi— ke vā ime kassa vā’ti. Ayañca me ekadhītikā, tirogāmo ca gantabbo, nāhaṁ dassāmī"ti.</p>
+
+<p>Kissa tumhe, ayyo, taṁ gaṇakiṁ dhītaraṁ yācittha? Nanu ayyo udāyī vattabbo. Ayyo udāyī dāpessatī"ti.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_1222</span>Atha kho te ājīvakasāvakā yenāyasmā udāyī tenupasankamiṁsu; upasankamitvā āyasmantaṁ udāyiṁ etadavocuṁ: "idha mayaṁ, bhante, amukaṁ nāma gaṇakiṁ dhītaraṁ yācimhā amhākaṁ kumārakassa. Sā evamāha— ‘Ahaṁ khvayyo, tumhe na jānāmi— ke vā ime kassa vāti. Ayañca me ekadhītikā, tirogāmo ca gantabbo, nāhaṁ dassāmī’ti. Sādhu, bhante, ayyo taṁ gaṇakiṁ dhītaraṁ dāpetu amhākaṁ kumārakassā"ti.</p>
+
+<hr>
+<p><span class="parno">4</span><span class="ms">p_1V_1223</span>Atha kho āyasmā udāyī yena sā gaṇakī tenupasankami; upasankamitvā taṁ gaṇakiṁ etadavoca: "kissimesaṁ dhītaraṁ na desī"ti?</p>
+
+<p>"Ahaṁ khvayya, ime na jānāmi— ‘ke vā ime kassa vā’ti. Ayañca me ekadhītikā, tirogāmo ca gantabbo, nāhaṁ dassāmī"ti.</p>
+
+<hr>
+<p>"Dehimesaṁ. Ahaṁ ime jānāmī"ti.</p>
+
+<p>"Sace, bhante, ayyo jānāti, dassāmī"ti.</p>
+
+<p>Atha kho sā gaṇakī tesaṁ ājīvakasāvakānaṁ dhītaraṁ adāsi. Atha kho te ājīvakasāvakā taṁ kumārikaṁ netvā māsaṁyeva suṇisabhogena bhuñjiṁsu. Tato aparena dāsibhogena bhuñjanti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_1V_1224</span>Atha kho sā kumārikā mātuyā santike dūtaṁ pāhesi— "ahañhi duggatā dukkhitā, na sukhaṁ labhāmi. Māsaṁyeva maṁ suṇisabhogena bhuñjiṁsu. Tato aparena dāsibhogena bhuñjanti. Āgacchatu me, mātā, maṁ nessatū"ti.</p>
+
+<p>Atha kho sā gaṇakī yena te ājīvakasāvakā tenupasankami; upasankamitvā te ājīvakasāvake etadavoca: "māyyo, imaṁ kumārikaṁ dāsibhogena bhuñjittha. Suṇisabhogena imaṁ kumārikaṁ bhuñjathā"ti.</p>
+
+<p>Te evamāhaṁsu— "natthamhākaṁ tayā saddhiṁ āhārūpahāro, samaṇena saddhiṁ amhākaṁ āhārūpahāro, gaccha tvaṁ, na mayaṁ taṁ jānāmā"ti. Atha kho sā gaṇakī tehi ājīvakasāvakehi apasāditā punadeva sāvatthiṁ paccāgañchi.</p>
+
+<hr>
+<p><span class="parno">6</span><span class="ms">p_1V_1225</span>Dutiyampi kho sā kumārikā mātuyā santike dūtaṁ pāhesi— "ahañhi duggatā dukkhitā, na sukhaṁ labhāmi. Māsaṁyeva maṁ suṇisabhogena bhuñjiṁsu. Tato aparena dāsibhogena bhuñjanti. Āgacchatu me, mātā, maṁ nessatū"ti.</p>
+
+<p>Atha kho sā gaṇakī yenāyasmā udāyī tenupasankami; upasankamitvā āyasmantaṁ udāyiṁ etadavoca: "sā kira, bhante, kumārikā duggatā dukkhitā, na sukhaṁ labhati. Māsaṁyeva naṁ suṇisabhogena bhuñjiṁsu. Tato aparena dāsibhogena bhuñjanti. Vadeyyātha, bhante— ‘māyyo, imaṁ kumārikaṁ dāsibhogena bhuñjittha. Suṇisabhogena imaṁ kumārikaṁ bhuñjathā’"ti.</p>
+
+<p><span class="parno">7</span><span class="ms">p_1V_1226</span>Atha kho āyasmā udāyī yena te ājīvakasāvakā tenupasankami; upasankamitvā te ājīvakasāvake etadavoca: "māyyo, imaṁ kumārikaṁ dāsibhogena bhujjittha. Suṇisabhogena imaṁ kumārikaṁ bhuñjathā"ti.</p>
+
+<p>Te evamāhaṁsu— "natthamhākaṁ tayā saddhiṁ āhārūpahāro, gaṇakiyā saddhiṁ amhākaṁ āhārūpahāro. Samaṇena bhavitabbaṁ abyāvaṭena. Samaṇo assa susamaṇo, gaccha tvaṁ, na mayaṁ taṁ jānāmā"ti. Atha kho āyasmā udāyī tehi ājīvakasāvakehi apasādito punadeva sāvatthiṁ paccāgañchi.</p>
+
+<hr>
+<p><span class="parno">8</span><span class="ms">p_1V_1227</span>Tatiyampi kho sā kumārikā mātuyā santike dūtaṁ pāhesi— "ahañhi duggatā dukkhitā, na sukhaṁ labhāmi. Māsaṁyeva maṁ suṇisabhogena bhuñjiṁsu. Tato aparena dāsibhogena bhuñjanti. Āgacchatu me, mātā, maṁ nessatū"ti. Dutiyampi kho sā gaṇakī yenāyasmā udāyī tenupasankami; upasankamitvā āyasmantaṁ udāyiṁ etadavoca: "sā kira, bhante, kumārikā duggatā dukkhitā, na sukhaṁ labhati. Māsaṁyeva naṁ suṇisabhogena bhuñjiṁsu. Tato aparena dāsibhogena bhuñjanti. Vadeyyātha, bhante— ‘māyyo, imaṁ kumārikaṁ dāsibhogena bhuñjittha, suṇisabhogena imaṁ kumārikaṁ bhuñjathā’"ti.</p>
+
+<hr>
+<p>"Paṭhamampāhaṁ tehi ājīvakasāvakehi apasādito, gaccha tvaṁ, nāhaṁ gamissāmī"ti.</p>
+
+<hr>
+<p><span class="parno">9</span><span class="ms">p_1V_1228, msdiv298</span>Atha kho sā gaṇakī ujjhāyati khiyyati vipāceti— "evaṁ duggato hotu ayyo udāyī, evaṁ dukkhito hotu ayyo udāyī, evaṁ mā sukhaṁ labhatu ayyo udāyī, yathā me kumārikā duggatā dukkhitā na sukhaṁ labhati pāpikāya sassuyā pāpakena sasurena pāpakena sāmikenā"ti.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_1V_1229</span>Sāpi kho kumārikā ujjhāyati khiyyati vipāceti— "evaṁ duggato hotu ayyo udāyī, evaṁ dukkhito hotu ayyo udāyī, evaṁ mā sukhaṁ labhatu ayyo udāyī, yathāhaṁ duggatā dukkhitā na sukhaṁ labhāmi pāpikāya sassuyā pāpakena sasurena pāpakena sāmikenā"ti.</p>
+
+<p><span class="parno">11</span><span class="ms">p_1V_1230</span>Aññāpi itthiyo asantuṭṭhā sassūhi vā sasurehi vā sāmikehi vā, tā evaṁ oyācanti— "evaṁ duggato hotu ayyo udāyī, evaṁ dukkhito hotu ayyo udāyī, evaṁ mā sukhaṁ labhatu ayyo udāyī, yathā mayaṁ duggatā dukkhitā na sukhaṁ labhāma pāpikāhi sassūhi pāpakehi sasurehi pāpakehi sāmikehī"ti.</p>
+
+<hr>
+<p><span class="parno">12</span><span class="ms">p_1V_1231</span>Yā pana tā itthiyo santuṭṭhā sassūhi vā sasurehi vā sāmikehi vā tā evaṁ āyācanti— "evaṁ sukhito hotu ayyo udāyī, evaṁ sajjito hotu ayyo udāyī, evaṁ sukhamedho hotu ayyo udāyī, yathā mayaṁ sukhitā sajjitā sukhamedhā bhaddikāhi sassūhi bhaddakehi sasurehi bhaddakehi sāmikehī"ti.</p>
+
+<p><span class="parno">13</span><span class="ms">p_1V_1232</span>Assosuṁ kho bhikkhū ekaccānaṁ itthīnaṁ oyācantīnaṁ ekaccānaṁ itthīnaṁ āyācantīnaṁ. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma āyasmā udāyī sañcarittaṁ samāpajjissatī"ti.</p>
+
+<p><span class="parno">14</span><span class="ms">p_1V_1233</span>Atha kho te bhikkhū āyasmantaṁ udāyiṁ anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusanghaṁ sannipātāpetvā āyasmantaṁ udāyiṁ paṭipucchi:</p>
+
+<hr>
+<p>"Saccaṁ kira tvaṁ, udāyi, sañcarittaṁ samāpajjasī"ti?</p>
+
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma tvaṁ, moghapurisa, sañcarittaṁ samāpajjissasi. Netaṁ, moghapurisa, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">15</span><span class="ms">p_1V_1234, msdiv299</span><span class="rule">"Yo pana bhikkhu sañcarittaṁ samāpajjeyya, itthiyā vā purisamatiṁ purisassa vā itthimatiṁ, jāyattane vā jārattane vā, Sanghādiseso"</span>ti.</p>
+
+<p><span class="parno">16</span><span class="ms">p_1V_1235</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">17</span><span class="ms">p_1V_1236, msdiv300</span>Tena kho pana samayena sambahulā dhuttā uyyāne paricārentā aññatarissā vesiyā santike dūtaṁ pāhesuṁ— "āgacchatu uyyāne paricāressāmā"ti.</p>
+
+<p>Sā evamāha— "ahaṁ khvayyo, tumhe na jānāmi— ‘ke vā ime kassa vā’ti. Ahañcamhi bahubhaṇḍā bahuparikkhārā, bahinagarañca gantabbaṁ. Nāhaṁ gamissāmī"ti.</p>
+
+<hr>
+<p><span class="parno">18</span><span class="ms">p_1V_1237</span>Atha kho so dūto tesaṁ dhuttānaṁ etamatthaṁ ārocesi. Evaṁ vutte, aññataro puriso te dhutte etadavoca: "Kissa tumhe, ayyo, etaṁ vesiṁ yācittha? Nanu ayyo udāyī vattabbo. Ayyo udāyī uyyojessatī"ti.</p>
+
+<p>Evaṁ vutte, aññataro upāsako taṁ purisaṁ etadavoca: "māyyo, evaṁ avaca. Na kappati samaṇānaṁ sakyaputtiyānaṁ evarūpaṁ kātuṁ. Nāyyo udāyī evaṁ karissatī"ti. Evaṁ vutte, "karissati na karissatī"ti abbhutamakaṁsu.</p>
+
+<p><span class="parno">19</span><span class="ms">p_1V_1238</span>Atha kho te dhuttā yenāyasmā udāyī tenupasankamiṁsu; upasankamitvā āyasmantaṁ udāyiṁ etadavocuṁ: "idha mayaṁ, bhante, uyyāne paricārentā asukāya nāma vesiyā santike dūtaṁ pahiṇimhā— ‘āgacchatu uyyāne paricāressāmā’ti. Sā evamāha— ‘Ahaṁ khvayyo, tumhe na jānāmi— ke vā ime kassa vāti, ahañcamhi bahubhaṇḍā bahuparikkhārā, bahinagarañca gantabbaṁ. Nāhaṁ gamissāmī’ti. Sādhu, bhante, ayyo taṁ vesiṁ uyyojetū"ti.</p>
+
+<hr>
+<p><span class="parno">20</span><span class="ms">p_1V_1239</span>Atha kho āyasmā udāyī yena sā vesī tenupasankami; upasankamitvā taṁ vesiṁ etadavoca: "kissimesaṁ na gacchasī"ti?</p>
+
+<hr>
+<p>"Ahaṁ khvayya, ime na jānāmi— ‘ke vā ime kassa vā’ti. Ahañcamhi bahubhaṇḍā bahuparikkhārā, bahinagarañca gantabbaṁ. Nāhaṁ gamissāmī"ti.</p>
+
+<hr>
+<p>"Gacchimesaṁ. Ahaṁ ime jānāmī"ti.</p>
+
+<hr>
+<p>"Sace, bhante, ayyo jānāti ahaṁ gamissāmī"ti. Atha kho te dhuttā taṁ vesiṁ ādāya uyyānaṁ agamaṁsu.</p>
+
+<p>Atha kho so upāsako ujjhāyati khiyyati vipāceti— "Kathañhi nāma ayyo udāyī tankhaṇikaṁ sañcarittaṁ samāpajjissatī"ti.</p>
+
+<p><span class="parno">21</span><span class="ms">p_1V_1240</span>Assosuṁ kho bhikkhū tassa upāsakassa ujjhāyantassa khiyyantassa vipācentassa. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma āyasmā udāyī tankhaṇikaṁ sañcarittaṁ samāpajjissatī"ti.</p>
+
+<hr>
+<p><span class="parno">22</span><span class="ms">p_1V_1241</span>Atha kho te bhikkhū āyasmantaṁ udāyiṁ anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe …</p>
+
+<hr>
+<p>"Saccaṁ kira tvaṁ, udāyi, tankhaṇikaṁ sañcarittaṁ samāpajjasī"ti"</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma tvaṁ, moghapurisa, tankhaṇikaṁ sañcarittaṁ samāpajjissasi? Netaṁ, moghapurisa, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">23</span><span class="ms">p_1V_1242, msdiv301</span><span class="rule">"Yo pana bhikkhu sañcarittaṁ samāpajjeyya, itthiyā vā purisamatiṁ purisassa vā itthimatiṁ, jāyattane vā jārattane vā, antamaso tankhaṇikāyapi, Sanghādiseso"</span>ti. (<i>5</i>:<b>9</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">24</span><span class="ms">p_1V_1243, msdiv302</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<p><span class="parno">25</span><span class="ms">p_1V_1244</span><b>Sañcarittaṁ samāpajjeyyā</b>'ti itthiyā vā pahito purisassa santike gacchati, purisena vā pahito itthiyā santike gacchati.</p>
+
+<p><span class="parno">26</span><span class="ms">p_1V_1245</span><b>Itthiyā vā purisamatin</b>'ti purisassa matiṁ itthiyā āroceti.</p>
+
+<p><span class="parno">27</span><span class="ms">p_1V_1246</span><b>Purisassa vā itthimatin</b>'ti itthiyā matiṁ purisassa āroceti.</p>
+
+<p><span class="parno">28</span><span class="ms">p_1V_1247</span><b>Jāyattane vā</b>'ti jāyā bhavissasi.</p>
+
+<p><span class="parno">29</span><span class="ms">p_1V_1248</span><b>Jārattane vā</b>'ti jārī bhavissasi.</p>
+
+<p><span class="parno">30</span><span class="ms">p_1V_1249</span><b>Antamaso tankhaṇikāyapī</b>'ti muhuttikā bhavissasi.</p>
+
+<hr>
+<p><span class="parno">31</span><span class="ms">p_1V_1250</span><b>Sanghādiseso</b>'ti … pe … tenapi vuccati "Sanghādiseso"ti.</p>
+
+<div> <h3>&nbsp;</h3> <h4>&nbsp;</h4> <h5>&nbsp;</h5> </div>
+
+<hr>
+<p><span class="parno">32</span><span class="ms">p_1V_1251, msdiv303</span>Dasa itthiyo— māturakkhitā piturakkhitā mātāpiturakkhitā bhāturakkhitā bhaginirakkhitā ñātirakkhitā gottarakkhitā dhammarakkhitā sārakkhā saparidaṇḍā.</p>
+
+<p><span class="parno">33</span><span class="ms">p_1V_1252</span>Dasa bhariyāyo— dhanakkītā chandavāsinī bhogavāsinī paṭavāsinī odapattakinī obhaṭacumbaṭā dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā muhuttikā.</p>
+
+<hr>
+<p><span class="parno">34</span><span class="ms">p_1V_1253, msdiv304</span><b>Māturakkhitā</b> nāma mātā rakkhati gopeti issariyaṁ kāreti vasaṁ vatteti.</p>
+
+<hr>
+<p><span class="parno">35</span><span class="ms">p_1V_1254</span><b>Piturakkhitā</b> nāma pitā rakkhati gopeti issariyaṁ kāreti vasaṁ vatteti.</p>
+
+<hr>
+<p><span class="parno">36</span><span class="ms">p_1V_1255</span><b>Mātāpiturakkhitā</b> nāma mātāpitaro rakkhanti gopenti issariyaṁ kārenti vasaṁ vattenti.</p>
+
+<p><span class="parno">37</span><span class="ms">p_1V_1256</span><b>Bhāturakkhitā</b> nāma bhātā rakkhati gopeti issariyaṁ kāreti vasaṁ vatteti.</p>
+
+<p><span class="parno">38</span><span class="ms">p_1V_1257</span><b>Bhaginirakkhitā</b> nāma bhaginī rakkhati gopeti issariyaṁ kāreti vasaṁ vatteti.</p>
+
+<hr>
+<p><span class="parno">39</span><span class="ms">p_1V_1258</span><b>Ñātirakkhitā</b> nāma ñātakā rakkhanti gopenti issariyaṁ kārenti vasaṁ vattenti.</p>
+
+<p><span class="parno">40</span><span class="ms">p_1V_1259</span><b>Gottarakkhitā</b> nāma sagottā rakkhanti gopenti issariyaṁ kārenti vasaṁ vattenti.</p>
+
+<hr>
+<p><span class="parno">41</span><span class="ms">p_1V_1260</span><b>Dhammarakkhitā</b> nāma sahadhammikā rakkhanti gopenti issariyaṁ kārenti vasaṁ vattenti.</p>
+
+<p><span class="parno">42</span><span class="ms">p_1V_1261</span><b>Sārakkhā</b> nāma gabbhepi pariggahitā hoti— mayhaṁ esāti. Antamaso mālāguḷaparikkhittāpi.</p>
+
+<p><span class="parno">43</span><span class="ms">p_1V_1262</span><b>Saparidaṇḍā</b> nāma kehici daṇḍo ṭhapito hoti— yo itthannāmaṁ itthiṁ gacchati ettako daṇḍoti.</p>
+
+<hr>
+<p><span class="parno">44</span><span class="ms">p_1V_1263</span><b>Dhanakkītā</b> nāma dhanena kiṇitvā vāseti.</p>
+
+<hr>
+<p><span class="parno">45</span><span class="ms">p_1V_1264</span><b>Chandavāsinī</b> nāma piyo piyaṁ vāseti.</p>
+
+<hr>
+<p><span class="parno">46</span><span class="ms">p_1V_1265</span><b>Bhogavāsinī</b> nāma bhogaṁ datvā vāseti.</p>
+
+<hr>
+<p><span class="parno">47</span><span class="ms">p_1V_1266</span><b>Paṭavāsinī</b> nāma paṭaṁ datvā vāseti.</p>
+
+<p><span class="parno">48</span><span class="ms">p_1V_1267</span><b>Odapattakinī</b> nāma udakapattaṁ āmasitvā vāseti.</p>
+
+<p><span class="parno">49</span><span class="ms">p_1V_1268</span><b>Obhaṭacumbaṭā</b> nāma cumbaṭaṁ oropetvā vāseti.</p>
+
+<p><span class="parno">50</span><span class="ms">p_1V_1269</span><b>Dāsī</b> nāma dāsī ceva hoti bhariyā ca.</p>
+
+<p><span class="parno">51</span><span class="ms">p_1V_1270</span><b>Kammakārī</b> nāma kammakārī ceva hoti bhariyā ca.</p>
+
+<p><span class="parno">52</span><span class="ms">p_1V_1271</span><b>Dhajāhaṭā</b> nāma karamarānītā vuccati.</p>
+
+<p><span class="parno">53</span><span class="ms">p_1V_1272</span><b>Muhuttikā</b> nāma tankhaṇikā vuccati.</p>
+
+<div> <h4>&nbsp;</h4> <h5>&nbsp;</h5> </div>
+
+<p><span class="parno">54</span><span class="ms">p_1V_1273, msdiv305</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">55</span><span class="ms">p_1V_1274</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitaṁ brūhi … pe … mātāpiturakkhitaṁ brūhi … bhāturakkhitaṁ brūhi … bhaginirakkhitaṁ brūhi … ñātirakkhitaṁ brūhi … gottarakkhitaṁ brūhi … dhammarakkhitaṁ brūhi … sārakkhaṁ brūhi … saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">56</span><span class="ms">p_1V_1275</span>Nikkhepapadāni.</p>
+
+<hr>
+<p><span class="parno">57</span><span class="ms">p_1V_1276, msdiv306</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca piturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">58</span><span class="ms">p_1V_1277</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca mātāpiturakkhitañca … pe … māturakkhitañca bhāturakkhitañca … māturakkhitañca bhaginirakkhitañca … māturakkhitañca ñātirakkhitañca … māturakkhitañca gottarakkhitañca … māturakkhitañca dhammarakkhitañca … māturakkhitañca sārakkhañca … māturakkhitañca saparidaṇḍañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">59</span><span class="ms">p_1V_1278</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">60</span><span class="ms">p_1V_1279, msdiv307</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitañca mātāpiturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">61</span><span class="ms">p_1V_1280</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitañca bhāturakkhitañca … pe … piturakkhitañca bhaginirakkhitañca … piturakkhitañca ñātirakkhitañca … piturakkhitañca gottarakkhitañca … piturakkhitañca dhammarakkhitañca … piturakkhitañca sārakkhañca … piturakkhitañca saparidaṇḍañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">62</span><span class="ms">p_1V_1281</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitañca māturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">63</span><span class="ms">p_1V_1282</span>Baddhacakkaṁ mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">64</span><span class="ms">p_1V_1283, msdiv308</span> Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍañca māturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">65</span><span class="ms">p_1V_1284</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍañca piturakkhitañca … pe … saparidaṇḍañca mātāpiturakkhitañca … saparidaṇḍañca bhāturakkhitañca … saparidaṇḍañca bhaginirakkhitañca … saparidaṇḍañca ñātirakkhitañca … saparidaṇḍañca gottarakkhitañca … saparidaṇḍañca dhammarakkhitañca … saparidaṇḍañca sārakkhañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">66</span><span class="ms">p_1V_1285</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">67</span><span class="ms">p_1V_1286</span>Evaṁ dumūlakampi timūlakampi yāva navamūlakaṁ kātabbaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">68</span><span class="ms">p_1V_1287</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">69</span><span class="ms">p_1V_1288, msdiv309</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca piturakkhitañca mātāpiturakkhitañca bhāturakkhitañca bhaginirakkhitañca ñātirakkhitañca gottarakkhitañca dhammarakkhitañca sārakkhañca saparidaṇḍañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">70</span><span class="ms">p_1V_1289</span>Dhanakkītācakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">71</span><span class="ms">p_1V_1290, msdiv310</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā chandavāsinī … pe … bhogavāsinī … paṭavāsinī … odapattakinī … obhaṭacumbaṭā … dāsī ca bhariyā ca … kammakārī ca bhariyā ca … dhajāhaṭā … muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">72</span><span class="ms">p_1V_1291</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitaṁ brūhi … pe … mātāpiturakkhitaṁ brūhi … bhāturakkhitaṁ brūhi … bhaginirakkhitaṁ brūhi … ñātirakkhitaṁ brūhi … gottarakkhitaṁ brūhi … dhammarakkhitaṁ brūhi … sārakkhaṁ brūhi … saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">73</span><span class="ms">p_1V_1292</span>Nikkhepapadāni.</p>
+
+<hr>
+<p><span class="parno">74</span><span class="ms">p_1V_1293, msdiv311</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca piturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">75</span><span class="ms">p_1V_1294</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca mātāpiturakkhitañca … pe … māturakkhitañca saparidaṇḍañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">76</span><span class="ms">p_1V_1295</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">77</span><span class="ms">p_1V_1296, msdiv312</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitañca mātāpiturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">78</span><span class="ms">p_1V_1297</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitañca bhāturakkhitañca … pe … piturakkhitañca saparidaṇḍañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">79</span><span class="ms">p_1V_1298</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitañca māturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">80</span><span class="ms">p_1V_1299</span>Baddhacakkaṁ mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">81</span><span class="ms">p_1V_1300, msdiv313</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍañca māturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">82</span><span class="ms">p_1V_1301</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍañca piturakkhitañca … pe … saparidaṇḍañca sārakkhañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">83</span><span class="ms">p_1V_1302</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">84</span><span class="ms">p_1V_1303</span>Dumūlakādīnipi evameva kātabbāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">85</span><span class="ms">p_1V_1304</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">86</span><span class="ms">p_1V_1305, msdiv314</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca piturakkhitañca mātāpiturakkhitañca bhāturakkhitañca bhaginirakkhitañca ñātirakkhitañca gottarakkhitañca dhammarakkhitañca sārakkhañca saparidaṇḍañca brūhi— ‘hotha kira itthannāmassa bhariyāyo muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">87</span><span class="ms">p_1V_1306</span>Muhuttikācakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">88</span><span class="ms">p_1V_1307, msdiv315</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">89</span><span class="ms">p_1V_1308</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā chandavāsinī … pe … bhogavāsinī … paṭavāsinī … odapattakinī … obhaṭacumbaṭā … dāsī ca bhariyā ca … kammakārī ca bhariyā ca … dhajāhaṭā … muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">90</span><span class="ms">p_1V_1309</span>Nikkhepapadāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">91</span><span class="ms">p_1V_1310, msdiv316</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā ca chandavāsinī cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">92</span><span class="ms">p_1V_1311</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā ca bhogavāsinī ca … pe … dhanakkītā ca paṭavāsinī ca … dhanakkītā ca odapattakinī ca … dhanakkītā ca obhaṭacumbaṭā ca … dhanakkītā ca dāsī ca bhariyā ca … dhanakkītā ca kammakārī ca bhariyā ca … dhanakkītā ca dhajāhaṭā ca … dhanakkītā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">93</span><span class="ms">p_1V_1312</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">94</span><span class="ms">p_1V_1313, msdiv317</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā chandavāsinī ca bhogavāsinī ca … pe … chandavāsinī ca muhuttikā ca … chandavāsinī ca dhanakkītā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">95</span><span class="ms">p_1V_1314</span>Baddhacakkaṁ mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">96</span><span class="ms">p_1V_1315, msdiv318</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā muhuttikā ca dhanakkītā ca … pe … muhuttikā ca chandavāsinī ca … pe … muhuttikā ca dhajāhaṭā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">97</span><span class="ms">p_1V_1316</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">98</span><span class="ms">p_1V_1317</span>Dumūlakādīnipi evameva kātabbāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">99</span><span class="ms">p_1V_1318</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">100</span><span class="ms">p_1V_1319, msdiv319</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca bhogavāsinī ca paṭavāsinī ca odapattakinī ca obhaṭacumbaṭā ca dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">101</span><span class="ms">p_1V_1320</span>Māturakkhitācakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">102</span><span class="ms">p_1V_1321</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ piturakkhitaṁ … pe … mātāpiturakkhitaṁ … bhāturakkhitaṁ … bhaginirakkhitaṁ … ñātirakkhitaṁ … gottarakkhitaṁ … dhammarakkhitaṁ … sārakkhaṁ … saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">103</span><span class="ms">p_1V_1322</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā chandavāsinī … pe … bhogavāsinī … paṭavāsinī … odapattakinī … obhaṭacumbaṭā … dāsī ca bhariyā ca … kammakārī ca bhariyā ca … dhajāhaṭā … muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">104</span><span class="ms">p_1V_1323</span>Nikkhepapadāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">105</span><span class="ms">p_1V_1324, msdiv320</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā ca chandavāsinī cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">106</span><span class="ms">p_1V_1325</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā ca bhogavāsinī ca … pe … dhanakkītā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">107</span><span class="ms">p_1V_1326</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">108</span><span class="ms">p_1V_1327</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā chandavāsinī ca bhogavāsinī ca … pe … chandavāsinī ca muhuttikā ca … chandavāsinī ca dhanakkītā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">109</span><span class="ms">p_1V_1328</span>Baddhacakkaṁ mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">110</span><span class="ms">p_1V_1329</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā muhuttikā ca dhanakkītā ca … pe … muhuttikā ca chandavāsinī ca … pe … muhuttikā ca dhajāhaṭā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">111</span><span class="ms">p_1V_1330</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">112</span><span class="ms">p_1V_1331</span>Dumūlakampi timūlakampi yāva navamūlakaṁ evameva kātabbaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">113</span><span class="ms">p_1V_1332</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">114</span><span class="ms">p_1V_1333, msdiv321</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ saparidaṇḍaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca bhogavāsinī ca paṭavāsinī ca odapattakinī ca obhaṭacumbaṭā ca dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">115</span><span class="ms">p_1V_1334</span>Saparidaṇḍācakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">116</span><span class="ms">p_1V_1335</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitaṁ brūhi— ‘hohi kira itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">117</span><span class="ms">p_1V_1336</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca piturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā ca chandavāsinī cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">118</span><span class="ms">p_1V_1337</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca piturakkhitañca mātāpiturakkhitañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā ca chandavāsinī ca bhogavāsinī cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">119</span><span class="ms">p_1V_1338</span>Evaṁ ubhatovaḍḍhakaṁ kātabbaṁ.</p>
+
+<p><span class="parno">120</span><span class="ms">p_1V_1339</span>Puriso bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ māturakkhitañca piturakkhitañca mātāpiturakkhitañca bhāturakkhitañca bhaginirakkhitañca ñātirakkhitañca gottarakkhitañca dhammarakkhitañca sārakkhañca saparidaṇḍañca brūhi— ‘hotha kira itthannāmassa bhariyāyo dhanakkītā ca chandavāsinī ca bhogavāsinī ca paṭavāsinī ca odapattakinī ca obhaṭacumbaṭā ca dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">121</span><span class="ms">p_1V_1340</span>Ubhatovaḍḍhakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">122</span><span class="ms">p_1V_1341</span>Purisassa mātā bhikkhuṁ pahiṇati … pe … purisassa pitā bhikkhuṁ pahiṇati … pe … purisassa mātāpitaro bhikkhuṁ pahiṇanti … pe … purisassa bhātā bhikkhuṁ pahiṇati … pe … purisassa bhaginī bhikkhuṁ pahiṇati … pe … purisassa ñātakā bhikkhuṁ pahiṇanti … pe … purisassa gottā bhikkhuṁ pahiṇanti … pe … purisassa sahadhammikā bhikkhuṁ pahiṇanti … pe … .</p>
+
+<hr>
+<p class="endsutta"><span class="parno">123</span><span class="ms">p_1V_1342</span>Purisassa peyyālo vitthāretabbo.</p>
+
+<p class="endsutta"><span class="parno">124</span><span class="ms">p_1V_1343</span>Ubhatovaḍḍhakaṁ yathā purimanayo<br/> tatheva vitthāretabbaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">125</span><span class="ms">p_1V_1344, msdiv322</span>Māturakkhitāya mātā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">126</span><span class="ms">p_1V_1345</span>Māturakkhitāya mātā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā chandavāsinī … pe … bhogavāsinī … paṭavāsinī … odapattakinī … obhaṭacumbaṭā … dāsī ca bhariyā ca … kammakārī ca bhariyā ca … dhajāhaṭā … muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">127</span><span class="ms">p_1V_1346</span>Nikkhepapadāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">128</span><span class="ms">p_1V_1347, msdiv323</span>Māturakkhitāya mātā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca … pe … dhanakkītā ca bhogavāsinī ca … pe … dhanakkītā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">129</span><span class="ms">p_1V_1348</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">130</span><span class="ms">p_1V_1349, msdiv324</span>Māturakkhitāya mātā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā chandavāsinī ca bhogavāsinī ca … pe … chandavāsinī ca muhuttikā ca … chandavāsinī ca dhanakkītā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">131</span><span class="ms">p_1V_1350</span>Baddhacakkaṁ mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">132</span><span class="ms">p_1V_1351, msdiv325</span>Māturakkhitāya mātā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā muhuttikā ca dhanakkītā ca … pe … muhuttikā ca chandavāsinī ca … pe … muhuttikā ca dhajāhaṭā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">133</span><span class="ms">p_1V_1352</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">134</span><span class="ms">p_1V_1353</span>Dumūlakampi timūlakampi yāva navamūlakaṁ evameva kātabbaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">135</span><span class="ms">p_1V_1354</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">136</span><span class="ms">p_1V_1355, msdiv326</span>Māturakkhitāya mātā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca bhogavāsinī ca paṭavāsinī ca odapattakinī ca obhaṭacumbaṭā ca dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">137</span><span class="ms">p_1V_1356</span>Mātucakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">138</span><span class="ms">p_1V_1357</span>Piturakkhitāya pitā bhikkhuṁ pahiṇati … pe … mātāpiturakkhitāya mātāpitaro bhikkhuṁ pahiṇanti … bhāturakkhitāya bhātā bhikkhuṁ pahiṇati … bhaginirakkhitāya bhaginī bhikkhuṁ pahiṇati … ñātirakkhitāya ñātakā bhikkhuṁ pahiṇanti … gottarakkhitāya gottā bhikkhuṁ pahiṇanti … dhammarakkhitāya sahadhammikā bhikkhuṁ pahiṇanti … sārakkhāya yena pariggahitā hoti so bhikkhuṁ pahiṇati … saparidaṇḍāya yena daṇḍo ṭhapito hoti so bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">139</span><span class="ms">p_1V_1358</span>Saparidaṇḍāya yena daṇḍo ṭhapito hoti so bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā chandavāsinī … pe … bhogavāsinī … paṭavāsinī … odapattakinī … obhaṭacumbaṭā … dāsī ca bhariyā ca … kammakārī ca bhariyā ca … dhajāhaṭā … muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">140</span><span class="ms">p_1V_1359</span>Nikkhepapadāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">141</span><span class="ms">p_1V_1360, msdiv327</span>Saparidaṇḍāya yena daṇḍo ṭhapito hoti so bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca … pe … dhanakkītā ca bhogavāsinī ca … pe … dhanakkītā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">142</span><span class="ms">p_1V_1361</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">143</span><span class="ms">p_1V_1362, msdiv328</span>Saparidaṇḍāya yena daṇḍo ṭhapito hoti so bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā chandavāsinī ca bhogavāsinī ca … pe … chandavāsinī ca muhuttikā ca … chandavāsinī ca dhanakkītā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">144</span><span class="ms">p_1V_1363</span>Baddhacakkaṁ mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">145</span><span class="ms">p_1V_1364, msdiv329</span>Saparidaṇḍāya yena daṇḍo, ṭhapito hoti so bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā muhuttikā ca dhanakkītā ca … pe … muhuttikā ca chandavāsinī ca … pe … muhuttikā ca dhajāhaṭā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">146</span><span class="ms">p_1V_1365</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">147</span><span class="ms">p_1V_1366</span>Dumūlakampi timūlakampi yāva navamūlakaṁ evameva kātabbaṁ.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">148</span><span class="ms">p_1V_1367</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">149</span><span class="ms">p_1V_1368, msdiv330</span>Saparidaṇḍāya yena daṇḍo ṭhapito hoti so bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘hotu itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca bhogavāsinī ca paṭavāsinī ca odapattakinī ca obhaṭacumbaṭā ca dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">150</span><span class="ms">p_1V_1369</span>Daṇḍaṭhapitacakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">151</span><span class="ms">p_1V_1370</span>Māturakkhitā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">152</span><span class="ms">p_1V_1371</span>Māturakkhitā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā chandavāsinī … pe … bhogavāsinī … paṭavāsinī … odapattakinī … obhaṭacumbaṭā … dāsī ca bhariyā ca … kammakārī ca bhariyā ca … dhajāhaṭā … muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">153</span><span class="ms">p_1V_1372</span>Nikkhepapadāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">154</span><span class="ms">p_1V_1373, msdiv331</span>Māturakkhitā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā dhanakkītā ca chandavāsinī cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">155</span><span class="ms">p_1V_1374</span>Māturakkhitā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā dhanakkītā ca bhogavāsinī ca … pe … dhanakkītā ca paṭavāsinī ca … pe … dhanakkītā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">156</span><span class="ms">p_1V_1375</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">157</span><span class="ms">p_1V_1376, msdiv332</span>Māturakkhitā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā chandavāsinī ca bhogavāsinī ca … pe … chandavāsinī ca muhuttikā ca … chandavāsinī ca dhanakkītā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">158</span><span class="ms">p_1V_1377</span>Baddhacakkaṁ mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">159</span><span class="ms">p_1V_1378</span>Māturakkhitā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā muhuttikā ca dhanakkītā ca … pe … muhuttikā ca chandavāsinī ca … pe … muhuttikā ca dhajāhaṭā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">160</span><span class="ms">p_1V_1379</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<hr>
+<p><span class="parno">161</span><span class="ms">p_1V_1380</span>Dumūlakādīnipi evameva kātabbāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">162</span><span class="ms">p_1V_1381</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">163</span><span class="ms">p_1V_1382, msdiv333</span>Māturakkhitā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca bhogavāsinī ca paṭavāsinī ca odapattakinī ca obhaṭacumbaṭā ca dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">164</span><span class="ms">p_1V_1383</span>Aparaṁ māturakkhitācakkaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">165</span><span class="ms">p_1V_1384</span>Piturakkhitā bhikkhuṁ pahiṇati … pe … mātāpiturakkhitā bhikkhuṁ pahiṇati … bhāturakkhitā bhikkhuṁ pahiṇati … bhaginirakkhitā bhikkhuṁ pahiṇati … ñātirakkhitā bhikkhuṁ pahiṇati … gottarakkhitā bhikkhuṁ pahiṇati … dhammarakkhitā bhikkhuṁ pahiṇati … sārakkhā bhikkhuṁ pahiṇati … saparidaṇḍā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā dhanakkītā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">166</span><span class="ms">p_1V_1385</span>Saparidaṇḍā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā chandavāsinī … pe … bhogavāsinī … paṭavāsinī … odapattakinī … obhaṭacumbaṭā … dāsī ca bhariyā ca … kammakārī ca bhariyā ca … dhajāhaṭā … muhuttikā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">167</span><span class="ms">p_1V_1386</span>Nikkhepapadāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">168</span><span class="ms">p_1V_1387, msdiv334</span>Saparidaṇḍā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca … pe … dhanakkītā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">169</span><span class="ms">p_1V_1388</span>Khaṇḍacakkaṁ.</p>
+
+<p><span class="parno">170</span><span class="ms">p_1V_1389, msdiv335</span>Saparidaṇḍā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā chandavāsinī ca bhogavāsinī ca … pe … chandavāsinī ca muhuttikā ca … chandavāsinī ca dhanakkītā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">171</span><span class="ms">p_1V_1390</span>Baddhacakkaṁ, mūlaṁ saṁkhittaṁ.</p>
+
+<p><span class="parno">172</span><span class="ms">p_1V_1391, msdiv336</span>Saparidaṇḍā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā muhuttikā ca dhanakkītā ca … pe … muhuttikā ca chandavāsinī ca … pe … muhuttikā ca dhajāhaṭā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">173</span><span class="ms">p_1V_1392</span>Ekamūlakaṁ niṭṭhitaṁ.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">174</span><span class="ms">p_1V_1393</span>Dumūlakādīnipi evameva kātabbāni.</p>
+
+<h5>&nbsp;</h5>
+
+<p class="endsutta"><span class="parno">175</span><span class="ms">p_1V_1394</span>Idaṁ dasamūlakaṁ—</p>
+
+<p><span class="parno">176</span><span class="ms">p_1V_1395, msdiv337</span>Saparidaṇḍā bhikkhuṁ pahiṇati— "gaccha, bhante, itthannāmaṁ brūhi— ‘homi itthannāmassa bhariyā dhanakkītā ca chandavāsinī ca bhogavāsinī ca paṭavāsinī ca odapattakinī ca obhaṭacumbaṭā ca dāsī ca bhariyā ca kammakārī ca bhariyā ca dhajāhaṭā ca muhuttikā cā’"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p class="endsutta"><span class="parno">177</span><span class="ms">p_1V_1396</span>Aparaṁ saparidaṇḍācakkaṁ niṭṭhitaṁ.</p>
+
+<p class="endsutta">Sabbaṁ cakkapeyyālaṁ niṭṭhitaṁ.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">178</span><span class="ms">p_1V_1397, msdiv338</span>Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa. Paṭiggaṇhāti vīmaṁsati na paccāharati, āpatti thullaccayassa. Paṭiggaṇhāti na vīmaṁsati paccāharati, āpatti thullaccayassa. Paṭiggaṇhāti na vīmaṁsati na paccāharati, āpatti dukkaṭassa. Na paṭiggaṇhāti vīmaṁsati paccāharati, āpatti thullaccayassa. Na paṭiggaṇhāti vīmaṁsati na paccāharati, āpatti dukkaṭassa. Na paṭiggaṇhāti na vīmaṁsati paccāharati, āpatti dukkaṭassa. Na paṭiggaṇhāti na vīmaṁsati na paccāharati, anāpatti.</p>
+
+<hr>
+<p><span class="parno">179</span><span class="ms">p_1V_1398</span>Puriso sambahule bhikkhū āṇāpeti— "gacchatha, bhante, itthannāmaṁ itthiṁ vīmaṁsathā"ti. Sabbe paṭiggaṇhanti sabbe vīmaṁsanti sabbe paccāharanti, āpatti sabbesaṁ sanghādisesassa.</p>
+
+<p><span class="parno">180</span><span class="ms">p_1V_1399</span>Puriso sambahule bhikkhū āṇāpeti— "gacchatha, bhante, itthannāmaṁ itthiṁ vīmaṁsathā"ti. Sabbe paṭiggaṇhanti sabbe vīmaṁsanti ekaṁ paccāharāpenti, āpatti sabbesaṁ sanghādisesassa.</p>
+
+<p><span class="parno">181</span><span class="ms">p_1V_1400</span>Puriso sambahule bhikkhū āṇāpeti— "gacchatha, bhante, itthannāmaṁ itthiṁ vīmaṁsathā"ti. Sabbe paṭiggaṇhanti ekaṁ vīmaṁsāpetvā sabbe paccāharanti, āpatti sabbesaṁ sanghādisesassa.</p>
+
+<p><span class="parno">182</span><span class="ms">p_1V_1401</span>Puriso sambahule bhikkhū āṇāpeti— "gacchatha, bhante, itthannāmaṁ itthiṁ vīmaṁsathā"ti. Sabbe paṭiggaṇhanti ekaṁ vīmaṁsāpetvā ekaṁ paccāharāpenti, āpatti sabbesaṁ sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">183</span><span class="ms">p_1V_1402</span>Puriso bhikkhuṁ āṇāpeti— "gaccha, bhante, itthannāmaṁ itthiṁ vīmaṁsā"ti. Paṭiggaṇhāti vīmaṁsati paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">184</span><span class="ms">p_1V_1403</span>Puriso bhikkhuṁ āṇāpeti— "gaccha, bhante, itthannāmaṁ itthiṁ vīmaṁsā"ti. Paṭiggaṇhāti vīmaṁsati antevāsiṁ paccāharāpeti, āpatti sanghādisesassa.</p>
+
+<hr>
+<p><span class="parno">185</span><span class="ms">p_1V_1404</span>Puriso bhikkhuṁ āṇāpeti— "gaccha, bhante, itthannāmaṁ itthiṁ vīmaṁsā"ti. Paṭiggaṇhāti antevāsiṁ vīmaṁsāpetvā attanā paccāharati, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">186</span><span class="ms">p_1V_1405</span>Puriso bhikkhuṁ āṇāpeti— "gaccha, bhante, itthannāmaṁ itthiṁ vimaṁsā"ti. Paṭiggaṇhāti antevāsiṁ vīmaṁsāpeti antevāsī vīmaṁsitvā bahiddhā paccāharati, āpatti ubhinnaṁ thullaccayassa.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">187</span><span class="ms">p_1V_1406, msdiv339</span>Gacchanto sampādeti, āgacchanto visaṁvādeti, āpatti thullaccayassa.</p>
+
+<p><span class="parno">188</span><span class="ms">p_1V_1407</span>Gacchanto visaṁvādeti, āgacchanto sampādeti, āpatti thullaccayassa.</p>
+
+<p><span class="parno">189</span><span class="ms">p_1V_1408</span>Gacchanto sampādeti, āgacchanto sampādeti, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">190</span><span class="ms">p_1V_1409</span>Gacchanto visaṁvādeti, āgacchanto visaṁvādeti, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">191</span><span class="ms">p_1V_1410, msdiv340</span>Anāpatti— sanghassa vā cetiyassa vā gilānassa vā karaṇīyena gacchati, ummattakassa, ādikammikassāti.</p>
+
+<div> <h3>&nbsp;</h3> <h4>5.1 Vinītavatthuuddānagāthā</h4> </div>
+
+<p class="verse"><span class="parno">192</span><span class="ms">p_1V_1411</span>Suttā matā ca nikkhantā,
+<br>anitthī itthipaṇḍakā;
+<br>Kalahaṁ katvāna sammodi,
+<br>sañcarittañca paṇḍaketi.</p>
+
+<h4>5.2 Vinītavatthu</h4>
+
+<p><span class="parno">193</span><span class="ms">p_1V_1412, msdiv341</span>Tena kho pana samayena aññataro puriso aññataraṁ bhikkhuṁ āṇāpesi— "gaccha, bhante, itthannāmaṁ itthiṁ vīmaṁsā"ti.</p>
+
+<hr>
+<p>So gantvā manusse pucchi— "kahaṁ itthannāmā"ti?</p>
+
+<hr>
+<p>"Suttā, bhante"ti.</p>
+
+<p>Tassa kukkuccaṁ ahosi— "bhagavatā sikkhāpadaṁ paññattaṁ, kacci nu kho ahaṁ sanghādisesaṁ āpattiṁ āpanno"ti? Bhagavato etamatthaṁ ārocesi—</p>
+
+<p>"Anāpatti, bhikkhu, sanghādisesassa; āpatti dukkaṭassā"ti. (1)</p>
+
+<p><span class="parno">194</span><span class="ms">p_1V_1413</span>Tena kho pana samayena aññataro puriso aññataraṁ bhikkhuṁ āṇāpesi— "gaccha, bhante, itthannāmaṁ itthiṁ vīmaṁsā"ti.</p>
+
+<hr>
+<p>So gantvā manusse pucchi— "kahaṁ itthannāmā"ti?</p>
+
+<p>"Matā, bhante"ti … pe … "nikkhantā, bhante"ti … "anitthī, bhante"ti … "itthipaṇḍakā, bhante"ti.</p>
+
+<p>Tassa kukkuccaṁ ahosi … pe …</p>
+
+<p>"anāpatti, bhikkhu, sanghādisesassa; āpatti dukkaṭassā"ti. (2 –⁠5)</p>
+
+<p><span class="parno">195</span><span class="ms">p_1V_1414</span>Tena kho pana samayena aññatarā itthī sāmikena saha bhaṇḍitvā mātugharaṁ agamāsi. Kulūpako bhikkhu sammodanīyaṁ akāsi. Tassa kukkuccaṁ ahosi … pe …</p>
+
+<p>"alaṁvacanīyā, bhikkhū"ti?</p>
+
+<p>"Nālaṁvacanīyā, bhagavā"ti.</p>
+
+<p>"Anāpatti, bhikkhu, nālaṁvacanīyāyā"ti. (6)</p>
+
+<p><span class="parno">196</span><span class="ms">p_1V_1415</span>Tena kho pana samayena aññataro bhikkhu paṇḍake sañcarittaṁ samāpajji. Tassa kukkuccaṁ ahosi … pe …</p>
+
+<p>"anāpatti, bhikkhu, sanghādisesassa; āpatti thullaccayassā"ti. (7)</p>
+
+<p class="endsutta"><span class="parno">197</span><span class="ms">p_1V_1416</span>Sañcarittasikkhāpadaṁ niṭṭhitaṁ pañcamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-sn6.html#content"></a><a id="next-sutta" href="../vi/bi-vb-sn8.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-sn.html">Sanghādisesas</a>Sanghādisesa 7
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

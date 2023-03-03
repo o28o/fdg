@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nikāya - Connected Discourses on the Aggregates 22.47</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 			</button>
+<span class="box-lbl">Light/Dark</span>
+
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="pressed w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+ 
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+					<div id="snheading">
+ 					<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div><!-- End snheading div -->
+</div>  <!-- End div for SN sub-navigation -->
+
+
+
+
+ <p>&nbsp;</p>
+
+ 
+ <h3 id="SN22heading">SN22: Connected Discourses on the Aggregates</h3>
+ 
+ 		<div class="w3-bar-white bwnav"><!-- Div for lower SN sub-navigation -->
+ 		<a href="sn22.html#SN22heading" title="Connected Discourses on the Aggregates" class="w3-bar-item w3-hover-white w3-border-white w3-button active">SN22</a>
+ 		<a href="sn23.html#SN23heading" title="Connected Discourses with Radha" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN23</a>
+ 		<a href="sn24.html#SN24heading" title="Connected Discourses on Views" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN24</a>
+ 		<a href="sn25.html#SN25heading" title="Connected Discourses on Entering" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN25</a>
+ 		<a href="sn26.html#SN26heading" title="Connected Discourses on Arising" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN26</a>
+ 		<a href="sn27.html#SN27heading" title="Connected Discourses on Defilements" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN27</a>
+ 		<a href="sn28.html#SN28heading" title="Connected Discourses with Sāriputta" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN28</a>
+ 		<a href="sn29.html#SN29heading" title="Connected Discourses on Nāgas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN29</a>
+ 		<a href="sn30.html#SN30heading" title="Connected Discourses on Supaṇṇas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN30</a>
+ 		<a href="sn31.html#SN31heading" title="Connected Discourses on Gandhabbas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN31</a>
+ 		<a href="sn32.html#SN32heading" title="Connected Discourses on Cloud Devas" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN32</a>
+ 		<a href="sn33.html#SN33heading" title="Connected Discourses with Vacchagotta" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN33</a>
+ 		<a href="sn34.html#SN34heading" title="Connected Discourses on Meditation" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN34</a>
+ 	</div><!-- End div for lower SN sub-navigation -->
+ 
+ <!--      SN content begins here      -->
+  
+ <div id="content">
+
+<h3>SN22:47 Ways of Regarding Things</h3>
+
+<div id="metaarea">
+ <ul class="translator">
+ <li>&copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>At Sāvatthī. "Bhikkhus, those ascetics and brahmins who regard <span class="add">anything as</span> self in various ways all regard <span class="add">as self</span> the five aggregates subject to clinging, or a certain one among them. What five?</p>
+
+<p>"Here, bhikkhus, the uninstructed worldling, who is not a seer of the noble ones and is unskilled and undisciplined in their Dhamma, who is not a seer of superior persons and is unskilled and undisciplined in their Dhamma, regards form as self, or self as possessing form, or form as in self, or self as in form. He regards feeling as self … perception as self … volitional formations as self … consciousness as self, or self as possessing consciousness, or consciousness as in self, or self as in consciousness.</p>
+
+<p id="p2"><span class="parno">2</span>"Thus this way of regarding things and <span class="add">the notion</span> ‘I am’ have not vanished in him.<span class="note" id="n61"><span class="details"><span class="p">[n.61] I read with Be and Se: <i>asmi ti c’ assa avigataṁ hoti.</i> Ee, and many mss, read <i>adhigataṁ</i> for <i>avigataṁ.</i> That the latter reading must be correct is proved by <a href="../an/an6.13.html">AN III 292,16–17</a>, where the affirmative occurs, <i>asmi ti kho me vigataṁ.</i> This same argument applies to the reading at <a href="sn22.89.html">SN22.89</a> below (III 128,34 foll.), despite the prevalence of <i>adhigataṁ</i> there.
+
+<br class="half"><a href="sn0-abbr.html" title="Abbreviations">Spk</a> explains "this way of regarding things" as regarding with views <i>(diṭṭhisamanupassanā)</i>, and "the notion ‘I am’" as the "triple proliferation" <i>(papañcattaya)</i> of craving, conceit, and views. The two differ in that "regarding" is a conceptually formulated view, the notion "I am" a subtler manifestation of ignorance expressive of desire and conceit; see the important discussion at <a href="sn22.89.html">SN22.89</a>. The view of self is eliminated by the path of stream-entry; the notion "I am" is fully eradicated only by the path of arahantship.</span></span></span> As ‘I am’ has not vanished, there takes place a descent of the five faculties—of the eye faculty, the ear faculty, the nose faculty, the tongue faculty, the body faculty.<span class="note" id="n62"><span class="details"><span class="p">[n.62] I take this terse sentence to be describing the rebirth process contingent upon the persistence of the delusion of personal selfhood. Elsewhere "descent" <i>(avakkanti)</i>—of consciousness, or of name-and-form—indicates the commencement of a new existence (as at <a href="sn12.39.html">SN12.39</a>, <a href="sn12.58.html">58</a>, <a href="sn12.59.html">59</a>). Spk: When there is this group of defilements, there is the production of the five faculties conditioned by defilements and kamma.</span></span></span> There is, bhikkhus, the mind, there are mental phenomena, there is the element of ignorance. When the uninstructed worldling is contacted by a feeling born of ignorance-contact, ‘I am’ occurs to him; ‘I am this’ occurs to him; ‘I will be’ and ‘I will not be,’ and ‘I will consist of form’ and ‘I will be formless,’ and ‘I will be percipient’ and ‘I will be nonpercipient’ and ‘I will be neither percipient nor nonpercipient’—these occur to him.<span class="note" id="n63"><span class="details"><span class="p">[n.63] I interpret this whole passage as a demonstration of how the new kammically active phase of existence commences through the renewal of conceiving in terms of the notion "I am" and speculative views of selfhood. Spk identifies "mind" <i>(mano)</i> with the kamma-mind <i>(kammamano)</i> and "mental phenomena" <i>(dhammā)</i> with its objects, or the former as the <i>bhavaṅga</i> and adverting consciousness. Ignorance-contact <i>(avijjāsamphassa)</i> is the contact associated with ignorance <i>(avijjāsampayuttaphassa)</i>.
+
+<br class="half">Ignorance is the most fundamental condition underlying this process, and when this is activated by feeling it gives rise to the notion "I am" (a manifestation of craving and conceit). The idea "I am this" arises subsequently, when the vacuous "I" is given a content by being identified with one or another of the five aggregates. Finally, full eternalist and annihilationist views originate when the imagined self is held either to survive death or to undergo destruction at death. This passage thus presents us with an alternative version of dependent origination, where the "way of regarding things" and the notion "I am" belong to the causally active side of the past existence; the five faculties to the resultant side of the present existence; and the recurrence of the notion "I am" to the causal side of the present existence. This will in turn generate renewed existence in the future.</span></span></span> <a class="pts_pn">sn.iii.47</a></p>
+
+<p id="p3"><span class="parno">3</span>"The five faculties remain right there, bhikkhus, but in regard to them the instructed noble disciple abandons ignorance and arouses true knowledge. With the fading away of ignorance and the arising of true knowledge, ‘I am’ does not occur to him; ‘I am this’ does not occur to him; ‘I will be’ and ‘I will not be,’ and ‘I will consist of form’ and ‘I will be formless,’ and ‘I will be percipient’ and ‘I will be nonpercipient’ and ‘I will be neither percipient nor nonpercipient’—these do not occur to him."</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Sāvatthinidānaṁ. "Ye hi keci, bhikkhave, samaṇā vā brāhmaṇā vā anekavihitaṁ attānaṁ samanupassamānā samanupassanti, sabbete pañcupādānakkhandhe samanupassanti, etesaṁ vā aññataraṁ. Katame pañca? </p>
+
+<p>Idha, bhikkhave, assutavā puthujjano ariyānaṁ adassāvī ariyadhammassa akovido ariyadhamme avinīto, sappurisānaṁ adassāvī sappurisadhammassa akovido sappurisadhamme avinīto rūpaṁ attato samanupassati, rūpavantaṁ vā attānaṁ; attani vā rūpaṁ, rūpasmiṁ vā attānaṁ. vedanāṁ … saññaṁ … sankhāre … viññāṇaṁ attato samanupassati, viññāṇavantaṁ vā attānaṁ; attani vā viññāṇaṁ, viññāṇasmiṁ vā attānaṁ.</p>
+
+<p><span class="parno">2</span>Iti ayañceva samanupassanā ‘asmī’ti cassa avigataṁ hoti. ‘Asmī’ti kho pana, bhikkhave, avigate pañcannaṁ indriyānaṁ avakkanti hoti – cakkhundriyassa sotindriyassa ghānindriyassa jivhindriyassa kāyindriyassa. Atthi, bhikkhave, mano, atthi dhammā, atthi avijjādhātu. Avijjāsamphassajena, bhikkhave, vedayitena phuṭṭhassa assutavato puthujjanassa ‘asmī’tipissa hoti; ‘ayamahamasmī’tipissa hoti; ‘bhavissan’tipissa hoti; ‘Na bhavissan’tipissa hoti; ‘rūpī bhavissan’tipissa hoti; ‘arūpī bhavissan’tipissa hoti; ‘saññī bhavissan’tipissa hoti; ‘asaññī bhavissan’tipissa hoti; ‘nevasaññīnāsaññī bhavissan’tipissa hoti.</p>
+
+<p><span class="parno">3</span>Tiṭṭhanteva kho, bhikkhave, tattheva pañcindriyāni. Athettha sutavato ariyasāvakassa avijjā pahīyati, vijjā uppajjati. Tassa avijjāvirāgā vijjuppādā ‘asmī’tipissa na hoti; ‘ayamahamasmī’tipissa na hoti; ‘bhavissan’ti … ‘Na bhavissan’ti … rūpī … arūpī … saññī … asaññī … ‘nevasaññīnāsaññī bhavissan’tipissa na hotī"ti.</p>
+<p class="endsection">Pañcamaṁ.</p>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="./sn22.46.html#content"></a><a id="next-sutta" href="./sn22.48.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div class="w3-white .bwcontainer2">
+<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn22.html">Connected Discourses on the Aggregates</a>SN22:47 Ways of Regarding Things
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </div>
+</footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

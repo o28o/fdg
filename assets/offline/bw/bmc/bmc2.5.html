@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.5</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+ 	<p>&nbsp;</p>
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc2.1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Personal Grooming</a>
+<a href="../bmc/bmc2.2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Cloth Requisites</a>
+<a href="../bmc/bmc2.3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Alms Bowls and Other Requisites</a>
+<a href="../bmc/bmc2.4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Food</a>
+<a href="../bmc/bmc2.5.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Medicine</a>
+<a href="../bmc/bmc2.6.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Lodgings</a>
+<a href="../bmc/bmc2.7.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Monastery Buildings and Property</a>
+<a href="../bmc/bmc2.8.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Respect</a>
+<a href="../bmc/bmc2.9.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Protocols</a>
+<a href="../bmc/bmc2.10.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Misbehavior</a>
+<a href="../bmc/bmc2.11.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Rains Residence</a>
+</div>
+
+ 	<p>&nbsp;</p>
+<h3>Chapter&nbsp;5: Medicine</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p>The Great Section on Virtue in the Sāmaññaphala Sutta (<a href="../dn/dn2.html">DN2</a>) lists the types of wrong livelihood from which a bhikkhu should abstain. Among them is the practice of medicine, or in the words of the sutta:</p>
+
+<p>“administering emetics, purges, purges from above, purges from below, head-purges; ear-oil, eye-drops, treatments through the nose, ointments, and counter-ointments; practicing eye-surgery (or: extractive surgery), general surgery, pediatrics; administering root-medicines and binding medicinal herbs — he abstains from wrong livelihood, from lowly arts such as these. This, too, is part of his virtue.”</p>
+
+<p>The Commentary to <a href="../bmc/bmc1.4.html#pr3">Pārājika 3</a> states that a bhikkhu should not act as a doctor for lay people unless they are:</p>
+
+<ul class="circ">
+<li>his parents, people who care for his parents, his other blood relatives;</li>
+<li>his preceptor and teacher’s parents or other blood relatives;</li>
+<li>applicants for ordination;</li>
+<li>his own steward;</li>
+<li>travelers who arrive ill at his monastery;</li>
+<li>people who fall ill while in the monastery.</li>
+</ul>
+
+<p>In none of these cases, however, should he expect material reward for his services.</p>
+
+<p>Bhikkhus are, however, expected to know enough medicine to care for their own and for one another’s illnesses. This point is beautifully illustrated by one of the most inspiring passages in the Canon:</p>
+
+<p>Now at that time a certain bhikkhu was sick with dysentery. He lay fouled in his own urine and excrement. Then the Blessed One, on an inspection tour of the lodgings with Ven. Ānanda as his attendant, went to that bhikkhu’s dwelling and, on arrival, saw the bhikkhu lying fouled in his own urine and excrement. On seeing him, he went to the bhikkhu and said: “What is your illness, bhikkhu?”</p>
+
+<p>“I have dysentery, O Blessed One.”</p>
+
+<p>“But do you have an attendant?”</p>
+
+<p>“No, O Blessed One.”</p>
+
+<p>“Then why don’t the bhikkhus tend to you?”</p>
+
+<p>“I don’t do anything for the bhikkhus, venerable sir, which is why they don’t tend to me.”</p>
+
+<p>Then the Blessed One addressed Ven. Ānanda: “Go fetch some water, Ānanda. We will wash this bhikkhu.”</p>
+
+<p>“As you say, venerable sir,” Ven. Ānanda responded, and he fetched some water. The Blessed One sprinkled water on the bhikkhu, and Ven. Ānanda washed him off. Then — with the Blessed One taking the bhikkhu by the head, and Ven. Ānanda taking him by the feet — they lifted him up and placed him on a bed.</p>
+
+<p>Then the Blessed One, with regard to this cause, to this incident, had the bhikkhus assembled and asked them: “Is there a sick bhikkhu in that dwelling over there?”</p>
+
+<p>“Yes, O Blessed One, there is.”</p>
+
+<p>“And what is his illness?”</p>
+
+<p>“He has dysentery, O Blessed One.”</p>
+
+<p>“But does he have an attendant?”</p>
+
+<p>“No, O Blessed One.”</p>
+
+<p>“Then why don’t the bhikkhus tend to him?”</p>
+
+<p>“He doesn’t do anything for the bhikkhus, venerable sir, which is why they don’t tend to him.”</p>
+
+<p>“Bhikkhus, you have no mother, you have no father, who might tend to you. If you don’t tend to one another, who then will tend to you? Whoever would tend to me, should tend to the sick.”</p>
+
+<p>The Buddha then sets out precise duties both for the sick and for those who nurse them:</p>
+
+<p>“If one’s preceptor is present, the preceptor should tend to one as long as life lasts (or) should stay until one’s recovery. If one’s teacher is present, the teacher should tend to one as long as life lasts (or) should stay until one’s recovery. If one’s pupil is present, the pupil should tend to one as long as life lasts (or) should stay until one’s recovery. If one’s student is present, the student should tend to one as long as life lasts (or) should stay until one’s recovery. If a fellow pupil of one’s preceptor is present, the fellow pupil of one’s preceptor should tend to one as long as life lasts (or) should stay until one’s recovery. If a fellow student of one’s teacher is present, the fellow student of one’s teacher should tend to one as long as life lasts (or) should stay until one’s recovery. If no preceptor, teacher, pupil, student, fellow pupil of one’s preceptor, or fellow student of one’s teacher is present, the Community should tend to one. If he/it (i.e., the bhikkhu or the Community responsible for the care, as the case may be) does not: an offense of wrong doing.</p>
+
+<p>“A sick person endowed with five qualities is hard to tend to: He does what is not amenable to his cure; he does not know the proper amount in things amenable to his cure; he does not take his medicine; he does not tell his symptoms, as they actually are present, to the nurse desiring his welfare, saying that they are getting worse when they are getting worse, improving when they are improving, or remaining the same when they are remaining the same; and he is not the type who can endure bodily feelings that are painful, fierce, sharp, wracking, repellent, disagreeable, life-threatening. A sick person endowed with these five qualities is hard to tend to.</p>
+
+<p>“A sick person endowed with five qualities is easy to tend to: He does what is amenable to his cure; he knows the proper amount in things amenable to his cure; he takes his medicine; he tells his symptoms, as they actually are present, to the nurse desiring his welfare, saying that they are getting worse when they are getting worse, improving when they are improving, or remaining the same when they are remaining the same; and he is the type who can endure bodily feelings that are painful, fierce, sharp, wracking, repellent, disagreeable, life-threatening. A sick person endowed with these five qualities is easy to tend to.</p>
+
+<p>“A nurse endowed with five qualities is not fit to tend to the sick: He is not competent at mixing medicine; he does not know what is amenable or unamenable to the patient’s cure, bringing to the patient things that are unamenable and taking away things that are amenable; he is motivated by material gain, not by thoughts of good will; he gets disgusted at cleaning up excrement, urine, saliva (§), or vomit; and he is not competent at instructing, urging, rousing, and encouraging the sick person at the proper occasions with a talk on Dhamma. A nurse endowed with these five qualities is not fit to tend to the sick.</p>
+
+<p>“A nurse endowed with five qualities is fit to tend to the sick: He is competent at mixing medicine; he knows what is amenable or unamenable to the patient’s cure, taking away things that are unamenable and bringing things that are amenable; he is motivated by thoughts of good will, not by material gain; he does not get disgusted at cleaning up excrement, urine, saliva, or vomit; and he is competent at instructing, urging, rousing, and encouraging the sick person at the proper occasions with a talk on Dhamma. A nurse endowed with these five qualities is fit to tend to the sick.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.1–8</p>
+
+<p>Issues related to two of the last five qualities are discussed in detail in the Khandhakas: competence in mixing medicine and the question of material gain, i.e., the rewards given to nurses who have faithfully tended to the sick. The latter issue is a communal one, and so will be discussed in <a href="../bmc/bmc2.22.html">Chapter&nbsp;22</a>. Here we will discuss issues related to medicine, which fall under four main topics: the basic “support” medicine; general classes of edibles that count as tonics and medicines; medical treatments recommended for specific diseases; and medical procedures.</p>
+
+<p><b>Support medicine.</b> A bhikkhu’s basic medicinal support is <i>pūti-mutta-bhesajja,</i> which translates literally as “rancid urine medicine” (Mv.I.30.4). Strangely, none of the texts define the term. The commentaries to the Khuddakapātha, Udāna, and Sutta Nipāta give an example of this sort of medicine — rancid urine with yellow myrobalan — but without a formal definition to indicate the full range of the term. The Sub-commentary to the Vinaya defines rancid urine as any sort of urine at all, citing as a parallel the Pali expression <i>pūti-kāya,</i> decomposing body, which refers to any human body, living or dead: “even one with golden skin.” However, it does not say whether rancid urine medicine is the rancid urine itself or, as suggested by the example from the commentaries, rancid urine in which medicinal fruits are pickled.</p>
+
+<p>Because the texts are vague about this term, various oral traditions have developed around it. In Sri Lanka, rancid urine medicine is interpreted as rancid cow’s urine, in which different types of myrobalan are sometimes pickled. In Thailand, some Communities interpret it as one’s own first urine in the morning, following the ancient Indian tradition of using this urine as a tonic. (Modern scientists have discovered that this urine contains a high level of melatonin.) Given the silence of the texts, the best policy here is to follow the traditions of one’s own Community.</p>
+
+<p><b>The five tonics</b> are discussed in detail under <a href="../bmc/bmc1.7-3.html#np23">Nissaggiya Pācittiya&nbsp;23</a>, but the issue of flour mixed with sugar bears repeating. The Canon states that if sugar is mixed with flour or ashes as a binding agent and is still called sugar, then it counts as one of the five tonics. Some have argued that this allowance extends to candies that have small amounts of flour or other food starch mixed in, but if the candies are not called sugar they do not meet the terms of the allowance and so should be classed as food.</p>
+
+<p><b>Life-long medicines.</b> Six types of edibles are classed as life-long medicines: root medicine, astringent decoction medicine, leaf medicine, fruit medicine, resin medicine, and salt medicine. The Canon lists specific examples for each type. Although some of the examples are hard to identify precisely, each of the classes when taken as a whole is clear enough to form a guideline for applying the Great Standards to similar medicines today. Thus I have made no effort to identify the more obscure examples. As the Canon itself makes clear, <i>any</i> medicine that would come under these six classes — as long as it does not serve as a staple or non-staple food — is allowed here.</p>
+
+<p><i>Root medicine.</i> The Canon defines life-long root medicine as follows: turmeric, ginger, sweet flag, white orris root, ativisa, black hellebore, khus-khus, nut-grass, or whatever other roots are medicines and do not serve as staple or non-staple food. With this, and all the remaining classes of life-long medicine, one may keep the medicine for life and consume it when there is a medicinal reason for doing so. If there is no such reason, there is a dukkaṭa for consuming it. As mentioned in the preceding chapter, there is a specific prohibition against eating garlic when not ill. In connection with the allowance for root medicine, there is also an allowance for a grindstone and a grinding wheel to reduce the medicine to a powder.</p>
+
+<p><i>Astringent-decoction medicine.</i> Here the Canon lists astringent decoctions from the nimb-tree (<i>Azadirachta indica</i>), from the kuṭaja (<i>Wrightia dysenterica</i>), from the pakkava, from the nattamāla (<i>Pongamia glabra</i>), or any other astringent decoctions that are medicines and do not serve as staple or non-staple food.</p>
+
+<p><i>Leaf medicine.</i> The Canon’s list includes nimb leaves, kuṭaja leaves, cucumber leaves (<i>Trichosanthes dioeca</i>), basil leaves, cotton-tree leaves, or any other leaves that are medicines and do not serve as staple or non-staple food.</p>
+
+<p><i>Fruit medicine.</i> Here the Canon lists vilaṅga (<i>Embelia ribes</i>), long pepper (<i>Erycibe paniculata</i>), black pepper, yellow myrobalan (<i>Terminalia chebula</i> or <i>citrina</i>), beleric myrobalan (<i>Terminalia balerica</i>), embric myrobalan (<i>Phyllantus embelica</i>) (these last three form the triphala mixture still used in modern Ayurveda), goṭha-fruit, or any other fruits that are medicines and do not serve as staple or non-staple food.</p>
+
+<p><i>Resin medicine.</i> The Canon lists assafoetida, assafoetida-resin, assafoetida-gum, gum, gum-patti, gum-panni, or any other resins that are medicines and do not serve as staple or non-staple food.</p>
+
+<p><i>Salt medicine.</i> The Canon allows the following salts: sea salt, black salt, rock salt, culinary salt, red salt (which the Commentary defines as salt mixed with other medicinal ingredients), or any other salts that are medicines and do not serve as staple or non-staple food. The Parivāra (VI.2) mentions both natural and man-made salts as allowable. Modern medicines that are organic or inorganic salts would fit under this category.</p>
+
+<p><b>Specific treatments.</b> In addition to the general classes of medicines, Mv.6lists allowable treatments for specific diseases. The stress here is on the word <i>allowable:</i> A bhikkhu is not required to use these treatments but he might want to familiarize himself with them so that he can apply the Great Standards to modern medicine in an informed way. Historically, this list, together with similar lists in the Vinayas of the other early schools, has played an important part in the spread of medical knowledge from India to the lands to which Buddhism spread in the rest of Asia. At present, it gives a fascinating picture of the state of medical art in the Buddha&rsquo;s time.</p>
+
+<p><i>For itch, small boils, running sores, an affliction of thick scabs, or bad body odor:</i> One may use powders. To refine the powder, one may use powder sifters, including cloth sifters. As mentioned in <a href="../bmc/bmc2.1.html">Chapter&nbsp;1</a>, the Commentary states that for bad body odor all fragrant powders are allowable. The Canon allows the use of (powdered) dung, clay, and dye-dregs for one who is not ill. According to the Commentary, ordinary (unscented) chunam comes under “dye-dregs.”</p>
+
+<p><i>For possession by non-human beings:</i> Raw flesh and raw blood are allowed (!). The texts do not say whether this a medicine per se, or — if the non-human being is blood-thirsty — the bhikkhu should simply not be held responsible for eating such things.</p>
+
+<p><i>For eye diseases:</i> Ointments such as black collyrium, rasa-ointment (made with vitriol?), sota-ointment (made with antimony?), yellow orpiment (§), and lamp-black are allowed. Sandalwood, tagara (<i>Tabernaemontana coronaria</i>), benzoin gum, tālīsa (<i>Flacourtia cataphracta</i>), and nut-grass — all of which are fragrant — may be mixed in with the ointments. The ointments may be kept in boxes made of any of the standard ten materials (except for human bone, says the Commentary) but not in boxes made of fancy materials. The boxes may have lids, which may be tied to the boxes with thread or string. If an ointment box gets split, it may be bound together with thread or string. Ointment sticks may be used to apply the ointments, but again they must be made of one of the ten standard allowable materials. A bhikkhu may keep the ointment sticks in a case, and the ointment box in a bag. The bag may have a string for tying the mouth of the bag as a carrying strap.</p>
+
+<p><i>For pains in the head:</i> Apply oil to the head; give treatments (such as snuff medicine) up the nose; or have the patient inhale smoke. Nose-tubes (or nose-spoons), double nose-tubes (double nose-spoons), and smoke inhaling tubes are allowed but must be made from any of the standard allowable materials. One may keep lids, bags, and double bags for the smoke-inhaling tubes, and the bags may be tied at the mouth with a string for use as a carrying strap.</p>
+
+<p><i>For wind afflictions:</i> According to ancient Indian medicine, sharp pains in the body result from the provocation of the wind property. Dizziness is also counted as a wind affliction. The basic treatment is for the patient to drink a decoction of oil. The oil may be kept in a flask made of metal, wood, or fruit (e.g., coconut shell). Alcohol may be mixed in with the decoction, but not so much that the color, smell, or taste of the liquor could be detected. To drink oil mixed with excessive alcohol violates <a href="../bmc/bmc1.8-6.html#pc51">Pācittiya&nbsp;51</a>. If too much alcohol has been mixed in with the oil, it may be determined for use as rubbing oil.</p>
+
+<p><i>For wind afflictions in the limbs:</i> Sweating treatments, sweating treatments with herbs, and a “great sweating” treatment are allowed. The Commentary gives directions for this last treatment: Use a hole dug lengthwise the size of a human being and fill it with burning embers, charcoal, or coals; cover it with sand or dirt, and then with various leaves that are good for wind diseases. Have the ill bhikkhu cover his body with oil and lie down on top of the leaves, turning over as necessary. Other treatments for wind afflictions in the limbs include hemp water (according to the Commentary, this means water boiled with hemp leaves; pour it over the body, cover the body with the leaves, and then get into a sweating-treatment tent) and a water tub, which the Commentary says is a tub big enough for a bhikkhu to get into. Hot tubs would come under here.</p>
+
+<p><i>For wind affliction in the joints:</i> Blood-letting and moxibustion are allowed.</p>
+
+<p><i>For split feet:</i> Rubbing-oil and foot salves are allowed. The Commentary states that the foot salve may include whatever liquor will help split feet to heal.</p>
+
+<p><i>For boils:</i> Lancing (surgery) is allowed unless the boil is on the genitals or near the anus (see below). Allowable post-operative treatments include astringent water, pounded sesame paste, a compress, and a bandage. The scar may be sprinkled with mustard-seed powder to prevent itching. It may also be fumigated, and the scar-tissue cut off with a piece of salt-crystal. The scar may also be treated with oil. An old piece of cloth is allowed for soaking up the oil, and every kind of treatment for sores or wounds is allowed.</p>
+
+<p><i>For snakebite:</i> A medicine may be made of the “four great filthy things&quot;: excrement, urine, ashes, and clay (!). If there is someone present to make these things allowable, one should have him/her make them allowable. If not, one may take them for oneself and consume them. The Commentary notes that this allowance covers not only snakebite, but also any other poisonous animal bite. The Sub-commentary adds that <i>for oneself</i> here also includes cases where Bhikkhu X fetches these items himself for Bhikkhu Y, who has been bitten. Y, in such cases, is allowed to consume them. None of the texts mention this point, but an oral tradition in Thailand asserts that the excrement to be used in this medicine should first be burnt in a fire.</p>
+
+<p><i>For drinking poison:</i> Water mixed with excrement (!!) may be drunk. If one receives the excrement while excreting it, it does not need to be formally received again. The Commentary interprets this last statement by saying that if, while excreting, one catches the excrement before it falls to the ground, one need not have it formally offered. If it falls to the ground, one does. This, however, seems overly scrupulous. The parallel in the case of offering food is that if the food falls to the ground while being offered, it still counts as offered. The same principle should hold here.</p>
+
+<p><i>For drinking a sorcery concoction:</i> According to the Commentary, a sorcery concoction is voodoo medicine made by a woman to put a man under her power. The antidote given in the Canon is to drink mud turned up by a plow. The Commentary recommends that it be mixed with water.</p>
+
+<p><i>For constipation:</i> The Canon recommends drinking alkaline liquid, and the Commentary gives directions for how to make it: Take cooked rice, dry it in the sun, burn it, and drink the liquid coming from the ashes.</p>
+
+<p><i>For jaundice:</i> Urine and yellow myrobalan are allowed, which the Commentary defines as yellow myrobalan pickled in cow urine. This raises the question: If this were the meaning of <i>rancid urine medicine</i> in the four supports, why would there be this special allowance?</p>
+
+<p><i>For skin disease:</i> A scented rubbing is allowed.</p>
+
+<p><i>For a body full of bad humors:</i> One may drink a purgative. After the purgative has worked, one may take clarified conjey (which, according to the Commentary, is the clear liquid from rice porridge, strained to remove all rice grains), clear green gram broth, slightly thick green gram broth (which the Commentary interprets as green gram broth that is not oily or greasy), or meat broth (which again, the Commentary says, is just the broth without any meat). Some Communities extend these last allowances for any occasion, but the Canon gives them in the context of an antidote to the effects of a strong purgative, so there are those who will extend the allowance only to cases where a bhikkhu is weakened by diarrhea or other similarly severe conditions.</p>
+
+<p><i>As a general tonic:</i> Loṇasovīraka (or loṇasocīraka — “salty sour gruel”), a fermented medicine, is discussed under <a href="../bmc/bmc1.8-4.html#pc37">Pācittiya&nbsp;37</a>.</p>
+
+<p><b>Medical procedures.</b> A bhikkhu who has surgery (lancing) or hemorrhoid removal performed in the crotch or within the area two fingerbreadths around it incurs a thullaccaya. The word for <i>crotch</i> (<i>sambādha</i>) literally means “confining place,” and the area two fingerbreadths around it covers the anus and genitals.</p>
+
+<p>Now at that time a certain bhikkhu had a fistula. Ākāsagotta the surgeon lanced it. Then the Blessed One, on a tour of the lodgings, headed to that bhikkhu’s dwelling. Ākāsagotta the surgeon saw the Blessed One coming from afar and, on seeing him, said: “Come, Master Gotama. Look at this bhikkhu’s anus (§). It’s like an iguana’s mouth.” Then the Blessed One, (thinking,) “This worthless man is making fun of me,” turned back right there ((§) — reading <i>tato'va</i> with the Thai and Sri Lankan editions). (He then convened a meeting of the bhikkhus, at which he said,) “How can this worthless man have surgery done in the crotch? In the crotch the skin is tender, a wound is hard to heal, the knife hard to guide.”<span class=cite>— <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a>-3</span></p>
+
+<p>It is interesting to note that brain surgery was known in the Buddha&rsquo;s time (see <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.16–20), and yet he did not regard it as dangerous as the procedures forbidden here. The Vinaya-mukha maintains that surgical technique has developed to the point where this prohibition is counterproductive, but post-operative complications from hemorrhoid surgery, for example, still arise fairly frequently. The Commentary states that if the scrotum is enlarged, one may apply medicines to it and warm it over the fire. None of the texts discuss alternatives to prostate surgery. Some Communities, following the Vinaya-mukha, would allow it whenever needed.</p>
+
+<p>The Pali term translated here as hemorrhoid removal — <i>vatthi-kamma</i> — is a cognate of the Sanskrit term, <i>vasti-karman,</i> usually translated as the administration of an enema. However, the Commentary restricts its meaning to hemorrhoid removal, and it is possible that the Commentary is right, for Pali terms do not always have the same meaning as their Sanskrit cognates, and the idea of administering medicines through the anus may have first developed in the context of hemorrhoid treatment. The Commentary adds that even trying to remove a hemorrhoid by squeezing it with a piece of hide or cloth would come under this prohibition. However, it recommends as a safer alternative that one apply an astringent decoction to the hemorrhoid and tie off the end with string. If the hemorrhoid then falls off on its own, well and good. Furthermore, the Commentary allows any equipment, such as tubes, used to apply medicine through the anus — an explicit allowance for enemas.</p>
+
+<p>As mentioned above, blood letting is allowed as a treatment for wind afflictions of the joints. For some reason, the PTS and Burmese editions of the Canon contain a separate general allowance for blood-letting at Cv.V.6. This passage is not in the Thai or Sri Lankan editions.</p>
+
+<p><b>The Great Standards.</b> Appropriately, the Khandhaka dealing with medicine ends with the Great Standards, as medical knowledge is so changeable over time, and variable from location to location, that there is a need for general principles to apply the rules of the Buddha&rsquo;s time to our own. In this chapter, the rules about practicing medicine and the classifications of tonics and life-long medicines are timeless. In the sections on specific treatments and medical procedures, however, the only hard and fast rules are the prohibitions. Outside of the prohibitions, all modern medical procedures are allowed.</p>
+
+<h2>Rules</h2> <h3>The Five Tonics</h3>
+<p>“I allow that the five tonics, having been accepted at the right time, be consumed at the right time.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow that the five tonics, having been accepted, be consumed at the right time or the wrong time.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“There are these tonics to be taken by sick bhikkhus: ghee, butter, oil, honey, sugar-molasses. Having been received, they may be used from storage seven days at most. Beyond that, one is to be dealt with in accordance with the rule (<a href="../bmc/bmc1.7-3.html#np23">Nissaggiya Pācittiya&nbsp;23</a>).” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“Even though, to bind it together, they mix flour or ashes (§) into sugar lumps and it still counts as sugar, I allow that sugar be consumed as much as you like.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow sugar lumps for a bhikkhu who is ill, and sugar-lump water for one who is not ill.” — Mv.VI.27</p>
+
+<p>“I allow that tallow-medicine — i.e., tallow from bears, tallow from fish, tallow from alligators, tallow from pigs, tallow from donkeys — be consumed as oil if received in the right time, rendered in the right time, and filtered (§) in the right time.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<h3>Life-long Medicines</h3>
+<p>“I allow that, having accepted root-medicine — i.e., turmeric, ginger, sweet flag, white orris root, ativisa, black hellebore, khus-khus, nut-grass, or whatever other roots are medicines and do not serve, among non-staple food, the purpose of non-staple food; or, among staple food, the purpose of staple food — one may keep it for life and, when there is reason, consume it. If there is no reason, there is an offense of wrong doing for one who consumes it.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“Garlic should not be eaten. Whoever should eat it: an offense of wrong doing.” … “I allow that garlic be eaten in the case of illness.” — <a href="../vi/kd15.html">Khandhaka&nbsp;15 (Cv&nbsp;5)</a>-2</p>
+
+<p>“I allow a grindstone and a grinding wheel.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow that, having accepted astringent-decoction medicine — i.e., astringent decoctions from the nimb-tree, from the kuṭaja, from the pakkava, from the nattamāla, or whatever other astringent decoctions are medicines and do not serve, among non-staple food, the purpose of non-staple food; or, among staple food, the purpose of staple food — one may keep it for life and, when there is reason, consume it. If there is no reason, there is an offense of wrong doing for one who consumes it.” — Mv.VI.4</p>
+
+<p>“I allow that, having accepted leaf-medicine — i.e., nimb leaves, kuṭaja leaves, cucumber leaves, basil leaves, cotton tree leaves, or whatever other leaves are medicines and do not serve, among non-staple food, the purpose of non-staple food; or, among staple food, the purpose of staple food — one may keep it for life and, when there is reason, consume it. If there is no reason, there is an offense of wrong doing for one who consumes it.” — Mv.VI.5</p>
+
+<p>“I allow that, having accepted fruit-medicine — i.e., vilaṅga, long pepper, black pepper, yellow myrobalan, beleric myrobalan, embric myrobalan, goṭha, or whatever other fruits are medicines and do not serve, among non-staple food, the purpose of non-staple food; or, among staple food, the purpose of staple food — one may keep it for life and, when there is reason, consume it. If there is no reason, there is an offense of wrong doing for one who consumes it.” — Mv.VI.6</p>
+
+<p>“I allow that, having accepted resin-medicine — i.e., assafoetida, assafoetida-resin, assafoetida-gum, gum, gum-patti, gum-panni, or whatever other resins are medicines and do not serve, among non-staple food, the purpose of non-staple food; or, among staple food, the purpose of staple food — one may keep it for life and, when there is reason, consume it. If there is no reason, there is an offense of wrong doing for one who consumes it.” — Mv.VI.7</p>
+
+<p>“I allow that, having accepted salt-medicine — i.e., sea salt, black salt, rock salt, culinary salt, red salt, or whatever other salts are medicines and do not serve, among non-staple food, the purpose of non-staple food; or, among staple food, the purpose of staple food — one may keep it for life and, when there is reason, consume it. If there is no reason, there is an offense of wrong doing for one who consumes it.” — Mv.VI.8</p>
+
+<h3>Specific Treatments</h3>
+<p>“I allow powders as medicines for one who has an itch, a small boil, a running sore, or an affliction of thick scabs; or for one whose body smells bad; I allow (powdered) dung, clay, and dye-dregs for one who is not ill. I allow a pestle and mortar.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow a powder sifter… I allow a cloth sifter.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow, for one who is afflicted (possessed) by non-human beings, raw flesh and raw blood.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow (eye) ointments: black collyrium, rasa-ointment (made with vitriol?), sota-ointment (made with antimony?), yellow orpiment (§), lamp-black.” … “I allow (mixed in the ointments) sandalwood, tagara, benzoin gum, tālīsa, nut-grass.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow an ointment box.” … “One should not use fancy ointment boxes. Whoever does: an offense of wrong doing. I allow (ointment boxes) made of bone, ivory, horn, reed, bamboo, wood, lac (resin), fruit (§) (e.g., coconut shell), copper (metal), or conch-shell.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow a lid.” … “I allow, having tied it with thread/string, to tie it to the ointment-box.” … “(An ointment box became split) I allow it to be bound together with thread/string.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow an ointment stick.” … “One should not use fancy ointment sticks. Whoever does: an offense of wrong doing. I allow (ointment sticks) made of bone, ivory, horn, reed, bamboo, wood, lac (resin), fruit (§) (e.g., coconut shell), copper (metal), or conch-shell.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow a case for (ointment) sticks.” … “I allow a bag for the ointment box.” … “I allow a string for tying the mouth of the bag as a carrying strap.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow oil for the head.” … “I allow treatment through the nose.” … “I allow a nose-tube (or nose-spoon).” … “One should not use fancy nose tubes. Whoever does: an offense of wrong doing. I allow (nose tubes) made of bone, ivory, horn, reed, bamboo, wood, lac (resin), fruit (§) (e.g., coconut shell), copper (metal), or conch-shell.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow a double nose-tube.” … “I allow that smoke be inhaled.” … “I allow a tube for inhaling smoke.” … “One should not use fancy smoke-inhaling tubes. Whoever does: an offense of wrong doing. I allow (smoke-inhaling tubes) made of bone, ivory, horn, reed, bamboo, wood, lac (resin), fruit (§) (e.g., coconut shell), copper (metal), or conch-shell.” … “I allow a lid (for the smoke-inhaling tubes).” … “I allow a bag for the smoke-inhaling tubes.” … “I allow a double bag.” … “I allow a string for tying the mouth of the bag as a carrying strap.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>(For wind afflictions): “I allow a decoction of oil.” … “I allow that alcohol be mixed in the decoction of oil.” … “Oil mixed with too much alcohol should not be drunk. Whoever drinks it is to be dealt with in accordance with the rule (<a href="../bmc/bmc1.8-6.html#pc51">Pācittiya&nbsp;51</a>). I allow that when neither the color, the smell, nor the taste of alcohol can be detected in the decoction of oil, this sort of oil mixed with alcohol may be drunk.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>(When too much alcohol has been mixed with oil): “I allow that it be determined as rubbing-oil.” … “I allow (for oil) three kinds of flasks: a metal flask, a wood flask, a fruit flask.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>(For wind affliction in the limbs): “I allow a sweating treatment.” … “I allow a sweating treatment with herbs … a 'great-sweating' treatment … hemp water … a water tub.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>(For wind afflictions in the joints): “I allow blood-letting … moxibustion (§).” … (For split feet): “I allow rubbing oil for the feet… I allow that a foot salve be prepared.” … (For boils): “I allow lancing (surgery)… I allow astringent water… I allow pounded sesame paste.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>(For boils, continued): “I allow a compress … a bandage … that it be sprinkled with mustard-seed powder (to prevent itching).” … “I allow fumigating.” … “I allow that (scar-tissue) be cut off with a piece of salt-crystal.” … “I allow oil for the sore/wound.” … “I allow an old piece of cloth for soaking up the oil and every kind of treatment for sores/ wounds.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>(For snakebite): “I allow that the four great filthy things be given: excrement, urine, ashes, clay.” … “I allow, when there is someone to make them allowable, that one have him make them allowable; when there is no one to make them allowable, that having taken them oneself one consume them.” … (For drinking poison): “I allow that water mixed with excrement be drunk.” … “I allow (excrement) that one received while making it as having been received in and of itself (§). It does not need to be received again.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>(For drinking a sorcery concoction): “ I allow that mud turned up by the plow be drunk.” … (For constipation): “I allow that alkaline juice be drunk.” … (For jaundice): “I allow that urine and yellow myrobalan be drunk.” … (For skin disease): “I allow that a scented rubbing be done.” … (For a body full of bad humors): “I allow that a purgative be drunk.” … (After taking a purgative) “I allow clarified conjey… I allow clear green gram broth… I allow slightly thick green gram broth… I allow meat broth.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“I allow that a bhikkhu who is ill may consume loṇasovīraka (loṇasocīraka) as much as he likes, and that one who is not ill may consume it mixed with water as a beverage.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<h3>Medical Procedures</h3>
+<p>“Surgery should not be done in the crotch. Whoever should do it (have it done): a grave offense.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>“Surgery and hemorrhoid removal (§) should not be done within the area two inches around the crotch. Whoever should do it (have it done): a grave offense.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+
+<p>[Included in the Burmese &amp; PTS editions, but not the Thai or Sri Lankan editions: “I allow the letting of blood.&quot;] — Cv.V.6</p>
+
+<h3>The Great Standards</h3>
+<p>“Whatever I have not objected to, saying, ’This is not allowable,’ if it conforms with what is not allowable, if it goes against (literally: “preempts”) what is allowable, this is not allowable for you. Whatever I have not objected to, saying, ’This is not allowable,’ if it conforms with what is allowable, if it goes against what is not allowable, this is allowable for you. And whatever I have not permitted, saying, ’This is allowable,’ if it conforms with what is not allowable, if it goes against what is allowable, this is not allowable for you. And whatever I have not permitted, saying, ’This is allowable,’ if it conforms with what is allowable, if it goes against what is not allowable, this is allowable for you.” — <a href="../vi/kd6.html">Khandhaka&nbsp;6 (Mv&nbsp;6)</a></p>
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.4.html#content"></a><a id="next-sutta" href="../bmc/bmc2.6.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;2.5: Medicine</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

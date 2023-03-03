@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.13</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+ 	<p>&nbsp;</p>
+
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc2.12.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Community Transactions</a>
+<a href="../bmc/bmc2.13.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Territories</a>
+<a href="../bmc/bmc2.14.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Ordination</a>
+<a href="../bmc/bmc2.15.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Uposatha</a>
+<a href="../bmc/bmc2.16.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Invitation</a>
+<a href="../bmc/bmc2.17.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Kaṭhina</a>
+<a href="../bmc/bmc2.18.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Community Officials</a>
+<a href="../bmc/bmc2.19.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Penance and Probation</a>
+<a href="../bmc/bmc2.20.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disciplinary Transactions</a>
+<a href="../bmc/bmc2.21.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Schism</a>
+<a href="../bmc/bmc2.22.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Inheritance</a>
+</div>
+
+ 	<p>&nbsp;</p>
+
+<h3>Chapter&nbsp;13: Territories</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p>As stated in the preceding chapter, the unity of a Community transaction depends on the assent — expressed either through consent or non-protesting presence — of all the regular bhikkhus of common affiliation within the territory (<i>sīmā</i>) where the meeting is held. Thus, whenever the Community meets for a transaction, the territory of the meeting must be clearly defined. (The word <i>sīmā</i> is sometimes translated as “boundary,” but this leads to confusion in instances where a body of water, such as a river, cannot be a sīmā but can act as the boundary line for a sīmā. To avoid this sort of confusion: “territory” seems to be a preferable rendering for the word.)</p>
+
+<p>A valid territory may either be one that has been correctly authorized by a Community transaction or one defined by natural or political boundaries. The Commentary’s terms for these two types of territory are <i>baddha-sīmā,</i> a tied-off territory; and <i>abaddha-sīmā,</i> a territory not tied-off. The term “tied-off” is derived from a general Canonical idiom — to “tie off” a territory or boundary is to set a limit (see <a href="../bmc/bmc1.7-1.html#np1">Nissaggiya Pācittiya&nbsp;1</a>) — but here it refers specifically to the way in which the Commentary recommends establishing the boundaries of a formally authorized territory: Boundary markers (<i>nimitta</i>) are placed around the perimeter of the territory, and a group of bhikkhus formally designates each marker, going from one to the next around the perimeter, leaving in their wake a boundary line, like an imaginary rope, running straight from one marker to the next. Finally, they return to the first marker and formally designate it once more, so that the boundary line is brought back to the starting point, completing the act of “tying off” the territory within the boundary line, separating it from the area outside the line.</p>
+
+<p>In the early years of the religion there was a tendency to authorize large territories, covering several monasteries and sometimes even entire cities. The purpose was to create a large sense of common affiliation. Bhikkhus had the opportunity to meet the larger Community face to face on a regular basis; any gifts of requisites that donors dedicated “to the territory” (see <a href="../bmc/bmc2.18.html">Chapter&nbsp;18</a>) would be shared among all. However, large territories create their own difficulties. To begin with, there is the difficulty in ensuring that, during a meeting, no unknown bhikkhus have wandered into the territory, invalidating any transaction carried out at the meeting. And as was mentioned in the preceding chapter, if a bhikkhu too ill to give consent or to be carried into the meeting is staying in the territory, the meeting has to be held in his presence. This is no great problem if there is only one such bhikkhu, but it <i>is</i> a problem if there are more than one in widely separated places. To avoid these difficulties, the tendency since before the time of the Commentary has been to authorize smaller territories: either subsidiary territories within larger territories, or — what is more common at present — territories covering only a fragment of a monastery’s grounds.</p>
+
+<p>The Canon’s discussion of territories is extremely brief: A formally authorized territory may not be larger than three leagues (30 miles; 48 km.) across; it may not include both sides of a river unless there is a permanent bridge or boat connecting the two; once a territory has been formally authorized for common affiliation and a common uposatha, it may be further authorized — except for any villages within the territory — as an area where one is not apart from one’s robes (in connection with <a href="../bmc/bmc1.7-1.html#np2">Nissaggiya Pācittiya&nbsp;2</a>); a new territory may not be mixed with or submerge a pre-existing formally authorized territory; to insure that it doesn’t, a buffer zone should be left between one authorized territory and another; and a territory, once authorized, may be revoked. In an area where no territories have been formally authorized, the following may be used as territories: a village or town territory; in a non-village or wilderness area, a radius of seven abbhantaras (see below) around the meeting; also, in a river, sea, or natural lake, a radius around the meeting the distance a man of average size can splash water.</p>
+
+<p>The commentaries expand on these points considerably — and understandably so, as the validity of a territory affects the validity of all subsequent Community transactions performed within it. This creates a need to be scrupulously precise in authorizing a new territory. Over the centuries, whenever reform movements aimed at reviving the Vinaya have started, one of the first orders of business has been to authorize new territories for just this reason. Thus we will have to follow the commentaries in treating the topic in considerable detail. Where not stated otherwise, the following discussion draws on the Commentary to Mv.II.6–13. Territories that are not tied-off will be discussed first, followed by territories that are.</p>
+
+<p><b><i>Territories not tied off.</i></b> As the Canon says the following territories may be used in a location that has not been authorized as a territory: a village or town territory; in a non-village or wilderness area, a radius of seven abbhantaras around the meeting; and — in a river, sea, or natural lake — a radius around the meeting the distance a man of average size can splash water.</p>
+
+<p>The Commentary states that <i>village and town territories</i> include large-city territories as well. The territory in each case would include not only the actual built-up area of the municipality but also any surrounding areas from which it collects tribute or taxes — which, in those days, meant private land or land under cultivation. To put the Commentary’s definition in modern political terms: In an incorporated municipality, the territory would include the entire area within the municipality boundaries. Outside of incorporated municipalities, the territory would cover all built-up areas, cultivated land, and private uncultivated land within a particular county or similar jurisdiction. Public forest or other public wilderness lands would not count as part of the territory. The Commentary adds that if the rulers have declared part of a village as not subject to taxes or tribute — this is called a “separated-from-the-village” (<i>visuṅgāma</i>) territory — that counts as a separate village territory. Modern examples would include any areas within a municipality where the municipality’s powers of jurisdiction do not extend. None of these territories — village, town, or separated-from-the-village — can serve as a <i>ticīvara-avippavāsa</i> (see below). For some reason, the Commentary states that other territories not tied off can serve this function, even though the Canon’s allowance for ticīvara-avippavāsa states specifically that this allowance applies only to formally authorized territories.</p>
+
+<p><i>A wilderness</i> is any land lying outside of a village, town, or city territory as defined in the last paragraph. For example, state, provincial, or national forests; state, provincial, or national parks; public wilderness or wildlife reserves; and any other unused government land (such as unused BLM land in the United States) would count as wilderness here. Any meeting held in such a wilderness creates its own temporary territory, lasting for the duration of the meeting, with a radius of seven abbhantaras measured from the outermost bhikkhus in the assembly — provided that the entire territory lies within the wilderness. (A Thai calculation puts seven abbhantaras at 98 meters; a Sri Lankan calculation, at 80. As the Thai calculation is the stricter of the two, it seems the wiser one to follow.) This means that a Community meeting in a wilderness should be at least 98 meters, plus a small buffer zone, from the wilderness' edge. The Commentary adds that if another Community meeting is held in the same wilderness at the same time, there should be another 98-meter buffer zone between the territories of the two assemblies. In other words, the two assemblies should be at least 294 meters apart.</p>
+
+<p>The Canon’s statement that all rivers, oceans, and natural lakes are non-territories means that they are not territories in and of themselves, and they cannot be made into tied-off territories. However, as in the case of a wilderness meeting, a meeting held in any of these bodies of water automatically creates its own temporary territory lasting for the duration of the meeting. The radius in this case is a water-splash (<i>udak'ukkhepa</i>) — the distance an average man can splash water or toss a handful of sand. This distance is measured out from the outermost bhikkhus in the assembly. And again as in the case of a temporary wilderness territory, this water-splash territory is valid only if the entire area marked by the water-splash lies within the body of water. In other words, the meeting has to be held just over a water-splash from shore.</p>
+
+<p>The Commentary defines each of these bodies of water as follows:</p>
+
+<p><i>A river</i> can be any stream that flows continuously during the rainy season, at least deep enough to wet the lower robe of a properly-robed bhikkhunī walking across. Rocks and islands normally flooded in an average rainy season count as part of the river, as do areas normally covered by the river during the rains but dry during the dry season. Canals or lakes made by damming a river, however, do not.</p>
+
+<p><i>An ocean</i> includes only the area that waves normally reach at low tide, not the high-tide mark or any areas that waves reach only when there is wind. Rocks in the ocean count as part of the ocean only if covered at low tide, with or without waves. Uninhabited islands and mountains in the ocean, if not part of fishermen’s routes — according to the Sub-commentary, this means that they are too far for fishermen to reach and return to their home village in one day — count as wilderness areas. If more accessible to inhabited land, they count as part of the nearest village territory.</p>
+
+<p>If a river or ocean covers an area within the boundaries of a village/town/city territory, the area covered by water counts as part of the river or ocean. If the river or ocean is flooding an authorized territory, the flooded area still counts as the authorized territory. If the flood is temporary, this ruling seems reasonable, but the Vinaya-mukha mentions an actual case in which a river in Thailand changed course and washed away part of an authorized territory. It does not try to resolve the question of whether the part of the riverbed that was once an authorized territory should still be regarded as part of that territory, but the Canon’s statement that a river is a non-territory would seem to take precedence here.</p>
+
+<p><i>A natural lake:</i> If during the rains a body of water doesn’t hold enough water to drink or to wash one’s hands or feet, it does not count as a lake. As for a body of water larger than that, the area it covers during the rainy season counts as a lake all year around, even if dry during the dry season. However, if people dig wells in the lake bottom or plant crops in it during the dry season, the area dug or planted doesn’t count as a lake. A lake filled in or dammed on one side no longer counts as a natural lake, and thus can be authorized as a tied-off territory (see below).</p>
+
+<p>Natural salt-flats also count as lakes. Transactions may be done in the part of the flat covered by water in the rainy season.</p>
+
+<p>When meeting in any of these bodies of water, the members of the Community — if they want to — may get down into the water and perform their transaction wearing only their rains-bathing cloths. (Although it’s possible to imagine scenarios where this allowance might prove useful, it seems more likely that this statement was inserted in the Commentary to wake up sleepy students in the back of the room. In actual practice, the members of such a meeting could easily drown while laughing themselves silly, especially if the transaction requires the person who is the object of the transaction to arrange his upper robe over his shoulder and bow down to their feet.) More practically, the members of the meeting may get in a boat, but they should not recite the transaction statement while the boat is moving. Instead, they should put down anchor or tie the boat to a post or tree in the water (not to a post or tree standing on the bank). Alternatively, they may meet in a pavilion built in the middle of the water or a tree growing in the water, as long as no bridge connects the pavilion or tree to the bank(s). In the case of a river or lake, they may also meet on a bridge crossing the water — again, as long as the bridge does not touch the banks.</p>
+
+<p><b><i>Tied-off territories.</i></b> A Community, through a formal transaction, may set off part of a wilderness or an untied-off territory as a separate territory. This, in the Commentary’s terminology, is called authorizing a tied-off territory.</p>
+
+<p>The Canon requires that an authorized territory be no larger than three leagues. This, the Commentary says, means that if one is standing in the middle of the territory, it should extend no more than 1.5 leagues in any of the four cardinal directions. If the territory is rectangular or triangular, it should be no more than three leagues on any one side.</p>
+
+<p>On the other extreme, the Commentary states that the smallest valid territory is one that can hold 21 bhikkhus, the number required for rehabilitating a bhikkhu who has completed his penance for a saṅghādisesa offense.</p>
+
+<p>The Canon also requires that a new territory neither be mixed with nor submerge a pre-existing territory. Here the V/Sub-commentary notes that “pre-existing territory” means a pre-existing authorized territory. The Commentary’s discussion of “mixed” builds on its assertion that, strictly speaking, a boundary marker lies just outside the territory; the territory begins just inside the marker. Thus it illustrates “mixed” territories with the following example: A mango and rose-apple tree are growing adjacent to one another with mingled forks. The mango tree is a boundary marker for a tied-off territory; the rose-apple tree, just to its west, lies just inside the territory. If someone comes and ties off another territory to the east, using the rose-apple tree as a marker, with the mango just inside the new territory, the new territory is “mixed with” the pre-existing territory. What this seems to mean is that the two trees are growing smack against each other, and so the two territories are immediately adjacent, with the mingling of their branches creating a confusion in their boundaries.</p>
+
+<p>“Submerged” means overlapping a part or the whole of a pre-existing territory.</p>
+
+<p>An alternative way of interpreting “mixing” and “submerging” would be to say that territory A is mixed with territory B if it overlaps part of B, and that it submerges B when it covers B entirely. This interpretation, however, is not supported by the Commentary.</p>
+
+<p>To prevent submerging or mixing, the Canon requires a buffer zone between two tied-off territories. Different commentarial authorities give different minimum measurements for this zone. According to Buddhaghosa, it should be at least one cubit; according to the Kurundī, at least one half cubit; and according to the Mahā Paccarī, at least four fingerbreadths. Because the boundary marker strictly speaking lies just outside the territory, a marker as wide as or wider than the minimum buffer zone may be used as a marker for two neighboring territories. However, the Commentary notes that a tree should not be used in this way, as it will grow; when it extends into both territories it will somehow connect them. The Sub-commentary notes that this will not invalidate the territories, but simply make them into one.</p>
+
+<p>The Vinaya-mukha, however, strongly objects to this type of thinking, saying that a tree “bridging” the buffer zone does not connect the territories any more than they were in the first place. As it points out, the purpose of the buffer zone is to prevent disputes as to where one territory begins and another ends. The growth of a tree bridging a buffer zone does not affect the boundary lines once they are drawn. Although in general it is a wise policy to hold to the stricter interpretation in areas where the Canon is silent, this is one area where the looser interpretation of the Vinaya-mukha appears to have common sense on its side.</p>
+
+<p>The Canon’s allowance for a territory incorporating two sides of a river is explained as follows: The requirement for a permanent boat or bridge means that there must be a boat at least big enough for three people to cross; or a bridge made at least of wood, big enough for one person to cross. Either may be one quarter league ( = 2.5 miles or 4 km.) upstream or downstream from the two parts of the territory. The river itself is not part of the territory.</p>
+
+<p>Any bhikkhus who authorize territories in defiance of the above rules — i.e., territories that are too large, territories mixed with or submerging pre-existing formally authorized territories, territories incorporating two sides of a river without a permanent boat or bridge between the two — each incur a dukkaṭa. Because the transaction authorizing any such territory is not in accordance with the Dhamma — in the Parivāra’s terms, the object lacks validity — it is not fit to stand. The territory thus retains its earlier status as part of the surrounding untied-off territory.</p>
+
+<p><b>Boundary markers.</b> A tied-off territory is defined by its boundary markers. In accordance with the laws of geometry — that a plane can be defined by no fewer than three points — at least three boundary markers are required to define a territory, although more than that is perfectly acceptable. The boundary connecting the markers runs straight from the inner side of one marker to the inner side of the next. The Canon permits eight types of markers: a mountain, a rock, a forest, a tree, a path, a termite’s nest, a river, and water. Common sense dictates that the markers be fairly permanent, but the Commentary’s explanations do not all meet this requirement.</p>
+
+<p><i>Pabbato: mountain.</i> To qualify as a marker, a mountain must be composed of rock, dirt, or a combination of the two. The minimum size is that of an elephant. A rock smaller than that is a valid marker (see below) but cannot be called a mountain. Piles of dust or sand do not count as mountains. If a monastery is surrounded by a single mountain chain, the chain should not be used as a marker in more than one direction. In other directions, the Community may use other markers inside or outside the chain, depending on whether they want to include part of the chain in the territory. This principle applies to other long, continuous markers (flat rock layers, forests, connected roads, etc.) as well.</p>
+
+<p><i>Pasāṇo: rock.</i> A rock used as a boundary marker can extend in size from a large bullock or buffalo down to a stone weighing 32 palas. The Thai translator of the Commentary calculates this as approximately 3 kilograms; a Sri Lankan method of calculation puts it at 8 lbs. As the latter calculation is the stricter of the two, it is the wiser one to follow. A flat stone slab, either lying down or standing up, may also be used as a “rock,” as can an iron ball. If the monastery is built on top of rock slab or ledge, the slab/ledge should not be used as a marker.</p>
+
+<p><i>Vano: forest.</i> To qualify as a marker, a forest must include at least four to five trees with hardwood. Forests of grassy plants or palms do not qualify. If a monastery is surrounded by forest, the same conditions apply as those to a monastery surrounded by a mountain chain, i.e., it may be used as a marker in only one direction. In other directions, other markers — either inside or outside the forest — should be used.</p>
+
+<p><i>Rukkho: tree.</i> To qualify as a marker, a tree must have heartwood and be at least 8 fingerbreadths tall, and at least the diameter of a “needle-rod (<i>suci-daṇḍa),”</i> which has been variously translated as a baluster or an incising needle. Whatever it is, the Old K/Sub-commentary puts its diameter as equal to that of the nail on the small finger. The tree must be planted in the ground, even if just that day (thus potted trees are not appropriate). With an extensive banyan tree, consisting of many trunks surrounding a monastery, the same conditions apply as with a forest and a mountain chain.</p>
+
+<p><i>Maggo: path/road.</i> To qualify as a marker, a path must be a usable walking or carriage path extending for at least two to three villages. Thus paths through a field, through a forest, along a riverside, or along a reservoir are not appropriate. If two or more connected paths surround a monastery, they may be used as a marker in only one direction.</p>
+
+<p><i>Vammiko: termite nest.</i> Even if appearing that very day, a termite’s nest is a valid marker if it is at least eight fingerbreadths tall and the diameter of a cattle horn.</p>
+
+<p><i>Nadī: river.</i> Any stream meeting the definition of “river” under untied-off territories qualifies as a river here. A single river or four connecting rivers surrounding a monastery may be used as a marker in only one direction. If dammed, the non-flowing section of the river counts as a water (<i>udaka</i>) boundary, not a river boundary. A canal should not be used as a river boundary marker unless the flow of water has turned it into what resembles a natural river course.</p>
+
+<p><i>Udako: water.</i> This refers to water on land (i.e., not in a bowl, etc.) that is not flowing. The smallest allowable bodies of water are: a puddle dug by a pig, a puddle in which children play, a hole in the ground that will keep water long enough to recite the transaction statement. In this last case, after the transaction, the Commentary recommends placing a pile of rocks or sand, or a post of rock or wood on the site to mark it. The Vinaya-mukha objects to the idea of using such an ephemeral body of water as a marker, stating that this last allowance misses the whole point of having a marker in the first place. In such a case, the pile of rock, etc., should have been used as the marker to begin with.</p>
+
+<p>The Commentary also discusses the issue of marking boundaries within a building. In such a case, it says, one should not use a wall as a marker. Stone posts are appropriate (at present, concrete or steel posts would qualify as well). For some reason, it says that in a multi-story building, if the markers are placed in the building on an upper floor, the territory does not go down to the ground unless there is a wall surrounding the lower story(s) and connected to the upper stories. Similarly, if the markers are posts as part of a wall on a lower floor, the territory includes the upper story(s) only if there is a continuous wall from the lower stories to the upper ones. If markers are placed outside the building (e.g., where water falls off the eaves), the whole building is in the territory regardless of how it is walled.</p>
+
+<p>In Thailand, the custom is to use buried stones as markers. Each stone is placed in a hole in the ground, formally recognized as a marker, and then covered with dirt. Another stone marker is then placed on top, to indicate where the real marker is buried. This custom is probably based on the idea that a buried stone is more permanent than a stone aboveground; even when the aboveground marker is removed, the buried stone is likely to stay in place. There is nothing in the Canon, however, to either confirm or refute this practice.</p>
+
+<p><b>Authorization procedure.</b> The two Vinaya experts that Buddhaghosa cites throughout the Commentary — Mahā Sumana Thera and Mahā Paduma Thera — offer differing opinions on how a territory should be authorized. Their differences center on the fact that in a district — such as a county or town — all parts of the district outside of the authorized territories within it count as a single territory. Thus the question: When authorizing a new territory, in what territory are the bhikkhus meeting as they issue the transaction statement — the new territory itself or the district as a whole (excluding other authorized territories)?</p>
+
+<p>Mahā Sumana Thera holds to the second alternative, and so recommends first asking the other monasteries in the district as to where their formally authorized territories are. The Community authorizing the new territory should make sure there is a buffer zone between the intended territory and the pre-existing ones. It should then choose a time when bhikkhus aren’t wandering and then send an announcement to the neighboring monasteries with formally authorized territories so that the bhikkhus don’t leave their territories at the time the new territory is being authorized. As for the bhikkhus in all the monasteries in the district without formally authorized territories, they should be invited to join in the transaction. If they can’t come, their consent must be conveyed.</p>
+
+<p>Mahā Paduma Thera, however, holds to the opinion that the bhikkhus authorizing the new territory are meeting in the territory they are authorizing. Thus there is no need to invite or get the consent of bhikkhus from other parts of the district. The only bhikkhus who need to be gathered in the transaction are the ones within the boundaries being marked. He goes on to state that not all the bhikkhus within the markers need be present (or have their consent sent) for declaring a territory for common affiliation (why, he doesn’t say), but they do need to be present (or have their consent sent) for declaring a territory for not being absent from one’s robes (see below).</p>
+
+<p>Although in the reported disputes between these two Vinaya experts both sides usually seem reasonable, in this dispute Mahā Sumana Thera seems clearly in the right. It’s hard to see how bhikkhus can be said to be meeting in a territory they have yet to authorize. Although Mahā Sumana Thera’s interpretation creates difficulties, in Thailand these are avoided by having the civil authorities declare an area about to be authorized as a territory a “separated-from-the-village” territory, thus removing it from the village district and eliminating any need to invite or get the consent of the bhikkhus in the surrounding district.</p>
+
+<p>Apart from this disagreement between Mahā Sumana Thera and Mahā Paduma Thera, the Vinaya experts are in general agreement as to how to conduct the formal procedure for authorizing a territory. The first step, the Canon says, is to designate the boundary markers. It gives no instructions as to how to do this, but the Commentary — perhaps reasoning from the pattern for inspecting a building site under <a href="../bmc/bmc1.5.html#sg6">Sanghādisesa 6</a> &amp; <a href="../bmc/bmc1.5.html#sg7">7</a>, recommends the following: Beginning in the east, a bhikkhu should stand just to the west of the eastern marker, facing the marker, and ask, <i>&quot;Puratthimāya disāya kiṁ nimittaṁ?</i> (What is the marker in the eastern direction?)” Someone — either ordained or not — should say, (if a stone) <i>&quot;Pasāṇo, bhante.”</i> The first bhikkhu responds, <i>&quot;Eso pasāṇo nimittaṁ</i> (This stone is the marker).” The two of them then continue clockwise around the directions — SE, S, SW, W, NW, N, NE — and then return to designate the first marker once more. In this way all markers are connected in a circle. In Thailand, the custom is for three bhikkhus to accompany the bhikkhu designating the boundary markers. All four are to stand just inside the marker, while the person/people identifying the markers (these are usually lay people) stand outside the marker. (See Appendix I for the full procedure.)</p>
+
+<p>If the new territory is to incorporate two sides of a river, the procedure is as follows: The bhikkhus designating the markers should start with the upstream marker on the left bank and then designate the markers going away from the river and back to the downstream marker on the same bank. Then they should designate the marker across the river from the downstream marker, followed by the markers going away from the river and back around to the marker on the right bank across from the original upstream marker. Then they re-designate the original upstream marker. If there is an island in the river, smaller or larger than territories on either banks, they should designate a marker at the lower end of island while crossing the river from one downstream marker to the other, and then designate the marker at the upper end of the island while crossing the river from one upstream marker to the other. Or, if they want to include only part of the island, they should locate markers on both sides of the island, at the desired extremes upstream and downstream, and designate them in the above sequence.</p>
+
+<p>When the boundary markers have been designated, the bhikkhus should all assemble at one spot in the new territory for the transaction statement (see Appendix I). When the transaction statement is done, the Commentary says that the area inside the markers down to “the water holding up the earth” (the water table? the magma?) is the territory. Any landfill later added to the territory or any pool later dug within the territory does not affect the territory’s status.</p>
+
+<p>The Commentary also recommends that when authorizing a territory on a rock slab or ledge, the Community should arrange to have stones placed on the rock for markers. After the transaction statement, lines should be incised in the rock to record the markers' location in case these later get moved.</p>
+
+<p>Once the territory has been authorized, it may be further authorized as an area where one is not apart from one’s set of three robes (<i>ticīvara-avippavāsa</i>). In other words, if one is inside the area at dawn, one is not counted as separate from one’s robes no matter where else in the territory they may be. The reason for this allowance is indicated by the origin story:</p>
+
+<p>Now at that time Ven. Mahā Kassapa, coming from Andhakavinda to Rājagaha for the uposatha, crossing a river on the way, was nearly swept away and his robes got wet. Bhikkhus said to him: “Why, friend, are your robes wet?”</p>
+
+<p>“Just now, friends, as I was coming from Andhakavinda to Rājagaha … I was nearly swept away. That’s why my robes are wet.”</p>
+
+<p>With the new allowance, a bhikkhu in Ven. Mahā Kassapa’s position — traveling to a Community transaction in a distant part of a large territory — would not have to take all his robes with him, and so they would not all get wet. Once this authorization has been made, it covers all parts of the territory except for any villages within it. The Commentary states that if the village is fenced in, everything inside the fence counts as village. If not, its immediate surroundings do — which in all other instances is measured as a distance of two leḍḍupātas from the village’s outermost buildings. An abandoned village does not count as a village. If a village is started or grows after the transaction statement, the new village or the new part of the village is still part of the original ticīvara-avippavāsa. This last comment, though, would defeat the purpose of exempting villages from the allowance in the first place, which was to prevent bhikkhus from leaving their robes in the houses of lay people.</p>
+
+<p>When a new territory has been authorized, the remainder of the pre-existing untied-off territory in which it is contained still counts as an untied-off territory.</p>
+
+<p><b>Subsidiary territories.</b> One way of avoiding the problems of large territories is to create a subsidiary territory (<i>khaṇḍa-sīmā</i>) within a larger one. The larger one — covering, say, an entire monastery — may be used as a ticīvara-avippavāsa, and the smaller one for Community meetings. As the territories are separate, there is no need — when holding a meeting in the subsidiary territory — to bring the consent of any ill bhikkhus in the larger one.</p>
+
+<p>The Commentary recommends locating the subsidiary territory in a quiet corner of the monastery. The smallest allowable size for such a territory is the same as that for any authorized territory: large enough to hold 21 bhikkhus. When authorizing a subsidiary territory and the larger territory surrounding it, the procedure is to start with the subsidiary territory first. Stand inside the proposed markers for the subsidiary territory and designate them according to the common pattern. Recite the transaction statements for the new territory. Then place the inside markers for the large territory just outside the markers for the subsidiary territory, leaving at least the minimum buffer zone between the two territories. Designate the markers for the large territory — first the inner markers surrounding the subsidiary territory, then the outside markers — while standing in the large territory, then recite the transaction statements, again while standing in the large territory. Alternatively, the Commentary says, designate all the markers while standing in the appropriate locations (inside the subsidiary territory while designating its markers, inside the large territory while designating its). Then, while meeting in the appropriate locations, recite the transaction statements for the subsidiary territory, followed by transactions statements for the larger territory. The buffer zone between the two territories remains part of the untied-off territory from which the two new territories were tied off.</p>
+
+<p>The Commentary adds that if a tree in a subsidiary territory touches a tree in the larger territory, or if a banyan tree in one territory sets down shoots in the other, the two territories are connected and must be treated as one until the connection is broken. The V/Sub-commentary argues that this principle does not apply between an ordinary tied-off territory and the untied-off territory around it. The Vinaya-mukha, as we noted above, argues further that it shouldn’t apply in any case — and rightly so. Plant life bridging a buffer zone does not erase it.</p>
+
+<p><b>Revoking territories.</b> The Canon states that when an authorized territory is to be revoked, the steps in the proceedings reverse those in the proceedings that authorized the territory to begin with. In other words, the ticīvara-avippavāsa is revoked first, then the territory for common affiliation. The Commentary adds that there are only two valid reasons for revoking a territory: to expand it or to contract it. If a Community doesn’t know where an old territory is, they can’t revoke it, much less establish a new one in its place. A territory becomes a non-territory for only two reasons: a transaction statement revoking it or the disappearance of the Buddha&rsquo;s teachings.</p>
+
+<p>These last two statements create all sorts of difficulties, as it is entirely possible that a Community once authorized a territory at a particular spot but left no record of its transaction. There would be no way of knowing precisely where it was or what the markers were, so there would be no way of revoking it when authorizing a new territory in its place. If, as the Commentary says, a territory remains such until the disappearance of the Buddha&rsquo;s teachings and any territory authorized to as to overlap it would be invalid — there being no exemption for doing so unknowingly — no one would know for sure whether a new territory was truly valid or not.</p>
+
+<p>Communities have sidestepped this dilemma by ignoring the Commentary’s assertion that a Community ignorant of an old territory’s location cannot revoke it. The procedure at present is first to revoke any possible pre-existing territory in the area where a new territory is to be authorized before authorizing the new territory. In Thailand, this is done as follows: At least four bhikkhus stand within hatthapāsa of one another while one of their number recites the statements for revoking the ticīvara-avippavāsa and the territory for common affiliation. This revokes any pre-existing territory within their hatthapāsa. They then move to an adjoining segment of the area they want to authorize, repeating the procedure as many times as is necessary to cover the entire area. The transaction statements for this procedure are in <a href="bmc2.app1.html">Appendix&nbsp;I</a>.</p>
+
+<p><b>Summary checklist.</b> The Commentary to Parivara XIX.1 and the K/Commentary to the Nidāna give a checklist of eleven factors peculiar to the tying-off of a territory that can invalidate the resulting territory: (1) the territory is too small, (2) the territory is too large, (3) there is a break in the markers, (4) it has shadow-markers (e.g., the shadow of a mountain instead of an actual mountain used as a marker), (5) it is without any markers at all, (6) it is authorized by a Community standing outside the territory, (7) it is in a river, (8) it is in an ocean, (9) it is in a natural lake, (10) it is mixed with another territory, or (11) it submerges another territory. As the Commentary notes, a tied-off territory with any of these features does not count as a tied-off territory and maintains whatever status it had prior to the attempt to tie it off. For instance, if it is located in a village-territory, it is still part of that territory.</p>
+
+<p>Of the items on this list, one actually covers two factors. “A break in the markers” can mean one of two things: (a) The process of tying off the markers is left incomplete — say, it starts with the eastern marker, goes counter-clockwise around the directions to the northern marker, and then stops there, without returning to the eastern marker; or (b) one of the markers does not actually qualify as a valid marker. The Vinaya-mukha objects to the idea that either of these faults would actually invalidate the territory, but as the Canon is silent on this point, and as the Commentary’s position is the stricter of the two, the wise policy would be to follow its judgment here.</p>
+
+<p>Still, there are problems with the Commentary’s list. The factors are given in random order, some of them are redundant (it’s hard to see why “shadow markers” would not fall under “invalid markers”), and some possible faults in a territory are missing: a territory on both sides of a river but without a permanent boat or bridge, a territory with only one or two markers, and a territory whose markers were misidentified when they were designated — e.g., a rock too small to be a mountain called a “mountain,” a canal called a “river.” Thus, to make the list more useful, it seems preferable to expand and rearrange it as thirteen factors under the following three categories:</p>
+
+<ul class="circ">
+<li><i>Invalid as to the actual territory:</i> (1) too small, (2) too large, (3) in a river, (4) in an ocean, (5) in a natural lake, (6) on two sides of a river not connected with a permanent boat or bridge, (7) mixed with a previous tied-off territory, (8) submerging a previous tied-off territory.</li>
+<li><i>Invalid as to the markers:</i> (9) a break in the markers (i.e., the tying-off process is left incomplete), (10) invalid markers, (11) misidentified markers, (12) fewer than three markers.</li>
+<li><i>Invalid as to the authorization:</i> (13) the territory is authorized by an assembly standing outside the markers.</li>
+</ul>
+
+<p>Of course, all the standard “consummations” required for Community transactions in general have to be met as well.</p>
+
+<p><b>The validity of the territory.</b> When seeking the unity of the Community in a Community transaction, it is important that the territory defining the Community be valid. Given the way tied-off and untied-off territories are defined, there is hardly a spot on Earth that is not already part of a valid territory or could not be made so by meeting there. The only problem lies in identifying the territory’s extent. If a Community meets in an improperly authorized tied-off territory, the actual territory of the meeting is the larger untied-off territory from which the tied-off territory was supposedly set off. In this case, if the bhikkhus in the meeting get the consent of all the non-attending bhikkhus in the tied-off territory while there are other bhikkhus in other parts of the untied-off territory who have not sent their consent, any transaction carried out in the meeting is invalid as to territory. But if they get the consent of all non-attending bhikkhus in the original untied-off territory, this factor is valid. Thus it is important, when authorizing a tied-off territory, that the procedures be followed to the letter and that adequate records be kept of the transaction so that bhikkhus in later generations can be confident of how far the territory of their meeting extends.</p>
+
+<h2>Rules</h2> <h3>Abaddha-sīmā</h3>
+<p>“When a territory has not been authorized, not set aside (§), the village-territory or town-territory of the village or town on which one depends is (the territory for) common affiliation and a single uposatha there. In a non-village, in a wilderness, seven abbhantaras all around is the (territory for) common affiliation and a single uposatha there. All rivers are non-territories. All oceans are non-territories. All natural lakes are non-territories. In a river, ocean, or natural lake, (the area) a man of average size can splash water all around is the (territory for) common affiliation and a single uposatha there.” — Mv.II.12.7</p>
+
+<h3>Baddha-sīmā</h3>
+<p>“I allow that a territory be authorized.” — Mv.II.6.1</p>
+
+<p>Procedure and transaction statement — Mv.II.6.1–2</p>
+
+<p>“An excessively large territory — of four, five, or six leagues — should not be authorized. Whoever should authorize one: an offense of wrong doing. I allow that a territory be authorized for three leagues at most.” — Mv.II.7.1</p>
+
+<p>“A territory should not be mixed with (another) territory. Whoever should do so: an offense of wrong doing.” — Mv.II.13.1</p>
+
+<p>“A territory should not submerge (another) territory. Whoever should do so: an offense of wrong doing. I allow, when a territory is being authorized, that it be authorized having set aside a buffer zone.” — Mv.II.13.2</p>
+
+<p>“A territory including the far side of a river should not be authorized. Whoever should authorize one: an offense of wrong doing. I allow that a territory including the far side of a river be authorized if it has a permanent boat or permanent bridge.” — Mv.II.7.2</p>
+
+<p>“Wherever a territory is authorized by the Community for a common affiliation, for a single uposatha, let the Community authorize it as an area where one is not apart from one’s set of three robes.” — Mv.II.12.1</p>
+
+<p>Transaction statement — Mv.II.12.2</p>
+
+<p>“Wherever a territory is authorized by the Community for a common affiliation, for a single uposatha, let the Community authorize it — except for any village or village area — as an area where one is not apart from one’s set of three robes.” — Mv.II.12.3</p>
+
+<p>Revised transaction statement — Mv.II.12.4</p>
+
+<p>Revoking territories: transaction statements — Mv.II.12.5–6</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.12.html#content"></a><a id="next-sutta" href="../bmc/bmc2.14.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;2.13: Territories</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

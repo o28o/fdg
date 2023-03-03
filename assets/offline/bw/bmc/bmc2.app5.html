@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2 Appendix 5</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+ 	<p>&nbsp;</p>
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-center">
+	<div class="w3-bar">
+	<a href="../bmc/bmc2.app1.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Appendix</a>
+	<a href="../bmc/bmc2.app2.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Going-forth and Acceptance</a>
+	<a href="../bmc/bmc2.app3.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Vuṭṭhāna-vidhī </a>
+	<a href="../bmc/bmc2.app4.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disciplinary Transactions</a>
+	<a href="../bmc/bmc2.app5.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Technical Terms</a>
+	<a href="../bmc/bmc2.glossary.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Glossary</a>
+	<a href="../bmc/bmc2.biblio.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Bibliography</a>
+	</div>
+</div>
+
+<h3>Appendix 5: Technical Terms</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<h4>A. Sampatti: The Validity of Community Transactions</h4>
+
+	
+<p>As stated in <a href="../bmc/bmc2.12.html">Chapter&nbsp;12</a>, the Khandhakas' discussion of what constitutes a valid transaction divides the principle of “in the presence of” into two broad factors: The transaction must be in accordance with the Dhamma — in other words, the proper procedure is followed in issuing the statement; and it must be harmonious — the Community issuing the statement is qualified to do so.</p>
+
+<p>The Parivāra (XIX.1.1) sets the requirements of a valid transaction at five “consummations” (<i>sampatti):</i></p>
+
+<ul class="disc"> <li>consummation of the object (<i>vatthu-sampatti),</i></li>
+<li>consummation of the motion (<i>ñatti-sampatti),</i></li>
+<li>consummation of the proclamation (<i>anusāvanā-sampatti</i>),</li>
+<li>consummation of the territory (<i>sīmā-sampatti), </i></li>
+<li>consummation of the assembly (<i>parisa-sampatti).</i></li>
+</ul>
+
+<p>The first three of these consummations fit under the Khandhakas' first factor, that the transaction be in accordance with the Dhamma. The last consummation is the same as the Khandhakas' second factor, that the transaction be united.</p>
+
+<p>The fourth consummation, however, does not fit neatly into either of the Khandhakas' two factors. The Parivāra explains it simply by saying that the territory has been authorized in a valid way. The Commentary further explains that if the territory is not valid in this way, it is not a territory but is instead part of the abaddha-sīmā from which it was originally tied off. Furthermore, any transaction performed in such a territory is invalid.</p>
+
+<p>The Vinaya-mukha objects to this interpretation on the grounds that a transaction performed in such a territory is not automatically invalidated, for in such a case the original abaddha-sīmā counts as the actual territory of the transaction. If all the bhikkhus in that territory are united in the transaction, the transaction is valid. The issue thus becomes one of how to judge the unity of the transaction, and this comes down to two questions:</p>
+
+<ol>
+<li>What is the extent of the valid territory in which the transaction is held?</li>
+<li>Are all the qualified bhikkhus in that territory participating in the transaction? (To be participating means that they must either be present at the transaction or have sent their consent, and no one who is qualified to do so protests the transaction while it is being carried out.)</li>
+</ol>
+
+<p>To prevent these questions from overlapping with the questions coming under the consummation of the assembly, the Vinaya-mukha proposes limiting that consummation to one question:</p>
+
+<p>Is the minimum quorum for the transaction fulfilled?</p>
+
+<p>And, for purposes of streamlining the discussion, it proposes combining the consummation of the motion and the consummation of the proclamation into one: the consummation of the transaction statement (<i>kamma-vācā-sampatti</i>).</p>
+
+<p>This gives four consummations:</p>
+
+<ol>
+<li><i>consummation of the object</i> — the person or item forming the object of the transaction fulfills the qualities required for that particular transaction;</li>
+<li><i>consummation of the transaction statement</i> — the statement issued follows the correct form for the transaction;</li>
+<li><i>consummation of the assembly</i> — the meeting contains at least the full quorum of bhikkhus required to perform that particular transaction; and</li>
+<li><i>consummation of the territory</i> — all the qualified bhikkhus in the territory where the meeting is being held are either taking part in the meeting or their consent has been conveyed there, and no one qualified to do so protests the transaction while it is being carried out.</li>
+</ol>
+
+<p>The first two of these consummations come under the principle of acting in accordance with the Dhamma; the last two, under the principle of the harmony of the Community.</p>
+
+<p>This method of analysis seems clearer and more useful than that proposed in the Parivāra, and so it is the method I have adopted in this book.</p>
+
+<h4>B. Saṁvāsa: Separate &amp; Common Affiliation</h4>
+
+<p>Several of the rules (e.g., Mv.II.34.10–13, Mv.II.35.4–5, Cv.VI.6.5) refer to bhikkhus of separate affiliation and of common affiliation. The basic distinction between the two is fairly simple: Bhikkhus of common affiliation will hold their uposatha and Invitation together; those of separate affiliations will not. The Canon mentions that bhikkhus of separate affiliation have their differences, and that if these differences can be resolved, they can become bhikkhus of common affiliation.</p>
+
+<p>Mv.X.1.10 discusses the two grounds for becoming a member of a separate affiliation: Either one makes oneself a member of a separate affiliation or one is suspended by a united Community. The Commentary to <a href="../bmc/bmc1.5.html#sg10">Sanghādisesa 10</a> terms the resulting bhikkhus respectively <i>laddhi-nānā-saṁvāsaka,</i> one of a separate affiliation through view or theory; and <i>kamma-nānā-saṁvāsaka</i>, one of a separate affiliation through a transaction. From the context of the statement at Mv.X.1.10 — it occurs in the discussion of the dispute at Kosambī — it would appear that making oneself a member of a separate affiliation means joining in with a bhikkhu who has been suspended by the Community in the course of a dispute. This is how the Abhayagiri (or Dharmaruci) sect split off from the Mahāvihāra in the first century B.C.E.: The Mahāvihāra bhikkhus suspended Ven. Mahātissa for unbecoming association with a lay person (i.e., King Vaṭṭagāminī, who had built him the Abhayagiri Vihāra), but he was able to rally a large number of bhikkhus to his side, thus forming a separate affiliation that lasted more than a millennium.</p>
+
+<p>The Sub-commentary to <a href="../bmc/bmc1.5.html#sg10">Sanghādisesa 10</a> limits the meaning of <i>laddhi-nānā-saṁvāsaka</i> to this one possibility — siding with a suspended bhikkhu — but neither the Canon nor the Commentary defines what making oneself a member of a separate affiliation means, nor do they limit it to this one possibility. History, however, has shown that there are at least two other ways that bhikkhus may make themselves a separate affiliation, both of which can result from any of the nine questions that can form the bases for a dispute: over</p>
+
+<ul style="list-style-type:disc;"> <li>what is and is not Dhamma;</li>
+<li>what is and is not Vinaya;</li>
+<li>what was and was not spoken by the Tathāgata;</li>
+<li>what was and was not regularly practiced by the Tathāgata;</li>
+<li>what was and was not formulated by the Tathāgata;</li>
+<li>what is and is not an offense;</li>
+<li>what is a heavy or a light offense;</li>
+<li>what is an offense leaving a remainder and not leaving a remainder; and</li>
+<li>what is and is not a serious offense.</li>
+</ul>
+
+<p>If two groups within a Community are unable to resolve their disagreements over these issues, they can avoid the controversy of suspension or schism if one of the groups leaves the territory and establishes a separate Community elsewhere. Because the two groups would then be conducting separate Community transactions in separate territories, their split would not constitute a schism. This is how the Jetavana sect split off from the Abhayagiri sect in the fourth century C.E. A dispute had grown among the Abhayagirins as to whether the Mahāyāna sūtras should be accepted as the teaching of the Buddha — i.e., over what is Dhamma and is not Dhamma. When the majority decided to accept them, a smaller group led by Ven. Ussiliyātissa left the Community not with the intention of forming a separate affiliation but simply to avoid any association with what they saw as a major — and hoped to be a temporary — mistake. When the dispute became prolonged, however, the Jetavana side became a de facto separate affiliation, again for many centuries. This is the first alternative way in which a separate affiliation may form.</p>
+
+<p>The second alternative way is a more formal variation of the first. Bhikkhus who, dismayed over the state of the practice in their Community, develop doubts as to the legitimacy of their ordination lineage: If the bhikkhus are misbehaving to this extent in public, what are they doing in private? Are the senior bhikkhus giving ordination true bhikkhus? If not, how can their students be true bhikkhus? Deciding that these doubts are legitimately in line with the Vinaya, they leave the Community and seek reordination in another Community whose conduct and claims to legitimacy they find more inspiring. To maintain the purity of their new ordination lineage, they make themselves a separate affiliation, a move that is often signaled by determining their own separate territories for Community transactions. This is how the nineteenth-century reform sects developed in Sri Lanka and Thailand.</p>
+
+<p>Once separate affiliations have formed, the Canon provides guidelines for how they should behave toward one another. Because not all separations need to be based on a disagreement over what is and is not Dhamma, Cv.VI.6.5 requires that a bhikkhu show homage to a senior bhikkhu of a separate affiliation who speaks what is Dhamma. In this case, respect for the Dhamma overrides sectarian issues. If, however, the separation is based on a disagreement over Dhamma, a bhikkhu is forbidden to show homage to a senior bhikkhu of a separate affiliation who speaks what is not Dhamma. In this case, respect for the Dhamma overrides concern for superficial harmony.</p>
+
+<p>A bhikkhu is allowed to sit in on most Community transactions of a separate affiliation and his presence does not invalidate the transaction as long as he does not have to be counted to complete the quorum (Mv.IX.4.2; Mv.IX.4.7). There are, however, two transactions that bhikkhus of separate affiliations are strictly forbidden from joining — knowing that their affiliation is separate and without having resolved their differences: the uposatha (Mv.II.34.10) and the Invitation (Mv.IV.13). Communities of separate affiliation are allowed to perform separate Community transactions within the same territory (Mv.X.1.9–10), but because this step would turn their de facto schism into a formal one, most Communities are loathe to take it.</p>
+
+<p>Given that the separateness between two affiliations is defined around the questions that form the basis for a dispute, there is always the possibility that they can be reunited by the means for settling disputes discussed in <a href="../bmc/bmc1.11.html">BMC1, Chapter&nbsp;11</a>. Meanwhile, Mv.X.1.10 says that an individual who has been of separate affiliation from a group of bhikkhus can become one of common affiliation with them in one of two ways: If his separate affiliation came from being suspended, he becomes of common affiliation when the suspension is revoked. If his separate affiliation was of his own doing, he can make himself of common affiliation. Here again the Canon offers no explanation, but the Commentary does, saying that he can change affiliation simply by changing his mind on the disputed issue that had defined his affiliation. This is simple enough, but in the case of the second alternative basis for separate affiliations, mentioned above, there is one complication. If a bhikkhu ordained not in a reform sect wants to change his affiliation to that of the reform sect, he must accept their position that his original ordination is in doubt. This means that to adopt their affiliation he will have to reordain in their lineage.</p>
+
+<h4>C. <i>Saṅghassa kaṭhinaṁ:</i> The Community’s Kaṭhina</h4>
+
+<p>Parivara XIV.5 attempts to resolve a paradox. On the one hand, the kaṭhina is spread not by the Community but by the individual on whom the Community has bestowed the robe for that purpose. On the other hand, the passages for spreading the kaṭhina and approving of its spreading contain the phrase, <i>&quot;Atthataṁ … saṅghassa kaṭhinaṁ,”</i> which — because of a peculiarity of the genitive case, can mean either: “The Community’s kaṭhina has been spread” or “The kaṭhina has been spread by the Community.” The authors of Parivara XIV.5 apparently adopt the second interpretation, and therein lies the paradox: The kaṭhina is not spread by the Community, and yet the kaṭhina is spread by the Community.</p>
+
+<p>To get around the paradox, they offer an analogy:</p>
+
+<p>“The Community does not recite the Pāṭimokkha, a group does not recite the Pāṭimokkha, an individual recites the Pāṭimokkha. If the Community does not recite the Pāṭimokkha, a group does not recite the Pāṭimokkha, an individual recites the Pāṭimokkha, then the Pāṭimokkha is not recited by the Community, the Pāṭimokkha is not recited by a group, the Pāṭimokkha is recited by an individual. But through the Community’s unity, the group’s unity, and the reciting by the individual, the Pāṭimokkha is recited by the Community … by the group … by the individual. In the same way, the Community does not spread the kaṭhina, a group does not spread the kaṭhina, an individual spreads the kaṭhina, but through the Community’s approval, the group’s approval, and the spreading by the individual, the kaṭhina is spread by the Community … by a group … by an individual.”</p>
+
+<p>There are, however, two problems with this explanation. First, there is no reciting of a Pāṭimokkha by a group. If less than a full Community is present for the uposatha, the Pāṭimokkha cannot be recited, and the group must instead perform the uposatha ceremony appropriate for its number. Second, as stated in Parivara XIV.4, the spreading of the kaṭhina is accomplished even if only one bhikkhu approves of it. In this case, following the logic of Parivara XIV.5, the phrase expressing approval could not contain the word <i>saṅghassa,</i> for the Community has not given its approval. Thus the analogy, as explained, does not hold.</p>
+
+<p>A preferable explanation would be to follow the first interpretation of the phrase, <i>&quot;Atthataṁ … saṅghassa kaṭhinaṁ:</i> The Community’s kaṭhina has been spread.” To follow the analogy with the chanting of the Pāṭimokkha, even if only one bhikkhu approves the spreading, the word <i>saṅghassa</i> would be appropriate here on the basis of the Community’s unity in bestowing the robe for the purpose of spreading the kaṭhina in the first place.</p>
+
+<h4><a id="anamasa"></a>D. Anāmāsa</h4>
+
+<p>The Vinaya-mukha contains the following passage on items that are <i>anāmāsa,</i> i.e., not to be touched. As it notes, the basic concept and the list of specific items are not to be found in the Canon (their provenance is the Commentary to <a href="../bmc/bmc1.5.html#sg2">Sanghādisesa 2</a>). Although the dukkaṭa for touching these things is not canonical, many Communities observe it, and so a wise policy is to know the list.</p>
+
+<p>One is prohibited from touching items that are anāmāsa, i.e., not to be touched — which are classified as follows:</p>
+
+<ol class="alph">
+<li>Women, their garments, and representations (pictures, statues) of the female form. Female animals would come under this class. Upper and lower garments that they have thrown away — which, for example, could be used as sitting cloths — no longer count as anāmāsa.</li>
+<li>Gold, silver, and jewels. Here the Commentary mentions eight kinds of jewels by name: pearl, crystal, lapis-lazuli, coral, rubies, topaz, conch-shell, and stones. Together with gold and silver, these are called the ten valuables. Diamonds were known at the time, but I have no idea why they are not mentioned. <i>Conch</i> here I understand as meaning conch shells that are decorated with gold and jewels and used to anoint with water, as in brahmanical ceremonies. It may also include conchs used for blowing (as musical instruments), but not ordinary conch shells, as these are allowed for making buttons and fasteners. <i>Stones</i> here I understand as meaning items that are classified as rock but considered precious, such as jade or onyx. Perhaps they were used as ornaments from early times, as — for example — jade bracelets in China, or bead bracelets made of red stone alternating with gold beads, which originally were probably made of jade. This category does not include ordinary stones.</li>
+<li>Weapons of all kinds that are used to hurt the body and destroy life. Sharp tools such as axes would not be included here.</li>
+<li>Traps for animals, whether used on land or in the water.</li>
+<li>Musical instruments of all kinds.</li>
+<li>Grain and fruits still on their original plants.</li>
+</ol>
+
+<p>The prohibition against touching these anāmāsa items does not come directly from the Canon. The compilers of the Commentary extrapolated from various passages in the Vinita-vatthu and other passages (of the Canon) and established this custom. Nevertheless, the custom is still appropriate. For example, a bhikkhu abstains from taking life, so if he were to touch weapons or traps it would look unseemly. He abstains from making music, so if he were to touch musical instruments it would look unseemly as well. So we can conclude that the items classified as anāmāsa were probably forbidden to bhikkhus from the very beginning.</p>
+
+<p>Not all Communities agree with the Vinaya-mukha’s conclusions here. <a href="../bmc/bmc1.8-9.html#pc84">Pācittiya&nbsp;84</a>, for example, gives explicit permission for a bhikkhu to pick up valuables — including gold and silver — that have been left behind in his monastery. Still, many Communities do follow the Vinaya-mukha in general here, so a wise bhikkhu should be informed and sensitive about this issue.</p>
+
+<h4>E. Agocara: Improper Range</h4>
+
+<p>A standard passage in the discourses (e.g., <a href="../mn/mn18.html">MN108</a>; <a href="../an/an4.37.html">AN4.37</a>; <a href="../an/an4.181.html">AN4.181</a>; <a href="../an/an8.2.html">AN5III.2</a>) describes a virtuous bhikkhu as follows:</p>
+
+<p>He dwells restrained in accordance with the Pāṭimokkha, consummate in his behavior and range. He trains himself, having undertaken the training rules, seeing danger in the slightest fault.</p>
+
+<p>The discourses do not explain the phrase: “consummate in behavior and range.” However, the second book in the Abhidhamma — the Vibhaṅga — defines <i>consummate in behavior</i> as avoiding bodily transgression, verbal transgression, and all forms of wrong livelihood. It defines <i>consummate in range</i> as follows:</p>
+
+<p>There is (proper) range (<i>gocara</i>), there is improper range (<i>agocara</i>). Which, in this context, is improper range? There is the case where a certain (bhikkhu) has prostitutes as his range. Or he has widows (or divorced women), unmarried women, paṇḍakas, bhikkhunīs, or taverns as his range. Or he dwells in unbecoming association with kings, kings' ministers, sectarians, or sectarians' disciples. Or he associates with, frequents, and attends to families who are without faith or conviction, who are abusive and rude, who wish loss, harm, discomfort, and no freedom from the yoke for bhikkhus, bhikkhunīs, male lay followers, and female lay followers. This is called improper range. And which is (proper) range? There is the case where a certain (bhikkhu) does not have prostitutes as his range, does not have widows (or divorced women), unmarried women, paṇḍakas, bhikkhunīs, or taverns as his range. He does not dwell in unbecoming association with kings, kings' ministers, sectarians, or sectarians' disciples. He associates with, frequents, and attends to families who have conviction, who have confidence, who are like clear water, who are radiant with ochre robes, where the breeze of seers blows in and out, who wish profit, well-being, comfort, and freedom from the yoke for bhikkhus, bhikkhunīs, male lay followers, and female lay followers. This is called (proper) range. (Vibhaṅga 514)</p>
+
+<p>In this passage, the phrase: “to have <i>x</i> as one’s range” seems to mean that one associates with that person or place in an unbecoming way. The first five of the individuals who are said to be improper range — prostitutes, widows (or divorced women), unmarried women, paṇḍakas, and bhikkhunīs — are drawn from the Mahāvagga’s list of individuals that a member of another sect, on probation prior to full Acceptance, should avoid (Mv.I.38.5). According to the Sub-commentary to that passage, <i>associates</i> means treating as a friend or intimate. The Commentary adds that it is all right to visit these people as long as one goes with bhikkhus on bhikkhu business. With regard to prostitutes, the Vinaya-mukha remarks: “It’s not the case that the Buddha totally abandoned women of this kind. One may accept proper invitations from them, as in the example (in the Commentary) of the bhikkhus who accepted invitations for food in the home of Lady Sirimā. But one should be mindful and careful so as not to mar one’s restraint.” The same principle would apply to the other individuals who are said to be improper range: widows, divorced women, unmarried women, paṇḍakas, and bhikkhunīs.</p>
+
+<p>As for a tavern, this is not mentioned as improper range in the Vinaya or the Suttas, although its inclusion in the Abhidhamma’s list is probably drawn from the rule against drinking fermented or distilled liquors (<a href="../bmc/bmc1.8-6.html#pc51">Pācittiya&nbsp;51</a>). The Vinaya-mukha defines a <i>tavern</i> as any place where alcohol is sold, served, or made, such as a bar, a nightclub, a brewery, or a distillery. It notes that opium dens did not exist in the time of the Buddha, but that such places would fall under the general category of “tavern” as an improper place for a bhikkhu to frequent. At present, when many restaurants serve alcoholic beverages, the line separating proper from improper places to eat is somewhat blurred, and a bhikkhu is left to his own discretion as to what sort of restaurant — defined by its advertising, name, and atmosphere — is appropriate for him to enter. Even in places that are unequivocally taverns, though, there are certain times and situations in which a bhikkhu may enter them, as when the owners wish to make merit and invite a number of bhikkhus for a meal. Still, the bhikkhus must be careful to maintain not only their propriety but also the appearance of propriety, so as to preserve the good reputation of the Saṅgha.</p>
+
+<p>The second volume of the Vinaya-mukha concludes with the following advice: “A bhikkhu who avoids these six forms of improper range (prostitutes, widows/divorcees, unmarried women, paṇḍakas, bhikkhunīs, and taverns), who — when visiting other people or places — chooses those people and places wisely, who doesn’t go excessively, and who returns at seemly hours, who behaves in such a way that he does not arouse the suspicions of his fellow Dhamma-practitioners, is said to be <i>gocara-sampanno,</i> a person consummate in his range. This is a principle paired with good behavior in the standard passage on virtue, in the compound <i>ācāra-gocara-sampanno,</i> consummate in behavior and range. This is further paired with the principle, <i>sīla-sampanno,</i> consummate in virtue. A bhikkhu consummate in his virtue, behavior, and range adorns the religion and makes it shine.”</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.app4.html#content"></a><a id="next-sutta" href="../bmc/bmc2.glossary.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Appendix 5: Technical Terms</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

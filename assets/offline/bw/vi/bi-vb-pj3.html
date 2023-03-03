@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Pārājika 3</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+  
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3>Bhikkhuni Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BI-VB sub-navigation -->
+ 	<a href="../vi/bi-vb-pj.html#BI-VBheading" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Pārājikas</a>
+ 	<a href="../vi/bi-vb-sn.html#BI-VBheading" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bi-vb-np.html#BI-VBheading" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bi-vb-pc.html#BI-VBheading" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bi-vb-pd.html#BI-VBheading" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bi-vb-sk.html#BI-VBheading" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bi-vb-as.html#BI-VBheading" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BI-VB sub-navigation -->
+ 
+ <!--      BI-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h3 id="#BI-VBheading">Bhikkhuni Vibhanga - Pārājika 3: Killing A Human</h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li>Translated from the Pali by <a href="../home/copyright.html#sc">Bhikkhu Brahmali.</a></li>
+	</ul>
+</div>
+
+<h3>Origin story</h3>
+<section class="raw_sutta">
+<div lang="en">
+
+<h3>First sub-story</h3>
+
+<p id="p1"><span class="parno">1</span><span class="ms">Bu-Pj.3, Bu-Pj.3.1, Bu-Pj.3.1.1, MS.376, BD.1.116, Vin.3.68</span><span class="note"><span class="details"><span class="p">This story also occurs at <a href="../sn/sn54.9.html"> SN54.9</a>. The problems raised by the story are discussed in Mills, "The Case of the Murdered Monks."</span></span></span>At one time the Buddha, the Master, was staying at Vesālī in the hall with the peaked roof in the Great Wood.At that time the Master talked in many ways to the monks on the subject of unattractiveness, he spoke in praise of unattractiveness, he spoke in praise of developing (the perception of) unattractiveness, he spoke thus and thus he spoke in many ways in praise of the attainment of unattractiveness. Then the Master addressed the monks:</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>"Monks, I wish to go into solitary retreat for half a month. No one is to approach me except the one who brings me almsfood."</p>
+
+<p>"Yes, Master," the monks replied, and accordingly no one approached the Master except the one to take him almsfood.</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>Then the monks thought, "The Master has talked in many ways on the subject of unattractiveness," and they dwelt intent upon the practice of developing (the perception of) unattractiveness in its many different aspects. As a consequence they became troubled by their own bodies, ashamed of them, loathing them.
+
+ Just as a young woman or man, fond of adornments and with head washed, would be ashamed, humiliated and disgusted if the carcase of a snake, a dog or a man were hung around their neck, just so those monks were troubled by their own bodies, ashamed of them and loathed them. They took their own lives, took the lives of one another, and they approached Migalaṇḍika, a sham recluse, the recluse lookalike, and said, "Friend, please kill us. This bowl and robe will be yours." Then Migalaṇḍika, hired for a bowl and robe killed a number of monks.</p>
+
+<hr>
+<p id="p4"><span class="parno">4</span>He then took hisknife to the river Vaggumudā, and while he was washing it he became anxious and remorseful: "Indeed, itʼs a loss for me, itʼs no gain; indeed, itʼs badly gained by me, not well-gained. I have made much demerit because I have killed monks who were virtuous and of good conduct."</p>
+
+<p>Then a certain god of Māraʼs retinue, walking across the water, said to Migalaṇḍika, "Well done, superior man; it is a gain for you, it is well-gained. You have made much merit, because you bring those across who have not yet crossed."</p>
+
+<hr>
+<p id="p5"><span class="parno">5</span>Then Migalaṇḍika thought, "So it seems it is a gain for me, that it is well-gained by me, and that I have made much merit by bringing those across who have not yet crossed." He then went from dwelling to dwelling, from dormitory to dormitory, and said, "Who has not yet crossed? Whom do I bring across?" And those monks who were not free from desire became fearful and terrified, with their hair standing on end, but not so those who were free from desire.</p>
+
+<hr>
+<p id="p6"><span class="parno">6</span>Then Migalaṇḍika killed a monk, on a single day he killed two monks, on a single day … three … four … five … ten … twenty … thirty … forty … fifty … on a single day he killed sixty monks.</p>
+
+<hr>
+<p id="p7"><span class="parno">7</span><span class="ms">Bu-Pj.3.1.2, MS.382</span>At the end of that half-month, the Master arose from seclusion and addressed Venerable Ānanda: "Ānanda, why is the Saṅgha of monks so diminished?"</p>
+
+<p>"It is because the Master talked to the monks in many ways on the subject of unattractiveness— he spoke in praise of unattractiveness, in praise of developing (the perception of) unattractiveness, and in many ways in praise of the attainment of unattractiveness. And, Master, those monks thought, ‘The Master has talked in many ways on the subject of unattractiveness,ʼ and so they dwelt intent upon the practice of developing (the perception of) unattractiveness in its many different aspects. As a consequence they became troubled by their own bodies, ashamed of them, loathing them. Just as a young woman or man, fond of adornments and with head washed, would be ashamed, humiliated and disgusted if the carcase of a snake, a dog or a man were hung around their neck, just so these monks were troubled by their own bodies, ashamed of them, loathing them. They then took their own lives, took the lives of each other, and they approached Migalaṇḍika, the recluse lookalike, and said, ʻFriend, please kill us. This bowl and robe will be yours.’ Then, Master, hired for a bowl and robe, Migalaṇḍika killed a monk … on a single day he killed sixty monks. Master, please give another instruction for the Saṅgha of monks to be established in final knowledge."</p>
+
+<hr>
+<p>"Well then, Ānanda, call together in the assembly-hall all the monks that dwell near Vesālī."</p>
+
+<p>"Yes, Master," he said. And when he had done so, he approached the Master and said, "Master, the Saṅgha of monks is assembled. Master, please do what you think is appropriate."</p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>Then the Master went to the assembly-hall, sat down on the prepared seat, and said:</p>
+
+<hr>
+<p id="p9"><span class="parno">9</span><span class="ms">Bu-Pj.3.1.3, MS.384</span>"Monks, the <i>samādhi</i> by mindfulness of breathing, when developed and cultivated, is peaceful and sublime, an exalted state of happiness, and it stops and settles bad, unwholesome qualities on the spot, whenever they arise. Just as a big storm, when it arises out of season in the last month of the hot weather, stops and settles the dust and dirt in the atmosphere—even so the <i>samādhi</i> by mindfulness of breathing, when developed and cultivated, is peaceful and sublime, an exalted state of happiness, and it stops and settles bad, unwholesome qualities on the spot, whenever they arise.</p>
+
+<hr>
+<p id="p10"><span class="parno">10</span>And how is the <i>samādhi</i> by mindfulness of breathing developed and cultivated in this way?</p>
+
+<p>As to that, monks, a monk sits down in the wilderness, at the foot of a tree, or in an empty hut; he crosses his legs, straightens his body, and establishes mindfulness in front of him. Simply mindful, he breathes in; simply mindful, he breathes out.</p>
+
+<hr>
+<p id="p11"><span class="parno">11</span>When he breathes in long, he knows it; and when he breathes out long, he knows that. When he breathes in short, he knows it; and when he breathes out short, he knows that. While breathing in, he trains in having the full experience (of the breath); while breathing out, he trains in having the full experience (of the breath). While breathing in, he trains in calming the activity of the body; while breathing out, he trains in calming the activity of the body.</p>
+
+<hr>
+<p id="p12"><span class="parno">12</span>While breathing in, he trains in experiencing rapture; while breathing out, he trains in experiencing rapture. While breathing in, he trains in experiencing happiness; while breathing out, he trains in experiencing happiness. While breathing in, he trains in experiencing the activity of the mind; while breathing out, he trains in experiencing the activity of the mind. While breathing in, he trains in calming the activity of the mind; while breathing out, he trains in calming the activity of the mind. While breathing in, he trains in experiencing the mind; while breathing out, he trains in experiencing the mind.</p>
+
+<p>While breathing in, he trains in gladdening the mind; while breathing out, he trains in gladdening the mind. While breathing in, he trains in unifying the mind; while breathing out, he trains in unifying the mind. While breathing in, he trains in freeing the mind; while breathing out, he trains in freeing the mind.</p>
+
+<hr>
+<p id="p13"><span class="parno">13</span>.. While breathing in, he trains in contemplating impermanence; while breathing out, he trains in contemplating impermanence. While breathing in, he trains in contemplating fading away; while breathing out, he trains in contemplating fading away. While breathing in, he trains in contemplating cessation; while breathing out, he trains in contemplating cessation. While breathing in, he trains in contemplating relinquishment; while breathing out, he trains in contemplating relinquishment.</p>
+
+<hr>
+<p id="p14"><span class="parno">14</span>Monks, when the <i>samādhi</i> by mindfulness of breathing is developed and cultivated in this way, it is peaceful and sublime, an exalted state of happiness, and it stops and settles bad, unwholesome qualities on the spot, whenever they arise."</p>
+
+<hr>
+<p id="p15"><span class="parno">15</span>And in this connection the Master convened the Saṅgha of monks and questioned the monks:</p>
+
+<p>"Monks, is it true that some monks have taken their own lives, have killed one another, and have said to Migalaṇḍika, ʻFriend, please kill us. This bowl and robe will be yoursʼ?"</p>
+
+<hr>
+<p>"It is true, Master."</p>
+
+<p>The Buddha, the Master, rebuked them: "Monks, it is not suitable for these monks, it is not becoming, it is not proper, it is not worthy of a recluse, it is not allowable, it should not be done. How could those monks take their own lives … and say … ‘ … This bowl and robe will be yours’? It will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Preliminary ruling</h3>
+
+<p id="p16"><span class="parno">16</span><span class="rule">If a monk intentionally kills a human being or searches for someone to kill him, he too is expelled and not in communion."</span></p>
+
+<hr>
+<p class="endsutta"><span class="parno">17</span>Thus the Master laid down this training rule for the monks.</p>
+
+<h3>Second sub-story</h3>
+
+<p id="p18"><span class="parno">18</span>At one time a certain lay-follower was ill. His wife was beautiful and pleasant, and the group of six monks had fallen in love with her. Then those monks said to each other: "Friends, if this lay-follower lives, we wonʼt get this woman. Come, let us praise the beauty of death to him." So they went to that lay follower and said:</p>
+
+<p>"Friend, you have done what is good and wholesome; you have made a shelter from fear. You have not done anything bad; you have not been greedy and immoral. What need have you of this wretched, difficult life? Death is better for you than life. When you have passed away, at the breaking up of the body after death, you will be reborn in a happy destination, in a heaven world. There you will amuse yourself and enjoy the five types of heavenly sensual pleasures."</p>
+
+<hr>
+<p id="p19"><span class="parno">19</span>Then that lay-follower thought, "The Masters have spoken the truth, for I have done what is good and avoided what is bad, and after death I will be reborn in a happy destination."</p>
+
+<p>He ate various types of detrimental food, he drank detrimental drinks, and because of this he became seriously ill and died.</p>
+
+<p>His wife criticised and denounced them: "These recluses, the sons of the Sakyan, are shameless, immoral, liars. They claim to be followers of dhamma, of just conduct, committed to the spiritual life, speakers of truth, virtuous, of good conduct. But there is no recluseship or brahminhood among these—it is lost to them. Where is recluseship and brahminhood among them? They have departed from it. They praised the beauty of death to my husband. Because of them my husband has died."</p>
+
+<p>And other people criticised and denounced them: "These recluses … Because of them that lay-follower has died.</p>
+
+<hr>
+<p id="p20"><span class="parno">20</span>Monks heard the criticism of those people. Those monks who had few desires and a sense of shame, who were contented, scrupulous, and desirous of training ..</p>
+
+<hr>
+<p id="p21"><span class="parno">21</span>… criticised and denounced the group of six monks: "How could they praise the beauty of death to that lay-follower?" Then those monks informed the Master …</p>
+
+<p>"Is it true, monks, that you praised the beauty of death to that lay-follower?"</p>
+
+<p>"It is true, Master."</p>
+
+<p>The Buddha, the Master, rebuked them: "Foolish men, it is not suitable, it is not becoming, it is not proper, it is not worthy of a recluse, it is not allowable, it should not be done. How could you praise the beauty of death to that lay-follower? This will not give rise to confidence in those without it … And so, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<hr>
+<p id="p22"><span class="parno">22</span><span class="rule">"If a monk intentionally kills a human being or searches for someone to kill him or praises death or incites someone to die, saying, ‘Good man, what use to you is this wretched, difficult life? Death is better for you than life.’ If, thinking and intending thus, he praises death in various ways or incites someone to die, he too is expelled and not in communion.</span>"</p>
+
+<h3>Definitions</h3>
+
+<p id="p23"><span class="parno">23</span><span class="term">A</span> means <span class="gloss">whoever, of such kind … </span></p>
+
+<p><span class="term">Monk</span> means <span class="gloss"> … this sort of <span class="term">monk</span> is meant in this case.</span></p>
+
+<hr>
+<p id="p24"><span class="parno">24</span><span class="term">Intentionally</span> means <span class="gloss">knowing, perceiving, having intended, having come to a conclusion, he transgresses.</span></p>
+
+<hr>
+<p id="p25"><span class="parno">25</span><span class="term">Human being</span> means <span class="gloss">from the mindʼs first arising, from the time of consciousness becoming first manifest in a motherʼs womb, until the time of death—in between these</span>; this is called a<span class="term">human being</span>.</p>
+
+<hr>
+<p id="p26"><span class="parno">26</span><span class="term">If (he) kills</span> means <span class="gloss">he cuts off the faculty of life, brings it to an end, interrupts its duration.</span></p>
+
+<hr>
+<p id="p27"><span class="parno">27</span><span class="term">Or searches for someone to kill him</span> means <span class="gloss">a knife, a dagger, an arrow, a cudgel, a stone, a sword, poison or a rope.</span></p>
+
+<hr>
+<p id="p28"><span class="parno">28</span><span class="term">Or praises death</span> means <span class="gloss">he shows the danger in living, and speaks in praise of death.</span></p>
+
+<hr>
+<p id="p29"><span class="parno">29</span><span class="term">Or incites someone to die</span> means <span class="gloss">he says, "take a sword, or eat poison, or die by hanging yourself with a rope."</span></p>
+
+<hr>
+<p id="p30"><span class="parno">30</span><span class="term">Good man</span>, means <span class="gloss">this is a form of address.</span></p>
+
+<hr>
+<p id="p31"><span class="parno">31</span><span class="term">What use to you is this wretched, difficult life</span> means <span class="term">wretched life</span> means <span class="gloss">the life of the poor is wretched compared to the life of the rich; the life of the impoverished is wretched compared to the life of the wealthy; the life of humans is wretched compared to the life of gods.</span></p>
+
+<hr>
+<p id="p32"><span class="parno">32</span><span class="term">Difficult life</span> means <span class="gloss">for one whose hands are cut off, for one whose feet are cut off, for one whose hands and feet are cut off, for one whose ears are cut off, for one whose nose is cut off, for one whose ears and nose are cut off.</span> Because of this sort of wretchedness and because of this sort of difficult life, one says, "death is better for you than life."</p>
+
+<hr>
+<p id="p33"><span class="parno">33</span><span class="term">Thinking</span> means <span class="gloss">mind and thought are equivalent.</span></p>
+
+<hr>
+<p id="p34"><span class="parno">34</span><span class="term">Intending</span> means <span class="gloss">perceiving death, intending death, aiming at death.</span></p>
+
+<hr>
+<p id="p35"><span class="parno">35</span><span class="term">In various ways</span> means <span class="gloss">in manifold manners.</span></p>
+
+<hr>
+<p id="p36"><span class="parno">36</span><span class="term">If he praises death</span> means <span class="gloss">he shows the danger in living and speaks in praise of death, saying, "When you have passed away, at the breaking up of the body after death, you will be reborn in a happy destination, in a heaven world. There you will amuse yourself and enjoy the five types of heavenly sensual pleasures."</span></p>
+
+<hr>
+<p id="p37"><span class="parno">37</span><span class="term">If he incites someone to die</span> means <span class="gloss">he says, "Take a sword, or eat poison, or die by hanging yourself with a rope; or fall into a lake, into a pit, or off a cliff."</span></p>
+
+<hr>
+<p id="p38"><span class="parno">38</span><span class="term">He too</span> means <span class="gloss">this is said with referrence to the preceding offences entailing expulsion.</span></p>
+
+<hr>
+<p id="p39"><span class="parno">39</span><span class="term">Is expelled</span> means <span class="gloss">just as an ordinary stone which has been broken in half cannot be put together again, so a monk who has intentionally killed a human being is not a recluse, not a son of the Sakyan</span>—he is therefore called one who<span class="term">is expelled</span>.</p>
+
+<hr>
+<p id="p40"><span class="parno">40</span><span class="term">Not in communion</span> means <span class="term"><i>communion</i></span> means <span class="gloss">a common official action, the same recital, the same training</span>—this is called<span class="term"> </span>.<span class="gloss">He does not take part in this</span>—he is therefore called<span class="term">not in communion</span>.</p>
+
+<h3>Permutations</h3>
+
+<h4>Summary</h4>
+
+<p id="p41"><span class="parno">41</span>Oneself, having resolved, by a messenger, by a series of messengers, by a messenger who does not follow instructions, by a messenger gone and returned again.</p>
+
+<p>Not in private, but perceiving it as private; in private, but perceiving it as not private; not in private, and perceiving it as not private; in private, and perceiving it as private.</p>
+
+<p>He praises by means of the body; he praises by means of speech; he praises by means of both the body and speech; he praises by means of a messenger; he praises by means of a writing.</p>
+
+<p>A pit, a piece of furniture, placing near, medicine, arranging a sight, arranging a sound, arranging a smell, arranging a taste, arranging a touch, arranging dhamma, announcement, instruction, making an arranged action, making a sign.</p>
+
+<h4>Exposition</h4>
+
+<hr>
+<p id="p42"><span class="parno">42</span><span class="term">Oneself</span> means: one oneself kills by means of the body or by means of something attached to the body or by means of something released.</p>
+
+<hr>
+<p id="p43"><span class="parno">43</span><span class="term">Having resolved</span> means: having resolved, he tells someone: hit thus, strike thus, kill thus.</p>
+
+<h4>By a messenger</h4>
+
+<hr>
+<p id="p44"><span class="parno">44</span>If a monk tells a second monk, "Kill so-and-so," there is an offence of bad conduct. If the second monk kills that person, thinking he is the one he was told to kill, there is an offence entailing expulsion for both.</p>
+
+<hr>
+<p id="p45"><span class="parno">45</span>If a monk tells a second monk, "kill so-and-so," there is an offence of bad conduct. If the second monk kills someone else, thinking he is the one he was told to kill, there is no offence for the instigator, but there is an offence entailing expulsion for the murderer.</p>
+
+<hr>
+<p id="p46"><span class="parno">46</span>If a monk tells a second monk … If the second monk kills that person, thinking it is someone else than the one he was told to kill, there is an offence entailing expulsion for both.</p>
+
+<hr>
+<p id="p47"><span class="parno">47</span>If a monk tells a second monk … If the second monk kills someone else, thinking it is someone else than the one he was told to kill, there is no offence for the instigator, but there is an offence entailing expulsion for the murderer.</p>
+
+<h4>By a series of messengers</h4>
+
+<p id="p48"><span class="parno">48</span>If a monk tells a second monk, "tell so-and-so to tell so-and-so to kill so-and-so," there is an offence of bad conduct. In informing the next person, there is an offence of bad conduct. If the (potential) murderer accepts, there is a serious offence for the instigator. If he kills that person, there is an offence entailing expulsion for all of them.</p>
+
+<h4>By a messenger who does not follow instructions</h4>
+
+<p id="p49"><span class="parno">49</span>If a monk tells a second monk, "tell so-and-so to tell so-and-so to kill so-and-so," there is an offence of bad conduct. If the second monk tells someone else than the one he was told to tell, there is an offence of bad conduct. If the (potential) murderer accepts, there is an offence of bad conduct. If he kills that person, there is no offence for the instigator, but there is an offence entailing expulsion for the conveyor of the message and for the murderer.</p>
+
+<h4>By a messenger gone and returned again</h4>
+
+<p id="p50"><span class="parno">50</span>If a monk tells a second monk, "kill so-and-so," there is an offence of bad conduct.
+
+ He goes, but returns, saying, "I was not able to kill him." If the first monk tells him again, "when you are able, then kill him," there is an offence of bad conduct. If the second monk kills that person, there is an offence entailing expulsion for both.</p>
+
+<hr>
+<p id="p51"><span class="parno">51</span>If a monk tells a second monk, "kill so-and-so," there is an offence of bad conduct. He then becomes remorseful, but does not say, "do not kill him." If the second monk then kills that person, there is an offence entailing expulsion for both.</p>
+
+<hr>
+<p id="p52"><span class="parno">52</span>If a monk tells a second monk, "kill so-and-so," there is an offence of bad conduct. He then becomes remorseful and says, "do not kill him." If the second monk replies, "I have been told by you to do so," and then kills that person, there is no offence for the instigator, but there is an offence entailing expulsion for the murderer.</p>
+
+<hr>
+<p id="p53"><span class="parno">53</span>If a monk tells a second monk … He then becomes remorseful and says, "do not kill him." If the second monk replies, "very well," and desists, there is no offence for either.</p>
+
+<hr>
+<p id="p54"><span class="parno">54</span><i><span class="term">Not in private, but perceiving it as private</span></i>,<span class="gloss">he says aloud, "if only so-and-so were killed," there is an offence of bad conduct</span>. <i><span class="term">In private, but perceiving it as not private</span></i>,<span class="gloss">he says aloud, "if only so-and-so were killed," there is an offence of bad conduct</span>. <i><span class="term">Not in private, and perceiving it as not private</span></i>,<span class="gloss">he says aloud,
+ "if only so-and-so were killed," there is an offence of bad conduct</span>.
+ <i><span class="term">In private, and perceiving it as private</span></i>,<span class="gloss">he says aloud, "if only so-and-so were killed," there is an offence of bad conduct</span>.</p>
+
+<hr>
+<p id="p55"><span class="parno">55</span><span class="term">He praises by means of the body</span> means: in<span class="gloss">making a gesture with the body, which effectively says, "Whoever dies thus, receives wealth, fame or goes to heaven,"</span> there is an offence of bad conduct. If, because of that praise, the target person thinks, "I shall die," and he does what is painful, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p56"><span class="parno">56</span><span class="term">He praises by means of speech</span> means: in<span class="gloss">saying, "whoever dies thus … "</span> … If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p57"><span class="parno">57</span><span class="term">He praises by means of the body and speech</span> means: in<span class="gloss">making a gesture with the body and saying, "whoever dies thus … "</span> … If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p58"><span class="parno">58</span><span class="term">He praises by means of a messenger</span> means: in<span class="gloss">giving instructions to a messenger, saying, "whoever dies thus, receives wealth, fame or goes to heaven,"</span> there is an offence of bad conduct. If, having heard the messenger’s instruction, the target person thinks, "I shall die," and he does what is painful, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p59"><span class="parno">59</span><span class="term">He praises by means of a writing</span> means: in<span class="gloss">writing: "Whoever dies thus, receives wealth, fame or goes to heaven,"</span> there is an offence of bad conduct for each character. If, having seen the writing, the target person thinks, "I shall die," and he does what is painful, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p60"><span class="parno">60</span><span class="term">A pit</span> means: in<span class="gloss">digging a pit for people, thinking, "falling into it someone will die,"</span> there is an offence of bad conduct. If a person falls into it, there is an offence of bad conduct. If, when he has fallen, he experiences pain, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<p>In <span class="gloss">digging a non-specific pit, thinking, "whatever falls in will die,"</span> there is an offence of bad conduct. If a person falls into it, there is an offence of bad conduct. If, when he has fallen, he experiences pain, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<p>If a spirit, ghost or animal in human form falls into it, there is an offence of bad conduct. If, when it has fallen, it experiences pain, there is an offence of bad conduct. If it dies, there is a serious offence. If an animal falls into it, there is an offence of bad conduct. If, when it has fallen, it experiences pain, there is an offence of bad conduct. If it dies, there is an offence entailing confession.</p>
+
+<hr>
+<p id="p61"><span class="parno">61</span><span class="term">A piece of furniture</span> means: if<span class="gloss">he places a dagger in a piece of furniture, smears the furniture with poison or makes it weak, or if he places it near a lake, a pit or a cliff, thinking, "falling down, he will die,"</span> there is an offence of bad conduct. If the target person experiences pain on account of the dagger or the poison or the fall, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p62"><span class="parno">62</span><span class="term">Placing near</span> means: if<span class="gloss">he places a knife, a dagger, an arrow, a club, a stone, a sword, poison or a rope near him, thinking, "using this he will die,"</span> there is an offence of bad conduct. If the target person thinks, "using that, I shall die," and he does what is painful, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p63"><span class="parno">63</span><span class="term">Medicine</span> means: if<span class="gloss">he gives ghee, butter, oil, honey or molasses, thinking, "having tasted this, he will die,"</span> there is an offence of bad conduct. When the target person tastes it and experiences pain, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p64"><span class="parno">64</span><span class="term">Arranging a sight</span> means: in<span class="gloss">arranging a dreadful and terrifying sight, thinking, "seeing this and becoming terrified, he will die,"</span> there is an offence of bad conduct. If the target person sees it and becomes terrified, there is a serious offence. If he dies, there is an offence entailing expulsion. In<span class="gloss">arranging a lovely sight, thinking, "seeing this and then not being able to obtain it, he will wither and die,"</span> there is an offence of bad conduct. If the target person sees it and then withers because of not obtaining it, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p65"><span class="parno">65</span><span class="term">Arranging a sound</span> means: in<span class="gloss">arranging a dreadful and terrifying sound, thinking, "hearing this and becoming terrified, he will die,"</span> there is an offence of bad conduct. If the target person hears it and becomes terrified, there is a serious offence. If he dies, there is an offence entailing expulsion. In<span class="gloss">arranging a lovely and heart-stirring sound, thinking, "hearing this and then not being able to obtain it, he will wither and die,"</span> there is an offence of bad conduct. If the target person hears it and then withers because of not obtaining it, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p66"><span class="parno">66</span><span class="term">Arranging a smell</span> means: in<span class="gloss">arranging a disgusting and repulsive smell, thinking, "smelling this, he will die from disgust and aversion,"</span> there is an offence of bad conduct. When the target person smells it and experiences suffering because of disgust and aversion, there is a serious offence. If he dies, there is an offence entailing expulsion. In<span class="gloss">arranging a lovely smell, thinking, "smelling this and then not being able to obtain it, he will wither and die,"</span> there is an offence of bad conduct. If the target person smells it and then withers because of not obtaining it, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p67"><span class="parno">67</span><span class="term">Arranging a taste</span> means: in<span class="gloss">arranging a disgusting and repulsive taste, thinking, "tasting this, he will die from disgust and aversion,"</span> there is an offence of bad conduct. When the target person tastes it and experiences suffering because of disgust and aversion, there is a serious offence. If he dies, there is an offence entailing expulsion. In<span class="gloss">arranging a lovely taste, thinking, "tasting this and then not being able to obtain it, he will wither and die,"</span> there is an offence of bad conduct. If the target person tastes it and then withers because of not obtaining it, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p68"><span class="parno">68</span><span class="term">Arranging a touch</span> means: in<span class="gloss">arranging a painful and harsh physical contact, thinking, "touched by this, he will die,"</span> there is an offence of bad conduct. When the target person makes contact with it and experiences pain, there is a serious offence. If he dies, there is an offence entailing expulsion. In<span class="gloss">arranging a pleasant and soft physical contact, thinking, "touched by this and then not being able to obtain it, he will wither and die,"</span> there is an offence of bad conduct. If the target person is touched by it and then withers because of not obtaining it, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p69"><span class="parno">69</span><span class="term">Arranging dhamma</span> means: in<span class="gloss">talking about hell to one destined to go to hell, thinking, "hearing this and becoming terrified, he will die,"</span> there is an offence of bad conduct. When the target person hears it and becomes terrified, there is a serious offence. If he dies, there is an offence entailing expulsion. In<span class="gloss">talking about heaven to someone of good behaviour, thinking, "hearing this and being intent on it, he will die,"</span> there is an offence of bad conduct. When the target person hears it, becomes intent on it and thinks, "I shall die," and he does what is painful, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p70"><span class="parno">70</span><span class="term">Announcement</span> means: if,<span class="gloss">being asked, he says, "die in this way; he who dies like this receives wealth, fame or goes to heaven,"</span> there is an offence of bad conduct. If, because of that announcement, the target person thinks, "I shall die," and he does what is painful, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p71"><span class="parno">71</span><span class="term">Instruction</span> means: if,<span class="gloss">without being asked, he says, "die in this way; he who dies like this receives wealth, fame or goes to heaven,"</span> there is an offence of bad conduct. If, because of that instruction, the target thinks, "I shall die," and he does what is painful, there is a serious offence. If he dies, there is an offence entailing expulsion.</p>
+
+<hr>
+<p id="p72"><span class="parno">72</span><span class="term">An arranged action</span> means: if<span class="gloss">he makes an arrangement for before the meal or for after the meal, for the night or for the day, telling another person, "kill that person according to this arrangement,"</span> there is an offence of bad conduct. If the other person kills that person according to that arrangement, there is an offence entailing expulsion for both. If he kills him before or after the arranged time, there is no offence for the instigator, but there is an offence entailing expulsion for the murderer.</p>
+
+<hr>
+<p id="p73"><span class="parno">73</span><span class="term">Making a sign</span> means <span class="gloss">he makes a sign. If he says to another person, "when I wink, raise my eyebrow, or raise my head, at that sign kill that person,"</span> there is an offence of bad conduct. If, at that sign, the other person kills that person, there is an offence entailing expulsion for both. If he kills him before or after the sign, there is no offence for the instigator, but there is an offence entailing expulsion for the murderer.</p>
+
+<h3>Non-offence Clause</h3>
+
+<p id="p74"><span class="parno">74</span>There is no offence if it was unintentional, for one not knowing, for one not aiming at death, for one who is insane, for the first offender.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">75</span>The first section on expulsion in relation to human beings is finished.</p>
+
+<h3>Case rulings</h3>
+<h4>Mnemonic list</h4>
+
+<div class="verse">
+
+<p><span class="parno">76. </span>Praising, sitting down,
+<br>with pestle, and with mortar;
+<br>Gone forth when old, a falling out,
+<br>first, experimental poison,
+<p></div>
+
+<hr>
+<div class="verse">
+<p id="p77"><span class="parno">77</span>And three with making sites,
+<br>another three with bricks,
+<br>An adze, and a rafter, a platform,
+<br>descent, fell off,</p>
+</div>
+
+<hr>
+<div class="verse">
+<p id="p78"><span class="parno">78</span>Sweating, and nose treatment,
+<br>massage, and by bathing,
+<br>and by smearing,
+<br>Making get up, making lie down,
+<br>death through food and drink,</p>
+</div>
+<hr>
+<div class="verse">
+<p id="p79"><span class="parno">79</span>Child by a lover, and co-wives,
+<br>he killed the mother, the child,
+<br>He killed both, neither, crushing,
+<br>heating, barren, fertile,</p>
+</div>
+
+<hr>
+<div class="verse">
+<p id="p80"><span class="parno">80</span>Tickling, in restraining, a spirit,
+<br>and sent to a predatory spirit,
+<br>Thinking it was him he gave a blow,
+<br>talk on heaven, and on hell,</p>
+</div>
+
+<hr>
+<p id="p81" class="verse"><span class="parno">81</span>Three trees at Āḷavī,
+<br>three others with forest about fires,
+<br>Do not keep in misery, not as you,
+<br>buttermilk, and salty medicine.</p>
+
+<h3>Case details</h3>
+
+<hr>
+<p id="p82"><span class="parno">82</span>At one time time a certain monk was ill. Out of compassion the monks praised the beauty of death to him. He died. They became anxious and said, "Could it be that we have fallen into an offence entailing expulsion?" They informed the Master. He said: "You, monks, have fallen into an offence entailing expulsion."</p>
+
+<hr>
+<p id="p83"><span class="parno">83</span>At one time a certain monk who was an almsgoer sat down on a bench, crushing a boy who was concealed by a rag. The boy died, and the monk became anxious. … "Monks, there is no offence entailing expulsion. <span class="rule"> But a monk should not sit down on a seat without checking it. If one does, there is an offence of bad conduct.</span>"</p>
+
+<hr>
+<p id="p84"><span class="parno">84</span>At one time a certain monk was preparing a seat in a refectory among the houses. When he took hold of a pestle high up, a second pestle fell down hitting a certain boy who then died. He became anxious … "What was your intention?"</p>
+
+<hr>
+<p>"I did not intend it, Master."</p>
+
+<p>"There is no offence, monk, when it is unintentional.</p>
+
+<p id="p85"><span class="parno">85</span>At one time a certain monk was preparing a seat in a refectory among the houses. He stepped on the requisites belonging to a mortar, which fell and hit a certain boy, who then died. He became anxious … "There is no offence, monk, when it is unintentional."</p>
+
+<p id="p86"><span class="parno">86</span>At one time a father and son had gone forth among the monks. When the time was announced the son said to his father, "Go, bhante, the Saṅgha is waiting for you," and seizing him by the back, he pushed him away. Falling down, he died. He became anxious. …
+
+ "What was your intention?"</p>
+
+<p>"I did not mean to cause his death, Master."</p>
+
+<p>"There is no offence, monk, for one who is not aiming at death.</p>
+
+<hr>
+<p id="p87"><span class="parno">87</span>At one time a father and son had gone forth among the monks. When the time was announced the son said to his father, "Go, bhante, the Saṅgha is waiting for you," and meaning to cause his death he seized him by the back and pushed him away. Falling down, he died. He became anxious … " … expulsion."</p>
+
+<hr>
+<p id="p88"><span class="parno">88</span>At one time a father and son had gone forth among the monks. When the time was announced the son said to his father, "Go, bhante, the Saṅgha is waiting for you," and meaning to cause his death he seized him by the back and pushed him away. Falling down, he did not die. He became anxious … "There is no offence, monk, entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p89"><span class="parno">89</span>At one time while a certain monk was eating some meat got stuck in his throat. A certain monk hit him on the neck. The meat came out together with blood, and the monk died. He became anxious … "There is no offence, monk, for one who does not mean to cause death."</p>
+
+<hr>
+<p id="p90"><span class="parno">90</span>At one time while a certain monk was eating some meat got stuck in his throat. A certain monk, meaning to cause his death, hit him on the neck. The meat came out together with blood, and the monk died. He became anxious … " … expulsion."</p>
+
+<hr>
+<p id="p91"><span class="parno">91</span>At one time while a certain monk was eating some meat got stuck in his throat. A certain monk, meaning to cause his death, hit him on the neck.
+
+ The meat came out together with blood, but the monk did not die. He became anxious … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p92"><span class="parno">92</span>At one time a certain monk who was an almsgoer received poisoned almsfood. He brought it back and gave the first portion to the monks. They died. He became anxious … "What was your intention, monk?"</p>
+
+<p>"I did not know, Master."</p>
+
+<p>"There is no offence for one who does not know.</p>
+
+<hr>
+<p id="p93"><span class="parno">93</span>At one time a certain monk gave poison to a certain monk, with the purpose of investigating it. That monk died. He became anxious … "What was your intention, monk?"</p>
+
+<p>"My purpose was to investigate it, Master."</p>
+
+<p>"There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p94"><span class="parno">94</span>At one time the monks of Āḷavī were preparing a site for a dwelling.
+
+ A certain monk who was below lifted up a stone. The stone, being badly held by a second monk who was above, fell on the head of the monk who was below, and he died. The second monk became anxious … "There is no offence, monk, when it is unintentional."</p>
+
+<hr>
+<p id="p95"><span class="parno">95</span>At one time the monks of Alavī were preparing a site for a dwelling. A certain monk who was below lifted up a stone. A second monk who was above, aiming to kill the one who was below, dropped the stone on his head. He died … he did not die. The second monk became anxious … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p96"><span class="parno">96</span>At one time the monks of Āḷavī were erecting a wall for a dwelling. A certain monk who was below lifted up a burnt brick. The brick, being badly held by a second monk who was above, fell on the head of the monk who was below. He died. The second monk became anxious … "There is no offence, monk, when it is unintentional."</p>
+
+<hr>
+<p id="p97"><span class="parno">97</span>At one time the monks of Āḷavī were erecting a wall for a dwelling. A certain monk who was below lifted up a burnt brick. A second monk who was above, intending to cause the death of the monk who was below, dropped the burnt brick on his head. He died … he did not die. The second monk became anxious … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p98"><span class="parno">98</span>At one time the monks of Āḷavī were doing building work. A certain monk who was below lifted up an adze. The adze, being badly held by a second monk who was above, fell on the head of the monk who was below. He died. The second monk became anxious … "There is no offence, monk, when it is unintentional."</p>
+
+<hr>
+<p id="p99"><span class="parno">99</span>At one time the monks of Āḷavī were doing building work … lifted up an adze. A second monk who was above, meaning to cause the death of the monk who was below, dropped the adze on his head. He died … he did not die … The second monk became anxious … " … serious offence."</p>
+
+<hr>
+<p id="p100"><span class="parno">100</span>… "There is no offence, monk, when it is unintentional."</p>
+
+<hr>
+<p id="p101"><span class="parno">101</span>At one time the monks of Āḷavī were doing building work. A certain monk who was below lifted up a rafter. The rafter, being badly held by a monk who was above …
+<span class="add"><i>three cases as above</i></span> … " … serious offence."</p>
+
+<hr>
+<p id="p102"><span class="parno">102</span>At one time the monks of Āḷavī, doing building work, were putting together a platform. A certain monk said to a second monk, "Friend, put it together by standing here." Putting it together by standing there, he fell down and died.
+
+ The first monk became anxious … "What was your intention, monk?"</p>
+
+<p>"I did not mean to cause his death, Master."</p>
+
+<p>"There is no offence for one who is not aiming at death."</p>
+
+<hr>
+<p id="p103"><span class="parno">103</span>At one time the monks of Āḷavī, doing building work, were putting together a platform. A certain monk, meaning to cause his death, said to second monk, "Friend, put it together by standing here." Putting it together by standing there, he fell down and died … fell down and did not die. The first monk became anxious … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p104"><span class="parno">104</span>At one time a certain monk, having made a roof for a dwelling, was coming down. A second monk said to that monk, "Friend, come down here." Coming down at that place, he fell down and died. The second monk became anxious … "There is no offence, monk, for one who is not aiming at death."</p>
+
+<hr>
+<p id="p105"><span class="parno">105</span>At one time a certain monk, having made a roof for a dwelling, was coming down. A second monk, meaning to cause his death, said to him: "Friend, come down here." Coming down at that place, he fell down and died … fell down and did not die … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p106"><span class="parno">106</span>At one time a certain monk who was tormented by discontent climbed Mount Vulture’s Peak, fell down the cliff and hit a certain basket-maker. He died, and the monk became anxious … "There is no offence entailing expulsion. <span class="rule">But, monks, one should not jump off. If one does, there is an offence of bad conduct."</span></p>
+
+<hr>
+<p id="p107"><span class="parno">107</span>At one time the group of six monks, having climbed Mount Vultureʼs Peak, threw down a stone for fun. Hitting a certain cowherd, it killed him. They became anxious. … "There is no offence entailing expulsion. <span class="rule">But, monks, you should not throw down stones for fun. If one does, there is an offence of bad conduct."</span></p>
+
+<hr>
+<p id="p108"><span class="parno">108</span>At one time a certain monk was ill. The monks made him sweat by heating him. He died. They became anxious. … "There is no offence, monks, for one who is not aiming at death."</p>
+
+<hr>
+<p id="p109"><span class="parno">109</span>At one time a certain monk was ill. The monks, meaning to cause his death, made him sweat by heating him. He died … he did not die. They became anxious. … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p110"><span class="parno">110</span>At one time a certain monk had a headache. The monks gave him medical treatment through the nose. He died. They became anxious. … "There is no offence, monks, for one who is not aiming at death."</p>
+
+<hr>
+<p id="p111"><span class="parno">111</span>At one time a certain monk had a headache. The monks, meaning to cause his death, gave him medical treatment through the nose. He died … did not die. They became anxious. … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">112–113</span>At one time a certain monk was ill. The monks massaged him. He died …<span class="add"><i>three cases as above</i></span> …
+
+ " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">114–115</span>At one time a certain monk was ill. The monks bathed him. He died …
+
+ " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">116–117</span>At one time a certain monk was ill. The monks anointed him with oil. He died …
+
+ " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">118–119</span>At one time a certain monk was ill. The monks made him get up. He died …
+
+ " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">120–121</span>At one time a certain monk was ill. The monks made him lie down. He died …
+
+ " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">122–125</span>At one time a certain monk was ill. The monks gave him food … they gave him drink. He died … " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">126–127</span>At one time a certain woman whose husband was living away from home became pregnant by a lover. She said to a monk who was supported by her family, "Master, please find a method of abortion." "All right, sister," he said, and he gave her a method of abortion. The child died. He became anxious. … "You, monk, have fallen into an offence entailing expulsion."</p>
+
+<hr>
+<p id="p128"><span class="parno">128</span>At one time a certain man had two wives, one who was barren and one who was fertile. The barren one said to a monk who was supported by her family, "If she should bring forth a child, bhante, she will become mistress of the whole household. Master, please find a method of abortion for her." "All right, sister," he said, and he gave her a method of abortion. The child died, but the mother did not die. He became anxious … " … expulsion."</p>
+
+<hr>
+<p id="p129"><span class="parno">129</span>At one time a certain man had two wives … he gave her a method of abortion. The mother died, but the child did not die. He became anxious … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<p>At one time a certain man had two wives … he gave her a method of abortion. Both died … neither died. He became anxious … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p130"><span class="parno">130</span>At one time a certain woman who was pregnant said to a monk who was supported by her family, "Master, please find me a method of abortion." "Well then crush it, sister," he said. She crushed it and caused an abortion. He became anxious … " … expulsion."</p>
+
+<hr>
+<p id="p131"><span class="parno">131</span>At one time a certain woman who was pregnant … "Well then heat yourself, sister," he said. She heated herself and caused an abortion. He became anxious … " … expulsion."</p>
+
+<hr>
+<p id="p132"><span class="parno">132</span>At one time a certain barren woman said to a monk who was supported by her family, "Master, please find me some medicine to help me become pregnant." "All right, sister," he said, and gave her some medicine. She died. He became anxious … "There is no offence entailing expulsion, but there is an offence of bad conduct."</p>
+
+<hr>
+<p id="p133"><span class="parno">133</span>At one time a certain fertile woman said to a monk who was supported by her family, "Master, please find me some medicine to help me not get pregnant." "All right, sister," he said … " … but there is an offence of bad conduct."</p>
+
+<hr>
+<p id="p134"><span class="parno">134</span>At one time the group of six monks made one of the group of seventeen monks laugh by tickling him with their fingers. Being unable to breathe, he died. They became anxious … "There is no offence entailing expulsion."</p>
+
+<hr>
+<p id="p135"><span class="parno">135</span>At one time the group of seventeen monks, while doing some work, covered one of the monks of the group of six. He died. They became anxious … "There is no offence entailing expulsion."</p>
+
+<hr>
+<p id="p136"><span class="parno">136</span>At one time a certain monk who was an exorcist killed a spirit. He became anxious. … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p137"><span class="parno">137</span>At one time a certain monk sent a certain monk to a dwelling inhabited by predatory spirits. The spirits killed him. He became anxious … "There is no offence, monk, for one who is not aiming at death."</p>
+
+<hr>
+<p id="p138"><span class="parno">138</span>At one time a certain monk, meaning to cause his death, sent a certain monk to a dwelling inhabited by predatory spirits. The spirits killed him
+
+ … the spirits did not kill him. "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">139–142</span>At one time a certain monk sent a certain monk to a wilderness inhabited by beasts of prey … to a wilderness inhabited by robbers. The beasts of prey … the robbers … killed him. He became anxious …<span class="add"><i>three cases each time as above</i></span> … " … but there is a serious offence."</p>
+
+<hr>
+<p id="p143"><span class="parno">143</span>At one time a certain monk, thinking he was that person, killed that person … thinking he was that person, killed someone else … thinking he was someone else, killed that person … thinking he was someone else, killed someone else. He became anxious … " … expulsion."</p>
+
+<hr>
+<p id="p144"><span class="parno">144</span>At one time a certain monk was possessed by a spirit. Another monk gave him a blow. He died. The other monk became anxious … "There is no offence, monk, for one who is not aiming at death."</p>
+
+<hr>
+<p id="p145"><span class="parno">145</span>At one time a certain monk was possessed by a spirit. Another monk, meaning to cause his death, gave him a blow. He died … he did not die. The other monk became anxious … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p id="p146"><span class="parno">146</span>At one time a certain monk gave a talk about heaven to a man of good behaviour. He became keen on it and died. The monk became anxious … "There is no offence, monk, for one who is not aiming at death."</p>
+
+<hr>
+<p id="p147"><span class="parno">147</span>At one time a certain monk, meaning to cause his death, gave a talk about heaven to a man of good behaviour. He became keen on it and died … he became keen on it, but did not die … "There is no offence entailing expulsion, but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">148–149</span>At one time a certain monk gave a talk about hell to a man destined to go to hell. Being terrified, he died … <span class="add"><i>the same three cases</i></span> … " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">150–151</span>At one time the monks of Āḷavī, while doing building work, felled a tree. A certain monk said to another monk, "Friend, fell it standing here." While he was felling it standing there, the tree fell on him and killed him …
+<span class="add"><i>three cases</i></span> … " … but there is a serious offence."</p>
+
+<hr>
+<p><span class="parno">152–153</span>At one time the group of six monks set fire to a forest. Some people were burnt and died …<span class="add"><i>three cases</i></span> … " … but there is a serious offence."</p>
+
+<hr>
+<p id="p154"><span class="parno">154</span>At one time a certain monk went to the place of execution and said to the executioner: "Friend, do not keep him in misery. Kill him with a single blow." "All right, bhante," he said, and he killed him with a single blow. He became anxious. "You, monk, have fallen into an offence entailing expulsion."</p>
+
+<hr>
+<p id="p155"><span class="parno">155</span>At one time a certain monk went to the place of execution and said to the executioner: "Friend, do not keep him in misery. Kill him with a single blow."
+
+ "I will not do as you ask," he said, and deprived him of life. He became anxious … "Monk, there is no offence entailing expulsion, but there is an offence of bad conduct."</p>
+
+<hr>
+<p id="p156"><span class="parno">156</span>At one time a certain man whose hands and feet had been cut off was in his relativesʼ house surrounded by his relations. A certain monk said to those people, "Friends, do you desire his death?"</p>
+
+<p>"Indeed, bhante, we do desire it."</p>
+
+<p>"Then you should make him drink buttermilk."</p>
+
+<p>They made him drink buttermilk and he died. The monk became anxious … "You, monk, have fallen into an offence entailing expulsion."</p>
+
+<hr>
+<p id="p157"><span class="parno">157</span>At one time a certain man whose hands and feet had been cut off was in his familyʼs house, surrounded by his relations. A certain nun said to those people, "Friends, do you desire his death?"</p>
+
+<hr>
+<p>"Indeed, honoured lady, we do desire it."</p>
+
+<hr>
+<p>"Then you should make him drink salty medicine."</p>
+
+<p>They made him drink salty medicine and he died. She became anxious. She then informed the nuns, who in turn informed the monks, who then informed the Master. He said: "Monks, that nun has fallen into an offence entailing expulsion."</p>
+
+<hr>
+<p class="endsutta"><span class="parno">158</span>The third pārājika is complete.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_376, msdiv162</span>Tena samayena buddho bhagavā vesāliyaṁ viharati mahāvane kūṭāgārasālāyaṁ. Tena kho pana samayena bhagavā bhikkhūnaṁ anekapariyāyena asubhakathaṁ katheti, asubhāya vaṇṇaṁ bhāsati, asubhabhāvanāya vaṇṇaṁ bhāsati, ādissa ādissa asubhasamāpattiyā vaṇṇaṁ bhāsati.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_1V_377</span>Atha kho bhagavā bhikkhū āmantesi:  "Icchāmahaṁ, bhikkhave, addhamāsaṁ paṭisallīyituṁ. Namhi kenaci upasankamitabbo, aññatra ekena piṇḍapātanīhārakenā"ti.</p>
+
+<p>"Evaṁ, bhante"ti, kho te bhikkhū bhagavato paṭissuṇitvā nāssudha koci bhagavantaṁ upasankamati, aññatra ekena piṇḍapātanīhārakena.</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_1V_378</span>Bhikkhū— "Bhagavā kho anekapariyāyena asubhakathaṁ katheti, asubhāya vaṇṇaṁ bhāsati, asubhabhāvanāya vaṇṇaṁ bhāsati, ādissa ādissa asubhasamāpattiyā vaṇṇaṁ bhāsatī"ti, te anekākāravokāraṁ asubhabhāvanānuyogamanuyuttā viharanti. Te sakena kāyena aṭṭīyanti harāyanti jigucchanti. Seyyathāpi nāma itthī vā puriso vā daharo yuvā maṇḍanakajātiko sīsaṁnhāto ahikuṇapena vā kukkurakuṇapena vā manussakuṇapena vā kaṇṭhe āsattena aṭṭīyeyya harāyeyya jiguccheyya; evameva te bhikkhū sakena kāyena aṭṭīyantā harāyantā jigucchantā attanāpi attānaṁ jīvitā voropenti, aññamaññampi jīvitā voropenti, migalaṇḍikampi samaṇakuttakaṁ upasankamitvā evaṁ vadanti— "sādhu no, āvuso, jīvitā voropehi. Idaṁ te pattacīvaraṁ bhavissatī"ti. Atha kho migalaṇḍiko samaṇakuttako pattacīvarehi bhaṭo sambahule bhikkhū jīvitā voropetvā lohitakaṁ asiṁ ādāya yena vaggumudā nadī tenupasankami.</p>
+
+<hr>
+<p><span class="parno">4</span><span class="ms">p_1V_379, msdiv163</span>Atha kho migalaṇḍikassa samaṇakuttakassa lohitakaṁ taṁ asiṁ dhovantassa ahudeva kukkuccaṁ ahu vippaṭisāro: "Alābhā vata me, na vata me lābhā; dulladdhaṁ vata me, na vata me suladdhaṁ. Bahuṁ vata mayā apuññaṁ pasutaṁ, yohaṁ bhikkhū sīlavante kalyāṇadhamme jīvitā voropesin"ti.</p>
+
+<p>Atha kho aññatarā mārakāyikā devatā abhijjamāne udake āgantvā migalaṇḍikaṁ samaṇakuttakaṁ etadavoca: "sādhu sādhu, sappurisa, lābhā te, sappurisa, suladdhaṁ te, sappurisa. Bahuṁ tayā, sappurisa, puññaṁ pasutaṁ, yaṁ tvaṁ atiṇṇe tāresī"ti.</p>
+
+<hr>
+<p><span class="parno">5</span><span class="ms">p_1V_380</span>Atha kho migalaṇḍiko samaṇakuttako— "lābhā kira me, suladdhaṁ kira me, bahuṁ kira mayā puññaṁ pasutaṁ, atiṇṇe kirāhaṁ tāremī"ti, tiṇhaṁ asiṁ ādāya vihārena vihāraṁ pariveṇena pariveṇaṁ upasankamitvā evaṁ vadeti: "ko atiṇṇo, kaṁ tāremī"ti? Tattha ye te bhikkhū avītarāgā tesaṁ tasmiṁ samaye hotiyeva bhayaṁ hoti chambhitattaṁ hoti lomahaṁso. Ye pana te bhikkhū vītarāgā tesaṁ tasmiṁ samaye na hoti bhayaṁ na hoti chambhitattaṁ na hoti lomahaṁso.</p>
+
+<hr>
+<p><span class="parno">6</span><span class="ms">p_1V_381</span>Atha kho migalaṇḍiko samaṇakuttako ekampi bhikkhuṁ ekāhena jīvitā voropesi, dvepi bhikkhū ekāhena jīvitā voropesi, tayopi bhikkhū ekāhena jīvitā voropesi, cattāropi bhikkhū ekāhena jīvitā voropesi, pañcapi bhikkhū ekāhena jīvitā voropesi, dasapi bhikkhū ekāhena jīvitā voropesi, vīsampi bhikkhū ekāhena jīvitā voropesi, tiṁsampi bhikkhū ekāhena jīvitā voropesi, cattālīsampi bhikkhū ekāhena jīvitā voropesi, paññāsampi bhikkhū ekāhena jīvitā voropesi, saṭṭhimpi bhikkhū ekāhena jīvitā voropesi.</p>
+
+<hr>
+<p><span class="parno">7</span><span class="ms">p_1V_382 msdiv164</span>Atha kho bhagavā tassa addhamāsassa accayena paṭisallānā vuṭṭhito āyasmantaṁ ānandaṁ āmantesi:  "Kiṁ nu kho, ānanda, tanubhūto viya bhikkhusangho"ti?</p>
+
+<p>"Tathā hi pana, bhante, bhagavā bhikkhūnaṁ anekapariyāyena asubhakathaṁ katheti, asubhāya vaṇṇaṁ bhāsati, asubhabhāvanāya vaṇṇaṁ bhāsati, ādissa ādissa asubhasamāpattiyā vaṇṇaṁ bhāsati. Te ca, bhante, bhikkhū— ‘bhagavā kho anekapariyāyena asubhakathaṁ katheti, asubhāya vaṇṇaṁ bhāsati, asubhabhāvanāya vaṇṇaṁ bhāsati, ādissa ādissa asubhasamāpattiyā vaṇṇaṁ bhāsatī’ti, te anekākāravokāraṁ asubhabhāvanānuyogamanuyuttā viharanti. Te sakena kāyena aṭṭīyanti harāyanti jigucchanti. Seyyathāpi nāma itthī vā puriso vā daharo yuvā maṇḍanakajātiko sīsaṁnhāto ahikuṇapena vā kukkurakuṇapena vā manussakuṇapena vā kaṇṭhe āsattena aṭṭīyeyya harāyeyya jiguccheyya; evameva te bhikkhū sakena kāyena aṭṭīyantā harāyantā jigucchantā attanāpi attānaṁ jīvitā voropenti, aññamaññampi jīvitā voropenti, migalaṇḍikampi samaṇakuttakaṁ upasankamitvā evaṁ vadanti— ‘sādhu no, āvuso, jīvitā voropehi. Idaṁ te pattacīvaraṁ bhavissatī’ti. Atha kho, bhante, migalaṇḍiko samaṇakuttako pattacīvarehi bhaṭo ekampi bhikkhuṁ ekāhena jīvitā voropesi … pe … saṭṭhimpi bhikkhū ekāhena jīvitā voropesi. Sādhu, bhante, bhagavā aññaṁ pariyāyaṁ ācikkhatu yathāyaṁ bhikkhusangho aññāya saṇṭhaheyyā"ti.</p>
+
+<hr>
+<p>"Tenahānanda, yāvatikā bhikkhū vesāliṁ upanissāya viharanti te sabbe upaṭṭhānasālāyaṁ sannipātehī"ti.</p>
+
+<p>"Evaṁ, bhante"ti, kho āyasmā ānando bhagavato paṭissuṇitvā yāvatikā bhikkhū vesāliṁ upanissāya viharanti te sabbe upaṭṭhānasālāyaṁ sannipātetvā yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ etadavoca: "sannipatito, bhante, bhikkhusangho; yassadāni, bhante, bhagavā kālaṁ maññatī"ti.</p>
+
+<hr>
+<p><span class="parno">8. p_1V_383, msdiv165</span>Atha kho bhagavā yena upaṭṭhānasālā tenupasankami; upasankamitvā paññatte āsane nisīdi. Nisajja kho bhagavā bhikkhū āmantesi: </p>
+
+<hr>
+<p><span class="parno">9. p_1V_384</span>"Ayampi kho, bhikkhave, ānāpānassatisamādhi bhāvito bahulīkato santo ceva paṇīto ca asecanako ca sukho ca vihāro uppannuppanne ca pāpake akusale dhamme ṭhānaso antaradhāpeti vūpasameti. Seyyathāpi, bhikkhave, gimhānaṁ pacchime māse uhataṁ rajojallaṁ tamenaṁ mahāakālamegho ṭhānaso antaradhāpeti vūpasameti; evameva kho, bhikkhave, ānāpānassatisamādhi bhāvito bahulīkato santo ceva paṇīto ca asecanako ca sukho ca vihāro uppannuppanne ca pāpake akusale dhamme ṭhānaso antaradhāpeti vūpasameti.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_1V_385</span>Kathaṁ bhāvito ca, bhikkhave, ānāpānassatisamādhi kathaṁ bahulīkato santo ceva paṇīto ca asecanako ca sukho ca vihāro uppannuppanne ca pāpake akusale dhamme ṭhānaso antaradhāpeti vūpasameti?</p>
+
+<p>Idha, bhikkhave, bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā nisīdati pallankaṁ ābhujitvā ujuṁ kāyaṁ paṇidhāya parimukhaṁ satiṁ upaṭṭhapetvā. So satova assasati sato passasati.</p>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_1V_386</span>Dīghaṁ vā assasanto dīghaṁ assasāmīti pajānāti, dīghaṁ vā passasanto dīghaṁ passasāmīti pajānāti. Rassaṁ vā assasanto rassaṁ assasāmīti pajānāti, rassaṁ vā passasanto rassaṁ passasāmīti pajānāti. Sabbakāyappaṭisaṁvedī assasissāmīti sikkhati. Sabbakāyappaṭisaṁvedī passasissāmīti sikkhati. Passambhayaṁ kāyasankhāraṁ assasissāmīti sikkhati. Passambhayaṁ kāyasankhāraṁ passasissāmīti sikkhati.</p>
+
+<hr>
+<p><span class="parno">12</span><span class="ms">p_1V_387</span>Pītippaṭisaṁvedī assasissāmīti sikkhati. Pītippaṭisaṁvedī passasissāmīti sikkhati. Sukhappaṭisaṁvedī assasissāmīti sikkhati. Sukhappaṭisaṁvedī passasissāmīti sikkhati. Cittasankhārappaṭisaṁvedī assasissāmīti sikkhati. Cittasankhārappaṭisaṁvedī passasissāmīti sikkhati. Passambhayaṁ cittasankhāraṁ assasissāmīti sikkhati. Passambhayaṁ cittasankhāraṁ passasissāmīti sikkhati. Cittappaṭisaṁvedī assasissāmīti sikkhati. Cittappaṭisaṁvedī passasissāmīti sikkhati. Abhippamodayaṁ cittaṁ … pe … samādahaṁ cittaṁ … pe … vimocayaṁ cittaṁ … pe …</p>
+
+<hr>
+<p><span class="parno">13</span><span class="ms">p_1V_388</span>Aniccānupassī … pe … virāgānupassī … pe … nirodhānupassī … pe … paṭinissaggānupassī assasissāmīti sikkhati. Paṭinissaggānupassī passasissāmīti sikkhati.</p>
+
+<hr>
+<p><span class="parno">14</span><span class="ms">p_1V_389</span>Evaṁ bhāvito kho, bhikkhave, ānāpānassatisamādhi evaṁ bahulīkato santo ceva paṇīto ca asecanako ca sukho ca vihāro uppannuppanne ca pāpake akusale dhamme ṭhānaso antaradhāpeti vūpasametī"ti.</p>
+
+<hr>
+<p><span class="parno">15</span><span class="ms">p_1V_390, msdiv166</span>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusanghaṁ sannipātāpetvā bhikkhū paṭipucchi:</p>
+
+<p>"Saccaṁ kira, bhikkhave, bhikkhū attanāpi attānaṁ jīvitā voropenti, aññamaññampi jīvitā voropenti migalaṇḍikampi samaṇakuttakaṁ upasankamitvā evaṁ vadanti— ‘sādhu no, āvuso, jīvitā voropehi, idaṁ te pattacīvaraṁ bhavissatī’"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā: "Ananucchavikaṁ, bhikkhave, tesaṁ bhikkhūnaṁ ananulomikaṁ appaṭirūpaṁ assāmaṇakaṁ akappiyaṁ akaraṇīyaṁ. Kathañhi nāma te, bhikkhave, bhikkhū attanāpi attānaṁ jīvitā voropessanti, aññamaññampi jīvitā voropessanti, migalaṇḍikampi samaṇakuttakaṁ upasankamitvā evaṁ vakkhanti— ‘sādhu no, āvuso, jīvitā voropehi, idaṁ te pattacīvaraṁ bhavissatī’ti. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">16</span><span class="ms">p_1V_391, msdiv167</span><span class="rule">"Yo pana bhikkhu sañcicca manussaviggahaṁ jīvitā voropeyya satthahārakaṁ vāssa pariyeseyya, ayampi pārājiko hoti asaṁvāso"</span>ti.</p>
+
+<hr>
+<p><span class="parno">17</span><span class="ms">p_1V_392</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">18</span><span class="ms">p_1V_393, msdiv168</span>Tena kho pana samayena aññataro upāsako gilāno hoti. Tassa pajāpati abhirūpā hoti dassanīyā pāsādikā. Chabbaggiyā bhikkhū tassā itthiyā paṭibaddhacittā honti. Atha kho chabbaggiyānaṁ bhikkhūnaṁ etadahosi: "Sace kho so, āvuso, upāsako jīvissati na mayaṁ taṁ itthiṁ labhissāma. Handa mayaṁ, āvuso, tassa upāsakassa maraṇavaṇṇaṁ saṁvaṇṇemā"ti. Atha kho chabbaggiyā bhikkhū yena so upāsako tenupasankamiṁsu; upasankamitvā taṁ upāsakaṁ etadavocuṁ:</p>
+
+<p>"tvaṁ khosi, upāsaka, katakalyāṇo katakusalo katabhīruttāṇo akatapāpo akataluddo akatakibbiso. Kataṁ tayā kalyāṇaṁ, akataṁ tayā pāpaṁ. Kiṁ tuyhiminā pāpakena dujjīvitena. Mataṁ te jīvitā seyyo. Ito tvaṁ kālankato kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissasi. Tattha dibbehi pañcahi kāmaguṇehi samappito samangībhūto paricāressasī"ti.</p>
+
+<hr>
+<p><span class="parno">19</span><span class="ms">p_1V_394, msdiv169</span>Atha kho so upāsako— "Saccaṁ kho ayyā āhaṁsu. Ahañhi katakalyāṇo katakusalo katabhīruttāṇo akatapāpo akataluddo akatakibbiso. Kataṁ mayā kalyāṇaṁ, akataṁ mayā pāpaṁ. Kiṁ mayhiminā pāpakena dujjīvitena. Mataṁ me jīvitā seyyo. Ito ahaṁ kālankato kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmi. Tattha dibbehi pañcahi kāmaguṇehi samappito samangībhūto paricāressāmī"ti,</p>
+
+<p>so asappāyāni ceva bhojanāni bhuñji asappāyāni ca khādanīyāni khādi asappāyāni ca sāyanīyāni sāyi asappāyāni ca pānāni pivi. Tassa asappāyāni ceva bhojanāni bhuñjato asappāyāni ca khādanīyāni khādato asappāyāni ca sāyanīyāni sāyato asappāyāni ca pānāni pivato kharo ābādho uppajji. So teneva ābādhena kālamakāsi.</p>
+
+<p>Tassa pajāpati ujjhāyati khiyyati vipāceti— "alajjino ime samaṇā sakyaputtiyā dussīlā musāvādino. Ime hi nāma dhammacārino samacārino brahmacārino saccavādino sīlavanto kalyāṇadhammā paṭijānissanti. Natthi imesaṁ sāmaññaṁ natthi imesaṁ brahmaññaṁ, naṭṭhaṁ imesaṁ sāmaññaṁ naṭṭhaṁ imesaṁ brahmaññaṁ, kuto imesaṁ sāmaññaṁ kuto imesaṁ brahmaññaṁ, apagatā ime sāmaññā apagatā ime brahmaññā. Ime me sāmikassa maraṇavaṇṇaṁ saṁvaṇṇesuṁ. Imehi me sāmiko mārito"ti.</p>
+
+<p>Aññepi manussā ujjhāyanti khiyyanti vipācenti:  "alajjino ime samaṇā sakyaputtiyā dussīlā musāvādino. Ime hi nāma dhammacārino samacārino brahmacārino saccavādino sīlavanto kalyāṇadhammā paṭijānissanti. Natthi imesaṁ sāmaññaṁ natthi imesaṁ brahmaññaṁ, naṭṭhaṁ imesaṁ sāmaññaṁ naṭṭhaṁ imesaṁ brahmaññaṁ, kuto imesaṁ sāmaññaṁ kuto imesaṁ brahmaññaṁ, apagatā ime sāmaññā apagatā ime brahmaññā. Ime upāsakassa maraṇavaṇṇaṁ saṁvaṇṇesuṁ. Imehi upāsako mārito"ti.</p>
+
+<hr>
+<p><span class="parno">20</span><span class="ms">p_1V_395</span>Assosuṁ kho bhikkhū tesaṁ manussānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma chabbaggiyā bhikkhū upāsakassa maraṇavaṇṇaṁ saṁvaṇṇissantī"ti.</p>
+
+<hr>
+<p><span class="parno">21</span><span class="ms">p_1V_396, msdiv170</span>Atha kho te bhikkhū chabbaggiye bhikkhū anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ … pe …</p>
+
+<p>"Saccaṁ kira tumhe, bhikkhave, upāsakassa maraṇavaṇṇaṁ saṁvaṇṇethā"ti?</p>
+
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā: "Ananucchavikaṁ, moghapurisā, ananulomikaṁ appaṭirūpaṁ assāmaṇakaṁ akappiyaṁ akaraṇīyaṁ. Kathañhi nāma tumhe, moghapurisā, upāsakassa maraṇavaṇṇaṁ saṁvaṇṇissatha. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">22</span><span class="ms">p_1V_397, msdiv171</span><span class="rule">"Yo pana bhikkhu sañcicca manussaviggahaṁ jīvitā voropeyya satthahārakaṁ vāssa pariyeseyya maraṇavaṇṇaṁ vā saṁvaṇṇeyya maraṇāya vā samādapeyya— ‘ambho purisa, kiṁ tuyhiminā pāpakena dujjīvitena, mataṁ te jīvitā seyyo’ti, iti cittamano cittasankappo anekapariyāyena maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājiko hoti asaṁvāso"</span>ti. (<i>3</i>:<b>3</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">23</span><span class="ms">p_1V_398, msdiv172</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<hr>
+<p><span class="parno">24</span><span class="ms">p_1V_399</span><b>Sañciccā</b>'ti jānanto sañjānanto cecca abhivitaritvā vītikkamo.</p>
+
+<hr>
+<p><span class="parno">25</span><span class="ms">p_1V_400</span><b>Manussaviggaho</b> nāma yaṁ mātukucchismiṁ paṭhamaṁ cittaṁ uppannaṁ paṭhamaṁ viññāṇaṁ pātubhūtaṁ, yāva maraṇakālā etthantare eso manussaviggaho nāma.</p>
+
+<hr>
+<p><span class="parno">26</span><span class="ms">p_1V_401</span><b>Jīvitā voropeyyā</b>'ti jīvitindriyaṁ upacchindati uparodheti santatiṁ vikopeti.</p>
+
+<hr>
+<p><span class="parno">27</span><span class="ms">p_1V_402</span><b>Satthahārakaṁ vāssa pariyeseyyā</b>'ti asiṁ vā sattiṁ vā bheṇḍiṁ vā laguḷaṁ vā pāsāṇaṁ vā satthaṁ vā visaṁ vā rajjuṁ vā.</p>
+
+<hr>
+<p><span class="parno">28</span><span class="ms">p_1V_403</span><b>Māraṇavaṇṇaṁ vā saṁvaṇṇeyyā</b>'ti jīvite ādīnavaṁ dasseti, maraṇe vaṇṇaṁ bhaṇati.</p>
+
+<hr>
+<p><span class="parno">29</span><span class="ms">p_1V_404</span><b>Māraṇāya vā samādapeyyā</b>'ti satthaṁ vā āhara, visaṁ vā khāda, rajjuyā vā ubbandhitvā kālaṁ karohīti.</p>
+
+<hr>
+<p><span class="parno">30</span><span class="ms">p_1V_405</span><b>Ambho purisā</b>'ti ālapanādhivacanametaṁ.</p>
+
+<hr>
+<p><span class="parno">31</span><span class="ms">p_1V_406</span><b>Kiṁ tuyhiminā pāpakena dujjīvitenā</b>'ti pāpakaṁ nāma jīvitaṁ aḍḍhānaṁ jīvitaṁ upādāya daliddānaṁ jīvitaṁ pāpakaṁ lāmakaṁ, sadhanānaṁ jīvitaṁ upādāya adhanānaṁ jīvitaṁ pāpakaṁ, devānaṁ jīvitaṁ upādāya manussānaṁ jīvitaṁ pāpakaṁ.</p>
+
+<hr>
+<p><span class="parno">32</span><span class="ms">p_1V_407</span><b>Dujjīvitaṁ</b> nāma hatthacchinnassa pādacchinnassa hatthapādacchinnassa kaṇṇacchinnassa nāsacchinnassa kaṇṇanāsacchinnassa, iminā ca pāpakena iminā ca dujjīvitena mataṁ te jīvitā seyyoti.</p>
+
+<hr>
+<p><span class="parno">33</span><span class="ms">p_1V_408</span><b>Iti cittamano</b>'ti yaṁ cittaṁ taṁ mano, yaṁ mano taṁ cittaṁ.</p>
+
+<hr>
+<p><span class="parno">34</span><span class="ms">p_1V_409</span><b>Cittasankappo</b>'ti maraṇasaññī maraṇacetano maraṇādhippāyo.</p>
+
+<hr>
+<p><span class="parno">35</span><span class="ms">p_1V_410</span><b>Anekapariyāyenā</b>'ti uccāvacehi ākārehi.</p>
+
+<hr>
+<p><span class="parno">36</span><span class="ms">p_1V_411</span><b>Māraṇavaṇṇaṁ vā saṁvaṇṇeyyā</b>'ti jīvite ādīnavaṁ dasseti, maraṇe vaṇṇaṁ bhaṇati— "ito tvaṁ kālankato kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissasi, tattha dibbehi pañcahi kāmaguṇehi samappito samangībhūto paricāressasī"ti.</p>
+
+<hr>
+<p><span class="parno">37</span><span class="ms">p_1V_412</span><b>Māraṇāya vā samādapeyyā</b>'ti satthaṁ vā āhara, visaṁ vā khāda, rajjuyā vā ubbandhitvā kālaṁ karohi, sobbhe vā narake vā papāte vā papatāti.</p>
+
+<hr>
+<p><span class="parno">38</span><span class="ms">p_1V_413</span><b>Ayampī</b>'ti purime upādāya vuccati.</p>
+
+<hr>
+<p><span class="parno">39</span><span class="ms">p_1V_414</span><b>Pārājiko hotī</b>'ti seyyathāpi nāma puthusilā dvidhā bhinnā appaṭisandhikā hoti, evameva bhikkhu sañcicca manussaviggahaṁ jīvitā voropetvā assamaṇo hoti asakyaputtiyo. Tena vuccati— "pārājiko hotī"ti.</p>
+
+<hr>
+<p><span class="parno">40</span><span class="ms">p_1V_415</span><b>Asaṁvāso</b>'ti saṁvāso nāma ekakammaṁ ekuddeso samasikkhatā— eso saṁvāso nāma. So tena saddhiṁ natthi, tena vuccati asaṁvāsoti.</p>
+
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+
+<p><span class="parno">41</span><span class="ms">p_1V_416, msdiv173</span>Sāmaṁ, adhiṭṭhāya, dūtena, dūtaparamparāya, visakkiyena dūtena, gatapaccāgatena dūtena,</p>
+
+<p>araho rahosaññī, raho arahosaññī, araho arahosaññī, raho rahosaññī</p>
+
+<p>kāyena saṁvaṇṇeti, vācāya saṁvaṇṇeti, kāyena vācāya saṁvaṇṇeti, dūtena saṁvaṇṇeti, lekhāya saṁvaṇṇeti,</p>
+
+<p>opātaṁ apassenaṁ, upanikkhipanaṁ, bhesajjaṁ, rūpūpahāro, saddūpahāro, gandhūpahāro, rasūpahāro, phoṭṭhabbūpahāro, dhammūpahāro, ācikkhanā, anusāsanī, sanketakammaṁ, nimittakammanti.</p>
+
+<hr>
+<p><span class="parno">42</span><span class="ms">p_1V_417, msdiv174</span><b>Sāman'</b>'ti sayaṁ hanati kāyena vā kāyapaṭibaddhena vā nissaggiyena vā.</p>
+
+<hr>
+<p><span class="parno">43</span><span class="ms">p_1V_418</span><b>Adhiṭṭhāyā'</b>'ti adhiṭṭhahitvā āṇāpeti— "evaṁ vijjha, evaṁ pāhāra, evaṁ ghātehī"ti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">44</span><span class="ms">p_1V_419</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So taṁ maññamāno taṁ jīvitā voropeti, āpatti ubhinnaṁ pārājikassa.</p>
+
+<hr>
+<p><span class="parno">45</span><span class="ms">p_1V_420</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So taṁ maññamāno aññaṁ jīvitā voropeti, mūlaṭṭhassa anāpatti. Vadhakassa āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">46</span><span class="ms">p_1V_421</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So aññaṁ maññamāno taṁ jīvitā voropeti, āpatti ubhinnaṁ pārājikassa.</p>
+
+<hr>
+<p><span class="parno">47</span><span class="ms">p_1V_422</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So aññaṁ maññamāno aññaṁ jīvitā voropeti; mūlaṭṭhassa anāpatti, vadhakassa āpatti pārājikassa.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">48</span><span class="ms">p_1V_423</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmassa pāvada— ‘itthannāmo itthannāmassa pāvadatu— itthannāmo itthannāmaṁ jīvitā voropetū’"ti, āpatti dukkaṭassa. So itarassa āroceti, āpatti dukkaṭassa. Vadhako paṭiggaṇhāti, mūlaṭṭhassa āpatti thullaccayassa. So taṁ jīvitā voropeti, āpatti sabbesaṁ pārājikassa.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">49</span><span class="ms">p_1V_424</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmassa pāvada— ‘itthannāmo itthannāmassa pāvadatu— itthannāmo itthannāmaṁ jīvitā voropetū’"ti, āpatti dukkaṭassa. So aññaṁ āṇāpeti, āpatti dukkaṭassa. Vadhako paṭiggaṇhāti, āpatti dukkaṭassa. So taṁ jīvitā voropeti, mūlaṭṭhassa anāpatti; āṇāpakassa ca vadhakassa ca āpatti pārājikassa.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">50</span><span class="ms">p_1V_425</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So gantvā puna paccāgacchati— "nāhaṁ sakkomi taṁ jīvitā voropetun"ti. So puna āṇāpeti— "yadā sakkosi tadā taṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So taṁ jīvitā voropeti, āpatti ubhinnaṁ pārājikassa.</p>
+
+<hr>
+<p><span class="parno">51</span><span class="ms">p_1V_426</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So āṇāpetvā vippaṭisārī na sāveti— "mā ghātehī"ti. So taṁ jīvitā voropeti, āpatti ubhinnaṁ pārājikassa.</p>
+
+<hr>
+<p><span class="parno">52</span><span class="ms">p_1V_427</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So āṇāpetvā vippaṭisārī sāveti— "mā ghātehī"ti. So— "āṇatto ahaṁ tayā"ti taṁ jīvitā voropeti, mūlaṭṭhassa anāpatti. Vadhakassa āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">53</span><span class="ms">p_1V_428</span>Bhikkhu bhikkhuṁ āṇāpeti— "itthannāmaṁ jīvitā voropehī"ti, āpatti dukkaṭassa. So āṇāpetvā vippaṭisārī sāveti— "mā ghātehī"ti. So sādhūti oramati, ubhinnaṁ anāpatti.</p>
+
+<hr>
+<p><span class="parno">54</span><span class="ms">p_1V_429, msdiv175</span>Araho rahosaññī ullapati— "aho itthannāmo hato assā"ti, āpatti dukkaṭassa. Raho arahosaññī ullapati— "aho itthannāmo hato assā"ti, āpatti dukkaṭassa. Araho arahosaññī ullapati— "aho itthannāmo hato assā"ti, āpatti dukkaṭassa. Raho rahosaññī ullapati— "aho itthannāmo hato assā"ti, āpatti dukkaṭassa.</p>
+
+<hr>
+<p><span class="parno">55</span><span class="ms">p_1V_430</span><b>Kāyena saṁvaṇṇeti</b> nāma kāyena vikāraṁ karoti— "yo evaṁ marati so dhanaṁ vā labhati yasaṁ vā labhati saggaṁ vā gacchatī"ti, āpatti dukkaṭassa. Tāya saṁvaṇṇanāya marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">56</span><span class="ms">p_1V_431</span><b>Vācāya saṁvaṇṇeti</b> nāma vācāya bhaṇati— "yo evaṁ marati so dhanaṁ vā labhati yasaṁ vā labhati saggaṁ vā gacchatī"ti, āpatti dukkaṭassa. Tāya saṁvaṇṇanāya marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">57</span><span class="ms">p_1V_432</span><b>Kāyena vācāya saṁvaṇṇeti</b> nāma kāyena ca vikāraṁ karoti, vācāya ca bhaṇati— "yo evaṁ marati so dhanaṁ vā labhati yasaṁ vā labhati saggaṁ vā gacchatī"ti, āpatti dukkaṭassa. Tāya saṁvaṇṇanāya marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">58</span><span class="ms">p_1V_433</span><b>Dūtena saṁvaṇṇeti</b> nāma dūtassa sāsanaṁ āroceti— "yo evaṁ marati so dhanaṁ vā labhati yasaṁ vā labhati saggaṁ vā gacchatī"ti, āpatti dukkaṭassa. Dūtassa sāsanaṁ sutvā marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">59</span><span class="ms">p_1V_434, msdiv176</span><b>Lekhāya saṁvaṇṇeti</b> nāma lekhaṁ chindati— "yo evaṁ marati so dhanaṁ vā labhati yasaṁ vā labhati saggaṁ vā gacchatī"ti, akkharakkharāya āpatti dukkaṭassa. Lekhaṁ passitvā marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">60</span><span class="ms">p_1V_435</span><b>Opātaṁ</b> nāma manussaṁ uddissa opātaṁ khanati— "papatitvā marissatī"ti, āpatti dukkaṭassa. Papatite dukkhā vedanā uppajjati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<p>Anodissa opātaṁ khanati— "yo koci papatitvā marissatī"ti, āpatti dukkaṭassa. Manusso tasmiṁ papatati, āpatti dukkaṭassa. Papatite dukkhā vedanā uppajjati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<p>Yakkho vā peto vā tiracchāna&shy;gatamanussa&shy;viggaho vā tasmiṁ papatati, āpatti dukkaṭassa. Papatite dukkhā vedanā uppajjati, āpatti dukkaṭassa. Mārati, āpatti thullaccayassa. Tiracchānagato tasmiṁ papatati, āpatti dukkaṭassa. Papatite dukkhā vedanā uppajjati, āpatti dukkaṭassa. Mārati, āpatti pācittiyassa.</p>
+
+<hr>
+<p><span class="parno">61</span><span class="ms">p_1V_436, msdiv177</span><b>Apassenaṁ</b> nāma apassene satthaṁ vā ṭhapeti visena vā makkheti dubbalaṁ vā karoti sobbhe vā narake vā papāte vā ṭhapeti— "papatitvā marissatī"ti, āpatti dukkaṭassa. Satthena vā visena vā papatitena vā dukkhā vedanā uppajjati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">62</span><span class="ms">p_1V_437</span><b>Upanikkhipanaṁ</b> nāma asiṁ vā sattiṁ vā bheṇḍiṁ vā laguḷaṁ vā pāsāṇaṁ vā satthaṁ vā visaṁ vā rajjuṁ vā upanikkhipati— "iminā marissatī"ti, āpatti dukkaṭassa. "Tena marissāmī"ti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">63</span><span class="ms">p_1V_438</span><b>Bhesajjaṁ</b> nāma sappiṁ vā navanītaṁ vā telaṁ vā madhuṁ vā phāṇitaṁ vā deti— "imaṁ sāyitvā marissatī"ti, āpatti dukkaṭassa. Taṁ sāyite dukkhā vedanā uppajjati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">64</span><span class="ms">p_1V_439, msdiv178</span><b>Rūpūpahāro</b> nāma amanāpikaṁ rūpaṁ upasaṁharati bhayānakaṁ bheravaṁ— "imaṁ passitvā uttasitvā marissatī"ti, āpatti dukkaṭassa. Taṁ passitvā uttasati, āpatti thullaccayassa. Mārati, āpatti pārājikassa. Manāpikaṁ rūpaṁ upasaṁharati— "imaṁ passitvā alābhakena sussitvā marissatī"ti, āpatti dukkaṭassa. Taṁ passitvā alābhakena sussati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">65</span><span class="ms">p_1V_440</span><b>Saddūpahāro</b> nāma amanāpikaṁ saddaṁ upasaṁharati bhayānakaṁ bheravaṁ— "imaṁ sutvā uttasitvā marissatī"ti, āpatti dukkaṭassa. Taṁ sutvā uttasati, āpatti thullaccayassa. Mārati, āpatti pārājikassa. Manāpikaṁ saddaṁ upasaṁharati pemanīyaṁ hadayangamaṁ— "imaṁ sutvā alābhakena sussitvā marissatī"ti, āpatti dukkaṭassa. Taṁ sutvā alābhakena sussati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">66</span><span class="ms">p_1V_441</span><b>Gandhūpahāro</b> nāma amanāpikaṁ gandhaṁ upasaṁharati jegucchaṁ pāṭikulyaṁ— "imaṁ ghāyitvā jegucchatā pāṭikulyatā marissatī"ti, āpatti dukkaṭassa. Taṁ ghāyite jegucchatā pāṭikulyatā dukkhā vedanā uppajjati, āpatti thullaccayassa. Mārati, āpatti pārājikassa. Manāpikaṁ gandhaṁ upasaṁharati— "imaṁ ghāyitvā alābhakena sussitvā marissatī"ti, āpatti dukkaṭassa. Taṁ ghāyitvā alābhakena sussati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">67</span><span class="ms">p_1V_442</span><b>Rasūpahāro</b> nāma amanāpikaṁ rasaṁ upasaṁharati jegucchaṁ pāṭikulyaṁ— "imaṁ sāyitvā jegucchatā pāṭikulyatā marissatī"ti, āpatti dukkaṭassa. Taṁ sāyite jegucchatā pāṭikulyatā dukkhā vedanā uppajjati, āpatti thullaccayassa. Mārati, āpatti pārājikassa. Manāpikaṁ rasaṁ upasaṁharati— "imaṁ sāyitvā alābhakena sussitvā marissatī"ti, āpatti dukkaṭassa. Taṁ sāyitvā alābhakena sussati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">68</span><span class="ms">p_1V_443</span><b>Phoṭṭhabbūpahāro</b> nāma amanāpikaṁ phoṭṭhabbaṁ upasaṁharati dukkhasamphassaṁ kharasamphassaṁ— "iminā phuṭṭho marissatī"ti, āpatti dukkaṭassa. Tena phuṭṭhassa dukkhā vedanā uppajjati, āpatti thullaccayassa. Mārati, āpatti pārājikassa. Manāpikaṁ phoṭṭhabbaṁ upasaṁharati sukhasamphassaṁ mudusamphassaṁ— "iminā phuṭṭho alābhakena sussitvā marissatī"ti, āpatti dukkaṭassa. Tena phuṭṭho alābhakena sussati, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">69</span><span class="ms">p_1V_444</span><b>Dhammūpahāro</b> nāma nerayikassa nirayakathaṁ katheti— "imaṁ sutvā uttasitvā marissatī"ti, āpatti dukkaṭassa. Taṁ sutvā uttasati, āpatti thullaccayassa. Mārati, āpatti pārājikassa. Kalyāṇakammassa saggakathaṁ katheti— "imaṁ sutvā adhimutto marissatī"ti, āpatti dukkaṭassa. Taṁ sutvā adhimutto marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">70</span><span class="ms">p_1V_445, msdiv179</span><b>Ācikkhanā</b> nāma puṭṭho bhaṇati— "evaṁ marassu. Yo evaṁ marati so dhanaṁ vā labhati yasaṁ vā labhati saggaṁ vā gacchatī"ti, āpatti dukkaṭassa. Tāya ācikkhanāya marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">71</span><span class="ms">p_1V_446</span><b>Anusāsanī</b> nāma apuṭṭho bhaṇati— "evaṁ marassu. Yo evaṁ marati so dhanaṁ vā labhati yasaṁ vā labhati saggaṁ vā gacchatī"ti, āpatti dukkaṭassa. Tāya anusāsaniyā marissāmīti dukkhaṁ vedanaṁ uppādeti, āpatti thullaccayassa. Mārati, āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">72</span><span class="ms">p_1V_447</span><b>Sanketakammaṁ</b> nāma sanketaṁ karoti purebhattaṁ vā pacchābhattaṁ vā rattiṁ vā divā vā— "tena sanketena taṁ jīvitā voropehī"ti, āpatti dukkaṭassa. Tena sanketena taṁ jīvitā voropeti, āpatti ubhinnaṁ pārājikassa. Taṁ sanketaṁ pure vā pacchā vā taṁ jīvitā voropeti, mūlaṭṭhassa anāpatti, vadhakassa āpatti pārājikassa.</p>
+
+<hr>
+<p><span class="parno">73</span><span class="ms">p_1V_448</span><b>Nimittakammaṁ</b> nāma nimittaṁ karoti— "akkhiṁ vā nikhaṇissāmi bhamukaṁ vā ukkhipissāmi sīsaṁ vā ukkhipissāmi, tena nimittena taṁ jīvitā voropehī"ti, āpatti dukkaṭassa. Tena nimittena taṁ jīvitā voropeti, āpatti ubhinnaṁ pārājikassa. Taṁ nimittaṁ pure vā pacchā vā taṁ jīvitā voropeti, mūlaṭṭhassa anāpatti, vadhakassa āpatti pārājikassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">74</span><span class="ms">p_1V_449</span>Anāpatti— asañcicca ajānantassa namaraṇādhippāyassa ummattakassa ādikammikassāti.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">75</span><span class="ms">p_1V_450</span>Manussaviggahapārājikamhi paṭhamabhāṇavāro niṭṭhito.</p>
+
+<h3>3.1 Vinītavatthuuddānagāthā</h3>
+<h4>&nbsp;</h4>
+
+<div class="verse">
+<p><span class="parno">76</span><span class="ms">p_1V_451</span>Saṁvaṇṇanā nisīdanto,
+<br>musalodukkhalena ca;
+<br>Vuḍḍhapabbajitābhisanno,
+<br>aggavīmaṁsanāvisaṁ.</p></div>
+
+<hr>
+<div class="verse">
+<p><span class="parno">77</span><span class="ms">p_1V_452</span>Tayo ca vatthukammehi,
+<br>iṭṭhakāhipare tayo;
+<br>Vāsī gopānasī ceva,
+<br>aṭṭakotaraṇaṁ pati.</p></div>
+
+<hr>
+<div class="verse">
+<p><span class="parno">78</span><span class="ms">p_1V_453</span>Sedaṁ natthuñca sambāho,
+<br>nhāpanabbhañjanena ca;
+<br>Uṭṭhāpento nipātento,
+<br>annapānena māraṇaṁ.</p></div>
+
+<hr>
+<div class="verse">
+<p><span class="parno">79</span><span class="ms">p_1V_454</span>Jāragabbho sapattī ca,
+<br>mātā puttaṁ ubho vadhi;
+<br>Ubho na miyyare maddā,
+<br>tāpaṁ vañjhā vijāyinī.</p></div>
+
+<hr>
+	 <div class="verse">
+<p><span class="parno">80</span><span class="ms">p_1V_455</span>Patodaṁ niggahe yakkho,
+<br>vāḷayakkhañca pāhiṇi;
+<br>Taṁ maññamāno pahari,
+<br>saggañca nirayaṁ bhaṇe.</p></div><hr>
+	 <div class="verse">
+<p><span class="parno">81</span><span class="ms">p_1V_456</span>Āḷaviyā tayo rukkhā,
+<br>dāyehi apare tayo;
+<br>Mā kilamesi na tuyhaṁ,
+<br>takkaṁ sovīrakena cāti.</p></div>
+
+<h3>3.2 Vinītavatthu</h3><hr>
+<p><span class="parno">82</span><span class="ms">p_1V_457, msdiv180</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Tassa bhikkhū kāruññena maraṇavaṇṇaṁ saṁvaṇṇesuṁ. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi "bhagavatā sikkhāpadaṁ paññattaṁ, kacci nu kho mayaṁ pārājikaṁ āpattiṁ āpannā"ti? Bhagavato etamatthaṁ ārocesuṁ. "Āpattiṁ tumhe, bhikkhave, āpannā pārājikan"ti. (1)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">83</span><span class="ms">p_1V_458</span>Tena kho pana samayena aññataro piṇḍacāriko bhikkhu pīṭhake pilotikāya paṭicchannaṁ dārakaṁ nisīdanto ottharitvā māresi. Tassa kukkuccaṁ ahosi "bhagavatā sikkhāpadaṁ paññattaṁ, kacci nu kho ahaṁ pārājikaṁ āpattiṁ āpanno"ti? Bhagavato etamatthaṁ ārocesi. "Anāpatti, bhikkhu, pārājikassa. Na ca, bhikkhave, appaṭivekkhitvā āsane nisīditabbaṁ; yo nisīdeyya, āpatti dukkaṭassā"ti. (2)</p>
+
+<hr>
+<p><span class="parno">84</span><span class="ms">p_1V_459</span>Tena kho pana samayena aññataro bhikkhu bhattagge antaraghare āsanaṁ paññapento musale ussite ekaṁ musalaṁ aggahesi. Dutiyo musalo paripatitvā aññatarassa dārakassa matthake avatthāsi. So kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "kiṁcitto tvaṁ, bhikkhū"ti?</p>
+
+<hr>
+<p>"Asañcicca ahaṁ, bhagavā"ti.</p>
+
+<p>"Anāpatti, bhikkhu, asañciccā"ti. (3)</p>
+
+<p><span class="parno">85</span><span class="ms">p_1V_460</span>Tena kho pana samayena aññataro bhikkhu bhattagge antaraghare āsanaṁ paññapento udukkhalabhaṇḍikaṁ akkamitvā pavaṭṭesi. Aññataraṁ dārakaṁ ottharitvā māresi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, asañciccā"ti. (4)</p>
+
+<p><span class="parno">86</span><span class="ms">p_1V_461</span>Tena kho pana samayena pitāputtā bhikkhūsu pabbajitā honti. Kāle ārocite putto pitaraṁ etadavoca: "gaccha, bhante, sangho taṁ patimānetī"ti piṭṭhiyaṁ gahetvā paṇāmesi. So papatitvā kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "kiṁcitto tvaṁ, bhikkhū"ti?</p>
+
+<p>"Nāhaṁ, bhagavā, maraṇādhippāyo"ti.</p>
+
+<p>"Anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (5)</p>
+
+<hr>
+<p><span class="parno">87</span><span class="ms">p_1V_462</span>Tena kho pana samayena pitāputtā bhikkhūsu pabbajitā honti. Kāle ārocite putto pitaraṁ etadavoca: "gaccha, bhante, sangho taṁ patimānetī"ti maraṇādhippāyo piṭṭhiyaṁ gahetvā paṇāmesi. So papatitvā kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (6)</p>
+
+<hr>
+<p><span class="parno">88</span><span class="ms">p_1V_463</span>Tena kho pana samayena pitāputtā bhikkhūsu pabbajitā honti. Kāle ārocite putto pitaraṁ etadavoca: "gaccha, bhante, sangho taṁ patimānetī"ti maraṇādhippāyo piṭṭhiyaṁ gahetvā paṇāmesi. So papatitvā na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (7)</p>
+
+<hr>
+<p><span class="parno">89</span><span class="ms">p_1V_464, msdiv181</span>Tena kho pana samayena aññatarassa bhikkhuno bhuñjantassa maṁsaṁ kaṇṭhe vilaggaṁ hoti. Aññataro bhikkhu tassa bhikkhuno gīvāyaṁ pahāraṁ adāsi. Salohitaṁ maṁsaṁ pati. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (8)</p>
+
+<hr>
+<p><span class="parno">90</span><span class="ms">p_1V_465</span>Tena kho pana samayena aññatarassa bhikkhuno bhuñjantassa maṁsaṁ kaṇṭhe vilaggaṁ hoti. Aññataro bhikkhu maraṇādhippāyo tassa bhikkhuno gīvāyaṁ pahāraṁ adāsi. Salohitaṁ maṁsaṁ pati. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (9)</p>
+
+<hr>
+<p><span class="parno">91</span><span class="ms">p_1V_466</span>Tena kho pana samayena aññatarassa bhikkhuno bhuñjantassa maṁsaṁ kaṇṭhe vilaggaṁ hoti. Aññataro bhikkhu maraṇādhippāyo tassa bhikkhuno gīvāyaṁ pahāraṁ adāsi. Salohitaṁ maṁsaṁ pati. So bhikkhu na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (10)</p>
+
+<hr>
+<p><span class="parno">92</span><span class="ms">p_1V_467</span>Tena kho pana samayena aññataro piṇḍacāriko bhikkhu visagataṁ piṇḍapātaṁ labhitvā paṭikkamanaṁ haritvā bhikkhūnaṁ aggakārikaṁ adāsi. Te bhikkhū kālamakaṁsu. Tassa kukkuccaṁ ahosi … pe … "kiṁcitto tvaṁ, bhikkhū"ti?</p>
+
+<p>"Nāhaṁ, bhagavā, jānāmī"ti.</p>
+
+<p>"Anāpatti, bhikkhu, ajānantassā"ti. (11)</p>
+
+<hr>
+<p><span class="parno">93</span><span class="ms">p_1V_468</span>Tena kho pana samayena aññataro bhikkhu vīmaṁsādhippāyo aññatarassa bhikkhuno visaṁ adāsi. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "kiṁcitto tvaṁ, bhikkhū"ti?</p>
+
+<p>"Vīmaṁsādhippāyo ahaṁ, bhagavā"ti.</p>
+
+<p>"Anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (12)</p>
+
+<hr>
+<p><span class="parno">94</span><span class="ms">p_1V_469, msdiv182</span>Tena kho pana samayena āḷavakā bhikkhū vihāravatthuṁ karonti. Aññataro bhikkhu heṭṭhā hutvā silaṁ uccāresi. Uparimena bhikkhunā duggahitā silā heṭṭhimassa bhikkhuno matthake avatthāsi. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, asañciccā"ti. (13)</p>
+
+<hr>
+<p><span class="parno">95</span><span class="ms">p_1V_470</span>Tena kho pana samayena āḷavakā bhikkhū vihāravatthuṁ karonti. Aññataro bhikkhu heṭṭhā hutvā silaṁ uccāresi. Uparimo bhikkhu maraṇādhippāyo heṭṭhimassa bhikkhuno matthake silaṁ muñci. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (14 –⁠15)</p>
+
+<hr>
+<p><span class="parno">96</span><span class="ms">p_1V_471</span>Tena kho pana samayena āḷavakā bhikkhū vihārassa kuṭṭaṁ uṭṭhāpenti. Aññataro bhikkhu heṭṭhā hutvā iṭṭhakaṁ uccāresi. Uparimena bhikkhunā duggahitā iṭṭhakā heṭṭhimassa bhikkhuno matthake avatthāsi. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, asañciccā"ti. (16)</p>
+
+<hr>
+<p><span class="parno">97</span><span class="ms">p_1V_472</span>Tena kho pana samayena āḷavakā bhikkhū vihārassa kuṭṭaṁ uṭṭhāpenti. Aññataro bhikkhu heṭṭhā hutvā iṭṭhakaṁ uccāresi. Uparimo bhikkhu maraṇādhippāyo heṭṭhimassa bhikkhuno matthake iṭṭhakaṁ muñci. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (17 –⁠18)</p>
+
+<hr>
+<p><span class="parno">98</span><span class="ms">p_1V_473, msdiv183</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karonti. Aññataro bhikkhu heṭṭhā hutvā vāsiṁ uccāresi. Uparimena bhikkhunā duggahitā vāsī heṭṭhimassa bhikkhuno matthake avatthāsi. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, asañciccā"ti. (19)</p>
+
+<hr>
+<p><span class="parno">99</span><span class="ms">p_1V_474</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karonti. Aññataro bhikkhu heṭṭhā hutvā vāsiṁ uccāresi. Uparimo bhikkhu maraṇādhippāyo heṭṭhimassa bhikkhuno matthake vāsiṁ muñci. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (20 –⁠21)</p>
+
+<hr>
+<p><span class="parno">100</span><span class="ms">p_1V_475</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karonti. Aññataro bhikkhu heṭṭhā hutvā gopānasiṁ uccāresi. Uparimena bhikkhunā duggahitā gopānasī heṭṭhimassa bhikkhuno matthake avatthāsi. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, asañciccā"ti. (22)</p>
+
+<hr>
+<p><span class="parno">101</span><span class="ms">p_1V_476</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karonti. Aññataro bhikkhu heṭṭhā hutvā gopānasiṁ uccāresi. Uparimo bhikkhu maraṇādhippāyo heṭṭhimassa bhikkhuno matthake gopānasiṁ muñci. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (23 –⁠24)</p>
+
+<hr>
+<p><span class="parno">102</span><span class="ms">p_1V_477</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karontā aṭṭakaṁ bandhanti. Aññataro bhikkhu aññataraṁ bhikkhuṁ etadavoca: "āvuso, atraṭṭhito bandhāhī"ti. So tatraṭṭhito bandhanto paripatitvā kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "kiṁcitto tvaṁ, bhikkhū"ti?</p>
+
+<p>"Nāhaṁ, bhagavā, maraṇādhippāyo"ti.</p>
+
+<p>"Anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (25)</p>
+
+<hr>
+<p><span class="parno">103</span><span class="ms">p_1V_478</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karontā aṭṭakaṁ bandhanti. Aññataro bhikkhu maraṇādhippāyo aññataraṁ bhikkhuṁ etadavoca: "āvuso, atraṭṭhito bandhāhī"ti. So tatraṭṭhito bandhanto paripatitvā kālamakāsi … pe … paripatitvā na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (26 –⁠27)</p>
+
+<hr>
+<p><span class="parno">104</span><span class="ms">p_1V_479</span>Tena kho pana samayena aññataro bhikkhu vihāraṁ chādetvā otarati. Aññataro bhikkhu taṁ bhikkhuṁ etadavoca: "āvuso, ito otarāhī"ti. So tena otaranto paripatitvā kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (28)</p>
+
+<hr>
+<p><span class="parno">105</span><span class="ms">p_1V_480</span>Tena kho pana samayena aññataro bhikkhu vihāraṁ chādetvā otarati. Aññataro bhikkhu maraṇādhippāyo taṁ bhikkhuṁ etadavoca: "āvuso, ito otarāhī"ti. So tena otaranto paripatitvā kālamakāsi … pe … paripatitvā na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (29 –⁠30)</p>
+
+<hr>
+<p><span class="parno">106</span><span class="ms">p_1V_481</span>Tena kho pana samayena aññataro bhikkhu anabhiratiyā pīḷito gijjhakūṭaṁ pabbataṁ abhiruhitvā papāte papatanto aññataraṁ vilīvakāraṁ ottharitvā māresi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa. Na ca, bhikkhave, attānaṁ pātetabbaṁ. Yo pāteyya, āpatti dukkaṭassā"ti. (31)</p>
+
+<hr>
+<p><span class="parno">107</span><span class="ms">p_1V_482</span>Tena kho pana samayena chabbaggiyā bhikkhū gijjhakūṭaṁ pabbataṁ abhiruhitvā davāya silaṁ pavijjhiṁsu. Sā aññataraṁ gopālakaṁ ottharitvā māresi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa. Na ca, bhikkhave, davāya silā pavijjhitabbā. Yo pavijjheyya, āpatti dukkaṭassā"ti. (32)</p>
+
+<hr>
+<p><span class="parno">108</span><span class="ms">p_1V_483, msdiv184</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū sedesuṁ. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (33)</p>
+
+<hr>
+<p><span class="parno">109</span><span class="ms">p_1V_484</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū maraṇādhippāyā sedesuṁ. So bhikkhu kālamakāsi. … pe … So bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (34 –⁠35)</p>
+
+<hr>
+<p><span class="parno">110</span><span class="ms">p_1V_485</span>Tena kho pana samayena aññatarassa bhikkhuno sīsābhitāpo hoti. Tassa bhikkhū natthuṁ adaṁsu. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (36)</p>
+
+<hr>
+<p><span class="parno">111</span><span class="ms">p_1V_486</span>Tena kho pana samayena aññatarassa bhikkhuno sīsābhitāpo hoti. Tassa bhikkhū maraṇādhippāyā natthuṁ adaṁsu. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (37 –⁠38)</p>
+
+<hr>
+<p><span class="parno">112</span><span class="ms">p_1V_487</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū sambāhesuṁ. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (39)</p>
+
+<p><span class="parno">113</span><span class="ms">p_1V_488</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū maraṇādhippāyā sambāhesuṁ. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (40 –⁠41)</p>
+
+<hr>
+<p><span class="parno">114</span><span class="ms">p_1V_489</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū nhāpesuṁ. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (42)</p>
+
+<p><span class="parno">115</span><span class="ms">p_1V_490</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū maraṇādhippāyā nhāpesuṁ. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (43 –⁠44)</p>
+
+<hr>
+<p><span class="parno">116</span><span class="ms">p_1V_491</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū telena abbhañjiṁsu. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (45)</p>
+
+<p><span class="parno">117</span><span class="ms">p_1V_492</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū maraṇādhippāyā telena abbhañjiṁsu. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (46 –⁠47)</p>
+
+<hr>
+<p><span class="parno">118</span><span class="ms">p_1V_493, msdiv185</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū uṭṭhāpesuṁ. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (48)</p>
+
+<p><span class="parno">119</span><span class="ms">p_1V_494</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū maraṇādhippāyā uṭṭhāpesuṁ. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (49 –⁠50)</p>
+
+<hr>
+<p><span class="parno">120</span><span class="ms">p_1V_495</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū nipātesuṁ. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (51)</p>
+
+<p><span class="parno">121</span><span class="ms">p_1V_496</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Taṁ bhikkhū maraṇādhippāyā nipātesuṁ. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (52 –⁠53)</p>
+
+<hr>
+<p><span class="parno">122</span><span class="ms">p_1V_497</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Tassa bhikkhū annaṁ adaṁsu. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (54)</p>
+
+<p><span class="parno">123</span><span class="ms">p_1V_498</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Tassa bhikkhū maraṇādhippāyā annaṁ adaṁsu. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (55 –⁠56)</p>
+
+<p><span class="parno">124</span><span class="ms">p_1V_499</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Tassa bhikkhu pānaṁ adaṁsu. So bhikkhu kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (57)</p>
+
+<p><span class="parno">125</span><span class="ms">p_1V_500</span>Tena kho pana samayena aññataro bhikkhu gilāno hoti. Tassa bhikkhū maraṇādhippāyā pānaṁ adaṁsu. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (58 –⁠59)</p>
+
+<hr>
+<p><span class="parno">126</span><span class="ms">p_1V_501, msdiv186</span>Tena kho pana samayena aññatarā itthī pavutthapatikā jārena gabbhinī hoti. Sā kulūpakaṁ bhikkhuṁ etadavoca: "inghāyya, gabbhapātanaṁ jānāhī"ti. "Suṭṭhu, bhaginī"ti tassā gabbhapātanaṁ adāsi. Dārako kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (60)</p>
+
+<p><span class="parno">127</span><span class="ms">p_1V_502</span>Tena kho pana samayena aññatarassa purisassa dve pajāpatiyo honti— ekā vañjhā, ekā vijāyinī. Vañjhā itthī kulūpakaṁ bhikkhuṁ etadavoca: "Sace sā, bhante, vijāyissati sabbassa kuṭumbassa issarā bhavissati. Inghāyya, tassā gabbhapātanaṁ jānāhī"ti. "Suṭṭhu, bhaginī"ti tassā gabbhapātanaṁ adāsi. Dārako kālamakāsi, mātā na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (61)</p>
+
+<hr>
+<p><span class="parno">128</span><span class="ms">p_1V_503</span>Tena kho pana samayena aññatarassa purisassa dve pajāpatiyo honti— ekā vañjhā, ekā vijāyinī. Vañjhā itthī kulūpakaṁ bhikkhuṁ etadavoca: "Sace sā, bhante, vijāyissati sabbassa kuṭumbassa issarā bhavissati. Inghāyya, tassā gabbhapātanaṁ jānāhī"ti. "Suṭṭhu, bhaginī"ti tassā gabbhapātanaṁ adāsi. Mātā kālamakāsi, dārako na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (62)</p>
+
+<hr>
+<p><span class="parno">129</span><span class="ms">p_1V_504</span>Tena kho pana samayena aññatarassa purisassa dve pajāpatiyo honti— ekā vañjhā, ekā vijāyinī. Vañjhā itthī kulūpakaṁ bhikkhuṁ etadavoca: "Sace sā, bhante, vijāyissati sabbassa kuṭumbassa issarā bhavissati. Inghāyya, tassā gabbhapātanaṁ jānāhī"ti. "Suṭṭhu, bhaginī"ti tassā gabbhapātanaṁ adāsi. Ubho kālamakaṁsu … pe … ubho na kālamakaṁsu. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (63 –⁠64)</p>
+
+<hr>
+<p><span class="parno">130</span><span class="ms">p_1V_505, msdiv187</span>Tena kho pana samayena aññatarā gabbhinī itthī kulūpakaṁ bhikkhuṁ etadavoca: "inghāyya, gabbhapātanaṁ jānāhī"ti. "Tena hi, bhagini, maddassū"ti. Sā maddāpetvā gabbhaṁ pātesi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (65)</p>
+
+<hr>
+<p><span class="parno">131</span><span class="ms">p_1V_506</span>Tena kho pana samayena aññatarā gabbhinī itthī kulūpakaṁ bhikkhuṁ etadavoca: "inghāyya, gabbhapātanaṁ jānāhī"ti. "Tena hi, bhagini, tāpehī"ti. Sā tāpetvā gabbhaṁ pātesi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (66)</p>
+
+<hr>
+<p><span class="parno">132</span><span class="ms">p_1V_507</span>Tena kho pana samayena aññatarā vañjhā itthī kulūpakaṁ bhikkhuṁ etadavoca: "inghāyya, bhesajjaṁ jānāhi yenāhaṁ vijāyeyyan"ti. "Suṭṭhu, bhaginī"ti tassā bhesajjaṁ adāsi. Sā kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti dukkaṭassā"ti. (67)</p>
+
+<hr>
+<p><span class="parno">133</span><span class="ms">p_1V_508</span>Tena kho pana samayena aññatarā vijāyinī itthī kulūpakaṁ bhikkhuṁ etadavoca: "inghāyya, bhesajjaṁ jānāhi yenāhaṁ na vijāyeyyan"ti. "Suṭṭhu, bhaginī"ti tassā bhesajjaṁ adāsi. Sā kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti dukkaṭassā"ti. (68)</p>
+
+<hr>
+<p><span class="parno">134</span><span class="ms">p_1V_509</span>Tena kho pana samayena chabbaggiyā bhikkhū sattarasavaggiyaṁ bhikkhuṁ angulipatodakena hāsesuṁ. So bhikkhu uttanto anassāsako kālamakāsi. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassā"ti. (69)</p>
+
+<hr>
+<p><span class="parno">135</span><span class="ms">p_1V_510</span>Tena kho pana samayena sattarasavaggiyā bhikkhū chabbaggiyaṁ bhikkhuṁ kammaṁ karissāmāti ottharitvā māresuṁ. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassā"ti. (70)</p>
+
+<hr>
+<p><span class="parno">136</span><span class="ms">p_1V_511</span>Tena kho pana samayena aññataro bhūtavejjako bhikkhu yakkhaṁ jīvitā voropesi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (71)</p>
+
+<hr>
+<p><span class="parno">137</span><span class="ms">p_1V_512</span>Tena kho pana samayena aññataro bhikkhu aññataraṁ bhikkhuṁ vāḷayakkhavihāraṁ pāhesi. Taṁ yakkhā jīvitā voropesuṁ. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (72)</p>
+
+<hr>
+<p><span class="parno">138</span><span class="ms">p_1V_513</span>Tena kho pana samayena aññataro bhikkhu maraṇādhippāyo aññataraṁ bhikkhuṁ vāḷayakkhavihāraṁ pāhesi. Taṁ yakkhā jīvitā voropesuṁ … pe … taṁ yakkhā jīvitā na voropesuṁ. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (73 –⁠74)</p>
+
+<hr>
+<p><span class="parno">139</span><span class="ms">p_1V_514</span>Tena kho pana samayena aññataro bhikkhu aññataraṁ bhikkhuṁ vāḷakantāraṁ pāhesi. Taṁ vāḷā jīvitā voropesuṁ. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (75)</p>
+
+<p><span class="parno">140</span><span class="ms">p_1V_515</span>Tena kho pana samayena aññataro bhikkhu maraṇādhippāyo aññataraṁ bhikkhuṁ vāḷakantāraṁ pāhesi. Taṁ vāḷā jīvitā voropesuṁ … pe … taṁ vāḷā jīvitā na voropesuṁ. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (76 –⁠77)</p>
+
+<p><span class="parno">141</span><span class="ms">p_1V_516</span>Tena kho pana samayena aññataro bhikkhu aññataraṁ bhikkhuṁ corakantāraṁ pāhesi. Taṁ corā jīvitā voropesuṁ. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (78)</p>
+
+<p><span class="parno">142</span><span class="ms">p_1V_517</span>Tena kho pana samayena aññataro bhikkhu maraṇādhippāyo aññataraṁ bhikkhuṁ corakantāraṁ pāhesi. Taṁ corā jīvitā voropesuṁ … pe … taṁ corā jīvitā na voropesuṁ. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (79 –⁠80)</p>
+
+<hr>
+<p><span class="parno">143</span><span class="ms">p_1V_518, msdiv188</span>Tena kho pana samayena aññataro bhikkhu taṁ maññamāno taṁ jīvitā voropesi … pe … taṁ maññamāno aññaṁ jīvitā voropesi … pe … aññaṁ maññamāno taṁ jīvitā voropesi … pe … aññaṁ maññamāno aññaṁ jīvitā voropesi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (81 –⁠84)</p>
+
+<hr>
+<p><span class="parno">144</span><span class="ms">p_1V_519</span>Tena kho pana samayena aññataro bhikkhu amanussena gahito hoti. Aññataro bhikkhu tassa bhikkhuno pahāraṁ adāsi. So bhikkhu kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (85)</p>
+
+<hr>
+<p><span class="parno">145</span><span class="ms">p_1V_520</span>Tena kho pana samayena aññataro bhikkhu amanussena gahito hoti. Aññataro bhikkhu maraṇādhippāyo tassa bhikkhuno pahāraṁ adāsi. So bhikkhu kālamakāsi … pe … so bhikkhu na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (86 –⁠87)</p>
+
+<hr>
+<p><span class="parno">146</span><span class="ms">p_1V_521</span>Tena kho pana samayena aññataro bhikkhu kalyāṇakammassa saggakathaṁ kathesi. So adhimutto kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (88)</p>
+
+<hr>
+<p><span class="parno">147</span><span class="ms">p_1V_522</span>Tena kho pana samayena aññataro bhikkhu maraṇādhippāyo kalyāṇakammassa saggakathaṁ kathesi. So adhimutto kālamakāsi … pe … so adhimutto na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (89 –⁠90)</p>
+
+<hr>
+<p><span class="parno">148</span><span class="ms">p_1V_523</span>Tena kho pana samayena aññataro bhikkhu nerayikassa nirayakathaṁ kathesi. So uttasitvā kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (91)</p>
+
+<p><span class="parno">149</span><span class="ms">p_1V_524</span>Tena kho pana samayena aññataro bhikkhu maraṇādhippāyo nerayikassa nirayakathaṁ kathesi. So uttasitvā kālamakāsi … pe … so uttasitvā na kālamakāsi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (92 –⁠93)</p>
+
+<hr>
+<p><span class="parno">150</span><span class="ms">p_1V_525, msdiv189</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karontā rukkhaṁ chindanti. Aññataro bhikkhu aññataraṁ bhikkhuṁ etadavoca: "āvuso, atraṭṭhito chindāhī"ti. Taṁ tatraṭṭhitaṁ chindantaṁ rukkho ottharitvā māresi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, namaraṇādhippāyassā"ti. (94)</p>
+
+<p><span class="parno">151</span><span class="ms">p_1V_526</span>Tena kho pana samayena āḷavakā bhikkhū navakammaṁ karontā rukkhaṁ chindanti. Aññataro bhikkhu maraṇādhippāyo aññataraṁ bhikkhuṁ etadavoca: "āvuso, atraṭṭhito chindāhī"ti. Taṁ tatraṭṭhitaṁ chindantaṁ rukkho ottharitvā māresi … pe … rukkho ottharitvā na māresi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti thullaccayassā"ti. (95 –⁠96)</p>
+
+<hr>
+<p><span class="parno">152</span><span class="ms">p_1V_527, msdiv190</span>Tena kho pana samayena chabbaggiyā bhikkhū dāyaṁ ālimpesuṁ; manussā daḍḍhā kālamakaṁsu. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, namaraṇādhippāyassā"ti. (97)</p>
+
+<p><span class="parno">153</span><span class="ms">p_1V_528</span>Tena kho pana samayena chabbaggiyā bhikkhū maraṇādhippāyā dāyaṁ ālimpesuṁ. Manussā daḍḍhā kālamakaṁsu … pe … manussā daḍḍhā na kālamakaṁsu. Tesaṁ kukkuccaṁ ahosi … pe … "anāpatti, bhikkhave, pārājikassa; āpatti thullaccayassā"ti. (98 –⁠99)</p>
+
+<hr>
+<p><span class="parno">154</span><span class="ms">p_1V_529, msdiv191</span>Tena kho pana samayena aññataro bhikkhu āghātanaṁ gantvā coraghātaṁ etadavoca: "āvuso, māyimaṁ kilamesi. Ekena pahārena jīvitā voropehī"ti. "Suṭṭhu, bhante"ti ekena pahārena jīvitā voropesi. Tassa kukkuccaṁ ahosi … pe … "āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (100)</p>
+
+<hr>
+<p><span class="parno">155</span><span class="ms">p_1V_530</span>Tena kho pana samayena aññataro bhikkhu āghātanaṁ gantvā coraghātaṁ etadavoca: "āvuso, māyimaṁ kilamesi. Ekena pahārena jīvitā voropehī"ti. So— "nāhaṁ tuyhaṁ vacanaṁ karissāmī"ti taṁ jīvitā voropesi. Tassa kukkuccaṁ ahosi … pe … "anāpatti, bhikkhu, pārājikassa; āpatti dukkaṭassā"ti. (101)</p>
+
+<hr>
+<p><span class="parno">156</span><span class="ms">p_1V_531, msdiv192</span>Tena kho pana samayena aññataro puriso ñātighare hatthapādacchinno ñātakehi samparikiṇṇo hoti. Aññataro bhikkhu te manusse etadavoca: "āvuso, icchatha imassa maraṇan"ti?</p>
+
+<p>"Āma, bhante, icchāmā"ti.</p>
+
+<p>"Tena hi takkaṁ pāyethā"ti. Te taṁ takkaṁ pāyesuṁ. So kālamakāsi. Tassa kukkuccaṁ ahosi … pe …</p>
+
+<p>"āpattiṁ tvaṁ, bhikkhu, āpanno pārājikan"ti. (102)</p>
+
+<hr>
+<p><span class="parno">157</span><span class="ms">p_1V_532</span>Tena kho pana samayena aññataro puriso kulaghare hatthapādacchinno ñātakehi samparikiṇṇo hoti. Aññatarā bhikkhunī te manusse etadavoca: "āvuso, icchatha imassa maraṇan"ti?</p>
+
+<hr>
+<p>"Āmāyye, icchāmā"ti.</p>
+
+<hr>
+<p>"Tena hi loṇasovīrakaṁ pāyethā"ti.</p>
+
+<p>Te taṁ loṇasovīrakaṁ pāyesuṁ. So kālamakāsi. Tassā kukkuccaṁ ahosi … pe … . Atha kho sā bhikkhunī bhikkhunīnaṁ etamatthaṁ ārocesi. Bhikkhuniyo bhikkhūnaṁ etamatthaṁ ārocesuṁ. Bhikkhū bhagavato etamatthaṁ ārocesuṁ. "Āpattiṁ sā, bhikkhave, bhikkhunī āpannā pārājikan"ti. (103)</p>
+
+<hr>
+<p class="endsutta"><span class="parno">158</span><span class="ms">p_1V_533</span>Tatiyapārājikaṁ samattaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-pj2.html#content"></a><a id="next-sutta" href="../vi/bi-vb-pj4.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-pj.html">Pārājikas</a>Pārājika 3
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>A Treasury of Dhamma</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!-- Header -->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="pressed w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div id="content">
+
+<h2>The Buddha’s Words</h2>
+
+<p>These pages are designed to make the best available translations of the Buddha’s words easily available in English and Pali. Please refer to the <a href="../home/copyright.html" target="_blank">copyright page </a>(or the copyright link on each translated page as pictured below) for more information.</p>
+<p><img src="../images/copyright_example.png" alt="Example of copyright information" class="w3-image"></p>
+
+
+<h3>What's New?</h3>
+
+<p>Earlier this year the option to turn Dark Mode on and off was added. More recently, keyboard shortcuts have been added as well as the ability to turn Pali Lookup on and off. See below for a full list of the keyboard shortcuts.</p>
+
+<p>Ajahn Brahmali's translations of the Vinaya are replacing the older ones based on I B Horner's translations. The Khandakas are the first to be updated with most of them now completed.</p>
+
+<h3>The Control Panel</h3>
+
+<p>The control panel widget that appears on the right hand side of the screen provides navigation between <b>previous</b> and <b>next</b> pages and between the <b>top</b> and <b>bottom</b> of the page.</p>
+
+<p>The <b>Pali</b> button appears wherever a Pali version is present (not all pages have a Pali translation). Clicking the Pali button toggles Pali on. Pali stays turned on until the button is clicked again. With Pali showing, hovering the cursor over a Pali word gives you the English translation of available words.</p>
+
+<p>Pali can also be toggled on by pressing the <strong>*</strong> key. </p>
+
+<p><img src="../images/ctrl-panel.png" alt="Control panel image" class="w3-image"></p>
+
+<h3>Mobile Devices</h3>
+
+<p>The site has been designed to work well on a wide range of screen sizes. On smaller screens a "hamburger symbol" appears. 
+<p><img src="../images/hamburger.png" alt="Hamburger symbol panel image" class="w3-image"></p>
+
+<h3>Dark Mode</h3>
+
+<p>If you'd prefer Dark Mode, the control at the top left of the screen toggles between dark and light modes. Dark mode can also be toggled on and off by pressing the <strong>d</strong> key.</p>
+
+<p><img src="../images/darkmode.png" alt="Dark Mode Toggle image" class="w3-image"></p>
+
+<h3>Navigation Around The Site</h3>
+
+<p>Use the navigation at the <b>top</b> of the page to navigate to other pages.</p>
+
+<p>Alternatively, the “breadcrumbs” at the <b>bottom</b> of each page contain clickable links to take you to the top of the current level, the top of the next higher level etc. or to this page. The last entry in the breadcrumbs is the current page.</p>
+
+<h3>Keyboard Shortcuts</h3>
+
+<p>There are some keyboard shortcuts to assist in navigating around the site:</p>
+
+<p>Pressing the <strong>p</strong> key takes you to the <strong>previous</strong> sutta while pressing the <strong>n</strong> key takes you to the <strong>next</strong> sutta.</p>
+
+<p>Pressing the <strong>d</strong> key turns <strong>dark mode</strong> on and off</p>
+
+<p>Pressing the <strong>*</strong> key turns <strong>Pali</strong> on and off</p>
+
+<p>Pressing the <strong>i</strong> key takes you to the next higher level of navigation</p>
+
+<p>Pressing the <strong>h</strong> key takes you to the <strong>Home Page</strong></p>
+
+<p>Pressing the <strong>c</strong> key takes you to the <strong>Contact Page</strong></p>
+
+<p>Pressing the <strong>?</strong> key takes you to the <strong>Help Page</strong></p>
+
+<p>Pressing the <strong>Control+Alt+l</strong> key combination turns the <strong>Pali Lookup</strong> on and off.</p>
+
+<p>&nbsp;</p>
+
+<h3>Useful Links</h3>
+
+<p>Also at the bottom of every page are links to:</p>
+
+<ul>
+	<li>A Study Guide for learning the Buddhas teachings based on Bhikkhu Bodhi's "In the Buddha's Words"</li>
+	<li>A Help page. (There is also a help link <img src="../images/help_icon.png" alt="Help image" class="w3-image"> just below the site logo on each page.</li>
+	<li>A Cross Reference for converting between Pali Text Society style references and the style of referencing used, for example, by Wisdom Publications etc.</li>
+	<li>A page of copyright information.</li>
+	<li>A page of information about contacting the Buddha's Words team (i.e. both of us).</li>
+</ul>
+
+<p><img src="../images/footer_breadcrumbs.png" alt="Footer and breadcrumbs image" class="w3-image"></p>
+
+<h3>Comments (Footnotes)</h3>
+
+<p>In the English text, hovering the cursor over an information icon ( <span class="note"><span class="details"><span class="p">Comments or footnotes appear in a pop-up box.</span></span></span> ) shows the comment or footnote in a pop up text box. Move the cursor away to close the pop-up box.</p>
+
+<h3>Pali Text</h3>
+
+<p>The Pali text contains a built-in Pali-English dictionary. <b>Hint:</b> move the cursor <i>downwards</i> to select the word; the translation pops up (if there is one for that word).
+
+<p>Some of the Pali text is highlighted with a <span class="var" title="Variant reading">beige</span> background to indicate variant Pali readings. Hovering the cursor over the beige word will cause the variant reading to be displayed in a popup.</p>
+
+<p><img src="../images/pali-var.png" alt="Pali text" class="w3-image"></p>
+
+
+
+<h3>Search Entire Site</h3>
+
+<p>To search the English Content of the <b>entire site</b>, click on the <b>Search English Content</b> link in the header of each page.</p>
+
+<p>To search the Pali Content of the <b>entire site</b>, click on the <b>Search Pali Content</b> link in the header of each page.</p>
+
+<p>Please be warned that the first time either of the search pages is opened may take a while to load … after that it’s fine.</p>
+
+<p><img src="../images/advsearch.png" alt="advanced search image"></p>
+
+<p>The search results will be displayed as hyperlinks that will take you to the relevant page but not to the exact location on the page. (Hint: Use right click | <b>Open in new tab</b> if you want to keep the results displayed) You will have to <b>Search on Current Page</b> (as below) until a future iteration of this work integrates the two types of searches.</p>
+
+<h3>Search on Current Page</h3>
+
+<p>Until we are able to implement a <b>Find on this Page</b> function, we reccomend using keyboard shortcuts such as the keyboard shortcut on Chrome: <b>Ctrl+F</b>. If Pali is toggled on when searching, both Pali and English matches are highlighted. Use the Next and Previous buttons to move between matches.</p>
+
+<p>Pali searches ignore diacriticals. e.g. to find the word “pariyādāya” simply enter “pariya ..” (or even “par” to find matches).</p>
+
+<p>To locate the sutta to which you have a Pali Text Society reference, a <a href="crossreference.html"><b>cross reference table is provided here</b></a>.</p>
+
+<h3>Versions of these pages …</h3>
+
+<p>These pages are updated regularly to add content, fix mistakes and to make improvements. </p>
+
+<p>The latest version can be downloaded by following <a href="https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8?usp=sharing"><b>this link</b></a> or, if you need to type the location for some reason, here's a shortened version of the URL: <a href="https://tinyurl.com/y4gzyhgt"><b>https://tinyurl.com/y4gzyhgt</b></a></p>
+
+<p>We've provided both zip and 7-zip archives with identical content. The 7-zip archiving is more efficient but not as easy to use (or as ubiquitous) as zip archives.</p>
+
+<br>
+
+<p>Last updated: 28th February 2023</p>
+
+</div> <!-- End page content -->
+</div> <!-- end content container bwcontainer4 -->
+	<!-- Footer -->
+	<footer>
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

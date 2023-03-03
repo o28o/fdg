@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Pācittiya&nbsp;1</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Pācittiya&nbsp;1: The Training Rule on Lying.</h2>
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.&nbsp; &nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+</ul>
+</div>
+
+<br><section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>Venerables, these ninety-two rules entailing confession come up for recitation.</p>
+
+<p class="namo"><span class="parno">2</span>Homage to the Master, the <i>Arahant</i>, the fully Awakened One</p>
+
+<h3>Origin story</h3>
+
+<p id="p3"><span class="parno">3</span><span class="ms">Bu-Pc.1.1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍika’s Monastery. At that time Hatthaka the Sakyan was beaten in debate. While talking with members of other sects, he would assert something after denying it, and he would deny something after asserting it. He evaded the issues, deliberately lied, and after reaching an agreement he would speak deceptively. The members of other sects complained and criticised him: “How can Hatthaka, while talking with us, assert things after denying them, deny things after asserting them, evade the issues, deliberately lie, and after reaching an agreement speak deceptively?"</p>
+
+<p id="p4"><span class="parno">4</span>Monks heard the complaints of those members of other sects, and they went to Hatthaka and said: “Is it true, Hatthaka, that while talking with members of other sects, you assert things after denying them, deny things after asserting them, evade the issues, deliberately lie, and after reaching an agreement speak deceptively?"</p>
+
+<p>“These members of other sects should be beaten by any means; they should not be allowed to win."</p>
+
+<p>The monks of few desires … complained and criticised him: “How can Hatthaka, while talking with members of other sects, assert things after denying them, deny things after asserting them, evade the issues, deliberately lie, and after reaching an agreement speak deceptively?"</p>
+
+<p id="p5"><span class="parno">5</span>After criticising Hatthaka in many ways, they informed the Master. The Master then convened the Saṅgha and questioned Hatthaka: “Is it true, Hatthaka, that while talking with members of other sects, you assert things after denying them, deny things after asserting them, evade the issues, deliberately lie, and after reaching an agreement speak deceptively?"</p>
+
+<hr>
+<p>“It’s true, Master."</p>
+
+<p>The Buddha, the Master, criticised him: “ … Foolish man, how can you act in this way? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p id="p6"><span class="parno">6</span><span class="rule">“If a monk deliberately lies, he commits an offence entailing confession."</span></p>
+
+<h3>Definitions</h3>
+
+<p id="p7"><span class="parno">7</span>Deliberately lies: the speech of one who is intent on deceiving—his words, his way of speaking, his breaking into speech, his verbal expression, his eight kinds of ignoble speech: he says that he has seen what he has not seen; he says that he has heard what he has not heard; he says that he has sensed what he has not sensed; he says that he has cognised what he has not cognised; he says that he has not seen what he has seen; he says that he has not heard what he has heard; he says that he has not sensed what he has sensed; he says that he has not cognised what he has cognised.</p>
+
+<h3>Permutations</h3>
+
+<h4>Definitions</h4>
+
+<p id="p8"><span class="parno">8</span>Not seen: not seen with the eye. Not heard: not heard with the ear. Not sensed: not smelled with the nose, not tasted with the tongue, not touched with the body. Not cognised: not cognised with the mind. Seen: seen with the eye. Heard: heard with the ear. Sensed: smelled with the nose, tasted with the tongue, touched with the body. Cognised: cognised with the mind.</p>
+
+<h4>Exposition</h4>
+
+<h4>Falsely claiming to have experienced what he has not experienced: a single sense door</h4>
+
+<p id="p9"><span class="parno">9</span>If he deliberately lies, saying that he has seen what he has not seen, he commits an offence entailing confession when three conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied.</p>
+
+<p id="p10"><span class="parno">10</span>If he deliberately lies, saying that he has seen what he has not seen, he commits an offence entailing confession when four conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied; in misrepresenting his view (of what is true).</p>
+
+<p id="p11"><span class="parno">11</span>If he deliberately lies, saying that he has seen what he has not seen, he commits an offence entailing confession when five conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied; in misrepresenting his view (of what is true); in misrepresenting his belief (of what is true).</p>
+
+<p id="p12"><span class="parno">12</span>If he deliberately lies, saying that he has seen what he has not seen, he commits an offence entailing confession when six conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied; in misrepresenting his view (of what is true); in misrepresenting his belief (of what is true); in misrepresenting his acceptance (of what is true).</p>
+
+<p id="p13"><span class="parno">13</span>If he deliberately lies, saying that he has seen what he has not seen, he commits an offence entailing confession when seven conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied; in misrepresenting his view (of what is true); in misrepresenting his belief (of what is true); in misrepresenting his acceptance (of what is true); in misrepresenting his sentiment (of what is true).</p>
+
+<p id="p14"><span class="parno">14</span>If he deliberately lies, saying that he says that he has heard what he has not heard … saying that he has sensed what he has not sensed … saying that he has cognised what he has not cognised, he commits an offence entailing confession when three conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied.</p>
+
+<p id="p15"><span class="parno">15</span>… when four conditions are fulfilled … when five conditions are fulfilled … when six conditions are fulfilled … If he deliberately lies, saying that he has cognised what he has not cognised, he commits an offence entailing confession when seven conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied; in misrepresenting his view (of what is true); in misrepresenting his belief (of what is true); in misrepresenting his acceptance (of what is true); in misrepresenting his sentiment (of what is true).</p>
+
+<h4>Falsely claiming to have experienced what he has not experienced: multiple sense doors</h4>
+
+<p id="p16"><span class="parno">16</span>If he deliberately lies, saying that he has seen and heard what he has not seen, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has seen and sensed what he has not seen, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has seen and cognised what he has not seen, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has seen and heard and sensed what he has not seen, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has seen and heard and cognised what he has not seen, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has seen and heard and sensed and cognised what he has not seen, he commits an offence entailing confession when three conditions are fulfilled: …</p>
+
+<p id="p17"><span class="parno">17</span>If he deliberately lies, saying that he has heard and sensed what he has not heard, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has heard and cognised what he has not heard, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has heard and seen what he has not heard, he commits an offence entailing confession when three conditions are fulfilled … If he dhrefeliberately lies, saying that he has heard and sensed and cognised what he has not heard, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has heard and sensed and seen what he has not heard, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has heard and sensed and cognised and seen what he has not heard, he commits an offence entailing confession when three conditions are fulfilled: …</p>
+
+<p id="p18"><span class="parno">18</span>If he deliberately lies, saying that he has sensed and cognised what he has not sensed, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has sensed and seen what he has not sensed, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has sensed and heard what he has not sensed, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has sensed and cognised and seen what he has not sensed, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has sensed and cognised and heard what he has not sensed, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has sensed and cognised and seen and heard what he has not sensed, he commits an offence entailing confession when three conditions are fulfilled: …</p>
+
+<p id="p19"><span class="parno">19</span>If he deliberately lies, saying that he has cognised and seen what he has not cognised, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has cognised and heard what he has not cognised, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has cognised and sensed what he has not cognised, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has cognised and seen and heard what he has not cognised, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has cognised and seen and sensed what he has not cognised, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has cognised and seen and heard and sensed what he has not cognised, he commits an offence entailing confession when three conditions are fulfilled: …
+<p><h4>Falsely claiming not to have experienced what he has experienced</h4>
+
+<p id="p20"><span class="parno">20</span>If he deliberately lies, saying that he has not seen what he has seen, he commits an offence entailing confession when three conditions are fulfilled … saying that he has not heard what he has heard … saying that he has not sensed what he has sensed … saying that he has not cognised what he has cognised, he commits an offence entailing confession when three conditions are fulfilled …</p>
+
+<h4>Falsely claiming to have experienced with one sense what he has experienced with another</h4>
+
+<p id="p21"><span class="parno">21</span>If he lies in full awareness, saying that he has heard what he has seen, he commits an offense entailing confession when three conditions are fulfilled … saying that he has sensed what he has seen … saying that he has known what he has seen, he commits an offense entailing confession when three conditions are fulfilled … If he lies in full awareness, saying that he has heard and sensed what he has seen, he commits an offense entailing confession when three conditions are fulfilled … saying that he has heard and known what he has seen … saying that he has heard and sensed and known what he seen, he commits an offense entailing confession when three conditions are fulfilled …</p>
+
+<hr>
+<p id="p22"><span class="parno">22</span>If he deliberately lies, saying that he has sensed what he has heard, he commits an offence entailing confession when three conditions are fulfilled … saying that he has cognised what he has heard … saying that he has seen what he has heard, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has sensed and cognised what he has heard, he commits an offence entailing confession when three conditions are fulfilled … saying that he has sensed and seen what he has heard … saying that he has sensed and cognised and seen what he heard, he commits an offence entailing confession when three conditions are fulfilled …</p>
+
+<hr>
+<p id="p23"><span class="parno">23</span>If he deliberately lies, saying that he has cognised what he has sensed, he commits an offence entailing confession when three conditions are fulfilled … saying that he has seen what he has sensed … saying that he has heard whathref he has sensed, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has cognised and seen what he has sensed, he commits an offence entailing confession when three conditions are fulfilled … saying that he has cognised and heard and sensed what he has heard … saying that he has cognised and seen and heard what he sensed, he commits an offence entailing confession when three conditions are fulfilled …</p>
+
+<p id="p24"><span class="parno">24</span>If he deliberately lies, saying that he has seen what he has cognised, he commits an offence entailing confession when three conditions are fulfilled … saying that he has heard what he has cognised … saying that he has sensed what he has cognised, he commits an offence entailing confession when three conditions are fulfilled … If he deliberately lies, saying that he has seen and heard what he has cognised, he commits an offence entailing confession when three conditions are fulfilled … saying that he has seen and sensed what he has cognised … saying that he has seen and heard and sensed what he cognised, he commits an offence entailing confession when three conditions are fulfilled …
+<p><h3>Making claims while having doubts</h3>
+
+<p id="p25"><span class="parno">25</span>If he has doubts about what he has seen, is not sure about what he has seen, does not remember what he has seen, is confused about what he has seen … If he has doubts about what he has heard, is not sure about what he has heard, does not remember what he has heard, is confused about what he has heard … If he has doubts about what he has sensed, is not sure about what he has sensed, does not remember what he has sensed, is confused about what he has sensed … If he has doubts about what he has cognised, is not sure about what he has cognised, does not remember what he has cognised, is confused about what he has cognised, but he deliberately lies, saying that he has cognised and seen … is confused about what he has cognised, but he deliberately lies, saying that he has cognised and heard … is confused about what he has cognised, but he deliberately lies, saying that he has cognised and sensed … is confused about what he has cognised, but he deliberately lies, saying that he has cognised and seen and heard … is confused about what he has cognised, but he deliberately lies, saying that he has cognised and seen and sensed … is confused about what he has cognised, but he deliberately lies, saying that he has cognised and seen and heard and sensed, he commits an offence entailing confession when three conditions are fulfilled … <span class="note"><span class="details"><span class="p">This series seems to be missing one combination: “ … is confused about what he has cognised, but he deliberately lies, saying that he has cognised and heard and sensed … "</span></span></span></p>
+
+<p id="p26"><span class="parno">26</span>… when four conditions are fulfilled … when five conditions are fulfilled … when six conditions are fulfilled … is confused about what he has cognised, but he deliberately lies, saying that he has cognised and seen and heard and sensed, he commits an offence entailing confession when seven conditions are fulfilled: before he has lied, he knows he is going to lie; while lying, he knows he is lying; after he has lied, he knows he has lied; in misrepresenting his view (of what is true); in misrepresenting his belief (of what is true); in misrepresenting his acceptance (of what is true); in misrepresenting his sentiment (of what is true).</p>
+
+<h2>Non-offences</h2>
+
+
+<p id="p27"><span class="parno">27</span>There is no offence: if he speaks playfully; if he is speaks too fast (speaks playfully means: speaking hastily; speaks too fast means: thinking to say one thing, he says something else); if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">28</span>The first rule, the training rule on lying, is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p><span class="parno">1</span><span class="ms">p_2V_2</span>Ime kho panāyasmanto dvenavuti pācittiyā
+<br>dhammā uddesaṁ āgacchanti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_2V_1</span>Namo tassa Bhagavato Arahato Sammāsambuddhassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">3</span><span class="ms">p_2V_3, msdiv1</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena hatthako sakyaputto vādakkhitto hoti. So titthiyehi saddhiṁ sallapanto avajānitvā paṭijānāti, paṭijānitvā avajānāti, aññenaññaṁ paṭicarati, sampajānamusā bhāsati, sanketaṁ katvā visaṁvādeti. Titthiyā ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma hatthako sakyaputto amhehi saddhiṁ sallapanto avajānitvā paṭijānissati, paṭijānitvā avajānissati, aññenaññaṁ paṭicarissati, sampajānamusā bhāsissati, sanketaṁ katvā visaṁvādessatī"ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_2V_4</span>Assosuṁ kho bhikkhū tesaṁ titthiyānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Atha kho te bhikkhū yena hatthako sakyaputto tenupasankamiṁsu; upasankamitvā hatthakaṁ sakyaputtaṁ etadavocuṁ: "Saccaṁ kira tvaṁ, āvuso hatthaka, titthiyehi saddhiṁ sallapanto avajānitvā paṭijānāsi, paṭijānitvā avajānāsi, aññenaññaṁ paṭicarasi, sampajānamusā bhāsasi, sanketaṁ katvā visaṁvādesī"ti?</p>
+
+<p>"Ete kho, āvuso, titthiyā nāma yena kenaci jetabbā; neva tesaṁ jayo dātabbo"ti.</p>
+
+<p>Ye te bhikkhū appicchā … pe … te ujjhāyanti khiyyanti vipācenti:  "Kathañhi nāma hatthako sakyaputto titthiyehi saddhiṁ sallapanto avajānitvā paṭijānissati, paṭijānitvā avajānissati, aññenaññaṁ paṭicarissati, sampajānamusā bhāsissati, sanketaṁ katvā visaṁvādessatī"ti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_5</span>Atha kho te bhikkhū hatthakaṁ sakyaputtaṁ anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusaṇghaṁ sannipātāpetvā hatthakaṁ sakyaputtaṁ paṭipucchi: "Saccaṁ kira tvaṁ, hatthaka, titthiyehi saddhiṁ sallapanto avajānitvā paṭijānāsi, paṭijānitvā avajānāsi, aññenaññaṁ paṭicarasi, sampajānamusā bhāsasi, sanketaṁ katvā visaṁvādesī"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma tvaṁ, moghapurisa, titthiyehi saddhiṁ sallapanto avajānitvā paṭijānissasi, paṭijānitvā avajānissasi, aññenaññaṁ paṭicarissasi, sampajānamusā bhāsissasi, sanketaṁ katvā visaṁvādessasi. Netaṁ, moghapurisa, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">6</span><span class="ms">p_2V_6, msdiv2</span><span class="rule">"Sampajānamusāvāde pācittiyan"</span> ti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">7</span><span class="ms">p_2V_7, msdiv3</span><b>Sampajānamusāvādo</b> nāma visaṁvādanapurekkhārassa vācā, girā, byappatho, vacībhedo, vācasikā viññatti, aṭṭha anariyavohārā— adiṭṭhaṁ diṭṭhaṁ meti, assutaṁ sutaṁ meti, amutaṁ mutaṁ meti, aviññātaṁ viññātaṁ meti, diṭṭhaṁ adiṭṭhaṁ meti, sutaṁ assutaṁ meti, mutaṁ amutaṁ meti, viññātaṁ aviññātaṁ meti.</p>
+
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+
+<p><span class="parno">8</span><span class="ms">p_2V_8</span><b>Adiṭṭhaṁ</b> nāma na cakkhunā diṭṭhaṁ. <b>Assutaṁ</b> nāma na sotena sutaṁ. <b>Amutaṁ</b> nāma na ghānena ghāyitaṁ, na jivhāya sāyitaṁ, na kāyena phuṭṭhaṁ. <b>Aviññātaṁ</b> nāma na manasā viññātaṁ. <b>Diṭṭhaṁ</b> nāma cakkhunā diṭṭhaṁ. <b>Sutaṁ</b> nāma sotena sutaṁ. <b>Mutaṁ</b> nāma ghānena ghāyitaṁ, jivhāya sāyitaṁ, kāyena phuṭṭhaṁ. <b>Viññātaṁ</b> nāma manasā viññātaṁ.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">9</span><span class="ms">p_2V_9, msdiv4</span>Tīhākārehi "adiṭṭhaṁ diṭṭhaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti.</p>
+
+<p><span class="parno">10</span><span class="ms">p_2V_10</span>Catūhākārehi "adiṭṭhaṁ diṭṭhaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti, vinidhāya diṭṭhiṁ.</p>
+
+<p><span class="parno">11</span><span class="ms">p_2V_11</span>Pañcahākārehi "adiṭṭhaṁ diṭṭhaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti, vinidhāya diṭṭhiṁ, vinidhāya khantiṁ.</p>
+
+<p><span class="parno">12</span><span class="ms">p_2V_12</span>Chahākārehi "adiṭṭhaṁ diṭṭhaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti, vinidhāya diṭṭhiṁ, vinidhāya khantiṁ, vinidhāya ruciṁ.</p>
+
+<p><span class="parno">13</span><span class="ms">p_2V_13</span>Sattahākārehi "adiṭṭhaṁ diṭṭhaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti, vinidhāya diṭṭhiṁ, vinidhāya khantiṁ, vinidhāya ruciṁ, vinidhāya bhāvaṁ.</p>
+
+<p><span class="parno">14</span><span class="ms">p_2V_14, msdiv5</span>Tīhākārehi "assutaṁ sutaṁ me"ti … pe … amutaṁ mutaṁ meti … pe … aviññātaṁ viññātaṁ meti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti.</p>
+
+<p><span class="parno">15</span><span class="ms">p_2V_15</span>Catūhākārehi … pe … pañcahākārehi … pe … chahākārehi … pe … sattahākārehi "aviññātaṁ viññātaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti, vinidhāya diṭṭhiṁ, vinidhāya khantiṁ, vinidhāya ruciṁ, vinidhāya bhāvaṁ.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">16</span><span class="ms">p_2V_16, msdiv6</span>Tīhākārehi "adiṭṭhaṁ diṭṭhañca me sutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi "adiṭṭhaṁ diṭṭhañca me mutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi "adiṭṭhaṁ diṭṭhañca me viññātañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi adiṭṭhaṁ "diṭṭhañca me sutañca mutañcā"ti … pe … tīhākārehi adiṭṭhaṁ "diṭṭhañca me sutañca viññātañcā"ti … pe … tīhākārehi adiṭṭhaṁ "diṭṭhañca me sutañca mutañca viññātañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<p><span class="parno">17</span><span class="ms">p_2V_17</span>Tīhākārehi assutaṁ "sutañca me mutañcā"ti … pe … tīhākārehi assutaṁ "sutañca me viññātañcā"ti … pe … tīhākārehi assutaṁ "sutañca me diṭṭhañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi assutaṁ "sutañca me mutañca viññātañcā"ti … pe … tīhākārehi assutaṁ "sutañca me mutañca diṭṭhañcā"ti … pe … tīhākārehi assutaṁ "sutañca me mutañca viññātañca diṭṭhañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<p><span class="parno">18</span><span class="ms">p_2V_18</span>Tīhākārehi amutaṁ "mutañca me viññātañcā"ti … pe … tīhākārehi amutaṁ "mutañca me diṭṭhañcā"ti … pe … tīhākārehi amutaṁ "mutañca me sutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi amutaṁ "mutañca me viññātañca diṭṭhañcā"ti … pe … tīhākārehi amutaṁ "mutañca me viññātañca sutañcā"ti … pe … tīhākārehi amutaṁ "mutañca me viññātañca diṭṭhañca sutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<p><span class="parno">19</span><span class="ms">p_2V_19</span>Tīhākārehi aviññātaṁ "viññātañca me diṭṭhañcā"ti … pe … tīhākārehi aviññātaṁ "viññātañca me sutañcā"ti … pe … tīhākārehi aviññātaṁ "viññātañca me mutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi aviññātaṁ "viññātañca me diṭṭhañca sutañcā"ti … pe … tīhākārehi aviññātaṁ "viññātañca me diṭṭhañca mutañcā"ti … pe … tīhākārehi aviññātaṁ "viññātañca me diṭṭhañca sutañca mutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">20</span><span class="ms">p_2V_20, msdiv7</span>Tīhākārehi diṭṭhaṁ "adiṭṭhaṁ me"ti … pe … sutaṁ "assutaṁ me"ti … pe … mutaṁ "amutaṁ me"ti … pe … viññātaṁ "aviññātaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">21</span><span class="ms">p_2V_21, msdiv8</span>Tīhākārehi diṭṭhaṁ "sutaṁ me"ti … pe … tīhākārehi diṭṭhaṁ "mutaṁ me"ti … pe … tīhākārehi diṭṭhaṁ "viññātaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi diṭṭhaṁ "sutañca me mutañcā"ti … pe … tīhākārehi diṭṭhaṁ "sutañca me viññātañcā"ti … pe … tīhākārehi diṭṭhaṁ "sutañca me mutañca viññātañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<hr>
+<p><span class="parno">22</span><span class="ms">p_2V_22</span>Tīhākārehi sutaṁ "mutaṁ me"ti … pe … tīhākārehi sutaṁ "viññātaṁ me"ti … pe … tīhākārehi sutaṁ "diṭṭhaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi sutaṁ "mutañca me viññātañcā"ti … pe … tīhākārehi sutaṁ "mutañca me diṭṭhañcā"ti … pe … tīhākārehi sutaṁ "mutañca me viññātañca diṭṭhañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<hr>
+<p><span class="parno">23</span><span class="ms">p_2V_23</span>Tīhākārehi mutaṁ "viññātaṁ me"ti … pe … tīhākārehi mutaṁ "diṭṭhaṁ me"ti … pe … tīhākārehi mutaṁ "sutaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi mutaṁ "viññātañca me diṭṭhañcā"ti … pe … tīhākārehi mutaṁ "viññātañca me sutañcā"ti … pe … tīhākārehi mutaṁ "viññātañca me diṭṭhañca sutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<p><span class="parno">24</span><span class="ms">p_2V_24</span>Tīhākārehi viññātaṁ "diṭṭhaṁ me"ti … pe … tīhākārehi viññātaṁ "sutaṁ me"ti … pe … tīhākārehi viññātaṁ "mutaṁ me"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … tīhākārehi viññātaṁ "diṭṭhañca me sutañcā"ti … pe … tīhākārehi viññātaṁ "diṭṭhañca me mutañcā"ti … pe … tīhākārehi viññātaṁ "diṭṭhañca me sutañca mutañcā"ti sampajānamusā bhaṇantassa āpatti pācittiyassa … pe … .</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">25</span><span class="ms">p_2V_25, msdiv9</span>Tīhākārehi diṭṭhe vematiko diṭṭhaṁ nokappeti, diṭṭhaṁ nassarati, diṭṭhaṁ pamuṭṭho hoti … pe … sute vematiko sutaṁ nokappeti, sutaṁ nassarati, sutaṁ pamuṭṭho hoti … pe … mute vematiko mutaṁ nokappeti, mutaṁ nassarati, mutaṁ pamuṭṭho hoti … pe … viññāte vematiko viññātaṁ nokappeti, viññātaṁ nassarati, viññātaṁ pamuṭṭho hoti … viññātañca me diṭṭhañcāti … pe … viññātaṁ pamuṭṭho hoti … viññātañca me sutañcāti … pe … viññātaṁ pamuṭṭho hoti; viññātañca me mutañcāti … pe … viññātaṁ pamuṭṭho hoti; viññātañca me diṭṭhañca sutañcāti … pe … viññātaṁ pamuṭṭho hoti; viññātañca me diṭṭhañca mutañcāti … pe … viññātaṁ pamuṭṭho hoti; viññātañca me diṭṭhañca sutañca mutañcāti sampajānamusā bhaṇantassa āpatti pācittiyassa.</p>
+
+<p><span class="parno">26</span><span class="ms">p_2V_26, msdiv10</span>Catūhākārehi … pe … pañcahākārehi … pe … chahākārehi … pe … sattahākārehi … pe … viññātaṁ pamuṭṭho hoti, viññātañca me diṭṭhañca sutañca mutañcāti sampajānamusā bhaṇantassa āpatti pācittiyassa— pubbevassa hoti "musā bhaṇissan"ti, bhaṇantassa hoti "musā bhaṇāmī"ti, bhaṇitassa hoti "musā mayā bhaṇitan"ti, vinidhāya diṭṭhiṁ, vinidhāya khantiṁ, vinidhāya ruciṁ, vinidhāya bhāvaṁ.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">27</span><span class="ms">p_2V_27, msdiv11</span>Anāpatti— davā bhaṇati, ravā bhaṇati. "<b>Davā bhaṇati</b> nāma sahasā bhaṇati. <b>Ravā bhaṇati</b> nāma ‘aññaṁ bhaṇissāmī’ti aññaṁ bhaṇati". Ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">28</span><span class="ms">p_2V_28</span>Musāvādasikkhāpadaṁ niṭṭhitaṁ paṭhamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-np30.html#content"></a><a id="next-sutta" href="../vi/bu-vb-pc2.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-pc.html">Pācittiyas</a>Pācittiya&nbsp;1
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Sanghādisesa 6</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Sanghādisesa 6: Having An Unsponsored Kuti Built Wrongly</h2>
+
+ 
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Rājagaha in the Bamboo Grove, the Squirrel Sanctuary. At that time the monks of Āḷavī were building huts by means of begging. The huts were intended for
+themselves, did not have a sponsoring owner, and were inappropriate in size. Moreover, they were never finished, and so the monks kept on asking and begging: "Give a man, give a servant, give an ox, give a cart, give an adze, give a hatchet, give an axe, give a spade, give a chisel, give a creeper, give bamboo, give <i>muñja</i>-grass, give <i>babbaja</i>-grass, give <i>tiṇa</i>-grass, give clay." People felt oppressed by all the asking and begging, so much so that when they saw a monk they became alarmed and fearful, and they ran away, took a different path, turned away, and closed their doors. Even when they saw cows they ran away, thinking they were monks.</p>
+
+<p id="p2"><span class="parno">2</span>At that time Venerable Mahākassapa, after spending the rainy season at Rājagaha, set out for Āḷavī. Walking by stages, he eventually arrived in Āḷavī, where he stayed at the Aggāḷava shrine. Then, after dressing in the morning, Venerable Mahākassapa took his bowl and robe, and entered Āḷavī for alms. When people saw him they became fearful and alarmed, and they ran away, took a different path, turned away, and closed their doors. After finishing his almsround and eating his meal, Venerable Mahākassapa returned and addressed the monks:</p>
+
+<p>"Formerly Āḷavī had plenty of food and almsfood was easy to obtain; it was not difficult to get by on alms. But now Āḷavī is short of almsfood, and itʼs not easy to get by on alms. Why is that?" And those monks told Venerable Mahākassapa what had happened.</p>
+
+<p id="p3"><span class="parno">3</span>At that time, after staying at Rājagaha as long as he liked, the Master too set out for Āḷavī. Walking on tour by stages, he eventually arrived at Āḷavī, and he too stayed at the Aggāḷava shrine.</p>
+
+<p>Then Venerable Mahākassapa approached the Master, paid homage to him, and sat down to one side. And he informed the Master of what had happened.</p>
+
+<p id="p4"><span class="parno">4</span>The Master then convened the Saṅgha and questioned the monks of Āḷavī: "Is it true, monks, that you are building huts through begging, huts intended for yourself, without a sponsoring owner, and inappropriate in size? And that because they were never completed, you kept on asking and begging for all sorts of things, and people felt oppressed to point where they now avoid monks?"</p>
+
+<hr>
+<p>"Itʼs true, Master."</p>
+
+<p>The Buddha, the Master, rebuked them: " … Foolish men, how could you act in this way? This will not give rise to confidence in those without it … " After rebuking them, he spoke on the Dhamma and then addressed the monks:</p>
+
+<h4>Jataka</h4>
+
+<p id="p5"><span class="parno">5</span>"Once upon a time,<span class="note"><span class="details"><span class="p">Cf. the Maṇikaṇṭhajātaka, <span class="ref">Ja.2.283</span>.</span></span></span> monks, two sages who were brothers lived near the river Ganges. On one occasion the dragon king Maṇikaṇṭha emerged from theGanges and approached the younger of the two sages, and he encircled him with seven coils and spread his large hood over his head. Then, monks, because of his fear of that dragon, the younger sage became thin, haggard and pale, his veins protruding all over his limbs. The older sage saw him in this state and asked him what was the matter. And the younger sage told him. The elder sage said: ʻWould you like that dragon not to return?ʼ</p>
+
+<hr>
+<p>"ʻI would.ʼ</p>
+
+<hr>
+<p>"ʻWell then, did you see anything belonging to that dragon?ʼ</p>
+
+<p>"ʻI saw a ornamental jewel on his neck.ʼ</p>
+
+<p>"ʻIn that case ask the dragon for that jewel.ʼ</p>
+
+<p id="p6"><span class="parno">6</span>"Soon the dragon king Maṇikaṇṭha again emerged from the Ganges, approached the younger sage, and stood to one side. The sage said to him: ʻSir, give me the jewel; I want the jewel.ʼ And the dragon thought, ʻThe monk is asking for the jewel,ʼ and he quickly departed.</p>
+
+<p id="p7"><span class="parno">7</span>"Once more the dragon king Maṇikaṇṭha emerged from the Ganges and approached the younger sage. The sage saw him coming and said to him: ʻSir, give me the jewel; I want the jewel.ʼ When the dragon heard him, he turned around right there.</p>
+
+<p id="p8"><span class="parno">8</span>"Yet again the dragon king Maṇikaṇṭha emerged from the Ganges. The younger sage saw him emerging and said to him: ʻSir, give me the jewel; I want the jewel.ʼ Then the dragon king spoke these verses to the sage:</p>
+
+<blockquote>
+<p id="p9"><span class="parno">9</span>"‘My food and drink is abundant and sublime,
+<br>And it appears because of this jewel.
+<br>I will not give it to you; you ask too much.
+<br>Nor will I return to your hermitage.</p>
+
+<p id="p10"><span class="parno">10</span>"‘Like a boy holding a sharp sword,
+<br>You frighten me, asking for this stone.
+<br>I will not give it to you; you ask too much.
+<br>Nor will I return to your hermitage.ʼ</p>
+</blockquote>
+
+<hr>
+<p id="p11"><span class="parno">11</span>"And the dragon king Maṇikaṇṭha thought: ‘The monk is asking for the jewel; he wants the jewel,ʼ and he departed and never returned.</p>
+
+<p>Because he did not get to see that beautiful dragon, the young sage became even thinner, more haggard and pale, his veins protruding even more. The older sage saw him in this condition and asked what was the matter. He replied, ʻIt is because I no longer get to see that beautiful dragon.ʼ The older sage then spoke to him in verse:</p>
+
+<hr>
+<blockquote>
+<p id="p12"><span class="parno">12</span>"‘One should not beg from those one wishes to be dear to;
+<br>One is detested for asking too much.
+<br>The dragon, asked for a jewel by the brahmin,
+<br>Departed, and was never seen again.’</p>
+</blockquote>
+
+<p id="p13"><span class="parno">13</span>"One will be disliked even by animals, monks, for asking and begging, let alone by human beings."</p>
+
+<h4>Story</h4>
+
+<p id="p14"><span class="parno">14</span>"Once upon a time, monks, a certain monk lived in a certain forest thicket on the slopes of the Himalayas. Not far from that thicket was an large, low-lying marsh. A great flock of birds, feeding in this marsh during the day, entered the thicket to roost at night. The monk there was disturbed by the noise of the flocking birds, and so he came to see me. He paid homage to me, sat down to one side, and I said to him: ʻI hope you are keeping well, monk, I hope you are comfortable. I hope you are not tired from travelling. And where have you come from?’</p>
+
+<p>"‘I am not keeping well, Master, I am comfortable, and I am not tired from travelling. On the slopes of the Himalayas there is a great forest thicket and close by a large low-lying marsh. Then, bhante, a large flock of birds, feeding in that low-lying marsh during the day, came at night to roost in that forest thicket. Thatʼs where Iʼve come from, Master, and I left because I was disturbed by the noise of that flock of birds.ʼ</p>
+
+<hr>
+<p>"ʻWould you like that flock of birds not to return?ʼ</p>
+
+<p>"‘I would, Master.’</p>
+
+<p>"ʻWell then, go back to that forest thicket and in the first watch of the night call out three times: "Listen to me, good birds. From whoever roosts in this forest thicket, I want a feather. Each one of you must give me a feather." And in the second and third watch of the night do the same thing.’</p>
+
+<p id="p15"><span class="parno">15</span>"The monk then returned to that forest thicket and did as instructed. That flock of birds thought, ʻThe monk is asking for a feather; he wants a feather,ʼ and they left that thicket and never returned. One will be disliked even by animals, monks, for asking and begging, let alone by human beings.</p>
+
+<hr>
+<p id="p16"><span class="parno">16</span>"Formerly the father of Raṭṭhapāla addressed his son with these verses:</p>
+<blockquote>
+<p id="p17"><span class="parno">17</span>"‘Raṭṭhāpāla, all these people
+<br>Who come to me and beg—
+<br>I do not even know them;
+<br>So why donʼt you beg from me?’</p>
+
+<p id="p18"><span class="parno">18</span>‘The beggar isnʼt liked,
+<br>Nor is he who doesnʼt give when asked.
+<br>That is why I do not beg from you;
+<br>Please donʼt hate me for this.’</p>
+</blockquote>
+
+<p id="p19"><span class="parno">19</span>"If Raṭṭhapāla, who came from a good family, could speak in this way to his own father, how much more then can people to each other.</p>
+
+<hr>
+<p id="p20"><span class="parno">20</span>"Monks, it is hard for householders to acquire and protect their possessions. This being so, foolish men, you still kept on asking and begging for all sorts of things. This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p id="p21"><span class="parno">21</span><span class="rule">"When a monk, by means of begging, builds a hut without a sponsoring owner and intended for himself, it is to be no more than 3 metres long and 1.75 meters wide inside. He must get monks to approve a site where no harm will be done and which has a space on all sides. If a monk, by means of begging, builds a hut on a site where harm will be done and which lacks a space on all sides, or he does not get monks to approve the site, or he exceeds the size limit, he commits an offence entailing suspension."</span></p>
+
+<h3 >Definitions</h3>
+
+<p id="p22"><span class="parno">22</span><span class="term">By means of begging</span>: <span class="gloss">having himself begged for a man, a servant, an ox, a cart, an adze, a hatchet, an axe, a spade, a chisel, a creeper, bamboo, <i>muñja</i>-grass, <i>babbaja</i>-grass, <i>tiṇa</i>-grass, clay.</span></p>
+
+<p id="p23"><span class="parno">23</span><span class="term">A hut</span>: <span class="gloss">a wattle and daub hut.</span></p>
+
+<hr>
+<p id="p24"><span class="parno">24</span><span class="term">Builds</span>: <span class="gloss">building himself or getting someone else to build.</span></p>
+
+<p id="p25"><span class="parno">25</span><span class="term">Without a sponsoring owner</span>: <span class="gloss">there is no other owner, either a woman or a man, either a householder or one gone forth.</span></p>
+
+<p id="p26"><span class="parno">26</span><span class="term">Intended for himself</span>: <span class="gloss">for his own use.</span></p>
+
+<p id="p27"><span class="parno">27</span><span class="term">It is to be no more than 3 metres long</span>: <span class="gloss">measured outside.</span></p>
+
+<p id="p28"><span class="parno">28</span><span class="term">And 1.75 meters wide inside</span>: <span class="gloss">measured inside.</span></p>
+
+<hr>
+<p id="p29"><span class="parno">29</span><span class="term">He must get monks to approve a site</span>:</p>
+
+<p>The monk who is building a hut should clear a site, then approach the Saṅgha, put his robe over one shoulder, pay homage at the feet of the senior monks, squat on his haunches with his palms together, and say: <span class="kamma">"Bhante, I wish, by means of begging, to build a hut without a sponsoring owner and intended for myself. I request the Saṅgha to inspect the site for the hut."</span> He should make his request a second and a third timea space on all sides—should be asked and then authorised.</p>
+
+<p>"And, monks, they should be authorised in this way. An experienced and competent monk should inform the Saṅgha:
+
+<br>
+<hr>
+<p id="p30"><span class="parno">30</span>‘Bhante, let the Saṅgha listen to me. Monk so-and-so, by means of begging, wishes to build a hut without a sponsoring owner and intended for himself. He is requesting the Saṅgha to inspect the site for the hut. If it seems appropriate to the Saṅgha, the Saṅgha should authorise monk so-and-so and monk so-and-so to inspect the site. This is the motion.</p>
+
+<p id="p31"><span class="parno">31</span>ʻBhante, let the Saṅgha listen to me. Monk so-and-so, by means of begging, wishes to build a hut without a sponsoring owner and intended for himself. He is requesting the Saṅgha to inspect the site for the hut. The Saṅgha is authorising monk so-and-so and monk so-and-so to inspect the site. Any monk who agrees to authorising monk so-and-so and monk so-and-so to inspect the site of the hut should remain silent. Any monk who does not agree should say so.</p>
+
+<p id="p32"><span class="parno">32</span>ʻMonk so-and-so and monk so-and-so have been authorised by the Saṅgha to inspect the site for the hut of monk so-and-so. The Saṅgha approves and is therefore silent. I will remember it thus.’</p>
+
+<hr>
+<p id="p33"><span class="parno">33</span>An experienced and competent monk should then inform the Saṅgha:</p>
+
+<hr>
+<p id="p34"><span class="parno">34</span>‘Bhante, let the Saṅgha listen to me. Monk so-and-so, by means of begging, wishes to build a hut without a sponsoring owner and intended for himself. He is requesting the Saṅgha to approve the site for the hut. If it seems appropriate to the Saṅgha, the Saṅgha should approve the site. This is the motion.</p>
+
+<p id="p35"><span class="parno">35</span>The Saṅgha approves the site for the hut of monk so-and-so. Any monk who agrees to approving the site for the hut should remain silent. Any monk who does not agree should say so.</p>
+
+<p id="p36"><span class="parno">36</span>ʻThe site for the hut of monk so-and-so has been approved by the Saṅgha. The Saṅgha approves and is therefore silent. I will remember it thus.’"</p>
+
+<hr>
+<p id="p37"><span class="parno">37</span><span class="term">Where harm will be done</span>: <span class="gloss">it is the abode of ants, termites, rats, snakes, scorpions, centipedes, elephants, horses, lions, tigers, leopards, bears, or hyenas, or any other animals; or it is bordering on a field of grain, a field of vegetables, a slaughtering-place, a place of execution, a charnel ground, a park, a king’s property, an elephant-stable, a horse-stable, a prison, a bar, a slaughterhouse, a vehicle road, a crossroads, an assembly hall, or a cul-de-sac. This is called, "Where harm will be done."</span></p>
+
+<hr>
+<p id="p38"><span class="parno">38</span><span class="term">Which lacks a space on all sides</span>: <span class="gloss">it is not possible to go around it with a yoked cart, or to go all the way around it with a ladder. This is called, "Which lacks a space on all sides."</span></p>
+
+<p id="p39"><span class="parno">39</span><span class="term">Where no harm will be done</span>: <span class="gloss">it is not the abode of ants, termites … or any other animal; and it is not bordering on a field of grain … or a cul-de-sac. This is called, "Where no harm will be done."</span></p>
+
+<p id="p40"><span class="parno">40</span><span class="term">Which has a space on all sides</span>: <span class="gloss">it is possible to go around it with a yoked cart, or to go all the way around it with a ladder. This is called, "Which has a space on all sides."</span></p>
+
+<p id="p41"><span class="parno">41</span><span class="term">By means of begging</span>: <span class="gloss">having himself begged for a man, a servant … clay.</span></p>
+
+<p id="p42"><span class="parno">42</span><span class="term">A hut</span>: <span class="gloss">a wattle and daub hut.</span></p>
+
+<p id="p43"><span class="parno">43</span><span class="term">Builds</span>: <span class="gloss">building himself or getting someone else to build.</span></p>
+
+<hr>
+<p id="p44"><span class="parno">44</span><span class="term">Or he does not get monks to approve the site, or he exceeds the size limit</span>: <span class="gloss">if the site has not been approved through an act of one motion and three announcements, and he then builds a hut which exceeds the allowable length or breadth even by the width of a hair, he commits an offence of bad conduct for every action. When one piece is left to complete the hut, he commits a serious offence. When the last piece is finished, he commits an offence entailing suspension.</span></p>
+
+<p id="p45"><span class="parno">45</span><span class="term">He commits an offence entailing suspension</span>: <span class="gloss"> … This is the name and designation of this class of offence. Therefore, too, it is said that he commits an offence entailing suspension.</span></p>
+
+<h3>Permutations</h3>
+<h4>Permutations part 1</h4>
+<h5>Building oneself</h5>
+
+<p id="p46"><span class="parno">46</span>If a monk builds a hut whose site has not been approved, where harm will be done, and which lacks a space on all sides, he commits one offence entailing suspension and two offences of bad conduct. If a monk builds a hut whose site has not been approved, where harm will be done, but which has a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. If a monk builds a hut whose site has not been approved, where no harm will be done, but which lacks a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. If a monk builds a hut whose site has not been approved, where no harm will be done, and which has a space on all sides, he commits one offence entailing suspension.</p>
+
+<p id="p47"><span class="parno">47</span>If a monk builds a hut whose site has been approved, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. If a monk builds a hut whose site has been approved, where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. If a monk builds a hut whose site has been approved, where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. If a monk builds a hut whose site has been approved, where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p48"><span class="parno">48</span>If a monk builds a hut which exceeds the size limit, where harm will be done, and which lacks a space on all sides, he commits one offence entailing suspension and two offences of bad conduct. If a monk builds a hut which exceeds the size limit, where harm will be done, but which has a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. If a monk builds a hut which exceeds the size limit, where no harm will be done, but which lacks a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. If a monk builds a hut which exceeds the size limit, where no harm will be done, and which has a space on all sides, he commits one offence entailing suspension.</p>
+
+<p id="p49"><span class="parno">49</span>If a monk builds a hut which is within the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. If a monk builds a hut which is within the size limit, where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. If a monk builds a hut which is within the size limit, where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. If a monk builds a hut which is within the size limit, where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p50"><span class="parno">50</span>If a monk builds a hut whose site has not been approved, which exceeds the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences entailing suspension and two offences of bad conduct. If a monk builds a hut whose site has not been approved, which exceeds the size limit, where harm will be done, but which has a space on all sides, he commits two offences entailing suspension and one offence of bad conduct. If a monk builds a hut whose site has not been approved, which exceeds the size limit, where no harm will be done, but which lacks a space on all sides, he commits two offence entailing suspension and one offence of bad conduct. If a monk builds a hut whose site has not been approved, which exceeds the size limit, where no harm will be done, and which has a space on all sides, he commits two offence entailing suspension.</p>
+
+<p id="p51"><span class="parno">51</span>If a monk builds a hut whose site has been approved, which is within the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. If a monk builds a hut whose site has been approved, which is within the size limit, where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. If a monk builds a hut whose site has been approved, which is within the size limit, where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. If a monk builds a hut whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<h5>Appointing someone else to build</h5>
+
+<p id="p52"><span class="parno">52</span>A monk appoints someone to build him a hut. If they build one whose site has not been approved, where harm will be done, and which lacks a space on all sides, he commits one offence entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits one offence entailing suspension.</p>
+
+<p id="p53"><span class="parno">53</span>A monk appoints someone to build him a hut. If they build one whose site has been approved, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p54"><span class="parno">54</span>A monk appoints someone to build him a hut. If they build one which exceeds the size limit, where harm will be done, and which lacks a space on all sides, he commits one offence entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits one offence entailing suspension.</p>
+
+<p id="p55"><span class="parno">55</span>A monk appoints someone to build him a hut. If they build one which is within the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p56"><span class="parno">56</span>A monk appoints someone to build him a hut. If they build one whose site has not been approved, which exceeds the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits two offences entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits two offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits two offence entailing suspension.</p>
+
+<p id="p57"><span class="parno">57</span>A monk appoints someone to build him a hut. If they build one whose site has been approved, which is within the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<h5>Departing without informing of proper building procedure</h5>
+
+<p id="p58"><span class="parno">58</span>A monk appoints someone to build him a hut and then departs, but he does not tells them to build it on a site which has been approved, where no harm will be done, and which has a space on all sides. If they build a hut whose site has not been approved, where harm will be done, and which lacks a space on all sides, he commits one offence entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits one offence entailing suspension.</p>
+
+<p id="p59"><span class="parno">59</span>A monk appoints someone to build him a hut and then departs, but he does not tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides. If they build a hut whose site has been approved, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p60"><span class="parno">60</span>A monk appoints someone to build him a hut and then departs, but he does not tells them to build one which is within the size limit, where no harm will be done, and which has a space on all sides. If they build a hut which exceeds the size limit, where harm will be done, and which lacks a space on all sides, he commits one offence entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits one offence entailing suspension.</p>
+
+<p id="p61"><span class="parno">61</span>A monk appoints someone to build him a hut and then departs, but he does not tells them to build one which is within the size limit, where no harm will be done, and which has a space on all sides. If they build a hut which is within the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p62"><span class="parno">62</span>A monk appoints someone to build him a hut and then departs, but he does not tells them to build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides. If they build a hut whose site has not been approved, which exceeds the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits two offences entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits two offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits two offence entailing suspension.</p>
+
+<p id="p63"><span class="parno">63</span>A monk appoints someone to build him a hut and then departs, but he does not tells them to build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides. If they build a hut whose site has been approved, which is within the size limit, where harm will be done, and which lacks a space on all sides, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides, he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<h5>Departing and then hearing about wrong building procedure</h5>
+
+<p id="p64"><span class="parno">64</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, but they build one whose site has not been approved, where harm will be done, and which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one whose site has been approved, where no harm will be done, and which has a space on all sides. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p65"><span class="parno">65</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, but they build one whose site has not been approved, where harm will be done, but which has a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one whose site has been approved, and where no harm will be done. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p66"><span class="parno">66</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, but they build one whose site has not been approved, where no harm will be done, but which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one whose site has been approved, and which has a space on all sides. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p67"><span class="parno">67</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, but they build one whose site has not been approved, where no harm will be done, and which has a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one whose site has been approved. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p68"><span class="parno">68</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, but they build one whose site has been approved, where harm will be done, and which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one where no harm will be done, and which has a space on all sides. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p69"><span class="parno">69</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, but they build one whose site has been approved, where harm will be done, but which has a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one where no harm will be done. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p70"><span class="parno">70</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, but they build one whose site has been approved, where no harm will be done, but which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one which has a space on all sides. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<hr>
+<p id="p71"><span class="parno">71</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides, and they do build one whose site has been approved, where no harm will be done, and which has a space on all sides. There is no offence.</p>
+
+<p id="p72"><span class="parno">72</span>A monk appoints someone to build him a hut and then departs. He tells them to build one which is within the size limit, where no harm will be done, and which has a space on all sides, but they build one which exceeds the size limit, where harm will be done, and which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one which is within the size limit, where no harm will be done, and which has a space on all sides. … which is within the size limit, and where no harm will be done. … which is within the size limit, and which has a space on all sides. … which is within the size limit. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p73"><span class="parno">73</span>A monk appoints someone to build him a hut and then departs. He tells them to build one which is within the size limit, where no harm will be done, and which has a space on all sides, but they build one which is within the size limit, where harm will be done, and which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one where no harm will be done, and which has a space on all sides. … where no harm will be done. … which has a space on all sides. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct. … There is no offence.</p>
+
+<p id="p74"><span class="parno">74</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides, but they build one whose site has not been approved, which exceeds the size limit, where harm will be done, and which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides. … whose site has been approved, which is within the size limit, and where no harm will be done. … whose site has been approved, which is within the size limit, and which has a space on all sides. … whose site has been approved, and which is within the size limit. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct.</p>
+
+<p id="p75"><span class="parno">75</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides, but they build one whose site has been approved, which is within the size limit, where harm will be done, and which lacks a space on all sides. If he hears about it, he must go there himself, or send a messenger, and tell them to build one where no harm will be done, and which has a space on all sides. … where no harm will be done. … which has a space on all sides. If he neither goes himself nor sends a messenger, he commits an offence of bad conduct. … There is no offence.</p>
+
+<h5>Offences for appointed builders</h5>
+
+<p id="p76"><span class="parno">76</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides. If they build one whose site has not been approved, where harm will be done, and which lacks a space on all sides, the builders commit three offences of bad conduct. … where harm will be done, but which has a space on all sides, the builders commit two offences of bad conduct. … where no harm will be done, but which lacks a space on all sides, the builders commit two offences of bad conduct. … where no harm will be done, and which has a space on all sides, the builders commit one offence of bad conduct.</p>
+
+<p id="p77"><span class="parno">77</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, where no harm will be done, and which has a space on all sides. If they build one whose site has been approved, where harm will be done, and which lacks a space on all sides, the builders commit two offences of bad conduct. … where harm will be done, but which has a space on all sides, the builders commit one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, the builders commit one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p78"><span class="parno">78</span>A monk appoints someone to build him a hut and then departs. He tells them to build one which is within the size limit, where no harm will be done, and which has a space on all sides. If they build one which exceeds the size limit, where harm will be done, and which lacks a space on all sides, the builders commit three offences of bad conduct. … where harm will be done, but which has a space on all sides, the builders commit two offences of bad conduct. … where no harm will be done, but which lacks a space on all sides, the builders commit two offences of bad conduct. … where no harm will be done, and which has a space on all sides, the builders commit one offence of bad conduct.</p>
+
+<p id="p79"><span class="parno">79</span>A monk appoints someone to build him a hut and then departs. He tells them to build one which is within the size limit, where no harm will be done, and which has a space on all sides. If they build one which is within the size limit, where harm will be done, and which lacks a space on all sides, the builders commit two offences of bad conduct. … where harm will be done, but which has a space on all sides, the builders commit one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, the builders commit one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p80"><span class="parno">80</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides. If they build one whose site has not been approved, which exceeds the size limit, where harm will be done, and which lacks a space on all sides, the builders commit four offences of bad conduct. … where harm will be done, but which has a space on all sides, the builders commit three offences of bad conduct. … where no harm will be done, but which lacks a space on all sides, the builders commit three offences of bad conduct. … where no harm will be done, and which has a space on all sides, the builders commit two offence of bad conduct.</p>
+
+<p id="p81"><span class="parno">81</span>A monk appoints someone to build him a hut and then departs. He tells them to build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides. If they build one whose site has been approved, which is within the size limit, where harm will be done, and which lacks a space on all sides, the builders commit two offences of bad conduct. … where harm will be done, but which has a space on all sides, the builders commit one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides, the builders commit one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<h5>Unfinished when he returns</h5>
+
+<p id="p82"><span class="parno">82</span>A monk appoints someone to build him a hut and then departs. They build one whose site has not been approved, where harm will be done, and which lacks a space on all sides. If it is unfinished when he returns, that hut is to be given to someone else or it is to be demolished and rebuilt. If he does not give it to someone else, or does not demolish and rebuild it, he commits one offence entailing suspension<span class="note"><span class="details"><span class="p">Presumably he only commits the offence when the building is finished. See definition of "Or he does not get monks to approve the site, or he exceeds the size limit" above.</span></span></span> and two offences of bad conduct.</p>
+
+<p id="p83"><span class="parno">83</span>A monk appoints someone to build him a hut and then departs. They build one whose site has not been approved, where harm will be done, but which has a space on all sides. If it is unfinished when he returns, that hut is to be given to someone else or it is to be demolished and rebuilt. If he does not give it to someone else, or does not demolish and rebuild it, he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides. … he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides. … he commits one offence entailing suspension.</p>
+
+<p id="p84"><span class="parno">84</span>A monk appoints someone to build him a hut and then departs. They build one whose site has been approved, where harm will be done, and which lacks a space on all sides. If it is unfinished when he returns, that hut is to be given to someone else or it is to be demolished and rebuilt. If he does not give it to someone else, or does not demolish and rebuild it, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides. … he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides. … he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p85"><span class="parno">85</span>A monk appoints someone to build him a hut and then departs. They build one which exceeds the size limit, where harm will be done, and which lacks a space on all sides. If it is unfinished when he returns, that hut is to be given to someone else or it is to be demolished and rebuilt. If he does not give it to someone else, or does not demolish and rebuild it, he commits one offence entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides. … he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides. … he commits one offence entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits one offence entailing suspension.</p>
+
+<p id="p86"><span class="parno">86</span>A monk appoints someone to build him a hut and then departs. They build one which is within the size limit, where harm will be done, and which lacks a space on all sides. If it is unfinished when he returns, that hut is to be given to someone else or it is to be demolished and rebuilt. If he does not give it to someone else, or does not demolish and rebuild it, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides. … he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides. … he commits one offence of bad conduct. … where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<p id="p87"><span class="parno">87</span>A monk appoints someone to build him a hut and then departs. They build one whose site has not been approved, which exceeds the size limit, where harm will be done, and which lacks a space on all sides. If it is unfinished when he returns, that hut is to be given to someone else or it is to be demolished and rebuilt. If he does not give it to someone else, or does not demolish and rebuild it, he commits two offences entailing suspension and two offences of bad conduct. … where harm will be done, but which has a space on all sides. … he commits two offence entailing suspension and one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides. … he commits two offences entailing suspension and one offence of bad conduct. … where no harm will be done, and which has a space on all sides, he commits two offences entailing suspension.</p>
+
+<p id="p88"><span class="parno">88</span>A monk appoints someone to build him a hut and then departs. They build one whose site has been approved, which is within the size limit, where harm will be done, and which lacks a space on all sides. If it is unfinished when he returns, that hut is to be given to someone else or it is to be demolished and rebuilt. If he does not give it to someone else, or does not demolish and rebuild it, he commits two offences of bad conduct. … where harm will be done, but which has a space on all sides. … he commits one offence of bad conduct. … where no harm will be done, but which lacks a space on all sides. … he commits one offence of bad conduct.</p>
+
+<p id="p89"><span class="parno">89</span>A monk appoints someone to build him a hut and then departs. They build one whose site has been approved, which is within the size limit, where no harm will be done, and which has a space on all sides, there is no offence.</p>
+
+<h4>Permutations part 2</h4>
+
+<p id="p90"><span class="parno">90</span>If he finishes what he began himself, he commits an offence entailing suspension.</p>
+
+<p id="p91"><span class="parno">91</span>If others finish what he began himself, he commits an offence entailing suspension.</p>
+
+<p id="p92"><span class="parno">92</span>If he finishes himself what was begun by others, he commits an offence entailing suspension.</p>
+
+<p id="p93"><span class="parno">93</span>If others finish what was begun by others, he commits an offence entailing suspension.</p>
+
+<h3 >Non-offences</h3>
+
+<p id="p94"><span class="parno">94</span>There is no offence: if it is a cave, an overhang, a grass hut; if it is built for someone else; if it is anything apart from a dwelling; if he is insane; if he is the first offender.</p>
+
+<p id="p95"><span class="parno">95</span>The sixth training rule on building huts is finished.</p>
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_1417, msdiv342</span>Tena samayena buddho bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tena kho pana samayena āḷavakā bhikkhū saññācikāyo kuṭiyo kārāpenti assāmikāyo attuddesikāyo appamāṇikāyo. Tāyo na niṭṭhānaṁ gacchanti. Te yācanabahulā viññattibahulā viharanti— "purisaṁ detha, purisatthakaraṁ detha, goṇaṁ detha, sakaṭaṁ detha, vāsiṁ detha, parasuṁ detha, kuṭhāriṁ detha, kudālaṁ detha, nikhādanaṁ detha, valliṁ detha, veḷuṁ detha, muñjaṁ detha, pabbajaṁ detha, tiṇaṁ detha, mattikaṁ dethā"ti. Manussā upaddutā yācanāya upaddutā viññattiyā bhikkhū disvā ubbijjantipi uttasantipi palāyantipi aññenapi gacchanti aññenapi mukhaṁ karonti dvārampi thakenti, gāvimpi disvā palāyanti bhikkhūti maññamānā.</p>
+
+<p><span class="parno">2</span><span class="ms">p_1V_1418</span>Atha kho āyasmā mahākassapo rājagahe vassaṁvuṭṭho yena āḷavī tena pakkāmi. Anupubbena yena āḷavī tadavasari. Tatra sudaṁ āyasmā mahākassapo āḷaviyaṁ viharati aggāḷave cetiye. Atha kho āyasmā mahākassapo pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya āḷaviṁ piṇḍāya pāvisi. Manussā āyasmantaṁ mahākassapaṁ passitvā ubbijjantipi uttasantipi palāyantipi aññenapi gacchanti aññenapi mukhaṁ karonti dvārampi thakenti. Atha kho āyasmā mahākassapo āḷaviyaṁ piṇḍāya caritvā pacchābhattaṁ piṇḍapātapaṭikkanto bhikkhū āmantesi: </p>
+
+<p>"pubbāyaṁ, āvuso, āḷavī subhikkhā ahosi sulabhapiṇḍā sukarā uñchena paggahena yāpetuṁ; etarahi panāyaṁ āḷavī dubbhikkhā dullabhapiṇḍā, na sukarā uñchena paggahena yāpetuṁ. Ko nu kho, āvuso, hetu ko paccayo, yenāyaṁ āḷavī dubbhikkhā dullabhapiṇḍā, na sukarā uñchena paggahena yāpetun"ti? Atha kho te bhikkhū āyasmato mahākassapassa etamatthaṁ ārocesuṁ.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_1419, msdiv343</span>Atha kho bhagavā rājagahe yathābhirantaṁ viharitvā yena āḷavī tena cārikaṁ pakkāmi. Anupubbena cārikaṁ caramāno yena āḷavī tadavasari. Tatra sudaṁ bhagavā āḷaviyaṁ viharati aggāḷave cetiye.</p>
+
+<p>Atha kho āyasmā mahākassapo yena bhagavā tenupasankami; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā mahākassapo bhagavato etamatthaṁ ārocesi.</p>
+
+<p><span class="parno">4</span><span class="ms">p_1V_1420</span>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusanghaṁ sannipātāpetvā āḷavake bhikkhū paṭipucchi: "Saccaṁ kira tumhe, bhikkhave, saññācikāyo kuṭiyo kārāpetha assāmikāyo attuddesikāyo appamāṇikāyo. Tāyo na niṭṭhānaṁ gacchanti. Te tumhe yācanabahulā viññattibahulā viharatha— ‘purisaṁ detha purisatthakaraṁ detha … pe … tiṇaṁ detha mattikaṁ dethā’ti. Manussā upaddutā yācanāya upaddutā viññattiyā bhikkhū disvā ubbijjantipi uttasantipi palāyantipi aññenapi gacchanti aññenapi mukhaṁ karonti dvārampi thakenti, gāvimpi disvā palāyanti bhikkhūti maññamānā"ti?</p>
+
+<hr>
+<p>"Saccaṁ, bhagavā"ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma tumhe, moghapurisā, saṁyācikāyo kuṭiyo kārāpessatha assāmikāyo attuddesikāyo appamāṇikāyo. Tāyo na niṭṭhānaṁ gacchanti. Te tumhe yācanabahulā viññattibahulā viharissatha— "purisaṁ detha purisatthakaraṁ detha … pe … tiṇaṁ detha mattikaṁ dethā"ti. Netaṁ moghapurisā, appasannānaṁ vā pasādāya … pe … vigarahitvā dhammiṁ kathaṁ katvā bhikkhū āmantesi: </p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">5</span><span class="ms">p_1V_1421, msdiv344</span>"Bhūtapubbaṁ, bhikkhave, dve bhātaro isayo gangaṁ nadiṁ upanissāya vihariṁsu. Atha kho, bhikkhave, maṇikaṇṭho nāgarājā gangaṁ nadiṁ uttaritvā yena kaniṭṭho isi tenupasankami; upasankamitvā kaniṭṭhaṁ isiṁ sattakkhattuṁ bhogehi parikkhipitvā uparimuddhani mahantaṁ phaṇaṁ karitvā aṭṭhāsi. Atha kho, bhikkhave, kaniṭṭho isi tassa nāgassa bhayā kiso ahosi lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto. Addasa kho, bhikkhave, jeṭṭho isi kaniṭṭhaṁ isiṁ kisaṁ lūkhaṁ dubbaṇṇaṁ uppaṇḍuppaṇḍukajātaṁ dhamanisanthatagattaṁ. Disvāna kaniṭṭhaṁ isiṁ etadavoca: ‘kissa tvaṁ, bho, kiso lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto’ti? ‘Idha, bho, maṇikaṇṭho nāgarājā gangaṁ nadiṁ uttaritvā yenāhaṁ tenupasankami; upasankamitvā maṁ sattakkhattuṁ bhogehi parikkhipitvā uparimuddhani mahantaṁ phaṇaṁ karitvā aṭṭhāsi. Tassāhaṁ, bho, nāgassa bhayā kiso lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto’ti. ‘Icchasi pana tvaṁ, bho, tassa nāgassa anāgamanan’ti?</p>
+
+<hr>
+<p>‘Icchāmahaṁ, bho, tassa nāgassa anāgamanan’ti.</p>
+
+<hr>
+<p>‘Api pana tvaṁ, bho, tassa nāgassa kiñci passasī’ti?</p>
+
+<p>‘Passāmahaṁ, bho, maṇimassa kaṇṭhe pilandhanan’ti.</p>
+
+<p>‘Tena hi tvaṁ, bho, taṁ nāgaṁ maṇiṁ yāca—</p>
+
+<p><span class="parno">6</span><span class="ms">p_1V_1422</span>Atha kho, bhikkhave, maṇikaṇṭho nāgarājā gangaṁ nadiṁ uttaritvā yena kaniṭṭho isi tenupasankami; upasankamitvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitaṁ kho, bhikkhave, maṇikaṇṭhaṁ nāgarājānaṁ kaniṭṭho isi etadavoca: ‘maṇiṁ me, bho, dehi; maṇinā me attho’ti. Atha kho, bhikkhave, maṇikaṇṭho nāgarājā— ‘bhikkhu maṇiṁ yācati, bhikkhussa maṇinā attho’ti khippaññeva agamāsi.</p>
+
+<p><span class="parno">7</span><span class="ms">p_1V_1423</span>Dutiyampi kho, bhikkhave, maṇikaṇṭho nāgarājā gangaṁ nadiṁ uttaritvā yena kaniṭṭho isi tenupasankami. Addasa kho, bhikkhave, kaniṭṭho isi maṇikaṇṭhaṁ nāgarājānaṁ dūratova āgacchantaṁ. Disvāna maṇikaṇṭhaṁ nāgarājānaṁ etadavoca: ‘maṇiṁ me, bho, dehi; maṇinā me attho’ti. Atha kho, bhikkhave, maṇikaṇṭho nāgarājā— ‘bhikkhu maṇiṁ yācati, bhikkhussa maṇinā attho’ti tatova paṭinivatti.</p>
+
+<p><span class="parno">8</span><span class="ms">p_1V_1424</span>Tatiyampi kho, bhikkhave, maṇikaṇṭho nāgarājā gangaṁ nadiṁ uttarati. Addasa kho, bhikkhave, kaniṭṭho isi maṇikaṇṭhaṁ nāgarājānaṁ gangaṁ nadiṁ uttarantaṁ. Disvāna maṇikaṇṭhaṁ nāgarājānaṁ etadavoca: ‘maṇiṁ me, bho, dehi; maṇinā me attho’ti. Atha kho, bhikkhave, maṇikaṇṭho nāgarājā kaniṭṭhaṁ isiṁ gāthāhi ajjhabhāsi—</p>
+
+<blockquote>
+<p><span class="parno">9</span><span class="ms">p_1V_1425</span>‘Mamannapānaṁ vipulaṁ uḷāraṁ,
+<br>Uppajjatīmassa maṇissa hetu;
+<br>Taṁ te na dassaṁ atiyācakosi,
+<br>Na cāpi te assamamāgamissaṁ.</p>
+
+<p><span class="parno">10</span><span class="ms">p_1V_1426</span>Susū yathā sakkharadhotapāṇī,
+<br>Tāsesi maṁ selamāyācamāno;
+<br>Taṁ te na dassaṁ atiyācakosi,
+<br>Na cāpi te assamamāgamissan’ti.</p>
+</blockquote>
+
+<hr>
+<p><span class="parno">11</span><span class="ms">p_1V_1427</span>Atha kho, bhikkhave, maṇikaṇṭho nāgarājā— ‘bhikkhu maṇiṁ yācati, bhikkhussa maṇinā attho’ti pakkāmi. Tathā pakkantova ahosi, na puna paccāgañchi.</p>
+
+<p>Atha kho, bhikkhave, kaniṭṭho isi tassa nāgassa dassanīyassa adassanena bhiyyoso mattāya kiso ahosi lūkho dubbaṇṇo, uppaṇḍuppaṇḍukajāto dhamanisanthatagatto. Addasa kho, bhikkhave, jeṭṭho isi kaniṭṭhaṁ isiṁ bhiyyoso mattāya kisaṁ lūkhaṁ dubbaṇṇaṁ uppaṇḍuppaṇḍukajātaṁ dhamanisanthatagattaṁ. Disvāna kaniṭṭhaṁ isiṁ etadavoca: ‘kissa tvaṁ, bho, bhiyyoso mattāya kiso lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto’ti? ‘Tassāhaṁ, bho, nāgassa dassanīyassa adassanena bhiyyoso mattāya kiso lūkho dubbaṇṇo uppaṇḍuppaṇḍukajāto dhamanisanthatagatto’ti. Atha kho, bhikkhave, jeṭṭho isi kaniṭṭhaṁ isiṁ gāthāya ajjhabhāsi—</p>
+
+<hr>
+<blockquote>
+<p><span class="parno">12</span><span class="ms">p_1V_1428</span>‘Na taṁ yāce yassapiyaṁ jigīse,
+<br>Videsso hoti atiyācanāya;
+<br>Nāgo maṇiṁ yācito brāhmaṇena,
+<br>Adassanaññeva tadajjhagamā’ti.</p>
+</blockquote>
+
+<p><span class="parno">13</span><span class="ms">p_1V_1429</span>Tesañhi nāma, bhikkhave, tiracchānagatānaṁ pāṇānaṁ amanāpā bhavissati yācanā amanāpā viññatti. Kimangaṁ pana manussabhūtānaṁ.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">14</span><span class="ms">p_1V_1430, msdiv345</span>Bhūtapubbaṁ, bhikkhave, aññataro bhikkhu himavantapasse viharati aññatarasmiṁ vanasaṇḍe. Tassa kho, bhikkhave, vanasaṇḍassa avidūre mahantaṁ ninnaṁ pallalaṁ. Atha kho, bhikkhave, mahāsakuṇasangho tasmiṁ pallale divasaṁ gocaraṁ caritvā sāyaṁ taṁ vanasaṇḍaṁ vāsāya upagacchati. Atha kho, bhikkhave, so bhikkhu tassa sakuṇasanghassa saddena ubbāḷho yenāhaṁ tenupasankami; upasankamitvā maṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho ahaṁ, bhikkhave, taṁ bhikkhuṁ etadavoca: ‘kacci, bhikkhu, khamanīyaṁ kacci yāpanīyaṁ kaccisi appakilamathena addhānaṁ āgato? Kuto ca tvaṁ, bhikkhu, āgacchasī’ti?</p>
+
+<p>‘Khamanīyaṁ, bhagavā, yāpanīyaṁ, bhagavā. Appakilamathena cāhaṁ, bhante, addhānaṁ āgato. Atthi, bhante, himavantapasse mahāvanasaṇḍo. Tassa kho pana, bhante, vanasaṇḍassa avidūre mahantaṁ ninnaṁ pallalaṁ. Atha kho, bhante, mahāsakuṇasangho tasmiṁ pallale divasaṁ gocaraṁ caritvā sāyaṁ taṁ vanasaṇḍaṁ vāsāya upagacchati. Tato ahaṁ, bhagavā, āgacchāmi— tassa sakuṇasanghassa saddena ubbāḷho’ti.</p>
+
+<hr>
+<p>‘Icchasi pana tvaṁ, bhikkhu, tassa sakuṇasanghassa anāgamanan’ti?</p>
+
+<p>‘Icchāmahaṁ, bhagavā, tassa sakuṇasanghassa anāgamanan’ti.</p>
+
+<p>‘Tena hi tvaṁ, bhikkhu, tattha gantvā taṁ vanasaṇḍaṁ ajjhogāhetvā rattiyā paṭhamaṁ yāmaṁ tikkhattuṁ saddamanussāvehi— suṇantu me, bhonto sakuṇā, yāvatikā imasmiṁ vanasaṇḍe vāsaṁ upagatā, pattena me attho. Ekekaṁ me, bhonto, pattaṁ dadantū’ti. Rattiyā majjhimaṁ yāmaṁ … rattiyā pacchimaṁ yāmaṁ tikkhattuṁ saddamanussāvehi— ‘suṇantu me, bhonto sakuṇā, yāvatikā imasmiṁ vanasaṇḍe vāsaṁ upagatā, pattena me attho. Ekekaṁ me, bhonto, pattaṁ dadantū’ti.</p>
+
+<p><span class="parno">15</span><span class="ms">p_1V_1431</span>Atha kho, bhikkhave, so bhikkhu tattha gantvā taṁ vanasaṇḍaṁ ajjhogāhetvā rattiyā paṭhamaṁ yāmaṁ tikkhattuṁ saddamanussāvesi— ‘suṇantu me, bhonto sakuṇā, yāvatikā imasmiṁ vanasaṇḍe vāsaṁ upagatā, pattena me attho. Ekekaṁ me, bhonto, pattaṁ dadantū’ti. Rattiyā majjhimaṁ yāmaṁ … rattiyā pacchimaṁ yāmaṁ tikkhattuṁ saddamanussāvesi— ‘suṇantu me, bhonto sakuṇā, yāvatikā imasmiṁ vanasaṇḍe vāsaṁ upagatā, pattena me attho. Ekekaṁ me, bhonto, pattaṁ dadantū’ti. Atha kho, bhikkhave, so sakuṇasangho— ‘bhikkhu pattaṁ yācati bhikkhussa pattena attho’ti tamhā vanasaṇḍā pakkāmi. Tathā pakkantova ahosi na puna paccāgañchi. Tesañhi nāma, bhikkhave, tiracchānagatānaṁ pāṇānaṁ amanāpā bhavissati yācanā amanāpā viññatti. Kimangaṁ pana manussabhūtānaṁ.</p>
+
+<hr>
+<p><span class="parno">16</span><span class="ms">p_1V_1432, msdiv346</span>Bhūtapubbaṁ, bhikkhave, raṭṭhapālassa kulaputtassa pitā raṭṭhapālaṁ kulaputtaṁ gāthāya ajjhabhāsi—</p><blockquote>
+<p><span class="parno">17</span><span class="ms">p_1V_1433</span>‘Apāhaṁ te na jānāmi,
+<br>raṭṭhapāla bahū janā;
+<br>Te maṁ sangamma yācanti,
+<br>kasmā maṁ tvaṁ na yācasī’ti.</p>
+
+<p><span class="parno">18</span><span class="ms">p_1V_1434</span>‘Yācako appiyo hoti,
+<br>yācaṁ adadamappiyo;
+<br>Tasmāhaṁ taṁ na yācāmi,
+<br>mā me videssanā ahū’ti.</p></blockquote>
+
+<p><span class="parno">19</span><span class="ms">p_1V_1435</span>So hi nāma, bhikkhave, raṭṭhapālo kulaputto sakaṁ pitaraṁ evaṁ vakkhati. Kimangaṁ pana jano janaṁ.</p>
+
+<hr>
+<p><span class="parno">20</span><span class="ms">p_1V_1436, msdiv347</span>Gihīnaṁ, bhikkhave, dussaṁharāni bhogāni sambhatānipi durakkhiyāni. Tattha nāma tumhe, moghapurisā, evaṁ dussaṁharesu bhogesu sambhatesupi durakkhiyesu yācanabahulā viññattibahulā viharissatha— ‘purisaṁ detha, purisatthakaraṁ detha, goṇaṁ detha, sakaṭaṁ detha, vāsiṁ detha, parasuṁ detha, kuṭhāriṁ detha, kudālaṁ detha, nikhādanaṁ detha, valliṁ detha, veḷuṁ detha, muñjaṁ detha, pabbajaṁ detha, tiṇaṁ detha, mattikaṁ dethā’ti. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">21</span><span class="ms">p_1V_1437, msdiv348</span><span class="rule">"Saññācikāya pana bhikkhunā kuṭiṁ kārayamānena assāmikaṁ attuddesaṁ pamāṇikā kāretabbā. Tatridaṁ pamāṇaṁ— dīghaso dvādasa vidatthiyo, sugatavidatthiyā; tiriyaṁ sattantarā. Bhikkhū abhinetabbā vatthudesanāya. Tehi bhikkhūhi vatthu desetabbaṁ— anārambhaṁ saparikkamanaṁ. Sārambhe ce bhikkhu vatthusmiṁ aparikkamane saññācikāya kuṭiṁ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṁ vā atikkāmeyya, Sanghādiseso"</span>ti. (<i>6</i>:<b>10</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">22</span><span class="ms">p_1V_1438, msdiv349</span><b>Saññācikā</b> nāma sayaṁ yācitvā purisampi purisatthakarampi goṇampi sakaṭampi vāsimpi parasumpi kuṭhārimpi kudālampi nikhādanampi vallimpi veḷumpi muñjampi pabbajampi tiṇampi mattikampi.</p>
+
+<p><span class="parno">23</span><span class="ms">p_1V_1439</span><b>Kuṭi</b> nāma ullittā vā hoti avalittā vā ullittāvalittā vā.</p>
+
+<hr>
+<p><span class="parno">24</span><span class="ms">p_1V_1440</span><b>Kārayamānenā</b>'ti karonto vā kārāpento vā.</p>
+
+<p><span class="parno">25</span><span class="ms">p_1V_1441</span><b>Assāmikan</b>'ti na añño koci sāmiko hoti, itthī vā puriso vā gahaṭṭho vā pabbajito vā.</p>
+
+<p><span class="parno">26</span><span class="ms">p_1V_1442</span><b>Attuddesan</b>'ti attano atthāya.</p>
+
+<p><span class="parno">27</span><span class="ms">p_1V_1443</span><b>Pamāṇikā kāretabbā. Tatridaṁ pamāṇaṁ— dīghaso dvādasa vidatthiyo, sugatavidatthiyā</b>'ti bāhirimena mānena.</p>
+
+<p><span class="parno">28</span><span class="ms">p_1V_1444</span><b>Tiriyaṁ sattantarā</b>'ti abbhantarimena mānena.</p>
+
+<hr>
+<p><span class="parno">29</span><span class="ms">p_1V_1445</span><b>Bhikkhū abhinetabbā vatthudesanāyā</b>'ti tena kuṭikārakena bhikkhunā kuṭivatthuṁ sodhetvā sanghaṁ upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā vuḍḍhānaṁ bhikkhūnaṁ pāde vanditvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassa vacanīyo: "Ahaṁ, bhante, saññācikāya kuṭiṁ kattukāmo assāmikaṁ attuddesaṁ. Sohaṁ, bhante, sanghaṁ kuṭivatthuolokanaṁ yācāmī"ti. Dutiyampi yācitabbā. Tatiyampi yācitabbā. Sace sabbo sangho ussahati kuṭivatthuṁ oloketuṁ, sabbena saṇghena oloketabbaṁ. No ce sabbo sangho ussahati kuṭivatthuṁ oloketuṁ, ye tattha honti bhikkhū byattā paṭibalā sārambhaṁ anārambhaṁ saparikkamanaṁ aparikkamanaṁ jānituṁ te yācitvā sammannitabbā.</p>
+
+<p>"Evañca pana, bhikkhave, sammannitabbā. Byattena bhikkhunā paṭibalena sangho ñāpetabbo—</p>
+
+<hr>
+<p><span class="parno">30</span><span class="ms">p_1V_1446, msdiv350</span>‘Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu saññācikāya kuṭiṁ kattukāmo assāmikaṁ attuddesaṁ. So sanghaṁ kuṭivatthuolokanaṁ yācati. Yadi sanghassa pattakallaṁ, sangho itthannāmañca itthannāmañca bhikkhū sammanneyya itthannāmassa bhikkhuno kuṭivatthuṁ oloketuṁ. Esā ñatti.</p>
+
+<p><span class="parno">31</span><span class="ms">p_1V_1447</span>Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu saññācikāya kuṭiṁ kattukāmo assāmikaṁ attuddesaṁ. So sanghaṁ kuṭivatthuolokanaṁ yācati. sangho itthannāmañca itthannāmañca bhikkhū sammannati itthannāmassa bhikkhuno kuṭivatthuṁ oloketuṁ. Yassāyasmato khamati itthannāmassa ca itthannāmassa ca bhikkhūnaṁ sammuti itthannāmassa bhikkhuno kuṭivatthuṁ oloketuṁ, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<p><span class="parno">32</span><span class="ms">p_1V_1448</span>Sammatā saṇghena itthannāmo ca itthannāmo ca bhikkhū itthannāmassa bhikkhuno kuṭivatthuṁ oloketuṁ. Khamati sanghassa, tasmā tuṇhī, evametaṁ dhārayāmī’"ti.</p>
+
+<hr>
+<p><span class="parno">33</span><span class="ms">p_1V_1449, msdiv351</span>Tehi sammatehi bhikkhūhi tattha gantvā kuṭivatthu oloketabbaṁ, sārambhaṁ anārambhaṁ saparikkamanaṁ aparikkamanaṁ jānitabbaṁ. Sace sārambhaṁ hoti aparikkamanaṁ, "mā idha karī"ti vattabbo. Sace anārambhaṁ hoti saparikkamanaṁ, sanghassa ārocetabbaṁ— "anārambhaṁ saparikkamanan"ti. Tena kuṭikārakena bhikkhunā sanghaṁ upasankamitvā ekaṁsaṁ uttarāsangaṁ karitvā vuḍḍhānaṁ bhikkhūnaṁ pāde vanditvā ukkuṭikaṁ nisīditvā añjaliṁ paggahetvā evamassa vacanīyo: "Ahaṁ, bhante, saññācikāya kuṭiṁ kattukāmo assāmikaṁ attuddesaṁ. Sohaṁ, bhante, sanghaṁ kuṭivatthudesanaṁ yācāmī"ti. Dutiyampi yācitabbā. Tatiyampi yācitabbā. "Byattena bhikkhunā paṭibalena sangho ñāpetabbo—</p>
+
+<hr>
+<p><span class="parno">34</span><span class="ms">p_1V_1450, msdiv352</span>‘Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu saññācikāya kuṭiṁ kattukāmo assāmikaṁ attuddesaṁ. So sanghaṁ kuṭivatthudesanaṁ yācati. Yadi sanghassa pattakallaṁ, sangho itthannāmassa bhikkhuno kuṭivatthuṁ deseyya. Esā ñatti.</p>
+
+<p><span class="parno">35</span><span class="ms">p_1V_1451</span>Suṇātu me, bhante, sangho. Ayaṁ itthannāmo bhikkhu saññācikāya kuṭiṁ kattukāmo assāmikaṁ attuddesaṁ. So sanghaṁ kuṭivatthudesanaṁ yācati. sangho itthannāmassa bhikkhuno kuṭivatthuṁ deseti. Yassāyasmato khamati itthannāmassa bhikkhuno kuṭivatthussa desanā, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<p><span class="parno">36</span><span class="ms">p_1V_1452</span>Desitaṁ saṇghena itthannāmassa bhikkhuno kuṭivatthu. Khamati sanghassa, tasmā tuṇhī, evametaṁ dhārayāmī’"ti.</p>
+
+<hr>
+<p><span class="parno">37</span><span class="ms">p_1V_1453, msdiv353</span><b>Sārambhaṁ</b> nāma kipillikānaṁ vā āsayo hoti, upacikānaṁ vā āsayo hoti, undūrānaṁ vā āsayo hoti, ahīnaṁ vā āsayo hoti, vicchikānaṁ vā āsayo hoti, satapadīnaṁ vā āsayo hoti, hatthīnaṁ vā āsayo hoti, assānaṁ vā āsayo hoti, sīhānaṁ vā āsayo hoti, byagghānaṁ vā āsayo hoti, dīpīnaṁ vā āsayo hoti, acchānaṁ vā āsayo hoti, taracchānaṁ vā āsayo hoti, yesaṁ kesañci tiracchānagatānaṁ pāṇānaṁ āsayo hoti, pubbaṇṇanissitaṁ vā hoti, aparaṇṇanissitaṁ vā hoti, abbhāghātanissitaṁ vā hoti, āghātananissitaṁ vā hoti, susānanissitaṁ vā hoti, uyyānanissitaṁ vā hoti, rājavatthunissitaṁ vā hoti, hatthisālānissitaṁ vā hoti, assasālānissitaṁ vā hoti, bandhanāgāranissitaṁ vā hoti, pānāgāranissitaṁ vā hoti, sūnanissitaṁ vā hoti, racchānissitaṁ vā hoti, caccaranissitaṁ vā hoti, sabhānissitaṁ vā hoti, saṁsaraṇanissitaṁ vā hoti. Etaṁ sārambhaṁ nāma.</p>
+
+<hr>
+<p><span class="parno">38</span><span class="ms">p_1V_1454</span><b>Aparikkamanaṁ</b> nāma na sakkā hoti yathāyuttena sakaṭena anuparigantuṁ samantā nisseṇiyā anuparigantuṁ. Etaṁ aparikkamanaṁ nāma.</p>
+
+<p><span class="parno">39</span><span class="ms">p_1V_1455</span><b>Anārambhaṁ</b> nāma na kipillikānaṁ vā āsayo hoti, na upacikānaṁ vā āsayo hoti, na undūrānaṁ vā āsayo hoti, na ahīnaṁ vā āsayo hoti, na vicchikānaṁ vā āsayo hoti, na satapadīnaṁ vā āsayo hoti … pe … na saṁsaraṇanissitaṁ vā hoti. Etaṁ anārambhaṁ nāma.</p>
+
+<p><span class="parno">40</span><span class="ms">p_1V_1456</span><b>Saparikkamanaṁ</b> nāma sakkā hoti yathāyuttena sakaṭena anuparigantuṁ, samantā nisseṇiyā anuparigantuṁ. Etaṁ saparikkamanaṁ nāma.</p>
+
+<p><span class="parno">41</span><span class="ms">p_1V_1457</span><b>Saññācikā</b> nāma sayaṁ yācitvā purisampi purisatthakarampi … pe … mattikampi.</p>
+
+<p><span class="parno">42</span><span class="ms">p_1V_1458</span><b>Kuṭi</b> nāma ullittā vā hoti avalittā vā ullittāvalittā vā.</p>
+
+<p><span class="parno">43</span><span class="ms">p_1V_1459</span><b>Kāreyyā</b>'ti karoti vā kārāpeti vā.</p>
+
+<hr>
+<p><span class="parno">44</span><span class="ms">p_1V_1460</span><b>Bhikkhū vā anabhineyya, vatthudesanāya pamāṇaṁ vā atikkāmeyyā</b> ti ñattidutiyena kammena kuṭivatthuṁ na desāpetvā, āyāmato vā vitthārato vā antamaso kesaggamattampi atikkāmetvā karoti vā kārāpeti vā, payoge dukkaṭaṁ. Ekaṁ piṇḍaṁ anāgate āpatti thullaccayassa. Tasmiṁ piṇḍe āgate āpatti sanghādisesassa.</p>
+
+<p><span class="parno">45</span><span class="ms">p_1V_1461</span><b>Sanghādiseso</b>'ti … pe … tenapi vuccati "Sanghādiseso"ti.</p>
+
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+<h5>&nbsp;</h5>
+
+<p><span class="parno">46</span><span class="ms">p_1V_1462, msdiv354</span>Bhikkhu kuṭiṁ karoti adesitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ. Bhikkhu kuṭiṁ karoti adesitavatthukaṁ sārambhaṁ saparikkamanaṁ, āpatti sanghādisesena dukkaṭassa. Bhikkhu kuṭiṁ karoti adesitavatthukaṁ anārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dukkaṭassa. Bhikkhu kuṭiṁ karoti adesitavatthukaṁ anārambhaṁ saparikkamanaṁ, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">47</span><span class="ms">p_1V_1463, msdiv355</span>Bhikkhu kuṭiṁ karoti desitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ. Bhikkhu kuṭiṁ karoti desitavatthukaṁ sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa. Bhikkhu kuṭiṁ karoti desitavatthukaṁ anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa. Bhikkhu kuṭiṁ karoti desitavatthukaṁ anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">48</span><span class="ms">p_1V_1464</span>Bhikkhu kuṭiṁ karoti pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ. Bhikkhu kuṭiṁ karoti pamāṇātikkantaṁ sārambhaṁ saparikkamanaṁ, āpatti sanghādisesena dukkaṭassa. Bhikkhu kuṭiṁ karoti pamāṇātikkantaṁ anārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dukkaṭassa. Bhikkhu kuṭiṁ karoti pamāṇātikkantaṁ anārambhaṁ saparikkamanaṁ, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">49</span><span class="ms">p_1V_1465</span>Bhikkhu kuṭiṁ karoti pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ. Bhikkhu kuṭiṁ karoti pamāṇikaṁ sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa. Bhikkhu kuṭiṁ karoti pamāṇikaṁ anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa. Bhikkhu kuṭiṁ karoti pamāṇikaṁ anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">50</span><span class="ms">p_1V_1466</span>Bhikkhu kuṭiṁ karoti adesitavatthukaṁ pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dvinnaṁ dukkaṭānaṁ. Bhikkhu kuṭiṁ karoti adesitavatthukaṁ pamāṇātikkantaṁ sārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa. Bhikkhu kuṭiṁ karoti adesitavatthukaṁ pamāṇātikkantaṁ anārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa. Bhikkhu kuṭiṁ karoti adesitavatthukaṁ pamāṇātikkantaṁ anārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesānaṁ.</p>
+
+<p><span class="parno">51</span><span class="ms">p_1V_1467</span>Bhikkhu kuṭiṁ karoti desitavatthukaṁ pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ. Bhikkhu kuṭiṁ karoti desitavatthukaṁ pamāṇikaṁ sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa. Bhikkhu kuṭiṁ karoti desitavatthukaṁ pamāṇikaṁ anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa. Bhikkhu kuṭiṁ karoti desitavatthukaṁ pamāṇikaṁ anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">52</span><span class="ms">p_1V_1468, msdiv356</span>Bhikkhu samādisati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">53</span><span class="ms">p_1V_1469</span>Bhikkhu samādisati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">54</span><span class="ms">p_1V_1470</span>Bhikkhu samādisati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">55</span><span class="ms">p_1V_1471</span>Bhikkhu samādisati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">56</span><span class="ms">p_1V_1472</span>Bhikkhu samādisati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesānaṁ.</p>
+
+<p><span class="parno">57</span><span class="ms">p_1V_1473</span>Bhikkhu samādisati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">58</span><span class="ms">p_1V_1474, msdiv357</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Na ca samādisati— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">59</span><span class="ms">p_1V_1475</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Na ca samādisati— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">60</span><span class="ms">p_1V_1476</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Na ca samādisati— "pamāṇikā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">61</span><span class="ms">p_1V_1477</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Na ca samādisati— "pamāṇikā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">62</span><span class="ms">p_1V_1478</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Na ca samādisati— "desitavatthukā ca hotu pamāṇikā ca anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesānaṁ.</p>
+
+<p><span class="parno">63</span><span class="ms">p_1V_1479</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Na ca samādisati— "desitavatthukā ca hotu pamāṇikā ca anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">64</span><span class="ms">p_1V_1480, msdiv358</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ sārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati adesitavatthukā sārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">65</span><span class="ms">p_1V_1481</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ sārambhaṁ saparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati adesitavatthukā sārambhā saparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "desitavatthukā ca hotu anārambhā cā"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">66</span><span class="ms">p_1V_1482</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ anārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati adesitavatthukā anārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "desitavatthukā ca hotu saparikkamanā cā"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">67</span><span class="ms">p_1V_1483</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ anārambhaṁ saparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati adesitavatthukā anārambhā saparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "desitavatthukā hotū"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">68</span><span class="ms">p_1V_1484</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ sārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati desitavatthukā sārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "anārambhā ca hotu saparikkamanā cā"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">69</span><span class="ms">p_1V_1485</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ sārambhaṁ saparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati desitavatthukā sārambhā saparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "anārambhā hotū"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">70</span><span class="ms">p_1V_1486</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ anārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati desitavatthukā anārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "saparikkamanā hotū"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<hr>
+<p><span class="parno">71</span><span class="ms">p_1V_1487</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">72</span><span class="ms">p_1V_1488, msdiv359</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "pamāṇikā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati pamāṇātikkantā sārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "pamāṇikā ca hotu anārambhā ca saparikkamanā cā"ti … pe … "pamāṇikā ca hotu anārambhā cā"ti … pe … "pamāṇikā ca hotu saparikkamanā cā"ti … pe … "pamāṇikā hotū"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">73</span><span class="ms">p_1V_1489</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "pamāṇikā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti pamāṇikaṁ sārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati pamāṇikā sārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "anārambhā ca hotu saparikkamanā cā"ti … pe … "anārambhā hotū"ti … pe … "saparikkamanā hotū"ti … pe … anāpatti.</p>
+
+<p><span class="parno">74</span><span class="ms">p_1V_1490, msdiv360</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu pamāṇikā ca anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati adesitavatthukā pamāṇātikkantā sārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "desitavatthukā ca hotu pamāṇikā ca anārambhā ca saparikkamanā cā"ti … pe … "desitavatthukā ca hotu pamāṇikā ca anārambhā cā"ti … pe … "desitavatthukā ca hotu pamāṇikā ca saparikkamanā cā"ti … pe … "desitavatthukā ca hotu pamāṇikā cā"ti. No ce sāmaṁ vā gaccheyya dūtaṁ vā pahiṇeyya, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">75</span><span class="ms">p_1V_1491</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu pamāṇikā ca anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ pamāṇikaṁ sārambhaṁ aparikkamanaṁ. So suṇāti— "kuṭi kira me kayirati desitavatthukā pamāṇikā sārambhā aparikkamanā"ti. Tena bhikkhunā sāmaṁ vā gantabbaṁ dūto vā pāhetabbo— "anārambhā ca hotu saparikkamanā cā"ti … pe … "anārambhā hotū"ti … pe … "saparikkamanā hotū"ti … pe … anāpatti.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">76</span><span class="ms">p_1V_1492</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ tiṇṇaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ … pe … anārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ … pe … anārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa.</p>
+
+<p><span class="parno">77</span><span class="ms">p_1V_1493</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ sārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">78</span><span class="ms">p_1V_1494</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "pamāṇikā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ tiṇṇaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ … pe … anārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ … pe … anārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa.</p>
+
+<p><span class="parno">79</span><span class="ms">p_1V_1495</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "pamāṇikā ca hotu anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">80</span><span class="ms">p_1V_1496</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu pamāṇikā ca anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ catunnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ tiṇṇaṁ dukkaṭānaṁ … pe … anārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ tiṇṇaṁ dukkaṭānaṁ … pe … anārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ.</p>
+
+<p><span class="parno">81</span><span class="ms">p_1V_1497</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Samādisati ca— "desitavatthukā ca hotu pamāṇikā ca anārambhā ca saparikkamanā cā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ pamāṇikaṁ sārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti kārukānaṁ dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<h5>&nbsp;</h5>
+
+<p><span class="parno">82</span><span class="ms">p_1V_1498, msdiv361</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ sārambhaṁ aparikkamanaṁ. So ce vippakate āgacchati, tena bhikkhunā sā kuṭi aññassa vā dātabbā bhinditvā vā puna kātabbā. No ce aññassa vā dadeyya bhinditvā vā puna kāreyya, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ.</p>
+
+<p><span class="parno">83</span><span class="ms">p_1V_1499</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ sārambhaṁ saparikkamanaṁ. So ce vippakate āgacchati, tena bhikkhunā sā kuṭi aññassa vā dātabbā bhinditvā vā puna kātabbā. No ce aññassa vā dadeyya bhinditvā vā puna kāreyya, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ … pe … āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ … pe … āpatti sanghādisesassa.</p>
+
+<p><span class="parno">84</span><span class="ms">p_1V_1500</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ sārambhaṁ aparikkamanaṁ. So ce vippakate āgacchati, tena bhikkhunā sā kuṭi aññassa vā dātabbā bhinditvā vā puna kātabbā. No ce aññassa vā dadeyya bhinditvā vā puna kāreyya, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">85</span><span class="ms">p_1V_1501, msdiv362</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ. So ce vippakate āgacchati, tena bhikkhunā sā kuṭi aññassa vā dātabbā bhinditvā vā puna kātabbā. No ce aññassa vā dadeyya bhinditvā vā puna kāreyya, āpatti sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">86</span><span class="ms">p_1V_1502</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti pamāṇikaṁ sārambhaṁ aparikkamanaṁ. So ce vippakate āgacchati, tena bhikkhunā sā kuṭi aññassa vā dātabbā bhinditvā vā puna kātabbā. No ce aññassa vā dadeyya bhinditvā vā puna kāreyya, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<p><span class="parno">87</span><span class="ms">p_1V_1503</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti adesitavatthukaṁ pamāṇātikkantaṁ sārambhaṁ aparikkamanaṁ. So ce vippakate āgacchati, tena bhikkhunā sā kuṭi aññassa vā dātabbā bhinditvā vā puna kātabbā. No ce aññassa vā dadeyya bhinditvā vā puna kāreyya, āpatti dvinnaṁ sanghādisesena dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dvinnaṁ sanghādisesena dukkaṭassa … pe … anārambhaṁ saparikkamanaṁ, āpatti dvinnaṁ sanghādisesānaṁ.</p>
+
+<p><span class="parno">88</span><span class="ms">p_1V_1504</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ pamāṇikaṁ sārambhaṁ aparikkamanaṁ. So ce vippakate āgacchati, tena bhikkhunā sā kuṭi aññassa vā dātabbā bhinditvā vā puna kātabbā. No ce aññassa vā dadeyya bhinditvā vā puna kāreyya, āpatti dvinnaṁ dukkaṭānaṁ … pe … sārambhaṁ saparikkamanaṁ, āpatti dukkaṭassa … pe … anārambhaṁ aparikkamanaṁ, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">89</span><span class="ms">p_1V_1505</span>Bhikkhu samādisitvā pakkamati— "kuṭiṁ me karothā"ti. Tassa kuṭiṁ karonti desitavatthukaṁ pamāṇikaṁ anārambhaṁ saparikkamanaṁ, anāpatti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">90</span><span class="ms">p_1V_1506, msdiv363</span>Attanā vippakataṁ attanā pariyosāpeti, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">91</span><span class="ms">p_1V_1507</span>Attanā vippakataṁ parehi pariyosāpeti, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">92</span><span class="ms">p_1V_1508</span>Parehi vippakataṁ attanā pariyosāpeti, āpatti sanghādisesassa.</p>
+
+<p><span class="parno">93</span><span class="ms">p_1V_1509</span>Parehi vippakataṁ parehi pariyosāpeti, āpatti sanghādisesassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">94</span><span class="ms">p_1V_1510, msdiv364</span>Anāpatti— leṇe guhāya tiṇakuṭikāya aññassatthāya vāsāgāraṁ ṭhapetvā sabbattha, anāpatti ummattakassa ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">95</span><span class="ms">p_1V_1511</span>Kuṭikārasikkhāpadaṁ niṭṭhitaṁ chaṭṭhaṁ.</p>
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-sn5.html#content"></a><a id="next-sutta" href="../vi/bu-vb-sn7.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-sn.html">Sanghādisesas</a>Sanghādisesa 6
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

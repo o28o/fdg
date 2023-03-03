@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nikāya - Connected Discourses with the Kosalans 3.18</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 			</button>
+<span class="box-lbl">Light/Dark</span>
+
+ 
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="pressed w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! -->
+  	<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 	<h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
+ 
+ 				<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+					<div id="snheading">
+ 					<a href="sn01.html#SN01heading" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#SN02heading" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#SN03heading" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#SN04heading" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#SN05heading" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div><!-- End snheading div -->
+</div>  <!-- End div for SN sub-navigation -->
+
+
+
+
+<p>&nbsp;</p>
+
+<h3 id="SN3heading">Connected Discourses with the Kosalan</h3>
+ 
+ 			<div class="w3-bar-white bwnav"><!-- Div for lower SN sub-navigation -->
+ 		<a href="sn1.html#SN1heading" title="Connected Discourses with Devatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN1</a>
+ 		<a href="sn2.html#SN2heading" title="Connected Discourses with Young Devas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN2</a>
+ 		<a href="sn3.html#SN3heading" title="Connected Discourses with the Kosalan" class="w3-bar-item w3-hover-white w3-border-white w3-button active">SN3</a>
+ 		<a href="sn4.html#SN4heading" title="Connected Discourses with Māra" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN4</a>
+ 		<a href="sn5.html#SN5heading" title="Connected Discourses with Bhikkhunis" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN5</a>
+ 		<a href="sn6.html#SN6heading" title="Connected Discourses with Brahmas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN6</a>
+ 		<a href="sn7.html#SN7heading" title="Connected Discourses with Brahmins" class=" w3-bar-item w3-hover-white w3-border-white w3-button">SN7</a>
+ 		<a href="sn8.html#SN8heading" title="Connected Discourses with Vangisa" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN8</a>
+ 		<a href="sn9.html#SN9heading" title="Connected Discourses in the Woods" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN9</a>
+ 		<a href="sn10.html#SN10heading" title="Connected Discourses with Yakkhas" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN10</a>
+ 		<a href="sn11.html#SN11heading" title="Connected Discourses with Sakka" class="w3-bar-item w3-hover-white w3-border-white w3-button">SN11</a>
+ 	</div><!-- End div for lower SN sub-navigation -->
+ 
+ <!--      SN content begins here      -->
+  
+ <div id="content">
+
+
+<h3>SN3:18 Diligence (2)</h3>
+
+<div id="metaarea">
+ <ul class="translator">
+ <li>&copy;&nbsp;Translated from the Pali by Bhikkhu Bodhi.&nbsp;
+ <a href="../home/copyright.html#wp">(More copyright information)</a>
+ </li>
+ </ul>
+ </div>
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>At Sāvatthī. Sitting to one side, King Pasenadi of Kosala said to the Blessed One: "Here, venerable sir, while I was alone in seclusion, the following reflection arose in my mind: ‘The Dhamma has been well expounded by the Blessed One, and that is for one with good friends, good companions, good comrades, not for one with bad friends, bad companions, bad comrades.’"<span class="note" id="n243"><span class="details"><span class="p">[n.243] <a href="sn0-abbr.html" title="Abbreviations">Spk</a>: Although the Dhamma is well expounded for all, just as medicine is effective only for one who takes it so the Dhamma fulfils its purpose only for a compliant and faithful person having good friends, not for the other type.</span></span></span></p>
+
+<p id="p2"><span class="parno">2</span>"So it is, great king! So it is, great king! The Dhamma has been well expounded by me, and that is for one with good friends, good companions, good comrades, not for one with bad friends, bad companions, bad comrades.</p>
+
+<p id="p3"><span class="parno">3</span>"On one occasion, great king, I was living among the Sakyans, where there is a town of the Sakyans named Nagaraka.<span class="note" id="n244"><span class="details"><span class="p">[n.244] The incident reported here, including the discourse on good friendship, is related at <a href="sn45.2.html">SN45.2</a>. The later version, however, does not include the line "beings subject to illness are freed from illnessʺ <i>(vyadhidhamma satta vyadhiya parimuccanti)</i>, found at I 88,23. Explanatory notes to the embedded discourse will be found below Vol V, nn. <a href="sn45.html#fn.V.5">5</a>-7.</span></span></span> Then the bhikkhu Ānanda approached me, paid homage to me, sat down to one side, and said: ‘Venerable sir, this is half of the holy life, that is, good friendship, good companionship, good comradeship. ’</p>
+
+<p id="p4"><span class="parno">4</span>"When this was said, great king, I told the bhikkhu Ānanda: ‘Not so, Ānanda! Not so, Ānanda! This is the entire holy life, Ānanda, that is, good friendship, <a class="pts_pn">sn.i.88</a> good companionship, good comradeship. When a bhikkhu has a good friend, a good companion, a good comrade, it is to be expected that he will develop and cultivate the Noble Eightfold Path.</p>
+
+<p id="p5"><span class="parno">5</span>And how, Ānanda, does a bhikkhu who has a good friend, a good companion, a good comrade, develop and cultivate the Noble Eightfold Path? Here, Ānanda, a bhikkhu develops right view, which is based upon seclusion, dispassion, and cessation, maturing in release. He develops right intention … right speech … right action … right livelihood … right effort … right mindfulness … right concentration, which is based upon seclusion, dispassion, and cessation, maturing in release. It is in this way, Ānanda, that a bhikkhu who has a good friend, a good companion, a good comrade, develops and cultivates the Noble Eightfold Path.</p>
+
+<p id="p6"><span class="parno">6</span>"‘By the following method too, Ānanda, it may be understood how the entire holy life is good friendship, good companionship, good comradeship: by relying upon me as a good friend, Ānanda, beings subject to birth are freed from birth; beings subject to aging are freed from aging; beings subject to illness are freed from illness; beings subject to death are freed from death; beings subject to sorrow, lamentation, pain, displeasure, and despair are freed from sorrow, lamentation, pain, displeasure, and despair. By this method, Ānanda, it may be understood how the entire holy life is good friendship, good companionship, good comradeship.’</p>
+
+<p id="p7"><span class="parno">7</span>"Therefore, great king, you should train yourself thus: ‘I will be one who has good friends, good companions, good comrades. ’ It is in such a way that you should train yourself.</p>
+
+<hr>
+<p id="p8"><span class="parno">8</span>"When, great king, you have good friends, good companions, good comrades, <a class="pts_pn">sn.i.89</a> you should dwell with one thing for support: diligence in wholesome states.</p>
+
+<p id="p9"><span class="parno">9</span>"When, great king, you are dwelling diligently, with diligence for support, your retinue of harem women will think thus: ‘The king dwells diligently, with diligence for support. Come now, let us also dwell diligently, with diligence for support.’</p>
+
+<hr>
+<p><span class="parno">10–12</span>"When, great king, you are dwelling diligently, with diligence for support, your retinue of khattiya vassals will think thus … your troops will think thus … your subjects in town and countryside will think thus: ‘The king dwells diligently, with diligence for support. Come now, let us also dwell diligently, with diligence for support.’</p>
+
+<hr>
+<p id="p13"><span class="parno">13</span>"When, great king, you are dwelling diligently, with diligence for support, you yourself will be guarded and protected, your retinue of harem women will be guarded and protected, your treasury and storehouse will be guarded and protected.</p>
+
+<div class="verse">
+<p id="p14"><span class="parno" id="v412">14</span><span class="add">v.412</span> "For one who desires lofty riches
+<br>Following in succession,
+<br>The wise praise diligence
+<br>In doing deeds of merit.</p>
+
+<p id="p15"><span class="parno" id="v413">15</span><span class="add">v.413</span> "The wise person who is diligent
+<br>Secures both kinds of good:
+<br>The good visible in this very life
+<br>And the good of the future life.
+<br>The steadfast one, by attaining the good,
+<br>Is called a person of wisdom."</p>
+</div>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Sāvatthinidānaṁ. Ekamantaṁ nisinno kho rājā pasenadi kosalo bhagavantaṁ etadavoca: "idha mayhaṁ, bhante, rahogatassa paṭisallīnassa evaṁ cetaso parivitakko udapādi: ‘svākkhāto bhagavatā dhammo, so ca kho kalyāṇamittassa kalyāṇasahāyassa kalyāṇasampavankassa, no pāpamittassa no pāpasahāyassa no pāpasampavankassā’"ti.</p>
+
+<p><span class="parno">2</span>"Evametaṁ, mahārāja, evametaṁ, mahārāja. Svākkhāto, mahārāja, mayā dhammo. So ca kho kalyāṇamittassa kalyāṇasahāyassa kalyāṇasampavankassa, no pāpamittassa no pāpasahāyassa no pāpasampavankassāti.</p>
+
+<p><span class="parno">3</span>Ekamidāhaṁ, mahārāja, samayaṁ sakkesu viharāmi nagarakaṁ nāma sakyānaṁ nigamo. Atha kho, mahārāja, ānando bhikkhu yenāhaṁ tenupasankami; upasankamitvā maṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho, mahārāja, ānando bhikkhu maṁ etadavoca: ‘upaḍḍhamidaṁ, bhante, brahmacariyassa – yadidaṁ kalyāṇamittatā kalyāṇasahāyatā kalyāṇasampavankatā’ti.</p>
+
+<p><span class="parno">4</span>Evaṁ vuttāhaṁ, mahārāja, Ānandaṁ bhikkhuṁ etadavocaṁ: ‘mā hevaṁ, Ānanda, mā hevaṁ, Ānanda. Sakalameva hidaṁ, Ānanda, brahmacariyaṁ – yadidaṁ kalyāṇamittatā kalyāṇasahāyatā kalyāṇasampavankatā. Kalyāṇamittassetaṁ, Ānanda, bhikkhuno pāṭikankhaṁ kalyāṇasahāyassa kalyāṇasampavankassa ariyaṁ aṭṭhangikaṁ maggaṁ bhāvessati ariyaṁ aṭṭhangikaṁ maggaṁ bahulīkarissati.</p>
+
+<p><span class="parno">5</span>Kathañca, Ānanda, bhikkhu kalyāṇamitto kalyāṇasahāyo kalyāṇasampavanko ariyaṁ aṭṭhangikaṁ maggaṁ bhāveti, ariyaṁ aṭṭhangikaṁ maggaṁ bahulīkaroti? IdhĀnanda, bhikkhu sammādiṭṭhiṁ bhāveti vivekanissitaṁ virāganissitaṁ nirodhanissitaṁ vossaggapariṇāmiṁ, sammāsaṅkappaṁ bhāveti … sammāvācaṁ bhāveti … sammākammantaṁ bhāveti … sammāājīvaṁ bhāveti … sammāvāyāmaṁ bhāveti … sammāsatiṁ bhāveti … sammāsamādhiṁ bhāveti vivekanissitaṁ virāganissitaṁ nirodhanissitaṁ vossaggapariṇāmiṁ. Evaṁ kho, Ānanda, bhikkhu kalyāṇamitto kalyāṇasahāyo kalyāṇasampavanko ariyaṁ aṭṭhangikaṁ maggaṁ bhāveti, ariyaṁ aṭṭhangikaṁ maggaṁ bahulīkaroti. Tadamināpetaṁ, Ānanda, pariyāyena veditabbaṁ yathā sakalamevidaṁ brahmacariyaṁ – yadidaṁ kalyāṇamittatā kalyāṇasahāyatā kalyāṇasampavankatāti.</p>
+
+<p><span class="parno">6</span>Mamañhi, Ānanda, kalyāṇamittaṁ āgamma jātidhammā sattā jātiyā parimuccanti, jarādhammā sattā jarāya parimuccanti, byādhidhammā sattā byādhito parimuccanti, maraṇadhammā sattā maraṇena parimuccanti, soka&shy;parideva&shy;dukkha&shy;domanassupāyā&shy;sadhammā sattā soka&shy;parideva&shy;dukkha&shy;domanassupāyāsehi parimuccanti. Iminā kho etaṁ, Ānanda, pariyāyena veditabbaṁ yathā sakalamevidaṁ brahmacariyaṁ – yadidaṁ kalyāṇamittatā kalyāṇasahāyatā kalyāṇasampavankatā’ti.</p>
+
+<p><span class="parno">7</span>Tasmātiha te, mahārāja, evaṁ sikkhitabbaṁ: ‘kalyāṇamitto bhavissāmi kalyāṇasahāyo kalyāṇasampavanko’ti. Evañhi te, mahārāja, sikkhitabbaṁ.</p>
+
+<hr>
+<p><span class="parno">8</span>Kalyāṇamittassa te, mahārāja, kalyāṇasahāyassa kalyāṇasampavankassa ayaṁ eko dhammo upanissāya vihātabbo – appamādo kusalesu dhammesu.</p>
+
+<p><span class="parno">9</span>Appamattassa te, mahārāja, vihārato appamādaṁ upanissāya, itthāgārassa anuyantassa evaṁ bhavissati: ‘rājā kho appamatto vihārati, appamādaṁ upanissāya. Handa mayampi appamattā viharāma, appamādaṁ upanissāyā’ti.</p>
+
+<hr>
+<p><span class="parno">10</span>Appamattassa te, mahārāja, vihārato appamādaṁ upanissāya, khattiyānampi anuyantānaṁ evaṁ bhavissati: ‘rājā kho appamatto vihārati appamādaṁ upanissāya. Handa mayampi appamattā viharāma, appamādaṁ upanissāyā’ti.</p>
+
+<p><span class="parno">11</span>Appamattassa te, mahārāja, vihārato appamādaṁ upanissāya, balakāyassapi evaṁ bhavissati: ‘rājā kho appamatto vihārati appamādaṁ upanissāya. Handa mayampi appamattā viharāma, appamādaṁ upanissāyā’ti.</p>
+
+<p><span class="parno">12</span>Appamattassa te, mahārāja, vihārato appamādaṁ upanissāya, negamajānapadassapi evaṁ bhavissati: ‘rājā kho appamatto vihārati, appamādaṁ upanissāya. Handa mayampi appamattā viharāma, appamādaṁ upanissāyā’ti?</p>
+
+<hr>
+<p><span class="parno">13</span>Appamattassa te, mahārāja, vihārato appamādaṁ upanissāya, attāpi gutto rakkhito bhavissati – itthāgārampi guttaṁ rakkhitaṁ bhavissati, kosakoṭṭhāgārampi guttaṁ rakkhitaṁ bhavissatī"ti. Idamavoca … pe …</p>
+
+<div class="verse">
+<p><span class="parno">14</span>"Bhoge patthayamānena,
+<br>uḷāre aparāpare;
+<br>Appamādaṁ pasaṁsanti,
+<br>puññakiriyāsu paṇḍitā;
+<br>Appamatto ubho atthe,
+<br>adhiggaṇhāti paṇḍito.</p>
+
+<p><span class="parno">15</span>Diṭṭhe dhamme ca yo attho,
+<br>yo cattho samparāyiko;
+<br>Atthābhisamayā dhīro,
+<br>paṇḍitoti pavuccatī"ti.</p>
+</div>
+</div>
+</section>
+<div id="nextprev"><a id="previous-sutta" href="./sn3.17.html#content"></a><a id="next-sutta" href="./sn3.19.html#content"></a></div>
+</div><!--content-->
+<footer>
+<div class="w3-white .bwcontainer2">
+<div id="breadcrumbs"> 
+<a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn3.html">Connected Discourses with the Kosalan</a>SN3:18 Diligence (2)
+</div>
+	
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </div>
+</footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

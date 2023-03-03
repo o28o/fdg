@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2 Intro</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+ 	<p>&nbsp;</p>
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<h3>Introduction</h3>
+
+<p>This volume is an attempt to give an organized, detailed account of the training rules found in the Khandhakas that govern the life of bhikkhus, together with the traditions that have grown up around them. It is a companion to <i>The Buddhist Monastic Code, Volume One</i> (BMC1), which offers a similar treatment of the Pāṭimokkha training rules.</p>
+
+<p>There is some overlap between the material in this volume and that in BMC1, primarily because the Khandhaka rules and Pāṭimokkha rules also overlap. Although each set of rules has some topics to itself, there are other topics covered by both sets, and a full knowledge of the topic requires acquaintance with both. In some cases, the Pātimokkha rules and the explanations that accompany them in the Sutta Vibhaṅga seem to presuppose the Khandhaka rules; in other cases, the relationship is the other way around. Thus, just as it was necessary in BMC1 to make frequent references to the Khandhakas to gain a full sense of the range of some of the Pāṭimokkha rules, I have found it necessary in this volume to refer to material in BMC1 to make the Khandhaka rules more fully intelligible. In some instances, this has simply meant cross-referencing; it others, it has meant lifting whole passages from BMC1 into the discussion. I hope that the reader will not find these recapitulations tedious, for they give a sense of the complex interrelationships among the rules and help provide the sort of understanding that comes with viewing an item in all its relevant contexts.</p>
+
+<p>Many people have helped with the writing of this book. Most responsible for my originally undertaking the task was Ajaan Suwat Suvaco (Phra Bodhidhammācariya Thera), who in 1997 convinced me that the job had to be done and that I was in a good position to do it. When the first draft of the first edition was completed, Vens. Vajiro Bhikkhu, Paññāvuḍḍho Bhikkhu, and the bhikkhus at Abhayagiri Buddhist Monastery and Wat Pa Nanachat all read it and offered useful suggestions for improvements. In Bangkok, Phra Ñāṇavorodom also offered encouragement and support. For this second edition, Ven. Ñāṇatusita, of the Forest Hermitage in Kandy, Sri Lanka, provided a detailed critique that helped clear up many of the errors and inconsistencies in the first edition. The bhikkhus here at Metta Forest Monastery also provided valuable feedback on the first draft of this revision. Any errors remaining in the book, of course, are my own responsibility. If you spot them, please let me know so that they can be corrected in future editions.</p>
+
+<p>I ask to dedicate this volume to the memory of Ajaan Suwat Suvaco, in gratitude not only for his encouragement in this endeavor, but also for the many valuable lessons he has kindly taught me in Dhamma and Vinaya, through word and example, over the years.</p>
+
+<p><i>Ṭhānissaro Bhikkhu</i>
+<br> Metta Forest Monastery
+<br> Valley Center, CA 92082–1409 USA
+<br> March, 2007</p>
+
+<h2 id="intro">Introduction</h2> <h3>The Khandhakas</h3>
+<p>The Khandhakas — literally: “Collections” — form the second major portion of the Vinaya Piṭaka, following the Sutta Vibhaṅga and preceding the Parivāra. There are 22 Khandhakas in all, divided into two groups: the Mahāvagga (Mv.), or Great Chapter, composed of ten Khandhakas; and the Cullavagga (Cv.), or Lesser Chapter, composed of twelve. Each Khandhaka is loosely organized around a major topic, with minor topics inserted in a fairly haphazard fashion. The major topics are these:</p>
+
+<p><b>Mahāvagga (Mv.)</b>
+<br> Khandhaka&nbsp;1 (Mv.1) — Ordination
+<br> Khandhaka&nbsp;2 (Mv.2) — Uposatha
+<br> Khandhaka&nbsp;3 (Mv.3) — Rains-residence
+<br> Khandhaka&nbsp;4 (Mv.4) — Invitation
+<br> Khandhaka&nbsp;5 (Mv.5) — Footwear
+<br> Khandhaka&nbsp;6 (Mv.6) — Medicine
+<br> Khandhaka&nbsp;7 (Mv.7) — Kaṭhina
+<br> Khandhaka&nbsp;8 (Mv.8) — Robe-cloth
+<br> Khandhaka&nbsp;9 (Mv.9) — Principles for Community Transactions
+<br> Khandhaka&nbsp;10 (Mv.10) — Unanimity in the Community</p>
+
+<p><b>Cullavagga (Cv.)</b>
+<br> Khandhaka&nbsp;11 (Cv.1) — Disciplinary Transactions
+<br> Khandhaka&nbsp;12 (Cv.2) — Penance &amp; Probation
+<br> Khandhaka&nbsp;13 (Cv.3) — Imposing Penance &amp; Probation
+<br> Khandhaka&nbsp;14 (Cv.4) — Settling Issues
+<br> Khandhaka&nbsp;15 (Cv.5) — Miscellany
+<br> Khandhaka&nbsp;16 (Cv.6) — Lodgings
+<br> Khandhaka&nbsp;17 (Cv.7) — Schism
+<br> Khandhaka&nbsp;18 (Cv.8) — Protocols
+<br> Khandhaka&nbsp;19 (Cv.9) — Canceling the Pāṭimokkha
+<br> Khandhaka&nbsp;20 (Cv.10) — Bhikkhunīs
+<br> Khandhaka&nbsp;21 (Cv.11) — The First Council
+<br> Khandhaka&nbsp;21 (Cv.12) — The Second Council</p>
+
+<p>Aside from their opening and closing narratives, there seems little overall plan to the Khandhakas' arrangement. The first Khandhaka opens with a narrative of the events beginning with the Buddha&rsquo;s Awakening; continuing through the conversion of his two major disciples, Vens. Sāriputta and Moggallāna; and concluding with the Buddha&rsquo;s authorization of the Saṅgha to accept new members into its fold.</p>
+
+<p>The account of the Awakening and the Buddha&rsquo;s success in leading others to Awakening establishes his legitimacy as a lawgiver, the source of all the rules the Khandhakas contain.</p>
+
+<p>The story of the conversion of the two major disciples establishes two principles: the awakening of the Dhamma Eye in Ven. Sāriputta shows that the path to Awakening can be successfully taught outside of the Buddha&rsquo;s presence, using words other than the Buddha&rsquo;s own; the awakening of the Dhamma Eye in Ven. Moggallāna shows that the path to Awakening can be successfully taught by disciples who have not even met the Buddha. These two principles indicate that the path to Awakening did not necessarily depend on personal contact with the Buddha, and that it can be thus be legitimately and effectively be taught in times and places such as ours, far removed from his presence.</p>
+
+<p>The story of the Buddha&rsquo;s authorizing the Saṅgha to accept new members establishes the legitimacy of each new bhikkhu accepted in line with the prescribed pattern. The Saṅgha that has accepted him owes its status to an allowance coming from the Buddha, and his preceptor belongs to a lineage stretching back to the Buddha himself.</p>
+
+<p>In this way, the opening narratives establish the legitimacy of the Bhikkhu Saṅgha and of the training for the bhikkhus as embodied in the Khandhakas and the Vinaya as a whole.</p>
+
+<p>As for the closing narratives, both the Mahāvagga and Cullavagga end with accounts that juxtapose misbehaving city bhikkhus with well-behaved wilderness bhikkhus. The placement of these accounts seems intended to make a point: that the survival of the Dhamma-Vinaya will depend on bhikkhus who practice in the wilderness. This is in keeping with a passage from the discourses (<a href="../an/an7.21.html">AN7.21</a>) that “as long as the bhikkhus see their own benefit in wilderness dwellings, their growth can be expected, not their decline.”</p>
+
+<p>Between these framing narratives, however, the Khandhakas seem randomly ordered, and the internal arrangement of individual Khandhakas is often even more haphazard. This lack of clear organization creates a problem for any bhikkhu who wants to train by the Khandhaka rules, as rules related in practice are often scattered in widely different spots of the text. The purpose of this volume is to bring related rules together in a coherent way that will make them easier to understand and put into practice.</p>
+
+<p><b>Format.</b> Topically, the rules in the Khandhakas fall into three major categories, dealing with (1) general issues, (2) Community transactions, and (3) relations between bhikkhus and their co-religionists, i.e., bhikkhunīs and novices. To reflect these categories, this volume is organized into the same three parts. Each part is further divided into chapters, with each chapter devoted to a particular topic. With one exception (<a href="../bmc/bmc2.9.html">Chapter&nbsp;9</a>), each chapter falls into two sections: translations of the rules related to that topic, preceded by an explanatory discussion. The discussion provides an overview of the topic of the chapter, explaining the individual rules related to the topic, at the same time showing the relationships among the rules. Its purpose is to provide an understanding of the rules sufficient for any bhikkhu who wants to live by them. The rule translations are included to show the raw material from the Canon on which the discussion is based. As for <a href="../bmc/bmc2.9.html">Chapter&nbsp;9</a>, its topic — the protocols — is contained in detailed rules requiring little discussion, so its format is that of rule translations with brief annotations.</p>
+
+<p><b>Rules.</b> Formally, the rules in the Khandhakas are of three sorts: prohibitions, allowances, and directives. Most of the directives are <i>de facto</i> prohibitions: if a bhikkhu does not do as directed, he incurs a penalty. However, some of the directives — such as the protocols (<a href="../bmc/bmc2.9.html">Chapter&nbsp;9</a>) and the directions on how not to wear one’s robes — give more room for leeway. If a bhikkhu has good reason to deviate from them, he incurs no penalty in doing so. The penalty applies only when he deviates from them out of disrespect. Throughout this volume, the reader should assume all directives to be <i>de facto</i> prohibitions unless otherwise noted.</p>
+
+<p>In terms of their seriousness, the vast majority of rules in the Khandhakas involve dukkaṭas (offenses of wrong doing), with a small number of thullaccayas (grave offenses) scattered among them. The text makes occasional references to the rules in the Pāṭimokkha, and — as anyone who has read BMC1 will have noted — these references play an important role in determining the range of those rules. In this volume, where the seriousness of a particular offense is not mentioned, the reader should assume it to be a dukkaṭa. Other grades of offenses will be specifically noted.</p>
+
+<p>In most cases, the citations in the Rules section of each chapter are straight translations from the Canon. However, there are passages — especially among the directives — where a straight translation would prove unduly long and repetitive, adding nothing to the discussion, so I have simply given a synopsis of the main points in the passage. For procedures and transaction statements (<i>kamma-vācā</i>) used in Community transactions (<i>saṅgha-kamma</i>), I have simply noted the chapter and section number where these passages can be found in <i>The Book of Discipline</i> (BD). Frequently-used transaction statements are provided in the Appendices. Passages where my translation differs from that in BD are marked with a (§).</p>
+
+<p>A few of the passages in the Rules sections are not mentioned in their respective discussions. In most cases, this is because these rules are discussed elsewhere, either in BMC1 or in this volume. However, there are also cases where a particular rule or transaction developed over time. For instance, Mv.I shows that the procedures for Acceptance — the Community transaction whereby new members are admitted to the Saṅgha — underwent many changes in response to incidents before achieving their final form. In cases like this, the text-locations of the earlier forms of the rules and transaction patterns are cited in the Rules section, but only the final forms are translated and discussed. Rules in Cv.X that affect only the bhikkhunīs and not the bhikkhus are best understood in the context of the Bhikkhunī Pāṭimokkha, and so are not translated or discussed here.</p>
+
+<p><b>Discussions.</b> Unlike its treatment of the Pāṭimokkha rules, the Canon does not provide word-commentaries for the Khandhaka rules. And, although it does provide an origin story for each rule, there are unfortunately very few cases where the story actually helps to explain the rule. In some cases, the origin story is terse, adding little information to what is in the rule. In others, the origin story is extremely long (the English translation of the origin story to the first rule in Mv.I takes up 51 pages in BD) and yet has very little to do with the rule it introduces. For instance, the origin story to the rule permitting bhikkhus to accept gifts of robe-cloth from lay donors tells the life story of Jīvaka Komārabhacca, the first lay person to give such a gift to the Buddha. Although Jīvaka’s story is fascinating in and of itself, providing many interesting insights into attitudes in the early Saṅgha, it is largely irrelevant to the rule at hand.</p>
+
+<p>Thus the primary way the discussions use the Canon in helping to explain the rules is by placing each rule in connection to those related to it. From this placement one may gain a picture of how the rules fit into a coherent whole.</p>
+
+<p>Given this picture, it is then possible to add explanatory material from other sources. These sources include Buddhaghosa’s Commentary to the Vinaya (the <i>Samanta-pāsādikā</i>), two sub-commentaries (Sāriputta’s <i>Sārattha-dīpanī</i> and Kassapa’s <i>Vimati-vinodanī</i>), two Thai Vinaya guides (the <i>Pubbasikkhā-vaṇṇanā</i> and Prince Vajirañāṇa’s <i>Vinaya-mukha</i>), and — occasionally — oral traditions concerning the rules. Very few scholars have written on the Khandhakas of other early Buddhist schools, so references in this volume to other early Buddhist canons are rare. As in BMC1, I give preference to the earlier Theravādin sources when these conflict with later ones, but I do so with a strong sense of respect for the later sources, and without implying that my interpretation of the Canon is the only one valid. There is always a danger in being too independent in interpreting the tradition, in that strongly held opinions can lead to disharmony in the Community. Thus, even in instances where I think the later sources misunderstand the Canon, I have tried to give a faithful account of their positions — sometimes in great detail — so that those who wish to take those sources as their authority, or who wish to live harmoniously in Communities that do, may still use this book as a guide.</p>
+
+<p>And — again, as in BMC1 — I have tried to include whatever seems most worth knowing for the bhikkhu who aims at using the Khandhaka rules to foster the qualities of discipline in his life — so as to help train his mind and live in peace with his fellow bhikkhus — and for anyone who wants to support and encourage the bhikkhus in that aim.</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.html#content"></a><a id="next-sutta" href="../bmc/bmc2.1.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Introduction</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

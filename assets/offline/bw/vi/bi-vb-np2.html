@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Nissaggiya Pācittiya 2</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div id="content">
+<h2>Vinaya Pitaka - Monastic Rules</h2>
+
+<p>&nbsp;</p>
+
+
+	<ul id="vbnav">
+		<li><a href="../vi/bi-vb-pj.html#content">Pārājikas</a></li>
+		<li><a href="../vi/bi-vb-sn.html#content">Sanghādisesas</a></li>
+		<li id="active"><a href="../vi/bi-vb-np.html#content">Nissaggiya Pācittiyas</a></li>
+		<li><a href="../vi/bi-vb-pc.html#content">Pācittiyas</a></li>
+		<li><a href="../vi/bi-vb-pd.html#content">Pāṭidesanīyas</a></li>
+		<li><a href="../vi/bi-vb-sk.html#content">Sekhiyas</a></li>
+		<li><a href="../vi/bi-vb-as.html#content">Adhikaraṇa-Samathās</a></li>
+	</ul>
+
+<h2>Bhikkhuni Vibhanga - Nissaggiya Pācittiya 2: Not to Distribute Wrongly Acquired Robe Cloth.</h2>
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by <a href="../home/copyright.html#sc">Bhikkhu Brahmali.</a></li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At that time the enlightened one, the lord, was staying at Sāvatthī in the Jeta Grove in Anāthapiṇḍika’s monastery. Now at that time several nuns, having spent the rains in a village-residence, went to Sāvatthī keeping the customs,<span class="note"><span class="details"><span class="p"><i>vattasampannā</i>. Groups of <i>vattāni</i> enumerated at <span class="ref">Vb-a.297</span>. Here probably these nuns had not yet their new robes, as it was not the custom to get these during the rains. The village perhaps could not supply enough material and so the nuns proposed to get it in Sāvatthī.</span></span></span> dignified in deportment, badly dressed, wearing shabby robes. Lay-followers having seen these nuns, thinking: “These nuns are keeping the customs … wearing shabby robes, these nuns will have been robbed," gave robe-material to the Order of nuns not at the right time. The nun Thullanandā, saying: “Our <i>kaṭhina</i>-cloth is (formally) made,<span class="note"><span class="details"><span class="p"><i>atthata</i>. See <a class="cr">BD.2.5, n.1</a>, <a class="cr">BD.2.26, n.3</a>. The <i>kaṭhina</i>-cloth had to be made up after the rains, <a class="cr" href="#Vin.1.254">Vin.1.254</a>. Robe-material accruing not at the right time might be accepted by a monk, but then should be made up quickly, <a class="cr" href="#Vin.3.203">Vin.3.203</a> (<a class="cr">BD.2.25<i>f.</i></a>). It looks as if Thullanandā and her nuns had had their <i>kaṭhina</i> robes made up before these other nuns arrived at Sāvatthī, and that she took possession of the material given by the laity, and in having it distributed, ignored these incoming nuns.</span></span></span> it was robe-material given at the right time," having allotted it, had it distributed.<span class="note"><span class="details"><span class="p">This seems to imply that she did not distribute it herself. At <a class="cr" href="#Vin.1.285">Vin.1.285</a> monks are allowed to agree upon a monk possessed of five qualities as distributor of robe-material; the way in which it should be distributed is then set forth.</span></span></span> The lay-followers having seen those nuns, spoke thus: “Was not the robe-material received by the ladies?"</p>
+
+<p>"We did not receive robe-material, sirs. The lady Thullanandā, saying, ‘Our <i>kaṭhina</i>-cloth is (formally) made; it was robe-material given at the right time,’ having allotted it, had it distributed."</p>
+
+<p>The lay-followers … spread it about, saying:</p>
+
+<p>"How can the lady Thullanandā, thinking that robe-material (given) not at the right time was robe-material (given) at the right time, having allotted it, have it distributed?"</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>Nuns heard these lay-followers who … spread it about. Those who were modest nuns … spread it about, saying: “How can the lady Thullanandā thinking … have it distributed?"</p>
+
+<p>Then these nuns told this matter to the monks. The monks … to the lord. He said:</p>
+
+<p>"Is it true, as is said, monks, that the nun Thullanandā … had it distributed?"</p>
+
+<p>"It is true, lord."</p>
+
+<p>The enlightened one, the lord, rebuked them, saying:</p>
+
+<p>"How, monks, can the nun Thullanandā … have it distributed? It is not, monks, for pleasing those who are not (yet) pleased … this rule of training:</p>
+
+<h3>Final ruling</h3>
+
+<p id="p3"><span class="parno">3</span>"<span class="rule">Whatever nun, thinking that robe-material (given) not at the right time is robe-material (given) at the right time, having allotted it should have it distributed, there is an offence of expiation involving forfeiture."</span></p>
+
+<h3>Definitions</h3>
+
+<p id="p4"><span class="parno">4</span><span class="term">Whatever</span> means: <span class="gloss"> … nun is to be understood in this case.</span></p>
+
+<hr>
+<p id="p5"><span class="parno">5</span><span class="term">Robe-material (given) not at the right time</span><span class="note"><span class="details"><span class="p"><i>Cf.</i> Monks’ <a href="../vi/bu-vb-np3.html">Bhikkhus Nissaggiya Pācittiya 3</a>, <a class="cr" href="#Vin.3.204">Vin.3.204</a> (<a class="cr"></a>, where see note), and <i>cf.</i> <a class="cr" href="#BD.2.311"></a>, <a class="cr" href="#BD.2.366"></a>: “time of giving robes."</span></span></span> means: <span class="gloss">some that has accrued during the eleven months when the <i>kaṭhina</i> cloth is not (formally) made; some that has accrued during the seven months when the <i>kaṭhina</i> cloth is (formally) made; a gift (of material) offered<span class="note"><span class="details"><span class="p"><i>ādissa</i>. <span class="ref">Vin-a.546</span> explains by <i>apadisitvā</i>, pointed out, indicated, designated; <span class="ref">Vin-a.658</span> by <i>uddisitvā</i>, pointed out, proposed; while <span class="ref">Vin-a.916</span> says: “she saying, ‘having obtained (<i>sampattā</i>), let them distribute,’ and then she says, ‘I will give this to a group and this to you.’"</span></span></span> even at the right time; this means robe-material (given) not at the right time.</span></p>
+
+<h3>Permutations</h3>
+
+<p id="p6"><span class="parno">6</span>If thinking: “It is robe-material (given) at the right time," having allotted it, she has it distributed, in the action there is an offence of wrong-doing; on acquisition it is to be forfeited. It should be forfeited to an Order or to a group or to one nun. And thus, monks, should it be forfeited: <span class="kamma">“Ladies, I, thinking that this robe-material (given) not at the right time was robe-material (given) at the right time, having allotted it, caused it to be distributed; it is to be forfeited by me. I forfeit it to the Order."</span> … <span class="kamma">“ … let the Order give back … they should give back … I will give back (this robe-material) to the lady."</span></p>
+
+<p id="p7"><span class="parno">7</span>If she thinks that it is robe-material (given) not at the right time when it is robe-material (given) not at the right, time, and saying: “It is robe-material (given) at the right time," having allotted it she has it distributed, there is an offence of expiation involving forfeiture. If she is in doubt as to whether it is robe-material (given) not at the right time … there is an offence of wrong-doing. If she thinks that it is robe-material (given) at the right time when it is robe-material (given) not at the right time … there is no offence. If she thinks that it is robe-material (given) not at the right time when it is robe-material (given) at the right time, there is an offence of wrong-doing. If she is in doubt as to whether it is robe-material (given) at the right time, there is an offence of wrong-doing. If she thinks that it is robe-material (given) at the right time when it is robe-material (given) at the right time, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p8"><span class="parno">8</span>There is no offence if she thinks that it is robe-material (given) not at the right time when it is robe-material (given) not at the right time and has it distributed; if she thinks that it is robe-material (given) at the right time when it is robe-material (given) at the right time and has it distributed; if she is mad, if she is the first wrong-doer.</p>
+
+<p class="endsutta"><span class="parno">9</span>The second nissaggiyaṁ pācittiya rule is endeded.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_2V_2441, msdiv738</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena sambahulā bhikkhuniyo gāmakāvāse vassaṁvuṭṭhā sāvatthiṁ agamaṁsu vattasampannā iriyāpathasampannā duccoḷā lūkhacīvarā. Upāsakā tā bhikkhuniyo passitvā— “imā bhikkhuniyo vattasampannā iriyāpathasampannā duccoḷā lūkhacīvarā, imā bhikkhuniyo acchinnā bhavissantī”ti bhikkhunisaṁghassa akālacīvaraṁ adaṁsu. Thullanandā bhikkhunī— “amhākaṁ kathinaṁ atthataṁ kālacīvaran”ti adhiṭṭhahitvā bhājāpesi. Upāsakā tā bhikkhuniyo passitvā etadavocuṁ: “apayyāhi cīvaraṁ laddhan”ti?</p>
+
+<p>“Na mayaṁ, āvuso, cīvaraṁ labhāma. Ayyā thullanandā— ‘amhākaṁ kathinaṁ atthataṁ kālacīvaran’ti adhiṭṭhahitvā bhājāpesī”ti.</p>
+
+<p>Upāsakā ujjhāyanti khiyyanti vipācenti: </p>
+
+<p>“kathañhi nāma ayyā thullanandā akālacīvaraṁ ‘kālacīvaran’ti adhiṭṭhahitvā bhājāpessatī”ti.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_2V_2442</span>Assosuṁ kho bhikkhuniyo tesaṁ upāsakānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Yā tā bhikkhuniyo appicchā … pe … tā ujjhāyanti khiyyanti vipācenti:  “kathañhi nāma ayyā thullanandā akālacīvaraṁ ‘kālacīvaran’ti adhiṭṭhahitvā bhājāpessatī”ti.</p>
+
+<p>Atha kho tā bhikkhuniyo bhikkhūnaṁ etamatthaṁ ārocesuṁ. Bhikkhū bhagavato etamatthaṁ ārocesuṁ … pe …“saccaṁ kira, bhikkhave, thullanandā bhikkhunī akālacīvaraṁ ‘kālacīvaran’ti adhiṭṭhahitvā bhājāpetī”ti?</p>
+
+<p>“Saccaṁ, bhagavā”ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe …</p>
+
+<p>Kathañhi nāma, bhikkhave, thullanandā bhikkhunī akālacīvaraṁ “kālacīvaran”ti adhiṭṭhahitvā bhājāpessati. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, bhikkhuniyo imaṁ sikkhāpadaṁ uddisantu—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">3</span><span class="ms">p_2V_2443, msdiv739</span><span class="rule">“Yā pana bhikkhunī akālacīvaraṁ ‘kālacīvaran’ti adhiṭṭhahitvā bhājāpeyya, nissaggiyaṁ pācittiyan”</span>ti. (<i>2</i>:27)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">4</span><span class="ms">p_2V_2444, msdiv740</span><b>Yā panā</b>'ti yā yādisā … pe … <b>bhikkhunī</b>'ti … pe … ayaṁ imasmiṁ atthe adhippetā bhikkhunīti.</p>
+
+<hr>
+<p><span class="parno">5</span><span class="ms">p_2V_2445</span><b>Akālacīvaraṁ</b> nāma anatthate kathine ekādasamāse uppannaṁ, atthate kathine sattamāse uppannaṁ, kālepi ādissa dinnaṁ, etaṁ akālacīvaraṁ nāma.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">6</span><span class="ms">p_2V_2446</span>Akālacīvaraṁ “kālacīvaran”ti adhiṭṭhahitvā bhājāpeti, payoge dukkaṭaṁ. Paṭilābhena nissaggiyaṁ hoti. Nissajjitabbaṁ saṁghassa vā gaṇassa vā ekabhikkhuniyā vā. Evañca pana, bhikkhave, nissajjitabbaṁ … pe … “idaṁ me, ayye, akālacīvaraṁ ‘kālacīvaran’ti adhiṭṭhahitvā bhājāpitaṁ nissaggiyaṁ, imāhaṁ saṁghassa nissajjāmī”ti … pe … dadeyyā”ti … pe … dadeyyun”ti … pe … ayyāya dammī”ti.</p>
+
+<p><span class="parno">7</span><span class="ms">p_2V_2447, msdiv741</span>Akālacīvare akālacīvarasaññā “kālacīvaran”ti adhiṭṭhahitvā bhājāpeti, nissaggiyaṁ pācittiyaṁ. Akālacīvare vematikā “kālacīvaran”ti adhiṭṭhahitvā bhājāpeti, āpatti dukkaṭassa. Akālacīvare kālacīvarasaññā “kālacīvaran”ti adhiṭṭhahitvā bhājāpeti, anāpatti. Kālacīvare akālacīvarasaññā, āpatti dukkaṭassa. Kālacīvare vematikā, āpatti dukkaṭassa. Kālacīvare kālacīvarasaññā, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">8</span><span class="ms">p_2V_2448, msdiv742</span>Anāpatti— akālacīvaraṁ kālacīvarasaññā bhājāpeti, kālacīvaraṁ kālacīvarasaññā bhājāpeti, ummattikāya, ādikammikāyāti.</p>
+
+<p class="endsutta"><span class="parno">9</span><span class="ms">p_2V_2449</span>Dutiyasikkhāpadaṁ niṭṭhitaṁ.</p>
+
+</div><!--End Pali-->
+</section>
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-np1.html#content"></a><a id="next-sutta" href="../vi/bi-vb-np3.html#content"></a></div>
+
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya 2
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

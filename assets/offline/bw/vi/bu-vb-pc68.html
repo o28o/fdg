@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Pācittiya&nbsp;68</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Pācittiya&nbsp;68: Not to affirm obstacles to the path as being obstacles.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by I.B. Horner.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>… at Sāvatthī in the Jeta Grove in Anāthapiṇḍika’s monastery. Now at that time a pernicious view had arisen to a monk named Ariṭṭha who had formerly been a vulture-trainer, like this:</p>
+
+<p>"In so far as I understand dhamma taught by the lord, it is that in following those things called stumbling-blocks by the lord, there is no stumbling-block at all."</p>
+
+<p>Several monks heard: "A pernicious view has arisen to the monk named Ariṭṭha, who was formerly a vulture-trainer, like this: ‘In so far as I understand … there is no stumbling-block at all.’"</p>
+
+<hr>
+<p>Then these monks approached the monk Ariṭṭha, who had formerly been a vulture-trainer, and having approached they spoke thus to the monk Ariṭṭha, who had formerly been a vulture-trainer:</p>
+
+<p>"Is it true, as is said, reverend Ariṭṭha, that a pernicious view has arisen to you, like this: ‘In so far as I understand … no stumbling-block at all’?"</p>
+
+<hr>
+<p>"Undoubtedly, your reverences, as I understand dhamma taught by the lord, it is that in following those things called stumbling-blocks by the lord, there is no stumbling-block at all."</p>
+
+<p id="p2"><span class="parno">2</span>"Do not speak thus, reverend Ariṭṭha; do not misrepresent the lord, misrepresentation of the lord is not at all seemly, and the lord certainly would not speak thus. Reverend Ariṭṭha, in many a figure are things that are stumbling-blocks called stumbling-blocks by the lord, and in following these, there is a veritable stumbling-block. Sense-pleasures are declared by the lord to be (things) affording little satisfaction, of much pain, of much tribulation, wherein is more danger. Sense-pleasures are declared by the lord (to be) like a skeleton, of much pain, of much tribulation, wherein is more danger. Sense-pleasures are declared by the lord (to be) like a lump of meat, of much pain, of much tribulation, wherein is more danger. Sense-pleasure are declared by the lord (to be) like a fire-brand of dry-grass, … Sense-pleasures are declared by the lord (to be) like a pit of glowing embers, … Sense-pleasures are declared by the lord (to be) like a dream, … Sense-pleasures are declared by the lord (to be) like something borrowed, … Sense-pleasures are declared by the lord (to be) like the fruits of a tree, … Sense-pleasures are declared by the lord (to be) like a slaughterhouse, … Sense-pleasures are declared by the lord (to be) like an impaling-stake, … Sense-pleasures are declared by the lord (to be) like a snake’s head, of much pain, of much tribulation, wherein is more danger."</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>Yet the monk Arittha, who had formerly been a vulture-trainer, being spoken to thus by these monks, expressed that pernicious view as before, obstinately holding to it, adhering to it:</p>
+
+<p>"Undoubtedly, your reverences, as I understand dhamma taught by the lord, it is that in following those things called stumbling-blocks by the lord, there is no stumbling-block at all."</p>
+
+<p>And since those monks were unable to dissuade the monk Ariṭṭha, who had formerly been a vulture-trainer, from that pernicious view, then those monks approached the lord, and having approached they told this matter to the lord. Then the lord, on this occasion, in this connection, having had the Order of monks convened, questioned the monk Arittha, who had formerly been a vulture-trainer, saying :</p>
+
+<hr>
+<p>"Is it true, as is said, that to you, Ariṭṭha, a pernicious view arose like this: ‘In so far as I understand dhamma … no stumbling-block at all’?"</p>
+
+<p>"Undoubtedly, lord, as I understand dhamma … no stumbling-block at all."</p>
+
+<p id="p4"><span class="parno">4</span>"To whom then do you, foolish man, understand that dhamma was taught thus by me? Are not, foolish man, things that are stumbling-blocks called stumbling-blocks by me in many a figure, and in following these is there not a veritable stumbling-block? Sense-pleasures are declared by me (to be things) affording little pleasure, of much pain, of much tribulation, wherein is more danger … Sense-pleasures are declared by me (to be) like a snake’s head, of much pain, of much tribulation, wherein is more danger. And yet you, foolish man, not only misrepresent me because of your own wrong grasp, but you also injure yourself and give rise to much demerit which for a long time will be for you, foolish man, of woe and sorrow. It is not, foolish man, for pleasing those who are not (yet) pleased … And thus, monks, this rule of training should be set forth:</p>
+
+<hr>
+<p id="p5"><span class="parno">5</span><span class="rule">"Whatever monk should speak thus: ‘In so far as I understand dhamma taught by the lord, it is that in following those things called stumbling-blocks by the lord, there is no stumbling-block at all’; that monk should be spoken to by the monks thus: ‘Do not, venerable one, speak thus, do not misrepresent the lord, misrepresentation of the lord is not at all seemly, and the lord certainly would not speak thus; in many a figure, your reverence, are things that are stumbling-blocks called stumbling-blocks by the lord, and in following these there is a veritable stumbling-block.’ And if that monk, when he has been spoken to thus by the monks, should persist as before, that monk should be admonished by the monks up to the third time for giving up that (course). If, being admonished up to the third time, he should give it up, that is good. But if he should not give it up, there is an offence of expiation."</span></p>
+
+<hr>
+<p id="p6"><span class="parno">6</span><span class="term">Whatever</span> means <span class="gloss"> … monk is to be understood in this case.</span></p>
+
+<p id="p7"><span class="parno">7</span><span class="term">Should speak thus</span> means <span class="gloss">‘In so far as I understand dhamma taught by the lord … no stumbling-block at all.’</span></p>
+
+<p id="p8"><span class="parno">8</span><span class="term">That monk</span> means <span class="gloss">the monk who speaks thus.</span></p>
+
+<hr>
+<p id="p9"><span class="parno">9</span><span class="term">By the monks</span> means <span class="gloss">by other monks, who see, who hear; he should be told by these: "Do not, venerable one, speak thus … a veritable stumbling-block." And a second time he should be told … And a third time he should be told … If he gives it up, that is good. If he does not give it up, there is an offence of wrong-doing. If, having heard, they do not speak, there is an offence of wrong-doing. That monk, having been pulled to the midst of the Order, should be told: "Do not, venerable one, speak thus … a veritable stumbling-block." And a second time he should be told … And a third time he should be told. … If he gives it up, that is good; if he does not give it up, there is an offence of wrong-doing.</span><span class="term"> That monk should be admonished</span>.And thus, monks, should he be admonished: the Order should be informed by an experienced, competent monk, saying:</p>
+
+<p id="p10"><span class="parno">10</span>‘Honoured sirs, let the Order listen to me. A pernicious view has arisen to the monk so and so, like this: "In so far as I understand … no stumbling-block at all." He does not give up that view. If it seems right to the Order, let the Order admonish the monk so and so that he may give up this view. This is the motion.</p>
+
+<p id="p11"><span class="parno">11</span>Honoured sirs, let the Order listen to me: A pernicious view has arisen to the monk so and so … He does not give up this view. The Order admonishes the monk so and so that he may give up this view. If the admonishing of the monk so and so that he may give up this view is pleasing to the venerable ones, let them be silent; if it is not pleasing, then you should speak. And a second time I speak forth this matter … And a third time I speak forth this matter.</p>
+
+<hr>
+<p id="p12"><span class="parno">12</span>Honoured sirs, let the Order listen to me … then you should speak.</p>
+
+<hr>
+<p id="p13"><span class="parno">13</span>The monk so and so has been admonished by the Order for giving up this view. If it is pleasing to the Order, let them be silent … thus do I understand this.’</p>
+
+<p id="p14"><span class="parno">14</span>As a result of the motion there is an offence of wrongdoing; as a result of two proclamations there are offences of wrong-doing; at the end of the proclamations there is an offence of expiation.</p>
+
+<p id="p15"><span class="parno">15</span>If he thinks that it is a legally valid act when it is a legally valid act (and) does not give it up, there is an offence of expiation. If he is in doubt as to whether it is a legally valid act … If he thinks that it is not a legally valid act when it is a legally valid act (and) does not give it up, there is an offence of expiation.</p>
+
+<p id="p16"><span class="parno">16</span>If he thinks that it is a legally valid act when it is not a legally valid act, there is an offence of wrong-doing. If he is in doubt as to whether it is not a legally valid act, there is an offence of wrong-doing. If he thinks that it is not a legally valid act when it is not a legally valid act, there is no offence.</p>
+
+<hr>
+<p id="p17"><span class="parno">17</span>There is no offence if he is not admonished; if he gives it up; if he is mad, if he is the first wrong-doer.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">18</span>The Eighth</p>
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p><span class="parno">1</span><span class="ms">p_2V_1247, msdiv417</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena ariṭṭhassa nāma bhikkhuno gaddhabādhipubbassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ hoti—</p>
+
+<p>"Tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā"ti.</p>
+
+<p>Assosuṁ kho sambahulā bhikkhū— "ariṭṭhassa kira nāma bhikkhuno gaddhabādhipubbassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ— ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā’"ti.</p>
+
+<hr>
+<p>Atha kho te bhikkhū yena ariṭṭho bhikkhu gaddhabādhipubbo tenupasankamiṁsu; upasankamitvā ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etadavocuṁ:</p>
+
+<p>"Saccaṁ kira te, āvuso ariṭṭha, evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ— ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā’"ti?</p>
+
+<hr>
+<p>"Evaṁ byā kho ahaṁ, āvuso, bhagavatā dhammaṁ desitaṁ ājānāmi— ‘yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_2V_1248</span> "Mā, āvuso ariṭṭha, evaṁ avaca. Mā bhagavantaṁ abbhācikkhi. Na hi sādhu bhagavato abbhakkhānaṁ. Na hi bhagavā evaṁ vadeyya. Anekapariyāyenāvuso ariṭṭha, antarāyikā dhammā antarāyikā vuttā bhagavatā. Alañca pana te paṭisevato antarāyāya. Appassādā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Aṭṭhikankalūpamā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Maṁsapesūpamā kāmā vuttā bhagavatā … pe … tiṇukkūpamā kāmā vuttā bhagavatā … angārakāsūpamā kāmā vuttā bhagavatā … supinakūpamā kāmā vuttā bhagavatā … yācitakūpamā kāmā vuttā bhagavatā … rukkhaphalūpamā kāmā vuttā bhagavatā … asisūnūpamā kāmā vuttā bhagavatā … sattisūlūpamā kāmā vuttā bhagavatā … sappasirūpamā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo"ti.</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_2V_1249</span>Evampi kho ariṭṭho bhikkhu gaddhabādhipubbo tehi bhikkhūhi vuccamāno tatheva taṁ pāpakaṁ diṭṭhigataṁ thāmasā parāmāsā abhinivissa voharati—</p>
+
+<p>"evaṁ byā kho ahaṁ, āvuso, bhagavatā dhammaṁ desitaṁ ājānāmi— ‘yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā’"ti.</p>
+
+<p>Yato ca kho te bhikkhū nāsakkhiṁsu ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etasmā pāpakā diṭṭhigatā vivecetuṁ, atha kho te bhikkhū yena bhagavā tenupasankamiṁsu; upasankamitvā bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusaṇghaṁ sannipātāpetvā ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ paṭipucchi:</p>
+
+<hr>
+<p>"Saccaṁ kira te, ariṭṭha, evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ— ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’"ti?</p>
+
+<p>"Evaṁ byā kho ahaṁ, bhante, bhagavatā dhammaṁ desitaṁ ājānāmi— ‘yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’"ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_2V_1250</span>Kassa nu kho nāma tvaṁ, moghapurisa, mayā evaṁ dhammaṁ desitaṁ ājānāsi? Nanu mayā, moghapurisa, anekapariyāyena antarāyikā dhammā antarāyikā vuttā. Alañca pana te paṭisevato antarāyāya. Appassādā kāmā vuttā mayā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Aṭṭhikankalūpamā kāmā vuttā mayā … pe … maṁsapesūpamā kāmā vuttā mayā … tiṇukkūpamā kāmā vuttā mayā … angārakāsūpamā kāmā vuttā mayā … supinakūpamā kāmā vuttā mayā … yācitakūpamā kāmā vuttā mayā … rukkhaphalūpamā kāmā vuttā mayā … asisūnūpamā kāmā vuttā mayā … sattisūlūpamā kāmā vuttā mayā … sappasirūpamā kāmā vuttā mayā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Atha ca pana tvaṁ, moghapurisa, attanā duggahitena amhe ceva abbhācikkhasi, attānañca khaṇasi, bahuñca apuññaṁ pasavasi. Tañhi te, moghapurisa, bhavissati dīgharattaṁ ahitāya dukkhāya. Netaṁ, moghapurisa, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<hr>
+<p><span class="parno">5</span><span class="ms">p_2V_1251, msdiv418</span><span class="rule">"Yo pana bhikkhu evaṁ vadeyya— ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā’ti so bhikkhu bhikkhūhi evamassa vacanīyo: ‘māyasmā evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāvuso, antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā’ti. Evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya. Yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, pācittiyan"</span>ti.</p>
+
+<hr>
+<p><span class="parno">6</span><span class="ms">p_2V_1252, msdiv419</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<p><span class="parno">7</span><span class="ms">p_2V_1253</span><b>Evaṁ vadeyyā</b> ti— "Tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā"ti.</p>
+
+<p><span class="parno">8</span><span class="ms">p_2V_1254</span><b>So bhikkhū</b>'ti yo so evaṁvādī bhikkhu.</p>
+
+<hr>
+<p><span class="parno">9</span><span class="ms">p_2V_1255</span><b>Bhikkhūhī</b>'ti aññehi bhikkhūhi. Ye passanti ye suṇanti tehi vattabbo— "māyasmā evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāvuso antarāyikā dhammā antarāyikā vuttā bhagavatā. Alañca pana te paṭisevato antarāyāyā"ti. Dutiyampi vattabbo. Tatiyampi vattabbo. Sace paṭinissajjati, iccetaṁ kusalaṁ; no ce paṭinissajjati, āpatti dukkaṭassa. Sutvā na vadanti, āpatti dukkaṭassa. So bhikkhu <b>saṇghamajjhampi</b> ākaḍḍhitvā vattabbo— "māyasmā evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāvuso antarāyikā dhammā antarāyikā vuttā bhagavatā. Alañca pana te paṭisevato antarāyāyā"ti. Dutiyampi vattabbo. Tatiyampi vattabbo. Sace paṭinissajjati, iccetaṁ kusalaṁ. No ce paṭinissajjati, āpatti dukkaṭassa. So bhikkhu samanubhāsitabbo. "Evañca pana, bhikkhave, samanubhāsitabbo. Byattena bhikkhunā paṭibalena saṇgho ñāpetabbo:</p>
+
+<p><span class="parno">10</span><span class="ms">p_2V_1256, msdiv420</span>"Tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā"ti. So taṁ diṭṭhiṁ na paṭinissajjati. Yadi saṇghassa pattakallaṁ, saṇgho itthannāmaṁ bhikkhuṁ samanubhāseyya— tassā diṭṭhiyā paṭinissaggāya. Esā ñatti. ‘Suṇātu me, bhante, saṇgho. Itthannāmassa bhikkhuno evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ—</p>
+
+<p><span class="parno">11</span><span class="ms">p_2V_1257</span>"Tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā"ti. So taṁ diṭṭhiṁ na paṭinissajjati. Saṇgho itthannāmaṁ bhikkhuṁ samanubhāsati tassā diṭṭhiyā paṭinissaggāya. Yassāyasmato khamati itthannāmassa bhikkhuno samanubhāsanā, tassā diṭṭhiyā paṭinissaggāya, so tuṇhassa; yassa nakkhamati, so bhāseyya. Suṇātu me, bhante, saṇgho. Itthannāmassa bhikkhuno evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ—</p>
+
+<hr>
+<p><span class="parno">12</span><span class="ms">p_2V_1258</span>"Tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā"ti. So taṁ diṭṭhiṁ na paṭinissajjati. Saṇgho itthannāmaṁ bhikkhuṁ samanubhāsati tassā diṭṭhiyā paṭinissaggāya. Yassāyasmato khamati itthannāmassa bhikkhuno samanubhāsanā, tassā diṭṭhiyā paṭinissaggāya, so tuṇhassa; yassa nakkhamati, so bhāseyya. Dutiyampi etamatthaṁ vadāmi … pe … tatiyampi etamatthaṁ vadāmi— suṇātu me, bhante, saṇgho. Itthannāmassa bhikkhuno evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ—</p>
+
+<hr>
+<p><span class="parno">13</span><span class="ms">p_2V_1259</span>Samanubhaṭṭho saṇghena itthannāmo bhikkhu, tassā diṭṭhiyā paṭinissaggāya. Khamati saṇghassa, tasmā tuṇhī, evametaṁ dhārayāmī’"ti.</p>
+
+<p><span class="parno">14</span><span class="ms">p_2V_1260</span> Ñattiyā dukkaṭaṁ. Dvīhi kammavācāhi dukkaṭā. Kammavācāpariyosāne āpatti pācittiyassa.</p>
+
+<p><span class="parno">15</span><span class="ms">p_2V_1261, msdiv421</span>Dhammakamme dhammakammasaññī na paṭinissajjati, āpatti pācittiyassa. Dhammakamme vematiko na paṭinissajjati, āpatti pācittiyassa. Dhammakamme adhammakammasaññī na paṭinissajjati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">16</span><span class="ms">p_2V_1262</span>Adhammakamme dhammakammasaññī, āpatti dukkaṭassa. Adhammakamme vematiko, āpatti dukkaṭassa. Adhammakamme adhammakammasaññī, āpatti dukkaṭassa.</p>
+
+<hr>
+<p><span class="parno">17</span><span class="ms">p_2V_1263, msdiv422</span>Anāpatti— asamanubhāsantassa, paṭinissajjantassa, ummattakassāti.</p>
+
+<hr>
+<p class="endsutta"><span class="parno">18</span><span class="ms">p_2V_1264</span>Ariṭṭhasikkhāpadaṁ niṭṭhitaṁ aṭṭhamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-pc67.html#content"></a><a id="next-sutta" href="../vi/bu-vb-pc69.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-pc.html">Pācittiyas</a>Pācittiya&nbsp;68
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

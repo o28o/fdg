@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Pācittiya 17</title>
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<!-- Loading third party fonts -->
+ 			 			<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 			<!-- Loading main and menu stylesheets -->
+ 			<link rel="stylesheet" href="../css/w3.css">
+ 			<link rel="stylesheet" href="../css/css.css">
+ 			<link rel="stylesheet" href="../css/menu.css">
+ 			<script src="../js/jquery-1.10.2.min.js"></script>
+ 			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+ <body>
+ 
+ <!-- header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 		<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 				<ul id="css3menu0">
+ 					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 					<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 				<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 					<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 						<ul>
+ 							<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 							<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 							<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 							<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 							<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 							<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 							<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 							<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 							<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 							<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 							<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 						<ul>
+ 							<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 							<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 							<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 							<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 							<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 							<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 							<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 						<ul>
+ 							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 							<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 							<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 
+ 						</ul>
+ 					</li>
+ 				</ul>
+ 				</div>
+ 			</div> <!--navbar-->
+ 
+ <!-- Sidebar (hidden by default) -->
+ 	<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 			<div class="w3-bar-block w3-white">
+ 				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 				<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 				<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 			</div>
+ 	</nav>
+ 
+ 		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <p>&nbsp;</p>
+ 
+ <h3 id="#BI-VBheading">Bhikkhuni Vibhanga</h3>
+ 		<div class="w3-bar-white bwnav"><!-- Div for lower BI-VB-PC sub-navigation -->
+ 		<a href="../vi/bi-vb-pj.html#BI-VBheading" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 		<a href="../vi/bi-vb-sn.html#BI-VBheading" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 		<a href="../vi/bi-vb-np.html#BI-VBheading" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pc.html#BI-VBheading" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Pācittiyas</a>
+ 		<a href="../vi/bi-vb-pd.html#BI-VBheading" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 		<a href="../vi/bi-vb-sk.html#BI-VBheading" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 		<a href="../vi/bi-vb-as.html#BI-VBheading" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+ 	</div><!-- End div for lower BI-VB-PC sub-navigation -->
+ 
+ <!--      BI-VB-PC content begins here      -->
+ 
+ <div id="content">
+
+ <h2>Bhikkhuni Vibhanga - Pācittiya 17: The Training Rule on Spreading Out Her Bedding in a Householders Home Without Asking Permission.</h2>
+
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Brahmali Bhikkhu.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p id="p1"><span class="parno">1</span><a class="pts-cs-empty" id="Bi-Pc.17"></a> <a class="pts-cs-empty" id="Bi-Pc.17.1"></a> <a class="pts-cs" id="Bi-Pc.17.1.1" href="#Bi-Pc.17.1.1"></a> <a class="pts-vp-en" id="BD.3.275" href="#BD.3.275"></a>At that time the enlightened one, the lord, was staying at Sāvatthī in the Jeta Grove in Anāthapiṇḍika’s monastery. Now at that time several nuns, going to Sāvatthī through the Kosalan districts, having arrived at a certain village in the evening, having approached a certain brahmin family, asked for accommodation. Then that brahmin woman spoke thus to these nuns: “Wait, ladies, until the brahmin comes.” The nuns, saying: “Until the brahmin comes!”, having spread a sleeping-place, some sat down, others lay down. Then that brahmin having come during the night, spoke thus to that brahmin woman: “Who are these?”</p>
+
+<hr>
+<p>“They are nuns, master.”</p>
+
+<p>Saying: “Throw out these shaven-headed strumpets,” he threw them out from the house.</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>Then these nuns, having arrived in Sāvatthī, told this matter to the nuns. Those who were modest nuns … spread it about, saying: “How can these nuns, having approached families at the wrong time, having spread a sleeping-place without asking the owner (for permission), sit down on it and lie down on it?” …</p>
+
+<p>“Is it true, as is said, monks, that nuns … lay down on it?”</p>
+
+<hr>
+<p>“It is true, lord.”</p>
+
+<p>The enlightened one, the lord, rebuked them, saying: “How, monks, can nuns, having approached families … lie down on it? It is not, monks, for pleasing those who are not (yet) pleased … this rule of training:</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>“<span class="rule">Whatever nun, having approached families at the wrong time, having spread or having caused a sleeping- <a class="pts-vp-en" id="BD.3.276" href="#BD.3.276"></a> place to be spread without asking the owner (for permission), should sit down on it or should lie down on it, there is an offence of expiation.”</span></p>
+
+<hr>
+<p id="p4"><span class="parno">4</span><a class="pts-cs-empty" id="Bi-Pc.17.2"></a> <a class="pts-cs" id="Bi-Pc.17.2.1" href="#Bi-Pc.17.2.1"></a> <span class="term">Whatever</span> means: <span class="gloss">… nun is to be understood in this case.</span></p>
+
+<p id="p5"><span class="parno">5</span><span class="term">Wrong time</span> means: <span class="gloss">from sunset until sunrise.</span></p>
+
+<p id="p6"><span class="parno">6</span><span class="term">Family means</span>: the castes — Khattiya, Brāhmaṇa, Vessa, and Sudda.</p>
+
+<hr>
+<p id="p7"><span class="parno">7</span><span class="term">Having approached means</span>: approaching that place.</p>
+
+<p id="p8"><span class="parno">8</span><span class="term">Without asking the owner (for permission) means</span>: …</p>
+
+<hr>
+<p id="p9"><span class="parno">9</span><span class="term">Sleeping-place</span> means: <span class="gloss">even a spreading of leaves.</span></p>
+
+<hr>
+<p id="p10"><span class="parno">10</span><span class="term">Having spread</span> means: <span class="gloss">oneself having spread.</span></p>
+
+<p id="p11"><span class="parno">11</span><span class="term">Having caused to be spread</span> means: <span class="gloss">having caused another to spread.</span></p>
+
+<p id="p12"><span class="parno">12</span><span class="term">Should sit down on</span> means: <span class="gloss">Should lie down on means: …</span></p>
+
+<p id="p13"><span class="parno">13</span><a class="pts-cs" id="Bi-Pc.17.2.2" href="#Bi-Pc.17.2.2"></a> If she thinks that she has not asked (for permission) when she has not asked (for permission) and having spread or having caused a sleeping-place to be spread, she sits down on it or lies down on it, there is an offence of expiation. If she is in doubt as to whether she has not asked (for permission) … If she thinks that she lias asked (for permission) when she has not asked (for permission) … offence of expiation.</p>
+
+<p id="p14"><span class="parno">14</span>If she thinks that she has not asked (for permission) when she has asked (for permission), there is an offence of wrong-doing. If she is in doubt as to whether she has asked (for permission), there is an offence of wrong-doing. If she thinks that she has asked (for permission) when she has asked (for permission), there is no offence.</p>
+
+<hr>
+<p id="p15"><span class="parno">15</span><a class="pts-cs" id="Bi-Pc.17.2.3" href="#Bi-Pc.17.2.3"></a> There is no offence if asking (for permission), having spread or having caused a sleeping-place to be spread, she sits down on it or lies down on it; if she is ill; if there are accidents; if she is mad, if she is the first wrong-doer.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+<p><span class="parno">1</span><span class="ms">p_2V_2747, msdiv864</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena sambahulā bhikkhuniyo kosalesu janapade sāvatthiṁ gacchantiyo sāyaṁ aññataraṁ gāmaṁ upagantvā aññataraṁ brāhmaṇakulaṁ upasaṅkamitvā okāsaṁ yāciṁsu. Atha kho sā brāhmaṇī tā bhikkhuniyo etadavoca: “āgametha, ayye, yāva brāhmaṇo āgacchatī”ti. Bhikkhuniyo—“yāva brāhmaṇo āgacchatī”ti seyyaṁ santharitvā ekaccā nisīdiṁsu ekaccā nipajjiṁsu. Atha kho so brāhmaṇo rattiṁ āgantvā taṁ brāhmaṇiṁ etadavoca:“kā imā”ti?</p>
+
+<hr>
+<p>“Bhikkhuniyo, ayyā”ti.</p>
+
+<p>“Nikkaḍḍhatha imā muṇḍā bandhakiniyo”ti, gharato nikkaḍḍhāpesi.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_2V_2748</span>Atha kho tā bhikkhuniyo sāvatthiṁ gantvā bhikkhunīnaṁ etamatthaṁ ārocesuṁ. Yā tā bhikkhuniyo appicchā … pe … tā ujjhāyanti khiyyanti vipācenti: “kathañhi nāma bhikkhuniyo vikāle kulāni upasaṅkamitvā sāmike anāpucchā seyyaṁ santharitvā abhinisīdissantipi abhinipajjissantipī”ti … pe …</p>
+
+<p>“saccaṁ kira, bhikkhave, bhikkhuniyo vikāle kulāni upasaṅkamitvā sāmike anāpucchā seyyaṁ santharitvā abhinisīdantipi abhinipajjantipī”ti?</p>
+
+<hr>
+<p>“Saccaṁ, bhagavā”ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe … kathañhi nāma, bhikkhave, bhikkhuniyo vikāle kulāni upasaṅkamitvā sāmike anāpucchā seyyaṁ santharitvā abhinisīdissantipi abhinipajjissantipi. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, bhikkhuniyo imaṁ sikkhāpadaṁ uddisantu—</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_2V_2749, msdiv865</span><span class="rule">“Yā pana bhikkhunī vikāle kulāni upasaṅkamitvā sāmike anāpucchā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdeyya vā abhinipajjeyya vā, pācittiyan”</span>ti.</p>
+
+<hr>
+<p><span class="parno">4</span><span class="ms">p_2V_2750, msdiv866</span><b>Yā panā</b>'ti yā yādisā … pe … <b>bhikkhunī</b>'ti … pe … ayaṁ imasmiṁ atthe adhippetā bhikkhunīti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_2751</span><b>Vikālo</b> nāma atthaṅgate sūriye yāva aruṇuggamanā.</p>
+
+<p><span class="parno">6</span><span class="ms">p_2V_2752</span><b>Kulaṁ</b> nāma cattāri kulāni—khattiyakulaṁ, brāhmaṇakulaṁ, vessakulaṁ, suddakulaṁ.</p>
+
+<hr>
+<p><span class="parno">7</span><b>Upasaṅkamitvā</b>'ti tattha gantvā.</p>
+
+<p><span class="parno">8</span><span class="ms">p_2V_2753</span><b>Sāmike anāpucchā</b>'ti yo tasmiṁ kule manusso sāmiko dātuṁ, taṁ anāpucchā.</p>
+
+<hr>
+<p><span class="parno">9</span><span class="ms">p_2V_2754</span><b>Seyyaṁ</b> nāma antamaso paṇṇasanthāropi. <b>Santharitvā</b>'ti sayaṁ santharitvā.</p>
+
+<hr>
+<p><span class="parno">10</span><b>Santharāpetvā</b>'ti aññaṁ santharāpetvā.</p>
+
+<p><span class="parno">11</span><b>Abhinisīdeyyā</b>'ti tasmiṁ abhinisīdati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">12</span><b>Abhinipajjeyyā</b>'ti tasmiṁ abhinipajjati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">13</span><span class="ms">p_2V_2755, msdiv867</span>Anāpucchite anāpucchitasaññā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdati vā abhinipajjati vā, āpatti pācittiyassa. Anāpucchite vematikā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdati vā abhinipajjati vā, āpatti pācittiyassa. Anāpucchite āpucchitasaññā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdati vā abhinipajjati vā, āpatti pācittiyassa.</p>
+
+<p><span class="parno">14</span><span class="ms">p_2V_2756</span>Āpucchite anāpucchitasaññā, āpatti dukkaṭassa. Āpucchite vematikā, āpatti dukkaṭassa. Āpucchite āpucchitasaññā, anāpatti.</p>
+
+<hr>
+<p><span class="parno">15</span><span class="ms">p_2V_2757, msdiv868</span>Anāpatti—āpucchā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdati vā abhinipajjati vā, gilānāya, āpadāsu, ummattikāya, ādikammikāyāti.</p>
+
+<p class="endsutta"><a class="sc" id="12"></a><span class="ms">p_2V_2758</span>Sattamasikkhāpadaṁ niṭṭhitaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-pc16.html#content"></a><a id="next-sutta" href="../vi/bi-vb-pc18.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-pc.html">Pācittiyas</a>Pācittiya 17
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

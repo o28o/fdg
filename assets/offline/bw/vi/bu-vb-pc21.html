@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhu) - Pācittiya&nbsp;21</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="pressed w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Monastic Rules</h2>
+ 
+ 	<div class="subnav6"> <!-- Div for sub-navigation -->
+ 		<a href="../vi/kd.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Khandaka</a>
+ 		<a href="../vi/bu-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">Bhikkhu<br>Vibhanga</a>
+ 		<a href="../vi/bu-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhu<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-pt.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhunī<br>Pāṭimokkha</a>
+ 		<a href="../vi/bi-vb.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Bhikkhuni<br>Vibhanga</a>
+ 		<a href="../bmc/bmc.html#content" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Buddhist<br>Monastic Code</a>
+ 		</div>	<!-- End div for sub-navigation -->
+
+ <p>&nbsp;</p>
+
+ <h3 id="BU-VBheading">Bhikkhu Vibhanga</h3>
+ <div class="w3-bar-white bwnav"><!-- Div for lower BU-VB sub-navigation -->
+ 	<a href="../vi/bu-vb-pj.html" title="Pārājikas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pārājikas</a>
+ 	<a href="../vi/bu-vb-sn.html" title="Sanghādisesas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sanghādisesas</a>
+ 	<a href="../vi/bu-vb-an.html" title="Aniyatas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Aniyatas</a>
+ 	<a href="../vi/bu-vb-np.html" title="Nissaggiya Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Nissaggiya Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pc.html" title="Pācittiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pācittiyas</a>
+ 	<a href="../vi/bu-vb-pd.html" title="Pāṭidesanīyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Pāṭidesanīyas</a>
+ 	<a href="../vi/bu-vb-sk.html" title="Sekhiyas" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sekhiyas</a>
+ 	<a href="../vi/bu-vb-as.html" title="Adhikaraṇa-Samathās" class="w3-bar-item w3-hover-white w3-border-white w3-button">Adhikaraṇa-Samathās</a>
+  </div><!-- End div for lower BU-VB sub-navigation -->
+ 
+ <!--      BU-VB content begins here      -->
+ 
+ <div id="content">
+
+
+<h2>Bhikkhu Vibhanga - Pācittiya&nbsp;21: The Training Rule on The Instruction.</h2>
+
+ 
+
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Bhikkhu Brahmali.&nbsp; &nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<div>
+<h3>Origin story</h3>
+<h4>First sub-story</h4>
+</div>
+
+<p><span class="parno">1. Bu-Pc.21.1, BD.2.263</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍika’s Monastery. At that time the senior monks who instructed the nuns were receiving robes, almsfood, lodging requisites, and medicines. When they knew that this was happening, some monks from the group of six thought: “Well then, let’s instruct the nuns." They then went to the nuns and said: “Sisters, come to us and we will instruct you too."</p>
+
+<p id="p2"><span class="parno">2</span>Soon afterwards those nuns went to those monks from the group of six, paid homage to them, and sat down to one side. Then, after speaking just a little bit of Dhamma, those monks spent the day on pointless talk, before dismissing the nuns: “Go, sisters."</p>
+
+<p>Those nuns then went to the Master, paid homage to him, and stood to one side. And the Master said to them: “Nuns, I hope the instruction was effective?"</p>
+
+<p>“Bhante, how could the instruction be effective? After speaking just a little bit of Dhamma, those monks from the group of six spent the day on pointless talk, and then dismissed us."</p>
+
+<p>The Master then instructed, inspired, and gladdened those nuns with a Dhamma talk. The nuns paid homage to the Master, circumambulated him with their right side towards him, and departed.</p>
+
+<p id="p3"><span class="parno">3</span>Then the Master convened the Saṅgha and questioned those monks from the group of six: “Is it true, monks, that you do this?" “Itʼs true, Master." The Buddha, the Master, rebuked them … “Foolish men, how can you speak just a little bit of Dhamma to the nuns, and then spend the day on pointless talk, before dismissing them? This will not give rise to confidence in those without it … " … and after criticising them … he spoke on the Dhamma and addressed the monks: “Monks, I allow you to choose an instructor for the nuns. And this is how he should be chosen. First a monk should be asked and then an experienced and competent monk should inform the Saṅgha:</p>
+
+<hr>
+<p id="p4"><span class="parno">4</span>“‘Bhante, let the Saṅgha listen to me. If it seems appropriate to the Saṅgha, it should choose monk so-and-so as an instructor of the nuns. This is the motion.</p>
+
+<p id="p5"><span class="parno">5</span>“‘Bhante, let the Saṅgha listen to me. The Saṅgha chooses monk so-and-so as an instructor of the nuns. Any monk who agrees to choosing monk so-and-so as an instructor of the nuns should remain silent. Any monk who does not agree should say so.</p>
+
+<p id="p6"><span class="parno">6</span>“‘For a second time I speak on this matter … For a third time I speak on this matter: Bhante, let the Saṅgha listen to me. The Saṅgha chooses monk so-and-so as an instructor of the nuns. Any monk who agrees to choosing monk so-and-so as an instructor of the nuns should remain silent. Any monk who does not agree should say so.</p>
+
+<p id="p7"><span class="parno">7</span>“‘The Saṅgha has chosen monks so-and-so as an instructor of the nuns. The Saṅgha approves and is therefore silent. I will remember it thus.’"</p>
+
+<p id="p8"><span class="parno">8</span>Then, after rebuking those monks from the group of six in many ways for being difficult to support … the Master said: “And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p class="rule"><span class="parno">9</span>“If a monk who has not been agreed upon instructs the nuns, he commits an offence entailing confession."</p>
+
+<p id="p10"><span class="parno">10</span>In this way the Master laid down this training rule for the monks.</p>
+
+<h4>Second sub-story</h4>
+
+<p id="p11"><span class="parno">11</span>After being chosen to do so, the senior monks who instructed the nuns still received robes, almsfood, lodging requisites, and medicines. When they knew this was the case, monks from the group of six said: “Well then, let’s go outside the boundary, choose each other as instructors of the nuns, and then instruct them." After doing just that, they again went to the nuns and said: “Sisters, we too have been chosen. Come to us and we will instruct you too."</p>
+
+<hr>
+<p id="p12"><span class="parno">12</span>Once again the nuns went to those monks from the group of six and everything unfolded as before.</p>
+
+<hr>
+<p id="p13"><span class="parno">13</span>The Master then convened the Saṅgha and questioned those monks from the group of six: “Is it true, monks, that you are acting in this way?" “Itʼs true, Master." The Buddha, the Master, rebuked them … “Foolish men, how can you speak just a little bit of Dhamma to the nuns, and then spend the day on pointless talk, before dismissing them?" This will not give rise to confidence in those without it … " … and after criticising them … he spoke on the Dhamma and addressed the monks: “Monks, I allow you to choose a monk who possesses eight qualities as an instructor of the nuns:</p>
+
+<hr>
+<p>(1) “He is virtuous and restrained by the <i>pātimokkha</i>. His conduct is good, he associates with the right people, and he sees danger in minor faults. And he undertakes and trains in the training rules.</p>
+
+<p>(2) “He has learned much, and he retains and accumulates what he has heard. Those teachings that are good in the beginning, good in the middle, and good in the end, that have the right meaning and phrasing and which proclaim the perfectly complete and pure spiritual life—he has learned much of such teachings, retained them in mind, recited them verbally, mentally investigated them, and penetrated them well by view.</p>
+
+<p>(3) “He has properly learned both <i>pātimokkhas</i> in detail, well analysed them, thoroughly mastered them, well investigated them in terms of the rules and their detailed exposition.</p>
+
+<hr>
+<p>(4) “He is a good speaker and has a good voice.</p>
+
+<p>(5) “He is generally liked by and pleasing to the nuns.</p>
+
+<p>(6) “He is able to instruct the nuns.</p>
+
+<p>(7) “He has never committed a serious offence against a Buddhist nun.</p>
+
+<hr>
+<p>(8) “He has been fully ordained for at least twenty years.</p>
+
+<p>“<span class="rule">Monks, I allow you to choose a monk who possesses these eight qualities as an instructor of the nuns.</span>"</p>
+
+<h3>Definitions</h3>
+
+<p id="p14"><span class="parno">14</span>A: whoever … Monk: … The monk who is ordained by a complete Saṅgha through a procedure of one motion and three announcements, which is unchallengeable and fit to stand; this sort of monk is meant in this case.</p>
+
+<hr>
+<p id="p15"><span class="parno">15</span>Who has not been agreed upon: who has not been agreed upon through an act consisting of one motion and three announcements.</p>
+
+<hr>
+<p id="p16"><span class="parno">16</span>Nuns: fully ordained by both Sanghas.</p>
+
+<p id="p17"><span class="parno">17</span>Instructs: If he instructs about the eight important rules, he commits an offence entailing confession. If he instructs in any other teaching, he commits an offence of bad conduct. If he instructs a nun ordained only on one side, he commits an offence of bad conduct.</p>
+
+<p id="p18"><span class="parno">18</span>The monk who has been agreed upon should sweep the surrounding area, set out water for drinking and for washing the feet, prepare a seat, get hold of a companion, and then sit down. The nuns should go there, pay homage to the monk, and sit down to one side. The monk should then ask them: “Sisters, are you all present?"</p>
+
+<p>If they say: “We are all present, venerable," he should say: “Are you keeping the eight important rules?"</p>
+
+<p>If they say: “We are," he should reply: “This is the instruction."</p>
+
+<p>If they say: “We are not," he should recite them:</p>
+
+<hr>
+<p>(1) “A nun who has been ordained for a hundred years should pay homage to a monk who was ordained on that very day, and she should stand up for him, put the palms of her hands together for him, and act appropriately towards him. This rule is to be honoured and respected all one’s life, and is not to be broken.</p>
+
+<p>(2) “A nun should not spend the rainy season in a monastery where there are no monks. This rule too is to be honoured and respected all one’s life, and is not to be broken.</p>
+
+<p>(3) “Every fortnight a nun should ask the Saṅgha of monks for two things: about the date of the <i>uposatha</i> and about going for the instruction. This rule too is to be honoured and respected all one’s life, and is not to be broken.</p>
+
+<p>(4) “A nun who has completed the rainy season should invite admonishment from both Sanghas in regard to three things: what has been seen, what has been heard, and what has been suspected. This rule too is to be honoured and respected all one’s life, and is not to be broken.</p>
+
+<p>(5) “A nun who has committed a serious offence should practice deference towards both Sanghas for a fortnight. This rule too is to be honoured and respected all one’s life, and is not to be broken.</p>
+
+<p>(6) “A trainee nun who has trained in the six rules for two years may seek for full ordination in both Sanghas. This rule too is to be honoured and respected all one’s life, and is not to be broken.</p>
+
+<p>(7) “A nun may not in any way abuse or revile a monk. This rule too is to be honoured and respected all one’s life, and is not to be broken.</p>
+
+<p>(8) “From today onwards, nuns may not correct monks, but monks may correct nuns. This rule too is to be honoured and respected all one’s life, and is not to be broken."</p>
+
+<hr>
+<p id="p19"><span class="parno">19</span>If they say: “We are all present, venerable," and he instructs them with another teaching, then he commits an offence of bad conduct. If they say: “We are not all present, venerable," and he instructs them about the eight important rules, then he commits an offence of bad conduct. If he does not give the instruction, but he gives them another teaching, then he commits an offence of bad conduct.</p>
+
+<h3>Permutations</h3>
+
+<p id="p20"><span class="parno">20</span>If it is an illegitimate act of the Saṅgha and he perceives it as illegitimate, and the Saṅgha of nuns is incomplete and he perceives it as incomplete, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha and he perceives it as illegitimate, and the Saṅgha of nuns is incomplete but he has doubts about it, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha and he perceives it as illegitimate, and the Saṅgha of nuns is incomplete but he perceives it as complete, then if he instructs those nuns, he commits an offence entailing confession.</p>
+
+<p id="p21"><span class="parno">21</span>If it is an illegitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is incomplete and he perceives it as incomplete, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is incomplete but he has doubts about it, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is incomplete but he perceives it as complete, then if he instructs those nuns, he commits an offence entailing confession.</p>
+
+<p id="p22"><span class="parno">22</span>If it is an illegitimate act of the Saṅgha but he perceives it as legitimate, and the Saṅgha of nuns is incomplete and he perceives it as incomplete, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he perceives it as legitimate, and the Saṅgha of nuns is incomplete but he has doubts about it, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he perceives it as legitimate, and the Saṅgha of nuns is incomplete but he perceives it as complete, then if he instructs those nuns, he commits an offence entailing confession.</p>
+
+<p id="p23"><span class="parno">23</span>If it is an illegitimate act of the Saṅgha and he perceives it as illegitimate, and the Saṅgha of nuns is complete but he perceives it as incomplete, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha and he perceives it as illegitimate, and the Saṅgha of nuns is complete but he has doubts about it, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha and he perceives it as illegitimate, and the Saṅgha of nuns is complete and he perceives it as complete, then if he instructs those nuns, he commits an offence entailing confession.</p>
+
+<hr>
+<p id="p24"><span class="parno">24</span>If it is an illegitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is complete but he perceives it as incomplete, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is complete but he has doubts about it, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is complete and he perceives it as complete, then if he instructs those nuns, he commits an offence entailing confession.</p>
+
+<p id="p25"><span class="parno">25</span>If it is an illegitimate act of the Saṅgha but he perceives it as legitimate, and the Saṅgha of nuns is complete but he perceives it as incomplete, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he perceives it as legitimate, and the Saṅgha of nuns is complete but he has doubts about it, then if he instructs those nuns, he commits an offence entailing confession. If it is an illegitimate act of the Saṅgha but he perceives it as legitimate, and the Saṅgha of nuns is complete and he perceives it as complete, then if he instructs those nuns, he commits an offence entailing confession.</p>
+
+<p id="p26"><span class="parno">26</span>If it is a legitimate act of the Saṅgha but he perceives it as illegitimate, and the Saṅgha of nuns is incomplete and he perceives it as incomplete, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he perceives it as illegitimate, and the Saṅgha of nuns is incomplete but he has doubts about it, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he perceives it as illegitimate, and the Saṅgha of nuns is incomplete but he perceives it as complete, then if he instructs those nuns, he commits an offence of bad conduct.</p>
+
+<p id="p27"><span class="parno">27</span>If it is a legitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is incomplete and he perceives it as incomplete, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is incomplete but he has doubts about it, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is incomplete but he perceives it as complete, then if he instructs those nuns, he commits an offence of bad conduct.</p>
+
+<hr>
+<p id="p28"><span class="parno">28</span>If it is a legitimate act of the Saṅgha and he perceives it as legitimate, and the Saṅgha of nuns is incomplete and he perceives it as incomplete, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha and he perceives it as legitimate, and the Saṅgha of nuns is incomplete but he has doubts about it, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha and he perceives it as legitimate, and the Saṅgha of nuns is incomplete but he perceives it as complete, then if he instructs those nuns, he commits an offence of bad conduct.</p>
+
+<p id="p29"><span class="parno">29</span>If it is a legitimate act of the Saṅgha but he perceives it as illegitimate, and the Saṅgha of nuns is complete but he perceives it as incomplete, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he perceives it as illegitimate, and the Saṅgha of nuns is complete but he has doubts about it, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he perceives it as illegitimate, and the Saṅgha of nuns is complete and he perceives it as complete, then if he instructs those nuns, he commits an offence of bad conduct.</p>
+
+<p id="p30"><span class="parno">30</span>If it is a legitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is complete but he perceives it as incomplete, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is complete but he has doubts about it, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha but he has doubts about it, and the Saṅgha of nuns is complete and he perceives it as complete, then if he instructs those nuns, he commits an offence of bad conduct.</p>
+
+<p id="p31"><span class="parno">31</span>If it is a legitimate act of the Saṅgha and he perceives it as legitimate, and the Saṅgha of nuns is complete but he perceives it as incomplete, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha and he perceives it as legitimate, and the Saṅgha of nuns is complete but he has doubts about it, then if he instructs those nuns, he commits an offence of bad conduct. If it is a legitimate act of the Saṅgha and he perceives it as legitimate, and the Saṅgha of nuns is complete and he perceives it as complete, then if he instructs those nuns, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p32"><span class="parno">32</span>There is no offence: if he gives a summary; if he conducts an examination; if he recites when asked to do so; if he asks a question; if he replies when asked a question; if he is speaking for the benefit of someone else and the nuns listen in; if it is to a trainee nun; if it is to a novice nun; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">33</span>The first rule, the training rule on the instruction, is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<div>
+<h3>&nbsp;</h3>
+<h4>&nbsp;</h4>
+</div>
+
+<p><span class="parno">1</span><span class="ms">p_2V_484, msdiv144</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena therā bhikkhū bhikkhuniyo ovadantā lābhino honti cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānappaccaya&shy;bhesajja&shy;parikkhārānaṁ. Atha kho chabbaggiyānaṁ bhikkhūnaṁ etadahosi: "Etarahi kho, āvuso, therā bhikkhū bhikkhuniyo ovadantā lābhino honti cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānappaccaya&shy;bhesajja&shy;parikkhārānaṁ. Handāvuso, mayampi bhikkhuniyo ovadāmā"ti. Atha kho chabbaggiyā bhikkhū bhikkhuniyo upasankamitvā etadavocuṁ: "amhepi, bhaginiyo, upasankamatha; mayampi ovadissāmā"ti.</p>
+
+<p><span class="parno">2</span><span class="ms">p_2V_485</span>Atha kho tā bhikkhuniyo yena chabbaggiyā bhikkhū tenupasankamiṁsu; upasankamitvā chabbaggiye bhikkhū abhivādetvā ekamantaṁ nisīdiṁsu. Atha kho chabbaggiyā bhikkhū bhikkhunīnaṁ parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojesuṁ— "gacchatha, bhaginiyo"ti.</p>
+
+<p>Atha kho tā bhikkhuniyo yena bhagavā tenupasankamiṁsu; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu. Ekamantaṁ ṭhitā kho tā bhikkhuniyo bhagavā etadavoca: "Kacci, bhikkhuniyo, ovādo iddho ahosī"ti?</p>
+
+<p>"Kuto, bhante, ovādo iddho bhavissati. Ayyā chabbaggiyā parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojesun"ti.</p>
+
+<p>Atha kho bhagavā tā bhikkhuniyo dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho tā bhikkhuniyo bhagavatā dhammiyā kathāya sandassitā samādapitā samuttejitā sampahaṁsitā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkamiṁsu.</p>
+
+<p><span class="parno">3</span><span class="ms">p_2V_486</span>Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusaṇghaṁ sannipātāpetvā chabbaggiye bhikkhū paṭipucchi: "Saccaṁ kira tumhe, bhikkhave, bhikkhunīnaṁ parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojethā"ti? "Saccaṁ, bhagavā"ti. Vigarahi buddho bhagavā … pe … kathañhi nāma tumhe, moghapurisā, bhikkhunīnaṁ parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojessatha. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … vigarahitvā … pe … dhammiṁ kathaṁ katvā bhikkhū āmantesi:  "Anujānāmi, bhikkhave, bhikkhunovādakaṁ sammannituṁ. Evañca pana, bhikkhave, sammannitabbo. Paṭhamaṁ bhikkhu yācitabbo. Yācitvā byattena bhikkhunā paṭibalena saṇgho ñāpetabbo:</p>
+
+<hr>
+<p><span class="parno">4</span><span class="ms">p_2V_487, msdiv145</span>‘Suṇātu me, bhante, saṇgho. Yadi saṇghassa pattakallaṁ, saṇgho itthannāmaṁ bhikkhuṁ bhikkhunovādakaṁ sammanneyya. Esā ñatti.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_488</span>Suṇātu me, bhante, saṇgho. Saṇgho itthannāmaṁ bhikkhuṁ bhikkhunovādakaṁ sammannati. Yassāyasmato khamati itthannāmassa bhikkhuno bhikkhunovādakassa sammuti, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<p><span class="parno">6</span><span class="ms">p_2V_489</span>Dutiyampi etamatthaṁ vadāmi … pe … tatiyampi etamatthaṁ vadāmi— suṇātu me, bhante, saṇgho. Saṇgho itthannāmaṁ bhikkhuṁ bhikkhunovādakaṁ sammannati. Yassāyasmato khamati itthannāmassa bhikkhuno bhikkhunovādakassa sammuti, so tuṇhassa; yassa nakkhamati, so bhāseyya.</p>
+
+<p><span class="parno">7</span><span class="ms">p_2V_490</span>Sammato saṇghena itthannāmo bhikkhu bhikkhunovādako. Khamati saṇghassa, tasmā tuṇhī, evametaṁ dhārayāmī’"ti.</p>
+
+<p><span class="parno">8</span><span class="ms">p_2V_491</span>Atha kho bhagavā chabbaggiye bhikkhū anekapariyāyena vigarahitvā dubbharatāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">9</span><span class="ms">p_2V_492, msdiv146</span><span class="rule">"Yo pana bhikkhu asammato bhikkhuniyo ovadeyya pācittiyan"</span>ti. (<i>21</i>:<b>70</b>)</p>
+
+<p><span class="parno">10</span><span class="ms">p_2V_493</span>Evañcidaṁ bhagavatā bhikkhūnaṁ sikkhāpadaṁ paññattaṁ hoti.</p>
+
+<h4>&nbsp;</h4>
+
+<p><span class="parno">11</span><span class="ms">p_2V_494, msdiv147</span>Tena kho pana samayena therā bhikkhū sammatā bhikkhuniyo ovadantā tatheva lābhino honti cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānappaccaya&shy;bhesajja&shy;parikkhārānaṁ. Atha kho chabbaggiyānaṁ bhikkhūnaṁ etadahosi: "Etarahi kho, āvuso, therā bhikkhū sammatā bhikkhuniyo ovadantā tatheva lābhino honti cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānappaccaya&shy;bhesajja&shy;parikkhārānaṁ. Handāvuso, mayampi nissīmaṁ gantvā aññamaññaṁ bhikkhunovādakaṁ sammannitvā bhikkhuniyo ovadāmā"ti. Atha kho chabbaggiyā bhikkhū nissīmaṁ gantvā aññamaññaṁ bhikkhunovādakaṁ sammannitvā bhikkhuniyo upasankamitvā etadavocuṁ: "mayampi, bhaginiyo, sammatā. Amhepi upasankamatha. Mayampi ovadissāmā"ti.</p>
+
+<hr>
+<p><span class="parno">12</span><span class="ms">p_2V_495</span>Atha kho tā bhikkhuniyo yena chabbaggiyā bhikkhū tenupasankamiṁsu; upasankamitvā chabbaggiye bhikkhū abhivādetvā ekamantaṁ nisīdiṁsu. Atha kho chabbaggiyā bhikkhū bhikkhunīnaṁ parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojesuṁ— "gacchatha, bhaginiyo"ti. Atha kho tā bhikkhuniyo yena bhagavā tenupasankamiṁsu; upasankamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhaṁsu. Ekamantaṁ ṭhitā kho tā bhikkhuniyo bhagavā etadavoca: "Kacci, bhikkhuniyo, ovādo iddho ahosī"ti? "Kuto, bhante, ovādo iddho bhavissati. Ayyā chabbaggiyā parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojesun"ti.</p>
+
+<hr>
+<p><span class="parno">13</span><span class="ms">p_2V_496</span>Atha kho bhagavā tā bhikkhuniyo dhammiyā kathāya sandassesi … pe … atha kho tā bhikkhuniyo bhagavatā dhammiyā kathāya sandassitā samādapitā samuttejitā sampahaṁsitā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkamiṁsu. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe bhikkhusaṇghaṁ sannipātāpetvā chabbaggiye bhikkhū paṭipucchi: "Saccaṁ kira tumhe, bhikkhave, bhikkhunīnaṁ parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojethā"ti? "Saccaṁ, bhagavā"ti. Vigarahi buddho bhagavā … pe … kathañhi nāma tumhe, moghapurisā, bhikkhunīnaṁ parittaññeva dhammiṁ kathaṁ katvā divasaṁ tiracchānakathāya vītināmetvā uyyojessatha. Netaṁ, moghapurisā, appasannānaṁ vā pasādāya … pe … vigarahitvā … pe … dhammiṁ kathaṁ katvā bhikkhū āmantesi:  "Anujānāmi, bhikkhave, aṭṭhahangehi samannāgataṁ bhikkhuṁ bhikkhunovādakaṁ sammannituṁ:</p>
+
+<hr>
+<p>Sīlavā hoti, pātimokkhasaṁvarasaṁvuto viharati ācāragocarasampanno aṇumattesu vajjesu bhayadassāvī, samādāya sikkhati sikkhāpadesu;</p>
+
+<p>bahussuto hoti sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā sātthaṁ sabyañjanaṁ kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ abhivadanti tathārūpāssa dhammā bahussutā honti dhātā vacasā paricitā manasā anupekkhitā diṭṭhiyā suppaṭividdhā;</p>
+
+<p>ubhayāni khopanassa pātimokkhāni vitthārena svāgatāni honti suvibhattāni suppavattīni suvinicchitāni suttaso anubyañjanaso;</p>
+
+<hr>
+<p>kalyāṇavāco hoti kalyāṇavākkaraṇo;</p>
+
+<p>yebhuyyena bhikkhunīnaṁ piyo hoti manāpo;</p>
+
+<p>paṭibalo hoti bhikkhuniyo ovadituṁ;</p>
+
+<p>na kho panetaṁ bhagavantaṁ uddissa pabbajitāya kāsāyavatthavasanāya garudhammaṁ ajjhāpannapubbo hoti;</p>
+
+<hr>
+<p>vīsativasso vā hoti atirekavīsativasso vā—</p>
+
+<p>anujānāmi, bhikkhave, imehi aṭṭhahangehi samannāgataṁ bhikkhuṁ bhikkhunovādakaṁ sammannitun"ti.</p>
+
+<hr>
+<p><span class="parno">14</span><span class="ms">p_2V_497, msdiv148</span><b>Yo panā</b>'ti yo yādiso … pe … <b>bhikkhū</b>'ti … pe … ayaṁ imasmiṁ atthe adhippeto bhikkhūti.</p>
+
+<hr>
+<p><span class="parno">15</span><span class="ms">p_2V_498</span><b>Asammato</b> nāma ñatticatutthena kammena asammato.</p>
+
+<hr>
+<p><span class="parno">16</span><span class="ms">p_2V_499</span><b>Bhikkhuniyo</b> nāma ubhatosaṇghe upasampannā.</p>
+
+<p><span class="parno">17</span><span class="ms">p_2V_500</span><b>Ovadeyyā</b>'ti aṭṭhahi garudhammehi ovadati, āpatti pācittiyassa. Aññena dhammena ovadati, āpatti dukkaṭassa. Ekatoupasampannaṁ ovadati, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">18</span><span class="ms">p_2V_501, msdiv149</span>Tena sammatena bhikkhunā pariveṇaṁ sammajjitvā pānīyaṁ paribhojanīyaṁ upaṭṭhāpetvā āsanaṁ paññapetvā dutiyaṁ gahetvā nisīditabbaṁ. Bhikkhunīhi tattha gantvā taṁ bhikkhuṁ abhivādetvā ekamantaṁ nisīditabbaṁ. Tena bhikkhunā pucchitabbā— "samaggāttha, bhaginiyo"ti?</p>
+
+<p>Sace "samaggāmhāyyā"ti bhaṇanti, "vattanti, bhaginiyo, aṭṭha garudhammā"ti?</p>
+
+<p>Sace "vattantāyyā"ti bhaṇanti, "eso, bhaginiyo, ovādo"ti niyyādetabbo.</p>
+
+<p>Sace "na vattantāyyā"ti bhaṇanti, osāretabbā.</p>
+
+<hr>
+<p>"Vassasatūpasampannāya bhikkhuniyā tadahupasampannassa bhikkhuno abhivādanaṁ paccuṭṭhānaṁ añjalikammaṁ sāmīcikammaṁ kātabbaṁ; ayampi dhammo sakkatvā garukatvā mānetvā pūjetvā yāvajīvaṁ anatikkamanīyo.</p>
+
+<p>Na bhikkhuniyā abhikkhuke āvāse vassaṁ vasitabbaṁ; ayampi dhammo sakkatvā garukatvā mānetvā pūjetvā yāvajīvaṁ anatikkamanīyo.</p>
+
+<p>Anvaddhamāsaṁ bhikkhuniyā bhikkhusaṇghato dve dhammā paccāsīsitabbā uposathapucchakañca ovādūpasankamanañca,</p>
+
+<p>ayampi dhammo … pe … vassaṁ vuṭṭhāya bhikkhuniyā ubhatosaṇghe tīhi ṭhānehi pavāretabbaṁ diṭṭhena vā sutena vā parisankāya vā;</p>
+
+<p>ayampi dhammo … pe … garudhammaṁ ajjhāpannāya bhikkhuniyā ubhatosaṇghe pakkhamānattaṁ caritabbaṁ;</p>
+
+<p>ayampi dhammo … pe … dve vassāni chasu dhammesu sikkhitasikkhāya sikkhamānāya ubhatosaṇghe upasampadā pariyesitabbā;</p>
+
+<p>ayampi dhammo … pe … na bhikkhuniyā kenaci pariyāyena bhikkhu akkositabbo paribhāsitabbo;</p>
+
+<p>ayampi dhammo … pe … ajjatagge ovaṭo bhikkhunīnaṁ bhikkhūsu vacanapatho, anovaṭo bhikkhūnaṁ bhikkhunīsu vacanapatho;</p>
+
+<p>ayampi dhammo sakkatvā garukatvā mānetvā pūjetvā yāvajīvaṁ anatikkamanīyo"ti.</p>
+
+<hr>
+<p><span class="parno">19</span><span class="ms">p_2V_502</span>Sace "samaggāmhāyyā"ti bhaṇantaṁ aññaṁ dhammaṁ bhaṇati, āpatti dukkaṭassa. Sace "vaggāmhāyyā"ti bhaṇantaṁ aṭṭha garudhamme bhaṇati, āpatti dukkaṭassa. Ovādaṁ aniyyādetvā aññaṁ dhammaṁ bhaṇati, āpatti dukkaṭassa.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">20</span><span class="ms">p_2V_503, msdiv150</span>Adhammakamme adhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati, āpatti pācittiyassa. Adhammakamme adhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ vematiko ovadati, āpatti pācittiyassa. Adhammakamme adhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ samaggasaññī ovadati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">21</span><span class="ms">p_2V_504</span>Adhammakamme vematiko vaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati, āpatti pācittiyassa. Adhammakamme vematiko vaggaṁ bhikkhunisaṇghaṁ vematiko ovadati, āpatti pācittiyassa. Adhammakamme vematiko vaggaṁ bhikkhunisaṇghaṁ samaggasaññī ovadati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">22</span><span class="ms">p_2V_505</span>Adhammakamme dhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati, āpatti pācittiyassa. Adhammakamme dhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ vematiko ovadati, āpatti pācittiyassa. Adhammakamme dhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ samaggasaññī ovadati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">23</span><span class="ms">p_2V_506</span>Adhammakamme adhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati, āpatti pācittiyassa. Adhammakamme adhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ vematiko ovadati, āpatti pācittiyassa. Adhammakamme adhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ samaggasaññī ovadati, āpatti pācittiyassa.</p>
+
+<hr>
+<p><span class="parno">24</span><span class="ms">p_2V_507</span>Adhammakamme vematiko samaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati … pe … vematiko ovadati … pe … samaggasaññī ovadati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">25</span><span class="ms">p_2V_508</span>Adhammakamme dhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati … pe … vematiko ovadati … pe … samaggasaññī ovadati, āpatti pācittiyassa.</p>
+
+<p><span class="parno">26</span><span class="ms">p_2V_509, msdiv151</span>Dhammakamme adhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati, āpatti dukkaṭassa. Dhammakamme adhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ vematiko ovadati … pe … samaggasaññī ovadati, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">27</span><span class="ms">p_2V_510</span>Dhammakamme vematiko vaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati … pe … vematiko ovadati … pe … samaggasaññī ovadati, āpatti dukkaṭassa.</p>
+
+<hr>
+<p><span class="parno">28</span><span class="ms">p_2V_511</span>Dhammakamme dhammakammasaññī vaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati … pe … vematiko ovadati … pe … samaggasaññī ovadati, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">29</span><span class="ms">p_2V_512</span>Dhammakamme adhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati … pe … vematiko ovadati … pe … samaggasaññī ovadati, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">30</span><span class="ms">p_2V_513</span>Dhammakamme vematiko samaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati … pe … vematiko ovadati … pe … samaggasaññī ovadati, āpatti dukkaṭassa.</p>
+
+<p><span class="parno">31</span><span class="ms">p_2V_514</span>Dhammakamme dhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ vaggasaññī ovadati, āpatti dukkaṭassa. Dhammakamme dhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ vematiko ovadati, āpatti dukkaṭassa. Dhammakamme dhammakammasaññī samaggaṁ bhikkhunisaṇghaṁ samaggasaññī ovadati, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">32</span><span class="ms">p_2V_515, msdiv152</span>Anāpatti— uddesaṁ dento, paripucchaṁ dento, "osārehi ayyā"ti vuccamāno, osāreti, pañhaṁ pucchati, pañhaṁ puṭṭho katheti, aññassatthāya bhaṇantaṁ bhikkhuniyo suṇanti, sikkhamānāya, sāmaṇeriyā, ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">33</span><span class="ms">p_2V_516</span>Ovādasikkhāpadaṁ niṭṭhitaṁ paṭhamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bu-vb-pc20.html#content"></a><a id="next-sutta" href="../vi/bu-vb-pc22.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bu-vb.html">Bhikkhu Vibhanga</a><a href="../vi/bu-vb-pc.html">Pācittiyas</a>Pācittiya&nbsp;21
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Nissaggiya Pācittiya 11</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div id="content">
+<h2>Vinaya Pitaka - Monastic Rules</h2>
+
+<p>&nbsp;</p>
+
+
+	<ul id="vbnav">
+		<li><a href="../vi/bi-vb-pj.html#content">Pārājikas</a></li>
+		<li><a href="../vi/bi-vb-sn.html#content">Sanghādisesas</a></li>
+			<li id="active"><a href="../vi/bi-vb-np.html#content">Nissaggiya Pācittiyas</a></li>
+		<li><a href="../vi/bi-vb-pc.html#content">Pācittiyas</a></li>
+		<li><a href="../vi/bi-vb-pd.html#content">Pāṭidesanīyas</a></li>
+		<li><a href="../vi/bi-vb-sk.html#content">Sekhiyas</a></li>
+		<li><a href="../vi/bi-vb-as.html#content">Adhikaraṇa-Samathās</a></li>
+	</ul>
+
+<h2>Bhikkhuni Vibhanga - Nissaggiya Pācittiya 11: Limiting the Value of Requested Heavy Robe Cloth.</h2>
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Brahmali Bhikkhu.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>Then King Pasenadi of Kosala having, in the cold weather, put on a costly woollen garment, approached the nun Thullanandā; having approached, having greeted the nun Thullanandā, he sat down at a respectful distance. As he was sitting down at a respectful distance, the nun Thullanandā roused … gladdened King Pasenadi of Kosala with dhamma-talk. Then King Pasenadi of Kosala, having been roused … gladdened with dhamma-talk by the nun Thullanandā, spoke thus to the nun Thullanandā: “Do let me know, lady, what would be of use (to you)."<span class="note"><span class="details"><span class="p"><i>Cf.</i> <a class="cr" href="#BD.1.222"></a> = <a class="cr"></a> for same expression.</span></span></span></p>
+
+<hr>
+<p>"If, Sire, you are desirous of giving (something) to me, give me this woollen garment."</p>
+
+<p>Then King Pasenadi of Kosala, having given the woollen garment to the nun Thullanandā, having risen from his seat, having greeted the nun Thullanandā, departed keeping his right side towards her. People looked down upon, criticised, spread it about, saying:</p>
+
+<p>"These nuns have great desires, they are not contented. How can they ask the king for a woollen garment?"</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>Nuns heard these people who … spread it about. Those who were modest nuns … spread it about, saying: “How can the lady Thullanandā ask the king for a woollen garment?" …</p>
+
+<p>"Is it true, as is said, monks, that the nun Thullanandā asked the king for a woollen garment?"</p>
+
+<hr>
+<p>"It is true, lord."</p>
+
+<p>The enlightened one, the lord rebuked them, saying:</p>
+
+<p>"How, monks, can the nun Thullanandā ask the king for a woollen garment? It is not, monks, for pleasing those who are not (yet) pleased … this rule of training:</p>
+
+<hr>
+<p id="p3"><span class="parno">3</span>"<span class="rule">If a nun is bargaining for<span class="note"><span class="details"><span class="p"><i>cetāpentiyā</i>, explained in Old Commentary, as <i>viññāpentiyā</i>, asking for, as at <a class="cr" href="#Vin.3.246">Vin.3.246</a> (<a class="cr" href="#BD.2.121"></a>). <i>Cetāpeti</i> is usually “to get in exchange," see <a class="cr">BD.2.54<i>f.</i></a>, <a class="cr" href="#BD.2.120"></a>, and above <a href="../vi/bu-vb-np7.html">Bhikkhus Nissaggiya Pācittiya 7</a> –<a href="../vi/bu-vb-np10.html">Bhikkhus Nissaggiya Pācittiya 10</a>. Here Thullanandā certainly gets the cloth in exchange for her teaching. But, since for us: “to get in exchange “usually means the changing hands of tangible objects, I have thought it best, in order to avoid this implication, to use “to bargain." Moreover, <i>cetāpeti</i> is not really synonymous with <i>viññāpeti</i>, although it may be said to contain, as does “to bargain," this meaning.</span></span></span> a heavy cloth,<span class="note"><span class="details"><span class="p"><i>garupāvuraṇa</i>.</span></span></span> she may bargain for one (worth) at most four “bronzes."<span class="note"><span class="details"><span class="p"><i>kaṁsa</i>. As <span class="ref"><span class="author">Rhys Davids</span> states, <cite class="essay">Ancient Coins and Measures of Ceylon</cite>, p.7</span>, this “as a measure of value is only found in this passage." Here, according to the Old Commentary, four “bronzes" are worth sixteen <i>kahāpaṇas</i>; and so, as Buddhaghosa says, <span class="ref">Vin-a.919</span>: “here a <i>kaṁsa</i> is (worth) four <i>kahāpaṇas</i>"; and <i>cf.</i> <i>Kankhāvitaraṇī</i> (Simon Hewavitarne Bequest), p.172, and Moggallāna, <span class="ref">Abhidhānappadīpikā 905</span>. The value being so small, Rhys Davids is against the notion that the <i>kaṁsa</i> was a bronze or brass cup, plate or vessel. It may possibly have been a bronze weight such as those used until recently in Burma. There is no commentarial support for Childers’ view that <i>kaṁsa</i> is “a coin," or for Böhtlingroth’s that it is an equivalent of <i>āḍhaka</i> (Pali, <i>āḷhaka</i>).</span></span></span> If she should bargain for one (worth) more than that, there is an offence of expiation involving forfeiture.</span>"</p>
+
+<p id="p4"><span class="parno">4</span><span class="term">A heavy cloth</span> means: <span class="gloss">whatever is a cloth for the cold weather.</span></p>
+
+<p id="p5"><span class="parno">5</span><span class="term">Is bargaining for</span> means: <span class="gloss">is asking for. </span></p>
+
+<hr>
+<p id="p6"><span class="parno">6</span><span class="term">She may bargain for one (worth) at most four “bronzes"</span> means: <span class="gloss">she may bargain for one worth sixteen <i>kahāpaṇas</i>.</span></p>
+
+<p id="p7"><span class="parno">7</span><span class="term">If she should bargain for one (worth) more than that</span> means: <span class="gloss">if she asks for one (worth) more than that, in the request there is an offence of wrong-doing. It is to be forfeited on acquisition. It should be forfeited to an Order or to a group or to one nun. And thus, monks, should it be forfeited: <span class="kamma">‘Ladies, this heavy cloth (worth) at most more than four “bronzes," bargained for by me, is to be forfeited. I forfeit it to the Order’</span> … <span class="kamma">“ … the Order should give back … let them give back … I will give back this (heavy cloth) to the lady."</span></span></p>
+
+<p id="p8"><span class="parno">8</span>If she thinks that it is (worth) more when it is (worth) more than four “bronzes" (and) bargains for it, there is an offence of expiation involving forfeiture. If she is in doubt as to whether it is (worth) more than four “bronzes" … If she thinks that it is (worth) less when it is (worth) more than four “bronzes" (and) bargains for it, there is an offence of expiation involving forfeiture.</p>
+
+<p id="p9"><span class="parno">9</span>If she thinks that it is (worth) more when it is (worth) less than four “bronzes," there is an offence of wrong-doing. If she is in doubt as to whether it is (worth) less than four “bronzes," there is an offence of wrong-doing. If she thinks that it is (worth) less when it is (worth) less than four “bronzes," there is no offence.</p>
+
+<hr>
+<p id="p10"><span class="parno">10</span>There is no offence if she bargains for one (worth) at most four “bronzes"; if she bargains for one (worth) at most less than four “bronzes"; if they belong to relations; if they are offered; if it is for another; if it is by means of her own property; if she bargains for something of small value while (the other person) desires to bargain for something costly<span class="note"><span class="details"><span class="p"><i>Cf.</i> <a href="#Vin.3.217">Vin.3.217</a> <a>BD.2.57</a> and where <i>cetāpeti</i> is in sense of “to get in exchange" rather than “to bargain."</span></span></span>; if she is mad, if she is the first wrong-doer.</p>
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+
+<p><span class="parno">1</span><span class="ms">p_2V_2541, msdiv783</span>Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena thullanandā bhikkhunī bahussutā hoti bhāṇikā visāradā paṭṭā dhammiṁ kathaṁ kātuṁ. Atha kho rājā pasenadi kosalo sītakāle mahagghaṁ kambalaṁ pārupitvā yena thullanandā bhikkhunī tenupasaṅkami; upasaṅkamitvā thullanandaṁ bhikkhuniṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho rājānaṁ pasenadiṁ kosalaṁ thullanandā bhikkhunī dhammiyā kathāya sandassesi samādapesi samuttejesi sampahaṁsesi. Atha kho rājā pasenadi kosalo thullanandāya bhikkhuniyā dhammiyā kathāya sandassito samādapito samuttejito sampahaṁsito thullanandaṁ bhikkhuniṁ etadavoca: “vadeyyāsi, ayye, yena attho”ti?</p>
+
+<hr>
+<p>“Sace me tvaṁ, mahārāja, dātukāmosi, imaṁ kambalaṁ dehī”ti.</p>
+
+<p>Atha kho rājā pasenadi kosalo thullanandāya bhikkhuniyā kambalaṁ datvā uṭṭhāyāsanā thullanandaṁ bhikkhuniṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi. Manussā ujjhāyanti khiyyanti vipācenti: </p>
+
+<p>“mahicchā imā bhikkhuniyo asantuṭṭhā. Kathañhi nāma rājānaṁ kambalaṁ viññāpessantī”ti.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_2V_2542</span>Assosuṁ kho bhikkhuniyo tesaṁ manussānaṁ ujjhāyantānaṁ khiyyantānaṁ vipācentānaṁ. Yā tā bhikkhuniyo appicchā … pe … tā ujjhāyanti khiyyanti vipācenti: </p>
+
+<p>“kathañhi nāma ayyā thullanandā rājānaṁ kambalaṁ viññāpessatī”ti … pe … “saccaṁ kira, bhikkhave, thullanandā bhikkhunī rājānaṁ kambalaṁ viññāpetī”ti?</p>
+
+<hr>
+<p>“Saccaṁ, bhagavā”ti.</p>
+
+<p>Vigarahi buddho bhagavā … pe …</p>
+
+<p>Kathañhi nāma, bhikkhave, thullanandā bhikkhunī rājānaṁ kambalaṁ viññāpessati. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, bhikkhuniyo imaṁ sikkhāpadaṁ uddisantu—</p>
+
+<hr>
+<p><span class="parno">3</span><span class="ms">p_2V_2543, msdiv784</span><b>“Garupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā catukkaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyan” ti.</b></p>
+
+<p><span class="parno">4</span><span class="ms">p_2V_2544, msdiv785</span><b>Garupāvuraṇaṁ</b> nāma yaṁ kiñci sītakāle pāvuraṇaṁ.</p>
+
+<p><span class="parno">5</span><span class="ms">p_2V_2545</span><b>Cetāpentiyā</b>'ti viññāpentiyā.</p>
+
+<hr>
+<p><span class="parno">6</span><span class="ms">p_2V_2546</span><b>Catukkaṁsaparamaṁ cetāpetabban</b>'ti soḷasakahāpaṇagghanakaṁ cetāpetabbaṁ.</p>
+
+<p><span class="parno">7</span><span class="ms">p_2V_2547</span><b>Tato ce uttari cetāpeyyā</b>'ti tatuttari viññāpeti, payoge dukkaṭaṁ. Paṭilābhena nissaggiyaṁ hoti. Nissajjitabbaṁ saṁghassa vā gaṇassa vā ekabhikkhuniyā vā. Evañca pana, bhikkhave, nissajjitabbaṁ … pe … “idaṁ me, ayye, garupāvuraṇaṁ atirekacatukkaṁsaparamaṁ cetāpitaṁ nissaggiyaṁ, imāhaṁ saṁghassa nissajjāmī”ti … pe … dadeyyāti … pe … dadeyyunti … pe … ayyāya dammīti.</p>
+
+<p><span class="parno">8</span><span class="ms">p_2V_2548, msdiv786</span>Atirekacatukkaṁse atirekasaññā cetāpeti, nissaggiyaṁ pācittiyaṁ. Atirekacatukkaṁse vematikā cetāpeti, nissaggiyaṁ pācittiyaṁ. Atirekacatukkaṁse ūnakasaññā cetāpeti, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p><span class="parno">9</span><span class="ms">p_2V_2549</span>Ūnakacatukkaṁse atirekasaññā, āpatti dukkaṭassa. Ūnakacatukkaṁse vematikā, āpatti dukkaṭassa. Ūnakacatukkaṁse ūnakasaññā, anāpatti.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_2V_2550, msdiv787</span>Anāpatti— catukkaṁsaparamaṁ cetāpeti, ūnakacatukkaṁsaparamaṁ cetāpeti, ñātakānaṁ, pavāritānaṁ, aññassatthāya, attano dhanena, mahagghaṁ cetāpetukāmassa appagghaṁ cetāpeti, ummattikāya, ādikammikāyāti.</p>
+
+<p class="endsutta"><span class="parno">11</span><span class="ms">p_2V_2551</span>Ekādasamasikkhāpadaṁ niṭṭhitaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-np10.html#content"></a><a id="next-sutta" href="../vi/bi-vb-np12.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya 11
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

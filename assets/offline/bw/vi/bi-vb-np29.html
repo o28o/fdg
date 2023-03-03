@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Vibhanga (Bhikkhuni) - Nissaggiya Pācittiya 29</title>
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Loading third party fonts -->
+  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+  	<!-- Loading main and menu stylesheets -->
+  	<link rel="stylesheet" href="../css/w3.css">
+  	<link rel="stylesheet" href="../css/css.css">
+  	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="pressed w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
+ 						
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<div id="content">
+<h2>Vinaya Pitaka - Monastic Rules</h2>
+
+<p>&nbsp;</p>
+
+
+	<ul id="vbnav">
+		<li><a href="../vi/bi-vb-pj.html#content">Pārājikas</a></li>
+		<li><a href="../vi/bi-vb-sn.html#content">Sanghādisesas</a></li>
+		<li id="active"><a href="../vi/bi-vb-np.html#content">Nissaggiya Pācittiyas</a></li>
+		<li><a href="../vi/bi-vb-pc.html#content">Pācittiyas</a></li>
+		<li><a href="../vi/bi-vb-pd.html#content">Pāṭidesanīyas</a></li>
+		<li><a href="../vi/bi-vb-sk.html#content">Sekhiyas</a></li>
+		<li><a href="../vi/bi-vb-as.html#content">Adhikaraṇa-Samathās</a></li>
+	</ul>
+
+<h2>Bhikkhuni Vibhanga - Nissaggiya Pācittiya 29<span class="note"><span class="details"><span class="p">i.e. the Bhikkhu's NP28</span></span></span>: The Training Rule on Haste Cloth.</h2>
+
+<div id="metaarea">
+<ul class="translator">
+<li>Translated from the Pali by Brahmali Bhikkhu.</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<h3>Origin story</h3>
+
+<p id="p1"><span class="parno">1</span>At one time the Buddha, the Master, was staying at Sāvatthī in the Jeta Grove, Anāthapiṇḍika’s Monastery. At that time a minister who was going away sent a messenger to the monks: “Come, bhantes, I wish to give rains-residence cloth."</p>
+
+<p>The monks thought: “The Master has allowed rains-residence cloth for those who have completed the rains residence," and being afraid of wrongdoing they did not go. Then that minister complained and criticised them: “How can the Venerables not come when I send a messenger? I am going out with the army. It is hard to know whether one will live or die."</p>
+
+<hr>
+<p id="p2"><span class="parno">2</span>Monks heard the complaints of that minister, and they informed the Master. The Master spoke on the Dhamma and addressed the monks: “Monks, I allow you to receive a haste-cloth, and then store it."</p>
+
+<p id="p3"><span class="parno">3</span>Knowing that the Master had made this allowance, monks received haste-cloth and stored it beyond the robe making season. They kept it tied up in a bundle on a robe rack.</p>
+
+<p>While inspecting the lodgings, Venerable Ānanda saw that cloth, and he asked the monks: “Whose cloth is this?"</p>
+
+<hr>
+<p>“It’s our haste-cloth."</p>
+
+<p>“How long have you stored it?"</p>
+
+<p>They informed him, and Venerrable Ānanda then complained and criticised them: “How can these monks receive haste-cloth and then store it beyond the robe season?"</p>
+
+<p id="p4"><span class="parno">4</span>After criticising those monks in many ways, Venerable Ānanda informed the Master. … “Is it true, monks, that you receive haste-cloth and then store is beyond the robe season?" “It’s true, Master." The Buddha, the Master, criticised them: “ … Monks, how can these foolish men receive haste-cloth and then store it beyond the robe season? This will not give rise to confidence in those without it … And, monks, this training rule should be recited thus:</p>
+
+<h3>Final ruling</h3>
+
+<p id="p5"><span class="parno">5</span><span class="rule">“When there are ten days left to the Kattika full moon that ends the first rains residence and haste-cloth becomes available for a monk, he may receive it if he regards it as urgent. He may then store it until the end of the robe season. If he stores it beyond that, he commits an offence entailing relinquishment and confession."</span></p>
+
+<h3>Definitions</h3>
+
+<p id="p6"><span class="parno">6</span>There are ten days left: until the <i>pavāraṇā</i> ceremony, which is ten days in the future.</p>
+
+<p id="p7"><span class="parno">7</span>The Kattika full moon that ends the first rains residence: the Kattikā full moon of the <i>pavāraṇā</i> is so called.</p>
+
+<p id="p8"><span class="parno">8</span>Haste-cloth: when someone wants to go out with the army, when someone wants to go away, when someone is sick, when someone is pregnant, when someone without faith acquires faith, when someone without confidence acquires confidence: if that person sends a messenger to the monks, saying: “Come, bhantes, I wish to give rains-residence cloth", this is called a haste-cloth.</p>
+
+<p id="p9"><span class="parno">9</span>He may receive it if he regards it as urgent. He may then store it until the end of the robe season: establishing the perception of it as a haste-robe, he may store it.</p>
+
+<hr>
+<p id="p10"><span class="parno">10</span>The robe season: for one who has not done the <i>kathina</i> ceremony, it is the last month of the rainy season; for one who has done the <i>kathina</i> ceremony, it is the five month period.
+<span class="note"><span class="details"><span class="p">That is, the last month of the rainy season, plus the four months of the cold season.</span></span></span></p>
+
+<p id="p11"><span class="parno">11</span>If he stores it beyond that: for one who has not done the kathina ceremony, if goes beyond the last day of the rainy season, he commits an offence entailing relinquishment and confession. For one who has done the kathina ceremony, if he goes beyond the day on which the kathina season ends, the cloth becomes subject to relinquishment.</p>
+
+<p>The cloth is to be relinquished to a Saṅgha, a group, or an individual. “And, monks, it is to be relinquished in this way. … <span class="add">To be expanded as in <a href="../vi/bu-vb-np1.html#p13">Nissaggiya Pācittiya 1, verses 13 to 17</a> with appropriate substitutions.</span> … ‘<span class="kamma">Bhante, this haste-cloth which I have kept beyond the robe season is to be relinquished. I relinquish it to the Saṅgha.</span>’ … the Saṅgha should give … the Venerables should give … “<span class="kamma">I give this cloth back to the Venerable.</span>"</p>
+
+<h3>Permutations</h3>
+
+<p id="p12"><span class="parno">12</span>If it is haste-cloth and he perceives it as haste-cloth, and he keeps it beyond the robe season, he commits an offence entailing relinquishment and confession. If it is haste-cloth, but he has doubts about it, and he keeps it beyond the robe season, he commits an offence entailing relinquishment and confession. If it is haste-cloth, but he does not perceives it as haste-cloth, and he keeps it beyond the robe season, he commits an offence entailing relinquishment and confession.</p>
+
+<p>If it is undetermined, but he perceives it as determined … If it is not placed under shared ownership, but he perceives it as placed under shared ownership … If it is not given away, but he perceives it as given away … If it is not lost, but he perceives it as lost … If it is not destroyed, but he perceives it as destroyed … If it is not burnt, but he perceives it as burnt … If it is not stolen, but he perceives it as stolen, and he keeps it beyond the robe season, he commits an offence entailing relinquishment and confession.</p>
+
+<p id="p13"><span class="parno">13</span><span class="rule">If he uses a cloth which is to be relinquished without first relinquishing it, he commits an offence of bad conduct.</span> If it is not a haste-cloth, but he perceives it as haste-cloth, he commits an offence of bad conduct. If it is not a haste-cloth, but he has doubts about it, he commits an offence of bad conduct. If it is not a haste-cloth and he does not perceive it as a haste-cloth, there is no offence.</p>
+
+<h3>Non-offences</h3>
+
+<p id="p14"><span class="parno">14</span>There is no offence: if within the robe season the haste-cloth is determined, placed under shared ownership, given away, lost, destroyed, burnt, stolen, or taken on trust; if he is insane; if he is the first offender.</p>
+
+<p class="endsutta"><span class="parno">15</span>The eighth rule, the training rule on haste-cloth, is finished.</p>
+
+</div><!--End English-->
+
+<div lang="pi"><!--Pali-->
+<h3>&nbsp;</h3>
+
+<p><span class="parno">1</span><span class="ms">p_1V_2385</span> Tena samayena buddho bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tena kho pana samayena aññataro mahāmatto pavāsaṁ gacchanto bhikkhūnaṁ santike dūtaṁ pāhesi— "āgacchantu bhadantā vassāvāsikaṁ dassāmī"ti. Bhikkhū—</p>
+
+<p>"vassaṁvuṭṭhānaṁ bhagavatā vassāvāsikaṁ anuññātan"ti, kukkuccāyantā nāgamaṁsu. Atha kho so mahāmatto ujjhāyati khiyyati vipāceti— "Kathañhi nāma bhadantā mayā dūte pahite nāgacchissanti. Ahañhi senāya gacchāmi. Dujjānaṁ jīvitaṁ dujjānaṁ maraṇan"ti.</p>
+
+<hr>
+<p><span class="parno">2</span><span class="ms">p_1V_2386</span>Assosuṁ kho bhikkhū tassa mahāmattassa ujjhāyantassa khiyyantassa vipācentassa. Atha kho te bhikkhū bhagavato etamatthaṁ ārocesuṁ. Atha kho bhagavā etasmiṁ nidāne etasmiṁ pakaraṇe dhammiṁ kathaṁ katvā bhikkhū āmantesi:  "Anujānāmi, bhikkhave, accekacīvaraṁ paṭiggahetvā nikkhipitun"ti.</p>
+
+<p><span class="parno">3</span><span class="ms">p_1V_2387</span> Tena kho pana samayena bhikkhū— "bhagavatā anuññātaṁ accekacīvaraṁ paṭiggahetvā nikkhipitun"ti, accekacīvarāni paṭiggahetvā cīvarakālasamayaṁ atikkāmenti. Tāni cīvarāni cīvaravaṁse bhaṇḍikābaddhāni tiṭṭhanti.</p>
+
+<p>Addasa kho āyasmā ānando senāsanacārikaṁ āhiṇḍanto tāni cīvarāni cīvaravaṁse bhaṇḍikābaddhāni tiṭṭhante disvā bhikkhū etadavoca: "kassimāni, āvuso, cīvarāni cīvaravaṁse bhaṇḍikābaddhāni tiṭṭhantī"ti?</p>
+
+<hr>
+<p>"Amhākaṁ, āvuso, accekacīvarānī"ti.</p>
+
+<p>"Kīvaciraṁ panāvuso, imāni cīvarāni nikkhittānī"ti?</p>
+
+<p>Atha kho te bhikkhū āyasmato ānandassa yathānikkhittaṁ ārocesuṁ. Āyasmā ānando ujjhāyati khiyyati vipāceti— "Kathañhi nāma bhikkhū accekacīvaraṁ paṭiggahetvā cīvarakālasamayaṁ atikkāmessantī"ti.</p>
+
+<p><span class="parno">4</span><span class="ms">p_1V_2388</span>Atha kho āyasmā ānando te bhikkhū anekapariyāyena vigarahitvā bhagavato etamatthaṁ ārocesi … pe … — "Saccaṁ kira, bhikkhave, bhikkhū accekacīvaraṁ paṭiggahetvā cīvarakālasamayaṁ atikkāmentī"ti? "Saccaṁ, bhagavā"ti. Vigarahi buddho bhagavā … pe … kathañhi nāma te, bhikkhave, moghapurisā accekacīvaraṁ paṭiggahetvā cīvarakālasamayaṁ atikkāmessanti. Netaṁ, bhikkhave, appasannānaṁ vā pasādāya … pe … evañca pana, bhikkhave, imaṁ sikkhāpadaṁ uddiseyyātha—</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">5</span><span class="ms">p_1V_2389</span><span class="rule">"Dasāhānāgataṁ kattikatemāsikapuṇṇamaṁ bhikkhuno paneva accekacīvaraṁ uppajjeyya, accekaṁ maññamānena bhikkhunā paṭiggahetabbaṁ, paṭiggahetvā yāva cīvarakālasamayaṁ nikkhipitabbaṁ. Tato ce uttari nikkhipeyya, nissaggiyaṁ pācittiyan"</span>ti. (<i>28</i>:<b>47</b>)</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">6</span><span class="ms">p_1V_2390</span> <b>Dasāhānāgatan</b>'ti dasāhānāgatāya pavāraṇāya.</p>
+
+<p><span class="parno">7</span><span class="ms">p_1V_2391</span><b>Kattikatemāsikapuṇṇaman</b>'ti pavāraṇā kattikā vuccati.</p>
+
+<p><span class="parno">8</span><span class="ms">p_1V_2392</span><b>Accekacīvaraṁ</b> nāma senāya vā gantukāmo hoti, pavāsaṁ vā gantukāmo hoti, gilāno vā hoti, gabbhinī vā hoti, assaddhassa vā saddhā uppannā hoti, appasannassa vā pasādo uppanno hoti, so ce bhikkhūnaṁ santike dūtaṁ pahiṇeyya— "āgacchantu bhadantā vassāvāsikaṁ dassāmī"ti, etaṁ accekacīvaraṁ nāma.</p>
+
+<p><span class="parno">9</span><span class="ms">p_1V_2393</span><b>Accekaṁ maññamānena bhikkhunā paṭiggahetabbaṁ paṭiggahetvā yāva cīvarakālasamayaṁ nikkhipitabban</b>'ti saññāṇaṁ katvā nikkhipitabbaṁ— "Idaṁ accekacīvaran"ti.</p>
+
+<hr>
+<p><span class="parno">10</span><span class="ms">p_1V_2394</span><b>Cīvarakālasamayo</b> nāma anatthate kathine vassānassa pacchimo māso, atthate kathine pañcamāsā.</p>
+
+<p><span class="parno">11</span><span class="ms">p_1V_2395</span><b>Tato ce uttari nikkhipeyyā</b>'ti anatthate kathine vassānassa pacchimaṁ divasaṁ atikkāmeti, nissaggiyaṁ pācittiyaṁ. Atthate kathine kaṭhinuddhāradivasaṁ atikkāmeti, nissaggiyaṁ hoti.</p>
+
+<p>Nissajjitabbaṁ sanghassa vā gaṇassa vā puggalassa vā. Evañca pana, bhikkhave, nissajjitabbaṁ … pe … idaṁ me, bhante, accekacīvaraṁ cīvarakālasamayaṁ atikkāmitaṁ nissaggiyaṁ. Imāhaṁ sanghassa nissajjāmīti … pe … dadeyyāti … pe … dadeyyunti … pe … āyasmato dammīti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">12</span><span class="ms">p_1V_2396</span> Accekacīvare accekacīvarasaññī cīvarakālasamayaṁ atikkāmeti, nissaggiyaṁ pācittiyaṁ. Accekacīvare vematiko cīvarakālasamayaṁ atikkāmeti, nissaggiyaṁ pācittiyaṁ. Accekacīvare anaccekacīvarasaññī cīvarakālasamayaṁ atikkāmeti, nissaggiyaṁ pācittiyaṁ.\</p>
+
+<p>Anadhiṭṭhite adhiṭṭhitasaññī … pe … avikappite vikappitasaññī … avissajjite vissajjitasaññī … anaṭṭhe naṭṭhasaññī … avinaṭṭhe vinaṭṭhasaññī … adaḍḍhe daḍḍhasaññī … avilutte viluttasaññī cīvarakālasamayaṁ atikkāmeti, nissaggiyaṁ pācittiyaṁ.</p>
+
+<p><span class="parno">13</span><span class="ms">p_1V_2397</span>Nissaggiyaṁ cīvaraṁ anissajjitvā paribhuñjati, āpatti dukkaṭassa. Anaccekacīvare accekacīvarasaññī, āpatti dukkaṭassa. Anaccekacīvare vematiko, āpatti dukkaṭassa. Anaccekacīvare anaccekacīvarasaññī, anāpatti.</p>
+
+<h3>&nbsp;</h3>
+
+<p><span class="parno">14</span><span class="ms">p_1V_2398</span> Anāpatti— antosamaye adhiṭṭheti, vikappeti, vissajjeti, nassati, vinassati, ḍayhati, acchinditvā gaṇhanti, vissāsaṁ gaṇhanti, ummattakassa, ādikammikassāti.</p>
+
+<p class="endsutta"><span class="parno">15</span><span class="ms">p_1V_2399</span>Accekacīvarasikkhāpadaṁ niṭṭhitaṁ aṭṭhamaṁ.</p>
+
+</div><!--End Pali-->
+
+<div id="nextprev"><a id="previous-sutta" href="../vi/bi-vb-np28.html#content"></a><a id="next-sutta" href="../vi/bi-vb-np30.html#content"></a></div>
+</section>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../vi/bi-vb.html">Bhikkhuni Vibhanga</a><a href="../vi/bi-vb-np.html">Nissaggiya Pācittiyas</a>Nissaggiya Pācittiya 29
+</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

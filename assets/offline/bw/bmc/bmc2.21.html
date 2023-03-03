@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>BMC2.21</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- Loading third party fonts -->
+ 	 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+			<script src="../js/jquery-1.10.2.min.js"></script>
+			<script src="../js/controlpanel.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+<body>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
+ 	</button>
+ 	<span class="box-lbl">Light\Dark</span>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 	</div>
+ </div>
+ 	<!-- Top menu -->
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
+ 						<li><a href="../bmc/bmc.html" class="w3-hide-small pressed">Buddhist Monastic Code</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
+ 	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
+ 	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
+ 	<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
+ 	<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 		</div>
+ </nav>
+ 
+  	<!-- !PAGE CONTENT! --> 
+ <div class="w3-main w3-content w3-left-align bwcontainer4">
+ 
+ <h2>Vinaya Pitaka - Buddhist Monastic Code</h2>
+
+ 	<div class="subnav3"> <!-- Div for sub-navigation -->
+ 		<a href="../bmc/bmc.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">Intro &<br>Abbreviations</a>
+ 		<a href="../bmc/bmc1.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile">BMC 1<br>&nbsp;</a>
+ 		<a href="../bmc/bmc2.html" class="w3-bar-item w3-border w3-button w3-hover-yellow w3-mobile w3-yellow">BMC 2<br>&nbsp;</a>
+ 	</div>	<!-- End div for sub-navigation -->
+ 
+ <div id="content">
+
+ 	<p>&nbsp;</p>
+
+ 	<h3>Buddhist Monastic Code Book 2 - The Khandhaka Rules Translated and Explained</h3>
+
+<div class="w3-center">
+	<div class="w3-bar">
+			<a href="../bmc/bmc2.intro.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:21%">Introduction:<br>The Khandakas<br>&nbsp;</a>
+			<a href="../bmc/bmc2.1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 1:<br>General<br>&nbsp;</a>
+			<a href="../bmc/bmc2.12.html" class="w3-button w3-yellow w3-border w3-hover-yellow w3-mobile" style="width:19%">Part 2:<br>Community Transactions</a>
+			<a href="../bmc/bmc2.23.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:24%">Part 3:<br>Co-religionists<br>&nbsp;</a>
+			<a href="../bmc/bmc2.app1.html" class="w3-button w3-white w3-border w3-hover-yellow w3-mobile" style="width:16%">Part 4:<br>Appendices<br>&nbsp;</a>
+	</div>
+</div>
+
+<div class="w3-bar w3-center">
+<a href="../bmc/bmc2.12.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Community Transactions</a>
+<a href="../bmc/bmc2.13.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Territories</a>
+<a href="../bmc/bmc2.14.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Ordination</a>
+<a href="../bmc/bmc2.15.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Uposatha</a>
+<a href="../bmc/bmc2.16.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Invitation</a>
+<a href="../bmc/bmc2.17.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Kaṭhina</a>
+<a href="../bmc/bmc2.18.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Community Officials</a>
+<a href="../bmc/bmc2.19.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Penance and Probation</a>
+<a href="../bmc/bmc2.20.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Disciplinary Transactions</a>
+<a href="../bmc/bmc2.21.html" class="w3-bar-item w3-border w3-yellow w3-hover-yellow w3-padding-16 w3-mobile">Schism</a>
+<a href="../bmc/bmc2.22.html" class="w3-bar-item w3-border w3-pale-yellow w3-hover-yellow w3-padding-16 w3-mobile">Inheritance</a>
+</div>
+
+ 	<p>&nbsp;</p>
+
+
+<h3>Chapter&nbsp;21: Schism</h3>
+
+	<div id="metaarea">
+		<ul class="translator">
+		<li>By Thannissaro Bhikkhu</li>
+		</ul>
+</div>
+
+<p>A schism (<i>saṅgha-bheda,</i> literally a split in the Saṅgha) is a division in the Community in which two groups of bhikkhus of common affiliation, with at least five in one group and four in the other, conduct Community business separately in the same territory. The discussion under <a href="../bmc/bmc1.5.html#sg10">Sanghādisesa 10</a> analyzes how schism comes about. Here we will discuss how bhikkhus, bhikkhunīs, and lay supporters should behave once a schism has started and how to bring it to an end.</p>
+
+<p>The Buddha condemned schism in strong terms, saying that a person who starts or joins a schism in a Community originally united around a correct understanding of Dhamma and Vinaya, knowing or suspecting that he is not on the side of the Dhamma and Vinaya, is destined to be boiled for an aeon in hell (<a href="../an/an5.129.html">AN5.129</a>, <a href="../vi/kd17.html#73">Khandhaka&nbsp;17 (Cv7)</a>). The Buddha also formulated two saṅghādisesa rules (<a href="../bmc/bmc1.5.html#sg10">Sanghādisesa 10</a> &amp; <a href="../bmc/bmc1.5.html#sg11">11</a>) to help intercept attempts at schism, and gave special allowances for bhikkhus to try to avoid, prevent, or end schisms, even if it means breaking their Rains-residence (see <a href="../bmc/bmc2.11.html">Chapter&nbsp;11</a>). Nevertheless, the Khandhakas do not depict the Buddha as discouraging people from taking sides in a schism. Instead, he instructs them to look into the matter and to side with the faction on the side of the Dhamma. He also does not encourage a too-hasty healing of the schism. If a split Community tries to patch up its differences without getting to the root of the matter, the transaction with which unification is announced is invalid and the matter must be opened up again. Thus the Buddha does not advocate superficial unity for its own sake at the expense of the Dhamma, but instead encourages that the Dhamma be clearly defended against non-Dhamma and that the distinction between the two be kept clear.</p>
+
+<p><b>Behavior during a schism.</b> When a bhikkhu has learned that a dispute has led to a schism and he wants to get involved, he is to side with whichever faction sides with the Dhamma. According to <a href="../vi/kd10.html#60">Khandhaka&nbsp;10 (Mv10)</a>, a speaker of non-Dhamma is to be recognized as such if he “explains not-Dhamma as 'Dhamma' … Dhamma as 'not-Dhamma' … not-Vinaya as 'Vinaya' … Vinaya as 'not-Vinaya' … what was not spoken, not mentioned by the Tathāgata as 'spoken, mentioned by the Tathāgata' … what was spoken, mentioned by the Tathāgata as 'not spoken, not mentioned by the Tathāgata' … what was not regularly practiced by the Tathāgata as ’regularly practiced by the Tathāgata' … what was regularly practiced by the Tathāgata as 'not regularly practiced by the Tathāgata' … what was not formulated by the Tathāgata as 'formulated by the Tathāgata' … what was formulated by the Tathāgata as 'not formulated by the Tathāgata' … a non-offense as 'an offense' … an offense as 'a non-offense' … a light offense as 'a heavy offense' … a heavy offense as 'a light offense' … an incurable offense as 'a curable offense' … a curable offense as 'an incurable offense' … a serious offense as 'a not-serious offense' … a not-serious offense as 'a serious offense.'” A speaker of Dhamma is to be recognized as such if he explains not-Dhamma as “not-Dhamma,” Dhamma as “Dhamma,” and so forth.</p>
+
+<p>Thus the ability to take sides requires that one be well-informed about the Buddha&rsquo;s teachings. If one cannot clearly judge which side is right (it might be that both sides are wrong, or that they have split over a gray area where the texts leave room for various interpretations), it is best not to get involved. Mv.III.11.5 gives permission for a bhikkhu to break his Rains-residence if bhikkhus in his Community are striving for a schism and he does not want to be present at the final break. Arguing from this allowance, it would make sense that if a bhikkhu arrives at a Community where the break has occurred and he does not want to get involved in it, he would do well to go elsewhere.</p>
+
+<p>Bhikkhunīs connected to a Community that has split should listen to both sides of the split and then give preference to whichever faction sides with the Dhamma. They should look to the Dhamma-faction for whatever services they expect from the Bhikkhu Saṅgha, such as the exhortation and the scheduling of the uposatha day (see <a href="../bmc/bmc2.23.html">Chapter&nbsp;23</a>). As for the laity, the texts quote the Buddha as saying that they should give gifts to both factions and listen to their Dhamma. Then, on consideration, they should give their preference to the Dhamma-faction. Notice, however, that in advising the laity to give preference to one faction over another, the Buddha does not say that only one faction should receive alms. After all, the laity may be misinformed about the Dhamma and in a poor position to tell the right faction from the wrong. At the same time, the Buddha has never been recorded as declaring a living being as unworthy of gifts, for that would be tantamount to saying that the being was unworthy to live. Still, there is the instructive tale contained in Khandhaka&nbsp;10, telling of the schism at Kosambī. After both sides had resisted the Buddha&rsquo;s efforts to settle their differences, he left Kosambī. The lay supporters then forced a settlement by refusing to give alms to either side.</p>
+
+<p><i>Practicalities.</i> Although the two sides of a schism may be performing separate recitations of the Pāṭimokkha and other Community transactions within the same territory, the transactions of both sides are considered valid as long as they follow the correct motions and announcements appropriate for those acts. Neither side can invalidate or successfully protest the transactions of the other side, for they count of separate affiliations (see Mv.X.1.9–10; Mv.IX.4.7). However — although none of the texts discuss the connection between Mv.X.1.9–10 and Mv.IX.4.2, which deals with valid and invalid quorums — it would seem that if the quorums of one side have to be filled by including bhikkhus who joined their faction out of corrupt motives, knowing or suspecting that what they were doing was not on the side of the Dhamma, their transactions would be automatically invalid.</p>
+
+<p>If the two sides of the schism are on bad terms, the bhikkhus of each side, whenever sitting down, should sit far enough apart from the members of the opposite side so that they will not act inappropriately toward one another (§). If the two sides are on courteous terms, though, a bhikkhu on one side may sit down near a bhikkhu on the other side, leaving the interval of one seat in between (§).</p>
+
+<p>When a schismatic faction arrives at a monastery, the members should be given any lodgings that are vacant (§). If none are vacant, some are to be made vacant, although this should be arranged so that senior bhikkhus are not preempted from lodgings to make way for junior bhikkhus. The advantage of this arrangement is that the resident bhikkhus will not be implicated in the schism and will at the same time be provided some respite from the schismatics' arguments. If two schismatic factions arrive at the same time, it would be wise — keeping the above injunction on sitting places in mind — to give them lodgings separate from each other.</p>
+
+<p>Offerings given to the Community should be shared between both factions. This principle holds regardless of whether the offerings were given before or after the split. Offerings given to a particular faction after the split are for that faction only.</p>
+
+<p><b>Ending schism.</b> The Canon contains two patterns for resolving a schism, based on the different ways the two schisms during the Buddha&rsquo;s lifetime were resolved. Generalizing from the two patterns, we can make the following observations:</p>
+
+<p>A schism can be rightfully ended only if both sides are able to investigate the grounds (i.e., the point of dispute around which the schism crystallized), get to the root (the mind-states motivating the schism — see Cv.IV.14.3–4), and then resolve which side was right, based on the Dhamma and Vinaya. (See the instructions for settling a dispute in <a href="../bmc/bmc1.11.html">BMC1, Chapter&nbsp;11</a>.) After the issue has been resolved, all members of both factions are to meet: No one may send his consent, and even those who are ill must come to the meeting. One of the bhikkhus recites the transaction statement announcing the unification of the Community, and a unity-uposatha is then held (see <a href="../bmc/bmc2.15.html">Chapter&nbsp;15</a>). That ends the schism.</p>
+
+<p>This method works only in cases where both factions were acting in good faith, each believing that it interpreted the Dhamma-Vinaya properly. In such cases, differences can be settled by appealing to bhikkhus whose knowledge of the Dhamma-Vinaya is authoritative. There are, however, cases where bhikkhus have started or joined a schism rooted in corrupted intent, knowing or suspecting that their views and actions deviate from the Dhamma-Vinaya. In these cases, full unification is impossible. Those who acted out of corrupt intent are to be expelled from the Saṅgha (Mv.I.67). Those who joined the schismatic faction through ignorance should be won over to the Dhamma side by explaining the true Dhamma-Vinaya to them. If they leave the faction and return to the Community, they are to confess a thullaccaya offense, and they are regular members of the Community as before.</p>
+
+<h2>Rules</h2> <h3>Roots of Schism</h3>
+<p>Roots of disputes: three unskillful &amp; three skillful</p>
+
+<p>[A list is inserted giving six unskillful traits:] A bhikkhu who is:</p>
+
+<ol>
+<li>easily angered &amp; bears a grudge;</li>
+<li>mean &amp; spiteful;</li>
+<li>jealous &amp; possessive;</li>
+<li>scheming &amp; deceitful;</li>
+<li>has evil desires &amp; wrong views;</li>
+<li>is attached to his own views, obstinate, unable to let them go.</li>
+</ol>
+
+<p>Such a bhikkhu lives without deference or respect for the Buddha, the Dhamma, the Saṅgha; does not complete the training. When he causes a dispute in the Community, it comes to be for the harm, the unhappiness, the detriment of many people, for the harm and pain of human and divine beings. — Cv.IV.14.3</p>
+
+<p>Three unskillful roots: states of mind that are covetous, corrupt, or confused. Three skillful roots: states of mind that are not covetous, corrupt, or confused. — Cv.IV.14.4</p>
+
+<h3>A Crack in the Community, a Split in the Community</h3>
+<p>Ven. Upāli: “‘A crack in the Community, a crack in the Community (<i>saṅgha-rāji)'</i> it is said. To what extent is there a crack in the Community but not a split in the Community? To what extent is there a crack in the Community and a split in the Community?</p>
+
+<p>The Buddha: “When there is one on one side and two on the other side, and a fourth makes a proclamation and makes them take a voting ticket: 'This is the Dhamma. This is the Vinaya. This is the Teacher’s instruction. Take this. Approve of this.' This is a crack in the Community but not a split in the Community. When there are two on one side and two on the other and a fifth makes a proclamation… When there are two on one side and three on the other and a sixth makes a proclamation… When there are three on one side and three on the other and a seventh makes a proclamation… When there are three on one side and four on the other and an eighth makes a proclamation… This is a crack in the Community but not a split in the Community. When there are four on one side and four on the other side, and a ninth makes a proclamation and makes them take a voting ticket: 'This is the Dhamma. This is the Vinaya. This is the Teacher’s instruction. Take this. Approve of this.' This is a crack in the Community and a split in the Community. With nine or more than nine there is a crack in the Community and a split in the Community.</p>
+
+<p>“A bhikkhunī does not split a Community even if she strives for a split. A female trainee does not split a Community. A novice… A female novice… A male lay-follower… A female lay-follower does not split a Community even if she strives for a split. A regular bhikkhu, of common affiliation, standing in the same territory splits the Community.” — Cv.VII.5.1</p>
+
+<p>Ven. Upāli: “‘A split in the Community, a split in the Community (<i>saṅgha-bheda)'</i> it is said. To what extent is the Community split?”</p>
+
+<p>The Buddha: “There is the case where they explain not-Dhamma as 'Dhamma' … Dhamma as 'not-Dhamma' … not-Vinaya as 'Vinaya' … Vinaya as 'not-Vinaya' … what was not spoken, not mentioned by the Tathāgata as 'spoken, mentioned by the Tathāgata' … what was spoken, mentioned by the Tathāgata as 'not spoken, not mentioned by the Tathāgata' … what was not regularly practiced by the Tathāgata as ’regularly practiced by the Tathāgata' … what was regularly practiced by the Tathāgata as 'not regularly practiced by the Tathāgata' … what was not formulated by the Tathāgata as 'formulated by the Tathāgata' … what was formulated by the Tathāgata as 'not formulated by the Tathāgata' … a non-offense as 'an offense' … an offense as 'a non-offense' … a light offense as 'a heavy offense' … a heavy offense as 'a light offense' … an offense leaving a remainder as 'an offense leaving no remainder' … an offense leaving no remainder as 'an offense leaving a remainder' … a serious offense as 'a not-serious offense' … a not-serious offense as 'a serious offense.' On the basis of these eighteen grounds they pull away, pull apart, they perform a separate uposatha, perform a separate Invitation, perform a separate Community transaction. To this extent the Community is split.” — Cv.VII.5.2</p>
+
+<p>Ven. Upāli: “‘Community-unity, Community-unity,’ it is said. To what extent is there Community-unity?”</p>
+
+<p>The Buddha: “There is the case where they explain not-Dhamma as 'not-Dhamma' … Dhamma as 'Dhamma' … a serious offense as 'a serious offense' … a not-serious offense as 'a not-serious offense.' On the basis of these eighteen grounds they do not pull away, they do not pull apart, they do not perform a separate uposatha, a separate Invitation, or a separate Community transaction. To this extent is there Community-unity.” — Cv.VII.5.3</p>
+
+<p>Ven. Upāli: “Having split a Community that was united, what does one beget?”</p>
+
+<p>The Buddha: “Having split a Community that was united, one begets an iniquity that lasts for an aeon and is boiled in hell for an aeon…”</p>
+
+<p>Ven. Upāli: “Having united a Community that was split, what does one beget?”</p>
+
+<p>The Buddha: “Having united a Community that was split, one begets brahma-merit (reading <i>brahma-puññaṁ</i> with the Thai edition) that lasts for an aeon and rejoices in heaven for an aeon…” — Cv.VII.5.4</p>
+
+<p>Ven. Upāli: “Which schismatic is destined to deprivation, destined to hell, doomed for an aeon, incurable?”</p>
+
+<p>The Buddha: “There is the case where a bhikkhu explains not-Dhamma as Dhamma. Viewing that (explanation) as not-Dhamma, viewing a split as not-Dhamma, misrepresenting his view, misrepresenting his preference, misrepresenting his approval, misrepresenting his state (of mind), he makes an announcement, has (the bhikkhus) take voting tickets (saying), ’This is the Dhamma, this is the Vinaya, this is the Teacher’s instruction. Take this. Approve of this.' This is a schismatic destined to deprivation, destined to hell, doomed for an aeon, incurable.</p>
+
+<p>“Then again, a bhikkhu explains not-Dhamma as Dhamma. Viewing that (explanation) as not-Dhamma, viewing a split as Dhamma … viewing that (explanation) as not-Dhamma, doubtful about a split … viewing that (explanation) as Dhamma, viewing a split as not-Dhamma … viewing that (explanation) as Dhamma, doubtful about a split … doubtful about that (explanation), viewing a split as not-Dhamma … doubtful about that (explanation), doubtful about a split, misrepresenting his view, misrepresenting his preference, misrepresenting his approval, misrepresenting his state (of mind), he makes an announcement, has (the bhikkhus) take voting tickets (saying), ’This is the Dhamma, this is the Vinaya, this is the Teacher’s instruction. Take this. Approve of this.' This is a schismatic destined to deprivation, destined to hell, doomed for an aeon, incurable. (Similarly for each of the remaining seventeen grounds for a schism.)”</p>
+
+<p>Ven. Upāli: “And which schismatic is not destined to deprivation, not destined to hell, not doomed for an aeon, not incurable?”</p>
+
+<p>The Buddha: “There is the case where a bhikkhu explains not-Dhamma as Dhamma. Viewing that (explanation) as Dhamma, viewing a split as Dhamma, not misrepresenting his view, not misrepresenting his preference, not misrepresenting his approval, not misrepresenting his state (of mind), he makes an announcement, has (the bhikkhus) take voting tickets (saying), ’This is Dhamma, this is the Vinaya, this is the Teacher’s instruction. Take this. Approve of this.' This is a schismatic not destined to deprivation, not destined to hell, not doomed for an aeon, not incurable. (Similarly for each of the remaining seventeen grounds for a schism.)” — Cv.VII.5.5–6</p>
+
+<h3>During Schism</h3>
+<p>“When the Community is split and getting along in an uncourteous way, not in accordance with the Dhamma, then one should sit down in a seat (far enough apart from a member of the opposite faction) to the extent that (§): “We won’t exhibit any improper bodily action or verbal action to one another, we won’t seize (§) one another with the hands.' When the Community is split and getting along in a courteous way in accordance with the Dhamma, one may sit down leaving the interval of a seat (§) (from a member of the opposite faction).” — Mv.X.2.1</p>
+
+<p>Ven. Sāriputta: “How am I to behave with regard to these (schismatic) bhikkhus?”</p>
+
+<p>The Buddha: “In that case, Sāriputta, take your stance in line with the Dhamma.”</p>
+
+<p>Ven. Sāriputta: “And how should I know what is Dhamma and what is not-Dhamma?” — Mv.X.5.3</p>
+
+<p>The Buddha: “There are these eighteen grounds by which a speaker of not-Dhamma is to be known. He explains not-Dhamma as 'Dhamma' … Dhamma as 'not-Dhamma' … not-Vinaya as 'Vinaya' … Vinaya as 'not-Vinaya' … what was not spoken, not mentioned by the Tathāgata as 'spoken, mentioned by the Tathāgata' … what was spoken, mentioned by the Tathāgata as 'not spoken, not mentioned by the Tathāgata' … what was not regularly practiced by the Tathāgata as ’regularly practiced by the Tathāgata' … what was regularly practiced by the Tathāgata as 'not regularly practiced by the Tathāgata' … what was not formulated by the Tathāgata as 'formulated by the Tathāgata' … what was formulated by the Tathāgata as 'not formulated by the Tathāgata' … a non-offense as 'an offense' … an offense as 'a non-offense' … a light offense as 'a heavy offense' … a heavy offense as 'a light offense' … an offense leaving a remainder as 'an offense leaving no remainder' … an offense leaving no remainder as 'an offense leaving a remainder' … a serious offense as 'a not-serious offense' … a not-serious offense as 'a serious offense.' These are the eighteen grounds by which a speaker of not-Dhamma is to be known. — Mv.X.5.4</p>
+
+<p>“There are these eighteen grounds by which a speaker of Dhamma is to be known. He explains not-Dhamma as 'not-Dhamma' … Dhamma as 'Dhamma' … not-Vinaya as 'not-Vinaya' … Vinaya as 'Vinaya' … what was not spoken, not mentioned by the Tathāgata as 'not spoken, not mentioned by the Tathāgata' … what was spoken, mentioned by the Tathāgata as 'spoken, mentioned by the Tathāgata' … what was not regularly practiced by the Tathāgata as 'not regularly practiced by the Tathāgata' … what was regularly practiced by the Tathāgata as ’regularly practiced by the Tathāgata' … what was not formulated by the Tathāgata as 'not formulated by the Tathāgata' … what was formulated by the Tathāgata as 'formulated by the Tathāgata' … a non-offense as 'a non-offense' … an offense as 'an offense' … a light offense as 'a light offense' … a heavy offense as 'a heavy offense' … an offense leaving a remainder as 'an offense leaving a remainder' … an offense leaving no remainder as 'an offense leaving no remainder' … a serious offense as 'a serious offense' … a not-serious offense as 'a not-serious offense.' These are the eighteen grounds by which a speaker of Dhamma is to be known.” — Mv.X.5.5</p>
+
+<p>Mahāpajāpatī Gotamī: “How am I to behave with regard to these (schismatic) bhikkhus?”</p>
+
+<p>The Buddha: “In that case, Gotamī, listen to the Dhamma from both sides. Having listened to the Dhamma from both sides, give preference to the view, approval, preference, and belief of the side of those who speak Dhamma. And whatever the Community of bhikkhunīs expects from the Community of bhikkhus should all be expected from the side of those who speak Dhamma.” — Mv.X.5.7</p>
+
+<p>Anāthapiṇḍika (and Visākhā): “How am I to behave with regard to these (schismatic) bhikkhus?”</p>
+
+<p>The Buddha: “In that case, householder, give gifts to both sides. Having given gifts to both sides, listen to the Dhamma from both sides. Having listened to the Dhamma from both sides, give preference to the view, approval, preference, and belief of the side of those who speak Dhamma.” — Mv.X.5.8 (9)</p>
+
+<p>Ven. Sāriputta: “How am I to act with regard to their lodgings?”</p>
+
+<p>The Buddha: “In that case, Sāriputta, vacant (§) lodgings are to be given to them.”</p>
+
+<p>Ven. Sāriputta: “And if there are no vacant lodgings, what should I do?”</p>
+
+<p>The Buddha: “They are to be given after having made them vacant. But in no way do I say that a senior bhikkhu’s lodging should be preempted. Whoever should preempt it: an offense of wrong doing.”</p>
+
+<p>Ven. Sāriputta: “And how am I to act with regard to material gifts?”</p>
+
+<p>The Buddha: “Material gifts are to be divided equally among all.” — Mv.X.5.10</p>
+
+<p>“There is the case where bhikkhus have spent the Rains and the Community splits before robe-cloth arises. People give water to one faction and robe-cloth to the other faction, saying, ’We are giving to the Community.' That is for the (entire) Community… People give water to one faction and robe-cloth to the same faction, saying, ’We are giving to the Community.' That is for the (entire) Community. People give water to one faction and robe-cloth to the other faction, saying, ’We are giving to the faction.' That is just for the faction. People give water to one faction and robe-cloth to the same faction, saying, ’We are giving to the faction.' That is just for the faction.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.4–5</p>
+
+<p>“There is the case where bhikkhus have spent the Rains and, when robe-cloth has arisen but before it is divided up, the Community splits. That is to be divided equally among all.” — <a href="../vi/kd8.html">Khandhaka&nbsp;8 (Mv&nbsp;8)</a>.6</p>
+
+<h3>Ending Schism</h3>
+<p>Ven. Sāriputta (after retrieving, together with Ven. Moggallana, the newly-ordained bhikkhus who had ignorantly followed Devadatta in a schism): “Venerable sir, it would be good if the followers of the schismatic were to be re-accepted (reordained).”</p>
+
+<p>The Buddha: “Enough, Sāriputta, of your preference for the re-acceptance of the followers of the schismatic. In that case, you should have the followers of the schismatic confess a grave offense.” — Cv.VII.4.4</p>
+
+<p>Procedure for achieving unity in the Community: “One and all should gather together, the ill and the not-ill. Consent is not to be conveyed for anyone.” Transaction statement. “Immediately the uposatha is to be done, the Pāṭimokkha is to be recited.” — Mv.X.5.14</p>
+
+<p>“When the Community, without having adjudicated the matter, without having gotten to the roots for a dispute in the Community … a schism in the Community, a split in the Community, a falling apart in the Community, a separation in the Community — performs a Community-unification, that is a non-Dhamma Community-unification.</p>
+
+<p>“When the Community, having adjudicated the matter, having gotten to the roots for a dispute in the Community … a schism in the Community, a split in the Community, a falling apart in the Community, a separation in the Community — performs a Community-unification, that is a Dhamma Community-unification.” — Mv.X.6.1</p>
+
+<div id="nextprev"><a id="previous-sutta" href="../bmc/bmc2.20.html#content"></a><a id="next-sutta" href="../bmc/bmc2.22.html#content"></a></div>
+</div><!--content-->
+	  <!-- Footer -->
+	<footer>
+ 		<div class="w3-white .bwcontainer2">
+ 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../vi/vi.html">Vinaya Pitaka</a><a href="../bmc/bmc.html">Buddhist Monastic Code</a><a href="../bmc/bmc2.html">BMC 2</a>Chapter&nbsp;2.21: Schism</div>
+	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
+ 	<div class="bottomlinks">
+ 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
+ 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ 	</div>  <!-- End bottom links -->
+ </footer>
+</div>
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 					localStorage.lightMode = "light";
+ 					app.setAttribute("light-mode", "light");
+ 				} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 			} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+
+ </script>
+ <script src="../js/footer.js"></script>
+  </body>
+ </html>

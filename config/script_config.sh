@@ -1,0 +1,1 @@
+../assets/config/script_config.sh

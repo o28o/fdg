@@ -422,7 +422,7 @@ function unloadPaliLookup() {
 
 // set default state of Pali Lookup
 if (localStorage.paliLookupActive === undefined) {
-  localStorage.paliLookupActive = "true";
+  localStorage.paliLookupActive = "false";
 }
 
 function setPaliVisibility(state) {

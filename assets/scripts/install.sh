@@ -128,6 +128,14 @@ sed -i 's@<script src="../js/mousetrap.min.js"></script>@<?php $uname = shell_ex
 
 done 
 
+
+#bw 
+localStorage.paliLookupActive = "false";
+
+js/footer.js
+
+
+
 			<?php 
 			$uname = shell_exec("uname -a"); 
 			if ( preg_match('/!Android/', $uname)) {  

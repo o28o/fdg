@@ -117,6 +117,21 @@ termux-open-url http://localhost:8080/
 
 exit 0
 
+
+cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/config/
+
+replace in bw index to disable the lookup
+
+			<?php 
+
+			$uname = shell_exec("uname -a"); 
+
+			if ( preg_match('/!Android/', $uname)  ) { 
+   <script src="../js/mousetrap.min.js"></script>
+   <script src="../js/mousetrap.min.js"></script>
+   }
+   ?>
+
 #to refresh theravada.ru run
 mkdir theravada.ru && cd theravada.ru
 wget -r --no-check-certificate -P ./ --no-parent https://theravada.ru/Teaching/canon.htm

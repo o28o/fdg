@@ -23,6 +23,7 @@ history="$apachesitepath/result/.history"
 sntoccsv="$apachesitepath/assets/sn_toc.csv"
 templatefolder=$apachesitepath/assets/templates
 
+bwlocation=$apachesitepath/assets/offline/bw/
 searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
 indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
 thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/

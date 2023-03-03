@@ -531,6 +531,7 @@ fi
 if echo $filenameblock | grep -E "(sn|an)[0-9]{0,2}.[0-9]{0,3}-[0-9]{0,3}" >/dev/null || echo $filenameblock | grep -E "dhp[0-9]{0,3}-[0-9]{0,3}" >/dev/null
 then 
 suttanumber=`nice -$nicevalue grep -E -Ei $filenameblock $basefile | awk '{print $2}' | awk -F':' '{print $1}' | sort | uniq `
+forbwranges=$suttanumber 
 else 
 suttanumber=$filenameblock
 fi 
@@ -586,10 +587,21 @@ fi
 linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=pli"}' ` 
 if [[ $mode == "offline" ]]
 then 
-forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
-linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
 linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
-else 
+forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
+#linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
+
+  if [[ -s $bwlocation/$forbwlink/${filenameblock}.html  ]] ; then 
+  linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
+  elif [[ -s $bwlocation/$forbwlink/${forbwranges}.html  ]] ; then 
+  linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink/$forbwranges'.html"}' `
+  #echo ello not $filenameblock but $forbwranges
+  else
+  linken=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli-eng"}' `
+  #echo fello $linken
+  fi 
+
+else #not offline #online
 linken=`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/en/'$translatorsname'?layout=linebyline"}' `
 linkpli=`echo $filenameblock |  awk '{print "https://find.dhamma.gift/sc/?q="$0"&lang=pli"}' `
 fi

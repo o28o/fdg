@@ -214,7 +214,7 @@ fi
 
 if [[ "$@" == *"-kn"* ]]; then
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} 
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} 
 }
 fileprefix=${fileprefix}-kn
 fortitle="${fortitle} +KN"
@@ -294,7 +294,7 @@ elif [[ "$@" == *"-pli"* ]]; then
 elif [[ "$@" == *"-en"* ]]; then
     fnlang=_en
 	printlang=English
-    pali_or_lang=sc-data/sc_bilara_data/translation/en/
+    pali_or_lang=sc-data/sc_bilara_data/translation/en/$translator
     language=English
     type=json
     metaphorkeys="It’s like a |suppose|is a term for|similar to |simile"

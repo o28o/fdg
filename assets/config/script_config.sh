@@ -75,9 +75,6 @@ outputdir=$output
 homedir=$rootpath
 outputdiraw=$output/allwords
 
-
-
-
 wbefore=1
 wafter=3
 linesafter=0
@@ -85,12 +82,44 @@ minlength=3
 truncatelength=30
 filesizenooverwrite=800000
 maxmatchesbg=1900
-history="/home/a0092061/domains/find.dhamma.gift/public_html/result/.history"
-sntoccsv="/home/a0092061/domains/find.dhamma.gift/public_html/assets/sn_toc.csv"
+history="$apachesitepath/result/.history"
+sntoccsv="$apachesitepath/assets/sn_toc.csv"
 archivenumber=31
 
+elif [[ "`uname -a`" == *"Linux"* ]]; then 
 
+sitename=http://localhost
+nicevalue=1
+mode=offline
+apachesitepath=/var/www/html
+rootpath=$apachesitepath/scripts
+suttapath=$apachesitepath/suttacentral.net/
+output=$apachesitepath/result/
+history="$apachesitepath/result/.history"
+sntoccsv="$apachesitepath/assets/sn_toc.csv"
+templatefolder=$apachesitepath/assets/templates
 
+bwlocation=$apachesitepath/assets/offline/bw/
+searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
+indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
+thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
+linkforthsu=/tipitaka.theravada.su
+linkforthru=/theravada.ru/
+linkforthai=/legacy.suttacentral.net/sc/th/
+linkforthaiext='.html'
+linkforru=/legacy.suttacentral.net/sc/ru/
+
+wbefore=1
+wafter=3
+linesafter=0
+minlength=3
+truncatelength=30
+filesizenooverwrite=800000
+maxmatchesbg=3000
+archivenumber=84
+history="$apachesitepath/result/.history"
+sntoccsv="$apachesitepath/assets/sn_toc.csv"
+archivenumber=91
 fi
 
 

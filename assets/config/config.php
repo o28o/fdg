@@ -1,6 +1,5 @@
 <?php
 $uname = shell_exec("uname -a"); 
-
 //
 //OFFLINE ANDROID
 //
@@ -34,7 +33,7 @@ $scroottextlocation = "/storage/emulated/0/Dhamma/suttacentral.net/sc-data/sc_bi
 
 }
 //
-//Offline for apache default /var/www/html e.g. Linux Mint / Ubuntu
+//Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
 else if ( preg_match('/Linux/', $uname)  ) {
     $mode = 'offline';

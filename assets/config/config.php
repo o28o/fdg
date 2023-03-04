@@ -47,7 +47,7 @@ $scriptfile = $basedir. '/scripts/ranges.sh';
 
 $thsulocation = $basedir. '/assets/offline/tipitaka.theravada.su/';
 $thrulocation = $basedir. '/assets/offline/theravada.ru/Teaching/Canon';
-
+$bwlocation = $basedir. '/assets/offline/bw';
 $linkforthsu = 'https://tipitaka.theravada.su/dn/';
 $linkforthru = 'https://theravada.ru/Teaching/Canon/Suttanta/Texts/';
 $linkforthai = "https://suttacentral.net/"; 
@@ -82,7 +82,7 @@ $scriptfile = $basedir. "/scripts/ranges.sh";
 
 $thsulocation = $basedir. '/assets/offline/tipitaka.theravada.su/';
 $thrulocation = $basedir. '/assets/offline/theravada.ru/Teaching/Canon';
-
+$bwlocation = $basedir. '/assets/offline/bw';
 $linkforthsu = '/tipitaka.theravada.su/dn/';
 $linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
 $linkforthai = "/legacy.suttacentral.net/sc/th/"; 

@@ -24,6 +24,7 @@ echo '<div class="d-md-inline-block">
     <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">Suttacentral Voice</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://tipitaka.org/">Tipitaka.org</a></li>
+        <li><a class="dropdown-item" target="_blank" href="https://thebuddhaswords.net">The Buddha\'s Words</a></li>    
         <li><a class="dropdown-item" target="_blank" href="https://en.dhammadana.org/sangha/dhutanga.htm">Благородный Аскетизм</a></li>
        <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">SC.net Виная</a></li>
       <li><a class="dropdown-item" target="_blank" href="https://www.accesstoinsight.org/tipitaka/vin/sv/index.html">Accesstoinsight.org Патимоккха</a></li>

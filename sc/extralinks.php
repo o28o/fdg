@@ -12,7 +12,9 @@ $forbwpath = strtolower(substr($fromjs,0,2));
 $bwfile = "$bwlocation/$forbwpath/$fromjs.html";
  
 if (file_exists($bwfile) ) {
-    $bwlink = preg_replace('@.*/bw/@i', '/bw/', $bwfile);
+    $bwlink = "$forbwpath/$fromjs.html";
+    //preg_replace('@.*/bw/@i', '/bw/', $bwfile);
+    
 }
 
   if ($mode == "offline") {
@@ -21,7 +23,7 @@ if (file_exists($bwfile) ) {
 $locationrudn = $thsulocation;
 
   $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
-    [[ $bwlink != \"\" ]] && echo -n \"<a target='_blank' href=$bwlink>Bw</a>&nbsp;\"; 
+    [[ $bwlink != \"\" ]] && echo -n \"<a target='_blank' href=/bw/$bwlink>Bw</a>&nbsp;\"; 
   [[ \$ruslink != \"\" ]] && 
   echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
   [[ \$ruslinkdn != \"\" ]] && 
@@ -72,7 +74,7 @@ $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
       [[ $bwlink != \"\" ]] && 
-echo -n \"<a target='_blank' href=$bwlink>Bw</a>&nbsp;\"; 
+echo -n \"<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>&nbsp;\"; 
       [[ \$ruslink != \"\" ]] && 
   echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
   [[ \$ruslinkdn != \"\" ]] && 

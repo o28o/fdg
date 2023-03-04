@@ -70,8 +70,9 @@ switch (strtolower($nikaya)) {
 }
 $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
-$output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\";
-    [[ $bwlink != \"\" ]] && echo -n \"<a target='_blank' href=$bwlink>Bw</a>&nbsp;\"; 
+$output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
+
+echo -n \"<a target='_blank' href=$bwlink>Bw</a>&nbsp;\"; 
       [[ \$ruslink != \"\" ]] && 
   echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
   [[ \$ruslinkdn != \"\" ]] && 

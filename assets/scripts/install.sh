@@ -167,6 +167,8 @@ ln -s ../result ./result
 #tests
 curl http://localhost:8080/sc/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
 curl http://localhost:8080/sc/api.php?fromjs=sutta/dn/dn22&type=A
+curl http://localhost:8080/sc/extralinks.php?fromjs=dn22
 
 curl https://find.dhamma.gift/sc/translator-lookup.php?fromjs=sutta/mn/mn1
 curl https://find.dhamma.gift/sc/api.php?fromjs=sutta/dn/dn22&type=A
+curl https://find.dhamma.gift/sc/extralinks.php?fromjs=dn22

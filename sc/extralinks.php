@@ -8,12 +8,25 @@ error_reporting(E_ERROR | E_PARSE);
 function rusLinks($fromjs) {
   include_once('../config/config.php');
   $forthru = str_replace(".", '_', $fromjs);
+$forbwpath = strtolower(substr($fromjs,0,2));
+$bwfile = "$bwlocation/$forbwpath/$fromjs.html";
+ 
+if (file_exists($bwfile) ) {
+    $bwlink = preg_replace('@.*/bw/@i', '/bw/', $bwfile);
+}
+
   if ($mode == "offline") {
   
-
+//th.ru and th.su part
 $locationrudn = $thsulocation;
 
-  $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ; [[ \$ruslink != \"\" ]] && echo -n \"/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink\"; [[ \$ruslinkdn != \"\" ]] && echo -n \", /tipitaka.theravada.su/dn/\$ruslinkdn\"");
+  $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
+    [[ $bwlink != \"\" ]] && echo -n \"<a target='_blank' href=$bwlink>Bw</a>&nbsp;\"; 
+  [[ \$ruslink != \"\" ]] && 
+  echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
+  [[ \$ruslinkdn != \"\" ]] && 
+  echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";
+  ");
   $result = str_replace(PHP_EOL, '', $output);
 return $output;
 
@@ -21,7 +34,7 @@ return $output;
   
   
 // $locationTocThsu = "/home/a0092061/domains/find.dhamma.gift/public_html/assets";
-
+//thsu part
 if (preg_match("/^(mn|dn)[0-9]{1,3}$/i",$fromjs)) {
 
 $forthsu = preg_replace("/s$/i","","$fromjs");
@@ -58,9 +71,11 @@ switch (strtolower($nikaya)) {
 $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\";
-  [[ \$ruslink != \"\" ]] && echo -n \"https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink\";
-  [[ \"\$ruslinkdn\" != \"\" ]] && echo -n \", $thsulink\";");
-
+    [[ $bwlink != \"\" ]] && echo -n \"<a target='_blank' href=$bwlink>Bw</a>&nbsp;\"; 
+      [[ \$ruslink != \"\" ]] && 
+  echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
+  [[ \$ruslinkdn != \"\" ]] && 
+  echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";");
 return $output;
   
 }

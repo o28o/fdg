@@ -138,18 +138,10 @@ const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.sl
       let scLink = `<p class="sc-link"><a href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;<a href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> `; 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp;
       if (linksArray[0].length >= 4) {
-        let thruLink = "<a target='_blank' href=" + linksArray[0] + ">Th.ru</a>&nbsp;";
-        scLink += thruLink;
-            console.log("thruLink " + thruLink);
-            console.log("linksArray[0] " + linksArray[0].length);
+        scLink += linksArray[0];
+            console.log("extralinks " + linksArray[0]);
       } 
-      if (linksArray[1]) {
-        let thsuLink = "<a target='_blank' href=" + linksArray[1] + ">Th.su</a>&nbsp;";
-        scLink += thsuLink; 
-        console.log("thsuLink " + thsuLink);
-      }
       scLink += "</p>"; 
-      //console.log('thruLink', thruLink, 'thsuLink', thsuLink);
 
   suttaArea.innerHTML =  scLink + html + translatorByline ;  
  

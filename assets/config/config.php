@@ -65,10 +65,11 @@ $adapterscriptlocation = '/home/a0092061/domains/find.dhamma.gift/aksharamukha/b
 //api-emulator
 $scroottextlocation = '/home/a0092061/data/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms';
 // include_once('../config/config.php');
-      } else if ( preg_match('/Linux/', $uname)  ) {     
-  //
+
+//
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
+      } else if ( preg_match('/Linux/', $uname)  ) {     
 
       $mode = 'offline';
 //$mode = 'online';

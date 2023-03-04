@@ -361,9 +361,9 @@ include 'scripts/multilang-search.php';
                
                 <div class="list-group">
       <?php
-      $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
-      $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
       if ( $mode == "offline" ) {
+        
+      $mainpagesclink = '/sc';
       echo '  <a href="https://find.dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">find.dhamma.gift</h5>
@@ -374,8 +374,7 @@ include 'scripts/multilang-search.php';
   </a>';
       
       } else {
-          $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
-        $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
+        $mainpagesclink = 'https://sc.dhamma.gift';
       echo '
   <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
@@ -458,6 +457,15 @@ include 'scripts/multilang-search.php';
                        
  <div class="list-group">
 
+ <div class="list-group">
+  <a target="_blank" href="<?php echo $mainpagesclink; ?>" class="list-group-item list-group-item-action active" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left">
+      <h5 class="mb-1">sc.dhamma.gift</h5>
+      <small>online & offline</small>
+    </div>
+    <p class="mb-1 text-left">Pali-English Line-by-line</p>
+    <small>Suttacentral.net texts with quicker lightweight interface</small>
+  </a>
 
   <a target="_blank" href="https://Suttacentral.net" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
@@ -467,6 +475,17 @@ include 'scripts/multilang-search.php';
     <p class="mb-1 text-left">The most complete line-by-line Pali-English collection</p>
     <small>Pali-English dictionary can be turned on in settings</small>
   </a>
+  
+    <a target="_blank" href="https://thebuddhaswords.net/home/index.html" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left">
+      <h5 class="mb-1">TheBuddhasWords.net</h5>
+      <small>online</small>
+    </div>
+    <p class="mb-1 text-left">Very impressive paragraph-by-paragraph Pali-English collection</p>
+    <small>Pali-English on hover dictionary built-in</small>
+  </a>
+  
+  
   
     <a target="_blank"   href="https://www.digitalpalireader.online/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">

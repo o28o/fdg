@@ -435,9 +435,9 @@ include 'scripts/multilang-search.php';
                
                 <div class="list-group">
       <?php
-      $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
-      $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
+      
       if ( $mode == "offline" ) {
+        $mainpagesclink = '/ru/sc';
       echo '<a href="https://find.dhamma.gift/ru" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">find.dhamma.gift</h5>
@@ -447,8 +447,7 @@ include 'scripts/multilang-search.php';
     <small class="text-muted"></small>
   </a>';
       } else {
-          $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
-        $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
+          $mainpagesclink = 'https://sc.dhamma.gift';
       echo '
   <a href="https://github.com/o28o/fdg" target="_blank" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
@@ -556,7 +555,7 @@ include 'scripts/multilang-search.php';
                         <h4 id="read" class="text-uppercase mb-4">Чтение</h4>
                        
  <div class="list-group">
-  <a target="_blank" href="https://sc.dhamma.gift" class="list-group-item list-group-item-action active" aria-current="true">
+  <a target="_blank" href="<?php echo $mainpagesclink; ?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">sc.dhamma.gift</h5>
       <small>Пали-Англ</small>
@@ -574,6 +573,14 @@ include 'scripts/multilang-search.php';
     <small>Пали-Англ словарь можно включить в настройках</small>
   </a>
   
+      <a target="_blank" href="https://thebuddhaswords.net/home/index.html" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left">
+      <h5 class="mb-1">TheBuddhasWords.net</h5>
+      <small>онлайн</small>
+    </div>
+    <p class="mb-1 text-left">Большая коллекция Пали-Англ переводов поабзацно</p>
+    <small>Пали-Англ словь встроен</small>
+  </a>
     <a target="_blank"   href="https://www.digitalpalireader.online/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Digital Pali Reader</h5>

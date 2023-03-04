@@ -7,6 +7,8 @@ if ( preg_match('/Android/', $uname)  ) {
     $mode = 'offline';
 //$mode = 'online';
 
+$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+      $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //translator-lookup.php
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
 $translatorlocation = $basedir. '/o/';
@@ -37,6 +39,8 @@ $scroottextlocation = "/storage/emulated/0/Dhamma/suttacentral.net/sc-data/sc_bi
 //
   //preg_match('/rym.from.sh/', $uname) 
   $mode = 'online';
+  $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+  $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
 //translator-lookup.php
 $basedir = '/home/a0092061/domains/find.dhamma.gift/public_html';
 $translatorlocation = $basedir. '/o/';
@@ -72,6 +76,8 @@ $scroottextlocation = '/home/a0092061/data/suttacentral.net/sc-data/sc_bilara_da
       } else if ( preg_match('/Linux/', $uname)  ) {     
 
       $mode = 'offline';
+ $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+      $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //$mode = 'online';
 //translator-lookup.php
 $basedir = "/var/www/html/";

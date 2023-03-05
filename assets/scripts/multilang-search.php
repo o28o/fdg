@@ -53,8 +53,8 @@ afterAkhsaramukhaResponse($convertedStr);
 
 		if ((( $p == "" ) && ( preg_match('/-net-v-/', $check)  )) || (( $p == "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
 		    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -en $extra $p $string");
-		  	echo "<p>$output</p>";
-		  	}	
-		  	
+			echo "<p>$output</p>";
+			}	
+		 
 		  	echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>"
 		?>	

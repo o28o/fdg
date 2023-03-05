@@ -851,7 +851,7 @@ then
 
 pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 	Erresponse
-	Clarification
+	#Clarification
      rm $basefile
 #     if [[ $language != "English" ]]
  #    then

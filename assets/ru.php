@@ -24,7 +24,7 @@ include 'scripts/opentexts.php';
 <meta property="og:description" content="Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском" />
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />
-<meta property="og:image" itemprop="image" content="/assets/social_sharing_gift_rus.jpg" />
+<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/social_sharing_gift_rus.jpg" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Поисковая Система Освобобждения">
 <meta name="twitter:description" content="Находите информацию в Суттах и Винае на Пали, Русском, Английском и Тайском">

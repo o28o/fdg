@@ -13,7 +13,7 @@ const citation = document.getElementById("citation");
 const pathLang = "en";
 
 citation.focus();
-let language = "pli-eng";
+let language = "pli";
 
 homeButton.addEventListener("click", () => {
   document.location.search = "";

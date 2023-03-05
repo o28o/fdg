@@ -22,7 +22,7 @@ include 'scripts/opentexts.php';
 
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />
-<meta property="og:image" itemprop="image" content="/assets/social_sharing_gift.jpg" />
+<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/social_sharing_gift.jpg" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="find.Dhamma.gift - Liberation Search Engine">

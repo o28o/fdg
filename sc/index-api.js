@@ -9,6 +9,8 @@ const form = document.getElementById("form");
 const citation = document.getElementById("citation");
 citation.focus();
 let language = "pli";
+localStorage.paliToggle = "pli";
+console.log(localStorage.paliToggle);
 
 homeButton.addEventListener("click", () => {
   document.location.search = "";
@@ -26,9 +28,11 @@ themeButton.addEventListener("click", () => {
   if (localStorage.theme === "light") {
     bodyTag.classList.add("dark");
     localStorage.theme = "dark";
+    console.log(localStorage.theme);
   } else {
     bodyTag.classList.remove("dark");
     localStorage.theme = "light";
+    console.log(localStorage.theme);
   }
 });
 
@@ -205,6 +209,33 @@ function showPali() {
 
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
+
+  // initial state
+  if (localStorage.paliToggle) {
+    if (localStorage.paliToggle === "pli") {
+      showPali();
+      language = "pli";
+    }
+  } else if (localStorage.paliToggle === "pli-eng") {
+      showPaliEnglish();
+      language = "pli-eng";
+  } else {
+    showEnglish();
+      language = "eng";
+  }
+
+  hideButton.addEventListener("click", () => {
+    if (localStorage.paliToggle === "show") {
+      suttaArea.classList.add("hide-pali");
+      localStorage.paliToggle = "hide";
+    } else {
+      suttaArea.classList.remove("hide-pali");
+      localStorage.paliToggle = "show";
+    }
+  });
+
+
+
 
   languageButton.addEventListener("click", () => {
     if (language === "pli") {

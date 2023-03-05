@@ -143,9 +143,8 @@ if [[ "$@" == *"-h"* ]]; then
     -ru - to search in Russian <br>
     -th - to search in thai <br>
     -pli - to search in pali (default option) <br>
-    -plb - search in pali Bhukkhu Bodhi translations<br>    
     -nbg - no background <br>
-  	-oru - output messages in Russian<br>"
+	-oru - output messages in Russian<br>"
     exit 0
 fi
 

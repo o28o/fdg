@@ -119,7 +119,18 @@ exit 0
 
 
 fix bw
-
+#controlpanel {
+	position: fixed;
+ bottom: 15px; /* 70px; */
+ 
+ // set default state of Pali Lookup
+if (localStorage.paliLookupActive === undefined) {
+  localStorage.paliLookupActive = "false";
+}
+ 
+ 
+ 
+ 
 cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/config/
 
 for i in `grep -rl mousetrap   /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/bw`

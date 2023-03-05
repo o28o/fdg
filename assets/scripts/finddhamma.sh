@@ -53,6 +53,11 @@ function OKresponse {
 
 function Erresponse {
      echo "${pattern} нет в $fortitle $language<br>"
+}
+
+function Clarification {
+     echo "в SN, DN, MN и AN. Попробуйте другие <br>
+     настройки +KN, Vin и др."
      #echo "$language - no<br>"
 }
 
@@ -92,9 +97,12 @@ echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsq
 }
 
 function Erresponse {
-
      echo "${pattern} not in $fortitle $language<br>"
-     #echo "$language - no<br>"
+}
+
+function Clarification {
+     echo "in SN, DN, MN & AN<br>
+     Try +KN, Vin options."
 }
 
 function wordsresponse {
@@ -843,6 +851,7 @@ then
 
 pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 	Erresponse
+	Clarification
      rm $basefile
 #     if [[ $language != "English" ]]
  #    then

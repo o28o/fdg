@@ -119,6 +119,7 @@ exit 0
 
 
 fix bw
+in css.css file 
 #controlpanel {
 	position: fixed;
  bottom: 15px; /* 70px; */

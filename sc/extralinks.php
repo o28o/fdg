@@ -76,9 +76,9 @@ $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | so
       [[ $bwlink != \"\" ]] && 
 echo -n \"<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>&nbsp;\"; 
       [[ \$ruslink != \"\" ]] && 
-  echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
+  echo -n \"<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
   [[ \$ruslinkdn != \"\" ]] && 
-  echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";");
+  echo -n \"<a target='_blank' href=https://tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";");
 return $output;
   
 }

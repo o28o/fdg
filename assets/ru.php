@@ -24,11 +24,11 @@ include 'scripts/opentexts.php';
 <meta property="og:description" content="Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском" />
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />
-<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/social_sharing_gift_rus.jpg" />
+<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/img/social_sharing_gift_rus.jpg" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Поисковая Система Освобобждения">
 <meta name="twitter:description" content="Находите информацию в Суттах и Винае на Пали, Русском, Английском и Тайском">
-<link rel="icon" type="image/png" href="/assets/favico-noglass.png" />
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
  
 <script src="/assets/js/jquery-3.6.0.js"></script>
 <script src="/assets/js/jquery-ui.js"></script>
@@ -51,7 +51,7 @@ include 'scripts/opentexts.php';
       <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-            <a class="navbar-brand mobile-center" href="/ru/"> <div class="container"><img src="./assets/dhammafindlogo.png"  style="width:100px;"></a>
+            <a class="navbar-brand mobile-center" href="/ru/"> <div class="container"><img src="./assets/img/dhammafindlogo.png"  style="width:100px;"></a>
                 <a class="navbar-brand mobile-none" href="/ru/">find.dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Меню
@@ -708,7 +708,7 @@ include 'scripts/multilang-search.php';
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>&nbsp;<small>Copyright &copy; Dhamma.gift 2022-<?php echo date("Y"); ?></small></div>
+            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31." /></a>&nbsp;<small>Copyright &copy; Dhamma.gift 2022-<?php echo date("Y"); ?></small></div>
 
         </div>
         <!-- Portfolio Modals-->

@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Custon Google Search by Dhamma.gift</title>
-<link rel="icon" type="image/png" href="https://find.dhamma.gift/assets/favico-noglass.png" />
+<link rel="icon" type="image/png" href="https://find.dhamma.gift/assets/img/favico-noglass.png" />
  <meta http-equiv="Cache-control" content="public">
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Custon Google Search by find.Dhamma.gift" />

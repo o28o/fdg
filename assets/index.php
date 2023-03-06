@@ -22,12 +22,12 @@ include 'scripts/opentexts.php';
 
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />
-<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/social_sharing_gift.jpg" />
+<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/img/social_sharing_gift.jpg" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="find.Dhamma.gift - Liberation Search Engine">
 <meta name="twitter:description" content="Search in Pali Suttas and Vinaya in Pali, Russian, English and Thai">
-<link rel="icon" type="image/png" href="./assets/favico-noglass.png" />
+<link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
 <script src="/assets/js/jquery-3.6.0.js"></script>
 <script src="/assets/js/jquery-ui.js"></script>
@@ -51,7 +51,7 @@ include 'scripts/opentexts.php';
     <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-            <a class="navbar-brand mobile-center" href="/"> <div class="container"><img src="./assets/dhammafindlogo.png"  style="width:100px;"></a>
+            <a class="navbar-brand mobile-center" href="/"> <div class="container"><img src="./assets/img/dhammafindlogo.png"  style="width:100px;"></a>
                 <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu

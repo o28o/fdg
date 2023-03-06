@@ -19,7 +19,7 @@ source ./config/script_config.sh --source-only
 #fi
 
 cd $output 
-
+dateforhist=`date +%d-%m-%Y`
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
 defaultlang='lang=pli'
@@ -27,10 +27,12 @@ excluderesponse="исключая"
 function bgswitch {
   removefilenames
 	echo "Найдено $linescount строк с $pattern<br> 
-	Ресурсы сервера ограничены <br>
-	запрос не может быть обработан.<br>
-	Данные <a class=\"outlink\" href="/result/${basefile}">здесь</a><br>
-	Выберите более специфическое слово."
+	Ресурсы сервера ограничены и запрос нельзя обработать.<br>
+	Варианты:<br>
+	1. Попробуйте опцию <strong>Опр</strong>, чтобы сузить поиск<br>
+	2. Выберите более специфическое слово из подсказок для Пали<br>
+	3. Скачайте необработанные данные <a class=\"outlink\" href="/result/${basefile}">здесь</a>
+	"
 	exit 3
 }
 
@@ -80,9 +82,12 @@ excluderesponse="excluding"
 function bgswitch {
   removefilenames
 	echo "Found $linescount lines with $pattern<br> 
-	Server resources are limited <br>
-	You can download raw data <a class=\"outlink\" href="/result/${basefile}">here</a><br>
-	to choose more specific word. "
+	Server resources are limited.<br>
+	Solutions:<br>
+	1. Try <strong>Def</strong> option, it'll narrow down results<br>
+	2. Choose more specific word from Pali autocomplete<br>
+	3. Download raw data <a class=\"outlink\" href="/result/${basefile}">here</a>
+	"
 	exit 3
 }
 
@@ -240,7 +245,7 @@ nice -$nicevalue grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|A
 }
 
 function grepbasefileExtended {
-nice -$nicevalue grep -E -A1 -Eir "(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${defpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${defpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} 
+nice -$nicevalue grep -E -A1 -Eir "(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${defpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${defpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,ud,pli-tv-kd,pli-tv-pvr} 
 }
 
 #\bKatha.*${defpattern}|\bIdaṁ .*${defpattern}{0,6}\b
@@ -253,7 +258,7 @@ fileprefix=${fileprefix}-all
 fortitle="${fortitle} +All"
 else 
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti} 
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} 
 }
 
 fi
@@ -390,7 +395,7 @@ sed "s/я/ya/g"
 fn=`echo $pattern | sed 's/\*//g' | sed 's/[|-]/-/g' | sed 's/[][]//g' | sed 's/ /-/g' | sed 's/\\\//g' | sed 's@?@-question@g'|  awk '{print tolower($0)}'`
 fn=${fn}${excfn}${fileprefix}${fnlang}
 modifiedfn=`echo $fn | diact2normal | cyr2lat`
-#echo fn=$fn modifiedfn=$modifiedfn
+
 extention=tmp
 basefile=${fn}_fn.$extention
 
@@ -403,8 +408,9 @@ tempfilewords=${modifiedfn}_words
 tempdeffile=${modifiedfn}.def.tmp
 deffile=${modifiedfn}_definitions
 
+checkfile=`ls $modifiedfn* | grep -v word`
 
-if [[ -s ${table} ]] ; then 
+if [[ -s "${checkfile}" ]] ; then 
 function md5checkwrite {
 var="$(cat)"
 functionname=`echo $var | awk '{print $1}'`
@@ -416,24 +422,29 @@ md5_file=$(md5sum ${functionfile} | cut -d" " -f1)
 [[ "$md5_stdin" != "$md5_file" ]] && echo "$content"  > $functionfile
 }
 
-filesize=$(stat -c%s "${table}")
+filesize=$(stat -c%s "${checkfile}")
 
-if (( $filesize >= $filesizenooverwrite )) && [[ "`tail -n1 ${table}`" == "</html>" ]] 
+if (( $filesize >= $filesizenooverwrite )) && [[ "`tail -n1 ${checkfile}`" == "</html>" ]] 
 then
-	#echo Already 
+	echo Already 
+	cat -n $history | grep -E "$table" | grep daterow | grep -i "${fortitle^}" | grep ">$language<" | tac > updatehistorytmp 
+	linenumbers=`cat updatehistorytmp | awk '{print $1}'`
+
+for i in $linenumbers
+do 
+sed -i "${i}d" $history 
+done 
+
+sed -i 's@[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]@'$dateforhist'@g' updatehistorytmp
+cat updatehistorytmp | tac | head -1 | awk '{print substr($0, index($0, $2))}' >> $history
+rm updatehistorytmp
 OKresponse
+echo "<script>window.location.href=\"./result/${checkfile}\";</script>"
 
-	if [[ "$language" == *"Pali"* ]] 
-	then 
-	wordsresponse
-	fi
-	quoteresponse
-	
+	#[[ "$language" == *"Pali"* ]] && wordsresponse
+	#quoteresponse
 	exit 0
-#else 
-#	echo Already 
 fi 
-
 fi
 
 function genwordsfile {
@@ -841,7 +852,7 @@ if [[ "$@" == *"-def"* ]] && (( $texts <= 6 ))
 then 
 grepbasefileExtended | grep -v "^--$" | grepexclude | clearsed | sort -V >> $basefile
 fi
-echo -n "`wc -l $basefile | awk '{print $1}'` "
+#echo -n "`wc -l $basefile | awk '{print $1}'` "
 
 linescount=`wc -l $basefile | awk '{print $1}'`
 if [ ! -s $basefile ]
@@ -932,9 +943,7 @@ echo "</tbody>
 cat $templatefolder/WordsFooter.html >> $tempfilewords
 mv ./$oldname ./$table
 
-linenumbers=`cat -n $history | grep daterow | grep -E "$table" | grep "${fortitle^}" | grep ">$language<" | awk '{print $1}' | tac`
-
-#grep "$textsqnty" | grep "$matchqnty"
+linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "${fortitle^}" | grep ">$language<" | awk '{print $1}' | tac`
 
 for i in $linenumbers
 do 
@@ -947,7 +956,7 @@ pattern="$pattern exc. ${excludepattern,,}"
 fi 
 
 echo -n "<!-- begin $userpattern --> 
-<tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><th>$textsqnty</th><th>$matchqnty</th><th><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></th><td>${fortitle^}</td><td>$language</td><td class=\"daterow\">`date +%d-%m-%Y`</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td>" >> $history
+<tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><th>$textsqnty</th><th>$matchqnty</th><th><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></th><td>${fortitle^}</td><td>$language</td><td class=\"daterow\">$dateforhist</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td>" >> $history
 
 
 
@@ -964,8 +973,6 @@ echo "</td></tr>
 " >> $history
 
 rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
-#echo thlnk=$linkthai fnb=$filenameblock
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0
-

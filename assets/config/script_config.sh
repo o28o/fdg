@@ -80,9 +80,10 @@ outputdir=$output
 homedir=$rootpath
 outputdiraw=$output/allwords
 
-urllinkpli=https://find.dhamma.gift
+urllinkpli=https://find.dhamma.gift/
 urllinken=https://suttacentral.net/
 urllinkenmid=/en/
+urllinkenend='?layout=linebyline'
 urllinkbw=https://thebuddhaswords.net/
 
 wbefore=1

@@ -593,7 +593,7 @@ fi
 
 linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=pli"}' ` 
 
-linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli'/sc/?q="$0"&lang=pli"}' `
+linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0"&lang=pli"}' `
 forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
 #linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
 
@@ -602,7 +602,7 @@ forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
   elif [[ -s $bwlocation/$forbwlink/${forbwranges}.html  ]] ; then 
   linken=`echo $filenameblock |  awk '{print "'${urllinkbw}$forbwlink/$forbwranges'.html"}' `
   else
-  linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${translatorsname}${urllinkenend}'"}'`
+  linken=`echo $filenameblock |  awk '{print "hello'$urllinken'"$0"'${urllinkenmid}${translatorsname}${urllinkenend}'"}'`
   fi 
 
 #if [[ $mode == "offline" ]]

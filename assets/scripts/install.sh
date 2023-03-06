@@ -117,21 +117,30 @@ termux-open-url http://localhost:8080/
 
 exit 0
 
+#cleanup sc repo from unused texts
+cd /suttacentral.net/sc-data/sc_bilara_data/translation
+ls | grep -Ev "ru|th|en|san" | xargs rm -rf
+cd /suttacentral.net/sc-data/sc_bilara_data/html
+ls | grep -Ev "ru|th|en|san" | xargs rm -rf
 
-fix bw
-in css.css file 
+#fix bw
+sed -i  "s@top: 15px@bottom: 15px" css.css
+
+#in css.css file 
 #controlpanel {
-	position: fixed;
- bottom: 15px; /* 70px; */
+#	position: fixed;
+# bottom: 15px; /* 70px; */
  
  // set default state of Pali Lookup
 if (localStorage.paliLookupActive === undefined) {
   localStorage.paliLookupActive = "false";
 }
+#disable dictionary 
+mv /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/offline/bw/js/pali-lookup-standalone.js  /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/offline/bw/js/pali-lookup-standalone.jsdd
+#remove bw header image
+cp /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/headerlogo.png /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/offline/bw/images
  
- 
- 
- 
+#apache config
 cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/config/
 
 for i in `grep -rl mousetrap   /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/bw`

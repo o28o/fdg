@@ -32,8 +32,10 @@ $locationrudn = $thsulocation;
   $result = str_replace(PHP_EOL, '', $output);
 return $output;
 
+
+
 } else {
-  
+ // online 
   
 // $locationTocThsu = "/home/a0092061/domains/find.dhamma.gift/public_html/assets";
 //thsu part
@@ -78,7 +80,7 @@ echo -n \"<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>&nbs
       [[ \$ruslink != \"\" ]] && 
   echo -n \"<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
   [[ \$ruslinkdn != \"\" ]] && 
-  echo -n \"<a target='_blank' href=https://tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";");
+  echo -n \"<a target='_blank' href=\$ruslinkdn>Th.su</a>&nbsp;\";");
 return $output;
   
 }

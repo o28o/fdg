@@ -33,6 +33,11 @@ linkforthai=/legacy.suttacentral.net/sc/th/
 linkforthaiext='.html'
 linkforru=/legacy.suttacentral.net/sc/ru/
 
+urllinkpli=
+urllinken='/sc/?q='
+urllinkenend='&lang=pli-eng'
+urllinkbw=/bw/
+
 wbefore=1
 wafter=3
 linesafter=0
@@ -75,6 +80,11 @@ outputdir=$output
 homedir=$rootpath
 outputdiraw=$output/allwords
 
+urllinkpli=https://find.dhamma.gift
+urllinken=https://suttacentral.net/
+urllinkenmid=/en/
+urllinkbw=https://thebuddhaswords.net/
+
 wbefore=1
 wafter=3
 linesafter=0
@@ -108,6 +118,11 @@ linkforthru=/theravada.ru/
 linkforthai=/legacy.suttacentral.net/sc/th/
 linkforthaiext='.html'
 linkforru=/legacy.suttacentral.net/sc/ru/
+
+urllinkpli=
+urllinken='/sc/?q='
+urllinkenend='&lang=pli-eng'
+urllinkbw=/bw/
 
 wbefore=1
 wafter=3

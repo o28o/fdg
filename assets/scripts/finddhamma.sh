@@ -592,26 +592,25 @@ link=`echo $filenameblock |  awk -v lkru="$linkforru" '{print lkru$0}' `
 fi
 
 linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=pli"}' ` 
-if [[ $mode == "offline" ]]
-then 
-linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
+
+linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli'/sc/?q="$0"&lang=pli"}' `
 forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
 #linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
 
   if [[ -s $bwlocation/$forbwlink/${filenameblock}.html  ]] ; then 
-  linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
+  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}${forbwlink}'/"$0".html"}' `
   elif [[ -s $bwlocation/$forbwlink/${forbwranges}.html  ]] ; then 
-  linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink/$forbwranges'.html"}' `
-  #echo ello not $filenameblock but $forbwranges
+  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}$forbwlink/$forbwranges'.html"}' `
   else
-  linken=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli-eng"}' `
-  #echo fello $linken
+  linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${translatorsname}${urllinkenend}'"}'`
   fi 
 
-else #not offline #online
-linken=`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/en/'$translatorsname'?layout=linebyline"}' `
-linkpli=`echo $filenameblock |  awk '{print "https://find.dhamma.gift/sc/?q="$0"&lang=pli"}' `
-fi
+#if [[ $mode == "offline" ]]
+#then 
+#else #not offline #online
+#linken=`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/en/'$translatorsname'?layout=linebyline"}' `
+#linkpli=`echo $filenameblock |  awk '{print "https://find.dhamma.gift/sc/?q="$0"&lang=pli"}' `
+#fi
 
 count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file | wc -l ` 
 echo $count >> $tempfile

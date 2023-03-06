@@ -62,6 +62,7 @@ templatefolder=$apachesitepath/assets/templates
 
 searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
 indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
+bwlocation=$apachesitepath/assets/offline/bw/
 thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
 linkforthsu=https://tipitaka.theravada.su
 linkforthru=https://theravada.ru/

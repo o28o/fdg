@@ -87,6 +87,7 @@ echo '	<div class="d-md-inline-block">
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
    <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true">Cases</a></li>
        <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">Conjugations</a></li>
+      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk">Pali Textbook</a></li>
     <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">Other Materials</a></li>
 </ul>
 

@@ -95,7 +95,9 @@ echo '
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
    <li><a class="dropdown-item" href="/assets/materials/declensions_and_conjugations_eng.xlsx">Cases</a></li>
              <li><a class="dropdown-item" href="/assets/materials/pali_conjugations_eng.pdf">Conjugations</a></li>
-    <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">Other Materials</a></li>
+        
+   <li><a class="dropdown-item" href="/assets/materials/pali_textbook_eng.pdf">Pali Textbook</a></li>
+    <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">Materials Online</a></li>
 </ul>
 
 </div>'

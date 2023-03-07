@@ -99,6 +99,7 @@ echo '
       <li><a class="dropdown-item" href="/assets/materials/pali_conjugations_eng.pdf">Спряжения</a></li>
 
    <li><a class="dropdown-item" href="/assets/materials/pali_textbook_rus.pdf">Курс по Пали</a></li>
+      <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>
 
   </ul>
   

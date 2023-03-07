@@ -40,11 +40,23 @@ afterAkhsaramukhaResponse($convertedStr);
       }
   
 }
-
+//english
 			$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
 			echo "<p class='mt-3'>$output</p>";
 		
 		if ((( $p == "" ) && ( preg_match('/ not in /', $output)  )) || (( $p == "-vin" ) && ( preg_match('/ not in /', $output)  )))	{
+		      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -b $extra $p $string"); 
+		      echo "<p>$output</p>";
+		    }                                 
+
+		$check = ru2lat( $output );
+
+		if ((( $p == "" ) && ( preg_match('/-net-v-/', $check)  )) || (( $p == "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
+		    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -b $extra $p $string");
+			echo "<p>$output</p>";
+			}	
+		 
+		 if ((( $p == "" ) && ( preg_match('/ not in /', $output)  )) || (( $p == "-vin" ) && ( preg_match('/ not in /', $output)  )))	{
 		      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -en $extra $p $string"); 
 		      echo "<p>$output</p>";
 		    }                                 

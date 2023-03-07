@@ -67,7 +67,8 @@ echo '
    <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=cn.mdict">mDict Android</a></li>
       
   <li><a class="dropdown-item" href="https://apps.apple.com/app/mdict/id389083586">mDict IOS</a></li>      
-  <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">Пали словарь для mDict</a></li>        
+  <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">Пали-Англ для mDict</a></li>  
+     <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Пали-Рус для GoldenDict</a></li>  
    <li><a class="dropdown-item" href="#research">Исследование</a></li>
        <li><a class="dropdown-item" href="#read">Чтение</a></li>
     <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li>
@@ -93,11 +94,11 @@ echo '
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
-      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntOr/view?usp=sharing">Падежи</a></li>
+   <li><a class="dropdown-item" href="/assets/materials/pali_cases_rus.pdf">Падежи pdf</a></li>
       
-      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">Спряжения</a></li>
+      <li><a class="dropdown-item" href="/assets/materials/pali_conjugations_eng.pdf">Спряжения</a></li>
 
-   <li><a class="dropdown-item" href="https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing">Курс по Пали</a></li>
+   <li><a class="dropdown-item" href="/assets/materials/pali_textbook_rus.pdf">Курс по Пали</a></li>
 
   </ul>
   

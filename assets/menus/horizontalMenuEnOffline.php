@@ -64,12 +64,13 @@ echo '
           
     <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=cn.mdict">mDict Android</a></li>
     <li><a class="dropdown-item" href="https://apps.apple.com/app/mdict/id389083586">mDict IOS</a></li>   
- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">Pali for mDict</a></li>  
+ <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">Pali-Eng for mDict</a></li>  
+
+   <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Pali-Rus for GoldenDict</a></li>  
    <li><a class="dropdown-item" href="#research">Research</a></li>
        <li><a class="dropdown-item" href="#read">Read</a></li>
     <li><a class="dropdown-item" href="#study">Study</a></li>
   </ul>
-  
        
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
@@ -92,8 +93,8 @@ echo '
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
-   <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntOr/view?usp=sharing">Cases</a></li>
-       <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">Conjugations</a></li>
+   <li><a class="dropdown-item" href="/assets/materials/declensions_and_conjugations_eng.xlsx">Cases</a></li>
+             <li><a class="dropdown-item" href="/assets/materials/pali_conjugations_eng.pdf">Conjugations</a></li>
     <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">Other Materials</a></li>
 </ul>
 

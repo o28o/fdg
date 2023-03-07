@@ -146,16 +146,18 @@ pattern="$@"
 if [[ "$@" == *"-h"* ]]; then
     echo "
     without arguments will search in pali<br>
+    materials as stored on Suttacentral.net in DN, MN, SN, AN.<br>
     <br>
-    -def - find definitions in Pali <br>
-  	-kn - include Khuddaka Nikaya selected books <br>
-  	-all - include all Khuddaka Nikaya books <br>
+    -def - find definitions given with standart formulas in Pali <br>
+	-kn - include Khuddaka Nikaya selected books <br>
+	-all - include all Khuddaka Nikaya books <br>
     -vin - to search in vinaya texts only <br>
     -abhi - to search in abhidhamma texts only <br>
-    -en - to search in english <br>
     -ru - to search in Russian <br>
-    -th - to search in thai <br>
-    -pli - to search in pali (default option) <br>
+    -en - to search in elEnglish <br>
+    -b - to search in tbw contents <br>
+    -th - to search in tlThai <br>
+    -pli - to search in Pali (default option) <br>
     -nbg - no background <br>
 	-oru - output messages in Russian<br>"
     exit 0
@@ -174,7 +176,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-plb" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-b" ]] 
 then   
 #emptypattern
    exit 3
@@ -204,6 +206,7 @@ fortitle=Suttanta
 dirlocation=sutta
 translator=sujato
 fileprefix=_suttanta
+hwithtitle='<h1>'
 if [[ "$@" == *"-vin"* ]]; then
     vin=dummy
     sutta=sutta
@@ -256,12 +259,24 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pal
 }
 fileprefix=${fileprefix}-all
 fortitle="${fortitle} +All"
+elif [[ "$@" == *"-b"* ]]; then
+function grepbasefile {
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $bwlocation
+ --exclude-dir={$sutta,$abhi,engsearch,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} | grep -v "bw/home"
+ #engsearch.html exclude file
+}
+fileprefix=${fileprefix}-bw
+fortitle="${fortitle}"
 else 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} 
 }
 
 fi
+
+
+
+
 
 if [[ "$@" == *"-th"* ]]; then
     fnlang=_th
@@ -282,12 +297,13 @@ elif [[ "$@" == *"-ru"* ]]; then
     metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
     nonmetaphorkeys="подобного|подоба"
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
-elif [[ "$@" == *"-plb"* ]]; then
-    fnlang=_pali-only
-    pali_or_lang=sc-data/sc_bilara_data/root/pli/ms
-    directlink=/pli/ms
-    language="Pali Only"
+elif [[ "$@" == *"-b"* ]]; then
+    fnlang=_enpi
+    pali_or_lang=/bw/
+    directlink=/bw
+    language="EngTBW"
     type=html
+    hwithtitle='<h00002>'
     metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"
     nonmetaphorkeys="adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"
     definitionkeys="Kata.*${pattern}.{0,4}\\?|${pattern}.*vucati|${pattern}.*adhivacan|${pattern}.{0,4}, ${pattern}.*vucca"
@@ -612,7 +628,8 @@ forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
   elif [[ -s $bwlocation/$forbwlink/${forbwranges}.html  ]] ; then 
   linken=`echo $filenameblock |  awk '{print "'${urllinkbw}$forbwlink/$forbwranges'.html"}' `
   else
-  linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${translatorsname}${urllinkenend}'"}'`
+  linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${urllinkenend}'"}'`
+  #${translatorsname}
   fi 
 
 #if [[ $mode == "offline" ]]
@@ -720,7 +737,8 @@ function linklist {
 cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | tohtml 
 
 
-uniquelist=`cat $basefile | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
+uniquelist=`cat $basefile | grep -v engsearch.html | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
+
 #| grep "html:"
 textlist=$uniquelist
 #echo $uniquelist | tohtml
@@ -740,16 +758,22 @@ linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=p
 
 linklang="$linkgeneral"
 
+
+if [[ "$@" == *"-b"* ]]; then
+echo thistext
+roottext=`nice -$nicevalue find $bwlocation -name "*${filenameblock}_*" -not -path "*/home/*" -not  -path "*/css/*" -not -path "*/js/*" -not -path "*/engsesrch/*"`
+else
 roottext=`nice -$nicevalue find $lookup/root -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
- 
+fi
         if [[ "$language" == *"Pali"* ]]; then
         file=$roottext
         
 
-    elif [[ "$language" == "Russian" ]]; then
+   # elif [[ "$language" == "Russian" ]]; then
+   else
         file=$tr
         remtitle=`echo $filenameblock | sed 's/[A-Za-z]//g'`
-suttatitle=`grep 'h1' $file | clearsed | xargs | sed 's@'$remtitle'@@g'`
+suttatitle=`grep -m1 $hwithtitle $file | clearsed | xargs | sed 's@'$remtitle'@@g'`
 		
 	
 	   np=`echo $filenameblock | sed 's@\.@_@g'`
@@ -785,7 +809,7 @@ linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
 linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
 else 
 linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
-linken=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli-eng"}' `
+linken=`echo $filenameblock |  awk '{print "'$urllinkbw/$forbwlink'"$0"'$urllinkbwend'"}' `
 
 fi
   
@@ -812,6 +836,8 @@ echo "<tr>
 <td><a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`&nbsp;<a target=\"_blank\" href="$linken">"Eng"</a>
 </td>
 <td>" | tohtml
+echo $pattern
+echo "fail=$file"
 nice -$nicevalue grep -E -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
 echo "$line"
 echo '<br class="styled">'

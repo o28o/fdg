@@ -204,6 +204,7 @@ const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.sl
      
     })
     .catch(error => {
+      console.log('error:not found');
       suttaArea.innerHTML = `<p>Перевод текста "${decodeURIComponent(slug)}" не найден.
     <br><br>
     Подсказка: <br>

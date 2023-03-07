@@ -103,5 +103,19 @@ $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/pyth
 //api-emulator
 $scroottextlocation = "/var/www/html/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";
       } 
-  //common vars
+//
+// Common Variables
+//
+$linebylinerulocation = $basedir. '/assets/texts/';
+//translator-lookup.php
+$translatorlocation = $basedir. '/o/';
+
+//opentexts.php
+$indexesfile = $basedir. '/assets/texts/text_indexes.txt';
+$scriptfile = $basedir. '/scripts/ranges.sh';
+
+$thsulocation = $basedir. '/assets/offline/tipitaka.theravada.su/';
+$thrulocation = $basedir. '/assets/offline/theravada.ru/Teaching/Canon';
+$bwlocation = $basedir. '/assets/offline/bw';
+
       ?>

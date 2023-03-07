@@ -192,6 +192,7 @@ if (linksArray[0].length >= 4) {
      
     })
     .catch(error => {
+    console.log('error:not found');
       suttaArea.innerHTML = `<p>Перевод текста "${decodeURIComponent(slug)}" не найден.
     <br><br>
     Подсказка: <br>

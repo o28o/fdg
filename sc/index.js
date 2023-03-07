@@ -203,6 +203,7 @@ const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.sl
      
     })
     .catch(error => {
+            console.log('error:not found');
       suttaArea.innerHTML = `<p>Sorry, "${decodeURIComponent(slug)}" is not a valid sutta citation.
     <br><br>
     Note: <br>

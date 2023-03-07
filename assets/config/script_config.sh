@@ -24,7 +24,7 @@ sntoccsv="$apachesitepath/assets/sn_toc.csv"
 templatefolder=$apachesitepath/assets/templates
 
 bwlocation=$apachesitepath/assets/offline/bw/
-searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
+
 indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
 thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
 linkforthsu=/tipitaka.theravada.su
@@ -60,7 +60,6 @@ history="$apachesitepath/result/.history"
 sntoccsv="$apachesitepath/assets/sn_toc.csv"
 templatefolder=$apachesitepath/assets/templates
 
-searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
 indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
 bwlocation=$apachesitepath/assets/offline/bw/
 thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
@@ -74,7 +73,6 @@ templatefolder=$apachesitepath/assets/templates
 
 #for find in all theravada.ru suttas
 scriptdir=$rootpath
-searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
 outputdir=$output
 
 #for allwords.sh
@@ -86,7 +84,7 @@ urllinken=https://suttacentral.net/
 urllinkenmid=/en/
 urllinkenend='?layout=linebyline'
 urllinkbw=https://thebuddhaswords.net/
-
+urllinkbwend=.html
 wbefore=1
 wafter=3
 linesafter=0
@@ -112,7 +110,7 @@ sntoccsv="$apachesitepath/assets/sn_toc.csv"
 templatefolder=$apachesitepath/assets/templates
 
 bwlocation=$apachesitepath/assets/offline/bw/
-searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
+
 indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
 thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
 linkforthsu=/tipitaka.theravada.su
@@ -138,14 +136,14 @@ history="$apachesitepath/result/.history"
 sntoccsv="$apachesitepath/assets/sn_toc.csv"
 archivenumber=91
 fi
-
-
+#common vars
+searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
 
 function pvlimit {
 pv -L 1m -q
 }
 function clearargs {
-sed -e 's/-pli //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg //g' | sed 's/ -exc.*//g' | sed 's/-la [0-9]* //g' | sed 's/-def //g' | sed 's/-ply //g'
+sed -e 's/-pli //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg //g' | sed 's/ -exc.*//g' | sed 's/-la [0-9]* //g' | sed 's/-def //g' |  sed 's/-b //g'
 }
 
 function removefilenames {

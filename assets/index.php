@@ -455,7 +455,6 @@ include 'scripts/multilang-search.php';
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 id="read" class="text-uppercase mb-4">Read</h4>
                        
- <div class="list-group">
 
  <div class="list-group">
   <a target="_blank" href="<?php echo $mainpagesclink; ?>" class="list-group-item list-group-item-action active" aria-current="true">
@@ -564,6 +563,7 @@ include 'scripts/multilang-search.php';
   </a>
   
 </div>  
+
 </div>
                     <!-- Footer About Text-->
                     <div id="contacts" class="col-lg-0 text-center">

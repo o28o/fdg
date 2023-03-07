@@ -836,8 +836,7 @@ echo "<tr>
 <td><a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`&nbsp;<a target=\"_blank\" href="$linken">"Eng"</a>
 </td>
 <td>" | tohtml
-echo $pattern
-echo "fail=$file"
+
 nice -$nicevalue grep -E -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
 echo "$line"
 echo '<br class="styled">'
@@ -999,6 +998,6 @@ echo "</td></tr>
 " >> $history
 
 rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
-#echo "<script>window.location.href=\"./result/${table}\";</script>"
+echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

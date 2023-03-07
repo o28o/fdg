@@ -999,6 +999,6 @@ echo "</td></tr>
 " >> $history
 
 rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
-echo "<script>window.location.href=\"./result/${table}\";</script>"
+#echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

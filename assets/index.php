@@ -227,7 +227,7 @@ include 'scripts/multilang-search.php';
 
                         </p></div> 
          
-              <div class="container-xl alert alert-warning float-start text-left mb-3" role="alert">
+              <div class="container-lg alert alert-warning float-start text-left mb-3" role="alert">
  <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one's own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.
  <!-- <a target="_blank" href="https://docs.google.com/document/d/1-ZY2G7dVq48EG8VPZIrItE6ShfqWgV5U9qDcb7VrelU/edit?usp=drivesdk" class="alert-link">Sn56.11</a>. -->
 </div>

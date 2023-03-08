@@ -16,17 +16,8 @@ sitename=http://localhost:8080
 nicevalue=1
 mode=offline
 apachesitepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
-rootpath=$apachesitepath/scripts
 suttapath=$apachesitepath/suttacentral.net/
-output=$apachesitepath/result/
-history="$apachesitepath/result/.history"
-sntoccsv="$apachesitepath/assets/sn_toc.csv"
-templatefolder=$apachesitepath/assets/templates
 
-bwlocation=$apachesitepath/assets/offline/bw/
-
-indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
-thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
 linkforthsu=/tipitaka.theravada.su
 linkforthru=/theravada.ru
 linkforthai=/legacy.suttacentral.net/sc/th/
@@ -43,7 +34,7 @@ wafter=3
 linesafter=0
 minlength=3
 truncatelength=30
-filesizenooverwrite=1
+filesizenooverwrite=10000000
 maxmatchesbg=3000
 archivenumber=84
 
@@ -53,23 +44,13 @@ sitename=https://find.dhamma.gift
 mode=online
 nicevalue=19
 apachesitepath=/home/a0092061/domains/find.dhamma.gift/public_html/
-rootpath=$apachesitepath/scripts
 suttapath=/home/a0092061/data/suttacentral.net/
-output=$apachesitepath/result/
-history="$apachesitepath/result/.history"
-sntoccsv="$apachesitepath/assets/sn_toc.csv"
-templatefolder=$apachesitepath/assets/templates
 
-indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
-bwlocation=$apachesitepath/assets/offline/bw/
-thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
 linkforthsu=https://tipitaka.theravada.su
 linkforthru=https://theravada.ru
 linkforthai=https://suttacentral.net/
 linkforthaiext=/th/siam_rath
 linkforru=https://suttacentral.net/
-
-templatefolder=$apachesitepath/assets/templates
 
 #for find in all theravada.ru suttas
 scriptdir=$rootpath
@@ -92,8 +73,6 @@ minlength=3
 truncatelength=30
 filesizenooverwrite=1
 maxmatchesbg=1900
-history="$apachesitepath/result/.history"
-sntoccsv="$apachesitepath/assets/sn_toc.csv"
 archivenumber=31
 
 elif [[ "`uname -a`" == *"Linux"* ]]; then 
@@ -102,17 +81,8 @@ sitename=http://localhost
 nicevalue=1
 mode=offline
 apachesitepath=/var/www/html
-rootpath=$apachesitepath/scripts
 suttapath=$apachesitepath/suttacentral.net/
-output=$apachesitepath/result/
-history="$apachesitepath/result/.history"
-sntoccsv="$apachesitepath/assets/sn_toc.csv"
-templatefolder=$apachesitepath/assets/templates
 
-bwlocation=$apachesitepath/assets/offline/bw/
-
-indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
-thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
 linkforthsu=/tipitaka.theravada.su
 linkforthru=/theravada.ru
 linkforthai=/legacy.suttacentral.net/sc/th/
@@ -132,12 +102,22 @@ truncatelength=30
 filesizenooverwrite=80000
 maxmatchesbg=300000
 archivenumber=280
-history="$apachesitepath/result/.history"
-sntoccsv="$apachesitepath/assets/sn_toc.csv"
 archivenumber=91
 fi
 #common vars
+rootpath=$apachesitepath/assets/scripts
+output=$apachesitepath/result/
+history="$apachesitepath/result/.history"
+sntoccsv="$apachesitepath/assets/texts/sn_toc.csv"
+templatefolder=$apachesitepath/assets/templates
+textinfofolder=$apachesitepath/assets/texts
+bwlocation=$apachesitepath/assets/offline/bw/
+indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
+thsulocation=$apachesitepath/assets/offline/tipitaka.theravada.su/
 searchdir=$apachesitepath/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts
+
+
+
 
 function pvlimit {
 pv -L 1m -q

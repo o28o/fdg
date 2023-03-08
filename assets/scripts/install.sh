@@ -181,6 +181,23 @@ for i in `find . -name  "*" -type f`; do
     sed -i 's@windows-1251@utf-8@g' $i
     done
     
+    
+    
+    
+    #count metaphorcount 
+metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"
+nonmetaphorkeys="adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"
+    
+nicevalue=1
+    
+for i in `find . -name "*.json" | sort -V`
+do 
+metaphorcount=`grep -E -i "$metaphorkeys" $i | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
+sankhamEvamcount=`cat $i | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
+metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
+
+echo $i $metaphorcount >> ~/metphrcount_vinaya.txt
+done 
 #check and fix links if needed 
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/ru
 ln -s ../assets ./assets 

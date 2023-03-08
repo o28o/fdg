@@ -202,6 +202,7 @@ sed 's/<p>/\n/g; s/<[^>]*>//g'  | sed  's/": "/ /g' | sed  's/"//1' | sed 's/",$
 vin=vinaya
 abhi=abhidhamma
 sutta=mutta
+metaphorcountfile=$textinfofolder/metphrcount_sutta.txt
 fortitle=Suttanta
 dirlocation=sutta
 translator=sujato
@@ -213,8 +214,8 @@ if [[ "$@" == *"-vin"* ]]; then
 	fortitle=Vinaya
 	dirlocation=vinaya
 	translator=brahmali
-    #echo search in vinaya
     fileprefix=_vinaya
+    metaphorcountfile=$textinfofolder/metphrcount_vinaya.txt
 fi
 if [[ "$@" == *"-abhi"* ]]; then
     abhi=dummy
@@ -659,9 +660,13 @@ indexlist=`nice -$nicevalue grep -E -i "${suttanumber}:" $basefile | awk '{print
 
 #metaphorindexlist=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -E -i "$metaphorkeys" | nice -$nicevalue grep -E -vE "$nonmetaphorkeys" | awk '{print $1}'` 
 
-metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -E -iE "$metaphorkeys" | nice -$nicevalue grep -E -vE "$nonmetaphorkeys" | awk '{print $1}'| wc -l` 
+metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
+if [[ $metaphorcount == "" ]]
+then
+metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
+fi
 
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneral">$filenameblock</a></td>
@@ -824,7 +829,16 @@ indexlist=`nice -$nicevalue grep -E -i $filenameblock $basefile | awk '{print $2
 
 #metaphorindexlist=`cat $file | pvlimit | clearsed | nice -$nicevalue grep -E -i "$metaphorkeys" | nice -$nicevalue grep -E -vE "$nonmetaphorkeys" | awk '{print $1}'` 
 
-metaphorcount=`cat $file | pvlimit | clearsed | nice -$nicevalue grep -E -i "$metaphorkeys" | nice -$nicevalue grep -E -vE "$nonmetaphorkeys" | awk '{print $1}'| wc -l` 
+metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
+if [[ $metaphorcount == "" ]]
+then
+echo 'i was used' >> ~/mfon.txt
+metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
+sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
+metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
+fi
+
+
 
 #quote=`nice -$nicevalue grep -E -ih "${pattern}" $file | clearsed | highlightpattern `
 echo "<tr>

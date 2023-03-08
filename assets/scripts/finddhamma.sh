@@ -248,7 +248,7 @@ nice -$nicevalue grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|A
 }
 
 function grepbasefileExtended {
-nice -$nicevalue grep -E -A1 -Eir "(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${defpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${defpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,ud,pli-tv-kd,pli-tv-pvr} 
+nice -$nicevalue grep -E -A1 -Eir "(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${defpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${defpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} 
 }
 
 #\bKatha.*${defpattern}|\bIdaṁ .*${defpattern}{0,6}\b

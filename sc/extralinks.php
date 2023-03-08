@@ -10,7 +10,10 @@ function rusLinks($fromjs) {
   $forthru = str_replace(".", '_', $fromjs);
 $forbwpath = strtolower(substr($fromjs,0,2));
 $bwfile = "$bwlocation/$forbwpath/$fromjs.html";
- 
+
+$texttype='sutta';
+
+
 if (file_exists($bwfile) ) {
     $bwlink = "$forbwpath/$fromjs.html";
     //preg_replace('@.*/bw/@i', '/bw/', $bwfile);

@@ -41,7 +41,7 @@ html {
 }
 
 body {
-	font: normal normal 1.15em/1.3em "URWPalladioITU", serif;
+	font: normal normal 1.15em/1.3em Helvetica, serif;
 	margin-left: 5px;
 	z-index:1;
  max-width: 1640px;

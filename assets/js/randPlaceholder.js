@@ -39,12 +39,12 @@ function randPlaceholderOnMain() {
    var theLanguage = $('html').attr("lang");
   if(theLanguage == "en"){
     var words = ["Kāyagat","Seyyathāpi","Samudd","Cūḷanik", "elephant", "ocean", "satipaṭṭhānā"];
-    var suttas = ["Sn56.11","Dn22","Sn12.2", "An4.163"]; 
+    var suttas = ["Sn56.11","Dn22","Sn12.2", "An4 163"]; 
     var or = " or ";
     var example = "e.g. ";
 }  else if  ( theLanguage == "ru") {
     var words = ["Kāyagat","Seyyathāpi","Samudd","Cūḷanik", "Suññat", "Mūsik", "Hatthī", "Слон", "дрессировщик", "satipaṭṭhānā"];
-    var suttas = ["Sn56.11","Dn22s","Сн12.2", "an4.163"];
+    var suttas = ["Sn56.11","Dn22s","Сн12.2", "an4 163"];
     var or = " или ";
 
     var example = "прим. ";

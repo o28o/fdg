@@ -148,18 +148,18 @@ if [[ "$@" == *"-h"* ]]; then
     without arguments will search in pali<br>
     materials as stored on Suttacentral.net in DN, MN, SN, AN.<br>
     <br>
+    -pli - to search in Pali, same as without arguments (default option) <br>
     -def - find definitions given with standart formulas in Pali <br>
 	-kn - include Khuddaka Nikaya selected books <br>
 	-all - include all Khuddaka Nikaya books <br>
     -vin - to search in vinaya texts only <br>
     -abhi - to search in abhidhamma texts only <br>
     -ru - to search in Russian <br>
-    -en - to search in elEnglish <br>
-    -b - to search in tbw contents <br>
-    -th - to search in tlThai <br>
-    -pli - to search in Pali (default option) <br>
+    -en - to search in English <br>
+    -th - to search in Thai <br>
+    -b - to search in tbw materials <br>
     -nbg - no background <br>
-	-oru - output messages in Russian<br>"
+    -oru - output messages in Russian<br>"
     exit 0
 fi
 

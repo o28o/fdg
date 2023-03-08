@@ -121,8 +121,9 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 
 if( $p == "-ru" ) 
 {
-    if(preg_match("/^(mn|dn)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}.[0-9]*$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}.[0-9]{0,3}-[0-9].*$/i",$string)) 
+    if(preg_match("/^(mn|dn)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[\. ][0-9]*$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9].*$/i",$string)) 
     {
+      $string = str_replace (" ", ".", $string);
   $forthru = str_replace(".","_","$string"). '-';
   $filename = shell_exec("ls -R $thrulocation | grep -i -m1 $forthru" ); 
   if( $filename != "" ) {
@@ -170,8 +171,9 @@ function ru2lat($str)    {
     );
     return strtr($str,$tr);
 }
-if (preg_match('/^[А-Яа-яЁё][А-Яа-яЁё][1-9]{1,3}/ui', $string) || preg_match("/^(сн|ан|уд)[0-9]{0,2}.[0-9]*$/ui",$string) || preg_match("/^(сн|ан|уд)[0-9]{0,2}.[0-9]{0,3}-[0-9].*$/ui",$string)) 
+if (preg_match('/^[А-Яа-яЁё][А-Яа-яЁё][1-9]{1,3}/ui', $string) || preg_match("/^(сн|ан|уд)[0-9]{0,2}[ \.][0-9]*$/ui",$string) || preg_match("/^(сн|ан|уд)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9].*$/ui",$string)) 
     {
+      $string = str_replace (" ", ".", $string);
      $trnstring = ru2lat( $string );	
   $forthru = str_replace(".","_","$trnstring"). '-';
   $filename = shell_exec("ls -R $thrulocation | grep -i -m1 $forthru" ); 
@@ -193,7 +195,8 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 
 if( $p == "-th" ) {
-    if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
+    if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
+      $string = str_replace (" ", ".", $string);
     {
       $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
@@ -209,8 +212,8 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 }
 }
-if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
-
+if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
+$string = str_replace (" ", ".", $string);
 $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
 if (empty($check)) {
@@ -222,7 +225,8 @@ echo "<script>window.location.href='$readerlang/sc/?q={$string}&$defaultlang';</
   exit();
 }
 
-if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}\.[0-9]{0,3}-[0-9]{0,3}b$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$string)){
+if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$string)){
+  $string = str_replace (" ", ".", $string);
   $forbwlink = strtolower(preg_replace("/b$/i","","$string"));
   $bwprefix = strtolower(substr($forbwlink,0,2));
   

@@ -708,7 +708,7 @@ include 'scripts/multilang-search.php';
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31." /></a>&nbsp;<small>Copyright &copy; Dhamma.gift 2022-<?php echo date("Y"); ?></small></div>
+            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a>&nbsp;<small>Copyright &copy; Dhamma.gift 2022-<?php echo date("Y"); ?></small></div>
 
         </div>
         <!-- Portfolio Modals-->

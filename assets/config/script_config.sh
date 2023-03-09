@@ -10,6 +10,10 @@
 # suparicitaṁ hoti.
 ########## an9.25 ##############
 
+
+export LANG=en_US.UTF-8
+
+
 if [[ "`uname -a`" == *"Android"* ]]; then 
 
 sitename=http://localhost:8080

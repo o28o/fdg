@@ -675,6 +675,10 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/dhammawheel.jpg" alt="..." /> -->
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4"><strong>Tip #0</strong><br>
+										Search available in Pali, English, Russian and Thai materials of SuttaCentral.net and also in thebuddhaswords.net. If some text is not presented there, you wont be able to find it.<br>
+									Also, e.g. if "sankhara" is translated as "formation" in thw materials you won't find it in suttacentral.net, as it's translated as "choice" and vice-versa.<br>
+										The following logic is applied: if you search in Roman script: 1st is Pali, then tbw materials, then Suttacentral.net materials. In Thai script - 1st is Pali, then Thai translations. In Cyrillic - Russian translations only.
+										<br><br>
 										If you search in Pali you don't need to check it in options. Pali is default.<br><br>
 									 <strong>Tip #1</strong><br>
                                     Use special characters ā ī ū ḍ ṁ ṁ ṇ ṅ ñ ṭ<br><br>

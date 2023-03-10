@@ -168,16 +168,16 @@ $(document).ready(function(){
 
   <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="English") echo "checked";?> value="-en">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="Search in an, sn, mn, dn in English">Eng</a>
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net">Eng</a>
   </div>
 
    <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Thai">ไทย</a>
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations">ไทย</a>
    </div>   
      <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Russain">Rus</a>
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Russain Suttacentral.net translations">Rus</a>
   </div>
   
   <br>

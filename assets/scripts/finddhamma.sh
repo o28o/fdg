@@ -263,8 +263,7 @@ fortitle="${fortitle} +All"
 elif [[ "$@" == *"-b"* ]]; then
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $bwlocation
- --exclude-dir={$sutta,$abhi,engsearch,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} | grep -v "bw/home"
- #engsearch.html exclude file
+ --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
 }
 fileprefix=${fileprefix}-bw
 fortitle="${fortitle}"
@@ -299,7 +298,7 @@ elif [[ "$@" == *"-ru"* ]]; then
     nonmetaphorkeys="подобного|подоба"
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
 elif [[ "$@" == *"-b"* ]]; then
-    fnlang=_enpi
+    fnlang=_enbw
     pali_or_lang=/bw/
     directlink=/bw
     language="EngTBW"
@@ -468,12 +467,13 @@ function genwordsfile {
 cat $tempfilewords | pvlimit | sedexpr | awk '{print tolower($0)}' | tr -s ' '  '\n' | sort | uniq -c | awk '{print $2, $1}' > $tempfile
 
 uniqwordtotal=`cat $tempfile | pvlimit | sort | uniq | wc -l `
-#| sed 's/(//g' | sed 's/)//g'
-#cat $tempfile
-#echo cat
 
-#cat $templatefolder/Header.html $templatefolder/WordTableHeader.html | sed 's/$title/TitletoReplace/g' > $tempfilewords 
+if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
+then
 cat $templatefolder/Header.html $templatefolder/WordTableHeader.html | sed 's/$title/TitletoReplace/g' > $tempfilewords 
+else
+cat $templatefolder/Header.html $templatefolder/WordTableHeader.html | sed '/forshellscript/d' | sed 's/$title/TitletoReplace/g' > $tempfilewords 
+fi 
 
 nice -$nicevalue cat $tempfile | pvlimit | while IFS= read -r line ; do
 uniqword=`echo $line | awk '{print $1}'`
@@ -540,10 +540,6 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
     tr=`nice -$nicevalue find $searchdir -name "*${np}-*"`
 
      thrulink=`echo $tr | sed 's@.*theravada.ru@'$linkforthru'@g'`
-#if [[ "$thrulink" == "" ]]; then
-#tr=`nice -$nicevalue find $suttapath/sc-data/html_text/ru/pli -name "*${filenameblock}*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
-#thrulink="https://suttacentral.net/$filenameblock"
-#fi 
 
 if [[ $filenameblock == *"dn"* ]]
 then 
@@ -738,11 +734,18 @@ function linklist {
 #/home/a0092061/scripts/suttacentral.net/sc-data-master/html_text/ru/pli/sutta
 #${textspi} ${textsru} ${textsen}
 #`grep ':0\.' $file | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
-
+if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
+then
 cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | tohtml 
+else
+cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' |sed '/forshellscript/d' | tohtml 
+
+fi 
 
 
-uniquelist=`cat $basefile | grep -v engsearch.html | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
+
+
+uniquelist=`cat $basefile |grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home" | grep -Ev "palisearch|engsearch" | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
 
 #| grep "html:"
 textlist=$uniquelist
@@ -772,8 +775,6 @@ roottext=`nice -$nicevalue find $lookup/root -name "*${filenameblock}_*" -not -p
 fi
         if [[ "$language" == *"Pali"* ]]; then
         file=$roottext
-        
-
    # elif [[ "$language" == "Russian" ]]; then
    else
         file=$tr
@@ -982,6 +983,12 @@ echo "</tbody>
 cat $templatefolder/WordsFooter.html >> $tempfilewords
 mv ./$oldname ./$table
 
+if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
+then
+sed -i 's@$quotesLinkToReplace@'./$table'@' ./$tempfilewords
+sed -i 's@$wordLinkToReplace@'./$tempfilewords'@' ./$table
+fi 
+
 linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "${fortitle^}" | grep ">$language<" | awk '{print $1}' | tac`
 
 for i in $linenumbers
@@ -1011,7 +1018,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
+#rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

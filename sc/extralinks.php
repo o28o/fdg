@@ -26,10 +26,10 @@ if (file_exists($bwfile) ) {
 $locationrudn = $thsulocation;
 
   $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
-    [[ $bwlink != \"\" ]] && echo -n \"<a target='_blank' href=/bw/$bwlink>Bw</a>&nbsp;\"; 
-  [[ \$ruslink != \"\" ]] && 
+    [ ! -z $bwlink ] && echo -n \"<a target='_blank' href=/bw/$bwlink>Bw</a>&nbsp;\"; 
+  [ ! -z \$ruslink ] && 
   echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
-  [[ \$ruslinkdn != \"\" ]] && 
+  [ ! -z \$ruslinkdn ] && 
   echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";
   ");
   $result = str_replace(PHP_EOL, '', $output);

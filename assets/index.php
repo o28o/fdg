@@ -100,14 +100,11 @@ Search for Truth
                 </div>
     
           <?php
-      if ( $mode == "offline" ) {
-	echo		'<form method="GET" action="index.php" class="justify-content-center">';
-      } else {
+      
 			echo '<form method="GET" action=
 			"';  
 			echo htmlspecialchars($_SERVER[" PHP_SELF "]);
 			echo '"	action="" class="justify-content-center">'; 
-      }
       ?>
 		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>

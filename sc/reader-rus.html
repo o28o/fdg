@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,7 +92,8 @@
     <script type="module" src="index.js"></script>
     <script src="randPlaceholder.js"></script>
     <script>
-      randPlaceholder("ru");
+      var theLanguage = $('html').attr("lang");
+      randPlaceholder(theLanguage);
     </script>  
 </body>
 </html>

@@ -1,9 +1,9 @@
-function randPlaceholder(lang) {
+function randPlaceholder(theLanguage) {
 
-          if ( lang === "en") {
+          if ( theLanguage === "en") {
 
             tasks = ["Start with Sn56.11", "Read sn22.87", "Think about mn28", "Practice in dn22", "Dukkha defined in dn22", "Saṅkhārā in mn44", "For example sn12.2", "Practices in an4.162", "Practices in an4.163", "\"The all\" is in sn35.23"]; 
-          } else if  ( lang === "ru") {
+          } else if  ( theLanguage === "ru") {
             tasks = ["Начните с Sn56.11", "Прочтите sn22.87", "Подумайте над mn28", "Практика в dn22", "Dukkha в dn22", "Saṅkhārā в mn44", "К примеру sn12.2", "Практики в an4.162", "Практики в an4.163", "\"Всё\" в sn35.23"];
           }
 

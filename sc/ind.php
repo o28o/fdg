@@ -1,5 +1,19 @@
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+if ( preg_match('/\/ru/', $actual_link)) {
+  $htmllang = "ru";
+} else {
+    $htmllang = "en";
+    echo $htmllang;
+    }
+    ?>
+
+<!DOCTYPE html>
+<html lang="<?php echo $htmllang; ?>" >
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -94,7 +108,8 @@
     <script src="randPlaceholder.js"></script>
     <script>
     var theLanguage = $('html').attr("lang");
-      randPlaceholder("en");
+      console.log("ggg is", theLanguage);
+      randPlaceholder(theLanguage);
     </script>  
 </body>
 

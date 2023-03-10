@@ -178,13 +178,30 @@ $(document).ready(function(){
      <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Russain">Rus</a>
-    
-    
-    
   </div>
+  
+  <br>
+         <div style="max-width: 300px; " class="mt-2"> 
+        <h5>RegEx Memo</h5>
+  <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
+          <p style="text-align: left;">
+         <strong>\\bX</strong> - beginning of the word or <strong>Y\\b</strong> end<br>
+<strong>X.*Y</strong> - ant number of symbols between X and Y<br>
+<strong>X.{0,10}Y</strong> - from 0 to 10 symbols<br>
+<strong>X\\S*\\sY</strong> - next words X и Y, with variable ending of X<br>              <strong>X -exc Y</strong> - search for X, exclude Y<br>
+<strong>[aā]</strong> - multiple variants<br>           
+<strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
+<strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
+<strong>'^"mn.*X'</strong> - find X in all Majjhimma Nikaya<br>            
+<strong>dn22.*Y</strong> - find Y in DN22 only<br> 
+<strong>"X(\\S*\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
+        
+        </p>          
+             </div>    
 </div>
 
 </div>
+ 
   <!-- extra options end -->
 </form>
 
@@ -608,18 +625,24 @@ include 'scripts/multilang-search.php';
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">	
-									<strong>Tip #1</strong><br>
-								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
-								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
-								  <strong>Tip #2</strong><br>
-								   To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
-								 <br><br>
-								  
-									<strong>Tip #3</strong><br>
-								   If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
-									<strong>Tip #4</strong><br>
-								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\) they should work.<br><br>
-								</p>
+                                                    									<strong>Tip #1</strong><br>
+                                                    								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
+                                                    								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
+                                                    								  <strong>Tip #2</strong><br>
+                                                    								   To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
+                                                    								 <br><br>
+                                                    								  
+                                                    									<strong>Tip #3</strong><br>
+                                                    								   If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
+                                                    									<strong>Tip #4</strong><br>
+                                                    								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\) they should work.<br><br>
+                                                    								   
+                                                    			<strong>How "Def" option works?</strong><br>
+                                                    									With Def following search will run:<br>
+grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
+Create an issue on github or send an email, if you'll find other criteria.<br><br>								   
+                                                                                  								   
+                                                                                  								</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -688,7 +711,13 @@ include 'scripts/multilang-search.php';
                                    if your request fails due to timeout, and you can't use longer search pattern try <a href="./bg.php">Background Mode</a>. It might work.
 								   <br><br> 
 								   
-                                   
+                                                  <strong>What is Mtphr count in result table?</strong><br>
+										Matches in all text, not connected to search pattern:<br>
+										"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
+										Following words are ignored:<br>
+    "adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
+    Create an issue on github or send an email, if you'll find other criteria.
+    <br><br>                                    
 									
 									</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">

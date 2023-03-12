@@ -410,19 +410,21 @@ sed "s/я/ya/g"
 
 fn=`echo $pattern | sed 's/\*//g' | sed 's/[|-]/-/g' | sed 's/[][]//g' | sed 's/ /-/g' | sed 's/\\\//g' | sed 's@?@-question@g'|  awk '{print tolower($0)}'`
 fn=${fn}${excfn}${fileprefix}${fnlang}
+
 modifiedfn=`echo $fn | diact2normal | cyr2lat`
 
-extention=tmp
+rand=`echo $RANDOM`
+extention=tmp.$rand
 basefile=${fn}_fn.$extention
 
 #filelist
 #metaphors=${fn}_metaphors.$extention
-table=${modifiedfn}
-tempfile=${modifiedfn}.tmp
-tempfilewhistory=${modifiedfn}_hist.tmp
-tempfilewords=${modifiedfn}_words
-tempdeffile=${modifiedfn}.def.tmp
-deffile=${modifiedfn}_definitions
+table=${modifiedfn}.$rand
+tempfile=${modifiedfn}.$extention
+tempfilewhistory=${modifiedfn}_hist.$extention
+tempfilewords=${modifiedfn}_words.$rand
+tempdeffile=${modifiedfn}.def.$extention
+deffile=${modifiedfn}_definitions.$rand
 
 function checkifalreadydone {
 checkfile=`ls $modifiedfn*_[0-9]*-[0-9]*.html 2>/dev/null| grep -v word ` 
@@ -879,18 +881,6 @@ pattern=`echo $pattern | sed 's/е/[ёе]/g' | sed 's/[ṅṃ]/[ṅṁṃ]/g'`
 fi
 
 checkifalreadydone
-#echo " here ./${basefile}"
-#ls -lah /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/result/$basefile
-if [[ -s ./${basefile} ]]; then
-echo " in if ./${basefile}"
-echo "Running"
-for i in {1..20}
-do
-sleep 10
-checkifalreadydone
-done
-exit 0
-fi
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
 
@@ -950,19 +940,12 @@ titlewords="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} 
 sed -i 's/TitletoReplace/'"$title"'/g' ${table}
 sed -i 's/TitletoReplace/'"$titlewords"'/g' ${tempfilewords}
 
-#file=`echo ${table} | awk '{print $NF}' | sed 's/.html//g'`
-#mv $file.html 
-#file=`echo ${tempfilewords} | awk '{print $NF}' | sed 's/.html//g'`
-#mv $file.html ${file}_${textsqnty}-${matchqnty}-${uniqwordtotal}.html
-
-#echo "${fortitle^} $language"
-
 OKresponse
-
 
 #finalize words file 
 oldname=$tempfilewords
-tempfilewords=${tempfilewords}_${textsqnty}-${matchqnty}-${uniqwordtotal}.html
+removerand=`echo $tempfilewords| sed 's@\.'$rand'@@'`
+tempfilewords=${removerand}_${textsqnty}-${matchqnty}-${uniqwordtotal}.html
 #sed -i "s/$oldname/$tempfilewords/g" $table
 echo "</tbody>
 </table>
@@ -981,7 +964,8 @@ mv ./$oldname ./$tempfilewords
 
 #finalize quotes file 
 oldname=$table
-table=${table}_${textsqnty}-${matchqnty}.html
+removerand=`echo $table| sed 's@\.'$rand'@@'`
+table=${removerand}_${textsqnty}-${matchqnty}.html
 #sed -i "s/$oldname/$table/g" $tempfilewords
 echo "</tbody>
 </table>

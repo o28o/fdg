@@ -38,7 +38,7 @@ wafter=3
 linesafter=0
 minlength=3
 truncatelength=30
-filesizenooverwrite=2
+filesizenooverwrite=1
 maxmatchesbg=3000
 archivenumber=84
 

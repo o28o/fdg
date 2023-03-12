@@ -34,7 +34,7 @@ $.ajax({
 
     $( "#citation" ).autocomplete({
       position: { my: "left bottom", at: "left top", collision: "flip" },
-	minLength: 3,
+	minLength: 1,
 	multiple: true,
  multipleSeparator: " ",
       source: function( request, response ) {

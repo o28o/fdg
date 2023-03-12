@@ -414,7 +414,7 @@ fn=${fn}${excfn}${fileprefix}${fnlang}
 modifiedfn=`echo $fn | diact2normal | cyr2lat`
 
 rand=`echo $RANDOM`
-extention=tmp.$rand
+extention=$rand.tmp
 basefile=${fn}_fn.$extention
 
 #filelist

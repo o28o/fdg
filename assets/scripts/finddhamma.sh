@@ -1,7 +1,7 @@
 #!/bin/bash -i
 #set -x 
 #trap read debug
-export LANG=en_US.UTF-8
+export LANG=C.UTF-8
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 
@@ -424,7 +424,8 @@ tempfilewords=${modifiedfn}_words
 tempdeffile=${modifiedfn}.def.tmp
 deffile=${modifiedfn}_definitions
 
-checkfile=`ls $modifiedfn* | grep -v word`
+function checkifalreadydone {
+checkfile=`ls $modifiedfn*_[0-9]*-[0-9]*.html 2>/dev/null| grep -v word ` 
 
 if [[ -s "${checkfile}" ]] ; then 
 function md5checkwrite {
@@ -456,12 +457,10 @@ cat updatehistorytmp | tac | head -1 | awk '{print substr($0, index($0, $2))}' >
 rm updatehistorytmp
 OKresponse
 echo "<script>window.location.href=\"./result/${checkfile}\";</script>"
-
-	#[[ "$language" == *"Pali"* ]] && wordsresponse
-	#quoteresponse
 	exit 0
 fi 
 fi
+}
 
 function genwordsfile {
 cat $tempfilewords | pvlimit | sedexpr | awk '{print tolower($0)}' | tr -s ' '  '\n' | sort | uniq -c | awk '{print $2, $1}' > $tempfile
@@ -489,7 +488,6 @@ linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -V | awk '{print $1}' | aw
 
 #echo $linkswwords
 #cat ${links_and_words}  | tr ' ' '\n' |  nice -$nicevalue grep -E -i$grepgenparam "$pattern"  | sed -e 's/<[^>]*>//g' | sed 's/[".;:?,]/ /g' | sed -e 's/“/ /g' -e 's/‘/ /g'| sed 's/.*= //g' | sed 's@/legacy-suttacentral-data-master/text/pi/su@@g' | sed 's/.*>//g'| sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr '[:upper:]' '[:lower:]'  | sort | uniq > ${words}
-
 
 #cat $file | clearsed | sed 's/[.,?;:]//g' | sed 's/[—”"]/ /g'| grep -io$grepgenparam "[^ ]*$pattern[^ ]*" | sort | uniq >> ${links_and_words}
 
@@ -880,6 +878,20 @@ if [[ "$pattern" != *"["* ]] &&  [[ "$pattern" != *"]"* ]];  then
 pattern=`echo $pattern | sed 's/е/[ёе]/g' | sed 's/[ṅṃ]/[ṅṁṃ]/g'`
 fi
 
+checkifalreadydone
+#echo " here ./${basefile}"
+#ls -lah /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/result/$basefile
+if [[ -s ./${basefile} ]]; then
+echo " in if ./${basefile}"
+echo "Running"
+for i in {1..20}
+do
+sleep 10
+checkifalreadydone
+done
+exit 0
+fi
+
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
 
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
@@ -1018,7 +1030,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-#rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
+rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

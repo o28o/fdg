@@ -38,8 +38,8 @@ wafter=3
 linesafter=0
 minlength=3
 truncatelength=30
-filesizenooverwrite=1
-maxmatchesbg=3000
+filesizenooverwrite=100000000000
+maxmatchesbg=4000
 archivenumber=84
 
 elif [[ "`uname -a`" == *"rym.from.sh"* ]]; then
@@ -75,8 +75,8 @@ wafter=3
 linesafter=0
 minlength=3
 truncatelength=30
-filesizenooverwrite=10000000000
-maxmatchesbg=1900
+filesizenooverwrite=1
+maxmatchesbg=4000
 archivenumber=31
 
 elif [[ "`uname -a`" == *"Linux"* ]]; then 
@@ -103,7 +103,7 @@ wafter=3
 linesafter=0
 minlength=2
 truncatelength=30
-filesizenooverwrite=800000000000
+filesizenooverwrite=1000000000000
 maxmatchesbg=300000
 archivenumber=280
 archivenumber=91
@@ -127,7 +127,7 @@ function pvlimit {
 pv -L 1m -q
 }
 function clearargs {
-sed -e 's/-pli //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg //g' | sed 's/ -exc.*//g' | sed 's/-la [0-9]* //g' | sed 's/-def //g' |  sed 's/-b //g'
+sed -e 's/-pli //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg //g' | sed 's/ -exc.*//g' | sed 's/-la [0-9]* //g' | sed 's/-def //g' |  sed 's/-b //g' | sed 's/-onl //g'
 }
 
 function removefilenames {

@@ -154,15 +154,16 @@ if [[ "$@" == *"-h"* ]]; then
 	-all - include all Khuddaka Nikaya books <br>
     -vin - to search in vinaya texts only <br>
     -abhi - to search in abhidhamma texts only <br>
+    X -exc Y - search X exclude Y <br>
+    -onl \"(X|Y|...)\"- find texts that contain all patterns only
     -ru - to search in Russian <br>
     -en - to search in English <br>
     -th - to search in Thai <br>
     -b - to search in tbw materials <br>
-    -nbg - no background <br>
     -oru - output messages in Russian<br>"
     exit 0
 fi
-
+#-nbg - no background <br>
 if [[ "$@" == *"-la"* ]]; then
 linesafter=`echo "$@" | awk -F'-la ' '{print $2 }' | awk '{print $1}'` 
 fi
@@ -176,7 +177,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-b" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] 
 then   
 #emptypattern
    exit 3
@@ -267,6 +268,24 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $bwlocation
 }
 fileprefix=${fileprefix}-bw
 fortitle="${fortitle}"
+elif [[ "$@" == *"-onl"* ]]; then
+xxx=onlmode
+function grepbasefile {
+tmponl=tmponl.$rand
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
+
+splitpattern=`echo $pattern | sed 's@|@ @g' | sed 's@)@ @g' | sed 's@(@ @g'`
+splitarraylen=`echo $splitpattern| wc -w`
+onltextindex=`for i in $splitpattern
+do
+grep -Eir $i $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 
+done | sort -V | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @|@g'`
+grep -E "($onltextindex)" $tmponl
+
+}
+fileprefix=${fileprefix}-onl
+fortitle="${fortitle} Matching Mode"
+
 else 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} 
@@ -566,7 +585,6 @@ forbwranges=$suttanumber
 else 
 suttanumber=$filenameblock
 fi 
-    
 if [[ "$roottext" == *"/dhp/"* ]] ||  [[ "$roottext" == *"/iti/"* ]] ||  [[ "$roottext" == *"/ja/"* ]] 
         then 
         roottitle=`nice -$nicevalue grep -m1 ':0\.4' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
@@ -602,11 +620,9 @@ elif [[ "$translation" == *"/dhp/"* ]] ||  [[ "$translation" == *"/iti/"* ]]
 elif [[ "$translation" == *"/pli-tv-b"* ]] 
 then
 trntitle=`nice -$nicevalue grep -E -m3 ':0\.[3-5].*rule' $translation | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
-
         else
         trntitle=`nice -$nicevalue grep -m1 ':0\.3' $translation | clearsed | awk '{print substr($0, index($0, $2))}' | sort -V | uniq | xargs `
         fi 
-
 translatorsname=`echo $translation | awk -F'/en/' '{print $2}' | awk -F'/' '{print $1}'`
 
 if [[ "$fortitle" == *"Suttanta"* ]]
@@ -881,7 +897,7 @@ pattern=`echo $pattern | sed 's/е/[ёе]/g' | sed 's/[ṅṃ]/[ṅṁṃ]/g'`
 fi
 
 checkifalreadydone
-
+echo $xxx
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
 
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
@@ -1014,7 +1030,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory > /dev/null 2>&1
+rm $basefile $tempfile $tempfilewhistory *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

@@ -182,10 +182,12 @@ $(document).ready(function(){
         <h5>RegEx Memo</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
-         <strong>\\bX</strong> - beginning of the word or <strong>Y\\b</strong> end<br>
+       <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br>
+       <strong>X -exc Y</strong> - search for X, exclude Y<br>
+       <strong>\\bX</strong> - beginning of the word or <strong>Y\\b</strong> end<br>
 <strong>X.*Y</strong> - ant number of symbols between X and Y<br>
 <strong>X.{0,10}Y</strong> - from 0 to 10 symbols<br>
-<strong>X\\S*\\sY</strong> - next words X и Y, with variable ending of X<br>              <strong>X -exc Y</strong> - search for X, exclude Y<br>
+<strong>X\\S*\\sY</strong> - next words X и Y, with variable ending of X<br>      
 <strong>[aā]</strong> - multiple variants<br>           
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
 <strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          

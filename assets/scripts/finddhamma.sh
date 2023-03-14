@@ -278,8 +278,8 @@ splitpattern=`echo $pattern | sed 's@|@ @g' | sed 's@)@ @g' | sed 's@(@ @g'`
 splitarraylen=`echo $splitpattern| wc -w`
 onltextindex=`for i in $splitpattern
 do
-grep -Eir $i $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 
-done | sort -V | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @|@g'`
+grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 
+done | sort -V | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @:|@g'`
 grep -E "($onltextindex)" $tmponl
 
 }
@@ -360,6 +360,8 @@ fi
 
 if [[ "$@" == *"-exc"* ]]
 then
+
+fortitle="${fortitle}"
 excludepattern="`echo $@ | sed 's/.*-exc //g'`"
 addtotitleifexclude=" exc. ${excludepattern,,}"
 addtoresponseexclude=" $excluderesponse $excludepattern"
@@ -1010,7 +1012,7 @@ done
 
 if [[ $excludepattern != "" ]]
 then
-pattern="$pattern exc. ${excludepattern,,}"
+userpattern="$pattern exc. ${excludepattern,,}"
 fi 
 
 echo -n "<!-- begin $userpattern --> 

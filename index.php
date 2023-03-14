@@ -151,7 +151,7 @@ $(document).ready(function(){
           <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y or "X|Y" including quotes. Finds texts containing only both matches for X, Y.
-  Without this option even one match will be in results'>Onl</a>
+  Without this option texit with even one match will be in results'>Onl</a>
   
   </div>
     

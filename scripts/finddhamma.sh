@@ -267,17 +267,12 @@ elif [[ "$@" == *"-onl"* ]]; then
 function grepbasefile {
 tmponl=tmponl.$rand
 
-if  [[ "$pattern" == *"|"* ]]; then
-splitpattern=`echo $pattern | sed -e 's@^@"@g' -e 's@$@"@' -e 's@|@" "@g'`
-else 
-splitpattern=`echo $pattern`
+splitpattern=`echo $pattern | sed 's@|@ @g'`
 pattern=`echo $pattern | sed 's@ @|@g' | sed 's@^@(@g' | sed 's@$@)@g'`
-fi
-
 splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
 
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
-pattern=`echo $pattern | sed 's@ @|@g'`
+
 onltextindex=`for i in $splitpattern
 do
 grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 
@@ -902,7 +897,7 @@ fi
 checkifalreadydone
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
-echo "pat=$pattern spl=$splitpattern len=$splitarraylen"
+#echo "pat=$pattern spl=$splitpattern len=$splitarraylen"
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 if [[ "$@" == *"-def"* ]] 
 then 

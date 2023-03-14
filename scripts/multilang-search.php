@@ -1,5 +1,5 @@
 <?php
-include_once('../config/config.php');
+include_once('./config/config.php');
 
 if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";

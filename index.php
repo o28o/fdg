@@ -229,9 +229,9 @@ include 'scripts/multilang-search.php';
             <div class="container text-center">
       <?php
       if ( $mode == "offline" ) {
-      include 'assets/menus/horizontalMenuEnOffline.php'; 
+      include 'assets/common/horizontalMenuEnOffline.php'; 
       } else {
-      include 'assets/menus/horizontalMenuEn.php'; 
+      include 'assets/common/horizontalMenuEn.php'; 
       }
       ?>
 

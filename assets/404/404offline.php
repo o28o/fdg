@@ -47,7 +47,7 @@
             <div class="container text-center">
 
      <?php
-      include 'menus/horizontalMenuEnOffline.php'; 
+      include '../../assets/common/horizontalMenuEnOffline.php'; 
       ?>   
                 
             </div>

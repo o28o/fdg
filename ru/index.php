@@ -274,9 +274,9 @@ include 'scripts/multilang-search.php';
     
       <?php
       if ( $mode == "offline" ) {
-      include 'assets/menus/horizontalMenuRuOffline.php'; 
+      include 'assets/common/horizontalMenuRuOffline.php'; 
       } else {
-      include 'assets/menus/horizontalMenuRu.php'; 
+      include 'assets/common/horizontalMenuRu.php'; 
       }
       ?>
 

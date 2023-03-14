@@ -10,14 +10,9 @@ export LANG=C.UTF-8
 # I can safely reach the far shore.
 ########## sn35.238 ##########
 
-#if [[ "`uname -a`" == *"rym.from.sh"* ]]; then
-#source /home/a0092061/domains/find.dhamma.gift/public_html/config/script_config.sh --source-only
-#elif [[ "`uname -a`" == *"Android"* ]]; then 
 source ./config/script_config.sh --source-only
-#elif [[ "`uname -a`" == *"CYGWIN"* ]]; then
-#source=/home/mobaxterm/scripts/script_config_moba.sh
-#fi
 
+mkdir $output 2>/dev/null
 cd $output 
 dateforhist=`date +%d-%m-%Y`
 if [[ "$@" == *"-oru"* ]]; then

@@ -138,15 +138,9 @@ input.addEventListener("keypress", function(event) {
 
   <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="-pli") echo "checked";?> value="-pli">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск по-умолчанию. По Суттам Ангутара Никаи (an), Саньютта Никаи (sn), Маджжхима Никаи (mn), Дигха Никаи (dn) + Удана (ud) из Кхуддака Никаи (kn)">Pāḷi</a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск по-умолчанию. По Суттам an, sn, dn, mn. Ангутара Никаи, Саньютта Никаи, Маджжхима Никаи, Дигха Никаи">Pāḷi</a>
   </div>
 
-  
-      <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-kn " >
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title="+ поиск на Пали в 6 книгах Кхуддака Никаи: Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха">+КН</a>
-  </div>
-  
   
     <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-def ") echo "checked";?> value="-def">
@@ -159,6 +153,11 @@ input.addEventListener("keypress", function(event) {
   <a data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск в Винае на Пали">Вин</a>
   </div>
   
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title=' Формат вкл. кавычки: "X|Y" только тексты содержащие все совпадения X, Y. Без этой опции будут собраны все тексты которые содержат хотя бы одно совпадение'>Все</a>
+  
+  </div>
     <!-- extra options -->
   <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings"><i class="fa-solid fa-gear"></i>
   </a>
@@ -172,6 +171,11 @@ $(document).ready(function(){
 });
 </script>
 
+  
+        <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-kn " >
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="+ поиск на Пали в 6 книгах Кхуддака Никаи: ud, dhp, iti, snp, thag, thig. Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха">+КН</a>
+  </div>
   
 
     <div class="form-check form-check-inline">
@@ -188,7 +192,7 @@ $(document).ready(function(){
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
   <a data-bs-toggle="tooltip" data-bs-placement="top" title="Опционально. Поиск по русским переводам АН, СН, МН, ДН с SuttaCentral.net">Рус</a>
   </div>
-  
+    <br>
     <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="English") echo "checked";?> value="-en">
   <a data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато">Eng</a>
@@ -199,19 +203,18 @@ $(document).ready(function(){
         <h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
-     <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br>
+     <strong>-onl "X|Y|..."</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br>
      <strong>X -exc Y</strong> - искать X, исключить Y<br>
          <strong>\\bX</strong> - начало или <strong>Y\\b</strong> конец слова<br>
 <strong>X.*Y</strong> - любое количество символов между X и Y<br>
 <strong>X.{0,10}Y</strong> - от 0 до 10 символов<br>
-<strong>X\\S*\\sY</strong> - рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным<br>                                        
+<strong>X\\S*\\sY</strong> - рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным<br>     
+<strong>"X(\\S*\\s){0,3}Y"</strong> - расстояние в 0 или 2 слова между X и Y с любым окончанием X<br> 
 <strong>[aā]</strong> - искать несколько вариантов<br>           
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - искать все метафоры в Самьютте 56<br> 
-<strong>"(a|b|c)"</strong> - искать несколько отдельных слов одновременно<br>                          
+<strong>"a|b|c"</strong> - искать несколько отдельных слов одновременно<br>
 <strong>'^"mn.*X'</strong> - искать X во всей Мадджхимма Никае<br>            
 <strong>dn22.*Y</strong> - искать Y в одной Сутте ДН22<br> 
-<strong>"X(\\S*\\s){0,3}Y"</strong> - расстояние в 0 или 2 слова между X и Y с любым окончанием X<br> 
-        
         </p>          
              </div>                     
 <!--      <div class="form-check abbr form-check-inline">

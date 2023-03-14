@@ -45,7 +45,6 @@ function emptypattern {
 
 function OKresponse {
   echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language - "
-#echo "$language - "
 }
 
 function Erresponse {
@@ -55,7 +54,6 @@ function Erresponse {
 function Clarification {
      echo "в SN, DN, MN и AN. Попробуйте другие <br>
      настройки +KN, Vin и др."
-     #echo "$language - no<br>"
 }
 
 function wordsresponse {
@@ -93,7 +91,6 @@ function emptypattern {
 
 function OKresponse {
 echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty in $fortitle $language - "
-#echo "$language - "
 }
 
 function Erresponse {
@@ -230,12 +227,11 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pal
 }
 fileprefix=${fileprefix}-kn
 fortitle="${fortitle} +KN"
-#| nice -$nicevalue grep -E -v "snp|thag|thig|dhp|iti|ud"
 elif [[ "$@" == *"-def"* ]]
 then
 fileprefix=${fileprefix}-definition
 fortitle="Definition ${fortitle}"
-#echo $pattern | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's/[aoā]$//g'
+
 defpattern="`echo $pattern | sed -E 's/([aoā]|aṁ)$//g'`"
 pattern="$defpattern" 
 
@@ -247,8 +243,6 @@ nice -$nicevalue grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|A
 function grepbasefileExtended {
 nice -$nicevalue grep -E -A1 -Eir "(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${defpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${defpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} 
 }
-
-#\bKatha.*${defpattern}|\bIdaṁ .*${defpattern}{0,6}\b
 
 elif [[ "$@" == *"-all"* ]]; then
 function grepbasefile {
@@ -372,7 +366,6 @@ function grepexclude {
 pvlimit 
 }
 fi
-#echo exc=$excfn
 
 function diact2normal {
 sed "s/ā/aa/g" |
@@ -424,7 +417,6 @@ sed "s/я/ya/g"
 }
 
 #link and filename
-
 fn=`echo $pattern | sed 's/\*//g' | sed 's/[|-]/-/g' | sed 's/[][]//g' | sed 's/ /-/g' | sed 's/\\\//g' | sed 's@?@-question@g'|  awk '{print tolower($0)}'`
 fn=${fn}${excfn}${fileprefix}${fnlang}
 
@@ -505,11 +497,6 @@ fi
 
 linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -V | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq | awk -F'_' '{print "<a target=_blank href=\"/sc/?q="$1"&lang=pli\">"$1"</a>"}'| sort -V | uniq | xargs`
 
-#echo $linkswwords
-#cat ${links_and_words}  | tr ' ' '\n' |  nice -$nicevalue grep -E -i$grepgenparam "$pattern"  | sed -e 's/<[^>]*>//g' | sed 's/[".;:?,]/ /g' | sed -e 's/“/ /g' -e 's/‘/ /g'| sed 's/.*= //g' | sed 's@/legacy-suttacentral-data-master/text/pi/su@@g' | sed 's/.*>//g'| sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr '[:upper:]' '[:lower:]'  | sort | uniq > ${words}
-
-#cat $file | clearsed | sed 's/[.,?;:]//g' | sed 's/[—”"]/ /g'| grep -io$grepgenparam "[^ ]*$pattern[^ ]*" | sort | uniq >> ${links_and_words}
-
 echo "<tr>
 <td class=\"longword\">`echo $uniqword | highlightpattern`</td>
 <td>$linkscount</td>   
@@ -535,9 +522,6 @@ ${top}"`
 grepvar=
 
 function linklist {
-#echo -e "Content-Type: text/html\n\n"
-#echo $@
-
 cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | tohtml 
 
 textlist=`nice -$nicevalue  cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -V | uniq`
@@ -575,7 +559,6 @@ elif [[ "$language" == "English" ]]; then
         file=$translation
 fi 
    
-  #if [[ $filenameblock == *"-"* ]]
 if echo $filenameblock | grep -E "(sn|an)[0-9]{0,2}.[0-9]{0,3}-[0-9]{0,3}" >/dev/null || echo $filenameblock | grep -E "dhp[0-9]{0,3}-[0-9]{0,3}" >/dev/null
 then 
 suttanumber=`nice -$nicevalue grep -E -Ei $filenameblock $basefile | awk '{print $2}' | awk -F':' '{print $1}' | sort | uniq `
@@ -607,7 +590,8 @@ samyuttaname=`grep -m1 \`echo $suttanumber | awk -F'.' '{print $1}'\` $sntoccsv 
 else 
 roottitle=`nice -$nicevalue grep ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
 fi 
-#" "substr($2, 1, length($2)-4)
+#echo -e "Content-Type: text/html\n\n"
+#echo $@
 
 if [[ "$translation" == *"/dn/"* ]] || [[ "$translation" == *"/mn/"* ]] || [[ "$translation" == *"/ud/"* ]] 
         then 
@@ -640,35 +624,13 @@ forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
   linken=`echo $filenameblock |  awk '{print "'${urllinkbw}$forbwlink/$forbwranges'.html"}' `
   else
   linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${urllinkenend}'"}'`
-  #${translatorsname}
   fi 
-
-#if [[ $mode == "offline" ]]
-#then 
-#else #not offline #online
-#linken=`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/en/'$translatorsname'?layout=linebyline"}' `
-#linkpli=`echo $filenameblock |  awk '{print "https://find.dhamma.gift/sc/?q="$0"&lang=pli"}' `
-#fi
 
 count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file | wc -l ` 
 echo $count >> $tempfile
-#Russian text 
-#link ru 
-#translatorsname=`echo $tr | awk -F'/ru/' '{print $2}' | awk -F'/' '{if ($4 ~ /html/ || $4 ~ /[0-9]/ || $NF > 3 ) print "sv"; else print $4}'`
-#echo -e "`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/ru/'$translatorsname'"}' ` " | tee -a ${quotes} ${links_and_words}  ${metaphors} #>/dev/null
-#/home/a0092061/scripts/suttacentral.net/sc-data-master/html_text/ru/pli/sutta
-#${textspi} ${textsru} ${textsen}
-#`grep ':0\.' $file | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
-
 
 word=`getwords | grepexclude | removeindex | clearsed | sedexpr | awk '{print tolower($0)}' | highlightpattern | sort | uniq | xargs` 
 indexlist=`nice -$nicevalue grep -E -i "${suttanumber}:" $basefile | awk '{print $2}' | sort -V | uniq`
-#indexlist=$(for i in $indexlist
-#do
-#nice -$nicevalue grep -E -A${linesafter} -iE "${i}(:|[^0-9]|$)" $roottext | grep -v "^--$" | awk '{print $1}' | clearsed | sedexpr | sort -V | uniq
-#done)
-
-#metaphorindexlist=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -E -i "$metaphorkeys" | nice -$nicevalue grep -E -vE "$nonmetaphorkeys" | awk '{print $1}'` 
 
 metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
 if [[ $metaphorcount == "" ]]
@@ -690,16 +652,12 @@ echo "<tr>
   `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"` 
 <a target=\"_blank\" href="$linken">Eng</a> 
 </td>" | tohtml 
-
-#quote part `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"` <a target=\"_blank\" href="$linkpli">Pāḷi</a> 
 echo "<td><p>" | tohtml 
 
 for i in $indexlist
 do
-
 		for f in $roottext $translation #$variant
         do     
-        #echo rt=$roottext
 		quote=`nice -$nicevalue grep -E -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
       if [[ "$quote" != "" ]] &&  [[ "$@" == *"-ply"* ]] 
 then
@@ -712,15 +670,12 @@ fi
 done
 echo '<br class="styled">'
 done | tohtml 
-
-#<!-- <td><a target=\"_blank\" href=\"https://voice.suttacentral.net/scv/index.html?#/sutta?search=${filenameblock}\">mp3</a></td> -->
 echo "</p></td>
 </tr>" | tohtml
 
 done
 matchqnty=`awk '{sum+=$1;} END{print sum;}' $tempfile`
 
-#Sibbin 999 matches in 444 texts of Pali Suttas
 }
 #e g for Russian language
 elif [[ "$type" == html ]]; then
@@ -738,16 +693,6 @@ ${table}"`
 grepvar=l
 
 function linklist {
-#echo -e "Content-Type: text/html\n\n"
-#echo $@
-
-#Russian text 
-#link ru 
-#translatorsname=`echo $tr | awk -F'/ru/' '{print $2}' | awk -F'/' '{if ($4 ~ /html/ || $4 ~ /[0-9]/ || $NF > 3 ) print "sv"; else print $4}'`
-#echo -e "`echo $filenameblock |  awk '{print "https://suttacentral.net/"$0"/ru/'$translatorsname'"}' ` " | tee -a ${quotes} ${links_and_words}  ${metaphors} #>/dev/null
-#/home/a0092061/scripts/suttacentral.net/sc-data-master/html_text/ru/pli/sutta
-#${textspi} ${textsru} ${textsen}
-#`grep ':0\.' $file | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
 then
 cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | tohtml 
@@ -756,22 +701,17 @@ cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/
 
 fi 
 
-
-
-
 uniquelist=`cat $basefile |grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home" | grep -Ev "palisearch|engsearch" | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
 
-#| grep "html:"
+
 textlist=$uniquelist
-#echo $uniquelist | tohtml
-#edit me edn
     for i in $uniquelist
 do
 
 filenameblock=`echo $i |  sed 's/.html//g' | sort -V | uniq `
 
 file=`grep -m1 "${i}" $basefile `
-   # count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file | wc -l` 
+
 tr=$file
 
     suttanumber="$filenameblock"
@@ -842,8 +782,6 @@ echo $count >> $tempfile
 word=`getwords | grepexclude | xargs | clearsed | sedexpr | highlightpattern`
 indexlist=`nice -$nicevalue grep -E -i $filenameblock $basefile | awk '{print $2}'`
 
-#metaphorindexlist=`cat $file | pvlimit | clearsed | nice -$nicevalue grep -E -i "$metaphorkeys" | nice -$nicevalue grep -E -vE "$nonmetaphorkeys" | awk '{print $1}'` 
-
 metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
 if [[ $metaphorcount == "" ]]
 then
@@ -853,9 +791,6 @@ sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Ev
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 fi
 
-
-
-#quote=`nice -$nicevalue grep -E -ih "${pattern}" $file | clearsed | highlightpattern `
 echo "<tr>
 <td><a target=\"_blank\" href="$linkgeneral">$suttanumber</a></td>
 <td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern`</strong>`echo "${suttatitle}" | highlightpattern ` </td>
@@ -870,8 +805,7 @@ nice -$nicevalue grep -E -A${linesafter} -ih "${pattern}" $file | grep -v "^--$"
 echo "$line"
 echo '<br class="styled">'
 done | tohtml
-#<a target=\"_blank\" href="$linkgeneral">Pāḷi</a>&nbsp;
-#<!-- <td><a target=\"_blank\" href=\"https://voice.suttacentral.net/scv/index.html?#/sutta?search=${filenameblock}\">mp3</a></td> -->
+
 echo "</td>
 </tr>" | tohtml
 
@@ -897,7 +831,7 @@ fi
 checkifalreadydone
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
-#echo "pat=$pattern spl=$splitpattern len=$splitarraylen"
+
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 if [[ "$@" == *"-def"* ]] 
 then 
@@ -908,7 +842,6 @@ if [[ "$@" == *"-def"* ]] && (( $texts <= 6 ))
 then 
 grepbasefileExtended | grep -v "^--$" | grepexclude | clearsed | sort -V >> $basefile
 fi
-#echo -n "`wc -l $basefile | awk '{print $1}'` "
 
 linescount=`wc -l $basefile | awk '{print $1}'`
 if [ ! -s $basefile ]
@@ -918,10 +851,6 @@ pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 	Erresponse
 	#Clarification
      rm $basefile
-#     if [[ $language != "English" ]]
- #    then
-#/home/a0092061/domains/find.dhamma.gift/public_html/scripts/finddhamma.sh -en "$@"
-#fi
      exit 1
 elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then  
 bgswitch
@@ -960,7 +889,7 @@ OKresponse
 oldname=$tempfilewords
 removerand=`echo $tempfilewords| sed 's@\.'$rand'@@'`
 tempfilewords=${removerand}_${textsqnty}-${matchqnty}-${uniqwordtotal}.html
-#sed -i "s/$oldname/$tempfilewords/g" $table
+
 echo "</tbody>
 </table>
 <a href='/' id='back'>Main</a>&nbsp;
@@ -980,7 +909,7 @@ mv ./$oldname ./$tempfilewords
 oldname=$table
 removerand=`echo $table| sed 's@\.'$rand'@@'`
 table=${removerand}_${textsqnty}-${matchqnty}.html
-#sed -i "s/$oldname/$table/g" $tempfilewords
+
 echo "</tbody>
 </table>
 <a href='/' id='back'>Main</a>&nbsp;

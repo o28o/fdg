@@ -144,7 +144,7 @@ input.addEventListener("keypress", function(event) {
   
     <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-def ") echo "checked";?> value="-def">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами">Опр</a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='Поиск определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. См. в "для Продвинутых"'>Опр</a>
   </div>
 
   <div class="form-check form-check-inline">
@@ -155,7 +155,7 @@ input.addEventListener("keypress", function(event) {
   
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... или "X|Y|..." включая кавычки. Найдет только тексты содержащие оба и более совпадений X, Y, ... Без этой опции будут собраны тексты которые содержат хотя бы одно совпадение'>Все</a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... или "X|Y|..." включая кавычки. Найдет только тексты содержащие оба и более совпадений X, Y, ... Без этой опции будут собраны тексты которые содержат хотя бы одно совпадение'>Тлк</a>
   
   </div>
     <!-- extra options -->

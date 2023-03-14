@@ -45,7 +45,7 @@
             <div class="container text-center">
               
       <?php
-      include '/assets/common/horizontalMenuRu.php'; 
+      include '../../assets/common/horizontalMenuRu.php'; 
       ?>
 
             </div>

@@ -170,7 +170,7 @@ pattern=`echo "$pattern"| clearargs `
 fi
 
 userpattern="$pattern"
-patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g'`"
+patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g'`"
 
 if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] 
 then   
@@ -268,7 +268,7 @@ function grepbasefile {
 tmponl=tmponl.$rand
 
 if  [[ "$pattern" == *"|"* ]]; then
-splitpattern=`echo $pattern | sed -e 's@^@"@g' -e 's@$@"@' -e 's@|@" "@g' | sed 's@)@ @g' | sed 's@(@ @g'`
+splitpattern=`echo $pattern | sed -e 's@^@"@g' -e 's@$@"@' -e 's@|@" "@g'`
 else 
 splitpattern=`echo $pattern`
 pattern=`echo $pattern | sed 's@ @|@g' | sed 's@^@(@g' | sed 's@$@)@g'`
@@ -277,13 +277,12 @@ fi
 splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
 
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
-
+pattern=`echo $pattern | sed 's@ @|@g'`
 onltextindex=`for i in $splitpattern
 do
 grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 
 done | sort -V | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @:|@g'`
-grep -E "($onltextindex)" $tmponl
-
+grep -E "($onltextindex)" $tmponl 
 }
 fileprefix=${fileprefix}-onl
 fortitle="${fortitle} Matching Mode"
@@ -901,9 +900,9 @@ pattern=`echo $pattern | sed 's/е/[ёе]/g' | sed 's/[ṅṃ]/[ṅṁṃ]/g'`
 fi
 
 checkifalreadydone
-echo $xxx
-grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
 
+grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
+echo "pat=$pattern spl=$splitpattern len=$splitarraylen"
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 if [[ "$@" == *"-def"* ]] 
 then 

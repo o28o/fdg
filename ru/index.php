@@ -155,7 +155,7 @@ input.addEventListener("keypress", function(event) {
   
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title=' Формат вкл. кавычки: "X|Y" только тексты содержащие все совпадения X, Y. Без этой опции будут собраны все тексты которые содержат хотя бы одно совпадение'>Все</a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y только тексты содержащие все совпадения X, Y. Без этой опции будут собраны все тексты которые содержат хотя бы одно совпадение'>Все</a>
   
   </div>
     <!-- extra options -->

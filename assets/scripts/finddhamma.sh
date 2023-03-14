@@ -150,7 +150,7 @@ if [[ "$@" == *"-h"* ]]; then
     -vin - to search in vinaya texts only <br>
     -abhi - to search in abhidhamma texts only <br>
     X -exc Y - search X exclude Y <br>
-    -onl \"(X|Y|...)\"- find texts that contain all patterns only
+    -onl \"X|Y|...\"- find texts that contain all patterns only
     -ru - to search in Russian <br>
     -en - to search in English <br>
     -th - to search in Thai <br>
@@ -264,13 +264,20 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $bwlocation
 fileprefix=${fileprefix}-bw
 fortitle="${fortitle}"
 elif [[ "$@" == *"-onl"* ]]; then
-xxx=onlmode
 function grepbasefile {
 tmponl=tmponl.$rand
+
+if  [[ "$pattern" == *"|"* ]]; then
+splitpattern=`echo $pattern | sed -e 's@^@"@g' -e 's@$@"@' -e 's@|@" "@g' | sed 's@)@ @g' | sed 's@(@ @g'`
+else 
+splitpattern=`echo $pattern`
+pattern=`echo $pattern | sed 's@ @|@g' | sed 's@^@(@g' | sed 's@$@)@g'`
+fi
+
+splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
+
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
 
-splitpattern=`echo $pattern | sed 's@|@ @g' | sed 's@)@ @g' | sed 's@(@ @g'`
-splitarraylen=`echo $splitpattern| wc -w`
 onltextindex=`for i in $splitpattern
 do
 grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 

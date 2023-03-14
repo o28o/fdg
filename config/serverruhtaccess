@@ -1,6 +1,4 @@
 RewriteEngine on
-Redirect 301 /ru.php /ru/
- 
 
 RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
 RewriteRule ^/$ /ru/ [L,R=302]
@@ -19,5 +17,4 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 
 RewriteCond %{HTTP_USER_AGENT} (bingbot|AhrefsBot|SemrushBot|PetalBot|DataForSeoBot|MegaIndex.ru|Barkrowler|SeekportBot|SemrushBot|Barkrowler) [NC]
 RewriteRule .* - [F]
-ErrorDocument 404 /assets/404/404.php
-
+ErrorDocument 404 /assets/404/404ru.php

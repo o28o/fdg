@@ -49,8 +49,8 @@ $locationru = $basedir. '/theravada.ru/Teaching/Canon/Suttanta/Texts';
 $locationTocThsu = $basedir. "/assets";
 
 //converter.php
-$adapterscriptlocation = '/home/a0092061/domains/find.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/find.dhamma.gift/public_html/scripts/aksa.py';
-
+//not used currently. php curl for offline
+$adapterscriptlocation = '/home/a0092061/domains/find.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/find.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
 
 //api-emulator
 $scroottextlocation = '/home/a0092061/data/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms';

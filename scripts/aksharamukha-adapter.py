@@ -1,7 +1,6 @@
 import sys
 from aksharamukha import transliterate
 
-
 argsList = sys.argv
 del argsList[0]
 thaiInp = ' '.join(argsList)

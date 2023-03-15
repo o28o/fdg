@@ -324,7 +324,7 @@ include 'scripts/multilang-search.php';
                 <li>Все сутты, где упомянут <a href="/assets/demo/sariputt_suttanta_ru_168-1055.html">Сарипутта</a> на Русском</li>
                <li>Все варианты словосочетания <a href="/assets/demo/pa.ticcasamupp_suttanta_pali_33-112.html">paṭiccasamuppado</a> на Пали со ссылками на Русские переводы</li>
                <li>Все сутты где, упоминается об <a href="/assets/demo/okean_suttanta_ru_82-259.html">океане</a> на Русском</li>
-               <li>Все сутты с <a href=./assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html.html>метафорами, примерами и сравнениями</a> на Пали со ссылками на Русские переводы. Запрос: "seyyathāpi|adhivacan|ūpama|opama" </li>   
+               <li>Все сутты с <a href=/assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html>метафорами, примерами и сравнениями</a> на Пали со ссылками на Русские переводы. Запрос: "seyyathāpi|adhivacan|ūpama|opama" </li>   
               </ol>    
 </div>
 

@@ -11,7 +11,7 @@
 ########## an9.25 ##############
 
 
-export LANG=C.UTF-8
+#export LANG=C.UTF-8
 
 
 if [[ "`uname -a`" == *"Android"* ]]; then 

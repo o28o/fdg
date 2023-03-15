@@ -203,7 +203,7 @@ $(document).ready(function(){
         <h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
-     <strong>-onl "X|Y|..."</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br>
+     <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br>
      <strong>X -exc Y</strong> - искать X, исключить Y<br>
          <strong>\\bX</strong> - начало или <strong>Y\\b</strong> конец слова<br>
 <strong>X.*Y</strong> - любое количество символов между X и Y<br>
@@ -212,7 +212,7 @@ $(document).ready(function(){
 <strong>"X(\\S*\\s){0,3}Y"</strong> - расстояние в 0 или 2 слова между X и Y с любым окончанием X<br> 
 <strong>[aā]</strong> - искать несколько вариантов<br>           
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - искать все метафоры в Самьютте 56<br> 
-<strong>"a|b|c"</strong> - искать несколько отдельных слов одновременно<br>
+<strong>"(a|b|c)"</strong> - искать несколько отдельных слов одновременно<br>
 <strong>'^"mn.*X'</strong> - искать X во всей Мадджхимма Никае<br>            
 <strong>dn22.*Y</strong> - искать Y в одной Сутте ДН22<br> 
         </p>          

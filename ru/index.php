@@ -319,12 +319,12 @@ include 'scripts/multilang-search.php';
              
               <li>Сутта, в которой Будда говорит, что не делает <a href="/assets/demo/dvayagaaminii_suttanta_pali_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            
-                <li>Все сутты со словом <a href="/assets/demo/vos'merichn_suttanta_ru_140-274.html">Восьмеричный</a> Благородный Путь на Русском</li>
-                <li>Все сутты со словом <a href="/assets/demo/nravstvennost'_suttanta_ru_94-264.html">нравственность</a> на Русском</li>
-                <li>Все сутты, где упомянут <a href="/assets/demo/sariputt_suttanta_ru_176-1082.html">Сарипутта</a> на Русском</li>
-               <li>Все варианты словосочетания <a href="/assets/demo/pat.iccasamupp_suttanta_pali_36-115.html">paṭiccasamuppado</a> на Пали со ссылками на Русские переводы</li>
-               <li>Все сутты где, упоминается об <a href="/assets/demo/okean_suttanta_ru_85-298.html">океане</a> на Русском</li>
-               <li>Все сутты с <a href=./assets/demo/seyyathaapi-adhivacan-uupama-opama_suttanta_pali_627-2101.html>метафорами, примерами и сравнениями</a> на Пали со ссылками на Русские переводы. Запрос: "seyyathāpi|adhivacan|ūpama|opama" </li>   
+                <li>Все сутты со словом <a href="/assets/demo/vosmerichn_suttanta_ru_139-275.html">Восьмеричный</a> Благородный Путь на Русском</li>
+                <li>Все сутты со словом <a href="/assets/demo/nravstvennost_suttanta_ru_92-260.html">нравственность</a> на Русском</li>
+                <li>Все сутты, где упомянут <a href="/assets/demo/sariputt_suttanta_ru_168-1055.html">Сарипутта</a> на Русском</li>
+               <li>Все варианты словосочетания <a href="/assets/demo/pa.ticcasamupp_suttanta_pali_33-112.html">paṭiccasamuppado</a> на Пали со ссылками на Русские переводы</li>
+               <li>Все сутты где, упоминается об <a href="/assets/demo/okean_suttanta_ru_82-259.html">океане</a> на Русском</li>
+               <li>Все сутты с <a href=./assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html.html>метафорами, примерами и сравнениями</a> на Пали со ссылками на Русские переводы. Запрос: "seyyathāpi|adhivacan|ūpama|opama" </li>   
               </ol>    
 </div>
 

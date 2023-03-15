@@ -475,7 +475,6 @@ fi
 
 function genwordsfile {
 cat $tempfilewords | pvlimit | sedexpr | awk '{print tolower($0)}' | tr -s ' '  '\n' | sort | uniq -c | awk '{print $2, $1}' > $tempfile
-cp $tempfile what.txt
 uniqwordtotal=`cat $tempfile | pvlimit | sort | uniq | wc -l `
 
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
@@ -498,7 +497,7 @@ fi
 linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -V | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq | awk -F'_' '{print "<a target=_blank href=\"/sc/?q="$1"&lang=pli\">"$1"</a>"}'| sort -V | uniq | xargs`
 
 echo "<tr>
-<td class=\"longword\">`echo $uniqword | highlightpattern`</td>
+<td>`echo $uniqword | highlightpattern`</td>
 <td>$linkscount</td>   
 <td>$uniqwordcount</td>   
 <td>$linkswwords</td>
@@ -785,7 +784,7 @@ indexlist=`nice -$nicevalue grep -E -i $filenameblock $basefile | awk '{print $2
 metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
 if [[ $metaphorcount == "" ]]
 then
-echo 'i was used' >> ~/mfon.txt
+
 metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
@@ -855,8 +854,7 @@ pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then  
 bgswitch
 exit 3
-	echo "$@" | sed 's/-oru //g' | sed 's/-oge //g' | sed 's/-ogr //g'   | sed 's/-nbg //g' >> ../input/input.txt
-	exit 3
+#	echo "$@" | sed 's/-oru //g' | sed 's/-oge //g' | sed 's/-ogr //g'   | sed 's/-nbg //g' >> ../input/input.txt
 fi
 
 }
@@ -962,7 +960,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-#rm $basefile $tempfile $tempfilewhistory *$rand* > /dev/null 2>&1
+rm $basefile $tempfile $tempfilewhistory *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

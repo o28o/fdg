@@ -307,10 +307,10 @@ elif [[ "$@" == *"-ru"* ]]; then
     nonmetaphorkeys="подобного|подоба"
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
 elif [[ "$@" == *"-b"* ]]; then
-    fnlang=_enbw
+    fnlang=_tbw
     pali_or_lang=/bw/
     directlink=/bw
-    language="EngTBW"
+    language="TBW"
     type=html
     hwithtitle='<h00002>'
     metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"

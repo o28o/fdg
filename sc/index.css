@@ -5,7 +5,7 @@
 
 :root {
   --off-white: rgb(221, 221, 221);
-  --light-off-white: rgb(241, 241, 241);
+  --light-off-white: rgb(253, 253, 253);
   --off-black: rgb(4, 1, 19);
   --dark-gray: #5a5a5a;
   --light-gray: #8f8f8f;
@@ -249,7 +249,20 @@ dt {
   padding: 5px; /* Some padding */
 }
 
+#theme-button {
+  position:relative;  
+  top:-3px;
+}
 
+#fdg-button {
+  margin:0px 0px;
+  position:relative; top:0px;
+}
+
+#home-button {
+  position:relative;  
+  top:-1px;
+}
 /*
 .button-area {
   position: fixed;

@@ -266,14 +266,14 @@ include 'scripts/multilang-search.php';
 
  <li>Sutta where Buddha says that he doesn't make <a href="/assets/demo/dvayagaaminii_suttanta_pali_1-1.html">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
 
-             <li>All variants of the word <a href="/assets/demo/pat.iccasamupp_suttanta_pali_words_36-115-16.html">paṭiccasamuppado</a> in Pali with quotes in English</li>
+             <li>All variants of the word <a href="/assets/demo/pa.ticcasamupp_suttanta_pali_33-112.html">paṭiccasamuppado</a> in Pali with quotes in English</li>
             
-                <li>All suttas about <a href="/assets/demo/eightfold_suttanta_en.html">Eightfold</a> Path in English</li>
-                <li>All suttas that took place or related to <a href="/assets/demo/%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%96%E0%B8%B5_suttanta_th.html">Savathi</a> in Thai</li>
-                <li>All suttas where <a href="/assets/demo/sariputt_suttanta_ru_176-1082.html">Sariputta</a> was mentioned in Russian</li>
+                <li>All suttas about <a href="/assets/demo/eightfold_suttanta_en_158-343.html">Eightfold</a> Path in English</li>
+                <li>All suttas that took place or related to <a href="/assets/demo/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
+                <li>All suttas where <a href="/assets/demo/sariputt_suttanta_ru_168-1055.html">Sariputta</a> was mentioned in Russian</li>
     
              <li>All suttas about or containing the word <a href="/assets/demo/ocean_suttanta_en_91-274.html">ocean</a> in English</li>
-                 <li>All Suttas with <a href=./assets/demo/seyyathaapi-adhivacan-uupama-opama_suttanta_pali_627-2101.html>metaphors & similies</a> in Pali and English</li>   
+                 <li>All Suttas with <a href=./assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html>metaphors & similies</a> in Pali and English</li>   
               </ol>    
 </div>         
                 <!-- Portfolio Section Heading-->

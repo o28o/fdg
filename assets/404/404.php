@@ -46,10 +46,14 @@
                <section class="page-section portfolio" id="help">
             <div class="container text-center">
 
-     <?php
+          <?php
+          include_once('../../config/config.php');
+      if ( $mode == "offline" ) {
+      include '../../assets/common/horizontalMenuEnOffline.php'; 
+      } else {
       include '../../assets/common/horizontalMenuEn.php'; 
-      ?>   
-                
+      }
+      ?>
             </div>
         </div>
     </body>

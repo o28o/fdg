@@ -38,16 +38,20 @@
                 <p class="lead">
                     “Atthi kho, āvuso, maggo atthi paṭipadā,</br> 
                     etassa dukkhassa pariññāyā”ti. 
-                    <a class="text-decoration-none" target="_blank" href="https://docs.google.com/document/d/1TCPbYi7NK5KgjtqQ6lqhMqMYp6jjQamQ0TpvqGqVhm0">sn38.4</a>
+                    <a class="text-decoration-none" target="_blank" href="/o/?q=Sn38.4">sn38.4</a>
                   </p>
                 <a href="/ru/" id="back" class="btn btn-primary">На главную</a>
                       <section class="page-section portfolio" id="help">
             <div class="container text-center">
-              
-      <?php
+ 
+          <?php
+          include_once('../../config/config.php');
+      if ( $mode == "offline" ) {
+      include '../../assets/common/horizontalMenuRuOffline.php'; 
+      } else {
       include '../../assets/common/horizontalMenuRu.php'; 
+      }
       ?>
-
             </div>
         </div>
         

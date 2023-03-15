@@ -4,5 +4,7 @@
 for i in `ls` 
 do
 sed -i 's@/assets/demo/@/assets/demo/@g' $i
+sed -i 's@href="../../">@href="../../">@g' $i
+
 done
 

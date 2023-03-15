@@ -1,7 +1,7 @@
 #!/bin/bash -i
 #set -x 
 #trap read debug
-#export LANG=C.UTF-8
+export LANG=en_US.UTF-8
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 

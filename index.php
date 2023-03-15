@@ -173,12 +173,12 @@ $(document).ready(function(){
 
   <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="English") echo "checked";?> value="-en">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net">Eng</a>
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then thebuddhaswords.net texts, then sc.net translations">Eng</a>
   </div>
 
    <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations">ไทย</a>
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations. Without this option default search will start with Pali texts, then with sc.net Thai translations">ไทย</a>
    </div> 
      <br>
      <div class="form-check form-check-inline">

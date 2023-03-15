@@ -185,7 +185,7 @@ $(document).ready(function(){
   </div>
       <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Опционально. Поиск в 4 основных Никаях в Тайских переводах Suttacentral.net">ไทย</a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Опционально. Поиск в 4 основных Никаях в Тайских переводах Suttacentral.net. Без этой опции сначала поиск будет произведен в Пали текстах, потом в переводах.">ไทย</a>
   </div>
   
     <div class="form-check form-check-inline">
@@ -195,7 +195,7 @@ $(document).ready(function(){
     <br>
     <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="English") echo "checked";?> value="-en">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато">Eng</a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах thebuddhaswords.net и затем в переводах sc.net">Eng</a>
   </div>
   <br>
 

@@ -475,7 +475,7 @@ fi
 
 function genwordsfile {
 cat $tempfilewords | pvlimit | sedexpr | awk '{print tolower($0)}' | tr -s ' '  '\n' | sort | uniq -c | awk '{print $2, $1}' > $tempfile
-
+cp $tempfile what.txt
 uniqwordtotal=`cat $tempfile | pvlimit | sort | uniq | wc -l `
 
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
@@ -888,7 +888,12 @@ OKresponse
 #finalize words file 
 oldname=$tempfilewords
 removerand=`echo $tempfilewords| sed 's@\.'$rand'@@'`
+if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
+then
 tempfilewords=${removerand}_${textsqnty}-${matchqnty}-${uniqwordtotal}.html
+else
+tempfilewords=${removerand}_${textsqnty}-${matchqnty}.html
+fi 
 
 echo "</tbody>
 </table>
@@ -957,7 +962,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory *$rand* > /dev/null 2>&1
+#rm $basefile $tempfile $tempfilewhistory *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

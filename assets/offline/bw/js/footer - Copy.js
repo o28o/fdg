@@ -492,12 +492,11 @@ Mousetrap.bind("d", function (e) {
 
 Mousetrap.bind("i", function (e) {
   chapterBooks = ["sn", "an", "snp", "ud"];
-  suttaBooks = ["dn", "mn", "kp", "dhp", "tha", "thi"];
   const url = location.pathname.split(/[/.]/);
   const urlLength = url.length;
   if (chapterBooks.includes(url[urlLength - 4])) {
     window.location.href = `../${url[urlLength - 4]}/${url[urlLength - 3]}.html#content`;
-  } else if (suttaBooks.includes(url[urlLength - 3])) {
+  } else {
     window.location.href = `../${url[urlLength - 3]}/${url[urlLength - 3]}.html#content`;
   }
 });

@@ -117,34 +117,77 @@ termux-open-url http://localhost:8080/
 
 exit 0
 
+
+#update
+
 #cleanup sc repo from unused texts
-cd /suttacentral.net/sc-data/sc_bilara_data/translation
-ls | grep -Ev "ru|th|en|san" | xargs rm -rf
-cd /suttacentral.net/sc-data/sc_bilara_data/html
-ls | grep -Ev "ru|th|en|san" | xargs rm -rf
+#git clone https://github.com/suttacentral/sc-data.git ./
+alias apa='cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs'
 
-#fix bw
-sed -i  "s@top: 15px@bottom: 15px@" css.css
-sed -i  's@font: normal normal 1.15em/1.3em "URWPalladioITU", serif;@font: normal normal 1.15em/1.3em Helvetica, serif;@' css.css
+initsize=`du -hs suttacentral.net/`
+echo $initsize
+cd suttacentral.net/
+git pull
 
-#disable dictionary 
-mv ./assets/offline/bw/js/pali-lookup-standalone.js  ./assets/offline/bw/js/pali-lookup-standalone.jsdd
-#remove bw header image
-cp ./assets/headerlogo.png ./assets/offline/bw/images
-	
-#in css.css file 
-#controlpanel {
-#	position: fixed;
-# bottom: 15px; /* 70px; */
- 
- // set default state of Pali Lookup
-if (localStorage.paliLookupActive === undefined) {
-  localStorage.paliLookupActive = "false";
-}
+apa 
+cd ./suttacentral.net/sc-data/html_text
+ls
+ls | grep -Ev "pli|ru|th|en|san" | xargs rm -rf
+ls
 
- 
+apa
+cd ./suttacentral.net/sc-data/sc_bilara_data/translation
+ls
+ls | grep -Ev "pli|ru|th|en|san" | xargs rm -rf
+ls
+apa
+cd ./suttacentral.net/sc-data/sc_bilara_data/html
+ls
+ls | grep -Ev "pli|ru|th|en|san" | xargs rm -rf
+ls
+
+apa
+cd ./suttacentral.net/sc-data/sc_bilara_data/root
+ls
+ls | grep -Ev "pli|ru|th|en|san" | xargs rm -rf
+ls
+
 #apache config
 cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/config/
+
+
+#fix bw
+#download new archive from 
+https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8
+
+
+
+cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/offline/
+mv bw bw1
+mkdir bw
+diff -qr bw/ bw1/
+
+cp /storage/emulated/0/Download/bw_*.zip  .
+
+#fix control panel
+grep "bottom: 15px" css/css.css
+sed -i  "s@bottom: 15px@top: 15px@" css/css.css
+grep "top: 15px" css/css.css
+
+#fix font
+grep 'font: normal normal 1.15em/1.3em "URWPalladioITU", serif;' css/css.css
+sed -i  's@font: normal normal 1.15em/1.3em "URWPalladioITU", serif;@font: normal normal 1.15em/1.3em Helvetica, serif;@' css/css.css
+grep 'font: normal normal 1.15em/1.3em' css/css.css
+
+#disable dictionary 
+ls ./js/pali-lookup-standalone.js*
+mv ./js/pali-lookup-standalone.js  ./js/pali-lookup-standalone.jsdd
+ls ./js/pali-lookup-standalone.js*
+
+#remove bw header image
+ls -laht ./images/headerlogo.png
+cp ../../../assets/img/headerlogo.png ./images
+ls -laht ./images/headerlogo.png
 
 for i in `grep -rl mousetrap   /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/bw`
 do 

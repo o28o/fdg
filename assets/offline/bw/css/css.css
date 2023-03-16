@@ -163,6 +163,10 @@ h1,h2,h3,h4,h5,h6 {
  font-weight:bold;
  margin: 0 0 .5em 0 ;
 }
+h1.left-align, h2.left-align, h3.left-align{
+	text-align: left;
+}
+
 
 h1 { /* h1 spans the two "pairs" columns -- not used */
  font-size: 100%;
@@ -627,7 +631,7 @@ font-weight: bold;
 
 #controlpanel {
 	position: fixed;
- bottom: 15px; /* 70px; */
+ top: 15px; /* 70px; */
 	float:right;
 	right: 25px;
 	z-index: 9000;
@@ -1365,7 +1369,8 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\
 /* For Publishing ... The end comment needs to be at the bottom of this page.
-/* For Editing ... Move the end comment at the end of this page to the end of this line.    
+/* For Editing ... Move the end comment at the end of this page to the end of this line.   
+ 
 
  h1,h2,h3,h4,h5,h6, .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
  background-color: gold;

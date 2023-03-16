@@ -32,7 +32,7 @@ urllinkbw=/bw/
 
 wbefore=1
 wafter=3
-linesafter=0
+linesafter=1
 minlength=3
 truncatelength=30
 filesizenooverwrite=1000000000000000

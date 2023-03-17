@@ -262,7 +262,8 @@ function grepbasefile {
 tmponl=tmponl.$rand
 
 splitpattern=`echo $pattern | sed 's@|@ @g' | sed 's@(@@g' | sed 's@)@@g'`
-pattern=`echo $pattern | sed 's@ @|@g' `
+#revertlater=$pattern
+
 splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
 
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
@@ -271,12 +272,13 @@ onltextindex=`for i in $splitpattern
 do
 grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 
 done | sort -V | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @:|@g'`
+#pattern=$revertlater
 grep -E "($onltextindex)" $tmponl 
 }
 fileprefix=${fileprefix}-onl
 fortitle="${fortitle} Matching Mode"
 maxmatchesbg=100000000
-echo $pattern $splitpattern $splitarraylen | tohtml
+#echo $pattern $splitpattern $splitarraylen | tohtml
 else 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} 
@@ -826,6 +828,16 @@ fi
   
 if [[ "$pattern" != *"["* ]] &&  [[ "$pattern" != *"]"* ]];  then
 pattern=`echo $pattern | sed 's/е/[ёе]/g' | sed 's/[ṅṃ]/[ṅṁṃ]/g'`
+fi
+
+if [[ "$@" == *"-onl"* ]]
+then
+if [[ $pattern == *"("* ]] && [[ $pattern == *")"* ]] 
+then
+pattern=`echo $pattern | sed 's@ @|@g' `
+else
+pattern=`echo $pattern | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' `
+fi
 fi
 
 checkifalreadydone

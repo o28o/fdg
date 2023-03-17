@@ -646,7 +646,7 @@ include 'scripts/multilang-search.php';
 								   
 								   <strong>Tip #5</strong><br>
 								
-								   Read about <a href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
+								   Read about <a target="_blank" href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
 								   
 			<strong>How "Def" option works?</strong><br>
 									With Def following search will run:<br>

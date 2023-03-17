@@ -191,7 +191,7 @@ $(document).ready(function(){
         <h5>RegEx Memo</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
-       <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br>
+     <!--  <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br> -->
        <strong>X -exc Y</strong> - search for X, exclude Y<br>
        <strong>\\bX</strong> - beginning of the word or <strong>Y\\b</strong> end<br>
 <strong>X.*Y</strong> - ant number of symbols between X and Y<br>

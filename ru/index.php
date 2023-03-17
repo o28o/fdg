@@ -203,7 +203,7 @@ $(document).ready(function(){
         <h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
-     <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br>
+  <!--   <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> -->
      <strong>X -exc Y</strong> - искать X, исключить Y<br>
          <strong>\\bX</strong> - начало или <strong>Y\\b</strong> конец слова<br>
 <strong>X.*Y</strong> - любое количество символов между X и Y<br>

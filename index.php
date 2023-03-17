@@ -150,7 +150,7 @@ $(document).ready(function(){
     
           <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... or "X|Y|..." including quotes. Finds texts containing only both and more matches for X, Y ...
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... or "(X|Y|...)" including quotes. Finds texts containing only both and more matches for X, Y ...
   Without this option texts containing even one match will be in results'>Onl</a>
   
   </div>
@@ -642,7 +642,7 @@ include 'scripts/multilang-search.php';
 									<strong>Tip #3</strong><br>
 								   If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
 									<strong>Tip #4</strong><br>
-								   You may use regexes that are applicable in GNU grep -E statements. Read and study regex to boost your search abilities. With proper escaping (\\) they should work.<br><br>
+								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\) they should work. Read and study regex to boost your search abilities.<br><br>
 								   
 								   <strong>Tip #5</strong><br>
 								

@@ -155,7 +155,7 @@ input.addEventListener("keypress", function(event) {
   
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... или "X|Y|..." включая кавычки. Найдет только тексты содержащие оба и более совпадений X, Y, ... Без этой опции будут собраны тексты которые содержат хотя бы одно совпадение'>Тлк</a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... или "(X|Y|...)" включая кавычки. Найдет только тексты содержащие оба и более совпадений X, Y, ... Без этой опции будут собраны тексты которые содержат хотя бы одно совпадение'>Тлк</a>
   
   </div>
     <!-- extra options -->
@@ -838,7 +838,7 @@ include 'scripts/multilang-search.php';
 								   Чтобы исключить один шаблон из результатов другого шаблона используйте аргумент -exc.<br>
 								   Пример: dundubh -exc devadundubh - этот запрос позволит вам выгрузить совпадения по словам похожим на dundubh, но без devadundubh<br><br>
 <strong>Совет #5</strong><br>
-								   Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать. Почитайте, поизучайте regexp.<br><br>
+								   Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать. Почитайте, поизучайте regex в интернете.<br><br>
 
 	<strong>Совет #6</strong><br>
 								   Почитайте на сайте проекта или в интернете о <a target="_blank" href="https://datatables.net/">DataTables</a>, результаты, которые вы получаете из текстов выводятся с помощью них.<br><br>

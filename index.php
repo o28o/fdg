@@ -631,21 +631,25 @@ include 'scripts/multilang-search.php';
                                     <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">	
-                                                    									<strong>Tip #1</strong><br>
-                                                    								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
-                                                    								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
-                                                    								  <strong>Tip #2</strong><br>
-                                                    								   To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
-                                                    								 <br><br>
-                                                    								  
-                                                    									<strong>Tip #3</strong><br>
-                                                    								   If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
-                                                    									<strong>Tip #4</strong><br>
-                                                    								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\) they should work.<br><br>
-                                                    								   
-                                                    			<strong>How "Def" option works?</strong><br>
-                                                    									With Def following search will run:<br>
+            <p class="mb-4">
+                <strong>Tip #1</strong><br>
+								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
+								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
+								  <strong>Tip #2</strong><br>
+								   To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
+								 <br><br>
+								  
+									<strong>Tip #3</strong><br>
+								   If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
+									<strong>Tip #4</strong><br>
+								   You may use regexes that are applicable in GNU grep -E statements. Read and study regex to boost your search abilities. With proper escaping (\\) they should work.<br><br>
+								   
+								   <strong>Tip #5</strong><br>
+								
+								   Read about <a href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
+								   
+			<strong>How "Def" option works?</strong><br>
+									With Def following search will run:<br>
 grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
 Create an issue on github or send an email, if you'll find other criteria.<br><br>								   
                                                                                   								   

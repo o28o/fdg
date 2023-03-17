@@ -5,7 +5,8 @@ $(document).ready(function (){
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
-	    'paging'  : true,
+	   'paging'  : true,
+	   'lengthMenu' : [10, 25, 50, 100, 1000],
 	  'responsive': true,
 	  'columnDefs': [
 	            { type: "html", target: [1,2,6] },

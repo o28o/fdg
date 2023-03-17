@@ -35,8 +35,8 @@ wafter=3
 linesafter=1
 minlength=3
 truncatelength=30
-filesizenooverwrite=1000000000000000
-maxmatchesbg=4000
+filesizenooverwrite=100000000000
+maxmatchesbg=3000
 archivenumber=84
 
 elif [[ "`uname -a`" == *"rym.from.sh"* ]]; then

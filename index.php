@@ -642,7 +642,7 @@ include 'scripts/multilang-search.php';
 									<strong>Tip #3</strong><br>
 								   If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
 									<strong>Tip #4</strong><br>
-								   You may use regexes that are applicable in GNU grep -E statements. Read and study regex to boost your search abilities. With proper escaping (\\) they should work.<br><br>
+								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\) they should work. Read and study regex to boost your search abilities.<br><br>
 								   
 								   <strong>Tip #5</strong><br>
 								

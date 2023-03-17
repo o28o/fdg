@@ -261,8 +261,8 @@ elif [[ "$@" == *"-onl"* ]]; then
 function grepbasefile {
 tmponl=tmponl.$rand
 
-splitpattern=`echo $pattern | sed 's@|@ @g'`
-pattern=`echo $pattern | sed 's@ @|@g' | sed 's@^@(@g' | sed 's@$@)@g'`
+splitpattern=`echo $pattern | sed 's@|@ @g' | sed 's@(@@g' | sed 's@)@@g'`
+pattern=`echo $pattern | sed 's@ @|@g' `
 splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
 
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
@@ -276,6 +276,7 @@ grep -E "($onltextindex)" $tmponl
 fileprefix=${fileprefix}-onl
 fortitle="${fortitle} Matching Mode"
 maxmatchesbg=100000000
+echo $pattern $splitpattern $splitarraylen | tohtml
 else 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} 

@@ -703,7 +703,7 @@ cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/
 
 fi 
 
-uniquelist=`cat $basefile |grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home" | grep -Ev "palisearch|engsearch" | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
+uniquelist=`cat $basefile |grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home" | grep -Ev "palisearch|engsearch|standalone.js" | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
 
 
 textlist=$uniquelist

@@ -162,7 +162,7 @@ https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8
 
 
 
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/offline/
+cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/
 mv bw bw1
 mkdir bw
 diff -qr bw/ bw1/

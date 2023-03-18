@@ -19,7 +19,7 @@ $linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
 $linkforthai = "/legacy.suttacentral.net/sc/th/"; 
 $linkforthaiend = '.html';
 //extralinks.php
-$locationru = $basedir. "/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts";
+$locationru = $basedir. "/theravada.ru/Teaching/Canon/Suttanta/Texts";
 
 //converter.php
 $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
@@ -73,7 +73,7 @@ $linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
 $linkforthai = "/legacy.suttacentral.net/sc/th/"; 
 $linkforthaiend = '.html';
 //extralinks.php
-$locationru = $basedir. "/assets/offline/theravada.ru/Teaching/Canon/Suttanta/Texts";
+$locationru = $basedir. "/theravada.ru/Teaching/Canon/Suttanta/Texts";
 
 //converter.php
 $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
@@ -92,8 +92,8 @@ $translatorlocation = $basedir. '/o/';
 $indexesfile = $basedir. '/assets/texts/text_indexes.txt';
 $scriptfile = $basedir. '/scripts/ranges.sh';
 
-$thsulocation = $basedir. '/assets/offline/tipitaka.theravada.su/';
-$thrulocation = $basedir. '/assets/offline/theravada.ru/Teaching/Canon';
-$bwlocation = $basedir. '/assets/offline/bw';
+$thsulocation = $basedir. '/tipitaka.theravada.su/';
+$thrulocation = $basedir. '/theravada.ru/Teaching/Canon';
+$bwlocation = $basedir. '/bw';
 
       ?>

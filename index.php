@@ -214,11 +214,7 @@ $(document).ready(function(){
 
  </div>
       </div>	
-<<<<<<< HEAD
-            <div id="spinner" class="justify-content-center mt-3 mb-3">
-=======
             <div id="spinner" class="justify-content-center mt-8 mb-3">
->>>>>>> e9c95cc2570d75902c0c17f6a195e65198050255
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>

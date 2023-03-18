@@ -250,7 +250,6 @@ $(document).ready(function(){
   </div>-->
 				</form>
 				
-
  </div>
  </div>
   <div id="spinner" class="justify-content-center mt-8 mb-3">

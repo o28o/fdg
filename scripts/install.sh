@@ -263,3 +263,5 @@ curl http://localhost/sc/extralinks.php?fromjs=dn22
 
 
 http://localhost:8080/ru/sc/index.js
+
+git rm -r --cached .

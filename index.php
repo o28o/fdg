@@ -214,7 +214,7 @@ $(document).ready(function(){
 
  </div>
       </div>	
-            <div id="spinner" class="justify-content-center mb-3">
+            <div id="spinner" class="justify-content-center mt-8 mb-3">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>

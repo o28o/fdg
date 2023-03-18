@@ -105,24 +105,18 @@ include 'scripts/opentexts.php';
                 </div>
     
           <?php
-      if ( $mode == "offline" ) {
-	echo		'<form method="GET" action="index.php" class="justify-content-center">';
-      } else {
+      
 			echo '<form method="GET" action=
 			"';  
 			echo htmlspecialchars($_SERVER[" PHP_SELF "]);
 			echo '"	action="" class="justify-content-center">'; 
-      }
-      ?>  
-
-	<div class="mb-3 form-group input-group ui-widget">
-		<label class="sr-only" for="paliauto"></label>
+      ?>
+		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
+		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
 			
-			 <input style="z-index:9" name="q" type="search" class="form-control rounded-pill searchbar" id="paliauto" placeholder="прим. Kāyagat или sn56.11" autofocus>
-			 
-				<div class="input-group-append">
-				  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="submit" value="search" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill"><i class="fas fa-search"></i></button>
-				</div>
+			 <input name="q" style="z-index:9" type="search" class="form-control rounded-pill" id="paliauto" placeholder="прим. Kāyagat или sn56.11" autofocus>
+
+		<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="submit" value="search" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search"></i></button></div>
 		</div>
 
 <script>
@@ -134,6 +128,11 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
+</script>
+<script>
+$(document).ready(function(){
+    $('[data-bs-toggle="tooltip"]').tooltip();   
+});
 </script>
 
   <div class="form-check form-check-inline">
@@ -164,14 +163,6 @@ input.addEventListener("keypress", function(event) {
 <div class="collapse mt-2 " id="collapseSettings">
   <div class="float-start">
 
-
-<script>
-$(document).ready(function(){
-    $('[data-bs-toggle="tooltip"]').tooltip();   
-});
-</script>
-
-  
         <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-kn " >
   <a data-bs-toggle="tooltip" data-bs-placement="top" title="+ поиск на Пали в 6 книгах Кхуддака Никаи: ud, dhp, iti, snp, thag, thig. Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха">+КН</a>

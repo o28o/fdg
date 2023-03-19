@@ -509,7 +509,7 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1"><?php echo $anametextbook;?></h5>
       <small><?php echo $detailtextbook;?></small>
     </div>
-    <p class="mb-1 text-left">Highly recommended</p>
+    <p class="mb-1 text-left"><?php echo $ptextbook;?></p>
     <small></small>
   </a>
 
@@ -518,8 +518,8 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1"><?php echo $anamecases;?></h5>
       <small class="text-muted"><?php echo $detailtable;?></small>
     </div>
-    <p class="mb-1">Cases are mistranslated pretty often.</p>
-    <small class="text-muted">Check Pali original</small>
+    <p class="mb-1"><?php echo $pcases;?></p>
+    <small class="text-muted"><?php echo $smcheckpali;?></small>
   </a>
 
   <a target="_blank" href="<?php echo $linkconj; ?>" class="list-group-item list-group-item-action" aria-current="true">
@@ -527,18 +527,18 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1"><?php echo $anameconj; ?> </h5>
       <small><?php echo $detailtable;?></small>
     </div>
-    <p class="mb-1 text-left">Conjugations sometimes mistranslated.</p>
-    <small>Check Pali original</small>
+    <p class="mb-1 text-left"><?php echo $pconj;?></p>
+    <small><?php echo $smcheckpali;?></small>
   </a>
   
 
   <a target="_blank"  href="
   <?php echo $linksothermat; ?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Materials for studying Pali in English and Russian</h5>
+      <h5 class="mb-1"><?php echo $head5othermat;?></h5>
       <small class="text-muted"><?php echo $detailoffline;?></small>
     </div>
-    <p class="mb-1">Collection of textbooks and tables</p>
+    <p class="mb-1"><?php echo $pothermat;?></p>
     <small class="text-muted"></small>
   </a>
   

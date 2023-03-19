@@ -371,13 +371,13 @@ include 'scripts/multilang-search.php';
   
     <a href="/cse.php" target="_blank" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Google from dhamma.gift</h5>
+      <h5 class="mb-1"><?php echo $head5cse;?></h5>
       <small class="text-muted"><?php echo $detailonline;?> </small>
     </div>
     <p class="mb-1">
-      Search with Google within recommended resources
+      <?php echo $psce;?>
     </p>
-    <small class="text-muted">Especially convenient for Wisdomlib</small>
+    <small class="text-muted"><?php echo $smcse;?></small>
   </a>
   
         <a target="_blank" href="https://digitalpalidictionary.github.io/" class="list-group-item list-group-item-action">
@@ -385,16 +385,34 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1">Digital Pali Dictionary</h5>
       <small class="text-muted"><?php echo $detailapp;?></small>
     </div>
-    <p class="mb-1">The biggest and quickest dictionary and pali grammar.</p>
-    <small class="text-muted">Available for PC, Mac, Android, IOS</small>
+    <p class="mb-1"><?php echo $pdpd;?></p>
+    <small class="text-muted"><?php echo $smdpd;?></small>
+  </a>
+
+        <a target="_blank" href="https://devamitta.github.io/pali/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><?php echo $head5dpdru;?></h5>
+      <small class="text-muted"><?php echo $detailapp;?></small>
+    </div>
+    <p class="mb-1"><?php echo $pdpdru;?></p>
+    <small class="text-muted"><?php echo $smdpdru;?></small>
+  </a>
+
+<a target="_blank" href="https://play.google.com/store/apps/details?id=klye.plugin.pi1" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><?php echo $head5plikeyboard;?></h5>
+      <small class="text-muted"><?php echo $detailapp;?></small>
+    </div>
+    <p class="mb-1"><?php echo $pplikeyboard;?></p>
+    <small class="text-muted"><?php echo $smplikeyboard;?></small>
   </a>
 
     <a target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Pali Text Society Dictionary</h5>
+      <h5 class="mb-1"><?php echo $head5pts;?></h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
-    <p class="mb-1">One of the most famous Pali English dictionaries</p>
+    <p class="mb-1"><?php echo $ppts;?></p>
     <small class="text-muted"></small>
   </a>
 
@@ -404,8 +422,8 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1">Wisdomlib.org</h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
-    <p class="mb-1">Excellent online collection of dictionaries. Not only Pali, but multiple spiritual traditions of India</p>
-    <small class="text-muted">Very helpful for difficult terms.</small>
+    <p class="mb-1"><?php echo $pwids;?></p>
+    <small class="text-muted"><?php echo $smwisd;?></small>
   </a>
   
       <a target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx" class="list-group-item list-group-item-action">
@@ -413,17 +431,17 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1">TamilCube.com</h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
-    <p class="mb-1">Simple Online English-Pali Dictionary</p>
+    <p class="mb-1"><?php echo $ptamilcube;?></p>
     <small class="text-muted"></small>
   </a>
 
     <a target="_blank"  href="
   https://drive.google.com/drive/folders/1bdkm-g_ReZi5QEior_gNTok8r4flAfa3?usp=sharing" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">All Pali words from Suttanta (except KN) & Vinaya</h5>
+      <h5 class="mb-1"><?php echo $head5words;?></h5>
       <small class="text-muted"><?php echo $detailoffline;?></small>
     </div>
-    <p class="mb-1">In alphabetical order with count number</p>
+    <p class="mb-1"><?php echo $pwords;?></p>
     <small class="text-muted"></small>
   </a>
 
@@ -442,8 +460,8 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1">sc.dhamma.gift</h5>
       <small><?php echo $detailonandoffline;?></small>
     </div>
-    <p class="mb-1 text-left">Pali-English Line-by-line</p>
-    <small>Suttacentral.net texts with quicker lightweight interface</small>
+    <p class="mb-1 text-left"><?php echo $psclight; ?></p>
+    <small><?php echo $smsclight; ?></small>
   </a>
 
   <a target="_blank" href="https://Suttacentral.net" class="list-group-item list-group-item-action" aria-current="true">
@@ -451,8 +469,8 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1">Suttacentral.net</h5>
       <small><?php echo $detailonandoffline;?></small>
     </div>
-    <p class="mb-1 text-left">The most complete line-by-line Pali-English collection</p>
-    <small>Pali-English dictionary can be turned on in settings</small>
+    <p class="mb-1 text-left"><?php echo $psc; ?></p>
+    <small><?php echo $smsc; ?></small>
   </a>
   
     <a target="_blank" href="https://thebuddhaswords.net/home/index.html" class="list-group-item list-group-item-action" aria-current="true">
@@ -460,19 +478,17 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1">TheBuddhasWords.net</h5>
       <small><?php echo $detailonline;?></small>
     </div>
-    <p class="mb-1 text-left">Very impressive paragraph-by-paragraph Pali-English collection</p>
-    <small>Pali-English on hover dictionary built-in</small>
+    <p class="mb-1 text-left"><?php echo $ptbw; ?></p>
+    <small><?php echo $smtbw; ?></small>
   </a>
-  
-  
   
     <a target="_blank"   href="https://www.digitalpalireader.online/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Digital Pali Reader</h5>
       <small class="text-muted"><?php echo $detailonandoffline;?></small>
     </div>
-    <p class="mb-1">Very profound online tool for Pali researches.</p>
-    <small class="text-muted">Built-in Pali-English dictionary</small>
+    <p class="mb-1"><?php echo $pdpr; ?></p>
+    <small class="text-muted"><?php echo $smdpr; ?></small>
   </a>
   
   <a target="_blank"  href="<?php echo $mainpagethsulink; ?>" class="list-group-item list-group-item-action">
@@ -480,17 +496,35 @@ include 'scripts/multilang-search.php';
       <h5 class="mb-1">Tipitaka.Theravada.su</h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
-    <p class="mb-1">Multiple translation options. Pali-English-Russian line-by-line.</p>
-    <small class="text-muted">Especially recommended for studying Digha Nikaya</small>
+    <p class="mb-1"><?php echo $pthsu;?></p>
+    <small class="text-muted"><?php echo $smthsu;?></small>
   </a>
   
   <a href="<?php echo $mainpagethrulink; ?>" target="_blank"   class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Theravada.ru </h5>
+      <h5 class="mb-1">Theravada.ru</h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
-    <p class="mb-1">The most complete translation of Suttanta in Russian.</p>
+    <p class="mb-1"><?php echo $pthru;?></p>
     <small class="text-muted"></small>
+  </a>
+  
+   <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank"   class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">T2S Android</h5>
+      <small class="text-muted"><?php echo $detailapp;?></small>
+    </div>
+    <p class="mb-1"><?php echo $pt2s;?></p>
+    <small class="text-muted"><?php echo $smt2s;?></small>
+  </a>
+  
+   <a href="https://voice.suttacentral.net" target="_blank"   class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Voice.suttacentral.net</h5>
+      <small class="text-muted"><?php echo $detailonline;?></small>
+    </div>
+    <p class="mb-1"><?php echo $pscvoice;?></p>
+    <small class="text-muted"><?php echo $smscvoice;?></small>
   </a>
   
 </div>  

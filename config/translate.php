@@ -231,6 +231,63 @@ $smcheckpali = 'Обязательно сверяйтесь с Пали';
 
 $pcases = 'В англ. переводах и соответственно русских переводах с англ. языка падежи часто переведены неправильно';
 $ptextbook = 'Рекомендуемый Учебник';
+
+$pthru = 'Самая полная коллекция Русских переводов Суттанты';
+$pthsu = 'Много вариантов переводов. Построчно Пали-Англ-Русский.';
+$smthsu = 'Особенно рекомендован для изучения текстов Дигха Никаи';
+
+$pdpr = 'Мощный инструмент для исследования Сутт и изучения Пали. И альетрантивный поиск';
+$smdpr = 'Встроенный Пали-Англ словарь';
+
+$ptbw = 'Полная коллекция Пали-Англ переводов по абзацам';
+$smtbw = 'Пали-Англ словарь встроен';
+$psc = 'Самая полная коллекция построчных переводов Типитаки Пали-Англ';
+$smsc = 'Пали-Англ словарь можно включить в настройках';
+
+$psclight = 'Открывайте тексты suttacentral.net в разы быстрее';
+$smsclight = 'Пали-Англ построчно с удобным переключением';
+$ptamilcube = 'Простой Англо-Пали словарь';
+
+$head5words = 'Все Пали слова из Суттанты (кроме КН) и Винаи';
+$pwords = 'По алфавиту с указанием количества';
+
+$pwids = 'Прекрасная онлайн коллекция словарей. Помимо Пали -  многие духовные традиции Индии';
+$smwisd = 'Очень полезно для сложных понятий';
+
+$pdpd = 'Объёмный и самый удобный Пали-Англ словарь и грамматика Пали';
+$smdpd = 'Доступно для ПК, Linux, Mac, Android, IOS';
+
+$head5dpdru = 'DPD Русская Версия';
+$pdpdru = 'Небольшой Пали-Русский словарь основанный на Digital Pali Dictionary';
+$smdpdru = 'Альтернатива DPD, для тех кто не владеет английским';
+
+$head5pts = 'Словарь Pali Text Society';
+$ppts = 'Один из самых известных Пали-Англ словарей';
+
+$head5cse = 'Google от dhamma.gift';
+$psce = 'Google поиск по рекомендованным ресурсам';
+$smcse = 'Особенно удобен для поисков на Wisdomlib';
+
+$head5plikeyboard = 'Pali раскладка';
+$pplikeyboard = 'Перед установкой Пали-плагина установите O keyboard';
+$smplikeyboard = 'для активации: Язык - Транслитерация - Pali (IAST)';
+
+$pt2s = 'Преобразование Русс и Англ текстов в речь';
+$smt2s = 'для прослушивания текстов sc.dhamma.gift, theravada.ru и др.';
+
+$pscvoice = 'Преобразование Пали и Англ текстов в речь';
+$smscvoice = 'для прослушивания текстов suttacentral.net';
+
+
+
+
+
+
+
+
+
+
+
 }
 else {
 $lang = "en";
@@ -434,5 +491,48 @@ $smcheckpali = 'Check Pali original';
 $pcases = 'Cases are mistranslated pretty often';
 
 $ptextbook = 'Highly recommended';
+$pthru = 'The most complete translation of Suttanta in Russian';
+$pthsu = 'Multiple translation options. Pali-English-Russian line-by-line';
+$smthsu = 'Especially recommended for studying Digha Nikaya';
+
+$pdpr = 'Profound online tool for Pali readings and alternative search';
+$smdpr = 'Built-in Pali-English dictionary';
+$ptbw = 'Very impressive paragraph-by-paragraph Pali-English collection';
+$smtbw = 'Pali-English on hover dictionary built-in';
+$psc = 'The most complete line-by-line Pali-English collection';
+$smsc = 'Pali-English dictionary can be turned on in settings';
+
+$psclight = 'Suttacentral.net texts with quicker lightweight interface';
+$smsclight = 'Pali-English Line-by-line';
+$ptamilcube = 'Simple Online English-Pali Dictionary';
+$head5words = 'All Pali words from Suttanta (except KN) & Vinaya';
+$pwords = 'In alphabetical order with count number';
+$pwids = 'Big online collection of dictionaries. Not only Pali, but multiple spiritual traditions of India';
+$smwisd = 'Very helpful for difficult terms';
+
+$head5cse = 'Google from dhamma.gift';
+$psce = 'Search with Google within recommended resources';
+$smcse = 'Especially convenient for Wisdomlib';
+
+$pdpd = 'The biggest and quickest dictionary and pali grammar';
+$smdpd = 'Available for PC, Linux, Mac, Android, IOS';
+
+$head5dpdru = 'DPD Russian Version';
+$pdpdru = 'Small Pali-Russian Dictionary based on DPD';
+$smdpdru = '';
+
+
+$head5pts = 'Pali Text Society Dictionary';
+$ppts = 'One of the most famous Pali English dictionaries';
+
+$head5plikeyboard = 'Pali Layout';
+$pplikeyboard = 'Install "O keyboard" itself before installing plug-in';
+$smplikeyboard = 'to add Pali: Language - Transliteration - Pali (IAST)';
+
+$pt2s = 'Text-to-Speech generator for English and Russian';
+$smt2s = 'Listen to sc.dhamma.gift, theravada.ru & other';
+$pscvoice = 'Generates Pali & English text-to-speech';
+$smscvoice = 'for suttacentral.net texts';
+
 }
 ?>

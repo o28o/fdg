@@ -26,6 +26,11 @@ $scroottextlocation = "/storage/emulated/0/Dhamma/suttacentral.net/sc-data/sc_bi
 
 // mainmenu
 $linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+$linksc = '/legacy.suttacentral.net/sc/su.html';
+$anamesc = 'Legacy.suttacentral.net';
+$linktbw = '/bw';
+$linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
+$linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
 } else if ( preg_match('/Linux rym.from.sh/', $uname)  ) {
 //
 // ONLINE PROD
@@ -56,7 +61,11 @@ $scroottextlocation = '/home/a0092061/data/suttacentral.net/sc-data/sc_bilara_da
 
 // mainmenu
 $linkmolds = 'https://obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
-
+$linksc = 'https://suttacentral.net/';
+$anamesc = 'SuttaCentral.net';
+$linktbw = 'https://thebuddhaswords.net';
+$linknoblasc = 'https://en.dhammadana.org/sangha/dhutanga.htm';
+$linkati = 'https://www.accesstoinsight.org/tipitaka/vin/sv/index.html';
 //
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
@@ -83,7 +92,11 @@ $scroottextlocation = "/var/www/html/suttacentral.net/sc-data/sc_bilara_data/roo
 
 // mainmenu
 $linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
-
+$linksc = 'https://suttacentral.net/';
+$anamesc = 'SuttaCentral.net';
+$linktbw = '/bw';
+$linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
+$linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
       } 
 //
 // Common Variables

@@ -64,7 +64,12 @@ $warning = '<b>Предупреждение!</b><br><br> Переводы вып
   Самое важное из Учения Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
   
 $anamemolds = 'Переводы Майкла Олдса'; 
-  
+$anameasc = 'Благородный Аскетизм';
+$anameati = 'Accesstoinsight.org Патимоккха';
+$anamehist = 'История';
+$anameuseful = 'Полезное';
+$anamedpd = 'Пали-Англ для mDict';
+$anamedpdru = 'Пали-Рус для GoldenDict';
 }
 else {
 $lang = "en";
@@ -132,7 +137,9 @@ $warning = '<b>Warning about translations!</b><br><br> Translations did not come
 }
 
 $anamemolds = 'Translations by M. Olds';
-
-
-
+$anameasc = 'Asceticism in Dhamma';
+$anameati = 'Accesstoinsight.org patimokkha';
+$anamehist = 'History';
+$anameuseful = 'Useful Links';
+$anamedpd = 'Pali for mDict';
 ?>

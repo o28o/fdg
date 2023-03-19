@@ -213,11 +213,7 @@ include 'scripts/multilang-search.php';
       include 'assets/common/horizontalMenuRu.php'; 
       }
       } else {
-        if ( $mode == "offline" ) {
-        include 'assets/common/horizontalMenuEnOffline.php'; 
-        } else {
         include 'assets/common/horizontalMenuEn.php'; 
-        }
       } 
       ?>
 

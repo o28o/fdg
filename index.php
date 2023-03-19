@@ -225,32 +225,20 @@ include 'scripts/multilang-search.php';
                         </p></div> 
          
               <div class="container-lg alert alert-warning float-start text-left mb-3" role="alert">
- <i class="fa-solid fa-triangle-exclamation "></i> <?php echo $warning;?>
- <!-- <a target="_blank" href="https://docs.google.com/document/d/1-ZY2G7dVq48EG8VPZIrItE6ShfqWgV5U9qDcb7VrelU/edit?usp=drivesdk" class="alert-link">Sn56.11</a>. -->
+                <?php echo $transwarning;?>
 </div>
 
-         
-               <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">Examples</h2>  
+                                                
+               <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  
               <div class="container mb-5">
               <ol class="col-lg-8 col-md-10 ms-auto text-start">
 			  
                    <!-- <li>All <a href="./history.php">previous searches</a></li> -->
-           <li>Definition of the <a href="/assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">Kata.*dukkhaṁ\\?</a></li>
-
- <li>Sutta where Buddha says that he doesn't make <a href="/assets/demo/dvayagaaminii_suttanta_pali_1-1.html">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
-
-             <li>All variants of the word <a href="/assets/demo/pa.ticcasamupp_suttanta_pali_33-112.html">paṭiccasamuppado</a> in Pali with quotes in English</li>
-            
-                <li>All suttas about <a href="/assets/demo/eightfold_suttanta_en_158-343.html">Eightfold</a> Path in English</li>
-                <li>All suttas that took place or related to <a href="/assets/demo/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
-                <li>All suttas where <a href="/assets/demo/sariputt_suttanta_ru_168-1055.html">Sariputta</a> was mentioned in Russian</li>
-    
-             <li>All suttas about or containing the word <a href="/assets/demo/ocean_suttanta_en_85-228.html">ocean</a> in English</li>
-                 <li>All Suttas with <a href=./assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html>metaphors & similies</a> in Pali and English</li>   
+                                        <?php echo $examplelist; ?>
               </ol>    
 </div>         
                 <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">How to Search</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><?php echo $howtoheader; ?></h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>

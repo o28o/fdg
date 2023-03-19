@@ -60,8 +60,7 @@ $fntmessage = 'Всесторонний взгляд на Четыре Благ�
 		в Палийских Суттах и Винае.<br> 
     Поймите настоящие Четыре Благородные Истины<br> 
    и положите конец боли.';
-$warning = '<b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Чаще всего содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
- <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1e-uFcjBzmCf08t7BUR-Ffnz3ZlSzhLNUnIWbMbvg3go" class="alert-link"> Примеры ошибок</a> -->
+$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Чаще всего содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <br><br>
   Самое важное из Учения Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
   
@@ -92,9 +91,21 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift эт
 <div class="col-lg-4 me-auto"><p class="lead">Дхамма энтузиасты, разработчики горячо приветствуются, у проекта большой потенциал в поисках настоящего значения текстов. Но, я не разработчик и это всего лишь скрипт на Bash и PHP-обёртка😊</p></div>';
 $prongh = 'Проект на GitHub';
 
+$headerexamples = 'Примеры';
+$examplelist = '<li>Определение понятия <a href="./assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">Kata.*dukkhaṁ\\\\?</a>
+             </li>
+             
+              <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/demo/dvayagaaminii_suttanta_pali_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
+           
+                <li>Все сутты со словом <a href="./assets/demo/vosmerichn_suttanta_ru_139-275.html">Восьмеричный</a> Благородный Путь на Русском</li>
+                <li>Все сутты со словом <a href="./assets/demo/nravstvennost_suttanta_ru_92-260.html">нравственность</a> на Русском</li>
+                <li>Все сутты, где упомянут <a href="./assets/demo/sariputt_suttanta_ru_168-1055.html">Сарипутта</a> на Русском</li>
+               <li>Все варианты словосочетания <a href="./assets/demo/pa.ticcasamupp_suttanta_pali_33-112.html">paṭiccasamuppado</a> на Пали со ссылками на Русские переводы</li>
+               <li>Все сутты где, упоминается об <a href="./assets/demo/okean_suttanta_ru_82-259.html">океане</a> на Русском</li>
+               <li>Все сутты с <a href=./assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html>метафорами, примерами и сравнениями</a> на Пали со ссылками на Русские переводы. Запрос: "seyyathāpi|adhivacan|ūpama|opama" </li> ';
 
 
-
+$howtoheader = 'Как Искать?';
 
 $contactheader = 'Контакты';
 $contaccalltoaction = 'Найдите Благородный Восьмеричный Путь.<br>
@@ -166,8 +177,7 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         of Four Noble Truths<br>
         and end up with pain.';
         
-$warning = '<b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
-}
+$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 
 $anamemolds = 'Translations by M. Olds';
 $anameasc = 'Asceticism in Dhamma';
@@ -193,10 +203,25 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift is a
 $prongh = 'Project on GitHub';
 
 
+$headerexamples = 'Examples';
+$examplelist = '<li>Definition of the <a href="/assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">Kata.*dukkhaṁ\\\\?</a></li>
+
+ <li>Sutta where Buddha says that he doesn\'t make <a href="/assets/demo/dvayagaaminii_suttanta_pali_1-1.html">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
+
+             <li>All variants of the word <a href="/assets/demo/pa.ticcasamupp_suttanta_pali_33-112.html">paṭiccasamuppado</a> in Pali with quotes in English</li>
+            
+                <li>All suttas about <a href="/assets/demo/eightfold_suttanta_en_158-343.html">Eightfold</a> Path in English</li>
+                <li>All suttas that took place or related to <a href="/assets/demo/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
+                <li>All suttas where <a href="/assets/demo/sariputt_suttanta_ru_168-1055.html">Sariputta</a> was mentioned in Russian</li>
+    
+             <li>All suttas about or containing the word <a href="/assets/demo/ocean_suttanta_en_85-228.html">ocean</a> in English</li>
+                 <li>All Suttas with <a href=./assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html>metaphors & similies</a> in Pali and English</li>   ';
+$howtoheader = 'How to Search';
 
 $contactheader = 'Contacts';
 $contaccalltoaction = 'Find the Noble Eightfold Path.<br>
 							Understand the Four Noble Truths.<br>Dhamma - is Actuality.
                       ';
 $closemodal = 'Close Window';
+}
 ?>

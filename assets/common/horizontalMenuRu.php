@@ -91,13 +91,13 @@ echo '<div class="d-md-inline-block">
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-table-list"></i>
-<figcaption class="figure-caption text-center">' . $anamematerials . '</figcaption>   
+<figcaption class="figure-caption text-center">Грамматика</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
-      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntOr/view?usp=sharing">' . $anamecases . '</a></li>
+      <li><a class="dropdown-item" href="' . $linkcasesru . '">Падежи</a></li>
       
-      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">Спряжения</a></li>
+      <li><a class="dropdown-item" href="' . $linkconj . '">Спряжения</a></li>
 
    <li><a class="dropdown-item" href="https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing">Курс по Пали</a></li>
          <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>

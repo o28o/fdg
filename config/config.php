@@ -8,11 +8,8 @@ if ( preg_match('/Android/', $uname)  ) {
 //$mode = 'online';
 
 $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
-      $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
-      
+$mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
-
-
 
 $linkforthsu = '/tipitaka.theravada.su/dn/';
 $linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
@@ -43,7 +40,6 @@ $linkforthru = 'https://theravada.ru/Teaching/Canon/Suttanta/Texts/';
 $linkforthai = "https://suttacentral.net/"; 
 $linkforthaiend = '/th/siam_rath';
 
-
 //extralinks.php
 $locationru = $basedir. '/theravada.ru/Teaching/Canon/Suttanta/Texts';
 $locationTocThsu = $basedir. "/assets/texts";
@@ -60,10 +56,9 @@ $scroottextlocation = '/home/a0092061/data/suttacentral.net/sc-data/sc_bilara_da
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
       } else if ( preg_match('/Linux/', $uname)  ) {     
-
-      $mode = 'offline';
- $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
-      $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
+$mode = 'offline';
+$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+$mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //$mode = 'online';
 
 $basedir = "/var/www/html/";
@@ -95,5 +90,4 @@ $scriptfile = $basedir. '/scripts/ranges.sh';
 $thsulocation = $basedir. '/tipitaka.theravada.su/';
 $thrulocation = $basedir. '/theravada.ru/Teaching/Canon';
 $bwlocation = $basedir. '/bw';
-
-      ?>
+?>

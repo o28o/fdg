@@ -3,8 +3,8 @@
 <?php
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
+include_once('config/translate.php');
 include 'scripts/opentexts.php';
-
 ?>
     <head>
       <meta charset="UTF-8">
@@ -59,10 +59,9 @@ include 'scripts/opentexts.php';
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-      <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> 
+<!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> 
 	  nav-link -->
-	  
-	  
+
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link px-0 px-lg-0 rounded" href="./sc/">Читать</a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link px-0 px-lg-0 rounded" href="/history.php">История Поиска</a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link px-0 px-lg-0 rounded" href="#help">Помощь</a></li>
@@ -83,14 +82,10 @@ include 'scripts/opentexts.php';
             <!--    <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />-->
                 <!-- Masthead Heading-->
 <h1 class="masthead-heading">
-        <a data-bs-toggle="tooltip" data-bs-placement="top" title="На Pāḷi, Русском, ไทย и Английском">  
-        
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="На Pāḷi, Русском, ไทย и Английском">
   Найдите Истину
  </a>
   </h1>
-            
-               
-
                 <!-- <h5 class="mr=5">Pāḷi, Русский, ไทย и English</h5> -->
 				
                 <!-- Icon Divider-->
@@ -105,7 +100,6 @@ include 'scripts/opentexts.php';
                 </div>
     
           <?php
-      
 			echo '<form method="GET" action=
 			"';  
 			echo htmlspecialchars($_SERVER[" PHP_SELF "]);
@@ -263,20 +257,16 @@ include 'scripts/multilang-search.php';
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="help">
             <div class="container text-center">
-              
-           	
-    
-      <?php
+<?php
       if ( $mode == "offline" ) {
       include 'assets/common/horizontalMenuRuOffline.php'; 
       } else {
       include 'assets/common/horizontalMenuRu.php'; 
       }
       ?>
-
-         <!--            	<p class="text-center">
-	<a href="./history.php" class="btn btn-primary" role="button btn-lg">История Поиска</a>
-	</p>
+         <!--	<p class="text-center">
+             	<a href="./history.php" class="btn btn-primary" role="button btn-lg">История Поиска</a>
+             	</p>
 <div class="divider-custom-icon text-center">
               <i class="fa-solid fa-book fa-4x" title="Exchange"></i> <i class="fa-solid fa-list fa-4x"></i>
               </div> -->
@@ -284,7 +274,7 @@ include 'scripts/multilang-search.php';
         
 	<h4 class="page-section-heading text-center mb-4">Как пользоваться?</h4>
 	        <div class="embed-container mb-5"> 
-                                   <iframe src="https://www.youtube.com/embed/4KIqQYSxTSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; " allowfullscreen></iframe>
+                                   <iframe src="https://www.youtube.com/embed/4KIqQYSxTSE" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; " allowfullscreen></iframe>
 									</div>
 
         <p class="lead mb-5">

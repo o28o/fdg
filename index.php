@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <?php
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
+include_once('config/translate.php');
 include 'scripts/opentexts.php';
 ?>
+<html lang="<?php echo $htmllang;?>">
     <head>
       <meta charset="UTF-8">
 
 <title>find.Dhamma.gift</title>
  <meta http-equiv="Cache-control" content="public">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="Liberation Search Engine. Search in Pali Suttanta and Vinaya" />
+<meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
 <!-- Favicon-->
 
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="find.Dhamma.gift" />
-<meta property="og:description" content="Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai" />
+<meta property="og:description" content="<?php echo $ogdesc;?>" />
 
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />
-<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/img/social_sharing_gift.jpg" />
+<meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="find.Dhamma.gift - Liberation Search Engine">
-<meta name="twitter:description" content="Search in Pali Suttas and Vinaya in Pali, Russian, English and Thai">
+<meta name="twitter:title" content="<?php echo $titletwit;?>">
+<meta name="twitter:description" content="<?php echo $ogdesc;?>">
 <link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
 <script src="/assets/js/jquery-3.6.0.js"></script>
@@ -54,19 +56,19 @@ include 'scripts/opentexts.php';
             <a class="navbar-brand mobile-center" href="/"> <div class="container"><img src="./assets/img/dhammafindlogo.png"  style="width:100px;"></a>
                 <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
+                   <?php echo $menu;?>
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
       <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> -->
             
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/sc/">Read</a></li>
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/history.php">Search History</a></li>
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#help">How to</a></li>
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project">About</a></li>             
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links">Useful Links</a></li>
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts">Contacts</a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/sc/"><?php echo $menuread;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/history.php"><?php echo $menuhist;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#help"><?php echo $menuhowto;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links"><?php echo $menulinks;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
 <li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 px-0 px-lg-1 rounded link-light" href="/">En</a> 
 									<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a></p></li>		
                     </ul>
@@ -83,9 +85,8 @@ include 'scripts/opentexts.php';
                 <!-- Masthead Heading-->
                 
     <h1 class="masthead-heading">
-        <a data-bs-toggle="tooltip" data-bs-placement="top" title="In Pāḷi, English, Russian & ไทย">  
-        
-Search for Truth
+        <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
+<?php echo $title;?>
  </a>
   </h1>
   
@@ -132,29 +133,22 @@ $(document).ready(function(){
 
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="Pali") echo "checked";?> value="">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="Default search. In Suttas of an, sn, mn, dn. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya">Pāḷi</a>
-  
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippli;?>"><?php echo $radiopli;?></a>
   </div>
 
   
    <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-def ") echo "checked";?> value="-def ">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title='Search for definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. For all-round view studing all related Suttas are recommended. See "Advanced" for details'>Def</a>
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipdef;?>'><?php echo $radiodef;?></a>
   </div>
-  
-
-  
   <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($extra) && $p=="-vin") echo "checked";?> value="-vin ">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="Search in Pali Vinaya">Vin</a></div>
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipvin;?>"><?php echo $radiovin;?></a></div>
     
           <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... or "(X|Y|...)" including quotes. Finds texts containing only both and more matches for X, Y ...
-  Without this option texts containing even one match will be in results'>Onl</a>
-  
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></a>
   </div>
-    
     
   <!-- extra options -->
   <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings"><i class="fa-solid fa-gear"></i></a>
@@ -163,27 +157,27 @@ $(document).ready(function(){
 
       <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-kn ">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig">+KN</a>
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipkn;?>"><?php echo $radiokn;?></a>
   </div>
   
     <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-all ">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="+ search in Pali in all books of kn including later texts">+Later</a>
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipltr;?>"><?php echo $radioltr;?></a>
   </div>
 
   <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="English") echo "checked";?> value="-en">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then thebuddhaswords.net texts, then sc.net translations">Eng</a>
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipen;?>"><?php echo $radioen;?></a>
   </div>
 
    <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations. Without this option default search will start with Pali texts, then with sc.net Thai translations">ไทย</a>
+    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipth;?>"><?php echo $radioth;?></a>
    </div> 
      <br>
      <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="(optional) Search in an, sn, mn, dn in Russain Suttacentral.net translations">Rus</a>
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
   </div>
   
   <br>
@@ -206,7 +200,6 @@ $(document).ready(function(){
         </p>          
              </div>    
 </div>
-
 </div>
  
   <!-- extra options end -->
@@ -228,27 +221,30 @@ include 'scripts/multilang-search.php';
         <section class="page-section portfolio" id="help">
             <div class="container text-center">
       <?php
-      if ( $mode == "offline" ) {
-      include 'assets/common/horizontalMenuEnOffline.php'; 
+      if ( $lang == "ru" ) {
+        if ( $mode == "offline" ) {
+      include 'assets/common/horizontalMenuRuOffline.php'; 
       } else {
-      include 'assets/common/horizontalMenuEn.php'; 
+      include 'assets/common/horizontalMenuRu.php'; 
       }
+      } else {
+        if ( $mode == "offline" ) {
+        include 'assets/common/horizontalMenuEnOffline.php'; 
+        } else {
+        include 'assets/common/horizontalMenuEn.php'; 
+        }
+      } 
       ?>
 
-				<h4 class="page-section-heading text-center mb-4">How-To Video</h4>
+				<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>
 		
 			<div class="embed-container mb-5"> 
-                   <iframe src="https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
-							                    		</div>
-			
+                   <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
+									</div>
+									
         <div class="font-italic"> 
         <p class="lead mb-5 font-italic text-center ">
-          All-round view on Four Noble Truths<br>
-        in Pali Suttas and Vinaya.<br>
-        Understand the real meaning <br>
-        of Four Noble Truths<br>
-        and end up with pain.
-
+          <?php echo $fntmessage;?>
                         </p></div> 
          
               <div class="container-lg alert alert-warning float-start text-left mb-3" role="alert">

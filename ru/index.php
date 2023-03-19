@@ -725,7 +725,7 @@ include 'scripts/multilang-search.php';
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
                                     <!-- Portfolio Modal - Text-->
                                        <div class="embed-container"> 
-                                   <iframe src="https://www.youtube.com/embed/iKRaa9D07-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+                                   <iframe src="<?php echo $demovideolink;?> " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
 									</div>
 							   
                                     <button class="btn btn-primary" data-bs-dismiss="modal">

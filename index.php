@@ -251,7 +251,7 @@ include 'scripts/multilang-search.php';
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">		 
                   		 
-         <h4 class="page-section-heading text-center mb-4">Detailed Video</h4>
+         <h4 class="page-section-heading text-center mb-4"><?php echo $demovideo;?> </h4>
                     <div class="col-md-6 col-lg-4 mb-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -265,7 +265,7 @@ include 'scripts/multilang-search.php';
 				
                     </div>
             
-			<h4 class="page-section-heading text-center mb-4">Tips & Tricks</h4>
+			<h4 class="page-section-heading text-center mb-4"><?php echo $basics;?> </h4>
                     <div class="col-md-6 col-lg-4 mb-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -281,7 +281,7 @@ include 'scripts/multilang-search.php';
 				
                     </div>
 
-<h4 class="page-section-heading text-center mb-4">Advanced</h4>
+<h4 class="page-section-heading text-center mb-4"><?php echo $advanced;?> </h4>
                     <div class="col-md-6 col-lg-4 mb-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -339,7 +339,7 @@ include 'scripts/multilang-search.php';
                     <div class="col-lg-4 mb-5 mb-lg-0">
           
 
-                        <h4 id="research" class="text-uppercase mb-4">Research</h4>
+                        <h4 id="research" class="text-uppercase mb-4"><?php echo $anameresearch;?> </h4>
                
                 <div class="list-group">
       <?php
@@ -435,7 +435,7 @@ include 'scripts/multilang-search.php';
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 id="read" class="text-uppercase mb-4">Read</h4>
+                        <h4 id="read" class="text-uppercase mb-4"><?php echo $anameread;?> </h4>
                        
 
  <div class="list-group">
@@ -577,7 +577,7 @@ include 'scripts/multilang-search.php';
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Advanced</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $advanced; ?></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -588,28 +588,8 @@ include 'scripts/multilang-search.php';
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
                                     <!-- Portfolio Modal - Text-->
             <p class="mb-4">
-                <strong>Tip #1</strong><br>
-								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
-								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
-								  <strong>Tip #2</strong><br>
-								   To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
-								 <br><br>
-								  
-									<strong>Tip #3</strong><br>
-								   If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
-									<strong>Tip #4</strong><br>
-								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\) they should work. Read and study regex to boost your search abilities.<br><br>
-								   
-								   <strong>Tip #5</strong><br>
-								
-								   Read about <a target="_blank" href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
-								   
-			<strong>How "Def" option works?</strong><br>
-									With Def following search will run:<br>
-grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
-Create an issue on github or send an email, if you'll find other criteria.<br><br>								   
-                                                                                  								   
-                                                                                  								</p>
+<?php echo $advancedcontent; ?>
+</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         <?php echo "$closemodal"; ?>
@@ -631,7 +611,7 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tips & Tricks</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $basics; ?></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -641,56 +621,7 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
                                     <!-- Portfolio Modal - Image
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/dhammawheel.jpg" alt="..." /> -->
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4"><strong>Tip #0</strong><br>
-										Search available in Pali, English, Russian and Thai materials of SuttaCentral.net and also in thebuddhaswords.net. If some text is not presented there, you wont be able to find it.<br>
-									Also, e.g. if "sankhara" is translated as "formation" in thw materials you won't find it in suttacentral.net, as it's translated as "choice" and vice-versa.<br>
-										The following logic is applied: if you search in Roman script: 1st is Pali, then tbw materials, then Suttacentral.net materials. In Thai script - 1st is Pali, then Thai translations. In Cyrillic - Russian translations only.
-										<br><br>
-						
-									 <strong>Tip #1</strong><br>
-                                    Use special characters ā ī ū ḍ ṁ ṁ ṇ ṅ ñ ṭ<br><br>
-                                   
-								   <strong>Tip #2 Khuddaka NIkaya</strong><br>
-									 Search is performed in All DN, MN, SN, AN. use <strong>-kn</strong> option if you also want to include results from the following books of KN: Dhammapada, Udāna, Itivuttaka, Suttanipāta, Theragāthā, Therīgāthā. Other books of KN will not be used in the search even with option. You may use alternative services to make searches in Jatakas and other book of KN.<br>
-									 Example #1: -kn jamm
-									 <br>Will search in DN, MN, SN, AN + books of KN listed above
-									 <br>
-									 Example #2: jamm
-									 <br>Will search in DN, MN, SN, AN only.
-									 <br><br>
-									 
-									 <strong>Tip #3 Vinaya</strong><br> 
-                                   if you're willing to search in Vinaya add -vin to your search request. For pali vinaya search for cetana the line will look like: -vin cetana <br><br>
-
-									 <strong>Tip #4 Stem</strong><br>
-                                    Use stem of the word for broader results with or without prefixes or endings. 
-									<br><br>
-									          <strong>Tip #5</strong><br>
-                                    Prefer Pali to other languages. Pali is the language in which the oldest Dhamma related texts are written.	
-									<br><br>
-									<strong>Tip #6</strong><br>
-									For Pali search results you have two options: results sorted by Suttas/Texts with quotes and by words. Use both to get some extra details.<br><br>
-                                   <strong>Tip #7</strong><br>Minimal length of search pattern is 3 symbols. But if possible search for longer patterns. Then you will get more precise results.<br><br>
-                                   
-								 
-									<strong>Tip #8</strong><br> 
-                                   We highly recommend to search in Pali. As it will give the best results, and you will develop a very important habit to look into Pali and do not rely blindly on the translations. But obviously you can get some benefits from searches in translations. If you are looking for animals, plants, etc. There are at least 4 different pali words for a snake but in Russian or English - it's just "a snake" or "a viper". <br><br>
-				
-									<strong>Tip #9</strong><br>
-                                   if your request fails due to timeout try longer search pattern.  <br><br>
-								   <strong>Tip #10</strong><br>
-                                   if your request fails due to timeout, and you can't use longer search pattern try <a href="./bg.php">Background Mode</a>. It might work.
-								   <br><br> 
-								   
-                                                  <strong>What is Mtphr count in result table?</strong><br>
-										Matches in all text, not connected to search pattern:<br>
-										"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
-										Following words are ignored:<br>
-    "adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
-    Create an issue on github or send an email, if you'll find other criteria.
-    <br><br>                                    
-									
-									</p>
+<?php echo $basicscontent;?>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i> 
                                         <?php echo "$closemodal"; ?>
@@ -712,7 +643,7 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Demo Video</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">                                        <?php echo $demovideo; ?></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -723,8 +654,8 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
                                     <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
 									<!-- Portfolio Modal - Text-->
 									  <div class="embed-container"> 
-                                        <iframe src="https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
-							                    		</div>
+                                        <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+									</div>
 									                          <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         <?php echo "$closemodal"; ?>

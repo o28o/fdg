@@ -317,7 +317,7 @@ include 'scripts/multilang-search.php';
         <section class="page-section bg-primary text-white mb-0" id="project">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About Project</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white"><?php echo $aboutheader; ?></h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -329,16 +329,13 @@ include 'scripts/multilang-search.php';
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift is a Liberation Search Engine, it's a search tool based on SuttaCentral.net and Theravada.ru materials. You can search in Pali, Russian, Thai and English for meanings, definitions, metaphors, explanations, people, locations etc. described in Suttas and Vinaya.
-                    </p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">Dhamma Enthusiasts, Developers and Contributors are warmly welcome, because project has great potential to find the real meaning of the texts. But! I'm not a developer and its just a bash script with php wrapper😊</p></div>
-                    
+<?php echo $aboutprp; ?>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
                     <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
                 
-                   <i class="fa-brands fa-github"></i>     Project on GitHub
+                   <i class="fa-brands fa-github"></i><?php echo $prongh; ?>
                     </a>
                 </div>
             </div>
@@ -564,12 +561,10 @@ include 'scripts/multilang-search.php';
 </div>
                     <!-- Footer About Text-->
                     <div id="contacts" class="col-lg-0 text-center">
-                        <h4 class="text-uppercase mt-5 mb-4">Contacts</h4>
+                        <h4 class="text-uppercase mt-5 mb-4">                                        <?php echo "$contactheader"; ?></h4>
 						
                         <p class="lead mb-4">
-                            Find the Noble Eightfold Path.<br>
-							Understand the Four Noble Truths.<br>Dhamma - is Actuality.
-                      
+                        <?php echo $contaccalltoaction; ?>
                         </p>
 							   <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
                         <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:o@dhamma.gift"><i class="fa-solid fa-at"></i></a>
@@ -629,7 +624,7 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
                                                                                   								</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        <?php echo "$closemodal"; ?>
                                     </button>
                                 </div>
                             </div>
@@ -709,8 +704,8 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
 									
 									</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        <i class="fas fa-xmark fa-fw"></i> 
+                                        <?php echo "$closemodal"; ?>
                                     </button>
                                 </div>
                             </div>
@@ -744,7 +739,7 @@ Create an issue on github or send an email, if you'll find other criteria.<br><b
 							                    		</div>
 									                          <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
+                                        <?php echo "$closemodal"; ?>
                                     </button>
                                 </div>
                             </div>

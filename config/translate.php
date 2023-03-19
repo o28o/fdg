@@ -84,6 +84,23 @@ $anameconj = 'Спряжения';
 $anametextbook = 'Курс по Пали';
 $anameothermat = 'Другие Материалы';
 $anamesdiff = 'Сравнить Две Сутты';
+
+
+
+$aboutheader = 'О Проекте';
+$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift это поисковая система Освобождения, инструмент для поиска основанный на материалах SuttaCentral.net и Theravada.ru. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
+<div class="col-lg-4 me-auto"><p class="lead">Дхамма энтузиасты, разработчики горячо приветствуются, у проекта большой потенциал в поисках настоящего значения текстов. Но, я не разработчик и это всего лишь скрипт на Bash и PHP-обёртка😊</p></div>';
+$prongh = 'Проект на GitHub';
+
+
+
+
+
+$contactheader = 'Контакты';
+$contaccalltoaction = 'Найдите Благородный Восьмеричный Путь.<br>
+							Поймите Четыре Благородные Истины.<br>
+							Дхамма - это Действительность.';
+$closemodal = 'Закрыть Окно';
 }
 else {
 $lang = "en";
@@ -168,4 +185,18 @@ $anameconj = 'Conjugations';
 $anametextbook = 'Pali Textbook';
 $anameothermat = 'Other Materials';
 $anamesdiff = 'Sutta Diff';
+
+
+$aboutheader = 'About Project';
+$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift is a Liberation Search Engine, it\'s a search tool based on SuttaCentral.net and Theravada.ru materials. You can search in Pali, Russian, Thai and English for meanings, definitions, metaphors, explanations, people, locations etc. described in Suttas and Vinaya.</p></div>
+<div class="col-lg-4 me-auto"><p class="lead">Dhamma Enthusiasts, Developers and Contributors are warmly welcome, because project has great potential to find the real meaning of the texts. But! I\'m not a developer and its just a bash script with php wrapper😊</p></div>';
+$prongh = 'Project on GitHub';
+
+
+
+$contactheader = 'Contacts';
+$contaccalltoaction = 'Find the Noble Eightfold Path.<br>
+							Understand the Four Noble Truths.<br>Dhamma - is Actuality.
+                      ';
+$closemodal = 'Close Window';
 ?>

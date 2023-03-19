@@ -1,9 +1,10 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
+
 $htmllang = "ru";
 $mainpage = '/ru';
-$mainscpage = '/ru/sc';
+$mainscpage = $mainpage . '/sc';
 $metadesc = 'Поисковый Сайт Освобождения. Поиск в Пали Суттах и Винае';
 $titletwit = 'find.Dhamma.gift - Поисковая Система Освобождения';
 $ogdesc = 'Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
@@ -208,6 +209,20 @@ grep -E -A1 -Eir "an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī)
 Создайте issue на github или напишите по почте, если вы найдёте другие критерии.<br><br> ';
 
 $closemodal = 'Закрыть Окно';
+
+$head2recomlinks = "Полезные Ссылки ";
+$detailonline = 'онлайн';
+$detailoffline = 'оффлайн';
+$detailonandoffline = 'онлайн и оффлайн';
+$detailapp = 'приложение';
+$detailtable = 'таблица';
+$detailtextbook = 'учебник';
+
+$header5fdgoffline = 'find.dhamma.gift Оффлайн Версия';
+
+$pfdg = 'Всепроникающий поиск по Суттам и Винае';
+$pfdgoffline = 'Оффлайн версия и инструкция по установке. Пока только Android🙏';
+
 }
 else {
 $lang = "en";
@@ -390,5 +405,16 @@ Create an issue on github or send an email, if you\'ll find other criteria.<br><
 
 $closemodal = 'Close Window';
 
+$head2recomlinks = 'Recommended Links';
+$detailonline = 'online';
+$detailoffline = 'offline';
+$detailonandoffline = 'online & offline';
+$detailapp = 'app';
+$detailtable = 'table';
+$detailtextbook = 'textbook';
+
+$header5fdgoffline = 'find.dhamma.gift Offline Edition';
+$pfdg = 'All encompassing search within all Suttas and Vinaya';
+$pfdgoffline = 'Offline version & setup instruction. Right now Android only🙏';
 }
 ?>

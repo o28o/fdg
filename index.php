@@ -331,7 +331,7 @@ include 'scripts/multilang-search.php';
   
         <!-- Footer-->
         <footer id="links" class="footer text-center ">
-               <h2 class="page-section-heading text-center text-uppercase text-white mb-5">Recommended Links</h2>
+               <h2 class="page-section-heading text-center text-uppercase text-white mb-5"><?php echo $head2recomlinks;?></h2>
 			   
             <div class="container">
                 <div  class="row">
@@ -349,9 +349,9 @@ include 'scripts/multilang-search.php';
       echo '  <a href="https://find.dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">find.dhamma.gift</h5>
-      <small class="text-muted">online</small>
+      <small class="text-muted">' . $detailonline . '</small>
     </div>
-    <p class="mb-1">All encompassing search within all Suttas and Vinaya.</p>
+    <p class="mb-1">' . $pfdg . '</p>
     <small class="text-muted"></small>
   </a>';
       
@@ -360,10 +360,10 @@ include 'scripts/multilang-search.php';
       echo '
   <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">find.dhamma.gift Offline Edition</h5>
-      <small class="text-muted">offline</small>
+      <h5 class="mb-1">' . $header5fdgoffline . '</h5>
+      <small class="text-muted">' . $detailoffline . '</small>
     </div>
-  <p class="mb-1">Offline version & setup instruction. Right now Android only🙏</p>
+  <p class="mb-1">' . $pfdgoffline . '</p>
     <small class="text-muted"></small>
   </a>';
       }
@@ -372,7 +372,7 @@ include 'scripts/multilang-search.php';
     <a href="/cse.php" target="_blank" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Google from dhamma.gift</h5>
-      <small class="text-muted">online</small>
+      <small class="text-muted"><?php echo $detailonline;?> </small>
     </div>
     <p class="mb-1">
       Search with Google within recommended resources
@@ -383,7 +383,7 @@ include 'scripts/multilang-search.php';
         <a target="_blank" href="https://digitalpalidictionary.github.io/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Digital Pali Dictionary</h5>
-      <small class="text-muted">app</small>
+      <small class="text-muted"><?php echo $detailapp;?></small>
     </div>
     <p class="mb-1">The biggest and quickest dictionary and pali grammar.</p>
     <small class="text-muted">Available for PC, Mac, Android, IOS</small>
@@ -392,7 +392,7 @@ include 'scripts/multilang-search.php';
     <a target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Pali Text Society Dictionary</h5>
-      <small class="text-muted">online</small>
+      <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
     <p class="mb-1">One of the most famous Pali English dictionaries</p>
     <small class="text-muted"></small>
@@ -402,7 +402,7 @@ include 'scripts/multilang-search.php';
     <a target="_blank" href="https://www.wisdomlib.org/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Wisdomlib.org</h5>
-      <small class="text-muted">online</small>
+      <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
     <p class="mb-1">Excellent online collection of dictionaries. Not only Pali, but multiple spiritual traditions of India</p>
     <small class="text-muted">Very helpful for difficult terms.</small>
@@ -411,7 +411,7 @@ include 'scripts/multilang-search.php';
       <a target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">TamilCube.com</h5>
-      <small class="text-muted">online</small>
+      <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
     <p class="mb-1">Simple Online English-Pali Dictionary</p>
     <small class="text-muted"></small>
@@ -421,7 +421,7 @@ include 'scripts/multilang-search.php';
   https://drive.google.com/drive/folders/1bdkm-g_ReZi5QEior_gNTok8r4flAfa3?usp=sharing" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">All Pali words from Suttanta (except KN) & Vinaya</h5>
-      <small class="text-muted">offline</small>
+      <small class="text-muted"><?php echo $detailoffline;?></small>
     </div>
     <p class="mb-1">In alphabetical order with count number</p>
     <small class="text-muted"></small>
@@ -429,20 +429,18 @@ include 'scripts/multilang-search.php';
 
 
 </div>  
-                        <p class="lead mb-0"> 
-
-                        </p>
-                    </div>
+  <p class="lead mb-0"> </p>
+    </div>
                     <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 id="read" class="text-uppercase mb-4"><?php echo $anameread;?> </h4>
+<div class="col-lg-4 mb-5 mb-lg-0">
+  <h4 id="read" class="text-uppercase mb-4"><?php echo $anameread;?> </h4>
                        
 
  <div class="list-group">
   <a target="_blank" href="<?php echo $mainpagesclink; ?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">sc.dhamma.gift</h5>
-      <small>online & offline</small>
+      <small><?php echo $detailonandoffline;?></small>
     </div>
     <p class="mb-1 text-left">Pali-English Line-by-line</p>
     <small>Suttacentral.net texts with quicker lightweight interface</small>
@@ -451,7 +449,7 @@ include 'scripts/multilang-search.php';
   <a target="_blank" href="https://Suttacentral.net" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">Suttacentral.net</h5>
-      <small>online & offline</small>
+      <small><?php echo $detailonandoffline;?></small>
     </div>
     <p class="mb-1 text-left">The most complete line-by-line Pali-English collection</p>
     <small>Pali-English dictionary can be turned on in settings</small>
@@ -460,7 +458,7 @@ include 'scripts/multilang-search.php';
     <a target="_blank" href="https://thebuddhaswords.net/home/index.html" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">TheBuddhasWords.net</h5>
-      <small>online</small>
+      <small><?php echo $detailonline;?></small>
     </div>
     <p class="mb-1 text-left">Very impressive paragraph-by-paragraph Pali-English collection</p>
     <small>Pali-English on hover dictionary built-in</small>
@@ -471,7 +469,7 @@ include 'scripts/multilang-search.php';
     <a target="_blank"   href="https://www.digitalpalireader.online/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Digital Pali Reader</h5>
-      <small class="text-muted">online & offline</small>
+      <small class="text-muted"><?php echo $detailonandoffline;?></small>
     </div>
     <p class="mb-1">Very profound online tool for Pali researches.</p>
     <small class="text-muted">Built-in Pali-English dictionary</small>
@@ -480,7 +478,7 @@ include 'scripts/multilang-search.php';
   <a target="_blank"  href="<?php echo $mainpagethsulink; ?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Tipitaka.Theravada.su</h5>
-      <small class="text-muted">online</small>
+      <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
     <p class="mb-1">Multiple translation options. Pali-English-Russian line-by-line.</p>
     <small class="text-muted">Especially recommended for studying Digha Nikaya</small>
@@ -489,7 +487,7 @@ include 'scripts/multilang-search.php';
   <a href="<?php echo $mainpagethrulink; ?>" target="_blank"   class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Theravada.ru </h5>
-      <small class="text-muted">online</small>
+      <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
     <p class="mb-1">The most complete translation of Suttanta in Russian.</p>
     <small class="text-muted"></small>
@@ -509,7 +507,7 @@ include 'scripts/multilang-search.php';
   <a target="_blank" href="<?php echo $linktextbook;?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left ">
       <h5 class="mb-1"><?php echo $anametextbook;?></h5>
-      <small>textbook</small>
+      <small><?php echo $detailtextbook;?></small>
     </div>
     <p class="mb-1 text-left">Highly recommended</p>
     <small></small>
@@ -518,7 +516,7 @@ include 'scripts/multilang-search.php';
     <a target="_blank"   href="<?php echo $linkcases;?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $anamecases;?></h5>
-      <small class="text-muted">table</small>
+      <small class="text-muted"><?php echo $detailtable;?></small>
     </div>
     <p class="mb-1">Cases are mistranslated pretty often.</p>
     <small class="text-muted">Check Pali original</small>
@@ -527,7 +525,7 @@ include 'scripts/multilang-search.php';
   <a target="_blank" href="<?php echo $linkconj; ?>" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1"><?php echo $anameconj; ?> </h5>
-      <small>table</small>
+      <small><?php echo $detailtable;?></small>
     </div>
     <p class="mb-1 text-left">Conjugations sometimes mistranslated.</p>
     <small>Check Pali original</small>
@@ -538,7 +536,7 @@ include 'scripts/multilang-search.php';
   <?php echo $linksothermat; ?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Materials for studying Pali in English and Russian</h5>
-      <small class="text-muted">offline</small>
+      <small class="text-muted"><?php echo $detailoffline;?></small>
     </div>
     <p class="mb-1">Collection of textbooks and tables</p>
     <small class="text-muted"></small>

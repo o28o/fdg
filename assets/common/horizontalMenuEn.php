@@ -1,7 +1,7 @@
 <?php
 echo '	<div class="d-md-inline-block">	
 
-<a class="text-decoration-none mx-1" href="/sc/">
+<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
   <figcaption class="figure-caption text-center">Pāḷi-Eng</figcaption>
@@ -86,7 +86,7 @@ echo '	<div class="d-md-inline-block">
    <li><a class="dropdown-item" href="' . $linkcases . '">' . $anamecases . '</a></li>
        <li><a class="dropdown-item" href="' . $linkconj . '">' . $anameconj . '</a></li>
       <li><a class="dropdown-item" href="' . $linktextbook . '">' . $anametextbook . '</a></li>
-    <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">' . $anameothermat . '</a></li>
+    <li><a class="dropdown-item" href="' . $linksothermat . '">' . $anameothermat . '</a></li>
 </ul>
 
 </div> 

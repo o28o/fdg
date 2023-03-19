@@ -63,7 +63,7 @@ include 'scripts/opentexts.php';
                     <ul class="navbar-nav ms-auto">
       <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> -->
             
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/sc/"><?php echo $menuread;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="<?php echo $mainscpage;?>"><?php echo $menuread;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/history.php"><?php echo $menuhist;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#help"><?php echo $menuhowto;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             
@@ -207,11 +207,7 @@ include 'scripts/multilang-search.php';
             <div class="container text-center">
       <?php
       if ( $lang == "ru" ) {
-        if ( $mode == "offline" ) {
-      include 'assets/common/horizontalMenuRuOffline.php'; 
-      } else {
       include 'assets/common/horizontalMenuRu.php'; 
-      }
       } else {
         include 'assets/common/horizontalMenuEn.php'; 
       } 
@@ -520,32 +516,32 @@ include 'scripts/multilang-search.php';
                     </div>
 					
 					 <div class="col-lg-4 mb-5 mb-lg-0">
-					<h4 id="study" class="text-uppercase mb-4">Study</h4>
+					<h4 id="study" class="text-uppercase mb-4"><?php echo $anamestudy;?></h4>
 	
 	<div class="list-group">
 
 
-  <a target="_blank" href="https://drive.google.com/file/d/1O_wZ_DLMbTMPnyl34Xxr9_t-Px6g8Hb0/view?usp=sharing" class="list-group-item list-group-item-action active" aria-current="true">
+  <a target="_blank" href="<?php echo $linktextbook;?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left ">
-      <h5 class="mb-1">New Pali Course</h5>
+      <h5 class="mb-1"><?php echo $anametextbook;?></h5>
       <small>textbook</small>
     </div>
     <p class="mb-1 text-left">Highly recommended</p>
     <small></small>
   </a>
 
-    <a target="_blank"   href="https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntOr/view?usp=sharing" class="list-group-item list-group-item-action">
+    <a target="_blank"   href="<?php echo $linkcases;?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Pali cases</h5>
+      <h5 class="mb-1"><?php echo $anamecases;?></h5>
       <small class="text-muted">table</small>
     </div>
     <p class="mb-1">Cases are mistranslated pretty often.</p>
     <small class="text-muted">Check Pali original</small>
   </a>
 
-  <a target="_blank" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing" class="list-group-item list-group-item-action" aria-current="true">
+  <a target="_blank" href="<?php echo $linkconj; ?>" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
-      <h5 class="mb-1">Pali verb conjugation</h5>
+      <h5 class="mb-1"><?php echo $anameconj; ?> </h5>
       <small>table</small>
     </div>
     <p class="mb-1 text-left">Conjugations sometimes mistranslated.</p>
@@ -554,7 +550,7 @@ include 'scripts/multilang-search.php';
   
 
   <a target="_blank"  href="
-  https://drive.google.com/drive/u/1/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN" class="list-group-item list-group-item-action">
+  <?php echo $linksothermat; ?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Materials for studying Pali in English and Russian</h5>
       <small class="text-muted">offline</small>

@@ -70,6 +70,18 @@ $anamehist = 'История';
 $anameuseful = 'Полезное';
 $anamedpd = 'Пали-Англ для mDict';
 $anamedpdru = 'Пали-Рус для GoldenDict';
+
+
+
+$anameresearch = 'Исследование';
+$anameread = 'Чтение';
+$anamestudy = 'Изучение';
+$anamematerials = 'Грамматика';
+$anamecases = 'Падежи';
+$anameconj = 'Спряжения';
+$anametextbook = 'Курс по Пали';
+$anameothermat = 'Другие Материалы';
+
 }
 else {
 $lang = "en";
@@ -142,4 +154,13 @@ $anameati = 'Accesstoinsight.org patimokkha';
 $anamehist = 'History';
 $anameuseful = 'Useful Links';
 $anamedpd = 'Pali for mDict';
+
+$anameresearch = 'Research';
+$anameread = 'Read';
+$anamestudy = 'Study';
+$anamematerials = 'Grammar';
+$anamecases = 'Cases';
+$anameconj = 'Conjugations';
+$anametextbook = 'Text Book';
+$anameothermat = 'Other Materials';
 ?>

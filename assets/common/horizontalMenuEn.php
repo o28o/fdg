@@ -56,9 +56,9 @@ echo '	<div class="d-md-inline-block">
     <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=cn.mdict">mDict Android</a></li>
     <li><a class="dropdown-item" href="https://apps.apple.com/app/mdict/id389083586">mDict IOS</a></li>   
  <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  
-   <li><a class="dropdown-item" href="#research">Research</a></li>
-       <li><a class="dropdown-item" href="#read">Read</a></li>
-    <li><a class="dropdown-item" href="#study">Study</a></li>
+   <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
+       <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
+    <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li>
   </ul>
   
        
@@ -79,14 +79,14 @@ echo '	<div class="d-md-inline-block">
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-graduation-cap"></i>
-<figcaption class="figure-caption text-center">Materials</figcaption>   
+<figcaption class="figure-caption text-center">' . $anamematerials . '</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
-   <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true">Cases</a></li>
-       <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">Conjugations</a></li>
-      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk">Pali Textbook</a></li>
-    <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">Other Materials</a></li>
+   <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true">' . $anamecases . '</a></li>
+       <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">' . $anameconj . '</a></li>
+      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk">' . $anametextbook . '</a></li>
+    <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">' . $anameothermat . '</a></li>
 </ul>
 
 </div> 

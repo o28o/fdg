@@ -631,7 +631,7 @@ font-weight: bold;
 
 #controlpanel {
 	position: fixed;
- top: 15px; /* 70px; */
+ bottom: 15px; /* 70px; */
 	float:right;
 	right: 25px;
 	z-index: 9000;

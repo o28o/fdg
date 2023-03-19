@@ -170,9 +170,11 @@ diff -qr bw/ bw1/
 cp /storage/emulated/0/Download/bw_*.zip  .
 
 #fix control panel
-grep "bottom: 15px" css/css.css
-sed -i  "s@bottom: 15px@top: 15px@" css/css.css
 grep "top: 15px" css/css.css
+sed -i  "s@top: 15px@bottom: 15px@" css/css.css
+grep "bottom: 15px" css/css.css
+
+
 
 #fix font
 grep 'font: normal normal 1.15em/1.3em "URWPalladioITU", serif;' css/css.css

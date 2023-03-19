@@ -34,7 +34,7 @@ echo '	<div class="d-md-inline-block">
 <figure class="figure">
   
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-code-compare"></i>
-<figcaption class="figure-caption text-center">Sutta Diff</figcaption>   
+<figcaption class="figure-caption text-center">' . $anamesdiff . '</figcaption>   
 </figure>	  
 </a>
 <a class="text-decoration-none mx-1" href="/history.php">
@@ -83,9 +83,9 @@ echo '	<div class="d-md-inline-block">
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
-   <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true">' . $anamecases . '</a></li>
-       <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">' . $anameconj . '</a></li>
-      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk">' . $anametextbook . '</a></li>
+   <li><a class="dropdown-item" href="' . $linkcases . '">' . $anamecases . '</a></li>
+       <li><a class="dropdown-item" href="' . $linkconj . '">' . $anameconj . '</a></li>
+      <li><a class="dropdown-item" href="' . $linktextbook . '">' . $anametextbook . '</a></li>
     <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">' . $anameothermat . '</a></li>
 </ul>
 

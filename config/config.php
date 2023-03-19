@@ -31,6 +31,9 @@ $anamesc = 'Legacy.suttacentral.net';
 $linktbw = '/bw';
 $linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
+$linktextbook = '/assets/materials/pali_textbook_eng.pdf';
+$linkconj = '/assets/materials/pali_conjugations_eng.pdf';
+$linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
 } else if ( preg_match('/Linux rym.from.sh/', $uname)  ) {
 //
 // ONLINE PROD
@@ -66,6 +69,9 @@ $anamesc = 'SuttaCentral.net';
 $linktbw = 'https://thebuddhaswords.net';
 $linknoblasc = 'https://en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = 'https://www.accesstoinsight.org/tipitaka/vin/sv/index.html';
+$linktextbook = 'https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk';
+$linkconj = 'https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing';
+$linkcases = 'https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true';
 //
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
@@ -97,6 +103,9 @@ $anamesc = 'SuttaCentral.net';
 $linktbw = '/bw';
 $linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
+$linktextbook = '/assets/materials/pali_textbook_eng.pdf';
+$linkconj = '/assets/materials/pali_conjugations_eng.pdf';
+$linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
       } 
 //
 // Common Variables

@@ -81,7 +81,7 @@ $anamecases = 'Падежи';
 $anameconj = 'Спряжения';
 $anametextbook = 'Курс по Пали';
 $anameothermat = 'Другие Материалы';
-
+$anamesdiff = 'Сравнить Две Сутты';
 }
 else {
 $lang = "en";
@@ -161,6 +161,7 @@ $anamestudy = 'Study';
 $anamematerials = 'Grammar';
 $anamecases = 'Cases';
 $anameconj = 'Conjugations';
-$anametextbook = 'Text Book';
+$anametextbook = 'Pali Textbook';
 $anameothermat = 'Other Materials';
+$anamesdiff = 'Sutta Diff';
 ?>

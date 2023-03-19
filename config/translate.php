@@ -40,11 +40,11 @@ $regexMemo = '<h5>Памятка по RegEx</h5>
           <p style="text-align: left;">
   <!--   <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> -->
      <strong>X -exc Y</strong> - искать X, исключить Y<br>
-         <strong>\\bX</strong> - начало или <strong>Y\\b</strong> конец слова<br>
+         <strong>\\\\bX</strong> - начало или <strong>Y\\\\b</strong> конец слова<br>
 <strong>X.*Y</strong> - любое количество символов между X и Y<br>
 <strong>X.{0,10}Y</strong> - от 0 до 10 символов<br>
-<strong>X\\S*\\sY</strong> - рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным<br>     
-<strong>"X(\\S*\\s){0,3}Y"</strong> - расстояние в 0 или 2 слова между X и Y с любым окончанием X<br> 
+<strong>X\\\\S*\\\\sY</strong> - рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным<br>     
+<strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - расстояние в 0 или 2 слова между X и Y с любым окончанием X<br> 
 <strong>[aā]</strong> - искать несколько вариантов<br>           
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - искать все метафоры в Самьютте 56<br> 
 <strong>"(a|b|c)"</strong> - искать несколько отдельных слов одновременно<br>
@@ -58,6 +58,10 @@ $fntmessage = 'Всесторонний взгляд на Четыре Благ�
 		в Палийских Суттах и Винае.<br> 
     Поймите настоящие Четыре Благородные Истины<br> 
    и положите конец боли.';
+$warning = '<b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Чаще всего содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
+ <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1e-uFcjBzmCf08t7BUR-Ffnz3ZlSzhLNUnIWbMbvg3go" class="alert-link"> Примеры ошибок</a> -->
+ <br><br>
+  Самое важное из Учения Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
 }
 else {
 $lang = "en";
@@ -101,11 +105,11 @@ $regexMemo = ' <h5>RegEx Memo</h5>
           <p style="text-align: left;">
      <!--  <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br> -->
        <strong>X -exc Y</strong> - search for X, exclude Y<br>
-       <strong>\\bX</strong> - beginning of the word or <strong>Y\\b</strong> end<br>
-<strong>X.*Y</strong> - ant number of symbols between X and Y<br>
+       <strong>\\\\bX</strong> - beginning of the word or <strong>Y\\\\b</strong> end<br>
+<strong>X.*Y</strong> - any number of symbols between X and Y<br>
 <strong>X.{0,10}Y</strong> - from 0 to 10 symbols<br>
-<strong>X\\S*\\sY</strong> - next words X и Y, with variable ending of X<br>      
-<strong>"X(\\S*\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
+<strong>X\\\\S*\\\\sY</strong> - next words X и Y, with variable ending of X<br>      
+<strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
 <strong>[aā]</strong> - multiple variants<br>           
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
 <strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
@@ -120,6 +124,8 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         Understand the real meaning <br>
         of Four Noble Truths<br>
         and end up with pain.';
+        
+$warning = '<b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 }
 
 ?>

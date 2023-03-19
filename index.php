@@ -182,22 +182,7 @@ $(document).ready(function(){
   
   <br>
          <div style="max-width: 300px; " class="mt-2"> 
-        <h5>RegEx Memo</h5>
-  <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
-          <p style="text-align: left;">
-     <!--  <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br> -->
-       <strong>X -exc Y</strong> - search for X, exclude Y<br>
-       <strong>\\bX</strong> - beginning of the word or <strong>Y\\b</strong> end<br>
-<strong>X.*Y</strong> - ant number of symbols between X and Y<br>
-<strong>X.{0,10}Y</strong> - from 0 to 10 symbols<br>
-<strong>X\\S*\\sY</strong> - next words X и Y, with variable ending of X<br>      
-<strong>"X(\\S*\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
-<strong>[aā]</strong> - multiple variants<br>           
-<strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
-<strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
-<strong>'^"mn.*X'</strong> - find X in all Majjhimma Nikaya<br>            
-<strong>dn22.*Y</strong> - find Y in DN22 only<br>
-        </p>          
+<?php echo $regexMemo;?>
              </div>    
 </div>
 </div>
@@ -248,7 +233,7 @@ include 'scripts/multilang-search.php';
                         </p></div> 
          
               <div class="container-lg alert alert-warning float-start text-left mb-3" role="alert">
- <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one's own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.
+ <i class="fa-solid fa-triangle-exclamation "></i> <?php echo $warning;?>
  <!-- <a target="_blank" href="https://docs.google.com/document/d/1-ZY2G7dVq48EG8VPZIrItE6ShfqWgV5U9qDcb7VrelU/edit?usp=drivesdk" class="alert-link">Sn56.11</a>. -->
 </div>
 

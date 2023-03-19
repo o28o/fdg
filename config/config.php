@@ -24,6 +24,8 @@ $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/pyth
 //api-emulator
 $scroottextlocation = "/storage/emulated/0/Dhamma/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";
 
+// mainmenu
+$linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
 } else if ( preg_match('/Linux rym.from.sh/', $uname)  ) {
 //
 // ONLINE PROD
@@ -52,6 +54,9 @@ $adapterscriptlocation = '/home/a0092061/domains/find.dhamma.gift/aksharamukha/b
 $scroottextlocation = '/home/a0092061/data/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms';
 // include_once('../config/config.php');
 
+// mainmenu
+$linkmolds = 'https://obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+
 //
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
@@ -75,6 +80,10 @@ $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/pyth
 
 //api-emulator
 $scroottextlocation = "/var/www/html/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";
+
+// mainmenu
+$linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+
       } 
 //
 // Common Variables

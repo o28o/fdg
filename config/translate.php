@@ -62,6 +62,9 @@ $warning = '<b>Предупреждение!</b><br><br> Переводы вып
  <!--<a target="_blank" href="https://docs.google.com/spreadsheets/d/1e-uFcjBzmCf08t7BUR-Ffnz3ZlSzhLNUnIWbMbvg3go" class="alert-link"> Примеры ошибок</a> -->
  <br><br>
   Самое важное из Учения Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
+  
+ $anamemolds = 'Переводы Майкла Олдса'; 
+  
 }
 else {
 $lang = "en";
@@ -127,5 +130,9 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         
 $warning = '<b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 }
+
+$anamemolds = 'Translations by M. Olds';
+
+
 
 ?>

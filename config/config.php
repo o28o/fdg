@@ -37,7 +37,7 @@ $linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
 $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
 $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
 
-} else if ( preg_match('/Ubuntu/', $uname)  ) {     
+} else if ( preg_match('/Ubuntu/', $uname)  || preg_match('/CentOS-Server/', $uname) ) {     
 //
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
@@ -74,7 +74,7 @@ $linkconj = '/assets/materials/pali_conjugations_eng.pdf';
 $linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
 $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
       } 
-else if ( preg_match('/Linux rym.from.sh/', $uname)  || preg_match('/CentOS-Server/', $uname)) {
+else if ( preg_match('/Linux rym.from.sh/', $uname) ) {
 //
 // ONLINE PROD
 //

@@ -40,7 +40,7 @@ maxmatchesbg=3000
 archivenumber=84
 
 
-elif [[ "`uname -a`" == *"Ubuntu"* ]]; then 
+elif [[ "`uname -a`" == *"Ubuntu"* ]] || [[ "`uname -a`" == *"CentOS-Server"* ]]; then 
 
 sitename=http://localhost
 nicevalue=1
@@ -70,7 +70,7 @@ archivenumber=280
 archivenumber=91
 
 
-elif [[ "`uname -a`" == *"rym.from.sh"* ]] || [[ "`uname -a`" == *"CentOS-Server"* ]]; then
+elif [[ "`uname -a`" == *"rym.from.sh"* ]]; then
 
 sitename=https://find.dhamma.gift
 mode=online

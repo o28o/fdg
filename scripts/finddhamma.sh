@@ -511,6 +511,19 @@ echo "$uniqword: $linkswwords `(( $linkscount >= 6 )) && echo \"($linkscount)\"`
 done
 }
 
+
+function genbwlinks {
+forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
+
+  if [[ -s $bwlocation/$forbwlink/${filenameblock}.html  ]] ; then 
+  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}${forbwlink}'/"$0".html"}' `
+  elif [[ -s $bwlocation/$forbwlink/${forbwranges}.html  ]] ; then 
+  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}$forbwlink/$forbwranges'.html"}' `
+  else
+  linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${urllinkenend}'"}'`
+  fi 
+}
+
 if [[ "$type" == json ]]; then
 
 filelist=`echo "
@@ -619,15 +632,9 @@ fi
 linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=pli"}' ` 
 
 linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0"&lang=pli"}' `
-forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
 
-  if [[ -s $bwlocation/$forbwlink/${filenameblock}.html  ]] ; then 
-  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}${forbwlink}'/"$0".html"}' `
-  elif [[ -s $bwlocation/$forbwlink/${forbwranges}.html  ]] ; then 
-  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}$forbwlink/$forbwranges'.html"}' `
-  else
-  linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${urllinkenend}'"}'`
-  fi 
+
+genbwlinks
 
 count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file | wc -l ` 
 echo $count >> $tempfile
@@ -765,16 +772,7 @@ linklang=`curl -s https://tipitaka.theravada.su/toc/translations/1098 | grep "Д
 fi
   fi    
   
-  if [[ $mode == "offline" ]]
-then 
-forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
-linken=`echo $filenameblock |  awk '{print "/bw/'$forbwlink'/"$0".html"}' `
-linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
-else 
-linkpli=`echo $filenameblock |  awk '{print "/sc/?q="$0"&lang=pli"}' `
-linken=`echo $filenameblock |  awk '{print "'$urllinkbw/$forbwlink'"$0"'$urllinkbwend'"}' `
-
-fi
+genbwlinks
   
 
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `

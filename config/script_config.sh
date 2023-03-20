@@ -39,8 +39,39 @@ filesizenooverwrite=100000000000
 maxmatchesbg=3000
 archivenumber=84
 
+elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
+sitename=http://localhost
+nicevalue=1
+mode=online
+apachesitepath=/var/www/html
+suttapath=$apachesitepath/suttacentral.net/
 
-elif [[ "`uname -a`" == *"Ubuntu"* ]] || [[ "`uname -a`" == *"CentOS-Server"* ]]; then 
+linkforthsu=https://tipitaka.theravada.su
+linkforthru=https://theravada.ru
+linkforthai=https://suttacentral.net/
+linkforthaiext=/th/siam_rath
+linkforru=https://suttacentral.net/
+
+
+urllinkpli=https://find.dhamma.gift/
+urllinkenmid=
+#urllinkbwend=.html
+urllinken='/sc/?q='
+urllinkenend='&lang=pli-eng'
+urllinkbw=/bw/
+
+wbefore=1
+wafter=3
+linesafter=0
+minlength=2
+truncatelength=30
+filesizenooverwrite=1000000000000
+maxmatchesbg=300000
+archivenumber=280
+archivenumber=91
+
+
+elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
 
 sitename=http://localhost
 nicevalue=1
@@ -98,6 +129,7 @@ urllinkenmid=/en/
 urllinkenend='?layout=linebyline'
 urllinkbw=https://thebuddhaswords.net/
 urllinkbwend=.html
+
 wbefore=1
 wafter=3
 linesafter=0

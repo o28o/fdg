@@ -42,6 +42,7 @@ $regexMemo = '<h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
   <!--   <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> -->
+       <strong>-la 2 X</strong> - искать X и добавить в результаты 1 следующую строку после строки с X<br>
      <strong>X -exc Y</strong> - искать X, исключить Y<br>
          <strong>\\\\bX</strong> - начало или <strong>Y\\\\b</strong> конец слова<br>
 <strong>X.*Y</strong> - любое количество символов между X и Y<br>
@@ -332,6 +333,7 @@ $regexMemo = ' <h5>RegEx Memo</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
      <!--  <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br> -->
+     <strong>-la 1 X</strong> - search for X, add 1 next line to output after lines containing X<br>
        <strong>X -exc Y</strong> - search for X, exclude Y<br>
        <strong>\\\\bX</strong> - beginning of the word or <strong>Y\\\\b</strong> end<br>
 <strong>X.*Y</strong> - any number of symbols between X and Y<br>

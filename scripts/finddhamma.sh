@@ -146,6 +146,7 @@ if [[ "$@" == *"-h"* ]]; then
 	-all - include all Khuddaka Nikaya books <br>
     -vin - to search in vinaya texts only <br>
     -abhi - to search in abhidhamma texts only <br>
+    -la N X - search X and print N lines after match<br>
     X -exc Y - search X exclude Y <br>
     -onl \"X|Y|...\"- find texts that contain all patterns only
     -ru - to search in Russian <br>

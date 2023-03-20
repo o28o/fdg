@@ -128,7 +128,7 @@ initsize=`du -hs suttacentral.net/`
 echo $initsize
 cd suttacentral.net/
 git pull
-
+git rm -r --cached .
 apa 
 cd ./suttacentral.net/sc-data/html_text
 ls
@@ -160,8 +160,6 @@ cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/
 #download new archive from 
 https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8
 
-
-
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/
 mv bw bw1
 mkdir bw
@@ -173,8 +171,6 @@ cp /storage/emulated/0/Download/bw_*.zip  .
 grep "top: 15px" css/css.css
 sed -i  "s@top: 15px@bottom: 15px@" css/css.css
 grep "bottom: 15px" css/css.css
-
-
 
 #fix font
 grep 'font: normal normal 1.15em/1.3em "URWPalladioITU", serif;' css/css.css
@@ -197,20 +193,12 @@ sed -i 's@<script src="../js/mousetrap.min.js"></script>@<?php $uname = shell_ex
 
 done 
 
-
-#bw 
-localStorage.paliLookupActive = "false";
-
-js/footer.js
-
-
-
-			<?php 
-			$uname = shell_exec("uname -a"); 
-			if ( preg_match('/!Android/', $uname)) {  
-			echo '<script src=../js/mousetrap.min.js></script>'; 
-			} 
-			?>
+<?php 
+$uname = shell_exec("uname -a"); 
+if ( preg_match('/!Android/', $uname)) {  
+echo '<script src=../js/mousetrap.min.js></script>'; 
+} 
+?>
 replace in bw index to disable the lookup
 
 			<?php $uname = shell_exec("uname -a"); if ( preg_match('/!Android/', $uname)) {  <script src="../js/mousetrap.min.js"></script> } ?>
@@ -226,15 +214,12 @@ for i in `find . -name  "*" -type f`; do
     sed -i 's@windows-1251@utf-8@g' $i
     done
     
-    
-    
-    
     #count metaphorcount 
 metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"
 nonmetaphorkeys="adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"
-    
+
+#refresh metaphors 
 nicevalue=1
-    
 for i in `find . -name "*.json" | sort -V`
 do 
 metaphorcount=`grep -E -i "$metaphorkeys" $i | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
@@ -243,6 +228,7 @@ metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 
 echo $i $metaphorcount >> ~/metphrcount_vinaya.txt
 done 
+
 #check and fix links if needed 
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/ru
 ln -s ../assets ./assets 
@@ -262,7 +248,6 @@ curl https://find.dhamma.gift/sc/extralinks.php?fromjs=dn22
 curl http://localhost/sc/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
 curl http://localhost/sc/api.php?fromjs=sutta/dn/dn22&type=A
 curl http://localhost/sc/extralinks.php?fromjs=dn22
-
 
 http://localhost:8080/ru/sc/index.js
 

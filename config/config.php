@@ -36,7 +36,7 @@ $linkconj = '/assets/materials/pali_conjugations_eng.pdf';
 $linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
 $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
 $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
-} else if ( preg_match('/Linux rym.from.sh/', $uname)  ) {
+} else if ( preg_match('/Linux rym.from.sh/', $uname)  || preg_match('/CentOS-Server/', $uname)) {
 //
 // ONLINE PROD
 //

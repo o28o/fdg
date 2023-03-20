@@ -192,7 +192,7 @@ $(document).ready(function(){
 
  </div>
       </div>	
-            <div id="spinner" class="justify-content-center mt-8 mb-3">
+            <div id="spinner" class="justify-content-center mt-8">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
@@ -345,7 +345,7 @@ include 'scripts/multilang-search.php';
       <?php
       if ( $mode == "offline" ) {
         
-      $mainpagesclink = '/sc';
+      $mainpagesclink = $mainscpage;
       echo '  <a href="https://find.dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">find.dhamma.gift</h5>
@@ -356,7 +356,7 @@ include 'scripts/multilang-search.php';
   </a>';
       
       } else {
-        $mainpagesclink = 'https://sc.dhamma.gift';
+        $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
       echo '
   <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">

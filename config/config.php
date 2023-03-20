@@ -37,7 +37,7 @@ $linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
 $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
 $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
 
-} else if ( preg_match('/Linux/', $uname)  ) {     
+} else if ( preg_match('/Ubuntu/', $uname)  ) {     
 //
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //

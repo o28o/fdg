@@ -40,7 +40,7 @@ maxmatchesbg=3000
 archivenumber=84
 
 
-elif [[ "`uname -a`" == *"Linux"* ]]; then 
+elif [[ "`uname -a`" == *"Ubuntu"* ]]; then 
 
 sitename=http://localhost
 nicevalue=1

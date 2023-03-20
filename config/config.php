@@ -36,7 +36,45 @@ $linkconj = '/assets/materials/pali_conjugations_eng.pdf';
 $linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
 $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
 $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
-} else if ( preg_match('/Linux rym.from.sh/', $uname)  || preg_match('/CentOS-Server/', $uname)) {
+
+} else if ( preg_match('/Linux/', $uname)  ) {     
+//
+//Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
+//
+$mode = 'offline';
+$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+$mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
+//$mode = 'online';
+
+$basedir = "/var/www/html/";
+
+$linkforthsu = '/tipitaka.theravada.su/dn/';
+$linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
+$linkforthai = "/legacy.suttacentral.net/sc/th/"; 
+$linkforthaiend = '.html';
+//extralinks.php
+$locationru = $basedir. "/theravada.ru/Teaching/Canon/Suttanta/Texts";
+
+//converter.php
+$adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
+
+//api-emulator
+$scroottextlocation = "/var/www/html/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";
+
+// mainmenu
+$linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+$linksc = 'https://suttacentral.net/';
+$anamesc = 'SuttaCentral.net';
+$linktbw = '/bw';
+$linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
+$linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
+$linktextbook = '/assets/materials/pali_textbook_eng.pdf';
+$linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
+$linkconj = '/assets/materials/pali_conjugations_eng.pdf';
+$linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
+$linkcasesru = '/assets/materials/pali_cases_rus.pdf';
+      } 
+else if ( preg_match('/Linux rym.from.sh/', $uname)  || preg_match('/CentOS-Server/', $uname)) {
 //
 // ONLINE PROD
 //
@@ -77,42 +115,6 @@ $linktextbookru = 'https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuw
 $linkconj = 'https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing';
 $linkcases = 'https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true';
 $linkcasesru = 'https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntOr/view?usp=drivesdk';
-//
-//Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
-//
-      } else if ( preg_match('/Linux/', $uname)  ) {     
-$mode = 'offline';
-$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
-$mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
-//$mode = 'online';
-
-$basedir = "/var/www/html/";
-
-$linkforthsu = '/tipitaka.theravada.su/dn/';
-$linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
-$linkforthai = "/legacy.suttacentral.net/sc/th/"; 
-$linkforthaiend = '.html';
-//extralinks.php
-$locationru = $basedir. "/theravada.ru/Teaching/Canon/Suttanta/Texts";
-
-//converter.php
-$adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
-
-//api-emulator
-$scroottextlocation = "/var/www/html/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";
-
-// mainmenu
-$linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
-$linksc = 'https://suttacentral.net/';
-$anamesc = 'SuttaCentral.net';
-$linktbw = '/bw';
-$linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
-$linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
-$linktextbook = '/assets/materials/pali_textbook_eng.pdf';
-$linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
-$linkconj = '/assets/materials/pali_conjugations_eng.pdf';
-$linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
-$linkcasesru = '/assets/materials/pali_cases_rus.pdf';
       } 
 //
 // Common Variables

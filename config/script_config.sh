@@ -39,7 +39,38 @@ filesizenooverwrite=100000000000
 maxmatchesbg=3000
 archivenumber=84
 
-elif [[ "`uname -a`" == *"rym.from.sh"* ]]; then
+
+elif [[ "`uname -a`" == *"Linux"* ]]; then 
+
+sitename=http://localhost
+nicevalue=1
+mode=offline
+apachesitepath=/var/www/html
+suttapath=$apachesitepath/suttacentral.net/
+
+linkforthsu=/tipitaka.theravada.su
+linkforthru=/theravada.ru
+linkforthai=/legacy.suttacentral.net/sc/th/
+linkforthaiext='.html'
+linkforru=/legacy.suttacentral.net/sc/ru/
+
+urllinkpli=
+urllinken='/sc/?q='
+urllinkenend='&lang=pli-eng'
+urllinkbw=/bw/
+
+wbefore=1
+wafter=3
+linesafter=0
+minlength=2
+truncatelength=30
+filesizenooverwrite=1000000000000
+maxmatchesbg=300000
+archivenumber=280
+archivenumber=91
+
+
+elif [[ "`uname -a`" == *"rym.from.sh"* ]] || [[ "`uname -a`" == *"CentOS-Server"* ]]; then
 
 sitename=https://find.dhamma.gift
 mode=online
@@ -75,35 +106,6 @@ truncatelength=30
 filesizenooverwrite=1000000000
 maxmatchesbg=4000
 archivenumber=31
-
-elif [[ "`uname -a`" == *"Linux"* ]]; then 
-
-sitename=http://localhost
-nicevalue=1
-mode=offline
-apachesitepath=/var/www/html
-suttapath=$apachesitepath/suttacentral.net/
-
-linkforthsu=/tipitaka.theravada.su
-linkforthru=/theravada.ru
-linkforthai=/legacy.suttacentral.net/sc/th/
-linkforthaiext='.html'
-linkforru=/legacy.suttacentral.net/sc/ru/
-
-urllinkpli=
-urllinken='/sc/?q='
-urllinkenend='&lang=pli-eng'
-urllinkbw=/bw/
-
-wbefore=1
-wafter=3
-linesafter=0
-minlength=2
-truncatelength=30
-filesizenooverwrite=1000000000000
-maxmatchesbg=300000
-archivenumber=280
-archivenumber=91
 fi
 #common vars
 rootpath=$apachesitepath/scripts

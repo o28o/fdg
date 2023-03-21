@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="find.Dhamma.gift - Liberation Search Engine">
 <meta name="twitter:description" content="Search in Pali Suttas and Vinaya in Pali, Russian, English and Thai">
-<link rel="icon" type="image/png" href="./assets/favico-noglass.png" />
+<link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
         <title>Ошибка 404</title>
     <link href="/assets/css/styles.css" rel="stylesheet" />

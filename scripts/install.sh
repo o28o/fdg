@@ -252,3 +252,34 @@ curl http://localhost/sc/extralinks.php?fromjs=dn22
 http://localhost:8080/ru/sc/index.js
 
 git rm -r --cached .
+
+vmtouch -dl /var/www/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
+vmtouch -dl /var/www/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya
+vmtouch -dl /var/www/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
+vmtouch -dl /var/www/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya
+vmtouch -dl /var/www/suttacentral.net/sc-data/html_text/ru/pli/sutta
+vmtouch -dl /var/www/suttacentral.net/sc-data/html_text/th/pli/sutta
+
+vmtouch -dl /var/www/html/sc
+vmtouch -dl /var/www/html/o
+vmtouch -dl /var/www/html/accesstoinsight.org
+vmtouch -dl /var/www/html/archive.php
+vmtouch -dl /var/www/html/assets
+vmtouch -dl /var/www/html/bw
+vmtouch -dl /var/www/html/config
+vmtouch -dl /var/www/html/cse.php
+vmtouch -dl /var/www/html/history.php
+vmtouch -dl /var/www/html/index.php
+vmtouch -dl /var/www/html/o
+vmtouch -dl /var/www/html/obo.genaud.net
+vmtouch -dl /var/www/html/README.md
+vmtouch -dl /var/www/html/ru
+vmtouch -dl /var/www/html/sc
+vmtouch -dl /var/www/html/scripts
+vmtouch -dl /var/www/html/sitemap.xml
+vmtouch -dl /var/www/html/theravada.ru
+vmtouch -dl /var/www/html/tipitaka.theravada.su
+
+
+
+

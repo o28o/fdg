@@ -2,9 +2,9 @@
 
 <?php
 error_reporting(E_ERROR | E_PARSE);
-include_once('../../config/config.php');
-include_once('../../config/translate.php');
-include '../../scripts/opentexts.php';
+include_once('../config/config.php');
+include_once('../config/translate.php');
+include '../scripts/opentexts.php';
 ?>
 <html lang="<?php echo $htmllang;?>">
 
@@ -53,9 +53,9 @@ include '../../scripts/opentexts.php';
 
       <?php
       if ( $lang == "ru" ) {
-      include '../../assets/common/horizontalMenuRu.php'; 
+      include '../assets/common/horizontalMenuRu.php'; 
       } else {
-        include '../../assets/common/horizontalMenuEn.php'; 
+        include '../assets/common/horizontalMenuEn.php'; 
       } 
       ?>
             </div>

@@ -40,7 +40,7 @@ include '../../scripts/opentexts.php';
         <div class="d-flex align-items-center justify-content-center vh-100">
             <div class="text-center">
                 <h1 class="display-1 fw-bold">404</h1>
-                <p class="fs-3"> <span class="text-danger">Aho!</span><?php echo $p404;?> Page not found. But</p>
+                <p class="fs-3"> <span class="text-danger">Aho!</span><?php echo $p404;?></p>
                 <p class="lead">
                 “Atthi kho, āvuso, maggo atthi paṭipadā,</br>
 

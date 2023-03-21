@@ -17,7 +17,6 @@ $texttype='sutta';
 if (file_exists($bwfile) ) {
     $bwlink = "$forbwpath/$fromjs.html";
     //preg_replace('@.*/bw/@i', '/bw/', $bwfile);
-    
 }
 
   if ($mode == "offline") {
@@ -26,9 +25,9 @@ if (file_exists($bwfile) ) {
 $locationrudn = $thsulocation;
 
   $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
-    [ ! -z $bwlink ] && echo -n \"<a target='_blank' href=/bw/$bwlink>Bw</a>&nbsp;\"; 
+    [ ! -z $bwlink ] && echo -n \"<a target='_blank' href=$linktbw/$bwlink>Bw</a>&nbsp;\"; 
   [ ! -z \$ruslink ] && 
-  echo -n \"<a target='_blank' href=/theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
+  echo -n \"<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>&nbsp;\"; 
   [ ! -z \$ruslinkdn ] && 
   echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";
   ");

@@ -136,7 +136,7 @@ linesafter=0
 minlength=3
 truncatelength=30
 filesizenooverwrite=1000000000
-maxmatchesbg=4000
+maxmatchesbg=6000
 archivenumber=31
 fi
 #common vars

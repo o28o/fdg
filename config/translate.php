@@ -90,7 +90,7 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift эт
 $prongh = ' Проект на GitHub';
 
 $headerexamples = 'Примеры';
-$examplelist = '<li>Определение понятия <a href="./assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">Kata.*dukkhaṁ\\\\?</a>
+$examplelist = '<li>Определение понятия <a href="./assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">Kata.*dukkhaṁ\\\\?</a>
              </li>
               <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/demo/dvayagaaminii_suttanta_pali_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            
@@ -371,7 +371,7 @@ $prongh = ' Project on GitHub';
 
 
 $headerexamples = 'Examples';
-$examplelist = '<li>Definition of the <a href="/assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/demo/kata.dukkhaṁ-question_suttanta_pali.html">Kata.*dukkhaṁ\\\\?</a></li>
+$examplelist = '<li>Definition of the <a href="/assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">Kata.*dukkhaṁ\\\\?</a></li>
 
  <li>Sutta where Buddha says that he doesn\'t make <a href="/assets/demo/dvayagaaminii_suttanta_pali_1-1.html">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
 

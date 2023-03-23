@@ -327,7 +327,7 @@ elif [[ "$@" == *"-b"* ]]; then
    #modify pattern as legacy uses different letters
 elif [[ "$@" == *"-pli"* ]]; then
     fnlang=_pali
-    pali_or_lang=sc-data/sc_bilara_data/root/pli/ms
+    pali_or_lang=sc-data/sc_bilara_data/root/pli/ms/
     directlink=/pli/ms
     #directlink=/en/?layout=linebyline
     language=Pali
@@ -347,7 +347,7 @@ elif [[ "$@" == *"-en"* ]]; then
     definitionkeys="what is.*${pattern}.{0,4}\\?|speak of this.*${pattern}|${pattern}.*term|${pattern}.{0,4}, ${pattern}.*говорят"
 else
     fnlang=_pali
-    pali_or_lang=sc-data/sc_bilara_data/root/pli/ms
+    pali_or_lang=sc-data/sc_bilara_data/root/pli/ms/
     directlink=/pli/ms
     #directlink=/en/?layout=linebyline
     language=Pali

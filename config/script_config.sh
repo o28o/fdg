@@ -43,7 +43,7 @@ elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
 sitename=http://localhost
 nicevalue=1
 mode=online
-apachesitepath=/var/www/html
+apachesitepath=/var/www/html/
 suttapath=$apachesitepath/suttacentral.net/
 
 linkforthsu=https://tipitaka.theravada.su

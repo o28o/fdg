@@ -87,7 +87,7 @@ $linkforthaiend = '/th/siam_rath';
 
 //extralinks.php
 $locationru = $basedir. '/theravada.ru/Teaching/Canon/Suttanta/Texts';
-$locationTocThsu = $basedir. "/assets/texts";
+$locationTocThsu = $basedir. "/assets/texts/";
 
 //converter.php
 //not used currently. php curl for offline

@@ -122,13 +122,17 @@ exit 0
 
 #cleanup sc repo from unused texts
 #git clone https://github.com/suttacentral/sc-data.git ./
+git pull
+git rm -r --cached .
+
+
 alias apa='cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs'
+alias apa='cd /home/a0092061/domains/find.dhamma.gift/public_html'
 
 initsize=`du -hs suttacentral.net/`
 echo $initsize
 cd suttacentral.net/
-git pull
-git rm -r --cached .
+
 apa 
 cd ./suttacentral.net/sc-data/html_text
 ls
@@ -151,6 +155,13 @@ cd ./suttacentral.net/sc-data/sc_bilara_data/root
 ls
 ls | grep -Ev "pli|ru|th|en|san" | xargs rm -rf
 ls
+
+apa
+rm -rf ./suttacentral.net/sc-data/.git
+echo $initsize
+du -hs ./suttacentral.net
+
+
 
 #apache config
 cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/config/
@@ -281,5 +292,5 @@ vmtouch -dl /var/www/html/theravada.ru
 vmtouch -dl /var/www/html/tipitaka.theravada.su
 
 
-
+vmtouch /var/www/html/
 

@@ -148,6 +148,7 @@ templatefolder=$apachesitepath/assets/templates
 textinfofolder=$apachesitepath/assets/texts
 bwlocation=$apachesitepath/bw/
 indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
+thsucurldn=$apachesitepath/assets/texts/dn_curl_toc.html
 thsulocation=$apachesitepath/tipitaka.theravada.su/
 searchdir=$apachesitepath/theravada.ru/Teaching/Canon/Suttanta/Texts
 

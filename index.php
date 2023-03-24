@@ -105,7 +105,7 @@ include 'scripts/opentexts.php';
 			echo '<form method="GET" action=
 			"';  
 			echo htmlspecialchars($_SERVER[" PHP_SELF "]);
-			echo '"	action="" class="justify-content-center">'; 
+			echo '" class="justify-content-center">'; 
       ?>
 		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
@@ -186,17 +186,17 @@ $(document).ready(function(){
              </div>    
 </div>
 </div>
- 
-  <!-- extra options end -->
-</form>
-
- </div>
+  </div>
       </div>	
             <div id="spinner" class="justify-content-center mt-8">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
               </div>
+  <!-- extra options end -->
+</form>
+
+
 <?php
 include 'scripts/multilang-search.php';
 ?>

@@ -120,12 +120,16 @@ include '../scripts/dpd-lookup.php';
         include '../assets/common/horizontalMenuEn.php'; 
       } 
       ?>
-
+<br><br><br><br><br><br><br><br><br>
 </div>
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
+     <div class="">
+       
+       
+        <div class=" copyright py-4 text-center text-white">
             <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright &copy; <a href="/dpd">Dhamma.gift</a> <?php echo $mode; ?> 2022-<?php echo date("Y"); ?></small></div>
         </div>
+   </div> 
         <!-- Bootstrap core JS-->
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
         <!-- Core theme JS

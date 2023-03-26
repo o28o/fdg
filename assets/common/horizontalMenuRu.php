@@ -23,7 +23,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
-<figcaption class="figure-caption text-center">Англ. Сайты</figcaption>   
+<figcaption class="figure-caption text-center">на Англ.</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">

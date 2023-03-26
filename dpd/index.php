@@ -74,7 +74,7 @@ include_once('../config/translate.php');
 			
 			 <input name="q" style="z-index:9" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus>
 
-		<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="submit" value="search" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search"></i></button></div>
+		<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="submit" value="search" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
 		</div>
 
 <script>
@@ -124,8 +124,8 @@ include '../scripts/dpd-lookup.php';
 
       <?php echo $dpdpart; ?>
 
-<h3>MDict</h3>
-<a target="_blank"  href="https://play.google.com/store/apps/details?id=cn.mdict"><img class="storeimg" src="/assets/img/googleplay-bw.png"></img></a>
+
+<a target="_blank"  href="https://play.google.com/store/apps/details?id=cn.mdict"><img class="storeimg" src="/assets/img/googleplay.png"></img></a>
 <a target="_blank" href="https://apps.apple.com/app/mdict/id389083586"><img class="storeimg" src="/assets/img/appstore.png"></img></a>
 
         <!-- <h2>GoldenDict</h2>

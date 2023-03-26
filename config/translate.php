@@ -282,10 +282,12 @@ $hreftext404 = 'На Главную';
 
 $dpddesc = 'Digital Pali Dictionary Онлайн';
 
-$dpdpart = '<h3>Оффлайн Установка</h3>
+$dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 <a target="_blank" href="https://digitalpalidictionary.github.io/"><p>Сайт DPD</p></a>
 
-<a target="_blank" href="https://devamitta.github.io/pali/"><p>DPD Русская Версия</p></a>';
+<a target="_blank" href="https://devamitta.github.io/pali/"><p>DPD Русская Версия</p></a>
+<h3>Скачать Оболочку mDict</h3>
+';
 
 
 
@@ -544,10 +546,12 @@ $hreftext404 = 'Go Home';
 
 $dpddesc = 'Digital Pali Dictionary Online';
 
-$dpdpart = '<h3>Install Offline</h3>
+$dpdpart = '<h3>Download DPD</h3>
 <a target="_blank" href="https://digitalpalidictionary.github.io/"><p>DPD Official</p></a>
 
-<a target="_blank" href="https://devamitta.github.io/pali/"><p>DPD Russian Edition</p></a>';
+<a target="_blank" href="https://devamitta.github.io/pali/"><p>DPD Russian Edition</p></a>
+<h3>Download MDict</h3>
+';
 
 }
 ?>

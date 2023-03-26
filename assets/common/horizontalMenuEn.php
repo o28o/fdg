@@ -30,6 +30,11 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
 
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
+   
+          <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
+       <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
+
+ <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  
        <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
    <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>
@@ -41,14 +46,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
      <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">' . $anameati . '</a></li>
   </ul>
 
-
-<a class="text-decoration-none mx-1" href="/dpd">
+<a class="text-decoration-none mx-1" href="/assets/diff/?lang=pl">
 <figure class="figure">
-
-<i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-spell-check"></i>
-<figcaption class="figure-caption text-center">DPD Online</figcaption>   
+<i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-code-compare"></i>
+<figcaption class="figure-caption text-center">'. $anamesdiff . '</figcaption>   
 </figure>	  
 </a>
+
 <a class="text-decoration-none mx-1" href="/history.php">
 <figure class="figure">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-clock-rotate-left"></i>
@@ -56,25 +60,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>	  
 </a>
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
-<figure class="figure d-md-inline-block">
-  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-link"></i>
-<figcaption class="figure-caption text-center">' . $anameuseful . '</figcaption> 
+ <a class="text-decoration-none mx-1" href="/dpd">
+<figure class="figure">
+<i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-spell-check"></i>
+<figcaption class="figure-caption text-center">DPD Online</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
-    <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
-       <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
-       <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
-    <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=cn.mdict">mDict Android</a></li>
-    <li><a class="dropdown-item" href="https://apps.apple.com/app/mdict/id389083586">mDict IOS</a></li>   
- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  
-   <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
-       <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
-    <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li>
-  </ul>
-  
-       
+
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-brands fa-google"></i>
@@ -100,6 +92,10 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
        <li><a class="dropdown-item" href="' . $linkconj . '">' . $anameconj . '</a></li>
       <li><a class="dropdown-item" href="' . $linktextbook . '">' . $anametextbook . '</a></li>
     <li><a class="dropdown-item" href="' . $linksothermat . '">' . $anameothermat . '</a></li>
+       <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
+       <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
+    <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li>
+    
 </ul>
 
 </div> 

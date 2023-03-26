@@ -281,6 +281,14 @@ $link404 = '/o/?q=sn38.4';
 $hreftext404 = 'На Главную';
 
 $dpddesc = 'Digital Pali Dictionary Онлайн';
+
+$dpdpart = '<h2>Оффлайн Установка</h2>
+<a target="_blank" href="https://digitalpalidictionary.github.io/"><h3>Сайт DPD</h3></a>
+
+<a target="_blank" href="https://devamitta.github.io/pali/"><h3>DPD Русская Версия</h3></a>';
+
+
+
 }
 else {
 $lang = "en";
@@ -535,5 +543,11 @@ $link404 = '/sc/?q=sn38.4';
 $hreftext404 = 'Go Home';
 
 $dpddesc = 'Digital Pali Dictionary Online';
+
+$dpdpart = '<h2>Install Offline</h2>
+<a target="_blank" href="https://digitalpalidictionary.github.io/"><h3>DPD Official</h3></a>
+
+<a target="_blank" href="https://devamitta.github.io/pali/"><h3>DPD Russian Edition</h3></a>';
+
 }
 ?>

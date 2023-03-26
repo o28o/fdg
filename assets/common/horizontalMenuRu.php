@@ -28,6 +28,9 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
         <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
+    <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
+    <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
+           
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
        <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали словарь</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
@@ -53,6 +56,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
     <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
+           <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Пали-Рус для GoldenDict</a></li>  
   </ul>
 
 <a class="text-decoration-none mx-1" href="/history.php">
@@ -63,27 +67,12 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </a>
 
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
-<figure class="figure d-md-inline-block">
-  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-link"></i>
-<figcaption class="figure-caption text-center">Полезное</figcaption>   
+<a class="text-decoration-none mx-1" href="/ru/dpd">
+<figure class="figure">
+<i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-spell-check"></i>
+<figcaption class="figure-caption text-center">DPD Онлайн</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
-          
-           <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
-          <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
-           
-   <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=cn.mdict">mDict Android</a></li>
-      
-  <li><a class="dropdown-item" href="https://apps.apple.com/app/mdict/id389083586">mDict IOS</a></li>      
-  <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">Пали-Англ для mDict</a></li> 
-       <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Пали-Рус для GoldenDict</a></li>  
-    <li><a class="dropdown-item" href="/ru/dpd">DPD Онлайн</a></li>
-   <li><a class="dropdown-item" href="#research">Исследование</a></li>
-       <li><a class="dropdown-item" href="#read">Чтение</a></li>
-    <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li>
-  </ul>
 
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
@@ -114,6 +103,11 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 
    <li><a class="dropdown-item" href="https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing">Курс по Пали</a></li>
          <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>
+         
+            <li><a class="dropdown-item" href="#research">Исследование</a></li>
+       <li><a class="dropdown-item" href="#read">Чтение</a></li>
+    <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li>
+    
   </ul>
   
 </div>'

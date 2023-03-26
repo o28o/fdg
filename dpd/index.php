@@ -120,15 +120,21 @@ include '../scripts/dpd-lookup.php';
         include '../assets/common/horizontalMenuEn.php'; 
       } 
       ?>
-<br><br><br><br><br><br><br><br><br>
+<br><br>
+
+      <?php echo $dpdpart; ?>
+
+<h3>MDict</h3>
+<a target="_blank"  href="https://play.google.com/store/apps/details?id=cn.mdict"><img class="storeimg" src="/assets/img/googleplay-bw.png"></img></a>
+<a target="_blank" href="https://apps.apple.com/app/mdict/id389083586"><img class="storeimg" src="/assets/img/appstore.png"></img></a>
+
+        <!-- <h2>GoldenDict</h2>
+<a target="_blank" href="https://play.google.com/store/apps/details?id=mobi.goldendict.android.free"><img class="storeimg" src="/assets/img/googleplay-bw.png"></img></a>
 </div>
-        <!-- Copyright Section-->
-     <div class="">
-       
-       
-        <div class=" copyright py-4 text-center text-white">
-            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright &copy; <a href="/dpd">Dhamma.gift</a> <?php echo $mode; ?> 2022-<?php echo date("Y"); ?></small></div>
-        </div>
+Copyright Section-->
+      <br><br>      <br><br>      
+        <div class=" py-6 text-center">
+            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright &copy; Dhamma.gift <?php echo $mode; ?> 2022-<?php echo date("Y"); ?></small></div>
    </div> 
         <!-- Bootstrap core JS-->
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script>

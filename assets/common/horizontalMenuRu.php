@@ -23,7 +23,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
-<figcaption class="figure-caption text-center">Английский</figcaption>   
+<figcaption class="figure-caption text-center">Англ. Сайты</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
@@ -49,7 +49,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
-<figcaption class="figure-caption text-center">Русский</figcaption>   
+<figcaption class="figure-caption text-center">Русские</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuRussian">
@@ -70,7 +70,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <a class="text-decoration-none mx-1" href="/ru/dpd">
 <figure class="figure">
 <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-spell-check"></i>
-<figcaption class="figure-caption text-center">DPD Онлайн</figcaption>   
+<figcaption class="figure-caption text-center">Словарь</figcaption>   
 </figure>	  
 </a>
 
@@ -93,7 +93,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-table-list"></i>
-<figcaption class="figure-caption text-center">Грамматика</figcaption>   
+<figcaption class="figure-caption text-center">Обучение</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">

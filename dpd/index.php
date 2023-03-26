@@ -13,22 +13,22 @@ include_once('../config/translate.php');
 <title>dpd.Dhamma.gift</title>
  <meta http-equiv="Cache-control" content="public">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="<?php echo $metadesc;?>" />
+<meta name="description" content="Digital Pali Dictionary Online" />
 <meta name="author" content="" />
 <!-- Favicon-->
 
-<meta property="og:locale" content="<?php echo $oglocale;?>" />
+<meta property="og:locale" content="Digital Pali Dictionary Online" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="find.Dhamma.gift" />
-<meta property="og:description" content="<?php echo $ogdesc;?>" />
+<meta property="og:title" content="dpd.Dhamma.gift" />
+<meta property="og:description" content="Digital Pali Dictionary Online" />
 
 <meta property="og:url" content="/" />
-<meta property="og:site_name" content="find.Dhamma.gift" />
-<meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
+<meta property="og:site_name" content="dpd.Dhamma.gift" />
+<meta property="og:image" itemprop="image" content="" />
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="<?php echo $titletwit;?>">
-<meta name="twitter:description" content="<?php echo $ogdesc;?>">
+<meta name="twitter:title" content="Digital Pali Dictionary Online">
+<meta name="twitter:description" content="Digital Pali Dictionary Online">
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
 <script src="/assets/js/jquery-3.6.0.js"></script>

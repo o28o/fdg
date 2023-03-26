@@ -70,6 +70,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
+          
            <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
           <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
            
@@ -78,6 +79,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
   <li><a class="dropdown-item" href="https://apps.apple.com/app/mdict/id389083586">mDict IOS</a></li>      
   <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">Пали-Англ для mDict</a></li> 
        <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Пали-Рус для GoldenDict</a></li>  
+    <li><a class="dropdown-item" href="/ru/dpd">DPD Онлайн</a></li>
    <li><a class="dropdown-item" href="#research">Исследование</a></li>
        <li><a class="dropdown-item" href="#read">Чтение</a></li>
     <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li>

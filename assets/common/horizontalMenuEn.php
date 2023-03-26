@@ -42,11 +42,11 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
   </ul>
 
 
-<a class="text-decoration-none mx-1" href="/assets/diff/?lang=pl">
+<a class="text-decoration-none mx-1" href="/dpd">
 <figure class="figure">
-  
-  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-code-compare"></i>
-<figcaption class="figure-caption text-center">' . $anamesdiff . '</figcaption>   
+
+<i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-spell-check"></i>
+<figcaption class="figure-caption text-center">DPD Online</figcaption>   
 </figure>	  
 </a>
 <a class="text-decoration-none mx-1" href="/history.php">
@@ -63,6 +63,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
+    <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
        <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
        <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
     <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=cn.mdict">mDict Android</a></li>

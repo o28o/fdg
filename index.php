@@ -4,7 +4,6 @@
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
-include 'scripts/opentexts.php';
 ?>
 <html lang="<?php echo $htmllang;?>">
     <head>
@@ -198,6 +197,7 @@ $(document).ready(function(){
 
 
 <?php
+include 'scripts/opentexts.php';
 include 'scripts/multilang-search.php';
 ?>
         </header>

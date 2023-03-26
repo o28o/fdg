@@ -4,6 +4,7 @@
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
+//echo basename($_SERVER['REQUEST_URI']);
 ?>
 <html lang="<?php echo $htmllang;?>">
     <head>

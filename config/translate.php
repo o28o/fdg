@@ -5,6 +5,7 @@ $lang = "ru";
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainscpage = $mainpage . '/sc';
+$searchcaption = 'Поиск';
 $metadesc = 'Поисковый Сайт Освобождения. Поиск в Пали Суттах и Винае';
 $titletwit = 'find.Dhamma.gift - Поисковая Система Освобождения';
 $ogdesc = 'Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
@@ -278,12 +279,15 @@ $title404 = 'Ошибка 404';
 $p404 = ' Страница не найдена. Но';
 $link404 = '/o/?q=sn38.4';
 $hreftext404 = 'На Главную';
+
+$dpddesc = 'Digital Pali Dictionary Онлайн';
 }
 else {
 $lang = "en";
 $htmllang = "en";
 $mainpage = '/';
 $mainscpage = '/sc';
+$searchcaption = 'Search';
 $metadesc = 'Liberation Search Engine. Search in Pali Suttanta and Vinaya';
 $titletwit = 'find.Dhamma.gift - Liberation Search Engine';
 $ogdesc = 'Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai';
@@ -529,5 +533,7 @@ $title404 = '404 Error';
 $p404 = ' Page not found. But';
 $link404 = '/sc/?q=sn38.4';
 $hreftext404 = 'Go Home';
+
+$dpddesc = 'Digital Pali Dictionary Online';
 }
 ?>

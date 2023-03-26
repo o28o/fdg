@@ -1,7 +1,19 @@
 <?php
-echo '	<div class="d-md-inline-block">	
+if (( basename($_SERVER['REQUEST_URI']) != "")) {
 
-<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+echo '<div class="d-md-inline-block">	
+
+<a class="text-decoration-none mx-1" href="' . $mainpage . '">
+<figure class="figure text-decoration-none">
+  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+  <figcaption class="figure-caption text-center">' . $searchcaption . '</figcaption>
+</figure>
+</a>';
+} else {
+echo '<div class="d-md-inline-block">	';
+}
+
+echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
   <figcaption class="figure-caption text-center">Pāḷi-Eng</figcaption>

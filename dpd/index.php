@@ -31,20 +31,10 @@ include_once('../config/translate.php');
 <meta name="twitter:description" content="<?php echo $dpddesc; ?>">
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
-<script src="/assets/js/jquery-3.6.0.js"></script>
-<script src="/assets/js/jquery-ui.js"></script>
-  
-<!-- Font Awesome icons (free version)-->
-<script src="/assets/js/fontawesome.6.1.all.js" crossorigin="anonymous"></script>
-<!-- Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link rel="stylesheet" href="/assets/css/jquery-ui.css">
+<link href="/assets/css/jquery-ui.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
- 
-<script src="/assets/js/autopali.js"></script>
 
 <style>
 </style>
@@ -52,18 +42,13 @@ include_once('../config/translate.php');
 </head>
     <body id="page-top"> 
         <!-- Navigation-->
-
         <!-- Masthead
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-    
-        </header>
-        
--->
+        </header>-->
             <div class="mt-4 mx-2">
               
-          <?php
-      
+<?php
 			echo '<form method="GET" action=
 			"';  
 			echo htmlspecialchars($_SERVER[" PHP_SELF "]);
@@ -95,13 +80,12 @@ $(document).ready(function(){
 
 </div>
 <div class="d-flex aligns-items-center justify-content-center my-3">
-
-            <div id="spinner" class="justify-content-center mt-8">
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              </div>
-               </div>
+  <div id="spinner" class="justify-content-center mt-8">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
   <!-- extra options end -->
 </form>
 
@@ -114,7 +98,7 @@ include '../scripts/dpd-lookup.php';
               </div>
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="help">
-            <div class="container text-center">
+        <div class="container text-center">
       <?php
       if ( $lang == "ru" ) {
       include '../assets/common/horizontalMenuRu.php'; 
@@ -123,10 +107,7 @@ include '../scripts/dpd-lookup.php';
       } 
       ?>
 <br><br>
-
       <?php echo $dpdpart; ?>
-
-
 <a target="_blank"  href="https://play.google.com/store/apps/details?id=cn.mdict"><img class="storeimg" src="/assets/img/googleplay.png"></img></a>
 <a target="_blank" href="https://apps.apple.com/app/mdict/id389083586"><img class="storeimg" src="/assets/img/appstore.png"></img></a>
 
@@ -138,11 +119,22 @@ Copyright Section-->
         <div class=" py-6 text-center">
             <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright &copy; Dhamma.gift <?php echo $mode; ?> 2022-<?php echo date("Y"); ?></small></div>
    </div> 
+   
+<script src="/assets/js/jquery-3.6.0.js"></script>
+<script src="/assets/js/jquery-ui.js"></script>
+  
+<!-- Font Awesome icons (free version)-->
+<script src="/assets/js/fontawesome.6.1.all.js" crossorigin="anonymous"></script>
+<!-- Google fonts
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />-->
+   
         <!-- Bootstrap core JS-->
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
         <!-- Core theme JS
         <script src="js/scripts.js"></script>-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="/assets/js/autopali.js"></script>
       <script src="/assets/js/randPlaceholder.js"> </script>
 <script>
   randCallToAction();

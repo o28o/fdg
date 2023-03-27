@@ -104,6 +104,8 @@ $(document).ready(function(){
                </div>
   <!-- extra options end -->
 </form>
+
+<h5 class="text-danger text-center">Alpha Version / Альфа версия</h5>
             <div class="mt-2 mx-2">
 	<?php
 include '../scripts/opentexts.php';

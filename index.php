@@ -31,9 +31,6 @@ include_once('config/translate.php');
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
 <link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
-<script src="/assets/js/jquery-3.6.0.js"></script>
-<script src="/assets/js/jquery-ui.js"></script>
-  
 <!-- Font Awesome icons (free version)-->
 <script src="/assets/js/fontawesome.6.1.all.js" crossorigin="anonymous"></script>
 <!-- Google fonts-->
@@ -43,9 +40,8 @@ include_once('config/translate.php');
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
- 
-<script src="/assets/js/autopali.js"></script>
 
+  
 <style>
 </style>
 
@@ -700,11 +696,16 @@ include 'scripts/multilang-search.php';
                 </div>
             </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
+
         <!-- Core theme JS
         <script src="js/scripts.js"></script>-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+                <!-- Bootstrap core JS-->
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
+
+<script src="/assets/js/jquery-3.6.0.js"></script>
+<script src="/assets/js/jquery-ui.js"></script>
+        <script src="/assets/js/autopali.js"></script>
       <script src="/assets/js/randPlaceholder.js"> </script>
 <script>
   randCallToAction();

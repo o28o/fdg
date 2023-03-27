@@ -31,12 +31,10 @@ include_once('config/translate.php');
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
 <link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
-<!-- Font Awesome icons (free version)-->
-<script src="/assets/js/fontawesome.6.1.all.js" crossorigin="anonymous"></script>
-<!-- Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+
+<!--  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-<!-- Core theme CSS (includes Bootstrap)-->
+Core theme CSS (includes Bootstrap)-->
 <link rel="stylesheet" href="/assets/css/jquery-ui.css">
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
@@ -702,7 +700,9 @@ include 'scripts/multilang-search.php';
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
-
+<!-- Font Awesome icons (free version)-->
+<script src="/assets/js/fontawesome.6.1.all.js" crossorigin="anonymous"></script>
+<!-- Google fonts-->
 <script src="/assets/js/jquery-3.6.0.js"></script>
 <script src="/assets/js/jquery-ui.js"></script>
         <script src="/assets/js/autopali.js"></script>

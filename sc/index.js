@@ -132,7 +132,9 @@ const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.sl
       } 
       scLink += "</p>"; 
 
-  suttaArea.innerHTML =  scLink + html + translatorByline ;  
+const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Reconcile texts with Pali originals</p>";
+
+suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;  
  
  
  const pageTile = document.querySelector("h1");

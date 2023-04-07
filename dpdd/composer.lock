@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0b76e2e88ab5ebd1bcf24a7842bca967",
+    "packages": [
+        {
+            "name": "skoro/stardict",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skoro/stardict.git",
+                "reference": "053f65f84a6fc19e4ac775fa3375c97706f4128d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skoro/stardict/zipball/053f65f84a6fc19e4ac775fa3375c97706f4128d",
+                "reference": "053f65f84a6fc19e4ac775fa3375c97706f4128d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "phpspec/prophecy": "^1.15",
+                "phpunit/phpunit": "^9.4",
+                "symfony/var-dumper": "^5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "StarDict\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Skorobogatko Oleksii",
+                    "email": "skorobogatko.oleksii@gmail.com"
+                }
+            ],
+            "description": "Provides interface to StarDict dictionaries.",
+            "keywords": [
+                "dictionary",
+                "stardict"
+            ],
+            "support": {
+                "issues": "https://github.com/skoro/stardict/issues",
+                "source": "https://github.com/skoro/stardict/tree/0.1.2"
+            },
+            "time": "2023-01-02T09:28:19+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

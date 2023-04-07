@@ -1,0 +1,5 @@
+{
+    "require": {
+        "skoro/stardict": "^0.1.2"
+    }
+}

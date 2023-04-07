@@ -659,16 +659,16 @@ echo "<tr>
 <td>$count</td>   
 <td>$metaphorcount</td>
 <td>
+<a target=\"_blank\" href="$linken">En</a> 
+`[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 
-  `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"` 
-<a target=\"_blank\" href="$linken">En</a> 
 </td>" | tohtml 
 echo "<td><p>" | tohtml 
 
 for i in $indexlist
 do
-		for f in $roottext $translation #$variant
+		for f in $roottext $translation $variant
         do     
 		quote=`nice -$nicevalue grep -E -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
       if [[ "$quote" != "" ]] &&  [[ "$@" == *"-ply"* ]] 
@@ -800,7 +800,9 @@ echo "<tr>
 <td>$word</td>
 <td>$count</td>   
 <td>$metaphorcount</td>
-<td><a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`&nbsp;<a target=\"_blank\" href="$linken">"Eng"</a>
+<td><a target=\"_blank\" href="$linken">Eng</a>&nbsp;
+`[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>&nbsp;"`
+<a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` 
 </td>
 <td>" | tohtml
 

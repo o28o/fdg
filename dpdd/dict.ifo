@@ -1,0 +1,12 @@
+StarDict's dict ifo file
+version=3.0.0
+bookname=Пали Словарь
+wordcount=37128
+synwordcount=915263
+idxfilesize=1152977
+idxoffsetbits=32
+author=Бхиккху Дэвамитта
+website=devamitta.github.io/pali/
+description=Пали Словарь
+date=2023-03-20T11:41:30
+sametypesequence=h

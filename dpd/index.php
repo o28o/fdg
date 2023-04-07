@@ -59,7 +59,11 @@ include_once('../config/translate.php');
 			
 			 <input name="q" style="z-index:9" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus>
 
-		<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="submit" value="search" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
+		<div class="input-group-append">
+		  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="lookup" value="lookup"  id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fa-solid fa-spell-check"></i></button>		  
+		 <!-- <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="search" value="search" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button> -->
+		  </div>
+		  <?php echo $submit; ?>
 		</div>
 
 <script>
@@ -93,7 +97,8 @@ $(document).ready(function(){
             <div class="mt-2 mx-2">
 	<?php
 include '../scripts/opentexts.php';
-include '../scripts/dpd-lookup.php';
+include '../scripts/dpd-lookup.php';    
+//include '../scripts/multilang-search.php';
 ?>
               </div>
         <!-- Portfolio Section-->

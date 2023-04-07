@@ -131,7 +131,10 @@ if (linksArray[0].length >= 4) {
       } 
       scLink += "</p>"; 
 
-  suttaArea.innerHTML =  scLink + html + translatorByline ;  
+  const warning = "<p class='warning' >Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали</p>";
+
+suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;  
+ 
  
  
  const pageTile = document.querySelector("h1");

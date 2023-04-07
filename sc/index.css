@@ -23,6 +23,15 @@ body.dark {
   background-color: var(--off-black);
 }
 
+.warning {
+  color: #EB140B;
+  text-align: center;
+}
+
+.dark p.warning {
+  color: #A52817;
+}
+
 #form {
   text-align: center;
   display: flex;
@@ -62,7 +71,7 @@ body.dark {
 
 #home-button {
   position:relative;  
-  top:-1px;
+  top:-3px;
 }
 .dark #citation {
   background-color: var(--dark-blue);
@@ -111,6 +120,7 @@ body.dark {
 
 p {
   margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .instructions ul li {
@@ -131,7 +141,7 @@ p {
 }
 
 .instructions h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-top: 0rem;
   margin-bottom: 0.1rem;
   margin-left: 0rem;
@@ -141,7 +151,7 @@ p {
   display: flex;
   flex-direction: row;
   column-gap: 0rem;
-  font-size: 85%;
+  font-size: 95%;
 }
 
 .suttas {
@@ -161,7 +171,7 @@ p {
   border: solid 0px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 105%;
+  font-size: 115%;
 }
 
 .dark .abbr {

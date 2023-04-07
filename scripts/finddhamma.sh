@@ -286,9 +286,16 @@ maxmatchesbg=100000000
 #echo $pattern $splitpattern $splitarraylen | tohtml
 else 
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} 
-}
+  tmpgb=tmpgrepbase.$rand
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpgb
+if [ -s $tmpgb ]; then
+cat $tmpgb
+else
+        # The file is empty.
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud}
+fi
 
+}
 fi
 
 

@@ -11,7 +11,7 @@ export LANG=en_US.UTF-8
 ########## sn35.238 ##########
 
 source ./config/script_config.sh --source-only
-
+args="$@"
 mkdir $output 2>/dev/null
 cd $output 
 dateforhist=`date +%d-%m-%Y`
@@ -134,7 +134,6 @@ function grepbrief {
 }
 
 pattern="$@"
-
 if [[ "$@" == *"-h"* ]]; then
     echo "
     without arguments will search in pali<br>
@@ -153,6 +152,7 @@ if [[ "$@" == *"-h"* ]]; then
     -en - to search in English <br>
     -th - to search in Thai <br>
     -b - to search in tbw materials <br>
+    -tru - to search in theravada.ru materials <br>
     -oru - output messages in sian<br>"
     exit 0
 fi
@@ -170,7 +170,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]]
 then   
 #emptypattern
    exit 3
@@ -255,6 +255,12 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pal
 }
 fileprefix=${fileprefix}-all
 fortitle="${fortitle} +All"
+elif [[ "$@" == *"-tru"* ]]; then
+function grepbasefile {
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} 
+}
+fileprefix=${fileprefix}
+fortitle="${fortitle}"
 elif [[ "$@" == *"-b"* ]]; then
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $bwlocation
@@ -311,11 +317,21 @@ if [[ "$@" == *"-th"* ]]; then
     type=html   
     metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
     nonmetaphorkeys="подобного|подоба"
+elif [[ "$@" == *"-tru"* ]]; then
+    fnlang=_thru
+    pali_or_lang=$apachesitepath/theravada.ru
+    language=Russian-thru
+    printlang=Русский
+    directlink=
+    type=html   
+    metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
+    nonmetaphorkeys="подобного|подоба"
+    definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"    
 elif [[ "$@" == *"-ru"* ]]; then
     fnlang=_ru
-    pali_or_lang=sc-data/html_text/ru/pli 
+    pali_or_lang=sc-data/html_text/ru/pli
     language=Russian
-	printlang=Русский
+    printlang=Русский
     directlink=
     type=html   
     metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
@@ -732,7 +748,12 @@ textlist=$uniquelist
     for i in $uniquelist
 do
 
+if [[ "$args" == *"-tru"* ]]; then
+filenameblock=`echo $i |  sed 's/-.*//g' | sed 's@_@.@g' | sort -V | uniq `
+else 
 filenameblock=`echo $i |  sed 's/.html//g' | sort -V | uniq `
+fi 
+
 
 file=`grep -m1 "${i}" $basefile `
 
@@ -746,7 +767,6 @@ linklang="$linkgeneral"
 
 
 if [[ "$@" == *"-b"* ]]; then
-echo thistext
 roottext=`nice -$nicevalue find $bwlocation -name "*${filenameblock}_*" -not -path "*/home/*" -not  -path "*/css/*" -not -path "*/js/*" -not -path "*/engsesrch/*"`
 else
 roottext=`nice -$nicevalue find $lookup/root -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
@@ -758,8 +778,7 @@ fi
         file=$tr
         remtitle=`echo $filenameblock | sed 's/[A-Za-z]//g'`
 suttatitle=`grep -m1 $hwithtitle $file | clearsed | xargs | sed 's@'$remtitle'@@g'`
-		
-	
+
 	   np=`echo $filenameblock | sed 's@\.@_@g'`
     tr=`find $searchdir -name "*${np}-*"`
 

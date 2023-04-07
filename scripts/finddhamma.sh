@@ -550,10 +550,15 @@ for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | se
 filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -V | uniq`
 pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) printf $i"/"}'`
 
-    roottext=`nice -$nicevalue find $lookup/root/pli/ms/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
-    translation=`nice -$nicevalue find $lookup/translation/en/$translator/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*" |head -n1`
-    
-    variant=`nice -$nicevalue find $lookup/variant/pli/ms/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
+#echo "flnblck=$filenameblock pathblock=$pathblock"
+
+  #old find block
+  #  roottext=`nice -$nicevalue find $lookup/root/pli/ms/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
+ #   translation=`nice -$nicevalue find $lookup/translation/en/$translator/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*" |head -n1`
+ #   variant=`nice -$nicevalue find $lookup/variant/pli/ms/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
+   roottext=`ls $lookup/root/pli/ms/$pathblock/*${filenameblock}_*`
+    translation=`ls $lookup/translation/en/$translator/$pathblock/*${filenameblock}_*`
+    variant=`ls $lookup/variant/pli/ms/$pathblock/*${filenameblock}_* 2>/dev/null`
     
     np=`echo $filenameblock | sed 's@\.@_@g'`
     tr=`nice -$nicevalue find $searchdir -name "*${np}-*"`

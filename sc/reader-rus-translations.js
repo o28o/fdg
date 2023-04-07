@@ -13,7 +13,7 @@ const citation = document.getElementById("citation");
 const pathLang = "ru";
 
 citation.focus();
-let language = "pli-eng";
+let language = "pli-rus";
 
 homeButton.addEventListener("click", () => {
   document.location.search = "";
@@ -291,9 +291,9 @@ if (document.location.search) {
 }
 
 function setLanguage(language) {
-  if (language === "pli-eng") {
+  if (language === "pli-rus") {
     showPaliEnglish();
-  } else if (language === "eng") {
+  } else if (language === "rus") {
     showEnglish();
   } else if (language === "pli") {
     showPali();
@@ -320,11 +320,11 @@ function toggleThePali() {
   languageButton.addEventListener("click", () => {
     if (language === "pli") {
       showPaliEnglish();
-      language = "pli-eng";    
-    } else if (language === "pli-eng") {
+      language = "pli-rus";    
+    } else if (language === "pli-rus") {
      showEnglish();
-      language = "eng";
-    } else if (language === "eng") {
+      language = "rus";
+    } else if (language === "rus") {
      showPali();
       language = "pli";
     }

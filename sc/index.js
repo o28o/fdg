@@ -199,14 +199,8 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
         previous2.innerHTML = previous.innerHTML;
       }
       );
- 
- 
- 
     }
     );
-      
-      
-     
     })
     .catch(error => {
             console.log('error:not found');

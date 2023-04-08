@@ -140,6 +140,8 @@ maxmatchesbg=6000
 archivenumber=31
 fi
 #common vars
+filelimit=500 
+procqnty=4
 rootpath=$apachesitepath/scripts
 output=$apachesitepath/result/
 history="$apachesitepath/result/.history"

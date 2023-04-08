@@ -2,6 +2,7 @@
 #set -x 
 #trap read debug
 export LANG=en_US.UTF-8
+#export LC_ALL=en_US
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 
@@ -292,21 +293,21 @@ maxmatchesbg=100000000
 #echo $pattern $splitpattern $splitarraylen | tohtml
 else 
 function grepbasefile {
-  tmpgb=tmpgrepbase.$rand
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpgb
-if [ -s $tmpgb ]; then
-cat $tmpgb
+tmpgb=tmpgrepbase.$rand
+curdir=`pwd`
+cd $suttapath/$pali_or_lang 
+find . -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' -print0 | xargs -n1000 -r0P3 grep -E -Ri${grepvar}${grepgenparam} "$pattern" > $curdir/$tmpgb
+  cd $curdir
+  cat $tmpgb
+#nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpgb
+if [ -s $curdir/$tmpgb ]; then
+cat $curdir/$tmpgb
 else
         # The file is empty.
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud}
 fi
-
 }
 fi
-
-
-
-
 
 if [[ "$@" == *"-th"* ]]; then
     fnlang=_th

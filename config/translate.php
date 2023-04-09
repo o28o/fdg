@@ -356,7 +356,7 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         in Pali Suttas and Vinaya.<br>
         Understand the real meaning <br>
         of Four Noble Truths<br>
-        and end up the pain.';
+        and finish the pain.';
         
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 

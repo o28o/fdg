@@ -125,7 +125,7 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
     });
 
 if (translator === "sv") {
-  translator = 'SV <a href=https://theravada.ru>theravada.ru</a>';
+  translator = 'SV <a target=_blank href=https://theravada.ru>theravada.ru</a>';
 }
 const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 

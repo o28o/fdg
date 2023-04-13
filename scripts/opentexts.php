@@ -12,6 +12,7 @@ if (empty($check)) {
 }
 }
 
+
 if ( preg_match('/\/ru/', $actual_link)) {
   $defaultlang = 'lang=pli';
   $outputlang = "-oru";
@@ -67,8 +68,10 @@ $q = $p = $arg = $string = $sutta = "";
     $p = test_input($_GET["p"]);
   }
 	
-		$string = str_replace ("`", "", $q);
-			
+		$string = str_replace("`", "", $q);
+
+$string = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $string);
+
 /* ru with arg */ 
 /* for th.su dn */
   if (preg_match("/^(dn|mn)[0-9]{1,3}s$/i",$string)) {

@@ -4,9 +4,11 @@
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Theragatha 3</title>
- 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<!-- Loading third party fonts -->
-  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<!-- Loading manifest -->
+ 		<link rel="manifest" href="../manifest.json">
+ <!-- Loading third party fonts -->
+  	 <link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
   	<!-- Loading main and menu stylesheets -->
   	<link rel="stylesheet" href="../css/w3.css">
   	<link rel="stylesheet" href="../css/css.css">
@@ -14,10 +16,9 @@
 			<script src="../js/jquery-1.10.2.min.js"></script>
 			<script src="../js/controlpanel.js"></script>
    <script src="../js/mousetrap.min.js"></script>
-<body>
-
- 	<!--  <header>-->
- 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<body> 
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
  		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
  		<span></span>
  		<span></span>
@@ -39,6 +40,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="guide"><a href="../guide/guide.html" class="w3-hide-small">Guide</a></li>
  				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
@@ -82,8 +84,6 @@
  						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
  						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
- 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
- 						
  					</ul>
  				</li>
  			</ul>
@@ -95,6 +95,8 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
  			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
@@ -109,17 +111,7 @@
    		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
  
  <h2>Khuddaka Nikaya - The Minor Texts</h2>
- 
- <div class="w3-bar-white bwnav"><!-- Div for lower Kn sub-navigation -->
- 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
- 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
- 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sutta Nipata</a>
- 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
- 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
- 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Theragatha</a>
- 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
- </div><!-- End div for lower Kn sub-navigation -->
- 
+  
  <!--     Theragatha content begins here     -->
  
  <div id="content">
@@ -135,7 +127,7 @@
 
 <section class="raw_sutta">
 <div lang="en">
-<h5>Angaṇikabhāradvāja</h5>
+<h5>Angaṇika&shy;bhāradvāja</h5>
 <div class="verse">
 <p id="p219"><span class="parno">219</span>Seeking purity the wrong way,
 <br>I worshipped the sacred fire in a grove.
@@ -161,7 +153,7 @@
 
 <p id="p223"><span class="parno">223</span>I won’t eat; I won’t drink;
 <br>I won’t leave my dwelling;
-<br>Nor will I lie down on my side—
+<br>Nor will I lie down on my side — 
 <br>Until the dart of craving is pulled out.</p>
 
 <p id="p224"><span class="parno">224</span>See my energy and effort
@@ -207,7 +199,7 @@
 <div class="verse">
 <p id="p231"><span class="parno">231</span>"It’s too cold, too hot,
 <br>Too late," they say.
-<br>Those who neglect their work like this—
+<br>Those who neglect their work like this — 
 <br>Opportunities pass them by.</p>
 
 <p id="p232"><span class="parno">232</span>But one who considers hot and cold
@@ -221,13 +213,13 @@
 </div>
 <h5>Khujjasobhita</h5>
 <div class="verse">
-<p id="p234"><span class="parno">234</span>"One of those monks who live in Pāṭaliputta—
-<br>Such brilliant speakers, and very learned—
+<p id="p234"><span class="parno">234</span>"One of those monks who live in Pāṭaliputta — 
+<br>Such brilliant speakers, and very learned — 
 <br>Stands at the door:
 <br>The old man, Khujjasobhita.</p>
 
-<p id="p235"><span class="parno">235</span>One of those monks who live in Pāṭaliputta—
-<br>Such brilliant speakers, and very learned—
+<p id="p235"><span class="parno">235</span>One of those monks who live in Pāṭaliputta — 
+<br>Such brilliant speakers, and very learned — 
 <br>Stands at the door:
 <br>An old man, trembling in the wind."</p>
 </div>
@@ -275,7 +267,7 @@
 <div class="verse">
 <p id="p243"><span class="parno">243</span>"With knobbly knees,
 <br>Thin, with veins matted on his skin,
-<br>Eating and drinking in moderation—
+<br>Eating and drinking in moderation — 
 <br>This person’s spirit is undaunted."</p>
 </div>
 <div class="verse">
@@ -296,7 +288,7 @@
 <br>What’s yours is yours alone;
 <br>I’ve done nothing wrong.</p>
 
-<p id="p247"><span class="parno">247</span>Faith is impermanent, fickle—
+<p id="p247"><span class="parno">247</span>Faith is impermanent, fickle — 
 <br>So I have seen.
 <br>People’s passions wax and wane:
 <br>Why should a sage grow old worrying about that?</p>
@@ -404,7 +396,7 @@
 <br>If they rely on a lazy person.
 <br>So avoid those who are lazy, lacking energy.</p>
 
-<p id="p266"><span class="parno">266</span>Instead, dwell with the wise—
+<p id="p266"><span class="parno">266</span>Instead, dwell with the wise — 
 <br>Secluded, noble,
 <br>Resolute, practising <i>jhāna</i>,
 <br>And always energetic.</p>
@@ -413,7 +405,7 @@
 </div><!--end English-->
 
 <div lang="pi">
-<h5>Angaṇikabhāradvājatheragāthā</h5>
+<h5>Angaṇika&shy;bhāradvājatheragāthā</h5>
 <div class="verse">
 <p><span class="parno">219</span><a class="pts1" id="pts29"></a>
 <span class="ms">p_19Th1_434</span>"Ayoni suddhimanvesaṁ,
@@ -430,7 +422,7 @@
 <br>idāni khomhi brāhmaṇo;
 <br>Tevijjo sottiyo camhi vedagū"ti.</p>
 </div>
-<h5>Paccayattheragāthā</h5>
+<h5>Paccaya&shy;ttheragāthā</h5>
 <div class="verse">
 <p><span class="parno">222</span><span class="ms">p_19Th1_438</span>"Pañcāhāhaṁ pabbajito,
 <br>sekho appattamānaso;
@@ -541,7 +533,7 @@
 
 <p><span class="parno">241</span><span class="ms">p_19Th1_463</span>Niggayha anukampāya,
 <br>coditā ñātayo mayā;
-<br>Ñātibandhavapemena,
+<br>Ñātibandha&shy;vapemena,
 <br>kāraṁ katvāna bhikkhusu.</p>
 
 <p><span class="parno">242</span><span class="ms">p_19Th1_464</span>Te abbhatītā kālankatā,
@@ -602,7 +594,7 @@
 <h5>Uttarapālattheragāthā</h5>
 <div class="verse">
 <p><span class="parno">252</span><span class="ms">p_19Th1_478</span>"Paṇḍitaṁ vata maṁ santaṁ,
-<br>alamatthavicintakaṁ;
+<br>alamattha&shy;vicintakaṁ;
 <br>Pañca kāmaguṇā loke,
 <br>sammohā pātayiṁsu maṁ.</p>
 
@@ -685,26 +677,37 @@
 </div>
 </div><!--end Pali-->
 
-</section>
-
-</div>
-
+</section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="../tha/tha2.html#content"></a><a id="next-sutta" href="../tha/tha4.html#content"></a></div>
-</div><!--content-->
-	  <!-- Footer -->
-	<footer>
- 		<div class="w3-white .bwcontainer2">
- 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../tha/tha.html">Theragatha</a>Chapter 3
-</div>
-	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
- 	<div class="bottomlinks">
- 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
- 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
- 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
- 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
- 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
- 	</div>  <!-- End bottom links -->
- </footer>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../tha/tha.html">Theragatha</a>Chapter 3</div>
+					<div class="bottomlinks">
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
 
  <script>
  // Script to open and close sidebar
@@ -721,28 +724,29 @@
  			app.setAttribute("light-mode", "dark");
  	}
  </script>
-
+ 
  <script>
  		function toggle_light_mode() {
  			var app = document.getElementsByTagName("BODY")[0];
  				if (localStorage.lightMode == "dark") {
- 					localStorage.lightMode = "light";
- 					app.setAttribute("light-mode", "light");
- 				} else {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
  					localStorage.lightMode = "dark";
  					app.setAttribute("light-mode", "dark");
  	}
  		}
-
+ 
  		window.addEventListener("storage", function () {
  			if (localStorage.lightMode == "dark") {
  				app.setAttribute("light-mode", "dark");
- 			} else {
+ 				} else {
  				app.setAttribute("light-mode", "light");
  		}
  		}, false);
-
+ 
  </script>
  <script src="../js/footer.js"></script>
-  </body>
+ <script src="/sw.js"></script>
+ </body>
  </html>

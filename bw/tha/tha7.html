@@ -4,9 +4,11 @@
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Theragatha 7</title>
- 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<!-- Loading third party fonts -->
-  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<!-- Loading manifest -->
+ 		<link rel="manifest" href="../manifest.json">
+ <!-- Loading third party fonts -->
+  	 <link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
   	<!-- Loading main and menu stylesheets -->
   	<link rel="stylesheet" href="../css/w3.css">
   	<link rel="stylesheet" href="../css/css.css">
@@ -14,10 +16,9 @@
 			<script src="../js/jquery-1.10.2.min.js"></script>
 			<script src="../js/controlpanel.js"></script>
    <script src="../js/mousetrap.min.js"></script>
-<body>
-
- 	<!--  <header>-->
- 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<body> 
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
  		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
  		<span></span>
  		<span></span>
@@ -39,6 +40,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="guide"><a href="../guide/guide.html" class="w3-hide-small">Guide</a></li>
  				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
@@ -82,8 +84,6 @@
  						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
  						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
- 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
- 						
  					</ul>
  				</li>
  			</ul>
@@ -95,6 +95,8 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
  			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
@@ -109,17 +111,7 @@
    		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
  
  <h2>Khuddaka Nikaya - The Minor Texts</h2>
- 
- <div class="w3-bar-white bwnav"><!-- Div for lower Kn sub-navigation -->
- 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
- 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
- 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sutta Nipata</a>
- 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
- 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
- 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Theragatha</a>
- 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
- </div><!-- End div for lower Kn sub-navigation -->
- 
+  
  <!--     Theragatha content begins here     -->
  
  <div id="content">
@@ -152,7 +144,7 @@
 <br>Come, stay in my teaching!
 <br>Enjoy human sensual pleasures,
 <br>I’ll give you riches.
-<br>I promise this is the truth—
+<br>I promise this is the truth — 
 <br>I’ll swear by the Sacred Flame.</p>
 
 <p id="p462"><span class="parno">462</span>And when we’ve grown old together,
@@ -166,11 +158,11 @@
 <br>Like a snare of death laid down.</p>
 
 <p id="p464"><span class="parno">464</span>Then the realization
-<br>Came upon me—
+<br>Came upon me — 
 <br>The danger became clear,
 <br>And I was firmly repulsed.</p>
 
-<p id="p465"><span class="parno">465</span>Then my mind was liberated—
+<p id="p465"><span class="parno">465</span>Then my mind was liberated — 
 <br>See the excellence of the Dhamma!
 <br>I’ve attained the three knowledges,
 <br>And fulfilled the Buddha’s instructions.</p>
@@ -231,7 +223,7 @@
 
 <p id="p476"><span class="parno">476</span>The teacher, having accepted me,
 <br>Declared to Ānanda:
-<br>"Quickly give him the going-forth—
+<br>"Quickly give him the going-forth — 
 <br>This one will be a thoroughbred."</p>
 
 <p id="p477"><span class="parno">477</span>After he, the teacher, had sent me forth,
@@ -275,7 +267,7 @@
 <br>That this person enjoys their
 <br>Robe and almsfood,
 <br>Requisites and lodgings,
-<br>Their respect and service—
+<br>Their respect and service — 
 <br>It’s a blessing for them," he declared.</p>
 
 <p id="p485"><span class="parno">485</span>"Sopāka, from this day on
@@ -285,7 +277,7 @@
 
 <p id="p486"><span class="parno">486</span>At seven years old
 <br>I received full ordination.
-<br>I bear my final body—
+<br>I bear my final body — 
 <br>Oh, the excellence of the Dhamma!</p>
 </div>
 <h5>Sarabhanga</h5>
@@ -314,7 +306,7 @@
 <br>Having become Dhamma, poised,
 <br>This Dhamma was taught,</p>
 
-<p id="p492"><span class="parno">492</span>Out of compassion for living beings—
+<p id="p492"><span class="parno">492</span>Out of compassion for living beings — 
 <br>Suffering, origin, path,
 <br>And cessation, the ending of suffering.
 <br>In these four noble truths,</p>
@@ -334,7 +326,7 @@
 <div class="verse">
 <p><span class="parno">459</span><a class="pts1" id="pts49"></a>
 <span class="ms">p_19Th1_744</span>"Alankatā suvasanā,
-<br>Alattakakatāpādā,
+<br>Alattaka&shy;katāpādā,
 <br>pādukāruyha vesikā.</p>
 
 <p><span class="parno">460</span><span class="ms">p_19Th1_745</span>Pādukā oruhitvāna,
@@ -398,7 +390,7 @@
 
 <p><span class="parno">472</span><span class="ms">p_19Th1_758</span>Ajjhattañca pajānāti,
 <br>bahiddhā ca vipassati;
-<br>Anāvaraṇadassāvī,
+<br>Anāvaraṇa&shy;dassāvī,
 <br>na so ghosena vuyhatī"ti.</p>
 </div>
 <h5>Bhaddattheragāthā</h5>
@@ -517,26 +509,37 @@
 </div>
 </div><!--end Pali-->
 
-</section>
-
-</div>
-
+</section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="../tha/tha6.html#content"></a><a id="next-sutta" href="../tha/tha8.html#content"></a></div>
-</div><!--content-->
-	  <!-- Footer -->
-	<footer>
- 		<div class="w3-white .bwcontainer2">
- 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../tha/tha.html">Theragatha</a>Chapter 7
-</div>
-	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
- 	<div class="bottomlinks">
- 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
- 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
- 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
- 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
- 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
- 	</div>  <!-- End bottom links -->
- </footer>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../tha/tha.html">Theragatha</a>Chapter 7</div>
+					<div class="bottomlinks">
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
 
  <script>
  // Script to open and close sidebar
@@ -553,28 +556,29 @@
  			app.setAttribute("light-mode", "dark");
  	}
  </script>
-
+ 
  <script>
  		function toggle_light_mode() {
  			var app = document.getElementsByTagName("BODY")[0];
  				if (localStorage.lightMode == "dark") {
- 					localStorage.lightMode = "light";
- 					app.setAttribute("light-mode", "light");
- 				} else {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
  					localStorage.lightMode = "dark";
  					app.setAttribute("light-mode", "dark");
  	}
  		}
-
+ 
  		window.addEventListener("storage", function () {
  			if (localStorage.lightMode == "dark") {
  				app.setAttribute("light-mode", "dark");
- 			} else {
+ 				} else {
  				app.setAttribute("light-mode", "light");
  		}
  		}, false);
-
+ 
  </script>
  <script src="../js/footer.js"></script>
-  </body>
+ <script src="/sw.js"></script>
+ </body>
  </html>

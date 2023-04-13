@@ -4,8 +4,10 @@
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Udana 6.6</title>
- 	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<!-- Loading third party fonts -->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<!-- Loading manifest -->
+ 		<link rel="manifest" href="../manifest.json">
+ <!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
  	<link rel="stylesheet" href="../css/w3.css">
@@ -38,6 +40,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="guide"><a href="../guide/guide.html" class="w3-hide-small">Guide</a></li>
  				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
@@ -81,7 +84,6 @@
  						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
  						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
- 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
  					</ul>
  				</li>
  			</ul>
@@ -94,7 +96,8 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  	<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 	<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
+ 	<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
  	<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
  	<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
  	<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
@@ -106,30 +109,8 @@
  
  			<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
  
- <h2>Khuddaka Nikaya - The Minor Texts</h2>
- 
- <div class="w3-bar-white bwnav"><!-- Div for lower Kn sub-navigation -->
- 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
- 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
- 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sutta Nipata</a>
- 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button active">The Udana</a>
- 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
- 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Theragatha</a>
- 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
- </div><!-- End div for lower Kn sub-navigation -->
- 
- <h2>The Udana</h2>
- <div class="w3-bar-white bwnav"><!-- Div for lower Ud sub-navigation -->
- 	<a href="../ud/ud1.html#content" title="1: The Bodhi Tree" class="w3-bar-item w3-hover-white w3-border-white w3-button">1:<br>The Bodhi Tree</a>
- 	<a href="../ud/ud2.html#content" title="2: Mucalinda" class="w3-bar-item w3-hover-white w3-border-white w3-button">2:<br>Mucalinda</a>
- 	<a href="../ud/ud3.html#content" title="3: Nanda" class="w3-bar-item w3-hover-white w3-border-white w3-button">3:<br>Nanda</a>
- 	<a href="../ud/ud4.html#content" title="4: Meghiya" class="w3-bar-item w3-hover-white w3-border-white w3-button">4:<br>Meghiya</a>
- 	<a href="../ud/ud5.html#content" title="5: Sona" class="w3-bar-item w3-hover-white w3-border-white w3-button">5:<br>Sona</a>
- 	<a href="../ud/ud6.html#content" title="6: Born Blind" class="w3-bar-item w3-hover-white w3-border-white w3-button active">6:<br>Born Blind</a>
- 	<a href="../ud/ud7.html#content" title="7: The Minor Section" class="w3-bar-item w3-hover-white w3-border-white w3-button">7:<br>The Minor Section</a>
- 	<a href="../ud/ud8.html#content" title="8: Patali Village" class="w3-bar-item w3-hover-white w3-border-white w3-button">8:<br>Patali Village</a>
- </div><!-- End div for lower Ud sub-navigation -->
- 
+<h2>Khuddaka Nikaya - The Minor Texts</h2>
+
  <!-- Ud content begins here -->
  
  <div id="content">
@@ -316,24 +297,37 @@
 <p class="endsection">Chaṭṭhaṁ.</p>
 
 </div>
-</section>
+</section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="./ud6.5.html#content"></a><a id="next-sutta" href="./ud6.7.html#content"></a></div>
-</div><!--content-->
-	  <!-- Footer -->
-	<footer>
- 		<div class="w3-white .bwcontainer2">
- 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../ud/ud.html">Udana</a>6.6 - The Third Discourse about the Various Sectarians
-</div>
-	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
- 	<div class="bottomlinks">
- 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
- 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
- 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
- 		<a href="../home/copyright.html"><span class="w3-bar-item">©&nbsp;Copyright</span></a>
- 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
- 	</div>  <!-- End bottom links -->
-  </footer>
-</div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../ud/ud.html">Udana</a>6.6 - The Third Discourse about the Various Sectarians</div>
+					<div class="bottomlinks">
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
 
  <script>
  // Script to open and close sidebar
@@ -350,28 +344,29 @@
  			app.setAttribute("light-mode", "dark");
  	}
  </script>
-
+ 
  <script>
  		function toggle_light_mode() {
  			var app = document.getElementsByTagName("BODY")[0];
  				if (localStorage.lightMode == "dark") {
- 					localStorage.lightMode = "light";
- 					app.setAttribute("light-mode", "light");
- 				} else {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
  					localStorage.lightMode = "dark";
  					app.setAttribute("light-mode", "dark");
  	}
  		}
-
+ 
  		window.addEventListener("storage", function () {
  			if (localStorage.lightMode == "dark") {
  				app.setAttribute("light-mode", "dark");
- 			} else {
+ 				} else {
  				app.setAttribute("light-mode", "light");
  		}
  		}, false);
-
+ 
  </script>
  <script src="../js/footer.js"></script>
-  </body>
+ <script src="/sw.js"></script>
+ </body>
  </html>

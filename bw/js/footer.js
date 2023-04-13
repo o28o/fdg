@@ -420,12 +420,13 @@ function unloadPaliLookup() {
   });
 }
 
-// set default state of Pali Lookup
+// set default state of Pali Lookup to true
 if (localStorage.paliLookupActive === undefined) {
   localStorage.paliLookupActive = "true";
 }
 
 function setPaliVisibility(state) {
+  // This actually both sets the Pali visibility as well as sets the Pali lookup
   if (state) {
     $("td:nth-child(2)").show();
     $("#pali").addClass("active");
@@ -439,18 +440,6 @@ function setPaliVisibility(state) {
     $("#pali").removeClass("active");
   }
 }
-
-// toggle Pali lookup with keyboard command
-Mousetrap.bind("mod+alt+l", function (e) {
-  if (localStorage.paliLookupActive === "true") {
-    localStorage.paliLookupActive = "false";
-    alert("Pali Lookup has been turned off.\n\nPress Control+Alt+l to turn it on.");
-  } else {
-    localStorage.paliLookupActive = "true";
-    alert("Pali Lookup has been turned on\n\nPress Control+Alt+l to turn it off.");
-  }
-  setPaliVisibility(paliVisible);
-});
 
 $("#pali").on("click", function () {
   paliVisible = !paliVisible;
@@ -484,21 +473,117 @@ Mousetrap.bind("c", function (e) {
   window.location.href = "../home/contact.html";
 });
 
-
-
 Mousetrap.bind("d", function (e) {
   document.getElementsByClassName("light-mode-button")[0].click();
 });
 
 Mousetrap.bind("i", function (e) {
-  chapterBooks = ["sn", "an", "snp", "ud"];
-  suttaBooks = ["dn", "mn", "kp", "dhp", "tha", "thi"];
-  const url = location.pathname.split(/[/.]/);
+  const knBooks = ["kp", "dhp", "ud", "it", "snp", "tha", "thi"];
+  const url = location.pathname.replace(/\.html/, "").split(/\//); // splits at  slashes
   const urlLength = url.length;
-  if (chapterBooks.includes(url[urlLength - 4])) {
-    window.location.href = `../${url[urlLength - 4]}/${url[urlLength - 3]}.html#content`;
-  } else if (suttaBooks.includes(url[urlLength - 3])) {
-    window.location.href = `../${url[urlLength - 3]}/${url[urlLength - 3]}.html#content`;
+  const book = url[url.length - 2];
+  const secondPart = url[url.length - 1];
+
+  if (book == "home" && secondPart == "index") {
+    return;
+  } else if (book == "home") {
+    window.location.href = "../home/index.html";
+  } else if (book == "vi") {
+    const vinayaBooks = ["kd", "bu-vb", "bi-vb", "bu-pt", "bi-pt"];
+    const bhikkhuRuleTypes = [
+      "bu-vb-pj",
+      "bu-vb-sn",
+      "bu-vb-an",
+      "bu-vb-np",
+      "bu-vb-pc",
+      "bu-vb-pd",
+      "bu-vb-sk",
+      "bu-vb-as",
+    ];
+    const bhikkhuniRuleTypes = ["bi-vb-pj", "bi-vb-sn", "bi-vb-np", "bi-vb-pc", "bi-vb-pd", "bi-vb-sk", "bi-vb-as"];
+
+    if (book == secondPart) {
+      // move from book home page to site homepage
+      window.location.href = "../home/index.html";
+    } else if (vinayaBooks.includes(secondPart)) {
+      // move from various vinaya books home to vi home
+      window.location.href = "../vi/vi.html";
+    } else if (bhikkhuRuleTypes.includes(secondPart)) {
+      // move from bhikkhu rule-type page to bhikkhu vibhanga home
+      window.location.href = "../vi/bu-vb.html";
+    } else if (bhikkhuniRuleTypes.includes(secondPart)) {
+      // move from bhikkhu rule-type page to bhikkhu vibhanga home
+      window.location.href = "../vi/bi-vb.html";
+    } else if (/\d/.test(secondPart)) {
+      // if there is a number in the second part
+      // that means we are on a rule page
+      // move up to rule type page
+      const ruleType = secondPart.replace(/\d/g, "");
+      window.location.href = `../vi/${ruleType}.html`;
+    }
+  } else if (knBooks.includes(book) && book == secondPart) {
+    // this is a top level page for a book in KN
+    window.location.href = "../kn/kn.html#content";
+  } else if (book == secondPart) {
+    // this is a top level page for any nikaya
+    window.location.href = "../home/index.html";
+  } else if (/\./.test(secondPart)) {
+    // This is a sutta page that is within a chapter
+    const chapter = secondPart.split(/\./)[0];
+    window.location.href = `../${book}/${chapter}.html`;
+  } else if (book == "sn" && /sn[1-5]/.test(secondPart)) {
+    // This is a samyutta top level page
+    const samyutta = parseInt(secondPart.replace("sn", ""));
+    if (samyutta >= 1 && samyutta <= 11) {
+      window.location.href = `../sn/sn01.html`;
+    } else if (samyutta >= 12 && samyutta <= 21) {
+      window.location.href = `../sn/sn02.html`;
+    } else if (samyutta >= 22 && samyutta <= 34) {
+      window.location.href = `../sn/sn03.html`;
+    } else if (samyutta >= 35 && samyutta <= 44) {
+      window.location.href = `../sn/sn04.html`;
+    } else {
+      window.location.href = `../sn/sn05.html`;
+    }
+  } else {
+    // This is a sutta not within a chapter
+    window.location.href = `../${book}/${book}.html`;
   }
 });
 
+// toggle Pali lookup with keyboard command
+Mousetrap.bind("mod+alt+l", function (e) {
+  changePaliLookupStatus();
+});
+
+function changePaliLookupStatus() {
+  const paliLookupCheckBox = document.getElementById("paliLookupCheck");
+
+  if (localStorage.paliLookupActive === "true") {
+    localStorage.paliLookupActive = "false";
+    paliLookupCheckBox.checked = false;
+    alert("Pali Lookup has been turned off.\n\nPress Control+Alt+l to turn it on.");
+  } else {
+    localStorage.paliLookupActive = "true";
+    paliLookupCheckBox.checked = true;
+    alert("Pali Lookup has been turned on\n\nPress Control+Alt+l to turn it off.");
+  }
+  setPaliVisibility(paliVisible);
+}
+
+// insert the checkbox for Pali lookup
+const footer = document.getElementsByTagName("footer")[0];
+const settingsDiv = document.createElement("div");
+settingsDiv.innerHTML = `<div class="w3-content w3-padding bwcontainer" style="background-color:#FFF3D6"> 
+<label for="paliLookupCheck">Pali Lookup On:</label>
+<input type="checkbox" id="paliLookupCheck">
+</div>`;
+footer.after(settingsDiv);
+const paliLookupCheckBox = document.getElementById("paliLookupCheck");
+
+// make the checkbox match the setting stored in local storage
+paliLookupCheckBox.checked = JSON.parse(localStorage.paliLookupActive);
+
+paliLookupCheckBox.addEventListener("change", e => {
+  changePaliLookupStatus();
+});

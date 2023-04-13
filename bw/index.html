@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
- 	<title>Redirect into Buddha&rsquo;s Words…</title>
- 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-				<meta http-equiv="refresh" content="0; url='home/index.html'" />
-  	<!-- Loading third party fonts -->
-  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-  	<!-- Loading main and menu stylesheets -->
-  	<link rel="stylesheet" href="../css/w3.css">
-  	<link rel="stylesheet" href="../css/css.css">
-  	<link rel="stylesheet" href="../css/menu.css">
-			<script src="../js/jquery-1.10.2.min.js"></script>
-			<script src="../js/controlpanel.js"></script>
-   <script src="../js/mousetrap.min.js"></script>
-<body>
+    <title>Dark Mode Toggle</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Dark Mode Toggle Example">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="refresh" content="0; url='home/index.html'" />
+    <!-- Loading manifest -->
+    <link rel="manifest" href="../manifest.json">
+    <!-- Loading third party fonts -->
+	<link rel="stylesheet" href="css/css.css">
 
+</head>
+
+<body>
  <a href="home/index.html">Click here if this doesn't redirect you automatically…</a>
+
+
+    <script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
+
+    <script>
+		
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }       
+        }
+
+		window.addEventListener("storage", function () {
+			if (localStorage.lightMode == "dark") {
+				app.setAttribute("light-mode", "dark");
+			} else {
+				app.setAttribute("light-mode", "light");
+			}
+		}, false);
+		
+    </script>
 
 </body>
 </html>

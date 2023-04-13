@@ -215,6 +215,13 @@ p, .p {
 /*	padding-left: 1em; */
 	margin: .5em 0;
 	}
+ 
+/* fill screen with English and Pali, force words to wrap */
+.pairs {
+	table-layout: fixed;
+	width: 100%;
+	word-break: break-word;
+}
 
 .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
  margin: 1em 0 .5em 0;
@@ -246,6 +253,28 @@ p, .p {
 	font-size: 100% !important;
 }
 
+/* Force Pali to display on top of English on smaller screens */
+@media screen and (max-width: 500px) {
+	.pairs tr {
+		display: flex;
+		flex-flow: column-reverse wrap;
+	}
+
+	.pairs {
+		table-layout: auto;
+		width: 100%;
+		word-break: break-word;
+	}
+
+	.pairs td {
+		width: 100% !important;
+		margin: 0;
+	}
+
+	p:lang(pi) {
+		font-weight: bold;
+	}
+}
 /* ================= used only in bmc ================= */
 
 ul, ol { margin-bottom: 0.5em; margin-top:0; }
@@ -440,7 +469,7 @@ color:white;
   color: #add8e6 !important;
   text-decoration: none;
   font-size: 17px;
-  width: 20%; /* Four links of equal widths */
+  width: 25%; /* Four links of equal widths */
   text-align: center;
 }
 
@@ -504,12 +533,12 @@ color: blue;
   background-color: white;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .bottomlinks a {
     float: none;
     display: block;
     width: 100%;
-    text-align: left;
+    text-align: center;
   }
 }
 /*Sub navigation */
@@ -569,7 +598,7 @@ color: blue !important;
 margin: 10px 10px 10px 2px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .subnav .subnav6 .subnav3 a {
     float: none;
     display: block;
@@ -827,16 +856,15 @@ font-weight: bold;
 	font-weight: bold;
 }
 
-.pairs p {
-}
-
 .pairs td {
 	width: 50%;
 	margin: 0;
+ word-wrap: break-word;
 }
 
 .pairs td:last-child p {
-	font-size: 125%
+	font-size: 125%;
+ word-wrap: break-word;
 }
 
 fieldset.input { padding: 0; }
@@ -880,7 +908,11 @@ table {
 
 th { font-weight: bold; padding: 5px; text-align: left; }
 
-td { font-size: 120%; padding: 5px;} /* Make font larger in java generated table English and Pali */
+td {
+font-size: 120%;
+padding: 5px;
+word-wrap: break-word;
+} /* Make font larger in java generated table English and Pali */
 
 thead tr th { background: #141516; color: #fff; padding: 0px; }
 
@@ -1360,16 +1392,17 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   font-family: Arial, Helvetica, sans-serif;
   color: #141516;
   font-size: 80%;
-  font-weight: 600;
+  font-weight: 600;<div lang="pi">
   cursor: pointer;
   position: absolute;
   top:16px;
   left:55px;
 }
 
+
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\
 /* For Publishing ... The end comment needs to be at the bottom of this page.
-/* For Editing ... Move the end comment at the end of this page to the end of this line.   
+/* For Editing ... Move the end comment at the end of this page to the end of this line.  
  
 
  h1,h2,h3,h4,h5,h6, .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
@@ -1381,4 +1414,5 @@ hr, .pairs hr {
  margin-bottom:0;
  background-color:lime;
 
-*/
+ */
+

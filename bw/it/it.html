@@ -4,9 +4,11 @@
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Itivuttaka</title>
- 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<!-- Loading third party fonts -->
-  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<!-- Loading manifest -->
+ 		<link rel="manifest" href="../manifest.json">
+ <!-- Loading third party fonts -->
+  	 <link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
   	<!-- Loading main and menu stylesheets -->
   	<link rel="stylesheet" href="../css/w3.css">
   	<link rel="stylesheet" href="../css/css.css">
@@ -14,10 +16,9 @@
 			<script src="../js/jquery-1.10.2.min.js"></script>
 			<script src="../js/controlpanel.js"></script>
    <script src="../js/mousetrap.min.js"></script>
-<body>
-
- 	<!--  <header>-->
- 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<body> 
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
  		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
  		<span></span>
  		<span></span>
@@ -39,6 +40,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="guide"><a href="../guide/guide.html" class="w3-hide-small">Guide</a></li>
  				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
@@ -82,8 +84,6 @@
  						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
  						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
- 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
- 						
  					</ul>
  				</li>
  			</ul>
@@ -95,6 +95,8 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
  			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
@@ -106,25 +108,15 @@
  
  
  
- 			<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
  
- <h2>Khuddaka Nikaya - The Minor Texts</h2>
+<h2>Khuddaka Nikaya - The Minor Texts</h2>
  
- <div class="w3-bar-white bwnav"><!-- Div for lower Kn sub-navigation -->
- 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
- 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
- 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sutta Nipata</a>
- 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
- 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button active">The Itivuttaka</a>
- 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Theragatha</a>
- 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
- </div><!-- End div for lower Kn sub-navigation -->
- 
-
 <h2>Itivuttaka</h2>
+
 	<div id="metaarea">
 		<ul class="translator">
-		 <li>&copy;&nbsp;Translated from the Pali by Thanissaro Bhikkhu.&nbsp;<a href="../home/copyright.html#than">(More copyright information)</a>
+		 <li>©&nbsp;Translated from the Pali by Thanissaro Bhikkhu.<br><a href="../home/copyright.html#than">(More copyright information)</a>
 		</ul>
 	</div>
 
@@ -243,7 +235,7 @@
 
 <p id="p10-13-1"><span class="parno">1</span><span class="evam">This was said by the Blessed One, said by the Arahant, so I have heard:</span></p>
 
-<p id="p10-13-2"><span class="parno">2</span>"Monks, one who has not fully known and fully understood hatred… delusion… anger… contempt, who has not detached his mind from it and let go of it, is incapable of putting an end to suffering. But one who has fully known and fully understood hatred… delusion… anger… contempt, who has detached his mind from it and let go of it, is capable of putting an end to suffering."</p>
+<p id="p10-13-2"><span class="parno">2</span>"Monks, one who has not fully known and fully understood hatred … delusion … anger … contempt, who has not detached his mind from it and let go of it, is incapable of putting an end to suffering. But one who has fully known and fully understood hatred … delusion … anger … contempt, who has detached his mind from it and let go of it, is capable of putting an end to suffering."</p>
 
 <p class="add">The verses for these discourses = those for discourses 2-5.</p>
 
@@ -289,7 +281,7 @@
 
 <p id="p17-1"><span class="parno">1</span><span class="evam">This was said by the Blessed One, said by the Arahant, so I have heard:</span></p>
 
-<p id="p17-2"><span class="parno">2</span>"With regard to external factors, I don't envision any other single factor like admirable friendship<span class="note"><span class="details"><span class="p">In SN 45.2 the Buddha says, "Admirable friendship… is actually the whole of the holy life… It is in dependence on me as an admirable friend that beings subject to birth have gained release from birth… aging… death… sorrow, lamentation, pain, suffering, and despair." As AN 8.54 points out, admirable friendship means not only associating with good people, but also learning from them and emulating their good qualities.</span></span></span> as doing so much for a monk in training, who has not attained the heart's goal but remains intent on the unsurpassed safety from bondage. A monk who is a friend with admirable people abandons what is unskillful and develops what is skillful."</p>
+<p id="p17-2"><span class="parno">2</span>"With regard to external factors, I don't envision any other single factor like admirable friendship<span class="note"><span class="details"><span class="p">In SN 45.2 the Buddha says, "Admirable friendship … is actually the whole of the holy life … It is in dependence on me as an admirable friend that beings subject to birth have gained release from birth … aging … death … sorrow, lamentation, pain, suffering, and despair." As AN 8.54 points out, admirable friendship means not only associating with good people, but also learning from them and emulating their good qualities.</span></span></span> as doing so much for a monk in training, who has not attained the heart's goal but remains intent on the unsurpassed safety from bondage. A monk who is a friend with admirable people abandons what is unskillful and develops what is skillful."</p>
 
 <p class="verse" id="p17-3"><span class="parno">3</span>A monk with admirable people as friends — who's reverential, respectful, doing what his friends advise — mindful, alert, attains step by step the ending of all fetters.</p>
 
@@ -338,7 +330,7 @@
 
 <p class="verse" id="p21-3"><span class="parno">3</span>Knowing the case of a clear-minded person, the One Awakened explained its meaning in the presence of the monks.</p>
 
-<p class="verse" id="p21-4"><span class="parno">4</span>If that person were to die at this instant, he'd reappear in heaven because his mind is clear —</p>
+<p class="verse" id="p21-4"><span class="parno">4</span>If that person were to die at this instant, he'd reappear in heaven because his mind is clear — </p>
 	
 <p class="verse" id="p21-5"><span class="parno">5</span>As if he were carried off and placed there. It's because of clear-mindedness that beings go to a good destination.</p>
 
@@ -1130,10 +1122,10 @@ mind, whether by day or by night, he lives in ease.</p>
 <p id="p78-2"><span class="parno">2</span>"It is in accordance with their properties that beings come together and associate with one another. Beings of low dispositions come together and associate with beings of low dispositions. Beings of admirable dispositions come together and associate with beings of admirable dispositions.</p>
 
 <hr>
-<p id="p78-3"><span class="parno">3</span>In the past, it was in accordance with their properties that beings came together and associated with one another…</p>
+<p id="p78-3"><span class="parno">3</span>In the past, it was in accordance with their properties that beings came together and associated with one another …</p>
 
 <hr>
-<p id="p78-4"><span class="parno">4</span>In the future, it will be in accordance with their properties that beings will come together and associate with one another…</p>
+<p id="p78-4"><span class="parno">4</span>In the future, it will be in accordance with their properties that beings will come together and associate with one another …</p>
 
 <hr>
 <p id="p78-5"><span class="parno">5</span>And now at present, it is in accordance with their properties that beings come together and associate with one another. Beings of low dispositions come together and associate with beings of low dispositions. Beings of admirable dispositions come together and associate with beings of admirable dispositions."</p>
@@ -1312,9 +1304,9 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p id="p87-1"><span class="parno">1</span><span class="evam">This was said by the Blessed One, said by the Arahant, so I have heard:</span></p>
 
-<p id="p87-2"><span class="parno">2</span>"There are these three kinds of unskillful thinking that produce blindness, produce lack of vision, produce lack of knowledge, lead to the cessation of discernment, side with vexation, and are not conducive to Unbinding. Which three? Thinking imbued with sensuality… Thinking imbued with ill-will… Thinking imbued with harmfulness produces blindness, produces lack of vision, produces lack of knowledge, leads to the cessation of discernment, sides with vexation, and is not conducive to Unbinding. These are the three kinds of unskillful thinking that produce blindness, produce lack of vision, produce lack of knowledge, lead to the cessation of discernment, side with vexation, and are not conducive to Unbinding.</p>
+<p id="p87-2"><span class="parno">2</span>"There are these three kinds of unskillful thinking that produce blindness, produce lack of vision, produce lack of knowledge, lead to the cessation of discernment, side with vexation, and are not conducive to Unbinding. Which three? Thinking imbued with sensuality … Thinking imbued with ill-will … Thinking imbued with harmfulness produces blindness, produces lack of vision, produces lack of knowledge, leads to the cessation of discernment, sides with vexation, and is not conducive to Unbinding. These are the three kinds of unskillful thinking that produce blindness, produce lack of vision, produce lack of knowledge, lead to the cessation of discernment, side with vexation, and are not conducive to Unbinding.</p>
 
-<p id="p87-3"><span class="parno">3</span>"There are these three kinds of skillful thinking that produce non-blindness, produce vision, produce knowledge, foster discernment, side with non-vexation, and are conducive to Unbinding. Which three? Thinking imbued with renunciation… Thinking imbued with non-ill-will… Thinking imbued with harmlessness produces non-blindness, produces vision, produces knowledge, fosters discernment, sides with non-vexation, and is conducive to Unbinding. These are the three kinds of skillful thinking that produce non-blindness, produce vision, produce knowledge, foster discernment, side with non-vexation, and are conducive to Unbinding."</p>
+<p id="p87-3"><span class="parno">3</span>"There are these three kinds of skillful thinking that produce non-blindness, produce vision, produce knowledge, foster discernment, side with non-vexation, and are conducive to Unbinding. Which three? Thinking imbued with renunciation … Thinking imbued with non-ill-will … Thinking imbued with harmlessness produces non-blindness, produces vision, produces knowledge, fosters discernment, sides with non-vexation, and is conducive to Unbinding. These are the three kinds of skillful thinking that produce non-blindness, produce vision, produce knowledge, foster discernment, side with non-vexation, and are conducive to Unbinding."</p>
 
 <p class="verse" id="p87-4"><span class="parno">4</span>Three skillful thoughts should be thought, three unskillful thoughts rejected. Whoever stills sustained thoughts — as rain would, a cloud of dust — through an awareness with thinking stilled, attains right here the state of peace.</p>
 
@@ -1324,7 +1316,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p id="p88-1"><span class="parno">1</span><span class="evam">This was said by the Blessed One, said by the Arahant, so I have heard:</span></p>
 
-<p id="p88-2"><span class="parno">2</span>"There are these three inside stains, inside enemies, inside foes, inside murderers, inside adversaries. Which three? Greed is an inside stain, inside enemy, inside foe, inside murderer, inside adversary. Aversion is an inside stain… Delusion is an inside stain, inside enemy, inside foe, inside murderer, inside adversary. These are the three inside stains, inside enemies, inside foes, inside murderers, inside adversaries."</p>
+<p id="p88-2"><span class="parno">2</span>"There are these three inside stains, inside enemies, inside foes, inside murderers, inside adversaries. Which three? Greed is an inside stain, inside enemy, inside foe, inside murderer, inside adversary. Aversion is an inside stain … Delusion is an inside stain, inside enemy, inside foe, inside murderer, inside adversary. These are the three inside stains, inside enemies, inside foes, inside murderers, inside adversaries."</p>
 
 <hr>
 <p class="verse" id="p88-3"><span class="parno">3</span>Greed causes harm. Greed provokes the mind. People don't realize it as a danger born from within.</p>
@@ -1351,7 +1343,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p id="p89-1"><span class="parno">1</span>This was said by the Blessed One, said by the Arahant, so I have heard:</p>
 
-<p id="p89-2"><span class="parno">2</span>"Conquered by three forms of false Dhamma — his mind overwhelmed — Devadatta<span class="note"><span class="details"><span class="p">Devadatta, one of the Buddha&rsquo;s cousins, plotted to take over the Saṅgha, and ended up causing a schism. His story is told in <a href="../vi/kd17.html">Khandaka 17 (Culavagga 7)</a> . His "lower modicum of distinctive attainment" was his mastery of psychic powers</span></span></span> is incurably doomed to deprivation, to hell, for an aeon. Which three? Conquered by evil desires — his mind overwhelmed — Devadatta is incurably doomed to deprivation, to hell, for the duration of an aeon. Conquered by friendship with evil people — his mind overwhelmed — Devadatta is incurably doomed to deprivation, to hell, for the duration of an aeon. And, there being something further to be done, he nevertheless stopped halfway with a lower modicum of distinctive attainment. Conquered by these three forms of false Dhamma — his mind overwhelmed — Devadatta is incurably doomed to deprivation, to hell, for an aeon."</p>
+<p id="p89-2"><span class="parno">2</span>"Conquered by three forms of false Dhamma — his mind overwhelmed — Devadatta<span class="note"><span class="details"><span class="p">Devadatta, one of the Buddha’s cousins, plotted to take over the Saṅgha, and ended up causing a schism. His story is told in <a href="../vi/kd17.html">Khandaka 17 (Culavagga 7)</a> . His "lower modicum of distinctive attainment" was his mastery of psychic powers</span></span></span> is incurably doomed to deprivation, to hell, for an aeon. Which three? Conquered by evil desires — his mind overwhelmed — Devadatta is incurably doomed to deprivation, to hell, for the duration of an aeon. Conquered by friendship with evil people — his mind overwhelmed — Devadatta is incurably doomed to deprivation, to hell, for the duration of an aeon. And, there being something further to be done, he nevertheless stopped halfway with a lower modicum of distinctive attainment. Conquered by these three forms of false Dhamma — his mind overwhelmed — Devadatta is incurably doomed to deprivation, to hell, for an aeon."</p>
 
 <p class="verse" id="p89-3"><span class="parno">3</span>May no one in the world ever be reborn with evil desire. Know that, through that evil desire, his destination's that of all who have evil desires.</p>
 
@@ -1437,7 +1429,7 @@ mind, whether by day or by night, he lives in ease.</p>
 <hr>
 <p class="verse" id="p93-3"><span class="parno">3</span>The fire of passion burns in a mortal excited, smitten with sensual desires; the fire of aversion, in a malevolent person taking life;</p>
 
-<p class="verse" id="p93-4"><span class="parno">4</span>The fire of delusion, in a bewildered person ignorant of the noble teaching. Not understanding these fires, people — fond of self-identity —</p>
+<p class="verse" id="p93-4"><span class="parno">4</span>The fire of delusion, in a bewildered person ignorant of the noble teaching. Not understanding these fires, people — fond of self-identity — </p>
 
 <p class="verse" id="p93-5"><span class="parno">5</span>Unreleased from Māra's shackles, swell the ranks of hell, the wombs of common animals, demons, the realm of the hungry shades.</p>
 
@@ -1541,7 +1533,7 @@ mind, whether by day or by night, he lives in ease.</p>
 <p id="p99-3"><span class="parno">3</span>And how is it on the strength of Dhamma that I describe [a person as] a brahman with threefold knowledge, and not another as measured by citing and reciting?</p>
 
 <hr>
-<p>"There is the case where a monk recollects his manifold past lives, i.e., one birth, two… five, ten… fifty, a hundred, a thousand, a hundred thousand, many aeons of cosmic contraction, many aeons of cosmic expansion, many aeons of cosmic contraction and expansion: 'There I had such a name, belonged to such a clan, had such an appearance. Such was my food, such my experience of pleasure and pain, such the end of my life. Passing away from that state, I re-arose there. There too I had such a name, belonged to such a clan, had such an appearance. Such was my food, such my experience of pleasure and pain, such the end of my life. Passing away from that state, I re-arose here.' Thus he recollects his manifold past lives in their modes and details.</p>
+<p>"There is the case where a monk recollects his manifold past lives, i.e., one birth, two … five, ten … fifty, a hundred, a thousand, a hundred thousand, many aeons of cosmic contraction, many aeons of cosmic expansion, many aeons of cosmic contraction and expansion: 'There I had such a name, belonged to such a clan, had such an appearance. Such was my food, such my experience of pleasure and pain, such the end of my life. Passing away from that state, I re-arose there. There too I had such a name, belonged to such a clan, had such an appearance. Such was my food, such my experience of pleasure and pain, such the end of my life. Passing away from that state, I re-arose here.' Thus he recollects his manifold past lives in their modes and details.</p>
 
 <hr>
 <p>"This is the first knowledge he has attained. Ignorance has been destroyed; knowledge has arisen; darkness has been destroyed; light has arisen — as happens in one who is heedful, ardent, and resolute.</p>
@@ -1740,10 +1732,10 @@ mind, whether by day or by night, he lives in ease.</p>
 <p id="p110-2"><span class="parno">2</span>"If, while he is walking, there arises in a monk a thought of sensuality, a thought of ill-will, or a thought of harmfulness, and he does not quickly abandon, dispel, demolish, or wipe that thought out of existence, then a monk walking with such a lack of ardency and concern is called continually and continuously lethargic and low in his persistence.</p>
 
 <hr>
-<p id="p110-3"><span class="parno">3</span>"If, while he is standing…</p>
+<p id="p110-3"><span class="parno">3</span>"If, while he is standing …</p>
 
 <hr>
-<p id="p110-4"><span class="parno">4</span>"If, while he is sitting…</p>
+<p id="p110-4"><span class="parno">4</span>"If, while he is sitting …</p>
 
 <hr>
 <p id="p110-5"><span class="parno">5</span>"If, while he is lying down, there arises in a monk a thought of sensuality, a thought of ill-will, or a thought of harmfulness, and he does not quickly abandon, dispel, demolish, or wipe that thought out of existence, then a monk lying down with such a lack of ardency and concern is called continually and continuously lethargic and low in his persistence.</p>
@@ -1751,10 +1743,10 @@ mind, whether by day or by night, he lives in ease.</p>
 <p id="p110-6"><span class="parno">6</span>"But if, while he is walking, there arises in a monk a thought of sensuality, a thought of ill-will, or a thought of harmfulness, and he quickly abandons, dispels, demolishes, and wipes that thought out of existence, then a monk walking with such ardency and concern is called continually and continuously resolute, one with persistence aroused.</p>
 
 <hr>
-<p id="p110-7"><span class="parno">7</span>"If, while he is standing…</p>
+<p id="p110-7"><span class="parno">7</span>"If, while he is standing …</p>
 
 <hr>
-<p id="p110-8"><span class="parno">8</span>"If, while he is sitting…</p>
+<p id="p110-8"><span class="parno">8</span>"If, while he is sitting …</p>
 
 <hr>
 <p id="p110-9"><span class="parno">9</span>"If, while he is lying down, there arises in a monk a thought of sensuality, a thought of ill-will, or a thought of harmfulness, and he quickly abandons, dispels, demolishes, and wipes that thought out of existence, then a monk lying down with such ardency and concern is called continually and continuously resolute, one with persistence aroused."</p>
@@ -1780,10 +1772,10 @@ mind, whether by day or by night, he lives in ease.</p>
 <p id="p111-4"><span class="parno">4</span>"If, while he is walking, any greed in a monk is done away with, any ill will, any sloth and drowsiness, any restlessness and anxiety, any uncertainty is done away with; if his persistence is aroused and not lax; if his mindfulness is established and unmuddled; if his body is calm and unaroused; if his mind is centered and unified: then a monk walking with such ardency and concern is called continually and continuously resolute, one with persistence aroused.</p>
 
 <hr>
-<p id="p111-5"><span class="parno">5</span>"If, while he is standing…</p>
+<p id="p111-5"><span class="parno">5</span>"If, while he is standing …</p>
 
 <hr>
-<p id="p111-6"><span class="parno">6</span>"If, while he is sitting…</p>
+<p id="p111-6"><span class="parno">6</span>"If, while he is sitting …</p>
 
 <hr>
 <p id="p111-7"><span class="parno">7</span>"If, while he is lying down, any greed in a monk is done away with, any ill will, any sloth and drowsiness, any restlessness and anxiety, any uncertainty is done away with; if his persistence is aroused and not lax; if his mindfulness is established and unmuddled; if his body is calm and unaroused; if his mind is centered and unified: then a monk lying down with such ardency and concern is called continually and continuously resolute, one with persistence aroused."</p>
@@ -1812,7 +1804,7 @@ mind, whether by day or by night, he lives in ease.</p>
 <p id="p112-6"><span class="parno">6</span>"In this world with its devas, Māras, and Brahmas, its generations complete with contemplatives and brahmans, princes and men, the Tathagata is the unconquered conqueror, all-seeing, the wielder of power.<span class="note"><span class="details"><span class="p">These are epithets usually associated with the Great Brahma.</span></span></span>
  Thus he is called the Tathagata." <span class="evam">This is the meaning of what the Blessed One said. So with regard to this it was said:</span></p>
 
-<p class="verse" id="p112-7-13"><span class="parno">7-13</span>Directly knowing all the world, all the world as is really is, from all the world disjoined, in all the world unmatched: Conquering all in all ways, enlightened, released from all bonds, he touches the foremost peace — Unbinding, free from fear. He is free of fermentation, of trouble, awakened, his doubts cut through; has attained the ending of action, is released in the destruction of acquisitions. He is blessed, awakened, a lion, unsurpassed. In the world with its devas he set the Brahma-wheel going.<span class="note"><span class="details"><span class="p">The Brahma-wheel = the Dhamma-wheel, the name of the Buddha&rsquo;s first sermon, so called because it contains a "wheel" that lists all twelve permutations of two sets of variables: the four noble truths — suffering, its origination, its cessation, and the way leading to its cessation — and the three levels of knowledge appropriate to each truth: knowledge of the truth, knowledge of the task appropriate to the truth, and knowledge that the task has been completed. This wheel constitutes the Buddha&rsquo;s most central teaching</span></span></span> Thus divine and human beings who have gone to the Buddha for refuge, gathering, pay homage to the great one, thoroughly mature: 'Tamed, he's the best of those who can be tamed; calm, the seer of those who can be calmed; released, supreme among those who can be released; crossed, the foremost of those who can cross.' Thus they pay homage to the great one, thoroughly mature: 'In this world with its devas, there's no one to compare with you.'</p>
+<p class="verse" id="p112-7-13"><span class="parno">7-13</span>Directly knowing all the world, all the world as is really is, from all the world disjoined, in all the world unmatched: Conquering all in all ways, enlightened, released from all bonds, he touches the foremost peace — Unbinding, free from fear. He is free of fermentation, of trouble, awakened, his doubts cut through; has attained the ending of action, is released in the destruction of acquisitions. He is blessed, awakened, a lion, unsurpassed. In the world with its devas he set the Brahma-wheel going.<span class="note"><span class="details"><span class="p">The Brahma-wheel = the Dhamma-wheel, the name of the Buddha’s first sermon, so called because it contains a "wheel" that lists all twelve permutations of two sets of variables: the four noble truths — suffering, its origination, its cessation, and the way leading to its cessation — and the three levels of knowledge appropriate to each truth: knowledge of the truth, knowledge of the task appropriate to the truth, and knowledge that the task has been completed. This wheel constitutes the Buddha’s most central teaching</span></span></span> Thus divine and human beings who have gone to the Buddha for refuge, gathering, pay homage to the great one, thoroughly mature: 'Tamed, he's the best of those who can be tamed; calm, the seer of those who can be calmed; released, supreme among those who can be released; crossed, the foremost of those who can cross.' Thus they pay homage to the great one, thoroughly mature: 'In this world with its devas, there's no one to compare with you.'</p>
 
 <hr>
 <p class="endsutta" id="p112-14"><span class="parno">14</span>This, too, was the meaning of what was said by the Blessed One, so I have heard.</p>
@@ -2179,7 +2171,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_121" class="ms"></a><span class="parno">2</span>"Mā, bhikkhave, puññānaṁ bhāyittha. Sukhassetaṁ, bhikkhave, adhivacanaṁ iṭṭhassa kantassa piyassa manāpassa yadidaṁ puññāni. Abhijānāmi kho panāhaṁ, bhikkhave, dīgharattaṁ katānaṁ puññānaṁ iṭṭhaṁ kantaṁ piyaṁ manāpaṁ vipākaṁ paccanubhūtaṁ. Satta vassāni mettacittaṁ bhāvetvā satta saṁvaṭṭavivaṭṭakappe nayimaṁ lokaṁ punarāgamāsiṁ. Saṁvaṭṭamāne sudaṁ, bhikkhave, kappe ābhassarūpago homi; vivaṭṭamāne kappe suññaṁ brahmavimānaṁ upapajjāmi.</p>
 
-<p><a id="p_18It_122" class="ms"></a><span class="parno">3</span>Tatra sudaṁ, bhikkhave, brahmā homi mahābrahmā abhibhū anabhibhūto aññadatthudaso vasavattī. Chattiṁsakkhattuṁ kho panāhaṁ, bhikkhave, sakko ahosiṁ devānamindo; anekasatakkhattuṁ rājā ahosiṁ cakkavattī dhammiko dhammarājā cāturanto vijitāvī janapadatthāvariyappatto sattaratanasamannāgato. Ko pana vādo padesarajjassa.</p>
+<p><a id="p_18It_122" class="ms"></a><span class="parno">3</span>Tatra sudaṁ, bhikkhave, brahmā homi mahābrahmā abhibhū anabhibhūto aññadatthudaso vasavattī. Chattiṁsakkhattuṁ kho panāhaṁ, bhikkhave, sakko ahosiṁ devānamindo; aneka&shy;satakkhattuṁ rājā ahosiṁ cakkavattī dhammiko dhammarājā cāturanto vijitāvī janapadatthāvariyappatto sattaratanasamannāgato. Ko pana vādo padesarajjassa.</p>
 
 <p><a id="p_18It_123" class="ms"></a><span class="parno">4</span>Tassa mayhaṁ, bhikkhave, etadahosi:  ‘kissa nu kho me idaṁ kammassa phalaṁ, kissa kammassa vipāko, yenāhaṁ etarahi evaṁmahiddhiko evaṁmahānubhāvo’ti? Tassa mayhaṁ, bhikkhave, etadahosi:  ‘tiṇṇaṁ kho me idaṁ kammānaṁ phalaṁ, tiṇṇaṁ kammānaṁ vipāko, yenāhaṁ etarahi evaṁmahiddhiko evaṁmahānubhāvoti, seyyathidaṁ – dānassa, damassa, saññamassā’"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
@@ -2304,7 +2296,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_157" class="ms"></a><span class="parno">3</span>Seyyathāpi, bhikkhave, yā kāci tārakarūpānaṁ pabhā sabbā tā candiyā pabhāya kalaṁ nāgghanti soḷasiṁ, candapabhāyeva tā adhiggahetvā bhāsate ca tapate ca virocati ca; evamevaṁ kho, bhikkhave, yāni kānici opadhikāni puññakiriyavatthūni sabbāni tāni mettāya cetovimuttiyā kalaṁ nāgghanti soḷasiṁ, mettāyeva tāni cetovimutti adhiggahetvā bhāsate ca tapate ca virocati ca.</p>
 
-<p><a id="p_18It_158" class="ms"></a><span class="parno">4</span>Seyyathāpi, bhikkhave, vassānaṁ pacchime māse saradasamaye viddhe vigatavalāhake deve ādicco nabhaṁ abbhussakkamāno sabbaṁ ākāsagataṁ tamagataṁ abhivihacca bhāsate ca tapate ca virocati ca; evamevaṁ kho, bhikkhave, yāni kānici opadhikāni puññakiriyavatthūni sabbāni tāni mettāya cetovimuttiyā kalaṁ nāgghanti soḷasiṁ, mettāyeva tāni cetovimutti adhiggahetvā bhāsate ca tapate ca virocati ca.</p>
+<p><a id="p_18It_158" class="ms"></a><span class="parno">4</span>Seyyathāpi, bhikkhave, vassānaṁ pacchime māse saradasamaye viddhe vigatavalāhake deve ādicco nabhaṁ abbhus&shy;sakkamāno sabbaṁ ākāsagataṁ tamagataṁ abhivihacca bhāsate ca tapate ca virocati ca; evamevaṁ kho, bhikkhave, yāni kānici opadhikāni puññakiriyavatthūni sabbāni tāni mettāya cetovimuttiyā kalaṁ nāgghanti soḷasiṁ, mettāyeva tāni cetovimutti adhiggahetvā bhāsate ca tapate ca virocati ca.</p>
 
 <p><a id="p_18It_159" class="ms"></a><span class="parno">5</span>Seyyathāpi, bhikkhave, rattiyā paccūsasamayaṁ osadhitārakā bhāsate ca tapate ca virocati ca; evamevaṁ kho, bhikkhave, yāni kānici opadhikāni puññakiriyavatthūni sabbāni tāni mettāya cetovimuttiyā kalaṁ nāgghanti soḷasiṁ, mettāyeva tāni cetovimutti adhiggahetvā bhāsate ca tapate ca virocati cā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
@@ -2314,13 +2306,13 @@ mind, whether by day or by night, he lives in ease.</p>
 <br>Tanū saṁyojanā honti,
 <br>passato upadhikkhayaṁ.</p>
 	
-<p class="verse"><a id="p_18It_161" class="ms"></a><span class="parno">7</span>Ekampi ce pāṇamaduṭṭhacitto,
+<p class="verse"><a id="p_18It_161" class="ms"></a><span class="parno">7</span>Ekampi ce pāṇamaduṭ&shy;ṭhacitto,
 <br>Mettāyati kusalo tena hoti;
 <br>Sabbe ca pāṇe manasānukampaṁ,
 <br>Pahūtamariyo pakaroti puññaṁ.</p>
 	
 <p class="verse"><a id="p_18It_162" class="ms"></a><span class="parno">8</span>Ye sattasaṇḍaṁ pathaviṁ vijitvā,
-<br>Rājisayo yajamānānupariyagā;
+<br>Rājisayo yajamānānu&shy;pari&shy;yagā;
 <br>Assamedhaṁ purisamedhaṁ,
 <br>Sammāpāsaṁ vājapeyyaṁ niraggaḷaṁ.</p>
 	
@@ -2355,7 +2347,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_172" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_173" class="ms"></a><span class="parno">2</span>"Dvīhi, bhikkhave, dhammehi samannāgato bhikkhu diṭṭheva dhamme dukkhaṁ viharati savighātaṁ saupāyāsaṁ sapariḷāhaṁ; kāyassa bhedā paraṁ maraṇā duggati pāṭikankhā. Katamehi dvīhi? Indriyesu aguttadvāratāya ca, bhojane amattaññutāya ca. Imehi kho, bhikkhave, dvīhi dhammehi samannāgato bhikkhu diṭṭheva dhamme dukkhaṁ viharati savighātaṁ saupāyāsaṁ sapariḷāhaṁ; kāyassa bhedā paraṁ maraṇā duggati pāṭikankhā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_173" class="ms"></a><span class="parno">2</span>"Dvīhi, bhikkhave, dhammehi samannāgato bhikkhu diṭṭheva dhamme dukkhaṁ viharati savighātaṁ saupāyāsaṁ sapariḷāhaṁ; kāyassa bhedā paraṁ maraṇā duggati pāṭikankhā. Katamehi dvīhi? Indriyesu agutta&shy;dvāratāya ca, bhojane amattaññutāya ca. Imehi kho, bhikkhave, dvīhi dhammehi samannāgato bhikkhu diṭṭheva dhamme dukkhaṁ viharati savighātaṁ saupāyāsaṁ sapariḷāhaṁ; kāyassa bhedā paraṁ maraṇā duggati pāṭikankhā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_174" class="ms"></a><span class="parno">3</span>"Cakkhu sotañca ghānañca,
 <br>jivhā kāyo tathā mano;
@@ -2405,7 +2397,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_186" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_187" class="ms"></a><span class="parno">2</span>"Dveme, bhikkhave, dhammā tapanīyā. Katame dve? Idha, bhikkhave, ekacco akatakalyāṇo hoti, akatakusalo, akatabhīruttāṇo, katapāpo, kataluddo, katakibbiso. So ‘akataṁ me kalyāṇan’tipi tappati, ‘kataṁ me pāpan’tipi tappati. Ime kho, bhikkhave, dve dhammā tapanīyā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_187" class="ms"></a><span class="parno">2</span>"Dveme, bhikkhave, dhammā tapanīyā. Katame dve? Idha, bhikkhave, ekacco akatakalyāṇo hoti, akatakusalo, akata&shy;bhīruttāṇo, katapāpo, kataluddo, katakibbiso. So ‘akataṁ me kalyāṇan’tipi tappati, ‘kataṁ me pāpan’tipi tappati. Ime kho, bhikkhave, dve dhammā tapanīyā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_188" class="ms"></a><span class="parno">3</span>"Kāyaduccaritaṁ katvā,
 <br>vacīduccaritāni ca;
@@ -2506,7 +2498,7 @@ mind, whether by day or by night, he lives in ease.</p>
 <p class="verse"><a id="p_18It_216" class="ms"></a><span class="parno">3</span>"Saṁvaratthaṁ pahānatthaṁ,
 <br>brahmacariyaṁ anītihaṁ;
 <br>Adesayi so bhagavā,
-<br>nibbānogadhagāminaṁ.</p>
+<br>nibbāno&shy;gadhagāminaṁ.</p>
 	
 <p class="verse"><a id="p_18It_217" class="ms"></a><span class="parno">4</span>Esa maggo mahattehi,
 <br>anuyāto mahesibhi;
@@ -2523,12 +2515,12 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_220" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_221" class="ms"></a><span class="parno">2</span>"Nayidaṁ, bhikkhave, brahmacariyaṁ vussati janakuhanatthaṁ, na janalapanatthaṁ, na lābhasakkārasilokānisaṁsatthaṁ, na ‘iti maṁ jano jānātū’ti. Atha kho idaṁ, bhikkhave, brahmacariyaṁ vussati abhiññatthañceva pariññatthañcā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_221" class="ms"></a><span class="parno">2</span>"Nayidaṁ, bhikkhave, brahmacariyaṁ vussati janakuhanatthaṁ, na janalapanatthaṁ, na lābhasakkārasilokānisaṁsatthaṁ, na ‘iti maṁ jano jānātū’ti. Atha kho idaṁ, bhikkhave, brahmacariyaṁ vussati abhiñña&shy;tthañceva pariññatthañcā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_222" class="ms"></a><span class="parno">3</span>"Abhiññatthaṁ pariññatthaṁ,
 <br>brahmacariyaṁ anītihaṁ;
 <br>Adesayi so bhagavā,
-<br>nibbānogadhagāminaṁ.</p>
+<br>nibbāno&shy;gadhagāminaṁ.</p>
 	
 <p class="verse"><a id="p_18It_223" class="ms"></a><span class="parno">4</span>Esa maggo mahattehi,
 <br>anuyāto mahesibhi;
@@ -2574,11 +2566,11 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_236" class="ms"></a><span class="parno">2</span>"Tathāgataṁ, bhikkhave, arahantaṁ sammāsambuddhaṁ dve vitakkā bahulaṁ samudācaranti – khemo ca vitakko, paviveko ca.</p>
 
-<p>Abyāpajjhārāmo, bhikkhave, tathāgato abyāpajjharato. Tamenaṁ, bhikkhave, tathāgataṁ abyāpajjhārāmaṁ abyāpajjharataṁ eseva vitakko bahulaṁ samudācarati:  ‘imāyāhaṁ iriyāya na kañci byābādhemi tasaṁ vā thāvaraṁ vā’ti.</p>
+<p>Abyāpajjhārāmo, bhikkhave, tathāgato abyāpajjharato. Tamenaṁ, bhikkhave, tathāgataṁ abyāpajjhā&shy;rāmaṁ abyāpajjha&shy;rataṁ eseva vitakko bahulaṁ samudācarati:  ‘imāyāhaṁ iriyāya na kañci byābādhemi tasaṁ vā thāvaraṁ vā’ti.</p>
 
 <p><a id="p_18It_237" class="ms"></a><span class="parno">3</span>Pavivekārāmo, bhikkhave, tathāgato pavivekarato. Tamenaṁ, bhikkhave, tathāgataṁ pavivekārāmaṁ pavivekarataṁ eseva vitakko bahulaṁ samudācarati:  ‘Yaṁ akusalaṁ taṁ pahīnan’ti.</p>
 
-<p><a id="p_18It_238" class="ms"></a><span class="parno">4</span>Tasmātiha, bhikkhave, tumhepi abyāpajjhārāmā viharatha abyāpajjharatā. Tesaṁ vo, bhikkhave, tumhākaṁ abyāpajjhārāmānaṁ viharataṁ abyāpajjharatānaṁ eseva vitakko bahulaṁ samudācarissati:  ‘imāya mayaṁ iriyāya na kañci byābādhema tasaṁ vā thāvaraṁ vā’ti.</p>
+<p><a id="p_18It_238" class="ms"></a><span class="parno">4</span>Tasmātiha, bhikkhave, tumhepi abyāpajjhārāmā viharatha abyāpajjharatā. Tesaṁ vo, bhikkhave, tumhākaṁ abyāpajjhā&shy;rāmānaṁ viharataṁ abyāpajjha&shy;ratānaṁ eseva vitakko bahulaṁ samudācarissati:  ‘imāya mayaṁ iriyāya na kañci byābādhema tasaṁ vā thāvaraṁ vā’ti.</p>
 
 <p><a id="p_18It_239" class="ms"></a><span class="parno">5</span>Pavivekārāmā, bhikkhave, viharatha pavivekaratā. Tesaṁ vo, bhikkhave, tumhākaṁ pavivekārāmānaṁ viharataṁ pavivekaratānaṁ eseva vitakko bahulaṁ samudācarissati:  ‘kiṁ akusalaṁ, kiṁ appahīnaṁ, kiṁ pajahāmā’"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
@@ -2591,10 +2583,10 @@ mind, whether by day or by night, he lives in ease.</p>
 <p class="verse"><a id="p_18It_241" class="ms"></a><span class="parno">7</span>Tamonudaṁ pāragataṁ mahesiṁ,
 <br>Taṁ pattipattaṁ vasimaṁ anāsavaṁ;
 <br>Visantaraṁ taṇhakkhaye vimuttaṁ,
-<br>Taṁ ve muniṁ antimadehadhāriṁ;
+<br>Taṁ ve muniṁ antima&shy;dehadhāriṁ;
 <br>Mārañjahaṁ brūmi jarāya pāraguṁ.</p>
 
-<p class="verse"><a id="p_18It_242" class="ms"></a><span class="parno">8</span>Sele yathā pabbatamuddhaniṭṭhito,
+<p class="verse"><a id="p_18It_242" class="ms"></a><span class="parno">8</span>Sele yathā pabbat&shy;amuddh&shy;aniṭṭhito,
 <br>Yathāpi passe janataṁ samantato;
 <br>Tathūpamaṁ dhammamayaṁ sumedho,
 <br>Pāsādamāruyha samantacakkhu;
@@ -2651,7 +2643,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p class="endsection">Tatiyaṁ.</p>
 
-<p class="endsection">Paṭhamabhāṇavāro.</p>
+<p class="endsection">Paṭhama&shy;bhāṇavāro.</p>
 
 <h2>41. Paññāparihīnasutta</h2>
 
@@ -2684,7 +2676,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_266" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_267" class="ms"></a><span class="parno">2</span>"Dveme, bhikkhave, sukkā dhammā lokaṁ pālenti. Katame dve? Hirī ca, ottappañca. Ime ce, bhikkhave, dve sukkā dhammā lokaṁ na pāleyyuṁ, nayidha paññāyetha mātāti vā mātucchāti vā mātulānīti vā ācariyabhariyāti vā garūnaṁ dārāti vā. Sambhedaṁ loko agamissa yathā ajeḷakā kukkuṭasūkarā soṇasingālā. Yasmā ca kho, bhikkhave, ime dve sukkā dhammā lokaṁ pālenti tasmā paññāyati mātāti vā mātucchāti vā mātulānīti vā ācariyabhariyāti vā garūnaṁ dārāti vā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_267" class="ms"></a><span class="parno">2</span>"Dveme, bhikkhave, sukkā dhammā lokaṁ pālenti. Katame dve? Hirī ca, ottappañca. Ime ce, bhikkhave, dve sukkā dhammā lokaṁ na pāleyyuṁ, nayidha paññāyetha mātāti vā mātucchāti vā mātulānīti vā ācariya&shy;bhariyāti vā garūnaṁ dārāti vā. Sambhedaṁ loko agamissa yathā ajeḷakā kukkuṭasūkarā soṇasingālā. Yasmā ca kho, bhikkhave, ime dve sukkā dhammā lokaṁ pālenti tasmā paññāyati mātāti vā mātucchāti vā mātulānīti vā ācariya&shy;bhariyāti vā garūnaṁ dārāti vā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_268" class="ms"></a><span class="parno">3</span>"Yesañce hiriottappaṁ,
 <br>sabbadā ca na vijjati;
@@ -2711,7 +2703,7 @@ mind, whether by day or by night, he lives in ease.</p>
 <br>Jarāmaraṇasanghāṭaṁ,
 <br>roganīḷaṁ pabhanguraṁ.</p>
 
-<p class="verse"><a id="p_18It_275" class="ms"></a><span class="parno">4</span>Āhāranettippabhavaṁ,
+<p class="verse"><a id="p_18It_275" class="ms"></a><span class="parno">4</span>Āhāra&shy;nettippabhavaṁ,
 <br>nālaṁ tadabhinandituṁ;
 <br>Tassa nissaraṇaṁ santaṁ,
 <br>atakkāvacaraṁ dhuvaṁ.</p>
@@ -2731,9 +2723,9 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_280" class="ms"></a><span class="parno">2</span>"Dvemā, bhikkhave, nibbānadhātuyo. Katamā dve? Saupādisesā ca nibbānadhātu, anupādisesā ca nibbānadhātu.</p>
 
-<p><a id="p_18It_281" class="ms"></a><span class="parno">3</span>Katamā ca, bhikkhave, saupādisesā nibbānadhātu? Idha, bhikkhave, bhikkhu arahaṁ hoti khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññāvimutto. Tassa tiṭṭhanteva pañcindriyāni yesaṁ avighātattā manāpāmanāpaṁ paccanubhoti, sukhadukkhaṁ paṭisaṁvedeti. Tassa yo rāgakkhayo, dosakkhayo, mohakkhayo – ayaṁ vuccati, bhikkhave, saupādisesā nibbānadhātu.</p>
+<p><a id="p_18It_281" class="ms"></a><span class="parno">3</span>Katamā ca, bhikkhave, saupādisesā nibbānadhātu? Idha, bhikkhave, bhikkhu arahaṁ hoti khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppatta&shy;sadattho pari&shy;kkhīṇabhavasaṁyojano sammadaññāvimutto. Tassa tiṭṭhanteva pañcindriyāni yesaṁ avighātattā manāpāmanāpaṁ paccanubhoti, sukhadukkhaṁ paṭisaṁvedeti. Tassa yo rāgakkhayo, dosakkhayo, mohakkhayo – ayaṁ vuccati, bhikkhave, saupādisesā nibbānadhātu.</p>
 
-<p><a id="p_18It_282" class="ms"></a><span class="parno">4</span>Katamā ca, bhikkhave, anupādisesā nibbānadhātu? Idha, bhikkhave, bhikkhu arahaṁ hoti khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññāvimutto. Tassa idheva, bhikkhave, sabbavedayitāni anabhinanditāni sīti bhavissanti. Ayaṁ vuccati, bhikkhave, anupādisesā nibbānadhātu. Imā kho, bhikkhave, dve nibbānadhātuyo"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_282" class="ms"></a><span class="parno">4</span>Katamā ca, bhikkhave, anupādisesā nibbānadhātu? Idha, bhikkhave, bhikkhu arahaṁ hoti khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppatta&shy;sadattho pari&shy;kkhīṇabhavasaṁyojano sammadaññāvimutto. Tassa idheva, bhikkhave, sabbavedayitāni anabhi&shy;nanditāni sīti bhavissanti. Ayaṁ vuccati, bhikkhave, anupādisesā nibbānadhātu. Imā kho, bhikkhave, dve nibbānadhātuyo"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_283" class="ms"></a><span class="parno">5</span>"Duve imā cakkhumatā pakāsitā,
 <br>Nibbānadhātū anissitena tādinā;
@@ -2755,7 +2747,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_287" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_288" class="ms"></a><span class="parno">2</span>"Paṭisallānārāmā, bhikkhave, viharatha paṭisallānaratā, ajjhattaṁ cetosamathamanuyuttā, anirākatajjhānā, vipassanāya samannāgatā, brūhetāro suññāgārānaṁ. Paṭisallānārāmānaṁ, bhikkhave, viharataṁ paṭisallānaratānaṁ ajjhattaṁ cetosamathamanuyuttānaṁ anirākatajjhānānaṁ vipassanāya samannāgatānaṁ brūhetānaṁ suññāgārānaṁ dvinnaṁ phalānaṁ aññataraṁ phalaṁ pāṭikankhaṁ – diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_288" class="ms"></a><span class="parno">2</span>"Paṭisallānārāmā, bhikkhave, viharatha paṭisallānaratā, ajjhattaṁ cetosamathamanuyuttā, anirākataj&shy;jhānā, vipassanāya samannāgatā, brūhetāro suññāgārānaṁ. Paṭisallānārāmānaṁ, bhikkhave, viharataṁ paṭisallānaratānaṁ ajjhattaṁ cetosamathamanuyuttānaṁ anirākataj&shy;jhānānaṁ vipassanāya samannāgatānaṁ brūhetānaṁ suññāgārānaṁ dvinnaṁ phalānaṁ aññataraṁ phalaṁ pāṭikankhaṁ – diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_289" class="ms"></a><span class="parno">3</span>"Ye santacittā nipakā,
 <br>satimanto ca jhāyino;
@@ -2779,7 +2771,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p class="verse"><a id="p_18It_295" class="ms"></a><span class="parno">3</span>"Paripuṇṇasikkhaṁ apahānadhammaṁ,
 <br>Paññuttaraṁ jātikhayantadassiṁ;
-<br>Taṁ ve muniṁ antimadehadhāriṁ,
+<br>Taṁ ve muniṁ antima&shy;dehadhāriṁ,
 <br>Mārañjahaṁ brūmi jarāya pāraguṁ.</p>
 
 <p class="verse"><a id="p_18It_296" class="ms"></a><span class="parno">4</span>Tasmā sadā jhānaratā samāhitā,
@@ -2804,7 +2796,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p class="verse"><a id="p_18It_302" class="ms"></a><span class="parno">4</span>Yo jāgaro ca satimā sampajāno,
 <br>Samāhito mudito vippasanno ca;
-<br>Kālena so sammā dhammaṁ parivīmaṁsamāno,
+<br>Kālena so sammā dhammaṁ pari&shy;vīmaṁsamāno,
 <br>Ekodibhūto vihane tamaṁ so.</p>
 
 <p class="verse"><a id="p_18It_303" class="ms"></a><span class="parno">5</span>Tasmā have jāgariyaṁ bhajetha,
@@ -2820,7 +2812,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_306" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_307" class="ms"></a><span class="parno">2</span>"Dveme, bhikkhave, āpāyikā nerayikā idamappahāya. Katame dve? Yo ca abrahmacārī brahmacāripaṭiñño, yo ca paripuṇṇaṁ parisuddhaṁ brahmacariyaṁ carantaṁ amūlakena abrahmacariyena anuddhaṁseti. Ime kho, bhikkhave, dve āpāyikā nerayikā idamappahāyā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_307" class="ms"></a><span class="parno">2</span>"Dveme, bhikkhave, āpāyikā nerayikā idamappahāya. Katame dve? Yo ca abrahmacārī brahmacāripaṭiñño, yo ca paripuṇṇaṁ parisuddhaṁ brahmacariyaṁ carantaṁ amūlakena abrahma&shy;cariyena anuddhaṁseti. Ime kho, bhikkhave, dve āpāyikā nerayikā idamappahāyā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_308" class="ms"></a><span class="parno">3</span>"Abhūtavādī nirayaṁ upeti,
 <br>Yo vāpi katvā na karomi cāha;
@@ -2950,7 +2942,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p class="verse"><a id="p_18It_346" class="ms"></a><span class="parno">3</span>"Yo sukhaṁ dukkhato adda,
 <br>Dukkhamaddakkhi sallato;
-<br>Adukkhamasukhaṁ santaṁ,
+<br>Adukkhama&shy;sukhaṁ santaṁ,
 <br>Adakkhi naṁ aniccato.</p>
 
 <p class="verse"><a id="p_18It_347" class="ms"></a><span class="parno">4</span>Sa ve sammaddaso bhikkhu,
@@ -3068,7 +3060,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_379" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_380" class="ms"></a><span class="parno">2</span>"Tīhi, bhikkhave, dhammehi samannāgato bhikkhu atikkamma māradheyyaṁ ādiccova virocati. Katamehi tīhi? Idha, bhikkhave, bhikkhu asekhena sīlakkhandhena samannāgato hoti, asekhena samādhikkhandhena samannāgato hoti, asekhena paññākkhandhena samannāgato hoti – imehi kho, bhikkhave, tīhi dhammehi samannāgato bhikkhu atikkamma māradheyyaṁ ādiccova virocatī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_380" class="ms"></a><span class="parno">2</span>"Tīhi, bhikkhave, dhammehi samannāgato bhikkhu atikkamma māradheyyaṁ ādiccova virocati. Katamehi tīhi? Idha, bhikkhave, bhikkhu asekhena sīlakkhandhena samannāgato hoti, asekhena samādhikkhandhena samannāgato hoti, asekhena paññāk&shy;khandhena samannāgato hoti – imehi kho, bhikkhave, tīhi dhammehi samannāgato bhikkhu atikkamma māradheyyaṁ ādiccova virocatī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_381" class="ms"></a><span class="parno">3</span>"Sīlaṁ samādhi paññā ca,
 <br>yassa ete subhāvitā;
@@ -3133,7 +3125,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_399" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_400" class="ms"></a><span class="parno">2</span>"Tīṇimāni, bhikkhave, indriyāni. Katamāni tīṇi? Anaññātaññassāmītindriyaṁ, aññindriyaṁ, aññātāvindriyaṁ – imāni kho, bhikkhave, tīṇi indriyānī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_400" class="ms"></a><span class="parno">2</span>"Tīṇimāni, bhikkhave, indriyāni. Katamāni tīṇi? Anaññā&shy;taññas&shy;sāmītindriyaṁ, aññindriyaṁ, aññātā&shy;vindriyaṁ – imāni kho, bhikkhave, tīṇi indriyānī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <hr>
 <p class="verse"><a id="p_18It_401" class="ms"></a><span class="parno">3</span>"Sekhassa sikkhamānassa,
@@ -3301,11 +3293,11 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_449" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_450" class="ms"></a><span class="parno">2</span>"Diṭṭhā mayā, bhikkhave, sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
+<p><a id="p_18It_450" class="ms"></a><span class="parno">2</span>"Diṭṭhā mayā, bhikkhave, sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchā&shy;diṭṭhi&shy;kamma&shy;samādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
 
-<p><a id="p_18It_451" class="ms"></a><span class="parno">3</span>Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā sutvā vadāmi. Diṭṭhā mayā, bhikkhave, sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā. Api ca, bhikkhave, yadeva sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadevāhaṁ vadāmi.</p>
+<p><a id="p_18It_451" class="ms"></a><span class="parno">3</span>Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā sutvā vadāmi. Diṭṭhā mayā, bhikkhave, sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchā&shy;diṭṭhi&shy;kamma&shy;samādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā. Api ca, bhikkhave, yadeva sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadevāhaṁ vadāmi.</p>
 
-<p><a id="p_18It_452" class="ms"></a><span class="parno">4</span>Diṭṭhā mayā, bhikkhave, sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_452" class="ms"></a><span class="parno">4</span>Diṭṭhā mayā, bhikkhave, sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchā&shy;diṭṭhi&shy;kamma&shy;samādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <hr>
 <p class="verse"><a id="p_18It_453" class="ms"></a><span class="parno">5</span>"Micchā manaṁ paṇidhāya,
@@ -3401,11 +3393,11 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_479" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, puttā santo saṁvijjamānā lokasmiṁ. Katame tayo? Atijāto, anujāto, avajātoti.</p>
 
-<p><a id="p_18It_480" class="ms"></a><span class="parno">3</span>Kathañca, bhikkhave, putto atijāto hoti? Idha, bhikkhave, puttassa mātāpitaro honti – na buddhaṁ saraṇaṁ gatā, na dhammaṁ saraṇaṁ gatā, na sanghaṁ saraṇaṁ gatā; pāṇātipātā appaṭiviratā, adinnādānā appaṭiviratā, kāmesumicchācārā appaṭiviratā, musāvādā appaṭiviratā, surāmerayamajjapamādaṭṭhānā appaṭiviratā, dussīlā pāpadhammā. Putto ca nesaṁ hoti – buddhaṁ saraṇaṁ gato, dhammaṁ saraṇaṁ gato, sanghaṁ saraṇaṁ gato; pāṇātipātā paṭivirato, adinnādānā paṭivirato, kāmesumicchācārā paṭivirato, musāvādā paṭivirato, surāmerayamajjapamādaṭṭhānā paṭivirato, sīlavā kalyāṇadhammo. Evaṁ kho, bhikkhave, putto atijāto hoti.</p>
+<p><a id="p_18It_480" class="ms"></a><span class="parno">3</span>Kathañca, bhikkhave, putto atijāto hoti? Idha, bhikkhave, puttassa mātāpitaro honti – na buddhaṁ saraṇaṁ gatā, na dhammaṁ saraṇaṁ gatā, na sanghaṁ saraṇaṁ gatā; pāṇātipātā appaṭiviratā, adinnādānā appaṭiviratā, kāmesumicchācārā appaṭiviratā, musāvādā appaṭiviratā, surāmeraya&shy;majjapamādaṭṭhānā appaṭiviratā, dussīlā pāpadhammā. Putto ca nesaṁ hoti – buddhaṁ saraṇaṁ gato, dhammaṁ saraṇaṁ gato, sanghaṁ saraṇaṁ gato; pāṇātipātā paṭivirato, adinnādānā paṭivirato, kāmesumicchācārā paṭivirato, musāvādā paṭivirato, surāmeraya&shy;majjapamādaṭṭhānā paṭivirato, sīlavā kalyāṇadhammo. Evaṁ kho, bhikkhave, putto atijāto hoti.</p>
 
-<p><a id="p_18It_481" class="ms"></a><span class="parno">4</span>Kathañca, bhikkhave, putto anujāto hoti? Idha, bhikkhave, puttassa mātāpitaro honti – buddhaṁ saraṇaṁ gatā, dhammaṁ saraṇaṁ gatā, sanghaṁ saraṇaṁ gatā; pāṇātipātā paṭiviratā, adinnādānā paṭiviratā, kāmesumicchācārā paṭiviratā, musāvādā paṭiviratā, surāmerayamajjapamādaṭṭhānā paṭiviratā, sīlavanto kalyāṇadhammā. Puttopi nesaṁ hoti – buddhaṁ saraṇaṁ gato, dhammaṁ saraṇaṁ gato, sanghaṁ saraṇaṁ gato; pāṇātipātā paṭivirato, adinnādānā paṭivirato, kāmesumicchācārā paṭivirato, musāvādā paṭivirato, surāmerayamajjapamādaṭṭhānā paṭivirato, sīlavā kalyāṇadhammo. Evaṁ kho, bhikkhave, putto anujāto hoti.</p>
+<p><a id="p_18It_481" class="ms"></a><span class="parno">4</span>Kathañca, bhikkhave, putto anujāto hoti? Idha, bhikkhave, puttassa mātāpitaro honti – buddhaṁ saraṇaṁ gatā, dhammaṁ saraṇaṁ gatā, sanghaṁ saraṇaṁ gatā; pāṇātipātā paṭiviratā, adinnādānā paṭiviratā, kāmesumicchācārā paṭiviratā, musāvādā paṭiviratā, surāmeraya&shy;majjapamādaṭṭhānā paṭiviratā, sīlavanto kalyāṇadhammā. Puttopi nesaṁ hoti – buddhaṁ saraṇaṁ gato, dhammaṁ saraṇaṁ gato, sanghaṁ saraṇaṁ gato; pāṇātipātā paṭivirato, adinnādānā paṭivirato, kāmesumicchācārā paṭivirato, musāvādā paṭivirato, surāmeraya&shy;majjapamādaṭṭhānā paṭivirato, sīlavā kalyāṇadhammo. Evaṁ kho, bhikkhave, putto anujāto hoti.</p>
 
-<p><a id="p_18It_482" class="ms"></a><span class="parno">5</span>Kathañca, bhikkhave, putto avajāto hoti? Idha, bhikkhave, puttassa mātāpitaro honti – buddhaṁ saraṇaṁ gatā, dhammaṁ saraṇaṁ gatā, sanghaṁ saraṇaṁ gatā; pāṇātipātā paṭiviratā, adinnādānā paṭiviratā, kāmesumicchācārā paṭiviratā, musāvādā paṭiviratā, surāmerayamajjapamādaṭṭhānā paṭiviratā, sīlavanto kalyāṇadhammā. Putto ca nesaṁ hoti – na buddhaṁ saraṇaṁ gato, na dhammaṁ saraṇaṁ gato, na sanghaṁ saraṇaṁ gato; pāṇātipātā appaṭivirato, adinnādānā appaṭivirato, kāmesumicchācārā appaṭivirato, musāvādā appaṭivirato, surāmerayamajjapamādaṭṭhānā appaṭivirato, dussīlo pāpadhammo. Evaṁ kho, bhikkhave, putto avajāto hoti. Ime kho, bhikkhave, tayo puttā santo saṁvijjamānā lokasmin"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_482" class="ms"></a><span class="parno">5</span>Kathañca, bhikkhave, putto avajāto hoti? Idha, bhikkhave, puttassa mātāpitaro honti – buddhaṁ saraṇaṁ gatā, dhammaṁ saraṇaṁ gatā, sanghaṁ saraṇaṁ gatā; pāṇātipātā paṭiviratā, adinnādānā paṭiviratā, kāmesumicchācārā paṭiviratā, musāvādā paṭiviratā, surāmeraya&shy;majjapamādaṭṭhānā paṭiviratā, sīlavanto kalyāṇadhammā. Putto ca nesaṁ hoti – na buddhaṁ saraṇaṁ gato, na dhammaṁ saraṇaṁ gato, na sanghaṁ saraṇaṁ gato; pāṇātipātā appaṭivirato, adinnādānā appaṭivirato, kāmesumicchācārā appaṭivirato, musāvādā appaṭivirato, surāmeraya&shy;majjapamādaṭṭhānā appaṭivirato, dussīlo pāpadhammo. Evaṁ kho, bhikkhave, putto avajāto hoti. Ime kho, bhikkhave, tayo puttā santo saṁvijjamānā lokasmin"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_483" class="ms"></a><span class="parno">6</span>"Atijātaṁ anujātaṁ,
 <br>puttamicchanti paṇḍitā;
@@ -3495,7 +3487,7 @@ mind, whether by day or by night, he lives in ease.</p>
 <p class="verse"><a id="p_18It_504" class="ms"></a><span class="parno">6</span>Sevamāno sevamānaṁ,
 <br>samphuṭṭho samphusaṁ paraṁ;
 <br>Saro diddho kalāpaṁva,
-<br>alittamupalimpati;
+<br>alittamupa&shy;limpati;
 <br>Upalepabhayā dhīro,
 <br>neva pāpasakhā siyā.</p>
 	
@@ -3524,7 +3516,7 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_510" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_511" class="ms"></a><span class="parno">2</span>"Bhidurāyaṁ, bhikkhave, kāyo, viññāṇaṁ virāgadhammaṁ, sabbe upadhī aniccā dukkhā vipariṇāmadhammā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_511" class="ms"></a><span class="parno">2</span>"Bhidurāyaṁ, bhikkhave, kāyo, viññāṇaṁ virāgadhammaṁ, sabbe upadhī aniccā dukkhā vipari&shy;ṇāmadhammā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_512" class="ms"></a><span class="parno">3</span>"Kāyañca bhiduraṁ ñatvā,
 <br>Viññāṇañca virāgunaṁ;
@@ -3575,9 +3567,9 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_525" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_526" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, dhammā sekhassa bhikkhuno parihānāya saṁvattanti. Katame tayo? Idha, bhikkhave, sekho bhikkhu kammārāmo hoti, kammarato, kammārāmatamanuyutto; bhassārāmo hoti, bhassarato, bhassārāmatamanuyutto; niddārāmo hoti, niddārato, niddārāmatamanuyutto. Ime kho, bhikkhave, tayo dhammā sekhassa bhikkhuno parihānāya saṁvattanti.</p>
+<p><a id="p_18It_526" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, dhammā sekhassa bhikkhuno parihānāya saṁvattanti. Katame tayo? Idha, bhikkhave, sekho bhikkhu kammārāmo hoti, kammarato, kammārāmatamanuyutto; bhassārāmo hoti, bhassarato, bhassārāmatamanuyutto; niddārāmo hoti, niddārato, niddārā&shy;matamanuyutto. Ime kho, bhikkhave, tayo dhammā sekhassa bhikkhuno parihānāya saṁvattanti.</p>
 
-<p><a id="p_18It_527" class="ms"></a><span class="parno">3</span>Tayome, bhikkhave, dhammā sekhassa bhikkhuno aparihānāya saṁvattanti. Katame tayo? Idha, bhikkhave, sekho bhikkhu na kammārāmo hoti, na kammarato, na kammārāmatamanuyutto; na bhassārāmo hoti, na bhassarato, na bhassārāmatamanuyutto; na niddārāmo hoti, na niddārato, na niddārāmatamanuyutto. Ime kho, bhikkhave, tayo dhammā sekhassa bhikkhuno aparihānāya saṁvattantī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_527" class="ms"></a><span class="parno">3</span>Tayome, bhikkhave, dhammā sekhassa bhikkhuno aparihānāya saṁvattanti. Katame tayo? Idha, bhikkhave, sekho bhikkhu na kammārāmo hoti, na kammarato, na kammārāmatamanuyutto; na bhassārāmo hoti, na bhassarato, na bhassārāmatamanuyutto; na niddārāmo hoti, na niddārato, na niddārā&shy;matamanuyutto. Ime kho, bhikkhave, tayo dhammā sekhassa bhikkhuno aparihānāya saṁvattantī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_528" class="ms"></a><span class="parno">4</span>"Kammārāmo bhassārāmo,
 <br>Niddārāmo ca uddhato;
@@ -3605,9 +3597,9 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_535" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_536" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, akusalavitakkā. Katame tayo? Anavaññattipaṭisaṁyutto vitakko, lābhasakkārasilokapaṭisaṁyutto vitakko, parānuddayatāpaṭisaṁyutto vitakko. Ime kho, bhikkhave, tayo akusalavitakkā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_536" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, akusalavitakkā. Katame tayo? Anavaññatti&shy;paṭisaṁyutto vitakko, lābhasakkārasilokapaṭisaṁyutto vitakko, parānuddayatāpaṭisaṁyutto vitakko. Ime kho, bhikkhave, tayo akusalavitakkā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
-<p class="verse"><a id="p_18It_537" class="ms"></a><span class="parno">3</span>"Anavaññattisaṁyutto,
+<p class="verse"><a id="p_18It_537" class="ms"></a><span class="parno">3</span>"Anavaññatti&shy;saṁyutto,
 <br>lābhasakkāragāravo;
 <br>Sahanandī amaccehi,
 <br>ārā saṁyojanakkhayā.</p>
@@ -3625,20 +3617,20 @@ mind, whether by day or by night, he lives in ease.</p>
 
 <p><a id="p_18It_541" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_542" class="ms"></a><span class="parno">2</span>"Diṭṭhā mayā, bhikkhave, sattā sakkārena abhibhūtā, pariyādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
+<p><a id="p_18It_542" class="ms"></a><span class="parno">2</span>"Diṭṭhā mayā, bhikkhave, sattā sakkārena abhibhūtā, pari&shy;yādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
 
-<p><a id="p_18It_543" class="ms"></a><span class="parno">3</span>Diṭṭhā mayā, bhikkhave, sattā asakkārena abhibhūtā, pariyādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
+<p><a id="p_18It_543" class="ms"></a><span class="parno">3</span>Diṭṭhā mayā, bhikkhave, sattā asakkārena abhibhūtā, pari&shy;yādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
 
-<p><a id="p_18It_544" class="ms"></a><span class="parno">4</span>Diṭṭhā mayā, bhikkhave, sattā sakkārena ca asakkārena ca tadubhayena abhibhūtā, pariyādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
+<p><a id="p_18It_544" class="ms"></a><span class="parno">4</span>Diṭṭhā mayā, bhikkhave, sattā sakkārena ca asakkārena ca tadubhayena abhibhūtā, pari&shy;yādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
 
 <p><a id="p_18It_545" class="ms"></a><span class="parno">5</span>Parihānasuttapari
 Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā sutvā vadāmi; api ca, bhikkhave, yadeva me sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tamevāhaṁ vadāmi.</p>
 
-<p><a id="p_18It_546" class="ms"></a><span class="parno">6</span>Diṭṭhā mayā, bhikkhave, sattā sakkārena abhibhūtā, pariyādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
+<p><a id="p_18It_546" class="ms"></a><span class="parno">6</span>Diṭṭhā mayā, bhikkhave, sattā sakkārena abhibhūtā, pari&shy;yādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
 
-<p><a id="p_18It_547" class="ms"></a><span class="parno">7</span>Diṭṭhā mayā, bhikkhave, sattā asakkārena abhibhūtā, pariyādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
+<p><a id="p_18It_547" class="ms"></a><span class="parno">7</span>Diṭṭhā mayā, bhikkhave, sattā asakkārena abhibhūtā, pari&shy;yādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā.</p>
 
-<p><a id="p_18It_548" class="ms"></a><span class="parno">8</span>Diṭṭhā mayā, bhikkhave, sattā sakkārena ca asakkārena ca tadubhayena abhibhūtā, pariyādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_548" class="ms"></a><span class="parno">8</span>Diṭṭhā mayā, bhikkhave, sattā sakkārena ca asakkārena ca tadubhayena abhibhūtā, pari&shy;yādinnacittā, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_549" class="ms"></a><span class="parno">9</span>"Yassa sakkariyamānassa,
 <br>asakkārena cūbhayaṁ;
@@ -3770,11 +3762,11 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_583" class="ms"></a><span class="parno">2</span>"Tayome puggalā loke uppajjamānā uppajjanti bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānaṁ. Katame tayo?</p>
 
-<p>Idha, bhikkhave, tathāgato loke uppajjati arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Ayaṁ, bhikkhave, paṭhamo puggalo loke uppajjamāno uppajjati bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānaṁ.</p>
+<p>Idha, bhikkhave, tathāgato loke uppajjati arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pari&shy;yosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Ayaṁ, bhikkhave, paṭhamo puggalo loke uppajjamāno uppajjati bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānaṁ.</p>
 
-<p><a id="p_18It_584" class="ms"></a><span class="parno">3</span>Puna caparaṁ, bhikkhave, tasseva satthu sāvako arahaṁ hoti khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññāvimutto. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Ayaṁ, bhikkhave, dutiyo puggalo loke uppajjamāno uppajjati bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānaṁ.</p>
+<p><a id="p_18It_584" class="ms"></a><span class="parno">3</span>Puna caparaṁ, bhikkhave, tasseva satthu sāvako arahaṁ hoti khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppatta&shy;sadattho pari&shy;kkhīṇabhavasaṁyojano sammadaññāvimutto. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pari&shy;yosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Ayaṁ, bhikkhave, dutiyo puggalo loke uppajjamāno uppajjati bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānaṁ.</p>
 
-<p><a id="p_18It_585" class="ms"></a><span class="parno">4</span>Puna caparaṁ, bhikkhave, tasseva satthu sāvako sekho hoti pāṭipado bahussuto sīlavatūpapanno. Sopi dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Ayaṁ, bhikkhave, tatiyo puggalo loke uppajjamāno uppajjati bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānaṁ.</p>
+<p><a id="p_18It_585" class="ms"></a><span class="parno">4</span>Puna caparaṁ, bhikkhave, tasseva satthu sāvako sekho hoti pāṭipado bahussuto sīlavatūpapanno. Sopi dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pari&shy;yosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Ayaṁ, bhikkhave, tatiyo puggalo loke uppajjamāno uppajjati bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānaṁ.</p>
 
 <p>Ime kho, bhikkhave, tayo puggalā loke uppajjamānā uppajjanti bahujanahitāya bahujanasukhāya lokānukampāya atthāya hitāya sukhāya devamanussānan"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
@@ -3801,7 +3793,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_591" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_592" class="ms"></a><span class="parno">2</span>"Asubhānupassī, bhikkhave, kāyasmiṁ viharatha; ānāpānassati ca vo ajjhattaṁ parimukhaṁ sūpaṭṭhitā hotu; sabbasankhāresu aniccānupassino viharatha. Asubhānupassīnaṁ, bhikkhave, kāyasmiṁ viharataṁ yo subhāya dhātuyā rāgānusayo so pahīyati. Ānāpānassatiyā ajjhattaṁ parimukhaṁ sūpaṭṭhititāya ye bāhirā vitakkāsayā vighātapakkhikā, te na honti. Sabbasankhāresu aniccānupassīnaṁ viharataṁ yā avijjā sā pahīyati, yā vijjā sā uppajjatī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_592" class="ms"></a><span class="parno">2</span>"Asubhānupassī, bhikkhave, kāyasmiṁ viharatha; ānāpānassati ca vo ajjhattaṁ parimukhaṁ sūpaṭṭhitā hotu; sabbasankhāresu aniccā&shy;nupassino viharatha. Asubhānupassīnaṁ, bhikkhave, kāyasmiṁ viharataṁ yo subhāya dhātuyā rāgānusayo so pahīyati. Ānāpānassatiyā ajjhattaṁ parimukhaṁ sūpaṭṭhititāya ye bāhirā vitakkāsayā vighātapakkhikā, te na honti. Sabbasankhāresu aniccā&shy;nupassīnaṁ viharataṁ yā avijjā sā pahīyati, yā vijjā sā uppajjatī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_593" class="ms"></a><span class="parno">3</span>"Asubhānupassī kāyasmiṁ,
 <br>ānāpāne paṭissato;
@@ -3821,7 +3813,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_597" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_598" class="ms"></a><span class="parno">2</span>"Dhammānudhammapaṭipannassa bhikkhuno ayamanudhammo hoti veyyākaraṇāya – dhammānudhammapaṭipannoyanti bhāsamāno dhammaññeva bhāsati no adhammaṁ, vitakkayamāno vā dhammavitakkaññeva vitakketi no adhammavitakkaṁ, tadubhayaṁ vā pana abhinivejjetvā upekkhako viharati sato sampajāno"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_598" class="ms"></a><span class="parno">2</span>"Dhammānudhammapaṭipannassa bhikkhuno ayamanudhammo hoti veyyākaraṇāya – dhammānudhammapaṭipannoyanti bhāsamāno dhammaññeva bhāsati no adhammaṁ, vitakkayamāno vā dhammavitakkaññeva vitakketi no adhamma&shy;vitakkaṁ, tadubhayaṁ vā pana abhinivejjetvā upekkhako viharati sato sampajāno"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_599" class="ms"></a><span class="parno">3</span>"Dhammārāmo dhammarato,
 <br>dhammaṁ anuvicintayaṁ;
@@ -3841,9 +3833,9 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_603" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_604" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, akusalavitakkā andhakaraṇā acakkhukaraṇā aññāṇakaraṇā paññānirodhikā vighātapakkhikā anibbānasaṁvattanikā. Katame tayo? Kāmavitakko, bhikkhave, andhakaraṇo acakkhukaraṇo aññāṇakaraṇo paññānirodhiko vighātapakkhiko anibbānasaṁvattaniko. Byāpādavitakko, bhikkhave, andhakaraṇo acakkhukaraṇo aññāṇakaraṇo paññānirodhiko vighātapakkhiko anibbānasaṁvattaniko. Vihiṁsāvitakko, bhikkhave, andhakaraṇo acakkhukaraṇo aññāṇakaraṇo paññānirodhiko vighātapakkhiko anibbānasaṁvattaniko. Ime kho, bhikkhave, tayo akusalavitakkā andhakaraṇā acakkhukaraṇā aññāṇakaraṇā paññānirodhikā vighātapakkhikā anibbānasaṁvattanikā.</p>
+<p><a id="p_18It_604" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, akusalavitakkā andhakaraṇā acakkhukaraṇā aññāṇakaraṇā paññānirodhikā vighātapakkhikā anibbānaanibbāna&shy;saṁvattanikāshy;saṁvattanikā. Katame tayo? Kāmavitakko, bhikkhave, andhakaraṇo acakkhukaraṇo aññāṇakaraṇo paññānirodhiko vighātapakkhiko anibbānaanibbāna&shy;saṁvattanikoshy;saṁvattaniko. Byāpādavitakko, bhikkhave, andhakaraṇo acakkhukaraṇo aññāṇakaraṇo paññānirodhiko vighātapakkhiko anibbānaanibbāna&shy;saṁvattanikoshy;saṁvattaniko. Vihiṁsāvitakko, bhikkhave, andhakaraṇo acakkhukaraṇo aññāṇakaraṇo paññānirodhiko vighātapakkhiko anibbānaanibbāna&shy;saṁvattanikoshy;saṁvattaniko. Ime kho, bhikkhave, tayo akusalavitakkā andhakaraṇā acakkhukaraṇā aññāṇakaraṇā paññānirodhikā vighātapakkhikā anibbānaanibbāna&shy;saṁvattanikāshy;saṁvattanikā.</p>
 
-<p><a id="p_18It_605" class="ms"></a><span class="parno">3</span>Tayome, bhikkhave, kusalavitakkā anandhakaraṇā cakkhukaraṇā ñāṇakaraṇā paññāvuddhikā avighātapakkhikā nibbānasaṁvattanikā. Katame tayo? Nekkhammavitakko, bhikkhave, anandhakaraṇo cakkhukaraṇo ñāṇakaraṇo paññāvuddhiko avighātapakkhiko nibbānasaṁvattaniko. Abyāpādavitakko, bhikkhave, anandhakaraṇo cakkhukaraṇo ñāṇakaraṇo paññāvuddhiko avighātapakkhiko nibbānasaṁvattaniko. Avihiṁsāvitakko, bhikkhave, anandhakaraṇo cakkhukaraṇo ñāṇakaraṇo paññāvuddhiko avighātapakkhiko nibbānasaṁvattaniko. Ime kho, bhikkhave, tayo kusalavitakkā anandhakaraṇā cakkhukaraṇā ñāṇakaraṇā paññāvuddhikā avighātapakkhikā nibbānasaṁvattanikā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_605" class="ms"></a><span class="parno">3</span>Tayome, bhikkhave, kusalavitakkā anandhakaraṇā cakkhukaraṇā ñāṇakaraṇā paññāvuddhikā avighātapakkhikā nibbāna&shy;saṁvattanikā. Katame tayo? Nekkhammavitakko, bhikkhave, anandhakaraṇo cakkhukaraṇo ñāṇakaraṇo paññāvuddhiko avighātapakkhiko nibbāna&shy;saṁvattaniko. Abyāpāda&shy;vitakko, bhikkhave, anandhakaraṇo cakkhukaraṇo ñāṇakaraṇo paññāvuddhiko avighātapakkhiko nibbāna&shy;saṁvattaniko. Avihiṁsāvitakko, bhikkhave, anandhakaraṇo cakkhukaraṇo ñāṇakaraṇo paññāvuddhiko avighātapakkhiko nibbāna&shy;saṁvattaniko. Ime kho, bhikkhave, tayo kusalavitakkā anandhakaraṇā cakkhukaraṇā ñāṇakaraṇā paññāvuddhikā avighātapakkhikā nibbāna&shy;saṁvattanikā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_606" class="ms"></a><span class="parno">4</span>"Tayo vitakke kusale vitakkaye,
 <br>Tayo pana akusale nirākare;
@@ -3860,7 +3852,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_609" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_610" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, antarāmalā antarāamittā antarāsapattā antarāvadhakā antarāpaccatthikā. Katame tayo? Lobho, bhikkhave, antarāmalo antarāamitto antarāsapatto antarāvadhako antarāpaccatthiko. Doso, bhikkhave, antarāmalo antarāamitto antarāsapatto antarāvadhako antarāpaccatthiko. Moho, bhikkhave, antarāmalo antarāamitto antarāsapatto antarāvadhako antarāpaccatthiko. Ime kho, bhikkhave, tayo antarāmalā antarāamittā antarāsapattā antarāvadhakā antarāpaccatthikā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_610" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, antarāmalā antarāamittā antarāsapattā antarāvadhakā antarā&shy;paccatthikā. Katame tayo? Lobho, bhikkhave, antarāmalo antarāamitto antarāsapatto antarāvadhako antarā&shy;paccatthiko. Doso, bhikkhave, antarāmalo antarāamitto antarāsapatto antarāvadhako antarā&shy;paccatthiko. Moho, bhikkhave, antarāmalo antarāamitto antarāsapatto antarāvadhako antarā&shy;paccatthiko. Ime kho, bhikkhave, tayo antarāmalā antarāamittā antarāsapattā antarāvadhakā antarā&shy;paccatthikā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <hr>
 <p class="verse"><a id="p_18It_611" class="ms"></a><span class="parno">3</span>"Anatthajanano lobho,
@@ -3916,7 +3908,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_622" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_623" class="ms"></a><span class="parno">2</span>"Tīhi, bhikkhave, asaddhammehi abhibhūto pariyādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho. Katamehi tīhi? Pāpicchatāya, bhikkhave, abhibhūto pariyādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho. Pāpamittatāya, bhikkhave, abhibhūto pariyādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho. Sati kho pana uttarikaraṇīye oramattakena visesādhigamena antarā vosānaṁ āpādi. Imehi kho, bhikkhave, tīhi asaddhammehi abhibhūto pariyādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_623" class="ms"></a><span class="parno">2</span>"Tīhi, bhikkhave, asaddhammehi abhibhūto pari&shy;yādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho. Katamehi tīhi? Pāpicchatāya, bhikkhave, abhibhūto pari&shy;yādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho. Pāpamittatāya, bhikkhave, abhibhūto pari&shy;yādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho. Sati kho pana uttarikaraṇīye oramattakena visesādhigamena antarā vosānaṁ āpādi. Imehi kho, bhikkhave, tīhi asaddhammehi abhibhūto pari&shy;yādinnacitto devadatto āpāyiko nerayiko kappaṭṭho atekiccho"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_624" class="ms"></a><span class="parno">3</span>"Mā jātu koci lokasmiṁ,
 <br>pāpiccho udapajjatha;
@@ -3970,10 +3962,10 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_637" class="ms"></a><span class="parno">2</span>"Tayome, bhikkhave, aggappasādā. Katame tayo?</p>
 
-<p>Yāvatā, bhikkhave, sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā rūpino vā arūpino vā saññino vā asaññino vā nevasaññināsaññino vā, tathāgato tesaṁ aggamakkhāyati arahaṁ sammāsambuddho. Ye, bhikkhave, buddhe pasannā, agge te pasannā. Agge kho pana pasannānaṁ aggo vipāko hoti.</p>
+<p>Yāvatā, bhikkhave, sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā rūpino vā arūpino vā saññino vā asaññino vā neva&shy;saññināsaññino vā, tathāgato tesaṁ aggamakkhāyati arahaṁ sammāsambuddho. Ye, bhikkhave, buddhe pasannā, agge te pasannā. Agge kho pana pasannānaṁ aggo vipāko hoti.</p>
 
 <hr>
-<p><a id="p_18It_638" class="ms"></a><span class="parno">3</span>Yāvatā, bhikkhave, dhammā sankhatā vā asankhatā vā, virāgo tesaṁ aggamakkhāyati, yadidaṁ madanimmadano pipāsavinayo ālayasamugghāto vaṭṭupacchedo taṇhakkhayo virāgo nirodho nibbānaṁ. Ye, bhikkhave, virāge dhamme pasannā, agge te pasannā. Agge kho pana pasannānaṁ aggo vipāko hoti.</p>
+<p><a id="p_18It_638" class="ms"></a><span class="parno">3</span>Yāvatā, bhikkhave, dhammā sankhatā vā asankhatā vā, virāgo tesaṁ aggamakkhāyati, yadidaṁ madanimmadano pipāsavinayo ālaya&shy;samugghāto vaṭṭupacchedo taṇhakkhayo virāgo nirodho nibbānaṁ. Ye, bhikkhave, virāge dhamme pasannā, agge te pasannā. Agge kho pana pasannānaṁ aggo vipāko hoti.</p>
 
 <hr>
 <p><a id="p_18It_639" class="ms"></a><span class="parno">4</span>Yāvatā, bhikkhave, sanghā vā gaṇā vā, tathāgatasāvakasangho tesaṁ aggamakkhāyati, yadidaṁ cattāri purisayugāni aṭṭha purisapuggalā esa bhagavato sāvakasangho āhuneyyo pāhuneyyo dakkhiṇeyyo añjalikaraṇīyo anuttaraṁ puññakkhettaṁ lokassa. Ye, bhikkhave, sanghe pasannā, agge te pasannā.</p>
@@ -3998,7 +3990,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 <br>yaso kitti sukhaṁ balaṁ.</p>
 	
 <p class="verse"><a id="p_18It_643" class="ms"></a><span class="parno">8</span>Aggassa dātā medhāvī,
-<br>aggadhammasamāhito;
+<br>aggadhamma&shy;samāhito;
 <br>Devabhūto manusso vā,
 <br>aggappatto pamodatī"ti.</p>
 
@@ -4010,7 +4002,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_646" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_647" class="ms"></a><span class="parno">2</span>"Antamidaṁ, bhikkhave, jīvikānaṁ yadidaṁ piṇḍolyaṁ. Abhisāpoyaṁ, bhikkhave, lokasmiṁ:  ‘piṇḍolo vicarasi pattapāṇī’ti. Tañca kho etaṁ, bhikkhave, kulaputtā upenti atthavasikā, atthavasaṁ paṭicca; neva rājābhinītā, na corābhinītā, na iṇaṭṭā, na bhayaṭṭā, na ājīvikāpakatā. Api ca kho ‘otiṇṇamhā jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi dukkhotiṇṇā dukkhaparetā, appeva nāma imassa kevalassa dukkhakkhandhassa antakiriyā paññāyethā’ti. Evaṁ pabbajito cāyaṁ, bhikkhave, kulaputto. So ca hoti abhijjhālu kāmesu tibbasārāgo, byāpannacitto paduṭṭhamanasankappo, muṭṭhassati asampajāno asamāhito vibbhantacitto pākatindriyo. Seyyathāpi, bhikkhave, chavālātaṁ ubhatopadittaṁ majjhe gūthagataṁ neva gāme kaṭṭhatthaṁ pharati na araññe; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi gihibhogā parihīno sāmaññatthañca na paripūretī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_647" class="ms"></a><span class="parno">2</span>"Antamidaṁ, bhikkhave, jīvikānaṁ yadidaṁ piṇḍolyaṁ. Abhisāpoyaṁ, bhikkhave, lokasmiṁ:  ‘piṇḍolo vicarasi pattapāṇī’ti. Tañca kho etaṁ, bhikkhave, kulaputtā upenti atthavasikā, atthavasaṁ paṭicca; neva rājābhinītā, na corābhinītā, na iṇaṭṭā, na bhayaṭṭā, na ājīvikāpakatā. Api ca kho ‘otiṇṇamhā jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi dukkhotiṇṇā dukkhaparetā, appeva nāma imassa kevalassa dukkhakkhandhassa antakiriyā paññāyethā’ti. Evaṁ pabbajito cāyaṁ, bhikkhave, kulaputto. So ca hoti abhijjhālu kāmesu tibbasārāgo, byāpannacitto paduṭṭha&shy;manasankappo, muṭṭhassati asampajāno asamāhito vibbhantacitto pākatindriyo. Seyyathāpi, bhikkhave, chavālātaṁ ubhatopadittaṁ majjhe gūthagataṁ neva gāme kaṭṭhatthaṁ pharati na araññe; tathūpamāhaṁ, bhikkhave, imaṁ puggalaṁ vadāmi gihibhogā parihīno sāmaññatthañca na paripūretī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_648" class="ms"></a><span class="parno">3</span>"Gihibhogā parihīno,
 <br>Sāmaññatthañca dubbhago;
@@ -4035,9 +4027,9 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_653" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_654" class="ms"></a><span class="parno">2</span>"Sanghāṭikaṇṇe cepi, bhikkhave, bhikkhu gahetvā piṭṭhito piṭṭhito anubandho assa pāde pādaṁ nikkhipanto, so ca hoti abhijjhālu kāmesu tibbasārāgo byāpannacitto paduṭṭhamanasankappo muṭṭhassati asampajāno asamāhito vibbhantacitto pākatindriyo; atha kho so ārakāva mayhaṁ, ahañca tassa. Taṁ kissa hetu? Dhammañhi so, bhikkhave, bhikkhu na passati. Dhammaṁ apassanto na maṁ passati.</p>
+<p><a id="p_18It_654" class="ms"></a><span class="parno">2</span>"Sanghāṭikaṇṇe cepi, bhikkhave, bhikkhu gahetvā piṭṭhito piṭṭhito anubandho assa pāde pādaṁ nikkhipanto, so ca hoti abhijjhālu kāmesu tibbasārāgo byāpannacitto paduṭṭha&shy;manasankappo muṭṭhassati asampajāno asamāhito vibbhantacitto pākatindriyo; atha kho so ārakāva mayhaṁ, ahañca tassa. Taṁ kissa hetu? Dhammañhi so, bhikkhave, bhikkhu na passati. Dhammaṁ apassanto na maṁ passati.</p>
 
-<p><a id="p_18It_655" class="ms"></a><span class="parno">3</span>Yojanasate cepi so, bhikkhave, bhikkhu vihareyya. So ca hoti anabhijjhālu kāmesu na tibbasārāgo abyāpannacitto apaduṭṭhamanasankappo upaṭṭhitassati sampajāno samāhito ekaggacitto saṁvutindriyo; atha kho so santikeva mayhaṁ, ahañca tassa. Taṁ kissa hetu? Dhammañhi so, bhikkhave, bhikkhu passati; dhammaṁ passanto maṁ passatī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_655" class="ms"></a><span class="parno">3</span>Yojanasate cepi so, bhikkhave, bhikkhu vihareyya. So ca hoti anabhijjhālu kāmesu na tibbasārāgo abyāpannacitto apaduṭṭhaapaduṭṭha&shy;manasankapposhy;manasankappo upaṭṭhitassati sampajāno samāhito ekaggacitto saṁvutindriyo; atha kho so santikeva mayhaṁ, ahañca tassa. Taṁ kissa hetu? Dhammañhi so, bhikkhave, bhikkhu passati; dhammaṁ passanto maṁ passatī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_656" class="ms"></a><span class="parno">4</span>"Anubandhopi ce assa,
 <br>mahiccho ca vighātavā;
@@ -4114,7 +4106,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <hr>
 <p class="verse"><a id="p_18It_674" class="ms"></a><span class="parno">3</span>"Sattasangappahīnassa,
-<br>netticchinnassa bhikkhuno;
+<br>nettic&shy;chinnassa bhikkhuno;
 <br>Vikkhīṇo jātisaṁsāro,
 <br>natthi tassa punabbhavo"ti.</p>
 
@@ -4126,9 +4118,9 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_677" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_678" class="ms"></a><span class="parno">2</span>"Tisso imā, bhikkhave, kāmūpapattiyo. Katamā tisso? Paccupaṭṭhitakāmā, nimmānaratino, paranimmitavasavattino – imā kho, bhikkhave, tisso kāmūpapattiyo"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_678" class="ms"></a><span class="parno">2</span>"Tisso imā, bhikkhave, kāmūpapattiyo. Katamā tisso? Paccu&shy;paṭṭhitakāmā, nimmānaratino, paranimmita&shy;vasavattino – imā kho, bhikkhave, tisso kāmūpapattiyo"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
-<p class="verse"><a id="p_18It_679" class="ms"></a><span class="parno">3</span>"Paccupaṭṭhitakāmā ca,
+<p class="verse"><a id="p_18It_679" class="ms"></a><span class="parno">3</span>"Paccu&shy;paṭṭhitakāmā ca,
 <br>ye devā vasavattino;
 <br>Nimmānaratino devā,
 <br>ye caññe kāmabhogino;
@@ -4187,7 +4179,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_694" class="ms"></a><span class="parno">2</span>"Kalyāṇasīlo, bhikkhave, bhikkhu kalyāṇadhammo kalyāṇapañño imasmiṁ dhammavinaye ‘kevalī vusitavā uttamapuriso’ti vuccati – </p>
 
-<p><a id="p_18It_695" class="ms"></a><span class="parno">3</span>Kathañca, bhikkhave, bhikkhu kalyāṇasīlo hoti? Idha, bhikkhave, bhikkhu sīlavā hoti, pātimokkhasaṁvarasaṁvuto viharati, ācāragocarasampanno aṇumattesu vajjesu bhayadassāvī, samādāya sikkhati sikkhāpadesu. Evaṁ kho, bhikkhave, bhikkhu kalyāṇasīlo hoti. Iti kalyāṇasīlo.</p>
+<p><a id="p_18It_695" class="ms"></a><span class="parno">3</span>Kathañca, bhikkhave, bhikkhu kalyāṇasīlo hoti? Idha, bhikkhave, bhikkhu sīlavā hoti, pātimokkhasaṁvarasaṁvuto viharati, ācāragocara&shy;sampanno aṇumattesu vajjesu bhayadassāvī, samādāya sikkhati sikkhāpadesu. Evaṁ kho, bhikkhave, bhikkhu kalyāṇasīlo hoti. Iti kalyāṇasīlo.</p>
 
 <p><a id="p_18It_696" class="ms"></a><span class="parno">4</span>Kalyāṇadhammo ca kathaṁ hoti? Idha, bhikkhave, bhikkhu sattannaṁ bodhipakkhiyānaṁ dhammānaṁ bhāvanānuyogamanuyutto viharati. Evaṁ kho, bhikkhave, bhikkhu kalyāṇadhammo hoti. Iti kalyāṇasīlo, kalyāṇadhammo.</p>
 
@@ -4225,7 +4217,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_706" class="ms"></a><span class="parno">2</span>"Dvemāni, bhikkhave, dānāni – āmisadānañca dhammadānañca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ dānānaṁ yadidaṁ – dhammadānaṁ.</p>
 
-<p><a id="p_18It_707" class="ms"></a><span class="parno">3</span>Dveme, bhikkhave, saṁvibhāgā – āmisasaṁvibhāgo ca dhammasaṁvibhāgo ca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ saṁvibhāgānaṁ yadidaṁ – dhammasaṁvibhāgo.</p>
+<p><a id="p_18It_707" class="ms"></a><span class="parno">3</span>Dveme, bhikkhave, saṁvibhāgā – āmisa&shy;saṁvibhāgo ca dhammasaṁvibhāgo ca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ saṁvibhāgānaṁ yadidaṁ – dhammasaṁvibhāgo.</p>
 
 <p><a id="p_18It_708" class="ms"></a><span class="parno">4</span>Dveme, bhikkhave, anuggahā – āmisānuggaho ca dhammānuggaho ca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ anuggahānaṁ yadidaṁ – dhammānuggaho"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
@@ -4257,7 +4249,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 <hr>
 <p>Ayamassa paṭhamā vijjā adhigatā hoti, avijjā vihatā, vijjā uppannā, tamo vihato, āloko uppanno, yathā taṁ appamattassa ātāpino pahitattassa viharato.</p>
 
-<p><a id="p_18It_716" class="ms"></a><span class="parno">4</span>Puna caparaṁ, bhikkhave, bhikkhu dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāti: ‘ime vata bhonto sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā. Ime vā pana bhonto sattā kāyasucaritena samannāgatā vacīsucaritena samannāgatā manosucaritena samannāgatā ariyānaṁ anupavādakā sammādiṭṭhikā sammādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapannā’ti. Iti dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāti.</p>
+<p><a id="p_18It_716" class="ms"></a><span class="parno">4</span>Puna caparaṁ, bhikkhave, bhikkhu dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāti: ‘ime vata bhonto sattā kāyaduccaritena samannāgatā vacīduccaritena samannāgatā manoduccaritena samannāgatā ariyānaṁ upavādakā micchādiṭṭhikā micchā&shy;diṭṭhi&shy;kamma&shy;samādānā. Te kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannā. Ime vā pana bhonto sattā kāyasucaritena samannāgatā vacīsucaritena samannāgatā manosucaritena samannāgatā ariyānaṁ anupavādakā sammādiṭṭhikā sammādiṭṭhikammasamādānā. Te kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapannā’ti. Iti dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe, sugate duggate yathākammūpage satte pajānāti.</p>
 
 <hr>
 <p>Ayamassa dutiyā vijjā adhigatā hoti, avijjā vihatā, vijjā uppannā, tamo vihato, āloko uppanno, yathā taṁ appamattassa ātāpino pahitattassa viharato.</p>
@@ -4295,11 +4287,11 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_726" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_727" class="ms"></a><span class="parno">2</span>"Ahamasmi, bhikkhave, brāhmaṇo yācayogo sadā payatapāṇi antimadehadharo anuttaro bhisakko sallakatto. Tassa me tumhe puttā orasā mukhato jātā dhammajā dhammanimmitā dhammadāyādā, no āmisadāyādā.</p>
+<p><a id="p_18It_727" class="ms"></a><span class="parno">2</span>"Ahamasmi, bhikkhave, brāhmaṇo yācayogo sadā payatapāṇi antima&shy;dehadharo anuttaro bhisakko sallakatto. Tassa me tumhe puttā orasā mukhato jātā dhammajā dhammanimmitā dhammadāyādā, no āmisadāyādā.</p>
 
 <p><a id="p_18It_728" class="ms"></a><span class="parno">3</span>Dvemāni, bhikkhave, dānāni – āmisadānañca dhammadānañca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ dānānaṁ yadidaṁ – dhammadānaṁ.</p>
 
-<p><a id="p_18It_729" class="ms"></a><span class="parno">4</span>Dveme, bhikkhave, saṁvibhāgā – āmisasaṁvibhāgo ca dhammasaṁvibhāgo ca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ saṁvibhāgānaṁ yadidaṁ – dhammasaṁvibhāgo.</p>
+<p><a id="p_18It_729" class="ms"></a><span class="parno">4</span>Dveme, bhikkhave, saṁvibhāgā – āmisa&shy;saṁvibhāgo ca dhammasaṁvibhāgo ca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ saṁvibhāgānaṁ yadidaṁ – dhammasaṁvibhāgo.</p>
 
 <p><a id="p_18It_730" class="ms"></a><span class="parno">5</span>Dveme, bhikkhave, anuggahā – āmisānuggaho ca dhammānuggaho ca. Etadaggaṁ, bhikkhave, imesaṁ dvinnaṁ anuggahānaṁ yadidaṁ – dhammānuggaho.</p>
 
@@ -4340,7 +4332,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_741" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_742" class="ms"></a><span class="parno">2</span>"Jānatohaṁ, bhikkhave, passato āsavānaṁ khayaṁ vadāmi, no ajānato no apassato. Kiñca, bhikkhave, jānato, kiṁ passato āsavānaṁ khayo hoti? Idaṁ dukkhanti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Ayaṁ dukkhasamudayoti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Ayaṁ dukkhanirodhoti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Ayaṁ dukkhanirodhagāminī paṭipadāti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Evaṁ kho, bhikkhave, jānato evaṁ passato āsavānaṁ khayo hotī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_742" class="ms"></a><span class="parno">2</span>"Jānatohaṁ, bhikkhave, passato āsavānaṁ khayaṁ vadāmi, no ajānato no apassato. Kiñca, bhikkhave, jānato, kiṁ passato āsavānaṁ khayo hoti? Idaṁ dukkhanti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Ayaṁ dukkhasamudayoti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Ayaṁ dukkhanirodhoti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Ayaṁ dukkha&shy;nirodha&shy;gāminī paṭipadāti, bhikkhave, jānato passato āsavānaṁ khayo hoti. Evaṁ kho, bhikkhave, jānato evaṁ passato āsavānaṁ khayo hotī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_743" class="ms"></a><span class="parno">3</span>"Sekhassa sikkhamānassa,
 <br>ujumaggānusārino;
@@ -4365,9 +4357,9 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_748" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_749" class="ms"></a><span class="parno">2</span>"Ye hi keci, bhikkhave, samaṇā vā brāhmaṇā vā ‘idaṁ dukkhan’ti yathābhūtaṁ nappajānanti; ‘Ayaṁ dukkhasamudayo’ti yathābhūtaṁ nappajānanti; ‘Ayaṁ dukkhanirodho’ti yathābhūtaṁ nappajānanti; ‘Ayaṁ dukkhanirodhagāminī paṭipadā’ti yathābhūtaṁ nappajānanti – na me te, bhikkhave, samaṇā vā brāhmaṇā vā samaṇesu vā samaṇasammatā brāhmaṇesu vā brāhmaṇasammatā, na ca panete āyasmanto sāmaññatthaṁ vā brahmaññatthaṁ vā diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharanti.</p>
+<p><a id="p_18It_749" class="ms"></a><span class="parno">2</span>"Ye hi keci, bhikkhave, samaṇā vā brāhmaṇā vā ‘idaṁ dukkhan’ti yathābhūtaṁ nappajānanti; ‘Ayaṁ dukkhasamudayo’ti yathābhūtaṁ nappajānanti; ‘Ayaṁ dukkhanirodho’ti yathābhūtaṁ nappajānanti; ‘Ayaṁ dukkha&shy;nirodha&shy;gāminī paṭipadā’ti yathābhūtaṁ nappajānanti – na me te, bhikkhave, samaṇā vā brāhmaṇā vā samaṇesu vā samaṇasammatā brāhmaṇesu vā brāhmaṇasammatā, na ca panete āyasmanto sāmaññatthaṁ vā brahmaññatthaṁ vā diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharanti.</p>
 
-<p><a id="p_18It_750" class="ms"></a><span class="parno">3</span>Ye ca kho keci, bhikkhave, samaṇā vā brāhmaṇā vā ‘idaṁ dukkhan’ti yathābhūtaṁ pajānanti; ‘Ayaṁ dukkhasamudayo’ti yathābhūtaṁ pajānanti; ‘Ayaṁ dukkhanirodho’ti yathābhūtaṁ pajānanti; ‘Ayaṁ dukkhanirodhagāminī paṭipadā’ti yathābhūtaṁ pajānanti – te kho me, bhikkhave, samaṇā vā brāhmaṇā vā samaṇesu ceva samaṇasammatā brāhmaṇesu ca brāhmaṇasammatā, te ca panāyasmanto sāmaññatthañca brahmaññatthañca diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharantī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_750" class="ms"></a><span class="parno">3</span>Ye ca kho keci, bhikkhave, samaṇā vā brāhmaṇā vā ‘idaṁ dukkhan’ti yathābhūtaṁ pajānanti; ‘Ayaṁ dukkhasamudayo’ti yathābhūtaṁ pajānanti; ‘Ayaṁ dukkhanirodho’ti yathābhūtaṁ pajānanti; ‘Ayaṁ dukkha&shy;nirodha&shy;gāminī paṭipadā’ti yathābhūtaṁ pajānanti – te kho me, bhikkhave, samaṇā vā brāhmaṇā vā samaṇesu ceva samaṇasammatā brāhmaṇesu ca brāhmaṇasammatā, te ca panāyasmanto sāmaññatthañca brahmaññatthañca diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharantī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <p class="verse"><a id="p_18It_751" class="ms"></a><span class="parno">4</span>"Ye dukkhaṁ nappajānanti,
 <br>atho dukkhassa sambhavaṁ;
@@ -4401,7 +4393,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_757" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_758" class="ms"></a><span class="parno">2</span>"Ye te, bhikkhave, bhikkhū sīlasampannā samādhisampannā paññāsampannā vimuttisampannā vimuttiñāṇadassanasampannā ovādakā viññāpakā sandassakā samādapakā samuttejakā sampahaṁsakā alaṁsamakkhātāro saddhammassa dassanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; savanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; upasankamanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; payirupāsanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; anussaraṇampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; anupabbajjampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi. Taṁ kissa hetu?</p>
+<p><a id="p_18It_758" class="ms"></a><span class="parno">2</span>"Ye te, bhikkhave, bhikkhū sīlasampannā samādhisampannā paññāsampannā vimuttisampannā vimuttiñāṇadassanasampannā ovādakā viññāpakā sandassakā samādapakā samuttejakā sampahaṁsakā alaṁ&shy;samakkhātāro saddhammassa dassanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; savanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; upasankamanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; payirupāsanampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; anussara&shy;ṇampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi; anupabbaj&shy;jampahaṁ, bhikkhave, tesaṁ bhikkhūnaṁ bahūpakāraṁ vadāmi. Taṁ kissa hetu?</p>
 
 <p>Tathārūpe, bhikkhave, bhikkhū sevato bhajato payirupāsato aparipūropi sīlakkhandho bhāvanāpāripūriṁ gacchati, aparipūropi samādhikkhandho bhāvanāpāripūriṁ gacchati, aparipūropi paññākkhandho bhāvanāpāripūriṁ gacchati, aparipūropi vimuttikkhandho bhāvanāpāripūriṁ gacchati, aparipūropi vimuttiñāṇadassanakkhandho bhāvanāpāripūriṁ gacchati. Evarūpā ca te, bhikkhave, bhikkhū satthārotipi vuccanti, satthavāhātipi vuccanti, raṇañjahātipi vuccanti, tamonudātipi vuccanti, ālokakarātipi vuccanti, obhāsakarātipi vuccanti, pajjotakarātipi vuccanti, ukkādhārātipi vuccanti, pabhankarātipi vuccanti, ariyātipi vuccanti, cakkhumantotipi vuccantī"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
@@ -4478,7 +4470,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_778" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_779" class="ms"></a><span class="parno">2</span>"Bahukārā, bhikkhave, brāhmaṇa&shy;gahapatikā tumhākaṁ ye vo paccupaṭṭhitā cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānapaccaya&shy;bhesajja&shy;parikkārehi. Tumhepi, bhikkhave, bahukārā brāhmaṇa&shy;gaha&shy;patikānaṁ yaṁ nesaṁ dhammaṁ desetha ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsetha. Evamidaṁ, bhikkhave, aññamaññaṁ nissāya brahmacariyaṁ vussati oghassa nittharaṇatthāya sammā dukkhassa antakiriyāyā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
+<p><a id="p_18It_779" class="ms"></a><span class="parno">2</span>"Bahukārā, bhikkhave, brāhmaṇa&shy;gahapatikā tumhākaṁ ye vo paccupaṭṭhitā cīvara&shy;piṇḍapāta&shy;senāsana&shy;gilānapaccaya&shy;bhesajja&shy;parikkārehi. Tumhepi, bhikkhave, bahukārā brāhmaṇa&shy;gaha&shy;patikānaṁ yaṁ nesaṁ dhammaṁ desetha ādikalyāṇaṁ majjhekalyāṇaṁ pari&shy;yosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāsetha. Evamidaṁ, bhikkhave, aññamaññaṁ nissāya brahmacariyaṁ vussati oghassa nitth&shy;araṇatthāya sammā dukkhassa antakiriyāyā"ti. Etamatthaṁ bhagavā avoca. Tatthetaṁ iti vuccati: </p>
 
 <hr>
 <p class="verse"><a id="p_18It_780" class="ms"></a><span class="parno">3</span>"Sāgārā anagārā ca,
@@ -4489,7 +4481,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 <p class="verse"><a id="p_18It_781" class="ms"></a><span class="parno">4</span>Sāgāresu ca cīvaraṁ,
 <br>paccayaṁ sayanāsanaṁ;
 <br>Anagārā paṭicchanti,
-<br>parissayavinodanaṁ.</p>
+<br>pari&shy;ssayavinodanaṁ.</p>
 	
 <p class="verse"><a id="p_18It_782" class="ms"></a><span class="parno">5</span>Sugataṁ pana nissāya,
 <br>gahaṭṭhā gharamesino;
@@ -4547,7 +4539,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_799" class="ms"></a><span class="parno">8</span>‘Gāhārakkhaso’ti kho, bhikkhave, mātugāmassetaṁ adhivacanaṁ.</p>
 
-<p><a id="p_18It_800" class="ms"></a><span class="parno">9</span>‘Paṭisoto’ti kho, bhikkhave, nekkhammassetaṁ adhivacanaṁ.</p>
+<p><a id="p_18It_800" class="ms"></a><span class="parno">9</span>‘Paṭisoto’ti kho, bhikkhave, nekkhamma&shy;ssetaṁ adhivacanaṁ.</p>
 
 <p><a id="p_18It_801" class="ms"></a><span class="parno">10</span>‘Hatthehi ca pādehi ca vāyāmo’ti kho, bhikkhave, vīriyārambhassetaṁ adhivacanaṁ.</p>
 
@@ -4617,10 +4609,10 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_820" class="ms"></a><span class="parno">1</span>Vuttañhetaṁ bhagavatā vuttamarahatāti me sutaṁ: </p>
 
-<p><a id="p_18It_821" class="ms"></a><span class="parno">2</span>"Sampannasīlā, bhikkhave, viharatha sampannapātimokkhā; pātimokkhasaṁvarasaṁvutā viharatha ācāragocarasampannā aṇumattesu vajjesu bhayadassāvino; samādāya sikkhatha sikkhāpadesu.</p>
+<p><a id="p_18It_821" class="ms"></a><span class="parno">2</span>"Sampannasīlā, bhikkhave, viharatha sampannapātimokkhā; pātimokkhasaṁvarasaṁvutā viharatha ācāragocara&shy;sampannā aṇumattesu vajjesu bhayadassāvino; samādāya sikkhatha sikkhāpadesu.</p>
 
 <hr>
-<p><a id="p_18It_822" class="ms"></a><span class="parno">3</span>Sampannasīlānaṁ vo, bhikkhave, viharataṁ sampannapātimokkhānaṁ pātimokkhasaṁvarasaṁvutānaṁ viharataṁ ācāragocarasampannānaṁ aṇumattesu vajjesu bhayadassāvīnaṁ samādāya sikkhataṁ sikkhāpadesu, kimassa uttari karaṇīyaṁ?</p>
+<p><a id="p_18It_822" class="ms"></a><span class="parno">3</span>Sampannasīlānaṁ vo, bhikkhave, viharataṁ sampannapātimokkhānaṁ pātimokkhasaṁvarasaṁvutānaṁ viharataṁ ācāragocara&shy;sampannānaṁ aṇumattesu vajjesu bhayadassāvīnaṁ samādāya sikkhataṁ sikkhāpadesu, kimassa uttari karaṇīyaṁ?</p>
 
 <p><a id="p_18It_823" class="ms"></a><span class="parno">4</span>Carato cepi, bhikkhave, bhikkhuno abhijjhā, byāpādo vigato hoti, thinamiddhaṁ vigataṁ hoti, uddhaccakukkuccaṁ vigataṁ hoti, vicikicchā pahīnā hoti, āraddhaṁ hoti vīriyaṁ asallīnaṁ, upaṭṭhitā sati asammuṭṭhā, passaddho kāyo asāraddho, samāhitaṁ cittaṁ ekaggaṁ. Carampi, bhikkhave, bhikkhu evaṁbhūto ātāpī ottāpī satataṁ samitaṁ āraddhavīriyo pahitattoti vuccati.</p>
 
@@ -4663,7 +4655,7 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 
 <p><a id="p_18It_834" class="ms"></a><span class="parno">3</span>Yaṁ, bhikkhave, sadevakassa lokassa samārakassa sabrahmakassa sassamaṇabrāhmaṇiyā pajāya sadevamanussāya diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ anuvicaritaṁ manasā yasmā taṁ tathāgatena abhisambuddhaṁ, tasmā tathāgatoti vuccati.</p>
 
-<p><a id="p_18It_835" class="ms"></a><span class="parno">4</span>Yañca, bhikkhave, rattiṁ tathāgato anuttaraṁ sammāsambodhiṁ abhisambujjhati, yañca rattiṁ anupādisesāya nibbānadhātuyā parinibbāyati, yaṁ etasmiṁ antare bhāsati lapati niddisati, sabbaṁ taṁ tatheva hoti no aññathā, tasmā tathāgatoti vuccati.</p>
+<p><a id="p_18It_835" class="ms"></a><span class="parno">4</span>Yañca, bhikkhave, rattiṁ tathāgato anuttaraṁ sammāsambodhiṁ abhi&shy;sambujjhati, yañca rattiṁ anupādisesāya nibbānadhātuyā parinibbāyati, yaṁ etasmiṁ antare bhāsati lapati niddisati, sabbaṁ taṁ tatheva hoti no aññathā, tasmā tathāgatoti vuccati.</p>
 
 <p><a id="p_18It_836" class="ms"></a><span class="parno">5</span>Yathāvādī, bhikkhave, tathāgato tathākārī, yathākārī tathāvādī, iti yathāvādī tathākārī yathākārī tathāvādī, tasmā tathāgatoti vuccati.</p>
 
@@ -4728,24 +4720,37 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
 <p class="endbook">Itivuttakapāḷi niṭṭhitā.</p>
 
 </div>
-</section>
-
-</div>
+</section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="../ud/ud.html#content"></a><a id="next-sutta" href="../tha/tha.html#content"></a></div>
- </div>  <!-- End page content -->
-	  <!-- Footer -->
-	<footer>
- 		<div class="w3-white .bwcontainer2">
- 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a>Itivuttaka</div>
-		</div>  <!-- End .bwcontainer2 for breadcrumbs -->
-		<div class="bottomlinks">
-			<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
-			<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
-			<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
-			<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
-			<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
-		</div>  <!-- End bottom links -->
- </footer>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a>Itivuttaka</div>
+					<div class="bottomlinks">
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
 
  <script>
  // Script to open and close sidebar
@@ -4762,28 +4767,29 @@ Taṁ kho panāhaṁ, bhikkhave, nāññassa samaṇassa vā brāhmaṇassa vā 
  			app.setAttribute("light-mode", "dark");
  	}
  </script>
-
+ 
  <script>
  		function toggle_light_mode() {
  			var app = document.getElementsByTagName("BODY")[0];
  				if (localStorage.lightMode == "dark") {
- 					localStorage.lightMode = "light";
- 					app.setAttribute("light-mode", "light");
- 				} else {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
  					localStorage.lightMode = "dark";
  					app.setAttribute("light-mode", "dark");
  	}
  		}
-
+ 
  		window.addEventListener("storage", function () {
  			if (localStorage.lightMode == "dark") {
  				app.setAttribute("light-mode", "dark");
- 			} else {
+ 				} else {
  				app.setAttribute("light-mode", "light");
  		}
  		}, false);
-
+ 
  </script>
  <script src="../js/footer.js"></script>
-  </body>
+ <script src="/sw.js"></script>
+ </body>
  </html>

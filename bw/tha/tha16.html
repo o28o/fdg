@@ -4,9 +4,11 @@
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Theragatha 16</title>
- 	 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<!-- Loading third party fonts -->
-  	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<!-- Loading manifest -->
+ 		<link rel="manifest" href="../manifest.json">
+ <!-- Loading third party fonts -->
+  	 <link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
   	<!-- Loading main and menu stylesheets -->
   	<link rel="stylesheet" href="../css/w3.css">
   	<link rel="stylesheet" href="../css/css.css">
@@ -14,10 +16,9 @@
 			<script src="../js/jquery-1.10.2.min.js"></script>
 			<script src="../js/controlpanel.js"></script>
    <script src="../js/mousetrap.min.js"></script>
-<body>
-
- 	<!--  <header>-->
- 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+<body> 
+ <!--  <header>-->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
  		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
  		<span></span>
  		<span></span>
@@ -39,6 +40,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="guide"><a href="../guide/guide.html" class="w3-hide-small">Guide</a></li>
  				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikaya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
@@ -82,8 +84,6 @@
  						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
  						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Patimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhuni Vibhanga</a></li>
- 						<li><a href="../bmc/bmc.html" class="w3-hide-small">Buddhist Monastic Code</a></li>
- 						
  					</ul>
  				</li>
  			</ul>
@@ -95,6 +95,8 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
  			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
@@ -109,17 +111,7 @@
    		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
  
  <h2>Khuddaka Nikaya - The Minor Texts</h2>
- 
- <div class="w3-bar-white bwnav"><!-- Div for lower Kn sub-navigation -->
- 	<a href="../kp/kp.html#content" title="Khuddapatha - The Minor Passages" class="w3-bar-item w3-hover-white w3-border-white w3-button">Khuddapatha</a>
- 	<a href="../dhp/dhp.html#content" title="Dhammapada" class="w3-bar-item w3-hover-white w3-border-white w3-button">Dhammapada</a>
- 	<a href="../snp/snp.html#content" title="Sutta Nipata" class="w3-bar-item w3-hover-white w3-border-white w3-button">Sutta Nipata</a>
- 	<a href="../ud/ud.html#content" title="The Udana" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Udana</a>
- 	<a href="../it/it.html#content" title="The Itivuttaka" class="w3-bar-item w3-hover-white w3-border-white w3-button">The Itivuttaka</a>
- 	<a href="../tha/tha.html#content" title="Theragatha" class="w3-bar-item w3-hover-white w3-border-white w3-button active">Theragatha</a>
- 	<a href="../thi/thi.html#content" title="Therigatha" class="w3-bar-item w3-hover-white w3-border-white w3-button">Therigatha</a>
- </div><!-- End div for lower Kn sub-navigation -->
- 
+  
  <!--     Theragatha content begins here     -->
  
  <div id="content">
@@ -190,7 +182,7 @@
 
 <p id="p715"><span class="parno">715</span>It doesn’t occur to me, ‘I had past lives’;
 <br>Nor does it occur to me, ‘I will have future lives’.
-<br>All conditions will disappear—
+<br>All conditions will disappear — 
 <br>Why lament for that?</p>
 
 <p id="p716"><span class="parno">716</span>Seeing in accordance with reality
@@ -383,7 +375,7 @@
 <br>The arrow of covetousness,</p>
 
 <p id="p753"><span class="parno">753</span>Propelled by the bow of craving,
-<br>Is stuck in my twice-fifteen ribs—
+<br>Is stuck in my twice-fifteen ribs — 
 <br>See how it stands in my breast,
 <br>Breaking my strong heart.</p>
 
@@ -586,7 +578,7 @@
 
 <p id="p793"><span class="parno">793</span>I’ve attained the goal
 <br>For the sake of which I went forth
-<br>From home life into homelessness—
+<br>From home life into homelessness — 
 <br>The ending of all fetters.</p>
 </div>
 <h5>Mālukyaputta</h5>
@@ -758,7 +750,7 @@
 
 <p id="p823"><span class="parno">823</span>Warriors, lords, and kings
 <br>Are your followers
-<br>You are king above kings and lord of men—
+<br>You are king above kings and lord of men — 
 <br>Claim your kingship, Gotama!"</p>
 
 <p id="p824"><span class="parno">824</span>"Sela, I <i>am</i> a king,
@@ -964,7 +956,7 @@
 
 <p id="p863"><span class="parno">863</span>Formerly I lived in a citadel surrounded by high walls,
 <br>With strong battlements and gates,
-<br>And guarded by swordsmen—
+<br>And guarded by swordsmen — 
 <br>And I trembled with fear.</p>
 
 <p id="p864"><span class="parno">864</span>Today I am fortunate, free of trembling,
@@ -984,7 +976,7 @@
 <br>I’m asking you this, ascetic:
 <br>Why are you standing still and I’m not?"</p>
 
-<p id="p867"><span class="parno">867</span>"Angulimāla, I always stand still—
+<p id="p867"><span class="parno">867</span>"Angulimāla, I always stand still — 
 <br>I’ve given up violence towards all living beings.
 <br>But you have no restraint towards living creatures;
 <br>That’s why I’m standing still and you’re not."</p>
@@ -1057,7 +1049,7 @@
 
 <p id="p881"><span class="parno">881</span>I used to have blood on my hands,
 <br>The notorious Angulimāla.
-<br>See my going for refuge—
+<br>See my going for refuge — 
 <br>I’ve undone the attachment to being reborn in any state of existence.</p>
 
 <p id="p882"><span class="parno">882</span>I’ve done many such deeds
@@ -1154,7 +1146,7 @@
 
 <p id="p900"><span class="parno">900</span>Their principles are skilful,
 <br>Leading to awakening;
-<br>They are without defilements—
+<br>They are without defilements — 
 <br>So it was said by the great sage.</p>
 
 <p id="p901"><span class="parno">901</span>Knowing my intention,
@@ -1219,7 +1211,7 @@
 <br>I went forth into homelessness.</p>
 
 <p id="p913"><span class="parno">913</span>I know my past life,
-<br>Where I used to live—
+<br>Where I used to live — 
 <br>I was born as Sakka,
 <br>And stayed among the Tāvatiṁsa gods.</p>
 
@@ -1299,7 +1291,7 @@
 
 <p id="p928"><span class="parno">928</span>With the ending of all defilements,
 <br>Those senior monks have now realised <i>nibbāna</i>;
-<br>They were great meditators and great benefactors—
+<br>They were great meditators and great benefactors — 
 <br>There are few like them today.</p>
 
 <p id="p929"><span class="parno">929</span>With the ending
@@ -1405,7 +1397,7 @@
 </div><!--end English-->
 
 <div lang="pi">
-<h5>Adhimuttattheragāthā</h5>
+<h5>Adhimutta&shy;ttheragāthā</h5>
 <div class="verse">
 <p><span class="parno">705</span><a class="pts1" id="pts71"></a>
 <span class="ms">p_19Th1_1041</span>"Yaññatthaṁ vā dhanatthaṁ vā,
@@ -1504,14 +1496,14 @@
 <p><span class="parno">724</span><span class="ms">p_19Th1_1060</span>Sutvāna corā isino subhāsitaṁ,
 <br>Nikkhippa satthāni ca āvudhāni ca;
 <br>Tamhā ca kammā viramiṁsu eke,
-<br>Eke ca pabbajjamarocayiṁsu.</p>
+<br>Eke ca pabbaj&shy;jamarocayiṁsu.</p>
 
 <p><span class="parno">725</span><span class="ms">p_19Th1_1061</span>Te pabbajitvā sugatassa sāsane,
 <br>Bhāvetva bojjhangabalāni paṇḍitā;
 <br>Udaggacittā sumanā katindriyā,
 <br>Phusiṁsu nibbānapadaṁ asankhatanti.</p>
 </div>
-<h5>Pārāpariyatheragāthā</h5>
+<h5>Pārāpari&shy;yatheragāthā</h5>
 <div class="verse">
 <p><span class="parno">726</span><span class="ms">p_19Th1_1063</span>"Samaṇassa ahu cintā,
 <br>pārāpariyassa bhikkhuno;
@@ -1534,16 +1526,16 @@
 
 <p><span class="parno">730</span><span class="ms">p_19Th1_1067</span>Cakkhundriyañce rūpesu,
 <br>gacchantaṁ anivārayaṁ;
-<br>Anādīnavadassāvī,
+<br>Anādīnava&shy;dassāvī,
 <br>so dukkhā na hi muccati.</p>
 
 <p><span class="parno">731</span><span class="ms">p_19Th1_1068</span>Sotindriyañce saddesu,
 <br>gacchantaṁ anivārayaṁ;
-<br>Anādīnavadassāvī,
+<br>Anādīnava&shy;dassāvī,
 <br>so dukkhā na hi muccati.</p>
 
 <p><span class="parno">732</span><a class="pts1" id="pts73"></a>
-<span class="ms">p_19Th1_1069</span>Anissaraṇadassāvī,
+<span class="ms">p_19Th1_1069</span>Anissaraṇa&shy;dassāvī,
 <br>gandhe ce paṭisevati;
 <br>Na so muccati dukkhamhā,
 <br>gandhesu adhimucchito.</p>
@@ -1641,7 +1633,7 @@
 <p><span class="parno">752</span><span class="ms">p_19Th1_1090</span>Vicikicchākankhāganthitaṁ,
 <br>sārambhabalasaññutaṁ;
 <br>Kodhappattamanatthaddhaṁ,
-<br>abhijappappadāraṇaṁ.</p>
+<br>abhi&shy;jappappadāraṇaṁ.</p>
 
 <p><span class="parno">753</span><span class="ms">p_19Th1_1091</span>Taṇhādhanusamuṭṭhānaṁ,
 <br>dve Passa orasikaṁ bhetvāna
@@ -1778,7 +1770,7 @@
 
 <p><span class="parno">782</span><span class="ms">p_19Th1_1121</span>Na dīghamāyuṁ labhate dhanena,
 <br>Na cāpi vittena jaraṁ vihanti;
-<br>Appaṁ Asassataṁ vippariṇāmadhammaṁ.</p>
+<br>Appaṁ Asassataṁ vippari&shy;ṇāmadhammaṁ.</p>
 
 <p><span class="parno">783</span><span class="ms">p_19Th1_1122</span>Bālo ca dhīro ca tatheva phuṭṭho;
 <br>Bālo hi bālyā vadhitova seti,
@@ -1826,7 +1818,7 @@
 <br>bhavanetti samūhatā.</p>
 
 <p><span class="parno">793</span><span class="ms">p_19Th1_1132</span>Yassatthāya pabbajito,
-<br>agārasmānagāriyaṁ;
+<br>agārasmāna&shy;gāriyaṁ;
 <br>So me attho anuppatto,
 <br>sabbasaṁyojanakkhayo"ti.</p>
 </div>
@@ -2088,7 +2080,7 @@
 <p><span class="parno">840</span><span class="ms">p_19Th1_1181</span>Upadhī te samatikkantā,
 <br>āsavā te padālitā;
 <br>Sīhova anupādāno,
-<br>pahīnabhayabheravo.</p>
+<br>pahīna&shy;bhayabheravo.</p>
 
 <p><span class="parno">841</span><span class="ms">p_19Th1_1182</span>Bhikkhavo tisatā ime,
 <br>tiṭṭhanti pañjalīkatā;
@@ -2174,7 +2166,7 @@
 <br>uttasaṁ vihariṁ pure.</p>
 
 <p><span class="parno">864</span><span class="ms">p_19Th1_1206</span>Sojja bhaddo anutrāsī,
-<br>pahīnabhayabheravo;
+<br>pahīna&shy;bhayabheravo;
 <br>Jhāyati vanamoggayha,
 <br>putto godhāya bhaddiyo.</p>
 
@@ -2262,12 +2254,12 @@
 <br>Phuṭṭho kammavipākena,
 <br>anaṇo bhuñjāmi bhojanaṁ.</p>
 
-<p><span class="parno">883</span><span class="ms">p_19Th1_1226</span>Pamādamanuyuñjanti,
+<p><span class="parno">883</span><span class="ms">p_19Th1_1226</span>Pamādama&shy;nuyuñjanti,
 <br>bālā dummedhino janā;
 <br>Appamādañca medhāvī,
 <br>dhanaṁ seṭṭhaṁva rakkhati.</p>
 
-<p><span class="parno">884</span><span class="ms">p_19Th1_1227</span>Mā pamādamanuyuñjetha,
+<p><span class="parno">884</span><span class="ms">p_19Th1_1227</span>Mā pamādama&shy;nuyuñjetha,
 <br>mā Appamatto hi jhāyanto,
 <br>pappoti paramaṁ sukhaṁ.</p>
 
@@ -2346,7 +2338,7 @@
 <p><span class="parno">899</span><span class="ms">p_19Th1_1243</span>Sato ca hoti appiccho,
 <br>santuṭṭho avighātavā;
 <br>Pavivekarato vitto,
-<br>niccamāraddhavīriyo.</p>
+<br>nicca&shy;māraddhavīriyo.</p>
 
 <p><span class="parno">900</span><span class="ms">p_19Th1_1244</span>Tassa dhammā ime honti,
 <br>kusalā bodhipakkhikā;
@@ -2361,16 +2353,16 @@
 <p><span class="parno">902</span><span class="ms">p_19Th1_1246</span>Yadā me ahu sankappo,
 <br>tato uttari desayi;
 <br>Nippapañcarato buddho,
-<br>nippapañcamadesayi.</p>
+<br>nippa&shy;&shy;pañcamadesayi.</p>
 
 <p><span class="parno">903</span><span class="ms">p_19Th1_1247</span>Tassāhaṁ dhammamaññāya,
 <br>vihāsiṁ sāsane rato;
 <br>Tisso vijjā anuppattā,
 <br>kataṁ buddhassa sāsanaṁ.</p>
 
-<p><span class="parno">904</span><span class="ms">p_19Th1_1248</span>Pañcapaññāsavassāni,
+<p><span class="parno">904</span><span class="ms">p_19Th1_1248</span>Pañca&shy;paññāsavassāni,
 <br>yato nesajjiko ahaṁ;
-<br>Pañcavīsativassāni,
+<br>Pañca&shy;vīsativassāni,
 <br>yato middhaṁ samūhataṁ.</p>
 
 <p><span class="parno">905</span><span class="ms">p_19Th1_1249</span>Nāhu assāsapassāsā,
@@ -2424,7 +2416,7 @@
 <br>dhammena anusāsayiṁ.</p>
 
 <p><span class="parno">915</span><span class="ms">p_19Th1_1259</span>Ito satta saṁsārāni catuddasa;
-<br>Nivāsamabhijānissaṁ,
+<br>Nivāsamabhi&shy;jānissaṁ,
 <br>devaloke ṭhito tadā.</p>
 
 <p><span class="parno">916</span><span class="ms">p_19Th1_1260</span>Pañcangike samādhimhi,
@@ -2446,7 +2438,7 @@
 <br>Heṭṭhato veḷugumbasmiṁ,
 <br>nibbāyissaṁ anāsavo"ti.</p>
 </div>
-<h5>Pārāpariyatheragāthā</h5>
+<h5>Pārāpari&shy;yatheragāthā</h5>
 <div class="verse">
 <p><span class="parno">920</span><span class="ms">p_19Th1_1265</span>Samaṇassa ahu cintā,
 <br>pupphitamhi mahāvane;
@@ -2458,7 +2450,7 @@
 <br>Iriyaṁ āsi bhikkhūnaṁ,
 <br>aññathā dāni dissati.</p>
 
-<p><span class="parno">922</span><span class="ms">p_19Th1_1267</span>Sītavātaparittāṇaṁ,
+<p><span class="parno">922</span><span class="ms">p_19Th1_1267</span>Sītavātapari&shy;ttāṇaṁ,
 <br>hirikopīnachādanaṁ;
 <br>Mattaṭṭhiyaṁ abhuñjiṁsu,
 <br>santuṭṭhā itarītare.</p>
@@ -2489,7 +2481,7 @@
 <br>Siniddhā teladhārāva,
 <br>ahosi iriyāpatho.</p>
 
-<p><span class="parno">928</span><span class="ms">p_19Th1_1273</span>Sabbāsavaparikkhīṇā,
+<p><span class="parno">928</span><span class="ms">p_19Th1_1273</span>Sabbāsavapari&shy;kkhīṇā,
 <br>mahājhāyī mahāhitā;
 <br>Nibbutā dāni te therā,
 <br>parittā dāni tādisā.</p>
@@ -2553,7 +2545,7 @@
 <br>āmisaṁ paribhuñjare.</p>
 
 <p><span class="parno">941</span><span class="ms">p_19Th1_1286</span>Lesakappe pariyāye,
-<br>parikappenudhāvitā;
+<br>pari&shy;kappenudhāvitā;
 <br>Jīvikatthā upāyena,
 <br>sankaḍḍhanti bahuṁ dhanaṁ.</p>
 
@@ -2583,7 +2575,7 @@
 <br>evaṁ gāme munī care.</p>
 
 <p><span class="parno">947</span><span class="ms">p_19Th1_1292</span>Saritvā pubbake yogī,
-<br>tesaṁ vattamanussaraṁ;
+<br>tesaṁ vatta&shy;manussaraṁ;
 <br>Kiñcāpi pacchimo kālo,
 <br>phuseyya amataṁ padaṁ.</p>
 
@@ -2595,26 +2587,37 @@
 
 </div><!--end Pali-->
 
-</section>
-
-</div>
-
+</section>  <!-- End English and Pali -->
 <div id="nextprev"><a id="previous-sutta" href="../tha/tha15.html#content"></a><a id="next-sutta" href="../tha/tha17.html#content"></a></div>
-</div><!--content-->
-	  <!-- Footer -->
-	<footer>
- 		<div class="w3-white .bwcontainer2">
- 			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../tha/tha.html">Theragatha</a>Chapter 16
-</div>
-	</div>  <!-- End .bwcontainer2 for breadcrumbs -->
- 	<div class="bottomlinks">
- 		<a href="../guide/study_guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Study&nbsp;Guide</span></a>
- 		<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
- 		<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
- 		<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
- 		<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
- 	</div>  <!-- End bottom links -->
- </footer>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikaya</a><a href="../tha/tha.html">Theragatha</a>Chapter 16</div>
+					<div class="bottomlinks">
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
 
  <script>
  // Script to open and close sidebar
@@ -2631,28 +2634,29 @@
  			app.setAttribute("light-mode", "dark");
  	}
  </script>
-
+ 
  <script>
  		function toggle_light_mode() {
  			var app = document.getElementsByTagName("BODY")[0];
  				if (localStorage.lightMode == "dark") {
- 					localStorage.lightMode = "light";
- 					app.setAttribute("light-mode", "light");
- 				} else {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
  					localStorage.lightMode = "dark";
  					app.setAttribute("light-mode", "dark");
  	}
  		}
-
+ 
  		window.addEventListener("storage", function () {
  			if (localStorage.lightMode == "dark") {
  				app.setAttribute("light-mode", "dark");
- 			} else {
+ 				} else {
  				app.setAttribute("light-mode", "light");
  		}
  		}, false);
-
+ 
  </script>
  <script src="../js/footer.js"></script>
-  </body>
+ <script src="/sw.js"></script>
+ </body>
  </html>

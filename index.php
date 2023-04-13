@@ -111,7 +111,7 @@ include_once('config/translate.php');
 			
 			 <input name="q" style="z-index:9" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus>
 
-	    	<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="submit" value="search" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
+	    	<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
 	    	</div>
 	<!--	  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="lookup" value="lookup" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button> -->
 <script>
@@ -123,11 +123,6 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
-</script>
-<script>
-$(document).ready(function(){
-    $('[data-bs-toggle="tooltip"]').tooltip();   
-});
 </script>
 
 <div class="form-check form-check-inline">
@@ -595,7 +590,8 @@ include 'scripts/multilang-search.php';
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright &copy; Dhamma.gift <?php echo $mode; ?> 2022-<?php echo date("Y"); ?></small></div>
+            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright &copy; Dhamma.gift <?php echo $mode; ?> 2022-<?php echo date("Y"); ?></small>
+                      <a data-bs-toggle="tooltip" data-bs-placement="top" title='this is fdg tooltip'>find.dhamma.dift</a> </div>
         </div>
         <!-- Portfolio Modals-->
      
@@ -708,6 +704,11 @@ include 'scripts/multilang-search.php';
 
 <script src="/assets/js/jquery-3.6.0.js"></script>
 <script src="/assets/js/jquery-ui.js"></script>
+<script>
+$(document).ready(function(){
+    $('[data-bs-toggle="tooltip"]').tooltip();   
+});
+</script>
         <script src="/assets/js/autopali.js"></script>
       <script src="/assets/js/randPlaceholder.js"> </script>
 <script>

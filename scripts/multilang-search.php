@@ -8,12 +8,24 @@ if ( preg_match('/\/ru/', $actual_link)) {
     }
     
 /* single search no radiobuttons */
-if (preg_match('/[А-Яа-яЁё]/u', $string) && ( $p != "-ru" )) {
+if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
 $p = "-ru";
+
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
+			echo "<p class='mt-3'>$output</p>";
+				
+$check = ru2lat( $output );
+
+		if ((( $p == "-ru" ) && ( preg_match('/-net-v-/', $check)  )) || ( ( $p != "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
+
+		    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -tru $extra $string");
+					echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+		exit("<p>$output</p>");
+			}	
 }
 
 
-if (preg_match('/\p{Thai}/u', $string) && ( $p != "-th" )) {
+if (preg_match('/\p{Thai}/u', $string) || ( $p == "-th" )) {
   $p = "-th";
   if ( $mode == "offline" ) {
     
@@ -38,26 +50,39 @@ afterAkhsaramukhaResponse($convertedStr);
   $output = shell_exec("bash ./scripts/finddhamma.sh $extra $outputlang $convertedStr");
   echo "<p>$output</p>";
       }
-  
+   
+   
+      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
+			echo "<p class='mt-3'>$output</p>";
+			echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+  exit("<br>") ;
+			
 }
-//english
+
+
+//english 
+
 			$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
 			echo "<p class='mt-3'>$output</p>";
 		
 		
 		if ((( $p == "" ) && ( preg_match('/ not in /', $output)  )) || (( $p == "-vin" ) && ( preg_match('/ not in /', $output)  )))	{
+		  echo "49";
 		      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -b $extra $p $string"); 
 		      echo "<p>$output</p>";
 		    }                                 
 
 		$check = ru2lat( $output );
 
-		if ((( $p == "" ) && ( preg_match('/-net-v-/', $check)  )) || (( $p != "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
+		if ((( $p == "-en" ) && ( preg_match('/-net-v-/', $check)  )) || ( ( $p != "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
+
+
 		    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -b $extra $p $string");
 			echo "<p>$output</p>";
 			}	
 		 
 		 if ((( $p == "" ) && ( preg_match('/ not in /', $output)  )) || (( $p == "-vin" ) && ( preg_match('/ not in /', $output)  )))	{
+		   
 		      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -en $extra $p $string"); 
 		      echo "<p>$output</p>";
 		    }                                 
@@ -65,9 +90,10 @@ afterAkhsaramukhaResponse($convertedStr);
 		$check = ru2lat( $output );
 
 		if ((( $p == "" ) && ( preg_match('/-net-v-/', $check)  )) || (( $p == "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
+
 		    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -en $extra $p $string");
 			echo "<p>$output</p>";
 			}	
 		 
-		  	echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>"
+		  	echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 		?>	

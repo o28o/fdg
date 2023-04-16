@@ -754,7 +754,7 @@ filenameblock=`echo $i |  sed 's/-.*//g' | sed 's@_@.@g' | sort -V | uniq `
 else 
 filenameblock=`echo $i |  sed 's/.html//g' | sort -V | uniq `
 fi 
-
+echo $i >> sddd
 
 file=`grep -m1 "${i}" $basefile `
 
@@ -770,6 +770,9 @@ linklang="$linkgeneral"
 if [[ "$@" == *"-b"* ]]; then
 roottext=`nice -$nicevalue find $bwlocation -name "*${filenameblock}_*" -not -path "*/home/*" -not  -path "*/css/*" -not -path "*/js/*" -not -path "*/engsesrch/*"`
 else
+#pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) printf $i"/"}'`
+#roottext=`ls $lookup/root/pli/ms/$pathblock/*${filenameblock}_*`
+
 roottext=`nice -$nicevalue find $lookup/root -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
 fi
         if [[ "$language" == *"Pali"* ]]; then

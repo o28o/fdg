@@ -49,6 +49,7 @@ include_once('config/translate.php');
 </style>
 
 </head>
+<!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">

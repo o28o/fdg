@@ -42,6 +42,7 @@ $radioru = "Рус";
 $regexMemo = '<h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
+          
   <!--   <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> -->
        <strong>-la 2 X</strong> - искать X и добавить в результаты 1 следующую строку после строки с X<br>
      <strong>X -exc Y</strong> - искать X, исключить Y<br>
@@ -55,7 +56,8 @@ $regexMemo = '<h5>Памятка по RegEx</h5>
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - искать все метафоры в Самьютте 56<br> 
 <strong>"(a|b|c)"</strong> - искать несколько отдельных слов одновременно<br>
 <strong>\'^"mn.*X\'</strong> - искать X во всей Мадджхимма Никае<br>            
-<strong>dn22.*Y</strong> - искать Y в одной Сутте ДН22<br> 
+<strong>dn22.*Y</strong> - искать Y в одной Сутте ДН22<br><br> 
+ИИ может сгенерировать регулярное выражение для Grep, к примеру <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>здесь</a><br>
         </p>     ';
 $titlehowtovideo = 'Как пользоваться?';  
 $linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
@@ -188,7 +190,9 @@ $advancedcontent = '<strong>Совет #1</strong><br>
 								   Чтобы исключить один шаблон из результатов другого шаблона используйте аргумент -exc.<br>
 								   Пример: dundubh -exc devadundubh - этот запрос позволит вам выгрузить совпадения по словам похожим на dundubh, но без devadundubh<br><br>
 <strong>Совет #5</strong><br>
-								   Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать. Почитайте, поизучайте regex в интернете.<br><br>
+								   Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать. 
+								   Специальные ИИ могут сгенерировать регулярное выражение для Grep, к примеру <a href="https://codepal.ai/regex-generator" target=_blank>здесь</a>.
+								   Почитайте, поизучайте regex в интернете.<br><br>
 
 	<strong>Совет #6</strong><br>
 								   Почитайте на сайте проекта или в интернете о <a target="_blank" href="https://datatables.net/">DataTables</a>, результаты, которые вы получаете из текстов выводятся с помощью них.<br><br>
@@ -350,7 +354,8 @@ $regexMemo = ' <h5>RegEx Memo</h5>
 <strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
 <strong>\'^"mn.*X\'</strong> - find X in all Majjhimma Nikaya<br>            
 <strong>dn22.*Y</strong> - find Y in DN22 only<br>
-        </p>          ';
+<br>AI can generate RegEx for Grep, e.g. <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>here</a><br>
+</p>          ';
 $titlehowtovideo = 'How-To Video';
 $linkhowtovideo = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift';
@@ -463,7 +468,9 @@ $advancedcontent = '<strong>Tip #1</strong><br>
 									<strong>Tip #3</strong><br>
 								   If you want to find words beginning or ending from some pattern use \\\\b before and/or in the end of the pattern. e.g. <strong>\\\\bkummo\\\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
 									<strong>Tip #4</strong><br>
-								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\\\) they should work. Read and study regex to boost your search abilities.<br><br>
+								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\\\) they should work. 
+								   Specialized AI can generate RegEx for Grep, e.g. <a href="https://codepal.ai/regex-generator" target=_blank>here</a>.
+								   Read and study regex to boost your search abilities.<br><br>
 								   
 								   <strong>Tip #5</strong><br>
 								

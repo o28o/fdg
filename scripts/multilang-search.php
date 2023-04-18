@@ -20,8 +20,10 @@ $check = ru2lat( $output );
 
 		    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -tru $extra $string");
 					echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
-		exit("<p>$output</p>");
+				echo	"<p>$output</p>";
+		
 			}	
+			exit("<br>");
 }
 
 

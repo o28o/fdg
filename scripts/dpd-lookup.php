@@ -11,7 +11,7 @@ $string = (strtolower($string));
 
 if ( !empty($string) ) {
 			$output = shell_exec("maxtime=30
-			curl -s -m \$maxtime http://4nt.one:8000/$string; 
+			curl -s -m 5 http://4nt.one:8000/$string; 
 			curl -s -m \$maxtime http://4nt.one:8080/$string"); 
 			echo "<p class='mt-3'>$output</p>";
 } else {

@@ -131,7 +131,7 @@ if (linksArray[0].length >= 4) {
       } 
       scLink += "</p>"; 
 
-  const warning = "<p class='warning' >Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали</p>";
+  const warning = "<p class='warning' >Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.</p>";
 
 suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;  
  

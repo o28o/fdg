@@ -132,7 +132,7 @@ const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.sl
       } 
       scLink += "</p>"; 
 
-const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali originals</p>";
+const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.</p>";
 
 suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;  
  

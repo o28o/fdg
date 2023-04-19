@@ -66,14 +66,14 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>	  
 </a>
 
-
+<!--
 <a class="text-decoration-none mx-1" href="/ru/dpd">
 <figure class="figure">
 <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-spell-check"></i>
 <figcaption class="figure-caption text-center">Словарь</figcaption>   
 </figure>	  
 </a>
-
+-->
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-brands fa-google"></i>

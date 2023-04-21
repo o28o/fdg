@@ -112,9 +112,18 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
       html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="eng-lang" lang="en">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
-const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
+if (translator === "sv") {
+  translator = 'SV <a target=_blank href=https://theravada.ru>theravada.ru</a>';
+} else if (translator === "sujato") {
+  translator = 'Bhikkhu Sujato';
+} else if (translator === "brahmali") {
+  translator = 'Bhikkhu Brahmali';
+}
 
-     const translatorByline = `<div class="byline"><p>Перевод: ${translatorCapitalized}</p></div>`;
+
+//const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
+
+     const translatorByline = `<div class="byline"><p>Перевод: ${translator}</p></div>`;
      
       const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC.net</a>`;
       

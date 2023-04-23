@@ -175,6 +175,11 @@ input.addEventListener("keypress", function(event) {
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
   </div>
   
+       <div class="form-check form-check-inline">
+  <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-b ") echo "checked";?> value="-b">
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptbw;?>"><?php echo $radiotbw;?></a>
+  </div>
+  
   <br>
          <div style="max-width: 300px; " class="mt-2"> 
 <?php echo $regexMemo;?>

@@ -38,6 +38,8 @@ $tooltipth = "Опционально. Поиск в 4 основных Ника�
 $radioth = "ไทย";
 $tooltipru = "Опционально. Поиск по русским переводам АН, СН, МН, ДН с SuttaCentral.net";
 $radioru = "Рус";
+$tooltiptbw = "Искать во всем содержимом TheBuddhasWords.net";
+$radiotbw = "TBW";
 
 $regexMemo = '<h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
@@ -336,6 +338,8 @@ $tooltipth = "(optional) Search in an, sn, mn, dn in Thai Suttacentral.net trans
 $radioth = "ไทย";
 $tooltipru = "(optional) Search in an, sn, mn, dn in Russain Suttacentral.net translations";
 $radioru = "Rus";
+$tooltiptbw = "Search in all contents of TheBuddhasWords.net";
+$radiotbw = "TBW";
 
 $regexMemo = ' <h5>RegEx Memo</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>

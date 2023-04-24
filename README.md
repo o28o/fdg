@@ -19,6 +19,15 @@ This instruction is only for Android devices. Check possible options for IOS in 
 # Option #1 
 # installation with script
 
+# for Linux with apt 
+
+copy-paste into terminal contents of the script from scripts/install-linix.sh
+
+# for Windoes 
+
+Install Mobaxterm, run it, then process is similar to Linux with apt 
+
+# For Android
 1\. Install Termux from [f-droid](https://f-droid.org/packages/com.termux/) or [github](https://github.com/termux/termux-app)
 
 2\. run Termux 

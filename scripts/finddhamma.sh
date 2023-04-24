@@ -265,7 +265,7 @@ fortitle="${fortitle}"
 elif [[ "$@" == *"-b"* ]]; then
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $bwlocation
- --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
+ --exclude-dir={$sutta,$abhi,home,js,css,image,fonts} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
 }
 fileprefix=${fileprefix}-bw
 fortitle="${fortitle}"

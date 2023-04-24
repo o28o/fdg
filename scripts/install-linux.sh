@@ -6,6 +6,7 @@ sudo apt install -y php-{common,xml,xmlrpc,curl,gd,imagick,cli,dev,imap,mbstring
 rm /var/www/html/index.html
 cd /var/www/html
 git clone https://github.com/o28o/fdg.git ./
+mkdir result
 cd ..
 mkdir suttacentral.net && cd suttacentral.net
 git clone https://github.com/suttacentral/sc-data.git 

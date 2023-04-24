@@ -70,7 +70,7 @@ cd ..
 rm -rf suttacentral.net
 mkdir suttacentral.net 
 cd suttacentral.net 
-git clone https://github.com/suttacentral/sc-data.git ./
+git clone https://github.com/suttacentral/sc-data.git 
 
 #accesstoinsight.org 
 cd ..

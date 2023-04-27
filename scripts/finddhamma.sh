@@ -18,7 +18,7 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
-defaultlang='lang=pli'
+defaultlang='lang=pli-rus'
 excluderesponse="исключая"
 function bgswitch {
   removefilenames
@@ -582,7 +582,15 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
  #   translation=`nice -$nicevalue find $lookup/translation/en/$translator/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*" |head -n1`
  #   variant=`nice -$nicevalue find $lookup/variant/pli/ms/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
    roottext=`ls $lookup/root/pli/ms/$pathblock/*${filenameblock}_*`
+ 
+ lettersblock=`echo $filenameblock | sed 's@[0-9]*@@g'`
+ numberblock=`echo $filenameblock | sed 's@[A-Za-z]*@@g'`
+
+if [[ "$args" == *"-oru"* ]] && [[ $lettersblock == "mn" ]] && [ $numberblock -le $latestrusmn ]; then
+ translation=`ls $apachesitepath/assets/texts/sutta/mn/*${filenameblock}_*`
+ else
     translation=`ls $lookup/translation/en/$translator/$pathblock/*${filenameblock}_*`
+fi   
     variant=`ls $lookup/variant/pli/ms/$pathblock/*${filenameblock}_* 2>/dev/null`
     
     np=`echo $filenameblock | sed 's@\.@_@g'`

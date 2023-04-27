@@ -90,7 +90,6 @@ $.ajax({
       let translator = trnsResp[0];
       console.log('inside', translator);
       
-
   const rootResponse = fetch(
     `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`
   )
@@ -102,22 +101,22 @@ $.ajax({
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
 
-let max;
+let max = 21;
 
-fetch('/sc/latest-rus.php')
+/* fetch('/sc/latest-rus.php')
   .then(response => response.text())
   .then(data => {
     max = data;
     console.log('Global variable set:', max);
   })
-  .catch(error => console.error(error));
+  .catch(error => console.error(error)); */
 
 
-   if (onlynumber >= 1 && onlynumber <= 21 && slug.match(/mn/)) {
+   if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
   var trnpath = `/o/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else {
   
-  const translator = "sujato";
+  let translator = "sujato";
   const pathLang = "en";
   console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
@@ -159,7 +158,7 @@ if (translator === "sv") {
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
      const translatorByline = `<div class="byline"><p>Перевод: ${translator}</p></div>`;
-     
+     console.log('trntir', translator);
       const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC.net</a>`;
       
       
@@ -201,7 +200,7 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
       let nextSlug = nextArray[0];
       let nextSlugPrint = nextSlug.replace("pli-tv-", "");
       let nextName = nextArray[1];
-      //console.log('inside', nextArray);
+
       
          next.innerHTML = nextSlug
         ? `<a href="?q=${nextSlug}&lang=pli-rus">${nextSlugPrint} ${nextName}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
@@ -224,7 +223,7 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
       let prevSlug = prevArray[0];
       let prevSlugPrint = prevSlug.replace("pli-tv-", "");
       let prevName = prevArray[1];
-      //console.log('inside', prevArray);
+
     
       previous.innerHTML = prevSlug
         ? `<a href="?q=${prevSlug}&lang=${language}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">

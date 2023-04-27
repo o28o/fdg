@@ -224,6 +224,12 @@ if (empty($check)) {
   $string = trim(shell_exec($command));
 }	  
 
+$numberblock = preg_replace("/[a-z]*/i","","$string");
+$letterblock = preg_replace("/[0-9]*/i","","$string");
+
+if ((  $numberblock <= $latestrusmn ) && ( preg_match("/mn/i",$letterblock) ) ){
+$defaultlang = 'lang=pli-rus';
+}
 echo "<script>window.location.href='$readerlang/sc/?q={$string}&$defaultlang';</script>";
   exit();
 }

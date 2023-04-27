@@ -96,7 +96,24 @@ $.ajax({
   )
     .then(response => response.json());
 
- if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
+
+//if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
+ 
+const onlynumber = slug.replace(/[a-zA-Z]/g, '');
+
+
+let max;
+
+fetch('/sc/latest-rus.php')
+  .then(response => response.text())
+  .then(data => {
+    max = data;
+    console.log('Global variable set:', max);
+  })
+  .catch(error => console.error(error));
+
+
+   if (onlynumber >= 1 && onlynumber <= 21 && slug.match(/mn/)) {
   var trnpath = `/o/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else {
   

@@ -96,7 +96,7 @@ $.ajax({
   )
     .then(response => response.json());
 
-if ( slug === "mn1" ) {
+ if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
   var trnpath = `/o/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else {
   

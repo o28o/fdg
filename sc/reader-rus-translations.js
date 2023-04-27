@@ -109,11 +109,8 @@ fetch('/sc/latest-rus.php')
   .then(data => {
     max = data;
     console.log('Global variable set:', max);
-  })
-  .catch(error => console.error(error));
 
-
-   if (onlynumber >= 1 && onlynumber <= 21 && slug.match(/mn/)) {
+   if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
   var trnpath = `/o/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else {
   
@@ -256,7 +253,9 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
     }
 
     );
+  })
 
+  .catch(error => console.error(error));
 }
 
 // initialize the whole app

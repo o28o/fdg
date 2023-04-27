@@ -1,1 +1,1 @@
-../../sc/reader-rus.js
+../../sc/reader-rus-translations.js

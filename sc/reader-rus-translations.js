@@ -96,11 +96,18 @@ $.ajax({
   )
     .then(response => response.json());
 
-
-   const translationResponse = fetch(
-		    `/o/sutta/${slugReady}_translation-${pathLang}-${translator}.json`
-  ).then(response => response.json());
+if ( slug === "mn1" ) {
+  var trnpath = `/o/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
+} else {
   
+  const translator = "sujato";
+  const pathLang = "en";
+  console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
+  var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+}
+
+   const translationResponse = fetch(trnpath).then(response => response.json());
+
   const htmlResponse = fetch(
     `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`
   ).then(response => response.json());
@@ -143,7 +150,15 @@ if (translator === "sv") {
       url: "/sc/extralinks.php?fromjs=" +slug
     }).done(function(data) {
       const linksArray = data.split(",");
-      let scLink = `<p class="sc-link"><a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;<a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> `; 
+ 
+
+  
+      let scLink = `<p class="sc-link"><a target="" href="/sc/?q=${slug}">En</a>&nbsp;<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;<a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> `; 
+
+      
+      
+      
+
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp;
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
@@ -172,7 +187,7 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
       //console.log('inside', nextArray);
       
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}&lang=pli">${nextSlugPrint} ${nextName}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${nextSlug}&lang=pli-rus">${nextSlugPrint} ${nextName}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>

@@ -1,1 +1,0 @@
-../scripts/translator-lookup.php

@@ -157,7 +157,7 @@ $linkcasesru = 'https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntO
 //
 $linebylinerulocation = $basedir. '/assets/texts/';
 //translator-lookup.php
-$translatorlocation = $basedir. '/o/';
+$translatorlocation = $basedir. '/ru/sc/';
 
 
 //api-emulator

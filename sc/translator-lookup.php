@@ -1,4 +1,5 @@
 <?php 
+error_reporting(E_ERROR | E_PARSE);
 // test request
 // curl http://localhost:8080/sc/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
 //error_reporting(E_ERROR | E_PARSE);

@@ -113,10 +113,16 @@ let max = 21;
 
 
    if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
-  var trnpath = `/o/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
-} else {
-  
+  var trnpath = `/ru/sc/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
+} else if ( texttype === "sutta" ) {
   let translator = "sujato";
+  
+  const pathLang = "en";
+  console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
+  var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+} else if ( texttype === "vinaya" ) {
+  let translator = "brahmali";
+  
   const pathLang = "en";
   console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
@@ -149,16 +155,16 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
 
 if (translator === "sv") {
   translator = 'SV <a target=_blank href=https://theravada.ru>theravada.ru</a>';
-} else if (translator === "sujato") {
+} else if (translator === "" && texttype === "sutta" ) {
   translator = 'Bhikkhu Sujato';
-} else if (translator === "brahmali") {
+} else if (translator === "" && texttype === "vinaya") {
   translator = 'Bhikkhu Brahmali';
 }
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
      const translatorByline = `<div class="byline"><p>Перевод: ${translator}</p></div>`;
-     console.log('trntir', translator);
+     
       const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC.net</a>`;
       
       

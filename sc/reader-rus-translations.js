@@ -101,7 +101,7 @@ $.ajax({
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
 
-let max = 21;
+let max = 23;
 
 /* fetch('/sc/latest-rus.php')
   .then(response => response.text())

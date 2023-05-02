@@ -251,44 +251,68 @@ include 'scripts/multilang-search.php';
                 </div>
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">		 
-                  		 
-         <h4 class="page-section-heading text-center mb-4"><?php echo $demovideo;?> </h4>
+                                                        		 
                     <div class="col-md-6 col-lg-4 mb-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
+          <div class="imgcontainer">
+
+  <div class="centered">
+  <h4 class="page-section-heading text-center text-white"><?php echo $demovideo;?> </h4>
+  </div>
+             
                             <img class="img-fluid" src="assets/img/portfolio/awakening.jpg" alt="..." />
-							
+		</div>					
                         </div>
 		<!-- text here --> <p class="mb-4">
 		</p>
 				
                     </div>
             
-			<h4 class="page-section-heading text-center mb-4"><?php echo $basics;?> </h4>
+
                     <div class="col-md-6 col-lg-4 mb-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
+    
+            <div class="imgcontainer">
+
+  <div class="centered">
+  <h4 class="page-section-heading text-center text-white"><?php echo $basics;?></h4>
+  </div>
+             
                             <img class="img-fluid" src="assets/img/portfolio/dhammawheelgreen.jpg" alt="..." />
-							
+		</div>					             
+               
+              
                         </div>
 			
-				                    		<!-- text here --> <p class="mb-4">
+						<!-- text here --> <p class="mb-4">
 		</p>
 
 				
                     </div>
 
-<h4 class="page-section-heading text-center mb-4"><?php echo $advanced;?> </h4>
                     <div class="col-md-6 col-lg-4 mb-0">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
+             
+                 <div class="imgcontainer">
+
+  <div class="centered">
+  <h4 class="page-section-heading text-center text-white"><?php echo $advanced;?></h4>
+  </div>
+             
                             <img class="img-fluid" src="assets/img/portfolio/sangha.jpg" alt="..." />
+		</div>					      
+             
+             
+
 							
                         </div>
 			

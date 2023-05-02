@@ -35,6 +35,22 @@ max-width: 274pxalign-items: center;
   color:#0d6efd;
 }
 
+/* Container holding the image and the text */
+.imgcontainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  
+}
+
+
 .btn-primary {
   color: #fff;
   background-color: #16a085;

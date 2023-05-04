@@ -7,7 +7,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
     $outputlang = "";
     }
   
-
+echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
 			
     
 /* single search no radiobuttons */
@@ -81,17 +81,18 @@ else {
   
   $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
 			echo "<p class='mt-3'>$output</p>";
-			
+
 		$check = ru2lat( $output );
 
-		if ((( $p == "" ) && ( preg_match('/-net-v-/', $check)  )) || (( $p == "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
-
+		if ( preg_match('/(|-vin)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) )  {
 		    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -en $extra $string");
 			echo "<p>$output</p>";
+
 		}
-				if ((( $p == "" ) && ( preg_match('/-net-v-/', $check)  )) || (( $p == "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
+		if ( preg_match('/(|-vin)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) )  {
 				    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -b $extra $string");
 			echo "<p>$output</p>";
+
 			}	
 }
 		 

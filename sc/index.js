@@ -239,19 +239,12 @@ if (document.location.search) {
   <div class="lists">
 
   <div class="suttas">
-  <h2>Suttas</h2>
+  <h2>Main Suttas</h2>
   <ul>
       <li><span class="abbr">dn</span> Dīgha-nikāya</li>
       <li><span class="abbr">mn</span> Majjhima-nikāya</li>
       <li><span class="abbr">sn</span> Saṁyutta-nikāya</li>
       <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
-      <li><span class="abbr">kp</span> Khuddakapāṭha</li>
-      <li><span class="abbr">dhp</span> Dhammapada</li>
-      <li><span class="abbr">ud</span> Udāna</li>
-      <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
-      <li><span class="abbr">snp</span> Sutta-nipāta</li>
-      <li><span class="abbr">thag</span> Theragāthā</li>
-      <li><span class="abbr">thig</span> Therīgāthā</li>
   </ul>
   </div><div>
   <h2>Vinaya</h2>
@@ -286,7 +279,17 @@ if (document.location.search) {
 </ul>
 </div>
   </div></div>
-
+  <h2>Other texts</h2>
+  <ul>
+      <li><span class="abbr">kp</span> Khuddakapāṭha</li>
+      <li><span class="abbr">dhp</span> Dhammapada</li>
+      <li><span class="abbr">ud</span> Udāna</li>
+      <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
+      <li><span class="abbr">snp</span> Sutta-nipāta</li>
+      <li><span class="abbr">thag</span> Theragāthā</li>
+      <li><span class="abbr">thig</span> Therīgāthā</li>
+  </ul>
+  </div><div>
   <p>Suttas that are part of a series require that you enter the exact series. 
   (Such as Dhp and some SN and AN.)</p>
 </div>

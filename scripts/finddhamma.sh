@@ -45,7 +45,7 @@ function emptypattern {
 }
 
 function OKresponse {
-  echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language - "
+  echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language "
 }
 
 function Erresponse {
@@ -91,7 +91,7 @@ function emptypattern {
 
 
 function OKresponse {
-echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty in $fortitle $language - "
+echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty in $fortitle $language "
 }
 
 function Erresponse {

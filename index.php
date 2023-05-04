@@ -4,6 +4,8 @@
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
+include 'scripts/opentexts.php';
+
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
 <html lang="<?php echo $htmllang;?>">
@@ -196,9 +198,12 @@ input.addEventListener("keypress", function(event) {
               </div>
   <!-- extra options end -->
 </form>
-
-        </header>
+	    <?php
+include 'scripts/multilang-search.php';
+?>  
 	
+        </header>
+
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="help">
             <div class="container text-center">
@@ -744,7 +749,3 @@ $(document).ready(function(){
 
     </body>
 </html>
-    <?php
-include 'scripts/opentexts.php';
-include 'scripts/multilang-search.php';
-?> 

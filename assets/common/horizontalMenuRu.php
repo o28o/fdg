@@ -98,10 +98,10 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
       <li><a class="dropdown-item" href="' . $linkcasesru . '">Падежи</a></li>
-      
       <li><a class="dropdown-item" href="' . $linkconj . '">Спряжения</a></li>
-
-   <li><a class="dropdown-item" href="https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing">Курс по Пали</a></li>
+   <li><a class="dropdown-item" href="assets/materials/pali_textbook_rus.pdf">Курс по Пали</a></li>
+   
+   <!-- https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing -->
          <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>
          
             <li><a class="dropdown-item" href="#research">Исследование</a></li>

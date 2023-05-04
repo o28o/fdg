@@ -282,19 +282,13 @@ if (document.location.search) {
   <div class="lists">
 
   <div class="suttas">
-  <h2>Сутты</h2>
+  <h2>Основные Сутты</h2>
   <ul>
       <li><span class="abbr">dn</span> Dīgha-nikāya</li>
       <li><span class="abbr">mn</span> Majjhima-nikāya</li>
       <li><span class="abbr">sn</span> Saṁyutta-nikāya</li>
       <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
-      <li><span class="abbr">kp</span> Khuddakapāṭha</li>
-      <li><span class="abbr">dhp</span> Dhammapada</li>
-      <li><span class="abbr">ud</span> Udāna</li>
-      <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
       <li><span class="abbr">snp</span> Sutta-nipāta</li>
-      <li><span class="abbr">thag</span> Theragāthā</li>
-      <li><span class="abbr">thig</span> Therīgāthā</li>
   </ul>
   </div><div>
   <h2>Виная</h2>
@@ -330,7 +324,17 @@ if (document.location.search) {
 </ul>
 </div>
   </div></div>
-
+  <h2>Другие тексты</h2>
+  <ul>
+      <li><span class="abbr">kp</span> Khuddakapāṭha</li>
+      <li><span class="abbr">dhp</span> Dhammapada</li>
+      <li><span class="abbr">ud</span> Udāna</li>
+      <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
+     <li><span class="abbr">snp</span> Sutta-nipāta</li>
+      <li><span class="abbr">thag</span> Theragāthā</li>
+      <li><span class="abbr">thig</span> Therīgāthā</li>
+  </ul>
+  </div><div>
   <p>Сутты собраные в серии должны быть указаны в точности, на suttacentral.net.
   (К примеру Dhp и некоторые из SN и AN.)</p>
 </div>

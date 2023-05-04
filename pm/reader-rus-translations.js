@@ -60,7 +60,7 @@ function buildSutta(slug) {
   }*/
   slug = slug.toLowerCase();
 
-  if ((!slug.match("bu-pm")) && (slug.match(/bu|bi|kd|pvr/))) {
+  if (slug.match(/bu|bi|kd|pvr/)) {
     translator = "brahmali";
     texttype = "vinaya";
     slug = slug.replace(/bu([psan])/, "bu-$1");
@@ -76,14 +76,6 @@ function buildSutta(slug) {
     }
   }
 
-  if (slug.match(/bu-pm|bi-pm/)) {
-    texttype = "vinaya";
-    slug = slug.replace(/bu([psan])/, "bu-$1");
-    slug = slug.replace(/bi([psn])/, "bi-$1");
-    if (!slug.match("pli-tv-")) {
-      slug = "pli-tv-" + slug;
-    }
-  }
   let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
   
   const slugReady = parseSlug(slug);
@@ -97,32 +89,38 @@ $.ajax({
       const trnsResp = data.split(" ");
       let translator = trnsResp[0];
       console.log('inside', translator);
+      
+  const rootResponse = fetch(
+    `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`
+  )
+    .then(response => response.json());
+
 
 //if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
+
 let max = 26;
 
-var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+/* fetch('/sc/latest-rus.php')
+  .then(response => response.text())
+  .then(data => {
+    max = data;
+    console.log('Global variable set:', max);
+  })
+  .catch(error => console.error(error)); */
 
-var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
-if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
+   if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
   var trnpath = `/ru/sc/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if ( texttype === "sutta" ) {
   let translator = "sujato";
+  
   const pathLang = "en";
-  // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
+  console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-} else if (slug.match(/bu-pm|bi-pm/)) {
-  let translator = "o";
-    var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
-    var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
-    var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
-    console.log(rootpath, trnpath, htmlpath);
-}
-else if ( texttype === "vinaya" ) {
+} else if ( texttype === "vinaya" ) {
   let translator = "brahmali";
   
   const pathLang = "en";
@@ -130,9 +128,11 @@ else if ( texttype === "vinaya" ) {
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 }
 
-  const rootResponse = fetch(rootpath).then(response => response.json());
-  const translationResponse = fetch(trnpath).then(response => response.json());
-  const htmlResponse = fetch(htmlpath).then(response => response.json());
+   const translationResponse = fetch(trnpath).then(response => response.json());
+
+  const htmlResponse = fetch(
+    `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`
+  ).then(response => response.json());
 
   Promise.all([rootResponse, translationResponse, htmlResponse]).then(responses => {
     const [paliData, transData, htmlData] = responses;
@@ -302,7 +302,7 @@ if (document.location.search) {
   <div>
   <h3>Bhikkhu</h3>
 <ul>
-<li><span class="abbr">bu-pm</span> Bhikkhupātimokkha</li>
+<li><span class="abbr">bi-pm</span> Bhikkhupātimokkha</li>
 <li><span class="abbr">bu-pj</span> Pārājikā</li>
 <li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bu-ay</span> Aniyatā</li>

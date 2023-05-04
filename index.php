@@ -31,8 +31,9 @@ include_once('config/translate.php');
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
 <link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
-<!-- Font Awesome icons (free version)-->
-<script src="/assets/js/fontawesome.6.1.all.js" crossorigin="anonymous"></script>
+<!-- Font Awesome icons (free version) crossorigin="anonymous"-->
+<script src="/assets/js/fontawesome.6.1.all.js" ></script>
+
 
 <!-- Google fonts
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
@@ -168,12 +169,12 @@ input.addEventListener("keypress", function(event) {
  <!--  <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipth;?>"><?php echo $radioth;?></a>
-   </div> 
+   </div>  -->
      <br>
      <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
-  </div> -->
+  </div>
   
        <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-b ") echo "checked";?> value="-b">
@@ -196,11 +197,6 @@ input.addEventListener("keypress", function(event) {
   <!-- extra options end -->
 </form>
 
-
-<?php
-include 'scripts/opentexts.php';
-include 'scripts/multilang-search.php';
-?>
         </header>
 	
         <!-- Portfolio Section-->
@@ -623,7 +619,7 @@ include 'scripts/multilang-search.php';
             <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 2022-<?php echo date("Y"); ?></small> </div>
         </div>
         <!-- Portfolio Modals-->
-     
+
         <!-- Portfolio Modal 4-->
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
             <div class="modal-dialog modal-xl">
@@ -745,5 +741,10 @@ $(document).ready(function(){
   randPlaceholderOnMain();
   console.log(window.location.href);
 </script>
+
     </body>
 </html>
+    <?php
+include 'scripts/opentexts.php';
+include 'scripts/multilang-search.php';
+?> 

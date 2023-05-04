@@ -16,7 +16,7 @@ echo '<div class="d-md-inline-block">	';
 echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
-  <figcaption class="figure-caption text-center">Pāḷi-Eng</figcaption>
+  <figcaption class="figure-caption text-center">Pāḷi Тексты</figcaption>
 </figure>
 </a>
 

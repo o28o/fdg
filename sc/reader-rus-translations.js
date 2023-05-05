@@ -102,7 +102,8 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let max = 26;
+let max = 27;
+let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40'];
 
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 
@@ -110,6 +111,12 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
   var trnpath = `/ru/sc/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
+} else if (an1ranges.indexOf(slug) !== -1) { {
+    var trnpath = `/ru/sc/sutta/${slugReady}_translation-${pathLang}-${translator}.json`;
+  console.log('match');
+}
+  
+  
 } else if ( texttype === "sutta" ) {
   let translator = "sujato";
   const pathLang = "en";

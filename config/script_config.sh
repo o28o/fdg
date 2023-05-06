@@ -155,8 +155,6 @@ thsulocation=$apachesitepath/tipitaka.theravada.su/
 searchdir=$apachesitepath/theravada.ru/Teaching/Canon/Suttanta/Texts
 latestrusmn=30
 
-
-
 function pvlimit {
 pv -L 1m -q
 }

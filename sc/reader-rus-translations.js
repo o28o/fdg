@@ -102,17 +102,12 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-<<<<<<< HEAD
 let max = 30;
-let an1ranges = ['public', 'public', 'public', 'public'];
-=======
-let max = 27;
 let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40'];
 let snranges = ['sn1.1', 'sn56.11', 'sn38.4'];
 let dnranges = ['dn22'];
 
 var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
->>>>>>> 3cb6a0f01322a0e6f08cfb1d5f8c30f948e6949e
 
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 

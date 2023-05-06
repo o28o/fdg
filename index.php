@@ -47,7 +47,9 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 
-  
+<script src="/assets/js/jquery-3.6.0.js"></script>
+<script src="/assets/js/jquery-ui.js"></script>
+
 <style>
 </style>
 
@@ -103,13 +105,9 @@ include 'scripts/opentexts.php';
                     <div class="divider-custom-line"></div>
                 </div>
     
-          <?php
+
       
-			echo '<form method="GET" action=
-			"';  
-			echo htmlspecialchars($_SERVER[" PHP_SELF "]);
-			echo '" class="justify-content-center">'; 
-      ?>
+			<form method="GET" action="" class="justify-content-center">
 		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
 			
@@ -198,9 +196,14 @@ input.addEventListener("keypress", function(event) {
               </div>
   <!-- extra options end -->
 </form>
+
 	    <?php
 include 'scripts/multilang-search.php';
 ?>  
+<script>
+  
+</script>
+
 	
         </header>
 
@@ -732,8 +735,7 @@ include 'scripts/multilang-search.php';
                 <!-- Bootstrap core JS-->
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
 
-<script src="/assets/js/jquery-3.6.0.js"></script>
-<script src="/assets/js/jquery-ui.js"></script>
+
 <script>
 $(document).ready(function(){
     $('[data-bs-toggle="tooltip"]').tooltip();   

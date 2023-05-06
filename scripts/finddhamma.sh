@@ -146,7 +146,7 @@ if [[ "$@" == *"-h"* ]]; then
 	-all - include all Khuddaka Nikaya books <br>
     -vin - to search in vinaya texts only <br>
     -abhi - to search in abhidhamma texts only <br>
-    -la N X - search X and print N lines after match<br>
+    -laN X - search X and print N lines after match<br>
     X -exc Y - search X exclude Y <br>
     -onl \"X|Y|...\"- find texts that contain all patterns only
     -ru - to search in Russian <br>
@@ -159,7 +159,7 @@ if [[ "$@" == *"-h"* ]]; then
 fi
 #-nbg - no background <br>
 if [[ "$@" == *"-la"* ]]; then
-linesafter=`echo "$@" | awk -F'-la ' '{print $2 }' | awk '{print $1}'` 
+linesafter=`echo "$@" | sed 's@.*-la@@' | awk '{print $1}'` 
 fi
 #echo la=$linesafter
 if [[ "$pattern" != *"\\"* ]]; then

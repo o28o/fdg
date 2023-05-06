@@ -1,6 +1,15 @@
 <?php
 include_once('../config/config.php');
 $pathmn = 'assets/texts/sutta/mn/';
+
+$validatejson = shell_exec("bash $basedir/sc/validatejson.sh 2>&1"); 
+
+if ( $validatejson == "" ) {
+  echo "validated successfully";
+} else {
+  echo "$validatejson";
+  exit("please fix before");
+}
 $files = scandir($pathmn);
 $max_mn = 0;
 foreach ($files as $file) {

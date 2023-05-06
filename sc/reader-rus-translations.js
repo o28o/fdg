@@ -102,7 +102,7 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let max = 29;
+let max = 30;
 let an1ranges = ['public', 'public', 'public', 'public'];
 
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;

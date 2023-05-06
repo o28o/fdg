@@ -102,8 +102,8 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let max = 27;
-let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40'];
+let max = 29;
+let an1ranges = ['public', 'public', 'public', 'public'];
 
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 

@@ -29,7 +29,7 @@ $pathan = 'assets/texts/sutta/an/';
 $check = shell_exec("
 anrangeInFile=`grep 'let an1ranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-anstring=`find $basedir/$pathan -type f | awk -F'_' '{print \$1}' | awk -F'/' '{print \$NF}'| xargs | sed \"s@ @\', \'@g\"`
+anstring=`find $basedir/$pathan -type f | awk -F'/' '{print \$NF}'| awk -F'_' '{print \$1}' | xargs | sed \"s@ @\', \'@g\"`
 
 andir=\"['\${anstring%,}']\"
 
@@ -44,5 +44,5 @@ echo "<h2 style='text-align: center;'>
 $check</h2>";
 //   sed -i 's@latestrusmn=.*@latestrusmn='$max_mn'@g' $basedir/config/script_config.sh ;
  // sed -i 's@\$latestrusmn =.*@\$latestrusmn = '$max_mn';@g' $basedir/config/config.php ;
-
+// 
 ?>

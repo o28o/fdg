@@ -11,8 +11,8 @@
 httpdconf=$PREFIX/etc/apache2/httpd.conf
 httpdtdir=$PREFIX/share/apache2/default-site/htdocs
 
-echo "installing php-apache apache2 zip pv wget git iconv w3m"
-apt install php-apache apache2 zip pv wget git iconv w3m
+echo "installing php-apache apache2 zip pv wget git iconv w3m jq"
+apt install php-apache apache2 zip pv wget git iconv w3m jq
 
 while true; do
     read -p "Are you going to perform searches in Thai? Y or N" yn

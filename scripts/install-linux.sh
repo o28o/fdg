@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update && sudo apt -y upgrade
-sudo apt install -y apache2 php zip pv wget git
+sudo apt install -y apache2 php zip pv wget git jq
 sudo apt install -y php-{common,xml,xmlrpc,curl,gd,imagick,cli,dev,imap,mbstring,opcache,soap,zip,intl}
 rm /var/www/html/index.html
 cd /var/www/html

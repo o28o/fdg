@@ -29,7 +29,7 @@ $pathan = 'assets/texts/sutta/an/';
 $check = shell_exec("
 anrangeInFile=`grep 'let an1ranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-anstring=`find $basedir/$pathan -type f | awk -F'/' '{print \$NF}'| awk -F'_' '{print \$1}' | xargs | sed \"s@ @\', \'@g\"`
+anstring=`find $basedir/$pathan -type f | awk -F'/' '{print \$NF}'| awk -F'_' '{print \$1}' | sort -V | xargs | sed \"s@ @\', \'@g\"`
 
 andir=\"['\${anstring%,}']\"
 

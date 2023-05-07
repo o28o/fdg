@@ -18,15 +18,16 @@ function getAround($fromjs,$type) {
   
   if [[ \$slug == \$next ]]
   then
-  echo -n \"\"
+  echo -n ''
   else
   echo -n \$nextslug \$textname
   fi
   ");
 return $output;
 }
-//$fromjs = "sutta/an/an1.1-10";
-//$fromjs = "sutta/dn/dn34";
+$fromjs = "sutta/an/an1.1-10";
+//$fromjs = "sutta/dn/dn31";
+//$type = "B";
 // |–|~ 
 //echo getAround($fromjs,$type);
 

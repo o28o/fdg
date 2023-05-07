@@ -284,7 +284,7 @@ $smscvoice = 'для прослушивания текстов suttacentral.net'
 
 $title404 = 'Ошибка 404';
 $p404 = ' Страница не найдена. Но';
-$link404 = '/o/?q=sn38.4';
+$link404 = '/ru/sc/?q=sn38.4';
 $hreftext404 = 'На Главную';
 
 $dpddesc = 'Digital Pali Dictionary Онлайн';

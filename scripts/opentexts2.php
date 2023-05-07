@@ -1,5 +1,5 @@
 <?php
-include_once('./config/config.php');
+include_once('../config/config.php');
 $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 function getRanges($string) {
   include_once('./config/config.php');

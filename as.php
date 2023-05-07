@@ -17,7 +17,7 @@ const xhr = new XMLHttpRequest();
 const responseElement = document.querySelector('#response');
 
 // Define the request URL with the parameter q
-const url = 'http://localhost:8080/run.php?q=adhivacanasamphasso';
+const url = 'http://localhost:8080/run.php/?q=adhffffanasamphasso';
 
 // Set up a callback function to handle the response
 xhr.onreadystatechange = function() {
@@ -26,11 +26,6 @@ xhr.onreadystatechange = function() {
       console.log(xhr.responseText); // The response from the PHP script will be printed to the console
       responseElement.innerHTML = xhr.responseText;
 
-      if ( xhr.responseText != "not in") {
-       window.location.href="./result/adhivacanasamphasso_suttanta_pali_1-2.html";      
-      } else {
-        responseElement.innerHTML = xhr.responseText;
-      }
 
     } else {
       console.error('Error: ' + xhr.status); // Handle errors here
@@ -48,5 +43,13 @@ xhr.send();
 </script>
 
 Content goes here.
+
+
+      if ( xhr.responseText != "not in") {
+     window.location.href="./result/adhivacanasamphasso_suttanta_pali_1-2.html";      
+      } else {
+        responseElement.innerHTML = xhr.responseText;
+      }
+
 </body>
 </html>

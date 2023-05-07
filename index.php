@@ -197,10 +197,11 @@ input.addEventListener("keypress", function(event) {
   <!-- extra options end -->
 </form>
 
-	    <?php
-include 'scripts/multilang-search.php';
-?>  
+
   <div id="response"></div>
+  
+  
+
 <script>
   
 </script>
@@ -750,4 +751,7 @@ $(document).ready(function(){
   console.log(window.location.href);
 </script>
     </body>
+	    <?php
+include 'scripts/multilang-search.php';
+?>  
 </html>

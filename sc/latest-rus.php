@@ -5,10 +5,10 @@ $pathmn = 'assets/texts/sutta/mn/';
 $validatejson = shell_exec("bash $basedir/sc/validatejson.sh 2>&1"); 
 
 if ( $validatejson == "" ) {
-  echo "validated successfully";
+  echo " </br><h2 style='text-align: center;'>validated successfully</h2>";
 } else {
-  echo "$validatejson";
-  exit("please fix before");
+  echo "</br><p style='text-align: center;'>$validatejson</p>";
+  exit(" </br><h2 style='text-align: center;'>please fix errors</h2>");
 }
 $files = scandir($pathmn);
 $max_mn = 0;
@@ -23,7 +23,7 @@ foreach ($files as $file) {
 $maxInFile = shell_exec("grep 'let max =' $basedir/sc/reader-rus-translations.js | awk '{print \$NF}' | sed 's@;@@g'"); 
 
 if (  $max_mn == $maxInFile ) {
-  echo " </br><h2 style='text-align: center;'>MN no updates</h2>";
+  echo "<h2 style='text-align: center;'>MN no updates</h2>";
 } else {
   shell_exec("sed -i 's@let max =.*@let max = '$max_mn';@g' $basedir/sc/reader-rus-translations.js ;
   sed -i 's@latestrusmn=.*@latestrusmn='$max_mn'@g' $basedir/config/script_config.sh ;

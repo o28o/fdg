@@ -15,8 +15,9 @@ if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
 $p = "-ru";
 
 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
-			echo "<p class='mt-3'>$output</p>";
-				
+       			echo "<p class='mt-3'>$output</p>";
+
+
 $check = ru2lat( $output );
 
 		if ((( $p == "-ru" ) && ( preg_match('/-net-v-/', $check)  )) || ( ( $p != "-vin" ) && ( preg_match('/-net-v-/', $check)  )))	{
@@ -95,6 +96,11 @@ else {
 
 			}	
 }
-		 
-		  	echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+
+echo "<script>
+		document.getElementById( 'spinner' ).style.display = 'none';
+		</script>";
+	
+
+
 		?>	

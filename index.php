@@ -200,6 +200,7 @@ input.addEventListener("keypress", function(event) {
 	    <?php
 include 'scripts/multilang-search.php';
 ?>  
+  <div id="response"></div>
 <script>
   
 </script>
@@ -748,6 +749,5 @@ $(document).ready(function(){
   randPlaceholderOnMain();
   console.log(window.location.href);
 </script>
-
     </body>
 </html>

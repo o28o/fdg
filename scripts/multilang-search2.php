@@ -1,6 +1,7 @@
 <?php
-include_once('./config/config.php');
-
+//error_reporting(E_ERROR | E_PARSE);
+include_once('../config/config.php');
+include_once('../scripts/opentexts2.php');
 if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";
 } else {
@@ -95,10 +96,10 @@ $outforjs .= $output . "<br>";
  
 else {
   
-  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
-	//		echo "<p class='mt-3'>$output</p>";
+  $output = shell_exec("bash ../scripts/finddhamma.sh adhivacanasamphasso"); 
+        echo "<p class='mt-3'>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
-$outforjs .= $output . "<br>"; 
+$outforjs = $output . "<br>"; 
 
 
 		$check = ru2lat( $output );
@@ -120,13 +121,15 @@ $outforjs .= $output;
 }
 //echo $outforjs; 
 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
-
+                                                            		
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
 $finaloutput = "<script>
-document.getElementById( 'spinner' ).style.display = 'none';
-		console.log('$outputnonl');
+			console.log('$outputnonl');
 			const responseElement = document.querySelector('#response');
-  responseElement.innerHTML = '$outputnonl';
+      responseElement.innerHTML = '$outputnonl';
 </script>";
 echo $finaloutput;  
+
+
+
 		?>	

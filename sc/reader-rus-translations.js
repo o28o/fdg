@@ -102,8 +102,13 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
+<<<<<<< HEAD
 let max = 34;
 let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40'];
+=======
+let max = 32;
+let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40'];
+>>>>>>> 95096bcc5eacd317df51d56272f76315e7175a29
 let snranges = ['sn1.1', 'sn56.11', 'sn38.4'];
 let dnranges = ['dn22'];
 
@@ -223,9 +228,13 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
       let nextSlugPrint = nextSlug.replace("pli-tv-", "");
       let nextName = nextArray[1];
 
-      
+      if (nextName === undefined) {
+      var nextPrint = nextSlugPrint;
+      } else {
+     var nextPrint = nextSlugPrint +' ' +nextName;
+     }     
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}&lang=pli-rus">${nextSlugPrint} ${nextName}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${nextSlug}&lang=pli-rus">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -246,7 +255,12 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
       let prevSlugPrint = prevSlug.replace("pli-tv-", "");
       let prevName = prevArray[1];
 
-    
+        if (prevName === undefined) {
+    var prevPrint = prevSlugPrint;
+      } else {
+        var prevPrint = prevSlugPrint +' ' +prevName;
+  
+     }
       previous.innerHTML = prevSlug
         ? `<a href="?q=${prevSlug}&lang=${language}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
@@ -255,7 +269,7 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
               <path d="M353 450C 349.02106 450.0018 345.20444 448.4226 342.39 445.61L342.39 445.61L157.5 260.71C 151.64429 254.8525 151.64429 245.3575 157.5 239.5L157.5 239.5L342.39 54.6C 346.1788 50.809414 351.70206 49.328068 356.8792 50.713974C 362.05634 52.099876 366.10086 56.14248 367.4892 61.318974C 368.87753 66.49547 367.3988 72.01941 363.61002 75.81L363.61002 75.81L189.32 250.1L363.61 424.39C 367.90283 428.6801 369.18747 435.13425 366.8646 440.74118C 364.5417 446.34808 359.06903 450.00275 353 450z" stroke="none" fill="#8f8f8f" fill-rule="nonzero" />
         </g>
       </g>
-      </svg>${prevSlugPrint} ${prevName}</a>`
+      </svg>${prevPrint}</a>`
         : ""; 
         previous2.innerHTML = previous.innerHTML;
       }

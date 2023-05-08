@@ -82,7 +82,7 @@ include 'scripts/opentexts.php';
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column mb-4">
+            <div class="container d-flex align-items-center flex-column mb-3">
                         
 
                 <!-- Masthead Avatar Image-->
@@ -197,10 +197,11 @@ input.addEventListener("keypress", function(event) {
   <!-- extra options end -->
 </form>
 
-	    <?php
-include 'scripts/multilang-search.php';
-?>  
+
   <div id="response"></div>
+  
+  
+
 <script>
   
 </script>
@@ -750,4 +751,7 @@ $(document).ready(function(){
   console.log(window.location.href);
 </script>
     </body>
+	    <?php
+include 'scripts/multilang-search.php';
+?>  
 </html>

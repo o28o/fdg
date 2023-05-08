@@ -115,8 +115,10 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
  var trnpath = rustrnpath; 
+ let language = "pli-rus";
   console.log(trnpath);
 } else if (an1ranges.indexOf(slug) !== -1) { 
+  let language = "pli-rus";
   var trnpath = rustrnpath; 
   console.log(trnpath);
   
@@ -126,6 +128,10 @@ if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
 } else if (dnranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
   console.log(trnpath);
+} else if (slug.match(/ja/)) {
+  let language = "pli";
+    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+    //console.log('ja case ', rootpath, trnpath, htmlpath);
 } else if ( texttype === "sutta" ) {
   let translator = "sujato";
   const pathLang = "en";
@@ -137,17 +143,16 @@ if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);
-}
-else if ( texttype === "vinaya" ) {
+} else if ( texttype === "vinaya" ) {
   let translator = "brahmali";
   
   const pathLang = "en";
   console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-}
+} 
 
   const rootResponse = fetch(rootpath).then(response => response.json());
-  const translationResponse = fetch(trnpath).then(response => response.json());
+ const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
   Promise.all([rootResponse, translationResponse, htmlResponse]).then(responses => {
@@ -229,7 +234,7 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
      var nextPrint = nextSlugPrint +' ' +nextName;
      }     
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}&lang=pli-rus">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${nextSlug}&lang=${language}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -297,7 +302,7 @@ if (document.location.search) {
   buildSutta(slug);
   if (lang) {
     language = lang;
-    console.log("in the initializing" + lang);
+    console.log("in the initializing " + lang);
     setLanguage(lang);
   }
 } else {
@@ -420,7 +425,6 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
   return `${bookWithoutNumber}/${slug}`;
 }
 
-
   const slugParts = slug.match(/^([a-z]+)(\d*)\.*(\d*)/);
   const book = slugParts[1];
   const firstNum = slugParts[2];
@@ -440,6 +444,8 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
   } else if (book === "snp") {
     return `kn/snp/vagga${firstNum}/${slug}`;
   } else if (book === "thag" || book === "thig") {
+    return `kn/${book}/${slug}`;
+  } else if (book === "ja") {
     return `kn/${book}/${slug}`;
   }
 }

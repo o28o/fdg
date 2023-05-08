@@ -85,11 +85,16 @@ function buildSutta(slug) {
     `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`
   )
     .then(response => response.json());
-
+    
+    if (slug.match(/ja/)) {
+  let language = "pli";
+    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+    console.log('ja case ', rootpath, trnpath, htmlpath);
+} else {
+  var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+}
    
-  const translationResponse = fetch(
-    `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`
-  ).then(response => response.json());
+  const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(
     `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`
   ).then(response => response.json());
@@ -351,11 +356,10 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
   return `${bookWithoutNumber}/${slug}`;
 }
 
-
   const slugParts = slug.match(/^([a-z]+)(\d*)\.*(\d*)/);
   const book = slugParts[1];
   const firstNum = slugParts[2];
-
+console.log(book,firstNum );
   if (book === "dn" || book === "mn") {
     return `${book}/${slug}`;
   } else if (book === "sn" || book === "an") {
@@ -372,6 +376,8 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
     return `kn/snp/vagga${firstNum}/${slug}`;
   } else if (book === "thag" || book === "thig") {
     return `kn/${book}/${slug}`;
+  } else if (book === "ja") {
+   return `kn/ja/${slug}`;
   }
 }
 

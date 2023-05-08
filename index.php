@@ -34,7 +34,7 @@ include 'scripts/opentexts.php';
 <link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"-->
-<script src="/assets/js/fontawesome.6.1.all.js" ></script>
+<script src="/assets/js/fontawesome.6.1.all.js" data-mutate-approach="sync"></script>
 
 
 <!-- Google fonts

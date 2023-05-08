@@ -11,7 +11,7 @@ echo "done<br>"
 fi
 done
 
-# json_pp -t null
 #Hyphen joins words (station-master).
 #En-dash indicates range usually of numbers (AN 3.43–7)
 #Em-dash indicates a break in a sentence—like this.
+#https://github.com/suttacentral/bilara-data/wiki/SuttaCentral-translation-style-guide#little-details

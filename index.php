@@ -33,8 +33,8 @@ include 'scripts/opentexts.php';
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
 <link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
-<!-- Font Awesome icons (free version) crossorigin="anonymous"-->
-<script src="/assets/js/fontawesome.6.1.all.js" data-mutate-approach="sync"></script>
+<!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
+<script src="/assets/js/fontawesome.6.1.all.js"></script>
 
 
 <!-- Google fonts

@@ -141,6 +141,14 @@ color: blue;
 color: blue;
 }
 
+#searchlinks a span {
+color: blue;
+text-decoration: underline;
+}
+
+#searchlinks a:visited, a:link, a:active {
+color: blue;
+}
 
 td, th {
 	vertical-align:top;
@@ -358,7 +366,7 @@ footer {
 }
 
 .homenav a:hover, a:visited, a:link, a:active {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .logotext {
@@ -443,12 +451,13 @@ footer {
 	}
 
 #breadcrumbs a {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 #breadcrumbs a:after {
 	content: " ► ";
 	color: orange;
+ display: inline-block;
 }
 
 [light-mode=dark] #breadcrumbs {
@@ -467,7 +476,7 @@ color:white;
   float: left;
   padding: 12px;
   color: #add8e6 !important;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 17px;
   width: 25%; /* Four links of equal widths */
   text-align: center;
@@ -612,7 +621,7 @@ background:#fdf2b8;
 }
 
 	#metaarea a {
-	text-decoration: none;
+	text-decoration: underline;
   width:20%;
   text-align: center;
 }
@@ -1402,7 +1411,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\
 /* For Publishing ... The end comment needs to be at the bottom of this page.
-/* For Editing ... Move the end comment at the end of this page to the end of this line.  
+/* For Editing ... Move the end comment at the end of this page to the end of this line.   
  
 
  h1,h2,h3,h4,h5,h6, .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
@@ -1414,5 +1423,5 @@ hr, .pairs hr {
  margin-bottom:0;
  background-color:lime;
 
- */
 
+*/

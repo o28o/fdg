@@ -161,59 +161,8 @@ rm -rf ./suttacentral.net/sc-data/.git
 echo $initsize
 du -hs ./suttacentral.net
 
-
-
-#apache config
+#apache config backup
 cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/config/
-
-
-#fix bw
-#download new archive from 
-https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8
-
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/
-mv bw bw1
-mkdir bw
-cd bw 
-cp /storage/emulated/0/Download/bw_*.zip  .
-unzip bw_*.zip
-
-diff -qr bw/ bw1/
-#fix control panel
-
-grep "top: 15px" css/css.css
-sed -i  "s@top: 15px@bottom: 15px@" css/css.css
-grep "bottom: 15px" css/css.css
-
-#fix font
-grep 'font: normal normal 1.15em/1.3em "URWPalladioITU", serif;' css/css.css
-sed -i  's@font: normal normal 1.15em/1.3em "URWPalladioITU", serif;@font: normal normal 1.15em/1.3em Helvetica, serif;@' css/css.css
-grep 'font: normal normal 1.15em/1.3em' css/css.css
-
-#remove bw header image
-ls -laht ./images/headerlogo.png
-cp ../assets/img/headerlogo.png ./images
-ls -laht ./images/headerlogo.png
-
-#disable dictionary fixed by TOM in official releases
-#ls ./js/pali-lookup-standalone.js*
-#mv ./js/pali-lookup-standalone.js  ./js/pali-lookup-standalone.jsdd
-#ls ./js/pali-lookup-standalone.js*
-
-for i in `grep -rl mousetrap   /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/bw`
-do 
-sed -i 's@<script src="../js/mousetrap.min.js"></script>@<?php $uname = shell_exec("uname -a"); if ( preg_match(\'/\!Android\/', $uname)) {  echo "<script src="../js/mousetrap.min.js"></script>"; } ?>@' /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/bw/vi/kd9.html
-done 
-
-<?php 
-$uname = shell_exec("uname -a"); 
-if ( preg_match('/!Android/', $uname)) {  
-echo '<script src=../js/mousetrap.min.js></script>'; 
-} 
-?>
-replace in bw index to disable the lookup
-
-			<?php $uname = shell_exec("uname -a"); if ( preg_match('/!Android/', $uname)) {  <script src="../js/mousetrap.min.js"></script> } ?>
 
 #to refresh theravada.ru run
 mkdir theravada.ru && cd theravada.ru

@@ -10,6 +10,10 @@ if ( $validatejson == "" ) {
   echo "</br><p style='text-align: center;'>$validatejson</p>";
   exit(" </br><h2 style='text-align: center;'>please fix errors</h2>");
 }
+
+//$styleforsc = shell_exec("bash $basedir/sc/styleforsc.sh 2>&1");
+//echo "<p style='text-align: center;'>$styleforsc</p>";
+
 $files = scandir($pathmn);
 $max_mn = 0;
 foreach ($files as $file) {

@@ -126,7 +126,6 @@ $finaloutput = "<script>
 document.getElementById( 'spinner' ).style.display = 'none';
 		console.log('$outputnonl');
 			const responseElement = document.querySelector('#response');
-    responseElement.innerHTML = 'okok';
   responseElement.innerHTML = '$outputnonl';
 </script>";
 echo $finaloutput;  

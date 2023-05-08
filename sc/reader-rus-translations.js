@@ -102,13 +102,8 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-<<<<<<< HEAD
 let max = 34;
 let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40'];
-=======
-let max = 32;
-let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40'];
->>>>>>> 95096bcc5eacd317df51d56272f76315e7175a29
 let snranges = ['sn1.1', 'sn56.11', 'sn38.4'];
 let dnranges = ['dn22'];
 
@@ -259,7 +254,6 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;
     var prevPrint = prevSlugPrint;
       } else {
         var prevPrint = prevSlugPrint +' ' +prevName;
-  
      }
       previous.innerHTML = prevSlug
         ? `<a href="?q=${prevSlug}&lang=${language}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">

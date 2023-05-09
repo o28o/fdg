@@ -587,8 +587,10 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
  numberblock=`echo $filenameblock | sed 's@[A-Za-z]*@@g'`
 
 if [[ "$args" == *"-oru"* ]] && [[ $lettersblock == "mn" ]] && [ $numberblock -le $latestrusmn ]; then
+defaultlang='lang=pli-rus'
  translation=`ls $apachesitepath/assets/texts/sutta/mn/*${filenameblock}_*`
  else
+ defaultlang='lang=pli'
     translation=`ls $lookup/translation/en/$translator/$pathblock/*${filenameblock}_*`
 fi   
     variant=`ls $lookup/variant/pli/ms/$pathblock/*${filenameblock}_* 2>/dev/null`
@@ -669,9 +671,9 @@ linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthai
 link=`echo $filenameblock |  awk -v lkru="$linkforru" '{print lkru$0}' `
 fi
 
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=pli"}' ` 
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&'$defaultlang'"}' ` 
 
-linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0"&lang=pli"}' `
+linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0"&'$defaultlang'"}' `
 
 
 genbwlinks
@@ -771,7 +773,7 @@ tr=$file
 
     suttanumber="$filenameblock"
 
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&lang=pli"}' `
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&'$defaultlang'"}' `
 
 linklang="$linkgeneral"
 

@@ -9,7 +9,6 @@ if ( preg_match('/\/ru/', $actual_link)) {
   
 echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
 			
-    
 /* single search no radiobuttons */
 if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
 $p = "-ru";

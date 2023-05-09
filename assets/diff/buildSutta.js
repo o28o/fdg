@@ -49,7 +49,7 @@ export function buildSutta(slug, suttaArea, language) {
         html += `${openHtml}${root ? root_text[segment] : translation_text[segment]}${closeHtml}<br>\n`;
       });
 
-      const scLink = `<p class="sc-link"><a href="https://suttacentral.net/${slug}"><img height="20px" src="./images/favicon-sc.png"></img></a></p>`;
+      const scLink = `<p class="sc-link"><a href="https://suttacentral.net/${slug}"><img height="20px" src="/assets/img/favicon-sc.png"></img></a></p>`;
 
       const translatorByline =
         language === "en" ? `<div class="byline"><p>Translated by ${suttaplex.translation.author}</p></div>` : "";

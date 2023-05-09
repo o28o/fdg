@@ -489,7 +489,9 @@
 
          // Populate a dataset for autocomplete functionality
          api.cells('tr', [0, 1, 2, 3, 4, 6]).every(function(){
-            var data = this.data();
+            var data = this.data().replace( /(<([^>]+)>)/ig, '');
+
+            console.log(data);
             if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
          });
 

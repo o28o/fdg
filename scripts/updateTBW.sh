@@ -2,16 +2,19 @@
 #download new archive from here
 # https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8
 
+pip install gdown
 
 
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/
 mv bw bw1
 mkdir bw
 cd bw 
-newestbw=`ls -Art /storage/emulated/0/Download | grep bw_.*.zip | tail -n1`
-cp /storage/emulated/0/Download/$newestbw  .
+gdown --folder https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8
+#newestbw=`ls -Art /storage/emulated/0/Download | grep bw_.*.zip | tail -n1`
+#cp /storage/emulated/0/Download/$newestbw  .
+mv "Buddha's Words"/bw_*.zip ./
 unzip bw_*.zip
-rm bw_*.zip
+rm -rf bw_*.zip "Buddha's Words"
 
 #fix control panel
 grep "top: 15px" css/css.css

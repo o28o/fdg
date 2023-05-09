@@ -955,6 +955,7 @@ fi
 
 echo "</tbody>
 </table>
+<br><br><hr>
 <a href='/' id='back'>Main</a>&nbsp;
 <a href='${pagelang}/sc'>Read</a>&nbsp;
 <a href='/assets/diff'>SuttaDiff</a>&nbsp;
@@ -975,6 +976,7 @@ table=${removerand}_${textsqnty}-${matchqnty}.html
 
 echo "</tbody>
 </table>
+<br><br><hr>
 <a href='/' id='back'>Main</a>&nbsp;
 <a href='${pagelang}/sc'>Read</a>&nbsp;
 <a href='/assets/diff'>SuttaDiff</a>&nbsp;

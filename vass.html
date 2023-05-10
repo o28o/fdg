@@ -489,9 +489,9 @@
 // docs https://github.com/bassjobsen/Bootstrap-3-Typeahead
          // Populate a dataset for autocomplete functionality
          api.cells('tr', [0, 1, 2, 3, 4, 6]).every(function(){
-          // var data = this.data().replace( /(<([^>]+)>)/ig, '');
-           var data = $('<div>').html(this.data()).text();
-           console.log(typeof data);
+           //var data = this.data().replace( /(<([^>]+)>)/ig, '');
+          var data = $('<div>').html(this.data()).text();
+          // console.log(typeof data);
             if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
             
          });
@@ -500,6 +500,8 @@
 
          $('.dataTables_filter input[type="search"]', api.table().container())
             .typeahead({
+              hint: true,
+              highlight: true,
               autoSelect: false,
                source: dataSrc,
                afterSelect: function(value){

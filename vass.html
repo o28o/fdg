@@ -486,7 +486,7 @@
 				
       'initComplete': function(){
          var api = this.api();
-
+// docs https://github.com/bassjobsen/Bootstrap-3-Typeahead
          // Populate a dataset for autocomplete functionality
          api.cells('tr', [0, 1, 2, 3, 4, 6]).every(function(){
           // var data = this.data().replace( /(<([^>]+)>)/ig, '');
@@ -497,7 +497,6 @@
          });
          // Initialize Typeahead plug-in
          
-
 
          $('.dataTables_filter input[type="search"]', api.table().container())
             .typeahead({

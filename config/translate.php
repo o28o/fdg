@@ -67,7 +67,7 @@ $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma
 $fntmessage = 'Всесторонний взгляд на Четыре Благородные Истины<br>
 		в Палийских Суттах и Винае.<br> 
     Поймите настоящие Четыре Благородные Истины<br> 
-   и положите конец боли.';
+   и положите конец б<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Чаще всего содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <br><br>
   Самое важное из Учения Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
@@ -367,7 +367,7 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         in Pali Suttas and Vinaya.<br>
         Understand the real meaning <br>
         of Four Noble Truths<br>
-        and finish the pain.';
+        and finish the p<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">a</a>in.';
         
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 

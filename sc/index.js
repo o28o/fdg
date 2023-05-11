@@ -346,8 +346,10 @@ function parseSlug(slug) {
 
 if ( slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)) {
     const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
-  const bookWithoutNumber = slug.replace(/\d+/g, '');
-  const bookWithoutNumberAndRule = slug.replace(/-([a-z]+)\d+/g, '');
+  const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');
+  const bookWithoutNumber = fixforbivb.replace(/(\d+)/g, '');
+  const fixforbivb2 = slug.replace(/-([a-z]+)\d+/g, '');
+  const bookWithoutNumberAndRule = fixforbivb2.replace(/-\d+$/g, '');
   const firstNum = slugParts[6];
   return `${bookWithoutNumberAndRule}/${bookWithoutNumber}/${slug}`;
 }

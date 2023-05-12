@@ -202,6 +202,7 @@ $totalinyears years total
 <td>
 <a target="_blank" href=/ru/sc/?q=sn22.95>sn22.95</a>  
 <a target=_blank href=/ru/sc/?q=sn22.102>sn22.102</a>  
+<a target=_blank href=/ru/sc/?q=sn35.70>sn35.70</a>  
 <a target=_blank href=/ru/sc/?q=an3.101>an3.101</a>  
  
 </td>

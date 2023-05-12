@@ -90,9 +90,27 @@ $outforjs .= $output . "<br>";
 
 }
 
+/* Pali def*/  
+else if ( preg_match('/-def/', $p ) && preg_match('/-vin/', $p ))  {
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -def -vin $extra $string");
+$output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output . "<br>"; 
+}
+
+else if ( preg_match('/-def/', $p ) && ( $p != "-vin" ))  {
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -def $extra $string");
+//    echo "<p>$output</p>";
+$check = ru2lat( $output );
+      $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output . "<br>"; 
+
+if ( preg_match('/-def/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check)))  {
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -def -vin $extra $string");
+      $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output . "<br>"; 
+}	
 /* Pali */  
- 
-else {
+}	else {
   
   $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $string"); 
 	//		echo "<p class='mt-3'>$output</p>";

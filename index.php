@@ -151,6 +151,11 @@ input.addEventListener("keypress", function(event) {
 <div class="collapse mt-2" id="collapseSettings">
   <div class="float-start">
 
+     <div class="form-check form-check-inline">
+  <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-vin -def ") echo "checked";?> value="-vin -def">
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipvindef;?>"><?php echo $radiovindef;?></a>
+  </div>
+
       <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-kn ">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipkn;?>"><?php echo $radiokn;?></a>
@@ -160,7 +165,14 @@ input.addEventListener("keypress", function(event) {
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-all ">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipltr;?>"><?php echo $radioltr;?></a>
   </div>
-
+  
+         <div class="form-check form-check-inline">
+  <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-b ") echo "checked";?> value="-b">
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptbw;?>"><?php echo $radiotbw;?></a>
+  </div>
+  
+  
+        <br>
   <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="English") echo "checked";?> value="-en">
     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipen;?>"><?php echo $radioen;?></a>
@@ -170,17 +182,14 @@ input.addEventListener("keypress", function(event) {
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipth;?>"><?php echo $radioth;?></a>
    </div>  -->
-     <br>
+
+  
      <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
   </div>
   
-       <div class="form-check form-check-inline">
-  <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-b ") echo "checked";?> value="-b">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptbw;?>"><?php echo $radiotbw;?></a>
-  </div>
-  
+
   <br>
          <div style="max-width: 300px; " class="mt-2"> 
 <?php echo $regexMemo;?>

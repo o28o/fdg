@@ -42,7 +42,7 @@ $tooltiptbw = "Искать во всем содержимом TheBuddhasWords.n
 $radiotbw = "TBW";
 
 
-$tooltipvindef = 'Поиск определений понятия на Пали в Винае.иРаботает только для определений данных стандартными фразами. См. в "для Продвинутых"';
+$tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "Опр Вин";
 $regexMemo = '<h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
@@ -69,8 +69,8 @@ $linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
 $fntmessage = 'Всесторонний взгляд на Четыре Благородные Истины<br>
 		в Палийских Суттах и Винае.<br> 
-    Поймите настоящие Четыре Благородные Истины<br> 
-   и положите конец б<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
+    Поймите наст<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=sn51.20>о</a>ящие Четыре Благородные Истины<br> 
+   и п<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=bu-pm>о</a>л<a class="text-black text-decoration-none" target=_blank href=/ru/sc/?q=sn35.70>о</a>жите к<a target=_blank class="text-black text-decoration-none" href=/ru/sc/?q=mn77>о</a>нец б<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Чаще всего содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <br><br>
   Самое важное из Учения Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
@@ -324,7 +324,7 @@ $tooltiptitle = 'In Pāḷi, English, Russian & ไทย';
 $title = 'Search for Truth';
 $tooltippli = 'Default search. In Suttas of an, sn, mn, dn. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya';
 $radiopli = 'Pāḷi';
-$tooltipdef = 'Search for definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. If nothing will br found in Suttas it will automatically search in Vi aya. For all-round view studing all related Suttas are recommended. See "Advanced" for details';
+$tooltipdef = 'Search for definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. If nothing will br found in Suttas it will automatically search in Vi aya. For all-round view studing all related Suttas is recommended. See "Advanced" for details';
 $radiodef = 'Def';
 $tooltipvin = 'Search in Pali Vinaya';
 $radiovin = 'Vin';
@@ -344,7 +344,7 @@ $radioru = "Rus";
 $tooltiptbw = "Search in all contents of TheBuddhasWords.net";
 $radiotbw = "TBW";
 
-$tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Suttas are recommended. See "Advanced" for details';
+$tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
 $radiovindef = "Def Vin";
 
 $regexMemo = ' <h5>RegEx Memo</h5>

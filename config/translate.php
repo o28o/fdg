@@ -71,8 +71,8 @@ $linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
 $fntmessage = 'Всесторонний взгляд на Четыре Благородные Истины<br>
 		в Палийских Суттах и Винае.<br> 
-    Поймите наст<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=sn51.20>о</a>ящие Четыре Благородные Истины<br> 
-   и п<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=bu-pm>о</a>л<a class="text-black text-decoration-none" target=_blank href=/ru/sc/?q=sn35.70>о</a>жите к<a target=_blank class="text-black text-decoration-none" href=/ru/sc/?q=mn77>о</a>нец б<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
+    Поймите наст<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
+   и п<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=bu-pm>о</a>л<a class="text-black text-decoration-none" target=_blank href=/ru/sc/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-black text-decoration-none" href=/ru/sc/?q=mn77&lang=pli>о</a>нец б<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Чаще всего содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <br><br>
   Самое важное из Учения Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';

@@ -171,6 +171,7 @@ $thrulocation = $basedir. '/theravada.ru/Teaching/Canon';
 $bwlocation = $basedir. '/bw';
 
 $linksothermat = 'https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG';
+$defaultla = 1;
 $latestrusmn = 35;
 
 ?>

@@ -589,7 +589,8 @@ for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | se
 filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -V | uniq`
 pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) printf $i"/"}'`
 
-#echo "flnblck=$filenameblock pathblock=$pathblock"
+#echo "flnblck=$filenameblock pathblock=$pathblock" 
+#| tohtml
 
   #old find block
   #  roottext=`nice -$nicevalue find $lookup/root/pli/ms/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
@@ -644,6 +645,9 @@ if [[ "$roottext" == *"/dhp/"* ]] ||  [[ "$roottext" == *"/iti/"* ]] ||  [[ "$ro
 elif [[ "$roottext" == *"/pli-tv-pvr/"* ]] 
 then
 roottitle=`nice -$nicevalue grep -E -m3 ':0\.[23]' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
+elif [[ "$roottext" == *"/pli-tv-bu-pm"* ]] || [[ "$roottext" == *"/pli-tv-bi-pm"* ]] 
+then
+roottitle=`nice -$nicevalue grep -E -m2 ':0\.2' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
 elif [[ "$roottext" == *"/pli-tv-kd/"* ]] 
 then
 roottitle=`nice -$nicevalue grep -E -m3 ':0\.[3-4].*khandhaka' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
@@ -689,6 +693,7 @@ linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&'$defa
 
 linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0"&'$defaultlang'"}' `
 
+#echo "root=$roottext trn=$translation" 
 
 genbwlinks
 
@@ -696,7 +701,15 @@ count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file | wc -l `
 echo $count >> $tempfile
 
 word=`getwords | grepexclude | removeindex | clearsed | sedexpr | awk '{print tolower($0)}' | highlightpattern | sort | uniq | xargs` 
+
+if [[ "$suttanumber" != *"pli-tv-bi-vb-pd2-8"* ]]
+then
 indexlist=`nice -$nicevalue grep -E -i "${suttanumber}:" $basefile | awk '{print $2}' | sort -V | uniq`
+else 
+indexlist=`nice -$nicevalue grep -E -i "pli-tv-bi-vb-pd" $basefile | awk '{print $2}' | sort -V | uniq`
+fi
+
+#echo "ind=$indexlist ls=`ls $basefile` stn=$suttanumber fnb=$filenameblock"
 
 metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
 if [[ $metaphorcount == "" ]]

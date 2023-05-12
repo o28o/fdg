@@ -33,7 +33,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
     
 		// Defining variables
 $nameErr = $languageErr  = "";
-$q = $p = $arg = $string = $sutta = "";
+$q = $la = $p = $arg = $string = $sutta = "";
 		// Checking for a GET request
 		
 		if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -47,7 +47,7 @@ $q = $p = $arg = $string = $sutta = "";
     }
   }
 	if (empty($_GET["p"])) {
-    $languageErr = "language is required";
+    $p = "";
   } else {
     $p = test_input($_GET["p"]);
   }
@@ -65,9 +65,15 @@ $q = $p = $arg = $string = $sutta = "";
 		}
 		
       if (empty($_GET["p"])) {
-    $languageErr = "";
+    $p = "";
   } else {
     $p = test_input($_GET["p"]);
+  }
+	
+	if (empty($_GET["la"])) {
+    $la = "";
+  } else {
+    $la = test_input($_GET["la"]);
   }
 	
 		$string = str_replace("`", "", $q);

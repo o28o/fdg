@@ -34,7 +34,7 @@ $tooltipnonl = 'С этой опцией будут собраны тексты,
 $checkboxnonl = 'А Б';
 $tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи, включая поздние";
 $radioltr = "+Позд";
-$tooltipen = 'Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах thebuddhaswords.net и затем в переводах sc.net';
+$tooltipen = 'Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах sc.net и затем в переводах thebuddhaswords.net ';
 $radioen = 'Англ';
 $tooltipth = "Опционально. Поиск в 4 основных Никаях в Тайских переводах Suttacentral.net. Без этой опции сначала поиск будет произведен в Пали текстах, потом в переводах";
 $radioth = "ไทย";
@@ -45,7 +45,10 @@ $radiotbw = "TBW";
 
 
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
-$radiovindef = "Опр Вин";
+$radiovindef = "ОпрВ";
+
+$tooltipla = "Добавить $defaultla строку после совпадения";
+$checkboxla = "+$defaultla";
 $regexMemo = '<h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
@@ -336,7 +339,7 @@ $tooltiponl = 'X Y ... Finds texts containing only both and more matches for X, 
 $checkboxonl = 'Onl';
 $tooltipnonl = 'By default only texts containing X Y ... on any distance between  words will be found. With this option texts containing only X Y standing next to each other will be in results.';
 $checkboxnonl = 'A B';
-$tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then thebuddhaswords.net texts, then sc.net translations';
+$tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then sc.net texts, then thebuddhaswords.net translations';
 $radioen = 'Eng';
 $tooltipltr= "+ search in Pali in all books of kn including later texts";
 $radioltr = "+Later";
@@ -348,7 +351,10 @@ $tooltiptbw = "Search in all contents of TheBuddhasWords.net";
 $radiotbw = "TBW";
 
 $tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
-$radiovindef = "Def Vin";
+$radiovindef = "DefV";
+$tooltipla = "Add $defaultla line after match";
+$checkboxla = "+$defaultla";
+
 
 $regexMemo = ' <h5>RegEx Memo</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>

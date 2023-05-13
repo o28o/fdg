@@ -196,13 +196,9 @@ if (translator === "sv") {
  
 
   
-      let scLink = `<p class="sc-link"><a target="" href="/sc/?q=${slug}">En</a>&nbsp;<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;<a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> `; 
+      let scLink = `<p class="sc-link"><a target="" href="/sc/?q=${slug}">En</a>&nbsp;<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
 
-      
-      
-      
-
-//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp;
+//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
             console.log("extralinks " + linksArray[0]);

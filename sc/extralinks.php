@@ -1,6 +1,6 @@
 <?php 
 header("Content-Type:text/plain");
-error_reporting(E_ERROR | E_PARSE);
+//error_reporting(E_ERROR | E_PARSE);
 //include('../config/config.php');
 
 
@@ -17,15 +17,27 @@ $texttype='sutta';
 if (file_exists($bwfile) ) {
     $bwlink = "$forbwpath/$fromjs.html";
     //preg_replace('@.*/bw/@i', '/bw/', $bwfile);
+} else {
+  $bwlink = "";
 }
 
   if ($mode == "offline") {
   
 //th.ru and th.su part
 $locationrudn = $thsulocation;
+$nikaya = preg_replace("/[0-9-.]/i","","$fromjs");
 
+if ((strtolower($nikaya)) == "dn" ) {
+  $voicelink = "<a target='_blank' href='/assets/audio/dn/" . $fromjs . "_pli_sujato_en.ogg'>Voice.SC</a>&nbsp;";
+} else {
+$voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;";
+}
+  
   $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
-    [ ! -z $bwlink ] && echo -n \"<a target='_blank' href=$linktbw/$bwlink>Bw</a>&nbsp;\"; 
+  
+  echo -n \"$voicelink\";
+    [ ! -z $bwlink ] && echo -n \"
+<a target='_blank' href=$linktbw/$bwlink>Bw</a>&nbsp;\"; 
   [ ! -z \$ruslink ] && 
   echo -n \"<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>&nbsp;\"; 
   [ ! -z \$ruslinkdn ] && 
@@ -77,6 +89,8 @@ switch (strtolower($nikaya)) {
 $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
+
+echo -n \"<a target='_blan' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;\"
       [[ $bwlink != \"\" ]] && 
 echo -n \"<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>&nbsp;\"; 
       [[ \$ruslink != \"\" ]] && 
@@ -87,8 +101,10 @@ return $output;
   
 }
 }
-$fromjs = "dn16";
-echo extraLinks($fromjs);
-//echo extraLinks($_GET['fromjs']);
+//$fromjs = "dn16";
+//$fromjs = "an1.1-10";
+
+//echo extraLinks($fromjs);
+echo extraLinks($_GET['fromjs']);
 
 ?>

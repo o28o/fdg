@@ -298,8 +298,8 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pal
 
 onltextindex=`for i in $splitpattern
 do
-grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -V | uniq 
-done | sort -V | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @:|@g'`
+grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -Vf | uniq 
+done | sort -Vf | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @:|@g'`
 #pattern=$revertlater
 grep -E "($onltextindex)" $tmponl 
 }
@@ -541,7 +541,7 @@ then
 continue 
 fi 
 
-linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -V | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq | awk -F'_' '{print "<a target=_blank href=\"/sc/?q="$1"&lang=pli\">"$1"</a>"}'| sort -V | uniq | xargs`
+linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq | awk -F'_' '{print "<a target=_blank href=\"/sc/?q="$1"&lang=pli\">"$1"</a>"}'| sort -Vf | uniq | xargs`
 
 echo "<tr>
 <td>`echo $uniqword | highlightpattern`</td>
@@ -582,11 +582,11 @@ grepvar=
 
 function linklist {
 cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | tohtml 
-textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -V | uniq`
+textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
 
-for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | sed -E 's@.*(sutta|vinaya|abhidhamma)@@g' |  awk -F'_' -v dirlocation="$dirlocation" '{print dirlocation""$1}' | sort -V | uniq` ; do
+for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | sed -E 's@.*(sutta|vinaya|abhidhamma)@@g' |  awk -F'_' -v dirlocation="$dirlocation" '{print dirlocation""$1}' | sort -Vf | uniq` ; do
 
-filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -V | uniq`
+filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -Vf | uniq`
 pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) printf $i"/"}'`
 
 #echo "flnblck=$filenameblock pathblock=$pathblock" 
@@ -656,13 +656,13 @@ then
   roottitle=`nice -$nicevalue grep -E -m3 ':0\.[3-5].*sikkhāpada' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
 elif ls $roottext | grep -E -q -m1 "sn[0-9]{0,2}.[0-9]*_"
 then
-  roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -V | uniq`
+  roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -Vf | uniq`
 
 elif ls $roottext | grep -E -q "(sn|an)[0-9]{0,3}.[0-9]*-[0-9]*_"
 then
 
 samyuttaname=`grep -m1 \`echo $suttanumber | awk -F'.' '{print $1}'\` $sntoccsv | awk -F',' '{print $4}'`
-      roottitle="`nice -$nicevalue grep -E -i "$pattern" $roottext | clearsed | awk '{print $1}' | awk -F':' '{print $1}' | sort -V | uniq |  xargs ` $samyuttaname"
+      roottitle="`nice -$nicevalue grep -E -i "$pattern" $roottext | clearsed | awk '{print $1}' | awk -F':' '{print $1}' | sort -Vf | uniq |  xargs ` $samyuttaname"
 else 
 roottitle=`nice -$nicevalue grep ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
 fi 
@@ -679,7 +679,7 @@ elif [[ "$translation" == *"/pli-tv-b"* ]]
 then
 trntitle=`nice -$nicevalue grep -E -m3 ':0\.[3-5].*rule' $translation | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
         else
-        trntitle=`nice -$nicevalue grep -m1 ':0\.3' $translation | clearsed | awk '{print substr($0, index($0, $2))}' | sort -V | uniq | xargs `
+        trntitle=`nice -$nicevalue grep -m1 ':0\.3' $translation | clearsed | awk '{print substr($0, index($0, $2))}' | sort -Vf | uniq | xargs `
         fi 
 translatorsname=`echo $translation | awk -F'/en/' '{print $2}' | awk -F'/' '{print $1}'`
 
@@ -704,9 +704,9 @@ word=`getwords | grepexclude | removeindex | clearsed | sedexpr | awk '{print to
 
 if [[ "$suttanumber" != *"pli-tv-bi-vb-pd2-8"* ]]
 then
-indexlist=`nice -$nicevalue grep -E -i "${suttanumber}:" $basefile | awk '{print $2}' | sort -V | uniq`
+indexlist=`nice -$nicevalue grep -E -i "${suttanumber}:" $basefile | awk '{print $2}' | sort -Vf | uniq`
 else 
-indexlist=`nice -$nicevalue grep -E -i "pli-tv-bi-vb-pd" $basefile | awk '{print $2}' | sort -V | uniq`
+indexlist=`nice -$nicevalue grep -E -i "pli-tv-bi-vb-pd" $basefile | awk '{print $2}' | sort -Vf | uniq`
 fi
 
 #echo "ind=$indexlist ls=`ls $basefile` stn=$suttanumber fnb=$filenameblock"
@@ -780,7 +780,7 @@ cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/
 
 fi 
 
-uniquelist=`cat $basefile |grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home" | grep -Ev "palisearch|engsearch|standalone.js" | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -V | uniq`
+uniquelist=`cat $basefile |grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home" | grep -Ev "palisearch|engsearch|standalone.js" | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq`
 
 
 textlist=$uniquelist
@@ -788,9 +788,9 @@ textlist=$uniquelist
 do
 
 if [[ "$args" == *"-tru"* ]]; then
-filenameblock=`echo $i |  sed 's/-.*//g' | sed 's@_@.@g' | sort -V | uniq `
+filenameblock=`echo $i |  sed 's/-.*//g' | sed 's@_@.@g' | sort -Vf | uniq `
 else 
-filenameblock=`echo $i |  sed 's/.html//g' | sort -V | uniq `
+filenameblock=`echo $i |  sed 's/.html//g' | sort -Vf | uniq `
 fi 
 echo $i >> sddd
 
@@ -833,7 +833,7 @@ roottitle=`nice -$nicevalue grep -m5 ':0\.' $roottext | clearsed | awk '{print s
 
 if ls $roottext | grep -E -q "sn[0-9]{0,2}.[0-9]*_"
 then
-roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -V | uniq`
+roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -Vf | uniq`
 fi
   
  if [[ $filenameblock == *"dn"* ]]
@@ -918,7 +918,7 @@ fi
 
 checkifalreadydone
 
-grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -V > $basefile
+grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
 mintexts=4
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
@@ -927,7 +927,7 @@ if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
 #echo "$tmpdef bf $texts"
 
-grepbasefileExtended1 | grep -v "^--$" | grepexclude | clearsed | sort -V >> $basefile
+grepbasefileExtended1 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
 
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "$tmpdef bf+1 $texts"
@@ -936,7 +936,7 @@ fi
 
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
-grepbasefileExtended2 | grep -v "^--$" | grepexclude | clearsed | sort -V >> $basefile
+grepbasefileExtended2 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
 
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12 $texts"
@@ -1065,9 +1065,9 @@ if [[ "$type" == json ]]; then
 echo -n "<br>`cat $tempfilewhistory | grep href | highlightpattern | xargs`" >> $history
 elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"Suttanta"* ]]
 then
-echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' -v lkth="$linkforthai" -v ext="$linkforthaiext"  '{print \"<a target=_blank href="lkth$1''ext">"$1"</a>\"}' | sort -u | sort -V | xargs`" >> $history
+echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' -v lkth="$linkforthai" -v ext="$linkforthaiext"  '{print \"<a target=_blank href="lkth$1''ext">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
 else
-echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1"&lang=pli>"$1"</a>\"}' | sort -u | sort -V | xargs`" >> $history
+echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1"&lang=pli>"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
 fi
 
 echo "</td></tr>

@@ -5,7 +5,7 @@ error_reporting(E_ERROR | E_PARSE);
 
 
 
-function rusLinks($fromjs) {
+function extraLinks($fromjs) {
   include_once('../config/config.php');
   $forthru = str_replace(".", '_', $fromjs);
 $forbwpath = strtolower(substr($fromjs,0,2));
@@ -87,7 +87,8 @@ return $output;
   
 }
 }
-//$fromjs = "dn34";
-echo rusLinks($_GET['fromjs']);
+$fromjs = "dn16";
+echo extraLinks($fromjs);
+//echo extraLinks($_GET['fromjs']);
 
 ?>

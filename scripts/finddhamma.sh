@@ -1077,6 +1077,6 @@ echo "</td></tr>
 " >> $history
 
 rm $basefile $tempfile $tempfilewhistory *$rand* > /dev/null 2>&1
-echo "<script>window.location.href=\"./result/${table}\";</script>"
-
+#echo "<script>window.location.href=\"./result/${table}\";</script>"
+echo "./result/${table}"
 exit 0

@@ -7,7 +7,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
     $outputlang = "";
     }
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
 			
 /* single search no radiobuttons */
 if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
@@ -23,12 +23,12 @@ $check = ru2lat( $output );
 
 		if ((( $p == "-ru" ) && ( preg_match('/(-not-in-|-net-v-)/', $check)  )) || ( ( $p != "-vin" ) && ( preg_match('/(-not-in-|-net-v-)/', $check)  )))	{
 
-	 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -tru $extra $string");
-	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
-	// echo                                                	"<p>$output</p>";
-	 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
-	 $outforjs .= $output;
-			}	
+  	 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -tru $extra $string");
+//	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+  	// echo                                                	"<p>$output</p>";
+  	 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+  	 $outforjs .= $output;
+  			}	
 }
 
 
@@ -71,7 +71,7 @@ $outforjs .= $output . "<br>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
 //english 
@@ -149,14 +149,15 @@ $outforjs .= $output;
 			}	
 }
 //echo $outforjs; 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 
-$outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
-$finaloutput = "<script>
-document.getElementById( 'spinner' ).style.display = 'none';
+$outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));
+echo $outputnonl;
+//$finaloutput = "<script>
+/*document.getElementById( 'spinner' ).style.display = 'none';
 		console.log('$outputnonl');
 			const responseElement = document.querySelector('#response');
   responseElement.innerHTML = '$outputnonl';
 </script>";
-echo $finaloutput;  
+echo $finaloutput;  */
 		?>	

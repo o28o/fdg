@@ -25,10 +25,19 @@ if (file_exists($bwfile) ) {
   
 //th.ru and th.su part
 $locationrudn = $thsulocation;
-$nikaya = preg_replace("/[0-9-.]/i","","$fromjs");
+$nikaya = strtolower(preg_replace("/[0-9-.]/i","","$fromjs"));
 
-if ((strtolower($nikaya)) == "dn" ) {
-  $voicelink = "<a target='_blank' href='/assets/audio/dn/" . $fromjs . "_pli_sujato_en.ogg'>Voice.SC</a>&nbsp;";
+
+if (preg_match("/(an|sn)/i",$nikaya)) {
+  $book = "/" . preg_replace("/\..*/i","","$fromjs") ;
+} else {
+  $book = "";
+}
+  
+
+$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
+if (file_exists("$basedir/$voicefile") ) {
+  $voicelink = "<a target='_blank' href='$voicefile'>Voice.SC</a>&nbsp;";
 } else {
 $voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;";
 }
@@ -41,7 +50,7 @@ $voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.
   [ ! -z \$ruslink ] && 
   echo -n \"<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>&nbsp;\"; 
   [ ! -z \$ruslinkdn ] && 
-  echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>&nbsp;\";
+  echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
   ");
   $result = str_replace(PHP_EOL, '', $output);
 return $output;
@@ -96,12 +105,15 @@ echo -n \"<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>&nbs
       [[ \$ruslink != \"\" ]] && 
   echo -n \"<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
   [[ \$ruslinkdn != \"\" ]] && 
-  echo -n \"<a target='_blank' href=\$ruslinkdn>Th.su</a>&nbsp;\";");
+  echo -n \"<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
 return $output;
   
 }
 }
-//$fromjs = "dn16";
+
+//curl localhost:8080/sc/extralinks.php?fromjs=an1.1-10
+
+//$fromjs = "mn20";
 //$fromjs = "an1.1-10";
 
 //echo extraLinks($fromjs);

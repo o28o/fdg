@@ -39,18 +39,17 @@ $voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
 if (file_exists("$basedir/$voicefile") ) {
   $voicelink = "<a target='_blank' href='$voicefile'>Voice.SC</a>&nbsp;";
 } else {
-$voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;";
+$voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }
   
   $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
   
   echo -n \"$voicelink\";
-    [ ! -z $bwlink ] && echo -n \"
-<a target='_blank' href=$linktbw/$bwlink>Bw</a>&nbsp;\"; 
+    [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='_blank' href=$linktbw/$bwlink>Bw</a>\"; 
   [ ! -z \$ruslink ] && 
-  echo -n \"<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>&nbsp;\"; 
+  echo -n \"&nbsp;<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>\"; 
   [ ! -z \$ruslinkdn ] && 
-  echo -n \"<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
+  echo -n \"&nbsp;<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
   ");
   $result = str_replace(PHP_EOL, '', $output);
 return $output;
@@ -99,13 +98,13 @@ $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
 
-echo -n \"<a target='_blan' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;\"
+echo -n \"<a target='_blan' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>\"
       [[ $bwlink != \"\" ]] && 
-echo -n \"<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>&nbsp;\"; 
+echo -n \"&nbsp;<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>\"; 
       [[ \$ruslink != \"\" ]] && 
-  echo -n \"<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>&nbsp;\"; 
+  echo -n \"&nbsp;<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
   [[ \$ruslinkdn != \"\" ]] && 
-  echo -n \"<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
+  echo -n \"&nbsp;<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
 return $output;
   
 }

@@ -106,7 +106,7 @@ elif [[ "`uname -a`" == *"rym.from.sh"* ]]; then
 sitename=https://find.dhamma.gift
 mode=online
 nicevalue=19
-apachesitepath=/home/a0092061/domains/find.dhamma.gift/public_html/
+apachesitepath=/home/a0092061/domains/f.dhamma.gift/public_html/
 suttapath=/home/a0092061/data/suttacentral.net/
 
 linkforthsu=https://tipitaka.theravada.su

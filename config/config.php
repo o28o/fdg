@@ -91,7 +91,7 @@ $locationTocThsu = $basedir. "/assets/texts/";
 
 //converter.php
 //not used currently. php curl for offline
-$adapterscriptlocation = '/home/a0092061/domains/find.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/find.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
+$adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/f.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
 
 // include_once('../config/config.php');
 
@@ -121,7 +121,7 @@ else if ( preg_match('/Linux rym.from.sh/', $uname) ) {
   $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
   
-$basedir = '/home/a0092061/domains/find.dhamma.gift/public_html';
+$basedir = '/home/a0092061/domains/f.dhamma.gift/public_html';
 
 $linkforthsu = 'https://tipitaka.theravada.su/dn/';
 $linkforthru = 'https://theravada.ru/Teaching/Canon/Suttanta/Texts/';
@@ -134,7 +134,7 @@ $locationTocThsu = $basedir. "/assets/texts";
 
 //converter.php
 //not used currently. php curl for offline
-$adapterscriptlocation = '/home/a0092061/domains/find.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/find.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
+$adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/f.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
 
 // include_once('../config/config.php');
 

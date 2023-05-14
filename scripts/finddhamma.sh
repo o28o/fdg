@@ -597,7 +597,10 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
  #   translation=`nice -$nicevalue find $lookup/translation/en/$translator/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*" |head -n1`
  #   variant=`nice -$nicevalue find $lookup/variant/pli/ms/$pathblock -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
    roottext=`ls $lookup/root/pli/ms/$pathblock/*${filenameblock}_*`
- 
+   
+   #roottext=`for f in $lookup/root/pli/ms/$pathblock/*${filenameblock}_*; do ;  [ -e "$f" ] && echo "$f" ; break ; done`
+
+ #echo "$roottext $roottext2"
  lettersblock=`echo $filenameblock | sed 's@[0-9]*@@g'`
  numberblock=`echo $filenameblock | sed 's@[A-Za-z]*@@g'`
 #echo "$filenameblock $pathblock $lettersblock $numberblock" | tohtml

@@ -65,7 +65,27 @@ return $output;
 } else {
  // online 
   
-// $locationTocThsu = "/home/a0092061/domains/find.dhamma.gift/public_html/assets";
+if (preg_match("/(an|sn)/i",$nikaya)) {
+  $book = "/" . preg_replace("/\..*/i","","$fromjs") ;
+} else {
+  $book = "";
+}
+  
+$voicefile = shell_exec("for f in $basedir/assets/audio/$nikaya$book/{$fromjs}_*
+do
+ [ -e \"\$f\" ] && echo \"\$f\" | sed 's%.*/assets/audio%/assets/audio%g'|| echo 'no file'
+    break
+done ");
+$voicefile = str_replace(PHP_EOL, '', $voicefile);
+//echo "$basedir/$voicefile";
+//$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
+if (file_exists("$basedir/$voicefile") ) {
+  $voicelink = "<a target='_blank' href='$voicefile'>Voice.SC</a>";
+} else {
+$voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+}
+
+
 //thsu part
 if (preg_match("/^(mn|dn)[0-9]{1,3}$/i",$fromjs)) {
 
@@ -104,7 +124,7 @@ $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
 
-echo -n \"<a target='_blan' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>\"
+echo -n \"$voicelink\";
       [[ $bwlink != \"\" ]] && 
 echo -n \"&nbsp;<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>\"; 
       [[ \$ruslink != \"\" ]] && 

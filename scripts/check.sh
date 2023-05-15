@@ -3,6 +3,9 @@ audiodir=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/asset
 #nikaya=sn
 #book=${nikaya}$@
 
+
+find $audiodir | grep "+" 
+
 function move {
 cd $audiodir
 mv /storage/emulated/0/Download/*ogg ./
@@ -21,9 +24,8 @@ do
 echo $line 
 echo "termux-open-url https://voice.suttacentral.net/scv/index.html?#/sutta?search=$line" >> $audiodir/tmpcheck
 done
-echo "do you want to open missing links?"
-read
-bash $audiodir/tmpcheck
+
+[[ "$@" != *"-s"* ]] && echo "do you want to open missing links?" ; read ; bash $audiodir/tmpcheck || echo nots
 	cd - >/dev/null
 }
 
@@ -33,7 +35,7 @@ move
 
 #book=`ls * | sed 's/\..*//g' `
 if [[ $@ != "" ]] then 
-book=$@
+book=`echo $@ | sed 's/-s //g'`
 nikaya=`echo $book | sed 's/[0-9]*//g'`
 
 	if [[ $book =~ [0-9] ]];then

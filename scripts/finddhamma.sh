@@ -700,7 +700,7 @@ linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0"
 
 genbwlinks
 
-count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file | wc -l ` 
+count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file $variant | wc -l ` 
 echo $count >> $tempfile
 
 word=`getwords | grepexclude | removeindex | clearsed | sedexpr | awk '{print tolower($0)}' | highlightpattern | sort | uniq | xargs` 
@@ -855,7 +855,7 @@ genbwlinks
 
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
 
-count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file | wc -l ` 
+count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file $variant | wc -l ` 
 echo $count >> $tempfile
 
 word=`getwords | grepexclude | xargs | clearsed | sedexpr | highlightpattern`

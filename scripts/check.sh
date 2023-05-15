@@ -46,6 +46,7 @@ else
 
 for i in `cat tmpmove | awk -F'/' '{print $2}' | awk '{print $1}' | sort | uniq`
 do 
+echo $i
 check $i
 
 done

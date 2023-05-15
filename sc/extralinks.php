@@ -33,7 +33,7 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
 } else {
   $book = "";
 }
-  
+
 $voicefile = shell_exec("for f in $basedir/assets/audio/$nikaya$book/{$fromjs}_*
 do
  [ -e \"\$f\" ] && echo \"\$f\" | sed 's%.*/assets/audio%/assets/audio%g'|| echo 'no file'
@@ -65,12 +65,19 @@ return $output;
 } else {
  // online 
   
+  
+  $nikaya = strtolower(preg_replace("/[0-9-.]/i","","$fromjs"));
+
 if (preg_match("/(an|sn)/i",$nikaya)) {
   $book = "/" . preg_replace("/\..*/i","","$fromjs") ;
 } else {
   $book = "";
 }
   
+  
+  
+  
+  echo "$basedir/assets/audio/$nikaya$book/{$fromjs}_*";
 $voicefile = shell_exec("for f in $basedir/assets/audio/$nikaya$book/{$fromjs}_*
 do
  [ -e \"\$f\" ] && echo \"\$f\" | sed 's%.*/assets/audio%/assets/audio%g'|| echo 'no file'

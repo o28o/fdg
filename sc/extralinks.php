@@ -74,10 +74,7 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
   $book = "";
 }
   
-  
-  
-  
-  echo "$basedir/assets/audio/$nikaya$book/{$fromjs}_*";
+ // echo "$basedir/assets/audio/$nikaya$book/{$fromjs}_*";
 $voicefile = shell_exec("for f in $basedir/assets/audio/$nikaya$book/{$fromjs}_*
 do
  [ -e \"\$f\" ] && echo \"\$f\" | sed 's%.*/assets/audio%/assets/audio%g'|| echo 'no file'

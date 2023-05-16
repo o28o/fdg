@@ -35,7 +35,7 @@ echo $line
 echo "termux-open-url https://voice.suttacentral.net/scv/index.html?#/sutta?search=$line" >> $audiodir/tmpcheck
 done
 
-#[[ "$@" != *"-s"* ]] && echo "do you want to open missing links?" ; read ; bash $audiodir/tmpcheck || echo nots
+[[ "$@" != *"-s"* ]] && echo "do you want to open missing links?" ; read ; bash $audiodir/tmpcheck || echo nots
 	cd - >/dev/null
 }
 
@@ -66,7 +66,7 @@ exit 0
 
 wc -l ready.txt; ./check.sh ; for i in `find an -type f | awk -F'/' '{print $NF}' | sed 's/_.*//g'` ; do sed -i '/'$i'/d' ready.txt ; done ; wc -l ready.txt
 
-for i in `grep an[78] ready.txt ` ; do
+for i in `echo "sn53.13-22                                                      sn53.23-34                                                      sn53.35-44                                                      sn53.45-54 "` ; do
 termux-open-url https://voice.suttacentral.net/scv/index.html?#/sutta?search=$i
 done
 
@@ -91,4 +91,3 @@ ud6.4
 ud8.10
 ud8.6
 ud8.9
-

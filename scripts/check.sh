@@ -15,9 +15,19 @@ bash tmpmove
 }
 
 function check {
+  book=$1
+  nikaya=`echo $book | sed 's/[0-9]*//g'`
+  
+	if [[ $book =~ [0-9] ]];then
+	book=$book
+	else
+	book=
+	fi
+	
+	
   rm $audiodir/tmpcheck
 	cd $audiodir/$nikaya/$book/
-	for i in `ls $roottextdir/$nikaya/$1/* | sed 's/_root.*//g' | awk -F'/' '{print $NF}' | sort -Vf ` ; do  
+	for i in `ls $roottextdir/$nikaya/$book/* | sed 's/_root.*//g' | awk -F'/' '{print $NF}' | sort -Vf ` ; do  
 		ls $i* 1>/dev/null
 	done 2>&1 | awk -F"'" '{print $2}' | sed 's/*//g' | sort -Vf | while read line 
 do
@@ -46,12 +56,38 @@ nikaya=`echo $book | sed 's/[0-9]*//g'`
 	check $book
 else
 
-for i in `cat tmpmove | awk -F'/' '{print $2}' | awk '{print $1}' | sort | uniq`
+for i in `cat tmpmove | awk '{print $2}' | sed 's@.*/@@g' | sort | uniq`
 do 
-echo $i
 check $i
-
 done
 fi 
 
+exit 0
 
+wc -l ready.txt; ./check.sh ; for i in `find an -type f | awk -F'/' '{print $NF}' | sed 's/_.*//g'` ; do sed -i '/'$i'/d' ready.txt ; done ; wc -l ready.txt
+
+for i in `echo "sn53.13-22                                                      sn53.23-34                                                      sn53.35-44                                                      sn53.45-54 "` ; do
+termux-open-url https://voice.suttacentral.net/scv/index.html?#/sutta?search=$i
+done
+
+
+
+
+iti91
+iti109
+iti27
+
+snp1.4
+snp3.10
+snp3.4                                                          
+
+thag6.7                                                         
+
+ud3.2
+ud3.3
+ud5.3
+ud5.5
+ud6.4
+ud8.10
+ud8.6
+ud8.9

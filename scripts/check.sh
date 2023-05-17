@@ -35,7 +35,7 @@ echo $line
 echo "termux-open-url https://voice.suttacentral.net/scv/index.html?#/sutta?search=$line" >> $audiodir/tmpcheck
 done
 
-[[ "$@" != *"-s"* ]] && echo "do you want to open missing links?" ; read ; bash $audiodir/tmpcheck || echo nots
+[[ "$@" != *"-s"* ]] && echo "opening missing links" ; cat $audiodir/tmpcheck | head -n7 | bash || echo nots
 	cd - >/dev/null
 }
 
@@ -91,3 +91,6 @@ ud6.4
 ud8.10
 ud8.6
 ud8.9
+
+
+for i in sn{7..10} ; do  ./check.sh $i; done 

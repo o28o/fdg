@@ -137,6 +137,9 @@ input.addEventListener("keypress", function(event) {
   <input class="form-check-input" type="radio" name="p" <?php if (isset($extra) && $extra=="-def ") echo "checked";?> value="-def ">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipdef;?>'><?php echo $radiodef;?></a>
   </div>
+  
+  
+  
   <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($extra) && $p=="-vin") echo "checked";?> value="-vin ">
     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipvin;?>"><?php echo $radiovin;?></a></div>
@@ -153,7 +156,7 @@ input.addEventListener("keypress", function(event) {
   <div class="float-start">
 
      <div class="form-check form-check-inline">
-  <input class="form-check-input"  type="radio" name="" <?php if (isset($p) && $p=="-vin -def ") echo "checked";?> value="-vin -def">
+  <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-vin -def ") echo "checked";?> value="-vin -def">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipvindef;?>"><?php echo $radiovindef;?></a>
   </div>
   

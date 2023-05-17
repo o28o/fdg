@@ -66,7 +66,9 @@ exit 0
 
 wc -l ready.txt; ./check.sh ; for i in `find an -type f | awk -F'/' '{print $NF}' | sed 's/_.*//g'` ; do sed -i '/'$i'/d' ready.txt ; done ; wc -l ready.txt
 
-for i in `echo "sn53.13-22                                                      sn53.23-34                                                      sn53.35-44                                                      sn53.45-54 "` ; do
+for i in `echo "an10.156-166                                                    an10.167                                                        an10.168                                                        an10.169                                                        an10.170
+an10.171                                                        an10.173                                                        an10.174                                                        an10.175                                                        an10.177
+an10.178"` ; do
 termux-open-url https://voice.suttacentral.net/scv/index.html?#/sutta?search=$i
 done
 

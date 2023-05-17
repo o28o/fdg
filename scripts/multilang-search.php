@@ -13,7 +13,7 @@ echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</scr
 if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
 $p = "-ru";
 
-$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $p $string"); 
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $p $string"); 
      //                                               			echo "<p class='mt-3'>$output</p>";
 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs = $output . "<br>";
@@ -23,7 +23,7 @@ $check = ru2lat( $output );
 
 		if ((( $p == "-ru" ) && ( preg_match('/(-not-in-|-net-v-)/', $check)  )) || ( ( $p != "-vin" ) && ( preg_match('/(-not-in-|-net-v-)/', $check)  )))	{
 
-	 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -tru $extra $string");
+	 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra -tru $string");
 	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 	// echo                                                	"<p>$output</p>";
 	 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
@@ -41,7 +41,7 @@ else if (preg_match('/\p{Thai}/u', $string) || ( $p == "-th" )) {
  $output = $aksharatext . $convertedStr; 
  $output = trim(preg_replace('/\s\s+/', ' ', $output));	
  $outforjs .= $output . "<br>";
-  $output = shell_exec("bash ./scripts/finddhamma.sh $extra $outputlang $la $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $convertedStr");
  // echo "<p>$output</p>";
  $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>";
@@ -60,13 +60,13 @@ curl_close($cURLConnection);
  $output = $aksharatext . $convertedStr; 
  $output = trim(preg_replace('/\s\s+/', ' ', $output));	
  $outforjs .= $output . "<br>";
-  $output = shell_exec("bash ./scripts/finddhamma.sh $extra $outputlang $la $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $convertedStr");
 //  echo "<p>$output</p>";
 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>";
       }
    
-      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $p $string");
+      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $p $string");
 //    echo "<p class='mt-3'>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
@@ -76,15 +76,15 @@ echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</scri
 } 
 //english 
 else if ( $p == "-en" ) {
-	  	    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en $extra $string");
-	//		echo "<p>$output</p>";
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en $extra $string");
+                                                            	//		echo "<p>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
 }
 else if ( $p == "-b" ) {
-	  	    $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -b $extra $string");
-	//		echo "<p>$output</p>";
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -b $extra $string");
+                                                            	//		echo "<p>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
@@ -112,7 +112,7 @@ $outforjs .= $output . "<br>";
 /* Pali */  
 }	else {
   
-  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $p $string"); 
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $p $string"); 
 	//		echo "<p class='mt-3'>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 

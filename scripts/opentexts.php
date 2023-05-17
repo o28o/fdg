@@ -33,7 +33,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
     
 		// Defining variables
 $nameErr = $languageErr  = "";
-$q = $la = $p = $arg = $string = $sutta = "";
+$q = $extra = $la = $p = $arg = $string = $sutta = "";
 		// Checking for a GET request
 		
 		if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -52,18 +52,25 @@ $q = $la = $p = $arg = $string = $sutta = "";
     $p = test_input($_GET["p"]);
   }
 }	
-		if ($_SERVER["REQUEST_METHOD"] == "GET") {
-		$q = test_input($_GET["q"]);
+
+   		if ($_SERVER["REQUEST_METHOD"] == "GET") {
+   		$extra = test_input($_GET["extra"]);
 /* 		$pitaka = test_input($_GET["pitaka"]);
  */		}
-		// Removing the redundant HTML characters if any exist.
-		function test_input($data) {
-		$data = trim($data);
-	/*	$data = stripslashes($data);
-		$data = htmlspecialchars($data); */
-		return $data;
-		}
-		
+ 
+ 
+   	  	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+   	  	$q = test_input($_GET["q"]);
+/* 	  	$pitaka = test_input($_GET["pitaka"]);
+ */	  	}
+   	  	// Removing the redundant HTML characters if any exist.
+   	  	function test_input($data) {
+   	  	$data = trim($data);
+   	/*	$data = stripslashes($data);
+   	  	$data = htmlspecialchars($data); */
+   	  	return $data;
+   	  	}
+   	  	
       if (empty($_GET["p"])) {
     $p = "";
   } else {

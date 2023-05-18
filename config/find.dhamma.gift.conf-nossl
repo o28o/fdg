@@ -1,0 +1,16 @@
+<VirtualHost *:80> 
+
+ServerName find.dhamma.gift
+ServerAlias www.find.dhamma.gift
+ServerAlias f.dhamma.gift
+ServerAlias www.f.dhamma.gift
+
+DocumentRoot /var/www/html
+
+ErrorLog /var/www/error.log
+CustomLog /var/www/requests.log combined
+
+</VirtualHost>
+
+
+

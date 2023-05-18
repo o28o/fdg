@@ -308,6 +308,15 @@ dt {
   display: none !important;
 }
 
+.hide-russian p .rus-lang,
+.hide-russian h1 .rus-lang,
+.hide-russian h2 .rus-lang,
+.hide-russian h3 .rus-lang,
+.hide-russian h4 .rus-lang,
+.hide-russian li .rus-lang {
+  display: none !important;
+}
+
 #sutta.hide-pali p span.eng-lang {
   display: inline !important;
 }

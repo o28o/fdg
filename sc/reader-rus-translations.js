@@ -155,7 +155,7 @@ if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
 
   const rootResponse = fetch(rootpath).then(response => response.json());
  const translationResponse = fetch(trnpath).then(response => response.json());
-  const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
+  const engtranslationResponse = fetch(`${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/${texttype}/${slugReady}_translation-en-sujato.json`).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
   Promise.all([rootResponse, translationResponse, engtranslationResponse, htmlResponse]).then(responses => {
@@ -175,8 +175,8 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
       html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
-      <span class="eng-lang" lang="en">${transData[segment]}</span>
-            <span class="rus-lang" lang="ru">${engTransData[segment]}</span>
+      <span class="rus-lang" lang="ru">${transData[segment]}</span>
+            <span class="eng-lang" lang="en">${engTransData[segment]}</span>
       ${closeHtml}\n\n`;
     });
 
@@ -382,18 +382,31 @@ function setLanguage(language) {
   }
 }
 
-function showPaliEnglish() {
+function showPaliAll() {
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
+  suttaArea.classList.remove("hide-russian");
+}
+function showPaliRussian() {
+  suttaArea.classList.remove("hide-pali");
+  suttaArea.classList.add("hide-english");
+  suttaArea.classList.remove("hide-russian");
 }
 function showEnglish() {
   suttaArea.classList.add("hide-pali");
+  suttaArea.classList.add("hide-russian");
   suttaArea.classList.remove("hide-english");
 }
+function showRussian() {
+  suttaArea.classList.add("hide-pali");
+  suttaArea.classList.add("hide-english");
+  suttaArea.classList.remove("hide-russian");
+}
 function showPali() {
-  console.log("showing pali");
+  console.log("showing pali ");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
+  suttaArea.classList.add("hide-russian");
 }
 
 function toggleThePali() {
@@ -401,13 +414,13 @@ function toggleThePali() {
 
   languageButton.addEventListener("click", () => {
     if (language === "pli") {
-      showPaliEnglish();
+      showPaliAll();
       language = "pli-rus";    
     } else if (language === "pli-rus") {
-     showEnglish();
+     showPali();
       language = "rus";
     } else if (language === "rus") {
-     showPali();
+     showRussian();
       language = "pli";
     }
   });

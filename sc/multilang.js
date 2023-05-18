@@ -109,8 +109,6 @@ let dnranges = ['dn22'];
 
 var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
-var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
@@ -155,11 +153,10 @@ if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
 
   const rootResponse = fetch(rootpath).then(response => response.json());
  const translationResponse = fetch(trnpath).then(response => response.json());
-  const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
-  Promise.all([rootResponse, translationResponse, engtranslationResponse, htmlResponse]).then(responses => {
-    const [paliData, transData, engTransData, htmlData] = responses;
+  Promise.all([rootResponse, translationResponse, htmlResponse]).then(responses => {
+    const [paliData, transData, htmlData] = responses;
 
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
@@ -174,10 +171,7 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
-      html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
-      <span class="eng-lang" lang="en">${transData[segment]}</span>
-            <span class="rus-lang" lang="ru">${engTransData[segment]}</span>
-      ${closeHtml}\n\n`;
+      html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="eng-lang" lang="en">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
 if (translator === "sv") {

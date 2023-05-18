@@ -112,22 +112,27 @@ var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
-
+ let scLink = `<p class="sc-link">`;
+ let ifRus = `<a target="" href="/sc/?q=${slug}">En</a>&nbsp;<a target="" href="/sc/ml.html?q=${slug}">R+E</a>&nbsp;`;
+ 
 if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
  var trnpath = rustrnpath; 
  let language = "pli-rus";
   console.log(trnpath);
+ scLink += ifRus; 
 } else if (an1ranges.indexOf(slug) !== -1) { 
   let language = "pli-rus";
   var trnpath = rustrnpath; 
   console.log(trnpath);
-  
+  scLink += ifRus; 
 } else if (snranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
   console.log(trnpath);
+  scLink += ifRus; 
 } else if (dnranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
   console.log(trnpath);
+  scLink += ifRus; 
 } else if (slug.match(/ja/)) {
   let language = "pli";
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
@@ -196,7 +201,7 @@ if (translator === "sv") {
  
 
   
-      let scLink = `<p class="sc-link"><a target="" href="/sc/?q=${slug}">En</a>&nbsp;<a target="" href="/sc/ml.html?q=${slug}">R+E</a>&nbsp;<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
+      scLink += `<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {

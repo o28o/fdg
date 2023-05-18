@@ -29,7 +29,7 @@ $maxInFile = shell_exec("grep 'let max =' $basedir/sc/reader-rus-translations.js
 if (  $max_mn == $maxInFile ) {
   echo "<h2 style='text-align: center;'>MN no updates</h2>";
 } else {
-  shell_exec("sed -i 's@let max =.*@let max = '$max_mn';@g' $basedir/sc/reader-rus-translations.js ;
+  shell_exec("sed -i 's@let max =.*@let max = '$max_mn';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js ;
   sed -i 's@latestrusmn=.*@latestrusmn='$max_mn'@g' $basedir/config/script_config.sh ;
   sed -i 's@\$latestrusmn =.*@\$latestrusmn = '$max_mn';@g' $basedir/config/config.php ;
   ");
@@ -50,7 +50,7 @@ if [[ \"\$andir\" == \"\$anrangeInFile\" ]] ; then
 echo AN no updates
 else 
 echo AN updated to \$andir
-sed -i \"s@let an1ranges =.*@let an1ranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js
+sed -i \"s@let an1ranges =.*@let an1ranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
 fi
 "); 
 echo "<h2 style='text-align: center;'>

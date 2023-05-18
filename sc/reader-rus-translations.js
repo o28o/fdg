@@ -113,7 +113,7 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
  let scLink = `<p class="sc-link">`;
- let ifRus = `<a target="" href="/sc/?q=${slug}">En</a>&nbsp;<a target="" href="/sc/ml.html?q=${slug}">R+E</a>&nbsp;`;
+ let ifRus = `<a target="" href="/sc/ml.html?q=${slug}">R+E</a>&nbsp;<a target="" href="/sc/?q=${slug}">En</a>&nbsp;`;
  
 if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
  var trnpath = rustrnpath; 
@@ -176,7 +176,7 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
-      html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="eng-lang" lang="en">${transData[segment]}</span>${closeHtml}\n\n`;
+      html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="rus-lang" lang="ru">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
 if (translator === "sv") {
@@ -384,15 +384,18 @@ function setLanguage(language) {
 function showPaliEnglish() {
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
+  suttaArea.classList.remove("hide-russian");
 }
 function showEnglish() {
   suttaArea.classList.add("hide-pali");
   suttaArea.classList.remove("hide-english");
+  suttaArea.classList.remove("hide-russian");
 }
 function showPali() {
   console.log("showing pali");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
+  suttaArea.classList.add("hide-russian");
 }
 
 function toggleThePali() {

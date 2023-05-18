@@ -107,6 +107,7 @@ let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40', 'an1.41-50',
 let snranges = ['sn1.1', 'sn56.11', 'sn38.4'];
 let dnranges = ['dn22'];
 
+
 var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
 var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
@@ -115,20 +116,28 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
+let scLink = `<p class="sc-link">`;
+let ifRus = `<a target="" href="/ru/sc/?q=${slug}">Ru</a>&nbsp;<a target="" href="/sc/?q=${slug}">En</a>&nbsp;`;
+
+
 if (onlynumber >= 1 && onlynumber <= max && slug.match(/mn/)) {
  var trnpath = rustrnpath; 
  let language = "pli-rus";
+ scLink += ifRus; 
   console.log(trnpath);
 } else if (an1ranges.indexOf(slug) !== -1) { 
   let language = "pli-rus";
   var trnpath = rustrnpath; 
+  scLink += ifRus;
   console.log(trnpath);
   
 } else if (snranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
+  scLink += ifRus; 
   console.log(trnpath);
 } else if (dnranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
+  scLink += ifRus; 
   console.log(trnpath);
 } else if (slug.match(/ja/)) {
   let language = "pli";
@@ -202,7 +211,7 @@ if (translator === "sv") {
  
 
   
-      let scLink = `<p class="sc-link"><a target="" href="/sc/?q=${slug}">En</a>&nbsp;<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
+      scLink += `<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
@@ -420,7 +429,7 @@ function toggleThePali() {
      showPali();
       language = "rus";
     } else if (language === "rus") {
-     showRussian();
+     showPaliRussian();
       language = "pli";
     }
   });

@@ -404,7 +404,7 @@ excludepattern="`echo $@ | sed 's/.*-exc //g'`"
 addtotitleifexclude=" exc. ${excludepattern,,}"
 addtoresponseexclude=" $excluderesponse $excludepattern"
 function grepexclude {
-grep -E -viE "$excludepattern"
+grep -iE -v "$excludepattern"
 }
 #echo arg="$@"
 excfn="` echo -exc-${excludepattern} | sed 's/ /-/g' | sed 's@\\\@@g' `"

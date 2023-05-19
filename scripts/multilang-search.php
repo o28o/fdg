@@ -6,7 +6,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
 } else {
     $outputlang = "";
     }
-
+echo "$p $q $extra";
 echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
 			
 /* single search no radiobuttons */

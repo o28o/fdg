@@ -153,7 +153,7 @@ indexesfile=$apachesitepath/assets/texts/all_texts_indexes.txt
 thsucurldn=$apachesitepath/assets/texts/dn_curl_toc.html
 thsulocation=$apachesitepath/tipitaka.theravada.su/
 searchdir=$apachesitepath/theravada.ru/Teaching/Canon/Suttanta/Texts
-latestrusmn=36
+latestrusmn=37
 
 function pvlimit {
 pv -L 1m -q

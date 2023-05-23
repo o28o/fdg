@@ -128,7 +128,13 @@ if (translator === "sv") {
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
-     const translatorByline = `<div class="byline"><p>Translated by ${translator}</p></div>`;
+          const translatorByline = `<div class="byline">
+     <p>
+    <span class="eng-lang" lang="en">
+     Translated by ${translator}
+    </span>
+     </p>
+     </div>`;
      
       const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Read on SC.net</a>`;
       

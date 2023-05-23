@@ -153,8 +153,7 @@ if (translator === "sv") {
 
 const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.</p>";
 
-suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning ;  
- 
+suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + scLink ;  
  
  const pageTile = document.querySelector("h1");
 

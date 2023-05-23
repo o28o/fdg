@@ -244,7 +244,7 @@ input.addEventListener("keypress", function(event) {
           <?php echo $fntmessage;?>
                         </p></div> 
          
-              <div class="container-lg alert alert-warning float-start text-left mb-3" role="alert">
+              <div class="container-md alert alert-warning float-start text-left mb-3" role="alert">
                 <?php echo $transwarning;?>
 </div>
 

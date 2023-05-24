@@ -105,7 +105,7 @@ const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
 let max = 37;
 let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40', 'an1.41-50', 'an1.51-60', 'an1.61-70', 'an1.71-81', 'an1.82-97'];
-let snranges = ['sn1.1', 'sn56.11', 'sn38.4'];
+let snranges = ['sn1.1', 'sn56.11', 'sn38.4', 'sn35.28'];
 let dnranges = ['dn33'];
 
 

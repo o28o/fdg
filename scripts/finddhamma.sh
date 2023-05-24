@@ -608,7 +608,7 @@ checktrnfile=$apachesitepath/assets/texts/$pathblock/*${filenameblock}_*
 #if [[ "$args" == *"-oru"* ]] && [[ $lettersblock == "mn" ]] && [ $numberblock -le $latestrusmn ]; then
 if [[ "$args" == *"-oru"* ]] && [ -f $checktrnfile ]; then
 defaultlang='lang=pli-rus'
- translation=`ls $apachesitepath/assets/texts/sutta/$pathblock/*${filenameblock}_*`
+ translation=`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_*`
  else
  defaultlang='lang=pli'
     translation=`ls $lookup/translation/en/$translator/$pathblock/*${filenameblock}_*`

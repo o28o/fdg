@@ -23,9 +23,9 @@ This instruction is only for Android devices. Check possible options for IOS in 
 
 copy-paste into terminal contents of the script from scripts/install-linix.sh
 
-# for Windoes 
+# for Windows 
 
-Install Mobaxterm, run it, then process is similar to Linux with apt 
+Install WAMP and clone repo to apache root
 
 # For Android
 1\. Install Termux from [f-droid](https://f-droid.org/packages/com.termux/) or [github](https://github.com/termux/termux-app)

@@ -55,10 +55,10 @@ fi
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 
-//sn
+//dn
 $pathdn = 'assets/texts/sutta/dn/';
 $check = shell_exec("
-snrangeInFile=`grep 'let dnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
+dnrangeInFile=`grep 'let dnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
 dnstring=`find $basedir/$pathdn -name \"*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 

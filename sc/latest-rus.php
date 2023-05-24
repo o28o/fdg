@@ -43,7 +43,7 @@ snrangeInFile=`grep 'let snranges = ' $basedir/sc/reader-rus-translations.js | s
 
 snstring=`find $basedir/$pathsn -name \"*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 
-sndir=\"['\${snstring%,}']\"
+sndir=\"[\${snstring%,}]\"
 
 if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then 
 echo SN no updates
@@ -62,7 +62,7 @@ snrangeInFile=`grep 'let dnranges = ' $basedir/sc/reader-rus-translations.js | s
 
 dnstring=`find $basedir/$pathdn -name \"*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 
-dndir=\"['\${dnstring%,}']\"
+dndir=\"[\${dnstring%,}]\"
 
 if [[ \"\$dndir\" == \"\$dnrangeInFile\" ]] ; then 
 echo DN no updates

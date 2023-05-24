@@ -604,9 +604,11 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
  lettersblock=`echo $filenameblock | sed 's@[0-9]*@@g'`
  numberblock=`echo $filenameblock | sed 's@[A-Za-z]*@@g'`
 #echo "$filenameblock $pathblock $lettersblock $numberblock" | tohtml
-if [[ "$args" == *"-oru"* ]] && [[ $lettersblock == "mn" ]] && [ $numberblock -le $latestrusmn ]; then
+checktrnfile=$apachesitepath/assets/texts/sutta/$pathblock/*${filenameblock}_*
+#if [[ "$args" == *"-oru"* ]] && [[ $lettersblock == "mn" ]] && [ $numberblock -le $latestrusmn ]; then
+if [[ "$args" == *"-oru"* ]] && [ -f $checktrnfile ]; then
 defaultlang='lang=pli-rus'
- translation=`ls $apachesitepath/assets/texts/sutta/mn/*${filenameblock}_*`
+ translation=`ls $apachesitepath/assets/texts/sutta/$pathblock/*${filenameblock}_*`
  else
  defaultlang='lang=pli'
     translation=`ls $lookup/translation/en/$translator/$pathblock/*${filenameblock}_*`

@@ -36,6 +36,46 @@ if (  $max_mn == $maxInFile ) {
  echo " </br><h2 style='text-align: center;' >MN updated to $max_mn in config was $maxInFile </br>
  Thank You. 🙏</h2>" ;  
 }
+//sn
+$pathsn = 'assets/texts/sutta/sn/';
+$check = shell_exec("
+snrangeInFile=`grep 'let snranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
+
+snstring=`find $basedir/$pathsn -name \"*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+
+sndir=\"['\${snstring%,}']\"
+
+if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then 
+echo SN no updates
+else 
+echo SN updated to \$sndir
+sed -i \"s@let snranges =.*@let snranges = \$sndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+fi
+"); 
+echo "<h2 style='text-align: center;'>
+$check</h2>";
+
+//sn
+$pathdn = 'assets/texts/sutta/dn/';
+$check = shell_exec("
+snrangeInFile=`grep 'let dnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
+
+dnstring=`find $basedir/$pathdn -name \"*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+
+dndir=\"['\${dnstring%,}']\"
+
+if [[ \"\$dndir\" == \"\$dnrangeInFile\" ]] ; then 
+echo DN no updates
+else 
+echo DN updated to \$sndir
+sed -i \"s@let dnranges =.*@let dnranges = \$dndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+fi
+"); 
+echo "<h2 style='text-align: center;'>
+$check</h2>";
+
+
+
 
 //an
 $pathan = 'assets/texts/sutta/an/';

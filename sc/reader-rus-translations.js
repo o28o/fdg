@@ -104,7 +104,7 @@ const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
 let max = 37;
 let an1ranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40', 'an1.41-50', 'an1.51-60', 'an1.61-70', 'an1.71-81', 'an1.82-97'];
-let snranges = ['sn1.1', 'sn1.10', 'sn56.11', 'sn38.4', 'sn35.28'];
+let snranges = ['sn1.1', 'sn1.10', 'sn1.11', 'sn1.12', 'sn1.13', 'sn1.14', 'sn1.15', 'sn1.16', 'sn1.17', 'sn1.18', 'sn1.19', 'sn1.21', 'sn1.22', 'sn1.23', 'sn1.24', 'sn1.26', 'sn1.27', 'sn1.28', 'sn1.29', 'sn1.30', 'sn1.36', 'sn1.2', 'sn14.12', 'sn38.4', 'sn56.11', 'sn35.70', 'sn35.104', 'sn35.28', 'sn22.104', 'sn22.105', 'sn22.103', 'sn22.106', 'sn22.107', 'sn22.108', 'sn22.109', 'sn22.10', 'sn22.110', 'sn22.111', 'sn22.112', 'sn22.113', 'sn22.114', 'sn22.115', 'sn22.117'];
 let dnranges = ['dn33'];
 
 var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;

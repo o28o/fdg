@@ -1,0 +1,54 @@
+# robots.txt file for http://dhamma.ru/
+User-agent: *
+Allow: /forum/*sitemap
+Allow: /forum/*arcade
+Allow: /forum/*rss
+Disallow: /forum/attachments/
+Disallow: /forum/avatars/
+Disallow: /forum/Packages/
+Disallow: /forum/Smileys/
+Disallow: /forum/Sources/
+Disallow: /forum/Themes/
+Disallow: /forum/Games/
+Disallow: /forum/*.msg
+Disallow: /forum/*.new
+Disallow: /forum/*sort
+Disallow: /forum/*topicseen
+Disallow: /forum/*wap
+Disallow: /forum/*imode
+Disallow: /forum/*action
+Disallow: /forum/index.php?PHPSESSID=*
+Disallow: /forum/index.php?*rss*
+Disallow: /forum/index.php?*wap2*
+Disallow: /forum/index.php?action=activate
+Disallow: /forum/index.php?action=admin
+Disallow: /sadhu/sadhu/*view,rss
+Disallow: /sadhu/sadhu/*/view,rss
+
+User-agent: AhrefsBot
+Disallow: / 
+
+User-agent: SemrushBot
+Disallow: / 
+
+User-agent: SemrushBot-SA
+Disallow: / 
+
+User-agent: MJ12bot
+Disallow: / 
+
+User-agent: sitebot
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+User-agent: dotbot
+Disallow: / 
+
+User-agent: *
+Crawl-delay: 1
+
+Sitemap: http://dhamma.ru/sitemap.xml
+sitemap: http://cdn.attracta.com/sitemap/673397.xml.gz
+

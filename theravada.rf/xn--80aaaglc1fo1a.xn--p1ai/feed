@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Тхеравада.рф</title>
+	<atom:link href="http://xn--80aaaglc1fo1a.xn--p1ai/feed" rel="self" type="application/rss+xml" />
+	<link>http://xn--80aaaglc1fo1a.xn--p1ai</link>
+	<description>Буддизм от корней до наших дней, Тхеравада, Учение Старейшин, Южный Буддизм, Медитация, Благородный Восьмеричный Путь,</description>
+	<lastBuildDate>Sat, 24 Mar 2018 16:19:43 +0000</lastBuildDate>
+	<language>ru-RU</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.12</generator>
+
+<image>
+	<url>http://тхеравада.рф/wp-content/uploads/2020/04/cropped-колесо-1-32x32.jpg</url>
+	<title>Тхеравада.рф</title>
+	<link>http://xn--80aaaglc1fo1a.xn--p1ai</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>проект 1</title>
+		<link>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1078</link>
+		
+		<dc:creator><![CDATA[admin1]]></dc:creator>
+		<pubDate>Sat, 24 Mar 2018 16:19:43 +0000</pubDate>
+				<category><![CDATA[Наши проекты]]></category>
+		<guid isPermaLink="false">http://тхеравада.рф/?p=1078</guid>
+
+					<description><![CDATA[текст проекта [...]<p><a class="btn btn-secondary understrap-read-more-link" href="http://xn--80aaaglc1fo1a.xn--p1ai/archives/1078">Читать далее...</a></p>]]></description>
+										<content:encoded><![CDATA[<p>текст проекта</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Новость 3</title>
+		<link>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1076</link>
+		
+		<dc:creator><![CDATA[admin1]]></dc:creator>
+		<pubDate>Sat, 24 Mar 2018 15:50:55 +0000</pubDate>
+				<category><![CDATA[НОВОСТИ]]></category>
+		<guid isPermaLink="false">http://тхеравада.рф/?p=1076</guid>
+
+					<description><![CDATA[третья новость [...]<p><a class="btn btn-secondary understrap-read-more-link" href="http://xn--80aaaglc1fo1a.xn--p1ai/archives/1076">Читать далее...</a></p>]]></description>
+										<content:encoded><![CDATA[<p>третья новость</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Вторая новость</title>
+		<link>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1073</link>
+					<comments>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1073#comments</comments>
+		
+		<dc:creator><![CDATA[admin1]]></dc:creator>
+		<pubDate>Sat, 24 Mar 2018 15:40:05 +0000</pubDate>
+				<category><![CDATA[НОВОСТИ]]></category>
+		<guid isPermaLink="false">http://тхеравада.рф/?p=1073</guid>
+
+					<description><![CDATA[потом эти новости удалим &#8212; это нужно для того, чтобы видеть как оно все выглядит, пока вы не добавили новостей сюда [...]<p><a class="btn btn-secondary understrap-read-more-link" href="http://xn--80aaaglc1fo1a.xn--p1ai/archives/1073">Читать далее...</a></p>]]></description>
+										<content:encoded><![CDATA[<p>потом эти новости удалим &#8212; это нужно для того, чтобы видеть как оно все выглядит, пока вы не добавили новостей сюда</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1073/feed</wfw:commentRss>
+			<slash:comments>83</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Первая новость</title>
+		<link>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1071</link>
+					<comments>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1071#comments</comments>
+		
+		<dc:creator><![CDATA[admin1]]></dc:creator>
+		<pubDate>Sat, 24 Mar 2018 15:36:07 +0000</pubDate>
+				<category><![CDATA[НОВОСТИ]]></category>
+		<guid isPermaLink="false">http://тхеравада.рф/?p=1071</guid>
+
+					<description><![CDATA[Текст первой новости [...]<p><a class="btn btn-secondary understrap-read-more-link" href="http://xn--80aaaglc1fo1a.xn--p1ai/archives/1071">Читать далее...</a></p>]]></description>
+										<content:encoded><![CDATA[<p>Текст первой новости</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>http://xn--80aaaglc1fo1a.xn--p1ai/archives/1071/feed</wfw:commentRss>
+			<slash:comments>99</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

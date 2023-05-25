@@ -8,7 +8,7 @@ if ( preg_match('/Android/', $uname)  ) {
 //$mode = 'online';
 
 $mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hикая.html";
-$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
 
@@ -42,7 +42,7 @@ $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
 //
 $mode = 'offline';
 $mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hикая.html";
-$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+$mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //$mode = 'online';
 
@@ -79,7 +79,7 @@ $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
   //preg_match('/rym.from.sh/', $uname) 
   $mode = 'online';
 $mainpagethrflink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";
-  $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+  $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
   
 $basedir = "/var/www/html/";
@@ -122,9 +122,8 @@ else if ( preg_match('/Linux rym.from.sh/', $uname) ) {
 //
   //preg_match('/rym.from.sh/', $uname) 
   $mode = 'online';
-$mainpagethrflink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";
-
-  $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/all-suttas-list.htm";
+  $mainpagethrflink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";
+  $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
   
 $basedir = '/home/a0092061/domains/f.dhamma.gift/public_html';

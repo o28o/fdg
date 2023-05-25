@@ -168,10 +168,10 @@ cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/
 mkdir theravada.ru && cd theravada.ru
 wget -r --no-check-certificate -P ./ --no-parent https://theravada.ru/Teaching/canon.htm
 cd theravada.ru/Teaching/Canon/Suttanta   
-for i in `find . -name  "*" -type f`; do  
+for i in `find . -name  "*htm*" -type f`; do  
     echo $i; 
     iconv -f windows-1251 $i > ../tmp
-    mv ../tmp $i
+    mv -f ../tmp $i
     sed -i 's@windows-1251@utf-8@g' $i
     done
     
@@ -244,6 +244,12 @@ vmtouch -dl /var/www/html/tipitaka.theravada.su
 
 vmtouch /var/www/html/
 
+ wget --mirror --convert-links --page-requisites --no-parent https://dhamma.ru/canon/
+ wget --mirror --convert-links --page-requisites --no-parent http://xn--80aaaglc1fo1a.xn--p1ai/palicanon
+
+
+wget -r --no-check-certificate -P ./ --no-parent http://xn--80aaaglc1fo1a.xn--p1ai/palicanon
+wget -r --no-check-certificate -P ./ --no-parent https://dhamma.ru/canon/
 
 wget \
      --recursive \
@@ -252,6 +258,5 @@ wget \
      --html-extension \
      --convert-links \
      --restrict-file-names=windows \
-     --domains website.org \
      --no-parent \
-         www.website.org/tutorials/html/
+          http://xn--80aaaglc1fo1a.xn--p1ai/palicanon

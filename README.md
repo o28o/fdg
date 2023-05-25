@@ -38,7 +38,7 @@ Install WAMP and clone repo to apache root
     mkdir -p $PREFIX/share/apache2/default-site/htdocs
     cd $PREFIX/share/apache2/default-site/htdocs
     git clone https://github.com/o28o/fdg.git ./
-    bash ./scripts/install.sh
+    bash ./scripts/install-android.sh
 
 
 # Option #2

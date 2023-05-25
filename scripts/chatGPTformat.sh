@@ -4,7 +4,7 @@ translationroot=/drives/c/soft/fdg/assets/texts/
 thrulocation=/drives/c/soft/fdg/theravada.ru/Teaching/Canon/Suttanta/Texts
 roottextlocation=/home/mobaxterm/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/
 cd $sctranslation
-for i in `find . -name "sn35*.json"`; do  
+for i in `find . -name "sn44*.json"`; do  
 linecount=`cat $i | wc -l`
 samyutta=`echo $i | awk -F'/' '{print $2}'`
 scsuttanumber=`echo $i | awk -F'_' '{print $1}'  | awk -F'/' '{print $NF}' `

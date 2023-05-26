@@ -1,8 +1,8 @@
 <?php
 // test request
 // curl http://localhost:8080/sc/api.php?fromjs=sutta/dn/dn22&type=A
-//error_reporting(E_ERROR | E_PARSE);
-//header("Content-Type:text/plain");
+error_reporting(E_ERROR | E_PARSE);
+header("Content-Type:text/plain");
 //var_dump($_GET);
 $fromjs = $_GET['fromjs'] ?? '';
 $type = $_GET['type'] ?? '';

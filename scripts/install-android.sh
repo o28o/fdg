@@ -251,6 +251,10 @@ vmtouch /var/www/html/
 wget -r --no-check-certificate -P ./ --no-parent http://xn--80aaaglc1fo1a.xn--p1ai/palicanon
 wget -r --no-check-certificate -P ./ --no-parent https://dhamma.ru/canon/
 
+
+
+
+
 wget \
      --recursive \
      --no-clobber \
@@ -263,4 +267,6 @@ wget \
 
 
 wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories --reject=pdf,docx,doc,zip,odt,rtf http://xn--80aaaglc1fo1a.xn--p1ai/palicanon
+
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories --reject=pdf,docx,doc,zip,odt,rtf http://probud.narod.ru/dop.html
 

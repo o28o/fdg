@@ -34,22 +34,24 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
   $book = "";
 }
 
-$voicefile = shell_exec("for f in $basedir/assets/audio/$nikaya$book/{$fromjs}_*
-do
- [ -e \"\$f\" ] && echo \"\$f\" | sed 's%.*/assets/audio%/assets/audio%g'|| echo 'no file'
-    break
-done ");
-$voicefile = str_replace(PHP_EOL, '', $voicefile);
+//$voicefile = str_replace(PHP_EOL, '', $voicefile);
 //echo "$basedir/$voicefile";
 //$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
-if (file_exists("$basedir/$voicefile") ) {
-  $voicelink = "<a target='_blank' href='$voicefile'>Voice.SC</a>";
+//$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_*";
+
+$fullpathvoicefile = $basedir . "/assets/audio/" . $nikaya . $book . "/" . $fromjs . "_*";
+$voicematches = glob($fullpathvoicefile);
+
+if (!empty($voicematches)) {
+    $voicefilename = basename($voicematches[0]);
+    $voicefile = "/assets/audio/" . $nikaya . $book . "/". $voicefilename;
+    $voicelink = "<a target='_blank' href='$voicefile'>Voice.SC</a>";
 } else {
-$voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+    $voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }
   
-  $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
-  
+  $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
+  echo ruslink=\"\$ruslink\"
   echo -n \"$voicelink\";
     [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='_blank' href=$linktbw/$bwlink>Bw</a>\"; 
   [ ! -z \$ruslink ] && 
@@ -60,12 +62,8 @@ $voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.
   $result = str_replace(PHP_EOL, '', $output);
 return $output;
 
-
-
 } else {
  // online 
-  
-  
   $nikaya = strtolower(preg_replace("/[0-9-.]/i","","$fromjs"));
 
 if (preg_match("/(an|sn)/i",$nikaya)) {

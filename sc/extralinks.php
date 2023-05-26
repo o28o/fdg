@@ -106,13 +106,14 @@ switch (strtolower($nikaya)) {
     $sourcefile = "$locationTocThsu/dn_toc_thsu.txt";
     // cat $sourcefile
     $grepfor = "ДН";
-    $thsulink = shell_exec("curl -s $sourcelink | grep \"$grepfor $forthsu \" | grep translations | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");
+    $thsulink = shell_exec("cat $sourcefile | grep -m1 \"$grepfor $forthsu \" | grep translations | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");
+//    $thsulink = shell_exec("curl -s $sourcelink | grep \"$grepfor $forthsu \" | grep translations | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");
     break;
   case "mn":
     $sourcelink = "https://tipitaka.theravada.su/toc/translations/1549";
     $sourcefile = "$locationTocThsu/mn_toc_thsu.txt";
     $grepfor = "МН";
-    $thsulink = shell_exec("curl -s $sourcelink | grep -A3 \"$grepfor $forthsu \" | grep Таблица | sed 's#href=\"/node/table/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");
+    $thsulink = shell_exec("cat $sourcefile | grep -m1 -A3 \"$grepfor $forthsu \" | grep Таблица | sed 's#href=\"/node/table/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");
     break;
   case "sn":
     $sourcelink = "https://tipitaka.theravada.su/toc/translations/1549";

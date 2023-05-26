@@ -103,7 +103,7 @@ switch (strtolower($nikaya)) {
   case "dn":
     $sourcelink = "https://tipitaka.theravada.su/toc/translations/1098";
     // curl -s $sourcelink
-    $sourcefile = "$locationTocThsu/dn_toc_thsu.txt";
+    $sourcefile = "$locationTocThsu/dn_curl_toc.html";
     // cat $sourcefile
     $grepfor = "ДН";
     $thsulink = shell_exec("cat $sourcefile | grep -m1 \"$grepfor $forthsu \" | grep translations | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'\"' '{print \$2}' | tail -n1");

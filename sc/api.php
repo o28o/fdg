@@ -3,10 +3,10 @@
 // curl http://localhost:8080/sc/api.php?fromjs=sutta/dn/dn22&type=A
 //error_reporting(E_ERROR | E_PARSE);
 //header("Content-Type:text/plain");
-var_dump($_GET);
+//var_dump($_GET);
 $fromjs = $_GET['fromjs'] ?? '';
 $type = $_GET['type'] ?? '';
-echo "type=$type";
+//echo "type=$type";
 function getAround($fromjs,$type) {
  include_once('../config/config.php');
   $location = $scroottextlocation;

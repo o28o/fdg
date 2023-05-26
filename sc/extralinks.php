@@ -71,20 +71,17 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
   $book = "";
 }
   
- // echo "$basedir/assets/audio/$nikaya$book/{$fromjs}_*";
-$voicefile = shell_exec("for f in $basedir/assets/audio/$nikaya$book/{$fromjs}_*
-do
- [ -e \"\$f\" ] && echo \"\$f\" | sed 's%.*/assets/audio%/assets/audio%g'|| echo 'no file'
-    break
-done ");
-$voicefile = str_replace(PHP_EOL, '', $voicefile);
-//echo "$basedir/$voicefile";
-//$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
-if (file_exists("$basedir/$voicefile") ) {
-  $voicelink = "<a target='_blank' href='$voicefile'>Voice.SC</a>";
+$fullpathvoicefile = $basedir . "/assets/audio/" . $nikaya . $book . "/" . $fromjs . "_*";
+$voicematches = glob($fullpathvoicefile);
+
+if (!empty($voicematches)) {
+    $voicefilename = basename($voicematches[0]);
+    $voicefile = "/assets/audio/" . $nikaya . $book . "/". $voicefilename;
+    $voicelink = "<a target='_blank' href='$voicefile'>Voice.SC</a>";
 } else {
-$voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+    $voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }
+
 
 
 //thsu part

@@ -50,13 +50,21 @@ if (!empty($voicematches)) {
     $voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }
   
-  $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
+  $output = shell_exec("
+  ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; 
+  ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
+
   echo -n \"$voicelink\";
-    [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='_blank' href=$linktbw/$bwlink>Bw</a>\"; 
-  [ \${#ruslink} -gt 5 ] && 
-  echo -n \"&nbsp;<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>\"; 
-  [ \${#ruslinkdn} -gt 5 ] && 
-  echo -n \"&nbsp;<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
+    [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='_blank' href=$linktbw/$bwlink>Bw</a>\"
+    [ ! -z \$ruslink ] && echo -n \"&nbsp;<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>\"
+    [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
+  
+  if [[ \${#ruslinkdn} >= 2 ]]; then
+  echo 'The length of ruslinkdn is greater than or equal to 2.'
+else
+  echo 'The length of ruslinkdn is less than 2.'
+fi
+
   ");
   $result = str_replace(PHP_EOL, '', $output);
 return $output;
@@ -123,12 +131,9 @@ $thsulink = str_replace(PHP_EOL, '', $thsulink);
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
 
 echo -n \"$voicelink\";
-      [[ $bwlink != \"\" ]] && 
-echo -n \"&nbsp;<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>\"; 
-      [[ \$ruslink != \"\" ]] && 
-  echo -n \"&nbsp;<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
-  [ \${#ruslinkdn} -gt 5 ] && 
-  echo -n \"&nbsp;<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
+      [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>\"; 
+      [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
+  [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
 return $output;
   
 }

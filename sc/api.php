@@ -27,9 +27,9 @@ return $output;
 }
 $fromjs = "sutta/an/an1.1-10";
 //$fromjs = "sutta/dn/dn31";
-//$type = "B";
+$type = "B";
 // |–|~ 
-//echo getAround($fromjs,$type);
+echo getAround($fromjs,$type);
 
-echo getAround($_GET['fromjs'],$_GET['type']);
+//echo getAround($_GET['fromjs'],$_GET['type']);
 ?>

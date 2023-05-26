@@ -2,7 +2,7 @@
 include_once('../config/config.php');
 $pathmn = 'assets/texts/sutta/mn/';
 
-$validatejson = shell_exec("bash $basedir/sc/validatejson.sh 2>&1"); 
+$validatejson = shell_exec("bash $basedir/sc/validatejson.sh 2>&1");
 
 if ( $validatejson == "" ) {
   echo " </br><h2 style='text-align: center;'>validated successfully</h2>";
@@ -24,7 +24,7 @@ foreach ($files as $file) {
         }
     }
 }
-$maxInFile = shell_exec("grep 'let max =' $basedir/sc/reader-rus-translations.js | awk '{print \$NF}' | sed 's@;@@g'"); 
+$maxInFile = shell_exec("grep 'let max =' $basedir/sc/reader-rus-translations.js | awk '{print \$NF}' | sed 's@;@@g'");
 
 if (  $max_mn == $maxInFile ) {
   echo "<h2 style='text-align: center;'>MN no updates</h2>";
@@ -34,7 +34,7 @@ if (  $max_mn == $maxInFile ) {
   sed -i 's@\$latestrusmn =.*@\$latestrusmn = '$max_mn';@g' $basedir/config/config.php ;
   ");
  echo " </br><h2 style='text-align: center;' >MN updated to $max_mn in config was $maxInFile </br>
- Thank You. 🙏</h2>" ;  
+ Thank You. 🙏</h2>" ;
 }
 //sn
 $pathsn = 'assets/texts/sutta/sn/';
@@ -45,13 +45,13 @@ snstring=`find $basedir/$pathsn -name \"*.json\" | awk -F'_' '{print $1}'  | awk
 
 sndir=\"[\${snstring%,}]\"
 
-if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then 
+if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then
 echo SN no updates
-else 
+else
 echo SN updated to \$sndir
 sed -i \"s@let snranges =.*@let snranges = \$sndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
 fi
-"); 
+");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 
@@ -64,13 +64,13 @@ dnstring=`find $basedir/$pathdn -name \"*.json\" | awk -F'_' '{print $1}'  | awk
 
 dndir=\"[\${dnstring%,}]\"
 
-if [[ \"\$dndir\" == \"\$dnrangeInFile\" ]] ; then 
+if [[ \"\$dndir\" == \"\$dnrangeInFile\" ]] ; then
 echo DN no updates
-else 
+else
 echo DN updated to \$sndir
 sed -i \"s@let dnranges =.*@let dnranges = \$dndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
 fi
-"); 
+");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 
@@ -86,16 +86,17 @@ anstring=`find $basedir/$pathan -type f | awk -F'/' '{print \$NF}'| awk -F'_' '{
 
 andir=\"['\${anstring%,}']\"
 
-if [[ \"\$andir\" == \"\$anrangeInFile\" ]] ; then 
+if [[ \"\$andir\" == \"\$anrangeInFile\" ]] ; then
 echo AN no updates
-else 
+else
 echo AN updated to \$andir
 sed -i \"s@let an1ranges =.*@let an1ranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
 fi
-"); 
+");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 //   sed -i 's@latestrusmn=.*@latestrusmn='$max_mn'@g' $basedir/config/script_config.sh ;
  // sed -i 's@\$latestrusmn =.*@\$latestrusmn = '$max_mn';@g' $basedir/config/config.php ;
-// 
+//
 ?>
+

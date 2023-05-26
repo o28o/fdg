@@ -52,7 +52,6 @@ linkforthai=https://suttacentral.net/
 linkforthaiext=/th/siam_rath
 linkforru=https://suttacentral.net/
 
-
 urllinkpli=https://find.dhamma.gift/
 urllinkenmid=
 #urllinkbwend=.html
@@ -69,10 +68,7 @@ filesizenooverwrite=1000000000000
 maxmatchesbg=300000
 archivenumber=280
 archivenumber=91
-
-
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
-
 sitename=http://localhost
 nicevalue=1
 mode=offline
@@ -203,3 +199,4 @@ cleanwords | tee -a $tempfilewords > /dev/null
 function highlightpattern {
 sed -E "s@$patternForHighlight@<b>&</b>@gI"
 }
+

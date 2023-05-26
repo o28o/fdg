@@ -1,5 +1,5 @@
 <?php
-
+var_dump($_GET);
 
 		$q = $_GET['q'];
 

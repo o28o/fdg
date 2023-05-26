@@ -123,12 +123,9 @@ $thsulink = str_replace(PHP_EOL, '', $thsulink);
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
 
 echo -n \"$voicelink\";
-      [[ $bwlink != \"\" ]] && 
-echo -n \"&nbsp;<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>\"; 
-      [[ \$ruslink != \"\" ]] && 
-  echo -n \"&nbsp;<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
-  [ \${#ruslinkdn} -gt 5 ] && 
-  echo -n \"&nbsp;<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
+      [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>\"; 
+      [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
+  [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
 return $output;
   
 }

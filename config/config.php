@@ -7,7 +7,7 @@ if ( preg_match('/Android/', $uname)  ) {
     $mode = 'offline';
 //$mode = 'online';
 
-$mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hикая.html";
+$mainpagethrflink = "/th.rf/palicanon/суттанта/дигха-hикая.html";
 $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
@@ -41,7 +41,7 @@ $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
 //Offline laptop or server for apache default /var/www/html e.g. Linux Mint / Ubuntu
 //
 $mode = 'offline';
-$mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hикая.html";
+$mainpagethrflink = "/th.rf/palicanon/суттанта/дигха-hикая.html";
 $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //$mode = 'online';

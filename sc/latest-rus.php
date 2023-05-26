@@ -2,6 +2,7 @@
 include_once('../config/config.php');
 $pathmn = 'assets/texts/sutta/mn/';
 
+// validate all json files
 $validatejson = shell_exec("bash $basedir/sc/validatejson.sh 2>&1");
 
 if ( $validatejson == "" ) {
@@ -11,6 +12,7 @@ if ( $validatejson == "" ) {
   exit(" </br><h2 style='text-align: center;'>please fix errors</h2>");
 }
 
+//apply styles for suttacentral.net 
 $styleforsc = shell_exec("bash $basedir/sc/styleforsc.sh 2>&1");
 echo "<p style='text-align: center;'>$styleforsc</p>";
 
@@ -41,7 +43,7 @@ $pathsn = 'assets/texts/sutta/sn/';
 $check = shell_exec("
 snrangeInFile=`grep 'let snranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-snstring=`find $basedir/$pathsn -name \"*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+snstring=`find $basedir/$pathsn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 
 sndir=\"[\${snstring%,}]\"
 
@@ -60,14 +62,14 @@ $pathdn = 'assets/texts/sutta/dn/';
 $check = shell_exec("
 dnrangeInFile=`grep 'let dnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-dnstring=`find $basedir/$pathdn -name \"*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+dnstring=`find $basedir/$pathdn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 
 dndir=\"[\${dnstring%,}]\"
 
 if [[ \"\$dndir\" == \"\$dnrangeInFile\" ]] ; then
 echo DN no updates
 else
-echo DN updated to \$sndir
+echo DN updated to \$dndir
 sed -i \"s@let dnranges =.*@let dnranges = \$dndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
 fi
 ");

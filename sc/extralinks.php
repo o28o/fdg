@@ -51,7 +51,6 @@ if (!empty($voicematches)) {
 }
   
   $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
-  echo ruslink=\"\$ruslink\"
   echo -n \"$voicelink\";
     [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='_blank' href=$linktbw/$bwlink>Bw</a>\"; 
   [ ! -z \$ruslink ] && 

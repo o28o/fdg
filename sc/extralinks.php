@@ -50,12 +50,12 @@ if (!empty($voicematches)) {
     $voicelink = "<a target='_blank' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }
   
-  $output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep \"{$fromjs}.html\" ` ;
+  $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
   echo -n \"$voicelink\";
     [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='_blank' href=$linktbw/$bwlink>Bw</a>\"; 
-  [ ! -z \$ruslink ] && 
+  [ \${#ruslink} -gt 5 ] && 
   echo -n \"&nbsp;<a target='_blank' href=$linkforthru/\$ruslink>Th.ru</a>\"; 
-  [ ! -z \$ruslinkdn ] && 
+  [ \${#ruslinkdn} -gt 5 ] && 
   echo -n \"&nbsp;<a target='_blank' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
   ");
   $result = str_replace(PHP_EOL, '', $output);
@@ -120,7 +120,7 @@ switch (strtolower($nikaya)) {
 }
 $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
-$output = shell_exec("ruslink=`cd $locationru ; ls . | grep \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
+$output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
 
 echo -n \"$voicelink\";
       [[ $bwlink != \"\" ]] && 

@@ -262,5 +262,5 @@ wget \
           http://xn--80aaaglc1fo1a.xn--p1ai/palicanon
 
 
-wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories --reject=pdf https://example.com
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories --reject=pdf,docx,doc,zip,odt,rtf http://xn--80aaaglc1fo1a.xn--p1ai/palicanon
 

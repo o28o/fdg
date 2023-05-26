@@ -127,14 +127,15 @@ echo -n \"$voicelink\";
 echo -n \"&nbsp;<a target='_blank' href=https://thebuddhaswords.net/$bwlink>Bw</a>\"; 
       [[ \$ruslink != \"\" ]] && 
   echo -n \"&nbsp;<a target='_blank' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
-  [[ \$ruslinkdn != \"\" ]] && 
+  [ \${#ruslinkdn} -gt 5 ] && 
   echo -n \"&nbsp;<a target='_blank' href=\$ruslinkdn>Th.su</a>\";");
 return $output;
   
 }
 }
 
-//curl localhost:8080/sc/extralinks.php?fromjs=an1.1-10
+// curl localhost:8080/sc/extralinks.php?fromjs=an1.1-10
+// curl localhost/sc/extralinks.php?fromjs=an1.1-10
 
 //$fromjs = "mn20";
 //$fromjs = "an1.1-10";

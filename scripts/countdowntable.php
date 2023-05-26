@@ -206,6 +206,7 @@ $totalinyears years total
 <a target=_blank href=/ru/sc/?q=an3.101>an3.101</a>  
 <a target=_blank href=/assets/audio/dn_Syrkin.pdf>ДН пер. Сыркин А.Я.</a>  
 <a target=_blank href=http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/lankavat/lanka.htm>TITUS</a>  
+<a target=_blank href=http://spiritual.su/>spiritual.su</a>  
  
 </td>
 </tr>

@@ -5,8 +5,8 @@
 //header("Content-Type:text/plain");
 var_dump($_GET);
 $fromjs = $_GET['fromjs'] ?? '';
-$type = $_GET['look'] ?? '';
-echo "look=$type";
+$type = $_GET['type'] ?? '';
+echo "type=$type";
 function getAround($fromjs,$type) {
  include_once('../config/config.php');
   $location = $scroottextlocation;

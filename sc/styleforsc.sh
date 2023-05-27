@@ -7,7 +7,7 @@ echo -n "fixing ellipsis in $i"
 sed -i 's@\.\.\.@…@g' $i
 sed -i 's@……@… …@g' $i
 sed -i 's@  …@ …@g' $i
-echo "done<br>"
+echo " done <br>"
 fi
 done
 

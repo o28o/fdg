@@ -232,17 +232,18 @@ input.addEventListener("keypress", function(event) {
         include 'assets/common/horizontalMenuEn.php'; 
       } 
       ?>
-
-				<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>
-		
-			<div class="embed-container mb-5"> 
-                   <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
-									</div>
-									
-        <div class="font-italic"> 
+	        <div class="font-italic"> 
         <p class="lead mb-5 font-italic text-center ">
           <?php echo $fntmessage;?>
                         </p></div> 
+		
+					<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
+		
+			<div class="embed-container mt-4 mb-5"> 
+                   <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
+									</div>
+									
+
          
               <div class="container-md alert alert-warning float-start text-left mb-3" role="alert">
                 <?php echo $transwarning;?>

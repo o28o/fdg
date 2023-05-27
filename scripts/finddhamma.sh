@@ -605,7 +605,7 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
  numberblock=`echo $filenameblock | sed 's@[A-Za-z]*@@g'`
 #echo "$filenameblock $pathblock $lettersblock $numberblock" | tohtml
 checktrnfile=$apachesitepath/assets/texts/$pathblock/*${filenameblock}_*
-#if [[ "$args" == *"-oru"* ]] && [[ $lettersblock == "mn" ]] && [ $numberblock -le $latestrusmn ]; then
+
 if [[ "$args" == *"-oru"* ]] && [ -f $checktrnfile ]; then
 defaultlang='lang=pli-rus'
  translation=`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_*`

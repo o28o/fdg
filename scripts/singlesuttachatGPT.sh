@@ -29,7 +29,7 @@ echo замени в json файле текст пали
 echo
 cat $roottextlocation
 echo 
-echo на русский перевод ниже
+echo на русский перевод ниже. обязательно сохрани индексы
 echo 
 w3m -dump $thrufilename | cat 2>&1 | sed '1,12d' | grep -v "(Буддизм|Учение Старцев|Тхеравада.ру|◄|٭|₪) | sed 's/^[0-9]//g'"
 

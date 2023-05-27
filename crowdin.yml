@@ -1,0 +1,3 @@
+files:
+  - source: /assets/texts/pali
+    translation: /assets/texts/sutta/**/%two_letters_code%

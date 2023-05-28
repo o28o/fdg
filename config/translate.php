@@ -133,154 +133,8 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 
 }
 else {
-$lang = "en";
-$htmllang = "en";
-$mainpage = '/';
-$mainscpage = '/sc';
-$searchcaption = 'Search';
-$metadesc = 'Liberation Search Engine. Search in Pali Suttanta and Vinaya';
-$titletwit = 'find.Dhamma.gift - Liberation Search Engine';
-$ogdesc = 'Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai';
-$oglocale = 'en_US';
-$ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift.jpg';
-$menu = 'Menu';
-$menuread = 'Read';
-$menuhist = 'Search History';
-$menuhowto = 'How To';
-$menuabout = 'About';
-$menulinks = 'Useful Links';
-$menucontact = 'Contacts';
-$tooltiptitle = 'In Pāḷi, English, Russian & ไทย';
-$title = 'Search for Truth';
-$tooltippli = 'Default search. In Suttas of an, sn, mn, dn. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya';
-$radiopli = 'Pāḷi';
-$tooltipdef = 'Search for definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. If nothing will be found in Suttas it will automatically search in Vinaya. For all-round view studing all related Suttas is recommended. See "Advanced" for details';
-$radiodef = 'Def';
-$tooltipvin = 'Search in Pali Vinaya';
-$radiovin = 'Vin';
-$tooltipkn = '+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig';
-$radiokn = '+KN';
-$tooltiponl = 'X Y ... Finds texts containing only both and more matches for X, Y ... Without this option only texts where X Y are standing next to each other will be found';
-$checkboxonl = 'Onl';
-$tooltipnonl = 'By default only texts containing X Y ... on any distance between  words will be found. With this option texts containing only X Y standing next to each other will be in results.';
-$checkboxnonl = 'A B';
-$tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then sc.net texts, then thebuddhaswords.net translations';
-$radioen = 'Eng';
-$tooltipltr= "+ search in Pali in all books of kn including later texts";
-$radioltr = "+Later";
-$tooltipth = "(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations. Without this option default search will start with Pali texts, then with sc.net Thai translations";
-$radioth = "ไทย";
-$tooltipru = "(optional) Search in an, sn, mn, dn in Russain Suttacentral.net translations";
-$radioru = "Rus";
-$tooltiptbw = "Search in all contents of TheBuddhasWords.net";
-$radiotbw = "TBW";
-
-$tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
-$radiovindef = "DefV";
-$tooltipla = "Add $defaultla line after match";
-$checkboxla = "+$defaultla";
 
 
-$regexMemo = ' <h5>RegEx Memo</h5>
-  <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
-          <p style="text-align: left;">
-     <!--  <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br> -->
-     <strong>-la1 X</strong> - search for X, add 1 next line to output after lines containing X<br>
-       <strong>X -exc Y</strong> - search for X, exclude Y<br>
-           <strong>X -exc "Y(ti|nti)"</strong> - search for X, exclude Y ending with "ti" and "nti"<br> 
-       <strong>\\\\bX</strong> - beginning of the word or <strong>Y\\\\b</strong> end<br>
-<strong>X.*Y</strong> - any number of symbols between X and Y<br>
-<strong>X.{0,10}Y</strong> - from 0 to 10 symbols<br>
-<strong>X\\\\S*\\\\sY</strong> - next words X и Y, with variable ending of X<br>      
-<strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
-<strong>[aā]</strong> - multiple variants<br>           
-<strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
-<strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
-<strong>\'^"mn.*X\'</strong> - find X in all Majjhimma Nikaya<br>            
-<strong>dn22.*Y</strong> - find Y in DN22 only<br>
-<br>AI can generate RegEx for Grep, e.g. <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>here</a><br>
-</p>          ';
-$titlehowtovideo = 'How-To Video';
-$linkhowtovideo = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
-$titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift';
-$fntmessage = 'All-round view on Four Noble Truths<br>
-        in Pali Suttas and Vinaya.<br>
-        Understand the real meaning <br>
-        of Four Noble Truths<br>
-        and finish the p<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">a</a>in.';
-        
-$mainscrollmodalheader = 'Dukkha in Suttas';        
-$mainscrollmodal = '<p class="">	
-<h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
-“And what is pain?</br>
-			</br>
-Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Whatever is experienced as  <strong>bodily pain</strong>, bodily discomfort, pain or discomfort born of bodily contact, </br>
-</br>
-idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
-that is called pain.</br>
-</br>
-<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
-“And what is stress?</br>
-</br>
-Yaṁ kho, bhikkhave, <strong>cetasikaṁ dukkhaṁ</strong> cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Whatever is experienced as <strong>mental pain</strong>, mental discomfort, pain or discomfort born of mental contact, that is called distress,</br>
-</br>
-idaṁ vuccati, bhikkhave, domanassaṁ.</br>
-that is called stress.</br></p>
-<p class="text-end">
-<a href=/sc/?q=dn22>dn22</a> <a href=/sc/?q=mn141>mn141</a>
-</p>';
-
- 
-$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
-
-$anamemolds = 'Translations by M. Olds';
-$anameasc = 'Asceticism in Dhamma';
-$anameati = 'Accesstoinsight.org patimokkha';
-$anamehist = 'History';
-$anameuseful = 'Useful Links';
-$anamedpd = 'Pali for mDict';
-
-$anameresearch = 'Research';
-$anameread = 'Read';
-$anamestudy = 'Study';
-$anamematerials = 'Grammar';
-$anamecases = 'Cases';
-$anameconj = 'Conjugations';
-$anametextbook = 'Pali Textbook';
-$anameothermat = 'Other Materials';
-$anamesdiff = 'Sutta Diff';
-
-
-$aboutheader = 'About Project';
-$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift is a Liberation Search Engine, it\'s a search tool based on SuttaCentral.net and Theravada.ru materials. You can search in Pali, Russian, Thai and English for meanings, definitions, metaphors, explanations, people, locations etc. described in Suttas and Vinaya.</p></div>
-<div class="col-lg-4 me-auto"><p class="lead">Dhamma Enthusiasts, Developers and Contributors are warmly welcome, because project has great potential to find the real meaning of the texts. But! I\'m not a developer and its just a bash script with php wrapper😊</p></div>';
-$prongh = ' Project on GitHub';
-
-
-$headerexamples = 'Examples';
-$examplelist = '<li>Definition of the <a href="/assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">Kata.*dukkhaṁ\\\\?</a></li>
-
- <li>Sutta where Buddha says that he doesn\'t make <a href="/assets/demo/dvayagaaminii_suttanta_pali_1-1.html">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
-
-             <li>All variants of the word <a href="/assets/demo/pa.ticcasamupp_suttanta_pali_33-112.html">paṭiccasamuppado</a> in Pali with quotes in English</li>
-            
-                <li>All suttas about <a href="/assets/demo/eightfold_suttanta_en_158-343.html">Eightfold</a> Path in English</li>
-                <li>All suttas that took place or related to <a href="/assets/demo/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
-                <li>All suttas where <a href="/assets/demo/sariputt_suttanta_ru_168-1055.html">Sariputta</a> was mentioned in Russian</li>
-    
-             <li>All suttas about or containing the word <a href="/assets/demo/ocean_suttanta_en_85-228.html">ocean</a> in English</li>
-                 <li>All Suttas with <a href=./assets/demo/(seyyathaapi-adhivacan-uupama-opama)-exc-opama~n~n_suttanta_pali_617-2071.html>metaphors & similies</a> in Pali and English</li>   ';
-$howtoheader = 'How to Search';
-
-$contactheader = 'Contacts';
-$contaccalltoaction = 'Find the Noble Eightfold Path.<br>
-							Understand the Four Noble Truths.<br>Dhamma - is Actuality.
-                      ';
- $demovideo = 'Demo Video';  
- $demovideolink = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
- $basics = 'Tips & Tricks';
  $basicscontent = '<p class="mb-4"><strong>Tip #0</strong><br>Search available in Pali, English, Russian and Thai materials of SuttaCentral.net and also in thebuddhaswords.net. If some text is not presented there, you wont be able to find it.<br>
 Also, e.g. if "sankhara" is translated as "formation" in thw materials you won\'t find it in suttacentral.net, as it\'s translated as "choice" and vice-versa.<br>
 The following logic is applied: if you search in Roman script: 1st is Pali, then tbw materials, then Suttacentral.net materials. In Thai script - 1st is Pali, then Thai translations. In Cyrillic - Russian translations only.
@@ -348,78 +202,25 @@ $advancedcontent = '<strong>Tip #1</strong><br>
 									With Def following search will run:<br>
 grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
 Please, create an issue on github or send an email, if you\'ll find other criteria.<br><br> ';
-
-
-$closemodal = 'Close Window';
-
-$head2recomlinks = 'Recommended Links';
-$detailonline = 'online';
-$detailoffline = 'offline';
-$detailonandoffline = 'online & offline';
-$detailapp = 'app';
-$detailtable = 'table';
-$detailtextbook = 'textbook';
-
-$header5fdgoffline = 'find.dhamma.gift Offline Edition';
-$pfdg = 'All encompassing search within all Suttas and Vinaya';
-$pfdgoffline = 'Offline version & setup instruction. Right now Android only🙏';
-
-$head5othermat = 'Materials for studying Pali in English and Russian';
-$pothermat = 'Collection of textbooks and tables';
-
-$pconj = 'Conjugations sometimes mistranslated';
-$smcheckpali = 'Check Pali original';
-
-$pcases = 'Cases are mistranslated pretty often';
-
-$ptextbook = 'Highly recommended';
-$pthru = 'The most complete translation of Suttanta in Russian';
-$pthsu = 'Multiple translation options. Pali-English-Russian line-by-line';
-$smthsu = 'Especially recommended for studying Digha Nikaya';
-
-$pdpr = 'Profound online tool for Pali readings and alternative search';
-$smdpr = 'Built-in Pali-English dictionary';
-$ptbw = 'Very impressive paragraph-by-paragraph Pali-English collection';
-$smtbw = 'Pali-English on hover dictionary built-in';
-$psc = 'The most complete line-by-line Pali-English collection';
-$smsc = 'Pali-English dictionary can be turned on in settings';
-
-$psclight = 'Suttacentral.net texts with quicker lightweight interface';
-$smsclight = 'Pali-English Line-by-line';
-$ptamilcube = 'Simple Online English-Pali Dictionary';
-$head5words = 'All Pali words from Suttanta (except KN) & Vinaya';
-$pwords = 'In alphabetical order with count number';
-$pwids = 'Big online collection of dictionaries. Not only Pali, but multiple spiritual traditions of India';
-$smwisd = 'Very helpful for difficult terms';
-
-$head5cse = 'Google from dhamma.gift';
-$psce = 'Search with Google within recommended resources';
-$smcse = 'Especially convenient for Wisdomlib';
-
-$pdpd = 'The biggest and quickest dictionary and pali grammar';
-$smdpd = 'Available for PC, Linux, Mac, Android, IOS';
-
-$head5dpdru = 'DPD Russian Version';
-$pdpdru = 'Small Pali-Russian Dictionary based on DPD';
-$smdpdru = '';
-
-
-$head5pts = 'Pali Text Society Dictionary';
-$ppts = 'One of the most famous Pali English dictionaries';
-
-$head5plikeyboard = 'Pali Layout';
-$pplikeyboard = 'Install "O keyboard" itself before installing plug-in';
-$smplikeyboard = 'to add Pali: Language - Transliteration - Pali (IAST)';
-
-$pt2s = 'Text-to-Speech generator for English and Russian';
-$smt2s = 'Listen to sc.dhamma.gift, theravada.ru & other';
-$pscvoice = 'Generates Pali & English text-to-speech';
-$smscvoice = 'for suttacentral.net texts';
-
-$title404 = '404 Error';
-$p404 = ' Page not found. But';
-$link404 = '/sc/?q=sn38.4';
-$hreftext404 = 'Go Home';
+$regexMemo = ' <h5>RegEx Memo</h5>
+  <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
+          <p style="text-align: left;">
+     <!--  <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br> -->
+     <strong>-la1 X</strong> - search for X, add 1 next line to output after lines containing X<br>
+       <strong>X -exc Y</strong> - search for X, exclude Y<br>
+           <strong>X -exc "Y(ti|nti)"</strong> - search for X, exclude Y ending with "ti" and "nti"<br> 
+       <strong>\\\\bX</strong> - beginning of the word or <strong>Y\\\\b</strong> end<br>
+<strong>X.*Y</strong> - any number of symbols between X and Y<br>
+<strong>X.{0,10}Y</strong> - from 0 to 10 symbols<br>
+<strong>X\\\\S*\\\\sY</strong> - next words X и Y, with variable ending of X<br>      
+<strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
+<strong>[aā]</strong> - multiple variants<br>           
+<strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
+<strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
+<strong>\'^"mn.*X\'</strong> - find X in all Majjhimma Nikaya<br>            
+<strong>dn22.*Y</strong> - find Y in DN22 only<br>
+<br>AI can generate RegEx for Grep, e.g. <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>here</a><br>
+</p>          ';
 
 $dpddesc = 'Digital Pali Dictionary Online';
 

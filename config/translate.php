@@ -74,7 +74,6 @@ $linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
 $fntmessage = 'Katamañca, bhikkhave, dukkhaṁ?<br>
 Что такое, монахи, боль / дуккха?
-
 <p class="text-end">
 dn22 mn141
 </p>

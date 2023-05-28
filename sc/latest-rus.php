@@ -1,6 +1,5 @@
 <?php
 include_once('../config/config.php');
-$pathmn = 'assets/texts/sutta/mn/';
 
 // validate all json files
 $validatejson = shell_exec("bash $basedir/sc/validatejson.sh 2>&1");
@@ -16,28 +15,26 @@ if ( $validatejson == "" ) {
 $styleforsc = shell_exec("bash $basedir/sc/styleforsc.sh 2>&1");
 echo "<p style='text-align: center;'>$styleforsc</p>";
 
-$files = scandir($pathmn);
-$max_mn = 0;
-foreach ($files as $file) {
-    if (preg_match('/^mn(\d+)_/', $file, $matches)) {
-        $mn = intval($matches[1]);
-        if ($mn > $max_mn) {
-            $max_mn = $mn;
-        }
-    }
-}
-$maxInFile = shell_exec("grep 'let max =' $basedir/sc/reader-rus-translations.js | awk '{print \$NF}' | sed 's@;@@g'");
+//mn
+$pathmn = 'assets/texts/sutta/mn/';
+$check = shell_exec("
+mnrangeInFile=`grep 'let mnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-if (  $max_mn == $maxInFile ) {
-  echo "<h2 style='text-align: center;'>MN no updates</h2>";
-} else {
-  shell_exec("sed -i 's@let max =.*@let max = '$max_mn';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js ;
-  sed -i 's@latestrusmn=.*@latestrusmn='$max_mn'@g' $basedir/config/script_config.sh ;
-  sed -i 's@\$latestrusmn =.*@\$latestrusmn = '$max_mn';@g' $basedir/config/config.php ;
-  ");
- echo " </br><h2 style='text-align: center;' >MN updated to $max_mn in config was $maxInFile </br>
- Thank You. 🙏</h2>" ;
-}
+mnstring=`find $basedir/$pathmn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+
+mndir=\"[\${mnstring%,}]\"
+
+if [[ \"\$mndir\" == \"\$mnrangeInFile\" ]] ; then
+echo MN no updates
+else
+echo MN updated to \$sndir
+sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+fi
+");
+echo "<h2 style='text-align: center;'>
+$check</h2>";
+
+
 //sn
 $pathsn = 'assets/texts/sutta/sn/';
 $check = shell_exec("

@@ -1,0 +1,3 @@
+files:
+  - source: /assets/texts/pali
+    translation: assets/translation/%original_file_name%

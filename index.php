@@ -259,7 +259,7 @@ input.addEventListener("keypress", function(event) {
 									
 
          
-              <div class="container">
+              <div class="container-lg">
               <div class="containerOnMain">
               <div class="alert alert-warning float-start text-left mb-3" role="alert">
                 <?php echo $transwarning;?>

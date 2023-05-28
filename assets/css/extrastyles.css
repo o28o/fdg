@@ -123,10 +123,9 @@ max-width: 274pxalign-items: center;
 }
 
 
-@media (min-width: 992px) {
 .containerOnMain {
         max-width: 500px; /* max-width for desktop */
-    }
+
 	
 @media only screen and (max-width: 900px) {
 

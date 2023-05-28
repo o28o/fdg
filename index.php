@@ -233,8 +233,10 @@ include 'assets/common/horizontalMenuEn.php';
 <!-- Portfolio Item 3-->
 <div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
 <div class="font-italic"> 
-<p class="lead font-italic text-center "><?php echo $fntmessage;?>
-</p></div> 
+<p class="font-italic text-center ">
+<?php echo $fntmessage;?>
+</p>
+</div> 
 <div class="col-md-6 col-lg-4 mb-3">
 						                     
 			
@@ -665,7 +667,9 @@ include 'assets/common/horizontalMenuEn.php';
 <div class="col-lg-8">
 
 <!-- Portfolio Modal - Title-->
-<p class="portfolio-modal-title text-secondary mb-0"><?php echo $mainscrollmodalheader ; ?></p>
+<h4 class="text-secondary mb-0">
+<?php echo $mainscrollmodalheader ; ?>
+</h4>
 <!-- Icon Divider-->
 <div class="divider-custom">
 <div class="divider-custom-line"></div>

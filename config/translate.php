@@ -108,10 +108,10 @@ $tooltipla  = "Add $defaultla line after match";
 $checkboxla = "+$defaultla";
 
 
-$mainscrollmodal = '<p class="">	
+$mainscrollmodal = '<p class="">
+From <a href=\"/sc/?q=dn22\">dn22</a> <a href=\"/sc/?q=mn141\">mn141</a></br>	
 <h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
-“And what is pain?</br>
-			</br>
+“And what is pain?</br></br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
 Whatever is experienced as  <strong>bodily pain</strong>, bodily discomfort, pain or discomfort born of bodily contact, </br>
 </br>
@@ -126,9 +126,7 @@ Whatever is experienced as <strong>mental pain</strong>, mental discomfort, pain
 </br>
 idaṁ vuccati, bhikkhave, domanassaṁ.</br>
 that is called stress.</br></p>
-<p class="text-end">
-<a href=/sc/?q=dn22>dn22</a> <a href=/sc/?q=mn141>mn141</a>
-</p>';
+';
 
 $basicscontent = '<p class="mb-4"><strong>Tip #0</strong><br>Search available in Pali, English, Russian and Thai materials of SuttaCentral.net and also in thebuddhaswords.net. If some text is not presented there, you wont be able to find it.<br>
 Also, e.g. if "sankhara" is translated as "formation" in thw materials you won\'t find it in suttacentral.net, as it\'s translated as "choice" and vice-versa.<br>

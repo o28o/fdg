@@ -257,8 +257,6 @@ input.addEventListener("keypress", function(event) {
                    <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
 									</div>
 									
-
-              <div class="container alert alert-warning float-start text-left mb-3" role="alert">    
              <div style="max-width: 600px;" class="container-lg">
               <div class="alert alert-warning float-start text-left mb-3" role="alert">
                 <?php echo $transwarning;?>

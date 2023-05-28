@@ -134,6 +134,11 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 }
 else {
 
+$jsonString = file_get_contents('config/en.json');
+$data = json_decode($jsonString, true);
+
+extract($data);
+
 
  $basicscontent = '<p class="mb-4"><strong>Tip #0</strong><br>Search available in Pali, English, Russian and Thai materials of SuttaCentral.net and also in thebuddhaswords.net. If some text is not presented there, you wont be able to find it.<br>
 Also, e.g. if "sankhara" is translated as "formation" in thw materials you won\'t find it in suttacentral.net, as it\'s translated as "choice" and vice-versa.<br>

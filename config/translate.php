@@ -7,15 +7,10 @@ $data = json_decode($jsonString, true);
 extract($data);
 
 
-$regexMemo = '<h5>Памятка по RegEx</h5>
-  <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
-          <p style="text-align: left;">
-          
-  <!--   <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> -->
-       <strong>-la2 X</strong> - искать X и добавить в результаты 2 следующие строки после строки с X<br>
-     <strong>X -exc Y</strong> - искать X, исключить Y<br>
-    <strong>X -exc "Y(ti|nti)"</strong> - искать X, исключить Y с окончаниями на "ti" и "nti"<br> 
-         <strong>\\\\bX</strong> - начало или <strong>Y\\\\b</strong> конец слова<br>
+$regexMemo = '<h5>Памятка по RegEx</h5><p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p><p style="text-align: left;"><!-- <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> --><strong>-la2 X</strong> - искать X и добавить в результаты 2 следующие строки после строки с X<br>
+<strong>X -exc Y</strong> - искать X, исключить Y<br>
+<strong>X -exc "Y(ti|nti)"</strong> - искать X, исключить Y с окончаниями на "ti" и "nti"<br> 
+<strong>\\\\bX</strong> - начало или <strong>Y\\\\b</strong> конец слова<br>
 <strong>X.*Y</strong> - любое количество символов между X и Y<br>
 <strong>X.{0,10}Y</strong> - от 0 до 10 символов<br>
 <strong>X\\\\S*\\\\sY</strong> - рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным<br>     
@@ -26,9 +21,7 @@ $regexMemo = '<h5>Памятка по RegEx</h5>
 <strong>\'^"mn.*X\'</strong> - искать X во всей Мадджхимма Никае<br>            
 <strong>dn22.*Y</strong> - искать Y в одной Сутте ДН22<br><br> 
 ИИ может сгенерировать регулярное выражение для Grep, к примеру <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>здесь</a><br>
-        </p>     ';
-
-
+</p>';
 
 $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 Поиск производится на Пали, Русском, Английском и Тайском в материалах SuttaCentral.net и дополнительно thebuddhaswords.net, то есть если того или иного перевода или определенных слов нет на этих ресурсах здесь их также не будет.<br>
@@ -44,17 +37,12 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 Запустите поиск с опцией -kn, чтобы также искать в следующих книгах КН: Дхаммапада, Удана, Итивуттака, Суттанипата, Тхерагатха, Тхеригатха. Другие книги КН не используются в поиске даже с параметром -kn. Вы можете использовать другие поисковые сайты для поиска в Джатаках и остальных книгах КН.
 <br>
 Пример #1: -kn jamm 
-<br>
-									 Этот запрос выведет все совпадения по корню jamm из DN, MN, SN, AN + перечисленные книги KN.
-																		 <br>
-									 Пример #2: jamm 
-									 <br>
-									 Выведет совпадения только из DN, MN, SN, AN.
-									 <br><br>
+<br>Этот запрос выведет все совпадения по корню jamm из DN, MN, SN, AN + перечисленные книги KN.<br>Пример #2: jamm 
+<br>Выведет совпадения только из DN, MN, SN, AN.<br><br>
 <strong>Совет #3 Виная</strong><br> 
-      Если вы хотите искать в текстах Винаи добавьте -vin к поисковому запросу. К примеру, чтобы искать совпадение по cetana в Винае запрос должен выглядеть так: -vin cetana <br><br>
-			<strong>Совет #4</strong><br>
-    Используйте корень слова для более широких результатов поиска. Или к примеру с или без приставок, или окончаний, чтобы сузить результаты. 
+Если вы хотите искать в текстах Винаи добавьте -vin к поисковому запросу. К примеру, чтобы искать совпадение по cetana в Винае запрос должен выглядеть так: -vin cetana <br><br>
+<strong>Совет #4</strong><br>
+Используйте корень слова для более широких результатов поиска. Или к примеру с или без приставок, или окончаний, чтобы сузить результаты. 
 <br><br>
 <strong>Совет #5</strong><br>
 Сделайте упор на Пали, используйте другие языки во вторую очередь. Пали - это язык на котором записаны самые древние тексты связанные с Дхаммой и Будда говорил на языке более близком или ставшим в последствии Пали, он гарантированно не говорил ни на Русском, ни на английском.	
@@ -63,25 +51,24 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 <strong>Совет #7</strong><br>Минимальная длинна поискового запроса - 3 символа. Но если возможно ищите более длинные шаблоны. Так вы получите более точные результаты.<br><br>
 <strong>Совет #8</strong><br> 
 Мы рекомендуем искать на Пали. Так вы получите наилучшие результаты и вы разовьёте очень важную привычку - не полагаться слепо на переводы. Но очевидно, вы также можете получить некоторые преимущества от поисков на других языках. Если вы ищете животных, растения и т.п. К примеру, в текстах на Пали используется как минимум четыре разных слова. Тогда как на русском и английском это "змея" и "гадюка".<br><br>
-									<strong>Совет #9</strong><br>
+<strong>Совет #9</strong><br>
 Если запрос завершается ошибкой из-за таймаута, попробуйте более длинный поисковый запрос или более специфичное слово.  <br><br>
-	<strong>Совет #10 Быстрые переходы</strong><br>
-   Также как на <a href="https://sc.dhamma.gift">sc.Dhamma.gift</a> или <a href="https://find.dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
-   Через строку поиска можно перейти в сутты dn, mn, sn, an, ud из kn и тексты Винаи. <br><br>
+<strong>Совет #10 Быстрые переходы</strong><br>
+Также как на <a href="https://sc.dhamma.gift">sc.Dhamma.gift</a> или <a href="https://find.dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
+Через строку поиска можно перейти в сутты dn, mn, sn, an, ud из kn и тексты Винаи. <br><br>
 <!--								  <strong>Совет #11</strong><br>
-                                   !!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  -->
+!!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  -->
 <p class="mb-4"><strong>Что именно подсчитывается в колонке Mtphr из таблицы результатов?</strong><br>
-										Подсчитываются совпадения по всему тексту, без привязки к критерию поиска:<br>
-										"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
-										Игнорируются:<br>
-    "adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
-    Создайте issue на github или напишите по почте, если вы найдёте другие критерии.
-    <br><br>                    
+Подсчитываются совпадения по всему тексту, без привязки к критерию поиска:<br>
+"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
+Игнорируются:<br>
+"adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
+Создайте issue на github или напишите по почте, если вы найдёте другие критерии.
+<br><br>                    
 </p>';
 
 
-$advancedcontent = '<strong>Совет #1</strong><br>
-Опция применима только для поисков на пали или английском! Если вы хотите найти определенное слово в определенной сутте, самьютте, никае - запустите поиск в таком виде: Sn17.*seyyathāpi
+$advancedcontent = '<strong>Совет #1</strong><br>Опция применима только для поисков на пали или английском! Если вы хотите найти определенное слово в определенной сутте, самьютте, никае - запустите поиск в таком виде: Sn17.*seyyathāpi
 <br>Запрос из примера выведет в таблицы все метафоры и сравнения из Sn17.<br>
 Если вы хотите найти разные слова в определенной сутте или группе сутт, запрос должен выглядеть так, включая кавычки:
 "Sn51.*(seyyathāpi|adhivacan|ūpama|opama)" 
@@ -92,43 +79,20 @@ $advancedcontent = '<strong>Совет #1</strong><br>
 <br>
 По умолчанию такая вариация установлена для буквы "е", она автоматически преобразуется в [ёе], если вам требуется найти совпадения только с "е", соответственно, то запрос можно сделать в таком виде: [е], к примеру впер[е]д.
 <br>
-С буквой ё поиск можно осуществлять без доп. символоа.
-								 <br><br>
-						
-									<strong>Совет #3</strong><br>
-								   Если вы хотите найти слова начинающиеся или заканчивающиеся с определенного шаблона, используйте \\\\b в начале и\или в конце шаблона поиска, к примеру<strong>\\\\bkummo\\\\b</strong> выведет в таблицы только kummo и пропустит kummova и любые другие совпадения<br><br>
-									<strong>Совет #4</strong><br>
-								   Чтобы исключить один шаблон из результатов другого шаблона используйте аргумент -exc.<br>
-								   Пример: dundubh -exc devadundubh - этот запрос позволит вам выгрузить совпадения по словам похожим на dundubh, но без devadundubh<br><br>
-<strong>Совет #5</strong><br>
-								   Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать. 
-								   Специальные ИИ могут сгенерировать регулярное выражение для Grep, к примеру <a href="https://codepal.ai/regex-generator" target=_blank>здесь</a>.
-								   Почитайте, поизучайте regex в интернете.<br><br>
-
-	<strong>Совет #6</strong><br>
-								   Почитайте на сайте проекта или в интернете о <a target="_blank" href="https://datatables.net/">DataTables</a>, результаты, которые вы получаете из текстов выводятся с помощью них.<br><br>
-								   
-							<strong>Совет #7 Подборки</strong><br>
-								   Вы можете создавать подборки текстов. <br>
-								   Примеры запросов:<br> 
-								   "sn42.8|sn20.5" (включая кавычки) выведет в одну таблицу две Сутты полностью<br>
-								   "Sn20.1" (включая кавычки) выведет Sn20.1 sn20.10 sn20.11 и тд в одну таблицу<br>
-								   "Sn20.1\\\\b" (включая кавычки) выведет только одну Сутту
-								   <br><br>
-
-									<strong>Как работает опция "Опр" - Определение</strong><br>
-									Если эта опция активирована поиск выполняется по следующим критериям:<br>
+С буквой ё поиск можно осуществлять без доп. символоа.<br><br>
+<strong>Совет #3</strong><br>Если вы хотите найти слова начинающиеся или заканчивающиеся с определенного шаблона, используйте \\\\b в начале и\или в конце шаблона поиска, к примеру<strong>\\\\bkummo\\\\b</strong> выведет в таблицы только kummo и пропустит kummova и любые другие совпадения<br><br>
+<strong>Совет #4</strong><br>Чтобы исключить один шаблон из результатов другого шаблона используйте аргумент -exc.<br>Пример: dundubh -exc devadundubh - этот запрос позволит вам выгрузить совпадения по словам похожим на dundubh, но без devadundubh<br><br>
+<strong>Совет #5</strong><br>Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать.Специальные ИИ могут сгенерировать регулярное выражение для Grep, к примеру <a href="https://codepal.ai/regex-generator" target=_blank>здесь</a>.Почитайте, поизучайте regex в интернете.<br><br><strong>Совет #6</strong><br>Почитайте на сайте проекта или в интернете о <a target="_blank" href="https://datatables.net/">DataTables</a>, результаты, которые вы получаете из текстов выводятся с помощью них.<br><br>
+<strong>Совет #7 Подборки</strong><br>
+Вы можете создавать подборки текстов. <br>
+Примеры запросов:<br>						   "sn42.8|sn20.5" (включая кавычки) выведет в одну таблицу две Сутты полностью<br>
+"Sn20.1" (включая кавычки) выведет Sn20.1 sn20.10 sn20.11 и тд в одну таблицу<br>
+"Sn20.1\\\\b" (включая кавычки) выведет только одну Сутту
+<br><br>
+<strong>Как работает опция "Опр" - Определение</strong><br>
+Если эта опция активирована поиск выполняется по следующим критериям:<br>
 grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
 Пожалуйста, создайте issue на github или напишите по почте, если вы найдёте другие критерии.<br><br> ';
-
-$dpdpart = '<h3>Скачать Словарь "DPD"</h3>
-<a target="_blank" href="https://digitalpalidictionary.github.io/"><p>Сайт DPD</p></a>
-
-<a target="_blank" href="https://devamitta.github.io/pali/"><p>DPD Русская Версия</p></a>
-<h3>Скачать Оболочку mDict</h3>
-';
-
-
 
 }
 else {
@@ -190,40 +154,35 @@ Search is performed in All DN, MN, SN, AN. use <strong>-kn</strong> option if yo
                                    <strong>Tip #7</strong><br>Minimal length of search pattern is 3 symbols. But if possible search for longer patterns. Then you will get more precise results.<br><br>
 									<strong>Tip #8</strong><br> 
                                    We highly recommend to search in Pali. As it will give the best results, and you will develop a very important habit to look into Pali and do not rely blindly on the translations. But obviously you can get some benefits from searches in translations. If you are looking for animals, plants, etc. There are at least 4 different pali words for a snake but in Russian or English - it\'s just "a snake" or "a viper". <br><br>
-				
-									<strong>Tip #9</strong><br>
-                                   if your request fails due to timeout try longer search pattern.  <br><br>
-								   <strong>Tip #10</strong><br>
-                                   if your request fails due to timeout, and you can\'t use longer search pattern try <a href="./bg.php">Background Mode</a>. It might work.
-								   <br><br> 
+<strong>Tip #9</strong><br>
+if your request fails due to timeout try longer search pattern.  <br><br>
+<strong>Tip #10</strong><br>
+if your request fails due to timeout, and you can\'t use longer search pattern try <a href="./bg.php">Background Mode</a>. It might work.
+<br><br> 
 <strong>What is Mtphr count in result table?</strong><br>
-										Matches in all text, not connected to search pattern:<br>
-										"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
-										Following words are ignored:<br>
-    "adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
-    Create an issue on github or send an email, if you\'ll find other criteria.
-    <br><br>
+Matches in all text, not connected to search pattern:<br>
+"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
+Following words are ignored:<br>
+"adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
+Create an issue on github or send an email, if you\'ll find other criteria.
+<br><br>
 </p>';
 $advancedcontent = '<strong>Tip #1</strong><br>
-								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
-								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
-								  <strong>Tip #2</strong><br>
-								   To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
-								 <br><br>
-								  
-									<strong>Tip #3</strong><br>
-								   If you want to find words beginning or ending from some pattern use \\\\b before and/or in the end of the pattern. e.g. <strong>\\\\bkummo\\\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
+If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
+<br>This example will search for all similies and metaphors in all Sn17.<br><br>
+<strong>Tip #2</strong><br>
+To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
+<br><br>
+<strong>Tip #3</strong><br>
+If you want to find words beginning or ending from some pattern use \\\\b before and/or in the end of the pattern. e.g. <strong>\\\\bkummo\\\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
 									<strong>Tip #4</strong><br>
-								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\\\) they should work. 
-								   Specialized AI can generate RegEx for Grep, e.g. <a href="https://codepal.ai/regex-generator" target=_blank>here</a>.
-								   Read and study regex to boost your search abilities.<br><br>
-								   
-								   <strong>Tip #5</strong><br>
-								
-								   Read about <a target="_blank" href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
-								   
-			<strong>How "Def" option works?</strong><br>
-									With Def following search will run:<br>
+You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\\\) they should work. 
+Specialized AI can generate RegEx for Grep, e.g. <a href="https://codepal.ai/regex-generator" target=_blank>here</a>.
+Read and study regex to boost your search abilities.<br><br>
+<strong>Tip #5</strong><br>
+Read about <a target="_blank" href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
+<strong>How "Def" option works?</strong><br>
+With Def following search will run:<br>
 grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
 Please, create an issue on github or send an email, if you\'ll find other criteria.<br><br> ';
 

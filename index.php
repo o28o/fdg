@@ -258,13 +258,15 @@ input.addEventListener("keypress", function(event) {
 									</div>
 									
 
-         
+ <div class="centered">
+
+                      
               <div class="container-lg">
               <div style="max-width: 500px;" class="alert alert-warning float-start text-left mb-3" role="alert">
                 <?php echo $transwarning;?>
 </div>
 </div>
-
+  </div>
                                                 
                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  
               <div class="container mb-5">

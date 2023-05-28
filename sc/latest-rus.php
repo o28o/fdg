@@ -12,8 +12,8 @@ if ( $validatejson == "" ) {
 }
 
 //apply styles for suttacentral.net 
-$styleforsc = shell_exec("bash $basedir/sc/styleforsc.sh 2>&1");
-echo "<p style='text-align: center;'>$styleforsc</p>";
+//$styleforsc = shell_exec("bash $basedir/sc/styleforsc.sh 2>&1");
+//echo "<p style='text-align: center;'>$styleforsc</p>";
 
 //mn
 $pathmn = 'assets/texts/sutta/mn/';

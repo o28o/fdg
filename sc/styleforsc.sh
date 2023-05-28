@@ -4,9 +4,8 @@ for i in `find . -type f -name "*.json" `; do
 if grep -q '\.\.\.' $i
 then
 echo -n "fixing ellipsis in $i"
-sed -i 's@\.\.\.@…@g' $i
-sed -i 's@……@… …@g' $i
-sed -i 's@  …@ …@g' $i
+cat $i | sed 's@\.\.\.@…@g' | sed -i 's@……@… …@g' | sed 's@  …@ …@g' > tmp
+mv tmp $i 
 echo " done <br>"
 fi
 done

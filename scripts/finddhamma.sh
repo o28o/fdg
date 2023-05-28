@@ -1067,7 +1067,13 @@ echo -n "<!-- begin $userpattern -->
 
 
 if [[ "$type" == json ]]; then
-echo -n "<br>`cat $tempfilewhistory | grep href | highlightpattern | xargs`" >> $history
+linenum=`cat $tempfilewhistory | wc -l`
+  if (( $linenum <= 40 ))
+  then
+  echo -n "<br>`cat $tempfilewhistory | grep href | highlightpattern | xargs`" >> $history
+  else 
+  echo -n "<br>" >> $history
+  fi
 elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"Suttanta"* ]]
 then
 echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' -v lkth="$linkforthai" -v ext="$linkforthaiext"  '{print \"<a target=_blank href="lkth$1''ext">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history

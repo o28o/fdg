@@ -604,7 +604,7 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
  lettersblock=`echo $filenameblock | sed 's@[0-9]*@@g'`
  numberblock=`echo $filenameblock | sed 's@[A-Za-z]*@@g'`
 #echo "$filenameblock $pathblock $lettersblock $numberblock" | tohtml
-checktrnfile=$apachesitepath/assets/texts/$pathblock/*${filenameblock}_*
+checktrnfile=$apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*
 
 if [[ "$args" == *"-oru"* ]] && [ -f $checktrnfile ]; then
 defaultlang='lang=pli-rus'

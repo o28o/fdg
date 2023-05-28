@@ -6,6 +6,8 @@ $data = json_decode($jsonString, true);
 
 extract($data);
 
+$tooltipla  = 'Добавить $defaultla строку после совпадения';
+$checkboxla = '+$defaultla';
 
 $regexMemo = '<h5>Памятка по RegEx</h5><p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p><p style="text-align: left;"><!-- <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> --><strong>-la2 X</strong> - искать X и добавить в результаты 2 следующие строки после строки с X<br>
 <strong>X -exc Y</strong> - искать X, исключить Y<br>
@@ -101,6 +103,9 @@ $jsonString = file_get_contents('config/en.json');
 $data = json_decode($jsonString, true);
 
 extract($data);
+
+$tooltipla  = 'Add $defaultla line after match';
+$checkboxla = '+$defaultla';
 
 
 $mainscrollmodal = '<p class="">	

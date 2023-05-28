@@ -42,8 +42,6 @@
     "radiotbw": "TBW",
     "tooltipvindef": "Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details",
     "radiovindef": "DefV",
-    "tooltipla": "Add $defaultla line after match",
-    "checkboxla": "+$defaultla",
     "titlehowtovideo": "How-To Video",
     "linkhowtovideo": "https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US",
     "titledeschowtovideo": "How to search in Pali Suttas and Vinaya with find.dhamma.gift",

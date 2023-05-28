@@ -42,8 +42,6 @@
   "radiotbw": "TBW",
   "tooltipvindef": "Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых",
   "radiovindef": "ОпрВ",
-  "tooltipla": "Добавить $defaultla строку после совпадения",
-  "checkboxla": "+$defaultla",
   "titlehowtovideo": "Как пользоваться?",
   "linkhowtovideo": "https://www.youtube.com/embed/4KIqQYSxTSE",
   "titledeschowtovideo": "How to search in Pali Suttas and Vinaya with find.dhamma.gift",

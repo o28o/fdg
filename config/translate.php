@@ -78,6 +78,28 @@ $fntmessage = 'Katamañca, bhikkhave, dukkhaṁ?<br>
 dn22 mn141
 </p>
 ';
+
+$mainscrollmodal = 'Definition of Dukkha
+Definition of Dukkha Aria Sacca
+
+Katamañca, bhikkhave, dukkhaṁ?
+And what is pain?
+
+Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
+Physical pain, physical displeasure, the painful, unpleasant feeling that’s born from physical contact.
+
+idaṁ vuccati, bhikkhave, dukkhaṁ.
+This is called pain.
+
+Katamañca, bhikkhave, domanassaṁ?
+And what is sadness?
+Yaṁ kho, bhikkhave, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
+Mental pain, mental displeasure, the painful, unpleasant feeling that’s born from mental contact.
+
+idaṁ vuccati, bhikkhave, domanassaṁ.
+This is called sadness.';
+
+
 $howtovideo = 'Вводное видео';
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Могут содержать фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <br><br>
@@ -387,7 +409,27 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         Understand the real meaning <br>
         of Four Noble Truths<br>
         and finish the p<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">a</a>in.';
-        
+$mainscrollmodal = 'Definition of Dukkha
+Definition of Dukkha Aria Sacca
+
+Katamañca, bhikkhave, dukkhaṁ?
+And what is pain?
+
+Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
+Physical pain, physical displeasure, the painful, unpleasant feeling that’s born from physical contact.
+
+idaṁ vuccati, bhikkhave, dukkhaṁ.
+This is called pain.
+
+Katamañca, bhikkhave, domanassaṁ?
+And what is sadness?
+Yaṁ kho, bhikkhave, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
+Mental pain, mental displeasure, the painful, unpleasant feeling that’s born from mental contact.
+
+idaṁ vuccati, bhikkhave, domanassaṁ.
+This is called sadness.';
+
+ 
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 
 $anamemolds = 'Translations by M. Olds';

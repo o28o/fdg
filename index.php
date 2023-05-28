@@ -264,15 +264,22 @@ input.addEventListener("keypress", function(event) {
                 <?php echo $transwarning;?>
 </div>
   </div>
-                                                
+   
+<div style="max-width: 500px;" class="container-lg">
+
+				  
                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  
               <div class="container mb-5">
               <ol class="col-lg-8 col-md-10 ms-auto text-start">
 			  
                    <!-- <li>All <a href="./history.php">previous searches</a></li> -->
                                         <?php echo $examplelist; ?>
-              </ol>    
-</div>         
+              </ol>
+			  </div>  
+
+  </div>
+
+       
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><?php echo $howtoheader; ?></h2>
                 <!-- Icon Divider-->

@@ -680,9 +680,25 @@ input.addEventListener("keypress", function(event) {
                                     <!-- Portfolio Modal - Image-->
                                     
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Definition of Dukkha</br>
+                                    <p class="lead mb-4">Definition of Dukkha</br>
 									Definition of Dukkha Aria Sacca</br>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+									</br>
+									Katamañca, bhikkhave, dukkhaṁ?</br>
+									And what is pain?</br>
+									</br>
+						Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+						Physical pain, physical displeasure, the painful, unpleasant feeling that’s born from physical contact.</br>
+						</br>
+						idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
+						This is called pain.</br>
+</br>
+Katamañca, bhikkhave, domanassaṁ?</br>
+And what is sadness?</br>
+Yaṁ kho, bhikkhave, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Mental pain, mental displeasure, the painful, unpleasant feeling that’s born from mental contact.</br>
+</br>
+idaṁ vuccati, bhikkhave, domanassaṁ.</br>
+This is called sadness.</br></p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         <?php echo "$closemodal"; ?>

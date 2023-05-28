@@ -76,7 +76,7 @@ $fntmessage = 'Katamañca, bhikkhave, dukkhaṁ?<br>
 Что такое, монахи, боль / дуккха?
 
 <p class="text-end">
-<a href=/ru/sc/?q=dn22&lang=pli-rus>Mahāsatipaṭṭhānasutta dn22</a>
+dn22 mn141
 </p>
 ';
 $howtovideo = 'Вводное видео';

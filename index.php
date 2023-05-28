@@ -216,57 +216,51 @@ input.addEventListener("keypress", function(event) {
   
 
 <script>
-  
 </script>
+</header>
 
-	
-        </header>
+<!-- Portfolio Section-->
+<section class="page-section portfolio" id="help">
+<div class="container text-center">
+<?php
+if ( $lang == "ru" ) {
+include 'assets/common/horizontalMenuRu.php'; 
+} else {
+include 'assets/common/horizontalMenuEn.php'; 
+} 
+?>
 
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="help">
-            <div class="container text-center">
-      <?php
-      if ( $lang == "ru" ) {
-      include 'assets/common/horizontalMenuRu.php'; 
-      } else {
-        include 'assets/common/horizontalMenuEn.php'; 
-      } 
-      ?>
-	   
-                    <!-- Portfolio Item 3-->
-
-                        <div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-									   <div class="font-italic"> 
-        <p class="lead font-italic text-center ">
-          <?php echo $fntmessage;?>
-                        </p></div> 
-
-						                    <div class="col-md-6 col-lg-4 mb-3">
+<!-- Portfolio Item 3-->
+<div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+<div class="font-italic"> 
+<p class="lead font-italic text-center "><?php echo $fntmessage;?>
+</p></div> 
+<div class="col-md-6 col-lg-4 mb-3">
 						                     
 			
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                        </div>
-                    </div>
-					
-		
-					<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
-		
-			<div class="embed-container mt-4 mb-5"> 
-                   <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
-									</div>
-									
-             <div style="max-width: 600px;" class="container-lg">
-              <div class="alert alert-warning float-start text-left mb-3" role="alert">
-                <?php echo $transwarning;?>
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white">
+<i class="fas fa-search fa-flip-horizontal fa-3x"></i></div>
 </div>
-  </div>
+</div>
+</div>
+
+<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
+
+<div class="embed-container mt-4 mb-5"> 
+<iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div style="max-width: 600px;" class="container-lg">
+<div class="alert alert-warning float-start text-left mb-3" role="alert">
+<?php echo $transwarning;?>
+</div>
+</div>
    
 <div style="max-width: 992px;" class="container-lg">
-               <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  
-              <div class="container mb-5">
-              <ol class="col-lg-8 col-md-10 ms-auto text-start">
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  
+<div class="container mb-5">
+<ol class="col-lg-8 col-md-10 ms-auto text-start">
 <?php echo $examplelist; ?>
               </ol>
 			  </div>  
@@ -288,33 +282,31 @@ input.addEventListener("keypress", function(event) {
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">		 
                                                         		 
-                    <div class="col-md-6 col-lg-4 mb-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-          <div class="imgcontainer">
+<div class="col-md-6 col-lg-4 mb-0">
+<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+</div>
+<div class="imgcontainer">
 
-  <div class="centered">
-  <h4 class="page-section-heading text-center text-white"><?php echo $demovideo;?> </h4>
+<div class="centered">
+<h4 class="page-section-heading text-center text-white"><?php echo $demovideo;?> </h4>
   </div>
-             
-                            <img class="img-fluid" src="assets/img/portfolio/awakening.jpg" alt="..." />
-		</div>					
-                        </div>
-		<!-- text here --> <p class="mb-4">
-		</p>
-				
-                    </div>
-            
 
-                    <div class="col-md-6 col-lg-4 mb-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-    
-            <div class="imgcontainer">
+<img class="img-fluid" src="assets/img/portfolio/awakening.jpg" alt="..." />
+</div>					
+</div>
+<!-- text here --> <p class="mb-4">
+</p>
+</div>
+
+<div class="col-md-6 col-lg-4 mb-0">
+<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+</div>
+
+<div class="imgcontainer">
 
   <div class="centered">
   <h4 class="page-section-heading text-center text-white"><?php echo $basics;?></h4>
@@ -663,20 +655,21 @@ input.addEventListener("keypress", function(event) {
 
 
 <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h4 class="portfolio-modal-title text-secondary mb-0"><?php echo $mainscrollmodalheader ; ?></h4>
-                                    <!-- Icon Divider-->
-                                     <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body text-center pb-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+
+<!-- Portfolio Modal - Title-->
+<p class="portfolio-modal-title text-secondary mb-0"><?php echo $mainscrollmodalheader ; ?></p>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->

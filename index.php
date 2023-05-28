@@ -265,7 +265,7 @@ input.addEventListener("keypress", function(event) {
 </div>
   </div>
    
-<div style="" class="container-lg">
+<div style="max-width: 992px;" class="container-lg">
 
 				  
                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  

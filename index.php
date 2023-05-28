@@ -257,19 +257,29 @@ input.addEventListener("keypress", function(event) {
                    <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
 									</div>
 									
+<<<<<<< HEAD
               <div class="container alert alert-warning float-start text-left mb-3" role="alert">
+=======
+
+                
+              <div style="max-width: 600px;" class="container-lg">
+              <div class="alert alert-warning float-start text-left mb-3" role="alert">
+>>>>>>> 022af759960d6b36da37101ec08fe96db691cda2
                 <?php echo $transwarning;?>
 </div>
-
-                                                
+  </div>
+   
+<div style="max-width: 992px;" class="container-lg">
                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  
               <div class="container mb-5">
               <ol class="col-lg-8 col-md-10 ms-auto text-start">
-			  
-                   <!-- <li>All <a href="./history.php">previous searches</a></li> -->
-                                        <?php echo $examplelist; ?>
-              </ol>    
-</div>         
+<?php echo $examplelist; ?>
+              </ol>
+			  </div>  
+
+  </div>
+
+       
                 <!-- Portfolio Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><?php echo $howtoheader; ?></h2>
                 <!-- Icon Divider-->

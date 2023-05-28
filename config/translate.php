@@ -80,7 +80,6 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 </p>';
 
 
-$advanced = 'для Продвинутых';
 $advancedcontent = '<strong>Совет #1</strong><br>
 Опция применима только для поисков на пали или английском! Если вы хотите найти определенное слово в определенной сутте, самьютте, никае - запустите поиск в таком виде: Sn17.*seyyathāpi
 <br>Запрос из примера выведет в таблицы все метафоры и сравнения из Sn17.<br>
@@ -138,6 +137,7 @@ $jsonString = file_get_contents('config/en.json');
 $data = json_decode($jsonString, true);
 
 extract($data);
+
 
 $mainscrollmodal = '<p class="">	
 <h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
@@ -204,8 +204,6 @@ Search is performed in All DN, MN, SN, AN. use <strong>-kn</strong> option if yo
     Create an issue on github or send an email, if you\'ll find other criteria.
     <br><br>
 </p>';
-
-$advanced = 'Advanced';
 $advancedcontent = '<strong>Tip #1</strong><br>
 								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
 								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
@@ -228,6 +226,7 @@ $advancedcontent = '<strong>Tip #1</strong><br>
 									With Def following search will run:<br>
 grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
 Please, create an issue on github or send an email, if you\'ll find other criteria.<br><br> ';
+
 $regexMemo = ' <h5>RegEx Memo</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
@@ -248,7 +247,6 @@ $regexMemo = ' <h5>RegEx Memo</h5>
 <br>AI can generate RegEx for Grep, e.g. <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>here</a><br>
 </p>          ';
 
-$dpddesc = 'Digital Pali Dictionary Online';
 
 $dpdpart = '<h3>Download DPD</h3>
 <a target="_blank" href="https://digitalpalidictionary.github.io/"><p>DPD Official</p></a>

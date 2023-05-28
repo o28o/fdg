@@ -79,25 +79,26 @@ dn22 mn141
 </p>
 ';
 
-$mainscrollmodal = 'Definition of Dukkha
-Definition of Dukkha Aria Sacca
-
-Katamañca, bhikkhave, dukkhaṁ?
-And what is pain?
-
-Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
-Physical pain, physical displeasure, the painful, unpleasant feeling that’s born from physical contact.
-
-idaṁ vuccati, bhikkhave, dukkhaṁ.
-This is called pain.
-
-Katamañca, bhikkhave, domanassaṁ?
-And what is sadness?
-Yaṁ kho, bhikkhave, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
-Mental pain, mental displeasure, the painful, unpleasant feeling that’s born from mental contact.
-
-idaṁ vuccati, bhikkhave, domanassaṁ.
-This is called sadness.';
+$mainscrollmodal = '<p class="lead mb-4">	
+Definition of Dukkha</br>
+Definition of Dukkha Aria Sacca</br>
+			</br>
+			Katamañca, bhikkhave, dukkhaṁ?</br>
+			And what is pain?</br>
+			</br>
+Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Physical pain, physical displeasure, the painful, unpleasant feeling that’s born from physical contact.</br>
+</br>
+idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
+This is called pain.</br>
+</br>
+Katamañca, bhikkhave, domanassaṁ?</br>
+And what is sadness?</br>
+Yaṁ kho, bhikkhave, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Mental pain, mental displeasure, the painful, unpleasant feeling that’s born from mental contact.</br>
+</br>
+idaṁ vuccati, bhikkhave, domanassaṁ.</br>
+This is called sadness.</br></p>';
 
 
 $howtovideo = 'Вводное видео';

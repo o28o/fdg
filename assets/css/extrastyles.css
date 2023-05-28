@@ -124,6 +124,10 @@ max-width: 274pxalign-items: center;
 
 @media only screen and (max-width: 900px) {
 
+.container {
+        max-width: 500px; /* max-width for desktop */
+    }
+
 #mainNav .navbar-toggler {
     margin-right: 2rem;  
 }

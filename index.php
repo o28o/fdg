@@ -670,7 +670,7 @@ input.addEventListener("keypress", function(event) {
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Dukkha</h2>
+                                    <h4 class="portfolio-modal-title text-secondary mb-0"><?php echo $mainscrollmodalheader ; ?></h4>
                                     <!-- Icon Divider-->
                                      <div class="divider-custom">
                                         <div class="divider-custom-line"></div>

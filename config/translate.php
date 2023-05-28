@@ -78,27 +78,29 @@ $fntmessage = 'Katamañca, bhikkhave, dukkhaṁ?<br>
 dn22 mn141
 </p>
 ';
-
-$mainscrollmodal = '<p class="lead mb-4">	
-Definition of Dukkha</br>
-Definition of Dukkha Aria Sacca</br>
+$mainscrollmodalheader = 'Dukkha в Суттах';
+$mainscrollmodal = '<p class="">	
+<h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+			Что такое, монахи, боль?</br>
 			</br>
-			Katamañca, bhikkhave, dukkhaṁ?</br>
-			And what is pain?</br>
-			</br>
-Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Physical pain, physical displeasure, the painful, unpleasant feeling that’s born from physical contact.</br>
+Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Все, что переживается как <strong>телесная боль</strong>, телесный дискомфорт, боль или дискомфорт, вызванные телесным контактом,</br>
 </br>
 idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
-This is called pain.</br>
+вот что называется болью.</br>
 </br>
-Katamañca, bhikkhave, domanassaṁ?</br>
-And what is sadness?</br>
-Yaṁ kho, bhikkhave, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Mental pain, mental displeasure, the painful, unpleasant feeling that’s born from mental contact.</br>
+<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
+А что такое стресс / страдание?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>cetasikaṁ dukkhaṁ</strong> cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Все, что переживается как <strong>ментальная боль</strong>, ментальный дискомфорт, боль или дискомфорт, вызванные контактом мышления,</br>
 </br>
 idaṁ vuccati, bhikkhave, domanassaṁ.</br>
-This is called sadness.</br></p>';
+– вот что называется стрессом.</br></p>
+<p class="text-end">
+<a href=/sc/?q=dn22>dn22</a> <a href=/sc/?q=mn141>mn141</a>
+</p>
+';
 
 
 $howtovideo = 'Вводное видео';
@@ -130,7 +132,7 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift эт
 $prongh = ' Проект на GitHub';
 
 $headerexamples = 'Примеры';
-$examplelist = '<li>Определение понятия <a href="./assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">Kata.*dukkhaṁ\\\\?</a>
+$examplelist = '<li>Определение понятия <a href="./assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/demo/kata.dukkha.m-question_suttanta_pali_3-5.html">-la1 Kata.*, dukkhaṁ\\\\?</a>
              </li>
               <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/demo/dvayagaaminii_suttanta_pali_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            
@@ -410,25 +412,29 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         Understand the real meaning <br>
         of Four Noble Truths<br>
         and finish the p<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">a</a>in.';
-$mainscrollmodal = 'Definition of Dukkha
-Definition of Dukkha Aria Sacca
-
-Katamañca, bhikkhave, dukkhaṁ?
-And what is pain?
-
-Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
-Physical pain, physical displeasure, the painful, unpleasant feeling that’s born from physical contact.
-
-idaṁ vuccati, bhikkhave, dukkhaṁ.
-This is called pain.
-
-Katamañca, bhikkhave, domanassaṁ?
-And what is sadness?
-Yaṁ kho, bhikkhave, cetasikaṁ dukkhaṁ cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,
-Mental pain, mental displeasure, the painful, unpleasant feeling that’s born from mental contact.
-
-idaṁ vuccati, bhikkhave, domanassaṁ.
-This is called sadness.';
+        
+$mainscrollmodalheader = 'Dukkha in Suttas';        
+$mainscrollmodal = '<p class="">	
+<h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+“And what is pain?</br>
+			</br>
+Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Whatever is experienced as  <strong>bodily pain</strong>, bodily discomfort, pain or discomfort born of bodily contact, </br>
+</br>
+idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
+that is called pain.</br>
+</br>
+<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
+“And what is stress?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>cetasikaṁ dukkhaṁ</strong> cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Whatever is experienced as <strong>mental pain</strong>, mental discomfort, pain or discomfort born of mental contact, that is called distress,</br>
+</br>
+idaṁ vuccati, bhikkhave, domanassaṁ.</br>
+that is called stress.</br></p>
+<p class="text-end">
+<a href=/sc/?q=dn22>dn22</a> <a href=/sc/?q=mn141>mn141</a>
+</p>';
 
  
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   

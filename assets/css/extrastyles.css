@@ -124,7 +124,6 @@ max-width: 274pxalign-items: center;
 
 @media only screen and (max-width: 900px) {
 
-
 #mainNav .navbar-toggler {
     margin-right: 2rem;  
 }

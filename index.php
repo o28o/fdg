@@ -259,21 +259,17 @@ input.addEventListener("keypress", function(event) {
 									
 
                 
-              <div style="max-width: 500px;" class="container-lg">
+              <div style="max-width: 600px;" class="container-lg">
               <div class="alert alert-warning float-start text-left mb-3" role="alert">
                 <?php echo $transwarning;?>
 </div>
   </div>
    
 <div style="max-width: 992px;" class="container-lg">
-
-				  
                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-3"><?php echo $headerexamples; ?></h2>  
               <div class="container mb-5">
               <ol class="col-lg-8 col-md-10 ms-auto text-start">
-			  
-                   <!-- <li>All <a href="./history.php">previous searches</a></li> -->
-                                        <?php echo $examplelist; ?>
+<?php echo $examplelist; ?>
               </ol>
 			  </div>  
 

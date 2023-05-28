@@ -9,6 +9,9 @@ $mainpage = $data['mainpage'];
 $mainscpage = $data['mainscpage'];
 $searchcaption = $data['searchcaption'];
 $metadesc = $data['metadesc'];
+$ogshare = $data['ogshare'];
+$menuhist = $data['menuhist'];
+$tooltippli = $data['tooltippli'];
 
 // You can use the variables here...
 echo "$lang";

@@ -109,7 +109,7 @@ $checkboxla = "+$defaultla";
 
 
 $mainscrollmodal = '<p class="">
-From <a href=\"/sc/?q=dn22\">dn22</a> <a href=\"/sc/?q=mn141\">mn141</a></br>	
+From <a href=/sc/?q=dn22>dn22</a> <a href=/sc/?q=mn141>mn141</a></br>	
 <h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 “And what is pain?</br></br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>

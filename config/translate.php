@@ -1,54 +1,12 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
-$lang = "ru";
 
-$htmllang = "ru";
-$mainpage = '/ru';
-$mainscpage = $mainpage . '/sc';
-$searchcaption = 'Поиск';
-$metadesc = 'Поисковый Сайт Освобождения. Поиск в Пали Суттах и Винае';
-$titletwit = 'find.Dhamma.gift - Поисковая Система Освобождения';
-$ogdesc = 'Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
-$oglocale = 'ru_RU';
-$ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift_rus.jpg';
-$menu = 'Меню';
-$menuread = 'Читать';
-$menuhist = 'История Поиска';
-$menuhowto = 'Помощь';
-$menuabout = 'О Проекте';
-$menulinks = 'Полезное';
-$menucontact = 'Контакты';
-$tooltiptitle = 'На Pāḷi, Русском, ไทย и Английском';
-$title = 'Найдите Истину';
-$tooltippli = 'Поиск на Пали по-умолчанию. По Суттам an, sn, dn, mn. Ангутара Никаи, Саньютта Никаи, Маджжхима Никаи, Дигха Никаи';
-$radiopli = 'Pāḷi';
-$tooltipdef = 'Поиск определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Если в Суттах не будет результатов, то поиск автоматически проведется в определениях из Винаи. Работает только для определений данных стандартными фразами. См. в "для Продвинутых"';
-$radiodef = 'Опр';
-$tooltipvin = 'Поиск в Винае на Пали';
-$radiovin = 'Вин';
-$tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, dhp, iti, snp, thag, thig. Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха';
-$radiokn = '+КН';
-$tooltiponl = 'X Y ... найдет только тексты содержащие оба и более совпадений X, Y, ... Без этой опции будут собраны тексты которые содержат только рядомстоящие X Y';
-$checkboxonl = 'Тлк';
-$tooltipnonl = 'С этой опцией будут собраны тексты, которые содержат только рядомстоящие X и Y (в одной строке). По умолчанию, без этой опции поиск будет производиться на любом расстоянии в пределах одного текста.';
-$checkboxnonl = 'А Б';
-$tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи, включая поздние";
-$radioltr = "+Позд";
-$tooltipen = 'Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах sc.net и затем в переводах thebuddhaswords.net ';
-$radioen = 'Англ';
-$tooltipth = "Опционально. Поиск в 4 основных Никаях в Тайских переводах Suttacentral.net. Без этой опции сначала поиск будет произведен в Пали текстах, потом в переводах";
-$radioth = "ไทย";
-$tooltipru = "Опционально. Поиск по русским переводам АН, СН, МН, ДН с SuttaCentral.net";
-$radioru = "Рус";
-$tooltiptbw = "Искать во всем содержимом TheBuddhasWords.net";
-$radiotbw = "TBW";
+$jsonString = file_get_contents('config/ru.json');
+$data = json_decode($jsonString, true);
+
+extract($data);
 
 
-$tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
-$radiovindef = "ОпрВ";
-
-$tooltipla = "Добавить $defaultla строку после совпадения";
-$checkboxla = "+$defaultla";
 $regexMemo = '<h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
           <p style="text-align: left;">
@@ -69,41 +27,6 @@ $regexMemo = '<h5>Памятка по RegEx</h5>
 <strong>dn22.*Y</strong> - искать Y в одной Сутте ДН22<br><br> 
 ИИ может сгенерировать регулярное выражение для Grep, к примеру <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>здесь</a><br>
         </p>     ';
-$titlehowtovideo = 'Как пользоваться?';  
-$linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
-$titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
-$fntmessage = 'Katamañca, bhikkhave, dukkhaṁ?<br>
-Что такое, монахи, боль / дуккха?
-<p class="text-end">
-dn22 mn141
-</p>
-';
-$mainscrollmodalheader = 'Dukkha в Суттах';
-$mainscrollmodal = '<p class="">	
-<h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
-			Что такое, монахи, боль?</br>
-			</br>
-Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Все, что переживается как <strong>телесная боль</strong>, телесный дискомфорт, боль или дискомфорт, вызванные телесным контактом,</br>
-</br>
-idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
-вот что называется болью.</br>
-</br>
-<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
-А что такое стресс / страдание?</br>
-</br>
-Yaṁ kho, bhikkhave, <strong>cetasikaṁ dukkhaṁ</strong> cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Все, что переживается как <strong>ментальная боль</strong>, ментальный дискомфорт, боль или дискомфорт, вызванные контактом мышления,</br>
-</br>
-idaṁ vuccati, bhikkhave, domanassaṁ.</br>
-– вот что называется стрессом.</br></p>
-<p class="text-end">
-<a href=/sc/?q=dn22>dn22</a> <a href=/sc/?q=mn141>mn141</a>
-</p>
-';
-
-
-$howtovideo = 'Вводное видео';
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Могут содержать фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <br><br>
   Самое важное из Учения Будды нужно изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';

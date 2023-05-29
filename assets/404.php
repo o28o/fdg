@@ -11,7 +11,7 @@ include '../scripts/opentexts.php';
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
@@ -47,16 +47,16 @@ include '../scripts/opentexts.php';
                 etassa dukkhassa pariññāyā”ti. <a target="_blank" class="text-decoration-none" href="<?php echo $link404;?>">sn38.4</a>
     </p>
                 <a href="<?php echo $mainpage;?>" id="back" class="btn btn-primary"><?php echo $hreftext404;?></a>
-                
+
                <section class="page-section portfolio" id="help">
             <div class="container text-center">
 
       <?php
       if ( $lang == "ru" ) {
-      include '../assets/common/horizontalMenuRu.php'; 
+      include '../assets/common/horizontalMenuRu.php';
       } else {
-        include '../assets/common/horizontalMenuEn.php'; 
-      } 
+        include '../assets/common/horizontalMenuEn.php';
+      }
       ?>
             </div>
         </div>
@@ -65,3 +65,4 @@ include '../scripts/opentexts.php';
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
 
 </html>
+                      

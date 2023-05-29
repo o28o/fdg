@@ -408,9 +408,9 @@ include 'assets/common/horizontalMenuEn.php';
     <p class="mb-1">' . $pfdg . '</p>
     <small class="text-muted"></small>
   </a>';
-      
+  $linktextbook = "$linktextbookru";
       } else {
-        $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
+$mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
       echo '
   <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
@@ -420,6 +420,8 @@ include 'assets/common/horizontalMenuEn.php';
   <p class="mb-1">' . $pfdgoffline . '</p>
     <small class="text-muted"></small>
   </a>';
+    $linktextbook = "$linktextbookru";
+
       }
       ?>
   
@@ -584,12 +586,12 @@ include 'assets/common/horizontalMenuEn.php';
 </div>  
 
 				
-                    </div>
-					
-					 <div class="col-lg-4 mb-5 mb-lg-0">
-					<h4 id="study" class="text-uppercase mb-4"><?php echo $anamestudy;?></h4>
+</div>
+				
+<div class="col-lg-4 mb-5 mb-lg-0">
+<h4 id="study" class="text-uppercase mb-4"><?php echo $anamestudy;?></h4>
 	
-	<div class="list-group">
+<div class="list-group">
 
 
   <a target="_blank" href="<?php echo $linktextbook;?>" class="list-group-item list-group-item-action active" aria-current="true">
@@ -633,24 +635,25 @@ include 'assets/common/horizontalMenuEn.php';
 </div>  
 
 </div>
-                    <!-- Footer About Text-->
-                    <div id="contacts" class="col-lg-0 text-center">
-                        <h4 class="text-uppercase mt-5 mb-4">                                        <?php echo "$contactheader"; ?></h4>
+<!-- Footer About Text-->
+<div id="contacts" class="col-lg-0 text-center">
+<h4 class="text-uppercase mt-5 mb-4">
+<?php echo "$contactheader"; ?></h4>
 						
-                        <p class="lead mb-4">
-                        <?php echo $contaccalltoaction; ?>
-                        </p>
-							   <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
-                        <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:o@dhamma.gift"><i class="fa-solid fa-at"></i></a>
-												<a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+<p class="lead mb-4">
+<?php echo $contaccalltoaction; ?>
+</p>
+<a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
+<a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:o@dhamma.gift"><i class="fa-solid fa-at"></i></a>
+<a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
-           <a class="text-white text-decoration-none" href="/scripts/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small> </div>
+<div class="copyright py-4 text-center text-white">
+<div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
+<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small> </div>
         </div>
         <!-- Portfolio Modals-->
 
@@ -673,17 +676,16 @@ include 'assets/common/horizontalMenuEn.php';
 <div class="divider-custom">
 <div class="divider-custom-line"></div>
 <div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    
-                                    <!-- Portfolio Modal - Text-->
-                                    <?php echo $mainscrollmodal; ?>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image-->
+
+<!-- Portfolio Modal - Text-->
+<?php echo $mainscrollmodal; ?>
 									
-								
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        <?php echo "$closemodal"; ?>
+<button class="btn btn-primary" data-bs-dismiss="modal">
+<i class="fas fa-xmark fa-fw"></i>
+<?php echo "$closemodal"; ?>
                                     </button>
                                 </div>
                             </div>
@@ -703,16 +705,16 @@ include 'assets/common/horizontalMenuEn.php';
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $advanced; ?></h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $advanced; ?></h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
             <p class="mb-4">
 <?php echo $advancedcontent; ?>
 </p>
@@ -736,22 +738,22 @@ include 'assets/common/horizontalMenuEn.php';
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $basics; ?></h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/dhammawheel.jpg" alt="..." /> -->
-                                    <!-- Portfolio Modal - Text-->
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $basics; ?></h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/dhammawheel.jpg" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
 <?php echo $basicscontent;?>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i> 
-                                        <?php echo "$closemodal"; ?>
-                                    </button>
+<button class="btn btn-primary" data-bs-dismiss="modal">
+<i class="fas fa-xmark fa-fw"></i> 
+<?php echo "$closemodal"; ?>
+</button>
                                 </div>
                             </div>
                         </div>
@@ -763,24 +765,27 @@ include 'assets/common/horizontalMenuEn.php';
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">                                        <?php echo $demovideo; ?></h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
-									<!-- Portfolio Modal - Text-->
-									  <div class="embed-container"> 
-                                        <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body text-center pb-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+<?php echo $demovideo; ?></h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
+<div class="embed-container"> 
+
+<iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
 									</div>
 									                          <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>

@@ -928,10 +928,11 @@ grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 mintexts=2
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 
-#echo mintxt=$mintexts txt=$texts
+#
 
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
+echo mintxt=$mintexts txt=$texts
 #echo "$tmpdef bf $texts"
 grepbasefileExtended1 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`

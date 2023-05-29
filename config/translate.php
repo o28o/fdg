@@ -1,7 +1,7 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 
-$jsonString = file_get_contents('config/ru.json');
+$jsonString = file_get_contents('/config/ru.json');
 $data = json_decode($jsonString, true);
 
 extract($data);
@@ -99,7 +99,7 @@ grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpatter
 }
 else {
 
-$jsonString = file_get_contents('config/en.json');
+$jsonString = file_get_contents('/config/en.json');
 $data = json_decode($jsonString, true);
 
 extract($data);

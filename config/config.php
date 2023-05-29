@@ -107,7 +107,7 @@ $linktbw = '/bw';
 $linknoblasc = 'https://en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = 'https://www.accesstoinsight.org/tipitaka/vin/sv/index.html';
 $linktextbook = 'https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk';
-$linktextbookru = 'https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing';
+$linktextbookru = 'https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=share_link';
 
 $linkconj = 'https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing';
 $linkcases = 'https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true';
@@ -175,7 +175,6 @@ $thsulocation = $basedir. '/tipitaka.theravada.su/';
 $thrulocation = $basedir. '/theravada.ru/Teaching/Canon';
 $bwlocation = $basedir. '/bw';
 
-$linksothermat = 'https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG';
 $defaultla = 1;
 $latestrusmn = 38;
 

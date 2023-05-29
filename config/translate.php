@@ -2,10 +2,15 @@
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
 
+
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainscpage = $mainpage . '/sc';
 $searchcaption = 'Поиск';
+
+$linksothermat = 'https://drive.google.com/drive/u/1/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN';
+
+
 $metadesc = 'Поисковый Сайт Освобождения. Поиск в Пали Суттах и Винае';
 $titletwit = 'find.Dhamma.gift - Поисковая Система Освобождения';
 $ogdesc = 'Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
@@ -343,6 +348,9 @@ $titletwit = 'find.Dhamma.gift - Liberation Search Engine';
 $ogdesc = 'Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai';
 $oglocale = 'en_US';
 $ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift.jpg';
+
+$linksothermat = 'https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG';
+
 $menu = 'Menu';
 $menuread = 'Read';
 $menuhist = 'Search History';

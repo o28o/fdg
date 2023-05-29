@@ -65,4 +65,3 @@ include '../scripts/opentexts.php';
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
 
 </html>
-                      

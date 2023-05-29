@@ -8,31 +8,10 @@
   <link href="/assets/css/extrastyles.css" rel="stylesheet" />
   <script src="/assets/js/jquery-3.6.0.js"></script>
   <script src="/assets/js/jquery-ui.js"></script>
-  
-  <style>
-    /* Mobile Styles */
-    @media only screen and (max-width: 768px) {
-      .container {
-        padding: 10px;
-      }
-      .form-label {
-        display: block;
-        margin-bottom: 5px;
-      }
-      .form-control {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-      .btn {
-        width: 100%;
-        margin-top: 10px;
-      }
-    }
-  </style>
 </head>
 <body>
   <div class="container mt-5">
-    <h2>Show Difference Between Two Lists</h2><br>
+      <h2>Show Difference Between Two Lists</h2><br>
     <form id="textLinksForm">
       <div class="mb-3">
         <label for="string1" class="form-label">List of Links 1:</label>
@@ -94,4 +73,14 @@
         result += difference + "<br>";
       });
 
-     
+      // Display the result
+      document.getElementById('result').innerHTML = "Result:<br>" + result;
+    }
+
+    function clearForm() {
+      document.getElementById('textLinksForm').reset();
+      document.getElementById('result').innerHTML = "";
+    }
+  </script>
+</body>
+</html>

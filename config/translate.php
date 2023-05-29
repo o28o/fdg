@@ -13,7 +13,7 @@ $oglocale = 'ru_RU';
 $ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift_rus.jpg';
 $menu = 'Меню';
 $menuread = 'Читать';
-$menuhist = 'История Поиска';
+$menuhist = 'История';
 $menuhowto = 'Помощь';
 $menuabout = 'О Проекте';
 $menulinks = 'Полезное';
@@ -72,10 +72,34 @@ $regexMemo = '<h5>Памятка по RegEx</h5>
 $titlehowtovideo = 'Как пользоваться?';  
 $linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
-$fntmessage = 'Всесторонний взгляд на Четыре Благородные Истины<br>
-		в Палийских Суттах и Винае.<br> 
-    Поймите наст<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
-   и п<a target="_blank" class="text-black text-decoration-none" href=/ru/sc/?q=bu-pm>о</a>л<a class="text-black text-decoration-none" target=_blank href=/ru/sc/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-black text-decoration-none" href=/ru/sc/?q=mn77&lang=pli>о</a>нец б<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
+
+$fntmessage = '<p class="font-italic text-center ">
+Katamañca, bhikkhave, dukkhaṁ?<br>
+Что такое, монахи, боль / дуккха?
+<p class="text-end">
+dn22 mn141
+</p>
+</p>';
+$mainscrollmodalheader = 'Определение Dukkha в Суттах';
+$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22>dn22</a> <a href=/ru/sc/?q=mn141>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+Что такое, монахи, боль?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Все, что переживается как <strong>телесная боль</strong>, телесный дискомфорт, боль или дискомфорт, вызванные телесным контактом,</br>
+</br>
+idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
+вот что называется болью.</br>
+</br>
+<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
+А что такое стресс / страдание?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>cetasikaṁ dukkhaṁ</strong> cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Все, что переживается как <strong>ментальная боль</strong>, ментальный дискомфорт, боль или дискомфорт, вызванные контактом мышления,</br>
+</br>
+idaṁ vuccati, bhikkhave, domanassaṁ.</br>
+– вот что называется стрессом.</br></p>
+<p class="text-end"></p>';
+
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
  <br><br>
   Самое важное из Учения Будды нужно изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
@@ -119,9 +143,10 @@ $examplelist = '<li>Определение понятия <a href="./assets/demo
 $howtoheader = 'Как Искать?';
 
 $contactheader = 'Контакты';
-$contaccalltoaction = 'Найдите Благородный Восьмеричный Путь.<br>
-                               							Поймите Четыре Благородные Истины.<br>
-                               							Дхамма - это Действительность.';
+$contaccalltoaction = 'Всесторонний взгляд на Четыре Благородные Истины<br>
+		в Палийских Суттах и Винае.<br> 
+    Поймите наст<a target="_blank" class="text-white text-decoration-none" href=/ru/sc/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
+   и п<a target="_blank" class="text-white text-decoration-none" href=/ru/sc/?q=bu-pm>о</a>л<a class="text-white text-decoration-none" target=_blank href=/ru/sc/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-white text-decoration-none" href=/ru/sc/?q=mn77&lang=pli>о</a>нец б<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
                                							
 $demovideo = 'Подробное Видео';	
 $demovideolink = 'https://www.youtube.com/embed/iKRaa9D07-I';
@@ -383,8 +408,31 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
         Understand the real meaning <br>
         of Four Noble Truths<br>
         and finish the p<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">a</a>in.';
+
+
+$mainscrollmodalheader = 'Definition of Dukkha in Suttas';
+
+$mainscrollmodal = '<p class="">
+From <a href="/sc/?q=dn22">dn22</a> <a href="/sc/?q=mn141">mn141</a></br>
+<h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+“And what is pain?</br></br>
+Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Whatever is experienced as  <strong>bodily pain</strong>, bodily discomfort, pain or discomfort born of bodily contact, </br>
+</br>
+idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
+that is called pain.</br>
+</br>
+<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
+“And what is stress?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>cetasikaṁ dukkhaṁ</strong> cetasikaṁ asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Whatever is experienced as <strong>mental pain</strong>, mental discomfort, pain or discomfort born of mental contact, that is called distress,</br>
+</br>
+idaṁ vuccati, bhikkhave, domanassaṁ.</br>
+that is called stress.</br></p>';
+
         
-$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them. The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
+$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 
 $anamemolds = 'Translations by M. Olds';
 $anameasc = 'Asceticism in Dhamma';

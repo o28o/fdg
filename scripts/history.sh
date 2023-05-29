@@ -76,6 +76,7 @@ fi
 echo "</tbody>
 </table>
 <a href=\"/\">Main</a>&nbsp;
+<a target=_blank href=/assets/listdiff.html>List Diff</a>&nbsp;
 `switchlink`" 
 cat $templatefolder/ListFooter.html 
 

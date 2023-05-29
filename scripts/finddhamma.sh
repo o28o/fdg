@@ -246,13 +246,13 @@ tmpdef=tmpdef.$rand
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
-vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
+#vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
 fi  
 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpdef
 
-nice -$nicevalue grep -A1 -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,6} vucca" $tmpdef
+nice -$nicevalue grep -A1 -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,15} vucca" $tmpdef
 }
 
 function grepbasefileExtended1 {
@@ -925,19 +925,18 @@ checkifalreadydone
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
-mintexts=4
+mintexts=2
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
+
+#echo mintxt=$mintexts txt=$texts
 
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
 #echo "$tmpdef bf $texts"
-
 grepbasefileExtended1 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
-
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "$tmpdef bf+1 $texts"
 fi
-
 
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
@@ -947,7 +946,6 @@ texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12 $texts"
 fi
 
-
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
@@ -956,7 +954,6 @@ nice -$nicevalue grep -E -A1 -Eir "${defpattern}.{0,50}saṅkhaṁ gacchati" $su
 texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12sk $texts"
 fi
-
 
 linescount=`wc -l $basefile | awk '{print $1}'`
 if [ ! -s $basefile ]

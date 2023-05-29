@@ -9,7 +9,7 @@ $mainscpage = $mainpage . '/sc';
 $searchcaption = 'Поиск';
 
 $linksothermat = 'https://drive.google.com/drive/u/1/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN';
-
+$linktextbook = "$linktextbookru";
 
 $metadesc = 'Поисковый Сайт Освобождения. Поиск в Пали Суттах и Винае';
 $titletwit = 'find.Dhamma.gift - Поисковая Система Освобождения';

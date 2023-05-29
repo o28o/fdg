@@ -408,7 +408,6 @@ include 'assets/common/horizontalMenuEn.php';
     <p class="mb-1">' . $pfdg . '</p>
     <small class="text-muted"></small>
   </a>';
-  $linktextbook = "$linktextbookru";
       } else {
 $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
       echo '
@@ -420,7 +419,6 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
   <p class="mb-1">' . $pfdgoffline . '</p>
     <small class="text-muted"></small>
   </a>';
-    $linktextbook = "$linktextbookru";
 
       }
       ?>

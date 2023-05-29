@@ -14,13 +14,14 @@
     <form id="textLinksForm">
       <div class="mb-3">
         <label for="string1" class="form-label">String 1:</label>
-        <input type="text" class="form-control" id="string1" name="string1" required>
+        <input type="search" class="form-control" id="string1" name="string1" required>
       </div>
       <div class="mb-3">
         <label for="string2" class="form-label">String 2:</label>
-        <input type="text" class="form-control" id="string2" name="string2" required>
+        <input type="search" class="form-control" id="string2" name="string2" required>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary" id="clearFormBtn">Clear Form</button>
     </form>
 
     <div id="result" class="mt-4"></div>
@@ -30,7 +31,15 @@
     // Handle form submission
     document.getElementById('textLinksForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form submission
+      processForm();
+    });
 
+    // Handle clear form button click
+    document.getElementById('clearFormBtn').addEventListener('click', function() {
+      clearForm();
+    });
+
+    function processForm() {
       // Get the input values
       var string1 = document.getElementById('string1').value;
       var string2 = document.getElementById('string2').value;
@@ -49,8 +58,13 @@
 
       // Find differences
       var differences = array1.filter(function(value) {
-        return array2.indexOf(value) === -1;
+        return !array2.includes(value);
       });
+
+      // Append differences from array2
+      differences = differences.concat(array2.filter(function(value) {
+        return !array1.includes(value);
+      }));
 
       // Print differences
       var result = "";
@@ -60,8 +74,12 @@
 
       // Display the result
       document.getElementById('result').innerHTML = "Result:<br>" + result;
-    });
+    }
+
+    function clearForm() {
+      document.getElementById('textLinksForm').reset();
+      document.getElementById('result').innerHTML = "";
+    }
   </script>
 </body>
 </html>
-

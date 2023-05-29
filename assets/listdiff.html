@@ -8,10 +8,9 @@
   <link href="/assets/css/extrastyles.css" rel="stylesheet" />
   <script src="/assets/js/jquery-3.6.0.js"></script>
   <script src="/assets/js/jquery-ui.js"></script>
-  
-  <style>
+   <style>
     /* Mobile Styles */
-    @media only screen and (max-width: 868px) {
+    @media only screen and (max-width: 768px) {
       .container {
         padding: 10px;
       }
@@ -23,9 +22,10 @@
         width: 100%;
         margin-bottom: 10px;
       }
-      .btn {
-        width: 100%;
-        margin-top: 10px;
+      .form-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
@@ -42,8 +42,11 @@
         <label for="string2" class="form-label">List of Links 2:</label>
         <input type="search" class="form-control" id="string2" name="string2" required>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button type="button" class="btn btn-secondary" id="clearFormBtn">Clear Form</button>
+	  
+	 <div class="form-buttons">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" id="clearFormBtn">Clear Form</button>
+      </div>
     </form>
 
     <div id="result" class="mt-4"></div>

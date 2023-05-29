@@ -1063,9 +1063,7 @@ echo -n "<!-- begin $userpattern -->
 <tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><th>$textsqnty</th><th>$matchqnty</th><th><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></th><td>${fortitle^}</td><td>$language</td><td class=\"daterow\">$dateforhist</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td>" >> $history
 
 if [[ "$type" == json ]]; then
-cat $tempfilewhistory > checkitout
-linenum=`cat $tempfilewhistory | sed 's/href/\n/g' | grep '</a>' | wc -l`
-  if (( $linenum <= 40 ))
+  if (( $textsqnty <= 40 ))
   then
   echo -n "<br>`cat $tempfilewhistory | grep href | highlightpattern | xargs`" >> $history
   else 
@@ -1073,16 +1071,14 @@ linenum=`cat $tempfilewhistory | sed 's/href/\n/g' | grep '</a>' | wc -l`
   fi
 elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"Suttanta"* ]]
 then
-linenum=`cat $basefile | wc -l`
-  if (( $linenum <= 40 ))
+  if (( $textsqnty <= 40 ))
   then
   echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' -v lkth="$linkforthai" -v ext="$linkforthaiext"  '{print \"<a target=_blank href="lkth$1''ext">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
   else 
   echo -n "<br>" >> $history
   fi
 else
-linenum=`cat $basefile | wc -l`
-  if (( $linenum <= 40 ))
+  if (( $textsqnty <= 40 ))
   then
   cat $basefile > checkitout
 echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1"&lang=pli>"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history

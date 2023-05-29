@@ -926,7 +926,7 @@ checkifalreadydone
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
 mintexts=2
-texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 
 #echo mintxt=$mintexts txt=$texts
 
@@ -934,7 +934,7 @@ if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
 #echo "$tmpdef bf $texts"
 grepbasefileExtended1 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
-texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "$tmpdef bf+1 $texts"
 fi
 
@@ -942,16 +942,16 @@ if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
 grepbasefileExtended2 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
 
-texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12 $texts"
 fi
 
-texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
 nice -$nicevalue grep -E -A1 -Eir "${defpattern}.{0,50}saṅkhaṁ gacchati" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} | grep -E -B1 Evamevaṁ | grep -v "^--$" >> $basefile
 
-texts=`awk -F'json|html' '{print $1}' $basefile | sort | uniq | wc -l`
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12sk $texts"
 fi
 

@@ -1074,9 +1074,21 @@ linenum=`cat $tempfilewhistory | wc -l`
   fi
 elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"Suttanta"* ]]
 then
-echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' -v lkth="$linkforthai" -v ext="$linkforthaiext"  '{print \"<a target=_blank href="lkth$1''ext">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+linenum=`cat $basefile | wc -l`
+  if (( $linenum <= 40 ))
+  then
+  echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' -v lkth="$linkforthai" -v ext="$linkforthaiext"  '{print \"<a target=_blank href="lkth$1''ext">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+  else 
+  echo -n "<br>" >> $history
+  fi
 else
+linenum=`cat $basefile | wc -l`
+  if (( $linenum <= 40 ))
+  then
 echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1"&lang=pli>"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+  else 
+  echo -n "<br>" >> $history
+  fi
 fi
 
 echo "</td></tr>

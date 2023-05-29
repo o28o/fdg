@@ -35,8 +35,15 @@ foreach ($differences as $difference) {
 <!DOCTYPE html>
 <html>
 <head>
+<!--  Core theme CSS (includes Bootstrap)-->
+<link href="/assets/css/jquery-ui.css" rel="stylesheet"/>
+<link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+
+<script src="/assets/js/jquery-3.6.0.js"></script>
+<script src="/assets/js/jquery-ui.js"></script>
+
   <title>Text Links Diff</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
 </head>
 <body>
   <div class="container mt-5">
@@ -61,5 +68,9 @@ foreach ($differences as $difference) {
     }
     ?>
 </body>
+                <!-- Bootstrap core JS-->
+        <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
+
+
 </html>
 

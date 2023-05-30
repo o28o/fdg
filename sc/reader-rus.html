@@ -89,19 +89,7 @@
         <a href="https://github.com/o28o/fdg#readme" title="The source code for this site" rel="noreferrer"
             target="_blank"><img width="20px" src="./images/GitHub-Mark-64px-black.png" alt="GitHub icon"></a>
     </div>
-    <script>
-	function scrollToSuttaSegment(slug) {
-  const params = new URLSearchParams(window.location.search);
-  const targetSegment = params.get("highlight");
-  if (targetSegment) {
-    const targetElement = document.getElementById(targetSegment);
-    if (targetElement) {
-      const offset = targetElement.offsetTop - suttaArea.offsetTop;
-      suttaArea.scrollTo({ top: offset, behavior: "smooth" });
-    }
-  }
-}	
-	</script>
+
     <script type="module" src="index.js"></script>
     <script src="randPlaceholder.js"></script>
     <script>

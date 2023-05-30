@@ -47,8 +47,6 @@ form.addEventListener("submit", e => {
   }
 });
 
-
-
 function buildSutta(slug) {
   let translator = "";
   let texttype = "sutta";
@@ -222,23 +220,29 @@ if (translator === "sv") {
 
 suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + scLink;
 
-
-scrollToSuttaSegment(slug);
-
-
 // Event listener for anchor links
 suttaArea.addEventListener("click", event => {
+	console.log("Anchor link clicked!");
   const target = event.target;
   if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
     const anchor = target.getAttribute("href").substring(1);
     const targetElement = document.getElementById(anchor);
     if (targetElement) {
       event.preventDefault();
-      const offset = targetElement.offsetTop - suttaArea.offsetTop;
-      suttaArea.scrollTo({ top: offset, behavior: "smooth" });
+      scrollToElement(targetElement);
     }
   }
 });
+
+// Function to scroll to the specified element
+function scrollToElement(element) {
+	console.log("Anchor link clicked!");
+  const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
+  suttaArea.scrollTo({
+    top: offset,
+    behavior: "smooth"
+  });
+}
 
 const pageTitle = document.querySelector("h1");
 

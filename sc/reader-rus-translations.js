@@ -220,21 +220,7 @@ if (translator === "sv") {
 
 suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + scLink;
 
-  // Event listener for anchor links
-  suttaArea.addEventListener("click", event => {
- 	console.log("Anchor link clicked!");
-	const target = event.target;
-    if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
-      const anchor = target.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(anchor);
-      if (targetElement) {
-        event.preventDefault();
-        scrollToElement(targetElement);
-      }
-    }
-  });
-
- // Function to scroll to the specified element
+  // Function to scroll to the specified element
 function scrollToElement(element) {
   console.log("Scrolling to element:", element);
   const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
@@ -243,6 +229,39 @@ function scrollToElement(element) {
     behavior: "smooth"
   });
 }
+
+// Event listener for anchor links
+suttaArea.addEventListener("click", event => {
+  console.log("Anchor link clicked!");
+  const target = event.target;
+  if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
+    const anchor = target.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(anchor);
+    if (targetElement) {
+      event.preventDefault();
+      scrollToElement(targetElement);
+    }
+  }
+});
+
+// Smooth scrolling based on URL query parameter
+function smoothScrollToQueryParameter() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const section = urlParams.get("section");
+  
+  if (section) {
+    const target = "#" + section;
+    const targetElement = document.querySelector(target);
+    if (targetElement) {
+      event.preventDefault();
+      scrollToElement(targetElement);
+    }
+  }
+}
+
+// Call the smooth scrolling function when the page is loaded
+window.addEventListener("load", smoothScrollToQueryParameter);
 
 const pageTitle = document.querySelector("h1");
 

@@ -220,29 +220,29 @@ if (translator === "sv") {
 
 suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + scLink;
 
-// Event listener for anchor links
-suttaArea.addEventListener("click", event => {
-	console.log("Anchor link clicked!");
-  const target = event.target;
-  if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
-    const anchor = target.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(anchor);
-    if (targetElement) {
-      event.preventDefault();
-      scrollToElement(targetElement);
+  // Event listener for anchor links
+  suttaArea.addEventListener("click", event => {
+ 	console.log("Anchor link clicked!");
+	const target = event.target;
+    if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
+      const anchor = target.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(anchor);
+      if (targetElement) {
+        event.preventDefault();
+        scrollToElement(targetElement);
+      }
     }
-  }
-});
-
-// Function to scroll to the specified element
-function scrollToElement(element) {
-	console.log("Anchor link clicked!");
-  const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
-  suttaArea.scrollTo({
-    top: offset,
-    behavior: "smooth"
   });
-}
+
+ // Function to scroll to the specified element
+  function scrollToElement(element) {
+ 	console.log("Anchor link clicked!");   
+   const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
+    suttaArea.scrollTo({
+      top: offset,
+      behavior: "smooth"
+    });
+  }
 
 const pageTitle = document.querySelector("h1");
 

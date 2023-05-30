@@ -282,7 +282,8 @@ include 'assets/common/horizontalMenuEn.php';
                 </div>
                 <!-- Portfolio Grid Items-->
 <div class="row justify-content-center">		 
-<a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"><?php echo $howtosearchquote;?></a>
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"></a>
+<?php echo $howtosearchquote;?>
 
 <div class="col-md-6 col-lg-4 mb-0">
 <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">

@@ -15,7 +15,6 @@
       margin-top: 50px;
     }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -35,23 +34,48 @@
   </div>
 
   <script>
-    $(document).ready(function() {
-      const suttaArea = $("#sutta");
+    function smoothScroll(target) {
+      const suttaArea = document.getElementById("sutta");
+      const targetElement = document.querySelector(target);
+      if (targetElement) {
+        event.preventDefault();
+        const targetPosition = targetElement.offsetTop - suttaArea.offsetTop + suttaArea.scrollTop;
+        const startPosition = suttaArea.scrollTop;
+        const distance = targetPosition - startPosition;
+        const duration = 800;
+        let startTimestamp = null;
 
-      // Event listener for anchor links
-      suttaArea.on("click", "a[href^='#']", function(event) {
-        const target = $(this).attr("href");
-        const targetElement = $(target);
-        if (targetElement.length) {
-          event.preventDefault();
-          $("html, body").animate({
-            scrollTop: targetElement.offset().top - suttaArea.offset().top + suttaArea.scrollTop()
-          }, 800);
+        function scrollAnimation(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = timestamp - startTimestamp;
+          suttaArea.scrollTop = easeInOutCubic(progress, startPosition, distance, duration);
+          if (progress < duration) {
+            requestAnimationFrame(scrollAnimation);
+          }
         }
+
+        function easeInOutCubic(t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t * t + b;
+          t -= 2;
+          return c / 2 * (t * t * t + 2) + b;
+        }
+
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll("#sutta a[href^='#']");
+      links.forEach(function(link) {
+        link.addEventListener("click", function(event) {
+          const target = this.getAttribute("href");
+          smoothScroll(target);
+        });
       });
     });
   </script>
-  
+
   <p>
     <a href="#section1">Go to Section 1</a> |
     <a href="#section2">Go to Section 2</a> |

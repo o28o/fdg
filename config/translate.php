@@ -48,7 +48,11 @@ $radioru = "Рус";
 $tooltiptbw = "Искать во всем содержимом TheBuddhasWords.net";
 $radiotbw = "TBW";
 
-
+$howtosearchquotetooltip = 'Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ – \'addhā, idaṃ na ceva tassa bhagavato vacanaṃ; imassa ca bhikkhuno duggahita\'nti.';
+$howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ – "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; imassa ca bhikkhuno duggahita"nti.<br><br>
+Если при поиске в Суттах и сверке с Винаей они (Учения, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем монахом".
+</p>
+<p class="text-end"><a href=/ru/sc/?q=dn16>dn16 </a><a href=/ru/sc/?q=an4.180>an4.180 </a></p>';
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "ОпрВ";
 

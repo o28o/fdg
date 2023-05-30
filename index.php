@@ -89,7 +89,7 @@ include 'scripts/opentexts.php';
                 <!-- Masthead Heading-->
                 
     <h1 class="masthead-heading">
-        <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
 <?php echo $title;?>
  </a>
   </h1>
@@ -281,8 +281,9 @@ include 'assets/common/horizontalMenuEn.php';
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">		 
-                                                        		 
+<div class="row justify-content-center">		 
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"><?php echo $howtosearchquote;?></a>
+
 <div class="col-md-6 col-lg-4 mb-0">
 <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
 <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">

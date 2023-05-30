@@ -22,6 +22,7 @@ body {
 body.dark {
   background-color: var(--off-black);
 }
+html{scroll-behavior:smooth}
 
 .warning {
   color: #E32636;

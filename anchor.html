@@ -15,6 +15,7 @@
       margin-top: 50px;
     }
   </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -33,31 +34,22 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
   <script>
-    const suttaArea = document.getElementById("sutta");
+    $(document).ready(function() {
+      const suttaArea = $("#sutta");
 
-    // Event listener for anchor links
-    suttaArea.addEventListener("click", event => {
-      const target = event.target;
-      if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
-        const anchor = target.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(anchor);
-        if (targetElement) {
+      // Event listener for anchor links
+      suttaArea.on("click", "a[href^='#']", function(event) {
+        const target = $(this).attr("href");
+        const targetElement = $(target);
+        if (targetElement.length) {
           event.preventDefault();
-          scrollToElement(targetElement);
+          $("html, body").animate({
+            scrollTop: targetElement.offset().top - suttaArea.offset().top + suttaArea.scrollTop()
+          }, 800);
         }
-      }
-    });
-
-    // Function to scroll to the specified element
-    function scrollToElement(element) {
-      const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
-      suttaArea.scrollTo({
-        top: offset,
-        behavior: "smooth"
       });
-    }
+    });
   </script>
 </body>
 

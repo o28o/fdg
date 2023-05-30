@@ -235,14 +235,14 @@ suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + sc
   });
 
  // Function to scroll to the specified element
-  function scrollToElement(element) {
- 	console.log("Anchor link clicked!");   
-   const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
-    suttaArea.scrollTo({
-      top: offset,
-      behavior: "smooth"
-    });
-  }
+function scrollToElement(element) {
+  console.log("Scrolling to element:", element);
+  const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
+  suttaArea.scrollTo({
+    top: offset,
+    behavior: "smooth"
+  });
+}
 
 const pageTitle = document.querySelector("h1");
 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scrolling Demo</title>
+  <style>
+    #sutta {
+      height: 200px;
+      overflow-y: scroll;
+    }
+
+    h2 {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Smooth Scrolling Demo</h1>
+  <p>Click the anchor links below to see smooth scrolling in action.</p>
+  <div id="sutta">
+    <h2 id="section1">Section 1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2 id="section2">Section 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2 id="section3">Section 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2 id="section4">Section 4</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2 id="section5">Section 5</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <script>
+    const suttaArea = document.getElementById("sutta");
+
+    // Event listener for anchor links
+    suttaArea.addEventListener("click", event => {
+      const target = event.target;
+      if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
+        const anchor = target.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(anchor);
+        if (targetElement) {
+          event.preventDefault();
+          scrollToElement(targetElement);
+        }
+      }
+    });
+
+    // Function to scroll to the specified element
+    function scrollToElement(element) {
+      const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
+      suttaArea.scrollTo({
+        top: offset,
+        behavior: "smooth"
+      });
+    }
+  </script>
+</body>
+
+</html>
+

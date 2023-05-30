@@ -220,49 +220,6 @@ if (translator === "sv") {
 
 suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + scLink;
 
-  // Function to scroll to the specified element
-function scrollToElement(element) {
-  console.log("Scrolling to element:", element);
-  const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
-  suttaArea.scrollTo({
-    top: offset,
-    behavior: "smooth"
-  });
-}
-
-// Event listener for anchor links
-suttaArea.addEventListener("click", event => {
-  console.log("Anchor link clicked!");
-  const target = event.target;
-  if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
-    const anchor = target.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(anchor);
-    if (targetElement) {
-      event.preventDefault();
-      scrollToElement(targetElement);
-    }
-  }
-});
-
-// Smooth scrolling based on URL query parameter
-function smoothScrollToQueryParameter() {
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const section = urlParams.get("section");
-  
-  if (section) {
-    const target = "#" + section;
-    const targetElement = document.querySelector(target);
-    if (targetElement) {
-      event.preventDefault();
-      scrollToElement(targetElement);
-    }
-  }
-}
-
-// Call the smooth scrolling function when the page is loaded
-window.addEventListener("load", smoothScrollToQueryParameter);
-
 const pageTitle = document.querySelector("h1");
 
       document.title = `${slug} ${pageTitle.textContent}`;
@@ -342,6 +299,32 @@ const pageTitle = document.querySelector("h1");
     );
 
 }
+
+
+// Function to scroll to the specified element
+function scrollToElement(element) {
+  const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
+  suttaArea.scrollTo({
+    top: offset,
+    behavior: "smooth"
+  });
+}
+
+// Smooth scrolling based on URL hash
+function smoothScrollToAnchor() {
+  const hash = window.location.hash;
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      scrollToElement(target);
+    }
+  }
+}
+
+// Call the smooth scrolling function when the page is loaded
+window.addEventListener("load", smoothScrollToAnchor);
+
+
 
 // initialize the whole app
 if (document.location.search) {

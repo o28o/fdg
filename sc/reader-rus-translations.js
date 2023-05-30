@@ -47,17 +47,6 @@ form.addEventListener("submit", e => {
   }
 });
 
-function scrollToSuttaSegment(slug) {
-  const params = new URLSearchParams(window.location.search);
-  const targetSegment = params.get("highlight");
-  if (targetSegment) {
-    const targetElement = document.getElementById(targetSegment);
-    if (targetElement) {
-      const offset = targetElement.offsetTop - suttaArea.offsetTop;
-      suttaArea.scrollTo({ top: offset, behavior: "smooth" });
-    }
-  }
-}
 
 
 function buildSutta(slug) {

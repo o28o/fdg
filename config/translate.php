@@ -52,7 +52,7 @@ $howtosearchquotetooltip = '';
 $howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ – "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; imassa ca bhikkhuno duggahita"nti.<br><br>
 Если при поиске в Суттах и сверке с Винаей они (Учения, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем монахом".
 </p>
-<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180>an4.180</a></p>';
+<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16#dn16:4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180#an4.180:2.7>an4.180</a></p>';
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "ОпрВ";
 
@@ -90,7 +90,7 @@ dn22 mn141
 </p>
 </p>';
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
-$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22>dn22</a> <a href=/ru/sc/?q=mn141>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22#dn22:18.18>dn22</a> <a href=/ru/sc/?q=mn141#mn141:13.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 Что такое, монахи, боль?</br>
 </br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>

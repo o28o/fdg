@@ -218,11 +218,24 @@ if (translator === "sv") {
 
   const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.</p>";
 
-suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + scLink ;  
- 
- const pageTile = document.querySelector("h1");
+suttaArea.innerHTML =  scLink + warning + html + translatorByline + warning + scLink;
 
-      document.title = `${slug} ${pageTile.textContent}`;
+  // Event listener for anchor links
+  suttaArea.addEventListener("click", event => {
+    const target = event.target;
+    if (target.tagName === "A" && target.getAttribute("href").startsWith("#")) {
+      const anchor = target.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(anchor);
+      if (targetElement) {
+        event.preventDefault();
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  });
+ 
+ const pageTitle = document.querySelector("h1");
+
+      document.title = `${slug} ${pageTitle.textContent}`;
 
 
       toggleThePali();

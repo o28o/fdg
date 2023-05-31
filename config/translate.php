@@ -84,7 +84,7 @@ $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma
 
 $fntmessage = '<p class="font-italic text-center ">
 Katamañca, bhikkhave, dukkhaṁ?<br>
-Что такое, монахи, боль / дуккха?
+Что такое, монахи, боль?
 <p class="text-end">
 dn22 mn141
 </p>

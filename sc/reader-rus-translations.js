@@ -300,32 +300,6 @@ const pageTitle = document.querySelector("h1");
 
 }
 
-
-// Function to scroll to the specified element
-function scrollToElement(element) {
-  const offset = element.getBoundingClientRect().top + suttaArea.scrollTop - suttaArea.getBoundingClientRect().top;
-  suttaArea.scrollTo({
-    top: offset,
-    behavior: "smooth"
-  });
-}
-
-// Smooth scrolling based on URL hash
-function smoothScrollToAnchor() {
-  const hash = window.location.hash;
-  if (hash) {
-    const target = document.querySelector(hash);
-    if (target) {
-      scrollToElement(target);
-    }
-  }
-}
-
-// Call the smooth scrolling function when the page is loaded
-window.addEventListener("load", smoothScrollToAnchor);
-
-
-
 // initialize the whole app
 if (document.location.search) {
   let params = new URLSearchParams(document.location.search);

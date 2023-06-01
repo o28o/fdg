@@ -8,7 +8,9 @@ header("Content-Type:text/plain");
 function translatorLookup($fromjs) {
   include_once('../config/config.php');
   
-  $output = shell_exec("ls $translatorlocation/{$fromjs}_* | awk -F'-' '{print \$NF}' | sed 's@.json@@g' ");
+  $translator = "o";
+  $filename = "$translatorlocation/{$fromjs}_translation-ru-$translator.json";
+  $output = shell_exec("ls $translatorlocation/{$fromjs}_translation-ru-*.json 2>/dev/null | awk -F'-' '{print \$NF}' | sed 's@.json@@g' | head -n1");
  $result = str_replace(PHP_EOL, '', $output);
 return $result;
 }

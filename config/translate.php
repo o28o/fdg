@@ -84,7 +84,7 @@ $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma
 
 $fntmessage = '<p class="font-italic text-center ">
 Katamañca, bhikkhave, dukkhaṁ?<br>
-Что такое, монахи, боль / дуккха?
+Что такое, монахи, боль?
 <p class="text-end">
 dn22 mn141
 </p>
@@ -137,7 +137,7 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift эт
 $prongh = ' Проект на GitHub';
 
 $headerexamples = 'Примеры';
-$examplelist = '<li>Определение понятия <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">Kata.*dukkhaṁ\\\\?</a>
+$examplelist = '<li>Определение понятия <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">-la1 Kata.*, dukkhaṁ\\\\?</a>
              </li>
               <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/example/dvayagaaminii_suttanta_pali_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            
@@ -471,7 +471,7 @@ $prongh = ' Project on GitHub';
 
 
 $headerexamples = 'Examples';
-$examplelist = '<li>Definition of the <a href="/assets/example/kata.dukkha.m-question_suttanta_pali_3-5.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/example/kata.dukkha.m-question_suttanta_pali_3-5.html">Kata.*dukkhaṁ\\\\?</a></li>
+$examplelist = '<li>Definition of the <a href="/assets/example/kata.dukkha.m-question_suttanta_pali_3-5.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/example/kata.dukkha.m-question_suttanta_pali_3-5.html">-la1 Kata.*, dukkhaṁ\\\\?</a></li>
 
  <li>Sutta where Buddha says that he doesn\'t make <a href="/assets/example/dvayagaaminii_suttanta_pali_1-1.html">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
 

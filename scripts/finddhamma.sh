@@ -19,7 +19,7 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
-fnlang=_ru
+outfnlang=-ru
 defaultlang='lang=pli-rus'
 excluderesponse="исключая"
 function bgswitch {
@@ -464,7 +464,7 @@ sed "s/я/ya/g"
 
 #link and filename
 fn=`echo $pattern | sed 's/\*//g' | sed 's/[|-]/-/g' | sed 's/[][]//g' | sed 's/ /-/g' | sed 's/\\\//g' | sed 's@?@-question@g'|  awk '{print tolower($0)}'`
-fn=${fn}${excfn}${fileprefix}${fnlang}
+fn=${fn}${excfn}${fileprefix}${fnlang}${outfnlang}
 echo fn=$fn 
 echo fnlang=$fnlang
 modifiedfn=`echo $fn | diact2normal | cyr2lat`

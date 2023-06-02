@@ -19,6 +19,7 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
+fnlang=_ru
 defaultlang='lang=pli-rus'
 excluderesponse="исключая"
 function bgswitch {
@@ -464,7 +465,8 @@ sed "s/я/ya/g"
 #link and filename
 fn=`echo $pattern | sed 's/\*//g' | sed 's/[|-]/-/g' | sed 's/[][]//g' | sed 's/ /-/g' | sed 's/\\\//g' | sed 's@?@-question@g'|  awk '{print tolower($0)}'`
 fn=${fn}${excfn}${fileprefix}${fnlang}
-
+echo fn=$fn 
+echo fnlang=$fnlang
 modifiedfn=`echo $fn | diact2normal | cyr2lat`
 
 extention=$rand.tmp
@@ -604,6 +606,9 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
 checktrnfile=$apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*
 
 if [[ "$args" == *"-oru"* ]] && [ -f $checktrnfile ]; then
+='lang=pli-rus'
+fnlang=_ru
+
 defaultlang='lang=pli-rus'
  translation=`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_*`
  else

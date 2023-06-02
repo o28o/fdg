@@ -606,7 +606,7 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
 checktrnfile=$apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*
 
 if [[ "$args" == *"-oru"* ]] && [ -f $checktrnfile ]; then
-='lang=pli-rus'
+defaultlang='lang=pli-rus'
 fnlang=_ru
 
 defaultlang='lang=pli-rus'

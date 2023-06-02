@@ -8,6 +8,9 @@ sed -i 's@\.\.\.@…@g' $i
 sed -i 's@……@… …@g' $i
 sed -i 's@  …@ …@g' $i
 echo " done <br>"
+echo -n "fixing windows newlines in $i"
+sed -i 's/\r//g' $i 
+echo " done <br>"
 fi
 done
 

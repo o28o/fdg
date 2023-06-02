@@ -137,7 +137,7 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift эт
 $prongh = ' Проект на GitHub';
 
 $headerexamples = 'Примеры';
-$examplelist = '<li>Определение понятия <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">dukkha</a> на Пали со ссылками на Русские переводы. Запрос: <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">-la1 Kata.*, dukkhaṁ\\\\?</a>
+$examplelist = '<li>Определение понятия <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">dukkha</a> на Пали и Русском. Запрос: <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">-la1 Kata.*, dukkhaṁ\\\\?</a>
              </li>
               <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/example/dvayagaaminii_suttanta_pali_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            

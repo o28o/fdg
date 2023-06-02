@@ -17,10 +17,10 @@ function randCallToAction() {
  
   if(theLanguage == "en"){
     console.log("your html contains en");
-    var tasks = ["The 1st is Sn56.11", "Read sn22.87", "Ponder on mn28", "Dukkha in Suttas is?", "How many Jhanas in Suttas?",  "Real meaning of Pañña is?", "Dukkha is defined in dn22", "Saṅkhārā in mn44", "Why Tathagata is like ocean?", "Why Dhamma is like Ocean?", "Why Tathagata is like elephant?", "What is the ocean?", "What is the all?"];
+    var tasks = ["The 1st is Sn56.11", "Read sn22.87", "Ponder on mn28", "Dukkha in Suttas is?", "How many Jhanas in Suttas?",  "Real meaning of Pañña is?", "Dukkha is defined in dn22", "Saṅkhārā in mn44", "Why Tathagata is like ocean?", "Why Dhamma is like Ocean?", "Why Tathagata is like elephant?", "What is the ocean?", "What is the all?", "Difference between dukkha and dukkha ariyasacca?"];
 }  else if  ( theLanguage == "ru") {
   console.log("your html contains ru");
-    var tasks = ["1ая - это Sn56.11", "Прочти sn22.87", "Подумай над mn28", "Dukkha в Суттах - это?", "Сколько джхан в Суттах?", "Pañña на самом деле - это ...?", "Определение dukkha есть в dn22", "Saṅkhārā в mn44", "Почему Татхагата, как слон?", "Почему Дхамма, как Океан?", "Почему Татхагата, как Океан?", "Что такое океан?", "Что такое 'всё'?"];
+    var tasks = ["1ая - это Sn56.11", "Прочти sn22.87", "Подумай над mn28", "Dukkha в Суттах - это?", "Сколько джхан в Суттах?", "Pañña на самом деле - это ...?", "Определение dukkha есть в dn22", "Saṅkhārā в mn44", "Почему Татхагата, как слон?", "Почему Дхамма, как Океан?", "Почему Татхагата, как Океан?", "Что такое океан?", "Что такое 'всё'?", "Разница между dukkha и dukkha ariyasacca"];
           }
 const random = Math.floor(Math.random() * tasks.length);
 console.log(random, tasks[random]);

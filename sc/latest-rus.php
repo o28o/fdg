@@ -76,7 +76,7 @@ $check</h2>";
 //an
 $pathan = 'assets/texts/sutta/an/';
 $check = shell_exec("
-anrangeInFile=`grep 'let an1ranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
+anrangeInFile=`grep 'let anranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
 anstring=`find $basedir/$pathan -type f  -name \"*translation*.json\" | awk -F'/' '{print \$NF}'| awk -F'_' '{print \$1}' | sort -V | xargs | sed \"s@ @\', \'@g\"`
 
@@ -86,7 +86,7 @@ if [[ \"\$andir\" == \"\$anrangeInFile\" ]] ; then
 echo AN no updates
 else
 echo AN updated to \$andir
-sed -i \"s@let an1ranges =.*@let an1ranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+sed -i \"s@let anranges =.*@let anranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
 fi
 ");
 echo "<h2 style='text-align: center;'>

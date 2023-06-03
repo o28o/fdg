@@ -189,12 +189,18 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
     });
 
 if (translator === "sv") {
-  translator = 'SV <a target=_blank href=https://theravada.ru>theravada.ru</a>';
+  translator = 'SV theravada.ru';
 } else if (translator === "" && texttype === "sutta" ) {
   translator = 'Bhikkhu Sujato';
 } else if (translator === "" && texttype === "vinaya") {
   translator = 'Bhikkhu Brahmali';
+} else if (translator === "syrkin" ) {
+  translator = 'А.Я. Сыркин';
+} else if (translator === "syrkin+o" ) {
+  translator = 'А.Я. Сыркин, ред. о';
 }
+
+
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 

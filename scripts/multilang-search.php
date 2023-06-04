@@ -140,13 +140,7 @@ $outforjs .= $output . "<br>";
 
 }	
 
-if ( preg_match('/(|-en|-b)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) )  && ( $p != "-vin" ) && ( $p != "-def" ))  {
-   $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -b $extra $string");
-//echo "<p>$output</p>";
-      $output = trim(preg_replace('/\s\s+/', ' ', $output));	
-$outforjs .= $output; 
 
-			}	
 }
 //echo $outforjs; 
 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
@@ -158,4 +152,18 @@ $finaloutput = "<script>
   responseElement.innerHTML = '$outputnonl';
 </script>";
 echo $finaloutput;  
+
+
+/*
+if ( preg_match('/(|-en|-b)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) )  && ( $p != "-vin" ) && ( $p != "-def" ))  {
+   $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -b $extra $string");
+//echo "<p>$output</p>";
+      $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output; 
+
+			}	
+			*/
+
 		?>	
+
+

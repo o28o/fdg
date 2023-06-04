@@ -6,7 +6,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
 } else {
     $outputlang = "";
     }
-echo "$p $q $extra";
+//echo "$p $q $extra";
 echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
 			
 /* single search no radiobuttons */
@@ -153,7 +153,6 @@ echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</scri
 
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
 $finaloutput = "<script>
-document.getElementById( 'spinner' ).style.display = 'none';
 		console.log('$outputnonl');
 			const responseElement = document.querySelector('#response');
   responseElement.innerHTML = '$outputnonl';

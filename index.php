@@ -211,8 +211,11 @@ input.addEventListener("keypress", function(event) {
 
 
   <div id="response"></div>
-  
-  
+
+	    <?php
+include 'scripts/multilang-search.php';
+?>  
+
 
 <script>
 </script>
@@ -819,7 +822,5 @@ $(document).ready(function(){
   console.log(window.location.href);
 </script>
     </body>
-	    <?php
-include 'scripts/multilang-search.php';
-?>  
+
 </html>

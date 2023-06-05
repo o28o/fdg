@@ -20,7 +20,7 @@ $pathmn = 'assets/texts/sutta/mn/';
 $check = shell_exec("
 mnrangeInFile=`grep 'let mnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-mnstring=`find $basedir/$pathmn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+mnstring=`find $basedir/$pathmn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 
 mndir=\"[\${mnstring%,}]\"
 
@@ -40,7 +40,7 @@ $pathsn = 'assets/texts/sutta/sn/';
 $check = shell_exec("
 snrangeInFile=`grep 'let snranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-snstring=`find $basedir/$pathsn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+snstring=`find $basedir/$pathsn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 
 sndir=\"[\${snstring%,}]\"
 
@@ -59,7 +59,7 @@ $pathdn = 'assets/texts/sutta/dn/';
 $check = shell_exec("
 dnrangeInFile=`grep 'let dnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-dnstring=`find $basedir/$pathdn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+dnstring=`find $basedir/$pathdn -name \"*translation*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
 
 dndir=\"[\${dnstring%,}]\"
 

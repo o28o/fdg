@@ -48,9 +48,11 @@ $radioru = "Рус";
 $tooltiptbw = "Искать во всем содержимом TheBuddhasWords.net";
 $radiotbw = "TBW";
 
+$monktype = Array("монахом","тхерой","сообществом монахов");
+
 $howtosearchquotetooltip = '';
 $howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; imassa ca bhikkhuno duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.<br><br>
-Если при поиске в Суттах и сверке с Винаей они (учения, практики, методы, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем монахом". Таким образом, монахи, вам следует это отвергнуть. 
+Если при поиске в Суттах и сверке с Винаей они (учения, практики, методы, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем ' . $monktype[array_rand($monktype)] . '". Таким образом, монахи, вам следует это отвергнуть. 
 </p>
 <p class="text-end"><a target=_blank href=/ru/sc/?q=dn16#dn16:4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180#an4.180:2.7>an4.180</a></p>';
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
@@ -387,9 +389,10 @@ $radioru = "Rus";
 $tooltiptbw = "Search in all contents of TheBuddhasWords.net";
 $radiotbw = "TBW";
 
+$monktype = Array("monk","thera","sangha");
 $howtosearchquotetooltip = '';
 $howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; imassa ca bhikkhuno duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.<br><br>
-If they (teachings, practices, methods, quotes, stories, anything associated with the Buddha) are not found in the Suttas and are not exhibited in the Vinaya, you should draw the conclusion: ‘Clearly this is not the word of the Blessed One. It has been wrongly understood by that monk.’ And so, monks, you should reject it.
+If they (teachings, practices, methods, quotes, stories, anything associated with the Buddha) are not found in the Suttas and are not exhibited in the Vinaya, you should draw the conclusion: ‘Clearly this is not the word of the Blessed One. It has been wrongly understood by that ' . $monktype[array_rand($monktype)] . '.’ And so, monks, you should reject it.
 </p>
 <p class="text-end"><a target=_blank href=/ru/sc/?q=dn16#dn16:4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180#an4.180:2.7>an4.180</a></p>';
 $tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';

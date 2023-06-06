@@ -141,7 +141,7 @@ $prongh = ' Проект на GitHub';
 $headerexamples = 'Примеры';
 $examplelist = '<li>Определение понятия <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">dukkha</a> на Пали и Русском. Запрос: <a href="./assets/example/kata-dukkha.m-question_suttanta_pali_3-3-ru.html">-la1 Kata.*, dukkhaṁ\\\\?</a>
              </li>
-              <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/example/dvayagaaminii_suttanta_pali_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
+              <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/example/dvayagaaminii_suttanta_pali-ru_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            
                 <li>Все сутты со словом <a href="./assets/example/vosmerichn_suttanta_ru_139-275.html">Восьмеричный</a> Благородный Путь на Русском</li>
                 <li>Все сутты со словом <a href="./assets/example/nravstvennost_suttanta_ru_92-260.html">нравственность</a> на Русском</li>

@@ -1,10 +1,7 @@
-
 #!/bin/bash
-
 if [[ `pwd` != *"/sc "* ]]; then
 cd sc 2>/dev/null
 fi
-
 
 source ../config/script_config.sh --source-only
 cd $apachesitepath/assets/texts/sutta

@@ -63,7 +63,7 @@ echo "removed apache demo page"
 mkdir result 
 cd ru 
 ln -s ../result ./result
-
+cd ..
 #current suttacentral.net
 echo "downloading suttacentral.net"
 cd ..
@@ -78,7 +78,8 @@ echo "downloading accesstoinsight.org"
 rm -rf accesstoinsight.org 
 wget http://accesstoinsight.org/tech/download/ati.zip
 echo "unzipping"
-unzip ati.zip ./accesstoinsight.org
+unzip ati.zip 
+mv ati ./accesstoinsight.org
 rm ati.zip
 
 #legacy suttacentral.net 
@@ -86,7 +87,9 @@ echo "downloading legacy.suttacentral.net"
 rm -rf legacy.suttacentral.net
 wget https://legacy.suttacentral.net/exports/sc-offline-2016-11-30_16:03:42.zip
 echo "unzipping"
-unzip sc-offline-2016-11-30_16\:03\:42.zip ./legacy.suttacentral.net
+unzip sc-offline-2016-11-30_16\:03\:42.zip 
+mv sc-offline-2016-11-30_16\:03\:42/ legacy.suttacentral.net  
+rm sc-offline-2016-11-30_16\:03\:42.zip 
 
 #test run
 echo "test run"

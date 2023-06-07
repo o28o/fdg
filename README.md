@@ -34,7 +34,7 @@ Install WAMP and clone repo to apache root
 
 3\.Copy-paste following commands:
 
-    apt install git
+    pkg install git
     mkdir -p $PREFIX/share/apache2/default-site/htdocs
     cd $PREFIX/share/apache2/default-site/htdocs
     git clone https://github.com/o28o/fdg.git ./
@@ -46,10 +46,6 @@ Install WAMP and clone repo to apache root
 1\. Install Termux from [f-droid](https://f-droid.org/packages/com.termux/) or [github]()
 
 2\. Open termux and run
-
-    apt install php-apache apache2 pv wget git iconv python w3m
-
-or use 
 
     pkg install php-apache apache2 pv wget git iconv python w3m
     

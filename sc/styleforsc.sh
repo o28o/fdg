@@ -26,6 +26,13 @@ sed -i 's/\r//g' $i
 echo " done <br>"
 fi
 
+if grep -E ",[\.:;]" $i
+then
+echo -n "fixing doubled punctuation $i"
+sed -i 's/,\([.,:;]\)/\1/g' $i
+echo " done <br>"
+fi
+
 done
 exit 
 

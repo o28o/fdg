@@ -1,7 +1,7 @@
 #install Termux
 #open it 
 #then run: 
-# apt install git
+# pkg install git
 # mkdir -p $PREFIX/share/apache2/default-site/htdocs
 # cd $PREFIX/share/apache2/default-site/htdocs
 # git clone https://github.com/o28o/fdg.git ./
@@ -12,7 +12,7 @@ httpdconf=$PREFIX/etc/apache2/httpd.conf
 httpdtdir=$PREFIX/share/apache2/default-site/htdocs
 
 echo "installing php-apache apache2 zip pv wget git iconv w3m jq"
-apt install php-apache apache2 zip pv wget git iconv w3m jq
+pkg install php-apache apache2 zip pv wget git iconv w3m jq
 
 while true; do
     read -p "Are you going to perform searches in Thai? Y or N" yn

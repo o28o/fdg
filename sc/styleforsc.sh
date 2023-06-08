@@ -16,14 +16,14 @@ echo " done <br>"
 fi
 
 
-if grep -l $'\r' $i
+if grep -q $'\r' $i
 then
 echo -n "fixing windows newlines in $i"
 sed -i 's/\r//g' $i
 echo " done <br>"
 fi
 
-if grep -E ",[\.:;]" $i
+if grep -qE ",[\.:;]" $i
 then
 echo -n "fixing doubled punctuation $i"
 sed -i 's/,\([.,:;]\)/\1/g' $i

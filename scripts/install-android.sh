@@ -1,7 +1,7 @@
 #install Termux
 #open it 
 #then run: 
-# pkg install git
+# pkg install -y git
 # mkdir -p $PREFIX/share/apache2/default-site/htdocs
 # cd $PREFIX/share/apache2/default-site/htdocs
 # git clone https://github.com/o28o/fdg.git ./
@@ -12,7 +12,7 @@ httpdconf=$PREFIX/etc/apache2/httpd.conf
 httpdtdir=$PREFIX/share/apache2/default-site/htdocs
 
 echo "installing php-apache apache2 zip pv wget git iconv w3m jq"
-pkg install php-apache apache2 zip pv wget git iconv w3m jq
+pkg install -y php-apache apache2 zip pv wget git iconv w3m jq
 
 while true; do
     read -p "Are you going to perform searches in Thai? Y or N" yn
@@ -24,9 +24,9 @@ You may fix it with these commands:
 rm \$PREFIX/bin/python
 ln -s \$PREFIX/bin/python(version installed previously) \$PREFIX/bin/python
 "     
-pkg install tur-repo
+pkg install -y tur-repo
 pkg update
-pkg install python3.9
+pkg install -y python3.9
 rm $PREFIX/bin/python
 ln -s $PREFIX/bin/python3.9 $PREFIX/bin/python
 

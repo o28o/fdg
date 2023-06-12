@@ -602,24 +602,23 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
  lettersblock=`echo $filenameblock | sed 's@[0-9]*@@g'`
  numberblock=`echo $filenameblock | sed 's@[A-Za-z]*@@g'`
 #echo "$filenameblock $pathblock $lettersblock $numberblock" | tohtml
-#checktrnfile="$apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*"
+checktrnfile="`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*| tail -n1`"
 
-matching_files=( $apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*{+o,-o}.json )
-
-if [[ ${#matching_files[@]} -gt 0 ]]; then
+#matching_files=( $apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*{+o,-o}.json )
+#if [[ ${#matching_files[@]} -gt 0 ]]; then
   # Найдены файлы с "+o.json" или "-o.json"
-  checktrnfile="${matching_files[0]}"
-else
+#  checktrnfile="${matching_files[0]}"
+#else
   # Файлы с "+o.json" или "-o.json" не найдены
-  checktrnfile="$apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*"
-fi
+#  checktrnfile="$apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*"
+#fi
 
 if [[ "$args" == *"-oru"* ]] && [ -f "$checktrnfile" ]; then
 defaultlang='lang=pli-rus'
 fnlang=_ru
 
 defaultlang='lang=pli-rus'
- translation=`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_*`
+ translation="$checktrnfile"
  else
  defaultlang='lang=pli'
     translation=`ls $lookup/translation/en/$translator/$pathblock/*${filenameblock}_*`

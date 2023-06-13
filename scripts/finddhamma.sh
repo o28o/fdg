@@ -726,7 +726,7 @@ fi
 
 firstIndex=$(echo $indexlist | head -n1)
 
-linkgeneral="$linkgeneral#$firstIndex"
+linkgeneralwithindex="$linkgeneral#$firstIndex"
 #echo "ind=$indexlist ls=`ls $basefile` stn=$suttanumber fnb=$filenameblock"
 
 metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
@@ -738,7 +738,7 @@ metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 fi
 
 echo "<tr>
-<td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneral">$filenameblock</a></td>
+<td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
 <td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern` </strong>`echo ${trntitle}  | highlightpattern ` </td>
 <td>${word}</td>
 <td>$count</td>   

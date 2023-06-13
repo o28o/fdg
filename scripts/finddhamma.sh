@@ -755,7 +755,7 @@ do
 		quote=`nice -$nicevalue grep -E -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
       if [[ "$quote" != "" ]] &&  [[ "$@" == *"-ply"* ]] 
 then
-[[ "$f" == *"root"* ]] && echo "<div class=\"pli-lang inputscript-ISOPali\">$quote</div><br class=\"btwntrn\">"
+[[ "$f" == *"root"* ]] && echo "<div class=\"pli-lang inputscript-ISOPali\">$quote <a target=_blank href=\"$linkgeneral\#$i\">_</a></div><br class=\"btwntrn\">"
 
 elif [[ "$quote" != "" ]] &&  [[ "$@" != *"-ply"* ]] 
 then 

@@ -303,13 +303,7 @@ const pageTitle = document.querySelector("h1");
 
     );
 	
-	window.addEventListener("DOMContentLoaded", function() {
-  var anchorElement = document.getElementById("an9.15:1.2");
-  if (anchorElement) {
-    anchorElement.scrollIntoView({ behavior: "smooth" });
-  }
-});
-
+// в конец функции можно добавить скролл
 
 }
 

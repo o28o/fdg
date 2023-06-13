@@ -118,6 +118,9 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
       html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="eng-lang" lang="en">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
+console.log("translator " + translator);
+
+
 if (translator === "sv") {
   translator = 'SV theravada.ru';
 } else if (translator === "" && texttype === "sutta" ) {
@@ -138,6 +141,8 @@ if (!translator || translator === '') {
     translator = 'Bhikkhu Brahmali';
   }
 }
+
+console.log("translator " + translator);
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 

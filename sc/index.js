@@ -130,6 +130,15 @@ if (translator === "sv") {
   translator = 'А.Я. Сыркин, ред. о';
 }
 
+
+if (!translator || translator === '') {
+  if (texttype === 'sutta') {
+    translator = 'Bhikkhu Sujato';
+  } else if (texttype === 'vinaya') {
+    translator = 'Bhikkhu Brahmali';
+  }
+}
+
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
           const translatorByline = `<div class="byline">

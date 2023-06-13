@@ -753,14 +753,7 @@ do
 		for f in $roottext $translation $variant
         do     
 		quote=`nice -$nicevalue grep -E -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
-      if [[ "$quote" != "" ]] &&  [[ "$@" == *"-ply"* ]] 
-then
-[[ "$f" == *"root"* ]] && echo "<div class=\"pli-lang inputscript-ISOPali\">$quote <a target=_blank href=\"$linkgeneral\#$i\">_</a></div><br class=\"btwntrn\">"
-
-elif [[ "$quote" != "" ]] &&  [[ "$@" != *"-ply"* ]] 
-then 
-[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote</span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
-fi
+[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank href=\"$linkgeneral\#$i\">_</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
 done
 echo '<br class="styled">'
 done | tohtml 

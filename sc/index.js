@@ -118,14 +118,14 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
       html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="eng-lang" lang="en">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
-console.log("translator " + translator);
+console.log("translator before" + translator);
 
 
 if (translator === "sv") {
   translator = 'SV theravada.ru';
-} else if (translator === "" && texttype === "sutta" ) {
-  translator = 'Bhikkhu Sujato';
-} else if (translator === "" && texttype === "vinaya") {
+} else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
+  translator = 'Bhikkhu Sujato'; 
+} else if ((translator === "" && texttype === "vinaya" ) || (translator === "brahmali" )) {
   translator = 'Bhikkhu Brahmali';
 } else if (translator === "syrkin" ) {
   translator = 'А.Я. Сыркин';
@@ -133,16 +133,7 @@ if (translator === "sv") {
   translator = 'А.Я. Сыркин, ред. о';
 }
 
-
-if (!translator || translator === '') {
-  if (texttype === 'sutta') {
-    translator = 'Bhikkhu Sujato';
-  } else if (texttype === 'vinaya') {
-    translator = 'Bhikkhu Brahmali';
-  }
-}
-
-console.log("translator " + translator);
+console.log("translator after" + translator);
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 

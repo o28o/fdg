@@ -539,7 +539,7 @@ then
 continue 
 fi 
 
-linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq | awk -F'_' '{print "<a target=_blank href=\"/sc/?q="$1"&lang=pli\">"$1"</a>"}'| sort -Vf | uniq | xargs`
+linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq | awk -F'_' '{print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"&lang=pli\">"$1"</a>"}'| sort -Vf | uniq | xargs`
 
 echo "<tr>
 <td>`echo $uniqword | highlightpattern`</td>

@@ -122,6 +122,8 @@ $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Пред�
  <br><br>
   Самое важное из Учения Будды нужно изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
   
+$linklearnpali = 'https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1';
+$anamemlearnpali = 'Learn Pali Переводы';
 $anamemolds = 'Переводы Майкла Олдса'; 
 $anameasc = 'Благородный Аскетизм';
 $anameati = 'Accesstoinsight.org Патимоккха';
@@ -467,6 +469,10 @@ that is called stress.</br></p>';
 
         
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
+
+
+$linklearnpali = 'https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1';
+$anamemlearnpali = 'Learn Pali Guides';
 
 $anamemolds = 'Translations by M. Olds';
 $anameasc = 'Asceticism in Dhamma';

@@ -24,7 +24,7 @@ $locationru = $basedir. "/theravada.ru/Teaching/Canon/Suttanta/Texts";
 $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
 
 // mainmenu
-$linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+$linkmolds = '/buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
 $linksc = '/legacy.suttacentral.net/sc/su.html';
 $anamesc = 'Legacy.suttacentral.net';
 $linktbw = '/bw';
@@ -59,7 +59,7 @@ $locationru = $basedir. "/theravada.ru/Teaching/Canon/Suttanta/Texts";
 $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
 
 // mainmenu
-$linkmolds = '/obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+$linkmolds = '/buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
 $linksc = 'https://suttacentral.net/';
 $anamesc = 'SuttaCentral.net';
 $linktbw = '/bw';
@@ -100,7 +100,7 @@ $adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/
 // include_once('../config/config.php');
 
 // mainmenu
-$linkmolds = 'https://obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+$linkmolds = 'https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
 $linksc = 'https://suttacentral.net/';
 $anamesc = 'SuttaCentral.net';
 $linktbw = '/bw';
@@ -144,7 +144,7 @@ $adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/
 // include_once('../config/config.php');
 
 // mainmenu
-$linkmolds = 'https://obo.genaud.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
+$linkmolds = 'https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
 $linksc = 'https://suttacentral.net/';
 $anamesc = 'SuttaCentral.net';
 $linktbw = 'https://thebuddhaswords.net';

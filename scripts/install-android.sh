@@ -235,7 +235,7 @@ vmtouch -dl /var/www/html/cse.php
 vmtouch -dl /var/www/html/history.php
 vmtouch -dl /var/www/html/index.php
 vmtouch -dl /var/www/html/o
-vmtouch -dl /var/www/html/obo.genaud.net
+vmtouch -dl /var/www/html/buddhadust.net
 vmtouch -dl /var/www/html/README.md
 vmtouch -dl /var/www/html/ru
 vmtouch -dl /var/www/html/sc
@@ -273,3 +273,5 @@ wget --recursive --no-clobber --page-requisites --html-extension --convert-links
 
 wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories --reject=pdf,docx,doc,zip,odt,rtf http://probud.narod.ru/dop.html
 
+
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm

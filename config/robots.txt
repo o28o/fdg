@@ -12,7 +12,7 @@ Disallow: /suttacentral.net/
 Disallow: /accesstoinsight.org/
 Disallow: /en.dhammadana.org/
 Disallow: /metta.lk/
-Disallow: /obo.genaud.net/
+Disallow: /buddhadust.net/
 Disallow: /theravada.ru/
 Disallow: /tipitaka.theravada.su/
 
@@ -29,7 +29,7 @@ Disallow: /suttacentral.net/
 Disallow: /accesstoinsight.org/
 Disallow: /en.dhammadana.org/
 Disallow: /metta.lk/
-Disallow: /obo.genaud.net/
+Disallow: /buddhadust.net/
 Disallow: /theravada.ru/
 Disallow: /tipitaka.theravada.su/
 
@@ -45,7 +45,7 @@ Disallow: /suttacentral.net/
 Disallow: /accesstoinsight.org/
 Disallow: /en.dhammadana.org/
 Disallow: /metta.lk/
-Disallow: /obo.genaud.net/
+Disallow: /buddhadust.net/
 Disallow: /theravada.ru/
 Disallow: /tipitaka.theravada.su/
 Host: find.dhamma.gift

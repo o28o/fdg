@@ -32,9 +32,6 @@ include 'scripts/opentexts.php';
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
 <link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
 
-<!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
-<script src="/assets/js/fontawesome.6.1.all.js"></script>
-
 
 <!-- Google fonts
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
@@ -798,10 +795,13 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
         </div>
 
         <!-- Core theme JS
-        <script src="js/scripts.js"></script>-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
         <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
+
+<!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
+<script src="/assets/js/fontawesome.6.1.all.js"></script>
+
 
 
 <script>

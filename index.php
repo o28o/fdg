@@ -214,7 +214,7 @@ input.addEventListener("keypress", function(event) {
 </header>
 
 <!-- Portfolio Section-->
-<section class="page-section portfolio" id="help">
+<section class="page-section portfolio">
 <div class="container text-center">
 <?php
 if ( $lang == "ru" ) {
@@ -241,7 +241,7 @@ include 'assets/common/horizontalMenuEn.php';
 </div>
 </div>
 
-<h4 class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
+<h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
 <div class="embed-container mt-4 mb-5"> 
 <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>

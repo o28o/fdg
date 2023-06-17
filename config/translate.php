@@ -11,6 +11,7 @@ $searchcaption = 'Поиск';
 $linksothermat = 'https://drive.google.com/drive/u/1/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN';
 $linktextbook = "$linktextbookru";
 
+$maintitle = 'Точный поиск в Пали Суттах и Винае.';
 $metadesc = 'Точный поиск в Пали Суттах и Винае. Поисковый Сайт Освобождения.';
 $titletwit = 'Точный поиск в Пали Суттах и Винае. ';
 $ogdesc = 'Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
@@ -358,6 +359,8 @@ $htmllang = "en";
 $mainpage = '/';
 $mainscpage = '/sc';
 $searchcaption = 'Search';
+
+$maintitle = 'Precise Search in Pali Suttas and Vinaya.';
 $metadesc = 'Precise Search in Pali Suttas and Vinaya. Liberation Search Engine. Search in Pali Suttanta and Vinaya';
 $titletwit = 'Precise Search in Pali Suttas and Vinaya. ';
 $ogdesc = 'Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai';

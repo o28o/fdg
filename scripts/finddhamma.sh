@@ -137,6 +137,7 @@ function grepbrief {
 }
 
 pattern="$@"
+grepdirection='A'
 if [[ "$@" == *"-h"* ]]; then
     echo "
     without arguments will search in pali<br>
@@ -149,6 +150,7 @@ if [[ "$@" == *"-h"* ]]; then
     -vin - to search in vinaya texts only <br>
     -abhi - to search in abhidhamma texts only <br>
     -laN X - search X and print N lines after match<br>
+    -lbN X - search X and print N lines before match<br>    
     X -exc Y - search X exclude Y <br>
     -onl \"X|Y|...\"- find texts that contain all patterns only
     -ru - to search in Russian <br>
@@ -163,6 +165,12 @@ fi
 if [[ "$@" == *"-la"* ]]; then
 linesafter=`echo "$@" | sed 's@.*-la@@' | awk '{print $1}'` 
 fi
+
+if [[ "$@" == *"-lb"* ]]; then
+grepdirection='B'
+linesafter=`echo "$@" | sed 's@.*-lb@@' | awk '{print $1}'` 
+fi
+
 #echo la=$linesafter
 if [[ "$pattern" != *"\\"* ]]; then
 pattern=`echo "$pattern"| awk '{print tolower($0)}' | clearargs `
@@ -701,7 +709,7 @@ translatorsname=`echo $translation | awk -F'/en/' '{print $2}' | awk -F'/' '{pri
 if [[ "$fortitle" == *"Suttanta"* ]]
 then
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
-link=`echo $filenameblock |  awk -v lkru="$linkforru" '{print lkru$0}' `
+link=`echo $filenameblock |  awk -v lkru="$linkforru" -v ext="$linkforruext" '{print lkru$0''ext}' `
 fi
 
 linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&'$defaultlang'"}' ` 
@@ -755,7 +763,7 @@ for i in $indexlist
 do
 		for f in $roottext $translation $variant
         do     
-		quote=`nice -$nicevalue grep -E -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
+		quote=`nice -$nicevalue grep -E -${grepdirection}${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
 [[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$i\">_</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
 done
 echo '<br class="styled">'
@@ -890,7 +898,7 @@ echo "<tr>
 </td>
 <td>" | tohtml
 
-nice -$nicevalue grep -E -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
+nice -$nicevalue grep -E -${grepdirection}${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
 echo "$line"
 echo '<br class="styled">'
 done | tohtml

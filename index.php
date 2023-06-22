@@ -630,7 +630,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
       <h5 class="mb-1"><?php echo $head5suttadiff;?></h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
     </div>
-    <p class="mb-1"></p>
+    <p class="mb-1"><?php echo $psuttadiff;?></p>
     <small class="text-muted"></small>
   </a>
 
@@ -639,7 +639,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
       <h5 class="mb-1"><?php echo $head5listdiff;?></h5>
       <small class="text-muted"><?php echo $detailoffline;?></small>
     </div>
-    <p class="mb-1"></p>
+    <p class="mb-1"><?php echo $plistdiff;?></p>
     <small class="text-muted"></small>
   </a>
 
@@ -648,7 +648,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
       <h5 class="mb-1"><?php echo $head5makelist;?></h5>
       <small class="text-muted"><?php echo $detailoffline;?></small>
     </div>
-    <p class="mb-1"></p>
+    <p class="mb-1"><?php echo $pmakelist;?></p>
     <small class="text-muted"></small>
   </a>
 

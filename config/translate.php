@@ -332,8 +332,11 @@ $head5plikeyboard = 'Pali раскладка';
 $pplikeyboard = 'Перед установкой Пали-плагина установите O keyboard';
 $smplikeyboard = 'для активации: Язык - Транслитерация - Pali (IAST)';
 $head5suttadiff = 'Сравнить Две Сутты';
+$psuttadiff = 'Показывает разницу между двумя текстами. Пали или Англ.';
 $head5listdiff = 'Сравнить Два Списка Сутт'; 
+$plistdiff = 'Показывает разницу между двумя списками текстов в формате sn56.22 dn22 sn12.2'; 
 $head5makelist = 'Создать CSV список';
+$pmakelist = 'Создавайте списки феноменов, учений, переводов и т.п.'; 
 
 $pt2s = 'Преобразование Русс и Англ текстов в речь';
 $smt2s = 'для прослушивания текстов sc.dhamma.gift, theravada.ru и др.';
@@ -661,8 +664,11 @@ $pplikeyboard = 'Install "O keyboard" itself before installing plug-in';
 $smplikeyboard = 'to add Pali: Language - Transliteration - Pali (IAST)';
 
 $head5suttadiff = 'Compare Two Suttas';
+$psuttadiff = 'Finds difference between two texts.';
 $head5listdiff = 'Compare Two Lists of Suttas'; 
+$plistdiff = 'Finds difference between two lists of suttas in this format: sn56.22 dn22 sn12.2'; 
 $head5makelist = 'Create CSV List';
+$pmakelist = 'Create Lists of phenomena, teachings, translations etc'; 
 
 
 $pt2s = 'Text-to-Speech generator for English and Russian';

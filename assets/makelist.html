@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Transformation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    #resultOutput {
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="delimiterInput">Custom Delimiter:</label>
+          <input type="text" class="form-control" id="delimiterInput" placeholder="Enter delimiter">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="textInput">Text:</label>
+          <textarea class="form-control" id="textInput" rows="5" placeholder="Enter text"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" id="transformButton">Transform</button>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h5>Result:</h5>
+        <pre id="resultOutput"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('transformButton').addEventListener('click', function() {
+      // Получение значений полей ввода
+      var delimiter = document.getElementById('delimiterInput').value;
+      var text = document.getElementById('textInput').value;
+
+      // Замена символов на новую строку
+      var transformedText = text.replace(/[,.;?]|or`/g, '\n');
+
+      // Преобразование текста в CSV формат
+      var lines = transformedText.split('\n');
+      var csv = '#, pali, other language\n';
+      for (var i = 0; i < lines.length; i++) {
+        var parts = lines[i].split(delimiter);
+        csv += (i + 1) + ',' + parts.join(',') + '\n';
+      }
+
+      // Вывод результата
+      document.getElementById('resultOutput').textContent = csv;
+    });
+  </script>
+</body>
+</html>

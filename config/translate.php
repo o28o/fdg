@@ -83,6 +83,7 @@ $regexMemo = '<h5>Памятка по RegEx</h5>
 <strong>X\\\\S*\\\\sY</strong> - рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным<br>     
 <strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - расстояние в 0 или 2 слова между X и Y с любым окончанием X<br> 
 <strong>[aā]</strong> - искать несколько вариантов<br>           
+<strong>"tatt($|[^h])"</strong> - искать tatt исключив tatth<br>           
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - искать все метафоры в Самьютте 56<br> 
 <strong>"(a|b|c)"</strong> - искать несколько отдельных слов одновременно<br>
 <strong>\'^"mn.*X\'</strong> - искать X во всей Мадджхимма Никае<br>            
@@ -435,6 +436,7 @@ $regexMemo = ' <h5>RegEx Memo</h5>
 <strong>X\\\\S*\\\\sY</strong> - next words X и Y, with variable ending of X<br>      
 <strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
 <strong>[aā]</strong> - multiple variants<br>           
+<strong>"tatt($|[^h])"</strong> - search for tatt excluding tatth<br>           
 <strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
 <strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
 <strong>\'^"mn.*X\'</strong> - find X in all Majjhimma Nikaya<br>            

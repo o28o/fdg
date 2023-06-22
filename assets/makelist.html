@@ -41,25 +41,26 @@
   </div>
 
   <script>
-    document.getElementById('transformButton').addEventListener('click', function() {
-      // Получение значений полей ввода
-      var delimiter = document.getElementById('delimiterInput').value;
-      var text = document.getElementById('textInput').value;
+ document.getElementById('transformButton').addEventListener('click', function() {
+  // Получение значений полей ввода
+  var delimiter = document.getElementById('delimiterInput').value;
+  var text = document.getElementById('textInput').value;
 
-      // Замена символов на новую строку
-      var transformedText = text.replace(/[,.;?]|or`/g, '\n');
+  // Замена символов на новую строку
+  var transformedText = text.replace(/[,.;"?]|or`/g, '\n');
 
-      // Преобразование текста в CSV формат
-      var lines = transformedText.split('\n');
-      var csv = '#, pali, other language\n';
-      for (var i = 0; i < lines.length; i++) {
-        var parts = lines[i].split(delimiter);
-        csv += (i + 1) + ',' + parts.join(',') + '\n';
-      }
+  // Преобразование текста в CSV формат
+  var lines = transformedText.split('\n');
+  var csv = '#, pali, other language\n';
+  for (var i = 0; i < lines.length; i++) {
+    var parts = lines[i].split(delimiter);
+    csv += (i + 1) + ',' + parts[0].trim() + ',' + parts[1].trim() + '\n';
+  }
 
-      // Вывод результата
-      document.getElementById('resultOutput').textContent = csv;
-    });
+  // Вывод результата
+  document.getElementById('resultOutput').textContent = csv;
+});
+
   </script>
 </body>
 </html>

@@ -41,7 +41,7 @@
   </div>
 
   <script>
- document.getElementById('transformButton').addEventListener('click', function() {
+document.getElementById('transformButton').addEventListener('click', function() {
   // Получение значений полей ввода
   var delimiter = document.getElementById('delimiterInput').value;
   var text = document.getElementById('textInput').value;
@@ -54,13 +54,14 @@
   var csv = '#, pali, other language\n';
   for (var i = 0; i < lines.length; i++) {
     var parts = lines[i].split(delimiter);
-    csv += (i + 1) + ',' + parts[0].trim() + ',' + parts[1].trim() + '\n';
+    var firstPart = parts[0] ? parts[0].trim() : '';
+    var secondPart = parts[1] ? parts[1].trim() : '';
+    csv += (i + 1) + ',' + firstPart + ',' + secondPart + '\n';
   }
 
   // Вывод результата
   document.getElementById('resultOutput').textContent = csv;
 });
-
   </script>
 </body>
 </html>

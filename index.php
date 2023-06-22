@@ -123,22 +123,6 @@ input.addEventListener("keypress", function(event) {
 
 </script>
 
-<script>
-$('label').click(function(e) {
-  e.preventDefault();
-
-  var radio = $(this).find('input[type=radio]');
-
-  if (radio.is(':checked')) {
-    e.stopImmediatePropagation();
-    $(this).removeClass("active");
-    radio.prop('checked', false);
-  } else {
-    radio.prop('checked', true);
-  }
-});
-</script>
-
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="Pali") echo "checked";?> value="">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippli;?>"><?php echo $radiopli;?></a>

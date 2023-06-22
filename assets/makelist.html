@@ -4,32 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Text Transformation</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <style>
+<link href="/assets/css/styles.css" rel="stylesheet" />
+ 
+ <style>
     #resultOutput {
       white-space: pre-wrap;
+    }
+
+    .full-width {
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <div class="container mt-5">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="form-group">
-          <label for="delimiterInput">Custom Delimiter:</label>
-          <input type="text" class="form-control" id="delimiterInput" placeholder="Enter delimiter">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="form-group">
-          <label for="textInput">Text:</label>
-          <textarea class="form-control" id="textInput" rows="5" placeholder="Enter text"></textarea>
+          <label for="paliTextInput">Pali Text:</label>
+          <textarea class="form-control full-width" id="paliTextInput" rows="5" placeholder="e.g. sammādiṭṭhi, sammāsaṅkappo, sammāvācā, sammākammanto, sammāājīvo, sammāvāyāmo, sammāsati, sammāsamādhi"></textarea>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <button class="btn btn-primary" id="transformButton">Transform</button>
+        <div class="form-group">
+          <label for="otherTextInput">Other Language Text:</label>
+          <textarea class="form-control full-width" id="otherTextInput" rows="5" placeholder="e.g. правильный взгляд, правильная заготовка=привычка+намерение, правильная речь, правильный поступок, правильный быт, правильное старание, правильная фокусировка-памятование, правильное объединение опыта"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="delimiterInput">Custom Delimiter:</label>
+          <input type="text" class="form-control full-width" id="delimiterInput" placeholder="Enter delimiter" value=".,:;|/?!">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="btn-group">
+          <button class="btn btn-primary" id="transformButton">Transform</button>
+          <button class="btn btn-secondary" id="clearButton">Clear</button>
+          <a href="#" class="btn btn-success" id="downloadButton" download="result.csv" style="display: none;">Download CSV</a>
+        </div>
       </div>
     </div>
     <div class="row mt-4">
@@ -41,27 +60,51 @@
   </div>
 
   <script>
-document.getElementById('transformButton').addEventListener('click', function() {
-  // Получение значений полей ввода
-  var delimiter = document.getElementById('delimiterInput').value;
-  var text = document.getElementById('textInput').value;
+    document.getElementById('transformButton').addEventListener('click', function() {
+      // Получение значений полей ввода
+      var delimiter = document.getElementById('delimiterInput').value;
+      var paliText = document.getElementById('paliTextInput').value;
+      var otherText = document.getElementById('otherTextInput').value;
 
-  // Замена символов на новую строку
-  var transformedText = text.replace(/[,.;"?]|or`/g, '\n');
+      // Замена разделителей на новую строку
+      var transformedPaliText = paliText.replace(new RegExp('[' + delimiter + ']|\\bor\\b', 'g'), '\n');
+      var transformedOtherText = otherText.replace(new RegExp('[' + delimiter + ']|\\bor\\b', 'g'), '\n');
 
-  // Преобразование текста в CSV формат
-  var lines = transformedText.split('\n');
-  var csv = '#, pali, other language\n';
-  for (var i = 0; i < lines.length; i++) {
-    var parts = lines[i].split(delimiter);
-    var firstPart = parts[0] ? parts[0].trim() : '';
-    var secondPart = parts[1] ? parts[1].trim() : '';
-    csv += (i + 1) + ',' + firstPart + ',' + secondPart + '\n';
-  }
+      // Преобразование текста в CSV формат
+      var paliLines = transformedPaliText.split('\n');
+      var otherLines = transformedOtherText.split('\n');
+      var csv = '#, pali, other language\n';
+      var maxLines = Math.max(paliLines.length, otherLines.length);
+      for (var i = 0; i < maxLines; i++) {
+        var paliPart = paliLines[i] ? paliLines[i].trim() : '';
+        var otherPart = otherLines[i] ? otherLines[i].trim() : '';
+        csv += (i + 1) + ',' + paliPart + ',' + otherPart + '\n';
+      }
 
-  // Вывод результата
-  document.getElementById('resultOutput').textContent = csv;
-});
+      // Вывод результата
+      document.getElementById('resultOutput').textContent = csv;
+
+      // Показать кнопку загрузки
+      document.getElementById('downloadButton').style.display = 'block';
+      // Создание Blob объекта для файла CSV
+      var blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), csv], { type: 'text/csv;charset=utf-8;' });
+      // Создание URL для файла CSV
+      var url = URL.createObjectURL(blob);
+      // Установка ссылки на файл CSV для загрузки
+      document.getElementById('downloadButton').href = url;
+    });
+
+    document.getElementById('clearButton').addEventListener('click', function() {
+      // Очистка полей ввода
+      document.getElementById('paliTextInput').value = '';
+      document.getElementById('otherTextInput').value = '';
+      document.getElementById('delimiterInput').value = '';
+
+      // Сброс результата и скрытие кнопки загрузки
+      document.getElementById('resultOutput').textContent = '';
+      document.getElementById('downloadButton').style.display = 'none';
+    });
   </script>
 </body>
 </html>
+

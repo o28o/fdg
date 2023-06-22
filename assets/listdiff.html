@@ -8,7 +8,7 @@
   <link href="/assets/css/extrastyles.css" rel="stylesheet" />
   <script src="/assets/js/jquery-3.6.0.js"></script>
   <script src="/assets/js/jquery-ui.js"></script>
-   <style>
+  <style>
     /* Mobile Styles */
     @media only screen and (max-width: 768px) {
       .container {
@@ -32,18 +32,18 @@
 </head>
 <body>
   <div class="container mt-5">
-      <h2>Show Difference Between Two Lists</h2><br>
+    <h2>Show Difference Between Two Lists</h2><br>
     <form id="textLinksForm">
       <div class="mb-3">
         <label for="string1" class="form-label">List of Links 1:</label>
-        <input type="search" class="form-control" id="string1" name="string1" required>
+        <input type="search" class="form-control" id="string1" name="string1" placeholder="e.g. sn56.11 dn22 sn12.2" required>
       </div>
       <div class="mb-3">
         <label for="string2" class="form-label">List of Links 2:</label>
-        <input type="search" class="form-control" id="string2" name="string2" required>
+        <input type="search" class="form-control" id="string2" name="string2" placeholder="e.g. sn56.11 dn22" required>
       </div>
-	  
-	 <div class="form-buttons">
+
+      <div class="form-buttons">
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="button" class="btn btn-secondary" id="clearFormBtn">Clear Form</button>
       </div>
@@ -108,3 +108,5 @@
   </script>
 </body>
 </html>
+
+

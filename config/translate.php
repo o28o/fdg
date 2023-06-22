@@ -331,6 +331,9 @@ $smcse = 'Особенно удобен для поисков на Wisdomlib';
 $head5plikeyboard = 'Pali раскладка';
 $pplikeyboard = 'Перед установкой Пали-плагина установите O keyboard';
 $smplikeyboard = 'для активации: Язык - Транслитерация - Pali (IAST)';
+$head5suttadiff = 'Сравнить Две Сутты';
+$head5listdiff = 'Сравнить Два Списка Сутт'; 
+$head5makelist = 'Создать CSV список';
 
 $pt2s = 'Преобразование Русс и Англ текстов в речь';
 $smt2s = 'для прослушивания текстов sc.dhamma.gift, theravada.ru и др.';
@@ -656,6 +659,11 @@ $ppts = 'One of the most famous Pali English dictionaries';
 $head5plikeyboard = 'Pali Layout';
 $pplikeyboard = 'Install "O keyboard" itself before installing plug-in';
 $smplikeyboard = 'to add Pali: Language - Transliteration - Pali (IAST)';
+
+$head5suttadiff = 'Compare Two Suttas';
+$head5listdiff = 'Compare Two Lists of Suttas'; 
+$head5makelist = 'Create CSV List';
+
 
 $pt2s = 'Text-to-Speech generator for English and Russian';
 $smt2s = 'Listen to sc.dhamma.gift, theravada.ru & other';

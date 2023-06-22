@@ -624,7 +624,37 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
     <p class="mb-1"><?php echo $pothermat;?></p>
     <small class="text-muted"></small>
   </a>
-  
+ 
+  <a target="_blank"  href="/assets/diff/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><?php echo $head5suttadiff;?></h5>
+      <small class="text-muted"><?php echo $detailonline;?></small>
+    </div>
+    <p class="mb-1"></p>
+    <small class="text-muted"></small>
+  </a>
+
+  <a target="_blank"  href="/assets/listdiff.html" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><?php echo $head5listdiff;?></h5>
+      <small class="text-muted"><?php echo $detailoffline;?></small>
+    </div>
+    <p class="mb-1"></p>
+    <small class="text-muted"></small>
+  </a>
+
+  <a target="_blank"  href="/assets/makelist.html" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><?php echo $head5makelist;?></h5>
+      <small class="text-muted"><?php echo $detailoffline;?></small>
+    </div>
+    <p class="mb-1"></p>
+    <small class="text-muted"></small>
+  </a>
+
+
+
+ 
 </div>  
 
 </div>

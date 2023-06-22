@@ -128,13 +128,11 @@ input.addEventListener("keypress", function(event) {
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippli;?>"><?php echo $radiopli;?></a>
   </div>
 
-  
 <div class="form-check form-check-inline">
 <input class="form-check-input" type="checkbox" name="extra" <?php if (isset($extra) && $extra=="-def ") echo "checked";?>  value="-def">
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipdef;?>'><?php echo $radiodef;?></a>
   </div>
-  
-  
+    
   <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($extra) && $p=="-vin") echo "checked";?> value="-vin ">
     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipvin;?>"><?php echo $radiovin;?></a></div>

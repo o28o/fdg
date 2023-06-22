@@ -255,7 +255,7 @@ tmpdef=tmpdef.$rand
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
-#vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
+vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
 fi  
 
 function grepbasefile {
@@ -946,7 +946,7 @@ texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
-echo mintxt=$mintexts txt=$texts
+#echo mintxt=$mintexts txt=$texts
 #echo "$tmpdef bf $texts"
 grepbasefileExtended1 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`

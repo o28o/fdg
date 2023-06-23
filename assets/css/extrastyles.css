@@ -4,6 +4,28 @@
   z-index:9999;
 }
 
+
+
+.sik-dropdown > button.dropdown-toggle {
+    position: relative;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 2ch;
+    text-align: left;
+}
+.sik-dropdown > button.dropdown-toggle::after {
+    position: absolute;
+    right: 1ch;
+    top: calc(50% - 0.2ch);
+}
+.sik-dropdown .dropdown-item {
+    cursor: pointer;
+}
+
+
+
 .searchbar {
   z-index:1;
 }

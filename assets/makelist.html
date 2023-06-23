@@ -16,13 +16,43 @@
         }
 
         .copy-button {
-            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .copy-success {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            display: none;
         }
     </style>
 </head>
 
 <body>
     <div class="container mt-5">
+	    <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="paliTextInput">Pali Text:</label>
+                    <textarea class="form-control full-width" id="paliTextInput" rows="5"
+                        placeholder="e.g. sammādiṭṭhi, sammāsaṅkappo, sammāvācā, sammākammanto, sammāājīvo, sammāvāyāmo, sammāsati, sammāsamādhi"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="otherTextInput">Other Language Text:</label>
+                    <textarea class="form-control full-width" id="otherTextInput" rows="5"
+                        placeholder="e.g. правильный взгляд, правильная заготовка=привычка+намерение, правильная речь, правильный поступок, правильный быт, правильное старание, правильная фокусировка-памятование, правильное объединение опыта"></textarea>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group" id="additionalInputs"></div>
@@ -46,24 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="paliTextInput">Pali Text:</label>
-                    <textarea class="form-control full-width" id="paliTextInput" rows="5"
-                        placeholder="e.g. sammādiṭṭhi, sammāsaṅkappo, sammāvācā, sammākammanto, sammāājīvo, sammāvāyāmo, sammāsati, sammāsamādhi"></textarea>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="otherTextInput">Other Language Text:</label>
-                    <textarea class="form-control full-width" id="otherTextInput" rows="5"
-                        placeholder="e.g. правильный взгляд, правильная заготовка=привычка+намерение, правильная речь, правильный поступок, правильный быт, правильное старание, правильная фокусировка-памятование, правильное объединение опыта"></textarea>
-                </div>
-            </div>
-        </div>
+    
         <div class="row">
             <div class="col-md-12">
                 <div class="btn-group">
@@ -81,6 +94,8 @@
             </div>
         </div>
     </div>
+
+    <div class="copy-success">Copied to Clipboard</div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -180,7 +195,7 @@
                 tableHtml += '<tr>';
                 for (var j = 0; j < columns.length; j++) {
                     if (i === 0) {
-                        tableHtml += '<th>' + columns[j] + '<button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></th>';
+                        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></br>' + columns[j] + '</th>';
                     } else {
                         tableHtml += '<td>' + columns[j] + '</td>';
                     }
@@ -198,6 +213,7 @@
             textarea.select();
             document.execCommand('copy');
             document.body.removeChild(textarea);
+            showCopySuccess();
         }
 
         function copyColumnToClipboard(columnIndex) {
@@ -213,8 +229,22 @@
             var columnText = columnData.join('\n');
             copyToClipboard(columnText);
         }
+
+        function showCopySuccess() {
+            var copySuccess = document.querySelector('.copy-success');
+            copySuccess.style.display = 'block';
+            setTimeout(function () {
+                copySuccess.style.display = 'none';
+            }, 1500);
+        }
+
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('copy-column-button')) {
+                var columnIndex = event.target.dataset.columnIndex;
+                copyColumnToClipboard(columnIndex);
+            }
+        });
     </script>
 </body>
 
 </html>
-

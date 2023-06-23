@@ -8,6 +8,7 @@
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+<script src="/assets/js/jquery-3.6.0.js"></script>
     <style>
         #resultOutput {
             white-space: pre-wrap;
@@ -99,7 +100,6 @@
 
     <div class="copy-success">Copied to Clipboard</div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         document.getElementById('transformButton').addEventListener('click', function () {
             var delimiter = document.getElementById('delimiterInput').value;
@@ -128,7 +128,7 @@
 
             var csv = '#, pali, other';
             for (var j = 0; j < additionalTexts.length; j++) {
-                csv += ', additional ' + (j + 1);
+                csv += ', extra ' + (j + 1);
             }
             csv += '\n';
 
@@ -179,7 +179,7 @@
             textArea.setAttribute('class', 'form-control full-width additional-text');
             textArea.setAttribute('rows', '5');
             textArea.setAttribute('placeholder', 'e.g. additional text');
-            additionalInputs.insertBefore(textArea, additionalInputs.firstChild);
+            additionalInputs.appendChild(textArea, additionalInputs.firstChild);
         });
 
         document.getElementById('removeInputButton').addEventListener('click', function () {

@@ -182,7 +182,7 @@ class SikDropdown {
 //This how we intiate it and extend the bs funcionality:
 var dropdown = new SikDropdown("#sik-select", {
     name        : "select-example", // the input field name
-    placeholder : "Pali",
+    placeholder : "Pali List",
     value       : null
 });
 

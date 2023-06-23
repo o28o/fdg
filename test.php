@@ -128,6 +128,9 @@ input.addEventListener("keypress", function(event) {
 <script src="/assets/js/dropdownlist.js"></script>
 
 
+<div class="p-2">
+    <p>Example selected value: <strong id="selected-example"></strong></p>
+</div>
 <div class="container m-2">
   <div class="dropdown sik-dropdown" id="sik-select">
     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -172,7 +175,7 @@ input.addEventListener("keypress", function(event) {
   </div>
 </div>
 
-<br>
+
 
 
 <div class="form-check form-check-inline">

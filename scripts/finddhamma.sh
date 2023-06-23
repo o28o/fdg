@@ -144,8 +144,8 @@ if [[ "$@" == *"-h"* ]]; then
     materials as stored on Suttacentral.net in DN, MN, SN, AN.<br>
     <br>
     -pli - to search in Pali, same as without arguments (default option) <br>
-    -def - find definitions given with standart formulas in Pali <br>
-    -sml - find definitions given with standart formulas in Pali <br>
+    -def - find similes in Pali provided with standard text formulas <br>
+    -sml - find similes in Pali provided with standard text formulas <br>
 	-kn - include Khuddaka Nikaya selected books <br>
 	-all - include all Khuddaka Nikaya books <br>
     -vin - to search in vinaya texts only <br>

@@ -68,7 +68,7 @@
                 <div class="form-group">
                     <label for="delimiterInput">Custom Delimiter:</label>
                     <input type="text" class="form-control full-width" id="delimiterInput" placeholder="Enter delimiter"
-                        value=".,:;|/?!">
+                        value=".,:;?!">
                 </div>
             </div>
             <div class="col-md-6">
@@ -126,9 +126,9 @@
             var paliLines = paliText.split(new RegExp(pattern, 'g'));
             var otherLines = otherText.split(new RegExp(pattern, 'g'));
 
-            var csv = '#, pali, other';
+            var csv = '#| pali| other';
             for (var j = 0; j < additionalTexts.length; j++) {
-                csv += ', extra ' + (j + 1);
+                csv += '| extra ' + (j + 1);
             }
             csv += '\n';
 
@@ -140,11 +140,11 @@
             for (var i = 0; i < maxLines; i++) {
                 var paliPart = paliLines[i] ? paliLines[i].trim() : '';
                 var otherPart = otherLines[i] ? otherLines[i].trim() : '';
-                csv += (i + 1) + ',' + paliPart + ',' + otherPart;
+                csv += (i + 1) + '|' + paliPart + '|' + otherPart;
 
                 for (var j = 0; j < additionalLines.length; j++) {
                     var additionalPart = additionalLines[j][i] ? additionalLines[j][i].trim() : '';
-                    csv += ',' + additionalPart;
+                    csv += '|' + additionalPart;
                 }
                 csv += '\n';
             }
@@ -165,8 +165,8 @@
             document.getElementById('delimiterBeforeWord').value = 'or';
 
             var additionalInputs = document.getElementById('additionalInputs');
-            while (additionalInputs.firstChild) {
-                additionalInputs.removeChild(additionalInputs.firstChild);
+            while (additionalInputs.lastChild) {
+                additionalInputs.removeChild(additionalInputs.lastChild);
             }
 
             document.getElementById('resultOutput').innerHTML = '';
@@ -185,7 +185,7 @@
         document.getElementById('removeInputButton').addEventListener('click', function () {
             var additionalInputs = document.getElementById('additionalInputs');
             if (additionalInputs.childElementCount > 0) {
-                additionalInputs.removeChild(additionalInputs.firstChild);
+                additionalInputs.removeChild(additionalInputs.lastChild);
             }
         });
 
@@ -193,7 +193,8 @@
             var lines = csv.split('\n');
             var tableHtml = '<table class="table table-bordered">';
             for (var i = 0; i < lines.length; i++) {
-                var columns = lines[i].split(',');
+			
+			var columns = lines[i].split('|');
                 tableHtml += '<tr>';
                 for (var j = 0; j < columns.length; j++) {
                     if (i === 0) {

@@ -256,7 +256,7 @@ tmpdef=tmpdef.$rand
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
-vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
+#vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
 fi  
 
 function grepbasefile {
@@ -293,7 +293,7 @@ nonmetaphorkeys="adhivacanasamphass|adhivacanapath|\banopam|\battūpa|\bnillopa|
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
-vindefpart="${smlpattern}.{0,3}—|${smlpattern}.{0,3}ti|${smlpattern}.*nāma|"
+#vindefpart="${smlpattern}.{0,3}—|${smlpattern}.{0,3}ti|${smlpattern}.*nāma|"
 fi  
 
 function grepbasefile {

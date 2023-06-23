@@ -30,7 +30,7 @@ include 'scripts/opentexts.php';
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
-<link rel="icon" type="image/png" href="./assets/img/favico-noglass.png" />
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
 
 <!-- Google fonts

@@ -9,6 +9,7 @@
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
+
     <style>
         #resultOutput {
             white-space: pre-wrap;
@@ -127,7 +128,7 @@
             var paliLines = paliText.split(new RegExp(pattern, 'g'));
             var otherLines = otherText.split(new RegExp(pattern, 'g'));
 
-            var csv = '#, pali, other language';
+            var csv = '#, pali, other';
             for (var j = 0; j < additionalTexts.length; j++) {
                 csv += ', additional ' + (j + 1);
             }
@@ -198,7 +199,7 @@
                 tableHtml += '<tr>';
                 for (var j = 0; j < columns.length; j++) {
                     if (i === 0) {
-                        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button>' + columns[j] + '</th>';
+                        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></br>' + columns[j] + '</th>';
                     } else {
                         tableHtml += '<td>' + columns[j] + '</td>';
                     }

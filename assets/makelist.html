@@ -38,7 +38,7 @@
 
 <body>
     <div class="container mt-5">
-	    <div class="row">
+	<div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="paliTextInput">Pali Text:</label>
@@ -56,6 +56,7 @@
                 </div>
             </div>
         </div>
+		
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group" id="additionalInputs"></div>
@@ -79,7 +80,7 @@
                 </div>
             </div>
         </div>
-    
+        
         <div class="row">
             <div class="col-md-12">
                 <div class="btn-group">
@@ -94,6 +95,7 @@
             <div class="col-md-12">
                 <h5>Result:</h5>
                 <div id="resultOutput"></div>
+                <button class="btn btn-primary mt-2" id="copyAllButton">Copy All</button>
             </div>
         </div>
     </div>
@@ -198,7 +200,7 @@
                 tableHtml += '<tr>';
                 for (var j = 0; j < columns.length; j++) {
                     if (i === 0) {
-                        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></br>' + columns[j] + '</th>';
+                        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button><br>' + columns[j] + '</th>';
                     } else {
                         tableHtml += '<td>' + columns[j] + '</td>';
                     }
@@ -233,6 +235,22 @@
             copyToClipboard(columnText);
         }
 
+        function copyAllToClipboard() {
+            var table = document.getElementsByTagName('table')[0];
+            var rows = table.getElementsByTagName('tr');
+            var allData = [];
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                var rowData = [];
+                for (var j = 0; j < cells.length; j++) {
+                    rowData.push(cells[j].innerText);
+                }
+                allData.push(rowData.join(','));
+            }
+            var allText = allData.join('\n');
+            copyToClipboard(allText);
+        }
+
         function showCopySuccess() {
             var copySuccess = document.querySelector('.copy-success');
             copySuccess.style.display = 'block';
@@ -245,6 +263,8 @@
             if (event.target.classList.contains('copy-column-button')) {
                 var columnIndex = event.target.dataset.columnIndex;
                 copyColumnToClipboard(columnIndex);
+            } else if (event.target.id === 'copyAllButton') {
+                copyAllToClipboard();
             }
         });
     </script>

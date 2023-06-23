@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Transformation</title>
-<link href="/assets/css/styles.css" rel="stylesheet" />
-<link href="/assets/css/extrastyles.css" rel="stylesheet" />
-<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
-<script src="/assets/js/jquery-3.6.0.js"></script>
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+    <script src="/assets/js/jquery-3.6.0.js"></script>
     <style>
         #resultOutput {
             white-space: pre-wrap;
@@ -38,7 +38,7 @@
 
 <body>
     <div class="container mt-5">
-	<div class="row">
+        <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="paliTextInput">Pali Text:</label>
@@ -79,7 +79,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-12">
                 <div class="btn-group">
@@ -193,12 +193,15 @@
             var lines = csv.split('\n');
             var tableHtml = '<table class="table table-bordered">';
             for (var i = 0; i < lines.length; i++) {
-			
-			var columns = lines[i].split(',');
+                var columns = lines[i].split(',');
                 tableHtml += '<tr>';
                 for (var j = 0; j < columns.length; j++) {
                     if (i === 0) {
-                        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></br>' + columns[j] + '</th>';
+                        if (j === 0) {
+                            tableHtml += '<th></th>';
+                        } else {
+                            tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + (j - 1) + '">Copy</button></th>';
+                        }
                     } else {
                         tableHtml += '<td>' + columns[j] + '</td>';
                     }

@@ -1,108 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text Transformation</title>
-  <link href="/assets/css/styles.css" rel="stylesheet" />
-  <style>
-    #resultOutput {
-      white-space: pre-wrap;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transformation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #resultOutput {
+            white-space: pre-wrap;
+        }
 
-    .full-width {
-      width: 100%;
-    }
-  </style>
+        .full-width {
+            width: 100%;
+        }
+
+        .copy-button {
+            margin-left: 5px;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <label for="paliTextInput">Pali Text:</label>
-          <textarea class="form-control full-width" id="paliTextInput" rows="5" placeholder="e.g. sammādiṭṭhi, sammāsaṅkappo, sammāvācā, sammākammanto, sammāājīvo, sammāvāyāmo, sammāsati, sammāsamādhi"></textarea>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group" id="additionalInputs"></div>
+                <button class="btn btn-info" id="addInputButton">+</button>
+                <button class="btn btn-danger" id="removeInputButton">-</button>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <label for="otherTextInput">Other Language Text:</label>
-          <textarea class="form-control full-width" id="otherTextInput" rows="5" placeholder="e.g. правильный взгляд, правильная заготовка=привычка+намерение, правильная речь, правильный поступок, правильный быт, правильное старание, правильная фокусировка-памятование, правильное объединение опыта"></textarea>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="delimiterInput">Custom Delimiter:</label>
+                    <input type="text" class="form-control full-width" id="delimiterInput" placeholder="Enter delimiter"
+                        value=".,:;|/?!">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="delimiterBeforeWord">Delimiter Before Word:</label>
+                    <input type="text" class="form-control full-width" id="delimiterBeforeWord"
+                        placeholder="Delimiter before word e.g. or">
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <label for="delimiterInput">Custom Delimiter:</label>
-          <input type="text" class="form-control full-width" id="delimiterInput" placeholder="Enter delimiter" value=".,:;|/?!">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="paliTextInput">Pali Text:</label>
+                    <textarea class="form-control full-width" id="paliTextInput" rows="5"
+                        placeholder="e.g. sammādiṭṭhi, sammāsaṅkappo, sammāvācā, sammākammanto, sammāājīvo, sammāvāyāmo, sammāsati, sammāsamādhi"></textarea>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="btn-group">
-          <button class="btn btn-primary" id="transformButton">Transform</button>
-          <button class="btn btn-secondary" id="clearButton">Clear</button>
-          <a href="#" class="btn btn-success" id="downloadButton" download="result.csv" style="display: none;">Download CSV</a>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="otherTextInput">Other Language Text:</label>
+                    <textarea class="form-control full-width" id="otherTextInput" rows="5"
+                        placeholder="e.g. правильный взгляд, правильная заготовка=привычка+намерение, правильная речь, правильный поступок, правильный быт, правильное старание, правильная фокусировка-памятование, правильное объединение опыта"></textarea>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="transformButton">Transform</button>
+                    <button class="btn btn-secondary" id="clearButton">Clear</button>
+                    <a href="#" class="btn btn-success" id="downloadButton" download="result.csv"
+                        style="display: none;">Download CSV</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h5>Result:</h5>
+                <div id="resultOutput"></div>
+            </div>
+        </div>
     </div>
-    <div class="row mt-4">
-      <div class="col-md-12">
-        <h5>Result:</h5>
-        <pre id="resultOutput"></pre>
-      </div>
-    </div>
-  </div>
 
-  <script>
-    document.getElementById('transformButton').addEventListener('click', function() {
-      // Получение значений полей ввода
-      var delimiter = document.getElementById('delimiterInput').value;
-      var paliText = document.getElementById('paliTextInput').value;
-      var otherText = document.getElementById('otherTextInput').value;
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.getElementById('transformButton').addEventListener('click', function () {
+            var delimiter = document.getElementById('delimiterInput').value;
+            var delimiterBeforeWord = document.getElementById('delimiterBeforeWord').value;
 
-      // Замена разделителей на новую строку
-      var transformedPaliText = paliText.replace(new RegExp('[' + delimiter + ']|\\bor\\b', 'g'), '\n');
-      var transformedOtherText = otherText.replace(new RegExp('[' + delimiter + ']|\\bor\\b', 'g'), '\n');
+            var paliText = document.getElementById('paliTextInput').value;
+            var otherText = document.getElementById('otherTextInput').value;
 
-      // Преобразование текста в CSV формат
-      var paliLines = transformedPaliText.split('\n');
-      var otherLines = transformedOtherText.split('\n');
-      var csv = '#, pali, other language\n';
-      var maxLines = Math.max(paliLines.length, otherLines.length);
-      for (var i = 0; i < maxLines; i++) {
-        var paliPart = paliLines[i] ? paliLines[i].trim() : '';
-        var otherPart = otherLines[i] ? otherLines[i].trim() : '';
-        csv += (i + 1) + ',' + paliPart + ',' + otherPart + '\n';
-      }
+            var additionalTexts = document.getElementsByClassName('additional-text');
+            var additionalLines = [];
+            for (var j = 0; j < additionalTexts.length; j++) {
+                var pattern = '[' + delimiter + ']';
+                if (delimiterBeforeWord) {
+                    pattern = '(?=' + delimiterBeforeWord + ')|[' + delimiter + ']';
+                }
+                additionalLines.push(additionalTexts[j].value.split(new RegExp(pattern, 'g')));
+            }
 
-      // Вывод результата
-      document.getElementById('resultOutput').textContent = csv;
+            var pattern = '[' + delimiter + ']';
+            if (delimiterBeforeWord) {
+                pattern = '(?=' + delimiterBeforeWord + ')|[' + delimiter + ']';
+            }
 
-      // Показать кнопку загрузки
-      document.getElementById('downloadButton').style.display = 'block';
-      // Создание Blob объекта для файла CSV
-      var blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), csv], { type: 'text/csv;charset=utf-8;' });
-      // Создание URL для файла CSV
-      var url = URL.createObjectURL(blob);
-      // Установка ссылки на файл CSV для загрузки
-      document.getElementById('downloadButton').href = url;
-    });
+            var paliLines = paliText.split(new RegExp(pattern, 'g'));
+            var otherLines = otherText.split(new RegExp(pattern, 'g'));
 
-    document.getElementById('clearButton').addEventListener('click', function() {
-      // Очистка полей ввода
-      document.getElementById('paliTextInput').value = '';
-      document.getElementById('otherTextInput').value = '';
+            var csv = '#, pali, other language';
+            for (var j = 0; j < additionalTexts.length; j++) {
+                csv += ', additional ' + (j + 1);
+            }
+            csv += '\n';
 
-      // Сброс результата и скрытие кнопки загрузки
-      document.getElementById('resultOutput').textContent = '';
-      document.getElementById('downloadButton').style.display = 'none';
-    });
-  </script>
+            var maxLines = Math.max(paliLines.length, otherLines.length);
+            for (var j = 0; j < additionalLines.length; j++) {
+                maxLines = Math.max(maxLines, additionalLines[j].length);
+            }
+
+            for (var i = 0; i < maxLines; i++) {
+                var paliPart = paliLines[i] ? paliLines[i].trim() : '';
+                var otherPart = otherLines[i] ? otherLines[i].trim() : '';
+                csv += (i + 1) + ',' + paliPart + ',' + otherPart;
+
+                for (var j = 0; j < additionalLines.length; j++) {
+                    var additionalPart = additionalLines[j][i] ? additionalLines[j][i].trim() : '';
+                    csv += ',' + additionalPart;
+                }
+                csv += '\n';
+            }
+
+            var resultTable = generateResultTable(csv);
+            document.getElementById('resultOutput').innerHTML = resultTable;
+
+            document.getElementById('downloadButton').style.display = 'block';
+            var blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), csv], { type: 'text/csv;charset=utf-8;' });
+            var url = URL.createObjectURL(blob);
+            document.getElementById('downloadButton').href = url;
+        });
+
+        document.getElementById('clearButton').addEventListener('click', function () {
+            document.getElementById('paliTextInput').value = '';
+            document.getElementById('otherTextInput').value = '';
+            document.getElementById('delimiterInput').value = '.,:;|/?!';
+            document.getElementById('delimiterBeforeWord').value = 'or';
+
+            var additionalInputs = document.getElementById('additionalInputs');
+            while (additionalInputs.firstChild) {
+                additionalInputs.removeChild(additionalInputs.firstChild);
+            }
+
+            document.getElementById('resultOutput').innerHTML = '';
+            document.getElementById('downloadButton').style.display = 'none';
+        });
+
+        document.getElementById('addInputButton').addEventListener('click', function () {
+            var additionalInputs = document.getElementById('additionalInputs');
+            var textArea = document.createElement('textarea');
+            textArea.setAttribute('class', 'form-control full-width additional-text');
+            textArea.setAttribute('rows', '5');
+            textArea.setAttribute('placeholder', 'e.g. additional text');
+            additionalInputs.insertBefore(textArea, additionalInputs.firstChild);
+        });
+
+        document.getElementById('removeInputButton').addEventListener('click', function () {
+            var additionalInputs = document.getElementById('additionalInputs');
+            if (additionalInputs.childElementCount > 0) {
+                additionalInputs.removeChild(additionalInputs.firstChild);
+            }
+        });
+
+        function generateResultTable(csv) {
+            var lines = csv.split('\n');
+            var tableHtml = '<table class="table table-bordered">';
+            for (var i = 0; i < lines.length; i++) {
+                var columns = lines[i].split(',');
+                tableHtml += '<tr>';
+                for (var j = 0; j < columns.length; j++) {
+                    if (i === 0) {
+                        tableHtml += '<th>' + columns[j] + '<button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></th>';
+                    } else {
+                        tableHtml += '<td>' + columns[j] + '</td>';
+                    }
+                }
+                tableHtml += '</tr>';
+            }
+            tableHtml += '</table>';
+            return tableHtml;
+        }
+
+        function copyToClipboard(text) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+
+        function copyColumnToClipboard(columnIndex) {
+            var table = document.getElementsByTagName('table')[0];
+            var rows = table.getElementsByTagName('tr');
+            var columnData = [];
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                if (cells[columnIndex]) {
+                    columnData.push(cells[columnIndex].innerText);
+                }
+            }
+            var columnText = columnData.join('\n');
+            copyToClipboard(columnText);
+        }
+    </script>
 </body>
+
 </html>
 

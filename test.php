@@ -124,57 +124,21 @@ input.addEventListener("keypress", function(event) {
 </script>
 
 
+<form id="L" method="post">
+   <select name="Language">
+   <option value="PHP"></option>
+    <option value="Python">Python</option>
+    <option value="Java">Java</option>
+    <option value="C++">C++</option>
+  </select>
+<input type="submit" name="Submit" value="Submit">
+</form>
 
-<script src="/assets/js/dropdownlist.js"></script>
-
-
-<div class="p-2">
-    <p>Example selected value: <strong id="selected-example"></strong></p>
-</div>
-<div class="container m-2">
-  <div class="dropdown sik-dropdown" id="sik-select">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      ...
-    </button>
-    <ul class="dropdown-menu dropdown-menu-dark">
-      <li>
-          <span class="dropdown-item" data-value="">Sutta
-          </span>          
-      </li>
-      <li>
-          <span class="dropdown-item" data-value="-vin">Vinaya
-          </span>          
-      </li>
-      <li>
-          <span class="dropdown-item" data-value="-kn">+KN
-          </span>          
-      </li>
-      <li>
-          <span class="dropdown-item" data-value="-all">+Later
-          </span>          
-      </li>
-        
-<li>
-          <span class="dropdown-item" data-value="-b">theBuddhasWords.net
-          </span>          
-      </li>
-        
-        <li>
-          <span class="dropdown-item" data-value="-rn">English
-          </span>          
-      </li>
-        
-        
-        <li>
-          <span class="dropdown-item" data-value="-ru">Russian
-          </span>          
-      </li>
-        
-        
-    </ul>
-  </div>
-</div>
-
+<?php
+if(isset($_POST['Language'])) {
+  echo "Selected Language: ".htmlspecialchars($_POST['Language']);
+}
+?>
 
 
 

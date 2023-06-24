@@ -136,7 +136,7 @@
             for (var i = 0; i < maxLines; i++) {
                 var paliPart = paliLines[i] ? paliLines[i].trim() : '';
                 var otherPart = otherLines[i] ? otherLines[i].trim() : '';
-                csv += (i + 1) + ',' + paliPart + ',' + otherPart;
+                csv += i + ',' + paliPart + ',' + otherPart;
 
                 for (var j = 0; j < additionalLines.length; j++) {
                     var additionalPart = additionalLines[j][i] ? additionalLines[j][i].trim() : '';

@@ -141,7 +141,12 @@
                 var paliPart = paliLines[i] ? paliLines[i].trim() : '';
                 var otherPart = otherLines[i] ? otherLines[i].trim() : '';
                 if (document.getElementById('checkbox').checked) {
-                    csv += i + ',' + paliPart + ',' + otherPart;
+                  if (i === 0) {
+   csv += '#' + ',' + paliPart + ',' + otherPart;                 
+} else {
+  csv += i + ',' + paliPart + ',' + otherPart;
+}
+                    
                 } else {
                     csv += (i + 1) + ',' + paliPart + ',' + otherPart;
                 }
@@ -150,7 +155,7 @@
                     var additionalPart = additionalLines[j][i] ? additionalLines[j][i].trim() : '';
                     csv += ',' + additionalPart;
                 }
-                csv += '\n';
+                 csv += '\n'; 
             }
 
             var resultTable = generateResultTable(csv);

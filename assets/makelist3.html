@@ -33,6 +33,10 @@
             border-radius: 5px;
             display: none;
         }
+
+        .hide {
+            display: none;
+        }
     </style>
 </head>
 
@@ -56,19 +60,19 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row my-2">
             <div class="col-md-12">
                 <div class="form-group" id="additionalInputs"></div>
                 <button class="btn btn-info" id="addInputButton">+</button>
                 <button class="btn btn-danger" id="removeInputButton">-</button>
             </div>
         </div>
-        <div class="row">
+        <div class="row my-2">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="delimiterInput">Custom Delimiter:</label>
                     <input type="text" class="form-control full-width" id="delimiterInput" placeholder="Enter delimiter"
-                        value=".,:;|/?!">
+                        value=".,:;?!—">
                 </div>
             </div>
             <div class="col-md-6">
@@ -79,21 +83,23 @@
                 </div>
             </div>
         </div>
+        <div class="form-group my-2">
+            <label for="checkbox">With Headers:</label>
+            <input type="checkbox" id="checkbox">
+        </div>
 
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-md-12">
-                <div class="btn-group">
-                    <button class="btn btn-primary" id="transformButton">Transform</button>
-                    <button class="btn btn-secondary" id="clearButton">Clear</button>
-                    <a href="#" class="btn btn-success" id="downloadButton" download="result.csv"
-                        style="display: none;">Download CSV</a>
-                </div>
+                <button class="btn btn-primary" id="transformButton">Transform</button>
             </div>
         </div>
         <div class="row mt-4">
             <div class="col-md-12">
-                <h5>Result:</h5>
-                <div id="resultOutput"></div>
+                <h5 class="hide">Result:</h5>
+                <div id="resultOutput" class="hide"></div>
+                <div class="btn-group mt-2 hide" id="copyAllButtonGroup">
+                    <button class="btn btn-info" id="copyAllButton">Copy All</button>
+                </div>
             </div>
         </div>
     </div>
@@ -136,7 +142,15 @@
             for (var i = 0; i < maxLines; i++) {
                 var paliPart = paliLines[i] ? paliLines[i].trim() : '';
                 var otherPart = otherLines[i] ? otherLines[i].trim() : '';
-                csv += i + ',' + paliPart + ',' + otherPart;
+                if (document.getElementById('checkbox').checked) {
+                    if (i === 0) {
+                        csv += '#' + ',' + paliPart + ',' + otherPart;
+                    } else {
+                        csv += i + ',' + paliPart + ',' + otherPart;
+                    }
+                } else {
+                    csv += (i + 1) + ',' + paliPart + ',' + otherPart;
+                }
 
                 for (var j = 0; j < additionalLines.length; j++) {
                     var additionalPart = additionalLines[j][i] ? additionalLines[j][i].trim() : '';
@@ -148,10 +162,8 @@
             var resultTable = generateResultTable(csv);
             document.getElementById('resultOutput').innerHTML = resultTable;
 
-            document.getElementById('downloadButton').style.display = 'block';
-            var blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), csv], { type: 'text/csv;charset=utf-8;' });
-            var url = URL.createObjectURL(blob);
-            document.getElementById('downloadButton').href = url;
+            document.getElementById('resultOutput').classList.remove('hide');
+            document.getElementById('copyAllButtonGroup').classList.remove('hide');
         });
 
         document.getElementById('clearButton').addEventListener('click', function () {
@@ -166,7 +178,8 @@
             }
 
             document.getElementById('resultOutput').innerHTML = '';
-            document.getElementById('downloadButton').style.display = 'none';
+            document.getElementById('resultOutput').classList.add('hide');
+            document.getElementById('copyAllButtonGroup').classList.add('hide');
         });
 
         document.getElementById('addInputButton').addEventListener('click', function () {
@@ -185,28 +198,41 @@
             }
         });
 
+        document.getElementById('copyAllButton').addEventListener('click', function () {
+            var table = document.getElementsByTagName('table')[0];
+            var rows = table.getElementsByTagName('tr');
+            var allData = [];
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                var rowData = [];
+                for (var j = 0; j < cells.length; j++) {
+                    rowData.push(cells[j].innerText);
+                }
+                allData.push(rowData.join(','));
+            }
+            var allText = allData.join('\n');
+            copyToClipboard(allText);
+        });
 
-function generateResultTable(csv) {
-    var lines = csv.split('\n');
-    var tableHtml = '<table class="table table-bordered">';
-    tableHtml += '<tr>';
-    for (var j = 0; j < lines[0].split(',').length; j++) {
-        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></th>';
-    }
-    tableHtml += '</tr>';
-    for (var i = 0; i < lines.length; i++) {
-        tableHtml += '<tr>';
-        var columns = lines[i].split(',');
-        for (var j = 0; j < columns.length; j++) {
-            tableHtml += '<td>' + columns[j] + '</td>';
+        function generateResultTable(csv) {
+            var lines = csv.split('\n');
+            var tableHtml = '<table class="table table-bordered">';
+            tableHtml += '<tr>';
+            for (var j = 0; j < lines[0].split(',').length; j++) {
+                tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></th>';
+            }
+            tableHtml += '</tr>';
+            for (var i = 0; i < lines.length; i++) {
+                tableHtml += '<tr>';
+                var columns = lines[i].split(',');
+                for (var j = 0; j < columns.length; j++) {
+                    tableHtml += '<td>' + columns[j] + '</td>';
+                }
+                tableHtml += '</tr>';
+            }
+            tableHtml += '</table>';
+            return tableHtml;
         }
-        tableHtml += '</tr>';
-    }
-    tableHtml += '</table>';
-    return tableHtml;
-}
-
-
 
         function copyToClipboard(text) {
             var textarea = document.createElement('textarea');
@@ -250,5 +276,3 @@ function generateResultTable(csv) {
 </body>
 
 </html>
-
-

@@ -978,10 +978,8 @@ mintexts=1000
 else 
 mintexts=1
 fi
-echo $mintexts
+#echo $mintexts
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
-
-#
 
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 

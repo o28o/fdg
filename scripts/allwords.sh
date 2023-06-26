@@ -47,3 +47,7 @@ cat $allwords | sort | uniq | sort > $result2
 
 done 
 exit 0
+
+#cound all letters in 4 nikayas
+grep -orih '[[:alpha:]]' dn/ mn/ sn/ an/  | sort -f | uniq -ci | sort -n
+

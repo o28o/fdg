@@ -194,14 +194,14 @@ input.addEventListener("keypress", function(event) {
  <!--  <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipth;?>"><?php echo $radioth;?></a>
-   </div>  -->
+   </div>  
 
 
 
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" name="p" <?php if (isset($p) && $p=="Pali") echo "checked";?> value="">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippli;?>"><?php echo $radiopli;?></a>
-  </div>
+  </div> -->
   
      <div class="form-check form-check-inline">
   <input class="form-check-input"  type="checkbox" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Links Diff</title>
+  <!-- Include required libraries -->
+  <link href="/assets/css/jquery-ui.css" rel="stylesheet"/>
+  <link href="/assets/css/styles.css" rel="stylesheet" />
+  <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+  <script src="/assets/js/jquery-3.6.0.js"></script>
+  <script src="/assets/js/jquery-ui.js"></script>
+  <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Custom Styles */
+    .mt-5 {
+      margin-top: 3rem !important;
+    }
+    .mt-4 {
+      margin-top: 2.5rem !important;
+    }
+    .form-control {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Show Difference Between Two Lists</h2><br>
+    <form id="textLinksForm">
+      <div class="mb-3">
+        <label for="string1" class="form-label">List of Links 1:</label>
+        <input type="search" class="form-control" id="string1" name="string1" placeholder="e.g. sn56.11 dn22 sn12.2" required>
+      </div>
+      <div class="mb-3">
+        <label for="string2" class="form-label">List of Links 2:</label>
+        <input type="search" class="form-control" id="string2" name="string2" placeholder="e.g. sn56.11 dn22" required>
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-secondary" id="clearFormBtn">Clear Form</button>
+      </div>
+    </form>
+
+    <div id="result" class="mt-4"></div>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById('textLinksForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      processForm();
+    });
+
+    // Handle clear form button click
+    document.getElementById('clearFormBtn').addEventListener('click', function() {
+      clearForm();
+    });
+
+    function processForm() {
+      // Get the input values
+      var string1 = document.getElementById('string1').value;
+      var string2 = document.getElementById('string2').value;
+
+      // Remove prefixes
+      string1 = string1.substring(string1.indexOf(":") + 1).trim();
+      string2 = string2.substring(string2.indexOf(":") + 1).trim();
+
+      // Remove trailing numbers
+      string1 = string1.replace(/ \(\d+\)$/, '');
+      string2 = string2.replace(/ \(\d+\)$/, '');
+
+      // Explode strings into arrays
+      var array1 = string1.split(" ");
+      var array2 = string2.split(" ");
+
+      // Find differences
+      var differences = array1.filter(function(value) {
+        return !array2.includes(value);
+      });
+
+      // Append differences from array2
+      differences = differences.concat(array2.filter(function(value) {
+        return !array1.includes(value);
+      }));
+
+      // Print differences
+      var result = "";
+      differences.forEach(function(difference) {
+        result += difference + "<br>";
+      });
+
+      // Display the result
+      document.getElementById('result').innerHTML = "Result:<br>" + result;
+    }
+
+    function clearForm() {
+      document.getElementById('textLinksForm').reset();
+      document.getElementById('result').innerHTML = "";
+    }
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -30,6 +30,11 @@ $tooltippli = 'Поиск на Пали по-умолчанию. По Сутта
 $radiopli = 'Pāḷi';
 $tooltipdef = 'Поиск определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Если в Суттах не будет результатов, то поиск автоматически проведется в определениях из Винаи. Работает только для определений данных стандартными фразами. См. в "для Продвинутых"';
 $radiodef = 'Опр';
+
+$tooltipsml = 'Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.';
+$radiosml = 'Пдб';
+
+
 $tooltipvin = 'Поиск в Винае на Пали';
 $radiovin = 'Вин';
 $tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, dhp, iti, snp, thag, thig. Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха';
@@ -390,6 +395,10 @@ $tooltippli = 'Default search. In Suttas of an, sn, mn, dn. Anguttara Nikaya, Sa
 $radiopli = 'Pāḷi';
 $tooltipdef = 'Search for definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. If nothing will be found in Suttas it will automatically search in Vinaya. For all-round view studing all related Suttas is recommended. See "Advanced" for details';
 $radiodef = 'Def';
+
+$tooltipsml = 'Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.';
+$radiosml = 'Sml';
+
 $tooltipvin = 'Search in Pali Vinaya';
 $radiovin = 'Vin';
 $tooltipkn = '+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig';

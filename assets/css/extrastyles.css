@@ -25,6 +25,12 @@ border-radius: 1rem;
 max-width: 274pxalign-items: center;
 }
 
+.dropdown {
+  height: 32px;
+  padding: 3px 3px 3px 3px;
+}
+
+
 .roundedborder{
   position: absolute; 
   right :35px; 

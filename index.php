@@ -102,16 +102,14 @@ include 'scripts/opentexts.php';
                 </div>
     
 
-      
-			<form method="GET" action="" class="justify-content-center">
+		<form method="GET" action="" class="justify-content-center">
 		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
-	
-	
+
 <div style="position: relative;">
   <input name="q" style="z-index: 9; padding-right: 30px;" type="" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
   <button type="button" style="position: absolute; top: 50%; right: 2px; transform: translateY(-50%); display: none;" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
-    <i class="fas fa-times" style="color: grey;"></i>
+    <i class="fas fa-times" style="color: grey; font-size: 12px;"></i>
   </button>
 </div>
 
@@ -130,7 +128,7 @@ input.addEventListener("keypress", function(event) {
 </script>
 
 <div class="align-items-center form-check-inline mx-0">
-    <select class="rounded-pill text-muted border-2 border-primary text-center" id="pOptions" name="p">
+    <select class="dropdown rounded-pill text-muted border-2 border-primary text-center" id="pOptions" name="p">
         <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn ") echo "selected";?> ><?php echo "$radiokn";?></option>
@@ -140,7 +138,7 @@ input.addEventListener("keypress", function(event) {
     </select>
        <div class="text-start text-muted form-check-inline my-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 
-    <select class="rounded-pill text-muted border-2 border-primary text-center" id="extraOptions" name="extra">
+    <select class="dropdown rounded-pill text-muted border-2 border-primary text-center" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
         <option value="-def" <?php if (isset($extra) && $p == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>
@@ -185,7 +183,7 @@ input.addEventListener("keypress", function(event) {
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
   </div> -->
   
-         <div style="max-width: 300px; " class="my-4"> 
+         <div style="max-width: 300px;" class="my-4"> 
          
  <h5><?php echo $regexMemoh5;?></h5>
  
@@ -217,10 +215,10 @@ input.addEventListener("keypress", function(event) {
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>"X(\\S*\\s){0,3}Y"</strong></button> - <?php echo $fewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"tatt($|[^h])"'><strong>"tatt($|[^h])"</strong></button> - <?php echo $variantsexc;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"'><strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong></button> - <?php echo $metaphorssmlletter;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"(a|b|c)"'><strong>"(a|b|c)"</strong></button> - <?php echo $searchfewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="'^&quot;mn.*X'"><strong>'^&quot;mn.*X'</strong></button> - <?php echo $inallnikaya;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="dn22.*"><strong>dn22.*Y</strong></button> - <?php echo $inonesutta;?> <br><br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="dn22.*"><strong>dn22.*Y</strong></button> - <?php echo $inonesutta;?> <br>
+    <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"'><strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong></button> - <?php echo $metaphorssmlletter;?> <br><br>
 </div>
 
   <?php echo $regexlink;?> 
@@ -297,8 +295,7 @@ input.addEventListener("keypress", function(event) {
   input.setSelectionRange(input.value.length, input.value.length);
 </script>
 
-  
-             </div>    
+</div>    
 </div>
 </div>
   </div>

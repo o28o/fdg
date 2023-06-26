@@ -135,7 +135,7 @@ include 'scripts/opentexts.php';
         <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>
         <option value="-def1000" <?php if (isset($extra) && $p == "-def1000 ") echo "selected";?> ><?php echo "$listdef1000";?></option>
     </select>
-       <a class="text-muted text-decoration-none me-2" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</a>
+       <a class="text-muted text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</a>
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->

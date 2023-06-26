@@ -115,8 +115,6 @@ include 'scripts/opentexts.php';
 
 	    	<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
 	    	</div>
-	<!--	  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="lookup" value="lookup" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button> -->
-
 
 <div class="align-items-center form-check-inline mx-0">
     <select class="dropdown rounded-pill text-muted border-2 border-primary text-center" id="pOptions" name="p">
@@ -139,12 +137,11 @@ include 'scripts/opentexts.php';
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
-  <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings"><i class="fa-solid fa-gear"></i></a>
+  <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings"><i class="fa-solid fa-gear fa-lg"></i></a>
 <div class="collapse" id="collapseSettings">
   
-  <div class="float-start">
+  <div class="float-start mt-2">
 
- <p class="my-3"></p>  
  <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></a>

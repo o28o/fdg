@@ -172,6 +172,11 @@ input.addEventListener("keypress", function(event) {
   <input class="form-check-input" type="checkbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></a>
   </div>
+ 
+ <div class="form-check form-check-inline">
+  <input class="form-check-input"  type="checkbox" name="p" <?php if (isset($p) && $p=="-b ") echo "checked";?> value="-b">
+   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptbw;?>"><?php echo $radiotbw;?></a>
+  </div>
   
             <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-all ">
@@ -180,13 +185,6 @@ input.addEventListener("keypress", function(event) {
   
     <p class="mb-1"></p>   
   
-             <div class="form-check form-check-inline">
-  <input class="form-check-input"  type="checkbox" name="p" <?php if (isset($p) && $p=="-b ") echo "checked";?> value="-b">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptbw;?>"><?php echo $radiotbw;?></a>
-  </div>
-  
-
-
  <!--  <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
     <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipth;?>"><?php echo $radioth;?></a>
@@ -197,12 +195,12 @@ input.addEventListener("keypress", function(event) {
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" name="p" <?php if (isset($p) && $p=="Pali") echo "checked";?> value="">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippli;?>"><?php echo $radiopli;?></a>
-  </div> -->
+  </div> 
   
      <div class="form-check form-check-inline">
   <input class="form-check-input"  type="checkbox" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
-  </div>
+  </div> -->
   
   
     <div class="form-check form-check-inline">

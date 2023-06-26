@@ -47,7 +47,7 @@ function randPlaceholderOnMain() {
     var suttas = ["Sn 56 11","Dn22s","Сн12.2", "an4 163"];
     var or = " или ";
 
-    var example = "прим. ";
+    var example = "пр. ";
           }
 const randomW = Math.floor(Math.random() * words.length);
 const randomS = Math.floor(Math.random() * suttas.length);

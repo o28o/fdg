@@ -206,6 +206,58 @@ input.addEventListener("keypress", function(event) {
   </div>
   
 
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $p=="-vin") echo "checked";?> value="-vin">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipvin; ?>"><?php echo $radiovin; ?></a>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-kn ") echo "checked";?> value="-kn">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipkn; ?>"><?php echo $radiokn; ?></a>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="p" <?php if (isset($extra) && $extra=="-all ") echo "checked";?> value="-all">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipltr; ?>"><?php echo $radioltr; ?></a>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="p" <?php if (isset($p) && $p=="-b ") echo "checked";?> value="-b">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptbw; ?>"><?php echo $radiotbw; ?></a>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="p" <?php if (isset($p) && $p=="English") echo "checked";?> value="-en">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipen; ?>"><?php echo $radioen; ?></a>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru; ?>"><?php echo $radioru; ?></a>
+</div>
+
+<script>
+  // Получаем все элементы с классом "form-check-input"
+  const checkboxes2 = document.querySelectorAll('.form-check-input');
+
+  // Обрабатываем клик на каждом чекбоксе
+  checkboxes2.forEach(function (checkbox) {
+    checkbox.addEventListener('click', function () {
+      // Если текущий чекбокс уже выбран, снимаем выбор со всех чекбоксов
+      if (this.checked) {
+        checkboxes2.forEach(function (otherCheckbox) {
+          if (otherCheckbox !== checkbox) {
+            otherCheckbox.checked = false;
+          }
+        });
+      }
+    });
+  });
+</script>
+
+
+
   <br>
          <div style="max-width: 300px; " class="mt-2"> 
 <?php echo $regexMemo;?>

@@ -127,7 +127,7 @@ include 'scripts/opentexts.php';
         <option value="-b" <?php if (isset($p) && $p == "-b ") echo "selected";?> ><?php echo $radiotbw;?></option>
         <option value="-en" <?php if (isset($p) && $p == "English") echo "selected";?> ><?php echo $radioen;?></option>
     </select>
-       <div class="text-start text-muted form-check-inline my-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
+       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 
     <select class="dropdown rounded-pill text-muted border-2 border-primary text-center" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>

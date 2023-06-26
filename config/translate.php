@@ -34,18 +34,18 @@ $radiodef = 'Опр';
 $tooltipsml = 'Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.';
 $radiosml = 'Пдб';
 
-$tooltiptextype = 'Pāḷi - Ангутара Никаи (AN), Саньютта Никаи (SN), Маджжхима Никаи (MN), Дигха Никаи (DN)<br><br>
-Виная - Поиск в Винае на Пали. <br><br>
-+KN - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
-Поздние - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
-TBW - поиск в материалах theBuddhasWords.net<br><br>
-Англ - поиск в материалах SuttaCentral.net
+$tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), Саньютта Никаи (SN), Маджжхима Никаи (MN), Дигха Никаи (DN)<br><br>
+<strong>Виная</strong> - Поиск в Винае на Пали. <br><br>
+<strong>+KN</strong> - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
+<strong>Поздние</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
+<strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
+<strong>Англ</strong> - поиск в англ переводах 4 никай SuttaCentral.net
 ';
-$tooltipsearchtype = 'По умолчанию - все совпадения<br><br>
-Определения - Поиск нескольких главных определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. <br><br>
-Сравнения - Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.<br><br>
-Определения+ - Поиск всех определений понятия. Логика описана в разделе помощи для Продвинутых.';
-$listdef1000  = "Определения+";
+$tooltipsearchtype = '<strong>По умолчанию</strong> - все совпадения<br><br>
+<strong>Определения</strong> - Поиск нескольких главных определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. <br><br>
+<strong>Сравнения</strong> - Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.<br><br>
+<strong>Все Определения</strong> - Поиск всех определений понятия. Логика описана в разделе помощи для Продвинутых.';
+$listdef1000  = "Все Определения";
 $listdef = "Определения";
 $listsml = "Сравнения";
 $liststd = "Все совпадения";
@@ -89,7 +89,7 @@ $tooltipla = "Добавить $defaultla строки после совпаде
 $checkboxla = "+$defaultla строки";
 $regexMemoh5 = '<h5>Памятка по RegEx</h5>';
 
-$lax = "искать X и добавить в результаты $defaultla следующие строки после строки с X";
+$lax = "искать X и добавить в результаты $defaultla (значение можно менять) следующие строки после строки с X";
 $lbx = "искать X и добавить в результаты $defaultla предыдущие строки перед строкой с X";
 $exc = "искать X, исключить Y";
 $excfew = 'искать X, исключить Y с окончаниями на "ti" и "nti"';
@@ -414,23 +414,21 @@ $radiodef = 'Def';
 $tooltipsml = 'Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.';
 $radiosml = 'Sml';
 
-$tooltiptextype = 'Pāḷi - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN)
+$tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN)
 <br><br>
-Vinaya - Search in Pali Vinaya. <br><br>
-+KN - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
-Later - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
-TBW - search in theBuddhasWords.net materials<br><br>
-Англ - search in SuttaCentral.net materials
-';
-$tooltipsearchtype = 'Default - all matches<br><br>
-Definitions - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases.  <br><br>
-Similes - Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.<br><br>
-Definitions+ - Search for all definitions. For all-round view studing all related Suttas is recommended. See Advanced for details.';
-$listdef1000  = "Definitions+";
+<strong>Vinaya</strong> - Search in Pali Vinaya. <br><br>
+<strong>+KN</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
+<strong>Later</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
+<strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>
+<strong>Англ</strong> - search in SuttaCentral.net materials';
+$tooltipsearchtype = '<strong>Default</strong> - all matches<br><br>
+<strong>Definitions</strong> - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. <br><br>
+<strong>Similes</strong> - Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.<br><br>
+<strong>All Definitions</strong> - Search for all definitions. For all-round view studying all related Suttas is recommended. See Advanced for details.';
+$listdef1000  = "All Definitions";
 $listdef = "Definitions";
 $listsml = "Similes";
 $liststd = "All matches";
-
 
 $tooltipvin = 'Search in Pali Vinaya';
 $radiovin = 'Vinaya';

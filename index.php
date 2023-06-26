@@ -127,16 +127,30 @@ input.addEventListener("keypress", function(event) {
   <input class="form-check-input" type="radio" name="p" <?php if (isset($p) && $p=="Pali") echo "checked";?> value="">
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippli;?>"><?php echo $radiopli;?></a>
   </div>
-
-<div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="extra" <?php if (isset($extra) && $extra=="-def ") echo "checked";?>  value="-def">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipdef;?>'><?php echo $radiodef;?></a>
-  </div>
   
 <div class="form-check form-check-inline">
-<input class="form-check-input" type="checkbox" name="extra" <?php if (isset($extra) && $extra=="-sml ") echo "checked";?>  value="-sml">
+  <input class="form-check-input" type="checkbox" name="extra" id="checkbox1" <?php if (isset($extra) && $extra == "-def ") echo "checked";?> value="-def">
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipdef;?>'><?php echo $radiodef;?></a>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" name="extra" id="checkbox2" <?php if (isset($extra) && $extra == "-sml ") echo "checked";?> value="-sml">
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipsml;?>'><?php echo $radiosml;?></a>
-  </div>  
+</div>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[name="extra"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      checkboxes.forEach((c) => {
+        if (c !== checkbox) {
+          c.checked = false;
+        }
+      });
+    });
+  });
+</script>
+
     
   <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($extra) && $p=="-vin") echo "checked";?> value="-vin ">

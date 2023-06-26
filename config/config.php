@@ -175,7 +175,7 @@ $thsulocation = $basedir. '/tipitaka.theravada.su/';
 $thrulocation = $basedir. '/theravada.ru/Teaching/Canon';
 $bwlocation = $basedir. '/bw';
 
-$defaultla = 1;
+$defaultla = 2;
 $latestrusmn = 38;
 
 ?>

@@ -54,7 +54,7 @@ $radiovin = 'Виная';
 $tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, dhp, iti, snp, thag, thig. Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха';
 $radiokn = '+КН';
 $tooltiponl = 'X Y ... найдет только тексты содержащие оба и более совпадений X, Y, ... Без этой опции будут собраны тексты которые содержат только рядомстоящие X Y';
-$checkboxonl = 'Тлк';
+$checkboxonl = 'Во всём';
 $tooltipnonl = 'С этой опцией будут собраны тексты, которые содержат только рядомстоящие X и Y (в одной строке). По умолчанию, без этой опции поиск будет производиться на любом расстоянии в пределах одного текста.';
 $checkboxnonl = 'А Б';
 $tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи, включая поздние";
@@ -86,28 +86,29 @@ $tooltipvindef = 'Поиск определений понятия на Пали
 $radiovindef = "ОпрВ";
 
 $tooltipla = "Добавить $defaultla строки после совпадения";
-$checkboxla = "+$defaultla";
-$regexMemo = '<h5>Памятка по RegEx</h5>
-  <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
-          <p style="text-align: left;">
-          
+$checkboxla = "+$defaultla строки";
+$regexMemoh5 = '<h5>Памятка по RegEx</h5>';
+
+$lax = "искать X и добавить в результаты $defaultla следующие строки после строки с X";
+$lbx = "искать X и добавить в результаты $defaultla предыдущие строки перед строкой с X";
+$exc = "искать X, исключить Y";
+$excfew = 'искать X, исключить Y с окончаниями на "ti" и "nti"';
+$begin = 'начало или';
+$end = 'конец слова';
+$anynumber = 'любое количество символов между X и Y';
+$fewsymbols = 'от 0 до 10 символов';
+$nextwords = 'рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным';
+$fewwords = 'расстояние в 0 или 2 слова между X и Y с любым окончанием X';
+$variants = 'искать несколько вариантов';
+$variantsexc = 'искать tatt исключив tatth';
+$metaphorssmlletter = 'искать все сравнения, метафоры в Самьютте 56';
+$searchfewwords = 'искать несколько отдельных слов одновременно';
+$inallnikaya = 'искать X во всей Мадджхимма Никае';
+$inonesutta = 'искать Y в одной Сутте ДН22';
+$regexlink = 'ИИ может сгенерировать регулярное выражение для Grep, к примеру <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>здесь</a>.<br>';
+
+$regexMemo = '<p style="text-align: left;">
   <!--   <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> -->
-       <strong>-la2 X</strong> - искать X и добавить в результаты 2 следующие строки после строки с X<br>
-    <strong>-lb1 X</strong> - искать X и добавить в результаты 1 предыдущую строку перед строкой с X<br>
-     <strong>X -exc Y</strong> - искать X, исключить Y<br>
-    <strong>X -exc "Y(ti|nti)"</strong> - искать X, исключить Y с окончаниями на "ti" и "nti"<br> 
-         <strong>\\\\bX</strong> - начало или <strong>Y\\\\b</strong> конец слова<br>
-<strong>X.*Y</strong> - любое количество символов между X и Y<br>
-<strong>X.{0,10}Y</strong> - от 0 до 10 символов<br>
-<strong>X\\\\S*\\\\sY</strong> - рядом стоящие слова X и Y, если окончание слова X неизвестно или может быть различным<br>     
-<strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - расстояние в 0 или 2 слова между X и Y с любым окончанием X<br> 
-<strong>[aā]</strong> - искать несколько вариантов<br>           
-<strong>"tatt($|[^h])"</strong> - искать tatt исключив tatth<br>           
-<strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - искать все метафоры в Самьютте 56<br> 
-<strong>"(a|b|c)"</strong> - искать несколько отдельных слов одновременно<br>
-<strong>\'^"mn.*X\'</strong> - искать X во всей Мадджхимма Никае<br>            
-<strong>dn22.*Y</strong> - искать Y в одной Сутте ДН22<br><br> 
-ИИ может сгенерировать регулярное выражение для Grep, к примеру <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>здесь</a><br>
         </p>     ';
 $titlehowtovideo = 'Как пользоваться?';  
 $linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
@@ -436,7 +437,7 @@ $radiovin = 'Vinaya';
 $tooltipkn = '+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig';
 $radiokn = '+KN';
 $tooltiponl = 'X Y ... Finds texts containing only both and more matches for X, Y ... Without this option only texts where X Y are standing next to each other will be found';
-$checkboxonl = 'Onl';
+$checkboxonl = 'In all text';
 $tooltipnonl = 'By default only texts containing X Y ... on any distance between  words will be found. With this option texts containing only X Y standing next to each other will be in results.';
 $checkboxnonl = 'A B';
 $tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then sc.net texts, then thebuddhaswords.net translations';
@@ -466,29 +467,32 @@ If they (teachings, practices, methods, quotes, stories, anything associated wit
 $tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
 $radiovindef = "DefV";
 $tooltipla = "Add $defaultla lines after match";
-$checkboxla = "+$defaultla";
+$checkboxla = "+$defaultla lines";
 
+$regexMemoh5 = 'RegEx Memo';
 
-$regexMemo = ' <h5>RegEx Memo</h5>
-  <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
+$lax = "search for X, add $defaultla next line to output after lines containing X";
+$lbx = "search for X, add $defaultla previous lines to output before lines containing X";
+$exc = "search for X, exclude Y";
+$excfew = 'search for X, exclude Y ending with "ti" and "nti"';
+$begin = 'beginning of the word or';
+$end = 'end';
+$anynumber = 'any number of symbols between X and Y';
+$fewsymbols = 'from 0 to 10 symbols';
+$nextwords = 'next words X и Y, with variable ending of X';
+$fewwords = 'distance of 0 to 2 words between X (any ending) and Y';
+$variants = 'multiple variants';
+$variantsexc = 'search for tatt excluding tatth';
+$metaphorssmlletter = 'search for all metaphors in Samyutta 56';
+$searchfewwords = 'search for few different patterns at the same time';
+$inallnikaya = 'find X in all Majjhimma Nikaya';
+$inonesutta = 'find Y in DN22 only';
+$regexlink = 'AI can generate RegEx for Grep, e.g. <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>here</a>.<br>';
+
+$regexMemo = '
           <p style="text-align: left;">
      <!--  <strong>-onl "(X|Y|...)"</strong> - find texts containing only all of the X, Y ... etc patterns<br> -->
-     <strong>-la1 X</strong> - search for X, add 1 next line to output after lines containing X<br>
-         <strong>-lb2 X</strong> - search for X, add 2 previous lines to output before lines containing X<br>
-       <strong>X -exc Y</strong> - search for X, exclude Y<br>
-           <strong>X -exc "Y(ti|nti)"</strong> - search for X, exclude Y ending with "ti" and "nti"<br> 
-       <strong>\\\\bX</strong> - beginning of the word or <strong>Y\\\\b</strong> end<br>
-<strong>X.*Y</strong> - any number of symbols between X and Y<br>
-<strong>X.{0,10}Y</strong> - from 0 to 10 symbols<br>
-<strong>X\\\\S*\\\\sY</strong> - next words X и Y, with variable ending of X<br>      
-<strong>"X(\\\\S*\\\\s){0,3}Y"</strong> - distance of 0 to 2 words between X and Y with any ending of X<br> 
-<strong>[aā]</strong> - multiple variants<br>           
-<strong>"tatt($|[^h])"</strong> - search for tatt excluding tatth<br>           
-<strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong> - search for all metaphors in Samyutta 56<br> 
-<strong>"(a|b|c)"</strong> - search for few different patterns at the same time<br>                          
-<strong>\'^"mn.*X\'</strong> - find X in all Majjhimma Nikaya<br>            
-<strong>dn22.*Y</strong> - find Y in DN22 only<br>
-<br>AI can generate RegEx for Grep, e.g. <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>here</a><br>
+
 </p>          ';
 $titlehowtovideo = 'How-To Video';
 $linkhowtovideo = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';

@@ -106,8 +106,14 @@ include 'scripts/opentexts.php';
 			<form method="GET" action="" class="justify-content-center">
 		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
-			
-			 <input name="q" style="z-index:9" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
+	
+	
+<div style="position: relative;">
+  <input name="q" style="z-index: 9; padding-right: 30px;" type="" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
+  <button type="button" style="position: absolute; top: 50%; right: 2px; transform: translateY(-50%); display: none;" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
+    <i class="fas fa-times" style="color: grey;"></i>
+  </button>
+</div>
 
 	    	<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
 	    	</div>
@@ -122,13 +128,6 @@ input.addEventListener("keypress", function(event) {
 });
 
 </script>
-
-<script>
-    // Поместить курсор в конец строки в поле ввода
-    var input = document.getElementById("paliauto");
-    input.focus();
-    input.setSelectionRange(input.value.length, input.value.length);
-  </script>
 
 <div class="align-items-center form-check-inline mx-0">
     <select class="rounded-pill text-muted border-2 border-primary text-center" id="pOptions" name="p">
@@ -158,18 +157,18 @@ input.addEventListener("keypress", function(event) {
   
   <div class="float-start">
 
- <p class="mb-1"></p>  
+ <p class="my-3"></p>  
  <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
+        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></a>
   </div>
   
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
+  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></a>
   </div>
   
-  
+
    <!--    
  <div class="form-check form-check-inline">
   <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
@@ -186,8 +185,119 @@ input.addEventListener("keypress", function(event) {
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
   </div> -->
   
-         <div style="max-width: 300px; " class="mt-2"> 
-<?php echo $regexMemo;?>
+         <div style="max-width: 300px; " class="my-4"> 
+         
+ <h5><?php echo $regexMemoh5;?></h5>
+ 
+<div class="align-items-center form-check-inline mt-4">
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā">ā</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī">ī</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ū">ū</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḍ">ḍ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḷ">ḷ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ">ṃ</button><br>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ">ṁ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṇ">ṇ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṅ">ṅ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ">ñ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ">ṭ</button>
+</div>
+
+
+<div class="mt-5" style="text-align: left;">
+  <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y</strong></button> - <?php echo $exc;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc "Y(ti|nti)"</strong></button> - <?php echo $excfew;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - <?php echo $anynumber;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - <?php echo $fewsymbols;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - <?php echo $nextwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>"X(\\S*\\s){0,3}Y"</strong></button> - <?php echo $fewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"tatt($|[^h])"'><strong>"tatt($|[^h])"</strong></button> - <?php echo $variantsexc;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"'><strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong></button> - <?php echo $metaphorssmlletter;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"(a|b|c)"'><strong>"(a|b|c)"</strong></button> - <?php echo $searchfewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="'^&quot;mn.*X'"><strong>'^&quot;mn.*X'</strong></button> - <?php echo $inallnikaya;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="dn22.*"><strong>dn22.*Y</strong></button> - <?php echo $inonesutta;?> <br><br>
+</div>
+
+  <?php echo $regexlink;?> 
+ </p>
+ 
+ <!-- JavaScript code -->
+<script>
+  // Function to reset all form elements
+  function resetForm() {
+    document.getElementById("paliauto").value = "";
+    document.getElementById("pOptions").selectedIndex = 0;
+    document.getElementById("extraOptions").selectedIndex = 0;
+    document.getElementById("onlCheckbox").checked = false;
+    document.getElementById("laCheckbox").checked = false;
+    // Reset other checkboxes and dropdowns as needed
+  }
+
+  // Event listener for the clear button
+  document.getElementById("clearbtn").addEventListener("click", function() {
+    resetForm();
+  });
+
+  // Event listener to submit the form when Enter key is pressed
+  var input = document.getElementById("paliauto");
+  input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("searchbtn").click();
+    }
+  });
+
+  // Получаем кнопки для вставки букв
+  var buttons = document.querySelectorAll('.insert-letter');
+
+  // Добавляем обработчики событий для каждой кнопки
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+      event.preventDefault();
+      var letterValue = this.getAttribute('data-letter');
+      input.value += letterValue;
+
+      // Перемещаем курсор в конец инпута
+      input.focus();
+      input.setSelectionRange(input.value.length, input.value.length);
+
+      checkInput(); // Проверяем поле после добавления буквы
+    });
+  });
+
+  var clearButton = document.getElementById('clearbtn');
+
+  // Проверяем поле при загрузке страницы
+  checkInput();
+
+  // Добавляем обработчик события input
+  input.addEventListener('input', checkInput);
+
+  // Очистка поля и скрытие кнопки при клике на кнопку очистки
+  clearButton.addEventListener('click', function() {
+    input.value = '';
+    checkInput();
+  });
+
+  function checkInput() {
+    if (input.value.trim().length > 0) {
+      clearButton.style.display = 'block'; // Показываем кнопку, если есть текст
+    } else {
+      clearButton.style.display = 'none'; // Скрываем кнопку, если нет текста
+    }
+  }
+
+  // Поместить курсор в конец строки в поле ввода
+  input.focus();
+  input.setSelectionRange(input.value.length, input.value.length);
+</script>
+
+  
              </div>    
 </div>
 </div>

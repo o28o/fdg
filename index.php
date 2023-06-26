@@ -123,8 +123,15 @@ input.addEventListener("keypress", function(event) {
 
 </script>
 
+<script>
+    // Поместить курсор в конец строки в поле ввода
+    var input = document.getElementById("paliauto");
+    input.focus();
+    input.setSelectionRange(input.value.length, input.value.length);
+  </script>
+
 <div class="align-items-center form-check-inline mx-0">
-    <select class="rounded-pill text-muted border-gray text-center" id="pOptions" name="p">
+    <select class="rounded-pill text-muted border-2 border-primary text-center" id="pOptions" name="p">
         <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn ") echo "selected";?> ><?php echo "$radiokn";?></option>
@@ -134,7 +141,7 @@ input.addEventListener("keypress", function(event) {
     </select>
        <div class="text-start text-muted form-check-inline my-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 
-    <select class="rounded-pill text-muted border-gray text-center" id="extraOptions" name="extra">
+    <select class="rounded-pill text-muted border-2 border-primary text-center" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
         <option value="-def" <?php if (isset($extra) && $p == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>

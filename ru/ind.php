@@ -1,1 +1,1 @@
-ind.php
+../ind.php

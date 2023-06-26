@@ -239,8 +239,7 @@ input.addEventListener("keypress", function(event) {
 
 <script>
   // Получаем все элементы с классом "form-check-input"
-  const checkboxes2 = document.querySelectorAll('.form-check-input');
-
+const checkboxes = document.querySelectorAll('input[name="p"]');
   // Обрабатываем клик на каждом чекбоксе
   checkboxes2.forEach(function (checkbox) {
     checkbox.addEventListener('click', function () {

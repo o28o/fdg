@@ -71,7 +71,7 @@ $howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānān
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "ОпрВ";
 
-$tooltipla = "Добавить $defaultla строку после совпадения";
+$tooltipla = "Добавить $defaultla строки после совпадения";
 $checkboxla = "+$defaultla";
 $regexMemo = '<h5>Памятка по RegEx</h5>
   <p>ā ī ū ḍ ḷ ṃ ṁ ṇ ṅ ñ ṭ</p>
@@ -433,7 +433,7 @@ If they (teachings, practices, methods, quotes, stories, anything associated wit
 <p class="text-end"><a target=_blank href=/ru/sc/?q=dn16#dn16:4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180#an4.180:2.7>an4.180</a></p>';
 $tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
 $radiovindef = "DefV";
-$tooltipla = "Add $defaultla line after match";
+$tooltipla = "Add $defaultla lines after match";
 $checkboxla = "+$defaultla";
 
 

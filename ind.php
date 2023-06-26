@@ -182,7 +182,7 @@ input.addEventListener("keypress", function(event) {
   
        <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" name="def1000" <?php if (isset($extra) && $extra=="-def1000 ") echo "checked";?>  value='<?php echo "-def1000"?>'>
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></a>
+  <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo "All Def";?></a>
   </div>
   
  <!--     <p class="mb-1"></p>   

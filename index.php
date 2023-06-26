@@ -102,7 +102,7 @@ include 'scripts/opentexts.php';
                 </div>
     
 
-		<form method="GET" action="" class="justify-content-center">
+<form method="GET" action="" class="justify-content-center">
 		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
 
@@ -116,16 +116,7 @@ include 'scripts/opentexts.php';
 	    	<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
 	    	</div>
 	<!--	  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" name="lookup" value="lookup" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button> -->
-<script>
-var input = document.getElementById("paliauto");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("searchbtn").click();
-  }
-});
 
-</script>
 
 <div class="align-items-center form-check-inline mx-0">
     <select class="dropdown rounded-pill text-muted border-2 border-primary text-center" id="pOptions" name="p">
@@ -147,8 +138,6 @@ input.addEventListener("keypress", function(event) {
        <a class="text-muted text-decoration-none me-2" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</a>
 </div>
   <!--  <label for="pOptions"></label> -->
-    
-
   <!-- extra options -->
   <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings"><i class="fa-solid fa-gear"></i></a>
 <div class="collapse" id="collapseSettings">
@@ -166,38 +155,22 @@ input.addEventListener("keypress", function(event) {
   <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></a>
   </div>
   
-
-   <!--    
- <div class="form-check form-check-inline">
-  <input class="form-check-input"  type="radio" name="p" <?php if (isset($p) && $p=="-th ") echo "checked";?> value="-th">
-    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipth;?>"><?php echo $radioth;?></a>
-   </div>  
-
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" name="p" <?php if (isset($p) && $p=="Pali") echo "checked";?> value="">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippli;?>"><?php echo $radiopli;?></a>
-  </div> 
-  
-     <div class="form-check form-check-inline">
-  <input class="form-check-input"  type="checkbox" name="p" <?php if (isset($p) && $p=="-ru ") echo "checked";?> value="-ru">
-   <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
-  </div> -->
-  
          <div style="max-width: 300px;" class="my-2"> 
          
-<div class="align-items-center form-check-inline mt-4">
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā">ā</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī">ī</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ū">ū</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḍ">ḍ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḷ">ḷ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ">ṃ</button><br>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ">ṁ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṇ">ṇ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṅ">ṅ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ">ñ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ">ṭ</button>
+<div class="align-items-center form-check-inline mt-2">
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā" autocomplete="off">ā</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī" autocomplete="off">ī</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ū" autocomplete="off">ū</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḍ" autocomplete="off">ḍ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḷ" autocomplete="off">ḷ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ" autocomplete="off">ṃ</button><br>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ" autocomplete="off">ṁ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṇ" autocomplete="off">ṇ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṅ" autocomplete="off">ṅ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ" autocomplete="off">ñ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ" autocomplete="off">ṭ</button>
 </div>
+
 
  <h5 class="mt-4"><?php echo $regexMemoh5;?></h5> 
 <div class="mt-4" style="text-align: left;">
@@ -222,77 +195,118 @@ input.addEventListener("keypress", function(event) {
   <?php echo $regexlink;?> 
  </p>
  
- <!-- JavaScript code -->
 <script>
+  
+  
+//  autocomplete part
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
+  }
+});  
+  
+  
   // Function to reset all form elements
-  function resetForm() {
-    document.getElementById("paliauto").value = "";
-    document.getElementById("pOptions").selectedIndex = 0;
-    document.getElementById("extraOptions").selectedIndex = 0;
-    document.getElementById("onlCheckbox").checked = false;
-    document.getElementById("laCheckbox").checked = false;
-    // Reset other checkboxes and dropdowns as needed
+function resetForm() {
+  document.getElementById("paliauto").value = "";
+  document.getElementById("pOptions").selectedIndex = 0;
+  document.getElementById("extraOptions").selectedIndex = 0;
+  document.getElementById("onlCheckbox").checked = false;
+  document.getElementById("laCheckbox").checked = false;
+  // Reset other checkboxes and dropdowns as needed
+  checkInput(); // Check input after resetting form
+}
+
+// Event listener for the clear button
+document.getElementById("clearbtn").addEventListener("click", function() {
+  resetForm();
+});
+
+// Event listener to submit the form when Enter key is pressed
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
   }
+});
 
-  // Event listener for the clear button
-  document.getElementById("clearbtn").addEventListener("click", function() {
-    resetForm();
+// Получаем кнопки для вставки букв
+var buttons = document.querySelectorAll('.insert-letter');
+
+// Добавляем обработчики событий для каждой кнопки
+buttons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    var letterValue = this.getAttribute('data-letter');
+    var currentValue = input.value;
+    input.value = currentValue + letterValue;
+
+    // Перемещаем курсор в конец инпута
+    input.focus();
+    input.setSelectionRange(input.value.length, input.value.length);
+
+    // Имитируем событие ввода, чтобы обновить состояние автозаполнения
+    var inputEvent = new Event('input', { bubbles: true });
+    input.dispatchEvent(inputEvent);
   });
+});
 
-  // Event listener to submit the form when Enter key is pressed
-  var input = document.getElementById("paliauto");
-  input.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      document.getElementById("searchbtn").click();
-    }
-  });
 
-  // Получаем кнопки для вставки букв
-  var buttons = document.querySelectorAll('.insert-letter');
 
-  // Добавляем обработчики событий для каждой кнопки
-  buttons.forEach(function(button) {
-    button.addEventListener('click', function(event) {
-      event.preventDefault();
-      var letterValue = this.getAttribute('data-letter');
-      input.value += letterValue;
+// Получаем чекбоксы и выпадающие списки
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+var selects = document.querySelectorAll('select');
 
-      // Перемещаем курсор в конец инпута
-      input.focus();
-      input.setSelectionRange(input.value.length, input.value.length);
+// Добавляем обработчики событий для чекбоксов
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', checkInput);
+});
 
-      checkInput(); // Проверяем поле после добавления буквы
-    });
-  });
+// Добавляем обработчики событий для выпадающих списков
+selects.forEach(function(select) {
+  select.addEventListener('change', checkInput);
+});
 
-  var clearButton = document.getElementById('clearbtn');
+var clearButton = document.getElementById('clearbtn');
 
-  // Проверяем поле при загрузке страницы
+// Проверяем поле при загрузке страницы
+checkInput();
+
+// Добавляем обработчик события input
+input.addEventListener('input', checkInput);
+
+// Очистка поля и скрытие кнопки при клике на кнопку очистки
+clearButton.addEventListener('click', function() {
+  input.value = '';
   checkInput();
+});
 
-  // Добавляем обработчик события input
-  input.addEventListener('input', checkInput);
-
-  // Очистка поля и скрытие кнопки при клике на кнопку очистки
-  clearButton.addEventListener('click', function() {
-    input.value = '';
-    checkInput();
-  });
-
-  function checkInput() {
-    if (input.value.trim().length > 0) {
-      clearButton.style.display = 'block'; // Показываем кнопку, если есть текст
-    } else {
-      clearButton.style.display = 'none'; // Скрываем кнопку, если нет текста
-    }
+function checkInput() {
+  if (
+    input.value.trim().length > 0 ||
+    Array.from(checkboxes).some(function(checkbox) {
+      return checkbox.checked;
+    }) ||
+    Array.from(selects).some(function(select) {
+      return select.value !== "";
+    })
+  ) {
+    clearButton.style.display = 'block'; // Показываем кнопку, если есть текст или выбраны чекбоксы/списки
+  } else {
+    clearButton.style.display = 'none'; // Скрываем кнопку, если нет текста и не выбраны чекбоксы/списки
   }
+}
 
-  // Поместить курсор в конец строки в поле ввода
-  input.focus();
-  input.setSelectionRange(input.value.length, input.value.length);
+// Поместить курсор в конец строки в поле ввода
+input.focus();
+input.setSelectionRange(input.value.length, input.value.length);
+
+  
+  
 </script>
-
 </div>    
 </div>
 </div>

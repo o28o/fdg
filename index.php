@@ -183,10 +183,8 @@ input.addEventListener("keypress", function(event) {
    <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipru;?>"><?php echo $radioru;?></a>
   </div> -->
   
-         <div style="max-width: 300px;" class="my-4"> 
+         <div style="max-width: 300px;" class="my-2"> 
          
- <h5><?php echo $regexMemoh5;?></h5>
- 
 <div class="align-items-center form-check-inline mt-4">
   <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā">ā</button>
   <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī">ī</button>
@@ -201,8 +199,8 @@ input.addEventListener("keypress", function(event) {
   <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ">ṭ</button>
 </div>
 
-
-<div class="mt-5" style="text-align: left;">
+ <h5 class="mt-4"><?php echo $regexMemoh5;?></h5> 
+<div class="mt-4" style="text-align: left;">
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y</strong></button> - <?php echo $exc;?> <br>

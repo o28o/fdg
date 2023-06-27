@@ -107,7 +107,7 @@ include 'scripts/opentexts.php';
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
 
 <div style="position: relative;">
-  <input name="q" style="z-index: 9; padding-right: 30px;" type="" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
+  <input name="q" style="z-index: 9; padding-right: 30px;" type="text" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>" multiple>
   <button type="button" style="position: absolute; top: 50%; right: 2px; transform: translateY(-50%); display: none;" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" style="color: grey; font-size: 12px;"></i>
   </button>
@@ -952,6 +952,7 @@ $(document).ready(function(){
 });
 </script>
 
+
 <script>
 $.ajax({
   url: "/assets/texts/sutta_words.txt",
@@ -1038,9 +1039,7 @@ $.ajax({
     });
   }
 });
-
 </script>
-
 <!-- <script type="module" src="/assets/js/autopali.js"></script> -->
 	  
       <script src="/assets/js/randPlaceholder.js"></script>

@@ -102,7 +102,7 @@ include 'scripts/opentexts.php';
                 </div>
     
 
-<form method="GET" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="justify-content-center">
+<form method="GET" action="" class="justify-content-center">
 		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
 

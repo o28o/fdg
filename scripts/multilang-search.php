@@ -138,12 +138,17 @@ $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en $extra $s
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-}	
-
-
+}
 }
 //echo $outforjs; 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+echo "<script>
+  // Скрыть все элементы с классом 'spinner'
+  var spinners = document.getElementsByClassName('spinner-border');
+  for (var i = 0; i < spinners.length; i++) {
+    spinners[i].style.display = 'none';
+  }
+</script>
+";
 
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
 $finaloutput = "<script>

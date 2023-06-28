@@ -367,7 +367,7 @@ include 'assets/common/horizontalMenuEn.php';
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
 <div class="embed-container mt-4 mb-5">
-<a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img  style="max-width: 400px;" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" ></a>
+<a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" ></a>
 </div>
 <!--<div class="embed-container mt-4 mb-5"> 
 <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
@@ -941,11 +941,12 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
 <!-- Portfolio Modal - Text-->
 <div class="embed-container mb-3">
-<a href="<?php echo $demovideolink;?>" target="_blank" ><img style="max-width: 400px;" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" ></a></div>
+<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" ></a></div>
 
 <!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
-									</div>-->
- <button class="btn btn-primary" data-bs-dismiss="modal">
+</div>-->
+
+<button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         <?php echo "$closemodal"; ?>
                                     </button>

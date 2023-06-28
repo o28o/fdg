@@ -129,6 +129,11 @@ max-width: 274pxalign-items: center;
   width: 200px;
 }
 
+
+.imgonmain {
+  max-width: 350px; 
+}
+
 @media only screen and (max-width: 900px) {
 
 #mainNav .navbar-toggler {
@@ -235,4 +240,10 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   letter-spacing:1px;
 }
 
+}
+
+@media (max-width: 768px) {
+  .imgonmain {
+    max-width: 95%;
+  }
 }

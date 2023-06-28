@@ -376,10 +376,9 @@ include 'assets/common/horizontalMenuEn.php';
 			  </div>  
 
   </div>
-
-       
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><?php echo $howtoheader; ?></h2>
+  
+<!-- Portfolio Section Heading-->
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"><?php echo $howtoheader; ?></h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -398,7 +397,8 @@ include 'assets/common/horizontalMenuEn.php';
 
 </div>
 
-		 
+<div class="clearfix"></div> 
+	 
 
 <div class="col-md-6 col-lg-4 mb-0">
 <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">

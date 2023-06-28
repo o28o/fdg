@@ -45,7 +45,6 @@ include 'scripts/opentexts.php';
 
 <script src="/assets/js/jquery-3.6.0.js"></script>
 <script src="/assets/js/jquery-ui.js"></script>
-<script src="/assets/js/fontawesome.6.1.all.js"></script>
 
 <style>
 </style>
@@ -355,9 +354,12 @@ include 'assets/common/horizontalMenuEn.php';
 
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
-<div class="embed-container mt-4 mb-5"> 
-<iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
+<div class="embed-container mt-4 mb-5">
+<a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img  style="max-width: 400px;" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" ></a>
 </div>
+<!--<div class="embed-container mt-4 mb-5"> 
+<iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
+</div>-->
 
 <div style="max-width: 600px;" class="container-lg">
 <div class="alert alert-warning float-start text-left mb-3" role="alert">
@@ -388,9 +390,15 @@ include 'assets/common/horizontalMenuEn.php';
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Grid Items-->
-<div class="row justify-content-center">		 
+<div class="row justify-content-center">
+
+<div style="max-width: 600px;" class="container-lg">
 <a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"></a>
 <?php echo $howtosearchquote;?>
+
+</div>
+
+		 
 
 <div class="col-md-6 col-lg-4 mb-0">
 <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
@@ -920,11 +928,12 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <!-- Portfolio Modal - Image
 <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
 <!-- Portfolio Modal - Text-->
-<div class="embed-container"> 
+<div class="embed-container mb-3">
+<a href="<?php echo $demovideolink;?>" target="_blank" ><img style="max-width: 400px;" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" ></a></div>
 
-<iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
-									</div>
-									                          <button class="btn btn-primary" data-bs-dismiss="modal">
+<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+									</div>-->
+ <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         <?php echo "$closemodal"; ?>
                                     </button>
@@ -936,15 +945,15 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
             </div>
         </div>
 
+<script src="/assets/js/fontawesome.6.1.all.js"></script>
+
+
         <!-- Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
+				
 <script src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
-<script>
-  $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-</script>
+
 <script>
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
@@ -1077,7 +1086,7 @@ $.ajax({
 
 <!-- <script type="module" src="/assets/js/autopali.js"></script> -->
 	  
-      <script src="/assets/js/randPlaceholder.js"></script>
+      <script async src="/assets/js/randPlaceholder.js"></script>
 <script>
 
   randCallToAction();

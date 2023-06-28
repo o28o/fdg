@@ -193,6 +193,8 @@ $contaccalltoaction = 'Всесторонний взгляд на Четыре �
                                							
 $demovideo = 'Подробное Видео';	
 $demovideolink = 'https://www.youtube.com/embed/iKRaa9D07-I';
+$demovideoimg = '/assets/img/video1ru.jpg';
+$demovideoimg2 = '/assets/img/video2ru.jpg';
 
 $basics = 'Основы ';
 
@@ -575,6 +577,9 @@ $contaccalltoaction = 'Find the Noble Eightfold Path.<br>
                       ';
  $demovideo = 'Demo Video';  
  $demovideolink = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
+ $demovideoimg = '/assets/img/video1en.jpg';
+ $demovideoimg2 = '/assets/img/video1en.jpg';
+
  $basics = 'Tips & Tricks';
  $basicscontent = '<p class="mb-4"><strong>Tip #0</strong><br>Search available in Pali, English, Russian and Thai materials of SuttaCentral.net and also in thebuddhaswords.net. If some text is not presented there, you wont be able to find it.<br>
 Also, e.g. if "sankhara" is translated as "formation" in thw materials you won\'t find it in suttacentral.net, as it\'s translated as "choice" and vice-versa.<br>

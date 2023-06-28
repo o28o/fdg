@@ -37,6 +37,8 @@ include 'scripts/opentexts.php';
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 -->
+<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
+<script src="/assets/js/fontawesome.6.1.all.js"></script>
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.css" rel="stylesheet"/>
@@ -939,10 +941,9 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
         <!-- Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
-        <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
+
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
-<script src="/assets/js/fontawesome.6.1.all.js"></script>
 
 
 <script>

@@ -41,7 +41,7 @@ $.ajax({
       source: function(request, response) {
         var terms = request.term.split(" ");
         var lastTerm = terms.pop().trim();
-		var otherMinLength = 3;
+        var otherMinLength = 3;
 
         if (lastTerm.length < otherMinLength) {
           response([]);
@@ -68,7 +68,11 @@ $.ajax({
           return !listBeginOnly.includes(el);
         });
 
-        response(listBeginOnly.concat(listAll));
+        // Ограничение количества подсказок до 10
+		var maxRecord = 1000;
+        var resultList = listBeginOnly.concat(listAll).slice(0, maxRecord);
+
+        response(resultList);
       },
       focus: function(event, ui) {
         var terms = this.value.split(" ");
@@ -84,6 +88,7 @@ $.ajax({
         this.value = terms.join(" ");
         return false;
       }
-    });
+    }).autocomplete("widget").addClass("fixed-height");
   }
-}); 
+});
+

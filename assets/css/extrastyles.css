@@ -25,11 +25,13 @@ border-radius: 1rem;
 max-width: 274pxalign-items: center;
 }
 
-.dropdown {
+.droponmain {
   height: 32px;
   padding: 3px 3px 3px 3px;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0.125rem solid #ced4da;
 }
-
 
 .roundedborder{
   position: absolute; 
@@ -75,8 +77,7 @@ max-width: 274pxalign-items: center;
 
 .form-check-input:checked {
   background-color: #16a085;
-  border-color: #1abc9c;
-  
+  border-color: #1abc9c; 
 }
 
 

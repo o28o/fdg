@@ -37,8 +37,6 @@ include 'scripts/opentexts.php';
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 -->
-<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
-<script src="/assets/js/fontawesome.6.1.all.js"></script>
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.css" rel="stylesheet"/>
@@ -47,6 +45,7 @@ include 'scripts/opentexts.php';
 
 <script src="/assets/js/jquery-3.6.0.js"></script>
 <script src="/assets/js/jquery-ui.js"></script>
+<script src="/assets/js/fontawesome.6.1.all.js"></script>
 
 <style>
 </style>
@@ -119,7 +118,7 @@ include 'scripts/opentexts.php';
 	    	</div>
 
 <div class="align-items-center form-check-inline mx-0">
-    <select class="dropdown rounded-pill text-muted border-2 border-primary text-center" id="pOptions" name="p">
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
         <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn ") echo "selected";?> ><?php echo "$radiokn";?></option>
@@ -129,7 +128,7 @@ include 'scripts/opentexts.php';
     </select>
        <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 
-    <select class="dropdown rounded-pill text-muted border-2 border-primary text-center" id="extraOptions" name="extra">
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
         <option value="-def" <?php if (isset($extra) && $p == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>
@@ -947,107 +946,15 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 
 
 <script>
-//get vars from file src="/assets/js/autopali.js"
-$.ajax({
-  url: "/assets/texts/sutta_words.txt",
-  dataType: "text",
-  success: function(data) {
-
-    var accentMap = {
-      "ā": "a",
-      "ī": "i",
-      "ū": "u",
-      "ḍ": "d",
-      "ḷ": "l",
-      "ṁ": "n",
-      "ṁ": "m",
-      "ṅ": "n",
-      "ṇ": "n",
-      "ṭ": "t",
-      "ñ": "n",
-      "ss": "s",
-      "cc": "c"
-    };
-
-    var normalize = function(term) {
-      var ret = "";
-      for (var i = 0; i < term.length; i++) {
-        ret += accentMap[term.charAt(i)] || term.charAt(i);
-      }
-      return ret;
-    };
-
-    var allWords = data.split('\n');
-
-    $("#paliauto").autocomplete({
-      position: {
-        my: "left bottom",
-        at: "left top",
-        collision: "flip"
-      },
-      minLength: 0,
-      multiple: " ",
-      source: function(request, response) {
-        var terms = request.term.split(" ");
-        var lastTerm = terms.pop().trim();
-        var otherMinLength = 3;
-
-        if (lastTerm.length < otherMinLength) {
-          response([]);
-          return;
-        }
-
-        var re = $.ui.autocomplete.escapeRegex(lastTerm);
-        var matchbeginonly = new RegExp("^" + re, "i");
-        var matchall = new RegExp(re, "i");
-
-        var listBeginOnly = $.grep(allWords, function(value) {
-          value = value.label || value.value || value;
-          var results = matchbeginonly.test(value) || matchbeginonly.test(normalize(value));
-          return results;
-        });
-
-        var listAll = $.grep(allWords, function(value) {
-          value = value.label || value.value || value;
-          var results = matchall.test(value) || matchall.test(normalize(value));
-          return results;
-        });
-
-        listAll = listAll.filter(function(el) {
-          return !listBeginOnly.includes(el);
-        });
-
-        // Ограничение количества подсказок до 10
-		var maxRecord = 1000;
-        var resultList = listBeginOnly.concat(listAll).slice(0, maxRecord);
-
-        response(resultList);
-      },
-      focus: function(event, ui) {
-        var terms = this.value.split(" ");
-        terms.pop();
-        terms.push(ui.item.value);
-        this.value = terms.join(" ");
-        return false;
-      },
-      select: function(event, ui) {
-        var terms = this.value.split(" ");
-        terms.pop();
-        terms.push(ui.item.value);
-        this.value = terms.join(" ");
-        return false;
-      }
-    }).autocomplete("widget").addClass("fixed-height");
-  }
-});
-
 
 </script>
+<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
 
+<script src="/assets/js/autopali.js"></script>
 
 <!-- <script type="module" src="/assets/js/autopali.js"></script> -->
 	  
-      <script src="/assets/js/randPlaceholder.js"></script>
+      <script async src="/assets/js/randPlaceholder.js"></script>
 <script>
   randCallToAction();
   randPlaceholderOnMain();

@@ -113,8 +113,8 @@ include 'scripts/opentexts.php';
   </button>
 </div>
 
-	    	<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
-	    	</div>
+<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
+</div>
 
 <div class="align-items-center form-check-inline mx-0">
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
@@ -314,6 +314,18 @@ input.setSelectionRange(input.value.length, input.value.length);
                 <span class="visually-hidden">Loading...</span>
               </div>
               </div>
+			  
+			  
+			  <script>
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    // Событие pageshow возникает при возврате назад с помощью кнопки "назад" браузера
+    // Скрываем спиннер
+    document.getElementById('spinner').style.display = 'none';
+  }
+});
+</script>
+
   <!-- extra options end -->
 </form>
 

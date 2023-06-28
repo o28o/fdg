@@ -7,14 +7,16 @@ if ( preg_match('/\/ru/', $actual_link)) {
     $outputlang = "";
     }
 //echo "$p $q $extra";
-echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
-			
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
+	
 /* single search no radiobuttons */
 if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
 $p = "-ru";
 
 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $p $string"); 
-     //                                               			echo "<p class='mt-3'>$output</p>";
+
+
+//echo "<p class='mt-3'>$output</p>";
 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs = $output . "<br>";
 
@@ -145,12 +147,11 @@ echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</scri
 
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
 $finaloutput = "<script>
-		console.log('$outputnonl');
-			const responseElement = document.querySelector('#response');
-  responseElement.innerHTML = '$outputnonl';
+console.log('$outputnonl');
+const responseElement = document.querySelector('#response');
+responseElement.innerHTML = '$outputnonl';
 </script>";
 echo $finaloutput;  
-
 
 /*
 if ( preg_match('/(|-en|-b)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) )  && ( $p != "-vin" ) && ( $p != "-def" ))  {
@@ -158,10 +159,8 @@ if ( preg_match('/(|-en|-b)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $che
 //echo "<p>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output; 
-
-			}	
-			*/
-
-		?>	
+}	
+*/
+?>	
 
 

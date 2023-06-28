@@ -140,15 +140,8 @@ $outforjs .= $output . "<br>";
 
 }
 }
-//echo $outforjs; 
-echo "<script>
-  // Скрыть все элементы с классом 'spinner'
-  var spinners = document.getElementsByClassName('spinner-border');
-  for (var i = 0; i < spinners.length; i++) {
-    spinners[i].style.display = 'none';
-  }
-</script>
-";
+//echo $outforjs;
+echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
 $finaloutput = "<script>

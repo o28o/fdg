@@ -115,7 +115,7 @@ include 'scripts/opentexts.php';
   </button>
 </div>
 
-	    	<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
+	    	<div class="input-group-append"><button onclick="document.getElementsByClassName('spinner-border').style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
 	    	</div>
 
 <div class="align-items-center form-check-inline mx-0">

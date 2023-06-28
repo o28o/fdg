@@ -196,7 +196,6 @@ include 'scripts/opentexts.php';
  
 <script>
   
-  
 //  autocomplete part
 var input = document.getElementById("paliauto");
 input.addEventListener("keypress", function(event) {
@@ -940,7 +939,18 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
         <!-- Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
-
+<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<script>
+$(function () {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+	
+</script>
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
 
@@ -1064,15 +1074,16 @@ $.ajax({
 
 </script>
 
-<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
 
 <!-- <script type="module" src="/assets/js/autopali.js"></script> -->
 	  
       <script src="/assets/js/randPlaceholder.js"></script>
 <script>
+
   randCallToAction();
   randPlaceholderOnMain();
   console.log(window.location.href);
+
 </script>
     </body>
 	    <?php

@@ -20,14 +20,14 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>
 </a>
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
 <figcaption class="figure-caption text-center">External</figcaption>   
 </figure>	  
 </a>
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
+  <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
    <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
@@ -70,13 +70,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>	  
 </a>
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="CSEMenu" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-brands fa-google"></i>
 <figcaption class="figure-caption text-center">CSE</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
+  <ul class="dropdown-menu" aria-labelledby="CSEMenu">
    <li>
       <script async src="https://cse.google.com/cse.js?cx=c184c71e0fe5d4c93"></script>
 <div class="gcse-searchbox-only" data-newWindow="true" data-resultsUrl="/cse.php"></div>   
@@ -91,13 +91,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </a> 
   
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-graduation-cap"></i>
 <figcaption class="figure-caption text-center">' . $anamematerials . '</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
+  <ul class="dropdown-menu" aria-labelledby="materials">
    <li><a class="dropdown-item" href="' . $linkcases . '">' . $anamecases . '</a></li>
        <li><a class="dropdown-item" href="' . $linkconj . '">' . $anameconj . '</a></li>
       <li><a class="dropdown-item" href="' . $linktextbook . '">' . $anametextbook . '</a></li>

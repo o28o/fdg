@@ -44,7 +44,7 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 
 <script src="/assets/js/jquery-3.6.0.js"></script>
-<script src="/assets/js/jquery-ui.js"></script>
+<script src="/assets/js/jquery-ui.js" defer></script>
 
 <style>
 </style>
@@ -103,8 +103,8 @@ include 'scripts/opentexts.php';
     
 
 <form method="GET" action="" class="justify-content-center">
-		<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
-		<label class="sr-only dropup rounded-pill" for="paliauto"></label>
+<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
+<label class="sr-only dropup rounded-pill" for="paliauto"></label>
 
 <div style="position: relative;">
   <input name="q" style="z-index: 9; padding-right: 30px;" type="text" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>" multiple>
@@ -113,7 +113,13 @@ include 'scripts/opentexts.php';
   </button>
 </div>
 
-<div class="input-group-append"><button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill "><i class="fas fa-search fa-flip-horizontal"></i></button></div>
+<div class="input-group-append">
+<button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill ">
+<i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i>
+    <span class="visually-hidden"><?php echo $searchcaption;?></span>
+</button>
+</div>
+
 </div>
 
 <div class="align-items-center form-check-inline mx-0">
@@ -137,7 +143,11 @@ include 'scripts/opentexts.php';
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
-  <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings"><i class="fa-solid fa-gear fa-lg"></i></a>
+  <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+  <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
+  <span class="visually-hidden"><?php echo $searchcaption;?></span>
+  </a>
+ 
 <div class="collapse" id="collapseSettings">
   
   <div class="float-start mt-2">
@@ -316,7 +326,7 @@ input.setSelectionRange(input.value.length, input.value.length);
               </div>
 			  
 			  
-			  <script>
+<script defer>
 window.addEventListener('pageshow', function(event) {
   if (event.persisted) {
     // Событие pageshow возникает при возврате назад с помощью кнопки "назад" браузера
@@ -958,26 +968,24 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
             </div>
         </div>
 
-<script src="/assets/js/fontawesome.6.1.all.js"></script>
+<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
 
 
         <!-- Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
 				
-<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script> 
-
-<script>
+<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
+<script defer>
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
     });
-	
 </script>
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
 
 
-<script>
+<script defer>
 $.ajax({
   url: "/assets/texts/sutta_words.txt",
   dataType: "text",
@@ -1099,16 +1107,16 @@ $.ajax({
 
 <!-- <script type="module" src="/assets/js/autopali.js"></script> -->
 	  
-      <script async src="/assets/js/randPlaceholder.js"></script>
-<script>
-
+<script src="/assets/js/randPlaceholder.js">
+</script>
+<script defer>
   randCallToAction();
   randPlaceholderOnMain();
   console.log(window.location.href);
 
 </script>
-    </body>
-	    <?php
+</body>
+<?php
 include 'scripts/multilang-search.php';
 ?>  
 

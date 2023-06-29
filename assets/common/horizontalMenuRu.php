@@ -20,13 +20,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>
 </a>
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
 <figcaption class="figure-caption text-center">на Англ.</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
+  <ul class="dropdown-menu" aria-labelledby="EnglishMaterials">
         <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
     <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
     <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
@@ -51,13 +51,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
   </ul>
   
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
 <figcaption class="figure-caption text-center">Русские</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuRussian">
+  <ul class="dropdown-menu" aria-labelledby="MenuRussian">
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrflink . '">Тхеравада.рф</a></li>
@@ -81,13 +81,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </figure>	  
 </a>
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-brands fa-google"></i>
 <figcaption class="figure-caption text-center">CSE</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu text-center" style="width:90% " aria-labelledby="dropdownMenuEng">
+  <ul class="dropdown-menu text-center" style="width:90% " aria-labelledby="dropdownMenuCSE">
    <li  >
       <script async src="https://cse.google.com/cse.js?cx=c184c71e0fe5d4c93"></script>
 <div class="gcse-searchbox-only" data-newWindow="true" data-resultsUrl="/cse.php"></div>   
@@ -102,13 +102,13 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 </a> 
   
   
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="dropdownMenuEng" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="Materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-graduation-cap"></i>
 <figcaption class="figure-caption text-center">Обучение</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuEng">
+  <ul class="dropdown-menu" aria-labelledby="Materials">
       <li><a class="dropdown-item" href="' . $linkcasesru . '">Падежи</a></li>
       <li><a class="dropdown-item" href="' . $linkconj . '">Спряжения</a></li>
    <li><a class="dropdown-item" href="assets/materials/pali_textbook_rus.pdf">Курс по Пали</a></li>

@@ -7,7 +7,7 @@ $htmllang = "ru";
 $mainpage = '/ru';
 $mainscpage = $mainpage . '/sc';
 $searchcaption = 'Поиск';
-
+$gearbutton = 'дополнительные настройки';
 $linksothermat = 'https://drive.google.com/drive/u/1/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN';
 $linktextbook = "$linktextbookru";
 
@@ -389,6 +389,7 @@ $htmllang = "en";
 $mainpage = '/';
 $mainscpage = '/sc';
 $searchcaption = 'Search';
+$gearbutton = 'extra settings';
 
 $maintitle = 'Precise Search in Pali Suttas and Vinaya';
 $metadesc = 'Precise Search in Pali Suttas and Vinaya. Liberation Search Engine. Search in Pali Suttanta and Vinaya';

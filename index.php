@@ -43,18 +43,20 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 
-<script src="/assets/js/jquery-3.6.0.js"></script>
-<script src="/assets/js/jquery-ui.js" defer></script>
+<script src="/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/jquery-ui.min.js" defer></script>
 
 <style>
 </style>
+
+<?php echo $fontawesomejs;?> 
 
 </head>
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.png"  style="width:100px;"></a>
+            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.png"  style="width:100px;"></a>
                 <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
@@ -85,11 +87,12 @@ include 'scripts/opentexts.php';
             <!--    <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />-->
                 <!-- Masthead Heading-->
                 
-    <h1 class="masthead-heading">
-<a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
-<?php echo $title;?>
- </a>
-  </h1>
+<h1 class="masthead-heading">
+    <div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
+        <?php echo $title;?>
+    </div>
+</h1>
+
   
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -133,20 +136,20 @@ include 'scripts/opentexts.php';
     </select>
        <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 
-    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center" id="extraOptions" name="extra">
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
         <option value="-def" <?php if (isset($extra) && $p == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>
         <option value="-defall" <?php if (isset($extra) && $p == "-defall ") echo "selected";?> ><?php echo "$listdefall";?></option>
     </select>
-       <a class="text-muted text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</a>
+	  <div class="text-muted text-decoration-none me-0 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</div>
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
-  <a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+  <div class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
   <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
   <span class="visually-hidden"><?php echo $searchcaption;?></span>
-  </a>
+  </div>
  
 <div class="collapse" id="collapseSettings">
   
@@ -154,12 +157,12 @@ include 'scripts/opentexts.php';
 
  <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></a>
+  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
   </div>
   
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
-  <a data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></a>
+  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></div>
   </div>
   
          <div style="max-width: 300px;" class="my-2"> 
@@ -377,7 +380,7 @@ include 'assets/common/horizontalMenuEn.php';
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
 <div class="embed-container mt-4 mb-5">
-<a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" ></a>
+<a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" loading="lazy"></a>
 </div>
 <!--<div class="embed-container mt-4 mb-5"> 
 <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>
@@ -414,7 +417,7 @@ include 'assets/common/horizontalMenuEn.php';
 <div class="row justify-content-center">
 
 <div style="max-width: 600px;" class="container-lg">
-<a data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"></a>
+<div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"></div>
 <?php echo $howtosearchquote;?>
 
 </div>
@@ -433,7 +436,7 @@ include 'assets/common/horizontalMenuEn.php';
 <h4 class="page-section-heading text-center text-white"><?php echo $demovideo;?> </h4>
   </div>
 
-<img class="img-fluid" src="assets/img/portfolio/awakening.jpg" alt="..." />
+<img class="img-fluid" src="assets/img/portfolio/awakening.jpg" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
 </div>					
 </div>
 <!-- text here --> <p class="mb-4">
@@ -452,7 +455,7 @@ include 'assets/common/horizontalMenuEn.php';
   <h4 class="page-section-heading text-center text-white"><?php echo $basics;?></h4>
   </div>
              
-                            <img class="img-fluid" src="assets/img/portfolio/dhammawheelgreen.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/dhammawheelgreen.jpg" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
 		</div>					             
                
               
@@ -476,7 +479,7 @@ include 'assets/common/horizontalMenuEn.php';
   <h4 class="page-section-heading text-center text-white"><?php echo $advanced;?></h4>
   </div>
              
-                            <img class="img-fluid" src="assets/img/portfolio/sangha.jpg" alt="..." />
+                            <img class="img-fluid" src="assets/img/portfolio/sangha.jpg" alt="Search in Pali Suttas and Vinaya" loading="lazy"/>
 		</div>					      
              
              
@@ -819,7 +822,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
         </footer>
         <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
-<div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
+<div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
 <a class="text-white text-decoration-none" href="/scripts/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small> </div>
         </div>
         <!-- Portfolio Modals-->
@@ -951,7 +954,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
 <!-- Portfolio Modal - Text-->
 <div class="embed-container mb-3">
-<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" ></a></div>
+<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" loading="lazy" ></a></div>
 
 <!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
 </div>-->
@@ -968,7 +971,6 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
             </div>
         </div>
 
-<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
 
 
         <!-- Core theme JS

@@ -12,6 +12,8 @@ $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
 
+$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
+';
 
 $linkforthsu = '/tipitaka.theravada.su/dn/';
 $linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
@@ -45,7 +47,8 @@ $mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hика
 $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //$mode = 'online';
-
+$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
+';
 $basedir = "/var/www/html/";
 
 $linkforthsu = '/tipitaka.theravada.su/dn/';
@@ -81,7 +84,11 @@ $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
 $mainpagethrflink =  "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";
   $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
-  
+
+
+$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
+
+
 $basedir = "/var/www/html/";
 
 $linkforthsu = 'https://tipitaka.theravada.su/dn/';
@@ -113,9 +120,7 @@ $linkconj = 'https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/v
 $linkcases = 'https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true';
 $linkcasesru = 'https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntOr/view?usp=drivesdk';
       }    
-      
-      
-      
+           
 else if ( preg_match('/Linux rym.from.sh/', $uname) ) {
 //
 // ONLINE PROD
@@ -127,6 +132,8 @@ $mainpagethrflink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
   
 $basedir = '/home/a0092061/domains/f.dhamma.gift/public_html';
+$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
+
 
 $linkforthsu = 'https://tipitaka.theravada.su/dn/';
 $linkforthru = 'https://theravada.ru/Teaching/Canon/Suttanta/Texts/';

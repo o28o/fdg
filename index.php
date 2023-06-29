@@ -154,7 +154,7 @@ include 'scripts/opentexts.php';
   
          <div style="max-width: 300px;" class="my-2"> 
          
-<div class="align-items-center form-check-inline mt-1">
+<div class="align-items-center form-check-inline mt-3">
   <div class="mb-2"><button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā" autocomplete="off">ā</button>
   <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ" autocomplete="off">ṁ</button>
   <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ" autocomplete="off">ñ</button>

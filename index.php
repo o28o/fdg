@@ -56,7 +56,7 @@ include 'scripts/opentexts.php';
     <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.png"  style="width:100px;"></a>
+            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
                 <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
@@ -436,7 +436,7 @@ include 'assets/common/horizontalMenuEn.php';
 <h4 class="page-section-heading text-center text-white"><?php echo $demovideo;?> </h4>
   </div>
 
-<img class="img-fluid" src="assets/img/portfolio/awakening.jpg" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
+<img class="img-fluid" src="assets/img/portfolio/awakening.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
 </div>					
 </div>
 <!-- text here --> <p class="mb-4">
@@ -455,7 +455,7 @@ include 'assets/common/horizontalMenuEn.php';
   <h4 class="page-section-heading text-center text-white"><?php echo $basics;?></h4>
   </div>
              
-                            <img class="img-fluid" src="assets/img/portfolio/dhammawheelgreen.jpg" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
+<img class="img-fluid" src="assets/img/portfolio/dhammawheelgreen.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
 		</div>					             
                
               
@@ -478,8 +478,8 @@ include 'assets/common/horizontalMenuEn.php';
   <div class="centered">
   <h4 class="page-section-heading text-center text-white"><?php echo $advanced;?></h4>
   </div>
-             
-                            <img class="img-fluid" src="assets/img/portfolio/sangha.jpg" alt="Search in Pali Suttas and Vinaya" loading="lazy"/>
+
+<img class="img-fluid" src="assets/img/portfolio/sangha.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy"/>
 		</div>					      
              
              

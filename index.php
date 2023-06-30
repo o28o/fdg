@@ -1005,6 +1005,7 @@ $.ajax({
       "ṇ": "n",
       "ṭ": "t",
       "ñ": "n",
+    "ññ": "n",
       "ss": "s",
       "aa": "a",
       "ii": "i",
@@ -1037,6 +1038,7 @@ $.ajax({
         }
       }
       return ret;
+   console.log(ret);
     };
 
     var allWords = data.split('\n');

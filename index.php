@@ -84,9 +84,7 @@ include 'scripts/opentexts.php';
                         
 
                 <!-- Masthead Avatar Image-->
-            <!--    <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />-->
                 <!-- Masthead Heading-->
-                
 <h1 class="masthead-heading">
     <div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
         <?php echo $title;?>
@@ -120,7 +118,8 @@ if (isset($_GET['q'])) {
 <div style="position: relative;">
   <input name="q" style="z-index: 9; padding-right: 30px;" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo $q; ?>" multiple>
   <button type="button" style="position: absolute; top: 50%; right: 21px; transform: translateY(-50%); display: none;" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
-    <i class="fas fa-times" style="color: grey; font-size: 12px;"></i>
+    <i class="fas fa-times" style="color: white; font-size: 12px;" aria-hidden="true"></i>
+    <span class="visually-hidden"><?php echo $clearaption;?></span>
   </button>
 </div>
 
@@ -150,7 +149,7 @@ if (isset($_GET['q'])) {
         <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>
         <option value="-defall" <?php if (isset($extra) && $p == "-defall ") echo "selected";?> ><?php echo "$listdefall";?></option>
     </select>
-	  <div class="text-muted text-decoration-none me-0 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</div>
+	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</div>
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->

@@ -109,18 +109,16 @@ include 'scripts/opentexts.php';
 <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 <label class="sr-only dropup rounded-pill" for="paliauto"></label>
 
-<?php
-if (isset($_GET['q'])) {
-    $q = htmlspecialchars($_GET['q']);
-    echo "<script>clearButton.style.display = 'block';</script>";
-} else {
-    $q = '';
-}
-?>
-
 
 <div style="position: relative;">
-  <input name="q" style="z-index: 9; padding-right: 30px;" type="text" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo $q; ?>" multiple>
+  <input name="q" style="z-index: 9; padding-right: 30px;" type="text" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php
+if (isset($_GET['q'])) {
+    echo htmlspecialchars($_GET['q']);
+    echo "<script>clearButton.style.display = 'block';</script>";
+} else {
+    echo '';
+}
+?>" multiple>
   <button type="button" style="position: absolute; top: 50%; right: 2px; transform: translateY(-50%); display: none;" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" style="color: grey; font-size: 12px;"></i>
   </button>

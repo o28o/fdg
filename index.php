@@ -116,7 +116,7 @@ if (isset($_GET['q'])) {
 ?>
 
 <div style="position: relative;">
-  <input name="q" style="z-index: 9; padding-right: 30px;" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" autofocus value="<?php echo $q; ?>" multiple>
+  <input name="q" style="z-index: 9; padding-right: 30px;" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
   <button type="button" style="position: absolute; top: 50%; right: 21px; transform: translateY(-50%); display: none;" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" style="color: white; font-size: 12px;" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>
@@ -1038,14 +1038,13 @@ $.ajax({
       for (var i = 0; i < term.length; i++) {
         var doubleLetter = term.substr(i, 2);
         if (accentMap[doubleLetter]) {
-          ret += accentMap[doubleLetter];
+          ret += accentMap[doubleLetter] || accentMap[term.charAt(i)] || term.charAt(i);
           i++; // пропустить следующий символ
         } else {
           ret += accentMap[term.charAt(i)] || term.charAt(i);
         }
       }
       return ret;
-   console.log(ret);
     };
 
     var allWords = data.split('\n');

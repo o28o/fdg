@@ -1036,13 +1036,7 @@ $.ajax({
     var normalize = function(term) {
       var ret = "";
       for (var i = 0; i < term.length; i++) {
-        var doubleLetter = term.substr(i, 2);
-        if (accentMap[doubleLetter]) {
-          ret += accentMap[doubleLetter] || accentMap[term.charAt(i)] || term.charAt(i);
-          i++; // пропустить следующий символ
-        } else {
           ret += accentMap[term.charAt(i)] || term.charAt(i);
-        }
       }
       return ret;
     };

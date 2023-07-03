@@ -7,6 +7,23 @@
   white-space: nowrap;
 }
 
+#clearbtn {
+  position: absolute;
+  top: 53%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+#clearbtn .fas.fa-times {
+  background-color: Transparent;
+  color: Transparent;
+  transition: background-color 0.3s; /* Добавляем плавный переход для изменения цвета фона */
+}
+
+#clearbtn:hover .fas.fa-times {
+  color: blue; /* Устанавливаем желаемый цвет иконки при наведении мыши */
+}
 
 .mainbutton {
   /*position: absolute; 

@@ -117,7 +117,7 @@ if (isset($_GET['q'])) {
 
 <div style="position: relative;">
   <input name="q" style="z-index: 9; padding-right: 30px;" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
-  <button type="button" style="position: absolute; top: 50%; right: 21px; transform: translateY(-50%); display: none;" id="clearbtn" class="btn color-secondary btn-sm ms-1 me-1 rounded-pill">
+  <button type="button" style="position: absolute; top: 50%; right: 21px; transform: translateY(-50%); display: none;" id="clearbtn" style="color: #2c3e50; color: var(--bs-secondary);" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" style="color: white; font-size: 12px;" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>
   </button>

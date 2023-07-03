@@ -39,9 +39,9 @@ include 'scripts/opentexts.php';
 -->
 
 <!--  Core theme CSS (includes Bootstrap)-->
-<link href="/assets/css/jquery-ui.css" rel="stylesheet"/>
-<link href="/assets/css/styles.css" rel="stylesheet" />
-<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
+<link href="/assets/css/styles.min.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.min.css" rel="stylesheet" />
 
 <script src="/assets/js/jquery-3.6.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js" defer></script>

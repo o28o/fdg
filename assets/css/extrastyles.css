@@ -49,7 +49,8 @@ overflow-y: auto;
 overflow-x: hidden;
 scrollbar-color: #10806A #10806A;
 border-radius: 1rem;
-max-width: 274pxalign-items: center;
+max-width: 274px;
+align-items: center;
 }
 
 .droponmain {
@@ -114,7 +115,7 @@ max-width: 274pxalign-items: center;
 }
  
 .page-section {
-    padding: 2rem 0;!important
+    padding: 2rem 0 !important;
 }
 
 .masthead { 

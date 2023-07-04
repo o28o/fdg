@@ -42,7 +42,7 @@ height: 16px; }
 background-color: rgba(0, 0, 0, 0.2);
 -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.10),inset 0 -1px 0 rgba(0,0,0,0.07); }
 
-	 .ui-autocomplete { 
+.ui-autocomplete { 
 max-height: 220px; 
 min-height: 38px;
 overflow-y: auto; 
@@ -159,25 +159,20 @@ align-items: center;
 
 
 .imgonmain {
-  max-width: 350px; 
+  width: 350px;  
+/*    max-width: 95%; */
 }
 
 @media only screen and (max-width: 900px) {
-
-.imgonmain {
-    max-width: 95%;
-  }
 
 #mainNav .navbar-toggler {
     margin-right: 2rem;  
 }
 
-
 #mainNav .navbar-nav {
 	margin-top: 1.5rem;
 	text-align: left;	
 	}
-
 
 .h5mobile {
 	font-size: 0.8rem;	

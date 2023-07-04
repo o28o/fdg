@@ -40,8 +40,8 @@ include 'scripts/opentexts.php';
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
-<link href="/assets/css/styles.min.css" rel="stylesheet" />
-<link href="/assets/css/extrastyles.min.css" rel="stylesheet" />
+<link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
 
 <script src="/assets/js/jquery-3.6.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js" defer></script>
@@ -387,7 +387,7 @@ include 'assets/common/horizontalMenuEn.php';
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
 <div class="embed-container mt-4 mb-5">
-<a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" loading="lazy"></a>
+<a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img width="350" class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" loading="lazy"></a>
 </div>
 <!--<div class="embed-container mt-4 mb-5"> 
 <iframe src="<?php echo $linkhowtovideo;?>" title="<?php echo $titledeschowtovideo;?>" frameborder="0" allowfullscreen></iframe>

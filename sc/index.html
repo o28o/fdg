@@ -91,6 +91,19 @@
             target="_blank"><img width="20px" src="./images/GitHub-Mark-64px-black.png" alt="GitHub icon"></a>
     </div>
     <script src="index.js"></script>
+		  <script defer>
+    window.addEventListener('load', function() {
+      var hash = window.location.hash;
+      if (hash) {
+        setTimeout(function() {
+          var element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 1000);
+      }
+    });
+  </script>
     <script src="randPlaceholder.js"></script>
     <script>
     var theLanguage = $('html').attr("lang");

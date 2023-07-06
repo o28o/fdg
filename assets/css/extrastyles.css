@@ -10,16 +10,23 @@
 #clearbtn {
   position: absolute;
   top: 53%;
-  right: 20px;
+  right: 21px;
   transform: translateY(-50%);
-  display: none;
+  font-size: 12px;
+  transition: background-color 0.3s;
+   /*   background-color: Transparent;
+   color: blue;
+  color: Transparent;
+Добавляем плавный переход для изменения цвета фона */
 }
 
 #clearbtn .fas.fa-times {
-  background-color: Transparent;
-  color: Transparent;
-  transition: background-color 0.3s; /* Добавляем плавный переход для изменения цвета фона */
+  background: #254678;
+background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
+
 
 #clearbtn:hover .fas.fa-times {
   color: blue; /* Устанавливаем желаемый цвет иконки при наведении мыши */

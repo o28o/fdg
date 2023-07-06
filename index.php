@@ -117,8 +117,8 @@ if (isset($_GET['q'])) {
 
 <div style="position: relative;">
   <input name="q" style="z-index: 9; padding-right: 30px;" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
-  <button type="button" style="position: absolute; top: 53%; right: 20px; transform: translateY(-50%); display: none; " id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
-    <i class="fas fa-times" style="background-color: Transparent; color: Transparent;" aria-hidden="true"></i>
+  <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
+    <i class="fas fa-times" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>
   </button>
 </div>
@@ -320,9 +320,6 @@ function checkInput() {
 // Поместить курсор в конец строки в поле ввода
 input.focus();
 input.setSelectionRange(input.value.length, input.value.length);
-
-  
-  
 </script>
 </div>    
 </div>
@@ -487,22 +484,13 @@ include 'assets/common/horizontalMenuEn.php';
   </div>
 
 <img class="img-fluid" src="assets/img/portfolio/sangha.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy"/>
-		</div>					      
-             
-             
+		</div>		
+         </div>
+<!-- text here --> <p class="mb-4"></p>
+</div>
 
-							
-                        </div>
-			
-				                    		<!-- text here --> <p class="mb-4">
-		</p>
-
-				
-                    </div>
-
-
-                </div>
-            </div>
+</div>
+</div>
         </section>
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="project">
@@ -805,10 +793,6 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
     <p class="mb-1"><?php echo $pmakelist;?></p>
     <small class="text-muted"></small>
   </a>
-
-
-
- 
 </div>  
 
 </div>
@@ -992,7 +976,6 @@ $(function () {
 </script>
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
-
 
 <script defer>
 $.ajax({

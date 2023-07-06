@@ -587,7 +587,8 @@ echo "<tr>
 <td>$linkswwords</td>
 </tr>" >>$tempfilewords
 
-echo "$uniqword: $linkswwords `(( $linkscount >= 6 )) && echo \"($linkscount)\"`<br>" >> $tempfilewhistory
+# `(( $linkscount >= 6 )) && echo \"($linkscount)\"`
+echo "$uniqword: $linkswwords<br>" >> $tempfilewhistory
 done
 }
 
@@ -1131,7 +1132,7 @@ then
 else
   if (( $textsqnty <= 40 ))
   then
-  cat $basefile > checkitout
+ # cat $basefile > checkitout
 echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1"&lang=pli>"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
   else 
   echo -n "<br>" >> $history

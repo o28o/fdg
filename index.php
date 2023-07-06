@@ -320,9 +320,6 @@ function checkInput() {
 // Поместить курсор в конец строки в поле ввода
 input.focus();
 input.setSelectionRange(input.value.length, input.value.length);
-
-  
-  
 </script>
 </div>    
 </div>
@@ -487,22 +484,13 @@ include 'assets/common/horizontalMenuEn.php';
   </div>
 
 <img class="img-fluid" src="assets/img/portfolio/sangha.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy"/>
-		</div>					      
-             
-             
+		</div>		
+         </div>
+<!-- text here --> <p class="mb-4"></p>
+</div>
 
-							
-                        </div>
-			
-				                    		<!-- text here --> <p class="mb-4">
-		</p>
-
-				
-                    </div>
-
-
-                </div>
-            </div>
+</div>
+</div>
         </section>
         <!-- About Section-->
         <section class="page-section bg-primary text-white mb-0" id="project">
@@ -805,10 +793,6 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
     <p class="mb-1"><?php echo $pmakelist;?></p>
     <small class="text-muted"></small>
   </a>
-
-
-
- 
 </div>  
 
 </div>
@@ -992,7 +976,6 @@ $(function () {
 </script>
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
-
 
 <script defer>
 $.ajax({

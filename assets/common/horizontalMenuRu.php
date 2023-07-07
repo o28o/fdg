@@ -119,7 +119,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
             <li><a class="dropdown-item" href="#research">Исследование</a></li>
        <li><a class="dropdown-item" href="#read">Чтение</a></li>
     <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li>
-    
+ <li><a class="dropdown-item" href="/assets/makelist.html">' . $head5makelist . '</a></li>     
   </ul>
   
 </div>'

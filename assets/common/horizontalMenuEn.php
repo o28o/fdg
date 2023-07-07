@@ -105,7 +105,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
        <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
        <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
     <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li>
-    
+<li><a class="dropdown-item" href="/assets/makelist.html">' . $head5makelist . '</a></li>  
 </ul>
 
 </div> 

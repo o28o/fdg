@@ -1000,7 +1000,7 @@ $.ajax({
       "ṇ": "n",
       "ṭ": "t",
       "ñ": "n",
-    "ññ": "n",
+      "ññ": "n",
       "ss": "s",
       "aa": "a",
       "ii": "i",
@@ -1038,9 +1038,9 @@ $.ajax({
         collision: "flip"
       },
       minLength: 0,
-      multiple: " ",
+      multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке
       source: function(request, response) {
-        var terms = request.term.split(" ");
+        var terms = request.term.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
         var lastTerm = terms.pop().trim();
         var otherMinLength = 3;
 
@@ -1080,7 +1080,7 @@ $.ajax({
         return false;
       },
       select: function(event, ui) {
-        var terms = this.value.split(" ");
+        var terms = this.value.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
         terms.pop();
         terms.push(ui.item.value);
         this.value = terms.join(" ");
@@ -1089,7 +1089,6 @@ $.ajax({
     }).autocomplete("widget").addClass("fixed-height");
   }
 });
-
 </script>
 
 

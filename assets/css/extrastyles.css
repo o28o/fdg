@@ -177,7 +177,7 @@ align-items: center;
 
 
 /* Styles for iOS devices with a minimum width of 280px */
-@media only screen and (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1000px) {
 .searchinput {
 min-width:300px ; 
 }

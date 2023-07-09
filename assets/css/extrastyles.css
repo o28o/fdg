@@ -7,6 +7,11 @@
   white-space: nowrap;
 }
 
+.searchinput {
+  z-index: 9; 
+  padding-right: 30px; 
+}
+
 #clearbtn {
   position: absolute;
   top: 53%;
@@ -169,6 +174,16 @@ align-items: center;
   width: 350px;  
 /*    max-width: 95%; */
 }
+
+
+/* Styles for iOS devices with a minimum width of 280px */
+@media only screen and (min-device-width: 900px) and (-webkit-min-device-pixel-ratio: 2) {
+.searchinput {
+min-width:300px ; 
+}
+}
+
+
 
 @media only screen and (max-width: 900px) {
 

@@ -32,6 +32,8 @@ include 'scripts/opentexts.php';
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
+  <!-- Загрузка иконки для iOS -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
 
 <!-- Google fonts
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />

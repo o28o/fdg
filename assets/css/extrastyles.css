@@ -7,10 +7,6 @@
   white-space: nowrap;
 }
 
-.searchinput {
-  z-index: 9; 
-  padding-right: 30px; 
-}
 
 #clearbtn {
   position: absolute;

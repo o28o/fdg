@@ -568,7 +568,7 @@ $examplelist = '<li>Definition of the <a href="/assets/example/kata.,-dukkha.m-q
 
              <li>All variants of the word <a href="/assets/example/pa.ticcasamupp_suttanta_pali_34-115.html">paṭiccasamuppado</a> in Pali with quotes in English</li>
             
-                <li>All suttas about <a href="/assets/example/eightfold_suttanta_en_158-343.html">Eightfold</a> Path in English</li>
+                <li>All suttas about <a href="/assets/example/eightfold_suttanta_en_157-342.html">Eightfold</a> Path in English</li>
                 <li>All suttas that took place or related to <a href="/assets/example/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
                 <li>All suttas where <a href="/assets/example/sariputt_suttanta_ru_168-1055.html">Sariputta</a> was mentioned in Russian</li>
     

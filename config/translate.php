@@ -36,7 +36,7 @@ $tooltipsml = 'Поиск сравнений, метафор, символов �
 $radiosml = 'Пдб';
 
 $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), Саньютта Никаи (SN), Маджжхима Никаи (MN), Дигха Никаи (DN)<br><br>
-<strong>Виная</strong> - Поиск в Винае на Пали. <br><br>
+<strong>Виная</strong> - Поиск в Винае на Пали и Английском. <br><br>
 <strong>+KN</strong> - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
 <strong>Поздние</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
 <strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
@@ -422,7 +422,7 @@ $radiosml = 'Sml';
 
 $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN)
 <br><br>
-<strong>Vinaya</strong> - Search in Pali Vinaya. <br><br>
+<strong>Vinaya</strong> - Search in Vinaya in Pali and English. <br><br>
 <strong>+KN</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
 <strong>Later</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
 <strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>

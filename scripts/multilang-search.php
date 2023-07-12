@@ -141,6 +141,14 @@ $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en $extra $s
 $outforjs .= $output . "<br>"; 
 
 }
+
+if ( preg_match('/(|-en)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) && ( $p != "-def" ))  {
+$output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en -vin $extra $string");
+//                                                          		echo "<p>$output</p>";
+      $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output . "<br>"; 
+
+}
 }
 //echo $outforjs;
 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";

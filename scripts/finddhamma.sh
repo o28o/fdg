@@ -137,7 +137,7 @@ function grepbrief {
 }
 
 pattern="$@"
-grepdirection='A'
+
 if [[ "$@" == *"-h"* ]]; then
     echo "
     without arguments will search in pali<br>
@@ -165,11 +165,14 @@ fi
 #-nbg - no background <br>
 if [[ "$@" == *"-la"* ]]; then
 linesafter=`echo "$@" | sed 's@.*-la@@' | awk '{print $1}'` 
+else
+linesafter=0
 fi
 
 if [[ "$@" == *"-lb"* ]]; then
-grepdirection='B'
-linesafter=`echo "$@" | sed 's@.*-lb@@' | awk '{print $1}'` 
+linesbefore=`echo "$@" | sed 's@.*-lb@@' | awk '{print $1}'` 
+else 
+linesbefore=0
 fi
 
 #echo la=$linesafter
@@ -799,7 +802,7 @@ for i in $indexlist
 do
 		for f in $roottext $translation $variant
         do     
-		quote=`nice -$nicevalue grep -E -${grepdirection}${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
+		quote=`nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
 [[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$i\">&nbsp;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
 done
 echo '<br class="styled">'
@@ -934,7 +937,7 @@ echo "<tr>
 </td>
 <td>" | tohtml
 
-nice -$nicevalue grep -E -${grepdirection}${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
+nice -$nicevalue grep -E -B${lilinesbefore} -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
 echo "$line"
 echo '<br class="styled">'
 done | tohtml

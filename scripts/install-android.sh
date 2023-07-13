@@ -55,7 +55,8 @@ LoadModule php_module /data/data/com.termux/files/usr/libexec/apache2/libphp.so
       
       LoadModule rewrite_module libexec/apache2/mod_rewrite.so
       ServerName localhost:8080
-      ServerName 127.0.0.1:8080" >> $httpdconf
+      ServerName 127.0.0.1:8080
+      ErrorDocument 404 /assets/404.php" >> $httpdconf
   
 cd $httpdtdir
 rm ./index.html

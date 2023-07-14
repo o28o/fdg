@@ -16,7 +16,6 @@ include 'scripts/opentexts.php';
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
-<!-- Favicon-->
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="article" />
@@ -30,6 +29,7 @@ include 'scripts/opentexts.php';
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
+<!-- Favicon-->
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
   <!-- Загрузка иконки для iOS -->

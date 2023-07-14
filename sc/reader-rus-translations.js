@@ -79,7 +79,7 @@ function buildSutta(slug) {
   if (slug.match(/bu-pm|bi-pm/)) {
     texttype = "vinaya";
     slug = slug.replace(/bu([psan])/, "bu-$1");
-    slug = slug.replace(/bi([psn])/, "bi-$1");
+    slug = slug.replace(/bi([psan])/, "bi-$1");
     if (!slug.match("pli-tv-")) {
       slug = "pli-tv-" + slug;
     }

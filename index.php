@@ -984,7 +984,7 @@ $(function () {
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
 
-<script defer>
+<script>
 $.ajax({
   url: "/assets/texts/sutta_words.txt",
   dataType: "text",

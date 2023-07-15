@@ -1,0 +1,51 @@
+<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
+<script>
+  const toggleButtons = document.querySelectorAll('.toggle-button');
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-bs-target');
+      const targetCollapse = document.querySelector(targetId);
+      if (targetCollapse) {
+        const isCollapsed = targetCollapse.classList.contains('show');
+        if (isCollapsed) {
+          targetCollapse.addEventListener('hidden.bs.collapse', () => {
+            btn.innerText = '+';
+          });
+        } else {
+          targetCollapse.addEventListener('shown.bs.collapse', () => {
+            btn.innerText = '-';
+          });
+        }
+      }
+    });
+  });
+
+  const collapseAllBtn = document.getElementById('collapseAll');
+  const expandAllBtn = document.getElementById('expandAll');
+  const collapseButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+
+  collapseAllBtn.addEventListener('click', () => {
+    collapseButtons.forEach((btn) => {
+      const targetId = btn.getAttribute('data-bs-target');
+      const targetCollapse = document.querySelector(targetId);
+      if (targetCollapse && !targetCollapse.classList.contains('collapsed')) {
+        btn.click();
+      }
+    });
+    collapseAllBtn.innerText = '+';
+  });
+
+  expandAllBtn.addEventListener('click', () => {
+    collapseButtons.forEach((btn) => {
+      const targetId = btn.getAttribute('data-bs-target');
+      const targetCollapse = document.querySelector(targetId);
+      if (targetCollapse && targetCollapse.classList.contains('collapsed')) {
+        btn.click();
+      }
+    });
+    collapseAllBtn.innerText = '-';
+  });
+</script>
+</body>
+</html>

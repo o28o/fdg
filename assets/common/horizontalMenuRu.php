@@ -43,6 +43,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
     <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">Suttacentral Voice</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://tipitaka.org/">Tipitaka.org</a></li>
+        <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Индекс Сутт</a></li>   
         <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">The Buddha\'s Words</a></li>    
         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Благородный Аскетизм</a></li>
        <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">SC.net Виная</a></li>

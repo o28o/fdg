@@ -44,6 +44,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
     <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SC.net Voice</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
+            <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>   
  <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">The Buddha\'s Words</a></li>    
     <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
      <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">' . $anameati . '</a></li>

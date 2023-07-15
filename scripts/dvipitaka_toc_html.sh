@@ -23,7 +23,8 @@ echo "<div class=\"my-3\">
       <div class=\"level1\">
         <h2><a href=# data-bs-toggle=\"collapse\"
           data-bs-target=\"#snCollapse\">Saṁyutta Nikāya</a></h2>
-      </div>"
+      </div>
+	  <div class=\"collapse\" id=\"snCollapse\">"
 	
 # sv loop
 grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort -V | sed 's/"sn//g' | while read -r samyuttavagga; do
@@ -33,8 +34,7 @@ grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort
   samyuttavagganumber=1
   firstsamyuttainsv=$(( $prevlast + 1 ))
   let "index+=1"
-  echo '<div class="collapse" id="snCollapse">
-  <div class="level2">
+  echo '<div class="level2">
   <h2>'"$samyuttavagganame"'</h2>
 </div>'
   #$(( $lastsamyuttainsv - $firstsamyuttainsv + 1 ))
@@ -81,7 +81,7 @@ grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort
         done # sutta loop
       done # "vagga" loop
 	  echo "</div>
-</div>"
+	  </div>"
     fi
   done # general loop
 done # sv loop

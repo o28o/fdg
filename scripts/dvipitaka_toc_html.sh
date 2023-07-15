@@ -87,6 +87,7 @@ grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort
 done # sv loop
 
 echo '</div>
+</div>
 </div>'
 cat $assetdir/TocFooter.html
 exit 0

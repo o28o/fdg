@@ -3,8 +3,8 @@
 source ./config/script_config.sh --source-only
 
 assetdir=$apachesitepath/assets/templates
-suttapath=../suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
-suttapath=../suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
+suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
+suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
 translationpath=$apachesitepath//suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
 translationpath=$apachesitepath//suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
 cd $suttapath

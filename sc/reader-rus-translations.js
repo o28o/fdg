@@ -329,7 +329,7 @@ if (document.location.search) {
   <ul>
       <li><span class="abbr">dn</span> Dīgha-nikāya</li>
       <li><span class="abbr">mn</span> Majjhima-nikāya</li>
-      <li><span class="abbr">sn</span> Saṁyutta-nikāya</li>
+      <li><span class="abbr">sn</span> <a href="/assets/texts/sn.html">Saṁyutta-nikāya</a></li>
       <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
       <li><span class="abbr">snp</span> Sutta-nipāta</li>
   </ul>

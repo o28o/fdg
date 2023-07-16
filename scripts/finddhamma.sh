@@ -937,7 +937,7 @@ echo "<tr>
 </td>
 <td>" | tohtml
 
-nice -$nicevalue grep -E -B${lilinesbefore} -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
+nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
 echo "$line"
 echo '<br class="styled">'
 done | tohtml

@@ -251,7 +251,7 @@ fortitle="Definition ${fortitle}"
 defpattern="`echo $pattern | sed -E 's/([aoā]|aṁ)$//g'`"
 pattern="$defpattern" 
 #vin=dummy ${defpattern}.*nāma|
-linesafter=1
+linesafter=3
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 
 tmpdef=tmpdef.$rand

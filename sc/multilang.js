@@ -348,7 +348,7 @@ if (document.location.search) {
   <div>
   <h3>Bhikkhu</h3>
 <ul>
-<li><span class="abbr">bu-pm</span> Bhikkhupātimokkha</li>
+<li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.html">Bhikkhupātimokkha</a></li>
 <li><span class="abbr">bu-pj</span> Pārājikā</li>
 <li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bu-ay</span> Aniyatā</li>

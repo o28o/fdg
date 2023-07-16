@@ -46,7 +46,7 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 
 <script src="/assets/js/jquery-3.6.0.min.js"></script>
-<script src="/assets/js/jquery-ui.min.js" defer></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
 
 <style>
 </style>

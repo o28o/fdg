@@ -5,7 +5,7 @@ source ./config/script_config.sh --source-only
 apachesitepath=/drives/c/soft/fdg/
 assetdir=$apachesitepath/assets/templates
 #suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
-suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/
+suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an1
 translationpath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
 
 cat $assetdir/TocHeader.html
@@ -81,7 +81,7 @@ fi
     
 	#suttalink div
 	echo '<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q='$suttanum'">'$suttanum'</a> '$suttaname'</span>
+<span class="level5"><a href="/ru/sc/?q='$suttanum'">'$suttanum'</a> '"$suttaname"'</span>
 </div>'
 	echo "  "
     

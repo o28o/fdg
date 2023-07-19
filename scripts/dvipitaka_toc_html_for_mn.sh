@@ -40,11 +40,44 @@ find "$suttapath" -type f -name "*.json" | sort -V | while read -r file; do
     nikaya=$(cat /tmp/tmp | grep Nikāya | awk '{print $2}')
 	
     #anbook=$(cat /tmp/tmp | grep Nikāya | awk '{print $NF}' | awk -F'.' '{print $1}')
-    vagga=$(cat /tmp/tmp | grep vagga | awk '{print $2, $3}')
+   # vagga=$(cat /tmp/tmp | grep vagga | awk '{print $2, $3}')
+ 
     suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}')
         suttanumwoletters=`echo $suttanum | sed 's/[^0-9]//g'`
  suttaname=$(cat /tmp/tmp | grep -E "sutta\\b " | awk '{print $2}')
     link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/sc/?q="$1}')
+
+if [[ $suttanumwoletters -ge 1 && $suttanumwoletters -le 10 ]]; then
+    vagga="Mūlapariyāyavagga"
+elif [[ $suttanumwoletters -ge 11 && $suttanumwoletters -le 20 ]]; then
+    vagga="Sīhanādavagga"
+elif [[ $suttanumwoletters -ge 21 && $suttanumwoletters -le 30 ]]; then
+    vagga="Opammavagga"
+elif [[ $suttanumwoletters -ge 31 && $suttanumwoletters -le 40 ]]; then
+    vagga="Mahāyamakavagga"
+elif [[ $suttanumwoletters -ge 41 && $suttanumwoletters -le 50 ]]; then
+    vagga="Cūḷayamakavagga"
+elif [[ $suttanumwoletters -ge 51 && $suttanumwoletters -le 60 ]]; then
+    vagga="Gahapativagga"
+elif [[ $suttanumwoletters -ge 61 && $suttanumwoletters -le 70 ]]; then
+    vagga="Bhikkhuvagga"
+elif [[ $suttanumwoletters -ge 71 && $suttanumwoletters -le 80 ]]; then
+    vagga="Paribbājakavagga"
+elif [[ $suttanumwoletters -ge 81 && $suttanumwoletters -le 90 ]]; then
+    vagga="Rājavagga"
+elif [[ $suttanumwoletters -ge 91 && $suttanumwoletters -le 100 ]]; then
+    vagga="Brāhmaṇavagga"
+elif [[ $suttanumwoletters -ge 101 && $suttanumwoletters -le 110 ]]; then
+    vagga="Devadahavagga"
+elif [[ $suttanumwoletters -ge 111 && $suttanumwoletters -le 120 ]]; then
+    vagga="Anupadavagga"
+elif [[ $suttanumwoletters -ge 121 && $suttanumwoletters -le 130 ]]; then
+    vagga="Suññatavagga"
+elif [[ $suttanumwoletters -ge 131 && $suttanumwoletters -le 142 ]]; then
+    vagga="Vibhaṅgavagga"
+elif [[ $suttanumwoletters -ge 143 && $suttanumwoletters -le 152 ]]; then
+    vagga="Saḷāyatanavagga"
+fi
 
     # Вывод извлеченных данных
 
@@ -70,7 +103,8 @@ then
 mnbook=Uparipaṇṇāsaka
 mnbookind=3
 fi
-	
+
+
 	
 	#nipata div
     if [[ "$mnbook" != "$prev_mnbook" ]]; then
@@ -123,3 +157,18 @@ echo '</div> <!-- Nikaya collapse -->
 rm /tmp/tmp
 
 cat $assetdir/TocFooter.html
+
+
+
+exit 0
+
+
+
+grep -ri vaggo * | grep niṭṭhito | sort -V | awk -F'"' '{
+    sub(/:.*/, "", $2);
+    suttanum = substr($2, 3);
+    print suttanum-9, suttanum, $4;
+}' | sed 's/vaggo.*/vagga/g'
+
+
+

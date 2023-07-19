@@ -6,7 +6,7 @@ source ./config/script_config.sh --source-only
 assetdir=$apachesitepath/assets/templates
 
 #suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an1
-suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an
+suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an2
 
 translationpath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
 
@@ -41,7 +41,8 @@ find "$suttapath" -type f -name "*.json" | sort -V | while read -r file; do
     anbook=$(cat /tmp/tmp | grep Nikāya | awk '{print $NF}' | awk -F'.' '{print $1}')
     vagga=$(cat /tmp/tmp | grep vagga | awk '{print $2, $3}')
     suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}') 
- suttaname=$(cat /tmp/tmp | grep -E "sutta\\b " | awk '{print $2}')
+ suttaname=$(cat /tmp/tmp | grep -E "sutta\\b " | awk '{$1=""; print $0}')
+ 
     link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/sc/?q="$1}')
 
     # Вывод извлеченных данных

@@ -336,10 +336,10 @@ if (document.location.search) {
   <div class="suttas">
   <h2>Основные Сутты</h2>
   <ul>
-     <li><span class="abbr">dn</span> <a href="/assets/texts/dn.html"> Dīgha-nikāya</a></li></li>
-     <li><span class="abbr">mn</span> <a href="/assets/texts/mn.html"> Majjhima-nikāya</a></li></li>     
-      <li><span class="abbr">sn</span> <a href="/assets/texts/sn.html"> Saṁyutta-nikāya</a></li></li>
-      <li><span class="abbr">an</span> <a href="/assets/texts/an.html"> Aṅguttara-nikāya</a></li>
+     <li><span class="abbr">dn</span> <a href="/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
+     <li><span class="abbr">mn</span> <a href="/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>
+      <li><span class="abbr">sn</span> <a href="/assets/texts/sn.php"> Saṁyutta-nikāya</a></li>
+      <li><span class="abbr">an</span> <a href="/assets/texts/an.php"> Aṅguttara-nikāya</a></li>
       <li><span class="abbr">snp</span> Sutta-nipāta</li>
   </ul>
   </div><div>
@@ -348,7 +348,7 @@ if (document.location.search) {
   <div>
   <h3>Bhikkhu</h3>
 <ul>
-<li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.html">Bhikkhupātimokkha</a></li>
+<li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.php">Bhikkhupātimokkha</a></li>
 <li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:8.0"> Pārājikā</a></li></li>
 <li><span class="abbr">bu-ss</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:14.0"> Saṅghādisesā</a></li></li>
 <li><span class="abbr">bu-ay</span> Aniyatā</li>

@@ -330,7 +330,7 @@ if (document.location.search) {
       <li><span class="abbr">dn</span> Dīgha-nikāya</li>
       <li><span class="abbr">mn</span> Majjhima-nikāya</li>
       <li><span class="abbr">sn</span> <a href="/assets/texts/sn.html">Saṁyutta-nikāya</a></li>
-      <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
+      <li><span class="abbr">an</span> <a href="/assets/texts/an.html">Aṅguttara-nikāya</a></li>
       <li><span class="abbr">snp</span> Sutta-nipāta</li>
   </ul>
   </div><div>
@@ -340,13 +340,13 @@ if (document.location.search) {
   <h3>Bhikkhu</h3>
 <ul>
 <li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.html">Bhikkhupātimokkha</a></li>
-<li><span class="abbr">bu-pj</span> Pārājikā</li>
+<li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:8.0">Pārājikā</a></li></li>
 <li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bu-ay</span> Aniyatā</li>
 <li><span class="abbr">bu-np</span> Nissaggiyā-pācittiyā</li>
 <li><span class="abbr">bu-pc</span> Pācittiyā</li>
 <li><span class="abbr">bu-pd</span> Pāṭidesanīyā</li>
-<li><span class="abbr">bu-sk</span> Sekhiyā</li>
+<li><span class="abbr">bu-sk</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:165.0"> Sekhiyā</a></li></li>
 <li><span class="abbr">bu-as</span> Adhikarana-samatha</li>
 </ul>
 </div><div>

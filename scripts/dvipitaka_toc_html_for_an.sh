@@ -2,18 +2,17 @@
 
 source ./config/script_config.sh --source-only
 
-
 #apachesitepath=/drives/c/soft/fdg/
 assetdir=$apachesitepath/assets/templates
 
 #suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an1
-suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/mn
+suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an
 
 translationpath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
 
 cat $assetdir/TocHeader.html
-nikayaabr=mn
-nikaya="Majjhima Nikāya"
+nikayaabr=an
+nikaya="Aṅguttara Nikāya"
 echo '<div class="container">
     <div class="my-3">
       <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
@@ -103,3 +102,19 @@ echo '</div> <!-- Nikaya collapse -->
 rm /tmp/tmp
 
 cat $assetdir/TocFooter.html
+
+
+exit 0
+
+Ekakanipāta
+Dukanipāta
+Tikanipāta
+Catukkanipāta
+Pañcakanipāta
+Chakkanipāta
+Sattakanipāta
+Aṭṭhakanipāta
+Navakanipāta
+Dasakanipāta
+Ekādasako nipāta
+

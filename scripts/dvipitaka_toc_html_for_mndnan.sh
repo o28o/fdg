@@ -39,9 +39,10 @@ find "$suttapath" -type f -name "*.json" | sort -V | while read -r file; do
 
     nikaya=$(cat /tmp/tmp | grep Nikāya | awk '{print $2}')
 	
-    anbook=$(cat /tmp/tmp | grep Nikāya | awk '{print $NF}' | awk -F'.' '{print $1}')
+    #anbook=$(cat /tmp/tmp | grep Nikāya | awk '{print $NF}' | awk -F'.' '{print $1}')
     vagga=$(cat /tmp/tmp | grep vagga | awk '{print $2, $3}')
-    suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}') 
+    suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}')
+        suttanumwoletters=`echo $suttanum | sed 's/[^0-9]//g'`
  suttaname=$(cat /tmp/tmp | grep -E "sutta\\b " | awk '{print $2}')
     link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/sc/?q="$1}')
 
@@ -51,20 +52,39 @@ find "$suttapath" -type f -name "*.json" | sort -V | while read -r file; do
 #        echo "$nikaya Nikāya"
 #    fi
 
+#mn100_root-pli-ms.json:  "mn100:45.5": "Majjhimapaṇṇāsakaṁ samattaṁ. "
+#mn152_root-pli-ms.json:  "mn152:20.5": "Uparipaṇṇāsakaṁ samattaṁ. ",
+#mn50_root-pli-ms.json:  "mn50:33.5": "Mūlapaṇṇāsakaṁ samattaṁ. "
+	
+	
+	if [[ "$suttanumwoletters" -le 50 ]]
+then
+mnbook=Mūlapaṇṇāsaka
+mnbookind=1
+elif [[ "$suttanumwoletters" -ge 51 ]] && [[  "$suttanumwoletters" -le 100 ]]
+then
+mnbook=Majjhimapaṇṇāsaka
+mnbookind=2
+elif [[ "$suttanumwoletters" -ge 101 ]] 
+then
+mnbook=Uparipaṇṇāsaka
+mnbookind=3
+fi
+	
 	
 	#nipata div
-    if [[ "$anbook" != "$prev_anbook" ]]; then
+    if [[ "$mnbook" != "$prev_anbook" ]]; then
 
-if [[ "$prev_anbook" != "" ]] ; then 
+if [[ "$prev_mnbook" != "" ]] ; then 
 echo '</div> <!-- my-3 inside nipata collapse close prev my div -->
 </div> <!-- nipata collapse close prev nipata div -->
 </div> <!-- nipata collapse close prev nipata div -->'
 fi
 
 echo '<div class="level2">
-	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#'${nikayaabr}$anbook'Collapse">'$nikaya' Nikāya '$anbook'</a></h3>
+	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#'${nikayaabr}$mnbookind'Collapse">'$mnbook'</a></h3>
 	  </div> 
-	  <div class="collapse" id="'${nikayaabr}$anbook'Collapse">
+	  <div class="collapse" id="'${nikayaabr}$mnbookind'Collapse">
 	  <div class="my-3">'
 
     fi

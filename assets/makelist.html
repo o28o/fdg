@@ -141,21 +141,20 @@
                 var paliPart = paliLines[i] ? paliLines[i].trim() : '';
                 var otherPart = otherLines[i] ? otherLines[i].trim() : '';
                 if (document.getElementById('checkbox').checked) {
-                  if (i === 0) {
-   csv += '#' + ',' + paliPart + ',' + otherPart;                 
-} else {
-  csv += i + ',' + paliPart + ',' + otherPart;
-}
-                    
+                    if (i === 0) {
+                        csv += '#' + ',' + escapeCommas(paliPart) + ',' + escapeCommas(otherPart);
+                    } else {
+                        csv += i + ',' + escapeCommas(paliPart) + ',' + escapeCommas(otherPart);
+                    }
                 } else {
-                    csv += (i + 1) + ',' + paliPart + ',' + otherPart;
+                    csv += (i + 1) + ',' + escapeCommas(paliPart) + ',' + escapeCommas(otherPart);
                 }
 
                 for (var j = 0; j < additionalLines.length; j++) {
                     var additionalPart = additionalLines[j][i] ? additionalLines[j][i].trim() : '';
-                    csv += ',' + additionalPart;
+                    csv += ',' + escapeCommas(additionalPart);
                 }
-                 csv += '\n'; 
+                csv += '\n';
             }
 
             var resultTable = generateResultTable(csv);
@@ -166,6 +165,9 @@
             var url = URL.createObjectURL(blob);
             document.getElementById('downloadButton').href = url;
         });
+
+
+/*
 
         document.getElementById('clearButton').addEventListener('click', function () {
             document.getElementById('paliTextInput').value = '';
@@ -179,6 +181,13 @@
             document.getElementById('resultOutput').innerHTML = '';
             document.getElementById('downloadButton').style.display = 'none';
         });
+*/
+
+
+document.getElementById('clearButton').addEventListener('click', function () {
+    location.reload(); // Перезагрузка страницы
+});
+
 
         document.getElementById('addInputButton').addEventListener('click', function () {
             var additionalInputs = document.getElementById('additionalInputs');
@@ -196,28 +205,30 @@
             }
         });
 
+        function generateResultTable(csv) {
+            var lines = csv.split('\n');
+            
+            var tableHtml = '<table class="table table-bordered">';
+            tableHtml += '<tr>';
 
-function generateResultTable(csv) {
-    var lines = csv.split('\n');
-    var tableHtml = '<table class="table table-bordered">';
-    tableHtml += '<tr>';
-    for (var j = 0; j < lines[0].split(',').length; j++) {
-        tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></th>';
-    }
-    tableHtml += '</tr>';
-    for (var i = 0; i < lines.length; i++) {
-        tableHtml += '<tr>';
-        var columns = lines[i].split(',');
-        for (var j = 0; j < columns.length; j++) {
-            tableHtml += '<td>' + columns[j] + '</td>';
+     // Получение заголовков столбцов
+    var headerLine = lines[0];
+    var headers = headerLine.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+    for (var j = 0; j < headers.length; j++) {           
+                tableHtml += '<th><button class="btn btn-sm btn-secondary copy-button copy-column-button" data-column-index="' + j + '">Copy</button></th>';
+            }
+            tableHtml += '</tr>';
+            for (var i = 0; i < lines.length; i++) {
+                tableHtml += '<tr>';
+                var columns = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                for (var j = 0; j < columns.length; j++) {
+                    tableHtml += '<td>' + columns[j] + '</td>';
+                }
+                tableHtml += '</tr>';
+            }
+            tableHtml += '</table>';
+            return tableHtml;
         }
-        tableHtml += '</tr>';
-    }
-    tableHtml += '</table>';
-    return tableHtml;
-}
-
-
 
         function copyToClipboard(text) {
             var textarea = document.createElement('textarea');
@@ -249,6 +260,13 @@ function generateResultTable(csv) {
             setTimeout(function () {
                 copySuccess.style.display = 'none';
             }, 1500);
+        }
+
+        function escapeCommas(text) {
+            if (text.includes(',')) {
+                return '"' + text.replace(/"/g, '""') + '"';
+            }
+            return text;
         }
 
         document.addEventListener('click', function (event) {

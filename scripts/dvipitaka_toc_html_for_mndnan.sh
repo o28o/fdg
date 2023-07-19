@@ -2,10 +2,15 @@
 
 source ./config/script_config.sh --source-only
 
-apachesitepath=/drives/c/soft/fdg/
+#apachesitepath=/drives/c/soft/fdg/
 assetdir=$apachesitepath/assets/templates
+<<<<<<< HEAD
 #suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
 suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an1
+=======
+suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an
+#suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/
+>>>>>>> 76e8cbbce6c56589ed0ff6da9eaa0bdd9715a17f
 translationpath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
 
 cat $assetdir/TocHeader.html

@@ -8,13 +8,12 @@ translationpath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/translat
 cd $suttapath
 cat $assetdir/TocHeader.html
 
-index=0
 echo "<div class=\"container\">
     <div class=\"my-3\">
       <button class=\"btn btn-primary btn-sm btn-fixed-width toggle-button\" type=\"button\" id=\"collapseAll\">+</button>
     </div>"
 
-grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sed 's/"sn//g' | while read line; do
+grep -ri vaggasaṁyutta an* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sed 's/"sn//g' | while read line; do
   array[$index]="$line"
   index=$(($index+1))
 done
@@ -22,12 +21,12 @@ done
 echo "<div class=\"my-3\">
       <div class=\"level1\">
         <h2><a href=# data-bs-toggle=\"collapse\"
-          data-bs-target=\"#snCollapse\">Saṁyutta Nikāya</a></h2>
+          data-bs-target=\"#snCollapse\">Aṅguttara Nikāya</a></h2>
       </div>
 	  <div class=\"collapse show showkeep\" id=\"snCollapse\">"
 	
 # sv loop
-grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort -V | sed 's/"sn//g' | while read -r samyuttavagga; do
+grep -ri vaggasaṁyutta an* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort -V | sed 's/"sn//g' | while read -r samyuttavagga; do
   prevlast=$lastsamyuttainsv
   lastsamyuttainsv=$(echo $samyuttavagga | awk '{print $1}')
   samyuttavagganame=$(echo $samyuttavagga | awk '{print $2}')
@@ -39,7 +38,7 @@ grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort
 </div>'
   #$(( $lastsamyuttainsv - $firstsamyuttainsv + 1 ))
   # SN general loop
-  grep -r "saṁyuttaṁ " ./sn* | grep -v "(Y" | sort -V | awk '{print $2, $3}' | sed 's/\.[0-9]*-/\./g' | sed 's/"//g' | sed 's/:.*://g' | sed 's/ ,//g' | sed 's/\. / /g' | sed 's/\./ /g' | while read -r samyuttainfo; do
+  grep -r "Aṅguttara Nikāya " ./an* | grep -v "(Y" | sort -V | awk '{print $2, $3}' | sed 's/\.[0-9]*-/\./g' | sed 's/"//g' | sed 's/:.*://g' | sed 's/ ,//g' | sed 's/\. / /g' | sed 's/\./ /g' | while read -r samyuttainfo; do
     samyuttanumber=$(echo $samyuttainfo | awk '{print $1}' | sed 's/sn//g')
     totalsuttasinsamyutta=$(echo $samyuttainfo | awk '{print $2}')
     samyuttaname=$(echo $samyuttainfo | awk '{print $3}')

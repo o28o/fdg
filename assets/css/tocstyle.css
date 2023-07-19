@@ -1,0 +1,32 @@
+
+    .level1 {
+      margin-left: 10px;
+    }
+
+    .level2 {
+      margin-left: 20px;
+    }
+
+    .level3 {
+      margin-left: 30px;
+    }
+
+    .level4 {
+      margin-left: 40px;
+    }
+
+    .level5 {
+      margin-left: 50px;
+    }
+	
+	.btn-fixed-width {
+  width: 30px; /* Замените на желаемую фиксированную ширину */
+}
+
+  .btn-rotate {
+    transition: transform 0.3s ease;
+  }
+
+  .btn-rotate.rotate {
+    transform: rotate(180deg);
+  }

@@ -337,7 +337,7 @@ if (document.location.search) {
   <h2>Основные Сутты</h2>
   <ul>
      <li><span class="abbr">dn</span> <a href="/assets/texts/dn.html"> Dīgha-nikāya</a></li></li>
-      <li><span class="abbr">mn</span> Majjhima-nikāya</li>
+     <li><span class="abbr">mn</span> <a href="/assets/texts/mn.html"> Majjhima-nikāya</a></li></li>     
       <li><span class="abbr">sn</span> <a href="/assets/texts/sn.html"> Saṁyutta-nikāya</a></li></li>
       <li><span class="abbr">an</span> <a href="/assets/texts/an.html"> Aṅguttara-nikāya</a></li>
       <li><span class="abbr">snp</span> Sutta-nipāta</li>

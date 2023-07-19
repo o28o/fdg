@@ -350,7 +350,7 @@ if (document.location.search) {
 <ul>
 <li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.html">Bhikkhupātimokkha</a></li>
 <li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:8.0"> Pārājikā</a></li></li>
-<li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
+<li><span class="abbr">bu-ss</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:14.0"> Saṅghādisesā</a></li></li>
 <li><span class="abbr">bu-ay</span> Aniyatā</li>
 <li><span class="abbr">bu-np</span> Nissaggiyā-pācittiyā</li>
 <li><span class="abbr">bu-pc</span> Pācittiyā</li>

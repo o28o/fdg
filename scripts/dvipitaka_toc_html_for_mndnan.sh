@@ -5,10 +5,8 @@ source ./config/script_config.sh --source-only
 #apachesitepath=/drives/c/soft/fdg/
 assetdir=$apachesitepath/assets/templates
 
-#suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta
-suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an1
+#suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an1
 suttapath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an
-#suttapath=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/
 
 translationpath=$apachesitepath/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta
 
@@ -63,7 +61,7 @@ echo '</div> <!-- my-3 inside nipata collapse close prev my div -->
 fi
 
 echo '<div class="level2">
-	  <h2><a href=# data-bs-toggle="collapse" data-bs-target="#'${nikayaabr}$anbook'Collapse">'$nikaya' Nikāya '$anbook'</a></h2>
+	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#'${nikayaabr}$anbook'Collapse">'$nikaya' Nikāya '$anbook'</a></h3>
 	  </div> 
 	  <div class="collapse" id="'${nikayaabr}$anbook'Collapse">
 	  <div class="my-3">'

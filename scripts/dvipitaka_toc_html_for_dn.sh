@@ -42,16 +42,17 @@ find "$suttapath" -type f -name "*.json" | sort -V | while read -r file; do
    # anbook=$(cat /tmp/tmp | grep Nikāya | awk '{print $NF}' | awk -F'.' '{print $1}')
     #vagga=$(cat /tmp/tmp | grep vagga | awk '{print $2, $3}')
     suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}') 
+    suttanumwoletters=`echo $suttanum | sed 's/[^0-9]//g'`
  suttaname=$(cat /tmp/tmp | grep -E "sutta\\b " | awk '{print $2}')
     link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/sc/?q="$1}')
 
-if [[ "$suttanum" -le 13 ]]
+if [[ "$suttanumwoletters" -le 13 ]]
 then
 vagga=Sīlakkhandhavagga
-elif [[ "$suttanum" -ge 14 ]] && [[  "$suttanum" -le 23 ]]
+elif [[ "$suttanumwoletters" -ge 14 ]] && [[  "$suttanumwoletters" -le 23 ]]
 then
 vagga=Mahāvagga
-elif [[ "$suttanum" -ge 24 ]] 
+elif [[ "$suttanumwoletters" -ge 24 ]] 
 then
 vagga=Pāthikavagga
 fi

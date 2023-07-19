@@ -276,3 +276,7 @@ wget --recursive --no-clobber --page-requisites --html-extension --convert-links
 
 
 wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm
+
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories --exclude-directories=forum,lib,sadhu https://dhamma.ru/
+
+

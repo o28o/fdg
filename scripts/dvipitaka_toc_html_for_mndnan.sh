@@ -73,7 +73,7 @@ fi
 	
 	
 	#nipata div
-    if [[ "$mnbook" != "$prev_anbook" ]]; then
+    if [[ "$mnbook" != "$prev_mnbook" ]]; then
 
 if [[ "$prev_mnbook" != "" ]] ; then 
 echo '</div> <!-- my-3 inside nipata collapse close prev my div -->
@@ -113,7 +113,7 @@ fi
     # Обновление предыдущих значений vagga, nikaya и anbook
     prev_vagga="$vagga"
     prev_nikaya="$nikaya"
-    prev_anbook="$anbook"
+    prev_mnbook="$mnbook"
 done
 
 echo '</div> <!-- Nikaya collapse -->

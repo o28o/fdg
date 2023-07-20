@@ -27,7 +27,7 @@
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#dnCollapse">Dīgha Nikāya</a></h2>
  </div>
-	 <div class="collapse show showkeep" id="dnCollapse">
+	 <div class="collapse show" id="dnCollapse">
 <div class="my-3">
 <div class="level4 my-3">
 		 <h5>Sīlakkhandhavagga</h5>

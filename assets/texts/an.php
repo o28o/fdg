@@ -6735,7 +6735,10 @@
  
 </div> <!-- Nikaya collapse -->
 </div> <!-- Nikaya title + Nikaya collapse inside -->
-</div> <!-- Container -->
+</div>
+</div><!-- Container -->
+</div>
+</div>
 <script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
 <script src="/assets/js/tocjs.js"></script>
 </body>

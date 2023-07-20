@@ -33,7 +33,7 @@ $mainscpage = $mainpage . '/sc';
  </div>
 	 <div class="collapse show showkeep" id="snCollapse">
 <div class="level2">
- <h2>Sagāthāvaggasaṁyuttapāḷi</h2>
+ <h3>Sagāthāvaggasaṁyuttapāḷi</h3>
 </div>
 <div class="level3">
 	 <h4><a href=# data-bs-toggle="collapse" data-bs-target="#sn1Collapse">1. Devatāsaṁyuttaṁ</a></h4>
@@ -1552,7 +1552,7 @@ $mainscpage = $mainpage . '/sc';
 </div>
 	 </div>
 <div class="level2">
- <h2>Nidānavaggasaṁyuttapāḷi</h2>
+ <h3>Nidānavaggasaṁyuttapāḷi</h3>
 </div>
 <div class="level3">
 	 <h4><a href=# data-bs-toggle="collapse" data-bs-target="#sn12Collapse">12. Nidānasaṁyuttaṁ</a></h4>
@@ -2946,7 +2946,7 @@ $mainscpage = $mainpage . '/sc';
 </div>
 	 </div>
 <div class="level2">
- <h2>Khandhavaggasaṁyuttapāḷi</h2>
+ <h3>Khandhavaggasaṁyuttapāḷi</h3>
 </div>
 <div class="level3">
 	 <h4><a href=# data-bs-toggle="collapse" data-bs-target="#sn22Collapse">22. Khandhasaṁyuttaṁ</a></h4>
@@ -4819,7 +4819,7 @@ $mainscpage = $mainpage . '/sc';
 </div>
 	 </div>
 <div class="level2">
- <h2>Saḷāyatanavaggasaṁyuttapāḷi</h2>
+ <h3>Saḷāyatanavaggasaṁyuttapāḷi</h3>
 </div>
 <div class="level3">
 	 <h4><a href=# data-bs-toggle="collapse" data-bs-target="#sn35Collapse">35. Saḷāyatanasaṁyuttaṁ</a></h4>
@@ -6711,7 +6711,7 @@ $mainscpage = $mainpage . '/sc';
 </div>
 	 </div>
 <div class="level2">
- <h2>Mahāvaggasaṁyuttapāḷi</h2>
+ <h3>Mahāvaggasaṁyuttapāḷi</h3>
 </div>
 <div class="level3">
 	 <h4><a href=# data-bs-toggle="collapse" data-bs-target="#sn45Collapse">45. Maggasaṁyuttaṁ</a></h4>

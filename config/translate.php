@@ -6,6 +6,7 @@ $lang = "ru";
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainscpage = $mainpage . '/sc';
+$mainscpage = '/ru/read.php';
 $searchcaption = 'Поиск';
 $clearaption = 'Очистить';
 $gearbutton = 'дополнительные настройки';
@@ -19,6 +20,7 @@ $ogdesc = 'Поисковая Система Освобождения. Нахо�
 $oglocale = 'ru_RU';
 $ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift_rus.jpg';
 $menu = 'Меню';
+$menumain = 'Главная';
 $menuread = 'Читать';
 $menuhist = 'История';
 $menuhowto = 'Помощь';
@@ -404,6 +406,8 @@ $ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift.jpg';
 $linksothermat = 'https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG';
 
 $menu = 'Menu';
+$menumain = 'Main';
+
 $menuread = 'Read';
 $menuhist = 'Search History';
 $menuhowto = 'How To';

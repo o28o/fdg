@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <title>Blurb Builder</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:title" content="Blurb Builder | ReadingFaithfully" />
+    <meta property="og:description" content="Build a JSON file of blurbs." />
+    <meta property="og:url" content="https://blurbs.readingfaithfully.org/" />
+    <meta property="og:site_name" content="Blurbs.ReadingFaithfully.org" />
+    <meta property="og:image" itemprop="image" content="/images/featuredImage-blurbs.png" />
+</head>
+
+<body>
+    <div class="main-area">
+        <div id="controls">
+            <div id="checkboxes-area" class="checkboxes-area">
+                <h1>Blurb Builder</h1>
+                <details>
+                    <summary>
+                        Info
+                    </summary>
+                    <p>This tool allows you to build a custom JSON object with the sutta blurbs from SuttaCentral.net
+                    </p>
+                    <p>You can find the source files on <a
+                            href="https://github.com/suttacentral/bilara-data/tree/published/root/en/blurb"
+                            title="open on Github.com" rel="noreferrer" target="_blank">GitHub</a></p>
+                </details>
+            </div>
+            <hr style="width:12rem">
+            <div class="options">
+                <label for="chapter-blurbs"><input type="checkbox" id="chapter-blurbs" value="chapter-blurbs"
+                        name="chapter-blurbs">
+                    Include chapter blurbs</label>
+                <label for="strip-html"><input type="checkbox" id="strip-html" value="strip-html" name="strip-html">
+                    Strip HTML from blurbs</label>
+            </div>
+            <div class="action-button-area">
+                <button id="build-button" class="build-button">Build</button>
+                <div id="copy-button-area" class="copy-button-area"></div>
+            </div>
+        </div>
+        <div id="table-area" class="table-area"></div>
+    </div>
+    <div class="links-area">
+        <a href="http://readingfaithfully.org" title="Support for your sutta readng practice" rel="noreferrer"
+            target="_blank"><img width="20px" alt="ReadingFaithfully.org icon" src="./images/favicon-rf-red.png"></a>
+        <a href="http://daily.readingfaithfully.org" title="Daily Suttas" rel="noreferrer" target="_blank"><img
+                width="20px" alt="Daily ReadingFaithfully.org icon" src="./images/favicon-drf-red.png"></a>
+        <a href="http://r.readingfaithfully.org" title="Random Suttas" rel="noreferrer" target="_blank"><img
+                width="20px" alt="Random Sutta icon" src="./images/favicon-random-red.png"></a>
+        <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer" target="_blank"><img
+                width="20px" src="./images/favicon-citaton-helper-red.png" alt="Citation Lookup tool icon"></a>
+        <a href="https://name.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/favicon-name-red.png" alt="Sutta Name Search icon"></a>
+        <a href="https://ped.readingfaithfully.org" title="A lightweight interface for the PED" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/favicon-ped-red.png" alt="Lightweight PED interface"></a>
+        <a href="https://dppn.readingfaithfully.org" title="A lightweight interface the Dictionary of Pali Proper Names"
+            rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-dppn-red.png"
+                alt="DPPN search icon"></a>
+        <a href="https://sc.readingfaithfully.org" title="A lightweight interface for SuttaCentral.net" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/favicon-sc-light-red.png" alt="SC Light icon"></a>
+        <a href="https://github.com/thesunshade/blurb-builder/tree/main#readme" title="The source code for this site"
+            rel="noreferrer" target="_blank"><img width="20px" src="./images/GitHub-Mark-64px-red.png"
+                alt="GitHub icon"></a>
+    </div>
+
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

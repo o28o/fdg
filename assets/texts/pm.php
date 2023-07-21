@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/tocstyle.css" rel="stylesheet" />
 <!-- Favicon-->
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
@@ -11,40 +12,6 @@
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
 
   <title>Bhikkhupātimokkha</title>
-  <style>
-    .level1 {
-      margin-left: 0px;
-    }
-
-    .level2 {
-      margin-left: 10px;
-    }
-
-    .level3 {
-      margin-left: 20px;
-    }
-
-    .level4 {
-      margin-left: 30px;
-    }
-
-    .level5 {
-      margin-left: 40px;
-    }
-	
-	.btn-fixed-width {
-  width: 30px; /* Замените на желаемую фиксированную ширину */
-}
-
-  .btn-rotate {
-    transition: transform 0.3s ease;
-  }
-
-  .btn-rotate.rotate {
-    transform: rotate(180deg);
-  }
-
-</style>
 
 </head>
 
@@ -484,10 +451,13 @@ Pārājikaṁ niṭṭhitaṁ </span>
  <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:213.0">Sekhiya 45. Kabaḷāvacchedaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk45#pli-tv-bu-vb-sk45:1.3.1">vb</a> Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
 </div>     
 
+<div class="level4">
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:214.0">Sekhiya 46. Avagaṇḍakāraka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk46#pli-tv-bu-vb-sk46:1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.  </span>
+</div>     
 <!--
 
-  "pli-tv-bu-pm:214.0": "Sekhiya 46. Avagaṇḍakāraka ",
-  "pli-tv-bu-pm:214.1": "Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. ",
+  "pli-tv-bu-pm:214.0": " ",
+  "pli-tv-bu-pm:214.1": "",
   "pli-tv-bu-pm:215.0": "Sekhiya 47. Hatthaniddhunaka ",
   "pli-tv-bu-pm:215.1": "Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. ",
   "pli-tv-bu-pm:216.0": "Sekhiya 48. Sitthāvakāraka ",
@@ -549,7 +519,7 @@ Pārājikaṁ niṭṭhitaṁ </span>
 
     </div>
   </div>
-
+<div class="mb-5"></div>
 <script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
   <script>
 

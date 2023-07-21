@@ -452,14 +452,14 @@ Pārājikaṁ niṭṭhitaṁ </span>
 </div>     
 
 <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:214.0">Sekhiya 46. Avagaṇḍakāraka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk46#pli-tv-bu-vb-sk46:1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.  </span>
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:214.0">Sekhiya 46. Avagaṇḍakāraka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk46#pli-tv-bu-vb-sk46:1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
 </div>     
+<div class="level4">
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:215.0">Sekhiya 47. Hatthaniddhunaka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk47#pli-tv-bu-vb-sk47:1.3.1">vb</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
+</div>     
+
 <!--
 
-  "pli-tv-bu-pm:214.0": " ",
-  "pli-tv-bu-pm:214.1": "",
-  "pli-tv-bu-pm:215.0": "Sekhiya 47. Hatthaniddhunaka ",
-  "pli-tv-bu-pm:215.1": "Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. ",
   "pli-tv-bu-pm:216.0": "Sekhiya 48. Sitthāvakāraka ",
   "pli-tv-bu-pm:216.1": "Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. ",
   "pli-tv-bu-pm:217.0": "Sekhiya 49. Jivhānicchāraka ",
@@ -521,53 +521,7 @@ Pārājikaṁ niṭṭhitaṁ </span>
   </div>
 <div class="mb-5"></div>
 <script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
-  <script>
-
-const toggleButtons = document.querySelectorAll('.toggle-button');
-
-toggleButtons.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    const targetId = btn.getAttribute('data-bs-target');
-    const targetCollapse = document.querySelector(targetId);
-    if (targetCollapse) {
-      const isCollapsed = targetCollapse.classList.contains('show');
-      if (btn.innerText === '+') {
-        btn.innerText = '-';
-      } else {
-        btn.innerText = '+';
-      }
-    }
-  });
-});
-
-  
-    const collapseAllBtn = document.getElementById('collapseAll');
-    const expandAllBtn = document.getElementById('expandAll');
-    const collapseButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
-
-    collapseAllBtn.addEventListener('click', () => {
-      collapseButtons.forEach((btn) => {
-        const targetId = btn.getAttribute('data-bs-target');
-        const targetCollapse = document.querySelector(targetId);
-        if (targetCollapse && !targetCollapse.classList.contains('collapsed')) {
-          btn.click();
-        }
-      });
-    });
-
-    expandAllBtn.addEventListener('click', () => {
-      collapseButtons.forEach((btn) => {
-        const targetId = btn.getAttribute('data-bs-target');
-        const targetCollapse = document.querySelector(targetId);
-        if (targetCollapse && targetCollapse.classList.contains('collapsed')) {
-          btn.click();
-        }
-      });
-    });
-	
-	
-	
-  </script>
+<script src="/assets/js/pmjs.js"></script>
 </body>
 
 </html>

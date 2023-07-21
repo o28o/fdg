@@ -109,16 +109,16 @@ if (isset($_GET['q'])) {
 <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $searchcaption;?></span>
 </button>
-<div class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+<div class="text-white input-group-append form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
   <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
   <span class="visually-hidden"><?php echo $searchcaption;?></span>
-  </div>
+  </div> 
 </div>
 
 </div>
 
- 
 <div class="collapse" id="collapseSettings">
+  
   
   <div class="float-start">
 

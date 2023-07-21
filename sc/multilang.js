@@ -334,7 +334,7 @@ if (document.location.search) {
   <div class="lists">
 
   <div class="suttas">
-  <a href="/ru/assets/texts/sutta.php"> <h2>Основные Сутты</h2></a> 
+  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> 
   <ul>
      <li><span class="abbr">dn</span> <a href="/ru/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
      <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>

@@ -13,7 +13,7 @@ echo '<div class="d-md-inline-block">
 } else {
 echo '<div class="d-md-inline-block">	';
 }
-echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+echo '<a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
   <figcaption class="figure-caption text-center">Pāḷi Тексты</figcaption>

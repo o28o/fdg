@@ -342,12 +342,12 @@ window.addEventListener('pageshow', function(event) {
 </script>
 </header>
 
-<!-- Portfolio Section page-section portfolio  --> 
-<section class="">
+
+<!-- Portfolio Section-->
+<section class="page-section portfolio">
 <div class="container text-center">
 
-
-<div style="max-width: 350px;" class="container-lg mb-4">
+<div style="max-width: 450px;" class="container-lg mb-4">
 
 <div class="container text-start">
 
@@ -18139,6 +18139,7 @@ window.addEventListener('pageshow', function(event) {
 </div>
 <script src="/assets/js/tocjs.js"></script>
 </div>
+
 <?php
 if ( $lang == "ru" ) {
 include 'assets/common/horizontalMenuRu.php'; 
@@ -18148,8 +18149,6 @@ include 'assets/common/horizontalMenuEn.php';
 ?>
 
 
-
-
 <!-- Portfolio Item 3-->
 <div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
 <div class="font-italic"> 
@@ -18157,8 +18156,17 @@ include 'assets/common/horizontalMenuEn.php';
 <?php echo $fntmessage;?>
 </p>
 </div> 
-
+<div class="col-md-6 col-lg-4 mb-3">
+						                     
+			
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white">
+<i class="fas fa-search fa-flip-horizontal fa-3x"></i></div>
 </div>
+</div>
+</div>
+
+<h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
 
 
@@ -18168,7 +18176,7 @@ include 'assets/common/horizontalMenuEn.php';
 </div>
 </div>
    
-
+  
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
@@ -18189,9 +18197,40 @@ include 'assets/common/horizontalMenuEn.php';
 
 <div class="clearfix"></div> 
 	 
+
+
+
+</div>
+</div>
         </section>
-
-
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="project">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white"><?php echo $aboutheader; ?></h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                        <div class="lock example divider-custom-icon">
+                                        <i class="fa-solid fa-dharmachakra example icon-unlock" ></i>
+ <i class="fa-solid fa-circle icon-lock bigger"></i>
+                      </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+<?php echo $aboutprp; ?>
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
+                
+                   <i class="fa-brands fa-github"></i><?php echo $prongh; ?>
+                    </a>
+                </div>
+            </div>
+        </section>
+  
         <!-- Footer-->
         <footer id="links" class="footer text-center ">
                <h2 class="page-section-heading text-center text-uppercase text-white mb-5"><?php echo $head2recomlinks;?></h2>
@@ -18487,6 +18526,151 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <div class="copyright py-4 text-center text-white">
 <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
 <a class="text-white text-decoration-none" href="/scripts/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small> </div>
+        </div>
+        <!-- Portfolio Modals-->
+
+
+<!-- Portfolio Modal 3-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body text-center pb-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+
+<!-- Portfolio Modal - Title-->
+<h4 class="text-secondary mb-0">
+<?php echo $mainscrollmodalheader ; ?>
+</h4>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image-->
+
+<!-- Portfolio Modal - Text-->
+<?php echo $mainscrollmodal; ?>
+									
+<button class="btn btn-primary" data-bs-dismiss="modal">
+<i class="fas fa-xmark fa-fw"></i>
+<?php echo "$closemodal"; ?>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $advanced; ?></h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
+            <p class="mb-4">
+<?php echo $advancedcontent; ?>
+</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        <?php echo "$closemodal"; ?>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><?php echo $basics; ?></h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/dhammawheel.jpg" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
+<?php echo $basicscontent;?>
+<button class="btn btn-primary" data-bs-dismiss="modal">
+<i class="fas fa-xmark fa-fw"></i> 
+<?php echo "$closemodal"; ?>
+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body text-center pb-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+<?php echo $demovideo; ?></h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
+<div class="embed-container mb-3">
+<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" loading="lazy" ></a></div>
+
+<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+</div>-->
+
+<button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        <?php echo "$closemodal"; ?>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 

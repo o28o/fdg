@@ -585,8 +585,9 @@ then
 continue 
 fi 
 
-linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq | awk -F'_' '{print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"&lang=pli\">"$1"</a>"}'| sort -Vf | uniq | xargs`
+linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq | awk -F'_' '{print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"\">"$1"</a>"}'| sort -Vf | uniq | xargs`
 
+#&lang=pli
 echo "<tr>
 <td>`echo $uniqword | highlightpattern`</td>
 <td>$linkscount</td>   
@@ -751,10 +752,12 @@ linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthai
 link=`echo $filenameblock |  awk -v lkru="$linkforru" -v ext="$linkforruext" '{print lkru$0''ext}' `
 fi
 
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&'$defaultlang'"}' ` 
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0}' ` 
 
-linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0"&'$defaultlang'"}' `
+#"&'$defaultlang'
 
+linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0}' `
+#"&'$defaultlang'"
 #echo "root=$roottext trn=$translation" 
 
 genbwlinks
@@ -858,8 +861,8 @@ tr=$file
 
     suttanumber="$filenameblock"
 
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0"&'$defaultlang'"}' `
-
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0}' `
+#"&'$defaultlang'"
 linklang="$linkgeneral"
 
 
@@ -1140,7 +1143,8 @@ else
   if (( $textsqnty <= 40 ))
   then
  # cat $basefile > checkitout
-echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1"&lang=pli>"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+#&lang=pli
   else 
   echo -n "<br>" >> $history
   fi

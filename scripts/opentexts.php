@@ -245,10 +245,10 @@ $letterblock = preg_replace("/[0-9]*/i","","$string");
 if ((  $numberblock <= $latestrusmn ) && ( preg_match("/mn/i",$letterblock) ) ){
 $defaultlang = 'lang=pli-rus';
 }
-echo "<script>window.location.href='$readerlang/sc/?q={$string}&$defaultlang';</script>";
+echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";
   exit();
 }
-
+// &$defaultlang
 if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$string)){
   $string = str_replace (" ", ".", $string);
   $forbwlink = strtolower(preg_replace("/b$/i","","$string"));

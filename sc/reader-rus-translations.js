@@ -246,7 +246,7 @@ const pageTitle = document.querySelector("h1");
      var nextPrint = nextSlugPrint +' ' +nextName;
      }     
          next.innerHTML = nextSlug
-        ? `<a href="?q=${nextSlug}&lang=${language}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${nextSlug}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -273,7 +273,7 @@ const pageTitle = document.querySelector("h1");
         var prevPrint = prevSlugPrint +' ' +prevName;
      }
       previous.innerHTML = prevSlug
-        ? `<a href="?q=${prevSlug}&lang=${language}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${prevSlug}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>

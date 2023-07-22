@@ -10,18 +10,32 @@ echo '<div class="d-md-inline-block">
   <figcaption class="figure-caption text-center">' . $searchcaption . '</figcaption>
 </figure>
 </a>';
-} else {
+} if (( basename($_SERVER['REQUEST_URI']) == "ru/read"))  {
 echo '<div class="d-md-inline-block">	';
 }
-echo '<a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
+echo '<!-- <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
   <figcaption class="figure-caption text-center">Pāḷi Тексты</figcaption>
 </figure>
-</a>
+</a> -->
 
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
-<figure class="figure d-md-inline-block">
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+
+<figure class="figure dropup">
+  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
+<figcaption class="figure-caption text-center">Pāḷi Тексты</figcaption>   
+</figure>	  
+</a>
+  <ul class="dropdown-menu" aria-labelledby="MenuRussian">
+    <li><a class="dropdown-item" target="" href="' . $mainreadlink . '">Содержание</a></li>
+    <li><a class="dropdown-item" target="" href="' . $mainscpage . '">SC Light</a></li>
+  </ul>
+
+
+
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<figure class="figure dropup d-md-inline-block">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
 <figcaption class="figure-caption text-center">на Англ.</figcaption>   
 </figure>	  

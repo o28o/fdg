@@ -390,7 +390,7 @@ include 'assets/common/horizontalMenuEn.php';
 
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
-<div class="embed-container mt-4 mb-5">
+<div class="embed-container mt-4 mb-5 text-center">
 <a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img width="350" class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" loading="lazy"></a>
 </div>
 <!--<div class="embed-container mt-4 mb-5"> 

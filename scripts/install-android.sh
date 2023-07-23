@@ -172,7 +172,7 @@ cp /data/data/com.termux/files/usr/etc/apache2/httpd.conf /data/data/com.termux/
 mkdir theravada.ru && cd theravada.ru
 wget -r --no-check-certificate -P ./ --no-parent https://theravada.ru/Teaching/canon.htm
 cd theravada.ru/Teaching/Canon/Suttanta   
-for i in `find . -name  "*htm*" -type f`; do  
+for i in `find . -name  "*htm*" -type f | sort -V`; do  
     echo $i; 
     iconv -f windows-1251 $i > ../tmp
     mv -f ../tmp $i

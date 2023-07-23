@@ -4,7 +4,8 @@ const branch = "published/"; // should end with slash
 
 let book = "ud";
 
-const githubLocation = `https://raw.githubusercontent.com/suttacentral/bilara-data/blob/${branch}root/en/blurb/${book}-blurbs_root-en.json`;
+//const githubLocation = `https://raw.githubusercontent.com/suttacentral/bilara-data/blob/${branch}root/en/blurb/${book}-blurbs_root-en.json`;
+const githubLocation = `/assets/brru/blurbs-ru.json`;
 
 fetch(githubLocation)
   .then(response => response.json())

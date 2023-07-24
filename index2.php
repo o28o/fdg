@@ -118,12 +118,12 @@ if (isset($_GET['q'])) {
 }
 ?>
 
-<div style="position: relative;">
-  <input name="q" style="z-index: 9; padding-right: 30px;" type="search" class="form-control rounded-pill" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
-  <button type="button" style="position: absolute; top: 53%; right: 20px; transform: translateY(-50%); display: none; " id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
-    <i class="fas fa-times" style="background-color: Transparent; color: Transparent;" aria-hidden="true"></i>
-    <span class="visually-hidden"><?php echo $clearaption;?></span>
-  </button>
+	<div style="position: relative;">	
+  <input name="q" style="z-index: 9; padding-right: 30px; " type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>	
+  <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">	
+    <i class="fas fa-times" aria-hidden="true"></i>	
+    <span class="visually-hidden"><?php echo $clearaption;?></span>	
+  </button>	
 </div>
 
 <div class="input-group-append">
@@ -195,9 +195,9 @@ if (isset($_GET['q'])) {
 
  <h5 class="mt-4"><?php echo $regexMemoh5;?></h5> 
 <div class="mt-4" style="text-align: left;">
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y</strong></button> - <?php echo $exc;?> <br>
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y</strong></button> - <?php echo $exc;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc "Y(ti|nti)"</strong></button> - <?php echo $excfew;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
@@ -261,17 +261,20 @@ buttons.forEach(function(button) {
   button.addEventListener('click', function(event) {
     event.preventDefault();
     var letterValue = this.getAttribute('data-letter');
-    var currentValue = input.value;
-    input.value = currentValue + letterValue;
-
-    // Перемещаем курсор в конец инпута
-    input.focus();
-    input.setSelectionRange(input.value.length, input.value.length);
-
-    // Имитируем событие ввода, чтобы обновить состояние автозаполнения
-    var inputEvent = new Event('input', { bubbles: true });
-    input.dispatchEvent(inputEvent);
-  });
+   var currentValue = input.value;	
+    var selectionStart = input.selectionStart;	
+    var selectionEnd = input.selectionEnd;	
+    var newValue = currentValue.substring(0, selectionStart) + letterValue + currentValue.substring(selectionEnd);	
+    input.value = newValue;	
+    // Перемещаем курсор после вставленных символов	
+    var newCursorPosition = selectionStart + letterValue.length;	
+    input.setSelectionRange(newCursorPosition, newCursorPosition);	
+    // Имитируем событие ввода, чтобы обновить состояние автозаполнения	
+    var inputEvent = new Event('input', { bubbles: true });	
+    input.dispatchEvent(inputEvent);	
+    // Перемещаем фокус на поле ввода	
+    input.focus();	
+  });	
 });
 
 
@@ -389,7 +392,7 @@ include 'assets/common/horizontalMenuEn.php';
 
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	
 
-<div class="embed-container mt-4 mb-5">
+<div class="embed-container mt-4 mb-5 text-center">
 <a href="<?php echo $linkhowtovideo;?>" target="_blank" ><img width="350" class="imgonmain" src="<?php echo $demovideoimg2;?>" title="<?php echo $titledeschowtovideo;?>" loading="lazy"></a>
 </div>
 <!--<div class="embed-container mt-4 mb-5"> 

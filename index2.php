@@ -1000,7 +1000,7 @@ $(function () {
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
 
 
-<script defer>
+<script>
 $.ajax({
   url: "/assets/texts/sutta_words.txt",
   dataType: "text",
@@ -1055,12 +1055,12 @@ $.ajax({
         at: "left top",
         collision: "flip"
       },
-      minLength: 0,
-      multiple: " ",
-      source: function(request, response) {
-        var terms = request.term.split(" ");
-        var lastTerm = terms.pop().trim();
-        var otherMinLength = 3;
+        minLength: 0,	
+      multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке	
+      source: function(request, response) {	
+        var terms = request.term.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке	
+        var lastTerm = terms.pop().trim();	
+        var otherMinLength = 3;	
 
         if (lastTerm.length < otherMinLength) {
           response([]);
@@ -1098,7 +1098,7 @@ $.ajax({
         return false;
       },
       select: function(event, ui) {
-        var terms = this.value.split(" ");
+        var terms = this.value.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
         terms.pop();
         terms.push(ui.item.value);
         this.value = terms.join(" ");

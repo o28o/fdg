@@ -154,7 +154,8 @@ $adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/
 $linkmolds = 'https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
 $linksc = 'https://suttacentral.net/';
 $anamesc = 'SuttaCentral.net';
-$linktbw = 'https://thebuddhaswords.net';
+//$linktbw = 'https://thebuddhaswords.net';
+$linktbw = '/bw';
 $linknoblasc = 'https://en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = 'https://www.accesstoinsight.org/tipitaka/vin/sv/index.html';
 $linktextbook = 'https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk';

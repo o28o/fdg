@@ -123,7 +123,8 @@ urllinkpli=https://find.dhamma.gift/
 urllinken=https://suttacentral.net/
 urllinkenmid=/en/
 urllinkenend='?layout=linebyline'
-urllinkbw=https://thebuddhaswords.net/
+#urllinkbw=https://thebuddhaswords.net/
+urllinkbw=/bw
 urllinkbwend=.html
 
 wbefore=1

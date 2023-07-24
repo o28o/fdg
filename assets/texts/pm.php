@@ -362,52 +362,13 @@ Pārājikaṁ niṭṭhitaṁ </span>
               </div>
               <div class="collapse" id="sk2Collapse">
                 <div class="my-3">
-          <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:176.0.2">Sekhiya 11. Ujjagghika</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk11#pli-tv-bu-vb-sk11:1.3.1">vb</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:178.0">Sekhiya 12.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk12#pli-tv-bu-vb-sk12:1.3.1">vb</a> Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>
-</div>
-
-
-
-<!-- 
-
-
-  "pli-tv-bu-pm:176.0.1": "Chapter 2. Ujjagghika ",
-  "pli-tv-bu-pm:176.0.2": "Sekhiya 11. Ujjagghika ",
-  "pli-tv-bu-pm:177.1": "Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:178.0": "Sekhiya 12. ",
-  "pli-tv-bu-pm:178.1": "Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:179.0": "Sekhiya 13. Uccasadda ",
-  "pli-tv-bu-pm:179.1": "Appasaddo antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:180.0": "Sekhiya 14. ",
-  "pli-tv-bu-pm:180.1": "Appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:181.0": "Sekhiya 15. Kāyappacālaka ",
-  "pli-tv-bu-pm:181.1": "Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:182.0": "Sekhiya 16. ",
-  "pli-tv-bu-pm:182.1": "Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:183.0": "Sekhiya 17. Bāhuppacālaka ",
-  "pli-tv-bu-pm:183.1": "Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:184.0": "Sekhiya 18. ",
-  "pli-tv-bu-pm:184.1": "Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:185.0": "Sekhiya 19. Sīsappacālaka ",
-  "pli-tv-bu-pm:185.1": "Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:186.0": "Sekhiya 20. ",
-  "pli-tv-bu-pm:186.1": "Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:186.2": "Ujjagghikavaggo dutiyo ",
-
--->
-           <div class="level4 my-3">
+<div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:176.0.2">Sekhiya 11. Ujjagghika</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk11#pli-tv-bu-vb-sk11:1.3.1">vb</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:178.0">Sekhiya 12.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk12#pli-tv-bu-vb-sk12:1.3.1">vb</a> Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:179.0">Sekhiya 13. Uccasadda</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk13#pli-tv-bu-vb-sk13:1.3.1">vb</a> Appasaddo antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:180.0">Sekhiya 14.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk14#pli-tv-bu-vb-sk14:1.3.1">vb</a> Appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:181.0">Sekhiya 15. Kāyappacālaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk15#pli-tv-bu-vb-sk15:1.3.1">vb</a> Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:182.0">Sekhiya 16.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk16#pli-tv-bu-vb-sk16:1.3.1">vb</a> Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:183.0">Sekhiya 17. Bāhuppacālaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk17#pli-tv-bu-vb-sk17:1.3.1">vb</a> Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:184.0">Sekhiya 18.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk18#pli-tv-bu-vb-sk18:1.3.1">vb</a> Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:185.0">Sekhiya 19. Sīsappacālaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk19#pli-tv-bu-vb-sk19:1.3.1">vb</a> Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:186.0">Sekhiya 20.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk20#pli-tv-bu-vb-sk20:1.3.1">vb</a> Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>
+    <div class="level4 my-3">
  <span class="level5">Ujjagghikavaggo dutiyo </span>
 </div> 
 </div>
 </div>
 <!-- vagga end -->
-  
-  
-  
-    
      <!-- vagga -->
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
@@ -418,45 +379,7 @@ Pārājikaṁ niṭṭhitaṁ </span>
               </div>
               <div class="collapse" id="sk3Collapse">
                 <div class="my-3">
-                  
-             <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:187.0.2">Sekhiya 21. Khambhakata</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk21#pli-tv-bu-vb-sk21:1.3.1">vb</a> Na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā. </span>
-</div>
-
-<!-- 
-
-  "pli-tv-bu-pm:187.0.2": "Sekhiya 21. Khambhakata ",
-  "pli-tv-bu-pm:187.1": "Na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:188.0": "Sekhiya 22. ",
-  "pli-tv-bu-pm:188.1": "Na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:189.0": "Sekhiya 23. Oguṇṭhita ",
-  "pli-tv-bu-pm:189.1": "Na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:190.0": "Sekhiya 24. ",
-  "pli-tv-bu-pm:191.1": "Na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:192.0": "Sekhiya 25. Ukkuṭika ",
-  "pli-tv-bu-pm:192.1": "Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:193.0": "Sekhiya 26. Pallatthika ",
-  "pli-tv-bu-pm:193.1": "Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:194.0": "Sekhiya 27. Sakkaccapaṭiggahaṇa ",
-  "pli-tv-bu-pm:194.1": "Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. ",
-
--->               
-                  
-                  
-                  
-          <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:194.0">Sekhiya 27. Sakkaccapaṭiggahaṇa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk27#pli-tv-bu-vb-sk27:1.3.1">vb</a> Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:195.0">Sekhiya 28. Pattasaññīpaṭiggahaṇa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk28#pli-tv-bu-vb-sk28:1.3.1">vb</a> Pattasaññī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:196.0">Sekhiya 29. Samasūpakapaṭiggahaṇa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk29#pli-tv-bu-vb-sk29:1.3.1">vb</a> Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:197.0">Sekhiya 30. Samatittika</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk30#pli-tv-bu-vb-sk30:1.3.1">vb</a> Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>
-</div>
-
+<div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:187.0.2">Sekhiya 21. Khambhakata</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk21#pli-tv-bu-vb-sk21:1.3.1">vb</a> Na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:188.0">Sekhiya 22.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk22#pli-tv-bu-vb-sk22:1.3.1">vb</a> Na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:189.0">Sekhiya 23. Oguṇṭhita</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk23#pli-tv-bu-vb-sk23:1.3.1">vb</a> Na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:190.0">Sekhiya 24.</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk24#pli-tv-bu-vb-sk24:1.3.1">vb</a> Na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:192.0">Sekhiya 25. Ukkuṭika</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk25#pli-tv-bu-vb-sk25:1.3.1">vb</a> Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:193.0">Sekhiya 26. Pallatthika</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk26#pli-tv-bu-vb-sk26:1.3.1">vb</a> Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:194.0">Sekhiya 27. Sakkaccapaṭiggahaṇa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk27#pli-tv-bu-vb-sk27:1.3.1">vb</a> Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:195.0">Sekhiya 28. Pattasaññīpaṭiggahaṇa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk28#pli-tv-bu-vb-sk28:1.3.1">vb</a> Pattasaññī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:196.0">Sekhiya 29. Samasūpakapaṭiggahaṇa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk29#pli-tv-bu-vb-sk29:1.3.1">vb</a> Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:197.0">Sekhiya 30. Samatittika</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk30#pli-tv-bu-vb-sk30:1.3.1">vb</a> Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                               </div>
            <div class="level4 my-3">
  <span class="level5">Khambhakatavaggo tatiyo </span>
 </div> 
@@ -471,39 +394,10 @@ Pārājikaṁ niṭṭhitaṁ </span>
     data-bs-toggle="collapse" data-bs-target="#sk4Collapse">+</span>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:199.0.1"><h4>4. Sakkaccavaggo </h4></a>
 </div>
-              </div>
+</div>
               <div class="collapse" id="sk4Collapse">
                 <div class="my-3 ">
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:199.0.2">Sekhiya 31. Sakkaccabhuñjana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk31#pli-tv-bu-vb-sk31:1.3.1">vb</a> Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:200.0.1">Sekhiya 32. Pattasaññībhuñjana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk32#pli-tv-bu-vb-sk32:1.3.1">vb</a> Pattasaññī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>                  
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:201.0.1">Sekhiya 33. Sapadāna</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk33#pli-tv-bu-vb-sk33:1.3.1">vb</a> Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>                                    
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:202.0.1">Sekhiya 34. Samasūpaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk34#pli-tv-bu-vb-sk34:1.3.1">vb</a> Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>                
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:203.0.1">Sekhiya 35. Nathūpakata</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk35#pli-tv-bu-vb-sk35:1.3.1">vb</a> Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>                
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:204.0.1">Sekhiya 36. Odanappaṭicchādana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk36#pli-tv-bu-vb-sk36:1.3.1">vb</a> Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā. </span>
-                  </div>                
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:205.0.1">Sekhiya 37. Sūpodanaviññatti</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk37#pli-tv-bu-vb-sk37:1.3.1">vb</a> Na sūpaṁ vā odanaṁ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>  
-				   <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:206.0">Sekhiya 38. Ujjhānasaññī</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk38#pli-tv-bu-vb-sk38:1.3.1">vb</a> Na ujjhānasaññī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā. </span>
-                 </div>
-				   <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:207.0">Sekhiya 39. Kabaḷa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk39#pli-tv-bu-vb-sk39:1.3.1">vb</a> Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā. </span>
-                 </div>                 
-				   <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:208.0">Sekhiya 40. Ālopa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk40#pli-tv-bu-vb-sk40:1.3.1">vb</a> Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. </span>
-                 </div>
+<div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:199.0.2">Sekhiya 31. Sakkaccabhuñjana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk31#pli-tv-bu-vb-sk31:1.3.1">vb</a> Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:200.0">Sekhiya 32. Pattasaññībhuñjana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk32#pli-tv-bu-vb-sk32:1.3.1">vb</a> Pattasaññī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:201.0">Sekhiya 33. Sapadāna</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk33#pli-tv-bu-vb-sk33:1.3.1">vb</a> Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:202.0">Sekhiya 34. Samasūpaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk34#pli-tv-bu-vb-sk34:1.3.1">vb</a> Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:203.0">Sekhiya 35. Nathūpakata</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk35#pli-tv-bu-vb-sk35:1.3.1">vb</a> Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:204.0">Sekhiya 36. Odanappaṭicchādana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk36#pli-tv-bu-vb-sk36:1.3.1">vb</a> Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā. </span>       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:205.0">Sekhiya 37. Sūpodanaviññatti</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk37#pli-tv-bu-vb-sk37:2.10.1">vb</a> Na sūpaṁ vā odanaṁ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:206.0">Sekhiya 38. Ujjhānasaññī</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk38#pli-tv-bu-vb-sk38:1.3.1">vb</a> Na ujjhānasaññī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:207.0">Sekhiya 39. Kabaḷa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk39#pli-tv-bu-vb-sk39:1.3.1">vb</a> Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā. </span>                                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:208.0">Sekhiya 40. Ālopa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk40#pli-tv-bu-vb-sk40:1.3.1">vb</a> Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. </span>                                                              </div>
            <div class="level4 my-3">
  <span class="level5">Sakkaccavaggo catuttho </span>
 </div>    
@@ -516,84 +410,97 @@ Pārājikaṁ niṭṭhitaṁ </span>
     data-bs-toggle="collapse" data-bs-target="#sk5Collapse">+</span>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:209.0.1"><h4>5. Kabaḷavaggo </h4></a>
 </div>
-              </div>
+</div>
               <div class="collapse" id="sk5Collapse">
                 <div class="my-3">
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:209.0.2">Sekhiya 41. Anāhaṭa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk41#pli-tv-bu-vb-sk41:1.3.1">vb</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā. </span>
-                  </div>
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:210.0">Sekhiya 42. Bhuñjamāna</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk42#pli-tv-bu-vb-sk42:1.3.1">vb</a> Na bhuñjamāno sabbahatthaṁ mukhe pakkhipissāmīti sikkhā karaṇīyā.</span>
-                  </div>  
-                  <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:211.0">Sekhiya 43. Sakabaḷa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk43#pli-tv-bu-vb-sk43:1.3.1">vb</a> Na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.</span>
-                  </div>
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:212.0">Sekhiya 44. Piṇḍukkhepaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk44#pli-tv-bu-vb-sk44:1.3.1">vb</a> Na piṇḍukkhepakaṁ bhuñjissāmīti sikkhā karaṇīyā.</span>
-</div>     
+<div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:209.0.2">Sekhiya 41. Anāhaṭa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk41#pli-tv-bu-vb-sk41:1.3.1">vb</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:210.0">Sekhiya 42. Bhuñjamāna</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk42#pli-tv-bu-vb-sk42:">vb</a> Na bhuñjamāno sabbahatthaṁ mukhe pakkhipissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:211.0">Sekhiya 43. Sakabaḷa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk43#pli-tv-bu-vb-sk43:1.3.1">vb</a> Na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā. </span>                                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:212.0">Sekhiya 44. Piṇḍukkhepaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk44#pli-tv-bu-vb-sk44:1.3.1">vb</a> Na piṇḍukkhepakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:213.0">Sekhiya 45. Kabaḷāvacchedaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk45#pli-tv-bu-vb-sk45:1.3.1">vb</a> Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:214.0">Sekhiya 46. Avagaṇḍakāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk46#pli-tv-bu-vb-sk46:1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:215.0">Sekhiya 47. Hatthaniddhunaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk47#pli-tv-bu-vb-sk47:1.3.1">vb</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:216.0">Sekhiya 48. Sitthāvakāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk48#pli-tv-bu-vb-sk48:1.3.1">vb</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:217.0">Sekhiya 49. Jivhānicchāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk49#pli-tv-bu-vb-sk49:1.3.1">vb</a> Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                  </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:218.0">Sekhiya 50. Capucapukāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk50#pli-tv-bu-vb-sk50:1.3.1">vb</a> Na capucapukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>
 
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:213.0">Sekhiya 45. Kabaḷāvacchedaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk45#pli-tv-bu-vb-sk45:1.3.1">vb</a> Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-</div>     
-
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:214.0">Sekhiya 46. Avagaṇḍakāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk46#pli-tv-bu-vb-sk46:1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-</div>     
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:215.0">Sekhiya 47. Hatthaniddhunaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk47#pli-tv-bu-vb-sk47:1.3.1">vb</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-</div>     
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:216.0">Sekhiya 48. Sitthāvakāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk48#pli-tv-bu-vb-sk48:1.3.1">vb</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-</div>     
-<!--
-
-  "pli-tv-bu-pm:217.0": "Sekhiya 49. Jivhānicchāraka ",
-  "pli-tv-bu-pm:217.1": "Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā. ",
-  "pli-tv-bu-pm:218.0": "Sekhiya 50. Capucapukāraka ",
--->
-
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:218.0">Sekhiya 50. Capucapukāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk50#pli-tv-bu-vb-sk50:1.3.1">vb</a> Na capucapukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-</div>
-
-           <div class="level4 my-3">
+<div class="level4 my-3">
  <span class="level5">Kabaḷavaggo pañcamo </span>
 </div> 
-
-                </div>
-              </div>
-              
+ </div>
+</div>
            <!-- vagga -->
-           
         <!-- vagga -->
-              <div class="level3">
+<div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk6Collapse">+</span>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:219.0.1"><h4>6. Surusuruvaggo </h4></a>
 </div>
-              </div>
+</div>
               <div class="collapse" id="sk6Collapse">
                 <div class="my-3">
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:219.0.2">Sekhiya 51. Surusurukāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk51#pli-tv-bu-vb-sk51:1.3.1">vb</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā.</span>
-</div>
-<div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:220.0">Sekhiya 52. Hatthanillehaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk52#pli-tv-bu-vb-sk52:1.3.1">vb</a> Na hatthanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-</div>
-                   <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:221.0">Sekhiya 53. Pattanillehaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk53#pli-tv-bu-vb-sk53:1.3.1">vb</a> Na pattanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>   
-                    <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:222.0">Sekhiya 54. Oṭṭhanillehaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk54#pli-tv-bu-vb-sk54:1.3.1">vb</a> Na oṭṭhanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
-                  </div>                    
-           <div class="level4 my-3">
- <span class="level5">Surusuruvaggo chaṭṭho  </span>
+<div class="level4">                                                    
+<span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:219.0.2">Sekhiya 51. Surusurukāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk51#pli-tv-bu-vb-sk51:1.19.1">vb</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    
+<span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:220.0">Sekhiya 52. Hatthanillehaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk52#pli-tv-bu-vb-sk52:1.3.1">vb</a> Na hatthanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                  </div>                                                             <div class="level4">                                                    
+<span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:221.0">Sekhiya 53. Pattanillehaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk53#pli-tv-bu-vb-sk53:1.3.1">vb</a> Na pattanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    
+<span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:222.0">Sekhiya 54. Oṭṭhanillehaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk54#pli-tv-bu-vb-sk54:1.3.1">vb</a> Na oṭṭhanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:223.0">Sekhiya 55. Sāmisa</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk55#pli-tv-bu-vb-sk55:1.14.1">vb</a> Na sāmisena hatthena pānīyathālakaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:224.0">Sekhiya 56. Sasitthaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk56#pli-tv-bu-vb-sk56:1.14.1">vb</a> Na sasitthakaṁ pattadhovanaṁ antaraghare chaḍḍessāmīti sikkhā karaṇīyā. </span>                                 </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:225.0">Sekhiya 57. Chattapāṇi</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk57#pli-tv-bu-vb-sk57:2.9.1">vb</a> Na chattapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:226.0">Sekhiya 58. Daṇḍapāṇi</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk58#pli-tv-bu-vb-sk58:1.3.1">vb</a> Na daṇḍapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:227.0">Sekhiya 59. Satthapāṇi</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk59#pli-tv-bu-vb-sk59:1.3.1">vb</a> Na satthapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:228.0">Sekhiya 60. Āvudhapāṇi</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk60#pli-tv-bu-vb-sk60:1.3.1">vb</a> Na āvudhapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                         </div>
+<div class="level4 my-3">
+ <span class="level5">Surusuruvaggo chaṭṭho </span>
 </div> 
                 </div>
               </div>
               
-           <!-- vagga -->        
+           <!-- vagga -->
+              <!-- vagga -->
+<div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#sk7Collapse">+</span>
+			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:229.0.1"><h4>7. Pādukavaggo </h4></a>
+</div>
+</div>
+<div class="collapse" id="sk7Collapse">
+                <div class="my-3">
+
+<div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:229.0.2">Sekhiya 61. Pāduka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk61#pli-tv-bu-vb-sk61:1.3.1">vb</a> Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:230.0">Sekhiya 62. Upāhana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk62#pli-tv-bu-vb-sk62:1.3.1">vb</a> Na upāhanāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:231.0">Sekhiya 63. Yāna</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk63#pli-tv-bu-vb-sk63:1.3.1">vb</a> Na yānagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:232.0">Sekhiya 64. Sayana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk64#pli-tv-bu-vb-sk64:1.3.1">vb</a> Na sayanagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:233.0">Sekhiya 65. Pallatthika</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk65#pli-tv-bu-vb-sk65:1.3.1">vb</a> Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:234.0">Sekhiya 66. Veṭhita</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk66#pli-tv-bu-vb-sk66:1.3.1">vb</a> Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:235.0">Sekhiya 67. Oguṇṭhita</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk67#pli-tv-bu-vb-sk67:1.3.1">vb</a> Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:236.0">Sekhiya 68. Chamā</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk68#pli-tv-bu-vb-sk68:1.3.1">vb</a> Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:237.0">Sekhiya 69. Nīcāsana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk69#pli-tv-bu-vb-sk69:1.46.1">vb</a> Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:238.0">Sekhiya 70. Ṭhita</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk70#pli-tv-bu-vb-sk70:1.3.1">vb</a> Na ṭhito nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:239.0">Sekhiya 71. Pacchatogamana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk71#pli-tv-bu-vb-sk71:1.3.1">vb</a> Na pacchato gacchanto purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:240.0">Sekhiya 72. Uppathenagamana</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk72#pli-tv-bu-vb-sk72:1.3.1">vb</a> Na uppathena gacchanto pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:241.0">Sekhiya 73. Ṭhitouccāra</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk73#pli-tv-bu-vb-sk73:1.3.1">vb</a> Na ṭhito agilāno uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā. </span>                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:242.0">Sekhiya 74. Hariteuccāra</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk74#pli-tv-bu-vb-sk74:1.3.1">vb</a> Na harite agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:243.0">Sekhiya 75. Udakeuccāra</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk75#pli-tv-bu-vb-sk75:2.6.1">vb</a> Na udake agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                          
+</div>
+
+           <div class="level4 my-3">
+ <span class="level5">Pādukavaggo sattamo </span>
+</div> 
+
+                </div>
+              </div>
+             <!-- 
+
+pli-tv-bu-pm:233.0|Sekhiya 65. Pallatthika
+pli-tv-bu-pm:233.1|Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:234.0|Sekhiya 66. Veṭhita
+pli-tv-bu-pm:234.1|Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:235.0|Sekhiya 67. Oguṇṭhita
+pli-tv-bu-pm:235.1|Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:236.0|Sekhiya 68. Chamā
+pli-tv-bu-pm:236.1|Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:237.0|Sekhiya 69. Nīcāsana
+pli-tv-bu-pm:237.1|Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:238.0|Sekhiya 70. Ṭhita
+pli-tv-bu-pm:238.1|Na ṭhito nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:239.0|Sekhiya 71. Pacchatogamana
+pli-tv-bu-pm:239.1|Na pacchato gacchanto purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:240.0|Sekhiya 72. Uppathenagamana
+pli-tv-bu-pm:240.1|Na uppathena gacchanto pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:241.0|Sekhiya 73. Ṭhitouccāra
+pli-tv-bu-pm:241.1|Na ṭhito agilāno uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:242.0|Sekhiya 74. Hariteuccāra
+pli-tv-bu-pm:242.1|Na harite agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā.
+pli-tv-bu-pm:243.0|Sekhiya 75. Udakeuccāra
+      -->
+           <!-- vagga -->   
+           
+                     <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho āyasmanto sekhiyā dhammā.
+Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+dutiyampi pucchāmi, kaccittha parisuddhā,
+tatiyampi pucchāmi, kaccittha parisuddhā,
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
+Sekhiyā niṭṭhitā </span>
+</div> 
+           <div class="level4 my-3">
+ <span class="level5">
+Sekhiyā niṭṭhitā </span>
+</div>           
       
             </div> <!-- mt div -->
            </div> <!-- collapsediv -->

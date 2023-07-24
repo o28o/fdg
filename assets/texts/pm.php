@@ -537,13 +537,13 @@ Pārājikaṁ niṭṭhitaṁ </span>
 </div>     
 
 <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:214.0">Sekhiya 46. Avagaṇḍakāraka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk46#pli-tv-bu-vb-sk46:1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:214.0">Sekhiya 46. Avagaṇḍakāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk46#pli-tv-bu-vb-sk46:1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
 </div>     
 <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:215.0">Sekhiya 47. Hatthaniddhunaka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk47#pli-tv-bu-vb-sk47:1.3.1">vb</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:215.0">Sekhiya 47. Hatthaniddhunaka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk47#pli-tv-bu-vb-sk47:1.3.1">vb</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
 </div>     
 <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:216.0">Sekhiya 48. Sitthāvakāraka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk48#pli-tv-bu-vb-sk48:1.3.1">vb</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:216.0">Sekhiya 48. Sitthāvakāraka</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk48#pli-tv-bu-vb-sk48:1.3.1">vb</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
 </div>     
 <!--
 

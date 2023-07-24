@@ -83,7 +83,6 @@ include 'scripts/opentexts.php';
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column mb-3">
-                        
 
                 <!-- Masthead Avatar Image-->
                 <!-- Masthead Heading-->
@@ -93,7 +92,6 @@ include 'scripts/opentexts.php';
     </div>
 </h1>
 
-  
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -352,8 +350,6 @@ window.addEventListener('pageshow', function(event) {
 
   <!-- extra options end -->
 </form>
-
-
   <div id="response"></div>
 
 <script>

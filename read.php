@@ -117,10 +117,7 @@ if (isset($_GET['q'])) {
 </div>
 
 <div class="collapse" id="collapseSettings">
-  
-  
   <div class="float-start">
-
 
 	<div class="align-items-center form-check-inline mt-2 mx-0">
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
@@ -144,8 +141,6 @@ if (isset($_GET['q'])) {
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
 
-
-  
          <div style="max-width: 300px;" class="my-2"> 
      <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
@@ -334,7 +329,6 @@ window.addEventListener('pageshow', function(event) {
   <!-- extra options end -->
 </form>
 
-
   <div id="response"></div>
 
 <script>
@@ -346,12 +340,12 @@ window.addEventListener('pageshow', function(event) {
 <section class="mt-3 portfolio">
 <div class="container text-center">
 
-<div style="max-width: 450px;" class="container-lg mb-4">
+<div style="max-width: 450px;" class="container-lg my-3">
 
 <div class="container text-start">
 
 
- <div class="my-1">
+ <div class="">
  <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
  </div>
  

@@ -414,16 +414,32 @@ function showPali() {
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
+  // initial state
+  if (localStorage.paliToggleRu) {
+    if (localStorage.paliToggleRu === "showPaliEng") {
+      showPaliEnglish();
+    } else if (localStorage.paliToggleRu === "showPali") {
+      showPali();
+    } else if (localStorage.paliToggleRu === "showEnglish") {
+      showEnglish();
+    }
+  } else {
+    localStorage.paliToggleRu = "showPaliEng";
+  }
+
   languageButton.addEventListener("click", () => {
     if (language === "pli") {
       showPaliEnglish();
       language = "pli-rus";    
+      localStorage.paliToggleRu = "showPaliEng";
     } else if (language === "pli-rus") {
      showEnglish();
       language = "rus";
+      localStorage.paliToggleRu = "showEnglish";
     } else if (language === "rus") {
      showPali();
       language = "pli";
+      localStorage.paliToggleRu = "showPali";
     }
   });
 }

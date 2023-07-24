@@ -16,7 +16,6 @@ include 'scripts/opentexts.php';
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
-<!-- Favicon-->
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="article" />
@@ -30,8 +29,11 @@ include 'scripts/opentexts.php';
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
-<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
+  <!-- Загрузка favico -->	
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+  <!-- Загрузка иконки для iOS -->	
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
 
 <!-- Google fonts
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
@@ -44,7 +46,7 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 
 <script src="/assets/js/jquery-3.6.0.min.js"></script>
-<script src="/assets/js/jquery-ui.min.js" defer></script>
+<script src="/assets/js/jquery-ui.min.js" ></script>
 
 <style>
 </style>
@@ -65,8 +67,9 @@ include 'scripts/opentexts.php';
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
       <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> -->
-            
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="<?php echo $mainscpage;?>"><?php echo $menuread;?></a></li>
+
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="<?php echo $mainreadlink;?>"><?php echo $menuread;?></a></li>
+	
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/history.php"><?php echo $menuhist;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#help"><?php echo $menuhowto;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             

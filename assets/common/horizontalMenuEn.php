@@ -10,12 +10,26 @@ echo '<div class="d-md-inline-block">
 } else {
 echo '<div class="d-md-inline-block">	';
 }
-echo '<a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+echo '<!-- <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
   <figcaption class="figure-caption text-center">Pāḷi-Eng</figcaption>
 </figure>
+</a> -->
+
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+
+
+
+<figure class="figure dropup">
+  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
+<figcaption class="figure-caption text-center">Pāḷi Texts</figcaption>   
+</figure>	  
 </a>
+  <ul class="dropdown-menu" aria-labelledby="MenuRussian">
+    <li><a class="dropdown-item" target="" href="' . $mainreadlink . '">Table of Content</a></li>
+    <li><a class="dropdown-item" target="" href="' . $mainscpage . '">SC Light</a></li>
+  </ul>
 
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">

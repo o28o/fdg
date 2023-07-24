@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <?php
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
@@ -344,7 +343,7 @@ window.addEventListener('pageshow', function(event) {
 
 
 <!-- Portfolio Section-->
-<section class="page-section portfolio">
+<section class="mt-3 portfolio">
 <div class="container text-center">
 
 <div style="max-width: 450px;" class="container-lg mb-4">
@@ -352,7 +351,7 @@ window.addEventListener('pageshow', function(event) {
 <div class="container text-start">
 
 
- <div class="my-3">
+ <div class="my-1">
  <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
  </div>
  

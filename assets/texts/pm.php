@@ -186,6 +186,9 @@ Pārājikaṁ niṭṭhitaṁ </span>
  <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:16.0">Saṅghādisesa 2. Kāyasaṁsagga</a> <a href="/ru/sc/?q=bu-ss2#pli-tv-bu-vb-ss2:1.2.15.0">vb</a> Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmena saddhiṁ kāyasaṁsaggaṁ samāpajjeyya hatthaggāhaṁ vā veṇiggāhaṁ vā aññatarassa vā aññatarassa vā aṅgassa parāmasanaṁ, saṅghādiseso. </span>
 </div>     
  
+ 
+ <div class="level4">                                                    <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:20.0">Saṅghādisesa 6. Kuṭikāra</a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk6#pli-tv-bu-vb-sk6:">vb</a> Saññācikāya pana bhikkhunā kuṭiṁ kārayamānena assāmikaṁ attuddesaṁ pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso dvādasa vidatthiyo sugatavidatthiyā, tiriyaṁ sattantarā, bhikkhū abhinetabbā vatthudesanāya, tehi bhikkhūhi vatthu desetabbaṁ anārambhaṁ saparikkamanaṁ. Sārambhe ce bhikkhu vatthusmiṁ aparikkamane saññācikāya kuṭiṁ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṁ vā atikkāmeyya, saṅghādiseso.  </span>                                          </div>
+ 
 <!-- 
 
   "pli-tv-bu-pm:16.0": "Saṅghādisesa 2. Kāyasaṁsagga ",

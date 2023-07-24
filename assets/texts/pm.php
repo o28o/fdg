@@ -542,11 +542,11 @@ Pārājikaṁ niṭṭhitaṁ </span>
 <div class="level4">
  <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:215.0">Sekhiya 47. Hatthaniddhunaka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk47#pli-tv-bu-vb-sk47:1.3.1">vb</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
 </div>     
-
+<div class="level4">
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:216.0">Sekhiya 48. Sitthāvakāraka </a> <a href="/ru/sc/?q=pli-tv-bu-vb-sk48#pli-tv-bu-vb-sk48:1.3.1">vb</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>
+</div>     
 <!--
 
-  "pli-tv-bu-pm:216.0": "Sekhiya 48. Sitthāvakāraka ",
-  "pli-tv-bu-pm:216.1": "Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. ",
   "pli-tv-bu-pm:217.0": "Sekhiya 49. Jivhānicchāraka ",
   "pli-tv-bu-pm:217.1": "Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā. ",
   "pli-tv-bu-pm:218.0": "Sekhiya 50. Capucapukāraka ",

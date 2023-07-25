@@ -3,12 +3,12 @@ bupm=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/te
 vb=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-bu-vb 
 vbtrn=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-bu-vb
 
-type=Saṅghādisesa
-typeacr=ss
+type=Pācittiya
+typeacr=pc
 i=1
-
-
+last=10
 cd $vb/pli-tv-bu-vb-$typeacr
+
 
 while true; do
 next=$(( $i + 1 ))

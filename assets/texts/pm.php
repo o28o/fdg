@@ -156,8 +156,7 @@ yathā pure, tathā pacchā, pārājiko hoti asaṁvāso.
 Tatthāyasmante pucchāmi, kaccittha parisuddhā,
 dutiyampi pucchāmi, kaccittha parisuddhā,
 tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
-Pārājikaṁ niṭṭhitaṁ </span>
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 </div> 
            <div class="level4 my-3">
  <span class="level5">Pārājikaṁ niṭṭhitaṁ </span>
@@ -183,114 +182,176 @@ Pārājikaṁ niṭṭhitaṁ </span>
  <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:15.0">Saṅghādisesa 1. Sukkavissaṭṭhi</a> <a href="/ru/sc/?q=bu-ss1#pli-tv-bu-vb-ss1:2.1.13.1">vb</a> Sañcetanikā sukkavissaṭṭhi aññatra supinantā saṅghādiseso. </span>
 </div>    
 <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:16.0">Saṅghādisesa 2. Kāyasaṁsagga</a> <a href="/ru/sc/?q=bu-ss2#pli-tv-bu-vb-ss2:1.2.15.0">vb</a> Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmena saddhiṁ kāyasaṁsaggaṁ samāpajjeyya hatthaggāhaṁ vā veṇiggāhaṁ vā aññatarassa vā aññatarassa vā aṅgassa parāmasanaṁ, saṅghādiseso. </span>
-</div>     
- 
- 
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:16.0">Saṅghādisesa 2. Kāyasaṁsagga</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss2#pli-tv-bu-vb-ss2:1.2.15.0">vb</a> Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmena saddhiṁ kāyasaṁsaggaṁ samāpajjeyya hatthaggāhaṁ vā veṇiggāhaṁ vā aññatarassa vā aññatarassa vā aṅgassa parāmasanaṁ, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:17.0">Saṅghādisesa 3. Duṭṭhullavācā</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss3#pli-tv-bu-vb-ss3:1.2.14.0">vb</a> Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmaṁ duṭṭhullāhi vācāhi obhāseyya yathā taṁ yuvā yuvatiṁ methunupasaṁhitāhi, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:18.0">Saṅghādisesa 4. Attakāmapāricariya</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss4#pli-tv-bu-vb-ss4:1.2.19.0">vb</a> Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmassa santike attakāmapāricariyāya vaṇṇaṁ bhāseyya “etadaggaṁ bhagini pāricariyānaṁ yā mādisaṁ sīlavantaṁ kalyāṇadhammaṁ brahmacāriṁ etena dhammena paricareyyā”ti methunupasaṁhitena, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:19.0">Saṅghādisesa 5. Sañcaritta</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss5#pli-tv-bu-vb-ss5:2.2.13.0">vb</a> Yo pana bhikkhu sañcarittaṁ samāpajjeyya itthiyā vā purisamatiṁ purisassa vā itthimatiṁ, jāyattane vā jārattane vā, antamaso taṅkhaṇikāyapi, saṅghādiseso.
+</span>
+</div>
 <div class="level4">
 <span class="level5">
 <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:20.0">Saṅghādisesa 6. Kuṭikāra</a>
-<a href="/ru/sc/?q=pli-tv-bu-vb-ss6#pli-tv-bu-vb-ss6:1.6.6.0">vb</a>Saññācikāya pana bhikkhunā kuṭiṁ kārayamānena assāmikaṁ attuddesaṁ pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso dvādasa vidatthiyo sugatavidatthiyā, tiriyaṁ sattantarā, bhikkhū abhinetabbā vatthudesanāya, tehi bhikkhūhi vatthu desetabbaṁ anārambhaṁ saparikkamanaṁ. Sārambhe ce bhikkhu vatthusmiṁ aparikkamane saññācikāya kuṭiṁ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṁ vā atikkāmeyya, saṅghādiseso.
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss6#pli-tv-bu-vb-ss6:1.6.6.0">vb</a> Saññācikāya pana bhikkhunā kuṭiṁ kārayamānena assāmikaṁ attuddesaṁ pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso dvādasa vidatthiyo sugatavidatthiyā, tiriyaṁ sattantarā, bhikkhū abhinetabbā vatthudesanāya, tehi bhikkhūhi vatthu desetabbaṁ anārambhaṁ saparikkamanaṁ. Sārambhe ce bhikkhu vatthusmiṁ aparikkamane saññācikāya kuṭiṁ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṁ vā atikkāmeyya, saṅghādiseso.
 </span>
 </div>
-
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:27.0">Saṅghādisesa 13. Kuladūsaka</a> 
-<a href="/ru/sc/?q=pli-tv-bu-vb-ss13#pli-tv-bu-vb-ss13:1.8.10.0">vb</a> Bhikkhu paneva aññataraṁ gāmaṁ vā nigamaṁ vā upanissāya viharati kuladūsako pāpasamācāro, tassa kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tena duṭṭhāni dissanti ceva suyyanti ca, so bhikkhu bhikkhūhi evamassa vacanīyo “āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṁ te idha vāsenā”ti, evañca so bhikkhu bhikkhūhi vuccamāno te bhikkhū evaṁ vadeyya “chandagāmino ca bhikkhū, dosagāmino ca bhikkhū, mohagāmino ca bhikkhū, bhayagāmino ca bhikkhū tādisikāya āpattiyā ekaccaṁ pabbājenti, ekaccaṁ na pabbājentī”ti, so bhikkhu bhikkhūhi evamassa vacanīyo “māyasmā evaṁ avaca, na ca bhikkhū chandagāmino, na ca bhikkhū dosagāmino, na ca bhikkhū mohagāmino, na ca bhikkhū bhayagāmino, āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṁ te idha vāsenā”ti, evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, saṅghādiseso.                                                   </span>                                                              </div>
- 
-<!-- 
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:21.0">Saṅghādisesa 7. Vihārakāra</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss7#pli-tv-bu-vb-ss7:1.19.0">vb</a> Mahallakaṁ pana bhikkhunā vihāraṁ kārayamānena sassāmikaṁ attuddesaṁ bhikkhū abhinetabbā vatthudesanāya, tehi bhikkhūhi vatthu desetabbaṁ anārambhaṁ saparikkamanaṁ. Sārambhe ce bhikkhu vatthusmiṁ aparikkamane mahallakaṁ vihāraṁ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:22.0">Saṅghādisesa 8. Duṭṭhadosa</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss8#pli-tv-bu-vb-ss8:1.9.32.0">vb</a> Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto amūlakena pārājikena dhammena anuddhaṁseyya “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhu ca dosaṁ patiṭṭhāti, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:23.0">Saṅghādisesa 9. Aññabhāgiya</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss9#pli-tv-bu-vb-ss9:1.2.14.0">vb</a> Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto aññabhāgiyassa adhikaraṇassa kiñcidesaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁseyya “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā aññabhāgiyañceva taṁ adhikaraṇaṁ hoti kocideso lesamatto upādinno, bhikkhu ca dosaṁ patiṭṭhāti, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:24.0">Saṅghādisesa 10. Saṅghabheda</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss10#pli-tv-bu-vb-ss10:1.3.16.0">vb</a> Yo pana bhikkhu samaggassa saṅghassa bhedāya parakkameyya, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha tiṭṭheyya, so bhikkhu bhikkhūhi evamassa vacanīyo “māyasmā samaggassa saṅghassa bhedāya parakkami, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha aṭṭhāsi, sametāyasmā saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti, evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:25.0">Saṅghādisesa 11. Bhedānuvattaka</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss11#pli-tv-bu-vb-ss11:1.19.0">vb</a> Tasseva kho pana bhikkhussa bhikkhū honti anuvattakā vaggavādakā eko vā dve vā tayo vā, te evaṁ vadeyyuṁ “māyasmanto etaṁ bhikkhuṁ kiñci avacuttha, dhammavādī ceso bhikkhu, vinayavādī ceso bhikkhu, amhākañceso bhikkhu chandañca ruciñca ādāya voharati, jānāti, no bhāsati, amhākampetaṁ khamatī”ti, te bhikkhū bhikkhūhi evamassu vacanīyā “māyasmanto evaṁ avacuttha, na ceso bhikkhu dhammavādī, na ceso bhikkhu vinayavādī, māyasmantānampi saṅghabhedo ruccittha, sametāyasmantānaṁ saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti, evañca te bhikkhū bhikkhūhi vuccamānā tatheva paggaṇheyyuṁ, te bhikkhū bhikkhūhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ, iccetaṁ kusalaṁ, no ce paṭinissajjeyyuṁ, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:26.0">Saṅghādisesa 12. Dubbaca</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss12#pli-tv-bu-vb-ss12:1.26.0">vb</a> Bhikkhu paneva dubbacajātiko hoti uddesapariyāpannesu sikkhāpadesu bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karoti “mā maṁ āyasmanto kiñci avacuttha kalyāṇaṁ vā pāpakaṁ vā, ahampāyasmante na kiñci vakkhāmi kalyāṇaṁ vā pāpakaṁ vā, viramathāyasmanto mama vacanāyā”ti, so bhikkhu bhikkhūhi evamassa vacanīyo “māyasmā attānaṁ avacanīyaṁ akāsi, vacanīyamevāyasmā attānaṁ karotu, āyasmāpi bhikkhū vadatu sahadhammena, bhikkhūpi āyasmantaṁ vakkhanti sahadhammena, evaṁ saṁvaddhā hi tassa bhagavato parisā yadidaṁ aññamaññavacanena aññamaññavuṭṭhāpanenā”ti, evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, saṅghādiseso.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:27.0">Saṅghādisesa 13. Kuladūsaka</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ss13#pli-tv-bu-vb-ss13:1.8.10.0">vb</a> Bhikkhu paneva aññataraṁ gāmaṁ vā nigamaṁ vā upanissāya viharati kuladūsako pāpasamācāro, tassa kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tena duṭṭhāni dissanti ceva suyyanti ca, so bhikkhu bhikkhūhi evamassa vacanīyo “āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṁ te idha vāsenā”ti, evañca so bhikkhu bhikkhūhi vuccamāno te bhikkhū evaṁ vadeyya “chandagāmino ca bhikkhū, dosagāmino ca bhikkhū, mohagāmino ca bhikkhū, bhayagāmino ca bhikkhū tādisikāya āpattiyā ekaccaṁ pabbājenti, ekaccaṁ na pabbājentī”ti, so bhikkhu bhikkhūhi evamassa vacanīyo “māyasmā evaṁ avaca, na ca bhikkhū chandagāmino, na ca bhikkhū dosagāmino, na ca bhikkhū mohagāmino, na ca bhikkhū bhayagāmino, āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṁ te idha vāsenā”ti, evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, saṅghādiseso.
+</span>
+</div>
+                <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho āyasmanto terasa saṅghādisesā dhammā nava paṭhamāpattikā, cattāro yāvatatiyakā.
+Yesaṁ bhikkhu aññataraṁ vā aññataraṁ vā āpajjitvā yāvatīhaṁ jānaṁ paṭicchādeti, tāvatīhaṁ tena bhikkhunā akāmā parivatthabbaṁ.
+Parivutthaparivāsena bhikkhunā uttari chārattaṁ bhikkhumānattāya paṭipajjitabbaṁ,
+ciṇṇamānatto bhikkhu yattha siyā vīsatigaṇo bhikkhusaṅgho, tattha so bhikkhu abbhetabbo.
+Ekenapi ce ūno vīsatigaṇo bhikkhusaṅgho taṁ bhikkhuṁ abbheyya, so ca bhikkhu anabbhito, te ca bhikkhū gārayhā, ayaṁ tattha sāmīci.
+Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+dutiyampi pucchāmi, kaccittha parisuddhā,
+tatiyampi pucchāmi, kaccittha parisuddhā,
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
+</span>
+</div> 
 
-  "pli-tv-bu-pm:16.0": "Saṅghādisesa 2. Kāyasaṁsagga ",
-
-  "pli-tv-bu-pm:16.1": "Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmena saddhiṁ kāyasaṁsaggaṁ samāpajjeyya hatthaggāhaṁ vā veṇiggāhaṁ vā aññatarassa vā aññatarassa vā aṅgassa parāmasanaṁ, saṅghādiseso. ",
-
-  "pli-tv-bu-pm:17.0": "Saṅghādisesa 3. Duṭṭhullavācā ",
-  "pli-tv-bu-pm:17.1": "Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmaṁ duṭṭhullāhi vācāhi obhāseyya yathā taṁ yuvā yuvatiṁ methunupasaṁhitāhi, saṅghādiseso. ",
-  "pli-tv-bu-pm:18.0": "Saṅghādisesa 4. Attakāmapāricariya ",
-  "pli-tv-bu-pm:18.1": "Yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmassa santike attakāmapāricariyāya vaṇṇaṁ bhāseyya “etadaggaṁ bhagini pāricariyānaṁ yā mādisaṁ sīlavantaṁ kalyāṇadhammaṁ brahmacāriṁ etena dhammena paricareyyā”ti methunupasaṁhitena, saṅghādiseso. ",
-  "pli-tv-bu-pm:19.0": "Saṅghādisesa 5. Sañcaritta ",
-  "pli-tv-bu-pm:19.1": "Yo pana bhikkhu sañcarittaṁ samāpajjeyya itthiyā vā purisamatiṁ purisassa vā itthimatiṁ, jāyattane vā jārattane vā, antamaso taṅkhaṇikāyapi, saṅghādiseso. ",
-  "pli-tv-bu-pm:20.0": "Saṅghādisesa 6. Kuṭikāra ",
-  "pli-tv-bu-pm:20.1": "Saññācikāya pana bhikkhunā kuṭiṁ kārayamānena assāmikaṁ attuddesaṁ pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso dvādasa vidatthiyo sugatavidatthiyā, tiriyaṁ sattantarā, ",
-  "pli-tv-bu-pm:20.2": "bhikkhū abhinetabbā vatthudesanāya, tehi bhikkhūhi vatthu desetabbaṁ anārambhaṁ saparikkamanaṁ. ",
-  "pli-tv-bu-pm:20.3": "Sārambhe ce bhikkhu vatthusmiṁ aparikkamane saññācikāya kuṭiṁ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṁ vā atikkāmeyya, saṅghādiseso. ",
-  "pli-tv-bu-pm:21.0": "Saṅghādisesa 7. Vihārakāra ",
-  "pli-tv-bu-pm:21.1": "Mahallakaṁ pana bhikkhunā vihāraṁ kārayamānena sassāmikaṁ attuddesaṁ bhikkhū abhinetabbā vatthudesanāya, ",
-  "pli-tv-bu-pm:21.2": "tehi bhikkhūhi vatthu desetabbaṁ anārambhaṁ saparikkamanaṁ. ",
-  "pli-tv-bu-pm:21.3": "Sārambhe ce bhikkhu vatthusmiṁ aparikkamane mahallakaṁ vihāraṁ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, saṅghādiseso. ",
-  "pli-tv-bu-pm:22.0": "Saṅghādisesa 8. Duṭṭhadosa ",
-  "pli-tv-bu-pm:22.1": "Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto amūlakena pārājikena dhammena anuddhaṁseyya “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, ",
-  "pli-tv-bu-pm:22.2": "tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhu ca dosaṁ patiṭṭhāti, saṅghādiseso. ",
-  "pli-tv-bu-pm:23.0": "Saṅghādisesa 9. Aññabhāgiya ",
-  "pli-tv-bu-pm:23.1": "Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto aññabhāgiyassa adhikaraṇassa kiñcidesaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁseyya “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, ",
-  "pli-tv-bu-pm:23.2": "tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā aññabhāgiyañceva taṁ adhikaraṇaṁ hoti kocideso lesamatto upādinno, bhikkhu ca dosaṁ patiṭṭhāti, saṅghādiseso. ",
-  "pli-tv-bu-pm:24.0": "Saṅghādisesa 10. Saṅghabheda ",
-  "pli-tv-bu-pm:24.1": "Yo pana bhikkhu samaggassa saṅghassa bhedāya parakkameyya, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha tiṭṭheyya, so bhikkhu bhikkhūhi evamassa vacanīyo ",
-  "pli-tv-bu-pm:24.2": "“māyasmā samaggassa saṅghassa bhedāya parakkami, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha aṭṭhāsi, ",
-  "pli-tv-bu-pm:24.3": "sametāyasmā saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti, ",
-  "pli-tv-bu-pm:24.4": "evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya, ",
-  "pli-tv-bu-pm:24.5": "yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, ",
-  "pli-tv-bu-pm:24.6": "no ce paṭinissajjeyya, saṅghādiseso. ",
-  "pli-tv-bu-pm:25.0": "Saṅghādisesa 11. Bhedānuvattaka ",
-  "pli-tv-bu-pm:25.1": "Tasseva kho pana bhikkhussa bhikkhū honti anuvattakā vaggavādakā eko vā dve vā tayo vā, te evaṁ vadeyyuṁ ",
-  "pli-tv-bu-pm:25.2": "“māyasmanto etaṁ bhikkhuṁ kiñci avacuttha, ",
-  "pli-tv-bu-pm:25.3": "dhammavādī ceso bhikkhu, vinayavādī ceso bhikkhu, ",
-  "pli-tv-bu-pm:25.4": "amhākañceso bhikkhu chandañca ruciñca ādāya voharati, jānāti, no bhāsati, amhākampetaṁ khamatī”ti, ",
-  "pli-tv-bu-pm:25.5": "te bhikkhū bhikkhūhi evamassu vacanīyā ",
-  "pli-tv-bu-pm:25.6": "“māyasmanto evaṁ avacuttha, ",
-  "pli-tv-bu-pm:25.7": "na ceso bhikkhu dhammavādī, na ceso bhikkhu vinayavādī, ",
-  "pli-tv-bu-pm:25.8": "māyasmantānampi saṅghabhedo ruccittha, ",
-  "pli-tv-bu-pm:25.9": "sametāyasmantānaṁ saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti, ",
-  "pli-tv-bu-pm:25.10": "evañca te bhikkhū bhikkhūhi vuccamānā tatheva paggaṇheyyuṁ, te bhikkhū bhikkhūhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, ",
-  "pli-tv-bu-pm:25.11": "yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ, iccetaṁ kusalaṁ, ",
-  "pli-tv-bu-pm:25.12": "no ce paṭinissajjeyyuṁ, saṅghādiseso. ",
-  "pli-tv-bu-pm:26.0": "Saṅghādisesa 12. Dubbaca ",
-  "pli-tv-bu-pm:26.1": "Bhikkhu paneva dubbacajātiko hoti uddesapariyāpannesu sikkhāpadesu bhikkhūhi sahadhammikaṁ vuccamāno attānaṁ avacanīyaṁ karoti ",
-  "pli-tv-bu-pm:26.2": "“mā maṁ āyasmanto kiñci avacuttha kalyāṇaṁ vā pāpakaṁ vā, ahampāyasmante na kiñci vakkhāmi kalyāṇaṁ vā pāpakaṁ vā, ",
-  "pli-tv-bu-pm:26.3": "viramathāyasmanto mama vacanāyā”ti, ",
-  "pli-tv-bu-pm:26.4": "so bhikkhu bhikkhūhi evamassa vacanīyo ",
-  "pli-tv-bu-pm:26.5": "“māyasmā attānaṁ avacanīyaṁ akāsi, vacanīyamevāyasmā attānaṁ karotu, ",
-  "pli-tv-bu-pm:26.6": "āyasmāpi bhikkhū vadatu sahadhammena, bhikkhūpi āyasmantaṁ vakkhanti sahadhammena, ",
-  "pli-tv-bu-pm:26.7": "evaṁ saṁvaddhā hi tassa bhagavato parisā yadidaṁ aññamaññavacanena aññamaññavuṭṭhāpanenā”ti, ",
-  "pli-tv-bu-pm:26.8": "evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya, ",
-  "pli-tv-bu-pm:26.9": "yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, ",
-  "pli-tv-bu-pm:26.10": "no ce paṭinissajjeyya, saṅghādiseso. ",
-  "pli-tv-bu-pm:27.0": "Saṅghādisesa 13. Kuladūsaka ",
-  "pli-tv-bu-pm:27.1": "Bhikkhu paneva aññataraṁ gāmaṁ vā nigamaṁ vā upanissāya viharati kuladūsako pāpasamācāro, tassa kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tena duṭṭhāni dissanti ceva suyyanti ca, ",
-  "pli-tv-bu-pm:27.2": "so bhikkhu bhikkhūhi evamassa vacanīyo ",
-  "pli-tv-bu-pm:27.3": "“āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṁ te idha vāsenā”ti, ",
-  "pli-tv-bu-pm:27.4": "evañca so bhikkhu bhikkhūhi vuccamāno te bhikkhū evaṁ vadeyya ",
-  "pli-tv-bu-pm:27.5": "“chandagāmino ca bhikkhū, dosagāmino ca bhikkhū, mohagāmino ca bhikkhū, bhayagāmino ca bhikkhū tādisikāya āpattiyā ekaccaṁ pabbājenti, ekaccaṁ na pabbājentī”ti, ",
-  "pli-tv-bu-pm:27.6": "so bhikkhu bhikkhūhi evamassa vacanīyo ",
-  "pli-tv-bu-pm:27.7": "“māyasmā evaṁ avaca, na ca bhikkhū chandagāmino, na ca bhikkhū dosagāmino, na ca bhikkhū mohagāmino, na ca bhikkhū bhayagāmino, ",
-  "pli-tv-bu-pm:27.8": "āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṁ te idha vāsenā”ti, ",
-  "pli-tv-bu-pm:27.9": "evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya, ",
-  "pli-tv-bu-pm:27.10": "yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, ",
-  "pli-tv-bu-pm:27.11": "no ce paṭinissajjeyya, saṅghādiseso. ",
-  "pli-tv-bu-pm:28.1": "Uddiṭṭhā kho āyasmanto terasa saṅghādisesā dhammā nava paṭhamāpattikā, cattāro yāvatatiyakā. ",
-  "pli-tv-bu-pm:28.2": "Yesaṁ bhikkhu aññataraṁ vā aññataraṁ vā āpajjitvā yāvatīhaṁ jānaṁ paṭicchādeti, tāvatīhaṁ tena bhikkhunā akāmā parivatthabbaṁ. ",
-  "pli-tv-bu-pm:28.3": "Parivutthaparivāsena bhikkhunā uttari chārattaṁ bhikkhumānattāya paṭipajjitabbaṁ, ",
-  "pli-tv-bu-pm:28.4": "ciṇṇamānatto bhikkhu yattha siyā vīsatigaṇo bhikkhusaṅgho, tattha so bhikkhu abbhetabbo. ",
-  "pli-tv-bu-pm:28.5": "Ekenapi ce ūno vīsatigaṇo bhikkhusaṅgho taṁ bhikkhuṁ abbheyya, so ca bhikkhu anabbhito, te ca bhikkhū gārayhā, ayaṁ tattha sāmīci. ",
-  "pli-tv-bu-pm:28.6": "Tatthāyasmante pucchāmi, kaccittha parisuddhā, ",
-  "pli-tv-bu-pm:28.7": "dutiyampi pucchāmi, kaccittha parisuddhā, ",
-  "pli-tv-bu-pm:28.8": "tatiyampi pucchāmi, kaccittha parisuddhā, ",
-  "pli-tv-bu-pm:28.9": "parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. ",
-  "pli-tv-bu-pm:28.10": "Saṅghādiseso niṭṭhito ",
-  "pli-tv-bu-pm:29.0": "Aniyatuddeso ",
-  "pli-tv-bu-pm:29.1": "Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti. ",
-  "pli-tv-bu-pm:30.0": "Aniyata 1. Paṭhamaaniyata ",
--->
+           <div class="level4 my-3">
+ <span class="level5">Saṅghādiseso niṭṭhito </span>
+</div> 
+       
               
            </div> <!-- mt div -->
          </div> <!-- collapsediv -->     
 
 
+						<div class="level2 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#ayCollapse">+</span>
+	<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:29.0"><h3>Aniyatuddeso</h3></a>
+</div>
+				  <div class="collapse" id="ayCollapse"> 
+            <div class="mt-3">
+   
+           <div class="level4 my-3">
+ <span class="level5">Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti. </span>
+</div>              
+              
+<div class="level4">
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:9.0">Pārājika 1. Methunadhamma</a> <a href="/ru/sc/?q=bu-pj1#pli-tv-bu-vb-pj1:7.1.16.1">vb</a> Yo pana bhikkhu bhikkhūnaṁ sikkhāsājīvasamāpanno sikkhaṁ appaccakkhāya dubbalyaṁ anāvikatvā methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatāyapi, pārājiko hoti asaṁvāso. </span>
+</div>    
+ 
+<div class="level4">
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:10.0">Pārājika 2. Adinnādāna</a> <a href="/ru/sc/?q=bu-pj2#pli-tv-bu-vb-pj2:2.28.1">vb</a> 
+Yo pana bhikkhu gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya,
+yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corosi bālosi mūḷhosi thenosīti, tathārūpaṁ bhikkhu adinnaṁ ādiyamāno ayampi pārājiko hoti asaṁvāso. </span>
+</div>     
+ 
+           <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho āyasmanto dve aniyatā dhammā.
+Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+dutiyampi pucchāmi, kaccittha parisuddhā,
+tatiyampi pucchāmi, kaccittha parisuddhā,
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
+</div> 
+           <div class="level4 my-3">
+ <span class="level5">Aniyato niṭṭhito </span>
+</div> 
+             
+           </div> <!-- mt div -->
+         </div> <!-- collapsediv -->     
 
 
-			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:29.0"><h3>Aniyatuddeso</h3></a>
+						<div class="level2 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#npCollapse">+</span>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:33.0"><h3>Nissaggiyapācittiyā</h3></a>
+</div>
+				  <div class="collapse" id="npCollapse"> 
+            <div class="mt-3">
+   
+           <div class="level4 my-3">
+ <span class="level5">Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti. </span>
+</div>              
+              
+<div class="level4">
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:9.0">Pārājika 1. Methunadhamma</a> <a href="/ru/sc/?q=bu-pj1#pli-tv-bu-vb-pj1:7.1.16.1">vb</a> Yo pana bhikkhu bhikkhūnaṁ sikkhāsājīvasamāpanno sikkhaṁ appaccakkhāya dubbalyaṁ anāvikatvā methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatāyapi, pārājiko hoti asaṁvāso. </span>
+</div>    
+ 
+<div class="level4">
+ <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:10.0">Pārājika 2. Adinnādāna</a> <a href="/ru/sc/?q=bu-pj2#pli-tv-bu-vb-pj2:2.28.1">vb</a> 
+Yo pana bhikkhu gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya,
+yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corosi bālosi mūḷhosi thenosīti, tathārūpaṁ bhikkhu adinnaṁ ādiyamāno ayampi pārājiko hoti asaṁvāso. </span>
+</div>     
+ 
+
+
+           <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho āyasmanto dve aniyatā dhammā.
+Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+dutiyampi pucchāmi, kaccittha parisuddhā,
+tatiyampi pucchāmi, kaccittha parisuddhā,
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
+</div> 
+           <div class="level4 my-3">
+ <span class="level5">Aniyato niṭṭhito </span>
+</div> 
+             
+           </div> <!-- mt div -->
+         </div> <!-- collapsediv -->     
+
+
+
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:65.0"><h3>Suddhapācittiyā</h3></a>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:159.0"><h3>Pāṭidesanīya</h3></a>
 			
@@ -303,8 +364,6 @@ Pārājikaṁ niṭṭhitaṁ </span>
     data-bs-toggle="collapse" data-bs-target="#skCollapse">+</span>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:165.0"><h3>Sekhiya</h3></a>
 </div>
-
-
 				  <div class="collapse" id="skCollapse"> 
             <div class="mt-3">
   
@@ -476,30 +535,7 @@ Pārājikaṁ niṭṭhitaṁ </span>
 
                 </div>
               </div>
-             <!-- 
 
-pli-tv-bu-pm:233.0|Sekhiya 65. Pallatthika
-pli-tv-bu-pm:233.1|Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:234.0|Sekhiya 66. Veṭhita
-pli-tv-bu-pm:234.1|Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:235.0|Sekhiya 67. Oguṇṭhita
-pli-tv-bu-pm:235.1|Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:236.0|Sekhiya 68. Chamā
-pli-tv-bu-pm:236.1|Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:237.0|Sekhiya 69. Nīcāsana
-pli-tv-bu-pm:237.1|Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:238.0|Sekhiya 70. Ṭhita
-pli-tv-bu-pm:238.1|Na ṭhito nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:239.0|Sekhiya 71. Pacchatogamana
-pli-tv-bu-pm:239.1|Na pacchato gacchanto purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:240.0|Sekhiya 72. Uppathenagamana
-pli-tv-bu-pm:240.1|Na uppathena gacchanto pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:241.0|Sekhiya 73. Ṭhitouccāra
-pli-tv-bu-pm:241.1|Na ṭhito agilāno uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:242.0|Sekhiya 74. Hariteuccāra
-pli-tv-bu-pm:242.1|Na harite agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā.
-pli-tv-bu-pm:243.0|Sekhiya 75. Udakeuccāra
-      -->
            <!-- vagga -->   
            
                      <div class="level4 my-3">

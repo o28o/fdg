@@ -115,8 +115,8 @@ if (isset($_GET['q'])) {
 }
 ?>
 
-<div style="position: relative;">
-  <input name="q" style="z-index: 9;     flex-grow: 1;" type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
+<div style="position: relative; flex-grow: 1;">
+  <input name="q" style="z-index: 9;" type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
   <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>

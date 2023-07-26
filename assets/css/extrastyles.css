@@ -289,8 +289,12 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 }
 
 @media (max-width: 768px) {
-  .imgonmain {
+.imgonmain {
     max-width: 95%;
   }
+  
+.searchinput {
+   width:230px; 
+ }
    
 }

@@ -332,30 +332,35 @@ patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'
 function grepbasefile {
 tmponl=tmponl.$rand
 
-#splitpattern=`echo $pattern | sed 's@|@ @g' | sed 's@(@@g' | sed 's@)@@g'`
+patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@(@@g' | sed 's@)@@g' `
+
 #revertlater=$pattern
 #splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
 
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
+#nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
 
-
-command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' -print0 "
-for i in $pattern
+command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' "
+for i in $patternforfind
 do
 command+=`echo -n '-exec grep -q "'$i'" {} \; '` 
 done
 command+=' -print'
-eval "$command" > tstout
-#$tmponl 
+#echo  "$command" >> command
+eval "$command" > $tmponl 
 
-grep -E "($onltextindex)" $tmponl 
-exit 1
+# Чтение содержимого файла в массив с помощью mapfile (readarray)
+mapfile -t onl_array < $tmponl
+
+# Вывод содержимого массива для проверки
+for line in "${onl_array[@]}"; do
+grep -HE "$pattern" $line
+done > $tmponl
+cat $tmponl
 #onltextindex=`for i in $splitpattern
 #do
 #grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -Vf | uniq 
 #done | sort -Vf | uniq -c | sort | awk '{print $1, $2}'| grep "^$splitarraylen" | awk -F'"' '{print $2}' | xargs | sed 's@ @:|@g' | sed 's@$@:@g'`
 #pattern=$revertlater
-
 }
 fileprefix=${fileprefix}-onl
 fortitle="${fortitle} Matching Mode"
@@ -980,12 +985,12 @@ fi
 
 if [[ "$@" == *"-onl"* ]]
 then
-if [[ $pattern == *"("* ]] && [[ $pattern == *")"* ]] 
-then
-pattern=`echo $pattern | sed 's@ @|@g' `
-else
-pattern=`echo $pattern | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' `
-fi
+ if [[ $pattern == *"("* ]] && [[ $pattern == *")"* ]] 
+ then
+ pattern=`echo $pattern | sed 's@ @|@g' `
+ else
+ pattern=`echo $pattern | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' `
+ fi
 fi
 
 checkifalreadydone

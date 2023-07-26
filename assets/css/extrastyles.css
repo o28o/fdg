@@ -11,7 +11,7 @@
 #clearbtn {
   position: absolute;
   top: 53%;
-  right: 4px;
+  right: 3px;
   transform: translateY(-50%);
   font-size: 12px;
   transition: background-color 0.3s;

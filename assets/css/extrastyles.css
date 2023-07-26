@@ -39,9 +39,20 @@ background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
   z-index:9999;
 }
 
+.searchinput {
+  z-index: 9; 
+  width: 100%;
+}
+
+.searchinputdiv {
+	position: relative; 
+	flex-grow: 1;
+}
+
 .searchbar {
   z-index:1;
 }
+
 ::-webkit-scrollbar {
 width: 16px;
 height: 16px; }
@@ -281,10 +292,5 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
   .imgonmain {
     max-width: 95%;
   }
-  
- 
- .searchinput {
-   width:230px; 
- } 
-  
+   
 }

@@ -332,7 +332,7 @@ patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'
 function grepbasefile {
 tmponl=tmponl.$rand
 
-patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@(@@g' | sed 's@)@@g' `
+patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' `
 
 #revertlater=$pattern
 #splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
@@ -342,7 +342,7 @@ patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@(@@g' | sed 's@)@@g' `
 command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' "
 for i in $patternforfind
 do
-command+=`echo -n '-exec grep -q "'$i'" {} \; '` 
+command+=`echo -n '-exec grep -qE "'$i'" {} \; '` 
 done
 command+=' -print'
 #echo  "$command" >> command

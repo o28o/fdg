@@ -18130,11 +18130,33 @@ window.addEventListener('pageshow', function(event) {
 </div><!-- Container -->
 </div>
 </div>
+
 <script src="/assets/js/tocjs.js"></script>
 </div>
 
+
+
 <?php
 if ( $lang == "ru" ) {
+
+echo '</br>
+ <div class="container">
+   <!-- <div class="mt-3">
+      <button class="btn btn-primary btn-sm" type="button" id="collapseAll">+</button>
+    </div> -->
+    <div class="mt-3">
+   
+<div class="level1 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#bupmCollapse">+</span>
+  <h2><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:0.2">Bhikkhupātimokkha</a></h2>
+</div>
+      <div class="collapse " id="bupmCollapse">
+      <script src="/assets/js/pmjs.js"></script>
+      ';
+include $basedir . "/assets/texts/vinaya/bupm.php";
+
+
 include 'assets/common/horizontalMenuRu.php'; 
 } else {
 include 'assets/common/horizontalMenuEn.php'; 

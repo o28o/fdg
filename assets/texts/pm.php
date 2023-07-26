@@ -288,14 +288,17 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </div>              
               
 <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:9.0">Pārājika 1. Methunadhamma</a> <a href="/ru/sc/?q=bu-pj1#pli-tv-bu-vb-pj1:7.1.16.1">vb</a> Yo pana bhikkhu bhikkhūnaṁ sikkhāsājīvasamāpanno sikkhaṁ appaccakkhāya dubbalyaṁ anāvikatvā methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatāyapi, pārājiko hoti asaṁvāso. </span>
-</div>    
- 
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:30.0">Aniyata 1. Paṭhamaaniyata</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ay1#pli-tv-bu-vb-ay1:1.32.0">vb</a> Yo pana bhikkhu mātugāmena saddhiṁ eko ekāya raho paṭicchanne āsane alaṅkammaniye nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā tiṇṇaṁ dhammānaṁ aññatarena vadeyya pārājikena vā saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno tiṇṇaṁ dhammānaṁ aññatarena kāretabbo pārājikena vā saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayaṁ dhammo aniyato.
+</span>
+</div>
 <div class="level4">
- <span class="level5"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:10.0">Pārājika 2. Adinnādāna</a> <a href="/ru/sc/?q=bu-pj2#pli-tv-bu-vb-pj2:2.28.1">vb</a> 
-Yo pana bhikkhu gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya,
-yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corosi bālosi mūḷhosi thenosīti, tathārūpaṁ bhikkhu adinnaṁ ādiyamāno ayampi pārājiko hoti asaṁvāso. </span>
-</div>     
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:31.0">Aniyata 2. Dutiyaaniyata</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ay2#pli-tv-bu-vb-ay2:1.19.0">vb</a> Na heva kho pana paṭicchannaṁ āsanaṁ hoti nālaṅkammaniyaṁ, alañca kho hoti mātugāmaṁ duṭṭhullāhi vācāhi obhāsituṁ, yo pana bhikkhu tathārūpe āsane mātugāmena saddhiṁ eko ekāya raho nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā dvinnaṁ dhammānaṁ aññatarena vadeyya saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno dvinnaṁ dhammānaṁ aññatarena kāretabbo saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayampi dhammo aniyato.
+</span>
+</div>
  
            <div class="level4 my-3">
  <span class="level5">Uddiṭṭhā kho āyasmanto dve aniyatā dhammā.

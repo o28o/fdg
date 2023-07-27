@@ -14,7 +14,7 @@ if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
 echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon fa-solid fa-book-bookmark"></i>
-  <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Тексты</figcaption>
+  <figcaption class="horiz-menu-item figure-caption text-center">Читать Pāḷi</figcaption>
 </figure>
 </a>';
 } else {

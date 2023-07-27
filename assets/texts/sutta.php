@@ -12,7 +12,7 @@ $mainscpage = $mainpage . '/sc';
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/assets/css/styles.css" rel="stylesheet" />
-<link href="/assets/css/tocstyle.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <!-- Favicon-->
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 

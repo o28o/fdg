@@ -126,7 +126,7 @@ dn22 mn141
 </p>
 </p>';
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
-$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22#dn22:18.18>dn22</a> <a href=/ru/sc/?q=mn141#mn141:13.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22#dn22:18.18>dn22</a> <a href=/ru/sc/?q=mn141#mn141:16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 Что такое, монахи, боль?</br>
 </br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
@@ -517,7 +517,7 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
 $mainscrollmodalheader = 'Definition of Dukkha in Suttas';
 
 $mainscrollmodal = '<p class="">
-From <a href="/sc/?q=dn22">dn22</a> <a href="/sc/?q=mn141">mn141</a></br>
+From <a href="/sc/?q=dn22#dn22:18.18">dn22</a> <a href="/sc/?q=mn141#mn141:16.1>mn141</a></br>
 <h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 “And what is pain?</br></br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ dukkhaṁ</strong> kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>

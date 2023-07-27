@@ -387,8 +387,6 @@ if (document.location.search) {
 	  <li><span class="abbr">kp</span> Khuddakapāṭha</li>
   </ul>
   </div><div>
-  <p>Сутты собраные в серии должны быть указаны в точности, на suttacentral.net.
-  (К примеру Dhp и некоторые из SN и AN.)</p>
 </div>
 `;
 }

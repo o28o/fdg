@@ -73,8 +73,8 @@ include 'scripts/opentexts.php';
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links"><?php echo $menulinks;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
-<li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
-									<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a></p></li>		
+<li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/read.php">En</a> 
+									<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/read.php">Ru</a></p></li>		
                     </ul>
                 </div>
             </div>
@@ -340,14 +340,17 @@ window.addEventListener('pageshow', function(event) {
 <section class="mt-3 portfolio">
 <div class="container text-center">
 
-<div style="max-width: 450px;" class="container-lg my-3">
+<div style="max-width: 450px;" class="container-lg mt-3 mb-5">
 
-<div class="container text-start">
+<div class="container text-start input-group-append ">
 
- <div class="">
- <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
+ <div class="level1 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" id="collapseAll">+</span>
+  <h2>Dhamma</h2>
  </div>
- <div class="my-3">
+ 
+ <div class="my-2">
  <div class="level1">
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#dnCollapse">Dīgha Nikāya</a></h2>
@@ -506,7 +509,7 @@ window.addEventListener('pageshow', function(event) {
 </div> <!-- Nikaya collapse -->
 </div> <!-- Nikaya title + Nikaya collapse inside -->
 </div> <!-- Container --> 
-<div class="my-3">
+<div class="my-2">
  <div class="level1">
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#mnCollapse">Majjhima Nikāya</a></h2>
@@ -1218,7 +1221,7 @@ window.addEventListener('pageshow', function(event) {
 </div> <!-- Nikaya title + Nikaya collapse inside -->
 </div> <!-- Container -->
 </div>
-<div class="my-3">
+<div class="my-2">
  <div class="level1">
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#snCollapse">Saṁyutta Nikāya</a></h2>
@@ -11409,7 +11412,7 @@ window.addEventListener('pageshow', function(event) {
 	 </div>
 </div>
 </div>
-<div class="my-3">
+<div class="my-2">
  <div class="level1">
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#anCollapse">Aṅguttara Nikāya</a></h2>
@@ -18127,18 +18130,16 @@ window.addEventListener('pageshow', function(event) {
 </div>
 </div><!-- Container -->
 </div>
-</div>
+
 
 <script src="/assets/js/tocjs.js"></script>
 </div>
 
-
-
 <?php
 if ( $lang == "ru" ) {
 
-echo '</br>
- <div class="container text-start">
+echo '
+ <div class="container text-start mt-4">
    <!-- <div class="mt-3">
       <button class="btn btn-primary btn-sm" type="button" id="collapseAll">+</button>
     </div> -->
@@ -18147,14 +18148,19 @@ echo '</br>
 <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">+</span>
-  <h2><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:0.2">Bhikkhupātimokkha</a></h2>
+  <h2>Vinaya</h2>
 </div>
+    <h2 class="my-2"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:0.2">Bhikkhupātimokkha</a></h2>
       <div class="collapse " id="bupmCollapse">
       <script src="/assets/js/pmjs.js"></script>
       ';
 include $basedir . "/assets/texts/vinaya/bupm.php";
+}
+?>
+</div>
 
-
+<?php
+if ( $lang == "ru" ) {
 include 'assets/common/horizontalMenuRu.php'; 
 } else {
 include 'assets/common/horizontalMenuEn.php'; 

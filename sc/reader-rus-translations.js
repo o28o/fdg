@@ -445,8 +445,24 @@ function toggleThePali() {
 }
 
 function parseSlug(slug) {
-
-if ( slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)) {
+if (
+  slug === 'bu-as' ||
+  slug === 'bu-vb-as1-7' ||
+  slug === 'pli-tv-bu-vb-as1-7' ||
+  slug === 'bi-as' ||
+  slug === 'bi-vb-as1-7' ||
+  slug === 'pli-tv-bi-vb-as1-7'
+) {
+  const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
+  console.log('as case');
+  const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');
+  const bookWithoutNumber = fixforbivb.replace(/(\d+)/g, '');
+  const fixforbivb2 = slug.replace(/-([a-z]+)\d+/g, '');
+  const bookWithoutNumberAndRule = fixforbivb2.replace(/-\d+$/g, '');
+  const firstNum = slugParts[6];
+  
+  return `${bookWithoutNumberAndRule}/${bookWithoutNumber}1-7`;
+} else if ( slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)) {
     const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
   const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');
   const bookWithoutNumber = fixforbivb.replace(/(\d+)/g, '');

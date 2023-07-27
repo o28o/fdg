@@ -284,7 +284,6 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
            </div> <!-- mt div -->
          </div> <!-- collapsediv -->     
 
-
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#npCollapse">+</span>
@@ -323,15 +322,85 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
            </div> <!-- mt div -->
          </div> <!-- collapsediv -->     
 
-
-
+						<div class="level2 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pcCollapse">+</span>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:65.0"><h3>Suddhapācittiyā</h3></a>
+</div>
+				  <div class="collapse" id="pcCollapse"> 
+            <div class="mt-3">
+   
+           <div class="level4 my-3">
+ <span class="level5">Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti. </span>
+</div>              
+              
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:30.0">Aniyata 1. Paṭhamaaniyata</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ay1#pli-tv-bu-vb-ay1:1.32.0">vb</a> Yo pana bhikkhu mātugāmena saddhiṁ eko ekāya raho paṭicchanne āsane alaṅkammaniye nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā tiṇṇaṁ dhammānaṁ aññatarena vadeyya pārājikena vā saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno tiṇṇaṁ dhammānaṁ aññatarena kāretabbo pārājikena vā saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayaṁ dhammo aniyato.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:31.0">Aniyata 2. Dutiyaaniyata</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ay2#pli-tv-bu-vb-ay2:1.19.0">vb</a> Na heva kho pana paṭicchannaṁ āsanaṁ hoti nālaṅkammaniyaṁ, alañca kho hoti mātugāmaṁ duṭṭhullāhi vācāhi obhāsituṁ, yo pana bhikkhu tathārūpe āsane mātugāmena saddhiṁ eko ekāya raho nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā dvinnaṁ dhammānaṁ aññatarena vadeyya saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno dvinnaṁ dhammānaṁ aññatarena kāretabbo saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayampi dhammo aniyato.
+</span>
+</div>
+ 
+           <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho āyasmanto dve aniyatā dhammā.
+Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+dutiyampi pucchāmi, kaccittha parisuddhā,
+tatiyampi pucchāmi, kaccittha parisuddhā,
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
+</div> 
+           <div class="level4 my-3">
+ <span class="level5">Aniyato niṭṭhito </span>
+</div> 
+             
+           </div> <!-- mt div -->
+         </div> <!-- collapsediv -->     
+
+
+						<div class="level2 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pdCollapse">+</span>
 			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:159.0"><h3>Pāṭidesanīya</h3></a>
-			
-			
-			<!-- 
-			-->
-			
+</div>
+				  <div class="collapse" id="pdCollapse"> 
+            <div class="mt-3">
+   
+           <div class="level4 my-3">
+ <span class="level5">Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti. </span>
+</div>              
+              
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:30.0">Aniyata 1. Paṭhamaaniyata</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ay1#pli-tv-bu-vb-ay1:1.32.0">vb</a> Yo pana bhikkhu mātugāmena saddhiṁ eko ekāya raho paṭicchanne āsane alaṅkammaniye nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā tiṇṇaṁ dhammānaṁ aññatarena vadeyya pārājikena vā saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno tiṇṇaṁ dhammānaṁ aññatarena kāretabbo pārājikena vā saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayaṁ dhammo aniyato.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:31.0">Aniyata 2. Dutiyaaniyata</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-ay2#pli-tv-bu-vb-ay2:1.19.0">vb</a> Na heva kho pana paṭicchannaṁ āsanaṁ hoti nālaṅkammaniyaṁ, alañca kho hoti mātugāmaṁ duṭṭhullāhi vācāhi obhāsituṁ, yo pana bhikkhu tathārūpe āsane mātugāmena saddhiṁ eko ekāya raho nisajjaṁ kappeyya, tamenaṁ saddheyyavacasā upāsikā disvā dvinnaṁ dhammānaṁ aññatarena vadeyya saṅghādisesena vā pācittiyena vā, nisajjaṁ bhikkhu paṭijānamāno dvinnaṁ dhammānaṁ aññatarena kāretabbo saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayampi dhammo aniyato.
+</span>
+</div>
+ 
+           <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho āyasmanto dve aniyatā dhammā.
+Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+dutiyampi pucchāmi, kaccittha parisuddhā,
+tatiyampi pucchāmi, kaccittha parisuddhā,
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
+</div> 
+           <div class="level4 my-3">
+ <span class="level5">Aniyato niṭṭhito </span>
+</div> 
+             
+           </div> <!-- mt div -->
+         </div> <!-- collapsediv -->     
+  
 			<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#skCollapse">+</span>
@@ -525,9 +594,114 @@ Sekhiyā niṭṭhitā </span>
 </div>           
       
             </div> <!-- mt div -->
+    
+    
+  						<div class="level2 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#asCollapse">+</span>
+  			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:245.0"><h3>Adhikaraṇasamathā</h3></a>
+</div>
+				  <div class="collapse" id="asCollapse"> 
+            <div class="mt-3">
+   
+           <div class="level4 my-3">
+ <span class="level5">Ime kho panāyasmanto satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti.
+</span>
+</div>              
+            <div class="level4 my-3">
+ <span class="level5">Uppannuppannānaṁ adhikaraṇānaṁ samathāya vūpasamāya:  
+</span>
+</div>                    
+
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:247.0">Adhikaraṇasamatha 1.</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-as1-7#pli-tv-bu-vb-as1:2.2">vb</a> Sammukhāvinayo dātabbo.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:248.0">Adhikaraṇasamatha 2.</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-as1-7#pli-tv-bu-vb-as2:1.1">vb</a> Sativinayo dātabbo. 
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:249.0">Adhikaraṇasamatha 3.</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-as1-7#pli-tv-bu-vb-as3:1.1">vb</a> Amūḷhavinayo dātabbo.  
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:250.0">Adhikaraṇasamatha 4.</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-as1-7#pli-tv-bu-vb-as4:1.1">vb</a> Paṭiññāya kāretabbaṁ.  
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:251.0">Adhikaraṇasamatha 5.</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-as1-7#pli-tv-bu-vb-as5:1.1">vb</a> Yebhuyyasikā. 
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:252.0">Adhikaraṇasamatha 6.</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-as1-7#pli-tv-bu-vb-as6:1.1">vb</a> Tassapāpiyasikā. 
+</span>
+</div>
+ <div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:253.0">Adhikaraṇasamatha 7.</a>
+<a href="/ru/sc/?q=pli-tv-bu-vb-as1-7#pli-tv-bu-vb-as7:1.1">vb</a> Tiṇavatthārakoti. 
+</span>
+</div>
+           <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho āyasmanto satta adhikaraṇasamathā dhammā.
+Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+dutiyampi pucchāmi, kaccittha parisuddhā,
+tatiyampi pucchāmi, kaccittha parisuddhā,
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
+</span>
+</div> 
+           <div class="level4 my-3">
+ <span class="level5">Adhikaraṇasamathā niṭṭhitā </span>
+</div> 
+           
+             
+           </div> <!-- mt div -->
+           
+            <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhaṁ kho āyasmanto nidānaṁ,
+uddiṭṭhā cattāro pārājikā dhammā,
+uddiṭṭhā terasa saṅghādisesā dhammā,
+uddiṭṭhā dve aniyatā dhammā,
+uddiṭṭhā tiṁsa nissaggiyā pācittiyā dhammā,
+uddiṭṭhā dvenavuti pācittiyā dhammā,
+uddiṭṭhā cattāro pāṭidesanīyā dhammā,
+uddiṭṭhā sekhiyā dhammā,
+uddiṭṭhā satta adhikaraṇasamathā dhammā.
+Ettakaṁ tassa bhagavato suttāgataṁ suttapariyāpannaṁ anvaddhamāsaṁ uddesaṁ āgacchati.
+Tattha sabbeheva samaggehi sammodamānehi avivadamānehi sikkhitabbanti.
+</span>
+</div> 
+                    
+<div class="level4 my-3">
+ <span class="level5">Vitthāruddeso pañcamo.
+ </span>
+</div> 
+<div class="level4 my-3">
+ <span class="level5">Bhikkhupātimokkhaṁ niṭṭhitaṁ
+ </span>
+</div> 
+<div class="level4 my-3">
+ <span class="level5">Namo tassa bhagavato arahato sammāsambuddhassa    
+ </span>
+</div> 
+   
+         </div> <!-- collapsediv -->     
+  
+
            </div> <!-- collapsediv -->
-			
-			<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:245.0"><h3>Adhikaraṇasamathā</h3></a>
           </div>
 
 

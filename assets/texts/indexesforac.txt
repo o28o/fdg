@@ -4389,6 +4389,10 @@ bi-vb-pd2-8
 bi-vb-sk1
 bi-vb-sk75
 bi-vb-as1-7
+bu-as1-7
+bi-as1-7
+bu-pm
+bi-pm
 pvr1.1
 pvr1.2
 pvr1.3

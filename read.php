@@ -344,11 +344,9 @@ window.addEventListener('pageshow', function(event) {
 
 <div class="container text-start">
 
-
  <div class="">
  <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
  </div>
- 
  <div class="my-3">
  <div class="level1">
  <h2><a href=# data-bs-toggle="collapse"
@@ -18140,7 +18138,7 @@ window.addEventListener('pageshow', function(event) {
 if ( $lang == "ru" ) {
 
 echo '</br>
- <div class="container">
+ <div class="container text-start">
    <!-- <div class="mt-3">
       <button class="btn btn-primary btn-sm" type="button" id="collapseAll">+</button>
     </div> -->

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dhammā</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-1.13.5/cr-1.7.0/rr-1.4.1/sl-1.7.0/sr-1.3.0/datatables.min.css" rel="stylesheet">
+</head>
+<body>
+      <h1>Dhammā</h1>
+    <table id="wordTable" class="display">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Gender</th>
+                <th>Declention</th>
+                <th>Quantity</th>
+                <th>Of</th>
+                <th>Word</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>noun</td>
+                <td>masc</td>
+                <td>voc</td>
+                <td>sg</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+            <tr>
+                <td>adj</td>
+                <td>fem</td>
+                <td>nom</td>
+                <td>sg</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+            <tr>
+                <td>noun</td>
+                <td>masc</td>
+                <td>instr</td>
+                <td>sg</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+            <tr>
+                <td>noun</td>
+                <td>masc</td>
+                <td>abl</td>
+                <td>sg</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+            <tr>
+                <td>noun</td>
+                <td>masc</td>
+                <td>voc</td>
+                <td>pl</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+            <tr>
+                <td>adj</td>
+                <td>masc</td>
+                <td>nom</td>
+                <td>pl</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+            <tr>
+                <td>noun</td>
+                <td>masc</td>
+                <td>nom</td>
+                <td>pl</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+            <tr>
+                <td>adj</td>
+                <td>fem</td>
+                <td>nom</td>
+                <td>pl</td>
+                <td>of</td>
+                <td>dhamma</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-1.13.5/cr-1.7.0/rr-1.4.1/sl-1.7.0/sr-1.3.0/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#wordTable").DataTable({
+                paging: false // Отключение пагинации
+            });
+        });
+    </script>
+</body>
+</html>

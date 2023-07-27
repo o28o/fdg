@@ -340,7 +340,7 @@ window.addEventListener('pageshow', function(event) {
 <section class="mt-3 portfolio">
 <div class="container text-center">
 
-<div style="max-width: 450px;" class="container-lg mt-3 mb-5">
+<div style="max-width: 450px;" class="container-lg my-4">
 
 <div class="container text-start input-group-append ">
 

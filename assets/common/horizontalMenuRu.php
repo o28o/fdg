@@ -21,7 +21,7 @@ echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
  echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon fa-solid fa-bolt"></i>
-  <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Инд</figcaption>
+  <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Индекс</figcaption>
 </figure>
 </a>' ;
 }

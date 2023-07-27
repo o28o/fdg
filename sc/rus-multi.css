@@ -47,7 +47,6 @@ body.dark {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 5px;
 }
 
 #citation {
@@ -72,8 +71,8 @@ body.dark {
 }
 
 #home-button {
-  position:relative;  
-  top:-2px;
+  position:relative; 
+  top: -2px;
 }
 .dark #citation {
   background-color: var(--dark-blue);

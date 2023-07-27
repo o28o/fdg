@@ -42,7 +42,7 @@ echo '<!--
 
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup d-md-inline-block">
-    <i class="menu-icon fa-solid fa-link"></i>
+    <i class="menu-icon fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">на Англ.</figcaption>   
 </figure>	  
 </a>

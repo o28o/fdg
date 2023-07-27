@@ -255,6 +255,8 @@ if (document.location.search) {
 } else {
   suttaArea.innerHTML = `<div class="instructions">
   <p>Citations must exactly match those found on SuttaCentral.net. Separate chapter and sutta with a period. The following collections work. Click them to add to input box.</p>
+    <p>Suttas that are part of a series require that you enter the exact series. 
+  (Such as Dhp and some SN and AN.)</p>
   <div class="lists">
 
   <div class="suttas">
@@ -266,10 +268,10 @@ if (document.location.search) {
       <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
   </ul>
   </div><div>
-  <h2>Vinaya</h2>
+  <!-- <h2>Vinaya</h2> -->
   <div class="vinaya">
   <div>
-  <h3>Bhikkhu</h3>
+  <h3>Bhikkhu Vinaya</h3>
 <ul>
 <li><span class="abbr">bu-pj</span> Pārājikā</li>
 <li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
@@ -281,7 +283,7 @@ if (document.location.search) {
 <li><span class="abbr">bu-as</span> Adhikarana-samatha</li>
 </ul>
 </div><div>
-<h3>Bhikkhuni</h3>
+<h3>Bhikkhuni Vinaya</h3>
 <ul>
 <li><span class="abbr">bi-pj</span> Pārājikā</li>
 <li><span class="abbr">bi-ss</span> Saṅghādisesā</li>
@@ -298,19 +300,17 @@ if (document.location.search) {
 </ul>
 </div>
   </div></div>
-  <h2>Other texts</h2>
+  <h2>Other Texts</h2>
   <ul>
-      <li><span class="abbr">kp</span> Khuddakapāṭha</li>
-      <li><span class="abbr">dhp</span> Dhammapada</li>
       <li><span class="abbr">ud</span> Udāna</li>
       <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
+      <li><span class="abbr">dhp</span> Dhammapada</li>
       <li><span class="abbr">snp</span> Sutta-nipāta</li>
       <li><span class="abbr">thag</span> Theragāthā</li>
       <li><span class="abbr">thig</span> Therīgāthā</li>
+	  <li><span class="abbr">kp</span> Khuddakapāṭha</li>
   </ul>
   </div><div>
-  <p>Suttas that are part of a series require that you enter the exact series. 
-  (Such as Dhp and some SN and AN.)</p>
 </div>
 `;
 }

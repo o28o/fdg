@@ -346,7 +346,7 @@ if (document.location.search) {
  <!-- <h2>Виная</h2> -->
   <div class="vinaya">
   <div>
-  <h3>Bhikkhu Vinaya</h3>
+  <h3>Бхиккху Виная</h3>
 <ul>
 <li><span class="abbr">bu-pm</span> <a href="/ru/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
 <li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:8.0"> Pārājikā</a></li></li>
@@ -359,7 +359,7 @@ if (document.location.search) {
 <li><span class="abbr">bu-as</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:245.0"> Adhikarana-samatha</a></li></li>
 </ul>
 </div><div>
-<h3>Bhikkhuni</h3>
+<h3>Бхиккхуни Виная</h3>
 <ul>
 <li><span class="abbr">bi-pj</span> Pārājikā</li>
 <li><span class="abbr">bi-ss</span> Saṅghādisesā</li>
@@ -378,13 +378,13 @@ if (document.location.search) {
   </div></div>
   <h2>Другие тексты</h2>
   <ul>
-      <li><span class="abbr">kp</span> Khuddakapāṭha</li>
-      <li><span class="abbr">dhp</span> Dhammapada</li>
       <li><span class="abbr">ud</span> Udāna</li>
       <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
-     <li><span class="abbr">snp</span> Sutta-nipāta</li>
+      <li><span class="abbr">dhp</span> Dhammapada</li>
+      <li><span class="abbr">snp</span> Sutta-nipāta</li>
       <li><span class="abbr">thag</span> Theragāthā</li>
       <li><span class="abbr">thig</span> Therīgāthā</li>
+	  <li><span class="abbr">kp</span> Khuddakapāṭha</li>
   </ul>
   </div><div>
   <p>Сутты собраные в серии должны быть указаны в точности, на suttacentral.net.

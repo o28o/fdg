@@ -75,7 +75,7 @@ html{
 
 #home-button {
   position:relative;  
-  top:-2px;
+  top:0px;
 }
 .dark #citation {
   background-color: var(--dark-blue);

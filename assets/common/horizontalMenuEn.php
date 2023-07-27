@@ -1,4 +1,5 @@
 <?php
+
 if (( basename($_SERVER['REQUEST_URI']) != "")) {
 echo '<div class="d-md-inline-block">	
 <a class="text-decoration-none mx-1" href="' . $mainpage . '">
@@ -10,17 +11,23 @@ echo '<div class="d-md-inline-block">
 } else {
 echo '<div class="d-md-inline-block">	';
 }
-echo '<!-- <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
+echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
-  <figcaption class="figure-caption text-center">Pāḷi-Eng</figcaption>
+  <figcaption class="figure-caption text-center">Read Pāḷi</figcaption>
 </figure>
-</a> -->
-
+</a>';
+} else {
+ echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+<figure class="figure text-decoration-none">
+    <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-bolt"></i>
+<figcaption class="figure-caption text-center">Pāḷi Index</figcaption>
+</figure>
+</a>' ;
+}
+echo '<!--
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
-
-
-
 <figure class="figure dropup">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
 <figcaption class="figure-caption text-center">Pāḷi Texts</figcaption>   
@@ -30,10 +37,10 @@ echo '<!-- <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
     <li><a class="dropdown-item" target="" href="' . $mainreadlink . '">Table of Content</a></li>
     <li><a class="dropdown-item" target="" href="' . $mainscpage . '">SC Light</a></li>
   </ul>
-
+-->
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
-  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
+    <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-link"></i>
 <figcaption class="figure-caption text-center">External</figcaption>   
 </figure>	  
 </a>

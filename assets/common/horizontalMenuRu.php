@@ -10,13 +10,22 @@ echo '<div class="d-md-inline-block">
 } else  {
 echo '<div class="d-md-inline-block">	';
 }
-echo '<!-- <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
+if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
+echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book-bookmark"></i>
   <figcaption class="figure-caption text-center">Pāḷi Тексты</figcaption>
 </figure>
-</a> -->
-
+</a>';
+} else {
+ echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+<figure class="figure text-decoration-none">
+  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-bolt"></i>
+  <figcaption class="figure-caption text-center">Индекс</figcaption>
+</figure>
+</a>' ;
+}
+echo '<!--
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
 <figure class="figure dropup">
@@ -28,12 +37,12 @@ echo '<!-- <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
     <li><a class="dropdown-item" target="" href="' . $mainreadlink . '">Содержание</a></li>
     <li><a class="dropdown-item" target="" href="' . $mainscpage . '">SC Light</a></li>
   </ul>
-
+-->
 
 
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup d-md-inline-block">
-  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
+    <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-link"></i>
 <figcaption class="figure-caption text-center">на Англ.</figcaption>   
 </figure>	  
 </a>
@@ -65,7 +74,7 @@ echo '<!-- <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
-  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book d-md-inline-block"></i>
+  <i style="font-size: 2em; color: #1EBC9C;" class="fa-solid fa-book"></i>
 <figcaption class="figure-caption text-center">Русские</figcaption>   
 </figure>	  
 </a>

@@ -347,7 +347,7 @@ window.addEventListener('pageshow', function(event) {
  <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" id="collapseAll">+</span>
-  <h2>Dhamma</h2>
+  <h2 style="level1">Dhamma</h2>
  </div>
  
  <div class="my-2">
@@ -18148,9 +18148,11 @@ echo '
 <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">+</span>
-  <h2>Vinaya</h2>
+  <h2 class="level1" >Vinaya</h2>
 </div>
-    <h2 class="my-2"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:0.2">Bhikkhupātimokkha</a></h2>
+    <span class="toggle-button form-check-inline"
+    data-bs-toggle="collapse" data-bs-target="#bupmCollapse">    <h2 class="my-2"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:0.2">Bhikkhupātimokkha</a></h2></span>
+
       <div class="collapse " id="bupmCollapse">
       <script src="/assets/js/pmjs.js"></script>
       ';

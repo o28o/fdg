@@ -3,7 +3,7 @@ bupm=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/te
 vb=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-bu-vb 
 vbtrn=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-bu-vb
 
-type=Pācittiya
+type="Pācittiya"
 typeacr=pc
 i=1
 last=10
@@ -12,16 +12,16 @@ cd $vb/pli-tv-bu-vb-$typeacr
 
 while true; do
 next=$(( $i + 1 ))
-  line=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -A1 "$type $i")
+  line=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -A1 "$type $i" 2>/dev/null)
 
-  rulename=$(echo "$line" | grep "$type $i\." | awk -F'|' '{print $2}' | sed 's/[[:space:]]*$//')
+  rulename=$(echo "$line" | grep "$type $i\." 2>/dev/null | awk -F'|' '{print $2}' | sed 's/[[:space:]]*$//')
 
   ruleindex=$(echo "$line" | awk -F':' '{print $2}' | awk -F'|' '{print $1}' | head -n1)
 
 
-bupmruleid=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA0 "$type $i" | awk -F'|' '{print $1}' | awk -F'.' '{print $1}')
+bupmruleid=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA0 "$type $i" 2>/dev/null | awk -F'|' '{print $1}' | awk -F'.' '{print $1}')
 
-  fullruletext=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA30 "$type $i" | grep $bupmruleid | grep -v "$bupmruleid.0"| awk -F'|' '{print $2}' )
+  fullruletext=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA30 "$type $i" 2>/dev/null | grep $bupmruleid | grep -v "$bupmruleid.0"| awk -F'|' '{print $2}' )
   
  vbindex=$(grep "Final ruling" `find $vbtrn -name "*${typeacr}${i}_*" ` | awk -F':' '{print $2}' | sed 's/"$//' ) 
   echo '<div class="level4">

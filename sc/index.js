@@ -326,17 +326,23 @@ function setLanguage(language) {
 }
 
 function showPaliEnglish() {
+  console.log("showing pali eng");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
+  suttaArea.classList.remove("hide-russian");
 }
 function showEnglish() {
+  console.log("showing eng");
   suttaArea.classList.add("hide-pali");
   suttaArea.classList.remove("hide-english");
+  suttaArea.classList.remove("hide-russian");
 }
 function showPali() {
   console.log("showing pali");
-  suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
+    suttaArea.classList.remove("hide-pali");
+      suttaArea.classList.add("hide-russian");
+  
 }
 
 function toggleThePali() {

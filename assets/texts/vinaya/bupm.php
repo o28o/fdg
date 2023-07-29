@@ -8,7 +8,6 @@
     data-bs-toggle="collapse" data-bs-target="#pkCollapse">+</span>
 			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#pli-tv-bu-pm:5.0"><h3>Pubbakaraṇaṁ</h3></a>
 </div>
-			
 					  <div class="collapse" id="pkCollapse"> 
             <div class="my-3">
    
@@ -38,8 +37,7 @@ Vajjanīyā ca puggalā tasmiṁ na honti, “pattakalla”nti vuccati.
 </div>
              
            </div> <!-- mt div -->
-         </div> <!-- collapsediv -->              
-            
+         </div> <!-- collapsediv -->
 <div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#ndCollapse">+</span>

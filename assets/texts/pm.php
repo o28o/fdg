@@ -34,7 +34,7 @@ include '../../scripts/opentexts.php';
 <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">-</span>
-  <h2><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:0.2">Bhikkhupātimokkha</a></h2>
+  <h2><a href="#" data-bs-toggle="collapse" data-bs-target="#bupmCollapse">Bhikkhupātimokkha</a></h2>
 </div>
 
       <div class="collapse show " id="bupmCollapse">

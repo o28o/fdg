@@ -182,7 +182,11 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
-      html += `${openHtml}<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
+
+let startIndex = segment.indexOf(':') + 1;
+let anchor = segment.substring(startIndex);
+
+      html += `${openHtml}<span id="${anchor}" class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
             <span class="eng-lang" lang="en">${engTransData[segment]}</span>
       ${closeHtml}\n\n`;
@@ -198,6 +202,9 @@ if (translator === "sv") {
   translatorforuser = 'А.Я. Сыркин';
 } else if (translator === "syrkin+o" ) {
   translatorforuser = 'А.Я. Сыркин, ред. о';
+} else {
+	translatorforuser = translator ;
+	
 }
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);

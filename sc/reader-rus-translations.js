@@ -143,7 +143,8 @@ if (mnranges.indexOf(slug) !== -1)  {
   // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
-    let translator = "thanissaro+o";
+    //let translator = "thanissaro+o";
+    let translator = "o";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
@@ -182,7 +183,7 @@ let anchor = segment.substring(startIndex);
       html += `${openHtml}<span id="${anchor}" class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="rus-lang" lang="ru">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
-console.log('before' + translator) ;
+console.log('before ' + translator) ;
 
 if (translator === "sv") {
   translatorforuser = 'SV theravada.ru';
@@ -194,6 +195,9 @@ if (translator === "sv") {
   translatorforuser = 'А.Я. Сыркин';
 } else if (translator === "syrkin+o" ) {
   translatorforuser = 'А.Я. Сыркин, ред. о';
+} else {
+	translatorforuser = "$translator" ;
+	
 }
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);

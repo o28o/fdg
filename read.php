@@ -18150,8 +18150,7 @@ echo '
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">+</span>
   <h2 class="level1" >Vinaya</h2>
 </div>
-    <span class="toggle-button form-check-inline"
-    data-bs-toggle="collapse" data-bs-target="#bupmCollapse">Bhikkhupātimokkha</a></h2></span>
+    <span class="toggle-button form-check-inline" data-bs-toggle="collapse" data-bs-target="#bupmCollapse">Bhikkhupātimokkha</a></h2></span>
 
       <div class="collapse " id="bupmCollapse">
       <script src="/assets/js/pmjs.js"></script>

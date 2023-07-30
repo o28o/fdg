@@ -18151,7 +18151,7 @@ echo '
   <h2 class="level1" >Vinaya</h2>
 </div>
     <span class="toggle-button form-check-inline"
-    data-bs-toggle="collapse" data-bs-target="#bupmCollapse">    <h2 class="my-2"><a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:0.2">Bhikkhupātimokkha</a></h2></span>
+    data-bs-toggle="collapse" data-bs-target="#0.2">Bhikkhupātimokkha</a></h2></span>
 
       <div class="collapse " id="bupmCollapse">
       <script src="/assets/js/pmjs.js"></script>

@@ -88,8 +88,9 @@ $howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānān
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "ОпрВ";
 
-$tooltipla = "Добавить $defaultla строки после совпадения";
-$checkboxla = "+$defaultla строки";
+$tooltipla = "Добавить по $defaultla строк после совпадения";
+//$checkboxla = "+" . $defaultla * 2 . " строки";
+$checkboxla = "+" . $defaultla . " строки";
 $regexMemoh5 = '<h5>Памятка по RegEx</h5>';
 
 $lax = "искать X и добавить в результаты $defaultla (значение можно менять) следующие строки после строки с X";
@@ -476,8 +477,8 @@ If they (teachings, practices, methods, quotes, stories, anything associated wit
 $tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
 $radiovindef = "DefV";
 $tooltipla = "Add $defaultla lines after match";
-$checkboxla = "+$defaultla lines";
-
+//$checkboxla = "+" . $defaultla * 2 . " lines";
+$checkboxla = "+" . $defaultla . " lines";
 $regexMemoh5 = 'RegEx Memo';
 
 $lax = "search for X, add $defaultla next line to output after lines containing X";

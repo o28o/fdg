@@ -143,7 +143,7 @@ if (mnranges.indexOf(slug) !== -1)  {
   // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
-  let translator = "o";
+    let translator = "thanissaro+o";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
@@ -178,32 +178,35 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
       html += `${openHtml}<span id="${segment}" class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="rus-lang" lang="ru">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
+console.log('before' + translator) ;
+
 if (translator === "sv") {
-  translator = 'SV theravada.ru';
-} else if (translator === "" && texttype === "sutta" ) {
-  translator = 'Bhikkhu Sujato';
-} else if (translator === "" && texttype === "vinaya") {
-  translator = 'Bhikkhu Brahmali';
+  translatorforuser = 'SV theravada.ru';
+} else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
+  translatorforuser = 'Bhikkhu Sujato';
+} else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
+  translatorforuser = 'Bhikkhu Brahmali';
 } else if (translator === "syrkin" ) {
-  translator = 'А.Я. Сыркин';
+  translatorforuser = 'А.Я. Сыркин';
 } else if (translator === "syrkin+o" ) {
-  translator = 'А.Я. Сыркин, ред. о';
+  translatorforuser = 'А.Я. Сыркин, ред. о';
 }
-
-
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
      const translatorByline = `<div class="byline">
      <p>
     <span class="rus-lang" lang="ru">
-     Перевод: ${translator}
+     Перевод: ${translatorforuser}
     </span>
      </p>
      </div>`;
      
-      const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC.net</a>`;
-      
+if ((translator === 'sujato') || (translator === 'brahmali')) {
+  scLink += `<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
+} else {
+  scLink += `<a target="_blank" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
+}  
       
       $.ajax({
       url: "/sc/extralinks.php?fromjs=" +slug
@@ -212,7 +215,7 @@ if (translator === "sv") {
  
 
   
-      scLink += `<a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
+      scLink += `<a target="_blank" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`; 
 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {

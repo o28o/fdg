@@ -118,29 +118,26 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
      html += `${openHtml}<span id="${segment}" class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="rus-lang" lang="ru">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
-console.log("translator before" + translator);
-
 
 if (translator === "sv") {
-  translator = 'SV theravada.ru';
+  translatorforuser = 'SV theravada.ru';
 } else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
-  translator = 'Bhikkhu Sujato'; 
-} else if ((translator === "" && texttype === "vinaya" ) || (translator === "brahmali" )) {
-  translator = 'Bhikkhu Brahmali';
+  translatorforuser = 'Bhikkhu Sujato';
+} else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
+  translatorforuser = 'Bhikkhu Brahmali';
 } else if (translator === "syrkin" ) {
-  translator = 'А.Я. Сыркин';
+  translatorforuser = 'А.Я. Сыркин';
 } else if (translator === "syrkin+o" ) {
-  translator = 'А.Я. Сыркин, ред. о';
+  translatorforuser = 'А.Я. Сыркин, ред. о';
 }
 
-console.log("translator after" + translator);
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
           const translatorByline = `<div class="byline">
      <p>
     <span class="eng-lang" lang="en">
-     Translated by ${translator}
+     Translated by ${translatorforuser}
     </span>
      </p>
      </div>`;
@@ -152,6 +149,7 @@ console.log("translator after" + translator);
       url: "/sc/extralinks.php?fromjs=" +slug
     }).done(function(data) {
       const linksArray = data.split(",");
+      
       let scLink = `<p class="sc-link"><a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
       if (linksArray[0].length >= 4) {

@@ -358,14 +358,14 @@ if (document.location.search) {
   <h3>Бхиккху Виная</h3>
 <ul>
 <li><span class="abbr">bu-pm</span> <a href="/ru/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
-<li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:8.0"> Pārājikā</a></li></li>
-<li><span class="abbr">bu-ss</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:14.0"> Saṅghādisesā</a></li></li>
-<li><span class="abbr">bu-ay</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:29.0"> Aniyatā</a></li>
-<li><span class="abbr">bu-np</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:33.0"> Nissaggiyā-pācittiyā</a></li>
-<li><span class="abbr">bu-pc</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:65.0"> Pācittiyā</a></li>
-<li><span class="abbr">bu-pd</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:159.0"> Pāṭidesanīyā</a></li></li>
-<li><span class="abbr">bu-sk</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:165.0"> Sekhiyā</a></li></li>
-<li><span class="abbr">bu-as</span> <a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:245.0"> Adhikarana-samatha</a></li></li>
+<li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#8.0"> Pārājikā</a></li></li>
+<li><span class="abbr">bu-ss</span> <a href="/ru/sc/?q=bu-pm#14.0"> Saṅghādisesā</a></li></li>
+<li><span class="abbr">bu-ay</span> <a href="/ru/sc/?q=bu-pm#29.0"> Aniyatā</a></li>
+<li><span class="abbr">bu-np</span> <a href="/ru/sc/?q=bu-pm#33.0"> Nissaggiyā-pācittiyā</a></li>
+<li><span class="abbr">bu-pc</span> <a href="/ru/sc/?q=bu-pm#65.0"> Pācittiyā</a></li>
+<li><span class="abbr">bu-pd</span> <a href="/ru/sc/?q=bu-pm#159.0"> Pāṭidesanīyā</a></li></li>
+<li><span class="abbr">bu-sk</span> <a href="/ru/sc/?q=bu-pm#165.0"> Sekhiyā</a></li></li>
+<li><span class="abbr">bu-as</span> <a href="/ru/sc/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
 </ul>
 </div><div>
 <h3>Бхиккхуни Виная</h3>

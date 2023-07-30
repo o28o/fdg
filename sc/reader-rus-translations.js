@@ -196,7 +196,7 @@ if (translator === "sv") {
 } else if (translator === "syrkin+o" ) {
   translatorforuser = 'А.Я. Сыркин, ред. о';
 } else {
-	translatorforuser = "$translator" ;
+	translatorforuser = translator ;
 	
 }
 

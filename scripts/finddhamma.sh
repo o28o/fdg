@@ -790,7 +790,7 @@ else
 indexlist=`nice -$nicevalue grep -E -i "pli-tv-bi-vb-pd" $basefile | awk '{print $2}' | sort -Vf | uniq`
 fi
 
-firstIndex=$(echo $indexlist | head -n1)
+firstIndex=$(echo $indexlist | head -n1 | awk -F':' '{print $2}' )
 
 linkgeneralwithindex="$linkgeneral#$firstIndex"
 #echo "ind=$indexlist ls=`ls $basefile` stn=$suttanumber fnb=$filenameblock"
@@ -821,8 +821,9 @@ for i in $indexlist
 do
 		for f in $roottext $translation $variant
         do     
+		anchor=`echo $i | awk -F':' '{print $2}'`
 		quote=`nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
-[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$i\">&nbsp;&nbsp;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
+[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&nbsp;&nbsp;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
 done
 echo '<br class="styled">'
 done | tohtml 

@@ -790,7 +790,8 @@ else
 indexlist=`nice -$nicevalue grep -E -i "pli-tv-bi-vb-pd" $basefile | awk '{print $2}' | sort -Vf | uniq`
 fi
 
-firstIndex=$(echo $indexlist | head -n1 | awk -F':' '{print $2}' )
+echo $indexlist > indexlist
+firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1 | awk -F':' '{print $2}'  )
 
 linkgeneralwithindex="$linkgeneral#$firstIndex"
 #echo "ind=$indexlist ls=`ls $basefile` stn=$suttanumber fnb=$filenameblock"
@@ -1170,7 +1171,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory *$rand* > /dev/null 2>&1
+rm $basefile $tempfile $tempfilewhistory tmp*$rand* *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

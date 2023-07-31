@@ -19,6 +19,7 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
+mainpagebase="/ru"
 outfnlang=-ru
 defaultlang='lang=pli-rus'
 excluderesponse="исключая"
@@ -73,6 +74,7 @@ echo "Слишком коротко. Мин $minlength символа"
 
 else #eng
 pagelang=
+mainpagebase="/"
 defaultlang='lang=pli-eng'
 excluderesponse="excluding"
 function bgswitch {
@@ -806,6 +808,7 @@ fi
 
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
+<td><input type='checkbox'></td>
 <td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern` </strong>`echo ${trntitle}  | highlightpattern ` </td>
 <td>${word}</td>
 <td>$count</td>   
@@ -948,6 +951,7 @@ fi
 
 echo "<tr>
 <td><a target=\"_blank\" href="$linkgeneral">$suttanumber</a></td>
+<td><input type='checkbox'></td>
 <td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern`</strong>`echo "${suttatitle}" | highlightpattern ` </td>
 <td>$word</td>
 <td>$count</td>   
@@ -1087,20 +1091,23 @@ else
 tempfilewords=${removerand}_${textsqnty}-${matchqnty}.html
 fi 
 
-echo "</tbody>
-</table>
-<br><br><hr>
-<a href='/' id='back'>Main</a>&nbsp;
-<a href='${pagelang}/sc'>Read</a>&nbsp;
-<a href='/assets/diff'>SuttaDiff</a>&nbsp;
-<a href='/history.php'>History</a>&nbsp;"  | tohtml
-if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
-then
-echo "<a href=\"/result/${tempfilewords}\">Words</a>" | tohtml
+# echo "</tbody>
+# </table>
+# <br><br><hr>
+# <a href='/' id='back'>Main</a>&nbsp;
+# <a href='${pagelang}/sc'>Read</a>&nbsp;
+# <a href='/assets/diff'>SuttaDiff</a>&nbsp;
+# <a href='/history.php'>History</a>&nbsp;"  | tohtml
+
+if [[ "$language" == *"Pali"* ]] || [[ "$language" == *"English"* ]]; 
+	then
+#echo "<a href=\"/result/${tempfilewords}\">Words</a>" | tohtml
 #replace button href in qoute file
+		cat $templatefolder/Footer.php | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
+	else
+		cat $templatefolder/Footer.php | sed '/WORDSLINKVAR/d' | tohtml
 fi 
 
-cat $templatefolder/Footer.html | tohtml
 mv ./$oldname ./$tempfilewords
 
 #finalize quotes file 
@@ -1111,11 +1118,11 @@ table=${removerand}_${textsqnty}-${matchqnty}.html
 echo "</tbody>
 </table>
 <br><br><hr>
-<a href='/' id='back'>Main</a>&nbsp;
-<a href='${pagelang}/sc'>Read</a>&nbsp;
+<a href='${mainpagebase}' id='back'>Main</a>&nbsp;
+<a href='${pagelang}/read.php'>Read</a>&nbsp;
 <a href='/assets/diff'>SuttaDiff</a>&nbsp;
-<a href='/history.php'>History</a>&nbsp;
-<a href=\"/result/${table}\">Quotes</a>
+<a href='${pagelang}/history.php'>History</a>&nbsp;
+<a href=\"${pagelang}/result/${table}\">Quotes</a>
 " >> $tempfilewords
 #replace button href in word file
 cat $templatefolder/WordsFooter.html >> $tempfilewords

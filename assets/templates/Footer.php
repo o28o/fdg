@@ -1,0 +1,141 @@
+</div>
+<script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
+    <script type='text/javascript'>
+   $(document).ready(function() {
+   var dataSrc = [];
+	 var table = $('#pali').DataTable({
+	   'autoWidth': true,
+	   'stateSave': true,
+	           dom: '<"row"lf>r<t><"row"ip><"footerlike"B>',
+        buttons: {
+          name: 'primary',
+        buttons: [
+            {
+              text: 'Main',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = "MAINLINKVAR";
+                            }
+            },
+              {
+              text: 'Read',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = "READLINKVAR";
+                            }
+            },
+                        {
+              text: 'Sutta Diff',
+               className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = '/assets/diff';
+                            }
+                        },  
+                        {
+              text: 'History',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = '/history.php';
+                            }
+                        },  
+                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = "WORDSLINKVAR";}},
+                        { extend: 'colvis', 
+                     className: 'btn btn-link ',
+                        text: 'Visibility' }
+        ]
+    },
+	   'paging'  : true,
+	    'colReorder': true,
+	    "orderMulti": true,
+	   'pageLength' : 28,
+	   'lengthMenu' : [10, 28, 50, 100, 1000],
+	  'responsive': true,
+	  'columnDefs': [
+	            { type: "html", target: [2,3,7] },
+	            { type: 'natural', targets: 0 },
+				  {
+            target: 1,
+            visible: false
+        }				
+					],
+      'initComplete': function(){
+         var api = this.api();
+
+         // Populate a dataset for autocomplete functionality
+		          api.cells('tr', [0, 2, 3, 4, 5, 7]).every(function(){
+            //var data = this.data().replace( /(<([^>]+)>)/ig, '');
+            var data = $('<div>').html(this.data()).text();
+          //  console.log(data);
+            if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
+         });
+
+         // Initialize Typeahead plug-in
+         $('.dataTables_filter input[type="search"]', api.table().container())
+            .typeahead({
+              autoSelect: false,
+               source: dataSrc,
+               afterSelect: function(value){
+                  api.search(value).draw();
+               }
+            }
+         );
+      }
+   });			
+
+    // Handle click on "Expand All" button
+    $('#btn-show-all-children').on('click', function(){
+        // Expand row details
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+    // Handle click on "Collapse All" button
+    $('#btn-hide-all-children').on('click', function(){
+        // Collapse row details
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+});
+  </script>
+  
+  <script>
+// Получение всех чекбоксов
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Функция для сохранения состояния чекбоксов в LocalStorage
+function saveCheckboxesStateToLocalStorage(urlKey) {
+  var checkboxState = {};
+  checkboxes.forEach(function(checkbox, index) {
+    checkboxState['checkbox_' + index] = checkbox.checked;
+  });
+  localStorage.setItem(urlKey, JSON.stringify(checkboxState));
+}
+
+// Функция для восстановления состояния чекбоксов из LocalStorage
+function restoreCheckboxesStateFromLocalStorage(urlKey) {
+  var checkboxState = JSON.parse(localStorage.getItem(urlKey));
+  if (checkboxState) {
+    checkboxes.forEach(function(checkbox, index) {
+      checkbox.checked = checkboxState['checkbox_' + index] || false;
+    });
+  }
+}
+
+// Получение части URL, которую будем использовать как ключ для LocalStorage
+var currentURL = window.location.href;
+var urlKey = currentURL.substring(currentURL.lastIndexOf('/') + 1);
+
+// Вызов функции восстановления состояния чекбоксов при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+  restoreCheckboxesStateFromLocalStorage(urlKey);
+});
+
+// Вызов функции сохранения состояния чекбоксов при изменении их значения
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+    saveCheckboxesStateToLocalStorage(urlKey);
+  });
+});
+
+</script>
+
+    <script type="module" src="/assets/js/langswitch.js"></script>      
+</body>
+</html>

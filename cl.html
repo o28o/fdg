@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +36,24 @@ https://datatables.net/reference/option/stateSaveParams
 <!--<script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=verse"></script>-->
 </head>
 <body>
+<script>
+/**
+ * Read information from a column of checkboxes (input elements with type
+ * checkbox) and return an array to use as a basis for sorting.
+ *
+ *  @summary Sort based on the checked state of checkboxes in a column
+ *  @name Checkbox data source
+ *  @author [Allan Jardine](http://sprymedia.co.uk)
+ */
+
+$.fn.dataTable.ext.order['dom-checkbox'] = function  ( settings, col )
+{
+	return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+		return $('input', td).prop('checked') ? '1' : '0';
+	} );
+};
+</script>
+
 <div class="container-fluid mt-2">    
     <h3 class="pl-2 ml-2">Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali</h3>
             <button class="btn btn-light" type="button">
@@ -76,6 +93,210 @@ https://datatables.net/reference/option/stateSaveParams
         </tr>
     </thead>
     <tbody id="sutta">
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn115</a></td>
+<td><input type="checkbox"></td>
+
+
+
+
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>2</td>   
+<td>5
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn14</a></td>
+<td><input type="checkbox" checked="checked"></td>
+<td><strong class="pli-lang inputscript-ISOPali">hānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>3</td>   
+<td>6
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn1</a></td>
+<td><input type="checkbox" checked=""></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong> Нидана  </td>
+<td><b>amphasso</b></td>
+<td>20</td>   
+<td>50
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn13</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">ānidānasutta </strong> Сутта </td>
+<td><b>vacanasamphasso</b></td>
+<td>2</td>   
+<td>2
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn28</a></td>
+<td><input type="checkbox" checked="checked"></td>
+<td><strong class="pli-lang inputscript-ISOPali">Pahānidānasutta </strong>FFFFFFF </td>
+<td><b>o</b></td>
+<td>12</td>   
+<td>28
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn14</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">hānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>3</td>   
+<td>6
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn1</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong> Нидана  </td>
+<td><b>amphasso</b></td>
+<td>20</td>   
+<td>50
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn13</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">ānidānasutta </strong> Сутта </td>
+<td><b>vacanasamphasso</b></td>
+<td>2</td>   
+<td>2
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
       <tr>
 <td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn15</a></td>
 <td><input type="checkbox" name="selectRow"></td>
@@ -126,14 +347,270 @@ https://datatables.net/reference/option/stateSaveParams
 <br class="styled">
 </p></td>
 </tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn1</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong> Нидана  </td>
+<td><b>amphasso</b></td>
+<td>20</td>   
+<td>50
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn13</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">ānidānasutta </strong> Сутта </td>
+<td><b>vacanasamphasso</b></td>
+<td>2</td>   
+<td>2
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn15</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>2</td>   
+<td>5
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn14</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">hānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>3</td>   
+<td>6
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn1</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong> Нидана  </td>
+<td><b>amphasso</b></td>
+<td>20</td>   
+<td>50
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn13</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">ānidānasutta </strong> Сутта </td>
+<td><b>vacanasamphasso</b></td>
+<td>2</td>   
+<td>2
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn15</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>2</td>   
+<td>5
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn14</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">hānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>3</td>   
+<td>6
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn1</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong> Нидана  </td>
+<td><b>amphasso</b></td>
+<td>20</td>   
+<td>50
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn13</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">ānidānasutta </strong> Сутта </td>
+<td><b>vacanasamphasso</b></td>
+<td>2</td>   
+<td>2
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+
+
+
+
+
 </tbody>
 </table>
 <br><br><hr>
+<!--
 <a href='/' id='back'>Main</a>&nbsp;
 <a href='/ru/sc'>Read</a>&nbsp;
 <a href='/assets/diff'>SuttaDiff</a>&nbsp;
 <a href='/history.php'>History</a>&nbsp;
-<a href="/result/adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html">Words</a>&nbsp;
+<a href="/result/adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html">Words</a>&nbsp; -->
 </div>
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
@@ -142,7 +619,7 @@ https://datatables.net/reference/option/stateSaveParams
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
-	           dom: '<lfr<t>ip><"classico"B>',
+	           dom: '<"row"lf>r<t><"row"ip><"footerlike"B>',
         buttons: {
           name: 'primary',
         buttons: [
@@ -177,16 +654,15 @@ https://datatables.net/reference/option/stateSaveParams
                         {
               text: 'Words',
               className: 'btn btn-link ',
-                  action: function ( dt ) {
+              action: function ( dt ) {
                                 window.location.href = '/result/adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html';
                             }
                         },
                         { extend: 'colvis', 
-                     className: 'btn btn-link ',                 
+                     className: 'btn btn-link ',
                         text: 'Visibility' }
         ]
     },
-	   
 	   'paging'  : true,
 	    'colReorder': true,
 	    "orderMulti": true,
@@ -201,13 +677,11 @@ https://datatables.net/reference/option/stateSaveParams
             visible: false
         }				
 					],
-					
-			
       'initComplete': function(){
          var api = this.api();
 
          // Populate a dataset for autocomplete functionality
-         api.cells('tr', [0, 1, 2, 3, 4, 6]).every(function(){
+		          api.cells('tr', [0, 2, 3, 4, 5, 7]).every(function(){
             //var data = this.data().replace( /(<([^>]+)>)/ig, '');
             var data = $('<div>').html(this.data()).text();
           //  console.log(data);
@@ -239,6 +713,48 @@ https://datatables.net/reference/option/stateSaveParams
     });
 });
   </script>
+ <script>
+// Получение всех чекбоксов
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Функция для сохранения состояния чекбоксов в LocalStorage
+function saveCheckboxesStateToLocalStorage(urlKey) {
+  var checkboxState = {};
+  checkboxes.forEach(function(checkbox, index) {
+    checkboxState['checkbox_' + index] = checkbox.checked;
+  });
+  localStorage.setItem(urlKey, JSON.stringify(checkboxState));
+}
+
+// Функция для восстановления состояния чекбоксов из LocalStorage
+function restoreCheckboxesStateFromLocalStorage(urlKey) {
+  var checkboxState = JSON.parse(localStorage.getItem(urlKey));
+  if (checkboxState) {
+    checkboxes.forEach(function(checkbox, index) {
+      checkbox.checked = checkboxState['checkbox_' + index] || false;
+    });
+  }
+}
+
+// Получение части URL, которую будем использовать как ключ для LocalStorage
+var currentURL = window.location.href;
+var urlKey = currentURL.substring(currentURL.lastIndexOf('/') + 1);
+
+// Вызов функции восстановления состояния чекбоксов при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+  restoreCheckboxesStateFromLocalStorage(urlKey);
+});
+
+// Вызов функции сохранения состояния чекбоксов при изменении их значения
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+    saveCheckboxesStateToLocalStorage(urlKey);
+  });
+});
+
+</script>
+
+
 
     <script type="module" src="/assets/js/langswitch.js"></script>      
 </body>

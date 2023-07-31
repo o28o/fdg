@@ -1103,9 +1103,9 @@ if [[ "$language" == *"Pali"* ]] || [[ "$language" == *"English"* ]];
 	then
 #echo "<a href=\"/result/${tempfilewords}\">Words</a>" | tohtml
 #replace button href in qoute file
-		cat $templatefolder/Footer.php | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
+		cat $templatefolder/Footer.html | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
 	else
-		cat $templatefolder/Footer.php | sed '/WORDSLINKVAR/d' | tohtml
+		cat $templatefolder/Footer.html | sed '/WORDSLINKVAR/d' | tohtml
 fi 
 
 mv ./$oldname ./$tempfilewords

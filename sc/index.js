@@ -85,11 +85,12 @@ function buildSutta(slug) {
     }
   }
 
+console.log('texttype ' + texttype + ' translator ' + translator);
+
   let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Eng</button></div>`;
   
   const slugReady = parseSlug(slug);
   console.log("slugReady is " + slugReady + " slug is " + slug); 
-
 
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`
    var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
@@ -100,11 +101,11 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
     console.log('ja case ', rootpath, trnpath, htmlpath);
 } else if (slug.match(/bu-pm|bi-pm/)) {
     //let translator = "thanissaro+o";
-    let translator = "none";
+    let translator = "thanissaro";
     texttype === "vinaya";
       let language = "pli";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
-    var trnpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
+    var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-thanissaro.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);
 } else {
@@ -138,7 +139,7 @@ let anchor = segment.substring(startIndex);
      html += `${openHtml}<span id="${anchor}" class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span><span class="rus-lang" lang="ru">${transData[segment]}</span>${closeHtml}\n\n`;
     });
 
-
+console.log('texttype ' + texttype + ' translator ' + translator);
 if (translator === "sv") {
   translatorforuser = 'SV theravada.ru';
 } else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
@@ -150,7 +151,7 @@ if (translator === "sv") {
 } else if (translator === "syrkin+o" ) {
   translatorforuser = 'А.Я. Сыркин, ред. о';
 }
-
+console.log('texttype ' + texttype + ' translator ' + translator);
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 

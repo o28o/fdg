@@ -18136,8 +18136,6 @@ window.addEventListener('pageshow', function(event) {
 </div>
 
 <?php
-if ( $lang == "ru" ) {
-
 echo '
  <div class="container text-start mt-4">
    <!-- <div class="mt-3">
@@ -18157,7 +18155,7 @@ echo '
       <script src="/assets/js/pmjs.js"></script>
       ';
 include $basedir . "/assets/texts/vinaya/bupm.php";
-}
+
 ?>
 </div>
 

@@ -75,13 +75,39 @@ https://datatables.net/reference/option/stateSaveParams
         <!-- <th class="none">Audio</th> -->
         </tr>
     </thead>
-    <tbody id="sutta"><tr>
+    <tbody id="sutta">
+      <tr>
 <td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn15</a></td>
 <td><input type="checkbox" name="selectRow"></td>
 <td><strong class="pli-lang inputscript-ISOPali">Mahānidānasutta </strong>Маха Нидана Сутта </td>
 <td><b>adhivacanasamphasso</b></td>
 <td>2</td>   
 <td>5
+</td>
+<td>
+<a target="_blank" href=/bw/dn/dn15.html>En</a> 
+<a target=_blank href=https://suttacentral.net/dn15/th/siam_rath>ไทย</a>
+<a target=_blank href=https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128>Ru</a> 
+ 
+</td>
+<td><p>
+<span class="pli-lang inputscript-ISOPali" lang="pi">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanasamphasso</b> paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.2">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+<span class="pli-lang inputscript-ISOPali" lang="pi">“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanasamphasso</b> vā paṭighasamphasso vā paññāyethā”ti?  <a target=_blank class="text-white text-decoration-none" href="/ru/sc/?q=dn15#20.6">&nbsp;&nbsp;</a></span><br class="btwntrn">
+<span class="eng-lang text-muted font-weight-light" lang="en">'Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела и материального тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения и соприкосновение воздействия'? </span>
+<span class="eng-lang text-muted font-weight-light" lang="en"></span>
+<br class="styled">
+</p></td>
+</tr>
+      <tr>
+<td><a class="freebutton" target="_blank" href=/ru/sc/?q=dn15#20.2>dn14</a></td>
+<td><input type="checkbox" name="selectRow"></td>
+<td><strong class="pli-lang inputscript-ISOPali">hānidānasutta </strong>Маха Нидана Сутта </td>
+<td><b>adhivacanasamphasso</b></td>
+<td>3</td>   
+<td>6
 </td>
 <td>
 <a target="_blank" href=/bw/dn/dn15.html>En</a> 
@@ -108,8 +134,6 @@ https://datatables.net/reference/option/stateSaveParams
 <a href='/assets/diff'>SuttaDiff</a>&nbsp;
 <a href='/history.php'>History</a>&nbsp;
 <a href="/result/adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html">Words</a>&nbsp;
-<a id="checklist">Check-List</a>
-<a id="clearchecklist">Clear All</a>
 </div>
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
@@ -118,6 +142,44 @@ https://datatables.net/reference/option/stateSaveParams
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
+	           dom: 'lfrtipB',
+        buttons: {
+          name: 'primary',
+        buttons: [
+            {
+              text: 'Main',
+                  action: function ( dt ) {
+                                window.location.href = '/ru';
+                            }
+            },
+              {
+              text: 'Read',
+                  action: function ( dt ) {
+                                window.location.href = '/ru/read.php';
+                            }
+            },
+                        {
+              text: 'Sutta Diff',
+                  action: function ( dt ) {
+                                window.location.href = '/assets/diff';
+                            }
+                        },  
+                        {
+              text: 'History',
+                  action: function ( dt ) {
+                                window.location.href = '/history.php';
+                            }
+                        },  
+                        {
+              text: 'Words',
+                  action: function ( dt ) {
+                                window.location.href = '/result/adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html';
+                            }
+                        },
+                        { extend: 'colvis', text: 'Visibility' }
+        ]
+    },
+	   
 	   'paging'  : true,
 	    'colReorder': true,
 	    "orderMulti": true,
@@ -129,7 +191,7 @@ https://datatables.net/reference/option/stateSaveParams
 	            { type: 'natural', targets: 0 },
 				  {
             target: 1,
-            visible: true
+            visible: false
         }				
 					],
 					

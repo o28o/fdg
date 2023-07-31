@@ -142,41 +142,48 @@ https://datatables.net/reference/option/stateSaveParams
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
-	           dom: 'lfrtipB',
+	           dom: '<lfr<t>ip><"classico"B>',
         buttons: {
           name: 'primary',
         buttons: [
             {
               text: 'Main',
+              className: 'btn btn-link ',
                   action: function ( dt ) {
                                 window.location.href = '/ru';
                             }
             },
               {
               text: 'Read',
+              className: 'btn btn-link ',
                   action: function ( dt ) {
                                 window.location.href = '/ru/read.php';
                             }
             },
                         {
               text: 'Sutta Diff',
+               className: 'btn btn-link ',
                   action: function ( dt ) {
                                 window.location.href = '/assets/diff';
                             }
                         },  
                         {
               text: 'History',
+              className: 'btn btn-link ',
                   action: function ( dt ) {
                                 window.location.href = '/history.php';
                             }
                         },  
                         {
               text: 'Words',
+              className: 'btn btn-link ',
                   action: function ( dt ) {
                                 window.location.href = '/result/adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html';
                             }
                         },
-                        { extend: 'colvis', text: 'Visibility' }
+                        { extend: 'colvis', 
+                     className: 'btn btn-link ',                 
+                        text: 'Visibility' }
         ]
     },
 	   

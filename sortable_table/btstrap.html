@@ -3,20 +3,22 @@
 <head>
     <title>Dhammā</title>
     <meta charset="UTF-8">
+	   <link href="./DataTables/datatables.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Dhammā</h1>
-    <table>
-        <thead>
-            <tr>
-                <th id="col1">Col 1</th>
-                <th id="col2">Col 2</th>
-                <th></th>
-                <th></th>
-                <th id="col5">Of</th>
-                <th id="col6">Word</th>
-            </tr>
-        </thead>
+    <div class="container mt-5">
+        <h1 class="mb-4">Dhammā</h1>
+        <table id="wordTable" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Col 1</th>
+                    <th>Col 2</th>
+                    <th></th>
+                    <th></th>
+                    <th>Of</th>
+                    <th>Word</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
                     <td>noun</td>
@@ -197,41 +199,14 @@
                     <td>ima</td>
                 </tr>
             </tbody>
-    </table>
+        </table>
+    </div>
 
+    <script src="./DataTables/datatables.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const table = document.querySelector('table');
-            const tbody = table.querySelector('tbody');
-            const headers = table.querySelectorAll('th');
-
-            headers.forEach(header => {
-                header.addEventListener('click', () => {
-                    const order = header.dataset.order === 'asc' ? 'desc' : 'asc';
-                    const colIndex = header.cellIndex;
-
-                    const rows = Array.from(tbody.querySelectorAll('tr'));
-                    rows.sort((a, b) => {
-                        const aValue = a.cells[colIndex].textContent.toLowerCase();
-                        const bValue = b.cells[colIndex].textContent.toLowerCase();
-                        return (aValue > bValue) ? 1 : -1;
-                    });
-
-                    if (order === 'desc') {
-                        rows.reverse();
-                    }
-
-                    tbody.innerHTML = '';
-                    rows.forEach(row => {
-                        tbody.appendChild(row);
-                    });
-
-                    headers.forEach(header => {
-                        header.dataset.order = '';
-                    });
-
-                    header.dataset.order = order;
-                });
+        $(document).ready(function () {
+            $("#wordTable").DataTable({
+                paging: false // Отключение пагинации
             });
         });
     </script>

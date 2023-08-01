@@ -95,7 +95,7 @@
 });
   </script>
   
-  <script>
+<script>
 // Получение всех чекбоксов
 var checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
@@ -103,7 +103,7 @@ var checkboxes = document.querySelectorAll('input[type="checkbox"]');
 function saveCheckboxesStateToLocalStorage(urlKey) {
   var checkboxState = {};
   checkboxes.forEach(function(checkbox, index) {
-    checkboxState['checkbox_' + index] = checkbox.checked;
+    checkboxState['checkbox_' + checkbox.dataset.index] = checkbox.checked;
   });
   localStorage.setItem(urlKey, JSON.stringify(checkboxState));
 }
@@ -112,7 +112,8 @@ function saveCheckboxesStateToLocalStorage(urlKey) {
 function restoreCheckboxesStateFromLocalStorage(urlKey) {
   var checkboxState = JSON.parse(localStorage.getItem(urlKey));
   if (checkboxState) {
-    checkboxes.forEach(function(checkbox, index) {
+    checkboxes.forEach(function(checkbox) {
+      var index = checkbox.dataset.index;
       checkbox.checked = checkboxState['checkbox_' + index] || false;
     });
   }
@@ -135,6 +136,7 @@ checkboxes.forEach(function(checkbox) {
 });
 
 </script>
+
 
     <script type="module" src="/assets/js/langswitch.js"></script>      
 </body>

@@ -116,7 +116,11 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
 let scLink = `<p class="sc-link">`;
-let ifRus = `<a target="" href="/ru/sc/?q=${slug}">Ru</a>&nbsp;<a target="" href="/sc/?q=${slug}">En</a>&nbsp;`;
+
+const currentURL = window.location.href;
+const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
+
+let ifRus = `<a target="" href="/ru/sc/?q=${slug}${anchorURL}">Ru</a>&nbsp;<a target="" href="/sc/?q=${slug}${anchorURL}">En</a>&nbsp;`;
 
 
 if (mnranges.indexOf(slug) !== -1)  {

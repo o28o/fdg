@@ -328,8 +328,8 @@ window.addEventListener('pageshow', function(event) {
 
   <!-- extra options end -->
 </form>
+    <div id="response"></div>
 
-  <div id="response"></div>
 
 <script>
 </script>

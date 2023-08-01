@@ -43,8 +43,7 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
-<link href="/assets/css/extrastyles.css" rel="stylesheet" />
-<script src="/assets/js/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 
 <style>
@@ -18698,7 +18697,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
 				
-<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script defer>
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();

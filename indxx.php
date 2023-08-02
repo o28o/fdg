@@ -42,7 +42,8 @@ include 'scripts/opentexts.php';
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
-<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/> -->
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.fl.5.2.3.css"/>
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>

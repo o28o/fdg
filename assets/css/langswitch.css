@@ -15,8 +15,8 @@
 
 body {
   margin: 1rem 3rem;
-  background-color: var(--light-off-white);
-  font-family: "Robto Serif", serif;
+ /* background-color: var(--light-off-white);
+  font-family: "Robto Serif", serif;*/
 }
 
 body.dark {
@@ -83,7 +83,8 @@ body.dark {
 
 p {
   margin-bottom: 1.5rem;
-}
+     color: #d3d3d3;
+}	
 
 .instructions ul li {
   line-height: 1.3;
@@ -193,7 +194,7 @@ h2 .pli-lang,
 h3 .pli-lang,
 h4 .pli-lang,
 h5 .pli-lang {
-  color: var(--off-black);
+  /*color: var(--off-black);*/
 }
 
 .dark p .pli-lang,
@@ -207,14 +208,14 @@ h5 .pli-lang {
 .dark h5 .pli-lang {
   color: var(--off-white) ;
 }
-
+ /*
 a {
-  color: var(--blue);
+ color: var(--blue); 
 }
 
 .dark a {
   color: rgb(122, 122, 249);
-}
+}*/
 
 dt {
   font-weight: bold;

@@ -588,7 +588,7 @@ uniqwordtotal=`cat $tempfile | pvlimit | sort | uniq | wc -l `
 
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
 then
-cat $templatefolder/Header.html $templatefolder/WordTableHeader.html | sed 's/$title/TitletoReplace/g' > $tempfilewords 
+cat $templatefolder/Header.html $templatefolder/WordTableHeader.html | sed 's/$title/TitletoReplace/g' | sed 's@HOMEVAR@'$mainpagebase'@'  > $tempfilewords 
 else
 cat $templatefolder/Header.html $templatefolder/WordTableHeader.html | sed '/forshellscript/d' | sed 's/$title/TitletoReplace/g' > $tempfilewords 
 fi 
@@ -645,7 +645,7 @@ ${top}"`
 grepvar=
 
 function linklist {
-cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | tohtml 
+cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's/$title/TitletoReplace/g' | tohtml 
 textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
 
 for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | sed -E 's@.*(sutta|vinaya|abhidhamma)@@g' |  awk -F'_' -v dirlocation="$dirlocation" '{print dirlocation""$1}' | sort -Vf | uniq` ; do
@@ -856,9 +856,9 @@ grepvar=l
 function linklist {
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
 then
-cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | tohtml 
+cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' | sed 's@HOMEVAR@'$mainpagebase'@' | tohtml 
 else
-cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' |sed '/forshellscript/d' | tohtml 
+cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's/$title/TitletoReplace/g' |sed '/forshellscript/d'  | sed 's@HOMEVAR@'$mainpagebase'@' | tohtml 
 
 fi 
 
@@ -874,7 +874,6 @@ filenameblock=`echo $i |  sed 's/-.*//g' | sed 's@_@.@g' | sort -Vf | uniq `
 else 
 filenameblock=`echo $i |  sed 's/.html//g' | sort -Vf | uniq `
 fi 
-echo $i >> sddd
 
 file=`grep -m1 "${i}" $basefile `
 
@@ -1178,7 +1177,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory tmp*$rand* *$rand* > /dev/null 2>&1
+rm $basefile $tempfile $tempfilewhistory *grepbase* tmp*$rand* *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

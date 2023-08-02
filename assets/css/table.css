@@ -1,4 +1,13 @@
-	* {
+:root,
+[data-bs-theme=light] {
+--highligh-td-b: #912a07;
+}
+
+[data-bs-theme=dark] {
+--highligh-td-b: #da420e;
+}
+
+* {
       font-family: sans-serif;
     }
 
@@ -56,9 +65,12 @@ text-align: left;
     .quote {
     color=#6A6969;
     }
-    b {
-    color:#912a07;
-    }
+ 
+
+b {
+    color: var(--highligh-td-b);
+}
+
     
      br {
             display: block; 

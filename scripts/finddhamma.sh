@@ -808,7 +808,7 @@ fi
 
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
-<td><input type='checkbox'></td>
+<td><input type='checkbox' data-index="$filenameblock"></td>
 <td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern` </strong>`echo ${trntitle}  | highlightpattern ` </td>
 <td>${word}</td>
 <td>$count</td>   

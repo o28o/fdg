@@ -1,22 +1,49 @@
 :root,
 [data-bs-theme=light] {
 --highligh-td-b: #912a07;
+--bs-btn-color: #000;
+--bs-btn-bg: #fff;
+--bs-btn-text: #000;
 }
  
 [data-bs-theme=dark] {
 --highligh-td-b: #da420e;
---bs-btn-color: #fff;
---bs-btn-bg: #000;
+--bs-btn-color-dark: #fff;
+--bs-btn-bg-dark: #000;
+--bs-btn-text-dark: #fff;
 }
 
 * {
       font-family: sans-serif;
     }
 
+/* Применение к кнопкам */
+.btn-light {
+  color: var(--bs-btn-color);
+  background-color: var(--bs-btn-bg);
+}
+
+/* Применение к кнопкам в темной теме */
+[data-bs-theme=dark] .btn-light {
+  color: var(--bs-btn-color-dark);
+  background-color: var(--bs-btn-bg-dark);
+  
+}
+
+
+button a {
+  color: var(--bs-btn-text); /* По умолчанию для темной темы */
+}
+
+/* Применение к тексту внутри кнопок в светлой теме */
+[data-bs-theme=dark] button a {
+  color: var(--bs-btn-text-dark);
+}
+
 a {
 	--bs-link-color: #0000EE;
     --bs-link-hover-color: #912a07;
-	}
+}
 
 
 .div light {

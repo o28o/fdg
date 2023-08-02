@@ -105,8 +105,8 @@ caption {
 }
 
 .form-control {	
-  color: #212529;	
-  background-color: #fff;	
+ /* color: #212529;	
+  background-color: #fff;	*/
   border: 0.125rem solid #ced4da;	
   -webkit-appearance: none;	
      -moz-appearance: none;	

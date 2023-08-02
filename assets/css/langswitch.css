@@ -83,7 +83,7 @@ body.dark {
 
 p {
   margin-bottom: 1.5rem;
-     color: #d3d3d3;
+ /*    color: #d3d3d3;*/
 }	
 
 .instructions ul li {
@@ -170,7 +170,7 @@ h3,
 h4,
 h5 {
   font-family: sans-serif;
-  color: var(--dark-gray) ;
+ /* color: var(--dark-gray) ; */
 }
 
 .dark p,
@@ -182,9 +182,9 @@ h5 {
 .dark h3,
 .dark h4,
 .dark h5 {
-  color: var(--light-gray);
+ /* color: var(--light-gray); */
 }
-
+/*
 p .pli-lang,
 dt .pli-lang,
 li .pli-lang,
@@ -194,9 +194,9 @@ h2 .pli-lang,
 h3 .pli-lang,
 h4 .pli-lang,
 h5 .pli-lang {
-  /*color: var(--off-black);*/
+  color: var(--off-black);*/
 }
-
+ /*
 .dark p .pli-lang,
 .dark dt .pli-lang,
 .dark li .pli-lang,
@@ -208,7 +208,7 @@ h5 .pli-lang {
 .dark h5 .pli-lang {
   color: var(--off-white) ;
 }
- /*
+
 a {
  color: var(--blue); 
 }

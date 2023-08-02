@@ -26,11 +26,13 @@ switch=en
 elif [[ "$case" == "ru" ]]
 then
 switch=ru
+mainpagebase=/ru
 elif [[ "$case" == "th" ]]
 then
 switch=th
 else 
 switch=
+mainpagebase=/
 fi
 
 
@@ -46,7 +48,7 @@ title='Search History'
 replacehref='/archive.php'
 buttonname='Archive'
 cat $templatefolder/Header.html | sed 's@<title>$title</title>@'"$titleT"'@' | sed 's@$title@'"$title"'@g' 
-cat $templatefolder/ListTableHeader.html | sed 's@HOMEVAR@../@' | sed 's@<h3 class="pl-2 ml-2">$title</h3>@'"$titleH"'@g' | sed 's@$title@'"$title"'@g' | sed 's@$replacehref@'"$replacehref"'@g' | sed 's@$ReplaceMe@'"$buttonname"'@g' 
+cat $templatefolder/ListTableHeader.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's@<h3 class="pl-2 ml-2">$title</h3>@'"$titleH"'@g' | sed 's@$title@'"$title"'@g' | sed 's@$replacehref@'"$replacehref"'@g' | sed 's@$ReplaceMe@'"$buttonname"'@g' 
 
 
 tac $history | grep "<tr>" | head -n $archivenumber

@@ -87,7 +87,7 @@ echo '<!--
            <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Пали-Рус для GoldenDict</a></li>  
   </ul>
 
-<a class="text-decoration-none mx-1" href="/history.php">
+<a class="text-decoration-none mx-1" href="/ru/history.php">
 <figure class="figure">
   <i class="menu-icon fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   

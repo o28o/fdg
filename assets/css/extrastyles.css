@@ -40,14 +40,14 @@ abbr[data-bs-original-title] {
   background-color: #fcf8e3;	
 }
 
-a {	
-  color: #1abc9c;	
-  text-decoration: underline;	
-}	
-a:hover {	
-  color: #15967d;	
+a.onmanin {
+  color: #1abc9c;
+  text-decoration: underline;
 }
 
+a.onmanin:hover {
+  color: #15967d;
+}
 	pre,	
 code,	
 kbd,	
@@ -289,11 +289,11 @@ align-items: center;
   right :35px; 
   z-index:999999;
 }
-
+/*
 .outlink {
   color:#0d6efd;
 }
-
+*/
 /* Container holding the image and the text */
 .imgcontainer {
   position: relative;

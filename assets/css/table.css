@@ -2,9 +2,11 @@
 [data-bs-theme=light] {
 --highligh-td-b: #912a07;
 }
-
+ 
 [data-bs-theme=dark] {
 --highligh-td-b: #da420e;
+--bs-btn-color: #fff;
+--bs-btn-bg: #000;
 }
 
 * {

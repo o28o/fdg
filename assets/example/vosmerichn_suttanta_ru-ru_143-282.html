@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="light">
 <head>
-<title>Восьмеричн 139 texts and 275 matches in Suttanta Russian</title>
-<link rel="icon" type="image/png" href="https://find.dhamma.gift/assets/img/favico-noglass.png" />
+<title>Восьмеричн 143 texts and 282 matches in Suttanta Russian</title>
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
  <meta http-equiv="Cache-control" content="public">
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Восьмеричн 139 texts and 275 matches in Suttanta Russian - find.Dhamma.gift" />
-<meta property="og:description" content="Восьмеричн 139 texts and 275 matches in Suttanta Russian - find.Dhamma.gift" />
-<meta name="description" content="Восьмеричн 139 texts and 275 matches in Suttanta Russian - find.Dhamma.gift">
-<meta name="twitter:title" content="Восьмеричн 139 texts and 275 matches in Suttanta Russian - find.Dhamma.gift">
-<meta name="twitter:description" content="Восьмеричн 139 texts and 275 matches in Suttanta Russian - find.Dhamma.gift">
+<meta property="og:title" content="Восьмеричн 143 texts and 282 matches in Suttanta Russian - find.Dhamma.gift" />
+<meta property="og:description" content="Восьмеричн 143 texts and 282 matches in Suttanta Russian - find.Dhamma.gift" />
+<meta name="description" content="Восьмеричн 143 texts and 282 matches in Suttanta Russian - find.Dhamma.gift">
+<meta name="twitter:title" content="Восьмеричн 143 texts and 282 matches in Suttanta Russian - find.Dhamma.gift">
+<meta name="twitter:description" content="Восьмеричн 143 texts and 282 matches in Suttanta Russian - find.Dhamma.gift">
 <meta property="og:image" itemprop="image" content="" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" href="/assets/css/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
 <link rel="stylesheet" href="/assets/css/langswitch.css">
+
+<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script type="text/javascript" src="/assets/js/datatables.min.js"></script>
 <script type="text/javascript" src="/assets/js/natural.js"></script>
 <script type="text/javascript" src="/assets/js/strip-html.js"></script>
 <!-- <script type="text/javascript" src="/assets/js/diacritics.js"></script> -->
 
 
-
-<link href="/assets/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-<link href="/assets/css/bootstrap.min.5.2.css" rel="stylesheet" type="text/css" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <link href="/assets/css/table.css" rel="stylesheet" />
 <!--<script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=verse"></script>-->
 </head>
 <body>
 <div class="container-fluid mt-2">    
-    <h3 class="pl-2 ml-2">Восьмеричн 139 texts and 275 matches in Suttanta Russian</h3>
-            <button class="btn btn-light" type="button">
-           <a href="../../">
+    <h3 class="pl-2 ml-2">Восьмеричн 143 texts and 282 matches in Suttanta Russian</h3>
+	
+            <button class="btn btn-light mb-1" type="button">
+           <a href="/ru">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="20" height="15">
                 <g transform="matrix(0.13384491 0 0 0.13384491 1.7765683 -0)">
                     <g>
@@ -45,35 +47,48 @@
                 </g>
             </svg>
                        </a>
-      </button>    
-    <button id="btn-hide-all-children" class="btn btn-light" type="button">Saṁvaṭṭo</button>
-<button id="btn-show-all-children" class="btn btn-light" type="button">Vivaṭṭo</button>
+      </button>  
+    <button id="theme-button" class="btn btn-light mb-1 " type="button">
+      
+            <svg xmlns="http://www.w3.org/2000/svg"  height="18" viewBox="0 0 24 24">
+                <path
+                    d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z"
+                    fill="#989898" />
+            </svg>
+</button>	  
+    <button id="btn-hide-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo</button>
+<button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Vivaṭṭo</button>
 
 
 
 
-<button id="language-button" class="hide-button btn btn-light" type="button">Pāḷi / Eng</button>
+<button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
 <hr>
-<table id="pali" class="display table table table-striped table-hover table-responsive " cellspacing="0" width="100%">
+
+<table id="pali" class="display table table-striped table-hover responsive " cellspacing="0" width="100%">
    <thead class="thead-light">
         <tr>
             <th>Sutta</th>
+            <th>St</th>
             <th>Title</th>
             <th>Words</th>
-            <th>Count</th>
-            <th>Mtphr</th>
+            <th>Ct</th>
+            <th>Mr</th>
             <th>Links</th>
             <th class="none">Quote</th>
         <!-- <th class="none">Audio</th> -->
         </tr>
     </thead>
     <tbody id="sutta"><tr>
-<td><a target="_blank" href=/ru/sc/?q=an1.394-574&lang=pli>an1.394-574</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an1.394-574>an1.394-574</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali"></strong>1.394–574 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/an1.394-574/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an1.394-574.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=an1.394-574&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an1.394-574/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 Благородный <b>Восьмеричн</b>ый Путь
@@ -81,12 +96,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an3.61&lang=pli>an3.61</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an3.61>an3.61</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Titthāyatanasutta</strong>. Приверженец другого учения </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an3_61-titthayatana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an3.61/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an3.61.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an3.61.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an3.61/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an3_61-titthayatana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -96,12 +114,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an3.62&lang=pli>an3.62</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an3.62>an3.62</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Bhayasutta</strong>. Опасности </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an3_62-bhaya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an3.62/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an3.62.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an3.62.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an3.62/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an3_62-bhaya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -111,12 +132,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an3.71&lang=pli>an3.71</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an3.71>an3.71</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Channasutta</strong>. Чханна </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an3_71-channa-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an3.71/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an3.71.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an3.71.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an3.71/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an3_71-channa-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -126,12 +150,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an4.33&lang=pli>an4.33</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an4.33>an4.33</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Sīhasutta</strong>. Лев </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an4_33-siha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an4.33/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an4.33.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an4.33.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an4.33/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an4_33-siha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Таков Путь Благородный <b>Восьмеричн</b>ый,
@@ -139,12 +166,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an4.34&lang=pli>an4.34</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an4.34>an4.34</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Aggappasādasutta</strong>. Уверенность </td>
-<td><b>восьмеричн</b>ом <b>восьмеричн</b>ый</td>
+<td><b>восьмеричн</b>ый <b>восьмеричн</b>ом</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an4_34-aggappasada-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an4.34/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an4.34.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an4.34.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an4.34/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an4_34-aggappasada-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -154,12 +184,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an4.205&lang=pli>an4.205</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an4.205>an4.205</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Aṭṭhaṅgikasutta</strong>. <b>Восьмеричн</b>ый </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an4_205-atthangika-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an4.205/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an4.205.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an4.205.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an4.205/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an4_205-atthangika-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 4.205. <b>Восьмеричн</b>ый
@@ -167,12 +200,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an5.32&lang=pli>an5.32</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an5.32>an5.32</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Cundīsutta</strong>. Чунди </td>
-<td><b>восьмеричн</b>ом <b>восьмеричн</b>ый</td>
+<td><b>восьмеричн</b>ый <b>восьмеричн</b>ом</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an5_32-cundi-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an5.32/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an5.32.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an5.32.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an5.32/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an5_32-cundi-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -182,12 +218,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an5.196&lang=pli>an5.196</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an5.196>an5.196</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Mahāsupinasutta</strong>. Великие сны </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an5_196-mahasupina-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an5.196/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an5.196.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an5.196.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an5.196/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an5_196-mahasupina-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -197,12 +236,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an6.63&lang=pli>an6.63</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an6.63>an6.63</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Nibbedhikasutta</strong>. Проникающее </td>
 <td><b>восьмеричн</b>ый</td>
 <td>6</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an6_63-nibbedhika-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an6.63/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an6.63.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an6.63.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an6.63/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an6_63-nibbedhika-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -232,12 +274,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an7.71&lang=pli>an7.71</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an7.71>an7.71</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Bhāvanāsutta</strong>. Развитие </td>
 <td><b>восьмеричн</b>ого</td>
 <td>4</td>   
-<td>4</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an7_71-bhavana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an7.71/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an7.71.html>Eng</a>
+<td>4</td>
+<td><a target="_blank" href=/bw/an/an7.71.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an7.71/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an7_71-bhavana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Благородного <b>Восьмеричн</b>ого Пути.
@@ -257,12 +302,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an8.19&lang=pli>an8.19</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an8.19>an8.19</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Pahārādasutta</strong>. Пахарада </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>8</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an8_19-paharada-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an8.19/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an8.19.html>Eng</a>
+<td>8</td>
+<td><a target="_blank" href=/bw/an/an8.19.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an8.19/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an8_19-paharada-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -272,12 +320,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an8.28&lang=pli>an8.28</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an8.28>an8.28</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Dutiyabalasutta</strong>. Силы (II) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an8_28-dutiya-bala-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an8.28/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an8.28.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an8.28.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an8.28/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an8_28-dutiya-bala-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -287,12 +338,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an10.28&lang=pli>an10.28</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an10.28>an10.28</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Dutiyamahāpañhāsutta</strong>. Великие вопросы (II) </td>
 <td><b>восьмеричн</b>ого</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an10_28-dutiya-mahapanha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an10.28/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an10.28.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an10.28.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an10.28/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an10_28-dutiya-mahapanha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -302,12 +356,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an10.90&lang=pli>an10.90</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an10.90>an10.90</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Khīṇāsavabalasutta</strong>. Силы </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an10_90-bala-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an10.90/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an10.90.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an10.90.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an10.90/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an10_90-bala-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -317,12 +374,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=an11.17&lang=pli>an11.17</a></td>
+<td><a target="_blank" href=/ru/sc/?q=an11.17>an11.17</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Gopālasutta</strong>. Пастух </td>
 <td><b>восьмеричн</b>ого <b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an11_17-gopala-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/an11.17/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//an11.17.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/an/an11.17.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/an11.17/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/an11_17-gopala-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -336,12 +396,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=dn16&lang=pli>dn16</a></td>
+<td><a target="_blank" href=/ru/sc/?q=dn16>dn16</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Mahāparinibbānasutta</strong>. Великое окончательное освобождение </td>
 <td><b>восьмеричн</b>ый</td>
 <td>4</td>   
-<td>14</td>
-<td><a target="_blank" href=https://tipitaka.theravada.su/node/table/1100 /toc/tags?tagid=70 https://tipitaka.theravada.su/node/table/1122 /toc/tags?tagid=75 https://tipitaka.theravada.su/node/table/1155 https://tipitaka.theravada.su/node/table/1170 https://tipitaka.theravada.su/node/table/1178 /toc/tags?tagid=342 https://tipitaka.theravada.su/node/table/1192 https://tipitaka.theravada.su/node/table/1199 https://tipitaka.theravada.su/node/table/1201 https://tipitaka.theravada.su/node/table/1210 https://tipitaka.theravada.su/node/table/1219 https://tipitaka.theravada.su/node/table/1224 https://tipitaka.theravada.su/node/table/1231 https://tipitaka.theravada.su/node/table/1236 https://tipitaka.theravada.su/node/table/1245 /toc/tags?tagid=77 https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128 https://tipitaka.theravada.su/node/table/1270 /toc/tags?tagid=74 https://tipitaka.theravada.su/node/table/1311 https://tipitaka.theravada.su/node/table/1326 https://tipitaka.theravada.su/node/table/1336 https://tipitaka.theravada.su/node/table/1351 https://tipitaka.theravada.su/node/table/1353 https://tipitaka.theravada.su/node/table/1361 https://tipitaka.theravada.su/node/table/1380 https://tipitaka.theravada.su/node/table/1402 https://tipitaka.theravada.su/node/table/1409 https://tipitaka.theravada.su/node/table/1420 /toc/tags?tagid=341 https://tipitaka.theravada.su/node/table/1432 /toc/tags?tagid=78 https://tipitaka.theravada.su/node/table/1449 /toc/tags?tagid=79 https://tipitaka.theravada.su/node/table/1469 https://tipitaka.theravada.su/node/table/1486 https://tipitaka.theravada.su/node/table/1508 /toc/tags?tagid=80 https://tipitaka.theravada.su/node/table/1522 /toc/tags?tagid=81 https://tipitaka.theravada.su/node/table/1525 /toc/tags?tagid=82 https://tipitaka.theravada.su/node/table/1538>Рус</a>&nbsp;<a target=_blank href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/dn16-mahaparinibbana-sutta-01-ivahnenko.htm>Вар. 2</a> <a target=_blank href=https://suttacentral.net/dn16/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//dn16.html>Eng</a>
+<td>14</td>
+<td><a target="_blank" href=/bw/dn/dn16.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/dn16/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://tipitaka.theravada.su/node/table/1100 /toc/tags?tagid=70 https://tipitaka.theravada.su/node/table/1122 /toc/tags?tagid=75 https://tipitaka.theravada.su/node/table/1155 https://tipitaka.theravada.su/node/table/1170 https://tipitaka.theravada.su/node/table/1178 /toc/tags?tagid=342 https://tipitaka.theravada.su/node/table/1192 https://tipitaka.theravada.su/node/table/1199 https://tipitaka.theravada.su/node/table/1201 https://tipitaka.theravada.su/node/table/1210 https://tipitaka.theravada.su/node/table/1219 https://tipitaka.theravada.su/node/table/1224 https://tipitaka.theravada.su/node/table/1231 https://tipitaka.theravada.su/node/table/1236 https://tipitaka.theravada.su/node/table/1245 /toc/tags?tagid=77 https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128 https://tipitaka.theravada.su/node/table/1270 /toc/tags?tagid=74 https://tipitaka.theravada.su/node/table/1311 https://tipitaka.theravada.su/node/table/1326 https://tipitaka.theravada.su/node/table/1336 https://tipitaka.theravada.su/node/table/1351 https://tipitaka.theravada.su/node/table/1353 https://tipitaka.theravada.su/node/table/1361 https://tipitaka.theravada.su/node/table/1380 https://tipitaka.theravada.su/node/table/1402 https://tipitaka.theravada.su/node/table/1409 https://tipitaka.theravada.su/node/table/1420 /toc/tags?tagid=341 https://tipitaka.theravada.su/node/table/1432 /toc/tags?tagid=78 https://tipitaka.theravada.su/node/table/1449 /toc/tags?tagid=79 https://tipitaka.theravada.su/node/table/1469 https://tipitaka.theravada.su/node/table/1486 https://tipitaka.theravada.su/node/table/1508 /toc/tags?tagid=80 https://tipitaka.theravada.su/node/table/1522 /toc/tags?tagid=81 https://tipitaka.theravada.su/node/table/1525 /toc/tags?tagid=82 https://tipitaka.theravada.su/node/table/1538>Рус</a>&nbsp;<a target=_blank href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/dn16-mahaparinibbana-sutta-01-ivahnenko.htm>Вар. 2</a> 
 </td>
 <td>
 
@@ -355,12 +418,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=dn22&lang=pli>dn22</a></td>
+<td><a target="_blank" href=/ru/sc/?q=dn22>dn22</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Mahāsatipaṭṭhānasutta</strong>. Большая сутта об основах памятования </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>7</td>
-<td><a target="_blank" href=https://tipitaka.theravada.su/node/table/1100 /toc/tags?tagid=70 https://tipitaka.theravada.su/node/table/1122 /toc/tags?tagid=75 https://tipitaka.theravada.su/node/table/1155 https://tipitaka.theravada.su/node/table/1170 https://tipitaka.theravada.su/node/table/1178 /toc/tags?tagid=342 https://tipitaka.theravada.su/node/table/1192 https://tipitaka.theravada.su/node/table/1199 https://tipitaka.theravada.su/node/table/1201 https://tipitaka.theravada.su/node/table/1210 https://tipitaka.theravada.su/node/table/1219 https://tipitaka.theravada.su/node/table/1224 https://tipitaka.theravada.su/node/table/1231 https://tipitaka.theravada.su/node/table/1236 https://tipitaka.theravada.su/node/table/1245 /toc/tags?tagid=77 https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128 https://tipitaka.theravada.su/node/table/1270 /toc/tags?tagid=74 https://tipitaka.theravada.su/node/table/1311 https://tipitaka.theravada.su/node/table/1326 https://tipitaka.theravada.su/node/table/1336 https://tipitaka.theravada.su/node/table/1351 https://tipitaka.theravada.su/node/table/1353 https://tipitaka.theravada.su/node/table/1361 https://tipitaka.theravada.su/node/table/1380 https://tipitaka.theravada.su/node/table/1402 https://tipitaka.theravada.su/node/table/1409 https://tipitaka.theravada.su/node/table/1420 /toc/tags?tagid=341 https://tipitaka.theravada.su/node/table/1432 /toc/tags?tagid=78 https://tipitaka.theravada.su/node/table/1449 /toc/tags?tagid=79 https://tipitaka.theravada.su/node/table/1469 https://tipitaka.theravada.su/node/table/1486 https://tipitaka.theravada.su/node/table/1508 /toc/tags?tagid=80 https://tipitaka.theravada.su/node/table/1522 /toc/tags?tagid=81 https://tipitaka.theravada.su/node/table/1525 /toc/tags?tagid=82 https://tipitaka.theravada.su/node/table/1538>Рус</a>&nbsp;<a target=_blank href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/dn22-mahasatipatthansa-sutta-02-ivahnenko.htm>Вар. 2</a> <a target=_blank href=https://suttacentral.net/dn22/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//dn22.html>Eng</a>
+<td>7</td>
+<td><a target="_blank" href=/bw/dn/dn22.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/dn22/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://tipitaka.theravada.su/node/table/1100 /toc/tags?tagid=70 https://tipitaka.theravada.su/node/table/1122 /toc/tags?tagid=75 https://tipitaka.theravada.su/node/table/1155 https://tipitaka.theravada.su/node/table/1170 https://tipitaka.theravada.su/node/table/1178 /toc/tags?tagid=342 https://tipitaka.theravada.su/node/table/1192 https://tipitaka.theravada.su/node/table/1199 https://tipitaka.theravada.su/node/table/1201 https://tipitaka.theravada.su/node/table/1210 https://tipitaka.theravada.su/node/table/1219 https://tipitaka.theravada.su/node/table/1224 https://tipitaka.theravada.su/node/table/1231 https://tipitaka.theravada.su/node/table/1236 https://tipitaka.theravada.su/node/table/1245 /toc/tags?tagid=77 https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128 https://tipitaka.theravada.su/node/table/1270 /toc/tags?tagid=74 https://tipitaka.theravada.su/node/table/1311 https://tipitaka.theravada.su/node/table/1326 https://tipitaka.theravada.su/node/table/1336 https://tipitaka.theravada.su/node/table/1351 https://tipitaka.theravada.su/node/table/1353 https://tipitaka.theravada.su/node/table/1361 https://tipitaka.theravada.su/node/table/1380 https://tipitaka.theravada.su/node/table/1402 https://tipitaka.theravada.su/node/table/1409 https://tipitaka.theravada.su/node/table/1420 /toc/tags?tagid=341 https://tipitaka.theravada.su/node/table/1432 /toc/tags?tagid=78 https://tipitaka.theravada.su/node/table/1449 /toc/tags?tagid=79 https://tipitaka.theravada.su/node/table/1469 https://tipitaka.theravada.su/node/table/1486 https://tipitaka.theravada.su/node/table/1508 /toc/tags?tagid=80 https://tipitaka.theravada.su/node/table/1522 /toc/tags?tagid=81 https://tipitaka.theravada.su/node/table/1525 /toc/tags?tagid=82 https://tipitaka.theravada.su/node/table/1538>Рус</a>&nbsp;<a target=_blank href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/dn22-mahasatipatthansa-sutta-02-ivahnenko.htm>Вар. 2</a> 
 </td>
 <td>
 
@@ -370,12 +436,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=dn29&lang=pli>dn29</a></td>
+<td><a target="_blank" href=/ru/sc/?q=dn29>dn29</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Pāsādikasutta</strong>Восхитительная проповедь </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>2</td>
-<td><a target="_blank" href=https://tipitaka.theravada.su/node/table/1100 /toc/tags?tagid=70 https://tipitaka.theravada.su/node/table/1122 /toc/tags?tagid=75 https://tipitaka.theravada.su/node/table/1155 https://tipitaka.theravada.su/node/table/1170 https://tipitaka.theravada.su/node/table/1178 /toc/tags?tagid=342 https://tipitaka.theravada.su/node/table/1192 https://tipitaka.theravada.su/node/table/1199 https://tipitaka.theravada.su/node/table/1201 https://tipitaka.theravada.su/node/table/1210 https://tipitaka.theravada.su/node/table/1219 https://tipitaka.theravada.su/node/table/1224 https://tipitaka.theravada.su/node/table/1231 https://tipitaka.theravada.su/node/table/1236 https://tipitaka.theravada.su/node/table/1245 /toc/tags?tagid=77 https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128 https://tipitaka.theravada.su/node/table/1270 /toc/tags?tagid=74 https://tipitaka.theravada.su/node/table/1311 https://tipitaka.theravada.su/node/table/1326 https://tipitaka.theravada.su/node/table/1336 https://tipitaka.theravada.su/node/table/1351 https://tipitaka.theravada.su/node/table/1353 https://tipitaka.theravada.su/node/table/1361 https://tipitaka.theravada.su/node/table/1380 https://tipitaka.theravada.su/node/table/1402 https://tipitaka.theravada.su/node/table/1409 https://tipitaka.theravada.su/node/table/1420 /toc/tags?tagid=341 https://tipitaka.theravada.su/node/table/1432 /toc/tags?tagid=78 https://tipitaka.theravada.su/node/table/1449 /toc/tags?tagid=79 https://tipitaka.theravada.su/node/table/1469 https://tipitaka.theravada.su/node/table/1486 https://tipitaka.theravada.su/node/table/1508 /toc/tags?tagid=80 https://tipitaka.theravada.su/node/table/1522 /toc/tags?tagid=81 https://tipitaka.theravada.su/node/table/1525 /toc/tags?tagid=82 https://tipitaka.theravada.su/node/table/1538>Рус</a> <a target=_blank href=https://suttacentral.net/dn29/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//dn29.html>Eng</a>
+<td>2</td>
+<td><a target="_blank" href=/bw/dn/dn29.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/dn29/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://tipitaka.theravada.su/node/table/1100 /toc/tags?tagid=70 https://tipitaka.theravada.su/node/table/1122 /toc/tags?tagid=75 https://tipitaka.theravada.su/node/table/1155 https://tipitaka.theravada.su/node/table/1170 https://tipitaka.theravada.su/node/table/1178 /toc/tags?tagid=342 https://tipitaka.theravada.su/node/table/1192 https://tipitaka.theravada.su/node/table/1199 https://tipitaka.theravada.su/node/table/1201 https://tipitaka.theravada.su/node/table/1210 https://tipitaka.theravada.su/node/table/1219 https://tipitaka.theravada.su/node/table/1224 https://tipitaka.theravada.su/node/table/1231 https://tipitaka.theravada.su/node/table/1236 https://tipitaka.theravada.su/node/table/1245 /toc/tags?tagid=77 https://tipitaka.theravada.su/node/table/1263 /toc/tags?tagid=128 https://tipitaka.theravada.su/node/table/1270 /toc/tags?tagid=74 https://tipitaka.theravada.su/node/table/1311 https://tipitaka.theravada.su/node/table/1326 https://tipitaka.theravada.su/node/table/1336 https://tipitaka.theravada.su/node/table/1351 https://tipitaka.theravada.su/node/table/1353 https://tipitaka.theravada.su/node/table/1361 https://tipitaka.theravada.su/node/table/1380 https://tipitaka.theravada.su/node/table/1402 https://tipitaka.theravada.su/node/table/1409 https://tipitaka.theravada.su/node/table/1420 /toc/tags?tagid=341 https://tipitaka.theravada.su/node/table/1432 /toc/tags?tagid=78 https://tipitaka.theravada.su/node/table/1449 /toc/tags?tagid=79 https://tipitaka.theravada.su/node/table/1469 https://tipitaka.theravada.su/node/table/1486 https://tipitaka.theravada.su/node/table/1508 /toc/tags?tagid=80 https://tipitaka.theravada.su/node/table/1522 /toc/tags?tagid=81 https://tipitaka.theravada.su/node/table/1525 /toc/tags?tagid=82 https://tipitaka.theravada.su/node/table/1538>Рус</a> 
 </td>
 <td>
 
@@ -385,31 +454,71 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn3&lang=pli>mn3</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dhammadāyādasutta</strong>. Наследники в Дхамме </td>
+<td><a target="_blank" href=/ru/sc/?q=iti24>iti24</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Aṭṭhipuñjasutta</strong>. Груда костей </td>
 <td><b>восьмеричн</b>ый</td>
-<td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn3-dhammadayada-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn3/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn3.html>Eng</a>
+<td>1</td>   
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=iti24&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/iti24/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
-
-<br class="styled">
-Друзья, порочное здесь—это жажда и злоба. Существует Срединный Путь для оставления жажды и злобы, который даёт видение, даёт знание, ведёт к покою, к прямому знанию, к просветлению, к ниббане. И что это за Срединный Путь? Это этот самый Благородный <b>Восьмеричн</b>ый Путь, то есть:
-<br class="styled">
-
-<br class="styled">
-Существует Срединный Путь для оставления тщеславия и небрежности, который даёт видение… Это этот самый Благородный <b>Восьмеричн</b>ый Путь… Таков Срединный Путь для оставления тщеславия и небрежности, который даёт видение, даёт знание, ведёт к покою, к прямому знанию, к просветлению, к ниббане».
+Преодоление страдания, и Благородный <b>Восьмеричн</b>ый Путь,
 <br class="styled">
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn8&lang=pli>mn8</a></td>
+<td><a target="_blank" href=/ru/sc/?q=iti90>iti90</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Aggappasādasutta</strong>. Наивысший в вере </td>
+<td><b>восьмеричн</b>ый</td>
+<td>2</td>   
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=iti90&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/iti90/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
+</td>
+<td>
+
+<br class="styled">
+Среди всевозможных качеств—сформированных или несформированных—качество бесстрастия, устранения отравления, уничтожения жажды, искоренения привязанности, разбивания круговерти [сансары], разрушения жажды, бесстрастие, прекращение, осуществление ниббаны—считается наивысшим. Тот, у кого есть вера в качество бесстрастия, имеет веру в то, что является наивысшим; тот, у кого есть вера в наивысшее, [того ждёт] наивысший результат. Среди всевозможных сформированных качеств—Благородный <b>Восьмеричн</b>ый Путь: правильные воззрения, правильное устремление, правильная речь, правильные действия, правильные средства к жизни, правильное усилие, правильная осознанность, правильное сосредоточение—считается наивысшим. Тот, у кого есть вера в Благородный <b>Восьмеричн</b>ый Путь, имеет веру в то, что является наивысшим; тот, у кого есть вера в наивысшее, [того ждёт] наивысший результат.
+<br class="styled">
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href=/ru/sc/?q=mn3>mn3</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dhammadāyādasutta</strong>. Духовное наследство </td>
+<td><b>восьмеричн</b>ый</td>
+<td>2</td>   
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn3.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn3/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn3-dhammadayada-sutta-sv.htm>Рус</a> 
+</td>
+<td>
+
+<br class="styled">
+И что, братья, это за Срединный Путь, дающий ви́дение, дающий мудрость, ведущий к покою, к непосредственному знанию, к пробуждению, к ниббане. Вот этот самый <b>Восьмеричн</b>ый Благородный Путь, а именно правильное воззрение, правильное намерение, правильная речь, правильное поведение, правильные средства к существованию, правильное усилие, правильное памятование, правильное сосредоточение. Это и есть тот самый Срединный Путь, дающий ви́дение, дающий знание, ведущий к покою, к непосредственному знанию, к пробуждению, к ниббане.
+<br class="styled">
+
+<br class="styled">
+И что, братья, это за Срединный Путь, дающий ви́дение, дающий мудрость, ведущий к покою, к непосредственному знанию, к пробуждению, к ниббане. Вот этот самый <b>Восьмеричн</b>ый Благородный Путь, а именно правильное воззрение, правильное намерение, правильная речь, правильное поведение, правильные средства к существованию, правильное усилие, правильное памятование, правильное сосредоточение. Это и есть тот самый Срединный Путь, дающий ви́дение, дающий знание, ведущий к покою, к непосредственному знанию, к пробуждению, к ниббане.
+<br class="styled">
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href=/ru/sc/?q=mn8>mn8</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Sallekhasutta</strong>. Аскеза </td>
 <td><b>восьмеричн</b>ого</td>
 <td>3</td>   
-<td>2</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn8-sallekha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn8/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn8.html>Eng</a>
+<td>2</td>
+<td><a target="_blank" href=/bw/mn/mn8.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn8/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn8-sallekha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 факторы <b>Восьмеричн</b>ого благородного пути
@@ -421,12 +530,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn9&lang=pli>mn9</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn9>mn9</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Sammādiṭṭhisutta</strong>. Правильные Воззрения </td>
 <td><b>восьмеричн</b>ый</td>
 <td>15</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn9-sammaditthi-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn9/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn9.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn9.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn9/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn9-sammaditthi-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -492,12 +604,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn19&lang=pli>mn19</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn19>mn19</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Dvedhāvitakkasutta</strong>. Два типа мыслей </td>
 <td><b>восьмеричн</b>ого <b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>11</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn19-dvedha-vitakka-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn19/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn19.html>Eng</a>
+<td>11</td>
+<td><a target="_blank" href=/bw/mn/mn19.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn19/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn19-dvedha-vitakka-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -507,12 +622,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn33&lang=pli>mn33</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn33>mn33</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Mahāgopālakasutta</strong>. Большая лекция о пастухе </td>
 <td><b>восьмеричн</b>ого <b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn33-maha-gopalaka-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn33/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn33.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn33.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn33/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn33-maha-gopalaka-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -526,12 +644,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn44&lang=pli>mn44</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn44>mn44</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Cūḷavedallasutta</strong>. Малое собрание вопросов и ответов </td>
 <td><b>восьмеричн</b>ый</td>
 <td>10</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn44-culavedala-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn44/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn44.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn44.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn44/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn44-culavedala-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -567,12 +688,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn75&lang=pli>mn75</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn75>mn75</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Māgaṇḍiyasutta</strong>. К Магандии </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>8</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn75-magandiya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn75/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn75.html>Eng</a>
+<td>8</td>
+<td><a target="_blank" href=/bw/mn/mn75.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn75/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn75-magandiya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Из всех путей путь <b>Восьмеричн</b>ый—наилучший,
@@ -582,12 +706,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn77&lang=pli>mn77</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn77>mn77</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Mahāsakuludāyisutta</strong>. Большая лекция для Сакулудайина </td>
-<td><b>восьмеричн</b>ого <b>восьмеричн</b>ый</td>
+<td><b>восьмеричн</b>ый <b>восьмеричн</b>ого</td>
 <td>2</td>   
-<td>25</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn77-maha-sakuludayi-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn77/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn77.html>Eng</a>
+<td>25</td>
+<td><a target="_blank" href=/bw/mn/mn77.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn77/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn77-maha-sakuludayi-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Благородный <b>Восьмеричн</b>ый Путь
@@ -599,12 +726,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn83&lang=pli>mn83</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn83>mn83</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Maghadevasutta</strong>. Царь Макхадэва </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>2</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn83-makhadeva-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn83/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn83.html>Eng</a>
+<td>2</td>
+<td><a target="_blank" href=/bw/mn/mn83.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn83/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn83-makhadeva-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -614,12 +744,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn103&lang=pli>mn103</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn103>mn103</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Kintisutta</strong>. Что вы думаете обо мне? </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn103-kinti-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn103/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn103.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn103.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn103/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn103-kinti-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Благородный <b>Восьмеричн</b>ый Путь —
@@ -627,12 +760,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn104&lang=pli>mn104</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn104>mn104</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Sāmagāmasutta</strong>. В Самагаме </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn104-samagama-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn104/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn104.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn104.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn104/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn104-samagama-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Благородный <b>Восьмеричн</b>ый Путь —
@@ -640,12 +776,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn118&lang=pli>mn118</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn118>mn118</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Ānāpānassatisutta</strong>. Осознанность к дыханию </td>
 <td><b>восьмеричн</b>ого</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn118-anapanasati-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn118/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn118.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn118.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn118/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn118-anapanasati-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -655,27 +794,33 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn139&lang=pli>mn139</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Araṇavibhaṅgasutta</strong>. Изложение о не-конфликте </td>
+<td><a target="_blank" href=/ru/sc/?q=mn139>mn139</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Araṇavibhaṅgasutta</strong>. Проповедь о беcконфликтности </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn139-aranavibhanga-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn139/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn139.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn139.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn139/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn139-aranavibhanga-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
 <br class="styled">
-Это именно этот самый Благородный <b>Восьмеричн</b>ый Путь:
+Это просто <b>Восьмеричн</b>ый Благородный Путь, а именно правильное воззрение, правильное намерение, правильная речь, правильное поведение, правильный образ жизни, правильное усилие, правильное памятование, правильное сосредоточение.
 <br class="styled">
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn141&lang=pli>mn141</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn141>mn141</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Saccavibhaṅgasutta</strong>. Изложение о истинах </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>2</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn141-sacca-vibhanga-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn141/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn141.html>Eng</a>
+<td>2</td>
+<td><a target="_blank" href=/bw/mn/mn141.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn141/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn141-sacca-vibhanga-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -685,12 +830,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn149&lang=pli>mn149</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn149>mn149</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Mahāsaḷāyatanikasutta</strong>. Великая сфера шести </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn149-mahasalayatanika-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn149/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn149.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn149.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn149/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn149-mahasalayatanika-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -700,12 +848,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=mn151&lang=pli>mn151</a></td>
+<td><a target="_blank" href=/ru/sc/?q=mn151>mn151</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Piṇḍapātapārisuddhisutta</strong>. Очищение еды, полученной с подаяний </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn151-pindapata-parisuddhi-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/mn151/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//mn151.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/mn/mn151.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/mn151/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/mn151-pindapata-parisuddhi-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -715,12 +866,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn3.18&lang=pli>sn3.18</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Kosalasaṁyuttaṁ</strong>. Прилежание (II) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn3.18>sn3.18</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Kosalasaṁyuttaṁ</strong>. Прилежание (II) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn3_18-dutiya-appamada-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn3.18/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn3.18.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn3.18.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn3.18/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn3_18-dutiya-appamada-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -738,12 +892,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn12.27&lang=pli>sn12.27</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paccayasutta Nidānasaṁyuttaṁ</strong>. Условия </td>
+<td><a target="_blank" href=/ru/sc/?q=sn12.27>sn12.27</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paccayasutta Nidānasaṁyuttaṁ</strong>. Условия </td>
 <td><b>восьмеричн</b>ый</td>
 <td>11</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_27-paccaya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn12.27/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn12.27.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn12.27.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn12.27/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_27-paccaya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -793,12 +950,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn12.28&lang=pli>sn12.28</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Bhikkhusutta Nidānasaṁyuttaṁ</strong>. Монах </td>
+<td><a target="_blank" href=/ru/sc/?q=sn12.28>sn12.28</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Bhikkhusutta Nidānasaṁyuttaṁ</strong>. Монах </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_28-bhikkhu-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn12.28/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn12.28.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn12.28.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn12.28/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_28-bhikkhu-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -808,12 +968,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn12.33&lang=pli>sn12.33</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Ñāṇavatthusutta Nidānasaṁyuttaṁ</strong>. Предметы знания (I) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn12.33>sn12.33</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Ñāṇavatthusutta Nidānasaṁyuttaṁ</strong>. Предметы знания (I) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_33-pathama-nyanavatthu-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn12.33/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn12.33.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn12.33.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn12.33/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_33-pathama-nyanavatthu-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -827,12 +990,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn12.65&lang=pli>sn12.65</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Nagarasutta Nidānasaṁyuttaṁ</strong>. Город </td>
+<td><a target="_blank" href=/ru/sc/?q=sn12.65>sn12.65</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Nagarasutta Nidānasaṁyuttaṁ</strong>. Город </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_65-nagara-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn12.65/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn12.65.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn12.65.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn12.65/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn12_65-nagara-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -842,12 +1008,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn14.28&lang=pli>sn14.28</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Aṭṭhaṅgikasutta Dhātusaṁyuttaṁ</strong>. <b>Восьмеричн</b>ый путь </td>
+<td><a target="_blank" href=/ru/sc/?q=sn14.28>sn14.28</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Aṭṭhaṅgikasutta Dhātusaṁyuttaṁ</strong>. <b>Восьмеричн</b>ый путь </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn14_28-atthangika-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn14.28/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn14.28.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn14.28.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn14.28/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn14_28-atthangika-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 14.28. <b>Восьмеричн</b>ый путь
@@ -855,12 +1024,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.56&lang=pli>sn22.56</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Upādānaparipavattasutta Khandhasaṁyuttaṁ</strong>. Фазы совокупностей, подверженных цеплянию </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.56>sn22.56</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Upādānaparipavattasutta Khandhasaṁyuttaṁ</strong>. Фазы совокупностей, подверженных цеплянию </td>
 <td><b>восьмеричн</b>ый</td>
 <td>5</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_56-upadana-paripavatta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.56/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.56.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn22.56.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.56/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_56-upadana-paripavatta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -886,12 +1058,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.57&lang=pli>sn22.57</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Sattaṭṭhānasutta Khandhasaṁyuttaṁ</strong>. Семь оснований </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.57>sn22.57</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Sattaṭṭhānasutta Khandhasaṁyuttaṁ</strong>. Семь оснований </td>
 <td><b>восьмеричн</b>ый</td>
 <td>5</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_57-sattatthana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.57/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.57.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn22.57.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.57/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_57-sattatthana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -917,12 +1092,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.78&lang=pli>sn22.78</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Sīhasutta Khandhasaṁyuttaṁ</strong>. Лев </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.78>sn22.78</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Sīhasutta Khandhasaṁyuttaṁ</strong>. Лев </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_78-siha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.78/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.78.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn22.78.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.78/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_78-siha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Таков Путь Благородный <b>Восьмеричн</b>ый,
@@ -930,12 +1108,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.81&lang=pli>sn22.81</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Pālileyyasutta Khandhasaṁyuttaṁ</strong>. Парилейя </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.81>sn22.81</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Pālileyyasutta Khandhasaṁyuttaṁ</strong>. Парилейя </td>
 <td><b>восьмеричн</b>ому</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_81-parileyya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.81/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.81.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn22.81.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.81/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_81-parileyya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -945,12 +1126,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.84&lang=pli>sn22.84</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Tissasutta Khandhasaṁyuttaṁ</strong>. Тисса </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.84>sn22.84</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Tissasutta Khandhasaṁyuttaṁ</strong>. Тисса </td>
 <td><b>восьмеричн</b>ого</td>
 <td>2</td>   
-<td>10</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_84-tissa-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.84/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.84.html>Eng</a>
+<td>10</td>
+<td><a target="_blank" href=/bw/sn/sn22.84.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.84/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_84-tissa-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -960,12 +1144,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.101&lang=pli>sn22.101</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Vāsijaṭasutta Khandhasaṁyuttaṁ</strong>. Рукоятка тесла </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.101>sn22.101</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Vāsijaṭasutta Khandhasaṁyuttaṁ</strong>. Рукоятка тесла </td>
 <td><b>восьмеричн</b>ого</td>
 <td>4</td>   
-<td>4</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_101-vasijata-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.101/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.101.html>Eng</a>
+<td>4</td>
+<td><a target="_blank" href=/bw/sn/sn22.101.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.101/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_101-vasijata-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -987,12 +1174,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.103&lang=pli>sn22.103</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Antasutta Khandhasaṁyuttaṁ</strong>. Доли </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.103>sn22.103</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Antasutta Khandhasaṁyuttaṁ</strong>. Доли </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_103-anta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.103/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.103.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn22.103.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.103/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_103-anta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1002,12 +1192,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn22.104&lang=pli>sn22.104</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dukkhasutta Khandhasaṁyuttaṁ</strong>. Страдание </td>
+<td><a target="_blank" href=/ru/sc/?q=sn22.104>sn22.104</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dukkhasutta Khandhasaṁyuttaṁ</strong>. Страдание </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_104-dukkha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn22.104/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn22.104.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn22.104.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn22.104/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn22_104-dukkha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1017,12 +1210,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn35.146&lang=pli>sn35.146</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kammanirodhasutta Saḷāyatanasaṁyuttaṁ</strong>. Камма </td>
+<td><a target="_blank" href=/ru/sc/?q=sn35.146>sn35.146</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kammanirodhasutta Saḷāyatanasaṁyuttaṁ</strong>. Камма </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn35_146-kamma-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn35.146/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn35.146.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn35.146.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn35.146/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn35_146-kamma-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1032,12 +1228,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn35.238&lang=pli>sn35.238</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Āsīvisopamasutta Saḷāyatanasaṁyuttaṁ</strong>. Пример с гадюками </td>
+<td><a target="_blank" href=/ru/sc/?q=sn35.238>sn35.238</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Āsīvisopamasutta Saḷāyatanasaṁyuttaṁ</strong>. Пример с гадюками </td>
 <td><b>восьмеричн</b>ого</td>
 <td>1</td>   
-<td>13</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn35_238-asivisopama-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn35.238/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn35.238.html>Eng</a>
+<td>13</td>
+<td><a target="_blank" href=/bw/sn/sn35.238.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn35.238/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn35_238-asivisopama-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1047,12 +1246,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn35.245&lang=pli>sn35.245</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kiṁsukopamasutta Saḷāyatanasaṁyuttaṁ</strong>. Пример с деревом Кимсука </td>
+<td><a target="_blank" href=/ru/sc/?q=sn35.245>sn35.245</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kiṁsukopamasutta Saḷāyatanasaṁyuttaṁ</strong>. Пример с деревом Кимсука </td>
 <td><b>восьмеричн</b>ого</td>
 <td>1</td>   
-<td>15</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn35_245-kimsukopama-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn35.245/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn35.245.html>Eng</a>
+<td>15</td>
+<td><a target="_blank" href=/bw/sn/sn35.245.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn35.245/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn35_245-kimsukopama-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1062,12 +1264,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn36.15&lang=pli>sn36.15</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paṭhamaānandasutta Vedanāsaṁyuttaṁ</strong>. Ананда (I) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn36.15>sn36.15</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paṭhamaānandasutta Vedanāsaṁyuttaṁ</strong>. Ананда (I) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn36_15-pathama-ananda-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn36.15/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn36.15.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn36.15.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn36.15/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn36_15-pathama-ananda-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1077,12 +1282,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn36.23&lang=pli>sn36.23</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Aññatarabhikkhusutta Vedanāsaṁyuttaṁ</strong>. Монах </td>
+<td><a target="_blank" href=/ru/sc/?q=sn36.23>sn36.23</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Aññatarabhikkhusutta Vedanāsaṁyuttaṁ</strong>. Монах </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn36_23-bhikkhu-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn36.23/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn36.23.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn36.23.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn36.23/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn36_23-bhikkhu-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1092,12 +1300,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn36.24&lang=pli>sn36.24</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Pubbasutta Vedanāsaṁyuttaṁ</strong>. Прежде </td>
+<td><a target="_blank" href=/ru/sc/?q=sn36.24>sn36.24</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Pubbasutta Vedanāsaṁyuttaṁ</strong>. Прежде </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn36_24-pubbe-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn36.24/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn36.24.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn36.24.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn36.24/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn36_24-pubbe-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1107,12 +1318,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.1&lang=pli>sn38.1</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Nibbānapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о ниббане </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.1>sn38.1</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Nibbānapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о ниббане </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_1-nibbana-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.1/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.1.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.1.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.1/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_1-nibbana-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1122,12 +1336,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.3&lang=pli>sn38.3</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dhammavādīpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос об приверженцах Дхаммы </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.3>sn38.3</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dhammavādīpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос об приверженцах Дхаммы </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_3-dhammavadi-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.3/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.3.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.3.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.3/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_3-dhammavadi-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1137,12 +1354,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.4&lang=pli>sn38.4</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kimatthiyasutta Jambukhādakasaṁyuttaṁ</strong>. Ради чего? </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.4>sn38.4</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kimatthiyasutta Jambukhādakasaṁyuttaṁ</strong>. Ради чего? </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_4-kimatthiya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.4/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.4.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.4.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.4/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_4-kimatthiya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1152,12 +1372,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.5&lang=pli>sn38.5</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Assāsappattasutta Jambukhādakasaṁyuttaṁ</strong>. Утешение </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.5>sn38.5</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Assāsappattasutta Jambukhādakasaṁyuttaṁ</strong>. Утешение </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_5-assasappatta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.5/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.5.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.5.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.5/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_5-assasappatta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1167,12 +1390,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.6&lang=pli>sn38.6</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paramassāsappattasutta Jambukhādakasaṁyuttaṁ</strong>. Наивысшее утешение </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.6>sn38.6</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paramassāsappattasutta Jambukhādakasaṁyuttaṁ</strong>. Наивысшее утешение </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_6-paramassasappatta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.6/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.6.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.6.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.6/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_6-paramassasappatta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1182,12 +1408,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.7&lang=pli>sn38.7</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Vedanāpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о чувстве </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.7>sn38.7</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Vedanāpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о чувстве </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_7-vedana-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.7/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.7.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.7.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.7/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_7-vedana-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1197,12 +1426,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.8&lang=pli>sn38.8</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Āsavapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о загрязнениях </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.8>sn38.8</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Āsavapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о загрязнениях </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_8-asava-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.8/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.8.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.8.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.8/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_8-asava-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1212,12 +1444,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.9&lang=pli>sn38.9</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Avijjāpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о невежестве </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.9>sn38.9</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Avijjāpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о невежестве </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_9-avija-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.9/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.9.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.9.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.9/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_9-avija-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1227,12 +1462,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.10&lang=pli>sn38.10</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Taṇhāpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о жажде </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.10>sn38.10</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Taṇhāpañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о жажде </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_10-tanha-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.10/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.10.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.10.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.10/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_10-tanha-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1242,12 +1480,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.11&lang=pli>sn38.11</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Oghapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о наводнениях </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.11>sn38.11</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Oghapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о наводнениях </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_11-ogha-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.11/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.11.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.11.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.11/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_11-ogha-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1257,12 +1498,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.12&lang=pli>sn38.12</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Upādānapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о цеплянии </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.12>sn38.12</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Upādānapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о цеплянии </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_12-upadana-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.12/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.12.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.12.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.12/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_12-upadana-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1272,12 +1516,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.13&lang=pli>sn38.13</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Bhavapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о существовании </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.13>sn38.13</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Bhavapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о существовании </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_13-bhava-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.13/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.13.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.13.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.13/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_13-bhava-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1287,12 +1534,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.14&lang=pli>sn38.14</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dukkhapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о страдании </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.14>sn38.14</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dukkhapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о страдании </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_14-dukkha-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.14/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.14.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.14.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.14/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_14-dukkha-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1302,12 +1552,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn38.15&lang=pli>sn38.15</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Sakkāyapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о личности </td>
+<td><a target="_blank" href=/ru/sc/?q=sn38.15>sn38.15</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Sakkāyapañhāsutta Jambukhādakasaṁyuttaṁ</strong>. Вопрос о личности </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_15-sakkaya-panha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn38.15/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn38.15.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn38.15.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn38.15/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn38_15-sakkaya-panha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1317,12 +1570,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn42.12&lang=pli>sn42.12</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Rāsiyasutta Gāmaṇisaṁyuttaṁ</strong>. Расия </td>
+<td><a target="_blank" href=/ru/sc/?q=sn42.12>sn42.12</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Rāsiyasutta Gāmaṇisaṁyuttaṁ</strong>. Расия </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn42_12-rasia-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn42.12/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn42.12.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn42.12.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn42.12/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn42_12-rasia-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1332,12 +1588,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn43.11&lang=pli>sn43.11</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Maggaṅgasutta Asaṅkhatasaṁyuttaṁ</strong>. Благородный <b>Восьмеричн</b>ый Путь </td>
+<td><a target="_blank" href=/ru/sc/?q=sn43.11>sn43.11</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Maggaṅgasutta Asaṅkhatasaṁyuttaṁ</strong>. Благородный <b>Восьмеричн</b>ый Путь </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn43.11/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn43.11.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn43.11.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn43.11/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 43.11. Благородный <b>Восьмеричн</b>ый Путь
@@ -1349,12 +1608,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn43.12&lang=pli>sn43.12</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Asaṅkhatasutta Asaṅkhatasaṁyuttaṁ</strong>. Необусловленное </td>
+<td><a target="_blank" href=/ru/sc/?q=sn43.12>sn43.12</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Asaṅkhatasutta Asaṅkhatasaṁyuttaṁ</strong>. Необусловленное </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn43_12-asankhata-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn43.12/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn43.12.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn43.12.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn43.12/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn43_12-asankhata-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 Благородный <b>восьмеричн</b>ый путь
@@ -1362,12 +1624,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.2&lang=pli>sn45.2</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Upaḍḍhasutta Maggasaṁyuttaṁ</strong>. Половина святой жизни </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.2>sn45.2</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Upaḍḍhasutta Maggasaṁyuttaṁ</strong>. Половина святой жизни </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_2-upaddha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.2/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.2.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.2.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.2/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_2-upaddha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1385,12 +1650,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.3&lang=pli>sn45.3</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Sāriputtasutta Maggasaṁyuttaṁ</strong>. Сарипутта </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.3>sn45.3</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Sāriputtasutta Maggasaṁyuttaṁ</strong>. Сарипутта </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_3-sariputta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.3/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.3.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.3.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.3/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_3-sariputta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1408,12 +1676,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.4&lang=pli>sn45.4</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Jāṇussoṇibrāhmaṇasutta Maggasaṁyuttaṁ</strong>. Брахман </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.4>sn45.4</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Jāṇussoṇibrāhmaṇasutta Maggasaṁyuttaṁ</strong>. Брахман </td>
 <td><b>восьмеричн</b>ого</td>
 <td>2</td>   
-<td>2</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_4-brahmana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.4/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.4.html>Eng</a>
+<td>2</td>
+<td><a target="_blank" href=/bw/sn/sn45.4.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.4/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_4-brahmana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1427,12 +1698,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.5&lang=pli>sn45.5</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kimatthiyasutta Maggasaṁyuttaṁ</strong>. Ради чего? </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.5>sn45.5</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kimatthiyasutta Maggasaṁyuttaṁ</strong>. Ради чего? </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_5-kimatthiya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.5/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.5.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.5.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.5/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_5-kimatthiya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1442,12 +1716,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.6&lang=pli>sn45.6</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paṭhamaaññatarabhikkhusutta Maggasaṁyuttaṁ</strong>. Один монах (I) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.6>sn45.6</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paṭhamaaññatarabhikkhusutta Maggasaṁyuttaṁ</strong>. Один монах (I) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_6-pathama-anyatara-bhikkhu-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.6/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.6.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.6.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.6/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_6-pathama-anyatara-bhikkhu-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1457,12 +1734,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.7&lang=pli>sn45.7</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dutiyaaññatarabhikkhusutta Maggasaṁyuttaṁ</strong>. Один монах (II) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.7>sn45.7</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dutiyaaññatarabhikkhusutta Maggasaṁyuttaṁ</strong>. Один монах (II) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>2</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_7-dutiya-anyatara-bhikkhu-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.7/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.7.html>Eng</a>
+<td>2</td>
+<td><a target="_blank" href=/bw/sn/sn45.7.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.7/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_7-dutiya-anyatara-bhikkhu-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1472,12 +1752,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.8&lang=pli>sn45.8</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Vibhaṅgasutta Maggasaṁyuttaṁ</strong>. Анализ </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.8>sn45.8</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Vibhaṅgasutta Maggasaṁyuttaṁ</strong>. Анализ </td>
 <td><b>восьмеричн</b>ому <b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_8-magga-vibhanga-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.8/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.8.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.8.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.8/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_8-magga-vibhanga-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1491,12 +1774,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.18&lang=pli>sn45.18</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paṭhamakukkuṭārāmasutta Maggasaṁyuttaṁ</strong>. Петушиный парк (I) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.18>sn45.18</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paṭhamakukkuṭārāmasutta Maggasaṁyuttaṁ</strong>. Петушиный парк (I) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_18-pathama-kukkutarama-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.18/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.18.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.18.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.18/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_18-pathama-kukkutarama-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1506,12 +1792,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.19&lang=pli>sn45.19</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dutiyakukkuṭārāmasutta Maggasaṁyuttaṁ</strong>. Петушиный парк (II) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.19>sn45.19</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dutiyakukkuṭārāmasutta Maggasaṁyuttaṁ</strong>. Петушиный парк (II) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_19-dutiya-kukkutarama-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.19/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.19.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.19.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.19/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_19-dutiya-kukkutarama-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1521,12 +1810,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.20&lang=pli>sn45.20</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Tatiyakukkuṭārāmasutta Maggasaṁyuttaṁ</strong>. Петушиный парк (III) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.20>sn45.20</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Tatiyakukkuṭārāmasutta Maggasaṁyuttaṁ</strong>. Петушиный парк (III) </td>
 <td><b>восьмеричн</b>ый <b>восьмеричн</b>ым</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_20-tatiya-kukkutarama-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.20/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.20.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.20.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.20/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_20-tatiya-kukkutarama-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1536,12 +1828,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.27&lang=pli>sn45.27</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kumbhasutta Maggasaṁyuttaṁ</strong>. Горшок </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.27>sn45.27</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kumbhasutta Maggasaṁyuttaṁ</strong>. Горшок </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>2</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_27-kumbha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.27/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.27.html>Eng</a>
+<td>2</td>
+<td><a target="_blank" href=/bw/sn/sn45.27.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.27/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_27-kumbha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1551,12 +1846,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.29&lang=pli>sn45.29</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Vedanāsutta Maggasaṁyuttaṁ</strong>. Чувство </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.29>sn45.29</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Vedanāsutta Maggasaṁyuttaṁ</strong>. Чувство </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_29-vedana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.29/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.29.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.29.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.29/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_29-vedana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1570,12 +1868,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.30&lang=pli>sn45.30</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Uttiyasutta Maggasaṁyuttaṁ</strong>. Уттия </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.30>sn45.30</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Uttiyasutta Maggasaṁyuttaṁ</strong>. Уттия </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_30-uttiya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.30/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.30.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.30.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.30/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_30-uttiya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1589,12 +1890,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.33&lang=pli>sn45.33</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Viraddhasutta Maggasaṁyuttaṁ</strong>. Пренебрегали </td>
-<td><b>восьмеричн</b>ый <b>восьмеричн</b>ым</td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.33>sn45.33</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Viraddhasutta Maggasaṁyuttaṁ</strong>. Пренебрегали </td>
+<td><b>восьмеричн</b>ым <b>восьмеричн</b>ый</td>
 <td>5</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_33-viraddha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.33/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.33.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.33.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.33/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_33-viraddha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1612,12 +1916,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.35&lang=pli>sn45.35</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paṭhamasāmaññasutta Maggasaṁyuttaṁ</strong>. Отшельничество (I) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.35>sn45.35</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paṭhamasāmaññasutta Maggasaṁyuttaṁ</strong>. Отшельничество (I) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_35-pathama-samannya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.35/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.35.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.35.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.35/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_35-pathama-samannya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1627,12 +1934,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.36&lang=pli>sn45.36</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dutiyasāmaññasutta Maggasaṁyuttaṁ</strong>. Отшельничество (II) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.36>sn45.36</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dutiyasāmaññasutta Maggasaṁyuttaṁ</strong>. Отшельничество (II) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_36-dutiya-samannya-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.36/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.36.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.36.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.36/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_36-dutiya-samannya-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1642,12 +1952,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.41&lang=pli>sn45.41</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Rāgavirāgasutta Maggasaṁyuttaṁ</strong>45.42. Угасание жажды </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.41>sn45.41</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Rāgavirāgasutta Maggasaṁyuttaṁ</strong>45.42. Угасание жажды </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_41-viraga-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.41/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.41.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.41.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.41/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_41-viraga-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1657,12 +1970,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.49&lang=pli>sn45.49</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Maggasaṁyuttaṁ</strong>. Хороший друг </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.49>sn45.49</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Maggasaṁyuttaṁ</strong>. Хороший друг </td>
 <td><b>восьмеричн</b>ого <b>восьмеричн</b>ый</td>
 <td>4</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_49-kalyanamitta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.49/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.49.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.49.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.49/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_49-kalyanamitta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1680,12 +1996,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.50-54&lang=pli>sn45.50-54</a></td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.50-54>sn45.50-54</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Sīlasampadādisuttapañcaka</strong>45.50–54 </td>
 <td><b>восьмеричн</b>ого <b>восьмеричн</b>ый</td>
 <td>4</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.50-54/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.50-54.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=sn45.50-54&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.50-54/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1703,12 +2022,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.63&lang=pli>sn45.63</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Maggasaṁyuttaṁ</strong>. Хороший друг </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.63>sn45.63</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Maggasaṁyuttaṁ</strong>. Хороший друг </td>
 <td><b>восьмеричн</b>ого <b>восьмеричн</b>ый</td>
 <td>4</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_63-kalyanamitta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.63/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.63.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.63.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.63/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_63-kalyanamitta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1726,12 +2048,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.77&lang=pli>sn45.77</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Maggasaṁyuttaṁ</strong>–90 </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.77>sn45.77</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kalyāṇamittasutta Maggasaṁyuttaṁ</strong>–90 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_77-90-suttas-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.77/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.77.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.77.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.77/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_77-90-suttas-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1741,12 +2066,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.78-82&lang=pli>sn45.78-82</a></td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.78-82>sn45.78-82</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Sīlasampadādisuttapañcaka</strong>45.77–90 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.78-82/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.78-82.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=sn45.78-82&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.78-82/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1756,12 +2084,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.83&lang=pli>sn45.83</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Yonisomanasikārasampadāsutta Maggasaṁyuttaṁ</strong>45.77–90 </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.83>sn45.83</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Yonisomanasikārasampadāsutta Maggasaṁyuttaṁ</strong>45.77–90 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.83/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.83.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=sn45.83&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.83/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1771,12 +2102,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.84&lang=pli>sn45.84</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dutiyakalyāṇamittasutta Maggasaṁyuttaṁ</strong>45.77–90 </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.84>sn45.84</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dutiyakalyāṇamittasutta Maggasaṁyuttaṁ</strong>45.77–90 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.84/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.84.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.84.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.84/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1786,12 +2120,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.85-89&lang=pli>sn45.85-89</a></td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.85-89>sn45.85-89</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Dutiyasīlasampadādisuttapañcaka</strong>45.77–90 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.85-89/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.85-89.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=sn45.85-89&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.85-89/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1801,12 +2138,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.90&lang=pli>sn45.90</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dutiyayonisomanasikārasampadāsutta Maggasaṁyuttaṁ</strong>45.77–90 </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.90>sn45.90</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dutiyayonisomanasikārasampadāsutta Maggasaṁyuttaṁ</strong>45.77–90 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.90/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.90.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=sn45.90&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.90/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1816,12 +2156,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.91&lang=pli>sn45.91</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paṭhamapācīnaninnasutta Maggasaṁyuttaṁ</strong>. Река Ганг - на восток </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.91>sn45.91</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paṭhamapācīnaninnasutta Maggasaṁyuttaṁ</strong>. Река Ганг - на восток </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_91-pancinaninna-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.91/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.91.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.91.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.91/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_91-pancinaninna-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1839,12 +2182,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.139&lang=pli>sn45.139</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Tathāgatasutta Maggasaṁyuttaṁ</strong>. Татхагата </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.139>sn45.139</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Tathāgatasutta Maggasaṁyuttaṁ</strong>. Татхагата </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_139-tathagata-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.139/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.139.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.139.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.139/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_139-tathagata-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1862,12 +2208,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.140&lang=pli>sn45.140</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Padasutta Maggasaṁyuttaṁ</strong>. Следы </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.140>sn45.140</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Padasutta Maggasaṁyuttaṁ</strong>. Следы </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_140-148-suttas-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.140/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.140.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.140.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.140/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_140-148-suttas-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1877,12 +2226,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.141-145&lang=pli>sn45.141-145</a></td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.141-145>sn45.141-145</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Kūṭādisutta</strong>45.141–145 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>5</td>   
-<td>5</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.141-145/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.141-145.html>Eng</a>
+<td>5</td>
+<td><a target="_blank" href=/sc/?q=sn45.141-145&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.141-145/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1908,12 +2260,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.146-148&lang=pli>sn45.146-148</a></td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.146-148>sn45.146-148</a></td>
+<td><input type='checkbox'></td>
 <td><strong class="pli-lang inputscript-ISOPali">Candimādisutta</strong>45.146–148 </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>3</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.146-148/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.146-148.html>Eng</a>
+<td>3</td>
+<td><a target="_blank" href=/sc/?q=sn45.146-148&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.146-148/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -1931,12 +2286,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.149&lang=pli>sn45.149</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Balasutta Maggasaṁyuttaṁ</strong>. Усилие </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.149>sn45.149</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Balasutta Maggasaṁyuttaṁ</strong>. Усилие </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>4</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_149-bala-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.149/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.149.html>Eng</a>
+<td>4</td>
+<td><a target="_blank" href=/bw/sn/sn45.149.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.149/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_149-bala-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1954,12 +2312,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.150&lang=pli>sn45.150</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Bījasutta Maggasaṁyuttaṁ</strong>. Семена </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.150>sn45.150</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Bījasutta Maggasaṁyuttaṁ</strong>. Семена </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_150-bija-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.150/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.150.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.150.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.150/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_150-bija-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1973,12 +2334,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.151&lang=pli>sn45.151</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Nāgasutta Maggasaṁyuttaṁ</strong>. Наги </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.151>sn45.151</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Nāgasutta Maggasaṁyuttaṁ</strong>. Наги </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_151-naga-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.151/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.151.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.151.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.151/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_151-naga-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -1992,12 +2356,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.152&lang=pli>sn45.152</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Rukkhasutta Maggasaṁyuttaṁ</strong>. Дерево </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.152>sn45.152</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Rukkhasutta Maggasaṁyuttaṁ</strong>. Дерево </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_152-rukkha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.152/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.152.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.152.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.152/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_152-rukkha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2011,12 +2378,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.153&lang=pli>sn45.153</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kumbhasutta Maggasaṁyuttaṁ</strong>. Горшок </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.153>sn45.153</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kumbhasutta Maggasaṁyuttaṁ</strong>. Горшок </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_153-kumbha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.153/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.153.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.153.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.153/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_153-kumbha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2030,12 +2400,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.155&lang=pli>sn45.155</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Ākāsasutta Maggasaṁyuttaṁ</strong>. Небо </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.155>sn45.155</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Ākāsasutta Maggasaṁyuttaṁ</strong>. Небо </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_155-akasa-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.155/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.155.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.155.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.155/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_155-akasa-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2049,12 +2422,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.156&lang=pli>sn45.156</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Paṭhamameghasutta Maggasaṁyuttaṁ</strong>. Дождевое облако (I) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.156>sn45.156</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Paṭhamameghasutta Maggasaṁyuttaṁ</strong>. Дождевое облако (I) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_156-pathama-megha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.156/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.156.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.156.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.156/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_156-pathama-megha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2068,12 +2444,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.157&lang=pli>sn45.157</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dutiyameghasutta Maggasaṁyuttaṁ</strong>. Дождевое облако (II) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.157>sn45.157</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dutiyameghasutta Maggasaṁyuttaṁ</strong>. Дождевое облако (II) </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_157-dutiya-megha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.157/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.157.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.157.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.157/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_157-dutiya-megha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2087,12 +2466,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.158&lang=pli>sn45.158</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Nāvāsutta Maggasaṁyuttaṁ</strong>. Корабль </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.158>sn45.158</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Nāvāsutta Maggasaṁyuttaṁ</strong>. Корабль </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_158-nava-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.158/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.158.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.158.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.158/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_158-nava-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2106,12 +2488,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.159&lang=pli>sn45.159</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Āgantukasutta Maggasaṁyuttaṁ</strong>. Гостевой дом </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.159>sn45.159</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Āgantukasutta Maggasaṁyuttaṁ</strong>. Гостевой дом </td>
 <td><b>восьмеричн</b>ый</td>
 <td>3</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_159-agantuka-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.159/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.159.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.159.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.159/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_159-agantuka-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2129,12 +2514,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.160&lang=pli>sn45.160</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Nadīsutta Maggasaṁyuttaṁ</strong>. Река </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.160>sn45.160</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Nadīsutta Maggasaṁyuttaṁ</strong>. Река </td>
 <td><b>восьмеричн</b>ый</td>
 <td>4</td>   
-<td>1</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_160-nadi-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.160/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.160.html>Eng</a>
+<td>1</td>
+<td><a target="_blank" href=/bw/sn/sn45.160.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.160/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_160-nadi-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2152,12 +2540,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.161&lang=pli>sn45.161</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Esanāsutta Maggasaṁyuttaṁ</strong>. Поиски </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.161>sn45.161</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Esanāsutta Maggasaṁyuttaṁ</strong>. Поиски </td>
 <td><b>восьмеричн</b>ый</td>
 <td>7</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_161-esana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.161/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.161.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.161.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.161/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_161-esana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2191,12 +2582,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.162&lang=pli>sn45.162</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Vidhāsutta Maggasaṁyuttaṁ</strong>. Суждения </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.162>sn45.162</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Vidhāsutta Maggasaṁyuttaṁ</strong>. Суждения </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_162-170-suttas-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.162/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.162.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.162.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.162/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_162-170-suttas-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2206,12 +2600,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.163&lang=pli>sn45.163</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Āsavasutta Maggasaṁyuttaṁ</strong>. Пятна </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.163>sn45.163</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Āsavasutta Maggasaṁyuttaṁ</strong>. Пятна </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.163/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.163.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.163.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.163/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2221,12 +2618,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.164&lang=pli>sn45.164</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Bhavasutta Maggasaṁyuttaṁ</strong>. Существование </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.164>sn45.164</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Bhavasutta Maggasaṁyuttaṁ</strong>. Существование </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.164/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.164.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.164.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.164/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2236,12 +2636,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.165&lang=pli>sn45.165</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dukkhatāsutta Maggasaṁyuttaṁ</strong>. Страдание </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.165>sn45.165</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dukkhatāsutta Maggasaṁyuttaṁ</strong>. Страдание </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.165/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.165.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.165.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.165/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2251,12 +2654,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.166&lang=pli>sn45.166</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Khilasutta Maggasaṁyuttaṁ</strong>. Бесполезность </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.166>sn45.166</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Khilasutta Maggasaṁyuttaṁ</strong>. Бесполезность </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.166/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.166.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.166.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.166/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2266,12 +2672,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.167&lang=pli>sn45.167</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Malasutta Maggasaṁyuttaṁ</strong>. Запятнанность </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.167>sn45.167</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Malasutta Maggasaṁyuttaṁ</strong>. Запятнанность </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.167/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.167.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.167.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.167/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2281,12 +2690,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.168&lang=pli>sn45.168</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Nīghasutta Maggasaṁyuttaṁ</strong>. Проблемы </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.168>sn45.168</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Nīghasutta Maggasaṁyuttaṁ</strong>. Проблемы </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.168/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.168.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.168.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.168/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2296,12 +2708,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.169&lang=pli>sn45.169</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Vedanāsutta Maggasaṁyuttaṁ</strong>. Чувства </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.169>sn45.169</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Vedanāsutta Maggasaṁyuttaṁ</strong>. Чувства </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.169/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.169.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.169.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.169/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2311,12 +2726,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.170&lang=pli>sn45.170</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Taṇhāsutta Maggasaṁyuttaṁ</strong>. Жажда </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.170>sn45.170</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Taṇhāsutta Maggasaṁyuttaṁ</strong>. Жажда </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.170/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.170.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.170.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.170/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2326,12 +2744,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.171&lang=pli>sn45.171</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Oghasutta Maggasaṁyuttaṁ</strong>. Наводнения </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.171>sn45.171</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Oghasutta Maggasaṁyuttaṁ</strong>. Наводнения </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_171-180-suttas-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.171/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.171.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.171.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.171/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn45_171-180-suttas-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2341,12 +2762,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.172&lang=pli>sn45.172</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Yogasutta Maggasaṁyuttaṁ</strong>. Оковы </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.172>sn45.172</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Yogasutta Maggasaṁyuttaṁ</strong>. Оковы </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.172/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.172.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.172.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.172/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2356,12 +2780,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.173&lang=pli>sn45.173</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Upādānasutta Maggasaṁyuttaṁ</strong>. Цепляния </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.173>sn45.173</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Upādānasutta Maggasaṁyuttaṁ</strong>. Цепляния </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.173/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.173.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.173.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.173/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2371,12 +2798,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.174&lang=pli>sn45.174</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Ganthasutta Maggasaṁyuttaṁ</strong>. Узлы </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.174>sn45.174</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Ganthasutta Maggasaṁyuttaṁ</strong>. Узлы </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.174/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.174.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.174.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.174/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2386,12 +2816,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.175&lang=pli>sn45.175</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Anusayasutta Maggasaṁyuttaṁ</strong>. Скрытые склонности </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.175>sn45.175</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Anusayasutta Maggasaṁyuttaṁ</strong>. Скрытые склонности </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.175/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.175.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.175.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.175/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2401,12 +2834,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.176&lang=pli>sn45.176</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Kāmaguṇasutta Maggasaṁyuttaṁ</strong>. Нити чувственности </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.176>sn45.176</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Kāmaguṇasutta Maggasaṁyuttaṁ</strong>. Нити чувственности </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.176/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.176.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.176.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.176/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2416,12 +2852,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.177&lang=pli>sn45.177</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Nīvaraṇasutta Maggasaṁyuttaṁ</strong>. Помехи </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.177>sn45.177</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Nīvaraṇasutta Maggasaṁyuttaṁ</strong>. Помехи </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.177/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.177.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.177.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.177/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2431,12 +2870,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.178&lang=pli>sn45.178</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Upādānakkhandhasutta Maggasaṁyuttaṁ</strong>. Совокупности </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.178>sn45.178</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Upādānakkhandhasutta Maggasaṁyuttaṁ</strong>. Совокупности </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.178/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.178.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.178.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.178/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2446,12 +2888,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.179&lang=pli>sn45.179</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Orambhāgiyasutta Maggasaṁyuttaṁ</strong>. Пять нижних оков </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.179>sn45.179</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Orambhāgiyasutta Maggasaṁyuttaṁ</strong>. Пять нижних оков </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.179/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.179.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.179.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.179/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2461,12 +2906,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn45.180&lang=pli>sn45.180</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Uddhambhāgiyasutta Maggasaṁyuttaṁ</strong>. Пять высших оков </td>
+<td><a target="_blank" href=/ru/sc/?q=sn45.180>sn45.180</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Uddhambhāgiyasutta Maggasaṁyuttaṁ</strong>. Пять высших оков </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=>Рус</a> <a target=_blank href=https://suttacentral.net/sn45.180/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn45.180.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn45.180.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn45.180/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=>Рус</a> 
 </td>
 <td>
 
@@ -2476,12 +2924,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn47.40&lang=pli>sn47.40</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Vibhaṅgasutta Satipaṭṭhānasaṁyuttaṁ</strong>. Анализ </td>
+<td><a target="_blank" href=/ru/sc/?q=sn47.40>sn47.40</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Vibhaṅgasutta Satipaṭṭhānasaṁyuttaṁ</strong>. Анализ </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn47_40-vibhanga-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn47.40/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn47.40.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn47.40.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn47.40/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn47_40-vibhanga-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2491,12 +2942,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn51.19&lang=pli>sn51.19</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Iddhādidesanāsutta Iddhipādasaṁyuttaṁ</strong>. Учение о сверхъестественной силе </td>
+<td><a target="_blank" href=/ru/sc/?q=sn51.19>sn51.19</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Iddhādidesanāsutta Iddhipādasaṁyuttaṁ</strong>. Учение о сверхъестественной силе </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn51_19-iddhadidesana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn51.19/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn51.19.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn51.19.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn51.19/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn51_19-iddhadidesana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2506,12 +2960,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn55.5&lang=pli>sn55.5</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dutiyasāriputtasutta Sotāpattisaṁyuttaṁ</strong>. Сарипутта (II) </td>
+<td><a target="_blank" href=/ru/sc/?q=sn55.5>sn55.5</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dutiyasāriputtasutta Sotāpattisaṁyuttaṁ</strong>. Сарипутта (II) </td>
 <td><b>восьмеричн</b>ый <b>восьмеричн</b>ым</td>
 <td>4</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn55_5-dutiya-sariputta-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn55.5/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn55.5.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn55.5.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn55.5/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn55_5-dutiya-sariputta-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2533,12 +2990,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn56.11&lang=pli>sn56.11</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Dhammacakkappavattanasutta Saccasaṁyuttaṁ</strong>. Поворот колеса Дхаммы </td>
+<td><a target="_blank" href=/ru/sc/?q=sn56.11>sn56.11</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dhammacakkappavattanasutta Saccasaṁyuttaṁ</strong>. Поворот колеса Дхаммы </td>
 <td><b>восьмеричн</b>ый</td>
 <td>2</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn56_11-dhammacakka-pavatana-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn56.11/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn56.11.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn56.11.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn56.11/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn56_11-dhammacakka-pavatana-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2552,12 +3012,15 @@
 </td>
 </tr>
 <tr>
-<td><a target="_blank" href=/ru/sc/?q=sn56.13&lang=pli>sn56.13</a></td>
-<td><strong class="pli-lang inputscript-ISOPali">Khandhasutta Saccasaṁyuttaṁ</strong>. Совокупности </td>
+<td><a target="_blank" href=/ru/sc/?q=sn56.13>sn56.13</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Khandhasutta Saccasaṁyuttaṁ</strong>. Совокупности </td>
 <td><b>восьмеричн</b>ый</td>
 <td>1</td>   
-<td>0</td>
-<td><a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn56_13-khandha-sutta-sv.htm>Рус</a> <a target=_blank href=https://suttacentral.net/sn56.13/th/siam_rath>ไทย</a>&nbsp;<a target="_blank" href=https://thebuddhaswords.net//sn56.13.html>Eng</a>
+<td>0</td>
+<td><a target="_blank" href=/bw/sn/sn56.13.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/sn56.13/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/sn56_13-khandha-sutta-sv.htm>Рус</a> 
 </td>
 <td>
 
@@ -2566,26 +3029,136 @@
 <br class="styled">
 </td>
 </tr>
-</tbody>
-</table>
-<a href='../../' id='back'>Main</a>&nbsp;
-<a href='/ru/sc'>Read</a>&nbsp;
-<a href='/assets/diff'>SuttaDiff</a>&nbsp;
-<a href='/history.php'>History</a>&nbsp;
-</div>
+<tr>
+<td><a target="_blank" href=/ru/sc/?q=snp2.14>snp2.14</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Dhammikasutta</strong>. Мирянин Дхаммика </td>
+<td><b>восьмеричн</b>ое</td>
+<td>2</td>   
+<td>0</td>
+<td><a target="_blank" href=/sc/?q=snp2.14&lang=pli-eng>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/snp2.14/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/snp2_14-dhammika-sutta-sv.htm>Рус</a> 
+</td>
+<td>
+Вот <b>восьмеричн</b>ое воздержание,
+<br class="styled">
+И приняв вполне <b>восьмеричн</b>ое уложение,
+<br class="styled">
+</td>
+</tr>
+<tr>
+<td><a target="_blank" href=/ru/sc/?q=ud5.5>ud5.5</a></td>
+<td><input type='checkbox'></td>
+<td><strong class="pli-lang inputscript-ISOPali">Uposathasutta</strong>. Высказывание о признании </td>
+<td><b>восьмеричн</b>ый</td>
+<td>2</td>   
+<td>8</td>
+<td><a target="_blank" href=/bw/ud/ud5.5.html>Eng</a>&nbsp;
+<a target=_blank href=https://suttacentral.net/ud5.5/th/siam_rath>ไทย</a>&nbsp;
+<a target="_blank" href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/ud5_5-uposatha-sutta-sv.htm>Рус</a> 
+</td>
+<td>
 
+<br class="styled">
+Подобно тому, монахи, как в Великом океане есть много драгоценных вещей, бесчисленных драгоценностей, таких как жемчуг, хрусталь, лазурит, перламутр, кварц, коралл, серебро, золото, рубин и кошачий глаз, также в Дхамме и Винае есть много драгоценных вещей, бесчисленных драгоценностей, таких как четыре основы внимательности, четыре правильных усилия, четыре пути могущества, пять способностей, пять сил, семь факторов пробуждения, <b>восьмеричн</b>ый путь Арьев. То, что в Дхамме и Винае есть много драгоценных вещей, бесчисленных драгоценностей, таких как четыре основы внимательности, четыре правильных усилия, четыре пути могущества, пять способностей, пять сил, семь факторов пробуждения, <b>восьмеричн</b>ый путь Арьев — является седьмой поразительной и удивительной вещью в Дхамме и Винае, увидев и рассмотрев которую, монахи восхищаются Дхаммой и Винаей.
+<br class="styled">
+</td>
+</tr>
+</div>
+<script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
-$(document).ready(function (){
+   $(document).ready(function() {
+       // Регистрируем собственный тип сортировки для чекбоксов
+    $.fn.dataTable.ext.order['dom-checkbox'] = function(settings, col) {
+        return this.api().column(col, { order: 'index' }).nodes().map(function(td, i) {
+            return $('input', td).prop('checked') ? '1' : '0';
+        });
+    };
+   
+   
+   var dataSrc = [];
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
-	    'paging'  : true,
+	           dom: '<"row"lf>r<t><"row"ip><"footerlike"B>',
+        buttons: {
+          name: 'primary',
+        buttons: [
+            {
+              text: 'Main',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = "MAINLINKVAR";
+                            }
+            },
+              {
+              text: 'Read',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = "READLINKVAR";
+                            }
+            },
+                        {
+              text: 'Sutta Diff',
+               className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = '/assets/diff';
+                            }
+                        },  
+                        {
+              text: 'History',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = '/history.php';
+                            }
+                        },  
+                        { extend: 'colvis', 
+                     className: 'btn btn-link ',
+                        text: 'Visibility' }
+        ]
+    },
+	   'paging'  : true,
+	    'colReorder': true,
+	    "orderMulti": true,
+	   'pageLength' : 28,
+	   'lengthMenu' : [10, 28, 50, 100, 1000],
 	  'responsive': true,
 	  'columnDefs': [
-	            { type: "html", target: [1,2,6] },
-	            { type: 'natural', targets: 0 }
-					]				
-    });
+				{                
+				targets: [1], // Индекс столбца с чекбоксами
+				orderDataType: 'dom-checkbox' // Используем функцию сортировки
+				},
+	            { type: "html", target: [2,3,7] },
+	            { type: 'natural', targets: 0 },
+				  {
+            target: 1,
+            visible: false
+        }				
+					],
+      'initComplete': function(){
+         var api = this.api();
+
+         // Populate a dataset for autocomplete functionality
+		          api.cells('tr', [0, 2, 3, 4, 5, 7]).every(function(){
+            //var data = this.data().replace( /(<([^>]+)>)/ig, '');
+            var data = $('<div>').html(this.data()).text();
+          //  console.log(data);
+            if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
+         });
+
+         // Initialize Typeahead plug-in
+         $('.dataTables_filter input[type="search"]', api.table().container())
+            .typeahead({
+              autoSelect: false,
+               source: dataSrc,
+               afterSelect: function(value){
+                  api.search(value).draw();
+               }
+            }
+         );
+      }
+   });			
 
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){
@@ -2599,6 +3172,51 @@ $(document).ready(function (){
     });
 });
   </script>
+  
+<script>
+// Получение всех чекбоксов
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Функция для сохранения состояния чекбоксов в LocalStorage
+function saveCheckboxesStateToLocalStorage(urlKey) {
+  var checkboxState = {};
+  checkboxes.forEach(function(checkbox, index) {
+    checkboxState['checkbox_' + checkbox.dataset.index] = checkbox.checked;
+  });
+  localStorage.setItem(urlKey, JSON.stringify(checkboxState));
+}
+
+// Функция для восстановления состояния чекбоксов из LocalStorage
+function restoreCheckboxesStateFromLocalStorage(urlKey) {
+  var checkboxState = JSON.parse(localStorage.getItem(urlKey));
+  if (checkboxState) {
+    checkboxes.forEach(function(checkbox) {
+      var index = checkbox.dataset.index;
+      checkbox.checked = checkboxState['checkbox_' + index] || false;
+    });
+  }
+}
+
+// Получение части URL, которую будем использовать как ключ для LocalStorage
+var currentURL = window.location.href;
+var urlKey = currentURL.substring(currentURL.lastIndexOf('/') + 1);
+
+// Вызов функции восстановления состояния чекбоксов при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+  restoreCheckboxesStateFromLocalStorage(urlKey);
+});
+
+// Вызов функции сохранения состояния чекбоксов при изменении их значения
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', function() {
+    saveCheckboxesStateToLocalStorage(urlKey);
+  });
+});
+
+</script>
+
+<script src="/assets/js/themeswitch.js"></script>
+
     <script type="module" src="/assets/js/langswitch.js"></script>      
 </body>
 </html>

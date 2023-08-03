@@ -33,6 +33,9 @@
 восьмеричный
 восьмеричный
 восьмеричный
+восьмеричный
+восьмеричный
+восьмеричный
 восьмеричного
 восьмеричного
 восьмеричного
@@ -271,30 +274,66 @@
 восьмеричным
 восьмеричным
 восьмеричный
+восьмеричный
+восьмеричный
+восьмеричное
+восьмеричное
 восьмеричный
 восьмеричный
 </tbody>
 </table>
-<a href='../../' id='back'>Main</a>&nbsp;
-<a href='/ru/sc'>Read</a>&nbsp;
+<br><br><hr>
+<a href='/ru' id='back'>Main</a>&nbsp;
+<a href='/ru/read.php'>Read</a>&nbsp;
 <a href='/assets/diff'>SuttaDiff</a>&nbsp;
-<a href='/history.php'>History</a>&nbsp;
-<a href="/assets/example/vosmerichn_suttanta_ru_139-275.html">Quotes</a>
+<a href='/ru/history.php'>History</a>&nbsp;
+<a href="/ru/result/vosmerichn_suttanta_ru-ru_143-282.html">Quotes</a>
 
 </div>
 
+
+<script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
-$(document).ready(function (){
+   $(document).ready(function() {
+   var dataSrc = [];
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
-	    'paging'  : true,
-	  'responsive': true,
-	  'columnDefs': [
+	   'paging'  : true,
+	   "orderMulti": true,
+	   'pageLength' : 28,
+	   'lengthMenu' : [10, 28, 50, 100, 1000],
+	   'responsive': true,
+	    'colReorder': true,
+	   'columnDefs': [
 	            { type: "html", target: [0] },
 	            { type: 'natural', targets: 2 }
-					]				
-    });
+					],
+					
+				
+      'initComplete': function(){
+         var api = this.api();
+ 
+         // Populate a dataset for autocomplete functionality
+         api.cells('tr', [0, 1, 2, 3]).every(function(){
+            //var data = this.data().replace( /(<([^>]+)>)/ig, '');
+            var data = $('<div>').html(this.data()).text();
+          //  console.log(data);
+            if(dataSrc.indexOf(data) === -1){ dataSrc.push(data); }
+         });
+
+         // Initialize Typeahead plug-in
+         $('.dataTables_filter input[type="search"]', api.table().container())
+            .typeahead({
+              autoSelect: false,
+               source: dataSrc,
+               afterSelect: function(value){
+                  api.search(value).draw();
+               }
+            }
+         );
+      }
+   });			
 
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){
@@ -308,6 +347,8 @@ $(document).ready(function (){
     });
 });
   </script>
+  <script src="/assets/js/themeswitch.js"></script>
+
 
 </body>
 </html>

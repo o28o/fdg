@@ -176,17 +176,21 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift эт
 $prongh = ' Проект на GitHub';
 
 $headerexamples = 'Примеры';
-$examplelist = '<li>Определение понятия <a href="./assets/example/kata.,-dukkha.m-question_suttanta_pali-ru_3-3.html">dukkha</a> на Пали и Русском. Запрос: <a href="./assets/example/kata.,-dukkha.m-question_suttanta_pali-ru_3-3.html">-la1 Kata.*, dukkhaṁ\\\\?</a>
+$examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">dukkha</a> на Пали и Русском. Запрос: <a href="/ru/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">-la1 Kata.*, dukkhaṁ\\\\?</a>
              </li>
-              <li>Сутта, в которой Будда говорит, что не делает <a href="./assets/example/dvayagaaminii_suttanta_pali-ru_1-1.html">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
+<li>Сутта, в которой Будда говорит, что не делает <a href="/ru/?q=dvayagāminī">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            
-                <li>Все сутты со словом <a href="./assets/example/vosmerichn_suttanta_ru_139-275.html">Восьмеричный</a> Благородный Путь на Русском</li>
-                <li>Все сутты со словом <a href="./assets/example/nravstvennost_suttanta_ru_92-260.html">нравственность</a> на Русском</li>
-                <li>Все сутты, где упомянут <a href="./assets/example/sariputt_suttanta_ru_168-1055.html">Сарипутта</a> на Русском</li>
-               <li>Все варианты словосочетания <a href="./assets/example/pa.ticcasamupp_suttanta_pali-ru_34-115.html">paṭiccasamuppado</a> на Пали со ссылками на Русские переводы</li>
-               <li>Все сутты где, упоминается об <a href="./assets/example/okean_suttanta_ru_82-259.html">океане</a> на Русском</li>
-               <li>Все сутты с <a href=./assets/example/seyyathaapi-adhivacan-uupama-opama_suttanta_pali-ru_631-2136.html>метафорами, примерами и сравнениями</a> на Пали со ссылками на Русские переводы. Запрос: "seyyathāpi|adhivacan|ūpama|opama" </li> ';
+<li>Все сутты со словом <a href="./assets/example/vosmerichn_suttanta_ru-ru_143-282.html">Восьмеричный</a> Благородный Путь на Русском</li>
+ 
+<li>Все сутты со словом <a href="./assets/example/nravstvennost_suttanta_ru-ru_194-781.html">нравственность</a> на Русском</li>
 
+<li>Все сутты, где упомянут <a href="./assets/example/sariputt_suttanta_ru-ru_179-1105.html">Сарипутта</a> на Русском</li>
+
+<li>Все варианты словосочетания <a href="/ru/?q=paṭiccasamuppād ">paṭiccasamuppado</a> на Пали со ссылками на Русские переводы</li>
+
+<li>Все сутты где, упоминается об <a href="./assets/example/okean_suttanta_ru-ru_90-324.html">океане</a> на Русском</li>
+
+<li>Все сутты с <a href=./assets/example/seyyathaapi_suttanta_pali-ru_597-1861.html>метафорами с seyyathāpi</a> со ссылками на Русские переводы. Для всех сравнениий на Пали используйте запрос с кавычками: "(seyyathāpi|adhivacan|ūpama|opama)" </li> ';
 
 $howtoheader = 'Как Искать?';
 
@@ -568,18 +572,18 @@ $prongh = ' Project on GitHub';
 
 
 $headerexamples = 'Examples';
-$examplelist = '<li>Definition of the <a href="/assets/example/kata.,-dukkha.m-question_suttanta_pali_3-3.html">dukkha</a> in Pali with quotes in English. Query is: <a href="/assets/example/kata.,-dukkha.m-question_suttanta_pali_3-3.html">-la1 Kata.*, dukkhaṁ\\\\?</a></li>
+$examplelist = '<li>Definition of the <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">dukkha</a> in Pali with quotes in English. Query is: <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">-la1 Kata.*, dukkhaṁ\\\\?</a></li>
 
- <li>Sutta where Buddha says that he doesn\'t make <a href="/assets/example/dvayagaaminii_suttanta_pali_1-1.html">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
+ <li>Sutta where Buddha says that he doesn\'t make <a href="/?q=dvayagāminī">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
 
-             <li>All variants of the word <a href="/assets/example/pa.ticcasamupp_suttanta_pali_34-115.html">paṭiccasamuppado</a> in Pali with quotes in English</li>
+             <li>All variants of the word <a href="/?q=paṭiccasamuppād">paṭiccasamuppado</a> in Pali with quotes in English</li>
             
-                <li>All suttas about <a href="/assets/example/eightfold_suttanta_en_157-342.html">Eightfold</a> Path in English</li>
+                <li>All suttas about <a href="/assets/example/eightfold_suttanta_en_159-344.html">Eightfold</a> Path in English</li>
                 <li>All suttas that took place or related to <a href="/assets/example/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
-                <li>All suttas where <a href="/assets/example/sariputt_suttanta_ru_168-1055.html">Sariputta</a> was mentioned in Russian</li>
+                <li>All suttas where <a href="/assets/example/sariputt_suttanta_ru-ru_179-1105.html">Sariputta</a> was mentioned in Russian</li>
     
-             <li>All suttas about or containing the word <a href="/assets/example/ocean_suttanta_en_88-231.html">ocean</a> in English</li>
-                 <li>All Suttas with <a href=./assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_631-2136.html>metaphors & similies</a> in Pali and English</li>   ';
+             <li>All suttas about or containing the word <a href="/assets/example/ocean_suttanta_en_92-266.html">ocean</a> in English</li>
+                 <li>All Suttas with <a href=./assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_647-2186.html>metaphors & similies</a> in Pali and English</li>   ';
 $howtoheader = 'How to Search';
 
 $contactheader = 'Contacts';

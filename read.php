@@ -45,8 +45,6 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="/assets/dark-mode-switch/dark-mode.css">
-
 <style>
 </style>
 

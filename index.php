@@ -7,7 +7,7 @@ include_once('config/translate.php');
 include 'scripts/opentexts.php';
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
-<html lang="<?php echo $htmllang;?>">
+<html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
     <head>
       <meta charset="UTF-8">
 
@@ -46,7 +46,6 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="/assets/dark-mode-switch/dark-mode.css">
 
 <style>
 </style>

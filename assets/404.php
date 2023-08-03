@@ -33,7 +33,7 @@ include '../scripts/opentexts.php';
 
         <title><?php echo $title404;?></title>
     <link href="/assets/css/styles.css" rel="stylesheet" />
-    <script src="/assets/js/fontawesome.6.1.all.js" crossorigin="anonymous"></script>
+<?php echo $fontawesomejs;?> 
     </head>
 
     <body>
@@ -62,6 +62,6 @@ include '../scripts/opentexts.php';
         </div>
     </body>
         <!-- Bootstrap core JS-->
-        <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 
 </html>

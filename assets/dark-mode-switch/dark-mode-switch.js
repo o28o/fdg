@@ -27,8 +27,8 @@ window.addEventListener("load", function () {
  */
 function initTheme() {
   var darkThemeSelected =
-    localStorage.getItem("theme") !== null &&
-    localStorage.getItem("theme") === "dark";
+    localStorage.getItem("darkSwitch") !== null &&
+    localStorage.getItem("darkSwitch") === "dark";
   darkSwitch.checked = darkThemeSelected;
   darkThemeSelected
     ? document.body.setAttribute("data-theme", "dark")
@@ -44,9 +44,9 @@ function initTheme() {
 function resetTheme() {
   if (darkSwitch.checked) {
     document.body.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark");
+    localStorage.setItem("darkSwitch", "dark");
   } else {
     document.body.removeAttribute("data-theme");
-    localStorage.removeItem("theme");
+    localStorage.removeItem("darkSwitch");
   }
 }

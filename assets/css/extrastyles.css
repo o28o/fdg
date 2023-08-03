@@ -212,9 +212,10 @@ background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
   z-index:1;
 }
 
-.horiz-menu-item {
+/* .horiz-menu-item {
  color: #383838;
-}
+} */
+
 .menu-icon {
   font-size: 2em; 
   color: #1EBC9C; 

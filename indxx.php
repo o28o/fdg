@@ -47,6 +47,7 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="/dark-mode-switch/dark-mode.css">
 
 <style>
 </style>
@@ -64,6 +65,7 @@ include 'scripts/opentexts.php';
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>
                 </button>
+          
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
       <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> -->
@@ -74,8 +76,19 @@ include 'scripts/opentexts.php';
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links"><?php echo $menulinks;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
-<li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
-									<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a></p></li>		
+<li class="nav-item mb-0 mx-lg-2">
+
+<p>
+<a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
+
+<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a>
+<div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" id="darkSwitch">
+          </div>
+</p>
+
+
+</li>		
                     </ul>
                 </div>
             </div>
@@ -1100,6 +1113,8 @@ $.ajax({
   console.log(window.location.href);
 
 </script>
+    <script src="/dark-mode-switch/dark-mode-switch.min.js"></script>
+
 </body>
 <?php
 include 'scripts/multilang-search.php';

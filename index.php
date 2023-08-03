@@ -46,6 +46,7 @@ include 'scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="/assets/dark-mode-switch/dark-mode.css">
 
 <style>
 </style>
@@ -74,8 +75,11 @@ include 'scripts/opentexts.php';
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links"><?php echo $menulinks;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
 <li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
-									<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a></p></li>		
-                    </ul>
+<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a>
+</p></li><div class="form-check form-switch input-group-append">
+<input type="checkbox" class="form-check-input" id="darkSwitch">
+</div>
+       </ul>
                 </div>
             </div>
         </nav>
@@ -1099,6 +1103,8 @@ $.ajax({
   console.log(window.location.href);
 
 </script>
+<script src="/assets/dark-mode-switch/dark-mode-switch.min.js"></script>
+
 </body>
 <?php
 include 'scripts/multilang-search.php';

@@ -17,22 +17,22 @@ listfile=listhtml.tmp
 lsout=lsout.tmp
 
 case=$@ 
-if [[ "$case" == "pali" ]]
+if [[ "$case" == *"pali"* ]]
 then
 switch=pali
-elif [[ "$case" == "en" ]]
+elif [[ "$case" == *"en"* ]]
 then
 switch=en
-elif [[ "$case" == "ru" ]]
+elif [[ "$case" == *"ru"* ]]
 then
 switch=ru
-mainpagebase=/ru
-elif [[ "$case" == "th" ]]
+mainpagebase=/ru/
+elif [[ "$case" == *"th"* ]]
 then
 switch=th
 else 
 switch=
-mainpagebase=/
+mainpagebase="/"
 fi
 
 
@@ -40,12 +40,13 @@ function listsearchresults {
   ls -lpah --time-style="+%d-%m-%Y" *_${switch}* | egrep -v "$listfile|$lsout|_words.html|\.tmp|_fn.txt|table|.git|итого|total|/" | grep -v "^_" | awk '{print substr($0, index($0, $5))}'
 }
 
-if [[ $@ == "" ]]
+if [[ $@ == "" ]] || [[ $@ == "ru" ]]
 then 
+
 titleT='<title>Search History</title>'
 titleH='<h3 class="pl-2 ml-2" style="text-decoration: none">Search History</h3>'
 title='Search History'
-replacehref='/archive.php'
+replacehref=$mainpagebase'archive.php'
 buttonname='Archive'
 cat $templatefolder/Header.html | sed 's@<title>$title</title>@'"$titleT"'@' | sed 's@$title@'"$title"'@g' 
 cat $templatefolder/ListTableHeader.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's@<h3 class="pl-2 ml-2">$title</h3>@'"$titleH"'@g' | sed 's@$title@'"$title"'@g' | sed 's@$replacehref@'"$replacehref"'@g' | sed 's@$ReplaceMe@'"$buttonname"'@g' 
@@ -53,31 +54,32 @@ cat $templatefolder/ListTableHeader.html | sed 's@HOMEVAR@'$mainpagebase'@' | se
 
 tac $history | grep "<tr>" | head -n $archivenumber
 function switchlink {
-echo "<a href=\"/archive.php\">Archive</a>&nbsp;"
+echo "<a href=\"${mainpagebase}archive.php\">Archive</a>&nbsp;"
 }
 
-elif  [[ $@ == "arc" ]]
+elif  [[ $@ == *"arc"* ]]
 then 
+
 titleT='<title>Search Archive</title>'
 titleH='<h3 class="pl-2 ml-2" style="text-decoration: none">Search Archive</h3>'
 title='Search Archive'
-replacehref='/history.php'
+replacehref=$mainpagebase'history.php'
 buttonname='History'
 cat $templatefolder/Header.html | sed 's@<title>$title</title>@'"$titleT"'@' | sed 's@$title@'"$title"'@g' 
-cat $templatefolder/ListTableHeader.html | sed 's@<h3 class="pl-2 ml-2">$title</h3>@'"$titleH"'@g' | sed 's@$title@'"$title"'@g' | sed 's@$replacehref@'"$replacehref"'@g' | sed 's@$ReplaceMe@'"$buttonname"'@g' 
+cat $templatefolder/ListTableHeader.html |sed 's@HOMEVAR@'$mainpagebase'@' | sed 's@<h3 class="pl-2 ml-2">$title</h3>@'"$titleH"'@g' | sed 's@$title@'"$title"'@g' | sed 's@$replacehref@'"$replacehref"'@g' | sed 's@$ReplaceMe@'"$buttonname"'@g' 
 
 
 
 
 tac $history | grep "<tr>" | tail -n +$(( $archivenumber + 1 ))
 function switchlink {
-echo "<a href=\"/history.php\">History</a>&nbsp;"
+echo "<a href=\"${mainpagebase}history.php\">History</a>&nbsp;"
 }
 fi
 
 echo "</tbody>
 </table>
-<a href=\"/\">Main</a>&nbsp;
+<a href=\"$mainpagebase\">Main</a>&nbsp;
 <a target=_blank href=/assets/listdiff.html>List Diff</a>&nbsp;
 `switchlink`" 
 cat $templatefolder/ListFooter.html 

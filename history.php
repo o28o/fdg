@@ -22,7 +22,12 @@ $query = $_SERVER['QUERY_STRING'];
 
 /* echo ' '.$params['lang']; */
 
+if ( $lang == "ru" ) {
+$command = escapeshellcmd('bash ./scripts/history.sh ru');
+} else {
 $command = escapeshellcmd('bash ./scripts/history.sh');
+} 
+
    $output = shell_exec($command); 
    echo "$output";
 

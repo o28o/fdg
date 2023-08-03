@@ -33,6 +33,8 @@ include '../scripts/opentexts.php';
 
         <title><?php echo $title404;?></title>
     <link href="/assets/css/styles.css" rel="stylesheet" />
+	<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+
 <?php echo $fontawesomejs;?> 
     </head>
 

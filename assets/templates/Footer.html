@@ -2,6 +2,14 @@
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
    $(document).ready(function() {
+       // Регистрируем собственный тип сортировки для чекбоксов
+    $.fn.dataTable.ext.order['dom-checkbox'] = function(settings, col) {
+        return this.api().column(col, { order: 'index' }).nodes().map(function(td, i) {
+            return $('input', td).prop('checked') ? '1' : '0';
+        });
+    };
+   
+   
    var dataSrc = [];
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
@@ -51,6 +59,10 @@
 	   'lengthMenu' : [10, 28, 50, 100, 1000],
 	  'responsive': true,
 	  'columnDefs': [
+				{                
+				targets: [1], // Индекс столбца с чекбоксами
+				orderDataType: 'dom-checkbox' // Используем функцию сортировки
+				},
 	            { type: "html", target: [2,3,7] },
 	            { type: 'natural', targets: 0 },
 				  {

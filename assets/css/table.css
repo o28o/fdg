@@ -30,7 +30,6 @@
   
 }
 
-
 button a {
   color: var(--bs-btn-text); /* По умолчанию для темной темы */
 }
@@ -126,3 +125,17 @@ b {
 	     color: #6A6969;
 	   
 	 } */
+
+/* Медиа-запрос для экранов шириной 992px и менее */
+@media (max-width: 992px) {
+    body {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.container-fluid {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+}

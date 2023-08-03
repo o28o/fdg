@@ -248,7 +248,7 @@ background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
 
 .menu-icon {
   font-size: 2em; 
-  color: #1EBC9C; 
+  color: var(--bs-primary); 
 }
 
 
@@ -259,7 +259,7 @@ background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
 
     .level2 {
       margin-left: 8px;
-     color: #3F424B;
+   /*  color: #3F424B; */
     }
 
     .level3 {
@@ -269,7 +269,7 @@ background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
 
     .level4 {
       margin-left: 18px;
-      color: #3F424B;
+     /*  color: #3F424B;*/
     }
 
     .level5 {

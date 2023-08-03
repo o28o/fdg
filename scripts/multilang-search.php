@@ -131,8 +131,7 @@ $outforjs .= $output . "<br>";
 
 }	
 
-
-		$check = ru2lat( $output );
+$check = ru2lat( $output );
 
 if ( preg_match('/(|-en)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) && ( $p != "-vin" ) && ( $p != "-def" ))  {
 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en $extra $string");
@@ -141,6 +140,9 @@ $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en $extra $s
 $outforjs .= $output . "<br>"; 
 
 }
+
+$check = ru2lat( $output );
+
 
 if ( preg_match('/(|-en)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) && ( $p != "-def" ))  {
 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en -vin $extra $string");

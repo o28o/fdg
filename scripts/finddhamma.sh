@@ -792,7 +792,6 @@ else
 indexlist=`nice -$nicevalue grep -E -i "pli-tv-bi-vb-pd" $basefile | awk '{print $2}' | sort -Vf | uniq`
 fi
 
-echo $indexlist > indexlist
 firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1 | awk -F':' '{print $2}'  )
 
 linkgeneralwithindex="$linkgeneral#$firstIndex"

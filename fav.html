@@ -3,63 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Favorites</title>
-<style>
-label {
-  /* Presentation */
-  font-size: 20px
-}
+    <style>
+        label {
+            display: inline-block;
+            position: relative;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-/* Required Styling */
+        label input[type="checkbox"] {
+            display: none;
+        }
 
-label input[type="checkbox"] {
-  display: none;
-}
+        .custom-checkbox .glyphicon {
+            color: gray;
+            font-size: 1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-.custom-checkbox {
-  margin-left: 2em;
-  position: relative;
-  cursor: pointer;
-}
-
-.custom-checkbox .glyphicon {
-  color: gold;
-  position: absolute;
-  top: 0.4em;
-  left: -1.25em;
-  font-size: 0.75em;
-}
-
-.custom-checkbox .glyphicon-star-empty {
-  color: gray;
-}
-
-.custom-checkbox .glyphicon-star {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.custom-checkbox:hover .glyphicon-star{
-  opacity: 0.5;
-}
-
-.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
-  opacity: 1;
-}
-
-</style>
-<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
- -->
+        .custom-checkbox input[type="checkbox"]:checked + .glyphicon {
+            color: gold;
+        }
+    </style>
 </head>
 <body>
-
-<label for="id-of-input" class="custom-checkbox">
-  <input type="checkbox" id="id-of-input"/>
-  <i class="fa-solid fa-star glyphicon glyphicon-star-empty"></i>
-  <i class="fa-solid fa-star glyphicon glyphicon-star"></i>
-  <span>Favorite</span>
-</label>
+    <label for="id-of-input" class="custom-checkbox">
+        <input type="checkbox" id="id-of-input"/>
+        <i class="fa-solid fa-star glyphicon glyphicon-star"></i>
+    </label>
 </body>
 </html>

@@ -108,6 +108,44 @@ caption {
   display: none;	
 }
 
+
+label {
+  /* Presentation */
+  font-size: 20px
+}
+
+/* Required Styling */
+
+label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  cursor: pointer;
+}
+
+.custom-checkbox .glyphicon {
+  color: gold;
+  font-size: 0.75em;
+}
+
+.custom-checkbox .glyphicon-star-empty {
+  color: gray;
+}
+
+.custom-checkbox .glyphicon-star {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover .glyphicon-star{
+  opacity: 0.5;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+  opacity: 1;
+}
+
 .img-thumbnail {	
   background-color: #fff;	
   border: 0.125rem solid #dee2e6;	

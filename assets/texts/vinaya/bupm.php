@@ -714,7 +714,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#85.0">Pācittiya 20. Sappāṇaka</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc20#1.12.0">vb</a> Yo pana bhikkhu jānaṁ sappāṇakaṁ udakaṁ tiṇaṁ vā mattikaṁ vā siñceyya vā siñcāpeyya vā, pācittiyaṁ. Bhūtagāmavaggo dutiyo 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc20#1.12.0">vb</a> Yo pana bhikkhu jānaṁ sappāṇakaṁ udakaṁ tiṇaṁ vā mattikaṁ vā siñceyya vā siñcāpeyya vā, pācittiyaṁ.
 </span>
 </div>
 

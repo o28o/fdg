@@ -143,6 +143,14 @@ caption {
           appearance: none;	
   border-radius: 0.5rem;	
 }
+
+.toggle-switch {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+
+
 #mainNav .navbar-brand {
   color: #fff;
 }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
+    <title>Favorites</title>
+<style>
+label {
+  /* Presentation */
+  font-size: 20px
+}
+
+/* Required Styling */
+
+label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  margin-left: 2em;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox .glyphicon {
+  color: gold;
+  position: absolute;
+  top: 0.4em;
+  left: -1.25em;
+  font-size: 0.75em;
+}
+
+.custom-checkbox .glyphicon-star-empty {
+  color: gray;
+}
+
+.custom-checkbox .glyphicon-star {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover .glyphicon-star{
+  opacity: 0.5;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+  opacity: 1;
+}
+
+</style>
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+ -->
+</head>
+<body>
+
+<label for="id-of-input" class="custom-checkbox">
+  <input type="checkbox" id="id-of-input"/>
+  <i class="fa-solid fa-star glyphicon glyphicon-star-empty"></i>
+  <i class="fa-solid fa-star glyphicon glyphicon-star"></i>
+  <span>Favorite</span>
+</label>
+</body>
+</html>

@@ -1146,7 +1146,8 @@ userpattern="$pattern exc. ${excludepattern,,}"
 fi 
 
 echo -n "<!-- begin $userpattern --> 
-<tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><th>$textsqnty</th><th>$matchqnty</th><th><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></th><td>${fortitle^}</td><td>$language</td><td class=\"daterow\">$dateforhist</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td>" >> $history
+<tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><th>$textsqnty</th><th>$matchqnty</th><th><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></th><td>${fortitle^}</td><td>$language</td><td class=\"daterow\">$dateforhist</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td><input type='checkbox' class='star-checkbox' data-index='${table}'\></td>
+<td>" >> $history
 
 if [[ "$type" == json ]]; then
   if (( $textsqnty <= 40 ))

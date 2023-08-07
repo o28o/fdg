@@ -8,8 +8,10 @@
     <link href="/assets/css/styles.css" rel="stylesheet" />
     <link href="/assets/css/extrastyles.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
-    <script src="/assets/js/jquery-3.6.0.js"></script>
-    <style>
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+
+  
+  <style>
         #resultOutput {
             white-space: pre-wrap;
         }
@@ -32,6 +34,13 @@
             font-weight: bold;
             border-radius: 5px;
             display: none;
+			
+			.toggle-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
         }
     </style>
 </head>
@@ -276,6 +285,8 @@ document.getElementById('clearButton').addEventListener('click', function () {
             }
         });
     </script>
+	<script src="/assets/js/dark-mode-switch/dark-mode-switch.min.js"></script>
+
 </body>
 
 </html>

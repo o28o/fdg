@@ -109,42 +109,37 @@ caption {
 }
 
 
+/* star intead of checkbox for history*/
 label {
-  /* Presentation */
-  font-size: 20px
-}
+            display: inline-block;
+            position: relative;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
-/* Required Styling */
+        label input[type="checkbox"] {
+            display: none;
+        }
 
-label input[type="checkbox"] {
-  display: none;
-}
+        .custom-checkbox .glyphicon {
+            color: gray;
+            font-size: 1em;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-.custom-checkbox {
-  cursor: pointer;
-}
+        .custom-checkbox input[type="checkbox"]:checked + .glyphicon {
+            color: gold;
+        }
 
-.custom-checkbox .glyphicon {
-  color: gold;
-  font-size: 0.75em;
-}
+/* star intead of checkbox for history end */
 
-.custom-checkbox .glyphicon-star-empty {
-  color: gray;
-}
 
-.custom-checkbox .glyphicon-star {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
 
-.custom-checkbox:hover .glyphicon-star{
-  opacity: 0.5;
-}
 
-.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
-  opacity: 1;
-}
+
+
 
 .img-thumbnail {	
   background-color: #fff;	

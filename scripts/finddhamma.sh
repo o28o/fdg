@@ -267,12 +267,12 @@ fi
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpdef
 
-nice -$nicevalue grep -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|(dn3[34]|mn4[34]).*(Dv|Ti|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|an1\..*yadidaṁ ${defpattern}|an1\..*${defpattern}.*yadidaṁ" $tmpdef
+nice -$nicevalue grep -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va" $tmpdef
 }
 
 function grepbasefileExtended1 {
   fortitle="Definition Extended 1 ${fortitle}"
-cat $tmpdef | nice -$nicevalue grep -Ei "\b${defpattern}[^\s]{0,3}sutta" 
+cat $tmpdef | nice -$nicevalue grep -Ei "\b${defpattern}[^\s]{0,3}sutta"
 }
 
 function grepbasefileExtended2 {

@@ -23,7 +23,7 @@ $(document).ready(function (){
               text: 'Main',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = "MAINLINKVAR";
+                                window.location.href = "HOMEVAR";
                             }
             },
                         {
@@ -34,10 +34,10 @@ $(document).ready(function (){
                             }
                         },  
                         {
-              text: 'Archive',
+              text: 'BOTTOMTEXT',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = '/archive.php';
+                                window.location.href = 'BOTTOMLINK';
                             }
                         },  
                         { extend: 'colvis', 
@@ -53,7 +53,10 @@ $(document).ready(function (){
 				targets: [8], // Индекс столбца с чекбоксами
 				orderDataType: 'dom-checkbox' // Используем функцию сортировки
 				},
-	            { type: "html", target: [0,3,9] }	
+	            { type: "html", target: [0,3,9] },   {
+            target: 8,
+            visible: true
+        }
 					], 
 	  'responsive': true,
 	  'colReorder': true,

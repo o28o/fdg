@@ -54,7 +54,9 @@ cat $templatefolder/ListTableHeader.html | sed 's@HOMEVAR@'$mainpagebase'@' | se
 
 tac $history | grep "<tr>" | head -n $archivenumber
 function switchlink {
-echo "<a href=\"${mainpagebase}archive.php\">Archive</a>&nbsp;"
+#echo "<a href=\"${mainpagebase}archive.php\">Archive</a>&nbsp;"
+bottomlink=`echo "${mainpagebase}archive.php"` 
+bottomtext=Archive
 }
 
 elif  [[ $@ == *"arc"* ]]
@@ -73,16 +75,19 @@ cat $templatefolder/ListTableHeader.html |sed 's@HOMEVAR@'$mainpagebase'@' | sed
 
 tac $history | grep "<tr>" | tail -n +$(( $archivenumber + 1 ))
 function switchlink {
-echo "<a href=\"${mainpagebase}history.php\">History</a>&nbsp;"
+#echo "<a href=\"${mainpagebase}history.php\">History</a>&nbsp;"
+bottomlink=`echo "${mainpagebase}history.php"` 
+bottomtext=History
 }
 fi
 
 echo "</tbody>
-</table>
-<a href=\"$mainpagebase\">Main</a>&nbsp;
-<a target=_blank href=/assets/listdiff.html>List Diff</a>&nbsp;
-`switchlink`" 
-cat $templatefolder/ListFooter.html 
+</table>"
+#<a href=\"$mainpagebase\">Main</a>&nbsp;
+#<a target=_blank href=/assets/listdiff.html>List Diff</a>&nbsp;
+switchlink 
+cat $templatefolder/ListFooter.html |sed 's@BOTTOMTEXT@'$bottomtext'@' |sed 's@BOTTOMLINK@'$bottomlink'@'  |sed 's@HOMEVAR@'$mainpagebase'@'
+
 
 exit 0
 

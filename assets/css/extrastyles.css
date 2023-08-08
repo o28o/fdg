@@ -40,12 +40,23 @@
 	}
 
 
+
 [data-theme="dark"] .btn-primary {
-    background-color: transparent;
+    background-color: #025d33;
+    border-color: #5a6a67;
 }
 
 [data-theme="dark"] .modal-content {
     background-color: #000;
+}
+
+[data-theme="dark"] a {
+    color: #09967a;
+}
+
+[data-theme="dark"] input {
+    background: #e4e4e4;
+    border-color: #6e6969;
 }
 
 	hr {	

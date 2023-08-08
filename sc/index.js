@@ -1,4 +1,3 @@
-
 const Sccopy = "/suttacentral.net";
 const suttaArea = document.getElementById("sutta");
 const homeButton = document.getElementById("home-button");

@@ -400,19 +400,21 @@ if (document.location.search) {
 function setLanguage(language) {
   if (language === "pli-rus") {
     showPaliEnglish();
-  } else if (language === "rus") {
-    showEnglish();
   } else if (language === "pli") {
     showPali();
+  } else if (language === "rus") {
+    showEnglish();
   }
 }
 
 function showPaliEnglish() {
+  console.log("showing pali eng");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
   suttaArea.classList.remove("hide-russian");
 }
 function showEnglish() {
+  console.log("showing eng");
   suttaArea.classList.add("hide-pali");
   suttaArea.classList.remove("hide-english");
   suttaArea.classList.remove("hide-russian");
@@ -441,18 +443,18 @@ function toggleThePali() {
   }
 
   languageButton.addEventListener("click", () => {
-    if (language === "pli") {
-      showPaliEnglish();
-      language = "pli-rus";    
-      localStorage.paliToggleRu = "showPaliEng";
-    } else if (language === "pli-rus") {
-     showEnglish();
-      language = "rus";
-      localStorage.paliToggleRu = "showEnglish";
-    } else if (language === "rus") {
+    if (language === "pli-rus") {
      showPali();
       language = "pli";
       localStorage.paliToggleRu = "showPali";
+    } else if (language === "pli") {
+	  showEnglish();
+      language = "rus";
+      localStorage.paliToggleRu = "showEnglish";
+    } else if (language === "rus") {
+      showPaliEnglish();
+      language = "pli-rus";    
+      localStorage.paliToggleRu = "showPaliEng";
     }
   });
 }

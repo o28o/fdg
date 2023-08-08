@@ -1,5 +1,30 @@
 RewriteEngine on
 Redirect 301 /ru.php /ru/
+
+# GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE font/opentype
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+</IfModule>
  
 
 RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
@@ -13,11 +38,8 @@ RewriteRule ^/$ /ru/ [L,R=302]
 RewriteRule ^/$ / [L,R=302]
 
   
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
-
 
 RewriteCond %{HTTP_USER_AGENT} (bingbot|AhrefsBot|SemrushBot|PetalBot|DataForSeoBot|MegaIndex.ru|Barkrowler|SeekportBot|SemrushBot|Barkrowler) [NC]
 RewriteRule .* - [F]
-ErrorDocument 404 /assets/404/404.php
+ErrorDocument 404 /assets/404.php
 

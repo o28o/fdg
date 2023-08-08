@@ -5,26 +5,7 @@ const bodyTag = document.querySelector("body");
 
 let language = "pli-eng";
 
-/*if (localStorage.theme) {
-  if (localStorage.theme === "light") {
-    bodyTag.classList.remove("dark");
-  }
-} else {
-  bodyTag.classList.add("dark");
-}
 
-themeButton.addEventListener("click", () => {
-  if (localStorage.theme === "light") {
-    bodyTag.classList.add("dark");
-    localStorage.theme = "dark";
-  } else {
-    bodyTag.classList.remove("dark");
-    localStorage.theme = "light";
-  }
-});*/
-
-      toggleThePali();
-      
       
 function setLanguage(language) {
   if (language === "pli-eng") {
@@ -37,10 +18,12 @@ function setLanguage(language) {
 }
 
 function showPaliEnglish() {
+  console.log("showing Pali eng");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
 }
 function showEnglish() {
+  console.log("showing eng");
   suttaArea.classList.add("hide-pali");
   suttaArea.classList.remove("hide-english");
 }
@@ -53,18 +36,36 @@ function showPali() {
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
-  languageButton.addEventListener("click", () => {
-    if (language === "pli") {
+  if (localStorage.paliToggleRes) {
+    if (localStorage.paliToggleRes === "showPaliEng") {
       showPaliEnglish();
-      language = "pli-eng";
-    } else if (language === "pli-eng") {
+    } else if (localStorage.paliToggleRes === "showPali") {
       showPali();
-      language = "eng";
-    } else if (language === "eng") {
+    } else if (localStorage.paliToggleRes === "showEnglish") {
+      showEnglish();
+    }
+  } else {
+    localStorage.paliToggleRes = "showPaliEng";
+  }
+
+
+  languageButton.addEventListener("click", () => {
+    if (language === "pli-eng") {
+	  showPali();     
+	  language = "pli";
+     localStorage.paliToggleRes = "showPali";   
+    } else if (language === "pli") {
      showEnglish();
-      
-      
-      language = "pli";
+      language = "eng";
+      localStorage.paliToggleRes = "showEnglish";
+    } else if (language === "eng") {
+     showPaliEnglish(); 
+      language = "pli-eng";
+localStorage.paliToggleRes = "showPaliEng";
     }
   });
 }
+
+      toggleThePali();
+      
+

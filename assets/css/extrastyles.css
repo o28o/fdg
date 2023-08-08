@@ -50,7 +50,7 @@
     background-color: #000;
 }
 
-[data-theme="dark"] a {
+[data-theme="dark"] container a {
     color: #09967a;
 }
 
@@ -370,6 +370,18 @@ align-items: center;
   background-clip: padding-box;
   border: 0.125rem solid #ced4da;
 }
+
+
+[data-theme="dark"] .droponmain {
+    background: #e4e4e4;
+    border-color: #6e6969; 
+	border: 0.125rem solid #6e6969;
+}
+
+[data-theme="dark"] .border-primary {
+    border-color: #6e6969 !important;
+}
+
 
 .roundedborder{
   position: absolute; 

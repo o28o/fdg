@@ -36,13 +36,13 @@
 
 
 [data-theme="dark"] .bg-primary {
-    background-color: #025242 !important;
+    background-color: #136857  !important;
 	}
 
 
 
 [data-theme="dark"] .btn-primary {
-    background-color: #025d33;
+    background-color: #025242;
     border-color: #5a6a67;
 }
 

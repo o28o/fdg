@@ -36,10 +36,16 @@
 
 
 [data-theme="dark"] .bg-primary {
-    background-color: #025242;
+    background-color: #025242 !important;
 	}
 
 
+[data-theme="dark"] .btn-primary {
+    background-color: transparent;
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: #000;
 
 
 

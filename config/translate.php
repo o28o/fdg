@@ -566,8 +566,8 @@ $anamesdiff = 'Sutta Diff';
 
 
 $aboutheader = 'About Project';
-$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift serves as a Liberation Search Engine for Dhamma and Vinaya, the core of the Pali Canon. It presents results in informative tables with line by line translations from sources like SuttaCentral.net, TheBuddhasWords.net, Theravada.ru, and Theravada.su. You can search in Pali, Russian, Thai, and English for meanings, definitions, metaphors, explanations, people, places, and more as described in Suttas and Vinaya.</p></div>
-<div class="col-lg-4 me-auto"><p class="lead">Dhamma enthusiasts and contributors, especially developers, are warmly invited to participate.</p></div>';
+$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift serves as a Liberation Search Engine for Dhamma and Vinaya, the core of the Pali Canon. It presents results in informative tables with line by line translations from sources like SuttaCentral.net, TheBuddhasWords.net, Theravada.ru, and Theravada.su. </p></div>
+<div class="col-lg-4 me-auto"><p class="lead">You can search in Pali, Russian, Thai, and English for meanings, definitions, metaphors, explanations, people, places, and more as described in Suttas and Vinaya.</br>Dhamma enthusiasts and contributors, especially developers, are warmly invited to participate.</p></div>';
 $prongh = ' Project on GitHub';
 
 

@@ -54,7 +54,7 @@
     color: #09967a;
 }
 
-[data-theme="dark"] input {
+[data-theme="dark"] .searchinputdiv input {
     background: #e4e4e4;
     border-color: #6e6969;
 }

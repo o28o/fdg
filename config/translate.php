@@ -56,8 +56,8 @@ $tooltipvin = 'Поиск в Винае на Пали';
 $radiovin = 'Виная';
 $tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, dhp, iti, snp, thag, thig. Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха';
 $radiokn = '+КН';
-$tooltiponl = 'X Y ... найдет только тексты содержащие оба и более совпадений X, Y, ... Без этой опции будут собраны тексты которые содержат только рядомстоящие X Y';
-$checkboxonl = 'По всему тексту';
+$tooltiponl = 'X Y ... могут быть на любом расстоянии в рамках одного текста. Без этой опции (по умолчанию) поиск идёт только по рядомстоящим словам. ';
+$checkboxonl = 'Любое расстояние';
 $tooltipnonl = 'С этой опцией будут собраны тексты, которые содержат только рядомстоящие X и Y (в одной строке). По умолчанию, без этой опции поиск будет производиться на любом расстоянии в пределах одного текста.';
 $checkboxnonl = 'А Б';
 $tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи, включая поздние";
@@ -171,8 +171,8 @@ $anameothermat = 'Другие Материалы';
 $anamesdiff = 'Сравнить Две Сутты';
 
 $aboutheader = 'О Проекте';
-$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift это поисковая система Освобождения, инструмент для поиска основанный на материалах SuttaCentral.net, TheBuddhasWords.net, Theravada.ru и Tipitaka.theravada.su. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
-<div class="col-lg-4 me-auto"><p class="lead">Дхамма энтузиасты, разработчики горячо приветствуются. Проект нуждается в помощи (не материальной): в подготовке построчных текстов на пали и русском, для этого не нужно знать пали, и если вы хотите помочь, пожалуйста, свяжитесь через github или по почте, указанной в контактах, внизу этой страницы. </p></div>';
+$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift это поисковая система Освобождения. Точный Поиск в текстах Дхаммы и Винаи Палийского Канона с результатами в удобных таблицах с построчными переводами SuttaCentral.net, TheBuddhasWords.net, Theravada.ru и Tipitaka.theravada.su. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
+<div class="col-lg-4 me-auto"><p class="lead">Дхамма энтузиасты горячо приветствуются. Проект нуждается в помощи (не материальной): в подготовке построчных текстов на пали и русском, для этого не нужно знать пали, и если вы хотите помочь, пожалуйста, свяжитесь через github или по почте, указанной в контактах, внизу этой страницы. </p></div>';
 $prongh = ' Проект на GitHub';
 
 $headerexamples = 'Примеры';
@@ -259,43 +259,42 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 
 $advanced = 'для Продвинутых';
 $advancedcontent = '<strong>Совет #1</strong><br>
-								    Опция применима только для поисков на пали или английском! Если вы хотите найти определенное слово в определенной сутте, самьютте, никае - запустите поиск в таком виде: Sn17.*seyyathāpi
-								  <br>Запрос из примера выведет в таблицы все метафоры и сравнения из Sn17.<br>
-								  Если вы хотите найти разные слова в определенной сутте или группе сутт, запрос должен выглядеть так, включая кавычки:
-								  "Sn51.*(seyyathāpi|adhivacan|ūpama|opama)" 
-								  <br>данный запрос выгрузит все метафоры, сравнения, перефразы и примеры из Sn51
-								  <br><br>
-								  <strong>Совет #2</strong><br>
-								   Чтобы добавить вариации используйте [], к примеру запрос nand[iī] выведет в таблицы совпадения по обоим вариантам nandi и nandī.
-								   <br>
-								   По умолчанию такая вариация установлена для буквы "е", она автоматически преобразуется в [ёе], если вам требуется найти совпадения только с "е", соответственно, то запрос можно сделать в таком виде: [е], к примеру впер[е]д.
-								   <br>
-								   С буквой ё поиск можно осуществлять без доп. символоа.
-								 <br><br>
-						
-									<strong>Совет #3</strong><br>
-								   Если вы хотите найти слова начинающиеся или заканчивающиеся с определенного шаблона, используйте \\\\b в начале и\или в конце шаблона поиска, к примеру<strong>\\\\bkummo\\\\b</strong> выведет в таблицы только kummo и пропустит kummova и любые другие совпадения<br><br>
-									<strong>Совет #4</strong><br>
-								   Чтобы исключить один шаблон из результатов другого шаблона используйте аргумент -exc.<br>
-								   Пример: dundubh -exc devadundubh - этот запрос позволит вам выгрузить совпадения по словам похожим на dundubh, но без devadundubh<br><br>
+Опция применима только для поисков на пали или английском! Если вы хотите найти определенное слово в определенной сутте, самьютте, никае - запустите поиск в таком виде: Sn17.*seyyathāpi
+<br>Запрос из примера выведет в таблицы все метафоры и сравнения из Sn17.<br>
+Если вы хотите найти разные слова в определенной сутте или группе сутт, запрос должен выглядеть так, включая кавычки:
+"Sn51.*(seyyathāpi|adhivacan|ūpama|opama)" 
+<br>данный запрос выгрузит все метафоры, сравнения, перефразы и примеры из Sn51
+<br><br>
+<strong>Совет #2</strong><br>
+Чтобы добавить вариации используйте [], к примеру запрос nand[iī] выведет в таблицы совпадения по обоим вариантам nandi и nandī.
+<br>
+По умолчанию такая вариация установлена для буквы "е", она автоматически преобразуется в [ёе], если вам требуется найти совпадения только с "е", соответственно, то запрос можно сделать в таком виде: [е], к примеру впер[е]д.
+<br>
+С буквой ё поиск можно осуществлять без доп. символоа.
+<br><br>
+<strong>Совет #3</strong><br>
+Если вы хотите найти слова начинающиеся или заканчивающиеся с определенного шаблона, используйте \\\\b в начале и\или в конце шаблона поиска, к примеру<strong>\\\\bkummo\\\\b</strong> выведет в таблицы только kummo и пропустит kummova и любые другие совпадения<br><br>
+<strong>Совет #4</strong><br>
+Чтобы исключить один шаблон из результатов другого шаблона используйте аргумент -exc.<br>
+Пример: dundubh -exc devadundubh - этот запрос позволит вам выгрузить совпадения по словам похожим на dundubh, но без devadundubh<br><br>
 <strong>Совет #5</strong><br>
-								   Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать. 
-								   Специальные ИИ могут сгенерировать регулярное выражение для Grep, к примеру <a href="https://codepal.ai/regex-generator" target=_blank>здесь</a>.
-								   Почитайте, поизучайте regex в интернете.<br><br>
+Вы можете использовать регулярные выражения (regex) синтаксиса GNU grep -E. С использованием escape-последовательности (\\) они должны работать. 
+Специальные ИИ могут сгенерировать регулярное выражение для Grep, к примеру <a href="https://codepal.ai/regex-generator" target=_blank>здесь</a>.
+Почитайте, поизучайте regex в интернете.<br><br>
 
 	<strong>Совет #6</strong><br>
-								   Почитайте на сайте проекта или в интернете о <a target="_blank" href="https://datatables.net/">DataTables</a>, результаты, которые вы получаете из текстов выводятся с помощью них.<br><br>
+Почитайте на сайте проекта или в интернете о <a target="_blank" href="https://datatables.net/">DataTables</a>, результаты, которые вы получаете из текстов выводятся с помощью них.<br><br>
 								   
-							<strong>Совет #7 Подборки</strong><br>
-								   Вы можете создавать подборки текстов. <br>
-								   Примеры запросов:<br> 
-								   "sn42.8|sn20.5" (включая кавычки) выведет в одну таблицу две Сутты полностью<br>
-								   "Sn20.1" (включая кавычки) выведет Sn20.1 sn20.10 sn20.11 и тд в одну таблицу<br>
-								   "Sn20.1\\\\b" (включая кавычки) выведет только одну Сутту
-								   <br><br>
+<strong>Совет #7 Подборки</strong><br>
+Вы можете создавать подборки текстов. <br>
+Примеры запросов:<br> 
+"sn42.8|sn20.5" (включая кавычки) выведет в одну таблицу две Сутты полностью<br>
+"Sn20.1" (включая кавычки) выведет Sn20.1 sn20.10 sn20.11 и тд в одну таблицу<br>
+"Sn20.1\\\\b" (включая кавычки) выведет только одну Сутту
+<br><br>
 
-									<strong>Как работает опция "Опр" - Определение</strong><br>
-									Если эта опция активирована поиск выполняется по следующим критериям:<br>
+<strong>Как работает опция "Опр" - Определение</strong><br>
+Если эта опция активирована поиск выполняется по следующим критериям:<br>
 grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
 Пожалуйста, создайте issue на github или напишите по почте, если вы найдёте другие критерии.<br><br> ';
 
@@ -422,12 +421,12 @@ $menulinks = 'Useful Links';
 $menucontact = 'Contacts';
 $tooltiptitle = 'In Pāḷi, English, Russian & ไทย';
 $title = 'Search for Truth';
-$tooltippli = 'Default search. In Suttas of an, sn, mn, dn. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya';
+$tooltippli = 'Default search. In Suttas of AN, SN, MN, DN + partially KN. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya + partially Khudakka Nikaya';
 $radiopli = 'Pāḷi';
-$tooltipdef = 'Search for definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. If nothing will be found in Suttas it will automatically search in Vinaya. For all-round view studing all related Suttas is recommended. See "Advanced" for details';
+$tooltipdef = 'Search for definitions in the 4 main Pali Nikayas. Find meanings, quantities, types, and metaphors associated with the term. Requires standard phrasing for definitions. If no results are found in Suttas, Vinaya texts are automatically searched. Study related Suttas for a comprehensive view. See "Advanced" for more details.';
 $radiodef = 'Def';
 
-$tooltipsml = 'Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.';
+$tooltipsml = 'Search for similes, metaphors, and symbols related to the search term in four main Pali Nikayas. Requires standard phrasing for definitions.';
 $radiosml = 'Sml';
 
 $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN)
@@ -451,8 +450,8 @@ $radiovin = 'Vinaya';
 $tooltipkn = '+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig';
 $radiokn = '+KN';
 $tooltiponl = 'X Y ... Finds texts containing only both and more matches for X, Y ... Without this option only texts where X Y are standing next to each other will be found';
-$checkboxonl = 'In all text';
-$tooltipnonl = 'By default only texts containing X Y ... on any distance between  words will be found. With this option texts containing only X Y standing next to each other will be in results.';
+$checkboxonl = 'Any distance';
+$tooltipnonl = 'Search for X Y ... on any distance within one text. By default only texts containing X Y ... next to each other will be found.';
 $checkboxnonl = 'A B';
 $tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then sc.net texts, then thebuddhaswords.net translations';
 $radioen = 'Eng';
@@ -541,8 +540,9 @@ idaṁ vuccati, bhikkhave, domanassaṁ.</br>
 that is called stress.</br></p>';
 
         
-$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
+$transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 
+$transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Caution regarding translations!</b><br><br> Translations do not originate directly from the Buddha himself!  Approach them with scrutiny and critical thinking.<br><br> To acquire the fundamental teachings of the Buddha, it is highly recommended to engage in the <strong>direct study of Suttas in Pali</strong>. At the very least, concentrate on understanding the Middle Practice and the Four Noble Truths. For instance, consider delving into a dedicated section from <strong>sn56.11</strong>.';
 
 $linklearnpali = 'https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1';
 $anamemlearnpali = 'Learn Pali Guides';
@@ -566,8 +566,8 @@ $anamesdiff = 'Sutta Diff';
 
 
 $aboutheader = 'About Project';
-$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift is a Liberation Search Engine, it\'s a search tool based on SuttaCentral.net and Theravada.ru materials. You can search in Pali, Russian, Thai and English for meanings, definitions, metaphors, explanations, people, locations etc. described in Suttas and Vinaya.</p></div>
-<div class="col-lg-4 me-auto"><p class="lead">Dhamma Enthusiasts, Developers and Contributors are warmly welcome, because project has great potential to find the real meaning of the texts. But! I\'m not a developer and its just a bash script with php wrapper😊</p></div>';
+$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift serves as a Liberation Search Engine for Dhamma and Vinaya, the core of the Pali Canon. It presents results in informative tables with line by line translations from sources like SuttaCentral.net, TheBuddhasWords.net, Theravada.ru, and Theravada.su. You can search in Pali, Russian, Thai, and English for meanings, definitions, metaphors, explanations, people, places, and more as described in Suttas and Vinaya.</p></div>
+<div class="col-lg-4 me-auto"><p class="lead">Dhamma enthusiasts and contributors, especially developers, are warmly invited to participate.</p></div>';
 $prongh = ' Project on GitHub';
 
 
@@ -576,20 +576,19 @@ $examplelist = '<li>Definition of the <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%8
 
  <li>Sutta where Buddha says that he doesn\'t make <a href="/?q=dvayagāminī">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
 
-             <li>All variants of the word <a href="/?q=paṭiccasamuppād">paṭiccasamuppado</a> in Pali with quotes in English</li>
+<li>All variants of the word <a href="/?q=paṭiccasamuppād">paṭiccasamuppado</a> in Pali with quotes in English</li>
             
-                <li>All suttas about <a href="/assets/example/eightfold_suttanta_en_159-344.html">Eightfold</a> Path in English</li>
-                <li>All suttas that took place or related to <a href="/assets/example/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
-                <li>All suttas where <a href="/assets/example/sariputt_suttanta_ru-ru_179-1105.html">Sariputta</a> was mentioned in Russian</li>
+<li>All suttas about <a href="/assets/example/eightfold_suttanta_en_159-344.html">Eightfold</a> Path in English</li>
+<li>All suttas that took place or related to <a href="/assets/example/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
+<li>All suttas where <a href="/assets/example/sariputt_suttanta_ru-ru_179-1105.html">Sariputta</a> was mentioned in Russian</li>
     
-             <li>All suttas about or containing the word <a href="/assets/example/ocean_suttanta_en_92-266.html">ocean</a> in English</li>
-                 <li>All Suttas with <a href=./assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_647-2186.html>metaphors & similies</a> in Pali and English</li>   ';
+<li>All suttas about or containing the word <a href="/assets/example/ocean_suttanta_en_92-266.html">ocean</a> in English</li>
+<li>All Suttas with <a href=./assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_647-2186.html>metaphors & similies</a> in Pali and English</li>   ';
 $howtoheader = 'How to Search';
 
 $contactheader = 'Contacts';
 $contaccalltoaction = 'Find the Noble Eightfold Path.<br>
-							Understand the Four Noble Truths.<br>Dhamma - is Actuality.
-                      ';
+Understand the Four Noble Truths.<br>Dhamma - is Actuality.';
  $demovideo = 'Demo Video';  
  $demovideolink = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
  $demovideoimg = '/assets/img/video1en.webp';
@@ -604,63 +603,61 @@ The following logic is applied: if you search in Roman script: 1st is Pali, then
 Use special characters ā ī ū ḍ ṁ ṁ ṇ ṅ ñ ṭ<br><br>
 <strong>Tip #2 Khuddaka NIkaya</strong><br>
 Search is performed in All DN, MN, SN, AN. use <strong>-kn</strong> option if you also want to include results from the following books of KN: Dhammapada, Udāna, Itivuttaka, Suttanipāta, Theragāthā, Therīgāthā. Other books of KN will not be used in the search even with option. You may use alternative services to make searches in Jatakas and other book of KN.<br>
-									 Example #1: -kn jamm
-									 <br>Will search in DN, MN, SN, AN + books of KN listed above
-									 <br>
-									 Example #2: jamm
-									 <br>Will search in DN, MN, SN, AN only.
-									 <br><br>
-									 
-									 <strong>Tip #3 Vinaya</strong><br> 
-                                   if you\'re willing to search in Vinaya add -vin to your search request. For pali vinaya search for cetana the line will look like: -vin cetana <br><br>
+Example #1: -kn jamm
+<br>Will search in DN, MN, SN, AN + books of KN listed above
+<br>
+Example #2: jamm
+<br>Will search in DN, MN, SN, AN only.
+<br><br>
 
-									 <strong>Tip #4 Stem</strong><br>
-                                    Use stem of the word for broader results with or without prefixes or endings. 
-									<br><br>
-									          <strong>Tip #5</strong><br>
-                                    Prefer Pali to other languages. Pali is the language in which the oldest Dhamma related texts are written.	
-									<br><br>
-									<strong>Tip #6</strong><br>
-									For Pali search results you have two options: results sorted by Suttas/Texts with quotes and by words. Use both to get some extra details.<br><br>
-                                   <strong>Tip #7</strong><br>Minimal length of search pattern is 3 symbols. But if possible search for longer patterns. Then you will get more precise results.<br><br>
-									<strong>Tip #8</strong><br> 
-                                   We highly recommend to search in Pali. As it will give the best results, and you will develop a very important habit to look into Pali and do not rely blindly on the translations. But obviously you can get some benefits from searches in translations. If you are looking for animals, plants, etc. There are at least 4 different pali words for a snake but in Russian or English - it\'s just "a snake" or "a viper". <br><br>
-				
-									<strong>Tip #9</strong><br>
-                                   if your request fails due to timeout try longer search pattern.  <br><br>
-								   <strong>Tip #10</strong><br>
-                                   if your request fails due to timeout, and you can\'t use longer search pattern try <a href="./bg.php">Background Mode</a>. It might work.
-								   <br><br> 
+<strong>Tip #3 Vinaya</strong><br> 
+if you\'re willing to search in Vinaya add -vin to your search request. For pali vinaya search for cetana the line will look like: -vin cetana <br><br>
+
+<strong>Tip #4 Stem</strong><br>
+Use stem of the word for broader results with or without prefixes or endings. 
+<br><br>
+<strong>Tip #5</strong><br>
+Prefer Pali to other languages. Pali is the language in which the oldest Dhamma related texts are written.	
+<br><br>
+<strong>Tip #6</strong><br>
+For Pali search results you have two options: results sorted by Suttas/Texts with quotes and by words. Use both to get some extra details.<br><br>
+<strong>Tip #7</strong><br>Minimal length of search pattern is 3 symbols. But if possible search for longer patterns. Then you will get more precise results.<br><br>
+<strong>Tip #8</strong><br> 
+We highly recommend to search in Pali. As it will give the best results, and you will develop a very important habit to look into Pali and do not rely blindly on the translations. But obviously you can get some benefits from searches in translations. If you are looking for animals, plants, etc. There are at least 4 different pali words for a snake but in Russian or English - it\'s just "a snake" or "a viper". <br><br>
+
+<strong>Tip #9</strong><br>
+if your request fails due to timeout try longer search pattern.  <br><br>
+<strong>Tip #10</strong><br>
+if your request fails due to timeout, and you can\'t use longer search pattern try <a href="./bg.php">Background Mode</a>. It might work.
+<br><br> 
 <strong>What is Mtphr count in result table?</strong><br>
-										Matches in all text, not connected to search pattern:<br>
-										"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
-										Following words are ignored:<br>
-    "adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
-    Create an issue on github or send an email, if you\'ll find other criteria.
-    <br><br>
+Matches in all text, not connected to search pattern:<br>
+"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
+Following words are ignored:<br>
+"adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
+Create an issue on github or send an email, if you\'ll find other criteria.
+<br><br>
 </p>';
 
 $advanced = 'Advanced';
 $advancedcontent = '<strong>Tip #1</strong><br>
-								   If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
-								  <br>This example will search for all similies and metaphors in all Sn17.<br><br>
-								  <strong>Tip #2</strong><br>
-								   To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
-								 <br><br>
-								  
-									<strong>Tip #3</strong><br>
-								   If you want to find words beginning or ending from some pattern use \\\\b before and/or in the end of the pattern. e.g. <strong>\\\\bkummo\\\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
-									<strong>Tip #4</strong><br>
-								   You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\\\) they should work. 
-								   Specialized AI can generate RegEx for Grep, e.g. <a href="https://codepal.ai/regex-generator" target=_blank>here</a>.
-								   Read and study regex to boost your search abilities.<br><br>
-								   
-								   <strong>Tip #5</strong><br>
-								
-								   Read about <a target="_blank" href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
-								   
-			<strong>How "Def" option works?</strong><br>
-									With Def following search will run:<br>
+If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
+<br>This example will search for all similies and metaphors in all Sn17.<br><br>
+<strong>Tip #2</strong><br>
+To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
+<br><br>
+
+<strong>Tip #3</strong><br>
+If you want to find words beginning or ending from some pattern use \\\\b before and/or in the end of the pattern. e.g. <strong>\\\\bkummo\\\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
+<strong>Tip #4</strong><br>
+You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\\\) they should work. 
+Specialized AI can generate RegEx for Grep, e.g. <a href="https://codepal.ai/regex-generator" target=_blank>here</a>.
+Read and study regex to boost your search abilities.<br><br>
+<strong>Tip #5</strong><br>
+Read about <a target="_blank" href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
+
+<strong>How "Def" option works?</strong><br>
+With Def following search will run:<br>
 grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
 Please, create an issue on github or send an email, if you\'ll find other criteria.<br><br> ';
 

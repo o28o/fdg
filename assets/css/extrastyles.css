@@ -570,21 +570,21 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
    
    
        .level2 {
-      margin-left: 4px;
+      margin-left: 0px;
 
     }
      .level3 {
-      margin-left: 8px;
+      margin-left: -4px;
 
     }
 
     .level4 {
-      margin-left: 10px;
+      margin-left: -10px;
      /* color: #3F424B;*/
     }
 
     .level5 {
-      margin-left: 11px;
+      margin-left: -20px;
     }
 	  
    

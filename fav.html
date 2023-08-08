@@ -17,7 +17,7 @@
             display: none;
         }
 
-        .custom-checkbox .glyphicon {
+        .star-checkbox .fa-star {
             color: gray;
             font-size: 1em;
             position: absolute;
@@ -25,15 +25,12 @@
             left: 0;
         }
 
-        .custom-checkbox input[type="checkbox"]:checked + .glyphicon {
+        .star-checkbox input[type="checkbox"]:checked + .fa-star {
             color: gold;
         }
     </style>
 </head>
 <body>
-    <label for="id-of-input" class="custom-checkbox">
-        <input type="checkbox" id="id-of-input"/>
-        <i class="fa-solid fa-star glyphicon glyphicon-star"></i>
-    </label>
+<label class="star-checkbox"><input type="checkbox"/><i class="fa-solid fa-star"></i></label>
 </body>
 </html>

@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Transformation</title>
-    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap.5.3.1.min.css" rel="stylesheet" />
     <link href="/assets/css/extrastyles.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 
-  
+ <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+
   <style>
+.table {
+  color: initial;  background-color: initial; 
+}
         #resultOutput {
             white-space: pre-wrap;
         }
@@ -47,22 +51,22 @@
 
 <body>
     <div class="container mt-5">
-	<div class="toggle-switch input-group-append"><div id="" class=" ">
-       <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer">   
-          <svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
-         </a>
-         </div> 
+	<div class="align-items-center align-items-center toggle-switch input-group-append">
+    <div id="" class="input-group">
+        <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+<svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+        </a>
 
-  <div id="fdg-button" class=" input-group-append">
-           <a  href="../../" title="Sutta and Vinaya search" rel="noreferrer"
-            ><img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png"></a>
-      </div>
+        <a href="../../" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+            <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+        </a>
 
-		 
-<div class="form-check form-switch input-group-append">
-<input type="checkbox" class="form-check-input" id="darkSwitch">
+        <div class="ms-1 form-check form-switch">
+            <input type="checkbox" class="form-check-input" id="darkSwitch">
+        </div>
+    </div>
 </div>
-</div>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">

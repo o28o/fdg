@@ -16,6 +16,7 @@ if [[ "`uname -a`" == *"Android"* ]]; then
 sitename=http://localhost:8080
 nicevalue=1
 mode=offline
+fontawesomejs='src="/assets/js/fontawesome.6.1.all.js" defer'
 apachesitepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 suttapath=$apachesitepath/suttacentral.net/
 
@@ -46,6 +47,7 @@ mode=online
 apachesitepath=/var/www/html
 suttapath=$apachesitepath/suttacentral.net/
 
+fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 linkforthsu=https://tipitaka.theravada.su
 linkforthru=https://theravada.ru
 linkforthai=https://suttacentral.net/
@@ -104,6 +106,7 @@ mode=online
 nicevalue=19
 apachesitepath=/home/a0092061/domains/f.dhamma.gift/public_html/
 suttapath=/home/a0092061/data/suttacentral.net/
+fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 
 linkforthsu=https://tipitaka.theravada.su
 linkforthru=https://theravada.ru

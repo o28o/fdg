@@ -48,7 +48,7 @@ titleH='<h3 class="pl-2 ml-2" style="text-decoration: none">Search History</h3>'
 title='Search History'
 replacehref=$mainpagebase'archive.php'
 buttonname='Archive'
-cat $templatefolder/Header.html | sed 's@<title>$title</title>@'"$titleT"'@' | sed 's@$title@'"$title"'@g' 
+cat $templatefolder/ListHeader.html | sed 's@fontawesomejs@<script '"$fontawesomejs"'></script>@' | sed 's@<title>$title</title>@'"$titleT"'@' | sed 's@$title@'"$title"'@g' 
 cat $templatefolder/ListTableHeader.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's@<h3 class="pl-2 ml-2">$title</h3>@'"$titleH"'@g' | sed 's@$title@'"$title"'@g' | sed 's@$replacehref@'"$replacehref"'@g' | sed 's@$ReplaceMe@'"$buttonname"'@g' 
 
 
@@ -67,7 +67,7 @@ titleH='<h3 class="pl-2 ml-2" style="text-decoration: none">Search Archive</h3>'
 title='Search Archive'
 replacehref=$mainpagebase'history.php'
 buttonname='History'
-cat $templatefolder/Header.html | sed 's@<title>$title</title>@'"$titleT"'@' | sed 's@$title@'"$title"'@g' 
+cat $templatefolder/ListHeader.html | sed 's@fontawesomejs@<script '"$fontawesomejs"'></script>@' | sed 's@<title>$title</title>@'"$titleT"'@' | sed 's@$title@'"$title"'@g' 
 cat $templatefolder/ListTableHeader.html |sed 's@HOMEVAR@'$mainpagebase'@' | sed 's@<h3 class="pl-2 ml-2">$title</h3>@'"$titleH"'@g' | sed 's@$title@'"$title"'@g' | sed 's@$replacehref@'"$replacehref"'@g' | sed 's@$ReplaceMe@'"$buttonname"'@g' 
 
 

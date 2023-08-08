@@ -4,7 +4,32 @@
 <title>$title</title>
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
+fontawesomejs
 
+    <style>
+        label {
+            display: inline-block;
+            position: relative;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        label input[type="checkbox"] {
+            display: none;
+        }
+
+        .star-checkbox .fa-star {
+            color: gray;
+            font-size: 1em;
+            position: absolute;
+            top: -15px;
+            left: -2px;
+        }
+
+        .star-checkbox input[type="checkbox"]:checked + .fa-star {
+            color: gold;
+        }
+    </style>
  <meta http-equiv="Cache-control" content="public">
 <meta property="og:type" content="article" />
 <meta property="og:title" content="$title - find.Dhamma.gift" />

@@ -190,10 +190,11 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
 
-      html += `${openHtml}<span id="${anchor}" class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
+      html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
-            <span class="eng-lang" lang="en">${engTransData[segment]}</span>
-      ${closeHtml}\n\n`;
+      <span class="eng-lang" lang="en">${engTransData[segment]}</span>
+      </span>${closeHtml}\n\n`;
     });
 
 if (translator === "sv") {

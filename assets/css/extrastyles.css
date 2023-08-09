@@ -59,6 +59,12 @@
     border-color: #6e6969;
 }
 
+
+[data-theme="light"] .menu-icon {
+  font-size: 2em; 
+  color: var(--bs-primary); 
+}
+
 [data-theme="dark"] .menu-icon  {
     color: #136857 ;
 }
@@ -307,10 +313,7 @@ background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
  color: #383838;
 } */
 
-.menu-icon {
-  font-size: 2em; 
-  color: var(--bs-primary); 
-}
+
 
 
     .level1 {

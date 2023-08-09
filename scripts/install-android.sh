@@ -12,6 +12,8 @@ httpdconf=$PREFIX/etc/apache2/httpd.conf
 httpdtdir=$PREFIX/share/apache2/default-site/htdocs
 
 echo "installing php-apache apache2 zip pv wget git iconv w3m jq"
+pkg update 
+pkg upgrade
 pkg install -y php-apache apache2 zip pv wget git iconv w3m jq
 
 while true; do

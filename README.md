@@ -34,7 +34,9 @@ Install WAMP and clone repo to apache root
 
 3\.Copy-paste following commands:
 
-    Pkg install -y git
+    pkg update 
+    pkg upgrade
+    pkg install -y git
     mkdir -p $PREFIX/share/apache2/default-site/htdocs
     cd $PREFIX/share/apache2/default-site/htdocs
     git clone https://github.com/o28o/fdg.git ./
@@ -47,7 +49,7 @@ Install WAMP and clone repo to apache root
 
 2\. Open termux and run
 
-    Pkg install -y php-apache apache2 pv wget git iconv python w3m
+    pkg install -y php-apache apache2 pv wget git iconv python w3m
     
 #fix php based on this [article](https://parzibyte.me/blog/en/2019/04/28/install-apache-php-7-android-termux/#Step_2_Install_Apache_and_PHP)
 

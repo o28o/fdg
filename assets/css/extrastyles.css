@@ -34,12 +34,9 @@
   background-color: #000 !important;
 }
 
-
 [data-theme="dark"] .bg-primary {
     background-color: #136857  !important;
 	}
-
-
 
 [data-theme="dark"] .btn-primary {
     background-color: #025242;

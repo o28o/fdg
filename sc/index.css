@@ -64,12 +64,12 @@ html{
 
 #theme-button {
   position:relative;  
-  margin-top:-3px;
+  margin-top:-5px;
 }
 
 #fdg-button {
   margin:0px 0px;
-  position:relative; top:0px;
+  position:relative; top:1px;
 }
 
 #home-button {

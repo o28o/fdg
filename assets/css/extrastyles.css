@@ -59,6 +59,11 @@
     border-color: #6e6969;
 }
 
+[data-theme="dark"] .menu-icon  {
+    color: #136857 ;
+}
+
+
 	hr {	
   background-color: currentColor;	
 }

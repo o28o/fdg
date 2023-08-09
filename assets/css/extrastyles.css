@@ -56,6 +56,19 @@
     border-color: #6e6969;
 }
 
+.menu-icon {
+  font-size: 2em; 
+}
+
+[data-theme="light"] .menu-icon {
+  color: var(--bs-primary); 
+}
+
+[data-theme="dark"] .menu-icon  {
+  color: #136857 ;
+}
+
+
 	hr {	
   background-color: currentColor;	
 }
@@ -299,10 +312,7 @@ background: linear-gradient(to top, #254678 0%, #3F74B8 100%);
  color: #383838;
 } */
 
-.menu-icon {
-  font-size: 2em; 
-  color: var(--bs-primary); 
-}
+
 
 
     .level1 {
@@ -599,17 +609,17 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 
     }
      .level3 {
-      margin-left: -4px;
+      margin-left: 4px;
 
     }
 
     .level4 {
-      margin-left: -10px;
+      margin-left: 8px;
      /* color: #3F424B;*/
     }
 
     .level5 {
-      margin-left: -20px;
+      margin-left: 0px;
     }
 	  
    

@@ -59,14 +59,16 @@
     border-color: #6e6969;
 }
 
+.menu-icon {
+  font-size: 2em; 
+}
 
 [data-theme="light"] .menu-icon {
-  font-size: 2em; 
   color: var(--bs-primary); 
 }
 
 [data-theme="dark"] .menu-icon  {
-    color: #136857 ;
+  color: #136857 ;
 }
 
 

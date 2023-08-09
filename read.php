@@ -18202,7 +18202,7 @@ include 'assets/common/horizontalMenuEn.php';
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                         <div class="lock example divider-custom-icon">
-                                        <i class="fa-solid fa-dharmachakra example icon-unlock" ></i>
+                                        <i class="fa-regular fa-gem example icon-unlock" ></i>
  <i class="fa-solid fa-circle icon-lock bigger"></i>
                       </div>
                     <div class="divider-custom-line"></div>
@@ -18233,7 +18233,7 @@ include 'assets/common/horizontalMenuEn.php';
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                         <div class="lock example divider-custom-icon">
-                                        <i class="fa-solid fa-dharmachakra example icon-unlock" ></i>
+                                        <i class="fa-regular fa-gem example icon-unlock" ></i>
  <i class="fa-solid fa-circle icon-lock bigger"></i>
                       </div>
                     <div class="divider-custom-line"></div>
@@ -18568,7 +18568,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <!-- Icon Divider-->
 <div class="divider-custom">
 <div class="divider-custom-line"></div>
-<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-icon"><i class="fa-regular fa-gem"></i></div>
 <div class="divider-custom-line"></div>
 </div>
 <!-- Portfolio Modal - Image-->
@@ -18602,7 +18602,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <!-- Icon Divider-->
 <div class="divider-custom">
 <div class="divider-custom-line"></div>
-<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-icon"><i class="fa-regular fa-gem"></i></div>
 <div class="divider-custom-line"></div>
 </div>
 <!-- Portfolio Modal - Image
@@ -18636,7 +18636,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <!-- Icon Divider-->
 <div class="divider-custom">
 <div class="divider-custom-line"></div>
-<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-icon"><i class="fa-regular fa-gem"></i></div>
 <div class="divider-custom-line"></div>
 </div>
 <!-- Portfolio Modal - Image
@@ -18669,7 +18669,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
 <!-- Icon Divider-->
 <div class="divider-custom">
 <div class="divider-custom-line"></div>
-<div class="divider-custom-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+<div class="divider-custom-icon"><i class="fa-regular fa-gem"></i></div>
 <div class="divider-custom-line"></div>
 </div>
 

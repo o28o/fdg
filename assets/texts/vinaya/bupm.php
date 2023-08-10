@@ -1558,8 +1558,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 Tatthāyasmante pucchāmi, kaccittha parisuddhā,
 dutiyampi pucchāmi, kaccittha parisuddhā,
 tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
-Sekhiyā niṭṭhitā </span>
+parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 </div> 
            <div class="level4 my-3">
  <span class="level5">

@@ -18268,7 +18268,6 @@ include 'assets/common/horizontalMenuEn.php';
       <?php
       if ( $mode == "offline" ) {
         
-      $mainpagesclink = $mainscpage;
       echo '  <a href="https://find.dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">find.dhamma.gift</h5>
@@ -18278,7 +18277,6 @@ include 'assets/common/horizontalMenuEn.php';
     <small class="text-muted"></small>
   </a>';
       } else {
-$mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
       echo '
   <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
@@ -18378,7 +18376,7 @@ $mainpagesclink = 'https://sc.dhamma.gift' . $mainpage ;
                        
 
  <div class="list-group">
-  <a target="_blank" href="<?php echo $mainpagesclink; ?>" class="list-group-item list-group-item-action active" aria-current="true">
+  <a target="_blank" href="<?php echo $mainscpage; ?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">sc.dhamma.gift</h5>
       <small><?php echo $detailonandoffline;?></small>

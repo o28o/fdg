@@ -650,7 +650,7 @@ include 'assets/common/horizontalMenuEn.php';
                        
 
  <div class="list-group">
-  <a target="_blank" href="<?php echo $mainscpage; ?>" class="list-group-item list-group-item-action active" aria-current="true">
+  <a target="" href="<?php echo $mainscpage; ?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">sc.dhamma.gift</h5>
       <small><?php echo $detailonandoffline;?></small>

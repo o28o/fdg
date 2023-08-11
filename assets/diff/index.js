@@ -60,7 +60,7 @@ document.getElementById("trash-two").addEventListener("click", () => {
 
 const compareButton = document.getElementById("compare-button");
 const languageSelector = document.getElementById("language");
-let language = "en";
+let language = "pl";
 languageSelector.addEventListener("input", e => {
   language = e.target.value;
   params.set("lang", language);

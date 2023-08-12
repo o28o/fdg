@@ -230,7 +230,7 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 }
 }
-if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
+if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud|snp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)||preg_match("/^(bu|bi)-pm$/i", $string)){
 $string = str_replace (" ", ".", $string);
 $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range

@@ -90,6 +90,7 @@ $string = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $string);
 //for patimokkha
 if (preg_match("/^(bu|bi)-pm$/i", $string)) {
 	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+	  exit(); 
 }
 
 /* ru with arg */ 

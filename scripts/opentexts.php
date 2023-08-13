@@ -87,6 +87,12 @@ $q = $extra = $la = $p = $arg = $string = $sutta = "";
 
 $string = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $string);
 
+//for patimokkha
+if (preg_match("/^(bu|bi)-pm$/i", $string)) {
+	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+	  exit(); 
+}
+
 /* ru with arg */ 
 /* for th.su dn */
   if (preg_match("/^(dn|mn)[0-9]{1,3}s$/i",$string)) {
@@ -230,7 +236,7 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 }
 }
-if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
+if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud|snp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
 $string = str_replace (" ", ".", $string);
 $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
@@ -255,8 +261,7 @@ if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}b$/i",$string) || preg_match("/^(sn|an|ud)
   $bwprefix = strtolower(substr($forbwlink,0,2));
   
   echo "<script>window.location.href='/bw/{$bwprefix}/{$forbwlink}.html';</script>";
-  exit();
-  
+  exit(); 
 }
 ?> 
 

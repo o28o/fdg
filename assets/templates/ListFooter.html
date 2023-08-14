@@ -132,8 +132,8 @@ function restoreCheckboxesStateFromLocalStorage(urlKey) {
       if (checkbox.checked) {
         var iconElement = checkbox.parentElement.querySelector('i');
         if (iconElement) {
-          iconElement.classList.remove('far');
-          iconElement.classList.add('fas');
+          iconElement.classList.remove('fa-regular');
+          iconElement.classList.add('fa-solid');
         }
       }
     });
@@ -158,11 +158,11 @@ checkboxes.forEach(function(checkbox) {
     var iconElement = this.parentElement.querySelector('i');
     if (iconElement) {
       if (this.checked) {
-        iconElement.classList.remove('far');
-        iconElement.classList.add('fas');
+        iconElement.classList.remove('fa-regular');
+        iconElement.classList.add('fa-solid');
       } else {
-        iconElement.classList.remove('fas');
-        iconElement.classList.add('far');
+        iconElement.classList.remove('fa-solid');
+        iconElement.classList.add('fa-regular');
       }
     }
   });

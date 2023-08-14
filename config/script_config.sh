@@ -66,8 +66,8 @@ wafter=3
 linesafter=0
 minlength=2
 truncatelength=30
-filesizenooverwrite=1000000000000
-maxmatchesbg=300000
+filesizenooverwrite=1000000
+maxmatchesbg=3000
 archivenumber=280
 archivenumber=91
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 

@@ -1037,7 +1037,6 @@ $.ajax({
         collision: "flip"
       },
       minLength: 0,
-      multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке
       source: function(request, response) {
         var terms = request.term.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
         var lastTerm = terms.pop().trim();
@@ -1068,10 +1067,9 @@ $.ajax({
           return !listBeginOnly.includes(el);
         });
 
-        // Ограничение количества подсказок до 10
+        // Ограничение количества подсказок до 1000
         var maxRecord = 1000;
         var resultList = listBeginOnly.concat(listAll).slice(0, maxRecord);
-
         response(resultList);
       },
       focus: function(event, ui) {

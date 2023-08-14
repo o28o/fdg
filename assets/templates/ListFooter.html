@@ -127,6 +127,15 @@ function restoreCheckboxesStateFromLocalStorage(urlKey) {
     checkboxes.forEach(function(checkbox) {
       var index = checkbox.dataset.index;
       checkbox.checked = checkboxState['checkbox_' + index] || false;
+
+      // Перезапись класса в зависимости от состояния checked
+      if (checkbox.checked) {
+        var iconElement = checkbox.parentElement.querySelector('i');
+        if (iconElement) {
+          iconElement.classList.remove('far');
+          iconElement.classList.add('fas');
+        }
+      }
     });
   }
 }
@@ -144,10 +153,23 @@ document.addEventListener('DOMContentLoaded', function() {
 checkboxes.forEach(function(checkbox) {
   checkbox.addEventListener('change', function() {
     saveCheckboxesStateToLocalStorage(urlKey);
+    
+    // Перезапись класса при изменении состояния чекбокса
+    var iconElement = this.parentElement.querySelector('i');
+    if (iconElement) {
+      if (this.checked) {
+        iconElement.classList.remove('far');
+        iconElement.classList.add('fas');
+      } else {
+        iconElement.classList.remove('fas');
+        iconElement.classList.add('far');
+      }
+    }
   });
 });
 
 </script>
+
 <script src="/assets/js/themeswitch.js"></script>
 
 </body>

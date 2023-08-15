@@ -16,8 +16,8 @@ vbtrn=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/translation/en/brah
 
 type="Sekhiya"
 typeacr=sk
-i=11
-last=20
+i=61
+last=75
 mf=i
 
 

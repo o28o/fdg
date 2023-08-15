@@ -1,13 +1,14 @@
 
-bupm=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/vinaya/pli-tv-bu-pm_root-pli-ms.json
-vb=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-bu-vb 
-vbtrn=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-bu-vb
+bupm=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/vinaya/pli-tv-bi-pm_root-pli-ms.json
+vb=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-bi-vb 
+vbtrn=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-bi-vb
 
-type="Pāṭidesanīya"
-typeacr=pd
-i=1
-last=4
-cd $vb/pli-tv-bu-vb-$typeacr
+type="Saṅghādisesa"
+typeacr=ss
+i=14
+last=17
+mf=i
+cd $vb/pli-tv-bi-vb-$typeacr
 
 
 while true; do
@@ -23,11 +24,15 @@ bupmruleid=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA0 "|$typ
 
   fullruletext=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA30 "$type $i" | grep $bupmruleid | grep -v "$bupmruleid.0"| awk -F'|' '{print $2}' )
   
- vbindex=$(grep "Final ruling" `find $vbtrn -name "*${typeacr}${i}_*" ` | awk -F':' '{print $2}' | sed 's/"$//' ) 
+  
+vbindexfile=`find $vbtrn -name "*${typeacr}${i}_*"`
+ vbindex=$(grep "Final ruling" $vbindexfile | awk -F':' '{print $2}' | sed 's/"$//' ) 
+ 
+ 
   echo '<div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bu-pm#pli-tv-bu-pm:'$ruleindex'">'$rulename'</a> 
-<a href="/ru/sc/?q=pli-tv-bu-vb-'$typeacr$i'#pli-tv-bu-vb-'$typeacr$i':'$vbindex'">vb</a> '$fullruletext'
+<a href="/ru/sc/?q=b'$mf'-pm#'$ruleindex'">'$rulename'</a> 
+<a href="/ru/sc/?q=pli-tv-b'$mf'-vb-'$typeacr$i'#'$vbindex'">vb</a> '$fullruletext'
 </span>
 </div>'
 

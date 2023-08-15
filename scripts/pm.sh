@@ -3,10 +3,21 @@ bupm=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/te
 vb=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-bi-vb 
 vbtrn=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-bi-vb
 
-type="Saṅghādisesa"
-typeacr=ss
+
+bupm=/var/www/html/assets/texts/vinaya/pli-tv-bi-pm_root-pli-ms.json
+vb=/var/www/html/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-bi-vb 
+vbtrn=/var/www/html/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-bi-vb
+
+bupm=/drives/c/soft/fdg/assets/texts/vinaya/pli-tv-bi-pm_root-pli-ms.json
+vb=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-bi-vb 
+vbtrn=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-bi-vb
+
+
+
+type="Pācittiya"
+typeacr=pc
 i=1
-last=17
+last=10
 mf=i
 cd $vb/pli-tv-bi-vb-$typeacr
 
@@ -25,7 +36,7 @@ bupmruleid=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA0 "|$typ
   fullruletext=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA30 "$type $i" | grep $bupmruleid | grep -v "$bupmruleid.0"| awk -F'|' '{print $2}' )
   
   
-vbindexfile=$(find "$vbtrn" -name "*${typeacr}${i}_*")
+vbindexfile=$(find "$vbtrn" -name "*${typeacr}${i}_*" 2>/dev/null)
 
 if [ -n "$vbindexfile" ]; then
     vbindex=$(grep "Final ruling" "$vbindexfile" | awk -F':' '{print $2}' | sed 's/"$//')

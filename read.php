@@ -18137,6 +18137,7 @@ window.addEventListener('pageshow', function(event) {
 <script src="/assets/js/tocjs.js"></script>
 </div>
 
+<!-- Vinaya header + bu-pm -->
 <?php
 echo '
  <div class="container text-start mt-4">
@@ -18154,13 +18155,26 @@ echo '
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">    <h2 class="my-2"><a href="/ru/sc/?q=bu-pm#0.2">Bhikkhupātimokkha</a></h2></span>	
 	
       <div class="collapse " id="bupmCollapse">
-      <script src="/assets/js/pmjs.js"></script>
       ';
 include $basedir . "/assets/texts/vinaya/bupm.php";
 
 ?>
-</div>
+<!-- bi-pm -->
+<?php
+echo '
+ 
+     <span class="toggle-button form-check-inline"
+    data-bs-toggle="collapse" data-bs-target="#bipmCollapse">    <h2 class="my-2"><a href="">Bhikkhunīpātimokkha</a></h2></span>	
+	
+      <div class="collapse " id="bipmCollapse">
+      ';
+include $basedir . "/assets/texts/vinaya/bipm.php";
 
+?>
+  </div>
+</div>
+</div>
+<div class="mb-5"></div>
 <?php
 if ( $lang == "ru" ) {
 include 'assets/common/horizontalMenuRu.php'; 
@@ -18168,7 +18182,7 @@ include 'assets/common/horizontalMenuRu.php';
 include 'assets/common/horizontalMenuEn.php'; 
 } 
 ?>
-
+ <script src="/assets/js/pmjs.js"></script>
 
 <!-- Portfolio Item 3-->
 <div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">

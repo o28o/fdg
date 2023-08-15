@@ -101,50 +101,50 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#9.0">Pārājika 1. Methunadhammasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj1#">vb</a> Yā pana bhikkhunī chandaso methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatenapi, pārājikā hoti asaṁvāsā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#9.0">Pārājika 1. Methunadhammasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj1#">vb</a> Yā pana bhikkhunī chandaso methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatenapi, pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#10.0">Pārājika 2. Adinnādānasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj2#">vb</a> Yā pana bhikkhunī gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya, yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corāsi bālāsi mūḷhāsi thenāsīti, tathārūpaṁ bhikkhunī adinnaṁ ādiyamānā ayampi pārājikā hoti asaṁvāsā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#10.0">Pārājika 2. Adinnādānasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj2#">vb</a> Yā pana bhikkhunī gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya, yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corāsi bālāsi mūḷhāsi thenāsīti, tathārūpaṁ bhikkhunī adinnaṁ ādiyamānā ayampi pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#11.0">Pārājika 3. Manussaviggahasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj3#">vb</a> Yā pana bhikkhunī sañcicca manussaviggahaṁ jīvitā voropeyya, satthahārakaṁ vāssa pariyeseyya, maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, “ambho purisa, kiṁ tuyhiminā pāpakena dujjīvitena, mataṁ te jīvitā seyyo”ti, iti cittamanā cittasaṅkappā anekapariyāyena maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājikā hoti asaṁvāsā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#11.0">Pārājika 3. Manussaviggahasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj3#">vb</a> Yā pana bhikkhunī sañcicca manussaviggahaṁ jīvitā voropeyya, satthahārakaṁ vāssa pariyeseyya, maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, “ambho purisa, kiṁ tuyhiminā pāpakena dujjīvitena, mataṁ te jīvitā seyyo”ti, iti cittamanā cittasaṅkappā anekapariyāyena maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#12.0">Pārājika 4. Uttarimanussadhammasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj4#">vb</a> Yā pana bhikkhunī anabhijānaṁ uttarimanussadhammaṁ attupanāyikaṁ alamariyañāṇadassanaṁ samudācareyya, “iti jānāmi, iti passāmī”ti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā āpannā visuddhāpekkhā evaṁ vadeyya, “ajānamevaṁ, ayye, avacaṁ jānāmi, apassaṁ passāmi, tucchaṁ musā vilapi”nti, aññatra adhimānā, ayampi pārājikā hoti asaṁvāsā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#12.0">Pārājika 4. Uttarimanussadhammasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj4#">vb</a> Yā pana bhikkhunī anabhijānaṁ uttarimanussadhammaṁ attupanāyikaṁ alamariyañāṇadassanaṁ samudācareyya, “iti jānāmi, iti passāmī”ti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā āpannā visuddhāpekkhā evaṁ vadeyya, “ajānamevaṁ, ayye, avacaṁ jānāmi, apassaṁ passāmi, tucchaṁ musā vilapi”nti, aññatra adhimānā, ayampi pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#13.0">Pārājika 5. Ubbhajāṇumaṇḍalikāsikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj5#1.54.0">vb</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa, adhakkhakaṁ ubbhajāṇumaṇḍalaṁ āmasanaṁ vā parāmasanaṁ vā gahaṇaṁ vā chupanaṁ vā paṭipīḷanaṁ vā sādiyeyya, ayampi pārājikā hoti asaṁvāsā ubbhajāṇumaṇḍalikā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#13.0">Pārājika 5. Ubbhajāṇumaṇḍalikāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj5#1.54.0">vb</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa, adhakkhakaṁ ubbhajāṇumaṇḍalaṁ āmasanaṁ vā parāmasanaṁ vā gahaṇaṁ vā chupanaṁ vā paṭipīḷanaṁ vā sādiyeyya, ayampi pārājikā hoti asaṁvāsā ubbhajāṇumaṇḍalikā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#14.0">Pārājika 6. Vajjappaṭicchādikāsikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj6#1.23.0">vb</a> Yā pana bhikkhunī jānaṁ pārājikaṁ dhammaṁ ajjhāpannaṁ bhikkhuniṁ nevattanā paṭicodeyya, na gaṇassa āroceyya, yadā ca sā ṭhitā vā assa cutā vā nāsitā vā avassaṭā vā, sā pacchā evaṁ vadeyya: “pubbevāhaṁ, ayye, aññāsiṁ etaṁ bhikkhuniṁ ‘evarūpā ca evarūpā ca sā bhaginī’ti, no ca kho attanā paṭicodessaṁ, na gaṇassa ārocessa”nti, ayampi pārājikā hoti asaṁvāsā vajjappaṭicchādikā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#14.0">Pārājika 6. Vajjappaṭicchādikāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj6#1.23.0">vb</a> Yā pana bhikkhunī jānaṁ pārājikaṁ dhammaṁ ajjhāpannaṁ bhikkhuniṁ nevattanā paṭicodeyya, na gaṇassa āroceyya, yadā ca sā ṭhitā vā assa cutā vā nāsitā vā avassaṭā vā, sā pacchā evaṁ vadeyya: “pubbevāhaṁ, ayye, aññāsiṁ etaṁ bhikkhuniṁ ‘evarūpā ca evarūpā ca sā bhaginī’ti, no ca kho attanā paṭicodessaṁ, na gaṇassa ārocessa”nti, ayampi pārājikā hoti asaṁvāsā vajjappaṭicchādikā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#15.0">Pārājika 7. Ukkhittānuvattikāsikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj7#1.11.0">vb</a> Yā pana bhikkhunī samaggena saṅghena ukkhittaṁ bhikkhuṁ dhammena vinayena satthusāsanena anādaraṁ appaṭikāraṁ akatasahāyaṁ tamanuvatteyya, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “eso kho, ayye, bhikkhu samaggena saṅghena ukkhitto, dhammena vinayena satthusāsanena anādaro appaṭikāro akatasahāyo, māyye, etaṁ bhikkhuṁ anuvattī”ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyaṁ ce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi pārājikā hoti asaṁvāsā ukkhittānuvattikā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#15.0">Pārājika 7. Ukkhittānuvattikāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj7#1.11.0">vb</a> Yā pana bhikkhunī samaggena saṅghena ukkhittaṁ bhikkhuṁ dhammena vinayena satthusāsanena anādaraṁ appaṭikāraṁ akatasahāyaṁ tamanuvatteyya, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “eso kho, ayye, bhikkhu samaggena saṅghena ukkhitto, dhammena vinayena satthusāsanena anādaro appaṭikāro akatasahāyo, māyye, etaṁ bhikkhuṁ anuvattī”ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyaṁ ce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi pārājikā hoti asaṁvāsā ukkhittānuvattikā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#16.0">Pārājika 8. Aṭṭhavatthukāsikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pj8#1.11.0">vb</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa hatthaggahaṇaṁ vā sādiyeyya, saṅghāṭikaṇṇaggahaṇaṁ vā sādiyeyya, santiṭṭheyya vā, sallapeyya vā, saṅketaṁ vā gaccheyya, purisassa vā abbhāgamanaṁ sādiyeyya, channaṁ vā anupaviseyya, kāyaṁ vā tadatthāya upasaṁhareyya etassa asaddhammassa paṭisevanatthāya, ayampi pārājikā hoti asaṁvāsā aṭṭhavatthukā.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#16.0">Pārājika 8. Aṭṭhavatthukāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pj8#1.11.0">vb</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa hatthaggahaṇaṁ vā sādiyeyya, saṅghāṭikaṇṇaggahaṇaṁ vā sādiyeyya, santiṭṭheyya vā, sallapeyya vā, saṅketaṁ vā gaccheyya, purisassa vā abbhāgamanaṁ sādiyeyya, channaṁ vā anupaviseyya, kāyaṁ vā tadatthāya upasaṁhareyya etassa asaddhammassa paṭisevanatthāya, ayampi pārājikā hoti asaṁvāsā aṭṭhavatthukā.
 </span>
 </div>
            <div class="level4 my-3">
@@ -179,97 +179,97 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
   
  <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#19.0">Saṅghādisesa 1. Ussayavādikāsikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss1#1.56.0">vb</a> Yā pana bhikkhunī ussayavādikā vihareyya gahapatinā vā gahapatiputtena vā dāsena vā kammakārena vā antamaso samaṇaparibbājakenāpi, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#19.0">Saṅghādisesa 1. Ussayavādikāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss1#1.56.0">vb</a> Yā pana bhikkhunī ussayavādikā vihareyya gahapatinā vā gahapatiputtena vā dāsena vā kammakārena vā antamaso samaṇaparibbājakenāpi, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#20.0">Saṅghādisesa 2. Corīvuṭṭhāpikāsikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss2#1.40.0">vb</a> Yā pana bhikkhunī jānaṁ coriṁ vajjhaṁ viditaṁ anapaloketvā rājānaṁ vā saṅghaṁ vā gaṇaṁ vā pūgaṁ vā seṇiṁ vā, aññatra kappā vuṭṭhāpeyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#20.0">Saṅghādisesa 2. Corīvuṭṭhāpikāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss2#1.40.0">vb</a> Yā pana bhikkhunī jānaṁ coriṁ vajjhaṁ viditaṁ anapaloketvā rājānaṁ vā saṅghaṁ vā gaṇaṁ vā pūgaṁ vā seṇiṁ vā, aññatra kappā vuṭṭhāpeyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#21.0">Saṅghādisesa 3. Ekagāmantaragamanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss3#4.14.0">vb</a> Yā pana bhikkhunī ekā vā gāmantaraṁ gaccheyya, ekā vā nadīpāraṁ gaccheyya, ekā vā rattiṁ vippavaseyya, ekā vā gaṇamhā ohiyeyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#21.0">Saṅghādisesa 3. Ekagāmantaragamanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss3#4.14.0">vb</a> Yā pana bhikkhunī ekā vā gāmantaraṁ gaccheyya, ekā vā nadīpāraṁ gaccheyya, ekā vā rattiṁ vippavaseyya, ekā vā gaṇamhā ohiyeyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#22.0">Saṅghādisesa 4. Ukkhittakaosāraṇasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss4#1.27.0">vb</a> Yā pana bhikkhunī samaggena saṅghena ukkhittaṁ bhikkhuniṁ dhammena vinayena satthusāsanena anapaloketvā kārakasaṅghaṁ, anaññāya gaṇassa chandaṁ osāreyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#22.0">Saṅghādisesa 4. Ukkhittakaosāraṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss4#1.27.0">vb</a> Yā pana bhikkhunī samaggena saṅghena ukkhittaṁ bhikkhuniṁ dhammena vinayena satthusāsanena anapaloketvā kārakasaṅghaṁ, anaññāya gaṇassa chandaṁ osāreyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#23.0">Saṅghādisesa 5. Bhojanapaṭiggahaṇapaṭhamasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss5#1.14.0">vb</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa hatthato khādanīyaṁ vā, bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#23.0">Saṅghādisesa 5. Bhojanapaṭiggahaṇapaṭhamasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss5#1.14.0">vb</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa hatthato khādanīyaṁ vā, bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#24.0">Saṅghādisesa 6. Bhojanapaṭiggahaṇadutiyasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss6#1.26.0">vb</a> Yā pana bhikkhunī evaṁ vadeyya: “kiṁ te, ayye, eso purisapuggalo karissati avassuto vā anavassuto vā, yato tvaṁ anavassutā, iṅgha, ayye, yaṁ te eso purisapuggalo deti khādanīyaṁ vā bhojanīyaṁ vā, taṁ tvaṁ sahatthā paṭiggahetvā khāda vā bhuñja vā”ti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#24.0">Saṅghādisesa 6. Bhojanapaṭiggahaṇadutiyasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss6#1.26.0">vb</a> Yā pana bhikkhunī evaṁ vadeyya: “kiṁ te, ayye, eso purisapuggalo karissati avassuto vā anavassuto vā, yato tvaṁ anavassutā, iṅgha, ayye, yaṁ te eso purisapuggalo deti khādanīyaṁ vā bhojanīyaṁ vā, taṁ tvaṁ sahatthā paṭiggahetvā khāda vā bhuñja vā”ti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#25.0">Saṅghādisesa 7. Sañcarittasikkhāpadaṁ</a> Yā pana bhikkhunī sañcarittaṁ samāpajjeyya itthiyā vā purisamatiṁ, purisassa vā itthimatiṁ, jāyattane vā jārattane vā antamaso taṅkhaṇikāyapi, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#25.0">Saṅghādisesa 7. Sañcarittasikkhāpadaṁ</a> Yā pana bhikkhunī sañcarittaṁ samāpajjeyya itthiyā vā purisamatiṁ, purisassa vā itthimatiṁ, jāyattane vā jārattane vā antamaso taṅkhaṇikāyapi, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#26.0">Saṅghādisesa 8. Duṭṭhadosasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ duṭṭhā dosā appatītā amūlakena pārājikena dhammena anuddhaṁseyya: “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamānā vā asa manuggāhīyamānā vā amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhunī ca dosaṁ patiṭṭhāti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#26.0">Saṅghādisesa 8. Duṭṭhadosasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ duṭṭhā dosā appatītā amūlakena pārājikena dhammena anuddhaṁseyya: “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamānā vā asa manuggāhīyamānā vā amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhunī ca dosaṁ patiṭṭhāti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#27.0">Saṅghādisesa 9. Aññabhāgiyasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ duṭṭhā dosā appatītā aññabhāgiyassa adhikaraṇassa kiñcidesaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁseyya, “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā aññabhāgiyañceva taṁ adhikaraṇaṁ hoti. Kocideso lesamatto upādinno, bhikkhunī ca dosaṁ patiṭṭhāti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#27.0">Saṅghādisesa 9. Aññabhāgiyasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ duṭṭhā dosā appatītā aññabhāgiyassa adhikaraṇassa kiñcidesaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁseyya, “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā aññabhāgiyañceva taṁ adhikaraṇaṁ hoti. Kocideso lesamatto upādinno, bhikkhunī ca dosaṁ patiṭṭhāti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#28.0">Saṅghādisesa 10. Sikkhaṁpaccācikkhaṇasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss10#1.19.0">vb</a> Yā pana bhikkhunī kupitā anattamanā evaṁ vadeyya: “buddhaṁ paccācikkhāmi dhammaṁ paccācikkhāmi, saṅghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi, kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī”ti. Sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye kupitā anattamanā evaṁ avaca ‘buddhaṁ paccācikkhāmi, dhammaṁ paccācikkhāmi, saṅghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi, kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti, abhiramāyye, svākkhāto dhammo, cara brahmacariyaṁ sammā dukkhassa antakiriyāyā”ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#28.0">Saṅghādisesa 10. Sikkhaṁpaccācikkhaṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss10#1.19.0">vb</a> Yā pana bhikkhunī kupitā anattamanā evaṁ vadeyya: “buddhaṁ paccācikkhāmi dhammaṁ paccācikkhāmi, saṅghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi, kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī”ti. Sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye kupitā anattamanā evaṁ avaca ‘buddhaṁ paccācikkhāmi, dhammaṁ paccācikkhāmi, saṅghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi, kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti, abhiramāyye, svākkhāto dhammo, cara brahmacariyaṁ sammā dukkhassa antakiriyāyā”ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#29.0">Saṅghādisesa 11. Adhikaraṇakupitasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss11#1.15.0">vb</a> Yā pana bhikkhunī kismiñcideva adhikaraṇe paccākatā kupitā anattamanā evaṁ vadeyya: “chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, kismiñcideva adhikaraṇe paccākatā kupitā anattamanā evaṁ avaca ‘chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo’ti, ayyā kho chandāpi gaccheyya, dosāpi gaccheyya, mohāpi gaccheyya, bhayāpi gaccheyyā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#29.0">Saṅghādisesa 11. Adhikaraṇakupitasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss11#1.15.0">vb</a> Yā pana bhikkhunī kismiñcideva adhikaraṇe paccākatā kupitā anattamanā evaṁ vadeyya: “chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, kismiñcideva adhikaraṇe paccākatā kupitā anattamanā evaṁ avaca ‘chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo’ti, ayyā kho chandāpi gaccheyya, dosāpi gaccheyya, mohāpi gaccheyya, bhayāpi gaccheyyā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#30.0">Saṅghādisesa 12. Pāpasamācārapaṭhamasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss12#1.11.0">vb</a> Bhikkhuniyo paneva saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā bhikkhuniyo bhikkhunīhi evamassu vacanīyā: “bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”ti, evañca tā bhikkhuniyo bhikkhunīhi vuccamānā tatheva paggaṇheyyuṁ, tā bhikkhuniyo bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ, iccetaṁ kusalaṁ, no ce paṭinissajjeyyuṁ, imāpi bhikkhuniyo yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#30.0">Saṅghādisesa 12. Pāpasamācārapaṭhamasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss12#1.11.0">vb</a> Bhikkhuniyo paneva saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā bhikkhuniyo bhikkhunīhi evamassu vacanīyā: “bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”ti, evañca tā bhikkhuniyo bhikkhunīhi vuccamānā tatheva paggaṇheyyuṁ, tā bhikkhuniyo bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ, iccetaṁ kusalaṁ, no ce paṭinissajjeyyuṁ, imāpi bhikkhuniyo yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#31.0">Saṅghādisesa 13. Pāpasamācāradutiyasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-ss13#1.23.0">vb</a> Yā pana bhikkhunī evaṁ vadeyya: “saṁsaṭṭhāva, ayye, tumhe viharatha, mā tumhe nānā viharittha, santi saṅghe aññāpi bhikkhuniyo evācārā evaṁsaddā evaṁsilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā saṅgho na kiñci āha tumhaññeva saṅgho uññāya paribhavena akkhantiyā vebhassiyā dubbalyā evamāha: ‘bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”’ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, evaṁ avaca, saṁsaṭṭhāva ayye tumhe viharatha, mā tumhe nānā viharittha, santi saṅghe aññāpi bhikkhuniyo evācārā evaṁsaddā evaṁsilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā saṅgho na kiñci āha, tumhaññeva saṅgho uññāya paribhavena akkhantiyā vebhassiyā dubbalyā evamāha: ‘bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”’ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#31.0">Saṅghādisesa 13. Pāpasamācāradutiyasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-ss13#1.23.0">vb</a> Yā pana bhikkhunī evaṁ vadeyya: “saṁsaṭṭhāva, ayye, tumhe viharatha, mā tumhe nānā viharittha, santi saṅghe aññāpi bhikkhuniyo evācārā evaṁsaddā evaṁsilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā saṅgho na kiñci āha tumhaññeva saṅgho uññāya paribhavena akkhantiyā vebhassiyā dubbalyā evamāha: ‘bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”’ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, evaṁ avaca, saṁsaṭṭhāva ayye tumhe viharatha, mā tumhe nānā viharittha, santi saṅghe aññāpi bhikkhuniyo evācārā evaṁsaddā evaṁsilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā saṅgho na kiñci āha, tumhaññeva saṅgho uññāya paribhavena akkhantiyā vebhassiyā dubbalyā evamāha: ‘bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”’ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#32.0">Saṅghādisesa 14. Saṅghabhedakasikkhāpadaṁ</a> Yā pana bhikkhunī samaggassa saṅghassa bhedāya parakkameyya, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha tiṭṭheyya, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, samaggassa saṅghassa bhedāya parakkami, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha aṭṭhāsi, sametāyyā, saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#32.0">Saṅghādisesa 14. Saṅghabhedakasikkhāpadaṁ</a> Yā pana bhikkhunī samaggassa saṅghassa bhedāya parakkameyya, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha tiṭṭheyya, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, samaggassa saṅghassa bhedāya parakkami, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha aṭṭhāsi, sametāyyā, saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#33.0">Saṅghādisesa 15. Bhedānuvattakasikkhāpadaṁ</a> Tassāyeva kho pana bhikkhuniyā bhikkhuniyo honti anuvattikā vaggavādikā ekā vā dve vā tisso vā, tā evaṁ vadeyyuṁ: “māyyāyo, etaṁ bhikkhuniṁ kiñci avacuttha dhammavādinī cesā bhikkhunī, vinayavādinī cesā bhikkhunī, amhākañcesā bhikkhunī chandañca ruciñca ādāya voharati, jānāti, no bhāsati, amhākampetaṁ khamatī”ti, tā bhikkhuniyo bhikkhunīhi evamassu vacanīyā: “māyyāyo, evaṁ avacuttha, na cesā bhikkhunī dhammavādinī, na cesā bhikkhunī vinayavādinī, māyyānampi saṅghabhedo ruccittha, sametāyyānaṁ saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti, evañca tā bhikkhuniyo bhikkhunīhi vuccamānā tatheva paggaṇheyyuṁ, tā bhikkhuniyo bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ. Iccetaṁ kusalaṁ. No ce paṭinissajjeyyuṁ, imāpi bhikkhuniyo yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#33.0">Saṅghādisesa 15. Bhedānuvattakasikkhāpadaṁ</a> Tassāyeva kho pana bhikkhuniyā bhikkhuniyo honti anuvattikā vaggavādikā ekā vā dve vā tisso vā, tā evaṁ vadeyyuṁ: “māyyāyo, etaṁ bhikkhuniṁ kiñci avacuttha dhammavādinī cesā bhikkhunī, vinayavādinī cesā bhikkhunī, amhākañcesā bhikkhunī chandañca ruciñca ādāya voharati, jānāti, no bhāsati, amhākampetaṁ khamatī”ti, tā bhikkhuniyo bhikkhunīhi evamassu vacanīyā: “māyyāyo, evaṁ avacuttha, na cesā bhikkhunī dhammavādinī, na cesā bhikkhunī vinayavādinī, māyyānampi saṅghabhedo ruccittha, sametāyyānaṁ saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti, evañca tā bhikkhuniyo bhikkhunīhi vuccamānā tatheva paggaṇheyyuṁ, tā bhikkhuniyo bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ. Iccetaṁ kusalaṁ. No ce paṭinissajjeyyuṁ, imāpi bhikkhuniyo yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#34.0">Saṅghādisesa 16. Dubbacasikkhāpadaṁ</a> Bhikkhunī paneva dubbacajātikā hoti uddesapariyāpannesu sikkhāpadesu bhikkhunīhi sahadhammikaṁ vuccamānā attānaṁ avacanīyaṁ karoti: “mā maṁ ayyāyo kiñci avacuttha kalyāṇaṁ vā pāpakaṁ vā, ahampāyyāyo, na kiñci vakkhāmi kalyāṇaṁ vā pāpakaṁ vā, viramathāyyāyo, mama vacanāyā”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, attānaṁ avacanīyaṁ akāsi, vacanīyameva, ayyā, attānaṁ karotu, ayyāpi bhikkhuniyo vadatu sahadhammena, bhikkhuniyopi ayyaṁ vakkhanti sahadhammena, evaṁ saṁvaddhā hi tassa bhagavato parisā yadidaṁ aññamaññavacanena aññamaññavuṭṭhāpanenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#34.0">Saṅghādisesa 16. Dubbacasikkhāpadaṁ</a> Bhikkhunī paneva dubbacajātikā hoti uddesapariyāpannesu sikkhāpadesu bhikkhunīhi sahadhammikaṁ vuccamānā attānaṁ avacanīyaṁ karoti: “mā maṁ ayyāyo kiñci avacuttha kalyāṇaṁ vā pāpakaṁ vā, ahampāyyāyo, na kiñci vakkhāmi kalyāṇaṁ vā pāpakaṁ vā, viramathāyyāyo, mama vacanāyā”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, attānaṁ avacanīyaṁ akāsi, vacanīyameva, ayyā, attānaṁ karotu, ayyāpi bhikkhuniyo vadatu sahadhammena, bhikkhuniyopi ayyaṁ vakkhanti sahadhammena, evaṁ saṁvaddhā hi tassa bhagavato parisā yadidaṁ aññamaññavacanena aññamaññavuṭṭhāpanenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#35.0">Saṅghādisesa 17. Kuladūsakasikkhāpadaṁ</a> Bhikkhunī paneva aññataraṁ gāmaṁ vā nigamaṁ vā upanissāya viharati kuladūsikā pāpasamācārā, tassā kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tāya duṭṭhāni dissanti ceva suyyanti ca, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “ayyā, kho kuladūsikā pāpasamācārā, ayyāya kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyyāya, duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyyā imamhā āvāsā, alaṁ te idha vāsenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tā bhikkhuniyo evaṁ vadeyya: “chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo, tādisikāya āpattiyā ekaccaṁ pabbājenti ekaccaṁ na pabbājentī”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, evaṁ avaca, na ca bhikkhuniyo chandagāminiyo, na ca bhikkhuniyo dosagāminiyo , na ca bhikkhuniyo mohagāminiyo, na ca bhikkhuniyo bhayagāminiyo, ayyā kho kuladūsikā pāpasamācārā, ayyāya kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyyāya duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyyā, imamhā āvāsā alaṁ te idha vāsenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#35.0">Saṅghādisesa 17. Kuladūsakasikkhāpadaṁ</a> Bhikkhunī paneva aññataraṁ gāmaṁ vā nigamaṁ vā upanissāya viharati kuladūsikā pāpasamācārā, tassā kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tāya duṭṭhāni dissanti ceva suyyanti ca, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “ayyā, kho kuladūsikā pāpasamācārā, ayyāya kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyyāya, duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyyā imamhā āvāsā, alaṁ te idha vāsenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tā bhikkhuniyo evaṁ vadeyya: “chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo, tādisikāya āpattiyā ekaccaṁ pabbājenti ekaccaṁ na pabbājentī”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, evaṁ avaca, na ca bhikkhuniyo chandagāminiyo, na ca bhikkhuniyo dosagāminiyo , na ca bhikkhuniyo mohagāminiyo, na ca bhikkhuniyo bhayagāminiyo, ayyā kho kuladūsikā pāpasamācārā, ayyāya kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyyāya duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyyā, imamhā āvāsā alaṁ te idha vāsenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
 </span>
 </div> 
   
@@ -324,62 +324,62 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#38.0.2">Nissaggiya pācittiya 1. Pattasannicayasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np1#1.14.0">vb</a> Yā pana bhikkhunī pattasannicayaṁ kareyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#38.0.2">Nissaggiya pācittiya 1. Pattasannicayasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np1#1.14.0">vb</a> Yā pana bhikkhunī pattasannicayaṁ kareyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#39.0">Nissaggiya pācittiya 2. Akālacīvarabhājanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np2#1.25.0">vb</a> Yā pana bhikkhunī akālacīvaraṁ “kālacīvara”nti adhiṭṭhahitvā bhājāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#39.0">Nissaggiya pācittiya 2. Akālacīvarabhājanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np2#1.25.0">vb</a> Yā pana bhikkhunī akālacīvaraṁ “kālacīvara”nti adhiṭṭhahitvā bhājāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#40.0">Nissaggiya pācittiya 3. Cīvaraparivattanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np3#1.20.0">vb</a> Yā pana bhikkhunī bhikkhuniyā saddhiṁ cīvaraṁ parivattetvā sā pacchā evaṁ vadeyya: “handāyye, tuyhaṁ cīvaraṁ, āhara metaṁ cīvaraṁ, yaṁ tuyhaṁ tuyhamevetaṁ, yaṁ mayhaṁ mayhamevetaṁ, āhara metaṁ cīvaraṁ, sakaṁ paccāharā”ti acchindeyya vā acchindāpeyya vā, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#40.0">Nissaggiya pācittiya 3. Cīvaraparivattanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np3#1.20.0">vb</a> Yā pana bhikkhunī bhikkhuniyā saddhiṁ cīvaraṁ parivattetvā sā pacchā evaṁ vadeyya: “handāyye, tuyhaṁ cīvaraṁ, āhara metaṁ cīvaraṁ, yaṁ tuyhaṁ tuyhamevetaṁ, yaṁ mayhaṁ mayhamevetaṁ, āhara metaṁ cīvaraṁ, sakaṁ paccāharā”ti acchindeyya vā acchindāpeyya vā, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#41.0">Nissaggiya pācittiya 4. Aññaviññāpanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np4#1.27.0">vb</a> Yā pana bhikkhunī aññaṁ viññāpetvā aññaṁ viññāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#41.0">Nissaggiya pācittiya 4. Aññaviññāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np4#1.27.0">vb</a> Yā pana bhikkhunī aññaṁ viññāpetvā aññaṁ viññāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#42.0">Nissaggiya pācittiya 5. Aññacetāpana sikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np5#1.28.0">vb</a> Yā pana bhikkhunī aññaṁ cetāpetvā aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#42.0">Nissaggiya pācittiya 5. Aññacetāpana sikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np5#1.28.0">vb</a> Yā pana bhikkhunī aññaṁ cetāpetvā aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#43.0">Nissaggiya pācittiya 6. Paṭhamasaṅghikacetāpanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np6#1.16.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena saṅghikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#43.0">Nissaggiya pācittiya 6. Paṭhamasaṅghikacetāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np6#1.16.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena saṅghikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#44.0">Nissaggiya pācittiya 7. Dutiyasaṅghikacetāpanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np7#1.13.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena saṅghikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#44.0">Nissaggiya pācittiya 7. Dutiyasaṅghikacetāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np7#1.13.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena saṅghikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#45.0">Nissaggiya pācittiya 8. Paṭhamagaṇikacetāpanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np8#1.14.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena mahājanikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#45.0">Nissaggiya pācittiya 8. Paṭhamagaṇikacetāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np8#1.14.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena mahājanikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#46.0">Nissaggiya pācittiya 9. Dutiyagaṇikacetāpanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np9#1.15.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena mahājanikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#46.0">Nissaggiya pācittiya 9. Dutiyagaṇikacetāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np9#1.15.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena mahājanikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#47.0">Nissaggiya pācittiya 10. Puggalikacetāpanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np10#1.18.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena puggalikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#47.0">Nissaggiya pācittiya 10. Puggalikacetāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np10#1.18.0">vb</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena puggalikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ. 
 </span>
 </div>
            
@@ -406,54 +406,54 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#48.0.2">Nissaggiya pācittiya 11. Garupāvuraṇasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np11#1.21.0">vb</a> Garupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā catukkaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#48.0.2">Nissaggiya pācittiya 11. Garupāvuraṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np11#1.21.0">vb</a> Garupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā catukkaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#49.0">Nissaggiya pācittiya 12. Lahupāvuraṇasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-np12#1.21.0">vb</a> Lahupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā aḍḍhateyyakaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#49.0">Nissaggiya pācittiya 12. Lahupāvuraṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-np12#1.21.0">vb</a> Lahupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā aḍḍhateyyakaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#50.0">Nissaggiya pācittiya 13. Kathinasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine dasāhaparamaṁ atirekacīvaraṁ dhāretabbaṁ. Taṁ atikkāmentiyā, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#50.0">Nissaggiya pācittiya 13. Kathinasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine dasāhaparamaṁ atirekacīvaraṁ dhāretabbaṁ. Taṁ atikkāmentiyā, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#51.0">Nissaggiya pācittiya 14. Udositasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine ekarattampi ce bhikkhunī ticīvarena vippavaseyya, aññatra bhikkhunisammutiyā nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#51.0">Nissaggiya pācittiya 14. Udositasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine ekarattampi ce bhikkhunī ticīvarena vippavaseyya, aññatra bhikkhunisammutiyā nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#52.0">Nissaggiya pācittiya 15. Akālacīvarasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine bhikkhuniyā paneva akālacīvaraṁ uppajjeyya, ākaṅkhamānāya bhikkhuniyā paṭiggahetabbaṁ, paṭiggahetvā khippameva kāretabbaṁ, no cassa pāripūri, māsaparamaṁ tāya bhikkhuniyā taṁ cīvaraṁ nikkhipitabbaṁ ūnassa pāripūriyā satiyā paccāsāya. Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#52.0">Nissaggiya pācittiya 15. Akālacīvarasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine bhikkhuniyā paneva akālacīvaraṁ uppajjeyya, ākaṅkhamānāya bhikkhuniyā paṭiggahetabbaṁ, paṭiggahetvā khippameva kāretabbaṁ, no cassa pāripūri, māsaparamaṁ tāya bhikkhuniyā taṁ cīvaraṁ nikkhipitabbaṁ ūnassa pāripūriyā satiyā paccāsāya. Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#53.0">Nissaggiya pācittiya 16. Aññātakaviññattisikkhāpadaṁ</a> Yā pana bhikkhunī aññātakaṁ gahapatiṁ vā gahapatāniṁ vā cīvaraṁ viññāpeyya aññatra samayā, nissaggiyaṁ pācittiyaṁ. Tatthāyaṁ samayo acchinnacīvarā vā hoti bhikkhunī, naṭṭhacīvarā vā, ayaṁ tattha samayo.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#53.0">Nissaggiya pācittiya 16. Aññātakaviññattisikkhāpadaṁ</a> Yā pana bhikkhunī aññātakaṁ gahapatiṁ vā gahapatāniṁ vā cīvaraṁ viññāpeyya aññatra samayā, nissaggiyaṁ pācittiyaṁ. Tatthāyaṁ samayo acchinnacīvarā vā hoti bhikkhunī, naṭṭhacīvarā vā, ayaṁ tattha samayo.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#54.0">Nissaggiya pācittiya 17. Tatuttarisikkhāpadaṁ</a> Tañce aññātako gahapati vā gahapatānī vā bahūhi cīvarehi abhihaṭṭhuṁ pavāreyya, santaruttaraparamaṁ tāya bhikkhuniyā tato cīvaraṁ sāditabbaṁ. Tato ce uttari sādiyeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#54.0">Nissaggiya pācittiya 17. Tatuttarisikkhāpadaṁ</a> Tañce aññātako gahapati vā gahapatānī vā bahūhi cīvarehi abhihaṭṭhuṁ pavāreyya, santaruttaraparamaṁ tāya bhikkhuniyā tato cīvaraṁ sāditabbaṁ. Tato ce uttari sādiyeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#55.0">Nissaggiya pācittiya 18. Paṭhamaupakkhaṭasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa aññātakassa gahapatissa vā gahapatāniyā vā cīvaracetāpannaṁ upakkhaṭaṁ hoti: “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarena acchādessāmī”ti. Tatra cesā bhikkhunī pubbe appavāritā upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “sādhu vata, maṁ āyasmā iminā cīvaracetāpannena evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādehī”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#55.0">Nissaggiya pācittiya 18. Paṭhamaupakkhaṭasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa aññātakassa gahapatissa vā gahapatāniyā vā cīvaracetāpannaṁ upakkhaṭaṁ hoti: “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarena acchādessāmī”ti. Tatra cesā bhikkhunī pubbe appavāritā upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “sādhu vata, maṁ āyasmā iminā cīvaracetāpannena evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādehī”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#56.0">Nissaggiya pācittiya 19. Dutiyaupakkhaṭasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa ubhinnaṁ aññātakānaṁ gahapatīnaṁ vā gahapatānīnaṁ vā paccekacīvaracetāpannāni upakkhaṭāni honti: “imehi mayaṁ paccekacīvaracetāpannehi paccekacīvarāni cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarehi acchādessāmā”ti. Tatra cesā bhikkhūnī pubbe appavāritā upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “sādhu vata maṁ āyasmanto imehi paccekacīvaracetāpannehi evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādetha ubhova santā ekenā”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#56.0">Nissaggiya pācittiya 19. Dutiyaupakkhaṭasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa ubhinnaṁ aññātakānaṁ gahapatīnaṁ vā gahapatānīnaṁ vā paccekacīvaracetāpannāni upakkhaṭāni honti: “imehi mayaṁ paccekacīvaracetāpannehi paccekacīvarāni cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarehi acchādessāmā”ti. Tatra cesā bhikkhūnī pubbe appavāritā upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “sādhu vata maṁ āyasmanto imehi paccekacīvaracetāpannehi evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādetha ubhova santā ekenā”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#57.0">Nissaggiya pācittiya 20. Rājasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa rājā vā rājabhoggo vā brāhmaṇo vā gahapatiko vā dūtena cīvaracetāpannaṁ pahiṇeyya: “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarena acchādehī”ti. So ce dūto taṁ bhikkhuniṁ upasaṅkamitvā evaṁ vadeyya: “idaṁ kho, ayye, ayyaṁ uddissa cīvaracetāpannaṁ ābhataṁ, paṭiggaṇhātāyyā cīvaracetāpanna”nti. Tāya bhikkhuniyā so dūto evamassa vacanīyo: “na kho mayaṁ, āvuso, cīvaracetāpannaṁ paṭiggaṇhāma, cīvarañca kho mayaṁ paṭiggaṇhāma kālena kappiya”nti. So ce dūto taṁ bhikkhuniṁ evaṁ vadeyya: “atthi panāyyāya, koci veyyāvaccakaro”ti, cīvaratthikāya, bhikkhave, bhikkhuniyā veyyāvaccakaro niddisitabbo ārāmiko vā upāsako vā: “eso kho, āvuso, bhikkhunīnaṁ veyyāvaccakaro”ti. So ce dūto taṁ veyyāvaccakaraṁ saññāpetvā taṁ bhikkhuniṁ upasaṅkamitvā evaṁ vadeyya: “yaṁ kho, ayye, ayyā veyyāvaccakaraṁ niddisi, saññatto so mayā, upasaṅkamatāyyā kālena, cīvarena taṁ acchādessatī”ti. Cīvaratthikāya, bhikkhave, bhikkhuniyā veyyāvaccakaro upasaṅkamitvā dvattikkhattuṁ codetabbo sāretabbo: “attho me, āvuso, cīvarenā”ti, dvattikkhattuṁ codayamānā sārayamānā taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ, no ce abhinipphādeyya, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtāya uddissa ṭhātabbaṁ, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtā uddissa tiṭṭhamānā taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ. Tato ce uttari vāyamamānā taṁ cīvaraṁ abhinipphādeyya, nissaggiyaṁ pācittiyaṁ. No ce abhinipphādeyya, yatassā cīvaracetāpannaṁ ābhataṁ, tattha sāmaṁ vā gantabbaṁ, dūto vā pāhetabbo: “yaṁ kho tumhe āyasmanto bhikkhuniṁ uddissa cīvaracetāpannaṁ pahiṇittha, na taṁ tassā bhikkhuniyā kiñci atthaṁ anubhoti, yuñjantāyasmanto sakaṁ, mā vo sakaṁ vinassā”ti, ayaṁ tattha sāmīci. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#57.0">Nissaggiya pācittiya 20. Rājasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa rājā vā rājabhoggo vā brāhmaṇo vā gahapatiko vā dūtena cīvaracetāpannaṁ pahiṇeyya: “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarena acchādehī”ti. So ce dūto taṁ bhikkhuniṁ upasaṅkamitvā evaṁ vadeyya: “idaṁ kho, ayye, ayyaṁ uddissa cīvaracetāpannaṁ ābhataṁ, paṭiggaṇhātāyyā cīvaracetāpanna”nti. Tāya bhikkhuniyā so dūto evamassa vacanīyo: “na kho mayaṁ, āvuso, cīvaracetāpannaṁ paṭiggaṇhāma, cīvarañca kho mayaṁ paṭiggaṇhāma kālena kappiya”nti. So ce dūto taṁ bhikkhuniṁ evaṁ vadeyya: “atthi panāyyāya, koci veyyāvaccakaro”ti, cīvaratthikāya, bhikkhave, bhikkhuniyā veyyāvaccakaro niddisitabbo ārāmiko vā upāsako vā: “eso kho, āvuso, bhikkhunīnaṁ veyyāvaccakaro”ti. So ce dūto taṁ veyyāvaccakaraṁ saññāpetvā taṁ bhikkhuniṁ upasaṅkamitvā evaṁ vadeyya: “yaṁ kho, ayye, ayyā veyyāvaccakaraṁ niddisi, saññatto so mayā, upasaṅkamatāyyā kālena, cīvarena taṁ acchādessatī”ti. Cīvaratthikāya, bhikkhave, bhikkhuniyā veyyāvaccakaro upasaṅkamitvā dvattikkhattuṁ codetabbo sāretabbo: “attho me, āvuso, cīvarenā”ti, dvattikkhattuṁ codayamānā sārayamānā taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ, no ce abhinipphādeyya, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtāya uddissa ṭhātabbaṁ, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtā uddissa tiṭṭhamānā taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ. Tato ce uttari vāyamamānā taṁ cīvaraṁ abhinipphādeyya, nissaggiyaṁ pācittiyaṁ. No ce abhinipphādeyya, yatassā cīvaracetāpannaṁ ābhataṁ, tattha sāmaṁ vā gantabbaṁ, dūto vā pāhetabbo: “yaṁ kho tumhe āyasmanto bhikkhuniṁ uddissa cīvaracetāpannaṁ pahiṇittha, na taṁ tassā bhikkhuniyā kiñci atthaṁ anubhoti, yuñjantāyasmanto sakaṁ, mā vo sakaṁ vinassā”ti, ayaṁ tattha sāmīci. 
 </span>
 </div>
                    
@@ -478,52 +478,52 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#58.0.2">Nissaggiya pācittiya 21. Rūpiyasikkhāpadaṁ</a> Yā pana bhikkhunī jātarūparajataṁ uggaṇheyya vā uggaṇhāpeyya vā upanikkhittaṁ vā sādiyeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#58.0.2">Nissaggiya pācittiya 21. Rūpiyasikkhāpadaṁ</a> Yā pana bhikkhunī jātarūparajataṁ uggaṇheyya vā uggaṇhāpeyya vā upanikkhittaṁ vā sādiyeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#59.0">Nissaggiya pācittiya 22. Rūpiyasaṁvohārasikkhāpadaṁ</a> Yā pana bhikkhunī nānappakārakaṁ rūpiyasaṁvohāraṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#59.0">Nissaggiya pācittiya 22. Rūpiyasaṁvohārasikkhāpadaṁ</a> Yā pana bhikkhunī nānappakārakaṁ rūpiyasaṁvohāraṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#60.0">Nissaggiya pācittiya 23. Kayavikkayasikkhāpadaṁ</a> Yā pana bhikkhunī nānappakārakaṁ kayavikkayaṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#60.0">Nissaggiya pācittiya 23. Kayavikkayasikkhāpadaṁ</a> Yā pana bhikkhunī nānappakārakaṁ kayavikkayaṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#61.0">Nissaggiya pācittiya 24. Ūnapañcabandhanasikkhāpadaṁ</a> Yā pana bhikkhunī ūnapañcabandhanena pattena aññaṁ navaṁ pattaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ. Tāya bhikkhuniyā so patto bhikkhuniparisāya nissajjitabbo, yo ca tassā bhikkhuniparisāya pattapariyanto, so tassā bhikkhuniyā padātabbo: “ayaṁ te bhikkhuni patto yāvabhedanāya dhāretabbo”ti, ayaṁ tattha sāmīci.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#61.0">Nissaggiya pācittiya 24. Ūnapañcabandhanasikkhāpadaṁ</a> Yā pana bhikkhunī ūnapañcabandhanena pattena aññaṁ navaṁ pattaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ. Tāya bhikkhuniyā so patto bhikkhuniparisāya nissajjitabbo, yo ca tassā bhikkhuniparisāya pattapariyanto, so tassā bhikkhuniyā padātabbo: “ayaṁ te bhikkhuni patto yāvabhedanāya dhāretabbo”ti, ayaṁ tattha sāmīci.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#62.0">Nissaggiya pācittiya 25. Bhesajjasikkhāpadaṁ</a> Yāni kho pana tāni gilānānaṁ bhikkhunīnaṁ paṭisāyanīyāni bhesajjāni, seyyathidaṁ: sappi navanītaṁ telaṁ madhu phāṇitaṁ, tāni paṭiggahetvā sattāhaparamaṁ sannidhikārakaṁ paribhuñjitabbāni. Taṁ atikkāmentiyā, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#62.0">Nissaggiya pācittiya 25. Bhesajjasikkhāpadaṁ</a> Yāni kho pana tāni gilānānaṁ bhikkhunīnaṁ paṭisāyanīyāni bhesajjāni, seyyathidaṁ: sappi navanītaṁ telaṁ madhu phāṇitaṁ, tāni paṭiggahetvā sattāhaparamaṁ sannidhikārakaṁ paribhuñjitabbāni. Taṁ atikkāmentiyā, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#63.0">Nissaggiya pācittiya 26. Cīvaraacchindanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā sāmaṁ cīvaraṁ datvā kupitā anattamanā acchindeyya vā acchindāpeyya vā, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#63.0">Nissaggiya pācittiya 26. Cīvaraacchindanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā sāmaṁ cīvaraṁ datvā kupitā anattamanā acchindeyya vā acchindāpeyya vā, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#64.0">Nissaggiya pācittiya 27. Suttaviññattisikkhāpadaṁ</a> Yā pana bhikkhunī sāmaṁ suttaṁ viññāpetvā tantavāyehi cīvaraṁ vāyāpeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#64.0">Nissaggiya pācittiya 27. Suttaviññattisikkhāpadaṁ</a> Yā pana bhikkhunī sāmaṁ suttaṁ viññāpetvā tantavāyehi cīvaraṁ vāyāpeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#65.0">Nissaggiya pācittiya 28. Mahāpesakārasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa aññātako gahapati vā gahapatānī vā tantavāyehi cīvaraṁ vāyāpeyya, tatra cesā bhikkhunī pubbe appavāritā tantavāye upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “idaṁ kho āvuso cīvaraṁ maṁ uddissa viyyati, āyatañca karotha, vitthatañca appitañca suvītañca suppavāyitañca suvilekhitañca suvitacchitañca karotha, appeva nāma mayampi āyasmantānaṁ kiñcimattaṁ anupadajjeyyāmā”ti, evañca sā bhikkhunī vatvā kiñcimattaṁ anupadajjeyya antamaso piṇḍapātamattampi, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#65.0">Nissaggiya pācittiya 28. Mahāpesakārasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa aññātako gahapati vā gahapatānī vā tantavāyehi cīvaraṁ vāyāpeyya, tatra cesā bhikkhunī pubbe appavāritā tantavāye upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “idaṁ kho āvuso cīvaraṁ maṁ uddissa viyyati, āyatañca karotha, vitthatañca appitañca suvītañca suppavāyitañca suvilekhitañca suvitacchitañca karotha, appeva nāma mayampi āyasmantānaṁ kiñcimattaṁ anupadajjeyyāmā”ti, evañca sā bhikkhunī vatvā kiñcimattaṁ anupadajjeyya antamaso piṇḍapātamattampi, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#66.0">Nissaggiya pācittiya 29. Accekacīvarasikkhāpadaṁ</a> Dasāhānāgataṁ kattikatemāsikapuṇṇamaṁ bhikkhuniyā paneva accekacīvaraṁ uppajjeyya, accekaṁ maññamānāya bhikkhuniyā paṭiggahetabbaṁ, paṭiggahetvā yāva cīvarakālasamayaṁ nikkhipitabbaṁ. Tato ce uttari nikkhipeyya, nissaggiyaṁ pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#66.0">Nissaggiya pācittiya 29. Accekacīvarasikkhāpadaṁ</a> Dasāhānāgataṁ kattikatemāsikapuṇṇamaṁ bhikkhuniyā paneva accekacīvaraṁ uppajjeyya, accekaṁ maññamānāya bhikkhuniyā paṭiggahetabbaṁ, paṭiggahetvā yāva cīvarakālasamayaṁ nikkhipitabbaṁ. Tato ce uttari nikkhipeyya, nissaggiyaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#67.0">Nissaggiya pācittiya 30. Pariṇatasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ attano pariṇāmeyya, nissaggiyaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#67.0">Nissaggiya pācittiya 30. Pariṇatasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ attano pariṇāmeyya, nissaggiyaṁ pācittiyaṁ. 
 </span>
 </div>
 
@@ -578,62 +578,62 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#70.0.2">Pācittiya 1. Lasuṇasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc1#1.41.0">vb</a> Yā pana bhikkhunī lasuṇaṁ khādeyya pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#70.0.2">Pācittiya 1. Lasuṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc1#1.41.0">vb</a> Yā pana bhikkhunī lasuṇaṁ khādeyya pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#71.0">Pācittiya 2. Sambādhalomasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc2#1.14.0">vb</a> Yā pana bhikkhunī sambādhe lomaṁ saṁharāpeyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#71.0">Pācittiya 2. Sambādhalomasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc2#1.14.0">vb</a> Yā pana bhikkhunī sambādhe lomaṁ saṁharāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#72.0">Pācittiya 3. Talaghātakasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc3#1.14.0">vb</a> Talaghātake pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#72.0">Pācittiya 3. Talaghātakasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc3#1.14.0">vb</a> Talaghātake pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#73.0">Pācittiya 4. Jatumaṭṭhakasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc4#1.21.0">vb</a> Jatumaṭṭhake pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#73.0">Pācittiya 4. Jatumaṭṭhakasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc4#1.21.0">vb</a> Jatumaṭṭhake pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#74.0">Pācittiya 5. Udakasuddhikasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc5#1.2.12.0">vb</a> Udakasuddhikaṁ pana bhikkhuniyā ādiyamānāya dvaṅgulapabbaparamaṁ ādātabbaṁ. Taṁ atikkāmentiyā pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#74.0">Pācittiya 5. Udakasuddhikasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc5#1.2.12.0">vb</a> Udakasuddhikaṁ pana bhikkhuniyā ādiyamānāya dvaṅgulapabbaparamaṁ ādātabbaṁ. Taṁ atikkāmentiyā pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#75.0">Pācittiya 6. Upatiṭṭhanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc6#1.19.0">vb</a> Yā pana bhikkhunī bhikkhussa bhuñjantassa pānīyena vā vidhūpanena vā upatiṭṭheyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#75.0">Pācittiya 6. Upatiṭṭhanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc6#1.19.0">vb</a> Yā pana bhikkhunī bhikkhussa bhuñjantassa pānīyena vā vidhūpanena vā upatiṭṭheyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#76.0">Pācittiya 7. Āmakadhaññasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc7#1.14.0">vb</a> Yā pana bhikkhunī āmakadhaññaṁ viññatvā vā viññāpetvā vā bhajjitvā vā bhajjāpetvā vā koṭṭetvā vā koṭṭāpetvā vā pacitvā vā pacāpetvā vā bhuñjeyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#76.0">Pācittiya 7. Āmakadhaññasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc7#1.14.0">vb</a> Yā pana bhikkhunī āmakadhaññaṁ viññatvā vā viññāpetvā vā bhajjitvā vā bhajjāpetvā vā koṭṭetvā vā koṭṭāpetvā vā pacitvā vā pacāpetvā vā bhuñjeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#77.0">Pācittiya 8. Paṭhamauccārachaḍḍanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc8#1.26.0">vb</a> Yā pana bhikkhunī uccāraṁ vā passāvaṁ vā saṅkāraṁ vā vighāsaṁ vā tirokuṭṭe vā tiropākāre vā chaḍḍeyya vā chaḍḍāpeyya vā, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#77.0">Pācittiya 8. Paṭhamauccārachaḍḍanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc8#1.26.0">vb</a> Yā pana bhikkhunī uccāraṁ vā passāvaṁ vā saṅkāraṁ vā vighāsaṁ vā tirokuṭṭe vā tiropākāre vā chaḍḍeyya vā chaḍḍāpeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#78.0">Pācittiya 9. Dutiyauccārachaḍḍanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc9#1.15.0">vb</a> Yā pana bhikkhunī uccāraṁ vā passāvaṁ vā saṅkāraṁ vā vighāsaṁ vā harite chaḍḍeyya vā chaḍḍāpeyya vā, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#78.0">Pācittiya 9. Dutiyauccārachaḍḍanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc9#1.15.0">vb</a> Yā pana bhikkhunī uccāraṁ vā passāvaṁ vā saṅkāraṁ vā vighāsaṁ vā harite chaḍḍeyya vā chaḍḍāpeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#79.0">Pācittiya 10. Naccagītasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc10#1.15.0">vb</a> Yā pana bhikkhunī naccaṁ vā gītaṁ vā vāditaṁ vā dassanāya gaccheyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#79.0">Pācittiya 10. Naccagītasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc10#1.15.0">vb</a> Yā pana bhikkhunī naccaṁ vā gītaṁ vā vāditaṁ vā dassanāya gaccheyya, pācittiyaṁ. 
 </span>
 </div>
             
@@ -658,66 +658,64 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#80.0.2">Pācittiya 11. Rattandhakārasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc11#1.12.0">vb</a> Yā pana bhikkhunī rattandhakāre appadīpe purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#80.0.2">Pācittiya 11. Rattandhakārasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc11#1.12.0">vb</a> Yā pana bhikkhunī rattandhakāre appadīpe purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#81.0">Pācittiya 12. Paṭicchannokāsasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc12#1.13.0">vb</a> Yā pana bhikkhunī paṭicchanne okāse purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#81.0">Pācittiya 12. Paṭicchannokāsasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc12#1.13.0">vb</a> Yā pana bhikkhunī paṭicchanne okāse purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#82.0">Pācittiya 13. Ajjhokāsasallapanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc13#1.13.0">vb</a> Yā pana bhikkhunī ajjhokāse purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#82.0">Pācittiya 13. Ajjhokāsasallapanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc13#1.13.0">vb</a> Yā pana bhikkhunī ajjhokāse purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#83.0">Pācittiya 14. Dutiyikauyyojanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc14#1.11.0">vb</a> Yā pana bhikkhunī rathikāya vā byūhe vā siṅghāṭake vā purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā nikaṇṇikaṁ vā jappeyya dutiyikaṁ vā bhikkhuniṁ uyyojeyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#83.0">Pācittiya 14. Dutiyikauyyojanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc14#1.11.0">vb</a> Yā pana bhikkhunī rathikāya vā byūhe vā siṅghāṭake vā purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā nikaṇṇikaṁ vā jappeyya dutiyikaṁ vā bhikkhuniṁ uyyojeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#84.0">Pācittiya 15. Anāpucchāpakkamanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc15#1.19.0">vb</a> Yā pana bhikkhunī purebhattaṁ kulāni upasaṅkamitvā āsane nisīditvā sāmike anāpucchā pakkameyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#84.0">Pācittiya 15. Anāpucchāpakkamanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc15#1.19.0">vb</a> Yā pana bhikkhunī purebhattaṁ kulāni upasaṅkamitvā āsane nisīditvā sāmike anāpucchā pakkameyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#85.0">Pācittiya 16. Anāpucchāabhinisīdanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc16#1.15.0">vb</a> Yā pana bhikkhunī pacchābhattaṁ kulāni upasaṅkamitvā sāmike anāpucchā āsane abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#85.0">Pācittiya 16. Anāpucchāabhinisīdanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc16#1.15.0">vb</a> Yā pana bhikkhunī pacchābhattaṁ kulāni upasaṅkamitvā sāmike anāpucchā āsane abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#86.0">Pācittiya 17. Anāpucchāsantharaṇasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc17#1.20.0">vb</a> Yā pana bhikkhunī vikāle kulāni upasaṅkamitvā sāmike anāpucchā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#86.0">Pācittiya 17. Anāpucchāsantharaṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc17#1.20.0">vb</a> Yā pana bhikkhunī vikāle kulāni upasaṅkamitvā sāmike anāpucchā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#87.0">Pācittiya 18. Paraujjhāpanakasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc18#1.15.0">vb</a> Yā pana bhikkhunī duggahitena dūpadhāritena paraṁ ujjhāpeyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#87.0">Pācittiya 18. Paraujjhāpanakasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc18#1.15.0">vb</a> Yā pana bhikkhunī duggahitena dūpadhāritena paraṁ ujjhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#88.0">Pācittiya 19. Paraabhisapanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc19#1.17.0">vb</a> Yā pana bhikkhunī attānaṁ vā paraṁ vā nirayena vā brahmacariyena vā abhisapeyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#88.0">Pācittiya 19. Paraabhisapanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc19#1.17.0">vb</a> Yā pana bhikkhunī attānaṁ vā paraṁ vā nirayena vā brahmacariyena vā abhisapeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="/ru/sc/?q=bi-pm#89.0">Pācittiya 20. Rodanasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc20#1.11.0">vb</a> Yā pana bhikkhunī attānaṁ vadhitvā vadhitvā rodeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#89.0">Pācittiya 20. Rodanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc20#1.11.0">vb</a> Yā pana bhikkhunī attānaṁ vadhitvā vadhitvā rodeyya, pācittiyaṁ. 
 </span>
 </div>
-
-
 
            <div class="level4 my-3">
  <span class="level5">Rattandhakāravaggo dutiyo. </span>
@@ -732,7 +730,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc3Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#86.0.1"><h4>3. Ovādavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#90.0.1"><h4>3. Naggavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="pc3Collapse">
@@ -740,67 +738,68 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#86.0.2">Pācittiya 21. Ovāda</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc21#1.44.0">vb</a> Yo pana bhikkhu asammato bhikkhuniyo ovadeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#90.0.2">Pācittiya 21. Naggasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc21#1.16.0">vb</a> Yā pana bhikkhunī naggā nahāyeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#87.0">Pācittiya 22. Atthaṅgata</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc22#1.33.0">vb</a> Sammatopi ce bhikkhu atthaṅgate sūriye bhikkhuniyo ovadeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#91.0">Pācittiya 22. Udakasāṭikasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc22#1.14.0">vb</a> Udakasāṭikaṁ pana bhikkhuniyā kārayamānāya pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso catasso vidatthiyo sugatavidatthiyā, tiriyaṁ dve vidatthiyo. Taṁ atikkāmentiyā chedanakaṁ pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#88.0">Pācittiya 23. Bhikkhunupassaya</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc23#2.19.0">vb</a> Yo pana bhikkhu bhikkhunupassayaṁ upasaṅkamitvā bhikkhuniyo ovadeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, gilānā hoti bhikkhunī, ayaṁ tattha samayo. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#92.0">Pācittiya 23. Cīvarasibbanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc23#1.20.0">vb</a> Yā pana bhikkhunī bhikkhuniyā cīvaraṁ visibbetvā vā visibbāpetvā vā sā pacchā anantarāyikinī neva sibbeyya, na sibbāpanāya ussukkaṁ kareyya aññatra catūhapañcāhā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#89.0">Pācittiya 24. Āmisa</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc24#1.16.0">vb</a> Yo pana bhikkhu evaṁ vadeyya “āmisahetu therā bhikkhū bhikkhuniyo ovadantī”ti, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#93.0">Pācittiya 24. Saṅghāṭicārasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc24#1.16.0">vb</a> Yā pana bhikkhunī pañcāhikaṁ saṅghāṭicāraṁ atikkāmeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#90.0">Pācittiya 25. Cīvaradāna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc25#2.11.0">vb</a> Yo pana bhikkhu aññātikāya bhikkhuniyā cīvaraṁ dadeyya aññatra pārivattakā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#94.0">Pācittiya 25. Cīvarasaṅkamanīyasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc25#1.18.0">vb</a> Yā pana bhikkhunī cīvarasaṅkamanīyaṁ dhāreyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#91.0">Pācittiya 26. Cīvarasibbana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc26#1.27.0">vb</a> Yo pana bhikkhu aññātikāya bhikkhuniyā cīvaraṁ sibbeyya vā sibbāpeyya vā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#95.0">Pācittiya 26. Gaṇacīvarasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc26#1.19.0">vb</a> Yā pana bhikkhunī gaṇassa cīvaralābhaṁ antarāyaṁ kareyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#92.0">Pācittiya 27. Saṁvidhāna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc27#2.15.0">vb</a> Yo pana bhikkhu bhikkhuniyā saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, satthagamanīyo hoti maggo, sāsaṅkasammato, sappaṭibhayo, ayaṁ tattha samayo. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#96.0">Pācittiya 27. Paṭibāhanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc27#1.18.0">vb</a> Yā pana bhikkhunī dhammikaṁ cīvaravibhaṅgaṁ paṭibāheyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#93.0">Pācittiya 28. Nāvābhiruhana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc28#2.16.0">vb</a> Yo pana bhikkhu bhikkhuniyā saddhiṁ saṁvidhāya ekaṁ nāvaṁ abhiruheyya uddhaṅgāminiṁ vā adhogāminiṁ vā aññatra tiriyaṁ taraṇāya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#97.0">Pācittiya 28. Cīvaradānasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc28#1.15.0">vb</a> Yā pana bhikkhunī agārikassa vā paribbājakassa vā paribbājikāya vā samaṇacīvaraṁ dadeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#94.0">Pācittiya 29. Paripācita</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc29#2.13.0">vb</a> Yo pana bhikkhu jānaṁ bhikkhuniparipācitaṁ piṇḍapātaṁ bhuñjeyya aññatra pubbe gihisamārambhā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#98.0">Pācittiya 29. Kālaatikkamanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc29#1.21.0">vb</a> Yā pana bhikkhunī dubbalacīvarapaccāsāya cīvarakālasamayaṁ atikkāmeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#95.0">Pācittiya 30. Rahonisajja</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc30#1.13.0">vb</a> Yo pana bhikkhu bhikkhuniyā saddhiṁ eko ekāya raho nisajjaṁ kappeyya, pācittiyaṁ. Ovādavaggo tatiyo 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#99.0">Pācittiya 30. Kathinuddhārasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc30#1.2.15.0">vb</a> Yā pana bhikkhunī dhammikaṁ kathinuddhāraṁ paṭibāheyya, pācittiyaṁ. 
 </span>
 </div>
 
+
            <div class="level4 my-3">
- <span class="level5">Ovādavaggo tatiyo </span>
+ <span class="level5">Naggavaggo tatiyo. </span>
 </div> 
 
 </div> 
@@ -814,7 +813,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc4Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#96.0.1"><h4>4. Bhojanavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#100.0.1"><h4>4. Tuvaṭṭavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="pc4Collapse">
@@ -822,68 +821,69 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#96.0.2">Pācittiya 31. Āvasathapiṇḍa</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc31#2.14.0">vb</a> Agilānena bhikkhunā eko āvasathapiṇḍo bhuñjitabbo. Tato ce uttari bhuñjeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#100.0.2">Pācittiya 31. Ekamañcatuvaṭṭanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc31#1.14.0">vb</a> Yā pana bhikkhuniyo dve ekamañce tuvaṭṭeyyuṁ, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#97.0">Pācittiya 32. Gaṇabhojana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc32#8.15.0">vb</a> Gaṇabhojane aññatra samayā pācittiyaṁ. Tatthāyaṁ samayo, gilānasamayo, cīvaradānasamayo, cīvarakārasamayo, addhānagamanasamayo, nāvābhiruhanasamayo, mahāsamayo, samaṇabhattasamayo, ayaṁ tattha samayo. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#101.0">Pācittiya 32. Ekattharaṇatuvaṭṭanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc32#1.14.0">vb</a> Yā pana bhikkhuniyo dve ekattharaṇapāvuraṇā tuvaṭṭeyyuṁ, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#98.0">Pācittiya 33. Paramparabhojana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc33#3.15.0">vb</a> Paramparabhojane aññatra samayā pācittiyaṁ. Tatthāyaṁ samayo, gilānasamayo, cīvaradānasamayo, cīvarakārasamayo, ayaṁ tattha samayo. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#102.0">Pācittiya 33. Aphāsukaraṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc33#1.16.0">vb</a> Yā pana bhikkhunī bhikkhuniyā sañcicca aphāsuṁ kareyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#99.0">Pācittiya 34. Kāṇamātu</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc34#1.2.21.0">vb</a> Bhikkhuṁ paneva kulaṁ upagataṁ pūvehi vā manthehi vā abhihaṭṭhuṁ pavāreyya, ākaṅkhamānena bhikkhunā dvattipattapūrā paṭiggahetabbā. Tato ce uttari paṭiggaṇheyya, pācittiyaṁ. Dvattipattapūre paṭiggahetvā tato nīharitvā bhikkhūhi saddhiṁ saṁvibhajitabbaṁ, ayaṁ tattha sāmīci. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#103.0">Pācittiya 34. Naupaṭṭhāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc34#1.11.0">vb</a> Yā pana bhikkhunī dukkhitaṁ sahajīviniṁ neva upaṭṭhaheyya, na upaṭṭhāpanāya ussukkaṁ kareyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#100.0">Pācittiya 35. Paṭhamapavāraṇā</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc35#2.15.0">vb</a> Yo pana bhikkhu bhuttāvī pavārito anatirittaṁ khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#104.0">Pācittiya 35. Nikkaḍḍhanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc35#1.23.0">vb</a> Yā pana bhikkhunī bhikkhuniyā upassayaṁ datvā kupitā anattamanā nikkaḍḍheyya vā nikkaḍḍhāpeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#101.0">Pācittiya 36. Dutiyapavāraṇā</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc36#1.28.0">vb</a> Yo pana bhikkhu bhikkhuṁ bhuttāviṁ pavāritaṁ anatirittena khādanīyena vā bhojanīyena vā abhihaṭṭhuṁ pavāreyya “handa bhikkhu khāda vā bhuñja vā”ti jānaṁ āsādanāpekkho, bhuttasmiṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#105.0">Pācittiya 36. Saṁsaṭṭhasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc36#1.11.0">vb</a> Yā pana bhikkhunī saṁsaṭṭhā vihareyya gahapatinā vā gahapatiputtena vā, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, saṁsaṭṭhā vihari gahapatināpi gahapatiputtenāpi, viviccāyye, vivekaññeva bhaginiyā saṅgho vaṇṇetī”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#102.0">Pācittiya 37. Vikālabhojana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc37#1.22.0">vb</a> Yo pana bhikkhu vikāle khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#106.0">Pācittiya 37. Antoraṭṭhasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc37#1.12.0">vb</a> Yā pana bhikkhunī antoraṭṭhe sāsaṅkasammate sappaṭibhaye asatthikā cārikaṁ careyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#103.0">Pācittiya 38. Sannidhikāraka</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc38#1.18.0">vb</a> Yo pana bhikkhu sannidhikārakaṁ khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#107.0">Pācittiya 38. Tiroraṭṭhasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc38#1.12.0">vb</a> Yā pana bhikkhunī tiroraṭṭhe sāsaṅkasammate sappaṭibhaye asatthikā cārikaṁ careyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#104.0">Pācittiya 39. Paṇītabhojana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc39#2.10.0">vb</a> Yāni kho pana tāni paṇītabhojanāni, seyyathidaṁ—sappi, navanītaṁ, telaṁ, madhu, phāṇitaṁ, maccho, maṁsaṁ, khīraṁ, dadhi. Yo pana bhikkhu evarūpāni paṇītabhojanāni agilāno attano atthāya viññāpetvā bhuñjeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#108.0">Pācittiya 39. Antovassasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc39#1.14.0">vb</a> Yā pana bhikkhunī antovassaṁ cārikaṁ careyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#105.0">Pācittiya 40. Dantapona</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc40#2.5.0">vb</a> Yo pana bhikkhu adinnaṁ mukhadvāraṁ āhāraṁ āhareyya aññatra udakadantaponā, pācittiyaṁ. Bhojanavaggo catuttho 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#109.0">Pācittiya 40. Cārikanapakkamanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc40#1.13.0">vb</a> Yā pana bhikkhunī vassaṁvuṭṭhā cārikaṁ na pakkameyya antamaso chappañcayojanānipi, pācittiyaṁ. 
 </span>
 </div>
+
 
 
            <div class="level4 my-3">
- <span class="level5">Bhojanavaggo catuttho </span>
+ <span class="level5">Tuvaṭṭavaggo catuttho. </span>
 </div> 
 
 </div> 
@@ -895,7 +895,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc5Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#106.0.1"><h4>5. Acelakavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#110.0.1"><h4>5. Cittāgāravaggo</h4></a>
 </div>
               </div>
               <div class="collapse" id="pc5Collapse">
@@ -903,67 +903,67 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#106.0.2">Pācittiya 41. Acelaka</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc41#1.2.15.0">vb</a> Yo pana bhikkhu acelakassa vā paribbājakassa vā paribbājikāya vā sahatthā khādanīyaṁ vā bhojanīyaṁ vā dadeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#110.0.2">Pācittiya 41. Rājāgārasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc41#1.16.0">vb</a> Yā pana bhikkhunī rājāgāraṁ vā cittāgāraṁ vā ārāmaṁ vā uyyānaṁ vā pokkharaṇiṁ vā dassanāya gaccheyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#107.0">Pācittiya 42. Uyyojana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc42#1.16.0">vb</a> Yo pana bhikkhu bhikkhuṁ “ehāvuso, gāmaṁ vā nigamaṁ vā piṇḍāya pavisissāmā”ti tassa dāpetvā vā adāpetvā vā uyyojeyya “gacchāvuso, na me tayā saddhiṁ kathā vā nisajjā vā phāsu hoti, ekakassa me kathā vā nisajjā vā phāsu hotī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#111.0">Pācittiya 42. Āsandiparibhuñjanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc42#1.14.0">vb</a> Yā pana bhikkhunī āsandiṁ vā pallaṅkaṁ vā paribhuñjeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#108.0">Pācittiya 43. Sabhojana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc43#1.23.0">vb</a> Yo pana bhikkhu sabhojane kule anupakhajja nisajjaṁ kappeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#112.0">Pācittiya 43. Suttakantanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc43#1.14.0">vb</a> Yā pana bhikkhunī suttaṁ kanteyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#109.0">Pācittiya 44. Rahopaṭicchanna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc44#1.14.0">vb</a> Yo pana bhikkhu mātugāmena saddhiṁ raho paṭicchanne āsane nisajjaṁ kappeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#113.0">Pācittiya 44. Gihiveyyāvaccasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc44#1.11.0">vb</a> Yā pana bhikkhunī gihiveyyāvaccaṁ kareyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#110.0">Pācittiya 45. Rahonisajja</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc45#1.14.0">vb</a> Yo pana bhikkhu mātugāmena saddhiṁ eko ekāya raho nisajjaṁ kappeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#114.0">Pācittiya 45. Adhikaraṇasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc45#1.21.0">vb</a> Yā pana bhikkhunī bhikkhuniyā: “ehāyye, imaṁ adhikaraṇaṁ vūpasamehī”ti vuccamānā: “sādhū”ti paṭissuṇitvā sā pacchā anantarāyikinī neva vūpasameyya, na vūpasamāya ussukkaṁ kareyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#111.0">Pācittiya 46. Cāritta</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc46#5.6.0">vb</a> Yo pana bhikkhu nimantito sabhatto samāno santaṁ bhikkhuṁ anāpucchā purebhattaṁ vā pacchābhattaṁ vā kulesu cārittaṁ āpajjeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, cīvaradānasamayo, cīvarakārasamayo, ayaṁ tattha samayo. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#115.0">Pācittiya 46. Bhojanadānasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc46#1.15.0">vb</a> Yā pana bhikkhunī agārikassa vā paribbājakassa vā paribbājikāya vā sahatthā khādanīyaṁ vā bhojanīyaṁ vā dadeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#112.0">Pācittiya 47. Mahānāma</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc47#1.4.27.0">vb</a> Agilānena bhikkhunā catumāsappaccayapavāraṇā sāditabbā aññatra punapavāraṇāya, aññatra niccapavāraṇāya. Tato ce uttari sādiyeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#116.0">Pācittiya 47. Āvasathacīvarasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc47#1.12.0">vb</a> Yā pana bhikkhunī āvasathacīvaraṁ anissajjetvā paribhuñjeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#113.0">Pācittiya 48. Uyyuttasenā</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc48#2.13.0">vb</a> Yo pana bhikkhu uyyuttaṁ senaṁ dassanāya gaccheyya aññatra tathārūpappaccayā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#117.0">Pācittiya 48. Āvasathavihārasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc48#1.22.0">vb</a> Yā pana bhikkhunī āvasathaṁ anissajjitvā cārikaṁ pakkameyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#114.0">Pācittiya 49. Senāvāsa</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc49#1.15.0">vb</a> Siyā ca tassa bhikkhuno kocideva paccayo senaṁ gamanāya, dirattatirattaṁ tena bhikkhunā senāya vasitabbaṁ. Tato ce uttari vaseyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#118.0">Pācittiya 49. Tiracchānavijjāpariyāpuṇanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc49#1.14.0">vb</a> Yā pana bhikkhunī tiracchānavijjaṁ pariyāpuṇeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#115.0">Pācittiya 50. Uyyodhika</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc50#1.19.0">vb</a> Dirattatirattaṁ ce bhikkhu senāya vasamāno uyyodhikaṁ vā balaggaṁ vā senābyūhaṁ vā anīkadassanaṁ vā gaccheyya, pācittiyaṁ. Acelakavaggo pañcamo 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#119.0">Pācittiya 50. Tiracchānavijjāvācanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc50#1.14.0">vb</a> Yā pana bhikkhunī tiracchānavijjaṁ vāceyya, pācittiyaṁ. 
 </span>
 </div>
 
            <div class="level4 my-3">
- <span class="level5">Acelakavaggo pañcamo </span>
+ <span class="level5">Cittāgāravaggo pañcamo. </span>
 </div> 
 
 </div> 
@@ -975,7 +975,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc6Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#116.0.1"><h4>6. Surāpānavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#120.0.1"><h4>6. Ārāmavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="pc6Collapse">
@@ -983,68 +983,68 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#116.0.2">Pācittiya 51. Surāpāna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc51#1.46.0">vb</a> Surāmerayapāne pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#120.0.2">Pācittiya 51. Ārāmapavisanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc51#3.9.0">vb</a> Yā pana bhikkhunī jānaṁ sabhikkhukaṁ ārāmaṁ anāpucchā paviseyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#117.0">Pācittiya 52. Aṅgulipatodaka</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc52#1.12.0">vb</a> Aṅgulipatodake pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#121.0">Pācittiya 52. Bhikkhuakkosanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc52#1.29.0">vb</a> Yā pana bhikkhunī bhikkhuṁ akkoseyya vā paribhāseyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#118.0">Pācittiya 53. Hasadhamma</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc53#1.22.0">vb</a> Udake hasadhamme pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#122.0">Pācittiya 53. Gaṇaparibhāsanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc53#1.27.0">vb</a> Yā pana bhikkhunī caṇḍīkatā gaṇaṁ paribhāseyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#119.0">Pācittiya 54. Anādariya</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc54#1.15.0">vb</a> Anādariye pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#123.0">Pācittiya 54. Pavāritasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc54#1.20.0">vb</a> Yā pana bhikkhunī nimantitā vā pavāritā vā khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#120.0">Pācittiya 55. Bhiṁsāpana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc55#1.15.0">vb</a> Yo pana bhikkhu bhikkhuṁ bhiṁsāpeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#124.0">Pācittiya 55. Kulamaccharinīsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc55#1.21.0">vb</a> Yā pana bhikkhunī kulamaccharinī assa, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#121.0">Pācittiya 56. Joti</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc56#2.5.0">vb</a> Yo pana bhikkhu agilāno visibbanāpekkho jotiṁ samādaheyya vā samādahāpeyya vā aññatra tathārūpappaccayā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#125.0">Pācittiya 56. Abhikkhukāvāsasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc56#1.16.0">vb</a> Yā pana bhikkhunī abhikkhuke āvāse vassaṁ vaseyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#122.0">Pācittiya 57. Nahāna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc57#6.7.0">vb</a> Yo pana bhikkhu orenaddhamāsaṁ nahāyeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo “diyaḍḍho māso seso gimhāna”nti “vassānassa paṭhamo māso” iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo, kammasamayo, addhānagamanasamayo, vātavuṭṭhisamayo, ayaṁ tattha samayo. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#126.0">Pācittiya 57. Apavāraṇāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc57#1.15.0">vb</a> Yā pana bhikkhunī vassaṁvuṭṭhā ubhatosaṅghe tīhi ṭhānehi na pavāreyya diṭṭhena vā sutena vā parisaṅkāya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#123.0">Pācittiya 58. Dubbaṇṇakaraṇa</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc58#1.15.0">vb</a> Navaṁ pana bhikkhunā cīvaralābhena tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ ādātabbaṁ nīlaṁ vā kaddamaṁ vā kāḷasāmaṁ vā. Anādā ce bhikkhu tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ navaṁ cīvaraṁ paribhuñjeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#127.0">Pācittiya 58. Ovādasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc58#1.14.0">vb</a> Yā pana bhikkhunī ovādāya vā saṁvāsāya vā na gaccheyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#124.0">Pācittiya 59. Vikappana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc59#1.13.0">vb</a> Yo pana bhikkhu bhikkhussa vā bhikkhuniyā vā sikkhamānāya vā sāmaṇerassa vā sāmaṇeriyā vā sāmaṁ cīvaraṁ vikappetvā appaccuddhāraṇaṁ paribhuñjeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#128.0">Pācittiya 59. Ovādūpasaṅkamanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc59#1.11.0">vb</a> Anvaddhamāsaṁ bhikkhuniyā bhikkhusaṅghato dve dhammā paccāsīsitabbā uposathapucchakañca ovādūpasaṅkamanañca. Taṁ atikkāmentiyā pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#125.0">Pācittiya 60. Apanidhāna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc60#1.18.0">vb</a> Yo pana bhikkhu bhikkhussa pattaṁ vā cīvaraṁ vā nisīdanaṁ vā sūcigharaṁ vā kāyabandhanaṁ vā apanidheyya vā apanidhāpeyya vā antamaso hasāpekkhopi, pācittiyaṁ. Surāpānavaggo chaṭṭho 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#129.0">Pācittiya 60. Pasākhejātasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc60#1.16.0">vb</a> Yā pana bhikkhunī pasākhe jātaṁ gaṇḍaṁ vā rudhitaṁ vā anapaloketvā saṅghaṁ vā gaṇaṁ vā purisena saddhiṁ ekenekā bhedāpeyya vā phālāpeyya vā dhovāpeyya vā ālimpāpeyya vā bandhāpeyya vā mocāpeyya vā, pācittiyaṁ. 
 </span>
 </div>
 
 
            <div class="level4 my-3">
- <span class="level5">Surāpānavaggo chaṭṭho </span>
+ <span class="level5">Ārāmavaggo chaṭṭho. </span>
 </div> 
 
 </div> 
@@ -1056,7 +1056,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc7Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#126.0.1"><h4>7. Sappāṇavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#130.0.1"><h4>7. Gabbhinivaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="pc7Collapse">
@@ -1064,67 +1064,68 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#126.0.2">Pācittiya 61. Sañcicca</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc61#1.16.0">vb</a> Yo pana bhikkhu sañcicca pāṇaṁ jīvitā voropeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#130.0.2">Pācittiya 61. Gabbhinīsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc61#1.17.0">vb</a> Yā pana bhikkhunī gabbhiniṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#127.0">Pācittiya 62. Sappāṇaka</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc62#1.11.0">vb</a> Yo pana bhikkhu jānaṁ sappāṇakaṁ udakaṁ paribhuñjeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#131.0">Pācittiya 62. Pāyantīsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc62#1.17.0">vb</a> Yā pana bhikkhunī pāyantiṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#128.0">Pācittiya 63. Ukkoṭana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc63#1.12.0">vb</a> Yo pana bhikkhu jānaṁ yathādhammaṁ nihatādhikaraṇaṁ punakammāya ukkoṭeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#132.0">Pācittiya 63. Paṭhamasikkhamānasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc63#1.41.0">vb</a> Yā pana bhikkhunī dve vassāni chasu dhammesu asikkhitasikkhaṁ sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#129.0">Pācittiya 64. Duṭṭhulla</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc64#1.23.0">vb</a> Yo pana bhikkhu bhikkhussa jānaṁ duṭṭhullaṁ āpattiṁ paṭicchādeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#133.0">Pācittiya 64. Dutiyasikkhamānasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc64#1.36.0">vb</a> Yā pana bhikkhunī dve vassāni chasu dhammesu sikkhitasikkhaṁ sikkhamānaṁ saṅghena asammataṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#130.0">Pācittiya 65. Ūnavīsativassa</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc65#1.53.0">vb</a> Yo pana bhikkhu jānaṁ ūnavīsativassaṁ puggalaṁ upasampādeyya, so ca puggalo anupasampanno, te ca bhikkhū gārayhā, idaṁ tasmiṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#134.0">Pācittiya 65. Paṭhamagihigatasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc65#1.17.0">vb</a> Yā pana bhikkhunī ūnadvādasavassaṁ gihigataṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#131.0">Pācittiya 66. Theyyasattha</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc66#1.22.0">vb</a> Yo pana bhikkhu jānaṁ theyyasatthena saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#135.0">Pācittiya 66. Dutiyagihigatasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc66#1.35.0">vb</a> Yā pana bhikkhunī paripuṇṇadvādasavassaṁ gihigataṁ dve vassāni chasu dhammesu asikkhitasikkhaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#132.0">Pācittiya 67. Saṁvidhāna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc67#1.28.0">vb</a> Yo pana bhikkhu mātugāmena saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#136.0">Pācittiya 67. Tatiyagihigatasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc67#1.36.0">vb</a> Yā pana bhikkhunī paripuṇṇadvādasavassaṁ gihigataṁ dve vassāni chasu dhammesu sikkhitasikkhaṁ saṅghena asammataṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#133.0">Pācittiya 68. Ariṭṭha</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc68#1.49.0">vb</a> Yo pana bhikkhu evaṁ vadeyya “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti, so bhikkhu bhikkhūhi evamassa vacanīyo “māyasmā evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāvuso antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti. Evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṁ samanubhāsitabbo tassa paṭinissaggāya. Yāvatatiyañce samanubhāsiyamāno taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#137.0">Pācittiya 68. Paṭhamasahajīvinīsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc68#1.13.0">vb</a> Yā pana bhikkhunī sahajīviniṁ vuṭṭhāpetvā dve vassāni neva anuggaṇheyya na anuggaṇhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#134.0">Pācittiya 69. Ukkhittasambhoga</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc69#1.11.0">vb</a> Yo pana bhikkhu jānaṁ tathāvādinā bhikkhunā akaṭānudhammena taṁ diṭṭhiṁ appaṭinissaṭṭhena saddhiṁ sambhuñjeyya vā, saṁvaseyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#138.0">Pācittiya 69. Pavattinīnānubandhanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc69#1.13.0">vb</a> Yā pana bhikkhunī vuṭṭhāpitaṁ pavattiniṁ dve vassāni nānubandheyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#135.0">Pācittiya 70. Kaṇṭaka</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc70#1.46.0">vb</a> Samaṇuddesopi ce evaṁ vadeyya “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti, so samaṇuddeso bhikkhūhi evamassa vacanīyo “māvuso, samaṇuddesa evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāvuso, samaṇuddesa antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti, evañca so samaṇuddeso bhikkhūhi vuccamāno tatheva paggaṇheyya, so samaṇuddeso bhikkhūhi evamassa vacanīyo “ajjatagge te, āvuso, samaṇuddesa na ceva so bhagavā satthā apadisitabbo, yampi caññe samaṇuddesā labhanti bhikkhūhi saddhiṁ dirattatirattaṁ sahaseyyaṁ, sāpi te natthi, cara pire, vinassā”ti. Yo pana bhikkhu jānaṁ tathānāsitaṁ samaṇuddesaṁ upalāpeyya vā, upaṭṭhāpeyya vā, sambhuñjeyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#139.0">Pācittiya 70. Dutiyasahajīvinīsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc70#1.13.0">vb</a> Yā pana bhikkhunī sahajīviniṁ vuṭṭhāpetvā neva vūpakāseyya na vūpakāsāpeyya antamaso chappañcayojanānipi, pācittiyaṁ. 
 </span>
 </div>
+      
 
  <div class="level4 my-3">
- <span class="level5">Sappāṇakavaggo sattamo </span>
+ <span class="level5">Gabbhinivaggo sattamo. </span>
 </div> 
 
 </div> 
@@ -1136,7 +1137,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc8Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#136.0.1"><h4>8. Sahadhammikavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#140.0.1"><h4>8. Kumāribhūtavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="pc8Collapse">
@@ -1144,79 +1145,86 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#136.0.2">Pācittiya 71. Sahadhammika</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc71#1.19.0">vb</a> Yo pana bhikkhu bhikkhūhi sahadhammikaṁ vuccamāno evaṁ vadeyya “na tāvāhaṁ, āvuso, etasmiṁ sikkhāpade sikkhissāmi, yāva na aññaṁ bhikkhuṁ byattaṁ vinayadharaṁ paripucchāmī”ti, pācittiyaṁ. Sikkhamānena, bhikkhave, bhikkhunā aññātabbaṁ paripucchitabbaṁ paripañhitabbaṁ, ayaṁ tattha sāmīci. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#140.0.2">Pācittiya 71. Paṭhamakumāribhūtasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc71#1.17.0">vb</a> Yā pana bhikkhunī ūnavīsativassaṁ kumāribhūtaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#137.0">Pācittiya 72. Vilekhana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc72#1.20.0">vb</a> Yo pana bhikkhu pātimokkhe uddissamāne evaṁ vadeyya “kiṁ panimehi khuddānukhuddakehi sikkhāpadehi uddiṭṭhehi, yāvadeva kukkuccāya vihesāya vilekhāya saṁvattantī”ti, sikkhāpadavivaṇṇake pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#141.0">Pācittiya 72. Dutiyakumāribhūtasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc72#1.37.0">vb</a> Yā pana bhikkhunī paripuṇṇavīsativassaṁ kumāribhūtaṁ dve vassāni chasu dhammesu asikkhitasikkhaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#138.0">Pācittiya 73. Mohana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc73#1.15.0">vb</a> Yo pana bhikkhu anvaddhamāsaṁ pātimokkhe uddissamāne evaṁ vadeyya “idāneva kho ahaṁ jānāmi, ayampi kira dhammo suttāgato suttapariyāpanno anvaddhamāsaṁ uddesaṁ āgacchatī”ti. Tañce bhikkhuṁ aññe bhikkhū jāneyyuṁ nisinnapubbaṁ iminā bhikkhunā dvattikkhattuṁ pātimokkhe uddissamāne, ko pana vādo bhiyyo, na ca tassa bhikkhuno aññāṇakena mutti atthi, yañca tattha āpattiṁ āpanno, tañca yathādhammo kāretabbo, uttari cassa moho āropetabbo “tassa te, āvuso, alābhā, tassa te dulladdhaṁ, yaṁ tvaṁ pātimokkhe uddissamānena sādhukaṁ aṭṭhiṁ katvā manasi karosī”ti, idaṁ tasmiṁ mohanake pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#142.0">Pācittiya 73. Tatiyakumāribhūtasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc73#1.36.0">vb</a> Yā pana bhikkhunī paripuṇṇavīsativassaṁ kumāribhūtaṁ dve vassāni chasu dhammesu sikkhitasikkhaṁ saṅghena asammataṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#139.0">Pācittiya 74. Pahāra</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc74#1.15.0">vb</a> Yo pana bhikkhu bhikkhussa kupito anattamano pahāraṁ dadeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#143.0">Pācittiya 74. Ūnadvādasavassasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc74#1.14.0">vb</a> Yā pana bhikkhunī ūnadvādasavassā vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#140.0">Pācittiya 75. Talasattika</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc75#1.15.0">vb</a> Yo pana bhikkhu bhikkhussa kupito anattamano talasattikaṁ uggireyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#144.0">Pācittiya 75. Paripuṇṇadvādasavassasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc75#1.42.0">vb</a> Yā pana bhikkhunī paripuṇṇadvādasavassā saṅghena asammatā vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#141.0">Pācittiya 76. Amūlaka</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc76#1.11.0">vb</a> Yo pana bhikkhu bhikkhuṁ amūlakena saṅghādisesena anuddhaṁseyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#145.0">Pācittiya 76. Khiyyanadhammasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc76#1.20.0">vb</a> Yā pana bhikkhunī, “alaṁ tāva te, ayye, vuṭṭhāpitenā”ti vuccamānā, “sādhū”ti paṭissuṇitvā sā pacchā khiyyanadhammaṁ āpajjeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#142.0">Pācittiya 77. Sañcicca</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc77#1.19.0">vb</a> Yo pana bhikkhu bhikkhussa sañcicca kukkuccaṁ upadaheyya “itissa muhuttampi aphāsu bhavissatī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#146.0">Pācittiya 77. Paṭhamasikkhamānanavuṭṭhāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc77#1.17.0">vb</a> Yā pana bhikkhunī sikkhamānaṁ, “sace me tvaṁ, ayye, cīvaraṁ dassasi, evāhaṁ taṁ vuṭṭhāpessāmī”ti vatvā sā pacchā anantarāyikinī neva vuṭṭhāpeyya, na vuṭṭhāpanāya ussukkaṁ kareyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#143.0">Pācittiya 78. Upassuti</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc78#1.18.0">vb</a> Yo pana bhikkhu bhikkhūnaṁ bhaṇḍanajātānaṁ kalahajātānaṁ vivādāpannānaṁ upassutiṁ tiṭṭheyya “yaṁ ime bhaṇissanti, taṁ sossāmī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#147.0">Pācittiya 78. Dutiyasikkhamānanavuṭṭhāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc78#1.16.0">vb</a> Yā pana bhikkhunī sikkhamānaṁ, “sace maṁ tvaṁ, ayye, dve vassāni anubandhissasi, evāhaṁ taṁ vuṭṭhāpessāmī”ti vatvā sā pacchā anantarāyikinī neva vuṭṭhāpeyya, na vuṭṭhāpanāya ussukkaṁ kareyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#144.0">Pācittiya 79. Kammappaṭibāhana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc79#1.22.0">vb</a> Yo pana bhikkhu dhammikānaṁ kammānaṁ chandaṁ datvā pacchā khīyanadhammaṁ āpajjeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#148.0">Pācittiya 79. Sokāvāsasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc79#1.11.0">vb</a> Yā pana bhikkhunī purisasaṁsaṭṭhaṁ kumārakasaṁsaṭṭhaṁ caṇḍiṁ sokāvāsaṁ sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#145.0">Pācittiya 80. Chandaṁadatvāgamana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc80#1.15.0">vb</a> Yo pana bhikkhu saṅghe vinicchayakathāya vattamānāya chandaṁ adatvā uṭṭhāyāsanā pakkameyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#149.0">Pācittiya 80. Ananuññātasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc80#1.14.0">vb</a> Yā pana bhikkhunī mātāpitūhi vā sāmikena vā ananuññātaṁ sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#146.0">Pācittiya 81. Dubbala</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc81#1.16.0">vb</a> Yo pana bhikkhu samaggena saṅghena cīvaraṁ datvā pacchā khīyanadhammaṁ āpajjeyya “yathāsanthutaṁ bhikkhū saṅghikaṁ lābhaṁ pariṇāmentī”ti, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#150.0">Pācittiya 81. Pārivāsikasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc81#1.13.0">vb</a> Yā pana bhikkhunī pārivāsikachandadānena sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#147.0">Pācittiya 82. Pariṇāmana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc82#1.26.0">vb</a> Yo pana bhikkhu jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ puggalassa pariṇāmeyya, pācittiyaṁ. Sahadhammikavaggo aṭṭhamo 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#151.0">Pācittiya 82. Anuvassasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc82#1.14.0">vb</a> Yā pana bhikkhunī anuvassaṁ vuṭṭhāpeyya, pācittiyaṁ.
 </span>
 </div>
-
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#152.0">Pācittiya 83. Ekavassasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc83#1.16.0">vb</a> Yā pana bhikkhunī ekaṁ vassaṁ dve vuṭṭhāpeyya, pācittiyaṁ. 
+</span>
+</div>
+         
+       
            <div class="level4 my-3">
- <span class="level5">Sahadhammikavaggo aṭṭhamo </span>
+ <span class="level5">Kumāribhūtavaggo aṭṭhamo. </span>
 </div> 
 
 </div> 
@@ -1228,7 +1236,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc9Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#146.0.1"><h4>9. Ratanavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#153.0.1"><h4>9. Chattupāhanavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="pc9Collapse">
@@ -1236,69 +1244,366 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#148.0.2">Pācittiya 83. Antepura</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc83#1.3.56.0">vb</a> Yo pana bhikkhu rañño khattiyassa muddhābhisittassa anikkhantarājake aniggataratanake pubbe appaṭisaṁvidito indakhīlaṁ atikkāmeyya, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#153.0.2">Pācittiya 84. Chattupāhanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc84#1.2.6.0">vb</a> Yā pana bhikkhunī agilānā chattupāhanaṁ dhāreyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#149.0">Pācittiya 84. Ratana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc84#3.17.0">vb</a> Yo pana bhikkhu ratanaṁ vā ratanasammataṁ vā aññatra ajjhārāmā vā ajjhāvasathā vā uggaṇheyya vā uggaṇhāpeyya vā, pācittiyaṁ. Ratanaṁ vā pana bhikkhunā ratanasammataṁ vā ajjhārāme vā ajjhāvasathe vā uggahetvā vā uggahāpetvā vā nikkhipitabbaṁ “yassa bhavissati, so harissatī”ti, ayaṁ tattha sāmīci. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#154.0">Pācittiya 85. Yānasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc85#1.2.5.0">vb</a> Yā pana bhikkhunī agilānā yānena yāyeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#150.0">Pācittiya 85. Vikālagāmappavesana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc85#4.9.0">vb</a> Yo pana bhikkhu santaṁ bhikkhuṁ anāpucchāvikāle gāmaṁ paviseyya aññatra tathārūpā accāyikā karaṇīyā, pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#155.0">Pācittiya 86. Saṅghāṇisikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc86#1.19.0">vb</a> Yā pana bhikkhunī saṅghāṇiṁ dhāreyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#151.0">Pācittiya 86. Sūcighara</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc86#1.20.0">vb</a> Yo pana bhikkhu aṭṭhimayaṁ vā dantamayaṁ vā visāṇamayaṁ vā sūcigharaṁ kārāpeyya, bhedanakaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#156.0">Pācittiya 87. Itthālaṅkārasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc87#1.14.0">vb</a> Yā pana bhikkhunī itthālaṅkāraṁ dhāreyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#152.0">Pācittiya 87. Mañcapīṭha</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc87#1.11.0">vb</a> Navaṁ pana bhikkhunā mañcaṁ vā pīṭhaṁ vā kārayamānena aṭṭhaṅgulapādakaṁ kāretabbaṁ sugataṅgulena aññatra heṭṭhimāya aṭaniyā. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#157.0">Pācittiya 88. Gandhavaṇṇakasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc88#1.14.0">vb</a> Yā pana bhikkhunī gandhavaṇṇakena nahāyeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#153.0">Pācittiya 88. Tūlonaddha</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc88#1.14.0">vb</a> Yo pana bhikkhu mañcaṁ vā pīṭhaṁ vā tūlonaddhaṁ kārāpeyya, uddālanakaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#158.0">Pācittiya 89. Vāsitakasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc89#1.14.0">vb</a> Yā pana bhikkhunī vāsitakena piññākena nahāyeyya, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#154.0">Pācittiya 89. Nisīdana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc89#2.10.0">vb</a> Nisīdanaṁ pana bhikkhunā kārayamānena pamāṇikaṁ kāretabbaṁ, tatridaṁ pamāṇaṁ, dīghaso dve vidatthiyo sugatavidatthiyā, tiriyaṁ diyaḍḍhaṁ, dasā vidatthi. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#159.0">Pācittiya 90. Bhikkhuniummaddāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc90#1.14.0">vb</a> Yā pana bhikkhunī bhikkhuniyā ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#155.0">Pācittiya 90. Kaṇḍuppaṭicchādi</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc90#1.14.0">vb</a> Kaṇḍuppaṭicchādiṁ pana bhikkhunā kārayamānena pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso catasso vidatthiyo sugatavidatthiyā, tiriyaṁ dve vidatthiyo. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#160.0">Pācittiya 91. Sikkhamānaummaddāpanasikkhāpadaṁ</a> Yā pana bhikkhunī sikkhamānāya ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#156.0">Pācittiya 91. Vassikasāṭika</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc91#1.14.0">vb</a> Vassikasāṭikaṁ pana bhikkhunā kārayamānena pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso cha vidatthiyo sugatavidatthiyā, tiriyaṁ aḍḍhateyyā. Taṁ atikkāmayato chedanakaṁ pācittiyaṁ. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#161.0">Pācittiya 92. Sāmaṇerīummaddāpanasikkhāpadaṁ</a> Yā pana bhikkhunī sāmaṇeriyā ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#157.0">Pācittiya 92. Nanda</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc92#1.15.0">vb</a> Yo pana bhikkhu sugatacīvarappamāṇaṁ cīvaraṁ kārāpeyya, atirekaṁ vā, chedanakaṁ pācittiyaṁ. Tatridaṁ sugatassa sugatacīvarappamāṇaṁ, dīghaso nava vidatthiyo sugatavidatthiyā, tiriyaṁ cha vidatthiyo, idaṁ sugatassa sugatacīvarapamāṇanti. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#162.0">Pācittiya 93. Gihiniummaddāpanasikkhāpadaṁ</a> Yā pana bhikkhunī gihiniyā ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#163.0">Pācittiya 94. Anāpucchāsikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc94#1.11.0">vb</a> Yā pana bhikkhunī bhikkhussa purato anāpucchā āsane nisīdeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#164.0">Pācittiya 95. Pañhāpucchanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc95#1.11.0">vb</a> Yā pana bhikkhunī anokāsakataṁ bhikkhuṁ pañhaṁ puccheyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#165.0">Pācittiya 96. Asaṅkaccikasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pc96#1.16.0">vb</a> Yā pana bhikkhunī asaṅkaccikā gāmaṁ paviseyya, pācittiyaṁ. 
 </span>
 </div>
 
+           <div class="level4 my-3">
+ <span class="level5">Chattupāhanavaggo navamo. </span>
+</div> 
+
+</div> 
+         </div>
+   <!-- vagga end -->   
+   
+ 
+    <!-- vagga begin -->     
+              <div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pc10Collapse">+</span>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#166.0.1"><h4>10. Musāvādavaggo </h4></a>
+</div>
+              </div>
+              <div class="collapse" id="pc10Collapse">
+                <div class="my-3">
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#166.0.2">Pācittiya 97. Musāvādasikkhāpadaṁ</a> Sampajānamusāvāde pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#167.0">Pācittiya 98. Omasavādasikkhāpadaṁ</a> Omasavāde pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#168.0">Pācittiya 99. Pesuññasikkhāpadaṁ</a> Bhikkhunipesuññe pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#169.0">Pācittiya 100. Padasodhammasikkhāpadaṁ</a> Yā pana bhikkhunī anupasampannaṁ padaso dhammaṁ vāceyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#170.0">Pācittiya 101. Paṭhamasahaseyyasikkhāpadaṁ</a> Yā pana bhikkhunī anupasampannāya uttaridirattatirattaṁ sahaseyyaṁ kappeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#171.0">Pācittiya 102. Dutiyasahaseyyasikkhāpadaṁ</a> Yā pana bhikkhunī purisena sahaseyyaṁ kappeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#172.0">Pācittiya 103. Dhammadesanāsikkhāpadaṁ</a> Yā pana bhikkhunī purisassa uttarichappañcavācāhi dhammaṁ deseyya aññatra viññunā itthiviggahena, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#173.0">Pācittiya 104. Bhūtārocanasikkhāpadaṁ</a> Yā pana bhikkhunī anupasampannāya uttarimanussadhammaṁ āroceyya, bhūtasmiṁ pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#174.0">Pācittiya 105. Duṭṭhullārocanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā duṭṭhullaṁ āpattiṁ anupasampannāya āroceyya aññatra bhikkhunisammutiyā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#175.0">Pācittiya 106. Pathavīkhaṇanasikkhāpadaṁ</a> Yā pana bhikkhunī pathaviṁ khaṇeyya vā khaṇāpeyya vā, pācittiyaṁ. 
+</span>
+</div>
 
 
            <div class="level4 my-3">
- <span class="level5">Ratanavaggo navamo </span>
+ <span class="level5">Musāvādavaggo dasamo. </span>
+</div> 
+
+</div> 
+         </div>
+   <!-- vagga end -->   
+   
+       <!-- vagga begin -->     
+              <div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pc11Collapse">+</span>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#176.0.1"><h4>11. Bhūtagāmavaggo </h4></a>
+</div>
+              </div>
+              <div class="collapse" id="pc11Collapse">
+                <div class="my-3">
+
+<<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#176.0.2">Pācittiya 107. Bhūtagāmasikkhāpadaṁ</a> Bhūtagāmapātabyatāya pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#177.0">Pācittiya 108. Aññavādakasikkhāpadaṁ</a> Aññavādake, vihesake pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#178.0">Pācittiya 109. Ujjhāpanakasikkhāpadaṁ</a> Ujjhāpanake, khiyyanake pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#179.0">Pācittiya 110. Paṭhamasenāsanasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghikaṁ mañcaṁ vā pīṭhaṁ vā bhisiṁ vā kocchaṁ vā ajjhokāse santharitvā vā santharāpetvā vā taṁ pakkamantī neva uddhareyya, na uddharāpeyya, anāpucchaṁ vā gaccheyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#180.0">Pācittiya 111. Dutiyasenāsanasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghike vihāre seyyaṁ santharitvā vā santharāpetvā vā taṁ pakkamantī neva uddhareyya, na uddharāpeyya, anāpucchaṁ vā gaccheyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#181.0">Pācittiya 112. Anupakhajjasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghike vihāre jānaṁ pubbupagataṁ bhikkhuniṁ anupakhajja seyyaṁ kappeyya, “yassā sambādho bhavissati, sā pakkamissatī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#182.0">Pācittiya 113. Nikkaḍḍhanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ kupitā anattamanā saṅghikā vihārā nikkaḍḍheyya vā nikkaḍḍhāpeyya vā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#183.0">Pācittiya 114. Vehāsakuṭisikkhāpadaṁ</a> Yā pana bhikkhunī saṅghike vihāre uparivehāsakuṭiyā āhaccapādakaṁ mañcaṁ vā pīṭhaṁ vā abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#184.0">Pācittiya 115. Mahallakavihārasikkhāpadaṁ</a> Mahallakaṁ pana bhikkhuniyā vihāraṁ kārayamānāya yāva dvārakosā aggaḷaṭṭhapanāya, ālokasandhiparikammāya dvatticchadanassa pariyāyaṁ appaharite ṭhitāya adhiṭṭhātabbaṁ. Tato ce uttari appaharitepi ṭhitā adhiṭṭhaheyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#185.0">Pācittiya 116. Sappāṇakasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ sappāṇakaṁ udakaṁ tiṇaṁ vā mattikaṁ vā siñceyya vā siñcāpeyya vā, pācittiyaṁ. 
+</span>
+</div>
+         
+
+           <div class="level4 my-3">
+ <span class="level5">Bhūtagāmavaggo ekādasamo. </span>
+</div> 
+
+</div> 
+         </div>
+   <!-- vagga end -->   
+   
+      <!-- vagga begin -->     
+              <div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pc12Collapse">+</span>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#186.0.1"><h4>12. Bhojanavaggo </h4></a>
+</div>
+              </div>
+              <div class="collapse" id="pc12Collapse">
+                <div class="my-3">
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#186.0.2">Pācittiya 117. Āvasathapiṇḍasikkhāpadaṁ</a> Agilānāya bhikkhuniyā eko āvasathapiṇḍo bhuñjitabbo. Tato ce uttari bhuñjeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#187.0">Pācittiya 118. Gaṇabhojanasikkhāpadaṁ</a> Gaṇabhojane aññatra samayā pācittiyaṁ. Tatthāyaṁ samayo, gilānasamayo, cīvaradānasamayo , cīvarakārasamayo, addhānagamanasamayo, nāvābhiruhanasamayo, mahāsamayo, samaṇabhattasamayo, ayaṁ tattha samayo.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#188.0">Pācittiya 119. Kāṇamātusikkhāpadaṁ</a> Bhikkhuniṁ paneva kulaṁ upagataṁ pūvehi vā manthehi vā abhihaṭṭhuṁ pavāreyya, ākaṅkhamānāya bhikkhuniyā dvattipattapūrā paṭiggahetabbā. Tato ce uttari paṭiggaṇheyya, pācittiyaṁ. Dvattipattapūre paṭiggahetvā tato nīharitvā bhikkhunīhi saddhiṁ saṁvibhajitabbaṁ, ayaṁ tattha sāmīci.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#189.0">Pācittiya 120. Vikālabhojanasikkhāpadaṁ</a> Yā pana bhikkhunī vikāle khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#190.0">Pācittiya 121. Sannidhikārakasikkhāpadaṁ</a> Yā pana bhikkhunī sannidhikārakaṁ khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#191.0">Pācittiya 122. Dantaponasikkhāpadaṁ</a> Yā pana bhikkhunī adinnaṁ mukhadvāraṁ āhāraṁ āhareyya aññatra udakadantaponā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#192.0">Pācittiya 123. Uyyojanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ, “ehāyye, gāmaṁ vā nigamaṁ vā piṇḍāya pavisissāmā”ti tassā dāpetvā vā adāpetvā vā uyyojeyya, “gacchāyye, na me tayā saddhiṁ kathā vā nisajjā vā phāsu hoti, ekikāya me kathā vā nisajjā vā phāsu hotī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#193.0">Pācittiya 124. Sabhojanasikkhāpadaṁ</a> Yā pana bhikkhunī sabhojane kule anupakhajja nisajjaṁ kappeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#194.0">Pācittiya 125. Rahopaṭicchannasikkhāpadaṁ</a> Yā pana bhikkhunī purisena saddhiṁ raho paṭicchanne āsane nisajjaṁ kappeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#195.0">Pācittiya 126. Rahonisajjasikkhāpadaṁ</a> Yā pana bhikkhunī purisena saddhiṁ ekenekā raho nisajjaṁ kappeyya, pācittiyaṁ. 
+</span>
+</div>
+                                
+
+           <div class="level4 my-3">
+ <span class="level5">Bhojanavaggo dvādasamo. </span>
+</div> 
+
+</div> 
+         </div>
+   <!-- vagga end -->   
+   
+      <!-- vagga begin -->     
+              <div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pc13Collapse">+</span>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#196.0.1"><h4>13. Cārittavaggo </h4></a>
+</div>
+              </div>
+              <div class="collapse" id="pc13Collapse">
+                <div class="my-3">
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#196.0.2">Pācittiya 127. Cārittasikkhāpadaṁ</a> Yā pana bhikkhunī nimantitā sabhattā samānā santiṁ bhikkhuniṁ anāpucchā purebhattaṁ vā pacchābhattaṁ vā kulesu cārittaṁ āpajjeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, cīvaradānasamayo, cīvarakārasamayo, ayaṁ tattha samayo.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#197.0">Pācittiya 128. Mahānāmasikkhāpadaṁ</a> Agilānāya bhikkhuniyā catumāsappaccayapavāraṇā sāditabbā aññatra punapavāraṇāya, aññatra niccapavāraṇāya. Tato ce uttari sādiyeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#198.0">Pācittiya 129. Uyyuttasenāsikkhāpadaṁ</a> Yā pana bhikkhunī uyyuttaṁ senaṁ dassanāya gaccheyya aññatra tathārūpappaccayā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#199.0">Pācittiya 130. Senāvāsasikkhāpadaṁ</a> Siyā ca tassā bhikkhuniyā kocideva paccayo senaṁ gamanāya, dirattatirattaṁ tāya bhikkhuniyā senāya vasitabbaṁ. Tato ce uttari vaseyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#200.0">Pācittiya 131. Uyyodhikasikkhāpadaṁ</a> Dirattatirattaṁ ce bhikkhunī senāya vasamānā uyyodhikaṁ vā balaggaṁ vā senābyūhaṁ vā anīkadassanaṁ vā gaccheyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#201.0">Pācittiya 132. Surāpānasikkhāpadaṁ</a> Surāmerayapāne pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#202.0">Pācittiya 133. Aṅgulipatodakasikkhāpadaṁ</a> Aṅgulipatodake pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#203.0">Pācittiya 134. Hasadhammasikkhāpadaṁ</a> Udake hasadhamme pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#204.0">Pācittiya 135. Anādariyasikkhāpadaṁ</a> Anādariye pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#205.0">Pācittiya 136. Bhiṁsāpanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ bhiṁsāpeyya, pācittiyaṁ. 
+</span>
+</div>
+                  
+           <div class="level4 my-3">
+ <span class="level5">Cārittavaggo terasamo. </span>
 </div> 
 
 </div> 
@@ -1306,16 +1611,229 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
    <!-- vagga end -->   
    
    
+         <!-- vagga begin -->     
+              <div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pc14Collapse">+</span>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#206.0.1"><h4>14. Jotivaggo </h4></a>
+</div>
+              </div>
+              <div class="collapse" id="pc14Collapse">
+                <div class="my-3">
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#206.0.2">Pācittiya 137. Jotisikkhāpadaṁ</a> Yā pana bhikkhunī agilānā visibbanāpekkhā jotiṁ samādaheyya vā samādahāpeyya vā aññatra tathārūpappaccayā, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#207.0">Pācittiya 138. Nahānasikkhāpadaṁ</a> Yā pana bhikkhunī orenaddhamāsaṁ nahāyeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo “diyaḍḍho māso seso gimhāna”nti “vassānassa paṭhamo māso” iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo, kammasamayo, addhānagamanasamayo, vātavuṭṭhisamayo, ayaṁ tattha samayo.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#208.0">Pācittiya 139. Dubbaṇṇakaraṇasikkhāpadaṁ</a> Navaṁ pana bhikkhuniyā cīvaralābhāya tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ ādātabbaṁ nīlaṁ vā kaddamaṁ vā kāḷasāmaṁ vā. Anādā ce bhikkhunī tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ navaṁ cīvaraṁ paribhuñjeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#209.0">Pācittiya 140. Vikappanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhussa vā bhikkhuniyā vā sikkhamānāya vā sāmaṇerassa vā sāmaṇeriyā vā sāmaṁ cīvaraṁ vikappetvā apaccuddhāraṇaṁ paribhuñjeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#210.0">Pācittiya 141. Apanidhāpanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā pattaṁ vā cīvaraṁ vā nisīdanaṁ vā sūcigharaṁ vā kāyabandhanaṁ vā apanidheyya vā apanidhāpeyya vā antamaso hasāpekkhāpi, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#211.0">Pācittiya 142. Sañciccasikkhāpadaṁ</a> Yā pana bhikkhunī sañcicca pāṇaṁ jīvitā voropeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#212.0">Pācittiya 143. Sappāṇakasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ sappāṇakaṁ udakaṁ paribhuñjeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#213.0">Pācittiya 144. Ukkoṭanasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ yathādhammaṁ nihatādhikaraṇaṁ punakammāya ukkoṭeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#214.0">Pācittiya 145. Theyyasatthasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ theyyasatthena saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#215.0">Pācittiya 146. Ariṭṭhasikkhāpadaṁ</a> Yā pana bhikkhunī evaṁ vadeyya: “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti. Sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāyye antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya. Yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, pācittiyaṁ. 
+</span>
+</div>
+                                                   
+
            <div class="level4 my-3">
- <span class="level5">Uddiṭṭhā kho āyasmanto dvenavuti pācittiyā dhammā.
-Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+ <span class="level5">Jotivaggo cuddasamo. </span>
+</div> 
+
+</div> 
+         </div>
+   <!-- vagga end -->  
+   
+   
+         <!-- vagga begin -->     
+              <div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pc15Collapse">+</span>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#216.0.1"><h4>15. Diṭṭhivaggo </h4></a>
+</div>
+              </div>
+              <div class="collapse" id="pc15Collapse">
+                <div class="my-3">
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#216.0.2">Pācittiya 147. Ukkhittasambhogasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ tathāvādiniyā bhikkhuniyā akaṭānudhammāya taṁ diṭṭhiṁ appaṭinissaṭṭhāya saddhiṁ sambhuñjeyya vā, saṁvaseyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#217.0">Pācittiya 148. Kaṇṭakasikkhāpadaṁ</a> Samaṇuddesāpi ce evaṁ vadeyya: “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti. Sā samaṇuddesā bhikkhunīhi evamassa vacanīyā: “māyye, samaṇuddese evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāyye, samaṇuddese antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti. Evañca sā samaṇuddesā bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā samaṇuddesā bhikkhunīhi evamassa vacanīyā: “ajjatagge te, ayye, samaṇuddese na ceva so bhagavā satthā apadisitabbo, yampi caññā samaṇuddesā labhanti bhikkhunīhi saddhiṁ dirattatirattaṁ sahaseyyaṁ, sāpi te natthi, cara pire, vinassā”ti. Yā pana bhikkhunī jānaṁ tathānāsitaṁ samaṇuddesaṁ upalāpeyya vā, upaṭṭhāpeyya vā, sambhuñjeyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#218.0">Pācittiya 149. Sahadhammikasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhunīhi sahadhammikaṁ vuccamānā evaṁ vadeyya: “na tāvāhaṁ, ayye, etasmiṁ sikkhāpade sikkhissāmi, yāva na aññaṁ bhikkhuniṁ byattaṁ vinayadharaṁ paripucchāmī”ti, pācittiyaṁ. Sikkhamānāya, bhikkhave, bhikkhuniyā aññātabbaṁ paripucchitabbaṁ paripañhitabbaṁ, ayaṁ tattha sāmīci.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#219.0">Pācittiya 150. Vilekhanasikkhāpadaṁ</a> Yā pana bhikkhunī pātimokkhe uddissamāne evaṁ vadeyya: “kiṁ panimehi khuddānukhuddakehi sikkhāpadehi uddiṭṭhehi, yāvadeva kukkuccāya vihesāya vilekhāya saṁvattantī”ti, sikkhāpadavivaṇṇake pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#220.0">Pācittiya 151. Mohanasikkhāpadaṁ</a> Yā pana bhikkhunī anvaddhamāsaṁ pātimokkhe uddissamāne evaṁ vadeyya: “idāneva kho ahaṁ, ayye, jānāmi ayampi kira dhammo suttāgato suttapariyāpanno anvaddhamāsaṁ uddesaṁ āgacchatī”ti, tañce bhikkhuniṁ aññā bhikkhuniyo jāneyyuṁ nisinnapubbaṁ imāya bhikkhuniyā dvattikkhattuṁ pātimokkhe uddissamāne, ko pana vādo bhiyyo, na ca tassā bhikkhuniyā aññāṇakena mutti atthi, yañca tattha āpattiṁ āpannā, tañca yathādhammo kāretabbo, uttari cassā moho āropetabbo: “tassā te, ayye, alābhā, tassā te dulladdhaṁ, yaṁ tvaṁ pātimokkhe uddissamāne na sādhukaṁ aṭṭhiṁ katvā manasi karosī”ti, idaṁ tasmiṁ mohanake pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#221.0">Pācittiya 152. Pahārasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā kupitā anattamanā pahāraṁ dadeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#222.0">Pācittiya 153. Talasattikasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā kupitā anattamanā talasattikaṁ uggireyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#223.0">Pācittiya 154. Amūlakasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ amūlakena saṅghādisesena anuddhaṁseyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#224.0">Pācittiya 155. Sañciccasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā sañcicca kukkuccaṁ upadaheyya, “itissā muhuttampi aphāsu bhavissatī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#225.0">Pācittiya 156. Upassuti sikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhunīnaṁ bhaṇḍanajātānaṁ kalahajātānaṁ vivādāpannānaṁ upassutiṁ tiṭṭheyya, “yaṁ imā bhaṇissanti, taṁ sossāmī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ. 
+</span>
+</div>
+                                                         
+
+           <div class="level4 my-3">
+ <span class="level5">Diṭṭhivaggo pannarasamo. </span>
+</div> 
+
+</div> 
+         </div>
+   <!-- vagga end -->  
+   
+           <!-- vagga begin -->     
+              <div class="level3">
+			<div class="level3 d-flex align-items-center">
+  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#pc16Collapse">+</span>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#226.0.1"><h4>16. Dhammikavaggo</h4></a>
+</div>
+              </div>
+              <div class="collapse" id="pc16Collapse">
+                <div class="my-3">
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#226.0.2">Pācittiya 157. Kammappaṭibāhanasikkhāpadaṁ</a> Yā pana bhikkhunī dhammikānaṁ kammānaṁ chandaṁ datvā pacchā khīyanadhammaṁ āpajjeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#227.0">Pācittiya 158. Chandaṁadatvāgamanasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghe vinicchayakathāya vattamānāya chandaṁ adatvā uṭṭhāyāsanā pakkameyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#228.0">Pācittiya 159. Dubbalasikkhāpadaṁ</a> Yā pana bhikkhunī samaggena saṅghena cīvaraṁ datvā pacchā khīyanadhammaṁ āpajjeyya, “yathāsanthutaṁ bhikkhuniyo saṅghikaṁ lābhaṁ pariṇāmentī”ti, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#229.0">Pācittiya 160. Pariṇāmanasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ puggalassa pariṇāmeyya, pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#230.0">Pācittiya 161. Ratanasikkhāpadaṁ</a> Yā pana bhikkhunī ratanaṁ vā ratanasammataṁ vā aññatra ajjhārāmā vā ajjhāvasathā vā uggaṇheyya vā uggaṇhāpeyya vā, pācittiyaṁ. Ratanaṁ vā pana bhikkhuniyā ratanasammataṁ vā ajjhārāme vā ajjhāvasathe vā uggahetvā vā uggahāpetvā vā nikkhipitabbaṁ, “yassa bhavissati, so harissatī”ti, ayaṁ tattha sāmīci.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#231.0">Pācittiya 162. Sūcigharasikkhāpadaṁ</a> Yā pana bhikkhunī aṭṭhimayaṁ vā dantamayaṁ vā visāṇamayaṁ vā sūcigharaṁ kārāpeyya, bhedanakaṁ pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#232.0">Pācittiya 163. Mañcapīṭhasikkhāpadaṁ</a> Navaṁ pana bhikkhuniyā mañcaṁ vā pīṭhaṁ vā kārayamānāya aṭṭhaṅgulapādakaṁ kāretabbaṁ sugataṅgulena aññatra heṭṭhimāya aṭaniyā. Taṁ atikkāmentiyā chedanakaṁ pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#233.0">Pācittiya 164. Tūlonaddhasikkhāpadaṁ</a> Yā pana bhikkhunī mañcaṁ vā pīṭhaṁ vā tūlonaddhaṁ kārāpeyya, uddālanakaṁ pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#234.0">Pācittiya 165. Kaṇḍuppaṭicchādisikkhāpadaṁ</a> Kaṇḍuppaṭicchādiṁ pana bhikkhuniyā kārayamānāya pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso catasso vidatthiyo sugatavidatthiyā, tiriyaṁ dve vidatthiyo. Taṁ atikkāmentiyā chedanakaṁ pācittiyaṁ.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#235.0">Pācittiya 166. Nandasikkhāpadaṁ</a> Yā pana bhikkhunī sugatacīvarappamāṇaṁ cīvaraṁ kārāpeyya, atirekaṁ vā, chedanakaṁ pācittiyaṁ. Tatridaṁ sugatassa sugatacīvarappamāṇaṁ, dīghaso nava vidatthiyo sugatavidatthiyā, tiriyaṁ cha vidatthiyo, idaṁ sugatassa sugatacīvarappamāṇanti. 
+</span>
+</div>
+                                                      
+           <div class="level4 my-3">
+ <span class="level5">Dhammikavaggo soḷasamo. </span>
+</div> 
+
+</div> 
+         </div>
+   <!-- vagga end -->   
+           <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho, ayyāyo, chasaṭṭhisatā pācittiyā dhammā.
+Tatthāyyāyo pucchāmi, kaccittha parisuddhā,
 dutiyampi pucchāmi, kaccittha parisuddhā,
 tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
+parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
+
 </span>
 </div> 
            <div class="level4 my-3">
- <span class="level5">Pācittiyā niṭṭhitā </span>
+ <span class="level5">Pācittiyā niṭṭhitā. </span>
 </div> 
              
            </div> <!-- mt div -->
@@ -1333,43 +1851,53 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
             <div class="mt-3">
    
            <div class="level4 my-3">
- <span class="level5">Ime kho panāyasmanto cattāro pāṭidesanīyā dhammā uddesaṁ āgacchanti. </span>
+ <span class="level5">Ime kho panāyyāyo aṭṭha pāṭidesanīyā dhammā uddesaṁ āgacchanti. </span>
 </div>              
               
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#160.0">Pāṭidesanīya 1. Paṭhamapāṭidesanīya</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pd1#1.35.0">vb</a> Yo pana bhikkhu aññātikāya bhikkhuniyā antaragharaṁ paviṭṭhāya hatthato khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā “gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#238.0">Pāṭidesanīya 1. Sappiviññāpanasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-pd1#1.2.9.0">vb</a> Yā pana bhikkhunī agilānā sappiṁ viññāpetvā bhuñjeyya, paṭidesetabbaṁ tāya bhikkhuniyā: “gārayhaṁ, ayye, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#161.0">Pāṭidesanīya 2. Dutiyapāṭidesanīya</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pd2#1.15.0">vb</a> Bhikkhū paneva kulesu nimantitā bhuñjanti, tatra ce sā bhikkhunī vosāsamānarūpā ṭhitā hoti “idha sūpaṁ detha, idha odanaṁ dethā”ti. Tehi bhikkhūhi sā bhikkhunī apasādetabbā “apasakka tāva bhagini, yāva bhikkhū bhuñjantī”ti. Ekassapi ce bhikkhuno na paṭibhāseyya taṁ bhikkhuniṁ apasādetuṁ “apasakka tāva bhagini, yāva bhikkhū bhuñjantī”ti, paṭidesetabbaṁ tehi bhikkhūhi “gārayhaṁ, āvuso, dhammaṁ āpajjimhā asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemā”ti. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#239.0">Pāṭidesanīya 2. Telaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā telaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#162.0">Pāṭidesanīya 3. Tatiyapāṭidesanīya</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pd3#3.15.0">vb</a> Yāni kho pana tāni sekkhasammatāni kulāni, yo pana bhikkhu tathārūpesu sekkhasammatesu kulesu pubbe animantito agilāno khādanīyaṁ vā, bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā, bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā “gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#240.0">Pāṭidesanīya 3. Madhuviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā madhuṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#163.0">Pāṭidesanīya 4. Catutthapāṭidesanīya</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pd4#2.12.0">vb</a> Yāni kho pana tāni āraññakāni senāsanāni sāsaṅkasammatāni sappaṭibhayāni, yo pana bhikkhu tathārūpesu senāsanesu pubbe appaṭisaṁviditaṁ khādanīyaṁ vā, bhojanīyaṁ vā ajjhārāme sahatthā paṭiggahetvā agilāno khādeyya vā, bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā “gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti. 
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#241.0">Pāṭidesanīya 4. Phāṇitaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā phāṇitaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
 </span>
 </div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#242.0">Pāṭidesanīya 5. Macchaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā macchaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#243.0">Pāṭidesanīya 6. Maṁsaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā maṁsaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#244.0">Pāṭidesanīya 7. Khīraviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā khīraṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#245.0">Pāṭidesanīya 8. Dadhiviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā dadhiṁ viññāpetvā bhuñjeyya, paṭidesetabbaṁ tāya bhikkhuniyā: “gārayhaṁ, ayye, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.
+</span>
+</div>
+                              
            <div class="level4 my-3">
- <span class="level5">Uddiṭṭhā kho āyasmanto cattāro pāṭidesanīyā dhammā.
-Tatthāyasmante pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
-</span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5">Pāṭidesanīyā niṭṭhitā </span>
+ <span class="level5">Pāṭidesanīyā niṭṭhitā. </span>
 </div> 
              
            </div> <!-- mt div -->
@@ -1378,7 +1906,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#skCollapse">+</span>
-			<a  data-bs-toggle="collapse" data-bs-target="#skCollapse" href=""><h3>Sekhiya</h3></a>
+			<a  data-bs-toggle="collapse" data-bs-target="#skCollapse" href=""><h3>Sekhiyā</h3></a>
 			
 			<!--<?php echo $mainscpage; ?>/?q=bi-pm#165.0 -->
 </div>
@@ -1386,50 +1914,70 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
             <div class="mt-3">
   
            <div class="level4 my-3">
- <span class="level5">Ime kho panāyasmanto sekhiyā dhammā uddesaṁ āgacchanti. </span>
+ <span class="level5">Ime kho panāyyāyo, sekhiyā dhammā uddesaṁ āgacchanti. </span>
 </div> 
      <!-- vagga begin -->     
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk1Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#166.0.1"><h4>1. Parimaṇḍalavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#248.0.1"><h4>1. Parimaṇḍalavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="sk1Collapse">
                 <div class="my-3">
-          <div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#166.0.2">Sekhiya 1. Parimaṇḍala</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk1#1.16.1">vb</a> Parimaṇḍalaṁ nivāsessāmīti sikkhā karaṇīyā. </span>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#248.0.2">Sekhiya 1. Parimaṇḍalasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-sk1#1.14.0">vb</a> Parimaṇḍalaṁ nivāsessāmīti sikkhā karaṇīyā.
+</span>
 </div>
 <div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#167.0">Sekhiya 2.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk2#1.3.1">vb</a> Parimaṇḍalaṁ pārupissāmīti sikkhā karaṇīyā. </span>
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#249.0">Sekhiya 2. Dutiyaparimaṇḍalasikkhāpadaṁ</a> Parimaṇḍalaṁ pārupissāmīti sikkhā karaṇīyā.
+</span>
 </div>
 <div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#168.0">Sekhiya 3. Suppaṭicchanna</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk3#1.3.1">vb</a> Suppaṭicchanno antaraghare gamissāmīti sikkhā karaṇīyā. </span>
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#250.0">Sekhiya 3. Suppaṭicchannasikkhāpadaṁ</a> Suppaṭicchannā antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
 </div>
 <div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#169.0">Sekhiya 4.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk4#1.3.1">vb</a> Suppaṭicchanno antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#251.0">Sekhiya 4. Dutiyasuppaṭicchannasikkhāpadaṁ</a> Suppaṭicchannā antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#252.0">Sekhiya 5. Susaṁvutasikkhāpadaṁ</a> Susaṁvutā antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#253.0">Sekhiya 6. Dutiyasusaṁvutasikkhāpadaṁ</a> Susaṁvutā antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#254.0">Sekhiya 7. Okkhittacakkhusikkhāpadaṁ</a> Okkhittacakkhunī antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#255.0">Sekhiya 8. Dutiya-okkhittacakkhusikkhāpadaṁ</a> Okkhittacakkhunī antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#256.0">Sekhiya 9. Ukkhittakasikkhāpadaṁ</a> Na ukkhittakāya antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#257.0">Sekhiya 10. Dutiya-ukkhittakasikkhāpadaṁ</a> Na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā. Parimaṇḍalavaggo paṭhamo.
+</span>
 </div>
 
-<div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#170.0">Sekhiya 5. Susaṁvuta</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk5#1.3.1">vb</a> Susaṁvuto antaraghare gamissāmīti sikkhā karaṇīyā. </span>
-</div>
-
-<div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#171.0">Sekhiya 6.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk6#1.3.1">vb</a> Susaṁvuto antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#172.0">Sekhiya 7. Okkhittacakkhu </a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk7#1.3.1">vb</a> Okkhittacakkhu antaraghare gamissāmīti sikkhā karaṇīyā.  </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#173.0">Sekhiya 8.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk8#1.3.1">vb</a> Okkhittacakkhu antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#174.0">Sekhiya 9. Ukkhittaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk9#1.3.1">vb</a> Na ukkhittakāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>
-</div>
-<div class="level4">
- <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#175.0">Sekhiya 10.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk10#1.3.1">vb</a> Na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā.  </span>
-</div>
 
            <div class="level4 my-3">
  <span class="level5">Parimaṇḍalavaggo paṭhamo  </span>
@@ -1442,36 +1990,143 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               
            <!-- vagga end -->
   
-       <!-- vagga begin -->     
+
+   <!-- vagga begin -->     
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk2Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#166.0.1"><h4>2. Ujjagghikavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#258.0.1"><h4>2. Ujjagghikavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="sk2Collapse">
                 <div class="my-3">
-<div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#176.0.2">Sekhiya 11. Ujjagghika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk11#1.3.1">vb</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#178.0">Sekhiya 12.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk12#1.3.1">vb</a> Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#179.0">Sekhiya 13. Uccasadda</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk13#1.3.1">vb</a> Appasaddo antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#180.0">Sekhiya 14.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk14#1.3.1">vb</a> Appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#181.0">Sekhiya 15. Kāyappacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk15#1.3.1">vb</a> Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#182.0">Sekhiya 16.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk16#1.3.1">vb</a> Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#183.0">Sekhiya 17. Bāhuppacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk17#1.3.1">vb</a> Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#184.0">Sekhiya 18.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk18#1.3.1">vb</a> Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#185.0">Sekhiya 19. Sīsappacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk19#1.3.1">vb</a> Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#186.0">Sekhiya 20.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk20#1.3.1">vb</a> Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>
-    <div class="level4 my-3">
- <span class="level5">Ujjagghikavaggo dutiyo </span>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#258.0.2">Sekhiya 11. Ujjagghikasikkhāpadaṁ</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#259.0">Sekhiya 12. Dutiya-ujjagghikasikkhāpadaṁ</a> Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#260.0">Sekhiya 13. Uccasaddasikkhāpadaṁ</a> Appasaddā antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#261.0">Sekhiya 14. Dutiya-uccasaddasikkhāpadaṁ</a> Appasaddā antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#262.0">Sekhiya 15. Kāyappacālakasikkhāpadaṁ</a> Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#263.0">Sekhiya 16. Dutiyakāyappacālakasikkhāpadaṁ</a> Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#264.0">Sekhiya 17. Bāhuppacālakasikkhāpadaṁ</a> Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#265.0">Sekhiya 18. Dutiyabāhuppacālakasikkhāpadaṁ</a> Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#266.0">Sekhiya 19. Sīsappacālakasikkhāpadaṁ</a> Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#267.0">Sekhiya 20. Dutiyasīsappacālakasikkhāpadaṁ</a> Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. 
+</span>
+
+           <div class="level4 my-3">
+ <span class="level5">Ujjagghikavaggo dutiyo. </span>
 </div> 
-</div>
-</div>
-<!-- vagga end -->
+
+</div> 
+         </div>
+              </div>
+              
+           <!-- vagga end -->
+
+
      <!-- vagga -->
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk3Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#187.0.1"><h4>3. Khambhakatavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#268.0.1"><h4>3. Khambhakatavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="sk3Collapse">
                 <div class="my-3">
-<div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#187.0.2">Sekhiya 21. Khambhakata</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk21#1.3.1">vb</a> Na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#188.0">Sekhiya 22.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk22#1.3.1">vb</a> Na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#189.0">Sekhiya 23. Oguṇṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk23#1.3.1">vb</a> Na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#190.0">Sekhiya 24.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk24#1.3.1">vb</a> Na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#192.0">Sekhiya 25. Ukkuṭika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk25#1.3.1">vb</a> Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#193.0">Sekhiya 26. Pallatthika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk26#1.3.1">vb</a> Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#194.0">Sekhiya 27. Sakkaccapaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk27#1.3.1">vb</a> Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#195.0">Sekhiya 28. Pattasaññīpaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk28#1.3.1">vb</a> Pattasaññī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#196.0">Sekhiya 29. Samasūpakapaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk29#1.3.1">vb</a> Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#197.0">Sekhiya 30. Samatittika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk30#1.3.1">vb</a> Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                               </div>
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#268.0.2">Sekhiya 21. Khambhakatasikkhāpadaṁ</a> Na khambhakatā antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#269.0">Sekhiya 22. Dutiyakhambhakatasikkhāpadaṁ</a> Na khambhakatā antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#270.0">Sekhiya 23. Oguṇṭhitasikkhāpadaṁ</a> Na oguṇṭhitā antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#271.0">Sekhiya 24. Dutiya-oguṇṭhitasikkhāpadaṁ</a> Na oguṇṭhitā antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#272.0">Sekhiya 25. Ukkuṭikasikkhāpadaṁ</a> Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#273.0">Sekhiya 26. Pallatthikasikkhāpadaṁ</a> Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#274.0">Sekhiya 27. Sakkaccapaṭiggahaṇasikkhāpadaṁ</a> Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#275.0">Sekhiya 28. Pattasaññinīpaṭiggahaṇasikkhāpadaṁ</a> Pattasaññinī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#276.0">Sekhiya 29. Samasūpakapaṭiggahaṇasikkhāpadaṁ</a> Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#277.0">Sekhiya 30. Samatittikasikkhāpadaṁ</a> Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+                   
+
            <div class="level4 my-3">
- <span class="level5">Khambhakatavaggo tatiyo </span>
+ <span class="level5">Khambhakatavaggo tatiyo. </span>
 </div> 
          </div>
               </div>
@@ -1482,14 +2137,66 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk4Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#199.0.1"><h4>4. Sakkaccavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#278.0.1"><h4>4. Sakkaccavaggo  </h4></a>
 </div>
 </div>
               <div class="collapse" id="sk4Collapse">
                 <div class="my-3 ">
-<div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#199.0.2">Sekhiya 31. Sakkaccabhuñjana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk31#1.3.1">vb</a> Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#200.0">Sekhiya 32. Pattasaññībhuñjana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk32#1.3.1">vb</a> Pattasaññī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#201.0">Sekhiya 33. Sapadāna</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk33#1.3.1">vb</a> Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#202.0">Sekhiya 34. Samasūpaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk34#1.3.1">vb</a> Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#203.0">Sekhiya 35. Nathūpakata</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk35#1.3.1">vb</a> Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#204.0">Sekhiya 36. Odanappaṭicchādana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk36#1.3.1">vb</a> Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā. </span>       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#205.0">Sekhiya 37. Sūpodanaviññatti</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk37#2.10.1">vb</a> Na sūpaṁ vā odanaṁ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#206.0">Sekhiya 38. Ujjhānasaññī</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk38#1.3.1">vb</a> Na ujjhānasaññī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#207.0">Sekhiya 39. Kabaḷa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk39#1.3.1">vb</a> Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā. </span>                                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#208.0">Sekhiya 40. Ālopa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk40#1.3.1">vb</a> Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. </span>                                                              </div>
+
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#278.0.2">Sekhiya 31. Sakkaccabhuñjanasikkhāpadaṁ</a> Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#279.0">Sekhiya 32. Pattasaññinībhuñjanasikkhāpadaṁ</a> Pattasaññinī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#280.0">Sekhiya 33. Sapadānasikkhāpadaṁ</a> Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#281.0">Sekhiya 34. Samasūpakasikkhāpadaṁ</a> Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#282.0">Sekhiya 35. Na thūpakatasikkhāpadaṁ</a> Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#283.0">Sekhiya 36. Odanappaṭicchādanasikkhāpadaṁ</a> Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#284.0">Sekhiya 37. Sūpodanaviññattisikkhāpadaṁ</a> Na sūpaṁ vā odanaṁ vā agilānā attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#285.0">Sekhiya 38. Ujjhānasaññinīsikkhāpadaṁ</a> Na ujjhānasaññinī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#286.0">Sekhiya 39. Kabaḷasikkhāpadaṁ</a> Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#287.0">Sekhiya 40. Ālopasikkhāpadaṁ</a> Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. 
+</span>
+</div>
+                      
            <div class="level4 my-3">
- <span class="level5">Sakkaccavaggo catuttho </span>
+ <span class="level5">Sakkaccavaggo catuttho. </span>
 </div>    
                 </div>	  		
               </div>	  
@@ -1498,15 +2205,65 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk5Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#209.0.1"><h4>5. Kabaḷavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#288.0.1"><h4>5. Kabaḷavaggo </h4></a>
 </div>
 </div>
               <div class="collapse" id="sk5Collapse">
                 <div class="my-3">
-<div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#209.0.2">Sekhiya 41. Anāhaṭa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk41#1.3.1">vb</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#210.0">Sekhiya 42. Bhuñjamāna</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk42#">vb</a> Na bhuñjamāno sabbahatthaṁ mukhe pakkhipissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#211.0">Sekhiya 43. Sakabaḷa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk43#1.3.1">vb</a> Na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā. </span>                                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#212.0">Sekhiya 44. Piṇḍukkhepaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk44#1.3.1">vb</a> Na piṇḍukkhepakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#213.0">Sekhiya 45. Kabaḷāvacchedaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk45#1.3.1">vb</a> Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#214.0">Sekhiya 46. Avagaṇḍakāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk46#1.3.1">vb</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#215.0">Sekhiya 47. Hatthaniddhunaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk47#1.3.1">vb</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#216.0">Sekhiya 48. Sitthāvakāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk48#1.3.1">vb</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#217.0">Sekhiya 49. Jivhānicchāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk49#1.3.1">vb</a> Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                  </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#218.0">Sekhiya 50. Capucapukāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk50#1.3.1">vb</a> Na capucapukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#288.0.2">Sekhiya 41. Anāhaṭasikkhāpadaṁ</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#289.0">Sekhiya 42. Bhuñjamānasikkhāpadaṁ</a> Na bhuñjamānā sabbahatthaṁ mukhe pakkhipissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#290.0">Sekhiya 43. Sakabaḷasikkhāpadaṁ</a> Na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#291.0">Sekhiya 44. Piṇḍukkhepakasikkhāpadaṁ</a> Na piṇḍukkhepakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#292.0">Sekhiya 45. Kabaḷāvacchedakasikkhāpadaṁ</a> Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#293.0">Sekhiya 46. Avagaṇḍakārakasikkhāpadaṁ</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#294.0">Sekhiya 47. Hatthaniddhunakasikkhāpadaṁ</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#295.0">Sekhiya 48. Sitthāvakārakasikkhāpadaṁ</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#296.0">Sekhiya 49. Jivhānicchārakasikkhāpadaṁ</a> Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#297.0">Sekhiya 50. Capucapukārakasikkhāpadaṁ</a> Na capucapukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. 
+</span>
+</div>
+          
 
 <div class="level4 my-3">
- <span class="level5">Kabaḷavaggo pañcamo </span>
+ <span class="level5">Kabaḷavaggo pañcamo. </span>
 </div> 
  </div>
 </div>
@@ -1516,18 +2273,67 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk6Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#219.0.1"><h4>6. Surusuruvaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#298.0.1"><h4>6. Surusuruvaggo </h4></a>
 </div>
 </div>
               <div class="collapse" id="sk6Collapse">
                 <div class="my-3">
-<div class="level4">                                                    
-<span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#219.0.2">Sekhiya 51. Surusurukāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk51#1.19.1">vb</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    
-<span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#220.0">Sekhiya 52. Hatthanillehaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk52#1.3.1">vb</a> Na hatthanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                  </div>                                                             <div class="level4">                                                    
-<span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#221.0">Sekhiya 53. Pattanillehaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk53#1.3.1">vb</a> Na pattanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    
-<span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#222.0">Sekhiya 54. Oṭṭhanillehaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk54#1.3.1">vb</a> Na oṭṭhanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#223.0">Sekhiya 55. Sāmisa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk55#1.14.1">vb</a> Na sāmisena hatthena pānīyathālakaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#224.0">Sekhiya 56. Sasitthaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk56#1.14.1">vb</a> Na sasitthakaṁ pattadhovanaṁ antaraghare chaḍḍessāmīti sikkhā karaṇīyā. </span>                                 </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#225.0">Sekhiya 57. Chattapāṇi</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk57#2.9.1">vb</a> Na chattapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#226.0">Sekhiya 58. Daṇḍapāṇi</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk58#1.3.1">vb</a> Na daṇḍapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#227.0">Sekhiya 59. Satthapāṇi</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk59#1.3.1">vb</a> Na satthapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#228.0">Sekhiya 60. Āvudhapāṇi</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk60#1.3.1">vb</a> Na āvudhapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                         </div>
+
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#298.0.2">Sekhiya 51. Surusurukārakasikkhāpadaṁ</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#299.0">Sekhiya 52. Hatthanillehakasikkhāpadaṁ</a> Na hatthanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#300.0">Sekhiya 53. Pattanillehakasikkhāpadaṁ</a> Na pattanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#301.0">Sekhiya 54. Oṭṭhanillehakasikkhāpadaṁ</a> Na oṭṭhanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#302.0">Sekhiya 55. Sāmisasikkhāpadaṁ</a> Na sāmisena hatthena pānīyathālakaṁ paṭiggahessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#303.0">Sekhiya 56. Sasitthakasikkhāpadaṁ</a> Na sasitthakaṁ pattadhovanaṁ antaraghare chaḍḍessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#304.0">Sekhiya 57. Chattapāṇisikkhāpadaṁ</a> Na chattapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#305.0">Sekhiya 58. Daṇḍapāṇisikkhāpadaṁ</a> Na daṇḍapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#306.0">Sekhiya 59. Satthapāṇisikkhāpadaṁ</a> Na satthapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#307.0">Sekhiya 60. Āvudhapāṇisikkhāpadaṁ</a> Na āvudhapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. 
+</span>
+</div>
+
+
+
 <div class="level4 my-3">
- <span class="level5">Surusuruvaggo chaṭṭho </span>
+ <span class="level5">Surusuruvaggo chaṭṭho. </span>
 </div> 
                 </div>
               </div>
@@ -1538,17 +2344,92 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk7Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#229.0.1"><h4>7. Pādukavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#308.0.1"><h4>7. Pādukavaggo </h4></a>
 </div>
 </div>
 <div class="collapse" id="sk7Collapse">
                 <div class="my-3">
 
-<div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#229.0.2">Sekhiya 61. Pāduka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk61#1.3.1">vb</a> Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#230.0">Sekhiya 62. Upāhana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk62#1.3.1">vb</a> Na upāhanāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#231.0">Sekhiya 63. Yāna</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk63#1.3.1">vb</a> Na yānagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#232.0">Sekhiya 64. Sayana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk64#1.3.1">vb</a> Na sayanagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#233.0">Sekhiya 65. Pallatthika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk65#1.3.1">vb</a> Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#234.0">Sekhiya 66. Veṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk66#1.3.1">vb</a> Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#235.0">Sekhiya 67. Oguṇṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk67#1.3.1">vb</a> Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#236.0">Sekhiya 68. Chamā</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk68#1.3.1">vb</a> Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#237.0">Sekhiya 69. Nīcāsana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk69#1.46.1">vb</a> Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#238.0">Sekhiya 70. Ṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk70#1.3.1">vb</a> Na ṭhito nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#239.0">Sekhiya 71. Pacchatogamana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk71#1.3.1">vb</a> Na pacchato gacchanto purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#240.0">Sekhiya 72. Uppathenagamana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk72#1.3.1">vb</a> Na uppathena gacchanto pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#241.0">Sekhiya 73. Ṭhitouccāra</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk73#1.3.1">vb</a> Na ṭhito agilāno uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā. </span>                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#242.0">Sekhiya 74. Hariteuccāra</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk74#1.3.1">vb</a> Na harite agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bi-pm#243.0">Sekhiya 75. Udakeuccāra</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk75#2.6.1">vb</a> Na udake agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                          
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#308.0.2">Sekhiya 61. Pādukasikkhāpadaṁ</a> Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#309.0">Sekhiya 62. Upāhanasikkhāpadaṁ</a> Na upāhanāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#310.0">Sekhiya 63. Yānasikkhāpadaṁ</a> Na yānagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#311.0">Sekhiya 64. Sayanasikkhāpadaṁ</a> Na sayanagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#312.0">Sekhiya 65. Pallatthikasikkhāpadaṁ</a> Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#313.0">Sekhiya 66. Veṭhitasikkhāpadaṁ</a> Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#314.0">Sekhiya 67. Oguṇṭhitasikkhāpadaṁ</a> Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#315.0">Sekhiya 68. Chamāsikkhāpadaṁ</a> Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#316.0">Sekhiya 69. Nīcāsanasikkhāpadaṁ</a> Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#317.0">Sekhiya 70. Ṭhitāsikkhāpadaṁ</a> Na ṭhitā nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#318.0">Sekhiya 71. Pacchatogacchantīsikkhāpadaṁ</a> Na pacchato gacchantī purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#319.0">Sekhiya 72. Uppathenagacchantīsikkhāpadaṁ</a> Na uppathena gacchantī pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#320.0">Sekhiya 73. Ṭhitāuccārasikkhāpadaṁ</a> Na ṭhitā agilānā uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#321.0">Sekhiya 74. Hariteuccārasikkhāpadaṁ</a> Na harite agilānā uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā.
+</span>
+</div>
+<div class="level4">
+<span class="level5">
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#322.0">Sekhiya 75. Udakeuccārasikkhāpadaṁ</a>
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bi-vb-sk75#2.5.0">vb</a> Na udake agilānā uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. 
+</span>
 </div>
 
+
            <div class="level4 my-3">
- <span class="level5">Pādukavaggo sattamo </span>
+ <span class="level5">Pādukavaggo sattamo. </span>
 </div> 
 
                 </div>
@@ -1582,13 +2463,9 @@ Sekhiyā niṭṭhitā </span>
             <div class="mt-3">
    
            <div class="level4 my-3">
- <span class="level5">Ime kho panāyasmanto satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti.
+ <span class="level5">Ime kho panāyyāyo, satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti.
 </span>
-</div>              
-            <div class="level4 my-3">
- <span class="level5">Uppannuppannānaṁ adhikaraṇānaṁ samathāya vūpasamāya:  
-</span>
-</div>                    
+</div>                                
 
 <div class="level4">
 <span class="level5">
@@ -1633,45 +2510,42 @@ Sekhiyā niṭṭhitā </span>
 </span>
 </div>
            <div class="level4 my-3">
- <span class="level5">Uddiṭṭhā kho āyasmanto satta adhikaraṇasamathā dhammā.
-Tatthāyasmante pucchāmi, kaccittha parisuddhā,
+ <span class="level5">Uddiṭṭhā kho ayyāyo satta adhikaraṇasamathā dhammā.
+Tatthāyyāyo pucchāmi, kaccittha parisuddhā,
 dutiyampi pucchāmi, kaccittha parisuddhā,
 tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
+parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </span>
 </div> 
            <div class="level4 my-3">
- <span class="level5">Adhikaraṇasamathā niṭṭhitā </span>
+ <span class="level5">Adhikaraṇasamathā niṭṭhitā. </span>
 </div> 
-           
              
            </div> <!-- mt div -->
            
             <div class="level4 my-3">
- <span class="level5">Uddiṭṭhaṁ kho āyasmanto nidānaṁ,
-uddiṭṭhā cattāro pārājikā dhammā,
-uddiṭṭhā terasa saṅghādisesā dhammā,
-uddiṭṭhā dve aniyatā dhammā,
+ <span class="level5">Uddiṭṭhaṁ kho ayyāyo nidānaṁ
+uddiṭṭhā aṭṭha pārājikā dhammā,
+uddiṭṭhā sattarasa saṅghādisesā dhammā,
 uddiṭṭhā tiṁsa nissaggiyā pācittiyā dhammā,
-uddiṭṭhā dvenavuti pācittiyā dhammā,
-uddiṭṭhā cattāro pāṭidesanīyā dhammā,
+uddiṭṭhā chasaṭṭhi satā pācittiyā dhammā,
+uddiṭṭhā aṭṭha pāṭidesanīyā dhammā,
 uddiṭṭhā sekhiyā dhammā,
 uddiṭṭhā satta adhikaraṇasamathā dhammā.
 Ettakaṁ tassa bhagavato suttāgataṁ suttapariyāpannaṁ anvaddhamāsaṁ uddesaṁ āgacchati.
-Tattha sabbeheva samaggehi sammodamānehi avivadamānehi sikkhitabbanti.
+Tattha sabbāheva samaggāhi sammodamānāhi avivadamānāhi sikkhitabbanti.
 </span>
 </div> 
                     
 <div class="level4 my-3">
- <span class="level5">Vitthāruddeso pañcamo.
+ <span class="level5">Vitthāruddeso catuttho. </span>
+</div> 
+<div class="level4 my-3">
+ <span class="level5">Bhikkhunipātimokkhaṁ niṭṭhitaṁ.
  </span>
 </div> 
 <div class="level4 my-3">
- <span class="level5">Bhikkhupātimokkhaṁ niṭṭhitaṁ
- </span>
-</div> 
-<div class="level4 my-3">
- <span class="level5">Namo tassa bhagavato arahato sammāsambuddhassa    
+ <span class="level5">Namo tassa bhagavato arahato sammāsambuddhassa   
  </span>
 </div> 
    
@@ -1683,6 +2557,3 @@ Tattha sabbeheva samaggehi sammodamānehi avivadamānehi sikkhitabbanti.
 
 
     </div>
-  </div>
-</div>
-<div class="mb-5"></div>

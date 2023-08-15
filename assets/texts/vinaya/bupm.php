@@ -1696,6 +1696,4 @@ Tattha sabbeheva samaggehi sammodamānehi avivadamānehi sikkhitabbanti.
 
 
     </div>
-  </div>
-</div>
-<div class="mb-5"></div>
+

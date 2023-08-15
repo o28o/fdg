@@ -43,7 +43,9 @@ include '../../scripts/opentexts.php';
 include $basedir . "/assets/texts/vinaya/bupm.php";
 ?>
 
-
+  </div>
+</div>
+<div class="mb-5"></div>
 <script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
 <script src="/assets/js/pmjs.js"></script>
 </body>

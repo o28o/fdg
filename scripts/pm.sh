@@ -25,23 +25,29 @@ bupmruleid=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA0 "|$typ
   fullruletext=$(jq -r 'to_entries[] | "\(.key)|\(.value)"' $bupm | grep -iA30 "$type $i" | grep $bupmruleid | grep -v "$bupmruleid.0"| awk -F'|' '{print $2}' )
   
   
-vbindexfile=`find $vbtrn -name "*${typeacr}${i}_*"`
- vbindex=$(grep "Final ruling" $vbindexfile | awk -F':' '{print $2}' | sed 's/"$//' ) 
- 
- 
+vbindexfile=$(find "$vbtrn" -name "*${typeacr}${i}_*")
+
+if [ -n "$vbindexfile" ]; then
+    vbindex=$(grep "Final ruling" "$vbindexfile" | awk -F':' '{print $2}' | sed 's/"$//')
   echo '<div class="level4">
 <span class="level5">
 <a href="/ru/sc/?q=b'$mf'-pm#'$ruleindex'">'$rulename'</a> 
 <a href="/ru/sc/?q=pli-tv-b'$mf'-vb-'$typeacr$i'#'$vbindex'">vb</a> '$fullruletext'
 </span>
 </div>'
+else 
+  echo '<div class="level4">
+<span class="level5">
+<a href="/ru/sc/?q=b'$mf'-pm#'$ruleindex'">'$rulename'</a> '$fullruletext'
+</span>
+</div>'
 
+fi
 
 if [ -z "$line" ]; then
     break
   fi
-  
-  
+    
 if [ ! -z "$last" ] 
 then
 if
@@ -49,8 +55,7 @@ if
     break
   fi
 fi
-    
-  
+   
   i=$(( $i + 1 ))
 done
 

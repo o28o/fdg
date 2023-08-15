@@ -570,7 +570,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc1Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#66.0.1"><h4>1. Musāvādavaggo </h4></a>
+			<a href="<?php echo $mainscpage; ?>/?q=bi-pm#70.0.1"><h4>1. Lasuṇavaggo </h4></a>
 </div>
               </div>
               <div class="collapse" id="pc1Collapse">
@@ -633,7 +633,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level4">
 <span class="level5">
 <a href="/ru/sc/?q=bi-pm#79.0">Pācittiya 10. Naccagītasikkhāpadaṁ</a>
-<a href="/ru/sc/?q=pli-tv-bi-vb-pc10#1.15.0">vb</a> Yā pana bhikkhunī naccaṁ vā gītaṁ vā vāditaṁ vā dassanāya gaccheyya, pācittiyaṁ. Lasuṇavaggo paṭhamo.
+<a href="/ru/sc/?q=pli-tv-bi-vb-pc10#1.15.0">vb</a> Yā pana bhikkhunī naccaṁ vā gītaṁ vā vāditaṁ vā dassanāya gaccheyya, pācittiyaṁ. 
 </span>
 </div>
             

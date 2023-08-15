@@ -5,7 +5,9 @@
 <div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pkCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#5.0"><h3>Pubbakaraṇaṁ</h3></a>
+			<a data-bs-toggle="collapse" data-bs-target="#pkCollapse" href=""><h3>Pubbakaraṇaṁ</h3></a>
+			
+			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#5.0-->
 </div>
 					  <div class="collapse" id="pkCollapse"> 
             <div class="my-3">
@@ -40,7 +42,9 @@ Vajjanīyā ca puggalā tasmiṁ na honti, “pattakalla”nti vuccati.
 <div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#ndCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#5.0"><h3>Nidānuddeso</h3></a>
+			<a data-bs-toggle="collapse" data-bs-target="#ndCollapse" href=""><h3>Nidānuddeso</h3></a>
+			
+			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#5.0 -->
 </div>
 			
 					  <div class="collapse" id="ndCollapse"> 
@@ -84,7 +88,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pjCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#8.0"><h3>Pārājikuddeso</h3></a>
+			<a data-bs-toggle="collapse" data-bs-target="#pjCollapse" href=""><h3>Pārājikuddeso</h3></a>
+						<!-- <?php echo $mainscpage; ?>/?q=bu-pm#8.0 -->
 </div>
 				  <div class="collapse" id="pjCollapse"> 
             <div class="mt-3">
@@ -135,8 +140,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 
 			<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#ssCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#14.0"><h3>Saṅghādisesuddeso</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#ssCollapse">+</span> <a data-bs-toggle="collapse" data-bs-target="#ssCollapse" href=""><h3>Saṅghādisesuddeso</h3></a>
+	
+	<!-- <?php echo $mainscpage; ?>/?q=bu-pm#14.0 -->
 </div>
 				  <div class="collapse" id="ssCollapse"> 
             <div class="mt-3">
@@ -245,7 +251,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#ayCollapse">+</span>
-	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#29.0"><h3>Aniyatuddeso</h3></a>
+	<a data-bs-toggle="collapse" data-bs-target="#ayCollapse" href=""><h3>Aniyatuddeso</h3></a>
+	
+	<!-- <?php echo $mainscpage; ?>/?q=bu-pm#29.0 -->
 </div>
 				  <div class="collapse" id="ayCollapse"> 
             <div class="mt-3">
@@ -284,7 +292,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#npCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#33.0"><h3>Nissaggiyapācittiyā</h3></a>
+			<a data-bs-toggle="collapse" data-bs-target="#npCollapse" href=""><h3>Nissaggiyapācittiyā</h3></a>
+			
+			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#33.0 -->
 </div>
 				  <div class="collapse" id="npCollapse"> 
             <div class="mt-3">
@@ -558,7 +568,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pcCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#65.0"><h3>Suddhapācittiyā</h3></a>
+			<a data-bs-toggle="collapse" data-bs-target="#pcCollapse" href=""><h3>Suddhapācittiyā</h3></a>
+			
+			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#65.0 -->
 </div>
 				  <div class="collapse" id="pcCollapse"> 
             <div class="mt-3">
@@ -1326,7 +1338,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pdCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#159.0"><h3>Pāṭidesanīya</h3></a>
+			<a data-bs-toggle="collapse" data-bs-target="#pdCollapse" href=""><h3>Pāṭidesanīya</h3></a>
+			
+			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#159.0 -->
 </div>
 				  <div class="collapse" id="pdCollapse"> 
             <div class="mt-3">
@@ -1377,7 +1391,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#skCollapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#165.0"><h3>Sekhiya</h3></a>
+			<a  data-bs-toggle="collapse" data-bs-target="#skCollapse" href=""><h3>Sekhiya</h3></a>
+			
+			<!--<?php echo $mainscpage; ?>/?q=bu-pm#165.0 -->
 </div>
 				  <div class="collapse" id="skCollapse"> 
             <div class="mt-3">
@@ -1571,7 +1587,9 @@ Sekhiyā niṭṭhitā </span>
   						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#asCollapse">+</span>
-  			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#245.0"><h3>Adhikaraṇasamathā</h3></a>
+  			<a data-bs-toggle="collapse" data-bs-target="#asCollapse" href=""><h3>Adhikaraṇasamathā</h3></a>
+			
+			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#245.0 -->
 </div>
 				  <div class="collapse" id="asCollapse"> 
             <div class="mt-3">

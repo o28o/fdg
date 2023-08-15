@@ -16,8 +16,8 @@ vbtrn=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/translation/en/brah
 
 type="Pācittiya"
 typeacr=pc
-i=1
-last=10
+i=11
+last=20
 mf=i
 cd $vb/pli-tv-bi-vb-$typeacr
 

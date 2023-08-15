@@ -5,7 +5,7 @@ vbtrn=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacen
 
 type="Saṅghādisesa"
 typeacr=ss
-i=14
+i=1
 last=17
 mf=i
 cd $vb/pli-tv-bi-vb-$typeacr

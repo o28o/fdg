@@ -295,6 +295,7 @@ if (document.location.search) {
   <div>
   <h3>Bhikkhu Vinaya</h3>
 <ul>
+<li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.php"> Bhikkhunīpātimokkha</a></li>
 <li><span class="abbr">bu-pj</span> Pārājikā</li>
 <li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bu-ay</span> Aniyatā</li>
@@ -307,6 +308,7 @@ if (document.location.search) {
 </div><div>
 <h3>Bhikkhuni Vinaya</h3>
 <ul>
+<li><span class="abbr">bi-pm</span> <a href="/assets/texts/bipm.php"> Bhikkhunīpātimokkha</a></li>
 <li><span class="abbr">bi-pj</span> Pārājikā</li>
 <li><span class="abbr">bi-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bi-np</span> Nissaggiyā-pācittiyā</li>

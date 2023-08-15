@@ -375,6 +375,7 @@ if (document.location.search) {
 </div><div>
 <h3>Бхиккхуни Виная</h3>
 <ul>
+<li><span class="abbr">bi-pm</span> <a href="/ru/assets/texts/bipm.php"> Bhikkhunīpātimokkha</a></li>
 <li><span class="abbr">bi-pj</span> Pārājikā</li>
 <li><span class="abbr">bi-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bi-np</span> Nissaggiyā-pācittiyā</li>

@@ -14,11 +14,13 @@ vbtrn=/drives/c/soft/suttacentral.net/sc-data/sc_bilara_data/translation/en/brah
 
 
 
-type="Pācittiya"
-typeacr=pc
+type="Sekhiya"
+typeacr=sk
 i=11
 last=20
 mf=i
+
+
 cd $vb/pli-tv-bi-vb-$typeacr
 
 

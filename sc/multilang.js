@@ -152,7 +152,7 @@ if (mnranges.indexOf(slug) !== -1)  {
   // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
-  let translator = "thanissaro+o";
+  let translator = "o";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;

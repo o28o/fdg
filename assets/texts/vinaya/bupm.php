@@ -455,7 +455,7 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#53.0">Nissaggiya Pācittiya 20. Kayavikkaya</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-np20#1.35.0">vb</a> Yo pana bhikkhu nānappakārakaṁ kayavikkayaṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ. Kosiyavaggo dutiyo. 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-np20#1.35.0">vb</a> Yo pana bhikkhu nānappakārakaṁ kayavikkayaṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ. 
 </span>
 </div>
 
@@ -537,7 +537,7 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#63.0">Nissaggiya Pācittiya 30. Pariṇata</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-np30#1.27.0">vb</a> Yo pana bhikkhu jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ attano pariṇāmeyya, nissaggiyaṁ pācittiyaṁ. Pattavaggo tatiyo. 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-np30#1.27.0">vb</a> Yo pana bhikkhu jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ attano pariṇāmeyya, nissaggiyaṁ pācittiyaṁ. 
 </span>
 </div>
 
@@ -808,7 +808,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#95.0">Pācittiya 30. Rahonisajja</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc30#1.13.0">vb</a> Yo pana bhikkhu bhikkhuniyā saddhiṁ eko ekāya raho nisajjaṁ kappeyya, pācittiyaṁ. Ovādavaggo tatiyo 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc30#1.13.0">vb</a> Yo pana bhikkhu bhikkhuniyā saddhiṁ eko ekāya raho nisajjaṁ kappeyya, pācittiyaṁ.
 </span>
 </div>
 
@@ -890,7 +890,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#105.0">Pācittiya 40. Dantapona</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc40#2.5.0">vb</a> Yo pana bhikkhu adinnaṁ mukhadvāraṁ āhāraṁ āhareyya aññatra udakadantaponā, pācittiyaṁ. Bhojanavaggo catuttho 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc40#2.5.0">vb</a> Yo pana bhikkhu adinnaṁ mukhadvāraṁ āhāraṁ āhareyya aññatra udakadantaponā, pācittiyaṁ. 
 </span>
 </div>
 
@@ -971,7 +971,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#115.0">Pācittiya 50. Uyyodhika</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc50#1.19.0">vb</a> Dirattatirattaṁ ce bhikkhu senāya vasamāno uyyodhikaṁ vā balaggaṁ vā senābyūhaṁ vā anīkadassanaṁ vā gaccheyya, pācittiyaṁ. Acelakavaggo pañcamo 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc50#1.19.0">vb</a> Dirattatirattaṁ ce bhikkhu senāya vasamāno uyyodhikaṁ vā balaggaṁ vā senābyūhaṁ vā anīkadassanaṁ vā gaccheyya, pācittiyaṁ. 
 </span>
 </div>
 
@@ -1051,7 +1051,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#125.0">Pācittiya 60. Apanidhāna</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc60#1.18.0">vb</a> Yo pana bhikkhu bhikkhussa pattaṁ vā cīvaraṁ vā nisīdanaṁ vā sūcigharaṁ vā kāyabandhanaṁ vā apanidheyya vā apanidhāpeyya vā antamaso hasāpekkhopi, pācittiyaṁ. Surāpānavaggo chaṭṭho 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc60#1.18.0">vb</a> Yo pana bhikkhu bhikkhussa pattaṁ vā cīvaraṁ vā nisīdanaṁ vā sūcigharaṁ vā kāyabandhanaṁ vā apanidheyya vā apanidhāpeyya vā antamaso hasāpekkhopi, pācittiyaṁ. 
 </span>
 </div>
 
@@ -1224,7 +1224,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pm#147.0">Pācittiya 82. Pariṇāmana</a> 
-<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc82#1.26.0">vb</a> Yo pana bhikkhu jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ puggalassa pariṇāmeyya, pācittiyaṁ. Sahadhammikavaggo aṭṭhamo 
+<a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-pc82#1.26.0">vb</a> Yo pana bhikkhu jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ puggalassa pariṇāmeyya, pācittiyaṁ. 
 </span>
 </div>
 

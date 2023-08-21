@@ -165,16 +165,17 @@ $(document).ready(function() {
   // Обработчик для нажатия клавиши Enter
   $(document).on('keydown', function(event) {
     if (event.key === 'Enter') {
-      $('#collapseSettings').collapse('toggle');
+      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
     }
   });
 
   // Обработчик для отправки формы
   $('#searchbtn').on('click', function() {
-    $('#collapseSettings').collapse('toggle');
+    $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
   });
 });
-</script> 
+</script>
+
 <div class="collapse" id="collapseSettings">
   
   <div class="float-start mt-2">

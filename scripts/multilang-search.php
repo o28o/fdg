@@ -33,7 +33,7 @@ $check = ru2lat( $output );
 			}	
 }
 
-
+#thai
 else if (preg_match('/\p{Thai}/u', $string) || ( $p == "-th" )) {
   $p = "-th";
   if ( $mode == "offline" ) {
@@ -76,6 +76,50 @@ $outforjs .= $output . "<br>";
 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
+#sinhala
+else if (preg_match('/\p{Thai}/u', $string) || ( $p == "-si" )) {
+  $p = "-si";
+  if ( $mode == "offline" ) {
+    
+  $command = escapeshellcmd("$adapterscriptlocation $string");
+  $convertedStr = shell_exec($command);
+ $output = $aksharatext . $convertedStr; 
+ $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+ $outforjs .= $output . "<br>";
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $convertedStr");
+ // echo "<p>$output</p>";
+ $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output . "<br>";
+  
+      } else {
+        
+      $cURLConnection = curl_init();
+ $param = urlencode($string);
+curl_setopt($cURLConnection, CURLOPT_URL, "https://aksharamukha-plugin.appspot.com/api/public?target=IASTPali&text=$param");
+curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
+    'Content-Type: text/plain'
+));
+$convertedStr = curl_exec($cURLConnection);
+curl_close($cURLConnection);
+ $output = $aksharatext . $convertedStr; 
+ $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+ $outforjs .= $output . "<br>";
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $convertedStr");
+//  echo "<p>$output</p>";
+$output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output . "<br>";
+      }
+   
+      $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $p $string");
+//    echo "<p class='mt-3'>$output</p>";
+      $output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs .= $output . "<br>"; 
+
+echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+			
+} 
+
 //english 
 else if ( $p == "-en" ) {
 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la -en $extra $string");

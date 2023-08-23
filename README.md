@@ -1,7 +1,7 @@
 # fdg 
 # find.dhamma.gift - Liberation Search Engine
 # online version
-Grep-based search in all Texts of Pali Suttanta and Vinaya in 4 languages: Pali, English, Russian and Thai. Little script that will or at least might change Buddhism to better.
+Grep-based search in all Texts of Pali Suttanta and Vinaya in 4 languages: Pali, English, Russian, Thai and Sinhala. Little script that will or at least might change Buddhism to better.
 Search all matches for the word in Suttas and Vinaya.
 Web implementation of bash script that generates comfortables datatables. 
 
@@ -9,7 +9,7 @@ https://find.dhamma.gift/
 
 Perfect for those who are looking for Awakening and study Pali.
 You can get all occurrences of the definition, metaphor, practice etc.
-Script ignores later chapters of texts using only DN, MN, SN, AN and UD. But user has option to add other books of KN to search.
+By default search is made in DN, MN, SN, AN. But user has option to add other books of KN.
 
 # fdg.offline
 Offline version of fdg 
@@ -22,10 +22,6 @@ This instruction is only for Android devices. Check possible options for IOS in 
 # for Linux with apt 
 
 copy-paste into terminal contents of the script from scripts/install-linix.sh
-
-# for Windows 
-
-Install WAMP and clone repo to apache root
 
 # For Android
 1\. Install Termux from [f-droid](https://f-droid.org/packages/com.termux/) or [github](https://github.com/termux/termux-app)
@@ -164,7 +160,8 @@ before using fdg offline
 
 done. 
 
-
+# for Windows?
+Not yet available 
 
 # IOS installation?
 
@@ -172,4 +169,4 @@ Might be possible to run on IOS devices with
 [phpwin](httpsp://apps.apple.com/us/app/phpwin/id1157634089) or similar 
 and some terminal emulator e.g. [from this article](https://alternativeto.net/software/termux/?platform=iphone)
 
-never tried.
+never tried. please let me know if there is a way.

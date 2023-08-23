@@ -77,7 +77,7 @@ echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</scri
 			
 } 
 #sinhala
-else if (preg_match('/\p{Thai}/u', $string) || ( $p == "-si" )) {
+else if (preg_match('/\p{Sinhala}/u', $string) || ( $p == "-si" )) {
   $p = "-si";
   if ( $mode == "offline" ) {
     

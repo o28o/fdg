@@ -933,6 +933,7 @@ genbwlinks
   
 
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
+linksi=`echo $filenameblock |  awk -v lksi="$linkforsi" -v ext="$linkforsiext" '{print lksi$0''ext}' `
 
 count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file $variant | wc -l ` 
 echo $count >> $tempfile
@@ -958,6 +959,7 @@ echo "<tr>
 <td>$metaphorcount</td>
 <td><a target=\"_blank\" href="$linken">Eng</a>&nbsp;
 `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>&nbsp;"`
+`[[ $linksi != "" ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>&nbsp;"`
 <a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` 
 </td>
 <td>" | tohtml

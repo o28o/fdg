@@ -767,7 +767,7 @@ translatorsname=`echo $translation | awk -F'/en/' '{print $2}' | awk -F'/' '{pri
 if [[ "$fortitle" == *"Suttanta"* ]]
 then
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
-linksi=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
+linksi=`echo $filenameblock |  awk -v lksi="$linkforsi" -v ext="$linkforsiext" '{print lksi$0''ext}' `
 link=`echo $filenameblock |  awk -v lkru="$linkforru" -v ext="$linkforruext" '{print lkru$0''ext}' `
 fi
 

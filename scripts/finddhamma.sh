@@ -187,7 +187,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed 's@е@[её]@g' | sed 's@ṃ@[ṃṁ]@g' | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's@^@(@g' | sed 's/$/)/g' | sed 's@,@@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]]  || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] 
 then   
 #emptypattern
    exit 3
@@ -387,6 +387,15 @@ if [[ "$@" == *"-th"* ]]; then
     pali_or_lang=sc-data/html_text/th/pli 
     language=Thai
 	printlang=ไทย
+    directlink=
+    type=html   
+    metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
+    nonmetaphorkeys="подобного|подоба"
+elif [[ "$@" == *"-si"* ]]; then
+    fnlang=_si
+    pali_or_lang=sc-data/html_text/si/pli 
+    language=Sinhala
+	printlang=සිංහල
     directlink=
     type=html   
     metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"

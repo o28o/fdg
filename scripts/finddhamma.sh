@@ -816,7 +816,7 @@ echo "<tr>
 <td>
 <a target=\"_blank\" href="$linken">En</a> 
 `[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
-`[[ $linksi != "" ]] && echo "<a target=\"_blank\" href="$linkthai">සිං</a>"`
+`[[ $linksi != "" ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 
 </td>" | tohtml 

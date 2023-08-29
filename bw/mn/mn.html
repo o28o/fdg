@@ -3,7 +3,7 @@
 <head>
  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
- 	<title>Majjhima Nikaya </title>
+ 	<title>Majjhima Nikāya</title>
  	 	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<!-- Loading third party fonts -->
   	  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -15,35 +15,34 @@
 			<script src="../js/controlpanel.js"></script>
    <script src="../js/mousetrap.min.js"></script>
 <body>
- 
- <!-- header -->
- <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
- 	<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
- 	<span></span>
- 	<span></span>
+
+ 	<!--  <header>-->
+ 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 		<span></span>
+ 		<span></span>
  	</button>
  	<span class="box-lbl">Light\Dark</span>
- 	<div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
- 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
- 			<div class="w3-bar bwcontainer">
- 		<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
- 		<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
- 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
- 		</div>
+ <a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 				<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 				<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 		</div><!-- End Searchlinks div -->
+ 
+			 		<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
  	</div>
  </div>
-  <!-- Top menu -->
-
-<!-- Navbar -->
+ 	<!-- Top menu -->
  <div class="w3-main w3-white bwcontainer2">
  	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
  				<li class="topmenu" id="guide"><a href="../guide/guide.html" class="w3-hide-small">Guide</a></li>
- 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Digha Nikaya</a></li>
- 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikaya</a></li>
- 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Samyutta Nikaya</a>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
  						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
  						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
@@ -51,7 +50,7 @@
  						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
  						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
  					</ul>
- 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Anguttara Nikaya</a>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
  					<ul>
  						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
  						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
@@ -66,7 +65,7 @@
  						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
  					</ul>
  				</li>
- 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikaya</a>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
  					<ul>
  						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
  						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
@@ -77,7 +76,7 @@
  						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
  					</ul>
  				</li>
- 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Pitaka</a>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhanga</a></li>
@@ -88,7 +87,7 @@
  				</li>
  			</ul>
  			</div>
- 		</div>
+ 		</div> <!--navbar-->
 
 <!-- Sidebar (hidden by default) -->
  <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
@@ -97,17 +96,15 @@
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
  			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
- 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Digha Nikaya</a>
- 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikaya</a>
- 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Samyutta Nikaya</a>
- 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Anguttara Nikaya</a>
- 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikaya</a>
- 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Pitaka</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
  		</div>
  </nav>
-<!-- End Navbar -->
-<!-- End Sidebar -->
-<!-- End Top menu -->
+ 
  
  
 <!-- !PAGE DIV! --> <!-- Div for page content --> 
@@ -151,7 +148,7 @@
 			
 			<tr>
 				<td><a href="./mn6.html#content">6</a></td>
-				<td><a href="./mn6.html#content">Ākankheyyasutta</a></td>
+				<td><a href="./mn6.html#content">Ākaṅkheyyasutta</a></td>
 				<td><a href="./mn6.html#content">If a Bhikkhu Should Wish</a></td>
 			</tr>
 			
@@ -309,14 +306,14 @@
 			
 			<tr>
 				<td><a href="./mn31.html#content">31</a></td>
-				<td><a href="./mn31.html#content">Cūḷagosingasutta</a></td>
-				<td><a href="./mn31.html#content">The Shorter Discourse in Gosinga</a></td>
+				<td><a href="./mn31.html#content">Cūḷagosiṅgasutta</a></td>
+				<td><a href="./mn31.html#content">The Shorter Discourse in Gosiṅga</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn32.html#content">32</a></td>
-				<td><a href="./mn32.html#content">Mahāgosingasutta</a></td>
-				<td><a href="./mn32.html#content">The Greater Discourse in Gosinga</a></td>
+				<td><a href="./mn32.html#content">Mahāgosiṅgasutta</a></td>
+				<td><a href="./mn32.html#content">The Greater Discourse in Gosiṅga</a></td>
 			</tr>
 			
 			<tr>
@@ -345,14 +342,14 @@
 			
 			<tr>
 				<td><a href="./mn37.html#content">37</a></td>
-				<td><a href="./mn37.html#content">Cūḷataṇhāsankhayasutta</a></td>
+				<td><a href="./mn37.html#content">Cūḷataṇhāsaṅkhayasutta</a></td>
 				<td><a href="./mn37.html#content">The Shorter Discourse on the
 			Destruction of Craving</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn38.html#content">38</a></td>
-				<td><a href="./mn38.html#content">Mahātaṇhāsankhayasutta</a></td>
+				<td><a href="./mn38.html#content">Mahātaṇhāsaṅkhayasutta</a></td>
 				<td><a href="./mn38.html#content">The Greater Discourse on the
 			Destruction of Craving</a></td>
 			</tr>
@@ -704,8 +701,8 @@
 			
 			<tr>
 				<td><a href="./mn95.html#content">95</a></td>
-				<td><a href="./mn95.html#content">Cankīsutta</a></td>
-				<td><a href="./mn95.html#content">With Cankī</a></td>
+				<td><a href="./mn95.html#content">Caṅkīsutta</a></td>
+				<td><a href="./mn95.html#content">With Caṅkī</a></td>
 			</tr>
 			
 			<tr>
@@ -734,7 +731,7 @@
 			
 			<tr>
 				<td><a href="./mn100.html#content">100</a></td>
-				<td><a href="./mn100.html#content">Sangāravasutta</a></td>
+				<td><a href="./mn100.html#content">Saṅgāravasutta</a></td>
 				<td><a href="./mn100.html#content">To Sangārava</a></td>
 			</tr>
 			
@@ -944,49 +941,49 @@
 			
 			<tr>
 				<td><a href="./mn135.html#content">135</a></td>
-				<td><a href="./mn135.html#content">Cūḷakammavibhangasutta</a></td>
+				<td><a href="./mn135.html#content">Cūḷakammavibhaṅgasutta</a></td>
 				<td><a href="./mn135.html#content">The Shorter Exposition of Action</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn136.html#content">136</a></td>
-				<td><a href="./mn136.html#content">Mahākammavibhangasutta</a></td>
+				<td><a href="./mn136.html#content">Mahākammavibhaṅgasutta</a></td>
 				<td><a href="./mn136.html#content">The Greater Exposition of Action</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn137.html#content">137</a></td>
-				<td><a href="./mn137.html#content">Saḷāyatanavibhangasutta</a></td>
+				<td><a href="./mn137.html#content">Saḷāyatanavibhaṅgasutta</a></td>
 				<td><a href="./mn137.html#content">The Exposition of the Sixfold Base</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn138.html#content">138</a></td>
-				<td><a href="./mn138.html#content">Uddesavibhangasutta</a></td>
+				<td><a href="./mn138.html#content">Uddesavibhaṅgasutta</a></td>
 				<td><a href="./mn138.html#content">The Exposition of a Summary</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn139.html#content">139</a></td>
-				<td><a href="./mn139.html#content">Araṇavibhangasutta</a></td>
+				<td><a href="./mn139.html#content">Araṇavibhaṅgasutta</a></td>
 				<td><a href="./mn139.html#content">The Exposition of Non-Conflict</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn140.html#content">140</a></td>
-				<td><a href="./mn140.html#content">Dhātuvibhangasutta</a></td>
+				<td><a href="./mn140.html#content">Dhātuvibhaṅgasutta</a></td>
 				<td><a href="./mn140.html#content">The Exposition of the Elements</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn141.html#content">141</a></td>
-				<td><a href="./mn141.html#content">Saccavibhangasutta</a></td>
+				<td><a href="./mn141.html#content">Saccavibhaṅgasutta</a></td>
 				<td><a href="./mn141.html#content">The Exposition of the Truths</a></td>
 			</tr>
 			
 			<tr>
 				<td><a href="./mn142.html#content">142</a></td>
-				<td><a href="./mn142.html#content">Dakkhiṇāvibhangasutta</a></td>
+				<td><a href="./mn142.html#content">Dakkhiṇāvibhaṅgasutta</a></td>
 				<td><a href="./mn142.html#content">The Exposition of Offerings</a></td>
 			</tr>
 			

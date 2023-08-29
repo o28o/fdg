@@ -452,11 +452,13 @@ footer {
 
 #breadcrumbs a {
 	text-decoration: underline;
+ padding-left: 4px;
 }
 
 #breadcrumbs a:after {
 	content: " ► ";
 	color: orange;
+ padding: 4px 4px;
  display: inline-block;
 }
 
@@ -1423,5 +1425,5 @@ hr, .pairs hr {
  margin-bottom:0;
  background-color:lime;
 
-
 */
+

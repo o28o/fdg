@@ -268,6 +268,9 @@ p, .p {
 		flex-flow: column-reverse wrap;
 	}
 
+
+ 
+ 
 	.pairs {
 		table-layout: auto;
 		width: 100%;
@@ -1409,6 +1412,39 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   top:16px;
   left:55px;
 }
+
+.w3-image {
+    max-width: 100%;
+    height: auto;
+    margin-left: 30px; 
+	    background-color: #FFF3D6;
+}
+
+ .w3-padding {
+    padding: 0px 16px!important;
+}
+
+.centered {
+  position: absolute;
+  top: 0px;
+}
+
+.header-background {
+  background-color: #FFF3D6;
+  background-image: url('../images/headerlogo.png');
+  background-repeat: no-repeat;
+  background-position: top right; /* Изображение фона в правом верхнем углу */
+  background-size: cover; /* или contain, в зависимости от вашего предпочтения */
+}
+
+    @media screen and (min-width: 1640px) {
+  .container {
+  margin: auto;
+  width: 50%; 
+  margin-top:10px;
+  min-width: 1640px;
+}
+
 
 
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\

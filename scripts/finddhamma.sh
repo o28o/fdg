@@ -1195,7 +1195,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-#rm $basefile $tempfile $tempfilewhistory *grepbase* tmp*$rand* *$rand* > /dev/null 2>&1
+rm $basefile $tempfile $tempfilewhistory *grepbase* tmp*$rand* *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

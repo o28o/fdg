@@ -174,8 +174,8 @@ console.log('texttype ' + texttype + ' translator ' + translator);
     }).done(function(data) {
       const linksArray = data.split(",");
       
-      let scLink = `<p class="sc-link"><a target="_blank" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
-//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="_blank" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
+      let scLink = `<p class="sc-link"><a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
+//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
         //    console.log("extralinks " + linksArray[0]);

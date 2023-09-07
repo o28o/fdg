@@ -357,7 +357,13 @@ mapfile -t onl_array < $tmponl
 for line in "${onl_array[@]}"; do
 grep -HE "$pattern" $line
 done > $tmponl
-cat $tmponl
+
+if [[ "$type" == html ]]; then
+cat $tmponl |sed 's/html:.*/html/g' 
+else 
+cat $tmponl 
+fi
+
 #onltextindex=`for i in $splitpattern
 #do
 #grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -Vf | uniq 
@@ -1189,7 +1195,7 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory *grepbase* tmp*$rand* *$rand* > /dev/null 2>&1
+#rm $basefile $tempfile $tempfilewhistory *grepbase* tmp*$rand* *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
 exit 0

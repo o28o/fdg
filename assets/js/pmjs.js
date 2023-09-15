@@ -1,58 +1,42 @@
+
 const toggleButtons = document.querySelectorAll('.toggle-button');
 
-toggleButtons.forEach(function(btn) {
-  btn.addEventListener('click', function() {
+toggleButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
     const targetId = btn.getAttribute('data-bs-target');
     const targetCollapse = document.querySelector(targetId);
     if (targetCollapse) {
       const isCollapsed = targetCollapse.classList.contains('show');
       if (btn.innerText === '+') {
         btn.innerText = '-';
-        // Сохраняем состояние в localStorage
-        localStorage.setItem(targetId, 'expanded');
       } else {
         btn.innerText = '+';
-        // Сохраняем состояние в localStorage
-        localStorage.setItem(targetId, 'collapsed');
       }
     }
   });
 });
 
-const collapseAllBtn = document.getElementById('collapseAll');
-const expandAllBtn = document.getElementById('expandAll');
-const collapseButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+  
+    const collapseAllBtn = document.getElementById('collapseAll');
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
 
-collapseAllBtn.addEventListener('click', function() {
-  collapseButtons.forEach(function(btn) {
-    const targetId = btn.getAttribute('data-bs-target');
-    const targetCollapse = document.querySelector(targetId);
-    if (targetCollapse && !targetCollapse.classList.contains('collapsed')) {
-      btn.click();
-      // Обновляем состояние в localStorage
-      localStorage.setItem(targetId, 'collapsed');
-    }
-  });
-});
+    collapseAllBtn.addEventListener('click', () => {
+      collapseButtons.forEach((btn) => {
+        const targetId = btn.getAttribute('data-bs-target');
+        const targetCollapse = document.querySelector(targetId);
+        if (targetCollapse && !targetCollapse.classList.contains('collapsed')) {
+          btn.click();
+        }
+      });
+    });
 
-expandAllBtn.addEventListener('click', function() {
-  collapseButtons.forEach(function(btn) {
-    const targetId = btn.getAttribute('data-bs-target');
-    const targetCollapse = document.querySelector(targetId);
-    if (targetCollapse && targetCollapse.classList.contains('collapsed')) {
-      btn.click();
-      // Обновляем состояние в localStorage
-      localStorage.setItem(targetId, 'expanded');
-    }
-  });
-});
-
-// Восстанавливаем состояние при загрузке страницы
-collapseButtons.forEach(function(btn) {
-  const targetId = btn.getAttribute('data-bs-target');
-  const targetCollapse = document.querySelector(targetId);
-  const savedState = localStorage.getItem(targetId);
-  if (savedState === 'expanded') {
-    btn.click();
-  }
-});
+    expandAllBtn.addEventListener('click', () => {
+      collapseButtons.forEach((btn) => {
+        const targetId = btn.getAttribute('data-bs-target');
+        const targetCollapse = document.querySelector(targetId);
+        if (targetCollapse && targetCollapse.classList.contains('collapsed')) {
+          btn.click();
+        }
+      });
+    });

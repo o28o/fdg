@@ -210,6 +210,46 @@ $(document).ready(function() {
   <?php echo $regexlink;?> 
  </p>
  
+ 
+ <script type="text/javascript"> // restore scroll position
+$(document).ready(function () {
+
+    if (localStorage.getItem("fdg-quote-scroll") != null) {
+        $(window).scrollTop(localStorage.getItem("fdg-quote-scroll"));
+    }
+
+    $(window).on("scroll", function() {
+        localStorage.setItem("fdg-quote-scroll", $(window).scrollTop());
+    });
+
+  });
+</script>
+ 
+<script> //save collapsed state
+$(document).ready(function () {
+    $(".collapse").on("shown.bs.collapse", function () {
+        localStorage.setItem("coll_" + this.id, true);
+		console.log('SHOW ' + this.id);
+    });
+
+    $(".collapse").on("hidden.bs.collapse", function () {
+        localStorage.removeItem("coll_" + this.id);
+		console.log('HIDE' + this.id);
+    });
+    
+    $(".collapse").each(function () {
+		console.log('EACH ' + this.id);
+        if (localStorage.getItem("coll_" + this.id) === "true") {
+            $(this).collapse("show");
+        }
+        else {
+            $(this).collapse("hide");
+        }
+    });
+});
+
+</script>
+
 <script>
   
 //  autocomplete part

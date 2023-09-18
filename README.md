@@ -21,7 +21,13 @@ This instruction is only for Android devices. Check possible options for IOS in 
 
 # for Linux with apt 
 
-copy-paste into terminal contents of the script from scripts/install-linix.sh
+copy-paste into terminal contents of the script from scripts/install-linix.sh (requires root)
+
+# for Windows 10+ (WSL)
+
+[Activate](https://learn.microsoft.com/en-us/windows/wsl/install) Windows Subsystem for Linux 
+install ubuntu of your choice from windows store. finalize the setup: set username and password
+copy-paste into terminal contents of the script from scripts/install-linix.sh (requires root)
 
 # For Android
 1\. Install Termux from [f-droid](https://f-droid.org/packages/com.termux/) or [github](https://github.com/termux/termux-app)

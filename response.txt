@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+
+ 
+
+<html lang="en" data-bs-theme="dark">
+    <head>
+      <meta charset="UTF-8">
+
+<title>Precise Search in Pali Suttas and Vinaya</title>
+ <meta http-equiv="Cache-control" content="public">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Precise Search in Pali Suttas and Vinaya. Liberation Search Engine. Search in Pali Suttanta and Vinaya" />
+<meta name="author" content="" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="find.Dhamma.gift" />
+<meta property="og:description" content="Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai" />
+
+<meta property="og:url" content="/" />
+<meta property="og:site_name" content="find.Dhamma.gift" />
+<meta property="og:image" itemprop="image" content="https://find.dhamma.gift/assets/img/social_sharing_gift.jpg" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Precise Search in Pali Suttas and Vinaya. ">
+<meta name="twitter:description" content="Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai">
+<!-- Favicon-->
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+
+  <!-- Загрузка иконки для iOS -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
+
+<!-- Google fonts
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+-->
+
+<!--  Core theme CSS (includes Bootstrap)-->
+<link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
+<link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+
+<style>
+</style>
+
+<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script> 
+
+</head>
+<!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
+    <body id="page-top"> 
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
+            <a class="navbar-brand mobile-center" href="/"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
+                <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                   Menu                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+      <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> -->
+            
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/read.php">Read</a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/history.php">Search History</a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#help">How To</a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project">About</a></li>             
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links">Useful Links</a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts">Contacts</a></li>
+<li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
+<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a>
+</p></li><div class="form-check form-switch input-group-append">
+<input type="checkbox" class="form-check-input" id="darkSwitch">
+</div>
+       </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column mb-3">
+
+                <!-- Masthead Avatar Image-->
+                <!-- Masthead Heading-->
+<h1 class="masthead-heading">
+    <div data-bs-toggle="tooltip" data-bs-placement="top" title="In Pāḷi, English, Russian & ไทย">
+        Search for Truth    </div>
+</h1>
+
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                        <div class="lock example divider-custom-icon">
+                                        <i class="fa-solid fa-circle example icon-unlock" ></i>
+ <i class="fa-solid fa-circle icon-lock bigger"></i>
+                      </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+    
+
+<form method="GET" action="" class="justify-content-center">
+<div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
+<label class="sr-only dropup rounded-pill" for="paliauto"></label>
+
+
+<div class="searchinputdiv">
+  <input name="q" type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="" multiple>
+  <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
+    <i class="fas fa-times" aria-hidden="true"></i>
+    <span class="visually-hidden">Clear</span>
+  </button>
+</div>
+
+<div class="input-group-append">
+<button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill ">
+<i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i>
+    <span class="visually-hidden">Search</span>
+</button>
+</div>
+
+</div>
+
+<div class="align-items-center form-check-inline mx-0">
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
+        <option value=""  >Pāḷi</option>
+        <option value="-vin"  >Vinaya</option>
+        <option value="-kn"  >+KN</option>
+        <option value="-all"  >+Later</option>
+        <option value="-b"  >TBW</option>
+        <option value="-en"  >Eng</option>
+    </select>
+       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN)
+<br><br>
+<strong>Vinaya</strong> - Search in Vinaya in Pali and English. <br><br>
+<strong>+KN</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
+<strong>Later</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
+<strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>
+<strong>Англ</strong> - search in SuttaCentral.net materials">*</div>
+
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
+        <option value="" selected >All matches</option>
+        <option value="-def"  >Definitions</option>
+        <option value="-sml"  >Similes</option>
+        <option value="-defall"  >All Definitions</option>
+    </select>
+	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<strong>Default</strong> - all matches<br><br>
+<strong>Definitions</strong> - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. <br><br>
+<strong>Similes</strong> - Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.<br><br>
+<strong>All Definitions</strong> - Search for all definitions. For all-round view studying all related Suttas is recommended. See Advanced for details.">*</div>
+</div>
+  <!--  <label for="pOptions"></label> -->
+  <!-- extra options -->
+  <div class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+  <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
+  <span class="visually-hidden">Search</span>
+  </div>
+
+<script>
+$(document).ready(function() {
+  // Обработчик для нажатия клавиши Enter
+  $(document).on('keydown', function(event) {
+    if (event.key === 'Enter') {
+      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+    }
+  });
+
+  // Обработчик для отправки формы
+  $('#searchbtn').on('click', function() {
+    $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+  });
+});
+</script>
+
+<div class="collapse" id="collapseSettings">
+  
+  <div class="float-start mt-2">
+
+ <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra"   value="-onl">
+  <div data-bs-toggle="tooltip" data-bs-placement="top" title='X Y ... Finds texts containing only both and more matches for X, Y ... Without this option only texts where X Y are standing next to each other will be found'>Any distance</div>
+  </div>
+  
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la"   value='-la2'>
+  <div data-bs-toggle="tooltip" data-bs-placement="top" title='Add 2 lines after match'>+2 lines</div>
+  </div>
+  
+         <div style="max-width: 300px;" class="my-2"> 
+         
+<div class="align-items-center form-check-inline mt-3">
+  <div class="mb-2"><button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā" autocomplete="off">ā</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ" autocomplete="off">ṁ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ" autocomplete="off">ñ</button>
+ <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ" autocomplete="off">ṭ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī" autocomplete="off">ī</button> </div>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṇ" autocomplete="off">ṇ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ū" autocomplete="off">ū</button>
+
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṅ" autocomplete="off">ṅ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḍ" autocomplete="off">ḍ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḷ" autocomplete="off">ḷ</button>
+ <!-- <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ" autocomplete="off">ṃ</button> -->
+</div>
+
+
+ <h5 class="mt-4">RegEx Memo</h5> 
+<div class="mt-4" style="text-align: left;">
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y</strong></button> - search for X, exclude Y <br>
+  <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la2 "><strong>-la2 X</strong></button> - search for X, add 2 next line to output after lines containing X <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb2 "><strong>-lb2 X</strong></button> - search for X, add 2 previous lines to output before lines containing X <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc "Y(ti|nti)"</strong></button> - search for X, exclude Y ending with "ti" and "nti" <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - begins with X or  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> ends<br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - any number of symbols between X and Y <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - from 0 to 10 symbols <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - next words X и Y, with variable ending of X <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>"X(\\S*\\s){0,3}Y"</strong></button> - distance of 0 to 2 words between X (any ending) and Y <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>a[ṁ]?</strong></button> - letter in [ ]? is optional <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - multiple variants <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"tatt($|[^h])"'><strong>"tatt($|[^h])"</strong></button> - search for tatt excluding tatth <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"(a|b|c)"'><strong>"(a|b|c)"</strong></button> - search for few different patterns at the same time <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="'^&quot;mn.*X'"><strong>'^&quot;mn.*X'</strong></button> - find X in all Majjhimma Nikaya <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="dn22.*"><strong>dn22.*Y</strong></button> - find Y in DN22 only <br>
+    <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"'><strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong></button> - search for all metaphors in Samyutta 56 <br><br>
+</div>
+
+  AI can generate RegEx for grep -Ei, e.g. <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>Codepal.ai</a> or <a class="text-white" href="https://chat.openai.com/" target=_blank>ChatGPT</a><br> 
+ </p>
+ 
+<script>
+  
+//  autocomplete part
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
+  }
+});  
+  
+  
+  // Function to reset all form elements
+function resetForm() {
+  document.getElementById("paliauto").value = "";
+  document.getElementById("pOptions").selectedIndex = 0;
+  document.getElementById("extraOptions").selectedIndex = 0;
+  document.getElementById("onlCheckbox").checked = false;
+  document.getElementById("laCheckbox").checked = false;
+  // Reset other checkboxes and dropdowns as needed
+  checkInput(); // Check input after resetting form
+}
+
+// Event listener for the clear button
+document.getElementById("clearbtn").addEventListener("click", function() {
+  resetForm();
+});
+
+// Event listener to submit the form when Enter key is pressed
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
+  }
+});
+
+// Получаем кнопки для вставки букв
+var buttons = document.querySelectorAll('.insert-letter');
+
+// Добавляем обработчики событий для каждой кнопки
+buttons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    var letterValue = this.getAttribute('data-letter');
+    var currentValue = input.value;
+    var selectionStart = input.selectionStart;
+    var selectionEnd = input.selectionEnd;
+    var newValue = currentValue.substring(0, selectionStart) + letterValue + currentValue.substring(selectionEnd);
+    input.value = newValue;
+
+    // Перемещаем курсор после вставленных символов
+    var newCursorPosition = selectionStart + letterValue.length;
+    input.setSelectionRange(newCursorPosition, newCursorPosition);
+
+    // Имитируем событие ввода, чтобы обновить состояние автозаполнения
+    var inputEvent = new Event('input', { bubbles: true });
+    input.dispatchEvent(inputEvent);
+
+    // Перемещаем фокус на поле ввода
+    input.focus();
+  });
+});
+
+// Получаем чекбоксы и выпадающие списки
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+var selects = document.querySelectorAll('select');
+
+// Добавляем обработчики событий для чекбоксов
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', checkInput);
+});
+
+// Добавляем обработчики событий для выпадающих списков
+selects.forEach(function(select) {
+  select.addEventListener('change', checkInput);
+});
+
+var clearButton = document.getElementById('clearbtn');
+
+// Проверяем поле при загрузке страницы
+checkInput();
+
+// Добавляем обработчик события input
+input.addEventListener('input', checkInput);
+
+// Очистка поля и скрытие кнопки при клике на кнопку очистки
+clearButton.addEventListener('click', function() {
+  input.value = '';
+  checkInput();
+});
+
+function checkInput() {
+  if (
+    input.value.trim().length > 0 ||
+    Array.from(checkboxes).some(function(checkbox) {
+      return checkbox.checked;
+    }) ||
+    Array.from(selects).some(function(select) {
+      return select.value !== "";
+    })
+  ) {
+    clearButton.style.display = 'block'; // Показываем кнопку, если есть текст или выбраны чекбоксы/списки
+  } else {
+    clearButton.style.display = 'none'; // Скрываем кнопку, если нет текста и не выбраны чекбоксы/списки
+  }
+}
+
+// Поместить курсор в конец строки в поле ввода
+input.focus();
+input.setSelectionRange(input.value.length, input.value.length);
+</script>
+</div>    
+</div>
+</div>
+  </div>
+      </div>	
+            <div id="spinner" class="justify-content-center mt-8">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              </div>
+			  
+			  
+<script defer>
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    // Событие pageshow возникает при возврате назад с помощью кнопки "назад" браузера
+    // Скрываем спиннер
+    document.getElementById('spinner').style.display = 'none';
+  }
+});
+</script>
+
+  <!-- extra options end -->
+</form>
+  <div id="response"></div>
+
+<script>
+</script>
+</header>
+
+<!-- Portfolio Section-->
+<section class="page-section portfolio">
+<div class="container text-center">
+<div class="d-md-inline-block">	 <a class="text-decoration-none mx-1" href="/read.php">
+<figure class="figure text-decoration-none">
+  <i class="menu-icon fa-solid fa-book-bookmark"></i>
+  <figcaption class="horiz-menu-item figure-caption text-center">Read Pāḷi</figcaption>
+</figure>
+</a><!--
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<figure class="figure dropup">
+  <i class="menu-icon fa-solid fa-book-bookmark"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Texts</figcaption>   
+</figure>	  
+</a>
+  <ul class="dropdown-menu" aria-labelledby="MenuRussian">
+    <li><a class="dropdown-item" target="" href="/read.php">Table of Content</a></li>
+    <li><a class="dropdown-item" target="" href="/sc">SC Light</a></li>
+  </ul>
+-->
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<figure class="figure d-md-inline-block">
+    <i class="menu-icon fa-solid fa-link"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">External</figcaption>   
+</figure>	  
+</a>
+
+  <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
+
+   <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
+   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
+          <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
+       <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
+
+<!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">Pali for mDict</a></li>  -->
+       <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
+    <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net/">SuttaCentral.net</a></li>
+    
+     <li><a class="dropdown-item" target="_blank" href="https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1">Learn Pali Guides</a></li>  
+          <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
+   <li><a class="dropdown-item" target="_blank" href="https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm">Translations by M. Olds</a></li>
+    <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SC.net Voice</a></li>
+    <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
+    <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
+            <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>   
+ <li><a class="dropdown-item" target="_blank" href="/bw">The Buddha's Words</a></li>    
+    <li><a class="dropdown-item" target="_blank" href="https://en.dhammadana.org/sangha/dhutanga.htm">Asceticism in Dhamma</a></li>
+     <li><a class="dropdown-item" target="_blank" href="https://www.accesstoinsight.org/tipitaka/vin/sv/index.html">Accesstoinsight.org patimokkha</a></li>
+  </ul>
+
+<a class="text-decoration-none mx-1" href="/assets/diff/?lang=pl">
+<figure class="figure">
+<i class="menu-icon fa-solid fa-code-compare"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">Sutta Diff</figcaption>   
+</figure>	  
+</a>
+
+<a class="text-decoration-none mx-1" href="/history.php">
+<figure class="figure">
+  <i class="menu-icon fa-solid fa-clock-rotate-left"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">History</figcaption>   
+</figure>	  
+</a>
+<!--
+ <a class="text-decoration-none mx-1" href="/dpd">
+<figure class="figure">
+<i class="menu-icon fa-solid fa-spell-check"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">DPD Online</figcaption>   
+</figure>	  
+</a>
+
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="CSEMenu" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<figure class="figure d-md-inline-block">
+  <i class="menu-icon fa-brands fa-google"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">CSE</figcaption>   
+</figure>	  
+</a>
+  <ul class="dropdown-menu" aria-labelledby="CSEMenu">
+   <li>
+      <script async src="https://cse.google.com/cse.js?cx=c184c71e0fe5d4c93"></script>
+<div class="gcse-searchbox-only" data-newWindow="true" data-resultsUrl="/cse.php"></div>   
+     </li>
+</ul>
+  -->
+ <a class="text-decoration-none mx-1" href="/cse.php">
+<figure class="figure">
+<i class="menu-icon fa-brands fa-google"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">CSE</figcaption>   
+</figure>	  
+</a> 
+  
+
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<figure class="figure d-md-inline-block">
+  <i class="menu-icon fa-solid fa-graduation-cap"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">Grammar</figcaption>   
+</figure>	  
+</a>
+  <ul class="dropdown-menu" aria-labelledby="materials">
+   <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true">Cases</a></li>
+       <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing">Conjugations</a></li>
+      <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk">Pali Textbook</a></li>
+    <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG">Other Materials</a></li>
+       <li><a class="dropdown-item" href="#research">Research</a></li>
+       <li><a class="dropdown-item" href="#read">Read</a></li>
+    <li><a class="dropdown-item" href="#study">Study</a></li>
+<li><a class="dropdown-item" href="/assets/makelist.html">Create CSV List</a></li>  
+</ul>
+
+</div> 
+
+
+<!-- Portfolio Item 3-->
+<div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+<div class="font-italic"> 
+<p class="font-italic text-center ">
+All-round view on Four Noble Truths<br>
+        in Pali Suttas and Vinaya.<br>
+        Understand the real meaning <br>
+        of Four Noble Truths<br>
+        and finish the p<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">a</a>in.</p>
+</div> 
+<div class="col-md-6 col-lg-4 mb-3">
+						                     
+			
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white">
+<i class="fas fa-search fa-flip-horizontal fa-3x"></i></div>
+</div>
+</div>
+</div>
+
+<h4 id="help" class="page-section-heading text-center mb-4"></h4>	
+
+<div class="embed-container mt-4 mb-5 text-center">
+<a href="https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US" target="_blank" ><img width="350" class="imgonmain" src="/assets/img/video1en.webp" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" loading="lazy"></a>
+</div>
+<!--<div class="embed-container mt-4 mb-5"> 
+<iframe src="https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+</div>-->
+
+<div style="max-width: 600px;" class="container-lg">
+<div class="alert alert-warning float-start text-left mb-3" role="alert">
+<i class="fa-solid fa-triangle-exclamation "></i> <b>Caution regarding translations!</b><br><br> Translations do not originate directly from the Buddha himself!  Approach them with scrutiny and critical thinking.<br><br> To acquire the fundamental teachings of the Buddha, it is highly recommended to engage in the <strong>direct study of Suttas in Pali</strong>. At the very least, concentrate on understanding the Middle Practice and the Four Noble Truths. For instance, consider delving into a dedicated section from <strong>sn56.11</strong>.</div>
+</div>
+   
+<div style="max-width: 992px;" class="container-lg">
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-3">Examples</h2>  
+<div class="container mb-5">
+<ol class="col-lg-8 col-md-10 ms-auto text-start">
+<li>Definition of the <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">dukkha</a> in Pali with quotes in English. Query is: <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">-la1 Kata.*, dukkhaṁ\\?</a></li>
+
+ <li>Sutta where Buddha says that he doesn't make <a href="/?q=dvayagāminī">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
+
+<li>All variants of the word <a href="/?q=paṭiccasamuppād">paṭiccasamuppado</a> in Pali with quotes in English</li>
+            
+<li>All suttas about <a href="/assets/example/eightfold_suttanta_en_159-344.html">Eightfold</a> Path in English</li>
+<li>All suttas that took place or related to <a href="/assets/example/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
+<li>All suttas where <a href="/assets/example/sariputt_suttanta_ru-ru_179-1105.html">Sariputta</a> was mentioned in Russian</li>
+    
+<li>All suttas about or containing the word <a href="/assets/example/ocean_suttanta_en_92-266.html">ocean</a> in English</li>
+<li>All Suttas with <a href=./assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_647-2186.html>metaphors & similies</a> in Pali and English</li>                 </ol>
+			  </div>  
+
+  </div>
+  
+<!-- Portfolio Section Heading-->
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">How to Search</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                        <div class="lock example divider-custom-icon">
+                                        <i class="fa-solid fa-circle example icon-unlock" ></i>
+ <i class="fa-solid fa-circle icon-lock bigger"></i>
+                      </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+<div class="row justify-content-center">
+
+<div style="max-width: 600px;" class="container-lg">
+<div data-bs-toggle="tooltip" data-bs-placement="top" title=""></div>
+<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; tassa ca saṅghassa duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.<br><br>
+If they (teachings, practices, methods, quotes, stories, anything associated with the Buddha) are not found in the Suttas and are not exhibited in the Vinaya, you should draw the conclusion: ‘Clearly this is not the word of the Blessed One. It has been wrongly understood by that Sangha.’ And so, monks, you should reject it.
+</p>
+<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16#4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180#2.7>an4.180</a></p>
+</div>
+
+<div class="clearfix"></div> 
+	 
+
+<div class="col-md-6 col-lg-4 mb-0">
+<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+</div>
+<div class="imgcontainer">
+
+<div class="centered">
+<h4 class="page-section-heading text-center text-white">Demo Video </h4>
+  </div>
+
+<img class="img-fluid" src="assets/img/portfolio/awakening.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
+</div>					
+</div>
+<!-- text here --> <p class="mb-4">
+</p>
+</div>
+
+<div class="col-md-6 col-lg-4 mb-0">
+<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+</div>
+
+<div class="imgcontainer">
+
+  <div class="centered">
+  <h4 class="page-section-heading text-center text-white">Tips & Tricks</h4>
+  </div>
+             
+<img class="img-fluid" src="assets/img/portfolio/dhammawheelgreen.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy" />
+		</div>					             
+               
+              
+                        </div>
+			
+						<!-- text here --> <p class="mb-4">
+		</p>
+
+				
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+             
+                 <div class="imgcontainer">
+
+  <div class="centered">
+  <h4 class="page-section-heading text-center text-white">Advanced</h4>
+  </div>
+
+<img class="img-fluid" src="assets/img/portfolio/sangha.webp" alt="Search in Pali Suttas and Vinaya" loading="lazy"/>
+		</div>		
+         </div>
+<!-- text here --> <p class="mb-4"></p>
+</div>
+
+</div>
+</div>
+        </section>
+        <!-- About Section-->
+        <section class="page-section bg-primary text-white mb-0" id="project">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white">About Project</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                        <div class="lock example divider-custom-icon">
+                                        <i class="fa-solid fa-circle example icon-unlock" ></i>
+ <i class="fa-solid fa-circle icon-lock bigger"></i>
+                      </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift serves as a Liberation Search Engine for Dhamma and Vinaya, the core of the Pali Canon. </br></br>It presents results in informative tables with line by line translations from sources like SuttaCentral.net, TheBuddhasWords.net, Theravada.ru, and Theravada.su. </p></div>
+<div class="col-lg-4 me-auto"><p class="lead">You can search in Pali, Russian, Thai, and English for meanings, definitions, metaphors, explanations, people, places, and more as described in Suttas and Vinaya.</br></br>Dhamma enthusiasts and contributors, especially developers, are warmly invited to participate.</p></div>                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
+                
+                   <i class="fa-brands fa-github"></i> Project on GitHub                    </a>
+                </div>
+            </div>
+        </section>
+  
+        <!-- Footer-->
+        <footer id="links" class="footer text-center ">
+               <h2 class="page-section-heading text-center text-uppercase text-white mb-5">Recommended Links</h2>
+			   
+            <div class="container">
+                <div  class="row">
+                   <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+          
+
+                        <h4 id="research" class="text-uppercase mb-4">Research </h4>
+               
+                <div class="list-group">
+      
+  <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">find.dhamma.gift Offline Edition</h5>
+      <small class="text-muted">offline</small>
+    </div>
+  <p class="mb-1">Offline version & setup instruction. Right now Android only🙏</p>
+    <small class="text-muted"></small>
+  </a>  
+    <a href="/cse.php" target="_blank" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Google from dhamma.gift</h5>
+      <small class="text-muted">online </small>
+    </div>
+    <p class="mb-1">
+      Search with Google within recommended resources    </p>
+    <small class="text-muted">Especially convenient for Wisdomlib</small>
+  </a>
+  
+        <a target="_blank" href="https://digitalpalidictionary.github.io/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Digital Pali Dictionary</h5>
+      <small class="text-muted">app</small>
+    </div>
+    <p class="mb-1">The biggest and quickest dictionary and pali grammar</p>
+    <small class="text-muted">Available for PC, Linux, Mac, Android, IOS</small>
+  </a>
+
+        <a target="_blank" href="https://devamitta.github.io/pali/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">DPD Russian Version</h5>
+      <small class="text-muted">app</small>
+    </div>
+    <p class="mb-1">Small Pali-Russian Dictionary based on DPD</p>
+    <small class="text-muted"></small>
+  </a>
+
+<a target="_blank" href="https://play.google.com/store/apps/details?id=klye.plugin.pi1" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Pali Layout</h5>
+      <small class="text-muted">app</small>
+    </div>
+    <p class="mb-1">Install "O keyboard" itself before installing plug-in</p>
+    <small class="text-muted">to add Pali: Language - Transliteration - Pali (IAST)</small>
+  </a>
+
+    <a target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Pali Text Society Dictionary</h5>
+      <small class="text-muted">online</small>
+    </div>
+    <p class="mb-1">One of the most famous Pali English dictionaries</p>
+    <small class="text-muted"></small>
+  </a>
+
+
+    <a target="_blank" href="https://www.wisdomlib.org/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Wisdomlib.org</h5>
+      <small class="text-muted">online</small>
+    </div>
+    <p class="mb-1">Big online collection of dictionaries. Not only Pali, but multiple spiritual traditions of India</p>
+    <small class="text-muted">Very helpful for difficult terms</small>
+  </a>
+  
+      <a target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">TamilCube.com</h5>
+      <small class="text-muted">online</small>
+    </div>
+    <p class="mb-1">Simple Online English-Pali Dictionary</p>
+    <small class="text-muted"></small>
+  </a>
+
+    <a target="_blank"  href="
+  https://drive.google.com/drive/folders/1bdkm-g_ReZi5QEior_gNTok8r4flAfa3?usp=sharing" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">All Pali words from Suttanta (except KN) & Vinaya</h5>
+      <small class="text-muted">offline</small>
+    </div>
+    <p class="mb-1">In alphabetical order with count number</p>
+    <small class="text-muted"></small>
+  </a>
+
+
+</div>  
+  <p class="lead mb-0"> </p>
+    </div>
+                    <!-- Footer Social Icons-->
+<div class="col-lg-4 mb-5 mb-lg-0">
+  <h4 id="read" class="text-uppercase mb-4">Read </h4>
+                       
+
+ <div class="list-group">
+  <a target="" href="/sc" class="list-group-item list-group-item-action active" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left">
+      <h5 class="mb-1">sc.dhamma.gift</h5>
+      <small>online & offline</small>
+    </div>
+    <p class="mb-1 text-left">Suttacentral.net texts with quicker lightweight interface</p>
+    <small>Pali-English Line-by-line</small>
+  </a>
+
+  <a target="_blank" href="https://Suttacentral.net" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left">
+      <h5 class="mb-1">Suttacentral.net</h5>
+      <small>online & offline</small>
+    </div>
+    <p class="mb-1 text-left">The most complete line-by-line Pali-English collection</p>
+    <small>Pali-English dictionary can be turned on in settings</small>
+  </a>
+  
+    <a target="_blank" href="https://thebuddhaswords.net/home/index.html" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left">
+      <h5 class="mb-1">TheBuddhasWords.net</h5>
+      <small>online</small>
+    </div>
+    <p class="mb-1 text-left">Very impressive paragraph-by-paragraph Pali-English collection</p>
+    <small>Pali-English on hover dictionary built-in</small>
+  </a>
+  
+    <a target="_blank"   href="https://www.digitalpalireader.online/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Digital Pali Reader</h5>
+      <small class="text-muted">online & offline</small>
+    </div>
+    <p class="mb-1">Profound online tool for Pali readings and alternative search</p>
+    <small class="text-muted">Built-in Pali-English dictionary</small>
+  </a>
+  
+  <a target="_blank"  href="https://tipitaka.theravada.su/toc/translations/1097" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Tipitaka.Theravada.su</h5>
+      <small class="text-muted">online</small>
+    </div>
+    <p class="mb-1">Multiple translation options. Pali-English-Russian line-by-line</p>
+    <small class="text-muted">Especially recommended for studying Digha Nikaya</small>
+  </a>
+  
+  <a href="https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm" target="_blank"   class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Theravada.ru</h5>
+      <small class="text-muted">online</small>
+    </div>
+    <p class="mb-1">The most complete translation of Suttanta in Russian</p>
+    <small class="text-muted"></small>
+  </a>
+  
+   <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank"   class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">T2S Android</h5>
+      <small class="text-muted">app</small>
+    </div>
+    <p class="mb-1">Text-to-Speech generator for English and Russian</p>
+    <small class="text-muted">Listen to sc.dhamma.gift, theravada.ru & other</small>
+  </a>
+  
+   <a href="https://voice.suttacentral.net" target="_blank"   class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Voice.suttacentral.net</h5>
+      <small class="text-muted">online</small>
+    </div>
+    <p class="mb-1">Generates Pali & English text-to-speech</p>
+    <small class="text-muted">for suttacentral.net texts</small>
+  </a>
+  
+</div>  
+
+				
+</div>
+				
+<div class="col-lg-4 mb-5 mb-lg-0">
+<h4 id="study" class="text-uppercase mb-4">Study</h4>
+	
+<div class="list-group">
+
+
+  <a target="_blank" href="https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk" class="list-group-item list-group-item-action active" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left ">
+      <h5 class="mb-1">Pali Textbook</h5>
+      <small>textbook</small>
+    </div>
+    <p class="mb-1 text-left">Highly recommended</p>
+    <small></small>
+  </a>
+
+    <a target="_blank"   href="https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Cases</h5>
+      <small class="text-muted">table</small>
+    </div>
+    <p class="mb-1">Cases are mistranslated pretty often</p>
+    <small class="text-muted">Check Pali original</small>
+  </a>
+
+  <a target="_blank" href="https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing" class="list-group-item list-group-item-action" aria-current="true">
+    <div class="d-flex w-100 justify-content-between text-left">
+      <h5 class="mb-1">Conjugations </h5>
+      <small>table</small>
+    </div>
+    <p class="mb-1 text-left">Conjugations sometimes mistranslated</p>
+    <small>Check Pali original</small>
+  </a>
+  
+
+  <a target="_blank"  href="
+  https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Materials for studying Pali in English and Russian</h5>
+      <small class="text-muted">offline</small>
+    </div>
+    <p class="mb-1">Collection of textbooks and tables</p>
+    <small class="text-muted"></small>
+  </a>
+ 
+  <a target="_blank"  href="/assets/diff/" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Compare Two Suttas</h5>
+      <small class="text-muted">online</small>
+    </div>
+    <p class="mb-1">Finds difference between two texts.</p>
+    <small class="text-muted"></small>
+  </a>
+
+  <a target="_blank"  href="/assets/listdiff.html" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Compare Two Lists of Suttas</h5>
+      <small class="text-muted">offline</small>
+    </div>
+    <p class="mb-1">Finds difference between two lists of suttas in this format: sn56.22 dn22 sn12.2</p>
+    <small class="text-muted"></small>
+  </a>
+
+  <a target="_blank"  href="/assets/makelist.html" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Create CSV List</h5>
+      <small class="text-muted">offline</small>
+    </div>
+    <p class="mb-1">Create Lists of phenomena, teachings, translations etc</p>
+    <small class="text-muted"></small>
+  </a>
+</div>  
+
+</div>
+<!-- Footer About Text-->
+<div id="contacts" class="col-lg-0 text-center">
+<h4 class="text-uppercase mt-5 mb-4">
+Contacts</h4>
+						
+<p class="lead mb-4">
+Find the Noble Eightfold Path.<br>
+Understand the Four Noble Truths.<br>Dhamma - is Actuality.</p>
+<a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
+<a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:o@dhamma.gift"><i class="fa-solid fa-at"></i></a>
+<a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+<div class="copyright py-4 text-center text-white">
+<div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift online 
+<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">2022</a>-2023</small> </div>
+        </div>
+        <!-- Portfolio Modals-->
+
+
+<!-- Portfolio Modal 3-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body text-center pb-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+
+<!-- Portfolio Modal - Title-->
+<h4 class="text-secondary mb-0">
+Definition of Dukkha in Suttas</h4>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-circle"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image-->
+
+<!-- Portfolio Modal - Text-->
+<p class="">From <a href="/sc/?q=dn22#18.18">dn22</a> <a href="/sc/?q=mn141#16.1">mn141</a></br>
+<h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>And what is pain?</br></br>Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>Whatever is experienced as  <strong>bodily</strong> pain, <strong>bodily</strong> discomfort, pain or discomfort born of bodily contact, </br>
+</br>
+idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
+that is called pain.</br>
+</br>
+<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
+And what is stress / "suffering"?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>cetasikaṁ</strong> dukkhaṁ <strong>cetasikaṁ</strong> asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Whatever is experienced as <strong>mental</strong> pain, <strong>mental</strong> discomfort, pain or discomfort born of mental contact, that is called distress,</br>
+</br>
+idaṁ vuccati, bhikkhave, domanassaṁ.</br>
+that is called stress.</p>									
+<button class="btn btn-primary" data-bs-dismiss="modal">
+<i class="fas fa-xmark fa-fw"></i>
+Close Window                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Advanced</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-circle"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/sangha.jpg" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
+            <p class="mb-4">
+<strong>Tip #1</strong><br>
+If you want to find some word in particular sutta, samyutta or nikaya run search like this: Sn17.*seyyathāpi
+<br>This example will search for all similies and metaphors in all Sn17.<br><br>
+<strong>Tip #2</strong><br>
+To add variations you may add [], e.g. nand[iī] this will search for both nandi and nandī matches.
+<br><br>
+
+<strong>Tip #3</strong><br>
+If you want to find words beginning or ending from some pattern use \\b before and/or in the end of the pattern. e.g. <strong>\\bkummo\\b</strong> will search for only kummo and will skip kummova and any other<br><br>
+<strong>Tip #4</strong><br>
+You may use regexes that are applicable in GNU grep -E statements. With proper escaping (\\) they should work. 
+Specialized AI can generate RegEx for Grep, e.g. <a href="https://codepal.ai/regex-generator" target=_blank>here</a>.
+Read and study regex to boost your search abilities.<br><br>
+<strong>Tip #5</strong><br>
+Read about <a target="_blank" href="https://datatables.net/">DataTables</a> on project webpage or elswhere. Results are generated in datatables.<br><br>
+
+<strong>How "Def" option works?</strong><br>
+With Def following search will run:<br>
+grep -E -A1 -Eir "${defpattern}.*nāma|an1\..*${defpattern}|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).*${defpattern}|An4.*(Cattā|Cata).*${defpattern}|An5.*Pañc.*${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.*${defpattern}|Seyyathāpi.*${defpattern}|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Tis|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKas.{0,60}${defpattern}.{0,9}\?|Katth.*${defpattern}.*daṭṭhabb|\bKata.{0,20}${defpattern}.{0,9}\?|Kiñ.*${defpattern}.{0,9} vadeth|${defpattern}.*adhivacan|vucca.{2,5} ${defpattern}{0,7}|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Yadapi.*${defpattern}.*tadapi.*${defpattern}" --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} <br>
+Please, create an issue on github or send an email, if you'll find other criteria.<br><br> </p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tips & Tricks</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-circle"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/dhammawheel.jpg" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
+<p class="mb-4"><strong>Tip #0</strong><br>Search available in Pali, English, Russian and Thai materials of SuttaCentral.net and also in thebuddhaswords.net. If some text is not presented there, you wont be able to find it.<br>
+Also, e.g. if "sankhara" is translated as "formation" in thw materials you won't find it in suttacentral.net, as it's translated as "choice" and vice-versa.<br>
+The following logic is applied: if you search in Roman script: 1st is Pali, then tbw materials, then Suttacentral.net materials. In Thai script - 1st is Pali, then Thai translations. In Cyrillic - Russian translations only.
+<br><br>
+<strong>Tip #1</strong><br>
+Use special characters ā ī ū ḍ ṁ ṁ ṇ ṅ ñ ṭ<br><br>
+<strong>Tip #2 Khuddaka NIkaya</strong><br>
+Search is performed in All DN, MN, SN, AN. use <strong>-kn</strong> option if you also want to include results from the following books of KN: Dhammapada, Udāna, Itivuttaka, Suttanipāta, Theragāthā, Therīgāthā. Other books of KN will not be used in the search even with option. You may use alternative services to make searches in Jatakas and other book of KN.<br>
+Example #1: -kn jamm
+<br>Will search in DN, MN, SN, AN + books of KN listed above
+<br>
+Example #2: jamm
+<br>Will search in DN, MN, SN, AN only.
+<br><br>
+
+<strong>Tip #3 Vinaya</strong><br> 
+if you're willing to search in Vinaya add -vin to your search request. For pali vinaya search for cetana the line will look like: -vin cetana <br><br>
+
+<strong>Tip #4 Stem</strong><br>
+Use stem of the word for broader results with or without prefixes or endings. 
+<br><br>
+<strong>Tip #5</strong><br>
+Prefer Pali to other languages. Pali is the language in which the oldest Dhamma related texts are written.	
+<br><br>
+<strong>Tip #6</strong><br>
+For Pali search results you have two options: results sorted by Suttas/Texts with quotes and by words. Use both to get some extra details.<br><br>
+<strong>Tip #7</strong><br>Minimal length of search pattern is 3 symbols. But if possible search for longer patterns. Then you will get more precise results.<br><br>
+<strong>Tip #8</strong><br> 
+We highly recommend to search in Pali. As it will give the best results, and you will develop a very important habit to look into Pali and do not rely blindly on the translations. But obviously you can get some benefits from searches in translations. If you are looking for animals, plants, etc. There are at least 4 different pali words for a snake but in Russian or English - it's just "a snake" or "a viper". <br><br>
+
+<strong>Tip #9</strong><br>
+if your request fails due to timeout try longer search pattern.  <br><br>
+<strong>Tip #10</strong><br>
+if your request fails due to timeout, and you can't use longer search pattern try <a href="./bg.php">Background Mode</a>. It might work.
+<br><br> 
+<strong>What is Mtphr count in result table?</strong><br>
+Matches in all text, not connected to search pattern:<br>
+"seyyathāpi|adhivacan|ūpama|opama|opamma"<br>
+Following words are ignored:<br>
+"adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"<br>
+Create an issue on github or send an email, if you'll find other criteria.
+<br><br>
+</p><button class="btn btn-primary" data-bs-dismiss="modal">
+<i class="fas fa-xmark fa-fw"></i> 
+Close Window</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+<div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+<div class="modal-body text-center pb-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+<!-- Portfolio Modal - Title-->
+<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+Demo Video</h2>
+<!-- Icon Divider-->
+<div class="divider-custom">
+<div class="divider-custom-line"></div>
+<div class="divider-custom-icon"><i class="fa-solid fa-circle"></i></div>
+<div class="divider-custom-line"></div>
+</div>
+
+<!-- Portfolio Modal - Image
+<img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
+<!-- Portfolio Modal - Text-->
+<div class="embed-container mb-3">
+<a href="https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US" target="_blank" ><img  class="imgonmain" src="/assets/img/video1en.webp" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" loading="lazy" ></a></div>
+
+<!-- <div class="embed-container"> <iframe src="https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+</div>-->
+
+<button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Core theme JS
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+                <!-- Bootstrap core JS-->
+				
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script defer>
+$(function () {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+<!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
+
+<script>
+$.ajax({
+  url: "/assets/texts/sutta_words.txt",
+  dataType: "text",
+  success: function(data) {
+
+    var accentMap = {
+      "ā": "a",
+      "ī": "i",
+      "ū": "u",
+      "ḍ": "d",
+      "ḷ": "l",
+      "ṁ": "n",
+      "ṁ": "m",
+      "ṅ": "n",
+      "ṇ": "n",
+      "ṭ": "t",
+      "ñ": "n",
+      "ññ": "n",
+      "ss": "s",
+      "aa": "a",
+      "ii": "i",
+      "uu": "u",
+      "dd": "d",
+      "kk": "k",
+      "ḍḍ": "d",
+      "ḷḷ": "l",
+      "ṇṇ": "n",
+      "ṭṭ": "t",
+      "cc": "c",
+      "pp": "p",
+	  "cch": "c",
+      "ch": "c",
+      "kh": "k",
+      "ph": "p",
+      "th": "t",
+      "ṭh": "t"
+    };
+
+    var normalize = function(term) {
+      var ret = "";
+      for (var i = 0; i < term.length; i++) {
+          ret += accentMap[term.charAt(i)] || term.charAt(i);
+      }
+      return ret;
+    };
+
+    var allWords = data.split('\n');
+
+    $("#paliauto").autocomplete({
+      position: {
+        my: "left bottom",
+        at: "left top",
+        collision: "flip"
+      },
+      minLength: 0,
+      source: function(request, response) {
+        var terms = request.term.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
+        var lastTerm = terms.pop().trim();
+        var otherMinLength = 3;
+
+        if (lastTerm.length < otherMinLength) {
+          response([]);
+          return;
+        }
+
+        var re = $.ui.autocomplete.escapeRegex(lastTerm);
+        var matchbeginonly = new RegExp("^" + re, "i");
+        var matchall = new RegExp(re.replace(/([a-z])\1/gi, "$1$1"), "i");
+
+        var listBeginOnly = $.grep(allWords, function(value) {
+          value = value.label || value.value || value;
+          var results = matchbeginonly.test(value) || matchbeginonly.test(normalize(value));
+          return results;
+        });
+
+        var listAll = $.grep(allWords, function(value) {
+          value = value.label || value.value || value;
+          var results = matchall.test(value) || matchall.test(normalize(value));
+          return results;
+        });
+
+        listAll = listAll.filter(function(el) {
+          return !listBeginOnly.includes(el);
+        });
+
+        // Ограничение количества подсказок до 1000
+        var maxRecord = 1000;
+        var resultList = listBeginOnly.concat(listAll).slice(0, maxRecord);
+        response(resultList);
+      },
+      focus: function(event, ui) {
+        // Удаляем автоматическое введение при наведении мыши
+        return false;
+      },
+      select: function(event, ui) {
+        var terms = this.value.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
+        terms.pop();
+        terms.push(ui.item.value);
+        this.value = terms.join(" ");
+        return false;
+      }
+    }).autocomplete("widget").addClass("fixed-height");
+  }
+});
+</script>
+
+
+<!-- <script type="module" src="/assets/js/autopali.js"></script> -->
+	  
+<script src="/assets/js/randPlaceholder.js">
+</script>
+<script defer>
+  randCallToAction();
+  randPlaceholderOnMain();
+  console.log(window.location.href);
+
+</script>
+<script src="/assets/js/dark-mode-switch/dark-mode-switch.min.js"></script>
+
+</body>
+<script>document.getElementById( 'spinner' ).style.display = 'none';</script><script>
+console.log('<br>');
+const responseElement = document.querySelector('#response');
+responseElement.innerHTML = '<br>';
+</script>	
+
+
+  
+
+</html>

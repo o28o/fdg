@@ -393,10 +393,16 @@ window.addEventListener('pageshow', function(event) {
 </script>
 </header>
 
-
 <!-- Portfolio Section-->
 <section class="mt-3 portfolio">
 <div class="container text-center">
+<?php
+if ( $lang == "ru" ) {
+include 'assets/common/horizontalMenuRu.php'; 
+} else {
+include 'assets/common/horizontalMenuEn.php'; 
+} 
+?>
 
 <div style="max-width: 450px;" class="container-lg my-4">
 
@@ -18231,13 +18237,7 @@ include $basedir . "/assets/texts/vinaya/bipm.php";
 </div>
 </div>
 <div class="mb-5"></div>
-<?php
-if ( $lang == "ru" ) {
-include 'assets/common/horizontalMenuRu.php'; 
-} else {
-include 'assets/common/horizontalMenuEn.php'; 
-} 
-?>
+
  <script src="/assets/js/pmjs.js"></script>
 
 <!-- Portfolio Item 3-->

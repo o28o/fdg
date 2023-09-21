@@ -2,7 +2,6 @@
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
 
-
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainscpage = $mainpage . '/sc';
@@ -130,8 +129,10 @@ dn22 mn141
 $carouseltitle = 'Интересные Запросы';
 
 $slide1 = 'Благородный Глоссарий';
+$slide1desc = 'Отличия между обычными и понятиями в очищении благородного';
 $slide1link = '/assets/example/ariyassa-vinaye_suttanta_pali-ru_34-106.html';
 $slide2 = 'Пища для размышлений';
+$slide2desc = 'Все случаи из Сутт, когда спрашивали: "Как вы думаете?"';
 $slide2link = '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali-ru_218-610.html';
 $read = 'читать';
 

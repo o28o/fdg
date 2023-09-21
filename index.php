@@ -385,7 +385,7 @@ include 'assets/common/horizontalMenuEn.php';
 } 
 ?>
 
-<!-- Portfolio Item 3-->
+<!-- Dukkha section Item 3-->
 <div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
 <div class="font-italic"> 
 <p class="font-italic text-center ">
@@ -399,6 +399,34 @@ include 'assets/common/horizontalMenuEn.php';
 <div class="portfolio-item-caption-content text-center text-white">
 <i class="fas fa-search fa-flip-horizontal fa-3x"></i></div>
 </div>
+</div>
+</div>
+
+
+<div style="max-width: 450px;" class="container-lg my-5">
+  <h4><?php echo $carouseltitle;?>:</h4><br>
+<div id="carouselWithCaptions" class="carousel slide " data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+ 
+  <h5><?php echo $slide1;?></h5>
+ 
+ <a href="<?php echo $slide1link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+    <div class="carousel-item">
+  <h5><?php echo $slide2;?></h5>
+ <a href="<?php echo $slide2link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 </div>
 

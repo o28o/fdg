@@ -126,26 +126,35 @@ Katamañca, bhikkhave, dukkhaṁ?<br>
 dn22 mn141
 </p>
 </p>';
+
+$carouseltitle = 'Интересные Запросы';
+
+$slide1 = 'Благородный Глоссарий';
+$slide1link = '/assets/example/ariyassa-vinaye_suttanta_pali-ru_34-106.html';
+$slide2 = 'Пища для размышлений';
+$slide2link = '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali-ru_218-610.html';
+$read = 'читать';
+
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
 $mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22#18.18>dn22</a> <a href=/ru/sc/?q=mn141#16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 Что такое, монахи, боль?</br>
 </br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
 
-Любая, монахи, <strong>телесная</strong> боль, <strong>телесный</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости осязанием,</br>
+Любая, монахи, <strong>телесная / осязаемая</strong> боль, <strong>телесный / осязаемый</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости осязанием,</br>
 </br>
 idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
 это называется болью.</br>
 </br>
 <h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
-А что такое стресс / страдание?</br>
+А что такое "страдание" / стресс / тягота / недовольство?</br>
 </br>
 Yaṁ kho, bhikkhave, <strong>cetasikaṁ</strong> dukkhaṁ <strong>cetasikaṁ</strong> asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Любая, монахи, <strong>ментальная</strong>  боль, <strong>ментальный</strong>  дискомфорт, боль и дискомфорт чувствуемый от затронутости мышлением,
+Любая, монахи, <strong>ментальная</strong>  боль, <strong>ментальный</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости мышлением,
 </br>
 </br>
 idaṁ vuccati, bhikkhave, domanassaṁ.</br>
-– вот что называется стрессом.</br></p>
+– вот что называется "страданием".</br></p>
 <p class="text-end"></p>';
 
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
@@ -513,13 +522,21 @@ $regexMemo = '
 $titlehowtovideo = 'How-To Video';
 $linkhowtovideo = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift';
+
+$carouseltitle = 'Top Interesting Queries';
+
+$slide1 = 'Noble Glossary';
+$slide1link = '/assets/example/ariyassa-vinaye_suttanta_pali_34-106.html';
+$slide2 = 'What do you think? ';
+$slide2link = '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali_218-610.html';
+$read = 'read';
+
 $fntmessage = 'All-round view on Four Noble Truths<br>
         in Pali Suttas and Vinaya.<br>
         Understand the real meaning <br>
         of Four Noble Truths<br>
-        and finish the p<a class="text-black text-decoration-none" href="/scripts/countdowntable.php">a</a>in.';
-
-
+        and finish the pain.';
+	
 $mainscrollmodalheader = 'Definition of Dukkha in Suttas';
 
 $mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22#18.18">dn22</a> <a href="/sc/?q=mn141#16.1">mn141</a></br>

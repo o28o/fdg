@@ -80,17 +80,17 @@ curl --insecure -u $user:$password -X POST "https://localhost:9200/pali/_doc/sn1
 
 curl --insecure -u $user:$password -X POST "https://localhost:9200/pali/_doc/sn1.1" -H 'Content-Type: application/json' -d'
 {
-  "group" : "fans",
+  "textID" : "sn1.1",
   "user" : [ 
     {
-      "first" : "John",
-      "last" :  "Smith"
+      "lineID" : "sn35.245:0.1",
+      "line" :  "Āsīvisavagga"
     },
     {
-      "first" : "Alice",
-      "last" :  "White"
-    }
-  ]
+      "lineID" : "sn35.245:0.2",
+      "line" :  "Atha kho aññataro bhikkhu yenaññataro bhikkhu tenupasaṅkami; upasaṅkamitvā taṁ bhikkhuṁ etadavoca:"
+    }
+  ]
 }
 '
 

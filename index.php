@@ -407,7 +407,11 @@ include 'assets/common/horizontalMenuEn.php';
  <!-- <h4><?php echo $carouseltitle;?>:</h4><br> -->
  
 <div id="carouselWithCaptions" class="carousel slide " data-bs-ride="carousel">
-
+<!-- <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div> -->
   <div class="carousel-inner">
     <div class="carousel-item active">
  
@@ -429,7 +433,9 @@ include 'assets/common/horizontalMenuEn.php';
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button> -->
+
 </div>
+
 </div>
 
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	

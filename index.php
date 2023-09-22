@@ -86,13 +86,59 @@ include 'scripts/opentexts.php';
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column mb-3">
 
-                <!-- Masthead Avatar Image-->
                 <!-- Masthead Heading-->
-<h1 class="masthead-heading">
+<div style="max-width: 450px;" class="container-lg my-1">
+ <!-- <h4><?php echo $carouseltitle;?>:</h4><br> -->
+ 
+<div id="carouselWithCaptions" class="carousel slide " data-bs-ride="carousel">
+<!-- <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div> -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+ <h1 class="">
     <div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
-        <?php echo $title;?>
+        <?php echo $title;?><br>
     </div>
 </h1>
+	      <img src="/assets/img/headerlogo.png" style="height: 30px;" class="d-block h-150" alt="<?php echo $tooltiptitle;?>">
+    </div>   
+	
+	<div class="carousel-item ">
+  <h5><?php echo $slide1;?></h5>
+   <span><?php echo $slide1desc;?></span>
+ <a href="<?php echo $slide1link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+    
+	<div class="carousel-item">
+  <h5><?php echo $slide2;?></h5>
+     <span><?php echo $slide2desc;?></span>
+ <a href="<?php echo $slide2link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+	
+	    <div class="carousel-item">
+  <h5><?php echo $slide3;?></h5>
+     <span><?php echo $slide3desc;?></span>
+ <a href="<?php echo $slide3link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+	
+  </div>
+ <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+</div>
+
+</div>
+
+
 
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -424,15 +470,22 @@ include 'assets/common/horizontalMenuEn.php';
      <span><?php echo $slide2desc;?></span>
  <a href="<?php echo $slide2link;?>" style="text-align: left;"><?php echo $read;?></a>
     </div>
+	
+	    <div class="carousel-item">
+  <h5><?php echo $slide3;?></h5>
+     <span><?php echo $slide3desc;?></span>
+ <a href="<?php echo $slide3link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+	
   </div>
-<!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
+ <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button> -->
+  </button>
 
 </div>
 

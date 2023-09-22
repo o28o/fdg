@@ -129,11 +129,16 @@ dn22 mn141
 $carouseltitle = 'Интересные Запросы';
 
 $slide1 = 'Благородный Глоссарий';
-$slide1desc = 'Отличия между обычными и понятиями в очищении благородного';
-$slide1link = '/assets/example/ariyassa-vinaye_suttanta_pali-ru_34-106.html';
 $slide2 = 'Пища для размышлений';
-$slide2desc = 'Все случаи из Сутт, когда спрашивали: "Как вы думаете?"';
+$slide3 = 'Я научу вас благородному ...';
+
+$slide1link = '/assets/example/ariyassa-vinaye_suttanta_pali-ru_34-106.html';
 $slide2link = '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali-ru_218-610.html';
+$slide3link = 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali-ru_13-13.html';
+
+$slide1desc = 'Отличия между обычными и понятиями <br> в очищении благородного';
+$slide2desc = 'Все случаи из Сутт, когда <br> спрашивают: "Как вы думаете?"';
+$slide3desc = 'Что такое благородное мытьё, слабительное, <br> рвотное, путь и самадхи';
 $read = 'читать';
 
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
@@ -527,10 +532,19 @@ $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma
 $carouseltitle = 'Top Interesting Queries';
 
 $slide1 = 'Noble Glossary';
-$slide1link = '/assets/example/ariyassa-vinaye_suttanta_pali_34-106.html';
 $slide2 = 'What do you think? ';
+$slide3 = 'I will teach a noble ...';
+
+$slide1link = '/assets/example/ariyassa-vinaye_suttanta_pali_34-106.html';
 $slide2link = '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali_218-610.html';
+$slide3link = 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali_13-13.html';
+
+$slide1desc = 'Differences between ordinary concepts and <br>in the purification of the noble one';
+$slide2desc = 'All instances from the Suttas when<br> "What do you think?" was asked';
+$slide3desc = 'What is noble cleansing, purgative, emetic,<br> the path, and samadhi';
+
 $read = 'read';
+
 
 $fntmessage = 'All-round view on Four Noble Truths<br>
         in Pali Suttas and Vinaya.<br>

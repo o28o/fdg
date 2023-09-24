@@ -546,7 +546,11 @@ $slide2link = '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali_218-610.html';
 $slide3link = 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali_13-13.html';
 
 $slide1desc = 'Differences between ordinary concepts and <br>in the purification of the noble one';
+<<<<<<< HEAD
 $slide2desc = 'All quotes from the Suttas when<br> "What do you think?" was asked';
+=======
+$slide2desc = 'All Suttas when<br> "What do you think?" was asked <br> by Buddha and his disciples';
+>>>>>>> 9659adad4c61d6395c22e9fece1c3a4e5ecb9650
 $slide3desc = 'What is noble cleansing, purgative, emetic,<br> the path, and samadhi';
 
 $slide4 = 'There comes a time...';

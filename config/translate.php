@@ -139,6 +139,12 @@ $slide3link = 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali-ru_1
 $slide1desc = 'Отличия между обычными и понятиями <br> в очищении благородного';
 $slide2desc = 'Все случаи из Сутт, когда <br> спрашивают: "Как вы думаете?"';
 $slide3desc = 'Что такое благородное мытьё, слабительное, <br> рвотное, путь и самадхи';
+
+$slide4 = 'Бывает такой период...';
+$slide4desc = 'Различные события, которые периодически происходят';
+$slide4link = '/assets/example/hoti-kho-so.samayo_suttanta_pali-ru_8-32.html';
+
+
 $read = 'читать';
 
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
@@ -542,6 +548,12 @@ $slide3link = 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali_13-1
 $slide1desc = 'Differences between ordinary concepts and <br>in the purification of the noble one';
 $slide2desc = 'All Suttas when<br> "What do you think?" was asked <br> by Buddha and his disciples';
 $slide3desc = 'What is noble cleansing, purgative, emetic,<br> the path, and samadhi';
+
+$slide4 = 'There comes a time...';
+$slide4desc = 'Various recurring events described in Suttas';
+$slide4link = '/assets/example/hoti-kho-so.samayo_suttanta_pali_8-32.html';
+
+
 
 $read = 'read';
 

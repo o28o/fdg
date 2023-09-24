@@ -429,6 +429,12 @@ include 'assets/common/horizontalMenuEn.php';
      <span><?php echo $slide3desc;?></span>
  <a href="<?php echo $slide3link;?>" style="text-align: left;"><?php echo $read;?></a>
     </div>
+
+	    <div class="carousel-item">
+  <h5><?php echo $slide4;?></h5>
+     <span><?php echo $slide4desc;?></span>
+ <a href="<?php echo $slide4link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
 	
   </div>
  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">

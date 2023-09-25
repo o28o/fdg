@@ -144,6 +144,10 @@ $slide4 = 'Бывает такой период...';
 $slide4desc = 'Различные события, которые периодически происходят';
 $slide4link = '/assets/example/hoti-kho-so.samayo_suttanta_pali-ru_8-32.html';
 
+$slide5 = 'Я не отрицаю это...';
+$slide5desc = 'Интересные уточнения и нюансы с этой фразой';
+$slide5link = '/assets/example/nes.natth.vadaami_suttanta_pali-ru_5-17.html';
+
 $read = 'читать';
 
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
@@ -553,7 +557,9 @@ $slide4 = 'There comes a time...';
 $slide4desc = 'Various recurring events described in Suttas';
 $slide4link = '/assets/example/hoti-kho-so.samayo_suttanta_pali_8-32.html';
 
-
+$slide5 = 'I don’t deny it. ';
+$slide5desc = 'Curious clarifications and details containting this phrase.';
+$slide5link = '/assets/example/nes.natth.vadaami_suttanta_pali_5-17.html';
 
 $read = 'read';
 

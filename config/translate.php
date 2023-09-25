@@ -564,6 +564,26 @@ $slide5link = '/assets/example/nes.natth.vadaami_suttanta_pali_5-17.html';
 $read = 'read';
 
 
+$slides = [
+    [
+        'title' => 'Noble Glossary',
+        'desc' => 'Differences between ordinary concepts and in the purification of the noble one',
+        'link' => '/assets/example/ariyassa-vinaye_suttanta_pali_34-106.html',
+    ],
+    [
+        'title' => 'What do you think?',
+        'desc' => 'All Suttas when "What do you think?" was asked by Buddha and his disciples',
+        'link' => '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali_218-610.html',
+    ],
+    [
+        'title' => 'I will teach a noble ...',
+        'desc' => 'What is noble cleansing, purgative, emetic, the path, and samadhi',
+        'link' => 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali_13-13.html',
+    ],
+    // Добавьте другие слайды по аналогии
+];
+
+
 $fntmessage = 'All-round view on Four Noble Truths<br>
         in Pali Suttas and Vinaya.<br>
         Understand the real meaning <br>

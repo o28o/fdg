@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <?php
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
@@ -86,7 +85,6 @@ include 'scripts/opentexts.php';
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column mb-3">
 
-                <!-- Masthead Avatar Image-->
                 <!-- Masthead Heading-->
 <h1 class="masthead-heading">
     <div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
@@ -424,15 +422,28 @@ include 'assets/common/horizontalMenuEn.php';
      <span><?php echo $slide2desc;?></span>
  <a href="<?php echo $slide2link;?>" style="text-align: left;"><?php echo $read;?></a>
     </div>
+	
+	    <div class="carousel-item">
+  <h5><?php echo $slide3;?></h5>
+     <span><?php echo $slide3desc;?></span>
+ <a href="<?php echo $slide3link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+
+	    <div class="carousel-item">
+  <h5><?php echo $slide4;?></h5>
+     <span><?php echo $slide4desc;?></span>
+ <a href="<?php echo $slide4link;?>" style="text-align: left;"><?php echo $read;?></a>
+    </div>
+	
   </div>
-<!--  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
+ <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
-  </button> -->
+  </button>
 
 </div>
 

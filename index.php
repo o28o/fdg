@@ -400,65 +400,6 @@ include 'assets/common/horizontalMenuEn.php';
 </div>
 </div>
 
-
-<div style="max-width: 450px;" class="container-lg my-5">
- <!-- <h4><?php echo $carouseltitle;?>:</h4><br> -->
- 
-<div id="carouselWithCaptions" class="carousel slide " data-bs-ride="carousel">
-<!-- <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div> -->
-  <div class="carousel-inner">
- 
-  <div class="carousel-item active">
-  <h5><?php echo $slide1;?></h5>
-  <span><?php echo $slide1desc;?></span>
-  <a href="<?php echo $slide1link;?>" style="text-align: left;"><?php echo $read;?></a>
-  </div>
- 
-  <div class="carousel-item">
-  <h5><?php echo $slide2;?></h5>
-  <span><?php echo $slide2desc;?></span>
-  <a href="<?php echo $slide2link;?>" style="text-align: left;"><?php echo $read;?></a>
-  </div>
-	
-  <div class="carousel-item">
-  <h5><?php echo $slide3;?></h5>
-  <span><?php echo $slide3desc;?></span>
-  <a href="<?php echo $slide3link;?>" style="text-align: left;"><?php echo $read;?></a>
-  </div>
-
-  <div class="carousel-item">
-  <h5><?php echo $slide4;?></h5>
-  <span><?php echo $slide4desc;?></span>
-  <a href="<?php echo $slide4link;?>" style="text-align: left;"><?php echo $read;?></a>
-  </div>
-
-  <div class="carousel-item">
-  <h5><?php echo $slide5;?></h5>
-  <span><?php echo $slide5desc;?></span>
-  <a href="<?php echo $slide5link;?>" style="text-align: left;"><?php echo $read;?></a>
-  </div>
-  
-  </div>
- <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-
-</div>
-
-</div>
-
-
-
-
 <div style="max-width: 450px;" class="container-lg my-5">
  <!-- <h4><?php echo $carouseltitle;?>:</h4><br> -->
  
@@ -472,24 +413,6 @@ include 'assets/common/horizontalMenuEn.php';
 
 
 <?php
-$slides = [
-    [
-        'title' => 'Noble GlossaryЧ',
-        'desc' => 'Differences between ordinary concepts and in the purification of the noble one',
-        'link' => '/assets/example/ariyassa-vinaye_suttanta_pali_34-106.html',
-    ],
-    [
-        'title' => 'What do you think?Ч',
-        'desc' => 'All Suttas when "What do you think?" was asked by Buddha and his disciples',
-        'link' => '/assets/example/ta.m-ki.m-ma~n~n_suttanta_pali_218-610.html',
-    ],
-    [
-        'title' => 'I will teach a nobleЧ ...',
-        'desc' => 'What is noble cleansing, purgative, emetic, the path, and samadhi',
-        'link' => 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali_13-13.html',
-    ],
-    // Добавьте другие слайды по аналогии
-];
 
 foreach ($slides as $index => $slide) {
     $title = $slide['title'];
@@ -508,7 +431,6 @@ foreach ($slides as $index => $slide) {
 }
 ?>
 
- 
   </div>
  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -518,9 +440,7 @@ foreach ($slides as $index => $slide) {
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-
 </div>
-
 </div>
 
 <h4 id="help" class="page-section-heading text-center mb-4"><?php echo $howtovideo;?></h4>	

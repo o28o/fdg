@@ -424,6 +424,7 @@ foreach ($slides as $index => $slide) {
 <div class="carousel-item <?php echo $isActive; ?>">
     <h5><?php echo $title; ?></h5>
     <span><?php echo $desc; ?></span>
+	<br>
     <a href="<?php echo $link; ?>" style="text-align: left;"><?php echo $read; ?></a>
 </div>
 

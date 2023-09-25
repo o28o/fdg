@@ -151,7 +151,7 @@ $slides = [
     ],
     [
         'title' => 'Я не отрицаю это...',
-        'desc' => 'Интересные уточнения и нюансы с этой фразой<br>',
+        'desc' => 'Интересные уточнения и нюансы с этой фразой',
         'link' => '/assets/example/nes.natth.vadaami_suttanta_pali-ru_5-17.html',
     ],
 ];

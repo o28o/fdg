@@ -411,30 +411,37 @@ include 'assets/common/horizontalMenuEn.php';
     <button type="button" data-bs-target="#carouselWithCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div> -->
   <div class="carousel-inner">
-    <div class="carousel-item active">
  
+  <div class="carousel-item active">
   <h5><?php echo $slide1;?></h5>
-   <span><?php echo $slide1desc;?></span>
- <a href="<?php echo $slide1link;?>" style="text-align: left;"><?php echo $read;?></a>
-    </div>
-    <div class="carousel-item">
+  <span><?php echo $slide1desc;?></span>
+  <a href="<?php echo $slide1link;?>" style="text-align: left;"><?php echo $read;?></a>
+  </div>
+ 
+  <div class="carousel-item">
   <h5><?php echo $slide2;?></h5>
-     <span><?php echo $slide2desc;?></span>
- <a href="<?php echo $slide2link;?>" style="text-align: left;"><?php echo $read;?></a>
-    </div>
+  <span><?php echo $slide2desc;?></span>
+  <a href="<?php echo $slide2link;?>" style="text-align: left;"><?php echo $read;?></a>
+  </div>
 	
-	    <div class="carousel-item">
+  <div class="carousel-item">
   <h5><?php echo $slide3;?></h5>
-     <span><?php echo $slide3desc;?></span>
- <a href="<?php echo $slide3link;?>" style="text-align: left;"><?php echo $read;?></a>
-    </div>
+  <span><?php echo $slide3desc;?></span>
+  <a href="<?php echo $slide3link;?>" style="text-align: left;"><?php echo $read;?></a>
+  </div>
 
-	    <div class="carousel-item">
+  <div class="carousel-item">
   <h5><?php echo $slide4;?></h5>
-     <span><?php echo $slide4desc;?></span>
- <a href="<?php echo $slide4link;?>" style="text-align: left;"><?php echo $read;?></a>
-    </div>
-	
+  <span><?php echo $slide4desc;?></span>
+  <a href="<?php echo $slide4link;?>" style="text-align: left;"><?php echo $read;?></a>
+  </div>
+
+  <div class="carousel-item">
+  <h5><?php echo $slide5;?></h5>
+  <span><?php echo $slide5desc;?></span>
+  <a href="<?php echo $slide5link;?>" style="text-align: left;"><?php echo $read;?></a>
+  </div>
+  
   </div>
  <button class="carousel-control-prev" type="button" data-bs-target="#carouselWithCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

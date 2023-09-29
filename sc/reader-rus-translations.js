@@ -333,6 +333,19 @@ if (document.location.search) {
     language = lang;
     console.log("in the initializing " + lang);
     setLanguage(lang);
+  } else if {
+	 // initial state
+  if (localStorage.paliToggleRu) {
+    if (localStorage.paliToggleRu === "showPaliEng") {
+      showPaliEnglish();
+    } else if (localStorage.paliToggleRu === "showPali") {
+      showPali();
+    } else if (localStorage.paliToggleRu === "showEnglish") {
+      showEnglish();
+    }
+  } else {
+    localStorage.paliToggleRu = "showPaliEng";
+  }   
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
@@ -430,18 +443,7 @@ function showPali() {
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
-  // initial state
-  if (localStorage.paliToggleRu) {
-    if (localStorage.paliToggleRu === "showPaliEng") {
-      showPaliEnglish();
-    } else if (localStorage.paliToggleRu === "showPali") {
-      showPali();
-    } else if (localStorage.paliToggleRu === "showEnglish") {
-      showEnglish();
-    }
-  } else {
-    localStorage.paliToggleRu = "showPaliEng";
-  }
+  
 
   languageButton.addEventListener("click", () => {
     if (language === "pli-rus") {

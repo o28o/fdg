@@ -269,10 +269,14 @@ if (document.location.search) {
   let lang = params.get("lang");
   citation.value = slug;
   buildSutta(slug);
-  if (lang) {
+if (lang) {
     language = lang;
-    console.log("in the initializing" + lang);
+    console.log("in the initializing " + lang);
     setLanguage(lang);
+  } else if  (localStorage.paliToggle) {
+    	language = localStorage.paliToggle; 
+		  console.log('read from ls ' + language);
+setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
@@ -372,32 +376,24 @@ function showPali() {
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
-  if (localStorage.paliToggle) {
-    if (localStorage.paliToggle === "showPaliEng") {
-      showPaliEnglish();
-    } else if (localStorage.paliToggle === "showPali") {
-      showPali();
-    } else if (localStorage.paliToggle === "showEnglish") {
-      showEnglish();
-    }
-  } else {
-    localStorage.paliToggle = "showPaliEng";
-  }
-
+	 // initial state
+ if (!localStorage.paliToggle) {
+    localStorage.paliToggle = "pli-eng";
+  }   
 
   languageButton.addEventListener("click", () => {
     if (language === "pli") {
       showPaliEnglish();
       language = "pli-eng";
-      localStorage.paliToggle = "showPaliEng";
+      localStorage.paliToggle = "pli-eng";
     } else if (language === "pli-eng") {
       showEnglish();
       language = "eng";
-      localStorage.paliToggle = "showEnglish";
+      localStorage.paliToggle = "eng";
     } else if (language === "eng") {
       showPali();
       language = "pli";
-      localStorage.paliToggle = "showPali";
+      localStorage.paliToggle = "pli";
     }
   });
 }

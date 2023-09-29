@@ -102,7 +102,7 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let mnranges = ['mn1', 'mn2', 'mn3', 'mn4', 'mn5', 'mn6', 'mn7', 'mn8', 'mn9', 'mn10', 'mn11', 'mn12', 'mn13', 'mn14', 'mn15', 'mn16', 'mn17', 'mn18', 'mn19', 'mn20', 'mn21', 'mn22', 'mn23', 'mn24', 'mn25', 'mn26', 'mn27', 'mn28', 'mn29', 'mn30', 'mn31', 'mn32', 'mn33', 'mn34', 'mn35', 'mn36', 'mn37', 'mn38', 'mn39', 'mn40', 'mn41', 'mn43', 'mn44', 'mn45', 'mn46', 'mn47', 'mn48', 'mn49', 'mn50', 'mn51', 'mn52', 'mn53', 'mn54', 'mn55', 'mn56', 'mn57', 'mn58', 'mn59', 'mn60', 'mn61', 'mn62', 'mn63', 'mn64', 'mn65', 'mn66', 'mn67', 'mn68', 'mn69', 'mn91', 'mn135', 'mn141'];
+let mnranges = ['mn1', 'mn2', 'mn3', 'mn4', 'mn5', 'mn6', 'mn7', 'mn8', 'mn9', 'mn10', 'mn11', 'mn12', 'mn13', 'mn14', 'mn15', 'mn16', 'mn17', 'mn18', 'mn19', 'mn20', 'mn21', 'mn22', 'mn23', 'mn24', 'mn25', 'mn26', 'mn27', 'mn28', 'mn29', 'mn30', 'mn31', 'mn32', 'mn33', 'mn34', 'mn35', 'mn36', 'mn37', 'mn38', 'mn39', 'mn40', 'mn41', 'mn43', 'mn44', 'mn45', 'mn46', 'mn47', 'mn48', 'mn49', 'mn50', 'mn51', 'mn52', 'mn53', 'mn54', 'mn55', 'mn56', 'mn57', 'mn58', 'mn59', 'mn60', 'mn61', 'mn62', 'mn63', 'mn64', 'mn65', 'mn66', 'mn67', 'mn68', 'mn69', 'mn77', 'mn91', 'mn135', 'mn141'];
 let snranges = ['sn1.1', 'sn1.2', 'sn1.10', 'sn1.11', 'sn1.12', 'sn1.13', 'sn1.14', 'sn1.15', 'sn1.16', 'sn1.17', 'sn1.18', 'sn1.19', 'sn1.21', 'sn1.22', 'sn1.23', 'sn1.24', 'sn1.26', 'sn1.27', 'sn1.28', 'sn1.29', 'sn1.30', 'sn1.36', 'sn14.12', 'sn22.10', 'sn22.59', 'sn22.59', 'sn22.103', 'sn22.104', 'sn22.105', 'sn22.106', 'sn22.107', 'sn22.108', 'sn22.109', 'sn22.110', 'sn22.111', 'sn22.112', 'sn22.113', 'sn22.114', 'sn22.115', 'sn22.117', 'sn35.28', 'sn35.104', 'sn38.4', 'sn44.10', 'sn56.11'];
 let anranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40', 'an1.41-50', 'an1.51-60', 'an1.61-70', 'an1.71-81', 'an1.82-97', 'an3.107', 'an10.46'];
 let dnranges = ['dn1', 'dn2', 'dn3', 'dn4', 'dn5', 'dn6', 'dn7', 'dn8', 'dn9', 'dn10', 'dn11', 'dn12', 'dn13', 'dn14', 'dn15', 'dn16', 'dn17', 'dn18', 'dn19', 'dn20', 'dn21', 'dn22', 'dn23', 'dn23', 'dn24', 'dn25', 'dn26', 'dn27', 'dn28', 'dn29', 'dn30', 'dn31', 'dn32', 'dn33', 'dn34'];
@@ -337,10 +337,14 @@ if (document.location.search) {
   let lang = params.get("lang");
   citation.value = slug;
   buildSutta(slug);
-  if (lang) {
+ if (lang) {
     language = lang;
     console.log("in the initializing " + lang);
     setLanguage(lang);
+  } else if  (localStorage.paliToggleML) {
+    	language = localStorage.paliToggleML; 
+		  console.log('read from ls ' + language);
+setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
@@ -446,36 +450,24 @@ function showPali() {
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
-  // initial state
-  if (localStorage.paliToggleML) {
-    if (localStorage.paliToggleML === "showPaliRussian") {
-      showPaliRussian();
-    } else if (localStorage.paliToggleML === "showPali") {
-      showPali();
-    } else if (localStorage.paliToggleML === "showPaliAll") {
-      showPaliAll();
-    } else if (localStorage.paliToggleML === "showEnglish") {
-      showEnglish();
-    } else if (localStorage.paliToggleML === "showRussian") {
-      showRussian();
-    }
-  } else {
-    localStorage.paliToggleML = "showPaliAll";
-  }
+// initial state
+ if (!localStorage.paliToggleML) {
+    localStorage.paliToggleRu = "pli-rus";
+  }   
 
   languageButton.addEventListener("click", () => {
     if (language === "pli") {
       showPaliAll();
       language = "pli-rus";    
-      localStorage.paliToggleML = "showPaliAll";
+      localStorage.paliToggleML = "pli-rus";
     } else if (language === "pli-rus") {
      showPali();
       language = "rus";
-      localStorage.paliToggleML = "showPali";
+      localStorage.paliToggleML = "rus";
     } else if (language === "rus") {
      showPaliRussian();
       language = "pli";
-      localStorage.paliToggleML = "showPaliRussian";
+      localStorage.paliToggleML = "pli";
     }
   });
 }

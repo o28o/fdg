@@ -3,49 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
     <title>Случайное Правило</title>
     <!-- Подключение Bootstrap 5 CSS -->
-<link href="/assets/css/styles.css" rel="stylesheet" />
-<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container mt-5">
-    	<div class="align-items-center align-items-center toggle-switch input-group-append">
-    <div id="" class="input-group">
-        <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
-<svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
-        </a>
+        <div class="align-items-center align-items-center toggle-switch input-group-append">
+            <div id="" class="input-group">
+                <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+                    <svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+                </a>
 
-        <a href="../../" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
-            <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
-        </a>
-		
-        <div class="ms-1 form-check form-switch">
-            <input type="checkbox" class="form-check-input" id="darkSwitch">
+                <a href="../../" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                </a>
+
+                <div class="ms-1 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="darkSwitch">
+                </div>
+            </div>
         </div>
-    </div>
-</div>  
-      
-      
-        <h1 class="mb-5">Случайное Правило</h1>
-  
 
+        <h1 class="mb-5">Случайное Правило</h1>
     </div>
     <div class="container mt-2">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
             <label class="form-check-label" for="numberOnlyCheckbox">
-                Скрыть раздел
+                Скрыть раздел и название
             </label>
         </div>
-  
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="hideRuleNameCheckbox">
+            <label class="form-check-label" for="hideRuleNameCheckbox">
+                Скрыть только название
+            </label>
+        </div>
+
         <button class="btn btn-primary" id="randomButton">Показать</button>
-                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
             Диапазоны
         </button>
         <div id="rangeList" class="collapse mt-3">
-            <ul class="list-group">
+                        <ul class="list-group">
                 <li class="list-group-item">1-4    pj</li>
                 <li class="list-group-item">5-17    ss</li>
                 <li class="list-group-item">20-19   an</li>
@@ -60,146 +64,168 @@
     </div>
 
     <script>
- // Ваш список записей echo "" | awk '{print "$0",}'
-        const records = [
-            "1	pj	1",
-            "2	pj	2",
-            "3	pj	3",   
-            "4	pj	4",    
-            "5	ss	1",
-            "6	ss	2",
-            "7	ss	3",
-            "8	ss	4",
-            "9	ss	5",
-            "10	ss	6",
-            "11	ss	7",
-            "12	ss	8",
-            "13	ss	9",
-            "14	ss	10",
-            "15	ss	11",
-            "16	ss	12",
-            "17	ss	13",
-            "18	an	1",
-            "19	an	2",
-            "20	np	1",
-            "21	np	2",
-            "22	np	3",
-            "23	np	4",
-            "24	np	5",
-            "25	np	6",
-            "26	np	7",
-            "27	np	8",
-            "28	np	9",
-            "29	np	10",
-            "50	pc	1",
-            "51	pc	2",
-            "52	pc	3",
-            "53	pc	4",
-            "54	pc	5",
-            "55	pc	6",
-            "56	pc	7",
-            "57	pc	8",
-            "58	pc	9",
-            "59	pc	10",
-            "60	pc	11",
-            "61	pc	12",
-            "62	pc	13",
-            "63	pc	14",
-            "64	pc	15",
-            "65	pc	16",
-            "66	pc	17",
-            "67	pc	18",
-            "68	pc	19",
-            "69	pc	20",
-            "100	pc	51",
-            "101	pc	52",
-            "102	pc	53",
-            "103	pc	54",
-            "104	pc	55",
-            "146	sk	1",
-            "147	sk	2",
-            "148	sk	3",
-            "149	sk	4",
-            "150	sk	5",
-            "151	sk	6",
-            "152 sk	7",
-            "153	sk	8",
-            "154	sk	9",
-            "155	sk	10",
-            "156	sk	11",
-            "157	sk	12",
-            "158	sk	13",
-            "159	sk	14",
-            "160	sk	15",
-            "161	sk	16",
-            "162	sk	17",
-            "163	sk	18",
-            "164	sk	19",
-            "165	sk	20",
-            "166	sk	21",
-            "167	sk	22",
-            "168	sk	23",
-            "169	sk	24",
-            "170	sk	25",
-            "171	sk	26",
-            "172	sk	27",
-            "173	sk	28",
-            "174	sk	29",
-            "175	sk	30",
-            "176	sk	31",
-            "177	sk	32",
-            "178	sk	33",
-            "179	sk	34",
-            "180	sk	35",
-            "181	sk	36",
-            "182	sk	37",
-            "183	sk	38",
-            "184	sk	39",
-            "185	sk	40",
-            "186	sk	41",
-            "187	sk	42",
-            "188	sk	43",
-            "189	sk	44",
-            "190	sk	45",
-            "191	sk	46",
-            "192	sk	47",
-            "193	sk	48",
-            "194	sk	49",
-            "195	sk	50",
-            "196	sk	51",
-            "197	sk	52",
-            "198	sk	53",
-            "199	sk	54",
-            "200	sk	55",
-            "201	sk	56",
-            "202	sk	57",
-            "203	sk	58",
-            "204	sk	59",
-            "205	sk	60",
-            "206	sk	61",
-            "207	sk	62",
-            "208	sk	63",
-            "209	sk	64",
-            "210	sk	65",
-            "211	sk	66",
-            "212	sk	67",
-            "213	sk	68",
-            "214	sk	69",
-            "215	sk	70",
-            "216	sk	71",
-            "217	sk	72",
-            "218	sk	73",
-            "219	sk	74",
-            "220	sk	75",
-            "221	as	1",
-            "222	as	2",
-            "223	as	3",
-            "224	as	4",
-            "225	as	5",
-            "226	as	6",
-            "227	as	7"
-        ];
+       // Ваш список записей echo "" | awk '{print "$0",}' 
+	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
+const records = [
+  "1	pj	1	Pārājika 1. Methunadhamma",
+  "2	pj	2	Pārājika 2. Adinnādāna",
+  "3	pj	3	Pārājika 3. Manussaviggaha",
+  "4	pj	4	Pārājika 4. Uttarimanussadhamma",
+  "5	ss	1	Saṅghādisesa 1. Sukkavissaṭṭhi",
+  "6	ss	2	Saṅghādisesa 2. Kāyasaṁsagga",
+  "7	ss	3	Saṅghādisesa 3. Duṭṭhullavācā",
+  "8	ss	4	Saṅghādisesa 4. Attakāmapāricariya",
+  "9	ss	5	Saṅghādisesa 5. Sañcaritta",
+  "10	ss	6	Saṅghādisesa 6. Kuṭikāra",
+  "11	ss	7	Saṅghādisesa 7. Vihārakāra",
+  "12	ss	8	Saṅghādisesa 8. Duṭṭhadosa",
+  "13	ss	9	Saṅghādisesa 9. Aññabhāgiya",
+  "14	ss	10	Saṅghādisesa 10. Saṅghabheda",
+  "15	ss	11	Saṅghādisesa 11. Bhedānuvattaka",
+  "16	ss	12	Saṅghādisesa 12. Dubbaca",
+  "17	ss	13	Saṅghādisesa 13. Kuladūsaka",
+  "18	an	1	Aniyata 1. Paṭhamaaniyata",
+  "19	an	2	Aniyata 2. Dutiyaaniyata",
+  "20	np	1	Nissaggiya Pācittiya 1. Kathina",
+  "21	np	2	Nissaggiya Pācittiya 2. Udosita",
+  "22	np	3	Nissaggiya Pācittiya 3. Akālacīvara",
+  "23	np	4	Nissaggiya Pācittiya 4. Purāṇacīvara",
+  "24	np	5	Nissaggiya Pācittiya 5. Cīvarapaṭiggahaṇa",
+  "25	np	6	Nissaggiya Pācittiya 6. Aññātakaviññatti",
+  "26	np	7	Nissaggiya Pācittiya 7. Tatuttari",
+  "27	np	8	Nissaggiya Pācittiya 8. Paṭhamaupakkhaṭa",
+  "28	np	9	Nissaggiya Pācittiya 9. Dutiyaupakkhaṭa",
+  "29	np	10	Nissaggiya Pācittiya 10. Rāja",
+  "30	np	11	Nissaggiya Pācittiya 11. Kosiya",
+  "31	np	12	Nissaggiya Pācittiya 12. Suddhakāḷaka",
+  "32	np	13	Nissaggiya Pācittiya 13. Dvebhāga",
+  "33	np	14	Nissaggiya Pācittiya 14. Chabbassa",
+  "34	np	15	Nissaggiya Pācittiya 15. Nisīdanasanthata",
+  "35	np	16	Nissaggiya Pācittiya 16. Eḷakaloma",
+  "36	np	17	Nissaggiya Pācittiya 17. Eḷakalomadhovāpana",
+  "37	np	18	Nissaggiya Pācittiya 18. Rūpiya",
+  "38	np	19	Nissaggiya Pācittiya 19. Rūpiyasaṁvohāra",
+  "39	np	20	Nissaggiya Pācittiya 20. Kayavikkaya",
+  "40	np	21	Nissaggiya Pācittiya 21. Patta",
+  "41	np	22	Nissaggiya Pācittiya 22. Ūnapañcabandhana",
+  "42	np	23	Nissaggiya Pācittiya 23. Bhesajja",
+  "43	np	24	Nissaggiya Pācittiya 24. Vassikasāṭika",
+  "44	np	25	Nissaggiya Pācittiya 25. Cīvaraacchindana",
+  "45	np	26	Nissaggiya Pācittiya 26. Suttaviññatti",
+  "46	np	27	Nissaggiya Pācittiya 27. Mahāpesakāra",
+  "47	np	28	Nissaggiya Pācittiya 28. Accekacīvara",
+  "48	np	29	Nissaggiya Pācittiya 29. Sāsaṅka",
+  "49	np	30	Nissaggiya Pācittiya 30. Pariṇata",
+  "50	pc	1	Pācittiya 1. Musāvāda",
+  "51	pc	2	Pācittiya 2. Omasavāda",
+  "52	pc	3	Pācittiya 3. Pesuñña",
+  "53	pc	4	Pācittiya 4. Padasodhamma",
+  "54	pc	5	Pācittiya 5. Paṭhamasahaseyya",
+  "55	pc	6	Pācittiya 6. Dutiyasahaseyya",
+  "56	pc	7	Pācittiya 7. Dhammadesanā",
+  "57	pc	8	Pācittiya 8. Bhūtārocana",
+  "58	pc	9	Pācittiya 9. Duṭṭhullārocana",
+  "59	pc	10	Pācittiya 10. Pathavīkhaṇana",
+  "60	pc	11	Pācittiya 11. Bhūtagāma",
+  "61	pc	12	Pācittiya 12. Aññavādaka",
+  "62	pc	13	Pācittiya 13. Ujjhāpanaka",
+  "63	pc	14	Pācittiya 14. Paṭhamasenāsana",
+  "64	pc	15	Pācittiya 15. Dutiyasenāsana",
+  "65	pc	16	Pācittiya 16. Anupakhajja",
+  "66	pc	17	Pācittiya 17. Nikkaḍḍhana",
+  "67	pc	18	Pācittiya 18. Vehāsakuṭi",
+  "68	pc	19	Pācittiya 19. Mahallakavihāra",
+  "69	pc	20	Pācittiya 20. Sappāṇaka",
+    "100	pc	51	Pācittiya 51. Surāpāna",
+  "101	pc	52	Pācittiya 52. Aṅgulipatodaka",
+  "102	pc	53	Pācittiya 53. Hasadhamma",
+  "103	pc	54	Pācittiya 54. Anādariya",
+  "104	pc	55	Pācittiya 55. Bhiṁsāpana",
+    "146	sk	1	Sekhiya 1. Parimaṇḍala",
+  "147	sk	2	Sekhiya 2.",
+  "148	sk	3	Sekhiya 3. Suppaṭicchanna",
+  "149	sk	4	Sekhiya 4.",
+  "150	sk	5	Sekhiya 5. Susaṁvuta",
+  "151	sk	6	Sekhiya 6.",
+  "152	sk	7	Sekhiya 7. Okkhittacakkhu",
+  "153	sk	8	Sekhiya 8.",
+  "154	sk	9	Sekhiya 9. Ukkhittaka",
+  "155	sk	10	Sekhiya 10.",
+  "156	sk	11	Sekhiya 11. Ujjagghika",
+  "157	sk	12	Sekhiya 12.",
+  "158	sk	13	Sekhiya 13. Uccasadda",
+  "159	sk	14	Sekhiya 14.",
+  "160	sk	15	Sekhiya 15. Kāyappacālaka",
+  "161	sk	16	Sekhiya 16.",
+  "162	sk	17	Sekhiya 17. Bāhuppacālaka",
+  "163	sk	18	Sekhiya 18.",
+  "164	sk	19	Sekhiya 19. Sīsappacālaka",
+  "165	sk	20	Sekhiya 20.",
+  "166	sk	21	Sekhiya 21. Khambhakata",
+  "167	sk	22	Sekhiya 22.",
+  "168	sk	23	Sekhiya 23. Oguṇṭhita",
+  "169	sk	24	Sekhiya 24.",
+  "170	sk	25	Sekhiya 25. Ukkuṭika",
+  "171	sk	26	Sekhiya 26. Pallatthika",
+  "172	sk	27	Sekhiya 27. Sakkaccapaṭiggahaṇa",
+  "173	sk	28	Sekhiya 28. Pattasaññīpaṭiggahaṇa",
+  "174	sk	29	Sekhiya 29. Samasūpakapaṭiggahaṇa",
+  "175	sk	30	Sekhiya 30. Samatittika",
+  "176	sk	31	Sekhiya 31. Sakkaccabhuñjana",
+  "177	sk	32	Sekhiya 32. Pattasaññībhuñjana",
+  "178	sk	33	Sekhiya 33. Sapadāna",
+  "179	sk	34	Sekhiya 34. Samasūpaka",
+  "180	sk	35	Sekhiya 35. Nathūpakata",
+  "181	sk	36	Sekhiya 36. Odanappaṭicchādana",
+  "182	sk	37	Sekhiya 37. Sūpodanaviññatti",
+  "183	sk	38	Sekhiya 38. Ujjhānasaññī",
+  "184	sk	39	Sekhiya 39. Kabaḷa",
+  "185	sk	40	Sekhiya 40. Ālopa",
+  "186	sk	41	Sekhiya 41. Anāhaṭa",
+  "187	sk	42	Sekhiya 42. Bhuñjamāna",
+  "188	sk	43	Sekhiya 43. Sakabaḷa",
+  "189	sk	44	Sekhiya 44. Piṇḍukkhepaka",
+  "190	sk	45	Sekhiya 45. Kabaḷāvacchedaka",
+  "191	sk	46	Sekhiya 46. Avagaṇḍakāraka",
+  "192	sk	47	Sekhiya 47. Hatthaniddhunaka",
+  "193	sk	48	Sekhiya 48. Sitthāvakāraka",
+  "194	sk	49	Sekhiya 49. Jivhānicchāraka",
+  "195	sk	50	Sekhiya 50. Capucapukāraka",
+  "196	sk	51	Sekhiya 51. Surusurukāraka",
+  "197	sk	52	Sekhiya 52. Hatthanillehaka",
+  "198	sk	53	Sekhiya 53. Pattanillehaka",
+  "199	sk	54	Sekhiya 54. Oṭṭhanillehaka",
+  "200	sk	55	Sekhiya 55. Sāmisa",
+  "201	sk	56	Sekhiya 56. Sasitthaka",
+  "202	sk	57	Sekhiya 57. Chattapāṇi",
+  "203	sk	58	Sekhiya 58. Daṇḍapāṇi",
+  "204	sk	59	Sekhiya 59. Satthapāṇi",
+  "205	sk	60	Sekhiya 60. Āvudhapāṇi",
+  "206	sk	61	Sekhiya 61. Pāduka",
+  "207	sk	62	Sekhiya 62. Upāhana",
+  "208	sk	63	Sekhiya 63. Yāna",
+  "209	sk	64	Sekhiya 64. Sayana",
+  "210	sk	65	Sekhiya 65. Pallatthika",
+  "211	sk	66	Sekhiya 66. Veṭhita",
+  "212	sk	67	Sekhiya 67. Oguṇṭhita",
+  "213	sk	68	Sekhiya 68. Chamā",
+  "214	sk	69	Sekhiya 69. Nīcāsana",
+  "215	sk	70	Sekhiya 70. Ṭhita",
+  "216	sk	71	Sekhiya 71. Pacchatogamana",
+  "217	sk	72	Sekhiya 72. Uppathenagamana",
+  "218	sk	73	Sekhiya 73. Ṭhitouccāra",
+  "219	sk	74	Sekhiya 74. Hariteuccāra",
+  "220	sk	75	Sekhiya 75. Udakeuccāra",
+   "221	as	1	Adhikaraṇasamatha 1",
+  "222	as	2	Adhikaraṇasamatha 2",
+  "223	as	3	Adhikaraṇasamatha 3",
+  "224	as	4	Adhikaraṇasamatha 4",
+  "225	as	5	Adhikaraṇasamatha 5",
+  "226	as	6	Adhikaraṇasamatha 6",
+  "227	as	7	Adhikaraṇasamatha 7"
+];
 
+	
         let currentIndex; // Индекс текущей записи
 
         // Функция для генерации случайного числа
@@ -213,7 +239,16 @@
             document.getElementById("randomRecord").textContent = randomRecord;
         }
 
-        // Функция для отображения номера строки
+        // Функция для скрытия названия правила
+        function hideRuleName(record) {
+            const parts = record.split('\t');
+            if (parts.length >= 4) {
+                return `${parts[0]}\t${parts[1]}\t${parts[2]}\t`;
+            }
+            return "Ошибка в формате записи";
+        }
+
+        // Функция для отображения только номера записи
         function showNumberOnly(index) {
             const randomRecord = records[index];
             const parts = randomRecord.split('\t');
@@ -224,15 +259,22 @@
             }
         }
 
-        // Функция для обновления отображения в зависимости от состояния чекбокса
+        // Функция для обновления отображения в зависимости от состояния чекбоксов
         function updateDisplay() {
             if (document.getElementById("numberOnlyCheckbox").checked) {
                 showNumberOnly(currentIndex);
             } else {
-                showRecord(currentIndex);
+                const record = records[currentIndex];
+                if (document.getElementById("hideRuleNameCheckbox").checked) {
+                    const hiddenRecord = hideRuleName(record);
+                    document.getElementById("randomRecord").textContent = hiddenRecord;
+                } else {
+                    showRecord(currentIndex);
+                }
             }
-            // Сохраняем состояние чекбокса в localStorage
+            // Сохраняем состояния чекбоксов в localStorage
             localStorage.setItem('rrtick', document.getElementById("numberOnlyCheckbox").checked);
+            localStorage.setItem('rrtick2', document.getElementById("hideRuleNameCheckbox").checked);
         }
 
         // Обработчик нажатия кнопки
@@ -241,20 +283,25 @@
             updateDisplay();
         });
 
-        // Обработчик изменения состояния чекбокса
+        // Обработчик изменения состояния чекбоксов
         document.getElementById("numberOnlyCheckbox").addEventListener("change", updateDisplay);
+        document.getElementById("hideRuleNameCheckbox").addEventListener("change", updateDisplay);
 
-        // Проверяем состояние чекбокса в localStorage и применяем его при загрузке страницы
+        // Проверяем состояния чекбоксов в localStorage и применяем их при загрузке страницы
         const savedCheckboxState = localStorage.getItem('rrtick');
         if (savedCheckboxState === 'true') {
             document.getElementById("numberOnlyCheckbox").checked = true;
+        }
+        const savedCheckboxState2 = localStorage.getItem('rrtick2');
+        if (savedCheckboxState2 === 'true') {
+            document.getElementById("hideRuleNameCheckbox").checked = true;
         }
         currentIndex = getRandomIndex(records.length);
         updateDisplay();
     </script>
 
     <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
-<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
-	<script src="/assets/js/dark-mode-switch/dark-mode-switch.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+    <script src="/assets/js/dark-mode-switch/dark-mode-switch.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+    <title>Случайное Правило</title>
+    <!-- Подключение Bootstrap 5 CSS -->
+<link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+    	<div class="align-items-center align-items-center toggle-switch input-group-append">
+    <div id="" class="input-group">
+        <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+<svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+        </a>
+
+        <a href="../../" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+            <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+        </a>
+		
+        <div class="ms-1 form-check form-switch">
+            <input type="checkbox" class="form-check-input" id="darkSwitch">
+        </div>
+    </div>
+</div>  
+      
+      
+        <h1 class="mb-5">Случайное Правило</h1>
+  
+
+    </div>
+    <div class="container mt-2">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
+            <label class="form-check-label" for="numberOnlyCheckbox">
+                Скрыть раздел
+            </label>
+        </div>
+  
+        <button class="btn btn-primary" id="randomButton">Показать</button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
+            Диапазоны
+        </button>
+        <div id="rangeList" class="collapse mt-3">
+            <ul class="list-group">
+                <li class="list-group-item">1-4    pj</li>
+                <li class="list-group-item">5-17    ss</li>
+                <li class="list-group-item">20-19   an</li>
+                <li class="list-group-item">20-49   np</li>
+                <li class="list-group-item">20-141  pc</li>
+                <li class="list-group-item">142-145 pd</li>
+                <li class="list-group-item">146-220 sk</li>
+                <li class="list-group-item">221-227 as</li>
+            </ul>
+        </div>
+        <h3 id="randomRecord" class="mt-3 text-center"></h3>
+    </div>
+
+    <script>
+ // Ваш список записей echo "" | awk '{print "$0",}'
+        const records = [
+            "1	pj	1",
+            "2	pj	2",
+            "3	pj	3",   
+            "4	pj	4",    
+            "5	ss	1",
+            "6	ss	2",
+            "7	ss	3",
+            "8	ss	4",
+            "9	ss	5",
+            "10	ss	6",
+            "11	ss	7",
+            "12	ss	8",
+            "13	ss	9",
+            "14	ss	10",
+            "15	ss	11",
+            "16	ss	12",
+            "17	ss	13",
+            "18	an	1",
+            "19	an	2",
+            "20	np	1",
+            "21	np	2",
+            "22	np	3",
+            "23	np	4",
+            "24	np	5",
+            "25	np	6",
+            "26	np	7",
+            "27	np	8",
+            "28	np	9",
+            "29	np	10",
+            "50	pc	1",
+            "51	pc	2",
+            "52	pc	3",
+            "53	pc	4",
+            "54	pc	5",
+            "55	pc	6",
+            "56	pc	7",
+            "57	pc	8",
+            "58	pc	9",
+            "59	pc	10",
+            "60	pc	11",
+            "61	pc	12",
+            "62	pc	13",
+            "63	pc	14",
+            "64	pc	15",
+            "65	pc	16",
+            "66	pc	17",
+            "67	pc	18",
+            "68	pc	19",
+            "69	pc	20",
+            "100	pc	51",
+            "101	pc	52",
+            "102	pc	53",
+            "103	pc	54",
+            "104	pc	55",
+            "146	sk	1",
+            "147	sk	2",
+            "148	sk	3",
+            "149	sk	4",
+            "150	sk	5",
+            "151	sk	6",
+            "152 sk	7",
+            "153	sk	8",
+            "154	sk	9",
+            "155	sk	10",
+            "156	sk	11",
+            "157	sk	12",
+            "158	sk	13",
+            "159	sk	14",
+            "160	sk	15",
+            "161	sk	16",
+            "162	sk	17",
+            "163	sk	18",
+            "164	sk	19",
+            "165	sk	20",
+            "166	sk	21",
+            "167	sk	22",
+            "168	sk	23",
+            "169	sk	24",
+            "170	sk	25",
+            "171	sk	26",
+            "172	sk	27",
+            "173	sk	28",
+            "174	sk	29",
+            "175	sk	30",
+            "176	sk	31",
+            "177	sk	32",
+            "178	sk	33",
+            "179	sk	34",
+            "180	sk	35",
+            "181	sk	36",
+            "182	sk	37",
+            "183	sk	38",
+            "184	sk	39",
+            "185	sk	40",
+            "186	sk	41",
+            "187	sk	42",
+            "188	sk	43",
+            "189	sk	44",
+            "190	sk	45",
+            "191	sk	46",
+            "192	sk	47",
+            "193	sk	48",
+            "194	sk	49",
+            "195	sk	50",
+            "196	sk	51",
+            "197	sk	52",
+            "198	sk	53",
+            "199	sk	54",
+            "200	sk	55",
+            "201	sk	56",
+            "202	sk	57",
+            "203	sk	58",
+            "204	sk	59",
+            "205	sk	60",
+            "206	sk	61",
+            "207	sk	62",
+            "208	sk	63",
+            "209	sk	64",
+            "210	sk	65",
+            "211	sk	66",
+            "212	sk	67",
+            "213	sk	68",
+            "214	sk	69",
+            "215	sk	70",
+            "216	sk	71",
+            "217	sk	72",
+            "218	sk	73",
+            "219	sk	74",
+            "220	sk	75",
+            "221	as	1",
+            "222	as	2",
+            "223	as	3",
+            "224	as	4",
+            "225	as	5",
+            "226	as	6",
+            "227	as	7"
+        ];
+
+        let currentIndex; // Индекс текущей записи
+
+        // Функция для генерации случайного числа
+        function getRandomIndex(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        // Функция для отображения записи
+        function showRecord(index) {
+            const randomRecord = records[index];
+            document.getElementById("randomRecord").textContent = randomRecord;
+        }
+
+        // Функция для отображения номера строки
+        function showNumberOnly(index) {
+            const randomRecord = records[index];
+            const parts = randomRecord.split('\t');
+            if (parts.length > 0) {
+                document.getElementById("randomRecord").textContent = parts[0];
+            } else {
+                document.getElementById("randomRecord").textContent = "Ошибка в формате записи";
+            }
+        }
+
+        // Функция для обновления отображения в зависимости от состояния чекбокса
+        function updateDisplay() {
+            if (document.getElementById("numberOnlyCheckbox").checked) {
+                showNumberOnly(currentIndex);
+            } else {
+                showRecord(currentIndex);
+            }
+            // Сохраняем состояние чекбокса в localStorage
+            localStorage.setItem('rrtick', document.getElementById("numberOnlyCheckbox").checked);
+        }
+
+        // Обработчик нажатия кнопки
+        document.getElementById("randomButton").addEventListener("click", () => {
+            currentIndex = getRandomIndex(records.length);
+            updateDisplay();
+        });
+
+        // Обработчик изменения состояния чекбокса
+        document.getElementById("numberOnlyCheckbox").addEventListener("change", updateDisplay);
+
+        // Проверяем состояние чекбокса в localStorage и применяем его при загрузке страницы
+        const savedCheckboxState = localStorage.getItem('rrtick');
+        if (savedCheckboxState === 'true') {
+            document.getElementById("numberOnlyCheckbox").checked = true;
+        }
+        currentIndex = getRandomIndex(records.length);
+        updateDisplay();
+    </script>
+
+    <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+	<script src="/assets/js/dark-mode-switch/dark-mode-switch.min.js"></script>
+</body>
+</html>

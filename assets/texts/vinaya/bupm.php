@@ -308,7 +308,11 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#np1Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#34.0.1"><h4>1. Kaṭhinavaggo </h4></a>
+		
+			<a data-bs-toggle="collapse" data-bs-target="#np1Collapse" href=""><h4>1. Kaṭhinavaggo </h4></a>
+			
+			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#34.0.1"><h4>1. Kaṭhinavaggo </h4></a> -->
+			
 </div>
               </div>
               <div class="collapse" id="np1Collapse">
@@ -392,7 +396,15 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#np2Collapse">+</span>
+	
+				<a data-bs-toggle="collapse" data-bs-target="#np2Collapse" href=""><h4>2. Kosiyavaggo </h4></a>
+			
+			<!--  
 			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#44.0.1"><h4>2. Kosiyavaggo </h4></a>
+			-->
+			
+	
+			
 </div>
               </div>
               <div class="collapse" id="np2Collapse">
@@ -474,7 +486,13 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#np3Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#54.0.1"><h4>3. Pattavaggo </h4></a>
+	
+				<a data-bs-toggle="collapse" data-bs-target="#np3Collapse" href=""><h4>3. Pattavaggo </h4></a>
+			
+			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#54.0.1"><h4>3. Pattavaggo </h4></a> 
+			-->
+	
+			
 </div>
               </div>
               <div class="collapse" id="np3Collapse">
@@ -584,7 +602,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc1Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#66.0.1"><h4>1. Musāvādavaggo </h4></a>
+
+			<a data-bs-toggle="collapse" data-bs-target="#pc1Collapse" href=""><h4>1. Musāvādavaggo </h4></a>
+			
+			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#66.0.1"><h4>1. Musāvādavaggo </h4></a>
+-->
+			
 </div>
               </div>
               <div class="collapse" id="pc1Collapse">
@@ -663,7 +686,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc2Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#76.0.1"><h4>2. Bhūtagāmavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#pc2Collapse" href=""><h4>2. Bhūtagāmavaggo </h4></a>
+			
+			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#76.0.1"><h4>2. Bhūtagāmavaggo </h4></a>
+-->
+			
+			
 </div>
               </div>
               <div class="collapse" id="pc2Collapse">
@@ -745,7 +773,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc3Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#86.0.1"><h4>3. Ovādavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#pc3Collapse" href=""><h4>3. Ovādavaggo </h4></a>
+			
+			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#86.0.1"><h4>3. Ovādavaggo </h4></a>
+-->
+			
+		
 </div>
               </div>
               <div class="collapse" id="pc3Collapse">
@@ -827,7 +860,13 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc4Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#96.0.1"><h4>4. Bhojanavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#pc4Collapse" href=""><h4>4. Bhojanavaggo</h4></a>
+			
+			<!-- 
+				<a href="<?php echo $mainscpage; ?>/?q=bu-pm#96.0.1"><h4>4. Bhojanavaggo </h4></a>
+-->
+			
+		
 </div>
               </div>
               <div class="collapse" id="pc4Collapse">
@@ -908,7 +947,13 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc5Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#106.0.1"><h4>5. Acelakavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#pc5Collapse" href=""><h4>5. Acelakavaggo </h4></a>
+			
+			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#106.0.1"><h4>5. Acelakavaggo </h4></a>
+-->
+			
+	
+			
 </div>
               </div>
               <div class="collapse" id="pc5Collapse">
@@ -988,7 +1033,13 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc6Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#116.0.1"><h4>6. Surāpānavaggo </h4></a>
+	
+				<a data-bs-toggle="collapse" data-bs-target="#pc6Collapse" href=""><h4>6. Surāpānavaggo </h4></a>
+			
+			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#116.0.1"><h4>6. Surāpānavaggo </h4></a>
+-->
+			
+		
 </div>
               </div>
               <div class="collapse" id="pc6Collapse">
@@ -1069,7 +1120,13 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc7Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#126.0.1"><h4>7. Sappāṇavaggo </h4></a>
+	
+				<a data-bs-toggle="collapse" data-bs-target="#pc7Collapse" href=""><h4>7. Sappāṇavaggo </h4></a>
+			
+			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#126.0.1"><h4>7. Sappāṇavaggo </h4></a>
+-->
+			
+			
 </div>
               </div>
               <div class="collapse" id="pc7Collapse">
@@ -1149,7 +1206,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc8Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#136.0.1"><h4>8. Sahadhammikavaggo </h4></a>
+		
+			<a data-bs-toggle="collapse" data-bs-target="#pc8Collapse" href=""><h4>8. Sahadhammikavaggo </h4></a>
+			
+			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#136.0.1"><h4>8. Sahadhammikavaggo </h4></a>
+-->		
+	
 </div>
               </div>
               <div class="collapse" id="pc8Collapse">
@@ -1241,7 +1303,13 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#pc9Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#146.0.1"><h4>9. Ratanavaggo </h4></a>
+	
+				<a data-bs-toggle="collapse" data-bs-target="#pc9Collapse" href=""><h4>9. Ratanavaggo </h4></a>
+			
+			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#146.0.1"><h4>9. Ratanavaggo </h4></a>
+-->
+			
+			
 </div>
               </div>
               <div class="collapse" id="pc9Collapse">
@@ -1406,7 +1474,13 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk1Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.1"><h4>1. Parimaṇḍalavaggo </h4></a>
+	
+				<a data-bs-toggle="collapse" data-bs-target="#sk1Collapse" href=""><h4>1. Parimaṇḍalavaggo </h4></a>
+			
+			<!-- 			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.1"><h4>1. Parimaṇḍalavaggo </h4></a>
+-->
+			
+
 </div>
               </div>
               <div class="collapse" id="sk1Collapse">
@@ -1460,7 +1534,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk2Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.1"><h4>2. Ujjagghikavaggo </h4></a>
+	
+					<a data-bs-toggle="collapse" data-bs-target="#sk2Collapse" href=""><h4>2. Ujjagghikavaggo </h4></a>
+			
+			<!-- 		<a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.1"><h4>2. Ujjagghikavaggo </h4></a>
+-->
+		
 </div>
               </div>
               <div class="collapse" id="sk2Collapse">
@@ -1477,7 +1556,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk3Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#187.0.1"><h4>3. Khambhakatavaggo </h4></a>
+	
+					<a data-bs-toggle="collapse" data-bs-target="#sk3Collapse" href=""><h4>3. Khambhakatavaggo </h4></a>
+			
+			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#187.0.1"><h4>3. Khambhakatavaggo </h4></a>
+-->
+			
 </div>
               </div>
               <div class="collapse" id="sk3Collapse">
@@ -1495,7 +1579,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk4Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#199.0.1"><h4>4. Sakkaccavaggo </h4></a>
+	
+					<a data-bs-toggle="collapse" data-bs-target="#sk4Collapse" href=""><h4>4. Sakkaccavaggo </h4></a>
+			
+			<!-- 		<a href="<?php echo $mainscpage; ?>/?q=bu-pm#199.0.1"><h4>4. Sakkaccavaggo </h4></a>
+-->
+		
 </div>
 </div>
               <div class="collapse" id="sk4Collapse">
@@ -1511,7 +1600,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk5Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#209.0.1"><h4>5. Kabaḷavaggo </h4></a>
+	
+					<a data-bs-toggle="collapse" data-bs-target="#sk5Collapse" href=""><h4>5. Kabaḷavaggo </h4></a>
+			
+			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#209.0.1"><h4>5. Kabaḷavaggo </h4></a>
+-->
+			
 </div>
 </div>
               <div class="collapse" id="sk5Collapse">
@@ -1529,7 +1623,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk6Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#219.0.1"><h4>6. Surusuruvaggo </h4></a>
+	
+		<a data-bs-toggle="collapse" data-bs-target="#sk6Collapse" href=""><h4>6. Surusuruvaggo </h4></a>
+			
+			<!-- 		<a href="<?php echo $mainscpage; ?>/?q=bu-pm#219.0.1"><h4>6. Surusuruvaggo </h4></a>
+-->
+		
 </div>
 </div>
               <div class="collapse" id="sk6Collapse">
@@ -1551,7 +1650,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#sk7Collapse">+</span>
-			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#229.0.1"><h4>7. Pādukavaggo </h4></a>
+	
+					<a data-bs-toggle="collapse" data-bs-target="#sk7Collapse" href=""><h4>7. Pādukavaggo </h4></a>
+			
+			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#229.0.1"><h4>7. Pādukavaggo </h4></a>	
+-->
+		
 </div>
 </div>
 <div class="collapse" id="sk7Collapse">

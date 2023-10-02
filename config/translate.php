@@ -83,7 +83,7 @@ $howtosearchquotetooltip = '';
 $howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.<br><br>
 Если при поиске в Суттах и сверке с Винаей они (учения, практики, методы, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем ' . $randomKey . '". Таким образом, монахи, вам следует это отвергнуть. 
 </p>
-<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16#4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180#2.7>an4.180</a></p>';
+<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16&lang=pli-eng#4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180&lang=pli-eng#2.7>an4.180</a></p>';
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "ОпрВ";
 
@@ -159,7 +159,7 @@ $slides = [
 $read = 'читать';
 
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
-$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22#18.18>dn22</a> <a href=/ru/sc/?q=mn141#16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22&lang=pli-rus#18.18>dn22</a> <a href=/ru/sc/?q=mn141&lang=pli-rus#16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 Что такое, монахи, боль?</br>
 </br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
@@ -510,7 +510,7 @@ $howtosearchquotetooltip = '';
 $howtosearchquote = '<p>Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.<br><br>
 If they (teachings, practices, methods, quotes, stories, anything associated with the Buddha) are not found in the Suttas and are not exhibited in the Vinaya, you should draw the conclusion: ‘Clearly this is not the word of the Blessed One. It has been wrongly understood by that ' . $randomKey . '.’ And so, monks, you should reject it.
 </p>
-<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16#4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180#2.7>an4.180</a></p>';
+<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16&lang=pli-rus#4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180&lang=pli-rus#2.7>an4.180</a></p>';
 $tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
 $radiovindef = "DefV";
 $tooltipla = "Add $defaultla lines after match";
@@ -586,7 +586,7 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
 	
 $mainscrollmodalheader = 'Definition of Dukkha in Suttas';
 
-$mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22#18.18">dn22</a> <a href="/sc/?q=mn141#16.1">mn141</a></br>
+$mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22&lang=pli-eng#18.18">dn22</a> <a href="/sc/?q=mn141&lang=pli-eng#16.1">mn141</a></br>
 <h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>And what is pain?</br></br>Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>Whatever is experienced as  <strong>bodily</strong> pain, <strong>bodily</strong> discomfort, pain or discomfort born of bodily contact, </br>
 </br>
 idaṁ vuccati, bhikkhave, dukkhaṁ.</br>

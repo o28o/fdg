@@ -30,7 +30,7 @@
         <h1 class="mb-5">Случайный Падеж</h1>
     </div>
     <div class="container mt-2">
-        <div class="form-check">
+     <div class="form-check">
             <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
             <label class="form-check-label" for="numberOnlyCheckbox">
                 Скрыть русское название
@@ -43,22 +43,21 @@
                 Скрыть только название
             </label>
         </div>
-
         <button class="btn btn-primary" id="randomButton">Показать</button>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
             Диапазоны
         </button>
         <div id="rangeList" class="collapse mt-3">
                         <ul class="list-group">
-                <li class="list-group-item">1-4    pj</li>
-                <li class="list-group-item">5-17    ss</li>
-                <li class="list-group-item">20-19   an</li>
-                <li class="list-group-item">20-49   np</li>
-                <li class="list-group-item">20-141  pc</li>
-                <li class="list-group-item">142-145 pd</li>
-                <li class="list-group-item">146-220 sk</li>
-                <li class="list-group-item">221-227 as</li>
-            </ul>
+                <li class="list-group-item">Nom Именительный</li>
+                <li class="list-group-item">Acc    ss</li>
+                <li class="list-group-item">Instr   an</li>
+                <li class="list-group-item">Gen   np</li>
+                <li class="list-group-item">Abl  pc</li>
+                <li class="list-group-item">Dat pd</li>
+                <li class="list-group-item">Loc sk</li>
+                <li class="list-group-item">Voc as</li>
+                <li class="list-group-item">Comp as</li>            </ul>
         </div>
         <h3 id="randomRecord" class="mt-3 text-center"></h3>
     </div>
@@ -67,8 +66,8 @@
        // Ваш список записей echo "" | awk '{print "$0",}' 
 	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
 const records = [
-"Nom      Им",
-	"Acc      Вин",
+"Nom",
+	"Acc",
 	"Instr",
 	"Dat",
 	"Abl",
@@ -126,8 +125,8 @@ const records = [
                 }
             }
             // Сохраняем состояния чекбоксов в localStorage
-            localStorage.setItem('rrtick', document.getElementById("numberOnlyCheckbox").checked);
-            localStorage.setItem('rrtick2', document.getElementById("hideRuleNameCheckbox").checked);
+            localStorage.setItem('rdtick', document.getElementById("numberOnlyCheckbox").checked);
+            localStorage.setItem('rdtick2', document.getElementById("hideRuleNameCheckbox").checked);
         }
 
         // Обработчик нажатия кнопки
@@ -141,11 +140,11 @@ const records = [
         document.getElementById("hideRuleNameCheckbox").addEventListener("change", updateDisplay);
 
         // Проверяем состояния чекбоксов в localStorage и применяем их при загрузке страницы
-        const savedCheckboxState = localStorage.getItem('rrtick');
+        const savedCheckboxState = localStorage.getItem('rdtick');
         if (savedCheckboxState === 'true') {
             document.getElementById("numberOnlyCheckbox").checked = true;
         }
-        const savedCheckboxState2 = localStorage.getItem('rrtick2');
+        const savedCheckboxState2 = localStorage.getItem('rdtick2');
         if (savedCheckboxState2 === 'true') {
             document.getElementById("hideRuleNameCheckbox").checked = true;
         }

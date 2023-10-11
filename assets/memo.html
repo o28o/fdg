@@ -4,33 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Преобразование текста</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+  <title>Преобразование текста для запоминания</title>
   <!-- Подключение Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение Bootstrap 5 CSS -->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container mt-5">
+      <div class="container mt-3">
+        <div class="align-items-center align-items-center toggle-switch input-group-append">
+            <div id="" class="input-group">
+                <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+                    <svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+                </a>
+
+                <a href="../../" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                </a>
+
+                <div class="ms-1 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="darkSwitch">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-1">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="mb-4">Преобразование текста</h1>
+                <h1 class="mb-4">Преобразование текста для запоминания</h1>
                 <textarea id="inputText" class="form-control mb-3" rows="10" placeholder="Введите текст"></textarea>
-                <div class="form-check"> <!-- Убраны классы d-flex justify-content-end -->
+             <!--   <div class="form-check"> 
                     <input type="checkbox" class="form-check-input" id="checkbox1">
                     <label class="form-check-label" for="checkbox1">Фича 1</label>
                 </div>
-                <div class="form-check"> <!-- Убраны классы d-flex justify-content-end -->
+                <div class="form-check"> 
                     <input type="checkbox" class="form-check-input" id="checkbox2">
                     <label class="form-check-label" for="checkbox2">Фича 2</label>
                 </div>
-                <div class="form-check"> <!-- Убраны классы d-flex justify-content-end -->
+                <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="checkbox3">
                     <label class="form-check-label" for="checkbox3">Фича 3</label>
-                </div>
-                <button class="btn btn-primary mt-3" onclick="преобразоватьТекст()">Преобразовать</button>
+                </div> -->
+<button class="btn btn-primary mt-3" onclick="преобразоватьТекст()">Преобразовать</button>
+<button class="btn btn-secondary mt-3" onclick="очистить()">Очистить</button>
+
+                
                 <div class="mt-4">
-                    <strong>Результат:</strong>
-                    <div id="результат"></div>
+              <h3>
+              Результат:   
+              </h3>     
+<div id="результат" class="display-7"></div>
                 </div>
             </div>
         </div>
@@ -41,6 +66,8 @@
     <script>
     function преобразоватьТекст() {
         const входнойТекст = document.getElementById("inputText").value;
+
+localStorage.setItem("входнойТекст", входнойТекст);
 
         const слова = входнойТекст.split(/\s+/);
 
@@ -55,7 +82,42 @@
         }).join(" ");
 
         document.getElementById("результат").innerText = результат;
+        
+        document.getElementById("результат").innerText = результат;
+
+    // Сохраняем результат в Local Storage
+    localStorage.setItem("результат", результат);
     }
+    
+    
+window.addEventListener('load', function () {
+    const входнойТекст = localStorage.getItem("входнойТекст");
+    const результат = localStorage.getItem("результат");
+
+    if (входнойТекст) {
+        document.getElementById("inputText").value = входнойТекст;
+    }
+
+    if (результат) {
+        document.getElementById("результат").innerText = результат;
+    }
+});
+
+function очистить() {
+    // Очищаем поле ввода и результат
+    document.getElementById("inputText").value = "";
+    document.getElementById("результат").innerText = "";
+
+    // Очищаем данные в Local Storage
+    localStorage.removeItem("входнойТекст");
+    localStorage.removeItem("результат");
+}
+
     </script>
+    
+        <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
+    <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+    <script src="/assets/js/dark-mode-switch/dark-mode-switch.min.js"></script>
+    
 </body>
 </html>

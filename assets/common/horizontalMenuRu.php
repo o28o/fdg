@@ -141,10 +141,10 @@ echo '<!--
             <li><a class="dropdown-item" href="#research">Исследование</a></li>
        <li><a class="dropdown-item" href="#read">Чтение</a></li>
     <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li>
-       <li><a class="dropdown-item" href="/assets/memo.html">Мнемотехника</a></li>    
-    <li><a class="dropdown-item" href="/assets/rd.html">Случайный падеж</a></li>    
-   <li><a class="dropdown-item" href="/assets/rr.html">Случайное правило</a></li>    
- <li><a class="dropdown-item" href="/assets/makelist.html">' . $head5makelist . '</a></li>     
+       <li><a class="dropdown-item" href="/ru/assets/memo.html">Мнемотехника</a></li>    
+    <li><a class="dropdown-item" href="/ru/assets/rd.html">Случайный падеж</a></li>    
+   <li><a class="dropdown-item" href="/ru/assets/rr.html">Случайное правило</a></li>    
+ <li><a class="dropdown-item" href="/ru/assets/makelist.html">' . $head5makelist . '</a></li>     
   </ul>
   
 </div>'

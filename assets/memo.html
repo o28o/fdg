@@ -50,9 +50,9 @@
                     <input type="checkbox" class="form-check-input" id="checkbox3">
                     <label class="form-check-label" for="checkbox3">Фича 3</label>
                 </div> -->
-<button class="btn btn-primary mt-3" onclick="преобразоватьТекст()">Преобразовать</button>
-<button class="btn btn-secondary mt-3" onclick="очистить()">Очистить</button>
-<button class="btn btn-success mt-3" onclick="копироватьРезультат()">Копировать</button>
+<button class="btn btn-primary mt-2" onclick="преобразоватьТекст()">Преобразовать</button>
+<button class="btn btn-secondary mt-2" onclick="очистить()">Очистить</button>
+<button class="btn btn-success mt-2" onclick="копироватьРезультат()">Копировать</button>
 
    <div class="modal fade" id="copyPopup" tabindex="-1" role="dialog" aria-labelledby="copyPopupLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -74,6 +74,11 @@
         </div>
     </div>
 
+<script>
+  
+</script>
+
+
     <script>
 function преобразоватьТекст() {
     const входнойТекст = document.getElementById("inputText").value;
@@ -81,27 +86,17 @@ function преобразоватьТекст() {
     localStorage.setItem("входнойТекст", входнойТекст);
 
     // Разбиваем текст на строки
-    const строкиСКавычками = входнойТекст.split('\n');
-
-const строки = строкиСКавычками.map(строка => {
-    return строка.replace(/["'“]/g, '');
-});
+    const строки = входнойТекст.split('\n');
 
     const результат = строки.map(строка => {
         // Разбиваем каждую строку на слова
         const слова = строка.split(/\s+/);
         
         // Преобразуем каждое слово в первую букву или пустую строку
-const преобразованныеСлова = слова.map(word => {
-    const перваяБуква = word.match(/^\p{L}/u); // Используйте \p{L} для букв из разных языков
-    if (перваяБуква) {
-        return перваяБуква[0];
-    } else {
-        const диакритическиеСимволы = word.match(/^[\p{M}\p{N}\p{S}\p{P}]/u);
-        return диакритическиеСимволы ? диакритическиеСимволы[0] : '';
-    }
-});
-
+        const преобразованныеСлова = слова.map(word => {
+            const перваяБуква = word.match(/^\b\w/);
+            return перваяБуква ? перваяБуква[0] : '';
+        });
 
         // Объединяем преобразованные слова снова в строку
         return преобразованныеСлова.join(' ');

@@ -228,21 +228,24 @@ $(document).ready(function () {
 <script> //save collapsed state
 $(document).ready(function () {
     $(".collapse").on("shown.bs.collapse", function () {
-        localStorage.setItem("coll_" + this.id, true);
-		console.log('SHOW ' + this.id);
+        if (this.id !== "collapseSettings") {
+            localStorage.setItem("coll_" + this.id, true);
+            console.log('SHOW ' + this.id);
+        }
     });
 
     $(".collapse").on("hidden.bs.collapse", function () {
-        localStorage.removeItem("coll_" + this.id);
-		console.log('HIDE' + this.id);
+        if (this.id !== "collapseSettings") {
+            localStorage.removeItem("coll_" + this.id);
+            console.log('HIDE ' + this.id);
+        }
     });
-    
+
     $(".collapse").each(function () {
-		console.log('EACH ' + this.id);
+        console.log('EACH ' + this.id);
         if (localStorage.getItem("coll_" + this.id) === "true") {
             $(this).collapse("show");
-        }
-        else {
+        } else {
             $(this).collapse("hide");
         }
     });

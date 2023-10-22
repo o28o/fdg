@@ -225,33 +225,38 @@ $(document).ready(function () {
   });
 </script>
  
-<script> //save collapsed state
+<script>
 $(document).ready(function () {
+    var isLocal = window.location.href.includes("localhost");
+
     $(".collapse").on("shown.bs.collapse", function () {
         if (this.id !== "collapseSettings") {
-            localStorage.setItem("coll_" + this.id, true);
-            console.log('SHOW ' + this.id);
+            var keyPrefix = isLocal ? "lcl_" : "fdg_";
+            localStorage.setItem(keyPrefix + "coll_" + this.id, true);
+        //    console.log('SHOW ' + this.id);
         }
     });
 
     $(".collapse").on("hidden.bs.collapse", function () {
         if (this.id !== "collapseSettings") {
-            localStorage.removeItem("coll_" + this.id);
-            console.log('HIDE ' + this.id);
+            var keyPrefix = isLocal ? "lcl_" : "fdg_";
+            localStorage.removeItem(keyPrefix + "coll_" + this.id);
+        //    console.log('HIDE ' + this.id);
         }
     });
 
     $(".collapse").each(function () {
-        console.log('EACH ' + this.id);
-        if (localStorage.getItem("coll_" + this.id) === "true") {
+      //  console.log('EACH ' + this.id);
+        var keyPrefix = isLocal ? "lcl_" : "fdg_";
+        if (localStorage.getItem(keyPrefix + "coll_" + this.id) === "true") {
             $(this).collapse("show");
         } else {
             $(this).collapse("hide");
         }
     });
 });
-
 </script>
+
 
 <script>
   

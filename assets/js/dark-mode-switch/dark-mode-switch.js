@@ -52,11 +52,11 @@ function resetTheme() {
   if (darkSwitch.checked) {
     document.body.setAttribute("data-theme", "dark");
     localStorage.setItem("darkSwitch", "dark");
-   // localStorage.theme = "dark";
+    localStorage.theme = "dark";
   } else {
     document.body.removeAttribute("data-theme");
     localStorage.removeItem("darkSwitch");
-  //  localStorage.theme = "light";
+  localStorage.theme = "light";
   }
 }
 

@@ -25,10 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.theme === "light") {
       bodyTag.classList.add("dark");
       localStorage.theme = "dark";
+      localStorage.setItem("darkSwitch", "dark");
       document.documentElement.setAttribute("data-bs-theme", "dark");
     } else {
       bodyTag.classList.remove("dark");
       localStorage.theme = "light";
+      localStorage.removeItem("darkSwitch");
       document.documentElement.setAttribute("data-bs-theme", "light");
     }
   });
@@ -37,3 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 toggleTheme() ;
+
+var themeValue = localStorage.theme;
+var darkSwitchValue = localStorage.getItem("darkSwitch");
+console.log("Значение theme:", themeValue);
+console.log("Значение darkSwitch:", darkSwitchValue);

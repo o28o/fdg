@@ -4,6 +4,9 @@
  * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
  */
 
+var darkSwitchValue = localStorage.getItem("darkSwitch");
+console.log("Значение darkSwitch:", darkSwitchValue);
+
 var darkSwitch = document.getElementById("darkSwitch");
 window.addEventListener("load", function () {
   if (darkSwitch) {
@@ -30,9 +33,13 @@ function initTheme() {
     localStorage.getItem("darkSwitch") !== null &&
     localStorage.getItem("darkSwitch") === "dark";
   darkSwitch.checked = darkThemeSelected;
-  darkThemeSelected
-    ? document.body.setAttribute("data-theme", "dark")
-    : document.body.removeAttribute("data-theme");
+  if (darkThemeSelected) {
+  document.body.setAttribute("data-theme", "dark");
+  localStorage.theme = "dark";
+} else {
+  document.body.removeAttribute("data-theme");
+ localStorage.theme = "light";
+}
 }
 
 /**
@@ -45,8 +52,16 @@ function resetTheme() {
   if (darkSwitch.checked) {
     document.body.setAttribute("data-theme", "dark");
     localStorage.setItem("darkSwitch", "dark");
+   // localStorage.theme = "dark";
   } else {
     document.body.removeAttribute("data-theme");
     localStorage.removeItem("darkSwitch");
+  //  localStorage.theme = "light";
   }
 }
+
+
+var themeValue = localStorage.theme;
+var darkSwitchValue = localStorage.getItem("darkSwitch");
+console.log("Значение theme:", themeValue);
+console.log("Значение darkSwitch:", darkSwitchValue);

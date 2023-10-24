@@ -18905,7 +18905,7 @@ $.ajax({
   console.log(window.location.href);
 
 </script>
-<script src="/assets/js/dark-mode-switch/dark-mode-switch.min.js"></script>
+<script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
 
 
 </body>

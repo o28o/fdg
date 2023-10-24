@@ -32,9 +32,11 @@ themeButton.addEventListener("click", () => {
   if (localStorage.theme === "light") {
     bodyTag.classList.add("dark");
     localStorage.theme = "dark";
+    localStorage.setItem("darkSwitch", "dark");
   } else {
     bodyTag.classList.remove("dark");
     localStorage.theme = "light";
+    localStorage.removeItem("darkSwitch");
   }
 });
 
@@ -550,3 +552,8 @@ abbreviations.forEach(book => {
     citation.focus();
   });
 });
+
+var themeValue = localStorage.theme;
+var darkSwitchValue = localStorage.getItem("darkSwitch");
+console.log("Значение theme:", themeValue);
+console.log("Значение darkSwitch:", darkSwitchValue);

@@ -33,7 +33,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
     
 		// Defining variables
 $nameErr = $languageErr  = "";
-$q = $extra = $la = $p = $arg = $string = $sutta = "";
+$cb = $q = $extra = $la = $p = $arg = $string = $sutta = "";
 		// Checking for a GET request
 		
 		if ($_SERVER["REQUEST_METHOD"] == "GET") {

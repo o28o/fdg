@@ -177,7 +177,15 @@ else
 linesbefore=0
 fi
 
-#echo la=$linesafter
+if [[ "$@" == *"-nm"* ]]; then
+numbersmatches=`echo "$@" | sed 's@.*-nm@@' | awk '{print $1}'` 
+headnm="head -n$numbersmatches"
+history=/dev/null
+else
+headnm=
+fi
+
+#echo headnm $headnm
 if [[ "$pattern" != *"\\"* ]]; then
 pattern=`echo "$pattern"| awk '{print tolower($0)}' | clearargs `
 else 
@@ -383,7 +391,7 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pal
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
 
 if [ -s $tmpgb ]; then
-cat $tmpgb
+cat $tmpgb 
 fi
 }
 fi
@@ -1010,7 +1018,7 @@ if [[ "$@" == *"-onl"* ]]
 then
  if [[ $pattern == *"("* ]] && [[ $pattern == *")"* ]] 
  then
- pattern=`echo $pattern | sed 's@ @|@g' `
+ pattern=`echo $pattern | sed 's@ @|@g'`
  else
  pattern=`echo $pattern | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' `
  fi
@@ -1018,8 +1026,12 @@ fi
 
 checkifalreadydone
 
+if [[ "$@" == *"-nm"* ]] 
+then
+grepbasefile | $headnm | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
+else 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
-
+fi
 
 
 if [[ "$@" == *"-defall"* ]] 

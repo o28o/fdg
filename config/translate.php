@@ -46,8 +46,11 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), 
 $tooltipsearchtype = '<strong>По умолчанию</strong> - все совпадения<br><br>
     <strong>Определения</strong> - Поиск нескольких главных определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. <br><br>
     <strong>Сравнения</strong> - Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.<br><br>
-    <strong>Все Определения</strong> - Поиск всех определений понятия. Логика описана в разделе помощи для Продвинутых.';
+    <strong>Все Определения</strong> - Поиск всех определений понятия. Логика описана в разделе помощи для Продвинутых.<br><br>
+        <strong>5 первых совпадений</strong> - Быстрый поиск совпадений. Если не нужны все результаты. не сохраняется в истории.
+    ';
 $listdefall  = "Все Определения";
+$listnm = "5 первых совпадений";
 $listdef = "Определения";
 $listsml = "Сравнения";
 $liststd = "Все совпадения";
@@ -473,8 +476,11 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Ni
 $tooltipsearchtype = '<strong>Default</strong> - all matches<br><br>
 <strong>Definitions</strong> - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. <br><br>
 <strong>Similes</strong> - Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.<br><br>
-<strong>All Definitions</strong> - Search for all definitions. For all-round view studying all related Suttas is recommended. See Advanced for details.';
+<strong>All Definitions</strong> - Search for all definitions. For all-round view studying all related Suttas is recommended. See Advanced for details.<br><br>
+<strong>5 first matches</strong> - Quick search in case if you don\'t need all matches. Not stored in search history
+';
 $listdefall  = "All Definitions";
+$listnm = "5 first matches";
 $listdef = "Definitions";
 $listsml = "Similes";
 $liststd = "All matches";

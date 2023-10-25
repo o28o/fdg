@@ -4,6 +4,17 @@
  * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
  */
 
+document.addEventListener("DOMContentLoaded", function () {
+  var darkSwitch = document.getElementById("darkSwitch");
+  if (darkSwitch) {
+    initTheme();
+    darkSwitch.addEventListener("change", function () {
+      resetTheme();
+    });
+  }
+});
+
+
 var darkSwitchValue = localStorage.getItem("darkSwitch");
 console.log("Значение darkSwitch:", darkSwitchValue);
 
@@ -61,7 +72,9 @@ function resetTheme() {
 }
 
 
+/*
 var themeValue = localStorage.theme;
 var darkSwitchValue = localStorage.getItem("darkSwitch");
 console.log("Значение theme:", themeValue);
 console.log("Значение darkSwitch:", darkSwitchValue);
+*/

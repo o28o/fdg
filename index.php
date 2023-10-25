@@ -167,12 +167,14 @@ $(document).ready(function() {
   $(document).on('keydown', function(event) {
     if (event.key === 'Enter') {
       $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+     $('#navbarResponsive').collapse('hide');
     }
   });
 
   // Обработчик для отправки формы
   $('#searchbtn').on('click', function() {
     $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+          $('#navbarResponsive').collapse('hide');
   });
 });
 </script>
@@ -345,6 +347,8 @@ function checkInput() {
 input.focus();
 input.setSelectionRange(input.value.length, input.value.length);
 </script>
+
+
 </div>    
 </div>
 </div>

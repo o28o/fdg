@@ -179,13 +179,11 @@ fi
 
 if [[ "$@" == *"-nm"* ]]; then
 numbersmatches=`echo "$@" | sed 's@.*-nm@@' | awk '{print $1}'` 
-headnm="head -n$numbersmatches"
 history=/dev/null
 else
-headnm=
+numbersmatches=
 fi
 
-#echo headnm $headnm
 if [[ "$pattern" != *"\\"* ]]; then
 pattern=`echo "$pattern"| awk '{print tolower($0)}' | clearargs `
 else 
@@ -195,7 +193,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed 's@е@[её]@g' | sed 's@ṃ@[ṃṁ]@g' | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's@^@(@g' | sed 's/$/)/g' | sed 's@,@@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] || [[ "$pattern" == "-nm5" ]] 
 then   
 #emptypattern
    exit 3
@@ -1026,11 +1024,16 @@ fi
 
 checkifalreadydone
 
+grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
+
 if [[ "$@" == *"-nm"* ]] 
 then
-grepbasefile | $headnm | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
-else 
-grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
+topmatchesintexts=`cat $basefile | awk '{print $1}' | uniq -c | sort -r | head -n$numbersmatches | awk '{print $2}'`
+for i in $topmatchesintexts
+do
+grep $i $basefile
+done > tmp
+cp tmp $basefile
 fi
 
 

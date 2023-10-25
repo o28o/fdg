@@ -47,10 +47,10 @@ $tooltipsearchtype = '<strong>По умолчанию</strong> - все совп
     <strong>Определения</strong> - Поиск нескольких главных определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. <br><br>
     <strong>Сравнения</strong> - Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.<br><br>
     <strong>Все Определения</strong> - Поиск всех определений понятия. Логика описана в разделе помощи для Продвинутых.<br><br>
-        <strong>5 совпадений</strong> - Быстрый поиск 5 первых совпадений. Если не нужны все результаты. не сохраняется в истории.
+        <strong>топ-5</strong> - Быстрый поиск до 5 текстов, где больше всего совпадений. Если не нужны все результаты. Не сохраняется в истории.
     ';
 $listdefall  = "Все Определения";
-$listnm = "5 совпадений";
+$listnm = "Топ-5";
 $listdef = "Определения";
 $listsml = "Сравнения";
 $liststd = "Все совпадения";
@@ -477,10 +477,10 @@ $tooltipsearchtype = '<strong>Default</strong> - all matches<br><br>
 <strong>Definitions</strong> - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. <br><br>
 <strong>Similes</strong> - Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.<br><br>
 <strong>All Definitions</strong> - Search for all definitions. For all-round view studying all related Suttas is recommended. See Advanced for details.<br><br>
-<strong>5 first matches</strong> - Quick search in case if you don\'t need all matches. Not stored in search history
+<strong>Top-5</strong> - Top-5 texts with the biggest number of matches. In case if you don\'t need all matches. Not stored in search history
 ';
 $listdefall  = "All Definitions";
-$listnm = "5 first matches";
+$listnm = "Top-5";
 $listdef = "Definitions";
 $listsml = "Similes";
 $liststd = "All matches";

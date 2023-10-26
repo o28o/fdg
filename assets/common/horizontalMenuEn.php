@@ -124,6 +124,9 @@ echo '<!--
        <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
        <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
     <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li>
+           <li><a class="dropdown-item" href="/ru/assets/memo.html">Memorizer</a></li>    
+
+    <li><a class="dropdown-item" href="/ru/assets/rd.html">Random declention</a></li>    
        <li><a class="dropdown-item" href="/assets/rr.html">Random rule</a></li> 
 <li><a class="dropdown-item" href="/assets/makelist.html">' . $head5makelist . '</a></li>  
 </ul>

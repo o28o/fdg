@@ -473,7 +473,7 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Ni
 <strong>+KN</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
 <strong>Later</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
 <strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>
-<strong>Англ</strong> - search in SuttaCentral.net materials';
+<strong>SC.net</strong> - search in SuttaCentral.net english translations';
 $tooltipsearchtype = '<strong>Default</strong> - all matches<br><br>
 <strong>Definitions</strong> - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. <br><br>
 <strong>Similes</strong> - Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.<br><br>
@@ -496,7 +496,7 @@ $checkboxonl = 'Any distance';
 $tooltipnonl = 'Search for X Y ... on any distance within one text. By default only texts containing X Y ... next to each other will be found.';
 $checkboxnonl = 'A B';
 $tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B. Sujato as on Suttacentral.net. Without this option search will start with Pali texts, then sc.net texts, then thebuddhaswords.net translations';
-$radioen = 'Eng';
+$radioen = 'SC.net';
 $tooltipltr= "+ search in Pali in all books of kn including later texts";
 $radioltr = "+Later";
 $tooltipth = "(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations. Without this option default search will start with Pali texts, then with sc.net Thai translations";

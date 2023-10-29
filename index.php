@@ -390,23 +390,7 @@ include 'assets/common/horizontalMenuEn.php';
 } 
 ?>
 
-<!-- Dukkha section Item 3-->
-<div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-<div class="font-italic"> 
-<p class="font-italic text-center ">
-<?php echo $fntmessage;?>
-</p>
-</div> 
-<div class="col-md-6 col-lg-4 mb-3">
-						                     
-			
-<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-<div class="portfolio-item-caption-content text-center text-white">
-<i class="fas fa-search fa-flip-horizontal fa-3x"></i></div>
-</div>
-</div>
-</div>
-
+<!--Slideshow section-->
 <div style="max-width: 450px;" class="container-lg my-5">
  <!-- <h4><?php echo $carouseltitle;?>:</h4><br> -->
  
@@ -448,6 +432,25 @@ foreach ($slides as $index => $slide) {
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
+</div>
+
+
+
+<!-- Dukkha section Item 3-->
+<div class="portfolio-item mx-auto mt-4" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+<div class="font-italic"> 
+<p class="font-italic text-center ">
+<?php echo $fntmessage;?>
+</p>
+</div> 
+<div class="col-md-6 col-lg-4 mb-3">
+						                     
+			
+<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+<div class="portfolio-item-caption-content text-center text-white">
+<i class="fas fa-search fa-flip-horizontal fa-3x"></i></div>
+</div>
 </div>
 </div>
 

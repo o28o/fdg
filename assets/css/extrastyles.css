@@ -415,6 +415,19 @@ align-items: center;
   
 }
 
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Используйте "center" для центрирования элементов по горизонтали */
+  align-items: center; /* Используйте "center" для центрирования элементов по вертикали */
+}
+
+
+.icon-item {
+ /* flex: 0 0 calc(39.33% - 20px); /* 33.33% - 10px - это примерная ширина для 3 элементов в строке */
+  margin: 15px 0 0 0; /* отступ между элементами */
+}
+
 
 .btn-primary {
   color: #fff;

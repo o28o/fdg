@@ -1,26 +1,26 @@
 <?php
 if (( basename($_SERVER['REQUEST_URI']) != "ru")) {
-echo '<div class="d-md-inline-block">	
+echo '<div class="icon-container d-md-inline-block">	
 <a class="text-decoration-none mx-1" href="' . $mainpage . '">
 <figure class="figure text-decoration-none">
-  <i class="menu-icon fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+  <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">' . $searchcaption . '</figcaption>
 </figure>
 </a>';
 } else  {
-echo '<div class="d-md-inline-block">	';
+echo '<div class="icon-container d-md-inline-block">	';
 }
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
 echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
-  <i class="menu-icon fa-solid fa-book-bookmark"></i>
+  <i class="menu-icon icon-item fa-solid fa-book-bookmark"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Читать Pāḷi</figcaption>
 </figure>
 </a>';
 } else {
  echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
-  <i class="menu-icon fa-solid fa-bolt"></i>
+  <i class="menu-icon icon-item fa-solid fa-bolt"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Индекс</figcaption>
 </figure>
 </a>' ;
@@ -29,7 +29,7 @@ echo '<!--
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
 <figure class="figure dropup">
-  <i class="menu-icon fa-solid fa-book-bookmark"></i>
+  <i class="menu-icon icon-item fa-solid fa-book-bookmark"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Тексты</figcaption>   
 </figure>	  
 </a>
@@ -42,7 +42,7 @@ echo '<!--
 
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup d-md-inline-block">
-    <i class="menu-icon fa-solid fa-book"></i>
+    <i class="menu-icon icon-item fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">на Англ.</figcaption>   
 </figure>	  
 </a>
@@ -76,7 +76,7 @@ echo '<!--
 
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRussian" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
-  <i class="menu-icon fa-solid fa-book"></i>
+  <i class="menu-icon icon-item fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Русские</figcaption>   
 </figure>	  
 </a>
@@ -91,7 +91,7 @@ echo '<!--
 
 <a class="text-decoration-none mx-1" href="/ru/history.php">
 <figure class="figure">
-  <i class="menu-icon fa-solid fa-clock-rotate-left"></i>
+  <i class="menu-icon icon-item fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   
 </figure>	  
 </a>
@@ -99,14 +99,14 @@ echo '<!--
 <!--
 <a class="text-decoration-none mx-1" href="/ru/dpd">
 <figure class="figure">
-<i class="menu-icon fa-solid fa-spell-check"></i>
+<i class="menu-icon icon-item fa-solid fa-spell-check"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Словарь</figcaption>   
 </figure>	  
 </a>
 
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
-  <i class="menu-icon fa-brands fa-google"></i>
+  <i class="menu-icon icon-item fa-brands fa-google"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">CSE</figcaption>   
 </figure>	  
 </a>
@@ -119,7 +119,7 @@ echo '<!--
 
  <a class="text-decoration-none mx-1" href="/cse.php">
 <figure class="figure">
-<i class="menu-icon fa-brands fa-google"></i>
+<i class="menu-icon icon-item fa-brands fa-google"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">CSE</figcaption>   
 </figure>	  
 </a> 
@@ -127,7 +127,7 @@ echo '<!--
     -->
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="Materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
-  <i class="menu-icon fa-solid fa-graduation-cap"></i>
+  <i class="menu-icon icon-item fa-solid fa-graduation-cap"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Обучение</figcaption>   
 </figure>	  
 </a>
@@ -150,7 +150,7 @@ echo '<!--
 
 <figure class="figure d-md-inline-block">
 
-<i class="menu-icon fa-solid fa-screwdriver-wrench"></i>
+<i class="menu-icon icon-item fa-solid fa-screwdriver-wrench"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anametools . '</figcaption>   
 </figure>	  
 </a>

@@ -94,14 +94,14 @@ echo '<!--
 <div class="gcse-searchbox-only" data-newWindow="true" data-resultsUrl="/cse.php"></div>   
      </li>
 </ul>
-  -->
+
  <a class="text-decoration-none mx-1" href="/cse.php">
 <figure class="figure">
 <i class="menu-icon fa-brands fa-google"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">CSE</figcaption>   
 </figure>	  
 </a> 
-  
+    -->
 
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
@@ -130,6 +130,7 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="tools">
+   <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
 
    <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
 

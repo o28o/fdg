@@ -416,10 +416,6 @@ align-items: center;
 }
 
 
-.icon-item {
- flex: 0 0 calc(59.33% - 20px); /* 33.33% - 10px - это примерная ширина для 3 элементов в строке */
-  margin: 20px 0 0 0; /* отступ между элементами */
-}
 
 
 .btn-primary {
@@ -605,14 +601,7 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 }
 
 @media (max-width: 768px) {
-  
-  
-  .icon-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Используйте "center" для центрирования элементов по горизонтали */
-  align-items: center; /* Используйте "center" для центрирования элементов по вертикали */
-}
+ 
 .imgonmain {
     max-width: 95%;
   }

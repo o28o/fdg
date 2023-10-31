@@ -18,14 +18,15 @@ echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
   <figcaption class="horiz-menu-item figure-caption text-center">Read Pāḷi</figcaption>
 </figure>
 </a>';
-} else {
+} /*else {
  echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
     <i class="menu-icon fa-solid fa-bolt"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Index</figcaption>
 </figure>
 </a>' ;
-}
+} */
+
 echo '<!--
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
@@ -47,7 +48,7 @@ echo '<!--
 
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
-   <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
+
 
           <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
        <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
@@ -130,8 +131,10 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="tools">
+     <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li>
+  
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
-
+   <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
    <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
 
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>

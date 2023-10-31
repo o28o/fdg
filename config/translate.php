@@ -212,6 +212,7 @@ $anameconj = 'Спряжения';
 $anametextbook = 'Курс по Пали';
 $anameothermat = 'Другие Материалы';
 $anamesdiff = 'Сравнить Две Сутты';
+$anametools = 'Инстр.';
 
 $aboutheader = 'О Проекте';
 $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift это поисковая система Освобождения. Точный Поиск в текстах Дхаммы и Винаи Палийского Канона с результатами в удобных таблицах с построчными переводами SuttaCentral.net, TheBuddhasWords.net, Theravada.ru и Tipitaka.theravada.su. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
@@ -637,13 +638,13 @@ $anamedpd = 'Pali for mDict';
 $anameresearch = 'Research';
 $anameread = 'Read';
 $anamestudy = 'Study';
-$anamematerials = 'Grammar';
+$anamematerials = 'Study';
 $anamecases = 'Cases';
 $anameconj = 'Conjugations';
 $anametextbook = 'Pali Textbook';
 $anameothermat = 'Other Materials';
 $anamesdiff = 'Sutta Diff';
-
+$anametools = 'Tools';
 
 $aboutheader = 'About Project';
 $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift serves as a Liberation Search Engine for Dhamma and Vinaya, the core of the Pali Canon. </br></br>It presents results in informative tables with line by line translations from sources like SuttaCentral.net, TheBuddhasWords.net, Theravada.ru, and Theravada.su. </p></div>

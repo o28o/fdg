@@ -48,15 +48,15 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
-   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
+
           <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
        <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
 
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
-       <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
+
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
     
-     <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
+
           <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
    <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SC.net Voice</a></li>
@@ -67,13 +67,6 @@ echo '<!--
     <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
      <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">' . $anameati . '</a></li>
   </ul>
-
-<a class="text-decoration-none mx-1" href="/assets/diff/?lang=pl">
-<figure class="figure">
-<i class="menu-icon fa-solid fa-code-compare"></i>
-<figcaption class="horiz-menu-item figure-caption text-center">'. $anamesdiff . '</figcaption>   
-</figure>	  
-</a>
 
 <a class="text-decoration-none mx-1" href="/history.php">
 <figure class="figure">
@@ -121,9 +114,31 @@ echo '<!--
        <li><a class="dropdown-item" href="' . $linkconj . '">' . $anameconj . '</a></li>
       <li><a class="dropdown-item" href="' . $linktextbook . '">' . $anametextbook . '</a></li>
     <li><a class="dropdown-item" href="' . $linksothermat . '">' . $anameothermat . '</a></li>
+         <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
        <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
        <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
     <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li>
+</ul>
+
+
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="tools" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+
+<figure class="figure d-md-inline-block">
+
+<i class="menu-icon fa-solid fa-screwdriver-wrench"></i>
+<figcaption class="horiz-menu-item figure-caption text-center">' . $anametools . '</figcaption>   
+</figure>	  
+</a>
+  <ul class="dropdown-menu" aria-labelledby="tools">
+
+   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
+
+  <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
+
+<li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
+      
+             <li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS converter #1</a></li>           
+                <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS converter #2</a></li>  
            <li><a class="dropdown-item" href="/ru/assets/memo.html">Memorizer</a></li>    
 
     <li><a class="dropdown-item" href="/ru/assets/rd.html">Random declention</a></li>    
@@ -132,6 +147,5 @@ echo '<!--
 </ul>
 
 </div> 
-
 '
 ?>

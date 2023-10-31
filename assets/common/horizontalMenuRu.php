@@ -1,6 +1,7 @@
 <?php
 if (( basename($_SERVER['REQUEST_URI']) != "ru")) {
-echo '<div class="icon-container d-md-inline-block">	
+echo '<div class="d-md-inline-block">	
+<!-- <div class="icon-container"> -->
 <a class="text-decoration-none mx-1" href="' . $mainpage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
@@ -8,7 +9,8 @@ echo '<div class="icon-container d-md-inline-block">
 </figure>
 </a>';
 } else  {
-echo '<div class="icon-container d-md-inline-block">	';
+echo '<div class="icon-container d-md-inline-block">
+<!-- <div class="icon-container"> -->';
 }
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
 echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
@@ -88,7 +90,7 @@ echo '<!--
     <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
            <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Пали-Рус для GoldenDict</a></li>  
   </ul>
-
+<!-- </div -->
 <a class="text-decoration-none mx-1" href="/ru/history.php">
 <figure class="figure">
   <i class="menu-icon icon-item fa-solid fa-clock-rotate-left"></i>

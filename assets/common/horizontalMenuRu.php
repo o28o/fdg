@@ -18,14 +18,15 @@ echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
   <figcaption class="horiz-menu-item figure-caption text-center">Читать Pāḷi</figcaption>
 </figure>
 </a>';
-} else {
+} /* else {
  echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-bolt"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Индекс</figcaption>
 </figure>
 </a>' ;
-}
+} */ 
+
 echo '<!--
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
@@ -44,7 +45,7 @@ echo '<!--
 <a class="dropup text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup d-md-inline-block">
     <i class="menu-icon icon-item fa-solid fa-book"></i>
-<figcaption class="horiz-menu-item figure-caption text-center">на Англ.</figcaption>   
+<figcaption class="horiz-menu-item figure-caption text-center">Английские</figcaption>   
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="EnglishMaterials">
@@ -156,6 +157,10 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="tools">
+  
+ <!--    <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Индекс</a></li> -->
+
+  
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
 
 

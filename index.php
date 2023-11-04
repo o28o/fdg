@@ -829,8 +829,7 @@ foreach ($slides as $index => $slide) {
   </a>
   
 
-  <a target="_blank"  href="
-  <?php echo $linksothermat; ?>" class="list-group-item list-group-item-action">
+  <a target="_blank"  href="<?php echo $linksothermat; ?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1"><?php echo $head5othermat;?></h5>
       <small class="text-muted"><?php echo $detailoffline;?></small>

@@ -18577,7 +18577,7 @@ include $basedir . "/assets/texts/vinaya/bipm.php";
 
   <a target="_blank"  href="
   <?php echo $linksothermat; ?>" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
+    <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1"><?php echo $head5othermat;?></h5>
       <small class="text-muted"><?php echo $detailoffline;?></small>
     </div>

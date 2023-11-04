@@ -49,24 +49,26 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
 
+     <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">' . $anameati . '</a></li
+     >
+     
+         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
+        <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
+        
+ <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">The Buddha\'s Words</a></li>   
+          <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
+    
+    <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
 
-          <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
+             <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
+
        <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
-
+          <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>   
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
 
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
     
-
-          <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
-   <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SC.net Voice</a></li>
-    <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
-    <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
-            <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>   
- <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">The Buddha\'s Words</a></li>    
-    <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
-     <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">' . $anameati . '</a></li>
   </ul>
 
 <a class="text-decoration-none mx-1" href="/history.php">
@@ -133,6 +135,8 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="tools">
      <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li>
   
+   <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>
+  
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
    <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
@@ -141,9 +145,9 @@ echo '<!--
 
 <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
       
-             <li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS converter #1</a></li>           
-                <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS converter #2</a></li>  
-           <li><a class="dropdown-item" href="/ru/assets/memo.html">Memorizer</a></li>    
+<li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS converter #1</a></li>           
+ <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS converter #2</a></li>  
+<li><a class="dropdown-item" href="/ru/assets/memo.html">Memorizer</a></li>    
 
     <li><a class="dropdown-item" href="/ru/assets/rd.html">Random declention</a></li>    
        <li><a class="dropdown-item" href="/assets/rr.html">Random rule</a></li> 

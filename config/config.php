@@ -28,7 +28,7 @@ $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/pyth
 // mainmenu
 $linkmolds = '/buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
 $linksc = '/legacy.suttacentral.net/sc/su.html';
-$anamesc = 'Legacy.suttacentral.net';
+$anamesc = 'SC.net Legacy';
 $linktbw = '/bw';
 $linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';

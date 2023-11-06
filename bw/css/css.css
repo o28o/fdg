@@ -1083,7 +1083,7 @@ td.c1 {
  }
 
 .add, .add1 {
-	color: #141516 !important;
+	color: #999999 !important;
 		}
 
 [light-mode=dark] .add , .add1 {
@@ -1433,8 +1433,8 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   background-color: #FFF3D6;
   background-image: url('../images/headerlogo.png');
   background-repeat: no-repeat;
-  background-position: top right; /* Изображение фона в правом верхнем углу */
-  background-size: cover; /* или contain, в зависимости от вашего предпочтения */
+  background-position: top right; /* Background image in the upper right corner */
+  background-size: cover; /* Or contain, depending on your preference */
 }
 
     @media screen and (min-width: 1640px) {
@@ -1460,6 +1460,6 @@ hr, .pairs hr {
  height:20px;
  margin-bottom:0;
  background-color:lime;
+}
 
 */
-

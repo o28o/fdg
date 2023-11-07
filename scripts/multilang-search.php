@@ -4,7 +4,7 @@ include_once('./config/config.php');
 foreach ($extra as $value) {
     $extraString .= " $value"; // Добавьте каждый элемент массива к строке с пробелом
 }
-echo "bash ./scripts/finddhamma.sh $outputlang $la $extra $extraString $p $string"; 
+
 
 if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";

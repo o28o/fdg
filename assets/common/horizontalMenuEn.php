@@ -55,7 +55,9 @@ echo '<!--
          <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
         <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
         
- <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">The Buddha\'s Words</a></li>   
+ <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">
+   <i class="' . $iconimportant . '"></i>
+ The Buddha\'s Words</a></li>   
           <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
     
     <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
@@ -113,9 +115,15 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="materials">
-   <li><a class="dropdown-item" href="' . $linkcases . '">' . $anamecases . '</a></li>
-       <li><a class="dropdown-item" href="' . $linkconj . '">' . $anameconj . '</a></li>
-      <li><a class="dropdown-item" href="' . $linktextbook . '">' . $anametextbook . '</a></li>
+   <li><a class="dropdown-item" href="' . $linkcases . '">
+     <i class="' . $iconimportant . '"></i>
+     ' . $anamecases . '</a></li>
+       <li><a class="dropdown-item" href="' . $linkconj . '">
+         <i class="' . $iconimportant . '"></i>
+         ' . $anameconj . '</a></li>
+      <li><a class="dropdown-item" href="' . $linktextbook . '">
+        <i class="' . $iconimportant . '"></i>
+        ' . $anametextbook . '</a></li>
     <li><a class="dropdown-item" href="' . $linksothermat . '">' . $anameothermat . '</a></li>
          <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
        <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
@@ -139,7 +147,9 @@ echo '<!--
   
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
-   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Digital Pāḷi Dictionary</a></li>
+   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">
+     <i class="' . $iconimportant . '"></i>
+   Digital Pāḷi Dictionary</a></li>
 
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
 

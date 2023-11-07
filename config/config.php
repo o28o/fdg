@@ -185,5 +185,8 @@ $bwlocation = $basedir. '/bw';
 
 $defaultla = 2;
 $latestrusmn = 38;
+$iconimportant = 'fa-solid fa-circle-exclamation';
+$iconimportant = 'fa-solid fa-triangle-exclamation';
+$iconimportant = 'fa-solid fa-star';
 
 ?>

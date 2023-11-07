@@ -49,7 +49,9 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="EnglishMaterials">
+      <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">Accesstoinsight.org Патимоккха</a></li>
 
+        
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
 
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
@@ -65,11 +67,12 @@ echo '<!--
         
 
 
-        <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">The Buddha\'s Words</a></li>    
+        <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">
+          <i class="' . $iconimportant . '"></i>
+        The Buddha\'s Words</a></li>    
         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Благородный Аскетизм</a></li>
       <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">Переводы Майкла Олдса</a></li>
-      <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">Accesstoinsight.org Патимоккха</a></li>
-        
+
   </ul>
   
 
@@ -131,9 +134,15 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="Materials">
-      <li><a class="dropdown-item" href="' . $linkcasesru . '">Падежи</a></li>
-      <li><a class="dropdown-item" href="' . $linkconj . '">Спряжения</a></li>
-   <li><a class="dropdown-item" href="assets/materials/pali_textbook_rus.pdf">Курс по Пали</a></li>
+      <li><a class="dropdown-item" href="' . $linkcasesru . '">
+        <i class="' . $iconimportant . '"></i>
+        Падежи</a></li>
+      <li><a class="dropdown-item" href="' . $linkconj . '">
+        <i class="' . $iconimportant . '"></i>
+        Спряжения</a></li>
+   <li><a class="dropdown-item" href="assets/materials/pali_textbook_rus.pdf">
+     <i class="' . $iconimportant . '"></i>
+     Курс по Пали</a></li>
    
    <!-- https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing -->
          <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>
@@ -172,10 +181,18 @@ echo '<!--
       
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
 
-           <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">Пали-Рус для GoldenDict</a></li>  
+           <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">
+             <i class="' . $iconimportant . '"></i>
+           Пали-Рус для GoldenDict</a></li>  
            
-   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">Пали-Англ Digital Pāḷi Dictionary</a></li>
-   
+<li>
+ 
+  <a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">
+  <i class="' . $iconimportant . '"></i>
+    Пали-Англ Digital Pāḷi Dictionary
+  </a>
+</li>
+
 
   
        <li><a class="dropdown-item" href="/ru/assets/memo.html">Мнемотехника</a></li>    

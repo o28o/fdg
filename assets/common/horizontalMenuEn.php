@@ -157,11 +157,15 @@ echo '<!--
       
 <li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS converter #1</a></li>           
  <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS converter #2</a></li>  
-<li><a class="dropdown-item" href="/ru/assets/memo.html">Memorizer</a></li>    
+<li><a class="dropdown-item" href="/ru/assets/memo.html">
+  <i class="' . $iconimportant . '"></i>
+Memorizer</a></li>    
 
     <li><a class="dropdown-item" href="/ru/assets/rd.html">Random declention</a></li>    
        <li><a class="dropdown-item" href="/assets/rr.html">Random rule</a></li> 
-<li><a class="dropdown-item" href="/assets/makelist.html">' . $head5makelist . '</a></li>  
+<li><a class="dropdown-item" href="/assets/makelist.html">
+  <i class="' . $iconimportant . '"></i>
+' . $head5makelist . '</a></li>  
 </ul>
 
 </div> 

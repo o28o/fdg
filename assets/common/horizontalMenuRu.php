@@ -195,11 +195,15 @@ echo '<!--
 
 
   
-       <li><a class="dropdown-item" href="/ru/assets/memo.html">Мнемотехника</a></li>    
+       <li><a class="dropdown-item" href="/ru/assets/memo.html">
+        <i class="' . $iconimportant . '"></i> 
+       Мнемотехника</a></li>    
     <li><a class="dropdown-item" href="/ru/assets/rd.html">Случайный падеж</a></li>    
    <li><a class="dropdown-item" href="/ru/assets/rr.html">Случайное правило</a></li>    
    <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
- <li><a class="dropdown-item" href="/ru/assets/makelist.html">' . $head5makelist . '</a></li>   
+ <li><a class="dropdown-item" href="/ru/assets/makelist.html">
+   <i class="' . $iconimportant . '"></i>
+ ' . $head5makelist . '</a></li>   
 
 </div>'
 ?>

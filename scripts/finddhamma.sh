@@ -194,7 +194,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed 's@е@[её]@g' | sed 's@ṃ@[ṃṁ]@g' | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's@^@(@g' | sed 's/$/)/g' | sed 's@,@@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] || [[ "$pattern" == "-nm5" ]] || [[ "$pattern" == "-nm1" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] || [[ "$pattern" == "-nm5" ]] || [[ "$pattern" == "-nm1" ]] || [[ "$pattern" == "-conv" ]] 
 then   
 #emptypattern
    exit 3
@@ -827,7 +827,6 @@ metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalu
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 fi
-
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
 <td><input type='checkbox' data-index="$filenameblock"></td>
@@ -840,6 +839,9 @@ echo "<tr>
 
 `[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
 `[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
+
+#inprogress
+`[[ $linksi != "" ]] && [[ "$@" == *"-conv"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
 
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 

@@ -159,6 +159,7 @@ if [[ "$@" == *"-h"* ]]; then
     -ru - to search in Russian <br>
     -en - to search in English <br>
     -th - to search in Thai <br>
+    -si - to search in Sinhala <br>
     -b - to search in tbw materials <br>
     -tru - to search in theravada.ru materials <br>
     -oru - output messages in sian<br>"
@@ -836,8 +837,10 @@ echo "<tr>
 <td>$metaphorcount</td>
 <td>
 <a target=\"_blank\" href="$linken">En</a> 
-`[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
-`[[ $linksi != "" ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
+
+`[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
+`[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
+
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 
 </td>" | tohtml 

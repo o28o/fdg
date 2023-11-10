@@ -110,7 +110,7 @@ curl_close($cURLConnection);
  $output = trim(preg_replace('/\s\s+/', ' ', $output));	
  $outforjs .= $output . "<br>";
  echo "$outputlang $p -conv $la $extra $cb $convertedStr";
-  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $la $extra $cb $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -conv $la $extra $cb $convertedStr");
   
 //  echo "<p>$output</p>";
 $output = trim(preg_replace('/\s\s+/', ' ', $output));	

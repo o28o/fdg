@@ -1115,6 +1115,12 @@ textsqnty=`echo $textlist | wc -w`
 pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 pattern=$userpattern
 title="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty texts and $matchqnty matches in $fortitle $language"
+
+if [[ "$@" == *"-nm"* ]]; then
+title="TOP-$numbersmatches `echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty texts and $matchqnty matches in $fortitle $language"
+fi
+
+
 titlewords="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $uniqwordtotal related words in $textsqnty texts and $matchqnty matches in $fortitle $language"
 
 sed -i 's/TitletoReplace/'"$title"'/g' ${table}

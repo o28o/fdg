@@ -1037,7 +1037,7 @@ grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
 if [[ "$@" == *"-nm"* ]] 
 then
-cp $basefile bfl
+#cp $basefile bfl
 topmatchesintexts=`cat $basefile | awk '{print $1}' | uniq -c | LC_ALL=C sort -r | head -n$numbersmatches | awk '{print $2}'`
 for i in $topmatchesintexts
 do

@@ -71,7 +71,6 @@ linesafter=0
 minlength=2
 truncatelength=30
 filesizenooverwrite=1000000
-filesizenooverwrite=100000000000
 maxmatchesbg=3500
 archivenumber=280
 archivenumber=91

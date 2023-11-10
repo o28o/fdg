@@ -582,6 +582,12 @@ md5_file=$(md5sum ${functionfile} | cut -d" " -f1)
 
 filesize=$(stat -c%s "${checkfile}")
 
+
+if [[ "$@" == *"-nm"* ]] 
+then
+filesizenooverwrite=100000000000
+fi
+
 if (( $filesize >= $filesizenooverwrite )) && [[ "`tail -n1 ${checkfile}`" == "</html>" ]] 
 then
 	echo Already 
@@ -1033,7 +1039,6 @@ grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
 if [[ "$@" == *"-nm"* ]] 
 then
-filesizenooverwrite=100000000000
 topmatchesintexts=`cat $basefile | awk '{print $1}' | uniq -c | sort -r | head -n$numbersmatches | awk '{print $2}'`
 for i in $topmatchesintexts
 do

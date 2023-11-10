@@ -14,6 +14,7 @@ $linktextbook = "$linktextbookru";
 
 $maintitle = 'Точный поиск в Пали Суттах и Винае';
 $metadesc = 'Точный поиск в Пали Суттах и Винае. Поисковый Сайт Освобождения.';
+$metakeywords = 'Сутты, Дхамма, Дхарма, Пали, Палийский канон, буддизм, dhamma, sutta, Buddhism, pali Canon';
 $titletwit = 'Точный поиск в Пали Суттах и Винае. ';
 $ogdesc = 'Поисковая Система Освобождения. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
 $oglocale = 'ru_RU';
@@ -447,6 +448,7 @@ $gearbutton = 'extra settings';
 
 $maintitle = 'Precise Search in Pali Suttas and Vinaya';
 $metadesc = 'Precise Search in Pali Suttas and Vinaya. Liberation Search Engine. Search in Pali Suttanta and Vinaya';
+$metakeywords = 'dhamma, sutta, Buddhism, pali Canon, dharma';
 $titletwit = 'Precise Search in Pali Suttas and Vinaya. ';
 $ogdesc = 'Liberation Search Engine. Search in Suttas and Vinaya in Pali, Russian, English and Thai';
 $oglocale = 'en_US';

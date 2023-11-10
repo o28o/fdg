@@ -13,6 +13,7 @@ include 'scripts/opentexts.php';
 <title><?php echo $maintitle;?></title>
  <meta http-equiv="Cache-control" content="public">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="keywords" content="<?php echo $metakeywords;?>">
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
 

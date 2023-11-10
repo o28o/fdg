@@ -10,7 +10,6 @@ export LANG=en_US.UTF-8
 # and paddling with my hands and feet,
 # I can safely reach the far shore.
 ########## sn35.238 ##########
-
 source ./config/script_config.sh --source-only
 args="$@"
 rand=`echo $RANDOM | md5sum | head -c 5`
@@ -827,6 +826,7 @@ metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalu
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 fi
+
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
 <td><input type='checkbox' data-index="$filenameblock"></td>
@@ -838,10 +838,10 @@ echo "<tr>
 <a target=\"_blank\" href="$linken">En</a> 
 
 `[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
+$([[ $linkthai != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linkthai\">ไทย</a>")
 `[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
+$([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linksi\">සිං</a>")
 
-#inprogress
-`[[ $linksi != "" ]] && [[ "$@" == *"-conv"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
 
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 

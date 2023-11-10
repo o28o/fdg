@@ -42,13 +42,12 @@ $check = ru2lat( $output );
 else if (preg_match('/\p{Thai}/u', $string) || ( $p == "-th" )) {
   $p = "-th";
   if ( $mode == "offline" ) {
-    
   $command = escapeshellcmd("$adapterscriptlocation $string");
   $convertedStr = shell_exec($command);
  $output = $aksharatext . $convertedStr; 
  $output = trim(preg_replace('/\s\s+/', ' ', $output));	
  $outforjs .= $output . "<br>";
-  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $cb $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -conv $la $extra $cb $convertedStr");
  // echo "<p>$output</p>";
  $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>";
@@ -57,7 +56,6 @@ $outforjs .= $output . "<br>";
         
       $cURLConnection = curl_init();
  $param = urlencode($string);
- $p = "-conv";
 curl_setopt($cURLConnection, CURLOPT_URL, "https://aksharamukha-plugin.appspot.com/api/public?target=IASTPali&text=$param");
 curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($cURLConnection, CURLOPT_HTTPHEADER, array(
@@ -68,7 +66,7 @@ curl_close($cURLConnection);
  $output = $aksharatext . $convertedStr; 
  $output = trim(preg_replace('/\s\s+/', ' ', $output));	
  $outforjs .= $output . "<br>";
-  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $p $la $extra $cb $convertedStr");
+  $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang -conv $la $extra $cb $convertedStr");
 //  echo "<p>$output</p>";
 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>";

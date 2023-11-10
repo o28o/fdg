@@ -864,7 +864,6 @@ echo '<br class="styled">'
 done | tohtml 
 echo "</p></td>
 </tr>" | tohtml
-
 done
 matchqnty=`awk '{sum+=$1;} END{print sum;}' $tempfile`
 
@@ -1147,8 +1146,12 @@ if [[ "$language" == *"Pali"* ]] || [[ "$language" == *"English"* ]];
 #replace button href in qoute file
 		cat $templatefolder/Footer.html | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
 	else
-		cat $templatefolder/Footer.html | sed '/WORDSLINKVAR/d' | tohtml
+		cat $templatefolder/er.html | sed '/WORDSLINKVAR/d' | tohtml
 fi 
+
+if [[ "$@" == *"-nm"* ]]; then
+sed -i "/'orderMulti': true,/a \    'order': [[4, 'desc'], [5, 'desc']],"  ${table} 
+fi
 
 mv ./$oldname ./$tempfilewords
 

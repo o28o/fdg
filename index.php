@@ -11,7 +11,6 @@ include 'scripts/opentexts.php';
       <meta charset="UTF-8">
 
 <title><?php echo $maintitle;?></title>
- <meta http-equiv="Cache-control" content="public">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
@@ -23,7 +22,7 @@ include 'scripts/opentexts.php';
 
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />
-<meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
+<meta property="og:image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
@@ -56,7 +55,8 @@ include 'scripts/opentexts.php';
     <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
+            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;">
+            </div></a>
                 <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
@@ -74,23 +74,25 @@ include 'scripts/opentexts.php';
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
 <li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
 <a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a>
-</p></li><div class="form-check form-switch input-group-append">
+</p></li>
+<li>
+<div class="form-check form-switch input-group-append">
 <input type="checkbox" class="form-check-input" id="darkSwitch">
 </div>
+</li>
        </ul>
                 </div>
-            </div>
         </nav>
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column mb-3">
 
                 <!-- Masthead Heading-->
+<div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
 <h1 class="masthead-heading">
-    <div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
         <?php echo $title;?>
-    </div>
 </h1>
+    </div>
 
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
@@ -103,7 +105,7 @@ include 'scripts/opentexts.php';
                 </div>
     
 
-<form method="GET" action="" class="justify-content-center">
+<form method="GET" class="justify-content-center">
 <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 <label class="sr-only dropup rounded-pill" for="paliauto"></label>
 

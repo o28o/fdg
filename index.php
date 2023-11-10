@@ -118,7 +118,7 @@ if (isset($_GET['q'])) {
 ?>
 
 <div class="searchinputdiv">
-  <input name="q" type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
+  <input name="q" type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>">
   <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>
@@ -136,7 +136,7 @@ if (isset($_GET['q'])) {
 
 <div class="align-items-center form-check-inline mx-0">
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
-        <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
+        <option  <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn ") echo "selected";?> ><?php echo "$radiokn";?></option>
         <option value="-all" <?php if (isset($extra) && $p == "-all ") echo "selected";?> ><?php echo "$radioltr";?></option>
@@ -146,7 +146,7 @@ if (isset($_GET['q'])) {
        <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
-        <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
+        <option <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
         <option value="-def" <?php if (isset($extra) && $p == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>
         <option value="-defall" <?php if (isset($extra) && $p == "-defall ") echo "selected";?> ><?php echo "$listdefall";?></option>
@@ -158,10 +158,11 @@ if (isset($_GET['q'])) {
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
-  <div class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+<a class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
   <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
   <span class="visually-hidden"><?php echo $searchcaption;?></span>
-  </div>
+</a>
+
 
 <script>
 $(document).ready(function() {
@@ -198,18 +199,18 @@ $(document).ready(function() {
          <div style="max-width: 300px;" class="my-2"> 
          
 <div class="align-items-center form-check-inline mt-3">
-  <div class="mb-2"><button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā" autocomplete="off">ā</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ" autocomplete="off">ṁ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ" autocomplete="off">ñ</button>
- <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ" autocomplete="off">ṭ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī" autocomplete="off">ī</button> </div>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṇ" autocomplete="off">ṇ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ū" autocomplete="off">ū</button>
+  <div class="mb-2"><button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā" >ā</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ" >ṁ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ" >ñ</button>
+ <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ" >ṭ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī" >ī</button> </div>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṇ" >ṇ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ū" >ū</button>
 
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṅ" autocomplete="off">ṅ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḍ" autocomplete="off">ḍ</button>
-  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḷ" autocomplete="off">ḷ</button>
- <!-- <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ" autocomplete="off">ṃ</button> -->
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṅ" >ṅ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḍ" >ḍ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḷ" >ḷ</button>
+ <!-- <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ" >ṃ</button> -->
 </div>
 
 
@@ -235,7 +236,6 @@ $(document).ready(function() {
 </div>
 
   <?php echo $regexlink;?> 
- </p>
  
 <script>
   

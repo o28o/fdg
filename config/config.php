@@ -80,7 +80,7 @@ $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
 // ONLINE KV Prod
 //
   //preg_match('/rym.from.sh/', $uname) 
-  $mode = 'online';
+  $mode = 'offline';
 $mainpagethrflink =  "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";
   $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
@@ -102,7 +102,7 @@ $locationTocThsu = $basedir. "/assets/texts/";
 
 //converter.php
 //not used currently. php curl for offline
-$adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/f.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
+$adapterscriptlocation = '/home/python/aksharamukha/bin/python3 /var/www/html/scripts/aksharamukha-adapter.py';
 
 // include_once('../config/config.php');
 

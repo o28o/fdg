@@ -565,6 +565,10 @@ tempfilewords=${modifiedfn}_words.$rand
 tempdeffile=${modifiedfn}.def.$extention
 deffile=${modifiedfn}_definitions.$rand
 
+if [[ "$@" == *"-nm"* ]] 
+then
+filesizenooverwrite=1900000000000
+fi
 function checkifalreadydone {
 checkfile=`ls $modifiedfn*_[0-9]*-[0-9]*.html 2>/dev/null| grep -v word ` 
 
@@ -581,12 +585,6 @@ md5_file=$(md5sum ${functionfile} | cut -d" " -f1)
 }
 
 filesize=$(stat -c%s "${checkfile}")
-
-
-if [[ "$@" == *"-nm"* ]] 
-then
-filesizenooverwrite=100000000000
-fi
 
 if (( $filesize >= $filesizenooverwrite )) && [[ "`tail -n1 ${checkfile}`" == "</html>" ]] 
 then

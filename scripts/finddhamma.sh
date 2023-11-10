@@ -1030,7 +1030,7 @@ fi
 checkifalreadydone
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
-
+cp $basefile bfl
 if [[ "$@" == *"-nm"* ]] 
 then
 topmatchesintexts=`cat $basefile | awk '{print $1}' | uniq -c | sort -r | head -n$numbersmatches | awk '{print $2}'`

@@ -179,7 +179,7 @@ fi
 
 if [[ "$@" == *"-nm"* ]]; then
 numbersmatches=`echo "$@" | sed 's@.*-nm@@' | awk '{print $1}'` 
-history=/dev/null
+#history=/dev/null
 else
 numbersmatches=
 fi
@@ -635,8 +635,8 @@ if(( $linkscount == 0 ))
 then
 continue 
 fi 
-
-linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq | awk -F'_' '{print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"\">"$1"</a>"}'| sort -Vf | uniq | xargs`
+cp $basefile bfl
+linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $2}' | awk -F'/' '{print $NF}' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"#"$2"\">"$1"</a>"}'| xargs`
 
 #&lang=pli
 echo "<tr>
@@ -1205,6 +1205,11 @@ if [[ $excludepattern != "" ]]
 then
 userpattern="$pattern exc. ${excludepattern,,}"
 fi 
+
+if [[ "$@" == *"-nm"* ]]; then
+fortitle="TOP-$numbersmatches ${fortitle^}"
+fi
+
 
 echo -n "<!-- begin $userpattern --> 
 <tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><td><label class='star-checkbox'><input type='checkbox' data-index=\"${table}\"/><i class='fa-regular fa-star'></i></label></td><td>$textsqnty</td><td>$matchqnty</td><td><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></td><td>${fortitle^}</td><td>$language</td><td class=\"daterow\">$dateforhist</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td>" >> $history

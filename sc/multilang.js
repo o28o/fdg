@@ -360,12 +360,12 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
 
   // Обновление сообщения об ошибке на странице
   
-  suttaArea.innerHTML = `<p>Поиск "${decodeURIComponent(slug)}". Ожидайте.
-    <br><br>
+  suttaArea.innerHTML = `<p>Поиск "${decodeURIComponent(slug)}". Ожидайте.</p>
+  
                       <div class="spinner-border" role="status">
                 <span class="visually-hidden">Загрузка...</span>
                   </div>
-    Подсказка: <br>
+<p>    Подсказка: <br>
     С главной страницы вам доступно больше настроек поиска.
 <br></p>`;
 });

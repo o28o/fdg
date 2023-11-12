@@ -285,12 +285,12 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
   };
 
   // Обновление сообщения об ошибке на странице
-        suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.
+        suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.</p>
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
                   </div>
     <br><br>
-    Note: <br>
+  <p>  Note: <br>
 More search options available from the main page.</p>`;
 });
 }

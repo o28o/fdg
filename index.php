@@ -583,10 +583,16 @@ foreach ($slides as $index => $slide) {
 <?php echo $aboutprp; ?>
                 </div>
                 <!-- About Section Button-->
-                <div class="text-center mt-4">
+         <!--       <div class="text-center mt-4">
                     <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
                 
                    <i class="fa-brands fa-github"></i><?php echo $prongh; ?>
+                    </a>
+                </div> -->
+                                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="mailto:agiftofdhamma@gmail.com">
+    
+                   <i class="fa-solid fa-at"></i><?php echo $premail; ?>
                     </a>
                 </div>
             </div>

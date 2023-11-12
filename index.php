@@ -11,13 +11,12 @@ include 'scripts/opentexts.php';
       <meta charset="UTF-8">
 
 <title><?php echo $maintitle;?></title>
- <meta http-equiv="Cache-control" content="public">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
 <meta name="keywords" content="<?php echo $metakeywords;?>">
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
-<meta property="og:type" content="article" />
+<meta property="og:type" content="website" />
 <meta property="og:title" content="find.Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 

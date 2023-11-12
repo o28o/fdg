@@ -334,15 +334,38 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
     );
      
     })
-    .catch(error => {
-      console.log('error:not found');
-      suttaArea.innerHTML = `<p>Перевод текста "${decodeURIComponent(slug)}" не найден.
+.catch(error => {
+  console.log('error:not found');
+
+  // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
+  xhr.send();
+
+  // Обработка ответа
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        // Обработка успешного ответа
+        console.log(xhr.responseText);
+                window.location.reload(true);
+        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+
+      } else {
+        // Обработка ошибки
+        console.log('Error sending request to /ru/?q=');
+      }
+    }
+  };
+
+  // Обновление сообщения об ошибке на странице
+  
+  suttaArea.innerHTML = `<p>Поиск "${decodeURIComponent(slug)}". Ожидайте.
     <br><br>
     Подсказка: <br>
-    Сутты собранные в серии должны быть указаны в точности, как на suttacentral.net. К примеру, <code>an1.1</code> работать не будет, но <code>an1.1-10</code> будет.<br>
-    Номер раздела и номер сутты должны быть разделены "точкой".<br>
-      Включены только dn, mn, sn, an и некоторые книги kn.<br></p>`;
-    });
+    С главной страницы вам доступно больше настроек поиска.
+<br></p>`;
+});
     }
 
     );
@@ -367,7 +390,11 @@ setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>Сутты собранные в серии должны быть указаны в точности, как на suttacentral.net. К примеру an1.1-10. Номер раздела и номер сутты должны быть разделены "точкой". Доступны следующие тексты. Кликните по аббревеатуре, чтобы добавить её в строку поиска.</p>
+  <p>
+На этой странице тексты собранные в серии должны быть указаны, как в подсказках автозаполнения. К примеру, <code>an1.1</code> работать не будет, но <code>an1.1-10</code> будет.<br>
+    Номер раздела и номер сутты должны быть разделены "точкой".<br>
+    Включены только dn, mn, sn, an, некоторые книги kn и виная<br>
+  </p>
   <div class="lists">
 
   <div class="suttas">

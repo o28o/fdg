@@ -260,14 +260,40 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
     }
     );
     })
+    
     .catch(error => {
-            console.log('error:not found');
-      suttaArea.innerHTML = `<p>Sorry, "${decodeURIComponent(slug)}" is not a valid sutta citation.
+  console.log('error:not found');
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
+  xhr.send();
+
+  // Обработка ответа
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        // Обработка успешного ответа
+        console.log(xhr.responseText);
+                window.location.reload(true);
+        window.location.href = "/?q=" + encodeURIComponent(slug);
+
+      } else {
+        // Обработка ошибки
+        console.log('Error sending request to /?q=');
+      }
+    }
+  };
+
+  // Обновление сообщения об ошибке на странице
+        suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.
     <br><br>
     Note: <br>
-    Suttas that are part of a series require that you enter the exact series. For example, <code>an1.1</code> will not work, but <code>an1.1-10</code> will.<br>
-    Chapter and sutta number should be separated by a period.<br>
-    Only dn, mn, sn, and an are valid books.</p>`;
+More search options available from the main page.</p>`;
+});
+    
+    .catch(error => {
+            console.log('error:not found');
+
     });
 }
 
@@ -289,9 +315,9 @@ setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>Citations must exactly match those found on SuttaCentral.net. Separate chapter and sutta with a period. The following collections work. Click them to add to input box.</p>
+  <p>Citations should exactly match should from autocomplete. Separate chapter and sutta with a period. The following collections work. Click them to add to input box.</p>
     <p>Suttas that are part of a series require that you enter the exact series. 
-  (Such as Dhp and some SN and AN.)</p>
+  (Such as and some SN and AN. E.g. 1.1-10)</p>
   <div class="lists">
 
   <div class="suttas">

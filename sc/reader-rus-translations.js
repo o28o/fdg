@@ -343,6 +343,9 @@ const pageTitle = document.querySelector("h1");
   
   suttaArea.innerHTML = `<p>Поиск "${decodeURIComponent(slug)}". Ожидайте.
     <br><br>
+                  <div class="spinner-border" role="status">
+                <span class="visually-hidden">Загрузка...</span>
+                  </div>
     Подсказка: <br>
     С главной страницы вам доступно больше настроек поиска.
 <br></p>`;

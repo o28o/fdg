@@ -15,6 +15,29 @@
   --blue: #3434be;
 }
 
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg) /* rtl:ignore */;
+  }
+}
+.spinner-border {
+  margin: 20px auto;
+  
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: -0.125em;
+  border: 0.25em solid #000;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: 0.75s linear infinite spinner-border;
+          animation: 0.75s linear infinite spinner-border;
+}
+
+.dark .spinner-border {
+  border: 0.25em solid var(--light-gray);
+  border-right-color: transparent;
+}
+
 body {
   margin: 1rem 3rem;
   background-color: var(--light-off-white);

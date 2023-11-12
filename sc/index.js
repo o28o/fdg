@@ -286,6 +286,9 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
 
   // Обновление сообщения об ошибке на странице
         suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+                  </div>
     <br><br>
     Note: <br>
 More search options available from the main page.</p>`;

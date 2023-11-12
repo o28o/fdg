@@ -310,7 +310,15 @@ fi
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpsml
 
-nice -$nicevalue grep -Ei "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)" $tmpsml | grep -vE "$nonmetaphorkeys" 
+if [[ "$type" == html ]]; then
+for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | sed 's/html:.*/html/g'  ; 
+done
+else 
+nice -$nicevalue grep -Ei "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $tmpsml | grep -vE "$nonmetaphorkeys" 
+
+fi
+
+
 }
 
 
@@ -366,7 +374,7 @@ done > $tmponl
 
 if [[ "$type" == html ]]; then
 cat $tmponl |sed 's/html:.*/html/g' 
-else 
+else
 cat $tmponl 
 fi
 
@@ -440,7 +448,7 @@ elif [[ "$@" == *"-b"* ]]; then
     language="TBW"
     type=html
     hwithtitle='<h00002>'
-    metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"
+    metaphorkeys="is a designation for|suppose"
     nonmetaphorkeys="adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"
     definitionkeys="Kata.*${pattern}.{0,4}\\?|${pattern}.*vucati|${pattern}.*adhivacan|${pattern}.{0,4}, ${pattern}.*vucca"
    #modify pattern as legacy uses different letters
@@ -461,7 +469,7 @@ elif [[ "$@" == *"-en"* ]]; then
     pali_or_lang=sc-data/sc_bilara_data/translation/en/$translator
     language=English
     type=json
-    metaphorkeys="It’s like a |suppose|is a term for|similar to |simile"
+    metaphorkeys="It’s like a |suppose|is a term for|similar to |simile|Suppose|is a designation for"
     nonmetaphorkeys="adhivacanasamphass|adhivacanapath" 
     definitionkeys="what is.*${pattern}.{0,4}\\?|speak of this.*${pattern}|${pattern}.*term|${pattern}.{0,4}, ${pattern}.*говорят"
     if [[ "$@" == *"-vin"* ]]

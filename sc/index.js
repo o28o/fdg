@@ -290,11 +290,6 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
     Note: <br>
 More search options available from the main page.</p>`;
 });
-    
-    .catch(error => {
-            console.log('error:not found');
-
-    });
 }
 
 // initialize the whole app

@@ -24,7 +24,7 @@
   width: 1.5rem;
   height: 1.5rem;
   vertical-align: -0.125em;
-  border: 0.25em solid #000;
+  border: 0.25em solid var(--off-white);
   border-right-color: transparent;
   border-radius: 50%;
   -webkit-animation: 0.75s linear infinite spinner-border;

@@ -134,10 +134,16 @@ dn22 mn141
 $carouseltitle = 'Интересные Запросы';
 
 $slides = [
+
           [
         'title' => 'Крайние сроки на Пробужление для монахов и мирян от Будды',
         'desc' => 'Максимум 7 и 10 лет, соответственно',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali-ru_3-16.html',
+    ],
+                [
+        'title' => '"Настоящие" джатаки из Сутт',
+        'desc' => 'Будда, о своих прошлых жизнях',
+        'link' => '/assets/example/aha.m-tena-samayena.ahos_suttanta_pali-ru_7-7.html',
     ],
     [
         'title' => 'Благородный Глоссарий',
@@ -570,6 +576,11 @@ $slides = [
         'title' => 'Deadlines for Awakening for monks and layity from Buddha.',
         'desc' => 'up to 7 or 10 years, accordingly',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali_3-16.html',
+    ],
+                [
+        'title' => 'The "Real" Jatakas from Suttas',
+        'desc' => 'Buddha, on his past lifes',
+        'link' => '/assets/example/aha.m-tena-samayena.ahos_suttanta_pali_7-7.html',
     ],
     [
         'title' => 'Noble Glossary',

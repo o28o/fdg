@@ -316,6 +316,10 @@ done
 else 
 nice -$nicevalue grep -Ei "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $tmpsml | grep -vE "$nonmetaphorkeys" 
 
+#for i in `cat $tmpsml | awk -F':' '{print $1}'`
+#do 
+#nice -$nicevalue grep -B2 -Ei "${smlpattern}" $i | awk '/Seyyathāpi/,/'${smlpattern}'/ {if(NR>1) print}' 
+#done
 fi
 
 
@@ -355,7 +359,9 @@ patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' `
 
 #nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
 
-command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' "
+command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*'  -not -path '*/iti/*' -not -path '*/ud/*' "
+
+#-not -path '*/dhp/*'
 for i in $patternforfind
 do
 command+=`echo -n '-exec grep -qE "'$i'" {} \; '` 
@@ -393,9 +399,9 @@ function grepbasefile {
 tmpgb=tmpgrepbase.$rand
 #find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' -print0 | xargs -n$filelimit -r0P$procqnty grep -E -Ri${grepvar}${grepgenparam} "$pattern" > $tmpgb
 
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp} > $tmpgb
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
-
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig} > $tmpgb
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig} >> $tmpgb
+#dhp
 if [ -s $tmpgb ]; then
 cat $tmpgb 
 fi
@@ -474,7 +480,8 @@ elif [[ "$@" == *"-en"* ]]; then
     definitionkeys="what is.*${pattern}.{0,4}\\?|speak of this.*${pattern}|${pattern}.*term|${pattern}.{0,4}, ${pattern}.*говорят"
     if [[ "$@" == *"-vin"* ]]
   then 
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/translation/en/$translator/$dirlocation --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,iti,ud} >> $tmpgb
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/translation/en/$translator/$dirlocation --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig} >> $tmpgb
+#dhp,iti,ud
 fi
 else
     fnlang=_pali
@@ -1041,7 +1048,7 @@ fi
 checkifalreadydone
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
-
+cp $basefile bfl
 if [[ "$@" == *"-nm"* ]] 
 then
 #cp $basefile bfl

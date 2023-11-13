@@ -236,7 +236,7 @@ $(document).ready(function() {
  
 <script>
   
-//  autocomplete part
+// Event listener to submit the form when Enter key is pressed
 var input = document.getElementById("paliauto");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -262,14 +262,8 @@ document.getElementById("clearbtn").addEventListener("click", function() {
   resetForm();
 });
 
-// Event listener to submit the form when Enter key is pressed
-var input = document.getElementById("paliauto");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("searchbtn").click();
-  }
-});
+
+
 
 // Получаем кнопки для вставки букв
 var buttons = document.querySelectorAll('.insert-letter');

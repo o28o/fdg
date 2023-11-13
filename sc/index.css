@@ -74,7 +74,7 @@ html{
   flex-wrap: wrap;
 }
 
-#citation {
+#paliauto {
   height: 35px;
   padding-left:10px;
   width:220px;
@@ -99,18 +99,18 @@ html{
   position:relative; 
   top: -2px;
 }
-.dark #citation {
+.dark #paliauto {
   background-color: var(--dark-blue);
   color: var(--off-white);
 }
 
-#citation:focus {
+#paliauto:focus {
   background-color: var(--off-white);
   color: var(--off-black);
   outline: none;
 }
 
-.dark #citation:focus {
+.dark #paliauto:focus {
   background-color: var(--off-white);
   color: var(--off-black);
   border-color: var(--off-white);
@@ -209,7 +209,7 @@ li {
 }
 
 @media only screen and (max-width: 730px) {
-  #citation {
+  #paliauto {
   width:210px;
   }
   
@@ -442,7 +442,7 @@ a:hover {
     row-gap: 1rem;
   }
   
-  #citation {
+  #paliauto {
   width:200px;
   }
 }

@@ -9,7 +9,7 @@ const next = document.getElementById("next");
 const previous2 = document.getElementById("previous2");
 const next2 = document.getElementById("next2");
 const form = document.getElementById("form");
-const citation = document.getElementById("citation");
+const citation = document.getElementById("paliauto");
 const pathLang = "ru";
 
 citation.focus();
@@ -44,12 +44,13 @@ themeButton.addEventListener("click", () => {
 form.addEventListener("submit", e => {
   e.preventDefault();
   if (citation.value) {
-    buildSutta(citation.value.replace(/\s/g, ""));
-    history.pushState({ page: citation.value.replace(/\s/g, "") }, "", `?q=${citation.value.replace(/\s/g, "")}`);
+    buildSutta(citation.value.replace(/\s+/g, " "));
+    history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
   }
 });
 
 function buildSutta(slug) {
+  
   let translator = "";
   let texttype = "sutta";
   let slugArray = slug.split("&");
@@ -329,7 +330,7 @@ const pageTitle = document.querySelector("h1");
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-                window.location.reload(true);
+
         window.location.href = "/ru/?q=" + encodeURIComponent(slug);
 
       } else {
@@ -349,6 +350,7 @@ const pageTitle = document.querySelector("h1");
   <p>  Подсказка: <br>
     С главной страницы вам доступно больше настроек поиска.
 <br></p>`;
+return false;
 });
 
     }
@@ -365,7 +367,9 @@ if (document.location.search) {
   let slug = params.get("q");
   let lang = params.get("lang");
   citation.value = slug;
+
   buildSutta(slug);
+  
   if (lang) {
     language = lang;
     console.log("in the initializing " + lang);

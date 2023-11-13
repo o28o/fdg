@@ -9,7 +9,7 @@ function randPlaceholder(theLanguage) {
 
 const random = Math.floor(Math.random() * tasks.length);
 console.log(random, tasks[random]);
-document.getElementById('citation').placeholder = tasks[random];
+document.getElementById('paliauto').placeholder = tasks[random];
 }
 
 function randCallToAction() {

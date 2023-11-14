@@ -36,6 +36,15 @@
   border-right-color: transparent;
 }
 
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.text-decoration-none:hover {
+  text-decoration: none; 
+}
+
+
 body {
   margin: 1rem 3rem;
   background-color: var(--light-off-white);

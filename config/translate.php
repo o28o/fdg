@@ -140,6 +140,11 @@ $slides = [
         'desc' => 'Максимум 7 и 10 лет, соответственно',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali-ru_3-16.html',
     ],
+                    [
+        'title' => 'Благородные "Средства Передвижения"',
+        'desc' => 'Когда ... сделано средством передвижения',
+        'link' => '/assets/example/yaaniikat_suttanta_pali-ru_17-62.html',
+    ],
                 [
         'title' => '"Настоящие" джатаки из Сутт',
         'desc' => 'Будда, о своих прошлых жизнях',
@@ -238,7 +243,7 @@ $examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+K
 
 <li>Все сутты, где упомянут <a href="./assets/example/sariputt_suttanta_ru-ru_179-1105.html">Сарипутта</a> на Русском</li>
 
-<li>Все сутты, где упомянут <a href="./assets/example/moggallaa-exc-(sikhaamoggall|akamoggall)_suttanta_pali-ru_78-624.html">Моггаллана</a> на Пали со ссылками на Русский</li>
+<li>Все сутты, где упомянут <a href="./assets/example/moggallaa-exc-(sikhaamoggall|akamoggall)_suttanta_pali-ru_75-621.html">Моггаллана</a> на Пали со ссылками на Русский</li>
 
 <li>Все варианты словосочетания <a href="/ru/?q=paṭiccasamuppād ">paṭiccasamuppado</a> на Пали со ссылками на Русские переводы</li>
 
@@ -579,6 +584,13 @@ $slides = [
         'desc' => 'up to 7 or 10 years, accordingly',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali_3-16.html',
     ],
+    
+                        [
+        'title' => 'Noble "Vehicles"',
+        'desc' => 'When ... made a vehicle',
+        'link' => '/assets/example/yaaniikat_suttanta_pali_17-62.html',
+    ],
+    
                 [
         'title' => 'The "Real" Jatakas from Suttas',
         'desc' => 'Buddha, on his past lifes',
@@ -679,7 +691,7 @@ $examplelist = '<li>Definition of the <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%8
 <li>All suttas that took place or related to <a href="/assets/example/สาวัตถี_suttanta_th_913-1168.html">Savathi</a> in Thai</li>
 <li>All suttas where <a href="/assets/example/sariputt_suttanta_ru-ru_179-1105.html">Sariputta</a> was mentioned in Russian</li>
 
-<li>All suttas where <a href="./assets/example/moggallaa-exc-(sikhaamoggall|akamoggall)_suttanta_pali_78-624.html">Moggallana</a> was mentioned in Pali and English</li>
+<li>All suttas where <a href="./assets/example/moggallaa-exc-(sikhaamoggall|akamoggall)_suttanta_pali_75-621.html">Moggallana</a> was mentioned in Pali and English</li>
     
 <li>All suttas about or containing the word <a href="/assets/example/ocean_suttanta_en_92-266.html">ocean</a> in English</li>
 <li>All Suttas with <a href=./assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_647-2186.html>metaphors & similies</a> in Pali and English</li>   ';

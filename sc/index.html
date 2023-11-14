@@ -359,4 +359,22 @@ $(document).ready(function() {
   });
 });
 </script>
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+
+<script>
+
+// Функция для копирования в буфер обмена
+function copyToClipboard(text) {
+  var textarea = document.createElement('textarea');
+  textarea.value = text;
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+//  alert('Ссылка скопирована: ' + text);
+        // Show the copy success popup
+        $('#copyPopup').modal('show');
+}
+
+</script>
 </html>

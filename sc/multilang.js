@@ -191,11 +191,12 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
 
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
+var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
       <span class="eng-lang" lang="en">${engTransData[segment]}</span>
       </span>${closeHtml}\n\n`;

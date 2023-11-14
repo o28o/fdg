@@ -13,6 +13,7 @@ export LANG=en_US.UTF-8
 source ./config/script_config.sh --source-only
 args="$@"
 rand=`echo $RANDOM | md5sum | head -c 5`
+excludetext='{ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig}'
 mkdir $output 2>/dev/null
 cd $output 
 dateforhist=`date +%d-%m-%Y`
@@ -247,6 +248,7 @@ fi
 
 if [[ "$@" == *"-kn"* ]]; then
 function grepbasefile {
+  excludetext='{ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv}'
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv} 
 }
 fileprefix=${fileprefix}-kn
@@ -271,7 +273,7 @@ vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
 fi  
 
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpdef
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig} > $tmpdef
 
 nice -$nicevalue grep -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|\bKatha.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
 }
@@ -308,7 +310,7 @@ if [[ "$@" == *"-vin"* ]]
 fi  
 
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmpsml
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig} > $tmpsml
 
 if [[ "$type" == html ]]; then
 for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | sed 's/html:.*/html/g'  ; 
@@ -359,9 +361,9 @@ patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' `
 
 #nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
 
-command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*'  -not -path '*/iti/*' -not -path '*/ud/*' "
+command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' "
 
-#-not -path '*/dhp/*'
+#-not -path '*/dhp/*' -not -path '*/snp/*'  -not -path '*/iti/*' -not -path '*/ud/*'
 for i in $patternforfind
 do
 command+=`echo -n '-exec grep -qE "'$i'" {} \; '` 

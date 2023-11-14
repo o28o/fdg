@@ -140,7 +140,7 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8198;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span>
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';

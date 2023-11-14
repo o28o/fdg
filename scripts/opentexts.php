@@ -8,7 +8,7 @@ function getRanges($string) {
 if (empty($check)) {
   $command = escapeshellcmd("bash $scriptfile $string");
   $string = trim(shell_exec($command));
-  echo $string;
+  echo strtolower($string);
 }
 }
 
@@ -251,6 +251,7 @@ $letterblock = preg_replace("/[0-9]*/i","","$string");
 if ((  $numberblock <= $latestrusmn ) && ( preg_match("/mn/i",$letterblock) ) ){
 $defaultlang = 'lang=pli-rus';
 }
+$string = strtolower($string);
 echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";
   exit();
 }

@@ -33,7 +33,7 @@ end=`echo $range | awk -F'-' '{print $2}'`
 if (( $textnumforrange >= $start )) && (( $textnumforrange <= $end ))
 then 
 rangeforlink=$check$range
-echo "$rangeforlink" | sed 's@\\@@g'
+echo "$rangeforlink#$string" | sed 's@\\@@g'
 break
 fi
 done

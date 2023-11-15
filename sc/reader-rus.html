@@ -140,21 +140,7 @@
 
 <script>
 
-  // Function to reset all form elements
-function resetForm() {
-  document.getElementById("paliauto").value = "";
-  document.getElementById("pOptions").selectedIndex = 0;
-  document.getElementById("extraOptions").selectedIndex = 0;
-  document.getElementById("onlCheckbox").checked = false;
-  document.getElementById("laCheckbox").checked = false;
-  // Reset other checkboxes and dropdowns as needed
-  checkInput(); // Check input after resetting form
-}
 
-// Event listener for the clear button
-document.getElementById("clearbtn").addEventListener("click", function() {
-  resetForm();
-}); 
 
 // Event listener to submit the form when Enter key is pressed
 var input = document.getElementById("paliauto");
@@ -165,76 +151,10 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
-// Получаем кнопки для вставки букв
-var buttons = document.querySelectorAll('.insert-letter');
 
-// Добавляем обработчики событий для каждой кнопки
-buttons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    event.preventDefault();
-    var letterValue = this.getAttribute('data-letter');
-    var currentValue = input.value;
-    var selectionStart = input.selectionStart;
-    var selectionEnd = input.selectionEnd;
-    var newValue = currentValue.substring(0, selectionStart) + letterValue + currentValue.substring(selectionEnd);
-    input.value = newValue;
 
-    // Перемещаем курсор после вставленных символов
-    var newCursorPosition = selectionStart + letterValue.length;
-    input.setSelectionRange(newCursorPosition, newCursorPosition);
 
-    // Имитируем событие ввода, чтобы обновить состояние автозаполнения
-    var inputEvent = new Event('input', { bubbles: true });
-    input.dispatchEvent(inputEvent);
 
-    // Перемещаем фокус на поле ввода
-    input.focus();
-  });
-});
-
-// Получаем чекбоксы и выпадающие списки
-var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-var selects = document.querySelectorAll('select');
-
-// Добавляем обработчики событий для чекбоксов
-checkboxes.forEach(function(checkbox) {
-  checkbox.addEventListener('change', checkInput);
-});
-
-// Добавляем обработчики событий для выпадающих списков
-selects.forEach(function(select) {
-  select.addEventListener('change', checkInput);
-});
-
-var clearButton = document.getElementById('clearbtn');
-
-// Проверяем поле при загрузке страницы
-checkInput();
-
-// Добавляем обработчик события input
-input.addEventListener('input', checkInput);
-
-// Очистка поля и скрытие кнопки при клике на кнопку очистки
-clearButton.addEventListener('click', function() {
-  input.value = '';
-  checkInput();
-});
-
-function checkInput() {
-  if (
-    input.value.trim().length > 0 ||
-    Array.from(checkboxes).some(function(checkbox) {
-      return checkbox.checked;
-    }) ||
-    Array.from(selects).some(function(select) {
-      return select.value !== "";
-    })
-  ) {
-    clearButton.style.display = 'block'; // Показываем кнопку, если есть текст или выбраны чекбоксы/списки
-  } else {
-    clearButton.style.display = 'none'; // Скрываем кнопку, если нет текста и не выбраны чекбоксы/списки
-  }
-}
 
 // Поместить курсор в конец строки в поле ввода
 input.focus();

@@ -4,12 +4,12 @@
 
 <div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pkCollapse">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pkCollapse" href=""><h3>Pubbakaraṇaṁ</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#pkCollapseBu">+</span>
+			<a data-bs-toggle="collapse" data-bs-target="#pkCollapseBu" href=""><h3>Pubbakaraṇaṁ</h3></a>
 			
 			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#5.0-->
 </div>
-					  <div class="collapse" id="pkCollapse"> 
+					  <div class="collapse" id="pkCollapseBu"> 
             <div class="my-3">
    
 <div class="level4 my-3">
@@ -41,13 +41,13 @@ Vajjanīyā ca puggalā tasmiṁ na honti, “pattakalla”nti vuccati.
          </div> <!-- collapsediv -->
 <div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#ndCollapse">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#ndCollapse" href=""><h3>Nidānuddeso</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#ndCollapseBu">+</span>
+			<a data-bs-toggle="collapse" data-bs-target="#ndCollapseBu" href=""><h3>Nidānuddeso</h3></a>
 			
 			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#5.0 -->
 </div>
 			
-					  <div class="collapse" id="ndCollapse"> 
+					  <div class="collapse" id="ndCollapseBu"> 
             <div class="mt-3">
    
 <div class="level4 my-3">
@@ -87,11 +87,11 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 			
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pjCollapse">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pjCollapse" href=""><h3>Pārājikuddeso</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#pjCollapseBu">+</span>
+			<a data-bs-toggle="collapse" data-bs-target="#pjCollapseBu" href=""><h3>Pārājikuddeso</h3></a>
 						<!-- <?php echo $mainscpage; ?>/?q=bu-pm#8.0 -->
 </div>
-				  <div class="collapse" id="pjCollapse"> 
+				  <div class="collapse" id="pjCollapseBu"> 
             <div class="mt-3">
    
            <div class="level4 my-3">
@@ -140,11 +140,11 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 
 			<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#ssCollapse">+</span> <a data-bs-toggle="collapse" data-bs-target="#ssCollapse" href=""><h3>Saṅghādisesuddeso</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#ssCollapseBu">+</span> <a data-bs-toggle="collapse" data-bs-target="#ssCollapseBu" href=""><h3>Saṅghādisesuddeso</h3></a>
 	
 	<!-- <?php echo $mainscpage; ?>/?q=bu-pm#14.0 -->
 </div>
-				  <div class="collapse" id="ssCollapse"> 
+				  <div class="collapse" id="ssCollapseBu"> 
             <div class="mt-3">
               
                <div class="level4 my-3">
@@ -238,12 +238,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#ayCollapse">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#ayCollapse" href=""><h3>Aniyatuddeso</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#ayCollapseBu">+</span>
+	<a data-bs-toggle="collapse" data-bs-target="#ayCollapseBu" href=""><h3>Aniyatuddeso</h3></a>
 	
 	<!-- <?php echo $mainscpage; ?>/?q=bu-pm#29.0 -->
 </div>
-				  <div class="collapse" id="ayCollapse"> 
+				  <div class="collapse" id="ayCollapseBu"> 
             <div class="mt-3">
    
            <div class="level4 my-3">
@@ -277,12 +277,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
 
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#npCollapse">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#npCollapse" href=""><h3>Nissaggiyapācittiyā</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#npCollapseBu">+</span>
+			<a data-bs-toggle="collapse" data-bs-target="#npCollapseBu" href=""><h3>Nissaggiyapācittiyā</h3></a>
 			
 			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#33.0 -->
 </div>
-				  <div class="collapse" id="npCollapse"> 
+				  <div class="collapse" id="npCollapseBu"> 
             <div class="mt-3">
    
            <div class="level4 my-3">
@@ -293,15 +293,15 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#np1Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#np1CollapseBu">+</span>
 		
-			<a data-bs-toggle="collapse" data-bs-target="#np1Collapse" href=""><h4>1. Kaṭhinavaggo </h4></a>
+			<a data-bs-toggle="collapse" data-bs-target="#np1CollapseBu" href=""><h4>1. Kaṭhinavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#34.0.1"><h4>1. Kaṭhinavaggo </h4></a> -->
 			
 </div>
               </div>
-              <div class="collapse" id="np1Collapse">
+              <div class="collapse" id="np1CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -371,9 +371,9 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#np2Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#np2CollapseBu">+</span>
 	
-				<a data-bs-toggle="collapse" data-bs-target="#np2Collapse" href=""><h4>2. Kosiyavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#np2CollapseBu" href=""><h4>2. Kosiyavaggo </h4></a>
 			
 			<!--  
 			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#44.0.1"><h4>2. Kosiyavaggo </h4></a>
@@ -383,7 +383,7 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 			
 </div>
               </div>
-              <div class="collapse" id="np2Collapse">
+              <div class="collapse" id="np2CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -451,9 +451,9 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#np3Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#np3CollapseBu">+</span>
 	
-				<a data-bs-toggle="collapse" data-bs-target="#np3Collapse" href=""><h4>3. Pattavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#np3CollapseBu" href=""><h4>3. Pattavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#54.0.1"><h4>3. Pattavaggo </h4></a> 
 			-->
@@ -461,7 +461,7 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 			
 </div>
               </div>
-              <div class="collapse" id="np3Collapse">
+              <div class="collapse" id="np3CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -541,12 +541,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pcCollapse">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pcCollapse" href=""><h3>Suddhapācittiyā</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#pcCollapseBu">+</span>
+			<a data-bs-toggle="collapse" data-bs-target="#pcCollapseBu" href=""><h3>Suddhapācittiyā</h3></a>
 			
 			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#65.0 -->
 </div>
-				  <div class="collapse" id="pcCollapse"> 
+				  <div class="collapse" id="pcCollapseBu"> 
             <div class="mt-3">
    
            <div class="level4 my-3">
@@ -557,16 +557,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc1Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#pc1CollapseBu">+</span>
 
-			<a data-bs-toggle="collapse" data-bs-target="#pc1Collapse" href=""><h4>1. Musāvādavaggo </h4></a>
+			<a data-bs-toggle="collapse" data-bs-target="#pc1CollapseBu" href=""><h4>1. Musāvādavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#66.0.1"><h4>1. Musāvādavaggo </h4></a>
 -->
 			
 </div>
               </div>
-              <div class="collapse" id="pc1Collapse">
+              <div class="collapse" id="pc1CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -631,8 +631,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc2Collapse">+</span>
-				<a data-bs-toggle="collapse" data-bs-target="#pc2Collapse" href=""><h4>2. Bhūtagāmavaggo </h4></a>
+    data-bs-toggle="collapse" data-bs-target="#pc2CollapseBu">+</span>
+				<a data-bs-toggle="collapse" data-bs-target="#pc2CollapseBu" href=""><h4>2. Bhūtagāmavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#76.0.1"><h4>2. Bhūtagāmavaggo </h4></a>
 -->
@@ -640,7 +640,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			
 </div>
               </div>
-              <div class="collapse" id="pc2Collapse">
+              <div class="collapse" id="pc2CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -708,8 +708,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc3Collapse">+</span>
-				<a data-bs-toggle="collapse" data-bs-target="#pc3Collapse" href=""><h4>3. Ovādavaggo </h4></a>
+    data-bs-toggle="collapse" data-bs-target="#pc3CollapseBu">+</span>
+				<a data-bs-toggle="collapse" data-bs-target="#pc3CollapseBu" href=""><h4>3. Ovādavaggo </h4></a>
 			
 			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#86.0.1"><h4>3. Ovādavaggo </h4></a>
 -->
@@ -717,7 +717,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 		
 </div>
               </div>
-              <div class="collapse" id="pc3Collapse">
+              <div class="collapse" id="pc3CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -785,8 +785,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc4Collapse">+</span>
-				<a data-bs-toggle="collapse" data-bs-target="#pc4Collapse" href=""><h4>4. Bhojanavaggo</h4></a>
+    data-bs-toggle="collapse" data-bs-target="#pc4CollapseBu">+</span>
+				<a data-bs-toggle="collapse" data-bs-target="#pc4CollapseBu" href=""><h4>4. Bhojanavaggo</h4></a>
 			
 			<!-- 
 				<a href="<?php echo $mainscpage; ?>/?q=bu-pm#96.0.1"><h4>4. Bhojanavaggo </h4></a>
@@ -795,7 +795,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 		
 </div>
               </div>
-              <div class="collapse" id="pc4Collapse">
+              <div class="collapse" id="pc4CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -862,8 +862,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc5Collapse">+</span>
-				<a data-bs-toggle="collapse" data-bs-target="#pc5Collapse" href=""><h4>5. Acelakavaggo </h4></a>
+    data-bs-toggle="collapse" data-bs-target="#pc5CollapseBu">+</span>
+				<a data-bs-toggle="collapse" data-bs-target="#pc5CollapseBu" href=""><h4>5. Acelakavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#106.0.1"><h4>5. Acelakavaggo </h4></a>
 -->
@@ -872,7 +872,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			
 </div>
               </div>
-              <div class="collapse" id="pc5Collapse">
+              <div class="collapse" id="pc5CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -938,9 +938,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc6Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#pc6CollapseBu">+</span>
 	
-				<a data-bs-toggle="collapse" data-bs-target="#pc6Collapse" href=""><h4>6. Surāpānavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#pc6CollapseBu" href=""><h4>6. Surāpānavaggo </h4></a>
 			
 			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#116.0.1"><h4>6. Surāpānavaggo </h4></a>
 -->
@@ -948,7 +948,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 		
 </div>
               </div>
-              <div class="collapse" id="pc6Collapse">
+              <div class="collapse" id="pc6CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -1015,9 +1015,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc7Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#pc7CollapseBu">+</span>
 	
-				<a data-bs-toggle="collapse" data-bs-target="#pc7Collapse" href=""><h4>7. Sappāṇavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#pc7CollapseBu" href=""><h4>7. Sappāṇavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#126.0.1"><h4>7. Sappāṇavaggo </h4></a>
 -->
@@ -1025,7 +1025,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			
 </div>
               </div>
-              <div class="collapse" id="pc7Collapse">
+              <div class="collapse" id="pc7CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -1091,16 +1091,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc8Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#pc8CollapseBu">+</span>
 		
-			<a data-bs-toggle="collapse" data-bs-target="#pc8Collapse" href=""><h4>8. Sahadhammikavaggo </h4></a>
+			<a data-bs-toggle="collapse" data-bs-target="#pc8CollapseBu" href=""><h4>8. Sahadhammikavaggo </h4></a>
 			
 			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#136.0.1"><h4>8. Sahadhammikavaggo </h4></a>
 -->		
 	
 </div>
               </div>
-              <div class="collapse" id="pc8Collapse">
+              <div class="collapse" id="pc8CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -1176,9 +1176,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc9Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#pc9CollapseBu">+</span>
 	
-				<a data-bs-toggle="collapse" data-bs-target="#pc9Collapse" href=""><h4>9. Ratanavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#pc9CollapseBu" href=""><h4>9. Ratanavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#146.0.1"><h4>9. Ratanavaggo </h4></a>
 -->
@@ -1186,7 +1186,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 			
 </div>
               </div>
-              <div class="collapse" id="pc9Collapse">
+              <div class="collapse" id="pc9CollapseBu">
                 <div class="my-3">
 
 <div class="level4">
@@ -1269,12 +1269,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pdCollapse">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pdCollapse" href=""><h3>Pāṭidesanīya</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#pdCollapseBu">+</span>
+			<a data-bs-toggle="collapse" data-bs-target="#pdCollapseBu" href=""><h3>Pāṭidesanīya</h3></a>
 			
 			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#159.0 -->
 </div>
-				  <div class="collapse" id="pdCollapse"> 
+				  <div class="collapse" id="pdCollapseBu"> 
             <div class="mt-3">
    
            <div class="level4 my-3">
@@ -1318,12 +1318,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
   
 			<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#skCollapse">+</span>
-			<a  data-bs-toggle="collapse" data-bs-target="#skCollapse" href=""><h3>Sekhiya</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#skCollapseBu">+</span>
+			<a  data-bs-toggle="collapse" data-bs-target="#skCollapseBu" href=""><h3>Sekhiya</h3></a>
 			
 			<!--<?php echo $mainscpage; ?>/?q=bu-pm#165.0 -->
 </div>
-				  <div class="collapse" id="skCollapse"> 
+				  <div class="collapse" id="skCollapseBu"> 
             <div class="mt-3">
   
            <div class="level4 my-3">
@@ -1333,9 +1333,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk1Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#sk1CollapseBu">+</span>
 	
-				<a data-bs-toggle="collapse" data-bs-target="#sk1Collapse" href=""><h4>1. Parimaṇḍalavaggo </h4></a>
+				<a data-bs-toggle="collapse" data-bs-target="#sk1CollapseBu" href=""><h4>1. Parimaṇḍalavaggo </h4></a>
 			
 			<!-- 			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.1"><h4>1. Parimaṇḍalavaggo </h4></a>
 -->
@@ -1343,7 +1343,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 </div>
               </div>
-              <div class="collapse" id="sk1Collapse">
+              <div class="collapse" id="sk1CollapseBu">
                 <div class="my-3">
           <div class="level4">
  <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk1#1.16.1">Sekhiya 1. Parimaṇḍala</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.2">pm</a> Parimaṇḍalaṁ nivāsessāmīti sikkhā karaṇīyā. </span>
@@ -1393,16 +1393,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk2Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#sk2CollapseBu">+</span>
 	
-					<a data-bs-toggle="collapse" data-bs-target="#sk2Collapse" href=""><h4>2. Ujjagghikavaggo </h4></a>
+					<a data-bs-toggle="collapse" data-bs-target="#sk2CollapseBu" href=""><h4>2. Ujjagghikavaggo </h4></a>
 			
 			<!-- 		<a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.1"><h4>2. Ujjagghikavaggo </h4></a>
 -->
 		
 </div>
               </div>
-              <div class="collapse" id="sk2Collapse">
+              <div class="collapse" id="sk2CollapseBu">
                 <div class="my-3">
 <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk11#1.3.1">Sekhiya 11. Ujjagghika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#176.0.2">pm</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#178.0">Sekhiya 12.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk12#1.3.1">pm</a> Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#179.0">Sekhiya 13. Uccasadda</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk13#1.3.1">pm</a> Appasaddo antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#180.0">Sekhiya 14.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk14#1.3.1">pm</a> Appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#181.0">Sekhiya 15. Kāyappacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk15#1.3.1">pm</a> Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#182.0">Sekhiya 16.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk16#1.3.1">pm</a> Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#183.0">Sekhiya 17. Bāhuppacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk17#1.3.1">pm</a> Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#184.0">Sekhiya 18.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk18#1.3.1">pm</a> Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#185.0">Sekhiya 19. Sīsappacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk19#1.3.1">pm</a> Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#186.0">Sekhiya 20.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk20#1.3.1">pm</a> Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>
     <div class="level4 my-3">
@@ -1415,16 +1415,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk3Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#sk3CollapseBu">+</span>
 	
-					<a data-bs-toggle="collapse" data-bs-target="#sk3Collapse" href=""><h4>3. Khambhakatavaggo </h4></a>
+					<a data-bs-toggle="collapse" data-bs-target="#sk3CollapseBu" href=""><h4>3. Khambhakatavaggo </h4></a>
 			
 			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#187.0.1"><h4>3. Khambhakatavaggo </h4></a>
 -->
 			
 </div>
               </div>
-              <div class="collapse" id="sk3Collapse">
+              <div class="collapse" id="sk3CollapseBu">
                 <div class="my-3">
 <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk21#1.3.1">Sekhiya 21. Khambhakata</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#187.0.2">pm</a> Na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#188.0">Sekhiya 22.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk22#1.3.1">pm</a> Na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#189.0">Sekhiya 23. Oguṇṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk23#1.3.1">pm</a> Na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#190.0">Sekhiya 24.</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk24#1.3.1">pm</a> Na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#192.0">Sekhiya 25. Ukkuṭika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk25#1.3.1">pm</a> Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#193.0">Sekhiya 26. Pallatthika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk26#1.3.1">pm</a> Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#194.0">Sekhiya 27. Sakkaccapaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk27#1.3.1">pm</a> Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#195.0">Sekhiya 28. Pattasaññīpaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk28#1.3.1">pm</a> Pattasaññī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#196.0">Sekhiya 29. Samasūpakapaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk29#1.3.1">pm</a> Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#197.0">Sekhiya 30. Samatittika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk30#1.3.1">pm</a> Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                               </div>
            <div class="level4 my-3">
@@ -1438,16 +1438,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk4Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#sk4CollapseBu">+</span>
 	
-					<a data-bs-toggle="collapse" data-bs-target="#sk4Collapse" href=""><h4>4. Sakkaccavaggo </h4></a>
+					<a data-bs-toggle="collapse" data-bs-target="#sk4CollapseBu" href=""><h4>4. Sakkaccavaggo </h4></a>
 			
 			<!-- 		<a href="<?php echo $mainscpage; ?>/?q=bu-pm#199.0.1"><h4>4. Sakkaccavaggo </h4></a>
 -->
 		
 </div>
 </div>
-              <div class="collapse" id="sk4Collapse">
+              <div class="collapse" id="sk4CollapseBu">
                 <div class="my-3 ">
 <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk31#1.3.1">Sekhiya 31. Sakkaccabhuñjana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#199.0.2">pm</a> Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#200.0">Sekhiya 32. Pattasaññībhuñjana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk32#1.3.1">pm</a> Pattasaññī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#201.0">Sekhiya 33. Sapadāna</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk33#1.3.1">pm</a> Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#202.0">Sekhiya 34. Samasūpaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk34#1.3.1">pm</a> Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#203.0">Sekhiya 35. Nathūpakata</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk35#1.3.1">pm</a> Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#204.0">Sekhiya 36. Odanappaṭicchādana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk36#1.3.1">pm</a> Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā. </span>       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#205.0">Sekhiya 37. Sūpodanaviññatti</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk37#2.10.1">pm</a> Na sūpaṁ vā odanaṁ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#206.0">Sekhiya 38. Ujjhānasaññī</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk38#1.3.1">pm</a> Na ujjhānasaññī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#207.0">Sekhiya 39. Kabaḷa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk39#1.3.1">pm</a> Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā. </span>                                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#208.0">Sekhiya 40. Ālopa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk40#1.3.1">pm</a> Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. </span>                                                              </div>
            <div class="level4 my-3">
@@ -1459,16 +1459,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk5Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#sk5CollapseBu">+</span>
 	
-					<a data-bs-toggle="collapse" data-bs-target="#sk5Collapse" href=""><h4>5. Kabaḷavaggo </h4></a>
+					<a data-bs-toggle="collapse" data-bs-target="#sk5CollapseBu" href=""><h4>5. Kabaḷavaggo </h4></a>
 			
 			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#209.0.1"><h4>5. Kabaḷavaggo </h4></a>
 -->
 			
 </div>
 </div>
-              <div class="collapse" id="sk5Collapse">
+              <div class="collapse" id="sk5CollapseBu">
                 <div class="my-3">
 <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk41#1.3.1">Sekhiya 41. Anāhaṭa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#209.0.2">pm</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#210.0">Sekhiya 42. Bhuñjamāna</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk42#">pm</a> Na bhuñjamāno sabbahatthaṁ mukhe pakkhipissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#211.0">Sekhiya 43. Sakabaḷa</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk43#1.3.1">pm</a> Na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā. </span>                                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#212.0">Sekhiya 44. Piṇḍukkhepaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk44#1.3.1">pm</a> Na piṇḍukkhepakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#213.0">Sekhiya 45. Kabaḷāvacchedaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk45#1.3.1">pm</a> Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#214.0">Sekhiya 46. Avagaṇḍakāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk46#1.3.1">pm</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#215.0">Sekhiya 47. Hatthaniddhunaka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk47#1.3.1">pm</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#216.0">Sekhiya 48. Sitthāvakāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk48#1.3.1">pm</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#217.0">Sekhiya 49. Jivhānicchāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk49#1.3.1">pm</a> Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                  </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#218.0">Sekhiya 50. Capucapukāraka</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk50#1.3.1">pm</a> Na capucapukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>
 
@@ -1482,16 +1482,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk6Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#sk6CollapseBu">+</span>
 	
-		<a data-bs-toggle="collapse" data-bs-target="#sk6Collapse" href=""><h4>6. Surusuruvaggo </h4></a>
+		<a data-bs-toggle="collapse" data-bs-target="#sk6CollapseBu" href=""><h4>6. Surusuruvaggo </h4></a>
 			
 			<!-- 		<a href="<?php echo $mainscpage; ?>/?q=bu-pm#219.0.1"><h4>6. Surusuruvaggo </h4></a>
 -->
 		
 </div>
 </div>
-              <div class="collapse" id="sk6Collapse">
+              <div class="collapse" id="sk6CollapseBu">
                 <div class="my-3">
 <div class="level4">                                                    
 <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk51#1.19.1">Sekhiya 51. Surusurukāraka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#219.0.2">pm</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    
@@ -1509,16 +1509,16 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <div class="level3">
 			<div class="level3 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk7Collapse">+</span>
+    data-bs-toggle="collapse" data-bs-target="#sk7CollapseBu">+</span>
 	
-					<a data-bs-toggle="collapse" data-bs-target="#sk7Collapse" href=""><h4>7. Pādukavaggo </h4></a>
+					<a data-bs-toggle="collapse" data-bs-target="#sk7CollapseBu" href=""><h4>7. Pādukavaggo </h4></a>
 			
 			<!-- 	<a href="<?php echo $mainscpage; ?>/?q=bu-pm#229.0.1"><h4>7. Pādukavaggo </h4></a>	
 -->
 		
 </div>
 </div>
-<div class="collapse" id="sk7Collapse">
+<div class="collapse" id="sk7CollapseBu">
                 <div class="my-3">
 
 <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk61#1.3.1">Sekhiya 61. Pāduka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#229.0.2">pm</a> Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#230.0">Sekhiya 62. Upāhana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk62#1.3.1">pm</a> Na upāhanāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#231.0">Sekhiya 63. Yāna</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk63#1.3.1">pm</a> Na yānagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#232.0">Sekhiya 64. Sayana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk64#1.3.1">pm</a> Na sayanagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#233.0">Sekhiya 65. Pallatthika</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk65#1.3.1">pm</a> Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#234.0">Sekhiya 66. Veṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk66#1.3.1">pm</a> Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#235.0">Sekhiya 67. Oguṇṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk67#1.3.1">pm</a> Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#236.0">Sekhiya 68. Chamā</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk68#1.3.1">pm</a> Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#237.0">Sekhiya 69. Nīcāsana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk69#1.46.1">pm</a> Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#238.0">Sekhiya 70. Ṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk70#1.3.1">pm</a> Na ṭhito nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#239.0">Sekhiya 71. Pacchatogamana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk71#1.3.1">pm</a> Na pacchato gacchanto purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#240.0">Sekhiya 72. Uppathenagamana</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk72#1.3.1">pm</a> Na uppathena gacchanto pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#241.0">Sekhiya 73. Ṭhitouccāra</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk73#1.3.1">pm</a> Na ṭhito agilāno uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā. </span>                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#242.0">Sekhiya 74. Hariteuccāra</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk74#1.3.1">pm</a> Na harite agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-pm#243.0">Sekhiya 75. Udakeuccāra</a> <a href="<?php echo $mainscpage; ?>/?q=pli-tv-bu-vb-sk75#2.6.1">pm</a> Na udake agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                          
@@ -1550,12 +1550,12 @@ Sekhiyā niṭṭhitā </span>
     
   						<div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#asCollapse">+</span>
-  			<a data-bs-toggle="collapse" data-bs-target="#asCollapse" href=""><h3>Adhikaraṇasamathā</h3></a>
+    data-bs-toggle="collapse" data-bs-target="#asCollapseBu">+</span>
+  			<a data-bs-toggle="collapse" data-bs-target="#asCollapseBu" href=""><h3>Adhikaraṇasamathā</h3></a>
 			
 			<!-- <?php echo $mainscpage; ?>/?q=bu-pm#245.0 -->
 </div>
-				  <div class="collapse" id="asCollapse"> 
+				  <div class="collapse" id="asCollapseBu"> 
             <div class="mt-3">
    
            <div class="level4 my-3">

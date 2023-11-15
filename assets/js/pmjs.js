@@ -1,5 +1,8 @@
 
-const toggleButtons = document.querySelectorAll('.toggle-button');
+if (typeof toggleButtons === 'undefined') {
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+    // Ваш код, использующий toggleButtons
+} 
 
 toggleButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -16,10 +19,19 @@ toggleButtons.forEach((btn) => {
   });
 });
 
-  
+if (typeof collapseAllBtn === 'undefined') {
     const collapseAllBtn = document.getElementById('collapseAll');
+} 
+
+if (typeof expandAllBtn === 'undefined') {
     const expandAllBtn = document.getElementById('expandAll');
+} 
+
+
+if (typeof collapseButtons === 'undefined') {
     const collapseButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+} 
+
 
     collapseAllBtn.addEventListener('click', () => {
       collapseButtons.forEach((btn) => {

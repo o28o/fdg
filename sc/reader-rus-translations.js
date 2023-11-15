@@ -258,21 +258,18 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
 
 const pageTitle = document.querySelector("h1");
 
-      document.title = `${slug} ${pageTitle.textContent}`;
-      
-// Установка мета-тега description
+document.title = `${slug} ${pageTitle.textContent}`;
+    
 var metaDescription = document.createElement('meta');
 metaDescription.name = 'description';
 metaDescription.content = document.title;
 document.head.appendChild(metaDescription);
 
-// Установка мета-тега og:description
 var ogDescriptionMeta = document.createElement('meta');
 ogDescriptionMeta.property = 'og:description';
 ogDescriptionMeta.content = document.title;
 document.head.appendChild(ogDescriptionMeta);
 
-console.log(document.title);
 
       toggleThePali();
       

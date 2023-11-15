@@ -273,6 +273,15 @@ suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorBy
  const pageTile = document.querySelector("h1");
 
       document.title = `${slug} ${pageTile.textContent}`;
+var metaDescription = document.createElement('meta');
+metaDescription.name = 'description';
+metaDescription.content = document.title;
+document.head.appendChild(metaDescription);
+
+var ogDescriptionMeta = document.createElement('meta');
+ogDescriptionMeta.property = 'og:description';
+ogDescriptionMeta.content = document.title;
+document.head.appendChild(ogDescriptionMeta);
 
 
       toggleThePali();

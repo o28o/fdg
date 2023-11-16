@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        <h1 class="mb-2">Бхиккхуни Патимоккха </h1>
+        <h1 class="mb-2">Бхиккху Патимоккха </h1>
         <h4 class="mb-5">Случайное Правило </h4>       
     </div>
     <div class="container mt-2">
@@ -69,75 +69,15 @@
     </div> 
     
         <div id="rangeList" class="collapse mt-3">
-          
-          
                         <ul class="list-group">
-                <li class="list-group-item">
-                <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="pjCheckbox">
-  <label class="form-check-label" for="pjCheckbox">
-    1-4    pj
-  </label>
-</div>  
-                  </li>
-                <li class="list-group-item">
-               <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="ssCheckbox">
-  <label class="form-check-label" for="ssCheckbox">
-    5-17    ss
-  </label>
-</div>   
-                  </li>
-                <li class="list-group-item">
-                <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="ayCheckbox" checked>
-  <label class="form-check-label" for="ayCheckbox">
-    20-19   an
-  </label>
-</div>  
-                  </li>
-                <li class="list-group-item">
-                  
-                                <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="npCheckbox" checked>
-  <label class="form-check-label" for="npCheckbox">
-    20-49   np
-  </label>
-</div>    
-                  </li>
-                <li class="list-group-item">
-                                              <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="pcCheckbox" checked>
-  <label class="form-check-label" for="pcCheckbox">
-20-141  pc
-  </label>
-</div>        
-                  </li>
-                <li class="list-group-item">
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" id="pdCheckbox" checked>
-  <label class="form-check-label" for="pdCheckbox">
-    142-145 pd
-  </label>
-</div>             
-                  
-          </li>
-                <li class="list-group-item">
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" id="skCheckbox" checked>
-  <label class="form-check-label" for="skCheckbox">
-    146-220 sk
-  </label>
-</div>                          
-                  </li>
-                <li class="list-group-item">
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" id="asCheckbox" checked>
-  <label class="form-check-label" for="asCheckbox">
-    221-227 as
-  </label>
-</div>                          
-                  </li>
+                <li class="list-group-item">1-4    pj</li>
+                <li class="list-group-item">5-17    ss</li>
+                <li class="list-group-item">20-19   an</li>
+                <li class="list-group-item">20-49   np</li>
+                <li class="list-group-item">20-141  pc</li>
+                <li class="list-group-item">142-145 pd</li>
+                <li class="list-group-item">146-220 sk</li>
+                <li class="list-group-item">221-227 as</li>
             </ul>
         </div>
         <h3 id="randomRecord" class="mt-3 text-center"></h3>
@@ -146,103 +86,13 @@
 
 
     <script>
-
-// Установка всех чекбоксов в положение "включено" по умолчанию
-document.getElementById("pjCheckbox").checked = true;
-document.getElementById("ssCheckbox").checked = true;
-document.getElementById("ayCheckbox").checked = true;
-document.getElementById("npCheckbox").checked = true;
-document.getElementById("pcCheckbox").checked = true;
-document.getElementById("pdCheckbox").checked = true
-document.getElementById("skCheckbox").checked = true;
-document.getElementById("asCheckbox").checked = true;
-
-   // Проверяем состояния чекбоксов в localStorage и применяем их при загрузке страницы
-const savedPjCheckboxState = localStorage.getItem('pjCheckbox');
-if (savedPjCheckboxState !== null) {
-  document.getElementById("pjCheckbox").checked = savedPjCheckboxState === 'true';
-}
-
-const savedSsCheckboxState = localStorage.getItem('ssCheckbox');
-if (savedSsCheckboxState !== null) {
-  document.getElementById("ssCheckbox").checked = savedSsCheckboxState === 'true';
-}
-
-const savedAyCheckboxState = localStorage.getItem('ayCheckbox');
-if (savedAyCheckboxState !== null) {
-  document.getElementById("ayCheckbox").checked = savedAyCheckboxState === 'true';
-}
-
-const savedNpCheckboxState = localStorage.getItem('npCheckbox');
-if (savedNpCheckboxState !== null) {
-  document.getElementById("npCheckbox").checked = savedNpCheckboxState === 'true';
-}
-
-const savedPcCheckboxState = localStorage.getItem('pcCheckbox');
-if (savedPcCheckboxState !== null) {
-  document.getElementById("pcCheckbox").checked = savedPcCheckboxState === 'true';
-}
-
-const savedPdCheckboxState = localStorage.getItem('pdCheckbox');
-if (savedPdCheckboxState !== null) {
-  document.getElementById("pdCheckbox").checked = savedPdCheckboxState === 'true';
-}
-
-const savedSkCheckboxState = localStorage.getItem('skCheckbox');
-if (savedSkCheckboxState !== null) {
-  document.getElementById("skCheckbox").checked = savedSkCheckboxState === 'true';
-}
-
-const savedAsCheckboxState = localStorage.getItem('asCheckbox');
-if (savedAsCheckboxState !== null) {
-  document.getElementById("asCheckbox").checked = savedAsCheckboxState === 'true';
-}
- 
-    
-   document.getElementById("pjCheckbox").addEventListener("change", () => {
-  localStorage.setItem('pjCheckbox', document.getElementById("pjCheckbox").checked);
-});
-
-document.getElementById("ssCheckbox").addEventListener("change", () => {
-  localStorage.setItem('ssCheckbox', document.getElementById("ssCheckbox").checked);
-});
-
-document.getElementById("ayCheckbox").addEventListener("change", () => {
-  localStorage.setItem('ayCheckbox', document.getElementById("ayCheckbox").checked);
-});
-
-document.getElementById("npCheckbox").addEventListener("change", () => {
-  localStorage.setItem('npCheckbox', document.getElementById("npCheckbox").checked);
-});
-
-document.getElementById("pcCheckbox").addEventListener("change", () => {
-  localStorage.setItem('pcCheckbox', document.getElementById("pcCheckbox").checked);
-});
-
-document.getElementById("pdCheckbox").addEventListener("change", () => {
-  localStorage.setItem('pdCheckbox', document.getElementById("pdCheckbox").checked);
-});
-
-document.getElementById("skCheckbox").addEventListener("change", () => {
-  localStorage.setItem('skCheckbox', document.getElementById("skCheckbox").checked);
-});
-
-document.getElementById("asCheckbox").addEventListener("change", () => {
-  localStorage.setItem('asCheckbox', document.getElementById("asCheckbox").checked);
-});
- 
-    
        // Ваш список записей echo "" | awk '{print "$0",}' 
 	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
-	
-  const pj = [
+const records = [
   "1	pj	1	<a href=/sc/?q=bu-pj1#7.1.16.1>Pārājika 1. Methunadhamma</a>",
 "2	pj	2	<a href=/sc/?q=bu-pj2#2.28.1>Pārājika 2. Adinnādāna</a>",
 "3	pj	3	<a href=/sc/?q=bu-pj3#2.49.1>Pārājika 3. Manussaviggaha</a>",
-"4	pj	4	<a href=/sc/?q=bu-pj4#2.12.1>Pārājika 4. Uttarimanussadhamma</a>"
-  ];
-
-  const ss = [
+"4	pj	4	<a href=/sc/?q=bu-pj4#2.12.1>Pārājika 4. Uttarimanussadhamma</a>",
 "5	ss	1	<a href=/sc/?q=bu-ss1#2.1.13.1>Saṅghādisesa 1. Sukkavissaṭṭhi</a>",
 "6	ss	2	<a href=/sc/?q=pli-tv-bu-vb-ss2#1.2.15.0>Saṅghādisesa 2. Kāyasaṁsagga</a>",
 "7	ss	3	<a href=/sc/?q=pli-tv-bu-vb-ss3#1.2.14.0>Saṅghādisesa 3. Duṭṭhullavācā</a>",
@@ -255,15 +105,9 @@ document.getElementById("asCheckbox").addEventListener("change", () => {
 "14	ss	10	<a href=/sc/?q=pli-tv-bu-vb-ss10#1.3.16.0>Saṅghādisesa 10. Saṅghabheda</a>",
 "15	ss	11	<a href=/sc/?q=pli-tv-bu-vb-ss11#1.19.0>Saṅghādisesa 11. Bhedānuvattaka</a>",
 "16	ss	12	<a href=/sc/?q=pli-tv-bu-vb-ss12#1.26.0>Saṅghādisesa 12. Dubbaca</a>",
-"17	ss	13	<a href=/sc/?q=pli-tv-bu-vb-ss13#1.8.10.0>Saṅghādisesa 13. Kuladūsaka</a>"
-  ];
-
-  const ay = [
-"18	ay	1	<a href=/sc/?q=pli-tv-bu-vb-ay1#1.32.0>Aniyata 1. Paṭhamaaniyata</a>",
-"19	ay	2	<a href=/sc/?q=pli-tv-bu-vb-ay2#1.19.0>Aniyata 2. Dutiyaaniyata</a>"
-  ];
-
-  const np = [
+"17	ss	13	<a href=/sc/?q=pli-tv-bu-vb-ss13#1.8.10.0>Saṅghādisesa 13. Kuladūsaka</a>",
+"18	an	1	<a href=/sc/?q=pli-tv-bu-vb-ay1#1.32.0>Aniyata 1. Paṭhamaaniyata</a>",
+"19	an	2	<a href=/sc/?q=pli-tv-bu-vb-ay2#1.19.0>Aniyata 2. Dutiyaaniyata</a>",
 "20	np	1	<a href=/sc/?q=pli-tv-bu-vb-np1#2.17.0>Nissaggiya Pācittiya 1. Kathina</a>",
 "21	np	2	<a href=/sc/?q=pli-tv-bu-vb-np2#2.39.0>Nissaggiya Pācittiya 2. Udosita</a>",
 "22	np	3	<a href=/sc/?q=pli-tv-bu-vb-np3#1.3.13.0>Nissaggiya Pācittiya 3. Akālacīvara</a>",
@@ -293,10 +137,7 @@ document.getElementById("asCheckbox").addEventListener("change", () => {
 "46	np	27	<a href=/sc/?q=pli-tv-bu-vb-np27#1.45.0>Nissaggiya Pācittiya 27. Mahāpesakāra</a>",
 "47	np	28	<a href=/sc/?q=pli-tv-bu-vb-np28#1.2.19.0>Nissaggiya Pācittiya 28. Accekacīvara</a>",
 "48	np	29	<a href=/sc/?q=pli-tv-bu-vb-np29#1.2.16.0>Nissaggiya Pācittiya 29. Sāsaṅka</a>",
-"49	np	30	<a href=/sc/?q=pli-tv-bu-vb-np30#1.27.0>Nissaggiya Pācittiya 30. Pariṇata</a>"
-  ];
-  
-   const pc = [
+"49	np	30	<a href=/sc/?q=pli-tv-bu-vb-np30#1.27.0>Nissaggiya Pācittiya 30. Pariṇata</a>",
 "50	pc	1	<a href=/sc/?q=pli-tv-bu-vb-pc1#1.20.0>Pācittiya 1. Musāvāda</a>",
 "51	pc	2	<a href=/sc/?q=pli-tv-bu-vb-pc2#1.2.33.0>Pācittiya 2. Omasavāda</a>",
 "52	pc	3	<a href=/sc/?q=pli-tv-bu-vb-pc3#1.20.0>Pācittiya 3. Pesuñña</a>",
@@ -388,17 +229,11 @@ document.getElementById("asCheckbox").addEventListener("change", () => {
 "138	pc	89	<a href=/sc/?q=pli-tv-bu-vb-pc89#2.10.0>Pācittiya 89. Nisīdana</a>",
 "139	pc	90	<a href=/sc/?q=pli-tv-bu-vb-pc90#1.14.0>Pācittiya 90. Kaṇḍuppaṭicchādi</a>",
 "140	pc	91	<a href=/sc/?q=pli-tv-bu-vb-pc91#1.14.0>Pācittiya 91. Vassikasāṭika</a>",
-"141	pc	92	<a href=/sc/?q=pli-tv-bu-vb-pc92#1.15.0>Pācittiya 92. Nanda</a>"
-  ]; 
-
-   const pd = [
+"141	pc	92	<a href=/sc/?q=pli-tv-bu-vb-pc92#1.15.0>Pācittiya 92. Nanda</a>",
 "142	pd	1	<a href=/sc/?q=pli-tv-bu-vb-pd1#1.35.0>Pāṭidesanīya 1. Paṭhamapāṭidesanīya</a>",
 "143	pd	2	<a href=/sc/?q=pli-tv-bu-vb-pd2#1.15.0>Pāṭidesanīya 2. Dutiyapāṭidesanīya</a>",
 "144	pd	3	<a href=/sc/?q=pli-tv-bu-vb-pd3#3.15.0>Pāṭidesanīya 3. Tatiyapāṭidesanīya</a>",
-"145	pd	4	<a href=/sc/?q=pli-tv-bu-vb-pd4#2.12.0>Pāṭidesanīya 4. Catutthapāṭidesanīya</a>"
-  ];   
-  
-     const sk = [
+"145	pd	4	<a href=/sc/?q=pli-tv-bu-vb-pd4#2.12.0>Pāṭidesanīya 4. Catutthapāṭidesanīya</a>",
 "146	sk	1	<a href=/sc/?q=pli-tv-bu-vb-sk1#1.16.1>Sekhiya 1. Parimaṇḍala</a>",
 "147	sk	2	<a href=/sc/?q=pli-tv-bu-vb-sk2#1.3.1>Sekhiya 2.</a>",
 "148	sk	3	<a href=/sc/?q=pli-tv-bu-vb-sk3#1.3.1>Sekhiya 3. Suppaṭicchanna</a>",
@@ -473,10 +308,7 @@ document.getElementById("asCheckbox").addEventListener("change", () => {
 "217	sk	72	<a href=/sc/?q=pli-tv-bu-vb-sk72#1.3.1>Sekhiya 72. Uppathenagamana</a>",
 "218	sk	73	<a href=/sc/?q=pli-tv-bu-vb-sk73#1.3.1>Sekhiya 73. Ṭhitouccāra</a>",
 "219	sk	74	<a href=/sc/?q=pli-tv-bu-vb-sk74#1.3.1>Sekhiya 74. Hariteuccāra</a>",
-"220	sk	75	<a href=/sc/?q=pli-tv-bu-vb-sk75#2.6.1>Sekhiya 75. Udakeuccāra</a>"
-  ];   
- 
-      const as = [
+"220	sk	75	<a href=/sc/?q=pli-tv-bu-vb-sk75#2.6.1>Sekhiya 75. Udakeuccāra</a>",
 "221	as	1	<a href=/sc/?q=pli-tv-bu-vb-as1-7#2.2>Adhikaraṇasamatha 1.</a>",
 "222	as	2	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 2.</a>",
 "223	as	3	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 3.</a>",
@@ -484,44 +316,7 @@ document.getElementById("asCheckbox").addEventListener("change", () => {
 "225	as	5	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 5.</a>",
 "226	as	6	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 6.</a>",
 "227	as	7	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 7.</a>"
-  ];    
-
-  let records = [];
-
-  // Функция для формирования массива records из выбранных блоков
-  function updateRecords() {
-    records = [];
-    if (document.getElementById("pjCheckbox").checked) {
-      records = records.concat(pj);
-    }
-    if (document.getElementById("ssCheckbox").checked) {
-      records = records.concat(ss);
-    }
-    if (document.getElementById("ayCheckbox").checked) {
-      records = records.concat(ay);
-    }
-    
-     if (document.getElementById("npCheckbox").checked) {
-      records = records.concat(np);
-    }
-    
-      if (document.getElementById("pcCheckbox").checked) {
-      records = records.concat(pc);
-    }
-    
-     if (document.getElementById("pdCheckbox").checked) {
-      records = records.concat(pd);
-    }
-    
-    if (document.getElementById("skCheckbox").checked) {
-      records = records.concat(sk);
-    }
-    
-        if (document.getElementById("asCheckbox").checked) {
-      records = records.concat(as);
-    }
-    // Добавьте остальные условия для остальных блоков np, pc, pd, sk, as
-  }
+];
 
 	
         let currentIndex; // Индекс текущей записи
@@ -577,9 +372,8 @@ document.getElementById("asCheckbox").addEventListener("change", () => {
 
         // Обработчик нажатия кнопки
         document.getElementById("randomButton").addEventListener("click", () => {
-updateRecords();
-    currentIndex = getRandomIndex(records.length);
-    updateDisplay();
+            currentIndex = getRandomIndex(records.length);
+            updateDisplay();
         });
 
         // Обработчик изменения состояния чекбоксов
@@ -596,14 +390,7 @@ updateRecords();
             document.getElementById("hideRuleNameCheckbox").checked = true;
         }
         currentIndex = getRandomIndex(records.length);
-    
-      
-updateRecords();
-currentIndex = getRandomIndex(records.length);
-updateDisplay();
-
-
-
+        updateDisplay();
     </script>
 
     <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
@@ -611,3 +398,237 @@ updateDisplay();
     <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
 </body>
 </html>
+
+
+ <!-- /* "1	pj	1	Pārājika 1. Methunadhamma",
+  "2	pj	2	Pārājika 2. Adinnādāna",
+  "3	pj	3	Pārājika 3. Manussaviggaha",
+  "4	pj	4	Pārājika 4. Uttarimanussadhamma",
+  "5	ss	1	Saṅghādisesa 1. Sukkavissaṭṭhi",
+  "6	ss	2	Saṅghādisesa 2. Kāyasaṁsagga",
+  "7	ss	3	Saṅghādisesa 3. Duṭṭhullavācā",
+  "8	ss	4	Saṅghādisesa 4. Attakāmapāricariya",
+  "9	ss	5	Saṅghādisesa 5. Sañcaritta",
+  "10	ss	6	Saṅghādisesa 6. Kuṭikāra",
+  "11	ss	7	Saṅghādisesa 7. Vihārakāra",
+  "12	ss	8	Saṅghādisesa 8. Duṭṭhadosa",
+  "13	ss	9	Saṅghādisesa 9. Aññabhāgiya",
+  "14	ss	10	Saṅghādisesa 10. Saṅghabheda",
+  "15	ss	11	Saṅghādisesa 11. Bhedānuvattaka",
+  "16	ss	12	Saṅghādisesa 12. Dubbaca",
+  "17	ss	13	Saṅghādisesa 13. Kuladūsaka",
+  "18	an	1	Aniyata 1. Paṭhamaaniyata",
+  "19	an	2	Aniyata 2. Dutiyaaniyata",
+  "20	np	1	Nissaggiya Pācittiya 1. Kathina",
+  "21	np	2	Nissaggiya Pācittiya 2. Udosita",
+  "22	np	3	Nissaggiya Pācittiya 3. Akālacīvara",
+  "23	np	4	Nissaggiya Pācittiya 4. Purāṇacīvara",
+  "24	np	5	Nissaggiya Pācittiya 5. Cīvarapaṭiggahaṇa",
+  "25	np	6	Nissaggiya Pācittiya 6. Aññātakaviññatti",
+  "26	np	7	Nissaggiya Pācittiya 7. Tatuttari",
+  "27	np	8	Nissaggiya Pācittiya 8. Paṭhamaupakkhaṭa",
+  "28	np	9	Nissaggiya Pācittiya 9. Dutiyaupakkhaṭa",
+  "29	np	10	Nissaggiya Pācittiya 10. Rāja",
+  "30	np	11	Nissaggiya Pācittiya 11. Kosiya",
+  "31	np	12	Nissaggiya Pācittiya 12. Suddhakāḷaka",
+  "32	np	13	Nissaggiya Pācittiya 13. Dvebhāga",
+  "33	np	14	Nissaggiya Pācittiya 14. Chabbassa",
+  "34	np	15	Nissaggiya Pācittiya 15. Nisīdanasanthata",
+  "35	np	16	Nissaggiya Pācittiya 16. Eḷakaloma",
+  "36	np	17	Nissaggiya Pācittiya 17. Eḷakalomadhovāpana",
+  "37	np	18	Nissaggiya Pācittiya 18. Rūpiya",
+  "38	np	19	Nissaggiya Pācittiya 19. Rūpiyasaṁvohāra",
+  "39	np	20	Nissaggiya Pācittiya 20. Kayavikkaya",
+  "40	np	21	Nissaggiya Pācittiya 21. Patta",
+  "41	np	22	Nissaggiya Pācittiya 22. Ūnapañcabandhana",
+  "42	np	23	Nissaggiya Pācittiya 23. Bhesajja",
+  "43	np	24	Nissaggiya Pācittiya 24. Vassikasāṭika",
+  "44	np	25	Nissaggiya Pācittiya 25. Cīvaraacchindana",
+  "45	np	26	Nissaggiya Pācittiya 26. Suttaviññatti",
+  "46	np	27	Nissaggiya Pācittiya 27. Mahāpesakāra",
+  "47	np	28	Nissaggiya Pācittiya 28. Accekacīvara",
+  "48	np	29	Nissaggiya Pācittiya 29. Sāsaṅka",
+  "49	np	30	Nissaggiya Pācittiya 30. Pariṇata",
+  "50	pc	1	Pācittiya 1. Musāvāda",
+  "51	pc	2	Pācittiya 2. Omasavāda",
+  "52	pc	3	Pācittiya 3. Pesuñña",
+  "53	pc	4	Pācittiya 4. Padasodhamma",
+  "54	pc	5	Pācittiya 5. Paṭhamasahaseyya",
+  "55	pc	6	Pācittiya 6. Dutiyasahaseyya",
+  "56	pc	7	Pācittiya 7. Dhammadesanā",
+  "57	pc	8	Pācittiya 8. Bhūtārocana",
+  "58	pc	9	Pācittiya 9. Duṭṭhullārocana",
+  "59	pc	10	Pācittiya 10. Pathavīkhaṇana",
+  "60	pc	11	Pācittiya 11. Bhūtagāma",
+  "61	pc	12	Pācittiya 12. Aññavādaka",
+  "62	pc	13	Pācittiya 13. Ujjhāpanaka",
+  "63	pc	14	Pācittiya 14. Paṭhamasenāsana",
+  "64	pc	15	Pācittiya 15. Dutiyasenāsana",
+  "65	pc	16	Pācittiya 16. Anupakhajja",
+  "66	pc	17	Pācittiya 17. Nikkaḍḍhana",
+  "67	pc	18	Pācittiya 18. Vehāsakuṭi",
+  "68	pc	19	Pācittiya 19. Mahallakavihāra",
+  "69	pc	20	Pācittiya 20. Sappāṇaka",
+
+  "70	pc	21	Pācittiya 21. Ovāda",
+  "71	pc	22	Pācittiya 22. Atthaṅgata",
+  "72	pc	23	Pācittiya 23. Bhikkhunupassaya",
+  "73	pc	24	Pācittiya 24. Āmisa",
+  "74	pc	25	Pācittiya 25. Cīvaradāna",
+  "75	pc	26	Pācittiya 26. Cīvarasibbana",
+  "76	pc	27	Pācittiya 27. Saṁvidhāna",
+  "77	pc	28	Pācittiya 28. Nāvābhiruhana",
+  "78	pc	29	Pācittiya 29. Paripācita",
+  "79	pc	30	Pācittiya 30. Rahonisajja",
+  "80	pc	31	Pācittiya 31. Āvasathapiṇḍa",
+  "81	pc	32	Pācittiya 32. Gaṇabhojana",
+  "82	pc	33	Pācittiya 33. Paramparabhojana",
+  "83	pc	34	Pācittiya 34. Kāṇamātu",
+  "84	pc	35	Pācittiya 35. Paṭhamapavāraṇā",
+  "85	pc	36	Pācittiya 36. Dutiyapavāraṇā",
+  "86	pc	37	Pācittiya 37. Vikālabhojana",
+  "87	pc	38	Pācittiya 38. Sannidhikāraka",
+  "88	pc	39	Pācittiya 39. Paṇītabhojana",
+  "89	pc	40	Pācittiya 40. Dantapona",
+  "90	pc	41	Pācittiya 41. Acelaka",
+  "91	pc	42	Pācittiya 42. Uyyojana",
+  "92	pc	43	Pācittiya 43. Sabhojana",
+  "93	pc	44	Pācittiya 44. Rahopaṭicchanna",
+  "94	pc	45	Pācittiya 45. Rahonisajja",
+  "95	pc	46	Pācittiya 46. Cāritta",
+  "96	pc	47	Pācittiya 47. Mahānāma",
+  "97	pc	48	Pācittiya 48. Uyyuttasenā",
+  "98	pc	49	Pācittiya 49. Senāvāsa",
+  "99	pc	50	Pācittiya 50. Uyyodhika",
+ 
+   "100	pc	51	Pācittiya 51. Surāpāna",
+  "101	pc	52	Pācittiya 52. Aṅgulipatodaka",
+  "102	pc	53	Pācittiya 53. Hasadhamma",
+  "103	pc	54	Pācittiya 54. Anādariya",
+  "104	pc	55	Pācittiya 55. Bhiṁsāpana",
+
+  "105	pc	56	Pācittiya 56. Joti",
+  "106	pc	57	Pācittiya 57. Nahāna",
+  "107	pc	58	Pācittiya 58. Dubbaṇṇakaraṇa",
+  "108	pc	59	Pācittiya 59. Vikappana",
+  "109	pc	60	Pācittiya 60. Apanidhāna",
+  "110	pc	61	Pācittiya 61. Sañcicca",
+  "111	pc	62	Pācittiya 62. Sappāṇaka",
+  "112	pc	63	Pācittiya 63. Ukkoṭana",
+  "113	pc	64	Pācittiya 64. Duṭṭhulla",
+  "114	pc	65	Pācittiya 65. Ūnavīsativassa",
+  "115	pc	66	Pācittiya 66. Theyyasattha",
+  "116	pc	67	Pācittiya 67. Saṁvidhāna",
+  "117	pc	68	Pācittiya 68. Ariṭṭha",
+  "118	pc	69	Pācittiya 69. Ukkhittasambhoga",
+  "119	pc	70	Pācittiya 70. Kaṇṭaka",
+  "120	pc	71	Pācittiya 71. Sahadhammika",
+  "121	pc	72	Pācittiya 72. Vilekhana",
+  "122	pc	73	Pācittiya 73. Mohana",
+  "123	pc	74	Pācittiya 74. Pahāra",
+  "124	pc	75	Pācittiya 75. Talasattika",
+  "125	pc	76	Pācittiya 76. Amūlaka",
+  "126	pc	77	Pācittiya 77. Sañcicca",
+  "127	pc	78	Pācittiya 78. Upassuti",
+  "128	pc	79	Pācittiya 79. Kammappaṭibāhana",
+  "129	pc	80	Pācittiya 80. Chandaṁadatvāgamana",
+  "130	pc	81	Pācittiya 81. Dubbala",
+  "131	pc	82	Pācittiya 82. Pariṇāmana",
+  "132	pc	83	Pācittiya 83. Antepura",
+  "133	pc	84	Pācittiya 84. Ratana",
+  "134	pc	85	Pācittiya 85. Vikālagāmappavesana",
+  "135	pc	86	Pācittiya 86. Sūcighara",
+  "136	pc	87	Pācittiya 87. Mañcapīṭha",
+  "137	pc	88	Pācittiya 88. Tūlonaddha",
+  "138	pc	89	Pācittiya 89. Nisīdana",
+  "139	pc	90	Pācittiya 90. Kaṇḍuppaṭicchādi",
+  "140	pc	91	Pācittiya 91. Vassikasāṭika",
+  "141	pc	92	Pācittiya 92. Nanda",
+
+  "142	pd	1	Pāṭidesanīya 1. Paṭhamapāṭidesanīya",
+  "143	pd	2	Pāṭidesanīya 2. Dutiyapāṭidesanīya",
+  "144	pd	3	Pāṭidesanīya 3. Tatiyapāṭidesanīya",
+  "145	pd	4	Pāṭidesanīya 4. Catutthapāṭidesanīya",
+
+    "146	sk	1	Sekhiya 1. Parimaṇḍala",
+  "147	sk	2	Sekhiya 2.",
+  "148	sk	3	Sekhiya 3. Suppaṭicchanna",
+  "149	sk	4	Sekhiya 4.",
+  "150	sk	5	Sekhiya 5. Susaṁvuta",
+  "151	sk	6	Sekhiya 6.",
+  "152	sk	7	Sekhiya 7. Okkhittacakkhu",
+  "153	sk	8	Sekhiya 8.",
+  "154	sk	9	Sekhiya 9. Ukkhittaka",
+  "155	sk	10	Sekhiya 10.",
+  "156	sk	11	Sekhiya 11. Ujjagghika",
+  "157	sk	12	Sekhiya 12.",
+  "158	sk	13	Sekhiya 13. Uccasadda",
+  "159	sk	14	Sekhiya 14.",
+  "160	sk	15	Sekhiya 15. Kāyappacālaka",
+  "161	sk	16	Sekhiya 16.",
+  "162	sk	17	Sekhiya 17. Bāhuppacālaka",
+  "163	sk	18	Sekhiya 18.",
+  "164	sk	19	Sekhiya 19. Sīsappacālaka",
+  "165	sk	20	Sekhiya 20.",
+  "166	sk	21	Sekhiya 21. Khambhakata",
+  "167	sk	22	Sekhiya 22.",
+  "168	sk	23	Sekhiya 23. Oguṇṭhita",
+  "169	sk	24	Sekhiya 24.",
+  "170	sk	25	Sekhiya 25. Ukkuṭika",
+  "171	sk	26	Sekhiya 26. Pallatthika",
+  "172	sk	27	Sekhiya 27. Sakkaccapaṭiggahaṇa",
+  "173	sk	28	Sekhiya 28. Pattasaññīpaṭiggahaṇa",
+  "174	sk	29	Sekhiya 29. Samasūpakapaṭiggahaṇa",
+  "175	sk	30	Sekhiya 30. Samatittika",
+  "176	sk	31	Sekhiya 31. Sakkaccabhuñjana",
+  "177	sk	32	Sekhiya 32. Pattasaññībhuñjana",
+  "178	sk	33	Sekhiya 33. Sapadāna",
+  "179	sk	34	Sekhiya 34. Samasūpaka",
+  "180	sk	35	Sekhiya 35. Nathūpakata",
+  "181	sk	36	Sekhiya 36. Odanappaṭicchādana",
+  "182	sk	37	Sekhiya 37. Sūpodanaviññatti",
+  "183	sk	38	Sekhiya 38. Ujjhānasaññī",
+  "184	sk	39	Sekhiya 39. Kabaḷa",
+  "185	sk	40	Sekhiya 40. Ālopa",
+  "186	sk	41	Sekhiya 41. Anāhaṭa",
+  "187	sk	42	Sekhiya 42. Bhuñjamāna",
+  "188	sk	43	Sekhiya 43. Sakabaḷa",
+  "189	sk	44	Sekhiya 44. Piṇḍukkhepaka",
+  "190	sk	45	Sekhiya 45. Kabaḷāvacchedaka",
+  "191	sk	46	Sekhiya 46. Avagaṇḍakāraka",
+  "192	sk	47	Sekhiya 47. Hatthaniddhunaka",
+  "193	sk	48	Sekhiya 48. Sitthāvakāraka",
+  "194	sk	49	Sekhiya 49. Jivhānicchāraka",
+  "195	sk	50	Sekhiya 50. Capucapukāraka",
+  "196	sk	51	Sekhiya 51. Surusurukāraka",
+  "197	sk	52	Sekhiya 52. Hatthanillehaka",
+  "198	sk	53	Sekhiya 53. Pattanillehaka",
+  "199	sk	54	Sekhiya 54. Oṭṭhanillehaka",
+  "200	sk	55	Sekhiya 55. Sāmisa",
+  "201	sk	56	Sekhiya 56. Sasitthaka",
+  "202	sk	57	Sekhiya 57. Chattapāṇi",
+  "203	sk	58	Sekhiya 58. Daṇḍapāṇi",
+  "204	sk	59	Sekhiya 59. Satthapāṇi",
+  "205	sk	60	Sekhiya 60. Āvudhapāṇi",
+  "206	sk	61	Sekhiya 61. Pāduka",
+  "207	sk	62	Sekhiya 62. Upāhana",
+  "208	sk	63	Sekhiya 63. Yāna",
+  "209	sk	64	Sekhiya 64. Sayana",
+  "210	sk	65	Sekhiya 65. Pallatthika",
+  "211	sk	66	Sekhiya 66. Veṭhita",
+  "212	sk	67	Sekhiya 67. Oguṇṭhita",
+  "213	sk	68	Sekhiya 68. Chamā",
+  "214	sk	69	Sekhiya 69. Nīcāsana",
+  "215	sk	70	Sekhiya 70. Ṭhita",
+  "216	sk	71	Sekhiya 71. Pacchatogamana",
+  "217	sk	72	Sekhiya 72. Uppathenagamana",
+  "218	sk	73	Sekhiya 73. Ṭhitouccāra",
+  "219	sk	74	Sekhiya 74. Hariteuccāra",
+  "220	sk	75	Sekhiya 75. Udakeuccāra",
+   "221	as	1	Adhikaraṇasamatha 1",
+  "222	as	2	Adhikaraṇasamatha 2",
+  "223	as	3	Adhikaraṇasamatha 3",
+  "224	as	4	Adhikaraṇasamatha 4",
+  "225	as	5	Adhikaraṇasamatha 5",
+  "226	as	6	Adhikaraṇasamatha 6",
+  "227	as	7	Adhikaraṇasamatha 7" */  -->

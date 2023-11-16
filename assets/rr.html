@@ -315,6 +315,90 @@ const records = [
 "225	as	5	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 5.</a>",
 "226	as	6	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 6.</a>",
 "227	as	7	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 7.</a>"
+];
+
+	
+        let currentIndex; // Индекс текущей записи
+
+        // Функция для генерации случайного числа
+        function getRandomIndex(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        // Функция для отображения записи
+        function showRecord(index) {
+            const randomRecord = records[index];
+            document.getElementById("randomRecord").innerHTML = randomRecord;
+        }
+
+        // Функция для скрытия названия правила
+        function hideRuleName(record) {
+            const parts = record.split('\t');
+            if (parts.length >= 4) {
+                return `${parts[0]}\t${parts[1]}\t${parts[2]}\t`;
+            }
+            return "Ошибка в формате записи";
+        }
+
+        // Функция для отображения только номера записи
+        function showNumberOnly(index) {
+            const randomRecord = records[index];
+            const parts = randomRecord.split('\t');
+            if (parts.length > 0) {
+                document.getElementById("randomRecord").innerHTML = parts[0];
+            } else {
+                document.getElementById("randomRecord").innerHTML = "Ошибка в формате записи";
+            }
+        }
+
+        // Функция для обновления отображения в зависимости от состояния чекбоксов
+        function updateDisplay() {
+            if (document.getElementById("numberOnlyCheckbox").checked) {
+                showNumberOnly(currentIndex);
+            } else {
+                const record = records[currentIndex];
+                if (document.getElementById("hideRuleNameCheckbox").checked) {
+                    const hiddenRecord = hideRuleName(record);
+                    document.getElementById("randomRecord").innerHTML = hiddenRecord;
+                } else {
+                    showRecord(currentIndex);
+                }
+            }
+            // Сохраняем состояния чекбоксов в localStorage
+            localStorage.setItem('rrtick', document.getElementById("numberOnlyCheckbox").checked);
+            localStorage.setItem('rrtick2', document.getElementById("hideRuleNameCheckbox").checked);
+        }
+
+        // Обработчик нажатия кнопки
+        document.getElementById("randomButton").addEventListener("click", () => {
+            currentIndex = getRandomIndex(records.length);
+            updateDisplay();
+        });
+
+        // Обработчик изменения состояния чекбоксов
+        document.getElementById("numberOnlyCheckbox").addEventListener("change", updateDisplay);
+        document.getElementById("hideRuleNameCheckbox").addEventListener("change", updateDisplay);
+
+        // Проверяем состояния чекбоксов в localStorage и применяем их при загрузке страницы
+        const savedCheckboxState = localStorage.getItem('rrtick');
+        if (savedCheckboxState === 'true') {
+            document.getElementById("numberOnlyCheckbox").checked = true;
+        }
+        const savedCheckboxState2 = localStorage.getItem('rrtick2');
+        if (savedCheckboxState2 === 'true') {
+            document.getElementById("hideRuleNameCheckbox").checked = true;
+        }
+        currentIndex = getRandomIndex(records.length);
+        updateDisplay();
+    </script>
+
+    <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
+    <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+    <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+</body>
+</html>
+
+
  /* "1	pj	1	Pārājika 1. Methunadhamma",
   "2	pj	2	Pārājika 2. Adinnādāna",
   "3	pj	3	Pārājika 3. Manussaviggaha",
@@ -547,85 +631,3 @@ const records = [
   "225	as	5	Adhikaraṇasamatha 5",
   "226	as	6	Adhikaraṇasamatha 6",
   "227	as	7	Adhikaraṇasamatha 7" */
-];
-
-	
-        let currentIndex; // Индекс текущей записи
-
-        // Функция для генерации случайного числа
-        function getRandomIndex(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        // Функция для отображения записи
-        function showRecord(index) {
-            const randomRecord = records[index];
-            document.getElementById("randomRecord").innerHTML = randomRecord;
-        }
-
-        // Функция для скрытия названия правила
-        function hideRuleName(record) {
-            const parts = record.split('\t');
-            if (parts.length >= 4) {
-                return `${parts[0]}\t${parts[1]}\t${parts[2]}\t`;
-            }
-            return "Ошибка в формате записи";
-        }
-
-        // Функция для отображения только номера записи
-        function showNumberOnly(index) {
-            const randomRecord = records[index];
-            const parts = randomRecord.split('\t');
-            if (parts.length > 0) {
-                document.getElementById("randomRecord").innerHTML = parts[0];
-            } else {
-                document.getElementById("randomRecord").innerHTML = "Ошибка в формате записи";
-            }
-        }
-
-        // Функция для обновления отображения в зависимости от состояния чекбоксов
-        function updateDisplay() {
-            if (document.getElementById("numberOnlyCheckbox").checked) {
-                showNumberOnly(currentIndex);
-            } else {
-                const record = records[currentIndex];
-                if (document.getElementById("hideRuleNameCheckbox").checked) {
-                    const hiddenRecord = hideRuleName(record);
-                    document.getElementById("randomRecord").innerHTML = hiddenRecord;
-                } else {
-                    showRecord(currentIndex);
-                }
-            }
-            // Сохраняем состояния чекбоксов в localStorage
-            localStorage.setItem('rrtick', document.getElementById("numberOnlyCheckbox").checked);
-            localStorage.setItem('rrtick2', document.getElementById("hideRuleNameCheckbox").checked);
-        }
-
-        // Обработчик нажатия кнопки
-        document.getElementById("randomButton").addEventListener("click", () => {
-            currentIndex = getRandomIndex(records.length);
-            updateDisplay();
-        });
-
-        // Обработчик изменения состояния чекбоксов
-        document.getElementById("numberOnlyCheckbox").addEventListener("change", updateDisplay);
-        document.getElementById("hideRuleNameCheckbox").addEventListener("change", updateDisplay);
-
-        // Проверяем состояния чекбоксов в localStorage и применяем их при загрузке страницы
-        const savedCheckboxState = localStorage.getItem('rrtick');
-        if (savedCheckboxState === 'true') {
-            document.getElementById("numberOnlyCheckbox").checked = true;
-        }
-        const savedCheckboxState2 = localStorage.getItem('rrtick2');
-        if (savedCheckboxState2 === 'true') {
-            document.getElementById("hideRuleNameCheckbox").checked = true;
-        }
-        currentIndex = getRandomIndex(records.length);
-        updateDisplay();
-    </script>
-
-    <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
-    <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
-    <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
-</body>
-</html>

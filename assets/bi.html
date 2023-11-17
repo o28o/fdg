@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+    <title>Случайное Правило</title>
+    <!-- Подключение Bootstrap 5 CSS -->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="align-items-center align-items-center toggle-switch input-group-append">
+            <div id="" class="input-group">
+                <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+                    <svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+                </a>
+
+                <a href="../../" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                </a>
+
+                <div class="ms-1 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="darkSwitch">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="mb-2">Бхиккху Патимоккха </h1>
+        <h4 class="mb-5">Случайное Правило </h4>       
+    </div>
+    <div class="container mt-2">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
+            <label class="form-check-label" for="numberOnlyCheckbox">
+                Скрыть раздел и название
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="hideRuleNameCheckbox">
+            <label class="form-check-label" for="hideRuleNameCheckbox">
+                Скрыть только название
+            </label>
+        </div>
+
+
+        <button class="btn btn-primary mt-3" id="randomButton">Показать</button>
+       
+
+    
+        <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
+            Диапазоны
+        </button>
+        
+              <button type="button" class="btn btn-primary mt-3" data-bs-toggle="collapse" data-bs-target="#linkList" aria-expanded="false">
+        Ссылки
+    </button>
+        
+            <div class="collapse mt-3" id="linkList">
+        <ul class="list-group">
+            <li class="list-group-item"><a href="/ru/assets/texts/pm.php">Bhikkhupātimokkha</a></li>
+            <li class="list-group-item"><a href="/ru/assets/texts/bipm.php">Bhikkhunīpātimokkha</a></li>
+            <li class="list-group-item"><a href="/ru/assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
+            <li class="list-group-item"><a href="/bw/vi/vi.html#content">TBW Патимоккха</a></li>
+            <li class="list-group-item"><a href="/accesstoinsight.org/tipitaka/vin/sv/index.html">ATI Патимоккха</a></li>
+        </ul>
+    </div> 
+    
+        <div id="rangeList" class="collapse mt-3">
+                        <ul class="list-group">
+                <li class="list-group-item">1-4    pj</li>
+                <li class="list-group-item">5-17    ss</li>
+                <li class="list-group-item">20-19   an</li>
+                <li class="list-group-item">20-49   np</li>
+                <li class="list-group-item">20-141  pc</li>
+                <li class="list-group-item">142-145 pd</li>
+                <li class="list-group-item">146-220 sk</li>
+                <li class="list-group-item">221-227 as</li>
+            </ul>
+        </div>
+        <h3 id="randomRecord" class="mt-3 text-center"></h3>
+    </div>
+
+
+
+    <script>
+       // Ваш список записей echo "" | awk '{print "$0",}' 
+	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
+const records = [
+"1	pj	1	<a href=/sc/?q=pli-tv-bi-vb-pj1#>Pārājika 1. Methunadhammasikkhāpadaṁ</a>",
+"2	pj	2	<a href=/sc/?q=pli-tv-bi-vb-pj2#>Pārājika 2. Adinnādānasikkhāpadaṁ</a>",
+"3	pj	3	<a href=/sc/?q=pli-tv-bi-vb-pj3#>Pārājika 3. Manussaviggahasikkhāpadaṁ</a>",
+"4	pj	4	<a href=/sc/?q=pli-tv-bi-vb-pj4#>Pārājika 4. Uttarimanussadhammasikkhāpadaṁ</a>",
+"5	pj	5	<a href=/sc/?q=pli-tv-bi-vb-pj5#1.54.0>Pārājika 5. Ubbhajāṇumaṇḍalikāsikkhāpadaṁ</a>",
+"6	pj	6	<a href=/sc/?q=pli-tv-bi-vb-pj6#1.23.0>Pārājika 6. Vajjappaṭicchādikāsikkhāpadaṁ</a>",
+"7	pj	7	<a href=/sc/?q=pli-tv-bi-vb-pj7#1.11.0>Pārājika 7. Ukkhittānuvattikāsikkhāpadaṁ</a>",
+"8	pj	8	<a href=/sc/?q=pli-tv-bi-vb-pj8#1.11.0>Pārājika 8. Aṭṭhavatthukāsikkhāpadaṁ</a>",
+"9	ss	1	<a href=/sc/?q=pli-tv-bi-vb-ss1#1.56.0>Saṅghādisesa 1. Ussayavādikāsikkhāpadaṁ</a>",
+"10	ss	2	<a href=/sc/?q=pli-tv-bi-vb-ss2#1.40.0>Saṅghādisesa 2. Corīvuṭṭhāpikāsikkhāpadaṁ</a>",
+"11	ss	3	<a href=/sc/?q=pli-tv-bi-vb-ss3#4.14.0>Saṅghādisesa 3. Ekagāmantaragamanasikkhāpadaṁ</a>",
+"12	ss	4	<a href=/sc/?q=pli-tv-bi-vb-ss4#1.27.0>Saṅghādisesa 4. Ukkhittakaosāraṇasikkhāpadaṁ</a>",
+"13	ss	5	<a href=/sc/?q=pli-tv-bi-vb-ss5#1.14.0>Saṅghādisesa 5. Bhojanapaṭiggahaṇapaṭhamasikkhāpadaṁ</a>",
+"14	ss	6	<a href=/sc/?q=pli-tv-bi-vb-ss6#1.26.0>Saṅghādisesa 6. Bhojanapaṭiggahaṇadutiyasikkhāpadaṁ</a>",
+"15	ss	7	<a href=/sc/?q=bi-pm#25.0>Saṅghādisesa 7. Sañcarittasikkhāpadaṁ</a>",
+"16	ss	8	<a href=/sc/?q=bi-pm#26.0>Saṅghādisesa 8. Duṭṭhadosasikkhāpadaṁ</a>",
+"17	ss	9	<a href=/sc/?q=bi-pm#27.0>Saṅghādisesa 9. Aññabhāgiyasikkhāpadaṁ</a>",
+"18	ss	10	<a href=/sc/?q=pli-tv-bi-vb-ss10#1.19.0>Saṅghādisesa 10. Sikkhaṁpaccācikkhaṇasikkhāpadaṁ</a>",
+"19	ss	11	<a href=/sc/?q=pli-tv-bi-vb-ss11#1.15.0>Saṅghādisesa 11. Adhikaraṇakupitasikkhāpadaṁ</a>",
+"20	ss	12	<a href=/sc/?q=pli-tv-bi-vb-ss12#1.11.0>Saṅghādisesa 12. Pāpasamācārapaṭhamasikkhāpadaṁ</a>",
+"21	ss	13	<a href=/sc/?q=pli-tv-bi-vb-ss13#1.23.0>Saṅghādisesa 13. Pāpasamācāradutiyasikkhāpadaṁ</a>",
+"22	ss	14	<a href=/sc/?q=bi-pm#32.0>Saṅghādisesa 14. Saṅghabhedakasikkhāpadaṁ</a>",
+"23	ss	15	<a href=/sc/?q=bi-pm#33.0>Saṅghādisesa 15. Bhedānuvattakasikkhāpadaṁ</a>",
+"24	ss	16	<a href=/sc/?q=bi-pm#34.0>Saṅghādisesa 16. Dubbacasikkhāpadaṁ</a>",
+"25	ss	17	<a href=/sc/?q=bi-pm#35.0>Saṅghādisesa 17. Kuladūsakasikkhāpadaṁ</a>",
+"26	np	1	<a href=/sc/?q=pli-tv-bi-vb-np1#1.14.0>Nissaggiya pācittiya 1. Pattasannicayasikkhāpadaṁ</a>",
+"27	np	2	<a href=/sc/?q=pli-tv-bi-vb-np2#1.25.0>Nissaggiya pācittiya 2. Akālacīvarabhājanasikkhāpadaṁ</a>",
+"28	np	3	<a href=/sc/?q=pli-tv-bi-vb-np3#1.20.0>Nissaggiya pācittiya 3. Cīvaraparivattanasikkhāpadaṁ</a>",
+"29	np	4	<a href=/sc/?q=pli-tv-bi-vb-np4#1.27.0>Nissaggiya pācittiya 4. Aññaviññāpanasikkhāpadaṁ</a>",
+"30	np	5	<a href=/sc/?q=pli-tv-bi-vb-np5#1.28.0>Nissaggiya pācittiya 5. Aññacetāpana sikkhāpadaṁ</a>",
+"31	np	6	<a href=/sc/?q=pli-tv-bi-vb-np6#1.16.0>Nissaggiya pācittiya 6. Paṭhamasaṅghikacetāpanasikkhāpadaṁ</a>",
+"32	np	7	<a href=/sc/?q=pli-tv-bi-vb-np7#1.13.0>Nissaggiya pācittiya 7. Dutiyasaṅghikacetāpanasikkhāpadaṁ</a>",
+"33	np	8	<a href=/sc/?q=pli-tv-bi-vb-np8#1.14.0>Nissaggiya pācittiya 8. Paṭhamagaṇikacetāpanasikkhāpadaṁ</a>",
+"34	np	9	<a href=/sc/?q=pli-tv-bi-vb-np9#1.15.0>Nissaggiya pācittiya 9. Dutiyagaṇikacetāpanasikkhāpadaṁ</a>",
+"35	np	10	<a href=/sc/?q=pli-tv-bi-vb-np10#1.18.0>Nissaggiya pācittiya 10. Puggalikacetāpanasikkhāpadaṁ</a>",
+"36	np	11	<a href=/sc/?q=pli-tv-bi-vb-np11#1.21.0>Nissaggiya pācittiya 11. Garupāvuraṇasikkhāpadaṁ</a>",
+"37	np	12	<a href=/sc/?q=pli-tv-bi-vb-np12#1.21.0>Nissaggiya pācittiya 12. Lahupāvuraṇasikkhāpadaṁ</a>",
+"38	np	13	<a href=/sc/?q=bi-pm#50.0>Nissaggiya pācittiya 13. Kathinasikkhāpadaṁ</a>",
+"39	np	14	<a href=/sc/?q=bi-pm#51.0>Nissaggiya pācittiya 14. Udositasikkhāpadaṁ</a>",
+"40	np	15	<a href=/sc/?q=bi-pm#52.0>Nissaggiya pācittiya 15. Akālacīvarasikkhāpadaṁ</a>",
+"41	np	16	<a href=/sc/?q=bi-pm#53.0>Nissaggiya pācittiya 16. Aññātakaviññattisikkhāpadaṁ</a>",
+"42	np	17	<a href=/sc/?q=bi-pm#54.0>Nissaggiya pācittiya 17. Tatuttarisikkhāpadaṁ</a>",
+"43	np	18	<a href=/sc/?q=bi-pm#55.0>Nissaggiya pācittiya 18. Paṭhamaupakkhaṭasikkhāpadaṁ</a>",
+"44	np	19	<a href=/sc/?q=bi-pm#56.0>Nissaggiya pācittiya 19. Dutiyaupakkhaṭasikkhāpadaṁ</a>",
+"45	np	20	<a href=/sc/?q=bi-pm#57.0>Nissaggiya pācittiya 20. Rājasikkhāpadaṁ</a>",
+"46	np	21	<a href=/sc/?q=bi-pm#58.0.2>Nissaggiya pācittiya 21. Rūpiyasikkhāpadaṁ</a>",
+"47	np	22	<a href=/sc/?q=bi-pm#59.0>Nissaggiya pācittiya 22. Rūpiyasaṁvohārasikkhāpadaṁ</a>",
+"48	np	23	<a href=/sc/?q=bi-pm#60.0>Nissaggiya pācittiya 23. Kayavikkayasikkhāpadaṁ</a>",
+"49	np	24	<a href=/sc/?q=bi-pm#61.0>Nissaggiya pācittiya 24. Ūnapañcabandhanasikkhāpadaṁ</a>",
+"50	np	25	<a href=/sc/?q=bi-pm#62.0>Nissaggiya pācittiya 25. Bhesajjasikkhāpadaṁ</a>",
+"51	np	26	<a href=/sc/?q=bi-pm#63.0>Nissaggiya pācittiya 26. Cīvaraacchindanasikkhāpadaṁ</a>",
+"52	np	27	<a href=/sc/?q=bi-pm#64.0>Nissaggiya pācittiya 27. Suttaviññattisikkhāpadaṁ</a>",
+"53	np	28	<a href=/sc/?q=bi-pm#65.0>Nissaggiya pācittiya 28. Mahāpesakārasikkhāpadaṁ</a>",
+"54	np	29	<a href=/sc/?q=bi-pm#66.0>Nissaggiya pācittiya 29. Accekacīvarasikkhāpadaṁ</a>",
+"55	np	30	<a href=/sc/?q=bi-pm#67.0>Nissaggiya pācittiya 30. Pariṇatasikkhāpadaṁ</a>",
+"56	pc	1	<a href=/sc/?q=pli-tv-bi-vb-pc1#1.41.0>Pācittiya 1. Lasuṇasikkhāpadaṁ</a>",
+"57	pc	2	<a href=/sc/?q=pli-tv-bi-vb-pc2#1.14.0>Pācittiya 2. Sambādhalomasikkhāpadaṁ</a>",
+"58	pc	3	<a href=/sc/?q=pli-tv-bi-vb-pc3#1.14.0>Pācittiya 3. Talaghātakasikkhāpadaṁ</a>",
+"59	pc	4	<a href=/sc/?q=pli-tv-bi-vb-pc4#1.21.0>Pācittiya 4. Jatumaṭṭhakasikkhāpadaṁ</a>",
+"60	pc	5	<a href=/sc/?q=pli-tv-bi-vb-pc5#1.2.12.0>Pācittiya 5. Udakasuddhikasikkhāpadaṁ</a>",
+"61	pc	6	<a href=/sc/?q=pli-tv-bi-vb-pc6#1.19.0>Pācittiya 6. Upatiṭṭhanasikkhāpadaṁ</a>",
+"62	pc	7	<a href=/sc/?q=pli-tv-bi-vb-pc7#1.14.0>Pācittiya 7. Āmakadhaññasikkhāpadaṁ</a>",
+"63	pc	8	<a href=/sc/?q=pli-tv-bi-vb-pc8#1.26.0>Pācittiya 8. Paṭhamauccārachaḍḍanasikkhāpadaṁ</a>",
+"64	pc	9	<a href=/sc/?q=pli-tv-bi-vb-pc9#1.15.0>Pācittiya 9. Dutiyauccārachaḍḍanasikkhāpadaṁ</a>",
+"65	pc	10	<a href=/sc/?q=pli-tv-bi-vb-pc10#1.15.0>Pācittiya 10. Naccagītasikkhāpadaṁ</a>",
+"66	pc	11	<a href=/sc/?q=pli-tv-bi-vb-pc11#1.12.0>Pācittiya 11. Rattandhakārasikkhāpadaṁ</a>",
+"67	pc	12	<a href=/sc/?q=pli-tv-bi-vb-pc12#1.13.0>Pācittiya 12. Paṭicchannokāsasikkhāpadaṁ</a>",
+"68	pc	13	<a href=/sc/?q=pli-tv-bi-vb-pc13#1.13.0>Pācittiya 13. Ajjhokāsasallapanasikkhāpadaṁ</a>",
+"69	pc	14	<a href=/sc/?q=pli-tv-bi-vb-pc14#1.11.0>Pācittiya 14. Dutiyikauyyojanasikkhāpadaṁ</a>",
+"70	pc	15	<a href=/sc/?q=pli-tv-bi-vb-pc15#1.19.0>Pācittiya 15. Anāpucchāpakkamanasikkhāpadaṁ</a>",
+"71	pc	16	<a href=/sc/?q=pli-tv-bi-vb-pc16#1.15.0>Pācittiya 16. Anāpucchāabhinisīdanasikkhāpadaṁ</a>",
+"72	pc	17	<a href=/sc/?q=pli-tv-bi-vb-pc17#1.20.0>Pācittiya 17. Anāpucchāsantharaṇasikkhāpadaṁ</a>",
+"73	pc	18	<a href=/sc/?q=pli-tv-bi-vb-pc18#1.15.0>Pācittiya 18. Paraujjhāpanakasikkhāpadaṁ</a>",
+"74	pc	19	<a href=/sc/?q=pli-tv-bi-vb-pc19#1.17.0>Pācittiya 19. Paraabhisapanasikkhāpadaṁ</a>",
+"75	pc	20	<a href=/sc/?q=pli-tv-bi-vb-pc20#1.11.0>Pācittiya 20. Rodanasikkhāpadaṁ</a>",
+"76	pc	21	<a href=/sc/?q=pli-tv-bi-vb-pc21#1.16.0>Pācittiya 21. Naggasikkhāpadaṁ</a>",
+"77	pc	22	<a href=/sc/?q=pli-tv-bi-vb-pc22#1.14.0>Pācittiya 22. Udakasāṭikasikkhāpadaṁ</a>",
+"78	pc	23	<a href=/sc/?q=pli-tv-bi-vb-pc23#1.20.0>Pācittiya 23. Cīvarasibbanasikkhāpadaṁ</a>",
+"79	pc	24	<a href=/sc/?q=pli-tv-bi-vb-pc24#1.16.0>Pācittiya 24. Saṅghāṭicārasikkhāpadaṁ</a>",
+"80	pc	25	<a href=/sc/?q=pli-tv-bi-vb-pc25#1.18.0>Pācittiya 25. Cīvarasaṅkamanīyasikkhāpadaṁ</a>",
+"81	pc	26	<a href=/sc/?q=pli-tv-bi-vb-pc26#1.19.0>Pācittiya 26. Gaṇacīvarasikkhāpadaṁ</a>",
+"82	pc	27	<a href=/sc/?q=pli-tv-bi-vb-pc27#1.18.0>Pācittiya 27. Paṭibāhanasikkhāpadaṁ</a>",
+"83	pc	28	<a href=/sc/?q=pli-tv-bi-vb-pc28#1.15.0>Pācittiya 28. Cīvaradānasikkhāpadaṁ</a>",
+"84	pc	29	<a href=/sc/?q=pli-tv-bi-vb-pc29#1.21.0>Pācittiya 29. Kālaatikkamanasikkhāpadaṁ</a>",
+"85	pc	30	<a href=/sc/?q=pli-tv-bi-vb-pc30#1.2.15.0>Pācittiya 30. Kathinuddhārasikkhāpadaṁ</a>",
+"86	pc	31	<a href=/sc/?q=pli-tv-bi-vb-pc31#1.14.0>Pācittiya 31. Ekamañcatuvaṭṭanasikkhāpadaṁ</a>",
+"87	pc	32	<a href=/sc/?q=pli-tv-bi-vb-pc32#1.14.0>Pācittiya 32. Ekattharaṇatuvaṭṭanasikkhāpadaṁ</a>",
+"88	pc	33	<a href=/sc/?q=pli-tv-bi-vb-pc33#1.16.0>Pācittiya 33. Aphāsukaraṇasikkhāpadaṁ</a>",
+"89	pc	34	<a href=/sc/?q=pli-tv-bi-vb-pc34#1.11.0>Pācittiya 34. Naupaṭṭhāpanasikkhāpadaṁ</a>",
+"90	pc	35	<a href=/sc/?q=pli-tv-bi-vb-pc35#1.23.0>Pācittiya 35. Nikkaḍḍhanasikkhāpadaṁ</a>",
+"91	pc	36	<a href=/sc/?q=pli-tv-bi-vb-pc36#1.11.0>Pācittiya 36. Saṁsaṭṭhasikkhāpadaṁ</a>",
+"92	pc	37	<a href=/sc/?q=pli-tv-bi-vb-pc37#1.12.0>Pācittiya 37. Antoraṭṭhasikkhāpadaṁ</a>",
+"93	pc	38	<a href=/sc/?q=pli-tv-bi-vb-pc38#1.12.0>Pācittiya 38. Tiroraṭṭhasikkhāpadaṁ</a>",
+"94	pc	39	<a href=/sc/?q=pli-tv-bi-vb-pc39#1.14.0>Pācittiya 39. Antovassasikkhāpadaṁ</a>",
+"95	pc	40	<a href=/sc/?q=pli-tv-bi-vb-pc40#1.13.0>Pācittiya 40. Cārikanapakkamanasikkhāpadaṁ</a>",
+"96	pc	41	<a href=/sc/?q=pli-tv-bi-vb-pc41#1.16.0>Pācittiya 41. Rājāgārasikkhāpadaṁ</a>",
+"97	pc	42	<a href=/sc/?q=pli-tv-bi-vb-pc42#1.14.0>Pācittiya 42. Āsandiparibhuñjanasikkhāpadaṁ</a>",
+"98	pc	43	<a href=/sc/?q=pli-tv-bi-vb-pc43#1.14.0>Pācittiya 43. Suttakantanasikkhāpadaṁ</a>",
+"99	pc	44	<a href=/sc/?q=pli-tv-bi-vb-pc44#1.11.0>Pācittiya 44. Gihiveyyāvaccasikkhāpadaṁ</a>",
+"100	pc	45	<a href=/sc/?q=pli-tv-bi-vb-pc45#1.21.0>Pācittiya 45. Adhikaraṇasikkhāpadaṁ</a>",
+"101	pc	46	<a href=/sc/?q=pli-tv-bi-vb-pc46#1.15.0>Pācittiya 46. Bhojanadānasikkhāpadaṁ</a>",
+"102	pc	47	<a href=/sc/?q=pli-tv-bi-vb-pc47#1.12.0>Pācittiya 47. Āvasathacīvarasikkhāpadaṁ</a>",
+"103	pc	48	<a href=/sc/?q=pli-tv-bi-vb-pc48#1.22.0>Pācittiya 48. Āvasathavihārasikkhāpadaṁ</a>",
+"104	pc	49	<a href=/sc/?q=pli-tv-bi-vb-pc49#1.14.0>Pācittiya 49. Tiracchānavijjāpariyāpuṇanasikkhāpadaṁ</a>",
+"105	pc	50	<a href=/sc/?q=pli-tv-bi-vb-pc50#1.14.0>Pācittiya 50. Tiracchānavijjāvācanasikkhāpadaṁ</a>",
+"106	pc	51	<a href=/sc/?q=pli-tv-bi-vb-pc51#3.9.0>Pācittiya 51. Ārāmapavisanasikkhāpadaṁ</a>",
+"107	pc	52	<a href=/sc/?q=pli-tv-bi-vb-pc52#1.29.0>Pācittiya 52. Bhikkhuakkosanasikkhāpadaṁ</a>",
+"108	pc	53	<a href=/sc/?q=pli-tv-bi-vb-pc53#1.27.0>Pācittiya 53. Gaṇaparibhāsanasikkhāpadaṁ</a>",
+"109	pc	54	<a href=/sc/?q=pli-tv-bi-vb-pc54#1.20.0>Pācittiya 54. Pavāritasikkhāpadaṁ</a>",
+"110	pc	55	<a href=/sc/?q=pli-tv-bi-vb-pc55#1.21.0>Pācittiya 55. Kulamaccharinīsikkhāpadaṁ</a>",
+"111	pc	56	<a href=/sc/?q=pli-tv-bi-vb-pc56#1.16.0>Pācittiya 56. Abhikkhukāvāsasikkhāpadaṁ</a>",
+"112	pc	57	<a href=/sc/?q=pli-tv-bi-vb-pc57#1.15.0>Pācittiya 57. Apavāraṇāsikkhāpadaṁ</a>",
+"113	pc	58	<a href=/sc/?q=pli-tv-bi-vb-pc58#1.14.0>Pācittiya 58. Ovādasikkhāpadaṁ</a>",
+"114	pc	59	<a href=/sc/?q=pli-tv-bi-vb-pc59#1.11.0>Pācittiya 59. Ovādūpasaṅkamanasikkhāpadaṁ</a>",
+"115	pc	60	<a href=/sc/?q=pli-tv-bi-vb-pc60#1.16.0>Pācittiya 60. Pasākhejātasikkhāpadaṁ</a>",
+"116	pc	61	<a href=/sc/?q=pli-tv-bi-vb-pc61#1.17.0>Pācittiya 61. Gabbhinīsikkhāpadaṁ</a>",
+"117	pc	62	<a href=/sc/?q=pli-tv-bi-vb-pc62#1.17.0>Pācittiya 62. Pāyantīsikkhāpadaṁ</a>",
+"118	pc	63	<a href=/sc/?q=pli-tv-bi-vb-pc63#1.41.0>Pācittiya 63. Paṭhamasikkhamānasikkhāpadaṁ</a>",
+"119	pc	64	<a href=/sc/?q=pli-tv-bi-vb-pc64#1.36.0>Pācittiya 64. Dutiyasikkhamānasikkhāpadaṁ</a>",
+"120	pc	65	<a href=/sc/?q=pli-tv-bi-vb-pc65#1.17.0>Pācittiya 65. Paṭhamagihigatasikkhāpadaṁ</a>",
+"121	pc	66	<a href=/sc/?q=pli-tv-bi-vb-pc66#1.35.0>Pācittiya 66. Dutiyagihigatasikkhāpadaṁ</a>",
+"122	pc	67	<a href=/sc/?q=pli-tv-bi-vb-pc67#1.36.0>Pācittiya 67. Tatiyagihigatasikkhāpadaṁ</a>",
+"123	pc	68	<a href=/sc/?q=pli-tv-bi-vb-pc68#1.13.0>Pācittiya 68. Paṭhamasahajīvinīsikkhāpadaṁ</a>",
+"124	pc	69	<a href=/sc/?q=pli-tv-bi-vb-pc69#1.13.0>Pācittiya 69. Pavattinīnānubandhanasikkhāpadaṁ</a>",
+"125	pc	70	<a href=/sc/?q=pli-tv-bi-vb-pc70#1.13.0>Pācittiya 70. Dutiyasahajīvinīsikkhāpadaṁ</a>",
+"126	pc	71	<a href=/sc/?q=pli-tv-bi-vb-pc71#1.17.0>Pācittiya 71. Paṭhamakumāribhūtasikkhāpadaṁ</a>",
+"127	pc	72	<a href=/sc/?q=pli-tv-bi-vb-pc72#1.37.0>Pācittiya 72. Dutiyakumāribhūtasikkhāpadaṁ</a>",
+"128	pc	73	<a href=/sc/?q=pli-tv-bi-vb-pc73#1.36.0>Pācittiya 73. Tatiyakumāribhūtasikkhāpadaṁ</a>",
+"129	pc	74	<a href=/sc/?q=pli-tv-bi-vb-pc74#1.14.0>Pācittiya 74. Ūnadvādasavassasikkhāpadaṁ</a>",
+"130	pc	75	<a href=/sc/?q=pli-tv-bi-vb-pc75#1.42.0>Pācittiya 75. Paripuṇṇadvādasavassasikkhāpadaṁ</a>",
+"131	pc	76	<a href=/sc/?q=pli-tv-bi-vb-pc76#1.20.0>Pācittiya 76. Khiyyanadhammasikkhāpadaṁ</a>",
+"132	pc	77	<a href=/sc/?q=pli-tv-bi-vb-pc77#1.17.0>Pācittiya 77. Paṭhamasikkhamānanavuṭṭhāpanasikkhāpadaṁ</a>",
+"133	pc	78	<a href=/sc/?q=pli-tv-bi-vb-pc78#1.16.0>Pācittiya 78. Dutiyasikkhamānanavuṭṭhāpanasikkhāpadaṁ</a>",
+"134	pc	79	<a href=/sc/?q=pli-tv-bi-vb-pc79#1.11.0>Pācittiya 79. Sokāvāsasikkhāpadaṁ</a>",
+"135	pc	80	<a href=/sc/?q=pli-tv-bi-vb-pc80#1.14.0>Pācittiya 80. Ananuññātasikkhāpadaṁ</a>",
+"136	pc	81	<a href=/sc/?q=pli-tv-bi-vb-pc81#1.13.0>Pācittiya 81. Pārivāsikasikkhāpadaṁ</a>",
+"137	pc	82	<a href=/sc/?q=pli-tv-bi-vb-pc82#1.14.0>Pācittiya 82. Anuvassasikkhāpadaṁ</a>",
+"138	pc	83	<a href=/sc/?q=pli-tv-bi-vb-pc83#1.16.0>Pācittiya 83. Ekavassasikkhāpadaṁ</a>",
+"139	pc	84	<a href=/sc/?q=pli-tv-bi-vb-pc84#1.2.6.0>Pācittiya 84. Chattupāhanasikkhāpadaṁ</a>",
+"140	pc	85	<a href=/sc/?q=pli-tv-bi-vb-pc85#1.2.5.0>Pācittiya 85. Yānasikkhāpadaṁ</a>",
+"141	pc	86	<a href=/sc/?q=pli-tv-bi-vb-pc86#1.19.0>Pācittiya 86. Saṅghāṇisikkhāpadaṁ</a>",
+"142	pc	87	<a href=/sc/?q=pli-tv-bi-vb-pc87#1.14.0>Pācittiya 87. Itthālaṅkārasikkhāpadaṁ</a>",
+"143	pc	88	<a href=/sc/?q=pli-tv-bi-vb-pc88#1.14.0>Pācittiya 88. Gandhavaṇṇakasikkhāpadaṁ</a>",
+"144	pc	89	<a href=/sc/?q=pli-tv-bi-vb-pc89#1.14.0>Pācittiya 89. Vāsitakasikkhāpadaṁ</a>",
+"145	pc	90	<a href=/sc/?q=pli-tv-bi-vb-pc90#1.14.0>Pācittiya 90. Bhikkhuniummaddāpanasikkhāpadaṁ</a>",
+"146	pc	91	<a href=/sc/?q=bi-vb-pc91-93#1.13.0>Pācittiya 91. Sikkhamānaummaddāpanasikkhāpadaṁ</a>",
+"147	pc	92	<a href=/sc/?q=bi-vb-pc91-93#1.13.0>Pācittiya 92. Sāmaṇerīummaddāpanasikkhāpadaṁ</a>",
+"148	pc	93	<a href=/sc/?q=bi-vb-pc91-93#1.13.0>Pācittiya 93. Gihiniummaddāpanasikkhāpadaṁ</a>",
+"149	pc	94	<a href=/sc/?q=pli-tv-bi-vb-pc94#1.11.0>Pācittiya 94. Anāpucchāsikkhāpadaṁ</a>",
+"150	pc	95	<a href=/sc/?q=pli-tv-bi-vb-pc95#1.11.0>Pācittiya 95. Pañhāpucchanasikkhāpadaṁ</a>",
+"151	pc	96	<a href=/sc/?q=pli-tv-bi-vb-pc96#1.16.0>Pācittiya 96. Asaṅkaccikasikkhāpadaṁ</a>",
+"152	pc	97	<a href=/sc/?q=bi-pm#166.0.2>Pācittiya 97. Musāvādasikkhāpadaṁ</a>",
+"153	pc	98	<a href=/sc/?q=bi-pm#167.0>Pācittiya 98. Omasavādasikkhāpadaṁ</a>",
+"154	pc	99	<a href=/sc/?q=bi-pm#168.0>Pācittiya 99. Pesuññasikkhāpadaṁ</a>",
+"155	pc	100	<a href=/sc/?q=bi-pm#169.0>Pācittiya 100. Padasodhammasikkhāpadaṁ</a>",
+"156	pc	101	<a href=/sc/?q=bi-pm#170.0>Pācittiya 101. Paṭhamasahaseyyasikkhāpadaṁ</a>",
+"157	pc	102	<a href=/sc/?q=bi-pm#171.0>Pācittiya 102. Dutiyasahaseyyasikkhāpadaṁ</a>",
+"158	pc	103	<a href=/sc/?q=bi-pm#172.0>Pācittiya 103. Dhammadesanāsikkhāpadaṁ</a>",
+"159	pc	104	<a href=/sc/?q=bi-pm#173.0>Pācittiya 104. Bhūtārocanasikkhāpadaṁ</a>",
+"160	pc	105	<a href=/sc/?q=bi-pm#174.0>Pācittiya 105. Duṭṭhullārocanasikkhāpadaṁ</a>",
+"161	pc	106	<a href=/sc/?q=bi-pm#175.0>Pācittiya 106. Pathavīkhaṇanasikkhāpadaṁ</a>",
+"162	pc	107	<a href=/sc/?q=bi-pm#176.0.2>Pācittiya 107. Bhūtagāmasikkhāpadaṁ</a>",
+"163	pc	108	<a href=/sc/?q=bi-pm#177.0>Pācittiya 108. Aññavādakasikkhāpadaṁ</a>",
+"164	pc	109	<a href=/sc/?q=bi-pm#178.0>Pācittiya 109. Ujjhāpanakasikkhāpadaṁ</a>",
+"165	pc	110	<a href=/sc/?q=bi-pm#179.0>Pācittiya 110. Paṭhamasenāsanasikkhāpadaṁ</a>",
+"166	pc	111	<a href=/sc/?q=bi-pm#180.0>Pācittiya 111. Dutiyasenāsanasikkhāpadaṁ</a>",
+"167	pc	112	<a href=/sc/?q=bi-pm#181.0>Pācittiya 112. Anupakhajjasikkhāpadaṁ</a>",
+"168	pc	113	<a href=/sc/?q=bi-pm#182.0>Pācittiya 113. Nikkaḍḍhanasikkhāpadaṁ</a>",
+"169	pc	114	<a href=/sc/?q=bi-pm#183.0>Pācittiya 114. Vehāsakuṭisikkhāpadaṁ</a>",
+"170	pc	115	<a href=/sc/?q=bi-pm#184.0>Pācittiya 115. Mahallakavihārasikkhāpadaṁ</a>",
+"171	pc	116	<a href=/sc/?q=bi-pm#185.0>Pācittiya 116. Sappāṇakasikkhāpadaṁ</a>",
+"172	pc	117	<a href=/sc/?q=bi-pm#186.0.2>Pācittiya 117. Āvasathapiṇḍasikkhāpadaṁ</a>",
+"173	pc	118	<a href=/sc/?q=bi-pm#187.0>Pācittiya 118. Gaṇabhojanasikkhāpadaṁ</a>",
+"174	pc	119	<a href=/sc/?q=bi-pm#188.0>Pācittiya 119. Kāṇamātusikkhāpadaṁ</a>",
+"175	pc	120	<a href=/sc/?q=bi-pm#189.0>Pācittiya 120. Vikālabhojanasikkhāpadaṁ</a>",
+"176	pc	121	<a href=/sc/?q=bi-pm#190.0>Pācittiya 121. Sannidhikārakasikkhāpadaṁ</a>",
+"177	pc	122	<a href=/sc/?q=bi-pm#191.0>Pācittiya 122. Dantaponasikkhāpadaṁ</a>",
+"178	pc	123	<a href=/sc/?q=bi-pm#192.0>Pācittiya 123. Uyyojanasikkhāpadaṁ</a>",
+"179	pc	124	<a href=/sc/?q=bi-pm#193.0>Pācittiya 124. Sabhojanasikkhāpadaṁ</a>",
+"180	pc	125	<a href=/sc/?q=bi-pm#194.0>Pācittiya 125. Rahopaṭicchannasikkhāpadaṁ</a>",
+"181	pc	126	<a href=/sc/?q=bi-pm#195.0>Pācittiya 126. Rahonisajjasikkhāpadaṁ</a>",
+"182	pc	127	<a href=/sc/?q=bi-pm#196.0.2>Pācittiya 127. Cārittasikkhāpadaṁ</a>",
+"183	pc	128	<a href=/sc/?q=bi-pm#197.0>Pācittiya 128. Mahānāmasikkhāpadaṁ</a>",
+"184	pc	129	<a href=/sc/?q=bi-pm#198.0>Pācittiya 129. Uyyuttasenāsikkhāpadaṁ</a>",
+"185	pc	130	<a href=/sc/?q=bi-pm#199.0>Pācittiya 130. Senāvāsasikkhāpadaṁ</a>",
+"186	pc	131	<a href=/sc/?q=bi-pm#200.0>Pācittiya 131. Uyyodhikasikkhāpadaṁ</a>",
+"187	pc	132	<a href=/sc/?q=bi-pm#201.0>Pācittiya 132. Surāpānasikkhāpadaṁ</a>",
+"188	pc	133	<a href=/sc/?q=bi-pm#202.0>Pācittiya 133. Aṅgulipatodakasikkhāpadaṁ</a>",
+"189	pc	134	<a href=/sc/?q=bi-pm#203.0>Pācittiya 134. Hasadhammasikkhāpadaṁ</a>",
+"190	pc	135	<a href=/sc/?q=bi-pm#204.0>Pācittiya 135. Anādariyasikkhāpadaṁ</a>",
+"191	pc	136	<a href=/sc/?q=bi-pm#205.0>Pācittiya 136. Bhiṁsāpanasikkhāpadaṁ</a>",
+"192	pc	137	<a href=/sc/?q=bi-pm#206.0.2>Pācittiya 137. Jotisikkhāpadaṁ</a>",
+"193	pc	138	<a href=/sc/?q=bi-pm#207.0>Pācittiya 138. Nahānasikkhāpadaṁ</a>",
+"194	pc	139	<a href=/sc/?q=bi-pm#208.0>Pācittiya 139. Dubbaṇṇakaraṇasikkhāpadaṁ</a>",
+"195	pc	140	<a href=/sc/?q=bi-pm#209.0>Pācittiya 140. Vikappanasikkhāpadaṁ</a>",
+"196	pc	141	<a href=/sc/?q=bi-pm#210.0>Pācittiya 141. Apanidhāpanasikkhāpadaṁ</a>",
+"197	pc	142	<a href=/sc/?q=bi-pm#211.0>Pācittiya 142. Sañciccasikkhāpadaṁ</a>",
+"198	pc	143	<a href=/sc/?q=bi-pm#212.0>Pācittiya 143. Sappāṇakasikkhāpadaṁ</a>",
+"199	pc	144	<a href=/sc/?q=bi-pm#213.0>Pācittiya 144. Ukkoṭanasikkhāpadaṁ</a>",
+"200	pc	145	<a href=/sc/?q=bi-pm#214.0>Pācittiya 145. Theyyasatthasikkhāpadaṁ</a>",
+"201	pc	146	<a href=/sc/?q=bi-pm#215.0>Pācittiya 146. Ariṭṭhasikkhāpadaṁ</a>",
+"202	pc	147	<a href=/sc/?q=bi-pm#216.0.2>Pācittiya 147. Ukkhittasambhogasikkhāpadaṁ</a>",
+"203	pc	148	<a href=/sc/?q=bi-pm#217.0>Pācittiya 148. Kaṇṭakasikkhāpadaṁ</a>",
+"204	pc	149	<a href=/sc/?q=bi-pm#218.0>Pācittiya 149. Sahadhammikasikkhāpadaṁ</a>",
+"205	pc	150	<a href=/sc/?q=bi-pm#219.0>Pācittiya 150. Vilekhanasikkhāpadaṁ</a>",
+"206	pc	151	<a href=/sc/?q=bi-pm#220.0>Pācittiya 151. Mohanasikkhāpadaṁ</a>",
+"207	pc	152	<a href=/sc/?q=bi-pm#221.0>Pācittiya 152. Pahārasikkhāpadaṁ</a>",
+"208	pc	153	<a href=/sc/?q=bi-pm#222.0>Pācittiya 153. Talasattikasikkhāpadaṁ</a>",
+"209	pc	154	<a href=/sc/?q=bi-pm#223.0>Pācittiya 154. Amūlakasikkhāpadaṁ</a>",
+"210	pc	155	<a href=/sc/?q=bi-pm#224.0>Pācittiya 155. Sañciccasikkhāpadaṁ</a>",
+"211	pc	156	<a href=/sc/?q=bi-pm#225.0>Pācittiya 156. Upassuti sikkhāpadaṁ</a>",
+"212	pc	157	<a href=/sc/?q=bi-pm#226.0.2>Pācittiya 157. Kammappaṭibāhanasikkhāpadaṁ</a>",
+"213	pc	158	<a href=/sc/?q=bi-pm#227.0>Pācittiya 158. Chandaṁadatvāgamanasikkhāpadaṁ</a>",
+"214	pc	159	<a href=/sc/?q=bi-pm#228.0>Pācittiya 159. Dubbalasikkhāpadaṁ</a>",
+"215	pc	160	<a href=/sc/?q=bi-pm#229.0>Pācittiya 160. Pariṇāmanasikkhāpadaṁ</a>",
+"216	pc	161	<a href=/sc/?q=bi-pm#230.0>Pācittiya 161. Ratanasikkhāpadaṁ</a>",
+"217	pc	162	<a href=/sc/?q=bi-pm#231.0>Pācittiya 162. Sūcigharasikkhāpadaṁ</a>",
+"218	pc	163	<a href=/sc/?q=bi-pm#232.0>Pācittiya 163. Mañcapīṭhasikkhāpadaṁ</a>",
+"219	pc	164	<a href=/sc/?q=bi-pm#233.0>Pācittiya 164. Tūlonaddhasikkhāpadaṁ</a>",
+"220	pc	165	<a href=/sc/?q=bi-pm#234.0>Pācittiya 165. Kaṇḍuppaṭicchādisikkhāpadaṁ</a>",
+"221	pc	166	<a href=/sc/?q=bi-pm#235.0>Pācittiya 166. Nandasikkhāpadaṁ</a>",
+"222	pd	1	<a href=/sc/?q=pli-tv-bi-vb-pd1#1.2.9.0>Pāṭidesanīya 1. Sappiviññāpanasikkhāpadaṁ</a>",
+"223	pd	2	<a href=/sc/?q=bi-pm#239.0>Pāṭidesanīya 2. Telaviññāpanasikkhāpadaṁ</a>",
+"224	pd	3	<a href=/sc/?q=bi-pm#240.0>Pāṭidesanīya 3. Madhuviññāpanasikkhāpadaṁ</a>",
+"225	pd	4	<a href=/sc/?q=bi-pm#241.0>Pāṭidesanīya 4. Phāṇitaviññāpanasikkhāpadaṁ</a>",
+"226	pd	5	<a href=/sc/?q=bi-pm#242.0>Pāṭidesanīya 5. Macchaviññāpanasikkhāpadaṁ</a>",
+"227	pd	6	<a href=/sc/?q=bi-pm#243.0>Pāṭidesanīya 6. Maṁsaviññāpanasikkhāpadaṁ</a>",
+"228	pd	7	<a href=/sc/?q=bi-pm#244.0>Pāṭidesanīya 7. Khīraviññāpanasikkhāpadaṁ</a>",
+"229	pd	8	<a href=/sc/?q=bi-pm#245.0>Pāṭidesanīya 8. Dadhiviññāpanasikkhāpadaṁ</a>",
+"230	sk	1	<a href=/sc/?q=pli-tv-bi-vb-sk1#1.14.0>Sekhiya 1. Parimaṇḍalasikkhāpadaṁ</a>",
+"231	sk	2	<a href=/sc/?q=bi-pm#249.0>Sekhiya 2. Dutiyaparimaṇḍalasikkhāpadaṁ</a>",
+"232	sk	3	<a href=/sc/?q=bi-pm#250.0>Sekhiya 3. Suppaṭicchannasikkhāpadaṁ</a>",
+"233	sk	4	<a href=/sc/?q=bi-pm#251.0>Sekhiya 4. Dutiyasuppaṭicchannasikkhāpadaṁ</a>",
+"234	sk	5	<a href=/sc/?q=bi-pm#252.0>Sekhiya 5. Susaṁvutasikkhāpadaṁ</a>",
+"235	sk	6	<a href=/sc/?q=bi-pm#253.0>Sekhiya 6. Dutiyasusaṁvutasikkhāpadaṁ</a>",
+"236	sk	7	<a href=/sc/?q=bi-pm#254.0>Sekhiya 7. Okkhittacakkhusikkhāpadaṁ</a>",
+"237	sk	8	<a href=/sc/?q=bi-pm#255.0>Sekhiya 8. Dutiya-okkhittacakkhusikkhāpadaṁ</a>",
+"238	sk	9	<a href=/sc/?q=bi-pm#256.0>Sekhiya 9. Ukkhittakasikkhāpadaṁ</a>",
+"239	sk	10	<a href=/sc/?q=bi-pm#257.0>Sekhiya 10. Dutiya-ukkhittakasikkhāpadaṁ</a>",
+"240	sk	11	<a href=/sc/?q=bi-pm#258.0.2>Sekhiya 11. Ujjagghikasikkhāpadaṁ</a>",
+"241	sk	12	<a href=/sc/?q=bi-pm#259.0>Sekhiya 12. Dutiya-ujjagghikasikkhāpadaṁ</a>",
+"242	sk	13	<a href=/sc/?q=bi-pm#260.0>Sekhiya 13. Uccasaddasikkhāpadaṁ</a>",
+"243	sk	14	<a href=/sc/?q=bi-pm#261.0>Sekhiya 14. Dutiya-uccasaddasikkhāpadaṁ</a>",
+"244	sk	15	<a href=/sc/?q=bi-pm#262.0>Sekhiya 15. Kāyappacālakasikkhāpadaṁ</a>",
+"245	sk	16	<a href=/sc/?q=bi-pm#263.0>Sekhiya 16. Dutiyakāyappacālakasikkhāpadaṁ</a>",
+"246	sk	17	<a href=/sc/?q=bi-pm#264.0>Sekhiya 17. Bāhuppacālakasikkhāpadaṁ</a>",
+"247	sk	18	<a href=/sc/?q=bi-pm#265.0>Sekhiya 18. Dutiyabāhuppacālakasikkhāpadaṁ</a>",
+"248	sk	19	<a href=/sc/?q=bi-pm#266.0>Sekhiya 19. Sīsappacālakasikkhāpadaṁ</a>",
+"249	sk	20	<a href=/sc/?q=bi-pm#267.0>Sekhiya 20. Dutiyasīsappacālakasikkhāpadaṁ</a>",
+"250	sk	21	<a href=/sc/?q=bi-pm#268.0.2>Sekhiya 21. Khambhakatasikkhāpadaṁ</a>",
+"251	sk	22	<a href=/sc/?q=bi-pm#269.0>Sekhiya 22. Dutiyakhambhakatasikkhāpadaṁ</a>",
+"252	sk	23	<a href=/sc/?q=bi-pm#270.0>Sekhiya 23. Oguṇṭhitasikkhāpadaṁ</a>",
+"253	sk	24	<a href=/sc/?q=bi-pm#271.0>Sekhiya 24. Dutiya-oguṇṭhitasikkhāpadaṁ</a>",
+"254	sk	25	<a href=/sc/?q=bi-pm#272.0>Sekhiya 25. Ukkuṭikasikkhāpadaṁ</a>",
+"255	sk	26	<a href=/sc/?q=bi-pm#273.0>Sekhiya 26. Pallatthikasikkhāpadaṁ</a>",
+"256	sk	27	<a href=/sc/?q=bi-pm#274.0>Sekhiya 27. Sakkaccapaṭiggahaṇasikkhāpadaṁ</a>",
+"257	sk	28	<a href=/sc/?q=bi-pm#275.0>Sekhiya 28. Pattasaññinīpaṭiggahaṇasikkhāpadaṁ</a>",
+"258	sk	29	<a href=/sc/?q=bi-pm#276.0>Sekhiya 29. Samasūpakapaṭiggahaṇasikkhāpadaṁ</a>",
+"259	sk	30	<a href=/sc/?q=bi-pm#277.0>Sekhiya 30. Samatittikasikkhāpadaṁ</a>",
+"260	sk	31	<a href=/sc/?q=bi-pm#278.0.2>Sekhiya 31. Sakkaccabhuñjanasikkhāpadaṁ</a>",
+"261	sk	32	<a href=/sc/?q=bi-pm#279.0>Sekhiya 32. Pattasaññinībhuñjanasikkhāpadaṁ</a>",
+"262	sk	33	<a href=/sc/?q=bi-pm#280.0>Sekhiya 33. Sapadānasikkhāpadaṁ</a>",
+"263	sk	34	<a href=/sc/?q=bi-pm#281.0>Sekhiya 34. Samasūpakasikkhāpadaṁ</a>",
+"264	sk	35	<a href=/sc/?q=bi-pm#282.0>Sekhiya 35. Na thūpakatasikkhāpadaṁ</a>",
+"265	sk	36	<a href=/sc/?q=bi-pm#283.0>Sekhiya 36. Odanappaṭicchādanasikkhāpadaṁ</a>",
+"266	sk	37	<a href=/sc/?q=bi-pm#284.0>Sekhiya 37. Sūpodanaviññattisikkhāpadaṁ</a>",
+"267	sk	38	<a href=/sc/?q=bi-pm#285.0>Sekhiya 38. Ujjhānasaññinīsikkhāpadaṁ</a>",
+"268	sk	39	<a href=/sc/?q=bi-pm#286.0>Sekhiya 39. Kabaḷasikkhāpadaṁ</a>",
+"269	sk	40	<a href=/sc/?q=bi-pm#287.0>Sekhiya 40. Ālopasikkhāpadaṁ</a>",
+"270	sk	41	<a href=/sc/?q=bi-pm#288.0.2>Sekhiya 41. Anāhaṭasikkhāpadaṁ</a>",
+"271	sk	42	<a href=/sc/?q=bi-pm#289.0>Sekhiya 42. Bhuñjamānasikkhāpadaṁ</a>",
+"272	sk	43	<a href=/sc/?q=bi-pm#290.0>Sekhiya 43. Sakabaḷasikkhāpadaṁ</a>",
+"273	sk	44	<a href=/sc/?q=bi-pm#291.0>Sekhiya 44. Piṇḍukkhepakasikkhāpadaṁ</a>",
+"274	sk	45	<a href=/sc/?q=bi-pm#292.0>Sekhiya 45. Kabaḷāvacchedakasikkhāpadaṁ</a>",
+"275	sk	46	<a href=/sc/?q=bi-pm#293.0>Sekhiya 46. Avagaṇḍakārakasikkhāpadaṁ</a>",
+"276	sk	47	<a href=/sc/?q=bi-pm#294.0>Sekhiya 47. Hatthaniddhunakasikkhāpadaṁ</a>",
+"277	sk	48	<a href=/sc/?q=bi-pm#295.0>Sekhiya 48. Sitthāvakārakasikkhāpadaṁ</a>",
+"278	sk	49	<a href=/sc/?q=bi-pm#296.0>Sekhiya 49. Jivhānicchārakasikkhāpadaṁ</a>",
+"279	sk	50	<a href=/sc/?q=bi-pm#297.0>Sekhiya 50. Capucapukārakasikkhāpadaṁ</a>",
+"280	sk	51	<a href=/sc/?q=bi-pm#298.0.2>Sekhiya 51. Surusurukārakasikkhāpadaṁ</a>",
+"281	sk	52	<a href=/sc/?q=bi-pm#299.0>Sekhiya 52. Hatthanillehakasikkhāpadaṁ</a>",
+"282	sk	53	<a href=/sc/?q=bi-pm#300.0>Sekhiya 53. Pattanillehakasikkhāpadaṁ</a>",
+"283	sk	54	<a href=/sc/?q=bi-pm#301.0>Sekhiya 54. Oṭṭhanillehakasikkhāpadaṁ</a>",
+"284	sk	55	<a href=/sc/?q=bi-pm#302.0>Sekhiya 55. Sāmisasikkhāpadaṁ</a>",
+"285	sk	56	<a href=/sc/?q=bi-pm#303.0>Sekhiya 56. Sasitthakasikkhāpadaṁ</a>",
+"286	sk	57	<a href=/sc/?q=bi-pm#304.0>Sekhiya 57. Chattapāṇisikkhāpadaṁ</a>",
+"287	sk	58	<a href=/sc/?q=bi-pm#305.0>Sekhiya 58. Daṇḍapāṇisikkhāpadaṁ</a>",
+"288	sk	59	<a href=/sc/?q=bi-pm#306.0>Sekhiya 59. Satthapāṇisikkhāpadaṁ</a>",
+"289	sk	60	<a href=/sc/?q=bi-pm#307.0>Sekhiya 60. Āvudhapāṇisikkhāpadaṁ</a>",
+"290	sk	61	<a href=/sc/?q=bi-pm#308.0.2>Sekhiya 61. Pādukasikkhāpadaṁ</a>",
+"291	sk	62	<a href=/sc/?q=bi-pm#309.0>Sekhiya 62. Upāhanasikkhāpadaṁ</a>",
+"292	sk	63	<a href=/sc/?q=bi-pm#310.0>Sekhiya 63. Yānasikkhāpadaṁ</a>",
+"293	sk	64	<a href=/sc/?q=bi-pm#311.0>Sekhiya 64. Sayanasikkhāpadaṁ</a>",
+"294	sk	65	<a href=/sc/?q=bi-pm#312.0>Sekhiya 65. Pallatthikasikkhāpadaṁ</a>",
+"295	sk	66	<a href=/sc/?q=bi-pm#313.0>Sekhiya 66. Veṭhitasikkhāpadaṁ</a>",
+"296	sk	67	<a href=/sc/?q=bi-pm#314.0>Sekhiya 67. Oguṇṭhitasikkhāpadaṁ</a>",
+"297	sk	68	<a href=/sc/?q=bi-pm#315.0>Sekhiya 68. Chamāsikkhāpadaṁ</a>",
+"298	sk	69	<a href=/sc/?q=bi-pm#316.0>Sekhiya 69. Nīcāsanasikkhāpadaṁ</a>",
+"299	sk	70	<a href=/sc/?q=bi-pm#317.0>Sekhiya 70. Ṭhitāsikkhāpadaṁ</a>",
+"300	sk	71	<a href=/sc/?q=bi-pm#318.0>Sekhiya 71. Pacchatogacchantīsikkhāpadaṁ</a>",
+"301	sk	72	<a href=/sc/?q=bi-pm#319.0>Sekhiya 72. Uppathenagacchantīsikkhāpadaṁ</a>",
+"302	sk	73	<a href=/sc/?q=bi-pm#320.0>Sekhiya 73. Ṭhitāuccārasikkhāpadaṁ</a>",
+"303	sk	74	<a href=/sc/?q=bi-pm#321.0>Sekhiya 74. Hariteuccārasikkhāpadaṁ</a>",
+"304	sk	75	<a href=/sc/?q=pli-tv-bi-vb-sk75#2.5.0>Sekhiya 75. Udakeuccārasikkhāpadaṁ</a>",
+"305	as	1	<a href=/sc/?q=pli-tv-bu-vb-as1-7#2.2>Adhikaraṇasamatha 1.</a>",
+"306	as	2	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 2.</a>",
+"307	as	3	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 3.</a>",
+"308	as	4	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 4.</a>",
+"309	as	5	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 5.</a>",
+"310	as	6	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 6.</a>",
+"311	as	7	<a href=/sc/?q=pli-tv-bu-vb-as1-7#1.1>Adhikaraṇasamatha 7.</a>"
+];
+
+	
+        let currentIndex; // Индекс текущей записи
+
+        // Функция для генерации случайного числа
+        function getRandomIndex(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        // Функция для отображения записи
+        function showRecord(index) {
+            const randomRecord = records[index];
+            document.getElementById("randomRecord").innerHTML = randomRecord;
+        }
+
+        // Функция для скрытия названия правила
+        function hideRuleName(record) {
+            const parts = record.split('\t');
+            if (parts.length >= 4) {
+                return `${parts[0]}\t${parts[1]}\t${parts[2]}\t`;
+            }
+            return "Ошибка в формате записи";
+        }
+
+        // Функция для отображения только номера записи
+        function showNumberOnly(index) {
+            const randomRecord = records[index];
+            const parts = randomRecord.split('\t');
+            if (parts.length > 0) {
+                document.getElementById("randomRecord").innerHTML = parts[0];
+            } else {
+                document.getElementById("randomRecord").innerHTML = "Ошибка в формате записи";
+            }
+        }
+
+        // Функция для обновления отображения в зависимости от состояния чекбоксов
+        function updateDisplay() {
+            if (document.getElementById("numberOnlyCheckbox").checked) {
+                showNumberOnly(currentIndex);
+            } else {
+                const record = records[currentIndex];
+                if (document.getElementById("hideRuleNameCheckbox").checked) {
+                    const hiddenRecord = hideRuleName(record);
+                    document.getElementById("randomRecord").innerHTML = hiddenRecord;
+                } else {
+                    showRecord(currentIndex);
+                }
+            }
+            // Сохраняем состояния чекбоксов в localStorage
+            localStorage.setItem('rrtick', document.getElementById("numberOnlyCheckbox").checked);
+            localStorage.setItem('rrtick2', document.getElementById("hideRuleNameCheckbox").checked);
+        }
+
+        // Обработчик нажатия кнопки
+        document.getElementById("randomButton").addEventListener("click", () => {
+            currentIndex = getRandomIndex(records.length);
+            updateDisplay();
+        });
+
+        // Обработчик изменения состояния чекбоксов
+        document.getElementById("numberOnlyCheckbox").addEventListener("change", updateDisplay);
+        document.getElementById("hideRuleNameCheckbox").addEventListener("change", updateDisplay);
+
+        // Проверяем состояния чекбоксов в localStorage и применяем их при загрузке страницы
+        const savedCheckboxState = localStorage.getItem('rrtick');
+        if (savedCheckboxState === 'true') {
+            document.getElementById("numberOnlyCheckbox").checked = true;
+        }
+        const savedCheckboxState2 = localStorage.getItem('rrtick2');
+        if (savedCheckboxState2 === 'true') {
+            document.getElementById("hideRuleNameCheckbox").checked = true;
+        }
+        currentIndex = getRandomIndex(records.length);
+        updateDisplay();
+    </script>
+
+    <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
+    <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+    <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+</body>
+</html>
+
+
+ <!-- /* "1	pj	1	Pārājika 1. Methunadhamma",
+  "2	pj	2	Pārājika 2. Adinnādāna",
+  "3	pj	3	Pārājika 3. Manussaviggaha",
+  "4	pj	4	Pārājika 4. Uttarimanussadhamma",
+  "5	ss	1	Saṅghādisesa 1. Sukkavissaṭṭhi",
+  "6	ss	2	Saṅghādisesa 2. Kāyasaṁsagga",
+  "7	ss	3	Saṅghādisesa 3. Duṭṭhullavācā",
+  "8	ss	4	Saṅghādisesa 4. Attakāmapāricariya",
+  "9	ss	5	Saṅghādisesa 5. Sañcaritta",
+  "10	ss	6	Saṅghādisesa 6. Kuṭikāra",
+  "11	ss	7	Saṅghādisesa 7. Vihārakāra",
+  "12	ss	8	Saṅghādisesa 8. Duṭṭhadosa",
+  "13	ss	9	Saṅghādisesa 9. Aññabhāgiya",
+  "14	ss	10	Saṅghādisesa 10. Saṅghabheda",
+  "15	ss	11	Saṅghādisesa 11. Bhedānuvattaka",
+  "16	ss	12	Saṅghādisesa 12. Dubbaca",
+  "17	ss	13	Saṅghādisesa 13. Kuladūsaka",
+  "18	an	1	Aniyata 1. Paṭhamaaniyata",
+  "19	an	2	Aniyata 2. Dutiyaaniyata",
+  "20	np	1	Nissaggiya Pācittiya 1. Kathina",
+  "21	np	2	Nissaggiya Pācittiya 2. Udosita",
+  "22	np	3	Nissaggiya Pācittiya 3. Akālacīvara",
+  "23	np	4	Nissaggiya Pācittiya 4. Purāṇacīvara",
+  "24	np	5	Nissaggiya Pācittiya 5. Cīvarapaṭiggahaṇa",
+  "25	np	6	Nissaggiya Pācittiya 6. Aññātakaviññatti",
+  "26	np	7	Nissaggiya Pācittiya 7. Tatuttari",
+  "27	np	8	Nissaggiya Pācittiya 8. Paṭhamaupakkhaṭa",
+  "28	np	9	Nissaggiya Pācittiya 9. Dutiyaupakkhaṭa",
+  "29	np	10	Nissaggiya Pācittiya 10. Rāja",
+  "30	np	11	Nissaggiya Pācittiya 11. Kosiya",
+  "31	np	12	Nissaggiya Pācittiya 12. Suddhakāḷaka",
+  "32	np	13	Nissaggiya Pācittiya 13. Dvebhāga",
+  "33	np	14	Nissaggiya Pācittiya 14. Chabbassa",
+  "34	np	15	Nissaggiya Pācittiya 15. Nisīdanasanthata",
+  "35	np	16	Nissaggiya Pācittiya 16. Eḷakaloma",
+  "36	np	17	Nissaggiya Pācittiya 17. Eḷakalomadhovāpana",
+  "37	np	18	Nissaggiya Pācittiya 18. Rūpiya",
+  "38	np	19	Nissaggiya Pācittiya 19. Rūpiyasaṁvohāra",
+  "39	np	20	Nissaggiya Pācittiya 20. Kayavikkaya",
+  "40	np	21	Nissaggiya Pācittiya 21. Patta",
+  "41	np	22	Nissaggiya Pācittiya 22. Ūnapañcabandhana",
+  "42	np	23	Nissaggiya Pācittiya 23. Bhesajja",
+  "43	np	24	Nissaggiya Pācittiya 24. Vassikasāṭika",
+  "44	np	25	Nissaggiya Pācittiya 25. Cīvaraacchindana",
+  "45	np	26	Nissaggiya Pācittiya 26. Suttaviññatti",
+  "46	np	27	Nissaggiya Pācittiya 27. Mahāpesakāra",
+  "47	np	28	Nissaggiya Pācittiya 28. Accekacīvara",
+  "48	np	29	Nissaggiya Pācittiya 29. Sāsaṅka",
+  "49	np	30	Nissaggiya Pācittiya 30. Pariṇata",
+  "50	pc	1	Pācittiya 1. Musāvāda",
+  "51	pc	2	Pācittiya 2. Omasavāda",
+  "52	pc	3	Pācittiya 3. Pesuñña",
+  "53	pc	4	Pācittiya 4. Padasodhamma",
+  "54	pc	5	Pācittiya 5. Paṭhamasahaseyya",
+  "55	pc	6	Pācittiya 6. Dutiyasahaseyya",
+  "56	pc	7	Pācittiya 7. Dhammadesanā",
+  "57	pc	8	Pācittiya 8. Bhūtārocana",
+  "58	pc	9	Pācittiya 9. Duṭṭhullārocana",
+  "59	pc	10	Pācittiya 10. Pathavīkhaṇana",
+  "60	pc	11	Pācittiya 11. Bhūtagāma",
+  "61	pc	12	Pācittiya 12. Aññavādaka",
+  "62	pc	13	Pācittiya 13. Ujjhāpanaka",
+  "63	pc	14	Pācittiya 14. Paṭhamasenāsana",
+  "64	pc	15	Pācittiya 15. Dutiyasenāsana",
+  "65	pc	16	Pācittiya 16. Anupakhajja",
+  "66	pc	17	Pācittiya 17. Nikkaḍḍhana",
+  "67	pc	18	Pācittiya 18. Vehāsakuṭi",
+  "68	pc	19	Pācittiya 19. Mahallakavihāra",
+  "69	pc	20	Pācittiya 20. Sappāṇaka",
+
+  "70	pc	21	Pācittiya 21. Ovāda",
+  "71	pc	22	Pācittiya 22. Atthaṅgata",
+  "72	pc	23	Pācittiya 23. Bhikkhunupassaya",
+  "73	pc	24	Pācittiya 24. Āmisa",
+  "74	pc	25	Pācittiya 25. Cīvaradāna",
+  "75	pc	26	Pācittiya 26. Cīvarasibbana",
+  "76	pc	27	Pācittiya 27. Saṁvidhāna",
+  "77	pc	28	Pācittiya 28. Nāvābhiruhana",
+  "78	pc	29	Pācittiya 29. Paripācita",
+  "79	pc	30	Pācittiya 30. Rahonisajja",
+  "80	pc	31	Pācittiya 31. Āvasathapiṇḍa",
+  "81	pc	32	Pācittiya 32. Gaṇabhojana",
+  "82	pc	33	Pācittiya 33. Paramparabhojana",
+  "83	pc	34	Pācittiya 34. Kāṇamātu",
+  "84	pc	35	Pācittiya 35. Paṭhamapavāraṇā",
+  "85	pc	36	Pācittiya 36. Dutiyapavāraṇā",
+  "86	pc	37	Pācittiya 37. Vikālabhojana",
+  "87	pc	38	Pācittiya 38. Sannidhikāraka",
+  "88	pc	39	Pācittiya 39. Paṇītabhojana",
+  "89	pc	40	Pācittiya 40. Dantapona",
+  "90	pc	41	Pācittiya 41. Acelaka",
+  "91	pc	42	Pācittiya 42. Uyyojana",
+  "92	pc	43	Pācittiya 43. Sabhojana",
+  "93	pc	44	Pācittiya 44. Rahopaṭicchanna",
+  "94	pc	45	Pācittiya 45. Rahonisajja",
+  "95	pc	46	Pācittiya 46. Cāritta",
+  "96	pc	47	Pācittiya 47. Mahānāma",
+  "97	pc	48	Pācittiya 48. Uyyuttasenā",
+  "98	pc	49	Pācittiya 49. Senāvāsa",
+  "99	pc	50	Pācittiya 50. Uyyodhika",
+ 
+   "100	pc	51	Pācittiya 51. Surāpāna",
+  "101	pc	52	Pācittiya 52. Aṅgulipatodaka",
+  "102	pc	53	Pācittiya 53. Hasadhamma",
+  "103	pc	54	Pācittiya 54. Anādariya",
+  "104	pc	55	Pācittiya 55. Bhiṁsāpana",
+
+  "105	pc	56	Pācittiya 56. Joti",
+  "106	pc	57	Pācittiya 57. Nahāna",
+  "107	pc	58	Pācittiya 58. Dubbaṇṇakaraṇa",
+  "108	pc	59	Pācittiya 59. Vikappana",
+  "109	pc	60	Pācittiya 60. Apanidhāna",
+  "110	pc	61	Pācittiya 61. Sañcicca",
+  "111	pc	62	Pācittiya 62. Sappāṇaka",
+  "112	pc	63	Pācittiya 63. Ukkoṭana",
+  "113	pc	64	Pācittiya 64. Duṭṭhulla",
+  "114	pc	65	Pācittiya 65. Ūnavīsativassa",
+  "115	pc	66	Pācittiya 66. Theyyasattha",
+  "116	pc	67	Pācittiya 67. Saṁvidhāna",
+  "117	pc	68	Pācittiya 68. Ariṭṭha",
+  "118	pc	69	Pācittiya 69. Ukkhittasambhoga",
+  "119	pc	70	Pācittiya 70. Kaṇṭaka",
+  "120	pc	71	Pācittiya 71. Sahadhammika",
+  "121	pc	72	Pācittiya 72. Vilekhana",
+  "122	pc	73	Pācittiya 73. Mohana",
+  "123	pc	74	Pācittiya 74. Pahāra",
+  "124	pc	75	Pācittiya 75. Talasattika",
+  "125	pc	76	Pācittiya 76. Amūlaka",
+  "126	pc	77	Pācittiya 77. Sañcicca",
+  "127	pc	78	Pācittiya 78. Upassuti",
+  "128	pc	79	Pācittiya 79. Kammappaṭibāhana",
+  "129	pc	80	Pācittiya 80. Chandaṁadatvāgamana",
+  "130	pc	81	Pācittiya 81. Dubbala",
+  "131	pc	82	Pācittiya 82. Pariṇāmana",
+  "132	pc	83	Pācittiya 83. Antepura",
+  "133	pc	84	Pācittiya 84. Ratana",
+  "134	pc	85	Pācittiya 85. Vikālagāmappavesana",
+  "135	pc	86	Pācittiya 86. Sūcighara",
+  "136	pc	87	Pācittiya 87. Mañcapīṭha",
+  "137	pc	88	Pācittiya 88. Tūlonaddha",
+  "138	pc	89	Pācittiya 89. Nisīdana",
+  "139	pc	90	Pācittiya 90. Kaṇḍuppaṭicchādi",
+  "140	pc	91	Pācittiya 91. Vassikasāṭika",
+  "141	pc	92	Pācittiya 92. Nanda",
+
+  "142	pd	1	Pāṭidesanīya 1. Paṭhamapāṭidesanīya",
+  "143	pd	2	Pāṭidesanīya 2. Dutiyapāṭidesanīya",
+  "144	pd	3	Pāṭidesanīya 3. Tatiyapāṭidesanīya",
+  "145	pd	4	Pāṭidesanīya 4. Catutthapāṭidesanīya",
+
+    "146	sk	1	Sekhiya 1. Parimaṇḍala",
+  "147	sk	2	Sekhiya 2.",
+  "148	sk	3	Sekhiya 3. Suppaṭicchanna",
+  "149	sk	4	Sekhiya 4.",
+  "150	sk	5	Sekhiya 5. Susaṁvuta",
+  "151	sk	6	Sekhiya 6.",
+  "152	sk	7	Sekhiya 7. Okkhittacakkhu",
+  "153	sk	8	Sekhiya 8.",
+  "154	sk	9	Sekhiya 9. Ukkhittaka",
+  "155	sk	10	Sekhiya 10.",
+  "156	sk	11	Sekhiya 11. Ujjagghika",
+  "157	sk	12	Sekhiya 12.",
+  "158	sk	13	Sekhiya 13. Uccasadda",
+  "159	sk	14	Sekhiya 14.",
+  "160	sk	15	Sekhiya 15. Kāyappacālaka",
+  "161	sk	16	Sekhiya 16.",
+  "162	sk	17	Sekhiya 17. Bāhuppacālaka",
+  "163	sk	18	Sekhiya 18.",
+  "164	sk	19	Sekhiya 19. Sīsappacālaka",
+  "165	sk	20	Sekhiya 20.",
+  "166	sk	21	Sekhiya 21. Khambhakata",
+  "167	sk	22	Sekhiya 22.",
+  "168	sk	23	Sekhiya 23. Oguṇṭhita",
+  "169	sk	24	Sekhiya 24.",
+  "170	sk	25	Sekhiya 25. Ukkuṭika",
+  "171	sk	26	Sekhiya 26. Pallatthika",
+  "172	sk	27	Sekhiya 27. Sakkaccapaṭiggahaṇa",
+  "173	sk	28	Sekhiya 28. Pattasaññīpaṭiggahaṇa",
+  "174	sk	29	Sekhiya 29. Samasūpakapaṭiggahaṇa",
+  "175	sk	30	Sekhiya 30. Samatittika",
+  "176	sk	31	Sekhiya 31. Sakkaccabhuñjana",
+  "177	sk	32	Sekhiya 32. Pattasaññībhuñjana",
+  "178	sk	33	Sekhiya 33. Sapadāna",
+  "179	sk	34	Sekhiya 34. Samasūpaka",
+  "180	sk	35	Sekhiya 35. Nathūpakata",
+  "181	sk	36	Sekhiya 36. Odanappaṭicchādana",
+  "182	sk	37	Sekhiya 37. Sūpodanaviññatti",
+  "183	sk	38	Sekhiya 38. Ujjhānasaññī",
+  "184	sk	39	Sekhiya 39. Kabaḷa",
+  "185	sk	40	Sekhiya 40. Ālopa",
+  "186	sk	41	Sekhiya 41. Anāhaṭa",
+  "187	sk	42	Sekhiya 42. Bhuñjamāna",
+  "188	sk	43	Sekhiya 43. Sakabaḷa",
+  "189	sk	44	Sekhiya 44. Piṇḍukkhepaka",
+  "190	sk	45	Sekhiya 45. Kabaḷāvacchedaka",
+  "191	sk	46	Sekhiya 46. Avagaṇḍakāraka",
+  "192	sk	47	Sekhiya 47. Hatthaniddhunaka",
+  "193	sk	48	Sekhiya 48. Sitthāvakāraka",
+  "194	sk	49	Sekhiya 49. Jivhānicchāraka",
+  "195	sk	50	Sekhiya 50. Capucapukāraka",
+  "196	sk	51	Sekhiya 51. Surusurukāraka",
+  "197	sk	52	Sekhiya 52. Hatthanillehaka",
+  "198	sk	53	Sekhiya 53. Pattanillehaka",
+  "199	sk	54	Sekhiya 54. Oṭṭhanillehaka",
+  "200	sk	55	Sekhiya 55. Sāmisa",
+  "201	sk	56	Sekhiya 56. Sasitthaka",
+  "202	sk	57	Sekhiya 57. Chattapāṇi",
+  "203	sk	58	Sekhiya 58. Daṇḍapāṇi",
+  "204	sk	59	Sekhiya 59. Satthapāṇi",
+  "205	sk	60	Sekhiya 60. Āvudhapāṇi",
+  "206	sk	61	Sekhiya 61. Pāduka",
+  "207	sk	62	Sekhiya 62. Upāhana",
+  "208	sk	63	Sekhiya 63. Yāna",
+  "209	sk	64	Sekhiya 64. Sayana",
+  "210	sk	65	Sekhiya 65. Pallatthika",
+  "211	sk	66	Sekhiya 66. Veṭhita",
+  "212	sk	67	Sekhiya 67. Oguṇṭhita",
+  "213	sk	68	Sekhiya 68. Chamā",
+  "214	sk	69	Sekhiya 69. Nīcāsana",
+  "215	sk	70	Sekhiya 70. Ṭhita",
+  "216	sk	71	Sekhiya 71. Pacchatogamana",
+  "217	sk	72	Sekhiya 72. Uppathenagamana",
+  "218	sk	73	Sekhiya 73. Ṭhitouccāra",
+  "219	sk	74	Sekhiya 74. Hariteuccāra",
+  "220	sk	75	Sekhiya 75. Udakeuccāra",
+   "221	as	1	Adhikaraṇasamatha 1",
+  "222	as	2	Adhikaraṇasamatha 2",
+  "223	as	3	Adhikaraṇasamatha 3",
+  "224	as	4	Adhikaraṇasamatha 4",
+  "225	as	5	Adhikaraṇasamatha 5",
+  "226	as	6	Adhikaraṇasamatha 6",
+  "227	as	7	Adhikaraṇasamatha 7" */  -->

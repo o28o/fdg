@@ -660,14 +660,14 @@ foreach ($slides as $index => $slide) {
     <small class="text-muted"><?php echo $smdpdru;?></small>
   </a>
 
-<a target="_blank" href="https://play.google.com/store/apps/details?id=klye.plugin.pi1" class="list-group-item list-group-item-action">
+<!-- <a target="_blank" href="https://play.google.com/store/apps/details?id=klye.plugin.pi1" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $head5plikeyboard;?></h5>
       <small class="text-muted"><?php echo $detailapp;?></small>
     </div>
     <p class="mb-1"><?php echo $pplikeyboard;?></p>
     <small class="text-muted"><?php echo $smplikeyboard;?></small>
-  </a>
+  </a> 
 
     <a target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
@@ -695,7 +695,7 @@ foreach ($slides as $index => $slide) {
     </div>
     <p class="mb-1"><?php echo $ptamilcube;?></p>
     <small class="text-muted"></small>
-  </a>
+  </a> --> 
 
     <a target="_blank"  href="
   https://drive.google.com/drive/folders/1bdkm-g_ReZi5QEior_gNTok8r4flAfa3?usp=sharing" class="list-group-item list-group-item-action">
@@ -771,7 +771,7 @@ foreach ($slides as $index => $slide) {
     <small class="text-muted"></small>
   </a>
   
-   <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank"   class="list-group-item list-group-item-action">
+ <!--  <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank"   class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">T2S Android</h5>
       <small class="text-muted"><?php echo $detailapp;?></small>
@@ -787,7 +787,7 @@ foreach ($slides as $index => $slide) {
     </div>
     <p class="mb-1"><?php echo $pscvoice;?></p>
     <small class="text-muted"><?php echo $smscvoice;?></small>
-  </a>
+  </a> -->
   
 </div>  
 
@@ -837,7 +837,7 @@ foreach ($slides as $index => $slide) {
     <small class="text-muted"></small>
   </a>
  
-  <a target="_blank"  href="/assets/diff/" class="list-group-item list-group-item-action">
+ <!-- <a target="_blank"  href="/assets/diff/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $head5suttadiff;?></h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
@@ -862,7 +862,7 @@ foreach ($slides as $index => $slide) {
     </div>
     <p class="mb-1"><?php echo $pmakelist;?></p>
     <small class="text-muted"></small>
-  </a>
+  </a> -->
 </div>  
 
 </div>

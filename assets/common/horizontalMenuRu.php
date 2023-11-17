@@ -146,10 +146,17 @@ echo '<!--
    
    <!-- https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing -->
          <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>
-              <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>    
-            <li><a class="dropdown-item" href="#research">Исследование</a></li>
+              <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li> 
+              
+                 <li><a class="dropdown-item" href="/ru/assets/memo.html">
+        <i class="' . $iconimportant . '"></i> 
+       Мнемотехника</a></li>    
+    <li><a class="dropdown-item" href="/ru/assets/rd.html">Случайный падеж</a></li>    
+   <li><a class="dropdown-item" href="/ru/assets/rr.html">Случайное правило</a></li>        
+              
+    <!--        <li><a class="dropdown-item" href="#research">Исследование</a></li>
        <li><a class="dropdown-item" href="#read">Чтение</a></li>
-    <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li>
+    <li><a class="dropdown-item" href="#study">Учебные Материалы</a></li> -->
   
   </ul>
   
@@ -194,12 +201,6 @@ echo '<!--
 </li>
 
 
-  
-       <li><a class="dropdown-item" href="/ru/assets/memo.html">
-        <i class="' . $iconimportant . '"></i> 
-       Мнемотехника</a></li>    
-    <li><a class="dropdown-item" href="/ru/assets/rd.html">Случайный падеж</a></li>    
-   <li><a class="dropdown-item" href="/ru/assets/rr.html">Случайное правило</a></li>    
    <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">
    <i class="' . $iconimportant . '"></i>

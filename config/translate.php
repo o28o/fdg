@@ -230,7 +230,7 @@ $aboutheader = 'О Проекте';
 $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift это поисковая система Освобождения. Точный Поиск в текстах Дхаммы и Винаи Палийского Канона с результатами в удобных таблицах с построчными переводами SuttaCentral.net, TheBuddhasWords.net, Theravada.ru и Tipitaka.theravada.su. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
 <div class="col-lg-4 me-auto"><p class="lead">Дхамма энтузиасты горячо приветствуются. Проект нуждается в помощи (не материальной): в подготовке построчных текстов на пали и русском, для этого не нужно знать пали, и если вы хотите помочь, пожалуйста, свяжитесь по почте или через Github ссылка внизу страницы. </p></div>';
 $prongh = ' Проект на GitHub';
-$premail = ' Напишите мне';
+$premail = ' Написать';
 
 $headerexamples = 'Примеры';
 $examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">dukkha</a> на Пали и Русском. Запрос: <a href="/ru/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">-la1 Kata.*, dukkhaṁ\\\\?</a>
@@ -678,7 +678,7 @@ $aboutheader = 'About Project';
 $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift serves as a Liberation Search Engine for Dhamma and Vinaya, the core of the Pali Canon. </br></br>It presents results in informative tables with line by line translations from sources like SuttaCentral.net, TheBuddhasWords.net, Theravada.ru, and Theravada.su. </p></div>
 <div class="col-lg-4 me-auto"><p class="lead">You can search in Pali, Russian, Thai, and English for meanings, definitions, metaphors, explanations, people, places, and more as described in Suttas and Vinaya.</br></br>Dhamma enthusiasts and contributors, especially developers, are warmly invited to participate.</p></div>';
 $prongh = ' Project on GitHub';
-$premail = ' Mail me';
+$premail = ' Send email';
 
 $headerexamples = 'Examples';
 $examplelist = '<li>Definition of the <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">dukkha</a> in Pali with quotes in English. Query is: <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">-la1 Kata.*, dukkhaṁ\\\\?</a></li>

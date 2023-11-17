@@ -126,9 +126,19 @@ echo '<!--
         ' . $anametextbook . '</a></li>
     <li><a class="dropdown-item" href="' . $linksothermat . '">' . $anameothermat . '</a></li>
          <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
-       <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
+         
+         <li><a class="dropdown-item" href="/ru/assets/memo.html">
+
+  <i class="' . $iconimportant . '"></i>
+
+Memorizer</a></li>    
+
+    <li><a class="dropdown-item" href="/ru/assets/rd.html">Random declention</a></li>    
+       <li><a class="dropdown-item" href="/assets/rr.html">Random rule</a></li> 
+       
+  <!--     <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
        <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
-    <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li>
+    <li><a class="dropdown-item" href="#study">' . $anamestudy . '</a></li> -->
 </ul>
 
 
@@ -157,12 +167,7 @@ echo '<!--
       
 <li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS converter #1</a></li>           
  <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS converter #2</a></li>  
-<li><a class="dropdown-item" href="/ru/assets/memo.html">
-  <i class="' . $iconimportant . '"></i>
-Memorizer</a></li>    
 
-    <li><a class="dropdown-item" href="/ru/assets/rd.html">Random declention</a></li>    
-       <li><a class="dropdown-item" href="/assets/rr.html">Random rule</a></li> 
 <li><a class="dropdown-item" href="/assets/makelist.html">
   <i class="' . $iconimportant . '"></i>
 ' . $head5makelist . '</a></li>  

@@ -145,6 +145,11 @@ $slides = [
         'desc' => 'Когда ... сделано средством передвижения',
         'link' => '/assets/example/yaaniikat_suttanta_pali-ru_17-62.html',
     ],
+      [
+        'title' => 'До моего пробуждения',
+        'desc' => 'Будда делится размышлениями и практиками, которые привели его к Пробуждению',
+        'link' => '/assets/example/pubb.sambodh_suttanta_pali-ru_25-50.html',
+    ],
                 [
         'title' => '"Настоящие" джатаки из Сутт',
         'desc' => 'Будда, о своих прошлых жизнях',
@@ -589,6 +594,11 @@ $slides = [
         'title' => 'Noble "Vehicles"',
         'desc' => 'When ... made a vehicle',
         'link' => '/assets/example/yaaniikat_suttanta_pali_17-62.html',
+    ],
+          [
+        'title' => 'Before my Awakening',
+        'desc' => 'Thoughts and practices that led the unawakened Bodhisatta to Buddhahood',
+        'link' => '/assets/example/pubb.sambodh_suttanta_pali_25-50.html',
     ],
     
                 [

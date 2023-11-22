@@ -249,7 +249,7 @@ $(document).ready(function () {
         if (this.id !== "navbarResponsive" && this.id !== "collapseSettings") {
             var keyPrefix = isLocal ? "lcl_" : "fdg_";
             localStorage.removeItem(keyPrefix + "coll_" + this.id);
-      //      console.log("Removed state for " + this.id);
+            console.log("Removed state for " + this.id);
         }
     });
 
@@ -257,15 +257,13 @@ $(document).ready(function () {
         var keyPrefix = isLocal ? "lcl_" : "fdg_";
         if (localStorage.getItem(keyPrefix + "coll_" + this.id) === "true") {
             $(this).collapse("show");
-       //     console.log("Loaded state for " + this.id + " as true");
+            console.log("Loaded state for " + this.id + " as true");
         } else {
             $(this).collapse("hide");
-         //   console.log("Loaded state for " + this.id + " as false");
+      //      console.log("Loaded state for " + this.id + " as false");
         }
     });
 });
-
-
 </script>
 
 
@@ -407,9 +405,6 @@ window.addEventListener('pageshow', function(event) {
 </form>
     <div id="response"></div>
 
-
-<script>
-</script>
 </header>
 
 <!-- Portfolio Section-->

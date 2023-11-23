@@ -377,7 +377,13 @@ mapfile -t onl_array < $tmponl
 for line in "${onl_array[@]}"; do
 grep -HE "$pattern" $line
 done > $tmponl
+
+#cp $basefile bfl
+if [[ "$type" == html ]]; then
+cat $tmponl | sed 's/html:.*/html/g'  
+else 
 cat $tmponl
+fi
 #onltextindex=`for i in $splitpattern
 #do
 #grep -Eir "$i" $tmponl | awk '{print $2}'| awk -F':' '{print $1}' | sort -Vf | uniq 
@@ -636,7 +642,7 @@ if(( $linkscount == 0 ))
 then
 continue 
 fi 
-cp $basefile bfl
+
 linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $2}' | awk -F'/' '{print $NF}' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"#"$2"\">"$1"</a>"}'| xargs`
 
 #&lang=pli
@@ -1042,10 +1048,10 @@ fi
 checkifalreadydone
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
-cp $basefile bfl
+
 if [[ "$@" == *"-nm"* ]] 
 then
-#cp $basefile bfl
+
 topmatchesintexts=`cat $basefile | awk '{print $1}' | uniq -c | LC_ALL=C sort -r | head -n$numbersmatches | awk '{print $2}'`
 for i in $topmatchesintexts
 do

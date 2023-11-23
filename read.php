@@ -76,7 +76,7 @@ include 'scripts/opentexts.php';
 <a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/read.php">Ru</a>
 
 </p></li>	<div class="form-check form-switch input-group-append">
-<input type="checkbox" class="form-check-input" id="darkSwitch">
+<input type="checkbox" style="transform: rotate(180deg);" class="form-check-input" id="darkSwitch">
 </div>	
                     </ul>
                 </div>
@@ -235,27 +235,24 @@ $(document).ready(function () {
 <script>
  // save collapsed state
 $(document).ready(function () {
-    var isLocal = window.location.href.includes("localhost");
 
     $(".collapse").on("shown.bs.collapse", function () {
         if (this.id !== "navbarResponsive" && this.id !== "collapseSettings") {
-            var keyPrefix = isLocal ? "lcl_" : "fdg_";
-            localStorage.setItem(keyPrefix + "coll_" + this.id, true);
+          
+            localStorage.setItem( "coll_" + this.id, true);
             console.log("Saved state for " + this.id + " as true");
         }
     });
 
     $(".collapse").on("hidden.bs.collapse", function () {
         if (this.id !== "navbarResponsive" && this.id !== "collapseSettings") {
-            var keyPrefix = isLocal ? "lcl_" : "fdg_";
-            localStorage.removeItem(keyPrefix + "coll_" + this.id);
+            localStorage.removeItem("coll_" + this.id);
             console.log("Removed state for " + this.id);
         }
     });
 
     $(".collapse").each(function () {
-        var keyPrefix = isLocal ? "lcl_" : "fdg_";
-        if (localStorage.getItem(keyPrefix + "coll_" + this.id) === "true") {
+        if (localStorage.getItem("coll_" + this.id) === "true") {
             $(this).collapse("show");
             console.log("Loaded state for " + this.id + " as true");
         } else {

@@ -75,7 +75,7 @@ include 'scripts/opentexts.php';
 <a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a>
 </p></li><div class="form-check form-switch input-group-append">
   <!-- <i class="nav-item fa-solid fa-circle-half-stroke"></i> -->
-<input style="transform: rotate(180deg);" type="checkbox" class="form-check-input" id="darkSwitch">
+<input type="checkbox" class="form-check-input" id="darkSwitch">
 </div>
        </ul>
                 </div>

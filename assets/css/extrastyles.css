@@ -68,6 +68,9 @@
   color: #136857 ;
 }
 
+#darkSwitch {
+transform: rotate(180deg);
+}
 
 	hr {	
   background-color: currentColor;	

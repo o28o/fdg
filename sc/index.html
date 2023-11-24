@@ -331,13 +331,23 @@ $.ajax({
         // Удаляем автоматическое введение при наведении мыши
         return false;
       },
-      select: function(event, ui) {
-        var terms = this.value.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
-        terms.pop();
-        terms.push(ui.item.value);
-        this.value = terms.join(" ");
-        return false;
-      }
+select: function(event, ui) {
+  var terms = this.value.split(/([\s\*])/);
+  terms.pop();
+  terms.push(ui.item.value);
+  
+  for (var i = 1; i < terms.length; i += 2) {
+    if (terms[i] === "*") {
+      terms[i] = "*";
+    } else {
+      terms[i] = " ";
+    }
+  }
+
+  this.value = terms.join("");
+  return false;
+}
+
     }).autocomplete("widget").addClass("fixed-height");
   }
 });

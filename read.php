@@ -233,34 +233,42 @@ $(document).ready(function () {
  
 
 <script>
- // save collapsed state
-$(document).ready(function () {
+  $(document).ready(function () {
+
+    function saveCollapseState(collapseId, isCollapsed) {
+      localStorage.setItem("coll_" + collapseId, isCollapsed);
+      console.log("Saved state for " + collapseId + " as " + isCollapsed);
+    }
+
+    function loadCollapseState(collapseId) {
+      var isCollapsed = localStorage.getItem("coll_" + collapseId) === "true";
+    //  console.log("Loaded state for " + collapseId + " as " + isCollapsed);
+      return isCollapsed;
+    }
+
+    function handleCollapse(collapseId, isCollapsed) {
+      if (collapseId !== "navbarResponsive" && collapseId !== "collapseSettings") {
+        if (isCollapsed) {
+          $("#" + collapseId).collapse("show");
+        } else {
+          $("#" + collapseId).collapse("hide");
+        }
+      }
+    }
 
     $(".collapse").on("shown.bs.collapse", function () {
-        if (this.id !== "navbarResponsive" && this.id !== "collapseSettings") {
-          
-            localStorage.setItem( "coll_" + this.id, true);
-            console.log("Saved state for " + this.id + " as true");
-        }
+      saveCollapseState(this.id, true);
     });
 
     $(".collapse").on("hidden.bs.collapse", function () {
-        if (this.id !== "navbarResponsive" && this.id !== "collapseSettings") {
-            localStorage.removeItem("coll_" + this.id);
-            console.log("Removed state for " + this.id);
-        }
+      saveCollapseState(this.id, false);
     });
 
     $(".collapse").each(function () {
-        if (localStorage.getItem("coll_" + this.id) === "true") {
-            $(this).collapse("show");
-            console.log("Loaded state for " + this.id + " as true");
-        } else {
-            $(this).collapse("hide");
-      //      console.log("Loaded state for " + this.id + " as false");
-        }
+      var isCollapsed = loadCollapseState(this.id);
+      handleCollapse(this.id, isCollapsed);
     });
-});
+  });
 </script>
 
 

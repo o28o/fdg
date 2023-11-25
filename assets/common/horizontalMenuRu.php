@@ -51,9 +51,9 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="EnglishMaterials">
       <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">Accesstoinsight.org Патимоккха</a></li>
 
-        
+             <li><a class="dropdown-item" target="_blank" href="/assets/materials/nanatusita_bupm_vibhanga.pdf ">Bhikkhu Vibhanga by Nanatusita</a></li>
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
-
+    
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
        <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">Suttacentral Voice</a></li>
            <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">SC.net Виная</a></li>   
@@ -63,10 +63,8 @@ echo '<!--
         <li><a class="dropdown-item" target="_blank" href="https://tipitaka.org/">Tipitaka.org</a></li>
         
      <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
-    <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li>        
-        
-
-
+    <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li>       
+         
         <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">
           <i class="' . $iconimportant . '"></i>
         The Buddha\'s Words</a></li>    

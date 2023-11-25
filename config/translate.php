@@ -41,7 +41,7 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), 
 <strong>Виная</strong> - Поиск в Патимоккхах и Вибхангах Винаи на Пали и Английском. <br><br>
 <strong>+KN</strong> - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
 <strong>Поздние</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
-<strong>+Kd и Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
+<strong>+Kd, Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
 <strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
 <strong>Англ</strong> - поиск в англ переводах 4 никай SuttaCentral.net
 ';
@@ -67,7 +67,7 @@ $tooltipnonl = 'С этой опцией будут собраны тексты,
 $checkboxnonl = 'А Б';
 $tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи, включая поздние";
 $radioltr = "+Позд";
-$radiovinall = "+Kd и Pvr";
+$radiovinall = "+Kd, Pvr";
 $tooltipen = 'Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах sc.net и затем в переводах thebuddhaswords.net ';
 $radioen = 'Англ';
 $tooltipth = "Опционально. Поиск в 4 основных Никаях в Тайских переводах Suttacentral.net. Без этой опции сначала поиск будет произведен в Пали текстах, потом в переводах";

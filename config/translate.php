@@ -38,9 +38,10 @@ $tooltipsml = 'Поиск сравнений, метафор, символов �
 $radiosml = 'Пдб';
 
 $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), Саньютта Никаи (SN), Маджжхима Никаи (MN), Дигха Никаи (DN)<br><br>
-<strong>Виная</strong> - Поиск в Винае на Пали и Английском. <br><br>
+<strong>Виная</strong> - Поиск в Патимоккхах и Вибхангах Винаи на Пали и Английском. <br><br>
 <strong>+KN</strong> - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
 <strong>Поздние</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
+<strong>+Kd и Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
 <strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
 <strong>Англ</strong> - поиск в англ переводах 4 никай SuttaCentral.net
 ';
@@ -66,6 +67,7 @@ $tooltipnonl = 'С этой опцией будут собраны тексты,
 $checkboxnonl = 'А Б';
 $tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи, включая поздние";
 $radioltr = "+Позд";
+$radiovinall = "+Kd и Pvr";
 $tooltipen = 'Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах sc.net и затем в переводах thebuddhaswords.net ';
 $radioen = 'Англ';
 $tooltipth = "Опционально. Поиск в 4 основных Никаях в Тайских переводах Suttacentral.net. Без этой опции сначала поиск будет произведен в Пали текстах, потом в переводах";
@@ -496,9 +498,10 @@ $radiosml = 'Sml';
 
 $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN)
 <br><br>
-<strong>Vinaya</strong> - Search in Vinaya in Pali and English. <br><br>
+<strong>Vinaya</strong> - Search in Patimokkhas and Vibhangas of Vinaya in Pali and English. <br><br>
 <strong>+KN</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
 <strong>Later</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
+<strong>+Kd & Pvr</strong> - Vinaya + Khandhaka & Parivara<br><br>
 <strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>
 <strong>SC.net</strong> - search in SuttaCentral.net english translations';
 $tooltipsearchtype = '<strong>Default</strong> - all matches<br><br>
@@ -526,6 +529,7 @@ $tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B
 $radioen = 'SC.net';
 $tooltipltr= "+ search in Pali in all books of kn including later texts";
 $radioltr = "+Later";
+$radiovinall = "+Kd & Pvr";
 $tooltipth = "(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations. Without this option default search will start with Pali texts, then with sc.net Thai translations";
 $radioth = "ไทย";
 $tooltipru = "(optional) Search in an, sn, mn, dn in Russain Suttacentral.net translations";

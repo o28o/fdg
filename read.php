@@ -147,6 +147,7 @@ $(document).ready(function() {
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn ") echo "selected";?> ><?php echo "$radiokn";?></option>
         <option value="-all" <?php if (isset($extra) && $p == "-all ") echo "selected";?> ><?php echo "$radioltr";?></option>
+               <option value="-all -vin" <?php if (isset($extra) && $p == "-all -vin ") echo "selected";?> ><?php echo "$radiovinall";?></option>
         <option value="-b" <?php if (isset($p) && $p == "-b ") echo "selected";?> ><?php echo $radiotbw;?></option>
         <option value="-en" <?php if (isset($p) && $p == "English") echo "selected";?> ><?php echo $radioen;?></option>
     </select>

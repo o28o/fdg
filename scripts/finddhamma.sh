@@ -312,11 +312,20 @@ fi
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpsml
 
+#todo
+for i in `nice -$nicevalue grep -Ei "Evamev.*${smlpattern}" $tmpsml | awk -F':' '{print $1}'`
+do 
+nice -$nicevalue grep -Ei -B1 "Evamev.*${smlpattern}" $i | grep -v "Evamev.*${smlpattern}"
+done >> tmpsml
+
 if [[ "$type" == html ]]; then
 for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|Evamev.*${smlpattern}|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | sed 's/html:.*/html/g'  ; 
 done
 else 
+#cat ${tmpsml}_2
 nice -$nicevalue grep -Ei "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)|Evamev.*${smlpattern}|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $tmpsml | grep -vE "$nonmetaphorkeys" 
+
+
 
 #for i in `cat $tmpsml | awk -F':' '{print $1}'`
 #do 

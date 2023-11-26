@@ -145,21 +145,21 @@ $(document).ready(function() {
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
         <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
-        <option value="-kn" <?php if (isset($extra) && $p == "-kn ") echo "selected";?> ><?php echo "$radiokn";?></option>
-        <option value="-all" <?php if (isset($extra) && $p == "-all ") echo "selected";?> ><?php echo "$radioltr";?></option>
-               <option value="-all -vin" <?php if (isset($extra) && $p == "-all -vin ") echo "selected";?> ><?php echo "$radiovinall";?></option>
-        <option value="-b" <?php if (isset($p) && $p == "-b ") echo "selected";?> ><?php echo $radiotbw;?></option>
-        <option value="-en" <?php if (isset($p) && $p == "English") echo "selected";?> ><?php echo $radioen;?></option>
+        <option value="-kn" <?php if (isset($extra) && $p == "-kn") echo "selected";?> ><?php echo "$radiokn";?></option>
+        <option value="-all" <?php if (isset($extra) && $p == "-all") echo "selected";?> ><?php echo "$radioltr";?></option>
+       <option value="-all -vin" <?php if (isset($extra) && $p == "-all -vin") echo "selected";?> ><?php echo "$radiovinall";?></option>
+        <option value="-b" <?php if (isset($p) && $p == "-b") echo "selected";?> ><?php echo $radiotbw;?></option>
+        <option value="-en" <?php if (isset($p) && $p == "-en") echo "selected";?> ><?php echo $radioen;?></option>
     </select>
        <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
-        <option value="-def" <?php if (isset($extra) && $p == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
-        <option value="-sml" <?php if (isset($extra) && $p == "-sml ") echo "selected";?> ><?php echo "$listsml";?></option>
-        <option value="-defall" <?php if (isset($extra) && $p == "-defall ") echo "selected";?> ><?php echo "$listdefall";?></option>
-         <option value="-nm5" <?php if (isset($p) && $p == "-defall ") echo "selected";?> ><?php echo "$listnm";?></option>
-       <option value="-nm1" <?php if (isset($p) && $p == "-defall ") echo "selected";?> ><?php echo "$listnm1";?></option>
+        <option value="-def" <?php if (isset($extra) && $extra == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
+        <option value="-sml" <?php if (isset($extra) && $extra == "-sml") echo "selected";?> ><?php echo "$listsml";?></option>
+        <option value="-defall" <?php if (isset($extra) && $extra == "-defall") echo "selected";?> ><?php echo "$listdefall";?></option>
+      <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
+      <option value="-nm1" <?php if (isset($extra) && $extra == "-nm1") echo "selected";?> ><?php echo "$listnm1";?></option>      
     </select>
 	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</div>
 </div>

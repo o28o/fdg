@@ -729,7 +729,7 @@ svgicon='<?xml version="1.0" encoding="utf-8"?>
 <svg style="fill:currentColor;" height="18px" width="18px" version="1.1" id="Listening" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 
 	 viewBox="0 0 128 128" xml:space="preserve">
-	 <g transform="translate(0,-15)">
+	 <g transform="translate(-15,-15)">
 	 
 <path id="_x34__1_" d="M39.6,108.1c-8.8,0-16-7.2-16-16c0-2.2,1.8-4,4-4s4,1.8,4,4c0,4.4,3.6,8,8,8c2.8,0,5.4-1.5,6.9-3.9
 	c0.6-1,1.4-2.8,2.3-4.7c1.7-3.8,3.6-8.1,6-11.2c1.9-2.5,4.7-5,7.4-7.5c2.7-2.5,5.8-5.4,6.8-7.2c2-3.5,3-7.4,3-11.4

@@ -724,6 +724,32 @@ pathblocknotexttype=$(echo $pathblock | sed 's@sutta@@')
 audiofile=$(ls "$apachesitepath/assets/audio/$pathblocknotexttype/${filenameblock}_"* 2> /dev/null | tail -n1)
 Audiofileforlink=$(echo "$audiofile" | sed "s|$apachesitepath||")
 
+svgicon='<?xml version="1.0" encoding="utf-8"?>
+
+<svg style="fill:currentColor;" height="18px" width="18px" version="1.1" id="Listening" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+
+	 viewBox="0 0 128 128" xml:space="preserve">
+	 <g transform="translate(0,-15)">
+	 
+<path id="_x34__1_" d="M39.6,108.1c-8.8,0-16-7.2-16-16c0-2.2,1.8-4,4-4s4,1.8,4,4c0,4.4,3.6,8,8,8c2.8,0,5.4-1.5,6.9-3.9
+	c0.6-1,1.4-2.8,2.3-4.7c1.7-3.8,3.6-8.1,6-11.2c1.9-2.5,4.7-5,7.4-7.5c2.7-2.5,5.8-5.4,6.8-7.2c2-3.5,3-7.4,3-11.4
+	c0-12.7-10.3-23-23-23s-23,10.3-23,23c0,2.2-1.8,4-4,4s-4-1.8-4-4c0-17.1,13.9-31,31-31c17.1,0,31,13.9,31,31
+	c0,5.4-1.4,10.7-4.1,15.4c-1.6,2.9-4.9,5.9-8.4,9.1c-2.4,2.3-5,4.6-6.5,6.5c-1.8,2.3-3.6,6.3-5,9.5c-1,2.2-1.8,4.1-2.7,5.6
+	C50.5,105.1,45.2,108.1,39.6,108.1z"/>
+<path id="_x33__2_" d="M34,79.6c-2.2,0-4-1.8-4-4s1.8-4,4-4c2,0,3.7-1.6,3.7-3.7c0-2-1.6-3.7-3.7-3.7c-2.2,0-4-1.8-4-4v-6
+	c0-10.5,8.5-19,19-19s19,8.5,19,19c0,3.3-0.8,6.5-2.4,9.3c-0.1,0.1-0.1,0.2-0.2,0.3c-0.8,1.2-2.7,3-5.9,6l-1.2,1.1
+	c-1.6,1.5-4.2,1.4-5.7-0.2c-1.5-1.6-1.4-4.2,0.2-5.7L54,64c2.6-2.4,4.2-3.9,4.7-4.6c0.8-1.6,1.3-3.4,1.3-5.2c0-6.1-4.9-11-11-11
+	s-11,4.9-11,11v2.7c4.5,1.6,7.7,5.9,7.7,11C45.7,74.3,40.5,79.6,34,79.6z"/>
+<path id="_x32__15_" d="M85,78.7c-0.6,0-1.2-0.2-1.7-0.5c-1.7-1-2.2-3.1-1.3-4.8c3.3-5.8,5.1-12.3,5.1-19c0-6.8-1.8-13.4-5.2-19.2
+	c-1-1.7-0.4-3.8,1.2-4.8c1.7-1,3.8-0.4,4.8,1.2c4.1,6.9,6.2,14.8,6.2,22.8c0,7.9-2.1,15.6-6,22.5C87.4,78.1,86.2,78.7,85,78.7z"/>
+<path id="_x31__17_" d="M95.9,90.1c-0.8,0-1.5-0.2-2.2-0.7c-1.8-1.2-2.3-3.7-1.1-5.6c5.9-8.7,9-18.8,9-29.4
+	c0-10.6-3.2-20.9-9.2-29.6c-1.2-1.8-0.8-4.3,1-5.6c1.8-1.2,4.3-0.8,5.6,1c6.9,10.1,10.6,21.9,10.6,34.1c0,12.1-3.6,23.8-10.3,33.8
+	C98.4,89.5,97.1,90.1,95.9,90.1z"/>
+	</g>
+</svg>'
+
+
+
 #matching_files=( $apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*{+o,-o}.json )
 #if [[ ${#matching_files[@]} -gt 0 ]]; then
   # Найдены файлы с "+o.json" или "-o.json"
@@ -878,7 +904,7 @@ $([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\
 
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 
-`if [ -n "$audiofile" ]; then echo "<a href=\"$Audiofileforlink\">Vc</a>"; fi`
+`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`
 
 </td>" | tohtml 
 echo "<td><p>" | tohtml 

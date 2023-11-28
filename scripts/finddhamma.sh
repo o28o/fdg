@@ -719,6 +719,11 @@ pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) prin
 #echo "$filenameblock $pathblock $lettersblock $numberblock" | tohtml
 checktrnfile="`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation* 2>/dev/null | tail -n1`"
 
+
+pathblocknotexttype=$(echo $pathblock | sed 's@sutta@@')
+audiofile=$(ls "$apachesitepath/assets/audio/$pathblocknotexttype/${filenameblock}_"* 2> /dev/null | tail -n1)
+Audiofileforlink=$(echo "$audiofile" | sed "s|$apachesitepath||")
+
 #matching_files=( $apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*{+o,-o}.json )
 #if [[ ${#matching_files[@]} -gt 0 ]]; then
   # Найдены файлы с "+o.json" или "-o.json"
@@ -873,6 +878,8 @@ $([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\
 
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 
+`if [ -n "$audiofile" ]; then echo "<a href=\"$Audiofileforlink\">Vc</a>"; fi`
+
 </td>" | tohtml 
 echo "<td><p>" | tohtml 
 

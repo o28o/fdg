@@ -24,7 +24,7 @@ $nextslug = preg_replace('/_.*$/', '', $next);
 $nextslug = str_replace(PHP_EOL, '', $nextslug);
 $textname = shell_exec("grep -m1 -E \":0\..*(sutt|pada)\" $location/$dirtolist/$next");
 
-$pattern = '/"([^"]+)"\s*,/'; // Matches a string enclosed in double quotes followed by a comma (with optional whitespace)
+$pattern = '/"([^"]+)",/'; // Matches a string enclosed in double quotes followed by a comma (with optional whitespace)
 $matches = array();
 
 if (!empty($textname)) {

@@ -105,6 +105,30 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
   $book = "";
 }
 
+if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
+    // Если $fromjs содержит *bu-vb* или *bi-vb*
+    $parts = explode("-", $fromjs);
+    
+    // Определить pmtype (bu или bi)
+    $pmtype = (strpos($fromjs, "bu") !== false) ? "bu" : ((strpos($fromjs, "bi") !== false) ? "bi" : "");
+    $vbIndex = array_search("vb", $parts);
+// Если "vb" найдено и есть следующий элемент, присваиваем $rule
+$rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? implode("-", array_slice($parts, $vbIndex + 1)) : "";
+    
+$rule = ucfirst($rule);
+$fullpathvoicefile = $basedir . "/assets/audio/" . $pmtype . "-pm" . "/" . $rule . ".m4a";
+$voicematches = glob($fullpathvoicefile);
+
+if (!empty($voicematches)) {
+    $voicefilename = basename($voicematches[0]);
+    $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
+    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;<a target='' href='$voicefile'>Voice</a>";
+} else {
+  $voicelink = "&nbsp;";
+}
+
+} else {
+    // Если $fromjs не содержит *bu-vb* или *bi-vb*
 $fullpathvoicefile = $basedir . "/assets/audio/" . $nikaya . $book . "/" . $fromjs . "_*";
 $voicematches = glob($fullpathvoicefile);
 
@@ -114,6 +138,8 @@ if (!empty($voicematches)) {
     $voicelink = "<a target='' href='$voicefile'>Voice.SC</a>";
 } else {
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+}
+
 }
 
 

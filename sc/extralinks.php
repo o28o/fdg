@@ -58,7 +58,7 @@ if (!empty($voicematches)) {
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
     $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
-    //<a target='' href='$voicefile'>Voice</a>
+    //<a target='' href='$voicefile'>/a>
 } else {
   $voicelink = "&nbsp;";
   $player = "&nbsp;";
@@ -196,13 +196,15 @@ switch (strtolower($nikaya)) {
 $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
-
+echo -n \"$player\";
 echo -n \"$voicelink\";
  
-      [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"; 
-      [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
-  [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href=\$ruslinkdn>Th.su</a>\";
- echo -n \"$player\";
+[[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"; 
+    
+[[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
+      
+[ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href=\$ruslinkdn>Th.su</a>\";
+  
 ");
 return $output;
   

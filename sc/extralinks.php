@@ -56,9 +56,12 @@ $voicematches = glob($fullpathvoicefile);
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
-    $voicelink = "<a target='' href='$voicefile'>Voice</a>";
+    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+    $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
+    //<a target='' href='$voicefile'>Voice</a>
 } else {
   $voicelink = "&nbsp;";
+  $player = "&nbsp;";
 }
 
 } else {
@@ -69,9 +72,14 @@ $voicematches = glob($fullpathvoicefile);
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $nikaya . $book . "/". $voicefilename;
-    $voicelink = "<a target='' href='$voicefile'>Voice.SC</a>";
+
+       $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>"; 
+       
+    $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+    $player = "&nbsp;";
+
 }
 
 }
@@ -79,12 +87,13 @@ if (!empty($voicematches)) {
   $output = shell_exec("
   ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; 
   ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
-
+  
  echo -n \"$voicelink\"
     [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"
     [ ! -z \$ruslink ] && echo -n \"&nbsp;<a target='' href=$linkforthru/\$ruslink>Th.ru</a>\"
     [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a target='' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
-  
+
+echo -n \"$player\"  
   if [[ \${#ruslinkdn} >= 2 ]]; then
   echo 'The length of ruslinkdn is greater than or equal to 2.'
 else
@@ -122,9 +131,12 @@ $voicematches = glob($fullpathvoicefile);
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
-    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;<a target='' href='$voicefile'>Voice</a>";
+    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+    
+        $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
   $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+  $player = "&nbsp;";
 }
 
 } else {
@@ -136,8 +148,10 @@ if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $nikaya . $book . "/". $voicefilename;
     $voicelink = "<a target='' href='$voicefile'>Voice.SC</a>";
+        $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
+    $player = "&nbsp;";
 }
 
 }
@@ -186,7 +200,10 @@ $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" 
 echo -n \"$voicelink\";
       [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"; 
       [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
-  [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href=\$ruslinkdn>Th.su</a>\";");
+  [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href=\$ruslinkdn>Th.su</a>\";
+ echo -n \"$player\"; 
+  
+  ");
 return $output;
   
 }

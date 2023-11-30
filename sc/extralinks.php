@@ -122,7 +122,7 @@ $voicematches = glob($fullpathvoicefile);
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
-    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a><a target='' href='$voicefile'>Voice</a>";
+    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;<a target='' href='$voicefile'>Voice</a>";
 } else {
   $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }

@@ -202,8 +202,12 @@ echo -n \"$voicelink\";
       [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
   [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href=\$ruslinkdn>Th.su</a>\";
  echo -n \"$player\"; 
-  
-  ");
+ 
+ echo \"<audio controls>
+  <source src='assets/audio/bu-pm/Pj1.m4a' type='audio/mp4'>
+  Ваш браузер не поддерживает аудио элемент.
+</audio>\";
+");
 return $output;
   
 }

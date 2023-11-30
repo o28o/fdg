@@ -204,7 +204,7 @@ echo -n \"$voicelink\";
  echo -n \"$player\"; 
  
  echo \"<audio controls>
-  <source src='assets/audio/bu-pm/Pj1.m4a' type='audio/mp4'>
+  <source src='/assets/audio/bu-pm/Pj1.m4a' type='audio/mp4'>
   Ваш браузер не поддерживает аудио элемент.
 </audio>\";
 ");

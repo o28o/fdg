@@ -218,7 +218,7 @@ document.head.appendChild(ogDescriptionMeta);
     }).done(function(data) {
       let nextArray = data.split(" ");
       let nextSlug = nextArray[0];
-      let nextSlugPrint = nextSlug.replace("pli-tv-", "");
+      let nextSlugPrint = nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
 let nextName = nextArray.slice(1).join(" ");
 nextName = nextName.replace(/[0-9.]/g, '');
      if (nextName === undefined) {
@@ -246,7 +246,7 @@ nextName = nextName.replace(/[0-9.]/g, '');
     }).done(function(data) {
       const prevArray = data.split(" ");
       let prevSlug = prevArray[0];
-      let prevSlugPrint = prevSlug.replace("pli-tv-", "");
+      let prevSlugPrint = prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
 let prevName = prevArray.slice(1).join(" ");
 prevName = prevName.replace(/[0-9.]/g, '');
       

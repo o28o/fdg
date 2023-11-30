@@ -201,7 +201,7 @@ echo -n \"$voicelink\";
       [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"; 
       [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
   [ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href=\$ruslinkdn>Th.su</a>\";
- echo -n \"$player\"; 
+ echo -n \"player=$player\"; 
 ");
 return $output;
   

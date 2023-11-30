@@ -91,7 +91,7 @@ $string = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $string);
 if (preg_match("/^(bu|bi)-pm$/i", $string)) {
 	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
-} else if (preg_match("/(bu|bi)-vb/i", $string)) {
+} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z])/i", $string)) {
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
 }

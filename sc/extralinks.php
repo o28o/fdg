@@ -45,10 +45,10 @@ if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
     
     // Определить pmtype (bu или bi)
     $pmtype = (strpos($fromjs, "bu") !== false) ? "bu" : ((strpos($fromjs, "bi") !== false) ? "bi" : "");
-
-    // Определить rule (последний блок после vb-)
     $vbIndex = array_search("vb", $parts);
-    $rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? $parts[$vbIndex + 1] : "";
+// Если "vb" найдено и есть следующий элемент, присваиваем $rule
+$rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? implode("-", array_slice($parts, $vbIndex + 1)) : "";
+    
 $rule = ucfirst($rule);
 $fullpathvoicefile = $basedir . "/assets/audio/" . $pmtype . "-pm" . "/" . $rule . ".m4a";
 $voicematches = glob($fullpathvoicefile);

@@ -39,6 +39,30 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
 //$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
 //$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_*";
 
+if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
+    // Если $fromjs содержит *bu-vb* или *bi-vb*
+    $parts = explode("-", $fromjs);
+    
+    // Определить pmtype (bu или bi)
+    $pmtype = (strpos($fromjs, "bu") !== false) ? "bu" : ((strpos($fromjs, "bi") !== false) ? "bi" : "");
+
+    // Определить rule (последний блок после vb-)
+    $vbIndex = array_search("vb", $parts);
+    $rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? $parts[$vbIndex + 1] : "";
+$rule = ucfirst($rule);
+$fullpathvoicefile = $basedir . "/assets/audio/" . $pmtype . "-pm" . "/" . $rule . ".m4a";
+$voicematches = glob($fullpathvoicefile);
+
+if (!empty($voicematches)) {
+    $voicefilename = basename($voicematches[0]);
+    $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
+    $voicelink = "<a target='' href='$voicefile'>Voice</a>";
+} else {
+  $voicelink = "&nbsp;";
+}
+
+} else {
+    // Если $fromjs не содержит *bu-vb* или *bi-vb*
 $fullpathvoicefile = $basedir . "/assets/audio/" . $nikaya . $book . "/" . $fromjs . "_*";
 $voicematches = glob($fullpathvoicefile);
 
@@ -49,12 +73,14 @@ if (!empty($voicematches)) {
 } else {
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }
+
+}
   
   $output = shell_exec("
   ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; 
   ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
 
-  echo -n \"$voicelink\";
+ echo -n \"$voicelink\"
     [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"
     [ ! -z \$ruslink ] && echo -n \"&nbsp;<a target='' href=$linkforthru/\$ruslink>Th.ru</a>\"
     [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a target='' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
@@ -78,7 +104,7 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
 } else {
   $book = "";
 }
-  
+
 $fullpathvoicefile = $basedir . "/assets/audio/" . $nikaya . $book . "/" . $fromjs . "_*";
 $voicematches = glob($fullpathvoicefile);
 

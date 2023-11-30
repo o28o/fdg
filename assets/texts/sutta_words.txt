@@ -82471,10 +82471,7 @@ bu-vb-sk73
 bu-vb-sk74
 bu-vb-sk75
 bu-vb-as1-7
-bi-vb-pj1
-bi-vb-pj2
-bi-vb-pj3
-bi-vb-pj4
+bi-vb-pj1-4
 bi-vb-pj5
 bi-vb-pj6
 bi-vb-pj7

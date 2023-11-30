@@ -132,7 +132,7 @@ if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
 
-       $voicelink = "<a target='' href='$voicefile'>Voice.SC</a>&nbsp;<a target='' href='$voicefile'>Voice</a>"; 
+       $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;<a target='' href='$voicefile'>Voice</a>"; 
         $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
   $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
@@ -147,7 +147,7 @@ $voicematches = glob($fullpathvoicefile);
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $nikaya . $book . "/". $voicefilename;
-    $voicelink = "<a target='' href='$voicefile'>Voice.SC</a>&nbsp;<a target='' href='$voicefile'>Voice</a>";
+    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>&nbsp;<a target='' href='$voicefile'>Voice</a>";
         $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";

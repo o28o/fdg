@@ -215,7 +215,7 @@ return $output;
 // curl localhost:8080/sc/extralinks.php?fromjs=an1.1-10
 // curl localhost/sc/extralinks.php?fromjs=an1.1-10
 
-//$fromjs = "mn20";
+$fromjs = "bu-vb-pj1";
 //$fromjs = "an1.1-10";
 
 //echo extraLinks($fromjs);

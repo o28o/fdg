@@ -2,7 +2,7 @@ source ./config/script_config.sh --source-only
 string=$@
 
 stringforrange=`echo $string |sed 's@\.@\\\.@g'`
-#echo $stringforrange
+#echo str4rg=$stringforrange
 
 partforrange=`echo $stringforrange| sed 's@\..*@\\.@g'`
 #echo $partforrange
@@ -15,6 +15,14 @@ textnumforrange=`echo $stringforrange| sed 's@.*\.@@g'`
 #echo $textforrange
 check=$partforrange
 ranges=`grep -i "$partforrange" $indexesfile | grep -i "-" | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}' |  awk -F'.' '{print $NF}' `
+#echo $ranges
+elif  [[ $textnameforrange == *"-vb-"* ]]
+then
+#echo vinayacase
+textnumforrange=`echo $string| sed 's@[A-Za-z]@@g' | sed 's@-@@g'`
+#echo $textnumforrange
+check=$textnameforrange
+ranges=`grep -i "$textnameforrange" $indexesfile | grep -i "-" | awk -F'/' '{print $NF}' | awk -F'[._]' '{print $1}' | sed 's/[^0-9]*\([0-9].*\)/\1/' `
 #echo $ranges
 elif  [[ $textnameforrange != *"\."* ]]
 then

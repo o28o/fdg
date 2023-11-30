@@ -3604,10 +3604,7 @@ pli-tv-bi-vb-pc95_root-pli-ms.json
 pli-tv-bi-vb-pc96_root-pli-ms.json
 pli-tv-bi-vb-pd1_root-pli-ms.json
 pli-tv-bi-vb-pd2-8_root-pli-ms.json
-pli-tv-bi-vb-pj1_root-pli-ms.json
-pli-tv-bi-vb-pj2_root-pli-ms.json
-pli-tv-bi-vb-pj3_root-pli-ms.json
-pli-tv-bi-vb-pj4_root-pli-ms.json
+pli-tv-bi-vb-pj1-4_root-pli-ms.json
 pli-tv-bi-vb-pj5_root-pli-ms.json
 pli-tv-bi-vb-pj6_root-pli-ms.json
 pli-tv-bi-vb-pj7_root-pli-ms.json

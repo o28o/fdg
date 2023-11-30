@@ -92,6 +92,14 @@ if (preg_match("/^(bu|bi)-pm$/i", $string)) {
 	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
 } else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]).*[0-9]/i", $string)) {
+  
+  $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
+//if this empty then find range
+if (empty($check)) {
+  $command = escapeshellcmd("bash $scriptfile $string");
+  $string = trim(shell_exec($command));
+}	  
+  
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
 } else if (preg_match("/(bu|bi)-(vb|[a-z][a-z])/i", $string)) {

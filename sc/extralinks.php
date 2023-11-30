@@ -139,6 +139,10 @@ $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>B
   $player = "&nbsp;";
 }
 
+
+$output = shell_exec("echo -n \"$voicelink\";
+echo -n \"$player\";");
+
 } else {
     // Если $fromjs не содержит *bu-vb* или *bi-vb*
 $fullpathvoicefile = $basedir . "/assets/audio/" . $nikaya . $book . "/" . $fromjs . "_*";
@@ -153,10 +157,6 @@ $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>B
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
     $player = "&nbsp;";
 }
-
-}
-
-
 
 //thsu part
 if (preg_match("/^(mn|dn)[0-9]{1,3}$/i",$fromjs)) {
@@ -207,6 +207,9 @@ echo -n \"$voicelink\";
 
 echo -n \"$player\";
 ");
+
+}
+
 return $output;
   
 }
@@ -215,7 +218,7 @@ return $output;
 // curl localhost:8080/sc/extralinks.php?fromjs=an1.1-10
 // curl localhost/sc/extralinks.php?fromjs=an1.1-10
 
-$fromjs = "bu-vb-pj1";
+//$fromjs = "bu-vb-pj1";
 //$fromjs = "an1.1-10";
 
 //echo extraLinks($fromjs);

@@ -42,6 +42,7 @@ return "$nextslug $extractedValue";
 }
 //$fromjs = "sutta/an/an1/an1.1-10";
 //$fromjs = "sutta/dn/dn31";
+//$fromjs = "vinaya/pli-tv-bu-vb/pli-tv-bu-vb-ay/pli-tv-bu-vb-ay1";
 //$type = "A";
 // |–|~ 
 //echo getAround($fromjs,$type);

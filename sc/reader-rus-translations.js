@@ -279,13 +279,16 @@ document.head.appendChild(ogDescriptionMeta);
       const nextArray = data.split(" ");
       let nextSlug = nextArray[0];
       let nextSlugPrint = nextSlug.replace("pli-tv-", "");
-      let nextName = nextArray[1];
+   //   let nextName = nextArray[1];
+let nextName = nextArray.slice(1).join(" ");
+nextName = nextName.replace(/[0-9.]/g, '');
 
       if (nextName === undefined) {
       var nextPrint = nextSlugPrint;
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
-     }     
+     }
+     console.log(nextPrint);
          next.innerHTML = nextSlug
         ? `<a href="?q=${nextSlug}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
@@ -306,7 +309,9 @@ document.head.appendChild(ogDescriptionMeta);
       const prevArray = data.split(" ");
       let prevSlug = prevArray[0];
       let prevSlugPrint = prevSlug.replace("pli-tv-", "");
-      let prevName = prevArray[1];
+//      let prevName = prevArray[1];
+let prevName = prevArray.slice(1).join(" ");
+prevName = prevName.replace(/[0-9.]/g, '');
 
         if (prevName === undefined) {
     var prevPrint = prevSlugPrint;

@@ -196,15 +196,16 @@ switch (strtolower($nikaya)) {
 $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
-echo -n \"$player\";
+
 echo -n \"$voicelink\";
  
-[[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"; 
+[[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href='$linktbw/$bwlink'>Bw</a>\"; 
     
-[[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href=https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink>Th.ru</a>\"; 
+[[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href='https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink'>Th.ru</a>\"; 
       
-[ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href=\$ruslinkdn>Th.su</a>\";
-  
+[ \${#ruslinkdn} -gt 5 ] && echo -n \"&nbsp;<a target='' href='\$ruslinkdn'>Th.su</a>\";
+
+echo -n \"$player\";
 ");
 return $output;
   

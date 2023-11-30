@@ -140,7 +140,7 @@ if (!empty($voicematches)) {
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
 }
 
-
+}
 
 
 

@@ -325,9 +325,8 @@ setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>Citations should exactly match should from autocomplete. Separate chapter and sutta with a period. The following collections work. Click them to add to input box.</p>
-    <p>Suttas that are part of a series require that you enter the exact series. 
-  (Such as and some SN and AN. E.g. 1.1-10)</p>
+  <p>For navigation texts should conatin text numbers. E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-vb-pj1</span> or <span class="abbr">pli-tv-bu-vb-as1-7</span>.<br>
+  Dn, mn, sn, an, some kn books, both patimokkhas and vinaya vibhanga are available. </p>
   <div class="lists">
 
   <div class="suttas">

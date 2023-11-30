@@ -221,7 +221,13 @@ li {
   #paliauto {
   width:210px;
   }
-  
+#navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
   .lists,
   .vinaya {
     flex-direction: column;
@@ -384,7 +390,6 @@ header ul li {
   body {
     margin: 1rem 0.5rem;
   }
-
   .button-area {
     
     right: 1px;
@@ -431,7 +436,7 @@ br {
   filter: invert(200%);
 }
 
-.navigation {
+#navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -446,10 +451,14 @@ a:hover {
 }
 
 @media only screen and (max-width: 475px) {
-  .navigation {
-    flex-direction: column !important;
+#navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 1rem;
-  }
+}
+
   
   #paliauto {
   width:200px;

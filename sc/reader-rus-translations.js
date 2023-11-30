@@ -403,10 +403,8 @@ setLanguage(language);
   } 
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>
-  На этой странице тексты собранные в серии должны быть указаны, как в подсказках автозаполнения. К примеру, <code>an1.1</code> работать не будет, но <code>an1.1-10</code> будет.<br>
-    Номер раздела и номер сутты должны быть разделены "точкой".<br>
-    Включены только dn, mn, sn, an, некоторые книги kn и виная<br>
+  <p>Тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-vb-pj1</span> или <span class="abbr">pli-tv-bu-vb-as1-7</span>.<br>
+ Доступны dn, mn, sn, an, некоторые книги kn, обе патимоккхи и виная вибханги.<br>
   </p>
   <div class="lists">
 

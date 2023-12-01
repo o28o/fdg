@@ -21,7 +21,7 @@ if (file_exists($bwfile) ) {
   $bwlink = "";
 }
 
-  if ($mode == "offline") {
+if ($mode == "offline") {
   
 //th.ru and th.su part
 $locationrudn = $thsulocation;
@@ -33,13 +33,6 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
 } else {
   $book = "";
 }
-
-//$voicefile = str_replace(PHP_EOL, '', $voicefile);
-//echo "$basedir/$voicefile";
-//$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
-//$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_*";
-
-//$finalRuling = "1.27.0";
 
 if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
     // Если $fromjs содержит *bu-vb* или *bi-vb*
@@ -70,18 +63,15 @@ if (!empty($finalRuling)) {
     $final = "&nbsp;<a href='#$finalRuling'>Final</a>";
 } else {
   $finalRuling = "";
-  $final ="";
+  $final = "";
 }
-
 $fullpathvoicefile = $basedir . "/assets/audio/" . $pmtype . "-pm" . "/" . $rule . ".m4a";
 $voicematches = glob($fullpathvoicefile);
-
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
     $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
-    //<a target='' href='$voicefile'>/a>
 } else {
   $voicelink = "";
   $player = "";
@@ -175,8 +165,7 @@ $voicematches = glob($fullpathvoicefile);
 if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
-
-       $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a> <a href='#$finalRuling'>Final</a>"; 
+    $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>"; 
 $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
   $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";

@@ -39,6 +39,8 @@ if (preg_match("/(an|sn)/i",$nikaya)) {
 //$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_pli_sujato_en.ogg";
 //$voicefile = "/assets/audio/$nikaya$book/{$fromjs}_*";
 
+//$finalRuling = "1.27.0";
+
 if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
     // Если $fromjs содержит *bu-vb* или *bi-vb*
     $parts = explode("-", $fromjs);
@@ -50,6 +52,27 @@ if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
 $rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? implode("-", array_slice($parts, $vbIndex + 1)) : "";
     
 $rule = ucfirst($rule);
+
+$trnpath = shell_exec("echo $fromjs | awk -F'-' '{{OFS=\"-\"} 
+  if (NF == 5) {
+    print $1,$2,$3,$4\"/\"$1,$2,$3,$4,substr($5,0,2)\"/\"$1,$2,$3,$4,$5
+  } else if (NF == 6) {
+    print $1,$2,$3,$4\"/\"$1,$2,$3,$4,substr($5,0,2)\"/\"$1,$2,$3,$4,$5,$6
+  }
+}'");
+if (!empty($trnpath)) {
+    $trnpath = str_replace(PHP_EOL, '', $trnpath);
+    $finalRuling = shell_exec("grep -i 'Final ruling' $sctrntextlocation/en/brahmali/vinaya/{$trnpath}_translation-en-brahmali.json | awk -F':' '{print \$2}' | sed 's@\"@@g'");
+}
+
+if (!empty($finalRuling)) {
+    $finalRuling = str_replace(PHP_EOL, '', $finalRuling);
+    $final = "&nbsp;<a href='#$finalRuling'>Final</a>";
+} else {
+  $finalRuling = "";
+  $final ="";
+}
+
 $fullpathvoicefile = $basedir . "/assets/audio/" . $pmtype . "-pm" . "/" . $rule . ".m4a";
 $voicematches = glob($fullpathvoicefile);
 
@@ -60,8 +83,8 @@ if (!empty($voicematches)) {
     $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
     //<a target='' href='$voicefile'>/a>
 } else {
-  $voicelink = "&nbsp;";
-  $player = "&nbsp;";
+  $voicelink = "";
+  $player = "";
 }
 
 } else {
@@ -88,7 +111,7 @@ if (!empty($voicematches)) {
   ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1 2>/dev/null` ; 
   ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
   
- echo -n \"$voicelink\"
+ echo -n \"{$voicelink}{$final}\"
     [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"
     [ ! -z \$ruslink ] && echo -n \"&nbsp;<a target='' href=$linkforthru/\$ruslink>Th.ru</a>\"
     [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a target='' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
@@ -123,8 +146,32 @@ if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
     $vbIndex = array_search("vb", $parts);
 // Если "vb" найдено и есть следующий элемент, присваиваем $rule
 $rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? implode("-", array_slice($parts, $vbIndex + 1)) : "";
+   
+   $finalRuling = "1.27.0";
     
 $rule = ucfirst($rule);
+
+$trnpath = shell_exec("echo $fromjs | awk -F'-' '{{OFS=\"-\"} 
+  if (NF == 5) {
+    print $1,$2,$3,$4\"/\"$1,$2,$3,$4,substr($5,0,2)\"/\"$1,$2,$3,$4,$5
+  } else if (NF == 6) {
+    print $1,$2,$3,$4\"/\"$1,$2,$3,$4,substr($5,0,2)\"/\"$1,$2,$3,$4,$5,$6
+  }
+}'");
+if (!empty($trnpath)) {
+    $trnpath = str_replace(PHP_EOL, '', $trnpath);
+    $finalRuling = shell_exec("grep -i 'Final ruling' $sctrntextlocation/en/brahmali/vinaya/{$trnpath}_translation-en-brahmali.json | awk -F':' '{print \$2}' | sed 's@\"@@g'");
+}
+
+if (!empty($finalRuling)) {
+    $finalRuling = str_replace(PHP_EOL, '', $finalRuling);
+    $final = "&nbsp;<a href='#$finalRuling'>Final</a>";
+} else {
+  $finalRuling = "";
+  $final ="";
+}
+
+
 $fullpathvoicefile = $basedir . "/assets/audio/" . $pmtype . "-pm" . "/" . $rule . ".m4a";
 $voicematches = glob($fullpathvoicefile);
 
@@ -132,7 +179,7 @@ if (!empty($voicematches)) {
     $voicefilename = basename($voicematches[0]);
     $voicefile = "/assets/audio/" . $pmtype . "-pm" . "/" . $voicefilename;
 
-       $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>"; 
+       $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a> <a href='#$finalRuling'>Final</a>"; 
 $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
   $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
@@ -197,7 +244,7 @@ $thsulink = str_replace(PHP_EOL, '', $thsulink);
 
 $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" | sort -V | head -n1` ; ruslinkdn=\"$thsulink\"; 
 
-echo -n \"$voicelink\";
+echo -n \"{$voicelink}{$final}\";
  
 [[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href='$linktbw/$bwlink'>Bw</a>\"; 
     

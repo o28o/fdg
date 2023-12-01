@@ -146,8 +146,6 @@ if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
     $vbIndex = array_search("vb", $parts);
 // Если "vb" найдено и есть следующий элемент, присваиваем $rule
 $rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? implode("-", array_slice($parts, $vbIndex + 1)) : "";
-   
-   $finalRuling = "1.27.0";
     
 $rule = ucfirst($rule);
 
@@ -168,9 +166,8 @@ if (!empty($finalRuling)) {
     $final = "&nbsp;<a href='#$finalRuling'>Final</a>";
 } else {
   $finalRuling = "";
-  $final ="";
+  $final = "";
 }
-
 
 $fullpathvoicefile = $basedir . "/assets/audio/" . $pmtype . "-pm" . "/" . $rule . ".m4a";
 $voicematches = glob($fullpathvoicefile);
@@ -183,7 +180,7 @@ if (!empty($voicematches)) {
 $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
 } else {
   $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
-  $player = "&nbsp;";
+  $player = "";
 }
 
 

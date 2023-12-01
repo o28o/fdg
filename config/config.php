@@ -175,6 +175,7 @@ $translatorlocation = $basedir. '/assets/texts/';
 
 //api-emulator
 $scroottextlocation = $basedir . "/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";
+$sctrntextlocation = $basedir . "/suttacentral.net/sc-data/sc_bilara_data/translation/";
 //opentexts.php
 $indexesfile = $basedir. '/assets/texts/text_indexes.txt';
 $scriptfile = $basedir. '/scripts/ranges.sh';

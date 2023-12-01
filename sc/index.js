@@ -196,10 +196,13 @@ const warning = "<p class='warning' >Warning!<br>Translations made not by the Bl
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
  
- const pageTile = document.querySelector("h1");
+ const pageTitleElement = document.querySelector("h1");
+let pageTitleText = pageTitleElement.textContent;
+pageTitle = pageTitleText.replace(/[0-9.]/g, '');
 
-      document.title = `${slug} ${pageTile.textContent}`;
-
+slug = slug.replace(/pli-tv-|vb-/g, '');
+document.title = `${slug} ${pageTitle}`;
+    
 var metaDescription = document.createElement('meta');
 metaDescription.name = 'description';
 metaDescription.content = document.title;
@@ -325,7 +328,7 @@ setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>For navigation texts should conatin text numbers. E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-vb-pj1</span> or <span class="abbr">pli-tv-bu-vb-as1-7</span>.<br>
+  <p>For navigation texts should conatin text numbers. E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-vb-as1-7</span> or <span class="abbr">bi-vb-pj1</span>.<br>
   Dn, mn, sn, an, some kn books, both patimokkhas and vinaya vibhanga are available. </p>
   <div class="lists">
 

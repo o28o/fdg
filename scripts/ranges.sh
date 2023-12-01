@@ -16,12 +16,18 @@ textnumforrange=`echo $stringforrange| sed 's@.*\.@@g'`
 check=$partforrange
 ranges=`grep -i "$partforrange" $indexesfile | grep -i "-" | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}' |  awk -F'.' '{print $NF}' `
 #echo $ranges
-elif  [[ $textnameforrange == *"-vb-"* ]]
+elif  [[ $textnameforrange == *"bu-"* ]] || [[ $textnameforrange == *"bi-"* ]] ||  [[ $textnameforrange == *"vb-"* ]] 
 then
+
+if  [[ $textnameforrange != *"vb-"* ]] 
+then
+textnameforrange=`echo "$textnameforrange" | sed 's/bi-/bi-vb-/g'| sed 's/bu-/bu-vb-/g'`
+fi 
 #echo vinayacase
 textnumforrange=`echo $string| sed 's@[A-Za-z]@@g' | sed 's@-@@g'`
 #echo $textnumforrange
-check=$textnameforrange
+textnameforrange=`echo $textnameforrange | sed 's@pli-tv-@@'`
+check=`echo $textnameforrange | sed 's@vb-@@g'`
 ranges=`grep -i "$textnameforrange" $indexesfile | grep -i "-" | awk -F'/' '{print $NF}' | awk -F'[._]' '{print $1}' | sed 's/[^0-9]*\([0-9].*\)/\1/' `
 #echo $ranges
 elif  [[ $textnameforrange != *"\."* ]]

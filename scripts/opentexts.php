@@ -84,25 +84,30 @@ $cb = $q = $extra = $la = $p = $arg = $string = $sutta = "";
   }
 	
 		$string = str_replace("`", "", $q);
-
+$string = strtolower($string);
 $string = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $string);
 
 //for patimokkha and vinaya vibhanga
 if (preg_match("/^(bu|bi)-pm$/i", $string)) {
 	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
-} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]).*[0-9]/i", $string)) {
-  
+} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z])[0-9]*/i", $string)) {
+if (strpos($string, 'vb-') === false) {
+    $string = str_replace('bi-', 'bi-vb-', $string);
+    $string = str_replace('bu-', 'bu-vb-', $string);
+}
+
   $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
 if (empty($check)) {
   $command = escapeshellcmd("bash $scriptfile $string");
   $string = trim(shell_exec($command));
 }	  
-  
+  $string = str_replace('bi-vb-', 'bi-', $string);
+    $string = str_replace('bu-vb-', 'bu-', $string);
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
-} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z])/i", $string)) {
+} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]*)/i", $string)) {
 echo "<script>window.location.href='$readerlang/sc/';</script>";	
 	  exit(); 
 }

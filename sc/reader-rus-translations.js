@@ -256,9 +256,12 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
 
-const pageTitle = document.querySelector("h1");
+const pageTitleElement = document.querySelector("h1");
+let pageTitleText = pageTitleElement.textContent;
+pageTitle = pageTitleText.replace(/[0-9.]/g, '');
 
-document.title = `${slug} ${pageTitle.textContent}`;
+slug = slug.replace(/pli-tv-|vb-/g, '');
+document.title = `${slug} ${pageTitle}`;
     
 var metaDescription = document.createElement('meta');
 metaDescription.name = 'description';
@@ -403,7 +406,7 @@ setLanguage(language);
   } 
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>Тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-vb-pj1</span> или <span class="abbr">pli-tv-bu-vb-as1-7</span>.<br>
+<p>Для перехода тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-vb-as1-7</span> или <span class="abbr">bi-vb-pj1</span>.<br>
  Доступны dn, mn, sn, an, некоторые книги kn, обе патимоккхи и виная вибханги.<br>
   </p>
   <div class="lists">

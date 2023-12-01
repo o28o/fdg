@@ -21,6 +21,9 @@ $command = "ls $location/$dirtolist | sort -V | sort -V | grep -{$type}1 {$slug}
 $next = shell_exec($command);
 
 $nextslug = preg_replace('/_.*$/', '', $next);
+$nextslug = preg_replace('/pli-tv-/', '', $nextslug);
+$nextslug = preg_replace('/bu-vb-/', 'bu-', $nextslug);
+$nextslug = preg_replace('/bi-vb-/', 'bi-', $nextslug);
 $nextslug = str_replace(PHP_EOL, '', $nextslug);
 $textname = shell_exec("grep -m1 -E \":0\..*(sutt|pada)\" $location/$dirtolist/$next");
 

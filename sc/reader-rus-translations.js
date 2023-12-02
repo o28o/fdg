@@ -406,7 +406,7 @@ setLanguage(language);
   } 
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-<p>Для перехода тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-vb-as1-7</span> или <span class="abbr">bi-vb-pj1</span>.<br>
+<p>Для перехода тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> или <span class="abbr">bi-pj1</span>.<br>
  Доступны dn, mn, sn, an, некоторые книги kn, обе патимоккхи и виная вибханги.<br>
   </p>
   <div class="lists">

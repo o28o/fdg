@@ -120,11 +120,8 @@ echo -n \"$player\"
 else
   echo 'The length of ruslinkdn is less than 2.'
 fi
-
   ");
-  $result = str_replace(PHP_EOL, '', $output);
-return $output;
-
+  
 } else {
  // online 
 
@@ -185,10 +182,9 @@ echo -n \"$player\";
 ");
 
 }
-
-return $output;
-  
 }
+$result = str_replace(PHP_EOL, '', $output);
+return $output;
 }
 
 // curl localhost:8080/sc/extralinks.php?fromjs=an1.1-10

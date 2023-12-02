@@ -89,9 +89,19 @@ $string = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $string);
 
 //for patimokkha and vinaya vibhanga
 if (preg_match("/^(bu|bi)-pm$/i", $string)) {
+//echo "<script>alert('case 1');</script>";	
 	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
-} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z])[0-9]*/i", $string)) {
+} else if  ((preg_match("/^(bu|bi)-(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) && (preg_match("!/[0-9]/i", $string))) {
+  $string = $string . "1";
+  echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+	  exit(); 
+} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
+  $string = "bu-" . $string . "1";
+  echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+	  exit(); 
+} else if (preg_match("/(bu|bi)-([a-z][a-z])[0-9]*/i", $string)) {
+ // echo "<script>alert('case 2');</script>";	
 if (strpos($string, 'vb-') === false) {
     $string = str_replace('bi-', 'bi-vb-', $string);
     $string = str_replace('bu-', 'bu-vb-', $string);
@@ -100,15 +110,30 @@ if (strpos($string, 'vb-') === false) {
   $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
 if (empty($check)) {
+  //echo "<script>alert('case 3');</script>";	
   $command = escapeshellcmd("bash $scriptfile $string");
   $string = trim(shell_exec($command));
+  $string = str_replace(PHP_EOL, '', $string);
 }	  
+if (empty($string)) {
+  //echo "<script>alert('case 31');</script>";	
+  echo "<script>window.location.href='$readerlang/sc/';</script>";	
+  exit();
+}	  
+
   $string = str_replace('bi-vb-', 'bi-', $string);
     $string = str_replace('bu-vb-', 'bu-', $string);
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
 } else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]*)/i", $string)) {
-echo "<script>window.location.href='$readerlang/sc/';</script>";	
+//echo "<script>alert('case 4');</script>";	
+ $string = $string . "1";
+echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+	  exit(); 
+} else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $string)) {
+ // echo "<script>alert('case 5');</script>";	
+  $string = "bu-" . $string;
+echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
 }
 /* ru with arg */ 

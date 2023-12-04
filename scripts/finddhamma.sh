@@ -499,10 +499,21 @@ then
 
 fortitle="${fortitle}"
 excludepattern="`echo $@ | sed 's/.*-exc //g'`"
-addtotitleifexclude=" exc. ${excludepattern,,}"
+addtotitleifexclude=" exc. $excludepattern"
 addtoresponseexclude=" $excluderesponse $excludepattern"
+
+# Проверяем, есть ли пробелы в excludepattern
+if [[ $excludepattern == *" "* ]]; then
+    # Если есть, преобразовываем в соответствующий формат
+    excludepatterngrepv="$(echo "$excludepattern" | sed 's/ /|/g')"
+    excludepatterngrepv="($excludepatterngrepv)"
+else
+    # Если нет пробелов, используем исходный паттерн
+    excludepatterngrepv="$excludepattern"
+fi
+
 function grepexclude {
-grep -iE -v "$excludepattern"
+grep -iE -v "$excludepatterngrepv"
 }
 #echo arg="$@"
 excfn="` echo -exc-${excludepattern} | sed 's/ /-/g' | sed 's@\\\@@g' `"

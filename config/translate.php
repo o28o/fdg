@@ -101,7 +101,7 @@ $regexMemoh5 = '<h5>Памятка по RegEx</h5>';
 
 $lax = "искать X и добавить в результаты $defaultla (значение можно менять) следующие строки после строки с X";
 $lbx = "искать X и добавить в результаты $defaultla предыдущие строки перед строкой с X";
-$exc = "искать X, исключить Y";
+$exc = "искать X, исключить Y и Z";
 $excfew = 'искать X, исключить Y с окончаниями на "ti" и "nti"';
 $begin = 'начало или';
 $end = 'конец слова';
@@ -559,7 +559,7 @@ $regexMemoh5 = 'RegEx Memo';
 
 $lax = "search for X, add $defaultla next line to output after lines containing X";
 $lbx = "search for X, add $defaultla previous lines to output before lines containing X";
-$exc = "search for X, exclude Y";
+$exc = "search for X, exclude Y and Z";
 $excfew = 'search for X, exclude Y ending with "ti" and "nti"';
 $begin = 'begins with X or';
 $end = 'ends';

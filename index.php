@@ -213,7 +213,7 @@ $(document).ready(function() {
 
  <h5 class="mt-4"><?php echo $regexMemoh5;?></h5> 
 <div class="mt-4" style="text-align: left;">
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y</strong></button> - <?php echo $exc;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y Z</strong></button> - <?php echo $exc;?> <br>
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc "Y(ti|nti)"</strong></button> - <?php echo $excfew;?> <br>

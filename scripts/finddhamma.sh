@@ -507,6 +507,8 @@ if [[ $excludepattern == *" "* ]]; then
     # Если есть, преобразовываем в соответствующий формат
     excludepatterngrepv="$(echo "$excludepattern" | sed 's/ /|/g')"
     excludepatterngrepv="($excludepatterngrepv)"
+elif [[ $excludepattern == *"("* ]] &&  [[ $excludepattern == *")"* ]] ; then
+    excludepatterngrepv="$excludepattern"    
 else
     # Если нет пробелов, используем исходный паттерн
     excludepatterngrepv="$excludepattern"

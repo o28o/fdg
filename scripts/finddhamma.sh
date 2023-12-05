@@ -185,10 +185,15 @@ else
 numbersmatches=
 fi
 
-if [[ "$pattern" != *"\\"* ]]; then
-pattern=`echo "$pattern"| awk '{print tolower($0)}' | clearargs `
-else 
-pattern=`echo "$pattern"| clearargs `
+
+
+if [[ "$pattern" =~ '/' || "$pattern" =~ '\' ]]
+then
+  #echo "yes"
+  pattern=`echo "$pattern"| clearargs `
+  else
+  #echo "no /\\"
+  pattern=`echo "$pattern"| awk '{print tolower($0)}' | clearargs `
 fi
 
 userpattern="$pattern"

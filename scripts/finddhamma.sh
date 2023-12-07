@@ -369,9 +369,10 @@ patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' `
 command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' -not -path '*/pli-tv-kd/*' -not -path '*/pli-tv-pvr/*' "
 for i in $patternforfind
 do
-command+=`echo -n '-exec grep -qE "'$i'" {} \; '` 
+#command+=`echo -n '-exec grep -qE "'$i'" {} \; '`
+command+=`echo -n '| xargs grep -il "'$i'"'` 
 done
-command+=' -print'
+#command+=' -print'
 #echo  "$command" >> command
 eval "$command" > $tmponl 
 

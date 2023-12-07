@@ -73,9 +73,12 @@ echo '<!--
 
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
     
-      <li><a class="dropdown-item" target="_blank" href="' . $linksclegacy . '">' . $anamesclegacy . '</a></li>
-      
+
     <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SC.net Voice</a></li>
+       <li><a class="dropdown-item" target="_blank" href="' . $linksclegacy . '">' . $anamesclegacy . '</a></li>
+
+      
+ 
   </ul>
 
 <a class="text-decoration-none mx-1" href="/history.php">

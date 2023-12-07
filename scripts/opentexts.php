@@ -92,11 +92,14 @@ if (preg_match("/^(bu|bi)-pm$/i", $string)) {
 //echo "<script>alert('case 1');</script>";	
 	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
+} else if (preg_match("/^pm$/i", $string)) {
+	echo "<script>window.location.href='$readerlang/sc/?q=bu-{$string}';</script>";	
+	  exit(); 
 } else if  ((preg_match("/^(bu|bi)-(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) && (preg_match("!/[0-9]/i", $string))) {
   $string = $string . "1";
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
-} else if  (preg_match("/^(pm|pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
+} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
   $string = "bu-" . $string . "1";
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 

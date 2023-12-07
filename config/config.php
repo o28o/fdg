@@ -27,8 +27,7 @@ $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/pyth
 
 // mainmenu
 $linkmolds = '/buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
-$linksc = '/legacy.suttacentral.net/sc/su.html';
-$anamesc = 'SC.net Legacy';
+
 $linktbw = '/bw';
 $linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
@@ -63,8 +62,6 @@ $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/pyth
 
 // mainmenu
 $linkmolds = '/buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
-$linksc = 'https://suttacentral.net/';
-$anamesc = 'SuttaCentral.net';
 $linktbw = '/bw';
 $linknoblasc = '/en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
@@ -108,8 +105,7 @@ $adapterscriptlocation = '/home/python/aksharamukha/bin/python3 /var/www/html/sc
 
 // mainmenu
 $linkmolds = 'https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
-$linksc = 'https://suttacentral.net/';
-$anamesc = 'SuttaCentral.net';
+
 $linktbw = '/bw';
 $linknoblasc = 'https://en.dhammadana.org/sangha/dhutanga.htm';
 $linkati = 'https://www.accesstoinsight.org/tipitaka/vin/sv/index.html';
@@ -152,8 +148,7 @@ $adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/
 
 // mainmenu
 $linkmolds = 'https://buddhadust.net/dhamma-vinaya/bd/dhamma-vinaya.htm';
-$linksc = 'https://suttacentral.net/';
-$anamesc = 'SuttaCentral.net';
+
 //$linktbw = 'https://thebuddhaswords.net';
 $linktbw = '/bw';
 $linknoblasc = 'https://en.dhammadana.org/sangha/dhutanga.htm';
@@ -168,11 +163,15 @@ $linkcasesru = 'https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntO
 //
 // Common Variables
 //
+
 $linebylinerulocation = $basedir. '/assets/texts/';
 //translator-lookup.php
 $translatorlocation = $basedir. '/assets/texts/';
 
-
+$linksc = 'https://suttacentral.net/';
+$anamesc = 'SuttaCentral.net';
+$linksclegacy = '/legacy.suttacentral.net/sc/su.html';
+$anamesclegacy = 'SC.net Legacy';
 //api-emulator
 $scroottextlocation = $basedir . "/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";
 $sctrntextlocation = $basedir . "/suttacentral.net/sc-data/sc_bilara_data/translation/";

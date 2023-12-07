@@ -56,7 +56,7 @@ echo '<!--
     
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
 
-       <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">Suttacentral Voice</a></li>
+       <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SuttaCentral Voice</a></li>
                  <li><a class="dropdown-item" target="_blank" href="' . $linksclegacy . '">' . $anamesclegacy . '</a></li> 
            <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">SC.net Виная</a></li>   
 

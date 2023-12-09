@@ -1,6 +1,6 @@
 <?php 
 header("Content-Type:text/plain");
-//error_reporting(E_ERROR | E_PARSE);
+error_reporting(E_ERROR | E_PARSE);
 //include('../config/config.php');
 
 
@@ -20,9 +20,6 @@ if (file_exists($bwfile) ) {
 } else {
   $bwlink = "";
 }
-
-
-  
 //th.ru and th.su part
 $locationrudn = $thsulocation;
 $nikaya = strtolower(preg_replace("/[0-9-.]/i","","$fromjs"));
@@ -76,7 +73,7 @@ if (!empty($voicematches)) {
 } else {
   $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
   $player = "";
-    $final = "";
+
 }
 
 
@@ -95,11 +92,11 @@ if (!empty($voicematches)) {
        $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>"; 
        
     $player = "</br></br><audio controls><source src='$voicefile' type='audio/mp4'>Browser is not supported.</audio>";
-    $final = "";
+
 } else {
     $voicelink = "<a target='' href='https://voice.suttacentral.net/scv/index.html?#/sutta?search=$fromjs'>Voice.SC</a>";
     $player = "";
-  $final = "";
+
 }
 
 }

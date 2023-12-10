@@ -40,8 +40,15 @@ if (strpos($fromjs, "bu-vb") !== false || strpos($fromjs, "bi-vb") !== false) {
     $vbIndex = array_search("vb", $parts);
 // Если "vb" найдено и есть следующий элемент, присваиваем $rule
 $rule = $vbIndex !== false && isset($parts[$vbIndex + 1]) ? implode("-", array_slice($parts, $vbIndex + 1)) : "";
-    
-$rule = ucfirst($rule);
+
+// Если $fromjs содержит "bi-"
+if (strpos($fromjs, 'bi-') !== false) {
+    // Добавить "Bi-" к $rule и привести первую букву следующего элемента к верхнему регистру
+    $rule = "Bi-" . $rule;
+} else {
+  $rule = ucfirst($rule);
+}
+
 
 $trnpath = shell_exec("echo $fromjs | awk -F'-' '{{OFS=\"-\"} 
   if (NF == 5) {

@@ -300,7 +300,7 @@ then
 fileprefix=${fileprefix}-simile
 fortitle="Similes ${fortitle}"
 
-smlpattern="`echo $pattern | sed -E 's/([aoā]|aṁ)$//g'`"
+smlpattern="`echo $pattern | sed -E 's/([aoāī]|aṁ)$//g'`"
 pattern="$smlpattern" 
 #vin=dummy ${smlpattern}.*nāma|
 linesafter=1
@@ -320,15 +320,15 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pal
 #for i in `grep -iE "Evamev.*${smlpattern}" $tmpsml | awk -F':' '{print $1}' | sort -V | uniq`; do grep -EHi -B1 "Evamev.*${smlpattern}" $i | sed 's@json-@json:@g' | grep -vi "Evamev.*${smlpattern}" | sort -V | uniq | sed '/--/d'  ; done > tmpsml
 
 if [[ "$type" == html ]]; then
-for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|Evamev.*${smlpattern}|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | sed 's/html:.*/html/g'  ; 
+for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|Eva[mnṇṅṃṁ].*${smlpattern}|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | sed 's/html:.*/html/g'  ; 
 done
 else 
 
 nice -$nicevalue grep -Ei "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $tmpsml | grep -vE "$nonmetaphorkeys" > ${tmpsml}_2
 
-nice -$nicevalue grep -B1 -ERi "Evamev.*${smlpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} | sed 's@json-@json:@g' | sed '/--/d' > ${tmpsml}_3
+nice -$nicevalue grep -B1 -ERi "Eva[mnṇṅṃṁ].*${smlpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} | sed 's@json-@json:@g' | sed '/--/d' > ${tmpsml}_3
 
-cat ${tmpsml}_2 ${tmpsml}_3 | grep -vi "Evamev.*${smlpattern}"
+cat ${tmpsml}_2 ${tmpsml}_3 | grep -vi "Eva[mnṇṅṃṁ].*${smlpattern}"
 fi
 }
 
@@ -892,7 +892,7 @@ metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | 
 if [[ $metaphorcount == "" ]]
 then
 metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
-sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
+sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evame'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 fi
 
@@ -1042,7 +1042,7 @@ if [[ $metaphorcount == "" ]]
 then
 
 metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
-sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamevaṁ'`
+sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamev'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 fi
 
@@ -1142,7 +1142,7 @@ fi
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
-nice -$nicevalue grep -E -A1 -Eir "${defpattern}.{0,50}saṅkhaṁ gacchati" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} | grep -E -B1 Evamevaṁ | grep -v "^--$" >> $basefile
+nice -$nicevalue grep -E -A1 -Eir "${defpattern}.{0,50}saṅkhaṁ gacchati" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} | grep -E -B1 Evamev | grep -v "^--$" >> $basefile
 
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12sk $texts"

@@ -1,0 +1,52 @@
+function toggleTheme() {
+  const bodyTag = document.body;
+  const themeButton = document.getElementById("theme-button");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Функция для установки темы
+    function setTheme(theme) {
+      bodyTag.classList.toggle("dark", theme === "dark");
+      document.documentElement.setAttribute("data-bs-theme", theme);
+      console.log(`Тема установлена в: ${theme}`);
+    }
+
+    // Функция для определения темы ОС
+    function detectOSTheme() {
+      const darkThemeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const osTheme = darkThemeMediaQuery.matches ? "dark" : "light";
+      setTheme(osTheme);
+      console.log(`Тема ОС определена как: ${osTheme}`);
+    }
+
+    // Проверяем значение localStorage.theme и устанавливаем тему соответственно
+    if (localStorage.theme) {
+      setTheme(localStorage.theme);
+    } else {
+      setTheme("dark"); // По умолчанию, если нет сохраненной темы
+      localStorage.theme = "dark";
+    }
+
+    // Обработчик клика на кнопку
+    themeButton.addEventListener("click", () => {
+      if (localStorage.theme === "light") {
+        setTheme("dark");
+        localStorage.theme = "dark";
+        localStorage.setItem("darkSwitch", "dark");
+      } else {
+        setTheme("light");
+        localStorage.theme = "light";
+        localStorage.removeItem("darkSwitch");
+      }
+    });
+
+    // Определение и установка темы ОС
+    detectOSTheme();
+  });
+}
+
+toggleTheme();
+
+var themeValue = localStorage.theme;
+var darkSwitchValue = localStorage.getItem("darkSwitch");
+console.log("Значение theme:", themeValue);
+console.log("Значение darkSwitch:", darkSwitchValue);

@@ -1909,7 +1909,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo $mainscpage; ?>/?q=bi-pm#257.0">Sekhiya 10. Dutiya-ukkhittakasikkhāpadaṁ</a> Na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā. Parimaṇḍalavaggo paṭhamo.
+<a href="<?php echo $mainscpage; ?>/?q=bi-pm#257.0">Sekhiya 10. Dutiya-ukkhittakasikkhāpadaṁ</a> Na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā.
 </span>
 </div>
 

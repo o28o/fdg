@@ -1,4 +1,3 @@
-"use strict";
 
 function toggleThemeManually() {
   const bodyTag = document.body;
@@ -14,15 +13,15 @@ function toggleThemeManually() {
     } else if (theme === "dark") {
       bodyTag.classList.add("dark");
       document.documentElement.setAttribute("data-bs-theme", "dark");
-      localStorage.setItem("darkSwitch", "dark");
+          localStorage.setItem("darkSwitch", "dark");
       document.body.setAttribute("data-theme", "dark");
     } else {
-      const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-      if (isDarkMode) {
+      // Handle "auto" theme
+      const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      if (darkModeMediaQuery.matches) {
         bodyTag.classList.add("dark");
         document.documentElement.setAttribute("data-bs-theme", "dark");
-        localStorage.setItem("darkSwitch", "dark");
+            localStorage.setItem("darkSwitch", "dark");
         document.body.setAttribute("data-theme", "dark");
       } else {
         bodyTag.classList.remove("dark");
@@ -32,7 +31,7 @@ function toggleThemeManually() {
       }
     }
   }
-
+//document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", function () {
     if (localStorage.theme && localStorage.theme !== "auto") {
       if (themeSelect) {
@@ -82,9 +81,9 @@ function toggleThemeManually() {
   });
 
   function updateTheme() {
-    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
-    if (isDarkMode) {
+    if (darkModeMediaQuery.matches) {
       setTheme("dark");
       localStorage.theme = "auto";
       if (themeSelect) {

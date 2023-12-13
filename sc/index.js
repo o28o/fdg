@@ -2,7 +2,6 @@ const Sccopy = "/suttacentral.net";
 const suttaArea = document.getElementById("sutta");
 const homeButton = document.getElementById("home-button");
 const fdgButton = document.getElementById("fdg-button");
-const themeButton = document.getElementById("theme-button");
 const bodyTag = document.querySelector("body");
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
@@ -20,25 +19,6 @@ homeButton.addEventListener("click", () => {
 });
 
 
-if (localStorage.theme) {
-  if (localStorage.theme === "light") {
-    bodyTag.classList.remove("dark");
-  }
-} else {
-  bodyTag.classList.add("dark");
-}
-
-themeButton.addEventListener("click", () => {
-  if (localStorage.theme === "light") {
-    bodyTag.classList.add("dark");
-    localStorage.setItem("darkSwitch", "dark");
-    localStorage.theme = "dark";
-  } else {
-    bodyTag.classList.remove("dark");
-    localStorage.theme = "light";
-    localStorage.removeItem("darkSwitch");
-  }
-});
 
 // pressing enter will "submit" the citation and load
 form.addEventListener("submit", e => {
@@ -539,7 +519,3 @@ abbreviations.forEach(book => {
   });
 });
 
-var themeValue = localStorage.theme;
-var darkSwitchValue = localStorage.getItem("darkSwitch");
-console.log("Значение theme:", themeValue);
-console.log("Значение darkSwitch:", darkSwitchValue);

@@ -73,10 +73,19 @@ include 'scripts/opentexts.php';
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
 <li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
 <a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a>
-</p></li><div class="form-check form-switch input-group-append">
-  <!-- <i class="nav-item fa-solid fa-circle-half-stroke"></i> -->
-<input type="checkbox" class="form-check-input" id="darkSwitch">
+
+</p></li>
+<li>
+<div class="align-items-center form-check-inline mx-0">
+    <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="auto">Auto</option>
+    </select>
 </div>
+
+
+</li>
        </ul>
                 </div>
             </div>
@@ -1178,8 +1187,7 @@ $.ajax({
   console.log(window.location.href);
 
 </script>
-<script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
-
+<script defer src="/assets/js/themeswitch.js"></script>
 </body>
 <?php
 include 'scripts/multilang-search.php';

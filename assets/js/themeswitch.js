@@ -1,46 +1,100 @@
-
-function toggleTheme() {
-    const bodyTag = document.body;
-    const themeButton = document.getElementById("theme-button");
-	
-document.addEventListener("DOMContentLoaded", function() {
+function toggleThemeManually() {
   const bodyTag = document.body;
+  const themeSelect = document.getElementById("theme-select");
   const themeButton = document.getElementById("theme-button");
 
-  // Проверяем значение localStorage.theme и устанавливаем тему соответственно
-  if (localStorage.theme) {
-    if (localStorage.theme === "light") {
+  function setTheme(theme) {
+    if (theme === "light") {
       bodyTag.classList.remove("dark");
       document.documentElement.setAttribute("data-bs-theme", "light");
-    } else {
+      document.body.removeAttribute("data-theme");
+    } else if (theme === "dark") {
+      bodyTag.classList.add("dark");
       document.documentElement.setAttribute("data-bs-theme", "dark");
+      document.body.setAttribute("data-theme", "dark");
+    } else {
+      // Handle "auto" theme
+      const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      if (darkModeMediaQuery.matches) {
+        bodyTag.classList.add("dark");
+        document.documentElement.setAttribute("data-bs-theme", "dark");
+        document.body.setAttribute("data-theme", "dark");
+      } else {
+        bodyTag.classList.remove("dark");
+        document.documentElement.setAttribute("data-bs-theme", "light");
+        document.body.removeAttribute("data-theme");
+      }
     }
-  } else {
-    bodyTag.classList.add("dark");
-    document.documentElement.setAttribute("data-bs-theme", "dark");
   }
 
-  // Обработчик клика на кнопку
-  themeButton.addEventListener("click", () => {
-    if (localStorage.theme === "light") {
-      bodyTag.classList.add("dark");
-      localStorage.theme = "dark";
-      localStorage.setItem("darkSwitch", "dark");
-      document.documentElement.setAttribute("data-bs-theme", "dark");
+  document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.theme && localStorage.theme !== "auto") {
+      if (themeSelect) {
+        themeSelect.value = localStorage.theme;
+      }
+      setTheme(localStorage.theme);
     } else {
-      bodyTag.classList.remove("dark");
-      localStorage.theme = "light";
-      localStorage.removeItem("darkSwitch");
-      document.documentElement.setAttribute("data-bs-theme", "light");
+      updateTheme();
+    }
+
+    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    darkModeMediaQuery.addEventListener("change", updateTheme);
+
+    if (themeSelect) {
+      themeSelect.addEventListener("change", () => {
+        const selectedTheme = themeSelect.value;
+        if (selectedTheme === "auto") {
+          updateTheme();
+        } else {
+          setTheme(selectedTheme);
+          localStorage.theme = selectedTheme;
+        }
+      });
+    }
+
+    if (themeButton) {
+      themeButton.addEventListener("click", () => {
+        const currentTheme = localStorage.theme;
+        let newTheme;
+
+        if (currentTheme === "light") {
+          newTheme = "dark";
+        } else if (currentTheme === "dark") {
+          newTheme = "auto";
+        } else {
+          newTheme = "light";
+        }
+
+        setTheme(newTheme);
+        localStorage.theme = newTheme;
+
+        if (themeSelect) {
+          themeSelect.value = newTheme;
+        }
+      });
     }
   });
-});
 
+  function updateTheme() {
+    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (darkModeMediaQuery.matches) {
+      setTheme("dark");
+      localStorage.theme = "auto";
+      if (themeSelect) {
+        themeSelect.value = "auto";
+      }
+    } else {
+      setTheme("light");
+      localStorage.theme = "auto";
+      if (themeSelect) {
+        themeSelect.value = "auto";
+      }
+    }
+  }
 }
 
-toggleTheme() ;
+toggleThemeManually();
 
 var themeValue = localStorage.theme;
-var darkSwitchValue = localStorage.getItem("darkSwitch");
 console.log("Значение theme:", themeValue);
-console.log("Значение darkSwitch:", darkSwitchValue);

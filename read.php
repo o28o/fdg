@@ -75,9 +75,18 @@ include 'scripts/opentexts.php';
 <li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/read.php">En</a> 
 <a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/read.php">Ru</a>
 
-</p></li>	<div class="form-check form-switch input-group-append">
-<input type="checkbox" style="transform: rotate(180deg);" class="form-check-input" id="darkSwitch">
-</div>	
+</p></li>
+<li>
+<div class="align-items-center form-check-inline mx-0">
+    <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="auto">Auto</option>
+    </select>
+</div>
+
+
+</li>
                     </ul>
                 </div>
             </div>
@@ -18926,8 +18935,7 @@ $.ajax({
   console.log(window.location.href);
 
 </script>
-<script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
-
+<script defer src="/assets/js/themeswitch.js"></script>
 
 </body>
 <?php

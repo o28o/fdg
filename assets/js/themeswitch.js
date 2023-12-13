@@ -1,3 +1,4 @@
+"use strict";
 function toggleThemeManually() {
   const bodyTag = document.body;
   const themeSelect = document.getElementById("theme-select");
@@ -30,8 +31,8 @@ function toggleThemeManually() {
       }
     }
   }
-
-  document.addEventListener("DOMContentLoaded", function () {
+//document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("load", function () {
     if (localStorage.theme && localStorage.theme !== "auto") {
       if (themeSelect) {
         themeSelect.value = localStorage.theme;

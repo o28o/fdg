@@ -381,7 +381,7 @@ mapfile -t onl_array < $tmponl
 
 # Вывод содержимого массива для проверки
 for line in "${onl_array[@]}"; do
-grep -HE "$pattern" $line
+grep -iHE "$pattern" $line
 done > $tmponl
 
 #cp $basefile bfl

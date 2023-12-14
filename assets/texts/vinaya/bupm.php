@@ -296,6 +296,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
    
            <div class="level4 my-3">
  <span class="level5">Ime kho panāyasmanto tiṁsa nissaggiyā pācittiyā dhammā uddesaṁ āgacchanti. </span>
+ 
 </div>              
               
      <!-- vagga begin -->     
@@ -307,12 +308,14 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
 			<a data-bs-toggle="collapse" data-bs-target="#np1CollapseBu" href=""><h4>1. Kaṭhinavaggo </h4></a>
 			
 			<!-- <a href="<?php echo $mainscpage; ?>/?q=bu-pm#34.0.1"><h4>1. Kaṭhinavaggo </h4></a> -->
-			
+
 </div>
               </div>
               <div class="collapse" id="np1CollapseBu">
                 <div class="my-3">
-
+<div class="my-2">
+         <audio controls><source src='/assets/audio/bu-pm/Bu-np1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>   
+</div>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-np1#2.17.0">Nissaggiya Pācittiya 1. Kathina</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#34.0.2">pm</a> Niṭṭhitacīvarasmiṁ bhikkhunā ubbhatasmiṁ kathine dasāhaparamaṁ atirekacīvaraṁ dhāretabbaṁ, taṁ atikkāmayato nissaggiyaṁ pācittiyaṁ.
@@ -397,6 +400,10 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 
 <div class="level4">
 <span class="level5">
+  
+  <div class="my-2">
+         <audio controls><source src='/assets/audio/bu-pm/Bu-np2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>   
+</div>
 <a href="<?php echo $mainscpage; ?>/?q=bu-np11#1.23.0">Nissaggiya Pācittiya 11. Kosiya</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#44.0.2">pm</a> Yo pana bhikkhu kosiyamissakaṁ santhataṁ kārāpeyya, nissaggiyaṁ pācittiyaṁ. 
 </span>
 </div>
@@ -475,6 +482,10 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 
 <div class="level4">
 <span class="level5">
+  
+  <div class="my-2">
+         <audio controls><source src='/assets/audio/bu-pm/Bu-np3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>   
+</div>
 <a href="<?php echo $mainscpage; ?>/?q=bu-np21#2.17.0">Nissaggiya Pācittiya 21. Patta</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#54.0.2">pm</a> Dasāhaparamaṁ atirekapatto dhāretabbo, taṁ atikkāmayato nissaggiyaṁ pācittiyaṁ. 
 </span>
 </div>

@@ -1,105 +1,62 @@
+    document.addEventListener('DOMContentLoaded', function () {
+        const themeSelect = document.getElementById('theme-select');
+        const bodyTag = document.body;
 
-function toggleThemeManually() {
-  const bodyTag = document.body;
-  const themeSelect = document.getElementById("theme-select");
-  const themeButton = document.getElementById("theme-button");
+        // Проверяем, есть ли значение в localStorage, и устанавливаем тему при необходимости
+        const savedThemeMode = localStorage.getItem('thememode');
+        const savedTheme = localStorage.getItem('theme');
+        
+        console.log('Значение из localStorage.thememode:', savedThemeMode);
+        console.log('Значение из localStorage.theme:', savedTheme);
 
-  function setTheme(theme) {
-    if (theme === "light") {
-      bodyTag.classList.remove("dark");
+        if (savedThemeMode) {
+            themeSelect.value = savedThemeMode;
+            setTheme(savedThemeMode);
+        }
+
+        // Обработчик события изменения выбранной темы
+        themeSelect.addEventListener('change', function () {
+            const selectedThemeMode = themeSelect.value;
+            console.log('Значение theme-select:', selectedThemeMode);
+            setTheme(selectedThemeMode);
+            localStorage.setItem('thememode', selectedThemeMode);
+        });
+
+
+        // Функция для установки темы
+        function setTheme(themeMode) {
+            if (themeMode === 'darkManual') {
+                bodyTag.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                
+                      bodyTag.classList.add("dark");
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+      localStorage.setItem("darkSwitch", "dark");
+      document.body.setAttribute("data-theme", "dark");
+      
+            } else if (themeMode === 'lightManual') {
+                bodyTag.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                
+                      bodyTag.classList.remove("dark");
       document.documentElement.setAttribute("data-bs-theme", "light");
       localStorage.removeItem("darkSwitch");
       document.body.removeAttribute("data-theme");
-    } else if (theme === "dark") {
-      bodyTag.classList.add("dark");
-      document.documentElement.setAttribute("data-bs-theme", "dark");
-          localStorage.setItem("darkSwitch", "dark");
-      document.body.setAttribute("data-theme", "dark");
-    } else {
-      // Handle "auto" theme
-      const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-      if (darkModeMediaQuery.matches) {
-        bodyTag.classList.add("dark");
-        document.documentElement.setAttribute("data-bs-theme", "dark");
-            localStorage.setItem("darkSwitch", "dark");
-        document.body.setAttribute("data-theme", "dark");
-      } else {
-        bodyTag.classList.remove("dark");
-        document.documentElement.setAttribute("data-bs-theme", "light");
-        localStorage.removeItem("darkSwitch");
-        document.body.removeAttribute("data-theme");
-      }
-    }
-  }
-//document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("load", function () {
-    if (localStorage.theme && localStorage.theme !== "auto") {
-      if (themeSelect) {
-        themeSelect.value = localStorage.theme;
-      }
-      setTheme(localStorage.theme);
-    } else {
-      updateTheme();
-    }
+                
+            } else if (themeMode === 'auto') {
+                // Отслеживание изменения темы в ОС
+                      document.documentElement.setAttribute("data-bs-theme", "auto");
+                const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                const updateTheme = () => {
+                    console.log('Тема ОС изменена:', darkModeMediaQuery.matches ? 'dark' : 'light');
+                    setTheme(darkModeMediaQuery.matches ? 'darkManual' : 'lightManual');
+                };
 
-    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    darkModeMediaQuery.addEventListener("change", updateTheme);
-
-    if (themeSelect) {
-      themeSelect.addEventListener("change", () => {
-        const selectedTheme = themeSelect.value;
-        if (selectedTheme === "auto") {
-          updateTheme();
-        } else {
-          setTheme(selectedTheme);
-          localStorage.theme = selectedTheme;
+                darkModeMediaQuery.addEventListener('change', updateTheme);
+                updateTheme();
+            }
         }
-      });
-    }
+    });
 
-    if (themeButton) {
-      themeButton.addEventListener("click", () => {
-        const currentTheme = localStorage.theme;
-        let newTheme;
 
-        if (currentTheme === "light") {
-          newTheme = "dark";
-        } else if (currentTheme === "dark") {
-          newTheme = "auto";
-        } else {
-          newTheme = "light";
-        }
 
-        setTheme(newTheme);
-        localStorage.theme = newTheme;
-
-        if (themeSelect) {
-          themeSelect.value = newTheme;
-        }
-      });
-    }
-  });
-
-  function updateTheme() {
-    const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-    if (darkModeMediaQuery.matches) {
-      setTheme("dark");
-      localStorage.theme = "auto";
-      if (themeSelect) {
-        themeSelect.value = "auto";
-      }
-    } else {
-      setTheme("light");
-      localStorage.theme = "auto";
-      if (themeSelect) {
-        themeSelect.value = "auto";
-      }
-    }
-  }
-}
-
-toggleThemeManually();
-
-var themeValue = localStorage.theme;
-console.log("Значение theme:", themeValue);

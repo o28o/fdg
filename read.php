@@ -133,19 +133,21 @@ $(document).ready(function() {
   // Обработчик для нажатия клавиши Enter
   $(document).on('keydown', function(event) {
     if (event.key === 'Enter') {
-      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
-     $('#navbarResponsive').collapse('hide');      
-      
+      if (!$('#navbarResponsive').hasClass('showkeep')) {
+        $('#navbarResponsive').collapse('hide');
+      }
     }
   });
 
   // Обработчик для отправки формы
   $('#searchbtn').on('click', function() {
-      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
-     $('#navbarResponsive').collapse('hide');
+    if (!$('#navbarResponsive').hasClass('showkeep')) {
+      $('#navbarResponsive').collapse('hide');
+    }
   });
 });
 </script>
+
 
 <div class="collapse" id="collapseSettings">
   <div class="float-start">
@@ -247,12 +249,10 @@ $(document).ready(function () {
 
     function saveCollapseState(collapseId, isCollapsed) {
       localStorage.setItem("coll_" + collapseId, isCollapsed);
-      console.log("Saved state for " + collapseId + " as " + isCollapsed);
     }
 
     function loadCollapseState(collapseId) {
       var isCollapsed = localStorage.getItem("coll_" + collapseId) === "true";
-    //  console.log("Loaded state for " + collapseId + " as " + isCollapsed);
       return isCollapsed;
     }
 

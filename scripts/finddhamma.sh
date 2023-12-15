@@ -326,7 +326,7 @@ else
 
 nice -$nicevalue grep -Ei "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpama|opama|opamma)|Suppose.*${smlpattern}|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $tmpsml | grep -vE "$nonmetaphorkeys" > ${tmpsml}_2
 
-nice -$nicevalue grep -B1 -ERi "Eva[mnṇṅṃṁ].*${smlpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} | sed 's@json-@json:@g' | sed '/--/d' > ${tmpsml}_3
+nice -$nicevalue grep -B2 -ERi "Eva[mnṇṅṃṁ].*${smlpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' > ${tmpsml}_3
 
 cat ${tmpsml}_2 ${tmpsml}_3 | grep -vi "Eva[mnṇṅṃṁ].*${smlpattern}"
 fi

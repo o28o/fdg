@@ -78,8 +78,8 @@ include 'scripts/opentexts.php';
 <li>
 <div class="align-items-center form-check-inline mx-0">
     <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">
-        <option value="dark">Dark</option>
-        <option value="light">Light</option>
+        <option value="darkManual">Dark</option>
+        <option value="lightalManual">Light</option>
         <option value="auto">Auto</option>
     </select>
 </div>
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"tatt($|[^h])"'><strong>"tatt($|[^h])"</strong></button> - <?php echo $variantsexc;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"(a|b|c)"'><strong>"(a|b|c)"</strong></button> - <?php echo $searchfewwords;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="'^&quot;mn.*X'"><strong>'^&quot;mn.*X'</strong></button> - <?php echo $inallnikaya;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="mn[0-9].*X"><strong>mn[0-9].*X</strong></button> - <?php echo $inallnikaya;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="dn22.*"><strong>dn22.*Y</strong></button> - <?php echo $inonesutta;?> <br>
     <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"'><strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong></button> - <?php echo $metaphorssmlletter;?> <br><br>
 </div>

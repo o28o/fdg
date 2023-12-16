@@ -142,6 +142,12 @@ $slides = [
         'desc' => 'Максимум 7 и 10 лет, соответственно',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali-ru_3-16.html',
     ],
+           [
+        'title' => 'Упадок и Не-упадок в Учении Татхагаты',
+        'desc' => 'Пример: Остановится на полпути - это упадок',
+        'link' => '/assets/example/parihaanameta.m_suttanta_pali-ru_6-86.html',
+    ],        
+    
                     [
         'title' => 'Благородные "Средства Передвижения"',
         'desc' => 'Когда ... сделано средством передвижения',
@@ -593,7 +599,11 @@ $slides = [
         'desc' => 'up to 7 or 10 years, accordingly',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali_3-16.html',
     ],
-    
+           [
+        'title' => 'Decline and Non-decline in Tathagatas Teaching',
+        'desc' => 'E.g. stopping half-way is a case of decline',
+        'link' => '/assets/example/parihaanameta.m_suttanta_pali_6-86.html',
+    ],    
                         [
         'title' => 'Noble "Vehicles"',
         'desc' => 'When ... made a vehicle',

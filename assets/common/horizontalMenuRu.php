@@ -146,8 +146,13 @@ echo '<!--
    
    <!-- https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing -->
          <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>
+         
+       <li><a class="dropdown-item" target="_blank" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">Материалы ABT.net</a></li>   
+         <li><a class="dropdown-item" target="_blank" href="https://sasanarakkha.github.io/study-tools/">Материалы SBS</a></li> 
+                         
               <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li> 
-              
+        
+
                  <li><a class="dropdown-item" href="/ru/assets/memo.html">
         <i class="' . $iconimportant . '"></i> 
        Мнемотехника</a></li>    

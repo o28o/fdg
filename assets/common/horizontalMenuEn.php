@@ -133,6 +133,9 @@ echo '<!--
         <i class="' . $iconimportant . '"></i>
         ' . $anametextbook . '</a></li>
     <li><a class="dropdown-item" href="' . $linksothermat . '">' . $anameothermat . '</a></li>
+          <li><a class="dropdown-item" target="_blank" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net Materials</a></li>    
+       <li><a class="dropdown-item" target="_blank" href="https://sasanarakkha.github.io/study-tools/">SBS Materials</a></li> 
+                   
          <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
          
          <li><a class="dropdown-item" href="/ru/assets/memo.html">

@@ -876,11 +876,11 @@ echo $count >> $tempfile
 
 word=`getwords | grepexclude | removeindex | clearsed | sedexpr | awk '{print tolower($0)}' | highlightpattern | xargs` 
 
-if [[ "$suttanumber" != *"pli-tv-bi-vb-pd2-8"* ]]
+if [[ "$suttanumber" != *"pli-tv-bi-vb-pd2-8"* ]] && [[ "$suttanumber" != *"pli-tv-bi-vb-pj1-4"* ]] && [[ "$suttanumber" != *"pli-tv-bi-vb-pc91-93"* ]] && [[ "$suttanumber" != *"pli-tv-bu-vb-as1-7"* ]] && [[ "$suttanumber" != *"pli-tv-bi-vb-as1-7"* ]] 
 then
 indexlist=`nice -$nicevalue grep -E -i "${suttanumber}:" $basefile | awk '{print $2}' | sort -Vf | uniq`
 else 
-indexlist=`nice -$nicevalue grep -E -i "pli-tv-bi-vb-pd" $basefile | awk '{print $2}' | sort -Vf | uniq`
+indexlist=`nice -$nicevalue grep -E -i "pli-tv-b[ui]-vb" $basefile | awk '{print $2}' | sort -Vf | uniq`
 fi
 
 firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1 | awk -F':' '{print $2}'  )

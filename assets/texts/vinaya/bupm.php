@@ -386,8 +386,6 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
 			<a href="<?php echo $mainscpage; ?>/?q=bu-pm#44.0.1"><h4>2. Kosiyavaggo </h4></a>
 			-->
 			
-	
-			
 </div>
               </div>
               <div class="collapse" id="np2CollapseBu">
@@ -887,6 +885,10 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+ 
+  <audio controls><source src='/assets/audio/bu-pm/Bu-pc5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>      
+  
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc41#1.2.15.0">Pācittiya 41. Acelaka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#106.0.2">pm</a> Yo pana bhikkhu acelakassa vā paribbājakassa vā paribbājikāya vā sahatthā khādanīyaṁ vā bhojanīyaṁ vā dadeyya, pācittiyaṁ. 
 </span>
@@ -963,6 +965,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc51#1.46.0">Pācittiya 51. Surāpāna</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#116.0.2">pm</a> Surāmerayapāne pācittiyaṁ. 
 </span>
@@ -1040,6 +1044,9 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+  
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc61#1.16.0">Pācittiya 61. Sañcicca</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#126.0.2">pm</a> Yo pana bhikkhu sañcicca pāṇaṁ jīvitā voropeyya, pācittiyaṁ. 
 </span>
@@ -1115,6 +1122,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc8vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc71#1.19.0">Pācittiya 71. Sahadhammika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#136.0.2">pm</a> Yo pana bhikkhu bhikkhūhi sahadhammikaṁ vuccamāno evaṁ vadeyya “na tāvāhaṁ, āvuso, etasmiṁ sikkhāpade sikkhissāmi, yāva na aññaṁ bhikkhuṁ byattaṁ vinayadharaṁ paripucchāmī”ti, pācittiyaṁ. Sikkhamānena, bhikkhave, bhikkhunā aññātabbaṁ paripucchitabbaṁ paripañhitabbaṁ, ayaṁ tattha sāmīci. 
 </span>
@@ -1201,6 +1210,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc9vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc83#1.3.56.0">Pācittiya 83. Antepura</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#148.0.2">pm</a> Yo pana bhikkhu rañño khattiyassa muddhābhisittassa anikkhantarājake aniggataratanake pubbe appaṭisaṁvidito indakhīlaṁ atikkāmeyya, pācittiyaṁ. 
 </span>

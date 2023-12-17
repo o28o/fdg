@@ -143,6 +143,11 @@ $slides = [
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali-ru_3-16.html',
     ],
            [
+        'title' => 'Определение понятия dukkha в суттах',
+        'desc' => 'Может ли быть, чтобы терминология в Учении Будды была не сквозной?',
+        'link' => '/assets/example/kata.,-dukkha.m-question_suttanta_pali-ru_3-3.html',
+    ],
+           [
         'title' => 'Упадок и Не-упадок в Учении Татхагаты',
         'desc' => 'Пример: Остановится на полпути - это упадок',
         'link' => '/assets/example/parihaanameta.m_suttanta_pali-ru_6-86.html',
@@ -599,6 +604,11 @@ $slides = [
         'desc' => 'up to 7 or 10 years, accordingly',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali_3-16.html',
     ],
+               [
+        'title' => 'Definition of dukkha in suttas',
+        'desc' => 'Is it possible that terminology in not throughout in the Buddhas Teaching?',
+  'link' => '/assets/example/kata.,-dukkha.m-question_suttanta_pali_3-3.html',
+    ],   
            [
         'title' => 'Decline and Non-decline in Tathagatas Teaching',
         'desc' => 'E.g. stopping half-way is a case of decline',

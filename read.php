@@ -229,20 +229,19 @@ $(document).ready(function() {
  </p>
  
  
- <script type="text/javascript"> // restore scroll position
-$(document).ready(function () {
-
+<script type="text/javascript">
+  // restore scroll position
+  window.onload = function () {
     if (localStorage.getItem("fdg-quote-scroll") != null) {
-        $(window).scrollTop(localStorage.getItem("fdg-quote-scroll"));
+      $(window).scrollTop(localStorage.getItem("fdg-quote-scroll"));
     }
 
     $(window).on("scroll", function() {
-        localStorage.setItem("fdg-quote-scroll", $(window).scrollTop());
+      localStorage.setItem("fdg-quote-scroll", $(window).scrollTop());
     });
-
-  });
+  };
 </script>
- 
+
 
 <script>
   $(document).ready(function () {

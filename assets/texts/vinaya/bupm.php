@@ -579,6 +579,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc1#1.20.0">Pācittiya 1. Musāvāda</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#66.0.2">pm</a> Sampajānamusāvāde pācittiyaṁ. 
 </span>
@@ -653,6 +655,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc11#1.29.0">Pācittiya 11. Bhūtagāma</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#76.0.2">pm</a> Bhūtagāmapātabyatāya pācittiyaṁ. 
 </span>
@@ -730,6 +734,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc21#1.44.0">Pācittiya 21. Ovāda</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#86.0.2">pm</a> Yo pana bhikkhu asammato bhikkhuniyo ovadeyya, pācittiyaṁ. 
 </span>
@@ -808,6 +814,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
+    <audio controls><source src='/assets/audio/bu-pm/Bu-pc4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+       </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc31#2.14.0">Pācittiya 31. Āvasathapiṇḍa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#96.0.2">pm</a> Agilānena bhikkhunā eko āvasathapiṇḍo bhuñjitabbo. Tato ce uttari bhuñjeyya, pācittiyaṁ. 
 </span>
@@ -1301,9 +1309,12 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
    
            <div class="level4 my-3">
  <span class="level5">Ime kho panāyasmanto cattāro pāṭidesanīyā dhammā uddesaṁ āgacchanti. </span>
+ 
+                </br> </br><audio controls><source src='/assets/audio/bu-pm/Bu-pd.m4a' type='audio/mp4'>Browser is not supported.</audio>   
 </div>              
-              
+ 
 <div class="level4">
+
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pd1#1.35.0">Pāṭidesanīya 1. Paṭhamapāṭidesanīya</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#160.0">pm</a> Yo pana bhikkhu aññātikāya bhikkhuniyā antaragharaṁ paviṭṭhāya hatthato khādanīyaṁ vā bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, paṭidesetabbaṁ tena bhikkhunā “gārayhaṁ, āvuso, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti. 
 </span>

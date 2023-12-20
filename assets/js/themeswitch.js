@@ -1,7 +1,6 @@
 "use strict";
 function toggleThemeManually() {
   const bodyTag = document.body;
-  const themeSelect = document.getElementById("theme-select");
   const themeButton = document.getElementById("theme-button");
 
   function setTheme(theme) {
@@ -40,9 +39,6 @@ function toggleThemeManually() {
 //document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", function () {
     if (localStorage.theme && localStorage.theme !== "auto") {
-      if (themeSelect) {
-        themeSelect.value = localStorage.theme;
-      }
       setTheme(localStorage.theme);
     } else {
       updateTheme();
@@ -50,18 +46,6 @@ function toggleThemeManually() {
 
     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     darkModeMediaQuery.addEventListener("change", updateTheme);
-
-    if (themeSelect) {
-      themeSelect.addEventListener("change", () => {
-        const selectedTheme = themeSelect.value;
-        if (selectedTheme === "auto") {
-          updateTheme();
-        } else {
-          setTheme(selectedTheme);
-          localStorage.theme = selectedTheme;
-        }
-      });
-    }
 
     if (themeButton) {
       themeButton.addEventListener("click", () => {
@@ -79,9 +63,6 @@ function toggleThemeManually() {
         setTheme(newTheme);
         localStorage.theme = newTheme;
 
-        if (themeSelect) {
-          themeSelect.value = newTheme;
-        }
       });
     }
   });
@@ -92,15 +73,10 @@ function toggleThemeManually() {
     if (darkModeMediaQuery.matches) {
       setTheme("dark");
       localStorage.theme = "auto";
-      if (themeSelect) {
-        themeSelect.value = "auto";
-      }
+
     } else {
       setTheme("light");
       localStorage.theme = "auto";
-      if (themeSelect) {
-        themeSelect.value = "auto";
-      }
     }
   }
 }

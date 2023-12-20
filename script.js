@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dark = document.getElementById('dark');
     const light = document.getElementById('light');
     const system = document.getElementById('system');
+const bodyTag = document.body;
 
     const switchTheme = (theme) => {
       let htmlClasses = document
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         htmlClasses.add('dark');
         htmlClasses.remove('light');
         
-        //      bodyTag.classList.add("dark");
+            bodyTag.classList.add("dark");
       document.documentElement.setAttribute("data-bs-theme", "dark");
           localStorage.setItem("darkSwitch", "dark");
       document.body.setAttribute("data-theme", "dark");
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         htmlClasses.add('light');
         htmlClasses.remove('dark');
         
-       //       bodyTag.classList.remove("dark");
+          bodyTag.classList.remove("dark");
       document.documentElement.setAttribute("data-bs-theme", "light");
       localStorage.removeItem("darkSwitch");
       document.body.removeAttribute("data-theme");
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         htmlClasses.add('dark');
         htmlClasses.remove('light');
         
-       //       bodyTag.classList.add("dark");
+           bodyTag.classList.add("dark");
       document.documentElement.setAttribute("data-bs-theme", "dark");
           localStorage.setItem("darkSwitch", "dark");
       document.body.setAttribute("data-theme", "dark");
@@ -133,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         htmlClasses.add('light');
         htmlClasses.remove('dark');
         
-       //       bodyTag.classList.remove("dark");
+           bodyTag.classList.remove("dark");
       document.documentElement.setAttribute("data-bs-theme", "light");
       localStorage.removeItem("darkSwitch");
       document.body.removeAttribute("data-theme");

@@ -1,6 +1,7 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  const bodyTag = document.body;
   const themeToggle = document.getElementById('theme-button');
   const icons = {
   dark: '<svg class="w-6 h-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>',
@@ -30,28 +31,67 @@ window
 
   let currentTheme = localStorage.theme || 'system';
 
-  const switchTheme = () => {
-    if (currentTheme === 'dark') {
-      currentTheme = 'light';
-    } else if (currentTheme === 'light') {
-      currentTheme = 'system';
+      const switchTheme = (theme) => {
+      let htmlClasses = document
+        .querySelector('html')
+        .classList;
+      if (theme === 'dark') {
+        localStorage.theme = 'dark';
+        htmlClasses.add('dark');
+        htmlClasses.remove('light');
+        
+            bodyTag.classList.add("dark");
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+          localStorage.setItem("darkSwitch", "dark");
+      document.body.setAttribute("data-theme", "dark");
+        
+      } else if (theme === 'light') {
+        localStorage.theme = 'light';
+        htmlClasses.add('light');
+        htmlClasses.remove('dark');
+        
+          bodyTag.classList.remove("dark");
+      document.documentElement.setAttribute("data-bs-theme", "light");
+      localStorage.removeItem("darkSwitch");
+      document.body.removeAttribute("data-theme");
+        
+      } else if (theme === 'systemDark') {
+        localStorage.removeItem('theme');
+        htmlClasses.add('dark');
+        htmlClasses.remove('light');
+        
+           bodyTag.classList.add("dark");
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+          localStorage.setItem("darkSwitch", "dark");
+      document.body.setAttribute("data-theme", "dark");
+        
+      } else {
+        localStorage.removeItem('theme');
+        htmlClasses.add('light');
+        htmlClasses.remove('dark');
+        
+           bodyTag.classList.remove("dark");
+      document.documentElement.setAttribute("data-bs-theme", "light");
+      localStorage.removeItem("darkSwitch");
+      document.body.removeAttribute("data-theme");
+
+      }
+    };
+    
+    
+    if (localStorage.theme === 'dark') {
+      switchTheme('dark');
+    } else if (localStorage.theme === 'light') {
+      switchTheme('light');
     } else {
-      currentTheme = 'dark';
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        switchTheme('systemDark');
+      } else {
+        switchTheme('systemLight');
+      }
     }
-    applyTheme(currentTheme);
-  };
 
-  const applyTheme = (theme) => {
-    localStorage.theme = theme;
-    switchThemeClass(theme);
-    updateIcon(theme);
-  };
-
-  const switchThemeClass = (theme) => {
-    const htmlClasses = document.querySelector('html').classList;
-    htmlClasses.toggle('dark', theme === 'dark');
-    htmlClasses.toggle('light', theme === 'light');
-  };
+  
 
   const updateIcon = (theme) => {
     themeToggle.innerHTML = getIconSvg(theme);
@@ -61,9 +101,34 @@ window
     return `${icons[theme]}`;
   };
 
-  themeToggle.addEventListener('click', () => {
-    switchTheme();
+
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = localStorage.theme;
+        let newTheme;
+
+        if (currentTheme === "light") {
+   switchTheme('light');       
+          newTheme = "dark";
+        } else if (currentTheme === "dark") {
+          switchTheme('dark');
+          newTheme = "system";
+        } else if (currentTheme === "system") {
+                localStorage.removeItem('theme');
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        switchTheme('systemDark');
+      } else {
+        switchTheme('systemLight');
+      }
+          newTheme = "light";
+        }
+
+console.log(currentTheme);
+console.log(newTheme);
+        localStorage.theme = newTheme;
+
+      
+      });
+    }
   });
 
-  applyTheme(currentTheme);
-});

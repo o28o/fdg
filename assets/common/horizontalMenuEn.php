@@ -54,14 +54,21 @@ echo '<!--
      
          <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
          
-                  <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha trans. by Nanatusita Bh</a></li>
+
+                  
         <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
 
-        
+
+            <li><a class="dropdown-item" target="_blank" href="dhammatalks.org/vinaya/bmc/Section0000.html">Patimokkha explained by Thanissaro Bh</a></li>
+            
+  <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha trans. by Nanatusita Bh</a></li>
+                  
  <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">
    <i class="' . $iconimportant . '"></i>
- The Buddha\'s Words</a></li>   
-          <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
+ The Buddha\'s Words</a></li> 
+ 
+ 
+    <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
     
     <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
 
@@ -71,6 +78,8 @@ echo '<!--
           <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>   
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
 
+
+  
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
     
 

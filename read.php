@@ -78,11 +78,14 @@ include 'scripts/opentexts.php';
 </p></li>
 <li>
 <div class="align-items-center form-check-inline mx-0">
-    <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">
-        <option value="dark">Dark</option>
-        <option value="light">Light</option>
-        <option value="auto">Auto</option>
-    </select>
+     <button id="theme-button" class="btn btn-link mb-1 " type="button">
+      
+            <svg xmlns="http://www.w3.org/2000/svg"  height="18" viewBox="0 0 24 24">
+                <path
+                    d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z"
+                    fill="#fff" />
+            </svg>
+</button>	   
 </div>
 
 

@@ -77,11 +77,40 @@ include 'scripts/opentexts.php';
 </p></li>
 <li>
 <div class="align-items-center form-check-inline mx-0">
-    <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">
+     <button id="theme-button" class="btn btn-link mb-1 text-white " type="button">
+<i onclick="switchIcon(this)" class="fa-solid fa-circle-half-stroke"></i>
+</button>	  
+
+<script>
+ function switchIcon(x) {
+   if (localStorage.theme === "dark") {
+     console.log(localStorage.theme);
+      x.classList.remove("fa-circle-half-stroke");
+   x.classList.remove("fa-moon");
+  x.classList.add("fa-sun");
+   } else if (localStorage.theme === "light") {
+     console.log(localStorage.theme);
+    x.classList.remove("fa-circle-half-stroke");
+  x.classList.remove("fa-sun");
+  x.classList.add("fa-moon"); 
+     
+
+   } else if (localStorage.theme === "auto") {
+     console.log(localStorage.theme);
+   x.classList.remove("fa-moon");
+  x.classList.remove("fa-sun");
+     x.classList.add("fa-circle-half-stroke");
+   }
+  
+} 
+</script>
+
+    
+  <!--  <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">
         <option value="darkManual">Dark</option>
         <option value="lightalManual">Light</option>
         <option value="auto">Auto</option>
-    </select>
+    </select> -->
 </div>
 
 

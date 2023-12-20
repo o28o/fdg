@@ -10,13 +10,19 @@ function toggleThemeManually() {
       document.documentElement.setAttribute("data-bs-theme", "light");
       localStorage.removeItem("darkSwitch");
       document.body.removeAttribute("data-theme");
+      localStorage.setItem("theme", "light");
+      localStorage.setItem("themeButtonAction", "lightManual");
     } else if (theme === "dark") {
       bodyTag.classList.add("dark");
       document.documentElement.setAttribute("data-bs-theme", "dark");
           localStorage.setItem("darkSwitch", "dark");
       document.body.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+      localStorage.setItem("themeButtonAction", "darkManual");
     } else {
       // Handle "auto" theme
+      localStorage.setItem("theme", "auto");
+      localStorage.setItem("themeButtonAction", "autoFollowOS");
       const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
       if (darkModeMediaQuery.matches) {
         bodyTag.classList.add("dark");

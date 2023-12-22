@@ -6,7 +6,7 @@ include_once('config/translate.php');
 include 'scripts/opentexts.php';
 //echo $mainscpage;
 ?>
-<html lang="<?php echo $htmllang;?>">
+<html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
     <head>
       <meta charset="UTF-8">
 

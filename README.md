@@ -34,7 +34,7 @@ copy-paste into terminal contents of the script from scripts/install-linix.sh (r
 
 2\. run Termux 
 
-3\.Copy-paste following commands:
+3\. Copy-paste following commands:
 
     pkg update 
     pkg upgrade
@@ -44,6 +44,11 @@ copy-paste into terminal contents of the script from scripts/install-linix.sh (r
     git clone https://github.com/o28o/fdg.git ./
     bash ./scripts/install-android.sh
 
+4\. If you want to add offline audio files clone this repo to ./assets/audio
+
+    mkdir -p $PREFIX/share/apache2/default-site/htdocs/assets/audio
+    cd $PREFIX/share/apache2/default-site/htdocs/assets/audio
+    git clone https://github.com/o28o/fdg.audio ./
 
 # Option #2
 # manual installation 

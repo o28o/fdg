@@ -198,7 +198,7 @@ echo '<!--
       
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
 
-           <li><a class="dropdown-item" href="https://devamitta.github.io/pali/">
+           <li><a class="dropdown-item" href="https://devamitta.github.io/pali/pali_dict.html">
              <i class="' . $iconimportant . '"></i>
            Пали-Рус для GoldenDict</a></li>  
            

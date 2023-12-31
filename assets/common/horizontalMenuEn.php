@@ -59,7 +59,7 @@ echo '<!--
         <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
 
 
-            <li><a class="dropdown-item" target="_blank" href="dhammatalks.org/vinaya/bmc/Section0000.html">Patimokkha explained by Thanissaro Bh</a></li>
+            <li><a class="dropdown-item" target="_blank" href="assets/dhammatalks.org/vinaya/bmc/Section0000.html">Patimokkha explained by Thanissaro Bh</a></li>
             
   <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha trans. by Nanatusita Bh</a></li>
                   

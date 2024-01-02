@@ -398,6 +398,7 @@ function copyToClipboard(text) {
     } else {
       scriptElement.src = "https://kit.fontawesome.com/a2bd6cd99e.js";
       scriptElement.crossOrigin = "anonymous";
+      scriptElement.defer = true;
     }
 
     // Вставляем созданный скрипт в тег head

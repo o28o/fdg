@@ -12,8 +12,7 @@ $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
 
-$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
-';
+$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
 
 $linkforthsu = '/tipitaka.theravada.su/dn/';
 $linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';

@@ -384,39 +384,5 @@ function copyToClipboard(text) {
 }
 
 </script>
-
-  <script>
-    function switchIcon(iconElement) {
-      // Ваши действия по смене иконки
-    }
-
-    function setIconSize() {
-      var iconElement = document.querySelector('.common-size-icon3');
-      if (iconElement) {
-        iconElement.style.top = '3px';
-        iconElement.style.height = '22px';
-        iconElement.style.width = '22px';
-      }
-    }
-  </script>
-  <script>
-    var hostname = window.location.hostname;
-    var scriptElement = document.createElement('script');
-
-    if (hostname === "localhost") {
-      scriptElement.src = "/assets/js/fontawesome.6.1.all.js";
-      scriptElement.defer = true;
-    } else {
-      scriptElement.src = "https://kit.fontawesome.com/a2bd6cd99e.js";
-      scriptElement.crossOrigin = "anonymous";
-    }
-
-    document.head.appendChild(scriptElement);
-
-    // Вызываем setIconSize после добавления скрипта
-    scriptElement.onload = function() {
-      setIconSize();
-    };
-  </script>
-
+<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
 </html>

@@ -68,6 +68,31 @@
   color: #136857 ;
 }
 
+.fa-circle-half-stroke::before {
+  content: url('/assets/svg/circle-half-stroke.svg');
+}
+
+.fa-sun::before {
+  content: url('/assets/svg/sun.svg');
+}
+
+.fa-moon::before {
+  content: url('/assets/svg/moon.svg');
+}
+
+.fa-house::before {
+  content: url('/assets/svg/house.svg');
+}
+
+
+.gray-icon {
+  color: #989898;
+}
+
+.home-svg-icon::before {
+  content: url('/assets/svg/home-icon.svg');
+}
+
 #darkSwitch {
   transform-origin: center;
 transform: rotate(180deg);

@@ -1,4 +1,29 @@
-"use strict";
+
+ function switchIcon(x) {
+   if (localStorage.theme === "dark") {
+     console.log(localStorage.theme);
+      x.classList.remove("fa-circle-half-stroke");
+   x.classList.remove("fa-moon");
+  x.classList.add("fa-sun");
+   } else if (localStorage.theme === "light") {
+     console.log(localStorage.theme);
+    x.classList.remove("fa-circle-half-stroke");
+  x.classList.remove("fa-sun");
+  x.classList.add("fa-moon"); 
+     
+
+   } else if (localStorage.theme === "auto") {
+     console.log(localStorage.theme);
+   x.classList.remove("fa-moon");
+  x.classList.remove("fa-sun");
+     x.classList.add("fa-circle-half-stroke");
+   }
+  
+} 
+
+
+
+
 function toggleThemeManually() {
   const bodyTag = document.body;
   const themeButton = document.getElementById("theme-button");

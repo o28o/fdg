@@ -81,29 +81,7 @@ include 'scripts/opentexts.php';
 <i onclick="switchIcon(this)" class="fa-solid fa-circle-half-stroke"></i>
 </button>	  
 
-<script>
- function switchIcon(x) {
-   if (localStorage.theme === "dark") {
-     console.log(localStorage.theme);
-      x.classList.remove("fa-circle-half-stroke");
-   x.classList.remove("fa-moon");
-  x.classList.add("fa-sun");
-   } else if (localStorage.theme === "light") {
-     console.log(localStorage.theme);
-    x.classList.remove("fa-circle-half-stroke");
-  x.classList.remove("fa-sun");
-  x.classList.add("fa-moon"); 
-     
 
-   } else if (localStorage.theme === "auto") {
-     console.log(localStorage.theme);
-   x.classList.remove("fa-moon");
-  x.classList.remove("fa-sun");
-     x.classList.add("fa-circle-half-stroke");
-   }
-  
-} 
-</script>
 
     
   <!--  <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">

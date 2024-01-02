@@ -84,6 +84,16 @@
   content: url('/assets/svg/house.svg');
 }
 
+.common-size-icon {
+  height: 28px;
+  width: 25px;
+}
+
+.common-size-icon3 {
+  top: 3px;
+  height: 22px;
+  width: 22px;
+}
 
 .gray-icon {
   color: #989898;

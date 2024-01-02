@@ -58,7 +58,7 @@ linkforsi=https://suttacentral.net/
 linkforsiext=/si/zoysa
 linkforru=https://suttacentral.net/
 linkforruext=
-urllinkpli=https://find.dhamma.gift/
+urllinkpli=http://find.dhamma.gift/
 urllinkenmid=
 #urllinkbwend=.html
 urllinken='/sc/?q='

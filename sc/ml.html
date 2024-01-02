@@ -368,7 +368,6 @@ $(document).ready(function() {
 });
 </script>
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
-<script src="/assets/js/fontawesome.6.1.all.js" defer></script> 
 <script defer src="/assets/js/themeswitch.js"></script>
 <script>
 
@@ -386,4 +385,24 @@ function copyToClipboard(text) {
 }
 
 </script>
+
+  <script>
+    // Получаем текущий хостнейм
+    var hostname = window.location.hostname;
+
+    // Создаем элемент скрипта
+    var scriptElement = document.createElement('script');
+
+    // Устанавливаем атрибуты скрипта в зависимости от хостнейма
+    if (hostname === "localhost") {
+      scriptElement.src = "/assets/js/fontawesome.6.1.all.js";
+      scriptElement.defer = true;
+    } else {
+      scriptElement.src = "https://kit.fontawesome.com/a2bd6cd99e.js";
+      scriptElement.crossOrigin = "anonymous";
+    }
+
+    // Вставляем созданный скрипт в тег head
+    document.head.appendChild(scriptElement);
+  </script>
 </html>

@@ -117,7 +117,7 @@ $linkcases = 'https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQP
 $linkcasesru = 'https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntOr/view?usp=drivesdk';
       }    
            
-else if ( preg_match('/Linux rym.from.sh/', $uname) ) {
+else if ( preg_match('/.from.sh/', $uname) ) {
 //
 // ONLINE PROD
 //
@@ -127,7 +127,7 @@ $mainpagethrflink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1
   $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
   
-$basedir = '/home/a0092061/domains/f.dhamma.gift/public_html';
+$basedir = '/home/a0902785/domains/find.dhamma.gift/public_html';
 $fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
 
 
@@ -142,7 +142,7 @@ $locationTocThsu = $basedir. "/assets/texts";
 
 //converter.php
 //not used currently. php curl for offline
-$adapterscriptlocation = '/home/a0092061/domains/f.dhamma.gift/aksharamukha/bin/python3 /home/a0092061/domains/f.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
+$adapterscriptlocation = '/home/a0902785/domains/find.dhamma.gift/aksharamukha/bin/python3 /home/a0902785/domains/find.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
 
 // include_once('../config/config.php');
 

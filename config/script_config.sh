@@ -108,6 +108,7 @@ elif [[ "`uname -a`" == *".from.sh"* ]]; then
 sitename=http://f2.dhamma.gift
 mode=online
 nicevalue=19
+fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 apachesitepath=/home/a0902785/domains/find.dhamma.gift/public_html/
 suttapath=/home/a0902785/domains/find.dhamma.gift/suttacentral.net/
 

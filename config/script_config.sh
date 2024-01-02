@@ -103,6 +103,44 @@ filesizenooverwrite=1000000000000
 maxmatchesbg=300000
 archivenumber=280
 archivenumber=91
+
+elif [[ "`uname -a`" == *".from.sh"* ]]; then
+sitename=http://f2.dhamma.gift
+mode=online
+nicevalue=19
+apachesitepath=/home/a0902785/domains/find.dhamma.gift/public_html/
+suttapath=/home/a0902785/domains/find.dhamma.gift/suttacentral.net/
+
+linkforthsu=https://tipitaka.theravada.su
+linkforthru=https://theravada.ru
+linkforthai=https://suttacentral.net/
+linkforthaiext=/th/siam_rath
+linkforru=https://suttacentral.net/
+
+#for find in all theravada.ru suttas
+scriptdir=$rootpath
+outputdir=$output
+
+#for allwords.sh
+homedir=$rootpath
+outputdiraw=$output/allwords
+
+urllinkpli=http://f2.dhamma.gift/
+urllinken=https://suttacentral.net/
+urllinkenmid=/en/
+urllinkenend='?layout=linebyline'
+urllinkbw=/bw/
+urllinkbwend=.html
+
+wbefore=1
+wafter=3
+linesafter=0
+minlength=3
+truncatelength=30
+filesizenooverwrite=1000000000
+maxmatchesbg=6000
+archivenumber=31
+
 fi
 #common vars
 filelimit=500 

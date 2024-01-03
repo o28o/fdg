@@ -119,13 +119,16 @@ if ($mode == "offline") {
     [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a target='' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
 
 echo -n \"$player\"  
+");
+ 
+ 
+/*
   if [[ \${#ruslinkdn} >= 2 ]]; then
   echo 'The length of ruslinkdn is greater than or equal to 2.'
 else
   echo 'The length of ruslinkdn is less than 2.'
 fi
-  ");
-  
+*/
 } else {
  // online 
 

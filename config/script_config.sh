@@ -138,8 +138,8 @@ wafter=3
 linesafter=0
 minlength=3
 truncatelength=30
-filesizenooverwrite=1000000000
-maxmatchesbg=6000
+filesizenooverwrite=10000000
+maxmatchesbg=2000
 archivenumber=31
 
 fi

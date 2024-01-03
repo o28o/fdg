@@ -1,30 +1,94 @@
-outputfile=bolsn56.txt
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/html_text/ru/pli/sutta/sn/sn56 
+outputfile=/storage/emulated/0/Download/bolsn12.txt
+rm $outputfile
 
-ls | sort -V | while read i ; do w3m -dump $i >> /storage/emulated/0/Download/$outputfile ; done  
+cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/html_text/ru/pli/sutta/sn/sn12
 
-cd /storage/emulated/0/Download
+ls | sort -V | while read i ; do w3m -dump $i >> $outputfile ; done  
 
+#general cleanup
+sed -i '/источник: Sam/Id' $outputfile
+sed -i '/редакция перевода:/Id' $outputfile
+sed -i '/Перевод с английского:/Id' $outputfile
+sed -i '/Prepared for SuttaCentral/Id' $outputfile
+
+#4би
 sed -i 's/страдание/боль/gI' $outputfile
 sed -i 's/страданий/болей/gI' $outputfile
 sed -i 's/страдания/боли/gI' $outputfile
 sed -i 's/страдании/боли/gI' $outputfile
-grep "страдан.* " $outputfile
+grep -i "страдан.* " $outputfile
 
 sed -i 's/источник/проявление/gI' $outputfile
 sed -i 's/о прекращении/об устранении/gI' $outputfile
 sed -i 's/прекращени/устранени/gI' $outputfile
-
-grep "прекращен.* " $outputfile
+grep -i "прекращен.* " $outputfile
 
 
 sed -i 's/путь, ведущий/практика, ведущая/gI' $outputfile
 sed -i 's/пути, ведущем/практике, ведущей/gI' $outputfile
 sed -i 's/пути, ведущего/практики, ведущей/gI' $outputfile
+sed -i 's/путём, ведущим/практикой, ведущей/gI' $outputfile
+grep -i "пут.*ведущ.* " $outputfile
 
-grep "пут.*ведущ.* " $outputfile
+#кп кв зв зп
+#jaramarana ca namarupa 
+sed -i 's/-и-/-/gI' $outputfile
 
-sed -i '/источник: Sam/Id' $outputfile
-sed -i '/редакция перевода:/Id' $outputfile
-sed -i '/Перевод с английского:/Id' $outputfile
-sed -i '/Prepared for SuttaCentral/Id' $outputfile
+
+sed -i 's/становлени/случени/gI' $outputfile
+grep -i "становлен" $outputfile
+
+sed -i 's/цепляни/поддерживани/gI' $outputfile
+grep -i "цеплян" $outputfile
+
+sed -i 's/жажда/цепляние/gI' $outputfile
+sed -i 's/жажду/цепляние/gI' $outputfile
+sed -i 's/жажды/цепляния/gI' $outputfile
+sed -i 's/жаждой/цеплянием/gI' $outputfile
+grep -i "жажд" $outputfile
+
+sed -i 's/чувство/ведание/gI' $outputfile
+sed -i 's/чувства/ведания/gI' $outputfile
+grep -i "чувств" $outputfile
+
+sed -i 's/контакта/касания/gI' $outputfile
+sed -i 's/контактом/касанием/gI' $outputfile
+sed -i 's/контакт/касание/gI' $outputfile
+grep -i "контак" $outputfile
+
+
+sed -i 's/шесть сфер чувств/шестеричный континуум/gI' $outputfile
+sed -i 's/шести сфер чувств/шестеричного континуума/gI' $outputfile
+sed -i 's/шестью сферами чувств/шестеричным континуумом/gI' $outputfile
+grep -i "контак" $outputfile
+
+
+
+
+sed -i 's/форма/материя/gI' $outputfile
+sed -i 's/формой/материей/gI' $outputfile
+sed -i 's/формы/материи/gI' $outputfile
+grep -i "форм" $outputfile
+
+sed -i 's/сознани/внимани/gI' $outputfile
+grep -i "сознан" $outputfile
+
+sed -i 's/волевые формирователи/отождествления/gI' $outputfile
+sed -i 's/волевых формирователей/отождествлений/gI' $outputfile
+sed -i 's/волевыми формирователями/отождествлениями/gI' $outputfile
+sed -i 's/ый волевой формирователь/ое отождествление/gI' $outputfile
+
+
+
+
+grep -i "формироват" $outputfile
+
+sed -i 's/невежество/нераспознавание/gI' $outputfile
+sed -i 's/невежеством/нераспознаванием/gI' $outputfile
+sed -i 's/невежества/нераспознавания/gI' $outputfile
+sed -i 's/невежеству/нераспознаванию/gI' $outputfile
+grep -i "невежест" $outputfile
+
+
+
+#cd /storage/emulated/0/Download

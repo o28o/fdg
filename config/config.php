@@ -45,8 +45,9 @@ $mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hика
 $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //$mode = 'online';
-$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>
-';
+#$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
+$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
+
 $basedir = "/var/www/html/";
 
 $linkforthsu = '/tipitaka.theravada.su/dn/';

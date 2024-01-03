@@ -80,7 +80,7 @@ nicevalue=1
 mode=offline
 apachesitepath=/var/www/html
 suttapath=$apachesitepath/suttacentral.net/
-
+fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 linkforthsu=/tipitaka.theravada.su
 linkforthru=/theravada.ru
 linkforthai=/legacy.suttacentral.net/sc/th/

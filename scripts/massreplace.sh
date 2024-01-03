@@ -1,9 +1,11 @@
-outputfile=/storage/emulated/0/Download/bolsn12.txt
+outputfile=/storage/emulated/0/Download/mn9.txt
 rm $outputfile
 
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/html_text/ru/pli/sutta/sn/sn12
+cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/theravada.ru/Teaching/Canon/Suttanta/Texts
+#cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/html_text/ru/pli/sutta/mn/
 
-ls | sort -V | while read i ; do w3m -dump $i >> $outputfile ; done  
+#ls mn9-* | sort -V | while read i ; do cat $i >> $outputfile ; done  
+ls mn9-* | sort -V | while read i ; do w3m -dump $i >> $outputfile ; done  
 
 #general cleanup
 sed -i '/источник: Sam/Id' $outputfile
@@ -19,6 +21,8 @@ sed -i 's/страдании/боли/gI' $outputfile
 grep -i "страдан.* " $outputfile
 
 sed -i 's/источник/проявление/gI' $outputfile
+sed -i 's/происхождение/проявление/gI' $outputfile
+
 sed -i 's/о прекращении/об устранении/gI' $outputfile
 sed -i 's/прекращени/устранени/gI' $outputfile
 grep -i "прекращен.* " $outputfile
@@ -78,7 +82,9 @@ sed -i 's/волевых формирователей/отождествлени
 sed -i 's/волевыми формирователями/отождествлениями/gI' $outputfile
 sed -i 's/ый волевой формирователь/ое отождествление/gI' $outputfile
 
+sed -i 's/ый формирователь/ое отождествление/gI' $outputfile
 
+sed -i 's/формирователей/отождествлений/gI' $outputfile
 
 
 grep -i "формироват" $outputfile
@@ -90,5 +96,16 @@ sed -i 's/невежеству/нераспознаванию/gI' $outputfile
 grep -i "невежест" $outputfile
 
 
+sed -i 's/Неведение/нераспознавание/gI' $outputfile
+sed -i 's/Неведением/нераспознаванием/gI' $outputfile
+sed -i 's/Неведения/нераспознавания/gI' $outputfile
+sed -i 's/Неведению/нераспознаванию/gI' $outputfile
+grep -i "невежест" $outputfile
+
+sed -i 's/пятна/брожения/gI' $outputfile
+sed -i 's/пятен/брожения/gI' $outputfile
+sed -i 's/пятно/брожение/gI' $outputfile
+sed -i 's/Пятна умственных загрязнений/брожения/gI' $outputfile
+grep -i "пят" $outputfile
 
 #cd /storage/emulated/0/Download

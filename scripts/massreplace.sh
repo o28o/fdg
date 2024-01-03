@@ -34,11 +34,22 @@ sed -i 's/пути, ведущего/практики, ведущей/gI' $outpu
 sed -i 's/путём, ведущим/практикой, ведущей/gI' $outputfile
 grep -i "пут.*ведущ.* " $outputfile
 
+
+#a8m
+sed -i 's/правильные воззрения/правильный взгляд/gI' $outputfile
+sed -i 's/правильное устремление/правильная привычка/gI' $outputfile
+sed -i 's/правильная речь/правильное высказывание/gI' $outputfile
+sed -i 's/правильные действия/правильный поступок/gI' $outputfile
+sed -i 's/правильные средства к жизни/правильный быт/gI' $outputfile
+sed -i 's/правильное усилие/правильное старание/gI' $outputfile
+sed -i 's/правильная осознанность/правильное памятование/gI' $outputfile 
+sed -i 's/правильное сосредоточение/правильное объединение опыта/gI' $outputfile  
+
 #кп кв зв зп
 #jaramarana ca namarupa 
 sed -i 's/-и-/-/gI' $outputfile
 
-
+sed -i 's/существовани/случени/gI' $outputfile
 sed -i 's/становлени/случени/gI' $outputfile
 grep -i "становлен" $outputfile
 

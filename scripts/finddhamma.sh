@@ -263,7 +263,7 @@ then
 fileprefix=${fileprefix}-definition
 fortitle="Definition ${fortitle}"
 
-defpattern="`echo $pattern | sed -E 's/([aoā]|aṁ)$//g'`"
+defpattern="`echo $pattern | sed -E 's/([aiīoā]|aṁ)$//g'`"
 pattern="$defpattern" 
 #vin=dummy ${defpattern}.*nāma|
 linesafter=3

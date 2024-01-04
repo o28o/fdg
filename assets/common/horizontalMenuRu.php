@@ -185,6 +185,9 @@ echo '<!--
 
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
 
+   <li><a class="dropdown-item" target="_blank" href="https://norbu-ai.org/ebt/">Norbu AI</a></li>
+
+
   <li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS Конвертер #1</a></li>           
 
   <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS Конвертер #2</a></li>  

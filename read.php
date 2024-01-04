@@ -90,7 +90,8 @@ include 'scripts/opentexts.php';
         </nav>
         <!-- Masthead-->
         <header class="bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column pt-3">
+            <div class="container d-flex align-items-center flex-column pt-3 pb-4">
+
                         
 <form method="GET" action="" class="justify-content-center">
 <div class="mb-0 form-group input-group ui-widget dropup rounded-pill">

@@ -211,7 +211,11 @@ console.log('$outputnonl');
 const responseElement = document.querySelector('#response');
 responseElement.innerHTML = '$outputnonl';
 </script>";
+if ($outputnonl !== '<br>') {
 echo $finaloutput;  
+}
+
+
 
 /*
 if ( preg_match('/(|-en|-b)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) )  && ( $p != "-vin" ) && ( $p != "-def" ))  {

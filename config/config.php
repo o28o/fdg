@@ -127,7 +127,7 @@ $mainpagethrflink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1
   $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
   
-$basedir = '/home/a0902785/domains/find.dhamma.gift/public_html';
+$basedir = '/home/a0902785/domains/find.dhamma.gift/public_html/';
 $fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
 
 

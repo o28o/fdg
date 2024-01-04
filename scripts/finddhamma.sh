@@ -315,7 +315,7 @@ linesafter=1
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 
 tmpsml=tmpsml.$rand
-nonmetaphorkeys="adhivacanasamphass|adhivacanapath|\banopam|\battūpa|\bnillopa|opamaññ|condition"
+nonmetaphorkeys="condition|adhivacanasamphass|adhivacanapath|\banopam|\battūpa|\bnillopa|opamaññ"
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy

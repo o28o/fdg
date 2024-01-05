@@ -46,7 +46,7 @@ $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 //$mode = 'online';
 #$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
-$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
+$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous" defer></script>';
 
 $basedir = "/var/www/html/";
 
@@ -83,7 +83,7 @@ $mainpagethrflink =  "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
 
 
-$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
+$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous" defer></script>';
 
 
 $basedir = "/var/www/html/";
@@ -128,7 +128,7 @@ $mainpagethrflink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;
   
 $basedir = '/home/a0902785/domains/find.dhamma.gift/public_html/';
-$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"></script>';
+$fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous" defer></script>';
 
 
 $linkforthsu = 'https://tipitaka.theravada.su/dn/';

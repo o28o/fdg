@@ -163,8 +163,15 @@ console.log('texttype ' + texttype + ' translator ' + translator);
       url: "/sc/extralinks.php?fromjs=" +slug
     }).done(function(data) {
       const linksArray = data.split(",");
+   
+
+
+const enUrl = window.location.href;
+
+const ruUrl = enUrl.replace("/sc/", "/ru/sc/");
+
       
-      let scLink = `<p class="sc-link"><a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
+      let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];

@@ -102,14 +102,14 @@ include 'scripts/opentexts.php';
             <div class="container d-flex align-items-center flex-column mb-2">
 
                 <!-- Masthead Heading-->
-<!--
+<div class="hideOnMobile">
 <h1 class="masthead-heading">
     <div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
         <?php echo $title;?>
     </div>
 </h1>
 
- Icon Divider
+ <!--Icon Divider    -->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                         <div class="lock example divider-custom-icon">
@@ -118,7 +118,7 @@ include 'scripts/opentexts.php';
                       </div>
                     <div class="divider-custom-line"></div>
                 </div>
-    -->
+</div>
 
 <form method="GET" action="" class="justify-content-center">
 <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">

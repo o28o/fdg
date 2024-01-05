@@ -281,7 +281,27 @@ label {
   font-size: 80%;
   padding: 0.8rem;
 }
+
+@media screen and (min-width: 1024px) {
+    .hideOnMobile {
+        display: block;
+    }
+    .hideOnMobile .divider-custom {
+        display: block;
+    }
+}
+
+
 @media (min-width: 992px) {
+  
+    .hideOnMobile {
+        display: none;
+    }
+    .hideOnMobile .divider-custom {
+        display: none;
+    }  
+  
+  
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -641,6 +661,14 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 }
 
 @media (max-width: 768px) {
+ 
+     .hideOnMobile {
+        display: none;
+    }
+    .hideOnMobile .divider-custom {
+        display: none;
+    }
+ 
  
 .imgonmain {
     max-width: 95%;

@@ -893,6 +893,11 @@ fi
 
 firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1 | awk -F':' '{print $2}'  )
 
+if [[ $filenameblock == *"-"* ]] && [[ $fortitle == *"Suttanta"* ]]
+then
+firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1  )
+fi
+
 linkgeneralwithindex="$linkgeneral#$firstIndex"
 #echo "ind=$indexlist ls=`ls $basefile` stn=$suttanumber fnb=$filenameblock"
 
@@ -930,12 +935,23 @@ echo "<td><p>" | tohtml
 for i in $indexlist
 do
 		for f in $roottext $translation $variant
-        do     
-		anchor=`echo $i | awk -F':' '{print $2}'`
+        do   
+ indexForAnchor=` echo $i` 
+ fileForAnchor=`echo $f | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}'` 
+ 
+if [[ "$fileForAnchor" == *"-"* ]] && [[ $fortitle == *"Suttanta"* ]]
+ then
+ anchor="$indexForAnchor"
+ else 
+ anchor=`echo $indexForAnchor | awk -F':' '{print $2}'`
+ fi
+ 
+		
 		quote=`nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
-[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
+
+[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>" 
 done
-echo '<br class="styled">'
+echo '<br class="styled">' 
 done | tohtml 
 echo "</p></td>
 </tr>" | tohtml

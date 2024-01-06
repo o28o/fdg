@@ -365,8 +365,8 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
   </div>
       </div>	
-            <div id="spinner" class="justify-content-center mt-2">
-              <div class="spinner-border" role="status">
+            <div id="spinner" class="justify-content-center">
+              <div class="spinner-border mt-3" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
               </div>

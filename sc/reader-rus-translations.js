@@ -164,10 +164,13 @@ Roman (IPA)            	IPA
 Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
-		
 
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
+
+if (slug.includes('-') && (slug.includes('an') || slug.includes('sn') || slug.includes('dhp'))) {
+anchor = segment;
+}
 
 // Получите полный URL с якорем
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;

@@ -171,6 +171,11 @@ Roman (ISO 15919: Pāḷi)	ISOPali */
 
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
+
+if (slug.includes('-') && (slug.includes('an') || slug.includes('sn') || slug.includes('dhp'))) {
+anchor = segment;
+}
+
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
 

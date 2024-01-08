@@ -279,14 +279,14 @@ vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|\bKatha.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
+nice -$nicevalue grep -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|\bKatha.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
 }
 
 else 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei "\bKata.{0,40} ${defpattern}.{0,5}[\?,]|\bKatha.{0,40} \b${defpattern}.{0,5}[\?,]|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
+nice -$nicevalue grep -Ei "\bKata.{0,40} ${defpattern}.{0,5}[\?,]|\bKatha.{0,40} \b${defpattern}.{0,5}[\?,]|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
 }
 fi  
 
@@ -893,6 +893,11 @@ fi
 
 firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1 | awk -F':' '{print $2}'  )
 
+if [[ $filenameblock == *"-"* ]] && [[ $fortitle == *"Suttanta"* ]]
+then
+firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1  )
+fi
+
 linkgeneralwithindex="$linkgeneral#$firstIndex"
 #echo "ind=$indexlist ls=`ls $basefile` stn=$suttanumber fnb=$filenameblock"
 
@@ -930,12 +935,26 @@ echo "<td><p>" | tohtml
 for i in $indexlist
 do
 		for f in $roottext $translation $variant
-        do     
-		anchor=`echo $i | awk -F':' '{print $2}'`
-		quote=`nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
-[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>"
+        do   
+ indexForAnchor=` echo $i` 
+ fileForAnchor=`echo $f | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}'` 
+ 
+if [[ "$fileForAnchor" == *"-"* ]] && [[ $fortitle == *"Suttanta"* ]]
+ then
+ anchor="$indexForAnchor"
+ else 
+ anchor=`echo $indexForAnchor | awk -F':' '{print $2}'`
+ fi
+ 
+if [ "$linesafter" -eq 0 ] && [ "$linesbefore" -eq 0 ]; then
+        quote=`nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern `
+    else
+    quote=`nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -iE "${i}(:|[^0-9]|$)" $f | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' `
+fi
+	echo $quote >> out
+[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>" 
 done
-echo '<br class="styled">'
+echo '<br class="styled">' 
 done | tohtml 
 echo "</p></td>
 </tr>" | tohtml

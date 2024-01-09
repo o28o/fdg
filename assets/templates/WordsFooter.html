@@ -49,8 +49,11 @@
          );
       }
    });			
-   if (filterValue) {
+          if (filterValue) {
         table.search(filterValue).draw();
+        var currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.delete('s');
+        history.replaceState({}, '', currentUrl);
 }
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){

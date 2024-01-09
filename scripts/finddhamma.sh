@@ -675,7 +675,7 @@ linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $2}' | a
 #&lang=pli
 echo "<tr>
 <td>`echo $uniqword | highlightpattern`</td>
-<td>$linkscount</td>   
+<td><a href=\$quotesLinkToReplace?s=$uniqword>$linkscount</a></td>   
 <td>$uniqwordcount</td>   
 <td>$linkswwords</td>
 </tr>" >>$tempfilewords

@@ -99,6 +99,13 @@
       }
    });			
    
+     if (filterValue) {
+        table.search(filterValue).draw();
+        var currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.delete('s');
+        history.replaceState({}, '', currentUrl);
+}
+   
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){
         // Expand row details
@@ -110,9 +117,7 @@
         table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
     });
     
-       if (filterValue) {
-        table.search(filterValue).draw();
-}
+
 });
 
 

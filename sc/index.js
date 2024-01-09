@@ -41,7 +41,7 @@ function buildSutta(slug) {
   }
   slug = slug.toLowerCase();
 
-  if ((!slug.match("bu-pm")) && (!slug.match("bi-pm")) && (slug.match(/bu|bi|kd|pvr/))) {
+  if ((!slug.match("bu-pm")) && (!slug.match("bi-pm")) && (slug.match(/bu-|bi-|kd|pvr/))) {
     translator = "brahmali";
     texttype = "vinaya";
     slug = slug.replace(/bu([psan])/, "bu-$1");

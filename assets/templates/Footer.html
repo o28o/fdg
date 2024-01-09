@@ -10,8 +10,8 @@
         });
     };
    
-   
    var dataSrc = [];
+   var filterValue = new URLSearchParams(window.location.search).get('s');
 	 var table = $('#pali').DataTable({
 	 /*  'autoWidth': true,*/
 	   'stateSave': true,
@@ -53,6 +53,10 @@
                         text: 'Visibility' }
         ]
     },
+      "search": {
+    "caseInsensitive": true,
+        "smart": true
+  },
 	   'paging'  : true,
 	    'colReorder': true,
 	    'orderMulti': true,
@@ -94,7 +98,7 @@
          );
       }
    });			
-
+   
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){
         // Expand row details
@@ -105,7 +109,13 @@
         // Collapse row details
         table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
     });
+    
+       if (filterValue) {
+        table.search(filterValue).draw();
+}
 });
+
+
   </script>
   
 <script>

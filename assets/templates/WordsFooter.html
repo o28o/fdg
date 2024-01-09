@@ -4,10 +4,17 @@
     <script type='text/javascript'>
    $(document).ready(function() {
    var dataSrc = [];
+   
+     var filterValue = new URLSearchParams(window.location.search).get('s');
+     
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
 	   'paging'  : true,
+	         "search": {
+    "caseInsensitive": true,
+        "smart": true
+  },
 	   "orderMulti": true,
 	   'pageLength' : 28,
 	   'lengthMenu' : [10, 28, 50, 100, 1000],
@@ -42,7 +49,9 @@
          );
       }
    });			
-
+   if (filterValue) {
+        table.search(filterValue).draw();
+}
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){
         // Expand row details

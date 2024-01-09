@@ -12,6 +12,7 @@ $(document).ready(function (){
    
    
    var dataSrc = [];
+     var filterValue = new URLSearchParams(window.location.search).get('s');
 	 var table = $('#pali').DataTable({
 	 
 	 
@@ -94,6 +95,9 @@ $(document).ready(function (){
       }
    });			     
 
+   if (filterValue) {
+        table.search(filterValue).draw();
+}
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){
         // Expand row details

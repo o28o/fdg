@@ -27,9 +27,12 @@ include 'scripts/opentexts.php';
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
-<!-- Favicon favico-noglass-->
+<!-- Favicon favico-noglass
 <link href="/assets/img/gray.png" rel="icon" media="(prefers-color-scheme: light)">
-<link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)">
+<link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)"> -->
+
+
+<link href="/assets/img/favico-noglass.png" rel="icon">
 
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">

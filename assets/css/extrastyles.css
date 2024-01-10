@@ -100,9 +100,9 @@
 }
 
 .common-size-icon {
-  top: 3px; 
-  height: 28px;
-  width: 25px;
+  margin-top: 3px; 
+  height: 24px;
+  width: 27px;
 }
 
 .common-size-icon3 {
@@ -114,6 +114,12 @@
 .gray-icon {
   color: #989898;
   fill: #989898;
+}
+
+.table-home-icon {
+  margin-top: -1px; 
+  height: 15px;
+  width: 18px;
 }
 
 .table-theme-icon {

@@ -31,9 +31,9 @@ include 'scripts/opentexts.php';
 <link href="/assets/img/gray.png" rel="icon" media="(prefers-color-scheme: light)">
 <link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)">
 
-  <!-- Загрузка иконки для iOS -->
+  <!-- Загрузка иконки для iOS
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
-
+ -->
 <!-- Google fonts
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />

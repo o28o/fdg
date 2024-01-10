@@ -1,22 +1,47 @@
-
- function switchIcon(x) {
+function switchIcon(x) {
+  
+  var imgElement = document.querySelector(".changesvg"); 
    if (localStorage.theme === "dark") {
      console.log(localStorage.theme);
-      x.classList.remove("fa-circle-half-stroke");
+      x.classList.remove("circle-half-stroke");
+   x.classList.remove("moon");
+  x.classList.add("sun");
+  
+        x.classList.remove("fa-circle-half-stroke");
    x.classList.remove("fa-moon");
   x.classList.add("fa-sun");
+  
+  if (imgElement) {
+  imgElement.src = "/assets/svg/sun.svg";
+  }
    } else if (localStorage.theme === "light") {
      console.log(localStorage.theme);
+    x.classList.remove("circle-half-stroke");
+  x.classList.remove("sun");
+  x.classList.add("moon"); 
+
     x.classList.remove("fa-circle-half-stroke");
   x.classList.remove("fa-sun");
-  x.classList.add("fa-moon"); 
-     
+  x.classList.add("fa-moon");      
+
+  if (imgElement) {
+  imgElement.src = "/assets/svg/moon.svg";
+  }
 
    } else if (localStorage.theme === "auto") {
      console.log(localStorage.theme);
-   x.classList.remove("fa-moon");
+   x.classList.remove("moon");
+  x.classList.remove("sun");
+     x.classList.add("circle-half-stroke");
+   
+      x.classList.remove("fa-moon");
   x.classList.remove("fa-sun");
-     x.classList.add("fa-circle-half-stroke");
+     x.classList.add("fa-circle-half-stroke");  
+     
+       if (imgElement) {
+         imgElement.src = "/assets/svg/circle-half-stroke.svg"; 
+  }
+
    }
   
 } 

@@ -68,30 +68,46 @@
   color: #136857 ;
 }
 
-.fa-circle-half-stroke::before {
-  content: url('/assets/svg/circle-half-stroke.svg');
+
+.circle-half-stroke {
+  /* bunch of pretty styles, oh wow */
+  &::after {
+    content: url('/assets/svg/circle-half-stroke.svg');
+
+  }
 }
 
-.fa-sun::before {
-  content: url('/assets/svg/sun.svg');
+.sun {
+  /* bunch of pretty styles, oh wow */
+  &::after {
+    content: url('/assets/svg/sun.svg');
+  }
 }
 
-.fa-moon::before {
-  content: url('/assets/svg/moon.svg');
+.moon {
+  /* bunch of pretty styles, oh wow */
+  &::after {
+    content: url('/assets/svg/moon.svg');
+  }
 }
 
-.fa-house::before {
-  content: url('/assets/svg/house.svg');
+.house {
+  /* bunch of pretty styles, oh wow */
+  &::after {
+    content: url('/assets/svg/home-icon.svg');
+
+  }
 }
 
 .common-size-icon {
+  top: 3px; 
   height: 28px;
   width: 25px;
 }
 
 .common-size-icon3 {
-  top: 3px;
-  height: 22px;
+  margin-top: 3px; 
+  height: 22px; 
   width: 22px;
 }
 
@@ -99,6 +115,14 @@
   color: #989898;
   fill: #989898;
 }
+
+.table-theme-icon {
+  margin-top: -3px; 
+  height: 15px;
+  width: 15px;
+}
+
+
 
 .home-svg-icon::before {
   content: url('/assets/svg/home-icon.svg');

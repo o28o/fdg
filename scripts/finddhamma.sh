@@ -1245,11 +1245,11 @@ if [[ "$language" == *"Pali"* ]] || [[ "$language" == *"English"* ]];
 #echo "<a href=\"/result/${tempfilewords}\">Words</a>" | tohtml
 #replace button href in qoute file
 
-echo "<script $fontawesomejs></script>" | tohtml
+#echo "<script $fontawesomejs></script>" | tohtml
 		cat $templatefolder/Footer.html | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
 	else
 
-echo "<script $fontawesomejs></script>" | tohtml
+#echo "<script $fontawesomejs></script>" | tohtml
 		cat $templatefolder/Footer.html | sed '/WORDSLINKVAR/d' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
 fi 
 
@@ -1274,7 +1274,7 @@ echo "</tbody>
 <a href=\"${pagelang}/result/${table}\">Quotes</a>
 " >> $tempfilewords
 #replace button href in word file
-echo "<script $fontawesomejs></script>"  >> $tempfilewords
+#echo "<script $fontawesomejs></script>"  >> $tempfilewords
 cat $templatefolder/WordsFooter.html >> $tempfilewords
 mv ./$oldname ./$table
 

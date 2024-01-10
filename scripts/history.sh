@@ -86,7 +86,7 @@ echo "</tbody>
 #<a href=\"$mainpagebase\">Main</a>&nbsp;
 #<a target=_blank href=/assets/listdiff.html>List Diff</a>&nbsp;
 switchlink 
-#echo "<script $fontawesomejs></script>"
+echo "<script $fontawesomejs></script>"
 cat $templatefolder/ListFooter.html |sed 's@BOTTOMTEXT@'$bottomtext'@' |sed 's@BOTTOMLINK@'$bottomlink'@'  |sed 's@HOMEVAR@'$mainpagebase'@'
 
 

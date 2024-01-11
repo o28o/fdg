@@ -4,9 +4,6 @@ function switchIcon(x) {
   var imgElement = document.querySelector(".changesvg"); 
    if (localStorage.theme === "dark") {
      console.log(localStorage.theme);
-      x.classList.remove("circle-half-stroke");
-   x.classList.remove("moon");
-  x.classList.add("sun");
   
         x.classList.remove("fa-circle-half-stroke");
    x.classList.remove("fa-moon");
@@ -17,9 +14,6 @@ function switchIcon(x) {
   }
    } else if (localStorage.theme === "light") {
      console.log(localStorage.theme);
-    x.classList.remove("circle-half-stroke");
-  x.classList.remove("sun");
-  x.classList.add("moon"); 
 
     x.classList.remove("fa-circle-half-stroke");
   x.classList.remove("fa-sun");
@@ -31,10 +25,7 @@ function switchIcon(x) {
 
    } else if (localStorage.theme === "auto") {
      console.log(localStorage.theme);
-   x.classList.remove("moon");
-  x.classList.remove("sun");
-     x.classList.add("circle-half-stroke");
-   
+
       x.classList.remove("fa-moon");
   x.classList.remove("fa-sun");
      x.classList.add("fa-circle-half-stroke");  

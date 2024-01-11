@@ -68,33 +68,17 @@
   color: #136857 ;
 }
 
-
-.circle-half-stroke {
+.regular-star {
   /* bunch of pretty styles, oh wow */
   &::after {
-    content: url('/assets/svg/circle-half-stroke.svg');
-
+    content: url('/assets/svg/regular-star.svg');
   }
 }
 
-.sun {
+.solid-star {
   /* bunch of pretty styles, oh wow */
   &::after {
-    content: url('/assets/svg/sun.svg');
-  }
-}
-
-.moon {
-  /* bunch of pretty styles, oh wow */
-  &::after {
-    content: url('/assets/svg/moon.svg');
-  }
-}
-
-.house {
-  /* bunch of pretty styles, oh wow */
-  &::after {
-    content: url('/assets/svg/home-icon.svg');
+    content: url('/assets/svg/solid-star.svg');
 
   }
 }
@@ -117,7 +101,7 @@
 }
 
 .table-home-icon {
-  margin-top: -1px; 
+  margin-top: -2px; 
   height: 15px;
   width: 18px;
 }
@@ -230,11 +214,6 @@ label {
         }
 
 /* star intead of checkbox for history end */
-
-
-
-
-
 
 
 .img-thumbnail {	

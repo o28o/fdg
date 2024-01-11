@@ -138,15 +138,15 @@ function restoreCheckboxesStateFromLocalStorage(urlKey) {
       // Перезапись класса в зависимости от состояния checked
       if (checkbox.checked) {
         var iconElement = checkbox.parentElement.querySelector('i');
-        var favElement = checkbox.parentElement.querySelector(".starsvg"); 
+    //    var favElement = checkbox.parentElement.querySelector(".starsvg"); 
         if (iconElement) {
           iconElement.classList.remove('fa-regular');
           iconElement.classList.add('fa-solid');
         }
         
-         if (favElement) {
+   /*      if (favElement) {
 favElement.src = "/assets/svg/solid-star.svg";
-        }
+        }*/
       }
     });
   }

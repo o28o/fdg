@@ -86,7 +86,7 @@
 .common-size-icon {
   margin-top: 3px; 
   height: 24px;
-  width: 28px;
+  width: 30px;
 }
 
 .common-size-icon3 {
@@ -101,9 +101,11 @@
 }
 
 .table-home-icon {
-  margin-top: -2px; 
-  height: 15px;
-  width: 18px;
+  margin-top: -3px; 
+  margin-left: -3px; 
+  margin-right: -3px; 
+  height: 17px;
+  width: 22px;
 }
 
 .table-theme-icon {

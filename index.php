@@ -59,7 +59,15 @@ include 'scripts/opentexts.php';
     <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
+            <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container">
+              
+              
+    <!--    <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/gray-white.png"  style="width:50px;"></a>
+   
+   -->
+   <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
+
+            
                 <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
@@ -1132,7 +1140,7 @@ $.ajax({
       minLength: 0,
       multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке
       source: function(request, response) {
-        var terms = request.term.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
+        var terms = request.term.split(/[\|\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке или |
         var lastTerm = terms.pop().trim();
         var otherMinLength = 3;
 
@@ -1172,13 +1180,15 @@ $.ajax({
         return false;
       },
       select: function(event, ui) {
-  var terms = this.value.split(/([\s\*])/);
+  var terms = this.value.split(/([\|\s\*])/);
   terms.pop();
   terms.push(ui.item.value);
   
   for (var i = 1; i < terms.length; i += 2) {
     if (terms[i] === "*") {
       terms[i] = "*";
+    } else if (terms[i] === "|") {
+      terms[i] = "|";
     } else {
       terms[i] = " ";
     }
@@ -1192,7 +1202,6 @@ $.ajax({
   }
 });
 </script>
-
 
 <!-- <script type="module" src="/assets/js/autopali.js"></script> -->
 	  

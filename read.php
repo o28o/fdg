@@ -18863,7 +18863,7 @@ $.ajax({
       minLength: 0,
       multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке
       source: function(request, response) {
-        var terms = request.term.split(/[\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке
+        var terms = request.term.split(/[\|\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке или |
         var lastTerm = terms.pop().trim();
         var otherMinLength = 3;
 
@@ -18903,13 +18903,15 @@ $.ajax({
         return false;
       },
       select: function(event, ui) {
-  var terms = this.value.split(/([\s\*])/);
+  var terms = this.value.split(/([\|\s\*])/);
   terms.pop();
   terms.push(ui.item.value);
   
   for (var i = 1; i < terms.length; i += 2) {
     if (terms[i] === "*") {
       terms[i] = "*";
+    } else if (terms[i] === "|") {
+      terms[i] = "|";
     } else {
       terms[i] = " ";
     }

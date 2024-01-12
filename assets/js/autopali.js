@@ -1,4 +1,4 @@
-//get vars from file src="/assets/js/autopali.js"
+
 $.ajax({
   url: "/assets/texts/sutta_words.txt",
   dataType: "text",
@@ -16,14 +16,31 @@ $.ajax({
       "ṇ": "n",
       "ṭ": "t",
       "ñ": "n",
+      "ññ": "n",
       "ss": "s",
-      "cc": "c"
+      "aa": "a",
+      "ii": "i",
+      "uu": "u",
+      "dd": "d",
+      "kk": "k",
+      "ḍḍ": "d",
+      "ḷḷ": "l",
+      "ṇṇ": "n",
+      "ṭṭ": "t",
+      "cc": "c",
+      "pp": "p",
+	  "cch": "c",
+      "ch": "c",
+      "kh": "k",
+      "ph": "p",
+      "th": "t",
+      "ṭh": "t"
     };
 
     var normalize = function(term) {
       var ret = "";
       for (var i = 0; i < term.length; i++) {
-        ret += accentMap[term.charAt(i)] || term.charAt(i);
+          ret += accentMap[term.charAt(i)] || term.charAt(i);
       }
       return ret;
     };
@@ -37,9 +54,9 @@ $.ajax({
         collision: "flip"
       },
       minLength: 0,
-      multiple: " ",
+      multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке
       source: function(request, response) {
-        var terms = request.term.split(" ");
+        var terms = request.term.split(/[\|\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке или |
         var lastTerm = terms.pop().trim();
         var otherMinLength = 3;
 
@@ -50,7 +67,7 @@ $.ajax({
 
         var re = $.ui.autocomplete.escapeRegex(lastTerm);
         var matchbeginonly = new RegExp("^" + re, "i");
-        var matchall = new RegExp(re, "i");
+        var matchall = new RegExp(re.replace(/([a-z])\1/gi, "$1$1"), "i");
 
         var listBeginOnly = $.grep(allWords, function(value) {
           value = value.label || value.value || value;
@@ -69,26 +86,34 @@ $.ajax({
         });
 
         // Ограничение количества подсказок до 10
-		var maxRecord = 1000;
+        var maxRecord = 1000;
         var resultList = listBeginOnly.concat(listAll).slice(0, maxRecord);
 
         response(resultList);
       },
       focus: function(event, ui) {
-        var terms = this.value.split(" ");
-        terms.pop();
-        terms.push(ui.item.value);
-        this.value = terms.join(" ");
+        // Удаляем автоматическое введение при наведении мыши
         return false;
       },
       select: function(event, ui) {
-        var terms = this.value.split(" ");
-        terms.pop();
-        terms.push(ui.item.value);
-        this.value = terms.join(" ");
-        return false;
-      }
+  var terms = this.value.split(/([\|\s\*])/);
+  terms.pop();
+  terms.push(ui.item.value);
+  
+  for (var i = 1; i < terms.length; i += 2) {
+    if (terms[i] === "*") {
+      terms[i] = "*";
+    } else if (terms[i] === "|") {
+      terms[i] = "|";
+    } else {
+      terms[i] = " ";
+    }
+  }
+
+  this.value = terms.join("");
+  return false;
+}
+
     }).autocomplete("widget").addClass("fixed-height");
   }
 });
-

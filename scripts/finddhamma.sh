@@ -368,29 +368,49 @@ function grepbasefile {
 tmponl=tmponl.$rand
 
 patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' `
+patternforgrep=`echo $patternforfind | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' `
+
+onlwc=`echo $patternforfind| wc -w`
+iterationnum=1
+for pattern in $patternforfind
+do 
+nice -$nicevalue grep -Eril -m1 "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv}  > iter$iterationnum.$rand
+ iterationnum=$((iterationnum + 1))
+done
+
+cat iter*.$rand | sort -V | uniq -c | awk '{print $1, $2}' | grep "^$onlwc" |  awk '{print $2}' > onllist.$rand 
+
+for i in `cat onllist* `
+do
+nice -$nicevalue grep -HEi "$patternforgrep" "$i"
+done > $tmponl
+
+### var 1 ###
 
 #revertlater=$pattern
 #splitarraylen=`echo $pattern | tr -s "|" "\n" | wc -l`
 
 #nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,snp,dhp,iti,ud} > $tmponl
 
-command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' -not -path '*/pli-tv-kd/*' -not -path '*/pli-tv-pvr/*' "
-for i in $patternforfind
-do
-#command+=`echo -n '-exec grep -qE "'$i'" {} \; '`
-command+=`echo -n '| xargs grep -il "'$i'"'` 
-done
+
+### var 2 find ###
+#command="find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' -not -path '*/pli-tv-kd/*' -not -path '*/pli-tv-pvr/*' "
+#for i in $patternforfind
+#do
+##command+=`echo -n '-exec grep -qE "'$i'" {} \; '`
+#command+=`echo -n '| xargs grep -il "'$i'"'` 
+#done
 #command+=' -print'
 #echo  "$command" >> command
-eval "$command" > $tmponl 
+#eval "$command" > $tmponl 
 
 # Чтение содержимого файла в массив с помощью mapfile (readarray)
-mapfile -t onl_array < $tmponl
+#mapfile -t onl_array < $tmponl
 
 # Вывод содержимого массива для проверки
-for line in "${onl_array[@]}"; do
-grep -iHE "$pattern" $line
-done > $tmponl
+#for line in "${onl_array[@]}"; do
+#grep -iHE "$pattern" $line
+#done > $tmponl
 
 #cp $basefile bfl
 if [[ "$type" == html ]]; then
@@ -1127,6 +1147,7 @@ checkifalreadydone
 
 grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
+cp $basefile bf
 if [[ "$@" == *"-nm"* ]] 
 then
 

@@ -20,4 +20,4 @@ sudo systemctl restart apache2
 #check this or similar article for "how to check apache and php installation"
 # https://www.vultr.com/docs/install-linux-apache-mysql-and-php-lamp-on-ubuntu-20-04-lts/
 
-#vmtouch -vfldt ./suttacentral.net/sc-data/html_text/ru ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/ ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/ ./theravada.ru/Teaching/Canon/Suttanta/ ./tipitaka.theravada.su/ ./result/ ./assets/js/ ./assets/css/ ./assets/texts/ ./index.php ./read.php ./sc/ ./scripts/ 
+#vmtouch -vfldt ./suttacentral.net/sc-data/html_text/ru ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/ ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/ ./suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/ ./suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/ ./theravada.ru/Teaching/Canon/Suttanta/ ./tipitaka.theravada.su/ ./result/ ./assets/js/ ./assets/css/ ./assets/texts/ ./index.php ./read.php ./sc/ ./scripts/ 

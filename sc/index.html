@@ -112,20 +112,7 @@
     </div>
     <script src="index.js"></script>
 	
-		  <script defer>
-		  //smooth scroll to anchor
-    window.addEventListener('DOMContentLoaded', function() {
-      var hash = window.location.hash;
-      if (hash) {
-        setTimeout(function() {
-          var element = document.getElementById(hash.substring(1));
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 2000);
-      }
-    });
-  </script>
+	  <script src="/assets/js/smoothScrollToAnchor.js"defer></script>
     <script src="randPlaceholder.js"></script>
     <script>
     var theLanguage = $('html').attr("lang");

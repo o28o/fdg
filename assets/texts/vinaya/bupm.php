@@ -254,17 +254,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
  <span class="level5">Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti. </span>
      </br> </br><audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-ay.m4a' type='audio/mp4'>Browser is not supported.</audio>
      
-     <script>
-  function loadLazyAudio() {
-    var lazyAudios = document.querySelectorAll('.lazy-audio');
-    lazyAudios.forEach(function(audio) {
-      audio.load();
-    });
-  }
-
-  // Вызов loadLazyAudio() в конце страницы или при необходимости
-  // Например: <button onclick="loadLazyAudio()">Загрузить аудио</button>
-</script>
+<script src="/assets/js/audioLazyLoad.js"></script>
 </div>              
               
 <div class="level4">

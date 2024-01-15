@@ -100,6 +100,19 @@ if (preg_match("/^(bu|bi)-pm$/i", $string)) {
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
 } else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
+  //open read.php Bu
+  $string = str_replace (" ", "", $string);
+$string = strtolower($string);
+echo "<script>window.location.href='$readerlang/read.php#{$string}CollapseBu';</script>";
+  exit();
+} else if  (preg_match("/^bi-(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
+  //open read.php Bi
+  $string = str_replace (" ", "", $string);
+  $string = str_replace ("bi-", "", $string);
+$string = strtolower($string);
+echo "<script>window.location.href='$readerlang/read.php#{$string}CollapseBi';</script>";
+  exit();
+} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)[1-9]{1,3}$/i", $string)) {
   $string = "bu-" . $string . "1";
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
@@ -282,6 +295,21 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 }
 }
+
+#open text list onthe read.php page
+if(preg_match("/^(mn|dn|sn|an)$/i",$string) || preg_match("/^(sn|an)[0-9]{0,2}$/i",$string)){
+$string = str_replace (" ", "", $string);
+$numberblock = preg_replace("/[a-z]*/i","","$string");
+$letterblock = preg_replace("/[0-9]*/i","","$string");
+
+$string = strtolower($string);
+echo "<script>
+window.location.href='$readerlang/read.php#{$string}Collapse';
+</script>";
+  exit();
+}
+
+#open sutta in sc light interface
 if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud|snp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
 $string = str_replace (" ", ".", $string);
 $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");

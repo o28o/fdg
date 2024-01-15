@@ -27,6 +27,10 @@ $menuhowto = 'Помощь';
 $menuabout = 'О Проекте';
 $menulinks = 'Полезное';
 $menucontact = 'Контакты';
+
+$poweredby = 'Powered by NI';
+$tooltippoweredby = 'Natural Intelligence, Естественный Интеллект, Dhamma Интеллект';
+
 $tooltiptitle = 'На Pāḷi, Русском, ไทย, සිංහල и Английском';
 $title = 'Найдите Истину';
 $tooltippli = 'Поиск на Пали по-умолчанию. По Суттам an, sn, dn, mn. Ангутара Никаи, Саньютта Никаи, Маджжхима Никаи, Дигха Никаи';
@@ -497,6 +501,10 @@ $menuhowto = 'How To';
 $menuabout = 'About';
 $menulinks = 'Useful Links';
 $menucontact = 'Contacts';
+
+$poweredby = 'Powered by NI';
+$tooltippoweredby = 'Natural Intelligence, Dhamma Intelligence';
+
 $tooltiptitle = 'In Pāḷi, English, Russian, සිංහල & ไทย';
 $title = 'Search for Truth';
 $tooltippli = 'Default search. In Suttas of AN, SN, MN, DN + partially KN. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya + partially Khudakka Nikaya';

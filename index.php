@@ -912,6 +912,10 @@ foreach ($slides as $index => $slide) {
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:agiftofdhamma@gmail.com"><i class="fa-solid fa-at"></i></a>
 <a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+
+<p class="lead mt-4">
+<?php echo $poweredby; ?>
+ <a class="text-white text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippoweredby;?>"> *</a></p>
                     </div>
                 </div>
             </div>
@@ -919,7 +923,7 @@ foreach ($slides as $index => $slide) {
         <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
 <div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
-<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small> </div>
+<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small></div>
         </div>
         <!-- Portfolio Modals-->
 

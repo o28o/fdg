@@ -433,6 +433,56 @@ include 'assets/common/horizontalMenuEn.php';
 } 
 ?>
 
+<script>
+  window.onload = function() {
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+
+    
+  };
+</script>
+
+		  <script defer>
+ document.addEventListener('DOMContentLoaded', function() {
+  var hash = window.location.hash;
+
+  if (hash) {
+
+var hashForInput = hash.replace(/#/, '');
+var hashForInput = hashForInput.replace(/Collapse.*/, '');
+
+if (/.*CollapseBi/.test(hash)) {
+ hashForInput = "bi-" + hashForInput;
+}
+
+document.getElementById('paliauto').value = hashForInput;
+
+var clearBtn = document.getElementById('clearbtn');
+clearBtn.style.display = 'block';
+
+    var element = document.getElementById(hash.substring(1));
+    if (element) {
+
+      var collapseTargets = [];
+      var currentCollapse = element.closest('.collapse');
+      while (currentCollapse) {
+        collapseTargets.push(currentCollapse);
+        currentCollapse = currentCollapse.parentElement.closest('.collapse');
+      }
+
+      collapseTargets.forEach(function(collapseTarget) {
+        var bsCollapse = new bootstrap.Collapse(collapseTarget, { toggle: false });
+        bsCollapse.show();
+      });
+
+      setTimeout(function() {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 3000);
+    }
+  }
+});
+  </script>
+
 <div style="max-width: 450px;" class="container-lg my-4">
 
 <div class="container text-start input-group-append ">
@@ -18635,6 +18685,10 @@ include $basedir . "/assets/texts/vinaya/bipm.php";
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:agiftofdhamma@gmail.com"><i class="fa-solid fa-at"></i></a>
 <a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+ 
+ <p class="lead mt-4">
+<?php echo $poweredby; ?>
+ <a class="text-white text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippoweredby;?>"> *</a></p>
                     </div>
                 </div>
             </div>

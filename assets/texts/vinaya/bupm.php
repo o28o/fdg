@@ -97,7 +97,8 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
            <div class="level4 my-3">
  <span class="level5">Tatrime cattāro pārājikā dhammā uddesaṁ āgacchanti. </span>
 
-   </br> </br><audio controls><source src='/assets/audio/bu-pm/Bu-pj.m4a' type='audio/mp4'>Browser is not supported.</audio>
+
+   </br> </br><audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pj.m4a' type='audio/mp4'>Browser is not supported.</audio>
 </div>              
               
 <div class="level4">
@@ -151,7 +152,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
               
                <div class="level4 my-3">
  <span class="level5">Ime kho panāyasmanto terasa saṅghādisesā dhammā uddesaṁ āgacchanti. </span>
-     </br> </br><audio controls><source src='/assets/audio/bu-pm/Bu-ss.m4a' type='audio/mp4'>Browser is not supported.</audio>
+     </br> </br><audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-ss.m4a' type='audio/mp4'>Browser is not supported.</audio>
 </div>           
               
 <div class="level4">
@@ -251,7 +252,19 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
    
            <div class="level4 my-3">
  <span class="level5">Ime kho panāyasmanto dve aniyatā dhammā uddesaṁ āgacchanti. </span>
-     </br> </br><audio controls><source src='/assets/audio/bu-pm/Bu-ay.m4a' type='audio/mp4'>Browser is not supported.</audio>
+     </br> </br><audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-ay.m4a' type='audio/mp4'>Browser is not supported.</audio>
+     
+     <script>
+  function loadLazyAudio() {
+    var lazyAudios = document.querySelectorAll('.lazy-audio');
+    lazyAudios.forEach(function(audio) {
+      audio.load();
+    });
+  }
+
+  // Вызов loadLazyAudio() в конце страницы или при необходимости
+  // Например: <button onclick="loadLazyAudio()">Загрузить аудио</button>
+</script>
 </div>              
               
 <div class="level4">
@@ -310,7 +323,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.</span>
 
 <div class="level4">
   
-<audio controls><source src='/assets/audio/bu-pm/Bu-np1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-np1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-np1#2.17.0">Nissaggiya Pācittiya 1. Kathina</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#34.0.2">pm</a> Niṭṭhitacīvarasmiṁ bhikkhunā ubbhatasmiṁ kathine dasāhaparamaṁ atirekacīvaraṁ dhāretabbaṁ, taṁ atikkāmayato nissaggiyaṁ pācittiyaṁ.
@@ -392,7 +405,7 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
                 <div class="my-3">
 
 <div class="level4">
-  <audio controls><source src='/assets/audio/bu-pm/Bu-np2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-np2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-np11#1.23.0">Nissaggiya Pācittiya 11. Kosiya</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#44.0.2">pm</a> Yo pana bhikkhu kosiyamissakaṁ santhataṁ kārāpeyya, nissaggiyaṁ pācittiyaṁ. 
@@ -472,7 +485,7 @@ Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
                 <div class="my-3">
 
 <div class="level4">
-  <audio controls><source src='/assets/audio/bu-pm/Bu-np3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-np3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-np21#2.17.0">Nissaggiya Pācittiya 21. Patta</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#54.0.2">pm</a> Dasāhaparamaṁ atirekapatto dhāretabbo, taṁ atikkāmayato nissaggiyaṁ pācittiyaṁ. 
@@ -579,7 +592,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc1#1.20.0">Pācittiya 1. Musāvāda</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#66.0.2">pm</a> Sampajānamusāvāde pācittiyaṁ. 
@@ -655,7 +668,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc11#1.29.0">Pācittiya 11. Bhūtagāma</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#76.0.2">pm</a> Bhūtagāmapātabyatāya pācittiyaṁ. 
@@ -734,7 +747,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc21#1.44.0">Pācittiya 21. Ovāda</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#86.0.2">pm</a> Yo pana bhikkhu asammato bhikkhuniyo ovadeyya, pācittiyaṁ. 
@@ -814,7 +827,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>      
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc31#2.14.0">Pācittiya 31. Āvasathapiṇḍa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#96.0.2">pm</a> Agilānena bhikkhunā eko āvasathapiṇḍo bhuñjitabbo. Tato ce uttari bhuñjeyya, pācittiyaṁ. 
@@ -894,7 +907,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
  
-  <audio controls><source src='/assets/audio/bu-pm/Bu-pc5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>      
   
 <span class="level5">
@@ -973,7 +986,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc51#1.46.0">Pācittiya 51. Surāpāna</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#116.0.2">pm</a> Surāmerayapāne pācittiyaṁ. 
@@ -1053,7 +1066,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 <div class="level4">
   
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc61#1.16.0">Pācittiya 61. Sañcicca</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#126.0.2">pm</a> Yo pana bhikkhu sañcicca pāṇaṁ jīvitā voropeyya, pācittiyaṁ. 
@@ -1130,7 +1143,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc8vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc8vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc71#1.19.0">Pācittiya 71. Sahadhammika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#136.0.2">pm</a> Yo pana bhikkhu bhikkhūhi sahadhammikaṁ vuccamāno evaṁ vadeyya “na tāvāhaṁ, āvuso, etasmiṁ sikkhāpade sikkhissāmi, yāva na aññaṁ bhikkhuṁ byattaṁ vinayadharaṁ paripucchāmī”ti, pācittiyaṁ. Sikkhamānena, bhikkhave, bhikkhunā aññātabbaṁ paripucchitabbaṁ paripañhitabbaṁ, ayaṁ tattha sāmīci. 
@@ -1218,7 +1231,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">
-    <audio controls><source src='/assets/audio/bu-pm/Bu-pc9vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pc9vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>     
 <span class="level5">
 <a href="<?php echo $mainscpage; ?>/?q=bu-pc83#1.3.56.0">Pācittiya 83. Antepura</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#148.0.2">pm</a> Yo pana bhikkhu rañño khattiyassa muddhābhisittassa anikkhantarājake aniggataratanake pubbe appaṭisaṁvidito indakhīlaṁ atikkāmeyya, pācittiyaṁ. 
@@ -1310,7 +1323,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
            <div class="level4 my-3">
  <span class="level5">Ime kho panāyasmanto cattāro pāṭidesanīyā dhammā uddesaṁ āgacchanti. </span>
  
-                </br> </br><audio controls><source src='/assets/audio/bu-pm/Bu-pd.m4a' type='audio/mp4'>Browser is not supported.</audio>   
+                </br> </br><audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-pd.m4a' type='audio/mp4'>Browser is not supported.</audio>   
 </div>              
  
 <div class="level4">
@@ -1379,7 +1392,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="collapse" id="sk1CollapseBu">
                 <div class="my-3">
           <div class="level4">
- <audio controls><source src='/assets/audio/bu-pm/Bu-sk1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-sk1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>           
             
  <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk1#1.16.1">Sekhiya 1. Parimaṇḍala</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#166.0.2">pm</a> Parimaṇḍalaṁ nivāsessāmīti sikkhā karaṇīyā. </span>
@@ -1442,7 +1455,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 <div class="level4">    
 
- <audio controls><source src='/assets/audio/bu-pm/Bu-sk2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-sk2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>           
             
 <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk11#1.3.1">Sekhiya 11. Ujjagghika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#176.0.2">pm</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk12#1.3.1">Sekhiya 12.</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#178.0">pm</a> Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk13#1.3.1">Sekhiya 13. Uccasadda</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#179.0">pm</a> Appasaddo antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk14#1.3.1">Sekhiya 14.</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#180.0">pm</a> Appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                                </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk15#1.3.1">Sekhiya 15. Kāyappacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#181.0">pm</a> Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk16#1.3.1">Sekhiya 16.</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#182.0">pm</a> Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk17#1.3.1">Sekhiya 17. Bāhuppacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#183.0">pm</a> Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk18#1.3.1">Sekhiya 18.</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#184.0">pm</a> Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk19#1.3.1">Sekhiya 19. Sīsappacālaka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#185.0">pm</a> Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk20#1.3.1">Sekhiya 20.</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#186.0">pm</a> Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                        </div>
@@ -1469,7 +1482,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 <div class="level4">        
 
- <audio controls><source src='/assets/audio/bu-pm/Bu-sk3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-sk3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>           
             
             <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk21#1.3.1">Sekhiya 21. Khambhakata</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#187.0.2">pm</a> Na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                               </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk22#1.3.1">Sekhiya 22.</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#188.0">pm</a> Na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk23#1.3.1">Sekhiya 23. Oguṇṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#189.0">pm</a> Na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk24#1.3.1">Sekhiya 24.</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#190.0">pm</a> Na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk25#1.3.1">Sekhiya 25. Ukkuṭika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#192.0">pm</a> Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā. </span>                                                     </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk26#1.3.1">Sekhiya 26. Pallatthika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#193.0">pm</a> Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk27#1.3.1">Sekhiya 27. Sakkaccapaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#194.0">pm</a> Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk28#1.3.1">Sekhiya 28. Pattasaññīpaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#195.0">pm</a> Pattasaññī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk29#1.3.1">Sekhiya 29. Samasūpakapaṭiggahaṇa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#196.0">pm</a> Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                      </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk30#1.3.1">Sekhiya 30. Samatittika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#197.0">pm</a> Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā. </span>                                               </div>
@@ -1496,7 +1509,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="collapse" id="sk4CollapseBu">
                 <div class="my-3 ">
 <div class="level4">    
- <audio controls><source src='/assets/audio/bu-pm/Bu-sk4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-sk4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>           
             <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk31#1.3.1">Sekhiya 31. Sakkaccabhuñjana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#199.0.2">pm</a> Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk32#1.3.1">Sekhiya 32. Pattasaññībhuñjana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#200.0">pm</a> Pattasaññī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk33#1.3.1">Sekhiya 33. Sapadāna</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#201.0">pm</a> Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk34#1.3.1">Sekhiya 34. Samasūpaka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#202.0">pm</a> Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk35#1.3.1">Sekhiya 35. Nathūpakata</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#203.0">pm</a> Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk36#1.3.1">Sekhiya 36. Odanappaṭicchādana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#204.0">pm</a> Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā. </span>       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk37#2.10.1">Sekhiya 37. Sūpodanaviññatti</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#205.0">pm</a> Na sūpaṁ vā odanaṁ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk38#1.3.1">Sekhiya 38. Ujjhānasaññī</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#206.0">pm</a> Na ujjhānasaññī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk39#1.3.1">Sekhiya 39. Kabaḷa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#207.0">pm</a> Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā. </span>                                                            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk40#1.3.1">Sekhiya 40. Ālopa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#208.0">pm</a> Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. </span>                                                              </div>
            <div class="level4 my-3">
@@ -1520,7 +1533,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="collapse" id="sk5CollapseBu">
                 <div class="my-3">
 <div class="level4">   
- <audio controls><source src='/assets/audio/bu-pm/Bu-sk5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-sk5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>           
             
 <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk41#1.3.1">Sekhiya 41. Anāhaṭa</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#209.0.2">pm</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā. </span>                                              </div>                                                             
@@ -1551,7 +1564,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
               <div class="collapse" id="sk6CollapseBu">
                 <div class="my-3">
 <div class="level4">      
- <audio controls><source src='/assets/audio/bu-pm/Bu-sk6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-sk6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>           
             
 <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk51#1.19.1">Sekhiya 51. Surusurukāraka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#219.0.2">pm</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    
@@ -1582,7 +1595,7 @@ parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
                 <div class="my-3">
 
 <div class="level4">        
- <audio controls><source src='/assets/audio/bu-pm/Bu-sk7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-sk7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
        </br>           
             
             <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk61#1.3.1">Sekhiya 61. Pāduka</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#229.0.2">pm</a> Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk62#1.3.1">Sekhiya 62. Upāhana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#230.0">pm</a> Na upāhanāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                          </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk63#1.3.1">Sekhiya 63. Yāna</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#231.0/">pm</a> Na yānagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                                 </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk64#1.3.1">Sekhiya 64. Sayana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#232.0">pm</a> Na sayanagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk65#1.3.1">Sekhiya 65. Pallatthika</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#233.0">pm</a> Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk66#1.3.1">Sekhiya 66. Veṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#234.0">pm</a> Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk67#1.3.1">Sekhiya 67. Oguṇṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#235.0">pm</a> Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                       </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk68#1.3.1">Sekhiya 68. Chamā</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#236.0">pm</a> Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk69#1.46.1">Sekhiya 69. Nīcāsana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#237.0">pm</a> Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>             </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk70#1.3.1">Sekhiya 70. Ṭhita</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#238.0">pm</a> Na ṭhito nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>                                           </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk71#1.3.1">Sekhiya 71. Pacchatogamana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#239.0">pm</a> Na pacchato gacchanto purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>            </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk72#1.3.1">Sekhiya 72. Uppathenagamana</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#240.0">pm</a> Na uppathena gacchanto pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. </span>         </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk73#1.3.1">Sekhiya 73. Ṭhitouccāra</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#241.0">pm</a> Na ṭhito agilāno uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā. </span>                                    </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk74#1.3.1">Sekhiya 74. Hariteuccāra</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#242.0">pm</a> Na harite agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                        </div>                                                             <div class="level4">                                                    <span class="level5"><a href="<?php echo $mainscpage; ?>/?q=bu-sk75#2.6.1">Sekhiya 75. Udakeuccāra</a> <a href="<?php echo $mainscpage; ?>/?q=bu-pm#243.0">pm</a> Na udake agilāno uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. </span>                          
@@ -1626,7 +1639,7 @@ Sekhiyā niṭṭhitā </span>
  <span class="level5">Ime kho panāyasmanto satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti.
 </span>
        </br>            </br>     
- <audio controls><source src='/assets/audio/bu-pm/Bu-as.m4a' type='audio/mp4'>Browser is not supported.</audio>
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bu-pm/Bu-as.m4a' type='audio/mp4'>Browser is not supported.</audio>
       
             
 </div>              

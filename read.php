@@ -54,6 +54,7 @@ include 'scripts/opentexts.php';
 
 <?php echo $fontawesomejs;?> 
 
+
 </head>
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
@@ -477,7 +478,7 @@ clearBtn.style.display = 'block';
 
       setTimeout(function() {
         element.scrollIntoView({ behavior: 'smooth' });
-      }, 3000);
+      }, 1000);
     }
   }
 });

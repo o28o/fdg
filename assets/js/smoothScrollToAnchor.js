@@ -1,5 +1,5 @@
 //smooth scroll to anchor
-    window.addEventListener('load', function() {
+    window.addEventListener('DOMContentLoaded', function() {
       var hash = window.location.hash;
       if (hash) {
         setTimeout(function() {
@@ -7,7 +7,7 @@
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
-        }, 3000);
+        }, 1000);
       }
     });
 

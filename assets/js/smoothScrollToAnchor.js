@@ -7,7 +7,7 @@
           if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
           }
-        }, 1000);
+        }, 1500);
       }
     });
 

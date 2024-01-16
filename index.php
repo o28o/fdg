@@ -250,7 +250,7 @@ $(document).ready(function() {
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                 Done.
+                 Done
             </div>
         </div>
     </div>

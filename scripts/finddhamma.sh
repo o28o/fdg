@@ -278,7 +278,6 @@ if [[ "$@" == *"-vin"* ]]
   vin=dummy
 vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
 linesafter=1
-echo vincase $linesafter > eee
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
@@ -288,14 +287,14 @@ else
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei "\bKata.{0,40} ${defpattern}.{0,5}[\?,]|\bKatha.{0,40} \b${defpattern}.{0,5}[\?,]|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${defpattern}.{0,5}[\?,]|\bKatha.{0,40} \b${defpattern}.{0,5}[\?,]|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
 }
 fi  
 
 
 function grepbasefileExtended1 {
   fortitle="Definition Extended 1 ${fortitle}"
-cat $tmpdef | nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\b${defpattern}[^\s]{0,3}sutta"
+cat $tmpdef | nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\b${defpattern}[^\s]{0,3}sutta|${defpattern}.*vacanīy"
 }
 
 function grepbasefileExtended2 {
@@ -762,8 +761,8 @@ checktrnfile="`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_tran
 
 
 pathblocknotexttype=$(echo $pathblock | sed 's@sutta@@')
-#audiofile=$(ls "$apachesitepath/assets/audio/$pathblocknotexttype/${filenameblock}_"* 2> /dev/null | tail -n1)
-#Audiofileforlink=$(echo "$audiofile" | sed "s|$apachesitepath||")
+audiofile=$(ls "$apachesitepath/assets/audio/$pathblocknotexttype/${filenameblock}_"* 2> /dev/null | tail -n1)
+Audiofileforlink=$(echo "$audiofile" | sed "s|$apachesitepath||")
 
 svgicon='<?xml version="1.0" encoding="utf-8"?>
 

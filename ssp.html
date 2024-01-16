@@ -1,9 +1,107 @@
-      </tbody>
+<!DOCTYPE html>
+<html data-bs-theme="light">
+<head>
+<title>Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali</title>
+<meta name="description" content="Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali - find.Dhamma.gift" />
+
+<meta property="og:url" content="https://find.dhamma.gift">
+<meta property="og:image" content="/assets/img/social_sharing_results.jpg" />
+
+<meta property="og:description" content="Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali" />
+<meta name="twitter:title" content="Find.dhamma.gift">
+<meta name="twitter:description" content="Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali">
+
+<meta name="twitter:card" content="/assets/img/social_sharing_results.jpg">
+<meta property="twitter:domain" content="find.dhamma.gift">
+<meta property="twitter:url" content="">
+<meta name="twitter:title" content="Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali">
+<meta name="twitter:description" content="Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali">
+<meta name="twitter:image" content="/assets/img/social_sharing_results.jpg">
+
+
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="/assets/css/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
+<link rel="stylesheet" href="/assets/css/langswitch.css">
+<link rel="stylesheet" href="/assets/css/extrastyles.css">
+
+<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/datatables.min.js"></script>
+<script type="text/javascript" src="/assets/js/natural.js"></script>
+<script type="text/javascript" src="/assets/js/strip-html.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/diacritics.js"></script> -->
+
+
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<link href="/assets/css/table.css" rel="stylesheet" />
+<!--<script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=verse"></script>-->
+</head>
+<body>
+<div class="container-fluid mt-2">    
+
+    <h3 class="pl-2 ml-2">Adhivacanasamphasso 1 texts and 2 matches in Suttanta Pali</h3>
+
+            <button class="btn btn-light mb-1" type="button">
+           <a href='/ru'>
+    <img class="table-home-icon" src="/assets/svg/home-icon.svg"></img>   
+</a>
+      </button>  
+    <button id="theme-button" class="btn btn-light mb-1 " type="button">
+      
+<img src="/assets/svg/circle-half-stroke.svg" onclick="switchIcon(this)" class="changesvg table-theme-icon gray-icon"></img>
+</button>		  
+    <button id="btn-hide-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo</button>
+<button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Vivaṭṭo</button>
+
+<button class="btn btn-light forshellscript mb-1" type="button"><a class="text-decoration-none " href="./adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html">Words</a></button>    
+
+
+
+<button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
+<hr>
+
+<table id="pali" class="display table table-striped table-hover responsive " cellspacing="0" width="100%">
+   <thead class="thead-light">
+        <tr>
+            <th>Sutta</th>
+            <th>St</th>
+            <th>Title</th>
+            <th>Words</th>
+            <th>Ct</th>
+            <th>Mr</th>
+            <th>Links</th>
+            <th class="none">Quote</th>
+        <!-- <th class="none">Audio</th> -->
+        </tr>
+    </thead>
+    <tbody id="sutta">
+      
+  
+    </tbody>
     </table>
 </div>
+<script> 
+new DataTable('#pali', {
+    ajax: '/ssp.php',
+//        ajax: '/sspnpsleep.php',
+    processing: true,
+    serverSide: true
+});
+</script>
 
-<script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
-    <script type='text/javascript'>
+
+
+ <!--   <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
+
+ <script type='text/javascript'>
    $(document).ready(function() {
        // Регистрируем собственный тип сортировки для чекбоксов
     $.fn.dataTable.ext.order['dom-checkbox'] = function(settings, col) {
@@ -25,14 +123,14 @@
               text: 'Main',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = "MAINLINKVAR";
+                                window.location.href = "/ru";
                             }
             },
               {
               text: 'Read',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = "READLINKVAR";
+                                window.location.href = "/ru/read.php";
                             }
             },
                         {
@@ -49,7 +147,7 @@
                                 window.location.href = '/history.php';
                             }
                         },  
-                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = "WORDSLINKVAR";}},
+                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = "/ru/result/adhivacanasamphasso_suttanta_pali-ru_words_1-2-1.html";}},
                         { extend: 'colvis', 
                      className: 'btn btn-link ',
                         text: 'Visibility' }
@@ -124,7 +222,8 @@
 
 
   </script>
-  
+ -->   
+ <!--
 <script>
 // Получение всех чекбоксов
 var checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -166,9 +265,11 @@ checkboxes.forEach(function(checkbox) {
 });
 
 </script>
+-->
+
 
 <script src="/assets/js/themeswitch.js"></script>
 
-    <script defer type="module" src="/assets/js/langswitch.js"></script>      
+    <script defer type="module" src="/assets/js/langswitch.js"></script>  
 </body>
 </html>

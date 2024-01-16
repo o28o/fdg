@@ -1,4 +1,5 @@
 #!/bin/bash -i
+start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
@@ -738,8 +739,8 @@ cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's@
 textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
 
 for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | sed -E 's@.*(sutta|vinaya|abhidhamma)@@g' |  awk -F'_' -v dirlocation="$dirlocation" '{print dirlocation""$1}' | sort -Vf | uniq` ; do
-echo before quote part >> time_output.txt
-{ time filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -Vf | uniq`
+
+filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -Vf | uniq`
 pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) printf $i"/"}'`
 
 #echo "flnblck=$filenameblock pathblock=$pathblock" 
@@ -761,8 +762,8 @@ checktrnfile="`ls $apachesitepath/assets/texts/$pathblock/*${filenameblock}_tran
 
 
 pathblocknotexttype=$(echo $pathblock | sed 's@sutta@@')
-audiofile=$(ls "$apachesitepath/assets/audio/$pathblocknotexttype/${filenameblock}_"* 2> /dev/null | tail -n1)
-Audiofileforlink=$(echo "$audiofile" | sed "s|$apachesitepath||")
+#audiofile=$(ls "$apachesitepath/assets/audio/$pathblocknotexttype/${filenameblock}_"* 2> /dev/null | tail -n1)
+#Audiofileforlink=$(echo "$audiofile" | sed "s|$apachesitepath||")
 
 svgicon='<?xml version="1.0" encoding="utf-8"?>
 
@@ -823,7 +824,7 @@ if [[ $mode == "offline" ]]
 then 
 thrulink="`ls -R $thsulocation/dn/ | grep -m1 \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
 else 
-thrulink=`grep "ДН $dnnumber" $thsucurldn | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
+thrulink=`grep -m1 "ДН $dnnumber " $thsucurldn | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
 fi
   fi 
 
@@ -931,7 +932,7 @@ then
 metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evame'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
-fi   ;} 2>> time_output.txt
+fi
 
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
@@ -1361,4 +1362,7 @@ echo "</td></tr>
 rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *$rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"./result/${table}\";</script>"
 
+end=`date +%s`
+runtime=$((end-start))
+echo total execution time $runtime >> time_output.txt
 exit 0

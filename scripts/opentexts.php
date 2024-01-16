@@ -95,10 +95,6 @@ if (preg_match("/^(bu|bi)-pm$/i", $string)) {
 } else if (preg_match("/^pm$/i", $string)) {
 	echo "<script>window.location.href='$readerlang/sc/?q=bu-{$string}';</script>";	
 	  exit(); 
-} else if  ((preg_match("/^(bu|bi)-(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) && (preg_match("!/[0-9]/i", $string))) {
-  $string = $string . "1";
-  echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
-	  exit(); 
 } else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
   //open read.php Bu
   $string = str_replace (" ", "", $string);
@@ -113,7 +109,7 @@ $string = strtolower($string);
 echo "<script>window.location.href='$readerlang/read.php#{$string}CollapseBi';</script>";
   exit();
 } else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)[1-9]{1,3}$/i", $string)) {
-  $string = "bu-" . $string . "1";
+  $string = "bu-" . $string;
   echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
 	  exit(); 
 } else if (preg_match("/(bu|bi)-([a-z][a-z])[0-9]*/i", $string)) {

@@ -8,6 +8,9 @@ $mainscpage = $mainpage . '/sc';
 $mainreadlink = '/ru/read.php';
 $searchcaption = 'Поиск';
 $clearaption = 'Очистить';
+$btnsave = 'Сохр. по умолч.';
+$btnreset = 'Сбросить';
+
 $gearbutton = 'дополнительные настройки';
 $linksothermat = 'https://drive.google.com/drive/u/1/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN';
 $linktextbook = "$linktextbookru";
@@ -481,6 +484,10 @@ $mainscpage = '/sc';
 $mainreadlink = '/read.php';
 $searchcaption = 'Search';
 $clearaption = 'Clear';
+
+$btnsave = 'Set Defaults';
+$btnreset = 'Reset';
+
 $gearbutton = 'extra settings';
 
 $maintitle = 'Precise Search in Pali Suttas and Vinaya';

@@ -1,5 +1,6 @@
 #!/bin/bash -i
 #set -x 
+#set +x
 #trap read debug
 export LANG=en_US.UTF-8
 #export LC_ALL=en_US
@@ -275,13 +276,13 @@ if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
 vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
-
+linesafter=1
+echo vincase $linesafter > eee
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|\bKatha.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|\bKatha.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
 }
-
 else 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
@@ -820,7 +821,7 @@ then
 dnnumber=`echo $filenameblock | sed 's/dn//g'`
 if [[ $mode == "offline" ]]
 then 
-thrulink="`ls -R $thsulocation/dn/ | grep \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
+thrulink="`ls -R $thsulocation/dn/ | grep -m1 \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
 else 
 thrulink=`grep "ДН $dnnumber" $thsucurldn | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
 fi
@@ -858,13 +859,14 @@ elif ls $roottext | grep -E -q -m1 "sn[0-9]{0,2}.[0-9]*_"
 then
   roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -Vf | uniq`
 
-elif ls $roottext | grep -E -q "(sn|an)[0-9]{0,3}.[0-9]*-[0-9]*_"
+elif ls $roottext | grep -m1 -E -q "(sn|an)[0-9]{0,3}.[0-9]*-[0-9]*_"
 then
 
 samyuttaname=`grep -m1 \`echo $suttanumber | awk -F'.' '{print $1}'\` $sntoccsv | awk -F',' '{print $4}'`
       roottitle="`nice -$nicevalue grep -E -i "$pattern" $roottext | clearsed | awk '{print $1}' | awk -F':' '{print $1}' | sort -Vf | uniq |  xargs ` $samyuttaname"
+
 else 
-roottitle=`nice -$nicevalue grep ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
+roottitle=`nice -$nicevalue grep -m5 ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
 fi 
 #echo -e "Content-Type: text/html\n\n"
 #echo $@
@@ -925,6 +927,7 @@ linkgeneralwithindex="$linkgeneral#$firstIndex"
 metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
 if [[ $metaphorcount == "" ]]
 then
+
 metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evame'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
@@ -968,9 +971,9 @@ if [[ "$fileForAnchor" == *"-"* ]] && [[ $fortitle == *"Suttanta"* ]]
  fi
  
 if [ "$linesafter" -eq 0 ] && [ "$linesbefore" -eq 0 ]; then
-   quote=`nice -$nicevalue grep -iE "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$"  `
+   quote=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $f | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$"  `
     else
-    quote=`nice -$nicevalue grep -iE "${i}(:|[^0-9]|$)" $f | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
+    quote=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $f | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
 fi
 [[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>" 
 done
@@ -1056,7 +1059,7 @@ fi
 
 roottitle=`nice -$nicevalue grep -m5 ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
 
-if ls $roottext | grep -E -q "sn[0-9]{0,2}.[0-9]*_"
+if ls $roottext | grep -m1 -E -q "sn[0-9]{0,2}.[0-9]*_"
 then
 roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -Vf | uniq`
 fi
@@ -1066,7 +1069,7 @@ then
 if [[ $mode == "offline" ]]
 then 
 dnnumber=`echo $filenameblock | sed 's/dn//g'`
-linklang="`ls -R $thsulocation/dn/ | grep \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
+linklang="`ls -R $thsulocation/dn/ | grep -m1 \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
 else 
 linklang=` grep "ДН $dnnumber" $thsucurldn | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
 fi

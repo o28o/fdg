@@ -171,6 +171,7 @@ $(document).ready(function() {
         <option value="-def" <?php if (isset($extra) && $extra == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $extra == "-sml") echo "selected";?> ><?php echo "$listsml";?></option>
         <option value="-defall" <?php if (isset($extra) && $extra == "-defall") echo "selected";?> ><?php echo "$listdefall";?></option>
+        <option value="-nm10" <?php if (isset($extra) && $extra == "-nm10") echo "selected";?> ><?php echo "$listnm10";?></option>
       <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
       <option value="-nm1" <?php if (isset($extra) && $extra == "-nm1") echo "selected";?> ><?php echo "$listnm1";?></option>      
     </select>
@@ -205,6 +206,21 @@ $(document).ready(function() {
  <!-- <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ" autocomplete="off">ṃ</button> -->
 </div>
 
+<div class="mt-3">
+  <script src="/assets/js/setDefaultMode.js"></script>
+<button type="button" class="btn btn-sm btn-primary rounded-pill" onclick="savePreferences()"><?php echo $btnsave;?></button>
+<button type="button" class="btn btn-sm btn-secondary rounded-pill" onclick="resetPreferences()"><?php echo $btnreset;?></button>
+  
+     <div class="modal fade" id="copyPopup" tabindex="-1" role="dialog" aria-labelledby="copyPopupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                 Done.
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
  <h5 class="mt-4"><?php echo $regexMemoh5;?></h5> 
 <div class="mt-4" style="text-align: left;">

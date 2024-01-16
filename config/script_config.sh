@@ -18,6 +18,7 @@ nicevalue=1
 mode=offline
 fontawesomejs='src="/assets/js/fontawesome.6.1.all.js" defer'
 apachesitepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
+tmpdir=$apachesitepath/result
 suttapath=$apachesitepath/suttacentral.net/
 
 linkforthsu=/tipitaka.theravada.su
@@ -47,6 +48,7 @@ sitename=http://localhost
 nicevalue=1
 mode=online
 apachesitepath=/var/www/html
+tmpdir=/tmp
 suttapath=$apachesitepath/suttacentral.net/
 
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
@@ -79,6 +81,7 @@ sitename=http://localhost
 nicevalue=1
 mode=offline
 apachesitepath=/var/www/html
+tmpdir=/tmp
 suttapath=$apachesitepath/suttacentral.net/
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 linkforthsu=/tipitaka.theravada.su
@@ -110,6 +113,7 @@ mode=online
 nicevalue=19
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 apachesitepath=/home/a0902785/domains/find.dhamma.gift/public_html/
+tmpdir=/tmp
 suttapath=/home/a0902785/domains/find.dhamma.gift/suttacentral.net/
 
 linkforthsu=https://tipitaka.theravada.su

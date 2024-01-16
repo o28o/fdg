@@ -270,7 +270,7 @@ pattern="$defpattern"
 linesafter=3
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 
-tmpdef=tmpdef.$rand
+tmpdef=$tmpdir/tmpdef.$rand
 
 if [[ "$@" == *"-vin"* ]]
   then
@@ -315,7 +315,7 @@ pattern="$smlpattern"
 linesafter=1
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 
-tmpsml=tmpsml.$rand
+tmpsml=$tmpdir/tmpsml.$rand
 nonmetaphorkeys="condition|adhivacanasamphass|adhivacanapath|\banopam|\battūpa|\bnillopa|opamaññ"
 if [[ "$@" == *"-vin"* ]]
   then
@@ -367,7 +367,7 @@ fortitle="${fortitle}"
 elif [[ "$@" == *"-onl"* ]]; then
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 function grepbasefile {
-tmponl=tmponl.$rand
+tmponl=$tmpdir/tmponl.$rand
 
 patternforfind=`echo $pattern | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' `
 patternforgrep=`echo $patternforfind | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' `
@@ -432,7 +432,7 @@ maxmatchesbg=100000000
 #echo $pattern $splitpattern $splitarraylen | tohtml
 else 
 function grepbasefile {
-tmpgb=tmpgrepbase.$rand
+tmpgb=$tmpdir/tmpgrepbase.$rand
 #find $suttapath/$pali_or_lang  -type f -not -path '*/'$sutta'/*' -not -path '*/'$abhi'/*' -not -path '*/'$vin'/*' -not -path '*/xplayground/*' -not -path '*/name/*' -not -path '*/site/*' -not -path '*/ab/*' -not -path '*/bv/*' -not -path '*/cnd/*' -not -path '*/cp/*' -not -path '*/ja/*' -not -path '*/kp/*' -not -path '*/mil/*' -not -path '*/mnd/*' -not -path '*/ne/*' -not -path '*/pe/*' -not -path '*/ps/*' -not -path '*/pv/*' -not -path '*/tha-ap/*' -not -path '*/thi-ap/*' -not -path '*/vv/*' -not -path '*/thag/*' -not -path '*/thig/*' -not -path '*/snp/*' -not -path '*/dhp/*' -not -path '*/iti/*' -not -path '*/ud/*' -print0 | xargs -n$filelimit -r0P$procqnty grep -E -Ri${grepvar}${grepgenparam} "$pattern" > $tmpgb
 
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr} > $tmpgb
@@ -623,11 +623,11 @@ basefile=${fn}_fn.$extention
 #filelist
 #metaphors=${fn}_metaphors.$extention
 table=${modifiedfn}.$rand
-tempfile=${modifiedfn}.$extention
-tempfilewhistory=${modifiedfn}_hist.$extention
+tempfile=$tmpdir/${modifiedfn}.$extention
+tempfilewhistory=$tmpdir/${modifiedfn}_hist.$extention
 tempfilewords=${modifiedfn}_words.$rand
-tempdeffile=${modifiedfn}.def.$extention
-deffile=${modifiedfn}_definitions.$rand
+tempdeffile=$tmpdir/${modifiedfn}.def.$extention
+deffile=$tmpdir/${modifiedfn}_definitions.$rand
 
 if [[ "$@" == *"-nm"* ]] 
 then
@@ -738,8 +738,8 @@ cat $templatefolder/Header.html $templatefolder/ResultTableHeader.html | sed 's@
 textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
 
 for pathAndfile in `nice -$nicevalue cat $basefile | awk -F':' '{print $1}' | sed -E 's@.*(sutta|vinaya|abhidhamma)@@g' |  awk -F'_' -v dirlocation="$dirlocation" '{print dirlocation""$1}' | sort -Vf | uniq` ; do
-
-filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -Vf | uniq`
+echo before quote part >> time_output.txt
+{ time filenameblock=`echo $pathAndfile | awk -F'/' '{print $NF}'| sort -Vf | uniq`
 pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) printf $i"/"}'`
 
 #echo "flnblck=$filenameblock pathblock=$pathblock" 
@@ -931,7 +931,7 @@ then
 metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evame'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
-fi
+fi   ;} 2>> time_output.txt
 
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
@@ -951,11 +951,10 @@ $([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\
 
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
 `[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 
-`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`
+`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi` 
 
-</td>" | tohtml 
+</td>" | tohtml
 echo "<td><p>" | tohtml 
-
 for i in $indexlist
 do
 		for f in $roottext $translation $variant
@@ -1148,8 +1147,9 @@ then
 fi
 
 checkifalreadydone
-
-grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
+echo grepbase > time_output.txt
+{ time grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf ;} 2>> time_output.txt > $basefile
+#grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
 if [[ "$@" == *"-nm"* ]] 
 then
@@ -1221,11 +1221,13 @@ getbasefile "$@"
 rm ${table} $tempfile $tempfilewords $tempfilewhistory > /dev/null 2>&1
 
 #add links to each file
-linklist
-
+echo linklist function part >> time_output.txt
+{ time linklist ;} 2>> time_output.txt
+echo end of linklist function part >> time_output.txt
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
 then
-genwordsfile
+echo genwordsfile >> time_output.txt
+{ time genwordsfile ;} 2>> time_output.txt
 fi 
 textsqnty=`echo $textlist | wc -w`
 

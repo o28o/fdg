@@ -143,7 +143,7 @@ $carouseltitle = 'Интересные Запросы';
 $slides = [
 
           [
-        'title' => 'Крайние сроки на Пробужление для монахов и мирян от Будды',
+        'title' => 'Крайние сроки на Пробуждение для монахов и мирян от Будды',
         'desc' => 'Максимум 7 и 10 лет, соответственно',
         'link' => '/assets/example/(viharanto-yathaa-mayaanusi.t.tha.m-eva.m-bhaaveyya)_suttanta_pali-ru_3-16.html',
     ],

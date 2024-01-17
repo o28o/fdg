@@ -252,6 +252,14 @@ if [[ "$@" == *"-abhi"* ]]; then
     #echo search in abhidhamma
 fi
  
+ 
+ #case for am3.76 3.77 
+ 
+ shopt -s extglob
+if [[ "$pattern" == @(taṇh*|dhāt*|cetan*|patthan*|kamm*|khett*|viññāṇ*|bīj*|sneh*|phass*|majjh*|sibbin*|ant*) ]]; 
+then
+customtexts="|an3.7[67].*${modpattern}|${modpattern}.*dutiyo puriso|an6.61.*${modpattern}|an4.199.*${modpattern}"
+fi
 
 if [[ "$@" == *"-kn"* ]]; then
 function grepbasefile {
@@ -265,9 +273,9 @@ then
 fileprefix=${fileprefix}-definition
 fortitle="Definition ${fortitle}"
 
-defpattern="`echo $pattern | sed -E 's/([aiīoā]|aṁ)$//g'`"
-pattern="$defpattern" 
-#vin=dummy ${defpattern}.*nāma|
+modpattern="`echo $pattern | sed -E 's/([aiīoā]|aṁ)$//g'`"
+pattern="$modpattern" 
+#vin=dummy ${modpattern}.*nāma|
 linesafter=3
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 
@@ -276,32 +284,34 @@ tmpdef=$tmpdir/tmpdef.$rand
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
-vindefpart="${defpattern}.{0,3}—|${defpattern}.{0,3}ti|${defpattern}.*nāma|"
+vindefpart="${modpattern}.{0,3}—|${modpattern}.{0,3}ti|${modpattern}.*nāma|"
 linesafter=1
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vindefpart}\bKata.{0,20} \b${defpattern}.{0,5}\?|\bKatha.{0,20} \b${defpattern}.{0,5}\?|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vindefpart}\bKata.{0,20} \b${modpattern}.{0,5}\?|\bKatha.{0,20} \b${modpattern}.{0,5}\?|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}" $tmpdef
 }
 else 
+# definitions in Suttanta 
+
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${defpattern}.{0,5}[\?,]|\bKatha.{0,40} \b${defpattern}.{0,5}[\?,]|${defpattern}.{0,15}, ${defpattern}.{0,25} vucca|${defpattern}.{0,25} vucca|Kiñ.*${defpattern}.{0,9} va|${defpattern}.*ariyassa vinaye|ariyassa vinaye.*${defpattern}" $tmpdef
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,5}[\?,]|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
 }
 fi  
 
 
 function grepbasefileExtended1 {
   fortitle="Definition Extended 1 ${fortitle}"
-cat $tmpdef | nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\b${defpattern}[^\s]{0,3}sutta|${defpattern}.*vacanīy"
+cat $tmpdef | nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\b${modpattern}[^\s]{0,3}sutta|${modpattern}.*vacanīy"
 }
 
 function grepbasefileExtended2 {
   fortitle="Definition Extended 2 ${fortitle}"
-nice -$nicevalue grep  -B${linesbefore} -A${linesafter} -Ei "\bKata.* \b${defpattern}.*[\?,]|\bKatha.* \b${defpattern}.*[,\?]|\bKas.{0,60}${defpattern}.{0,9}[\?,]|${defpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Ti|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${defpattern}|\bKata.{0,20}${defpattern}.{0,9}[\?,]|${defpattern}.*adhivacan|${defpattern}.{0,15}, ${defpattern}.*vucca|${defpattern}.{0,9} vacan|Seyyathāpi.*${defpattern}|Katth.*${defpattern}.*daṭṭhabb|Kiñ.*${defpattern}.{0,9} vadeth|vucca.{2,5} ${defpattern}{0,7}|Yadapi.*${defpattern}.*tadapi.*${defpattern}|an1\..*yadidaṁ ${defpattern}|an1\..*${defpattern}.*yadidaṁ|An2.*Dv.*${defpattern}|An3.*(Tis|Tay|Tī).{0,50}${defpattern}|An4.*(Cattā|Cata).{0,50}${defpattern}|An5.*Pañc.{0,50}${defpattern}|An6.*cha.*${defpattern}|An7.*Satta.*${defpattern}|An8.*Aṭṭh.*${defpattern}|An9.*Nav.*${defpattern}|an1[10].*das.{0,50}${defpattern}|(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${defpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${defpattern}" $tmpdef
+nice -$nicevalue grep  -B${linesbefore} -A${linesafter} -Ei "\bKata.* \b${modpattern}.*[\?,]|\bKatha.* \b${modpattern}.*[,\?]|\bKas.{0,60}${modpattern}.{0,9}[\?,]|${modpattern}[^\s]{0,3}sutta|(dn3[34]|mn4[34]).*(Dv|Ti|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${modpattern}|\bKata.{0,20}${modpattern}.{0,9}[\?,]|${modpattern}.*adhivacan|${modpattern}.{0,15}, ${modpattern}.*vucca|${modpattern}.{0,9} vacan|Seyyathāpi.*${modpattern}|Katth.*${modpattern}.*daṭṭhabb|Kiñ.*${modpattern}.{0,9} vadeth|vucca.{2,5} ${modpattern}{0,7}|Yadapi.*${modpattern}.*tadapi.*${modpattern}|an1\..*yadidaṁ ${modpattern}|an1\..*${modpattern}.*yadidaṁ|An2.*Dv.*${modpattern}|An3.*(Tis|Tay|Tī).{0,50}${modpattern}|An4.*(Cattā|Cata).{0,50}${modpattern}|An5.*Pañc.{0,50}${modpattern}|An6.*cha.*${modpattern}|An7.*Satta.*${modpattern}|An8.*Aṭṭh.*${modpattern}|An9.*Nav.*${modpattern}|an1[10].*das.{0,50}${modpattern}|(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${modpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${modpattern}" $tmpdef
 }
-#|an1\..*${defpattern}
+#|an1\..*${modpattern}
 #sml 
 
 elif [[ "$@" == *"-sml"* ]]
@@ -309,9 +319,10 @@ then
 fileprefix=${fileprefix}-simile
 fortitle="Similes ${fortitle}"
 
-smlpattern="`echo $pattern | sed -E 's/([aoāī]|aṁ)$//g'`"
-pattern="$smlpattern" 
-#vin=dummy ${smlpattern}.*nāma|
+
+modpattern="`echo $pattern | sed -E 's/([aiīoā]|aṁ)$//g'`"
+pattern="$modpattern" 
+#vin=dummy ${modpattern}.*nāma|
 linesafter=1
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 
@@ -320,25 +331,25 @@ nonmetaphorkeys="condition|adhivacanasamphass|adhivacanapath|\banopam|\battūpa|
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
-#vinsmlpart="${smlpattern}.{0,3}—|${smlpattern}.{0,3}ti|${smlpattern}.*nāma|"
+#vinsmlpart="${modpattern}.{0,3}—|${modpattern}.{0,3}ti|${modpattern}.*nāma|"
 fi  
 
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpsml
 
-#for i in `grep -iE "Evamev.*${smlpattern}" $tmpsml | awk -F':' '{print $1}' | sort -V | uniq`; do grep -EHi -B1 "Evamev.*${smlpattern}" $i | sed 's@json-@json:@g' | grep -vi "Evamev.*${smlpattern}" | sort -V | uniq | sed '/--/d'  ; done > tmpsml
+#for i in `grep -iE "Evamev.*${modpattern}" $tmpsml | awk -F':' '{print $1}' | sort -V | uniq`; do grep -EHi -B1 "Evamev.*${modpattern}" $i | sed 's@json-@json:@g' | grep -vi "Evamev.*${modpattern}" | sort -V | uniq | sed '/--/d'  ; done > tmpsml
 
 if [[ "$type" == html ]]; then
-for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|Eva[mnṇṅṃṁ].*${smlpattern}|${smlpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${smlpattern}|Suppose.*${smlpattern}|${smlpattern} is|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | grep -v "condition"| sed 's/html:.*/html/g'  ; 
+for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${modpattern}|${modpattern}.*adhivacan|Eva[mnṇṅṃṁ].*${modpattern}|${modpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modpattern}|Suppose.*${modpattern}|${modpattern} is|${modpattern}.*is a designation for|is a designation for.*${modpattern}|${modpattern}.*Simile|simile.*${modpattern}|It’s like.*${modpattern}|is a term for.*${modpattern}|${modpattern}.*is a term for|similar to.*${modpattern}|${modpattern}.*similar to|Представ.*${modpattern}|обозначение.*${modpattern}|${modpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | grep -v "condition"| sed 's/html:.*/html/g'  ; 
 done
 else 
+#json sources
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vinsmlpart}seyyathāpi.*${modpattern}|${modpattern}.*adhivacan|${modpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modpattern}|Suppose.*${modpattern}|${modpattern} is|${modpattern}.*is a designation for|is a designation for.*${modpattern}|${modpattern}.*Simile|simile.*${modpattern}|It’s like.*${modpattern}|is a term for.*${modpattern}|${modpattern}.*is a term for|similar to.*${modpattern}|${modpattern}.*similar to|Представ.*${modpattern}|обозначение.*${modpattern}|${modpattern}.*обозначение${customtexts}" $tmpsml | grep -vE "$nonmetaphorkeys" | grep -v "condition" > ${tmpsml}_2
 
-nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vinsmlpart}seyyathāpi.*${smlpattern}|${smlpattern}.*adhivacan|${smlpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${smlpattern}|Suppose.*${smlpattern}|${smlpattern} is|${smlpattern}.*is a designation for|is a designation for.*${smlpattern}|${smlpattern}.*Simile|simile.*${smlpattern}|It’s like.*${smlpattern}|is a term for.*${smlpattern}|${smlpattern}.*is a term for|similar to.*${smlpattern}|${smlpattern}.*similar to|Представ.*${smlpattern}|обозначение.*${smlpattern}|${smlpattern}.*обозначение" $tmpsml | grep -vE "$nonmetaphorkeys" | grep -v "condition" > ${tmpsml}_2
-
-nice -$nicevalue grep -B2 -ERi "Eva[mnṇṅṃṁ].*${smlpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' > ${tmpsml}_3
+nice -$nicevalue grep -B2 -ERi "Eva[mnṇṅṃṁ].*${modpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' > ${tmpsml}_3
 
 cat ${tmpsml}_2 ${tmpsml}_3 
-#| grep -vi "Eva[mnṇṅṃṁ].*${smlpattern}"
+#| grep -vi "Eva[mnṇṅṃṁ].*${modpattern}"
 fi
 }
 
@@ -1193,7 +1204,7 @@ fi
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
 then 
-nice -$nicevalue grep -E -A1 -Eir "${defpattern}.{0,50}saṅkhaṁ gacchati" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} | grep -E -B1 Evamev | grep -v "^--$" >> $basefile
+nice -$nicevalue grep -E -A1 -Eir "${modpattern}.{0,50}saṅkhaṁ gacchati" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} | grep -E -B1 Evamev | grep -v "^--$" >> $basefile
 
 texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12sk $texts"

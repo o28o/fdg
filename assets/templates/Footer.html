@@ -101,6 +101,24 @@
       }
    });			
    
+   //custom sort для dhp iti
+/*$.fn.dataTable.ext.order.push(
+    function(settings, col) {
+        if (col === 0) {
+            var data = this.api().column(col, {order: 'current'}).data();
+            data = data.map(function(value, index) {
+                var keywords = ["dhp", "iti", "snp", "thag", "thig"];
+                var regex = new RegExp(keywords.join("|"), "i");
+                return regex.test(value) ? Number.POSITIVE_INFINITY : value;
+            });
+            return data;
+        } else {
+            return this.api().column(col, {order: 'current'}).data();
+        }
+    }
+);
+*/
+   //предустановка фильтра из get param ?s=
      if (filterValue) {
         table.search(filterValue).draw();
         var currentUrl = new URL(window.location.href);

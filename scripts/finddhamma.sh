@@ -974,7 +974,8 @@ if [ "$linesafter" -eq 0 ] && [ "$linesbefore" -eq 0 ]; then
     else
     quote=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $f | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
 fi
-[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote <a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>" 
+
+[[ "$f" == *"root"* ]] && echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" || echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote</span>" 
 done
 echo '<br class="styled">' 
 done | tohtml 
@@ -1365,3 +1366,15 @@ end=`date +%s`
 runtime=$((end-start))
 echo total execution time $runtime >> time_output.txt
 exit 0
+
+
+
+#update hidden link 
+last_char="${quote: -1}"
+
+if [[ $last_char == *[.,:\!\;—–-…]* ]]; then
+hreflastchar="<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">$last_char</a>"
+else
+hreflastchar="<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a>"
+fi  
+quote=`echo $quote | sed 's@.$@'$hreflastchar'@g'`

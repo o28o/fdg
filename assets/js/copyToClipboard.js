@@ -28,7 +28,7 @@ if (text.includes('localhost')) {
         if (shareOnlineElement) {
             var currentUrl = window.location.href;
 
-            if (!currentUrl.includes('bhava')) {
+            if (currentUrl.includes('bhava')) {
                 shareOnlineElement.style.display = 'none';
             }
         }

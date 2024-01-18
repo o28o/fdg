@@ -89,18 +89,9 @@ include 'scripts/opentexts.php';
 </p></li>
 <li>
 <div class="align-items-center form-check-inline mx-0">
-     <button id="theme-button" class="btn btn-link mb-1 text-white " type="button">
+     <a id="theme-button" class=" mb-1 text-white ">
 <i onclick="switchIcon(this)" class="fa-solid fa-circle-half-stroke"></i>
-</button>	  
-
-
-
-    
-  <!--  <select id="theme-select" class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append">
-        <option value="darkManual">Dark</option>
-        <option value="lightalManual">Light</option>
-        <option value="auto">Auto</option>
-    </select> -->
+</a>	  
 </div>
 
 

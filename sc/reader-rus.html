@@ -96,12 +96,6 @@
 <a href="/assets/diff" title="Compare two suttas" rel="noreferrer"
             ><img width="20px" alt="Diff icon" src="/ru/sc/images/favicon-black.png"></a>
 
-<script>
-    var currentUrl = window.location.href;
-    if (currentUrl.includes('localhost')) {
-        document.getElementById('shareOnline').style.display = 'inline-block';
-    }
-</script>
 
         <a id="shareOnline" onclick="copyToClipboard()" title="Copy fdg url Suttas" rel="noreferrer" target=""><img
                 width="20px" alt="" src="./images/favicon-random-black.png"></a>
@@ -284,31 +278,7 @@ $(document).ready(function() {
 </script>
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script defer src="/assets/js/themeswitch.js"></script>
-<script>
-
-// Функция для копирования в буфер обмена
-function copyToClipboard(text = "") {
-  
-  if (text === ""){
- var text = window.location.href;
-if (text.includes('localhost')) {
-    text = text.replace('http://localhost:8080', 'https://find.dhamma.gift');
-} else {
-    text = text.replace('https://find.dhamma.gift', 'http://localhost:8080');
-} 
-}
-
-  var textarea = document.createElement('textarea');
-  textarea.value = text;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textarea);
-//  alert('Ссылка скопирована: ' + text);
-        // Show the copy success popup
-        $('#copyPopup').modal('show');
-}
-</script>
+<script src="/assets/js/copyToClipboard.js"></script>
 
  <!-- <script>
     // Получаем текущий хостнейм

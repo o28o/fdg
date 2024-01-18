@@ -95,8 +95,8 @@
             ><img width="20px" alt="Diff icon" src="/sc/images/favicon-black.png"></a>
 
  
-        <a href="http://r.readingfaithfully.org" title="Random Suttas" rel="noreferrer" target="_blank"><img
-                width="20px" alt="Random Sutta icon" src="./images/favicon-random-black.png"></a>
+        <a id="shareOnline" onclick="copyToClipboard()" title="Copy fdg url Suttas" rel="noreferrer" target=""><img
+                width="20px" alt="" src="./images/favicon-random-black.png"></a>
         <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer" target="_blank"><img
                 width="20px" src="./images/favicon-citaton-helper-black.png" alt="Citation Lookup tool icon"></a>
         <a href="https://name.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer"
@@ -361,20 +361,5 @@ $(document).ready(function() {
 </script>
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script defer src="/assets/js/themeswitch.js"></script>
-<script>
-
-// Функция для копирования в буфер обмена
-function copyToClipboard(text) {
-  var textarea = document.createElement('textarea');
-  textarea.value = text;
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textarea);
-//  alert('Ссылка скопирована: ' + text);
-        // Show the copy success popup
-        $('#copyPopup').modal('show');
-}
-
-</script>
+<script src="/assets/js/copyToClipboard.js"></script>
 </html>

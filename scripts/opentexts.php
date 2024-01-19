@@ -84,85 +84,85 @@ $cb = $q = $extra = $la = $p = $arg = $string = $sutta = "";
   }
 	
 		$string = str_replace("`", "", $q);
-$string = strtolower($string);
-$string = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $string);
+$stringForOpen = strtolower($string);
+$stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
 
 //for patimokkha and vinaya vibhanga
-if (preg_match("/^(bu|bi)-pm$/i", $string)) {
+if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
 //echo "<script>alert('case 1');</script>";	
-	echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+	echo "<script>window.location.href='$readerlang/sc/?q={$stringForOpen}';</script>";	
 	  exit(); 
-} else if (preg_match("/^pm$/i", $string)) {
-	echo "<script>window.location.href='$readerlang/sc/?q=bu-{$string}';</script>";	
+} else if (preg_match("/^pm$/i", $stringForOpen)) {
+	echo "<script>window.location.href='$readerlang/sc/?q=bu-{$stringForOpen}';</script>";	
 	  exit(); 
-} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
+} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $stringForOpen)) {
   //open read.php Bu
-  $string = str_replace (" ", "", $string);
-$string = strtolower($string);
-echo "<script>window.location.href='$readerlang/read.php#{$string}CollapseBu';</script>";
+  $stringForOpen = str_replace (" ", "", $stringForOpen);
+$stringForOpen = strtolower($stringForOpen);
+echo "<script>window.location.href='$readerlang/read.php#{$stringForOpen}CollapseBu';</script>";
   exit();
-} else if  (preg_match("/^bi-(pj|ss|ay|np|pc|pd|sk|as)$/i", $string)) {
+} else if  (preg_match("/^bi-(pj|ss|ay|np|pc|pd|sk|as)$/i", $stringForOpen)) {
   //open read.php Bi
-  $string = str_replace (" ", "", $string);
-  $string = str_replace ("bi-", "", $string);
-$string = strtolower($string);
-echo "<script>window.location.href='$readerlang/read.php#{$string}CollapseBi';</script>";
+  $stringForOpen = str_replace (" ", "", $stringForOpen);
+  $stringForOpen = str_replace ("bi-", "", $stringForOpen);
+$stringForOpen = strtolower($stringForOpen);
+echo "<script>window.location.href='$readerlang/read.php#{$stringForOpen}CollapseBi';</script>";
   exit();
-} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)[1-9]{1,3}$/i", $string)) {
-  $string = "bu-" . $string;
-  echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)[1-9]{1,3}$/i", $stringForOpen)) {
+  $stringForOpen = "bu-" . $stringForOpen;
+  echo "<script>window.location.href='$readerlang/sc/?q={$stringForOpen}';</script>";	
 	  exit(); 
-} else if (preg_match("/(bu|bi)-([a-z][a-z])[0-9]*/i", $string)) {
+} else if (preg_match("/(bu|bi)-([a-z][a-z])[0-9]*/i", $stringForOpen)) {
  // echo "<script>alert('case 2');</script>";	
-if (strpos($string, 'vb-') === false) {
-    $string = str_replace('bi-', 'bi-vb-', $string);
-    $string = str_replace('bu-', 'bu-vb-', $string);
+if (strpos($stringForOpen, 'vb-') === false) {
+    $stringForOpen = str_replace('bi-', 'bi-vb-', $stringForOpen);
+    $stringForOpen = str_replace('bu-', 'bu-vb-', $stringForOpen);
 }
 
-  $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
+  $check = shell_exec("grep -m1 -i \"{$stringForOpen}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
 if (empty($check)) {
   //echo "<script>alert('case 3');</script>";	
-  $command = escapeshellcmd("bash $scriptfile $string");
-  $string = trim(shell_exec($command));
-  $string = str_replace(PHP_EOL, '', $string);
+  $command = escapeshellcmd("bash $scriptfile $stringForOpen");
+  $stringForOpen = trim(shell_exec($command));
+  $stringForOpen = str_replace(PHP_EOL, '', $stringForOpen);
 }	  
-if (empty($string)) {
+if (empty($stringForOpen)) {
   //echo "<script>alert('case 31');</script>";	
   echo "<script>window.location.href='$readerlang/sc/';</script>";	
   exit();
 }	  
 
-  $string = str_replace('bi-vb-', 'bi-', $string);
-    $string = str_replace('bu-vb-', 'bu-', $string);
-  echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+  $stringForOpen = str_replace('bi-vb-', 'bi-', $stringForOpen);
+    $stringForOpen = str_replace('bu-vb-', 'bu-', $stringForOpen);
+  echo "<script>window.location.href='$readerlang/sc/?q={$stringForOpen}';</script>";	
 	  exit(); 
-} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]*)/i", $string)) {
+} else if (preg_match("/(bu|bi)-(vb|[a-z][a-z]*)/i", $stringForOpen)) {
 //echo "<script>alert('case 4');</script>";	
- $string = $string . "1";
-echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+ $stringForOpen = $stringForOpen . "1";
+echo "<script>window.location.href='$readerlang/sc/?q={$stringForOpen}';</script>";	
 	  exit(); 
-} else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $string)) {
+} else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
  // echo "<script>alert('case 5');</script>";	
-  $string = "bu-" . $string;
-echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";	
+  $stringForOpen = "bu-" . $stringForOpen;
+echo "<script>window.location.href='$readerlang/sc/?q={$stringForOpen}';</script>";	
 	  exit(); 
 }
 /* ru with arg */ 
 /* for th.su dn */
-  if (preg_match("/^(dn|mn)[0-9]{1,3}s$/i",$string)) {
+  if (preg_match("/^(dn|mn)[0-9]{1,3}s$/i",$stringForOpen)) {
 
 if ( $mode == "offline" ) {
   
-$forthsu = preg_replace("/dn/i","","$string");
+$forthsu = preg_replace("/dn/i","","$stringForOpen");
 $forthsu = preg_replace("/s/i","","$forthsu");
 
 $link = shell_exec("ls $thsulocation/dn | grep \"dn{$forthsu}.html\" | awk '{print \"$linkforthsu\"$0}'");
       } else {
 
-$forthsu = preg_replace("/s$/i","","$string");
+$forthsu = preg_replace("/s$/i","","$stringForOpen");
 $nikaya = preg_replace("/[0-9]/i","","$forthsu");
-$forthsu = preg_replace("/[a-z]/i","","$string");
+$forthsu = preg_replace("/[a-z]/i","","$stringForOpen");
 
 switch (strtolower($nikaya)) {
   case "dn":
@@ -200,18 +200,18 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 
 if( $p == "-ru" ) 
 {
-    if(preg_match("/^(mn|dn)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[\. ][0-9]*$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9].*$/i",$string)) 
+    if(preg_match("/^(mn|dn)[0-9]{1,3}$/i",$stringForOpen) || preg_match("/^(sn|an|ud)[0-9]{0,2}[\. ][0-9]*$/i",$stringForOpen) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9].*$/i",$stringForOpen)) 
     {
-      $string = str_replace (" ", ".", $string);
-  $forthru = str_replace(".","_","$string"). '-';
+      $stringForOpen = str_replace (" ", ".", $stringForOpen);
+  $forthru = str_replace(".","_","$stringForOpen"). '-';
   $filename = shell_exec("ls -R $thrulocation | grep -i -m1 $forthru" ); 
   if( $filename != "" ) {
   $link = $linkforthru . $filename;
  $link = str_replace(PHP_EOL, '', $link);
   } 
-  elseif (preg_match("/^dn[0-9]{1,2}$/i",$string)) {
+  elseif (preg_match("/^dn[0-9]{1,2}$/i",$stringForOpen)) {
 
-$forthsu = preg_replace("/dn/i","","$string");
+$forthsu = preg_replace("/dn/i","","$stringForOpen");
 
 if ( $mode == "offline" ) {
     $link = shell_exec("ls $thsulocation | grep \"dn{$forthsu}.html\" | awk '{print \"$linkforthsu\"$0}'");
@@ -250,10 +250,10 @@ function ru2lat($str)    {
     );
     return strtr($str,$tr);
 }
-if (preg_match('/^[А-Яа-яЁё][А-Яа-яЁё][1-9]{1,3}/ui', $string) || preg_match("/^(сн|ан|уд)[0-9]{0,2}[ \.][0-9]*$/ui",$string) || preg_match("/^(сн|ан|уд)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9].*$/ui",$string)) 
+if (preg_match('/^[А-Яа-яЁё][А-Яа-яЁё][1-9]{1,3}/ui', $stringForOpen) || preg_match("/^(сн|ан|уд)[0-9]{0,2}[ \.][0-9]*$/ui",$stringForOpen) || preg_match("/^(сн|ан|уд)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9].*$/ui",$stringForOpen)) 
     {
-      $string = str_replace (" ", ".", $string);
-     $trnstring = ru2lat( $string );	
+      $stringForOpen = str_replace (" ", ".", $stringForOpen);
+     $trnstring = ru2lat( $stringForOpen );	
   $forthru = str_replace(".","_","$trnstring"). '-';
   $filename = shell_exec("ls -R $thrulocation | grep -i -m1 $forthru" ); 
  
@@ -274,18 +274,18 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 
 if( $p == "-th" ) {
-    if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
-      $string = str_replace (" ", ".", $string);
+    if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}$/i",$stringForOpen) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}$/i",$stringForOpen) || preg_match("/^(sn|an|ud)[0-9]{0,2}[ \.][0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)){
+      $stringForOpen = str_replace (" ", ".", $stringForOpen);
     {
-      $check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
+      $check = shell_exec("grep -m1 -i \"{$stringForOpen}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
 if (empty($check)) {
-  $command = escapeshellcmd("bash $scriptfile $string");
-  $string = trim(shell_exec($command));
+  $command = escapeshellcmd("bash $scriptfile $stringForOpen");
+  $stringForOpen = trim(shell_exec($command));
 }	  
 
- // $link = "https://suttacentral.net/$string/th/siam_rath";
- $link = $linkforthai. $string. $linkforthaiend;
+ // $link = "https://suttacentral.net/$stringForOpen/th/siam_rath";
+ $link = $linkforthai. $stringForOpen. $linkforthaiend;
 echo '<script>window.open("' . $link . '", "_self");</script>';
   exit();
 }
@@ -293,42 +293,42 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 
 #open text list onthe read.php page
-if(preg_match("/^(mn|dn|sn|an)$/i",$string) || preg_match("/^(sn|an)[0-9]{0,2}$/i",$string)){
-$string = str_replace (" ", "", $string);
-$numberblock = preg_replace("/[a-z]*/i","","$string");
-$letterblock = preg_replace("/[0-9]*/i","","$string");
+if(preg_match("/^(mn|dn|sn|an)$/i",$stringForOpen) || preg_match("/^(sn|an)[0-9]{0,2}$/i",$stringForOpen)){
+$stringForOpen = str_replace (" ", "", $stringForOpen);
+$numberblock = preg_replace("/[a-z]*/i","","$stringForOpen");
+$letterblock = preg_replace("/[0-9]*/i","","$stringForOpen");
 
-$string = strtolower($string);
+$stringForOpen = strtolower($stringForOpen);
 echo "<script>
-window.location.href='$readerlang/read.php#{$string}Collapse';
+window.location.href='$readerlang/read.php#{$stringForOpen}Collapse';
 </script>";
   exit();
 }
 
 #open sutta in sc light interface
-if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$string) || preg_match("/^(sn|an|ud|snp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$string)){
-$string = str_replace (" ", ".", $string);
-$check = shell_exec("grep -m1 -i \"{$string}_\" $indexesfile | awk '{print \$0}'");
+if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$stringForOpen) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$stringForOpen) || preg_match("/^(sn|an|ud|snp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)){
+$stringForOpen = str_replace (" ", ".", $stringForOpen);
+$check = shell_exec("grep -m1 -i \"{$stringForOpen}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
 if (empty($check)) {
-  $command = escapeshellcmd("bash $scriptfile $string");
-  $string = trim(shell_exec($command));
+  $command = escapeshellcmd("bash $scriptfile $stringForOpen");
+  $stringForOpen = trim(shell_exec($command));
 }	  
 
-$numberblock = preg_replace("/[a-z]*/i","","$string");
-$letterblock = preg_replace("/[0-9]*/i","","$string");
+$numberblock = preg_replace("/[a-z]*/i","","$stringForOpen");
+$letterblock = preg_replace("/[0-9]*/i","","$stringForOpen");
 
 if ((  $numberblock <= $latestrusmn ) && ( preg_match("/mn/i",$letterblock) ) ){
 $defaultlang = 'lang=pli-rus';
 }
-$string = strtolower($string);
-echo "<script>window.location.href='$readerlang/sc/?q={$string}';</script>";
+$stringForOpen = strtolower($stringForOpen);
+echo "<script>window.location.href='$readerlang/sc/?q={$stringForOpen}';</script>";
   exit();
 }
 // &$defaultlang
-if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$string) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$string)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$string)){
-  $string = str_replace (" ", ".", $string);
-  $forbwlink = strtolower(preg_replace("/b$/i","","$string"));
+if(preg_match("/^(mn|dn|dhp)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(sn|an|ud)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
+  $stringForOpen = str_replace (" ", ".", $stringForOpen);
+  $forbwlink = strtolower(preg_replace("/b$/i","","$stringForOpen"));
   $bwprefix = strtolower(substr($forbwlink,0,2));
   
   echo "<script>window.location.href='/bw/{$bwprefix}/{$forbwlink}.html';</script>";

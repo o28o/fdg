@@ -227,20 +227,20 @@ $(document).ready(function() {
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y Z</strong></button> - <?php echo $exc;?> <br>
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc "Y(ti|nti)"</strong></button> - <?php echo $excfew;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc Y(ti|nti)</strong></button> - <?php echo $excfew;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - <?php echo $anynumber;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - <?php echo $fewsymbols;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - <?php echo $nextwords;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>"X(\\S*\\s){0,3}Y"</strong></button> - <?php echo $fewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\\S*\\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>a[ṁ]?</strong></button> - <?php echo $optionalletter;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"tatt($|[^h])"'><strong>"tatt($|[^h])"</strong></button> - <?php echo $variantsexc;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"(a|b|c)"'><strong>"(a|b|c)"</strong></button> - <?php echo $searchfewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='tatt($|[^h])'><strong>tatt($|[^h])</strong></button> - <?php echo $variantsexc;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(a|b|c)'><strong>(a|b|c)</strong></button> - <?php echo $searchfewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="mn[0-9].*X"><strong>mn[0-9].*X</strong></button> - <?php echo $inallnikaya;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="dn22.*"><strong>dn22.*Y</strong></button> - <?php echo $inonesutta;?> <br>
-    <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"'><strong>"Sn56.*(seyyathāpi|adhivacan|ūpama|opama)"</strong></button> - <?php echo $metaphorssmlletter;?> <br><br>
+    <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='sn56.*(seyyathāpi|adhivacan|ūpama|opama)'><strong>sn56.*(seyyathāpi|adhivacan|ūpama|opama)</strong></button> - <?php echo $metaphorssmlletter;?> <br><br>
 </div>
 
   <?php echo $regexlink;?> 

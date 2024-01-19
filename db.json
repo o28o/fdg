@@ -19,9 +19,14 @@
 "line_id":"sn1.1:2.4", "line_text":"tiṇṇaṁ loke visattikan”ti. ",
 "line_id":"sn1.1:3.1", "line_text":"Idamavoca sā devatā. ",
 "line_id":"sn1.1:3.2", "line_text":"Samanuñño satthā ahosi. ",
-"line_id":"sn1.1:3.3", "line_text":"Atha kho sā devatā, "line_text":",
-"line_id":"sn1.1:3.4", "line_text":"“samanuñño me satthā”ti bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyīti. "
+,
+
 }
   
 }
 }
+
+
+db.insert({"lang":"pli","line_id":"sn1.1:3.3", "line_text":"Atha kho sā devatā, "})
+
+db.insert({"line_id":"sn1.1:3.4", "line_text":"“samanuñño me satthā”ti bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyīti. "})

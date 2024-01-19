@@ -414,7 +414,7 @@ else
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,5}[\?,]|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,5}[\?,]|\bKo .{0,40}${modpattern}|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
 }
 fi  
 
@@ -1003,7 +1003,7 @@ then
 
       roottitle="`nice -$nicevalue grep -Ei -m1 "$pattern" $roottext | clearsed | awk '{print $1}' | awk -F':' '{print $1}' | sort -Vf | uniq |  xargs `"
 else 
-roottitle=`nice -$nicevalue grep -m5 ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
+roottitle=`nice -$nicevalue grep -m1 -oE "[^ ]*sutta[^ ]*" $roottext | clearsed `
 fi 
 #echo -e "Content-Type: text/html\n\n"
 #echo $@

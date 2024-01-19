@@ -5,6 +5,7 @@ foreach ($extra as $value) {
     $extraString .= " $value"; // Добавьте каждый элемент массива к строке с пробелом
 }
 
+$string = "\"$string\"";
 
 if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";

@@ -140,6 +140,123 @@ function grepbrief {
 }'
 }
 
+function getSamyuttaname {
+samyuttanumer=`echo $suttanumber | awk -F'.' '{print $1}'`
+
+if [[ $samyuttanumer == "sn1" ]]; then
+  samyuttaname="Devatāsaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn2" ]]; then
+  samyuttaname="Devaputtasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn3" ]]; then
+  samyuttaname="Kosalasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn4" ]]; then
+  samyuttaname="Mārasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn5" ]]; then
+  samyuttaname="Bhikkhunīsaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn6" ]]; then
+  samyuttaname="Brahmasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn7" ]]; then
+  samyuttaname="Brāhmaṇasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn8" ]]; then
+  samyuttaname="Vaṅgīsasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn9" ]]; then
+  samyuttaname="Vanasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn10" ]]; then
+  samyuttaname="Yakkhasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn11" ]]; then
+  samyuttaname="Sakkasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn12" ]]; then
+  samyuttaname="Nidānasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn13" ]]; then
+  samyuttaname="Abhisamayasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn14" ]]; then
+  samyuttaname="Dhātusaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn15" ]]; then
+  samyuttaname="Anamataggasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn16" ]]; then
+  samyuttaname="Kassapasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn17" ]]; then
+  samyuttaname="Lābhasakkārasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn18" ]]; then
+  samyuttaname="Rāhulasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn19" ]]; then
+  samyuttaname="Lakkhaṇasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn20" ]]; then
+  samyuttaname="Opammasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn21" ]]; then
+  samyuttaname="Bhikkhusaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn22" ]]; then
+  samyuttaname="Khandhasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn23" ]]; then
+  samyuttaname="Rādhasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn24" ]]; then
+  samyuttaname="Diṭṭhisaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn25" ]]; then
+  samyuttaname="Okkantasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn26" ]]; then
+  samyuttaname="Uppādasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn27" ]]; then
+  samyuttaname="Kilesasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn28" ]]; then
+  samyuttaname="Sāriputtasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn29" ]]; then
+  samyuttaname="Nāgasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn30" ]]; then
+  samyuttaname="Supaṇṇasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn31" ]]; then
+  samyuttaname="Gandhabbakāyasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn32" ]]; then
+  samyuttaname="Valāhakasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn33" ]]; then
+  samyuttaname="Vacchagottasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn34" ]]; then
+  samyuttaname="Jhānasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn35" ]]; then
+  samyuttaname="Saḷāyatanasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn36" ]]; then
+  samyuttaname="Vedanāsaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn37" ]]; then
+  samyuttaname="Mātugāmasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn38" ]]; then
+  samyuttaname="Jambukhādakasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn39" ]]; then
+  samyuttaname="Sāmaṇḍakasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn40" ]]; then
+  samyuttaname="Moggallānasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn41" ]]; then
+  samyuttaname="Cittasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn42" ]]; then
+  samyuttaname="Gāmaṇisaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn43" ]]; then
+  samyuttaname="Asaṅkhatasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn44" ]]; then
+  samyuttaname="Abyākatasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn45" ]]; then
+  samyuttaname="Maggasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn46" ]]; then
+  samyuttaname="Bojjhaṅgasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn47" ]]; then
+  samyuttaname="Satipaṭṭhānasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn48" ]]; then
+  samyuttaname="Indriyasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn49" ]]; then
+  samyuttaname="Sammappadhānasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn50" ]]; then
+  samyuttaname="Balasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn51" ]]; then
+  samyuttaname="Iddhipādasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn52" ]]; then
+  samyuttaname="Anuruddhasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn53" ]]; then
+  samyuttaname="Jhānasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn54" ]]; then
+  samyuttaname="Ānāpānasaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn55" ]]; then
+  samyuttaname="Sotāpattisaṁyuttaṁ"
+elif [[ $samyuttanumer == "sn56" ]]; then
+  samyuttaname="Saccasaṁyuttaṁ"
+fi
+}
 pattern="$@"
 
 if [[ "$@" == *"-h"* ]]; then
@@ -868,14 +985,23 @@ then
   roottitle=`nice -$nicevalue grep -E -m3 ':0\.[3-5].*sikkhāpada' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs `
 elif ls $roottext | grep -E -q -m1 "sn[0-9]{0,2}.[0-9]*_"
 then
-  roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -Vf | uniq`
 
-elif ls $roottext | grep -m1 -E -q "(sn|an)[0-9]{0,3}.[0-9]*-[0-9]*_"
+getSamyuttaname
+
+roottitle=`nice -$nicevalue grep -m5 ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
+
+roottitle="$roottitle $samyuttaname"
+elif ls $roottext | grep -m1 -E -q "sn[0-9]{0,3}.[0-9]*-[0-9]*_"
 then
 
-samyuttaname=`grep -m1 \`echo $suttanumber | awk -F'.' '{print $1}'\` $sntoccsv | awk -F',' '{print $4}'`
-      roottitle="`nice -$nicevalue grep -E -i "$pattern" $roottext | clearsed | awk '{print $1}' | awk -F':' '{print $1}' | sort -Vf | uniq |  xargs ` $samyuttaname"
+getSamyuttaname
 
+      roottitle="`nice -$nicevalue grep -Ei -m1 "$pattern" $roottext | clearsed | awk '{print $1}' | awk -F':' '{print $1}' | sort -Vf | uniq |  xargs ` $samyuttaname"
+
+elif ls $roottext | grep -m1 -E -q "an[0-9]{0,3}.[0-9]*-[0-9]*_"
+then
+
+      roottitle="`nice -$nicevalue grep -Ei -m1 "$pattern" $roottext | clearsed | awk '{print $1}' | awk -F':' '{print $1}' | sort -Vf | uniq |  xargs `"
 else 
 roottitle=`nice -$nicevalue grep -m5 ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
 fi 

@@ -1110,7 +1110,11 @@ indexForAnchor=` echo $i`
   quote_ln=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $translation | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$"  ` 
  quote_var=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $variant | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$"  `  
     else
-    quote=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $f | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
+    quote_pi=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $roottext | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
+    
+    quote_ln=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $translation | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
+    
+    quote_var=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $variant | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
 fi
 
 echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" 

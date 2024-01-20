@@ -1,6 +1,10 @@
 // Функция для копирования в буфер обмена
 function copyToClipboard(text = "") {
-  
+ 
+ if (text === 127) {
+  text = text.replace('localhost', '127.0.0.1');
+}
+
   if (text === ""){
  var text = window.location.href;
 if (text.includes('localhost')) {
@@ -8,8 +12,10 @@ if (text.includes('localhost')) {
 } else {
     text = text.replace('https://find.dhamma.gift', 'http://localhost:8080');
 } 
-}
+} 
 
+
+console.log(text);
   var textarea = document.createElement('textarea');
   textarea.value = text;
   document.body.appendChild(textarea);
@@ -25,11 +31,14 @@ if (text.includes('localhost')) {
     document.addEventListener('DOMContentLoaded', function () {
         var shareOnlineElement = document.getElementById('shareOnline');
 
-        if (shareOnlineElement) {
             var currentUrl = window.location.href;
-
+        if (shareOnlineElement) {
             if (currentUrl.includes('bhava')) {
                 shareOnlineElement.style.display = 'none';
             }
         }
+        
+    if (!currentUrl.includes('localhost')) {
+         shareT2SElement.style.display = 'none';
+            }
     });

@@ -18702,6 +18702,7 @@ include $basedir . "/assets/texts/vinaya/bipm.php";
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:agiftofdhamma@gmail.com"><i class="fa-solid fa-at"></i></a>
 <a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
+<a href="https://t.me/dhamma_gift" class="btn btn-outline-light btn-social mx-1" title="Telegram" target="_blank" rel="nofollow"><i class="fa-brands fa-telegram"></i></a> 
  
  <p class="lead mt-4">
 <?php echo $poweredby; ?>

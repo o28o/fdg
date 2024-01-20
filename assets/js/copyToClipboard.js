@@ -2,6 +2,7 @@
 function copyToClipboard(text = "") {
  
  if (text === 127) {
+   var text = window.location.href;
   text = text.replace('localhost', '127.0.0.1');
 }
 

@@ -259,7 +259,7 @@ $prongh = ' Проект на GitHub';
 $premail = ' Написать';
 
 $headerexamples = 'Примеры';
-$examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">dukkha</a> на Пали и Русском. Запрос: <a href="/ru/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">-la1 Kata.*, dukkhaṁ\\\\?</a>
+$examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">dukkha</a> на Пали и Русском. Запрос: <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">-la1 Kata.*, dukkhaṁ[,\\\\?]</a>
              </li>
 <li>Сутта, в которой Будда говорит, что не делает <a href="/ru/?q=dvayagāminī">двусмысленных (dvayagāminī) утверждений</a> на Пали со ссылками на Русский перевод</li>
            
@@ -732,7 +732,8 @@ $prongh = ' Project on GitHub';
 $premail = ' Send email';
 
 $headerexamples = 'Examples';
-$examplelist = '<li>Definition of the <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">dukkha</a> in Pali with quotes in English. Query is: <a href="/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F">-la1 Kata.*, dukkhaṁ\\\\?</a></li>
+$examplelist = '<li>Definition of the <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">dukkha</a> in Pali with quotes in English. Query is: <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">-la1 Kata.*, dukkhaṁ[,\\\\?]</a>
+</li>
 
  <li>Sutta where Buddha says that he doesn\'t make <a href="/?q=dvayagāminī">ambiguous (dvayagāminī) statements</a> in Pali with English quote</li>
 

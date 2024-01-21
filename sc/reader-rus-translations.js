@@ -349,7 +349,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
 
   // Обновление сообщения об ошибке на странице
   
-  suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидаете.</p>
+  suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>
     
                   <div class="spinner-border" role="status">
                 <span class="visually-hidden">Загрузка...</span>

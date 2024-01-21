@@ -8,10 +8,13 @@ function copyToClipboard(text = "") {
 
   if (text === ""){
  var text = window.location.href;
-if (text.includes('localhost')) {
+if (text.includes('localhost') || text.includes('127.0.0.1')) {
     text = text.replace('http://localhost:8080', 'https://find.dhamma.gift');
-} else {
-    text = text.replace('https://find.dhamma.gift', 'http://localhost:8080');
+    text = text.replace('http://127.0.0.1:8080', 'https://find.dhamma.gift');
+}
+ else {
+    text = text.replace('https://find.dhamma.gift', 'http://127.0.0.1:8080');
+   // text = text.replace('https://find.dhamma.gift', 'http://localhost:8080');
 } 
 } 
 
@@ -38,8 +41,8 @@ console.log(text);
                 shareOnlineElement.style.display = 'none';
             }
         }
-        
-    if (!currentUrl.includes('localhost')) {
+ 
+ if (!currentUrl.includes('localhost') && !currentUrl.includes('127.0.0.1')) {
          shareT2SElement.style.display = 'none';
             }
     });

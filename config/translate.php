@@ -285,8 +285,8 @@ $contaccalltoaction = 'Всесторонний взгляд на Четыре �
     Поймите наст<a target="_blank" class="text-white text-decoration-none" href=/ru/sc/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
    и п<a target="_blank" class="text-white text-decoration-none" href=/ru/sc/?q=bu-pm>о</a>л<a class="text-white text-decoration-none" target=_blank href=/ru/sc/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-white text-decoration-none" href=/ru/sc/?q=mn77&lang=pli>о</a>нец б<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
                                							
-$demovideo = 'Подробное Видео';	
-$demovideolink = 'https://www.youtube.com/embed/iKRaa9D07-I';
+$demovideo = 'Обучающие Видео';	
+$demovideolink = 'https://youtube.com/playlist?list=PLFJDP30qrYJ2rknY6fEVR3jQxpZd1S6lX&si=7O06E2lcmPxaEVX2';
 $demovideoimg = '/assets/img/video1ru.webp';
 $demovideoimg2 = '/assets/img/video2ru.webp';
 
@@ -752,8 +752,8 @@ $howtoheader = 'How to Search';
 $contactheader = 'Contacts';
 $contaccalltoaction = 'Find the Noble Eightfold Path.<br>
 Understand the Four Noble Truths.<br>Dhamma - is Actuality.';
- $demovideo = 'Demo Video';  
- $demovideolink = 'https://youtu.be/Jle0XDs_roc?si=-FJFTpdOwZ4lIdo3';
+ $demovideo = 'Demo Videos';  
+ $demovideolink = 'https://youtube.com/playlist?list=PLFJDP30qrYJ2H2lYWREQHF1FVggRYsDB9&si=SIOe2dVFFAApudsw';
  $demovideoimg = '/assets/img/video1en.webp';
  $demovideoimg2 = '/assets/img/video1en.webp';
 

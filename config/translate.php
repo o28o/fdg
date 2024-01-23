@@ -130,7 +130,7 @@ $regexMemo = '<p style="text-align: left;">
   <!--   <strong>-onl "(X|Y|...)"</strong> - найти тексты содержащие только все совпадения X, Y ... и т.д.<br> -->
         </p>     ';
 $titlehowtovideo = 'Как пользоваться?';  
-$linkhowtovideo = 'https://www.youtube.com/embed/4KIqQYSxTSE';
+$linkhowtovideo = 'https://youtu.be/XXa-K2fQ0Is?si=DDkT-2ZJo6B9bOAA';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
 
 $fntmessage = '<p class="font-italic text-center ">

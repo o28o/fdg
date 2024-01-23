@@ -50,7 +50,7 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), 
 <strong>Поздние</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
 <strong>+Kd, Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
 <strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
-<strong>Англ</strong> - поиск в англ переводах 4 никай SuttaCentral.net
+<strong>SC.net</strong> - поиск в англ переводах 4 никай SuttaCentral.net
 ';
 $tooltipsearchtype = '<strong>По умолчанию</strong> - все совпадения<br><br>
     <strong>Определения</strong> - Поиск нескольких главных определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. <br><br>
@@ -77,7 +77,7 @@ $tooltipltr= "+ поиск на Пали во всех книгах Кхудда
 $radioltr = "+Позд";
 $radiovinall = "+Kd, Pvr";
 $tooltipen = 'Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах sc.net и затем в переводах thebuddhaswords.net ';
-$radioen = 'Англ';
+$radioen = 'SC.net';
 $tooltipth = "Опционально. Поиск в 4 основных Никаях в Тайских переводах Suttacentral.net. Без этой опции сначала поиск будет произведен в Пали текстах, потом в переводах";
 $radioth = "ไทย";
 $tooltipru = "Опционально. Поиск по русским переводам АН, СН, МН, ДН с SuttaCentral.net";
@@ -610,7 +610,7 @@ $regexMemo = '
 
 </p>          ';
 $titlehowtovideo = 'How-To Video';
-$linkhowtovideo = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
+$linkhowtovideo = 'https://youtu.be/Jle0XDs_roc?si=-FJFTpdOwZ4lIdo3';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift';
 
 $carouseltitle = 'Top Interesting Queries';
@@ -753,7 +753,7 @@ $contactheader = 'Contacts';
 $contaccalltoaction = 'Find the Noble Eightfold Path.<br>
 Understand the Four Noble Truths.<br>Dhamma - is Actuality.';
  $demovideo = 'Demo Video';  
- $demovideolink = 'https://www.youtube.com/embed/Q_SLMrg6L1k?modestbranding=1&hl=en-US';
+ $demovideolink = 'https://youtu.be/Jle0XDs_roc?si=-FJFTpdOwZ4lIdo3';
  $demovideoimg = '/assets/img/video1en.webp';
  $demovideoimg2 = '/assets/img/video1en.webp';
 

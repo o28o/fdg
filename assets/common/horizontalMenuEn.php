@@ -172,7 +172,7 @@ Memorizer</a></li>
 </a>
   <ul class="dropdown-menu" aria-labelledby="tools">
      <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li>
-  
+     <li><a class="dropdown-item" target="_blank" href="https://find.dhamma.gift/assets/br/">ReadingFaithfully.org Blurbs</a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>
   
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>

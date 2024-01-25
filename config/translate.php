@@ -231,7 +231,6 @@ $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Пред�
  <br><br>
   Самое важное из Учения Будды нужно изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
   
-$linklearnpali = 'https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1';
 $anamemlearnpali = 'Learn Pali Переводы';
 $anamemolds = 'Переводы Майкла Олдса'; 
 $anameasc = 'Благородный Аскетизм';
@@ -704,7 +703,7 @@ $transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Warning ab
 
 $transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Caution regarding translations!</b><br><br> Translations do not originate directly from the Buddha himself!  Approach them with scrutiny and critical thinking.<br><br> To acquire the fundamental teachings of the Buddha, it is highly recommended to engage in the <strong>direct study of Suttas in Pali</strong>. At the very least, concentrate on understanding the Middle Practice and the Four Noble Truths. For instance, consider delving into a dedicated section from <strong>sn56.11</strong>.';
 
-$linklearnpali = 'https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1';
+
 $anamemlearnpali = 'Learn Pali Guides';
 
 $anamemolds = 'Translations by M. Olds';

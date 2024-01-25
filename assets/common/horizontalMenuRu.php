@@ -145,7 +145,7 @@ echo '<!--
       <li><a class="dropdown-item" href="' . $linkconj . '">
         <i class="' . $iconimportant . '"></i>
         Спряжения</a></li>
-   <li><a class="dropdown-item" href="assets/materials/pali_textbook_rus.pdf">
+   <li><a class="dropdown-item" href="' . $linktextbookru . '">
      <i class="' . $iconimportant . '"></i>
      Курс по Пали</a></li>
    

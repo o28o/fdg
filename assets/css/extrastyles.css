@@ -112,7 +112,10 @@
 }
 
 #arrowImg {
-
+margin-top: -3px; 
+  margin-left: -3px; 
+  margin-right: -3px; 
+  margin-bottom: -3px;
   width: 15px;
 }
 

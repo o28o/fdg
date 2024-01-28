@@ -820,7 +820,7 @@ then
 continue 
 fi 
 
-linkswwords=`grep -i "\b$uniqword\b" $basefile | sort -Vf | awk '{print $2}' | awk -F'/' '{print $NF}' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"#"$2"\">"$1"</a>"}'| xargs`
+linkswwords=`grep -i "\b$uniqword\b" $basefile | awk '{print $1, $2}' | sort -Vf | awk -F'/' '{print $NF}' | sed 's@_.*json@@g' | sed 's@ @@g' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{if ($2 ~ /-/) print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"#"$2":"$3"\">"$2"</a>"; else print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"#"$3"\">"$2"</a>"}' | xargs`
 
 #&lang=pli
 echo "<tr>

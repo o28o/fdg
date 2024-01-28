@@ -183,7 +183,7 @@
 </div> <!-- Container -->
 </div>
 <div class="mb-5"></div>
-<script src="/assets/js/bootstrap.bundle.5.13.min.js"></script>
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script src="/assets/js/tocjs.js"></script>
 </body>
 </html>

@@ -394,12 +394,8 @@ input.setSelectionRange(input.value.length, input.value.length);
               </div>
               </div>
 			  
-<button id="scrollToTopBtn" class="btn btn-secondary rounded-pill" style="display: none;">
-  <i class="fa-solid fa-arrow-up"></i>
-  <!--  <img src="/assets/svg/arrow-up.svg" alt="To top"> -->
-</button>
 
-	  <script src="/assets/js/smoothScrollToAnchor.js"defer></script>
+	  <script src="/assets/js/smoothScroll.js" defer></script>
 	
 <script defer>
 window.addEventListener('pageshow', function(event) {

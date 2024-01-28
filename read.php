@@ -130,11 +130,6 @@ if (isset($_GET['q'])) {
 
 </div>
 
-<button id="scrollToTopBtn" class="btn btn-secondary rounded-pill" style="display: none;">
-  <i class="fa-solid fa-arrow-up"></i>
-  <!--  <img src="/assets/svg/arrow-up.svg" alt="To top"> -->
-</button>
-
 <script>
 $(document).ready(function() {
   // Обработчик для нажатия клавиши Enter
@@ -264,7 +259,7 @@ $(document).ready(function() {
     });
   };
 </script>
-	  <script src="/assets/js/smoothScrollToAnchor.js"defer></script>
+	  <script src="/assets/js/smoothScroll.js" defer></script>
 	
 
 <script>

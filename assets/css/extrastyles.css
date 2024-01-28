@@ -101,12 +101,19 @@
 }
 
 #scrollToTopBtn {
+
+    border-radius: 15px;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: none;
   z-index: 100;
   opacity: 0.4;
+  
+}
+
+#arrowImg {
+
+  width: 15px;
 }
 
 .table-home-icon {

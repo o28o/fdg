@@ -465,7 +465,47 @@ include 'assets/common/horizontalMenuEn.php';
   };
 </script>
 
- 
+ 		  <script defer>
+ document.addEventListener('DOMContentLoaded', function() {
+  var hash = window.location.hash;
+
+  if (hash) {
+
+var hashForInput = hash.replace(/#/, '');
+var hashForInput = hashForInput.replace(/Collapse.*/, '');
+
+if (/.*CollapseBi/.test(hash)) {
+ hashForInput = "bi-" + hashForInput;
+}
+
+document.getElementById('paliauto').value = hashForInput;
+
+var clearBtn = document.getElementById('clearbtn');
+clearBtn.style.display = 'block';
+
+    var element = document.getElementById(hash.substring(1));
+    if (element) {
+
+      var collapseTargets = [];
+      var currentCollapse = element.closest('.collapse');
+      while (currentCollapse) {
+        collapseTargets.push(currentCollapse);
+        currentCollapse = currentCollapse.parentElement.closest('.collapse');
+      }
+
+      collapseTargets.forEach(function(collapseTarget) {
+        var bsCollapse = new bootstrap.Collapse(collapseTarget, { toggle: false });
+        bsCollapse.show();
+      });
+
+      setTimeout(function() {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 1000);
+    }
+  }
+});
+  </script>
+
 
 <div style="max-width: 450px;" class="container-lg my-4">
 

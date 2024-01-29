@@ -101,22 +101,25 @@
 }
 
 #scrollToTopBtn {
-
     border-radius: 15px;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 100;
-  opacity: 0.4;
-  
+  opacity: 0.6;
 }
 
+.svgarrow {
+  color: #D5D5D5;
+  fill: #D5D5D5;
+}
 #arrowImg {
 margin-top: -3px; 
   margin-left: -3px; 
   margin-right: -3px; 
   margin-bottom: -3px;
   width: 15px;
+  color: #D5D6D5;
 }
 
 .table-home-icon {

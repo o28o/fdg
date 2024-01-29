@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Создаем элемент кнопки  <img src="/assets/img/arrow-up.png" alt="To top"> <!--  <img src="/assets/svg/arrow-up.svg" alt="To top"> -->  <i class="fa-solid fa-arrow-up"></i>
   var scrollToTopBtn = document.createElement('button');
   scrollToTopBtn.id = 'scrollToTopBtn';
-  scrollToTopBtn.className = 'btn btn-secondary rounded-pill ';
+  scrollToTopBtn.className = 'btn btn-secondary rounded-pill hide-button';
   scrollToTopBtn.style.display = 'none';
 
   // Создаем элемент изображения

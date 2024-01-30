@@ -37,7 +37,7 @@ console.log(text);
 
             var currentUrl = window.location.href;
         if (shareOnlineElement) {
-            if (currentUrl.includes('bhava')) {
+            if (currentUrl.includes('dhamma.gift')) {
                 shareOnlineElement.style.display = 'none';
             }
         }

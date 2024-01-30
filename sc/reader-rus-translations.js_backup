@@ -2,6 +2,7 @@ const Sccopy = "/suttacentral.net";
 const suttaArea = document.getElementById("sutta");
 const homeButton = document.getElementById("home-button");
 const fdgButton = document.getElementById("fdg-button");
+
 const bodyTag = document.querySelector("body");
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
@@ -9,16 +10,14 @@ const previous2 = document.getElementById("previous2");
 const next2 = document.getElementById("next2");
 const form = document.getElementById("form");
 const citation = document.getElementById("paliauto");
-const pathLang = "en";
+const pathLang = "ru";
 
 citation.focus();
-let language = "pli-eng";
+let language = "pli-rus";
 
 homeButton.addEventListener("click", () => {
   document.location.search = "";
 });
-
-
 
 // pressing enter will "submit" the citation and load
 form.addEventListener("submit", e => {
@@ -30,15 +29,17 @@ form.addEventListener("submit", e => {
 });
 
 function buildSutta(slug) {
+  
   let translator = "";
   let texttype = "sutta";
   let slugArray = slug.split("&");
   slug = slugArray[0];
   if (slugArray[1]) {
     translator = slugArray[1];
-  } else {
-    translator = "sujato";
-  }
+  } 
+  /*else {
+    translator = "sv";
+  }*/
   slug = slug.toLowerCase();
 
   if ((!slug.match("bu-pm")) && (!slug.match("bi-pm")) && (slug.match(/bu-|bi-|kd|pvr/))) {
@@ -65,42 +66,89 @@ function buildSutta(slug) {
       slug = "pli-tv-" + slug;
     }
   }
-
-console.log('texttype ' + texttype + ' translator ' + translator);
-
-  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Eng</button></div>`;
+  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
   
   const slugReady = parseSlug(slug);
   console.log("slugReady is " + slugReady + " slug is " + slug); 
 
-var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`
-   var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
-   
-    if (slug.match(/ja/)) {
+
+
+$.ajax({
+       url: "/sc/translator-lookup.php?fromjs=" +texttype +"/" +slugReady
+    }).done(function(data) {
+      const trnsResp = data.split(" ");
+      let translator = trnsResp[0];
+      console.log('inside', translator);
+
+//if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
+ 
+const onlynumber = slug.replace(/[a-zA-Z]/g, '');
+
+let mnranges = ['mn1', 'mn2', 'mn3', 'mn4', 'mn5', 'mn6', 'mn7', 'mn8', 'mn9', 'mn10', 'mn11', 'mn12', 'mn13', 'mn14', 'mn15', 'mn16', 'mn17', 'mn18', 'mn19', 'mn20', 'mn21', 'mn22', 'mn23', 'mn24', 'mn25', 'mn26', 'mn27', 'mn28', 'mn29', 'mn30', 'mn31', 'mn32', 'mn33', 'mn34', 'mn35', 'mn36', 'mn37', 'mn38', 'mn39', 'mn40', 'mn41', 'mn42', 'mn43', 'mn44', 'mn45', 'mn46', 'mn47', 'mn48', 'mn49', 'mn50', 'mn51', 'mn52', 'mn53', 'mn54', 'mn55', 'mn56', 'mn57', 'mn58', 'mn59', 'mn60', 'mn61', 'mn62', 'mn63', 'mn64', 'mn65', 'mn66', 'mn67', 'mn68', 'mn69', 'mn70', 'mn71', 'mn72', 'mn73', 'mn74', 'mn75', 'mn76', 'mn77', 'mn78', 'mn79', 'mn80', 'mn81', 'mn82', 'mn83', 'mn84', 'mn85', 'mn86', 'mn87', 'mn88', 'mn89', 'mn90', 'mn91', 'mn92', 'mn93', 'mn94', 'mn95', 'mn96', 'mn97', 'mn115', 'mn117', 'mn118', 'mn119', 'mn135', 'mn141', 'mn146', 'mn148', 'mn152'];
+let anranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40', 'an1.41-50', 'an1.51-60', 'an1.61-70', 'an1.71-81', 'an1.82-97', 'an3.107', 'an10.46'];
+let snranges = ['sn1.1', 'sn1.2', 'sn1.10', 'sn1.11', 'sn1.12', 'sn1.13', 'sn1.14', 'sn1.15', 'sn1.16', 'sn1.17', 'sn1.18', 'sn1.19', 'sn1.21', 'sn1.22', 'sn1.23', 'sn1.24', 'sn1.26', 'sn1.27', 'sn1.28', 'sn1.29', 'sn1.30', 'sn1.36', 'sn14.12', 'sn22.10', 'sn22.59', 'sn22.59', 'sn22.103', 'sn22.104', 'sn22.105', 'sn22.106', 'sn22.107', 'sn22.108', 'sn22.109', 'sn22.110', 'sn22.111', 'sn22.112', 'sn22.113', 'sn22.114', 'sn22.115', 'sn22.117', 'sn35.28', 'sn35.104', 'sn38.4', 'sn44.10', 'sn56.11'];
+let dnranges = ['dn1', 'dn2', 'dn3', 'dn4', 'dn5', 'dn6', 'dn7', 'dn8', 'dn9', 'dn10', 'dn11', 'dn12', 'dn13', 'dn14', 'dn15', 'dn16', 'dn17', 'dn18', 'dn19', 'dn20', 'dn21', 'dn22', 'dn23', 'dn23', 'dn24', 'dn25', 'dn26', 'dn27', 'dn28', 'dn29', 'dn30', 'dn31', 'dn32', 'dn33', 'dn34'];
+
+var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+
+var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+
+var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
+ let scLink = `<p class="sc-link">`;
+ 
+const currentURL = window.location.href;
+const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
+
+ let ifRus = `<a target="" href="/sc/ml.html?q=${slug}${anchorURL}">R+E</a>&nbsp;<a target="" href="/sc/?q=${slug}${anchorURL}">En</a>&nbsp;`;
+ 
+if (mnranges.indexOf(slug) !== -1)  {
+ var trnpath = rustrnpath; 
+ let language = "pli-rus";
+  console.log(trnpath);
+ scLink += ifRus; 
+} else if (anranges.indexOf(slug) !== -1) { 
+  let language = "pli-rus";
+  var trnpath = rustrnpath; 
+  console.log(trnpath);
+  scLink += ifRus; 
+} else if (snranges.indexOf(slug) !== -1) { 
+  var trnpath = rustrnpath; 
+  console.log(trnpath);
+  scLink += ifRus; 
+} else if (dnranges.indexOf(slug) !== -1) { 
+  var trnpath = rustrnpath; 
+  console.log(trnpath);
+  scLink += ifRus; 
+} else if (slug.match(/ja/)) {
   let language = "pli";
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
-    console.log('ja case ', rootpath, trnpath, htmlpath);
+    //console.log('ja case ', rootpath, trnpath, htmlpath);
+} else if ( texttype === "sutta" ) {
+  let translator = "sujato";
+  const pathLang = "en";
+  // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
+  var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
     //let translator = "thanissaro+o";
-    let translator = "thanissaro";
-    texttype === "vinaya";
-      let language = "pli";
+    let translator = "o";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
-    var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-thanissaro.json`;
+    var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);
-} else {
+} else if ( texttype === "vinaya" ) {
+  let translator = "brahmali";
+  
+  const pathLang = "en";
+  console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-}
+} 
 
-  const rootResponse = fetch(rootpath)
-    .then(response => response.json());
-   
-  const translationResponse = fetch(trnpath).then(response => response.json());
+  const rootResponse = fetch(rootpath).then(response => response.json());
+ const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
+
   Promise.all([rootResponse, translationResponse, htmlResponse]).then(responses => {
     const [paliData, transData, htmlData] = responses;
-
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
         transData[segment] = "";
@@ -121,12 +169,13 @@ if (slug.includes('-') && (slug.includes('an') || slug.includes('sn') || slug.in
 anchor = segment;
 }
 
+// Получите полный URL с якорем
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
+
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
-        html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span>
-      </span>${closeHtml}\n\n`;
+html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span></span>${closeHtml}\n\n`;
+
 } else if (paliData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
 } else if (transData[segment] !== undefined) {
@@ -136,8 +185,8 @@ if (paliData[segment] !== undefined && transData[segment] !== undefined) {
 
     });
 
+console.log('before ' + translator) ;
 
-console.log('texttype ' + texttype + ' translator ' + translator);
 if (translator === "sv") {
   translatorforuser = 'SV theravada.ru';
 } else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
@@ -148,71 +197,46 @@ if (translator === "sv") {
   translatorforuser = 'А.Я. Сыркин';
 } else if (translator === "syrkin+o" ) {
   translatorforuser = 'А.Я. Сыркин, ред. о';
+} else {
+	translatorforuser = translator ;
+	
 }
-console.log('texttype ' + texttype + ' translator ' + translator);
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
-          const translatorByline = `<div class="byline">
+     const translatorByline = `<div class="byline">
      <p>
-    <span class="eng-lang" lang="en">
-     Translated by ${translatorforuser}
+    <span class="rus-lang" lang="ru">
+     Перевод: ${translatorforuser}
     </span>
      </p>
      </div>`;
      
-      const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Read on SC.net</a>`;
-      
-      
+if ((translator === 'sujato') || (translator === 'brahmali')) {
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
+} else {
+  scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
+}  
+
       $.ajax({
       url: "/sc/extralinks.php?fromjs=" +slug
     }).done(function(data) {
       const linksArray = data.split(",");
-   
+  
+   //   scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`; 
 
-
-const enUrl = window.location.href;
-
-const ruUrl = enUrl.replace("/sc/", "/ru/sc/");
-
-      
-      let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;
- 
- //dpr
-
-function getTextUrl(slug) {
-  let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
-  let textnum;
-
-  if (slug.includes(".")) {
-    textnum = parseInt(slug.match(/(?<=\.)\d+/)[0]); // Получаем цифры после точки
-    let subdivision = parseInt(slug.match(/\d+(?=\.)/)[0]); // Получаем номер подраздела, если есть точка в строке
-    let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available[subdivision].find(item => item[0] === textnum)[1];
-    return textUrl;
-  } else {
-    textnum = parseInt(slug.match(/[a-zA-Z](\d+)/)[1]); // Получаем цифры после букв
-    let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available.find(item => item[0] === textnum)[1];
-    return textUrl;
-  }
-}
-//let slug = "sn56.11"; // Пример строки
-
-let textUrl = getTextUrl(slug);
-console.log("Ссылка на", slug + ":", textUrl);
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;     
-      
-//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
+//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
-        //    console.log("extralinks " + linksArray[0]);
+            console.log("extralinks " + linksArray[0]);
       } 
       scLink += "</p>"; 
 
-const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.</p>";
+  const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.</p>";
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
- 
- const pageTitleElement = document.querySelector("h1");
+
+const pageTitleElement = document.querySelector("h1");
 let pageTitleText = pageTitleElement.textContent;
 pageTitle = pageTitleText.replace(/[0-9.]/g, '');
 
@@ -235,17 +259,20 @@ document.head.appendChild(ogDescriptionMeta);
       $.ajax({
       url: "/sc/api.php?fromjs=" +texttype +"/" +slugReady +"&type=A"
     }).done(function(data) {
-      let nextArray = data.split(" ");
+      const nextArray = data.split(" ");
       let nextSlug = nextArray[0];
-      let nextSlugPrint = nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
+let nextSlugPrint = nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
+
+   //   let nextName = nextArray[1];
 let nextName = nextArray.slice(1).join(" ");
 nextName = nextName.replace(/[0-9.]/g, '');
-     if (nextName === undefined) {
+
+      if (nextName === undefined) {
       var nextPrint = nextSlugPrint;
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
      }
-      
+     console.log(nextPrint);
          next.innerHTML = nextSlug
         ? `<a href="?q=${nextSlug}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
@@ -266,17 +293,18 @@ nextName = nextName.replace(/[0-9.]/g, '');
       const prevArray = data.split(" ");
       let prevSlug = prevArray[0];
       let prevSlugPrint = prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
+
+//      let prevName = prevArray[1];
 let prevName = prevArray.slice(1).join(" ");
 prevName = prevName.replace(/[0-9.]/g, '');
-      
-    if (prevName === undefined) {
+
+        if (prevName === undefined) {
     var prevPrint = prevSlugPrint;
       } else {
         var prevPrint = prevSlugPrint +' ' +prevName;
      }
-    
       previous.innerHTML = prevSlug
-        ? `<a href="?q=${prevSlug}&lang=${language}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
+        ? `<a href="?q=${prevSlug}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
       <g transform="matrix(0.021484375 0 0 0.021484375 2 -0)">
         <g>
@@ -288,15 +316,17 @@ prevName = prevName.replace(/[0-9.]/g, '');
         previous2.innerHTML = previous.innerHTML;
       }
       );
+
     }
     );
+     
     })
-    
-    .catch(error => {
+.catch(error => {
   console.log('error:not found');
 
+  // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
+  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
   xhr.send();
 
   // Обработка ответа
@@ -305,25 +335,35 @@ prevName = prevName.replace(/[0-9.]/g, '');
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-                window.location.reload(true);
-        window.location.href = "/?q=" + encodeURIComponent(slug);
+
+        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
 
       } else {
         // Обработка ошибки
-        console.log('Error sending request to /?q=');
+        console.log('Error sending request to /ru/?q=');
       }
     }
   };
 
   // Обновление сообщения об ошибке на странице
-        suttaArea.innerHTML = `<p>Searching for "${decodeURIComponent(slug)}". Please wait.</p>
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
+  
+  suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>
+    
+                  <div class="spinner-border" role="status">
+                <span class="visually-hidden">Загрузка...</span>
                   </div>
-    <br><br>
-  <p>  Note: <br>
-More search options available from the main page.</p>`;
+  <p>  Подсказка: <br>
+    С главной страницы доступно больше настроек поиска.
+<br></p>`;
+return false;
 });
+
+    }
+
+    );
+	
+// в конец функции можно добавить скролл
+
 }
 
 // initialize the whole app
@@ -332,50 +372,54 @@ if (document.location.search) {
   let slug = params.get("q");
   let lang = params.get("lang");
   citation.value = slug;
+
   buildSutta(slug);
-if (lang) {
+  
+  if (lang) {
     language = lang;
     console.log("in the initializing " + lang);
     setLanguage(lang);
-  } else if  (localStorage.paliToggle) {
-    	language = localStorage.paliToggle; 
+  } else if  (localStorage.paliToggleRu) {
+    	language = localStorage.paliToggleRu; 
 		  console.log('read from ls ' + language);
 setLanguage(language);
-  }
+  } 
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>For navigation texts should conatin text numbers. E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> or <span class="abbr">bi-pj1</span>.<br>
-  Dn, mn, sn, an, some kn books, both patimokkhas and vinaya vibhanga are available. </p>
+<p>Для перехода тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> или <span class="abbr">bi-pj1</span>.<br>
+ Доступны dn, mn, sn, an, некоторые книги kn, обе патимоккхи и виная вибханги.<br>
+  </p>
   <div class="lists">
 
   <div class="suttas">
-  <h2>Main Suttas</h2>
+  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> 
   <ul>
-      <li><span class="abbr">dn</span> Dīgha-nikāya</li>
-      <li><span class="abbr">mn</span> Majjhima-nikāya</li>
-      <li><span class="abbr">sn</span> Saṁyutta-nikāya</li>
-      <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
+     <li><span class="abbr">dn</span> <a href="/ru/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
+     <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>
+      <li><span class="abbr">sn</span> <a href="/ru/assets/texts/sn.php"> Saṁyutta-nikāya</a></li>
+      <li><span class="abbr">an</span> <a href="/ru/assets/texts/an.php"> Aṅguttara-nikāya</a></li>
+      <li><span class="abbr">snp</span> Sutta-nipāta</li>
   </ul>
   </div><div>
-  <!-- <h2>Vinaya</h2> -->
+ <!-- <h2>Виная</h2> -->
   <div class="vinaya">
   <div>
-  <h3>Bhikkhu Vinaya</h3>
+  <h3>Бхиккху Виная</h3>
 <ul>
-<li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.php"> Bhikkhunīpātimokkha</a></li>
-<li><span class="abbr">bu-pj</span> Pārājikā</li>
-<li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
-<li><span class="abbr">bu-ay</span> Aniyatā</li>
-<li><span class="abbr">bu-np</span> Nissaggiyā-pācittiyā</li>
-<li><span class="abbr">bu-pc</span> Pācittiyā</li>
-<li><span class="abbr">bu-pd</span> Pāṭidesanīyā</li>
-<li><span class="abbr">bu-sk</span> Sekhiyā</li>
-<li><span class="abbr">bu-as</span> Adhikarana-samatha</li>
+<li><span class="abbr">bu-pm</span> <a href="/ru/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
+<li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#8.0"> Pārājikā</a></li></li>
+<li><span class="abbr">bu-ss</span> <a href="/ru/sc/?q=bu-pm#14.0"> Saṅghādisesā</a></li></li>
+<li><span class="abbr">bu-ay</span> <a href="/ru/sc/?q=bu-pm#29.0"> Aniyatā</a></li>
+<li><span class="abbr">bu-np</span> <a href="/ru/sc/?q=bu-pm#33.0"> Nissaggiyā-pācittiyā</a></li>
+<li><span class="abbr">bu-pc</span> <a href="/ru/sc/?q=bu-pm#65.0"> Pācittiyā</a></li>
+<li><span class="abbr">bu-pd</span> <a href="/ru/sc/?q=bu-pm#159.0"> Pāṭidesanīyā</a></li></li>
+<li><span class="abbr">bu-sk</span> <a href="/ru/sc/?q=bu-pm#165.0"> Sekhiyā</a></li></li>
+<li><span class="abbr">bu-as</span> <a href="/ru/sc/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
 </ul>
 </div><div>
-<h3>Bhikkhuni Vinaya</h3>
+<h3>Бхиккхуни Виная</h3>
 <ul>
-<li><span class="abbr">bi-pm</span> <a href="/assets/texts/bipm.php"> Bhikkhunīpātimokkha</a></li>
+<li><span class="abbr">bi-pm</span> <a href="/ru/assets/texts/bipm.php"> Bhikkhunīpātimokkha</a></li>
 <li><span class="abbr">bi-pj</span> Pārājikā</li>
 <li><span class="abbr">bi-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bi-np</span> Nissaggiyā-pācittiyā</li>
@@ -391,7 +435,7 @@ setLanguage(language);
 </ul>
 </div>
   </div></div>
-  <h2>Other Texts</h2>
+  <h2>Другие тексты</h2>
   <ul>
       <li><span class="abbr">ud</span> Udāna</li>
       <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
@@ -407,12 +451,12 @@ setLanguage(language);
 }
 
 function setLanguage(language) {
-  if (language === "pli-eng") {
+  if (language === "pli-rus") {
     showPaliEnglish();
-  } else if (language === "eng") {
-    showEnglish();
   } else if (language === "pli") {
     showPali();
+  } else if (language === "rus") {
+    showEnglish();
   }
 }
 
@@ -430,33 +474,33 @@ function showEnglish() {
 }
 function showPali() {
   console.log("showing pali");
+  suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
-    suttaArea.classList.remove("hide-pali");
-      suttaArea.classList.add("hide-russian");
-  
+  suttaArea.classList.add("hide-russian");
 }
 
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
+ 
 	 // initial state
- if (!localStorage.paliToggle) {
-    localStorage.paliToggle = "pli-eng";
+ if (!localStorage.paliToggleRu) {
+    localStorage.paliToggleRu = "pli-rus";
   }   
 
   languageButton.addEventListener("click", () => {
-    if (language === "pli") {
-      showPaliEnglish();
-      language = "pli-eng";
-      localStorage.paliToggle = "pli-eng";
-    } else if (language === "pli-eng") {
-      showEnglish();
-      language = "eng";
-      localStorage.paliToggle = "eng";
-    } else if (language === "eng") {
-      showPali();
+    if (language === "pli-rus") {
+     showPali();
       language = "pli";
-      localStorage.paliToggle = "pli";
+      localStorage.paliToggleRu = "pli";
+    } else if (language === "pli") {
+	  showEnglish();
+      language = "rus";
+      localStorage.paliToggleRu = "rus";
+    } else if (language === "rus") {
+      showPaliEnglish();
+      language = "pli-rus";    
+      localStorage.paliToggleRu = "pli-rus";
     }
   });
 }
@@ -496,7 +540,7 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
   const slugParts = slug.match(/^([a-z]+)(\d*)\.*(\d*)/);
   const book = slugParts[1];
   const firstNum = slugParts[2];
-console.log(book,firstNum );
+
   if (book === "dn" || book === "mn") {
     return `${book}/${slug}`;
   } else if (book === "sn" || book === "an") {
@@ -514,7 +558,7 @@ console.log(book,firstNum );
   } else if (book === "thag" || book === "thig") {
     return `kn/${book}/${slug}`;
   } else if (book === "ja") {
-   return `kn/ja/${slug}`;
+    return `kn/${book}/${slug}`;
   }
 }
 

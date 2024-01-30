@@ -1,3 +1,4 @@
+
 const Sccopy = "/suttacentral.net";
 const suttaArea = document.getElementById("sutta");
 const homeButton = document.getElementById("home-button");
@@ -216,14 +217,35 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
   scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
 } else {
   scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
-}  
-      
+}
+
+//dpr
+
+function getTextUrl(slug) {
+  let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
+  let textnum;
+
+  if (slug.includes(".")) {
+    textnum = parseInt(slug.match(/(?<=\.)\d+/)[0]); // Получаем цифры после точки
+    let subdivision = parseInt(slug.match(/\d+(?=\.)/)[0]); // Получаем номер подраздела, если есть точка в строке
+    let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available[subdivision].find(item => item[0] === textnum)[1];
+    return textUrl;
+  } else {
+    textnum = parseInt(slug.match(/[a-zA-Z](\d+)/)[1]); // Получаем цифры после букв
+    let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available.find(item => item[0] === textnum)[1];
+    return textUrl;
+  }
+}
+//let slug = "sn56.11"; // Пример строки
+
+let textUrl = getTextUrl(slug);
+console.log("Ссылка на", slug + ":", textUrl);
+scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+
       $.ajax({
       url: "/sc/extralinks.php?fromjs=" +slug
     }).done(function(data) {
       const linksArray = data.split(",");
- 
-
   
    //   scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`; 
 

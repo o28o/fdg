@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
   img.alt = 'To top';
   scrollToTopBtn.appendChild(img);
   
+    if (localStorage.theme === "dark") { img.src = '/assets/svg/arrow-up.svg';
+  } else { 
+    img.src = '/assets/svg/arrow-up-dark.svg';
+  }
+  
   // Создаем элемент иконки
 /* var icon = document.createElement('i');
   icon.className = 'fa-solid fa-arrow-up';

@@ -30,8 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
   scrollToTopBtn.appendChild(img);
   
     if (localStorage.theme === "dark") { img.src = '/assets/svg/arrow-up.svg';
-  } else { 
+  } else if (localStorage.theme === "light") { 
     img.src = '/assets/svg/arrow-up-dark.svg';
+  } else{ 
+    img.src = '/assets/svg/arrow-up.svg';
   }
   
   // Создаем элемент иконки

@@ -495,7 +495,6 @@ a:hover {
 .hide-button {
   background-color: var(--off-white);
   color: var(--off-black);
-  fill: var(--off-black);
   border: solid 2px var(--dark-gray);
   padding-bottom: 3px;
 }
@@ -503,17 +502,14 @@ a:hover {
 .hide-button:hover {
   background-color: var(--dark-blue);
   color: var(--off-white);
-  fill: var(--off-white);
 }
 
 .dark .hide-button {
   background-color: var(--dark-blue);
   color: var(--off-white);
-  fill: var(--off-white);
 }
 
 .dark .hide-button:hover {
   background-color: var(--blue);
   color: var(--off-white);
-  fill: var(--off-white);
 }

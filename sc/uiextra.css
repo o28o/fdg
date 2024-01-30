@@ -25,3 +25,12 @@ max-width: 274px;
   right :35px; 
   z-index:999999;
 }
+
+
+.svgarrow {
+  color: #000;
+}
+
+.dark .svgarrow {
+  color: #D5D5D5;
+}

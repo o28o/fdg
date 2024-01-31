@@ -212,13 +212,7 @@ if (translator === "sv") {
     </span>
      </p>
      </div>`;
-     
-if ((translator === 'sujato') || (translator === 'brahmali')) {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
-} else {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
-}
-
+  
 //dpr
 function getTextUrl(slug) {
   let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
@@ -242,6 +236,12 @@ function getTextUrl(slug) {
 let textUrl = getTextUrl(slug);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+}
+
+if ((translator === 'sujato') || (translator === 'brahmali')) {
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
+} else {
+  scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
 }
 
       $.ajax({

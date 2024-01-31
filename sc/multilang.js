@@ -233,14 +233,7 @@ if (translator === "sv") {
       url: "/sc/extralinks.php?fromjs=" +slug
     }).done(function(data) {
       const linksArray = data.split(",");
-  
-  
-if ((translator === 'sujato') || (translator === 'brahmali')) {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
-} else {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
-}
-  
+
  //dpr
 function getTextUrl(slug) {
   let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
@@ -265,8 +258,12 @@ console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
 }
-  
-  
+
+if ((translator === 'sujato') || (translator === 'brahmali')) {
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
+} else {
+  scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
+}
  //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>

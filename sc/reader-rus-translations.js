@@ -100,7 +100,7 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 
- let ifRus = `<a target="" href="/sc/ml.html?q=${slug}${anchorURL}">R+E</a>&nbsp;<a target="" href="/sc/?q=${slug}${anchorURL}">En</a>&nbsp;`;
+ let ifRus = `<a target="" href="/sc/ml.html?q=${slug}${anchorURL}">R+E</a>&nbsp;`;
  
 if (mnranges.indexOf(slug) !== -1)  {
  var trnpath = rustrnpath; 
@@ -182,8 +182,6 @@ html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPa
 } else if (transData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="rus-lang" lang="ru">' + transData[segment] + '</span></span>' + closeHtml + '\n\n';
 }
-
-
     });
 
 console.log('before ' + translator) ;
@@ -212,6 +210,13 @@ if (translator === "sv") {
     </span>
      </p>
      </div>`;
+  
+  const ruUrl  = window.location.href;
+
+const enUrl = ruUrl.replace("/ru/sc/", "/sc/");
+
+scLink += `<a href="${enUrl}">En</a>&nbsp;`;
+ 
   
 //dpr
 function getTextUrl(slug) {

@@ -175,7 +175,7 @@ const enUrl = window.location.href;
 
 const ruUrl = enUrl.replace("/sc/", "/ru/sc/");
 
-      let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;`;
+let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;`;
  
 //dpr
 function getTextUrl(slug) {

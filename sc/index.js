@@ -177,29 +177,65 @@ const ruUrl = enUrl.replace("/sc/", "/ru/sc/");
 
       let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;`;
  
- //dpr
+//dpr
 function getTextUrl(slug) {
   let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
   let textnum;
 
   if (slug.includes(".")) {
-    textnum = parseInt(slug.match(/(?<=\.)\d+/)[0]); // Получаем цифры после точки
-    let subdivision = parseInt(slug.match(/\d+(?=\.)/)[0]); // Получаем номер подраздела, если есть точка в строке
-    let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available[subdivision].find(item => item[0] === textnum)[1];
-    console.log("Ссылка на", slug, nikaya, subdivision, textnum + ":", textUrl);
-    return textUrl;
+    let match = slug.match(/([a-zA-Z]+)(\d+)\.(\d+)/);
+    if (match) {
+      let [, nikaya, subdivision, textnum] = match;
+      let textUrl = findTextUrl(nikaya, parseInt(subdivision), parseInt(textnum));
+      if (textUrl) {
+        return textUrl;
+      }
+    }
   } else {
     textnum = parseInt(slug.match(/[a-zA-Z](\d+)/)[1]); // Получаем цифры после букв
-    let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available.find(item => item[0] === textnum)[1];
-    console.log("Ссылка на", slug, nikaya, textnum + ":", textUrl);
-    return textUrl;
+    let textUrl = findTextUrl(nikaya, null, textnum);
+    if (textUrl) {
+      return textUrl;
+    }
   }
+  
+  return "Запись не найдена";
 }
+
+function findTextUrl(nikaya, subdivision, textnum) {
+  if (subdivision !== null) {
+    if (digitalPaliReader[nikaya].available[subdivision]) {
+      let item = digitalPaliReader[nikaya].available[subdivision].find(item => {
+        if (Array.isArray(item)) {
+          if (item.length === 3) {
+            return textnum >= item[0] && textnum <= item[1];
+          } else if (item.length === 2) {
+            return textnum === item[0];
+          }
+        }
+        return false;
+      });
+      
+      if (item) {
+        return digitalPaliReader.constants.rootUrl + item[item.length - 1];
+      }
+    }
+  } else {
+    let item = digitalPaliReader[nikaya].available.find(item => Array.isArray(item) ? item[0] === textnum : item === textnum);
+    if (item) {
+      return digitalPaliReader.constants.rootUrl + item[1];
+    }
+  }
+  
+  return null;
+}
+
 let textUrl = getTextUrl(slug);
+console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
-}  
-
+}
+//dpr end
 
 scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;
       

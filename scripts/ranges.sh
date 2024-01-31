@@ -14,7 +14,7 @@ then
 textnumforrange=`echo $stringforrange| sed 's@.*\.@@g'`
 #echo $textforrange
 check=$partforrange
-ranges=`grep -i "$partforrange" $indexesfile | grep -i "-" | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}' |  awk -F'.' '{print $NF}' `
+ranges=`grep -iE "[0-9]-[0-9]" $indexesfile | grep -i "$partforrange" | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}' |  awk -F'.' '{print $NF}' `
 #echo $ranges
 elif  [[ $textnameforrange == *"bu-"* ]] || [[ $textnameforrange == *"bi-"* ]] ||  [[ $textnameforrange == *"vb-"* ]] 
 then
@@ -28,7 +28,7 @@ textnumforrange=`echo $string| sed 's@[A-Za-z]@@g' | sed 's@-@@g'`
 #echo $textnumforrange
 textnameforrange=`echo $textnameforrange | sed 's@pli-tv-@@'`
 check=`echo $textnameforrange | sed 's@vb-@@g'`
-ranges=`grep -i "$textnameforrange" $indexesfile | grep -i "-" | awk -F'/' '{print $NF}' | awk -F'[._]' '{print $1}' | sed 's/[^0-9]*\([0-9].*\)/\1/' `
+ranges=`grep -iE "[0-9]-[0-9]" $indexesfile | grep -i "$partforrange" | awk -F'/' '{print $NF}' | awk -F'[._]' '{print $1}' | sed 's/[^0-9]*\([0-9].*\)/\1/' `
 #echo $ranges
 elif  [[ $textnameforrange != *"\."* ]]
 then
@@ -36,7 +36,7 @@ then
 textnumforrange=`echo $stringforrange| sed 's@[A-Za-z]@@g'`
 #echo $textforrange
 check=$textnameforrange
-ranges=`grep -i "$textnameforrange" $indexesfile | grep -i "-" | awk -F'/' '{print $NF}' | awk -F'[._]' '{print $1}' | sed 's@[A-Za-z]@@g' `
+ranges=`grep -iE "[0-9]-[0-9]" $indexesfile | grep -i "$partforrange" | awk -F'/' '{print $NF}' | awk -F'[._]' '{print $1}' | sed 's@[A-Za-z]@@g' `
 #echo $ranges
 fi
 

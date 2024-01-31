@@ -242,7 +242,6 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 }
   
  //dpr
-
 function getTextUrl(slug) {
   let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
   let textnum;
@@ -262,7 +261,10 @@ function getTextUrl(slug) {
 
 let textUrl = getTextUrl(slug);
 console.log("Ссылка на", slug + ":", textUrl);
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`; 
+
+if (textUrl) {
+scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+}
   
   
  //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 

@@ -179,7 +179,6 @@ const ruUrl = enUrl.replace("/sc/", "/ru/sc/");
       let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;
  
  //dpr
-
 function getTextUrl(slug) {
   let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
   let textnum;
@@ -188,18 +187,19 @@ function getTextUrl(slug) {
     textnum = parseInt(slug.match(/(?<=\.)\d+/)[0]); // Получаем цифры после точки
     let subdivision = parseInt(slug.match(/\d+(?=\.)/)[0]); // Получаем номер подраздела, если есть точка в строке
     let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available[subdivision].find(item => item[0] === textnum)[1];
+    console.log("Ссылка на", slug, nikaya, subdivision, textnum + ":", textUrl);
     return textUrl;
   } else {
     textnum = parseInt(slug.match(/[a-zA-Z](\d+)/)[1]); // Получаем цифры после букв
     let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available.find(item => item[0] === textnum)[1];
+    console.log("Ссылка на", slug, nikaya, textnum + ":", textUrl);
     return textUrl;
   }
 }
-//let slug = "sn56.11"; // Пример строки
-
 let textUrl = getTextUrl(slug);
-console.log("Ссылка на", slug + ":", textUrl);
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;     
+if (textUrl) {
+scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+}  
       
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a> 
       if (linksArray[0].length >= 4) {

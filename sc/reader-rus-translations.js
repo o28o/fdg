@@ -220,7 +220,6 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 }
 
 //dpr
-
 function getTextUrl(slug) {
   let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
   let textnum;
@@ -229,18 +228,21 @@ function getTextUrl(slug) {
     textnum = parseInt(slug.match(/(?<=\.)\d+/)[0]); // Получаем цифры после точки
     let subdivision = parseInt(slug.match(/\d+(?=\.)/)[0]); // Получаем номер подраздела, если есть точка в строке
     let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available[subdivision].find(item => item[0] === textnum)[1];
+    console.log("Ссылка на", slug, nikaya, subdivision, textnum + ":", textUrl);
     return textUrl;
   } else {
     textnum = parseInt(slug.match(/[a-zA-Z](\d+)/)[1]); // Получаем цифры после букв
     let textUrl = digitalPaliReader.constants.rootUrl + digitalPaliReader[nikaya].available.find(item => item[0] === textnum)[1];
+    console.log("Ссылка на", slug, nikaya, textnum + ":", textUrl);
     return textUrl;
   }
 }
 //let slug = "sn56.11"; // Пример строки
 
 let textUrl = getTextUrl(slug);
-console.log("Ссылка на", slug + ":", textUrl);
+if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+}
 
       $.ajax({
       url: "/sc/extralinks.php?fromjs=" +slug

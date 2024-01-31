@@ -487,7 +487,6 @@ a:hover {
   background-color: var(--off-white);
   color: var(--off-black);
   border: solid 2px var(--dark-gray);
-  padding-bottom: 3px;
 }
 
 .hide-button:hover {

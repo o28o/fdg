@@ -235,6 +235,7 @@ if (translator === "sv") {
       const linksArray = data.split(",");
 
 //dpr
+if (texttype !== "vinaya") {
 function getTextUrl(slug) {
   let nikaya = slug.match(/[a-zA-Z]+/)[0]; // Получаем название никаи из строки
   let textnum;
@@ -291,6 +292,7 @@ let textUrl = getTextUrl(slug);
 console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+}
 }
 //dpr end
 

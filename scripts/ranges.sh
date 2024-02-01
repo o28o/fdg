@@ -1,6 +1,9 @@
 source ./config/script_config.sh --source-only
 string=$@
 
+if [[ $string =~ [0-9]-[0-9] ]];then
+string=`echo $string | sed 's@-.*@@g'`
+fi
 stringforrange=`echo $string |sed 's@\.@\\\.@g'`
 #echo str4rg=$stringforrange
 

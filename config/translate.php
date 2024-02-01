@@ -394,8 +394,8 @@ $detailtextbook = 'учебник';
 
 $header5fdgoffline = 'find.dhamma.gift Оффлайн Версия';
 
-$pfdg = 'Всепроникающий поиск по Суттам и Винае';
-$pfdgoffline = 'Оффлайн версия и инструкция по установке. Пока только Android🙏';
+$pfdg = 'Точный поиск по Суттам и Винае';
+$pfdgoffline = 'Оффлайн версия и инструкция по установке. Android, Linux, Windows';
 
 $head5othermat = 'Учебные материалы на русском и английском';
 $pothermat = 'Подборка учебников и таблиц';
@@ -836,7 +836,7 @@ $detailtextbook = 'textbook';
 
 $header5fdgoffline = 'find.dhamma.gift Offline Edition';
 $pfdg = 'All encompassing search within all Suttas and Vinaya';
-$pfdgoffline = 'Offline version & setup instruction. Right now Android only🙏';
+$pfdgoffline = 'Offline version & setup instruction. Android, Linux, Windows';
 
 $head5othermat = 'Materials for studying Pali in English and Russian';
 $pothermat = 'Collection of textbooks and tables';

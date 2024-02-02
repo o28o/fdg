@@ -37,6 +37,7 @@ else
     timeout=60
 fi
 cp $table $tmphtml
+sed -i '/<table id="pali"/s@id="pali"@id="temporary"@g' $tmphtml
 sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml
 sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh every '$timeout' sec @g' $tmphtml
 inProgressresponse >> $tmphtml
@@ -58,7 +59,7 @@ echo "<script>setInterval(function() {
     
 </script>" >> $tmphtml
 
-cat $templatefolder/Footer.html | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
+cat $templatefolder/Footer.html | sed "s@('#pali')@('#temporary')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
 ((round++))
 }
 

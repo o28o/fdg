@@ -192,7 +192,7 @@ echo '<!--
 
   <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS Конвертер #2</a></li>  
 
-     <li><a class="dropdown-item" target="_blank" href="https://find.dhamma.gift/assets/br/">ReadingFaithfully.org Содержания</a></li>   
+     <li><a class="dropdown-item" target="_blank" href="/assets/br/">ReadingFaithfully.org Содержания</a></li>   
      <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org по Темам</a></li>   
      
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>

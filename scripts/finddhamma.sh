@@ -25,6 +25,60 @@ excludetext='{ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,
 mkdir $output 2>/dev/null
 cd $output 
 dateforhist=`date +%d-%m-%Y`
+
+function writeToTmpHtml {
+  totaltexts=` echo $textlist | wc -w`
+   
+if [ "$totaltexts" -le 15 ]; then
+    timeout=15
+elif [ "$totaltexts" -ge 16 ] && [ "$totaltexts" -lt 30 ]; then
+    timeout=30
+else
+    timeout=60
+fi
+cp $table $tmphtml
+sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml
+sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh every '$timeout' sec @g' $tmphtml
+inProgressresponse >> $tmphtml
+echo "</tbody>
+ </table>"  >> $tmphtml
+ 
+echo "<script>  setInterval(function() {
+        location.reload();
+    }, ${timeout}000);
+   
+/* localStorage.removeItem('successAlertDismissed');  
+    
+ document.addEventListener('DOMContentLoaded', function() {
+    var successAlert = document.getElementById('successAlert');
+    var alertDismissed = localStorage.getItem('successAlertDismissed');
+
+    if (alertDismissed === 'true') {
+      successAlert.style.display = 'none';
+    }
+
+    successAlert.querySelector('.btn-close').addEventListener('click', function() {
+      successAlert.style.display = 'none';
+      localStorage.setItem('successAlertDismissed', 'true');
+    });
+  });   
+  
+*/
+  document.addEventListener('DOMContentLoaded', function() {
+    var refreshLink = document.getElementById('refreshLink');
+
+    refreshLink.addEventListener('click', function(event) {
+      event.preventDefault(); // Отменить стандартное действие ссылки
+      location.reload(); // Перезагрузить страницу
+    });
+  });
+    
+</script>" >> $tmphtml
+
+cat $templatefolder/Footer.html | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
+((round++))
+}
+
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
 mainpagebase="/ru"
@@ -36,29 +90,10 @@ function bgswitch {
 	echo "Найдено $linescount строк с $pattern<br> 
 	Ресурсы сервера ограничены и запрос нельзя обработать.<br>
 	Варианты:<br>
-	1. Попробуйте опцию <strong>Опр</strong>, чтобы сузить поиск<br>
+	1. Попробуйте опции <strong>Определения</strong> или <strong>Сравнения</strong>, чтобы сузить поиск<br>
 	2. Выберите более специфическое слово из подсказок для Пали<br>
 	3. Скачайте необработанные данные <a class=\"outlink\" href="/result/${basefile}">здесь</a>
 	"
-}
-
-function writeToTmpHtml {
-  totaltexts=` echo $textlist | wc -w`
-   
-if [ "$totaltexts" -le 15 ]; then
-    timeout=7
-else
-    timeout=30
-fi
-cp $table $tmphtml
-sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh every '$timeout' sec @g' $tmphtml
-echo "<script>
-    setInterval(function() {
-        location.reload();
-    }, ${timeout}000);
-</script>" >> $tmphtml
-cat $templatefolder/Footer.html | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
-((round++))
 }
 
 function reverseyoinpattern {
@@ -72,6 +107,14 @@ echo "$pattern" | sed 's/[[:lower:]]/\U&/'
 function emptypattern {
    echo "Что искать?"
 }
+
+function inProgressresponse {
+  echo "<div class='alert alert-warning alert-dismissible fade show' role='alert' id='successAlert'>
+  <strong>Идёт загрузка...</strong> $round из $totaltexts результатов по $pattern обработано. Авто-обновление каждые $timeout секунд. <a href='' class='alert-link' id='refreshLink'>Обновить вручную.</a>
+     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>"
+}
+
 
 function OKresponse {
   echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language "
@@ -108,7 +151,7 @@ function bgswitch {
 	echo "Found $linescount lines with $pattern<br> 
 	Server resources are limited.<br>
 	Solutions:<br>
-	1. Try <strong>Def</strong> option, it'll narrow down results<br>
+	1. Try <strong>Definitions</strong> or <strong>Similies</strong> options, it'll narrow down results<br>
 	2. Choose more specific word from Pali autocomplete<br>
 	3. Download raw data <a class=\"outlink\" href="/result/${basefile}">here</a>
 	"
@@ -118,6 +161,11 @@ function emptypattern {
    echo "Empty pattern"
 }
 
+function inProgressresponse {
+  echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
+  <strong>Loading...</strong> $round of $totaltexts records proccessed for $pattern. Page auto-refresh every $timeout sec. <a href='' class='alert-link' id='refreshLink'>Refresh manually.</a>
+   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>"
+}
 
 function OKresponse {
 echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty in $fortitle $language "
@@ -1381,8 +1429,23 @@ elif [ $linescount -ge $minmatchesforonline ] && [[ "$@" != *"-nbg"* ]];  then
 rm $tmphtml
 cd ..
 nohup bash scripts/finddhamma.sh -nbg-$rand $@ >/dev/null 2>&1 & disown
-sleep 3
-echo "<script>window.location.href=\"./result/$tmphtml\";</script>"
+
+counter=0
+
+while [ $counter -lt 10 ]; do
+    if [ -f "./result/$tmphtml" ]; then
+        echo "<script>window.location.href=\"./result/$tmphtml\";</script>"
+        break
+    else
+        if [ $counter -eq 9 ]; then
+            echo "Error: File ./result/$tmphtml not found."
+            break
+        else
+            sleep 1
+            ((counter++))
+        fi
+    fi
+done
 exit 0     
 elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then 
 bgswitch
@@ -1536,14 +1599,16 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand* > /dev/null 2>&1
-echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" > $tmphtml
-echo "<script>window.location.href=\"./result/${table}\";</script>"
-# rm $tmphtml
+rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand $rand* > /dev/null 2>&1
+echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" >> $tmphtml
+echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>"
+
 end=`date +%s`
 runtime=$((end-start))
 echo total execution time $runtime >> time_output.txt
+find . -type f -name 'search-*.html' -mmin +60 -exec rm {} \;
 exit 0
+
 
 find . -type f -name 'search-*.html' -mtime +2 -exec rm {} \;
 

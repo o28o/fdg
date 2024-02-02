@@ -73,7 +73,7 @@ wafter=3
 linesafter=0
 minlength=2
 truncatelength=30
-filesizenooverwrite=1000000
+filesizenooverwrite=700000
 maxmatchesbg=3500
 archivenumber=280
 archivenumber=91
@@ -149,6 +149,7 @@ archivenumber=31
 
 fi
 #common vars
+minmatchesforonline=5
 filelimit=500 
 procqnty=4
 rootpath=$apachesitepath/scripts
@@ -168,7 +169,7 @@ function pvlimit {
 pv -L 1m -q
 }
 function clearargs {
-sed -e 's/-pli //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/-si //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' -e 's/-tru //g' -e 's/-conv //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg //g' | sed 's/ -exc.*//g' | sed 's/-l[ab][0-9]* //g' | sed 's/-defall //g' | sed 's/-def //g' | sed 's/-sml //g' |  sed 's/-b //g' | sed 's/-onl //g' | sed 's/-nm[0-9]* //g' 
+sed -e 's/-pli //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/-si //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' -e 's/-tru //g' -e 's/-conv //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg-.* //g' | sed 's/ -exc.*//g' | sed 's/-l[ab][0-9]* //g' | sed 's/-defall //g' | sed 's/-def //g' | sed 's/-sml //g' |  sed 's/-b //g' | sed 's/-onl //g' | sed 's/-nm[0-9]* //g' 
 }
 
 function removefilenames {

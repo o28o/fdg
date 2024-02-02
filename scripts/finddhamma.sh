@@ -14,7 +14,13 @@ export LANG=en_US.UTF-8
 ########## sn35.238 ##########
 source ./config/script_config.sh --source-only
 args="$@"
+
+if [[ "$@" == *"-nbg"* ]]; then
+rand=`echo $@ | awk -F'-nbg-' '{print $2}' | awk '{print $1}' `
+else
 rand=`echo $RANDOM | md5sum | head -c 5`
+fi 
+tmphtml=search-${rand}.html
 excludetext='{ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp}'
 mkdir $output 2>/dev/null
 cd $output 
@@ -26,7 +32,7 @@ outfnlang=-ru
 defaultlang='lang=pli-rus'
 excluderesponse="исключая"
 function bgswitch {
-  removefilenames
+ # removefilenames
 	echo "Найдено $linescount строк с $pattern<br> 
 	Ресурсы сервера ограничены и запрос нельзя обработать.<br>
 	Варианты:<br>
@@ -34,7 +40,25 @@ function bgswitch {
 	2. Выберите более специфическое слово из подсказок для Пали<br>
 	3. Скачайте необработанные данные <a class=\"outlink\" href="/result/${basefile}">здесь</a>
 	"
-	exit 3
+}
+
+function writeToTmpHtml {
+  totaltexts=` echo $textlist | wc -w`
+   
+if [ "$totaltexts" -le 15 ]; then
+    timeout=7
+else
+    timeout=30
+fi
+cp $table $tmphtml
+sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh every '$timeout' sec @g' $tmphtml
+echo "<script>
+    setInterval(function() {
+        location.reload();
+    }, ${timeout}000);
+</script>" >> $tmphtml
+cat $templatefolder/Footer.html | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
+((round++))
 }
 
 function reverseyoinpattern {
@@ -80,7 +104,7 @@ mainpagebase="/"
 defaultlang='lang=pli-eng'
 excluderesponse="excluding"
 function bgswitch {
-  removefilenames
+ # removefilenames
 	echo "Found $linescount lines with $pattern<br> 
 	Server resources are limited.<br>
 	Solutions:<br>
@@ -88,7 +112,6 @@ function bgswitch {
 	2. Choose more specific word from Pali autocomplete<br>
 	3. Download raw data <a class=\"outlink\" href="/result/${basefile}">here</a>
 	"
-	exit 3
 }
 
 function emptypattern {
@@ -849,7 +872,6 @@ forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
 }
 
 if [[ "$type" == json ]]; then
-
 filelist=`echo "
 ${words}
 ${links}
@@ -1124,8 +1146,10 @@ echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_l
 echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_var</span>" 
 echo '<br class="styled">' 
 done | tohtml 
+
 echo "</p></td>
 </tr>" | tohtml
+writeToTmpHtml
 done
 matchqnty=`awk '{sum+=$1;} END{print sum;}' $tempfile`
 
@@ -1262,7 +1286,7 @@ done | tohtml
 
 echo "</td>
 </tr>" | tohtml
-
+writeToTmpHtml
 done
 
 matchqnty=`awk '{sum+=$1;} END{print sum;}' $tempfile`
@@ -1353,7 +1377,14 @@ pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 	#Clarification
      rm $basefile
      exit 1
-elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then  
+elif [ $linescount -ge $minmatchesforonline ] && [[ "$@" != *"-nbg"* ]];  then  
+rm $tmphtml
+cd ..
+nohup bash scripts/finddhamma.sh -nbg-$rand $@ >/dev/null 2>&1 & disown
+sleep 3
+echo "<script>window.location.href=\"./result/$tmphtml\";</script>"
+exit 0     
+elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then 
 bgswitch
 exit 3
 #	echo "$@" | sed 's/-oru //g' | sed 's/-oge //g' | sed 's/-ogr //g'   | sed 's/-nbg //g' >> ../input/input.txt
@@ -1368,6 +1399,7 @@ rm ${table} $tempfile $tempfilewords $tempfilewhistory > /dev/null 2>&1
 
 #add links to each file
 echo linklist function part >> time_output.txt
+round=1
 { time linklist ;} 2>> time_output.txt
 echo end of linklist function part >> time_output.txt
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
@@ -1504,15 +1536,16 @@ fi
 echo "</td></tr>
 " >> $history
 
-rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *$rand* > /dev/null 2>&1
+rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand* > /dev/null 2>&1
+echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" > $tmphtml
 echo "<script>window.location.href=\"./result/${table}\";</script>"
-
+# rm $tmphtml
 end=`date +%s`
 runtime=$((end-start))
 echo total execution time $runtime >> time_output.txt
 exit 0
 
-
+find . -type f -name 'search-*.html' -mtime +2 -exec rm {} \;
 
 #update hidden link 
 last_char="${quote: -1}"

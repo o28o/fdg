@@ -43,33 +43,16 @@ inProgressresponse >> $tmphtml
 echo "</tbody>
  </table>"  >> $tmphtml
  
-echo "<script>  setInterval(function() {
+echo "<script>setInterval(function() {
         location.reload();
     }, ${timeout}000);
    
-/* localStorage.removeItem('successAlertDismissed');  
-    
- document.addEventListener('DOMContentLoaded', function() {
-    var successAlert = document.getElementById('successAlert');
-    var alertDismissed = localStorage.getItem('successAlertDismissed');
-
-    if (alertDismissed === 'true') {
-      successAlert.style.display = 'none';
-    }
-
-    successAlert.querySelector('.btn-close').addEventListener('click', function() {
-      successAlert.style.display = 'none';
-      localStorage.setItem('successAlertDismissed', 'true');
-    });
-  });   
-  
-*/
   document.addEventListener('DOMContentLoaded', function() {
     var refreshLink = document.getElementById('refreshLink');
 
     refreshLink.addEventListener('click', function(event) {
-      event.preventDefault(); // Отменить стандартное действие ссылки
-      location.reload(); // Перезагрузить страницу
+      event.preventDefault(); 
+      location.reload();
     });
   });
     
@@ -1603,7 +1586,7 @@ echo "</td></tr>
 
 rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand $rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" > $tmphtml
-#echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>"
+echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>"
 
 end=`date +%s`
 runtime=$((end-start))
@@ -1623,3 +1606,23 @@ else
 hreflastchar="<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a>"
 fi  
 quote=`echo $quote | sed 's@.$@'$hreflastchar'@g'`
+
+
+
+/* localStorage.removeItem('successAlertDismissed');  
+    
+ document.addEventListener('DOMContentLoaded', function() {
+    var successAlert = document.getElementById('successAlert');
+    var alertDismissed = localStorage.getItem('successAlertDismissed');
+
+    if (alertDismissed === 'true') {
+      successAlert.style.display = 'none';
+    }
+
+    successAlert.querySelector('.btn-close').addEventListener('click', function() {
+      successAlert.style.display = 'none';
+      localStorage.setItem('successAlertDismissed', 'true');
+    });
+  });   
+  
+*/

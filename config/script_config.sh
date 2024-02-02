@@ -109,7 +109,7 @@ filesizenooverwrite=1000000000000
 maxmatchesbg=300000
 archivenumber=280
 archivenumber=91
-minmatchesforonline=10
+minmatchesforonline=15
 elif [[ "`uname -a`" == *".from.sh"* ]]; then
 sitename=http://f2.dhamma.gift
 mode=online
@@ -148,7 +148,7 @@ truncatelength=30
 filesizenooverwrite=10000000
 maxmatchesbg=2000
 archivenumber=31
-minmatchesforonline=10
+minmatchesforonline=15
 fi
 #common vars
 

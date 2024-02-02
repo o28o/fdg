@@ -27,7 +27,7 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 
 function writeToTmpHtml {
-  totaltexts=` echo $textlist | wc -w`
+  
    
 if [ "$totaltexts" -le 15 ]; then
     timeout=15
@@ -1416,6 +1416,8 @@ texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
 #echo "bf+12sk $texts"
 fi
 
+textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
+totaltexts=` echo $textlist | wc -w`
 linescount=`wc -l $basefile | awk '{print $1}'`
 if [ ! -s $basefile ]
 then
@@ -1425,7 +1427,7 @@ pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 	#Clarification
      rm $basefile
      exit 1
-elif [ $linescount -ge $minmatchesforonline ] && [[ "$@" != *"-nbg"* ]];  then  
+elif [ $totaltexts -ge $minmatchesforonline ] && [[ "$@" != *"-nbg"* ]];  then  
 rm $tmphtml
 cd ..
 nohup bash scripts/finddhamma.sh -nbg-$rand $@ >/dev/null 2>&1 & disown

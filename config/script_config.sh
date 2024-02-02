@@ -42,6 +42,7 @@ truncatelength=30
 filesizenooverwrite=100000000000
 maxmatchesbg=3000
 archivenumber=84
+minmatchesforonline=5
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
 sitename=http://localhost
@@ -75,8 +76,9 @@ minlength=2
 truncatelength=30
 filesizenooverwrite=700000
 maxmatchesbg=3500
-archivenumber=280
 archivenumber=91
+minmatchesforonline=10
+
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
 sitename=http://localhost
 nicevalue=1
@@ -107,7 +109,7 @@ filesizenooverwrite=1000000000000
 maxmatchesbg=300000
 archivenumber=280
 archivenumber=91
-
+minmatchesforonline=10
 elif [[ "`uname -a`" == *".from.sh"* ]]; then
 sitename=http://f2.dhamma.gift
 mode=online
@@ -146,10 +148,10 @@ truncatelength=30
 filesizenooverwrite=10000000
 maxmatchesbg=2000
 archivenumber=31
-
+minmatchesforonline=10
 fi
 #common vars
-minmatchesforonline=5
+
 filelimit=500 
 procqnty=4
 rootpath=$apachesitepath/scripts

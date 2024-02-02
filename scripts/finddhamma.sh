@@ -30,9 +30,9 @@ function writeToTmpHtml {
   
    
 if [ "$totaltexts" -le 15 ]; then
-    timeout=15
+    timeout=$titeout1
 elif [ "$totaltexts" -ge 16 ] && [ "$totaltexts" -lt 30 ]; then
-    timeout=30
+    timeout=$titeout2
 else
     timeout=60
 fi

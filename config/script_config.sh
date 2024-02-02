@@ -43,8 +43,8 @@ filesizenooverwrite=100000000000
 maxmatchesbg=3000
 archivenumber=84
 minmatchesforonline=5
-titeout1=15
-titeout2=30
+defaultTimeout=60
+multiplier=1
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
 sitename=http://localhost
@@ -79,9 +79,10 @@ truncatelength=30
 filesizenooverwrite=700000
 maxmatchesbg=3500
 archivenumber=91
+
+multiplier=2
 minmatchesforonline=15
-titeout1=7
-titeout2=15
+defaultTimeout=30
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
 sitename=http://localhost
 nicevalue=1
@@ -112,9 +113,9 @@ filesizenooverwrite=1000000000000
 maxmatchesbg=300000
 archivenumber=280
 archivenumber=91
+multiplier=2
 minmatchesforonline=15
-titeout1=7
-titeout2=15
+defaultTimeout=30
 elif [[ "`uname -a`" == *".from.sh"* ]]; then
 sitename=http://f2.dhamma.gift
 mode=online
@@ -153,10 +154,12 @@ truncatelength=30
 filesizenooverwrite=10000000
 maxmatchesbg=2000
 archivenumber=31
+multiplier=2
 minmatchesforonline=15
-titeout1=7
-titeout2=15
+defaultTimeout=30
+
 fi
+
 #common vars
 
 filelimit=500 
@@ -172,7 +175,6 @@ indexesfile=$apachesitepath/assets/texts/text_indexes.txt
 thsucurldn=$apachesitepath/assets/texts/dn_curl_toc.html
 thsulocation=$apachesitepath/tipitaka.theravada.su/
 searchdir=$apachesitepath/theravada.ru/Teaching/Canon/Suttanta/Texts
-latestrusmn=38
 
 function pvlimit {
 pv -L 1m -q

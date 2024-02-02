@@ -27,15 +27,13 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 
 function writeToTmpHtml {
-   
-   
-if [ "$totaltexts" -le 15 ]; then
-    timeout=$titeout1
-elif [ "$totaltexts" -ge 16 ] && [ "$totaltexts" -lt 30 ]; then
-    timeout=$titeout2
-else
-    timeout=60
+if [ "$totaltexts" -le 50 ]; then
+    timeout=$(awk "BEGIN {printf \"%.2f\", $totaltexts / $multiplier }" )
+  timeout=`echo $timeout | sed 's@\..*@@'`
+elif [ "$totaltexts" -ge 51 ]; then
+    timeout=$defaultTimeout
 fi
+
 cp $table $tmphtml
 sed -i '/<table id="pali"/s@id="pali"@id="temporary"@g' $tmphtml
 sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml

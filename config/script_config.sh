@@ -77,7 +77,7 @@ truncatelength=30
 filesizenooverwrite=700000
 maxmatchesbg=3500
 archivenumber=91
-minmatchesforonline=10
+minmatchesforonline=15
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
 sitename=http://localhost

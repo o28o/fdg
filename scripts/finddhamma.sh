@@ -1600,7 +1600,7 @@ echo "</td></tr>
 " >> $history
 
 rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand $rand* > /dev/null 2>&1
-echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" >> $tmphtml
+echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" > $tmphtml
 echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>"
 
 end=`date +%s`

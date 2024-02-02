@@ -27,7 +27,7 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 
 function writeToTmpHtml {
-  
+   
    
 if [ "$totaltexts" -le 15 ]; then
     timeout=$titeout1

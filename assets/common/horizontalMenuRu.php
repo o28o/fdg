@@ -1,5 +1,5 @@
 <?php
-if (( basename($_SERVER['REQUEST_URI']) != "ru")) {
+if (preg_match('/read\.php.*/', basename($_SERVER['REQUEST_URI']))) {
 echo '<div class="d-md-inline-block">	
 <a class="text-decoration-none mx-1" href="' . $mainpage . '">
 <figure class="figure text-decoration-none">

@@ -34,6 +34,7 @@ elif [ "$totaltexts" -ge 51 ]; then
     timeout=$defaultTimeout
 fi
 
+#cp $table $tmphtml
 sed -n '/<table/q;p' $table > $tmphtml
 inProgressresponse >> $tmphtml
 sed -n '/<table/,$p' $table  >> $tmphtml 

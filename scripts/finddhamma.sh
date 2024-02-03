@@ -35,17 +35,21 @@ elif [ "$totaltexts" -ge 51 ]; then
 fi
 
 cp $table $tmphtml
-sed -i '/<table id="pali"/s@id="pali"@id="temporary"@g' $tmphtml
-sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml
-sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh every '$timeout' sec @g' $tmphtml
-inProgressresponse >> $tmphtml
-echo "</tbody>
- </table>"  >> $tmphtml
- 
 echo "<script>setInterval(function() {
         location.reload();
     }, ${timeout}000);
    
+   function waitForHtml() {
+    if (!document.body.innerHTML.includes('</html>')) {
+        setTimeout(waitForHtml, 1000); // Повторяем через 1 секунду
+    } else {
+        // Здесь можете выполнить действия, которые должны произойти после того, как слово '</html>' обнаружено
+        console.log('Слово </html> обнаружено. Продолжаем отрисовку страницы.');
+    }
+}
+
+waitForHtml(); // Начинаем ожидание
+
   document.addEventListener('DOMContentLoaded', function() {
     var refreshLink = document.getElementById('refreshLink');
 
@@ -56,6 +60,12 @@ echo "<script>setInterval(function() {
   });
     
 </script>" >> $tmphtml
+sed -i '/<table id="pali"/s@id="pali"@id="temporary"@g' $tmphtml
+sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml
+sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh every '$timeout' sec @g' $tmphtml
+inProgressresponse >> $tmphtml
+echo "</tbody>
+ </table>"  >> $tmphtml
 
 cat $templatefolder/Footer.html | sed "s@('#pali')@('#temporary')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
 ((round++))
@@ -1417,7 +1427,7 @@ nohup bash scripts/finddhamma.sh -nbg-$rand $@ >/dev/null 2>&1 & disown
 counter=0
 
 while [ $counter -lt 10 ]; do
-    if [ -f "./result/$tmphtml" ]; then
+if [ -f "./result/$tmphtml" ] && grep -q "</html>" ./result/$tmphtml; then
         echo "<script>window.location.href=\"./result/$tmphtml\";</script>"
         break
     else

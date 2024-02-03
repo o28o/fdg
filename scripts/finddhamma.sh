@@ -35,21 +35,21 @@ elif [ "$totaltexts" -ge 51 ]; then
 fi
 
 cp $table $tmphtml
-echo "<script>setInterval(function() {
-        location.reload();
-    }, ${timeout}000);
-   
-   function waitForHtml() {
-    if (!document.body.innerHTML.includes('</html>')) {
+echo "<script>function waitForHtml() {
+    if (document.readyState !== 'complete' || !document.body.innerHTML.includes('</html>')) {
         setTimeout(waitForHtml, 1000); // Повторяем через 1 секунду
     } else {
         // Здесь можете выполнить действия, которые должны произойти после того, как слово '</html>' обнаружено
-        console.log('Слово </html> обнаружено. Продолжаем отрисовку страницы.');
+        console.log('Слово </html> обнаружено. Продолжаем загрузку страницы.');
     }
 }
 
-waitForHtml(); // Начинаем ожидание
+document.addEventListener('DOMContentLoaded', waitForHtml);
 
+setInterval(function() {
+        location.reload();
+    }, ${timeout}000);
+   
   document.addEventListener('DOMContentLoaded', function() {
     var refreshLink = document.getElementById('refreshLink');
 
@@ -1426,12 +1426,12 @@ nohup bash scripts/finddhamma.sh -nbg-$rand $@ >/dev/null 2>&1 & disown
 
 counter=0
 
-while [ $counter -lt 10 ]; do
+while [ $counter -lt 15 ]; do
 if [ -f "./result/$tmphtml" ] && grep -q "</html>" ./result/$tmphtml; then
         echo "<script>window.location.href=\"./result/$tmphtml\";</script>"
         break
     else
-        if [ $counter -eq 9 ]; then
+        if [ $counter -eq 14 ]; then
             echo "Error: File ./result/$tmphtml not found."
             break
         else
@@ -1595,7 +1595,10 @@ echo "</td></tr>
 
 rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand $rand* > /dev/null 2>&1
 echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" > $tmphtml
-echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>"
+echo "<script>
+history.pushState({ previousPage: window.location.href }, '');
+window.location.href=\"$mainpagebase/result/${table}\";
+</script>"
 
 end=`date +%s`
 runtime=$((end-start))

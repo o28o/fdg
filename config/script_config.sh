@@ -43,8 +43,8 @@ filesizenooverwrite=100000000000
 maxmatchesbg=3000
 archivenumber=84
 minmatchesforonline=5
-defaultTimeout=60
-multiplier=1
+
+multiplier=0.5
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
 sitename=http://localhost
@@ -82,7 +82,7 @@ archivenumber=91
 
 multiplier=2
 minmatchesforonline=15
-defaultTimeout=30
+
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
 sitename=http://localhost
 nicevalue=1
@@ -115,7 +115,7 @@ archivenumber=280
 archivenumber=91
 multiplier=2
 minmatchesforonline=15
-defaultTimeout=30
+
 elif [[ "`uname -a`" == *".from.sh"* ]]; then
 sitename=http://f2.dhamma.gift
 mode=online
@@ -156,11 +156,13 @@ maxmatchesbg=2000
 archivenumber=31
 multiplier=2
 minmatchesforonline=15
-defaultTimeout=30
+
 
 fi
 
 #common vars
+
+defaultTimeout=30
 
 filelimit=500 
 procqnty=4

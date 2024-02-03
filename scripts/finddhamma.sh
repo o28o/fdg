@@ -35,6 +35,7 @@ elif [ "$totaltexts" -ge 51 ]; then
 fi
 
 cp $table $tmphtml
+
 echo "<script>function waitForHtml() {
     if (document.readyState !== 'complete' || !document.body.innerHTML.includes('</html>')) {
         setTimeout(waitForHtml, 1000); // Повторяем через 1 секунду
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', waitForHtml);
 
 setInterval(function() {
         location.reload();
-    }, ${timeout}000);
+    }, ${timeout} * 1000);
    
   document.addEventListener('DOMContentLoaded', function() {
     var refreshLink = document.getElementById('refreshLink');
@@ -66,7 +67,7 @@ sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-ref
 inProgressresponse >> $tmphtml
 echo "</tbody>
  </table>"  >> $tmphtml
-
+echo "<script $fontawesomejs></script>" >> $tmphtml
 cat $templatefolder/Footer.html | sed "s@('#pali')@('#temporary')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
 ((round++))
 }
@@ -101,12 +102,20 @@ function emptypattern {
 }
 
 function inProgressresponse {
-  echo "<div class='alert alert-warning alert-dismissible fade show' role='alert' id='successAlert'>
-  <strong>Идёт загрузка...</strong> $round из $totaltexts результатов по $pattern обработано. Авто-обновление каждые $timeout секунд. <a href='' class='alert-link' id='refreshLink'>Обновить вручную.</a>
-     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-</div>"
+  
+  echo "
+  <div class='alert alert-warning alert-dismissible fade show ' role='alert' id='successAlert'>
+<div class='spinner-border spinner-border-sm' role=status>
+  <span class=visually-hidden>Loading...</span>
+</div> <strong> Загружаю...</strong> $round из $totaltexts текстов с $pattern обработано. Авто-обновление каждые $timeout секунд. 
+  <a href='' class='alert-link' id='refreshLink'>
+<i class='fa-solid fa-arrow-rotate-right'></i>
+  Обновить вручную.</a>
+       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button> 
+</div>" 
 }
-
+#  <a href='' class='alert-link' id='startAutorefresh'><i class='fa-solid fa-play'></i>Авто-обновление</a> 
+#  <a href='' class='alert-link' id='pauseRefresh'><i class='fa-solid fa-pause'></i>  Пауза</a>
 
 function OKresponse {
   echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language "
@@ -155,7 +164,10 @@ function emptypattern {
 
 function inProgressresponse {
   echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-  <strong>Loading...</strong> $round of $totaltexts records proccessed for $pattern. Page auto-refresh every $timeout sec. <a href='' class='alert-link' id='refreshLink'>Refresh manually.</a>
+  <div class='spinner-border spinner-border-sm' role=status>
+  <span class=visually-hidden>Loading...</span>
+</div> 
+  <strong>Loading...</strong> $round of $totaltexts records with $pattern proccessed. Page auto-refresh every $timeout sec. <a href='' class='alert-link' id='refreshLink'>Refresh manually.</a>
    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>"
 }
 
@@ -955,12 +967,9 @@ audiofile=$(ls "$apachesitepath/assets/audio/$pathblocknotexttype/${filenamebloc
 Audiofileforlink=$(echo "$audiofile" | sed "s|$apachesitepath||")
 
 svgicon='<?xml version="1.0" encoding="utf-8"?>
-
 <svg style="fill:currentColor;" height="18px" width="18px" version="1.1" id="Listening" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-
 	 viewBox="0 0 128 128" xml:space="preserve">
 	 <g transform="translate(-15,-15)">
-	 
 <path id="_x34__1_" d="M39.6,108.1c-8.8,0-16-7.2-16-16c0-2.2,1.8-4,4-4s4,1.8,4,4c0,4.4,3.6,8,8,8c2.8,0,5.4-1.5,6.9-3.9
 	c0.6-1,1.4-2.8,2.3-4.7c1.7-3.8,3.6-8.1,6-11.2c1.9-2.5,4.7-5,7.4-7.5c2.7-2.5,5.8-5.4,6.8-7.2c2-3.5,3-7.4,3-11.4
 	c0-12.7-10.3-23-23-23s-23,10.3-23,23c0,2.2-1.8,4-4,4s-4-1.8-4-4c0-17.1,13.9-31,31-31c17.1,0,31,13.9,31,31
@@ -977,8 +986,6 @@ svgicon='<?xml version="1.0" encoding="utf-8"?>
 	C98.4,89.5,97.1,90.1,95.9,90.1z"/>
 	</g>
 </svg>'
-
-
 
 #matching_files=( $apachesitepath/assets/texts/$pathblock/*${filenameblock}_translation*{+o,-o}.json )
 #if [[ ${#matching_files[@]} -gt 0 ]]; then
@@ -1140,6 +1147,7 @@ echo "<tr>
 <td>$count</td>   
 <td>$metaphorcount</td>
 <td>
+`[ "$suttanumber" != "" ] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
 <a target=\"_blank\" href="$linken">En</a> 
 
 `[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
@@ -1149,10 +1157,12 @@ $([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\
 
 
 `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
-`[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"` 
-`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi` 
+`[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"`
+
+
 
 </td>" | tohtml
+#`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
 echo "<td><p>" | tohtml 
 for i in $indexlist
 do
@@ -1594,10 +1604,10 @@ echo "</td></tr>
 " >> $history
 
 rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand $rand* > /dev/null 2>&1
-echo "<script>window.location.href=\"$mainpagebase/result/${table}\";</script>" > $tmphtml
+echo "<script>window.location.href=\"$pagelang/result/${table}\";</script>" > $tmphtml
 echo "<script>
 history.pushState({ previousPage: window.location.href }, '');
-window.location.href=\"$mainpagebase/result/${table}\";
+window.location.href=\"$pagelang/result/${table}\";
 </script>"
 
 end=`date +%s`

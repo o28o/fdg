@@ -34,9 +34,13 @@ elif [ "$totaltexts" -ge 51 ]; then
     timeout=$defaultTimeout
 fi
 
-cp $table $tmphtml
-
-echo "
+sed -n '/<table/q;p' $table > $tmphtml
+inProgressresponse >> $tmphtml
+sed -n '/<table/,$p' $table  >> $tmphtml 
+echo "</tbody>
+ </table>"  >> $tmphtml
+ 
+ echo "
 <script>function waitForHtml() {
     if (document.readyState !== 'complete' || !document.body.innerHTML.includes('</html>')) {
         setTimeout(waitForHtml, 1000); // Повторяем через 1 секунду
@@ -61,9 +65,6 @@ document.addEventListener('DOMContentLoaded', waitForHtml);
 sed -i '/<table id="pali"/s@id="pali"@id="temporary-'$rand'"@g' $tmphtml
 sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml
 sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh '$timeout' sec @g' $tmphtml
-inProgressresponse >> $tmphtml
-echo "</tbody>
- </table>"  >> $tmphtml
 echo "<script>" >> $tmphtml
 cat $apachesitepath/assets/js/timer.js | sed '/time_in_seconds = 60;/s/60/'${timeout}'/' >> $tmphtml
 echo "</script>" >> $tmphtml
@@ -404,7 +405,7 @@ fi
 userpattern="$pattern"
 patternForHighlight="`echo $pattern | sed 's@е@[её]@g' | sed 's@ṃ@[ṃṁ]@g' | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's@^@(@g' | sed 's/$/)/g' | sed 's@,@@g'`"
 
-if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] || [[ "$pattern" == "-nm5" ]] || [[ "$pattern" == "-nm1" ]] || [[ "$pattern" == "-conv" ]] 
+if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] || [[ "$pattern" == "-nm5" ]] || [[ "$pattern" == "-nm10" ]] || [[ "$pattern" == "-conv" ]] 
 then   
 #emptypattern
    exit 3
@@ -500,7 +501,7 @@ else
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,5}[\?,]|\bKo .{0,40}${modpattern}|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,5}[\?,]|\bKo .{0,40}${modpattern}|\bayaṁ .{0,40}${modpattern}|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
 }
 fi  
 

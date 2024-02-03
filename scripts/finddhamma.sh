@@ -76,6 +76,7 @@ if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
 mainpagebase="/ru"
 outfnlang=-ru
+langforhist="/Ru"
 defaultlang='lang=pli-rus'
 excluderesponse="исключая"
 function bgswitch {
@@ -146,6 +147,7 @@ else #eng
 pagelang=
 mainpagebase="/"
 defaultlang='lang=pli-eng'
+langforhist="/En"
 excluderesponse="excluding"
 function bgswitch {
  # removefilenames
@@ -651,6 +653,7 @@ if [[ "$@" == *"-th"* ]]; then
     fnlang=_th
     pali_or_lang=sc-data/html_text/th/pli 
     language=Thai
+    langforhist="/Th"
 	printlang=ไทย
     directlink=
     type=html   
@@ -660,6 +663,7 @@ elif [[ "$@" == *"-si"* ]]; then
     fnlang=_si
     pali_or_lang=sc-data/html_text/si/pli 
     language=Sinhala
+    langforhist="/Si"
 	printlang=සිංහල
     directlink=
     type=html   
@@ -1572,7 +1576,7 @@ fi
 
 #<img src='/assets/svg/regular-star.svg' class='starsvg'></img>
 echo -n "<!-- begin $userpattern --> 
-<tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><td><label class='star-checkbox'><input type='checkbox' data-index=\"${table}\"/><i class='fa-regular fa-star'></i></label></td><td>$textsqnty</td><td>$matchqnty</td><td><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></td><td>${fortitle^}</td><td>$language</td><td class=\"daterow\">$dateforhist</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td>" >> $history
+<tr><td><a class=\"outlink\" href=\"./result/${table}\">${userpattern}</a></td><td><label class='star-checkbox'><input type='checkbox' data-index=\"${table}\"/><i class='fa-regular fa-star'></i></label></td><td>$textsqnty</td><td>$matchqnty</td><td><a class=\"outlink\" href=\"./result/${tempfilewords}\">$uniqwordtotal</a></td><td>${fortitle^}$langforhist</td><td>$language</td><td class=\"daterow\">$dateforhist</td><td>`ls -lh ${table} | awk '{print  $5}'`</td><td>" >> $history
 #}'`</td><td><label  class='custom-checkbox'><input type='checkbox' class='star-checkbox' data-index='1'/><i class='fa-solid fa-star glyphicon glyphicon-star-empty'></i><i class='fa-solid fa-star glyphicon glyphicon-star'></i></label></td><td>"
 if [[ "$type" == json ]]; then
   if (( $textsqnty <= 40 ))
@@ -1604,7 +1608,8 @@ echo "</td></tr>
 " >> $history
 
 rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand $rand* > /dev/null 2>&1
-echo "<script>window.location.href=\"$pagelang/result/${table}\";</script>" > $tmphtml
+echo "<meta charset='utf-8'>
+<script>window.location.href=\"$pagelang/result/${table}\";</script>" > $tmphtml
 echo "<script>
 history.pushState({ previousPage: window.location.href }, '');
 window.location.href=\"$pagelang/result/${table}\";

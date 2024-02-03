@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', waitForHtml);
   });
     
 </script>" >> $tmphtml
-sed -i '/<table id="pali"/s@id="pali"@id="temporary"@g' $tmphtml
+sed -i '/<table id="pali"/s@id="pali"@id="temporary-'$rand'"@g' $tmphtml
 sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml
 sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh '$timeout' sec @g' $tmphtml
 inProgressresponse >> $tmphtml
@@ -68,7 +68,7 @@ echo "<script>" >> $tmphtml
 cat $apachesitepath/assets/js/timer.js | sed '/time_in_seconds = 60;/s/60/'${timeout}'/' >> $tmphtml
 echo "</script>" >> $tmphtml
 echo "<script $fontawesomejs></script>" >> $tmphtml
-cat $templatefolder/Footer.html | sed "s@('#pali')@('#temporary')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
+cat $templatefolder/Footer.html | sed "s@('#pali')@('#temporary-$rand')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
 ((round++))
 }
 #setInterval(function() {   location.reload();   }, ${timeout} * 1000);
@@ -93,6 +93,10 @@ function bgswitch {
 function reverseyoinpattern {
 pattern="`echo $pattern | sed 's/\[ёе\]/е/g' | sed 's/\[ṅṁṃ\]/'$initialNorM'/g'`"
 }  
+
+function GeneralError {
+  echo "Пожалуйста, повторите запрос"
+}
 
 function capitalized {
 echo "$pattern" | sed 's/[[:lower:]]/\U&/'
@@ -165,6 +169,9 @@ function emptypattern {
    echo "Empty pattern"
 }
 
+function GeneralError {
+  echo "Please, try again"
+}
 function inProgressresponse {
   echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
   <strong>Loading...</strong> $round of $totaltexts records with $pattern proccessed. Auto-refresh in <div id='countdown'></div>
@@ -1448,7 +1455,7 @@ if [ -f "./result/$tmphtml" ] && grep -q "</html>" ./result/$tmphtml; then
         break
     else
         if [ $counter -eq 14 ]; then
-            echo "Error: File ./result/$tmphtml not found."
+            GeneralError
             break
         else
             sleep 1
@@ -1611,7 +1618,18 @@ echo "</td></tr>
 
 rm $basefile $tempfile $tempfilewhistory *grepbase* tmp* *tmp *$rand $rand* > /dev/null 2>&1
 echo "<meta charset='utf-8'>
-<script>window.location.href=\"$pagelang/result/${table}\";</script>" > $tmphtml
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var refreshLink = document.getElementById('refreshLink');
+
+    refreshLink.addEventListener('click', function(event) {
+      event.preventDefault(); 
+      location.reload();
+    });
+  });
+
+window.location.href=\"$pagelang/result/${table}\";
+</script>" > $tmphtml
 echo "<script>
 history.pushState({ previousPage: window.location.href }, '');
 window.location.href=\"$pagelang/result/${table}\";

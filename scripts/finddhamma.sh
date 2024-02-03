@@ -36,7 +36,8 @@ fi
 
 cp $table $tmphtml
 
-echo "<script>function waitForHtml() {
+echo "
+<script>function waitForHtml() {
     if (document.readyState !== 'complete' || !document.body.innerHTML.includes('</html>')) {
         setTimeout(waitForHtml, 1000); // Повторяем через 1 секунду
     } else {
@@ -46,10 +47,6 @@ echo "<script>function waitForHtml() {
 }
 
 document.addEventListener('DOMContentLoaded', waitForHtml);
-
-setInterval(function() {
-        location.reload();
-    }, ${timeout} * 1000);
    
   document.addEventListener('DOMContentLoaded', function() {
     var refreshLink = document.getElementById('refreshLink');
@@ -63,15 +60,18 @@ setInterval(function() {
 </script>" >> $tmphtml
 sed -i '/<table id="pali"/s@id="pali"@id="temporary"@g' $tmphtml
 sed -i '/<button.*>Words</s@type="button">@type="button" disabled>@g' $tmphtml
-sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh every '$timeout' sec @g' $tmphtml
+sed -i 's@TitletoReplace@'$round' of '$totaltexts' done for '$pattern'. Auto-refresh '$timeout' sec @g' $tmphtml
 inProgressresponse >> $tmphtml
 echo "</tbody>
  </table>"  >> $tmphtml
+echo "<script>" >> $tmphtml
+cat $apachesitepath/assets/js/timer.js | sed '/time_in_seconds = 60;/s/60/'${timeout}'/' >> $tmphtml
+echo "</script>" >> $tmphtml
 echo "<script $fontawesomejs></script>" >> $tmphtml
 cat $templatefolder/Footer.html | sed "s@('#pali')@('#temporary')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
 ((round++))
 }
-
+#setInterval(function() {   location.reload();   }, ${timeout} * 1000);
 if [[ "$@" == *"-oru"* ]]; then
 pagelang="/ru"
 mainpagebase="/ru"
@@ -89,7 +89,7 @@ function bgswitch {
 	3. Скачайте необработанные данные <a class=\"outlink\" href="/result/${basefile}">здесь</a>
 	"
 }
-
+#
 function reverseyoinpattern {
 pattern="`echo $pattern | sed 's/\[ёе\]/е/g' | sed 's/\[ṅṁṃ\]/'$initialNorM'/g'`"
 }  
@@ -105,19 +105,20 @@ function emptypattern {
 function inProgressresponse {
   
   echo "
-  <div class='alert alert-warning alert-dismissible fade show ' role='alert' id='successAlert'>
-<div class='spinner-border spinner-border-sm' role=status>
-  <span class=visually-hidden>Loading...</span>
-</div> <strong> Загружаю...</strong> $round из $totaltexts текстов с $pattern обработано. Авто-обновление каждые $timeout секунд. 
-  <a href='' class='alert-link' id='refreshLink'>
-<i class='fa-solid fa-arrow-rotate-right'></i>
-  Обновить вручную.</a>
-       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button> 
+<div class='alert alert-warning alert-dismissible fade show' role='alert' id='successAlert'>
+
+   <strong>Загружаю...</strong> $round из $totaltexts текстов с $pattern обработано. Авто-обновление через <div id='countdown'></div>
+      <button class='alert-link btn btn-link' id='resume'><i class='fa-solid fa-play'></i></button>
+   <button class='alert-link btn btn-link' id='pause'><i class='fa-solid fa-pause'></i></button>
+   <button class='alert-link btn btn-link' id='refreshLink'><i class='fa-solid fa-arrow-rotate-right'></i></button>
+
+<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
 </div>" 
 }
-#  <a href='' class='alert-link' id='startAutorefresh'><i class='fa-solid fa-play'></i>Авто-обновление</a> 
-#  <a href='' class='alert-link' id='pauseRefresh'><i class='fa-solid fa-pause'></i>  Пауза</a>
-
+#$timeout секунд.  &nbsp;
+#<div class='spinner-border spinner-border-sm' role=status>
+#<span class=visually-hidden>Loading...</span>
+#</div>
 function OKresponse {
   echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language "
 }
@@ -166,10 +167,11 @@ function emptypattern {
 
 function inProgressresponse {
   echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
-  <div class='spinner-border spinner-border-sm' role=status>
-  <span class=visually-hidden>Loading...</span>
-</div> 
-  <strong>Loading...</strong> $round of $totaltexts records with $pattern proccessed. Page auto-refresh every $timeout sec. <a href='' class='alert-link' id='refreshLink'>Refresh manually.</a>
+  <strong>Loading...</strong> $round of $totaltexts records with $pattern proccessed. Auto-refresh in <div id='countdown'></div>
+      <button class='alert-link btn btn-link' id='resume'><i class='fa-solid fa-play'></i></button>
+   <button class='alert-link btn btn-link' id='pause'><i class='fa-solid fa-pause'></i></button>
+   <button class='alert-link btn btn-link' id='refreshLink'><i class='fa-solid fa-arrow-rotate-right'></i></button> 
+  
    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>"
 }
 

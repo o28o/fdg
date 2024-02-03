@@ -89,6 +89,11 @@
   width: 30px;
 }
 
+#countdown, #pause, #resume, #refreshLink {
+    display: inline-block;
+    margin-right: 2px;
+}
+
 .countdown-icon {
   height: 22px; 
   width: 22px;

@@ -28,7 +28,7 @@ dateforhist=`date +%d-%m-%Y`
 
 function writeToTmpHtml {
   
-if [ "$linescount" -ge 50 ]; then
+if [ "$linescount" -ge 200 ]; then
 skiprounds=0
 fi
 if [ "$totaltexts" -le 50 ]; then

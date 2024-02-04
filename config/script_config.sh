@@ -82,7 +82,7 @@ maxmatchesbg=3500
 archivenumber=91
 
 multiplier=2
-minmatchesforonline=15
+minmatchesforonline=10
 skiprounds=5
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 

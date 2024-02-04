@@ -6,7 +6,7 @@ include_once('../config/config.php');
 include_once('../config/translate.php');
 include '../scripts/opentexts.php';
 ?>
-<html lang="<?php echo $htmllang;?>">
+<html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
 
     <head>
         <meta charset="UTF-8" />
@@ -65,5 +65,5 @@ include '../scripts/opentexts.php';
     </body>
         <!-- Bootstrap core JS-->
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
-
+<script defer src="/assets/js/themeswitch.js"></script>
 </html>

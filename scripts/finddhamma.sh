@@ -1118,12 +1118,16 @@ then
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
 linksi=`echo $filenameblock |  awk -v lksi="$linkforsi" -v ext="$linkforsiext" '{print lksi$0''ext}' `
 link=`echo $filenameblock |  awk -v lkru="$linkforru" -v ext="$linkforruext" '{print lkru$0''ext}' `
-fi
+
 htmlpattern=$(echo "$pattern" | sed 's/\\.//g' | sed 's/ /%20/g')
 
-echo echo "$pattern"  >out
-echo $htmlpattern >>out
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?s='${htmlpattern}'&q="$0}' ` 
+linkgeneral=`echo $filenameblock | awk '{print "'${pagelang}'/sc/?s='${htmlpattern}'&q="$0}' ` 
+else
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0}' ` 
+fi
+
+
+
 
 #"&'$defaultlang'
 
@@ -1172,7 +1176,7 @@ echo "<tr>
 <td>$count</td>   
 <td>$metaphorcount</td>
 <td>
-`[ "$suttanumber" != "" ] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
+`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
 <a target=\"_blank\" href="$linken">En</a> 
 
 `[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
@@ -1600,7 +1604,9 @@ echo -n "<!-- begin $userpattern -->
 if [[ "$type" == json ]]; then
   if (( $textsqnty <= 40 ))
   then
-  echo -n "<br>`cat $tempfilewhistory | grep href | highlightpattern | xargs`" >> $history
+  echo -n "<br>`cat $tempfilewhistory | grep href | sed -E "s@$patternForHighlight@<b>&</b>@I" | xargs`" >> $history
+  cat $tempfilewhistory  > out 
+  cat $tempfilewhistory | grep href | sed -E "s@$patternForHighlight@<b>&</b>@I" | xargs > out2
   else 
   echo -n "<br>" >> $history
   fi

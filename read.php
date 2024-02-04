@@ -419,7 +419,7 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>    
 </div>
 </div>
-        	<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 mb-1' role='alert' id='successAlert'>
+        	<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 mb-1 text-start' role='alert' id='successAlert'>
   <div id="response"></div>
   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
 </div>		  

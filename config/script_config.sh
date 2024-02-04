@@ -39,12 +39,13 @@ wafter=3
 linesafter=0
 minlength=3
 truncatelength=30
-filesizenooverwrite=100000000000
+filesizenooverwrite=300000
 maxmatchesbg=3000
 archivenumber=84
 minmatchesforonline=5
 
 multiplier=0.5
+skiprounds=3
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
 sitename=http://localhost
@@ -76,12 +77,13 @@ wafter=3
 linesafter=0
 minlength=2
 truncatelength=30
-filesizenooverwrite=700000
+filesizenooverwrite=500000
 maxmatchesbg=3500
 archivenumber=91
 
 multiplier=2
 minmatchesforonline=15
+skiprounds=5
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
 sitename=http://localhost
@@ -115,6 +117,7 @@ archivenumber=280
 archivenumber=91
 multiplier=2
 minmatchesforonline=15
+skiprounds=5
 
 elif [[ "`uname -a`" == *".from.sh"* ]]; then
 sitename=http://f2.dhamma.gift
@@ -156,7 +159,7 @@ maxmatchesbg=2000
 archivenumber=31
 multiplier=2
 minmatchesforonline=15
-
+skiprounds=5
 
 fi
 

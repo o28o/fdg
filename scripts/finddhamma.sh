@@ -27,13 +27,18 @@ cd $output
 dateforhist=`date +%d-%m-%Y`
 
 function writeToTmpHtml {
+  
+if [ "$linescount" -ge 50 ]; then
+skiprounds=0
+fi
 if [ "$totaltexts" -le 50 ]; then
-    timeout=$(awk "BEGIN {printf \"%.2f\", $totaltexts / $multiplier }" )
+    timeout=$(awk "BEGIN {printf \"%.2f\", $totaltexts / $multiplier - $skiprounds }" )
   timeout=`echo $timeout | sed 's@\..*@@'`
 elif [ "$totaltexts" -ge 51 ]; then
     timeout=$defaultTimeout
 fi
 
+if [ "$round" -ge $skiprounds ]; then
 #cp $table $tmphtml
 sed -n '/<table/q;p' $table > $tmphtml
 inProgressresponse >> $tmphtml
@@ -71,6 +76,7 @@ cat $apachesitepath/assets/js/timer.js | sed '/time_in_seconds = 60;/s/60/'${tim
 echo "</script>" >> $tmphtml
 echo "<script $fontawesomejs></script>" >> $tmphtml
 cat $templatefolder/Footer.html | sed "s@('#pali')@('#temporary-$rand')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
+fi
 ((round++))
 }
 #setInterval(function() {   location.reload();   }, ${timeout} * 1000);
@@ -97,7 +103,7 @@ pattern="`echo $pattern | sed 's/\[ёе\]/е/g' | sed 's/\[ṅṁṃ\]/'$initial
 }  
 
 function GeneralError {
-  echo "Пожалуйста, повторите запрос"
+  echo "Ожидайте результат в истории. <a href='./result/$tmphtml'>Следить</a>"
 }
 
 function capitalized {
@@ -172,7 +178,7 @@ function emptypattern {
 }
 
 function GeneralError {
-  echo "Please, try again"
+  echo "Check result in History. <a href='./result/$tmphtml'>Watch</a>"
 }
 function inProgressresponse {
   echo "<div class='alert alert-warning alert-dismissible fade show' role='alert'>
@@ -1389,7 +1395,6 @@ echo grepbase > time_output.txt
 
 if [[ "$@" == *"-nm"* ]] 
 then
-
 topmatchesintexts=`cat $basefile | awk '{print $1}' | uniq -c | LC_ALL=C sort -r | head -n$numbersmatches | awk '{print $2}'`
 for i in $topmatchesintexts
 do
@@ -1445,19 +1450,22 @@ pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 	#Clarification
      rm $basefile
      exit 1
+elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then 
+bgswitch
+exit 3
+#	echo "$@" | sed 's/-oru //g' | sed 's/-oge //g' | sed 's/-ogr //g'   | sed 's/-nbg //g' >> ../input/input.txt     
 elif [ $totaltexts -ge $minmatchesforonline ] && [[ "$@" != *"-nbg"* ]];  then  
 rm $tmphtml
 cd ..
 nohup bash scripts/finddhamma.sh -nbg-$rand $@ >/dev/null 2>&1 & disown
 
 counter=0
-
-while [ $counter -lt 15 ]; do
+while [ $counter -lt 60 ]; do
 if [ -f "./result/$tmphtml" ] && grep -q "</html>" ./result/$tmphtml; then
         echo "<script>window.location.href=\"./result/$tmphtml\";</script>"
         break
     else
-        if [ $counter -eq 14 ]; then
+        if [ $counter -eq 59 ]; then
             GeneralError
             break
         else
@@ -1467,10 +1475,6 @@ if [ -f "./result/$tmphtml" ] && grep -q "</html>" ./result/$tmphtml; then
     fi
 done
 exit 0     
-elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then 
-bgswitch
-exit 3
-#	echo "$@" | sed 's/-oru //g' | sed 's/-oge //g' | sed 's/-ogr //g'   | sed 's/-nbg //g' >> ../input/input.txt
 fi
 
 }

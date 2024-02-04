@@ -211,6 +211,9 @@ $finaloutput = "<script>
 console.log('$outputnonl');
 const responseElement = document.querySelector('#response');
 responseElement.innerHTML = '$outputnonl';
+if (responseElement !== '') {
+    successAlert.style.display = 'block';
+  }
 </script>";
 if ($outputnonl !== '<br>') {
 echo $finaloutput;  

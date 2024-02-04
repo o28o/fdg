@@ -303,10 +303,6 @@ $(document).ready(function() {
 </script>
 
 	  <script src="/assets/js/smoothScroll.js" defer></script>
-	
-
-
-
 
 <script>
   
@@ -423,15 +419,22 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>    
 </div>
 </div>
+        	<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 mb-1' role='alert' id='successAlert'>
+  <div id="response"></div>
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>		  
   </div>
       </div>	
+      
+
             <div id="spinner" class="justify-content-center">
               <div class="spinner-border mb-3" role="status">
                 <span class="visually-hidden">Loading...</span>
               </div>
               </div>
-			  
-			  
+                
+
+
 <script defer>
 window.addEventListener('pageshow', function(event) {
   if (event.persisted) {
@@ -444,7 +447,6 @@ window.addEventListener('pageshow', function(event) {
 
   <!-- extra options end -->
 </form>
-    <div id="response"></div>
 
 </header>
 

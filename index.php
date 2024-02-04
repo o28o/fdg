@@ -385,8 +385,16 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>    
 </div>
 </div>
+
+<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3' role='alert' id='successAlert'>
+  <div id="response"></div>
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>
+
   </div>
+  
       </div>	
+      
             <div id="spinner" class="justify-content-center">
               <div class="spinner-border mt-3" role="status">
                 <span class="visually-hidden">Loading...</span>
@@ -409,7 +417,6 @@ window.addEventListener('pageshow', function(event) {
   <!-- extra options end -->
 </form>
 
-  <div id="response"></div>
 <div class="hideOnMobile">
   <p><br>
   <br>

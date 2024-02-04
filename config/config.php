@@ -74,6 +74,7 @@ $linklearnpali = '/lp/';
 $linktbw = '/bw';
 
 $mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hикая.html";
+$mainpagethrfvinayalink = "/theravada.rf/palicanon/виная.html";
 $mainpagethrulink = "/theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 
@@ -101,7 +102,7 @@ $linktbw = '/bw';
 //$linktbw = 'https://thebuddhaswords.net';
 
 $mainpagethrflink =  "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";
-
+$mainpagethrfvinayalink = "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%d0%b2%d0%b8%d0%bd%d0%b0%d1%8f"; 
   $mainpagethrulink = "https://theravada.ru/Teaching/Canon/Suttanta/samyutta.htm";
 
   $mainpagethsulink = 'https://tipitaka.theravada.su/toc/translations/1097' ;

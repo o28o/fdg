@@ -90,10 +90,11 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="MenuRussian">
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
-    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrflink . '">Тхеравада.рф</a></li>
-        <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/canon/dn/digha.htm">Dhamma.ru Дигха Никая</a></li>
-    <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
 
+  <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/canon/dn/digha.htm">Dhamma.ru Дигха Никая</a></li>
+    <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
+    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrflink . '">Тхеравада.рф Дигха Никая</a></li>
+    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrfvinayalink . '">Тхеравада.рф Патимоккха</a></li>
   </ul>
 <!-- </div> -->
 <a class="text-decoration-none mx-1" href="/ru/history.php">

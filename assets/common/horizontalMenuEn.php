@@ -62,6 +62,7 @@ echo '<!--
             <li><a class="dropdown-item" target="_blank" href="assets/dhammatalks.org/vinaya/bmc/Section0000.html">Patimokkha explained by Thanissaro Bh</a></li>
             
   <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha trans. by Nanatusita Bh</a></li>
+  <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi trans. by Ch Kabilsingh</a></li>
                   
  <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">
    <i class="' . $iconimportant . '"></i>

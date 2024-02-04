@@ -1496,7 +1496,7 @@ pattern=$userpattern
 title="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty texts and $matchqnty matches in $fortitle $language"
 
 if [[ "$@" == *"-nm"* ]]; then
-title="TOP-$numbersmatches `echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty texts and $matchqnty matches in $fortitle $language"
+title="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty texts and $matchqnty matches in $fortitle $language Top-$numbersmatches"
 fi
 
 
@@ -1582,7 +1582,7 @@ userpattern="$pattern exc. ${excludepattern,,}"
 fi 
 
 if [[ "$@" == *"-nm"* ]]; then
-fortitle="TOP-$numbersmatches ${fortitle^}"
+fortitle="Top-$numbersmatches ${fortitle^}"
 fi
 
 #<img src='/assets/svg/regular-star.svg' class='starsvg'></img>

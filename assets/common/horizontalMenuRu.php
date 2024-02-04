@@ -57,7 +57,7 @@ echo '<!--
                  <li><a class="dropdown-item" target="_blank" href="assets/dhammatalks.org/vinaya/bmc/Section0000.html">Patimokkha комм. Thanissaro Bh</a></li>
                  
               <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha пер. Nanatusita Bh</a></li>
-    
+           <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi пер. Ch Kabilsingh</a></li>
     
     <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
 

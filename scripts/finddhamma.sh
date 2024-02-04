@@ -181,7 +181,8 @@ function inProgressresponse {
    <button class='alert-link btn btn-link' id='pause'><i class='fa-solid fa-pause'></i></button>
    <button class='alert-link btn btn-link' id='refreshLink'><i class='fa-solid fa-arrow-rotate-right'></i></button> 
   
-   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>"
+   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+   </div>"
 }
 
 function OKresponse {
@@ -502,7 +503,7 @@ else
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
 
-nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,5}[\?,]|\bKo .{0,40}${modpattern}|\bayaṁ .{0,40}${modpattern}|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,9}[\?,]|\bKo .{0,40}${modpattern}|\bayaṁ .{0,40}${modpattern}|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
 }
 fi  
 

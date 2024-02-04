@@ -244,22 +244,6 @@ $(document).ready(function() {
 
   <?php echo $regexlink;?> 
  </p>
- 
- 
-<script type="text/javascript">
-  // restore scroll position
-  window.onload = function () {
-    if (localStorage.getItem("fdg-quote-scroll") != null) {
-      $(window).scrollTop(localStorage.getItem("fdg-quote-scroll"));
-    }
-
-    $(window).on("scroll", function() {
-      localStorage.setItem("fdg-quote-scroll", $(window).scrollTop());
-    });
-  };
-</script>
-	  <script src="/assets/js/smoothScroll.js" defer></script>
-	
 
 <script>
   $(document).ready(function () {
@@ -295,8 +279,33 @@ $(document).ready(function() {
       var isCollapsed = loadCollapseState(this.id);
       handleCollapse(this.id, isCollapsed);
     });
+
+    // Save and restore scroll position
+    var scrollPos = localStorage.getItem("scrollPos");
+    if (scrollPos) {
+      window.scrollTo(0, scrollPos);
+    }
+
+    $(window).on("beforeunload", function () {
+      localStorage.setItem("scrollPos", window.scrollY);
+    });
+
+    // Smooth scroll
+    $("a[href^='#']").on("click", function (e) {
+      e.preventDefault();
+
+      var target = $(this).attr("href");
+      $("html, body").animate({
+        scrollTop: $(target).offset().top
+      }, 1000, "easeInOutExpo");
+    });
   });
 </script>
+
+	  <script src="/assets/js/smoothScroll.js" defer></script>
+	
+
+
 
 
 <script>

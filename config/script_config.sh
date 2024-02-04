@@ -42,8 +42,7 @@ truncatelength=30
 filesizenooverwrite=300000
 maxmatchesbg=3000
 archivenumber=84
-minmatchesforonline=5
-
+minmatchesforonline=7
 multiplier=0.5
 skiprounds=3
 

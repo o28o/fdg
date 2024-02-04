@@ -284,6 +284,40 @@ $(document).ready(function() {
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/copyToClipboard.js"></script>
 
+
+<button id="match-button-clear" onclick="clearParam()">Clear Param</button>
+
+<script>
+function clearParam() {
+  var urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('s')) {
+    urlParams.delete('s');
+    var newUrl = window.location.origin + window.location.pathname + '?' + urlParams.toString();
+    window.history.replaceState({}, '', newUrl);
+  }
+  
+  var finderElements = document.querySelectorAll('b.finder');
+  finderElements.forEach(function(element) {
+    element.outerHTML = element.innerHTML;
+  });
+  
+  var hiddenLinks = document.querySelectorAll('a[href*="s="][onclick^="copyToClipboard"]');
+  hiddenLinks.forEach(function(link) {
+    var url = new URL(link.getAttribute('onclick').match(/'(.*?)'/)[1]);
+    url.searchParams.delete('s');
+    link.setAttribute('onclick', `copyToClipboard('${url.toString()}')`);
+  });
+}
+
+window.onload = function() {
+  var urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('s')) {
+    document.getElementById('match-button-clear').style.display = 'block';
+  }
+};
+</script>
+
+
  <!-- <script>
     // Получаем текущий хостнейм
     var hostname = window.location.hostname;

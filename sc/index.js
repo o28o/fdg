@@ -123,6 +123,15 @@ anchor = segment;
 
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
+let params = new URLSearchParams(document.location.search);
+  let finder = params.get("s");
+if (finder && finder.trim() !== "") {
+    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+    paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    
+}
+
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span>

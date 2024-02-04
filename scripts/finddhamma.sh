@@ -917,7 +917,7 @@ then
 continue 
 fi 
 
-linkswwords=`grep -i "\b$uniqword\b" $basefile | awk '{print $1, $2}' | sort -Vf | awk -F'/' '{print $NF}' | sed 's@_.*json@@g' | sed 's@ @@g' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{if ($2 ~ /-/) print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"#"$2":"$3"\">"$2"</a>"; else print "<a target=_blank href=\"'${pagelang}'/sc/?q="$1"#"$3"\">"$2"</a>"}' | xargs`
+linkswwords=`grep -i "\b$uniqword\b" $basefile | awk '{print $1, $2}' | sort -Vf | awk -F'/' '{print $NF}' | sed 's@_.*json@@g' | sed 's@ @@g' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{if ($2 ~ /-/) print "<a target=_blank href=\"'${pagelang}'/sc/?s='${uniqword}'&q="$1"#"$2":"$3"\">"$2"</a>"; else print "<a target=_blank href=\"'${pagelang}'/sc/?s='${uniqword}'&q="$1"#"$3"\">"$2"</a>"}' | xargs`
 
 #&lang=pli
 echo "<tr>
@@ -1119,8 +1119,11 @@ linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthai
 linksi=`echo $filenameblock |  awk -v lksi="$linkforsi" -v ext="$linkforsiext" '{print lksi$0''ext}' `
 link=`echo $filenameblock |  awk -v lkru="$linkforru" -v ext="$linkforruext" '{print lkru$0''ext}' `
 fi
+htmlpattern=$(echo "$pattern" | sed 's/\\.//g' | sed 's/ /%20/g')
 
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0}' ` 
+echo echo "$pattern"  >out
+echo $htmlpattern >>out
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?s='${htmlpattern}'&q="$0}' ` 
 
 #"&'$defaultlang'
 

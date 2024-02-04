@@ -102,7 +102,11 @@ let scLink = `<p class="sc-link">`;
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 
-let ifRus = `<a target="" href="/ru/sc/?q=${slug}${anchorURL}">Ru</a>&nbsp;<a target="" href="/sc/?q=${slug}${anchorURL}">En</a>&nbsp;`;
+const mlUrl  = window.location.href;
+
+const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
+const enUrl = mlUrl.replace("/sc/ml.html", "/sc/");
+let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 
 if (mnranges.indexOf(slug) !== -1)  {
@@ -177,7 +181,14 @@ anchor = segment;
 }
 
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
-
+let params = new URLSearchParams(document.location.search);
+  let finder = params.get("s");
+if (finder && finder.trim() !== "") {
+    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+    paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    
+}
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">

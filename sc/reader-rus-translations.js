@@ -100,7 +100,11 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 
- let ifRus = `<a target="" href="/sc/ml.html?q=${slug}${anchorURL}">R+E</a>&nbsp;`;
+
+const ruUrl  = window.location.href;
+
+const mlUrl = ruUrl.replace("/ru/sc/", "/sc/ml.html");
+ let ifRus = `<a target="" href="${mlUrl}">R+E</a>&nbsp;`;
  
 if (mnranges.indexOf(slug) !== -1)  {
  var trnpath = rustrnpath; 
@@ -171,8 +175,17 @@ anchor = segment;
 }
 
 // Получите полный URL с якорем
+
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
+let params = new URLSearchParams(document.location.search);
+  let finder = params.get("s");
+if (finder && finder.trim() !== "") {
+    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+    paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    
+}
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
 html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span></span>${closeHtml}\n\n`;
@@ -301,6 +314,9 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
       scLink += "</p>"; 
 
   const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.</p>";
+
+
+suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
 
@@ -439,6 +455,7 @@ if (document.location.search) {
   let params = new URLSearchParams(document.location.search);
   let slug = params.get("q");
   let lang = params.get("lang");
+
   citation.value = slug;
 
   buildSutta(slug);

@@ -34,3 +34,32 @@ max-width: 274px;
 .dark .svgarrow {
   color: #D5D5D5;
 }
+
+#match-button-next {
+  border-radius: 32px;
+  position: fixed; 
+  bottom: 30px; 
+  right: 100px; 
+  z-index: 99; 
+  padding: 5px; 
+}
+
+#match-button-clear {
+  display: none;
+  border-radius: 32px;
+  position: fixed; 
+  bottom: 30px; 
+  right: 100px; 
+  z-index: 99; 
+  padding: 5px; 
+}
+
+.finder {
+  color: #902A07;
+    font-weight: bold;
+}
+
+.dark .finder  {
+  color: #DA420E;
+      font-weight: bold;
+}  

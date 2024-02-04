@@ -43,8 +43,8 @@ console.log(text);
         }
  
 //localhost 127.0.0.1
-
+/*
 if (!currentUrl.includes('bhava') && !currentUrl.includes('nirodho')) {
          shareT2SElement.style.display = 'none';
-            }
+            }*/
     });

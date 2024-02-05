@@ -109,3 +109,6 @@ SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id = "$1" UNION AL
 SELECT file_name, line_id, line_text FROM sutta_en WHERE line_id = "$1" group by file_name;"}' | sqlite3 fdg-db.db
 
 grep -rih dukkh suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/sn/ ntral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/mn/ | sed "s@\"@'@g" | sed "s@':@'@g" | awk '{print "\                                    select file_name, line_id, line_text from sutta_pi where line_id = "$1" UNION ALL \               SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id = "$1" UNION ALL \               SELECT file_name, line_id, line_text FROM sutta_en WHERE line_id = "$1" group by file_name;"}' | sqlite3 fdg-db.db
+
+#fix rus file 
+tr -d '\r' < input.txt > output.txt

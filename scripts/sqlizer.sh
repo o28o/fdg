@@ -81,6 +81,13 @@ line_text TEXT NOT NULL,
 file_name TEXT NOT NULL,
 translator TEXT NOT NULL);
 
+DROP TABLE IF EXISTS vinaya_en;
+CREATE TABLE vinaya_en (
+line_id TEXT PRIMARY KEY NOT NULL UNIQUE,
+line_text TEXT NOT NULL,
+file_name TEXT NOT NULL,
+translator TEXT NOT NULL);
+
 done
 
 sqlite3 -separator '@' $fdgdb ".import pali-sutta.sql sutta_pi"
@@ -112,3 +119,94 @@ grep -rih dukkh suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/sn/ nt
 
 #fix rus file 
 tr -d '\r' < input.txt > output.txt
+
+
+
+
+select file_name, line_id, line_text from sutta_pi where line_id = "dn15:20.2" UNION ALL 
+SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id = "dn15:20.2"
+
+выводит так 
+dn15|dn15:20.2|Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye adhivacanasamphasso paññāyethā”ti?
+dn15|dn15:20.2|Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'?                          
+
+а нужно так 
+
+<tr><td><a href="dn15:20.2">dn15<a></td>
+  <td> <div> <p class="pali">Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye adhivacanasamphasso paññāyethā”ti?<a href="dn15:20.2">link<a></p>
+    <p class="russ">Если бы те качества, черты, признаки и указатели, посредством которых есть описание умственного тела полностью отсутствовали, возможно ли будет обнаружить соприкосновение обозначения в материальном теле'?<a href="dn15:20.2">link<a></p>
+    </div> </td>   
+    
+    
+SELECT '<tr><td><a href="/sc/?q=' || REPLACE(line_id, ':', '#') || '">' || file_name || '<a></td>' ||
+       '<td> <div> <p class="pali">' || line_text || '<a href="/sc/?q=' || REPLACE(line_id, ':', '#') || '">link<a></p>' ||
+       '<p class="russ">' || line_text || '<a href="/sc/?q=' || REPLACE(line_id, ':', '#') || '">link<a></p>' ||
+       '</div> </td></tr>'
+FROM (
+    SELECT file_name, line_id, line_text FROM sutta_pi WHERE line_id IN ('dn15:20.2', 'dn15:20.6')
+    UNION ALL
+    SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id IN ('dn15:20.2', 'dn15:20.6')
+) AS combined_tables;
+
+
+SELECT file_name, line_id, line_text FROM sutta_pi WHERE line_id IN ('dn15:20.2', 'dn15:20.6')
+    UNION ALL
+    SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id IN ('dn15:20.2', 'dn15:20.6')
+    
+    
+    
+    
+    SELECT line_id FROM sutta_pi WHERE line_text LIKE '%kummo kacchap%' ;
+UNION ALL
+SELECT * FROM vinaya_pi WHERE line_text LIKE '%adhivacanasamphasso%'
+UNION ALL
+SELECT * FROM sutta_var WHERE line_text LIKE '%adhivacanasamphasso%'
+UNION ALL
+SELECT * FROM vinaya_var WHERE line_text LIKE '%adhivacanasamphasso%';
+
+SELECT line_id
+FROM sutta_pi
+WHERE line_text LIKE '%kacchap%'
+    AND line_id REGEXP '^(sn|mn[0-9]|dn|an)';
+
+
+SELECT file_name, GROUP_CONCAT(line_id || '|' || line_text, '| ') AS concatenated_text
+FROM (
+SELECT file_name, line_id, line_text
+FROM sutta_pi
+WHERE line_id IN (
+    SELECT line_id
+    FROM sutta_pi
+    WHERE line_text LIKE '%kacchap%'
+        AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
+)
+    UNION ALL
+    SELECT file_name, line_id, line_text
+FROM sutta_en
+WHERE line_id IN (
+    SELECT line_id
+    FROM sutta_pi
+    WHERE line_text LIKE '%kacchap%'
+        AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
+)
+    UNION ALL
+    SELECT file_name, line_id, line_text
+FROM sutta_var
+WHERE line_id IN (
+    SELECT line_id
+    FROM sutta_pi
+    WHERE line_text LIKE '%kacchap%'
+        AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
+)
+) AS combined_tables
+GROUP BY file_name;
+
+
+SELECT file_name, line_id, line_text
+FROM sutta_pi
+WHERE line_id IN (
+    SELECT line_id
+    FROM sutta_pi
+    WHERE line_text LIKE '%kacchap%'
+        AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
+)

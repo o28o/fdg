@@ -1,6 +1,15 @@
 #!/bin/bash
 source ./config/script_config.sh --source-only
 
+
+head metphrcount_sutta.txt | while read line ; do 
+file_name=$(basename "$line" | sed 's@_.*@@g' )
+mtphcount=$(echo "$line" | awk '{print $2}')
+echo $file_name sutta $mtphcount
+echo "$file_name@sutta@$mtphcount" 
+done > metphrcount_sutta
+
+
 function ParseFile {
 # Чтение файла построчно
 cat "$file_path" | sed 's@{@@g' |sed 's@}@@g' | grep -v "^$" |while IFS= read -r line; do

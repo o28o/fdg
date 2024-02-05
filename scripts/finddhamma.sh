@@ -29,7 +29,7 @@ dateforhist=`date +%d-%m-%Y`
 function writeToTmpHtml {
   
 if [ "$linescount" -ge 200 ]; then
-skiprounds=0
+skiprounds=1
 fi
 if [ "$totaltexts" -le 50 ]; then
     timeout=$(awk "BEGIN {printf \"%.2f\", $totaltexts / $multiplier - $skiprounds }" )

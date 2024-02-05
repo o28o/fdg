@@ -1608,8 +1608,6 @@ if [[ "$type" == json ]]; then
   if (( $textsqnty <= 40 ))
   then
   echo -n "<br>`cat $tempfilewhistory | grep href | sed -E "s@$patternForHighlight@<b>&</b>@I" | xargs`" >> $history
-  cat $tempfilewhistory  > out 
-  cat $tempfilewhistory | grep href | sed -E "s@$patternForHighlight@<b>&</b>@I" | xargs > out2
   else 
   echo -n "<br>" >> $history
   fi

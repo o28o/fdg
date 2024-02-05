@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Параметр запроса - ключевое слово для поиска
-keyword="adhivacanas"
+keyword="$1"
 
 # SQLite запрос с использованием параметров запроса
 query="SELECT file_name, GROUP_CONCAT(line_id || '|' || line_text, '| ') AS concatenated_text
@@ -39,6 +39,6 @@ FROM (
 ) AS combined_tables
 GROUP BY file_name, line_id;"
 
-query=$(echo $query| sed 's@kacchap@'$keyword'@g')
+query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
 # Выполнение запроса SQLite с использованием параметров
 sqlite3 fdg-db.db "$query" 

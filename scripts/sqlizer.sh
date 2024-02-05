@@ -115,7 +115,9 @@ select file_name, line_id, line_text from sutta_pi where line_id = "$1" UNION AL
 SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id = "$1" UNION ALL \
 SELECT file_name, line_id, line_text FROM sutta_en WHERE line_id = "$1" group by file_name;"}' | sqlite3 fdg-db.db
 
-grep -rih dukkh suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/sn/ ntral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/mn/ | sed "s@\"@'@g" | sed "s@':@'@g" | awk '{print "\                                    select file_name, line_id, line_text from sutta_pi where line_id = "$1" UNION ALL \               SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id = "$1" UNION ALL \               SELECT file_name, line_id, line_text FROM sutta_en WHERE line_id = "$1" group by file_name;"}' | sqlite3 fdg-db.db
+grep -rih dukkh suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/sn/ suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/ suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/dn/ suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/mn/ | sed "s@\"@'@g" | sed "s@':@'@g" | awk '{print "$1}'
+
+\                                    select file_name, line_id, line_text from sutta_pi where line_id = "$1" UNION ALL \               SELECT file_name, line_id, line_text FROM sutta_ru WHERE line_id = "$1" UNION ALL \               SELECT file_name, line_id, line_text FROM sutta_en WHERE line_id = "$1" group by file_name;"}' | sqlite3 fdg-db.db
 
 #fix rus file 
 tr -d '\r' < input.txt > output.txt
@@ -173,25 +175,7 @@ WHERE line_text LIKE '%kacchap%'
 SELECT file_name, GROUP_CONCAT(line_id || '|' || line_text, '| ') AS concatenated_text
 FROM (
 SELECT file_name, line_id, line_text
-FROM sutta_pi
-WHERE line_id IN (
-    SELECT line_id
-    FROM sutta_pi
-    WHERE line_text LIKE '%kacchap%'
-        AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
-)
-    UNION ALL
-    SELECT file_name, line_id, line_text
-FROM sutta_en
-WHERE line_id IN (
-    SELECT line_id
-    FROM sutta_pi
-    WHERE line_text LIKE '%kacchap%'
-        AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
-)
-    UNION ALL
-    SELECT file_name, line_id, line_text
-FROM sutta_var
+FROM sutta_pi, sutta_en, sutta_var
 WHERE line_id IN (
     SELECT line_id
     FROM sutta_pi
@@ -200,6 +184,18 @@ WHERE line_id IN (
 )
 ) AS combined_tables
 GROUP BY file_name;
+
+SELECT file_name, GROUP_CONCAT(line_id || '|' || line_text, '| ') AS concatenated_text
+FROM (
+SELECT file_name, line_id, line_text
+FROM sutta_pi, sutta_en, sutta_var
+WHERE line_id IN (
+'sn56.48:1.6','sn56.48:1.7','mn129:21.3', 'mn129:24.3', 'mn129:24.5'
+)
+) AS combined_tables
+GROUP BY file_name;
+
+
 
 
 SELECT file_name, line_id, line_text
@@ -210,3 +206,85 @@ WHERE line_id IN (
     WHERE line_text LIKE '%kacchap%'
         AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
 )
+
+
+'sn56.48:1.6','sn56.48:1.7','mn129:21.3', 'mn129:24.3', 'mn129:24.5'
+
+
+SELECT file_name, GROUP_CONCAT(line_id || '|' || line_text, '| ') AS concatenated_text
+FROM (
+    SELECT sp.file_name, sp.line_id, sp.line_text
+    FROM sutta_pi sp
+    WHERE sp.line_id IN ('sn56.48:1.6','sn56.48:1.7','mn129:21.3', 'mn129:24.3', 'mn129:24.5')
+    
+    UNION ALL
+    
+    SELECT se.file_name, se.line_id, se.line_text
+    FROM sutta_en se
+    WHERE se.line_id IN ('sn56.48:1.6','sn56.48:1.7','mn129:21.3', 'mn129:24.3', 'mn129:24.5')
+    
+    UNION ALL
+    
+    SELECT sv.file_name, sv.line_id, sv.line_text
+    FROM sutta_var sv
+    WHERE sv.line_id IN ('sn56.48:1.6','sn56.48:1.7','mn129:21.3', 'mn129:24.3', 'mn129:24.5')
+) AS combined_tables
+GROUP BY file_name, line_id; -- Добавлено группирование по line_id внутри каждого file_name
+
+
+
+
+SELECT file_name, GROUP_CONCAT(line_id || '|' || line_text, '| ') AS concatenated_text
+FROM (
+    SELECT sp.file_name, sp.line_id, sp.line_text
+    FROM sutta_pi sp
+    WHERE sp.line_id IN (
+        SELECT line_id
+        FROM sutta_pi
+        WHERE line_text LIKE '%kacchap%'
+            AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
+    )
+    
+    UNION ALL
+    
+    SELECT se.file_name, se.line_id, se.line_text
+    FROM sutta_en se
+    WHERE se.line_id IN (
+        SELECT line_id
+        FROM sutta_pi
+        WHERE line_text LIKE '%kacchap%'
+            AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
+    )
+    
+    UNION ALL
+    
+    SELECT sv.file_name, sv.line_id, sv.line_text
+    FROM sutta_var sv
+    WHERE sv.line_id IN (
+        SELECT line_id
+        FROM sutta_pi
+        WHERE line_text LIKE '%kacchap%'
+            AND line_id REGEXP '^(sn|mn[0-9]|dn|an)'
+    )
+) AS combined_tables
+GROUP BY file_name, line_id;
+
+
+
+
+SELECT file_name, line_id, line_text
+FROM (
+    SELECT file_name, line_id, line_text,
+           ROW_NUMBER() OVER(PARTITION BY file_name ORDER BY line_id) as row_num
+    FROM (
+        SELECT file_name, line_id, line_text
+        FROM sutta_pi
+        UNION ALL
+    SELECT file_name, line_id, line_text
+        FROM sutta_en
+        UNION ALL
+        SELECT file_name, line_id, line_text
+        FROM sutta_var
+    )
+)
+ORDER BY file_name, row_num;

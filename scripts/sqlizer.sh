@@ -9,7 +9,7 @@ cat "$file_path" | sed 's@{@@g' |sed 's@}@@g' | grep -v "^$" |while IFS= read -r
     line_text=$(echo "$line" | awk '{$1=""; print $0}' | sed 's@^ "@@' | sed 's@",$@@' | sed 's@"$@@')
     file_name=$(basename "$file_path" | sed 's@_.*@@g' )
   
-echo "$line_id@$line_text@$file_name@$1" 
+echo "$line_id@$line_text@$file_name" 
 done 
 }
 
@@ -45,8 +45,8 @@ CreateSQL vinaya variant $basedir "pli-tv-bu-pm_root-pli-ms.json pli-tv-bi-pm_ro
 #sutta vinaya eng
 basedir=$suttapath/sc-data/sc_bilara_data/translation/en
 
-CreateSQL sutta pali $basedir/sujato/sutta "an sn mn dn kn"
-CreateSQL vinaya pali $basedirra_data/brahmali/vinaya "pli-tv-bu-pm_root-pli-ms.json pli-tv-bi-pm_root-pli-ms.json pli-tv-bu-vb pli-tv-bi-vb pli-tv-kd pli-tv-pvr"
+CreateSQL sutta eng $basedir/sujato/sutta "an sn mn dn kn"
+CreateSQL vinaya eng $basedirra_data/brahmali/vinaya "pli-tv-bu-pm_root-pli-ms.json pli-tv-bi-pm_root-pli-ms.json pli-tv-bu-vb pli-tv-bi-vb pli-tv-kd pli-tv-pvr"
 
 exit 0
 sqlite3 -separator '|' fdg-db.db ".import insert-sutta-sn28.sql sutta_pi"

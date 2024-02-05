@@ -597,12 +597,15 @@ patternforgrep=`echo $patternforfind | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)
 
 onlwc=`echo $patternforfind| wc -w`
 iterationnum=1
+rm outgrepcomloop
 for pattern in $patternforfind
 do 
+echo nice -$nicevalue grep -Eril -m1 "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv} >> outgrepcomloop
+echo >> outgrepcomloop
 nice -$nicevalue grep -Eril -m1 "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv}  > iter$iterationnum.$rand
  iterationnum=$((iterationnum + 1))
 done
-
+echo "$patternforfind dddd $patternforgrep" >> outgrepcomloop
 cat iter*.$rand | sort -V | uniq -c | awk '{print $1, $2}' | grep "^$onlwc" |  awk '{print $2}' > onllist.$rand 
 
 for i in `cat onllist* `
@@ -1461,7 +1464,7 @@ elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then
 bgswitch
 exit 3
 #	echo "$@" | sed 's/-oru //g' | sed 's/-oge //g' | sed 's/-ogr //g'   | sed 's/-nbg //g' >> ../input/input.txt     
-elif [ $totaltexts -ge $minmatchesforonline ] && [[ "$@" != *"-nbg"* ]];  then  
+elif [ $totaltexts -ge $minmatchesforonline ]  && [[ "$@" != *"-onl"* ]] && [[ "$@" != *"-nbg"* ]];  then  
 rm $tmphtml
 cd ..
 nohup bash scripts/finddhamma.sh -nbg-$rand $@ >/dev/null 2>&1 & disown

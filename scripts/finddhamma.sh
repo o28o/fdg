@@ -1034,20 +1034,9 @@ fi
     variant=`ls $lookup/variant/pli/ms/$pathblock/*${filenameblock}_* 2>/dev/null`
     
     np=`echo $filenameblock | sed 's@\.@_@g'`
-#    tr=`nice -$nicevalue find $searchdir -name "*${np}-*"`
-tr=`ls $searchdir/*${np}-* 2>/dev/null`
-     thrulink=`echo $tr | sed 's@.*theravada.ru@'$linkforthru'@g'`
 
-if [[ $filenameblock == *"dn"* ]]
-then 
-dnnumber=`echo $filenameblock | sed 's/dn//g'`
-if [[ $mode == "offline" ]]
-then 
-thrulink="`ls -R $thsulocation/dn/ | grep -m1 \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
-else 
-thrulink=`grep -m1 "ДН $dnnumber " $thsucurldn | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
-fi
-  fi 
+
+
 
 if [[ "$language" == *"Pali"* ]]; then
         file=$roottext
@@ -1181,17 +1170,14 @@ echo "<tr>
 <td>
 `[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
 <a target=\"_blank\" href="$linken">En</a> 
+<a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>
+
+
 
 `[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
 $([[ $linkthai != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linkthai\">ไทย</a>")
 `[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
 $([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linksi\">සිං</a>")
-
-
-`[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
-`[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"`
-
-
 
 </td>" | tohtml
 #`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
@@ -1690,3 +1676,23 @@ quote=`echo $quote | sed 's@.$@'$hreflastchar'@g'`
   });   
   
 */
+
+
+
+#change from ru
+
+#    tr=`nice -$nicevalue find $searchdir -name "*${np}-*"`
+tr=`ls $searchdir/*${np}-* 2>/dev/null`
+     thrulink=`echo $tr | sed 's@.*theravada.ru@'$linkforthru'@g'`
+if [[ $filenameblock == *"dn"* ]]
+then 
+dnnumber=`echo $filenameblock | sed 's/dn//g'`
+if [[ $mode == "offline" ]]
+then 
+thrulink="`ls -R $thsulocation/dn/ | grep -m1 \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
+else 
+thrulink=`grep -m1 "ДН $dnnumber " $thsucurldn | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
+fi
+  fi 
+  `[[ "$thrulink" != "" ]] && echo "<a target=\"_blank\" href="$thrulink">Ru</a>"` 
+`[[ "$thrulink" == "" ]] && [[ $link != "" ]] && echo "<a target=\"_blank\" href="$link">Ru</a>"`

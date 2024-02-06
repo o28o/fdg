@@ -19,7 +19,7 @@ FROM (
         WHERE sp.line_id IN (
             SELECT line_id
             FROM sutta_pi
-            WHERE line_text LIKE '%kacchap%'
+            WHERE lower(line_text) LIKE '%kacchap%'
                 AND line_id REGEXP '^(sn|mn|dn|an)[0-9]'
         )
     
@@ -30,7 +30,7 @@ FROM (
         WHERE se.line_id IN (
             SELECT line_id
             FROM sutta_pi
-            WHERE line_text LIKE '%kacchap%'
+            WHERE lower(line_text) LIKE '%kacchap%'
                 AND line_id REGEXP '^(sn|mn|dn|an)[0-9]'
         )
     
@@ -41,7 +41,7 @@ FROM (
         WHERE sv.line_id IN (
             SELECT line_id
             FROM sutta_pi
-            WHERE line_text LIKE '%kacchap%'
+            WHERE lower(line_text) LIKE '%kacchap%'
                 AND line_id REGEXP '^(sn|mn|dn|an)[0-9]'
         )
     ) AS combined_results
@@ -56,6 +56,14 @@ sqlite3 fdg-db.db "$query"
 
 
 exit 0
+#count
+SELECT file_name, 
+       SUM((LENGTH(line_text) - LENGTH(REPLACE(lower(line_text), 'kacchap', ''))) / LENGTH('kacchap')) AS count_occurrences
+FROM sutta_pi
+WHERE lower(line_text) REGEXP '.*kacchap.*'
+GROUP BY file_name
+HAVING count_occurrences >= 1;
+
 
 
 

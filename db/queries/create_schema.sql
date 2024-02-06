@@ -2,9 +2,25 @@
 
 
 fdgdb=fdg-db.db 
-for table in sutta_pi vinaya_pi sutta_var vinaya_var
+for table in 
+
+DROP TABLE IF EXISTS sutta_pi;
+CREATE TABLE sutta_pi (
+line_id TEXT PRIMARY KEY NOT NULL UNIQUE,
+line_text TEXT NOT NULL,
+file_name TEXT NOT NULL);
+
+DROP TABLE IF EXISTS vinaya_pi;
+CREATE TABLE vinaya_pi (
+line_id TEXT PRIMARY KEY NOT NULL UNIQUE,
+line_text TEXT NOT NULL,
+file_name TEXT NOT NULL);
+
+sutta_pi vinaya_pi sutta_var vinaya_var
 do 
-echo "DROP TABLE IF EXISTS $table;
+echo "
+
+DROP TABLE IF EXISTS $table;
 CREATE TABLE $table (
 line_id TEXT PRIMARY KEY NOT NULL UNIQUE,
 line_text TEXT NOT NULL,

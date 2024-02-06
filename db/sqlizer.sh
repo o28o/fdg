@@ -66,7 +66,7 @@ CreateSQL sutta rus $basedir "an sn mn dn"
 exit 0
 
 #imoort data
-
+$fdgdb=test.db
 sqlite3 -separator '@' $fdgdb ".import pali-sutta.sql sutta_pi"
 sqlite3 -separator '@' $fdgdb ".import pali-vinaya.sql vinaya_pi"
 sqlite3 -separator '@' $fdgdb ".import variant-sutta.sql sutta_var"

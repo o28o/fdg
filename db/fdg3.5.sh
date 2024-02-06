@@ -40,13 +40,26 @@ query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
 htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 # Выполнение запроса SQLite с использованием параметров
 sqlite3 fdg-db.db "$query" > ./result/output
-cat ./new/header | sed 's/$title/'"$keyword"'/g' > ./result/w.html
+
+
+if [ -s "./result/output" ]; then
+    cat ./new/header | sed 's/$title/'"$keyword"'/g' > ./result/w.html
 bash ./awk.sh ./result/output "$keyword" >> ./result/w.html
 cat ./new/footer >> ./result/w.html
 
 echo '<script>                                   
 window.location.href="/result/w.html?s='$htmlpattern'";
 </script>'
+else
+    echo "	<script>                                   
+window.location.href='/new';
+</script>
+    <script defer>
+    document.getElementById('spinner').style.display = 'none';
+</script>"
+
+fi
+
 
 exit 0
 

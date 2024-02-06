@@ -33,14 +33,14 @@
               text: 'Main',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = "MAINLINKVAR";
+                                window.location.href = "/new";
                             }
             },
               {
               text: 'Read',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = "READLINKVAR";
+                                window.location.href = "/sc";
                             }
             },
                         {
@@ -57,7 +57,7 @@
                                 window.location.href = '/history.php';
                             }
                         },  
-                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = "WORDSLINKVAR";}},
+                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = "#not-ready";}},
                         { extend: 'colvis', 
                      className: 'btn btn-link ',
                         text: 'Visibility' }

@@ -55,7 +55,7 @@
     <h3 class="pl-2 ml-2">$title</h3>
 
             <button class="btn btn-light mb-1" type="button">
-           <a href='HOMEVAR'>
+           <a href='/new'>
     <img class="table-home-icon" src="/assets/svg/home-icon.svg"></img>   
 </a>
       </button>  

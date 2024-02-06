@@ -925,7 +925,7 @@ linkswwords=`grep -i "\b$uniqword\b" $basefile | awk '{print $1, $2}' | sort -Vf
 #&lang=pli
 echo "<tr>
 <td>`echo $uniqword | highlightpattern`</td>
-<td><a href=\$quotesLinkToReplace?s=$uniqword>$linkscount</a></td>   
+<td><a href=\$quotesLinkToReplace?f=$uniqword>$linkscount</a></td>   
 <td>$uniqwordcount</td>   
 <td>$linkswwords</td>
 </tr>" >>$tempfilewords
@@ -1159,7 +1159,7 @@ metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalu
 sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evame'`
 metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
 fi
-
+#<a target=\"_blank\" href="$linken">En</a> 
 echo "<tr>
 <td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
 <td><input type='checkbox' data-index="$filenameblock"></td>
@@ -1169,7 +1169,8 @@ echo "<tr>
 <td>$metaphorcount</td>
 <td>
 `[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
-<a target=\"_blank\" href="$linken">En</a> 
+
+<a class='bwLink' href='' data-slug='$suttanumber'>En</a>
 <a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>
 
 

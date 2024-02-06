@@ -14,3 +14,9 @@ paste -d ' ' keys values | awk '{print "[\""$1"\", \""$2"\"],"}' > thrulinks.js
 for dnnumber in {1..33}; do echo dn$dnnumber `grep -m1 "ДН $dnnumber " $thsucurldn | sed 's#href=\"/toc/translations/#href=\"/node/table/#' |awk -F'"' '{print $2}'`; done
 
 
+
+
+
+#bw links 
+
+cat bwout  | sort -V | awk -F'/' '{print $NF}' | sed 's@.html@@g' | sed 's@tha@thag@'| sed 's@thi@thig@'  | sed 's@bi-vb@pli-tv-bi-vb@'| sed 's@bu-vb@pli-tv-bu-vb@' 

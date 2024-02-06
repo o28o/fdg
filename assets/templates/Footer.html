@@ -13,7 +13,9 @@
     };
    
    var dataSrc = [];
-   var filterValue = new URLSearchParams(window.location.search).get('s');
+   var filterValue = new URLSearchParams(window.location.search).get('f');
+
+
 	 var table = $('#pali').DataTable({
 	 /*  'autoWidth': true,*/
 	   'stateSave': true,
@@ -122,10 +124,13 @@
      if (filterValue) {
         table.search(filterValue).draw();
         var currentUrl = new URL(window.location.href);
-        currentUrl.searchParams.delete('s');
+        currentUrl.searchParams.delete('f');
         history.replaceState({}, '', currentUrl);
 }
    
+   //highlight pattern
+   
+
     // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){
         // Expand row details
@@ -141,6 +146,41 @@
 });
 
 
+  </script>
+  
+  <script>
+
+$(document).ready(function() {
+    // Получаем параметр поиска из URL
+    let params = new URLSearchParams(document.location.search);
+    let finder = params.get("s");
+
+    if (finder && finder.trim() !== "") {
+        // Получаем таблицу DataTables по ее id
+        var table = $('#pali').DataTable();
+
+        // Получаем все строки таблицы
+        table.rows().every(function(rowIdx, tableLoop, rowLoop) {
+            // Получаем данные в текущей строке
+            var rowData = this.data();
+
+            // Проходим по каждому элементу данных в строке
+            rowData.forEach(function(cellData, index) {
+                // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
+                var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+                cellData = cellData.replace(regex, function(match) {
+                    return '<b class="match finder">' + match + '</b>';
+                });
+
+                // Обновляем содержимое ячейки с примененной подсветкой
+                table.cell(rowIdx, index).data(cellData);
+            });
+        });
+
+        // Перерисовываем таблицу для применения изменений
+        table.draw();
+    }
+});
   </script>
   
 <script>
@@ -187,10 +227,11 @@ checkboxes.forEach(function(checkbox) {
 
 <script src="/assets/js/themeswitch.js"></script>
 	  <script src="/assets/js/smoothScroll.js"defer></script>
-    <script defer type="module" src="/assets/js/langswitch.js"></script>     <script src="/assets/js/dpr.js"></script>
+    <script defer type="module" src="/assets/js/langswitch.js"></script>     <script src="/assets/js/linksdpr.js"></script>
         <script src="/assets/js/openDpr.js"></script>
-                <script src="/assets/js/rulinks.js"></script>
+                <script src="/assets/js/linksru.js"></script>
         <script src="/assets/js/openRu.js"></script>
-
+        <script src="/assets/js/linksbw.js"></script>
+                <script src="/assets/js/openBw.js"></script>
 </body>
 </html>

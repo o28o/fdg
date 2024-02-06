@@ -50,7 +50,7 @@ FROM (
 GROUP BY file_name;"
 
 
-query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
+query=$(echo $query| sed 's@%kacchap%@'"$keyword"'@g')
 # Выполнение запроса SQLite с использованием параметров
 sqlite3 fdg-db.db "$query" 
 

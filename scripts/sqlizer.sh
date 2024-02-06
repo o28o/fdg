@@ -65,6 +65,8 @@ CreateSQL sutta rus $basedir "an sn mn dn"
 
 exit 0
 
+#create schema
+
 
 fdgdb=fdg-db.db 
 for table in sutta_pi vinaya_pi sutta_var vinaya_var
@@ -74,7 +76,7 @@ CREATE TABLE $table (
 line_id TEXT PRIMARY KEY NOT NULL UNIQUE,
 line_text TEXT NOT NULL,
 file_name TEXT NOT NULL);" | sqlite3 $fdgdb
-
+done
 
 DROP TABLE IF EXISTS sutta_ru;
 CREATE TABLE sutta_ru (
@@ -97,13 +99,69 @@ line_text TEXT NOT NULL,
 file_name TEXT NOT NULL,
 translator TEXT NOT NULL);
 
-done
+
+#imoort data
 
 sqlite3 -separator '@' $fdgdb ".import pali-sutta.sql sutta_pi"
 sqlite3 -separator '@' $fdgdb ".import pali-vinaya.sql vinaya_pi"
 sqlite3 -separator '@' $fdgdb ".import variant-sutta.sql sutta_var"
 sqlite3 -separator '@' $fdgdb ".import variant-vinaya.sql vinaya_var"
 sqlite3 -separator '@' $fdgdb ".import rus-sutta.sql sutta_ru"
+
+sqlite3 -separator '|' $fdgdb ".import names.dat text_names"
+
+#create extra tables
+
+#text name table
+select line_id,line_text,file_name from sutta_pi      
+  where line_id REGEXP '(an|sn|mn|dn)[0-9].*:0.[0-5]'  
+  and ( line_text REGEXP '.*sutta.*'   
+  or
+   line_text REGEXP '.*vatthu.*' )
+  and line_text not like '%vagg%'  
+  and line_text not like '%peyyāla%'  
+
+    union all  
+SELECT line_id, line_text,file_name FROM sutta_pi  
+where line_id REGEXP 'an[0-9].*' 
+  and line_text REGEXP '^[0-9]* '   
+  union all  
+  
+ select line_id,line_text,file_name from sutta_pi      
+  where line_id REGEXP '(dhp)[0-9].*:0'  
+  and 
+   line_text REGEXP '.*vatthu.*' 
+  and line_text not like '%vagg%'  
+  and line_text not like '%peyyāla%'  
+  
+  union all
+  
+select line_id,line_text,file_name from sutta_pi      
+  where line_id REGEXP '(thag|thig)[0-9].*:0.*'  
+  and line_text REGEXP '.*gāthā.*' 
+and line_text not Regexp '.*[0-9].*'
+
+union all
+
+SELECT line_id, TRIM(SUBSTR(line_text, INSTR(line_text, '.') + 1)) AS line_text,file_name
+FROM sutta_pi
+WHERE line_id REGEXP '(ud|ja|snp|iti)[0-9].*:0.*'
+AND line_text REGEXP '.*(sutta|pucchā|jātaka).*'
+
+union all
+
+SELECT line_id, TRIM(SUBSTR(line_text, INSTR(line_text, '.') + 1)) AS line_text,file_name
+FROM vinaya_pi
+WHERE line_id REGEXP 'pli.*[0-9].*:0.*'
+AND line_text REGEXP '.*(khandhaka|pada).*';
+
+#???? idk about pvr
+union ALL
+
+SELECT line_id, TRIM(SUBSTR(line_text, INSTR(line_text, '.') + 1)) AS line_text,file_name
+FROM vinaya_pi
+WHERE line_id REGEXP 'pli-tv-pvr.*[0-9].*:0.*'
+AND line_text REGEXP '.*[0-9]* .*';
 
 
 exit 1

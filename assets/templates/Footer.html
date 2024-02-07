@@ -166,14 +166,17 @@ $(document).ready(function() {
 
             // Проходим по каждому элементу данных в строке
             rowData.forEach(function(cellData, index) {
-                // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
-                var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-                cellData = cellData.replace(regex, function(match) {
-                    return '<b class="match finder">' + match + '</b>';
-                });
+                // Проверяем, является ли текущая колонка нечетной (индексация с 0)
+                if (index !== 4) {
+                    // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
+                    var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+                    cellData = cellData.replace(regex, function(match) {
+                        return '<b class="match finder">' + match + '</b>';
+                    });
 
-                // Обновляем содержимое ячейки с примененной подсветкой
-                table.cell(rowIdx, index).data(cellData);
+                    // Обновляем содержимое ячейки с примененной подсветкой
+                    table.cell(rowIdx, index).data(cellData);
+                }
             });
         });
 

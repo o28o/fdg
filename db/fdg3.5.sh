@@ -10,10 +10,10 @@ keyword="$@"
 
 query="SELECT 
     cr.file_name,
-    1 AS weight,
+    weight,
     cr.line_text,
     cr.line_id,
-        (SELECT line_text FROM Text_names WHERE file_name = cr.file_name) AS text_name,
+ (SELECT line_text FROM Text_names WHERE line_id LIKE (SUBSTR(cr.line_id, 1, INSTR(cr.line_id, ':')) || '%')) AS text_name,
     (SELECT  metaphor_count FROM similes WHERE file_name = cr.file_name) AS metaphor_count
 FROM (
     SELECT file_name, 1 AS weight, line_text, line_id

@@ -6,7 +6,7 @@ qoute=$3
 line_id=$4
 name=$5
 mtphr_count=$6
-   anchorlink = "/sc/?q=" $4 
+   anchorlink = "/sc/?s=" keyword "&q=" $4 
     gsub(":", "#", anchorlink)
 sutta=$4
  gsub(":.*", "", sutta)

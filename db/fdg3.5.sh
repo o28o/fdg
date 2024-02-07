@@ -10,11 +10,11 @@ keyword="$@"
 
 query="SELECT 
     cr.file_name,
-    (SELECT line_text FROM Text_names WHERE file_name = cr.file_name) AS text_name,
-    (SELECT  metaphor_count FROM similes WHERE file_name = cr.file_name) AS metaphor_count,
     1 AS weight,
     cr.line_text,
-    cr.line_id
+    cr.line_id,
+        (SELECT line_text FROM Text_names WHERE file_name = cr.file_name) AS text_name,
+    (SELECT  metaphor_count FROM similes WHERE file_name = cr.file_name) AS metaphor_count
 FROM (
     SELECT file_name, 1 AS weight, line_text, line_id
     FROM sutta_pi
@@ -74,12 +74,12 @@ WHERE line_id IN (
 query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
 htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 # Выполнение запроса SQLite с использованием параметров
-sqlite3 fdg-db.db "$query" > ./result/output
+sqlite3 ./db/fdg-db.db "$query" > ./result/output
 
 
 if [ -s "./result/output" ]; then
     cat ./new/header | sed 's/$title/'"$keyword"'/g' > ./result/w.html
-bash ./awk.sh ./result/output "$keyword" >> ./result/w.html
+bash ./new/awk2.sh ./result/output "$keyword" >> ./result/w.html
 cat ./new/footer >> ./result/w.html
 
 echo '<script>                                   

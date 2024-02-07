@@ -78,7 +78,9 @@
         <tr>
             <th>Sutta</th>
             <th>St</th>
-            <th>Links</th>
+            <th>Name</th>
+            <th>Mr</th>
+            <th>Links</th>            
             <th class="none">Quote</th>
         <!-- <th class="none">Audio</th> -->
         </tr>

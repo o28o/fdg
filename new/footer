@@ -1,6 +1,17 @@
 </td></tr>
 
-
+    <!--    <tfoot>
+            <tr>
+            <th>Sutta</th>
+            <th>St</th>
+            <th>Title</th>
+            <th>Words</th>
+            <th>Ct</th>
+            <th>Mr</th>
+            <th>Links</th>
+            <th class="none">Quote</th>
+            </tr>
+        </tfoot> -->
 
       </tbody>
 
@@ -78,7 +89,7 @@
 				targets: [1], // Индекс столбца с чекбоксами
 				orderDataType: 'dom-checkbox' // Используем функцию сортировки
 				},
-	            { type: "html", target: [2,3,5] },
+	            { type: "html", target: [2,3,7] },
 	            { type: 'natural', targets: 0 },
 				  {
             target: 1,
@@ -89,7 +100,7 @@
          var api = this.api();
 
          // Populate a dataset for autocomplete functionality
-		          api.cells('tr', [0,2]).every(function(){
+		          api.cells('tr', [0, 2, 3, 4, 5]).every(function(){
             //var data = this.data().replace( /(<([^>]+)>)/ig, '');
             var data = $('<div>').html(this.data()).text();
           //  console.log(data);

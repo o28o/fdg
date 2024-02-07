@@ -6,11 +6,19 @@ qoute=$3
 line_id=$4
 name=$5
 mtphr_count=$6
-   anchorlink = "/sc/?s=" keyword "&q=" $4 
-    gsub(":", "#", anchorlink)
+   
+
+    if (index(file_name, "-") != 0) { 
+anchorpart = $4
+} else { 
+  anchorpart = $4
+    gsub(".*:", "", anchorpart)
+}
+ textAndAnchor = file_name "#" anchorpart
+ urlwithanchor = "/sc/?s=" keyword "&q=" textAndAnchor 
 sutta=$4
  gsub(":.*", "", sutta)
- hiddenlink="<a class=\"text-white text-decoration-none\" href=\"" anchorlink "\">&nbsp;</a>"
+ hiddenlink="<a class=\"text-white text-decoration-none\" href=\"" urlwithanchor "\">&nbsp;</a>"
  if ( textclass == 1 ) {
    language="pi"
    htmlclass="pli-lang"
@@ -19,7 +27,7 @@ sutta=$4
    htmlclass="eng-lang text-muted font-weight-light"
  }
     if (NR == 1 || (file_name != prev_file && textclass == 1)) {
-        print "<tr><td><a href=\"" anchorlink "\">" file_name "</a></td><td><input type=checkbox data-index=" file_name "></td><td><strong class=\"pli-lang inputscript-ISOPali\">" name "</strong></td><td>" mtphr_count "</td><td><a href=\"\" onclick=openDpr(\"" sutta "\") >Pi</a>&nbsp;<a class=\"bwLink\"  href=\"\" data-slug=" sutta ">En</a>&nbsp;<a class=\"ruLink\"  href=\"\" data-slug=" sutta ">Ru</a>&nbsp;</td><td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>"
+        print "<tr><td><a href=\"" urlwithanchor "\">" file_name "</a></td><td><input type=checkbox data-index=" file_name "></td><td><strong class=\"pli-lang inputscript-ISOPali\">" name "</strong></td><td><div></div></td><td></td><td>" mtphr_count "</td><td><a href=\"\" onclick=openDpr(\"" sutta "\") >Pi</a>&nbsp;<a class=\"bwLink\"  href=\"\" data-slug=" sutta ">En</a>&nbsp;<a class=\"ruLink\"  href=\"\" data-slug=" sutta ">Ru</a>&nbsp;</td><td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>"
     } else if (prev_line == NR && NR != 1) {
         print "</p></td></tr>"
     } else {

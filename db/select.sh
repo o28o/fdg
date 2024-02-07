@@ -39,8 +39,8 @@ WHERE line_id IN (
 query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
 htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 # Выполнение запроса SQLite с использованием параметров
-sqlite3 fdg-db.db "$query" > ./result/output
-
+sqlite3 -json fdg-db.db "$query" 
+exit 0
 
 if [ -s "./result/output" ]; then
     cat ./new/header | sed 's/$title/'"$keyword"'/g' > ./result/w.html
@@ -61,7 +61,7 @@ window.location.href='/new';
 fi
 
 
-exit 0
+
 
 
 SELECT file_name, line_id, line_text, 1 AS weight

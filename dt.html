@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <!-- Your HTML content here -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+
+<table id="example" class="display table table-striped table-hover responsive style="width:100%">
+        <thead>
+            <tr>
+                <th>First name</th>
+
+                <th>Position</th>
+                <th>Office</th>
+                                <th>Office</th>
+                <th class="none">Last name</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>First name</th>
+                <th>Office</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th class="none">Last name</th>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+      new DataTable('#example', {
+    ajax: './ssp.php',
+    processing: true,
+    serverSide: true
+});
+      
+    </script>
+</body>
+</html>

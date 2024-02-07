@@ -1,0 +1,9 @@
+db.insert({'filename': 'dn15', 'type': 1, 'line_text': 'adhivacanasamphasso paññāyethā”ti?', 'line_id': 'dn15:20.2' })
+db.insert({'filename': 'dn15', 'type': 2, 'line_text': 'good day”ti?', 'line_id': 'dn15:20.2' })
+db.insert({'filename': 'dn15', 'type': 3, 'line_text': 'var->%', 'line_id': 'dn15:20.2' })
+db.insert({'filename': 'mn129', 'type': 1, 'line_text': ' paññāyethā”ti?', 'line_id': 'mn129:2.2' })
+db.insert({'filename': 'mn129', 'type': 2, 'line_text': ' day”ti?', 'line_id': 'mn129:2.2' })
+db.insert({'filename': 'mn129', 'type': 3, 'line_text': 'vgggar->%', 'line_id': 'mn129:29.1' })
+db.insert({'filename': 'mn129', 'type': 1, 'line_text': ' pali dukkha', 'line_id': 'mn129:29.1' })
+db.insert({'filename': 'mn129', 'type': 2, 'line_text': ' yes', 'line_id': 'mn129:29.1' })
+

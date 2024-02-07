@@ -1,0 +1,30 @@
+{
+  "draw": 1,
+  "recordsTotal": 57,
+  "recordsFiltered": 57,
+  "data": [
+    [
+      "<a class=freebutton target=_blank href=/sc/?s=adhivacanas&q=dn15#20.2>dn15</a>",
+      "<strong class='pli-lang inputscript-ISOPali'>Mahānidānasutta </strong>The Great Discourse on Causation",
+      "<b>adhivacanas</b>amphasso",
+      "<a  href='' onclick=openDpr('dn15') >Pi</a> <a class='bwLink' href='' data-slug='dn15'>En</a><a class='ruLink' href='' data-slug='dn15'>Ru</a>",
+      "<p><span class='pli-lang inputscript-ISOPali' lang='pi'>Yehi, ānanda, ākārehi yehi liṅgehi yehi nimittehi yehi uddesehi nāmakāyassa paññatti hoti, tesu ākāresu tesu liṅgesu tesu nimittesu tesu uddesesu asati api nu kho rūpakāye <b>adhivacanas</b>amphasso paññāyethā”ti? <a target=_blank class='text-white text-decoration-none' href='/sc/?s=adhivacanas&q=dn15#20.2'>&#8202;</a></span><br class='btwntrn'><span class='eng-lang text-muted font-weight-light' lang='en'>Suppose there were none of the features, attributes, signs, and details by which the set of mental phenomena known as name is found. Would labeling contact still be found in the set of physical phenomena?” </span><br class='styled'><span class='pli-lang inputscript-ISOPali' lang='pi'>“Yehi, ānanda, ākārehi …pe… yehi uddesehi nāmakāyassa ca rūpakāyassa ca paññatti hoti, tesu ākāresu …pe… tesu uddesesu asati api nu kho <b>adhivacanas</b>amphasso vā paṭighasamphasso vā paññāyethā”ti? <a target=_blank class='text-white text-decoration-none' href='/sc/?s=adhivacanas&q=dn15#20.6'>&#8202;</a></span><br class='btwntrn'><span class='eng-lang text-muted font-weight-light' lang='en'>“Suppose there were none of the features, attributes, signs, and details by which the set of phenomena known as name and the set of phenomena known as form are found. Would either labeling contact or impingement contact still be found?” </span><br class='styled'></p>"
+
+    ],
+    [
+      "Angelica",
+      "Ramos",
+      "Chief Executive Officer (CEO)",
+      "London",
+      "9th Oct 09"
+    ],
+    [
+      "Ashton",
+      "Cox",
+      "Junior Technical Author",
+      "San Francisco",
+      "12th Jan 09"
+    ]
+    ]
+}
+

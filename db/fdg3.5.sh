@@ -8,7 +8,44 @@ keyword="$@"
 
 # SQLite запрос с использованием параметров запроса
 
-query="SELECT file_name, 1 AS weight, line_text, line_id
+query="SELECT 
+    cr.file_name,
+    (SELECT line_text FROM Text_names WHERE file_name = cr.file_name) AS text_name,
+    (SELECT  metaphor_count FROM similes WHERE file_name = cr.file_name) AS metaphor_count,
+    1 AS weight,
+    cr.line_text,
+    cr.line_id
+FROM (
+    SELECT file_name, 1 AS weight, line_text, line_id
+    FROM sutta_pi
+    WHERE line_id IN (
+        SELECT line_id
+        FROM sutta_pi
+        WHERE lower(line_text) REGEXP '.*kacchap.*'
+        AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
+    )
+    UNION ALL
+    SELECT file_name, 2 AS weight, line_text, line_id
+    FROM sutta_en
+    WHERE line_id IN (
+        SELECT line_id
+        FROM sutta_pi
+        WHERE lower(line_text) REGEXP '.*kacchap.*'
+        AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
+    )
+    UNION ALL
+    SELECT file_name, 3 AS weight, line_text, line_id
+    FROM sutta_var
+    WHERE line_id IN (
+        SELECT line_id
+        FROM sutta_pi
+        WHERE lower(line_text) REGEXP '.*kacchap.*'
+        AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
+    )
+) cr
+ORDER BY cr.file_name, cr.line_id, cr.weight;"
+
+quickerNoCountAndNamequery="SELECT file_name, 1 AS weight, line_text, line_id
 FROM sutta_pi
 WHERE line_id IN (
     SELECT line_id
@@ -33,9 +70,7 @@ WHERE line_id IN (
     FROM sutta_pi
     WHERE lower(line_text) REGEXP '.*kacchap.*'
     AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
-) order by file_name, line_id, weight"
-
-
+) order by file_name, line_id, weight" 
 query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
 htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 # Выполнение запроса SQLite с использованием параметров

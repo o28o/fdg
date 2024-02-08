@@ -32,14 +32,11 @@
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
     <h2 class="text-center my-4 mb-5">       <a href="/new">     <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="height:30px;"></a>   Search for Truth</h2>
-
-
-
-                <form  action="/s.php" method="GET">
-                  
+        
+        <form  action="/s.php" method="GET">
     <div class="my-3 form-group input-group ui-widget dropup rounded-pill">
 <label class="sr-only dropup rounded-pill" for="paliauto"></label>        <div class="searchinputdiv">      
-  <input name="q" type="search" class="form-control rounded-pill searchinput " id="paliauto" placeholder="e.g. Kāyagat or sn56.11"  multiple>
+  <input name="s" type="search" class="form-control rounded-pill searchinput " id="paliauto" placeholder="e.g. Kāyagat or sn56.11"  multiple>
  <!-- <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>

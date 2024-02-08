@@ -4,32 +4,33 @@ awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" }
 {
 
 file_name=$1
-countDb=$3
+count=$3
 mtphr_count=$4
 name=$5
 urlwithanchor=$6
 sutta=$8
 qoute=$9
+
 qoutetoparse=qoute
 
+gsub(/<\/?[^>]+>/, "", qoutetoparse); 
 gsub(/[[:punct:]]/, "", qoutetoparse)
-count=0
+
     words = ""
     split(qoutetoparse, quoteArray, " ");  # Разбиваем строку на массив
     for (i = 1; i <= length(quoteArray); i++) {
         word = quoteArray[i];    # Текущее слово
         if (match(word, /.*'"$keyword"'.*/)) {  # Проверяем, содержит ли слово ключевое слово
-        count++
+        
             if (!(word in seen)) {  # Проверяем, не содержится ли слово уже в массиве seen
                 words = words " " word; 
-                
                 seen[word] = 1;  # Помечаем слово как увиденное
             }
         }
     } 
  
  
-
+gsub(/;;;/, "\n", qoute)
         if (prev_file != file_name && NR != 1) {
         print "\n"
     } 

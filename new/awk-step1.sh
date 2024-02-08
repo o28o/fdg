@@ -1,5 +1,5 @@
-#keyword="$(echo $@ | awk '{$1=""; $2=""; print $0}' | sed 's/^ //')"
-keyword="$3"
+#keyword="$(echo $@ | awk '{$1=""; print $0}' | sed 's/^ //')"
+keyword="$2"
 awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" }  { OFS = "" } 
 {
 
@@ -42,9 +42,9 @@ name=sutta
     } 
 if (NR == 1 || (file_name != prev_file && textclass == 1)) {
     
-        print urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>"
+        print urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>;;;"
     } else {
-        print "<span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span><br class=\"styled\">"
+        print "<span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span><br class=\"styled\">;;;"
     }
 
     prev_file = $1
@@ -52,7 +52,7 @@ if (NR == 1 || (file_name != prev_file && textclass == 1)) {
 END  { 
         print "</p></td></tr>"
         print "\n"
-    }' "$1" "$2"
+    }' "$1" 
 
 
 exit 0

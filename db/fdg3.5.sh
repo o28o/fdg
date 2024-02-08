@@ -1,27 +1,31 @@
 #!/bin/bash
+start=`date +%s`
+#set -x 
+#set +x
+#trap read debug
+export LANG=en_US.UTF-8
+#export LC_ALL=en_US
+##############################
+# ‘Why don’t I gather grass, 
+# sticks, branches, and leaves 
+# and make a raft? Riding on the raft
+# and paddling with my hands and feet,
+# I can safely reach the far shore.
+########## sn35.238 ##########
+source ./config/script_config.sh --source-only
+args="$@"
 
-# Параметр запроса - ключевое слово для поиска
 keyword="$@"
 database="./db/fdg-db.db"
-tmpdir="./result"
+
 separator="@"
 sqlitecommand="sqlite3 -separator $separator"
 [[ $keyword == "" ]] && exit 0
 
-
-# SQLite запрос с использованием параметров 
-prequery="SELECT file_name, line_id,
-       sum((LENGTH(line_text) - LENGTH(REPLACE(lower(line_text), 'kacchap', ''))) / LENGTH('kacchap')) AS count_occurrences
-FROM sutta_pi
-WHERE lower(line_text) REGEXP '.*kacchap.*'
-AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
-GROUP BY file_name
-HAVING count_occurrences >= 1;"
-
-#names and metaphors
-
-
-
+# SQLite запрос с использованием параметров
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
+grep -rioE "[^ ]*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+cd -  > /dev/null
 #quickerNoCountAndNamequery
 query="SELECT file_name, 1 AS weight, line_text, line_id
 FROM sutta_pi
@@ -48,14 +52,17 @@ WHERE line_id IN (
     FROM sutta_pi
     WHERE lower(line_text) REGEXP '.*kacchap.*'
     AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
-) order by file_name, line_id, weight" 
-prequery=$(echo $prequery| sed 's@kacchap@'"$keyword"'@g')
+) order by file_name, line_id, weight;" 
+#prequery=$(echo $prequery| sed 's@kacchap@'"$keyword"'@g')
 query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
 htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 # Выполнение запроса SQLite с использованием параметров
-$sqlitecommand $database "$prequery" > $tmpdir/counts
+#$sqlitecommand $database "$prequery" > $tmpdir/counts
 
-if [ -s "$tmpdir/counts" ]; then
+if [ -s "$tmpdir/words" ]; then
+
+cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V| uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+
 cat $tmpdir/counts | awk -F"$separator" 'BEGIN {
     printf("SELECT t1.metaphor_count, t2.line_text\n");
     printf("FROM similes t1\n");
@@ -92,6 +99,15 @@ cat $tmpdir/w.html
 
 fi
 exit 0
+
+prequery="SELECT file_name, line_id,
+       sum((LENGTH(line_text) - LENGTH(REPLACE(lower(line_text), 'kacchap', ''))) / LENGTH('kacchap')) AS count_occurrences
+FROM sutta_pi
+WHERE lower(line_text) REGEXP '.*kacchap.*'
+AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
+GROUP BY file_name
+HAVING count_occurrences >= 1;"
+
 
 echo '<script>                                   
 window.location.href="/result/w.html?s='$htmlpattern'";

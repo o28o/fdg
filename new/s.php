@@ -22,13 +22,12 @@ $query = $_SERVER['QUERY_STRING'];
 
 /* echo ' '.$params['lang']; */
 
-  	   	  	if ($_SERVER["REQUEST_METHOD"] == "GET") {
-   	  	$s = $_GET["s"];
-
-  	}
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $s = trim($_GET["s"]);
+}
  
  		$string = str_replace("`", "", $s);
- 		$stringForOpen = strtolower($string);
+$stringForOpen = strtolower(trim($string));
 $command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
    $output = shell_exec($command); 

@@ -44,10 +44,12 @@
 </div>
 
 <div class="input-group-append ms-2">
-<button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill ">
-<!-- <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i> --> Search
-    <span class="visually-hidden">Search</span>
+  <button onclick="trimParamsAndShowSpinner()" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill">
+    Search
 </button>
+
+<!-- <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i> --> 
+
 </div>
 </div>
 
@@ -60,6 +62,25 @@
 </div>             
                     
 
+
+<script>
+    function trimParamsAndShowSpinner() {
+        var paramsToTrim = ['s', 'p', 'extra', 'q'];
+
+        paramsToTrim.forEach(function(paramName) {
+            var paramValue = document.getElementById(paramName).value;
+            document.getElementById(paramName).value = paramValue.trim();
+        });
+
+        var sValue = document.getElementById('paliauto').value;
+        document.getElementById('paliauto').value = sValue.trim();
+
+        var spinner = document.getElementById('spinner');
+        if (spinner) {
+            spinner.style.display = 'block';
+        }
+    }
+</script>
 
 	  <script src="/assets/js/smoothScroll.js" defer></script>
 	<script defer>

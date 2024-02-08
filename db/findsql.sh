@@ -61,6 +61,7 @@ SELECT file_name,
        SUM((LENGTH(line_text) - LENGTH(REPLACE(lower(line_text), 'kacchap', ''))) / LENGTH('kacchap')) AS count_occurrences
 FROM sutta_pi
 WHERE lower(line_text) REGEXP '.*kacchap.*'
+AND line_id REGEXP '^(sn|mn|dn|an)[0-9]'
 GROUP BY file_name
 HAVING count_occurrences >= 1;
 

@@ -57,7 +57,7 @@ $sqlitecommand $database "$prequery" > $tmpdir/counts
 
 if [ -s "$tmpdir/counts" ]; then
 cat $tmpdir/counts | awk -F"$separator" 'BEGIN {
-    printf("SELECT t1.file_name, t1.metaphor_count, t2.line_text\n");
+    printf("SELECT t1.metaphor_count, t2.line_text\n");
     printf("FROM similes t1\n");
     printf("JOIN text_names t2 ON t1.file_name = t2.file_name\n");
     printf("WHERE t2.file_name IN (");
@@ -77,11 +77,16 @@ END {
 }' | $sqlitecommand $database > $tmpdir/extra
 paste -d"$separator" $tmpdir/counts $tmpdir/extra > $tmpdir/ctMrNames
 $sqlitecommand $database "$query" > $tmpdir/mainquery
-bash ./new/awk2.sh $tmpdir/ctMrNames $tmpdir/mainquery "$keyword" > $tmpdir/final
+bash ./new/awk-step1.sh $tmpdir/mainquery "$keyword" > $tmpdir/prefinal
+paste -d'@' $tmpdir/ctMrNames $tmpdir/prefinal > $tmpdir/finalraw
+bash ./new/awk-step2.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
+
+#bash ./new/awk2.sh $tmpdir/ctMrNames $tmpdir/mainquery "$keyword" > $tmpdir/final
 #paste -d"$separator" $tmpdir/nocount $tmpdir/ctMrNames
+
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/ctMrNames)"
 cat ./new/header | sed 's/$title/'"$headerinfo"'/g' > $tmpdir/w.html
-cat $tmpdir/final >> $tmpdir/w.html
+cat $tmpdir/finalhtml >> $tmpdir/w.html
 cat ./new/footer >> $tmpdir/w.html
 cat $tmpdir/w.html
 

@@ -1,17 +1,16 @@
-keyword=$3
-awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" } NR==FNR { 
-    # Обработка первого файла (file1)
-    countsAndNames[$0] = 1
-    next;  
-}
+#keyword="$(echo $@ | awk '{$1=""; $2=""; print $0}' | sed 's/^ //')"
+keyword="$3"
+awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" }  { OFS = "" } 
 {
 
 file_name=$1
 textclass=$2
 qoute=$3 
 line_id=$4
-name=$5
-mtphr_count=$6
+
+
+    qoute = $3
+  
 
     if (index(file_name, "-") != 0) { 
 anchorpart = $4
@@ -43,21 +42,10 @@ name=sutta
     } 
 if (NR == 1 || (file_name != prev_file && textclass == 1)) {
     
-        for (key in countsAndNames) {
-        split(key, array, "@")
-        filenamefromArray = array[1]
-        
-            if (file_name == filenamefromArray) {
-            count = array[3]
-        metaphor = array[5]
-        name = array[6]
-           }
-    }
-        print "<tr><td><a href=\"" urlwithanchor "\">" file_name "</a></td><td><input type=checkbox data-index=" file_name "></td><td><strong class=\"pli-lang inputscript-ISOPali\">" name "</strong></td><td></td><td>" count "</td><td>" metaphor "</td><td><a href=\"\" onclick=openDpr(\"" sutta "\") >Pi</a>&nbsp;<a class=\"bwLink\"  href=\"\" data-slug=" sutta ">En</a>&nbsp;<a class=\"ruLink\"  href=\"\" data-slug=" sutta ">Ru</a>&nbsp;</td><td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>"
+        print urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>"
     } else {
         print "<span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span><br class=\"styled\">"
     }
-    
 
     prev_file = $1
     prev_line = NR}

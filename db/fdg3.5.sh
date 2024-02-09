@@ -24,16 +24,28 @@ sqlitecommand="sqlite3 -separator $separator"
 
 # SQLite запрос с использованием параметров
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
-grep -rioE "[^ ]*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+grep -riE "[^ ]*$keyword[^ ]*" ./sn ./mn ./an ./dn  | sort -V > $tmpdir/maingrep
 cd -  > /dev/null
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
+grep -riE "[^ ]*$keyword[^ ]*" ./sn ./mn ./an ./dn  | sort -V >> $tmpdir/maingrep
+cd - > /dev/null
 #quickerNoCountAndNamequery
+
+#prequery=$(echo $prequery| sed 's@kacchap@'"$keyword"'@g')
+#query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
+htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
+# Выполнение запроса SQLite с использованием параметров
+#$sqlitecommand $database "$prequery" > $tmpdir/counts
+
+if [ -s "$tmpdir/maingrep" ]; then
+
+cat $tmpdir/maingrep | awk '{ print $2 }' | sed "s@\":@',@g" | sort -V | sed "s@^\"@'@g" |sed '$ s/,$//'  > $tmpdir/ids 
 query="SELECT file_name, 1 AS weight, line_text, line_id
 FROM sutta_pi
 WHERE line_id IN (
     SELECT line_id
     FROM sutta_pi
-    WHERE lower(line_text) REGEXP '.*kacchap.*'
-    AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
+    WHERE line_id in ("$(cat $tmpdir/ids)")
 )
 UNION ALL
 SELECT file_name, 2 AS weight, line_text, line_id
@@ -41,8 +53,7 @@ FROM sutta_en
 WHERE line_id IN (
     SELECT line_id
     FROM sutta_pi
-    WHERE lower(line_text) REGEXP '.*kacchap.*'
-    AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
+    WHERE line_id in ("$(cat $tmpdir/ids)")
 )
 UNION ALL
 SELECT file_name, 3 AS weight, line_text, line_id
@@ -50,42 +61,35 @@ FROM sutta_var
 WHERE line_id IN (
     SELECT line_id
     FROM sutta_pi
-    WHERE lower(line_text) REGEXP '.*kacchap.*'
-    AND line_id REGEXP '^(sn|mn|dn|an)[0-9].*'
+    WHERE line_id in ("$(cat $tmpdir/ids)")
 ) order by file_name, line_id, weight;" 
-#prequery=$(echo $prequery| sed 's@kacchap@'"$keyword"'@g')
-query=$(echo $query| sed 's@kacchap@'"$keyword"'@g')
-htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
-# Выполнение запроса SQLite с использованием параметров
-#$sqlitecommand $database "$prequery" > $tmpdir/counts
 
-if [ -s "$tmpdir/words" ]; then
-
-cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V| uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
-
-cat $tmpdir/counts | awk -F"$separator" 'BEGIN {
-    printf("SELECT t1.metaphor_count, t2.line_text\n");
-    printf("FROM similes t1\n");
-    printf("JOIN text_names t2 ON t1.file_name = t2.file_name\n");
-    printf("WHERE t2.file_name IN (");
-    first = 1;
-}
-{
-    if (first) {
-        printf("'\''%s'\''", $1);
-        first = 0;
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
+grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+cd -  > /dev/null
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
+grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
+cd -  > /dev/null
+cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+echo $query   > ofof
+cat $tmpdir/counts | awk -F"$separator" '{ if (NR == 1) {
+        printf "SELECT temp_ids.file_name, t.line_text, s.metaphor_count\n";
+        printf "FROM (\n";
+        printf "    SELECT '\''%s'\'' AS file_name\n", $1;
     } else {
-        printf(",'\''%s'\''", $1);
+        printf "    UNION ALL SELECT '\''%s'\''\n", $1;
     }
 }
-
 END {
-    printf(");\n");
-}' | $sqlitecommand $database > $tmpdir/extra
+    printf ") AS temp_ids\n";
+    printf "LEFT JOIN text_names t ON temp_ids.file_name = t.file_name\n";
+    printf "LEFT JOIN similes s ON temp_ids.file_name = s.file_name;\n";
+}' | $sqlitecommand $database | sort -V > $tmpdir/extra
 paste -d"$separator" $tmpdir/counts $tmpdir/extra > $tmpdir/ctMrNames
-$sqlitecommand $database "$query" > $tmpdir/mainquery
+$sqlitecommand $database "$query"  | sort -t'@' -k1V,1 -k4 -k2 > $tmpdir/mainquery
 bash ./new/awk-step1.sh $tmpdir/mainquery "$keyword" > $tmpdir/prefinal
-paste -d'@' $tmpdir/ctMrNames $tmpdir/prefinal > $tmpdir/finalraw
+
+paste -d'@' $tmpdir/prefinal $tmpdir/ctMrNames > $tmpdir/finalraw
 bash ./new/awk-step2.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 #bash ./new/awk2.sh $tmpdir/ctMrNames $tmpdir/mainquery "$keyword" > $tmpdir/final

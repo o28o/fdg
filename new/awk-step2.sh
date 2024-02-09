@@ -2,15 +2,14 @@
 keyword="$2"
 awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" } 
 {
+urlwithanchor=$1
+file_name=$2
+sutta=$3
+qoute=$4
+count=$7
 
-file_name=$1
-count=$3
-mtphr_count=$4
-name=$5
-urlwithanchor=$6
-sutta=$8
-qoute=$9
-
+mtphr_count=$NF
+name=$9
 qoutetoparse=qoute
 
 gsub(/<\/?[^>]+>/, "", qoutetoparse); 

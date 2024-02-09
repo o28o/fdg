@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+error_reporting(E_ERROR | E_PARSE);
+include_once('../config/config.php');
+include_once('../config/translate.php');
+include '../scripts/opentexts.php';
+//echo basename($_SERVER['REQUEST_URI']);
+?>
 <html lang="en" data-bs-theme="dark">
 
 <head>
@@ -93,9 +100,19 @@ window.addEventListener('pageshow', function(event) {
 </script>           
                     
                 </form>
-            </div>
+            </div><div class="container text-center mt-5">
+<?php
+if ( $lang == "ru" ) {
+include '../assets/common/horizontalMenuRu.php'; 
+} else {
+include '../assets/common/horizontalMenuEn.php'; 
+} 
+?>
+</div>
         </div>
     </div>
+    
+    
 <script>
 $.ajax({
   url: "/assets/texts/sutta_words.txt",

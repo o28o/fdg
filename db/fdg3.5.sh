@@ -70,7 +70,7 @@ cd -  > /dev/null
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
 grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
 cd -  > /dev/null
-cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
 echo $query   > ofof
 cat $tmpdir/counts | awk -F"$separator" '{ if (NR == 1) {
         printf "SELECT temp_ids.file_name, t.line_text, s.metaphor_count\n";
@@ -96,10 +96,10 @@ bash ./new/awk-step2.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 #paste -d"$separator" $tmpdir/nocount $tmpdir/ctMrNames
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/ctMrNames)"
-cat ./new/header | sed 's/$title/'"$headerinfo"'/g' > $tmpdir/w.html
-cat $tmpdir/finalhtml >> $tmpdir/w.html
-cat ./new/footer >> $tmpdir/w.html
-cat $tmpdir/w.html
+cat ./new/templates/header ./new/templates/resultheader| sed 's/$title/'"$headerinfo"'/g' > $tmpdir/r.html
+cat $tmpdir/finalhtml >> $tmpdir/r.html
+cat ./new/templates/footer >> $tmpdir/r.html
+cat $tmpdir/r.html
 
 fi
 exit 0
@@ -114,7 +114,7 @@ HAVING count_occurrences >= 1;"
 
 
 echo '<script>                                   
-window.location.href="/result/w.html?s='$htmlpattern'";
+window.location.href="/result/r.html?s='$htmlpattern'";
 </script>'
 else
     echo "	<script>                                   

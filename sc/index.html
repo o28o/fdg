@@ -373,4 +373,48 @@ $(document).ready(function() {
 <!-- <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script> -->
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/copyToClipboard.js"></script>
+<script>
+window.addEventListener("load", function() {
+    console.log("Document loaded");
+
+    setTimeout(function() {
+        console.log("Timeout fired after 1.5 seconds");
+
+        let params = new URLSearchParams(document.location.search);
+        let finder = params.get("s");
+        let query = params.get("q");
+        let url = document.location.href;
+
+        if (finder && finder.trim() !== "" && query && url.indexOf("#") === -1) {
+            console.log("Parameters 's', 'q', and no anchor found in URL");
+
+            let regex = new RegExp(finder, 'gi');
+            let textNodes = document.evaluate(
+                "//text()[normalize-space(parent::*) != '']", 
+                document.body, 
+                null, 
+                XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, 
+                null
+            );
+
+            for (let i = 0; i < textNodes.snapshotLength; i++) {
+                let currentNode = textNodes.snapshotItem(i);
+                if (regex.test(currentNode.nodeValue)) {
+                    console.log("Found match in text node:", currentNode.nodeValue);
+
+                    let parentNode = currentNode.parentNode;
+                    parentNode.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                    break; // Прекратить поиск после первого совпадения
+                }
+            }
+        } else {
+            console.log("Conditions not met: 's' parameter empty or missing, 'q' parameter empty or missing, or anchor found in URL");
+        }
+    }, 1000); // 1.5 секунды таймаута
+});
+</script>
 </html>

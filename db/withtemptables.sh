@@ -39,7 +39,19 @@ htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 
 if [ -s "$tmpdir/maingrep" ]; then
 
-cat $tmpdir/maingrep | awk '{ print $2 }' | sed "s@\":@',@g" | sort -V | sed "s@^\"@'@g" |sed '$ s/,$//'  > $tmpdir/ids 
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
+grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+cd -  > /dev/null
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
+grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
+cd -  > /dev/null
+cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+
+idqnty=$(wc -l $tmpdir/maingrep)
+unionlimit=1000
+if [ $idqnty <= $unionlimit ]; then
+echo small case
+cat $tmpdir/maingrep | awk '{ print $2 }' | sed "s@\":@',@g" | sort -V | sed "s@^\"@'@g"  |sed '$ s/,$//' > $tmpdir/ids 
 query="SELECT file_name, 1 AS weight, line_text, line_id
 FROM sutta_pi
 WHERE line_id IN (
@@ -64,14 +76,6 @@ WHERE line_id IN (
     WHERE line_id in ("$(cat $tmpdir/ids)")
 ) order by file_name, line_id, weight;" 
 
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
-grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
-cd -  > /dev/null
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
-grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
-cd -  > /dev/null
-cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
-echo $query   > ofof
 cat $tmpdir/counts | awk -F"$separator" '{ if (NR == 1) {
         printf "SELECT temp_ids.file_name, t.line_text, s.metaphor_count\n";
         printf "FROM (\n";
@@ -85,6 +89,59 @@ END {
     printf "LEFT JOIN text_names t ON temp_ids.file_name = t.file_name\n";
     printf "LEFT JOIN similes s ON temp_ids.file_name = s.file_name;\n";
 }' | $sqlitecommand $database | sort -V > $tmpdir/extra
+
+else
+#if toobig
+
+cat $tmpdir/maingrep | awk '{ print $2 }' | sed "s@\":@'@g" | sort -V | sed "s@^\"@'@g"  > $tmpdir/ids 
+cat $tmpdir/counts | awk -F"$separator" 'BEGIN {
+    printf "DROP TABLE IF EXISTS temp_ids;\n";
+    printf "CREATE TEMPORARY TABLE temp_ids (file_name VARCHAR(255));\n";
+}
+{
+    if (NR == 1) {
+        printf "INSERT INTO temp_ids (file_name) VALUES ('\''%s'\'');\n", $1;
+    } else {
+        printf "INSERT INTO temp_ids (file_name) VALUES ('\''%s'\'');\n", $1;
+    }
+}
+END {
+    printf "SELECT temp_ids.file_name, t.line_text, s.metaphor_count\n";
+    printf "FROM temp_ids\n";
+    printf "LEFT JOIN text_names t ON temp_ids.file_name = t.file_name\n";
+    printf "LEFT JOIN similes s ON temp_ids.file_name = s.file_name;\n";
+}' | $sqlitecommand $database | sort -V > $tmpdir/extra
+
+# Создаем временную таблицу для идентификаторов line_id
+cat $tmpdir/ids | awk -v separator="," 'BEGIN {
+    printf "DROP TABLE IF EXISTS temp_line_ids;\n";
+    printf "CREATE TEMPORARY TABLE temp_line_ids (line_id INT);\n";
+    }
+{
+    printf "INSERT INTO temp_line_ids (line_id) VALUES (%s);\n", $1;
+}' | $sqlitecommand $database 
+
+# Выполняем три SELECT-запроса с JOIN к временной таблице
+query="SELECT file_name, 1 AS weight, line_text, line_id
+FROM sutta_pi
+JOIN temp_line_ids USING (line_id)
+UNION ALL
+SELECT file_name, 2 AS weight, line_text, line_id
+FROM sutta_en
+JOIN temp_line_ids USING (line_id)
+UNION ALL
+SELECT file_name, 3 AS weight, line_text, line_id
+FROM sutta_var
+JOIN temp_line_ids USING (line_id)
+ORDER BY file_name, line_id, weight;"
+
+# Выводим запрос
+echo "$query" | $sqlitecommand $database
+
+#toobig end
+fi
+echo $query   > ofof
+
 paste -d"$separator" $tmpdir/counts $tmpdir/extra > $tmpdir/ctMrNames
 $sqlitecommand $database "$query"  | sort -t'@' -k1V,1 -k4 -k2 > $tmpdir/mainquery
 bash ./new/awk-step1.sh $tmpdir/mainquery "$keyword" > $tmpdir/prefinal

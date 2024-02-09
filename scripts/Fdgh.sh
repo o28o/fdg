@@ -28,10 +28,12 @@ sed -i 's/_translation-en-sujato.json/":2"/g' $tmpdir/maingrep2
 sed -i 's/_variant-pli-ms.json/":3"/g' $tmpdir/maingrep3
 sed -i 's/":/@/g' $tmpdir/maingrep*
 
+cat $tmpdir/maingrep* | sort -t'@' -k1V,1 -k3V,3 -k2n,2 | sed 's/@ *"/@/g' | sed 's/",$//g' | awk -F/ '{print $NF}'> $tmpdir/readyforawk
 
-cat $tmpdir/maingrep* | sort -t'@' -k1V,1 -k3V,3 -k2n,2 > $tmpdir/readyforawk
+bash awknewfdg.sh $tmpdir/readyforawk "$keyword" > $tmpdir/afterawk  
 
-head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
+cat $tmpdir/afterawk | wc -l 
+#head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 exit 0
 
 cat $tmpdir/maingrep1 | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | sed "s@^\"@@g" | awk 'BEGIN {OFS=""; printf "grep -Eir \047("} { printf $1"|"}' |  sed '$ s@|$@)'\'' ./sn ./mn ./an ./dn \n@'  > cmnd

@@ -71,7 +71,7 @@ cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
 grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
 cd -  > /dev/null
 cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
-echo $query   > ofof
+
 cat $tmpdir/counts | awk -F"$separator" '{ if (NR == 1) {
         printf "SELECT temp_ids.file_name, t.line_text, s.metaphor_count\n";
         printf "FROM (\n";
@@ -86,7 +86,7 @@ END {
     printf "LEFT JOIN similes s ON temp_ids.file_name = s.file_name;\n";
 }' | $sqlitecommand $database | sort -V > $tmpdir/extra
 paste -d"$separator" $tmpdir/counts $tmpdir/extra > $tmpdir/ctMrNames
-$sqlitecommand $database "$query"  | sort -t'@' -k1V,1 -k4 -k2 > $tmpdir/mainquery
+$sqlitecommand $database "$query" | sed 's/<[^>]*>//g' | sort -t'@' -k1V,1 -k4 -k2 > $tmpdir/mainquery
 bash ./new/awk-step1.sh $tmpdir/mainquery "$keyword" > $tmpdir/prefinal
 
 paste -d'@' $tmpdir/prefinal $tmpdir/ctMrNames > $tmpdir/finalraw

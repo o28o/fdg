@@ -229,3 +229,6 @@ function highlightpattern {
 sed -E "s@$patternForHighlight@<b>&</b>@gI"
 }
 
+function cleanupwords {
+sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/[”’]*ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
+}

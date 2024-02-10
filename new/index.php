@@ -108,7 +108,9 @@ include '../assets/common/horizontalMenuRu.php';
 include '../assets/common/horizontalMenuEn.php'; 
 } 
 ?>
+<a href="/result/r.html">r.html </a><a href="/result/w.html">w.html </a>
 </div>
+
         </div>
     </div>
     

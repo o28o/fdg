@@ -5,9 +5,9 @@ awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" }
 urlwithanchor=$4
 file_name=$1
 sutta=$6
-qoute=$NF
+qoute=$7
 count=$3
-
+words=$9
 mtphr_count=""
 name=""
 

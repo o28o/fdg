@@ -38,6 +38,23 @@ cd -  > /dev/null
 #grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
 #cd -  > /dev/null
 cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+
+
+cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $1, $2}' | sort | uniq | awk '{
+    if ($1 in data) {
+        data[$1] = data[$1] " " $2
+    } else {
+        data[$1] = $1 "@" $2
+    }
+}
+END {
+    for (item in data) {
+        print data[item]
+    }
+}' | sort -V > $tmpdir/wordsAggregatedByTexts
+
+
+
 ########## end count keywords in texts
 #rm $tmpdir/afterawk  
 bash awknewfdg.sh $tmpdir/readyforawk "$keyword" > $tmpdir/afterawk  
@@ -45,14 +62,18 @@ bash awknewfdg.sh $tmpdir/readyforawk "$keyword" > $tmpdir/afterawk
 
 counts_file="$tmpdir/counts"
 afterawk_file="$tmpdir/afterawk"
+aggregated_file="$tmpdir/wordsAggregatedByTexts"
+wordsAggregatedByTexts=$(wc -l < "$aggregated_file")
 counts=$(wc -l < "$counts_file")
 afterawk=$(wc -l < "$afterawk_file")
 
-if [ "$counts" -ne "$afterawk" ]; then
-    echo "Количество строк $counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file"
+if [ "$counts" -eq "$afterawk" ] && [ "$afterawk" -eq "$wordsAggregatedByTexts" ]; then
+    echo "Все три переменные равны $counts"
+else
+    echo "Количество строк $counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file и $wordsAggregatedByTexts в $aggregated_file"
 fi
 
-paste -d"@" $tmpdir/counts $tmpdir/afterawk > $tmpdir/finalraw
+paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts> $tmpdir/finalraw
 bash ./awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"

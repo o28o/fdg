@@ -102,7 +102,7 @@ $('#pali').find('tbody').find('tr').each(function() {
 	   'paging'  : true,
 	    'colReorder': true,
 	    'orderMulti': true,
-	   'pageLength' : 28,
+	   'pageLength' : 10,
 	   'lengthMenu' : [10, 28, 50, 100, 1000],
 	/*  'responsive': true,*/
 	  'columnDefs': [
@@ -157,39 +157,55 @@ $('#pali').find('tbody').find('tr').each(function() {
 
    });	//конец datatable	         
    
-             let params = new URLSearchParams(document.location.search);
-    let finder = params.get("s");
+   
+  // s param и div keywprd
+   
+let params = new URLSearchParams(document.location.search);
+let finder = params.get("s");
+let keyword;
 
-    if (finder && finder.trim() !== "") {
-        // Получаем таблицу DataTables по ее id
+// Проверяем наличие элемента с классом "keyword"
+let keywordElement = document.querySelector('.keyword');
+if (keywordElement) {
+    keyword = keywordElement.textContent.trim();
+} else {
+    keyword = ""; // Значение по умолчанию, если элемент не найден
+}
 
-        // Получаем все строки таблицы
-        table.rows().every(function(rowIdx, tableLoop, rowLoop) {
-            // Получаем данные в текущей строке
-            var rowData = this.data();
+// Используем значение из параметра "s" или "keyword"
+let searchValue = finder && finder.trim() !== "" ? finder : keyword;
 
-            // Проходим по каждому элементу данных в строке
-            rowData.forEach(function(cellData, index) {
+if (searchValue !== "") {
+    // Получаем таблицу DataTables по ее id
 
-if ( index !== 0) {
+    // Получаем все строки таблицы
+    table.rows().every(function(rowIdx, tableLoop, rowLoop) {
+        // Получаем данные в текущей строке
+        var rowData = this.data();
 
-                    // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
-var regex = new RegExp(finder + '(?![^<]*>)', 'gi');
-                   // var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-                    cellData = cellData.replace(regex, function(match) {
-                        return '<b class="match finder">' + match + '</b>';
-                    });
+        // Проходим по каждому элементу данных в строке
+        rowData.forEach(function(cellData, index) {
+            if (index !== 0) {
+                // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
+                var regex = new RegExp(searchValue + '(?![^<]*>)', 'gi');
+                // var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+                cellData = cellData.replace(regex, function(match) {
+                    return '<b class="match finder">' + match + '</b>';
+                });
 
-                    // Обновляем содержимое ячейки с примененной подсветкой
-                    table.cell(rowIdx, index).data(cellData);
-                }
-            });
+                // Обновляем содержимое ячейки с примененной подсветкой
+                table.cell(rowIdx, index).data(cellData);
+            }
         });
+    });
 
-        // Перерисовываем таблицу для применения изменений
-        table.draw(false);
-    }         
-            
+    // Перерисовываем таблицу для применения изменений
+    table.draw(false);
+}
+
+
+
+//конец s и keyword            
         },
         error: function(xhr, status, error) {
             console.error('Ошибка при загрузке файла с данными:', status, error);

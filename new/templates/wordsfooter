@@ -74,10 +74,24 @@
 
 $(document).ready(function() {
     // Получаем параметр поиска из URL
-    let params = new URLSearchParams(document.location.search);
-    let finder = params.get("s");
+let params = new URLSearchParams(document.location.search);
+let finder = params.get("s");
+let keyword;
 
-    if (finder && finder.trim() !== "") {
+// Проверяем наличие элемента с классом "keyword"
+let keywordElement = document.querySelector('.keyword');
+if (keywordElement) {
+    keyword = keywordElement.textContent.trim();
+    console.log("element keyword found", keyword);
+} else {
+  console.log("element keyword not found");
+    keyword = ""; // Значение по умолчанию, если элемент не найден
+}
+
+let searchValue = finder && finder.trim() !== "" ? finder : keyword;
+
+if (searchValue !== "") {
+  
         // Получаем таблицу DataTables по ее id
         var table = $('#pali').DataTable();
 

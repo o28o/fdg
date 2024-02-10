@@ -77,7 +77,10 @@ paste -d'@' $tmpdir/wordcountTexts $tmpdir/wordcountMatches $tmpdir/wordsWithAgg
 }' > $tmpdir/wordsfinalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-cat ./new/templates/header ./new/templates/wordsheader | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
+
+cat ./new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
+echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/w.html
+cat ./new/templates/wordsheader | sed 's/$title/'"$headerinfo"'/g' >> $output/w.html
 cat $tmpdir/wordsfinalhtml >> $output/w.html
 cat ./new/templates/wordsfooter >> $output/w.html
 cat $output/w.html

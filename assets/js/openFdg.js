@@ -4,13 +4,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получить параметр s из URL браузера
     const urlParams = new URLSearchParams(window.location.search);
     const sParam = urlParams.get('s');
+  
+    let keyword;
+
+// Проверяем наличие элемента с классом "keyword"
+let keywordElement = document.querySelector('.keyword');
+if (keywordElement) {
+    keyword = keywordElement.textContent.trim();
+} else {
+    keyword = ""; // Значение по умолчанию, если элемент не найден
+}
+
+// Используем значение из параметра "s" или "keyword"
+let searchValue = sParam && sParam.trim() !== "" ? sParam : keyword;
+console.log("searchValue:", searchValue);
     
     const fdgLinks = document.querySelectorAll('.fdgLink');
     fdgLinks.forEach(link => {
         const slug = link.getAttribute('data-slug');
-        console.log("Slug:", slug);
-        const textUrl = findFdgTextUrl(slug, sParam);
-        console.log("Text URL:", textUrl);
+     //   console.log("Slug:", slug);
+        const textUrl = findFdgTextUrl(slug, searchValue);
+    //    console.log("Text URL:", textUrl);
         if (!textUrl) {
             link.style.display = 'none';
         } else {
@@ -31,8 +45,8 @@ function openFdg(slug) {
     }
 }
 
-function findFdgTextUrl(slug, sParam) {
+function findFdgTextUrl(slug, searchValue) {
     let url;
-    url = window.location.origin + "/ru/sc/?s=" + (sParam ? sParam : "") + "&q=" + slug;
+    url = window.location.origin + "/ru/sc/?s=" + (searchValue ? searchValue : "") + "&q=" + slug;
     return url;
 }

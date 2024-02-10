@@ -42,7 +42,7 @@ truncatelength=30
 filesizenooverwrite=300000
 maxmatchesbg=3000
 archivenumber=84
-minmatchesforonline=7
+minmatchesforonline=20
 multiplier=0.5
 skiprounds=3
 
@@ -81,7 +81,7 @@ maxmatchesbg=3500
 archivenumber=91
 
 multiplier=2
-minmatchesforonline=10
+minmatchesforonline=30
 skiprounds=5
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
@@ -115,7 +115,7 @@ maxmatchesbg=300000
 archivenumber=280
 archivenumber=91
 multiplier=2
-minmatchesforonline=15
+minmatchesforonline=30
 skiprounds=5
 
 elif [[ "`uname -a`" == *".from.sh"* ]]; then

@@ -57,12 +57,12 @@ bash ./awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
 
-cat ./new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $tmpdir/r.html
-echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $tmpdir/r.html
-cat ./new/templates/resultheader| sed 's/$title/'"$headerinfo"'/g' >> $tmpdir/r.html
-cat $tmpdir/finalhtml >> $tmpdir/r.html
-cat ./new/templates/footer >> $tmpdir/r.html
-cat $tmpdir/r.html
+cat ./new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
+echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
+cat ./new/templates/resultheader| sed 's/$title/'"$headerinfo"'/g' >> $output/r.html
+cat $tmpdir/finalhtml >> $output/r.html
+cat ./new/templates/footer >> $output/r.html
+cat $output/r.html
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 #wc -l $tmpdir/counts $tmpdir/afterawk
 exit 0

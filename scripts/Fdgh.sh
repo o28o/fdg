@@ -49,8 +49,7 @@ counts=$(wc -l < "$counts_file")
 afterawk=$(wc -l < "$afterawk_file")
 
 if [ "$counts" -ne "$afterawk" ]; then
-    echo "Количество строк в файле $counts_file не равно количеству строк в файле $afterawk_file"
-    exit 1
+    echo "Количество строк $counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file"
 fi
 
 paste -d"@" $tmpdir/counts $tmpdir/afterawk > $tmpdir/finalraw

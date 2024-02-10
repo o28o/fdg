@@ -32,8 +32,29 @@
    var dataSrc = [];
    var filterValue = new URLSearchParams(window.location.search).get('f');
 
-
-	 var table = $('#pali').DataTable({
+$(document).ready(function() {
+    // Загрузка файла с данными
+    $.ajax({
+        url: '/assets/js/textinfo.js',
+        dataType: 'json',
+        success: function(TextInfo) {
+            // Заполнение данных в таблице
+$('#pali').find('tbody').find('tr').each(function() {
+    var linkText = $(this).find('td').eq(0).find('a').text();
+    if (TextInfo[linkText]) {
+        var titlePali = TextInfo[linkText]['Title Pali'] || ''; // Если нет значения, присваиваем пустую строку
+        var titleEnglish = TextInfo[linkText]['Title English'] || ''; // Если нет значения, присваиваем пустую строку
+        var metaphorCount = TextInfo[linkText]['Metaphor count'] || ''; // Если нет значения, присваиваем пустую строку
+        $(this).find('td').eq(1).html('<strong class="pli-lang inputscript-ISOPali">' + titlePali + '</strong> ' + titleEnglish);
+        $(this).find('td').eq(4).text(metaphorCount);
+    } else {
+        // Если данных для linkText нет, можно установить пустые значения или другое поведение по умолчанию
+        $(this).find('td').eq(1).html('');
+        $(this).find('td').eq(4).text('');
+    }
+});
+            
+   	 var table = $('#pali').DataTable({
 	 /*  'autoWidth': true,*/
 	   'stateSave': true,
 	           dom: '<"row"lf>r<t><"row"ip><"footerlike"B>',
@@ -85,15 +106,16 @@
 	   'lengthMenu' : [10, 28, 50, 100, 1000],
 	/*  'responsive': true,*/
 	  'columnDefs': [
-				{                
-				targets: [1], // Индекс столбца с чекбоксами
+		/*		{                
+				targets: [8], // Индекс столбца с чекбоксами
 				orderDataType: 'dom-checkbox' // Используем функцию сортировки
 				},
-	            { type: "html", target: [2,3,7] },
+				*/
+	            { type: "html", target: [1,2,6] },
 	            { type: 'natural', targets: 0 },
 				  {
             target: 1,
-            visible: false
+            visible: true
         }				
 					],
       'initComplete': function(){
@@ -117,8 +139,52 @@
                }
             }
          );
-      }
-   });			
+      } // автозаполнение какоето
+      
+
+   });	//конец datatable	         
+   
+             let params = new URLSearchParams(document.location.search);
+    let finder = params.get("s");
+
+    if (finder && finder.trim() !== "") {
+        // Получаем таблицу DataTables по ее id
+
+        // Получаем все строки таблицы
+        table.rows().every(function(rowIdx, tableLoop, rowLoop) {
+            // Получаем данные в текущей строке
+            var rowData = this.data();
+
+            // Проходим по каждому элементу данных в строке
+            rowData.forEach(function(cellData, index) {
+
+if ( index !== 0) {
+
+                    // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
+var regex = new RegExp(finder + '(?![^<]*>)', 'gi');
+                   // var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+                    cellData = cellData.replace(regex, function(match) {
+                        return '<b class="match finder">' + match + '</b>';
+                    });
+
+                    // Обновляем содержимое ячейки с примененной подсветкой
+                    table.cell(rowIdx, index).data(cellData);
+                }
+            });
+        });
+
+        // Перерисовываем таблицу для применения изменений
+        table.draw(false);
+    }         
+            
+        },
+        error: function(xhr, status, error) {
+            console.error('Ошибка при загрузке файла с данными:', status, error);
+        }
+    });
+});
+
+	
    
    //custom sort для dhp iti
 /*$.fn.dataTable.ext.order.push(
@@ -165,43 +231,18 @@
 
   </script>
   
+
+  <script>
+    // Заполнение данных в таблице
+  
+</script>
+  
+  
   <script>
 
 $(document).ready(function() {
     // Получаем параметр поиска из URL
-    let params = new URLSearchParams(document.location.search);
-    let finder = params.get("s");
 
-    if (finder && finder.trim() !== "") {
-        // Получаем таблицу DataTables по ее id
-        var table = $('#pali').DataTable();
-
-        // Получаем все строки таблицы
-        table.rows().every(function(rowIdx, tableLoop, rowLoop) {
-            // Получаем данные в текущей строке
-            var rowData = this.data();
-
-            // Проходим по каждому элементу данных в строке
-            rowData.forEach(function(cellData, index) {
-
-if ( index !== 0) {
-
-                    // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
-var regex = new RegExp(finder + '(?![^<]*>)', 'gi');
-                   // var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-                    cellData = cellData.replace(regex, function(match) {
-                        return '<b class="match finder">' + match + '</b>';
-                    });
-
-                    // Обновляем содержимое ячейки с примененной подсветкой
-                    table.cell(rowIdx, index).data(cellData);
-                }
-            });
-        });
-
-        // Перерисовываем таблицу для применения изменений
-        table.draw();
-    }
 });
   </script>
   

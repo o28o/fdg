@@ -14,9 +14,9 @@ sqlitecommand="sqlite3 -separator $separator"
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
 grep -riE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn  | sort -V > $tmpdir/initrun1
 cd -  > /dev/null
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
-grep -riE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn  | sort -V | sed 's/<[^>]*>//g' > $tmpdir/initrun3
-cd - > /dev/null
+#cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
+#grep -riE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn  | sort -V | sed 's/<[^>]*>//g' > $tmpdir/initrun3
+#cd - > /dev/null
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/sujato/sutta
 cat $tmpdir/initrun1 | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  ./sn ./mn ./an ./dn \n@' > cmnd
@@ -34,9 +34,9 @@ cat $tmpdir/initrun* | sort -t'@' -k1V,1 -k3V,3 -k2n,2 | sed 's/<[^>]*>//g' | se
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
 grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
 cd -  > /dev/null
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
-grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
-cd -  > /dev/null
+#cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
+#grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
+#cd -  > /dev/null
 cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
 ########## end count keywords in texts
 #rm $tmpdir/afterawk  
@@ -53,7 +53,7 @@ if [ "$counts" -ne "$afterawk" ]; then
     exit 1
 fi
 
-paste -d"@" $tmpdir/afterawk $tmpdir/counts > $tmpdir/finalraw
+paste -d"@" $tmpdir/counts $tmpdir/afterawk > $tmpdir/finalraw
 bash ./awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
@@ -63,9 +63,9 @@ echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $tmpdi
 cat ./new/templates/resultheader| sed 's/$title/'"$headerinfo"'/g' >> $tmpdir/r.html
 cat $tmpdir/finalhtml >> $tmpdir/r.html
 cat ./new/templates/footer >> $tmpdir/r.html
-#cat $tmpdir/r.html
+cat $tmpdir/r.html
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
-wc -l $tmpdir/counts $tmpdir/afterawk
+#wc -l $tmpdir/counts $tmpdir/afterawk
 exit 0
 
 cat $tmpdir/initrun1 | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | sed "s@^\"@@g" | awk 'BEGIN {OFS=""; printf "grep -Eir \047("} { printf $1"|"}' |  sed '$ s@|$@)'\'' ./sn ./mn ./an ./dn \n@'  > cmnd

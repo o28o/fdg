@@ -28,7 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
  
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));
-$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
+$command = escapeshellcmd("bash ./fdgnew.sh $stringForOpen");
+//$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
    $output = shell_exec($command); 
    echo "$output";

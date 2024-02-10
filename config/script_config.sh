@@ -52,7 +52,7 @@ nicevalue=1
 mode=online
 apachesitepath=/var/www/html
 tmpdir=/tmp
-tmpdir=$apachesitepath/result
+#tmpdir=$apachesitepath/result
 suttapath=$apachesitepath/suttacentral.net/
 
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'

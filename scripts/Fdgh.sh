@@ -19,8 +19,8 @@ cd -  > /dev/null
 #cd - > /dev/null
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/sujato/sutta
-cat $tmpdir/initrun1 | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  ./sn ./mn ./an ./dn \n@' > cmnd
-bash cmnd > $tmpdir/initrun2
+cat $tmpdir/initrun1 | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  ./sn ./mn ./an ./dn \n@' > $tmpdir/cmnd
+bash $tmpdir/cmnd > $tmpdir/initrun2
 cd - > /dev/null
 
 sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun1

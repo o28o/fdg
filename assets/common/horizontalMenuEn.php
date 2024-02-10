@@ -1,16 +1,23 @@
 <?php
-
-if (preg_match('/read\.php.*/', basename($_SERVER['REQUEST_URI']))) {
-echo '<div class="d-md-inline-block">	
-<a class="text-decoration-none mx-1" href="' . $mainpage . '">
+echo '<div class="d-md-inline-block">	';
+if ((($_SERVER['SERVER_ADDR'] === '127.0.0.1') || ($_SERVER['SERVER_NAME'] === 'localhost')) && (!preg_match('/(new)(\?.*)?$/', basename($_SERVER['REQUEST_URI'])))) {
+echo '<a class="text-decoration-none mx-1" href="/ru/new">
 <figure class="figure text-decoration-none">
-  <i class="menu-icon fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+  <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+  <figcaption class="horiz-menu-item figure-caption text-center">Fdg New!!!</figcaption>
+</figure>
+</a>';
+}
+
+ if (preg_match('/(read\.php|new)(\?.*)?$/', basename($_SERVER['REQUEST_URI']))) {
+    
+echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
+<figure class="figure text-decoration-none">
+  <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">' . $searchcaption . '</figcaption>
 </figure>
 </a>';
-} else {
-echo '<div class="d-md-inline-block">	';
-}
+} 
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
 echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">

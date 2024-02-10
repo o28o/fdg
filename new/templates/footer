@@ -120,6 +120,19 @@ $('#pali').find('tbody').find('tr').each(function() {
 					],
       'initComplete': function(){
          var api = this.api();
+         
+         
+             // Handle click on "Expand All" button
+    $('#btn-show-all-children').on('click', function(){
+        // Expand row details
+        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
+    });
+    // Handle click on "Collapse All" button
+    $('#btn-hide-all-children').on('click', function(){
+        // Collapse row details
+        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
+    });
+         
 
          // Populate a dataset for autocomplete functionality
 		          api.cells('tr', [0, 2, 3, 4, 5]).every(function(){
@@ -214,16 +227,7 @@ var regex = new RegExp(finder + '(?![^<]*>)', 'gi');
    //highlight pattern
    
 
-    // Handle click on "Expand All" button
-    $('#btn-show-all-children').on('click', function(){
-        // Expand row details
-        table.rows(':not(.parent)').nodes().to$().find('td:first-child').trigger('click');
-    });
-    // Handle click on "Collapse All" button
-    $('#btn-hide-all-children').on('click', function(){
-        // Collapse row details
-        table.rows('.parent').nodes().to$().find('td:first-child').trigger('click');
-    });
+
     
 
 });

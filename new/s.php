@@ -25,7 +25,9 @@ $query = $_SERVER['QUERY_STRING'];
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $s = trim($_GET["s"]);
 }
- 
+
+setlocale(LC_CTYPE, "en_US.UTF-8");
+
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));
 $command = escapeshellcmd("bash ./fdgnew.sh $stringForOpen");

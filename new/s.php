@@ -32,9 +32,7 @@ $command = escapeshellcmd("bash ./fdgnew.sh $stringForOpen");
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
    $output = shell_exec($command); 
-  echo "$stringForOpen\n";
   echo "$command\n";
-  
    echo "$output";
 
 

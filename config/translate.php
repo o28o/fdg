@@ -226,9 +226,9 @@ idaṁ vuccati, bhikkhave, domanassaṁ.</br>
 – вот что называется "страданием".</br></p>
 <p class="text-end"></p>';
 
-$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой! Содержат фундаментальные ошибки главных положений его Учения. Переводы нужно читать критически. 
+$transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Предупреждение!</b><br><br> Переводы выполнены не Буддой, в т.ч. словари! Содержат фундаментальные ошибки главных положений его Учения. Их нужно изучать критически. 
  <br><br>
-  Самое важное из Учения Будды нужно изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
+  Самое важное в Учении Будды лучше изучить <strong> самостоятельно по Суттам</strong> на Пали. В частности, что такое Серединная Практика и Четыре Благородные Истины. Это несколько абзацев, к примеру из <strong>sn56.11</strong>.';
   
 $anamemlearnpali = 'Learn Pali Переводы';
 $anamemolds = 'Переводы Майкла Олдса'; 
@@ -697,7 +697,7 @@ idaṁ vuccati, bhikkhave, domanassaṁ.</br>
 that is called stress.</p>';
 
         
-$transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations did not come from Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas</strong> in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
+$transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Warning about translations!</b><br><br> Translations and dictionaries did not come from Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
 
 $transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Caution regarding translations!</b><br><br> Translations do not originate directly from the Buddha himself!  Approach them with scrutiny and critical thinking.<br><br> To acquire the fundamental teachings of the Buddha, it is highly recommended to engage in the <strong>direct study of Suttas in Pali</strong>. At the very least, concentrate on understanding the Middle Practice and the Four Noble Truths. For instance, consider delving into a dedicated section from <strong>sn56.11</strong>.';
 

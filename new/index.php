@@ -51,7 +51,7 @@ include '../scripts/opentexts.php';
 </div>
 
 <div class="input-group-append ms-2">
-  <button onclick="trimParamsAndShowSpinner()" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill">
+  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill">
     Search
 </button>
 
@@ -71,9 +71,9 @@ include '../scripts/opentexts.php';
 
 
 <script>
-document.getElementById('paliauto').addEventListener('change', function() {
+/*document.getElementById('paliauto').addEventListener('change', function() {
     this.value = this.value.trim();
-});
+});*/
     function trimParamsAndShowSpinner() {
         var paramsToTrim = ['s', 'p', 'extra', 'q'];
 

@@ -71,6 +71,9 @@ include '../scripts/opentexts.php';
 
 
 <script>
+document.getElementById('paliauto').addEventListener('change', function() {
+    this.value = this.value.trim();
+});
     function trimParamsAndShowSpinner() {
         var paramsToTrim = ['s', 'p', 'extra', 'q'];
 

@@ -89,7 +89,7 @@ if (keywordElement) {
 }
 
 let searchValue = finder && finder.trim() !== "" ? finder : keyword;
-
+console.log("searchValue highlighter", searchValue);
 if (searchValue !== "") {
   
         // Получаем таблицу DataTables по ее id
@@ -106,7 +106,7 @@ if (searchValue !== "") {
 if ( index === 0) {
 
                     // Применяем регулярное выражение к содержимому ячейки и подсвечиваем совпадения
-var regex = new RegExp(finder + '(?![^<]*>)', 'gi');
+var regex = new RegExp(searchValue + '(?![^<]*>)', 'gi');
                    // var regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
                     cellData = cellData.replace(regex, function(match) {
                         return '<b class="match finder">' + match + '</b>';

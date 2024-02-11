@@ -1,6 +1,6 @@
 #keyword="$(echo $@ | awk '{$1=""; print $0}' | sed 's/^ //')"
 keyword="$2"
-awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" }  { OFS = "" } 
+awk -F "@" 'BEGIN { ORS = "" }  { OFS = "" } 
 {
 file_name=$1
 textclass=$2
@@ -14,15 +14,15 @@ anchorpart = $3
     gsub(".*:", "", anchorpart)
 }
  textAndAnchor = file_name "#" anchorpart
- urlwithanchor = "/sc/?s=" keyword "&q=" textAndAnchor 
+ urlwithanchor = textAndAnchor
 sutta=$3
  gsub(":.*", "", sutta)
  
     if ( name == "" ) { 
 name=sutta
 } 
+ hiddenlink="<a class=\"fdgLink text-white text-decoration-none\" href=\"\" data-slug=\"" urlwithanchor "\">&nbsp;</a>"
  
- hiddenlink="<a class=\"text-white text-decoration-none\" href=\"" urlwithanchor "\">&nbsp;</a>"
  if ( textclass == 1 ) {
    language="pi"
    htmlclass="pli-lang"

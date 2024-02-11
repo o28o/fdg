@@ -1,6 +1,6 @@
 #keyword="$(echo $@ | awk '{$1=""; $2=""; print $0}' | sed 's/^ //')"
 keyword="$2"
-awk -F "@" -v keyword="$keyword" 'BEGIN { ORS = "" } 
+awk -F "@" 'BEGIN { ORS = "" } 
 {
 urlwithanchor=$4
 file_name=$1
@@ -17,7 +17,7 @@ gsub(/;;;/, "\n", qoute)
     } 
 gsub(/;;;/, "\n", qoute)
 while (sub(/;;;/, "\n", qoute)){}
-        print "<tr><td><a href=\"" urlwithanchor "\">" file_name "</a></td><td><strong class=\"pli-lang inputscript-ISOPali\">" name "</strong></td><td>" words "</td><td>" count "</td><td>" mtphr_count "</td><td><a href=\"\" onclick=openDpr(\"" sutta "\") >Pi</a>&nbsp;<a class=\"bwLink\"  href=\"\" data-slug=" sutta ">En</a>&nbsp;<a class=\"ruLink\"  href=\"\" data-slug=" sutta ">Ru</a>&nbsp;</td>" qoute
+        print "<tr><td><a class=\"fdgLink\" href=\"\" data-slug=\"" urlwithanchor "\">" file_name "</a></td><td><strong class=\"pli-lang inputscript-ISOPali\">" name "</strong></td><td>" words "</td><td>" count "</td><td>" mtphr_count "</td><td><a href=\"\" onclick=openDpr(\"" sutta "\") >Pi</a>&nbsp;<a class=\"bwLink\"  href=\"\" data-slug=" sutta ">En</a>&nbsp;<a class=\"ruLink\"  href=\"\" data-slug=" sutta ">Ru</a>&nbsp;</td>" qoute
  
 }
 END  { 

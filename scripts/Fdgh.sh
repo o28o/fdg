@@ -8,7 +8,7 @@ database="./db/fdg-db.db"
 #separator="@"
 sqlitecommand="sqlite3 -separator $separator"
 #[[ $keyword == "" ]] && exit 0
-
+rm $tmpdir/initrun*
 #keyword=dukkh
 # SQLite запрос с использованием параметров
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
@@ -17,6 +17,10 @@ cd -  > /dev/null
 #cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
 #grep -riE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn  | sort -V | sed 's/<[^>]*>//g' > $tmpdir/initrun3
 #cd - > /dev/null
+if [ ! -s "$tmpdir/initrun1" ]; then
+    echo "$keyword не найдено в sn an mn dn"
+    exit 1
+fi
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/sujato/sutta
 cat $tmpdir/initrun1 | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  ./sn ./mn ./an ./dn \n@' > $tmpdir/cmnd

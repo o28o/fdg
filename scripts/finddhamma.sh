@@ -1385,6 +1385,9 @@ then
  fi
 fi
 
+###
+###  basefile operations
+###
 checkifalreadydone
 echo grepbase > time_output.txt
 { time grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf ;} 2>> time_output.txt > $basefile
@@ -1480,6 +1483,9 @@ rm $basefile > /dev/null 2>&1
 getbasefile "$@"
 #cleanup in case the same search was launched before
 rm ${table} $tempfile $tempfilewords $tempfilewhistory > /dev/null 2>&1
+###
+###  basefile operations end
+###
 
 #add links to each file
 echo linklist function part >> time_output.txt

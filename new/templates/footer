@@ -42,9 +42,9 @@ $(document).ready(function() {
 $('#pali').find('tbody').find('tr').each(function() {
     var linkText = $(this).find('td').eq(0).find('a').text();
     if (TextInfo[linkText]) {
-        var titlePali = TextInfo[linkText]['Title Pali'] || ''; // Если нет значения, присваиваем пустую строку
-        var titleEnglish = TextInfo[linkText]['Title English'] || ''; // Если нет значения, присваиваем пустую строку
-        var metaphorCount = TextInfo[linkText]['Metaphor count'] || ''; // Если нет значения, присваиваем пустую строку
+        var titlePali = TextInfo[linkText]['pi'] || ''; // Если нет значения, присваиваем пустую строку
+        var titleEnglish = TextInfo[linkText]['en'] || ''; // Если нет значения, присваиваем пустую строку
+        var metaphorCount = TextInfo[linkText]['mtph'] || ''; // Если нет значения, присваиваем пустую строку
         $(this).find('td').eq(1).html('<strong class="pli-lang inputscript-ISOPali">' + titlePali + '</strong> ' + titleEnglish);
         $(this).find('td').eq(4).text(metaphorCount);
     } else {

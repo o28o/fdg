@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $s = trim($_GET["s"]);
 }
 
-setlocale(LC_CTYPE, "en_US.UTF-8");
+
 
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));
@@ -34,7 +34,7 @@ $command = escapeshellcmd("bash ./fdgnew.sh $stringForOpen");
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
    $output = shell_exec($command); 
-  echo "$command\n";
+//  echo "$command\n";
    echo "$output";
 
 

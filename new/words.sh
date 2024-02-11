@@ -16,11 +16,22 @@ source ./config/script_config.sh --source-only
 args="$@"
 
 keyword="$@"
+[[ $keyword == "" ]] && exit 0
 database="./db/fdg-db.db"
 htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 separator="@"
 sqlitecommand="sqlite3 -separator $separator"
-[[ $keyword == "" ]] && exit 0
+
+
+rm $tmpdir/counts 2>/dev/null
+rm $tmpdir/finalhtml 2>/dev/null
+rm $tmpdir/uniqwords 2>/dev/null
+rm $tmpdir/w.html 2>/dev/null
+rm $tmpdir/wordcountMatches 2>/dev/null
+rm $tmpdir/wordcountTexts 2>/dev/null
+rm $tmpdir/words 2>/dev/null
+rm $tmpdir/wordsWithAggregatedTexts 2>/dev/null
+rm $tmpdir/wordsfinalhtml 2>/dev/null
 
 function cleanupwords {
 sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/[”’]*ti$/’ti/g' -e 's/[[:punct:]]*$//' 
@@ -76,7 +87,9 @@ paste -d'@' $tmpdir/wordcountTexts $tmpdir/wordcountMatches $tmpdir/wordsWithAgg
     print "<tr><td>" word "</td><td><a href=./r.php?s=" keyword "&f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 
-headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
+uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)
+textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sort -u | wc -l)
+headerinfo="${keyword^} $uniqwordqnty related words in $textqnty texts"
 
 cat ./new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/w.html

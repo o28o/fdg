@@ -1,1 +1,1 @@
-scripts/Fdgh.sh
+new/fdgnew.sh

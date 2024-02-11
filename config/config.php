@@ -1,4 +1,5 @@
 <?php
+setlocale(LC_CTYPE, "en_US.UTF-8");
 $uname = shell_exec("uname -a"); 
 //
 //OFFLINE ANDROID

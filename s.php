@@ -1,1 +1,1 @@
-./new/s.php
+new/s.php

@@ -71,10 +71,10 @@ include '../scripts/opentexts.php';
 
 
 <script>
-/*document.getElementById('paliauto').addEventListener('change', function() {
+document.getElementById('paliauto').addEventListener('change', function() {
     this.value = this.value.trim();
-});*/
-    function trimParamsAndShowSpinner() {
+});
+  /*  function trimParamsAndShowSpinner() {
         var paramsToTrim = ['s', 'p', 'extra', 'q'];
 
         paramsToTrim.forEach(function(paramName) {
@@ -89,7 +89,7 @@ include '../scripts/opentexts.php';
         if (spinner) {
             spinner.style.display = 'block';
         }
-    }
+    }*/
 </script>
 
 	  <script src="/assets/js/smoothScroll.js" defer></script>

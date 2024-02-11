@@ -92,7 +92,7 @@ afterawk=$(wc -l < "$afterawk_file")
 
 if [ "$counts" -eq "$afterawk" ] && [ "$afterawk" -eq "$wordsAggregatedByTexts" ]; then
    # echo "Все три переменные равны $counts"
-   break
+   echo
 else
     echo "Количество строк $counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file и $wordsAggregatedByTexts в $aggregated_file"
 fi

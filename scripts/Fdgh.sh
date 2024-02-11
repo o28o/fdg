@@ -1,8 +1,13 @@
-
+#!/bin/bash
+start=`date +%s`
+#set -x 
+#set +x
+#trap read debug
+export LANG=en_US.UTF-8
 source ./config/script_config.sh --source-only
 #args="$@"
-
 keyword="$@"
+[[ $keyword == "" ]] && exit 0
 database="./db/fdg-db.db"
 
 #separator="@"

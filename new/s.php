@@ -33,6 +33,8 @@ $command = escapeshellcmd("bash ./fdgnew.sh $stringForOpen");
 
    $output = shell_exec($command); 
   echo "$stringForOpen\n";
+  echo "$command\n";
+  
    echo "$output";
 
 

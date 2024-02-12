@@ -5,6 +5,7 @@ start=`date +%s`
 #trap read debug
 export LANG=en_US.UTF-8
 #export LC_ALL=en_US
+LC_ALL=C head 
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 
@@ -89,7 +90,7 @@ cat $tmpdir/threetables | awk -v keyword="$htmlpattern" 'BEGIN {
     }
 
     # Вывод форматированной строки
-    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td><div style=\"display:inline;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:inline;\">" wordTabThree " </div>" linksHTML "</td></tr>"
+    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td><div style=\"display:none;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:none;\">" wordTabThree " </div>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 
 uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)

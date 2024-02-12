@@ -45,10 +45,10 @@ grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' 
 cd -  > /dev/null
 
 #get uniq words
-cat $tmpdir/words | sed -e 's/.*://g' -e 's/”ti/’ti/g' -e 's/[[:punct:]]*$//'   | sort| uniq > $tmpdir/uniqwords
+cat $tmpdir/words | sed -e 's/.*://g' -e 's/”ti/’ti/g' -e 's/[[:punct:]]*$//' | sort| uniq > $tmpdir/uniqwords
 
 #this list for table is ok
-cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort | uniq | awk '{
+cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -V | uniq | awk '{
     if ($1 in data) {
         data[$1] = data[$1] " " $2
     } else {
@@ -67,7 +67,9 @@ cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*
 #get word counts 
 cat $tmpdir/words | awk -F: '{print $NF}' | sort | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2, $1}'   > $tmpdir/wordcountMatches
 
-paste -d'@' $tmpdir/wordcountTexts $tmpdir/wordcountMatches $tmpdir/wordsWithAggregatedTexts | awk -v keyword="$htmlpattern" 'BEGIN { 
+paste -d'@' $tmpdir/wordcountTexts $tmpdir/wordcountMatches $tmpdir/wordsWithAggregatedTexts > $tmpdir/threetables
+
+cat $tmpdir/threetables | awk -v keyword="$htmlpattern" 'BEGIN { 
     FS = "@" 
 } 
 {

@@ -28,16 +28,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const fdgLinks = document.querySelectorAll('.fdgLink');
-    fdgLinks.forEach(link => {
-        const slug = link.getAttribute('data-slug');
-        const textUrl = findFdgTextUrl(slug, searchValue, baseUrl);
-        if (!textUrl) {
-            link.style.display = 'none';
-        } else {
-            // Установка значения в атрибут href
-            link.href = textUrl;
-        }
-    });
+fdgLinks.forEach(link => {
+    const slug = link.getAttribute('data-slug');
+    const filter = link.getAttribute('data-filter');
+    const textUrl = findFdgTextUrl(slug, filter || searchValue, baseUrl);
+    if (!textUrl) {
+        link.style.display = 'none';
+    } else {
+        // Установка значения в атрибут href
+        link.href = textUrl;
+    }
+});
 });
 
 function openFdg(slug) {

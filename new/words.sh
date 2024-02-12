@@ -5,7 +5,8 @@ start=`date +%s`
 #trap read debug
 export LANG=en_US.UTF-8
 #export LC_ALL=en_US
-export LC_ALL=C  
+#export LC_ALL=C  
+export LC_ALL=pa_IN.UTF-8 
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 
@@ -86,7 +87,7 @@ cat $tmpdir/threetables | awk -v keyword="$htmlpattern" 'BEGIN {
     linkCount = split(linkslistArray, linksArray, " ")
     linksHTML = ""
     for (i = 1; i <= linkCount; i++) {
-        linksHTML = linksHTML "<a class=\"fdgLink\" href=\"\" data-slug=\"" linksArray[i] "\">" linksArray[i] "</a> "
+        linksHTML = linksHTML "<a class=\"fdgLink\" href=\"\" data-slug=\"" linksArray[i] "\" data-filter=\"" word "\">" linksArray[i] "</a> "
     }
 
     # Вывод форматированной строки

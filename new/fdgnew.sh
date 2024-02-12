@@ -25,42 +25,56 @@ rm $tmpdir/wordsAggregatedByTexts 2>/dev/null
 #keyword=dukkh
 # SQLite запрос с использованием параметров
 
+translator="sujato"
+searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
+kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
+knLater="./sutta/kn"
+vin="./vinaya/pli-tv-b*"
+vinLater="./vinaya/pli-tv-[kp].*"
+searchIn="$searchIn $kn"
 #keyword=byākarissāmīti
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
-grep -riE "$keyword" ./sn ./mn ./an ./dn | sort -V | sed 's/<[^>]*>//g' > $tmpdir/initrun3
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+grep -riE "$keyword" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
 
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
-if [ -s "$tmpdir/initrun3" ]; then
-cat $tmpdir/initrun3 | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  ./sn ./mn ./an ./dn \n@' > $tmpdir/cmnd1
-bash $tmpdir/cmnd1 > $tmpdir/initrun1
+if [ -s "$tmpdir/initrun-var" ]; then
+cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmnd1
+bash $tmpdir/cmnd1 > $tmpdir/initrun-pi
 fi
+grep -riE "$keyword" $searchIn >> $tmpdir/initrun-pi
 
-grep -riE "$keyword" ./sn ./mn ./an ./dn  | sort -V | uniq >> $tmpdir/initrun1
-
-if [ ! -s "$tmpdir/initrun3" ] && [ ! -s "$tmpdir/initrun1" ]; then
-    echo "$keyword не найдено в sn an mn dn"
+if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
+    echo "$keyword не найдено в $searchIn"
     exit 1
 fi
 
-cd $suttapath/sc-data/sc_bilara_data/translation/en/sujato/sutta
-cat $tmpdir/initrun1 | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  ./sn ./mn ./an ./dn \n@' > $tmpdir/cmnd
-bash $tmpdir/cmnd > $tmpdir/initrun2
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmnd
+bash $tmpdir/cmnd > $tmpdir/initrun-en
+
+#if output language is russian
+#cd $apachesitepath/assets/texts/
+#bash $tmpdir/cmnd > $tmpdir/initrun-ru
+
 cd - > /dev/null
 
-sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun1
-sed -i 's/_translation-en-sujato.json/":2"/g' $tmpdir/initrun2
-sed -i 's/_variant-pli-ms.json/":3"/g' $tmpdir/initrun3
-sed -i 's/":/@/g' $tmpdir/initrun*
+sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi
+sed -i 's/_translation-ru-.*.json/":2"/g' $tmpdir/initrun-ru
+sed -i 's/_translation-en-sujato.json/":3"/g' $tmpdir/initrun-en
+sed -i 's/_variant-pli-ms.json/":4"/g' $tmpdir/initrun-var
+sed -i 's/":/@/g'  $tmpdir/initrun*
+sed -i -e 's@./sutta/kn@khudakka\@@g' -e 's@./sutta/@dhamma\@@g' -e 's@./vinaya/@vinaya\@@g' $tmpdir/initrun*
 
-cat $tmpdir/initrun* | sort -t'@' -k1V,1 -k3V,3 -k2n,2 | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | awk -F/ '{print $NF}'> $tmpdir/readyforawk
+
+cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | awk -F/ '{print $NF}' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sort -t'@' -k1V,1 -k3V,3 -k2n,2 | uniq > $tmpdir/readyforawk
 
 ########## count keywords in texts
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta
-grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+grep -rioE "\w*$keyword[^ ]*" $searchIn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
 
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta
-grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+grep -rioE "\w*$keyword[^ ]*" $searchIn | awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
 
 cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
 
@@ -94,10 +108,10 @@ if [ "$counts" -eq "$afterawk" ] && [ "$afterawk" -eq "$wordsAggregatedByTexts" 
    # echo "Все три переменные равны $counts"
    echo
 else
-    echo "Количество строк $counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file и $wordsAggregatedByTexts в $aggregated_file"
+    echo "$counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file и $wordsAggregatedByTexts в $aggregated_file"
 fi
 
-paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts> $tmpdir/finalraw
+paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
@@ -112,7 +126,7 @@ cat $output/r.html
 #wc -l $tmpdir/counts $tmpdir/afterawk
 exit 0
 
-cat $tmpdir/initrun1 | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | sed "s@^\"@@g" | awk 'BEGIN {OFS=""; printf "grep -Eir \047("} { printf $1"|"}' |  sed '$ s@|$@)'\'' ./sn ./mn ./an ./dn \n@'  > cmnd
+cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | sed "s@^\"@@g" | awk 'BEGIN {OFS=""; printf "grep -Eir \047("} { printf $1"|"}' |  sed '$ s@|$@)'\'' '"$searchIn"' \n@'  > cmnd
 
 
 

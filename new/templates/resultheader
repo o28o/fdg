@@ -27,12 +27,12 @@
    <thead class="thead-light">
         <tr>
             <th>Sutta</th>
-
             <th>Title</th>
             <th>Words</th>
             <th>Ct</th>
             <th>Mr</th>
             <th>Links</th>
+            <th>Text</th>
             <th class="none">Quote</th>
         <!-- <th class="none">Audio</th> -->
         </tr>

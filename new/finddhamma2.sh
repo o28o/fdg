@@ -13,6 +13,8 @@ export LANG=en_US.UTF-8
 # I can safely reach the far shore.
 ########## sn35.238 ##########
 source ./config/script_config.sh --source-only
+history="$apachesitepath/result/historya"
+
 args="$@"
 
 if [[ "$@" == *"-nbg"* ]]; then
@@ -1390,8 +1392,8 @@ fi
 
 
 checkifalreadydone
-echo grepbase > time_output.txt
-{ time grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf ;} 2>> time_output.txt > $basefile
+echo grepbase > new_time_output.txt
+{ time grepbasefile | grep -v "^--$" | grepexclude | sort -Vf ;} 2>> new_time_output.txt > $basefile
 #grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
 if [[ "$@" == *"-nm"* ]] 
@@ -1482,7 +1484,7 @@ fi
 
 rm $basefile > /dev/null 2>&1
 getbasefile "$@"
-
+cp $basefile $basefile.tocheck 
 #cleanup in case the same search was launched before
 rm ${table} $tempfile $tempfilewords $tempfilewhistory > /dev/null 2>&1
 ###
@@ -1490,14 +1492,14 @@ rm ${table} $tempfile $tempfilewords $tempfilewhistory > /dev/null 2>&1
 ###
 
 #add links to each file
-echo linklist function part >> time_output.txt
+echo linklist function part >> new_time_output.txt
 round=1
-{ time linklist ;} 2>> time_output.txt
-echo end of linklist function part >> time_output.txt
+{ time linklist ;} 2>> new_time_output.txt
+echo end of linklist function part >> new_time_output.txt
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
 then
-echo genwordsfile >> time_output.txt
-{ time genwordsfile ;} 2>> time_output.txt
+echo genwordsfile >> new_time_output.txt
+{ time genwordsfile ;} 2>> new_time_output.txt
 fi 
 textsqnty=`echo $textlist | wc -w`
 
@@ -1649,6 +1651,6 @@ window.location.href=\"$pagelang/result/${table}\";
 
 end=`date +%s`
 runtime=$((end-start))
-echo total execution time $runtime >> time_output.txt
+echo total execution time $runtime >> new_time_output.txt
 find . -type f -name 'search-*.html' -mmin +60 -exec rm {} \;
 exit 0

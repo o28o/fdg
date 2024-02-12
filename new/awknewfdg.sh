@@ -26,6 +26,9 @@ name=sutta
  if ( textclass == 1 ) {
    language="pi"
    htmlclass="pli-lang"
+   } else if ( textclass == 2 ) {
+   language="ru" 
+   htmlclass="eng-lang text-muted font-weight-light"
  } else {
    language="en" 
    htmlclass="eng-lang text-muted font-weight-light"

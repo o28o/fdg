@@ -76,7 +76,9 @@ cat $tmpdir/threetables | awk -v keyword="$htmlpattern" 'BEGIN {
 {
     word = $1
     counttexts = $2
+    wordTabTwo = $3
     countmatches = $4
+    wordTabThree = $5
     linkslistArray = $NF
 
     # Парсинг списка ссылок
@@ -87,7 +89,7 @@ cat $tmpdir/threetables | awk -v keyword="$htmlpattern" 'BEGIN {
     }
 
     # Вывод форматированной строки
-    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
+    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td><div style=\"display:inline;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:inline;\">" wordTabThree " </div>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 
 uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)

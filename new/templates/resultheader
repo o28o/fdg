@@ -16,9 +16,7 @@
     <button id="btn-hide-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo</button>
 <button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Vivaṭṭo</button>
 
-<button class="btn btn-light forshellscript mb-1" type="button" disabled><a class="text-decoration-none " href="$wordLinkToReplace" >Words</a></button>    
-
-
+<button class="btn btn-light forshellscript mb-1" type="button" ><a class="text-decoration-none " href="$wordLinkToReplace" >Words</a></button>    
 
 <button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
 <hr>
@@ -32,7 +30,7 @@
             <th>Ct</th>
             <th>Mr</th>
             <th>Links</th>
-            <th>Text</th>
+            <th>Type</th>
             <th class="none">Quote</th>
         <!-- <th class="none">Audio</th> -->
         </tr>

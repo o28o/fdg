@@ -640,7 +640,7 @@ done > $tmponl
 #grep -iHE "$pattern" $line
 #done > $tmponl
 
-#cp $basefile bfl
+
 if [[ "$type" == html ]]; then
 cat $tmponl | sed 's/html:.*/html/g'  
 else 
@@ -1482,7 +1482,7 @@ fi
 
 rm $basefile > /dev/null 2>&1
 getbasefile "$@"
-
+cp $basefile bfl
 #cleanup in case the same search was launched before
 rm ${table} $tempfile $tempfilewords $tempfilewhistory > /dev/null 2>&1
 ###

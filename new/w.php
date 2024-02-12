@@ -1,10 +1,7 @@
- <!DOCTYPE html>
-
+<!DOCTYPE html>
 <?php
-
-error_reporting(E_ERROR | E_PARSE);
-include_once('../config/config.php');
-include_once('../config/translate.php');
+echo "its me";
+//error_reporting(E_ERROR | E_PARSE);
 
 //echo basename($_SERVER['REQUEST_URI']);
 
@@ -24,10 +21,8 @@ $query = $_SERVER['QUERY_STRING'];
 
 /* echo ' '.$params['lang']; */
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $s = trim($_GET["s"]);
-}
- 
+
+ $s ="lobh";
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));
 $command = escapeshellcmd("bash ./new/words.sh $stringForOpen");

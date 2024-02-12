@@ -2,20 +2,21 @@
 keyword="$2"
 awk -F "@" 'BEGIN { ORS = "" }  { OFS = "" } 
 {
-file_name=$1
-textclass=$2
-qoute=$4
-line_id=$3
+texttype=$1
+file_name=$2
+textclass=$3
+qoute=$5
+line_id=$4
 
     if (index(file_name, "-") != 0) { 
-anchorpart = $3
+anchorpart = $4
 } else { 
-  anchorpart = $3
+  anchorpart = $4
     gsub(".*:", "", anchorpart)
 }
  textAndAnchor = file_name "#" anchorpart
  urlwithanchor = textAndAnchor
-sutta=$3
+sutta=$4
  gsub(":.*", "", sutta)
  
     if ( name == "" ) { 
@@ -40,12 +41,12 @@ name=sutta
     } 
 if (NR == 1 || (file_name != prev_file && textclass == 1)) {
     
-        print urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>;;;"
+        print texttype "@" urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>;;;"
     } else {
         print "<span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span><br class=\"styled\">;;;"
     }
 
-    prev_file = $1
+    prev_file = $2
     prev_line = NR}
 END  { 
         print "</p></td></tr>"

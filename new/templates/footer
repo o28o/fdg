@@ -89,7 +89,7 @@ $('#pali').find('tbody').find('tr').each(function() {
                                 window.location.href = '/history.php';
                             }
                         },  
-                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = "#not-ready";}},
+                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = 'WORDREPLACELINK';}},
                         { extend: 'colvis', 
                      className: 'btn btn-link ',
                         text: 'Visibility' }
@@ -114,8 +114,8 @@ $('#pali').find('tbody').find('tr').each(function() {
 	            { type: "html", target: [1,2,6] },
 	            { type: 'natural', targets: 0 },
 				  {
-            target: 1,
-            visible: true
+            target: 7,
+            visible: false
         }				
 					],
       'initComplete': function(){
@@ -157,7 +157,13 @@ $('#pali').find('tbody').find('tr').each(function() {
 
    });	//конец datatable	         
    
-   
+      //предустановка фильтра из get param ?f=
+     if (filterValue) {
+        table.search(filterValue).draw();
+        var currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.delete('f');
+        history.replaceState({}, '', currentUrl);
+}
   // s param и div keywprd
    
 let params = new URLSearchParams(document.location.search);
@@ -214,37 +220,11 @@ if (searchValue !== "") {
 });
 
 	
-   
-   //custom sort для dhp iti
-/*$.fn.dataTable.ext.order.push(
-    function(settings, col) {
-        if (col === 0) {
-            var data = this.api().column(col, {order: 'current'}).data();
-            data = data.map(function(value, index) {
-                var keywords = ["dhp", "iti", "snp", "thag", "thig"];
-                var regex = new RegExp(keywords.join("|"), "i");
-                return regex.test(value) ? Number.POSITIVE_INFINITY : value;
-            });
-            return data;
-        } else {
-            return this.api().column(col, {order: 'current'}).data();
-        }
-    }
-);
-*/
-   //предустановка фильтра из get param ?s=
-     if (filterValue) {
-        table.search(filterValue).draw();
-        var currentUrl = new URL(window.location.href);
-        currentUrl.searchParams.delete('f');
-        history.replaceState({}, '', currentUrl);
-}
+  
+
    
    //highlight pattern
    
-
-
-    
 
 });
 

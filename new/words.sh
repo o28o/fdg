@@ -26,7 +26,7 @@ sqlitecommand="sqlite3 -separator $separator"
 rm $tmpdir/counts 2>/dev/null
 rm $tmpdir/finalhtml 2>/dev/null
 rm $tmpdir/uniqwords 2>/dev/null
-rm $tmpdir/w.html 2>/dev/null
+rm $output/w.html 2>/dev/null
 rm $tmpdir/wordcountMatches 2>/dev/null
 rm $tmpdir/wordcountTexts 2>/dev/null
 rm $tmpdir/words 2>/dev/null
@@ -84,16 +84,18 @@ paste -d'@' $tmpdir/wordcountTexts $tmpdir/wordcountMatches $tmpdir/wordsWithAgg
     }
 
     # Вывод форматированной строки
-    print "<tr><td>" word "</td><td><a href=./r.php?s=" keyword "&f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
+    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 
 uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)
 textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sort -u | wc -l)
 headerinfo="${keyword^} $uniqwordqnty related words in $textqnty texts"
+quotesLinkToReplace="/s.php?s=$keyword"
 
-cat ./new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
+
+cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/w.html
-cat ./new/templates/wordsheader | sed 's/$title/'"$headerinfo"'/g' >> $output/w.html
+cat $apachesitepath/new/templates/wordsheader | sed 's@quotesLinkToReplace@'"$quotesLinkToReplace"'@g' | sed 's/$title/'"$headerinfo"'/g' >> $output/w.html
 cat $tmpdir/wordsfinalhtml >> $output/w.html
 cat ./new/templates/wordsfooter >> $output/w.html
 cat $output/w.html
@@ -110,17 +112,13 @@ counttexts=$2
 countmatches=$4
 linkslistArray=$NF
 
-<tr><td> word </td><td><a href=./r.php?&s=" htmlpattern "f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>
+<tr><td> word </td><td><a href=/s.php?&s=" htmlpattern "f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>
 <a class='fdgLink' href='' data-slug='" linkfromArray1 "'>" linkfromaArray1 "</a>
 <a class='fdgLink' href='' data-slug='" linkfromArray2 "'>" linkfromaArray2 "</a>
 <a class='fdgLink' href='' data-slug='" etc "'>" etc "</a>
 </td>
 </tr>
 
-headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-cat ./new/templates/header ./new/templates/resultheader| sed 's/$title/'"$headerinfo"'/g' > $tmpdir/w.html
-cat $tmpdir/finalhtml >> $tmpdir/w.html
-cat ./new/templates/footer >> $tmpdir/w.html
-cat $tmpdir/w.html
+
 
 exit 0

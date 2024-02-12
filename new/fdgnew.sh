@@ -31,7 +31,7 @@ kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
 knLater="./sutta/kn"
 vin="./vinaya/pli-tv-b*"
 vinLater="./vinaya/pli-tv-[kp].*"
-searchIn="$searchIn"
+searchIn="$searchIn $kn"
 #keyword=byākarissāmīti
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 grep -riE "$keyword" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var

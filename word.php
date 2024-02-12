@@ -11,7 +11,7 @@ include '../scripts/opentexts.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page</title>
+    <title>Fdg Word Search</title>
     <!-- Bootstrap CSS -->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
@@ -38,9 +38,9 @@ include '../scripts/opentexts.php';
 </div>
         <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
-    <h2 class="text-center my-4 mb-5">       <a href="/ru/new">     <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="height:30px;"></a>   Search for Truth</h2>
+    <h2 class="text-center my-4 mb-5">       <a href="/ru/new">     <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="height:30px;"></a> Word Search</h2>
         
-        <form  action="/new/w.php" method="GET">
+        <form  action="/w.php" method="GET">
     <div class="my-3 form-group input-group ui-widget dropup rounded-pill">
 <label class="sr-only dropup rounded-pill" for="paliauto"></label>        <div class="searchinputdiv">      
   <input name="s" type="search" class="form-control rounded-pill searchinput " id="paliauto" placeholder="e.g. Kāyagat or sn56.11"  multiple>

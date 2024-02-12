@@ -1,4 +1,4 @@
 <?php
-$file = 'file.txt';
+$file = 'out';
 echo file_get_contents($file);
 ?>

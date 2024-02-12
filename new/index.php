@@ -11,7 +11,7 @@ include '../scripts/opentexts.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page</title>
+    <title>New Find.dhamma.gift</title>
     <!-- Bootstrap CSS -->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
@@ -111,7 +111,7 @@ include '../assets/common/horizontalMenuRu.php';
 include '../assets/common/horizontalMenuEn.php'; 
 } 
 ?>
-<a href="/result/r.html">r.html </a><a href="/result/w.html">w.html </a>
+<a href="/word.php">Word </a><a href="/result/r.html">r.html </a> <a href="/result/w.html">w.html </a>
 </div>
 
         </div>

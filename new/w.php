@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-echo "its me";
 //error_reporting(E_ERROR | E_PARSE);
 
 //echo basename($_SERVER['REQUEST_URI']);

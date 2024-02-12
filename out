@@ -1,0 +1,87 @@
+{
+  "draw": 1,
+  "recordsTotal": 57,
+  "recordsFiltered": 57,
+  "data": [
+    [
+      "dn1#1.22.2 dn1",
+      "",
+      "kacchapalakkhaṇaṁ",
+      "1",
+      "",
+      "dn1",
+      "dhamma",
+      "test ipsum"
+    ],
+    [
+      "dn2#57.2 dn2",
+      "",
+      "kacchapalakkhaṇaṁ",
+      "1",
+      "",
+      "dn2",
+      "dhamma",
+      "test ipsum"
+    ],
+    [
+      "mn129#21.3 mn129",
+      "",
+      "kacchapo kacchapā",
+      "4",
+      "",
+      "mn129",
+      "dhamma",
+      "test ipsum"
+    ],
+    [
+      "sn35.240#1.1 sn35.240",
+      "",
+      "kacchapaṁ kacchapo",
+      "7",
+      "",
+      "sn35.240",
+      "dhamma",
+      "test ipsum"
+    ],
+    [
+      "sn56.47#1.1 sn56.47",
+      "",
+      "kacchapo",
+      "3",
+      "",
+      "sn56.47",
+      "dhamma",
+      "test ipsum"
+    ],
+    [
+      "sn56.48#1.4 sn56.48",
+      "",
+      "kacchapo",
+      "3",
+      "",
+      "sn56.48",
+      "dhamma",
+      "test ipsum"
+    ],
+    [
+      "thig12.1#6.2 thig12.1",
+      "",
+      "maṇḍūkakacchapā",
+      "1",
+      "",
+      "thig12.1",
+      "khudakka",
+      "test ipsum"
+    ],
+    [
+      "thig16.1#53.1 thig16.1",
+      "",
+      "kāṇakacchapaṁ",
+      "1",
+      "",
+      "thig16.1",
+      "khudakka",
+      "test ipsum"
+    ]
+  ]
+}

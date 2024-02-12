@@ -1,10 +1,12 @@
 #!/bin/bash
+echo before set all=$LC_ALL lang=$LANG
 start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
 export LANG=en_US.UTF-8
 export LC_ALL=en_US
+echo after set all=$LC_ALL lang=$LANG
 #export LC_ALL=C  
 #export LC_ALL=pa_IN.UTF-8 
 ##############################

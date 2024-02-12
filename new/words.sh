@@ -59,13 +59,13 @@ END {
     for (item in data) {
         print data[item]
     }
-}' | sort > $tmpdir/wordsWithAggregatedTexts
+}' | sort -k1 > $tmpdir/wordsWithAggregatedTexts
 
 #get counts in how many texts
-cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort | uniq | awk '{print $1}'  | sort | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
+cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -k1 | uniq | awk '{print $1}'  | sort | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
 
 #get word counts 
-cat $tmpdir/words | awk -F: '{print $NF}' | sort | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2, $1}'   > $tmpdir/wordcountMatches
+cat $tmpdir/words | awk -F: '{print $NF}' | sort -k1 | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2, $1}' > $tmpdir/wordcountMatches
 
 paste -d'@' $tmpdir/wordcountTexts $tmpdir/wordcountMatches $tmpdir/wordsWithAggregatedTexts > $tmpdir/threetables
 

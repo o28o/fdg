@@ -18,8 +18,8 @@
         "smart": true
   },
 	   "orderMulti": true,
-	   'pageLength' : 28,
-	   'lengthMenu' : [10, 28, 50, 100, 1000],
+	   'pageLength' : 10,
+	   'lengthMenu' : [10, 30, 50, 100, 1000],
 	   'responsive': true,
 	    'colReorder': true,
 	   'columnDefs': [

@@ -103,7 +103,7 @@ $('#pali').find('tbody').find('tr').each(function() {
 	    'colReorder': true,
 	    'orderMulti': true,
 	   'pageLength' : 10,
-	   'lengthMenu' : [10, 28, 50, 100, 1000],
+	   'lengthMenu' : [10, 30, 50, 100, 1000],
 	/*  'responsive': true,*/
 	  'columnDefs': [
 		/*		{                

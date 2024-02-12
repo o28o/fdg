@@ -45,7 +45,7 @@ grep -rioE "\w*$keyword[^ ]*" ./sn ./mn ./an ./dn | awk -F: '$2 > 0 {print $0}' 
 cd -  > /dev/null
 
 #get uniq words
-cat $tmpdir/words | sed -e 's/.*://g' -e 's/”ti/’ti/g' -e 's/[[:punct:]]*$//' | sort| uniq > $tmpdir/uniqwords
+cat $tmpdir/words | sed -e 's/.*://g' -e 's/”ti/’ti/g' -e 's/[[:punct:]]*$//' | sort | uniq > $tmpdir/uniqwords
 
 #this list for table is ok
 cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -V | uniq | awk '{
@@ -62,7 +62,8 @@ END {
 }' | sort -k1 > $tmpdir/wordsWithAggregatedTexts
 
 #get counts in how many texts
-cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -k1 | uniq | awk '{print $1}'  | sort | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
+cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -k1 | uniq | awk '{print $1}'   | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
+#less $tmpdir/wordcountTexts
 
 #get word counts 
 cat $tmpdir/words | awk -F: '{print $NF}' | sort -k1 | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2, $1}' > $tmpdir/wordcountMatches

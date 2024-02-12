@@ -1,5 +1,5 @@
 #!/bin/bash
-echo before set all=$LC_ALL lang=$LANG
+#echo before set all=$LC_ALL lang=$LANG
 start=`date +%s`
 #set -x 
 #set +x
@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 #export LC_ALL=en_US
 export LC_ALL=C.utf8
 #export LC_ALL=pa_IN.UTF-8 
-echo after set all=$LC_ALL lang=$LANG
+#echo after set all=$LC_ALL lang=$LANG
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 
@@ -100,7 +100,7 @@ uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)
 textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sort -u | wc -l)
 headerinfo="${keyword^} $uniqwordqnty related words in $textqnty texts"
 quotesLinkToReplace="/s.php?s=$keyword"
-echo end set all=$LC_ALL lang=$LANG
+#echo end set all=$LC_ALL lang=$LANG
 
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/w.html

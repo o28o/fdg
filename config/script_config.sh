@@ -89,7 +89,8 @@ sitename=http://localhost
 nicevalue=1
 mode=offline
 apachesitepath=/var/www/html
-tmpdir=/tmp
+#tmpdir=/tmp
+tmpdir=$apachesitepath/result/
 suttapath=$apachesitepath/suttacentral.net/
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 linkforthsu=/tipitaka.theravada.su

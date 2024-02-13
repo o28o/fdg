@@ -4,7 +4,7 @@ start=`date +%s`
 #set +x
 #trap read debug
 export LANG=en_US.UTF-8
-export LC_ALL=pa_IN.UTF-8 
+#export LC_ALL=C.utf8
 #args="$@"
 keyword="$@"
 [[ $keyword == "" ]] && exit 0

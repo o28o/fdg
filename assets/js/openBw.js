@@ -37,8 +37,10 @@ function findBwTextUrl(slug) {
         tbwRootUrl = "bw/"; 
     } else {
         console.log("онлайн");
-        base = "https://";
-        tbwRootUrl = "thebuddhaswords.net/"; 
+        base = "/";
+        tbwRootUrl = "bw/"; 
+      //  base = "https://";
+      //  tbwRootUrl = "thebuddhaswords.net/"; 
     }
   
         datasetBw = tbwLinksData;

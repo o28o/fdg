@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 include_once('./config/config.php');
 
 foreach ($extra as $value) {
@@ -6,7 +7,8 @@ foreach ($extra as $value) {
 }
 
 $string = "\"$string\"";
-
+//$string = "uttarimanussadham";
+//$p = "-vin";
 if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";
 } else {
@@ -20,7 +22,10 @@ if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
 $p = "-ru";
 
 $output = shell_exec("bash ./scripts/finddhamma.sh $outputlang $la $extra $cb $p $string"); 
-
+//./scripts/finddhamma.sh
+//./scripts/finddhamma.sh
+// sed -i 's@./scripts/finddhamma.sh@./scripts/finddhamma.sh@g' scripts/multilang-search.php
+// sed -i 's@./scripts/finddhamma.sh@./scripts/finddhamma.sh@g' scripts/multilang-search.php
 
 //echo "<p class='mt-3'>$output</p>";
 $output = trim(preg_replace('/\s\s+/', ' ', $output));	

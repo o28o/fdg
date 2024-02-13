@@ -498,60 +498,40 @@ if [[ "$@" == *"-kn"* ]]; then
 kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
 searchIn="$searchIn $kn"
 
-function grepbasefile {
-tmpgb=$tmpdir/tmpgrepbase.$rand
-
-keyword="$pattern"
-
-if [[ "$language" == *"Pali"* ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar > $tmpdir/initrun-pi
-fi
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-pi
-
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmnd
-bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-en
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-
-elif [[ "$language" == "English" ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-en
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-pi
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-var
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-else
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr} > $tmpgb
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
-
-fi 
-
-
-if [ -s $tmpgb ]; then
-cat $tmpgb 
-fi
-}
-
 fileprefix=${fileprefix}-kn
 fortitle="${fortitle} +KN"
-elif [[ "$@" == *"-def"* ]]
+
+elif [[ "$@" == *"-all"* ]]; then
+
+knLater="./sutta/kn"
+searchIn="$searchIn $knLater"
+if [[ "$@" == *"-vin"* ]]; then
+	vin="./vinaya/pli-tv-b*"
+	vinLater="./vinaya/pli-tv-[kp].*"
+	searchIn="$vin $vinLater"
+fi 
+
+fileprefix=${fileprefix}-all
+fortitle="${fortitle} +All"
+elif [[ "$@" == *"-tru"* ]]; then
+function grepbasefile {
+nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} 
+}
+fileprefix=${fileprefix}
+fortitle="${fortitle}"
+elif [[ "$@" == *"-b"* ]]; then
+function grepbasefile {
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $bwlocation
+ --exclude-dir={$sutta,$abhi,home,js,css,image,fonts} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,pli-tv-kd,pli-tv-pvr,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
+}
+fileprefix=${fileprefix}-bw
+fortitle="${fortitle}"
+fi
+
+
+
+
+if [[ "$@" == *"-def"* ]]
 then
 fileprefix=${fileprefix}-definition
 fortitle="Definition ${fortitle}"
@@ -643,75 +623,7 @@ fi
 
 #sml end
 
-elif [[ "$@" == *"-all"* ]]; then
-vinLater="./vinaya/pli-tv-[kp].*"
-knLater="./sutta/kn"
-searchIn="$searchIn $knLater $vinLater"
-function grepbasefile {
-tmpgb=$tmpdir/tmpgrepbase.$rand
 
-keyword="$pattern"
-
-if [[ "$language" == *"Pali"* ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar > $tmpdir/initrun-pi
-fi
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-pi
-
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmnd
-bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-en
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-
-elif [[ "$language" == "English" ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-en
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-pi
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-var
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-else
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr} > $tmpgb
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
-
-fi 
-
-
-if [ -s $tmpgb ]; then
-cat $tmpgb 
-fi
-}
-fileprefix=${fileprefix}-all
-fortitle="${fortitle} +All"
-elif [[ "$@" == *"-tru"* ]]; then
-function grepbasefile {
-nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} 
-}
-fileprefix=${fileprefix}
-fortitle="${fortitle}"
-elif [[ "$@" == *"-b"* ]]; then
-function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $bwlocation
- --exclude-dir={$sutta,$abhi,home,js,css,image,fonts} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,pli-tv-kd,pli-tv-pvr,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
-}
-fileprefix=${fileprefix}-bw
-fortitle="${fortitle}"
 elif [[ "$@" == *"-onl"* ]]; then
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 function grepbasefile {

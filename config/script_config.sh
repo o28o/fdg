@@ -40,9 +40,9 @@ linesafter=0
 minlength=3
 truncatelength=30
 filesizenooverwrite=300000
-maxmatchesbg=3000
+maxmatchesbg=3000000000
 archivenumber=84
-minmatchesforonline=20
+minmatchesforonline=20000000000
 multiplier=0.5
 skiprounds=3
 
@@ -81,7 +81,7 @@ maxmatchesbg=3500
 archivenumber=91
 
 multiplier=2
-minmatchesforonline=30
+minmatchesforonline=30000000000000000000
 skiprounds=5
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 

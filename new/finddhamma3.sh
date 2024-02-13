@@ -150,7 +150,6 @@ function OKresponse {
 
 function Erresponse {
      echo "${pattern} нет в $fortitle $language<br>"
-     
 }
 
 function Clarification {
@@ -449,104 +448,7 @@ function clearsed {
 sed 's/<p>/\n/g; s/<[^>]*>//g'  | sed  's/": "/ /g' | sed  's/"//1' | sed 's/",$//g' 
 }
 
-
-vin=vinaya
-abhi=abhidhamma
-sutta=mutta
-metaphorcountfile=$textinfofolder/metphrcount_sutta.txt
-fortitle=Suttanta
-dirlocation=sutta
-translator=sujato
-fileprefix=_suttanta
-hwithtitle='<h1>'
-searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
-if [[ "$@" == *"-vin"* ]]; then
-    vin=dummy
-    sutta=sutta
-	fortitle=Vinaya
-	dirlocation=vinaya
-	translator=brahmali
-	vin="./vinaya/pli-tv-b*"
-	searchIn="$vin"
-    fileprefix=_vinaya
-    metaphorcountfile=$textinfofolder/metphrcount_vinaya.txt
-
-function grepbasefile {
-tmpgb=$tmpdir/tmpgrepbase.$rand
-
-keyword="$pattern"
-
-if [[ "$language" == *"Pali"* ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar > $tmpdir/initrun-pi
-fi
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-pi
-
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmnd
-bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-en
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-
-elif [[ "$language" == "English" ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-en
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-pi
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-var
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-else
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr} > $tmpgb
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
-
-fi 
-
-
-if [ -s $tmpgb ]; then
-cat $tmpgb 
-fi
-} 
-    
-fi
-if [[ "$@" == *"-abhi"* ]]; then
-    abhi=dummy
-    sutta=sutta
-	fortitle=Abhidhamma
-	dirlocation=abhidhamma
-	translator=""
-    fileprefix=_abhidhamma
-    #echo search in abhidhamma
-fi
- 
- 
- #case for am3.76 3.77 
- 
- shopt -s extglob
-if [[ "$pattern" == @(taṇh*|dhāt*|cetan*|patthan*|kamm*|khett*|viññāṇ*|bīj*|sneh*|phass*|majjh*|sibbin*|ant*) ]]; 
-then
-customtexts="|an3.7[67].*${modpattern}|${modpattern}.*dutiyo puriso|an6.61.*${modpattern}|an4.199.*${modpattern}"
-fi
-
-if [[ "$@" == *"-kn"* ]]; then
-
-kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
-searchIn="$searchIn $kn"
-
+#json basic pali eng grelbase
 function grepbasefile {
 tmpgb=$tmpdir/tmpgrepbase.$rand
 
@@ -598,9 +500,81 @@ cat $tmpgb
 fi
 }
 
+
+shopt -s extglob
+if [[ "$pattern" == @(taṇh*|dhāt*|cetan*|patthan*|kamm*|khett*|viññāṇ*|bīj*|sneh*|phass*|majjh*|sibbin*|ant*) ]]; 
+then
+customtexts="|an3.7[67].*${modpattern}|${modpattern}.*dutiyo puriso|an6.61.*${modpattern}|an4.199.*${modpattern}"
+fi
+
+
+#basic mode pki 4 main nikayas
+vin=vinaya
+abhi=abhidhamma
+sutta=mutta
+metaphorcountfile=$textinfofolder/metphrcount_sutta.txt
+fortitle=Suttanta
+dirlocation=sutta
+translator=sujato
+fileprefix=_suttanta
+hwithtitle='<h1>'
+searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
+if [[ "$@" == *"-vin"* ]]; then
+    vin=dummy
+    sutta=sutta
+	fortitle=Vinaya
+	dirlocation=vinaya
+	translator=brahmali
+	vin="./vinaya/pli-tv-b*"
+	searchIn="$vin"
+    fileprefix=_vinaya
+    metaphorcountfile=$textinfofolder/metphrcount_vinaya.txt
+elif [[ "$@" == *"-abhi"* ]]; then
+    abhi=dummy
+    sutta=sutta
+	fortitle=Abhidhamma
+	dirlocation=abhidhamma
+	translator=""
+    fileprefix=_abhidhamma
+    #echo search in abhidhamma
+
+ #case for an3.76 3.77 
+ 
+elif [[ "$@" == *"-kn"* ]]; then
+
+kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
+searchIn="$searchIn $kn"
 fileprefix=${fileprefix}-kn
 fortitle="${fortitle} +KN"
-elif [[ "$@" == *"-def"* ]]
+
+elif [[ "$@" == *"-all"* ]]; then
+knLater="./sutta/kn"
+searchIn="$searchIn $knLater"
+fileprefix=${fileprefix}-all
+fortitle="${fortitle} +All"
+
+elif [[ "$@" == *"-tru"* ]]; then
+function grepbasefile {
+nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} 
+}
+fileprefix=${fileprefix}
+fortitle="${fortitle}"
+elif [[ "$@" == *"-b"* ]]; then
+function grepbasefile {
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $bwlocation
+ --exclude-dir={$sutta,$abhi,home,js,css,image,fonts} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,pli-tv-kd,pli-tv-pvr,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
+}
+fileprefix=${fileprefix}-bw
+fortitle="${fortitle}"
+
+else 
+echo idk
+fi
+
+
+
+
+if [[ "$@" == *"-def"* ]]
 then
 fileprefix=${fileprefix}-definition
 fortitle="Definition ${fortitle}"
@@ -692,75 +666,7 @@ fi
 
 #sml end
 
-elif [[ "$@" == *"-all"* ]]; then
-vinLater="./vinaya/pli-tv-[kp].*"
-knLater="./sutta/kn"
-searchIn="$searchIn $knLater $vinLater"
-function grepbasefile {
-tmpgb=$tmpdir/tmpgrepbase.$rand
 
-keyword="$pattern"
-
-if [[ "$language" == *"Pali"* ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar > $tmpdir/initrun-pi
-fi
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-pi
-
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmnd
-bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-en
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-
-elif [[ "$language" == "English" ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-en
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-pi
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-var
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-else
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr} > $tmpgb
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
-
-fi 
-
-
-if [ -s $tmpgb ]; then
-cat $tmpgb 
-fi
-}
-fileprefix=${fileprefix}-all
-fortitle="${fortitle} +All"
-elif [[ "$@" == *"-tru"* ]]; then
-function grepbasefile {
-nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} 
-}
-fileprefix=${fileprefix}
-fortitle="${fortitle}"
-elif [[ "$@" == *"-b"* ]]; then
-function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $bwlocation
- --exclude-dir={$sutta,$abhi,home,js,css,image,fonts} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,pli-tv-kd,pli-tv-pvr,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
-}
-fileprefix=${fileprefix}-bw
-fortitle="${fortitle}"
 elif [[ "$@" == *"-onl"* ]]; then
 patternForHighlight="`echo $pattern | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 function grepbasefile {
@@ -830,58 +736,7 @@ fileprefix=${fileprefix}-onl
 fortitle="${fortitle} Matching Mode"
 maxmatchesbg=100000000
 #echo $pattern $splitpattern $splitarraylen | tohtml
-else 
 
-function grepbasefile {
-tmpgb=$tmpdir/tmpgrepbase.$rand
-
-keyword="$pattern"
-
-if [[ "$language" == *"Pali"* ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar > $tmpdir/initrun-pi
-fi
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-pi
-
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmnd
-bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-en
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-
-elif [[ "$language" == "English" ]]; then
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-en
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-pi
-
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromEn
-bash $tmpdir/cmndFromEn > $tmpdir/initrun-var
-
-cat $tmpdir/initrun-pi $tmpdir/initrun-en $tmpdir/initrun-var > $tmpgb
-else
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr} > $tmpgb
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
-
-fi 
-
-
-if [ -s $tmpgb ]; then
-cat $tmpgb 
-fi
-}
 fi
 
 if [[ "$@" == *"-th"* ]]; then
@@ -1254,7 +1109,10 @@ else
     $afterawk в файле $afterawk_file и 
     $wordsAggregatedByTexts в $aggregated_file"
     paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}'
-    cd result
+    
+    echo paste -d\"@\" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == \"@\"} BEGIN {print \"counts after wordsAggr\" } {print $1,$6, $9}'
+    cd ./result
+    echo $searchIn
     exit 0
 fi
 
@@ -1266,48 +1124,13 @@ wordLinkToReplace="/w.php?s=$keyword"
 WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
-cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
+#cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
-cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
+#cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
 
 #echo -e "Content-Type: text/html\n\n"
 #echo $@
 
-
-#<a target=\"_blank\" href="$linken">En</a> 
-echo "<tr>
-<td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
-<td><input type='checkbox' data-index="$filenameblock"></td>
-<td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern` </strong>`echo ${trntitle}  | highlightpattern ` </td>
-<td>${word}</td>
-<td>$count</td>   
-<td>$metaphorcount</td>
-<td>
-`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
-
-<a class='bwLink' href='' data-slug='$suttanumber'>En</a>
-<a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>
-
-
-
-`[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
-$([[ $linkthai != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linkthai\">ไทย</a>")
-`[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
-$([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linksi\">සිං</a>")
-
-</td>" 
-#`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
-echo "<td><p>"
-
-echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" 
-[[ "$quote_ln" != "" ]] && 
-echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_ln</span>" 
-[[ "$quote_var" != "" ]] && 
-echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_var</span>" 
-echo '<br class="styled">' 
-
-echo "</p></td>
-</tr>" 
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
 matchqnty=`awk -F@ '{sum+=$3;} END{print sum;}' $tmpdir/counts`
@@ -1533,9 +1356,10 @@ totaltexts=` echo $textlist | wc -w`
 linescount=$(wc -l < "$basefile")
 
 if (( linescount == 0 )); then
+    # ваш код здесь
+
 pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 	Erresponse
-
 	#Clarification
      rm $basefile
      exit 1
@@ -1637,7 +1461,7 @@ echo "</tbody>
 " >> $tempfilewords
 #replace button href in word file
 #echo "<script $fontawesomejs></script>"  >> $tempfilewords
-cat $templatefolder/WordsFooter2.html >> $tempfilewords
+cat $templatefolder/WordsFooter.html >> $tempfilewords
 mv ./$oldname ./$table
 
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
@@ -1719,3 +1543,43 @@ runtime=$((end-start))
 echo total execution time $runtime >> new_time_output.txt
 find . -type f -name 'search-*.html' -mmin +60 -exec rm {} \;
 exit 0
+
+
+
+
+
+
+#<a target=\"_blank\" href="$linken">En</a> 
+echo "<tr>
+<td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
+<td><input type='checkbox' data-index="$filenameblock"></td>
+<td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern` </strong>`echo ${trntitle}  | highlightpattern ` </td>
+<td>${word}</td>
+<td>$count</td>   
+<td>$metaphorcount</td>
+<td>
+`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
+
+<a class='bwLink' href='' data-slug='$suttanumber'>En</a>
+<a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>
+
+
+
+`[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
+$([[ $linkthai != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linkthai\">ไทย</a>")
+`[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
+$([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linksi\">සිං</a>")
+
+</td>" 
+#`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
+echo "<td><p>"
+
+echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" 
+[[ "$quote_ln" != "" ]] && 
+echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_ln</span>" 
+[[ "$quote_var" != "" ]] && 
+echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_var</span>" 
+echo '<br class="styled">' 
+
+echo "</p></td>
+</tr>" 

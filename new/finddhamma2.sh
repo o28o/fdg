@@ -1266,48 +1266,14 @@ wordLinkToReplace="/w.php?s=$keyword"
 WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
-cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
+#cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
-cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
+#cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
 
 #echo -e "Content-Type: text/html\n\n"
 #echo $@
 
 
-#<a target=\"_blank\" href="$linken">En</a> 
-echo "<tr>
-<td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
-<td><input type='checkbox' data-index="$filenameblock"></td>
-<td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern` </strong>`echo ${trntitle}  | highlightpattern ` </td>
-<td>${word}</td>
-<td>$count</td>   
-<td>$metaphorcount</td>
-<td>
-`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
-
-<a class='bwLink' href='' data-slug='$suttanumber'>En</a>
-<a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>
-
-
-
-`[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
-$([[ $linkthai != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linkthai\">ไทย</a>")
-`[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
-$([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linksi\">සිං</a>")
-
-</td>" 
-#`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
-echo "<td><p>"
-
-echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" 
-[[ "$quote_ln" != "" ]] && 
-echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_ln</span>" 
-[[ "$quote_var" != "" ]] && 
-echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_var</span>" 
-echo '<br class="styled">' 
-
-echo "</p></td>
-</tr>" 
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
 matchqnty=`awk -F@ '{sum+=$3;} END{print sum;}' $tmpdir/counts`
@@ -1637,7 +1603,7 @@ echo "</tbody>
 " >> $tempfilewords
 #replace button href in word file
 #echo "<script $fontawesomejs></script>"  >> $tempfilewords
-cat $templatefolder/WordsFooter2.html >> $tempfilewords
+cat $templatefolder/WordsFooter.html >> $tempfilewords
 mv ./$oldname ./$table
 
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
@@ -1719,3 +1685,40 @@ runtime=$((end-start))
 echo total execution time $runtime >> new_time_output.txt
 find . -type f -name 'search-*.html' -mmin +60 -exec rm {} \;
 exit 0
+
+
+
+#<a target=\"_blank\" href="$linken">En</a> 
+echo "<tr>
+<td><a class=\"freebutton\" target=\"_blank\" href="$linkgeneralwithindex">$filenameblock</a></td>
+<td><input type='checkbox' data-index="$filenameblock"></td>
+<td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern` </strong>`echo ${trntitle}  | highlightpattern ` </td>
+<td>${word}</td>
+<td>$count</td>   
+<td>$metaphorcount</td>
+<td>
+`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
+
+<a class='bwLink' href='' data-slug='$suttanumber'>En</a>
+<a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>
+
+
+
+`[[ $linkthai != "" ]] && [[ "$@" == *"-th"* ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>"`
+$([[ $linkthai != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linkthai\">ไทย</a>")
+`[[ $linksi != "" ]] && [[ "$@" == *"-si"* ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>"`
+$([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\" href=\"$linksi\">සිං</a>")
+
+</td>" 
+#`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
+echo "<td><p>"
+
+echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" 
+[[ "$quote_ln" != "" ]] && 
+echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_ln</span>" 
+[[ "$quote_var" != "" ]] && 
+echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_var</span>" 
+echo '<br class="styled">' 
+
+echo "</p></td>
+</tr>" 

@@ -56,7 +56,7 @@ bash $tmpdir/cmnd > $tmpdir/initrun-en
 
 # output language is russian
 cd $apachesitepath/assets/texts/
-bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru
+bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
 
 cd - > /dev/null
 

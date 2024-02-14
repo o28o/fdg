@@ -66,7 +66,7 @@ cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 grep -rioE "\w*$keyword[^ ]*" $searchIn | awk -F: '$2 > 0 {print $0}' | cleanupwords >> $tmpdir/words
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -ri "$keyword" * | awk -F/ '{print $NF}' | sed -e 's/_variant-pli-ms.json:/@/g' -e 's/": "/@/g'  -e 's/@ *"/@/g' | sed 's/",$//g'| awk -F@ '{anch = $2 ; gsub(":", "#", anch); link = "<strong><a class=\"fdgLink\" href=\"\" data-slug=\"" anch "\">" $1 "</a></strong>"}{print link, $3 "<br>"}'  > $tmpdir/variantsReport
+grep -ri "$keyword" * | awk -F/ '{print $NF}' | sed -e 's/_variant-pli-ms.json:/@/g' -e 's/": "/@/g'  -e 's/@ *"/@/g' | sed 's/",$//g' | sed 's/"$//g'| awk -F@ '{anch = $2 ; gsub(":", "#", anch); link = "<strong><a class=\"fdgLink\" href=\"\" data-slug=\"" anch "\">" $1 "</a></strong>"}{print link, $3 "<br>"}'  > $tmpdir/variantsReport
 #| sed -i 's/_variant-pli-ms.json//g' 
 
 

@@ -1279,7 +1279,7 @@ $.ajax({
   randPlaceholderOnMain();
   console.log(window.location.href);
 
-</ script>
+</script>
 <script defer src="/assets/js/themeswitch.js"></script>
 </body>
 <?php

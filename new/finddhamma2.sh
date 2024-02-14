@@ -642,7 +642,7 @@ echo >> outgrepcomloop
 nice -$nicevalue grep -Eril -m1 "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv}  > iter$iterationnum.$rand
  iterationnum=$((iterationnum + 1))
 done
-echo "$patternforfind dddd $patternforgrep" >> outgrepcomloop
+#echo "$patternforfind dddd $patternforgrep" >> outgrepcomloop
 cat iter*.$rand | sort -V | uniq -c | awk '{print $1, $2}' | grep "^$onlwc" |  awk '{print $2}' > onllist.$rand 
 
 for i in `cat onllist* `
@@ -985,45 +985,13 @@ then
 cat $templatefolder/Header2.html $templatefolder/WordTableHeader2.html | sed 's/$title/TitletoReplace/g' | sed 's@HOMEVAR@'$mainpagebase'@'  > $tempfilewords 
 else
 cat $templatefolder/Header2.html $templatefolder/WordTableHeader2.html | sed '/forshellscript/d' | sed 's/$title/TitletoReplace/g' > $tempfilewords 
-fi 
+fi
 
-nice -$nicevalue cat $tempfile | pvlimit | while IFS= read -r line ; do
-uniqword=`echo $line | awk '{print $1}'`
-uniqwordcount=`echo $line | awk '{print $2}'`
-linkscount=`nice -$nicevalue grep -i "\b$uniqword\b" $basefile | sort | awk '{print $1}' | awk -F'/' '{print $NF}' | sort | uniq | wc -l`
+#bash $apachesitepath/new/words.sh -f ${table} "$pattern"
+cat $tmpdir/wordsfinalhtml >> $tempfilewords
 
-if(( $linkscount == 0 ))
-then
-continue 
-fi 
-
-linkswwords=`grep -i "\b$uniqword\b" $basefile | awk '{print $1, $2}' | sort -Vf | awk -F'/' '{print $NF}' | sed 's@_.*json@@g' | sed 's@ @@g' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{if ($2 ~ /-/) print "<a target=_blank href=\"'${pagelang}'/sc/?s='${uniqword}'&q="$1"#"$2":"$3"\">"$2"</a>"; else print "<a target=_blank href=\"'${pagelang}'/sc/?s='${uniqword}'&q="$1"#"$3"\">"$2"</a>"}' | xargs`
-
-#&lang=pli
-echo "<tr>
-<td>`echo $uniqword | highlightpattern`</td>
-<td><a href=\$quotesLinkToReplace?f=$uniqword>$linkscount</a></td>   
-<td>$uniqwordcount</td>   
-<td>$linkswwords</td>
-</tr>" >>$tempfilewords
-
-# `(( $linkscount >= 6 )) && echo \"($linkscount)\"`
-echo "$uniqword: $linkswwords<br>" >> $tempfilewhistory
-done
 }
 
-
-function genbwlinks {
-forbwlink=`echo $filenameblock |  awk '{print substr($1,1,2)}' `
-
-  if [[ -s $bwlocation/$forbwlink/${filenameblock}.html  ]] ; then 
-  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}${forbwlink}'/"$0".html"}' `
-  elif [[ -s $bwlocation/$forbwlink/${forbwranges}.html  ]] ; then 
-  linken=`echo $filenameblock |  awk '{print "'${urllinkbw}$forbwlink/$forbwranges'.html"}' `
-  else
-  linken=`echo $filenameblock |  awk '{print "'$urllinken'"$0"'${urllinkenmid}${urllinkenend}'"}'`
-  fi 
-}
 
 if [[ "$type" == json ]]; then
 filelist=`echo "
@@ -1129,6 +1097,7 @@ wordLinkToReplace="/w.php?s=$keyword"
 WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
+echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtml
 #cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
 #cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
@@ -1423,13 +1392,6 @@ else
 tempfilewords=${removerand}_${textsqnty}-${matchqnty}.html
 fi 
 
-# echo "</tbody>
-# </table>
-# <br><br><hr>
-# <a href='/' id='back'>Main</a>&nbsp;
-# <a href='${pagelang}/sc'>Read</a>&nbsp;
-# <a href='/assets/diff'>SuttaDiff</a>&nbsp;
-# <a href='/history.php'>History</a>&nbsp;"  | tohtml
 
 if [[ "$language" == *"Pali"* ]] || [[ "$language" == *"English"* ]]; 
 	then
@@ -1472,7 +1434,8 @@ mv ./$oldname ./$table
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
 then
 sed -i 's@$quotesLinkToReplace@'./$table'@' ./$tempfilewords
-sed -i 's@$wordLinkToReplace@'./$tempfilewords'@' ./$table
+#sed -i 's@$wordLinkToReplace@/w.php?d=result/'$table'@' ./$table
+sed -i 's@$wordLinkToReplace@/w.php?s='$pattern'@' ./$table
 fi 
 
 linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "${fortitle^}" | grep ">$language<" | awk '{print $1}' | tac`

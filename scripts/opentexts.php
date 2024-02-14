@@ -88,7 +88,13 @@ $stringForOpen = strtolower($string);
 $stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
 
 //for patimokkha and vinaya vibhanga
-if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
+if (preg_match("/pli-tv-/i", $stringForOpen)) {
+  
+  echo "<script>window.location.href='$readerlang/sc/?q=$stringForOpen&s=$s';</script>";	
+  exit();
+	  
+}
+else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
 //echo "<script>alert('case 1');</script>";	
 	echo "<script>window.location.href='$readerlang/sc/?q={$stringForOpen}';</script>";	
 	  exit(); 
@@ -209,7 +215,7 @@ if( $p == "-ru" )
   $link = $linkforthru . $filename;
  $link = str_replace(PHP_EOL, '', $link);
   } 
-  elseif (preg_match("/^dn[0-9]{1,2}$/i",$stringForOpen)) {
+  else if (preg_match("/^dn[0-9]{1,2}$/i",$stringForOpen)) {
 
 $forthsu = preg_replace("/dn/i","","$stringForOpen");
 

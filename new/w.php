@@ -20,11 +20,17 @@ $query = $_SERVER['QUERY_STRING'];
 
 /* echo ' '.$params['lang']; */
 
+	$s = isset($_GET['s']) ? htmlspecialchars($_GET['s']) : '';
+$d = isset($_GET['d']) ? htmlspecialchars($_GET['d']) : '';
+ //$s ="lobh";
+ $stringForOpen = isset($s) ? strtolower(trim(str_replace("`", "", $s))) : '';
 
- $s ="lobh";
- 		$string = str_replace("`", "", $s);
-$stringForOpen = strtolower(trim($string));
+if ( preg_match('/html/', $d ))  {	
+  $command = escapeshellcmd("bash ./new/words.sh -f $d $stringForOpen");
+} else {
 $command = escapeshellcmd("bash ./new/words.sh $stringForOpen");
+}
+
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
    $output = shell_exec($command); 

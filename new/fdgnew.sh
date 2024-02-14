@@ -7,9 +7,11 @@ export LANG=en_US.UTF-8
 #export LC_ALL=C.utf8
 #args="$@"
 keyword="$@"
+args="$@"
 [[ $keyword == "" ]] && exit 0
 database="./db/fdg-db.db"
 source ./config/script_config.sh --source-only
+source ./new/functions.sh --source-only
 #separator="@"
 sqlitecommand="sqlite3 -separator $separator"
 #[[ $keyword == "" ]] && exit 0
@@ -27,12 +29,8 @@ rm $tmpdir/wordsAggregatedByTexts 2>/dev/null
 
 translator="brahmali"
 translator="sujato"
-searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
-kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
-knLater="./sutta/kn"
-vin="./vinaya/pli-tv-b*"
-vinLater="./vinaya/pli-tv-[kp].*"
-searchIn="$searchIn $kn"
+WhereToSearch
+
 #keyword=byākarissāmīti
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 grep -riE "$keyword" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
@@ -120,6 +118,7 @@ wordLinkToReplace="/w.php?s=$keyword"
 WORDREPLACELINK="$wordLinkToReplace"
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
+echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
 cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/r.html
 cat $tmpdir/finalhtml >> $output/r.html
 cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' >> $output/r.html

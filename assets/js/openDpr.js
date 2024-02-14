@@ -1,3 +1,22 @@
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Страница загружена");
+    const dprLinks = document.querySelectorAll('.dprLink');
+    dprLinks.forEach(link => {
+        const slug = link.getAttribute('data-slug');
+        console.log("Slug:", slug);
+        const textUrl = getTextUrl(slug);
+        console.log("Text URL:", textUrl);
+        if (!textUrl) {
+            link.style.display = 'none';
+        } else {
+            // Установка значения в атрибут href
+            link.href = textUrl;
+        }
+    });
+});
+
+
+
   function openDpr(slug) {
 
         console.log("Открывается DPR для:", slug);
@@ -34,30 +53,30 @@
       return null;
     }
 
-    function findTextUrl(nikaya, subdivision, textnum) {
-      if (subdivision !== null) {
-        if (digitalPaliReader[nikaya].available[subdivision]) {
-          let item = digitalPaliReader[nikaya].available[subdivision].find(item => {
-            if (Array.isArray(item)) {
-              if (item.length === 3) {
-                return textnum >= item[0] && textnum <= item[1];
-              } else if (item.length === 2) {
-                return textnum === item[0];
-              }
-            }
-            return false;
-          });
-
-          if (item) {
-            return digitalPaliReader.constants.rootUrl + item[item.length - 1];
+function findTextUrl(nikaya, subdivision, textnum) {
+  if (digitalPaliReader && digitalPaliReader[nikaya] && digitalPaliReader[nikaya].available) {
+    if (subdivision !== null && digitalPaliReader[nikaya].available[subdivision]) {
+      let item = digitalPaliReader[nikaya].available[subdivision].find(item => {
+        if (Array.isArray(item)) {
+          if (item.length === 3) {
+            return textnum >= item[0] && textnum <= item[1];
+          } else if (item.length === 2) {
+            return textnum === item[0];
           }
         }
-      } else {
-        let item = digitalPaliReader[nikaya].available.find(item => Array.isArray(item) ? item[0] === textnum : item === textnum);
-        if (item) {
-          return digitalPaliReader.constants.rootUrl + item[1];
-        }
-      }
+        return false;
+      });
 
-      return null;
+      if (item) {
+        return digitalPaliReader.constants.rootUrl + item[item.length - 1];
+      }
+    } else {
+      let item = digitalPaliReader[nikaya].available.find(item => Array.isArray(item) ? item[0] === textnum : item === textnum);
+      if (item) {
+        return digitalPaliReader.constants.rootUrl + item[1];
+      }
     }
+  }
+
+  return null;
+}

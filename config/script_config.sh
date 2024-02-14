@@ -47,8 +47,7 @@ multiplier=0.5
 skiprounds=3
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
-#export LC_ALL=C.utf8
-export LC_ALL=pa_IN.UTF-8 
+export LC_ALL=C.utf8
 sitename=http://localhost
 nicevalue=1
 mode=online

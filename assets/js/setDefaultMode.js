@@ -44,7 +44,7 @@
       document.getElementById("onlCheckbox").checked = preferences.onl;
       document.getElementById("laCheckbox").checked = preferences.la;
     } else {
-   document.getElementById("extraOptions").value = "-nm10";
+   document.getElementById("extraOptions").value = "";
     }
   }
 

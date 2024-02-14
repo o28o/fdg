@@ -386,6 +386,44 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
+<?php
+if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+<strong>Отличная новость!</strong> 
+
+Поиск по "Всем совпадениям" на Пали и Англ стал намного быстрее. Ускорение поиска на Русском в процессе. "Определения", "Сравнения" и др. работают, но как прежде медленно. Если обнаружите ошибки, пожалуйста, <a class="alert-link" href="#contacts"> сообщите через контакты <i class="fa-regular fa-comment"></i></a>
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+} else {
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+<strong>Great news!</strong> 
+
+"All matches" search in Pali and English has become much faster. Speeding up searches in Russian, Thai and Sinhala is in progress. "Definitions", "Similes" etc are working but slowly as before. If you encounter any errors, please use <a class="alert-link" href="#contacts">contacts to report <i class="fa-regular fa-comment"></i></a>
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+}
+?>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var infoUpdate = document.getElementById("infoUpdate");
+
+    // Проверяем, есть ли запись в localStorage
+    if (!localStorage.getItem("infoUpdateClosed")) {
+        infoUpdate.style.display = "block"; // Если нет, показываем его
+    }
+
+    // Добавляем обработчик события для кнопки закрытия
+    infoUpdate.querySelector(".btn-close").addEventListener("click", function() {
+        // Сохраняем в localStorage информацию о закрытии окна
+        localStorage.setItem("infoUpdateClosed", "true");
+        // Скрываем окно при нажатии на кнопку закрытия
+        infoUpdate.style.display = "none";
+    });
+});
+
+</script>
+
 <div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
   <div id="response"></div>
   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>

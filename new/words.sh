@@ -147,9 +147,11 @@ echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $outpu
 cat $apachesitepath/new/templates/wordsheader | sed 's@quotesLinkToReplace@'"$quotesLinkToReplace"'@g' | sed 's/$title/'"$headerinfo"'/g' >> $output/w.html
 cat $tmpdir/wordsfinalhtml >> $output/w.html
 echo " </tbody>
-    </table>
-        </div><div class='mt-3 ms-4 variants'><h3 class='text-center my-3'>Variants</h2>" >> $output/w.html
+    </table>" >> $output/w.html
+    if [ -s "$tmpdir/variantsReport" ]; then
+echo " </div><div class='mt-3 ms-4 variants'><h3 class='text-center my-3'>Variants for ${keyword^}</h2>" >> $output/w.html
 cat $tmpdir/variantsReport >> $output/w.html
+fi
 echo "</div>" >> $output/w.html
 cat $apachesitepath/new/templates/wordsfooter >> $output/w.html
 cat $output/w.html

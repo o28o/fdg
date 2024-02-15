@@ -5,7 +5,7 @@ start=`date +%s`
 #set +x
 #trap read debug
 export LANG=en_US.UTF-8
-export LANG=C
+#export LANG=C
 #export LC_ALL=en_US
 #export LC_ALL=C.utf8
 #export LC_ALL=pa_IN.UTF-8 

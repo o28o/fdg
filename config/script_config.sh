@@ -48,13 +48,13 @@ skiprounds=3
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
 #export LC_ALL=C.utf8
-export LANG=en_US.UTF-8
+#export LANG=en_US.UTF-8
 sitename=http://localhost
 nicevalue=1
 mode=online
 apachesitepath=/var/www/html
-tmpdir=/tmp
-#tmpdir=$apachesitepath/result
+#tmpdir=/tmp
+tmpdir=$apachesitepath/result
 suttapath=$apachesitepath/suttacentral.net/
 
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'

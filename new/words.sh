@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 #export LC_ALL=en_US
 #export LC_ALL=C.utf8
 #export LC_ALL=pa_IN.UTF-8 
-#echo after set all=$LC_ALL lang=$LANG
+echo after set all=$LC_ALL lang=$LANG
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 

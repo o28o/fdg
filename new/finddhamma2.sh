@@ -780,14 +780,21 @@ elif [[ "$@" == *"-tru"* ]]; then
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"    
 elif [[ "$@" == *"-ru"* ]]; then
     fnlang=_ru
-    pali_or_lang=sc-data/html_text/ru/pli
+    pali_or_lang=sc-data/html_text/ru/pli/
     language=Russian
     printlang=Русский
     directlink=
-    type=html   
+    type=html  
+    searchIn="./sutta/"
     metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
     nonmetaphorkeys="подобного|подоба"
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
+      function grepbasefile {
+cd $suttapath/$pali_or_lang
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  
+cd - > /dev/null
+}  
+
 elif [[ "$@" == *"-b"* ]]; then
     fnlang=_tbw
     pali_or_lang=/bw/
@@ -1126,6 +1133,7 @@ ${table}"`
 
 grepvar=l
 
+
 function linklist {
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
 then
@@ -1135,117 +1143,88 @@ cat $templatefolder/Header2.html $templatefolder/ResultTableHeader2.html | sed '
 
 fi 
 
-uniquelist=`cat $basefile |grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home" | grep -Ev "palisearch|engsearch|standalone.js" | pvlimit | awk '{print $1}' | awk -F'/' '{print $NF}' | sort -Vf | uniq`
+keyword="$pattern"
+
+    
+cd $output > /dev/null
+#Samaṇasukhasutta An Ascetic’s Happiness an5.128 var
+sed -i 's/.html/":1"/g'  $tmpdir/$basefile
+sed -i 's/":/@/g'  $tmpdir/$basefile
+sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/$basefile
+sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/$basefile
+   
+cat $tmpdir/$basefile | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
 
 
-textlist=$uniquelist
-    for i in $uniquelist
-do
+# |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
+########## count keywords in texts
 
-if [[ "$args" == *"-tru"* ]]; then
-filenameblock=`echo $i |  sed 's/-.*//g' | sed 's@_@.@g' | sort -Vf | uniq `
-else 
-filenameblock=`echo $i |  sed 's/.html//g' | sort -Vf | uniq `
-fi 
-
-file=`grep -m1 "${i}" $basefile `
-
-tr=$file
-
-    suttanumber="$filenameblock"
-
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0}' `
-#"&'$defaultlang'"
-linklang="$linkgeneral"
+cd $suttapath/$pali_or_lang
+grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
 
 
-if [[ "$@" == *"-b"* ]]; then
-roottext=`nice -$nicevalue find $bwlocation -name "*${filenameblock}_*" -not -path "*/home/*" -not  -path "*/css/*" -not -path "*/js/*" -not -path "*/engsesrch/*"`
+
+cat $tmpdir/words   | awk -F/ '{print $NF}' | awk -F: '{print $1}' | sort -V | uniq -c | sed 's/.html//g'| awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+
+cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
+    if ($1 in data) {
+        data[$1] = data[$1] " " $2
+    } else {
+        data[$1] = $1 "@" $2
+    }
+}
+END {
+    for (item in data) {
+        print data[item]
+    }
+}' | sort -V > $tmpdir/wordsAggregatedByTexts
+
+cd $output > /dev/null
+########## end count keywords in texts
+
+#rm $tmpdir/afterawk  
+bash $apachesitepath/new/awknewfdg.sh $tmpdir/readyforawk "$keyword" > $tmpdir/afterawk  
+
+counts_file="$tmpdir/counts" 
+afterawk_file="$tmpdir/afterawk"
+aggregated_file="$tmpdir/wordsAggregatedByTexts"
+wordsAggregatedByTexts=$(wc -l < "$aggregated_file")
+counts=$(wc -l < "$counts_file")
+afterawk=$(wc -l < "$afterawk_file")
+
+if [ "$counts" -eq "$afterawk" ] && [ "$afterawk" -eq "$wordsAggregatedByTexts" ]; then
+   # echo "Все три переменные равны $counts"
+   echo
 else
-#pathblock=`echo $pathAndfile | awk -F'/' '{ var=NF-1 ; for (i=1;i<=var;i++) printf $i"/"}'`
-#roottext=`ls $lookup/root/pli/ms/$pathblock/*${filenameblock}_*`
-
-roottext=`nice -$nicevalue find $lookup/root -name "*${filenameblock}_*" -not -path "*/blurb/*" -not  -path "*/name*" -not -path "*/site/*"`
-fi
-        if [[ "$language" == *"Pali"* ]]; then
-        file=$roottext
-   # elif [[ "$language" == "Russian" ]]; then
-   else
-        file=$tr
-        remtitle=`echo $filenameblock | sed 's/[A-Za-z]//g'`
-suttatitle=`grep -m1 $hwithtitle $file | clearsed | xargs | sed 's@'$remtitle'@@g'`
-
-	   np=`echo $filenameblock | sed 's@\.@_@g'`
-   # tr=`find $searchdir -name "*${np}-*"`
-tr=`ls $searchdir/*${np}-* 2>/dev/null`
-     thrulink=`echo $tr | sed 's@.*theravada.ru@'$linkforthru'@g'`
-
-linklang="$thrulink"	
+    echo "$counts в файле $counts_file не равно количеству строк 
+    $afterawk в файле $afterawk_file и 
+    $wordsAggregatedByTexts в $aggregated_file"
+    paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}'
+    cd result
+    exit 0
 fi
 
-roottitle=`nice -$nicevalue grep -m5 ':0\.' $roottext | clearsed | awk '{print substr($0, index($0, $2))}' | xargs | grep -E -oE "[^ ]*sutta[^ ]*"`
+paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
+bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
-if ls $roottext | grep -m1 -E -q "sn[0-9]{0,2}.[0-9]*_"
-then
-roottitle=`nice -$nicevalue grep -m1 "${suttanumber}," $sntoccsv | awk -F',' '{print $8" "$4}' | sort -Vf | uniq`
-fi
-  
- if [[ $filenameblock == *"dn"* ]]
-then 
-if [[ $mode == "offline" ]]
-then 
-dnnumber=`echo $filenameblock | sed 's/dn//g'`
-linklang="`ls -R $thsulocation/dn/ | grep -m1 \"dn${dnnumber}.html\" | awk -v lths="$linkforthsu" '{print lths\"/dn/\"$0}'`"
-else 
-linklang=` grep "ДН $dnnumber" $thsucurldn | sed 's#href=\"/toc/translations/#href=\"https://tipitaka.theravada.su/node/table/#' |awk -F'"' '{print $2}'`
-fi
-  fi    
-  
-genbwlinks
-  
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
+wordLinkToReplace="/w.php?s=$keyword"
+WORDREPLACELINK="$wordLinkToReplace"
 
-linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
-linksi=`echo $filenameblock |  awk -v lksi="$linkforsi" -v ext="$linkforsiext" '{print lksi$0''ext}' `
+echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
+echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtml
+#cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
+cat $tmpdir/finalhtml | tohtml
+#cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
 
-count=`nice -$nicevalue grep -E -oi$grepgenparam "$pattern" $file $variant | wc -l ` 
-echo $count >> $tempfile
+#echo -e "Content-Type: text/html\n\n"
+#echo $@
 
-word=`getwords | grepexclude | xargs | clearsed | sedexpr | highlightpattern`
-indexlist=`nice -$nicevalue grep -E -i $filenameblock $basefile | awk '{print $2}'`
 
-metaphorcount=`nice -$nicevalue grep -m1 ${filenameblock}_ $metaphorcountfile | awk '{print $2}'`
-if [[ $metaphorcount == "" ]]
-then
 
-metaphorcount=`nice -$nicevalue cat $file | pvlimit | clearsed | nice -$nicevalue grep -iE "$metaphorkeys" | nice -$nicevalue grep -vE "$nonmetaphorkeys" | tr -s ' '  '\n' | nice -$nicevalue grep -iE "$metaphorkeys" | wc -l` 
-sankhamEvamcount=`cat $file | tr '\n' '\a' | grep -ioc 'saṅkhaṁ gacchati.*Evamev'`
-metaphorcount=$(( $metaphorcount + $sankhamEvamcount ))
-fi
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
+matchqnty=`awk -F@ '{sum+=$3;} END{print sum;}' $tmpdir/counts`
 
-echo "<tr>
-<td><a target=\"_blank\" href="$linkgeneral">$suttanumber</a></td>
-<td><input type='checkbox'></td>
-<td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern`</strong>`echo "${suttatitle}" | highlightpattern ` </td>
-<td>$word</td>
-<td>$count</td>   
-<td>$metaphorcount</td>
-<td><a target=\"_blank\" href="$linken">Eng</a>&nbsp;
-`[[ $linkthai != "" ]] && echo "<a target=\"_blank\" href="$linkthai">ไทย</a>&nbsp;"`
-`[[ $linksi != "" ]] && echo "<a target=\"_blank\" href="$linksi">සිං</a>&nbsp;"`
-<a target=\"_blank\" href="$linklang">Рус</a>`[[ "$thrulink" != "" ]] && [[ "$thrulink" != "$linklang" ]] && echo "&nbsp;<a target=\"_blank\" href="$thrulink">Вар. 2</a>"` 
-</td>
-<td>" | tohtml
-
-nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -ih "${pattern}" $file | grep -v "^--$" | clearsed | highlightpattern  | while IFS= read -r line ; do
-echo "$line"
-echo '<br class="styled">'
-done | tohtml
-
-echo "</td>
-</tr>" | tohtml
-done
-
-matchqnty=`awk '{sum+=$1;} END{print sum;}' $tempfile`
 }
 
 fi
@@ -1278,6 +1257,11 @@ fi
 checkifalreadydone
 echo grepbase > new_time_output.txt
 { time grepbasefile | grep -v "^--$" | grepexclude | sort -Vf ;} 2>> new_time_output.txt > $basefile
+cp $basefile bfc
+echo path is $suttapath/$pali_or_lang and searchin is $searchIn
+echo grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn
+
+
 #grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
 
 if [[ "$@" == *"-nm"* ]] 

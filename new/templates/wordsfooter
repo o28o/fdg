@@ -86,7 +86,8 @@ if (keywordElement) {
     keyword = ""; // Значение по умолчанию, если элемент не найден
 }
 
-let searchValue = finder && finder.trim() !== "" ? finder : keyword;
+//let searchValue = finder && finder.trim() !== "" ? finder : keyword;
+let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
 console.log("searchValue highlighter", searchValue);
 if (searchValue !== "") {
   

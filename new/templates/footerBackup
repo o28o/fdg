@@ -65,7 +65,7 @@ $('#pali').find('tbody').find('tr').each(function() {
               text: 'Main',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = "/";
+                                window.location.href = "/new";
                             }
             },
               {
@@ -89,7 +89,7 @@ $('#pali').find('tbody').find('tr').each(function() {
                                 window.location.href = '/history.php';
                             }
                         },  
-                /*        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = 'WORDREPLACELINK';}},*/
+                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = 'WORDREPLACELINK';}},
                         { extend: 'colvis', 
                      className: 'btn btn-link ',
                         text: 'Visibility' }
@@ -111,10 +111,6 @@ $('#pali').find('tbody').find('tr').each(function() {
 				orderDataType: 'dom-checkbox' // Используем функцию сортировки
 				},
 				*/
-				      {
-            targets: [0],
-            orderData: [6, 0]
-        },
 	            { type: "html", target: [1,2,7] },
 	            { type: 'natural', targets: 0 },
 				  {
@@ -176,7 +172,6 @@ let keyword;
 
 // Проверяем наличие элемента с классом "keyword"
 let keywordElement = document.querySelector('.keyword');
-console.log("keywordElement", keywordElement);
 if (keywordElement) {
     keyword = keywordElement.textContent.trim();
 } else {
@@ -186,7 +181,6 @@ if (keywordElement) {
 // Используем значение из параметра "s" или "keyword"
 //let searchValue = finder && finder.trim() !== "" ? finder : keyword;
 let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
-
 if (searchValue !== "") {
     // Получаем таблицу DataTables по ее id
 

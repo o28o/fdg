@@ -17,7 +17,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
 //echo "$p $q $extra $cb";
 //echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
 
-if ( preg_match('/(-def|-sml|-nm|-b)/', $p ) || preg_match('/(-def|-sml|-nm|-b)/', $extra ))  {	
+if ( preg_match('/(-def|-sml|-nm|-b|-onl)/', $p ) || preg_match('/(-onl|-def|-sml|-nm|-b)/', $extra ))  {	
   $fdgscript = "./scripts/finddhamma.sh";
 } else {
 $fdgscript = "./new/finddhamma2.sh";

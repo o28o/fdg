@@ -28,8 +28,8 @@ case "$i" in
             *sn*) searchIn="$searchIn ./sutta/sn" ;;
             *mn*) searchIn="$searchIn ./sutta/mn" ;;
             *dn*) searchIn="$searchIn ./sutta/dn" ;;
-            *kn*) searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag" ;;
-            *lt*) searchIn="$searchIn ./sutta/kn" ;;
+            *kn*) searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" ;;
+            *lt*) searchIn="$searchIn ./sutta/kn/bv ./sutta/kn/cnd ./sutta/kn/cp ./sutta/kn/ja ./sutta/kn/kp ./sutta/kn/mil ./sutta/kn/mnd ./sutta/kn/ne ./sutta/kn/pe ./sutta/kn/ps ./sutta/kn/pv  ./sutta/kn/tha-ap ./sutta/kn/thi-ap ./sutta/kn/vv" ;;
             *vn*) searchIn="$searchIn ./vinaya/pli-tv-b*" ;;
             *kp*) searchIn="$searchIn ./vinaya/pli-tv-[kp].*" ;;
             *) echo "Unknown pair: $pair" ;;
@@ -88,3 +88,7 @@ pvlimit
 }
 fi
 
+
+function cleanupwords {
+sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/[”’]*ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
+}

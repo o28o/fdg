@@ -16,13 +16,16 @@ export LANG=en_US.UTF-8
 # and paddling with my hands and feet,
 # I can safely reach the far shore.
 ########## sn35.238 ##########
-source ./config/script_config.sh --source-only
 args="$@"
+source ./config/script_config.sh --source-only
+source ./new/functions.sh --source-only
+
 
 
 keyword="$@"
 [[ $keyword == "" ]] && exit 0
-
+WhereToSearch
+keyword=$( echo "$@" | clearargs)
 
 if [[ "$@" == *"-d"* ]]; then
 filename=$(echo "$@" | awk '{print $2}')
@@ -47,26 +50,21 @@ rm $tmpdir/wordsfinalhtml 2>/dev/null
 
 translator="brahmali"
 translator="sujato"
-searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
-kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
-knLater="./sutta/kn"
-vin="./vinaya/pli-tv-b*"
-vinLater="./vinaya/pli-tv-[kp].*"
-searchIn="$searchIn"
 
 
-function cleanupwords {
-sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/[”’]*ti$/’ti/g' -e 's/[[:punct:]]*$//' 
-}
+
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-grep -rioE "\w*$keyword[^ ]*" $searchIn | awk -F: '$2 > 0 {print $0}' | cleanupwords > $tmpdir/words
+grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords > $tmpdir/words
 cd -  > /dev/null
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -rioE "\w*$keyword[^ ]*" $searchIn | awk -F: '$2 > 0 {print $0}' | cleanupwords >> $tmpdir/words
+grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords >> $tmpdir/words
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -ri "$keyword" * | awk -F/ '{print $NF}' | sed -e 's/_variant-pli-ms.json:/@/g' -e 's/": "/@/g'  -e 's/@ *"/@/g' | sed 's/",$//g' | sed 's/"$//g'| awk -F@ '{anch = $2 ; gsub(":", "#", anch); link = "<strong><a class=\"fdgLink\" href=\"\" data-slug=\"" anch "\">" $1 "</a></strong>"}{print link, $3 "<br>"}'  > $tmpdir/variantsReport
+grep -ri "$keyword" ./sutta/ ./vinaya/ | sed -e 's@./sutta/kn@khudakka\@/@g' -e 's@./sutta/@dhamma\@/@g' -e 's@./vinaya/@vinaya\@/@g' | sed -e 's/_variant-pli-ms.json:/@/g' -e 's/": "/@/g'  -e 's/@ *"/@/g' | sed 's/",$//g' | sed 's/"$//g' | sort -t@ -k1,1 -k2V | awk -F/ '{print $NF}'| awk -F@ '{
+  anch = $2 ; gsub(":", "#", anch); 
+  link = "<strong><a class=\"fdgLink\" href=\"\" data-slug=\"" anch "\">" $1 "</a></strong>"}
+  {print link, $3 "<br>"}'  > $tmpdir/variantsReport
 #| sed -i 's/_variant-pli-ms.json//g' 
 
 

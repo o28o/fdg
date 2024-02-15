@@ -709,9 +709,9 @@ cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
 if [ -s "$tmpdir/initrun-var" ]; then
 cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar > $tmpdir/initrun-pi
+bash $tmpdir/cmndFromVar | sed 's/<[^>]*>//g'> $tmpdir/initrun-pi
 fi
-grep -riE "$pattern" $searchIn >> $tmpdir/initrun-pi
+grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' >> $tmpdir/initrun-pi
 
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator

@@ -30,6 +30,9 @@ rm $tmpdir/wordsAggregatedByTexts 2>/dev/null
 translator="brahmali"
 translator="sujato"
 WhereToSearch
+keyword=$( echo "$@" | clearargs)
+echo $keyword
+echo $searchIn
 
 #keyword=byākarissāmīti
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
@@ -39,9 +42,9 @@ cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
 if [ -s "$tmpdir/initrun-var" ]; then
 cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmnd1
-bash $tmpdir/cmnd1 > $tmpdir/initrun-pi
+bash $tmpdir/cmnd1 | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
 fi
-grep -riE "$keyword" $searchIn >> $tmpdir/initrun-pi
+grep -riE "$keyword" $searchIn | sed 's/<[^>]*>//g' >> $tmpdir/initrun-pi
 
 if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
     echo "$keyword не найдено в $searchIn"
@@ -70,12 +73,12 @@ cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' |
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
 ########## count keywords in texts
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-grep -rioE "\w*$keyword[^ ]*" $searchIn | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g' |sed 's/[[:punct:]]*$//'| awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
 
-cat $tmpdir/words   | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
 
 cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
     if ($1 in data) {

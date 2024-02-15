@@ -777,7 +777,14 @@ elif [[ "$@" == *"-tru"* ]]; then
     type=html   
     metaphorkeys="как если бы|подоб|представь|обозначение|Точно также, как"
     nonmetaphorkeys="подобного|подоба"
-    definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"    
+    definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"  
+    
+         function grepbasefile {
+cd $apachesitepath/theravada.ru/Teaching/Canon
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  
+cd - > /dev/null
+}   
+    
 elif [[ "$@" == *"-ru"* ]]; then
     fnlang=_ru
     pali_or_lang=sc-data/html_text/ru/pli/

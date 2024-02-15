@@ -47,7 +47,7 @@ multiplier=0.5
 skiprounds=3
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
-export LC_ALL=C.utf8
+#export LC_ALL=C.utf8
 sitename=http://localhost
 nicevalue=1
 mode=online
@@ -82,7 +82,7 @@ maxmatchesbg=10000
 archivenumber=91
 
 multiplier=2
-minmatchesforonline=30000000000000000000
+minmatchesforonline=3000000000
 skiprounds=5
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
@@ -233,5 +233,5 @@ sed -E "s@$patternForHighlight@<b>&</b>@gI"
 }
 
 function cleanupwords {
-sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/[”’]*ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
+sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
 }

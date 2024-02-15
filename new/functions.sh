@@ -24,22 +24,38 @@ searchIn=""
 for i in $(echo $source | sed 's/,/ /g')
 do
 case "$i" in
-            *an*) searchIn="$searchIn ./sutta/an" ;;
-            *sn*) searchIn="$searchIn ./sutta/sn" ;;
-            *mn*) searchIn="$searchIn ./sutta/mn" ;;
-            *dn*) searchIn="$searchIn ./sutta/dn" ;;
-            *kn*) searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" ;;
-            *lt*) searchIn="$searchIn ./sutta/kn/bv ./sutta/kn/cnd ./sutta/kn/cp ./sutta/kn/ja ./sutta/kn/kp ./sutta/kn/mil ./sutta/kn/mnd ./sutta/kn/ne ./sutta/kn/pe ./sutta/kn/ps ./sutta/kn/pv  ./sutta/kn/tha-ap ./sutta/kn/thi-ap ./sutta/kn/vv" ;;
-            *vn*) searchIn="$searchIn ./vinaya/pli-tv-b*" ;;
-            *kp*) searchIn="$searchIn ./vinaya/pli-tv-[kp].*" ;;
-            *) echo "Unknown pair: $pair" ;;
+            *an*) searchIn="$searchIn ./sutta/an" 
+           searchInForUser="$searchInForUser AN" ;;
+            *sn*) searchIn="$searchIn ./sutta/sn" 
+            searchInForUser="$searchInForUser SN"
+            ;;
+            *mn*) searchIn="$searchIn ./sutta/mn"
+            searchInForUser="$searchInForUser MN"
+            ;;
+            *dn*) searchIn="$searchIn ./sutta/dn" 
+            searchInForUser="$searchInForUser DN"
+            ;;
+            *kn*) searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
+            searchInForUser="$searchInForUser KN"
+            ;;
+            *lt*) searchIn="$searchIn ./sutta/kn/bv ./sutta/kn/cnd ./sutta/kn/cp ./sutta/kn/ja ./sutta/kn/kp ./sutta/kn/mil ./sutta/kn/mnd ./sutta/kn/ne ./sutta/kn/pe ./sutta/kn/ps ./sutta/kn/pv  ./sutta/kn/tha-ap ./sutta/kn/thi-ap ./sutta/kn/vv" 
+            searchInForUser="$searchInForUser Later"
+            ;;
+            *vn*) searchIn="$searchIn ./vinaya/pli-tv-b*" 
+            searchInForUser="$searchInForUser Vinaya"
+            ;;
+            *kp*) searchIn="$searchIn ./vinaya/pli-tv-[kp].*" 
+            searchInForUser="$searchInForUser Kd Prv"
+            ;;
+            *) echo "Unknown" ;;
         esac
         done
 else
 function cleanupSrc {
     pvlimit
   }
-searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
+searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
+searchInForUser="Main Nikayas"
 fi
 #echo $searchIn
 }

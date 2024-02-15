@@ -15,15 +15,8 @@ source ./new/functions.sh --source-only
 #separator="@"
 sqlitecommand="sqlite3 -separator $separator"
 #[[ $keyword == "" ]] && exit 0
-rm $tmpdir/initrun* 2>/dev/null
-rm $tmpdir/afterawk 2>/dev/null
-rm $tmpdir/cmnd 2>/dev/null
-rm $tmpdir/counts 2>/dev/null
-rm $tmpdir/finalhtml 2>/dev/null
-rm $tmpdir/finalraw 2>/dev/null
-rm $tmpdir/readyforawk 2>/dev/null
-rm $tmpdir/words 2>/dev/null
-rm $tmpdir/wordsAggregatedByTexts 2>/dev/null
+
+cleanupTempFiles
 #keyword=dukkh
 # SQLite запрос с использованием параметров
 
@@ -31,38 +24,43 @@ translator="brahmali"
 translator="sujato"
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
-echo $keyword
-echo $searchIn
+echo $keyword in $searchIn
 
 #keyword=byākarissāmīti
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$keyword" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
 
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmnd1
-bash $tmpdir/cmnd1 | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
-fi
-grep -riE "$keyword" $searchIn | sed 's/<[^>]*>//g' >> $tmpdir/initrun-pi
-
-if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
-    echo "$keyword не найдено в $searchIn"
-    exit 1
+#if pali cd to pali or var if eng cd to eng 
+#filelists
+if [[ "$@" == *"-anyd"* ]] || [[ "$@" == *"-top"* ]] ; then
+echo engFirst
 fi
 
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmnd
-bash $tmpdir/cmnd > $tmpdir/initrun-en
+#word or id lists
+#pli or eng first
+if [[ "$@" == *"-def"* ]] || [[ "$@" == *"-sml"* ]] ; then
+echo engFirst
+fi
 
+#eng 1st pli 1st 
+if [[ "$@" == *"-en"* ]]; then
+echo engFirst
+
+fi
+
+#var1st
+varFirst
+
+if [[ "$@" == *"-oru"* ]]
+then
 # output language is russian
 cd $apachesitepath/assets/texts/
-bash $tmpdir/cmnd | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
+bash $tmpdir/cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
+fi
 
-cd - > /dev/null
+cd $apachesitepath > /dev/null
 
+#proccessing common for all files 
 sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi
-sed -i 's/_translation-ru-.*.json/":2"/g' $tmpdir/initrun-ru
+sed -i 's/_translation-ru-.*.json/":2"/g' $tmpdir/initrun-ru 2>/dev/null
 sed -i 's/_translation-en-sujato.json/":3"/g' $tmpdir/initrun-en
 sed -i 's/_variant-pli-ms.json/":4"/g' $tmpdir/initrun-var
 sed -i 's/":/@/g'  $tmpdir/initrun*

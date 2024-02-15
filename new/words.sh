@@ -33,20 +33,12 @@ keyword=$(echo "$@" | awk '{$1=$2="";print $0}' | sed 's/^ *//g')
 echo "filnename case"
 fi
 
-htmlpattern=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
+htmlkeyword=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 separator="@"
 sqlitecommand="sqlite3 -separator $separator"
 
 
-rm $tmpdir/counts 2>/dev/null
-rm $tmpdir/finalhtml 2>/dev/null
-rm $tmpdir/uniqwords 2>/dev/null
-rm $output/w.html 2>/dev/null
-rm $tmpdir/wordcountMatches 2>/dev/null
-rm $tmpdir/wordcountTexts 2>/dev/null
-rm $tmpdir/words 2>/dev/null
-rm $tmpdir/wordsWithAggregatedTexts 2>/dev/null
-rm $tmpdir/wordsfinalhtml 2>/dev/null
+cleanupTempFiles
 
 translator="brahmali"
 translator="sujato"
@@ -120,7 +112,7 @@ cat $tmpdir/threetables | awk -v keyword="$keyword" -v filename="$filename" 'BEG
     print "<tr><td>" word "</td><td><a href=\"/" filename "?f=" word "\">" counttexts "</a></td><td><div style=\"display:none;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:none;\">" wordTabThree " </div>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 else
-cat $tmpdir/threetables | awk -v keyword="$htmlpattern" 'BEGIN { 
+cat $tmpdir/threetables | awk -v keyword="$htmlkeyword" 'BEGIN { 
     FS = "@" 
 } 
 {
@@ -174,7 +166,7 @@ counttexts=$2
 countmatches=$4
 linkslistArray=$NF
 
-<tr><td> word </td><td><a href=/s.php?&s=" htmlpattern "f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>
+<tr><td> word </td><td><a href=/s.php?&s=" htmlkeyword "f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>
 <a class='fdgLink' href='' data-slug='" linkfromArray1 "'>" linkfromaArray1 "</a>
 <a class='fdgLink' href='' data-slug='" linkfromArray2 "'>" linkfromaArray2 "</a>
 <a class='fdgLink' href='' data-slug='" etc "'>" etc "</a>

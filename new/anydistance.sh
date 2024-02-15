@@ -1,13 +1,15 @@
 
 
-if [[ "$@" == *"-anydist"* ]]
+
+
+if [[ "$@" == *"-anyd"* ]]
 then
  
-pattern="\bsaddhā vicikicch"
-patternforfindingfiles=$(echo $pattern | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' )
-patternforgreping=$(echo $patternforfindingfiles | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
+keyword="\bsaddhā vicikicch"
+keywordforfindingfiles=$(echo $keyword | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' )
+keywordforgreping=$(echo $keywordforfindingfiles | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
 
-echo "$patternforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) {
+echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) {
   print "grep -rlE \"" $1 "\" '"$searchIn"' " 
 }
   else {
@@ -15,7 +17,7 @@ echo "$patternforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR
 }}' > $tmpdir/cmndForAnydistance
 bash $tmpdir/cmndForAnydistance > $tmpdir/initfilelist
 
-cat  "$tmpdir/initfilelist" | xargs grep -Ei "$patternforgreping" > $tmpdir/initrun-pi
+cat  "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-pi
 
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/

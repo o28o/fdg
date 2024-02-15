@@ -48,7 +48,6 @@ function clearargs {
 cleanupSrc | sed -e 's/-src //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/-si //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' -e 's/-tru //g' -e 's/-conv //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg-.* //g' | sed 's/ -exc.*//g' | sed 's/-l[ab][0-9]* //g' | sed 's/-defall //g' | sed 's/-def //g' | sed 's/-sml //g' |  sed 's/-b //g' | sed 's/-onl //g' | sed 's/-top[0-9]* //g' | sed 's/-nm10 //g' 
 }
 
-
 function topFiles { 
     #usage for filelists
 #grep -ril dukkh * | xargs  grep -ci dukkh | sort -t':' -k2n | tail -n10
@@ -58,37 +57,124 @@ numbersmatches=`echo "$@" | sed 's@.*-nm@@' | awk '{print $1}'`
 else
 numbersmatches=
 fi
-xargs  grep -ci "$keyword" | sort -t':' -k2n | tail -n10
+xargs grep -ci "$keyword" | sort -t':' -k2n | tail -n10  > $tmpdir/inittoplist
+#do the word grep here cat  "$tmpdir/inittoplist" 
 }
+
+function anyDistance {
+ # keyword="\bsaddhā vicikicch"
+keywordforfindingfiles=$(echo $keyword | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' )
+keywordforgreping=$(echo $keywordforfindingfiles | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
+
+echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) {
+  print "grep -rlE \"" $1 "\" '"$searchIn"' " 
+}
+  else {
+  print "| xargs grep -l \"" $1 "\""
+}}' > $tmpdir/cmndForAnydistance
+bash $tmpdir/cmndForAnydistance > $tmpdir/initfilelist
+
+cat  "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-pi
+  
+}
+
+function initialGrep {
+[[ "$1" == *"file"* ]] && grepArg="l"
+grep -riE$grepArg "$keyword" $searchIn | sed 's/<[^>]*>//g'
+}
+
 
 if [[ "$@" == *"-exc"* ]]
 then
 fortitle="${fortitle}"
-excludepattern="`echo $@ | sed 's/.*-exc //g'`"
-addtotitleifexclude=" exc. $excludepattern"
-addtoresponseexclude=" $excluderesponse $excludepattern"
-excfn="` echo -exc-${excludepattern} | sed 's/ /-/g' | sed 's@\\\@@g' `"
-patternforexclude=$(echo "$@" | awk -F'-exc' '{ print $2}'  | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
+excludekeyword="`echo $@ | sed 's/.*-exc //g'`"
+addtotitleifexclude=" exc. $excludekeyword"
+addtoresponseexclude=" $excluderesponse $excludekeyword"
+excfn="` echo -exc-${excludekeyword} | sed 's/ /-/g' | sed 's@\\\@@g' `"
+keywordforexclude=$(echo "$@" | awk -F'-exc' '{ print $2}'  | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
 
-function excludeFiles { 
-  #possible cases words, ids or files
-  #usage
-#grep -ril dukkh * | xargs  grep -ci dukkh | sort -t':' -k2n | tail -n10
-xargs grep -vl "$patternforexclude" 
-}
-function excludeWords {
-grep -iE -v "$excludepatterngrepv"
-}
-else
-function excludeFiles {
-pvlimit
-}
-function excludeWords {
-pvlimit
+function initialGrep {
+[[ "$1" == *"file"* ]] && grepArg="l"
+grep -rviE$grepArg "$keywordforexclude" $searchIn | grep -iE "$keyword" | sed 's/<[^>]*>//g'
 }
 fi
 
 
 function cleanupwords {
-sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/[”’]*ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
+sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
 }
+
+
+function cleanupTempFiles {
+  #fdgnew
+rm $tmpdir/initrun* 2>/dev/null
+rm $tmpdir/afterawk 2>/dev/null
+rm $tmpdir/cmnd* 2>/dev/null
+rm $tmpdir/counts 2>/dev/null
+rm $tmpdir/finalhtml 2>/dev/null
+rm $tmpdir/finalraw 2>/dev/null
+rm $tmpdir/readyforawk 2>/dev/null
+rm $tmpdir/words 2>/dev/null
+rm $tmpdir/wordsAggregatedByTexts 2>/dev/null
+#words
+rm $tmpdir/counts 2>/dev/null
+rm $tmpdir/finalhtml 2>/dev/null
+rm $tmpdir/uniqwords 2>/dev/null
+rm $output/w.html 2>/dev/null
+rm $tmpdir/wordcountMatches 2>/dev/null
+rm $tmpdir/wordcountTexts 2>/dev/null
+rm $tmpdir/words 2>/dev/null
+rm $tmpdir/wordsWithAggregatedTexts 2>/dev/null
+rm $tmpdir/wordsfinalhtml 2>/dev/null
+}
+
+function getSimiles {
+  tmpsml=$tmpdir/tmpsml.$rand
+  modkeyword="`echo $keyword | sed -E 's/([aiīoā]|aṁ)$//g'`"
+keyword="$modkeyword"
+
+linesafter=1
+nonmetaphorkeys="condition|adhivacanasamphass|adhivacanapath|\banopam|\battūpa|\bnillopa|opamaññ"
+if [[ "$@" == *"-vin"* ]]
+  then
+  vin=dummy
+#vinsmlpart="${modkeyword}.{0,3}—|${modkeyword}.{0,3}ti|${modkeyword}.*nāma|"
+fi  
+
+smlkeyword="${vinsmlpart}seyyathāpi.*${modkeyword}|${modkeyword}.*adhivacan|${modkeyword}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modkeyword}|Suppose.*${modkeyword}|${modkeyword} is|${modkeyword}.*is a designation for|is a designation for.*${modkeyword}|${modkeyword}.*Simile|simile.*${modkeyword}|It’s like.*${modkeyword}|is a term for.*${modkeyword}|${modkeyword}.*is a term for|similar to.*${modkeyword}|${modkeyword}.*similar to|Представ.*${modkeyword}|обозначение.*${modkeyword}|${modkeyword}.*обозначение${customtexts}" 
+
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+grep -Eir "$smlkeyword" $searchIn | grep -viE "$nonmetaphorkeys" | grep -vi "condition" > $tmpdir/initrun-pi
+
+grep -B2 -ERi "Eva[mnṇṅṃṁ].*${modkeyword}" $searchIn | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' >> $tmpdir/initrun-pi
+
+if [ -s "$tmpdir/initrun-pi" ]; then
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+cat $tmpdir/initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromPi
+bash $tmpdir/cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
+fi
+
+}
+
+function varFirst {
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+initialGrep > $tmpdir/initrun-var
+
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+
+if [ -s "$tmpdir/initrun-var" ]; then
+cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
+bash $tmpdir/cmndFromVar | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
+fi
+initialGrep >> $tmpdir/initrun-pi
+
+if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
+    echo "$keyword не найдено в $searchIn"
+    exit 1
+fi
+
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFromPi
+bash $tmpdir/cmndFromPi > $tmpdir/initrun-en
+}
+

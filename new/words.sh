@@ -4,13 +4,10 @@ start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
-export LANG=ru_RU.UTF-8 
-export LANG=C
 #export LC_ALL=ru_RU.UTF-8 
 #export LC_ALL=en_US
-export LC_ALL=C
 #export LC_ALL=pa_IN.UTF-8 
-echo after set all=$LC_ALL lang=$LANG
+#echo after set all=$LC_ALL lang=$LANG
 ##############################
 # ‘Why don’t I gather grass, 
 # sticks, branches, and leaves 

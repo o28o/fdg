@@ -89,7 +89,9 @@ minmatchesforonline=3000000000
 skiprounds=5
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
-export LC_ALL=C.utf8
+#export LC_ALL=C.utf8
+export LANG=C
+export LC_ALL=C
 sitename=http://localhost
 nicevalue=1
 mode=offline

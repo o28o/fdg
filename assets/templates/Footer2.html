@@ -176,6 +176,7 @@ let keyword;
 
 // Проверяем наличие элемента с классом "keyword"
 let keywordElement = document.querySelector('.keyword');
+console.log("keywordElement", keywordElement);
 if (keywordElement) {
     keyword = keywordElement.textContent.trim();
 } else {
@@ -183,7 +184,8 @@ if (keywordElement) {
 }
 
 // Используем значение из параметра "s" или "keyword"
-let searchValue = finder && finder.trim() !== "" ? finder : keyword;
+//let searchValue = finder && finder.trim() !== "" ? finder : keyword;
+let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
 
 if (searchValue !== "") {
     // Получаем таблицу DataTables по ее id

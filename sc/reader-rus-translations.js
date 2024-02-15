@@ -201,7 +201,7 @@ html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPa
 }
     });
 
-console.log('before ' + translator) ;
+//console.log('before ' + translator) ;
 
 if (translator === "sv") {
   translatorforuser = 'SV theravada.ru';

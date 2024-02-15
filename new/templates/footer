@@ -179,8 +179,8 @@ if (keywordElement) {
 }
 
 // Используем значение из параметра "s" или "keyword"
-let searchValue = finder && finder.trim() !== "" ? finder : keyword;
-
+//let searchValue = finder && finder.trim() !== "" ? finder : keyword;
+let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
 if (searchValue !== "") {
     // Получаем таблицу DataTables по ее id
 

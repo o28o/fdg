@@ -1,5 +1,5 @@
 #!/bin/bash
-#echo before set all=$LC_ALL lang=$LANG
+echo locale set all=$LC_ALL lang=$LANG
 start=`date +%s`
 #set -x 
 #set +x

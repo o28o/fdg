@@ -5,10 +5,10 @@ start=`date +%s`
 #set +x
 #trap read debug
 export LANG=ru_RU.UTF-8 
-#export LANG=C
-export LC_ALL=ru_RU.UTF-8 
+export LANG=C
+#export LC_ALL=ru_RU.UTF-8 
 #export LC_ALL=en_US
-#export LC_ALL=C.utf8
+export LC_ALL=C
 #export LC_ALL=pa_IN.UTF-8 
 echo after set all=$LC_ALL lang=$LANG
 ##############################
@@ -22,7 +22,6 @@ args="$@"
 source ./config/script_config.sh --source-only
 source ./new/functions.sh --source-only
 
-export LANG=en_US.UTF-8
 
 keyword="$@"
 [[ $keyword == "" ]] && exit 0

@@ -391,16 +391,16 @@ if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
 <strong>Отличная новость!</strong> 
 
-Поиск по "Всем совпадениям" на Пали и Англ стал намного быстрее. Ускорение поиска на Русском в процессе. "Определения", "Сравнения" и др. работают, но как прежде медленно. Отчет по словам "Words" и опция "исключить" пока недоступны. Если обнаружите ошибки, пожалуйста, <a class="alert-link" href="#contacts"> сообщите через контакты <i class="fa-regular fa-comment"></i></a>
+Поиск по "Всем совпадениям" на Пали, Англ и Русском стал намного быстрее. "Определения", "Сравнения" и др. работают, но как прежде медленно. Отчет по словам "Words" доступен в тестовом режимк для Пали. Опция "исключить" пока недоступна. Если обнаружите ошибки, пожалуйста, <a class="alert-link" href="#contacts"> сообщите через контакты <i class="fa-regular fa-comment"></i></a>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } else {
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
 <strong>Great news!</strong> 
 
-"All matches" search in Pali and English has become much faster. Speeding up searches in Russian, Thai and Sinhala is in progress. "Definitions", "Similes" etc are working but slowly as before. 
+"All matches" search in Pali, English and Russian has become much faster. "Definitions", "Similes" etc are working but slowly as before. 
 
-"Words" report and "exclude" option are not available yet. 
+"Words" report available for Pali in text mode. "Exclude" option is not available yet. 
 
 If you encounter any errors, please use <a class="alert-link" href="#contacts">contacts to report <i class="fa-regular fa-comment"></i></a>
 

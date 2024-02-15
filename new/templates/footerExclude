@@ -56,8 +56,17 @@ $('#pali').find('tbody').find('tr').each(function() {
             
    	 var table = $('#pali').DataTable({
 	 /*  'autoWidth': true,*/
-	   'stateSave': true,
+	   'stateSave': false,
 	           dom: '<"row"lf>r<t><"row"ip>Q<"footerlike"B>',
+      searchBuilder: {
+            preDefined: {
+                criteria:[
+{ condition: '!contains', data: 'Quote', value: ['Tatrāpissa']},
+{ condition: '!contains', data: 'Quote', value: ['ūpam']},
+                ],
+                logic: 'OR'
+            }
+        },
         buttons: {
           name: 'primary',
         buttons: [

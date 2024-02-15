@@ -134,7 +134,7 @@ cat $tmpdir/threetables | awk -v keyword="$htmlkeyword" 'BEGIN {
 fi 
 uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)
 textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sort -u | wc -l)
-headerinfo="${keyword^} $textqnty texts and $uniqwordqnty related words in $searchInForUser"
+headerinfo="${keyword^} $textqnty texts $uniqwordqnty related words in $searchInForUser"
 quotesLinkToReplace="/s.php?s=$keyword"
 #echo end set all=$LC_ALL lang=$LANG
 

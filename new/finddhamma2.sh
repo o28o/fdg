@@ -798,7 +798,7 @@ elif [[ "$@" == *"-ru"* ]]; then
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
       function grepbasefile {
 cd $suttapath/$pali_or_lang
-grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g'
 cd - > /dev/null
 }  
 
@@ -1098,9 +1098,9 @@ else
     echo "$counts в файле $counts_file не равно количеству строк 
     $afterawk в файле $afterawk_file и 
     $wordsAggregatedByTexts в $aggregated_file"
-    paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}'
-    cd result
-    exit 0
+   paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}' > $tmpdir/fordebug
+  #  cd result
+  #  exit 0
 fi
 
 paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
@@ -1206,9 +1206,9 @@ else
     echo "$counts в файле $counts_file не равно количеству строк 
     $afterawk в файле $afterawk_file и 
     $wordsAggregatedByTexts в $aggregated_file"
-    paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}'
-    cd result
-    exit 0
+   paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}' > $tmpdir/fordebug
+  #  cd result
+  #  exit 0
 fi
 
 paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
@@ -1422,11 +1422,14 @@ echo "</tbody>
 cat $templatefolder/WordsFooter.html >> $tempfilewords
 mv ./$oldname ./$table
 
-if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
+if [[ "$language" == *"Pali"* ]]; 
 then
 sed -i 's@$quotesLinkToReplace@'./$table'@' ./$tempfilewords
 #sed -i 's@$wordLinkToReplace@/w.php?d=result/'$table'@' ./$table
 sed -i 's@$wordLinkToReplace@/w.php?s='$pattern'@' ./$table
+elif [[ "$language" == *"English"* ]]
+then
+sed -i '/<button.*>Words</s@type="button">@type="button" style="display: none;">@g' $table
 fi 
 
 linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "${fortitle^}" | grep ">$language<" | awk '{print $1}' | tac`
@@ -1540,3 +1543,6 @@ echo '<br class="styled">'
 
 echo "</p></td>
 </tr>" 
+
+
+cat $tmpdir/$basefile | sed 's/<[^>]*>//g' | awk -F: 'BEGIN {OFS = ":"} {$2 = gensub("/", "", "g", $2); print $1, $2}' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g' | awk -F@ '{OFS = "@"} {quote=$4 ; gsub("/", "", quote); print $1, $2, $3, $2, quote}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk

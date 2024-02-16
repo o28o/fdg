@@ -1265,8 +1265,8 @@ checkifalreadydone
 echo grepbase > new_time_output.txt
 { time grepbasefile | grep -v "^--$" | grepexclude | sort -Vf ;} 2>> new_time_output.txt > $basefile
 cp $basefile bfc
-echo path is $suttapath/$pali_or_lang and searchin is $searchIn
-echo grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn
+#echo path is $suttapath/$pali_or_lang and searchin is $searchIn
+#echo grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn
 
 
 #grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile

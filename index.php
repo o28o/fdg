@@ -391,7 +391,7 @@ if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
 <strong>Отличная новость!</strong> 
 
-Поиск по "Всем совпадениям" на Пали, Англ и Русском стал намного быстрее. "Определения", "Сравнения" и др. работают, но как прежде медленно. Отчет по словам "Words" доступен в тестовом режимк для Пали. Опция "исключить" пока недоступна. Если обнаружите ошибки, пожалуйста, <a class="alert-link" href="#contacts"> сообщите через контакты <i class="fa-regular fa-comment"></i></a>
+Поиск по "Всем совпадениям" на Пали, Англ и Русском стал намного быстрее. "Определения", "Сравнения" и др. работают, но как прежде медленно. Отчет по словам "Words" доступен в тестовом режиме только для Пали. Опция "исключить" пока недоступна. Если обнаружите ошибки, пожалуйста, <a class="alert-link" href="#contacts"> сообщите через контакты <i class="fa-regular fa-comment"></i></a>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } else {

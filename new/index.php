@@ -111,7 +111,12 @@ include '../assets/common/horizontalMenuRu.php';
 include '../assets/common/horizontalMenuEn.php'; 
 } 
 ?>
-<a href="/word.php">Word </a><a href="/result/r.html">r.html </a> <a href="/result/w.html">w.html </a>
+<a href="/word.php">Word </a>
+<a href="/result/r.html">r.html </a> 
+<a href="/result/w.html">w.html </a><br>
+<a href="/assets/texts/sutta.php">Dhamma </a>
+<a href="/assets/texts/pm.php">bupm </a>
+<a href="/assets/texts/bipm.php">bipm </a>
 </div>
 
         </div>

@@ -10,6 +10,7 @@
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
+	   	           dom: '<"row"lf>r<t><"row"i><Q>',
 	   'paging'  : true,
 	         "search": {
     "caseInsensitive": true,

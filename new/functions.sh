@@ -55,7 +55,7 @@ function cleanupSrc {
     pvlimit
   }
 searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
-searchInForUser="Main Nikayas"
+searchInForUser="Four Nikayas"
 fi
 #echo $searchIn
 }

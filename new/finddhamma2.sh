@@ -3,7 +3,7 @@ start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
-export LANG=en_US.UTF-8
+export LANG=ru_RU.utf8
 #export LC_ALL=en_US
 ##############################
 # ‘Why don’t I gather grass, 

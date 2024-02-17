@@ -212,33 +212,39 @@ function downloadJson() {
 
 <script>
 function loadText() {
+
+  
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
-  let translation = document.getElementById('translationInput').value.trim();
+    let translation = document.getElementById('translationInput').value.trim();
+    
 
-  let cleanedTranslation = translation.replace(/[\.:?!] /g, match => {
+let cleanedTranslation = translation.replace(/[\.:?!] /g, match => {
     let index = translation.indexOf(match);
     if (translation.charAt(index + match.length) !== '\n') {
-      return `${match}\n`;
+        return `${match}\n`;
     }
     return match;
-  });
+});
 
-  if (indexValue.includes("sn") && !cleanedTranslation.startsWith("Связанные Наставления")) {
-    const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
-    cleanedTranslation = additionalLines + cleanedTranslation;
-  } else if (indexValue.includes("an") && !cleanedTranslation.startsWith("Восходящие Наставления")) {
-    const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
-    cleanedTranslation = additionalLines + cleanedTranslation;
-  }
+//const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
 
-  document.getElementById('translationInput').value = cleanedTranslation;
+  // Concatenate additional lines with existing translation
+ // translation = additionalLines + translation;
+  // Добавляем \n после . ... :
 
-  const translationLines = cleanedTranslation.split('\n');
+ document.getElementById('translationInput').value = cleanedTranslation;
+      
+  // Split the translation text into lines
+  const translationLines = translation.split('\n');
+
+  // Extracting only letters from indexValue
   const lettersOnly = indexValue.match(/[a-z]+/)[0];
-  const beforeDot = indexValue.split('.')[0];
-  let url;
 
+  // Extracting all characters before the dot
+  const beforeDot = indexValue.split('.')[0];
+
+  let url;
   if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
   } else if (language === 'en') {
@@ -256,13 +262,20 @@ function loadText() {
       const tableBody = document.getElementById('outputTableBody');
       tableBody.innerHTML = '';
 
+      // Convert data object to array of [key, value] pairs
       const dataArray = Object.entries(data);
 
+      // Iterate through each key in the data object
       dataArray.forEach(([key, value], index) => {
-        const translationLine = translationLines[index] || '';
+        // Get the corresponding line from the translation text
+        const translationLine = translationLines[index] || ''; // Use index from iteration
+
+        // Split the translation line into individual texts based on new lines
         const texts = translationLine.split('\n');
 
+        // Create a new row for each key
         texts.forEach((text, textIndex) => {
+          // Get the current text based on the index
           const currentText = texts[textIndex] || '';
 
           const row = `<tr>
@@ -270,7 +283,7 @@ function loadText() {
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;
-          tableBody.innerHTML += row;
+          tableBody.innerHTML += row; // Добавляем каждую строку к таблице
         });
       });
     })

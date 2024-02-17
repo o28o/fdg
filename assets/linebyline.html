@@ -216,7 +216,7 @@ function loadText() {
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
   let translation = document.getElementById('translationInput').value.trim();
 
-  let cleanedTranslation = translation.replace(/[\.:?!] /g, match => {
+  let cleanedTranslation = translation.replace(/[\.…:?!] /g, match => {
     let index = translation.indexOf(match);
     if (translation.charAt(index + match.length) !== '\n') {
       return `${match}\n`;

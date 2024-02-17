@@ -98,7 +98,8 @@ table td {
     </select>
   </div>
 <div >
-    <input type="search" class="form-control" id="indexInput" placeholder="sn23.1 или an3.70 ">
+      <label for="indexInput">Номер Текста:</label>
+    <input type="search" class="form-control" id="indexInput" placeholder="Введите номер текста, к прим. sn23.1 или an3.70 ">
 
 </div>
 
@@ -113,9 +114,15 @@ table td {
     
 <div>
   <label for="translationInput" >Текст перевода:</label>
-  <textarea id="translationInput" placeholder="Вставьте русский текст и инструмент добавит переносы строк,
-также можно будет поправить переноcы вручную. 
-Если перенос строки не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
+  <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
+2. Вставьте русский перевод сюда
+3. Нажмите 'Обновить'
+
+Инструмент добавит заголовок и переносы строк.
+
+Можно будет поправить переноcы вручную. 
+
+Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
 </div>
 
   <button class="btn btn-primary mt-1" onclick="loadText()">Обновить</button>

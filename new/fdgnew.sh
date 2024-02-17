@@ -134,3 +134,25 @@ cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | s
 
 #make cleanup
 grep -oE "tmpdir[^ ]*"  scripts/Fdgh.sh | sort -u | sed 's/[[:punct:]]*$//' | sort -u | sed 's/^/rm $/' | sed 's@$@ 2>/dev/null @'
+
+
+
+datatables debugger
+
+https://debug.datatables.net/
+
+(function() {
+    var url = 'https://debug.datatables.net/bookmarklet/DT_Debug.js';
+    if (typeof DT_Debug != 'undefined') {
+        if (DT_Debug.instance !== null) {
+            DT_Debug.close();
+        } else {
+            new DT_Debug();
+        }
+    } else {
+        var n = document.createElement('script');
+        n.setAttribute('language', 'JavaScript');
+        n.setAttribute('src', url + '?rand=' + new Date().getTime());
+        document.body.appendChild(n);
+    }
+})(); 

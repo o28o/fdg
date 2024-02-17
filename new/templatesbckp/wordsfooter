@@ -10,7 +10,7 @@
 	 var table = $('#pali').DataTable({
 	   'autoWidth': true,
 	   'stateSave': true,
-	   	           dom: '<"row"lf>r<t><"row"i><Q>',
+	   	           dom: '<"row"lf>r<t><"row"ip><Q>',
 	   'paging'  : true,
 	         "search": {
     "caseInsensitive": true,
@@ -23,10 +23,8 @@
 	    'colReorder': true,
 	   'columnDefs': [
 	            { type: "html", target: [0] },
-	            { type: 'natural', targets: 2 }
+          { type: "num", target: [2] }
 					],
-					
-				
       'initComplete': function(){
          var api = this.api();
  

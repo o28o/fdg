@@ -9,7 +9,7 @@
 <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Парсер Пали текста</title>
+<title>Построчные Переводы</title>
 <style>
 body {
   font-family: Arial, sans-serif;
@@ -22,7 +22,20 @@ body {
     max-height: 300px; /* Максимальная высота текстового поля */
   }
 
+.table-container {
+  overflow-y: auto; /* Включает вертикальную прокрутку */
+  max-height: 500px; /* Максимальная высота контейнера */
+}
 
+table {
+  width: 100%; /* Занимает всю доступную ширину */
+  border-collapse: collapse; /* Объединяет границы ячеек */
+}
+
+th, td {
+  border: 1px solid black; /* Границы ячеек */
+  padding: 8px; /* Внутренний отступ ячеек */
+}
 label {
   font-weight: bold;
   margin-right: 10px;
@@ -107,7 +120,10 @@ table td {
   <button class="btn btn-secondary" onclick="clearInputs()">Очистить Перевод</button>
   <button class="btn btn-primary" onclick="downloadJson()">Скачать JSON</button>
   <a href="https://youtu.be/QK1F_Y9NBmo?si=43xXB6vLEJAHxso2" class="btn btn-primary" target="_blank">Видео-Инструкция</a>
-  <table>
+  <div id="translationJsonOutput"></div>
+<div class="table-container mt-2 mb-5">
+
+  <table class=" table-hover">
     <thead>
       <tr>
         <th>Текст</th>
@@ -117,7 +133,10 @@ table td {
     </thead>
     <tbody id="outputTableBody"></tbody>
   </table>
-  <div id="translationJsonOutput"></div>
+  </div>
+<div style="height:100px" class="my-5">
+   
+</div>
 
 <script>
 function downloadJson() {

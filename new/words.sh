@@ -151,6 +151,7 @@ echo " </div><div class='mt-3 ms-4 variants'><h3 class='text-center my-3'>Varian
 cat $tmpdir/variantsReport >> $output/w.html
 fi
 echo "</div>" >> $output/w.html
+#cat $apachesitepath/assets/templates/WordsFooter.html >> $output/w.html
 cat $apachesitepath/new/templates/wordsfooter >> $output/w.html
 cat $output/w.html
 

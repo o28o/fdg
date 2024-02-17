@@ -96,6 +96,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
    
            <div class="level4 my-3">
  <span class="level5">Tatrime aṭṭha pārājikā dhammā uddesaṁ āgacchanti. </span>
+    </br> </br><audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pj.m4a' type='audio/mp4'>Browser is not supported.</audio>
 </div>              
 
 

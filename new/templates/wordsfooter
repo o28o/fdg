@@ -22,11 +22,10 @@
 	   'responsive': true,
 	    'colReorder': true,
 	   'columnDefs': [
-	            { type: "html", target: [0] },
-	            { type: 'natural', targets: 2 }
+	            { type: "html", target: [0] }
 					],
 					
-				
+	
       'initComplete': function(){
          var api = this.api();
  

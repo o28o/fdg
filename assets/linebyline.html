@@ -239,13 +239,21 @@ if (document.getElementById('lineBreakCheckbox').checked) {
 }
   
 
-  if (indexValue.includes("sn") && !cleanedTranslation.startsWith("Связанные Наставления")) {
-    const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
-    cleanedTranslation = additionalLines + cleanedTranslation;
-  } else if (indexValue.includes("an") && !cleanedTranslation.startsWith("Восходящие Наставления")) {
-    const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
-    cleanedTranslation = additionalLines + cleanedTranslation;
-  }
+if (indexValue.includes("sn")) {
+    if (!cleanedTranslation.startsWith("Связанные Наставления")) {
+        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Связанные Наставления")) {
+        cleanedTranslation = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }
+} else if (indexValue.includes("an")) {
+    if (!cleanedTranslation.startsWith("Восходящие Наставления")) {
+        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
+        cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }
+} 
 
   document.getElementById('translationInput').value = cleanedTranslation;
 

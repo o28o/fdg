@@ -119,16 +119,16 @@ table td {
 Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
 </div>
 
-  <button class="btn btn-primary mt-1" onclick="loadText()">Обновить</button>
-  <button class="btn btn-secondary mt-1" onclick="clearInputs()">Очистить Перевод</button>
-    <button class="btn btn-primary mt-1" onclick="downloadJson()">Скачать JSON</button>
-<div class="form-check">
+
+<div class="form-check input-group-append ">
   <input class="form-check-input" type="checkbox" id="lineBreakCheckbox">
   <label class="form-check-label" for="lineBreakCheckbox">
     Автопереносы
   </label>
 </div>
-
+  <button class="btn btn-primary mt-1 input-group-append " onclick="loadText()">Обновить</button>
+  <button class="btn btn-secondary mt-1" onclick="clearInputs()">Очистить Перевод</button>
+    <button class="btn btn-primary mt-1" onclick="downloadJson()">Скачать JSON</button>
 
   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>
       <button class="btn btn-primary mt-1" id="linkButton">Текст на Fdg</button>
@@ -221,32 +221,30 @@ function downloadJson() {
 </script>
 
 <script>
-function updateText() {
-  loadText();
-
-  document.getElementById('lineBreakCheckbox').addEventListener('change', function() {
-    loadText();
-  });
-}
-
 function loadText() {
-  document.getElementById('lineBreakCheckbox').removeEventListener('change', loadText);
-
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
   let translation = document.getElementById('translationInput').value.trim();
 
-  const lineBreakEnabled = document.getElementById('lineBreakCheckbox').checked;
+let cleanedTranslation = translation;
 
-  let cleanedTranslation = translation;
-  if (lineBreakEnabled) {
-    cleanedTranslation = translation.replace(/[\.…:?!] /g, match => {
-      let index = translation.indexOf(match);
-      if (translation.charAt(index + match.length) !== '\n') {
-        return `${match}\n`;
-      }
-      return match;
-    });
+if (document.getElementById('lineBreakCheckbox').checked) {
+  cleanedTranslation = translation.replace(/[\.…:?!] /g, match => {
+    let index = translation.indexOf(match);
+    if (translation.charAt(index + match.length) !== '\n') {
+      return `${match}\n`;
+    }
+    return match;
+  });
+}
+  
+
+  if (indexValue.includes("sn") && !cleanedTranslation.startsWith("Связанные Наставления")) {
+    const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+    cleanedTranslation = additionalLines + cleanedTranslation;
+  } else if (indexValue.includes("an") && !cleanedTranslation.startsWith("Восходящие Наставления")) {
+    const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+    cleanedTranslation = additionalLines + cleanedTranslation;
   }
 
   document.getElementById('translationInput').value = cleanedTranslation;
@@ -292,39 +290,33 @@ function loadText() {
       });
     })
     .catch(error => console.error('Error fetching data:', error.message));
-
-  document.getElementById('lineBreakCheckbox').addEventListener('change', loadText);
 }
 </script>
 
 <script>
-// Получаем ссылки на элементы
-const indexInput = document.getElementById('indexInput');
-const translationInput = document.getElementById('translationInput');
-const lineBreakCheckbox = document.getElementById('lineBreakCheckbox');
-
 // Функция для сохранения значений
 function saveInputs() {
   localStorage.setItem('indexValue', indexInput.value);
   localStorage.setItem('translationValue', translationInput.value);
-  localStorage.setItem('lineBreakCheckbox', lineBreakCheckbox.value);
+  localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
+ // Сохраняем состояние чекбокса как булево значение
 }
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {
   indexInput.value = localStorage.getItem('indexValue') || '';
   translationInput.value = localStorage.getItem('translationValue') || '';
-  lineBreakCheckbox.value = localStorage.getItem('lineBreakCheckbox') || '';
+  // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
+  lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
 }
 
-// Загружаем сохраненные значения при загрузке страницы
+// Вызываем функцию загрузки сохраненных значений при загрузке страницы
 loadInputs();
-
 // Сохраняем значения при изменении инпутов
 indexInput.addEventListener('input', saveInputs);
 translationInput.addEventListener('input', saveInputs);
 lineBreakCheckbox.addEventListener('input', saveInputs);
-
+ 
 function clearInputs() {
   // Очищаем значения инпутов
 
@@ -333,7 +325,7 @@ function clearInputs() {
   // Очищаем сохраненные значения в localStorage
  // localStorage.removeItem('indexValue');
   localStorage.removeItem('translationValue');
-  localStorage.removeItem('lineBreakCheckbox');
+
 }
 </script>
     <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>

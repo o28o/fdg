@@ -319,12 +319,11 @@ lineBreakCheckbox.addEventListener('input', saveInputs);
  
 function clearInputs() {
   // Очищаем значения инпутов
-
   document.getElementById('translationInput').value = '';
   
   // Очищаем сохраненные значения в localStorage
- // localStorage.removeItem('indexValue');
   localStorage.removeItem('translationValue');
+  localStorage.removeItem('lineBreakCheckboxState');
 
 }
 </script>

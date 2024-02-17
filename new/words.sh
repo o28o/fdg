@@ -129,7 +129,7 @@ cat $tmpdir/threetables | awk -v keyword="$htmlkeyword" 'BEGIN {
     }
 
     # Вывод форматированной строки
-    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td><div style=\"display:none;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:none;\">" wordTabThree " </div>" linksHTML "</td></tr>"
+    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 fi 
 uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)

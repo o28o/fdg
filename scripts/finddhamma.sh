@@ -1572,7 +1572,6 @@ echo "</tbody>
 #replace button href in word file
 #echo "<script $fontawesomejs></script>"  >> $tempfilewords
 cat $templatefolder/WordsFooter.html >> $tempfilewords
-#cat $apachesitepath/new/templates/wordsfooter >> $tempfilewords
 mv ./$oldname ./$table
 
 if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
+<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Парсер Пали текста</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+  .custom-textarea {
+    resize: both; /* Позволяет растягивать в любом направлении */
+    overflow: auto; /* Добавляет полосы прокрутки при необходимости */
+    min-height: 100px; /* Минимальная высота текстового поля */
+    max-height: 300px; /* Максимальная высота текстового поля */
+  }
+
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+  <div>
+    <label for="languageSelect">Язык:</label>
+    <select id="languageSelect">
+      <option value="pli">Пали</option>
+      <option value="en">Английский</option>
+    </select>
+  </div>
+  <div>
+    <label for="indexInput">Индекс текста:</label>
+    <input type="text" id="indexInput">
+  </div>
+    
+<div>
+  <label for="translationInput">Текст перевода:</label>
+  <textarea id="translationInput" class="form-control custom-textarea" rows="5"></textarea>
+</div>
+
+  <button onclick="loadText()">Готово</button>
+  <button onclick="clearInputs()">Очистить</button>
+  <button onclick="downloadJson()">Скачать JSON</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Текст</th>
+        <th>Индексы</th>
+        <th>Перевод</th>
+      </tr>
+    </thead>
+    <tbody id="outputTableBody"></tbody>
+  </table>
+  <div id="translationJsonOutput"></div>
+
+<script>
+function downloadJson() {
+  const language = document.getElementById('languageSelect').value;
+  const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
+  const translation = document.getElementById('translationInput').value.trim();
+
+  // Split the translation text into lines
+  const translationLines = translation.split('\n');
+
+  // Object to hold the JSON data
+  const jsonData = {};
+
+  // Extracting only letters from indexValue
+  const lettersOnly = indexValue.match(/[a-z]+/)[0];
+
+  // Extracting all characters before the dot
+  const beforeDot = indexValue.split('.')[0];
+
+  let url;
+  if (language === 'pli') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
+  } else if (language === 'en') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
+  }
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Convert data object to array of [key, value] pairs
+      const dataArray = Object.entries(data);
+
+      // Iterate through each key in the data object
+      dataArray.forEach(([key, value], index) => {
+        // Get the corresponding line from the translation text
+        const translationLine = translationLines[index] || ''; // Use index from iteration
+
+        // Create key-value pair in JSON object
+        jsonData[key] = translationLine;
+      });
+
+      // Convert JSON object to string
+      const jsonString = JSON.stringify(jsonData, null, 2);
+
+      // Create Blob object with JSON string
+      const blob = new Blob([jsonString], { type: 'application/json' });
+
+      // Create download link
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'translation.json';
+
+      // Append link to the body and click it programmatically
+      document.body.appendChild(a);
+      a.click();
+
+      // Cleanup
+      URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    })
+    .catch(error => console.error('Error fetching data:', error.message));
+}
+</script>
+
+<script>
+function loadText() {
+  const language = document.getElementById('languageSelect').value;
+  const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
+  const translation = document.getElementById('translationInput').value.trim();
+
+  // Split the translation text into lines
+  const translationLines = translation.split('\n');
+
+  // Extracting only letters from indexValue
+  const lettersOnly = indexValue.match(/[a-z]+/)[0];
+
+  // Extracting all characters before the dot
+  const beforeDot = indexValue.split('.')[0];
+
+  let url;
+  if (language === 'pli') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
+  } else if (language === 'en') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
+  }
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const tableBody = document.getElementById('outputTableBody');
+      tableBody.innerHTML = '';
+
+      // Convert data object to array of [key, value] pairs
+      const dataArray = Object.entries(data);
+
+      // Iterate through each key in the data object
+      dataArray.forEach(([key, value], index) => {
+        // Get the corresponding line from the translation text
+        const translationLine = translationLines[index] || ''; // Use index from iteration
+
+        // Split the translation line into individual texts based on new lines
+        const texts = translationLine.split('\n');
+
+        // Create a new row for each key
+        texts.forEach((text, textIndex) => {
+          // Get the current text based on the index
+          const currentText = texts[textIndex] || '';
+
+          const row = `<tr>
+                        <td>${value}</td>
+                        <td>${key}</td>
+                        <td>${currentText}</td>
+                      </tr>`;
+          tableBody.innerHTML += row; // Добавляем каждую строку к таблице
+        });
+      });
+    })
+    .catch(error => console.error('Error fetching data:', error.message));
+}
+</script>
+
+<script>
+// Получаем ссылки на элементы
+const indexInput = document.getElementById('indexInput');
+const translationInput = document.getElementById('translationInput');
+
+// Функция для сохранения значений
+function saveInputs() {
+  localStorage.setItem('indexValue', indexInput.value);
+  localStorage.setItem('translationValue', translationInput.value);
+}
+
+// Функция для загрузки сохраненных значений
+function loadInputs() {
+  indexInput.value = localStorage.getItem('indexValue') || '';
+  translationInput.value = localStorage.getItem('translationValue') || '';
+}
+
+// Загружаем сохраненные значения при загрузке страницы
+loadInputs();
+
+// Сохраняем значения при изменении инпутов
+indexInput.addEventListener('input', saveInputs);
+translationInput.addEventListener('input', saveInputs);
+
+function clearInputs() {
+  // Очищаем значения инпутов
+  document.getElementById('indexInput').value = '';
+  document.getElementById('translationInput').value = '';
+  
+  // Очищаем сохраненные значения в localStorage
+  localStorage.removeItem('indexValue');
+  localStorage.removeItem('translationValue');
+}
+</script>
+</body>
+</html>

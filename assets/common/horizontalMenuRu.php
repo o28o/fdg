@@ -224,7 +224,7 @@ echo '<!--
   </a>
 </li>
 
-
+   <li><a class="dropdown-item" href="/assets/linebyline.html">Создание Построчных Файлов</a></li>
    <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">
    <i class="' . $iconimportant . '"></i>

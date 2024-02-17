@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
     <link href="/assets/css/styles.css" rel="stylesheet" />
     <link href="/assets/css/extrastyles.css" rel="stylesheet" />
-
+    <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,13 +103,6 @@ table td {
 
 </div>
 
-<script>
-    document.getElementById('linkButton').addEventListener('click', function() {
-        var indexValue = document.getElementById('indexInput').value;
-        var url = '/ru/sc?q=' + indexValue;
-        window.open(url, '_blank');
-    });
-</script>
    
     
 <div>
@@ -320,6 +313,16 @@ function clearInputs() {
 }
 </script>
     <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
-    
+  
+  
+  
+
+<script>
+    document.getElementById('linkButton').addEventListener('click', function() {
+        var indexValue = document.getElementById('indexInput').value;
+        var url = '/ru/sc?q=' + indexValue;
+        window.open(url, '_blank');
+    });
+</script>  
 </body>
 </html>

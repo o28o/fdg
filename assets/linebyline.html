@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
 <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -57,6 +59,23 @@ table td {
 </style>
 </head>
 <body>
+        <div class="container mt-3">
+        <div class="align-items-center align-items-center toggle-switch input-group-append">
+            <div id="" class="input-group">
+                <a href="/ru/read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+                    <svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+                </a>
+
+                <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                </a>
+
+                <div class="ms-1 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="darkSwitch">
+                </div>
+            </div>
+        </div>
+    </div>
   <div>
     <label for="languageSelect">Язык:</label>
     <select id="languageSelect">
@@ -64,20 +83,29 @@ table td {
       <option value="en">Английский</option>
     </select>
   </div>
-  <div>
-    <label for="indexInput">Индекс текста:</label>
-    <input type="text" id="indexInput">
-  </div>
+<div >
+    <input type="search" class="form-control" id="indexInput">
+    <button class="btn btn-primary" id="linkButton">Открыть на Fdg</button>
+</div>
+
+<script>
+    document.getElementById('linkButton').addEventListener('click', function() {
+        var indexValue = document.getElementById('indexInput').value;
+        var url = '/ru/sc?q=' + indexValue;
+        window.open(url, '_blank');
+    });
+</script>
+   
     
 <div>
   <label for="translationInput">Текст перевода:</label>
-  <textarea id="translationInput" class="form-control custom-textarea" rows="10"></textarea>
+  <textarea id="translationInput" class="form-control custom-textarea" rows="15"></textarea>
 </div>
 
   <button class="btn btn-primary" onclick="loadText()">Готово</button>
-  <button class="btn btn-secondary" onclick="clearInputs()">Очистить</button>
+  <button class="btn btn-secondary" onclick="clearInputs()">Очистить Перевод</button>
   <button class="btn btn-primary" onclick="downloadJson()">Скачать JSON</button>
-  <a href="https://youtu.be/QK1F_Y9NBmo?si=43xXB6vLEJAHxso2" class="btn btn-info" target="_blank">Видео-Инструкция</a>
+  <a href="https://youtu.be/QK1F_Y9NBmo?si=43xXB6vLEJAHxso2" class="btn btn-primary" target="_blank">Видео-Инструкция</a>
   <table>
     <thead>
       <tr>
@@ -145,7 +173,7 @@ function downloadJson() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'translation.json';
+      a.download = indexValue + '_translation-ru-sv.json';
 
       // Append link to the body and click it programmatically
       document.body.appendChild(a);
@@ -160,11 +188,33 @@ function downloadJson() {
 </script>
 
 <script>
+
+
+
 function loadText() {
+
+  
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
-  const translation = document.getElementById('translationInput').value.trim();
+    let translation = document.getElementById('translationInput').value.trim();
+    
 
+let cleanedTranslation = translation.replace(/[\.:?!] /g, match => {
+    let index = translation.indexOf(match);
+    if (translation.charAt(index + match.length) !== '\n') {
+        return `${match}\n`;
+    }
+    return match;
+});
+
+//const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+
+  // Concatenate additional lines with existing translation
+ // translation = additionalLines + translation;
+  // Добавляем \n после . ... :
+
+ document.getElementById('translationInput').value = cleanedTranslation;
+      
   // Split the translation text into lines
   const translationLines = translation.split('\n');
 
@@ -247,13 +297,15 @@ translationInput.addEventListener('input', saveInputs);
 
 function clearInputs() {
   // Очищаем значения инпутов
-  document.getElementById('indexInput').value = '';
+
   document.getElementById('translationInput').value = '';
   
   // Очищаем сохраненные значения в localStorage
-  localStorage.removeItem('indexValue');
+ // localStorage.removeItem('indexValue');
   localStorage.removeItem('translationValue');
 }
 </script>
+    <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+    
 </body>
 </html>

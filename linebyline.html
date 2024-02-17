@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Парсер Пали текста</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+</style>
+</head>
+<body>
+  <div>
+    <label for="indexInput">Индекс текста:</label>
+    <input type="text" id="indexInput">
+  </div>
+  <div>
+    <label for="translationInput">Текст перевода:</label>
+    <textarea id="translationInput" rows="5"></textarea>
+  </div>
+  <button onclick="loadText()">Загрузить текст</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Пали текст</th>
+        <th>Индексы (JSON)</th>
+      </tr>
+    </thead>
+    <tbody id="outputTableBody"></tbody>
+  </table>
+  <div id="translationJsonOutput"></div>
+
+  <script>
+function loadText() {
+  const index = document.getElementById('indexInput').value.trim();
+  const translation = document.getElementById('translationInput').value.trim();
+
+  // Split the translation text into lines
+  const translationLines = translation.split('\n');
+
+  fetch(`/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/sn/sn15/${index}_root-pli-ms.json`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const tableBody = document.getElementById('outputTableBody');
+      tableBody.innerHTML = '';
+
+      // Iterate through each key in the data object
+      Object.keys(data).forEach(key => {
+        // Extract the index from the key and adjust it to match array index
+        const indexNumber = parseInt(key.split(':')[1]) - 1;
+        
+        // Get the corresponding line from the translation text
+        const translationLine = translationLines[indexNumber] || ''; // Handle case when translation line is undefined
+
+        // Create a new row for each key
+        const row = `<tr>
+                      <td>${data[key]}</td>
+                      <td>${key}</td>
+                      <td>${translationLine}</td>
+                    </tr>`;
+        tableBody.innerHTML += row;
+      });
+    })
+    .catch(error => console.error('Error fetching data:', error.message));
+}
+  </script>
+</body>
+</html>

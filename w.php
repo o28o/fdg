@@ -1,1 +1,1 @@
-./new/w.php
+new/w.php

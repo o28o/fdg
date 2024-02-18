@@ -20,15 +20,33 @@ $query = $_SERVER['QUERY_STRING'];
 
 /* echo ' '.$params['lang']; */
 
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+
+    // Перебираем все GET-параметры и выводим их
+
+    foreach ($_GET as $key => $value) {
+        echo $key . ' => ' . $value . '<br>';
+    }
+}
+
+
 	$s = isset($_GET['s']) ? htmlspecialchars($_GET['s']) : '';
-$d = isset($_GET['d']) ? htmlspecialchars($_GET['d']) : '';
+	
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    if(isset($_GET['d'])) {
+        $selectedParams = $_GET['d'];
+        $searchIn = "-src " . $selectedParams; 
+    } else {
+        $searchIn = "";
+    }
+}
  //$s ="lobh";
  $stringForOpen = isset($s) ? strtolower(trim(str_replace("`", "", $s))) : '';
 
 if ( preg_match('/html/', $d ))  {	
-  $command = escapeshellcmd("bash ./new/words.sh -f $d $stringForOpen");
+  $command = escapeshellcmd("bash ./fdgnew.sh $searchIn $stringForOpen");
 } else {
-$command = escapeshellcmd("bash ./new/words.sh $stringForOpen");
+$command = escapeshellcmd("bash ./fdgnew.sh $searchIn $stringForOpen");
 }
 
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");

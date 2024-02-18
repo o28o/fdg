@@ -22,11 +22,26 @@ $query = $_SERVER['QUERY_STRING'];
 
 /* echo ' '.$params['lang']; */
 
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // Перебираем все GET-параметры и выводим их
+    foreach ($_GET as $key => $value) {
+        echo $key . ' => ' . $value . '<br>';
+    }
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $s = trim($_GET["s"]);
 }
 
-
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    if(isset($_GET['d'])) {
+        $selectedParams = $_GET['d'];
+        $searchIn = "-src $d" ;
+    } else {
+        $searchIn = "" ;
+    }
+}
 
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));

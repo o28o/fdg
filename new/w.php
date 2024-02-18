@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
-//error_reporting(E_ERROR | E_PARSE);
-
-//echo basename($_SERVER['REQUEST_URI']);
+error_reporting(E_ERROR | E_PARSE);
+include_once('config/config.php');
+include_once('config/translate.php');
 
 $uri = $_SERVER['REQUEST_URI'];
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";

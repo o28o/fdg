@@ -55,6 +55,7 @@ function cleanupSrc {
   }
 searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
 searchInForUser="Four Nikayas"
+source="an,sn,mn,dn"
 searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
 searchInForUser="$searchInForUser +KN"
 fi

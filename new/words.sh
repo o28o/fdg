@@ -135,7 +135,9 @@ fi
 uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)
 textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sort -u | wc -l)
 headerinfo="${keyword^} $textqnty texts $uniqwordqnty related words in $searchInForUser"
-quotesLinkToReplace="/s.php?s=$keyword"
+
+quotesLinkToReplace="/s.php?s=${keyword}\&d=$source"
+
 #echo end set all=$LC_ALL lang=$LANG
 
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html

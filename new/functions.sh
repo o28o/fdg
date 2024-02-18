@@ -100,6 +100,12 @@ function initialGrep {
 grep -riE$grepArg "$keyword" $searchIn | sed 's/<[^>]*>//g'
 }
 
+function initialCmnd {
+#file to process to function
+cat "$1" | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFor-$2
+bash $tmpdir/cmndFor-$2 | sed 's/<[^>]*>//g' > $tmpdir/initrun-$2
+}
+
 if [[ "$@" == *"-exc"* ]]
 then
 fortitle="${fortitle}"

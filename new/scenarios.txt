@@ -4,20 +4,34 @@ case 1 pli basic
 
 
 
+######
+# search languages
+######
 
-#search languages
-if pali 
+if pali
+cd var 
 varfirst 
+cd pli 
+
 varpli 
 pli
+
+cd eng 
 eng 
 
 elif eng 
+
+cd eng 
 eng
+
+cd pli
 pli
+
+cd pli
 var
 
 elif rus
+cd rus
 ru
 
 elif thru
@@ -26,15 +40,20 @@ thru
 elif tbw
 tbw
 
-#search extras
+######
+# search extras
+######
+
 if exclude 
 initialGrep
 
 elif top
 
 
+#######
+# search modes 
+#######
 
-#search modes 
 if = "" basic
 getFirstFile = 
 
@@ -48,3 +67,51 @@ elif = "def"
 getFirstFile = getDefinitions 
 
 
+
+
+
+################
+# experiments
+################
+
+pli basic pali 
+1=var initVar
+2=pli cnmd initPi
+3=eng cnmd
+
+pli sml def any 
+1=pli initPi
+2=vat cnmd 
+3=eng cnmd
+
+eng all emg searches
+1=eng initEn
+2=pli cnmd
+3=var cnmd
+
+
+cd 1
+initGrep
+
+cd 2
+
+if pli 
+cnmd
+initGrep
+
+elif eng 
+cnmd
+
+cd 3
+cnmd
+
+
+
+tmpdir=./
+searchIn=./sutta/
+
+function initialCmnd {
+#file to process to function
+cat "$1" | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFor-$2
+bash $tmpdir/cmndFor-$2 | sed 's/<[^>]*>//g' > $tmpdir/initrun-$2
+}

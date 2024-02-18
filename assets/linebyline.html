@@ -90,18 +90,25 @@ table td {
             </div>
         </div>
     </div>
-  <div>
+
+<div class="input-group">
+
+
+
+<div>
+      <label for="indexInput">Номер Текста:</label>
+    <input type="search" class="form-control" id="indexInput" placeholder="Номер текста (sn23.1, an3.70 и т.п.">
+
+</div>
+
+<div class="input-group-append ms-2">
     <label for="languageSelect">Язык:</label>
-    <select id="languageSelect">
+    <select class="form-select" id="languageSelect">
       <option value="pli">Пали</option>
       <option value="en">Английский</option>
     </select>
   </div>
-<div >
-      <label for="indexInput">Номер Текста:</label>
-    <input type="search" class="form-control" id="indexInput" placeholder="Введите номер текста, к прим. sn23.1 или an3.70 ">
-
-</div>
+  </div>
 
    
     
@@ -130,12 +137,11 @@ table td {
   <button class="btn btn-secondary mt-1" onclick="clearInputs()">Очистить Перевод</button>
     <button class="btn btn-primary mt-1" onclick="downloadJson()">Скачать JSON</button>
 
-  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>
+
   
 
       <button class="btn btn-primary mt-1" id="linkButton">Текст на Fdg</button>
-     <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
-
+ 
   <div id="translationJsonOutput"></div>
 <div class="table-container mt-2 mb-5">
 
@@ -151,7 +157,13 @@ table td {
   </table>
   </div>
 <div style="height:100px" class="my-5">
-   
+      
+</div>
+<div  class="my-5">
+      
+ <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
+
+  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>
 </div>
 
 <script>

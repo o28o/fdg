@@ -57,7 +57,7 @@ $('#pali').find('tbody').find('tr').each(function() {
    	 var table = $('#pali').DataTable({
 	 /*  'autoWidth': true,*/
 	   'stateSave': true,
-	           dom: '<"row"lf>r<t><"row"ip>Q<"footerlike"B>',
+	           dom: '<"row"lf>r<t><"row"ip><"btn btn-light"Q><"footerlike"B>',
         buttons: {
           name: 'primary',
         buttons: [

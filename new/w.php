@@ -44,9 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
  $stringForOpen = isset($s) ? strtolower(trim(str_replace("`", "", $s))) : '';
 
 if ( preg_match('/html/', $d ))  {	
-  $command = escapeshellcmd("bash ./fdgnew.sh $searchIn $stringForOpen");
+$command = escapeshellcmd("bash ./new/words.sh $searchIn $stringForOpen");
 } else {
-$command = escapeshellcmd("bash ./fdgnew.sh $searchIn $stringForOpen");
+$command = escapeshellcmd("bash ./new/words.sh $searchIn $stringForOpen");
 }
 
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");

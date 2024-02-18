@@ -37,20 +37,20 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if(isset($_GET['d'])) {
         $selectedParams = $_GET['d'];
-        $searchIn = "-src $d" ;
+        $searchIn = "-src " . $selectedParams; 
     } else {
-        $searchIn = "" ;
+        $searchIn = "";
     }
 }
-
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));
-$command = escapeshellcmd("bash ./fdgnew.sh $stringForOpen");
+$command = escapeshellcmd("bash ./fdgnew.sh $searchIn $stringForOpen");
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
-   $output = shell_exec($command); 
-//  echo "$command\n";
-   echo "$output";
+$output = shell_exec($command); 
+
+// echo "$command\n";
+ echo "$output";
 
 
 ?>

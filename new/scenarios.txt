@@ -1,0 +1,50 @@
+
+
+case 1 pli basic
+
+
+
+
+#search languages
+if pali 
+varfirst 
+varpli 
+pli
+eng 
+
+elif eng 
+eng
+pli
+var
+
+elif rus
+ru
+
+elif thru
+thru
+
+elif tbw
+tbw
+
+#search extras
+if exclude 
+initialGrep
+
+elif top
+
+
+
+#search modes 
+if = "" basic
+getFirstFile = 
+
+elif = "onl" anyd
+getFirstFile = anyDistance
+
+elif = "sml" 
+getFirstFile = getSimiles
+
+elif = "def" 
+getFirstFile = getDefinitions 
+
+

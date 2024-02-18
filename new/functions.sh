@@ -9,7 +9,6 @@
 ########## sn35.238 ##########
 source ./config/script_config.sh --source-only
 
-
 function WhereToSearch {
 
 #source="t=an,sn,mn,dn,kn,lt,vn,kp"
@@ -92,15 +91,14 @@ echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR
 }}' > $tmpdir/cmndForAnydistance
 bash $tmpdir/cmndForAnydistance > $tmpdir/initfilelist
 
-cat  "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-pi
-  
+cat "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-pi
 }
 
 function initialGrep {
+  #use with "file" flag for output file and no flag for word/id mode list 
 [[ "$1" == *"file"* ]] && grepArg="l"
 grep -riE$grepArg "$keyword" $searchIn | sed 's/<[^>]*>//g'
 }
-
 
 if [[ "$@" == *"-exc"* ]]
 then
@@ -117,11 +115,31 @@ grep -rviE$grepArg "$keywordforexclude" $searchIn | grep -iE "$keyword" | sed 's
 }
 fi
 
+function varFirst {
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+initialGrep > $tmpdir/initrun-var
+
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+
+if [ -s "$tmpdir/initrun-var" ]; then
+cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
+bash $tmpdir/cmndFromVar | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
+fi
+initialGrep >> $tmpdir/initrun-pi
+
+if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
+    echo "$keyword не найдено в $searchIn"
+    exit 1
+fi
+
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFromPi
+bash $tmpdir/cmndFromPi > $tmpdir/initrun-en
+}
 
 function cleanupwords {
 sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
 }
-
 
 function cleanupTempFiles {
   #fdgnew
@@ -172,27 +190,5 @@ cat $tmpdir/initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS
 bash $tmpdir/cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
 fi
 
-}
-
-function varFirst {
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-initialGrep > $tmpdir/initrun-var
-
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
-fi
-initialGrep >> $tmpdir/initrun-pi
-
-if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
-    echo "$keyword не найдено в $searchIn"
-    exit 1
-fi
-
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFromPi
-bash $tmpdir/cmndFromPi > $tmpdir/initrun-en
 }
 

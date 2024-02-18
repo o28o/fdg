@@ -3,7 +3,7 @@ start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
-export LANG=en_US.UTF-8
+#export LANG=en_US.UTF-8
 #export LC_ALL=C.utf8
 #args="$@"
 keyword="$@"

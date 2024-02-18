@@ -72,8 +72,7 @@ include '../scripts/opentexts.php';
 
 <div class="input-group-append ms-2">
   <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
-    Search
-  </button>
+    Search</button>
   <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn-icon" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
   <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i> 
   </button>

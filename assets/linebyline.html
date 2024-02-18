@@ -91,17 +91,13 @@ table td {
         </div>
     </div>
 
-<div class="input-group">
-
-
-
+<div class="input-group mt-2">
 <div>
       <label for="indexInput">Номер Текста:</label>
     <input type="search" class="form-control" id="indexInput" placeholder="Номер текста (sn23.1, an3.70 и т.п.">
-
 </div>
 
-<div class="input-group-append ms-2">
+<div class="input-group-append ms-1">
     <label for="languageSelect">Язык:</label>
     <select class="form-select" id="languageSelect">
       <option value="pli">Пали</option>
@@ -109,12 +105,9 @@ table td {
     </select>
   </div>
   </div>
-
-   
-    
 <div>
   
-  <label for="translationInput" >Текст перевода:</label>
+  <label class="mt-2" for="translationInput">Текст перевода:</label>
   <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
 2. Вставьте русский перевод сюда
 3. Нажмите 'Обновить'
@@ -136,10 +129,6 @@ table td {
   <button class="btn btn-primary mt-1 input-group-append " onclick="loadText()">Обновить</button>
   <button class="btn btn-secondary mt-1" onclick="clearInputs()">Очистить Перевод</button>
     <button class="btn btn-primary mt-1" onclick="downloadJson()">Скачать JSON</button>
-
-
-  
-
       <button class="btn btn-primary mt-1" id="linkButton">Текст на Fdg</button>
  
   <div id="translationJsonOutput"></div>
@@ -161,9 +150,8 @@ table td {
 </div>
 <div  class="my-5">
       
- <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
-
   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>
+   <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
 </div>
 
 <script>

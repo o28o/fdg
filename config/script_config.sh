@@ -47,8 +47,8 @@ multiplier=0.5
 skiprounds=3
 
 elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
-#export LANG=C
-#export LC_ALL=C
+export LANG=C
+export LC_ALL=C
 #export LC_ALL=C.utf8
 #export LC_ALL=ru_RU.utf8
 #export LANG=ru_RU.utf8

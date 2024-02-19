@@ -107,7 +107,7 @@ $('#pali').find('tbody').find('tr').each(function() {
 	    'orderMulti': true,
 	   'pageLength' : 10,
 	   'lengthMenu' : [10, 30, 50, 100, 1000],
-        "order": [[6, 'asc'], [0, 'asc']],
+
 	/*  'responsive': true,*/
 	  'columnDefs': [
 		/*		{                
@@ -115,13 +115,14 @@ $('#pali').find('tbody').find('tr').each(function() {
 				orderDataType: 'dom-checkbox' // Используем функцию сортировки
 				},
 				*/
-	            { type: "html", target: [0,1,2,7] },
-	            { type: 'natural', targets: 0 },
+	      { type: 'natural', targets: 0 },
+	      { type: "html", target: [0,1,2,7] },
 				  {
             target: 6,
             visible: true
         }				
 					],
+		//			     "order": [[6, 'asc']],
       'initComplete': function(){
          var api = this.api();
          

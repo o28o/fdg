@@ -136,7 +136,8 @@ uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)
 textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sort -u | wc -l)
 headerinfo="${keyword^} $textqnty texts $uniqwordqnty related words in $searchInForUser"
 
-quotesLinkToReplace="/s.php?s=${keyword}\&d=$source"
+escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+quotesLinkToReplace="/s.php?s=${escapedKeyword}\&d=$source"
 
 #echo end set all=$LC_ALL lang=$LANG
 

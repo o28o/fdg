@@ -25,7 +25,27 @@ include '../scripts/opentexts.php';
 
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
-  
+     <style>
+  @media (max-width: 767px) {
+    #searchbtn {
+      display: none; /* Скрываем текстовую кнопку на мобильных устройствах */
+    }
+
+    #searchbtn-icon {
+      display: inline-block; /* Отображаем иконку лупы на мобильных устройствах */
+    }
+  }
+
+  @media (min-width: 768px) {
+    #searchbtn {
+      display: inline-block; /* Отображаем текстовую кнопку на устройствах с шириной экрана больше 767px */
+    }
+
+    #searchbtn-icon {
+      display: none; /* Скрываем иконку лупы на устройствах с шириной экрана больше 767px */
+    }
+  }
+</style> 
 </head>
 
 <body>
@@ -51,13 +71,15 @@ include '../scripts/opentexts.php';
 </div>
 
 <div class="input-group-append ms-2">
-  <button onclick="trimParamsAndShowSpinner()" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill">
-    Search
-</button>
+  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
+    Search</button>
+  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn-icon" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
+  <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i> 
+  </button>
+</div>  
 
 <!-- <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i> --> 
 
-</div>
 </div>
 
        <div class="justify-content-center text-center">

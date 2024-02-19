@@ -72,6 +72,7 @@ cleanupSrc | sed -e 's/-src //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e
 }
 
 function topFiles { 
+  ##### replace by custom sorting of datatable
     #usage for filelists
 #grep -ril dukkh * | xargs  grep -ci dukkh | sort -t':' -k2n | tail -n10
  if [[ "$@" == *"-top"* ]] ; then
@@ -90,14 +91,16 @@ keywordforfindingfiles=$(echo $keyword | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)
 keywordforgreping=$(echo $keywordforfindingfiles | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
 
 echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) {
-  print "grep -rlE \"" $1 "\" '"$searchIn"' " 
+  print "grep -rliE \"" $1 "\" '"$searchIn"' " 
 }
   else {
-  print "| xargs grep -l \"" $1 "\""
+  print "| xargs grep -iEl \"" $1 "\""
 }}' > $tmpdir/cmndForAnydistance
 bash $tmpdir/cmndForAnydistance > $tmpdir/initfilelist
 
+#if [ -s "$tmpdir/initrun-var" ]; then
 cat "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-pi
+#fi
 }
 
 function initialGrep {

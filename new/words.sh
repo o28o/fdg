@@ -150,7 +150,8 @@ echo " </tbody>
     </table>" >> $output/w.html
     if [ -s "$tmpdir/variantsReport" ]; then
 echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3'>Variants for ${keyword^}</h2>" >> $output/w.html
-cat $tmpdir/variantsReport >> $output/w.html
+cat $tmpdir/variantsReport | sed -E 's@'"$keyword"'@<b>&</b>@gI'>> $output/w.html
+#cat $tmpdir/variantsReport >> $output/w.html
 fi
 echo "</div>" >> $output/w.html
 #cat $apachesitepath/assets/templates/WordsFooter.html >> $output/w.html

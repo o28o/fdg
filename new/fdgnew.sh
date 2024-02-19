@@ -114,12 +114,37 @@ fi
 paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
+
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum " matches in '"$searchInForUser"'" }' $tmpdir/counts)"
 wordLinkToReplace="/w.php?s=${keyword}\&d=$source"
 WORDREPLACELINK="$wordLinkToReplace"
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
+
+    if [ -s "$tmpdir/initrun-var" ]; then
+echo '<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var keywordDiv = document.querySelector(".keyword");
+  var variantsDivs = document.querySelectorAll(".variants");
+
+  if (keywordDiv) {
+    var keywordText = keywordDiv.innerText.trim();
+    var keywordCapitalized = keywordText.charAt(0).toUpperCase() + keywordText.slice(1);
+    
+    variantsDivs.forEach(function(variantsDiv) {
+      if (variantsDiv.id === "variants") {
+        variantsDiv.style.display = "block";
+        variantsDiv.innerHTML = keywordCapitalized + " has" + variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3);
+      } else {
+        variantsDiv.style.display = "block";
+      }
+    });
+  }
+});
+</script>' >> $output/r.html
+fi 
+
 cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/r.html
 cat $tmpdir/finalhtml >> $output/r.html
 cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' >> $output/r.html

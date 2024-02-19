@@ -16,10 +16,17 @@
   <!--  <button id="btn-hide-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo</button>    -->
 <button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo / Vivaṭṭo</button>
 
-<button class="btn btn-light forshellscript mb-1" type="button" ><a class="text-decoration-none " href="$wordLinkToReplace" >Words</a></button>    
-
+<a class="text-decoration-none forshellscript mb-1 " href="$wordLinkToReplace" > 
+<button type="button" class="btn btn-light position-relative">Words
+  <span style="display: none;" class="position-absolute variants top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+    var
+    <span class="visually-hidden">unread messages</span>
+  </span>
+</button>
+</a>
 <button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
 <hr>
+<div id='variants' class="variants" style='display: none;'> has <a href=$wordLinkToReplace#variants>variants</a></div>
 
 <table id="pali" class="display table table-striped table-hover responsive " cellspacing="0" width="100%">
    <thead class="thead-light">

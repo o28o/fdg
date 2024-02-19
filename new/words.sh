@@ -149,7 +149,7 @@ cat $tmpdir/wordsfinalhtml >> $output/w.html
 echo " </tbody>
     </table>" >> $output/w.html
     if [ -s "$tmpdir/variantsReport" ]; then
-echo " </div><div class='mt-3 ms-4 variants'><h3 class='text-center my-3'>Variants for ${keyword^}</h2>" >> $output/w.html
+echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3'>Variants for ${keyword^}</h2>" >> $output/w.html
 cat $tmpdir/variantsReport >> $output/w.html
 fi
 echo "</div>" >> $output/w.html

@@ -119,6 +119,7 @@ headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum 
 wordLinkToReplace="/w.php?s=${keyword}\&d=$source"
 WORDREPLACELINK="$wordLinkToReplace"
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
+echo "<script $fontawesomejs></script>" >> $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
 
@@ -138,8 +139,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     variantsDivs.forEach(function(variantsDiv) {
       if (variantsDiv.id === "variants") {
-        variantsDiv.style.display = "block";
-        variantsDiv.innerHTML = keywordCapitalized + " has" + variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3);
+variantsDiv.style.display = "block";
+variantsDiv.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${keywordCapitalized} has${variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3)}`;
       } else {
         variantsDiv.style.display = "block";
       }

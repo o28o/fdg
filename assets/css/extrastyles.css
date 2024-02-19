@@ -83,6 +83,10 @@
   }
 }
 
+.tooltip-inner {
+    text-align: left;
+}
+
 .common-size-icon {
   margin-top: 3px; 
   height: 24px;

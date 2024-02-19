@@ -24,6 +24,7 @@ translator="brahmali"
 translator="sujato"
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
+escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source
 
 #keyword=byākarissāmīti
@@ -116,7 +117,10 @@ bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdi
 
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum " matches in '"$searchInForUser"'" }' $tmpdir/counts)"
-wordLinkToReplace="/w.php?s=${keyword}\&d=$source"
+
+escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+#echo $escapedKeyword
+wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
 WORDREPLACELINK="$wordLinkToReplace"
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
 echo "<script $fontawesomejs></script>" >> $output/r.html
@@ -149,6 +153,8 @@ variantsDiv.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${keywordCapita
 });
 </script>' >> $output/r.html
 fi 
+
+#echo $keyword in the end
 
 cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/r.html
 cat $tmpdir/finalhtml >> $output/r.html

@@ -16,13 +16,11 @@
   <!--  <button id="btn-hide-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo</button>    -->
 <button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo / Vivaṭṭo</button>
 
-<a class="text-decoration-none forshellscript mb-1 " href="$wordLinkToReplace" > 
-<button type="button" class="btn btn-light position-relative">Words
+<a class="position-relative text-decoration-none btn btn-light  forshellscript mb-1 " href="$wordLinkToReplace" >Words
   <span style="display: none;" class="position-absolute variants top-0 start-100 translate-middle badge rounded-pill bg-secondary">
     var
-    <span class="visually-hidden">unread messages</span>
+    <span class="visually-hidden">variants</span>
   </span>
-</button>
 </a>
 <button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
 <hr>

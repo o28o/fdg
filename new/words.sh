@@ -51,7 +51,7 @@ cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords >> $tmpdir/words
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -ri "$keyword" ./sutta/ ./vinaya/ | sed -e 's@./sutta/kn@khudakka\@/@g' -e 's@./sutta/@dhamma\@/@g' -e 's@./vinaya/@vinaya\@/@g' | sed -e 's/_variant-pli-ms.json:/@/g' -e 's/": "/@/g'  -e 's/@ *"/@/g' | sed 's/",$//g' | sed 's/"$//g' | sort -t@ -k1,1 -k2V | awk -F/ '{print $NF}'| awk -F@ '{
+grep -Eri "$keyword" ./sutta/ ./vinaya/ | sed -e 's@./sutta/kn@khudakka\@/@g' -e 's@./sutta/@dhamma\@/@g' -e 's@./vinaya/@vinaya\@/@g' | sed -e 's/_variant-pli-ms.json:/@/g' -e 's/": "/@/g'  -e 's/@ *"/@/g' | sed 's/",$//g' | sed 's/"$//g' | sort -t@ -k1,1 -k2V | awk -F/ '{print $NF}'| awk -F@ '{
   anch = $2 ; gsub(":", "#", anch); 
   link = "<strong><a class=\"fdgLink\" href=\"\" data-slug=\"" anch "\">" $1 "</a></strong>"}
   {print link, $3 "<br>"}'  > $tmpdir/variantsReport

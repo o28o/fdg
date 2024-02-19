@@ -122,7 +122,11 @@ cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $o
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
 
-    if [ -s "$tmpdir/initrun-var" ]; then
+grepping=
+
+#    if [ -s "$tmpdir/initrun-var" ]; then
+if grep -qrEi -m1 "$keyword" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/ $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/vinaya/
+then
 echo '<script>
 document.addEventListener("DOMContentLoaded", function() {
   var keywordDiv = document.querySelector(".keyword");

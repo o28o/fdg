@@ -126,6 +126,6 @@ var regex = new RegExp(searchValue + '(?![^<]*>)', 'gi');
   </script>
   <script src="/assets/js/themeswitch.js"></script>
         <script src="/assets/js/openFdg.js"></script>
-
+	  <script src="/assets/js/smoothScroll.js"defer></script>
 </body>
 </html>

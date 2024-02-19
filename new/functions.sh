@@ -63,7 +63,8 @@ fi
 }
 
 function keywordForLinks {
-echo if keyword has | but no  () add them for proper highlighting
+  echo 1
+#echo if keyword has | but no  () add them for proper highlighting
 }
 
 function clearargs {

@@ -91,11 +91,7 @@ $('#pali').find('tbody').find('tr').each(function() {
                   action: function ( dt ) {
                                 window.location.href = '/history.php';
                             }
-                        },  
-                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = 'WORDREPLACELINK';}},
-                        { extend: 'colvis', 
-                     className: 'btn btn-link ',
-                        text: 'Visibility' }
+                        }
         ]
     },
       "search": {

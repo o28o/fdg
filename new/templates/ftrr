@@ -68,7 +68,7 @@ $('#pali').find('tbody').find('tr').each(function() {
               text: 'Main',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = "/";
+                                window.location.href = "/new";
                             }
             },
               {
@@ -92,6 +92,7 @@ $('#pali').find('tbody').find('tr').each(function() {
                                 window.location.href = '/history.php';
                             }
                         },  
+                        {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = 'WORDREPLACELINK';}},
                         { extend: 'colvis', 
                      className: 'btn btn-link ',
                         text: 'Visibility' }

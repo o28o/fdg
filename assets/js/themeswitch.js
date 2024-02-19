@@ -5,9 +5,11 @@ function switchIcon(x) {
    if (localStorage.theme === "dark") {
      console.log(localStorage.theme);
   
-        x.classList.remove("fa-circle-half-stroke");
-   x.classList.remove("fa-moon");
-  x.classList.add("fa-sun");
+
+  
+        x.classList.remove("fa-moon");
+  x.classList.remove("fa-sun");
+     x.classList.add("fa-circle-half-stroke");  
   
   if (imgElement) {
   imgElement.src = "/assets/svg/sun.svg";
@@ -26,9 +28,9 @@ function switchIcon(x) {
    } else if (localStorage.theme === "auto") {
      console.log(localStorage.theme);
 
-      x.classList.remove("fa-moon");
-  x.classList.remove("fa-sun");
-     x.classList.add("fa-circle-half-stroke");  
+        x.classList.remove("fa-circle-half-stroke");
+   x.classList.remove("fa-moon");
+  x.classList.add("fa-sun");
      
        if (imgElement) {
          imgElement.src = "/assets/svg/circle-half-stroke.svg"; 

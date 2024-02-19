@@ -24,7 +24,7 @@ translator="brahmali"
 translator="sujato"
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
-echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source
+#echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source
 
 #keyword=byākarissāmīti
 

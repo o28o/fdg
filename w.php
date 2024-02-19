@@ -20,14 +20,14 @@ $query = $_SERVER['QUERY_STRING'];
 
 /* echo ' '.$params['lang']; */
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+/*if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     // Перебираем все GET-параметры и выводим их
 
     foreach ($_GET as $key => $value) {
         echo $key . ' => ' . $value . '<br>';
     }
-}
+} */
 
 
 	$s = isset($_GET['s']) ? htmlspecialchars($_GET['s']) : '';

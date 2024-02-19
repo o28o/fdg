@@ -23,12 +23,12 @@ $query = $_SERVER['QUERY_STRING'];
 /* echo ' '.$params['lang']; */
 
 
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+/* if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Перебираем все GET-параметры и выводим их
     foreach ($_GET as $key => $value) {
         echo $key . ' => ' . $value . '<br>';
     }
-}
+} */
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $s = trim($_GET["s"]);

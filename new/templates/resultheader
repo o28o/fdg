@@ -18,6 +18,7 @@
 
 <a class="position-relative text-decoration-none btn btn-light  forshellscript mb-1 " href="$wordLinkToReplace" >Words
   <span style="display: none;" class="position-absolute variants top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+  <!-- <span class="badge text-bg-secondary"> -->
     var
     <span class="visually-hidden">variants</span>
   </span>

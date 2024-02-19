@@ -18,13 +18,14 @@
 
 <a class="position-relative text-decoration-none btn btn-light  forshellscript mb-1 " href="$wordLinkToReplace" >Words
   <span style="display: none;" class="position-absolute variants top-0 start-100 translate-middle badge rounded-pill bg-secondary">
+  <!-- <span class="badge text-bg-secondary"> -->
     var
     <span class="visually-hidden">variants</span>
   </span>
 </a>
 <button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
 <hr>
-<div id='variants' class="variants" style='display: none;'> has <a href=$wordLinkToReplace#variants>variants</a></div>
+<div id='variants' class="variants" style='display: none;'><i class="fa-solid fa-circle-info"></i> has <a href=$wordLinkToReplace#variants>variants</a></div>
 
 <table id="pali" class="display table table-striped table-hover responsive " cellspacing="0" width="100%">
    <thead class="thead-light">

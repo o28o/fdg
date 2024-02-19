@@ -115,7 +115,7 @@ $('#pali').find('tbody').find('tr').each(function() {
 				orderDataType: 'dom-checkbox' // Используем функцию сортировки
 				},
 				*/
-	            { type: "html", target: [1,2,7] },
+	            { type: "html", target: [0,1,2,7] },
 	            { type: 'natural', targets: 0 },
 				  {
             target: 6,

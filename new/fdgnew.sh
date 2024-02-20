@@ -31,24 +31,22 @@ escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 
 #decide about lang
 if [[ "$@" == *"-en"* ]]; then
+searchlang=en
 echo engFirst
-elif [[ "$@" == *"-ru"* ]]; then 
+searchIn="$searchInEng"
+initialGrep > $tmpdir/initrun-$searchlang
+
+elif [[ "$@" == *"-ru"* ]]; then
+searchlang=ru
 echo rusFirst
 else
 #pali
-echo varFirst
 varFirst
+
 fi
-
-
-
-
 
 #if pali cd to pali or var if eng cd to eng 
 #filelists
-
-
-
 
 if [[ "$@" == *"-anyd"* ]] || [[ "$@" == *"-top"* ]] ; then
 echo engFirst
@@ -60,17 +58,12 @@ if [[ "$@" == *"-def"* ]] || [[ "$@" == *"-sml"* ]] ; then
 echo engFirst
 fi
 
-#eng 1st pli 1st 
-if [[ "$@" == *"-en"* ]]; then
-echo engFirst
-
-fi
-
 
 if [[ "$@" == *"-oru"* ]]
 then
 # output language is russian
 cd $apachesitepath/assets/texts/
+#bash $tmpdir/cmndFor-en | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
 bash $tmpdir/cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
 fi
 
@@ -83,7 +76,6 @@ sed -i 's/_translation-en-sujato.json/":3"/g' $tmpdir/initrun-en
 sed -i 's/_variant-pli-ms.json/":4"/g' $tmpdir/initrun-var
 sed -i 's/":/@/g'  $tmpdir/initrun*
 sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/initrun*
-
 
 cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'|  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
@@ -124,7 +116,7 @@ afterawk=$(wc -l < "$afterawk_file")
 
 if [ "$counts" -eq "$afterawk" ] && [ "$afterawk" -eq "$wordsAggregatedByTexts" ]; then
    # echo "Все три переменные равны $counts"
-   echo
+   echo >/dev/null
 else
     echo "$counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file и $wordsAggregatedByTexts в $aggregated_file"
 fi
@@ -147,7 +139,8 @@ echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $out
 grepping=
 
 #    if [ -s "$tmpdir/initrun-var" ]; then
-if grep -qrEi -m1 "$keyword" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/ $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/vinaya/
+
+if grep -qrEi -m1 "$keyword" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/ $suttapath/sc-data/sc_bilara_data/variant/pli/ms/vinaya/
 then
 echo '<script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -180,6 +173,19 @@ cat $output/r.html
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 #wc -l $tmpdir/counts $tmpdir/afterawk
 exit 0
+
+
+echo varFirst
+BackupsearchIn="$searchIn"
+initialGrep "$searchInVar" > $tmpdir/initrun-var
+
+initialCmnd $tmpdir/initrun-var pi "$searchInPli"
+initialGrep "$searchInPli" >> $tmpdir/initrun-pi
+
+initialCmnd $tmpdir/initrun-pi en "$searchInEng"
+
+
+
 
 cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | sed "s@^\"@@g" | awk 'BEGIN {OFS=""; printf "grep -Eir \047("} { printf $1"|"}' |  sed '$ s@|$@)'\'' '"$searchIn"' \n@'  > cmnd
 

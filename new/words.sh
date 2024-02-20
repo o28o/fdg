@@ -150,7 +150,7 @@ cat $tmpdir/wordsfinalhtml >> $output/w.html
 echo " </tbody>
     </table>" >> $output/w.html
     if [ -s "$tmpdir/variantsReport" ]; then
-echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3'>Variants for ${keyword^}</h2>" >> $output/w.html
+echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3'>Variants for ${keyword^}<div class='form-check-inline text-muted input-group-append' data-bs-html='true'data-bs-toggle='tooltip' data-bs-placement='bottom' title='Buttons:<br><br><strong>Home</strong> - go to main page'> *</div></h2>" >> $output/w.html
 cat $tmpdir/variantsReport | sed -E 's@'"$keyword"'@<b>&</b>@gI'>> $output/w.html
 #cat $tmpdir/variantsReport >> $output/w.html
 fi

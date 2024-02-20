@@ -62,6 +62,152 @@ fi
 #echo $searchIn
 }
 
+function WhereToSearchAllinOne {
+
+#source="t=an,sn,mn,dn,kn,lt,vn,kp"
+if [[ "$args" == *"-src"* ]]; then 
+function cleanupSrc {
+   awk -F"-src" '{ print $2}' | awk '{$1=""} { print $0}' | sed 's/^ *//g'
+  }
+
+source=$(echo "$args" | awk -F'-src' '{ print $2}' | awk '{ print $1}' )
+
+dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
+dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
+diren=$suttapath/sc-data/sc_bilara_data/translation/en
+searchIn=""
+for i in $(echo $source | sed 's/,/ /g')
+do
+case "$i" in
+            *an*) 
+            #searchIn="$searchIn ./sutta/an" 
+            searchInForUser="$searchInForUser an"
+            translator="sujato"
+            for folder in sutta/an
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+           # searchIn="$searchIn $dirpli/sutta/an $dirvat/sutta/an $direng/$translator/sutta/an" 
+           ;;
+            *sn*) 
+            searchInForUser="$searchInForUser sn"
+            translator="sujato"
+            #searchIn="$searchIn $dirpli/sutta/sn $dirvat/sutta/sn $direng/$translator/sutta/sn" 
+            #searchIn="$searchIn ./sutta/sn" 
+            for folder in sutta/sn
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+            ;;
+            *mn*)              
+            searchInForUser="$searchInForUser mn"
+            translator="sujato"
+           # searchIn="$searchIn $dirpli/sutta/mn $dirvat/sutta/mn $direng/$translator/sutta/mn" 
+         #   searchIn="$searchIn ./sutta/mn"
+         for folder in sutta/mn
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+            ;;
+            *dn*) 
+            searchInForUser="$searchInForUser dn"
+            translator="sujato"
+           # searchIn="$searchIn $dirpli/sutta/dn $dirvat/sutta/dn $direng/$translator/sutta/dn"             
+        #    searchIn="$searchIn ./sutta/dn" 
+        for folder in sutta/dn
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+            ;;
+            *kn*) 
+         #   searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
+            searchInForUser="$searchInForUser kn"
+            translator="sujato"
+            #searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp"
+            for folder in sutta/kn/ud sutta/kn/iti sutta/kn/dhp sutta/kn/thig sutta/kn/thag sutta/kn/snp
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+            ;;
+            *lt*) 
+            searchInForUser="$searchInForUser later"
+            translator="sujato"
+            #searchIn="$searchIn $dirpli/sutta/kn $dirvat/sutta/kn $direng/$translator/sutta/kn" 
+       #  searchIn="$searchIn ./sutta/kn/bv ./sutta/kn/cnd ./sutta/kn/cp ./sutta/kn/ja ./sutta/kn/kp ./sutta/kn/mil ./sutta/kn/mnd ./sutta/kn/ne ./sutta/kn/pe ./sutta/kn/ps ./sutta/kn/pv  ./sutta/kn/tha-ap ./sutta/kn/thi-ap ./sutta/kn/vv" 
+       for folder in sutta/kn/bv sutta/kn/cnd sutta/kn/cp sutta/kn/ja sutta/kn/kp sutta/kn/mil sutta/kn/mnd sutta/kn/ne sutta/kn/pe sutta/kn/ps sutta/kn/pv  sutta/kn/tha-ap sutta/kn/thi-ap sutta/kn/vv
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+            ;;
+            *vn*) 
+            #searchIn="$searchIn ./vinaya/pli-tv-b*" 
+            searchInForUser="$searchInForUser vinaya"
+            translator="brahmali"
+            #searchIn="$searchIn $dirpli/vinaya/pli-tv-b* $dirvat/vinaya/pli-tv-b* $direng/$translator/vinaya/pli-tv-b*" 
+            for folder in vinaya/pli-tv-b*
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+            ;;
+            *kp*)
+           # searchIn="$searchIn ./vinaya/pli-tv-[kp].*" 
+            searchInForUser="$searchInForUser kd prv"
+            translator="brahmali"
+           #searchIn="$searchIn $dirpli/vinaya/pli-tv-[kp].* $dirvat/vinaya/pli-tv-[kp].* $direng/$translator/vinaya/pli-tv-[kp].*"  
+            for folder in vinaya/pli-tv-kd vinaya/pli-tv-prv
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done           
+            ;;
+            *) echo "Unknown" ;;
+        esac
+        done
+else
+function cleanupSrc {
+    pvlimit
+  }
+#searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
+searchInForUser="Four Nikayas"
+#searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
+#searchInForUser="$searchInForUser +KN"
+source="an,sn,mn,dn,kn"
+translator="sujato"
+for folder in sutta/an sutta/sn sutta/mn sutta/dn
+do
+for base in $dirpli $dirvar $direng/$translator
+do        
+searchIn="$searchIn $base/$folder" 
+done
+done
+
+fi
+#echo $searchIn
+}
+
 function keywordForLinks {
   echo 1
 #echo if keyword has | but no  () add them for proper highlighting
@@ -131,6 +277,9 @@ grep -rviE$grepArg "$keywordforexclude" $searchIn | grep -iE "$keyword" | sed 's
 fi
 
 function varFirst {
+dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
+dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
+diren=$suttapath/sc-data/sc_bilara_data/translation/en
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 initialGrep > $tmpdir/initrun-var
 

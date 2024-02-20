@@ -26,11 +26,30 @@ WhereToSearch
 keyword=$( echo "$@" | clearargs)
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source
-
 #keyword=byākarissāmīti
+
+
+#decide about lang
+if [[ "$@" == *"-en"* ]]; then
+echo engFirst
+elif [[ "$@" == *"-ru"* ]]; then 
+echo rusFirst
+else
+#pali
+echo varFirst
+varFirst
+fi
+
+
+
+
 
 #if pali cd to pali or var if eng cd to eng 
 #filelists
+
+
+
+
 if [[ "$@" == *"-anyd"* ]] || [[ "$@" == *"-top"* ]] ; then
 echo engFirst
 fi
@@ -47,8 +66,6 @@ echo engFirst
 
 fi
 
-#var1st
-varFirst
 
 if [[ "$@" == *"-oru"* ]]
 then

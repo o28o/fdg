@@ -72,7 +72,7 @@ cd $apachesitepath > /dev/null
 #proccessing common for all files 
 sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi
 sed -i 's/_translation-ru-.*.json/":2"/g' $tmpdir/initrun-ru 2>/dev/null
-sed -i 's/_translation-en-sujato.json/":3"/g' $tmpdir/initrun-en
+sed -i 's/_translation-en-.*.json/":3"/g' $tmpdir/initrun-en
 sed -i 's/_variant-pli-ms.json/":4"/g' $tmpdir/initrun-var
 sed -i 's/":/@/g'  $tmpdir/initrun*
 sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/initrun*

@@ -92,9 +92,9 @@ function cleanupSrc {
 searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
 searchInForUser="Four Nikayas"
 searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
-#searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp vinaya/pli-tv-b*" 
+searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp vinaya/pli-tv-b*" 
 searchInForUser="$searchInForUser +KN"
-#searchInForUser="$searchInForUser +KN +Vinaya"
+searchInForUser="$searchInForUser +KN +Vinaya"
 setSearchIn sutta/an sutta/sn sutta/mn sutta/dn sutta/kn/ud sutta/kn/iti sutta/kn/dhp sutta/kn/thig sutta/kn/thag sutta/kn/snp vinaya/pli-tv-b*
 source="an,sn,mn,dn,kn"
 fi
@@ -189,9 +189,22 @@ if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
     exit 1
 fi
 
-cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+
 cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFromPi
+
+if [[ "$searchIn" == *"sutta"* ]] 
+then 
+translator="sujato"
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
 bash $tmpdir/cmndFromPi > $tmpdir/initrun-en
+fi 
+
+if [[ "$searchIn" == *"vinaya"* ]] 
+then 
+translator="brahmali"
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+bash $tmpdir/cmndFromPi >> $tmpdir/initrun-en
+fi 
 }
 
 function cleanupwords {

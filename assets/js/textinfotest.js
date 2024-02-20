@@ -52,3 +52,18 @@ FROM sutta_en
 WHERE line_id IN (SELECT line_id FROM text_names);
     
     */
+    
+    
+ echo "SELECT tn.file_name,
+     json_object(
+      'pi', tp.line_text,  
+ 'en', te.line_text  ,
+   'mtph', s.metaphor_count 
+   )
+FROM text_names tn
+LEFT JOIN vinaya_en te ON te.line_id = tn.line_id
+LEFT JOIN vinaya_pi tp ON tp.line_id = tn.line_id
+LEFT JOIN similes s ON s.file_name = tn.file_name
+where tn.file_name like '%pli-tv-%'
+GROUP BY tn.file_name, te.line_text, tp.line_text;" | sqlite3 db/fdg-db.db
+    

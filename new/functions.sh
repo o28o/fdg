@@ -148,6 +148,10 @@ function anyDistance {
 keywordforfindingfiles=$(echo $keyword | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' )
 keywordforgreping=$(echo $keywordforfindingfiles | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
 
+
+echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) { print "grep -rliE \"" $1 "\" '"$searchIn"' " } else if (NR == n) { print "| xargs grep -iE \"" $1 "\"" } else { print "| xargs grep -iEl \"" $1 "\"" }}' n=$(echo "$keywordforfindingfiles" | wc -w) "$searchIn"
+
+#old $keywordforgreping
 echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) {
   print "grep -rliE \"" $1 "\" '"$searchIn"' " 
 }

@@ -20,8 +20,8 @@ cleanupTempFiles
 #keyword=dukkh
 # SQLite запрос с использованием параметров
 
-translator="brahmali"
-translator="sujato"
+applyOutputLangToResponses
+
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
@@ -32,14 +32,21 @@ escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #decide about lang
 if [[ "$@" == *"-en"* ]]; then
 searchlang=en
+searchlangForUser=English
+langtwo=pi
 echo engFirst
-searchIn="$searchInEng"
-initialGrep > $tmpdir/initrun-$searchlang
+LangFirst
 
 elif [[ "$@" == *"-ru"* ]]; then
 searchlang=ru
+langtwo=pi
+searchlangForUser=Russian
 echo rusFirst
+LangFirst
 else
+searchlang=pi
+langtwo=en
+searchlangForUser=Pali
 #pali
 varFirst
 
@@ -49,13 +56,13 @@ fi
 #filelists
 
 if [[ "$@" == *"-anyd"* ]] || [[ "$@" == *"-top"* ]] ; then
-echo engFirst
+echo anyDist
 fi
 
 #word or id lists
 #pli or eng first
 if [[ "$@" == *"-def"* ]] || [[ "$@" == *"-sml"* ]] ; then
-echo engFirst
+echo def sml
 fi
 
 
@@ -64,7 +71,7 @@ then
 # output language is russian
 cd $apachesitepath/assets/texts/
 #bash $tmpdir/cmndFor-en | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
-bash $tmpdir/cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
+bash $tmpdir/cmndFor-$langtwo | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
 fi
 
 cd $apachesitepath > /dev/null
@@ -79,12 +86,9 @@ sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinay
 
 cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'|  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
-########## count keywords in texts
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
 
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g' |sed 's/[[:punct:]]*$//'| awk -F: '$2 > 0 {print $0}' >> $tmpdir/words
+########## count keywords in texts
+getWordsForCounts
 
 cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
 
@@ -125,7 +129,8 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 
-headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum " matches in '"$searchInForUser"'" }' $tmpdir/counts)"
+#format output results
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum " matches in '"$searchInForUser $searchlangForUser"'" }' $tmpdir/counts)"
 
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #echo $escapedKeyword
@@ -136,11 +141,11 @@ echo "<script $fontawesomejs></script>" >> $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
 
-grepping=
-
+#ping for all variants of the pali word
+if  [[ "$searchlang" == *"pi"* ]]; then 
+# use this one if will decide that should show variants from searchIn only
 #    if [ -s "$tmpdir/initrun-var" ]; then
-
-if grep -qrEi -m1 "$keyword" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/ $suttapath/sc-data/sc_bilara_data/variant/pli/ms/vinaya/
+if grep -qrEi -m1 "$keyword" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/ $suttapath/sc-data/sc_bilara_data/variant/pli/ms/vinaya/ 2>/dev/null
 then
 echo '<script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -163,7 +168,7 @@ variantsDiv.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${keywordCapita
 });
 </script>' >> $output/r.html
 fi 
-
+fi
 #echo $keyword in the end
 
 cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/r.html

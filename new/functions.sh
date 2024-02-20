@@ -13,6 +13,25 @@ dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
 dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
 direng=$suttapath/sc-data/sc_bilara_data/translation/en
 
+function applyOutputLangToResponses {
+if [[ "$args" == *"-oru"* ]]; then
+function OKresponse {
+  echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language "
+}
+
+function NotFoundErr {
+    echo "$keyword не найдено в $searchInForUser $searchlangForUser"
+}
+
+function Erresponse {
+    echo "$keyword не найдено в $searchIn"
+}
+else
+function NotFoundErr {
+    echo "$keyword not in $searchInForUser $searchlangForUser"
+}
+fi 
+}
 function setSearchIn {
 for folder in $@
 do
@@ -93,7 +112,7 @@ searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
 searchInForUser="Four Nikayas"
 searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
 searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp vinaya/pli-tv-b*" 
-searchInForUser="$searchInForUser +KN"
+#searchInForUser="$searchInForUser +KN"
 searchInForUser="$searchInForUser +KN +Vinaya"
 setSearchIn sutta/an sutta/sn sutta/mn sutta/dn sutta/kn/ud sutta/kn/iti sutta/kn/dhp sutta/kn/thig sutta/kn/thag sutta/kn/snp vinaya/pli-tv-b*
 source="an,sn,mn,dn,kn"
@@ -145,31 +164,51 @@ cat "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initr
 function initialGrep {
   #use with "file" flag for output file and no flag for word/id mode list 
 [[ "$1" == *"file"* ]] && grepArg="l"
-grep -riE$grepArg "$keyword" $searchIn | sed 's/<[^>]*>//g'
+grep -riE$grepArg "$keyword" $searchIn 2>/dev/null | sed 's/<[^>]*>//g'
 }
 
 function initialCmnd {
 #file to process to function $1 source file e.g initfile eng var pli $2 dest filr e.g. pli 
 if [ -s "$1" ]; then
 cat "$1" | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$3"' \n@' > $tmpdir/cmndFor-$2
-bash $tmpdir/cmndFor-$2 | sed 's/<[^>]*>//g' > $tmpdir/initrun-$2
+bash $tmpdir/cmndFor-$2 2>/dev/null | sed 's/<[^>]*>//g' > $tmpdir/initrun-$2
 fi
 }
 
-if [[ "$@" == *"-exc"* ]]
-then
-fortitle="${fortitle}"
-excludekeyword="`echo $@ | sed 's/.*-exc //g'`"
-addtotitleifexclude=" exc. $excludekeyword"
-addtoresponseexclude=" $excluderesponse $excludekeyword"
-excfn="` echo -exc-${excludekeyword} | sed 's/ /-/g' | sed 's@\\\@@g' `"
-keywordforexclude=$(echo "$@" | awk -F'-exc' '{ print $2}'  | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
-
-function initialGrep {
-#[[ "$1" == *"file"* ]] && grepArg="l"
-grep -rviE$grepArg "$keywordforexclude" $@ | grep -iE "$keyword" | sed 's/<[^>]*>//g'
+function grepForWords {
+  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}'
 }
+
+function LangFirst {
+if [[ "$searchIn" == *"sutta"* ]] 
+then 
+translator="sujato"
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+initialGrep > $tmpdir/initrun-en
+fi 
+
+if [[ "$searchIn" == *"vinaya"* ]] 
+then 
+translator="brahmali"
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+initialGrep >> $tmpdir/initrun-en
+fi 
+
+if [ ! -s "$tmpdir/initrun-en" ]; then
+NotFoundErr
+#cd $apachesitepath > /dev/null
+#bash new/fdgnew.sh `echo $@ | sed -e 's/-en//g'`
+    exit 1
 fi
+
+cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
+
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
+
+}
 
 function varFirst {
 
@@ -179,32 +218,60 @@ initialGrep > $tmpdir/initrun-var
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
 if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromVar
-bash $tmpdir/cmndFromVar | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
+cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
+bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
 fi
 initialGrep >> $tmpdir/initrun-pi
 
 if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
-    echo "$keyword не найдено в $searchIn"
+NotFoundErr
+#cd $apachesitepath > /dev/null
+#bash new/fdgnew.sh -en $@ 
     exit 1
 fi
 
 
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFromPi
+cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-en
 
 if [[ "$searchIn" == *"sutta"* ]] 
 then 
 translator="sujato"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-bash $tmpdir/cmndFromPi > $tmpdir/initrun-en
+bash $tmpdir/cmndFor-en > $tmpdir/initrun-en
 fi 
 
 if [[ "$searchIn" == *"vinaya"* ]] 
 then 
 translator="brahmali"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-bash $tmpdir/cmndFromPi >> $tmpdir/initrun-en
+bash $tmpdir/cmndFor-en >> $tmpdir/initrun-en
 fi 
+}
+
+function getWordsForCounts {
+if [[ "$searchlang" == *"pi"* ]]; then
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+grepForWords > $tmpdir/words
+
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+grepForWords >> $tmpdir/words
+
+elif  [[ "$searchlang" == *"en"* ]]; then
+if [[ "$searchIn" == *"sutta"* ]] 
+then 
+translator="sujato"
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+grepForWords > $tmpdir/words
+fi 
+
+if [[ "$searchIn" == *"vinaya"* ]] 
+then 
+translator="brahmali"
+cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
+grepForWords >> $tmpdir/words
+fi 
+
+fi
 }
 
 function cleanupwords {
@@ -262,9 +329,22 @@ fi
 
 }
 
+function excludeWords {
+if [[ "$@" == *"-exc"* ]]
+then
+fortitle="${fortitle}"
+excludekeyword="`echo $@ | sed 's/.*-exc //g'`"
+addtotitleifexclude=" exc. $excludekeyword"
+addtoresponseexclude=" $excluderesponse $excludekeyword"
+excfn="` echo -exc-${excludekeyword} | sed 's/ /-/g' | sed 's@\\\@@g' `"
+keywordforexclude=$(echo "$@" | awk -F'-exc' '{ print $2}'  | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
 
-
-
+function initialGrep {
+#[[ "$1" == *"file"* ]] && grepArg="l"
+grep -rviE$grepArg "$keywordforexclude" $@ | grep -iE "$keyword" | sed 's/<[^>]*>//g'
+}
+fi
+}
 
 #########
 

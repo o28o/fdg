@@ -34,7 +34,7 @@ if [[ "$@" == *"-en"* ]]; then
 searchlang=en
 searchlangForUser=English
 langtwo=pi
-echo engFirst
+#echo engFirst
 LangFirst
 
 elif [[ "$@" == *"-ru"* ]]; then

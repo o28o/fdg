@@ -13,10 +13,41 @@ dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
 dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
 direng=$suttapath/sc-data/sc_bilara_data/translation/en
 
+function setSearchLanguage {
+  if [[ "$args" == *"-en"* ]]; then
+searchlang=en
+searchlangForUser=English
+langtwo=pi
+#echo engFirst
+initrun=LangFirst
+
+elif [[ "$args" == *"-ru"* ]]; then
+searchlang=ru
+langtwo=pi
+searchlangForUser=Russian
+#echo rusFirst
+initrun=RuLangFirst
+
+function ifHtmlFiles {
+  awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}'
+}
+
+else
+searchlang=pi
+langtwo=en
+searchlangForUser=Pali
+#pali
+initrun=varFirst
+
+fi
+}
+
+
+
 function applyOutputLangToResponses {
 if [[ "$args" == *"-oru"* ]]; then
 function OKresponse {
-  echo "`echo "$pattern" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language "
+  echo "`echo "$keyword" | sed 's/[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty в $fortitle $language "
 }
 
 function NotFoundErr {
@@ -32,6 +63,7 @@ function NotFoundErr {
 }
 fi 
 }
+
 function setSearchIn {
 for folder in $@
 do
@@ -115,7 +147,7 @@ searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig 
 #searchInForUser="$searchInForUser +KN"
 searchInForUser="$searchInForUser +KN +Vinaya"
 setSearchIn sutta/an sutta/sn sutta/mn sutta/dn sutta/kn/ud sutta/kn/iti sutta/kn/dhp sutta/kn/thig sutta/kn/thag sutta/kn/snp vinaya/pli-tv-b*
-source="an,sn,mn,dn,kn"
+source="an,sn,mn,dn,kn,vn"
 fi
 #echo $searchIn
 }
@@ -143,6 +175,9 @@ xargs grep -ci "$keyword" | sort -t':' -k2n | tail -n10  > $tmpdir/inittoplist
 #do the word grep here cat  "$tmpdir/inittoplist" 
 }
 
+function ifHtmlFiles {
+  pvlimit
+}
 function anyDistance {
  # keyword="\bsaddhā vicikicch"
 keywordforfindingfiles=$(echo $keyword | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' )
@@ -196,7 +231,118 @@ fi
 }
 
 function grepForWords {
-  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}'
+  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords
+}
+
+function RuLangFirst {
+cd $suttapath/sc-data/html_text/ru/pli/
+grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g' | grep -v "^--$" > $tmpdir/initrun-ru
+#cd - > /dev/null
+
+if [ ! -s "$tmpdir/initrun-ru" ]; then
+NotFoundErr
+#cd $apachesitepath > /dev/null
+#bash new/fdgnew.sh `echo $@ | sed -e 's/-en//g'`
+    exit 1
+fi
+
+
+}
+
+function linklist {
+if [[ "$language" == *"Pali"* ]] ||  [[ "$language" == *"English"* ]]; 
+then
+cat $templatefolder/Header2.html $templatefolder/ResultTableHeader2.html | sed 's/$title/TitletoReplace/g' | sed 's@HOMEVAR@'$mainpagebase'@' | tohtml 
+else
+cat $templatefolder/Header2.html $templatefolder/ResultTableHeader2.html | sed 's/$title/TitletoReplace/g' |sed '/forshellscript/d'  | sed 's@HOMEVAR@'$mainpagebase'@' | tohtml 
+
+fi 
+
+#keyword="$keyword"
+pattern="$keyword"
+    
+cd $output > /dev/null
+#Samaṇasukhasutta An Ascetic’s Happiness an5.128 var
+
+#if ru
+sed -i 's/.html/":1"/g'  $tmpdir/$basefile
+sed -i 's/":/@/g'  $tmpdir/$basefile
+
+sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/$basefile
+sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/$basefile
+   
+cat $tmpdir/$basefile | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
+
+
+# |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
+########## count keywords in texts
+
+cd $suttapath/$pali_or_lang
+grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+
+
+
+cat $tmpdir/words   | awk -F/ '{print $NF}' | awk -F: '{print $1}' | sort -V | uniq -c | sed 's/.html//g'| awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+
+cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
+    if ($1 in data) {
+        data[$1] = data[$1] " " $2
+    } else {
+        data[$1] = $1 "@" $2
+    }
+}
+END {
+    for (item in data) {
+        print data[item]
+    }
+}' | sort -V > $tmpdir/wordsAggregatedByTexts
+
+cd $output > /dev/null
+########## end count keywords in texts
+
+#rm $tmpdir/afterawk  
+bash $apachesitepath/new/awknewfdg.sh $tmpdir/readyforawk "$keyword" > $tmpdir/afterawk  
+
+counts_file="$tmpdir/counts" 
+afterawk_file="$tmpdir/afterawk"
+aggregated_file="$tmpdir/wordsAggregatedByTexts"
+wordsAggregatedByTexts=$(wc -l < "$aggregated_file")
+counts=$(wc -l < "$counts_file")
+afterawk=$(wc -l < "$afterawk_file")
+
+if [ "$counts" -eq "$afterawk" ] && [ "$afterawk" -eq "$wordsAggregatedByTexts" ]; then
+   # echo "Все три переменные равны $counts"
+   echo
+else
+    echo "$counts в файле $counts_file не равно количеству строк 
+    $afterawk в файле $afterawk_file и 
+    $wordsAggregatedByTexts в $aggregated_file"
+   paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}' > $tmpdir/fordebug
+  #  cd result
+  #  exit 0
+fi
+
+paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
+bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
+
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
+wordLinkToReplace="/w.php?s=$keyword"
+WORDREPLACELINK="$wordLinkToReplace"
+
+echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
+echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtml
+#cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
+cat $tmpdir/finalhtml | tohtml
+#cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
+
+#echo -e "Content-Type: text/html\n\n"
+#echo $@
+
+
+
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
+matchqnty=`awk -F@ '{sum+=$3;} END{print sum;}' $tmpdir/counts`
+
 }
 
 function LangFirst {
@@ -269,6 +415,7 @@ fi
 }
 
 function getWordsForCounts {
+delimiterForAwk="_"
 if [[ "$searchlang" == *"pi"* ]]; then
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 grepForWords > $tmpdir/words
@@ -289,9 +436,13 @@ then
 translator="brahmali"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
 grepForWords >> $tmpdir/words
-fi 
-
 fi
+elif  [[ "$searchlang" == *"ru"* ]]; then
+delimiterForAwk=":"
+cd $suttapath/sc-data/html_text/ru/pli/
+grepForWords > $tmpdir/words
+fi 
+cd $apachesitepath >/dev/null
 }
 
 function cleanupwords {
@@ -319,6 +470,8 @@ rm $tmpdir/wordcountTexts 2>/dev/null
 rm $tmpdir/words 2>/dev/null
 rm $tmpdir/wordsWithAggregatedTexts 2>/dev/null
 rm $tmpdir/wordsfinalhtml 2>/dev/null
+rm $tmpdir/variantsReport 2>/dev/null
+
 }
 
 function getSimiles {
@@ -349,6 +502,128 @@ fi
 
 }
 
+function getDefinitions {
+fileprefix=${fileprefix}-definition
+fortitle="Definition ${fortitle}"
+
+modpattern="`echo $keyword | sed -E 's/([aiīoā]|aṁ)$//g'`"
+pattern="$modpattern" 
+#vin=dummy ${modpattern}.*nāma|
+linesafter=3
+patternForHighlight="`echo $keyword | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
+
+tmpdef=$tmpdir/tmpdef.$rand
+
+vin="./vinaya/pli-tv-b*"
+searchIn="$vin"
+  vin=dummy
+vindefpart="${modpattern}.{0,3}—|${modpattern}.{0,3}ti|${modpattern}.*nāma|"
+linesafter=1
+function grepbasefile {
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$keyword" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
+
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vindefpart}\bKata.{0,20} \b${modpattern}.{0,5}\?|\bKatha.{0,20} \b${modpattern}.{0,5}\?|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}" $tmpdef
+}
+}
+
+#make it getdefall
+function getbasefile {
+
+if [[ "$keyword" == *"ṅ"* ]]; then
+initialNorM="ṅ"
+elif [[ "$keyword" == *"ṃ"* ]];  then
+initialNorM="ṃ"
+fi
+  
+if [[ "$keyword" != *"["* ]] &&  [[ "$keyword" != *"]"* ]];  then
+pattern=`echo $keyword | sed 's/е/[ёе]/g' | sed 's/[ṅṃ]/[ṅṁṃ]/g'`
+fi
+
+if [[ "$@" == *"-onl"* ]]
+then
+ if [[ $keyword == *"("* ]] && [[ $keyword == *")"* ]] 
+ then
+ pattern=`echo $keyword | sed 's@ @|@g'`
+ else
+ pattern=`echo $keyword | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' `
+ fi
+fi
+
+checkifalreadydone
+echo grepbase > new_time_output.txt
+{ time grepbasefile | grep -v "^--$" | grepexclude | sort -Vf ;} 2>> new_time_output.txt > $basefile
+cp $basefile bfc
+#echo path is $suttapath/$pali_or_lang and searchin is $searchIn
+#echo grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn
+
+
+#grepbasefile | grep -v "^--$" | grepexclude | clearsed | sort -Vf > $basefile
+
+if [[ "$@" == *"-nm"* ]] 
+then
+topmatchesintexts=`cat $basefile | awk '{print $1}' | uniq -c | LC_ALL=C sort -r | head -n$numbersmatches | awk '{print $2}'`
+for i in $topmatchesintexts
+do
+grep $i $basefile
+done > tmp
+cp tmp $basefile
+fi
+
+
+if [[ "$@" == *"-defall"* ]] 
+then
+mintexts=1000
+else 
+mintexts=1
+fi
+#echo $mintexts
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
+
+if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
+then 
+#echo mintxt=$mintexts txt=$texts
+#echo "$tmpdef bf $texts"
+grepbasefileExtended1 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
+#echo "$tmpdef bf+1 $texts"
+fi
+
+if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
+then 
+grepbasefileExtended2 | grep -v "^--$" | grepexclude | clearsed | sort -Vf >> $basefile
+
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
+#echo "bf+12 $texts"
+fi
+
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
+if [[ "$@" == *"-def"* ]] && (( $texts <= $mintexts )) && [[ "$@" != *"-vin"* ]]
+then 
+nice -$nicevalue grep -E -A1 -Eir "${modpattern}.{0,50}saṅkhaṁ gacchati" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr} | grep -E -B1 Evamev | grep -v "^--$" >> $basefile
+
+texts=`awk -F"$type" '{print $1}' $basefile | sort | uniq | wc -l`
+#echo "bf+12sk $texts"
+fi
+
+textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
+totaltexts=` echo $textlist | wc -w`
+linescount=$(wc -l < "$basefile")
+
+if (( linescount == 0 )); then
+pattern="`echo $keyword | sed 's/\[ёе\]/е/g'`"
+	Erresponse
+
+	#Clarification
+     rm $basefile
+     exit 1
+elif [ $linescount -ge $maxmatchesbg ] && [[ "$@" != *"-nbg"* ]];  then 
+bgswitch
+exit 3
+#	echo "$@" | sed 's/-oru //g' | sed 's/-oge //g' | sed 's/-ogr //g'   | sed 's/-nbg //g' >> ../input/input.txt     
+fi
+
+}
+
 function excludeWords {
 if [[ "$args" == *"-exc"* ]]
 then
@@ -373,7 +648,7 @@ grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/n
 }
 
 function grepForWords {
-  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | grep -viE "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}'
+  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | grep -viE "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords
 }
 fi
 }

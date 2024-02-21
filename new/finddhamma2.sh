@@ -1155,8 +1155,11 @@ keyword="$pattern"
     
 cd $output > /dev/null
 #Samaṇasukhasutta An Ascetic’s Happiness an5.128 var
+
+#if ru
 sed -i 's/.html/":1"/g'  $tmpdir/$basefile
 sed -i 's/":/@/g'  $tmpdir/$basefile
+
 sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/$basefile
 sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/$basefile
    

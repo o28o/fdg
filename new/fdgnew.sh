@@ -8,6 +8,7 @@ start=`date +%s`
 #args="$@"
 keyword="$@"
 args="$@"
+applyOutputLangToResponses
 [[ $keyword == "" ]] && exit 0
 database="./db/fdg-db.db"
 source ./config/script_config.sh --source-only
@@ -20,8 +21,6 @@ cleanupTempFiles
 #keyword=dukkh
 # SQLite запрос с использованием параметров
 
-applyOutputLangToResponses
-
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
@@ -31,28 +30,8 @@ setLinesBeforeAndAfter
 excludeWords
 #echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter
 #decide about lang
-if [[ "$@" == *"-en"* ]]; then
-searchlang=en
-searchlangForUser=English
-langtwo=pi
-#echo engFirst
-LangFirst
-
-elif [[ "$@" == *"-ru"* ]]; then
-searchlang=ru
-langtwo=pi
-searchlangForUser=Russian
-echo rusFirst
-LangFirst
-else
-searchlang=pi
-langtwo=en
-searchlangForUser=Pali
-#pali
-varFirst
-
-fi
-
+setSearchLanguage
+$initrun
 #if pali cd to pali or var if eng cd to eng 
 #filelists
 
@@ -78,6 +57,9 @@ fi
 cd $apachesitepath > /dev/null
 
 #proccessing common for all files 
+#if ru
+sed -i 's/.html/":1"/g'  $tmpdir/initrun*
+
 sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi
 sed -i 's/_translation-ru-.*.json/":2"/g' $tmpdir/initrun-ru 2>/dev/null
 sed -i 's/_translation-en-.*.json/":3"/g' $tmpdir/initrun-en
@@ -85,15 +67,16 @@ sed -i 's/_variant-pli-ms.json/":4"/g' $tmpdir/initrun-var
 sed -i 's/":/@/g'  $tmpdir/initrun*
 sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/initrun*
 
-cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'|  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
+cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g' | ifHtmlFiles |  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
+
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
 
 ########## count keywords in texts
 getWordsForCounts
 
-cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F_ '{print $1}' | sort -V | uniq -c | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F"$delimiterForAwk" '{print $1}' | sort -V | uniq -c | sed 's/.html//g' | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
 
-cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
+cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g' | sed 's/_.*:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
     if ($1 in data) {
         data[$1] = data[$1] " " $2
     } else {

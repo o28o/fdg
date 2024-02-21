@@ -21,7 +21,6 @@ source ./new/functions.sh --source-only
 
 
 keyword="$@"
-applyOutputLangToResponses
 [[ $keyword == "" ]] && exit 0
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
@@ -41,34 +40,31 @@ cleanupTempFiles
 
 translator="brahmali"
 translator="sujato"
-setSearchLanguage
-
-getWordsForCounts
-
-if [ ! -s "$tmpdir/words" ]; then
-NotFoundErr
-#cd $apachesitepath > /dev/null
-#bash new/fdgnew.sh `echo $@ | sed -e 's/-en//g'`
-    exit 1
-fi
 
 
 
-if [[ "$searchlang" == *"pi"* ]]; then
+
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords > $tmpdir/words
+cd -  > /dev/null
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords >> $tmpdir/words
+
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 grep -Eri "$keyword" ./sutta/ ./vinaya/ | sed -e 's@./sutta/kn@khudakka\@/@g' -e 's@./sutta/@dhamma\@/@g' -e 's@./vinaya/@vinaya\@/@g' | sed -e 's/_variant-pli-ms.json:/@/g' -e 's/": "/@/g'  -e 's/@ *"/@/g' | sed 's/",$//g' | sed 's/"$//g' | sort -t@ -k1,1 -k2V | awk -F/ '{print $NF}'| awk -F@ '{
   anch = $2 ; gsub(":", "#", anch); 
   link = "<strong><a class=\"fdgLink\" href=\"\" data-slug=\"" anch "\">" $1 "</a></strong>"}
   {print link, $3 "<br>"}'  > $tmpdir/variantsReport
 #| sed -i 's/_variant-pli-ms.json//g' 
-fi 
 
+
+cd -  > /dev/null
 
 #get uniq words
-cat $tmpdir/words | cleanupwords  | sort | uniq > $tmpdir/uniqwords
+cat $tmpdir/words | sed -e 's/.*://g' -e 's/”ti/’ti/g' -e 's/[[:punct:]]*$//' | sort | uniq > $tmpdir/uniqwords
 
 #this list for table is ok
-cat $tmpdir/words | cleanupwords  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -V | uniq | awk '{
+cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -V | uniq | awk '{
     if ($1 in data) {
         data[$1] = data[$1] " " $2
     } else {
@@ -82,7 +78,7 @@ END {
 }' | sort -k1 > $tmpdir/wordsWithAggregatedTexts
 
 #get counts in how many texts
-cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -k1 | uniq | awk '{print $1}'   | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
+cat $tmpdir/words |sed 's/[[:punct:]]*$//'  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -k1 | uniq | awk '{print $1}'   | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
 #less $tmpdir/wordcountTexts
 
 #get word counts 
@@ -154,7 +150,7 @@ cat $tmpdir/wordsfinalhtml >> $output/w.html
 echo " </tbody>
     </table>" >> $output/w.html
     if [ -s "$tmpdir/variantsReport" ]; then
-echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3'>Variants for ${keyword^}<div class='form-check-inline text-muted input-group-append' data-bs-html='true'data-bs-toggle='tooltip' data-bs-placement='bottom' title='Variants with searched word:<br><br><strong></strong>That are found across different editions of Pali Canon. <br><br>Abbreviation keys can be found in Edition Abbreviations section of <a target=_blank href=https://suttacentral.net/abbreviations?lang=en>this list</a>'> *</div></h2>" >> $output/w.html
+echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3'>Variants for ${keyword^}<div class='form-check-inline text-muted input-group-append' data-bs-html='true'data-bs-toggle='tooltip' data-bs-placement='bottom' title='Variants with searched word:<br><br><strong></strong>That are found across different editions of Pali Canon. <br><br>The abbreviation keys can be found at Edition Abbreviations section in <a target=_blank href=https://suttacentral.net/abbreviations?lang=en>this list</a>'> *</div></h2>" >> $output/w.html
 cat $tmpdir/variantsReport | sed -E 's@'"$keyword"'@<b>&</b>@gI'>> $output/w.html
 #cat $tmpdir/variantsReport >> $output/w.html
 fi
@@ -165,12 +161,6 @@ cat $output/w.html
 
 exit 0
 
-#replaced by getWordsForCounts
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords > $tmpdir/words
-cd -  > /dev/null
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -rioE "\w*$keyword[^ ]*" $searchIn  | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords >> $tmpdir/words
 
 
 

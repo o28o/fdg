@@ -15,7 +15,6 @@ export LANG=ru_RU.utf8
 source ./config/script_config.sh --source-only
 history="$apachesitepath/result/.history"
 
-
 rm $tmpdir/initrun* 2>/dev/null
 rm $tmpdir/afterawk 2>/dev/null
 rm $tmpdir/cmnd* 2>/dev/null

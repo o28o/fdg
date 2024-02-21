@@ -36,11 +36,8 @@ htmlkeyword=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 separator="@"
 sqlitecommand="sqlite3 -separator $separator"
 
-
 cleanupTempFiles
 
-translator="brahmali"
-translator="sujato"
 setSearchLanguage
 
 getWordsForCounts
@@ -65,10 +62,10 @@ fi
 
 
 #get uniq words
-cat $tmpdir/words | cleanupwords  | sort | uniq > $tmpdir/uniqwords
+cat $tmpdir/words | cleanupwords | sort | uniq > $tmpdir/uniqwords
 
 #this list for table is ok
-cat $tmpdir/words | cleanupwords  | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -V | uniq | awk '{
+cat $tmpdir/words | cleanupwords  | awk -F/ '{print $NF}' | sed 's/.html:/ /g' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -V | uniq | awk '{
     if ($1 in data) {
         data[$1] = data[$1] " " $2
     } else {
@@ -82,7 +79,7 @@ END {
 }' | sort -k1 > $tmpdir/wordsWithAggregatedTexts
 
 #get counts in how many texts
-cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -k1 | uniq | awk '{print $1}'   | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
+cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g' | sed 's/_.*:/ /g'| awk '{print $2, $1}' | sort -k1 | uniq | awk '{print $1}'   | uniq -c | awk 'BEGIN { OFS = "@" }{print $2, $1}' > $tmpdir/wordcountTexts
 #less $tmpdir/wordcountTexts
 
 #get word counts 

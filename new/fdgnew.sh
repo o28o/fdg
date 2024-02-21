@@ -120,6 +120,7 @@ cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $o
 echo "<script $fontawesomejs></script>" >> $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
+echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/r.html
 
 #ping for all variants of the pali word
 if  [[ "$searchlang" == *"pi"* ]]; then 

@@ -41,9 +41,9 @@ name=sutta
     } 
 if (NR == 1 || (file_name != prev_file && textclass == 1)) {
     
-        print texttype "@" urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span>;;;"
+        print texttype "@" urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass " quote\" lang=\"" language "\">" qoute, hiddenlink "</span>;;;"
     } else {
-        print "<span class=\"" htmlclass "\" lang=\"" language "\">" qoute, hiddenlink "</span><br class=\"styled\">;;;"
+        print "<span class=\"" htmlclass " quote\" lang=\"" language "\">" qoute, hiddenlink "</span><br class=\"styled\">;;;"
     }
 
     prev_file = $2

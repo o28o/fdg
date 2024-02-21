@@ -33,25 +33,25 @@
    var filterValue = new URLSearchParams(window.location.search).get('f');
 
 $(document).ready(function() {
-    // Загрузка файла с данными
+    // load textinfo with ajax for textnames and metaphor counts
     $.ajax({
         url: '/assets/js/textinfo.js',
         dataType: 'json',
         success: function(TextInfo) {
-            // Заполнение данных в таблице
+            // fill data in the tabke
 $('#pali').find('tbody').find('tr').each(function() {
     var linkText = $(this).find('td').eq(0).find('a').text();
     if (TextInfo[linkText]) {
-        var titlePali = TextInfo[linkText]['pi'] || ''; // Если нет значения, присваиваем пустую строку
-        var titleEnglish = TextInfo[linkText]['en'] || ''; // Если нет значения, присваиваем пустую строку
-        var metaphorCount = TextInfo[linkText]['mtph'] || ''; // Если нет значения, присваиваем пустую строку
-        $(this).find('td').eq(1).html('<strong class="pli-lang inputscript-ISOPali">' + titlePali + '</strong> ' + titleEnglish);
-        $(this).find('td').eq(4).text(metaphorCount);
-    } else {
-        // Если данных для linkText нет, можно установить пустые значения или другое поведение по умолчанию
-        $(this).find('td').eq(1).html('');
-        $(this).find('td').eq(4).text('');
-    }
+    var titlePali = TextInfo[linkText]['pi'] || ''; // If there is no value, assign an empty string
+    var titleEnglish = TextInfo[linkText]['en'] || ''; // If there is no value, assign an empty string
+    var metaphorCount = TextInfo[linkText]['mtph'] || ''; // If there is no value, assign an empty string
+    $(this).find('td').eq(1).html('<strong class="pli-lang inputscript-ISOPali">' + titlePali + '</strong> ' + titleEnglish);
+    $(this).find('td').eq(4).text(metaphorCount);
+} else {
+    // If there is no data for linkText, you can set empty values or other default behavior
+    $(this).find('td').eq(1).html('');
+    $(this).find('td').eq(4).text('');
+}
 });
             
    	 var table = $('#pali').DataTable({
@@ -153,25 +153,25 @@ $('#pali').find('tbody').find('tr').each(function() {
                }
             }
          );
-      } // автозаполнение какоето
+      } // autofill 
       
 
-   });	//конец datatable	         
+   });	//end of datatable initialization         
    
-      //предустановка фильтра из get param ?f=
+      //get filter value from get param ?f=
      if (filterValue) {
         table.search(filterValue).draw();
         var currentUrl = new URL(window.location.href);
         currentUrl.searchParams.delete('f');
         history.replaceState({}, '', currentUrl);
 }
-  // s param и div keywprd
+  // s param & div keywprd
    
 let params = new URLSearchParams(document.location.search);
 let finder = params.get("s");
 let keyword;
 
-// Проверяем наличие элемента с классом "keyword"
+// check element with class "keyword"
 let keywordElement = document.querySelector('.keyword');
 if (keywordElement) {
     keyword = keywordElement.textContent.trim();
@@ -179,7 +179,7 @@ if (keywordElement) {
     keyword = ""; // Значение по умолчанию, если элемент не найден
 }
 
-// Используем значение из параметра "s" или "keyword"
+// using value from "s" or "keyword"
 //let searchValue = finder && finder.trim() !== "" ? finder : keyword;
 let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
 if (searchValue !== "") {
@@ -210,42 +210,38 @@ if (searchValue !== "") {
     table.draw(false);
 }
 
-
-
-//конец s и keyword            
+//end of s и keyword            
         },
         error: function(xhr, status, error) {
-            console.error('Ошибка при загрузке файла с данными:', status, error);
+            console.error('Error loading file:', status, error);
         }
     });
 });
-
-	
-  
-
    
-   //highlight pattern
-   
-
+   //highlight pattern end
 });
-
-
+  //js scripts that generate links for texts 
   </script>
   
 
-  <script>
-    // Заполнение данных в таблице
-  
-</script>
-  
-  
-  <script>
+        <script src="/assets/js/openFdg.js"></script>
+<script src="/assets/js/themeswitch.js"></script>
+	  <script src="/assets/js/smoothScroll.js"defer></script>
+    <script defer type="module" src="/assets/js/langswitch.js"></script>     <script src="/assets/js/linksdpr.js"></script>
+        <script src="/assets/js/openDpr.js"></script>
+                <script src="/assets/js/linksru.js"></script>
+        <script src="/assets/js/openRu.js"></script>
+        <script src="/assets/js/linksbw.js"></script>
+                <script src="/assets/js/openBw.js"></script>
+                
+        
+      <script defer>
+           //to enable bootstrap tooltip    
+$(function () {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+</script>    
 
-$(document).ready(function() {
-    // Получаем параметр поиска из URL
-
-});
-  </script>
   
 <script>
 // Получение всех чекбоксов
@@ -288,20 +284,6 @@ checkboxes.forEach(function(checkbox) {
 });
 
 </script>
-        <script src="/assets/js/openFdg.js"></script>
-<script src="/assets/js/themeswitch.js"></script>
-	  <script src="/assets/js/smoothScroll.js"defer></script>
-    <script defer type="module" src="/assets/js/langswitch.js"></script>     <script src="/assets/js/linksdpr.js"></script>
-        <script src="/assets/js/openDpr.js"></script>
-                <script src="/assets/js/linksru.js"></script>
-        <script src="/assets/js/openRu.js"></script>
-        <script src="/assets/js/linksbw.js"></script>
-                <script src="/assets/js/openBw.js"></script>
-      <script defer>
-$(function () {
-        $('[data-bs-toggle="tooltip"]').tooltip();
-    });
-</script>          
                 
 </body>
 </html>

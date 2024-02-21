@@ -25,10 +25,11 @@ applyOutputLangToResponses
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
-#echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source
+
 #keyword=byākarissāmīti
-
-
+setLinesBeforeAndAfter
+excludeWords
+#echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter
 #decide about lang
 if [[ "$@" == *"-en"* ]]; then
 searchlang=en

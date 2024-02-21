@@ -165,10 +165,26 @@ cat "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initr
 #fi
 }
 
+function setLinesBeforeAndAfter {
+
+if [[ "$args" == *"-lb"* ]]; then
+linesbefore=`echo "$args" | sed 's@.*-lb@@' | awk '{print $1}'` 
+else 
+linesbefore=0
+fi 
+
+if [[ "$args" == *"-la"* ]]; then
+linesafter=`echo "$args" | sed 's@.*-la@@' | awk '{print $1}'` 
+else
+linesafter=0
+fi
+}
+
+
 function initialGrep {
   #use with "file" flag for output file and no flag for word/id mode list 
 [[ "$1" == *"file"* ]] && grepArg="l"
-grep -riE$grepArg "$keyword" $searchIn 2>/dev/null | sed 's/<[^>]*>//g'
+grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'
 }
 
 function initialCmnd {
@@ -334,18 +350,30 @@ fi
 }
 
 function excludeWords {
-if [[ "$@" == *"-exc"* ]]
+if [[ "$args" == *"-exc"* ]]
 then
 fortitle="${fortitle}"
-excludekeyword="`echo $@ | sed 's/.*-exc //g'`"
+excludekeyword="`echo $args | sed 's/.*-exc //g'`"
 addtotitleifexclude=" exc. $excludekeyword"
 addtoresponseexclude=" $excluderesponse $excludekeyword"
 excfn="` echo -exc-${excludekeyword} | sed 's/ /-/g' | sed 's@\\\@@g' `"
-keywordforexclude=$(echo "$@" | awk -F'-exc' '{ print $2}'  | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
+
+if [[ $(echo "$excludekeyword" | wc -w) -eq 1 ]]; then
+    keywordforexclude="$excludekeyword"
+   # echo 1 word in exclude 
+else
+    keywordforexclude=$(echo "$args" | awk -F'-exc' '{ print $2}'  | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
+   # echo 2 or more words in exclude
+fi
 
 function initialGrep {
 #[[ "$1" == *"file"* ]] && grepArg="l"
-grep -rviE$grepArg "$keywordforexclude" $@ | grep -iE "$keyword" | sed 's/<[^>]*>//g'
+grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | grep -B${linesbefore} -A${linesafter} -viE$grepArg "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'
+#grep -B${linesbefore} -A${linesafter} -rviE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | grep -iE "$keyword" | sed 's/<[^>]*>//g'
+}
+
+function grepForWords {
+  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | grep -viE "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}'
 }
 fi
 }

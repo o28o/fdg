@@ -7,42 +7,71 @@
 # and paddling with my hands and feet,
 # I can safely reach the far shore.
 ########## sn35.238 ##########
-source ./config/script_config.sh --source-only
+#source ./config/script_config.sh --source-only
+database="./db/fdg-db.db"
+#separator="@"
+sqlitecommand="sqlite3 -separator $separator"
 
 dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
 dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
 direng=$suttapath/sc-data/sc_bilara_data/translation/en
 
 function setSearchLanguage {
-  if [[ "$args" == *"-en"* ]]; then
+if [[ "$args" == *"-en"* ]]; then
+#echo eng case
 searchlang=en
 searchlangForUser=English
 langtwo=pi
 #echo engFirst
 initrun=LangFirst
-
+steptwo=getPliFromLangFirst
+cd $suttapath/sc-data/sc_bilara_data/translation/en/
 elif [[ "$args" == *"-ru"* ]]; then
 searchlang=ru
 langtwo=pi
 searchlangForUser=Russian
 #echo rusFirst
 initrun=RuLangFirst
-
+steptwo=""
 function ifHtmlFiles {
   awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}'
 }
+cd $suttapath/sc-data/html_text/ru/pli/
 
 else
+#echo pli case
 searchlang=pi
 langtwo=en
 searchlangForUser=Pali
 #pali
-initrun=varFirst
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 
+initrun=varFirst
+steptwo=getLangFromVarFirst
 fi
 }
 
+function setSearchExtras {
+  if [[ "$args" == *"-anyd"* ]]; then
+initrun=anyDistance
+    if [[ "$searchlang" == *"pi"* ]]; then
+    steptwo=getLangFromVarFirst
+    cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
+    fi
+elif [[ "$args" == *"-def"* ]]; then
+initrun=getDefinitions
+
+elif [[ "$args" == *"-sml"* ]]; then
+initrun=getSimiles
+fi
+
+if [[ "$args" == *"-top"* ]] ; then
+echo >/dev/null
+else
+echo >/dev/null
+fi
+}
 
 function applyOutputLangToResponses {
 if [[ "$args" == *"-oru"* ]]; then
@@ -158,7 +187,7 @@ function keywordForLinks {
 }
 
 function clearargs {
-cleanupSrc | sed -e 's/-src //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/-si //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' -e 's/-tru //g' -e 's/-conv //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg-.* //g' | sed 's/ -exc.*//g' | sed 's/-l[ab][0-9]* //g' | sed 's/-defall //g' | sed 's/-def //g' | sed 's/-sml //g' |  sed 's/-b //g' | sed 's/-onl //g' | sed 's/-top[0-9]* //g' | sed 's/-nm10 //g' 
+cleanupSrc | sed -e 's/-src //g' -e 's/-pi //g' -e 's/-ru //g' -e 's/-en //g' -e 's/-abhi //g' -e 's/-vin //g' -e 's/-th //g' -e 's/-si //g' -e 's/^ //g' -e 's/-kn //g' -e 's/-all //g' -e 's/-tru //g' -e 's/-conv //g' | sed 's/-oru //g' | sed 's/-ogr //g' | sed 's/-oge //g'| sed 's/-nbg-.* //g' | sed 's/ -exc.*//g' | sed 's/-l[ab][0-9]* //g' | sed 's/-defall //g' | sed 's/-def //g' | sed 's/-sml //g' |  sed 's/-b //g' | sed 's/-onl //g' | sed 's/-anyd //g' |  sed 's/-top[0-9]* //g' | sed 's/-nm10 //g' 
 }
 
 function topFiles { 
@@ -173,18 +202,19 @@ numbersmatches=
 fi
 xargs grep -ci "$keyword" | sort -t':' -k2n | tail -n10  > $tmpdir/inittoplist
 #do the word grep here cat  "$tmpdir/inittoplist" 
+cat "$tmpdir/inittoplist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-$searchlang
 }
 
 function ifHtmlFiles {
   pvlimit
 }
+
 function anyDistance {
  # keyword="\bsaddhā vicikicch"
 keywordforfindingfiles=$(echo $keyword | sed 's@|@ @g' |sed 's@^(@@g' | sed 's@)$@@g' )
 keywordforgreping=$(echo $keywordforfindingfiles | sed 's@ @|@g' |sed 's@^@(@g' | sed 's@$@)@g' )
 
-
-echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) { print "grep -rliE \"" $1 "\" '"$searchIn"' " } else if (NR == n) { print "| xargs grep -iE \"" $1 "\"" } else { print "| xargs grep -iEl \"" $1 "\"" }}' n=$(echo "$keywordforfindingfiles" | wc -w) "$searchIn"
+#echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) { print "grep -rliE \"" $1 "\" '"$searchIn"' " } else if (NR == n) { print "| xargs grep -iE \"" $1 "\"" } else { print "| xargs grep -iEl \"" $1 "\"" }}' n=$(echo "$keywordforfindingfiles" | wc -w) "$searchIn"
 
 #old $keywordforgreping
 echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR == 1) {
@@ -195,9 +225,16 @@ echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR
 }}' > $tmpdir/cmndForAnydistance
 bash $tmpdir/cmndForAnydistance > $tmpdir/initfilelist
 
-#if [ -s "$tmpdir/initrun-var" ]; then
-cat "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-pi
-#fi
+checkForInitSearch $tmpdir/initfilelist
+
+cat "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-$searchlang
+
+if [[ "$searchlang" == *"pi"* ]]; then
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+initialCmnd $tmpdir/initrun-pi var 
+fi
+
+
 }
 
 function setLinesBeforeAndAfter {
@@ -215,7 +252,6 @@ linesafter=0
 fi
 }
 
-
 function initialGrep {
   #use with "file" flag for output file and no flag for word/id mode list 
 [[ "$1" == *"file"* ]] && grepArg="l"
@@ -231,7 +267,14 @@ fi
 }
 
 function grepForWords {
+  
+  if [[ "$args" == *"-anyd"* ]]; then 
+cat "$tmpdir/initfilelist" | xargs grep -ioHE "\w*${keywordforgreping}[^ ]*" | awk -F: '$2 > 0 {print $0}' | cleanupwords
+
+else   
   grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords
+ fi  
+  
 }
 
 function RuLangFirst {
@@ -239,13 +282,7 @@ cd $suttapath/sc-data/html_text/ru/pli/
 grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g' | grep -v "^--$" > $tmpdir/initrun-ru
 #cd - > /dev/null
 
-if [ ! -s "$tmpdir/initrun-ru" ]; then
-NotFoundErr
-#cd $apachesitepath > /dev/null
-#bash new/fdgnew.sh `echo $@ | sed -e 's/-en//g'`
-    exit 1
-fi
-
+checkForInitSearch $tmpdir/initrun-ru
 
 }
 
@@ -360,20 +397,35 @@ cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
 initialGrep >> $tmpdir/initrun-en
 fi 
 
-if [ ! -s "$tmpdir/initrun-en" ]; then
-NotFoundErr
-#cd $apachesitepath > /dev/null
-#bash new/fdgnew.sh `echo $@ | sed -e 's/-en//g'`
-    exit 1
-fi
+checkForInitSearch $tmpdir/initrun-en
+}
 
-cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
+function checkForInitSearch {
+    if [ "$#" -eq 1 ]; then
+        if [ ! -s "$1" ]; then
+            NotFoundErr
+            #cd $apachesitepath > /dev/null
+            #bash new/fdgnew.sh `echo $@ | sed -e 's/-en//g'`
+            exit 1
+        fi
+    elif [ "$#" -eq 2 ]; then
+        if [ ! -s "$1" ] && [ ! -s "$2" ]; then
+            NotFoundErr
+            #cd $apachesitepath > /dev/null
+            #bash new/fdgnew.sh -en "$@"
+            exit 1
+        fi
+    fi
+}
+
+function getPliFromLangFirst {
+ # initialCmnd $tmpdir/initrun-en pi 
+  cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
-
 }
 
 function varFirst {
@@ -389,15 +441,13 @@ bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
 fi
 initialGrep >> $tmpdir/initrun-pi
 
-if [ ! -s "$tmpdir/initrun-var" ] && [ ! -s "$tmpdir/initrun-pi" ]; then
-NotFoundErr
-#cd $apachesitepath > /dev/null
-#bash new/fdgnew.sh -en $@ 
-    exit 1
-fi
+checkForInitSearch $tmpdir/initrun-var $tmpdir/initrun-pi
 
+}
 
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-en
+function getLangFromVarFirst {
+   # initialCmnd $tmpdir/initrun-pi en
+  cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-en
 
 if [[ "$searchIn" == *"sutta"* ]] 
 then 

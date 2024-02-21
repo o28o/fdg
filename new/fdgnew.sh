@@ -8,18 +8,12 @@ start=`date +%s`
 #args="$@"
 keyword="$@"
 args="$@"
-applyOutputLangToResponses
-[[ $keyword == "" ]] && exit 0
-database="./db/fdg-db.db"
 source ./config/script_config.sh --source-only
 source ./new/functions.sh --source-only
-#separator="@"
-sqlitecommand="sqlite3 -separator $separator"
-#[[ $keyword == "" ]] && exit 0
+applyOutputLangToResponses
+[[ $keyword == "" ]] && exit 0
 
 cleanupTempFiles
-#keyword=dukkh
-# SQLite запрос с использованием параметров
 
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
@@ -28,10 +22,12 @@ escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #keyword=byākarissāmīti
 setLinesBeforeAndAfter
 excludeWords
-#echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter
+#echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter allargs $@ or $args
 #decide about lang
 setSearchLanguage
+setSearchExtras
 $initrun
+$steptwo
 #if pali cd to pali or var if eng cd to eng 
 #filelists
 
@@ -158,7 +154,7 @@ fi
 cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/r.html
 cat $tmpdir/finalhtml >> $output/r.html
 cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' >> $output/r.html
-cat $output/r.html
+#cat $output/r.html
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 #wc -l $tmpdir/counts $tmpdir/afterawk
 exit 0

@@ -182,6 +182,69 @@ if (keywordElement) {
 // using value from "s" or "keyword"
 //let searchValue = finder && finder.trim() !== "" ? finder : keyword;
 let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
+
+
+// check element with class "searchlang"
+let searchlangElement = document.querySelector('.searchlang');
+if (searchlangElement) {
+    searchlang = searchlangElement.textContent.trim();
+} else {
+    searchlang = ""; // Значение по умолчанию, если элемент не найден
+}
+
+// добавляем переменную для хранения количества совпадений
+let MatchesCount = 0;
+
+// если searchlang = pi, то ищем совпадения в цитате с классом quote и lang=pi
+if (searchlang === "pi") {
+    quotelLang = "pi";
+} else {
+    quotelLang = "en";  
+}
+
+// Создаем регулярное выражение для поиска совпадений
+let regex = new RegExp(searchValue + '(?![^<]*>)', 'gi');
+
+// Обнуляем MatchesCount для каждой строки
+let rowMatchesCounts = [];
+
+// Проходим по каждой строке в таблице
+table.rows().every(function () {
+    // Получаем данные текущей строки в колонке с индексом 7
+    let rowData = this.data()[7];
+
+let $rowData = $(rowData);
+
+    let quotes = $rowData.find('.quote[lang="' + quotelLang + '"]');
+    
+        let matches = 0;
+    quotes.each(function () {
+        let quoteText = $(this).text().trim();
+        matches += (quoteText.match(regex) || []).length;
+    });
+    // Подсчитываем количество совпадений для текущей строки
+ //   let matches = (rowData.match(regex) || []).length;
+    
+    // Добавляем количество совпадений в массив
+    rowMatchesCounts.push(matches);
+
+    return true; 
+});
+
+// print results
+rowMatchesCounts.forEach(function (count, index) {
+    console.log("Number of matches in line " + index + ": " + count);
+
+    table.cell(index, 3).data("" + count).draw();
+});
+
+
+// Суммируем все значения в массиве rowMatchesCounts
+let totalMatchesCount = rowMatchesCounts.reduce((total, count) => total + count, 0);
+
+console.log("Общее количество совпадений: " + totalMatchesCount);
+
+
 if (searchValue !== "") {
     // Получаем таблицу DataTables по ее id
 
@@ -207,9 +270,9 @@ if (searchValue !== "") {
     });
 
     // Перерисовываем таблицу для применения изменений
-    table.draw(false);
+    
 }
-
+table.draw(false);
 //end of s и keyword            
         },
         error: function(xhr, status, error) {

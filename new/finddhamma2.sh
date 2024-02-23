@@ -3,7 +3,7 @@ start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
-export LANG=ru_RU.utf8
+
 #export LC_ALL=en_US
 ##############################
 # ‘Why don’t I gather grass, 
@@ -13,6 +13,7 @@ export LANG=ru_RU.utf8
 # I can safely reach the far shore.
 ########## sn35.238 ##########
 source ./config/script_config.sh --source-only
+export LANG=ru_RU.utf8
 history="$apachesitepath/result/.history"
 
 rm $tmpdir/initrun* 2>/dev/null

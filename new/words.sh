@@ -31,7 +31,7 @@ filename=$(echo "$@" | awk '{print $2}')
 keyword=$(echo "$@" | awk '{$1=$2="";print $0}' | sed 's/^ *//g')
 echo "filnename case"
 fi
-echo $LC_ALL $LANG $keyword $@
+#echo $LC_ALL $LANG $keyword $@
 htmlkeyword=$(echo "$keyword" | sed 's/\\.//g' | sed 's/ /%20/g')
 separator="@"
 sqlitecommand="sqlite3 -separator $separator"

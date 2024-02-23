@@ -496,7 +496,7 @@ cd $apachesitepath >/dev/null
 }
 
 function cleanupwords {
-sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
+sed 's/[[:punct:]]*$//' | sed 's/…$//'| awk '{print tolower($0)}' | sed -e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
 }
 
 function cleanupTempFiles {

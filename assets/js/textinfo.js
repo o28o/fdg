@@ -4715,6 +4715,8 @@
 "ud8.7": {"pi":"Dvidhāpathasutta ","en":"A Fork in the Road ","mtph": ""},
 "ud8.8": {"pi":"Visākhāsutta ","en":"With Visākhā ","mtph": ""},
 "ud8.9": {"pi":"Paṭhamadabbasutta ","en":"With Dabba (1st) ","mtph":1},
+"pli-tv-bu-pm": {"pi":"Bhikkhupātimokkha ","en":"The Bhikkhus Code of Discipline ","mtph":""},
+"pli-tv-bi-pm": {"pi":"Bhikkhunipātimokkha ","en":"The Bhikkhunis Code of Discipline ","mtph":""},
 "pli-tv-bi-vb-np1": {"pi":"1. Pattasannicayasikkhāpada ","en":"The training rule on collections of almsbowls ","mtph":""},
 "pli-tv-bi-vb-np10": {"pi":"10. Puggalikacetāpanasikkhāpada ","en":"The training rule on exchanging what belongs to an individual ","mtph":""},
 "pli-tv-bi-vb-np11": {"pi":"11. Garupāvuraṇasikkhāpada ","en":"The training rule on heavy cloaks ","mtph":""},

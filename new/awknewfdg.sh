@@ -8,7 +8,7 @@ textclass=$3
 qoute=$5
 line_id=$4
 
-    if (index(file_name, "-") != 0) { 
+if (match(file_name, /[0-9]-[0-9]/)) {
 anchorpart = $4
 } else { 
   anchorpart = $4

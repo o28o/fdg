@@ -3,7 +3,7 @@ start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
-export LANG=ru_RU.utf8
+
 #export LC_ALL=en_US
 ##############################
 # ‘Why don’t I gather grass, 
@@ -13,6 +13,7 @@ export LANG=ru_RU.utf8
 # I can safely reach the far shore.
 ########## sn35.238 ##########
 source ./config/script_config.sh --source-only
+export LANG=ru_RU.utf8
 history="$apachesitepath/result/.history"
 
 rm $tmpdir/initrun* 2>/dev/null
@@ -424,6 +425,8 @@ then
 fi
 
 userpattern="$pattern"
+escapedkeyword=$userpattern
+#echo escapedkeyword $escapedkeyword
 patternForHighlight="`echo $pattern | sed 's@е@[её]@g' | sed 's@ṃ@[ṃṁ]@g' | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's@^@(@g' | sed 's/$/)/g' | sed 's@,@@g'`"
 
 if [[ "$pattern" == "" ]] ||  [[ "$pattern" == "-ru" ]] || [[ "$pattern" == "-en" ]] || [[ "$pattern" == "-th" ]] || [[ "$pattern" == "-si" ]] || [[ "$pattern" == "-oru" ]]  || [[ "$pattern" == "-nbg" ]] || [[ "$pattern" == "-ogr" ]] || [[ "$pattern" == "-oge" ]] || [[ "$pattern" == "-vin" ]] || [[ "$pattern" == "-all" ]] || [[ "$pattern" == "" ]] || [[ "$pattern" == "-kn" ]] || [[ "$pattern" == "-pli" ]] || [[ "$pattern" == "-def" ]] || [[ "$pattern" == "-sml" ]] || [[ "$pattern" == "-b" ]] || [[ "$pattern" == "-onl" ]] ||  [[ "$pattern" == "-tru" ]] || [[ "$pattern" == "-defall" ]] || [[ "$pattern" == "-nm5" ]] || [[ "$pattern" == "-nm10" ]] || [[ "$pattern" == "-conv" ]] 
@@ -1109,7 +1112,7 @@ headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  
 wordLinkToReplace="/w.php?s=$keyword"
 WORDREPLACELINK="$wordLinkToReplace"
 
-echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
+echo '<div class="keyword" style="display: none;" >'"$escapedkeyword"'</div>' | tohtml
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtml
 #cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml

@@ -176,7 +176,7 @@ let keywordElement = document.querySelector('.keyword');
 if (keywordElement) {
     keyword = keywordElement.textContent.trim();
 } else {
-    keyword = ""; // Значение по умолчанию, если элемент не найден
+    keyword = ""; // default keyword value
 }
 
 // using value from "s" or "keyword"
@@ -192,25 +192,25 @@ if (searchlangElement) {
     searchlang = ""; // Значение по умолчанию, если элемент не найден
 }
 
-// добавляем переменную для хранения количества совпадений
+// variable to store counts
 let MatchesCount = 0;
 
-// если searchlang = pi, то ищем совпадения в цитате с классом quote и lang=pi
+// if searchlang = pi, looking for matches quote and lang=pi
 if (searchlang === "pi") {
     quotelLang = "pi";
 } else {
     quotelLang = "en";  
 }
 
-// Создаем регулярное выражение для поиска совпадений
+// regexp for countimg
 let regex = new RegExp(searchValue + '(?![^<]*>)', 'gi');
 
-// Обнуляем MatchesCount для каждой строки
+// nullify MatchesCount for each line
 let rowMatchesCounts = [];
 
-// Проходим по каждой строке в таблице
+// precessing each row
 table.rows().every(function () {
-    // Получаем данные текущей строки в колонке с индексом 7
+    // getting the col 7 data
     let rowData = this.data()[7];
 
 let $rowData = $(rowData);
@@ -222,10 +222,10 @@ let $rowData = $(rowData);
         let quoteText = $(this).text().trim();
         matches += (quoteText.match(regex) || []).length;
     });
-    // Подсчитываем количество совпадений для текущей строки
+    // counting matches in current line
  //   let matches = (rowData.match(regex) || []).length;
     
-    // Добавляем количество совпадений в массив
+    // updating array
     rowMatchesCounts.push(matches);
 
     return true; 
@@ -238,15 +238,14 @@ rowMatchesCounts.forEach(function (count, index) {
     table.cell(index, 3).data("" + count).draw();
 });
 
-
-// Суммируем все значения в массиве rowMatchesCounts
+// summarize all counts in rowMatchesCounts
 let totalMatchesCount = rowMatchesCounts.reduce((total, count) => total + count, 0);
 
-console.log("Общее количество совпадений: " + totalMatchesCount);
+console.log("Total Matches: " + totalMatchesCount);
 
 
+//pattern hihlighter
 if (searchValue !== "") {
-    // Получаем таблицу DataTables по ее id
 
     // Получаем все строки таблицы
     table.rows().every(function(rowIdx, tableLoop, rowLoop) {

@@ -5,12 +5,13 @@ start=`date +%s`
 #trap read debug
 #export LANG=en_US.UTF-8
 #export LC_ALL=C.utf8
-export LANG=en_US.UTF-8
+
 #args="$@"
 keyword="$@"
 args="$@"
 source ./config/script_config.sh --source-only
 source ./new/functions.sh --source-only
+export LANG=en_US.UTF-8
 applyOutputLangToResponses
 [[ $keyword == "" ]] && exit 0
 

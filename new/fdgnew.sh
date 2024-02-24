@@ -22,7 +22,7 @@ escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #keyword=byākarissāmīti
 setLinesBeforeAndAfter
 excludeWords
-#echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter allargs $@ or $args
+echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter allargs $@ or $args
 #decide about lang
 setSearchLanguage
 setSearchExtras
@@ -54,7 +54,7 @@ cd $apachesitepath > /dev/null
 
 #proccessing common for all files 
 #if ru
-cat $tmpdir/initrun* > $tmpdir/forpd
+#cat $tmpdir/initrun* > $tmpdir/forpd
 sed -i 's/.html/":1"/g'  $tmpdir/initrun*
 
 sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi
@@ -160,6 +160,9 @@ cat $output/r.html
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 #wc -l $tmpdir/counts $tmpdir/afterawk
 exit 0
+
+cat $tmpdir/forpd | sed -e 's/.*json: *"/@/g'  -e 's/": *"/@/g' 
+
 
 
 echo varFirst

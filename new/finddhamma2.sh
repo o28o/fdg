@@ -1416,7 +1416,7 @@ document.addEventListener("DOMContentLoaded", function() {
     variantsDivs.forEach(function(variantsDiv) {
       if (variantsDiv.id === "variants") {
 variantsDiv.style.display = "block";
-variantsDiv.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${keywordCapitalized} has${variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3)}`;
+variantsDiv.innerHTML = `<img style="margin-top: -2px; height: 15px; " src="/assets/svg/circle-info.svg"> ${keywordCapitalized} has${variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3)}`;
       } else {
         variantsDiv.style.display = "block";
       }

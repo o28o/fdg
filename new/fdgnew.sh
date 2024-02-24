@@ -120,7 +120,7 @@ escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
 WORDREPLACELINK="$wordLinkToReplace"
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
-echo "<script $fontawesomejs></script>" >> $output/r.html
+#echo "<script $fontawesomejs></script>" >> $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
 echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/r.html
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
     variantsDivs.forEach(function(variantsDiv) {
       if (variantsDiv.id === "variants") {
 variantsDiv.style.display = "block";
-variantsDiv.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${keywordCapitalized} has${variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3)}`;
+variantsDiv.innerHTML = `<img style="margin-top: -2px; height: 15px; " src="/assets/svg/circle-info.svg"> ${keywordCapitalized} has${variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3)}`;
       } else {
         variantsDiv.style.display = "block";
       }

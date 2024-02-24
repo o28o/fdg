@@ -19,7 +19,6 @@ args="$@"
 source ./config/script_config.sh --source-only
 source ./new/functions.sh --source-only
 
-
 keyword="$@"
 applyOutputLangToResponses
 [[ $keyword == "" ]] && exit 0
@@ -42,6 +41,8 @@ setSearchLanguage
 
 getWordsForCounts
 
+export LANG=C
+export LC_ALL=C
 if [ ! -s "$tmpdir/words" ]; then
 NotFoundErr
 #cd $apachesitepath > /dev/null

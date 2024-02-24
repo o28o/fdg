@@ -5,11 +5,13 @@ start=`date +%s`
 #trap read debug
 #export LANG=en_US.UTF-8
 #export LC_ALL=C.utf8
+
 #args="$@"
 keyword="$@"
 args="$@"
 source ./config/script_config.sh --source-only
 source ./new/functions.sh --source-only
+#export LANG=en_US.UTF-8
 applyOutputLangToResponses
 [[ $keyword == "" ]] && exit 0
 
@@ -54,6 +56,7 @@ cd $apachesitepath > /dev/null
 
 #proccessing common for all files 
 #if ru
+#cat $tmpdir/initrun* > $tmpdir/forpd
 sed -i 's/.html/":1"/g'  $tmpdir/initrun*
 
 sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi
@@ -159,6 +162,9 @@ cat $output/r.html
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 #wc -l $tmpdir/counts $tmpdir/afterawk
 exit 0
+
+cat $tmpdir/forpd | sed -e 's/.*json: *"/@/g'  -e 's/": *"/@/g' 
+
 
 
 echo varFirst

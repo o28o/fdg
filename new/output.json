@@ -1,0 +1,104 @@
+{
+  "text_index": "an1.21-30",
+  "text_details": [
+    {
+      "type": "dhamma",
+      "count": 3,
+      "unique_words": ["dukkhādhivahaṁ"],
+      "quote": [
+        {
+          "line_id": "an1.29:1.1",
+          "content": {
+            "pali": "“Nāhaṁ, bhikkhave, aññaṁ ekadhammampi samanupassāmi yaṁ evaṁ abhāvitaṁ abahulīkataṁ dukkhādhivahaṁ hoti yathayidaṁ, bhikkhave, cittaṁ.",
+            "english": "“Mendicants, I do not see a single thing that, when it’s not developed and cultivated, brings such suffering as the mind.",
+            "variant": "dukkha -> sukha"
+          }
+        },
+        {
+          "line_id": "an1.29:1.2",
+          "content": {
+            "pali": "Cittaṁ, bhikkhave, abhāvitaṁ abahulīkataṁ dukkhādhivahaṁ hotī”ti.",
+            "russian": "Неразвитый и не разработанный ум принрсит боль.",
+            "english": "An undeveloped and uncultivated mind brings suffering."
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+{
+  "text_index": "an1.21-30",
+  "text_details": {
+    "type": "dhamma",
+          "count": 3,
+      "unique_words": ["dukkhādhivahaṁ"],
+    "quote": [
+      {
+        "line_id": "an1.29:1.1",
+        "pali": "“Nāhaṁ, bhikkhave, aññaṁ ekadhammampi samanupassāmi yaṁ evaṁ abhāvitaṁ abahulīkataṁ dukkhādhivahaṁ hoti yathayidaṁ, bhikkhave, cittaṁ.",
+        "english": "“Mendicants, I do not see a single thing that, when it’s not developed and cultivated, brings such suffering as the mind.",
+        "variant": "dukkha -> sukha"
+      },
+      {
+        "line_id": "an1.29:1.2",
+        "pali": "Cittaṁ, bhikkhave, abhāvitaṁ abahulīkataṁ dukkhādhivahaṁ hotī”ti.",
+        "russian": "Неразвитый и не разработанный ум принрсит боль.",
+        "english": "An undeveloped and uncultivated mind brings suffering."
+      }
+    ]
+  }
+}
+
+{
+  "data": [
+  {
+      "name": "Tiger Nixon",
+      "hr": {
+        "position": "System Architect",
+        "salary": "$320,800",
+        "start_date": "2011-04-25"
+      },
+      "contact": [
+        "Edinburgh",
+        "5421"
+      ]
+    },
+  {
+      "name": "Garrett Winters",
+      "hr": {
+        "position": "Accountant",
+        "salary": "$170,750",
+        "start_date": "2011-07-25"
+      },
+      "contact": [
+        "Tokyo",
+        "8422"
+      ]
+    }
+    ]
+    }
+
+{
+  "data": [
+    [
+      "an1.21-30",
+      "",
+      "dukkhādhivahaṁ",
+      "3",
+      "",    
+      "", 
+      "dhamma",
+      "an1.29:1.1 “Nāhaṁ, bhikkhave, aññaṁ ekadhammampi samanupassāmi yaṁ evaṁ abhāvitaṁ abahulīkataṁ dukkhādhivahaṁ hoti yathayidaṁ, bhikkhave, cittaṁ. “Mendicants, I do not see a single thing that, when it’s not developed and cultivated, brings such suffering as the mind.dukkha -> sukha"
+    ],
+    [
+      "Garrett Winters",
+      "Accountant",
+      "Tokyo",
+      "8422",
+      "2011-07-25",
+      "$170,750"
+    ]
+    ]
+}

@@ -1225,6 +1225,10 @@ WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
 echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtml
+
+
+#echo $keyword in the end
+
 #cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
 #cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
@@ -1393,7 +1397,34 @@ if [[ "$language" == *"Pali"* ]] || [[ "$language" == *"English"* ]];
 	then
 #echo "<a href=\"/result/${tempfilewords}\">Words</a>" | tohtml
 #replace button href in qoute file
+#ping for all variants of the pali word
 
+# use this one if will decide that should show variants from searchIn only
+#    if [ -s "$tmpdir/initrun-var" ]; then
+
+if grep -qrEi -m1 "$keyword" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/ $suttapath/sc-data/sc_bilara_data/variant/pli/ms/vinaya/ 2>/dev/null
+then
+echo '<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var keywordDiv = document.querySelector(".keyword");
+  var variantsDivs = document.querySelectorAll(".variants");
+
+  if (keywordDiv) {
+    var keywordText = keywordDiv.innerText.trim();
+    var keywordCapitalized = keywordText.charAt(0).toUpperCase() + keywordText.slice(1);
+    
+    variantsDivs.forEach(function(variantsDiv) {
+      if (variantsDiv.id === "variants") {
+variantsDiv.style.display = "block";
+variantsDiv.innerHTML = `<i class="fa-solid fa-circle-info"></i> ${keywordCapitalized} has${variantsDiv.innerHTML.substring(variantsDiv.innerHTML.indexOf("has") + 3)}`;
+      } else {
+        variantsDiv.style.display = "block";
+      }
+    });
+  }
+});
+</script>' | tohtml
+fi 
 #echo "<script $fontawesomejs></script>" | tohtml
 		cat $templatefolder/Footer2.html | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
 	else

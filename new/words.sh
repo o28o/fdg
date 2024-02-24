@@ -19,7 +19,8 @@ args="$@"
 source ./config/script_config.sh --source-only
 source ./new/functions.sh --source-only
 
-
+export LANG=C
+export LC_ALL=C
 keyword="$@"
 applyOutputLangToResponses
 [[ $keyword == "" ]] && exit 0

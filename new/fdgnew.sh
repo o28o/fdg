@@ -54,6 +54,7 @@ cd $apachesitepath > /dev/null
 
 #proccessing common for all files 
 #if ru
+cat $tmpdir/initrun* > $tmpdir/forpd
 sed -i 's/.html/":1"/g'  $tmpdir/initrun*
 
 sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi

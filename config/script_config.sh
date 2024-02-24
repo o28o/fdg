@@ -52,6 +52,7 @@ elif [[ "`uname -a`" == *"CentOS-Server"* ]];then
 #export LC_ALL=C.utf8
 #export LC_ALL=ru_RU.utf8
 #export LANG=ru_RU.utf8
+export LC_COLLATE=C
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #export LC_ALL=en_US

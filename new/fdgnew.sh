@@ -24,7 +24,7 @@ escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #keyword=byākarissāmīti
 setLinesBeforeAndAfter
 excludeWords
-echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter allargs $@ or $args
+#echo $keyword in $searchIn lc $LC_ALL lang $LANG src $source lb $linesbefore la $linesafter allargs $@ or $args
 #decide about lang
 setSearchLanguage
 setSearchExtras

@@ -5,6 +5,7 @@ start=`date +%s`
 #trap read debug
 #export LANG=en_US.UTF-8
 #export LC_ALL=C.utf8
+export LANG=en_US.UTF-8
 #args="$@"
 keyword="$@"
 args="$@"

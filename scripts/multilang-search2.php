@@ -22,8 +22,8 @@ if ( preg_match('/\/ru/', $actual_link)) {
 }
   $fdgscript = "./scripts/finddhamma.sh";
   */
-$fdgscript = "./new/finddhamma2.sh";
-
+//$fdgscript = "./new/finddhamma2.sh";
+$fdgscript = "./scripts/finddhamma.sh";
 
 /* single search no radiobuttons */
 if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {

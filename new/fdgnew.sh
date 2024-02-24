@@ -11,7 +11,7 @@ keyword="$@"
 args="$@"
 source ./config/script_config.sh --source-only
 source ./new/functions.sh --source-only
-export LANG=en_US.UTF-8
+#export LANG=en_US.UTF-8
 applyOutputLangToResponses
 [[ $keyword == "" ]] && exit 0
 

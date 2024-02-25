@@ -181,7 +181,7 @@ if (keywordElement) {
 
 // using value from "s" or "keyword"
 //let searchValue = finder && finder.trim() !== "" ? finder : keyword;
-let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
+let searchValue = finder && finder.trim() !== "" ? finder.replace(/\\b/g, '') : keyword.replace(/\\b/g, '');
 if (searchValue !== "") {
     // Получаем таблицу DataTables по ее id
 

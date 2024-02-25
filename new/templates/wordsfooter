@@ -89,7 +89,7 @@ if (keywordElement) {
 }
 
 //let searchValue = finder && finder.trim() !== "" ? finder : keyword;
-let searchValue = finder && finder.trim() !== "" ? finder : keyword.replace(/\\b/g, '');
+let searchValue = finder && finder.trim() !== "" ? finder.replace(/\\b/g, '') : keyword.replace(/\\b/g, '');
 console.log("searchValue highlighter", searchValue);
 if (searchValue !== "") {
   

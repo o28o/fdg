@@ -60,75 +60,70 @@ include '../scripts/opentexts.php';
             <div class="col-md-6 offset-md-3">
     <h2 class="text-center my-4 mb-5">       <a href="/ru/new">     <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="height:30px;"></a>   Search for Truth</h2>
         
-        <form  action="/s.php" method="GET">
+<form id="searchForm" action="/s.php" method="GET">
     <div class="my-3 form-group input-group ui-widget dropup rounded-pill">
-<label class="sr-only dropup rounded-pill" for="paliauto"></label>        <div class="searchinputdiv">      
-  <input name="s" type="search" class="form-control rounded-pill searchinput " id="paliauto" placeholder="e.g. Kāyagat or sn56.11"  multiple>
- <!-- <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
-    <i class="fas fa-times" aria-hidden="true"></i>
-    <span class="visually-hidden"><?php echo $clearaption;?></span>
-  </button>-->
-</div>
+        <label class="sr-only dropup rounded-pill" for="paliauto"></label>
+        <div class="searchinputdiv">
+            <input name="s" type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" multiple>
+        </div>
+                <div class="input-group-append ms-2">
+            <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
+                Search
+            </button>
+            <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn-icon" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
+                <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i>
+            </button>
+        </div>
 
-<div class="input-group-append ms-2">
-  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
-    Search</button>
-  <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn-icon" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
-  <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i> 
-  </button>
-</div>  
-    
-    
-    
+        <div class="searchcheckboes mt-2">
+      
+      <!-- Чекбоксы для выбора места поиска -->
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="an">
+            <label class="form-check-label" for="checkboxAn">AN</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="sn">
+            <label class="form-check-label" for="checkboxSn">SN</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="mn">
+            <label class="form-check-label" for="checkboxMn">MN</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="dn">
+            <label class="form-check-label" for="checkboxDn">DN</label>
+        </div>   
+        <br>
+        <!-- Добавьте другие чекбоксы по аналогии для MN, DN и т.д. -->
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kn">
+            <label class="form-check-label" for="checkboxKn">KN</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="lt">
+            <label class="form-check-label" for="checkboxLt">Later KN</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="vn">
+            <label class="form-check-label" for="checkboxVn">Vinaya</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kp">
+            <label class="form-check-label" for="checkboxKp">Later Vinaya</label>
+        </div>   
+        </div>
 
-<!-- <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i> --> 
+    </div>
 
-</div>
-</div>
-
-       <div class="justify-content-center text-center">
-     <div id="spinner" style="display: none;" >
-              <div class="spinner-border mt-3" role="status">
+    <div class="justify-content-center text-center">
+        <div id="spinner" style="display: none;">
+            <div class="spinner-border mt-3" role="status">
                 <span class="visually-hidden">Loading...</span>
-              </div>
-              </div>     
-</div>             
-                    
-
-
-<script>
-document.getElementById('paliauto').addEventListener('change', function() {
-    this.value = this.value.trim();
-});
-  /*  function trimParamsAndShowSpinner() {
-        var paramsToTrim = ['s', 'p', 'extra', 'q'];
-
-        paramsToTrim.forEach(function(paramName) {
-            var paramValue = document.getElementById(paramName).value;
-            document.getElementById(paramName).value = paramValue.trim();
-        });
-
-        var sValue = document.getElementById('paliauto').value;
-        document.getElementById('paliauto').value = sValue.trim();
-
-        var spinner = document.getElementById('spinner');
-        if (spinner) {
-            spinner.style.display = 'block';
-        }
-    }*/
-</script>
-
-	  <script src="/assets/js/smoothScroll.js" defer></script>
-	<script defer>
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    // Скрываем спиннер
-    document.getElementById('spinner').style.display = 'none';
-  }
-});
-</script>           
-                    
-                </form>
+            </div>
+        </div>
+    </div>
+</form>
             </div><div class="container text-center mt-5">
 <?php
 if ( $lang == "ru" ) {

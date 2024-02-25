@@ -192,6 +192,15 @@ include '../scripts/opentexts.php';
         
         </div>          
 
+<script defer>
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    // Событие pageshow возникает при возврате назад с помощью кнопки "назад" браузера
+    // Скрываем спиннер
+    document.getElementById('spinner').style.display = 'none';
+  }
+});
+</script>
 
 	<div class="align-items-center form-check-inline mt-2 mx-0">
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">

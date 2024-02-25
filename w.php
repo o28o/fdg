@@ -4,6 +4,8 @@ error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
 
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
 $uri = $_SERVER['REQUEST_URI'];
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 $url = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -28,7 +30,11 @@ $query = $_SERVER['QUERY_STRING'];
         echo $key . ' => ' . $value . '<br>';
     }
 } */
-
+if ( preg_match('/\/ru/', $actual_link)) {
+  $outputlang = "-oru";
+} else {
+    $outputlang = "";
+    }
 
 	$s = isset($_GET['s']) ? htmlspecialchars($_GET['s']) : '';
 	
@@ -44,9 +50,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
  $stringForOpen = isset($s) ? strtolower(trim(str_replace("`", "", $s))) : '';
 
 if ( preg_match('/html/', $d ))  {	
-$command = escapeshellcmd("bash ./new/words.sh $searchIn $stringForOpen");
+$command = escapeshellcmd("bash ./new/words.sh $outputlang $searchIn $stringForOpen");
 } else {
-$command = escapeshellcmd("bash ./new/words.sh $searchIn $stringForOpen");
+$command = escapeshellcmd("bash ./new/words.sh $outputlang $searchIn $stringForOpen");
 }
 
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");

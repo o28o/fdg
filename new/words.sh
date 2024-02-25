@@ -112,7 +112,7 @@ cat $tmpdir/threetables | awk -v keyword="$keyword" -v filename="$filename" 'BEG
     print "<tr><td>" word "</td><td><a href=\"/" filename "?f=" word "\">" counttexts "</a></td><td><div style=\"display:none;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:none;\">" wordTabThree " </div>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 else
-cat $tmpdir/threetables | awk -v keyword="$htmlkeyword" 'BEGIN { 
+cat $tmpdir/threetables | awk -v keyword="$htmlkeyword" -v source="$source" 'BEGIN { 
     FS = "@" 
 } 
 {
@@ -131,7 +131,7 @@ cat $tmpdir/threetables | awk -v keyword="$htmlkeyword" 'BEGIN {
     }
 
     # Вывод форматированной строки
-    print "<tr><td>" word "</td><td><a href=/s.php?s=\\b" word "\\b>" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
+    print "<tr><td>" word "</td><td><a href=/s.php?s=\\b" word "\\b&d=" source " >" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
 }' > $tmpdir/wordsfinalhtml
 #    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
 fi 

@@ -60,7 +60,7 @@ include '../scripts/opentexts.php';
             <div class="col-md-6 offset-md-3">
     <h2 class="text-center my-4 mb-5">       <a href="/ru/new">     <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="height:30px;"></a>   Search for Truth</h2>
         
-<form id="searchForm" action="/s.php" method="GET">
+<form id="searchForm" action="./s.php" method="GET">
     <div class="my-3 form-group input-group ui-widget dropup rounded-pill">
         <label class="sr-only dropup rounded-pill" for="paliauto"></label>
         <div class="searchinputdiv">

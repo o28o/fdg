@@ -5,6 +5,7 @@ include_once('config/config.php');
 include_once('config/translate.php');
 
 //echo basename($_SERVER['REQUEST_URI']);
+$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $uri = $_SERVER['REQUEST_URI'];
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
@@ -30,6 +31,12 @@ $query = $_SERVER['QUERY_STRING'];
     }
 } */
 
+if ( preg_match('/\/ru/', $actual_link)) {
+  $outputlang = "-oru";
+} else {
+    $outputlang = "";
+    }
+
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $s = trim($_GET["s"]);
 }
@@ -44,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 }
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));
-$command = escapeshellcmd("bash ./fdgnew.sh $searchIn $stringForOpen");
+$command = escapeshellcmd("bash ./fdgnew.sh $outputlang $searchIn $stringForOpen");
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
 $output = shell_exec($command); 

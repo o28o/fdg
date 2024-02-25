@@ -380,6 +380,7 @@ window.addEventListener("load", function() {
 
         let params = new URLSearchParams(document.location.search);
         let finder = params.get("s");
+        //finder = finder.replace(/\\b/g, '');
         let query = params.get("q");
         let url = document.location.href;
 

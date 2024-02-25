@@ -124,7 +124,9 @@ anchor = segment;
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
 let params = new URLSearchParams(document.location.search);
-  let finder = params.get("s");
+  let = params.get("s");
+  //finder = finder.replace(/\\b/g, '');
+  console.log("finder ", finder);
 if (finder && finder.trim() !== "") {
     let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
     paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);

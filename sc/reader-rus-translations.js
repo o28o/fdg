@@ -183,6 +183,7 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
 let params = new URLSearchParams(document.location.search);
   let finder = params.get("s");
+ //  finder = finder.replace(/\\b/g, '');
 //  finder = finder.replace(/%08/g, '\\b');
  // console.log(finder);
    // let finder = decodeURIComponent(params.get("s"));

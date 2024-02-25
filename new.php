@@ -191,12 +191,11 @@ include '../scripts/opentexts.php';
        
         
         </div>          
-              
 
 
 	<div class="align-items-center form-check-inline mt-2 mx-0">
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
-        <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
+        <option value="-oru" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn") echo "selected";?> ><?php echo "$radiokn";?></option>
         <option value="-all" <?php if (isset($extra) && $p == "-all") echo "selected";?> ><?php echo "$radioltr";?></option>
@@ -472,6 +471,10 @@ input.setSelectionRange(input.value.length, input.value.length);
         </div>
     </div>
 </form>
+
+
+
+
             </div><div class="container text-center mt-5">
 <?php
 if ( $lang == "ru" ) {

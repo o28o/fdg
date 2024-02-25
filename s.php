@@ -31,14 +31,14 @@ $query = $_SERVER['QUERY_STRING'];
     }
 } */
 
-if ( preg_match('/\/ru/', $actual_link)) {
-  $outputlang = "-oru";
-} else {
-    $outputlang = "";
-    }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $s = trim($_GET["s"]);
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $p = trim($_GET["p"]);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 }
  		$string = str_replace("`", "", $s);
 $stringForOpen = strtolower(trim($string));
-$command = escapeshellcmd("bash ./fdgnew.sh $outputlang $searchIn $stringForOpen");
+$command = escapeshellcmd("bash ./fdgnew.sh $p $searchIn $stringForOpen");
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 
 $output = shell_exec($command); 

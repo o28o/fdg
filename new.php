@@ -6,6 +6,17 @@ include_once('../config/translate.php');
 include '../scripts/opentexts.php';
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
+
+<?php
+if(isset($_GET['checkboxes'])){
+    $selected_values = array_map('strtolower', $_GET['checkboxes']);
+    $selected_values_string = implode(',', $selected_values);
+    $new_url = 'http://127.0.0.1:8080/s.php?d=' . $selected_values_string;
+    header('Location: ' . $new_url);
+    exit();
+}
+?>
+
 <html lang="en" data-bs-theme="dark">
 
 <head>
@@ -65,6 +76,10 @@ include '../scripts/opentexts.php';
         <label class="sr-only dropup rounded-pill" for="paliauto"></label>
         <div class="searchinputdiv">
             <input name="s" type="search" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" multiple>
+              <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
+    <i class="fas fa-times" aria-hidden="true"></i>
+    <span class="visually-hidden"><?php echo $clearaption;?></span>
+  </button>
         </div>
                 <div class="input-group-append ms-2">
             <button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn searchbutton btn-primary mainbutton ms-1 me-1 rounded-pill">
@@ -82,14 +97,13 @@ include '../scripts/opentexts.php';
    
             <div class="">
 
-            <div class="container d-flex text-center align-items-center flex-column pt-1 pb-1">
-  
+            <div class="container d-flex text-center align-items-center flex-column pb-1">
     
      <div class="" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
-  <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>Настройки
+<i class="fa-solid fa-gear fa-sm" aria-hidden="true"></i> options
   <span class="visually-hidden"><?php echo $searchcaption;?></span>
   </div> 
-           
+         <!--    -->   
         
         
   <div class="collapse" id="collapseSettings">
@@ -97,31 +111,31 @@ include '../scripts/opentexts.php';
 
             <div class="searchcheckboxes text-start mt-2">
       
-      <!-- Чекбоксы для выбора места поиска -->
+      <!-- Checkboxes for searchIn location -->
 <div class="block1 d-inline-block align-top">
 
 <ul class="list-unstyled">
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="an" id="checkboxAn">
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="an" id="checkboxAn">
             <label class="form-check-label" for="checkboxAn">Aṅguttara</label>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="sn" id="checkboxSn">
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="sn" id="checkboxSn">
             <label class="form-check-label" for="checkboxSn">Saṁyutta</label>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="mn" id="checkboxMn">
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="mn" id="checkboxMn">
             <label class="form-check-label" for="checkboxMn">Majjhima</label>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="dn" id="checkboxDn">
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="dn" id="checkboxDn">
             <label class="form-check-label" for="checkboxDn">Dīgha</label>
         </div>
     </li>
@@ -130,34 +144,34 @@ include '../scripts/opentexts.php';
 
 <div class="block2 d-inline-block align-top">
    
-              <!-- Добавьте другие чекбоксы по аналогии для MN, DN и т.д. -->
 <ul class="list-unstyled">
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kn" id="checkboxKn">
-            <label class="form-check-label" for="checkboxKn">Khuddaka</label>
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="kn" id="checkboxKn">
+                <div data-bs-toggle="tooltip" data-bs-placement="top" title='ud iti dhp snp thig thag'>    <label class="form-check-label" for="checkboxKn">KN</label></div>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="lt" id="checkboxLt">
-            <label class="form-check-label" for="checkboxLt">Later KN</label>
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="lt" id="checkboxLt">
+                <div data-bs-toggle="tooltip" data-bs-placement="top" title='ja tha-ap vv pe etc'>    <label class="form-check-label" for="checkboxLt">Later</label></div>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="vn" id="checkboxVn">
-            <label class="form-check-label" for="checkboxVn">Vinaya</label>
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="vn" id="checkboxVn">
+                <div data-bs-toggle="tooltip" data-bs-placement="top" title='Pātimokkha ca vibhaṅga ca'>    <label class="form-check-label" for="checkboxVn">Vinaya</label></div>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kp" id="checkboxKp">
-            <label class="form-check-label" for="checkboxKp">Later Vinaya</label>
+            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="kp" id="checkboxKp">
+                <div data-bs-toggle="tooltip" data-bs-placement="top" title='Khandhaka ca parivāra ca'>    <label class="form-check-label" for="checkboxKp">Vinaya Later</label></div>
         </div>
     </li>
 </ul>
         </div>
+        
         
  <div class="block3 d-inline-block align-top">
               
@@ -191,20 +205,12 @@ include '../scripts/opentexts.php';
        
         
         </div>          
+        </div>    
 
-<script defer>
-window.addEventListener('pageshow', function(event) {
-  if (event.persisted) {
-    // Событие pageshow возникает при возврате назад с помощью кнопки "назад" браузера
-    // Скрываем спиннер
-    document.getElementById('spinner').style.display = 'none';
-  }
-});
-</script>
 
 	<div class="align-items-center form-check-inline mt-2 mx-0">
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
-        <option value="-oru" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
+        <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn") echo "selected";?> ><?php echo "$radiokn";?></option>
         <option value="-all" <?php if (isset($extra) && $p == "-all") echo "selected";?> ><?php echo "$radioltr";?></option>
@@ -226,18 +232,27 @@ window.addEventListener('pageshow', function(event) {
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
+  
+  <script>
+$(document).ready(function() {
+  // Обработчик для нажатия клавиши Enter
+  $(document).on('keydown', function(event) {
+    if (event.key === 'Enter') {
+      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+     $('#navbarResponsive').collapse('hide');
+    }
+  });
 
-         <div style="max-width: 300px;" class="my-2"> 
-     <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
-  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
-  </div>
-  
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
-  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></div>
-  </div>
-  
+  // Обработчик для отправки формы
+  $('#searchbtn').on('click', function() {
+    $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+          $('#navbarResponsive').collapse('hide');
+  });
+});
+</script>
+
+
+  	<div class="align-items-center form-check-inline mt-2 mx-0">
 <div class="align-items-center form-check-inline mt-3">
   <div class="mb-2"><button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā" autocomplete="off">ā</button>
   <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ" autocomplete="off">ṁ</button>
@@ -292,66 +307,6 @@ window.addEventListener('pageshow', function(event) {
 
   <?php echo $regexlink;?> 
  </p>
-
-<script>
-  $(document).ready(function () {
-
-    function saveCollapseState(collapseId, isCollapsed) {
-      localStorage.setItem("coll_" + collapseId, isCollapsed);
-    }
-
-    function loadCollapseState(collapseId) {
-      var isCollapsed = localStorage.getItem("coll_" + collapseId) === "true";
-      return isCollapsed;
-    }
-
-    function handleCollapse(collapseId, isCollapsed) {
-      if (collapseId !== "navbarResponsive" && collapseId !== "collapseSettings") {
-        if (isCollapsed) {
-          $("#" + collapseId).collapse("show");
-        } else {
-          $("#" + collapseId).collapse("hide");
-        }
-      }
-    }
-
-    $(".collapse").on("shown.bs.collapse", function () {
-      saveCollapseState(this.id, true);
-    });
-
-    $(".collapse").on("hidden.bs.collapse", function () {
-      saveCollapseState(this.id, false);
-    });
-
-    $(".collapse").each(function () {
-      var isCollapsed = loadCollapseState(this.id);
-      handleCollapse(this.id, isCollapsed);
-    });
-
-    // Save and restore scroll position
-    var scrollPos = localStorage.getItem("scrollPos");
-    if (scrollPos) {
-      window.scrollTo(0, scrollPos);
-    }
-
-    $(window).on("beforeunload", function () {
-      localStorage.setItem("scrollPos", window.scrollY);
-    });
-
-    // Smooth scroll
-    $("a[href^='#']").on("click", function (e) {
-      e.preventDefault();
-
-      var target = $(this).attr("href");
-      $("html, body").animate({
-        scrollTop: $(target).offset().top
-      }, 1000, "easeInOutExpo");
-    });
-  });
-</script>
-
-	  <script src="/assets/js/smoothScroll.js" defer></script>
-
 <script>
   
 //  autocomplete part
@@ -392,15 +347,17 @@ input.addEventListener("keypress", function(event) {
 // Получаем кнопки для вставки букв
 var buttons = document.querySelectorAll('.insert-letter');
 
-// Добавляем обработчики событий для каждой кнопки
 buttons.forEach(function(button) {
   button.addEventListener('click', function(event) {
     event.preventDefault();
     var letterValue = this.getAttribute('data-letter');
+    console.log("Value of letter to insert:", letterValue); // Лог значения буквы для вставки
     var currentValue = input.value;
+    console.log("Current input value before insert:", currentValue); // Лог текущего значения ввода перед вставкой
     var selectionStart = input.selectionStart;
     var selectionEnd = input.selectionEnd;
     var newValue = currentValue.substring(0, selectionStart) + letterValue + currentValue.substring(selectionEnd);
+    console.log("New input value after insert:", newValue); // Лог нового значения ввода после вставки
     input.value = newValue;
 
     // Перемещаем курсор после вставленных символов
@@ -464,6 +421,69 @@ function checkInput() {
 input.focus();
 input.setSelectionRange(input.value.length, input.value.length);
 </script>
+
+
+
+<script>
+  $(document).ready(function () {
+
+    function saveCollapseState(collapseId, isCollapsed) {
+      localStorage.setItem("coll_" + collapseId, isCollapsed);
+    }
+
+    function loadCollapseState(collapseId) {
+      var isCollapsed = localStorage.getItem("coll_" + collapseId) === "true";
+      return isCollapsed;
+    }
+
+    function handleCollapse(collapseId, isCollapsed) {
+      if (collapseId !== "navbarResponsive" && collapseId !== "collapseSettings") {
+        if (isCollapsed) {
+          $("#" + collapseId).collapse("show");
+        } else {
+          $("#" + collapseId).collapse("hide");
+        }
+      }
+    }
+
+    $(".collapse").on("shown.bs.collapse", function () {
+      saveCollapseState(this.id, true);
+    });
+
+    $(".collapse").on("hidden.bs.collapse", function () {
+      saveCollapseState(this.id, false);
+    });
+
+    $(".collapse").each(function () {
+      var isCollapsed = loadCollapseState(this.id);
+      handleCollapse(this.id, isCollapsed);
+    });
+
+    // Save and restore scroll position
+    var scrollPos = localStorage.getItem("scrollPos");
+    if (scrollPos) {
+      window.scrollTo(0, scrollPos);
+    }
+
+    $(window).on("beforeunload", function () {
+      localStorage.setItem("scrollPos", window.scrollY);
+    });
+
+    // Smooth scroll
+    $("a[href^='#']").on("click", function (e) {
+      e.preventDefault();
+
+      var target = $(this).attr("href");
+      $("html, body").animate({
+        scrollTop: $(target).offset().top
+      }, 1000, "easeInOutExpo");
+    });
+  });
+</script>
+
+	  <script src="/assets/js/smoothScroll.js" defer></script>
+
+
 </div>    
 </div>
 </div>      
@@ -631,6 +651,15 @@ $(function () {
     });
 </script>
 
+<script defer>
+window.addEventListener('pageshow', function(event) {
+  if (event.persisted) {
+    // Событие pageshow возникает при возврате назад с помощью кнопки "назад" браузера
+    // Скрываем спиннер
+    document.getElementById('spinner').style.display = 'none';
+  }
+});
+</script>
 <script defer src="/assets/js/themeswitch.js"></script>
 </body>
 

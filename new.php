@@ -7,15 +7,6 @@ include '../scripts/opentexts.php';
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
 
-<?php
-if(isset($_GET['checkboxes'])){
-    $selected_values = array_map('strtolower', $_GET['checkboxes']);
-    $selected_values_string = implode(',', $selected_values);
-    $new_url = 'http://127.0.0.1:8080/s.php?d=' . $selected_values_string;
-    header('Location: ' . $new_url);
-    exit();
-}
-?>
 
 <html lang="en" data-bs-theme="dark">
 
@@ -117,25 +108,25 @@ if(isset($_GET['checkboxes'])){
 <ul class="list-unstyled">
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="an" id="checkboxAn">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="an" id="checkboxAn">
             <label class="form-check-label" for="checkboxAn">Aṅguttara</label>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="sn" id="checkboxSn">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="sn" id="checkboxSn">
             <label class="form-check-label" for="checkboxSn">Saṁyutta</label>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="mn" id="checkboxMn">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="mn" id="checkboxMn">
             <label class="form-check-label" for="checkboxMn">Majjhima</label>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="dn" id="checkboxDn">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="dn" id="checkboxDn">
             <label class="form-check-label" for="checkboxDn">Dīgha</label>
         </div>
     </li>
@@ -147,25 +138,25 @@ if(isset($_GET['checkboxes'])){
 <ul class="list-unstyled">
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="kn" id="checkboxKn">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kn" id="checkboxKn">
                 <div data-bs-toggle="tooltip" data-bs-placement="top" title='ud iti dhp snp thig thag'>    <label class="form-check-label" for="checkboxKn">KN</label></div>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="lt" id="checkboxLt">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="lt" id="checkboxLt">
                 <div data-bs-toggle="tooltip" data-bs-placement="top" title='ja tha-ap vv pe etc'>    <label class="form-check-label" for="checkboxLt">Later</label></div>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="vn" id="checkboxVn">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="vn" id="checkboxVn">
                 <div data-bs-toggle="tooltip" data-bs-placement="top" title='Pātimokkha ca vibhaṅga ca'>    <label class="form-check-label" for="checkboxVn">Vinaya</label></div>
         </div>
     </li>
     <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="checkboxes[]" value="kp" id="checkboxKp">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kp" id="checkboxKp">
                 <div data-bs-toggle="tooltip" data-bs-placement="top" title='Khandhaka ca parivāra ca'>    <label class="form-check-label" for="checkboxKp">Vinaya Later</label></div>
         </div>
     </li>

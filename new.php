@@ -75,47 +75,395 @@ include '../scripts/opentexts.php';
             </button>
         </div>
 
-        <div class="searchcheckboes mt-2">
-      
-      <!-- Чекбоксы для выбора места поиска -->
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="an">
-            <label class="form-check-label" for="checkboxAn">AN</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="sn">
-            <label class="form-check-label" for="checkboxSn">SN</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="mn">
-            <label class="form-check-label" for="checkboxMn">MN</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="dn">
-            <label class="form-check-label" for="checkboxDn">DN</label>
-        </div>   
-        <br>
-        <!-- Добавьте другие чекбоксы по аналогии для MN, DN и т.д. -->
-            <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kn">
-            <label class="form-check-label" for="checkboxKn">KN</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="lt">
-            <label class="form-check-label" for="checkboxLt">Later KN</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="vn">
-            <label class="form-check-label" for="checkboxVn">Vinaya</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kp">
-            <label class="form-check-label" for="checkboxKp">Later Vinaya</label>
-        </div>   
-        </div>
+
 
     </div>
 
+   
+            <div class="">
+
+            <div class="container d-flex text-center align-items-center flex-column pt-1 pb-1">
+  
+    
+     <div class="" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+  <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>Настройки
+  <span class="visually-hidden"><?php echo $searchcaption;?></span>
+  </div> 
+           
+        
+        
+  <div class="collapse" id="collapseSettings">
+  <div class="float-start">
+
+            <div class="searchcheckboxes text-start mt-2">
+      
+      <!-- Чекбоксы для выбора места поиска -->
+<div class="block1 d-inline-block align-top">
+
+<ul class="list-unstyled">
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="an" id="checkboxAn">
+            <label class="form-check-label" for="checkboxAn">Aṅguttara</label>
+        </div>
+    </li>
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="sn" id="checkboxSn">
+            <label class="form-check-label" for="checkboxSn">Saṁyutta</label>
+        </div>
+    </li>
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="mn" id="checkboxMn">
+            <label class="form-check-label" for="checkboxMn">Majjhima</label>
+        </div>
+    </li>
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="dn" id="checkboxDn">
+            <label class="form-check-label" for="checkboxDn">Dīgha</label>
+        </div>
+    </li>
+</ul>
+        </div>
+
+<div class="block2 d-inline-block align-top">
+   
+              <!-- Добавьте другие чекбоксы по аналогии для MN, DN и т.д. -->
+<ul class="list-unstyled">
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kn" id="checkboxKn">
+            <label class="form-check-label" for="checkboxKn">Khuddaka</label>
+        </div>
+    </li>
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="lt" id="checkboxLt">
+            <label class="form-check-label" for="checkboxLt">Later KN</label>
+        </div>
+    </li>
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="vn" id="checkboxVn">
+            <label class="form-check-label" for="checkboxVn">Vinaya</label>
+        </div>
+    </li>
+    <li>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="dcheckbox" value="kp" id="checkboxKp">
+            <label class="form-check-label" for="checkboxKp">Later Vinaya</label>
+        </div>
+    </li>
+</ul>
+        </div>
+        
+ <div class="block3 d-inline-block align-top">
+              
+<ul class="list-unstyled">
+    <li>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
+                <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'>    <label class="form-check-label" for="onlCheckbox"><?php echo $checkboxonl;?></label></div>
+        </div>
+    </li>
+        <li>
+        <div class="form-check">
+  <input class="form-check-input" type="checkbox" id="lbCheckbox" name="lb" <?php if (isset($extra) && $extra=="-lb$defaultla ") echo "checked";?>  value='<?php echo "-lb$defaultla"?>'>
+             <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'> <label class="form-check-label" for="lbCheckbox"><?php echo $checkboxla;?></label>
+</div>
+
+        </div>
+    </li>
+    <li>
+        <div class="form-check">
+  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
+             <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'> <label class="form-check-label" for="laCheckbox"><?php echo $checkboxla;?></label>
+</div>
+
+        </div>
+    </li>
+
+
+</ul>
+        </div>
+       
+        
+        </div>          
+              
+
+
+	<div class="align-items-center form-check-inline mt-2 mx-0">
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
+        <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
+        <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
+        <option value="-kn" <?php if (isset($extra) && $p == "-kn") echo "selected";?> ><?php echo "$radiokn";?></option>
+        <option value="-all" <?php if (isset($extra) && $p == "-all") echo "selected";?> ><?php echo "$radioltr";?></option>
+       <option value="-all -vin" <?php if (isset($extra) && $p == "-all -vin") echo "selected";?> ><?php echo "$radiovinall";?></option>
+        <option value="-b" <?php if (isset($p) && $p == "-b") echo "selected";?> ><?php echo $radiotbw;?></option>
+        <option value="-en" <?php if (isset($p) && $p == "-en") echo "selected";?> ><?php echo $radioen;?></option>
+    </select>
+       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
+
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
+        <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
+        <option value="-def" <?php if (isset($extra) && $extra == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
+        <option value="-sml" <?php if (isset($extra) && $extra == "-sml") echo "selected";?> ><?php echo "$listsml";?></option>
+        <option value="-defall" <?php if (isset($extra) && $extra == "-defall") echo "selected";?> ><?php echo "$listdefall";?></option>
+        <option value="-nm10" <?php if (isset($extra) && $extra == "-nm10") echo "selected";?> ><?php echo "$listnm10";?></option>
+      <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
+    </select>
+	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</div>
+</div>
+  <!--  <label for="pOptions"></label> -->
+  <!-- extra options -->
+
+         <div style="max-width: 300px;" class="my-2"> 
+     <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
+  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
+  </div>
+  
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
+  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></div>
+  </div>
+  
+<div class="align-items-center form-check-inline mt-3">
+  <div class="mb-2"><button class="btn btn-secondary rounded-pill insert-letter" data-letter="ā" autocomplete="off">ā</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṁ" autocomplete="off">ṁ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ñ" autocomplete="off">ñ</button>
+ <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṭ" autocomplete="off">ṭ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ī" autocomplete="off">ī</button> </div>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṇ" autocomplete="off">ṇ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ū" autocomplete="off">ū</button>
+
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṅ" autocomplete="off">ṅ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḍ" autocomplete="off">ḍ</button>
+  <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ḷ" autocomplete="off">ḷ</button>
+ <!-- <button class="btn btn-secondary rounded-pill insert-letter" data-letter="ṃ" autocomplete="off">ṃ</button> -->
+</div>
+
+<div class="mt-3">
+  <script src="/assets/js/setDefaultMode.js"></script>
+<button type="button" class="btn btn-sm btn-primary rounded-pill" onclick="savePreferences()"><?php echo $btnsave;?></button>
+<button type="button" class="btn btn-sm btn-secondary rounded-pill" onclick="resetPreferences()"><?php echo $btnreset;?></button>
+  
+     <div class="modal fade" id="copyPopup" tabindex="-1" role="dialog" aria-labelledby="copyPopupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-muted">
+                 Done
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+ <h5 class="mt-4"><?php echo $regexMemoh5;?></h5> 
+<div class="mt-4" style="text-align: left;">
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -exc "><strong>X -exc Y Z</strong></button> - <?php echo $exc;?> <br>
+  <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc Y(ti|nti)</strong></button> - <?php echo $excfew;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - <?php echo $anynumber;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - <?php echo $fewsymbols;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - <?php echo $nextwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\\S*\\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>a[ṁ]?</strong></button> - <?php echo $optionalletter;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='tatt($|[^h])'><strong>tatt($|[^h])</strong></button> - <?php echo $variantsexc;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(a|b|c)'><strong>(a|b|c)</strong></button> - <?php echo $searchfewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="mn[0-9].*X"><strong>mn[0-9].*X</strong></button> - <?php echo $inallnikaya;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter="dn22.*"><strong>dn22.*Y</strong></button> - <?php echo $inonesutta;?> <br>
+    <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='sn56.*(seyyathāpi|adhivacan|ūpama|opama)'><strong>sn56.*(seyyathāpi|adhivacan|ūpama|opama)</strong></button> - <?php echo $metaphorssmlletter;?> <br><br>
+</div>
+
+  <?php echo $regexlink;?> 
+ </p>
+
+<script>
+  $(document).ready(function () {
+
+    function saveCollapseState(collapseId, isCollapsed) {
+      localStorage.setItem("coll_" + collapseId, isCollapsed);
+    }
+
+    function loadCollapseState(collapseId) {
+      var isCollapsed = localStorage.getItem("coll_" + collapseId) === "true";
+      return isCollapsed;
+    }
+
+    function handleCollapse(collapseId, isCollapsed) {
+      if (collapseId !== "navbarResponsive" && collapseId !== "collapseSettings") {
+        if (isCollapsed) {
+          $("#" + collapseId).collapse("show");
+        } else {
+          $("#" + collapseId).collapse("hide");
+        }
+      }
+    }
+
+    $(".collapse").on("shown.bs.collapse", function () {
+      saveCollapseState(this.id, true);
+    });
+
+    $(".collapse").on("hidden.bs.collapse", function () {
+      saveCollapseState(this.id, false);
+    });
+
+    $(".collapse").each(function () {
+      var isCollapsed = loadCollapseState(this.id);
+      handleCollapse(this.id, isCollapsed);
+    });
+
+    // Save and restore scroll position
+    var scrollPos = localStorage.getItem("scrollPos");
+    if (scrollPos) {
+      window.scrollTo(0, scrollPos);
+    }
+
+    $(window).on("beforeunload", function () {
+      localStorage.setItem("scrollPos", window.scrollY);
+    });
+
+    // Smooth scroll
+    $("a[href^='#']").on("click", function (e) {
+      e.preventDefault();
+
+      var target = $(this).attr("href");
+      $("html, body").animate({
+        scrollTop: $(target).offset().top
+      }, 1000, "easeInOutExpo");
+    });
+  });
+</script>
+
+	  <script src="/assets/js/smoothScroll.js" defer></script>
+
+<script>
+  
+//  autocomplete part
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
+  }
+});  
+  
+  
+  // Function to reset all form elements
+function resetForm() {
+  document.getElementById("paliauto").value = "";
+  document.getElementById("pOptions").selectedIndex = 0;
+  document.getElementById("extraOptions").selectedIndex = 0;
+  document.getElementById("onlCheckbox").checked = false;
+  document.getElementById("laCheckbox").checked = false;
+  // Reset other checkboxes and dropdowns as needed
+  checkInput(); // Check input after resetting form
+}
+
+// Event listener for the clear button
+document.getElementById("clearbtn").addEventListener("click", function() {
+  resetForm();
+});
+
+// Event listener to submit the form when Enter key is pressed
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
+  }
+});
+
+// Получаем кнопки для вставки букв
+var buttons = document.querySelectorAll('.insert-letter');
+
+// Добавляем обработчики событий для каждой кнопки
+buttons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    var letterValue = this.getAttribute('data-letter');
+    var currentValue = input.value;
+    var selectionStart = input.selectionStart;
+    var selectionEnd = input.selectionEnd;
+    var newValue = currentValue.substring(0, selectionStart) + letterValue + currentValue.substring(selectionEnd);
+    input.value = newValue;
+
+    // Перемещаем курсор после вставленных символов
+    var newCursorPosition = selectionStart + letterValue.length;
+    input.setSelectionRange(newCursorPosition, newCursorPosition);
+
+    // Имитируем событие ввода, чтобы обновить состояние автозаполнения
+    var inputEvent = new Event('input', { bubbles: true });
+    input.dispatchEvent(inputEvent);
+
+    // Перемещаем фокус на поле ввода
+    input.focus();
+  });
+});
+
+// Получаем чекбоксы и выпадающие списки
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+var selects = document.querySelectorAll('select');
+
+// Добавляем обработчики событий для чекбоксов
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', checkInput);
+});
+
+// Добавляем обработчики событий для выпадающих списков
+selects.forEach(function(select) {
+  select.addEventListener('change', checkInput);
+});
+
+var clearButton = document.getElementById('clearbtn');
+
+// Проверяем поле при загрузке страницы
+checkInput();
+
+// Добавляем обработчик события input
+input.addEventListener('input', checkInput);
+
+// Очистка поля и скрытие кнопки при клике на кнопку очистки
+clearButton.addEventListener('click', function() {
+  input.value = '';
+  checkInput();
+});
+
+function checkInput() {
+  if (
+    input.value.trim().length > 0 ||
+    Array.from(checkboxes).some(function(checkbox) {
+      return checkbox.checked;
+    }) ||
+    Array.from(selects).some(function(select) {
+      return select.value !== "";
+    })
+  ) {
+    clearButton.style.display = 'block'; // Показываем кнопку, если есть текст или выбраны чекбоксы/списки
+  } else {
+    clearButton.style.display = 'none'; // Скрываем кнопку, если нет текста и не выбраны чекбоксы/списки
+  }
+}
+
+// Поместить курсор в конец строки в поле ввода
+input.focus();
+input.setSelectionRange(input.value.length, input.value.length);
+</script>
+</div>    
+</div>
+</div>      
+        
+             </div>
+        </div>
+   
+        
     <div class="justify-content-center text-center">
         <div id="spinner" style="display: none;">
             <div class="spinner-border mt-3" role="status">

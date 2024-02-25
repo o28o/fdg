@@ -136,7 +136,7 @@ cat $tmpdir/threetables | awk -v keyword="$htmlkeyword" 'BEGIN {
 fi 
 uniqwordqnty=$(cat $tmpdir/wordcountTexts | wc -l)
 textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sort -u | wc -l)
-headerinfo="${keyword^} $textqnty texts $uniqwordqnty related words in $searchInForUser"
+headerinfo="${keyword^} $textqnty texts $uniqwordqnty related words in $searchInForUser $searchlangForUser"
 
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 quotesLinkToReplace="/s.php?s=${escapedKeyword}\&d=$source"
@@ -145,8 +145,9 @@ quotesLinkToReplace="/s.php?s=${escapedKeyword}\&d=$source"
 
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
 
-echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/w.html
+echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' >> $output/w.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/w.html
+echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/w.html
 cat $apachesitepath/new/templates/wordsheader | sed 's@quotesLinkToReplace@'"$quotesLinkToReplace"'@g' | sed 's/$title/'"$headerinfo"'/g' >> $output/w.html
 cat $tmpdir/wordsfinalhtml >> $output/w.html
 echo " </tbody>

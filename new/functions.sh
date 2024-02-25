@@ -176,7 +176,8 @@ searchInForUser="Four Nikayas"
 #searchInForUser="$searchInForUser +KN"
 #searchInForUser="$searchInForUser +KN +Vinaya"
 setSearchIn sutta/an sutta/sn sutta/mn sutta/dn sutta/kn/ud sutta/kn/iti sutta/kn/dhp sutta/kn/thig sutta/kn/thag sutta/kn/snp vinaya/pli-tv-b*
-source="an,sn,mn,dn,kn,vn"
+#source="an,sn,mn,dn,kn,vn"
+source="an,sn,mn,dn"
 fi
 #echo $searchIn
 }
@@ -366,10 +367,7 @@ headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  
 wordLinkToReplace="/w.php?s=$keyword"
 WORDREPLACELINK="$wordLinkToReplace"
 
-echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
-echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtml
 #cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
-cat $tmpdir/finalhtml | tohtml
 #cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
 
 #echo -e "Content-Type: text/html\n\n"

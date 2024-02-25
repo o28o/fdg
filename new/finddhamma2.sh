@@ -462,6 +462,7 @@ translator=sujato
 fileprefix=_suttanta
 hwithtitle='<h1>'
 searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
+source="an,sn,mn,dn"
 if [[ "$@" == *"-vin"* ]]; then
     vin=dummy
     sutta=sutta
@@ -472,6 +473,7 @@ if [[ "$@" == *"-vin"* ]]; then
 	searchIn="$vin"
     fileprefix=_vinaya
     metaphorcountfile=$textinfofolder/metphrcount_vinaya.txt
+	source="vn"
 
 
     
@@ -497,9 +499,9 @@ fi
 
 if [[ "$@" == *"-kn"* ]]; then
 
-kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag"
+kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp"
 searchIn="$searchIn $kn"
-
+source="an,sn,mn,dn,kn"
 fileprefix=${fileprefix}-kn
 fortitle="${fortitle} +KN"
 
@@ -507,10 +509,12 @@ elif [[ "$@" == *"-all"* ]]; then
 
 knLater="./sutta/kn"
 searchIn="$searchIn $knLater"
+source="an,sn,mn,dn,kn,lt"
 if [[ "$@" == *"-vin"* ]]; then
 	vin="./vinaya/pli-tv-b*"
 	vinLater="./vinaya/pli-tv-[kp].*"
 	searchIn="$vin $vinLater"
+	source="vn,kp"
 fi 
 
 fileprefix=${fileprefix}-all
@@ -550,6 +554,8 @@ if [[ "$@" == *"-vin"* ]]
 
 vin="./vinaya/pli-tv-b*"
 searchIn="$vin"
+	source="vn"
+
   then
   vin=dummy
 vindefpart="${modpattern}.{0,3}—|${modpattern}.{0,3}ti|${modpattern}.*nāma|"
@@ -1109,11 +1115,13 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-wordLinkToReplace="/w.php?s=$keyword"
+escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+wordLinkToReplace="/w.php?s=$escapedKeyword\&d=$source"
 WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$escapedkeyword"'</div>' | tohtml
-echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtml
+echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' | tohtml
+echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' | tohtml
 #cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
 #cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
@@ -1220,7 +1228,8 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-wordLinkToReplace="/w.php?s=$keyword"
+escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+wordLinkToReplace="/w.php?s=$escapedKeyword\&d=$source"
 WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
@@ -1461,8 +1470,8 @@ mv ./$oldname ./$table
 if [[ "$language" == *"Pali"* ]]; 
 then
 sed -i 's@$quotesLinkToReplace@'./$table'@' ./$tempfilewords
-#sed -i 's@$wordLinkToReplace@/w.php?d=result/'$table'@' ./$table
-sed -i 's@$wordLinkToReplace@/w.php?s='$pattern'@' ./$table
+escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+sed -i 's@$wordLinkToReplace@/w.php?s='$escapedKeyword'\&d='$source'@' ./$table
 elif [[ "$language" == *"English"* ]]
 then
 sed -i '/<button.*>Words</s@type="button">@type="button" style="display: none;">@g' $table

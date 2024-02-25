@@ -19,7 +19,7 @@ cleanupTempFiles
 
 WhereToSearch
 keyword=$( echo "$@" | clearargs)
-escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+#escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 
 #keyword=byākarissāmīti
 setLinesBeforeAndAfter
@@ -122,7 +122,7 @@ WORDREPLACELINK="$wordLinkToReplace"
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
 #echo "<script $fontawesomejs></script>" >> $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
-echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' >> $output/r.html
+echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' >> $output/r.html
 echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/r.html
 
 #ping for all variants of the pali word

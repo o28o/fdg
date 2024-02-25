@@ -562,11 +562,11 @@ function changePaliLookupStatus() {
   if (localStorage.paliLookupActive === "true") {
     localStorage.paliLookupActive = "false";
     paliLookupCheckBox.checked = false;
-    alert("Pali Lookup has been turned off.\n\nPress Control+Alt+l to turn it on.");
+    alert("Pali Lookup has been turned off.\n\nPress Control+Alt+l \(Lower case \"L\"\ for \"lookup\") to turn it on.");
   } else {
     localStorage.paliLookupActive = "true";
     paliLookupCheckBox.checked = true;
-    alert("Pali Lookup has been turned on\n\nPress Control+Alt+l to turn it off.");
+    alert("Pali Lookup has been turned on\n\nPress Control+Alt+l \(Lower case \"L\"\ for \"lookup\") to turn it off.");
   }
   setPaliVisibility(paliVisible);
 }

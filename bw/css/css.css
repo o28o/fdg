@@ -262,14 +262,11 @@ p, .p {
 }
 
 /* Force Pali to display on top of English on smaller screens */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 595px) {
 	.pairs tr {
 		display: flex;
 		flex-flow: column-reverse wrap;
 	}
-
-
- 
  
 	.pairs {
 		table-layout: auto;
@@ -910,7 +907,7 @@ input, select, textarea, .inputbox {
 /* Tables ---*/
 
 table.plain, th, td {
-	margin-left:40px;
+	margin-left: 3px;
 	font-size: 110%;
 /*	border: solid 1px #ddd;*/
 	text-align: left;
@@ -920,11 +917,11 @@ table {
 	border-collapse: collapse;
 }
 
-th { font-weight: bold; padding: 5px; text-align: left; }
+th { font-weight: bold; padding: 2px; text-align: left; }
 
 td {
 font-size: 120%;
-padding: 5px;
+padding: 2px;
 word-wrap: break-word;
 } /* Make font larger in java generated table English and Pali */
 
@@ -946,7 +943,7 @@ thead tr th a:active { color: #fff;}
 /* Format Sutta Indexes */
 
 table.suttalist {
-	margin-left:10px;
+	margin-left:5px;
 	font-size: 110%;
  overflow: hidden;
 }
@@ -1227,14 +1224,15 @@ font-weight: bold;
 
 .meaning {
  position:absolute;
- visibility: hidden;
+ visibility:hidden;
  display:block;
  opacity: 0;
- bottom: 1.6em;
- left: -7em;
+ bottom: 2.2em;
+ margin-left: 40px;
+ margin-right: auto;
  z-index: 1001;
  border: 1px solid darkorchid;
- background: pink;
+ background: #fff3d6;
  border-radius: 5px;
  font-size:16px;
  font-weight:normal;
@@ -1243,8 +1241,9 @@ font-weight: bold;
  text-align: left;
  padding: 0.1em 0.5em;
  margin-top:1em;
- min-width:10em;
- max-width:20em;
+ min-width:20em;
+ max-width:550px;
+ height: auto;
  transition: 100ms;
 }
 
@@ -1252,7 +1251,6 @@ font-weight: bold;
  background: #a52a2a;
  border: 2px solid #E6BFAD;
 }
-
 
 .lookup:hover .meaning {
  visibility:visible;
@@ -1327,10 +1325,11 @@ color: white;
 
 .var, p span.var {
 	background-color: #FFE4C4 !important; /* Bisque */
+ color: grey;
 }
 
 [light-mode=dark] .var, p span.var {
-	background-color: #B8D167 !important; 
+	background-color: #edf1de !important; 
 }
 
 
@@ -1437,7 +1436,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   background-size: cover; /* Or contain, depending on your preference */
 }
 
-    @media screen and (min-width: 1640px) {
+@media screen and (min-width: 1640px) {
   .container {
   margin: auto;
   width: 50%; 
@@ -1449,8 +1448,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\
 /* For Publishing ... The end comment needs to be at the bottom of this page.
-/* For Editing ... Move the end comment at the end of this page to the end of this line.  
-
+/* For Editing ... Move the end comment at the end of this page to the end of this line.   
  
 
  h1,h2,h3,h4,h5,h6, .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
@@ -1463,4 +1461,5 @@ hr, .pairs hr {
  background-color:lime;
 }
 
-*/ 
+
+*/

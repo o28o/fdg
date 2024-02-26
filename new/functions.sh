@@ -41,7 +41,11 @@ cd $suttapath/sc-data/html_text/ru/pli/
 else
 #echo pli case
 searchlang=pi
+if [[ "$args" == *"-oru"* ]]; then
+langtwo=ru
+else
 langtwo=en
+fi
 searchlangForUser=Pali
 #pali
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
@@ -700,6 +704,22 @@ function grepForWords {
 }
 fi
 }
+
+function updateHistory {
+filesize=`ls -lh $output/$table | awk '{print \$5}'`
+
+linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "$searchInForUser" | grep "$searchlangForUser/$langtwo" | awk '{print \$1}' | tac`
+
+for i in $linenumbers
+do 
+sed -i "${i}d" $history 
+done 
+
+dateforhist=`date +%d-%m-%Y`
+echo -n "<!-- begin $keyword --> 
+<tr><td><a class=\"outlink\" href=\"./result/${table}\">${keyword}</a></td><td><label class='star-checkbox'><input type='checkbox' data-index=\"${table}\"/><i class='fa-regular fa-star'></i></label></td><td>$textsqnty</td><td>$matchqnty</td><td><a class=\"outlink\" href=\"/w.php?s=${escapedKeyword}&d=$source\">$uniqwords</a></td><td>$searchlangForUser/$langtwo</td><td>$searchInForUser</td><td class=\"daterow\">$dateforhist</td><td>$filesize</td><td>" >> $history
+}
+
 
 #########
 

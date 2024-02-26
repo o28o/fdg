@@ -112,6 +112,9 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 
+uniqwords=$(cat $tmpdir/words | cleanupwords |awk -F: '{print $2}' | sort -u | wc -l)
+textsqnty=$(awk -F@ '{ sum += $3 }; END { print NR }' $tmpdir/counts)
+matchqnty=$(awk -F@ '{ sum += $3 }; END { print sum }' $tmpdir/counts)
 #format output results
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum " matches in '"$searchInForUser $searchlangForUser"'" }' $tmpdir/counts)"
 
@@ -159,8 +162,18 @@ cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g
 cat $tmpdir/finalhtml >> $output/r.html
 cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' >> $output/r.html
 cat $output/r.html
+
+table=$keyword-$textsqnty-$matchqnty-$searchlang.html
+
+
+cp $output/r.html $output/$table
+
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 #wc -l $tmpdir/counts $tmpdir/afterawk
+
+
+updateHistory
+
 exit 0
 
 cat $tmpdir/forpd | sed -e 's/.*json: *"/@/g'  -e 's/": *"/@/g' 

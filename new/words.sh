@@ -140,12 +140,19 @@ textqnty=$(cat $tmpdir/words | awk -F/ '{print $NF}'| awk -F_ '{print $1}' | sor
 headerinfo="${keyword^} $textqnty texts $uniqwordqnty related words in $searchInForUser $searchlangForUser"
 
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+
+if [[ "$@" == *"-oru"* ]]
+then
+quotesLinkToReplace="/s.php?s=${escapedKeyword}\&d=$source\&p=-oru"
+else
 quotesLinkToReplace="/s.php?s=${escapedKeyword}\&d=$source"
+fi
 
 #echo end set all=$LC_ALL lang=$LANG
 
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/w.html
 
+echo '<div class="args" style="display: none;" >'"$args"'</div>' >> $output/w.html
 echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' >> $output/w.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/w.html
 echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/w.html

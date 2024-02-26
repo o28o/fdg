@@ -121,10 +121,16 @@ headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum 
 
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #echo $escapedKeyword
+if [[ "$@" == *"-oru"* ]]
+then
+wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
+else
 wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
+fi
 WORDREPLACELINK="$wordLinkToReplace"
 cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
 #echo "<script $fontawesomejs></script>" >> $output/r.html
+echo '<div class="args" style="display: none;" >'"$args"'</div>' >> $output/r.html
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
 echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' >> $output/r.html
 echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/r.html
@@ -172,6 +178,12 @@ cp $output/r.html $output/$table
 #head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
 #wc -l $tmpdir/counts $tmpdir/afterawk
 
+linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "$searchInForUser" | grep "$searchlangForUser/$langtwo" | awk '{print $1}' | tac`
+
+for i in $linenumbers
+do 
+sed -i "${i}d" $history 
+done 
 
 updateHistory
 

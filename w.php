@@ -36,6 +36,9 @@ if ( preg_match('/\/ru/', $actual_link)) {
     $outputlang = "";
     }
 
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $p = trim($_GET["p"]);
+}
 	$s = isset($_GET['s']) ? htmlspecialchars($_GET['s']) : '';
 	
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -49,11 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
  //$s ="lobh";
  $stringForOpen = isset($s) ? strtolower(trim(str_replace("`", "", $s))) : '';
 
-if ( preg_match('/html/', $d ))  {	
-$command = escapeshellcmd("bash ./new/words.sh $outputlang $searchIn $stringForOpen");
-} else {
-$command = escapeshellcmd("bash ./new/words.sh $outputlang $searchIn $stringForOpen");
-}
+
+$command = escapeshellcmd("bash ./new/words.sh $p $outputlang $searchIn $stringForOpen");
+
 
 //$command = escapeshellcmd("bash ./db/fdg3.5.sh $stringForOpen");
 

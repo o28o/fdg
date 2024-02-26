@@ -1116,12 +1116,19 @@ bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdi
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
-wordLinkToReplace="/w.php?s=$escapedKeyword\&d=$source"
+
+if [[ "$@" == *"-oru"* ]]
+then
+wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
+else
+wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
+fi
 WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$escapedkeyword"'</div>' | tohtml
 echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' | tohtml
 echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' | tohtml
+echo '<div class="args" style="display: none;" >'"$args"'</div>' | tohtml
 #cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
 #cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
@@ -1229,7 +1236,12 @@ bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdi
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
-wordLinkToReplace="/w.php?s=$escapedKeyword\&d=$source"
+if [[ "$@" == *"-oru"* ]]
+then
+wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
+else
+wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
+fi
 WORDREPLACELINK="$wordLinkToReplace"
 
 echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' | tohtml
@@ -1471,7 +1483,16 @@ if [[ "$language" == *"Pali"* ]];
 then
 sed -i 's@$quotesLinkToReplace@'./$table'@' ./$tempfilewords
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+
+if [[ "$@" == *"-oru"* ]]
+then
+
+sed -i 's@$wordLinkToReplace@/w.php?s='$escapedKeyword'\&d='$source'\&p=-oru@' ./$table
+else
 sed -i 's@$wordLinkToReplace@/w.php?s='$escapedKeyword'\&d='$source'@' ./$table
+fi
+
+
 elif [[ "$language" == *"English"* ]]
 then
 sed -i '/<button.*>Words</s@type="button">@type="button" style="display: none;">@g' $table

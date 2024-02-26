@@ -712,12 +712,6 @@ fi
 function updateHistory {
 filesize=`ls -lh $output/$table | awk '{print \$5}'`
 
-linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "$searchInForUser" | grep "$searchlangForUser/$langtwo" | awk '{print \$1}' | tac`
-
-for i in $linenumbers
-do 
-sed -i "${i}d" $history 
-done 
 
 dateforhist=`date +%d-%m-%Y`
 echo -n "<!-- begin $keyword --> 

@@ -124,7 +124,7 @@ anchor = segment;
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
 let params = new URLSearchParams(document.location.search);
-  let = params.get("s");
+  let finder = params.get("s");
   //finder = finder.replace(/\\b/g, '');
   console.log("finder ", finder);
 if (finder && finder.trim() !== "") {

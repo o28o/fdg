@@ -167,9 +167,11 @@ if (isset($_GET['q'])) {
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
 
         <option value="" <?php if (isset($extra)) echo "selected";?> ><?php echo "$liststd";?></option>
+         <option value="wordRep" <?php if (isset($extra) && $extra == "wordRep") echo "selected";?> ><?php echo "$listwlords";?></option>
         <option value="-def" <?php if (isset($extra) && $extra == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $extra == "-sml") echo "selected";?> ><?php echo "$listsml";?></option>
         <option value="-defall" <?php if (isset($extra) && $extra == "-defall") echo "selected";?> ><?php echo "$listdefall";?></option>
+
      <option value="-nm10" <?php if (isset($extra) && $extra == "-nm10") echo "selected";?> ><?php echo "$listnm10";?></option>
       <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
     </select>

@@ -6,7 +6,9 @@ foreach ($extra as $value) {
     $extraString .= " $value"; // Добавьте каждый элемент массива к строке с пробелом
 }
 
+$stringForWord = $string;
 $string = "\"$string\"";
+
 //$string = "uttarimanussadham";
 //$p = "-vin";
 if ( preg_match('/\/ru/', $actual_link)) {
@@ -16,6 +18,21 @@ if ( preg_match('/\/ru/', $actual_link)) {
     }
 //echo "$p $q $extra $cb";
 //echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
+
+
+// Проверка условий
+if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {
+    // Действие при выполнении условия
+    $stringForWord = urlencode($stringForWord); // Предполагая, что $string определено где-то в вашем коде
+echo "<script>
+window.location.href='/w.php?s=$stringForWord';
+</script>";
+    exit();
+}
+
+
+
+
 
 if ( preg_match('/(-def|-sml|-nm|-b|-onl|-tru)/', $p ) || preg_match('/(-onl|-def|-sml|-nm|-b|-tru)/', $extra ))  {	
   $fdgscript = "./scripts/finddhamma.sh";

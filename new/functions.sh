@@ -25,6 +25,7 @@ langtwo=pi
 #echo engFirst
 initrun=LangFirst
 steptwo=getPliFromLangFirst
+langdir=$suttapath/sc-data/sc_bilara_data/translation/en/
 cd $suttapath/sc-data/sc_bilara_data/translation/en/
 elif [[ "$args" == *"-ru"* ]]; then
 searchlang=ru
@@ -36,6 +37,7 @@ steptwo=""
 function ifHtmlFiles {
   awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}'
 }
+langdir=$suttapath/sc-data/html_text/ru/pli/
 cd $suttapath/sc-data/html_text/ru/pli/
 
 else
@@ -48,6 +50,7 @@ langtwo=en
 fi
 searchlangForUser=Pali
 #pali
+langdir=$suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 
 initrun=varFirst
@@ -61,7 +64,7 @@ initrun=anyDistance
     if [[ "$searchlang" == *"pi"* ]]; then
     steptwo=getLangFromVarFirst
     cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-
+langdir=$suttapath/sc-data/sc_bilara_data/root/pli/ms/
     fi
 elif [[ "$args" == *"-def"* ]]; then
 initrun=getDefinitions
@@ -274,6 +277,7 @@ fi
 function grepForWords {
   
   if [[ "$args" == *"-anyd"* ]]; then 
+  cd $langdir
 cat "$tmpdir/initfilelist" | xargs grep -ioHE "\w*${keywordforgreping}[^ ]*" | awk -F: '$2 > 0 {print $0}' | cleanupwords
 
 else   
@@ -472,8 +476,8 @@ if [[ "$searchlang" == *"pi"* ]]; then
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 grepForWords > $tmpdir/words
 
-cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grepForWords >> $tmpdir/words
+#cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+#grepForWords >> $tmpdir/words
 
 elif  [[ "$searchlang" == *"en"* ]]; then
 if [[ "$searchIn" == *"sutta"* ]] 

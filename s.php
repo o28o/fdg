@@ -32,6 +32,8 @@ $query = $_SERVER['QUERY_STRING'];
 } */
 
 
+
+
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $s = trim($_GET["s"]);
 }
@@ -40,6 +42,18 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $p = trim($_GET["p"]);
 }
+
+// Проверка условий
+if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {
+    // Действие при выполнении условия
+    $stringForWord = urlencode($stringForWord); // Предполагая, что $string определено где-то в вашем коде
+echo "<script>
+window.location.href='/w.php?s=$stringForWord';
+</script>";
+    exit();
+}
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if(isset($_GET['d'])) {

@@ -71,6 +71,7 @@ cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' |
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
 
 ########## count keywords in texts
+cd $langdir
 getWordsForCounts
 
 cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F"$delimiterForAwk" '{print $1}' | sort -V | uniq -c | sed 's/.html//g' | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts

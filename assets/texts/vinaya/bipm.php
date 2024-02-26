@@ -2414,6 +2414,9 @@ Sekhiyā niṭṭhitā </span>
            <div class="level4 my-3">
  <span class="level5">Ime kho panāyyāyo, satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti.
 </span>
+       </br>            </br>     
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-as.m4a' type='audio/mp4'>Browser is not supported.</audio>
+      
 </div>                                
 
 <div class="level4">

@@ -1115,7 +1115,7 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+escapedKeyword=$(echo "$patternforhist" | sed 's/\\/\\\\/g')
 
 if [[ "$@" == *"-oru"* ]]
 then
@@ -1235,7 +1235,7 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+escapedKeyword=$(echo "$patternforhist" | sed 's/\\/\\\\/g')
 if [[ "$@" == *"-oru"* ]]
 then
 wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
@@ -1276,7 +1276,7 @@ initialNorM="ṅ"
 elif [[ "$pattern" == *"ṃ"* ]];  then
 initialNorM="ṃ"
 fi
-  
+patternforhist=$pattern
 if [[ "$pattern" != *"["* ]] &&  [[ "$pattern" != *"]"* ]];  then
 pattern=`echo $pattern | sed 's/е/[ёе]/g' | sed 's/[ṅṃ]/[ṅṁṃ]/g'`
 fi
@@ -1482,7 +1482,7 @@ mv ./$oldname ./$table
 if [[ "$language" == *"Pali"* ]]; 
 then
 sed -i 's@$quotesLinkToReplace@'./$table'@' ./$tempfilewords
-escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
+escapedKeyword=$(echo "$patternforhist" | sed 's/\\/\\\\/g')
 
 if [[ "$@" == *"-oru"* ]]
 then

@@ -451,6 +451,24 @@ checkForInitSearch $tmpdir/initrun-var $tmpdir/initrun-pi
 
 }
 
+function pliFirst {
+
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+initialGrep > $tmpdir/initrun-pi
+
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+initialGrep > $tmpdir/initrun-var
+
+if [ -s "$tmpdir/initrun-var" ]; then
+cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
+bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' >> $tmpdir/initrun-pi
+fi
+
+checkForInitSearch $tmpdir/initrun-var $tmpdir/initrun-pi
+
+}
+
 function getLangFromVarFirst {
    # initialCmnd $tmpdir/initrun-pi en
   cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-en

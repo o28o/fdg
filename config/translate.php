@@ -56,7 +56,7 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), 
 <strong>SC.net</strong> - поиск в англ переводах 4 никай SuttaCentral.net
 ';
 $tooltipsearchtype = '<strong>По умолчанию</strong> - все совпадения сгруппированные по текстам<br><br>
-<strong>Слова</strong> - результаты сгруппированы по словам (работает только для 4 Никай)<br><br>
+<strong>Слова</strong> - результаты сгруппированы по словам (работает только для Пали и 4 Никай)<br><br>
     <strong>Определения</strong> - Поиск нескольких главных определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. <br><br>
     <strong>Сравнения</strong> - Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.<br><br>
     <strong>Все определения</strong> - Поиск всех определений понятия. Логика описана в разделе помощи для Продвинутых.<br><br>
@@ -66,7 +66,7 @@ $listdefall  = "Все определения";
 $listnm10 = "Топ-10";
 $listnm = "Топ-5";
 $listdef = "Определения";
-$listwlords = "Слова";
+$listwords = "Слова";
 $listsml = "Сравнения";
 $liststd = "Все совпадения";
 $tooltipvin = 'Поиск в Винае на Пали';
@@ -535,7 +535,7 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Ni
 <strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>
 <strong>SC.net</strong> - search in SuttaCentral.net english translations';
 $tooltipsearchtype = '<strong>Default</strong> - all matches grouped by texts<br><br>
-<strong>Words</strong> - search results grouped by words (works only for 4 Nikayas)<br><br>
+<strong>Words</strong> - search results grouped by words (works only for Pali in 4 Nikayas)<br><br>
 <strong>Definitions</strong> - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. <br><br>
 <strong>Similes</strong> - Sesrch for similies, metaphors, symbols, of the search term in Pali in 4 main Nikayas. Works only if definition was given in standard phrases.<br><br>
 <strong>All definitions</strong> - Search for all definitions. For all-round view studying all related Suttas is recommended. See Advanced for details.<br><br>
@@ -545,7 +545,7 @@ $listdefall  = "All definitions";
 $listnm10 = "Top-10";
 $listnm = "Top-5";
 $listdef = "Definitions";
-$listwlords = "Words";
+$listwords = "Words";
 $listsml = "Similes";
 $liststd = "All matches";
 

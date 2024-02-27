@@ -1,0 +1,84 @@
+	   'stateSave': false,
+        searchBuilder: {
+            preDefined: {
+                criteria:[
+                    {
+                        condition: 'contains',
+                        data: 'Title',
+                        value: ['keywordToReplace']
+                    },
+                    {
+                        criteria: [
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['Kata']
+                            },
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['Katha']
+                            },
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['vucc']
+                            },
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['Kiñ']
+                            },
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['Kas']
+                            },
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['saṅkhaṁ gacchati']
+                            },
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['nāma']
+                            },
+                            {
+                                condition: 'contains',
+                                data: 'Quote',
+                                value: ['ariyassa vinaye']
+                            }
+
+                        ],
+                        logic: 'OR'
+                    },
+                                        {
+                        condition: 'contains',
+                        data: 'Quote',
+                        value: ['vaca']
+                    },
+                                        {
+                        condition: 'contains',
+                        data: 'Quote',
+                        value: ['yadidaṁ']
+                    },
+                                        {
+                        condition: 'contains',
+                        data: 'Quote',
+                        value: ['daṭṭhabb']
+                    },
+                    {
+                        condition: 'contains',
+                        data: 'Quote',
+                        value: ['upam']
+                    },
+                      {
+                        condition: 'contains',
+                        data: 'Quote',
+                        value: ['opam']
+                    },
+                ],
+                logic: 'OR'
+            }
+        },

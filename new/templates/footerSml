@@ -1,5 +1,4 @@
 	   'stateSave': false,
-	           dom: '<"row"lf>r<t><"row"ip><Q><"footerlike"B>',
         searchBuilder: {
             preDefined: {
                 criteria:[
@@ -7,6 +6,16 @@
                         condition: 'contains',
                         data: 'Quote',
                         value: ['seyyathāpi']
+                    },
+                    {
+                        condition: 'contains',
+                        data: 'Quote',
+                        value: ['Evam']
+                    },
+                    {
+                        condition: 'contains',
+                        data: 'Quote',
+                        value: ['Evan']
                     },
                     {
                         criteria: [

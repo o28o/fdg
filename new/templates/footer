@@ -56,18 +56,11 @@ $('#pali').find('tbody').find('tr').each(function() {
             
    	 var table = $('#pali').DataTable({
 	 /*  'autoWidth': true,*/
-	   'stateSave': true,
+searchBuilderConfiguration
+	     dom: '<"row"lf>r<t><"row"ip><""Q><"footerlike"B>',
   stateSaveParams: function(settings, data) {
     data.search.search = ''; 
   },
-	     dom: '<"row"lf>r<t><"row"ip><""Q><"footerlike"B>',
-	           searchBuilder: {
-            preDefined: {
-                criteria:[
-{ condition: '!contains', data: 'Quote', value: ['Word to exclude']}                ],
-                logic: 'OR'
-            }
-        },
         buttons: {
           name: 'primary',
         buttons: [

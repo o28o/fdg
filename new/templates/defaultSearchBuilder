@@ -1,0 +1,8 @@
+  	   'stateSave': true,
+	         searchBuilder: {
+            preDefined: {
+                criteria:[
+{ condition: '!contains', data: 'Quote', value: ['Word to exclude']}                ],
+                logic: 'OR'
+            }
+        },

@@ -59,6 +59,7 @@ fi
 }
 
 function setSearchExtras {
+  
   if [[ "$args" == *"-anyd"* ]]; then
 initrun=anyDistance
     if [[ "$searchlang" == *"pi"* ]]; then
@@ -67,10 +68,13 @@ initrun=anyDistance
 langdir=$suttapath/sc-data/sc_bilara_data/root/pli/ms/
     fi
 elif [[ "$args" == *"-def"* ]]; then
-initrun=getDefinitions
-
+searchBuilderConfiguration=$apachesitepath/new/templates/footerDef
+linesafter=1
 elif [[ "$args" == *"-sml"* ]]; then
-initrun=getSimiles
+searchBuilderConfiguration=$apachesitepath/new/templates/footerSml
+linesafter=1
+else
+searchBuilderConfiguration=$apachesitepath/new/templates/defaultSearchBuilder
 fi
 
 if [[ "$args" == *"-top"* ]] ; then
@@ -263,7 +267,7 @@ fi
 function initialGrep {
   #use with "file" flag for output file and no flag for word/id mode list 
 [[ "$1" == *"file"* ]] && grepArg="l"
-grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'
+grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | sort -V | uniq
 }
 
 function initialCmnd {
@@ -288,7 +292,7 @@ else
 
 function RuLangFirst {
 cd $suttapath/sc-data/html_text/ru/pli/
-grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g' | grep -v "^--$" > $tmpdir/initrun-ru
+grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g' | grep -v "^--$" | sort -V | uniq > $tmpdir/initrun-ru
 #cd - > /dev/null
 
 checkForInitSearch $tmpdir/initrun-ru
@@ -558,12 +562,12 @@ nonmetaphorkeys="condition|adhivacanasamphass|adhivacanapath|\banopam|\battūpa|
 if [[ "$@" == *"-vin"* ]]
   then
   vin=dummy
-#vinsmlpart="${modkeyword}.{0,3}—|${modkeyword}.{0,3}ti|${modkeyword}.*nāma|"
+vinsmlpart="${modkeyword}.{0,3}—|${modkeyword}.{0,3}ti|${modkeyword}.*nāma|"
 fi  
 
 smlkeyword="${vinsmlpart}seyyathāpi.*${modkeyword}|${modkeyword}.*adhivacan|${modkeyword}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modkeyword}|Suppose.*${modkeyword}|${modkeyword} is|${modkeyword}.*is a designation for|is a designation for.*${modkeyword}|${modkeyword}.*Simile|simile.*${modkeyword}|It’s like.*${modkeyword}|is a term for.*${modkeyword}|${modkeyword}.*is a term for|similar to.*${modkeyword}|${modkeyword}.*similar to|Представ.*${modkeyword}|обозначение.*${modkeyword}|${modkeyword}.*обозначение${customtexts}" 
 
-cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
+#cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 grep -Eir "$smlkeyword" $searchIn | grep -viE "$nonmetaphorkeys" | grep -vi "condition" > $tmpdir/initrun-pi
 
 grep -B2 -ERi "Eva[mnṇṅṃṁ].*${modkeyword}" $searchIn | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' >> $tmpdir/initrun-pi
@@ -699,6 +703,10 @@ fi
 }
 
 function excludeWords {
+  
+searchBuilderConfiguration=$apachesitepath/new/templates/footerExclude
+WordToExclude1=test  
+  
 if [[ "$args" == *"-exc"* ]]
 then
 fortitle="${fortitle}"

@@ -99,36 +99,38 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
-let scLink = `<p class="sc-link">`;
-
-const currentURL = window.location.href;
-const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
-
 const mlUrl  = window.location.href;
 
 const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
 const enUrl = mlUrl.replace("/sc/ml.html", "/sc/");
-let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+//let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+
+let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+
+const currentURL = window.location.href;
+const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
+
+
 
 
 if (mnranges.indexOf(slug) !== -1)  {
  var trnpath = rustrnpath; 
  let language = "pli-rus";
- scLink += ifRus; 
+// scLink += ifRus; 
   console.log(trnpath);
 } else if (anranges.indexOf(slug) !== -1) { 
   let language = "pli-rus";
   var trnpath = rustrnpath; 
-  scLink += ifRus;
+//  scLink += ifRus;
   console.log(trnpath);
   
 } else if (snranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
-  scLink += ifRus; 
+ // scLink += ifRus; 
   console.log(trnpath);
 } else if (dnranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
-  scLink += ifRus; 
+ // scLink += ifRus; 
   console.log(trnpath);
 } else if (slug.match(/ja/)) {
   let language = "pli";
@@ -193,7 +195,23 @@ if (finder && finder.trim() !== "") {
     
 }
 
-if (paliData[segment] !== undefined && transData[segment] !== undefined) {
+
+if (engTransData[segment] !== undefined) {
+//   console.log(`transData[${segment}]: ${transData[segment]}`);
+  //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
+    if (engTransData[segment] !== transData[segment]) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
+      <span class="rus-lang" lang="ru">${transData[segment]}</span>
+      <span class="eng-lang" lang="en">${engTransData[segment]}</span>
+      </span>${closeHtml}\n\n`;
+    } else {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
+      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      </span>${closeHtml}\n\n`;
+    }
+} else if (paliData[segment] !== undefined && transData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
@@ -205,13 +223,7 @@ if (paliData[segment] !== undefined && transData[segment] !== undefined) {
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
       <span class="eng-lang" lang="en">${engTransData[segment]}</span>
       </span>${closeHtml}\n\n`;
-} else if (transData[segment] !== undefined) {
-        html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}</span>
-      <span class="rus-lang" lang="ru">${transData[segment]}</span>
-      <span class="eng-lang" lang="en">${engTransData[segment]}</span>
-      </span>${closeHtml}\n\n`;
-}
+} 
 
 
     });
@@ -587,12 +599,13 @@ function toggleThePali() {
       localStorage.paliToggleML = "pli-rus";
     } else if (language === "pli-rus") {
      showPali();
-      language = "rus";
-      localStorage.paliToggleML = "rus";
-    } else if (language === "rus") {
-     showPaliRussian();
-      language = "pli";
+           language = "pli";
       localStorage.paliToggleML = "pli";
+
+ /*   } else if (language === "rus") {
+     showPaliRussian();
+      language = "rus";
+      localStorage.paliToggleML = "rus"; */
     }
   });
 }

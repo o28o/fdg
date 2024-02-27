@@ -98,35 +98,37 @@ var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
- let scLink = `<p class="sc-link">`;
+
+const ruUrl  = window.location.href;
+
+const mlUrl = ruUrl.replace("/ru/sc/", "/sc/ml.html");
+ let scLink = `<p class="sc-link"><a target="" href="${mlUrl}">R+E</a>&nbsp;`;
  //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 
 
-const ruUrl  = window.location.href;
 
-const mlUrl = ruUrl.replace("/ru/sc/", "/sc/ml.html");
- let ifRus = `<a target="" href="${mlUrl}">R+E</a>&nbsp;`;
+// let ifRus = `<a target="" href="${mlUrl}">R+E</a>&nbsp;`;
  
 if (mnranges.indexOf(slug) !== -1)  {
  var trnpath = rustrnpath; 
  let language = "pli-rus";
   console.log(trnpath);
- scLink += ifRus; 
+// scLink += ifRus; 
 } else if (anranges.indexOf(slug) !== -1) { 
   let language = "pli-rus";
   var trnpath = rustrnpath; 
   console.log(trnpath);
-  scLink += ifRus; 
+ // scLink += ifRus; 
 } else if (snranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
   console.log(trnpath);
-  scLink += ifRus; 
+//  scLink += ifRus; 
 } else if (dnranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
   console.log(trnpath);
-  scLink += ifRus; 
+//  scLink += ifRus; 
 } else if (slug.match(/ja/)) {
   let language = "pli";
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
@@ -586,14 +588,14 @@ function toggleThePali() {
      showPali();
       language = "pli";
       localStorage.paliToggleRu = "pli";
-    } else if (language === "pli") {
-	  showEnglish();
-      language = "rus";
-      localStorage.paliToggleRu = "rus";
     } else if (language === "rus") {
       showPaliEnglish();
       language = "pli-rus";    
       localStorage.paliToggleRu = "pli-rus";
+    } else if (language === "pli") {
+	  showEnglish();
+      language = "rus";
+      localStorage.paliToggleRu = "rus";  
     }
   });
 }

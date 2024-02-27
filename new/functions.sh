@@ -50,7 +50,7 @@ langtwo=en
 fi
 searchlangForUser=Pali
 #pali
-langdir=$suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+langdir=$suttapath/sc-data/sc_bilara_data/root/pli/ms/
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 
 initrun=varFirst
@@ -235,7 +235,7 @@ bash $tmpdir/cmndForAnydistance > $tmpdir/initfilelist
 
 checkForInitSearch $tmpdir/initfilelist
 
-cat "$tmpdir/initfilelist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-$searchlang
+cat "$tmpdir/initfilelist" | xargs grep -EHi "$keywordforgreping" > $tmpdir/initrun-$searchlang
 
 if [[ "$searchlang" == *"pi"* ]]; then
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
@@ -494,8 +494,8 @@ if [[ "$searchlang" == *"pi"* ]]; then
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 grepForWords > $tmpdir/words
 
-#cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-#grepForWords >> $tmpdir/words
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+grepForWords >> $tmpdir/words
 
 elif  [[ "$searchlang" == *"en"* ]]; then
 if [[ "$searchIn" == *"sutta"* ]] 

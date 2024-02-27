@@ -169,22 +169,22 @@ include '../scripts/opentexts.php';
 <ul class="list-unstyled">
     <li>
         <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
+        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-anyd ") echo "checked";?>  value="-anyd">
                 <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'>    <label class="form-check-label" for="onlCheckbox"><?php echo $checkboxonl;?></label></div>
         </div>
     </li>
         <li>
         <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="lbCheckbox" name="lb" <?php if (isset($extra) && $extra=="-lb$defaultla ") echo "checked";?>  value='<?php echo "-lb$defaultla"?>'>
-             <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'> <label class="form-check-label" for="lbCheckbox"><?php echo $checkboxla;?></label>
+  <input class="form-check-input" type="checkbox" id="lbCheckbox" name="lb" <?php if (isset($extra) && $extra=="-lb1 ") echo "checked";?>  value='<?php echo "-lb1"?>'>
+             <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'> <label class="form-check-label" for="lbCheckbox">+1 line before</label>
 </div>
 
         </div>
     </li>
     <li>
         <div class="form-check">
-  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
-             <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'> <label class="form-check-label" for="laCheckbox"><?php echo $checkboxla;?></label>
+  <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la1 ") echo "checked";?>  value='<?php echo "-la1"?>'>
+             <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'> <label class="form-check-label" for="laCheckbox">+1 line after</label>
 </div>
 
         </div>

@@ -18,7 +18,7 @@ applyOutputLangToResponses
 cleanupTempFiles
 
 WhereToSearch
-keyword=$( echo "$@" | clearargs)
+keyword=$( echo "$args" | clearargs)
 #escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 
 #keyword=byākarissāmīti
@@ -34,7 +34,7 @@ $steptwo
 #filelists
 
 if [[ "$@" == *"-anyd"* ]] || [[ "$@" == *"-top"* ]] ; then
-echo anyDist
+echo anyDist >/dev/null
 fi
 
 #word or id lists

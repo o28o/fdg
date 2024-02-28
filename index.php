@@ -88,6 +88,7 @@ include 'scripts/opentexts.php';
 
 </p></li>
 <li>
+
 <div class="align-items-center form-check-inline mx-0">
      <a id="theme-button" class=" mb-1 text-white ">
 <i onclick="switchIcon(this)" class="fa-solid fa-circle-half-stroke"></i>
@@ -274,6 +275,8 @@ $(document).ready(function() {
 </div>
 
   <?php echo $regexlink;?> 
+  <?php echo $defaults;?> 
+
  </p>
  
 <script>

@@ -22,10 +22,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получаем базовый URL в зависимости от наличия подстроки "/ru" в текущем URL или в значении localStorage.siteLanguage
     let baseUrl;
     if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-        baseUrl = window.location.origin + "/ru";
+        baseUrl = window.location.origin + "/ru/sc/";
     } else {
-        baseUrl = window.location.origin;
+        baseUrl = window.location.origin + "/sc/";
     }
+
+    if (localStorage.defaultReader === 'ml') {
+        baseUrl = window.location.origin + "/sc/ml.html";
+    } 
+
 
     const fdgLinks = document.querySelectorAll('.fdgLink');
 fdgLinks.forEach(link => {
@@ -58,7 +63,7 @@ function findFdgTextUrl(slug, searchValue, baseUrl) {
 
     const url = isSuttaCentral ? `https://suttacentral.net/${slug}` : baseUrl;
 
-    const scUrl = `${baseUrl}/sc/?s=${searchValue ? searchValue : ""}&q=${slug}`;
+    const scUrl = `${baseUrl}?s=${searchValue ? searchValue : ""}&q=${slug}`;
 
     return isSuttaCentral ? url : scUrl;
 }

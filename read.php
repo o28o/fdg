@@ -245,6 +245,7 @@ $(document).ready(function() {
 </div>
 
   <?php echo $regexlink;?> 
+    <?php echo $defaults;?> 
  </p>
 
 <script>

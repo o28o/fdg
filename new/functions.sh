@@ -69,7 +69,7 @@ langdir=$suttapath/sc-data/sc_bilara_data/root/pli/ms/
     fi
 elif [[ "$args" == *"-def"* ]]; then
 searchBuilderConfiguration=$apachesitepath/new/templates/footerDef
-linesafter=1
+linesafter=0
 elif [[ "$args" == *"-sml"* ]]; then
 searchBuilderConfiguration=$apachesitepath/new/templates/footerSml
 linesafter=1

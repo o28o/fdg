@@ -425,7 +425,7 @@ then
 fi
 
 userpattern="$pattern"
-escapedkeyword=$userpattern
+escapedkeyword="$userpattern"
 #echo escapedkeyword $escapedkeyword
 patternForHighlight="`echo $pattern | sed 's@е@[её]@g' | sed 's@ṃ@[ṃṁ]@g' | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's@^@(@g' | sed 's/$/)/g' | sed 's@,@@g'`"
 
@@ -1115,7 +1115,7 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-escapedKeyword=$(echo "$patternforhist" | sed 's/\\/\\\\/g')
+escapedKeyword="$(echo "$patternforhist" | sed 's/\\/\\\\/g')"
 
 if [[ "$@" == *"-oru"* ]]
 then
@@ -1129,9 +1129,7 @@ echo '<div class="keyword" style="display: none;" >'"$escapedkeyword"'</div>' | 
 echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' | tohtml
 echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' | tohtml
 echo '<div class="args" style="display: none;" >'"$args"'</div>' | tohtml
-#cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
-#cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
 
 #echo -e "Content-Type: text/html\n\n"
 #echo $@
@@ -1235,7 +1233,7 @@ paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tm
 bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
 
 headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-escapedKeyword=$(echo "$patternforhist" | sed 's/\\/\\\\/g')
+escapedKeyword="$(echo "$patternforhist" | sed 's/\\/\\\\/g')"
 if [[ "$@" == *"-oru"* ]]
 then
 wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
@@ -1250,9 +1248,7 @@ echo '<div class="searchIn" style="display: none;" >'"$searchIn"'</div>' | tohtm
 
 #echo $keyword in the end
 
-#cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' 
 cat $tmpdir/finalhtml | tohtml
-#cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g'
 
 #echo -e "Content-Type: text/html\n\n"
 #echo $@
@@ -1487,9 +1483,9 @@ escapedKeyword=$(echo "$patternforhist" | sed 's/\\/\\\\/g')
 if [[ "$@" == *"-oru"* ]]
 then
 
-sed -i 's@$wordLinkToReplace@/w.php?s='$escapedKeyword'\&d='$source'\&p=-oru@' ./$table
+sed -i 's@$wordLinkToReplace@/w.php?s='"$escapedKeyword"'\&d='$source'\&p=-oru@' ./$table
 else
-sed -i 's@$wordLinkToReplace@/w.php?s='$escapedKeyword'\&d='$source'@' ./$table
+sed -i 's@$wordLinkToReplace@/w.php?s='"$escapedKeyword"'\&d='$source'@' ./$table
 fi
 
 

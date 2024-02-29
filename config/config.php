@@ -12,7 +12,7 @@ $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
 $fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
 
 $defaults = '<br>
-   <input class="form-check-input mt-2" type="checkbox" id="readerCheckbox"> <a class="text-white" href="/sc/ml.html?q=sn56.11">ml</a> as Default Reader
+   <input class="form-check-input mt-2" type="checkbox" id="readerCheckbox"> <a href="/sc/ml.html?q=sn56.11">ml</a> as Default Reader
  <script>
 //localStorage.setItem("defaultReader", "ml");  
  
@@ -125,7 +125,7 @@ $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
 } else if ( preg_match('/online/', $mode)  ) {
   //online specific
 $linklearnpali = 'https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1';
-$linktbw = '/bw';
+$linktbw = '/bw/home/index.html';
 //$linktbw = 'https://thebuddhaswords.net';
 
 $mainpagethrflink =  "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";

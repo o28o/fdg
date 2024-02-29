@@ -106,7 +106,7 @@ searchBuilderConfiguration
 	    'orderMulti': true,
 	   'pageLength' : 10,
 	   'lengthMenu' : [10, 30, 50, 100, 1000],
-
+        "order": [[6, 'asc']],
 	/*  'responsive': true,*/
 	  'columnDefs': [
 		/*		{                
@@ -119,12 +119,25 @@ searchBuilderConfiguration
 				  {
             target: 6,
             visible: false
-        }				
+        },
+
+    /*    {
+            targets: [0],
+            orderData: [6, 1],
+        },*/
+        {
+            targets: [3],
+            orderData: [3, 4],
+                   orderSequence: ['desc', 'asc'] 
+        },
+        {
+            targets: [4],
+            orderData: [4, 3],
+                   orderSequence: ['desc', 'asc'] 
+        }
 					],
-        "order": [[6, 'asc']],
       'initComplete': function(){
          var api = this.api();
-         
          
              // Handle click on "Expand All" button
     $('#btn-show-all-children').on('click', function(){

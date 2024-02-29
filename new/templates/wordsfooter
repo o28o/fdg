@@ -26,7 +26,17 @@
 	    'colReorder': true,
 	   'columnDefs': [
 	            { type: "html", target: [0] },
-          { type: "num", target: [2] }
+          { type: "num", target: [2] },
+                  {
+            targets: [1],
+            orderData: [1, 2],
+       orderSequence: ['desc', 'asc'] 
+        },
+        {
+            targets: [2],
+            orderData: [2, 1],
+  orderSequence: ['desc', 'asc'] 
+        }
 					],
       'initComplete': function(){
          var api = this.api();

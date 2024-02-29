@@ -119,7 +119,17 @@ $('#pali').find('tbody').find('tr').each(function() {
 				  {
             target: 6,
             visible: false
-        }				
+        }	,
+        {
+            targets: [3],
+            orderData: [3, 4],
+            orderSequence: ['desc', 'asc'] 
+        },
+        {
+            targets: [4],
+            orderData: [4, 3],
+            orderSequence: ['desc', 'asc'] 
+        }
 					],
 	     "order": [[6, 'asc']],
       'initComplete': function(){

@@ -98,7 +98,7 @@ $adapterscriptlocation = '/home/a0902785/domains/find.dhamma.gift/aksharamukha/b
 if ( preg_match('/offline/', $mode)  ) {
   //offline specific
 $linklearnpali = '/lp/';
-$linktbw = '/bw';
+$linktbw = '/bw/home/index.html';
 
 $mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hикая.html";
 $mainpagethrfvinayalink = "/theravada.rf/palicanon/виная.html";

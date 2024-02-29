@@ -98,7 +98,8 @@ $adapterscriptlocation = '/home/a0902785/domains/find.dhamma.gift/aksharamukha/b
 if ( preg_match('/offline/', $mode)  ) {
   //offline specific
 $linklearnpali = '/lp/';
-$linktbw = '/bw/home/index.html';
+$linktbw = '/bw';
+$linktbwOnMain = '/bw/home/index.html';
 
 $mainpagethrflink = "/theravada.rf/palicanon/суттанта/дигха-hикая.html";
 $mainpagethrfvinayalink = "/theravada.rf/palicanon/виная.html";
@@ -125,7 +126,8 @@ $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
 } else if ( preg_match('/online/', $mode)  ) {
   //online specific
 $linklearnpali = 'https://palistudies.blogspot.com/2019/04/intro-kaya-section-satipatthana-sutta.html?m=1';
-$linktbw = '/bw/home/index.html';
+$linktbw = '/bw';
+$linktbwOnMain = '/bw/home/index.html';
 //$linktbw = 'https://thebuddhaswords.net';
 
 $mainpagethrflink =  "http://xn--80aaaglc1fo1a.xn--p1ai/palicanon/%D1%81%D1%83%D1%82%D1%82%D0%B0%D0%BD%D1%82%D0%B0/%D0%B4%D0%B8%D0%B3%D1%85%D0%B0-h%D0%B8%D0%BA%D0%B0%D1%8F";

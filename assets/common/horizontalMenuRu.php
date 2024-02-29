@@ -81,7 +81,7 @@ echo '<!--
      <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
     <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li>       
          
-        <li><a class="dropdown-item" target="_blank" href="' . $linktbw . '">
+        <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
           <i class="' . $iconimportant . '"></i>
         The Buddha\'s Words</a></li>    
         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Благородный Аскетизм</a></li>

@@ -11,32 +11,7 @@ if ( preg_match('/Android/', $uname)  ) {
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
 $fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
 
-$defaults = '<br>
-   <input class="form-check-input mt-2" name="ml" type="checkbox" id="readerCheckbox"> <a href="/sc/ml.html?q=sn56.11">ml</a> as Default Reader
- <script>
-//localStorage.setItem("defaultReader", "ml");  
- 
- // Получаем элемент чекбокса
-var checkbox = document.getElementById("readerCheckbox");
 
-// Устанавливаем обработчик события при изменении состояния чекбокса
-checkbox.addEventListener("change", function() {
-    if (this.checked) {
-        // Если чекбокс отмечен, устанавливаем значение в localStorage
-        localStorage.setItem("defaultReader", "ml");
-    } else {
-        // Если чекбокс не отмечен, удаляем значение из localStorage
-        localStorage.removeItem("defaultReader");
-    }
-});
-
-// Проверяем значение в localStorage при загрузке страницы и устанавливаем состояние чекбокса
-if (localStorage.getItem("defaultReader") === "ml") {
-    checkbox.checked = true;
-} else {
-    checkbox.checked = false;
-}
- </script> ';
 //converter.php
 $adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
 
@@ -191,4 +166,35 @@ $iconimportant = 'fa-solid fa-circle-exclamation';
 $iconimportant = 'fa-solid fa-triangle-exclamation';
 $iconimportant = 'fa-solid fa-star';
 
+
+$defaults = '<br>
+
+   <input class="form-check-input mt-2" name="ml" type="checkbox" id="readerCheckbox"> <a href="/sc/ml.html?q=sn56.11">ml</a> as Default Reader
+
+ <script>
+//localStorage.setItem("defaultReader", "ml");  
+ 
+ // Получаем элемент чекбокса
+var checkbox = document.getElementById("readerCheckbox");
+
+// Устанавливаем обработчик события при изменении состояния чекбокса
+checkbox.addEventListener("change", function() {
+    if (this.checked) {
+        // Если чекбокс отмечен, устанавливаем значение в localStorage
+        localStorage.setItem("defaultReader", "ml");
+    } else {
+        // Если чекбокс не отмечен, удаляем значение из localStorage
+        localStorage.removeItem("defaultReader");
+    }
+});
+
+// Проверяем значение в localStorage при загрузке страницы и устанавливаем состояние чекбокса
+if (localStorage.getItem("defaultReader") === "ml") {
+    checkbox.checked = true;
+} else {
+    checkbox.checked = false;
+}
+ </script>';
+ 
+ 
 ?>

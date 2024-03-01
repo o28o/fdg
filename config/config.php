@@ -12,7 +12,7 @@ $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
 $fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
 
 $defaults = '<br>
-   <input class="form-check-input mt-2" type="checkbox" id="readerCheckbox"> <a href="/sc/ml.html?q=sn56.11">ml</a> as Default Reader
+   <input class="form-check-input mt-2" name="ml" type="checkbox" id="readerCheckbox"> <a href="/sc/ml.html?q=sn56.11">ml</a> as Default Reader
  <script>
 //localStorage.setItem("defaultReader", "ml");  
  

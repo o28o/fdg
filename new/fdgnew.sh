@@ -48,25 +48,25 @@ if [[ "$@" == *"-oru"* ]]
 then
 # output language is russian
 cd $apachesitepath/assets/texts/
-#bash $tmpdir/cmndFor-en | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
-bash $tmpdir/cmndFor-$langtwo | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
+bash $tmpdir/${prefix}cmndFor-en | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-ru 2>/dev/null
+#bash $tmpdir/${prefix}cmndFor-$langtwo | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-ru 2>/dev/null
 fi
 
 cd $apachesitepath > /dev/null
 
 #proccessing common for all files 
 #if ru
-#cat $tmpdir/initrun* > $tmpdir/forpd
-sed -i 's/.html/":1"/g'  $tmpdir/initrun*
+#cat $tmpdir/${prefix}initrun* > $tmpdir/${prefix}forpd
+sed -i 's/.html/":1"/g'  $tmpdir/${prefix}initrun*
 
-sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/initrun-pi
-sed -i 's/_translation-ru-.*.json/":2"/g' $tmpdir/initrun-ru 2>/dev/null
-sed -i 's/_translation-en-.*.json/":3"/g' $tmpdir/initrun-en
-sed -i 's/_variant-pli-ms.json/":4"/g' $tmpdir/initrun-var
-sed -i 's/":/@/g'  $tmpdir/initrun*
-sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/initrun*
+sed -i 's/_root-pli-ms.json/":1"/g' $tmpdir/${prefix}initrun-pi
+sed -i 's/_translation-ru-.*.json/":2"/g' $tmpdir/${prefix}initrun-ru 2>/dev/null
+sed -i 's/_translation-en-.*.json/":3"/g' $tmpdir/${prefix}initrun-en
+sed -i 's/_variant-pli-ms.json/":4"/g' $tmpdir/${prefix}initrun-var
+sed -i 's/":/@/g'  $tmpdir/${prefix}initrun*
+sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/${prefix}initrun*
 
-cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's|@/.*/|@|g' | sed 's|@/|@|g'| ifHtmlFiles |  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
+cat $tmpdir/${prefix}initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's|@/.*/|@|g' | sed 's|@/|@|g'| ifHtmlFiles |  sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
 
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
 
@@ -74,9 +74,9 @@ cat $tmpdir/initrun*  | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' |
 cd $langdir
 getWordsForCounts
 
-cat $tmpdir/words | awk -F/ '{print $NF}' | awk -F"$delimiterForAwk" '{print $1}' | sort -V | uniq -c | sed 's/.html//g' | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+cat $tmpdir/${prefix}words | awk -F/ '{print $NF}' | awk -F"$delimiterForAwk" '{print $1}' | sort -V | uniq -c | sed 's/.html//g' | awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/${prefix}counts
 
-cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g' | sed 's/_.*:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
+cat $tmpdir/${prefix}words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g' | sed 's/_.*:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
     if ($1 in data) {
         data[$1] = data[$1] " " $2
     } else {
@@ -87,17 +87,17 @@ END {
     for (item in data) {
         print data[item]
     }
-}' | sort -V > $tmpdir/wordsAggregatedByTexts
+}' | sort -V > $tmpdir/${prefix}wordsAggregatedByTexts
 
 cd $apachesitepath > /dev/null
 ########## end count keywords in texts
 
-#rm $tmpdir/afterawk  
-bash $apachesitepath/new/awknewfdg.sh $tmpdir/readyforawk "$keyword" > $tmpdir/afterawk  
+#rm $tmpdir/${prefix}afterawk  
+bash $apachesitepath/new/awknewfdg.sh $tmpdir/${prefix}readyforawk "$keyword" > $tmpdir/${prefix}afterawk  
 
-counts_file="$tmpdir/counts" 
-afterawk_file="$tmpdir/afterawk"
-aggregated_file="$tmpdir/wordsAggregatedByTexts"
+counts_file="$tmpdir/${prefix}counts" 
+afterawk_file="$tmpdir/${prefix}afterawk"
+aggregated_file="$tmpdir/${prefix}wordsAggregatedByTexts"
 wordsAggregatedByTexts=$(wc -l < "$aggregated_file")
 counts=$(wc -l < "$counts_file")
 afterawk=$(wc -l < "$afterawk_file")
@@ -109,15 +109,15 @@ else
     echo "$counts в файле $counts_file не равно количеству строк $afterawk в файле $afterawk_file и $wordsAggregatedByTexts в $aggregated_file"
 fi
 
-paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
-bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
+paste -d"@" $tmpdir/${prefix}counts $tmpdir/${prefix}afterawk $tmpdir/${prefix}wordsAggregatedByTexts > $tmpdir/${prefix}finalraw
+bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/${prefix}finalraw "$keyword" > $tmpdir/${prefix}finalhtml
 
 
-uniqwords=$(cat $tmpdir/words | cleanupwords |awk -F: '{print $2}' | sort -u | wc -l)
-textsqnty=$(awk -F@ '{ sum += $3 }; END { print NR }' $tmpdir/counts)
-matchqnty=$(awk -F@ '{ sum += $3 }; END { print sum }' $tmpdir/counts)
+uniqwords=$(cat $tmpdir/${prefix}words | cleanupwords |awk -F: '{print $2}' | sort -u | wc -l)
+textsqnty=$(awk -F@ '{ sum += $3 }; END { print NR }' $tmpdir/${prefix}counts)
+matchqnty=$(awk -F@ '{ sum += $3 }; END { print sum }' $tmpdir/${prefix}counts)
 #format output results
-headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum " matches in '"$searchInForUser $searchlangForUser"'" }' $tmpdir/counts)"
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts "  sum " matches in '"$searchInForUser $searchlangForUser"'" }' $tmpdir/${prefix}counts)"
 
 escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #echo $escapedKeyword
@@ -128,17 +128,17 @@ else
 wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
 fi
 WORDREPLACELINK="$wordLinkToReplace"
-cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/r.html
-#echo "<script $fontawesomejs></script>" >> $output/r.html
-echo '<div class="args" style="display: none;" >'"$args"'</div>' >> $output/r.html
-echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/r.html
-echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' >> $output/r.html
-echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/r.html
+cat $apachesitepath/new/templates/header | sed 's/$title/'"$headerinfo"'/g' > $output/${prefix}r.html
+#echo "<script $fontawesomejs></script>" >> $output/${prefix}r.html
+echo '<div class="args" style="display: none;" >'"$args"'</div>' >> $output/${prefix}r.html
+echo '<div class="keyword" style="display: none;" >'"$keyword"'</div>' >> $output/${prefix}r.html
+echo '<div class="searchIn" style="display: none;" >'"$source"'</div>' >> $output/${prefix}r.html
+echo '<div class="searchlang" style="display: none;" >'"$searchlang"'</div>' >> $output/${prefix}r.html
 
 #ping for all variants of the pali word
 if  [[ "$searchlang" == *"pi"* ]]; then 
 # use this one if will decide that should show variants from searchIn only
-#    if [ -s "$tmpdir/initrun-var" ]; then
+#    if [ -s "$tmpdir/${prefix}initrun-var" ]; then
 if grep -qrEi -m1 "$keyword" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta/ $suttapath/sc-data/sc_bilara_data/variant/pli/ms/vinaya/ 2>/dev/null
 then
 echo '<script>
@@ -160,23 +160,23 @@ variantsDiv.innerHTML = `<img style="margin-top: -2px; height: 15px; " src="/ass
     });
   }
 });
-</script>' >> $output/r.html
+</script>' >> $output/${prefix}r.html
 fi 
 fi
 #echo $keyword in the end
 
-cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/r.html
-cat $tmpdir/finalhtml >> $output/r.html
-cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' | awk -v config="$(cat $searchBuilderConfiguration)" '{gsub("searchBuilderConfiguration", config )}1' | sed 's@WordToExclude1@'"$WordToExclude1"'@' >> $output/r.html
-cat $output/r.html
+cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/${prefix}r.html
+cat $tmpdir/${prefix}finalhtml >> $output/${prefix}r.html
+cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' | awk -v config="$(cat $searchBuilderConfiguration)" '{gsub("searchBuilderConfiguration", config )}1' | sed 's@WordToExclude1@'"$WordToExclude1"'@' >> $output/${prefix}r.html
+cat $output/${prefix}r.html
 
 table=$keyword-$textsqnty-$matchqnty-$searchlang.html
 
 
-cp $output/r.html $output/$table
+cp $output/${prefix}r.html $output/$table
 
-#head $tmpdir/readyforawk | awk -F@ '{print $1, $2, $3}' 
-#wc -l $tmpdir/counts $tmpdir/afterawk
+#head $tmpdir/${prefix}readyforawk | awk -F@ '{print $1, $2, $3}' 
+#wc -l $tmpdir/${prefix}counts $tmpdir/${prefix}afterawk
 
 linenumbers=`cat -n $history | grep -E "$table" | grep daterow | grep "$searchInForUser" | grep "$searchlangForUser/$langtwo" | awk '{print $1}' | tac`
 
@@ -186,26 +186,26 @@ sed -i "${i}d" $history
 done 
 
 updateHistory
-
+#cleanupTempFiles
 exit 0
 
-cat $tmpdir/forpd | sed -e 's/.*json: *"/@/g'  -e 's/": *"/@/g' 
+cat $tmpdir/${prefix}forpd | sed -e 's/.*json: *"/@/g'  -e 's/": *"/@/g' 
 
 
 
 echo varFirst
 BackupsearchIn="$searchIn"
-initialGrep "$searchInVar" > $tmpdir/initrun-var
+initialGrep "$searchInVar" > $tmpdir/${prefix}initrun-var
 
-initialCmnd $tmpdir/initrun-var pi "$searchInPli"
-initialGrep "$searchInPli" >> $tmpdir/initrun-pi
+initialCmnd $tmpdir/${prefix}initrun-var pi "$searchInPli"
+initialGrep "$searchInPli" >> $tmpdir/${prefix}initrun-pi
 
-initialCmnd $tmpdir/initrun-pi en "$searchInEng"
-
-
+initialCmnd $tmpdir/${prefix}initrun-pi en "$searchInEng"
 
 
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | sed "s@^\"@@g" | awk 'BEGIN {OFS=""; printf "grep -Eir \047("} { printf $1"|"}' |  sed '$ s@|$@)'\'' '"$searchIn"' \n@'  > cmnd
+
+
+cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed "s@:@@g" | sed "s@^\"@@g" | awk 'BEGIN {OFS=""; printf "grep -Eir \047("} { printf $1"|"}' |  sed '$ s@|$@)'\'' '"$searchIn"' \n@'  > cmnd
 
 
 

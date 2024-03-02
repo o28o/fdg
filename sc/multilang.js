@@ -196,7 +196,16 @@ if (finder && finder.trim() !== "") {
 }
 
 
-if (engTransData[segment] !== undefined) {
+
+if (paliData[segment] === undefined) {
+  paliData[segment] = "";
+}
+if (transData[segment] === undefined) {
+  transData[segment] = "";
+}
+if (engTransData[segment] === undefined) {
+  engTransData[segment] = "";
+}
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment]) {
@@ -211,19 +220,9 @@ if (engTransData[segment] !== undefined) {
       <span class="rus-lang" lang="en">${engTransData[segment]}</span>
       </span>${closeHtml}\n\n`;
     }
-} else if (paliData[segment] !== undefined && transData[segment] !== undefined) {
-        html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span>
-      <span class="rus-lang" lang="ru">${transData[segment]}</span>
-      <span class="eng-lang" lang="en">${engTransData[segment]}</span>
-      </span>${closeHtml}\n\n`;
-} else if (paliData[segment] !== undefined) {
-        html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span>
-      <span class="rus-lang" lang="ru">${transData[segment]}</span>
-      <span class="eng-lang" lang="en">${engTransData[segment]}</span>
-      </span>${closeHtml}\n\n`;
-} 
+
+
+
 
 
     });

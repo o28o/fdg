@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получить параметр s из URL браузера
     const urlParams = new URLSearchParams(window.location.search);
     const sParam = urlParams.get('s');
-  
+ 
     let keyword;
 
     // Проверяем наличие элемента с классом "keyword"
@@ -63,7 +63,12 @@ function findFdgTextUrl(slug, searchValue, baseUrl) {
 
     const url = isSuttaCentral ? `https://suttacentral.net/${slug}` : baseUrl;
 
-    const scUrl = `${baseUrl}?s=${searchValue ? searchValue : ""}&q=${slug}`;
+  let scUrl = `${baseUrl}?s=${searchValue ? searchValue : ""}&q=${slug}`;
 
+if (scUrl.endsWith('#')) {
+    scUrl = scUrl.replace(/#$/, '');
+}
+     
+console.log("Ссылка эта? ", scUrl);
     return isSuttaCentral ? url : scUrl;
 }

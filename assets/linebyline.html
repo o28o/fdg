@@ -172,10 +172,12 @@ function downloadJson() {
   let url;
   if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
+
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
-
+   //   url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
+console.log(url);
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -267,7 +269,8 @@ if (indexValue.includes("sn")) {
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
-
+  //    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
+console.log(url);
   fetch(url)
     .then(response => {
       if (!response.ok) {

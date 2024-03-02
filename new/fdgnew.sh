@@ -48,8 +48,8 @@ if [[ "$@" == *"-oru"* ]]
 then
 # output language is russian
 cd $apachesitepath/assets/texts/
-#bash $tmpdir/cmndFor-en | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
-bash $tmpdir/cmndFor-$langtwo | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
+bash $tmpdir/cmndFor-en | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
+#bash $tmpdir/cmndFor-$langtwo | sed 's/<[^>]*>//g' > $tmpdir/initrun-ru 2>/dev/null
 fi
 
 cd $apachesitepath > /dev/null

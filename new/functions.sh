@@ -12,6 +12,9 @@ database="./db/fdg-db.db"
 #separator="@"
 sqlitecommand="sqlite3 -separator $separator"
 
+rand=`echo $RANDOM | md5sum | head -c 5`
+#prefix=tmp${rand}-
+
 dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
 dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
 direng=$suttapath/sc-data/sc_bilara_data/translation/en
@@ -212,9 +215,9 @@ numbersmatches=`echo "$@" | sed 's@.*-nm@@' | awk '{print $1}'`
 else
 numbersmatches=
 fi
-xargs grep -ci "$keyword" | sort -t':' -k2n | tail -n10  > $tmpdir/inittoplist
-#do the word grep here cat  "$tmpdir/inittoplist" 
-cat "$tmpdir/inittoplist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/initrun-$searchlang
+xargs grep -ci "$keyword" | sort -t':' -k2n | tail -n10  > $tmpdir/${prefix}inittoplist
+#do the word grep here cat  "$tmpdir/${prefix}inittoplist" 
+cat "$tmpdir/${prefix}inittoplist" | xargs grep -Ei "$keywordforgreping" > $tmpdir/${prefix}initrun-$searchlang
 }
 
 function ifHtmlFiles {
@@ -234,16 +237,16 @@ echo "$keywordforfindingfiles" | tr ' ' '\n'  | awk 'BEGIN { ORS = "" } { if (NR
 }
   else {
   print "| xargs grep -iEl \"" $1 "\""
-}}' > $tmpdir/cmndForAnydistance
-bash $tmpdir/cmndForAnydistance > $tmpdir/initfilelist
+}}' > $tmpdir/${prefix}cmndForAnydistance
+bash $tmpdir/${prefix}cmndForAnydistance > $tmpdir/${prefix}initfilelist
 
-checkForInitSearch $tmpdir/initfilelist
+checkForInitSearch $tmpdir/${prefix}initfilelist
 
-cat "$tmpdir/initfilelist" | xargs grep -EHi "$keywordforgreping" > $tmpdir/initrun-$searchlang
+cat "$tmpdir/${prefix}initfilelist" | xargs grep -EHi "$keywordforgreping" > $tmpdir/${prefix}initrun-$searchlang
 
 if [[ "$searchlang" == *"pi"* ]]; then
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-initialCmnd $tmpdir/initrun-pi var 
+initialCmnd $tmpdir/${prefix}initrun-pi var 
 fi
 
 
@@ -273,8 +276,8 @@ grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/n
 function initialCmnd {
 #file to process to function $1 source file e.g initfile eng var pli $2 dest filr e.g. pli 
 if [ -s "$1" ]; then
-cat "$1" | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$3"' \n@' > $tmpdir/cmndFor-$2
-bash $tmpdir/cmndFor-$2 2>/dev/null | sed 's/<[^>]*>//g' > $tmpdir/initrun-$2
+cat "$1" | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$3"' \n@' > $tmpdir/${prefix}cmndFor-$2
+bash $tmpdir/${prefix}cmndFor-$2 2>/dev/null | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-$2
 fi
 }
 
@@ -282,7 +285,7 @@ function grepForWords {
   
   if [[ "$args" == *"-anyd"* ]]; then 
   cd $langdir
-cat "$tmpdir/initfilelist" | xargs grep -ioHE "\w*${keywordforgreping}[^ ]*" | awk -F: '$2 > 0 {print $0}' | cleanupwords
+cat "$tmpdir/${prefix}initfilelist" | xargs grep -ioHE "\w*${keywordforgreping}[^ ]*" | awk -F: '$2 > 0 {print $0}' | cleanupwords
 
 else   
   grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords
@@ -292,10 +295,10 @@ else
 
 function RuLangFirst {
 cd $suttapath/sc-data/html_text/ru/pli/
-grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g' | grep -v "^--$" | sort -V | uniq > $tmpdir/initrun-ru
+grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g' | grep -v "^--$" | sort -V | uniq > $tmpdir/${prefix}initrun-ru
 #cd - > /dev/null
 
-checkForInitSearch $tmpdir/initrun-ru
+checkForInitSearch $tmpdir/${prefix}initrun-ru
 
 }
 
@@ -315,26 +318,26 @@ cd $output > /dev/null
 #Samaṇasukhasutta An Ascetic’s Happiness an5.128 var
 
 #if ru
-sed -i 's/.html/":1"/g'  $tmpdir/$basefile
-sed -i 's/":/@/g'  $tmpdir/$basefile
+sed -i 's/.html/":1"/g'  $tmpdir/${prefix}$basefile
+sed -i 's/":/@/g'  $tmpdir/${prefix}$basefile
 
-sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/$basefile
-sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/$basefile
+sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/${prefix}$basefile
+sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/${prefix}$basefile
    
-cat $tmpdir/$basefile | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/readyforawk
+cat $tmpdir/${prefix}$basefile | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
 
 
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
 ########## count keywords in texts
 
 cd $suttapath/$pali_or_lang
-grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' > $tmpdir/words
+grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' > $tmpdir/${prefix}words
 
 
 
-cat $tmpdir/words   | awk -F/ '{print $NF}' | awk -F: '{print $1}' | sort -V | uniq -c | sed 's/.html//g'| awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/counts
+cat $tmpdir/${prefix}words   | awk -F/ '{print $NF}' | awk -F: '{print $1}' | sort -V | uniq -c | sed 's/.html//g'| awk 'BEGIN { OFS = "@" }{ print $2,$2,$1}' > $tmpdir/${prefix}counts
 
-cat $tmpdir/words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
+cat $tmpdir/${prefix}words | cleanupwords | awk -F/ '{print $NF}' | sed 's/.html:/ /g'| awk '{print $1, $2}' | sort -V | uniq | awk '{
     if ($1 in data) {
         data[$1] = data[$1] " " $2
     } else {
@@ -345,17 +348,17 @@ END {
     for (item in data) {
         print data[item]
     }
-}' | sort -V > $tmpdir/wordsAggregatedByTexts
+}' | sort -V > $tmpdir/${prefix}wordsAggregatedByTexts
 
 cd $output > /dev/null
 ########## end count keywords in texts
 
-#rm $tmpdir/afterawk  
-bash $apachesitepath/new/awknewfdg.sh $tmpdir/readyforawk "$keyword" > $tmpdir/afterawk  
+#rm $tmpdir/${prefix}afterawk  
+bash $apachesitepath/new/awknewfdg.sh $tmpdir/${prefix}readyforawk "$keyword" > $tmpdir/${prefix}afterawk  
 
-counts_file="$tmpdir/counts" 
-afterawk_file="$tmpdir/afterawk"
-aggregated_file="$tmpdir/wordsAggregatedByTexts"
+counts_file="$tmpdir/${prefix}counts" 
+afterawk_file="$tmpdir/${prefix}afterawk"
+aggregated_file="$tmpdir/${prefix}wordsAggregatedByTexts"
 wordsAggregatedByTexts=$(wc -l < "$aggregated_file")
 counts=$(wc -l < "$counts_file")
 afterawk=$(wc -l < "$afterawk_file")
@@ -367,15 +370,15 @@ else
     echo "$counts в файле $counts_file не равно количеству строк 
     $afterawk в файле $afterawk_file и 
     $wordsAggregatedByTexts в $aggregated_file"
-   paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}' > $tmpdir/fordebug
+   paste -d"@" $tmpdir/${prefix}counts $tmpdir/${prefix}afterawk $tmpdir/${prefix}wordsAggregatedByTexts | awk -F@ '{OFS == "@"} BEGIN {print "counts after wordsAggr" } {OFS == "\t"} {print $1,$6, $9}' > $tmpdir/${prefix}fordebug
   #  cd result
   #  exit 0
 fi
 
-paste -d"@" $tmpdir/counts $tmpdir/afterawk $tmpdir/wordsAggregatedByTexts > $tmpdir/finalraw
-bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/finalraw "$keyword" > $tmpdir/finalhtml
+paste -d"@" $tmpdir/${prefix}counts $tmpdir/${prefix}afterawk $tmpdir/${prefix}wordsAggregatedByTexts > $tmpdir/${prefix}finalraw
+bash $apachesitepath/new/awk-step2fornew.sh $tmpdir/${prefix}finalraw "$keyword" > $tmpdir/${prefix}finalhtml
 
-headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/${prefix}counts)"
 wordLinkToReplace="/w.php?s=$keyword"
 WORDREPLACELINK="$wordLinkToReplace"
 
@@ -387,8 +390,8 @@ WORDREPLACELINK="$wordLinkToReplace"
 
 
 
-headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/counts)"
-matchqnty=`awk -F@ '{sum+=$3;} END{print sum;}' $tmpdir/counts`
+headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  sum " matches" }' $tmpdir/${prefix}counts)"
+matchqnty=`awk -F@ '{sum+=$3;} END{print sum;}' $tmpdir/${prefix}counts`
 
 }
 
@@ -397,17 +400,17 @@ if [[ "$searchIn" == *"sutta"* ]]
 then 
 translator="sujato"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-initialGrep > $tmpdir/initrun-en
+initialGrep > $tmpdir/${prefix}initrun-en
 fi 
 
 if [[ "$searchIn" == *"vinaya"* ]] 
 then 
 translator="brahmali"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-initialGrep >> $tmpdir/initrun-en
+initialGrep >> $tmpdir/${prefix}initrun-en
 fi 
 
-checkForInitSearch $tmpdir/initrun-en
+checkForInitSearch $tmpdir/${prefix}initrun-en
 }
 
 function checkForInitSearch {
@@ -429,66 +432,66 @@ function checkForInitSearch {
 }
 
 function getPliFromLangFirst {
- # initialCmnd $tmpdir/initrun-en pi 
-  cat $tmpdir/initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
+ # initialCmnd $tmpdir/${prefix}initrun-en pi 
+  cat $tmpdir/${prefix}initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFor-pi
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-pi
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
 }
 
 function varFirst {
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-initialGrep > $tmpdir/initrun-var
+initialGrep > $tmpdir/${prefix}initrun-var
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
-if [ -s "$tmpdir/initrun-var" ]; then
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
-bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/initrun-pi
+if [ -s "$tmpdir/${prefix}initrun-var" ]; then
+cat $tmpdir/${prefix}initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFor-pi
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-pi
 fi
-initialGrep >> $tmpdir/initrun-pi
+initialGrep >> $tmpdir/${prefix}initrun-pi
 
-checkForInitSearch $tmpdir/initrun-var $tmpdir/initrun-pi
+checkForInitSearch $tmpdir/${prefix}initrun-var $tmpdir/${prefix}initrun-pi
 
 }
 
 function pliFirst {
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-initialGrep > $tmpdir/initrun-pi
+initialGrep > $tmpdir/${prefix}initrun-pi
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-initialGrep > $tmpdir/initrun-var
+initialGrep > $tmpdir/${prefix}initrun-var
 
-if [ -s "$tmpdir/initrun-var" ]; then
+if [ -s "$tmpdir/${prefix}initrun-var" ]; then
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-cat $tmpdir/initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFor-pi
-bash $tmpdir/cmndFor-pi | sed 's/<[^>]*>//g' >> $tmpdir/initrun-pi
+cat $tmpdir/${prefix}initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFor-pi
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-pi
 fi
 
-checkForInitSearch $tmpdir/initrun-var $tmpdir/initrun-pi
+checkForInitSearch $tmpdir/${prefix}initrun-var $tmpdir/${prefix}initrun-pi
 
 }
 
 function getLangFromVarFirst {
-   # initialCmnd $tmpdir/initrun-pi en
-  cat $tmpdir/initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/cmndFor-en
+   # initialCmnd $tmpdir/${prefix}initrun-pi en
+  cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFor-en
 
 if [[ "$searchIn" == *"sutta"* ]] 
 then 
 translator="sujato"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-bash $tmpdir/cmndFor-en > $tmpdir/initrun-en
+bash $tmpdir/${prefix}cmndFor-en > $tmpdir/${prefix}initrun-en
 fi 
 
 if [[ "$searchIn" == *"vinaya"* ]] 
 then 
 translator="brahmali"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-bash $tmpdir/cmndFor-en >> $tmpdir/initrun-en
+bash $tmpdir/${prefix}cmndFor-en >> $tmpdir/${prefix}initrun-en
 fi 
 }
 
@@ -496,29 +499,29 @@ function getWordsForCounts {
 delimiterForAwk="_"
 if [[ "$searchlang" == *"pi"* ]]; then
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-grepForWords > $tmpdir/words
+grepForWords > $tmpdir/${prefix}words
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grepForWords >> $tmpdir/words
+grepForWords >> $tmpdir/${prefix}words
 
 elif  [[ "$searchlang" == *"en"* ]]; then
 if [[ "$searchIn" == *"sutta"* ]] 
 then 
 translator="sujato"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grepForWords > $tmpdir/words
+grepForWords > $tmpdir/${prefix}words
 fi 
 
 if [[ "$searchIn" == *"vinaya"* ]] 
 then 
 translator="brahmali"
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grepForWords >> $tmpdir/words
+grepForWords >> $tmpdir/${prefix}words
 fi
 elif  [[ "$searchlang" == *"ru"* ]]; then
 delimiterForAwk=":"
 cd $suttapath/sc-data/html_text/ru/pli/
-grepForWords > $tmpdir/words
+grepForWords > $tmpdir/${prefix}words
 fi 
 cd $apachesitepath >/dev/null
 }
@@ -529,31 +532,34 @@ sed 's/[[:punct:]]*$//' | sed 's/…$//'| awk '{print tolower($0)}' | sed -e 's/
 
 function cleanupTempFiles {
   #fdgnew
-rm $tmpdir/initrun* 2>/dev/null
-rm $tmpdir/afterawk 2>/dev/null
-rm $tmpdir/cmnd* 2>/dev/null
-rm $tmpdir/counts 2>/dev/null
-rm $tmpdir/finalhtml 2>/dev/null
-rm $tmpdir/finalraw 2>/dev/null
-rm $tmpdir/readyforawk 2>/dev/null
-rm $tmpdir/words 2>/dev/null
-rm $tmpdir/wordsAggregatedByTexts 2>/dev/null
+rm $tmpdir/${prefix}initrun* 2>/dev/null
+rm $tmpdir/${prefix}afterawk 2>/dev/null
+rm $tmpdir/${prefix}cmnd* 2>/dev/null
+rm $tmpdir/${prefix}counts 2>/dev/null
+rm $tmpdir/${prefix}finalhtml 2>/dev/null
+rm $tmpdir/${prefix}finalraw 2>/dev/null
+rm $tmpdir/${prefix}readyforawk 2>/dev/null
+rm $tmpdir/${prefix}words 2>/dev/null
+rm $tmpdir/${prefix}wordsAggregatedByTexts 2>/dev/null
+rm $output/${prefix}r.html 2>/dev/null
+
 #words
-rm $tmpdir/counts 2>/dev/null
-rm $tmpdir/finalhtml 2>/dev/null
-rm $tmpdir/uniqwords 2>/dev/null
-rm $output/w.html 2>/dev/null
-rm $tmpdir/wordcountMatches 2>/dev/null
-rm $tmpdir/wordcountTexts 2>/dev/null
-rm $tmpdir/words 2>/dev/null
-rm $tmpdir/wordsWithAggregatedTexts 2>/dev/null
-rm $tmpdir/wordsfinalhtml 2>/dev/null
-rm $tmpdir/variantsReport 2>/dev/null
+rm $tmpdir/${prefix}threetables 2>/dev/null
+rm $tmpdir/${prefix}counts 2>/dev/null
+rm $tmpdir/${prefix}finalhtml 2>/dev/null
+rm $tmpdir/${prefix}uniqwords 2>/dev/null
+rm $output/${prefix}w.html 2>/dev/null
+rm $tmpdir/${prefix}wordcountMatches 2>/dev/null
+rm $tmpdir/${prefix}wordcountTexts 2>/dev/null
+rm $tmpdir/${prefix}words 2>/dev/null
+rm $tmpdir/${prefix}wordsWithAggregatedTexts 2>/dev/null
+rm $tmpdir/${prefix}wordsfinalhtml 2>/dev/null
+rm $tmpdir/${prefix}variantsReport 2>/dev/null
 
 }
 
 function getSimiles {
-  tmpsml=$tmpdir/tmpsml.$rand
+  tmpsml=$tmpdir/${prefix}tmpsml.$rand
   modkeyword="`echo $keyword | sed -E 's/([aiīoā]|aṁ)$//g'`"
 keyword="$modkeyword"
 
@@ -568,14 +574,14 @@ fi
 smlkeyword="${vinsmlpart}seyyathāpi.*${modkeyword}|${modkeyword}.*adhivacan|${modkeyword}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modkeyword}|Suppose.*${modkeyword}|${modkeyword} is|${modkeyword}.*is a designation for|is a designation for.*${modkeyword}|${modkeyword}.*Simile|simile.*${modkeyword}|It’s like.*${modkeyword}|is a term for.*${modkeyword}|${modkeyword}.*is a term for|similar to.*${modkeyword}|${modkeyword}.*similar to|Представ.*${modkeyword}|обозначение.*${modkeyword}|${modkeyword}.*обозначение${customtexts}" 
 
 #cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-grep -Eir "$smlkeyword" $searchIn | grep -viE "$nonmetaphorkeys" | grep -vi "condition" > $tmpdir/initrun-pi
+grep -Eir "$smlkeyword" $searchIn | grep -viE "$nonmetaphorkeys" | grep -vi "condition" > $tmpdir/${prefix}initrun-pi
 
-grep -B2 -ERi "Eva[mnṇṅṃṁ].*${modkeyword}" $searchIn | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' >> $tmpdir/initrun-pi
+grep -B2 -ERi "Eva[mnṇṅṃṁ].*${modkeyword}" $searchIn | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' >> $tmpdir/${prefix}initrun-pi
 
-if [ -s "$tmpdir/initrun-pi" ]; then
+if [ -s "$tmpdir/${prefix}initrun-pi" ]; then
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-cat $tmpdir/initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/cmndFromPi
-bash $tmpdir/cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/initrun-var
+cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFromPi
+bash $tmpdir/${prefix}cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
 fi
 
 }
@@ -590,7 +596,7 @@ pattern="$modpattern"
 linesafter=3
 patternForHighlight="`echo $keyword | sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}\.\*//g'| sed -E 's/^[A-Za-z]{2,4}[0-9]{2,3}.[0-9]{1,3}\.\*//g' | sed 's/.\*/|/g' |  sed 's@^@(@g' | sed 's/$/)/g' | sed 's@\\.@|@g' | sed 's@ @|@g' | sed 's@,@@g'`"
 
-tmpdef=$tmpdir/tmpdef.$rand
+tmpdef=$tmpdir/${prefix}tmpdef.$rand
 
 vin="./vinaya/pli-tv-b*"
 searchIn="$vin"

@@ -1,5 +1,6 @@
 while read -r word1 word2; do  
 echo $word1 $word2
+sed -i 's/\b'${word1}'\b/'${word2}'/g' ./bw/an/*
 sed -i 's/\b'${word1}'\b/'${word2}'/g' ./bw/dhp/*
 sed -i 's/\b'${word1}'\b/'${word2}'/g' ./bw/dn/*
 sed -i 's/\b'${word1}'\b/'${word2}'/g' ./bw/it/*

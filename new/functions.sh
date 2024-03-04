@@ -19,6 +19,36 @@ dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
 dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
 direng=$suttapath/sc-data/sc_bilara_data/translation/en
 
+function setSearchSite {
+if [[ "$args" == *"-tbwbodhi"* ]]; then
+#echo eng case
+dirvar=/dev/null
+dirpli=$apachesitepath/tbw/roottbw
+direng=$apachesitepath/tbw/translation
+translator=bodhi
+elif [[ "$args" == *"-tbwsujato"* ]]; then
+#echo eng case
+dirvar=/dev/null
+dirpli=$apachesitepath/tbw/roottbw
+direng=$apachesitepath/tbw/translation
+translator=bodhi
+elif [[ "$args" == *"-thru"* ]]; then
+dirvar=/dev/null
+dirpli=$apachesitepath/tbw/roottbw
+direng=$apachesitepath/tbw/translation
+translator=sv
+function ifHtmlFiles {
+  awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}'
+}
+
+else
+#sc line by line
+dirvar=$suttapath/sc-data/sc_bilara_data/variant/pli/ms
+dirpli=$suttapath/sc-data/sc_bilara_data/root/pli/ms
+direng=$suttapath/sc-data/sc_bilara_data/translation/en
+fi
+}
+
 function setSearchLanguage {
 if [[ "$args" == *"-en"* ]]; then
 #echo eng case
@@ -127,7 +157,6 @@ function cleanupSrc {
   }
 
 source=$(echo "$args" | awk -F'-src' '{ print $2}' | awk '{ print $1}' )
-
 
 searchIn=""
 searchInPli="" 

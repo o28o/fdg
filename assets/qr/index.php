@@ -40,7 +40,7 @@ include 'scripts/opentexts.php';
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-               <a href="/assets/qr/vcard_Pavel_K.vcf"> <img class="masthead-avatar mt-5 mb-5" src="/assets/qr/qr_Pavel_K.svg" alt="..." /></a>
+               <a href="/assets/qr/vcard_Pavel_K.vcf"> <img class="masthead-avatar mt-5 mb-5" src="/assets/qr/contactqr.png" alt="..." /></a>
                 <!-- Masthead Heading-->
                   <a class="text-decoration-none text-white" href="/assets/qr/vcard_Pavel_K.vcf"> <h1 class="masthead-heading text-uppercase mb-0">Pavel Katorgin</h1></a>
                 <!-- Icon Divider-->

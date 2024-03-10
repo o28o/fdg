@@ -193,7 +193,7 @@ $slides = [
     [
         'title' => 'Я научу вас благородному ...',
         'desc' => 'Что такое благородное мытьё, слабительное, рвотное, путь и самадхи',
-        'link' => 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali-ru_13-13.html',
+        'link' => '/assets/example/bariy.desessaa_suttanta_pali-ru_13-13.html',
     ],
     [
         'title' => 'Бывает такой период...',
@@ -664,7 +664,7 @@ $slides = [
     [
         'title' => 'I will teach a noble...',
         'desc' => 'What is noble cleansing, purgative, emetic, the path, and samadhi',
-        'link' => 'https://find.dhamma.gift/result/bariy.desessaa_suttanta_pali_13-13.html',
+        'link' => '/assets/example/bariy.desessaa_suttanta_pali_13-13.html',
     ],
     [
         'title' => 'There comes a time...',

@@ -791,7 +791,7 @@ elif [[ "$@" == *"-tru"* ]]; then
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"  
     
          function grepbasefile {
-cd $apachesitepath/theravada.ru/Teaching/Canon
+cd $apachesitepath/theravada.ru/Teaching/Canon/Suttanta/
 grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  
 cd - > /dev/null
 }   

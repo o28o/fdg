@@ -8,6 +8,8 @@ Disallow: /assets/
 Disallow: /bw/
 Disallow: /db/
 Disallow: /new/
+Disallow: /w.php
+Disallow: /s.php
 Disallow: /legacy.suttacentral.net/
 Disallow: /suttacentral.net/
 Disallow: /accesstoinsight.org/

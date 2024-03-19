@@ -214,7 +214,7 @@ echo '<!--
 
            <li><a class="dropdown-item" href="https://devamitta.github.io/pali/pali_dict.html">
              <i class="' . $iconimportant . '"></i>
-           Пали-Рус для GoldenDict</a></li>  
+           Пали-Русс Digital Pāḷi Dictionary</a></li>  
            
 <li>
  

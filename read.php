@@ -190,7 +190,7 @@ $(document).ready(function() {
 
          <div style="max-width: 300px;" class="my-2"> 
      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-onl ") echo "checked";?>  value="-onl">
+        <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-anyd ") echo "checked";?>  value="-anyd">
   <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
   </div>
   

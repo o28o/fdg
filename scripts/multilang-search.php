@@ -33,13 +33,15 @@ window.location.href='/w.php?s=$stringForWord';
 
 
 
-
-if ( preg_match('/(-def|-sml|-nm|-b|-onl|-tru)/', $p ) || preg_match('/(-onl|-def|-sml|-nm|-b|-tru)/', $extra ))  {	
+if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru)/', $p) || preg_match('/(-onl|-def|-sml|-nm|-b|-tru)/', $extra)) {
   $fdgscript = "./scripts/finddhamma.sh";
-} else {
-$fdgscript = "./new/finddhamma2.sh";
+} 
+elseif (preg_match('/(-anyd)/', $extra)) {
+  $fdgscript = "./new/fdgnew.sh";
 }
-
+else {
+  $fdgscript = "./new/finddhamma2.sh";
+}
 
 /* single search no radiobuttons */
 if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
@@ -248,7 +250,9 @@ if ($outputnonl !== '<br>') {
 echo $finaloutput;  
 }
 
-
+if (preg_match('/(-anyd)/', $extra)) {
+  echo "<script>window.location.href='/result/r.html';</script>";
+}
 
 /*
 if ( preg_match('/(|-en|-b)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) )  && ( $p != "-vin" ) && ( $p != "-def" ))  {

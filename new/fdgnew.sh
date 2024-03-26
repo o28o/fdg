@@ -173,7 +173,6 @@ cat $output/${prefix}r.html
 
 table=$keyword-$textsqnty-$matchqnty-$searchlang.html
 
-
 cp $output/${prefix}r.html $output/$table
 
 #head $tmpdir/${prefix}readyforawk | awk -F@ '{print $1, $2, $3}' 

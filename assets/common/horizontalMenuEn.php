@@ -190,8 +190,12 @@ Memorizer</a></li>
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
    <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">
      <i class="' . $iconimportant . '"></i>
-   Digital Pāḷi Dictionary</a></li>
+   Digital Pāḷi Dictionary English</a></li>
+   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/rus/">
 
+     <i class="' . $iconimportant . '"></i>
+
+   Digital Pāḷi Dictionary Russian</a></li>
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
 
 <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>

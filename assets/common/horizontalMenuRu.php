@@ -212,7 +212,7 @@ echo '<!--
       
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
 
-           <li><a class="dropdown-item" href="https://devamitta.github.io/pali/pali_dict.html">
+           <li><a class="dropdown-item" href="https://digitalpalidictionary.github.io/rus/">
              <i class="' . $iconimportant . '"></i>
            Пали-Русс Digital Pāḷi Dictionary</a></li>  
            

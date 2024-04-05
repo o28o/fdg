@@ -391,7 +391,7 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
-<?php
+<!-- /* <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
 <strong>Отличная новость!</strong> 
@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-</script>
+</script> */ -->
 
 <div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
   <div id="response"></div>

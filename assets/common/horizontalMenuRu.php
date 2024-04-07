@@ -191,6 +191,14 @@ echo '<!--
 </a>
   <ul class="dropdown-menu" aria-labelledby="tools">
   
+  
+         <li>
+         <div class="dropdown-item ">Fdg 
+         <a class="text-black" target=""  href="/old.php">old</a> 
+         <a class="text-black" target="" href="/new/">new</a>   </div>
+         </li>
+  
+  
      <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Индекс</a></li> 
 
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>

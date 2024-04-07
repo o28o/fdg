@@ -179,7 +179,13 @@ Memorizer</a></li>
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="tools">
-     <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li>
+         <li>
+         <div class="dropdown-item ">Fdg 
+         <a class="text-black" target=""  href="/old.php">old</a> 
+         <a class="text-black" target="" href="/new/">new</a>   </div>
+         </li>
+         
+     <li><a  target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li>
      <li><a class="dropdown-item" target="_blank" href="/assets/br/">ReadingFaithfully.org Blurbs</a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>
   

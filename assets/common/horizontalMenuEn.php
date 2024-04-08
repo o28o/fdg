@@ -79,22 +79,33 @@ echo '<!--
     <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
     
     <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
+    
+            <li>
 
-             <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
+         <div class="dropdown-item ">Tipitaka Pali Reader 
 
-       <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li> 
+         <a class="text-black" target=""  href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Android</a> 
+         <a class="text-black" target="" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">IOS</a>   </div>
+         </li>
+    
+
+
           <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>   
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
 
-
+    <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
   
-    <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
-    
+                <li>
+         <div class="dropdown-item ">
+         <a class="text-black" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
+                <a class="text-black" target="" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">Виная</a>
+         <a class="text-black" target="" href="https://voice.suttacentral.net">Voice</a>
+        <a class="text-black" target="" href="' . $linksclegacy . '">Legacy</a>
+         </div>
+         </li>
 
-    <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SC.net Voice</a></li>
-       <li><a class="dropdown-item" target="_blank" href="' . $linksclegacy . '">' . $anamesclegacy . '</a></li>
 
-      
+           
  
   </ul>
 
@@ -184,8 +195,7 @@ Memorizer</a></li>
          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a>   </div>
          </li>
-         
-     <li><a  target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li>
+     <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li> 
      <li><a class="dropdown-item" target="_blank" href="/assets/br/">ReadingFaithfully.org Blurbs</a></li>   
    <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>
   

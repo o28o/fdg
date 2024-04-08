@@ -68,18 +68,29 @@ echo '<!--
               <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha пер. Nanatusita Bh</a></li>
            <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi пер. Ch Kabilsingh</a></li>
     
-    <li><a class="dropdown-item" target="_blank" href="' . $linksc . '">' . $anamesc . '</a></li>
+                <li>
+         <div class="dropdown-item ">
+         <a class="text-black" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
+                <a class="text-black" target="" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">Виная</a>
+         <a class="text-black" target="" href="https://voice.suttacentral.net">Voice</a>
+        <a class="text-black" target="" href="' . $linksclegacy . '">Legacy</a>
+         </div>
+         </li>
 
-       <li><a class="dropdown-item" target="_blank" href="https://voice.suttacentral.net">SuttaCentral Voice</a></li>
-                 <li><a class="dropdown-item" target="_blank" href="' . $linksclegacy . '">' . $anamesclegacy . '</a></li> 
-           <li><a class="dropdown-item" target="_blank" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">SC.net Виная</a></li>   
+
 
      
       <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
         <li><a class="dropdown-item" target="_blank" href="https://tipitaka.org/">Tipitaka.org</a></li>
         
-     <li><a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Tipitaka Pali Reader Android</a></li>
-    <li><a class="dropdown-item" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">Tipitaka Pali Reader IOS</a></li>       
+            <li>
+         <div class="dropdown-item ">Tipitaka Pali Reader 
+         <a class="text-black" target=""  href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Android</a> 
+         <a class="text-black" target="" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">IOS</a>   </div>
+         </li>
+    
+<li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
+         
          
         <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
           <i class="' . $iconimportant . '"></i>

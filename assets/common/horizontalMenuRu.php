@@ -58,16 +58,25 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="EnglishMaterials">
-      <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">Accesstoinsight.org Патимоккха</a></li>
+
 
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
     
+                <li>
+         <div class="dropdown-item ">Patimokkha 
+         <a class="text-black" target=""  href="' . $linkati . '">ATI</a>
+       <a class="text-black" target="" href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
+          <a class="text-black" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
+       </div>
+         </li>
     
-                 <li><a class="dropdown-item" target="_blank" href="assets/dhammatalks.org/vinaya/bmc/Section0000.html">Patimokkha комм. Thanissaro Bh</a></li>
-                 
-              <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha пер. Nanatusita Bh</a></li>
+    
+
            <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi пер. Ch Kabilsingh</a></li>
     
+    <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
+
+         
                 <li>
          <div class="dropdown-item ">
          <a class="text-black" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
@@ -76,25 +85,29 @@ echo '<!--
         <a class="text-black" target="" href="' . $linksclegacy . '">Legacy</a>
          </div>
          </li>
+        <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
 
+          <i class="' . $iconimportant . '"></i>
 
+        The Buddha\'s Words</a></li>    
+   
+            <li>
+         <div class="dropdown-item ">Tipitaka 
+         <a class="text-black" target=""  href="https://tipitaka.app">CST</a>
+       <a class="text-black" target="" href="https://84000.org/">Thai</a>
+          <a class="text-black" target="" href="https://tipitaka.org/">VRI</a>  
+       </div>
+         </li>
 
-     
-      <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
-        <li><a class="dropdown-item" target="_blank" href="https://tipitaka.org/">Tipitaka.org</a></li>
-        
             <li>
          <div class="dropdown-item ">Tipitaka Pali Reader 
          <a class="text-black" target=""  href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Android</a> 
          <a class="text-black" target="" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">IOS</a>   </div>
          </li>
     
-<li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
+
          
-         
-        <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
-          <i class="' . $iconimportant . '"></i>
-        The Buddha\'s Words</a></li>    
+
         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Благородный Аскетизм</a></li>
       <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">Переводы Майкла Олдса</a></li>
 
@@ -171,19 +184,30 @@ echo '<!--
      Курс по Пали</a></li>
    
    <!-- https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing -->
-         <li><a class="dropdown-item" href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Материалы Онлайн</a></li>
-         
-       <li><a class="dropdown-item" target="_blank" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">Материалы ABT.net</a></li>   
-         <li><a class="dropdown-item" target="_blank" href="https://sasanarakkha.github.io/study-tools/">Материалы SBS</a></li> 
+   
+               <li>
+         <div class="dropdown-item ">Материалы
+         <a class="text-black" target=""  href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Gdrive</a>
+                   <a class="text-black" target="" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net</a>
+        <a class="text-black" target="" href="https://sasanarakkha.github.io/study-tools/">SBS</a>  
+       </div>
+         </li>     
+  
                          
               <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li> 
         
 
                  <li><a class="dropdown-item" href="/ru/assets/memo.html">
         <i class="' . $iconimportant . '"></i> 
-       Мнемотехника</a></li>    
-    <li><a class="dropdown-item" href="/ru/assets/rd.html">Случайный падеж</a></li>    
-   <li><a class="dropdown-item" href="/ru/assets/rr.html">Случайное правило</a></li>        
+       Мнемотехника</a></li>  
+       
+                  <li>
+         <div class="dropdown-item ">Случайный
+         <a class="text-black" target=""  href="/ru/assets/rd.html">падеж</a>
+                   <a class="text-black" target="" href="/ru/assets/rr.html">правило</a>
+       </div>
+         </li>     
+      
               
     <!--        <li><a class="dropdown-item" href="#research">Исследование</a></li>
        <li><a class="dropdown-item" href="#read">Чтение</a></li>
@@ -206,43 +230,46 @@ echo '<!--
          <li>
          <div class="dropdown-item ">Fdg 
          <a class="text-black" target=""  href="/old.php">old</a> 
-         <a class="text-black" target="" href="/new/">new</a>   </div>
+         <a class="text-black" target="" href="/new/">new</a> 
+         <a class="text-black" target="" href="' . $mainscpage . '">Pāḷi Индекс</a>   </div>
          </li>
-  
-  
-     <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Индекс</a></li> 
 
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
 
    <li><a class="dropdown-item" target="_blank" href="https://norbu-ai.org/ebt/">Norbu AI</a></li>
 
-
-  <li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS Конвертер #1</a></li>           
-
-  <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS Конвертер #2</a></li>  
-
-     <li><a class="dropdown-item" target="_blank" href="/assets/br/">ReadingFaithfully.org Содержания</a></li>   
-     <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org по Темам</a></li>   
+              <li>
+         <div class="dropdown-item ">PTS Конвертер
+         <a class="text-black" target=""  href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">#1</a>
+                   <a class="text-black" target="" href="https://benmneb.github.io/pts-converter/">#2</a>  
+       </div>
+         </li>   
+     
+     
+              <li>
+         <div class="dropdown-item "> 
+         <a class="text-black" target=""  href="https://readingfaithfully.org/">ReadingFaithfully.org</a>
+                   <a class="text-black" target="" href="/assets/br/">Кратко</a>  
+       <a class="text-black" target="" href="https://index.readingfaithfully.org/">Темы</a>
+       </div>
+         </li>   
      
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
 
 
+      
 
+  
+               <li>
+         <div class="dropdown-item ">
+                      <i class="' . $iconimportant . '"></i> Digital Pāḷi Dictionary
+         <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Англ</a>
+                   <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Русс</a>  
+
+       </div>
+         </li>   
       
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
-
-           <li><a class="dropdown-item" href="https://digitalpalidictionary.github.io/rus/">
-             <i class="' . $iconimportant . '"></i>
-           Пали-Русс Digital Pāḷi Dictionary</a></li>  
-           
-<li>
- 
-  <a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">
-  <i class="' . $iconimportant . '"></i>
-    Пали-Англ Digital Pāḷi Dictionary
-  </a>
-</li>
-
    <li><a class="dropdown-item" href="/assets/linebyline.html">Создание Построчных Файлов</a></li>
    <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">

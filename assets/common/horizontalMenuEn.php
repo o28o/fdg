@@ -55,30 +55,49 @@ echo '<!--
 
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
-
-     <li><a class="dropdown-item" target="_blank" href="' . $linkati . '">' . $anameati . '</a></li
-     >
      
          <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
-         
-
+        
                   
         <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
 
 
-            <li><a class="dropdown-item" target="_blank" href="assets/dhammatalks.org/vinaya/bmc/Section0000.html">Patimokkha explained by Thanissaro Bh</a></li>
+                <li>
+
+         <div class="dropdown-item ">Patimokkha 
+
+         <a class="text-black" target=""  href="' . $linkati . '">ATI</a>
+       <a class="text-black" target="" href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
+          <a class="text-black" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
+       </div>
+         </li>
             
-  <li><a class="dropdown-item" target="_blank" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Patimokkha trans. by Nanatusita Bh</a></li>
   <li><a class="dropdown-item" target="_blank" href="/assets/materials/bipm_trn_by_chatsumarn_kabilsingh.pdf">Patimokkha Bi trans. by Ch Kabilsingh</a></li>
+        
+        <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
+  
+                <li>
+         <div class="dropdown-item ">
+         <a class="text-black" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
+                <a class="text-black" target="" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">Виная</a>
+         <a class="text-black" target="" href="https://voice.suttacentral.net">Voice</a>
+        <a class="text-black" target="" href="' . $linksclegacy . '">Legacy</a>
+         </div>
+         </li>
+    
                   
  <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
    <i class="' . $iconimportant . '"></i>
  The Buddha\'s Words</a></li> 
  
  
-    <li><a class="dropdown-item" target="_blank" href="https://tipitaka.app">Tipitaka CST</a></li>
-    
-    <li><a class="dropdown-item" target="_blank" href="https://Tipitaka.org">Tipitaka.org</a></li>
+            <li>
+         <div class="dropdown-item ">Tipitaka 
+         <a class="text-black" target=""  href="https://tipitaka.app">CST</a>
+       <a class="text-black" target="" href="https://84000.org/">Thai</a>
+          <a class="text-black" target="" href="https://tipitaka.org/">VRI</a>  
+       </div>
+         </li>
     
             <li>
 
@@ -93,19 +112,6 @@ echo '<!--
           <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>   
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
 
-    <li><a class="dropdown-item" target="_blank" href="https://simsapa.github.io/">Simsapa Pali Reader <u>PC</u> <u>Mac</u> <u>Linux</u></a></li>
-  
-                <li>
-         <div class="dropdown-item ">
-         <a class="text-black" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
-                <a class="text-black" target="" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">Виная</a>
-         <a class="text-black" target="" href="https://voice.suttacentral.net">Voice</a>
-        <a class="text-black" target="" href="' . $linksclegacy . '">Legacy</a>
-         </div>
-         </li>
-
-
-           
  
   </ul>
 
@@ -160,9 +166,15 @@ echo '<!--
       <li><a class="dropdown-item" href="' . $linktextbook . '">
         <i class="' . $iconimportant . '"></i>
         ' . $anametextbook . '</a></li>
-    <li><a class="dropdown-item" href="' . $linksothermat . '">' . $anameothermat . '</a></li>
-          <li><a class="dropdown-item" target="_blank" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net Materials</a></li>    
-       <li><a class="dropdown-item" target="_blank" href="https://sasanarakkha.github.io/study-tools/">SBS Materials</a></li> 
+
+                  <li>
+         <div class="dropdown-item ">Materials
+         <a class="text-black" target=""  href="' . $linksothermat . '">Gdrive</a>
+                   <a class="text-black" target="" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net</a>
+        <a class="text-black" target="" href="https://sasanarakkha.github.io/study-tools/">SBS</a>  
+       </div>
+         </li>     
+   
                    
          <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
          
@@ -172,8 +184,13 @@ echo '<!--
 
 Memorizer</a></li>    
 
-    <li><a class="dropdown-item" href="/ru/assets/rd.html">Random declention</a></li>    
-       <li><a class="dropdown-item" href="/assets/rr.html">Random rule</a></li> 
+                  <li>
+         <div class="dropdown-item ">Random
+         <a class="text-black" target=""  href="/ru/assets/rd.html">declention</a>
+                   <a class="text-black" target="" href="/ru/assets/rr.html">rule</a>
+       </div>
+         </li>     
+    
        
   <!--     <li><a class="dropdown-item" href="#research">' . $anameresearch . '</a></li>
        <li><a class="dropdown-item" href="#read">' . $anameread . '</a></li>
@@ -190,34 +207,49 @@ Memorizer</a></li>
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="tools">
+   
          <li>
          <div class="dropdown-item ">Fdg 
          <a class="text-black" target=""  href="/old.php">old</a> 
-         <a class="text-black" target="" href="/new/">new</a>   </div>
+         <a class="text-black" target="" href="/new/">new</a> 
+         <a class="text-black" target="" href="' . $mainscpage . '">Pāḷi Indexes</a>   </div>
          </li>
-     <li><a class="dropdown-item" target="_blank" href="' . $mainscpage . '">Pāḷi Index</a></li> 
-     <li><a class="dropdown-item" target="_blank" href="/assets/br/">ReadingFaithfully.org Blurbs</a></li>   
-   <li><a class="dropdown-item" target="_blank" href="https://index.readingfaithfully.org/">ReadingFaithfully.org Sutta Index</a></li>
-  
+         
+     
+              <li>
+         <div class="dropdown-item "> 
+         <a class="text-black" target=""  href="https://readingfaithfully.org/">ReadingFaithfully.org</a>
+                   <a class="text-black" target="" href="/assets/br/">Blurbs</a>  
+       <a class="text-black" target="" href="https://index.readingfaithfully.org/">Indexes</a>
+       </div>
+         </li>   
+     
+    
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
    
       <li><a class="dropdown-item" target="_blank" href="https://norbu-ai.org/ebt/">Norbu AI</a></li>
 
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
-   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/">
-     <i class="' . $iconimportant . '"></i>
-   Digital Pāḷi Dictionary English</a></li>
-   <li><a class="dropdown-item" target="_blank" href="https://digitalpalidictionary.github.io/rus/">
 
-     <i class="' . $iconimportant . '"></i>
-
-   Digital Pāḷi Dictionary Russian</a></li>
+               <li>
+         <div class="dropdown-item ">
+                      <i class="' . $iconimportant . '"></i> Digital Pāḷi Dictionary
+         <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Eng</a>
+                   <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Rus</a>  
+       </div>
+         </li>   
+   
+   
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
 
 <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
       
-<li><a class="dropdown-item" href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">PTS converter #1</a></li>           
- <li><a class="dropdown-item" href="https://benmneb.github.io/pts-converter/">PTS converter #2</a></li>  
+              <li>
+         <div class="dropdown-item ">PTS Converter
+         <a class="text-black" target=""  href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">#1</a>
+                   <a class="text-black" target="" href="https://benmneb.github.io/pts-converter/">#2</a>  
+       </div>
+         </li>   
 
    <li><a class="dropdown-item" href="/assets/linebyline.html">Line-by-line Formatter</a></li>
 

@@ -231,7 +231,11 @@ echo '<!--
          <div class="dropdown-item ">Fdg 
          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
-         <a class="text-black" target="" href="' . $mainscpage . '">Pāḷi Индекс</a>   </div>
+                  <a class="text-black" target="" href="' . $mainscpage . '"> индекс</a>   
+      <a class="text-black" target="" href="/assets/texts/pm.php">bupm</a>        
+      <a class="text-black" target="" href="/assets/texts/bipm.php">bipm</a> 
+
+         </div>
          </li>
 
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>

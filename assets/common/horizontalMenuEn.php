@@ -212,7 +212,11 @@ Memorizer</a></li>
          <div class="dropdown-item ">Fdg 
          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
-         <a class="text-black" target="" href="' . $mainscpage . '">Pāḷi Indexes</a>   </div>
+                  <a class="text-black" target="" href="' . $mainscpage . '">index</a>   
+      <a class="text-black" target="" href="/assets/texts/pm.php">bupm</a>        
+      <a class="text-black" target="" href="/assets/texts/bipm.php">bipm</a> 
+
+         </div>
          </li>
          
      

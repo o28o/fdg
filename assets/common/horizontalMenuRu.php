@@ -240,7 +240,8 @@ echo '<!--
 
    <li><a class="dropdown-item" target="_blank" href="/cse.php">Google Custom Search</a></li>
 
-   <li><a class="dropdown-item" target="_blank" href="https://norbu-ai.org/ebt/">Norbu AI</a></li>
+      <li><a class="dropdown-item" target="_blank" href="https://norbu-ai.org/ebt/">Norbu AI</a></li>
+      <li><a class="dropdown-item" target="_blank" href="https://dharmamitra.org/">Mitra Переводчик</a></li>
 
               <li>
          <div class="dropdown-item ">PTS Конвертер

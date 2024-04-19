@@ -436,7 +436,7 @@ $pdpd = 'Объёмный и самый удобный Пали-Англ сло�
 $smdpd = 'Доступно для ПК, Linux, Mac, Android, IOS';
 
 $head5dpdru = 'DPD Русская Версия';
-$pdpdru = 'Небольшой Пали-Русский словарь основанный на Digital Pali Dictionary';
+$pdpdru = 'Пали-Русский словарь основанный на Digital Pali Dictionary';
 $smdpdru = 'Альтернатива DPD, для тех кто не владеет английским';
 
 $head5pts = 'Словарь Pali Text Society';
@@ -472,7 +472,7 @@ $dpddesc = 'Digital Pali Dictionary Онлайн';
 $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 <a target="_blank" href="https://digitalpalidictionary.github.io/"><p>Сайт DPD</p></a>
 
-<a target="_blank" href="https://devamitta.github.io/pali/"><p>DPD Русская Версия</p></a>
+<a target="_blank" href="https://digitalpalidictionary.github.io/rus/"><p>DPD Русская Версия</p></a>
 <h3>Скачать Оболочку mDict</h3>
 ';
 
@@ -879,7 +879,7 @@ $pdpd = 'The biggest and quickest dictionary and pali grammar';
 $smdpd = 'Available for PC, Linux, Mac, Android, IOS';
 
 $head5dpdru = 'DPD Russian Version';
-$pdpdru = 'Small Pali-Russian Dictionary based on DPD';
+$pdpdru = 'Smaller Pali-Russian Dictionary based on DPD';
 $smdpdru = '';
 
 
@@ -913,7 +913,7 @@ $dpddesc = 'Digital Pali Dictionary Online';
 $dpdpart = '<h3>Download DPD</h3>
 <a target="_blank" href="https://digitalpalidictionary.github.io/"><p>DPD Official</p></a>
 
-<a target="_blank" href="https://devamitta.github.io/pali/"><p>DPD Russian Edition</p></a>
+<a target="_blank" href="https://digitalpalidictionary.github.io/rus/"><p>DPD Russian Edition</p></a>
 <h3>Download MDict</h3>
 ';
 

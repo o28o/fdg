@@ -61,6 +61,15 @@ $('#pali').find('tbody').find('tr').each(function() {
     data.search.search = ''; 
   },
 	     dom: '<"row"lf>r<t><"row"ip><""Q><"footerlike"B>',
+	         searchBuilder: {
+            preDefined: {
+                criteria:[
+{ condition: '!contains', data: 'Quote', value: ['Word to exclude']}                ],
+                logic: 'AND'
+            }
+        },   
+	     
+	     
         buttons: {
           name: 'primary',
         buttons: [

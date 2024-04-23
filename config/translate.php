@@ -159,6 +159,11 @@ $slides = [
         'desc' => 'Может ли быть, чтобы терминология в Учении Будды была не сквозной?',
         'link' => '/assets/example/kata.,-dukkha.m-question_suttanta_pali-ru_3-3.html',
     ],
+               [
+        'title' => 'Виды личностей в Учении Татхагаты',
+        'desc' => 'Начиная от 3 видов и до 10',
+        'link' => '/assets/example/pugg.sa.mvijjam.lokasmi.m_suttanta_pali-ru_74-98.html',
+    ],        
            [
         'title' => 'Упадок и Не-упадок в Учении Татхагаты',
         'desc' => 'Пример: Остановится на полпути - это упадок',
@@ -629,7 +634,13 @@ $slides = [
         'title' => 'Definition of dukkha in suttas',
         'desc' => 'Is it possible that terminology in not throughout in the Buddhas Teaching?',
   'link' => '/assets/example/kata.,-dukkha.m-question_suttanta_pali_3-3.html',
-    ],   
+    ],
+    
+                   [
+        'title' => 'Types of individuals in Tathagatas Teaching',
+        'desc' => 'Starting from 3 types up to 10',
+        'link' => '/assets/example/pugg.sa.mvijjam.lokasmi.m_suttanta_pali_74-98.html',
+    ],        
            [
         'title' => 'Decline and Non-decline in Tathagatas Teaching',
         'desc' => 'E.g. stopping half-way is a case of decline',

@@ -45,7 +45,8 @@ function fetchBlurbs(selectedBooks) {
     return;
   }
   for (let x = 0; x < selectedBooks.length; x++) {
-    const githubLocation = `https://raw.githubusercontent.com/suttacentral/bilara-data/${branch}root/en/blurb/${selectedBooks[x]}-blurbs_root-en.json`;
+    const githubLocation = `/suttacentral.net/sc-data/sc_bilara_data/root/en/blurb/${selectedBooks[x]}-blurbs_root-en.json`;
+  //  const githubLocation = `https://raw.githubusercontent.com/suttacentral/bilara-data/${branch}root/en/blurb/${selectedBooks[x]}-blurbs_root-en.json`;
   //  const githubLocation = `/assets/brru/blurbs-ru.json`;
             console.log(githubLocation);
     bookBlurbResponses[x] = fetch(githubLocation)

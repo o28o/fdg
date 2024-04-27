@@ -33,12 +33,18 @@ window.location.href='/w.php?s=$stringForWord';
 
 
 
-if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru)/', $p) || preg_match('/(-onl|-def|-sml|-nm|-b|-tru)/', $extra)) {
+if (preg_match('/(-vin|-def|-sml|-nm|-b|-onl|-tru)/', $p) || preg_match('/(-onl|-def|-sml|-nm|-b|-tru)/', $extra)) {
   $fdgscript = "./scripts/finddhamma.sh";
 } 
 elseif (preg_match('/(-anyd)/', $extra)) {
   $fdgscript = "./new/fdgnew.sh";
 }
+/* elseif (preg_match('/(-vin)/', $p)) {
+  $fdgscript = "./new/fdgnew.sh -src vn";
+}
+elseif (preg_match('/(-all -vin)/', $p)) {
+  $fdgscript = "./new/fdgnew.sh -src vn,kp";
+} */
 else {
   $fdgscript = "./new/finddhamma2.sh";
 }
@@ -206,6 +212,7 @@ $outforjs .= $output . "<br>";
 		
 		
 if ( preg_match('/(|-en)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) && ( $p != "-vin" ) && ( $p != "-def" ))  {
+  $fdgscript = "./scripts/finddhamma.sh";
 $output = shell_exec("bash $fdgscript $outputlang $la -vin $extra $cb $string");
 //                                                          		echo "<p>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	

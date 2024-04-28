@@ -32,11 +32,30 @@
   -webkit-animation: 0.75s linear infinite spinner-border;
           animation: 0.75s linear infinite spinner-border;
 }
+.flip-horizontal {
+  transform: scaleY(-1);
+}
 
   .reverse-order {
     display: flex;
     flex-direction: column-reverse;
   }
+  
+  .flip-horizontal {
+  transform: scaleY(-1);
+  transform: scaleX(-1);
+}
+
+.text-reversed {
+  display: inline-block;
+}
+
+.text-reversed {
+  display: inline-block;
+  transform: rotate(180deg);
+}  
+  
+  
   
 .dark .spinner-border {
   border: 0.25em solid var(--light-gray);

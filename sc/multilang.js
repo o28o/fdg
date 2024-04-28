@@ -471,6 +471,8 @@ if (document.location.search) {
   let lang = params.get("lang");
   citation.value = slug;
   buildSutta(slug);
+
+
  if (lang) {
     language = lang;
     console.log("in the initializing " + lang);
@@ -544,8 +546,12 @@ setLanguage(language);
   </div><div>
 </div>
 `;
+
+
+
 }
 
+  
 function setLanguage(language) {
   if (language === "pli-rus") {
     showPaliEnglish();

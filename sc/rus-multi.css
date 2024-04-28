@@ -33,6 +33,11 @@
           animation: 0.75s linear infinite spinner-border;
 }
 
+  .reverse-order {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
 .dark .spinner-border {
   border: 0.25em solid var(--light-gray);
   border-right-color: transparent;

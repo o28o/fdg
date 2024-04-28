@@ -555,7 +555,7 @@ nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${line
 #for i in `grep -iE "Evamev.*${modpattern}" $tmpsml | awk -F':' '{print $1}' | sort -V | uniq`; do grep -EHi -B1 "Evamev.*${modpattern}" $i | sed 's@json-@json:@g' | grep -vi "Evamev.*${modpattern}" | sort -V | uniq | sed '/--/d'  ; done > tmpsml
 
 if [[ "$type" == html ]]; then
-for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${modpattern}|${modpattern}.*adhivacan|Eva[mnṇṅṃṁ].*${modpattern}|${modpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modpattern}|Suppose.*${modpattern}|${modpattern} is|${modpattern}.*is a designation for|is a designation for.*${modpattern}|${modpattern}.*Simile|simile.*${modpattern}|It’s like.*${modpattern}|is a term for.*${modpattern}|${modpattern}.*is a term for|similar to.*${modpattern}|${modpattern}.*similar to|Представ.*${modpattern}|обозначение.*${modpattern}|${modpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | grep -v "condition"| sed 's/html:.*/html/g'  ; 
+for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.*${modpattern}|${modpattern}[^ ]{0,4}etaṁ|${modpattern}.*adhivacan|Eva[mnṇṅṃṁ].*${modpattern}|${modpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modpattern}|Suppose.*${modpattern}|${modpattern} is|${modpattern}.*is a designation for|is a designation for.*${modpattern}|${modpattern}.*Simile|simile.*${modpattern}|It’s like.*${modpattern}|is a term for.*${modpattern}|${modpattern}.*is a term for|similar to.*${modpattern}|${modpattern}.*similar to|Представ.*${modpattern}|обозначение.*${modpattern}|${modpattern}.*обозначение" $i | grep -vE "$nonmetaphorkeys" | grep -v "condition"| sed 's/html:.*/html/g'  ; 
 done
 else 
 #json sources

@@ -333,12 +333,12 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
   const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.</p>";
 
-var lineBreak = "\n\n",
-revhtml = html.split(lineBreak).reverse().join(lineBreak)
+//var lineBreak = "\n\n",
+//revhtml = html.split(lineBreak).reverse().join(lineBreak)
 // console.log(revhtml)
 // console.log(html)
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + '<div class="">' + html + '</div>' + translatorByline + warning + scLink ;  
+suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
 
  
  const pageTitleElement = document.querySelector("h1");

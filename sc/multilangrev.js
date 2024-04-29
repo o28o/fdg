@@ -101,8 +101,8 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
-const enUrl = mlUrl.replace("/sc/ml.html", "/sc/");
+const ruUrl = mlUrl.replace("/sc/rv.html", "/ru/sc/");
+const enUrl = mlUrl.replace("/sc/rv.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;

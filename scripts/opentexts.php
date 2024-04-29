@@ -42,7 +42,11 @@ $cb = $q = $extra = $la = $p = $arg = $string = $sutta = $ml = "";
 if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
         $base = "/";
   $readerlang = $base . "sc/ml.html";
+} else if (isset($_GET['rv']) && $_GET['rv'] === 'on') {
+        $base = "/";
+  $readerlang = $base . "sc/rv.html";
 } 
+
 		
 		
 		if ($_SERVER["REQUEST_METHOD"] == "GET") {

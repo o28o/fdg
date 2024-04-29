@@ -168,33 +168,52 @@ $iconimportant = 'fa-solid fa-star';
 
 
 $defaults = '<br>
+<input class="form-check-input mt-2" name="ml" type="checkbox" id="mlCheckbox">
+<a href="/sc/ml.html?q=sn56.11">ml</a> or <input class="form-check-input mt-2" name="rv" type="checkbox" id="rvCheckbox">
+<a href="/sc/rv.html?q=sn56.11">rv</a> as Default Reader
 
-   <input class="form-check-input mt-2" name="ml" type="checkbox" id="readerCheckbox"> <a href="/sc/ml.html?q=sn56.11">ml</a> as Default Reader
+<script>
+// Получаем элементы чекбоксов
+var mlCheckbox = document.getElementById("mlCheckbox");
+var rvCheckbox = document.getElementById("rvCheckbox");
 
- <script>
-//localStorage.setItem("defaultReader", "ml");  
- 
- // Получаем элемент чекбокса
-var checkbox = document.getElementById("readerCheckbox");
-
-// Устанавливаем обработчик события при изменении состояния чекбокса
-checkbox.addEventListener("change", function() {
+// Устанавливаем обработчики событий при изменении состояния чекбоксов
+mlCheckbox.addEventListener("change", function() {
     if (this.checked) {
-        // Если чекбокс отмечен, устанавливаем значение в localStorage
+        // Если чекбокс "ml" отмечен, устанавливаем значение в localStorage
         localStorage.setItem("defaultReader", "ml");
+        // Убеждаемся, что чекбокс "rv" не отмечен
+        rvCheckbox.checked = false;
     } else {
-        // Если чекбокс не отмечен, удаляем значение из localStorage
+        // Если чекбокс "ml" не отмечен, удаляем значение из localStorage
         localStorage.removeItem("defaultReader");
     }
 });
 
-// Проверяем значение в localStorage при загрузке страницы и устанавливаем состояние чекбокса
+rvCheckbox.addEventListener("change", function() {
+    if (this.checked) {
+        // Если чекбокс "rv" отмечен, устанавливаем значение в localStorage
+        localStorage.setItem("defaultReader", "rv");
+        // Убеждаемся, что чекбокс "ml" не отмечен
+        mlCheckbox.checked = false;
+    } else {
+        // Если чекбокс "rv" не отмечен, удаляем значение из localStorage
+        localStorage.removeItem("defaultReader");
+    }
+});
+
+// Проверяем значение в localStorage при загрузке страницы и устанавливаем состояние чекбоксов
 if (localStorage.getItem("defaultReader") === "ml") {
-    checkbox.checked = true;
-} else {
-    checkbox.checked = false;
+    mlCheckbox.checked = true;
+} else if (localStorage.getItem("defaultReader") === "rv") {
+    rvCheckbox.checked = true;
 }
- </script>';
+
+// Проверяем, если оба чекбокса отключены, удаляем значение из localStorage
+if (!mlCheckbox.checked && !rvCheckbox.checked) {
+    localStorage.removeItem("defaultReader");
+}
+</script>';
  
  
 ?>

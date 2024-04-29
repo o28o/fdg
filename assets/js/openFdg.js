@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (localStorage.defaultReader === 'ml') {
         baseUrl = window.location.origin + "/sc/ml.html";
+    } else if (localStorage.defaultReader === 'rv') {
+        baseUrl = window.location.origin + "/sc/rv.html";
     } 
 
 

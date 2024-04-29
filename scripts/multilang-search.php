@@ -223,6 +223,7 @@ $outforjs .= $output . "<br>";
 $check = ru2lat( $output );
 
 if ( preg_match('/(|-en)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) && ( $p != "-vin" ) && ( $p != "-def" ))  {
+  $fdgscript = "./new/finddhamma2.sh";
 $output = shell_exec("bash $fdgscript $outputlang $la -en $extra $cb $string");
 //                                                          		echo "<p>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	

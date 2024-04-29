@@ -331,7 +331,12 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
       } 
       scLink += "</p>"; 
 
-  const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.</p>";
+const origUrl = window.location.href;
+let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
+rvUrl = rvUrl.replace("ml.html", "");
+rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
+
+const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&#8202;</a></p>";
 
 var lineBreak = "\n\n",
 revhtml = html.split(lineBreak).reverse().join(lineBreak)

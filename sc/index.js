@@ -259,7 +259,13 @@ scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}"
       } 
       scLink += "</p>"; 
 
-const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.</p>";
+const origUrl = window.location.href;
+let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
+rvUrl = rvUrl.replace("ml.html", "");
+rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
+
+
+const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&#8202;</a></p>";
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
  

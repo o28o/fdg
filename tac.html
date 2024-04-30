@@ -8,18 +8,23 @@
   .reverse-order {
     display: flex;
     flex-direction: column-reverse;
+    
   }
-  
+ /* 
   .flip-horizontal {
-  transform: scaleY(-1);
+  
   transform: scaleX(-1);
+  direction: rtl;
 }
-
+*/
 .text-reversed {
   display: inline-block;
-  transform: rotate(180deg);
+/*  transform: rotate(180deg);*/
+  
 }
-
+.reverse-text {
+    direction: rtl;
+}
 </style>
 </head>
 <body>
@@ -29,6 +34,16 @@
   <div>3</div>
   <div>4</div>
 </div>
+<p class=" reverse-text">
+“test1 Catasso imā, bhikkhave, paṭipadā.
+</p>
+<div id="output" class="reverse-text"></div>
+<script>
+  const text = "test2 Catasso imā, bhikkhave, paṭipadā.";
+  const reversedText = text.split(' ').reverse().join(' ');
+  document.getElementById('output').innerText = reversedText;
+</script>
+
 <p class=" text-reversed flip-horizontal">
 “Catasso imā, bhikkhave, paṭipadā.
 </p>

@@ -176,9 +176,11 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
-  paliData[segment] = paliData[segment].split(' ').reverse().join(' ');
-   
-transData[segment] = transData[segment].split(' ').reverse().join(' ');
+//paliData[segment] = paliData[segment].split(' ').reverse().join(' ');
+//transData[segment] = transData[segment].split(' ').reverse().join(' ');
+
+paliData[segment] = paliData[segment].split('').reverse().join('');
+transData[segment] = transData[segment].split('').reverse().join('');
 
 //engTransData[segment] = engTransData[segment].split(' ').reverse().join(' ');
 

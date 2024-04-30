@@ -176,7 +176,13 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
+  paliData[segment] = paliData[segment].split(' ').reverse().join(' ');
+   
+transData[segment] = transData[segment].split(' ').reverse().join(' ');
 
+//engTransData[segment] = engTransData[segment].split(' ').reverse().join(' ');
+
+    
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
 
@@ -192,6 +198,7 @@ if (finder && finder.trim() !== "") {
     let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
     paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+   // engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     
 }
 

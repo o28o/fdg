@@ -514,7 +514,9 @@ a:hover {
   color: var(--off-white);
 }
 
-
+.right-text {
+    direction: rtl;
+}
 /*
 
   .reverse-order {

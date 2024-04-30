@@ -102,22 +102,22 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 
 <div class="level4">
 <span class="level5">
-<a href="<?php echo "$mainscpage"; ?>?q=bi-pj1#">Pārājika 1. Methunadhammasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#9.0">pm</a> Yā pana bhikkhunī chandaso methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatenapi, pārājikā hoti asaṁvāsā.
+<a href="<?php echo "$mainscpage"; ?>?q=bi-pj1-4#">Pārājika 1. Methunadhammasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#9.0">pm</a> Yā pana bhikkhunī chandaso methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatenapi, pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo "$mainscpage"; ?>?q=bi-pj2#">Pārājika 2. Adinnādānasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#10.0">pm</a> Yā pana bhikkhunī gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya, yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corāsi bālāsi mūḷhāsi thenāsīti, tathārūpaṁ bhikkhunī adinnaṁ ādiyamānā ayampi pārājikā hoti asaṁvāsā.
+<a href="<?php echo "$mainscpage"; ?>?q=bi-pj1-4#">Pārājika 2. Adinnādānasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#10.0">pm</a> Yā pana bhikkhunī gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya, yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corāsi bālāsi mūḷhāsi thenāsīti, tathārūpaṁ bhikkhunī adinnaṁ ādiyamānā ayampi pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo "$mainscpage"; ?>?q=bi-pj3#">Pārājika 3. Manussaviggahasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#11.0">pm</a> Yā pana bhikkhunī sañcicca manussaviggahaṁ jīvitā voropeyya, satthahārakaṁ vāssa pariyeseyya, maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, “ambho purisa, kiṁ tuyhiminā pāpakena dujjīvitena, mataṁ te jīvitā seyyo”ti, iti cittamanā cittasaṅkappā anekapariyāyena maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājikā hoti asaṁvāsā.
+<a href="<?php echo "$mainscpage"; ?>?q=bi-pj1-4#">Pārājika 3. Manussaviggahasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#11.0">pm</a> Yā pana bhikkhunī sañcicca manussaviggahaṁ jīvitā voropeyya, satthahārakaṁ vāssa pariyeseyya, maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, “ambho purisa, kiṁ tuyhiminā pāpakena dujjīvitena, mataṁ te jīvitā seyyo”ti, iti cittamanā cittasaṅkappā anekapariyāyena maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">
 <span class="level5">
-<a href="<?php echo "$mainscpage"; ?>?q=bi-pj4#">Pārājika 4. Uttarimanussadhammasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#12.0">pm</a> Yā pana bhikkhunī anabhijānaṁ uttarimanussadhammaṁ attupanāyikaṁ alamariyañāṇadassanaṁ samudācareyya, “iti jānāmi, iti passāmī”ti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā āpannā visuddhāpekkhā evaṁ vadeyya, “ajānamevaṁ, ayye, avacaṁ jānāmi, apassaṁ passāmi, tucchaṁ musā vilapi”nti, aññatra adhimānā, ayampi pārājikā hoti asaṁvāsā.
+<a href="<?php echo "$mainscpage"; ?>?q=bi-pj1-4#">Pārājika 4. Uttarimanussadhammasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#12.0">pm</a> Yā pana bhikkhunī anabhijānaṁ uttarimanussadhammaṁ attupanāyikaṁ alamariyañāṇadassanaṁ samudācareyya, “iti jānāmi, iti passāmī”ti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā āpannā visuddhāpekkhā evaṁ vadeyya, “ajānamevaṁ, ayye, avacaṁ jānāmi, apassaṁ passāmi, tucchaṁ musā vilapi”nti, aññatra adhimānā, ayampi pārājikā hoti asaṁvāsā.
 </span>
 </div>
 <div class="level4">

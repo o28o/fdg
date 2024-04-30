@@ -28,7 +28,7 @@ if [[ \"\$mndir\" == \"\$mnrangeInFile\" ]] ; then
 echo MN no updates
 else
 echo MN updated to \$sndir
-sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
 fi
 ");
 echo "<h2 style='text-align: center;'>
@@ -48,7 +48,7 @@ if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then
 echo SN no updates
 else
 echo SN updated to \$sndir
-sed -i \"s@let snranges =.*@let snranges = \$sndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+sed -i \"s@let snranges =.*@let snranges = \$sndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
 fi
 ");
 echo "<h2 style='text-align: center;'>
@@ -67,7 +67,7 @@ if [[ \"\$dndir\" == \"\$dnrangeInFile\" ]] ; then
 echo DN no updates
 else
 echo DN updated to \$dndir
-sed -i \"s@let dnranges =.*@let dnranges = \$dndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+sed -i \"s@let dnranges =.*@let dnranges = \$dndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
 fi
 ");
 echo "<h2 style='text-align: center;'>
@@ -86,7 +86,7 @@ if [[ \"\$andir\" == \"\$anrangeInFile\" ]] ; then
 echo AN no updates
 else
 echo AN updated to \$andir
-sed -i \"s@let anranges =.*@let anranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js
+sed -i \"s@let anranges =.*@let anranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
 fi
 ");
 echo "<h2 style='text-align: center;'>

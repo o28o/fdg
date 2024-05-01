@@ -2,7 +2,7 @@
 	         searchBuilder: {
             preDefined: {
                 criteria:[
-{ condition: '!contains', data: 'Quote', value: ['Word to exclude']}                ],
+{ condition: '!contains', data: 'Quote', value: ['ExcludeMe']}                ],
                 logic: 'AND'
             }
         },

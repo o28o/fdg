@@ -515,7 +515,7 @@ searchIn="$searchIn $knLater"
 source="an,sn,mn,dn,kn,lt"
 if [[ "$@" == *"-vin"* ]]; then
 	vin="./vinaya/pli-tv-b*"
-	vinLater="./vinaya/pli-tv-[kp].*"
+	vinLater="./vinaya/pli-tv-*"
 	searchIn="$vin $vinLater"
 	source="vn,kp"
 fi 

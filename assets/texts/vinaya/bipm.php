@@ -1,6 +1,6 @@
 
         <div class="mt-3">
-          <div class="level2">
+          <div class="level2 right-text  reverse-order">
 
 <div class="level2 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"

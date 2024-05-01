@@ -524,7 +524,7 @@ clearBtn.style.display = 'block';
 
 <div style="max-width: 450px;" class="container-lg my-4">
 
-<div class="container text-start input-group-append ">
+<div class="container text-start input-group-append " >
 
  <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
@@ -537,7 +537,7 @@ clearBtn.style.display = 'block';
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#dnCollapse">Dīgha Nikāya</a></h2>
  </div>
-	 <div class="collapse" id="dnCollapse">
+	 <div class="collapse right-text reverse-order" id="dnCollapse">
 <div class="my-3">
 <div class="level4 my-3">
 		 <h5>Sīlakkhandhavagga</h5>
@@ -696,7 +696,7 @@ clearBtn.style.display = 'block';
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#mnCollapse">Majjhima Nikāya</a></h2>
  </div>
-	 <div class="collapse" id="mnCollapse">
+	 <div class="collapse right-text reverse-order" id="mnCollapse">
 <div class="level2">
 	 <h3><a href=# data-bs-toggle="collapse" data-bs-target="#mn1Collapse">Mūlapaṇṇāsaka</a></h3>
 	 </div> 
@@ -1408,7 +1408,7 @@ clearBtn.style.display = 'block';
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#snCollapse">Saṁyutta Nikāya</a></h2>
  </div>
-	 <div class="collapse" id="snCollapse">
+	 <div class="collapse right-text reverse-order" id="snCollapse">
 <div class="level2">
  <h3>Sagāthāvaggasaṁyuttapāḷi</h3>
 </div>
@@ -11599,7 +11599,7 @@ clearBtn.style.display = 'block';
  <h2><a href=# data-bs-toggle="collapse"
  data-bs-target="#anCollapse">Aṅguttara Nikāya</a></h2>
  </div>
-	 <div class="collapse" id="anCollapse">
+	 <div class="collapse right-text reverse-order" id="anCollapse">
 <div class="level2">
 	 <h3><a href=# data-bs-toggle="collapse" data-bs-target="#an1Collapse">1. Ekakanipāta </a></h3>
 	 </div> 
@@ -19032,7 +19032,7 @@ $.ajax({
 
 </script>
 <script defer src="/assets/js/themeswitch.js"></script>
-
+<script src="/assets/js/openFdg.js"></script>
 </body>
 <?php
 include 'scripts/multilang-search.php';

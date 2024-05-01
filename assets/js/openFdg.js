@@ -74,3 +74,20 @@ if (scUrl.endsWith('#')) {
 console.log("Ссылка эта? ", scUrl);
     return isSuttaCentral ? url : scUrl;
 }
+
+// Проверяем значение localStorage.defaultReader
+if (localStorage.defaultReader === 'rv') {
+    // Если значение равно 'rv', убираем классы -hide и добавляем классы reverse-order
+    var elements = document.querySelectorAll('.right-text-hide.reverse-order-hide');
+    elements.forEach(element => {
+        element.classList.remove('right-text-hide', 'reverse-order-hide');
+        element.classList.add('right-text', 'reverse-order');
+    });
+} else {
+    // Если значение не равно 'rv', добавляем классы -hide и убираем классы reverse-order
+    var elements = document.querySelectorAll('.right-text.reverse-order');
+    elements.forEach(element => {
+        element.classList.add('right-text-hide', 'reverse-order-hide');
+        element.classList.remove('right-text', 'reverse-order');
+    });
+}

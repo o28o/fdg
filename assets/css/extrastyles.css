@@ -13,6 +13,35 @@
   --bs-font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.right-text {
+    direction: rtl;
+}
+
+.reverse-order {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.reverse-order > div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.reverse-order > div > div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.reverse-order > div > div > div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.reverse-order > div > div > div > div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 [data-theme="dark"] {
   background-color: #111 !important;
   color: #eee;
@@ -337,6 +366,7 @@ label {
         display: block;
     }
 }
+
 
 
 @media (min-width: 992px) {

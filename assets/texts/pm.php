@@ -47,7 +47,7 @@ include '../../scripts/opentexts.php';
     </div> -->
     <div class="mt-3">
    
-<div class="level1 d-flex align-items-center">
+<div class="level1 d-flex align-items-center ">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
     data-bs-toggle="collapse" data-bs-target="#bupmCollapse">-</span>
   <h2><a href="#" data-bs-toggle="collapse" data-bs-target="#bupmCollapse">Bhikkhupātimokkha</a></h2>
@@ -65,6 +65,7 @@ include $basedir . "/assets/texts/vinaya/bupm.php";
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script src="/assets/js/pmjs.js"></script>
+<script src="/assets/js/openFdg.js"></script>
 <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
 <script>
  // save collapsed state
@@ -114,6 +115,7 @@ $(document).ready(function () {
 
   });
 </script>
+
 </body>
 
 </html>

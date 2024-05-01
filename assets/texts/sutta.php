@@ -39,7 +39,7 @@ include '../../scripts/opentexts.php';
             </div>
         </div>
     </div>
-<div class="container">
+<div class="container right-text reverse-order">
  <div class="my-3">
  <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
  </div>
@@ -17828,6 +17828,6 @@ include '../../scripts/opentexts.php';
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script src="/assets/js/tocjs.js"></script>
 <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
-
+<script src="/assets/js/openFdg.js"></script>
 </body>
 </html>

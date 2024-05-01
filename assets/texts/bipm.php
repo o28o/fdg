@@ -65,6 +65,7 @@ include $basedir . "/assets/texts/vinaya/bipm.php";
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script src="/assets/js/pmjs.js"></script>
+<script src="/assets/js/openFdg.js"></script>
 <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
 <script>
  // save collapsed state

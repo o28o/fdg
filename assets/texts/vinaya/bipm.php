@@ -260,15 +260,14 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
               
 
                 <div class="level4 my-3">
- <span class="level5">Uddiṭṭhā kho āyasmanto terasa saṅghādisesā dhammā nava paṭhamāpattikā, cattāro yāvatatiyakā.
-Yesaṁ bhikkhu aññataraṁ vā aññataraṁ vā āpajjitvā yāvatīhaṁ jānaṁ paṭicchādeti, tāvatīhaṁ tena bhikkhunā akāmā parivatthabbaṁ.
-Parivutthaparivāsena bhikkhunā uttari chārattaṁ bhikkhumānattāya paṭipajjitabbaṁ,
-ciṇṇamānatto bhikkhu yattha siyā vīsatigaṇo bhikkhusaṅgho, tattha so bhikkhu abbhetabbo.
-Ekenapi ce ūno vīsatigaṇo bhikkhusaṅgho taṁ bhikkhuṁ abbheyya, so ca bhikkhu anabbhito, te ca bhikkhū gārayhā, ayaṁ tattha sāmīci.
-Tatthāyasmante pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti.
+ <span class="level5">Uddiṭṭhā kho ayyāyo sattarasa saṅghādisesā dhammā nava paṭhamāpattikā, aṭṭha yāvatatiyakā, 
+yesaṁ bhikkhunī aññataraṁ vā aññataraṁ vā āpajjati, tāya bhikkhuniyā ubhatosaṅghe pakkhamānattaṁ caritabbaṁ. 
+Ciṇṇamānattā bhikkhunī yattha siyā vīsatigaṇo bhikkhunisaṅgho, tattha sā bhikkhunī abbhetabbā. 
+Ekāyapi ce ūno vīsatigaṇo bhikkhunisaṅgho taṁ bhikkhuniṁ abbheyya, sā ca bhikkhunī anabbhitā, tā ca bhikkhuniyo gārayhā, ayaṁ tattha sāmīci. 
+Tatthāyyāyo pucchāmi, kaccittha parisuddhā, 
+dutiyampi pucchāmi, kaccittha parisuddhā, 
+tatiyampi pucchāmi, kaccittha parisuddhā, 
+parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. 
 </span>
 </div> 
 
@@ -1830,7 +1829,15 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#245.0">Pāṭidesanīya 8. Dadhiviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā dadhiṁ viññāpetvā bhuñjeyya, paṭidesetabbaṁ tāya bhikkhuniyā: “gārayhaṁ, ayye, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.
 </span>
 </div>
-                              
+
+           <div class="level4 my-3">
+ <span class="level5">Uddiṭṭhā kho, ayyāyo, aṭṭha pāṭidesanīyā dhammā. 
+Tatthāyyāyo pucchāmi, kaccittha parisuddhā, 
+dutiyampi pucchāmi, kaccittha parisuddhā, 
+tatiyampi pucchāmi, kaccittha parisuddhā, 
+parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. 
+</span>
+</div> 
            <div class="level4 my-3">
  <span class="level5">Pāṭidesanīyā niṭṭhitā. </span>
 </div> 
@@ -2387,11 +2394,11 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
            <!-- vagga -->   
            
                      <div class="level4 my-3">
- <span class="level5">Uddiṭṭhā kho āyasmanto sekhiyā dhammā.
-Tatthāyasmante pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyasmanto, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
+ <span class="level5">Uddiṭṭhā kho, ayyāyo, sekhiyā dhammā. 
+Tatthāyyāyo pucchāmi, kaccittha parisuddhā, 
+dutiyampi pucchāmi, kaccittha parisuddhā, 
+tatiyampi pucchāmi, kaccittha parisuddhā, 
+parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 </div> 
            <div class="level4 my-3">
  <span class="level5">

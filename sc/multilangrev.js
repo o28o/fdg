@@ -348,11 +348,14 @@ let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 
+frUrl = origUrl.replace("rv.html", "fr.html");
+
+const rvfr = "<a class='text-decoration-none' target='' href='" + frUrl + "'>&#8202;</a>";
 
 const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&#8202;</a>";
 
 // Добавляем ссылку в вашу строку предупреждения
-const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях." + scrollLink + "</p>";
+const warning = "<p class='warning'>Внимание!" + rvfr + "<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях." + scrollLink + "</p>";
 
 
 //const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + "'>&#8202;</a></p>";

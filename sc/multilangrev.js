@@ -105,7 +105,10 @@ const ruUrl = mlUrl.replace("/sc/rv.html", "/ru/sc/");
 const enUrl = mlUrl.replace("/sc/rv.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
-let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+const mlorigUrl = ruUrl.replace("/sc/rv.html", "/sc/ml.html");
+ let scLink = `<p class="sc-link"><a target="" href="${mlorigUrl}">R+E</a>&nbsp;`;
+
+ scLink += `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"

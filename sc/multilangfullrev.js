@@ -105,9 +105,13 @@ const ruUrl = mlUrl.replace("/sc/fr.html", "/ru/sc/");
 const enUrl = mlUrl.replace("/sc/fr.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
+const mlorigUrl = ruUrl.replace("/sc/rv.html", "/sc/ml.html");
+ let scLink = `<p class="sc-link"><a target="" href="${mlorigUrl}">R+E</a>&nbsp;`;
+
+ scLink += `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+
 const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&#8202;</a>";
 
-let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"

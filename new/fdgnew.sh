@@ -124,7 +124,7 @@ escapedKeyword=$(echo "$keyword" | sed 's/\\/\\\\/g')
 #echo $escapedKeyword
 if [[ "$@" == *"-oru"* ]]
 then
-wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
+wordLinkToReplace="/ru/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
 else
 wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
 fi

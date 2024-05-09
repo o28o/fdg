@@ -21,6 +21,8 @@
 <meta property="og:url" content="/sc" />
 <link rel="icon" type="image/png" sizes="32x32" href="https://find.dhamma.gift/assets/img/favico_black.png"> 
 
+<link href="/assets/css/styles.css" rel="stylesheet" />
+
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <link rel="stylesheet" href="index.css">
@@ -63,6 +65,33 @@
         <div id="next"></div>
     </div>
     <br>
+    
+<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
+<strong>Рекомендованный Словарь</strong> Digital Pali Dictionary. Инструкции по установке <a class="alert-link" href="https://digitalpalidictionary.github.io/rus/"> Пали-Русс здесь<i class="fa-regular fa-comment"></i></a> и <a class="alert-link" href="https://digitalpalidictionary.github.io/"> Пали-Англ здесь<i class="fa-regular fa-comment"></i></a>. Это сторонее приложение и набор словарей.
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var paliLookupInfo = document.getElementById("paliLookupInfo");
+
+    // Проверяем, есть ли запись в localStorage
+    if (!localStorage.getItem("paliLookupInfoClosed")) {
+        paliLookupInfo.style.display = "block"; // Если нет, показываем его
+    }
+
+    // Добавляем обработчик события для кнопки закрытия
+    paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
+        // Сохраняем в localStorage информацию о закрытии окна
+        localStorage.setItem("paliLookupInfoClosed", "true");
+        // Скрываем окно при нажатии на кнопку закрытия
+        paliLookupInfo.style.display = "none";
+    });
+});
+
+</script>
+
+    <br>
+    
     <div id="sutta">
     </div>
     <hr>
@@ -282,9 +311,8 @@ $(document).ready(function() {
           $('#navbarResponsive').collapse('hide');
   });
 });
-</script> -->
-<!-- <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script> -->
-
+</script>
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>  -->
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/copyToClipboard.js"></script>
 

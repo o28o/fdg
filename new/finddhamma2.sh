@@ -1239,7 +1239,7 @@ headerinfo="${keyword^} $(awk -F@ '{ sum += $3 }; END { print NR " texts and "  
 escapedKeyword="$(echo "$patternforhist" | sed 's/\\/\\\\/g')"
 if [[ "$@" == *"-oru"* ]]
 then
-wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
+wordLinkToReplace="/ru/w.php?s=${escapedKeyword}\&d=$source\&p=-oru"
 else
 wordLinkToReplace="/w.php?s=${escapedKeyword}\&d=$source"
 fi
@@ -1485,7 +1485,7 @@ escapedKeyword=$(echo "$patternforhist" | sed 's/\\/\\\\/g')
 if [[ "$@" == *"-oru"* ]]
 then
 
-sed -i 's@$wordLinkToReplace@/w.php?s='"$escapedKeyword"'\&d='$source'\&p=-oru@' ./$table
+sed -i 's@$wordLinkToReplace@/ru/w.php?s='"$escapedKeyword"'\&d='$source'\&p=-oru@' ./$table
 else
 sed -i 's@$wordLinkToReplace@/w.php?s='"$escapedKeyword"'\&d='$source'@' ./$table
 fi

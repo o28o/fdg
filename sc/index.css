@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Robto Serif";
+  font-family: "Roboto Serif";
   src: url("roboto-lightest.woff");
 }
 
@@ -247,15 +247,6 @@ li {
   background-color: var(--dark-blue);
 }
 
-input,
-button,
-select,
-optgroup,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
 
 @media only screen and (max-width: 730px) {
   #paliauto {

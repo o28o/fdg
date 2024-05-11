@@ -26,7 +26,15 @@ max-width: 274px;
   z-index:999999;
 }
 
-
+input,
+button,
+select,
+optgroup,
+textarea {
+  font-family: "Roboto Serif";
+  font-size: 1rem;
+  line-height: 1rem;
+}
 .svgarrow {
   color: #000;
 }

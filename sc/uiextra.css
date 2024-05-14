@@ -20,6 +20,23 @@ border-radius: 1rem;
 max-width: 274px;
 }
 
+#arrowImg {
+  height: 13px;
+}
+
+#scrollToTopBtn {
+border-width: 2px;
+  border-radius: 32px;
+  bottom: 30px;
+  right: 90px;
+/*  background-color: #424269;
+  border-color: #5A5A5A;*/
+  height: 30px;
+  width: 30px;
+  opacity: 0.8;
+}
+
+
 .roundedborder{
   position: absolute; 
   right :35px; 
@@ -31,8 +48,8 @@ button,
 select,
 optgroup,
 textarea {
-  font-family: "Roboto Serif";
-  font-size: 1rem;
+  font-family: "Robto Serif";
+  font-size: 0.8rem;
   line-height: 1rem;
 }
 .svgarrow {

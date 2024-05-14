@@ -285,3 +285,5 @@ wget --recursive --no-clobber --page-requisites --html-extension --convert-links
 wget --recursive --no-clobber --page-requisites --html-extension --convert-links --no-parent --no-host-directories --exclude-directories=forum,lib,sadhu https://dhamma.ru/
 
 
+sox /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/audio/mn/mn54_*.ogg /storage/emulated/0/Download/out.ogg pitch -350 speed 0.8 bass +5                
+                 

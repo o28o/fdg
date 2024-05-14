@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Roboto Serif";
+  font-family: "Robto Serif";
   src: url("roboto-lightest.woff");
 }
 
@@ -94,24 +94,6 @@ html{
   z-index: 99; 
   padding: 5px; 
 }
-
-
-#arrowImg {
-  height: 13px;
-}
-
-#scrollToTopBtn {
-border-width: 2px;
-  border-radius: 32px;
-  bottom: 30px;
-  right: 90px;
-/*  background-color: #424269;
-  border-color: #5A5A5A;*/
-  height: 30px;
-  width: 30px;
-  opacity: 0.8;
-}
-
 
 #paliauto {
   height: 35px;

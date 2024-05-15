@@ -212,7 +212,8 @@ Memorizer</a></li>
          <div class="dropdown-item ">Fdg 
          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
-                  <a class="text-black" target="" href="' . $mainscpage . '">index</a>   
+                  <a class="text-black" target="" href="' . $mainscpage . '">index</a>  
+<a class="text-black" target="" href="/assets/texts/sutta.php">sutta</a>                       
       <a class="text-black" target="" href="/assets/texts/pm.php">bupm</a>        
       <a class="text-black" target="" href="/assets/texts/bipm.php">bipm</a> 
 
@@ -223,8 +224,8 @@ Memorizer</a></li>
               <li>
          <div class="dropdown-item "> 
          <a class="text-black" target=""  href="https://readingfaithfully.org/">ReadingFaithfully.org</a>
-                   <a class="text-black" target="" href="/assets/br/">Blurbs</a>  
-       <a class="text-black" target="" href="https://index.readingfaithfully.org/">Indexes</a>
+                   <a class="text-black" target="" href="/assets/br/">blurbs</a>  
+       <a class="text-black" target="" href="https://index.readingfaithfully.org/">index</a>
        </div>
          </li>   
      

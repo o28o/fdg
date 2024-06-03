@@ -3,7 +3,7 @@
 function RandomPlaceholder($lang) {
   if ($lang == "ru") {
   $words = Array("Kāyagat","Seyyathāpi","Samudd","Cūḷanik", "Suññat", "Mūsik", "Hatthī", "Слон", "дрессировщик", "satipaṭṭhānā");
-  $suttas = Array("Sn56.11","Dn22s","Сн12.2", "an4.163");
+  $suttas = Array("Sn56.11","Dn22","Сн12.2", "an4.163");
   $or = " или ";
   } else {
    $words = Array("Kāyagat","Seyyathāpi","Samudd","Cūḷanik", "elephant", "ocean", "satipaṭṭhānā");

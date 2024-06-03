@@ -44,7 +44,7 @@ function randPlaceholderOnMain() {
     var example = "e.g. ";
 }  else if  ( theLanguage == "ru") {
     var words = ["Kāyagat","Seyyathāpi","Samudd","Cūḷanik", "Suññat", "Mūsik", "Hatthī", "Слон", "дрессировщик", "satipaṭṭhānā"];
-    var suttas = ["Sn 56 11","Dn22s","Сн12.2", "an4 163"];
+    var suttas = ["Sn 56 11","Dn22","Сн12.2", "an4 163"];
     var or = " или ";
 
     var example = "пр. ";

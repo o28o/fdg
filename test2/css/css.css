@@ -14,6 +14,7 @@ body {
  margin: 10px 10px 10px 10px;
 	}
 
+
 #content,
 #footer,
 #breadcrumbs {
@@ -40,18 +41,8 @@ max-width:1610px
    margin-top:8px;
  }
 
-
 td, th {
 	vertical-align:top;
-}
-
-br.half {
- margin-bottom:0.5em;
-}
-
-span.half {
-   display:block;
-   line-height: 0.5em;
 }
 
 /* =========== stuff not in 'pairs' ================= */
@@ -66,7 +57,6 @@ h1.left-align, h2.left-align, h3.left-align{
 	text-align: left;
 }
 
-
 h1 { /* h1 spans the two "pairs" columns -- not used */
  font-size: 100%;
 }
@@ -77,10 +67,6 @@ h2 {
 
 h3 {
  font-size: 120%;
-}
-
-h3.samttl {
- margin: 1em 0;
 }
 
 h4 {
@@ -175,10 +161,14 @@ p, .p {
 	}
 }
 
+ul { margin-bottom: 0.5em; margin-top:0; } /* required so that there is no extra spacing between Pali lookup word and it's translation */
+
+
 /* unvisited link */
 a:link {
   color: blue;
 }
+
 
 /* visited link */
 a:visited {
@@ -196,6 +186,7 @@ a:active {
   color: blue;
 }
 
+
 header {
 	padding: 0px;
 }
@@ -204,74 +195,12 @@ header {
 	display:none;
 }
 
-footer {
- min-height: 30px;
- border-top: 4px solid #DDD;
- -webkit-border-bottom-left-radius: 5px;
- -webkit-border-bottom-right-radius: 5px;
- -moz-border-radius-bottomleft: 5px;
- -moz-border-radius-bottomright: 5px;
- border-bottom-left-radius: 5px;
- border-bottom-right-radius: 5px;
- z-index:1;
- margin-top:2em;
-}
-
-
-
-.logotext {
-	height: 123px;
-	float: none;
-	width: 100%;
-}
-
-
-@media screen and (max-width: 600px) {
-  .bottomlinks a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-#firsttableheading {
-display: block;
-font-size: 1.5em;
--webkit-margin-before: 0.83em;
--webkit-margin-after: 0.83em;
--webkit-margin-start: 0px;
--webkit-margin-end: 0px;
-font-weight: bold;
-}
-
 #pali.palitoggle {
 	font-weight: bold;
 	text-decoration: none;
 	color: #141516;
 	margin-top: -3px;
 }
-
-#pali {
-	width: 40%;
-	border: 2px outset #B0B0B0;
- 	background: -webkit-linear-gradient(#B0B0B0, #F8F8F8); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#B0B0B0, #F8F8F8); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#B0B0B0, #F8F8F8); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#B0B0B0, #F8F8F8);
-	color: white:
-}
-
-#pali.active {
-	background: linear-gradient(#33CCFF, #99CCFF);
-	background: -webkit-linear-gradient(#33CCFF, #99CCFF); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#33CCFF, #99CCFF); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#33CCFF, #99CCFF); /* For Firefox 3.6 to 15 */
- border: 2px outset #3366CC;
- font-weight: bold;
-	text-decoration: none;
-	color: #141516;
-	}
 
 .pairs td {
 	width: 50%;
@@ -283,32 +212,6 @@ font-weight: bold;
 	font-size: 125%;
  word-wrap: break-word;
 }
-
-fieldset.input { padding: 0; }
-
-.search .word .inputbox {
- margin: 0;
-}
-.search .word button {
- height: 22px;
-}
-
-/* Search ---*/
-form#searchForm { border-top: 1px solid #ccc; padding: 15px 0; }
-
-form.poll .button { margin-right: 5px; }
-
-input, select, textarea, .inputbox {
- font-family: Tahoma, Arial, Helvetica, sans-serif;
- font-size: 100%;
- padding: 3px 5px;
-}
-
-.inputbox { border: 1px solid #ccc; background: #fff; }
-
-.inputbox:hover, .inputbox:focus { background: #ffffcc; }
-
-.left { text-align: left; }
 
 /* Tables ---*/
 
@@ -337,23 +240,6 @@ thead tr th { background: #141516; color: #fff; padding: 0px; }
 background:  #141516 !important;
 
 } 
-
-thead tr th a:active { color: #fff;}
-
-table.contentpane, table.tablelist, table.category { width: 100%; }
-
-table.contentpaneopen { border: none; border-collapse: collapse; border-spacing: 0; }
-
-.term, .rule, .subrule {
-	font-weight: bold !important;
-}
-
-td.c1 {
-	vertical-align: top !important;
-	padding-top: .27em;
-	text-align: left;    
-	font-size: 95%;  /* taken from .minor */
-}
 
 /* Pali Lookup */
 
@@ -396,57 +282,16 @@ td.c1 {
  font-weight: bold;
 }
 
-.ms_pali,.ms_eng,.bps {
-	float:left;
-	color: #141516;
-	font-size: 90%;
-	margin-left: -1em;
-	padding-right: .7em;
-}
-
 .parno {
 	color:#141516;
 	font-size: 85%;
 	padding-right:.5em;
 }
 
-.var, p span.var {
-	background-color: #FFE4C4 !important; /* Bisque */
- color: grey;
-}
-
-.verse {
-	margin-left:1.5em !important;
-	text-align: left;
-}
-
-q {display:none;
-}
-
 hr, .pairs hr {
  border:0px;
  height:0px;
  margin-top: -6px;
-}
-
-.half {
- margin-bottom:0.5em;
-}
-
-.w3-image {
-    max-width: 100%;
-    height: auto;
-    margin-left: 30px; 
-	    background-color: #FFF3D6;
-}
-
- .w3-padding {
-    padding: 0px 16px!important;
-}
-
-.centered {
-  position: absolute;
-  top: 0px;
 }
 
 @media screen and (min-width: 1640px) {
@@ -457,4 +302,3 @@ hr, .pairs hr {
   min-width: 1640px;
 }
 }
-

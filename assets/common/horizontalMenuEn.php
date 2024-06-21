@@ -239,9 +239,10 @@ Memorizer</a></li>
 
                <li>
          <div class="dropdown-item ">
-                      <i class="' . $iconimportant . '"></i> Digital Pāḷi Dictionary
+                      <i class="' . $iconimportant . '"></i> Digital Pāḷi Dict
          <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Eng</a>
-                   <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Rus</a>  
+          <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Rus</a>  
+       <a class="text-black" target="" href="https://dpdict.net/">Online</a> 
        </div>
          </li>   
    

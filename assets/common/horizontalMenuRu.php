@@ -268,9 +268,10 @@ echo '<!--
   
                <li>
          <div class="dropdown-item ">
-                      <i class="' . $iconimportant . '"></i> Digital Pāḷi Dictionary
+                      <i class="' . $iconimportant . '"></i> Digital Pāḷi Dict
          <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Англ</a>
-                   <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Русс</a>  
+     <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Русс</a>  
+       <a class="text-black" target="" href="https://dpdict.net/">Онлайн</a>     
 
        </div>
          </li>   

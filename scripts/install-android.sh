@@ -183,7 +183,9 @@ for i in `find . -name  "*htm*" -type f | sort -V`; do
     mv -f ../tmp $i
     sed -i 's@windows-1251@utf-8@g' $i
     done
-    
+
+apa
+diff -qr theravada.ruold theravada.ru | grep -i suttanta
     #count metaphorcount 
 metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"
 nonmetaphorkeys="adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"

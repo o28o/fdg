@@ -12,6 +12,8 @@ cd bw
 gdown --folder https://drive.google.com/drive/folders/17DZmO3PaN_bXPyDuQGRkX4dcYQ0tXhe8
 #newestbw=`ls -Art /storage/emulated/0/Download | grep bw_.*.zip | tail -n1`
 #cp /storage/emulated/0/Download/$newestbw  .
+echo downlad complete
+read x
 mv "Buddha's Words"/bw_*.zip ./
 unzip bw_*.zip
 rm -rf bw_*.zip "Buddha's Words"

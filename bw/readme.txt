@@ -1,5 +1,5 @@
 
-Help
+Please note that most of the translations on this site are copyrighted. Accordingly, you probably should have legitimate copies of the 4 Nikayas published by Wisdom Publications in either hard copy or digital formats. This site was created for my own study and reference and, with the help of a number of people, I've since created a version that is free of copyright restrictions except for the modest ones requested by the translators. That site can be found at www.thebuddhaswords.net and installed as a Progressive Web App or copied to a PC, table or phone as below. 
 
 The Buddhas Words works well on a tablet or PC but is a bit difficult to read on smaller smart phone-sized screens. It has been tested on a range of browsers but has been developed and maintained on Google Chrome. Other browsers, such as the ones pre-installed on Android devices, generally do not work as they don't support javascript. The Buddha's Words relies on javascript to load pages, toggle Pali on and off and to do the Pali lookup etc.
 

@@ -1,6 +1,6 @@
 
 ul#css3menu0, ul#css3menu0 ul{
-	margin-left:15px;
+	margin-left:5px;
 	list-style:none;
 	padding:0;
 	background-color:#dedede;
@@ -139,7 +139,7 @@ ul#css3menu0 li.toplast>a{
  
  /* navigation for vibanga ---*/
 
-/* Vibhaṅga nav bar styling */
+/* Vibhanga nav bar styling */
 	#vbnav {
 		width: 100%;
 		float: left;

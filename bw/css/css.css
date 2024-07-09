@@ -480,7 +480,7 @@ color:white;
   color: #add8e6 !important;
   text-decoration: underline;
   font-size: 17px;
-  width: 25%; /* Four links of equal widths */
+  width: 20%; /* Five links of equal widths */
   text-align: center;
 }
 
@@ -1230,7 +1230,7 @@ font-weight: bold;
  bottom: 2.2em;
  margin-left: 40px;
  margin-right: auto;
- z-index: 1001;
+ z-index: 2002;
  border: 1px solid darkorchid;
  background: #fff3d6;
  border-radius: 5px;
@@ -1443,7 +1443,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
   margin-top:10px;
   min-width: 1640px;
 }
-
+}
 
 
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\
@@ -1461,5 +1461,9 @@ hr, .pairs hr {
  background-color:lime;
 }
 
+@media screen and (min-width: 600px) {
+ h1,h2,h3,h4,h5,h6, .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {
+ background-color: gold;
+}
 
 */

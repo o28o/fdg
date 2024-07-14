@@ -165,7 +165,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
 </div>
 				  <div class="collapse" id="ssCollapseBi"> 
             <div class="mt-3">
-              
+ <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-ss.m4a' type='audio/mp4'>Browser is not supported.</audio>             
                <div class="level4 my-3">
  <span class="level5">Ime kho panāyyāyo sattarasa saṅghādisesā dhammā uddesaṁ āgacchanti. </span>
 </div>           
@@ -308,7 +308,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="np1CollapseBi">
                 <div class="my-3">
-
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-np1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-np1#1.14.0">Nissaggiya pācittiya 1. Pattasannicayasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#38.0.2">pm</a> Yā pana bhikkhunī pattasannicayaṁ kareyya, nissaggiyaṁ pācittiyaṁ.
@@ -385,7 +385,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="np2CollapseBi">
                 <div class="my-3">
-
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-np2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-np11#1.21.0">Nissaggiya pācittiya 11. Garupāvuraṇasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#48.0.2">pm</a> Garupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā catukkaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyaṁ.
@@ -460,7 +460,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="np3CollapseBi">
                 <div class="my-3">
-
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-np3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#58.0.2">Nissaggiya pācittiya 21. Rūpiyasikkhāpadaṁ</a> Yā pana bhikkhunī jātarūparajataṁ uggaṇheyya vā uggaṇhāpeyya vā upanikkhittaṁ vā sādiyeyya, nissaggiyaṁ pācittiyaṁ.
@@ -558,6 +558,8 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 
 	
 	<a data-bs-toggle="collapse" data-bs-target="#pc1CollapseBi" href=""><h4>1. Lasuṇavaggo </h4></a>
+	
+	  
 			
 	<!-- <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#70.0.1"><h4>1. Lasuṇavaggo </h4></a>
 -->
@@ -565,6 +567,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc1CollapseBi">
                 <div class="my-3">
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 
 <div class="level4">
 <span class="level5">
@@ -639,6 +642,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc2CollapseBi">
                 <div class="my-3">
+                  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 
 <div class="level4">
 <span class="level5">
@@ -714,7 +718,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc3CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pc21#1.16.0">Pācittiya 21. Naggasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#90.0.2">pm</a> Yā pana bhikkhunī naggā nahāyeyya, pācittiyaṁ.
@@ -791,6 +795,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc4CollapseBi">
                 <div class="my-3">
+            <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 
 <div class="level4">
 <span class="level5">
@@ -866,7 +871,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc5CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pc41#1.16.0">Pācittiya 41. Rājāgārasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#110.0.2">pm</a> Yā pana bhikkhunī rājāgāraṁ vā cittāgāraṁ vā ārāmaṁ vā uyyānaṁ vā pokkharaṇiṁ vā dassanāya gaccheyya, pācittiyaṁ.
@@ -938,7 +943,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc6CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pc51#3.9.0">Pācittiya 51. Ārāmapavisanasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#120.0.2">pm</a> Yā pana bhikkhunī jānaṁ sabhikkhukaṁ ārāmaṁ anāpucchā paviseyya, pācittiyaṁ.
@@ -1011,7 +1016,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc7CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pc61#1.17.0">Pācittiya 61. Gabbhinīsikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#130.0.2">pm</a> Yā pana bhikkhunī gabbhiniṁ vuṭṭhāpeyya, pācittiyaṁ.
@@ -1083,7 +1088,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc8CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc8vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pc71#1.17.0">Pācittiya 71. Paṭhamakumāribhūtasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#140.0.2">pm</a> Yā pana bhikkhunī ūnavīsativassaṁ kumāribhūtaṁ vuṭṭhāpeyya, pācittiyaṁ.
@@ -1171,7 +1176,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc9CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc10vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pc84#1.2.6.0">Pācittiya 84. Chattupāhanasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#153.0.2">pm</a> Yā pana bhikkhunī agilānā chattupāhanaṁ dhāreyya, pācittiyaṁ.
@@ -1259,7 +1264,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc10CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc10vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#166.0.2">Pācittiya 97. Musāvādasikkhāpadaṁ</a> Sampajānamusāvāde pācittiyaṁ.
@@ -1333,7 +1338,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc11CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc11vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#176.0.2">Pācittiya 107. Bhūtagāmasikkhāpadaṁ</a> Bhūtagāmapātabyatāya pācittiyaṁ.
@@ -1407,7 +1412,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc12CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc12vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#186.0.2">Pācittiya 117. Āvasathapiṇḍasikkhāpadaṁ</a> Agilānāya bhikkhuniyā eko āvasathapiṇḍo bhuñjitabbo. Tato ce uttari bhuñjeyya, pācittiyaṁ.
@@ -1480,7 +1485,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc13CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc13vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#196.0.2">Pācittiya 127. Cārittasikkhāpadaṁ</a> Yā pana bhikkhunī nimantitā sabhattā samānā santiṁ bhikkhuniṁ anāpucchā purebhattaṁ vā pacchābhattaṁ vā kulesu cārittaṁ āpajjeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, cīvaradānasamayo, cīvarakārasamayo, ayaṁ tattha samayo.
@@ -1553,7 +1558,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc14CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc14vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#206.0.2">Pācittiya 137. Jotisikkhāpadaṁ</a> Yā pana bhikkhunī agilānā visibbanāpekkhā jotiṁ samādaheyya vā samādahāpeyya vā aññatra tathārūpappaccayā, pācittiyaṁ.
@@ -1626,7 +1631,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc15CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc15vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#216.0.2">Pācittiya 147. Ukkhittasambhogasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ tathāvādiniyā bhikkhuniyā akaṭānudhammāya taṁ diṭṭhiṁ appaṭinissaṭṭhāya saddhiṁ sambhuñjeyya vā, saṁvaseyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ.
@@ -1699,7 +1704,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="pc16CollapseBi">
                 <div class="my-3">
-
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc16vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#226.0.2">Pācittiya 157. Kammappaṭibāhanasikkhāpadaṁ</a> Yā pana bhikkhunī dhammikānaṁ kammānaṁ chandaṁ datvā pacchā khīyanadhammaṁ āpajjeyya, pācittiyaṁ.
@@ -1784,7 +1789,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </div>
 				  <div class="collapse" id="pdCollapseBi"> 
             <div class="mt-3">
-   
+   <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pd.m4a' type='audio/mp4'>Browser is not supported.</audio>
            <div class="level4 my-3">
  <span class="level5">Ime kho panāyyāyo aṭṭha pāṭidesanīyā dhammā uddesaṁ āgacchanti. </span>
 </div>              
@@ -1870,6 +1875,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="sk1CollapseBi">
                 <div class="my-3">
+                  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-sk1#1.14.0">Sekhiya 1. Parimaṇḍalasikkhāpadaṁ</a> <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#248.0.2">pm</a> Parimaṇḍalaṁ nivāsessāmīti sikkhā karaṇīyā.
@@ -1947,6 +1953,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="sk2CollapseBi">
                 <div class="my-3">
+                    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#258.0.2">Sekhiya 11. Ujjagghikasikkhāpadaṁ</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā.
@@ -2021,6 +2028,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
               </div>
               <div class="collapse" id="sk3CollapseBi">
                 <div class="my-3">
+                    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 
 <div class="level4">
 <span class="level5">
@@ -2092,7 +2100,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </div>
               <div class="collapse" id="sk4CollapseBi">
                 <div class="my-3 ">
-
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 
 <div class="level4">
 <span class="level5">
@@ -2162,6 +2170,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </div>
               <div class="collapse" id="sk5CollapseBi">
                 <div class="my-3">
+                    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#288.0.2">Sekhiya 41. Anāhaṭasikkhāpadaṁ</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā.
@@ -2232,7 +2241,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </div>
               <div class="collapse" id="sk6CollapseBi">
                 <div class="my-3">
-
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#298.0.2">Sekhiya 51. Surusurukārakasikkhāpadaṁ</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
@@ -2306,7 +2315,7 @@ parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
 </div>
 <div class="collapse" id="sk7CollapseBi">
                 <div class="my-3">
-
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
 <div class="level4">
 <span class="level5">
 <a href="<?php echo "$mainscpage"; ?>?q=bi-pm#308.0.2">Sekhiya 61. Pādukasikkhāpadaṁ</a> Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
@@ -2417,7 +2426,6 @@ Sekhiyā niṭṭhitā </span>
 </div>
 				  <div class="collapse" id="asCollapseBi"> 
             <div class="mt-3">
-   
            <div class="level4 my-3">
  <span class="level5">Ime kho panāyyāyo, satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti.
 </span>

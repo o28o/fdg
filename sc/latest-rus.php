@@ -28,7 +28,7 @@ if [[ \"\$mndir\" == \"\$mnrangeInFile\" ]] ; then
 echo MN no updates
 else
 echo MN updated to \$sndir
-sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
+sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
 fi
 ");
 echo "<h2 style='text-align: center;'>

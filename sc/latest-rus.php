@@ -27,7 +27,7 @@ mndir=\"[\${mnstring%,}]\"
 if [[ \"\$mndir\" == \"\$mnrangeInFile\" ]] ; then
 echo MN no updates
 else
-echo MN updated to \$sndir
+echo MN updated to \$mndir
 sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js 
 fi
 ");

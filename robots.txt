@@ -1,7 +1,7 @@
 Sitemap: https://find.dhamma.gift/sitemap.xml
 User-agent: *
 Allow: /
-Allow: /result/
+Disallow: /result/
 Allow: /assets/example/
 Disallow: /scripts/
 Disallow: /assets/
@@ -21,7 +21,7 @@ Disallow: /tipitaka.theravada.su/
 
 User-agent: Googlebot
 Allow: /
-Allow: /result/
+Disallow: /result/
 Allow: /assets/example/
 Disallow: /scripts/
 Disallow: /assets/
@@ -41,7 +41,7 @@ Disallow: /tipitaka.theravada.su/
 
 User-agent: Yandex
 Allow: /
-Allow: /result/
+Disallow: /result/
 Allow: /assets/example/
 Disallow: /scripts/
 Disallow: /assets/

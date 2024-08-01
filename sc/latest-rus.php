@@ -28,7 +28,7 @@ if [[ \"\$mndir\" == \"\$mnrangeInFile\" ]] ; then
 echo MN no updates
 else
 echo MN updated to \$mndir
-sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js 
+sed -i \"s@let mnranges =.*@let mnranges = \$mndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js 
 fi
 ");
 echo "<h2 style='text-align: center;'>
@@ -67,7 +67,7 @@ if [[ \"\$dndir\" == \"\$dnrangeInFile\" ]] ; then
 echo DN no updates
 else
 echo DN updated to \$dndir
-sed -i \"s@let dnranges =.*@let dnranges = \$dndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
+sed -i \"s@let dnranges =.*@let dnranges = \$dndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js 
 fi
 ");
 echo "<h2 style='text-align: center;'>
@@ -108,7 +108,7 @@ if [[ \"\$kndir\" == \"\$knrangeInFile\" ]] ; then
 echo KN no updates
 else
 echo KN updated to \$kndir
-sed -i \"s@let dnranges =.*@let knranges = \$kndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
+sed -i \"s@let knranges =.*@let knranges = \$kndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js 
 fi
 ");
 echo "<h2 style='text-align: center;'>

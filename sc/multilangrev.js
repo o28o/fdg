@@ -92,7 +92,7 @@ let anranges = ['an1.1-10', 'an1.11-20', 'an1.21-30', 'an1.31-40', 'an1.41-50', 
 
 let dnranges = ['dn1', 'dn2', 'dn3', 'dn4', 'dn5', 'dn6', 'dn7', 'dn8', 'dn9', 'dn10', 'dn11', 'dn12', 'dn13', 'dn14', 'dn15', 'dn16', 'dn17', 'dn18', 'dn19', 'dn20', 'dn21', 'dn22', 'dn23', 'dn23', 'dn24', 'dn25', 'dn26', 'dn27', 'dn28', 'dn29', 'dn30', 'dn31', 'dn32', 'dn33', 'dn34'];
 
-let knranges = ["snp3.2", "thag1.1", "thag1.2", "thag1.3", "thag1.4", "thag1.5", "thag1.6", "thag1.7", "thag1.8", "thag1.9", "thag1.10", "thag1.11", "thag1.12", "thag1.13", "thag1.14", "thag1.15", "thag1.16", "thag1.17", "thag1.18", "thag1.19", "thag1.33", "thag2.1", "thig1.1", "thig1.2"];
+let knranges = ['snp3.2', 'thag1.1', 'thag1.2', 'thag1.3', 'thag1.4', 'thag1.5', 'thag1.6', 'thag1.7', 'thag1.8', 'thag1.9', 'thag1.10', 'thag1.11', 'thag1.12', 'thag1.13', 'thag1.14', 'thag1.15', 'thag1.16', 'thag1.17', 'thag1.18', 'thag1.19', 'thag1.33', 'thag2.1', 'thig1.1', 'thig1.2'];
 
 var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 

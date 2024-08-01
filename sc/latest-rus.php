@@ -94,4 +94,23 @@ $check</h2>";
 //   sed -i 's@latestrusmn=.*@latestrusmn='$max_mn'@g' $basedir/config/script_config.sh ;
  // sed -i 's@\$latestrusmn =.*@\$latestrusmn = '$max_mn';@g' $basedir/config/config.php ;
 //
+
+//kn
+$pathkn = 'assets/texts/sutta/kn/';
+$check = shell_exec("
+knrangeInFile=`grep 'let knranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
+
+knstring=`find $basedir/$pathkn -name \"*translation-ru*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+
+kndir=\"[\${knstring%,}]\"
+
+if [[ \"\$kndir\" == \"\$knrangeInFile\" ]] ; then
+echo KN no updates
+else
+echo KN updated to \$kndir
+sed -i \"s@let dnranges =.*@let knranges = \$kndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js
+fi
+");
+echo "<h2 style='text-align: center;'>
+$check</h2>";
 ?>

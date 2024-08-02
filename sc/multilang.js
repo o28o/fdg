@@ -18,8 +18,6 @@ homeButton.addEventListener("click", () => {
   document.location.search = "";
 });
 
-
-
 // pressing enter will "submit" the citation and load
 form.addEventListener("submit", e => {
   e.preventDefault();

@@ -608,7 +608,7 @@ abhinimmināti
 abhinimmineyya
 abhinimmineyyāmāti
 abhinimmini
-abhinimminissāmiseyyathāpi
+abhinimminissāmi
 abhinimminissati
 abhinimminitvā
 abhininnāmesiṁ
@@ -937,7 +937,7 @@ abhisapissati
 abhisapissatīti
 abhisapite
 abhisapito
-abhisapitvāseyyathāpi
+abhisapitvā
 abhisāpoyaṁ
 abhisaṭā
 abhisaṭaṁ
@@ -2523,7 +2523,7 @@ adinnaṁyeva
 adinnañca
 ādinnasaññī
 ādinnasatthānaṁ
-ādinnasipāṭikoseyyathāpi
+ādinnasipāṭiko
 ādinne
 ādīpito
 ādippanti
@@ -7814,7 +7814,7 @@ anumoditabbaṁ
 anumoditabbanti
 anumoditunti
 anumoditvā
-anumoditvāseyyathāpi
+anumoditvā
 anunadītīre
 anūnakā
 anūnamanadhikaṁ
@@ -12446,7 +12446,6 @@ attabhāvapaṭilābhe
 attabhāvapaṭilābhena
 attabhāvapaṭilābhesu
 attabhāvapaṭilābho
-attabhāvapaṭilābhoseyyathāpi
 attabhāvappaṭilābhaṁ
 attabhāvappaṭilābhena
 attabhāvappaṭilābho
@@ -14878,7 +14877,7 @@ bhagavantanti
 bhagavantarūpo
 bhagavanto
 bhagavāpi
-bhagavāseyyathāpi
+bhagavā
 bhagavatā
 bhagavatāti
 bhagavatāvuso
@@ -15692,7 +15691,6 @@ bhavissatha
 bhavissathāti
 bhavissati
 bhavissatikinti
-bhavissatiseyyathāpi
 bhavissatīti
 bhavissatītinetaṁ
 bhavissatītiṭhānametaṁ
@@ -16127,7 +16125,6 @@ bhikkhusatāni
 bhikkhusatasahassaṁ
 bhikkhusatehi
 bhikkhusatehīti
-bhikkhuseyyathāpi
 bhikkhusikkhāya
 bhikkhusmiṁ
 bhikkhussa
@@ -18574,7 +18571,6 @@ cetopaṇidhi
 cetopaṇidhimanvāya
 cetoparicca
 cetoparivitakkamaññāya
-cetoparivitakkamaññāyaseyyathāpi
 cetopariyaṁ
 cetopariyañāṇa
 cetopariyañāṇaṁ
@@ -20940,7 +20936,6 @@ devānamindassa
 devānamindāti
 devānamindena
 devānamindo
-devānamindoseyyathāpi
 devānamindoti
 devānampi
 devānaṁva
@@ -21030,7 +21025,6 @@ devatāsaṁyuttaṁ
 devatāsannipāta
 devatāsatasahassāni
 devatāsatehi
-devatāseyyathāpi
 devatāsu
 devatāsutta
 devatāti
@@ -22251,7 +22245,6 @@ dissati
 dissatīti
 disvā
 disvāna
-disvānaseyyathāpi
 disvānassa
 disvāti
 disvāva
@@ -27289,7 +27282,6 @@ hatthiratana
 hatthiratanaṁ
 hatthiratanampāhaṁ
 hatthiratanampi
-hatthiratanaṁseyyathāpi
 hatthiratanassa
 hatthiratanena
 hatthisaddaṁ
@@ -27654,7 +27646,6 @@ hotina
 hotinevimaṁ
 hotipaccessanti
 hotisace
-hotiseyyathāpi
 hotitathāgatosutta
 hotīti
 hotiyā
@@ -29951,7 +29942,6 @@ kalyāṇadhammā
 kalyāṇadhammaṁ
 kalyāṇadhammānaṁ
 kalyāṇadhammañca
-kalyāṇadhammāseyyathāpi
 kalyāṇadhammatā
 kalyāṇadhammatarañca
 kalyāṇadhammataro
@@ -33249,7 +33239,6 @@ kiṁsukassa
 kiṁsukhā
 kiṁsuko
 kiṁsukopamasutta
-kiṁsukoseyyathāpi
 kiṁsukoti
 kiṁupavicārā
 kiṁuttarā
@@ -35785,7 +35774,6 @@ mahāmoggallānasutta
 mahāmoggallāne
 mahāmoggallānena
 mahāmoggallāno
-mahāmoggallānoseyyathāpi
 mahāmoggallānoti
 mahāmuni
 mahānadiyo
@@ -35962,7 +35950,6 @@ mahārajakkhe
 mahārājānaṁ
 mahārājāno
 mahārājasahassāni
-mahārājāseyyathāpi
 mahārājassa
 mahārājāti
 mahārāje
@@ -43702,7 +43689,6 @@ ovaditoti
 ovadituṁ
 ovaditunti
 ovaditvā
-ovaditvāseyyathāpi
 ovadiyamānā
 ovadīyamānā
 ovadiyamānānaṁ
@@ -44256,7 +44242,6 @@ paccayo
 paccekā
 paccekabrahmā
 paccekabrahmānaṁ
-paccekabrahmāseyyathāpi
 paccekabrahmāti
 paccekabrahmuno
 paccekabuddhā
@@ -56009,7 +55994,6 @@ sahampati
 sahampatibrahmasutta
 sahampatiṁ
 sahampatinā
-sahampatiseyyathāpi
 sahampatissa
 sahampatīti
 sahampatiyācaṁ
@@ -58582,7 +58566,6 @@ sampannakusalo
 sampannaṁ
 sampannamānaso
 sampannamevāti
-sampannaṁseyyathāpi
 sampannanivāsanapāvuraṇo
 sampannapaññe
 sampannapātimokkhā
@@ -59173,7 +59156,6 @@ saṁvejesi
 saṁvejetukāmā
 saṁvejetukāmena
 saṁvejetvā
-saṁvejetvāseyyathāpi
 saṁvejeyyāmāti
 saṁvejeyyanti
 saṁvejitā
@@ -74273,7 +74255,6 @@ viditena
 vidito
 viditvā
 viditvāna
-viditvāseyyathāpi
 vidū
 vidūhi
 vidvā

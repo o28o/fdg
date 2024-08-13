@@ -111,10 +111,18 @@ else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
 //echo "<script>alert('case 1');</script>";	
 	echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
 	  exit(); 
-} else if (preg_match("/^pm$/i", $stringForOpen)) {
-	echo "<script>window.location.href='$readerlang?q=bu-{$stringForOpen}';</script>";	
+}  else if (preg_match("/^(bu|pm|bpm|bupm)$/i", $stringForOpen)) {
+  
+	//echo "<script>window.location.href='$readerlang?q=bu-{$stringForOpen}';</script>";	
+	echo "<script>window.location.href='/assets/texts/pm.php';</script>";	
 	  exit(); 
+} else if (preg_match("/^(bi|bipm)$/i", $stringForOpen)) {
+
+//echo "<script>alert('case 1');</script>";	
+//	echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
+	echo "<script>window.location.href='/assets/texts/bipm.php';</script>";	
 } else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $stringForOpen)) {
+	  exit(); 
   //open read.php Bu
   $stringForOpen = str_replace (" ", "", $stringForOpen);
 $stringForOpen = strtolower($stringForOpen);

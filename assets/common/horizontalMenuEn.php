@@ -257,6 +257,13 @@ Memorizer</a></li>
    
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
 
+      <li>
+         <div class="dropdown-item "> Eng-Sanskr Dictionary
+         <a class="text-black" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+     <a class="text-black" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+       </div>
+         </li>    
+
 <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
       
               <li>

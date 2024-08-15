@@ -270,21 +270,25 @@ echo '<!--
      
    <li><a class="dropdown-item" target="_blank" href="https://Wisdomlib.org">Wisdomlib.org</a></li>
 
-
-      
-
-  
                <li>
          <div class="dropdown-item ">
                       <i class="' . $iconimportant . '"></i> Digital Pāḷi Dict
          <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Англ</a>
-     <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Русс</a>  
+     <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Рус</a>  
        <a class="text-black" target="" href="https://dpdict.net/">Онлайн</a>     
 
        </div>
          </li>   
       
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
+  
+      <li>
+         <div class="dropdown-item "> Англ-Санскр Словарь
+         <a class="text-black" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+     <a class="text-black" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+       </div>
+         </li>    
+  
    <li><a class="dropdown-item" href="/assets/linebyline.html">Создание Построчных Файлов</a></li>
    <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">

@@ -289,3 +289,10 @@ wget --recursive --no-clobber --page-requisites --html-extension --convert-links
 
 sox /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/audio/mn/mn54_*.ogg /storage/emulated/0/Download/out.ogg pitch -350 speed 0.8 bass +5                
                  
+                 
+                 
+#termux-setup-storage
+
+#tar -zcf /storage/emulated/0/Download/termux-backup.tar.gz -C /data/data/com.termux/files ./home ./usr
+
+#tar -zxf /storage/emulated/0/Download/termux-backup.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions                

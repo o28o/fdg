@@ -5,6 +5,8 @@
  	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
  	<title>Samyutta Nikāya V — The Great Book</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
  	<!-- Loading third party fonts -->
  	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Loading main and menu stylesheets -->
@@ -42,7 +44,7 @@
  		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
  			<ul id="css3menu0">
  				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
-			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
  				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
  				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
  					<ul>
@@ -82,8 +84,8 @@
  					<ul>
  						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
  						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
- 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pāṭimokkha</a></li>
- 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pāṭimokkha</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
  						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
  					</ul>
  				</li>
@@ -96,7 +98,6 @@
  	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
  		<div class="w3-bar-block w3-white">
  			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
- 			
  			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
  			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
  			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
@@ -107,61 +108,66 @@
  		</div>
  </nav>
   
-<!-- !PAGE DIV! --> <!-- Div for page content -->
-  	<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
- 	<h2 id="SN01heading">Saṁyutta Nikāya — The Connected Discourses</h2>
- 
- 			
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 	<h2 id="SN01heading">Saṁyutta Nikāya — The Linked Discourses</h2>
+		
+ 				<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+ 					<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div>  <!-- End div for SN sub-navigation -->
 
-<h3 id="SN05heading">5: Saṁyutta Nikāya - The Great Book - Mahāvagga</h3>
 
- 	 
- <!--      SN content begins here      -->
-  
- <div id="content">
+<!-- SN content begins here -->
+
+<div id="content">
+
+<h2>5: Saṁyutta Nikāya - The Great Book - Mahāvagga</h2>
 
 	<div class="w3-responsive">
 		<table class="w3-striped suttalist">
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn45.html#SN45heading">SN45:&nbsp;&nbsp;Connected Discourses on the Path</a></td>
+			<td><a href="./sn45.html#content">45. Maggasaṁyutta: On the Path</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn46.html#SN46heading">SN46:&nbsp;&nbsp;Connected Discourses on the Factors of Enlightenment</a></td>
+			<td><a href="./sn46.html#content">46. Bojjhaṅgasaṁyutta: On the Awakening Factors</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn47.html#SN47heading">SN47:&nbsp;&nbsp;Connected Discourses on the Establishments of Mindfulness</a></td>
+			<td><a href="./sn47.html#content">47. Satipaṭṭhānasaṁyutta: On Mindfulness Meditation</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn48.html#SN48heading">SN48:&nbsp;&nbsp;Connected Discourses on the Faculties</a></td>
+			<td><a href="./sn48.html#content">48. Indriyasaṁyutta: On the Faculties</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn49.html#SN49heading">SN49:&nbsp;&nbsp;Connected Discourses on the Right Strivings</a></td>
+			<td><a href="./sn49.html#content">49. Sammappadhānasaṁyutta: On the Right Efforts</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn50.html#SN50heading">SN50:&nbsp;&nbsp;Connected Discourses on the Powers</a></td>
+			<td><a href="./sn50.html#content">50. Balasaṁyutta: On the Five Powers</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn51.html#SN51heading">SN51:&nbsp;&nbsp;Connected Discourses on the Bases for Spiritual Power</a></td>
+			<td><a href="./sn51.html#content">51. Iddhipādasaṁyutta: On the Bases of Psychic Power</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn52.html#SN52heading">SN52:&nbsp;&nbsp;Connected Discourses with Anuruddha</a></td>
+			<td><a href="./sn52.html#content">52. Anuruddhasaṁyutta: With Anuruddha</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn53.html#SN53heading">SN53:&nbsp;&nbsp;Connected Discourses on the jhānas</a></td>
+			<td><a href="./sn53.html#content">53. Jhānasaṁyutta: On Absorption</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn54.html#SN54heading">SN54:&nbsp;&nbsp;Connected Discourses on Breathing</a></td>
+			<td><a href="./sn54.html#content">54. Ānāpānasaṁyutta: On Breath Meditation</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn55.html#SN55heading">SN55:&nbsp;&nbsp;Connected Discourses on Stream-Entry</a></td>
+			<td><a href="./sn55.html#content">55. Sotāpattisaṁyutta: On Stream-Entry</a></td>
 		</tr>
 		<tr class="w3-hover-yellow">
-			<td><a href="./sn56.html#SN56heading">SN56:&nbsp;&nbsp;Connected Discourses on the Truths</a></td>
+			<td><a href="./sn56.html#content">56. Saccasaṁyutta: On the Truths</a></td>
 		</tr>
 		</table>
 	</div>
-<br>
-<br>
+
 <div id="nextprev"><a id="previous-sutta" href="../sn/sn44.11.html#content"></a><a id="next-sutta" href="../sn/sn45.html#content"></a></div>
 </div>  <!--End Content -->
 </div>  <!-- End Page -->
@@ -175,7 +181,7 @@
 	
  	<div class="bottomlinks">
  	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
- 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
  	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
  	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
  	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>

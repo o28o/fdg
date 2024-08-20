@@ -4,10 +4,10 @@
  *
  * To rebuild or modify this file with the latest versions of the included
  * software please visit:
- *   https://datatables.net/download/#bs5/dt-2.1.4/af-2.7.0/b-3.1.1/b-colvis-3.1.1/cr-2.0.4/fc-5.0.1/fh-4.0.1/kt-2.12.1/r-3.0.2/rg-1.5.0/rr-1.5.0/sc-2.4.3/sb-1.8.0/sp-2.3.2/sl-2.0.5/sr-1.4.1
+ *   https://datatables.net/download/#bs5/jq-3.7.0/dt-2.0.0/af-2.7.0/b-3.0.0/b-colvis-3.0.0/b-html5-3.0.0/cr-2.0.0/fc-5.0.0/fh-4.0.0/kt-2.12.0/r-3.0.0/rg-1.5.0/rr-1.5.0/sc-2.4.0/sb-1.7.0/sp-2.3.0/sl-2.0.0/sr-1.4.0
  *
  * Included libraries:
- *   DataTables 2.1.4, AutoFill 2.7.0, Buttons 3.1.1, Column visibility 3.1.1, ColReorder 2.0.4, FixedColumns 5.0.1, FixedHeader 4.0.1, KeyTable 2.12.1, Responsive 3.0.2, RowGroup 1.5.0, RowReorder 1.5.0, Scroller 2.4.3, SearchBuilder 1.8.0, SearchPanes 2.3.2, Select 2.0.5, StateRestore 1.4.1
+ *   jQuery 3 3.7.0, DataTables 2.0.0, AutoFill 2.7.0, Buttons 3.0.0, Column visibility 3.0.0, HTML5 export 3.0.0, ColReorder 2.0.0, FixedColumns 5.0.0, FixedHeader 4.0.0, KeyTable 2.12.0, Responsive 3.0.0, RowGroup 1.5.0, RowReorder 1.5.0, Scroller 2.4.0, SearchBuilder 1.7.0, SearchPanes 2.3.0, Select 2.0.0, StateRestore 1.4.0
  */
 
 @charset "UTF-8";
@@ -45,19 +45,13 @@ table.dataTable tr.dt-hasChild td.dt-control:before {
 }
 
 html.dark table.dataTable td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable td.dt-control:before,
-:root[data-theme=dark] table.dataTable td.dt-control:before {
+:root[data-bs-theme=dark] table.dataTable td.dt-control:before {
   border-left-color: rgba(255, 255, 255, 0.5);
 }
 html.dark table.dataTable tr.dt-hasChild td.dt-control:before,
-:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before,
-:root[data-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
+:root[data-bs-theme=dark] table.dataTable tr.dt-hasChild td.dt-control:before {
   border-top-color: rgba(255, 255, 255, 0.5);
   border-left-color: transparent;
-}
-
-div.dt-scroll {
-  width: 100%;
 }
 
 div.dt-scroll-body thead tr,
@@ -353,7 +347,7 @@ table.table.dataTable.table-striped > tbody > tr:nth-of-type(2n+1) > * {
   box-shadow: none;
 }
 table.table.dataTable > :not(caption) > * > * {
-  background-color: var(--bs-table-bg);
+  background-color: transparent;
 }
 table.table.dataTable > tbody > tr {
   background-color: transparent;
@@ -383,31 +377,6 @@ table.table.dataTable.table-hover > tbody > tr.selected:hover > * {
   box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-selected), 0.975);
 }
 
-div.dt-container div.dt-layout-start > *:not(:last-child) {
-  margin-right: 1em;
-}
-div.dt-container div.dt-layout-end > *:not(:first-child) {
-  margin-left: 1em;
-}
-div.dt-container div.dt-layout-full {
-  width: 100%;
-}
-div.dt-container div.dt-layout-full > *:only-child {
-  margin-left: auto;
-  margin-right: auto;
-}
-div.dt-container div.dt-layout-table > div {
-  display: block !important;
-}
-
-@media screen and (max-width: 767px) {
-  div.dt-container div.dt-layout-start > *:not(:last-child) {
-    margin-right: 0;
-  }
-  div.dt-container div.dt-layout-end > *:not(:first-child) {
-    margin-left: 0;
-  }
-}
 div.dt-container div.dt-length label {
   font-weight: normal;
   text-align: left;
@@ -430,6 +399,9 @@ div.dt-container div.dt-search input {
   margin-left: 0.5em;
   display: inline-block;
   width: auto;
+}
+div.dt-container div.dt-info {
+  padding-top: 0.85em;
 }
 div.dt-container div.dt-paging {
   margin: 0;
@@ -491,18 +463,10 @@ div.dt-scroll-foot > .dt-scroll-footInner > table > tfoot > tr:first-child {
     justify-content: center !important;
   }
 }
-table.dataTable.table-sm > thead > tr th.dt-orderable-asc, table.dataTable.table-sm > thead > tr th.dt-orderable-desc, table.dataTable.table-sm > thead > tr th.dt-ordering-asc, table.dataTable.table-sm > thead > tr th.dt-ordering-desc,
-table.dataTable.table-sm > thead > tr td.dt-orderable-asc,
-table.dataTable.table-sm > thead > tr td.dt-orderable-desc,
-table.dataTable.table-sm > thead > tr td.dt-ordering-asc,
-table.dataTable.table-sm > thead > tr td.dt-ordering-desc {
+table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled) {
   padding-right: 20px;
 }
-table.dataTable.table-sm > thead > tr th.dt-orderable-asc span.dt-column-order, table.dataTable.table-sm > thead > tr th.dt-orderable-desc span.dt-column-order, table.dataTable.table-sm > thead > tr th.dt-ordering-asc span.dt-column-order, table.dataTable.table-sm > thead > tr th.dt-ordering-desc span.dt-column-order,
-table.dataTable.table-sm > thead > tr td.dt-orderable-asc span.dt-column-order,
-table.dataTable.table-sm > thead > tr td.dt-orderable-desc span.dt-column-order,
-table.dataTable.table-sm > thead > tr td.dt-ordering-asc span.dt-column-order,
-table.dataTable.table-sm > thead > tr td.dt-ordering-desc span.dt-column-order {
+table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled):before, table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled):after {
   right: 5px;
 }
 
@@ -1060,28 +1024,25 @@ table.dataTable.table-bordered tr:last-child td {
   border-bottom-width: 0;
 }
 
-table.dataTable thead tr > .dtfc-fixed-start,
-table.dataTable thead tr > .dtfc-fixed-end,
-table.dataTable tfoot tr > .dtfc-fixed-start,
-table.dataTable tfoot tr > .dtfc-fixed-end {
-  background-color: var(--bs-table-bg);
-}
-table.dataTable tbody tr > .dtfc-fixed-start,
-table.dataTable tbody tr > .dtfc-fixed-end {
-  background-color: var(--bs-table-bg);
-}
-
-div.dtfc-top-blocker,
-div.dtfc-bottom-blocker {
+html[data-bs-theme=dark] table.dataTable thead tr > .dtfc-fixed-start,
+html[data-bs-theme=dark] table.dataTable thead tr > .dtfc-fixed-end,
+html[data-bs-theme=dark] table.dataTable tfoot tr > .dtfc-fixed-start,
+html[data-bs-theme=dark] table.dataTable tfoot tr > .dtfc-fixed-end {
   background-color: var(--bs-body-bg);
 }
-
-div.dt-scroll-body {
-  border-left-color: var(--bs-table-color) !important;
+html[data-bs-theme=dark] table.dataTable tbody tr > .dtfc-fixed-start,
+html[data-bs-theme=dark] table.dataTable tbody tr > .dtfc-fixed-end {
+  background-color: var(--bs-body-bg);
 }
-
-div.dt-scroll-headInner table.table-bordered tr th:first-child,
-div.dt-scroll-footInner table.table-bordered tr th:first-child {
+html[data-bs-theme=dark] div.dtfc-top-blocker,
+html[data-bs-theme=dark] div.dtfc-bottom-blocker {
+  background-color: var(--bs-body-bg);
+}
+html[data-bs-theme=dark] div.dt-scroll-body {
+  border-left-color: var(--bs-border-color) !important;
+}
+html[data-bs-theme=dark] div.dt-scroll-headInner table.table-bordered tr th:first-child,
+html[data-bs-theme=dark] div.dt-scroll-footInner table.table-bordered tr th:first-child {
   border-left-color: var(--bs-border-color) !important;
 }
 
@@ -1550,7 +1511,6 @@ div.dtsb-searchBuilder {
   cursor: default;
   margin-bottom: 1em;
   text-align: left;
-  width: 100%;
 }
 div.dtsb-searchBuilder button.dtsb-button,
 div.dtsb-searchBuilder select {
@@ -1623,7 +1583,7 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont {
   flex: 1;
   white-space: nowrap;
 }
-div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont span.dtsb-joiner {
+div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont span.dtsp-joiner {
   margin-right: 0.8em;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria div.dtsb-inputCont input.dtsb-value {

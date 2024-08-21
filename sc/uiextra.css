@@ -21,7 +21,9 @@ max-width: 274px;
 }
 
 #arrowImg {
-  height: 13px;
+    height: 13px;
+    margin-left: -6px;
+    margin-top: -15px;
 }
 
 #scrollToTopBtn {

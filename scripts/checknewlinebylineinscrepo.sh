@@ -1,12 +1,14 @@
 #!/bin/bash
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data
+source ./config/script_config.sh --source-only
+
+cd $suttapath/sc-data
 git pull | grep "translation/ru"
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/
+cd $apachesitepath
 
 
-Pali="/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta"
-Trn="/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/sutta"
-TrnNew="/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/translation/ru"
+Pali="$suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta"
+Trn="$apachesitepath/assets/texts/sutta"
+TrnNew="$suttapath/sc-data/sc_bilara_data/translation/ru"
 
 function ShowDiff() {
 cd $TrnDir 2>/dev/null

@@ -2,7 +2,7 @@
 source ./config/script_config.sh --source-only
 
 cd $suttapath/sc-data
-git pull | grep "translation/ru"
+git pull #| grep "translation/ru"
 cd $apachesitepath
 
 

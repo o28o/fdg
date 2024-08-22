@@ -21,7 +21,7 @@ TrnFolders=${TrnFolders//./}
 
 for i in $TrnFolders ; do 
 root=$(ls $PaliDir/$i | wc -l) 
-asset=$(ls $TrnDir/$i 2>/dev/null | wc -l ) 
+asset=$(ls $TrnDir/$i 2>/dev/null | awk -F'_' '{print $1}' | uniq | wc -l ) 
 new=$(ls $TrnNewDir/$i 2>/dev/null | wc -l)
 percentdone=$(awk "BEGIN {printf \"%.0f\", ($asset/$root)*100}")
 check=$(if [ "$root" -eq "$asset" ]; then echo $asset;

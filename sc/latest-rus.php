@@ -16,6 +16,7 @@ if ( $validatejson == "" ) {
 //echo "<p style='text-align: center;'>$styleforsc</p>";
 
 //mn
+/*
 $pathmn = 'assets/texts/sutta/mn/';
 $check = shell_exec("
 mnrangeInFile=`grep 'let mnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
@@ -33,7 +34,7 @@ fi
 ");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
-
+*/
 
 //sn
 $pathsn = 'assets/texts/sutta/sn/';
@@ -55,6 +56,7 @@ echo "<h2 style='text-align: center;'>
 $check</h2>";
 
 //dn
+/*
 $pathdn = 'assets/texts/sutta/dn/';
 $check = shell_exec("
 dnrangeInFile=`grep 'let dnranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
@@ -72,7 +74,7 @@ fi
 ");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
-
+*/
 //an
 $pathan = 'assets/texts/sutta/an/';
 $check = shell_exec("
@@ -113,4 +115,8 @@ fi
 ");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
+echo "<h2 style='text-align: center;'>
+DN complete</h2>";
+echo "<h2 style='text-align: center;'>
+MN complete</h2>";
 ?>

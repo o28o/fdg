@@ -136,7 +136,7 @@ if (finder && finder.trim() !== "") {
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8200;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span>
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
@@ -265,7 +265,7 @@ rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 
 
-const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&#8202;</a></p>";
+const warning = "<p class='warning' >Warning!<br>Translations made not by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&#8200;</a></p>";
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
  

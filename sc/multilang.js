@@ -212,13 +212,13 @@ if (engTransData[segment] === undefined) {
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment]) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8200;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
       <span class="eng-lang" lang="en">${engTransData[segment]}</span>
       </span>${closeHtml}\n\n`;
     } else {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8200;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
       <span class="rus-lang" lang="en">${engTransData[segment]}</span>
       </span>${closeHtml}\n\n`;
     }
@@ -338,7 +338,7 @@ let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 
-const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&#8200;</a></p>";
+const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
 //var lineBreak = "\n\n",
 //revhtml = html.split(lineBreak).reverse().join(lineBreak)

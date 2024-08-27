@@ -225,13 +225,13 @@ if (engTransData[segment] === undefined) {
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment]) {
         html += `<p><span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8200;</a></span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
       <span class="eng-lang" lang="en">${engTransData[segment]}</span>
       </span></p>\n\n`;
     } else {
         html += `<p><span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8200;</a></span>
       <span class="rus-lang" lang="en">${engTransData[segment]}</span>
       </span></p>\n\n`;
     }
@@ -353,15 +353,15 @@ rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 
 frUrl = origUrl.replace("rv.html", "fr.html");
 
-const rvfr = "<a class='text-decoration-none' target='' href='" + frUrl + "'>&#8202;</a>";
+const rvfr = "<a class='text-decoration-none' target='' href='" + frUrl + "'>&#8200;</a>";
 
-const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&#8202;</a>";
+const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&#8200;</a>";
 
 // Добавляем ссылку в вашу строку предупреждения
 const warning = "<p class='warning'>Внимание!" + rvfr + "<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях." + scrollLink + "</p>";
 
 
-//const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + "'>&#8202;</a></p>";
+//const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + "'>&#8200;</a></p>";
 
 var lineBreak = "\n\n",
 revhtml = html.split(lineBreak).reverse().join(lineBreak)

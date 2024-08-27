@@ -1598,7 +1598,7 @@ $([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\
 #`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
 echo "<td><p>"
 
-echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8200;</a></span><br class=\"btwntrn\">" 
+echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&nbsp;</a></span><br class=\"btwntrn\">" 
 [[ "$quote_ln" != "" ]] && 
 echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_ln</span>" 
 [[ "$quote_var" != "" ]] && 
@@ -1607,6 +1607,6 @@ echo '<br class="styled">'
 
 echo "</p></td>
 </tr>" 
-#&#8202
+#&#8200
 
 cat $tmpdir/$basefile | sed 's/<[^>]*>//g' | awk -F: 'BEGIN {OFS = ":"} {$2 = gensub("/", "", "g", $2); print $1, $2}' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g' | awk -F@ '{OFS = "@"} {quote=$4 ; gsub("/", "", quote); print $1, $2, $3, $2, quote}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk

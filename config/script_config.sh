@@ -94,7 +94,7 @@ multiplier=2
 minmatchesforonline=3000000000
 skiprounds=5
 
-elif [[ "`uname -a`" == *"Ubuntu"* ]] ; then 
+elif [[ "`uname -a`" == *"Ubuntu"* ]] || [[ "`uname -a`" == *"microsoft-standard"* ]] ; then 
 #export LC_ALL=C.utf8
 export LANG=C
 export LC_ALL=C

@@ -233,7 +233,7 @@ if (engTransData[segment] === undefined) {
       </span></p>\n\n`;
     } else {
         html += `<p><span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment]}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&#8202;</a></span>
       <span class="rus-lang" lang="en">${engTransData[segment]}</span>
       </span></p>\n\n`;
     }

@@ -134,6 +134,7 @@ echo "<tr>
 done  | tee -a $listfile
 echo "</table>
 <a href="/">Main page </a>" | tee -a $listfile
+<a href="/assets/makelist.html">Make List</a>" | tee -a $listfile
 <a href="/assets/listdiff.html">List Diff</a>" | tee -a $listfile
 cat $templatefolder/Footer.html  | tee -a $listfile
 

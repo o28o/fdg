@@ -78,6 +78,13 @@ $('#pali').find('tbody').find('tr').each(function() {
                                 window.location.href = "/sc";
                             }
             },
+			         {
+              text: 'Make List',
+               className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = '/assets/makelist.html';
+                            }
+                        },  
                         {
               text: 'Sutta Diff',
                className: 'btn btn-link ',

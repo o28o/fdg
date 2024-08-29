@@ -389,14 +389,14 @@ input.setSelectionRange(input.value.length, input.value.length);
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-<strong>Это старая версия fdg!</strong> 
+<strong>Это старая версия fdg!</strong> </br>
 
 Новая версия <a class="alert-link" href="/ru">здесь </a></br>
-Обратную связь можно оставить через <a class="alert-link" href="#contacts">контакты <i class="fa-regular fa-comment"></i></a>
+Обратная связь через <a class="alert-link" href="#contacts">контакты <i class="fa-regular fa-comment"></i></a>
 </div>';
 } else {
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert fade show mt-3" role="alert" id="infoUpdate">
-<strong>This is the old version of fdg!</strong> 
+<strong>This is the old version of fdg!</strong> </br>
 
 New version is <a class="alert-link" href="/">here </a></br>
 For suggestions please use <a class="alert-link" href="#contacts">contacts <i class="fa-regular fa-comment"></i></a>

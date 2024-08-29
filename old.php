@@ -386,23 +386,6 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
-<?php
-if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-<strong>Это старая версия fdg!</strong> </br>
-
-Новая версия <a class="alert-link" href="/ru">здесь </a></br>
-Обратная связь через <a class="alert-link" href="#contacts">контакты <i class="fa-regular fa-comment"></i></a>
-</div>';
-} else {
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert fade show mt-3" role="alert" id="infoUpdate">
-<strong>This is the old version of fdg!</strong> </br>
-
-New version is <a class="alert-link" href="/">here </a></br>
-You may use <a class="alert-link" href="#contacts">contacts <i class="fa-regular fa-comment"></i></a> for suggestions
-</div>';
-}
-?>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -429,7 +412,28 @@ document.addEventListener("DOMContentLoaded", function() {
   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
 </div>
 
+
   </div>
+  
+ <div style="max-width: 300px;" class=' fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
+<?php
+if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+<strong>Это старая версия fdg!</strong> </br>
+
+Новая версия <a class="alert-link" href="/ru">здесь </a></br>
+Обратная связь через <a class="alert-link" href="#contacts">контакты <i class="fa-regular fa-comment"></i></a>
+</div>';
+} else {
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert fade show mt-3" role="alert" id="infoUpdate">
+<strong>This is the old version of fdg!</strong> </br>
+
+New version is <a class="alert-link" href="/">here </a></br>
+You may use <a class="alert-link" href="#contacts">contacts <i class="fa-regular fa-comment"></i></a> for suggestions
+</div>';
+}
+?>
+</div> 
   
       </div>	
       

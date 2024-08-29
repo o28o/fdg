@@ -33,7 +33,7 @@ window.location.href='/w.php?s=$stringForWord';
 
 
 
-if (preg_match('/(-vin|-def|-sml|-nm|-b|-onl|-tru|-si)/', $p) || preg_match('/(-onl|-def|-sml|-nm|-b|-tru|-si|-la2|-lb2)/', $extra)) {
+if (preg_match('/(-vin|-def|-sml|-nm|-b|-onl|-tru|-si)/', $p) || preg_match('/(-la|-lb)/', $q) || preg_match('/(-la|-lb)/', $la) || preg_match('/(-onl|-def|-sml|-nm|-b|-tru|-si|-la2|-lb2)/', $extra)) {
   $fdgscript = "./scripts/finddhamma.sh";
 } 
 elseif (preg_match('/(-anyd)/', $extra)) {

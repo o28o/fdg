@@ -388,7 +388,7 @@ input.setSelectionRange(input.value.length, input.value.length);
 
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert fade show mt-3" role="alert" id="infoUpdate">
 <strong>Это старая версия!</strong> 
 
 Новая версия <a class="alert-link" href="/">здесь <i class="fa-regular fa-comment"></i></br>

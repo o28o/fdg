@@ -389,20 +389,18 @@ input.setSelectionRange(input.value.length, input.value.length);
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-<strong>Отличная новость!</strong> 
+<strong>Это старая версия!</strong> 
 
-Поиск по "Всем совпадениям" на Пали, Англ и Русском стал намного быстрее. "Определения", "Сравнения" и др. работают, но как прежде медленно. Отчет по словам "Words" доступен в тестовом режиме только для Пали. Опция "исключить" пока недоступна. Если обнаружите ошибки, пожалуйста, <a class="alert-link" href="#contacts"> сообщите через контакты <i class="fa-regular fa-comment"></i></a>
+Новая версия <a class="alert-link" href="/">здесь <i class="fa-regular fa-comment"></i></br>
+Для обратной связи и предложений используйте <a class="alert-link" href="#contacts">контакты <i class="fa-regular fa-comment"></i></a>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } else {
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-<strong>Great news!</strong> 
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert fade show mt-3" role="alert" id="infoUpdate">
+<strong>This is the Old Version of fdg</strong> 
 
-"All matches" search in Pali, English and Russian has become much faster. "Definitions", "Similes" etc are working but slowly as before. 
-
-"Words" report available for Pali in text mode. "Exclude" option is not available yet. 
-
-If you encounter any errors, please use <a class="alert-link" href="#contacts">contacts to report <i class="fa-regular fa-comment"></i></a>
+New version is <a class="alert-link" href="/">here <i class="fa-regular fa-comment"></i></br>
+If you have any suggestions please use <a class="alert-link" href="#contacts">contacts to report <i class="fa-regular fa-comment"></i></a>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 }

@@ -559,11 +559,11 @@ for i in `cat $tmpsml`; do nice -$nicevalue grep -HEi "${vinsmlpart}seyyathāpi.
 done
 else 
 #json sources
-nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vinsmlpart}seyyathāpi.*${modpattern}|${modpattern}.*adhivacan|${modpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modpattern}|Suppose.*${modpattern}|${modpattern} is|${modpattern}.*is a designation for|is a designation for.*${modpattern}|${modpattern}.*Simile|simile.*${modpattern}|It’s like.*${modpattern}|is a term for.*${modpattern}|${modpattern}.*is a term for|similar to.*${modpattern}|${modpattern}.*similar to|Представ.*${modpattern}|обозначение.*${modpattern}|${modpattern}.*обозначение${customtexts}" $tmpsml | grep -vE "$nonmetaphorkeys" | grep -v "condition" > ${tmpsml}_2
+nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vinsmlpart}seyyathāpi.*${modpattern}|${modpattern}.*adhivacan|${modpattern}.*(ūpam|upam|opam|opamm)|(ūpam|upam|opam|opamm).*${modpattern}|Eva[mnṇṅṃṁ]ev.*${modpattern}|Suppose.*${modpattern}|${modpattern} is|${modpattern}.*is a designation for|is a designation for.*${modpattern}|${modpattern}.*Simile|simile.*${modpattern}|It’s like.*${modpattern}|is a term for.*${modpattern}|${modpattern}.*is a term for|similar to.*${modpattern}|${modpattern}.*similar to|Представ.*${modpattern}|обозначение.*${modpattern}|${modpattern}.*обозначение${customtexts}" $tmpsml | grep -vE "$nonmetaphorkeys" | grep -v "condition" > ${tmpsml}_2
 
 nice -$nicevalue grep -B2 -ERi "Eva[mnṇṅṃṁ].*${modpattern}" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} | grep -A1 -i Seyyathāpi | sed 's@json-@json:@g' | sed '/--/d' > ${tmpsml}_3
 
-cat ${tmpsml}_2 ${tmpsml}_3 
+cat ${tmpsml}_2 ${tmpsml}_3 | sort -V | uniq 
 #| grep -vi "Eva[mnṇṅṃṁ].*${modpattern}"
 fi
 }

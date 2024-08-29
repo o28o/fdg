@@ -399,7 +399,7 @@ echo '<div style="max-width: 450px; display: none;" class="alert alert-primary a
 <strong>This is the old version of fdg!</strong> </br>
 
 New version is <a class="alert-link" href="/">here </a></br>
-For suggestions please use <a class="alert-link" href="#contacts">contacts <i class="fa-regular fa-comment"></i></a>
+You may use <a class="alert-link" href="#contacts">contacts <i class="fa-regular fa-comment"></i></a> for suggestions
 </div>';
 }
 ?>

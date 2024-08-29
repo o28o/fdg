@@ -1283,7 +1283,7 @@ $.ajax({
 <script defer src="/assets/js/themeswitch.js"></script>
 </body>
 <?php
-include 'scripts/multilang-search2.php';
+include 'scripts/multilang-search-old.php';
 ?>  
 
 </html>

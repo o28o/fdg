@@ -83,8 +83,8 @@ include 'scripts/opentexts.php';
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links"><?php echo $menulinks;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
-<li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/">En</a> 
-<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/">Ru</a>
+<li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/old.php">En</a> 
+<a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/old.php">Ru</a>
 
 </p></li>
 <li>
@@ -388,21 +388,19 @@ input.setSelectionRange(input.value.length, input.value.length);
 
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert fade show mt-3" role="alert" id="infoUpdate">
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
 <strong>Это старая версия!</strong> 
 
-Новая версия <a class="alert-link" href="/">здесь <i class="fa-regular fa-comment"></i></br>
+Новая версия <a class="alert-link" href="/ru">здесь </a></br>
 Для обратной связи и предложений используйте <a class="alert-link" href="#contacts">контакты <i class="fa-regular fa-comment"></i></a>
-
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+</div>';
 } else {
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert fade show mt-3" role="alert" id="infoUpdate">
 <strong>This is the Old Version of fdg</strong> 
 
-New version is <a class="alert-link" href="/">here <i class="fa-regular fa-comment"></i></br>
+New version is <a class="alert-link" href="/">here </a></br>
 If you have any suggestions please use <a class="alert-link" href="#contacts">contacts to report <i class="fa-regular fa-comment"></i></a>
-
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+</div>';
 }
 ?>
 

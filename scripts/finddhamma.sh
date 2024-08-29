@@ -1200,11 +1200,11 @@ indexForAnchor=` echo $i`
  fi
  
  if [ "$linesafter" -eq 0 ] && [ "$linesbefore" -eq 0 ]; then
-   quote_pi=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $roottext | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$"  `
+   quote_pi=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $roottext | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$" | sed 's/[[:space:]]*$//' `
   quote_ln=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $translation | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$"  ` 
  quote_var=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $variant | grep -v "^--$" | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | grep -viE "(^}$|^{$})" | grep -viE "^$"  `  
     else
-    quote_pi=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $roottext | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
+    quote_pi=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $roottext | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})" | sed 's/[[:space:]]*$//' `
     
     quote_ln=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $translation | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})"  `
     

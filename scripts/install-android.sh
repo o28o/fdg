@@ -186,6 +186,16 @@ for i in `find . -name  "*htm*" -type f | sort -V`; do
 
 apa
 diff -qr theravada.ruold theravada.ru | grep -i suttanta
+
+#доделать $textindex
+for i in `grep -lri ';">.</' theravada.ru/Teaching/Canon/`
+do 
+echo $i
+textindex=`echo $i | awk -F'/' '{print $NF}'  | sed 's/.html//g'`
+sed -i '/>.<\/font>/s/.<\/font>/.<\/font> <a href="\/ru\/sc\/?q='$textindex'">fdg<\/a> <a href="https:\/\/suttacentral.net\/'$textindex'">sc<\/a>/' $i
+done 
+
+
     #count metaphorcount 
 metaphorkeys="seyyathāpi|adhivacan|ūpama|opama|opamma"
 nonmetaphorkeys="adhivacanasamphass|adhivacanapath|ekarūp|tathārūpa|āmarūpa|\brūpa|evarūpa|\banopam|\battūpa|\bnillopa|opamaññ"

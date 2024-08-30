@@ -5,7 +5,8 @@ awk -F "@" 'BEGIN { ORS = "" }  { OFS = "" }
 texttype=$1
 file_name=$2
 textclass=$3
-qoute=gsub(/[ \t]+$/, "", $5)
+gsub(/[ \t]+$/, "", $5)
+qoute=$5
 line_id=$4
 
 if (match(file_name, /[0-9]-[0-9]/)) {

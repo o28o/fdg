@@ -13,8 +13,10 @@ $string = "\"$string\"";
 //$p = "-vin";
 if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";
+  $langinurl = "/ru";
 } else {
     $outputlang = "";
+  $langinurl = "/";
     }
 //echo "$p $q $extra $cb";
 //echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
@@ -23,9 +25,9 @@ if ( preg_match('/\/ru/', $actual_link)) {
 // Проверка условий
 if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {
     // Действие при выполнении условия
-    $stringForWord = urlencode($stringForWord); // Предполагая, что $string определено где-то в вашем коде
+    $stringForWord = urlencode($stringForWord); 
 echo "<script>
-window.location.href='/w.php?s=$stringForWord';
+window.location.href='$langinurl/w.php?s=$stringForWord';
 </script>";
     exit();
 }

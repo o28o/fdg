@@ -32,17 +32,17 @@ grep 'font: normal normal 1.15em/1.3em' css/css.css
 ls -laht ./images/headerlogo.png
 cp ../assets/img/headerlogo.png ./images
 ls -laht ./images/headerlogo.png
+cd ..
 
 echo "all done. anykey for diff. don't forget to rm -rf bw1 after testing new bw"
 read x
 
-for i in `grep -lri "<li>.*Translated" bw/dn`
+
+for i in `grep -lri "<li>.*Translated" bw/`
 do 
 echo $i
 textindex=`echo $i | awk -F'/' '{print $NF}'  | sed 's/.html//g'`
 sed -i '/<li>.*Translated/s/<li>/<li><a href="\/ru\/sc\/?q='$textindex'">fdg<\/a> /' $i
 done 
 
-
-cd ..
 diff -qr bw/ bw1/

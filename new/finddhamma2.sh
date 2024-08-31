@@ -91,7 +91,7 @@ echo "<script>" >> $tmphtml
 cat $apachesitepath/assets/js/timer.js | sed '/time_in_seconds = 60;/s/60/'${timeout}'/' >> $tmphtml
 echo "</script>" >> $tmphtml
 echo "<script $fontawesomejs></script>" >> $tmphtml
-cat $templatefolder/Footer2.html | sed "s@('#pali')@('#temporary-$rand')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' >> $tmphtml
+cat $templatefolder/Footer2.html | sed "s@('#pali')@('#temporary-$rand')@g"  | sed "/stateSave/s@true@false@g" | sed 's@</tbody>@@g' | sed 's@</table>@@g' | sed 's@WORDSLINKVAR@#not-ready@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | sed 's@/history.php@'${mainpagebase}history.php'@g' >> $tmphtml
 fi
 ((round++))
 }
@@ -1445,11 +1445,11 @@ variantsDiv.innerHTML = `<img style="margin-top: -2px; height: 15px; " src="/ass
 </script>' | tohtml
 fi 
 #echo "<script $fontawesomejs></script>" | tohtml
-		cat $templatefolder/Footer2.html | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
+		cat $templatefolder/Footer2.html | sed 's@WORDSLINKVAR@'${pagelang}'/result/'${tempfilewords}'@g' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | sed 's@/history.php@'${mainpagebase}history.php'@g' | tohtml
 	else
 
 #echo "<script $fontawesomejs></script>" | tohtml
-		cat $templatefolder/Footer2.html | sed '/WORDSLINKVAR/d' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | tohtml
+		cat $templatefolder/Footer2.html | sed '/WORDSLINKVAR/d' | sed 's@MAINLINKVAR@'${mainpagebase}'@g' | sed 's@READLINKVAR@'${pagelang}'/read.php@g' | sed 's@/history.php@'${mainpagebase}history.php'@g' | tohtml
 fi 
 
 if [[ "$@" == *"-nm"* ]]; then

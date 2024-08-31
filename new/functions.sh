@@ -78,8 +78,10 @@ else
 searchlang=pi
 if [[ "$args" == *"-oru"* ]]; then
 langtwo=ru
+mainpagebase="/ru"
 else
 langtwo=en
+mainpagebase="/"
 fi
 searchlangForUser=Pali
 #pali

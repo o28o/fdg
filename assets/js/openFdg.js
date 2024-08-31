@@ -60,7 +60,7 @@ function openFdg(slug) {
 }
 
 function findFdgTextUrl(slug, searchValue, baseUrl) {
-    const exceptions = ["bv", "ja", "ne", "pv", "cnd", "mil", "pe", "tha-ap", "cp", "kp", "mnd", "ps", "vv"];
+    const exceptions = ["bv", "ja", "ne", "pv", "cnd", "mil", "pe", "thi-ap", "tha-ap", "cp", "kp", "mnd", "ps", "vv"];
     const isSuttaCentral = exceptions.some(ex => slug.includes(ex));
 
     const url = isSuttaCentral ? `https://suttacentral.net/${slug}` : baseUrl;

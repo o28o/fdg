@@ -215,7 +215,7 @@ $slides = [
 $read = 'читать';
 
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
-$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22&lang=pli-rus#18.18>dn22</a> <a href=/ru/sc/?q=mn141&lang=pli-rus#16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22&s=dukkha&lang=pli-rus#18.18>dn22</a> <a href=/ru/sc/?q=mn141&s=dukkha&lang=pli-rus#16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 Что такое, монахи, боль?</br>
 </br>
 Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
@@ -699,7 +699,7 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
 	
 $mainscrollmodalheader = 'Definition of Dukkha in Suttas';
 
-$mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22&lang=pli-eng#18.18">dn22</a> <a href="/sc/?q=mn141&lang=pli-eng#16.1">mn141</a></br>
+$mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22&s=dukkha&lang=pli-eng#18.18">dn22</a> <a href="/sc/?q=mn141&s=dukkha&lang=pli-eng#16.1">mn141</a></br>
 <h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>And what is pain?</br></br>Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>Whatever is experienced as  <strong>bodily</strong> pain, <strong>bodily</strong> discomfort, pain or discomfort born of bodily contact, </br>
 </br>
 idaṁ vuccati, bhikkhave, dukkhaṁ.</br>

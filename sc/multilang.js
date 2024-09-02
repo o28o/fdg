@@ -44,7 +44,7 @@ function buildSutta(slug) {
     translator = "brahmali";
     texttype = "vinaya";
     slug = slug.replace(/bu([psan])/, "bu-$1");
-    slug = slug.replace(/bi([psn])/, "bi-$1");
+    slug = slug.replace(/bi([psan])/, "bi-$1");
     if (!slug.match("pli-tv-")) {
       slug = "pli-tv-" + slug;
     }
@@ -445,7 +445,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-                window.location.reload(true);
+              //  window.location.reload(true);
         window.location.href = "/ru/?q=" + encodeURIComponent(slug);
 
       } else {

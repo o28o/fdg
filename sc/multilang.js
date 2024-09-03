@@ -193,7 +193,7 @@ if (finder && finder.trim() !== "") {
     let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
     paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+ //   engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     
 }
 

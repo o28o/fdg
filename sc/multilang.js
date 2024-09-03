@@ -435,37 +435,8 @@ prevName = prevName.replace(/[0-9.]/g, '');
 .catch(error => {
   console.log('error:not found');
 
-  // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
-  xhr.send();
 
-  // Обработка ответа
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        // Обработка успешного ответа
-        console.log(xhr.responseText);
-              //  window.location.reload(true);
-        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
 
-      } else {
-        // Обработка ошибки
-        console.log('Error sending request to /ru/?q=');
-      }
-    }
-  };
-
-  // Обновление сообщения об ошибке на странице
-  
-  suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>
-  
-                      <div class="spinner-border" role="status">
-                <span class="visually-hidden">Загрузка...</span>
-                  </div>
-<p>    Подсказка: <br>
-    С главной страницы доступно больше настроек поиска.
-<br></p>`;
 });
     }
 

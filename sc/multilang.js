@@ -434,7 +434,11 @@ prevName = prevName.replace(/[0-9.]/g, '');
     })
 .catch(error => {
   console.log('error:not found');
-console.log('Requesting:', rootpath);
+console.log('Requesting root:', rootpath);
+console.log('Requesting trn:', trnpath);
+console.log('Requesting html:', htmlpath);
+console.log('Requesting rustrnpath:', rustrnpath);
+console.log('Requesting engtrnpath:', engtrnpath);
 console.log('Current slug:', slug);
 console.log('Full URL:', window.location.href);
 fetch(rootpath)

@@ -192,16 +192,19 @@ let params = new URLSearchParams(document.location.search);
 if (finder && finder.trim() !== "") {
     let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
     paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-if (typeof engTransData[segment] === 'string') {
-    engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-} else {
-    console.error(`engTransData[${segment}] is not a string`);
+
+function replaceTextInData(data, segment, regex) {
+    if (typeof data[segment] === 'string') {
+        data[segment] = data[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    } else if (data[segment] === undefined) {
+        console.error(`${segment} is undefined in the data. No replacement performed.`);
+    } else {
+        console.error(`${segment} is not a string in the data. Type: ${typeof data[segment]}`);
+    }
 }
-console.log('Regex:', regex);
 
-console.log(`engTransData[${segment}]:`, engTransData[segment]);
-
+replaceTextInData(transData, segment, regex);
+replaceTextInData(engTransData, segment, regex);
 
    // engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     

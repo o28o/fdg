@@ -96,7 +96,7 @@ searchBuilderConfiguration
               text: 'History',
               className: 'btn btn-link ',
                   action: function ( dt ) {
-                                window.location.href = 'HIST';
+                                window.location.href = '/history.php';
                             }
                         },
                      { extend: 'colvis', 

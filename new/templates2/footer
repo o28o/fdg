@@ -75,6 +75,13 @@ $('#pali').find('tbody').find('tr').each(function() {
                                 window.location.href = "/sc";
                             }
             },
+			       {
+              text: 'History',
+              className: 'btn btn-link ',
+                  action: function ( dt ) {
+                                window.location.href = '/history.php';
+                            }
+                        }, 
                         {
               text: 'Sutta Diff',
                className: 'btn btn-link ',
@@ -82,13 +89,7 @@ $('#pali').find('tbody').find('tr').each(function() {
                                 window.location.href = '/assets/diff';
                             }
                         },  
-                        {
-              text: 'History',
-              className: 'btn btn-link ',
-                  action: function ( dt ) {
-                                window.location.href = '/history.php';
-                            }
-                        },  
+                  
                         {text: 'Words', className: 'btn btn-link ', action: function ( dt ) {window.location.href = 'WORDREPLACELINK';}},
                         { extend: 'colvis', 
                      className: 'btn btn-link ',

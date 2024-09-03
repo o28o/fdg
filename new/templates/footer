@@ -84,13 +84,7 @@ searchBuilderConfiguration
                   action: function ( dt ) {
                                 window.location.href = '/assets/makelist.html';
                             }
-                        }, 
-  text: 'History',
-              className: 'btn btn-link ',
-                  action: function ( dt ) {
-                                window.location.href = '/history.php';
-                            }
-                        },						
+                        },  
                         {
               text: 'Sutta Diff',
                className: 'btn btn-link ',
@@ -105,7 +99,7 @@ searchBuilderConfiguration
                                 window.location.href = '/history.php';
                             }
                         },
-            { extend: 'colvis', 
+              { extend: 'colvis', 
                      className: 'btn btn-link ',
                         text: 'Visibility' }
         ]

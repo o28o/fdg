@@ -438,6 +438,7 @@ console.log('Requesting root:', rootpath);
 console.log('Requesting trn:', trnpath);
 console.log('Requesting html:', htmlpath);
 console.log('Requesting rustrnpath:', rustrnpath);
+console.log('Requesting engtrnpathX:', `${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/${texttype}/${slugReady}_translation-en-sujato.json`);
 console.log('Requesting engtrnpath:', engtrnpath);
 console.log('Current slug:', slug);
 console.log('Full URL:', window.location.href);

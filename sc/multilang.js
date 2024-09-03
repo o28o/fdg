@@ -434,6 +434,19 @@ prevName = prevName.replace(/[0-9.]/g, '');
     })
 .catch(error => {
   console.log('error:not found');
+console.log('Requesting:', rootpath);
+console.log('Current slug:', slug);
+console.log('Full URL:', window.location.href);
+fetch(rootpath)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok: ' + response.statusText);
+    }
+    return response.json();
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
 
 
 

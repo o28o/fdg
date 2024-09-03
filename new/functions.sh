@@ -53,6 +53,7 @@ function setSearchLanguage {
 if [[ "$args" == *"-en"* ]]; then
 #echo eng case
 searchlang=en
+mainpagebase="/"
 searchlangForUser=English
 langtwo=pi
 #echo engFirst
@@ -64,6 +65,7 @@ elif [[ "$args" == *"-ru"* ]]; then
 searchlang=ru
 langtwo=pi
 searchlangForUser=Russian
+mainpagebase="/ru"
 #echo rusFirst
 initrun=RuLangFirst
 steptwo=""

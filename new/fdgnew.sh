@@ -168,7 +168,7 @@ fi
 
 cat $apachesitepath/new/templates/resultheader | sed 's/$title/'"$headerinfo"'/g' | sed 's@$wordLinkToReplace@'"$wordLinkToReplace"'@g' >> $output/${prefix}r.html
 cat $tmpdir/${prefix}finalhtml >> $output/${prefix}r.html
-cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' | awk -v config="$(cat $searchBuilderConfiguration)" '{gsub("searchBuilderConfiguration", config )}1' | sed 's@WordToExclude1@'"$WordToExclude1"'@' >> $output/${prefix}r.html
+cat $apachesitepath/new/templates/footer | sed 's@WORDREPLACELINK@'"$wordLinkToReplace"'@g' | awk -v config="$(cat $searchBuilderConfiguration)" '{gsub("searchBuilderConfiguration", config )}1' | sed 's@WordToExclude1@'"$WordToExclude1"'@' | sed 's@/history.php@'$mainpagebase'/history.php@g' >> $output/${prefix}r.html
 cat $output/${prefix}r.html
 
 table=$keyword-$textsqnty-$matchqnty-$searchlang.html

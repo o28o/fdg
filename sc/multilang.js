@@ -193,6 +193,16 @@ if (finder && finder.trim() !== "") {
     let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
     paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+if (typeof engTransData[segment] === 'string') {
+    engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+} else {
+    console.error(`engTransData[${segment}] is not a string`);
+}
+console.log('Regex:', regex);
+
+console.log(`engTransData[${segment}]:`, engTransData[segment]);
+
+
    // engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     
 }

@@ -98,9 +98,8 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/") + window.location.search;
-const enUrl = mlUrl.replace("/sc/ml.html", "/sc/") + window.location.search;
-
+const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
+const enUrl = mlUrl.replace("/sc/ml.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
@@ -434,27 +433,38 @@ prevName = prevName.replace(/[0-9.]/g, '');
     })
 .catch(error => {
   console.log('error:not found');
-console.log('Requesting root:', rootpath);
-console.log('Requesting trn:', trnpath);
-console.log('Requesting html:', htmlpath);
-console.log('Requesting rustrnpath:', rustrnpath);
-console.log('Requesting engtrnpathX:', `${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/${texttype}/${slugReady}_translation-en-sujato.json`);
-console.log('Requesting engtrnpath:', engtrnpath);
-console.log('Current slug:', slug);
-console.log('Full URL:', window.location.href);
-fetch(rootpath)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok: ' + response.statusText);
+
+  // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
+  xhr.send();
+
+  // Обработка ответа
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        // Обработка успешного ответа
+        console.log(xhr.responseText);
+              //  window.location.reload(true);
+        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+
+      } else {
+        // Обработка ошибки
+        console.log('Error sending request to /ru/?q=');
+      }
     }
-    return response.json();
-  })
-  .catch(error => {
-    console.error('Fetch error:', error);
-  });
+  };
 
-
-
+  // Обновление сообщения об ошибке на странице
+  
+  suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>
+  
+                      <div class="spinner-border" role="status">
+                <span class="visually-hidden">Загрузка...</span>
+                  </div>
+<p>    Подсказка: <br>
+    С главной страницы доступно больше настроек поиска.
+<br></p>`;
 });
     }
 

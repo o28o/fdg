@@ -32,6 +32,15 @@ if ( preg_match('/\/ru/', $actual_link)) {
     echo "Romanized string is $convertedStr<br><br>";
   }
     }
+	
+	if ( preg_match('/ml.html/', $actual_link)) {
+  $defaultlang = 'lang=pli-rus';
+  $outputlang = "-oru";
+  $base = "/";
+  $readerlang = $base . "sc/ml.html";
+
+}
+
     
 		// Defining variables
 $nameErr = $languageErr  = "";

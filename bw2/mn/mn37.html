@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 37</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN37: Cūḷataṇhāsaṅkhaya Sutta — The Shorter Discourse on the Ending of Craving </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn37">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Sāvatthī in the Eastern Monastery, the stilt longhouse of Migāra’s mother.</p>
+<p>And then Sakka, lord of gods, went up to the Buddha, bowed, stood to one side, and said to him:</p>
+
+<hr>
+
+<p><span class="parno">2</span>“Sir, how do you briefly define a mendicant who is freed through the ending of craving, who has reached the ultimate end, the ultimate sanctuary, the ultimate spiritual life, the ultimate goal, and is best among gods and humans?”</p>
+
+<p>“Lord of Gods, it’s when a mendicant has heard: ‘Nothing is worth insisting on.’ When a mendicant has heard that nothing is worth insisting on, they directly know all things. Directly knowing all things, they completely understand all things. Having completely understood all things, when they experience any kind of feeling — pleasant, unpleasant, or neutral — they meditate observing impermanence, dispassion, cessation, and letting go in those feelings. Meditating in this way, they don’t grasp at anything in the world. Not grasping, they’re not anxious. Not being anxious, they personally become extinguished. They understand: ‘Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.’ That’s how I briefly define a mendicant who is freed through the ending of craving, who has reached the ultimate end, the ultimate sanctuary, the ultimate spiritual life, the ultimate goal, and is best among gods and humans.”</p>
+
+<hr>
+
+<p><span class="parno">3</span>Then Sakka, lord of gods, having approved and agreed with what the Buddha said, bowed and respectfully circled the Buddha, keeping him on his right, before vanishing right there.</p>
+
+<p><span class="parno">4</span>Now, at that time Venerable Mahāmoggallāna was sitting not far from the Buddha. He thought: “Did that spirit comprehend what the Buddha said when he agreed with him, or not? Why don’t I find out?”</p>
+
+<p>And then Venerable Mahāmoggallāna, as easily as a strong person would extend or contract their arm, vanished from the Eastern Monastery and reappeared among the gods of the Thirty-Three. </p>
+
+<hr>
+
+<p>Now at that time Sakka was amusing himself in the Single Lotus Park, supplied and provided with a divine orchestra.</p>
+
+<p>Seeing Mahāmoggallāna coming off in the distance, he dismissed the orchestra, approached Mahāmoggallāna, and said: “Come, my good Moggallāna! Welcome, good sir! It’s been a long time since you took the opportunity to come here. Sit, my good Moggallāna, this seat is for you.”</p>
+
+<p>Mahāmoggallāna sat down on the seat spread out, while Sakka took a low seat and sat to one side.</p>
+
+<hr>
+
+<p>Mahāmoggallāna said to him: “Kosiya, how did the Buddha briefly explain freedom through the ending of craving? Please share this talk with me so that I can also get to hear it.”</p>
+
+<p><span class="parno">5</span>“My good Moggallāna, I have many duties, and much to do, not only for myself, but also for the Gods of the Thirty-Three. Besides, I quickly forget even things I’ve properly heard, learned, attended, and memorized. Once upon a time, a battle was fought between the gods and the demons. In that battle the gods won and the demons lost. When I returned from that battle as a conqueror, I created the Palace of Victory. The Palace of Victory has a hundred towers. Each tower has seven hundred chambers. Each chamber has seven nymphs. Each nymph has seven maids. Would you like to see the lovely Palace of Victory?” Mahāmoggallāna consented in silence.</p>
+
+<p><span class="parno">6</span>Then, putting Venerable Mahāmoggallāna in front, Sakka, lord of gods, and Vessavaṇa, the Great King, went to the Palace of Victory. When they saw Moggallāna coming off in the distance, Sakka’s maids, being prudent and discreet, each went to her own bedroom. They were just like a daughter-in-law who is prudent and discreet when they see their father-in-law.</p>
+
+<p>Then Sakka and Vessavaṇa encouraged Moggallāna to wander and explore the palace, saying: “See, in the palace, my good Moggallāna, this lovely thing! And that lovely thing!”</p>
+
+<p>“That looks nice for Venerable Kosiya, just like for someone who has made merit in the past. Humans, when they see something lovely, also say: ‘It looks nice enough for the Gods of the Thirty-Three!’ That looks nice for Venerable Kosiya, just like for someone who has made merit in the past.”</p>
+
+<hr>
+
+<p>Then Moggallāna thought: “This spirit lives much too negligently. Why don’t I stir up a sense of urgency in him?”</p>
+
+<p>Then Moggallāna used his psychic power to make the Palace of Victory shake and rock and tremble with his big toe. </p>
+
+<p>Then Sakka, Vessavaṇa, and the Gods of the Thirty-Three, their minds full of wonder and amazement, thought: “It’s incredible, it’s amazing! The ascetic has such power and might that he makes the god’s home shake and rock and tremble with his big toe!”</p>
+
+<p>Knowing that Sakka was shocked and awestruck, Moggallāna said to him: “Kosiya, how did the Buddha briefly explain freedom through the ending of craving? Please share this talk with me so that I can also get to hear it.”</p>
+
+<hr>
+
+<p><span class="parno">7</span>“My dear Moggallāna, I approached the Buddha, bowed, stood to one side, and said to him: ‘Sir, how do you briefly define a mendicant who is freed with the ending of craving, who has reached the ultimate end, the ultimate sanctuary, the ultimate spiritual life, the ultimate goal, and is best among gods and humans?’</p>
+
+<hr>
+
+<p><span class="parno">8</span>When I had spoken the Buddha said to me: ‘Lord of Gods, it’s when a mendicant has heard: “Nothing is worth insisting on” When a mendicant has heard that nothing is worth insisting on, they directly know all things. Directly knowing all things, they completely understand all things. Having completely understood all things, when they experience any kind of feeling — pleasant, unpleasant, or neutral — they meditate observing impermanence, dispassion, cessation, and letting go in those feelings. Meditating in this way, they don’t grasp at anything in the world. Not grasping, they’re not anxious. Not being anxious, they personally become extinguished. They understand: “Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.” That’s how I briefly define a mendicant who is freed through the ending of craving, who has reached the ultimate end, the ultimate sanctuary, the ultimate spiritual life, the ultimate goal, and is best among gods and humans.’ That’s how the Buddha briefly explained freedom through the ending of craving to me.”</p>
+
+<hr>
+
+<p><span class="parno">9</span>Moggallāna approved and agreed with what Sakka said. As easily as a strong person would extend or contract their arm, he vanished from among the Gods of the Thirty-Three and reappeared in the Eastern Monastery.</p>
+
+<p>Soon after Moggallāna left, Sakka’s maids said to him: “Good sir, was that the Blessed One, your Teacher?”</p>
+
+<p>“No, it was not. That was my spiritual companion Venerable Mahāmoggallāna.”</p>
+
+<hr>
+
+<p>“You’re fortunate, good sir, so very fortunate, to have a spiritual companion of such power and might! We can’t believe that’s not the Blessed One, your Teacher!”</p>
+
+<hr>
+
+<p><span class="parno">10-11</span>Then Mahāmoggallāna went up to the Buddha, bowed, sat down to one side, and said to him: “Sir, do you recall briefly explaining freedom through the ending of craving to a certain well-known and illustrious spirit?”<br>
+<br>“I do, Moggallāna.” And the Buddha retold all that happened when Sakka came to visit him, adding:<br>
+<br>“That’s how I recall briefly explaining freedom through the ending of craving to Sakka, lord of gods.”</p>
+
+<hr>
+
+<p>That is what the Buddha said. Satisfied, Venerable Mahāmoggallāna was happy with what the Buddha said.</p>
+
+</div>
+
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati pubbārāme migāramātupāsāde.</p>
+
+<p>Atha kho sakko devānamindo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho sakko devānamindo bhagavantaṁ etadavoca: </p>
+
+<hr>
+
+<p>"kittāvatā nu kho, bhante, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan"ti?</p>
+
+<p><span class="parno">2</span>"Idha, devānaminda, bhikkhuno sutaṁ hoti: ‘sabbe dhammā nālaṁ abhinivesāyā’ti. Evañcetaṁ, devānaminda, bhikkhuno sutaṁ hoti: ‘sabbe dhammā nālaṁ abhinivesāyā’ti. So sabbaṁ dhammaṁ abhijānāti; sabbaṁ dhammaṁ abhiññāya sabbaṁ dhammaṁ parijānāti; sabbaṁ dhammaṁ pariññāya yaṁ kiñci vedanaṁ vedeti — sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā, so tāsu vedanāsu aniccānupassī viharati, virāgānupassī viharati, nirodhānupassī viharati, paṭinissaggānupassī viharati. So tāsu vedanāsu aniccānupassī viharanto, virāgānupassī viharanto, nirodhānupassī viharanto, paṭinissaggānupassī viharanto na kiñci loke upādiyati. Anupādiyaṁ na paritassati, aparitassaṁ paccattaññeva parinibbāyati: ‘khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti. Ettāvatā kho, devānaminda, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">3</span>Atha kho sakko devānamindo bhagavato bhāsitaṁ abhinanditvā anumoditvā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā tatthevantaradhāyi.</p>
+
+<p><span class="parno">4</span>Tena kho pana samayena āyasmā mahāmoggallāno bhagavato avidūre nisinno hoti. Atha kho āyasmato mahāmoggallānassa etadahosi: "Kiṁ nu kho so yakkho bhagavato bhāsitaṁ abhisamecca anumodi udāhu no; yannūnāhaṁ taṁ yakkhaṁ jāneyyaṁ — yadi vā so yakkho bhagavato bhāsitaṁ abhisamecca anumodi yadi vā no"ti?</p>
+
+<p>Atha kho āyasmā mahāmoggallāno — seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evameva — pubbārāme migāramātupāsāde antarahito devesu tāvatiṁsesu pāturahosi.</p>
+
+<hr>
+
+<p>Tena kho pana samayena sakko devānamindo ekapuṇḍarīke uyyāne dibbehi pañcahi <span class="var" title="turiyasatehi (bj, s1–3, km, pts1)" id="note414">tūriyasatehi</span> samappito samaṅgībhūto paricāreti. </p>
+
+<p>Addasā kho sakko devānamindo āyasmantaṁ mahāmoggallānaṁ dūratova āgacchantaṁ. Disvāna tāni dibbāni pañca tūriyasatāni paṭippaṇāmetvā yenāyasmā mahāmoggallāno tenupasaṅkami; upasaṅkamitvā āyasmantaṁ mahāmoggallānaṁ etadavoca: "ehi kho, mārisa moggallāna, svāgataṁ, mārisa moggallāna. Cirassaṁ kho, mārisa moggallāna, imaṁ pariyāyaṁ akāsi yadidaṁ idhāgamanāya. Nisīda, mārisa moggallāna, idamāsanaṁ paññattan"ti. Nisīdi kho āyasmā mahāmoggallāno paññatte āsane.</p>
+
+<p>Sakkopi kho devānamindo aññataraṁ nīcaṁ āsanaṁ gahetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho sakkaṁ devānamindaṁ āyasmā mahāmoggallāno etadavoca:</p>
+
+<hr>
+
+<p>"yathā kathaṁ pana kho, kosiya, bhagavā saṁkhittena taṇhāsaṅkhayavimuttiṁ abhāsi? Sādhu mayampi etissā kathāya bhāgino assāma <span class="var" title="savaṇāyāti (bj)" id="note415">savanāyā"ti</span>.</p>
+
+<p><span class="parno">5</span>"Mayaṁ kho, mārisa moggallāna, bahukiccā bahukaraṇīyā — appeva sakena karaṇīyena, api ca devānaṁyeva tāvatiṁsānaṁ karaṇīyena. Api ca, mārisa moggallāna, sussutaṁyeva hoti suggahitaṁ sumanasikataṁ sūpadhāritaṁ, yaṁ no khippameva antaradhāyati. Bhūtapubbaṁ, mārisa moggallāna, devāsurasaṅgāmo <span class="var" title="samupabbūḷho (bj, pts1) | samūpabbūḷho (si) | samūpabyuḷho (s1–3, km)" id="note416">samupabyūḷho</span> ahosi. Tasmiṁ kho pana, mārisa moggallāna, saṅgāme devā jiniṁsu, asurā parājiniṁsu. So kho ahaṁ, mārisa moggallāna, taṁ saṅgāmaṁ abhivijinitvā vijitasaṅgāmo tato paṭinivattitvā vejayantaṁ nāma pāsādaṁ māpesiṁ. Vejayantassa kho, mārisa moggallāna, pāsādassa ekasataṁ niyyūhaṁ. Ekekasmiṁ niyyūhe satta satta kūṭāgārasatāni. Ekamekasmiṁ kūṭāgāre satta satta accharāyo. Ekamekissā accharāya satta satta paricārikāyo. Iccheyyāsi no tvaṁ, mārisa moggallāna, vejayantassa pāsādassa rāmaṇeyyakaṁ daṭṭhun"ti? Adhivāsesi kho āyasmā mahāmoggallāno tuṇhībhāvena.</p>
+
+<p><span class="parno">6</span>Atha kho sakko ca devānamindo vessavaṇo ca mahārājā āyasmantaṁ mahāmoggallānaṁ purakkhatvā yena vejayanto pāsādo tenupasaṅkamiṁsu. Addasaṁsu kho sakkassa devānamindassa paricārikāyo āyasmantaṁ mahāmoggallānaṁ dūratova āgacchantaṁ; <span class="var" title="disvāna (bj, s1–3)" id="note417">disvā</span> ottappamānā hirīyamānā sakaṁ sakaṁ ovarakaṁ pavisiṁsu. Seyyathāpi nāma suṇisā sasuraṁ disvā ottappati hirīyati; evameva sakkassa devānamindassa paricārikāyo āyasmantaṁ mahāmoggallānaṁ disvā ottappamānā hirīyamānā sakaṁ sakaṁ ovarakaṁ pavisiṁsu.</p>
+
+<p>Atha kho sakko ca devānamindo vessavaṇo ca mahārājā āyasmantaṁ mahāmoggallānaṁ vejayante pāsāde anucaṅkamāpenti anuvicarāpenti: "idampi, mārisa moggallāna, passa vejayantassa pāsādassa rāmaṇeyyakaṁ; idampi, mārisa moggallāna, passa vejayantassa pāsādassa rāmaṇeyyakan"ti.</p>
+
+<p>"Sobhati idaṁ āyasmato kosiyassa, yathā taṁ pubbe katapuññassa. Manussāpi kiñcideva rāmaṇeyyakaṁ <span class="var" title="daṭṭhā (bj) | diṭṭhā (si, pts1, mr)" id="note418">disvā</span> evamāhaṁsu: ‘sobhati vata bho yathā devānaṁ tāvatiṁsānan’ti. Tayidaṁ āyasmato kosiyassa sobhati, yathā taṁ pubbe katapuññassā"ti.</p>
+
+<hr>
+
+<p>Atha kho āyasmato mahāmoggallānassa etadahosi: "atibāḷhaṁ kho ayaṁ yakkho pamatto viharati. Yannūnāhaṁ imaṁ yakkhaṁ saṁvejeyyan"ti. </p>
+
+<p>Atha kho āyasmā mahāmoggallāno tathārūpaṁ iddhābhisaṅkhāraṁ <span class="var" title="abhisaṅkhāreti (s1–3, km) | abhisaṅkhāresi (mr)" id="note419">abhisaṅkhāsi</span> yathā vejayantaṁ pāsādaṁ pādaṅguṭṭhakena saṅkampesi sampakampesi sampavedhesi.</p>
+
+<p>Atha kho sakko ca devānamindo, vessavaṇo ca mahārājā, devā ca tāvatiṁsā acchariyabbhutacittajātā ahesuṁ: "acchariyaṁ vata, bho, abbhutaṁ vata, bho. Samaṇassa mahiddhikatā mahānubhāvatā, yatra hi nāma dibbabhavanaṁ pādaṅguṭṭhakena saṅkampessati sampakampessati sampavedhessatī"ti.</p>
+
+
+<p>Atha kho āyasmā mahāmoggallāno sakkaṁ devānamindaṁ saṁviggaṁ lomahaṭṭhajātaṁ viditvā sakkaṁ devānamindaṁ etadavoca: "yathā kathaṁ pana kho, kosiya, bhagavā saṁkhittena taṇhāsaṅkhayavimuttiṁ abhāsi? Sādhu mayampi etissā kathāya bhāgino assāma savanāyā"ti.</p>
+
+<hr>
+
+<p><span class="parno">7</span>"Idhāhaṁ, mārisa moggallāna, yena bhagavā tenupasaṅkamiṁ; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ aṭṭhāsiṁ. Ekamantaṁ ṭhito kho ahaṁ, mārisa moggallāna, bhagavantaṁ etadavocaṁ: ‘kittāvatā nu kho, bhante, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti?</p>
+
+<hr>
+
+<p><span class="parno">8</span>Evaṁ vutte, mārisa moggallāna, bhagavā maṁ etadavoca: ‘idha, devānaminda, bhikkhuno sutaṁ hoti: "sabbe dhammā nālaṁ abhinivesāyā"ti. Evañcetaṁ, devānaminda, bhikkhuno sutaṁ hoti "sabbe dhammā nālaṁ abhinivesāyā"ti. So sabbaṁ dhammaṁ abhijānāti, sabbaṁ dhammaṁ abhiññāya sabbaṁ dhammaṁ parijānāti, sabbaṁ dhammaṁ pariññāya yaṁ kiñci vedanaṁ vedeti sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā. So tāsu vedanāsu aniccānupassī viharati, virāgānupassī viharati, nirodhānupassī viharati, paṭinissaggānupassī viharati. So tāsu vedanāsu aniccānupassī viharanto, virāgānupassī viharanto, nirodhānupassī viharanto, paṭinissaggānupassī viharanto na kiñci loke upādiyati, anupādiyaṁ na paritassati, aparitassaṁ paccattaññeva parinibbāyati: "khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā"ti pajānāti. Ettāvatā kho, devānaminda, bhikkhu saṅkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti. Evaṁ kho me, mārisa moggallāna, bhagavā saṅkhittena taṇhāsaṅkhayavimuttiṁ abhāsī"ti.</p>
+
+<hr>
+
+<p><span class="parno">9</span>Atha kho āyasmā mahāmoggallāno sakkassa devānamindassa bhāsitaṁ abhinanditvā anumoditvā — seyyathāpi nāma balavā puriso samiñjitaṁ vā bāhaṁ pasāreyya, pasāritaṁ vā bāhaṁ samiñjeyya; evameva — devesu tāvatiṁsesu antarahito pubbārāme migāramātupāsāde pāturahosi.</p>
+
+<p>Atha kho sakkassa devānamindassa paricārikāyo acirapakkante āyasmante mahāmoggallāne sakkaṁ devānamindaṁ etadavocuṁ: "Eso nu te, mārisa, so bhagavā satthā"ti? </p>
+
+<p>"Na kho me, mārisa, so bhagavā satthā. Sabrahmacārī me eso āyasmā mahāmoggallāno"ti. </p>
+
+<hr>
+
+<p>"Lābhā te, mārisa,<q class="open" id="note420" title=" etthantare pāṭho syā1, sī, pā1 potthakesu"> suladdhaṁ te, mārisa</q> yassa te sabrahmacārī evaṁmahiddhiko evaṁmahānubhāvo. Aho nūna te so bhagavā satthā"ti.</p>
+
+<hr>
+
+<p><span class="parno">10</span>Atha kho āyasmā mahāmoggallāno yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā mahāmoggallāno bhagavantaṁ etadavoca: "abhijānāti no, bhante, <span class="var" title="ahunaññeva (si, km) | āhunaññeva (s1–3) | ahu taññeva (pts1)" id="note422">bhagavā ahu</span> ñātaññatarassa mahesakkhassa yakkhassa saṁkhittena taṇhāsaṅkhayavimuttiṁ <span class="var" title="bhāsitā (bj) | abhāsitthāti (pts1, mr)" id="note423">bhāsitā"ti</span>?</p>
+
+<p>"Abhijānāmahaṁ, moggallāna, idha sakko devānamindo yenāhaṁ tenupasaṅkami; upasaṅkamitvā maṁ abhivādetvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhito kho, moggallāna, sakko devānamindo maṁ etadavoca: ‘kittāvatā nu kho, bhante, bhikkhu saṁkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti.</p>
+
+<p><span class="parno">11</span>Evaṁ vutte, ahaṁ, moggallāna, sakkaṁ devānamindaṁ etadavocaṁ ‘idha devānaminda, bhikkhuno sutaṁ hoti "sabbe dhammā nālaṁ abhinivesāyā"ti. Evaṁ cetaṁ, devānaminda, bhikkhuno sutaṁ hoti "sabbe dhammā nālaṁ abhinivesāyā"ti. So sabbaṁ dhammaṁ abhijānāti, sabbaṁ dhammaṁ abhiññāya sabbaṁ dhammaṁ parijānāti, sabbaṁ dhammaṁ pariññāya yaṁ kiñci vedanaṁ vedeti sukhaṁ vā dukkhaṁ vā adukkhamasukhaṁ vā. So tāsu vedanāsu aniccānupassī viharati, virāgānupassī viharati, nirodhānupassī viharati, paṭinissaggānupassī viharati. So tāsu vedanāsu aniccānupassī viharanto, virāgānupassī viharanto, nirodhānupassī viharanto, paṭinissaggānupassī viharanto na kiñci loke upādiyati, anupādiyaṁ na paritassati, aparitassaṁ paccattaññeva parinibbāyati: "khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā"ti pajānāti. Ettāvatā kho, devānaminda, bhikkhu saṁkhittena taṇhāsaṅkhayavimutto hoti accantaniṭṭho accantayogakkhemī accantabrahmacārī accantapariyosāno seṭṭho devamanussānan’ti. Evaṁ kho ahaṁ, moggallāna, abhijānāmi sakkassa devānamindassa saṁkhittena taṇhāsaṅkhayavimuttiṁ <span class="var" title="abhāsitthāti (mr)" id="note424">bhāsitā"ti</span>.</p>
+
+<hr>
+
+<p><span class="parno">12</span>Idamavoca bhagavā. Attamano āyasmā mahāmoggallāno bhagavato bhāsitaṁ abhinandīti.</p>
+
+<p class="endsutta">Cūḷataṇhāsaṅkhayasuttaṁ niṭṭhitaṁ sattamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn36.html#content"></a><a id="next-sutta" href="./mn38.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN37: Cūḷataṇhāsaṅkhaya Sutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

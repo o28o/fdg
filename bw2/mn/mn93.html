@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 93</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN93: Assalāyanasutta - With Assalāyana </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn93">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery.</p>
+<p>Now at that time around five hundred brahmins from abroad were residing in Sāvatthī on some business. Then those brahmins thought: “This ascetic Gotama advocates purification for all four classes. Who is capable of having a dialogue with him about this?”</p>
+
+<p>Now at that time the brahmin student Assalāyana was residing in Sāvatthī. He was young, newly tonsured; he was sixteen years old. He had mastered the three Vedas, together with their vocabularies, ritual, phonology and etymology, and the testament as fifth. He knew philology and grammar, and was well versed in cosmology and the marks of a great man.</p>
+
+<hr>
+
+<p>Then those brahmins thought: “This Assalāyana is capable of having a dialogue with the ascetic Gotama about this.”</p>
+
+<p><span class="parno">2</span>So they approached Assalāyana and said to him: “This ascetic Gotama advocates purification for all four classes. Please, Mister Assalāyana, have a dialogue with the ascetic Gotama about this.”</p>
+
+<p><span class="parno">3</span>When they said this, Assalāyana said to them: “They say that the ascetic Gotama is a speaker of principle. But speakers of principle are hard to have a dialogue with. I’m not capable of having a dialogue with the ascetic Gotama about this.”</p>
+
+<p><span class="parno">4</span>For a second time, those brahmins said to him “This ascetic Gotama advocates purification for all four classes. Please, Mister Assalāyana, have a dialogue with the ascetic Gotama about this. For you have lived as a wanderer.” </p>
+
+<p>And for a second time, Assalāyana refused.</p>
+
+<hr>
+
+<p><span class="parno">5</span>For a third time, those brahmins said to him: “This ascetic Gotama advocates purification for all four classes. Please, Mister Assalāyana, have a dialogue with the ascetic Gotama about this. For you have lived as a wanderer. Don’t admit defeat before going into battle!”</p>
+
+<hr>
+
+<p><span class="parno">6</span>When they said this, Assalāyana said to them: “Clearly, gentlemen, I’m not getting through to you when I say: ‘They say that the ascetic Gotama is a speaker of principle. But speakers of principle are hard to have a dialogue with. I’m not capable of having a dialogue with the ascetic Gotama about this.’ Nevertheless, I shall go at your bidding.”</p>
+
+<p><span class="parno">7</span>Then Assalāyana together with a large group of brahmins went to the Buddha and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side and said to the Buddha:</p>
+
+<p>“Master Gotama, the brahmins say: ‘Only brahmins are the highest caste; other castes are inferior. Only brahmins are the light caste; other castes are dark. Only brahmins are purified, not others. Only brahmins are Brahmā’s rightful sons, born of his mouth, born of Brahmā, created by Brahmā, heirs of Brahmā.’ What do you say about this?”</p>
+
+<p>“But Assalāyana, brahmin women are seen menstruating, being pregnant, giving birth, and breastfeeding. Yet even though they’re born from a brahmin womb they say: ‘Only brahmins are the highest caste; other castes are inferior. Only brahmins are the light caste; other castes are dark. Only brahmins are purified, not others. Only brahmins are Brahmā’s rightful sons, born of his mouth, born of Brahmā, created by Brahmā, heirs of Brahmā.’”</p>
+
+<hr>
+
+<p>“Even though you say this, still the brahmins maintain their belief.”</p>
+
+<hr>
+
+<p><span class="parno">8</span>“What do you think, Assalāyana? Have you heard that in Greece and Persia and other foreign lands there are only two classes, masters and bonded servants; and that masters may become servants, and servants masters?”</p>
+
+<hr>
+
+<p>“Yes, I have heard that.”</p>
+
+<p>“Then what is the source of the brahmins’ self-confidence and forcefulness in this matter that they make this claim?”</p>
+
+<hr>
+
+<p>“Even though you say this, still the brahmins maintain their belief.”</p>
+
+<hr>
+
+<p><span class="parno">9</span>“What do you think, Assalāyana? Suppose an aristocrat were to kill living creatures, steal, and commit sexual misconduct; to use speech that’s false, divisive, harsh, or nonsensical; and to be covetous, malicious, with wrong view. When their body breaks up, after death, they’d be reborn in a place of loss, a bad place, the underworld, hell. Would this happen only to an aristocrat, and not to a brahmin? Or suppose a merchant, or a worker were to act in the same way. Would that result befall only a merchant or a worker, and not to a brahmin?”</p>
+
+<p>“No, Master Gotama. If they acted the same way, the same result would befall an aristocrat, a brahmin, a merchant, or a worker. For if any of the four classes were to kill living creatures, steal, and commit sexual misconduct; to use speech that’s false, divisive, harsh, or nonsensical; and to be covetous, malicious, with wrong view, then, when their body breaks up, after death, they’d be reborn in a place of loss, a bad place, the underworld, hell.”</p>
+
+<p>“Then what is the source of the brahmins’ self-confidence and forcefulness in this matter that they make this claim?”</p>
+
+<p>“Even though you say this, still the brahmins maintain their belief.”</p>
+
+<hr>
+
+<p><span class="parno">10</span>“What do you think, Assalāyana? Suppose a brahmin were to refrain from killing living creatures, stealing, and committing sexual misconduct; from using speech that’s false, divisive, harsh, or nonsensical; and from covetousness, malice, and wrong view. When their body breaks up, after death, they’d be reborn in a good place, a heavenly realm. Would this happen only to an brahmin, and not to an aristocrat, a merchant, or a worker?”</p>
+
+<p>“No, Master Gotama. If they acted the same way, the same result would befall an aristocrat, a brahmin, a merchant, or a worker. For if any of the four classes were to refrain from killing living creatures, stealing, and committing sexual misconduct; from using speech that’s false, divisive, harsh, or nonsensical; and from covetousness, malice, and wrong view, then, when their body breaks up, after death, they’d be reborn in a good place, a heavenly realm.”</p>
+
+<p>“Then what is the source of the brahmins’ self-confidence and forcefulness in this matter that they make this claim?”</p>
+
+<p>“Even though you say this, still the brahmins maintain their belief.”</p>
+
+<hr>
+
+<p><span class="parno">11</span>“What do you think, Assalāyana? Is only a brahmin capable of developing a heart of love, free of enmity and ill will for this region, and not an aristocrat, merchant, or worker?”</p>
+
+<p>“No, Master Gotama. Aristocrats, brahmins, merchants, and workers can all do so. For all four classes are capable of developing a heart of love, free of enmity and ill will for this region.”</p>
+
+<p>“Then what is the source of the brahmins’ self-confidence and forcefulness in this matter that they make this claim?”</p>
+
+<p>“Even though you say this, still the brahmins maintain their belief.”</p>
+
+<hr>
+
+<p><span class="parno">12</span>“What do you think, Assalāyana? Is only a brahmin capable of taking some bathing paste of powdered shell, going to the river, and washing off dust and dirt, and not an aristocrat, merchant, or worker?”</p>
+
+<hr>
+
+<p>“No, Master Gotama. All four classes are capable of doing this.”</p>
+
+<hr>
+
+<p>“Then what is the source of the brahmins’ self-confidence and forcefulness in this matter that they make this claim?”</p>
+
+<p>“Even though you say this, still the brahmins maintain their belief.”</p>
+
+<hr>
+
+<p><span class="parno">13</span>“What do you think, Assalāyana? Suppose an anointed aristocratic king were to gather a hundred people born in different castes and say to them: ‘Please gentlemen, let anyone here who was born in a family of aristocrats, brahmins, or chieftains take a drill-stick made of teak, sal, frankincense wood, sandalwood, or cherry wood, light a fire and produce heat. And let anyone here who was born in a family of outcastes, hunters, bamboo-workers, chariot-makers, or waste-collectors take a drill-stick made from a dog’s drinking trough, a pig’s trough, a dustbin, or castor-oil wood, light a fire and produce heat.’</p>
+
+<hr>
+
+<p><span class="parno">14</span>What do you think, Assalāyana? Would only the fire produced by the high class people with good quality wood have flames, color, and radiance, and be usable as fire, and not the fire produced by the low class people with poor quality wood?”</p>
+
+<hr>
+
+<p>“No, Master Gotama. The fire produced by the high class people with good quality wood would have flames, color, and radiance, and be usable as fire, and so would the fire produced by the low class people with poor quality wood. For all fire has flames, color, and radiance, and is usable as fire.”</p>
+
+<p>“Then what is the source of the brahmins’ self-confidence and forcefulness in this matter that they make this claim?”</p>
+
+<hr>
+
+<p>“Even though you say this, still the brahmins maintain their belief.”</p>
+
+<hr>
+
+<p><span class="parno">15</span>“What do you think, Assalāyana? Suppose an aristocrat boy was to sleep with a brahmin girl, and they had a child. Would that child be called an aristocrat after the father or a brahmin after the mother?”</p>
+
+<p>“They could be called either.”</p>
+
+<hr>
+
+<p><span class="parno">16</span>“What do you think, Assalāyana? Suppose a brahmin boy was to sleep with an aristocrat girl, and they had a child. Would that child be called an aristocrat after the mother or a brahmin after the father?”</p>
+
+<p>“They could be called either.”</p>
+
+<hr>
+
+<p><span class="parno">17</span>“What do you think, Assalāyana? Suppose a mare were to mate with a donkey, and she gave birth to a mule. Would that mule be called a horse after the mother or a donkey after the father?”</p>
+
+<p>“It’s a mule, as it is a crossbreed. I see the difference in this case, but not in the previous cases.”</p>
+
+<hr>
+
+<p><span class="parno">18</span>“What do you think, Assalāyana? Suppose there were two brahmin students who were brothers who had shared a womb. One was educated, a reciter, while the other was uneducated and not a reciter. Who would the brahmins feed first at an offering of food for ancestors, an offering of a dish of milk-rice, a sacrifice, or a feast for guests?”</p>
+
+<p>“They’d first feed the student who was educated, a reciter. For how could an offering to someone who is uneducated and not a reciter be very fruitful?”</p>
+
+<hr>
+
+<p><span class="parno">19</span>“What do you think, Assalāyana? Suppose there were two brahmin students who were brothers who had shared a womb. One was educated, a reciter, but was unethical, of bad character, while the other was uneducated and not a reciter, but was ethical and of good character. Who would the brahmins feed first?”</p>
+
+<p>“They’d first feed the student who was uneducated and not a reciter, but was ethical and of good character. For how could an offering to someone who is unethical and of bad character be very fruitful?”</p>
+
+<p>“Firstly you relied on birth, Assalāyana, then you switched to education, then you switched to abstemious behavior. Now you’ve come around to believing in purification for the four classes, just as I advocate.” </p>
+
+<p>When he said this, Assalāyana sat silent, embarrassed, shoulders drooping, downcast, depressed, with nothing to say.</p>
+
+<hr>
+
+<p><span class="parno">21</span>Knowing this, the Buddha said to him:</p>
+
+<hr>
+
+<p>“Once upon a time, Assalāyana, seven brahmin hermits settled in leaf huts in a wilderness region. They had the following harmful misconception: ‘Only brahmins are the highest caste; other castes are inferior. Only brahmins are the light caste; other castes are dark. Only brahmins are purified, not others. Only brahmins are Brahmā’s rightful sons, born of his mouth, born of Brahmā, created by Brahmā, heirs of Brahmā.’</p>
+
+<p>The hermit Devala the Dark heard about this. So he did up his hair and beard, dressed in magenta robes, put on his boots, grasped a golden staff, and appeared in the courtyard of the seven brahmin hermits. Then he wandered about the yard saying, ‘Where, oh where have those brahmin hermits gone? Where, oh where have those brahmin hermits gone?’</p>
+
+<p>Then those brahmin hermits said, ‘Who’s this wandering about our courtyard like a cowpoke? Let’s curse him!’</p>
+
+<p>So they cursed Devala the Dark, ‘Be ashes, wretch! Be ashes, wretch!’ But the more the hermits cursed him, the more attractive, good-looking, and lovely Devala the Dark became.</p>
+
+<p>Then those brahmin hermits said, ‘Our austerities are in vain! Our spiritual path is fruitless! For when we used to curse someone to become ashes, ashes they became. But the more we curse this one, the more attractive, good-looking, and lovely he becomes.’</p>
+
+<hr>
+
+<p>‘Gentlemen, your austerities are not in vain; your spiritual path is not fruitless. Please let go of your malevolence towards me.’</p>
+
+<p>‘We let go of our malevolence towards you. But who are you, sir?’</p>
+
+<p>‘Have you heard of the hermit Devala the Dark?’</p>
+
+<hr>
+
+<p>‘Yes, sir.’</p>
+
+<p>‘I am he, sirs.’ Then they approached Devala and bowed to him.</p>
+
+<hr>
+
+<p><span class="parno">22</span>Devala said to them, ‘I heard that when the seven brahmin hermits had settled in leaf huts in a wilderness region, they had the following harmful misconception: “Only brahmins are the highest caste; other castes are inferior. Only brahmins are the light caste; other castes are dark. Only brahmins are purified, not others. Only brahmins are Brahmā’s rightful sons, born of his mouth, born of Brahmā, created by Brahmā, heirs of Brahmā.”’</p>
+
+<hr>
+
+<p>‘That’s right, sir.’</p>
+
+<p><span class="parno">23</span>‘But do you know whether your birth mother only had relations with a brahmin and not with a non-brahmin?’</p>
+
+<p>‘We don’t know that.’</p>
+
+<p><span class="parno">24</span>‘But do you know whether your birth mother’s mothers back to the seventh generation only had relations with brahmins and not with non-brahmins?’</p>
+
+<p>‘We don’t know that.’</p>
+
+<p><span class="parno">25</span>‘But do you know whether your birth father only had relations with a brahmin woman and not with a non-brahmin?’</p>
+
+<p>‘We don’t know that.’</p>
+
+<p><span class="parno">26</span>‘But do you know whether your birth father’s fathers back to the seventh generation only had relations with brahmins and not with non-brahmins?’</p>
+
+<p>‘We don’t know that.’</p>
+
+<hr>
+
+<p><span class="parno">27</span>‘But do you know how an embryo is conceived?’</p>
+
+<p>‘We do know that, sir. An embryo is conceived when these three things come together — the mother and father come together, the mother is in the fertile part of her menstrual cycle, and the spirit being reborn is present.’</p>
+
+<hr>
+
+<p><span class="parno">28</span>‘But do you know for sure whether that spirit is an aristocrat, a brahmin, a merchant, or a worker?’</p>
+
+<p>‘We don’t know that.’</p>
+
+<p>‘In that case, sirs, don’t you know what you are?’</p>
+
+<p>‘In that case, sir, we don’t know what we are.’</p>
+
+<hr>
+
+<p>So even those seven brahmin hermits were stumped when pursued, pressed, and grilled by the seer Devala on their own doctrine of ancestry. So how could you succeed, being grilled by me now on your own doctrine of ancestry — you who have not even mastered your own teacher’s doctrine?”</p>
+
+<hr>
+
+<p><span class="parno">29</span>When he had spoken, Assalāyana said to him: “Excellent, Master Gotama! … From this day forth, may Master Gotama remember me as a lay follower who has gone for refuge for life.”</p>
+
+</div>
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.</p>
+
+<p>Tena kho pana samayena nānāverajjakānaṁ brāhmaṇānaṁ pañcamattāni brāhmaṇasatāni sāvatthiyaṁ paṭivasanti kenacideva karaṇīyena. Atha kho tesaṁ brāhmaṇānaṁ etadahosi: "Ayaṁ kho samaṇo gotamo cātuvaṇṇiṁ suddhiṁ paññapeti. Ko nu kho pahoti samaṇena gotamena saddhiṁ asmiṁ vacane paṭimantetun"ti?</p>
+
+<p>Tena kho pana samayena assalāyano nāma māṇavo sāvatthiyaṁ paṭivasati daharo, vuttasiro, soḷasavassuddesiko jātiyā, tiṇṇaṁ vedānaṁ pāragū sanighaṇḍukeṭubhānaṁ sākkharappabhedānaṁ itihāsapañcamānaṁ, padako, veyyākaraṇo, lokāyatamahāpurisalakkhaṇesu anavayo. </p>
+
+<hr>
+
+<p>Atha kho tesaṁ brāhmaṇānaṁ etadahosi: "Ayaṁ kho assalāyano māṇavo sāvatthiyaṁ paṭivasati daharo, vuttasiro, soḷasavassuddesiko jātiyā, tiṇṇaṁ vedānaṁ pāragū … pe … anavayo. So kho pahoti samaṇena gotamena saddhiṁ asmiṁ vacane paṭimantetun"ti.</p>
+
+<p><span class="parno">2</span>Atha kho te brāhmaṇā yena assalāyano māṇavo tenupasaṅkamiṁsu; upasaṅkamitvā assalāyanaṁ māṇavaṁ etadavocuṁ: "Ayaṁ, bho assalāyana, samaṇo gotamo cātuvaṇṇiṁ suddhiṁ paññapeti. Etu bhavaṁ assalāyano samaṇena gotamena saddhiṁ asmiṁ vacane <span class="var" title="patimantetunti (bj, pts1) | paṭimantetunti (mr)" id="note601">paṭimantetū"ti</span>.</p>
+
+<p><span class="parno">3</span>Evaṁ vutte, assalāyano māṇavo te brāhmaṇe etadavoca: "Samaṇo khalu, bho, gotamo dhammavādī; dhammavādino ca pana duppaṭimantiyā bhavanti. Nāhaṁ sakkomi samaṇena gotamena saddhiṁ asmiṁ vacane paṭimantetun"ti.</p>
+
+<p><span class="parno">4</span>Dutiyampi kho te brāhmaṇā assalāyanaṁ māṇavaṁ etadavocuṁ: "Ayaṁ, bho assalāyana, samaṇo gotamo cātuvaṇṇiṁ suddhiṁ paññapeti. Etu bhavaṁ assalāyano samaṇena gotamena saddhiṁ asmiṁ vacane <span class="var" title="patimantetuṁ (bj, pts1) | paṭimantetuṁ (mr)" id="note602">paṭimantetu</span><q class="open" id="note603" title=" etthantare pāṭho syā1–3 potthakesu">. Caritaṁ kho pana bhotā assalāyanena paribbājakan"ti</q>.</p>
+
+<p>Dutiyampi kho assalāyano māṇavo te brāhmaṇe etadavoca: "Samaṇo khalu, bho, gotamo dhammavādī; dhammavādino ca pana duppaṭimantiyā bhavanti. Nāhaṁ sakkomi samaṇena gotamena saddhiṁ asmiṁ vacane paṭimantetun"ti.</p>
+
+<hr>
+
+<p><span class="parno">5</span>Tatiyampi kho te brāhmaṇā assalāyanaṁ māṇavaṁ etadavocuṁ: "Ayaṁ, bho assalāyana, samaṇo gotamo cātuvaṇṇiṁ suddhiṁ paññapeti. Etu bhavaṁ assalāyano samaṇena gotamena saddhiṁ asmiṁ vacane <span class="var" title="patimantetuṁ (bj, pts1) | paṭimantetuṁ (mr)" id="note605">paṭimantetu</span>. Caritaṁ kho pana bhotā assalāyanena paribbājakaṁ. Mā bhavaṁ assalāyano ayuddhaparājitaṁ parājayī"ti.</p>
+
+<hr>
+
+<p><span class="parno">6</span>Evaṁ vutte, assalāyano māṇavo te brāhmaṇe etadavoca: "addhā kho ahaṁ bhavanto na labhāmi. Samaṇo khalu, bho, gotamo dhammavādī; dhammavādino ca pana duppaṭimantiyā bhavanti. Nāhaṁ sakkomi samaṇena gotamena saddhiṁ asmiṁ vacane paṭimantetunti. Api cāhaṁ bhavantānaṁ vacanena gamissāmī"ti.</p>
+
+
+<p><span class="parno">7</span>Atha kho assalāyano māṇavo mahatā brāhmaṇagaṇena saddhiṁ yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho assalāyano māṇavo bhagavantaṁ etadavoca: </p>
+
+<p>"brāhmaṇā, bho gotama, evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo; brāhmaṇova sukko vaṇṇo, kaṇho añño vaṇṇo; brāhmaṇova sujjhanti, no abrāhmaṇā; brāhmaṇāva brahmuno puttā orasā mukhato jātā brahmajā brahmanimmitā brahmadāyādā’ti. Idha bhavaṁ gotamo kimāhā"ti?</p>
+
+<p>"<span class="var" title="dissante (bj, s1–3, km, pts1)" id="note606">Dissanti</span> kho pana, assalāyana, brāhmaṇānaṁ brāhmaṇiyo utuniyopi gabbhiniyopi vijāyamānāpi pāyamānāpi. Te ca brāhmaṇiyonijāva samānā evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo; brāhmaṇova sukko vaṇṇo, kaṇho añño vaṇṇo; brāhmaṇāva sujjhanti, no abrāhmaṇā; brāhmaṇāva brahmuno puttā orasā mukhato jātā brahmajā brahmanimmitā brahmadāyādā’"ti.</p>
+
+<hr>
+
+<p>"Kiñcāpi bhavaṁ gotamo evamāha, atha khvettha brāhmaṇā evametaṁ maññanti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">8</span>"Taṁ kiṁ maññasi, assalāyana, sutaṁ te: ‘yonakambojesu aññesu ca paccantimesu janapadesu dveva vaṇṇā — ayyo ceva dāso ca; ayyo hutvā dāso hoti, dāso hutvā ayyo hotī’"ti?</p>
+
+<hr>
+
+<p>"Evaṁ, bho, sutaṁ taṁ me: ‘yonakambojesu aññesu ca paccantimesu janapadesu dveva vaṇṇā — ayyo ceva dāso ca; ayyo hutvā dāso hoti, dāso hutvā ayyo hotī’"ti.</p>
+
+<p>"Ettha, assalāyana, brāhmaṇānaṁ kiṁ balaṁ, ko assāso yadettha brāhmaṇā evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti?</p>
+
+<hr>
+
+<p>"Kiñcāpi bhavaṁ gotamo evamāha, atha khvettha brāhmaṇā evametaṁ maññanti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">9</span>"Taṁ kiṁ maññasi, assalāyana, khattiyova nu kho pāṇātipātī adinnādāyī kāmesumicchācārī musāvādī pisuṇavāco pharusavāco samphappalāpī abhijjhālu byāpannacitto micchādiṭṭhi kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya, no brāhmaṇo? Vessova nu kho … pe … suddova nu kho pāṇātipātī adinnādāyī kāmesumicchācārī musāvādī pisuṇavāco pharusavāco samphappalāpī abhijjhālu byāpannacitto micchādiṭṭhi kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya, no brāhmaṇo"ti?</p>
+
+
+<p>"No hidaṁ, bho gotama. Khattiyopi hi, bho gotama, pāṇātipātī adinnādāyī kāmesumicchācārī musāvādī pisuṇavāco pharusavāco samphappalāpī abhijjhālu byāpannacitto micchādiṭṭhi kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyya. Brāhmaṇopi hi, bho gotama … pe … vessopi hi, bho gotama … pe … suddopi hi, bho gotama … pe … sabbepi hi, bho gotama, cattāro vaṇṇā pāṇātipātino adinnādāyino kāmesumicchācārino musāvādino pisuṇavācā pharusavācā samphappalāpino abhijjhālū byāpannacittā micchādiṭṭhī kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjeyyun"ti.</p>
+
+
+<p>"Ettha, assalāyana, brāhmaṇānaṁ kiṁ balaṁ, ko assāso yadettha brāhmaṇā evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti?</p>
+
+<p>"Kiñcāpi bhavaṁ gotamo evamāha, atha khvettha brāhmaṇā evametaṁ maññanti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">10</span>"Taṁ kiṁ maññasi, assalāyana, brāhmaṇova nu kho pāṇātipātā paṭivirato adinnādānā paṭivirato kāmesumicchācārā paṭivirato musāvādā paṭivirato pisuṇāya vācāya paṭivirato pharusāya vācāya paṭivirato samphappalāpā paṭivirato anabhijjhālu abyāpannacitto sammādiṭṭhi kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjeyya, <span class="var" title="no ca (mr)" id="note607">no</span> khattiyo, <span class="var" title="no ca (mr)" id="note608">no</span> vesso, <span class="var" title="no ca (mr)" id="note609">no</span> suddo"ti?</p>
+
+
+<p>"No hidaṁ, bho gotama. Khattiyopi hi, bho gotama, pāṇātipātā paṭivirato adinnādānā paṭivirato kāmesumicchācārā paṭivirato musāvādā paṭivirato pisuṇāya vācāya paṭivirato pharusāya vācāya paṭivirato samphappalāpā paṭivirato anabhijjhālu abyāpannacitto sammādiṭṭhi kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjeyya. Brāhmaṇopi hi, bho gotama … pe … vessopi hi, bho gotama … pe … suddopi hi, bho gotama … pe … sabbepi hi, bho gotama, cattāro vaṇṇā pāṇātipātā paṭiviratā adinnādānā paṭiviratā kāmesumicchācārā paṭiviratā musāvādā paṭiviratā pisuṇāya vācāya paṭiviratā pharusāya vācāya paṭiviratā samphappalāpā paṭiviratā anabhijjhālū abyāpannacittā sammādiṭṭhī kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjeyyun"ti.</p>
+
+
+<p>"Ettha, assalāyana, brāhmaṇānaṁ kiṁ balaṁ, ko assāso yadettha brāhmaṇā evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti?</p>
+
+<p>"Kiñcāpi bhavaṁ gotamo evamāha, atha khvettha brāhmaṇā evametaṁ maññanti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">11</span>"Taṁ kiṁ maññasi, assalāyana, brāhmaṇova nu kho pahoti asmiṁ padese averaṁ abyābajjhaṁ mettacittaṁ bhāvetuṁ, no khattiyo, no vesso, no suddo"ti?</p>
+
+<p>"No hidaṁ, bho gotama. Khattiyopi hi, bho gotama, pahoti asmiṁ padese averaṁ abyābajjhaṁ mettacittaṁ bhāvetuṁ; brāhmaṇopi hi, bho gotama … vessopi hi, bho gotama … suddopi hi, bho gotama … sabbepi hi, bho gotama, cattāro vaṇṇā pahonti asmiṁ padese averaṁ abyābajjhaṁ mettacittaṁ bhāvetun"ti.</p>
+
+<p>"Ettha, assalāyana, brāhmaṇānaṁ kiṁ balaṁ, ko assāso yadettha brāhmaṇā evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti?</p>
+
+<p>"Kiñcāpi bhavaṁ gotamo evamāha, atha khvettha brāhmaṇā evametaṁ maññanti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">12</span>"Taṁ kiṁ maññasi, assalāyana, brāhmaṇova nu kho pahoti sottisināniṁ ādāya nadiṁ gantvā rajojallaṁ pavāhetuṁ, no khattiyo, no vesso, no suddo"ti?</p>
+
+<hr>
+
+<p>"No hidaṁ, bho gotama. Khattiyopi hi, bho gotama, pahoti sottisināniṁ ādāya nadiṁ gantvā rajojallaṁ pavāhetuṁ, brāhmaṇopi hi, bho gotama … vessopi hi, bho gotama … suddopi hi, bho gotama … sabbepi hi, bho gotama, cattāro vaṇṇā pahonti sottisināniṁ ādāya nadiṁ gantvā rajojallaṁ pavāhetun"ti.</p>
+
+<hr>
+
+<p>"Ettha, assalāyana, brāhmaṇānaṁ kiṁ balaṁ, ko assāso yadettha brāhmaṇā evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti?</p>
+
+<p>"Kiñcāpi bhavaṁ gotamo evamāha, atha khvettha brāhmaṇā evametaṁ maññanti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">13</span>"Taṁ kiṁ maññasi, assalāyana, idha rājā khattiyo muddhāvasitto nānājaccānaṁ purisānaṁ purisasataṁ sannipāteyya: ‘āyantu bhonto ye tattha khattiyakulā brāhmaṇakulā rājaññakulā uppannā, <span class="var" title="uppannā sālassa vā (bj, pts1)" id="note610">sākassa vā sālassa vā</span> salaḷassa vā candanassa vā padumakassa vā uttarāraṇiṁ ādāya, aggiṁ abhinibbattentu, tejo pātukarontu. Āyantu pana bhonto ye tattha caṇḍālakulā nesādakulā <span class="var" title="veṇakulā (bj, pts1) | veṇukulā (s1–3, km)" id="note611">venakulā</span> rathakārakulā pukkusakulā uppannā, sāpānadoṇiyā vā sūkaradoṇiyā vā rajakadoṇiyā vā eraṇḍakaṭṭhassa vā uttarāraṇiṁ ādāya, aggiṁ abhinibbattentu, tejo pātukarontū’ti.</p>
+
+<hr>
+
+<p><span class="parno">14</span>Taṁ kiṁ maññasi, assalāyana, yo <span class="var" title="yo ca nu kho (s1–3, km, pts1, mr)" id="note612">evaṁ nu kho so</span> khattiyakulā brāhmaṇakulā rājaññakulā uppannehi sākassa vā sālassa vā salaḷassa vā candanassa vā padumakassa vā uttarāraṇiṁ ādāya aggi abhinibbatto, tejo pātukato, so eva nu khvāssa aggi accimā <span class="var" title="ca (bj, pts1)" id="note613">ceva</span> <span class="var" title="vaṇṇimā (s1–3, km, pts1, mr)" id="note614">vaṇṇavā</span> ca pabhassaro ca, tena ca sakkā agginā aggikaraṇīyaṁ kātuṁ; yo pana so caṇḍālakulā nesādakulā venakulā rathakārakulā pukkusakulā uppannehi sāpānadoṇiyā vā sūkaradoṇiyā vā rajakadoṇiyā vā eraṇḍakaṭṭhassa vā uttarāraṇiṁ ādāya aggi abhinibbatto, tejo pātukato svāssa aggi na ceva accimā na ca vaṇṇavā na ca pabhassaro, na ca tena sakkā agginā aggikaraṇīyaṁ kātun"ti?</p>
+
+<hr>
+
+<p>"No hidaṁ, bho gotama. <span class="var" title="yo so (bj, pts1) | yopi so (s1–3)" id="note615">Yopi hi so</span>, bho gotama, khattiyakulā brāhmaṇakulā rājaññakulā uppannehi sākassa vā sālassa vā salaḷassa vā candanassa vā padumakassa vā uttarāraṇiṁ ādāya aggi abhinibbatto, tejo pātukato svāssa aggi accimā ceva vaṇṇavā ca pabhassaro ca, tena ca sakkā agginā aggikaraṇīyaṁ kātuṁ; yopi so caṇḍālakulā nesādakulā venakulā rathakārakulā pukkusakulā uppannehi sāpānadoṇiyā vā sūkaradoṇiyā vā rajakadoṇiyā vā eraṇḍakaṭṭhassa vā uttarāraṇiṁ ādāya aggi abhinibbatto, tejo pātukato, <span class="var" title="so cassa (bj, pts1) | sopassa (s1–3)" id="note616">svāssa</span> aggi accimā ceva vaṇṇavā ca pabhassaro ca, tena ca sakkā agginā aggikaraṇīyaṁ kātuṁ. Sabbopi hi, bho gotama, aggi accimā ceva vaṇṇavā ca pabhassaro ca, sabbenapi sakkā agginā aggikaraṇīyaṁ kātun"ti.</p>
+
+<p>"Ettha, assalāyana, brāhmaṇānaṁ kiṁ balaṁ, ko assāso yadettha brāhmaṇā evamāhaṁsu: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo; brāhmaṇova sukko vaṇṇo, kaṇho añño vaṇṇo; brāhmaṇāva sujjhanti, no abrāhmaṇā; brāhmaṇāva brahmuno puttā orasā mukhato jātā brahmajā brahmanimmitā brahmadāyādā’"ti?</p>
+
+<hr>
+
+<p>"Kiñcāpi bhavaṁ gotamo evamāha, atha khvettha brāhmaṇā evametaṁ maññanti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">15</span>"Taṁ kiṁ maññasi, assalāyana, idha khattiyakumāro brāhmaṇakaññāya saddhiṁ saṁvāsaṁ kappeyya, tesaṁ saṁvāsamanvāya putto jāyetha; yo so khattiyakumārena brāhmaṇakaññāya putto uppanno, siyā so mātupi sadiso pitupi sadiso, ‘khattiyo’tipi vattabbo ‘brāhmaṇo’tipi vattabbo"ti?</p>
+
+
+<p>"Yo so, bho gotama, khattiyakumārena brāhmaṇakaññāya putto uppanno, siyā so mātupi sadiso pitupi sadiso, ‘khattiyo’tipi vattabbo ‘brāhmaṇo’tipi vattabbo"ti.</p>
+
+<hr>
+
+<p><span class="parno">16</span>"Taṁ kiṁ maññasi, assalāyana, idha brāhmaṇakumāro khattiyakaññāya saddhiṁ saṁvāsaṁ kappeyya, tesaṁ saṁvāsamanvāya putto jāyetha; yo so brāhmaṇakumārena khattiyakaññāya putto uppanno, siyā so mātupi sadiso pitupi sadiso, ‘khattiyo’tipi vattabbo ‘brāhmaṇo’tipi vattabbo"ti?</p>
+
+<p>"Yo so, bho gotama, brāhmaṇakumārena khattiyakaññāya putto uppanno, siyā so mātupi sadiso pitupi sadiso, ‘khattiyo’tipi vattabbo ‘brāhmaṇo’tipi vattabbo"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">17</span>"Taṁ kiṁ maññasi, assalāyana, idha vaḷavaṁ gadrabhena <span class="var" title="saṁyojeyya (mr)" id="note617">sampayojeyyuṁ</span>, tesaṁ sampayogamanvāya kisoro jāyetha; yo so vaḷavāya gadrabhena kisoro uppanno, siyā so mātupi sadiso pitupi sadiso, ‘asso’tipi vattabbo ‘gadrabho’tipi vattabbo"ti?</p>
+
+<p>"<span class="var" title="vekurañjāya hi so (bj, pts1) | so kumāraṇḍupi so (s1–3, km) | vekulajo hi so (?)" id="note618">Kuṇḍañhi so</span>, bho gotama, assataro hoti. Idaṁ hissa, bho gotama, nānākaraṇaṁ passāmi; amutra ca panesānaṁ na kiñci nānākaraṇaṁ passāmī"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">18</span>"Taṁ kiṁ maññasi, assalāyana, idhāssu dve māṇavakā bhātaro sodariyā, eko ajjhāyako upanīto eko anajjhāyako anupanīto. Kamettha brāhmaṇā paṭhamaṁ bhojeyyuṁ saddhe vā thālipāke vā yaññe vā pāhune vā"ti?</p>
+
+<p>"Yo so, bho gotama, māṇavako ajjhāyako upanīto tamettha brāhmaṇā paṭhamaṁ bhojeyyuṁ saddhe vā thālipāke vā yaññe vā pāhune vā. Kiñhi, bho gotama, anajjhāyake anupanīte dinnaṁ mahapphalaṁ bhavissatī"ti?</p>
+
+<hr>
+
+<p><span class="parno">19</span>"Taṁ kiṁ maññasi, assalāyana, idhāssu dve māṇavakā bhātaro sodariyā, eko ajjhāyako upanīto dussīlo pāpadhammo, eko anajjhāyako anupanīto sīlavā kalyāṇadhammo. Kamettha brāhmaṇā paṭhamaṁ bhojeyyuṁ saddhe vā thālipāke vā yaññe vā pāhune vā"ti?</p>
+
+<p>"Yo so, bho gotama, māṇavako anajjhāyako anupanīto sīlavā kalyāṇadhammo tamettha brāhmaṇā paṭhamaṁ bhojeyyuṁ saddhe vā thālipāke vā yaññe vā pāhune vā. Kiñhi, bho gotama, dussīle pāpadhamme dinnaṁ mahapphalaṁ bhavissatī"ti?</p>
+
+<p><span class="parno">20</span>"Pubbe kho tvaṁ, assalāyana, jātiṁ agamāsi; jātiṁ gantvā mante agamāsi; <span class="var" title="mante gantvā tameva ṭhapetvā (s1–3, km) | mante gantvā tametaṁ tvaṁ (pts1)" id="note619">mante gantvā tape agamāsi; tape gantvā</span> cātuvaṇṇiṁ suddhiṁ paccāgato, yamahaṁ paññapemī"ti.</p>
+
+<p>Evaṁ vutte, assalāyano māṇavo tuṇhībhūto maṅkubhūto pattakkhandho adhomukho pajjhāyanto appaṭibhāno nisīdi.</p>
+
+
+<hr>
+
+<p><span class="parno">21</span>Atha kho bhagavā assalāyanaṁ māṇavaṁ tuṇhībhūtaṁ maṅkubhūtaṁ pattakkhandhaṁ adhomukhaṁ pajjhāyantaṁ appaṭibhānaṁ viditvā assalāyanaṁ māṇavaṁ etadavoca: </p>
+
+<hr>
+
+<p>"Bhūtapubbaṁ, assalāyana, sattannaṁ brāhmaṇisīnaṁ araññāyatane paṇṇakuṭīsu sammantānaṁ evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ hoti: ‘brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo … pe … brahmadāyādā’ti. Assosi kho, assalāyana, asito devalo isi: ‘sattannaṁ kira brāhmaṇisīnaṁ araññāyatane paṇṇakuṭīsu sammantānaṁ evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ — brāhmaṇova seṭṭho vaṇṇo … pe … brahmadāyādā’ti. </p>
+
+<p>Atha kho, assalāyana, asito devalo isi kesamassuṁ kappetvā mañjiṭṭhavaṇṇāni dussāni nivāsetvā <span class="var" title="aṭaliyo (bj, pts1) | agaliyo (s1–3, km)" id="note620">paṭaliyo</span> upāhanā āruhitvā jātarūpamayaṁ daṇḍaṁ gahetvā sattannaṁ brāhmaṇisīnaṁ patthaṇḍile pāturahosi. Atha kho, assalāyana, asito devalo isi sattannaṁ brāhmaṇisīnaṁ patthaṇḍile caṅkamamāno evamāha: ‘handa ko nu kho ime bhavanto brāhmaṇisayo <span class="var" title="gantā (s1–3, km, mr)" id="note621">gatā</span>; handa ko nu kho ime bhavanto brāhmaṇisayo gatā’ti? </p>
+
+<p>Atha kho, assalāyana, sattannaṁ brāhmaṇisīnaṁ etadahosi: ‘ko nāyaṁ gāmaṇḍalarūpo viya sattannaṁ brāhmaṇisīnaṁ patthaṇḍile caṅkamamāno evamāha: "handa ko nu kho ime bhavanto brāhmaṇisayo gatā; handa ko nu kho ime bhavanto brāhmaṇisayo gatāti? Handa naṁ abhisapāmā"’ti. </p>
+
+<p>Atha kho, assalāyana, satta brāhmaṇisayo asitaṁ devalaṁ isiṁ abhisapiṁsu: ‘bhasmā, <span class="var" title="capalī (s1–3, km) | vasalī (pts1) | vasali (mr)" id="note622">vasala</span>, <span class="var" title="bhasmā capalī hohi. bhasmā capalī hohi bhasmācapalī hohīti (s1–3)" id="note623">hohi; bhasmā, vasala, hohī’ti</span>. Yathā yathā kho, assalāyana, satta brāhmaṇisayo asitaṁ devalaṁ isiṁ abhisapiṁsu tathā tathā asito devalo isi abhirūpataro ceva hoti dassanīyataro ca pāsādikataro ca. </p>
+
+<p>Atha kho, assalāyana, sattannaṁ brāhmaṇisīnaṁ etadahosi: ‘moghaṁ vata no tapo, aphalaṁ brahmacariyaṁ. Mayañhi pubbe yaṁ abhisapāma — bhasmā, vasala, hohi; bhasmā, vasala, hohīti bhasmāva bhavati ekacco. Imaṁ pana mayaṁ yathā yathā abhisapāma tathā tathā abhirūpataro ceva hoti dassanīyataro ca pāsādikataro cā’ti.</p>
+
+
+<hr>
+
+<p>‘Na bhavantānaṁ moghaṁ tapo, nāphalaṁ brahmacariyaṁ. Iṅgha bhavanto, yo mayi manopadoso taṁ pajahathā’ti.</p>
+
+
+<p>‘Yo bhavati manopadoso taṁ pajahāma. Ko nu bhavaṁ hotī’ti?</p>
+
+<p>‘Suto nu bhavataṁ — asito devalo isī’ti? </p>
+
+<hr>
+
+<p>‘Evaṁ, bho’. </p>
+
+<p>‘So khvāhaṁ, bho, homī’ti. Atha kho, assalāyana, satta brāhmaṇisayo asitaṁ devalaṁ isiṁ abhivādetuṁ upakkamiṁsu.</p>
+
+
+<hr>
+
+<p><span class="parno">22</span>Atha kho, assalāyana, asito devalo isi satta brāhmaṇisayo etadavoca: ‘sutaṁ metaṁ, bho, sattannaṁ kira brāhmaṇisīnaṁ araññāyatane paṇṇakuṭīsu sammantānaṁ evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ — brāhmaṇova seṭṭho vaṇṇo, hīno añño vaṇṇo; brāhmaṇova sukko vaṇṇo, kaṇho añño vaṇṇo; brāhmaṇāva sujjhanti, no abrāhmaṇā; brāhmaṇāva brahmuno puttā orasā mukhato jātā brahmajā brahmanimmitā brahmadāyādā’ti. </p>
+
+<hr>
+
+<p>‘Evaṁ, bho’.</p>
+
+<p><span class="parno">23</span>‘Jānanti pana bhonto — yā <span class="var" title="janimātā (s1–3, km) | janīmātā (pts1)" id="note624">janikā mātā</span> brāhmaṇaṁyeva agamāsi, no abrāhmaṇan’ti? </p>
+
+<p>‘No hidaṁ, bho’.</p>
+
+<p><span class="parno">24</span>‘Jānanti pana bhonto — yā <span class="var" title="janimātu (s1–3, km) | janīmātu (pts1)" id="note625">janikāmātu</span> mātā yāva sattamā mātumātāmahayugā brāhmaṇaṁyeva agamāsi, no abrāhmaṇan’ti? </p>
+
+<p>‘No hidaṁ, bho’.</p>
+
+<p><span class="parno">25</span>‘Jānanti pana bhonto — yo <span class="var" title="janipitā (s1–3, km) | janīpitā (pts1)" id="note626">janako pitā</span> brāhmaṇiṁyeva agamāsi, no abrāhmaṇin’ti? </p>
+
+<p>‘No hidaṁ, bho’.</p>
+
+<p><span class="parno">26</span>‘Jānanti pana bhonto — yo <span class="var" title="janipitu (s1–3, km) | janīpitu (pts1)" id="note627">janakapitu</span> pitā yāva sattamā pitupitāmahayugā brāhmaṇiṁyeva agamāsi, no abrāhmaṇin’ti? </p>
+
+<p>‘No hidaṁ, bho’.</p>
+
+<hr>
+
+<p><span class="parno">27</span>‘Jānanti pana bhonto — yathā gabbhassa avakkanti hotī’ti?</p>
+
+<p>‘Jānāma mayaṃ, bho — yathā gabbhassa avakkanti hoti<q class="open" id="note628" title=" na mayaṁ jānāma bho yathā gabbhassa avakkanti hotīti. yathā kathaṁ pana bho gabbhassa avakkanti hotīti. (ka-ma)">Jānāma mayaṁ, bho –  yathā gabbhassa avakkanti hoti</q>. Idha mātāpitaro ca sannipatitā honti, mātā ca utunī hoti, gandhabbo ca paccupaṭṭhito hoti; evaṁ tiṇṇaṁ sannipātā gabbhassa avakkanti hotī’ti.</p>
+
+<hr>
+
+<p><span class="parno">28</span>‘Jānanti pana bhonto — <span class="var" title="yagghe (bj, s1–3, km, pts1)" id="note630">taggha</span>, so gandhabbo khattiyo vā brāhmaṇo vā vesso vā suddo vā’ti?</p>
+
+<p>‘Na mayaṁ, bho, jānāma — taggha so gandhabbo khattiyo vā brāhmaṇo vā vesso vā suddo vā’ti.</p>
+
+<p>‘Evaṁ sante, bho, jānātha — ke tumhe hothā’ti?</p>
+
+<p>‘Evaṁ sante, bho, na mayaṁ jānāma — ke mayaṁ homā’ti.</p>
+
+<hr>
+
+<p>Te hi nāma, assalāyana, satta brāhmaṇisayo asitena devalena isinā sake jātivāde samanuyuñjīyamānā samanuggāhīyamānā samanubhāsīyamānā na sampāyissanti; kiṁ pana tvaṁ etarahi mayā sakasmiṁ jātivāde samanuyuñjīyamāno samanuggāhīyamāno samanubhāsīyamāno sampāyissasi, yesaṁ tvaṁ sācariyako na puṇṇo dabbigāho"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">29</span>Evaṁ vutte, assalāyano māṇavo bhagavantaṁ etadavoca: "Abhikkantaṁ, bho gotama … pe … upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p>
+
+<p class="endsutta">Assalāyanasuttaṁ niṭṭhitaṁ tatiyaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn92.html#content"></a><a id="next-sutta" href="./mn94.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN93: Assalāyanasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

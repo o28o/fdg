@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 16</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN16: Cetokhila Sutta — Emotional Barrenness </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn16">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery. There the Buddha addressed the mendicants: “Mendicants!”</p>
+<p>“Venerable sir,” they replied. The Buddha said this:</p>
+
+<hr>
+
+<p><span class="parno">2</span>“Mendicants, when a mendicant has not given up five kinds of emotional barrenness and cut off five emotional shackles, it’s not possible for them to achieve growth, improvement, or maturity in this teaching and training.</p>
+
+<p><span class="parno">3</span>What are the five kinds of emotional barrenness they haven’t given up? Firstly, a mendicant has doubts about the Teacher. They’re uncertain, undecided, and lacking confidence. This being so, their mind doesn’t incline toward keenness, commitment, persistence, and striving. This is the first kind of emotional barrenness they haven’t given up.</p>
+
+<hr>
+
+<p><span class="parno">4</span>Furthermore, a mendicant has doubts about the teaching … This is the second kind of emotional barrenness.</p>
+
+<hr>
+
+<p><span class="parno">5</span>They have doubts about the Saṅgha … This is the third kind of emotional barrenness.</p>
+
+<p><span class="parno">6</span>They have doubts about the training … This is the fourth kind of emotional barrenness.</p>
+
+<hr>
+
+<p><span class="parno">7</span>Furthermore, a mendicant is angry and upset with their spiritual companions, resentful and closed off. This being so, their mind doesn’t incline toward keenness, commitment, persistence, and striving. This is the fifth kind of emotional barrenness they haven’t given up. These are the five kinds of emotional barrenness they haven’t given up.</p>
+
+<hr>
+
+<p><span class="parno">8</span>What are the five emotional shackles they haven’t cut off? Firstly, a mendicant isn’t free of greed, desire, fondness, thirst, passion, and craving for sensual pleasures. This being so, their mind doesn’t incline toward keenness, commitment, persistence, and striving. This is the first emotional shackle they haven’t cut off.</p>
+
+<hr>
+
+<p><span class="parno">9</span>Furthermore, a mendicant isn’t free of greed for the body … This is the second emotional shackle.</p>
+
+<p><span class="parno">10</span>Furthermore, a mendicant isn’t free of greed for form … This is the third emotional shackle.</p>
+
+<hr>
+
+<p><span class="parno">11</span>They eat as much as they like until their belly is full, then indulge in the pleasures of sleeping, lying down, and drowsing … This is the fourth emotional shackle.</p>
+
+<hr>
+
+<p><span class="parno">12</span>They live the spiritual life hoping to be reborn in one of the orders of gods, thinking: ‘By this precept or observance or mortification or spiritual life, may I become one of the gods!’ This being so, their mind doesn’t incline toward keenness, commitment, persistence, and striving. This is the fifth emotional shackle they haven’t cut off. </p>
+
+<p>These are the five emotional shackles they haven’t cut off.</p>
+
+<hr>
+
+<p><span class="parno">13</span>When a mendicant has not given up these five kinds of emotional barrenness and cut off these five emotional shackles, it’s not possible for them to achieve growth, improvement, or maturity in this teaching and training.</p>
+
+<p><span class="parno">14</span>When a mendicant has given up these five kinds of emotional barrenness and cut off these five emotional shackles, it is possible for them to achieve growth, improvement, and maturity in this teaching and training.</p>
+
+<hr>
+
+<p><span class="parno">15</span>What are the five kinds of emotional barrenness they’ve given up? Firstly, a mendicant has no doubts about the Teacher. They’re not uncertain, undecided, or lacking confidence. This being so, their mind inclines toward keenness, commitment, persistence, and striving. This is the first kind of emotional barrenness they’ve given up.</p>
+
+<p><span class="parno">16</span>Furthermore, a mendicant has no doubts about the teaching …</p>
+
+<hr>
+
+<p><span class="parno">17</span>They have no doubts about the Saṅgha …</p>
+
+<p><span class="parno">18</span>They have no doubts about the training …</p>
+
+<hr>
+
+<p><span class="parno">19</span>They’re not angry and upset with their spiritual companions, not resentful or closed off. This being so, their mind inclines toward keenness, commitment, persistence, and striving. This is the fifth kind of emotional barrenness they’ve given up. </p>
+
+<p>These are the five kinds of emotional barrenness they’ve given up.</p>
+
+<hr>
+
+<p><span class="parno">20</span>What are the five emotional shackles they’ve cut off? Firstly, a mendicant is rid of greed, desire, fondness, thirst, passion, and craving for sensual pleasures. This being so, their mind inclines toward keenness, commitment, persistence, and striving. This is the first emotional shackle they’ve cut off.</p>
+
+<hr>
+
+<p><span class="parno">21</span>Furthermore, a mendicant is rid of greed for the body …<br>
+<br>They’re rid of greed for form …<br>
+<br>They don’t eat as much as they like until their belly is full, then indulge in the pleasures of sleeping, lying down, and drowsing …</p>
+
+<hr>
+
+<p><span class="parno">22</span>They don’t live the spiritual life hoping to be reborn in one of the orders of gods, thinking: ‘By this precept or observance or mortification or spiritual life, may I become one of the gods!’ This being so, their mind inclines toward keenness, commitment, persistence, and striving. This is the fifth emotional shackle they’ve cut off. </p>
+
+<p>These are the five emotional shackles they’ve cut off.</p>
+
+<hr>
+
+<p><span class="parno">23</span>When a mendicant has given up these five kinds of emotional barrenness and cut off these five emotional shackles, it is possible for them to achieve growth, improvement, or maturity in this teaching and training.</p>
+
+<p><span class="parno">24</span>They develop the basis of psychic power that has immersion due to enthusiasm, and active effort … the basis of psychic power that has immersion due to energy, and active effort … the basis of psychic power that has immersion due to mental development, and active effort … the basis of psychic power that has immersion due to inquiry, and active effort. And the fifth is sheer vigor. A mendicant who possesses these fifteen factors, including vigor, is capable of breaking out, becoming awakened, and reaching the supreme sanctuary. </p>
+
+<hr>
+
+<p>Suppose there was a chicken with eight or ten or twelve eggs. And she properly sat on them to keep them warm and incubated. </p>
+
+<p>Even if that chicken doesn’t wish: ‘If only my chicks could break out of the eggshell with their claws and beak and hatch safely!’ Still they can break out and hatch safely.</p>
+
+<p>In the same way, a mendicant who possesses these fifteen factors, including vigor, is capable of breaking out, becoming awakened, and reaching the supreme sanctuary.”</p>
+
+<hr>
+
+<p>That is what the Buddha said. Satisfied, the mendicants were happy with what the Buddha said.</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: "bhikkhavo"ti. </p>
+
+<p>"Bhadante"ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:</p>
+
+<hr>
+
+<p><span class="parno">2</span>"Yassa kassaci, bhikkhave, bhikkhuno pañca <span class="var" title="cetokhīlā (s2, s3)" id="note186">cetokhilā</span> appahīnā, pañca <span class="var" title="cetaso vinibaddhā (si) | cetovinibaddhā (sāratthadīpanīṭīkā)" id="note187">cetasovinibandhā</span> asamucchinnā, so vatimasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ vepullaṁ āpajjissatīti — netaṁ ṭhānaṁ vijjati.</p>
+
+<p><span class="parno">3</span>Katamāssa pañca cetokhilā appahīnā honti? Idha, bhikkhave, bhikkhu satthari kaṅkhati vicikicchati nādhimuccati na sampasīdati. Yo so, bhikkhave, bhikkhu satthari kaṅkhati vicikicchati nādhimuccati na sampasīdati tassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ paṭhamo cetokhilo appahīno hoti.</p>
+
+<hr>
+
+<p><span class="parno">4</span>Puna caparaṁ, bhikkhave, bhikkhu dhamme kaṅkhati vicikicchati nādhimuccati na sampasīdati … pe … evamassāyaṁ dutiyo cetokhilo appahīno hoti.</p>
+
+
+<hr>
+
+<p><span class="parno">5</span>Puna caparaṁ, bhikkhave, bhikkhu saṅghe kaṅkhati vicikicchati nādhimuccati na sampasīdati … pe … evamassāyaṁ tatiyo cetokhilo appahīno hoti.</p>
+
+<p><span class="parno">6</span>Puna caparaṁ, bhikkhave, bhikkhu sikkhāya kaṅkhati vicikicchati nādhimuccati na sampasīdati. Yo so, bhikkhave, bhikkhu sikkhāya kaṅkhati vicikicchati nādhimuccati na sampasīdati, tassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ catuttho cetokhilo appahīno hoti.</p>
+
+<hr>
+
+<p><span class="parno">7</span>Puna caparaṁ, bhikkhave, bhikkhu sabrahmacārīsu kupito hoti anattamano āhatacitto khilajāto. Yo so, bhikkhave, bhikkhu sabrahmacārīsu kupito hoti anattamano āhatacitto khilajāto, tassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ pañcamo cetokhilo appahīno hoti.</p>
+
+<p>Imāssa pañca cetokhilā appahīnā honti.</p>
+
+
+<hr>
+
+<p><span class="parno">8</span>Katamāssa pañca cetasovinibandhā asamucchinnā honti? Idha, bhikkhave, bhikkhu kāme <span class="var" title="avigatarāgo (katthaci)" id="note190">avītarāgo</span> hoti avigatacchando avigatapemo avigatapipāso avigatapariḷāho avigatataṇho. Yo so, bhikkhave, bhikkhu kāme avītarāgo hoti avigatacchando avigatapemo avigatapipāso avigatapariḷāho avigatataṇho, tassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ paṭhamo cetasovinibandho asamucchinno hoti.</p>
+
+<hr>
+
+<p><span class="parno">9</span>Puna caparaṁ, bhikkhave, bhikkhu kāye avītarāgo hoti … pe … evamassāyaṁ dutiyo cetasovinibandho asamucchinno hoti.</p>
+
+
+<p><span class="parno">10</span>Puna caparaṁ, bhikkhave, bhikkhu rūpe avītarāgo hoti … pe … evamassāyaṁ tatiyo cetasovinibandho asamucchinno hoti.</p>
+
+
+<hr>
+
+<p><span class="parno">11</span>Puna caparaṁ, bhikkhave, bhikkhu yāvadatthaṁ udarāvadehakaṁ bhuñjitvā seyyasukhaṁ passasukhaṁ middhasukhaṁ anuyutto viharati. Yo so, bhikkhave, bhikkhu yāvadatthaṁ udarāvadehakaṁ bhuñjitvā seyyasukhaṁ passasukhaṁ middhasukhaṁ anuyutto viharati, tassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ catuttho cetasovinibandho asamucchinno hoti.</p>
+
+
+<hr>
+
+<p><span class="parno">12</span>Puna caparaṁ, bhikkhave, bhikkhu aññataraṁ devanikāyaṁ paṇidhāya brahmacariyaṁ carati: ‘imināhaṁ sīlena vā vatena vā tapena vā brahmacariyena vā devo vā bhavissāmi devaññataro vā’ti. Yo so, bhikkhave, bhikkhu aññataraṁ devanikāyaṁ paṇidhāya brahmacariyaṁ carati: ‘imināhaṁ sīlena vā vatena vā tapena vā brahmacariyena vā devo vā bhavissāmi devaññataro vā’ti, tassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ na namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ pañcamo cetasovinibandho asamucchinno hoti.</p>
+
+<p>Imāssa pañca cetasovinibandhā asamucchinnā honti.</p>
+
+
+<hr>
+
+<p><span class="parno">13</span>Yassa kassaci, bhikkhave, bhikkhuno ime pañca cetokhilā appahīnā, ime pañca cetasovinibandhā asamucchinnā, so vatimasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ vepullaṁ āpajjissatīti — netaṁ ṭhānaṁ vijjati.</p>
+
+<p><span class="parno">14</span>Yassa kassaci, bhikkhave, bhikkhuno pañca cetokhilā pahīnā, pañca cetasovinibandhā susamucchinnā, so vatimasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ vepullaṁ āpajjissatīti — ṭhānametaṁ vijjati.</p>
+
+<hr>
+
+<p><span class="parno">15</span>Katamāssa pañca cetokhilā pahīnā honti? Idha, bhikkhave, bhikkhu satthari na kaṅkhati na vicikicchati adhimuccati sampasīdati. Yo so, bhikkhave, bhikkhu satthari na kaṅkhati na vicikicchati adhimuccati sampasīdati, tassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ paṭhamo cetokhilo pahīno hoti.</p>
+
+
+<p><span class="parno">16</span>Puna caparaṁ, bhikkhave, bhikkhu dhamme na kaṅkhati na vicikicchati adhimuccati sampasīdati … pe … evamassāyaṁ dutiyo cetokhilo pahīno hoti.</p>
+
+<hr>
+
+<p><span class="parno">17</span>Puna caparaṁ, bhikkhave, bhikkhu saṅghe na kaṅkhati na vicikicchati adhimuccati sampasīdati … pe … evamassāyaṁ tatiyo cetokhilo pahīno hoti.</p>
+
+<p><span class="parno">18</span>Puna caparaṁ, bhikkhave, bhikkhu sikkhāya na kaṅkhati na vicikicchati adhimuccati sampasīdati … pe … evamassāyaṁ catuttho cetokhilo pahīno hoti.</p>
+
+<hr>
+
+<p><span class="parno">19</span>Puna caparaṁ, bhikkhave, bhikkhu sabrahmacārīsu na kupito <span class="var" title="hoti attamano (bj, pts1)" id="note191">hoti na anattamano</span>
+anāhatacitto akhilajāto. Yo so, bhikkhave, bhikkhu sabrahmacārīsu na kupito hoti na anattamano anāhatacitto akhilajāto, tassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ pañcamo cetokhilo pahīno hoti.</p>
+
+<p>Imāssa pañca cetokhilā pahīnā honti.</p>
+
+
+<hr>
+
+<p><span class="parno">20</span>Katamāssa pañca cetasovinibandhā susamucchinnā honti? Idha, bhikkhave, bhikkhu kāme vītarāgo hoti vigatacchando vigatapemo vigatapipāso vigatapariḷāho vigatataṇho. Yo so, bhikkhave, bhikkhu kāme vītarāgo hoti vigatacchando
+vigatapemo vigatapipāso vigatapariḷāho vigatataṇho, tassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ paṭhamo cetasovinibandho susamucchinno hoti.</p>
+
+<hr>
+
+<p><span class="parno">21</span>Puna caparaṁ, bhikkhave, bhikkhu kāye vītarāgo hoti … pe … rūpe vītarāgo hoti … pe … na yāvadatthaṁ udarāvadehakaṁ bhuñjitvā seyyasukhaṁ passasukhaṁ middhasukhaṁ anuyutto viharati.</p>
+
+<p>Yo so, bhikkhave, bhikkhu na yāvadatthaṁ udarāvadehakaṁ bhuñjitvā seyyasukhaṁ passasukhaṁ middhasukhaṁ anuyutto viharati, tassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ catuttho cetasovinibandho susamucchinno hoti.</p>
+
+<hr>
+
+<p><span class="parno">22</span>Puna caparaṁ, bhikkhave, bhikkhu na aññataraṁ devanikāyaṁ paṇidhāya brahmacariyaṁ carati: ‘imināhaṁ sīlena vā vatena vā tapena vā brahmacariyena vā devo vā bhavissāmi devaññataro vā’ti. Yo so, bhikkhave, bhikkhu na aññataraṁ devanikāyaṁ paṇidhāya brahmacariyaṁ carati: ‘imināhaṁ sīlena vā vatena vā tapena vā brahmacariyena vā devo vā bhavissāmi devaññataro vā’ti, tassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya. Yassa cittaṁ namati ātappāya anuyogāya sātaccāya padhānāya, evamassāyaṁ pañcamo cetasovinibandho susamucchinno hoti.</p>
+
+<p>Imāssa pañca cetasovinibandhā susamucchinnā honti.</p>
+
+
+<hr>
+
+<p><span class="parno">23</span>Yassa kassaci, bhikkhave, bhikkhuno ime pañca cetokhilā pahīnā, ime pañca
+cetasovinibandhā susamucchinnā, so vatimasmiṁ dhammavinaye vuddhiṁ virūḷhiṁ
+vepullaṁ āpajjissatīti — ṭhānametaṁ vijjati.</p>
+
+<p><span class="parno">24</span>So chandasamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti, vīriyasamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti, cittasamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti, vīmaṁsāsamādhipadhānasaṅkhārasamannāgataṁ iddhipādaṁ bhāveti, ussoḷhīyeva pañcamī. Sa kho so, bhikkhave, evaṁ ussoḷhipannarasaṅgasamannāgato bhikkhu bhabbo abhinibbidāya, bhabbo sambodhāya, bhabbo anuttarassa yogakkhemassa adhigamāya.</p>
+
+<hr>
+
+<p>Seyyathāpi, bhikkhave, kukkuṭiyā aṇḍāni aṭṭha vā dasa vā dvādasa vā. Tānassu kukkuṭiyā sammā adhisayitāni sammā pariseditāni sammā paribhāvitāni.</p>
+
+<p>Kiñcāpi tassā kukkuṭiyā na evaṁ icchā uppajjeyya: ‘aho vatime kukkuṭapotakā pādanakhasikhāya vā mukhatuṇḍakena vā aṇḍakosaṁ padāletvā sotthinā abhinibbhijjeyyun’ti. Atha kho bhabbāva te kukkuṭapotakā pādanakhasikhāya vā mukhatuṇḍakena vā aṇḍakosaṁ padāletvā sotthinā abhinibbhijjituṁ. </p>
+
+<p>Evameva kho, bhikkhave, evaṁ ussoḷhipannarasaṅgasamannāgato bhikkhu bhabbo abhinibbidāya, bhabbo sambodhāya, bhabbo anuttarassa yogakkhemassa adhigamāyā"ti.</p>
+
+<hr>
+<p><span class="parno">25</span>Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti.</p>
+
+<p class="endsutta">Cetokhilasuttaṁ niṭṭhitaṁ chaṭṭhaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn15.html#content"></a><a id="next-sutta" href="./mn17.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN16: Cetokhila Sutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 3:12</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="snp.html" class="pressed w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+  
+ 
+		<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+<h2>Khuddaka Nikāya - The Minor Texts</h2>
+
+<h2>Sutta Nipata</h2>
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata Chapter 3: The Great Chapter</h2>
+
+	<h3>3:12 Contemplating Pairs</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li><a href="/ru/sc/?q=snp3.12">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h2>3:12 Contemplating Pairs</h2>
+
+<p>So I have heard:</p>
+
+<p>At one time the Buddha was staying near Sāvatthī in the Eastern Monastery, the stilt longhouse of Migāra’s mother. Now, at that time it was the sabbath—the full moon on the fifteenth day—and the Buddha was sitting in the open surrounded by the Saṅgha of monks. Then the Buddha looked around the Saṅgha of monks, who were so very silent. He addressed them:</p>
+
+<p>“Suppose, mendicants, they questioned you thus: ‘There are skillful teachings that are noble, emancipating, and lead to awakening. What is the real reason for listening to such teachings?’ You should answer: ‘Only so as to truly know the pairs of teachings.’ </p>
+
+<hr>
+
+<p>And what pairs do they speak of? </p>
+
+<p>‘This is suffering; this is the origin of suffering’: this is the first contemplation. ‘This is the cessation of suffering; this is the practice that leads to the cessation of suffering’: this is the second contemplation. When a mendicant meditates rightly contemplating a pair of teachings in this way—diligent, keen, and resolute—they can expect one of two results: enlightenment in the present life, or if there’s something left over, non-return.” </p>
+
+<p>That is what the Buddha said. Then the Holy One, the Teacher, went on to say: </p>
+
+<hr>
+	<div class="verse">
+			<p id="p730"><span class="parno">730</span>
+			“There are those who don’t understand suffering 
+			<br>and suffering’s cause, 
+			<br>and where all suffering 
+			<br>ceases with nothing left over. 
+			<br>And they don’t know the path 
+			<br>that leads to the stilling of suffering. </p>
+			
+			<p id="p731"><span class="parno">731</span>
+			They lack the heart’s release, 
+			<br>as well as the release by wisdom. 
+			<br>Unable to make an end, 
+			<br>they continue to be reborn and grow old. </p>
+			
+			<p id="p732"><span class="parno">732</span>
+			But there are those who understand suffering 
+			<br>and suffering’s cause, 
+			<br>and where all suffering 
+			<br>ceases with nothing left over. 
+			<br>And they understand the path 
+			<br>that leads to the stilling of suffering. </p>
+			
+			<p id="p733"><span class="parno">733</span>
+			They’re endowed with the heart’s release, 
+			<br>as well as the release by wisdom. 
+			<br>Able to make an end, 
+			<br>they don’t continue to be reborn and grow old.” </p>
+	</div>
+
+<hr>
+<p>“Suppose, mendicants, they questioned you thus: ‘Could there be another way to contemplate the pairs?’ You should say, ‘There could.’ 
+And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by attachment’: this is one contemplation. ‘With the utter cessation of attachment there is no origination of suffering’: this is the second contemplation. When a mendicant meditates in this way they can expect enlightenment or non-return.” Then the Teacher went on to say: </p>
+
+<p>“‘Whatever suffering arises, all is caused by attachments’, this is one observation. ‘With the complete ending of all attachments there is no arising of suffering’, this is a second observation. Rightly observing this duality, a monk who meditates diligent, ardent, and resolute may expect one of two results: final knowledge in this very life, or is there is anything left over, non-return."</p>
+
+<p>This is what the Buddha said. Having said this, the Teacher, the Sublime One, said further:</p>
+
+<hr>
+	<div class="verse">
+			<p id="p734"><span class="parno">734</span>
+			“Attachment is the source of suffering 
+			<br>in all its countless forms in the world. 
+			<br>When an ignorant person builds up attachments, 
+			<br>that idiot returns to suffering again and again. 
+			<br>So let one who understands not build up attachments, 
+			<br>contemplating the origin of suffering and rebirth.” </p>
+	</div>
+
+<hr>
+<p>“Suppose, mendicants, they questioned you thus: ‘Could there be another way to contemplate the pairs?’ You should say, ‘There could.’ And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by ignorance’: this is one contemplation. 
+‘With the utter cessation of ignorance there is no origination of suffering’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>Then the Teacher went on to say: </p>
+
+<hr>
+	<div class="verse">
+			<p id="p735"><span class="parno">735</span>
+			“Those who journey again and again, 
+			<br>transmigrating through birth and death; 
+			<br>they go from this state to another, 
+			<br>destined only for ignorance. </p>
+			
+			<p id="p736"><span class="parno">736</span>
+			For ignorance is the great delusion 
+			<br>because of which we have long transmigrated. 
+			<br>Those beings who have arrived at knowledge 
+			<br>do not proceed to a future life.” </p>
+	</div>
+
+<hr>
+<p>“‘Could there be another way?’ … And how could there be? </p>
+
+<p>
+‘All the suffering that originates is caused by choices’: this is one contemplation. ‘With the utter cessation of choices there is no origination of suffering’: this is the second contemplation. When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>Then the Teacher went on to say: </p>
+
+<hr>
+	<div class="verse">
+			<p id="p737"><span class="parno">737</span>
+			“All the suffering that originates 
+			<br>is caused by choices. 
+			<br>With the cessation of choices, 
+			<br>there is no origination of suffering. </p>
+			
+			<p id="p738"><span class="parno">738</span>
+			Knowing this danger, 
+			<br>that suffering is caused by choices; 
+			<br>through the stilling of all choices, 
+			<br>and the stopping of perceptions, 
+			<br>this is the way suffering ends. 
+			<br>For those who truly know this, </p>
+			
+			<p id="p739"><span class="parno">739</span>
+			rightly seeing, knowledge masters, 
+			<br>the astute, understanding rightly, 
+			<br>having overcome Māra’s bonds, 
+			<br>do not proceed to a future life.” </p>
+	</div>
+
+<hr>
+<p>
+“‘Could there be another way?’ … And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by consciousness’: this is one contemplation. ‘With the utter cessation of consciousness there is no origination of suffering’: this is the second contemplation. When a mendicant meditates in this way they can expect enlightenment or non-return.”</p>
+
+<p>Then the Teacher went on to say:</p>
+
+<hr>
+	<div class="verse">
+			<p id="p740"><span class="parno">740</span>
+			“All the suffering that originates 
+			<br>is caused by consciousness. 
+			<br>With the cessation of consciousness, 
+			<br>there is no origination of suffering. </p>
+			
+			<p id="p741"><span class="parno">741</span>
+			Knowing this danger, 
+			<br>that suffering is caused by consciousness, 
+			<br>with the stilling of consciousness a mendicant 
+			<br>is hungerless, extinguished.” </p>
+	</div>
+
+<hr>
+<p>“‘Could there be another way?’ … And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by contact’: this is one contemplation. 
+‘With the utter cessation of contact there is no origination of suffering’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.”</p>
+
+<p>Then the Teacher went on to say: </p>
+	
+<hr>
+<div class="verse">
+		<p id="p742"><span class="parno">742</span>
+		“Those mired in contact, 
+		<br>swept down the stream of rebirths, 
+		<br>practicing the wrong way, 
+		<br>are far from the ending of fetters. </p>
+		
+		<p id="p743"><span class="parno">743</span>
+		But those who completely understand contact, 
+		<br>who, understanding, delight in peace; 
+		<br>by comprehending contact 
+		<br>they are hungerless, extinguished.” </p>
+</div>
+
+<hr>
+<p>“‘Could there be another way?’ … And how could there be? </p>
+
+<p>
+‘All the suffering that originates is caused by feeling’: this is one contemplation. ‘With the utter cessation of feeling there is no origination of suffering’: this is the second contemplation. When a mendicant meditates in this way they can expect enlightenment or non-return.”</p>
+
+<p>Then the Teacher went on to say: </p>
+
+<hr>
+	<div class="verse">
+			<p id="p744"><span class="parno">744</span>
+			“Having known everything that is felt—
+			<br>whether pleasure or pain, 
+			<br>as well as what’s neutral, 
+			<br>both internally and externally—</p>
+			
+			<p id="p745"><span class="parno">745</span>as suffering, 
+			<br>deceptive, falling apart; 
+			<br>they see it vanish with every touch: 
+			<br>that’s how they understand it. 
+			<br>With the ending of feelings, a mendicant 
+			<br>is hungerless, extinguished.” </p>
+			</div>
+
+<hr>
+
+<p>“‘Could there be another way?’ … And how could there be?</p>
+
+<p> 
+‘All the suffering that originates is caused by craving’: this is one contemplation. ‘With the utter cessation of craving there is no origination of suffering’: this is the second contemplation. When a mendicant meditates in this way they can expect enlightenment or non-return.” 
+
+<p>Then the Teacher went on to say: </p>
+
+<hr>
+<div class="verse">
+		<p id="p746"><span class="parno">746</span>
+		“Craving is a person’s partner 
+		<br>as they transmigrate on this long journey. 
+		<br>They go from this state to another, 
+		<br>but don’t escape transmigration. </p>
+		
+		
+		<p id="p747"><span class="parno">747</span>
+		Knowing this danger, 
+		<br>that craving is the cause of suffering—
+		<br>rid of craving, free of grasping, 
+		<br>a mendicant would wander mindful.” </p>
+</div>
+
+<hr>
+<p>“‘Could there be another way?’ … And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by grasping’: this is one contemplation. 
+‘With the utter cessation of grasping there is no origination of suffering’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>Then the Teacher went on to say: </p>
+
+<hr>
+	<div class="verse">
+			<p id="p748"><span class="parno">748</span>
+			“Grasping is the cause of continued existence; 
+			<br>one who exists falls into suffering. 
+			<br>Death comes to those who are born—
+			<br>this is the origination of suffering. </p>
+			
+			<p id="p749"><span class="parno">749</span>
+			That’s why with the end of grasping, 
+			<br>the astute, understanding rightly, 
+			<br>having directly known the end of rebirth, 
+			<br>do not proceed to a future life.” </p>
+		</div>
+
+<hr>
+
+<p>“‘Could there be another way?’ … And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by instigating karma’: this is one contemplation. 
+‘With the utter cessation of instigation there is no origination of suffering’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>Then the Teacher went on to say:</p>
+
+<hr>
+	<div class="verse">
+			<p id="p750"><span class="parno">750</span>
+			“All the suffering that originates 
+			<br>is caused by instigating karma. 
+			<br>With the cessation of instigation, 
+			<br>there is no origination of suffering. </p>
+			
+			<p id="p751"><span class="parno">751</span>
+			Knowing this danger, 
+			<br>that suffering is caused by instigating karma, 
+			<br>having given up all instigation, 
+			<br>one is freed with respects to instigation. </p>
+			
+			<p id="p752"><span class="parno">752</span>
+			For the mendicant with peaceful mind, 
+			<br>who has cut off craving for continued existence, 
+			<br>transmigration through births is finished; 
+			<br>there are no future lives for them.” </p>
+	</div>
+
+<hr>
+<p>
+“‘Could there be another way?’ … And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by sustenance’: this is one contemplation. 
+‘With the utter cessation of sustenance there is no origination of suffering’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.”</p>
+
+<p>Then the Teacher went on to say:</p>
+
+<hr>
+	<div class="verse">
+			<p id="p453"><span class="parno">453</span>
+			“All the suffering that originates 
+			<br>is caused by sustenance. 
+			<br>With the cessation of sustenance, 
+			<br>there is no origination of suffering. </p>
+			
+			<p id="p754"><span class="parno">754</span>
+			Knowing this danger, 
+			<br>that suffering is caused by sustenance, 
+			<br>completely understanding all sustenance, 
+			<br>one is independent of all sustenance. </p>
+			
+			<p id="p755"><span class="parno">755</span>Having rightly understood the state of health, 
+			<br>through the ending of defilements, 
+			<br>using after reflection, firm in principle, 
+			<br>a knowledge master cannot be reckoned.” </p>
+	</div>
+
+<hr>
+<p>“‘Could there be another way?’ … And how could there be? </p>
+
+<p>‘All the suffering that originates is caused by perturbation’: this is one contemplation. 
+‘With the utter cessation of perturbation there is no origination of suffering’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>
+Then the Teacher went on to say: </p>
+
+<hr>
+	<div class="verse">
+			<p id="p756"><span class="parno">756</span>
+			“All the suffering that originates 
+			<br>is caused by perturbation. 
+			<br>With the cessation of perturbation, 
+			<br>there is no origination of suffering. </p>
+			
+			<p id="p757"><span class="parno">757</span>
+			Knowing this danger, 
+			<br>that suffering is caused by perturbation, 
+			<br>that’s why, having relinquished perturbation, 
+			<br>and stopped making karmic choices, 
+			<br>imperturbable, free of grasping, 
+			<br>a mendicant would wander mindful.” </p>
+	</div>
+
+<hr>
+<p>“‘Could there be another way?’ … And how could there be?</p>
+
+<p>‘For the dependent there is agitation’: this is the first contemplation. 
+‘For the independent there’s no agitation’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>Then the Teacher went on to say:  </p>
+
+<hr>
+	<div class="verse">
+			<p id="p758"><span class="parno">758</span>
+			“For the independent there’s no agitation. 
+			<br>The dependent, grasping, 
+			<br>goes from this state to another, 
+			<br>without escaping transmigration. </p>
+			
+			<p id="p759"><span class="parno">759</span>
+			Knowing this danger, 
+			<br>the great fear in dependencies, 
+			<br>independent, free of grasping, 
+			<br>a mendicant would wander mindful.” </p>
+	</div>
+
+<hr>
+
+<p>“‘Could there be another way?’ … And how could there be? </p>
+
+<p>‘Formless states are more peaceful than states of form’: this is the first contemplation. ‘Cessation is more peaceful than formless states’: this is the second contemplation. When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>Then the Teacher went on to say: </p>
+
+<hr>
+	<div class="verse">
+			<p id="p760"><span class="parno">760</span>
+			“There are beings in the realm of luminous form, 
+			<br>and others stuck in the formless. 
+			<br>Not understanding cessation, 
+			<br>they return in future lives. </p>
+			
+			<p id="p761"><span class="parno">761</span>
+			But the people who completely understand form, 
+			<br>not stuck in the formless, 
+			<br>released in cessation—
+			<br>they are conquerors of death.” </p>
+	</div>
+
+<hr>
+<p> “‘Could there be another way?’ … And how could there be?</p>
+
+<p>‘What this world—with its gods, Māras, and Brahmās, this population with its ascetics and brahmins, its gods and humans—focuses on as true, the noble ones have clearly seen with right wisdom to be actually false’: this is the first contemplation. 
+‘What this world focuses on as false, the noble ones have clearly seen with right wisdom to be actually true’: this is the second contemplation. 
+When a mendicant meditates in this way they can expect enlightenment or non-return.” </p>
+
+<p>Then the Teacher went on to say:</p>
+
+<hr>
+	<div class="verse">
+			<p id="p762"><span class="parno">762</span>
+			“See how the world with its gods 
+			<br>imagines not-self to be self; 
+			<br>habituated to name and form, 
+			<br>imagining this is truth. </p>
+			
+			<p id="p763"><span class="parno">763</span>
+			For whatever you imagine it is, 
+			<br>it turns out to be something else. 
+			<br>And that is what is false in it, 
+			<br>for the ephemeral is deceptive by nature. </p>
+			
+			<p id="p764"><span class="parno">764</span>
+			Extinguishment has an undeceptive nature, 
+			<br>the noble ones know it as truth. 
+			<br>Having comprehended the truth,
+			<br>they are hungerless, extinguished.” </p>
+	</div>
+
+<hr>
+
+<p>“Suppose, mendicants, they questioned you thus: ‘Could there be another way to contemplate the pairs?’ You should say, ‘There could.’ And how could there be? </p>
+
+<p>‘What this world—with its gods, Māras, and Brahmās, this population with its ascetics and brahmins, its gods and humans—focuses on as happiness, the noble ones have clearly seen with right wisdom to be actually suffering’: this is the first contemplation. 
+‘What this world focuses on as suffering, the noble ones have clearly seen with right wisdom to be actually happiness’: this is the second contemplation. 
+When a mendicant meditates rightly contemplating a pair of teachings in this way—diligent, keen, and resolute—they can expect one of two results: 
+enlightenment in the present life, or if there’s something left over, non-return. </p>
+
+<p>That is what the Buddha said. Then the Holy One, the Teacher, went on to say: </p>
+
+<hr>
+
+	<div class="verse">
+			<p id="p765"><span class="parno">765</span>
+			“Sights, sounds, tastes, smells, 
+			<br>touches, and thoughts, the lot of them—
+			<br>they’re likable, desirable, and pleasurable 
+			<br>as long as you can say that they exist. </p>
+			
+			<p id="p766"><span class="parno">766</span>
+			For all the world with its gods, 
+			<br>this is what they agree is happiness. 
+			<br>And where they cease 
+			<br>is agreed on as suffering for them. </p>
+			
+			<p id="p767"><span class="parno">767</span>
+			The noble ones have seen as happiness 
+			<br>the ceasing of identity. 
+			<br>This insight by those who see 
+			<br>contradicts the whole world. </p>
+			
+			<p id="p768"><span class="parno">768</span>
+			What others say is happiness 
+			<br>the noble ones say is suffering. 
+			<br>What others say is suffering 
+			<br>the noble ones know as happiness. </p>
+			
+			<p id="p769"><span class="parno">769</span>
+			See, this teaching is hard to understand, 
+			<br>it confuses the ignorant. 
+			<br>There is darkness for the shrouded; 
+			<br>blackness for those who don’t see. </p>
+			
+			
+			<p id="p770"><span class="parno">770</span>
+			But the good are open; 
+			<br>like light for those who see. 
+			<br>Though close, they do not understand, 
+			<br>those fools inexpert in the teaching. </p>
+			
+			<p id="p771"><span class="parno">771</span>
+			They’re mired in desire to be reborn, 
+			<br>flowing along the stream of lives, 
+			<br>mired in Māra’s sway: 
+			<br>this teaching isn’t easy for them to understand. </p>
+			
+			<p id="p772"><span class="parno">772</span>
+			Who, apart from the noble ones, 
+			<br>is qualified to understand this state? 
+			<br>Having rightly understood this state, 
+			<br>the undefiled become fully extinguished.” </p>
+	</div>
+
+<hr>
+<p>That is what the Buddha said. Satisfied, the mendicants were happy with what the Buddha said. And while this discourse was being spoken, the minds of sixty mendicants were freed from defilements by not grasping. </p>
+
+</div>
+
+<div lang="pi">
+<h2>Dvayatānupassanāsutta</h2>
+
+<p>Evaṁ me sutaṁ:</p>
+
+<p>Ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati pubbārāme migāramātupāsāde. Tena kho pana samayena bhagavā tadahuposathe pannarase puṇṇāya puṇṇamāya rattiyā bhikkhusaṅghaparivuto abbhokāse nisinno hoti. Atha kho bhagavā tuṇhībhūtaṁ tuṇhībhūtaṁ bhikkhusaṅghaṁ anuviloketvā bhikkhū āmantesi: </p>
+
+<p>"‘Ye te, bhikkhave, kusalā dhammā ariyā niyyānikā sambodhagāmino, tesaṁ vo, bhikkhave, kusalānaṁ dhammānaṁ ariyānaṁ niyyānikānaṁ sambodhagāmīnaṁ kā upanisā savanāyā’ti, iti ce, bhikkhave, pucchitāro assu, te evamassu vacanīyā:  ‘yāvadeva dvayatānaṁ dhammānaṁ yathābhūtaṁ ñāṇāyā’ti.</p>
+
+<hr>
+
+<p>Kiñca dvayataṁ vadetha?</p>
+
+<p>
+Idaṁ dukkhaṁ, ayaṁ dukkhasamudayoti ayamekānupassanā. Ayaṁ dukkhanirodho, ayaṁ dukkhanirodhagāminī paṭipadāti, ayaṁ dutiyānupassanā. Evaṁ sammā dvayatānupassino kho, bhikkhave, bhikkhuno appamattassa ātāpino pahitattassa viharato dvinnaṁ phalānaṁ aññataraṁ phalaṁ pāṭikaṅkhaṁ – diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā"ti.</p>
+
+<p>Idamavoca bhagavā. Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">730</span>"Ye dukkhaṁ nappajānanti,
+<br>	atho dukkhassa sambhavaṁ;
+<br>	Yattha ca sabbaso dukkhaṁ,
+<br>	asesaṁ uparujjhati;
+<br>	Tañca maggaṁ na jānanti,
+<br>	dukkhūpasamagāminaṁ.</p>
+		
+		<p><span class="parno">731</span><a class="brnum" id="br2"></a>
+		Cetovimuttihīnā te,
+<br>	Atho paññāvimuttiyā;
+<br>	Abhabbā te antakiriyāya,
+<br>	Te ve jātijarūpagā.</p>
+		
+		<p><span class="parno">732</span><a class="brnum" id="br3"></a>
+		Ye ca dukkhaṁ pajānanti,
+<br>	atho dukkhassa sambhavaṁ;
+<br>	Yattha ca sabbaso dukkhaṁ,
+<br>	asesaṁ uparujjhati;
+<br>	Tañca maggaṁ pajānanti,
+<br>	dukkhūpasamagāminaṁ.</p>
+		
+		<p><span class="parno">733</span><a class="brnum" id="br4"></a>
+		Cetovimuttisampannā,
+<br>	Atho paññāvimuttiyā;
+<br>	Bhabbā te antakiriyāya,
+<br>	Na te jātijarūpagāti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br2."></a>‘Siyā aññenapi pariyāyena sammā dvayatānupassanā’ti, iti ce, bhikkhave, pucchitāro assu; ‘siyā’tissu vacanīyā. Kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ upadhipaccayāti, ayamekānupassanā. Upadhīnaṁ tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">734</span><a class="brnum" id="br5"></a>
+		"Upadhinidānā pabhavanti dukkhā,
+<br>	Ye keci lokasmimanekarūpā;
+<br>	Yo ve avidvā upadhiṁ karoti,
+<br>	Punappunaṁ dukkhamupeti mando;
+<br>	Tasmā pajānaṁ upadhiṁ na kayirā,
+<br>	Dukkhassa jātippabhavānupassīti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br3."></a>
+‘Siyā aññenapi pariyāyena sammā dvayatānupassanā’ti, iti ce, bhikkhave, pucchitāro assu; ‘siyā’tissu vacanīyā. Kathañca siyā? <br>
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ avijjāpaccayāti, ayamekānupassanā. Avijjāya tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">735</span><a class="brnum" id="br6"></a>
+		"Jātimaraṇasaṁsāraṁ,
+<br>	ye vajanti punappunaṁ;
+<br>	Itthabhāvaññathābhāvaṁ,
+<br>	avijjāyeva sā gati.	</p>
+		
+		<p><span class="parno">736</span><a class="brnum" id="br7"></a>
+		Avijjā hāyaṁ mahāmoho,
+<br>	Yenidaṁ saṁsitaṁ ciraṁ;
+<br>	Vijjāgatā ca ye sattā,
+<br>	Na te gacchanti punabbhavanti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br4."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ saṅkhārapaccayāti, ayamekānupassanā. Saṅkhārānaṁ tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">737</span><a class="brnum" id="br8"></a>
+		"Yaṁ kiñci dukkhaṁ sambhoti,
+<br>	sabbaṁ saṅkhārapaccayā;
+<br>	Saṅkhārānaṁ nirodhena,
+<br>	natthi dukkhassa sambhavo.</p>
+		
+		<p><span class="parno">738</span><a class="brnum" id="br9"></a>
+		Etamādīnavaṁ ñatvā,
+<br>	dukkhaṁ saṅkhārapaccayā;
+<br>	Sabbasaṅkhārasamathā,
+<br>	saññānaṁ uparodhanā;
+<br>	Evaṁ dukkhakkhayo hoti,
+<br>	etaṁ ñatvā yathātathaṁ.</p>
+		
+		<p><span class="parno">739</span><a class="brnum" id="br10"></a>
+		Sammaddasā vedaguno,
+<br>	Sammadaññāya paṇḍitā;
+<br>	Abhibhuyya mārasaṁyogaṁ,
+<br>	Na gacchanti punabbhavanti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br5."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ viññāṇapaccayāti, ayamekānupassanā. Viññāṇassa tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">740</span><a class="brnum" id="br11"></a>
+		"Yaṁ kiñci dukkhaṁ sambhoti,
+<br>	Sabbaṁ viññāṇapaccayā;
+<br>	Viññāṇassa nirodhena,
+<br>	Natthi dukkhassa sambhavo.</p>
+		
+		<p><span class="parno">741</span><a class="brnum" id="br12"></a>
+		Etamādīnavaṁ ñatvā,
+<br>	Dukkhaṁ viññāṇapaccayā;
+<br>	Viññāṇūpasamā bhikkhu,
+<br>	Nicchāto parinibbutoti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br6."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ phassapaccayāti, ayamekānupassanā. Phassassa tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">742</span><a class="brnum" id="br13"></a>
+		"Tesaṁ phassaparetānaṁ,
+<br>	Bhavasotānusārinaṁ;
+<br>	Kummaggapaṭipannānaṁ,
+<br>	Ārā saṁyojanakkhayo.</p>
+		
+		<p><span class="parno">743</span><a class="brnum" id="br14"></a>
+		Ye ca phassaṁ pariññāya,
+<br>	Aññāyupasame ratā;
+<br>	Te ve phassābhisamayā,
+<br>	Nicchātā parinibbutāti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br7."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ vedanāpaccayāti, ayamekānupassanā. Vedanānaṁ tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">744</span><a class="brnum" id="br15"></a>
+		"Sukhaṁ vā yadi vā dukkhaṁ,
+<br>	Adukkhamasukhaṁ saha;
+<br>	Ajjhattañca bahiddhā ca,
+<br>	Yaṁ kiñci atthi veditaṁ.</p>
+		
+		<p><span class="parno">745</span><a class="brnum" id="br16"></a>
+		Etaṁ dukkhanti ñatvāna,
+<br>	Mosadhammaṁ palokinaṁ;
+<br>	Phussa phussa vayaṁ passaṁ,
+<br>	Evaṁ tattha vijānati;
+<br>	Vedanānaṁ khayā bhikkhu,
+<br>	Nicchāto parinibbutoti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br8."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ taṇhāpaccayāti, ayamekānupassanā. Taṇhāya tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">746</span><a class="brnum" id="br17"></a>
+		"Taṇhādutiyo puriso,
+<br>	Dīghamaddhāna saṁsaraṁ;
+<br>	Itthabhāvaññathābhāvaṁ,
+<br>	Saṁsāraṁ nātivattati.</p>
+		
+		<p><span class="parno">747</span><a class="brnum" id="br18"></a>
+		Etamādīnavaṁ ñatvā,
+<br>	Taṇhaṁ dukkhassa sambhavaṁ;
+<br>	Vītataṇho anādāno,
+<br>	Sato bhikkhu paribbajeti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br9."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ upādānapaccayāti, ayamekānupassanā. Upādānānaṁ tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">748</span><a class="brnum" id="br19"></a>
+		"Upādānapaccayā bhavo,
+<br>	Bhūto dukkhaṁ nigacchati;
+<br>	Jātassa maraṇaṁ hoti,
+<br>	Eso dukkhassa sambhavo.</p>
+		
+		<p><span class="parno">749</span><a class="brnum" id="br20"></a>
+		Tasmā upādānakkhayā,
+<br>	Sammadaññāya paṇḍitā;
+<br>	Jātikkhayaṁ abhiññāya,
+<br>	Na gacchanti punabbhavanti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br10."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ ārambhapaccayāti, ayamekānupassanā. Ārambhānaṁ tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">750</span><a class="brnum" id="br21"></a>
+		"Yaṁ kiñci dukkhaṁ sambhoti,
+<br>	Sabbaṁ ārambhapaccayā;
+<br>	Ārambhānaṁ nirodhena,
+<br>	Natthi dukkhassa sambhavo.</p>
+		
+		<p><span class="parno">751</span><a class="brnum" id="br22"></a>
+		Etamādīnavaṁ ñatvā,
+<br>	Dukkhaṁ ārambhapaccayā;
+<br>	Sabbārambhaṁ paṭinissajja,
+<br>	Anārambhe vimuttino.</p>
+		
+		<p><span class="parno">752</span><a class="brnum" id="br23"></a>
+		Ucchinnabhavataṇhassa,
+<br>	Santacittassa bhikkhuno;
+<br>	Vikkhīṇo jātisaṁsāro,
+<br>	Natthi tassa punabbhavoti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br11."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ āhārapaccayāti, ayamekānupassanā. Āhārānaṁ tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">753</span><a class="brnum" id="br24"></a>
+		"Yaṁ kiñci dukkhaṁ sambhoti,<br> Sabbaṁ āhārapaccayā;
+<br>	Āhārānaṁ nirodhena,
+<br>	Natthi dukkhassa sambhavo.</p>
+		
+		<p><span class="parno">754</span><a class="brnum" id="br25"></a>
+		Etamādīnavaṁ ñatvā,<br> Dukkhaṁ āhārapaccayā;
+<br>	Sabbāhāraṁ pariññāya,
+<br>	Sabbāhāramanissito.</p>
+		
+		<p><span class="parno">755</span><a class="brnum" id="br26"></a>
+		Ārogyaṁ sammadaññāya,<br> Āsavānaṁ parikkhayā;
+<br>	Saṅkhāya sevī dhammaṭṭho,
+<br>	Saṅkhyaṁ nopeti vedagūti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br12."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ kiñci dukkhaṁ sambhoti sabbaṁ iñjitapaccayāti, ayamekānupassanā. Iñjitānaṁ tveva asesavirāganirodhā natthi dukkhassa sambhavoti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">756</span><a class="brnum" id="br27"></a>
+		"Yaṁ kiñci dukkhaṁ sambhoti,
+<br>	Sabbaṁ iñjitapaccayā;
+<br>	Iñjitānaṁ nirodhena,
+<br>	Natthi dukkhassa sambhavo.</p>
+		
+		<p><span class="parno">757</span><a class="brnum" id="br28"></a>
+		Etamādīnavaṁ ñatvā,
+<br>	Dukkhaṁ iñjitapaccayā;
+<br>	Tasmā hi ejaṁ vossajja,
+<br>	Saṅkhāre uparundhiya;
+<br>	Anejo anupādāno,
+<br>	Sato bhikkhu paribbajeti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br13."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Nissitassa calitaṁ hotīti, ayamekānupassanā. Anissito na calatīti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">758</span><a class="brnum" id="br29"></a>
+		"Anissito na calati,<br> Nissito ca upādiyaṁ;
+<br>	Itthabhāvaññathābhāvaṁ,
+<br>	Saṁsāraṁ nātivattati.</p>
+		
+		<p><span class="parno">759</span><a class="brnum" id="br30"></a>
+		Etamādīnavaṁ ñatvā,<br> Nissayesu mahabbhayaṁ;
+<br>	Anissito anupādāno,
+<br>	Sato bhikkhu paribbajeti.</p>
+</div>
+
+<hr>
+
+<p><a class="brnum" id="br14."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Rūpehi, bhikkhave, arūpā santatarāti, ayamekānupassanā. Arūpehi nirodho santataroti, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">760</span><a class="brnum" id="br31"></a>
+		"Ye ca rūpūpagā sattā,
+<br>	Ye ca arūpaṭṭhāyino;
+<br>	Nirodhaṁ appajānantā,
+<br>	Āgantāro punabbhavaṁ.</p>
+		
+		<p><span class="parno">761</span><a class="brnum" id="br32"></a>
+		Ye ca rūpe pariññāya,
+<br>	Arūpesu asaṇṭhitā;
+<br>	Nirodhe ye vimuccanti,
+<br>	Te janā maccuhāyinoti.</p>
+</div>
+
+<hr>
+<p><a class="brnum" id="br15."></a>
+‘Siyā aññenapi … pe … kathañca siyā? <br>
+
+<br>Yaṁ, bhikkhave, sadevakassa lokassa samārakassa sabrahmakassa sassamaṇabrāhmaṇiyā pajāya sadevamanussāya idaṁ saccanti upanijjhāyitaṁ tadamariyānaṁ etaṁ musāti yathābhūtaṁ sammappaññāya sudiṭṭhaṁ, ayamekānupassanā. Yaṁ, bhikkhave, sadevakassa … pe … sadevamanussāya idaṁ musāti upanijjhāyitaṁ, tadamariyānaṁ etaṁ saccanti yathābhūtaṁ sammappaññāya sudiṭṭhaṁ, ayaṁ dutiyānupassanā. <br>
+
+<br>Evaṁ sammā … pe … athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">762</span><a class="brnum" id="br33"></a>
+		"Anattani attamāniṁ,
+<br>	Passa lokaṁ sadevakaṁ;
+<br>	Niviṭṭhaṁ nāmarūpasmiṁ,
+<br>	Idaṁ saccanti maññati.</p>
+		
+		<p><span class="parno">763</span><a class="brnum" id="br34"></a>
+		Yena yena hi maññanti,
+<br>	Tato taṁ hoti aññathā;
+<br>	Tañhi tassa musā hoti,
+<br>	Mosadhammañhi ittaraṁ.</p>
+		
+		<p><span class="parno">764</span><a class="brnum" id="br35"></a>
+		Amosadhammaṁ nibbānaṁ,
+<br>	Tadariyā saccato vidū;
+<br>	Te ve saccābhisamayā,
+<br>	Nicchātā parinibbutāti.</p>
+</div>
+
+<hr>
+
+<p><a class="brnum" id="br16."></a>‘Siyā aññenapi pariyāyena sammā dvayatānupassanā’ti, iti ce, bhikkhave, pucchitāro assu; ‘siyā’tissu vacanīyā. Kathañca siyā?</p>
+
+<p>Yaṁ, bhikkhave, sadevakassa lokassa samārakassa sabrahmakassa sassamaṇabrāhmaṇiyā pajāya sadevamanussāya idaṁ sukhanti upanijjhāyitaṁ, tadamariyānaṁ etaṁ dukkhanti yathābhūtaṁ sammappaññāya sudiṭṭhaṁ, ayamekānupassanā. Yaṁ, bhikkhave, sadevakassa … pe … sadevamanussāya idaṁ dukkhanti upanijjhāyitaṁ tadamariyānaṁ etaṁ sukhanti yathābhūtaṁ sammappaññāya sudiṭṭhaṁ, ayaṁ dutiyānupassanā. Evaṁ sammā dvayatānupassino kho, bhikkhave, bhikkhuno appamattassa ātāpino pahitattassa viharato dvinnaṁ phalānaṁ aññataraṁ phalaṁ pāṭikaṅkhaṁ – diṭṭheva dhamme aññā, sati vā upādisese anāgāmitāti. </p>
+
+<p>Idamavoca bhagavā. Idaṁ vatvāna sugato athāparaṁ etadavoca satthā: </p>
+
+<hr>
+	<div class="verse">
+		<p><span class="parno">765</span><a class="brnum" id="br36"></a>
+		"Rūpā saddā rasā gandhā,
+<br>	Phassā dhammā ca kevalā;
+<br>	Iṭṭhā kantā manāpā ca,
+<br>	Yāvatatthīti vuccati.</p>
+		
+		<p><span class="parno">766</span><a class="brnum" id="br37"></a>
+		Sadevakassa lokassa,
+<br>	Ete vo sukhasammatā;
+<br>	Yattha cete nirujjhanti,
+<br>	Taṁ nesaṁ dukkhasammataṁ.</p>
+		
+		<p><span class="parno">767</span><a class="brnum" id="br38"></a>
+		Sukhanti diṭṭhamariyehi,
+<br>	Sakkāyassuparodhanaṁ;
+<br>	Paccanīkamidaṁ hoti,
+<br>	Sabbalokena passataṁ.</p>
+		
+		<p><span class="parno">768</span><a class="brnum" id="br39"></a>
+		Yaṁ pare sukhato āhu,
+<br>	Tadariyā āhu dukkhato;
+<br>	Yaṁ pare dukkhato āhu,
+<br>	Tadariyā sukhato vidū.</p>
+		
+		<p><span class="parno">769</span><a class="brnum" id="br40"></a>
+		Passa dhammaṁ durājānaṁ,
+<br>	Sampamūḷhetthaviddasu;
+<br>	Nivutānaṁ tamo hoti,
+<br>	Andhakāro apassataṁ.</p>
+		
+		<p><span class="parno">770</span><a class="brnum" id="br41"></a>
+		Satañca vivaṭaṁ hoti,
+<br>	Āloko passatāmiva;
+<br>	Santike na vijānanti,
+<br>	Magā dhammassa kovidā.</p>
+		
+		<p><span class="parno">771</span><a class="brnum" id="br42"></a>
+		Bhavarāgaparetehi,
+<br>	Bhavasotānusāribhi;
+<br>	Māradheyyānupannehi,
+<br>	Nāyaṁ dhammo susambudho.</p>
+		
+		<p><span class="parno">772</span><a class="brnum" id="br43"></a>
+		Ko nu aññatra mariyehi,
+<br>	Padaṁ sambuddhumarahati;
+<br>	Yaṁ padaṁ sammadaññāya,
+<br>	Parinibbanti anāsavā"ti.</p>
+</div>
+
+<hr>
+<p>
+
+Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti. Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne saṭṭhimattānaṁ bhikkhūnaṁ anupādāya āsavehi cittāni vimucciṁsūti.</p>
+
+<p class="endsection">Dvayatānupassanāsuttaṁ dvādasamaṁ.</p>
+
+	<div class="verse">
+		<p>Saccaṁ upadhi avijjā ca,
+<br>	saṅkhāre viññāṇapañcamaṁ;
+<br>	Phassavedaniyā taṇhā,
+<br>	upādānārambhaāhārā;
+<br>	Iñjitaṁ calitaṁ rūpaṁ,
+<br>	saccaṁ dukkhena soḷasāti.</p>
+</div>
+<p class="endsutta">Mahāvaggo tatiyo.</p>
+
+	<div class="verse">
+		<p>Pabbajjā ca padhānañca,
+<br>	subhāsitañca sundari;
+<br>	Māghasuttaṁ sabhiyo ca,
+<br>	selo sallañca vuccati.</p>
+		
+		<p>Vāseṭṭho cāpi kokāli,
+<br>	Nālako dvayatānupassanā;
+<br>	Dvādasetāni suttāni,
+<br>	Mahāvaggoti vuccatīti.</p>
+</div>
+
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp3.11.html#content"></a><a id="next-sutta" href="../snp/snp4.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp3.html">Chapter 3: The Great Chapter</a>3:12 Contemplating Pairs
+</div>
+	
+ 	<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

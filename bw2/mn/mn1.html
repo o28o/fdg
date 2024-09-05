@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 1</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+		<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+
+		<h2>MN1: The Root of All Things - Mūlapariyāya Sutta</h2>
+		
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn1">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was staying near Ukkaṭṭhā, in the Subhaga Forest at the root of a magnificent sal tree. There the Buddha addressed the mendicants, “Mendicants!” </p>
+
+<hr>
+
+<p>“Venerable sir,” they replied. The Buddha said this: </p>
+
+<p>“Mendicants, I will teach you the explanation of the root of all things. Listen and apply your minds well, I will speak.” </p>
+
+<p>“Yes, sir,” they replied. The Buddha said this: </p>
+
+<hr>
+
+<p id="p2"><span class="parno">2</span>“Take an unlearned ordinary person who has not seen the noble ones, and is neither skilled nor trained in the teaching of the noble ones. They’ve not seen true persons, and are neither skilled nor trained in the teaching of the true persons. They perceive earth as earth. Having perceived earth as earth, they conceive it to be earth, they conceive it in earth, they conceive it as earth, they conceive that ‘earth is mine’, they take pleasure in earth. Why is that? Because they haven’t completely understood it, I say. </p>
+
+<hr>
+
+<p id="p3"><span class="parno">3</span>They perceive water as water. Having perceived water as water, they conceive it to be water … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p4"><span class="parno">4</span>They perceive fire as fire. Having perceived fire as fire, they conceive it to be fire … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p5"><span class="parno">5</span>They perceive air as air. Having perceived air as air, they conceive it to be air … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p6"><span class="parno">6</span>They perceive creatures as creatures. Having perceived creatures as creatures, they conceive it to be creatures … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p7"><span class="parno">7</span>They perceive gods as gods. Having perceived gods as gods, they conceive it to be gods … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p8"><span class="parno">8</span>They perceive the Progenitor as the Progenitor. Having perceived the Progenitor as the Progenitor, they conceive it to be the Progenitor … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<hr>
+
+<p id="p9"><span class="parno">9</span>They perceive Brahmā as Brahmā. Having perceived Brahmā as Brahmā, they conceive it to be Brahmā … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p10"><span class="parno">10</span>They perceive those of streaming radiance as those of streaming radiance. Having perceived those of streaming radiance as those of streaming radiance, they conceive it to be those of streaming radiance … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p11"><span class="parno">11</span>They perceive those replete with glory as those replete with glory. Having perceived those replete with glory as those replete with glory, they conceive it to be those replete with glory … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p12"><span class="parno">12</span>They perceive those of abundant fruit as those of abundant fruit. Having perceived those of abundant fruit as those of abundant fruit, they conceive it to be those of abundant fruit … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p13"><span class="parno">13</span>They perceive the Vanquisher as the Vanquisher. Having perceived the Vanquisher as the Vanquisher, they conceive it to be the Vanquisher … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<hr>
+
+<p id="p14"><span class="parno">14</span>They perceive the dimension of infinite space as the dimension of infinite space. Having perceived the dimension of infinite space as the dimension of infinite space, they conceive it to be the dimension of infinite space … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<hr>
+
+<p id="p15"><span class="parno">15</span>They perceive the dimension of infinite consciousness as the dimension of infinite consciousness. Having perceived the dimension of infinite consciousness as the dimension of infinite consciousness, they conceive it to be the dimension of infinite consciousness … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p16"><span class="parno">16</span>They perceive the dimension of nothingness as the dimension of nothingness. Having perceived the dimension of nothingness as the dimension of nothingness, they conceive it to be the dimension of nothingness … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p17"><span class="parno">17</span>They perceive the dimension of neither perception nor non-perception as the dimension of neither perception nor non-perception. Having perceived the dimension of neither perception nor non-perception as the dimension of neither perception nor non-perception, they conceive it to be the dimension of neither perception nor non-perception … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p18"><span class="parno">18</span>They perceive the seen as the seen. Having perceived the seen as the seen, they conceive it to be the seen … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p19"><span class="parno">19</span>They perceive the heard as the heard. Having perceived the heard as the heard, they conceive it to be the heard … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p20"><span class="parno">20</span>They perceive the thought as the thought. Having perceived the thought as the thought, they conceive it to be the thought … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p21"><span class="parno">21</span>They perceive the known as the known. Having perceived the known as the known, they conceive it to be the known … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p22"><span class="parno">22</span>They perceive oneness as oneness. Having perceived oneness as oneness, they conceive it to be oneness … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p23"><span class="parno">23</span>They perceive diversity as diversity. Having perceived diversity as diversity, they conceive it to be diversity … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p24"><span class="parno">24</span>They perceive all as all. Having perceived all as all, they conceive it to be all … Why is that? Because they haven’t completely understood it, I say. </p>
+
+<p id="p25"><span class="parno">25</span>They perceive extinguishment as extinguishment. Having perceived extinguishment as extinguishment, they conceive it to be extinguishment, they conceive it in extinguishment, they conceive it as extinguishment, they conceive that ‘extinguishment is mine’, they take pleasure in extinguishment. Why is that? Because they haven’t completely understood it, I say. </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="p26"><span class="parno">26</span>A mendicant who is a trainee, who hasn’t achieved their heart’s desire, but lives aspiring to the supreme sanctuary from the yoke, directly knows earth as earth. Having directly known earth as earth, let them not conceive it to be earth, let them not conceive it in earth, let them not conceive it as earth, let them not conceive that ‘earth is mine’, let them not take pleasure in earth. Why is that? So that they may completely understand it, I say. </p>
+
+<p id="p27"><span class="parno">27</span>They directly know water … fire … air … creatures … gods … the Progenitor … Brahmā … those of streaming radiance … those replete with glory … those of abundant fruit … the Vanquisher … the dimension of infinite space … the dimension of infinite consciousness … the dimension of nothingness … the dimension of neither perception nor non-perception … the seen … the heard … the thought … the known … oneness … diversity … all … They directly know extinguishment as extinguishment. Having directly known extinguishment as extinguishment, let them not conceive it to be extinguishment, let them not conceive it in extinguishment, let them not conceive it as extinguishment, let them not conceive that ‘extinguishment is mine’, let them not take pleasure in extinguishment. Why is that? So that they may completely understand it, I say. </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="p28"><span class="parno">28</span>A mendicant who is perfected—with defilements ended, who has completed the spiritual journey, done what had to be done, laid down the burden, achieved their own true goal, utterly ended the fetters of rebirth, and is rightly freed through enlightenment—directly knows earth as earth. Having directly known earth as earth, they do not conceive it to be earth, they do not conceive it in earth, they do not conceive it as earth, they do not conceive that ‘earth is mine’, they do not take pleasure in earth. Why is that? Because they have completely understood it, I say. </p>
+
+<p id="29"><span class="parno">29</span>They directly know water … fire … air … creatures … gods … the Progenitor … Brahmā … those of streaming radiance … those replete with glory … those of abundant fruit … the Vanquisher … the dimension of infinite space … the dimension of infinite consciousness … the dimension of nothingness … the dimension of neither perception nor non-perception … the seen … the heard … the thought … the known … oneness … diversity … all … They directly know extinguishment as extinguishment. Having directly known extinguishment as extinguishment, they do not conceive it to be extinguishment, they do not conceive it in extinguishment, they do not conceive it as extinguishment, they do not conceive that ‘extinguishment is mine’, they do not take pleasure in extinguishment. Why is that? Because they have completely understood it, I say. </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="30"><span class="parno">30</span>A mendicant who is perfected—with defilements ended, who has completed the spiritual journey, done what had to be done, laid down the burden, achieved their own true goal, utterly ended the fetters of rebirth, and is rightly freed through enlightenment—directly knows earth as earth. Having directly known earth as earth, they do not conceive it to be earth, they do not conceive it in earth, they do not conceive it as earth, they do not conceive that ‘earth is mine’, they do not take pleasure in earth. Why is that? Because they’re free of greed due to the ending of greed. </p>
+
+<p id="31"><span class="parno">31</span>They directly know water … fire … air … creatures … gods … the Progenitor … Brahmā … those of streaming radiance … those replete with glory … those of abundant fruit … the Vanquisher … the dimension of infinite space … the dimension of infinite consciousness … the dimension of nothingness … the dimension of neither perception nor non-perception … the seen … the heard … the thought … the known … oneness … diversity … all … They directly know extinguishment as extinguishment. Having directly known extinguishment as extinguishment, they do not conceive it to be extinguishment, they do not conceive it in extinguishment, they do not conceive it as extinguishment, they do not conceive that ‘extinguishment is mine’, they do not take pleasure in extinguishment. Why is that? Because they’re free of greed due to the ending of greed. </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="p32"><span class="parno">32</span>A mendicant who is perfected—with defilements ended, who has completed the spiritual journey, done what had to be done, laid down the burden, achieved their own true goal, utterly ended the fetters of rebirth, and is rightly freed through enlightenment—directly knows earth as earth. Having directly known earth as earth, they do not conceive it to be earth, they do not conceive it in earth, they do not conceive it as earth, they do not conceive that ‘earth is mine’, they do not take pleasure in earth. Why is that? Because they’re free of hate due to the ending of hate. </p>
+
+<p id="p33"><span class="parno">33</span>They directly know water … fire … air … creatures … gods … the Progenitor … Brahmā … those of streaming radiance … those replete with glory … those of abundant fruit … the Vanquisher … the dimension of infinite space … the dimension of infinite consciousness … the dimension of nothingness … the dimension of neither perception nor non-perception … the seen … the heard … the thought … the known … oneness … diversity … all … They directly know extinguishment as extinguishment. Having directly known extinguishment as extinguishment, they do not conceive it to be extinguishment, they do not conceive it in extinguishment, they do not conceive it as extinguishment, they do not conceive that ‘extinguishment is mine’, they do not take pleasure in extinguishment. Why is that? Because they’re free of hate due to the ending of hate. </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="p34"><span class="parno">34</span>A mendicant who is perfected—with defilements ended, who has completed the spiritual journey, done what had to be done, laid down the burden, achieved their own true goal, utterly ended the fetters of rebirth, and is rightly freed through enlightenment—directly knows earth as earth. Having directly known earth as earth, they do not conceive it to be earth, they do not conceive it in earth, they do not conceive it as earth, they do not conceive that ‘earth is mine’, they do not take pleasure in earth. Why is that? Because they’re free of delusion due to the ending of delusion. </p>
+
+<p id="p35"><span class="parno">35</span>They directly know water … fire … air … creatures … gods … the Progenitor … Brahmā … those of streaming radiance … those replete with glory … those of abundant fruit … the Vanquisher … the dimension of infinite space … the dimension of infinite consciousness … the dimension of nothingness … the dimension of neither perception nor non-perception … the seen … the heard … the thought … the known … oneness … diversity … all … They directly know extinguishment as extinguishment. Having directly known extinguishment as extinguishment, they do not conceive it to be extinguishment, they do not conceive it in extinguishment, they do not conceive it as extinguishment, they do not conceive that ‘extinguishment is mine’, they do not take pleasure in extinguishment. Why is that? Because they’re free of delusion due to the ending of delusion. </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="p36"><span class="parno">36</span>The Realized One, the perfected one, the fully awakened Buddha directly knows earth as earth. Having directly known earth as earth, he does not conceive it to be earth, he does not conceive it in earth, he does not conceive it as earth, he does not conceive that ‘earth is mine’, he does not take pleasure in earth. Why is that? Because the Realized One has completely understood it to the end, I say. </p>
+
+<p id="p37"><span class="parno">37</span>He directly knows water … fire … air … creatures … gods … the Progenitor … Brahmā … those of streaming radiance … those replete with glory … those of abundant fruit … the Vanquisher … the dimension of infinite space … the dimension of infinite consciousness … the dimension of nothingness … the dimension of neither perception nor non-perception … the seen … the heard … the thought … the known … oneness … diversity … all … He directly knows extinguishment as extinguishment. Having directly known extinguishment as extinguishment, he does not conceive it to be extinguishment, he does not conceive it in extinguishment, he does not conceive it as extinguishment, he does not conceive that ‘extinguishment is mine’, he does not take pleasure in extinguishment. Why is that? Because the Realized One has completely understood it to the end, I say. </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="p89"><span class="parno">38</span>The Realized One, the perfected one, the fully awakened Buddha directly knows earth as earth. Having directly known earth as earth, he does not conceive it to be earth, he does not conceive it in earth, he does not conceive it as earth, he does not conceive that ‘earth is mine’, he does not take pleasure in earth. Why is that? Because he has understood that taking pleasure is the root of suffering, and that rebirth comes from continued existence; whoever has come to be gets old and dies. That’s why the Realized One—with the ending, fading away, cessation, giving up, and letting go of all cravings—has awakened to the supreme perfect Awakening, I say. </p>
+
+<p id="p39"><span class="parno">39</span>He directly knows water … fire … air … creatures … gods … the Progenitor … Brahmā … those of streaming radiance … those replete with glory … those of abundant fruit … the Vanquisher … the dimension of infinite space … the dimension of infinite consciousness … the dimension of nothingness … the dimension of neither perception nor non-perception … the seen … the heard … the thought … the known … oneness … diversity … all … He directly knows extinguishment as extinguishment. Having directly known extinguishment as extinguishment, he does not conceive it to be extinguishment, he does not conceive it in extinguishment, he does not conceive it as extinguishment, he does not conceive that ‘extinguishment is mine’, he does not take pleasure in extinguishment. Why is that? Because he has understood that taking pleasure is the root of suffering, and that rebirth comes from continued existence; whoever has come to be gets old and dies. That’s why the Realized One—with the ending, fading away, cessation, giving up, and letting go of all cravings—has awakened to the supreme perfect Awakening, I say.” </p>
+
+<hr>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p id="p40"><span class="parno">40</span>That is what the Buddha said. But the mendicants took no pleasure in what the Buddha said.</p>
+
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā ukkaṭṭhāyaṁ viharati subhagavane sālarājamūle. Tatra kho bhagavā bhikkhū āmantesi: "bhikkhavo"ti. </p>
+
+<hr>
+
+<p>"Bhadante"ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:</p>
+
+<p>"Sabbadhammamūlapariyāyaṁ vo, bhikkhave, desessāmi. Taṁ suṇātha, sādhukaṁ manasi karotha, bhāsissāmī"ti. </p>
+
+<p>"Evaṁ, bhante"ti kho te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: </p>
+
+<hr>
+
+<p><span class="parno">2</span>"Idha, bhikkhave, assutavā puthujjano ariyānaṁ adassāvī ariyadhammassa akovido ariyadhamme avinīto, sappurisānaṁ adassāvī sappurisadhammassa akovido sappurisadhamme avinīto — <span class="var" title="paṭhaviṁ (bj, s1-3, km, pts1)" id="note1">pathaviṁ</span> pathavito sañjānāti; pathaviṁ pathavito saññatvā pathaviṁ maññati, pathaviyā maññati, pathavito maññati, pathaviṁ meti maññati, pathaviṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(1)</span></p>
+
+<hr>
+
+<p><span class="parno">3</span>Āpaṁ āpato sañjānāti; āpaṁ āpato saññatvā āpaṁ maññati, āpasmiṁ maññati, āpato maññati, āpaṁ meti maññati, āpaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">4</span>Tejaṁ tejato sañjānāti; tejaṁ tejato saññatvā tejaṁ maññati, tejasmiṁ maññati, tejato maññati, tejaṁ meti maññati, tejaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">5</span>Vāyaṁ vāyato sañjānāti; vāyaṁ vāyato saññatvā vāyaṁ maññati, vāyasmiṁ maññati, vāyato maññati, vāyaṁ meti maññati, vāyaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(4)</span></p>
+
+<p><span class="parno">6</span>Bhūte bhūtato sañjānāti; bhūte bhūtato saññatvā bhūte maññati, bhūtesu maññati, bhūtato maññati, bhūte meti maññati, bhūte abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(5)</span></p>
+
+<p><span class="parno">7</span>Deve devato sañjānāti; deve devato saññatvā deve maññati, devesu maññati, devato maññati, deve meti maññati, deve abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(6)</span></p>
+
+<p><span class="parno">8</span>Pajāpatiṁ pajāpatito sañjānāti; pajāpatiṁ pajāpatito saññatvā pajāpatiṁ maññati, pajāpatismiṁ maññati, pajāpatito maññati, pajāpatiṁ meti maññati, pajāpatiṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(7)</span></p>
+
+<hr>
+
+<p><span class="parno">9</span>Brahmaṁ brahmato sañjānāti; brahmaṁ brahmato saññatvā brahmaṁ maññati, brahmasmiṁ maññati, brahmato maññati, brahmaṁ meti maññati, brahmaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(8)</span></p>
+
+<p><span class="parno">10</span>Ābhassare ābhassarato sañjānāti; ābhassare ābhassarato saññatvā ābhassare maññati, ābhassaresu maññati, ābhassarato maññati, ābhassare meti maññati, ābhassare abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(9)</span></p>
+
+<p><span class="parno">11</span>Subhakiṇhe subhakiṇhato sañjānāti; subhakiṇhe subhakiṇhato saññatvā subhakiṇhe maññati, subhakiṇhesu maññati, subhakiṇhato maññati, subhakiṇhe meti maññati, subhakiṇhe abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(10)</span></p>
+
+<p><span class="parno">12</span>Vehapphale vehapphalato sañjānāti; vehapphale vehapphalato saññatvā vehapphale maññati, vehapphalesu maññati, vehapphalato maññati, vehapphale meti maññati, vehapphale abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(11)</span></p>
+
+<p><span class="parno">13</span>Abhibhuṁ abhibhuto sañjānāti; abhibhuṁ abhibhuto saññatvā abhibhuṁ maññati, abhibhusmiṁ maññati, abhibhuto maññati, abhibhuṁ meti maññati, abhibhuṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(12)</span></p>
+
+<hr>
+
+<p><span class="parno">14</span>Ākāsānañcāyatanaṁ ākāsānañcāyatanato sañjānāti; ākāsānañcāyatanaṁ ākāsānañcāyatanato saññatvā ākāsānañcāyatanaṁ maññati, ākāsānañcāyatanasmiṁ maññati, ākāsānañcāyatanato maññati, ākāsānañcāyatanaṁ meti maññati, ākāsānañcāyatanaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(13)</span></p>
+
+<hr>
+
+<p><span class="parno">15</span>Viññāṇañcāyatanaṁ viññāṇañcāyatanato sañjānāti; viññāṇañcāyatanaṁ viññāṇañcāyatanato saññatvā viññāṇañcāyatanaṁ maññati, viññāṇañcāyatanasmiṁ maññati, viññāṇañcāyatanato maññati, viññāṇañcāyatanaṁ meti maññati, viññāṇañcāyatanaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(14)</span></p>
+
+<p><span class="parno">16</span>Ākiñcaññāyatanaṁ ākiñcaññāyatanato sañjānāti; ākiñcaññāyatanaṁ ākiñcaññāyatanato saññatvā ākiñcaññāyatanaṁ maññati, ākiñcaññāyatanasmiṁ maññati, ākiñcaññāyatanato maññati, ākiñcaññāyatanaṁ meti maññati, ākiñcaññāyatanaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(15)</span></p>
+
+<p><span class="parno">17</span>Nevasaññānāsaññāyatanaṁ nevasaññānāsaññāyatanato sañjānāti; nevasaññānāsaññāyatanaṁ nevasaññānāsaññāyatanato saññatvā nevasaññānāsaññāyatanaṁ maññati, nevasaññānāsaññāyatanasmiṁ maññati, nevasaññānāsaññāyatanato maññati, nevasaññānāsaññāyatanaṁ meti maññati, nevasaññānāsaññāyatanaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(16)</span></p>
+
+<p><span class="parno">18</span>Diṭṭhaṁ diṭṭhato sañjānāti; diṭṭhaṁ diṭṭhato saññatvā diṭṭhaṁ maññati, diṭṭhasmiṁ maññati, diṭṭhato maññati, diṭṭhaṁ meti maññati, diṭṭhaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(17)</span></p>
+
+<p><span class="parno">19</span>Sutaṁ sutato sañjānāti; sutaṁ sutato saññatvā sutaṁ maññati, sutasmiṁ maññati, sutato maññati, sutaṁ meti maññati, sutaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(18)</span></p>
+
+<p><span class="parno">20</span>Mutaṁ mutato sañjānāti; mutaṁ mutato saññatvā mutaṁ maññati, mutasmiṁ maññati, mutato maññati, mutaṁ meti maññati, mutaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(19)</span></p>
+
+<p><span class="parno">21</span>Viññātaṁ viññātato sañjānāti; viññātaṁ viññātato saññatvā viññātaṁ maññati, viññātasmiṁ maññati, viññātato maññati, viññātaṁ meti maññati, viññātaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(20)</span></p>
+
+<p><span class="parno">22</span>Ekattaṁ ekattato sañjānāti; ekattaṁ ekattato saññatvā ekattaṁ maññati, ekattasmiṁ maññati, ekattato maññati, ekattaṁ meti maññati, ekattaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(21)</span></p>
+
+<p><span class="parno">23</span>Nānattaṁ nānattato sañjānāti; nānattaṁ nānattato saññatvā nānattaṁ maññati, nānattasmiṁ maññati, nānattato maññati, nānattaṁ meti maññati, nānattaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(22)</span></p>
+
+<p><span class="parno">24</span>Sabbaṁ sabbato sañjānāti; sabbaṁ sabbato saññatvā sabbaṁ maññati, sabbasmiṁ maññati, sabbato maññati, sabbaṁ meti maññati, sabbaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(23)</span></p>
+
+<p><span class="parno">25</span>Nibbānaṁ nibbānato sañjānāti; nibbānaṁ nibbānato saññatvā nibbānaṁ maññati, nibbānasmiṁ maññati, nibbānato maññati, nibbānaṁ meti maññati, nibbānaṁ abhinandati. Taṁ kissa hetu? ‘Apariññātaṁ tassā’ti vadāmi. <span class="brnum">(24)</span></p>
+
+<hr>
+
+<p class="endsection">Puthujjanavasena paṭhamanayabhūmiparicchedo niṭṭhito.</p>
+
+<hr>
+
+<p><span class="parno">26</span>Yopi so, bhikkhave, bhikkhu <span class="var" title="sekho (bj, s1-3, km, pts1)" id="note2">sekkho</span> appattamānaso anuttaraṁ yogakkhemaṁ patthayamāno viharati, sopi pathaviṁ pathavito abhijānāti; pathaviṁ pathavito <span class="var" title="abhiññatvā (si, mr)" id="note3">abhiññāya</span> pathaviṁ mā <span class="var" title="vā maññati (si) | māmaññī (s1)" id="note4">maññi</span>, pathaviyā mā maññi, pathavito mā maññi, pathaviṁ meti mā maññi, pathaviṁ <span class="var" title="vā abhinandati (si) | mābhinandī (s1)" id="note5">mābhinandi</span>. Taṁ kissa hetu? ‘Pariññeyyaṁ tassā’ti vadāmi.</p>
+
+<p><span class="parno">27</span>Āpaṁ … pe … tejaṁ … vāyaṁ … bhūte … deve … pajāpatiṁ … brahmaṁ … ābhassare … subhakiṇhe … vehapphale … abhibhuṁ … ākāsānañcāyatanaṁ … viññāṇañcāyatanaṁ … ākiñcaññāyatanaṁ … nevasaññānāsaññāyatanaṁ … diṭṭhaṁ … sutaṁ … mutaṁ … viññātaṁ … ekattaṁ … nānattaṁ … sabbaṁ … nibbānaṁ nibbānato abhijānāti; nibbānaṁ nibbānato abhiññāya nibbānaṁ mā maññi, nibbānasmiṁ mā maññi, nibbānato mā maññi, nibbānaṁ meti mā maññi, nibbānaṁ mābhinandi. Taṁ kissa hetu? ‘Pariññeyyaṁ tassā’ti vadāmi.</p>
+
+<hr>
+
+<p class="endsection">Sekkhavasena dutiyanayabhūmiparicchedo niṭṭhito.</p>
+
+<hr>
+
+<p><span class="parno">28</span>Yopi so, bhikkhave, bhikkhu arahaṁ khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññāvimutto, sopi pathaviṁ pathavito abhijānāti; pathaviṁ pathavito abhiññāya pathaviṁ na maññati, pathaviyā na maññati, pathavito na maññati, pathaviṁ meti na maññati, pathaviṁ nābhinandati. Taṁ kissa hetu? ‘Pariññātaṁ tassā’ti vadāmi.</p>
+
+<p><span class="parno">29</span>Āpaṁ … pe … tejaṁ … vāyaṁ … bhūte … deve … pajāpatiṁ … brahmaṁ … ābhassare … subhakiṇhe … vehapphale … abhibhuṁ … ākāsānañcāyatanaṁ … viññāṇañcāyatanaṁ … ākiñcaññāyatanaṁ … nevasaññānāsaññāyatanaṁ … diṭṭhaṁ … sutaṁ … mutaṁ … viññātaṁ … ekattaṁ … nānattaṁ … sabbaṁ … nibbānaṁ nibbānato abhijānāti; nibbānaṁ nibbānato abhiññāya nibbānaṁ na maññati, nibbānasmiṁ na maññati, nibbānato na maññati, nibbānaṁ meti na maññati, nibbānaṁ nābhinandati. Taṁ kissa hetu? ‘Pariññātaṁ tassā’ti vadāmi.</p>
+
+<hr>
+
+<p class="endsection">Khīṇāsavavasena tatiyanayabhūmiparicchedo niṭṭhito.</p>
+
+<hr>
+
+<p><span class="parno">30</span>Yopi so, bhikkhave, bhikkhu arahaṁ khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññā vimutto, sopi pathaviṁ pathavito abhijānāti; pathaviṁ pathavito abhiññāya pathaviṁ na maññati, pathaviyā na maññati, pathavito na maññati, pathaviṁ meti na maññati, pathaviṁ nābhinandati. Taṁ kissa hetu? Khayā rāgassa, vītarāgattā.</p>
+
+<p><span class="parno">31</span>Āpaṁ … pe … tejaṁ … vāyaṁ … bhūte … deve … pajāpatiṁ … brahmaṁ … ābhassare … subhakiṇhe … vehapphale … abhibhuṁ … ākāsānañcāyatanaṁ … viññāṇañcāyatanaṁ … ākiñcaññāyatanaṁ … nevasaññānāsaññāyatanaṁ … diṭṭhaṁ … sutaṁ … mutaṁ … viññātaṁ … ekattaṁ … nānattaṁ … sabbaṁ … nibbānaṁ nibbānato abhijānāti; nibbānaṁ nibbānato abhiññāya nibbānaṁ na maññati, nibbānasmiṁ na maññati, nibbānato na maññati, nibbānaṁ meti na maññati, nibbānaṁ nābhinandati. Taṁ kissa hetu? Khayā rāgassa, vītarāgattā.</p>
+
+<hr>
+
+<p class="endsection">Khīṇāsavavasena catutthanayabhūmiparicchedo niṭṭhito.</p>
+
+<hr>
+
+<p><span class="parno">32</span>Yopi so, bhikkhave, bhikkhu arahaṁ khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññāvimutto, sopi pathaviṁ pathavito abhijānāti; pathaviṁ pathavito abhiññāya pathaviṁ na maññati, pathaviyā na maññati, pathavito na maññati, pathaviṁ meti na maññati, pathaviṁ nābhinandati. Taṁ kissa hetu? Khayā dosassa, vītadosattā.</p>
+
+<p><span class="parno">33</span>Āpaṁ … pe … tejaṁ … vāyaṁ … bhūte … deve … pajāpatiṁ … brahmaṁ … ābhassare … subhakiṇhe … vehapphale … abhibhuṁ … ākāsānañcāyatanaṁ … viññāṇañcāyatanaṁ … ākiñcaññāyatanaṁ … nevasaññānāsaññāyatanaṁ … diṭṭhaṁ … sutaṁ … mutaṁ … viññātaṁ … ekattaṁ … nānattaṁ … sabbaṁ … nibbānaṁ nibbānato abhijānāti; nibbānaṁ nibbānato abhiññāya nibbānaṁ na maññati, nibbānasmiṁ na maññati, nibbānato na maññati, nibbānaṁ meti na maññati, nibbānaṁ nābhinandati. Taṁ kissa hetu? Khayā dosassa, vītadosattā.</p>
+
+<hr>
+
+<p class="endsection">Khīṇāsavavasena pañcamanayabhūmiparicchedo niṭṭhito.</p>
+
+<hr>
+
+<p><span class="parno">34</span>Yopi so, bhikkhave, bhikkhu arahaṁ khīṇāsavo vusitavā katakaraṇīyo ohitabhāro anuppattasadattho parikkhīṇabhavasaṁyojano sammadaññāvimutto, sopi pathaviṁ pathavito abhijānāti; pathaviṁ pathavito abhiññāya pathaviṁ na maññati, pathaviyā na maññati, pathavito na maññati, pathaviṁ meti na maññati, pathaviṁ nābhinandati. Taṁ kissa hetu? Khayā mohassa, vītamohattā.</p>
+
+<p><span class="parno">35</span>Āpaṁ … pe … tejaṁ … vāyaṁ … bhūte … deve … pajāpatiṁ … brahmaṁ … ābhassare … subhakiṇhe … vehapphale … abhibhuṁ … ākāsānañcāyatanaṁ … viññāṇañcāyatanaṁ … ākiñcaññāyatanaṁ … nevasaññānāsaññāyatanaṁ … diṭṭhaṁ … sutaṁ … mutaṁ … viññātaṁ … ekattaṁ … nānattaṁ … sabbaṁ … nibbānaṁ nibbānato abhijānāti; nibbānaṁ nibbānato abhiññāya nibbānaṁ na maññati, nibbānasmiṁ na maññati, nibbānato na maññati, nibbānaṁ meti na maññati, nibbānaṁ nābhinandati. Taṁ kissa hetu? Khayā mohassa, vītamohattā.</p>
+
+<hr>
+
+<p class="endsection">Khīṇāsavavasena chaṭṭhanayabhūmiparicchedo niṭṭhito.</p>
+
+<hr>
+
+<p><span class="parno">36</span>Tathāgatopi, bhikkhave, arahaṁ sammāsambuddho pathaviṁ pathavito abhijānāti; pathaviṁ pathavito abhiññāya pathaviṁ na maññati, pathaviyā na maññati, pathavito na maññati, pathaviṁ meti na maññati, pathaviṁ nābhinandati. Taṁ kissa hetu? ‘Pariññātantaṁ tathāgatassā’ti vadāmi.</p>
+
+<p><span class="parno">37</span>Āpaṁ … pe … tejaṁ … vāyaṁ … bhūte … deve … pajāpatiṁ … brahmaṁ … ābhassare … subhakiṇhe … vehapphale … abhibhuṁ … ākāsānañcāyatanaṁ … viññāṇañcāyatanaṁ … ākiñcaññāyatanaṁ … nevasaññānāsaññāyatanaṁ … diṭṭhaṁ … sutaṁ … mutaṁ … viññātaṁ … ekattaṁ … nānattaṁ … sabbaṁ … nibbānaṁ nibbānato abhijānāti; nibbānaṁ nibbānato abhiññāya nibbānaṁ na maññati, nibbānasmiṁ na maññati, nibbānato na maññati, nibbānaṁ meti na maññati, nibbānaṁ nābhinandati. Taṁ kissa hetu? ‘Pariññātantaṁ tathāgatassā’ti vadāmi.</p>
+
+<hr>
+
+<p class="endsection">Tathāgatavasena sattamanayabhūmiparicchedo niṭṭhito.</p>
+
+<hr>
+
+<p><span class="parno">38</span>Tathāgatopi, bhikkhave, arahaṁ sammāsambuddho pathaviṁ pathavito abhijānāti; pathaviṁ pathavito abhiññāya pathaviṁ na maññati, pathaviyā na maññati, pathavito na maññati, pathaviṁ meti na maññati, pathaviṁ nābhinandati. Taṁ kissa hetu? ‘<span class="var" title="nandi (bj, s1-3)" id="note7">Nandī</span> dukkhassa mūlan’ti — iti viditvā ‘bhavā jāti bhūtassa jarāmaraṇan’ti. Tasmātiha, bhikkhave, ‘tathāgato sabbaso taṇhānaṁ khayā virāgā nirodhā cāgā paṭinissaggā anuttaraṁ sammāsambodhiṁ abhisambuddho’ti vadāmi.</p>
+
+
+<p><span class="parno">39</span>Āpaṁ … pe … tejaṁ … vāyaṁ … bhūte … deve … pajāpatiṁ … brahmaṁ … ābhassare … subhakiṇhe … vehapphale … abhibhuṁ … ākāsānañcāyatanaṁ … viññāṇañcāyatanaṁ … ākiñcaññāyatanaṁ … nevasaññānāsaññāyatanaṁ … diṭṭhaṁ … sutaṁ … mutaṁ … viññātaṁ … ekattaṁ … nānattaṁ … sabbaṁ … nibbānaṁ nibbānato abhijānāti; nibbānaṁ nibbānato abhiññāya nibbānaṁ na maññati, nibbānasmiṁ na maññati, nibbānato na maññati, nibbānaṁ meti na maññati, nibbānaṁ nābhinandati. Taṁ kissa hetu? ‘Nandī dukkhassa mūlan’ti — iti viditvā ‘bhavā jāti bhūtassa jarāmaraṇan’ti. Tasmātiha, bhikkhave, ‘tathāgato sabbaso taṇhānaṁ khayā virāgā nirodhā cāgā paṭinissaggā anuttaraṁ sammāsambodhiṁ abhisambuddho’ti vadāmī"ti.</p>
+
+<hr>
+
+<p class="endsection">Tathāgatavasena aṭṭhamanayabhūmiparicchedo niṭṭhito.</p>
+
+
+<hr>
+
+<p><span class="parno">40</span>Idamavoca bhagavā<span class="var" id="note8" title=" na attamanā te bhikkhū (syā1-3), attamanā te bhikkhū (pā1, ka-ma) aṭṭha.">. Na te bhikkhū</span> bhagavato bhāsitaṁ abhinandunti.</p>
+
+<p class="endsection">Mūlapariyāyasuttaṁ niṭṭhitaṁ paṭhamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn.html#content"></a><a id="next-sutta" href="./mn2.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN1: Mūlapariyāya Sutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

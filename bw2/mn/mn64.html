@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 64</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN64: Mahāmālukyasutta - The Longer Discourse With Māluṅkya</h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn64">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery. There the Buddha addressed the mendicants: “Mendicants!”</p>
+
+<p>“Venerable sir,” they replied. The Buddha said this:</p>
+
+<p>“Mendicants, do you remember the five lower fetters that I taught?”</p>
+
+<hr>
+
+<p id="p2"><span class="parno">2</span>When he said this, Venerable Māluṅkyaputta said to him: “Sir, I remember them.”</p>
+
+<p>“But how do you remember them?”</p>
+
+<hr>
+
+<p>“I remember the lower fetters taught by the Buddha as follows: identity view, doubt, misapprehension of precepts and observances, sensual desire, and ill will. That’s how I remember the five lower fetters taught by the Buddha.”</p>
+
+<p id="p3"><span class="parno">3</span>“Who on earth do you remember being taught the five lower fetters in that way? Wouldn’t the wanderers who follow other paths fault you using the simile of the infant? For a little baby doesn’t even have a concept of ‘identity’, so how could identity view possibly arise in them? Yet the underlying tendency to identity view still lies within them. A little baby doesn’t even have a concept of ‘teachings’, so how could doubt about the teachings possibly arise in them? Yet the underlying tendency to doubt still lies within them. A little baby doesn’t even have a concept of ‘precepts’, so how could misapprehension of precepts and observances possibly arise in them? Yet the underlying tendency to misapprehension of precepts and observances still lies within them. A little baby doesn’t even have a concept of ‘sensual pleasures’, so how could desire for sensual pleasures possibly arise in them? Yet the underlying tendency to sensual desire still lies within them. A little baby doesn’t even have a concept of ‘sentient beings’, so how could ill will for sentient beings possibly arise in them? Yet the underlying tendency to ill will still lies within them. Wouldn’t the wanderers who follow other paths fault you using the simile of the infant?”</p>
+
+<hr>
+
+<p id="p4"><span class="parno">4</span>When he said this, Venerable Ānanda said to the Buddha: “Now is the time, Blessed One! Now is the time, Holy One! May the Buddha teach the five lower fetters. The mendicants will listen and remember it.”</p>
+
+<p>“Well then, Ānanda, listen and pay close attention, I will speak.”</p>
+
+<p>“Yes, sir,” Ānanda replied. </p>
+
+<p>The Buddha said this:</p>
+
+<hr>
+
+<p id="p5"><span class="parno">5</span>“Ānanda, take an uneducated ordinary person who has not seen the noble ones, and is neither skilled nor trained in the teaching of the noble ones. They’ve not seen good persons, and are neither skilled nor trained in the teaching of the good persons. Their heart is overcome and mired in identity view, and they don’t truly understand the escape from identity view that has arisen. That identity view is reinforced in them, not eliminated: it is a lower fetter.</p>
+
+<p id="p6"><span class="parno">6</span>Their heart is overcome and mired in doubt, and they don’t truly understand the escape from doubt that has arisen. That doubt is reinforced in them, not eliminated: it is a lower fetter.</p>
+
+<p id="p7"><span class="parno">7</span>Their heart is overcome and mired in misapprehension of precepts and observances, and they don’t truly understand the escape from misapprehension of precepts and observances that has arisen. That misapprehension of precepts and observances is reinforced in them, not eliminated: it is a lower fetter.</p>
+
+<p id="p8"><span class="parno">8</span>Their heart is overcome and mired in sensual desire, and they don’t truly understand the escape from sensual desire that has arisen. That sensual desire is reinforced in them, not eliminated: it is a lower fetter.</p>
+
+<p id="p9"><span class="parno">9</span>Their heart is overcome and mired in ill will, and they don’t truly understand the escape from ill will that has arisen. That ill will is reinforced in them, not eliminated: it is a lower fetter.</p>
+
+<p id="p10"><span class="parno">10</span>But an educated noble disciple has seen the noble ones, and is skilled and trained in the teaching of the noble ones. They’ve seen good persons, and are skilled and trained in the teaching of the good persons. Their heart is not overcome and mired in identity view, and they truly understand the escape from identity view that has arisen. That identity view, along with any underlying tendency to it, is given up in them.</p>
+
+<p id="p11"><span class="parno">11</span>Their heart is not overcome and mired in doubt, and they truly understand the escape from doubt that has arisen. That doubt, along with any underlying tendency to it, is given up in them.</p>
+
+<p id="p12"><span class="parno">12</span>Their heart is not overcome and mired in misapprehension of precepts and observances, and they truly understand the escape from misapprehension of precepts and observances that has arisen. That misapprehension of precepts and observances, along with any underlying tendency to it, is given up in them.</p>
+
+<p id="p13"><span class="parno">13</span>Their heart is not overcome and mired in sensual desire, and they truly understand the escape from sensual desire that has arisen. That sensual desire, along with any underlying tendency to it, is given up in them.</p>
+
+<p id="p14"><span class="parno">14</span>Their heart is not overcome and mired in ill will, and they truly understand the escape from ill will that has arisen. That ill will, along with any underlying tendency to it, is given up in them.</p>
+
+<hr>
+
+<p id="p15"><span class="parno">15</span>There is a path and a practice for giving up the five lower fetters. It’s not possible to know or see or give up the five lower fetters without relying on that path and that practice. </p>
+
+<p>Suppose there was a large tree standing with heartwood. It’s not possible to cut out the heartwood without having cut through the bark and the softwood. In the same way, there is a path and a practice for giving up the five lower fetters. It’s not possible to know or see or give up the five lower fetters without relying on that path and that practice.</p>
+
+<hr>
+
+<p id="p16"><span class="parno">16</span>There is a path and a practice for giving up the five lower fetters. It is possible to know and see and give up the five lower fetters by relying on that path and that practice.</p>
+
+<p>Suppose there was a large tree standing with heartwood. It is possible to cut out the heartwood after having cut through the bark and the softwood. In the same way, there is a path and a practice for giving up the five lower fetters. It is possible to know and see and give up the five lower fetters by relying on that path and that practice. </p>
+
+<hr>
+
+<p>Suppose the river Ganges was full to the brim so a crow could drink from it. Then along comes a feeble person, who thinks: ‘By swimming with my arms I’ll safely cross over to the far shore of the Ganges.’ But they’re not able to do so. </p>
+
+<p>In the same way, when the Dhamma is being taught for the cessation of identity view, someone whose mind isn’t eager, confident, settled, and decided should be regarded as being like that feeble person. </p>
+
+<p>Suppose the river Ganges was full to the brim so a crow could drink from it. Then along comes a strong person, who thinks: ‘By swimming with my arms I’ll safely cross over to the far shore of the Ganges.’ And they are able to do so.</p>
+
+<p>In the same way, when the Dhamma is being taught for the cessation of identity view, someone whose mind is eager, confident, settled, and decided should be regarded as being like that strong person.</p>
+
+<hr>
+
+<p id="p17"><span class="parno">17</span>And what, Ānanda, is the path and the practice for giving up the five lower fetters? It’s when a mendicant — due to the seclusion from attachments, the giving up of unskillful qualities, and the complete settling of physical discomfort — quite secluded from sensual pleasures, secluded from unskillful qualities, enters and remains in the first absorption, which has the rapture and bliss born of seclusion, while placing the mind and keeping it connected. </p>
+
+<p>They contemplate the phenomena there — included in form, feeling, perception, choices, and consciousness — as impermanent, as suffering, as diseased, as an abscess, as a dart, as misery, as an affliction, as alien, as falling apart, as empty, as not-self. They turn their mind away from those things, and apply it to the deathless element: ‘This is peaceful; this is sublime — that is, the stilling of all activities, the letting go of all attachments, the ending of craving, cessation, extinguishment.’ Abiding in that they attain the ending of defilements. If they don’t attain the ending of defilements, with the ending of the five lower fetters they’re reborn spontaneously, because of their passion and love for that meditation. They are extinguished there, and are not liable to return from that world. This is the path and the practice for giving up the five lower fetters.</p>
+
+<hr>
+
+<p id="p18"><span class="parno">18</span>Furthermore, as the placing of the mind and keeping it connected are stilled, a mendicant enters and remains in the second absorption … third absorption … fourth absorption. </p>
+
+<p>They contemplate the phenomena there as impermanent … They turn their mind away from those things … If they don’t attain the ending of defilements, they’re reborn spontaneously … and are not liable to return from that world. This too is the path and the practice for giving up the five lower fetters.</p>
+
+<p id="p19"><span class="parno">19</span>Furthermore, a mendicant, going totally beyond perceptions of form, with the ending of perceptions of impingement, not focusing on perceptions of diversity, aware that ‘space is infinite’, enters and remains in the dimension of infinite space. </p>
+
+<p>They contemplate the phenomena there as impermanent … They turn their mind away from those things … If they don’t attain the ending of defilements, they’re reborn spontaneously … and are not liable to return from that world. This too is the path and the practice for giving up the five lower fetters.</p>
+
+<p id="p20"><span class="parno">20</span>Furthermore, a mendicant, going totally beyond the dimension of infinite space, aware that ‘consciousness is infinite’, enters and remains in the dimension of infinite consciousness. </p>
+
+<p>They contemplate the phenomena there as impermanent … They turn their mind away from those things … If they don’t attain the ending of defilements, they’re reborn spontaneously … and are not liable to return from that world. This too is the path and the practice for giving up the five lower fetters.</p>
+
+<p id="p21"><span class="parno">21</span>Furthermore, a mendicant, going totally beyond the dimension of infinite consciousness, aware that ‘there is nothing at all’, enters and remains in the dimension of nothingness. </p>
+
+<p>They contemplate the phenomena there as impermanent … They turn their mind away from those things … If they don’t attain the ending of defilements, they’re reborn spontaneously … and are not liable to return from that world. This too is the path and the practice for giving up the five lower fetters.”</p>
+
+<p id="p22"><span class="parno">22</span>“Sir, if this is the path and the practice for giving up the five lower fetters, how come some mendicants here are released in heart while others are released by wisdom?”</p>
+
+<p>“In that case, I say it is the diversity of their faculties.”</p>
+
+<hr>
+
+<p id="p23"><span class="parno">23</span>That is what the Buddha said. Satisfied, Venerable Ānanda was happy with what the Buddha said.</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: "bhikkhavo"ti. "Bhadante"ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:</p>
+
+<p>"dhāretha no tumhe, bhikkhave, mayā desitāni pañcorambhāgiyāni saṁyojanānī"ti?</p>
+
+<hr>
+
+<p><span class="parno">2</span>Evaṁ vutte, āyasmā mālukyaputto bhagavantaṁ etadavoca: "Ahaṁ kho, bhante, dhāremi bhagavatā desitāni pañcorambhāgiyāni saṁyojanānī"ti.</p>
+
+<p>"Yathā kathaṁ pana tvaṁ, mālukyaputta, dhāresi mayā desitāni pañcorambhāgiyāni saṁyojanānī"ti?</p>
+
+<hr>
+
+<p>"Sakkāyadiṭṭhiṁ kho ahaṁ, bhante, bhagavatā orambhāgiyaṁ saṁyojanaṁ desitaṁ dhāremi; vicikicchaṁ kho ahaṁ, bhante, bhagavatā orambhāgiyaṁ saṁyojanaṁ desitaṁ dhāremi; sīlabbataparāmāsaṁ kho ahaṁ, bhante, bhagavatā orambhāgiyaṁ saṁyojanaṁ desitaṁ dhāremi; kāmacchandaṁ kho ahaṁ, bhante, bhagavatā orambhāgiyaṁ saṁyojanaṁ desitaṁ dhāremi; byāpādaṁ kho ahaṁ, bhante, bhagavatā orambhāgiyaṁ saṁyojanaṁ desitaṁ dhāremi. Evaṁ kho ahaṁ, bhante, dhāremi bhagavatā desitāni pañcorambhāgiyāni saṁyojanānī"ti.</p>
+
+<p><span class="parno">3</span>"Kassa kho nāma tvaṁ, mālukyaputta, imāni evaṁ pañcorambhāgiyāni saṁyojanāni desitāni dhāresi? Nanu, mālukyaputta, aññatitthiyā paribbājakā iminā taruṇūpamena upārambhena upārambhissanti? Dāhārassa hi, mālukyaputta, kumārassa mandassa uttānaseyyakassa sakkāyotipi na hoti, kuto panassa uppajjissati sakkāyadiṭṭhi? <span class="var" title="anuseti tvevassa (bj, s1–3, pts1)" id="note156">Anusetvevassa</span> sakkāyadiṭṭhānusayo. Dāhārassa hi, mālukyaputta, kumārassa mandassa uttānaseyyakassa dhammātipi na hoti, kuto panassa uppajjissati dhammesu vicikicchā? Anusetvevassa vicikicchānusayo. Dāhārassa hi, mālukyaputta, kumārassa mandassa uttānaseyyakassa sīlātipi na hoti, kuto panassa uppajjissati sīlesu sīlabbataparāmāso? Anusetvevassa sīlabbataparāmāsānusayo. Dāhārassa hi, mālukyaputta, kumārassa mandassa uttānaseyyakassa kāmātipi na hoti, kuto panassa uppajjissati kāmesu kāmacchando? Anusetvevassa kāmarāgānusayo. Dāhārassa hi, mālukyaputta, kumārassa mandassa uttānaseyyakassa sattātipi na hoti, kuto panassa uppajjissati sattesu byāpādo? Anusetvevassa byāpādānusayo. Nanu, mālukyaputta, aññatitthiyā paribbājakā iminā taruṇūpamena upārambhena upārambhissantī"ti?</p>
+
+<hr>
+
+<p><span class="parno">4</span>Evaṁ vutte, āyasmā ānando bhagavantaṁ etadavoca: "etassa, bhagavā, kālo, etassa, sugata, kālo yaṁ bhagavā pañcorambhāgiyāni saṁyojanāni deseyya. Bhagavato sutvā bhikkhū dhāressantī"ti.</p>
+
+<p>"Tena hānanda, suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī"ti.</p>
+
+<p>"Evaṁ, bhante"ti kho āyasmā ānando bhagavato paccassosi.</p>
+
+<p>Bhagavā etadavoca: </p>
+
+<hr>
+
+<p><span class="parno">5</span>"Idhānanda, assutavā puthujjano ariyānaṁ adassāvī ariyadhammassa akovido ariyadhamme avinīto, sappurisānaṁ adassāvī sappurisadhammassa akovido sappurisadhamme avinīto sakkāyadiṭṭhipariyuṭṭhitena cetasā viharati sakkāyadiṭṭhiparetena; uppannāya ca sakkāyadiṭṭhiyā nissaraṇaṁ yathābhūtaṁ nappajānāti. Tassa sā sakkāyadiṭṭhi thāmagatā appaṭivinītā orambhāgiyaṁ saṁyojanaṁ.</p>
+
+<p><span class="parno">6</span>Vicikicchāpariyuṭṭhitena cetasā viharati vicikicchāparetena; uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ nappajānāti. Tassa sā vicikicchā thāmagatā appaṭivinītā orambhāgiyaṁ saṁyojanaṁ.</p>
+
+<p><span class="parno">7</span>Sīlabbataparāmāsapariyuṭṭhitena cetasā viharati sīlabbataparāmāsaparetena; uppannassa ca sīlabbataparāmāsassa nissaraṇaṁ yathābhūtaṁ nappajānāti. Tassa so sīlabbataparāmāso thāmagato appaṭivinīto orambhāgiyaṁ saṁyojanaṁ.</p>
+
+<p><span class="parno">8</span>Kāmarāgapariyuṭṭhitena cetasā viharati kāmarāgaparetena; uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ nappajānāti. Tassa so kāmarāgo thāmagato appaṭivinīto orambhāgiyaṁ saṁyojanaṁ.</p>
+
+<p><span class="parno">9</span>Byāpādapariyuṭṭhitena cetasā viharati byāpādaparetena; uppannassa ca byāpādassa nissaraṇaṁ yathābhūtaṁ nappajānāti. Tassa so byāpādo thāmagato appaṭivinīto orambhāgiyaṁ saṁyojanaṁ.</p>
+
+<p><span class="parno">10</span>Sutavā ca kho, ānanda, ariyasāvako ariyānaṁ dassāvī ariyadhammassa kovido ariyadhamme suvinīto, sappurisānaṁ dassāvī sappurisadhammassa kovido sappurisadhamme suvinīto na sakkāyadiṭṭhipariyuṭṭhitena cetasā viharati na sakkāyadiṭṭhiparetena; uppannāya ca sakkāyadiṭṭhiyā nissaraṇaṁ yathābhūtaṁ pajānāti. Tassa sā sakkāyadiṭṭhi sānusayā pahīyati.</p>
+
+<p><span class="parno">11</span>Na vicikicchāpariyuṭṭhitena cetasā viharati na vicikicchāparetena; uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ pajānāti. Tassa sā vicikicchā sānusayā pahīyati.</p>
+
+<p><span class="parno">12</span>Na sīlabbataparāmāsapariyuṭṭhitena cetasā viharati na sīlabbataparāmāsaparetena; uppannassa ca sīlabbataparāmāsassa nissaraṇaṁ yathābhūtaṁ pajānāti. Tassa so sīlabbataparāmāso sānusayo pahīyati.</p>
+
+<p><span class="parno">13</span>Na kāmarāgapariyuṭṭhitena cetasā viharati na kāmarāgaparetena; uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ pajānāti. Tassa so kāmarāgo sānusayo pahīyati.</p>
+
+<p><span class="parno">14</span>Na byāpādapariyuṭṭhitena cetasā viharati na byāpādaparetena; uppannassa ca byāpādassa nissaraṇaṁ yathābhūtaṁ pajānāti. Tassa so byāpādo sānusayo pahīyati.</p>
+
+<hr>
+
+<p><span class="parno">15</span>Yo, ānanda, maggo yā paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya taṁ maggaṁ taṁ paṭipadaṁ anāgamma pañcorambhāgiyāni saṁyojanāni ñassati vā dakkhati vā pajahissati vāti — netaṁ ṭhānaṁ vijjati. </p>
+
+<p>Seyyathāpi, ānanda, mahato rukkhassa tiṭṭhato sāravato tacaṁ acchetvā phegguṁ acchetvā sāracchedo bhavissatīti — netaṁ ṭhānaṁ vijjati; evameva kho, ānanda, yo maggo yā paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya taṁ maggaṁ taṁ paṭipadaṁ anāgamma pañcorambhāgiyāni saṁyojanāni ñassati vā dakkhati vā pajahissati vāti — netaṁ ṭhānaṁ vijjati.</p>
+
+<hr>
+
+<p><span class="parno">16</span>Yo ca kho, ānanda, maggo yā paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya taṁ maggaṁ taṁ paṭipadaṁ āgamma pañcorambhāgiyāni saṁyojanāni ñassati vā dakkhati vā pajahissati vāti — ṭhānametaṁ vijjati. </p>
+
+<p>Seyyathāpi, ānanda, mahato rukkhassa tiṭṭhato sāravato tacaṁ chetvā phegguṁ chetvā sāracchedo bhavissatīti — ṭhānametaṁ vijjati; evameva kho, ānanda, yo maggo yā paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya taṁ maggaṁ taṁ paṭipadaṁ āgamma pañcorambhāgiyāni saṁyojanāni ñassati vā dakkhati vā pajahissati vāti –  ṭhānametaṁ vijjati.</p>
+
+<hr>
+
+<p>Seyyathāpi, ānanda, gaṅgā nadī pūrā udakassa samatittikā kākapeyyā. Atha dubbalako puriso āgaccheyya: ‘Ahaṁ imissā gaṅgāya nadiyā tiriyaṁ bāhāya sotaṁ chetvā sotthinā pāraṁ <span class="var" title="gacchāmīti (bj, pts1)" id="note157">gacchissāmī’ti</span>; so na sakkuṇeyya gaṅgāya nadiyā tiriyaṁ bāhāya sotaṁ chetvā sotthinā pāraṁ gantuṁ. </p>
+
+<p>Evameva kho, ānanda, <span class="var" title="yassa kassaci (sabbattha)" id="note158">yesaṁ kesañci</span> sakkāyanirodhāya dhamme desiyamāne cittaṁ na pakkhandati nappasīdati na santiṭṭhati na vimuccati; seyyathāpi so dubbalako puriso evamete daṭṭhabbā.</p>
+
+<p>Seyyathāpi, ānanda, gaṅgā nadī pūrā udakassa samatittikā kākapeyyā. Atha balavā puriso āgaccheyya: ‘Ahaṁ imissā gaṅgāya nadiyā tiriyaṁ bāhāya sotaṁ chetvā sotthinā pāraṁ gacchissāmī’ti; so sakkuṇeyya gaṅgāya nadiyā tiriyaṁ bāhāya sotaṁ chetvā sotthinā pāraṁ gantuṁ. </p>
+
+<p>Evameva kho, ānanda, yesaṁ kesañci sakkāyanirodhāya dhamme desiyamāne cittaṁ pakkhandati pasīdati santiṭṭhati vimuccati; seyyathāpi so balavā puriso evamete daṭṭhabbā.</p>
+
+<hr>
+
+<p><span class="parno">17</span>Katamo cānanda, maggo, katamā paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya? Idhānanda, bhikkhu upadhivivekā akusalānaṁ dhammānaṁ pahānā sabbaso kāyaduṭṭhullānaṁ paṭippassaddhiyā vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati.</p>
+
+<p>So yadeva tattha hoti rūpagataṁ vedanāgataṁ saññāgataṁ saṅkhāragataṁ viññāṇagataṁ te dhamme aniccato dukkhato rogato gaṇḍato sallato aghato ābādhato parato palokato suññato anattato samanupassati. So tehi dhammehi cittaṁ <span class="var" title="paṭipāpeti (s1–3) | patiṭṭhāpeti (mr)" id="note160">paṭivāpeti</span>. So tehi dhammehi cittaṁ paṭivāpetvā amatāya dhātuyā cittaṁ upasaṁharati: ‘etaṁ santaṁ etaṁ paṇītaṁ yadidaṁ sabbasaṅkhārasamatho sabbūpadhipaṭinissaggo taṇhākkhayo virāgo nirodho nibbānan’ti. So tattha ṭhito āsavānaṁ khayaṁ pāpuṇāti; no ce āsavānaṁ khayaṁ pāpuṇāti teneva dhammarāgena tāya dhammanandiyā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ parikkhayā opapātiko hoti, tattha parinibbāyī, anāvattidhammo tasmā lokā. Ayampi kho, ānanda, maggo ayaṁ paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya.</p>
+
+<hr>
+
+<p><span class="parno">18</span>Puna caparaṁ, ānanda, bhikkhu vitakkavicārānaṁ vūpasamā … pe … dutiyaṁ jhānaṁ upasampajja viharati … pe … tatiyaṁ jhānaṁ … pe … catutthaṁ jhānaṁ upasampajja viharati.</p>
+
+<p>So yadeva tattha hoti rūpagataṁ vedanāgataṁ saññāgataṁ saṅkhāragataṁ viññāṇagataṁ … pe … anāvattidhammo tasmā lokā. Ayampi kho, ānanda, maggo ayaṁ paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya.</p>
+
+<p><span class="parno">19</span>Puna caparaṁ, ānanda, bhikkhu sabbaso rūpasaññānaṁ samatikkamā paṭighasaññānaṁ atthaṅgamā nānattasaññānaṁ amanasikārā ‘ananto ākāso’ti ākāsānañcāyatanaṁ upasampajja viharati.</p>
+
+<p>So yadeva tattha hoti vedanāgataṁ saññāgataṁ saṅkhāragataṁ viññāṇagataṁ … pe … anāvattidhammo tasmā lokā. Ayampi kho, ānanda, maggo ayaṁ paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya.</p>
+
+<p><span class="parno">20</span>Puna caparaṁ, ānanda, bhikkhu sabbaso ākāsānañcāyatanaṁ samatikkamma ‘anantaṁ viññāṇan’ti viññāṇañcāyatanaṁ upasampajja viharati.</p>
+
+<p>So yadeva tattha hoti vedanāgataṁ saññāgataṁ saṅkhāragataṁ viññāṇagataṁ … pe … anāvattidhammo tasmā lokā. Ayampi kho, ānanda, maggo ayaṁ paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya.</p>
+
+<p><span class="parno">21</span>Puna caparaṁ, ānanda, bhikkhu sabbaso viññāṇañcāyatanaṁ samatikkamma ‘Natthi kiñcī’ti ākiñcaññāyatanaṁ upasampajja viharati.</p>
+
+<p>So yadeva tattha hoti vedanāgataṁ saññāgataṁ saṅkhāragataṁ viññāṇagataṁ … pe … anāvattidhammo tasmā lokā. Ayampi kho, ānanda, maggo ayaṁ paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāyā"ti.</p>
+
+<p><span class="parno">22</span>"Eso ce, bhante, maggo esā paṭipadā pañcannaṁ orambhāgiyānaṁ saṁyojanānaṁ pahānāya, atha kiñcarahi idhekacce bhikkhū cetovimuttino ekacce bhikkhū paññāvimuttino"ti?</p>
+
+<p>"<span class="var" title="ettha kho tesāhaṁ (bj, s1–3, km, pts1)" id="note162">Ettha kho panesāhaṁ</span>, ānanda, indriyavemattataṁ vadāmī"ti.</p>
+
+<hr>
+
+<p><span class="parno">23</span>Idamavoca bhagavā. Attamano āyasmā ānando bhagavato bhāsitaṁ abhinandīti.</p>
+
+<p class="endsutta">Mahāmālukyasuttaṁ niṭṭhitaṁ catutthaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn63.html#content"></a><a id="next-sutta" href="./mn65.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN64: Mahāmālukyasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

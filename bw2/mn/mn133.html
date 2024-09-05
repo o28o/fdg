@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 133</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN133: Mahākaccānabhaddekarattasutta - Mahākaccāna and One Fine Night </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn133">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Rājagaha in the Hot Springs Monastery.</p>
+
+<p>Then Venerable Samiddhi rose at the crack of dawn and went to the hot springs to bathe. When he had bathed and emerged from the water he stood in one robe drying himself.</p>
+
+<p>Then, late at night, a glorious deity, lighting up the entire hot springs, went up to Samiddhi, stood to one side, and said to Samiddhi:</p>
+
+<p>“Mendicant, do you remember the recitation passage and analysis of One Fine Night?”</p>
+
+<p>“No, reverend, I do not. Do you?”</p>
+
+<p>“I also do not. But do you remember just the verses on One Fine Night?”</p>
+
+<p>“I do not. Do you?”</p>
+
+<p>“I also do not. Learn the recitation passage and analysis of One Fine Night, mendicant, memorize it, and remember it. It is beneficial and relates to the fundamentals of the spiritual life.”</p>
+
+<p>That’s what that deity said, before vanishing right there.</p>
+
+<hr>
+
+<p><span class="parno">2-4</span>Then, when the night had passed, Samiddhi went to the Buddha, bowed, sat down to one side, and told him what had happened. Then he added:<br>
+
+<br>“Sir, please teach me the recitation passage and analysis of One Fine night.”<br>
+
+<br>“Well then, mendicant, listen and pay close attention, I will speak.”<br>
+
+<br>“Yes, sir,” Samiddhi replied. The Buddha said this:</p>
+
+<hr>
+
+<div class="verse">
+
+<p><span class="parno">5</span>“Don’t run back to the past, 
+<br>don’t hope for the future. 
+<br>What’s past is left behind; 
+<br>the future has not arrived;</p>
+
+<p><span class="parno">6</span>and phenomena in the present 
+<br>are clearly seen in every case. 
+<br>Knowing this, foster it — 
+<br>unfaltering, unshakable.</p>
+
+<p><span class="parno">7</span>Today’s the day to keenly work — 
+<br>who knows, tomorrow may bring death! 
+<br>For there is no bargain to be struck 
+<br>with Death and his mighty hordes.</p>
+
+<p><span class="parno">8</span>The peaceful sage explained it’s those 
+<br>who keenly meditate like this, 
+<br>tireless all night and day, 
+<br>who truly have that one fine night.”</p>
+</div>
+
+<hr>
+
+<p><span class="parno">9-13</span>That is what the Buddha said. When he had spoken, the Holy One got up from his seat and entered his dwelling.<br>
+
+<br>Soon after the Buddha left, those mendicants considered, <br>
+
+<br>“The Buddha gave this brief passage for recitation, then entered his dwelling without explaining the meaning in detail. …</p>
+
+<hr>
+
+<p><span class="parno">14</span>Who can explain in detail the meaning of this brief summary given by the Buddha?”</p>
+
+<hr>
+
+<p><span class="parno">15</span>Then those mendicants thought:</p>
+
+<p>“This Venerable Mahākaccāna is praised by the Buddha and esteemed by his sensible spiritual companions. He is capable of explaining in detail the meaning of this brief passage for recitation given by the Buddha. Let’s go to him, and ask him about this matter.”</p>
+
+<hr>
+
+<p><span class="parno">16-20</span>Then those mendicants went to Mahākaccāna, and exchanged greetings with him. When the greetings and polite conversation were over, they sat down to one side. They told him what had happened, and said:<br>
+
+<br>“May Venerable Mahākaccāna please explain this.”</p>
+
+<hr>
+
+<p><span class="parno">21</span>“Reverends, suppose there was a person in need of heartwood. And while wandering in search of heartwood he’d come across a large tree standing with heartwood. But he’d pass over the roots and trunk, imagining that the heartwood should be sought in the branches and leaves. Such is the consequence for the venerables. Though you were face to face with the Buddha, you passed him by, imagining that you should ask me about this matter. For he is the Buddha, who knows and sees. He is vision, he is knowledge, he is the truth, he is supreme. He is the teacher, the proclaimer, the elucidator of meaning, the bestower of the deathless, the lord of truth, the Realized One. That was the time to approach the Buddha and ask about this matter. You should have remembered it in line with the Buddha’s answer.”</p>
+
+<p><span class="parno">22</span>“Certainly he is the Buddha, who knows and sees. He is vision, he is knowledge, he is the truth, he is supreme. He is the teacher, the proclaimer, the elucidator of meaning, the bestower of the deathless, the lord of truth, the Realized One. That was the time to approach the Buddha and ask about this matter. We should have remembered it in line with the Buddha’s answer. Still, Venerable Mahākaccāna is praised by the Buddha and esteemed by his sensible spiritual companions. He is capable of explaining in detail the meaning of this brief passage for recitation given by the Buddha. Please explain this, if it’s no trouble.”</p>
+
+<p><span class="parno">23</span>“Well then, reverends, listen and pay close attention, I will speak.”</p>
+
+<p>“Yes, reverend,” they replied. Venerable Mahākaccāna said this:</p>
+
+<p><span class="parno">24</span>“Reverends, the Buddha gave this brief passage for recitation, then entered his dwelling without explaining the meaning in detail:</p>
+
+<hr>
+
+<div class="verse">
+
+<p><span class="parno">25</span>‘Don’t run back to the past … 
+<br>
+<br>not slacking off by night or day, 
+<br>who truly have that one fine night.’</p>
+</div>
+
+<p><span class="parno">26</span>And this is how I understand the detailed meaning of this passage for recitation.</p>
+
+<p><span class="parno">27</span>And how do you run back to the past? Consciousness gets tied up there with desire and lust, thinking: ‘In the past I had such eyes and such sights.’ So you take pleasure in that, and that’s when you run back to the past.</p>
+
+<p>Consciousness gets tied up there with desire and lust, thinking: ‘In the past I had such ears and such sounds … such a nose and such smells … such a tongue and such tastes … such a body and such touches … such a mind and such thoughts.’ So you take pleasure in that, and that’s when you run back to the past. That’s how you run back to the past.</p>
+
+<p><span class="parno">28</span>And how do you not run back to the past? Consciousness doesn’t get tied up there with desire and lust, thinking: ‘In the past I had such eyes and such sights.’ So you don’t take pleasure in that, and that’s when you no longer run back to the past.</p>
+
+<p>Consciousness doesn’t get tied up there with desire and lust, thinking: ‘In the past I had such ears and such sounds … such a nose and such smells … such a tongue and such tastes … such a body and such touches … such a mind and such thoughts.’ So you don’t take pleasure in that, and that’s when you no longer run back to the past. That’s how you don’t run back to the past.</p>
+
+<p><span class="parno">29</span>And how do you hope for the future? The heart is set on getting what it does not have, thinking: ‘May I have such eyes and such sights in the future.’ So you take pleasure in that, and that’s when you hope for the future. </p>
+
+<p>The heart is set on getting what it does not have, thinking: ‘May I have such ears and such sounds … such a nose and such smells … such a tongue and such tastes … such a body and such touches … such a mind and such thoughts in the future.’ So you take pleasure in that, and that’s when you hope for the future. That’s how you hope for the future.</p>
+
+<hr>
+
+<p><span class="parno">30</span>And how do you not hope for the future? The heart is not set on getting what it does not have, thinking: ‘May I have such eyes and such sights in the future.’ So you don’t take pleasure in that, and that’s when you no longer hope for the future. </p>
+
+<p>The heart is not set on getting what it does not have, thinking: ‘May I have such ears and such sounds … such a nose and such smells … such a tongue and such tastes … such a body and such touches … such a mind and such thoughts in the future.’ So you don’t take pleasure in that, and that’s when you no longer hope for the future. That’s how you don’t hope for the future.</p>
+
+<hr>
+
+<p><span class="parno">31</span>And how do you falter amid presently arisen phenomena? Both the eye and sights are presently arisen. If consciousness gets tied up there in the present with desire and lust, you take pleasure in that, and that’s when you falter amid presently arisen phenomena. </p>
+
+<p>Both the ear and sounds … nose and smells … tongue and tastes … body and touches … mind and thoughts are presently arisen. If consciousness gets tied up there in the present with desire and lust, you take pleasure in that, and that’s when you falter amid presently arisen phenomena. That’s how you falter amid presently arisen phenomena.</p>
+
+<hr>
+
+<p><span class="parno">32</span>And how do you not falter amid presently arisen phenomena? Both the eye and sights are presently arisen. If consciousness doesn’t get tied up there in the present with desire and lust, you don’t take pleasure in that, and that’s when you no longer falter amid presently arisen phenomena. </p>
+
+<p>Both the ear and sounds … nose and smells … tongue and tastes … body and touches … mind and thoughts are presently arisen. If consciousness doesn’t get tied up there in the present with desire and lust, you don’t take pleasure in that, and that’s when you no longer falter amid presently arisen phenomena. That’s how you don’t falter amid presently arisen phenomena.</p>
+
+<hr>
+
+<p><span class="parno">33</span>This is how I understand the detailed meaning of that brief passage for recitation given by the Buddha.</p>
+
+<hr>
+<p><span class="parno">34</span>‘Don’t run back to the past … 
+
+<hr>
+
+<p><span class="parno">35</span>If you wish, you may go to the Buddha and ask him about this. You should remember it in line with the Buddha’s answer.”</p>
+
+<p><span class="parno">36-44</span>“Yes, reverend,” said those mendicants, approving and agreeing with what Mahākaccāna said. Then they rose from their seats and went to the Buddha, bowed, sat down to one side, and told him what had happened, adding:<br>
+
+<br>“Mahākaccāna clearly explained the meaning to us in this manner, with these words and phrases.”<br>
+
+<br>“Mahākaccāna is astute, mendicants, he has great wisdom. If you came to me and asked this question, I would answer it in exactly the same way as Mahākaccāna. That is what it means, and that’s how you should remember it.”</p>
+
+<hr>
+
+<p><span class="parno">45</span>That is what the Buddha said. Satisfied, the mendicants were happy with what the Buddha said.</p>
+
+</div>
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā rājagahe viharati tapodārāme. </p>
+
+<p>Atha kho āyasmā samiddhi rattiyā paccūsasamayaṁ paccuṭṭhāya yena <span class="var" title="tapodā (si)" id="note409">tapodo</span> tenupasaṅkami gattāni parisiñcituṁ. Tapode gattāni parisiñcitvā paccuttaritvā ekacīvaro aṭṭhāsi gattāni <span class="var" title="sukkhāpayamāno (mr)" id="note410">pubbāpayamāno</span>. </p>
+
+<p>Atha kho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ tapodaṁ obhāsetvā yenāyasmā samiddhi tenupasaṅkami; upasaṅkamitvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitā kho sā devatā āyasmantaṁ samiddhiṁ etadavoca:</p>
+
+<p>"dhāresi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañcā"ti?</p>
+
+
+<p>"Na kho ahaṁ, āvuso, dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Tvaṁ panāvuso, dhāresi bhaddekarattassa uddesañca vibhaṅgañcā"ti?</p>
+
+<p>"Ahampi kho, bhikkhu, na dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Dhāresi pana tvaṁ, bhikkhu, bhaddekarattiyo gāthā"ti?</p>
+
+<p>"Na kho ahaṁ, āvuso, dhāremi bhaddekarattiyo gāthāti. Tvaṁ panāvuso, dhāresi bhaddekarattiyo gāthā"ti?</p>
+
+<p>"Ahampi kho, bhikkhu na dhāremi bhaddekarattiyo gāthāti. Uggaṇhāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; pariyāpuṇāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; dhārehi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca. Atthasaṁhito, bhikkhu, bhaddekarattassa uddeso ca vibhaṅgo ca ādibrahmacariyako"ti.</p>
+
+<p>Idamavoca sā devatā. Idaṁ vatvā tatthevantaradhāyi.</p>
+
+
+<hr>
+
+<p><span class="parno">2</span>Atha kho āyasmā samiddhi tassā rattiyā accayena yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā samiddhi bhagavantaṁ etadavoca: </p>
+
+<p><span class="parno">3</span>"Idhāhaṁ, bhante, rattiyā paccūsasamayaṁ paccuṭṭhāya yena tapodo tenupasaṅkamiṁ gattāni parisiñcituṁ. Tapode gattāni parisiñcitvā paccuttaritvā ekacīvaro aṭṭhāsiṁ gattāni pubbāpayamāno. Atha kho bhante, aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṁ tapodaṁ obhāsetvā yenāhaṁ tenupasaṅkami; upasaṅkamitvā ekamantaṁ aṭṭhāsi. Ekamantaṁ ṭhitā kho sā devatā maṁ etadavoca: ‘dhāresi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañcā’ti?</p>
+
+<p><span class="parno">4</span>Evaṁ vutte, ahaṁ, bhante, taṁ devataṁ etadavocaṁ: ‘Na kho ahaṁ, āvuso, dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Tvaṁ panāvuso, dhāresi bhaddekarattassa uddesañca vibhaṅgañcā’ti? ‘Ahampi kho, bhikkhu, na dhāremi bhaddekarattassa uddesañca vibhaṅgañca. Dhāresi pana tvaṁ, bhikkhu, bhaddekarattiyo gāthā’ti? ‘Na kho ahaṁ, āvuso, dhāremi bhaddekarattiyo gāthāti. Tvaṁ panāvuso, dhāresi bhaddekarattiyo gāthā’ti? ‘Ahampi kho, bhikkhu, na dhāremi bhaddekarattiyo gāthāti. Uggaṇhāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; pariyāpuṇāhi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca; dhārehi tvaṁ, bhikkhu, bhaddekarattassa uddesañca vibhaṅgañca. Atthasaṁhito, bhikkhu, bhaddekarattassa uddeso ca vibhaṅgo ca ādibrahmacariyako’ti. Idamavoca, bhante, sā devatā. Idaṁ vatvā tatthevantaradhāyi. Sādhu me, bhante, bhagavā bhaddekarattassa uddesañca vibhaṅgañca desetū"ti. "Tena hi, bhikkhu, suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī"ti. "Evaṁ, bhante"ti kho āyasmā samiddhi bhagavato paccassosi. Bhagavā etadavoca: </p>
+
+
+<hr>
+
+<p class="verse"><span class="parno">5</span>"Atītaṁ nānvāgameyya,
+<br>nappaṭikaṅkhe anāgataṁ;
+<br>Yadatītaṁ pahīnaṁ taṁ,
+<br>appattañca anāgataṁ.</p>
+
+<p class="verse"><span class="parno">6</span>Paccuppannañca yo dhammaṁ,
+<br>tattha tattha vipassati;
+<br>Asaṁhīraṁ asaṅkuppaṁ,
+<br>taṁ vidvā manubrūhaye.</p>
+
+<p class="verse"><span class="parno">7</span>Ajjeva kiccamātappaṁ,
+<br>ko jaññā maraṇaṁ suve;
+<br>Na hi no saṅgaraṁ tena,
+<br>mahāsenena maccunā.</p>
+
+<p class="verse"><span class="parno">8</span>Evaṁvihāriṁ ātāpiṁ,
+<br>ahorattamatanditaṁ;
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">9</span>Idamavoca bhagavā; idaṁ vatvāna sugato uṭṭhāyāsanā vihāraṁ pāvisi.</p>
+
+<p>Atha kho tesaṁ bhikkhūnaṁ, acirapakkantassa bhagavato, etadahosi:</p>
+
+<p>"idaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: </p>
+
+<p class="verse"><span class="parno">10</span>‘Atītaṁ nānvāgameyya,
+<br>nappaṭikaṅkhe anāgataṁ;
+<br>Yadatītaṁ pahīnaṁ taṁ,
+<br>appattañca anāgataṁ.</p>
+
+<p class="verse"><span class="parno">11</span>Paccuppannañca yo dhammaṁ,
+<br>tattha tattha vipassati;
+<br>Asaṁhīraṁ asaṅkuppaṁ,
+<br>taṁ vidvā manubrūhaye.</p>
+
+<p class="verse"><span class="parno">12</span>Ajjeva kiccamātappaṁ,
+<br>ko jaññā maraṇaṁ suve;
+<br>Na hi no saṅgaraṁ tena,
+<br>mahāsenena maccunā.</p>
+
+<p class="verse"><span class="parno">13</span>Evaṁvihāriṁ ātāpiṁ,
+<br>ahorattamatanditaṁ;
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī’ti.</p>
+
+<hr>
+
+<p><span class="parno">14</span>Ko nu kho imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajeyyā"ti?</p>
+
+
+<hr>
+
+<p><span class="parno">15</span>Atha kho tesaṁ bhikkhūnaṁ etadahosi: </p>
+
+<p>"Ayaṁ kho āyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ; pahoti cāyasmā mahākaccāno imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ. Yannūna mayaṁ yenāyasmā mahākaccāno tenupasaṅkameyyāma; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipuccheyyāmā"ti.</p>
+
+<hr>
+
+<p><span class="parno">16</span>Atha kho te bhikkhū yenāyasmā mahākaccāno tenupasaṅkamiṁsu; upasaṅkamitvā āyasmatā mahākaccānena saddhiṁ sammodiṁsu. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū āyasmantaṁ mahākaccānaṁ etadavocuṁ: "Idaṁ kho no, āvuso kaccāna, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: </p>
+
+<p class="verse"><span class="parno">17</span>‘Atītaṁ nānvāgameyya,
+<br> … pe … 
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī’ti.</p>
+
+<p><span class="parno">18</span>Tesaṁ no, āvuso kaccāna, amhākaṁ, acirapakkantassa bhagavato, etadahosi — idaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: </p>
+
+<p class="verse"><span class="parno">19</span>‘Atītaṁ nānvāgameyya,
+<br> … pe … 
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī’ti.</p>
+
+<p><span class="parno">20</span>Ko nu kho imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajeyyāti? Tesaṁ no, āvuso kaccāna, amhākaṁ etadahosi: ‘Ayaṁ kho āyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ. Pahoti cāyasmā mahākaccāno imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ. Yannūna mayaṁ yenāyasmā mahākaccāno tenupasaṅkameyyāma; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipuccheyyāmā’ti. Vibhajatāyasmā mahākaccāno"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">21</span>"Seyyathāpi, āvuso, puriso sāratthiko sāragavesī sārapariyesanaṁ caramāno mahato rukkhassa tiṭṭhato sāravato atikkammeva mūlaṁ atikkamma khandhaṁ sākhāpalāse sāraṁ pariyesitabbaṁ maññeyya; evaṁsampadamidaṁ āyasmantānaṁ satthari sammukhībhūte taṁ bhagavantaṁ atisitvā amhe etamatthaṁ paṭipucchitabbaṁ maññatha. So hāvuso, bhagavā jānaṁ jānāti, passaṁ passati, cakkhubhūto ñāṇabhūto dhammabhūto brahmabhūto vattā pavattā atthassa ninnetā amatassa dātā dhammassāmī tathāgato. So ceva panetassa kālo ahosi yaṁ bhagavantaṁyeva etamatthaṁ paṭipuccheyyātha, yathā vo bhagavā byākareyya tathā naṁ dhāreyyāthā"ti.</p>
+
+<p><span class="parno">22</span>"Addhāvuso kaccāna, bhagavā jānaṁ jānāti, passaṁ passati, cakkhubhūto ñāṇabhūto dhammabhūto brahmabhūto vattā pavattā atthassa ninnetā amatassa dātā dhammassāmī tathāgato. So ceva panetassa kālo ahosi yaṁ bhagavantaṁyeva etamatthaṁ paṭipuccheyyāma; yathā no bhagavā byākareyya tathā naṁ dhāreyyāma. Api cāyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ; pahoti cāyasmā mahākaccāno imassa bhagavatā saṁkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ. Vibhajatāyasmā mahākaccāno <span class="var" title="agarukaritvāti (s1–3, km, pts1)" id="note411">agaruṁ karitvā"ti</span>.</p>
+
+<p><span class="parno">23</span>"Tena hāvuso, suṇātha, sādhukaṁ manasi karotha, bhāsissāmī"ti. </p>
+
+<p>"Evamāvuso"ti kho te bhikkhū āyasmato mahākaccānassa paccassosuṁ. Āyasmā mahākaccāno etadavoca: </p>
+
+<p><span class="parno">24</span>"Yaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: </p>
+
+
+<hr>
+
+<p class="verse"><span class="parno">25</span>‘Atītaṁ nānvāgameyya,
+<br> … pe … 
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī’ti.</p>
+
+<p><span class="parno">26</span>Imassa kho ahaṁ, āvuso, bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa evaṁ vitthārena atthaṁ ājānāmi – </p>
+
+
+<p><span class="parno">27</span>Kathañca, āvuso, atītaṁ anvāgameti? Iti me cakkhu ahosi atītamaddhānaṁ iti rūpāti — tattha <span class="var" title="chandarāgapaṭibaddhaṁ (bj, s1–3, pts1) | chandarāgappaṭibandhaṁ (mr)" id="note412">chandarāgappaṭibaddhaṁ</span> hoti viññāṇaṁ, chandarāgappaṭibaddhattā viññāṇassa tadabhinandati, tadabhinandanto atītaṁ anvāgameti.</p>
+
+<p>Iti me sotaṁ ahosi atītamaddhānaṁ iti saddāti … pe … iti me ghānaṁ ahosi atītamaddhānaṁ iti gandhāti … iti me jivhā ahosi atītamaddhānaṁ iti rasāti … iti me kāyo ahosi atītamaddhānaṁ iti phoṭṭhabbāti … iti me mano ahosi atītamaddhānaṁ iti dhammāti — tattha chandarāgappaṭibaddhaṁ hoti viññāṇaṁ, chandarāgappaṭibaddhattā viññāṇassa tadabhinandati, tadabhinandanto atītaṁ anvāgameti — evaṁ kho, āvuso, atītaṁ anvāgameti.</p>
+
+<p><span class="parno">28</span>Kathañca, āvuso, atītaṁ nānvāgameti? Iti me cakkhu ahosi atītamaddhānaṁ iti rūpāti — tattha na chandarāgappaṭibaddhaṁ hoti viññāṇaṁ, na chandarāgappaṭibaddhattā viññāṇassa na tadabhinandati, na tadabhinandanto atītaṁ nānvāgameti.</p>
+
+<p>Iti me sotaṁ ahosi atītamaddhānaṁ iti saddāti … pe … iti me ghānaṁ ahosi atītamaddhānaṁ iti gandhāti … iti me jivhā ahosi atītamaddhānaṁ iti rasāti … iti me kāyo ahosi atītamaddhānaṁ iti phoṭṭhabbāti … iti me mano ahosi atītamaddhānaṁ iti dhammāti — tattha na chandarāgappaṭibaddhaṁ hoti viññāṇaṁ, na chandarāgappaṭibaddhattā viññāṇassa, na tadabhinandati, na tadabhinandanto atītaṁ nānvāgameti — evaṁ kho, āvuso, atītaṁ nānvāgameti.</p>
+
+<p><span class="parno">29</span>Kathañca, āvuso, anāgataṁ paṭikaṅkhati? Iti me cakkhu siyā anāgatamaddhānaṁ iti rūpāti — appaṭiladdhassa paṭilābhāya cittaṁ paṇidahati, cetaso paṇidhānapaccayā tadabhinandati, tadabhinandanto anāgataṁ paṭikaṅkhati.</p>
+
+<p>Iti me sotaṁ siyā anāgatamaddhānaṁ iti saddāti … pe … iti me ghānaṁ siyā anāgatamaddhānaṁ iti gandhāti … iti me jivhā siyā anāgatamaddhānaṁ iti rasāti … iti me kāyo siyā anāgatamaddhānaṁ iti phoṭṭhabbāti … iti me mano siyā anāgatamaddhānaṁ iti dhammāti — appaṭiladdhassa paṭilābhāya cittaṁ paṇidahati, cetaso paṇidhānapaccayā tadabhinandati, tadabhinandanto anāgataṁ paṭikaṅkhati — evaṁ kho, āvuso, anāgataṁ paṭikaṅkhati.</p>
+
+<hr>
+
+<p><span class="parno">30</span>Kathañca, āvuso, anāgataṁ nappaṭikaṅkhati? Iti me cakkhu siyā anāgatamaddhānaṁ iti rūpāti — appaṭiladdhassa paṭilābhāya cittaṁ nappaṇidahati, cetaso appaṇidhānapaccayā na tadabhinandati, na tadabhinandanto anāgataṁ nappaṭikaṅkhati.</p>
+
+<p>Iti me sotaṁ siyā anāgatamaddhānaṁ iti saddāti … pe … iti me ghānaṁ siyā anāgatamaddhānaṁ iti gandhāti … iti me jivhā siyā anāgatamaddhānaṁ iti rasāti … iti me kāyo siyā anāgatamaddhānaṁ iti phoṭṭhabbāti … iti me mano siyā anāgatamaddhānaṁ iti dhammāti — appaṭiladdhassa paṭilābhāya cittaṁ nappaṇidahati, cetaso appaṇidhānapaccayā na tadabhinandati, na tadabhinandanto anāgataṁ nappaṭikaṅkhati — evaṁ kho, āvuso, anāgataṁ nappaṭikaṅkhati.</p>
+
+<hr>
+
+<p><span class="parno">31</span>Kathañca, āvuso, paccuppannesu dhammesu saṁhīrati? Yañcāvuso, cakkhu ye ca rūpā — ubhayametaṁ paccuppannaṁ. Tasmiñce paccuppanne chandarāgappaṭibaddhaṁ hoti viññāṇaṁ, chandarāgappaṭibaddhattā viññāṇassa tadabhinandati, tadabhinandanto paccuppannesu dhammesu saṁhīrati.</p>
+
+<p>Yañcāvuso, sotaṁ ye ca saddā … pe … yañcāvuso, ghānaṁ ye ca gandhā … yā cāvuso, jivhā ye ca rasā … yo cāvuso, kāyo ye ca phoṭṭhabbā … yo cāvuso, mano ye ca dhammā — ubhayametaṁ paccuppannaṁ. Tasmiñce paccuppanne chandarāgappaṭibaddhaṁ hoti viññāṇaṁ, chandarāgappaṭibaddhattā viññāṇassa tadabhinandati, tadabhinandanto paccuppannesu dhammesu saṁhīrati — evaṁ kho, āvuso, paccuppannesu dhammesu saṁhīrati.</p>
+
+<hr>
+
+<p><span class="parno">32</span>Kathañca, āvuso, paccuppannesu dhammesu na saṁhīrati? Yañcāvuso, cakkhu ye ca rūpā — ubhayametaṁ paccuppannaṁ. Tasmiñce paccuppanne na chandarāgappaṭibaddhaṁ hoti viññāṇaṁ, na chandarāgappaṭibaddhattā viññāṇassa na tadabhinandati, na tadabhinandanto paccuppannesu dhammesu na saṁhīrati.</p>
+
+<p>Yañcāvuso, sotaṁ ye ca saddā … pe … yañcāvuso, ghānaṁ ye ca gandhā … yā cāvuso, jivhā ye ca rasā … yo cāvuso, kāyo ye ca phoṭṭhabbā … yo cāvuso, mano ye ca dhammā — ubhayametaṁ paccuppannaṁ. Tasmiñce paccuppanne na chandarāgappaṭibaddhaṁ hoti viññāṇaṁ, na chandarāgappaṭibaddhattā viññāṇassa na tadabhinandati, na tadabhinandanto paccuppannesu dhammesu na saṁhīrati — evaṁ kho, āvuso, paccuppannesu dhammesu na saṁhīrati.</p>
+
+<hr>
+
+<p><span class="parno">33</span>Yaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: </p>
+
+
+<hr>
+
+<p class="verse"><span class="parno">34</span>‘Atītaṁ nānvāgameyya,
+<br> … pe … 
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī’ti.</p>
+
+<hr>
+
+<p><span class="parno">35</span>Imassa kho ahaṁ, āvuso, bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa evaṁ vitthārena atthaṁ ājānāmi. Ākaṅkhamānā ca pana tumhe āyasmanto bhagavantaṁyeva upasaṅkamitvā etamatthaṁ paṭipuccheyyātha, yathā vo bhagavā byākaroti tathā naṁ dhāreyyāthā"ti.</p>
+
+
+<p><span class="parno">36</span>Atha kho te bhikkhū āyasmato mahākaccānassa bhāsitaṁ abhinanditvā anumoditvā uṭṭhāyāsanā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: "yaṁ kho no, bhante, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: </p>
+
+<p class="verse"><span class="parno">37</span>‘Atītaṁ nānvāgameyya,
+<br> … pe … 
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī’ti.</p>
+
+<p><span class="parno">38</span>Tesaṁ no, bhante, amhākaṁ, acirapakkantassa bhagavato, etadahosi: ‘idaṁ kho no, āvuso, bhagavā saṅkhittena uddesaṁ uddisitvā vitthārena atthaṁ avibhajitvā uṭṭhāyāsanā vihāraṁ paviṭṭho: </p>
+
+<p class="verse"><span class="parno">39</span>"Atītaṁ nānvāgameyya,
+<br>nappaṭikaṅkhe anāgataṁ;
+<br>Yadatītaṁ pahīnaṁ taṁ,
+<br>appattañca anāgataṁ.</p>
+
+<p class="verse"><span class="parno">40</span>Paccuppannañca yo dhammaṁ,
+<br>tattha tattha vipassati;
+<br>Asaṁhīraṁ asaṅkuppaṁ,
+<br>taṁ vidvā manubrūhaye.</p>
+
+<p class="verse"><span class="parno">41</span>Ajjeva kiccamātappaṁ,
+<br>ko jaññā maraṇaṁ suve;
+<br>Na hi no saṅgaraṁ tena,
+<br>mahāsenena maccunā.</p>
+
+<p class="verse"><span class="parno">42</span>Evaṁvihāriṁ ātāpiṁ,
+<br>ahorattamatanditaṁ;
+<br>Taṁ ve bhaddekarattoti,
+<br>santo ācikkhate munī"ti.</p>
+
+<p><span class="parno">43</span>Ko nu kho imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajeyyā’ti? Tesaṁ no, bhante, amhākaṁ etadahosi: ‘Ayaṁ kho āyasmā mahākaccāno satthu ceva saṁvaṇṇito sambhāvito ca viññūnaṁ sabrahmacārīnaṁ. Pahoti cāyasmā mahākaccāno imassa bhagavatā saṅkhittena uddesassa uddiṭṭhassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ vibhajituṁ. Yannūna mayaṁ yenāyasmā mahākaccāno tenupasaṅkameyyāma; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipuccheyyāmā’ti. Atha kho mayaṁ, bhante, yenāyasmā mahākaccāno tenupasaṅkamimha; upasaṅkamitvā āyasmantaṁ mahākaccānaṁ etamatthaṁ paṭipucchimha. Tesaṁ no, bhante, āyasmatā mahākaccānena imehi ākārehi imehi padehi imehi byañjanehi attho vibhatto"ti.</p>
+
+
+<p><span class="parno">44</span>"Paṇḍito, bhikkhave, mahākaccāno; mahāpañño, bhikkhave mahākaccāno. Mañcepi tumhe, bhikkhave, etamatthaṁ paṭipuccheyyātha, ahampi taṁ evamevaṁ byākareyyaṁ yathā taṁ mahākaccānena byākataṁ. Eso cevetassa attho. Evañca naṁ dhārethā"ti.</p>
+
+<hr>
+
+<p><span class="parno">45</span>Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti.</p>
+
+
+<p class="endsutta">Mahākaccānabhaddekarattasuttaṁ niṭṭhitaṁ tatiyaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn132.html#content"></a><a id="next-sutta" href="./mn134.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN133: Mahākaccānabhaddekarattasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 57</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN57: Kukkuravatikasutta - The Ascetic Who Behaved Like a Dog</h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn57">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was staying in the land of the Koliyans, where they have a town named Haliddavasana.</p>
+
+<p>Then Puṇṇa Koliyaputta, who had taken a vow to behave like a cow, and Seniya, a naked ascetic who had taken a vow to behave like a dog, went to see the Buddha. Puṇṇa bowed to the Buddha and sat down to one side, while Seniya exchanged greetings and polite conversation with him before sitting down to one side curled up like a dog.</p>
+
+<p>Puṇṇa said to the Buddha: “Sir, this naked dog ascetic Seniya does a hard thing: he eats food placed on the ground. For a long time he has undertaken that observance to behave like a dog. Where will he be reborn in his next life?”</p>
+
+<p>“Enough, Puṇṇa, let it be. Don’t ask me that.”</p>
+
+<p>For a second time … and a third time, Puṇṇa said to the Buddha: “Sir, this naked dog ascetic Seniya does a hard thing: he eats food placed on the ground. For a long time he has undertaken that observance to behave like a dog. Where will he be reborn in his next life?”</p>
+
+<p id="p2"><span class="parno">2</span>“Clearly, Puṇṇa, I’m not getting through to you when I say: ‘Enough, Puṇṇa, let it be. Don’t ask me that.’ Nevertheless, I will answer you.</p>
+
+<p>Take someone who develops the dog observance fully and uninterruptedly. They develop a dog’s ethics, a dog’s mentality, and a dog’s behavior fully and uninterruptedly. When their body breaks up, after death, they’re reborn in the company of dogs. But if they have such a view: ‘By this precept or observance or mortification or spiritual life, may I become one of the gods!’ This is their wrong view. An individual with wrong view is reborn in one of two places, I say: hell or the animal realm. So if the dog observance succeeds it leads to rebirth in the company of dogs, but if it fails it leads to hell.”</p>
+
+<p>When he said this, Seniya cried and burst out in tears.</p>
+
+<hr>
+
+<p id="p3"><span class="parno">3</span>The Buddha said to Puṇṇa: “This is what I didn’t get through to you when I said: ‘Enough, Puṇṇa, let it be. Don’t ask me that.’”</p>
+
+<p>“Sir, I’m not crying because of what the Buddha said. But, sir, for a long time I have undertaken this observance to behave like a dog. Sir, this Puṇṇa has taken a vow to behave like a cow. For a long time he has undertaken that observance to behave like a cow. Where will he be reborn in his next life?”</p>
+
+<p>“Enough, Seniya, let it be. Don’t ask me that.”</p>
+
+<p>For a second time … and a third time Seniya said to the Buddha: “Sir, this Puṇṇa has taken a vow to behave like a cow. For a long time he has undertaken that observance to behave like a cow. Where will he be reborn in his next life?”</p>
+
+<p id="p4"><span class="parno">4</span>“Clearly, Seniya, I’m not getting through to you when I say: ‘Enough, Seniya, let it be. Don’t ask me that.’ Nevertheless, I will answer you.</p>
+
+<p>Take someone who develops the cow observance fully and uninterruptedly. They develop a cow’s ethics, a cow’s mentality, and a cow’s behavior fully and uninterruptedly. When their body breaks up, after death, they’re reborn in the company of cows. But if they have such a view: ‘By this precept or observance or mortification or spiritual life, may I become one of the gods!’ This is their wrong view. An individual with wrong view is reborn in one of two places, I say: hell or the animal realm. So if the cow observance succeeds it leads to rebirth in the company of cows, but if it fails it leads to hell.”</p>
+
+<p>When he said this, Puṇṇa cried and burst out in tears.</p>
+
+<hr>
+
+<p id="p5"><span class="parno">5</span>The Buddha said to Seniya: “This is what I didn’t get through to you when I said: ‘Enough, Seniya, let it be. Don’t ask me that.’”</p>
+
+<p>“Sir, I’m not crying because of what the Buddha said. But, sir, for a long time I have undertaken this observance to behave like a cow. I am quite confident that the Buddha is capable of teaching me so that I can give up this cow observance, and the naked ascetic Seniya can give up that dog observance.”</p>
+
+<p>“Well then, Puṇṇa, listen and pay close attention, I will speak.”</p>
+
+<p>“Yes, sir,” he replied. The Buddha said this:</p>
+
+<p id="p6"><span class="parno">6</span>“Puṇṇa, I declare these four kinds of deeds, having realized them with my own insight. What four?</p>
+<p>There are dark deeds with dark results;
+<br>bright deeds with bright results;
+<br>dark and bright deeds with dark and bright results; and
+<br>neither dark nor bright deeds with neither dark nor bright results, which lead to the ending of deeds. </p>
+
+<p id="p7"><span class="parno">7</span>And what are dark deeds with dark results? It’s when someone makes hurtful choices by way of body, speech, and mind. Having made these choices, they’re reborn in a hurtful world, where hurtful contacts touch them. Touched by hurtful contacts, they experience hurtful feelings that are exclusively painful — like the beings in hell. This is how a being is born from a being. For your deeds determine your rebirth, and when you’re reborn contacts affect you. This is why I say that sentient beings are heirs to their deeds. These are called dark deeds with dark results.</p>
+
+<p id="p8"><span class="parno">8</span>And what are bright deeds with bright results? It’s when someone makes pleasing choices by way of body, speech, and mind. Having made these choices, they are reborn in a pleasing world, where pleasing contacts touch them. Touched by pleasing contacts, they experience pleasing feelings that are exclusively happy — like the gods replete with glory. This is how a being is born from a being. For your deeds determine your rebirth, and when you’re reborn contacts affect you. This is why I say that sentient beings are heirs to their deeds. These are called bright deeds with bright results.</p>
+
+<p id="p9"><span class="parno">9</span>And what are dark and bright deeds with dark and bright results? It’s when someone makes both hurtful and pleasing choices by way of body, speech, and mind. Having made these choices, they are reborn in a world that is both hurtful and pleasing, where hurtful and pleasing contacts touch them. Touched by both hurtful and pleasing contacts, they experience both hurtful and pleasing feelings that are a mixture of pleasure and pain — like humans, some gods, and some beings in the underworld. This is how a being is born from a being. For what you do brings about your rebirth, and when you’re reborn contacts affect you. This is why I say that sentient beings are heirs to their deeds. These are called dark and bright deeds with dark and bright results.</p>
+
+<p id="p10"><span class="parno">10</span>And what are neither dark nor bright deeds with neither dark nor bright results, which lead to the ending of deeds? It’s the intention to give up dark deeds with dark results, bright deeds with bright results, and both dark and bright deeds with both dark and bright results. These are called neither dark nor bright deeds with neither dark nor bright results, which lead to the ending of deeds.</p>
+
+<p>These are the four kinds of deeds that I declare, having realized them with my own insight.”</p>
+
+<hr>
+
+<p id="p11"><span class="parno">11</span>When he had spoken, Puṇṇa Koliyaputta the observer of cow behavior said to the Buddha: </p>
+
+<p>“Excellent, sir! Excellent! … From this day forth, may the Buddha remember me as a lay follower who has gone for refuge for life.” And Seniya the naked dog ascetic said to the Buddha: “Excellent, sir! Excellent! … I go for refuge to the Buddha, to the teaching, and to the mendicant Saṅgha. Sir, may I receive the going forth, the ordination in the Buddha’s presence?”</p>
+
+<p>“Seniya, if someone formerly ordained in another sect wishes to take the going forth, the ordination in this teaching and training, they must spend four months on probation. When four months have passed, if the mendicants are satisfied, they’ll give the going forth, the ordination into monkhood. However, I have recognized individual differences in this matter.”</p>
+
+<p id="p12"><span class="parno">12</span>“Sir, if four months probation are required in such a case, I’ll spend four years on probation. When four years have passed, if the mendicants are satisfied, let them give me the going forth, the ordination into monkhood.”</p>
+
+<p id="p13"><span class="parno">13</span>And the naked dog ascetic Seniya received the going forth, the ordination in the Buddha’s presence. Not long after his ordination, Venerable Seniya, living alone, withdrawn, diligent, keen, and resolute, soon realized the supreme end of the spiritual path in this very life. He lived having achieved with his own insight the goal for which gentlemen rightly go forth from the lay life to homelessness.</p>
+
+<p id="p14"><span class="parno">14</span>He understood: “Rebirth is ended; the spiritual journey has been completed; what had to be done has been done; there is no return to any state of existence.” And Venerable Seniya became one of the perfected.</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā koliyesu viharati haliddavasanaṁ nāma koliyānaṁ nigamo.</p>
+
+<p>Atha kho puṇṇo ca koliyaputto govatiko acelo ca seniyo kukkuravatiko yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā puṇṇo koliyaputto govatiko bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Acelo pana seniyo kukkuravatiko bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā kukkurova <span class="var" title="paḷikujjitvā (bj) | palikuṇṭhitvā (s1–3, km) | paliguṇṭhitvā (mr)" id="note95">palikujjitvā</span>ekamantaṁ nisīdi. </p>
+
+<p>Ekamantaṁ nisinno kho puṇṇo koliyaputto govatiko bhagavantaṁ etadavoca: "Ayaṁ, bhante, acelo seniyo kukkuravatiko dukkarakārako chamānikkhittaṁ bhojanaṁ bhuñjati. Tassa taṁ kukkuravataṁ dīgharattaṁ samattaṁ samādinnaṁ. Tassa kā gati, ko abhisamparāyo"ti?</p>
+
+<p>"Alaṁ, puṇṇa, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī"ti.</p>
+
+<p>Dutiyampi kho puṇṇo koliyaputto govatiko … pe … tatiyampi kho puṇṇo koliyaputto govatiko bhagavantaṁ etadavoca: "Ayaṁ, bhante, acelo seniyo kukkuravatiko dukkarakārako chamānikkhittaṁ bhojanaṁ bhuñjati. Tassa taṁ kukkuravataṁ dīgharattaṁ samattaṁ samādinnaṁ. Tassa kā gati, ko abhisamparāyo"ti?</p>
+
+<p><span class="parno">2</span>"Addhā kho te ahaṁ, puṇṇa, na labhāmi. Alaṁ, puṇṇa, tiṭṭhatetaṁ; mā maṁ etaṁ pucchīti; api ca tyāhaṁ byākarissāmi.</p>
+
+<p>Idha, puṇṇa, ekacco kukkuravataṁ bhāveti paripuṇṇaṁ abbokiṇṇaṁ, kukkurasīlaṁ bhāveti paripuṇṇaṁ abbokiṇṇaṁ, kukkuracittaṁ bhāveti paripuṇṇaṁ abbokiṇṇaṁ, kukkurākappaṁ bhāveti paripuṇṇaṁ abbokiṇṇaṁ. So kukkuravataṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ, kukkurasīlaṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ, kukkuracittaṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ, kukkurākappaṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ kāyassa bhedā paraṁ maraṇā kukkurānaṁ sahabyataṁ upapajjati. Sace kho panassa evaṁdiṭṭhi hoti: ‘imināhaṁ sīlena vā vatena vā tapena vā brahmacariyena vā devo vā bhavissāmi devaññataro vā’ti, <span class="var" title="sāyaṁ (mr)" id="note96">sāssa</span> hoti micchādiṭṭhi. <span class="var" title="micchādiṭṭhikassa (bj)" id="note97">Micchādiṭṭhissa</span> kho ahaṁ, puṇṇa, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi — nirayaṁ vā tiracchānayoniṁ vā. Iti kho, puṇṇa, sampajjamānaṁ kukkuravataṁ kukkurānaṁ sahabyataṁ upaneti, vipajjamānaṁ nirayan"ti.</p>
+
+<p>Evaṁ vutte, acelo seniyo kukkuravatiko parodi, assūni pavattesi.</p>
+
+<hr>
+
+<p><span class="parno">3</span>Atha kho bhagavā puṇṇaṁ koliyaputtaṁ govatikaṁ etadavoca: </p>
+
+<p>"etaṁ kho te ahaṁ, puṇṇa, nālatthaṁ. Alaṁ, puṇṇa, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī"ti. "Nāhaṁ, bhante, etaṁ rodāmi yaṁ maṁ bhagavā evamāha; api ca me idaṁ, bhante, kukkuravataṁ dīgharattaṁ samattaṁ samādinnaṁ. Ayaṁ, bhante, puṇṇo koliyaputto govatiko. Tassa taṁ govataṁ dīgharattaṁ samattaṁ samādinnaṁ. Tassa kā gati, ko abhisamparāyo"ti?</p>
+
+<p>"Alaṁ, seniya, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī"ti.</p>
+
+<p>Dutiyampi kho acelo seniyo … pe … tatiyampi kho acelo seniyo kukkuravatiko bhagavantaṁ etadavoca: "Ayaṁ, bhante, puṇṇo koliyaputto govatiko. Tassa taṁ govataṁ dīgharattaṁ samattaṁ samādinnaṁ. Tassa kā gati, ko abhisamparāyo"ti?</p>
+
+<p><span class="parno">4</span>"Addhā kho te ahaṁ, seniya, na labhāmi. Alaṁ, seniya, tiṭṭhatetaṁ; mā maṁ etaṁ pucchīti; api ca tyāhaṁ byākarissāmi.</p>
+
+<p>Idha, seniya, ekacco govataṁ bhāveti paripuṇṇaṁ abbokiṇṇaṁ, gosīlaṁ bhāveti paripuṇṇaṁ abbokiṇṇaṁ, gocittaṁ bhāveti paripuṇṇaṁ abbokiṇṇaṁ, <span class="var" title="gvākappaṁ (mr)" id="note98">gavākappaṁ</span> bhāveti paripuṇṇaṁ abbokiṇṇaṁ. So govataṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ, gosīlaṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ, gocittaṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ, gavākappaṁ bhāvetvā paripuṇṇaṁ abbokiṇṇaṁ kāyassa bhedā paraṁ maraṇā gunnaṁ sahabyataṁ upapajjati. Sace kho panassa evaṁdiṭṭhi hoti: ‘imināhaṁ sīlena vā vatena vā tapena vā brahmacariyena vā devo vā bhavissāmi devaññataro vā’ti, sāssa hoti micchādiṭṭhi. Micchādiṭṭhissa kho ahaṁ, seniya, dvinnaṁ gatīnaṁ aññataraṁ gatiṁ vadāmi –  nirayaṁ vā tiracchānayoniṁ vā. Iti kho, seniya, sampajjamānaṁ govataṁ gunnaṁ sahabyataṁ upaneti, vipajjamānaṁ nirayan"ti.</p>
+
+<p>Evaṁ vutte, puṇṇo koliyaputto govatiko parodi, assūni pavattesi.</p>
+
+<hr>
+
+<p><span class="parno">5</span>Atha kho bhagavā acelaṁ seniyaṁ kukkuravatikaṁ etadavoca: "etaṁ kho te ahaṁ, seniya, nālatthaṁ. Alaṁ, seniya, tiṭṭhatetaṁ; mā maṁ etaṁ pucchī"ti.</p>
+
+<p>"Nāhaṁ, bhante, etaṁ rodāmi yaṁ maṁ bhagavā evamāha; api ca me idaṁ, bhante, govataṁ dīgharattaṁ samattaṁ samādinnaṁ. Evaṁ pasanno ahaṁ, bhante, bhagavati; pahoti bhagavā tathā dhammaṁ desetuṁ yathā ahaṁ cevimaṁ govataṁ pajaheyyaṁ, ayañceva acelo seniyo kukkuravatiko taṁ kukkuravataṁ pajaheyyā"ti.</p>
+
+<p>"Tena hi, puṇṇa, suṇāhi, sādhukaṁ manasi karohi, bhāsissāmī"ti. "Evaṁ, bhante"ti kho puṇṇo koliyaputto govatiko bhagavato paccassosi. Bhagavā etadavoca: </p>
+
+<p><span class="parno">6</span>"Cattārimāni, puṇṇa, kammāni mayā sayaṁ abhiññā sacchikatvā paveditāni. Katamāni cattāri? </p>
+
+<p>Atthi, puṇṇa, kammaṁ kaṇhaṁ kaṇhavipākaṁ;
+<br>atthi, puṇṇa, kammaṁ sukkaṁ sukkavipākaṁ;
+<br>atthi, puṇṇa, kammaṁ kaṇhasukkaṁ kaṇhasukkavipākaṁ;
+<br>atthi, puṇṇa, kammaṁ akaṇhaṁ asukkaṁ akaṇhaasukkavipākaṁ, kammakkhayāya saṁvattati.</p>
+
+<p><span class="parno">7</span>Katamañca, puṇṇa, kammaṁ kaṇhaṁ kaṇhavipākaṁ? Idha, puṇṇa, ekacco <span class="var" title="sabyāpajjhaṁ (bj, s1–3, km)" id="note100">sabyābajjhaṁ</span>kāyasaṅkhāraṁ abhisaṅkharoti, sabyābajjhaṁ vacīsaṅkhāraṁ abhisaṅkharoti, sabyābajjhaṁ manosaṅkhāraṁ abhisaṅkharoti. So sabyābajjhaṁ kāyasaṅkhāraṁ abhisaṅkharitvā, sabyābajjhaṁ vacīsaṅkhāraṁ abhisaṅkharitvā, sabyābajjhaṁ manosaṅkhāraṁ abhisaṅkharitvā, sabyābajjhaṁ lokaṁ upapajjati. Tamenaṁ sabyābajjhaṁ lokaṁ upapannaṁ samānaṁ sabyābajjhā phassā phusanti. So sabyābajjhehi phassehi phuṭṭho samāno sabyābajjhaṁ vedanaṁ vedeti ekantadukkhaṁ, seyyathāpi sattā nerayikā. Iti kho, puṇṇa, bhūtā bhūtassa upapatti hoti; yaṁ karoti tena upapajjati, upapannamenaṁ phassā phusanti. Evampāhaṁ, puṇṇa, ‘kammadāyādā sattā’ti vadāmi. Idaṁ vuccati, puṇṇa, kammaṁ kaṇhaṁ kaṇhavipākaṁ. <span class="brnum">(1)</span></p>
+
+<p><span class="parno">8</span>Katamañca, puṇṇa, kammaṁ sukkaṁ sukkavipākaṁ? Idha, puṇṇa, ekacco abyābajjhaṁ kāyasaṅkhāraṁ abhisaṅkharoti, abyābajjhaṁ vacīsaṅkhāraṁ abhisaṅkharoti, abyābajjhaṁ manosaṅkhāraṁ abhisaṅkharoti. So abyābajjhaṁ kāyasaṅkhāraṁ abhisaṅkharitvā, abyābajjhaṁ vacīsaṅkhāraṁ abhisaṅkharitvā, abyābajjhaṁ manosaṅkhāraṁ abhisaṅkharitvā abyābajjhaṁ lokaṁ upapajjati. Tamenaṁ abyābajjhaṁ lokaṁ upapannaṁ samānaṁ abyābajjhā phassā phusanti. So abyābajjhehi phassehi phuṭṭho samāno abyābajjhaṁ vedanaṁ vedeti ekantasukhaṁ, seyyathāpi devā subhakiṇhā. Iti kho, puṇṇa, bhūtā bhūtassa upapatti hoti; yaṁ karoti tena upapajjati, upapannamenaṁ phassā phusanti. Evampāhaṁ, puṇṇa, ‘kammadāyādā sattā’ti vadāmi. Idaṁ vuccati, puṇṇa, kammaṁ sukkaṁ sukkavipākaṁ. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">9</span>Katamañca, puṇṇa, kammaṁ kaṇhasukkaṁ kaṇhasukkavipākaṁ? Idha, puṇṇa, ekacco sabyābajjhampi abyābajjhampi kāyasaṅkhāraṁ abhisaṅkharoti, sabyābajjhampi abyābajjhampi vacīsaṅkhāraṁ abhisaṅkharoti, sabyābajjhampi abyābajjhampi manosaṅkhāraṁ abhisaṅkharoti. So sabyābajjhampi abyābajjhampi kāyasaṅkhāraṁ abhisaṅkharitvā, sabyābajjhampi abyābajjhampi vacīsaṅkhāraṁ abhisaṅkharitvā, sabyābajjhampi abyābajjhampi manosaṅkhāraṁ abhisaṅkharitvā sabyābajjhampi abyābajjhampi lokaṁ upapajjati. Tamenaṁ sabyābajjhampi abyābajjhampi lokaṁ upapannaṁ samānaṁ sabyābajjhāpi abyābajjhāpi phassā phusanti. So sabyābajjhehipi abyābajjhehipi phassehi phuṭṭho samāno sabyābajjhampi abyābajjhampi vedanaṁ vedeti vokiṇṇasukhadukkhaṁ, seyyathāpi manussā ekacce ca devā ekacce ca vinipātikā. Iti kho, puṇṇa, bhūtā bhūtassa upapatti hoti; yaṁ karoti tena upapajjati. Upapannamenaṁ phassā phusanti. Evampāhaṁ, puṇṇa, ‘kammadāyādā sattā’ti vadāmi. Idaṁ vuccati, puṇṇa, kammaṁ kaṇhasukkaṁ kaṇhasukkavipākaṁ. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">10</span>Katamañca, puṇṇa, kammaṁ akaṇhaṁ asukkaṁ akaṇhaasukkavipākaṁ, kammakkhayāya saṁvattati? Tatra, puṇṇa, yamidaṁ kammaṁ kaṇhaṁ kaṇhavipākaṁ tassa pahānāya yā cetanā, <span class="var" title="yampidaṁ (bj, pts1)" id="note101">yamidaṁ</span> kammaṁ sukkaṁ sukkavipākaṁ tassa pahānāya yā cetanā, <span class="var" title="yampidaṁ (bj, pts1)" id="note102">yamidaṁ</span>kammaṁ kaṇhasukkaṁ kaṇhasukkavipākaṁ tassa pahānāya yā cetanā — idaṁ vuccati, puṇṇa, kammaṁ akaṇhaṁ asukkaṁ akaṇhaasukkavipākaṁ, kammakkhayāya saṁvattatīti. </p>
+
+<p>Imāni kho, puṇṇa, cattāri kammāni mayā sayaṁ abhiññā sacchikatvā paveditānī"ti. <span class="brnum">(4)</span></p>
+
+ 
+<hr>
+
+<p><span class="parno">11</span>Evaṁ vutte, puṇṇo koliyaputto govatiko bhagavantaṁ etadavoca: </p>
+
+<p>"Abhikkantaṁ, bhante, abhikkantaṁ, bhante. Seyyathāpi, bhante … pe … upāsakaṁ maṁ bhagavā dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti. Acelo pana seniyo kukkuravatiko bhagavantaṁ etadavoca: "Abhikkantaṁ, bhante, abhikkantaṁ, bhante. Seyyathāpi, bhante … pe … pakāsito. Esāhaṁ, bhante, bhagavantaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Labheyyāhaṁ, bhante, bhagavato santike pabbajjaṁ, labheyyaṁ upasampadan"ti.</p>
+
+<p>"Yo kho, seniya, aññatitthiyapubbo imasmiṁ dhammavinaye ākaṅkhati pabbajjaṁ, ākaṅkhati upasampadaṁ so cattāro māse parivasati. Catunnaṁ māsānaṁ accayena āraddhacittā bhikkhū pabbājenti, upasampādenti bhikkhubhāvāya. Api ca mettha puggalavemattatā viditā"ti.</p>
+
+<p><span class="parno">12</span>"Sace, bhante, aññatitthiyapubbā imasmiṁ dhammavinaye ākaṅkhantā pabbajjaṁ ākaṅkhantā upasampadaṁ te cattāro māse parivasanti catunnaṁ māsānaṁ accayena āraddhacittā bhikkhū pabbājenti upasampādenti bhikkhubhāvāya, ahaṁ cattāri vassāni parivasissāmi catunnaṁ vassānaṁ accayena āraddhacittā bhikkhū pabbājentu, upasampādentu bhikkhubhāvāyā"ti.</p>
+
+<p><span class="parno">13</span>Alattha kho acelo seniyo kukkuravatiko bhagavato santike pabbajjaṁ, alattha upasampadaṁ. Acirūpasampanno kho panāyasmā seniyo eko vūpakaṭṭho appamatto ātāpī pahitatto viharanto nacirasseva — yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, Tadanuttaraṁ — brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja vihāsi.</p>
+
+<p><span class="parno">14</span>"Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā"ti abbhaññāsi. Aññataro kho panāyasmā seniyo arahataṁ ahosīti.</p>
+
+<p class="endsutta">Kukkuravatikasuttaṁ niṭṭhitaṁ sattamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn56.html#content"></a><a id="next-sutta" href="./mn58.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN57: Kukkuravatikasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

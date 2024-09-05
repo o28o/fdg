@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nika 12.32</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="pressed w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+<!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+
+ <h2>Saṁyutta Nikāya — The Linked Discourses</h2>
+
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+ 					<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div>  <!-- End div for SN sub-navigation -->
+
+
+<!-- SN content begins here -->
+
+<div id="content">
+
+<h2>12. Nidānasaṁyutta: On Causation</h2>
+<h3>IV. Kaḷāra the Aristocrat — SN12.32: With Kaḷāra the Aristocrat </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+	<li><a href="/ru/sc/?q=sn12.32">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+	</ul>
+</div>
+
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p><span class="parno">1</span>At Sāvatthī.</p>
+
+<p>Then the mendicant Kaḷāra the Aristocrat went up to Venerable Sāriputta and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side and said to him: “Reverend Sāriputta, the mendicant Phagguna of the Top-Knot has rejected the training and returned to a lesser life.”</p>
+
+<p>“That venerable mustn’t have got any satisfaction in this teaching and training.”</p>
+
+<hr>
+<p><span class="parno">2</span>“Well then, has Venerable Sāriputta found satisfaction in this teaching and training?”</p>
+
+<p><span class="parno">3</span>“Reverend, I have no uncertainty.”</p>
+
+<p>“But what of the future?”</p>
+
+<hr>
+<p><span class="parno">4</span>“I have no doubt.”</p>
+
+<p><span class="parno">5</span>Then Kaḷāra the Aristocrat went up to the Buddha, bowed, sat down to one side, and said to him: “Sir, Venerable Sāriputta has declared enlightenment: ‘I understand: “Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.”’”</p>
+
+<p><span class="parno">6</span>So the Buddha said to a certain monk: “Please, monk, in my name tell Sāriputta that the teacher summons him.”</p>
+
+<p>“Yes, sir,” that monk replied. He went to Sāriputta and said to him: “Reverend Sāriputta, the teacher summons you.”</p>
+
+<p>“Yes, reverend,” replied Sāriputta. He went to the Buddha, bowed, and sat down to one side. The Buddha said to him: “Sāriputta, is it really true that you have declared enlightenment: ‘I understand: “Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence”’?”</p>
+
+<hr>
+<p>“Sir, I did not state the meaning in these words and phrases.”</p>
+
+<p>“Sāriputta, no matter how a gentleman declares enlightenment, what they have declared should be regarded as such.”</p>
+
+<p>“Sir, did I not also say that I did not state the meaning in these words and phrases?”</p>
+
+<p><span class="parno">7</span>“Sāriputta, suppose they were to ask you: ‘But Reverend Sāriputta, how have you known and seen so that you’ve declared enlightenment: “I understand: ‘Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.’”’ How would you answer?”</p>
+
+<p><span class="parno">8</span>“Sir, if they were to ask me this, I would answer: ‘Reverends, because of the ending of the source of rebirth, when it ended, I knew “it is ended”. Knowing this, I understand: “Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.”’ That’s how I’d answer such a question.”</p>
+
+<p><span class="parno">9</span>“But Sāriputta, suppose they were to ask you: ‘But what is the source, origin, birthplace, and root of rebirth?’ How would you answer?”</p>
+
+<p>“Sir, if they were to ask me this, I would answer: ‘Continued existence is the source, origin, birthplace, and root of rebirth.’ That’s how I’d answer such a question.”</p>
+
+<hr>
+<p><span class="parno">10</span>“But Sāriputta, suppose they were to ask you: ‘What is the source of continued existence?’ How would you answer?”</p>
+
+<p>“Sir, if they were to ask me this, I’d answer: ‘Grasping is the source of continued existence.’ That’s how I’d answer such a question.”</p>
+
+<p><span class="parno">11</span>“But Sāriputta, suppose they were to ask you: ‘What is the source of grasping?’ … But Sāriputta, suppose they were to ask you: ‘What is the source of craving?’ How would you answer?”</p>
+
+<p>“Sir, if they were to ask me this, I’d answer: ‘Feeling is the source of craving.’ That’s how I’d answer such a question.”</p>
+
+<hr>
+<p><span class="parno">12</span>“But Sāriputta, suppose they were to ask you: ‘But how have you known and seen so that the relishing of feelings is no longer present?’ How would you answer?”</p>
+
+<p>“Sir, if they were to ask me this, I’d answer: ‘Reverends, there are three feelings. What three? Pleasant, painful, and neutral feeling. These three feelings are impermanent, and what’s impermanent is suffering. When I understood this, the relishing of feelings was no longer present.’ That’s how I’d answer such a question.”</p>
+
+<hr>
+<p><span class="parno">13</span>“Good, good, Sāriputta! The same point may also be briefly explained in this way: ‘Suffering includes whatever is felt.’</p>
+
+<p><span class="parno">14</span>But Sāriputta, suppose they were to ask you: ‘But Reverend, how have you been released that you declare enlightenment: “I understand: ‘Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.’”?’ How would you answer?”</p>
+
+<p>“Sir, if they were to ask me this, I’d answer: ‘Because of an inner release with the ending of all grasping, I live mindfully so that defilements don’t defile me and I don’t look down on myself.’ That’s how I’d answer such a question.”</p>
+
+<hr>
+<p><span class="parno">15</span>“Good, good, Sāriputta! The same point may also be briefly explained in this way: ‘I have no uncertainty regarding the defilements spoken of by the ascetic. I have no doubt that I’ve given them up.’”</p>
+
+<p>That is what the Buddha said. When he had spoken, the Holy One got up from his seat and entered his dwelling.</p>
+
+<hr>
+<p><span class="parno">16</span>Then soon after the Buddha left, Venerable Sāriputta said to the mendicants: “Reverends, the first question that the Buddha asked me was something that I’d not previously considered, so I hesitated. But when the Buddha agreed with my answer, I thought: ‘If the Buddha were to question me all day on this matter in different words and ways, I could answer all day with different words and ways. If he were to question me all night, all day and night, for two days and nights, for three, four, five, six, or seven days and nights, I could answer in different words and ways for seven days and nights.’”</p>
+
+<p><span class="parno">17</span>Then Kaḷāra the Aristocrat went up to the Buddha, bowed, sat down to one side, and said to him: “Sir, Venerable Sāriputta has roared his lion’s roar!”
+
+<span class="half"><br></span>(And he told the Buddha all that Sāriputta had said.)</p>
+
+<hr>
+<p><span class="parno">18</span>“Mendicant, Sāriputta has clearly comprehended the principle of the teachings, so that he could answer any questions I might ask him in different words and ways up to the seventh day and night.”</p>
+
+</div> <!-- End English -->
+<div lang="pi">
+
+<p><span class="parno">1</span>Sāvatthiyaṁ vihārati.</p>
+
+<p>Atha kho kaḷārakhattiyo bhikkhu yenāyasmā sāriputto tenupasaṅkami; upasaṅkamitvā āyasmatā sāriputtena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho kaḷārakhattiyo bhikkhu āyasmantaṁ sāriputtaṁ etadavoca: "moḷiyaphagguno, āvuso sāriputta, bhikkhu sikkhaṁ paccakkhāya hīnāyāvatto"ti. </p>
+
+<p>"Na hi nūna so āyasmā imasmiṁ dhammavinaye assāsamalatthā"ti.</p>
+
+<hr>
+<p><span class="parno">2</span>"Tena hāyasmā sāriputto imasmiṁ dhammavinaye assāsaṁ patto"ti?</p>
+
+<p><span class="parno">3</span>"Na khvāhaṁ, āvuso, kaṅkhāmī"ti.</p>
+
+<p>"Āyatiṁ, panāvuso"ti?</p>
+
+<hr>
+<p><span class="parno">4</span>"Na khvāhaṁ, āvuso, vicikicchāmī"ti.</p>
+
+<p><span class="parno">5</span>Atha kho kaḷārakhattiyo bhikkhu uṭṭhāyāsanā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho kaḷārakhattiyo bhikkhu bhagavantaṁ etadavoca: "āyasmatā, bhante, sāriputtena aññā byākatā: ‘khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāmī"ti.</p>
+
+<p><span class="parno">6</span>Atha kho bhagavā aññataraṁ bhikkhuṁ āmantesi: "ehi tvaṁ, bhikkhu, mama vacanena sāriputtaṁ āmantehi: ‘satthā taṁ, āvuso sāriputta, āmantetī’"ti. </p>
+
+<p>"Evaṁ, bhante"ti kho so bhikkhu bhagavato paṭissutvā yenāyasmā sāriputto tenupasaṅkami; upasaṅkamitvā āyasmantaṁ sāriputtaṁ etadavoca: "satthā taṁ, āvuso sāriputta, āmantetī"ti. </p>
+
+<p>"Evaṁ, āvuso"ti kho āyasmā sāriputto tassa bhikkhuno paṭissutvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho āyasmantaṁ sāriputtaṁ bhagavā etadavoca: "Saccaṁ kira tayā, sāriputta, aññā byākatā: ‘khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāmī"ti? </p>
+
+<hr>
+<p>"Na kho, bhante, etehi padehi etehi byañjanehi attho vutto"ti. </p>
+
+<p>"Yena kenacipi, sāriputta, pariyāyena kulaputto aññaṁ byākaroti, atha kho byākataṁ byākatato daṭṭhabban"ti. </p>
+
+<p>"Nanu ahampi, bhante, evaṁ vadāmi: ‘Na kho, bhante, etehi padehi etehi byañjanehi attho vutto’"ti.</p>
+
+<p><span class="parno">7</span>"Sace taṁ, sāriputta, evaṁ puccheyyuṁ: ‘kathaṁ jānatā pana tayā, āvuso sāriputta, kathaṁ passatā aññā byākatā – khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyāti pajānāmī’ti. Evaṁ puṭṭho tvaṁ, sāriputta, kinti byākareyyāsī"ti?</p>
+
+<p><span class="parno">8</span>"Sace maṁ, bhante, evaṁ puccheyyuṁ: ‘kathaṁ jānatā pana tayā, āvuso sāriputta, kathaṁ passatā aññā byākatā – khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyāti pajānāmī’ti; evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyaṁ: ‘yaṁnidānā, āvuso, jāti, tassa nidānassa khayā khīṇasmiṁ khīṇāmhīti viditaṁ. Khīṇāmhīti viditvā – khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyāti pajānāmī’ti. Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyan"ti.</p>
+
+<p><span class="parno">9</span>"Sace pana taṁ, sāriputta, evaṁ puccheyyuṁ: ‘jāti panāvuso sāriputta, kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā’ti? Evaṁ puṭṭho taṁ, sāriputta, kinti byākareyyāsī"ti? </p>
+
+<p>"Sace maṁ, bhante, evaṁ puccheyyuṁ: ‘jāti panāvuso sāriputta, kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā’ti? Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyaṁ: ‘jāti kho, āvuso, bhavanidānā bhavasamudayā bhavajātikā bhavappabhavā’ti. Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyan"ti.</p>
+
+<hr>
+<p><span class="parno">10</span>"Sace pana taṁ, sāriputta, evaṁ puccheyyuṁ: ‘bhavo panāvuso sāriputta, kiṁnidāno kiṁsamudayo kiṁjātiko kiṁpabhavo’ti? Evaṁ puṭṭho tvaṁ, sāriputta, kinti byākareyyāsī"ti? </p>
+
+<p>"Sace maṁ, bhante, evaṁ puccheyyuṁ: ‘bhavo panāvuso sāriputta, kiṁnidāno kiṁsamudayo kiṁjātiko kiṁpabhavo’ti?</p>
+
+<p>Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyaṁ: ‘bhavo kho, āvuso, upādānanidāno upādānasamudayo upādānajātiko upādānappabhavo’ti. Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyan"ti.</p>
+
+<p><span class="parno">11</span>"Sace pana taṁ, sāriputta, evaṁ puccheyyuṁ: ‘upādānaṁ panāvuso … pe … sace pana taṁ, sāriputta, evaṁ puccheyyuṁ – taṇhā panāvuso sāriputta, kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā’ti? Evaṁ puṭṭho tvaṁ, sāriputta, kinti byākareyyāsī"ti? </p>
+
+<p>"Sace maṁ, bhante, evaṁ puccheyyuṁ: ‘taṇhā panāvuso sāriputta, kiṁnidānā kiṁsamudayā kiṁjātikā kiṁpabhavā’ti?</p>
+
+<p>Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyaṁ: ‘taṇhā kho, āvuso, vedanānidānā vedanāsamudayā vedanājātikā vedanāpabhavā’ti. Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyan"ti.</p>
+
+<hr>
+<p><span class="parno">12</span>"Sace pana taṁ, sāriputta, evaṁ puccheyyuṁ: ‘kathaṁ jānato pana te, āvuso sāriputta, kathaṁ passato yā vedanāsu nandī sā na upaṭṭhāsī’ti. Evaṁ puṭṭho tvaṁ, sāriputta, kinti byākareyyāsī"ti?</p>
+
+<p>"Sace maṁ, bhante, evaṁ puccheyyuṁ: ‘kathaṁ jānato pana te, āvuso sāriputta, kathaṁ passato yā vedanāsu nandī sā na upaṭṭhāsī’ti evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyaṁ: ‘tisso kho imā, āvuso, vedanā. Katamā tisso? Sukhā vedanā, dukkhā vedanā, adukkhamasukhā vedanā. Imā kho, āvuso, tisso vedanā aniccā. Yadaniccaṁ taṁ dukkhanti viditaṁ, yā vedanāsu nandī sā na upaṭṭhāsī’ti. Evaṁ, puṭṭhohaṁ, bhante, evaṁ byākareyyan"ti.</p>
+
+<hr>
+<p><span class="parno">13</span>"Sādhu sādhu, sāriputta. Ayampi kho, sāriputta, pariyāyo, etasseva atthassa saṅkhittena veyyākaraṇāya: ‘Yaṁ kiñci vedayitaṁ taṁ dukkhasmin’"ti.</p>
+
+<p><span class="parno">14</span>"Sace pana taṁ, sāriputta, evaṁ puccheyyuṁ: ‘kathaṁ vimokkhā pana tayā, āvuso sāriputta, aññā byākatā – khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyāti pajānāmī’ti? Evaṁ puṭṭho tvaṁ, sāriputta, kinti byākareyyāsī"ti?</p>
+
+<p>"Sace maṁ, bhante, evaṁ puccheyyuṁ: ‘kathaṁ vimokkhā pana tayā, āvuso sāriputta, aññā byākatā – khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyāti pajānāmī’ti. Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyaṁ: ‘ajjhattaṁ vimokkhā khvāhaṁ, āvuso, sabbupādānakkhayā tathā sato viharāmi yathā sataṁ vihārantaṁ āsavā nānussavanti, attānañca nāvajānāmī’ti. Evaṁ puṭṭhohaṁ, bhante, evaṁ byākareyyan"ti.</p>
+
+<hr>
+<p><span class="parno">15</span>"Sādhu sādhu, sāriputta. Ayampi kho sāriputta, pariyāyo etasseva atthassa saṅkhittena veyyākaraṇāya – ye āsavā samaṇena vuttā tesvāhaṁ na kaṅkhāmi, te me pahīnāti na vicikicchāmī"ti. </p>
+
+<p>Idamavoca bhagavā. Idaṁ vatvā sugato uṭṭhāyāsanā vihāraṁ pāvisi.</p>
+
+<hr>
+<p><span class="parno">16</span>Tatra kho āyasmā sāriputto acirapakkantassa bhagavato bhikkhū āmantesi: "Pubbe appaṭisaṁviditaṁ maṁ, āvuso, bhagavā paṭhamaṁ pañhaṁ apucchi, tassa me ahosi dandhāyitattaṁ. Yato ca kho me, āvuso, bhagavā paṭhamaṁ pañhaṁ anumodi, tassa mayhaṁ, āvuso, etadahosi – divasañcepi maṁ bhagavā etamatthaṁ puccheyya aññamaññehi padehi aññamaññehi pariyāyehi, divasampāhaṁ bhagavato etamatthaṁ byākareyyaṁ aññamaññehi padehi aññamaññehi pariyāyehi. Rattiñcepi maṁ bhagavā etamatthaṁ puccheyya aññamaññehi padehi aññamaññehi pariyāyehi, rattimpāhaṁ bhagavato etamatthaṁ byākareyyaṁ aññamaññehi padehi aññamaññehi pariyāyehi. Rattindivaṁ cepi maṁ bhagavā etamatthaṁ puccheyya aññamaññehi padehi aññamaññehi pariyāyehi, rattindivampāhaṁ bhagavato etamatthaṁ byākareyyaṁ aññamaññehi padehi aññamaññehi pariyāyehi. Dve rattindivāni cepi maṁ bhagavā etamatthaṁ puccheyya … pe … dve rattindivānipāhaṁ bhagavato etamatthaṁ byākareyyaṁ … pe … tīṇi rattindivāni cepi maṁ bhagavā etamatthaṁ puccheyya … pe … tīṇi rattindivānipāhaṁ bhagavato etamatthaṁ byākareyyaṁ … pe … cattāri rattindivāni cepi maṁ bhagavā etamatthaṁ puccheyya … pe … cattāri rattindivānipāhaṁ bhagavato etamatthaṁ byākareyyaṁ … pe … pañca rattindivāni cepi maṁ bhagavā etamatthaṁ puccheyya … pe … pañca rattindivānipāhaṁ bhagavato etamatthaṁ byākareyyaṁ … pe … cha rattindivāni cepi maṁ bhagavā etamatthaṁ puccheyya … pe … cha rattindivānipāhaṁ bhagavato etamatthaṁ byākareyyaṁ … pe … satta rattindivāni cepi maṁ bhagavā etamatthaṁ puccheyya aññamaññehi padehi aññamaññehi pariyāyehi, satta rattindivānipāhaṁ bhagavato etamatthaṁ byākareyyaṁ aññamaññehi padehi aññamaññehi pariyāyehī"ti.</p>
+
+<p><span class="parno">17</span>Atha kho kaḷārakhattiyo bhikkhu uṭṭhāyāsanā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho kaḷārakhattiyo bhikkhu bhagavantaṁ etadavoca: "āyasmatā, bhante, sāriputtena sīhanādo nadito – pubbe appaṭisaṁviditaṁ maṁ, āvuso, bhagavā paṭhamaṁ pañhaṁ apucchi, tassa me ahosi dandhāyitattaṁ. Yato ca kho me, āvuso, bhagavā paṭhamaṁ pañhaṁ anumodi, tassa mayhaṁ, āvuso, etadahosi – divasañcepi maṁ bhagavā etamatthaṁ puccheyya aññamaññehi padehi aññamaññehi pariyāyehi, divasampāhaṁ bhagavato etamatthaṁ byākareyyaṁ aññamaññehi padehi aññamaññehi pariyāyehi; rattiñcepi … pe … rattindivañcepi maṁ bhagavā … pe … dve rattindivāni cepi maṁ bhagavā … pe … tīṇi … cattāri … pañca … cha … satta rattindivāni cepi maṁ bhagavā etamatthaṁ puccheyya aññamaññehi padehi aññamaññehi pariyāyehi, satta rattindivānipāhaṁ bhagavato etamatthaṁ byākareyyaṁ aññamaññehi padehi aññamaññehi pariyāyehī"ti.</p>
+
+<hr>
+<p><span class="parno">18</span>"Sā hi, bhikkhu, sāriputtassa dhammadhātu suppaṭividdhā, yassā dhammadhātuyā suppaṭividdhattā divasaṁ cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ aññamaññehi padehi aññamaññehi pariyāyehi, divasampi me sāriputto etamatthaṁ byākareyya aññamaññehi padehi aññamaññehi pariyāyehi. Rattiṁ cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ aññamaññehi padehi aññamaññehi pariyāyehi, rattimpi me sāriputto etamatthaṁ byākareyya … pe … rattindivaṁ cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ, rattindivampi me sāriputto etamatthaṁ byākareyya … dve rattindivāni cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ, dve rattindivānipi me sāriputto etamatthaṁ byākareyya … tīṇi rattindivāni cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ, tīṇi rattindivānipi me sāriputto etamatthaṁ byākareyya … cattāri rattindivāni cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ, cattāri rattindivānipi me sāriputto etamatthaṁ byākareyya … pañca rattindivāni cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ, pañca rattindivānipi me sāriputto etamatthaṁ byākareyya … cha rattindivāni cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ, cha rattindivānipi me sāriputto etamatthaṁ byākareyya … satta rattindivāni cepāhaṁ sāriputtaṁ etamatthaṁ puccheyyaṁ aññamaññehi padehi aññamaññehi pariyāyehi, satta rattindivānipi me sāriputto etamatthaṁ byākareyya aññamaññehi padehi aññamaññehi pariyāyehī"ti.</p>
+<p class="endsection">Dutiyaṁ.</p>
+</div> <!-- end pali -->
+
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./sn12.31.html#content"></a><a id="next-sutta" href="./sn12.33.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn12.html">12. Nidānasaṁyutta: On Causation</a> SN12.32: With Kaḷāra the Aristocrat </div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

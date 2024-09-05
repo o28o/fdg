@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 22</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN22: Alagaddūpama Sutta — The Simile of the Snake</h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn22">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery.</p>
+
+<p>Now at that time a mendicant called Ariṭtha, who had previously been a vulture trapper, had the following harmful misconception: “As I understand the Buddha’s teachings, the acts that he says are obstructions are not really obstructions for the one who performs them.”</p>
+
+<p id="p2"><span class="parno">2</span>Several mendicants heard about this. They went up to Ariṭṭha and said to him: “Is it really true, Reverend Ariṭṭha, that you have such a harmful misconception: ‘As I understand the Buddha’s teachings, the acts that he says are obstructions are not really obstructions for the one who performs them’?”</p>
+
+<p>“Absolutely, reverends. As I understand the Buddha’s teachings, the acts that he says are obstructions are not really obstructions for the one who performs them.”</p>
+
+<hr>
+
+<p id="p3"><span class="parno">3</span>Then, wishing to dissuade Ariṭṭha from his view, the mendicants pursued, pressed, and grilled him: “Don’t say that, Ariṭṭha! Don’t misrepresent the Buddha, for misrepresentation of the Buddha is not good. And the Buddha would not say that. In many ways the Buddha has said that obstructive acts are obstructive, and that they really do obstruct the one who performs them. The Buddha says that sensual pleasures give little gratification and much suffering and distress, and they are all the more full of drawbacks. With the similes of a skeleton … a lump of meat … a grass torch … a pit of glowing coals … a dream … borrowed goods … fruit on a tree … a butcher’s knife and chopping block … a staking sword … a snake’s head, the Buddha says that sensual pleasures give little gratification and much suffering and distress, and they are all the more full of drawbacks.”</p>
+
+<p id="p4"><span class="parno">4</span>But even though the mendicants pursued, pressed, and grilled him in this way, Ariṭṭha obstinately stuck to his misconception and insisted on stating it.</p>
+
+<hr>
+
+<p id="p5-8"><span class="parno">5-8</span>When they weren’t able to dissuade Ariṭṭha from his view, the mendicants went to the Buddha, bowed, sat down to one side, and told him what had happened.</p>
+
+<hr>
+
+<p id="p9"><span class="parno">9</span>So the Buddha said to a certain monk: “Please, monk, in my name tell the mendicant Ariṭṭha, formerly a vulture trapper, that the teacher summons him.”</p>
+
+<p>“Yes, sir,” that monk replied. He went to Ariṭṭha and said to him: </p>
+
+<p>“Reverend Ariṭṭha, the teacher summons you.”</p>
+
+<hr>
+
+<p>“Yes, reverend,” Ariṭṭha replied. He went to the Buddha, bowed, and sat down to one side. The Buddha said to him:</p>
+
+<hr>
+
+<p>“Is it really true, Ariṭṭha, that you have such a harmful misconception: ‘As I understand the Buddha’s teachings, the acts that he says are obstructions are not really obstructions for the one who performs them’?”</p>
+
+<p>“Absolutely, sir. As I understand the Buddha’s teachings, the acts that he says are obstructions are not really obstructions for the one who performs them.”</p>
+
+<hr>
+
+<p id="p10"><span class="parno">10</span>“Silly man, who on earth have you ever known me to teach in that way? Haven’t I said in many ways that obstructive acts are obstructive, and that they really do obstruct the one who performs them? I’ve said that sensual pleasures give little gratification and much suffering and distress, and they are all the more full of drawbacks. With the similes of a skeleton … a lump of meat … a grass torch … a pit of glowing coals … a dream … borrowed goods … fruit on a tree … a butcher’s knife and chopping block … a staking sword … a snake’s head, I’ve said that sensual pleasures give little gratification and much suffering and distress, and they are all the more full of drawbacks. But still you misrepresent me by your wrong grasp, harm yourself, and make much bad karma. This will be for your lasting harm and suffering.”</p>
+
+<hr>
+
+<p id="p11"><span class="parno">11</span>Then the Buddha said to the mendicants: “What do you think, mendicants? Has this mendicant Ariṭṭha kindled even a spark of wisdom in this teaching and training?”</p>
+
+<p>“How could that be, sir? No, sir.” </p>
+
+<hr>
+
+<p>When this was said, Ariṭṭha sat silent, embarrassed, shoulders drooping, downcast, depressed, with nothing to say.</p>
+
+<p>Knowing this, the Buddha said: “Silly man, you will be known by your own harmful misconception. I’ll question the mendicants about this.”</p>
+
+<hr>
+
+<p id="p12"><span class="parno">12</span>Then the Buddha said to the mendicants: “Mendicants, do you understand my teachings as Ariṭṭha does, when he misrepresents me by his wrong grasp, harms himself, and makes much bad karma?”</p>
+
+<p>“No, sir. For in many ways the Buddha has said that obstructive acts are obstructive, and that they really do obstruct the one who performs them. The Buddha has said that sensual pleasures give little gratification and much suffering and distress, and they are all the more full of drawbacks. With the similes of a skeleton … a snake’s head, the Buddha has said that sensual pleasures give little gratification and much suffering and distress, and they are all the more full of drawbacks.”</p>
+
+<p id="p13"><span class="parno">13</span>“Good, good, mendicants! It’s good that you understand my teaching like this. For in many ways I have said that obstructive acts are obstructive …</p>
+
+<hr>
+
+<p id="p14"><span class="parno">14</span>I’ve said that sensual pleasures give little gratification and much suffering and distress, and they are all the more full of drawbacks. But still this Ariṭṭha misrepresents me by his wrong grasp, harms himself, and makes much bad karma. This will be for his lasting harm and suffering. </p>
+
+<p>Truly, mendicants, it’s not possible to perform sensual acts without sensual pleasures, sensual perceptions, and sensual thoughts.</p>
+
+<hr>
+
+<p id="p15"><span class="parno">15</span>Take a foolish person who memorizes the teaching — statements, songs, discussions, verses, inspired exclamations, legends, stories of past lives, amazing stories, and classifications. But they don’t examine the meaning of those teachings with wisdom, and so don’t come to a reflective acceptance of them. They just memorize the teaching for the sake of finding fault and winning debates. They don’t realize the goal for which they memorized them. Because they’re wrongly grasped, those teachings lead to their lasting harm and suffering. Why is that? Because of their wrong grasp of the teachings.</p>
+
+<hr>
+
+<p id="p16"><span class="parno">16</span>Suppose there was a person in need of a snake. And while wandering in search of a snake they’d see a big snake, and grasp it by the coil or the tail. But that snake would twist back and bite them on the hand or the arm or limb, resulting in death or deadly pain. Why is that? Because of their wrong grasp of the snake.</p>
+
+<hr>
+
+<p>In the same way, a foolish person memorizes the teaching … and those teachings lead to their lasting harm and suffering. Why is that? Because of their wrong grasp of the teachings.</p>
+
+<hr>
+
+<p id="p17"><span class="parno">17</span>Now, take a gentleman who memorizes the teaching — statements, songs, discussions, verses, inspired exclamations, legends, stories of past lives, amazing stories, and classifications. And once they’ve memorized them, they examine their meaning with wisdom, and come to a reflective acceptance of them. They don’t memorize the teaching for the sake of finding fault and winning debates. They realize the goal for which they memorized them. Because they’re correctly grasped, those teachings lead to their lasting welfare and happiness. Why is that? Because of their correct grasp of the teachings.</p>
+
+<hr>
+
+<p id="p18"><span class="parno">18</span>Suppose there was a person in need of a snake. And while wandering in search of a snake they’d see a big snake, and hold it down carefully with a cleft stick. Only then would they correctly grasp it by the neck. And even though that snake might wrap its coils around that person’s hand or arm or some other limb, that wouldn’t result in death or deadly pain. Why is that? Because of their correct grasp of the snake.</p>
+
+<p>In the same way, a gentleman memorizes the teaching … and those teachings lead to their lasting welfare and happiness. Why is that? Because of their correct grasp of the teachings.</p>
+
+<hr>
+
+<p>So, mendicants, when you understand what I’ve said, you should remember it accordingly. But if I’ve said anything that you don’t understand, you should ask me about it, or some competent mendicants.</p>
+
+<hr>
+
+<p id="p19"><span class="parno">19</span>Mendicants, I will teach you how the Dhamma is similar to a raft: it’s for crossing over, not for holding on. Listen and pay close attention, I will speak.”</p>
+
+<p>“Yes, sir,” they replied. The Buddha said this:</p>
+
+<hr>
+
+<p id="p20"><span class="parno">20</span>“Suppose there was a person traveling along the road. They’d see a large deluge, whose near shore was dubious and perilous, while the far shore was a sanctuary free of peril. But there was no ferryboat or bridge for crossing over. They’d think, ‘Why don’t I gather grass, sticks, branches, and leaves and make a raft? Riding on the raft, and paddling with my hands and feet, I can safely reach the far shore.’ And so they’d do exactly that. And when they’d crossed over to the far shore, they’d think, ‘This raft has been very helpful to me. Riding on the raft, and paddling with my hands and feet, I have safely crossed over to the far shore. Why don’t I hoist it on my head or pick it up on my shoulder and go wherever I want?’</p>
+
+<hr>
+
+<p>What do you think, mendicants? Would that person be doing what should be done with that raft?”</p>
+
+<hr>
+
+<p id="p21"><span class="parno">21</span>“No, sir.”</p>
+
+<p>“And what, mendicants, should that person do with the raft? When they’d crossed over they should think, ‘This raft has been very helpful to me. … Why don’t I beach it on dry land or set it adrift on the water and go wherever I want?’ That’s what that person should do with the raft.</p>
+
+<hr>
+
+<p>In the same way, I have taught how the teaching is similar to a raft: it’s for crossing over, not for holding on. </p>
+
+<p>By understanding the simile of the raft, you will even give up the teachings, let alone what is against the teachings.</p>
+
+<hr>
+
+<p id="p22"><span class="parno">22</span>Mendicants, there are these six grounds for views. What six? Take an uneducated ordinary person who has not seen the noble ones, and is neither skilled nor trained in the teaching of the noble ones. They’ve not seen good persons, and are neither skilled nor trained in the teaching of the good persons. They regard form like this: ‘This is mine, I am this, this is my self.’ They also regard feeling … perception … choices … whatever is seen, heard, thought, known, sought, and explored by the mind like this: ‘This is mine, I am this, this is my self.’ And the same for this ground for views: ‘The self and the cosmos are one and the same. After death I will be permanent, everlasting, eternal, imperishable, and will last forever and ever.’ They also regard this: ‘This is mine, I am this, this is my self.’</p>
+
+<p id="p23"><span class="parno">23</span>But an educated noble disciple has seen the noble ones, and is skilled and trained in the teaching of the noble ones. They’ve seen good persons, and are skilled and trained in the teaching of the good persons. They regard form like this: ‘This is not mine, I am not this, this is not my self.’ They also regard feeling … perception … choices … whatever is seen, heard, thought, known, sought, and explored by the mind like this: ‘This is not mine, I am not this, this is not my self.’ And the same for this ground for views: ‘The self and the cosmos are one and the same. After death I will be permanent, everlasting, eternal, imperishable, and will last forever and ever.’ They also regard this: ‘This is not mine, I am not this, this is not my self.’</p>
+
+<p>Seeing in this way they’re not anxious about what doesn’t exist.”</p>
+
+<hr>
+
+<p id="p24"><span class="parno">24</span>When he said this, one of the mendicants asked the Buddha: “Sir, can there be anxiety about what doesn’t exist externally?”</p>
+
+<p>“There can, mendicant,” said the Buddha. “It’s when someone thinks, ‘Oh, but it used to be mine, and it is mine no more. Oh, but it could be mine, and I will get it no more.’ They sorrow and pine and lament, beating their breast and falling into confusion. That’s how there is anxiety about what doesn’t exist externally.”</p>
+
+<p id="p25"><span class="parno">25</span>“But can there be no anxiety about what doesn’t exist externally?”</p>
+
+<p>“There can, mendicant,” said the Buddha. “It’s when someone doesn’t think, ‘Oh, but it used to be mine, and it is mine no more. Oh, but it could be mine, and I will get it no more.’ They don’t sorrow and pine and lament, beating their breast and falling into confusion. That’s how there is no anxiety about what doesn’t exist externally.”</p>
+
+<p id="p26"><span class="parno">26</span>“But can there be anxiety about what doesn’t exist internally?”</p>
+
+<p>“There can, mendicant,” said the Buddha. “It’s when someone has such a view: ‘The self and the cosmos are one and the same. After death I will be permanent, everlasting, eternal, imperishable, and will last forever and ever.’ They hear the Realized One or their disciple teaching Dhamma for the uprooting of all grounds, fixations, obsessions, insistences, and underlying tendencies regarding views; for the stilling of all activities, the letting go of all attachments, the ending of craving, fading away, cessation, extinguishment. They think, ‘Whoa, I’m going to be annihilated and destroyed! I won’t exist any more!’ They sorrow and pine and lament, beating their breast and falling into confusion. That’s how there is anxiety about what doesn’t exist internally.”</p>
+
+<hr>
+
+<p id="p27"><span class="parno">27</span>“But can there be no anxiety about what doesn’t exist internally?”</p>
+
+<p>“There can,” said the Buddha. “It’s when someone doesn’t have such a view: ‘The self and the cosmos are one and the same. After death I will be permanent, everlasting, eternal, imperishable, and will last forever and ever.’ They hear the Realized One or their disciple teaching Dhamma for the uprooting of all grounds, fixations, obsessions, insistences, and underlying tendencies regarding views; for the stilling of all activities, the letting go of all attachments, the ending of craving, fading away, cessation, extinguishment. It never occurs to them, ‘Whoa, I’m going to be annihilated and destroyed! I won’t exist any more!’ They don’t sorrow and pine and lament, beating their breast and falling into confusion. That’s how there is no anxiety about what doesn’t exist internally.</p>
+
+<hr>
+
+<p id="p28"><span class="parno">28</span>Mendicants, it would make sense to be possessive about something that’s permanent, everlasting, eternal, imperishable, and will last forever and ever. But do you see any such possession?”</p>
+
+<p>“No, sir.”</p>
+
+<hr>
+
+<p>“Good, mendicants! I also can’t see any such possession.</p>
+
+<hr>
+
+<p id="p29"><span class="parno">29</span>It would make sense to grasp at a doctrine of self that didn’t give rise to sorrow, lamentation, pain, sadness, and distress. But do you see any such doctrine of self?”</p>
+
+<p>“No, sir.”</p>
+
+<p>“Good, mendicants! I also can’t see any such doctrine of self.</p>
+
+<hr>
+
+<p id="p30"><span class="parno">30</span>It would make sense to rely on a view that didn’t give rise to sorrow, lamentation, pain, sadness, and distress. But do you see any such view to rely on?”</p>
+
+<p>“No, sir.”</p>
+
+<hr>
+
+<p>“Good, mendicants! I also can’t see any such view to rely on.</p>
+
+<hr>
+
+<p id="p31"><span class="parno">31</span>Mendicants, were a self to exist, would there be the thought, ‘Belonging to my self’?”</p>
+
+<hr>
+
+<p id="p32"><span class="parno">32</span>“Yes, sir.”</p>
+
+<p id="p33"><span class="parno">33</span>“Were what belongs to a self to exist, would there be the thought, ‘My self’?”</p>
+
+<p>“Yes, sir.”</p>
+
+<hr>
+
+<p id="p34"><span class="parno">34</span>“But self and what belongs to a self are not acknowledged as a genuine fact. This being so, is not the following a totally foolish teaching: ‘The self and the cosmos are one and the same. After death I will be permanent, everlasting, eternal, imperishable, and will last forever and ever’?”</p>
+
+<p id="p35"><span class="parno">35</span>“What else could it be, sir? It’s a totally foolish teaching.”</p>
+
+<p id="p36"><span class="parno">36</span>“What do you think, mendicants? Is form permanent or impermanent?”</p>
+
+<p id="p37"><span class="parno">37</span>“Impermanent, sir.”</p>
+
+<p id="p38"><span class="parno">38</span>“But if it’s impermanent, is it suffering or happiness?”</p>
+
+<p id="p39"><span class="parno">39</span>“Suffering, sir.”</p>
+
+<p id="p40"><span class="parno">40</span>“But if it’s impermanent, suffering, and liable to fall apart, is it fit to be regarded thus: ‘This is mine, I am this, this is my self’?”</p>
+
+<p id="p41"><span class="parno">41</span>“No, sir.”</p>
+
+<p id="p42"><span class="parno">42</span>“What do you think, mendicants? Is feeling … perception … choices … consciousness permanent or impermanent?”</p>
+
+<p id="p43"><span class="parno">43</span>“Impermanent, sir.”</p>
+
+<p id="p44"><span class="parno">44</span>“But if it’s impermanent, is it suffering or happiness?”</p>
+
+<p id="p45"><span class="parno">45</span>“Suffering, sir.”</p>
+
+<p id="p46"><span class="parno">46</span>“But if it’s impermanent, suffering, and liable to fall apart, is it fit to be regarded thus: ‘This is mine, I am this, this is my self’?”</p>
+
+<p id="p47"><span class="parno">47</span>“No, sir.”</p>
+
+<hr>
+
+<p id="p48"><span class="parno">48</span>“So, mendicants, you should truly see any kind of form at all — past, future, or present; internal or external; coarse or fine; inferior or superior; far or near: *all* form — with right understanding: ‘This is not mine, I am not this, this is not my self.’ You should truly see any kind of feeling … perception … choices … consciousness at all — past, future, or present; internal or external; coarse or fine; inferior or superior; far or near: *all* consciousness — with right understanding: ‘This is not mine, I am not this, this is not my self.’</p>
+
+<hr>
+
+<p id="p49"><span class="parno">49</span>Seeing this, a learned noble disciple grows disillusioned with form, feeling, perception, choices, and consciousness. Being disillusioned, desire fades away. When desire fades away they’re freed. When they’re freed, they know they’re freed.</p>
+
+<p>They understand: ‘Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.’</p>
+
+<p>This is called a mendicant who has lifted up the cross-bar, filled in the trench, and pulled up the pillar; who is unbarred, a noble one with banner and burden put down, detached.</p>
+
+<p id="p50"><span class="parno">50</span>And how has a mendicant lifted the cross-bar? It’s when a mendicant has given up ignorance, cut it off at the root, made it like a palm stump, obliterated it, so it’s unable to arise in the future. That’s how a mendicant has lifted the cross-bar.</p>
+
+<p id="p51"><span class="parno">51</span>And how has a mendicant filled in the trench? It’s when a mendicant has given up transmigrating through births in future lives, cut it off at the root, made it like a palm stump, obliterated it, so it’s unable to arise in the future. That’s how a mendicant has filled in the trench.</p>
+
+<p id="p52"><span class="parno">52</span>And how has a mendicant pulled up the pillar? It’s when a mendicant has given up craving, cut it off at the root, made it like a palm stump, obliterated it, so it’s unable to arise in the future. That’s how a mendicant has pulled up the pillar.</p>
+
+<p id="p53"><span class="parno">53</span>And how is a mendicant unbarred? It’s when a mendicant has given up the five lower fetters, cut them off at the root, made them like a palm stump, obliterated them, so they’re unable to arise in the future. That’s how a mendicant is unbarred.</p>
+
+<p id="p54"><span class="parno">54</span>And how is a mendicant a noble one with banner and burden put down, detached? It’s when a mendicant has given up the conceit ‘I am’, cut it off at the root, made it like a palm stump, obliterated it, so it’s unable to arise in the future. That’s how a mendicant is a noble one with banner and burden put down, detached.</p>
+
+<hr>
+
+<p id="p55"><span class="parno">55</span>When a mendicant’s mind is freed like this, the gods together with Indra, Brahmā, and Pajāpati, search as they may, will not find anything that such a Realized One’s consciousness depends on. Why is that? Because even in the present life the Realized One is undiscoverable, I say.</p>
+
+<p>Though I speak and explain like this, certain ascetics and brahmins misrepresent me with the false, hollow, lying, untruthful claim: ‘The ascetic Gotama is an exterminator. He advocates the annihilation, eradication, and obliteration of an existing being.’ </p>
+
+<hr>
+
+<p>I have been falsely misrepresented as being what I am not, and saying what I do not say. In the past, as today, what I describe is suffering and the cessation of suffering. This being so, if others abuse, attack, harass, and trouble the Realized One, he doesn’t get resentful, bitter, and emotionally exasperated.</p>
+
+<hr>
+
+<p id="p56"><span class="parno">56</span>Or if others honor, respect, revere, or venerate him, he doesn’t get thrilled, elated, and emotionally excited. He just thinks, ‘They do such things for what has already been completely understood.’</p>
+
+<p>So, mendicants, if others abuse, attack, harass, and trouble you, don’t make yourselves resentful, bitter, and emotionally exasperated. Or if others honor, respect, revere, or venerate you, don’t make yourselves thrilled, elated, and emotionally excited. Just think, ‘They do such things for what has already been completely understood.’</p>
+
+<hr>
+
+<p id="p57"><span class="parno">57</span>So, mendicants, give up what isn't yours. Giving it up will be for your lasting welfare and happiness.</p>
+
+<p>And what isn’t yours? Form isn’t yours: give it up. Giving it up will be for your lasting welfare and happiness.</p>
+
+<hr>
+
+<p>Feeling … perception … choices … consciousness isn’t yours: give it up. Giving it up will be for your lasting welfare and happiness.</p>
+
+<hr>
+
+<p>What do you think, mendicants? Suppose a person was to carry off the grass, sticks, branches, and leaves in this Jeta’s Grove, or burn them, or do what they want with them. </p>
+
+<p>Would you think, ‘This person is carrying us off, burning us, or doing what they want with us?’”</p>
+
+<p>“No, sir. Why is that? Because that’s neither self nor belonging to self.”</p>
+
+<hr>
+
+<p>“In the same way, mendicants, give up what isn't yours. Giving it up will be for your lasting welfare and happiness. And what isn’t yours? Form … feeling … perception … choices … consciousness isn’t yours: give it up. Giving it up will be for your lasting welfare and happiness.</p>
+
+<hr>
+
+<p id="p58"><span class="parno">58</span>Thus the teaching has been well explained by me, made clear, opened, illuminated, and stripped of patchwork. In this teaching there are mendicants who are perfected, who have ended the defilements, completed the spiritual journey, done what had to be done, laid down the burden, achieved their own goal, utterly ended the fetters of rebirth, and are rightly freed through enlightenment. For them, there is no cycle of rebirths to be found. …</p>
+
+<p id="p59"><span class="parno">59</span>In this teaching there are mendicants who have given up the five lower fetters. All of them are reborn spontaneously. They are extinguished there, and are not liable to return from that world. …</p>
+
+<p id="p60"><span class="parno">60</span>In this teaching there are mendicants who, having given up three fetters, and weakened greed, hate, and delusion, are once-returners. All of them come back to this world once only, then make an end of suffering. …</p>
+
+<hr>
+
+<p id="p61"><span class="parno">61</span>In this teaching there are mendicants who have ended three fetters. All of them are stream-enterers, not liable to be reborn in the underworld, bound for awakening. …</p>
+
+<p id="p62"><span class="parno">62</span>In this teaching there are mendicants who are followers of principles, or followers by faith. All of them are bound for awakening.</p>
+
+<p id="p63"><span class="parno">63</span>Thus the teaching has been well explained by me, made clear, opened, illuminated, and stripped of patchwork. In this teaching there are those who have a degree of faith and love for me. All of them are bound for heaven.”</p>
+
+<hr>
+
+<p id="p64"><span class="parno">64</span>That is what the Buddha said. Satisfied, the mendicants were happy with what the Buddha said.</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.</p>
+
+<p>Tena kho pana samayena ariṭṭhassa nāma bhikkhuno <span class="var" title="gandhavādhipubbassa (s1–3) | gandhabādhipubbassa (mr)" id="note238">gaddhabādhipubbassa</span> evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ hoti: "Tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā"ti. Assosuṁ kho sambahulā bhikkhū: "ariṭṭhassa kira nāma bhikkhuno gaddhabādhipubbassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’"ti.</p>
+
+<p><span class="parno">2</span>Atha kho te bhikkhū yena ariṭṭho bhikkhu gaddhabādhipubbo tenupasaṅkamiṁsu; upasaṅkamitvā ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etadavocuṁ: "Saccaṁ kira te, āvuso ariṭṭha, evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’"ti.</p>
+
+<p>"Evaṁ byā kho ahaṁ, āvuso, bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā"ti.</p>
+
+<hr>
+
+<p><span class="parno">3</span>Atha kho tepi bhikkhū ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etasmā pāpakā diṭṭhigatā vivecetukāmā samanuyuñjanti <span class="var" title="samanuggāhanti (s1–3)" id="note239">samanugāhanti</span> samanubhāsanti: "mā hevaṁ, āvuso ariṭṭha, avaca, mā bhagavantaṁ abbhācikkhi; na hi sādhu bhagavato
+<span class="var" title="abbhācikkhanaṁ (mr)" id="note240">abbhakkhānaṁ</span>, na hi bhagavā evaṁ vadeyya. Anekapariyāyenāvuso ariṭṭha, antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāya. Appassādā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Aṭṭhikaṅkalūpamā kāmā vuttā bhagavatā … maṁsapesūpamā kāmā vuttā bhagavatā … tiṇukkūpamā kāmā vuttā bhagavatā … aṅgārakāsūpamā kāmā vuttā bhagavatā … supinakūpamā kāmā vuttā bhagavatā … yācitakūpamā kāmā vuttā bhagavatā … rukkhaphalūpamā kāmā vuttā bhagavatā … asisūnūpamā kāmā vuttā bhagavatā … sattisūlūpamā kāmā vuttā bhagavatā … sappasirūpamā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo"ti.</p>
+
+<p><span class="parno">4</span>Evampi kho ariṭṭho bhikkhu gaddhabādhipubbo tehi bhikkhūhi samanuyuñjiyamāno <span class="var" title="samanuggāhiyamāno (s1–3 ^pi-tv-bu-vb-pc68#1 [Pācittiyā 68: Ariṭṭhasikkhāpada]; ^pi-tv-kd11#297 [Kammakkhandhaka/ Pāpikāyadiṭṭhiyāappaṭinissagge ukkhepanīyakamma])" id="note241">samanugāhiyamāno</span> samanubhāsiyamāno <span class="var" title="tameva (bj) | tatheva taṁ (^pi-tv-bu-vb-pc68#1 [Pācittiyā 68: Ariṭṭhasikkhāpada]; ^pi-tv-kd11#297 [Kammakkhandhaka/ Pāpikāyadiṭṭhiyāappaṭinissagge ukkhepanīyakamma])" id="note242">tadeva</span> pāpakaṁ diṭṭhigataṁ thāmasā parāmāsā abhinivissa voharati: "evaṁ byā kho ahaṁ, āvuso, bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā"ti.</p>
+
+<hr>
+
+<p><span class="parno">5</span>Yato kho te bhikkhū nāsakkhiṁsu ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etasmā pāpakā diṭṭhigatā vivecetuṁ, atha kho te bhikkhū yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinnā kho te bhikkhū bhagavantaṁ etadavocuṁ: "ariṭṭhassa nāma, bhante, bhikkhuno gaddhabādhipubbassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’ti. Assumha kho mayaṁ, bhante: ‘ariṭṭhassa kira nāma bhikkhuno gaddhabādhipubbassa evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ — tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’ti.</p>
+
+<p><span class="parno">6</span>Atha kho mayaṁ, bhante, yena ariṭṭho bhikkhu gaddhabādhipubbo tenupasaṅkamimha; upasaṅkamitvā ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etadavocumha: ‘saccaṁ kira te, āvuso ariṭṭha, evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ — tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’ti?</p>
+
+<p><span class="parno">7</span>Evaṁ vutte, bhante, ariṭṭho bhikkhu gaddhabādhipubbo amhe etadavoca: ‘evaṁ byā kho ahaṁ, āvuso, bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’ti. Atha kho mayaṁ, bhante, ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etasmā pāpakā diṭṭhigatā vivecetukāmā samanuyuñjimha samanugāhimha samanubhāsimha: ‘mā hevaṁ, āvuso ariṭṭha, avaca, mā bhagavantaṁ abbhācikkhi; na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya. Anekapariyāyenāvuso ariṭṭha, antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāya. Appassādā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Aṭṭhikaṅkalūpamā kāmā vuttā bhagavatā … pe … sappasirūpamā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo’ti.</p>
+
+<p><span class="parno">8</span>Evampi kho, bhante, ariṭṭho bhikkhu gaddhabādhipubbo amhehi samanuyuñjiyamāno samanugāhiyamāno samanubhāsiyamāno tadeva pāpakaṁ diṭṭhigataṁ thāmasā parāmāsā abhinivissa voharati: ‘evaṁ byā kho ahaṁ, āvuso, bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’ti. Yato kho mayaṁ, bhante, nāsakkhimha ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etasmā pāpakā diṭṭhigatā vivecetuṁ, atha mayaṁ etamatthaṁ bhagavato ārocemā"ti.</p>
+
+<hr>
+
+<p><span class="parno">9</span>Atha kho bhagavā aññataraṁ bhikkhuṁ āmantesi: "ehi tvaṁ, bhikkhu, mama vacanena ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ āmantehi: ‘satthā taṁ, āvuso ariṭṭha, āmantetī’"ti. </p>
+
+<p>"Evaṁ, bhante"ti kho so bhikkhu bhagavato paṭissutvā, yena ariṭṭho bhikkhu gaddhabādhipubbo tenupasaṅkami; upasaṅkamitvā ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etadavoca:</p>
+
+<p>"satthā taṁ, āvuso ariṭṭha, āmantetī"ti. </p>
+
+<hr>
+
+<p>"Evamāvuso"ti kho ariṭṭho bhikkhu gaddhabādhipubbo tassa bhikkhuno paṭissutvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ bhagavā etadavoca: </p>
+
+<hr>
+
+<p>"Saccaṁ kira te, ariṭṭha, evarūpaṁ pāpakaṁ diṭṭhigataṁ uppannaṁ: ‘tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’"ti?</p>
+
+<p>"Evaṁ byā kho ahaṁ, bhante, bhagavatā dhammaṁ desitaṁ ājānāmi: ‘yathā yeme antarāyikā dhammā vuttā bhagavatā te paṭisevato nālaṁ antarāyāyā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">10</span>"Kassa kho nāma tvaṁ, moghapurisa, mayā evaṁ dhammaṁ desitaṁ ājānāsi? Nanu mayā, moghapurisa, anekapariyāyena antarāyikā dhammā antarāyikā vuttā? Alañca pana te paṭisevato antarāyāya. Appassādā kāmā vuttā mayā, bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Aṭṭhikaṅkalūpamā kāmā vuttā mayā … maṁsapesūpamā kāmā vuttā mayā … tiṇukkūpamā kāmā vuttā mayā … aṅgārakāsūpamā kāmā vuttā mayā … supinakūpamā kāmā vuttā mayā … yācitakūpamā kāmā vuttā mayā … rukkhaphalūpamā kāmā vuttā mayā … asisūnūpamā kāmā vuttā mayā … sattisūlūpamā kāmā vuttā mayā … sappasirūpamā kāmā vuttā mayā, bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Atha ca pana tvaṁ, moghapurisa, attanā duggahitena amhe ceva abbhācikkhasi, attānañca khanasi, bahuñca apuññaṁ pasavasi. Tañhi te, moghapurisa, bhavissati dīgharattaṁ ahitāya dukkhāyā"ti.</p>
+
+<hr>
+
+<p><span class="parno">11</span>Atha kho bhagavā bhikkhū āmantesi: "taṁ kiṁ maññatha, bhikkhave, api nāyaṁ ariṭṭho bhikkhu gaddhabādhipubbo usmīkatopi imasmiṁ dhammavinaye"ti?</p>
+
+<p>"<span class="var" title="kiṁti (mr)" id="note243">Kiñhi</span> siyā, bhante; no hetaṁ, bhante"ti.</p>
+
+<hr>
+
+<p>Evaṁ vutte, ariṭṭho bhikkhu gaddhabādhipubbo tuṇhībhūto maṅkubhūto pattakkhandho adhomukho pajjhāyanto appaṭibhāno nisīdi. </p>
+
+<p>Atha kho bhagavā ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ tuṇhībhūtaṁ maṅkubhūtaṁ pattakkhandhaṁ adhomukhaṁ pajjhāyantaṁ appaṭibhānaṁ viditvā ariṭṭhaṁ bhikkhuṁ gaddhabādhipubbaṁ etadavoca: "paññāyissasi kho tvaṁ, moghapurisa, etena sakena pāpakena diṭṭhigatena. Idhāhaṁ bhikkhū paṭipucchissāmī"ti.</p>
+
+<hr>
+
+<p><span class="parno">12</span>Atha kho bhagavā bhikkhū āmantesi: "tumhepi me, bhikkhave, evaṁ dhammaṁ desitaṁ ājānātha yathāyaṁ ariṭṭho bhikkhu gaddhabādhipubbo attanā duggahitena amhe ceva abbhācikkhati, attānañca khanati, bahuñca apuññaṁ pasavatī"ti?</p>
+
+<p>"No hetaṁ, bhante. Anekapariyāyena hi no, bhante, antarāyikā dhammā antarāyikā vuttā bhagavatā; alañca pana te paṭisevato antarāyāya. Appassādā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Aṭṭhikaṅkalūpamā kāmā vuttā bhagavatā … pe … sappasirūpamā kāmā vuttā bhagavatā bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo"ti.</p>
+
+<p><span class="parno">13</span>"Sādhu sādhu, bhikkhave, sādhu, kho me tumhe, bhikkhave, evaṁ dhammaṁ desitaṁ ājānātha. Anekapariyāyena hi kho, bhikkhave, antarāyikā dhammā vuttā mayā, alañca pana te paṭisevato antarāyāya.</p>
+
+<hr>
+
+<p><span class="parno">14</span>Appassādā kāmā vuttā mayā, bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Aṭṭhikaṅkalūpamā kāmā vuttā mayā … pe … sappasirūpamā kāmā vuttā mayā, bahudukkhā bahupāyāsā, ādīnavo ettha bhiyyo. Atha ca panāyaṁ ariṭṭho bhikkhu gaddhabādhipubbo attanā duggahitena amhe ceva abbhācikkhati, attānañca khanati, bahuñca apuññaṁ pasavati. Tañhi tassa moghapurisassa bhavissati dīgharattaṁ ahitāya dukkhāya.</p>
+
+<p>So vata, bhikkhave, aññatreva kāmehi aññatra kāmasaññāya aññatra kāmavitakkehi kāme paṭisevissatīti — netaṁ ṭhānaṁ vijjati.</p>
+
+<hr>
+
+<p><span class="parno">15</span>Idha, bhikkhave, ekacce moghapurisā dhammaṁ pariyāpuṇanti — suttaṁ, geyyaṁ, veyyākaraṇaṁ, gāthaṁ, udānaṁ, itivuttakaṁ, jātakaṁ, abbhutadhammaṁ, vedallaṁ. Te taṁ dhammaṁ pariyāpuṇitvā tesaṁ dhammānaṁ paññāya atthaṁ na upaparikkhanti. Tesaṁ te dhammā paññāya atthaṁ anupaparikkhataṁ na nijjhānaṁ khamanti. Te upārambhānisaṁsā ceva dhammaṁ pariyāpuṇanti itivādappamokkhānisaṁsā ca. Yassa catthāya dhammaṁ pariyāpuṇanti tañcassa atthaṁ nānubhonti. Tesaṁ te dhammā duggahitā dīgharattaṁ ahitāya dukkhāya saṁvattanti. Taṁ kissa hetu? Duggahitattā, bhikkhave, dhammānaṁ.</p>
+
+<hr>
+
+<p><span class="parno">16</span>Seyyathāpi, bhikkhave, puriso alagaddatthiko alagaddagavesī alagaddapariyesanaṁ caramāno. So passeyya mahantaṁ alagaddaṁ. Tamenaṁ bhoge vā naṅguṭṭhe vā gaṇheyya. Tassa so alagaddo <span class="var" title="paṭinivattitvā (s1–3, mr)" id="note245">paṭiparivattitvā</span> hatthe vā bāhāya vā aññatarasmiṁ vā aṅgapaccaṅge <span class="var" title="ḍaseyya (bj, pts1)" id="note246">ḍaṁseyya</span>. So tatonidānaṁ maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ. Taṁ kissa hetu? Duggahitattā, bhikkhave, alagaddassa. </p>
+
+<hr>
+
+<p>Evameva kho, bhikkhave, idhekacce moghapurisā dhammaṁ pariyāpuṇanti — suttaṁ, geyyaṁ, veyyākaraṇaṁ, gāthaṁ, udānaṁ, itivuttakaṁ, jātakaṁ, abbhutadhammaṁ, vedallaṁ. Te taṁ dhammaṁ pariyāpuṇitvā tesaṁ dhammānaṁ paññāya atthaṁ na upaparikkhanti. Tesaṁ te dhammā paññāya atthaṁ anupaparikkhataṁ na nijjhānaṁ khamanti. Te upārambhānisaṁsā ceva dhammaṁ pariyāpuṇanti itivādappamokkhānisaṁsā ca. Yassa catthāya dhammaṁ pariyāpuṇanti tañcassa atthaṁ nānubhonti. Tesaṁ te dhammā duggahitā dīgharattaṁ ahitāya dukkhāya saṁvattanti. Taṁ kissa hetu? Duggahitattā, bhikkhave, dhammānaṁ.</p>
+
+<hr>
+
+<p><span class="parno">17</span>Idha pana, bhikkhave, ekacce kulaputtā dhammaṁ pariyāpuṇanti — suttaṁ, geyyaṁ, veyyākaraṇaṁ, gāthaṁ, udānaṁ, itivuttakaṁ, jātakaṁ, abbhutadhammaṁ, vedallaṁ. Te taṁ dhammaṁ pariyāpuṇitvā tesaṁ dhammānaṁ paññāya atthaṁ upaparikkhanti. Tesaṁ te dhammā paññāya atthaṁ upaparikkhataṁ nijjhānaṁ khamanti. Te na ceva upārambhānisaṁsā dhammaṁ pariyāpuṇanti <span class="var" title="na ca itivādappamokkhānisaṁsā (?)" id="note247">na itivādappamokkhānisaṁsā ca</span>. Yassa catthāya dhammaṁ pariyāpuṇanti tañcassa atthaṁ anubhonti. Tesaṁ te dhammā suggahitā dīgharattaṁ hitāya sukhāya saṁvattanti. Taṁ kissa hetu? Suggahitattā bhikkhave dhammānaṁ.</p>
+
+<hr>
+
+<p><span class="parno">18</span>Seyyathāpi, bhikkhave, puriso alagaddatthiko alagaddagavesī alagaddapariyesanaṁ caramāno. So passeyya mahantaṁ alagaddaṁ. Tamenaṁ ajapadena daṇḍena suniggahitaṁ niggaṇheyya. Ajapadena daṇḍena suniggahitaṁ niggahitvā, gīvāya suggahitaṁ gaṇheyya. Kiñcāpi so, bhikkhave, alagaddo tassa purisassa hatthaṁ vā bāhaṁ vā aññataraṁ vā angapaccaṅgaṁ bhogehi paliveṭheyya, atha kho so neva tatonidānaṁ maraṇaṁ vā nigaccheyya maraṇamattaṁ vā dukkhaṁ. Taṁ kissa hetu? Suggahitattā, bhikkhave, alagaddassa. </p>
+
+<p>Evameva kho, bhikkhave, idhekacce kulaputtā dhammaṁ pariyāpuṇanti — suttaṁ, geyyaṁ, veyyākaraṇaṁ, gāthaṁ, udānaṁ, itivuttakaṁ, jātakaṁ, abbhutadhammaṁ, vedallaṁ. Te taṁ dhammaṁ pariyāpuṇitvā tesaṁ dhammānaṁ paññāya atthaṁ upaparikkhanti. Tesaṁ te dhammā paññāya atthaṁ upaparikkhataṁ nijjhānaṁ khamanti. Te na ceva upārambhānisaṁsā dhammaṁ pariyāpuṇanti, na itivādappamokkhānisaṁsā ca. Yassa catthāya dhammaṁ pariyāpuṇanti, tañcassa atthaṁ anubhonti. Tesaṁ te dhammā suggahitā dīgharattaṁ atthāya hitāya sukhāya saṁvattanti. Taṁ kissa hetu? Suggahitattā, bhikkhave, dhammānaṁ.</p>
+
+<hr>
+
+<p>Tasmātiha, bhikkhave, yassa me bhāsitassa atthaṁ ājāneyyātha, tathā naṁ dhāreyyātha. Yassa ca pana me bhāsitassa atthaṁ na ājāneyyātha, ahaṁ vo tattha paṭipucchitabbo, ye vā panāssu viyattā bhikkhū.</p>
+
+
+
+<hr>
+
+<p><span class="parno">19</span>Kullūpamaṁ vo, bhikkhave, dhammaṁ desessāmi nittharaṇatthāya, no gahaṇatthāya. Taṁ suṇātha, sādhukaṁ manasikarotha, bhāsissāmī"ti. </p>
+
+<p>"Evaṁ, bhante"ti kho te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: </p>
+
+<hr>
+
+<p><span class="parno">20</span>"Seyyathāpi, bhikkhave, puriso addhānamaggappaṭipanno. So passeyya mahantaṁ udakaṇṇavaṁ, orimaṁ tīraṁ sāsaṅkaṁ sappaṭibhayaṁ, pārimaṁ tīraṁ khemaṁ appaṭibhayaṁ; na cassa nāvā santāraṇī uttarasetu vā apārā pāraṁ gamanāya. Tassa evamassa: ‘Ayaṁ kho mahāudakaṇṇavo, orimaṁ tīraṁ sāsaṅkaṁ sappaṭibhayaṁ, pārimaṁ tīraṁ khemaṁ appaṭibhayaṁ; natthi ca nāvā santāraṇī uttarasetu vā apārā pāraṁ gamanāya. Yannūnāhaṁ tiṇakaṭṭhasākhāpalāsaṁ saṅkaḍḍhitvā, kullaṁ bandhitvā, taṁ kullaṁ nissāya hatthehi ca pādehi ca vāyamamāno sotthinā pāraṁ uttareyyan’ti. Atha kho so, bhikkhave, puriso tiṇakaṭṭhasākhāpalāsaṁ saṅkaḍḍhitvā, kullaṁ bandhitvā taṁ kullaṁ nissāya hatthehi ca pādehi ca vāyamamāno sotthinā pāraṁ uttareyya. Tassa purisassa <span class="var" title="tiṇṇassa (si, pts1, mr)" id="note248">uttiṇṇassa</span> pāraṅgatassa evamassa: ‘bahukāro kho me ayaṁ kullo; imāhaṁ kullaṁ nissāya hatthehi ca pādehi ca vāyamamāno sotthinā pāraṁ uttiṇṇo. Yannūnāhaṁ imaṁ kullaṁ sīse vā āropetvā khandhe vā <span class="var" title="paccāropetvā (s1–3) | uccopetvā (mr)" id="note249">uccāretvā</span> yena kāmaṁ pakkameyyan’ti. </p>
+
+<hr>
+
+<p>Taṁ kiṁ maññatha, bhikkhave, api nu so puriso evaṁkārī tasmiṁ kulle kiccakārī assā"ti?</p>
+
+<hr>
+
+<p><span class="parno">21</span>"No hetaṁ, bhante".</p>
+
+<p>"Kathaṁkārī ca so, bhikkhave, puriso tasmiṁ kulle kiccakārī assa? Idha, bhikkhave, tassa purisassa uttiṇṇassa pāraṅgatassa evamassa: ‘bahukāro kho me ayaṁ kullo; imāhaṁ kullaṁ nissāya hatthehi ca pādehi ca vāyamamāno sotthinā pāraṁ uttiṇṇo. Yannūnāhaṁ imaṁ kullaṁ thale vā <span class="var" title="ussāpetvā (s1–3) | ussāretvā (mr)" id="note250">ussādetvā</span> udake vā opilāpetvā yena kāmaṁ pakkameyyan’ti. Evaṁkārī kho so, bhikkhave, puriso tasmiṁ kulle kiccakārī assa. </p>
+
+<hr>
+
+<p>Evameva kho, bhikkhave, kullūpamo mayā dhammo desito nittharaṇatthāya, no gahaṇatthāya.</p>
+
+<p>Kullūpamaṁ vo, bhikkhave, dhammaṁ desitaṁ, ājānantehi dhammāpi vo pahātabbā pageva adhammā.</p>
+
+
+
+<hr>
+
+<p><span class="parno">22</span>Chayimāni, bhikkhave, diṭṭhiṭṭhānāni. Katamāni cha? Idha, bhikkhave, assutavā puthujjano ariyānaṁ adassāvī ariyadhammassa akovido ariyadhamme avinīto, sappurisānaṁ adassāvī sappurisadhammassa akovido sappurisadhamme avinīto, rūpaṁ ‘etaṁ mama, esohamasmi, eso me attā’ti samanupassati; vedanaṁ ‘etaṁ mama, esohamasmi, eso me attā’ti samanupassati; saññaṁ ‘etaṁ mama, esohamasmi, eso me attā’ti samanupassati; saṅkhāre ‘etaṁ mama, esohamasmi, eso me attā’ti samanupassati; yampi taṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ, anuvicaritaṁ manasā tampi ‘etaṁ mama, esohamasmi, eso me attā’ti samanupassati; yampi taṁ diṭṭhiṭṭhānaṁ — so loko so attā, so pecca bhavissāmi nicco dhuvo sassato avipariṇāmadhammo, sassatisamaṁ tatheva ṭhassāmīti — tampi ‘etaṁ mama, esohamasmi, eso me attā’ti samanupassati.</p>
+
+<p><span class="parno">23</span>Sutavā ca kho, bhikkhave, ariyasāvako ariyānaṁ dassāvī ariyadhammassa kovido ariyadhamme suvinīto, sappurisānaṁ dassāvī sappurisadhammassa kovido sappurisadhamme suvinīto, rūpaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti samanupassati; vedanaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti samanupassati; saññaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti samanupassati; saṅkhāre ‘netaṁ mama, nesohamasmi, na meso attā’ti samanupassati; yampi taṁ diṭṭhaṁ sutaṁ mutaṁ viññātaṁ pattaṁ pariyesitaṁ, anuvicaritaṁ manasā, tampi ‘netaṁ mama, nesohamasmi, na meso attā’ti samanupassati; yampi taṁ diṭṭhiṭṭhānaṁ — so loko so attā, so pecca bhavissāmi nicco dhuvo sassato avipariṇāmadhammo, sassatisamaṁ tatheva ṭhassāmīti — tampi ‘netaṁ mama, nesohamasmi, na meso attā’ti samanupassati.</p>
+
+<p>So evaṁ samanupassanto asati na paritassatī"ti.</p>
+
+
+
+<hr>
+
+<p><span class="parno">24</span>Evaṁ vutte, aññataro bhikkhu bhagavantaṁ etadavoca: "siyā nu kho, bhante, bahiddhā asati paritassanā"ti?</p>
+
+<p>"Siyā, bhikkhū"ti — bhagavā avoca. "Idha bhikkhu ekaccassa evaṁ hoti: ‘ahu vata me, taṁ vata me natthi; siyā vata me, taṁ vatāhaṁ na labhāmī’ti. So socati kilamati paridevati urattāḷiṁ kandati sammohaṁ āpajjati. Evaṁ kho, bhikkhu, bahiddhā asati paritassanā hotī"ti.</p>
+
+<p><span class="parno">25</span>"Siyā pana, bhante, bahiddhā asati aparitassanā"ti?</p>
+
+<p>"Siyā, bhikkhū"ti — bhagavā avoca. "Idha bhikkhu ekaccassa na evaṁ hoti: ‘ahu vata me, taṁ vata me natthi; siyā vata me, taṁ vatāhaṁ na labhāmī’ti. So na socati na kilamati na paridevati na urattāḷiṁ kandati na sammohaṁ āpajjati. Evaṁ kho, bhikkhu, bahiddhā asati aparitassanā hotī"ti.</p>
+
+<p><span class="parno">26</span>"Siyā nu kho, bhante, ajjhattaṁ asati paritassanā"ti?</p>
+
+<p>"Siyā, bhikkhū"ti –  bhagavā avoca. "Idha, bhikkhu, ekaccassa evaṁ diṭṭhi hoti: ‘so loko so attā, so pecca bhavissāmi nicco dhuvo sassato avipariṇāmadhammo, sassatisamaṁ tatheva ṭhassāmī’ti. So suṇāti tathāgatassa vā tathāgatasāvakassa vā sabbesaṁ diṭṭhiṭṭhānādhiṭṭhānapariyuṭṭhānābhinivesānusayānaṁ samugghātāya sabbasaṅkhārasamathāya sabbūpadhipaṭinissaggāya taṇhākkhayāya virāgāya nirodhāya nibbānāya dhammaṁ desentassa. Tassa evaṁ hoti: ‘ucchijjissāmi nāmassu, vinassissāmi nāmassu, nassu nāma bhavissāmī’ti. So socati kilamati paridevati urattāḷiṁ kandati sammohaṁ āpajjati. Evaṁ kho, bhikkhu, ajjhattaṁ asati paritassanā hotī"ti.</p>
+
+<hr>
+
+<p><span class="parno">27</span>"Siyā pana, bhante, ajjhattaṁ asati aparitassanā"ti?</p>
+
+<p>"Siyā, bhikkhū"ti bhagavā avoca. "Idha, bhikkhu, ekaccassa na evaṁ diṭṭhi hoti: ‘so loko so attā, so pecca bhavissāmi nicco dhuvo sassato avipariṇāmadhammo, sassatisamaṁ tatheva ṭhassāmī’ti. So suṇāti tathāgatassa vā tathāgatasāvakassa vā sabbesaṁ diṭṭhiṭṭhānādhiṭṭhānapariyuṭṭhānābhinivesānusayānaṁ samugghātāya sabbasaṅkhārasamathāya sabbūpadhipaṭinissaggāya taṇhākkhayāya virāgāya nirodhāya nibbānāya dhammaṁ desentassa. Tassa na evaṁ hoti: ‘ucchijjissāmi nāmassu, vinassissāmi nāmassu, nassu nāma bhavissāmī’ti. So na socati na kilamati na paridevati na urattāḷiṁ kandati na sammohaṁ āpajjati. Evaṁ kho, bhikkhu, ajjhattaṁ asati aparitassanā hoti.</p>
+
+
+
+<hr>
+
+<p><span class="parno">28</span><span class="var" title="tañca (mr)" id="note251">Taṁ</span>, bhikkhave, pariggahaṁ pariggaṇheyyātha, <span class="var" title="yvāssu (mr)" id="note252">yvāssa</span> pariggaho nicco dhuvo sassato avipariṇāmadhammo, sassatisamaṁ tatheva tiṭṭheyya. Passatha no tumhe, bhikkhave, taṁ pariggahaṁ yvāssa pariggaho nicco dhuvo sassato avipariṇāmadhammo, sassatisamaṁ tatheva tiṭṭheyyā"ti? </p>
+
+<p>"No hetaṁ, bhante". </p>
+
+<hr>
+
+<p>"Sādhu, bhikkhave. Ahampi kho taṁ, bhikkhave, pariggahaṁ na samanupassāmi yvāssa pariggaho nicco dhuvo sassato avipariṇāmadhammo sassatisamaṁ tatheva tiṭṭheyya.</p>
+
+<hr>
+
+<p><span class="parno">29</span>Taṁ, bhikkhave, attavādupādānaṁ upādiyetha, <span class="var" title="yassa (s1–3, mr)" id="note254">yaṁsa</span> attavādupādānaṁ upādiyato na uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā. Passatha no tumhe, bhikkhave, taṁ attavādupādānaṁ yaṁsa attavādupādānaṁ upādiyato na uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā"ti? </p>
+
+<p>"No hetaṁ, bhante". </p>
+
+<p>"Sādhu, bhikkhave. Ahampi kho taṁ, bhikkhave, attavādupādānaṁ na samanupassāmi yaṁsa attavādupādānaṁ upādiyato na uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā.</p>
+
+<hr>
+
+<p><span class="parno">30</span>Taṁ, bhikkhave, diṭṭhinissayaṁ nissayetha yaṁsa diṭṭhinissayaṁ nissayato na uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā. Passatha no tumhe, bhikkhave, taṁ diṭṭhinissayaṁ yaṁsa diṭṭhinissayaṁ nissayato na uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā"ti? </p>
+
+<p>"No hetaṁ, bhante". </p>
+
+<hr>
+
+<p>"Sādhu, bhikkhave. Ahampi kho taṁ, bhikkhave, diṭṭhinissayaṁ na samanupassāmi yaṁsa diṭṭhinissayaṁ nissayato na uppajjeyyuṁ sokaparidevadukkhadomanassupāyāsā".</p>
+
+<hr>
+
+<p><span class="parno">31</span>"Attani vā, bhikkhave, sati ‘attaniyaṁ me’ti assā"ti?</p>
+
+<hr>
+
+<p><span class="parno">32</span>"Evaṁ, bhante".</p>
+
+<p><span class="parno">33</span>"Attaniye vā, bhikkhave, sati ‘attā me’ti assā"ti? </p>
+
+<p>"Evaṁ, bhante".</p>
+
+<hr>
+
+<p><span class="parno">34</span>"Attani ca, bhikkhave, attaniye ca saccato thetato anupalabbhamāne, yampi taṁ diṭṭhiṭṭhānaṁ: ‘so loko so attā, so pecca bhavissāmi nicco dhuvo sassato avipariṇāmadhammo, sassatisamaṁ tatheva <span class="var" title="na ca khoyaṁ (mr)" id="note255">ṭhassāmī’ti — nanāyaṁ</span>, bhikkhave, kevalo paripūro bāladhammo"ti?</p>
+
+<p><span class="parno">35</span>"Kiñhi no siyā, bhante, kevalo hi, <span class="var" title="kevalo paripūro (bj, pts1)" id="note256">bhante, paripūro</span> bāladhammo"ti.</p>
+
+<p><span class="parno">36</span>"Taṁ kiṁ maññatha, bhikkhave, rūpaṁ niccaṁ vā aniccaṁ vā"ti?</p>
+
+<p><span class="parno">37</span>"Aniccaṁ, bhante".</p>
+
+<p><span class="parno">38</span>"Yaṁ panāniccaṁ dukkhaṁ vā taṁ sukhaṁ vā"ti?</p>
+
+<p><span class="parno">39</span>"Dukkhaṁ, bhante".</p>
+
+<p><span class="parno">40</span>"Yaṁ panāniccaṁ dukkhaṁ vipariṇāmadhammaṁ, kallaṁ nu taṁ samanupassituṁ — etaṁ mama, esohamasmi, eso me attā"ti?</p>
+
+<p><span class="parno">41</span>"No hetaṁ, bhante".</p>
+
+<p><span class="parno">42</span>"Taṁ kiṁ maññatha, bhikkhave, vedanā … pe … saññā … saṅkhārā … viññāṇaṁ niccaṁ vā aniccaṁ vā"ti?</p>
+
+<p><span class="parno">43</span>"Aniccaṁ, bhante".</p>
+
+<p><span class="parno">44</span>"Yaṁ panāniccaṁ dukkhaṁ vā taṁ sukhaṁ vā"ti?</p>
+
+<p><span class="parno">45</span>"Dukkhaṁ, bhante".</p>
+
+<p><span class="parno">46</span>"Yaṁ panāniccaṁ dukkhaṁ vipariṇāmadhammaṁ, kallaṁ nu taṁ samanupassituṁ — etaṁ mama, esohamasmi, eso me attā"ti?</p>
+
+<p><span class="parno">47</span>"No hetaṁ, bhante".</p>
+
+<hr>
+
+<p><span class="parno">48</span>"Tasmātiha, bhikkhave, yaṁ kiñci rūpaṁ atītānāgatapaccuppannaṁ, ajjhattaṁ vā bahiddhā vā, oḷārikaṁ vā sukhumaṁ vā, hīnaṁ vā paṇītaṁ vā, yaṁ dūre santike vā, sabbaṁ rūpaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti — evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ. Yā kāci vedanā … pe … yā kāci saññā … ye keci saṅkhārā … yaṁ kiñci viññāṇaṁ atītānāgatapaccuppannaṁ, ajjhattaṁ vā bahiddhā vā, oḷārikaṁ vā sukhumaṁ vā, hīnaṁ vā paṇītaṁ vā, yaṁ dūre santike vā, sabbaṁ viññāṇaṁ ‘netaṁ mama, nesohamasmi, na meso attā’ti — evametaṁ yathābhūtaṁ sammappaññāya daṭṭhabbaṁ.</p>
+
+<hr>
+
+<p><span class="parno">49</span>Evaṁ passaṁ, bhikkhave, sutavā ariyasāvako rūpasmiṁ nibbindati, vedanāya nibbindati, saññāya nibbindati, saṅkhāresu nibbindati, viññāṇasmiṁ <span class="var" title="nibbindaṁ virajjati (bj, s1–3, pts1)" id="note257">nibbindati, nibbidā virajjati</span>, virāgā vimuccati, vimuttasmiṁ vimuttamiti ñāṇaṁ hoti.</p>
+
+
+
+<p>‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti. </p>
+
+<p>Ayaṁ vuccati, bhikkhave, bhikkhu ukkhittapaligho itipi, saṁkiṇṇaparikkho itipi, abbūḷhesiko itipi, niraggaḷo itipi, ariyo pannaddhajo pannabhāro visaṁyutto itipi.</p>
+
+<p><span class="parno">50</span>Kathañca, bhikkhave, bhikkhu ukkhittapaligho hoti? Idha, bhikkhave, bhikkhuno avijjā pahīnā hoti, ucchinnamūlā tālāvatthukatā anabhāvaṅkatā, āyatiṁ anuppādadhammā. Evaṁ kho, bhikkhave, bhikkhu ukkhittapaligho hoti.</p>
+
+<p><span class="parno">51</span>Kathañca, bhikkhave, bhikkhu saṅkiṇṇaparikkho hoti? Idha, bhikkhave, bhikkhuno ponobbhaviko jātisaṁsāro pahīno hoti, ucchinnamūlo tālāvatthukato anabhāvaṅkato, āyatiṁ anuppādadhammo. Evaṁ kho, bhikkhave, bhikkhu saṅkiṇṇaparikkho hoti.</p>
+
+<p><span class="parno">52</span>Kathañca, bhikkhave, bhikkhu abbūḷhesiko hoti? Idha, bhikkhave, bhikkhuno taṇhā pahīnā hoti, ucchinnamūlā tālāvatthukatā anabhāvaṅkatā, āyatiṁ anuppādadhammā. Evaṁ kho, bhikkhave, bhikkhu abbūḷhesiko hoti.</p>
+
+<p><span class="parno">53</span>Kathañca, bhikkhave, bhikkhu niraggaḷo hoti? Idha, bhikkhave, bhikkhuno pañca orambhāgiyāni saṁyojanāni pahīnāni honti, ucchinnamūlāni tālāvatthukatāni anabhāvaṅkatāni, āyatiṁ anuppādadhammāni. Evaṁ kho, bhikkhave, bhikkhu niraggaḷo hoti.</p>
+
+<p><span class="parno">54</span>Kathañca, bhikkhave, bhikkhu ariyo pannaddhajo pannabhāro visaṁyutto hoti? Idha, bhikkhave, bhikkhuno asmimāno pahīno hoti, ucchinnamūlo tālāvatthukato anabhāvaṅkato, āyatiṁ anuppādadhammo. Evaṁ kho, bhikkhave, bhikkhu ariyo pannaddhajo pannabhāro visaṁyutto hoti.</p>
+
+<hr>
+
+<p><span class="parno">55</span>Evaṁ vimuttacittaṁ kho, bhikkhave, bhikkhuṁ saindā devā sabrahmakā sapajāpatikā anvesaṁ nādhigacchanti: ‘idaṁ nissitaṁ tathāgatassa viññāṇan’ti. Taṁ kissa hetu? Diṭṭhevāhaṁ, bhikkhave, dhamme tathāgataṁ ananuvijjoti vadāmi. </p>
+
+<p>Evaṁvādiṁ kho maṁ, bhikkhave, evamakkhāyiṁ eke samaṇabrāhmaṇā asatā tucchā musā abhūtena abbhācikkhanti: ‘venayiko samaṇo gotamo, sato sattassa ucchedaṁ vināsaṁ vibhavaṁ paññāpetī’ti.</p>
+
+
+<hr>
+
+
+<p>Yathā <span class="var" title="vāhaṁ bhikkhave na (bj, pts1) | cāhaṁ bhikkhave na (s1–3)" id="note258">cāhaṁ na, bhikkhave</span>, yathā cāhaṁ na vadāmi, tathā maṁ te bhonto samaṇabrāhmaṇā asatā tucchā musā abhūtena abbhācikkhanti: ‘venayiko samaṇo gotamo, sato sattassa ucchedaṁ vināsaṁ vibhavaṁ paññāpetī’ti. Pubbe cāhaṁ, bhikkhave, etarahi ca dukkhañceva paññāpemi, dukkhassa ca nirodhaṁ. Tatra ce, bhikkhave, pare tathāgataṁ akkosanti paribhāsanti rosenti vihesenti, tatra, bhikkhave, tathāgatassa na hoti āghāto na appaccayo na cetaso anabhiraddhi.</p>
+
+<hr>
+
+<p><span class="parno">56</span>Tatra ce, bhikkhave, pare tathāgataṁ sakkaronti garuṁ karonti mānenti pūjenti, tatra, bhikkhave, tathāgatassa na hoti ānando na somanassaṁ na cetaso uppilāvitattaṁ. Tatra ce, bhikkhave, pare vā tathāgataṁ sakkaronti garuṁ karonti mānenti pūjenti, tatra, bhikkhave, tathāgatassa evaṁ hoti: ‘Yaṁ kho idaṁ pubbe pariññātaṁ tattha me evarūpā <span class="var" title="sakkārā (mr)" id="note259">kārā</span> karīyantī’ti. Tasmātiha, bhikkhave, tumhe cepi pare akkoseyyuṁ paribhāseyyuṁ roseyyuṁ viheseyyuṁ, tatra tumhe hi na āghāto na appaccayo na cetaso anabhiraddhi karaṇīyā.</p>
+
+<p>Tasmātiha, bhikkhave, tumhe cepi pare sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ, tatra tumhehi na ānando na somanassaṁ na cetaso uppilāvitattaṁ karaṇīyaṁ. Tasmātiha, bhikkhave, tumhe cepi pare sakkareyyuṁ garuṁ kareyyuṁ māneyyuṁ pūjeyyuṁ, tatra tumhākaṁ evamassa: ‘Yaṁ kho idaṁ pubbe pariññātaṁ, <span class="var" title="tatrime (bj) | tattha no (s1–3, pts1, mr)" id="note260">tatthame</span> evarūpā kārā karīyantī’ti.</p>
+
+
+
+<hr>
+
+<p><span class="parno">57</span>Tasmātiha, bhikkhave, yaṁ na tumhākaṁ taṁ pajahatha; taṁ vo pahīnaṁ dīgharattaṁ hitāya sukhāya bhavissati. </p>
+
+<p>Kiñca, bhikkhave, na tumhākaṁ? Rūpaṁ, bhikkhave, na tumhākaṁ, taṁ pajahatha; taṁ vo pahīnaṁ dīgharattaṁ hitāya sukhāya bhavissati. </p>
+
+<hr>
+
+<p>Vedanā, bhikkhave, na tumhākaṁ, taṁ pajahatha; sā vo pahīnā dīgharattaṁ hitāya sukhāya bhavissati. Saññā, bhikkhave, na tumhākaṁ, taṁ pajahatha; sā vo pahīnā dīgharattaṁ hitāya sukhāya bhavissati. Saṅkhārā, bhikkhave, na tumhākaṁ, te pajahatha; te vo pahīnā dīgharattaṁ hitāya sukhāya bhavissanti. Viññāṇaṁ, bhikkhave, na tumhākaṁ, taṁ pajahatha; taṁ vo pahīnaṁ dīgharattaṁ hitāya sukhāya bhavissati.</p>
+
+<hr>
+
+<p>Taṁ kiṁ maññatha, bhikkhave, yaṁ imasmiṁ jetavane tiṇakaṭṭhasākhāpalāsaṁ, taṁ jano hareyya vā daheyya vā yathāpaccayaṁ vā kareyya. </p>
+
+<p>Api nu tumhākaṁ evamassa: ‘amhe jano harati vā dahati vā yathāpaccayaṁ vā karotī’"ti? </p>
+
+<p>"No hetaṁ, bhante". "Taṁ kissa hetu"? "Na hi no etaṁ, bhante, attā vā attaniyaṁ vā"ti. </p>
+
+<hr>
+
+<p>"Evameva kho, bhikkhave, yaṁ na tumhākaṁ taṁ pajahatha; taṁ vo pahīnaṁ dīgharattaṁ hitāya sukhāya bhavissati. Kiñca, bhikkhave, na tumhākaṁ? Rūpaṁ, bhikkhave, na tumhākaṁ, taṁ pajahatha; taṁ vo pahīnaṁ dīgharattaṁ hitāya sukhāya bhavissati. Vedanā, bhikkhave … pe … saññā, bhikkhave … saṅkhārā, bhikkhave … pe … viññāṇaṁ, bhikkhave, na tumhākaṁ, taṁ pajahatha; taṁ vo pahīnaṁ dīgharattaṁ hitāya sukhāya bhavissati.</p>
+
+
+
+<hr>
+
+<p><span class="parno">58</span>Evaṁ svākkhāto, bhikkhave, mayā dhammo uttāno vivaṭo pakāsito chinnapilotiko. Evaṁ svākkhāte, bhikkhave, mayā dhamme uttāne vivaṭe pakāsite chinnapilotike ye te bhikkhū arahanto khīṇāsavā vusitavanto katakaraṇīyā ohitabhārā anuppattasadatthā parikkhīṇabhavasaṁyojanā sammadaññāvimuttā, vaṭṭaṁ tesaṁ natthi paññāpanāya.</p>
+
+<p><span class="parno">59</span>Evaṁ svākkhāto, bhikkhave, mayā dhammo uttāno vivaṭo pakāsito chinnapilotiko. Evaṁ svākkhāte, bhikkhave, mayā dhamme uttāne vivaṭe pakāsite chinnapilotike yesaṁ bhikkhūnaṁ pañcorambhāgiyāni saṁyojanāni pahīnāni, sabbe te opapātikā, tattha parinibbāyino, anāvattidhammā tasmā lokā.</p>
+
+<p><span class="parno">60</span>Evaṁ svākkhāto, bhikkhave, mayā dhammo uttāno vivaṭo pakāsito chinnapilotiko. Evaṁ svākkhāte, bhikkhave, mayā dhamme uttāne vivaṭe pakāsite chinnapilotike yesaṁ bhikkhūnaṁ tīṇi saṁyojanāni pahīnāni, rāgadosamohā tanubhūtā, sabbe te sakadāgāmino, sakideva imaṁ lokaṁ āgantvā dukkhassantaṁ karissanti.</p>
+
+<hr>
+
+<p><span class="parno">61</span>Evaṁ svākkhāto, bhikkhave, mayā dhammo uttāno vivaṭo pakāsito chinnapilotiko. Evaṁ svākkhāte, bhikkhave, mayā dhamme uttāne vivaṭe pakāsite chinnapilotike yesaṁ bhikkhūnaṁ tīṇi saṁyojanāni pahīnāni, sabbe te sotāpannā, avinipātadhammā, niyatā sambodhiparāyanā.</p>
+
+<p><span class="parno">62</span>Evaṁ svākkhāto, bhikkhave, mayā dhammo uttāno vivaṭo pakāsito chinnapilotiko. Evaṁ svākkhāte, bhikkhave, mayā dhamme uttāne vivaṭe pakāsite chinnapilotike ye te bhikkhū dhammānusārino saddhānusārino sabbe te sambodhiparāyanā.</p>
+
+<p><span class="parno">63</span>Evaṁ svākkhāto, bhikkhave, mayā dhammo uttāno vivaṭo pakāsito chinnapilotiko. Evaṁ svākkhāte, bhikkhave, mayā dhamme uttāne vivaṭe pakāsite chinnapilotike yesaṁ mayi saddhāmattaṁ pemamattaṁ sabbe te saggaparāyanā"ti.</p>
+
+<hr>
+
+<p><span class="parno">64</span>Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti.</p>
+
+<p class="endsutta">Alagaddūpamasuttaṁ niṭṭhitaṁ dutiyaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn21.html#content"></a><a id="next-sutta" href="./mn23.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN22: Alagaddūpama Sutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

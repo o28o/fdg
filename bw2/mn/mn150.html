@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 150</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN150: Nagaravindeyyasutta - With the People of Nagaravinda </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn150">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was wandering in the land of the Kosalans together with a large Saṅgha of mendicants when he arrived at a village of the Kosalan brahmins named Nagaravinda.</p>
+<p>The brahmins and householders of Nagaravinda heard: “It seems the ascetic Gotama — a Sakyan, gone forth from a Sakyan family — while wandering in the land of the Kosalans has arrived at Nagaravinda, together with a large Saṅgha of mendicants. He has this good reputation: ‘That Blessed One is perfected, a fully awakened Buddha, accomplished in knowledge and conduct, holy, knower of the world, supreme guide for those who wish to train, teacher of gods and humans, awakened, blessed.’ He has realized with his own insight this world — with its gods, Māras and Brahmās, this population with its ascetics and brahmins, gods and humans — and he makes it known to others. He teaches Dhamma that’s good in the beginning, good in the middle, and good in the end, meaningful and well-phrased. And he reveals a spiritual practice that’s entirely full and pure. It’s good to see such perfected ones.”</p>
+
+<hr>
+
+<p><span class="parno">2</span>Then the brahmins and householders of Nagaravinda went up to the Buddha. Before sitting down to one side, some bowed, some exchanged greetings and polite conversation, some held up their joined palms toward the Buddha, some announced their name and clan, while some kept silent. The Buddha said to them:</p>
+
+<p><span class="parno">3</span>“Householders, if wanderers who follow another path were to ask you: ‘What kind of ascetic or brahmin doesn’t deserve honor, respect, reverence, and veneration?’ You should answer them: ‘There are ascetics and brahmins who are not free of greed, hate, and delusion for sights known by the eye, who are not peaceful inside, and who conduct themselves badly among the good by way of body, speech, and mind. They don’t deserve honor, respect, reverence, and veneration. Why is that? Because we ourselves are not free of these things, so we do not see that they have any higher good conduct than us. That’s why they don’t deserve honor, respect, reverence, and veneration. </p>
+
+<p>There are ascetics and brahmins who are not free of greed, hate, and delusion for sounds known by the ear … smells known by the nose … tastes known by the tongue … touches known by the body … thoughts known by the mind, who are not peaceful inside, and who conduct themselves badly among the good by way of body, speech, and mind. They don’t deserve honor, respect, reverence, and veneration. Why is that? Because we ourselves are not free of these things, so we do not see that they have any higher good conduct than us. That’s why they don’t deserve honor, respect, reverence, and veneration.’ When questioned by wanderers who follow other paths, that’s how you should answer them.</p>
+
+<p><span class="parno">4</span>If wanderers who follow other paths were to ask you: ‘What kind of ascetic or brahmin deserves honor, respect, reverence, and veneration?’ You should answer them: ‘There are ascetics and brahmins who are free of greed, hate, and delusion for sights known by the eye, who are peaceful inside, and who conduct themselves well by way of body, speech, and mind. They deserve honor, respect, reverence, and veneration. Why is that? Because we ourselves are not free of these things, but we see that they have a higher good conduct than us. That’s why they deserve honor, respect, reverence, and veneration. </p>
+
+<p>There are ascetics and brahmins who are free of greed, hate, and delusion for sounds known by the ear … smells known by the nose … tastes known by the tongue … touches known by the body … thoughts known by the mind, who are peaceful inside, and who conduct themselves well by way of body, speech, and mind. They deserve honor, respect, reverence, and veneration. Why is that? Because we ourselves are not free of these things, but we see that they have a higher good conduct than us. That’s why they deserve honor, respect, reverence, and veneration. When questioned by wanderers who follow other paths, that’s how you should answer them.</p>
+
+<p><span class="parno">5</span>If wanderers who follow other paths were to ask you: ‘But what reasons and evidence do you have regarding those venerables that justifies saying: “Clearly those venerables are free of greed, hate, and delusion, or practicing to be free of them”?’ You should answer them: ‘It’s because those venerables frequent remote lodgings in the wilderness and the forest. In such places there are no sights known by the eye to see and enjoy, there are no sounds known by the ear to hear and enjoy, no odors known by the nose to smell and enjoy, no flavors known by the tongue to taste and enjoy, and no touches known by the body to feel and enjoy. These are the reasons and evidence that you have regarding those venerables that justifies saying: “Clearly those venerables are free of greed, hate, and delusion, or practicing to be free of them”.’ When questioned by wanderers who follow other paths, that’s how you should answer them.”</p>
+
+<hr>
+
+<p><span class="parno">6</span>When he had spoken, the brahmins and householders of Nagaravinda said to the Buddha: “Excellent, Master Gotama! Excellent! As if he were righting the overturned, or revealing the hidden, or pointing out the path to the lost, or lighting a lamp in the dark so people with good eyes can see what’s there, Master Gotama has made the Teaching clear in many ways. We go for refuge to Master Gotama, to the teaching, and to the mendicant Saṅgha. From this day forth, may Master Gotama remember us as lay followers who have gone for refuge for life.”</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā kosalesu cārikaṁ caramāno mahatā bhikkhusaṁghena saddhiṁ yena nagaravindaṁ nāma kosalānaṁ brāhmaṇānaṁ gāmo tadavasari.</p>
+
+<p>Assosuṁ kho <span class="var" title="nagaravindeyyā (mr)" id="note555">nagaravindeyyakā</span> brāhmaṇagahapatikā: "Samaṇo khalu, bho, gotamo sakyaputto sakyakulā pabbajito kosalesu cārikaṁ caramāno mahatā bhikkhusaṁghena saddhiṁ nagaravindaṁ anuppatto. Taṁ kho pana bhavantaṁ gotamaṁ evaṁ kalyāṇo kittisaddo abbhuggato: ‘itipi so bhagavā arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā’ti. So imaṁ lokaṁ sadevakaṁ samārakaṁ sabrahmakaṁ sassamaṇabrāhmaṇiṁ pajaṁ sadevamanussaṁ sayaṁ abhiññā sacchikatvā pavedeti. So dhammaṁ deseti ādikalyāṇaṁ majjhekalyāṇaṁ pariyosānakalyāṇaṁ sātthaṁ sabyañjanaṁ, kevalaparipuṇṇaṁ parisuddhaṁ brahmacariyaṁ pakāseti. Sādhu kho pana tathārūpānaṁ arahataṁ dassanaṁ hotī"ti.</p>
+
+<hr>
+
+<p><span class="parno">2</span>Atha kho nagaravindeyyakā brāhmaṇagahapatikā yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā appekacce bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Appekacce bhagavatā saddhiṁ sammodiṁsu; sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdiṁsu. Appekacce yena bhagavā tenañjaliṁ paṇāmetvā ekamantaṁ nisīdiṁsu. Appekacce bhagavato santike nāmagottaṁ sāvetvā ekamantaṁ nisīdiṁsu. Appekacce tuṇhībhūtā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinne kho nagaravindeyyake brāhmaṇagahapatike bhagavā etadavoca: </p>
+
+<p><span class="parno">3</span>"Sace vo, gahapatayo, aññatitthiyā paribbājakā evaṁ puccheyyuṁ: ‘kathaṁbhūtā, gahapatayo, samaṇabrāhmaṇā na sakkātabbā na garukātabbā na mānetabbā na pūjetabbā’ti? Evaṁ puṭṭhā tumhe, gahapatayo, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyātha: ‘ye te samaṇabrāhmaṇā cakkhuviññeyyesu rūpesu avītarāgā avītadosā avītamohā, ajjhattaṁ avūpasantacittā, samavisamaṁ caranti kāyena vācāya manasā, evarūpā samaṇabrāhmaṇā na sakkātabbā na garukātabbā na mānetabbā na pūjetabbā. Taṁ kissa hetu? Mayampi hi cakkhuviññeyyesu rūpesu avītarāgā avītadosā avītamohā, ajjhattaṁ avūpasantacittā, samavisamaṁ carāma kāyena vācāya manasā, tesaṁ no samacariyampi hetaṁ uttari apassataṁ.</p>
+
+<p>Tasmā te bhonto samaṇabrāhmaṇā na sakkātabbā na garukātabbā na mānetabbā na pūjetabbā. Ye te samaṇabrāhmaṇā sotaviññeyyesu saddesu … ghānaviññeyyesu gandhesu … jivhāviññeyyesu rasesu … kāyaviññeyyesu phoṭṭhabbesu … manoviññeyyesu dhammesu avītarāgā avītadosā avītamohā, ajjhattaṁ avūpasantacittā, samavisamaṁ caranti kāyena vācāya manasā, evarūpā samaṇabrāhmaṇā na sakkātabbā na garukātabbā na mānetabbā na pūjetabbā. Taṁ kissa hetu? Mayampi hi manoviññeyyesu dhammesu avītarāgā avītadosā avītamohā, ajjhattaṁ avūpasantacittā, samavisamaṁ carāma kāyena vācāya manasā, tesaṁ no samacariyampi hetaṁ uttari apassataṁ. Tasmā te bhonto samaṇabrāhmaṇā na sakkātabbā na garukātabbā na mānetabbā na pūjetabbā’ti. Evaṁ puṭṭhā tumhe, gahapatayo, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyātha.</p>
+
+<p><span class="parno">4</span>Sace pana vo, gahapatayo, aññatitthiyā paribbājakā evaṁ puccheyyuṁ: ‘kathaṁbhūtā, gahapatayo, samaṇabrāhmaṇā sakkātabbā garukātabbā mānetabbā pūjetabbā’ti? Evaṁ puṭṭhā tumhe, gahapatayo, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyātha: ‘ye te samaṇabrāhmaṇā cakkhuviññeyyesu rūpesu vītarāgā vītadosā vītamohā, ajjhattaṁ vūpasantacittā, samacariyaṁ caranti kāyena vācāya manasā, evarūpā samaṇabrāhmaṇā sakkātabbā garukātabbā mānetabbā pūjetabbā. Taṁ kissa hetu? <span class="var" title="Mayaṁ hi (?)" id="note556">Mayampi hi</span> cakkhuviññeyyesu rūpesu avītarāgā avītadosā avītamohā, ajjhattaṁ avūpasantacittā, samavisamaṁ carāma kāyena vācāya manasā, tesaṁ no samacariyampi hetaṁ uttari passataṁ.</p>
+
+<p>Tasmā te bhonto samaṇabrāhmaṇā sakkātabbā garukātabbā mānetabbā pūjetabbā. Ye te samaṇabrāhmaṇā sotaviññeyyesu saddesu … ghānaviññeyyesu gandhesu … jivhāviññeyyesu rasesu … kāyaviññeyyesu phoṭṭhabbesu … manoviññeyyesu dhammesu vītarāgā vītadosā vītamohā, ajjhattaṁ vūpasantacittā, samacariyaṁ caranti kāyena vācāya manasā, evarūpā samaṇabrāhmaṇā sakkātabbā garukātabbā mānetabbā pūjetabbā. Taṁ kissa hetu? Mayampi hi manoviññeyyesu dhammesu avītarāgā avītadosā avītamohā ajjhattaṁ avūpasantacittā, samavisamaṁ carāma kāyena vācāya manasā, tesaṁ no samacariyampi hetaṁ uttari passataṁ. Tasmā te bhonto samaṇabrāhmaṇā sakkātabbā garukātabbā mānetabbā pūjetabbā’ti. Evaṁ puṭṭhā tumhe, gahapatayo, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyātha.</p>
+
+<p><span class="parno">5</span>Sace <span class="var" title="sace te (s1–3, km, pts1, mr)" id="note557">pana vo</span>, gahapatayo, aññatitthiyā paribbājakā evaṁ puccheyyuṁ: ‘ke panāyasmantānaṁ ākārā, ke anvayā, yena tumhe āyasmanto evaṁ vadetha? Addhā te āyasmanto vītarāgā vā rāgavinayāya vā paṭipannā, vītadosā vā dosavinayāya vā paṭipannā, vītamohā vā mohavinayāya vā paṭipannā’ti? Evaṁ puṭṭhā tumhe, gahapatayo, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyātha: ‘tathā hi te āyasmanto araññavanapatthāni pantāni senāsanāni paṭisevanti. Natthi kho pana tattha tathārūpā cakkhuviññeyyā rūpā ye disvā disvā abhirameyyuṁ, natthi kho pana tattha tathārūpā sotaviññeyyā saddā ye sutvā sutvā abhirameyyuṁ, natthi kho pana tattha tathārūpā ghānaviññeyyā gandhā ye ghāyitvā ghāyitvā abhirameyyuṁ, natthi kho pana tattha tathārūpā jivhāviññeyyā rasā ye sāyitvā sāyitvā abhirameyyuṁ, natthi kho pana tattha tathārūpā kāyaviññeyyā phoṭṭhabbā ye phusitvā phusitvā abhirameyyuṁ. Ime kho no, āvuso, ākārā, ime anvayā, <span class="var" title="yena mayaṁ āyasmanto (bj, pts1) | yena mayaṁ āyasmante (s1–3, km)" id="note558">yena mayaṁ</span> evaṁ vadema — addhā te āyasmanto vītarāgā vā rāgavinayāya vā paṭipannā, vītadosā vā dosavinayāya vā paṭipannā, vītamohā vā mohavinayāya vā paṭipannā’ti. Evaṁ puṭṭhā tumhe, gahapatayo, tesaṁ aññatitthiyānaṁ paribbājakānaṁ evaṁ byākareyyāthā"ti.</p>
+
+<hr>
+
+<p><span class="parno">6</span>Evaṁ vutte, nagaravindeyyakā brāhmaṇagahapatikā bhagavantaṁ etadavocuṁ: "Abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito. Ete mayaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāma dhammañca bhikkhusaṅghañca. Upāsake no bhavaṁ gotamo dhāretu ajjatagge pāṇupete saraṇaṁ gate"ti.</p>
+
+<p class="endsutta">Nagaravindeyyasuttaṁ niṭṭhitaṁ aṭṭhamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn149.html#content"></a><a id="next-sutta" href="./mn151.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN150: Nagaravindeyyasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

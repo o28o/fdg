@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nika 46.55</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="pressed w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+<!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Linked Discourses</h2>
+
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+ 					<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div>  <!-- End div for SN sub-navigation -->
+
+
+<!-- SN content begins here -->
+
+<div id="content">
+
+<h2>46. Bojjhaṅgasaṁyutta: On the Awakening Factors</h2>
+<h3>V1. Discussion — SN46.55: With Saṅgārava </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+	<li><a href="/ru/sc/?q=sn46.55">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p><span class="parno">1</span>At Sāvatthī.</p>
+
+<p>Then Saṅgārava the brahmin went up to the Buddha, and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side and said to the Buddha:</p>
+
+<p id="p2"><span class="parno">2</span>“What is the cause, Master Gotama, what is the reason why sometimes even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced? And why is it that sometimes even hymns that are long-unpracticed spring to mind, let alone those that are practiced?”</p>
+
+<p id="p3"><span class="parno">3</span>“Brahmin, there’s a time when your heart is overcome and mired in sensual desire and you don’t truly understand the escape from sensual desire that has arisen. At that time you don’t truly know or see your own good, the good of another, or the good of both. Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p4"><span class="parno">4</span>Suppose there was a bowl of water that was mixed with dye such as red lac, turmeric, indigo, or rose madder. Even a person with good eyesight checking their own reflection wouldn’t truly know it or see it.</p>
+
+<p>In the same way, when your heart is overcome and mired in sensual desire … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p5"><span class="parno">5</span>Furthermore, when your heart is overcome and mired in ill will … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p6"><span class="parno">6</span>Suppose there was a bowl of water that was heated by fire, boiling and bubbling. Even a person with good eyesight checking their own reflection wouldn’t truly know it or see it.</p>
+
+<p>In the same way, when your heart is overcome and mired in ill will … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p7"><span class="parno">7</span>Furthermore, when your heart is overcome and mired in dullness and drowsiness … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p8"><span class="parno">8</span>Suppose there was a bowl of water overgrown with moss and aquatic plants. Even a person with good eyesight checking their own reflection wouldn’t truly know it or see it.</p>
+
+<p>In the same way, when your heart is overcome and mired in dullness and drowsiness … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<p id="p9"><span class="parno">9</span>Furthermore, when your heart is overcome and mired in restlessness and remorse … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p10"><span class="parno">10</span>Suppose there was a bowl of water stirred by the wind, churning, swirling, and rippling. Even a person with good eyesight checking their own reflection wouldn’t truly know it or see it.</p>
+
+<p>In the same way, when your heart is overcome and mired in restlessness and remorse … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<p id="p11"><span class="parno">11</span>Furthermore, when your heart is overcome and mired in doubt … Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p12"><span class="parno">12</span>Suppose there was a bowl of water that was cloudy, murky, and muddy, hidden in the darkness. Even a person with good eyesight checking their own reflection wouldn’t truly know it or see it.</p>
+
+<p>In the same way, there’s a time when your heart is overcome and mired in doubt and you don’t truly understand the escape from doubt that has arisen. At that time you don’t truly know or see your own good, the good of another, or the good of both. Even hymns that are long-practiced don’t spring to mind, let alone those that are not practiced. This is the cause, brahmin, this is the reason why sometimes even hymns that are long-practiced aren’t clear to the mind, let alone those that are not practiced.</p>
+
+<hr>
+
+<p id="p13"><span class="parno">13</span>There’s a time when your heart is not overcome and mired in sensual desire and you truly understand the escape from sensual desire that has arisen. At that time you truly know and see your own good, the good of another, and the good of both. Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<p id="p14"><span class="parno">14</span>Suppose there was a bowl of water that was not mixed with dye such as red lac, turmeric, indigo, or rose madder. A person with good eyesight checking their own reflection would truly know it and see it.</p>
+
+<p>In the same way, when your heart is not overcome and mired in sensual desire … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<hr>
+
+<p id="p15"><span class="parno">15</span>Furthermore, when your heart is not overcome and mired in ill will … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<p id="p16"><span class="parno">16</span>Suppose there is a bowl of water that is not heated by a fire, boiling and bubbling. A person with good eyesight checking their own reflection would truly know it and see it.</p>
+
+<p>In the same way, when your heart is not overcome and mired in ill will … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<p id="p17"><span class="parno">17</span>Furthermore, when your heart is not overcome and mired in dullness and drowsiness … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<hr>
+
+<p id="p18"><span class="parno">18</span>Suppose there is a bowl of water that is not overgrown with moss and aquatic plants. A person with good eyesight checking their own reflection would truly know it and see it.</p>
+
+<p>In the same way, when your heart is not overcome and mired in dullness and drowsiness … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<p id="p19"><span class="parno">19</span>Furthermore, when your heart is not overcome and mired in restlessness and remorse … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<p id="p20"><span class="parno">20</span>Suppose there is a bowl of water that is not stirred by the wind, churning, swirling, and rippling. A person with good eyesight checking their own reflection would truly know it and see it.</p>
+
+<p>In the same way, when your heart is not overcome and mired in restlessness and remorse … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<hr>
+
+<p id="p21"><span class="parno">21</span>Furthermore, when your heart is not overcome and mired in doubt … Even hymns that are long-unpracticed spring to mind, let alone those that are practiced.</p>
+
+<hr>
+
+<p id="p22"><span class="parno">22</span>Suppose there was a bowl of water that was transparent, clear, and unclouded, brought into the light. A person with good eyesight checking their own reflection would truly know it and see it.</p>
+
+<p>In the same way, there’s a time when your heart is not overcome and mired in doubt and you truly understand the escape from doubt that has arisen. At that time you truly know and see your own good, the good of another, and the good of both. Even hymns that are long-unpracticed spring to mind, let alone those that are practiced. This is the cause, brahmin, this is the reason why sometimes even hymns that are long-unpracticed do spring to mind, let alone those that are practiced.</p>
+
+<p id="p23"><span class="parno">23</span>These seven awakening factors are not obstacles, hindrances, or corruptions of the mind. When developed and cultivated they lead to the realization of the fruit of knowledge and freedom. What seven? The awakening factors of mindfulness, investigation of principles, energy, rapture, tranquility, immersion, and equanimity. These seven awakening factors are not obstacles, hindrances, or corruptions of the mind. When developed and cultivated they lead to the realization of the fruit of knowledge and freedom.”</p>
+
+<hr>
+
+<p id="p24"><span class="parno">24</span>When he said this, Saṅgārava said to the Buddha: “Excellent, Master Gotama! … From this day forth, may Master Gotama remember me as a lay follower who has gone for refuge for life.”</p>
+
+
+
+</div> <!-- End English -->
+<div lang="pi">
+
+<p><span class="parno">1</span>Sāvatthinidānaṁ.</p>
+
+<p>Atha kho saṅgāravo brāhmaṇo yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho saṅgāravo brāhmaṇo bhagavantaṁ etadavoca: </p>
+
+<p><span class="parno">2</span>"Ko nu kho, bho gotama, hetu, ko paccayo yenekadā dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā? Ko pana, bho gotama, hetu, ko paccayo yenekadā dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā"ti?</p>
+
+<p><span class="parno">3</span>"Yasmiṁ kho, brāhmaṇa, samaye kāmarāgapariyuṭṭhitena cetasā vihārati kāmarāgaparetena, uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">4</span>Seyyathāpi, brāhmaṇa, udapatto saṁsaṭṭho lākhāya vā haliddiyā vā nīliyā vā mañjiṭṭhāya vā. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ na jāneyya na passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye kāmarāgapariyuṭṭhitena cetasā vihārati kāmarāgaparetena, uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati … pe … paratthampi … pe … ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">5</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye byā pāda pariyuṭṭhitena cetasā vihārati byā pāda paretena, uppannassa ca byā pāda ssa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi … pe … ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">6</span>Seyyathāpi, brāhmaṇa, udapatto agginā santatto pakkuthito usmudakajāto. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ na jāneyya na passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye byā pāda pariyuṭṭhitena cetasā vihārati byā pāda paretena, uppannassa ca byā pāda ssa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi tasmiṁ samaye … pe … ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">7</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye thinamiddhapariyuṭṭhitena cetasā vihārati thinamiddhaparetena, uppannassa ca thinamiddhassa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi … pe … ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">8</span>Seyyathāpi, brāhmaṇa, udapatto sevālapaṇakapariyonaddho. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ na jāneyya na passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye thinamiddhapariyuṭṭhitena cetasā vihārati thinamiddhaparetena, uppannassa ca thinamiddhassa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi … pe … ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<p><span class="parno">9</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye uddhaccakukkuccapariyuṭṭhitena cetasā vihārati uddhaccakukkuccaparetena, uppannassa ca uddhaccakukkuccassa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi … pe … ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">10</span>Seyyathāpi, brāhmaṇa, udapatto vāterito calito bhanto ūmijāto. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ na jāneyya na passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye uddhaccakukkuccapariyuṭṭhitena cetasā vihārati uddhaccakukkuccaparetena, uppannassa ca uddhaccakukkuccassa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi … pe … ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<p><span class="parno">11</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye vicikicchāpariyuṭṭhitena cetasā vihārati vicikicchāparetena, uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi … pe … ubhayatthampi … dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">12</span>Seyyathāpi, brāhmaṇa, udapatto āvilo luḷito kalalībhūto andhakāre nikkhitto. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ na jāneyya na passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye vicikicchāpariyuṭṭhitena cetasā vihārati vicikicchāparetena, uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā. Ayaṁ kho, brāhmaṇa, hetu ayaṁ paccayo yenekadā dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">13</span>Yasmiñca kho, brāhmaṇa, samaye na kāmarāgapariyuṭṭhitena cetasā vihārati na kāmarāgaparetena, uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, ubhayatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati; dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<p><span class="parno">14</span>Seyyathāpi, brāhmaṇa, udapatto asaṁsaṭṭho lākhāya vā haliddiyā vā nīliyā vā mañjiṭṭhāya vā. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ jāneyya passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye na kāmarāgapariyuṭṭhitena cetasā vihārati na kāmarāgaparetena, uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ pajānāti … pe … .</p>
+
+<hr>
+
+<p><span class="parno">15</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye na byā pāda pariyuṭṭhitena cetasā vihārati na byā pāda paretena, uppannassa ca byā pāda ssa nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi … pe … ubhayatthampi … pe … dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<p><span class="parno">16</span>Seyyathāpi, brāhmaṇa, udapatto na agginā santatto na pakkuthito na usmudakajāto, tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ jāneyya passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye na byā pāda pariyuṭṭhitena cetasā vihārati na byā pāda paretena, uppannassa ca byā pāda ssa nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi … pe … ubhayatthampi … pe … dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<p><span class="parno">17</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye na thinamiddhapariyuṭṭhitena cetasā vihārati na thinamiddhaparetena, uppannassa ca thinamiddhassa nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi … pe … ubhayatthampi … pe … dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">18</span>Seyyathāpi, brāhmaṇa, udapatto na sevālapaṇakapariyonaddho. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ jāneyya passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye na thinamiddhapariyuṭṭhitena cetasā vihārati na thinamiddhaparetena, uppannassa ca thinamiddhassa nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi … pe … ubhayatthampi … pe … dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<p><span class="parno">19</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye na uddhaccakukkuccapariyuṭṭhitena cetasā vihārati na uddhaccakukkuccaparetena, uppannassa ca uddhaccakukkuccassa nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi … pe … ubhayatthampi … pe … dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<p><span class="parno">20</span>Seyyathāpi, brāhmaṇa, udapatto na vāterito na calito na bhanto na ūmijāto. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ jāneyya passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye na uddhaccakukkuccapariyuṭṭhitena cetasā vihārati na uddhaccakukkuccaparetena, uppannassa ca uddhaccakukkuccassa nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi … pe … ubhayatthampi … pe … dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">21</span>Puna caparaṁ, brāhmaṇa, yasmiṁ samaye na vicikicchāpariyuṭṭhitena cetasā vihārati na vicikicchāparetena, uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi tasmiṁ samaye yathābhūtaṁ jānāti passati; ubhayatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati; dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<hr>
+
+<p><span class="parno">22</span>Seyyathāpi, brāhmaṇa, udapatto accho vippasanno anāvilo āloke nikkhitto. Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ jāneyya passeyya. </p>
+
+<p>Evameva kho, brāhmaṇa, yasmiṁ samaye na vicikicchāpariyuṭṭhitena cetasā vihārati na vicikicchāparetena, uppannāya ca vicikicchāya nissaraṇaṁ yathābhūtaṁ pajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, paratthampi tasmiṁ samaye yathābhūtaṁ jānāti passati, ubhayatthampi tasmiṁ samaye yathābhūtaṁ jānāti passati; dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā. Ayaṁ kho, brāhmaṇa, hetu ayaṁ paccayo yenekadā dīgharattaṁ asajjhāyakatāpi mantā paṭibhanti, pageva sajjhāyakatā.</p>
+
+<p><span class="parno">23</span>Sattime, brāhmaṇa, bojjhaṅgā anāvaraṇā anīvaraṇā cetaso anupakkilesā bhāvitā bahulīkatā vijjāvimuttiphalasacchikiriyāya saṁvattanti. Katame satta? Satisambojjhaṅgo kho, brāhmaṇa, anāvaraṇo anīvaraṇo cetaso anupakkileso bhāvito bahulīkato vijjāvimuttiphalasacchikiriyāya saṁvattati … pe … upekkhāsambojjhaṅgo kho, brāhmaṇa, anāvaraṇo anīvaraṇo cetaso anupakkileso bhāvito bahulīkato vijjāvimuttiphalasacchikiriyāya saṁvattati. Ime kho, brāhmaṇa, satta bojjhaṅgā anāvaraṇā anīvaraṇā cetaso anupakkilesā bhāvitā bahulīkatā vijjāvimuttiphalasacchikiriyāya saṁvattantī"ti.</p>
+
+<hr>
+
+<p><span class="parno">24</span>Evaṁ vutte, saṅgāravo brāhmaṇo bhagavantaṁ etadavoca: "Abhikkantaṁ, bho gotama … pe … upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p>
+<p class="endsection">Pañcamaṁ.</p>
+</div> <!-- end pali -->
+
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./sn46.54.html#content"></a><a id="next-sutta" href="./sn46.56.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn46.html">46. Bojjhaṅgasaṁyutta: On the Awakening Factors</a> SN46.55: With Saṅgārava </div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

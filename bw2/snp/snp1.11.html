@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 1.11</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 		<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 				<ul id="css3menu0">
+ 					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 				<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 					<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 						<ul>
+ 							<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 							<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 							<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 							<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 							<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 							<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 							<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 							<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 							<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 							<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 							<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 						<ul>
+ 							<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 							<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 							<li><a href="../snp/snp.html" class="pressed w3-hide-small">Sutta Nipata</a></li>
+ 							<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 							<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 							<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 							<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 						<ul>
+ 							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 						</ul>
+ 					</li>
+ 				</ul>
+ 				</div>
+ 			</div> <!--navbar-->
+ 
+ <!-- Sidebar (hidden by default) -->
+ 	<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 			<div class="w3-bar-block w3-white">
+ 				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 				<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 				<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 				<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 			</div>
+ 	</nav>
+ 
+ 				<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+<h2>Khuddaka Nikāya - The Minor Texts</h2>
+
+<h2>Sutta Nipata</h2>
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata Chapter 1: The Serpent Chapter - Uragavagga</h2>
+
+
+	<h3>1:11 Victory</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li><a href="/ru/sc/?q=snp1.11">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h2>1:11 Victory</h2>
+<div class="verse">
+			<p id="p193"><span class="parno">193</span>
+			Walking and standing, 
+			<br>sitting and lying down, 
+			<br>extending and contracting the limbs: 
+			<br>these are the movements of the body. </p>
+			
+			<p id="p194"><span class="parno">194</span>
+			Linked together by bones and sinews, 
+			<br>plastered over with flesh and hide, 
+			<br>and covered by the skin, 
+			<br>the body is not seen as it is. </p>
+			
+			<p id="p195"><span class="parno">195</span>
+			It’s full of guts and belly, 
+			<br>liver and bladder, 
+			<br>heart and lungs, 
+			<br>kidney and spleen, </p>
+			
+			<p id="p196"><span class="parno">196</span>
+			spit and snot, 
+			<br>sweat and fat, 
+			<br>blood and synovial fluid, 
+			<br>bile and grease. </p>
+</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p197"><span class="parno">197</span>
+			Then in nine streams 
+			<br>the filth is always flowing. 
+			<br>There is muck from the eyes, 
+			<br>wax from the ears, </p>
+			
+			<p id="p198"><span class="parno">198</span>
+			and snot from the nostrils. 
+			<br>The mouth sometimes vomits 
+			<br>bile and sometimes phlegm. 
+			<br>And from the body, sweat and waste. </p>
+			
+			<p id="p199"><span class="parno">199</span>
+			Then there is the hollow head 
+			<br>all filled with brains. 
+			<br>Governed by ignorance, 
+			<br>the fool thinks it’s lovely. </p>
+			
+			<p id="p200"><span class="parno">200</span>
+			And when it lies dead, 
+			<br>bloated and livid, 
+			<br>discarded in a charnel ground, 
+			<br>the relatives forget it. </p>
+			
+			<p id="p201"><span class="parno">201</span>
+			It’s devoured by dogs, 
+			<br>by jackals, wolves, and worms. 
+			<br>It’s devoured by crows and vultures, 
+			<br>and any other creatures there. </p>
+			
+			<p id="p202"><span class="parno">202</span>
+			A wise mendicant here, 
+			<br>having heard the Buddha’s words, 
+			<br>fully understands it, 
+			<br>for they see it as it is. </p>
+</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p203"><span class="parno">203</span>
+			“As this is, so is that, 
+			<br>as that is, so is this.” 
+			<br>They’d reject desire for the body 
+			<br>inside and out. </p>
+			
+			<p id="p204"><span class="parno">204</span>
+			That wise mendicant here 
+			<br>rid of desire and lust, 
+			<br>has found the deathless peace, 
+			<br>extinguishment, the imperishable state. </p>
+			
+			<p id="p205"><span class="parno">205</span>
+			This two-legged body is dirty and stinking, 
+			<br>full of different carcasses, 
+			<br>and oozing all over the place—
+			<br>but still it is cherished! </p>
+			
+			<p id="p206"><span class="parno">206</span>
+			And if, on account of such a body, 
+			<br>someone prides themselves 
+			<br>or looks down on others—
+			<br>what is that but a failure to see? </p>
+</div>
+
+<p class="endsutta"></p>
+</div>
+
+<div lang="pi">
+<h2>Vijayasutta</h2>
+<div class="verse">
+<p><span class="parno">193</span>Caraṁ vā yadi vā tiṭṭhaṁ,<br> nisinno uda vā sayaṁ;
+<br>Samiñjeti pasāreti,
+<br>esā kāyassa iñjanā.</p>
+
+<p><span class="parno">194</span><a class="brnum" id="br2"></a>
+Aṭṭhinahārusaṁyutto,<br> tacamaṁsāvalepano;
+<br>Chaviyā kāyo paṭicchanno,
+<br>yathābhūtaṁ na dissati.</p>
+
+<p><span class="parno">195</span><a class="brnum" id="br3"></a>
+Antapūro udarapūro,<br> yakanapeḷassa vatthino;
+<br>Hadayassa papphāsassa,
+<br>vakkassa pihakassa ca.</p>
+
+<p><span class="parno">196</span><a class="brnum" id="br4"></a>
+Siṅghāṇikāya kheḷassa,<br> sedassa ca medassa ca;
+<br>Lohitassa lasikāya,
+<br>pittassa ca vasāya ca.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">197</span><a class="brnum" id="br5"></a>
+Athassa navahi sotehi,<br> asucī savati sabbadā;
+<br>Akkhimhā akkhigūthako,
+<br>kaṇṇamhā kaṇṇagūthako.</p>
+
+<p><span class="parno">198</span><a class="brnum" id="br6"></a>
+Siṅghāṇikā ca nāsato,<br> mukhena vamatekadā;
+<br>Pittaṁ semhañca vamati,
+<br>kāyamhā sedajallikā.</p>
+
+<p><span class="parno">199</span><a class="brnum" id="br7"></a>
+Athassa susiraṁ sīsaṁ,<br> matthaluṅgassa pūritaṁ;
+<br>Subhato naṁ maññati bālo,
+<br>avijjāya purakkhato.</p>
+
+<p><span class="parno">200</span><a class="brnum" id="br8"></a>
+Yadā ca so mato seti,<br> Uddhumāto vinīlako;
+<br>Apaviddho susānasmiṁ,
+<br>Anapekkhā honti ñātayo.</p>
+
+<p><span class="parno">201</span><a class="brnum" id="br9"></a>
+Khādanti naṁ suvānā ca,<br> siṅgālā ca vakā kimī;
+<br>Kākā gijjhā ca khādanti,
+<br>ye caññe santi pāṇino.</p>
+
+<p><span class="parno">202</span><a class="brnum" id="br10"></a>
+Sutvāna buddhavacanaṁ,<br> Bhikkhu paññāṇavā idha;
+<br>So kho naṁ parijānāti,
+<br>Yathābhūtañhi passati.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">203</span><a class="brnum" id="br11"></a>
+Yathā idaṁ tathā etaṁ,<br> Yathā etaṁ tathā idaṁ;
+<br>Ajjhattañca bahiddhā ca,
+<br>Kāye chandaṁ virājaye.</p>
+
+<p><span class="parno">204</span><a class="brnum" id="br12"></a>
+Chandarāgaviratto so,<br> Bhikkhu paññāṇavā idha;
+<br>Ajjhagā amataṁ santiṁ,
+<br>Nibbānaṁ padamaccutaṁ.</p>
+
+<p><span class="parno">205</span><a class="brnum" id="br13"></a>
+Dvipādakoyaṁ asuci,<br> Duggandho parihīrati;
+<br>Nānākuṇapaparipūro,
+<br>Vissavanto tato tato.</p>
+
+<p><span class="parno">206</span><a class="brnum" id="br14"></a>
+Etādisena kāyena,<br> Yo maññe uṇṇametave;
+<br>Paraṁ vā avajāneyya,
+<br>Kimaññatra adassanāti.</p>
+</div>
+<p class="endsection">Vijayasuttaṁ ekādasamaṁ.</p>
+
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp1.10.html#content"></a><a id="next-sutta" href="../snp/snp1.12.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp1.html">1: The Serpent Chapter</a>1:11 Victory
+</div>
+	
+ 	<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

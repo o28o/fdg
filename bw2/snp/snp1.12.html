@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Sutta Nipata 1.12</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+
+
+
+
+ <div class="w3-main w3-white bwcontainer2">
+ 		<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 			<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 				<ul id="css3menu0">
+ 					<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 				<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 					<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 					<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 				<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 					<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 						<ul>
+ 							<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 							<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 							<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 							<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 							<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 							<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 							<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 							<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 							<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 							<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 							<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="topmenu" id="kn"><a href="../kn/kn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 						<ul>
+ 							<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 							<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 							<li><a href="../snp/snp.html" class="pressed w3-hide-small">Sutta Nipata</a></li>
+ 							<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 							<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 							<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 							<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 						</ul>
+ 					</li>
+ 					<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 						<ul>
+ 							<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 							<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 							<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 							<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 						</ul>
+ 					</li>
+ 				</ul>
+ 				</div>
+ 			</div> <!--navbar-->
+ 
+ <!-- Sidebar (hidden by default) -->
+ 	<nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 			<div class="w3-bar-block w3-white">
+ 				<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 				<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 				<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 				<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 				<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 				<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 				<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 				<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 			</div>
+ 	</nav>
+ 
+ 				<!-- !PAGE CONTENT! -->  <div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+<h2>Khuddaka Nikāya - The Minor Texts</h2>
+
+<h2>Sutta Nipata</h2>
+ 
+ <!-- Snp content begins here -->
+ 
+ <div id="content">
+ 
+ <h2>Sutta Nipata Chapter 1: The Serpent Chapter - Uragavagga</h2>
+
+
+	<h3>1:12 The Sage</h3>	
+	<div id="metarea"> <!-- metarea div -->
+		<ul class="translator"><!-- Translator div -->
+			<li><a href="/ru/sc/?q=snp1.12">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.<a href="../home/copyright.html#sc">(More copyright information)</a></li>
+		</ul>
+	</div><!-- End metarea div -->
+
+<section class="raw_sutta">
+<div lang="en">
+
+<h2>1:12 The Sage</h2>
+<div class="verse">
+			<p id="p207"><span class="parno">207</span>
+			Peril stems from intimacy, 
+			<br>dust comes from a home. 
+			<br>Freedom from home and intimacy: 
+			<br>that is the sage’s vision. </p>
+			
+			<p id="p208"><span class="parno">208</span>
+			Having cut down what’s grown, they wouldn’t replant, 
+			<br>nor would they nurture what’s growing. 
+			<br>That’s who they call a sage wandering alone, 
+			<br>the great hermit has seen the state of peace. </p>
+			
+			<p id="p209"><span class="parno">209</span>
+			Having assessed the fields and measured the seeds, 
+			<br>they wouldn’t nurture them with moisture. 
+			<br>Truly that sage who sees the ending of rebirth 
+			<br>has left logic behind and is beyond reckoning. </p>
+			</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p210"><span class="parno">210</span>
+			Understanding all the planes of rebirth, 
+			<br>not wanting a single one of them, 
+			<br>Truly that sage freed of greed 
+			<br>need not strive, for they have reached the far shore. </p>
+			</div>
+			<hr>
+			<div class="verse">
+			<p id="p211"><span class="parno">211</span>
+			The champion, all-knower, so very intelligent, 
+			<br>unsullied in the midst of all things, 
+			<br>has given up all, freed in the ending of craving: 
+			<br>that’s who the wise know as a sage. </p>
+			
+			<p id="p212"><span class="parno">212</span>
+			Strong in wisdom, with precepts and observances intact, 
+			<br>serene, loving absorption, mindful, 
+			<br>released from chains, kind, undefiled: 
+			<br>that’s who the wise know as a sage. </p>
+			
+			<p id="p213"><span class="parno">213</span>
+			The diligent sage wandering alone, 
+			<br>is unaffected by blame and praise—
+			<br>like a lion not startled by sounds, 
+			<br>like wind not caught in a net, 
+			<br>like water not sticking to a lotus. 
+			<br>Leader of others, not by others led: 
+			<br>that’s who the wise know as a sage. </p>
+			
+			<p id="p214"><span class="parno">214</span>
+			Steady as a post in a bathing-place 
+			<br>when others speak endlessly against them, 
+			<br>freed of greed, with senses stilled: 
+			<br>that’s who the wise know as a sage. </p>
+			
+			
+			<p id="p215"><span class="parno">215</span>
+			Steadfast, straight as a shuttle, 
+			<br>horrified by wicked deeds, 
+			<br>discerning the just and the unjust: 
+			<br>that’s who the wise know as a sage. </p>
+			
+			<p id="p216"><span class="parno">216</span>
+			Restrained, they do no evil, 
+			<br>young or middle-aged, the sage is self-controlled. 
+			<br>Irreproachable, he does not insult anyone: 
+			<br>that’s who the wise know as a sage. </p>
+</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p217"><span class="parno">217</span>
+			When one who lives on charity receives alms, 
+			<br>from the top, the middle, or the leftovers, 
+			<br>they think it unworthy to praise or put down: 
+			<br>that’s who the wise know as a sage. </p>
+			
+			<p id="p218"><span class="parno">218</span>
+			The sage lives refraining from sex, 
+			<br>even when young is not tied down, 
+			<br>refraining from indulgence and negligence, freed: 
+			<br>that’s who the wise know as a sage. </p>
+			
+			<p id="p219"><span class="parno">219</span>
+			Understanding the world, the seer of the ultimate goal, 
+			<br>the poised one who has crossed the flood and the ocean, 
+			<br>has cut the ties, unattached and undefiled: 
+			<br>that’s who the wise know as a sage. </p>
+</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p220"><span class="parno">220</span>
+			The two are not the same, far apart in lifestyle and conduct—
+			<br>the householder providing for a wife, and the selfless one true to their vows. 
+			<br>The unrestrained householder kills other creatures, 
+			<br>while the restrained sage always protects living creatures. </p>
+			</div>
+
+<hr>
+
+<div class="verse">
+			<p id="p221"><span class="parno">221</span>
+			As the crested blue-necked peacock flying through the sky
+			<br>never approaches the speed of the swan, 
+			<br>so the householder cannot compete with the mendicant, 
+			<br>the sage meditating secluded in the woods. </p>
+</div>
+</div>
+
+<div lang="pi">
+<h2>Munisutta</h2>
+<div class="verse">
+<p><span class="parno">207</span>Santhavāto bhayaṁ jātaṁ,<br> niketā jāyate rajo;
+<br>Aniketamasanthavaṁ,
+<br>etaṁ ve munidassanaṁ.</p>
+
+<p><span class="parno">208</span><a class="brnum" id="br2"></a>
+Yo jātamucchijja na ropayeyya,<br> Jāyantamassa nānuppavecche;
+<br>Tamāhu ekaṁ muninaṁ carantaṁ,
+<br>Addakkhi so santipadaṁ mahesi.</p>
+
+<p><span class="parno">209</span><a class="brnum" id="br3"></a>
+Saṅkhāya vatthūni pamāya bījaṁ,<br> Sinehamassa nānuppavecche;
+<br>Sa ve munī jātikhayantadassī,
+<br>Takkaṁ pahāya na upeti saṅkhaṁ.</p>
+</div>
+
+<hr>
+
+<div class="verse">
+<p><span class="parno">210</span><a class="brnum" id="br4"></a>
+Aññāya sabbāni nivesanāni,<br> Anikāmayaṁ aññatarampi tesaṁ;
+<br>Sa ve munī vītagedho agiddho,
+<br>Nāyūhatī pāragato hi hoti.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">211</span><a class="brnum" id="br5"></a>
+Sabbābhibhuṁ sabbaviduṁ sumedhaṁ,<br> Sabbesu dhammesu anūpalittaṁ;
+<br>Sabbañjahaṁ taṇhakkhaye vimuttaṁ,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+
+<p><span class="parno">212</span><a class="brnum" id="br6"></a>
+Paññābalaṁ sīlavatūpapannaṁ,<br> Samāhitaṁ jhānarataṁ satīmaṁ;
+<br>Saṅgā pamuttaṁ akhilaṁ anāsavaṁ,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+
+<p><span class="parno">213</span><a class="brnum" id="br7"></a>
+Ekaṁ carantaṁ munimappamattaṁ,<br> Nindāpasaṁsāsu avedhamānaṁ;
+<br>Sīhaṁva saddesu asantasantaṁ,
+<br>Vātaṁva jālamhi asajjamānaṁ;
+<br>Padmaṁva toyena alippamānaṁ,
+<br>Netāramaññesamanaññaneyyaṁ;
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+
+<p><span class="parno">214</span><a class="brnum" id="br8"></a>
+Yo ogahaṇe thambhorivābhijāyati,<br> Yasmiṁ pare vācāpariyantaṁ vadanti;
+<br>Taṁ vītarāgaṁ susamāhitindriyaṁ,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+
+<p><span class="parno">215</span><a class="brnum" id="br9"></a>
+Yo ve ṭhitatto tasaraṁva ujju,<br> Jigucchati kammehi pāpakehi;
+<br>Vīmaṁsamāno visamaṁ samañca,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+
+<p><span class="parno">216</span><a class="brnum" id="br10"></a>
+Yo saññatatto na karoti pāpaṁ,<br> Daharo majjhimo ca muni yatatto;
+<br>Arosaneyyo na so roseti kañci,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+</div>
+<hr>
+<div class="verse">
+<p><span class="parno">217</span><a class="brnum" id="br11"></a>
+Yadaggato majjhato sesato vā,<br> Piṇḍaṁ labhetha paradattūpajīvī;
+<br>Nālaṁ thutuṁ nopi nipaccavādī,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+
+<p><span class="parno">218</span><a class="brnum" id="br12"></a>
+Muniṁ carantaṁ virataṁ methunasmā,<br> Yo yobbane nopanibajjhate kvaci;
+<br>Madappamādā virataṁ vippamuttaṁ,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+
+<p><span class="parno">219</span><a class="brnum" id="br13"></a>
+Aññāya lokaṁ paramatthadassiṁ,<br> Oghaṁ samuddaṁ atitariya tādiṁ;
+<br>Taṁ chinnaganthaṁ asitaṁ anāsavaṁ,
+<br>Taṁ vāpi dhīrā muni vedayanti.</p>
+</div>
+
+<hr>
+
+<div class="verse">
+<p><span class="parno">220</span><a class="brnum" id="br14"></a>
+Asamā ubho dūravihāravuttino,<br> Gihī dāraposī amamo ca subbato;
+<br>Parapāṇarodhāya gihī asaññato,
+<br>Niccaṁ munī rakkhati pāṇine yato.</p>
+</div>
+
+<hr>
+
+<div class="verse">
+<p><span class="parno">221</span><a class="brnum" id="br15"></a>
+Sikhī yathā nīlagīvo vihaṅgamo,<br> Haṁsassa nopeti javaṁ kudācanaṁ;
+<br>Evaṁ gihī nānukaroti bhikkhuno,
+<br>Munino vivittassa vanamhi jhāyatoti.</p>
+</div>
+<p class="endsection">Munisuttaṁ dvādasamaṁ.</p>
+<p class="endsutta">Uragavaggo paṭhamo.</p>
+
+	<div class="verse">
+		<p>Urago dhaniyo ceva,
+<br>	visāṇañca tathā kasi;
+<br>	Cundo parābhavo ceva,
+<br>	vasalo mettabhāvanā.</p>
+		
+		<p>Sātāgiro āḷavako,
+<br>	Vijayo ca tathā muni;
+<br>	Dvādasetāni suttāni,
+<br>	Uragavaggoti vuccatīti.</p>
+</div>
+
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="../snp/snp1.11.html#content"></a><a id="next-sutta" href="../snp/snp2.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs">
+<a href="../home/index.html">Home</a><a href="../kn/kn.html">Khuddaka Nikāya</a><a href="snp.html">Sutta Nipata</a><a href="snp1.html">1: The Serpent Chapter</a>1:12 The Sage
+</div>
+	
+ 	<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

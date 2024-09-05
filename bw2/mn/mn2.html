@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 2</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h2>MN2: Sabbāsava Sutta - All the Defilements</h2>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn2">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery. There the Buddha addressed the mendicants: “Mendicants!”</p>
+
+
+<p>“Venerable sir,” they replied. The Buddha said this:</p>
+
+<p>“Mendicants, I will teach you the explanation of the restraint of all defilements. Listen and pay close attention, I will speak.”</p>
+
+<p>“Yes, sir,” they replied. The Buddha said this:</p>
+
+<hr>
+
+<p id="p2"><span class="parno">2</span>“Mendicants, I say that the ending of defilements is for one who knows and sees, not for one who does not know or see. For one who knows and sees what? Proper attention and improper attention. When you pay improper attention, defilements arise, and once arisen they grow. When you pay proper attention, defilements don’t arise, and those that have already arisen are given up.</p>
+
+<p id="p3"><span class="parno">3</span>Some defilements should be given up by seeing, some by restraint, some by using, some by enduring, some by avoiding, some by dispelling, and some by developing.</p>
+
+<h4>1. Defilements Given Up by Seeing </h4>
+
+<p id="p4"><span class="parno">4</span>And what are the defilements that should be given up by seeing? Take an uneducated ordinary person who has not seen the noble ones, and is neither skilled nor trained in the teaching of the noble ones. They’ve not seen good persons, and are neither skilled nor trained in the teaching of the good persons. They don’t understand to which things they should pay attention and to which things they should not pay attention. So they pay attention to things they shouldn’t and don’t pay attention to things they should.</p>
+
+<p id="p5"><span class="parno">5</span>And what are the things to which they pay attention but should not? They are the things that, when attention is paid to them, give rise to unarisen defilements and make arisen defilements grow; the defilements of sensual desire, desire to be reborn, and ignorance. These are the things to which they pay attention but should not.</p>
+
+<p id="p6"><span class="parno">6</span>And what are the things to which they do not pay attention but should? They are the things that, when attention is paid to them, do not give rise to unarisen defilements and give up arisen defilements; the defilements of sensual desire, desire to be reborn, and ignorance. These are the things to which they do not pay attention but should.</p>
+
+<p id="p7"><span class="parno">7</span>Because of paying attention to what they should not and not paying attention to what they should, unarisen defilements arise and arisen defilements grow.</p>
+
+<p id="p8"><span class="parno">8</span>This is how they attend improperly: ‘Did I exist in the past? Did I not exist in the past? What was I in the past? How was I in the past? After being what, what did I become in the past? Will I exist in the future? Will I not exist in the future? What will I be in the future? How will I be in the future? After being what, what will I become in the future?’ Or they are undecided about the present thus: ‘Am I? Am I not? What am I? How am I? This sentient being — where did it come from? And where will it go?’</p>
+
+<p id="p9"><span class="parno">9</span>When they attend improperly in this way, one of the following six views arises in them and is taken as a genuine fact. The view: ‘My self exists in an absolute sense.’ The view: ‘My self does not exist in an absolute sense.’ The view: ‘I perceive the self with the self.’ The view: ‘I perceive what is not-self with the self.’ The view: ‘I perceive the self with what is not-self.’ Or they have such a view: ‘This self of mine is he who speaks and feels and experiences the results of good and bad deeds in all the different realms. This self is permanent, everlasting, eternal, and imperishable, and will last forever and ever.’ This is called a misconception, the thicket of views, the desert of views, the trick of views, the evasiveness of views, the fetter of views. An uneducated ordinary person who is fettered by views is not freed from rebirth, old age, and death, from sorrow, lamentation, pain, sadness, and distress. They’re not freed from suffering, I say.</p>
+
+<p id="p10"><span class="parno">10</span>But take an educated noble disciple who has seen the noble ones, and is skilled and trained in the teaching of the noble ones. They’ve seen good persons, and are skilled and trained in the teaching of the good persons. They understand to which things they should pay attention and to which things they should not pay attention. So they pay attention to things they should and don’t pay attention to things they shouldn’t.</p>
+
+
+<p id="p11"><span class="parno">11</span>And what are the things to which they don’t pay attention and should not? They are the things that, when attention is paid to them, give rise to unarisen defilements and make arisen defilements grow; the defilements of sensual desire, desire to be reborn, and ignorance. These are the things to which they don’t pay attention and should not.</p>
+
+<p id="p12"><span class="parno">12</span>And what are the things to which they do pay attention and should? They are the things that, when attention is paid to them, do not give rise to unarisen defilements and give up arisen defilements; the defilements of sensual desire, desire to be reborn, and ignorance. These are the things to which they do pay attention and should.</p>
+
+<p id="p13"><span class="parno">13</span>Because of not paying attention to what they should not and paying attention to what they should, unarisen defilements don’t arise and arisen defilements are given up.</p>
+
+<p id="p14"><span class="parno">14</span>They properly attend: ‘This is suffering’ … ‘This is the origin of suffering’ … ‘This is the cessation of suffering’ … ‘This is the practice that leads to the cessation of suffering’. And as they do so, they give up three fetters: identity view, doubt, and misapprehension of precepts and observances. These are called the defilements that should be given up by seeing.</p>
+
+<h4>2. Defilements Given Up by Restraint </h4>
+
+<p id="p15"><span class="parno">15</span>And what are the defilements that should be given up by restraint? Take a mendicant who, reflecting properly, lives restraining the faculty of the eye. For the distressing and feverish defilements that might arise in someone who lives without restraint of the eye faculty do not arise when there is such restraint. Reflecting properly, they live restraining the faculty of the ear … the nose … the tongue … the body … the mind. For the distressing and feverish defilements that might arise in someone who lives without restraint of the mind faculty do not arise when there is such restraint.</p>
+
+<p id="p16"><span class="parno">16</span>For the distressing and feverish defilements that might arise in someone who lives without restraint do not arise when there is such restraint. These are called the defilements that should be given up by restraint.</p>
+
+<h4>3. Defilements Given Up by Using </h4>
+
+<p id="p17"><span class="parno">17</span>And what are the defilements that should be given up by using? Take a mendicant who, reflecting properly, makes use of robes: ‘Only for the sake of warding off cold and heat; for warding off the touch of flies, mosquitoes, wind, sun, and reptiles; and for covering up the private parts.’</p>
+
+<p id="p18"><span class="parno">18</span>Reflecting properly, they make use of almsfood: ‘Not for fun, indulgence, adornment, or decoration, but only to sustain this body, to avoid harm, and to support spiritual practice. In this way, I shall put an end to old discomfort and not give rise to new discomfort, and I will live blamelessly and at ease.’</p>
+
+<p id="p19"><span class="parno">19</span>Reflecting properly, they make use of lodgings: ‘Only for the sake of warding off cold and heat; for warding off the touch of flies, mosquitoes, wind, sun, and reptiles; to shelter from harsh weather and to enjoy retreat.’</p>
+
+<p id="p20"><span class="parno">20</span>Reflecting properly, they make use of medicines and supplies for the sick: ‘Only for the sake of warding off the pains of illness and to promote good health.’</p>
+
+<p id="p21"><span class="parno">21</span>For the distressing and feverish defilements that might arise in someone who lives without using these things do not arise when they are used. These are called the defilements that should be given up by using.</p>
+
+<h4>4. Defilements Given Up by Enduring </h4>
+
+<p id="p22"><span class="parno">22</span>And what are the defilements that should be given up by enduring? Take a mendicant who, reflecting properly, endures cold, heat, hunger, and thirst. They endure the touch of flies, mosquitoes, wind, sun, and reptiles. They endure rude and unwelcome criticism. And they put up with physical pain — sharp, severe, acute, unpleasant, disagreeable, and life-threatening.</p>
+
+<p id="p23"><span class="parno">23</span>For the distressing and feverish defilements that might arise in someone who lives without enduring these things do not arise when they are endured. These are called the defilements that should be given up by enduring.</p>
+
+<h4>5. Defilements Given Up by Avoiding </h4>
+
+<p id="p24"><span class="parno">24</span>And what are the defilements that should be given up by avoiding? Take a mendicant who, reflecting properly, avoids a wild elephant, a wild horse, a wild ox, a wild dog, a snake, a stump, thorny ground, a pit, a cliff, a swamp, and a sewer. Reflecting properly, they avoid sitting on inappropriate seats, walking in inappropriate neighborhoods, and mixing with bad friends — whatever sensible spiritual companions would believe to be a bad setting.</p>
+
+<p id="p25"><span class="parno">25</span>For the distressing and feverish defilements that might arise in someone who lives without avoiding these things do not arise when they are avoided. These are called the defilements that should be given up by avoiding.</p>
+
+<h4>6. Defilements Given Up by Dispelling </h4>
+
+<p id="p26"><span class="parno">26</span>And what are the defilements that should be given up by dispelling? Take a mendicant who, reflecting properly, doesn’t tolerate a sensual, malicious, or cruel thought that has arisen, but gives it up, gets rid of it, eliminates it, and obliterates it. They don’t tolerate any bad, unskillful qualities that have arisen, but give them up, get rid of them, eliminate them, and obliterate them.</p>
+
+<p id="p27"><span class="parno">27</span>For the distressing and feverish defilements that might arise in someone who lives without dispelling these things do not arise when they are dispelled. These are called the defilements that should be given up by dispelling.</p>
+
+<h4>7. Defilements Given Up by Developing </h4>
+
+<p id="p28"><span class="parno">28</span>And what are the defilements that should be given up by developing? It’s when a mendicant, reflecting properly, develops the awakening factors of mindfulness, investigation of principles, energy, rapture, tranquility, immersion, and equanimity, which rely on seclusion, fading away, and cessation, and ripen as letting go.</p>
+
+<hr>
+
+<p id="p29"><span class="parno">29</span>For the distressing and feverish defilements that might arise in someone who lives without developing these things do not arise when they are developed. These are called the defilements that should be given up by developing.</p>
+
+<p id="p30"><span class="parno">30</span>Now, take a mendicant who, by seeing, has given up the defilements that should be given up by seeing. By restraint, they’ve given up the defilements that should be given up by restraint. By using, they’ve given up the defilements that should be given up by using. By enduring, they’ve given up the defilements that should be given up by enduring. By avoiding, they’ve given up the defilements that should be given up by avoiding. By dispelling, they’ve given up the defilements that should be given up by dispelling. By developing, they’ve given up the defilements that should be given up by developing. They’re called a mendicant who lives having restrained all defilements, who has cut off craving, untied the fetters, and by rightly comprehending conceit has made an end of suffering.”</p>
+
+<hr>
+
+<p id="p31"><span class="parno">31</span>That is what the Buddha said. Satisfied, the mendicants were happy with what the Buddha said.</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: "bhikkhavo"ti. </p>
+
+<p>"Bhadante"ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:</p>
+
+<p>"sabbāsavasaṁvarapariyāyaṁ vo, bhikkhave, desessāmi. Taṁ suṇātha, sādhukaṁ manasi karotha, bhāsissāmī"ti. </p>
+
+<p>"Evaṁ, bhante"ti kho te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca:</p>
+
+
+<hr>
+
+<p><span class="parno">2</span>"Jānato ahaṁ, bhikkhave, passato āsavānaṁ khayaṁ vadāmi, no ajānato no apassato. Kiñca, bhikkhave, jānato kiñca passato āsavānaṁ khayaṁ vadāmi? Yoniso ca manasikāraṁ ayoniso ca manasikāraṁ. Ayoniso, bhikkhave, manasikaroto anuppannā ceva āsavā uppajjanti, uppannā ca āsavā pavaḍḍhanti; yoniso ca kho, bhikkhave, manasikaroto anuppannā ceva āsavā na uppajjanti, uppannā ca āsavā pahīyanti.</p>
+
+<p><span class="parno">3</span>Atthi, bhikkhave, āsavā dassanā pahātabbā, atthi āsavā saṁvarā pahātabbā, atthi āsavā paṭisevanā pahātabbā, atthi āsavā adhivāsanā pahātabbā, atthi āsavā parivajjanā pahātabbā, atthi āsavā vinodanā pahātabbā, atthi āsavā bhāvanā pahātabbā.</p>
+
+<h4>1. Dassanāpahātabbaāsava</h4>
+
+<p><span class="parno">4</span>Katame ca, bhikkhave, āsavā dassanā pahātabbā? Idha, bhikkhave, assutavā puthujjano — ariyānaṁ adassāvī ariyadhammassa akovido ariyadhamme avinīto, sappurisānaṁ adassāvī sappurisadhammassa akovido sappurisadhamme avinīto – manasikaraṇīye dhamme nappajānāti, amanasikaraṇīye dhamme nappajānāti. So manasikaraṇīye dhamme appajānanto amanasikaraṇīye dhamme appajānanto, ye dhammā na manasikaraṇīyā, te dhamme manasi karoti, ye dhammā manasikaraṇīyā te dhamme na manasi karoti.</p>
+
+<p><span class="parno">5</span>Katame ca, bhikkhave, dhammā na manasikaraṇīyā ye dhamme manasi karoti? Yassa, bhikkhave, dhamme manasikaroto anuppanno vā kāmāsavo uppajjati, uppanno vā kāmāsavo pavaḍḍhati; anuppanno vā bhavāsavo uppajjati, uppanno vā bhavāsavo pavaḍḍhati; anuppanno vā avijjāsavo uppajjati, uppanno vā avijjāsavo pavaḍḍhati — ime dhammā na manasikaraṇīyā ye dhamme manasi karoti.</p>
+
+<p><span class="parno">6</span>Katame ca, bhikkhave, dhammā manasikaraṇīyā ye dhamme na manasi karoti? Yassa, bhikkhave, dhamme manasikaroto anuppanno vā kāmāsavo na uppajjati, uppanno vā kāmāsavo pahīyati; anuppanno vā bhavāsavo na uppajjati, uppanno vā bhavāsavo pahīyati; anuppanno vā avijjāsavo na uppajjati, uppanno vā avijjāsavo pahīyati — ime dhammā manasikaraṇīyā ye dhamme na manasi karoti.</p>
+
+
+<p><span class="parno">7</span>Tassa amanasikaraṇīyānaṁ dhammānaṁ manasikārā manasikaraṇīyānaṁ dhammānaṁ amanasikārā anuppannā ceva āsavā uppajjanti uppannā ca āsavā pavaḍḍhanti.</p>
+
+<p><span class="parno">8</span>So evaṁ ayoniso manasi karoti: ‘ahosiṁ nu kho ahaṁ atītamaddhānaṁ? Na nu kho ahosiṁ atītamaddhānaṁ? Kiṁ nu kho ahosiṁ atītamaddhānaṁ? Kathaṁ nu kho ahosiṁ atītamaddhānaṁ? Kiṁ hutvā kiṁ ahosiṁ nu kho ahaṁ atītamaddhānaṁ? Bhavissāmi nu kho ahaṁ anāgatamaddhānaṁ? Na nu kho bhavissāmi anāgatamaddhānaṁ? Kiṁ nu kho bhavissāmi anāgatamaddhānaṁ? Kathaṁ nu kho bhavissāmi anāgatamaddhānaṁ? Kiṁ hutvā kiṁ bhavissāmi nu kho ahaṁ anāgatamaddhānan’ti? Etarahi vā <span class="var" title="paccuppannaṁ addhānaṁ (bj) | paccuppannamaddhānaṁ ārabbha (s1-3)" id="note12">paccuppannamaddhānaṁ</span> ajjhattaṁ kathaṁkathī hoti: ‘Ahaṁ nu khosmi? No nu khosmi? Kiṁ nu khosmi? Kathaṁ nu khosmi? Ayaṁ nu kho satto kuto āgato? So kuhiṁ gāmī bhavissatī’ti?</p>
+
+<p><span class="parno">9</span>Tassa evaṁ ayoniso manasikaroto channaṁ diṭṭhīnaṁ aññatarā diṭṭhi uppajjati. ‘Atthi me attā’ti vā <span class="var" title="vāssa (bj, s1-3, pts1)" id="note13">assa</span> saccato thetato diṭṭhi uppajjati; ‘Natthi me attā’ti vā assa saccato thetato diṭṭhi uppajjati; ‘attanāva attānaṁ sañjānāmī’ti vā assa saccato thetato diṭṭhi uppajjati; ‘attanāva anattānaṁ sañjānāmī’ti vā assa saccato thetato diṭṭhi uppajjati; ‘anattanāva attānaṁ sañjānāmī’ti vā assa saccato thetato diṭṭhi uppajjati; atha vā panassa evaṁ diṭṭhi hoti: ‘yo me ayaṁ attā vado vedeyyo tatra tatra kalyāṇapāpakānaṁ kammānaṁ vipākaṁ paṭisaṁvedeti so kho pana me ayaṁ attā nicco dhuvo sassato avipariṇāmadhammo sassatisamaṁ tatheva ṭhassatī’ti. Idaṁ vuccati, bhikkhave, diṭṭhigataṁ diṭṭhigahanaṁ diṭṭhikantāraṁ diṭṭhivisūkaṁ diṭṭhivipphanditaṁ diṭṭhisaṁyojanaṁ. Diṭṭhisaṁyojanasaṁyutto, bhikkhave, assutavā puthujjano na parimuccati jātiyā jarāya maraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi; ‘Na parimuccati dukkhasmā’ti vadāmi.</p>
+
+<p><span class="parno">10</span>Sutavā ca kho, bhikkhave, ariyasāvako — ariyānaṁ dassāvī ariyadhammassa kovido ariyadhamme suvinīto, sappurisānaṁ dassāvī sappurisadhammassa kovido sappurisadhamme suvinīto — manasikaraṇīye dhamme pajānāti amanasikaraṇīye dhamme pajānāti. So manasikaraṇīye dhamme pajānanto amanasikaraṇīye dhamme pajānanto ye dhammā na manasikaraṇīyā te dhamme na manasi karoti, ye dhammā manasikaraṇīyā te dhamme manasi karoti.</p>
+
+<p><span class="parno">11</span>Katame ca, bhikkhave, dhammā na manasikaraṇīyā ye dhamme na manasi karoti? Yassa, bhikkhave, dhamme manasikaroto anuppanno vā kāmāsavo uppajjati, uppanno vā kāmāsavo pavaḍḍhati; anuppanno vā bhavāsavo uppajjati, uppanno vā bhavāsavo pavaḍḍhati; anuppanno vā avijjāsavo uppajjati, uppanno vā avijjāsavo pavaḍḍhati — ime dhammā na manasikaraṇīyā, ye dhamme na manasi karoti.</p>
+
+<p><span class="parno">12</span>Katame ca, bhikkhave, dhammā manasikaraṇīyā ye dhamme manasi karoti? Yassa, bhikkhave, dhamme manasikaroto anuppanno vā kāmāsavo na uppajjati, uppanno vā kāmāsavo pahīyati; anuppanno vā bhavāsavo na uppajjati, uppanno vā bhavāsavo pahīyati; anuppanno vā avijjāsavo na uppajjati, uppanno vā avijjāsavo pahīyati — ime dhammā manasikaraṇīyā ye dhamme manasi karoti.</p>
+
+<p><span class="parno">13</span>Tassa amanasikaraṇīyānaṁ dhammānaṁ amanasikārā manasikaraṇīyānaṁ dhammānaṁ manasikārā anuppannā ceva āsavā na uppajjanti, uppannā ca āsavā pahīyanti.</p>
+
+<p><span class="parno">14</span>So ‘idaṁ dukkhan’ti yoniso manasi karoti, ‘Ayaṁ dukkhasamudayo’ti yoniso manasi karoti, ‘Ayaṁ dukkhanirodho’ti yoniso manasi karoti, ‘Ayaṁ dukkhanirodhagāminī paṭipadā’ti yoniso manasi karoti. Tassa evaṁ yoniso manasikaroto tīṇi saṁyojanāni pahīyanti — sakkāyadiṭṭhi, vicikicchā, sīlabbataparāmāso. Ime vuccanti, bhikkhave, āsavā dassanā pahātabbā.</p>
+
+<h4>2. Saṁvarāpahātabbaāsava</h4>
+
+<p><span class="parno">15</span>Katame ca, bhikkhave, āsavā saṁvarā pahātabbā? Idha, bhikkhave, bhikkhu paṭisaṅkhā yoniso cakkhundriyasaṁvarasaṁvuto viharati. Yañhissa, bhikkhave, cakkhundriyasaṁvaraṁ asaṁvutassa viharato uppajjeyyuṁ āsavā vighātapariḷāhā, cakkhundriyasaṁvaraṁ saṁvutassa viharato evaṁsa te āsavā vighātapariḷāhā na honti. Paṭisaṅkhā yoniso sotindriyasaṁvarasaṁvuto viharati … pe … ghānindriyasaṁvarasaṁvuto viharati … pe … jivhindriyasaṁvarasaṁvuto viharati … pe … kāyindriyasaṁvarasaṁvuto viharati … pe … manindriyasaṁvarasaṁvuto viharati. Yañhissa, bhikkhave, manindriyasaṁvaraṁ asaṁvutassa viharato uppajjeyyuṁ āsavā vighātapariḷāhā, manindriyasaṁvaraṁ saṁvutassa viharato evaṁsa te āsavā vighātapariḷāhā na honti.</p>
+
+<p><span class="parno">16</span>Yañhissa, bhikkhave, saṁvaraṁ asaṁvutassa viharato uppajjeyyuṁ āsavā vighātapariḷāhā, saṁvaraṁ saṁvutassa viharato evaṁsa te āsavā vighātapariḷāhā na honti. Ime vuccanti, bhikkhave, āsavā saṁvarā pahātabbā.</p>
+
+<h4>3. Paṭisevanāpahātabbaāsava</h4>
+
+<p><span class="parno">17</span>Katame ca, bhikkhave, āsavā paṭisevanā pahātabbā? Idha, bhikkhave, bhikkhu paṭisaṅkhā yoniso cīvaraṁ paṭisevati: ‘yāvadeva sītassa paṭighātāya, uṇhassa paṭighātāya, <span class="var" title=" … siriṁsapa … (bj, s1-3, pts1)" id="note15">ḍaṁsamakasavātātapasarīsapasamphassānaṁ</span> paṭighātāya, yāvadeva hirikopīnappaṭicchādanatthaṁ’.</p>
+
+<p><span class="parno">18</span>Paṭisaṅkhā yoniso piṇḍapātaṁ paṭisevati: ‘neva davāya, na madāya, na maṇḍanāya, na vibhūsanāya, yāvadeva imassa kāyassa ṭhitiyā yāpanāya, vihiṁsūparatiyā, brahmacariyānuggahāya, iti purāṇañca vedanaṁ paṭihaṅkhāmi navañca vedanaṁ na uppādessāmi, yātrā ca me bhavissati anavajjatā ca phāsuvihāro <span class="var" title="cāti (bj, s1-3, pts1)" id="note16">ca</span>’.</p>
+
+<p><span class="parno">19</span>Paṭisaṅkhā yoniso senāsanaṁ paṭisevati: ‘yāvadeva sītassa paṭighātāya, uṇhassa paṭighātāya, ḍaṁsamakasavātātapasarīsapasamphassānaṁ paṭighātāya, yāvadeva utuparissayavinodanapaṭisallānārāmatthaṁ’.</p>
+
+<p><span class="parno">20</span>Paṭisaṅkhā yoniso gilānappaccayabhesajjaparikkhāraṁ paṭisevati: ‘yāvadeva uppannānaṁ veyyābādhikānaṁ vedanānaṁ paṭighātāya, <span class="var" title="abyāpajjhaparamatāya (bj, s1-3) | abyāpajjaparamatāya (mr)" id="note17">abyābajjhaparamatāya</span>’.</p>
+
+<p><span class="parno">21</span>Yañhissa, bhikkhave, appaṭisevato uppajjeyyuṁ āsavā vighātapariḷāhā, paṭisevato evaṁsa te āsavā vighātapariḷāhā na honti. Ime vuccanti, bhikkhave, āsavā paṭisevanā pahātabbā.</p>
+
+<h4>4. Adhivāsanāpahātabbaāsava</h4>
+
+<p><span class="parno">22</span>Katame ca, bhikkhave, āsavā adhivāsanā pahātabbā? Idha, bhikkhave, bhikkhu paṭisaṅkhā yoniso khamo hoti sītassa uṇhassa, jighacchāya pipāsāya. ḍaṁsamakasavātātapasarīsapasamphassānaṁ, duruttānaṁ durāgatānaṁ vacanapathānaṁ, uppannānaṁ sārīrikānaṁ vedanānaṁ dukkhānaṁ <span class="var" title="tippānaṁ (bj, s1-3, pts1)" id="note18">tibbānaṁ</span> kharānaṁ kaṭukānaṁ asātānaṁ amanāpānaṁ pāṇaharānaṁ adhivāsakajātiko hoti.</p>
+
+<p><span class="parno">23</span>Yañhissa, bhikkhave, anadhivāsayato uppajjeyyuṁ āsavā vighātapariḷāhā, adhivāsayato evaṁsa te āsavā vighātapariḷāhā na honti. Ime vuccanti, bhikkhave, āsavā adhivāsanā pahātabbā.</p>
+
+<h4>5. Parivajjanāpahātabbaāsava</h4>
+
+<p><span class="parno">24</span>Katame ca, bhikkhave, āsavā parivajjanā pahātabbā? Idha, bhikkhave, bhikkhu paṭisaṅkhā yoniso caṇḍaṁ hatthiṁ parivajjeti, caṇḍaṁ assaṁ parivajjeti, caṇḍaṁ goṇaṁ parivajjeti, caṇḍaṁ kukkuraṁ parivajjeti, ahiṁ khāṇuṁ kaṇṭakaṭṭhānaṁ sobbhaṁ papātaṁ candanikaṁ oḷigallaṁ. Yathārūpe anāsane nisinnaṁ yathārūpe agocare carantaṁ yathārūpe pāpake mitte bhajantaṁ viññū sabrahmacārī pāpakesu ṭhānesu okappeyyuṁ, so tañca anāsanaṁ tañca agocaraṁ te ca pāpake mitte paṭisaṅkhā yoniso parivajjeti.</p>
+
+<p><span class="parno">25</span>Yañhissa, bhikkhave, aparivajjayato uppajjeyyuṁ āsavā vighātapariḷāhā, parivajjayato evaṁsa te āsavā vighātapariḷāhā na honti. Ime vuccanti, bhikkhave, āsavā parivajjanā pahātabbā.</p>
+
+<h4>6. Vinodanāpahātabbaāsava</h4>
+
+<p><span class="parno">26</span>Katame ca, bhikkhave, āsavā vinodanā pahātabbā? Idha, bhikkhave, bhikkhu paṭisaṅkhā yoniso uppannaṁ kāmavitakkaṁ nādhivāseti pajahati vinodeti byantīkaroti anabhāvaṁ gameti, uppannaṁ byāpādavitakkaṁ … pe … uppannaṁ vihiṁsāvitakkaṁ … pe … uppannuppanne pāpake akusale dhamme nādhivāseti pajahati vinodeti byantīkaroti anabhāvaṁ gameti.</p>
+
+<p><span class="parno">27</span>Yañhissa, bhikkhave, avinodayato uppajjeyyuṁ āsavā vighātapariḷāhā, vinodayato evaṁsa te āsavā vighātapariḷāhā na honti. Ime vuccanti, bhikkhave, āsavā vinodanā pahātabbā.</p>
+
+<h4>7. Bhāvanāpahātabbaāsava</h4>
+
+<p><span class="parno">28</span>Katame ca, bhikkhave, āsavā bhāvanā pahātabbā? Idha, bhikkhave, bhikkhu paṭisaṅkhā yoniso satisambojjhaṅgaṁ bhāveti vivekanissitaṁ virāganissitaṁ nirodhanissitaṁ vossaggapariṇāmiṁ; paṭisaṅkhā yoniso dhammavicayasambojjhaṅgaṁ bhāveti … pe … vīriyasambojjhaṅgaṁ bhāveti … pītisambojjhaṅgaṁ bhāveti … passaddhisambojjhaṅgaṁ bhāveti … samādhisambojjhaṅgaṁ bhāveti … upekkhāsambojjhaṅgaṁ bhāveti vivekanissitaṁ virāganissitaṁ nirodhanissitaṁ vossaggapariṇāmiṁ.</p>
+
+<hr>
+
+<p><span class="parno">29</span>Yañhissa, bhikkhave, abhāvayato uppajjeyyuṁ āsavā vighātapariḷāhā, bhāvayato evaṁsa te āsavā vighātapariḷāhā na honti. Ime vuccanti, bhikkhave, āsavā bhāvanā pahātabbā.</p>
+
+
+<p><span class="parno">30</span>Yato kho, bhikkhave, bhikkhuno ye āsavā dassanā pahātabbā te dassanā pahīnā honti, ye āsavā saṁvarā pahātabbā te saṁvarā pahīnā honti, ye āsavā paṭisevanā pahātabbā te paṭisevanā pahīnā honti, ye āsavā adhivāsanā pahātabbā te adhivāsanā pahīnā honti, ye āsavā parivajjanā pahātabbā te parivajjanā pahīnā honti, ye āsavā vinodanā pahātabbā te vinodanā pahīnā honti, ye āsavā bhāvanā pahātabbā te bhāvanā pahīnā honti; ayaṁ vuccati, bhikkhave: ‘bhikkhu sabbāsavasaṁvarasaṁvuto viharati, <span class="var" title="acchejji (mr)" id="note19">acchecchi</span> taṇhaṁ, <span class="var" title="vāvattayi (bj, pts1)" id="note20">vivattayi</span> saṁyojanaṁ, sammā mānābhisamayā antamakāsi dukkhassā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">31</span>Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti.</p>
+
+<p class="endsection">Sabbāsavasuttaṁ niṭṭhitaṁ dutiyaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn1.html#content"></a><a id="next-sutta" href="./mn3.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN2: Sabbāsava Sutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

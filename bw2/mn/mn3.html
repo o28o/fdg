@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 3</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+<!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+	
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h2>MN3: Dhammadāyāda Sutta - Heirs in the Teaching </h2>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn3">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+
+	<div lang="en">
+			<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery. There the Buddha addressed the mendicants: “Mendicants!”</p>
+			<p>“Venerable sir,” they replied. The Buddha said this:</p>
+			
+			<p><span class="parno">2</span>“Mendicants, be my heirs in the teaching, not in material things. Out of compassion for you, I think, ‘How can my disciples become heirs in the teaching, not in material things?’</p>
+			
+			
+			<p>If you become heirs in material things, not in the teaching, they’ll point to you, saying, ‘The Teacher’s disciples live as heirs in material things, not in the teaching.’ And they’ll point to me, saying, ‘The Teacher’s disciples live as heirs in material things, not in the teaching.’</p>
+			
+			<p>If you become heirs in the teaching, not in material things, they’ll point to you, saying, ‘The Teacher’s disciples live as heirs in the teaching, not in material things.’ And they’ll point to me, saying, ‘The Teacher’s disciples live as heirs in the teaching, not in material things.’</p>
+			
+			<p>So, mendicants, be my heirs in the teaching, not in material things. Out of compassion for you, I think, ‘How can my disciples become heirs in the teaching, not in material things?’</p>
+			
+			<hr>
+			
+			<p><span class="parno">3</span>Suppose that I had eaten and refused more food, being full, and having had as much as I needed. And there was some extra alms-food that was going to be thrown away. Then two mendicants were to come who were weak with hunger. I’d say to them, ‘Mendicants, I have eaten and refused more food, being full, and having had as much as I need. And there is this extra alms-food that’s going to be thrown away. Eat it if you like. Otherwise I’ll throw it out where there is little that grows, or drop it into water that has no living creatures.’</p>
+			
+			<p><span class="parno">4</span>Then one of those mendicants thought, ‘The Buddha has eaten and refused more food. And he has some extra alms-food that’s going to be thrown away. If we don’t eat it he’ll throw it away. But the Buddha has also said: “Be my heirs in the teaching, not in material things.” And alms-food is a kind of material thing. Instead of eating this alms-food, why don’t I spend this day and night weak with hunger?’ And that’s what they did.</p>
+			
+			<hr>
+			
+			<p><span class="parno">5</span>Then the second of those mendicants thought, ‘The Buddha has eaten and refused more food. And he has some extra alms-food that’s going to be thrown away. If we don’t eat it he’ll throw it away. Why don’t I eat this alms-food, then spend the day and night having got rid of my hunger and weakness?’ And that’s what they did.</p>
+			
+			<p><span class="parno">6</span>Even though that mendicant, after eating the alms-food, spent the day and night rid of hunger and weakness, it is the former mendicant who is more worthy of respect and praise. Why is that? Because for a long time that will conduce to that mendicant being of few wishes, content, self-effacing, easy to look after, and energetic.</p>
+			
+			<p>So, mendicants, be my heirs in the teaching, not in material things. Out of compassion for you, I think, ‘How can my disciples become heirs in the teaching, not in material things?’”</p>
+			
+			<hr>
+			
+			<p><span class="parno">7</span>That is what the Buddha said. When he had spoken, the Holy One got up from his seat and entered his dwelling.</p>
+			
+			<p><span class="parno">8</span>Then soon after the Buddha left, Venerable Sāriputta said to the mendicants: “Reverends, mendicants!”</p>
+			
+			<p>“Reverend,” they replied. Sāriputta said this:</p>
+			
+			<hr>
+			
+			<p><span class="parno">9</span>“Reverends, how do the disciples of a Teacher who lives in seclusion not train in seclusion? And how do they train in seclusion?”</p>
+			
+			<p>“Reverend, we would travel a long way to learn the meaning of this statement in the presence of Venerable Sāriputta. May Venerable Sāriputta himself please clarify the meaning of this. The mendicants will listen and remember it.”</p>
+			
+			<p>“Well then, reverends, listen and pay close attention, I will speak.”</p>
+			
+			<p>“Yes, reverend,” they replied. Sāriputta said this:</p>
+			
+			<hr>
+			
+			<p><span class="parno">10</span>“Reverends, how do the disciples of a Teacher who lives in seclusion not train in seclusion? The disciples of a teacher who lives in seclusion do not train in seclusion. They don’t give up what the Teacher tells them to give up. They’re indulgent and slack, leaders in backsliding, neglecting seclusion. In this case, the senior mendicants should be criticized on three grounds. ‘The disciples of a teacher who lives in seclusion do not train in seclusion.’ This is the first ground. ‘They don’t give up what the Teacher tells them to give up.’ This is the second ground. ‘They’re indulgent and slack, leaders in backsliding, neglecting seclusion.’ This is the third ground. The senior mendicants should be criticized on these three grounds. In this case, the middle mendicants and the junior mendicants should be criticized on the same three grounds. This is how the disciples of a Teacher who lives in seclusion do not train in seclusion.</p>
+			
+			<p><span class="parno">11</span>And how do the disciples of a teacher who lives in seclusion train in seclusion? The disciples of a teacher who lives in seclusion train in seclusion. They give up what the Teacher tells them to give up. They’re not indulgent and slack, leaders in backsliding, neglecting seclusion. In this case, the senior mendicants should be praised on three grounds. ‘The disciples of a teacher who lives in seclusion train in seclusion.’ This is the first ground. ‘They give up what the Teacher tells them to give up.’ This is the second ground. ‘They’re not indulgent and slack, leaders in backsliding, neglecting seclusion.’ This is the third ground. The senior mendicants should be praised on these three grounds. In this case, the middle mendicants and the junior mendicants should be praised on the same three grounds. This is how the disciples of a Teacher who lives in seclusion train in seclusion.</p>
+			
+			<p><span class="parno">12</span>The bad thing here is greed and hate. There is a middle way of practice for giving up greed and hate. It gives vision and knowledge, and leads to peace, direct knowledge, awakening, and extinguishment. And what is that middle way? It is simply this noble eightfold path, that is: right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right immersion. This is that middle way, which gives vision and knowledge, and leads to peace, direct knowledge, awakening, and extinguishment.</p>
+			
+			<p><span class="parno">13</span>The bad thing here is anger and hostility. … offensiveness and contempt … jealousy and stinginess … deceit and deviousness … obstinacy and aggression … conceit and arrogance … vanity and negligence. There is a middle way of practice for giving up vanity and negligence. It gives vision and knowledge, and leads to peace, direct knowledge, awakening, and extinguishment. And what is that middle way? It is simply this noble eightfold path, that is: right view, right thought, right speech, right action, right livelihood, right effort, right mindfulness, and right immersion. This is that middle way, which gives vision and knowledge, and leads to peace, direct knowledge, awakening, and extinguishment.”</p>
+			
+			<hr>
+			
+			<p><span class="parno">14</span>This is what Venerable Sāriputta said. Satisfied, the mendicants were happy with what Sāriputta said.</p>
+
+</div>
+
+<div lang="pi">
+
+		<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi: "bhikkhavo"ti. </p>
+		
+		<p>"Bhadante"ti te bhikkhū bhagavato paccassosuṁ. Bhagavā etadavoca: </p>
+		
+		<p><span class="parno">2</span>"Dhammadāyādā me, bhikkhave, bhavatha, mā āmisadāyādā. Atthi me tumhesu anukampā: ‘Kinti me sāvakā dhammadāyādā bhaveyyuṁ, no āmisadāyādā’ti. </p>
+		
+		<p>Tumhe ca me, bhikkhave, āmisadāyādā bhaveyyātha no dhammadāyādā, tumhepi tena <span class="var" title="ādissā (bj, s1–3, pts1)" id="note22">ādiyā</span> bhaveyyātha: ‘āmisadāyādā satthusāvakā viharanti, no dhammadāyādā’ti; ahampi tena ādiyo bhaveyyaṁ: ‘āmisadāyādā satthusāvakā viharanti, no dhammadāyādā’ti. </p>
+		
+		<p>Tumhe ca me, bhikkhave, dhammadāyādā bhaveyyātha, no āmisadāyādā, tumhepi tena na ādiyā bhaveyyātha: ‘dhammadāyādā satthusāvakā viharanti, no āmisadāyādā’ti; ahampi tena na ādiyo bhaveyyaṁ: ‘dhammadāyādā satthusāvakā viharanti, no āmisadāyādā’ti. </p>
+		
+		<p>Tasmātiha me, bhikkhave, dhammadāyādā bhavatha, mā āmisadāyādā. Atthi me tumhesu anukampā: ‘Kinti me sāvakā dhammadāyādā bhaveyyuṁ, no āmisadāyādā’ti.</p>
+		
+		
+		<hr>
+		
+		<p><span class="parno">3</span>Idhāhaṁ, bhikkhave, bhuttāvī assaṁ pavārito paripuṇṇo pariyosito suhito yāvadattho; siyā ca me piṇḍapāto atirekadhammo <span class="var" title="chaḍḍiyadhammo (bj, s1–3, pts1)" id="note23">chaḍḍanīyadhammo</span>. Atha dve bhikkhū āgaccheyyuṁ jighacchādubbalyaparetā. Tyāhaṁ evaṁ vadeyyaṁ: ‘Ahaṁ khomhi, bhikkhave, bhuttāvī pavārito paripuṇṇo pariyosito suhito yāvadattho; atthi ca me ayaṁ piṇḍapāto atirekadhammo chaḍḍanīyadhammo. Sace ākaṅkhatha, bhuñjatha, no ce <span class="var" title="sace tumhe na bhuñjissatha (bj, s1–3, pts1)" id="note24">tumhe bhuñjissatha</span>, idānāhaṁ appaharite vā chaḍḍessāmi, appāṇake vā udake opilāpessāmī’ti.</p>
+		
+		
+		
+		<p><span class="parno">4</span>Tatrekassa bhikkhuno evamassa: ‘bhagavā kho bhuttāvī pavārito paripuṇṇo pariyosito suhito yāvadattho; atthi cāyaṁ bhagavato piṇḍapāto atirekadhammo chaḍḍanīyadhammo. Sace mayaṁ na bhuñjissāma, idāni bhagavā appaharite vā chaḍḍessati, appāṇake vā udake opilāpessati. Vuttaṁ kho panetaṁ bhagavatā: "dhammadāyādā me, bhikkhave, bhavatha, mā āmisadāyādā"ti. Āmisaññataraṁ kho panetaṁ, yadidaṁ piṇḍapāto. Yannūnāhaṁ imaṁ piṇḍapātaṁ abhuñjitvā imināva jighacchādubbalyena evaṁ imaṁ <span class="var" title="rattidivaṁ (mr)" id="note25">rattindivaṁ</span> vītināmeyyan’ti. So taṁ piṇḍapātaṁ abhuñjitvā teneva jighacchādubbalyena evaṁ taṁ rattindivaṁ vītināmeyya.</p>
+		
+		<hr>
+		
+		<p><span class="parno">5</span>Atha dutiyassa bhikkhuno evamassa: ‘bhagavā kho bhuttāvī pavārito paripuṇṇo pariyosito suhito yāvadattho; atthi cāyaṁ bhagavato piṇḍapāto atirekadhammo chaḍḍanīyadhammo. Sace mayaṁ na bhuñjissāma, idāni bhagavā appaharite vā chaḍḍessati, appāṇake vā udake opilāpessati. Yannūnāhaṁ imaṁ piṇḍapātaṁ bhuñjitvā jighacchādubbalyaṁ <span class="var" title="paṭivinetvā (bj, pts1)" id="note26">paṭivinodetvā</span> evaṁ imaṁ rattindivaṁ vītināmeyyan’ti. So taṁ piṇḍapātaṁ bhuñjitvā jighacchādubbalyaṁ paṭivinodetvā evaṁ taṁ rattindivaṁ vītināmeyya.</p>
+		
+		<p><span class="parno">6</span>Kiñcāpi so, bhikkhave, bhikkhu taṁ piṇḍapātaṁ bhuñjitvā jighacchādubbalyaṁ paṭivinodetvā evaṁ taṁ rattindivaṁ vītināmeyya, atha kho asuyeva me purimo bhikkhu pujjataro ca pāsaṁsataro ca. Taṁ kissa hetu? Tañhi tassa, bhikkhave, bhikkhuno dīgharattaṁ appicchatāya santuṭṭhiyā sallekhāya subharatāya vīriyārambhāya saṁvattissati. </p>
+		
+		<p>Tasmātiha me, bhikkhave, dhammadāyādā bhavatha, mā āmisadāyādā. Atthi me tumhesu anukampā: ‘Kinti me sāvakā dhammadāyādā bhaveyyuṁ, no āmisadāyādā’"ti.</p>
+		
+		<hr>
+		
+		<p><span class="parno">7</span>Idamavoca bhagavā. Idaṁ <span class="var" title="vatvā (bj, pts1)" id="note28">vatvāna</span> sugato uṭṭhāyāsanā vihāraṁ pāvisi.</p>
+		
+		<p><span class="parno">8</span>Tatra kho āyasmā sāriputto acirapakkantassa bhagavato bhikkhū āmantesi: "āvuso bhikkhave"ti. </p>
+		
+		<p>"Āvuso"ti kho te bhikkhū āyasmato sāriputtassa paccassosuṁ. Āyasmā sāriputto etadavoca: </p>
+		
+		<hr>
+		
+		<p><span class="parno">9</span>"Kittāvatā nu kho, āvuso, satthu pavivittassa viharato sāvakā vivekaṁ nānusikkhanti, kittāvatā ca pana satthu pavivittassa viharato sāvakā vivekamanusikkhantī"ti? </p>
+		
+		<p>"Dūratopi kho mayaṁ, āvuso, āgacchāma āyasmato sāriputtassa santike etassa bhāsitassa atthamaññātuṁ. Sādhu vatāyasmantaṁyeva sāriputtaṁ paṭibhātu etassa bhāsitassa attho; āyasmato sāriputtassa sutvā bhikkhū dhāressantī"ti. </p>
+		
+		<p>"Tena hāvuso, suṇātha, sādhukaṁ manasi karotha, bhāsissāmī"ti. </p>
+		
+		<p>"Evamāvuso"ti kho te bhikkhū āyasmato sāriputtassa paccassosuṁ. Āyasmā sāriputto etadavoca: </p>
+		
+		
+		<hr>
+		
+		<p><span class="parno">10</span>"Kittāvatā nu kho, āvuso, satthu pavivittassa viharato sāvakā vivekaṁ nānusikkhanti? Idhāvuso, satthu pavivittassa viharato sāvakā vivekaṁ nānusikkhanti, yesañca dhammānaṁ satthā pahānamāha, te ca dhamme nappajahanti, <span class="var" title="bāhullikā (s1–3)" id="note29">bāhulikā</span> ca honti, sāthalikā, okkamane pubbaṅgamā, paviveke nikkhittadhurā. Tatrāvuso, therā bhikkhū tīhi ṭhānehi gārayhā bhavanti. ‘Satthu pavivittassa viharato sāvakā vivekaṁ nānusikkhantī’ti — iminā paṭhamena ṭhānena therā bhikkhū gārayhā bhavanti. ‘Yesañca dhammānaṁ satthā pahānamāha te ca dhamme nappajahantī’ti — iminā dutiyena ṭhānena therā bhikkhū gārayhā bhavanti. ‘Bāhulikā ca, sāthalikā, okkamane pubbaṅgamā, paviveke nikkhittadhurā’ti –  iminā tatiyena ṭhānena therā bhikkhū gārayhā bhavanti. Therā, āvuso, bhikkhū imehi tīhi ṭhānehi gārayhā bhavanti. Tatrāvuso, majjhimā bhikkhū … pe … navā bhikkhū tīhi ṭhānehi gārayhā bhavanti. ‘Satthu pavivittassa viharato sāvakā vivekaṁ nānusikkhantī’ti — iminā paṭhamena ṭhānena navā bhikkhū gārayhā bhavanti. ‘Yesañca dhammānaṁ satthā pahānamāha te ca dhamme nappajahantī’ti – iminā dutiyena ṭhānena navā bhikkhū gārayhā bhavanti. ‘Bāhulikā ca honti, sāthalikā, okkamane pubbaṅgamā, paviveke nikkhittadhurā’ti — iminā tatiyena ṭhānena navā bhikkhū gārayhā bhavanti. Navā, āvuso, bhikkhū imehi tīhi ṭhānehi gārayhā bhavanti. Ettāvatā kho, āvuso, satthu pavivittassa viharato sāvakā vivekaṁ nānusikkhanti.</p>
+		
+		<p><span class="parno">11</span>Kittāvatā ca panāvuso, satthu pavivittassa viharato sāvakā vivekamanusikkhanti? Idhāvuso, satthu pavivittassa viharato sāvakā vivekamanusikkhanti — yesañca dhammānaṁ satthā pahānamāha te ca dhamme pajahanti; na ca bāhulikā honti, na sāthalikā okkamane nikkhittadhurā paviveke pubbaṅgamā. Tatrāvuso, therā bhikkhū tīhi ṭhānehi pāsaṁsā bhavanti. ‘Satthu pavivittassa viharato sāvakā vivekamanusikkhantī’ti — iminā paṭhamena ṭhānena therā bhikkhū pāsaṁsā bhavanti. ‘Yesañca dhammānaṁ satthā pahānamāha te ca dhamme pajahantī’ti – iminā dutiyena ṭhānena therā bhikkhū pāsaṁsā bhavanti. ‘Na ca bāhulikā, na sāthalikā okkamane nikkhittadhurā paviveke pubbaṅgamā’ti — iminā tatiyena ṭhānena therā bhikkhū pāsaṁsā bhavanti. Therā, āvuso, bhikkhū imehi tīhi ṭhānehi pāsaṁsā bhavanti. Tatrāvuso, majjhimā bhikkhū … pe … navā bhikkhū tīhi ṭhānehi pāsaṁsā bhavanti. ‘Satthu pavivittassa viharato sāvakā vivekamanusikkhantī’ti — iminā paṭhamena ṭhānena navā bhikkhū pāsaṁsā bhavanti. ‘Yesañca dhammānaṁ satthā pahānamāha te ca dhamme pajahantī’ti — iminā dutiyena ṭhānena navā bhikkhū pāsaṁsā bhavanti. ‘Na ca bāhulikā, na sāthalikā okkamane nikkhittadhurā paviveke pubbaṅgamā’ti — iminā tatiyena ṭhānena navā bhikkhū pāsaṁsā bhavanti. Navā, āvuso, bhikkhū imehi tīhi ṭhānehi pāsaṁsā bhavanti. Ettāvatā kho, āvuso, satthu pavivittassa viharato sāvakā vivekamanusikkhanti.</p>
+		
+		
+		<p><span class="parno">12</span>Tatrāvuso, lobho ca pāpako doso ca pāpako. Lobhassa ca pahānāya dosassa ca pahānāya atthi majjhimā paṭipadā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati. Katamā ca sā, āvuso, majjhimā paṭipadā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati? Ayameva ariyo aṭṭhaṅgiko maggo, <span class="var" title="seyyathīdaṁ (bj, s1–3, pts1)" id="note30">seyyathidaṁ</span> — sammādiṭṭhi sammāsaṅkappo sammāvācā sammākammanto sammāājīvo sammāvāyāmo sammāsati sammāsamādhi. Ayaṁ kho sā, āvuso, majjhimā paṭipadā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati.</p>
+		
+		<p><span class="parno">13</span>Tatrāvuso, kodho ca pāpako upanāho ca pāpako … pe … makkho ca pāpako paḷāso ca pāpako, issā ca pāpikā maccherañca pāpakaṁ, māyā ca pāpikā sāṭheyyañca pāpakaṁ, thambho ca pāpako sārambho ca pāpako, māno ca pāpako atimāno ca pāpako, mado ca pāpako pamādo ca pāpako. Madassa ca pahānāya pamādassa ca pahānāya atthi majjhimā paṭipadā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati. Katamā ca sā, āvuso, majjhimā paṭipadā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattati? Ayameva ariyo aṭṭhaṅgiko maggo, seyyathidaṁ — sammādiṭṭhi sammāsaṅkappo sammāvācā sammākammanto sammāājīvo sammāvāyāmo sammāsati sammāsamādhi. Ayaṁ kho sā, āvuso, majjhimā paṭipadā cakkhukaraṇī ñāṇakaraṇī upasamāya abhiññāya sambodhāya nibbānāya saṁvattatī"ti.</p>
+		
+		<hr>
+		
+		<p><span class="parno">14</span>Idamavocāyasmā sāriputto. Attamanā te bhikkhū āyasmato sāriputtassa bhāsitaṁ abhinandunti.</p>
+		
+		<p class="endsection">Dhammadāyādasuttaṁ niṭṭhitaṁ tatiyaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn2.html#content"></a><a id="next-sutta" href="./mn4.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN3: Dhammadāyāda Sutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

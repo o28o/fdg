@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nika 22.55</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="pressed w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+<!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Linked Discourses</h2>
+
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+ 					<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div>  <!-- End div for SN sub-navigation -->
+
+
+<!-- SN content begins here -->
+
+<div id="content">
+
+<h2>22. Khandhasaṁyutta: On the Aggregates</h2>
+<h3>VI. Involvement — SN22.55: An Inspired Saying </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+	<li><a href="/ru/sc/?q=sn22.55">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p><span class="parno">1</span>At Sāvatthī.</p>
+
+<p>There the Buddha was inspired to exclaim: “‘It might not be, and it might not be mine. It will not be, and it will not be mine.’ A mendicant who makes such a resolution can cut off the five lower fetters.”</p>
+
+<p>When he said this, one of the mendicants asked the Buddha: “But sir, how can a mendicant who makes such a resolution cut off the five lower fetters?”</p>
+
+<hr>
+<p><span class="parno">2</span>“Mendicant, take an uneducated ordinary person who has not seen the noble ones, and is neither skilled nor trained in their teaching. They’ve not seen good persons, and are neither skilled nor trained in their teaching.</p>
+
+<p>They regard form as self, self as having form, form in self, or self in form. They regard feeling … perception … choices … consciousness as self, self as having consciousness, consciousness in self, or self in consciousness.</p>
+
+<hr>
+<p><span class="parno">3</span>They don’t truly understand form — which is impermanent — as impermanent. They don’t truly understand feeling … perception … choices … consciousness — which is impermanent — as impermanent.</p>
+
+<p><span class="parno">4</span>They don’t truly understand form — which is suffering — as suffering. They don’t truly understand feeling … perception … choices … consciousness — which is suffering — as suffering.</p>
+
+<hr>
+<p><span class="parno">5</span>They don’t truly understand form — which is not-self — as not-self. They don’t truly understand feeling … perception … choices … consciousness — which is not-self — as not-self.</p>
+
+<hr>
+<p><span class="parno">6</span>They don’t truly understand form — which is conditioned — as conditioned. They don’t truly understand feeling … perception … choices … consciousness — which is conditioned — as conditioned.</p>
+
+<p>They don’t truly understand that form will disappear. They don’t truly understand that feeling … perception … choices … consciousness will disappear.</p>
+
+<p><span class="parno">7</span>But an educated noble disciple has seen the noble ones, and is skilled and trained in the teaching of the noble ones. They’ve seen good persons, and are skilled and trained in the teaching of the good persons. They don’t regard form as self … They don’t regard feeling … perception … choices … consciousness as self.</p>
+
+<hr>
+<p><span class="parno">8</span>They truly understand form — which is impermanent — as impermanent. They truly understand feeling … perception … choices … consciousness — which is impermanent — as impermanent.</p>
+
+<hr>
+<p>They truly understand form … feeling … perception … choices … consciousness — which is suffering — as suffering.</p>
+
+<hr>
+<p>They truly understand form … feeling … perception … choices … consciousness — which is not-self — as not-self.</p>
+
+<hr>
+<p>They truly understand form … feeling … perception … choices … consciousness — which is conditioned — as conditioned.</p>
+
+<p>They truly understand that form will disappear. They truly understand that feeling … perception … choices … consciousness will disappear.</p>
+
+<hr>
+<p><span class="parno">9</span>It’s because of the disappearance of form, feeling, perception, choices, and consciousness that a mendicant who makes such a resolution — ‘It might not be, and it might not be mine. It will not be, and it will not be mine’ — can cut off the five lower fetters.”</p>
+
+<p>“Sir, a mendicant who makes such a resolution can cut off the five lower fetters.</p>
+
+<p><span class="parno">10</span>But how are they to know and see in order to end the defilements in the present life?”</p>
+
+<p>“Mendicant, an uneducated ordinary person worries about things that aren’t a worry. For an uneducated ordinary person worries: ‘It might not be, and it might not be mine. It will not be, and it will not be mine.’</p>
+
+<p><span class="parno">11</span>An educated noble disciple doesn’t worry about things that aren’t a worry. For an educated noble disciple doesn’t worry: ‘It might not be, and it might not be mine. It will not be, and it will not be mine.’</p>
+
+<p>As long as consciousness remains, it would remain involved with form, supported by form, founded on form. And with a sprinkle of relishing, it would grow, increase, and mature.</p>
+
+<hr>
+<p>Or consciousness would remain involved with feeling …</p>
+
+<p>Or consciousness would remain involved with perception …</p>
+
+<hr>
+<p>Or consciousness would remain involved with choices, supported by choices, grounded on choices. And with a sprinkle of relishing, it would grow, increase, and mature.</p>
+
+<p><span class="parno">12</span>Mendicant, suppose you say: ‘Apart from form, feeling, perception, and choices, I will describe the coming and going of consciousness, its passing away and reappearing, its growth, increase, and maturity.’ That is not possible.</p>
+
+<p><span class="parno">13</span>If a mendicant has given up greed for the form element, the support is cut off, and there is no foundation for consciousness.</p>
+
+<p>If a mendicant has given up greed for the feeling element …</p>
+
+<hr>
+<p>perception element …</p>
+
+<p>choices element …</p>
+
+<hr>
+<p>consciousness element, the support is cut off, and there is no foundation for consciousness. Since that consciousness does not become established and does not grow, with no power to regenerate, it is freed.</p>
+
+<p>Being free, it’s stable. Being stable, it’s content. Being content, they’re not anxious. Not being anxious, they personally become extinguished.</p>
+
+<p>They understand: ‘Rebirth is ended … there is no return to any state of existence.’</p>
+
+<p>The ending of the defilements in the present life is for one who knows and sees this.”</p>
+<hr>
+</div> <!-- End English -->
+<div lang="pi">
+
+<p><span class="parno">1</span>Sāvatthinidānaṁ.</p>
+
+<p>Tatra kho bhagavā udānaṁ udānesi: "‘no cassaṁ, no ca me siyā, nābhavissa, na me bhavissatī’ti – evaṁ adhimuccamāno bhikkhu chindeyya orambhāgiyāni saṁyojanānī"ti.</p>
+
+<p>Evaṁ vutte, aññataro bhikkhu bhagavantaṁ etadavoca: "yathā kathaṁ pana, bhante, ‘no cassaṁ, no ca me siyā, nābhavissa, na me bhavissatī’ti – evaṁ adhimuccamāno bhikkhu chindeyya orambhāgiyāni saṁyojanānī"ti?</p>
+
+<hr>
+<p><span class="parno">2</span>"Idha, bhikkhu, assutavā puthujjano ariyānaṁ adassāvī … pe … sappurisadhamme avinīto rūpaṁ attato samanupassati, rūpavantaṁ vā attānaṁ;</p>
+
+<p>attani vā rūpaṁ, rūpasmiṁ vā attānaṁ. vedanāṁ … saññaṁ … saṅkhāre … viññāṇaṁ attato samanupassati, viññāṇavantaṁ vā attānaṁ; attani vā viññāṇaṁ, viññāṇasmiṁ vā attānaṁ.</p>
+
+<hr>
+<p><span class="parno">3</span>So aniccaṁ rūpaṁ ‘aniccaṁ rūpan’ti yathābhūtaṁ nappajānāti, aniccaṁ vedanāṁ ‘aniccā vedanā’ti yathābhūtaṁ nappajānāti, aniccaṁ saññaṁ ‘aniccā saññā’ti yathābhūtaṁ nappajānāti, anicce saṅkhāre ‘aniccā saṅkhārā’ti yathābhūtaṁ nappajānāti, aniccaṁ viññāṇaṁ ‘aniccaṁ viññāṇan’ti yathābhūtaṁ nappajānāti.</p>
+
+<p><span class="parno">4</span>Dukkhaṁ rūpaṁ ‘dukkhaṁ rūpan’ti yathābhūtaṁ nappajānāti, dukkhaṁ vedanāṁ … dukkhaṁ saññaṁ … dukkhe saṅkhāre … dukkhaṁ viññāṇaṁ ‘dukkhaṁ viññāṇan’ti yathābhūtaṁ nappajānāti.</p>
+
+<hr>
+<p><span class="parno">5</span>Anattaṁ rūpaṁ ‘anattā rūpan’ti yathābhūtaṁ nappajānāti, anattaṁ vedanāṁ ‘anattā vedanā’ti yathābhūtaṁ nappajānāti, anattaṁ saññaṁ ‘anattā saññā’ti yathābhūtaṁ nappajānāti, anatte saṅkhāre ‘anattā saṅkhārā’ti yathābhūtaṁ nappajānāti, anattaṁ viññāṇaṁ ‘anattā viññāṇan’ti yathābhūtaṁ nappajānāti.</p>
+
+<hr>
+<p><span class="parno">6</span>Saṅkhataṁ rūpaṁ ‘saṅkhataṁ rūpan’ti yathābhūtaṁ nappajānāti, saṅkhataṁ vedanāṁ … saṅkhataṁ saññaṁ … saṅkhate saṅkhāre … saṅkhataṁ viññāṇaṁ ‘saṅkhataṁ viññāṇan’ti yathābhūtaṁ nappajānāti.</p>
+
+<p>Rūpaṁ vibhavissatīti yathābhūtaṁ nappajānāti. Vedanā vibhavissati … saññā vibhavissati … saṅkhārā vibhavissanti … viññāṇaṁ vibhavissatīti yathābhūtaṁ nappajānāti.</p>
+
+<p><span class="parno">7</span>Sutavā ca kho, bhikkhu, ariyasāvako ariyānaṁ dassāvī ariyadhammassa kovido ariyadhamme suvinīto sappurisānaṁ dassāvī sappurisadhammassa kovido sappurisadhamme suvinīto na rūpaṁ attato samanupassati … pe … na vedanāṁ … na saññaṁ … na saṅkhāre … na viññāṇaṁ attato samanupassati.</p>
+
+<hr>
+<p><span class="parno">8</span>So aniccaṁ rūpaṁ ‘aniccaṁ rūpan’ti yathābhūtaṁ pajānāti. Aniccaṁ vedanāṁ … aniccaṁ saññaṁ … anicce saṅkhāre … aniccaṁ viññāṇaṁ ‘aniccaṁ viññāṇan’ti yathābhūtaṁ pajānāti.</p>
+
+<hr>
+<p>Dukkhaṁ rūpaṁ … pe … dukkhaṁ viññāṇaṁ …</p>
+
+<hr>
+<p>anattaṁ rūpaṁ … pe … anattaṁ viññāṇaṁ …</p>
+
+<hr>
+<p>saṅkhataṁ rūpaṁ … pe … saṅkhataṁ viññāṇaṁ ‘saṅkhataṁ viññāṇan’ti yathābhūtaṁ pajānāti.</p>
+
+<p>Rūpaṁ vibhavissatīti yathābhūtaṁ pajānāti. Vedanā … saññā … saṅkhārā … viññāṇaṁ vibhavissatīti yathābhūtaṁ pajānāti.</p>
+
+<hr>
+<p><span class="parno">9</span>So rūpassa vibhavā, vedanāya vibhavā, saññāya vibhavā, saṅkhārānaṁ vibhavā, viññāṇassa vibhavā, evaṁ kho, bhikkhu, ‘no cassaṁ, no ca me siyā, nābhavissa, na me bhavissatī’ti – evaṁ adhimuccamāno bhikkhu chindeyya orambhāgiyāni saṁyojanānī"ti.</p>
+
+<p>"Evaṁ adhimuccamāno, bhante, bhikkhu chindeyya orambhāgiyāni saṁyojanānī"ti.</p>
+
+<p><span class="parno">10</span>"Kathaṁ pana, bhante, jānato kathaṁ passato anantarā āsavānaṁ khayo hotī"ti? </p>
+
+<p>"Idha, bhikkhu, assutavā puthujjano atasitāye ṭhāne tāsaṁ āpajjati. Tāso heso bhikkhu assutavato puthujjanassa: ‘no cassaṁ, no ca me siyā, nābhavissa, na me bhavissatī’ti.</p>
+
+<p><span class="parno">11</span>Sutavā ca kho, bhikkhu, ariyasāvako atasitāye ṭhāne na tāsaṁ āpajjati. Na heso, bhikkhu, tāso sutavato ariyasāvakassa: ‘no cassaṁ, no ca me siyā, nābhavissa, na me bhavissatī’ti. </p>
+
+<p>Rūpupayaṁ vā, bhikkhu, viññāṇaṁ tiṭṭhamānaṁ tiṭṭheyya, rūpārammaṇaṁ rūpappatiṭṭhaṁ nandūpasecanaṁ vuddhiṁ virūḷhiṁ vepullaṁ āpajjeyya.</p>
+
+<hr>
+<p>Vedanupayaṁ vā, bhikkhu … </p>
+
+<p>saññupayaṁ vā, bhikkhu …</p>
+
+<hr>
+<p>saṅkhārupayaṁ vā, bhikkhu, viññāṇaṁ tiṭṭhamānaṁ tiṭṭheyya, saṅkhārārammaṇaṁ saṅkhārappatiṭṭhaṁ nandūpasecanaṁ vuddhiṁ virūḷhiṁ vepullaṁ āpajjeyya.</p>
+
+<p><span class="parno">12</span>Yo, bhikkhu, evaṁ vadeyya: ‘ahamaññatra rūpā, aññatra vedanāya, aññatra saññāya, aññatra saṅkhārehi viññāṇassa āgatiṁ vā gatiṁ vā cutiṁ vā upapattiṁ vā vuddhiṁ vā virūḷhiṁ vā vepullaṁ vā paññāpessāmī’ti, netaṁ ṭhānaṁ vijjati.</p>
+
+<p><span class="parno">13</span>Rūpadhātuyā ce, bhikkhu, bhikkhuno rāgo pahīno hoti. Rāgassa pahānā vocchijjatārammaṇaṁ patiṭṭhā viññāṇassa na hoti.</p>
+
+<p>Vedanādhātuyā ce, bhikkhu, bhikkhuno …</p>
+
+<hr>
+<p>saññādhātuyā ce, bhikkhu, bhikkhuno …</p>
+
+<p>saṅkhāradhātuyā ce, bhikkhu, bhikkhuno … </p>
+
+<hr>
+<p>viññāṇadhātuyā ce, bhikkhu, bhikkhuno rāgo pahīno hoti. Rāgassa pahānā vocchijjatārammaṇaṁ patiṭṭhā viññāṇassa na hoti. </p>
+
+<p>Tadappatiṭṭhitaṁ viññāṇaṁ avirūḷhaṁ anabhisaṅkhacca vimuttaṁ. Vimuttattā ṭhitaṁ. Ṭhitattā santusitaṁ. Santusitattā na paritassati. Aparitassaṁ paccattaññeva parinibbāyati.</p>
+
+<p>‘Khīṇā jāti … pe … nāparaṁ itthattāyā’ti pajānāti. </p>
+
+<p>Evaṁ kho, bhikkhu, jānato evaṁ passato anantarā āsavānaṁ khayo hotī"ti.</p>
+<hr>
+<p class="endsection">Tatiyaṁ.</p>
+</div> <!-- end pali -->
+
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./sn22.54.html#content"></a><a id="next-sutta" href="./sn22.56.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn22.html">22. Khandhasaṁyutta: On the Aggregates</a> SN22.55: An Inspired Saying </div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

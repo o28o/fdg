@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 89</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN89: Dhammacetiyasutta - Shrines to the Teaching </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn89">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying in the land of the Sakyans, near the Sakyan town named Medeḷumpa.</p>
+
+<p>Now at that time King Pasenadi of Kosala had arrived at Nagaraka on some business.</p>
+
+<p>Then he addressed Dīgha Kārāyana: “My good Kārāyana, harness the finest chariots. We will go to a park and see the scenery.”</p>
+
+<hr>
+
+<p>“Yes, Your Majesty,” replied Dīgha Kārāyana. He harnessed the chariots and informed the king: “Sire, the finest chariots are harnessed. Please go at your convenience.”</p>
+
+<p>Then King Pasenadi mounted a fine carriage and, along with other fine carriages, set out in full royal pomp from Nagaraka, heading for the park grounds. He went by carriage as far as the terrain allowed, then descended and entered the park on foot.</p>
+
+<p>As he was going for a walk in the park he saw roots of trees that were impressive and inspiring, quiet and still, far from the madding crowd, remote from human settlements, and fit for retreat. The sight reminded him right away of the Buddha: “These roots of trees, so impressive and inspiring, are like those where we used to pay homage to the Blessed One, the perfected one, the fully awakened Buddha.”</p>
+
+<p><span class="parno">2</span>He addressed Dīgha Kārāyana: “These roots of trees, so impressive and inspiring, are like those where we used to pay homage to the Blessed One, the perfected one, the fully awakened Buddha. My good Kārāyana, where is that Buddha at present?”</p>
+
+<p>“Great king, there is a Sakyan town named Medaḷumpa. That’s where the Buddha is now staying.”</p>
+
+<p>“But how far away is that town?”</p>
+
+<hr>
+
+<p>“Not far, great king, it’s three leagues. We can get there while it’s still light.”</p>
+
+<p>“Well then, harness the chariots, and we shall go to see the Buddha.”</p>
+
+<p>“Yes, Your Majesty,” replied Dīgha Kārāyana. He harnessed the chariots and informed the king: “Sire, the finest chariots are harnessed. Please go at your convenience.”</p>
+
+<p>Then King Pasenadi mounted a fine carriage and, along with other fine carriages, set out from Nagaraka to Medaḷumpa. He reached the town while it was still light and headed for the park grounds. He went by carriage as far as the terrain allowed, then descended and entered the monastery on foot.</p>
+
+<hr>
+
+<p><span class="parno">3</span>At that time several mendicants were walking meditation in the open air. King Pasenadi of Kosala went up to them and said: “Sirs, where is the Blessed One at present, the perfected one, the fully awakened Buddha? For I want to see him.”</p>
+
+<p>“Great king, that’s his dwelling, with the door closed. Approach it quietly, without hurrying; go onto the porch, clear your throat, and knock with the latch. The Buddha will open the door.” The king right away presented his sword and turban to Dīgha Kārāyana, who thought: “Now the king seeks privacy. I should wait here.”</p>
+
+<p>Then the king approached the Buddha’s dwelling and knocked, and the Buddha opened the door.</p>
+
+<p>King Pasenadi entered the dwelling, and bowed with his head to the Buddha’s feet, caressing them and covering them with kisses, and pronounced his name: “Sir, I am Pasenadi, king of Kosala! I am Pasenadi, king of Kosala!”</p>
+
+<hr>
+
+<p><span class="parno">4</span>“But great king, for what reason do you demonstrate such utmost devotion for this body, conveying your manifest love?”</p>
+
+<p>“Sir, I infer about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’ It happens, sir, that I see some ascetics and brahmins leading the spiritual life only for a limited period: ten, twenty, thirty, or forty years. Some time later — nicely bathed and anointed, with hair and beard dressed — they amuse themselves, supplied and provided with the five kinds of sensual stimulation. But here I see the mendicants leading the spiritual life entirely full and pure as long as they live, to their last breath. I don’t see any other spiritual life elsewhere so full and pure. That’s why I infer this about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’</p>
+
+<p><span class="parno">5</span>Furthermore, kings fight with kings, aristocrats fight with aristocrats, brahmins fight with brahmins, householders fight with householders. A mother fights with her child, child with mother, father with child, and child with father. Brother fights with brother, brother with sister, sister with brother, and friend fights with friend. But here I see the mendicants living in harmony, appreciating each other, without quarreling, blending like milk and water, and regarding each other with kindly eyes. I don’t see any other assembly elsewhere so harmonious. So I infer this about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’</p>
+
+<p><span class="parno">6</span>Furthermore, I have walked and wandered from monastery to monastery and from park to park. There I’ve seen some ascetics and brahmins who are thin, haggard, pale, and veiny — hardly a captivating sight, you’d think. It occurred to me: ‘Clearly these venerables lead the spiritual life dissatisfied, or they’re hiding some bad deed they’ve done. That’s why they’re thin, haggard, pale, and veiny — hardly a captivating sight, you’d think.’ I went up to them and said: ‘Venerables, why are you so thin, haggard, pale, and veiny — hardly a captivating sight, you’d think?’ They say: ‘We have jaundice, great king.’ But here I see mendicants always smiling and joyful, obviously happy, with cheerful faces, living relaxed, unruffled, surviving on charity, their hearts free as a wild deer. It occurred to me: ‘Clearly these venerables have realized a higher distinction in the Buddha’s instructions than they had before. That’s why these venerables are always smiling and joyful, obviously happy, with cheerful faces, living relaxed, unruffled, surviving on charity, their hearts free as a wild deer.’ So I infer this about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’</p>
+
+<p><span class="parno">7</span>Furthermore, as an anointed king I am able to execute, fine, or banish those who are guilty. Yet when I’m sitting in judgment they interrupt me. And I can’t get them to stop interrupting me and wait until I’ve finished speaking. But here I’ve seen the mendicants while the Buddha is teaching an assembly of many hundreds, and there is no sound of his disciples coughing or clearing their throats. Once it so happened that the Buddha was teaching an assembly of many hundreds. Then one of his disciples cleared their throat. And one of their spiritual companions nudged them with their knee, to indicate: ‘Hush, venerable, don’t make a sound! Our teacher, the Blessed One, is teaching!’ It occurred to me: ‘It’s incredible, it’s amazing, how an assembly can be so well trained without rod or sword!’ I don’t see any other assembly elsewhere so well trained. So I infer this about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’</p>
+
+<p><span class="parno">8</span>Furthermore, I’ve seen some clever aristocrats who are subtle, accomplished in the doctrines of others, hair-splitters. You’d think they live to demolish convictions with their intellect. They hear: ‘So, gentlemen, that ascetic Gotama will come down to such and such village or town.’ They formulate a question, thinking: ‘We’ll approach the ascetic Gotama and ask him this question. If he answers like this, we’ll refute him like that; and if he answers like that, we’ll refute him like this.’ When they hear that he has come down they approach him. The Buddha educates, encourages, fires up, and inspires them with a Dhamma talk. They don’t even get around to asking their question to the Buddha, so how could they refute his answer? Invariably, they become his disciples. So I infer this about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’</p>
+
+<p><span class="parno">9</span>Furthermore, I see some clever brahmins … some clever householders … some clever ascetics who are subtle, accomplished in the doctrines of others, hair-splitters. … They don’t even get around to asking their question to the Buddha, so how could they refute his answer? Invariably, they ask the ascetic Gotama for the chance to go forth. And he gives them the going-forth. Soon after going forth, living withdrawn, diligent, keen, and resolute, they realize the supreme end of the spiritual path in this very life. They live having achieved with their own insight the goal for which gentlemen rightly go forth from the lay life to homelessness. They say: ‘We were almost lost! We almost perished! For we used to claim that we were ascetics, brahmins, and perfected ones, but we were none of these things. But now we really are ascetics, brahmins, and perfected ones!’ So I infer this about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’</p>
+
+<p><span class="parno">10</span>Furthermore, these chamberlains Isidatta and Purāṇa share my meals and my carriages. I give them a livelihood and bring them renown. And yet they don’t show me the same level of devotion that they show to the Buddha. Once it so happened that while I was leading a military campaign and testing Isidatta and Purāṇa I took up residence in a cramped house. They spent most of the night discussing the teaching, then they lay down with their heads towards where the Buddha was and their feet towards me. It occurred to me: ‘It’s incredible, it’s amazing! These chamberlains Isidatta and Purāṇa share my meals and my carriages. I give them a livelihood and bring them renown. And yet they don’t show me the same level of devotion that they show to the Buddha. Clearly these venerables have realized a higher distinction in the Buddha’s instructions than they had before.’ So I infer this about the Buddha from the teaching: ‘The Blessed One is a fully awakened Buddha. The teaching is well explained. The Saṅgha is practicing well.’</p>
+
+<p><span class="parno">11</span>Furthermore, the Buddha is an aristocrat, and so am I. The Buddha is Kosalan, and so am I. The Buddha is eighty years old, and so am I. Since this is so, it’s proper for me to show the Buddha such utmost devotion and demonstrate such friendship.</p>
+
+<hr>
+
+<p>Well, now, sir, I must go. I have many duties, and much to do.”</p>
+
+<p>“Please, great king, go at your convenience.” </p>
+
+<p>Then King Pasenadi got up from his seat, bowed, and respectfully circled the Buddha, keeping him on his right, before leaving.</p>
+
+<p><span class="parno">12</span>Soon after the king had left, the Buddha addressed the mendicants: “Mendicants, before he got up and left, King Pasenadi spoke shrines to the teaching. Learn these shrines to the teaching! Memorize these shrines to the teaching! Remember these shrines to the teaching! These shrines to the teaching are beneficial and relate to the fundamentals of the spiritual life.”</p>
+
+<p><span class="parno">13</span>That is what the Buddha said. Satisfied, the mendicants were happy with what the Buddha said.</p>
+
+</div>
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sakkesu viharati <span class="var" title="medataḷumpaṁ (bj) | metalūpaṁ (si) | medaḷupaṁ (s1–3) | medaḷumpaṁ (pts1)" id="note540">medāḷupaṁ</span> nāma sakyānaṁ nigamo. </p>
+
+<p>Tena kho pana samayena rājā pasenadi kosalo nagarakaṁ anuppatto hoti kenacideva karaṇīyena.</p>
+
+<p>Atha kho rājā pasenadi kosalo dīghaṁ kārāyanaṁ āmantesi: "yojehi, samma kārāyana, bhadrāni bhadrāni yānāni, uyyānabhūmiṁ gacchāma <span class="var" title="subhūmidassanāyāti (^dn14#90 [Mahāpadānasutta/5. Jiṇṇapurisa])" id="note541">subhūmiṁ dassanāyā"ti</span>.</p>
+
+<hr>
+
+<p>"Evaṁ, devā"ti kho dīgho kārāyano rañño pasenadissa kosalassa paṭissutvā bhadrāni bhadrāni yānāni yojāpetvā rañño pasenadissa kosalassa paṭivedesi: "yuttāni kho te, deva, bhadrāni bhadrāni yānāni. Yassadāni kālaṁ maññasī"ti.</p>
+
+<p>Atha kho rājā pasenadi kosalo bhadraṁ yānaṁ abhiruhitvā bhadrehi bhadrehi yānehi nagarakamhā niyyāsi mahaccā rājānubhāvena. Yena ārāmo tena pāyāsi. Yāvatikā yānassa bhūmi, yānena gantvā yānā paccorohitvā pattikova ārāmaṁ pāvisi.</p>
+
+<p>Addasā kho rājā pasenadi kosalo ārāme jaṅghāvihāraṁ anucaṅkamamāno anuvicaramāno rukkhamūlāni pāsādikāni pasādanīyāni appasaddāni appanigghosāni vijanavātāni <span class="var" title="manussarāhaseyyakāni (bj) | manussarāhaseyyākāni (pts1)" id="note542">manussarāhasseyyakāni</span> paṭisallānasāruppāni. Disvāna bhagavantaṁyeva ārabbha sati udapādi: "imāni kho tāni rukkhamūlāni pāsādikāni pasādanīyāni appasaddāni appanigghosāni vijanavātāni manussarāhasseyyakāni paṭisallānasāruppāni, yattha sudaṁ mayaṁ taṁ bhagavantaṁ payirupāsāma arahantaṁ sammāsambuddhan"ti.</p>
+
+
+<p><span class="parno">2</span>Atha kho rājā pasenadi kosalo dīghaṁ kārāyanaṁ āmantesi: "imāni kho, samma kārāyana, tāni rukkhamūlāni pāsādikāni pasādanīyāni appasaddāni appanigghosāni vijanavātāni manussarāhasseyyakāni paṭisallānasāruppāni, yattha sudaṁ mayaṁ taṁ bhagavantaṁ payirupāsāma arahantaṁ sammāsambuddhaṁ. Kahaṁ nu kho, samma kārāyana, etarahi so bhagavā viharati arahaṁ sammāsambuddho"ti? </p>
+
+<p>"Atthi, mahārāja, medāḷupaṁ nāma sakyānaṁ nigamo. Tattha so bhagavā etarahi viharati arahaṁ sammāsambuddho"ti.</p>
+
+
+<p>"<span class="var" title="kīvadūro (bj, s1–3, km, pts1)" id="note543">Kīvadūre</span> pana, samma kārāyana, nagarakamhā medāḷupaṁ nāma sakyānaṁ nigamo hotī"ti?</p>
+
+
+<hr>
+
+<p>"Na dūre, mahārāja; tīṇi yojanāni; sakkā divasāvasesena gantun"ti.</p>
+
+<p>"Tena hi, samma kārāyana, yojehi bhadrāni bhadrāni yānāni, gamissāma mayaṁ taṁ bhagavantaṁ dassanāya arahantaṁ sammāsambuddhan"ti.</p>
+
+<p>"Evaṁ, devā"ti kho dīgho kārāyano rañño pasenadissa kosalassa paṭissutvā bhadrāni bhadrāni yānāni yojāpetvā rañño pasenadissa kosalassa paṭivedesi: "yuttāni kho te, deva, bhadrāni bhadrāni yānāni. Yassadāni kālaṁ maññasī"ti.</p>
+
+<p>Atha kho rājā pasenadi kosalo bhadraṁ yānaṁ abhiruhitvā bhadrehi bhadrehi yānehi nagarakamhā yena medāḷupaṁ nāma sakyānaṁ nigamo tena pāyāsi. Teneva divasāvasesena medāḷupaṁ nāma sakyānaṁ nigamaṁ sampāpuṇi. Yena ārāmo tena pāyāsi. Yāvatikā yānassa bhūmi, yānena gantvā yānā paccorohitvā pattikova ārāmaṁ pāvisi.</p>
+
+
+<hr>
+
+<p><span class="parno">3</span>Tena kho pana samayena sambahulā bhikkhū abbhokāse caṅkamanti. Atha kho rājā pasenadi kosalo yena te bhikkhū tenupasaṅkami; upasaṅkamitvā te bhikkhū etadavoca: "kahaṁ nu kho, bhante, etarahi so bhagavā viharati arahaṁ sammāsambuddho? Dassanakāmā hi mayaṁ taṁ bhagavantaṁ arahantaṁ sammāsambuddhan"ti.</p>
+
+<p>"Eso, mahārāja, vihāro saṁvutadvāro. Tena appasaddo upasaṅkamitvā ataramāno āḷindaṁ pavisitvā ukkāsitvā aggaḷaṁ ākoṭehi. Vivarissati bhagavā te dvāran"ti. Atha kho rājā pasenadi kosalo tattheva khaggañca uṇhīsañca dīghassa kārāyanassa pādāsi. Atha kho dīghassa kārāyanassa etadahosi: "rahāyati <span class="var" title="mahārājā (bj, s1–3, km, pts1)" id="note544">kho dāni rājā</span>, <span class="var" title="tenidheva (bj)" id="note545">idheva</span> dāni mayā ṭhātabban"ti. </p>
+
+<p>Atha kho rājā pasenadi kosalo yena so vihāro saṁvutadvāro tena appasaddo upasaṅkamitvā ataramāno āḷindaṁ pavisitvā ukkāsitvā aggaḷaṁ ākoṭesi. Vivari bhagavā dvāraṁ. </p>
+
+<p>Atha kho rājā pasenadi kosalo vihāraṁ pavisitvā bhagavato pādesu sirasā nipatitvā bhagavato pādāni mukhena ca paricumbati, pāṇīhi ca parisambāhati, nāmañca sāveti: "rājāhaṁ, bhante, pasenadi kosalo; rājāhaṁ, bhante, pasenadi kosalo"ti.</p>
+
+<hr>
+
+<p><span class="parno">4</span>"Kiṁ pana tvaṁ, mahārāja, atthavasaṁ sampassamāno imasmiṁ sarīre evarūpaṁ paramanipaccakāraṁ karosi, <span class="var" title="cittūpahāraṁ (bj)" id="note546">mittūpahāraṁ</span> upadaṁsesī"ti?</p>
+
+<p>"Atthi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṁgho’ti. Idhāhaṁ, bhante, passāmi eke samaṇabrāhmaṇe pariyantakataṁ brahmacariyaṁ carante dasapi vassāni, vīsampi vassāni, tiṁsampi vassāni, cattārīsampi vassāni. Te aparena samayena sunhātā suvilittā kappitakesamassū pañcahi kāmaguṇehi samappitā samaṅgībhūtā paricārenti. Idha panāhaṁ, bhante, bhikkhū passāmi yāvajīvaṁ āpāṇakoṭikaṁ paripuṇṇaṁ parisuddhaṁ brahmacariyaṁ carante. Na kho panāhaṁ, bhante, ito bahiddhā aññaṁ evaṁ paripuṇṇaṁ parisuddhaṁ brahmacariyaṁ samanupassāmi. Ayampi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṁgho’ti.</p>
+
+<p><span class="parno">5</span>Puna caparaṁ, bhante, rājānopi rājūhi vivadanti, khattiyāpi khattiyehi vivadanti, brāhmaṇāpi brāhmaṇehi vivadanti, gahapatayopi gahapatīhi vivadanti, mātāpi puttena vivadati, puttopi mātarā vivadati, pitāpi puttena vivadati, puttopi pitarā vivadati, bhātāpi bhaginiyā vivadati, bhaginīpi bhātarā vivadati, sahāyopi sahāyena vivadati. Idha panāhaṁ, bhante, bhikkhū passāmi samagge sammodamāne avivadamāne khīrodakībhūte aññamaññaṁ piyacakkhūhi sampassante viharante. Na kho panāhaṁ, bhante, ito bahiddhā aññaṁ evaṁ samaggaṁ parisaṁ samanupassāmi. Ayampi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṅgho’ti.</p>
+
+<p><span class="parno">6</span>Puna caparāhaṁ, bhante, ārāmena ārāmaṁ, uyyānena uyyānaṁ anucaṅkamāmi anuvicarāmi. Sohaṁ tattha passāmi eke samaṇabrāhmaṇe kise lūkhe dubbaṇṇe uppaṇḍuppaṇḍukajāte dhamanisanthatagatte, na viya maññe cakkhuṁ bandhante janassa dassanāya. Tassa mayhaṁ, bhante, etadahosi: ‘addhā ime āyasmanto anabhiratā vā brahmacariyaṁ caranti, atthi vā tesaṁ kiñci pāpaṁ kammaṁ kataṁ paṭicchannaṁ; tathā hi ime āyasmanto kisā lūkhā dubbaṇṇā uppaṇḍuppaṇḍukajātā dhamanisanthatagattā, na viya maññe cakkhuṁ bandhanti janassa dassanāyā’ti. Tyāhaṁ upasaṅkamitvā evaṁ vadāmi: ‘kiṁ nu kho tumhe āyasmanto kisā lūkhā dubbaṇṇā uppaṇḍuppaṇḍukajātā dhamanisanthatagattā, na viya maññe cakkhuṁ bandhatha janassa dassanāyā’ti? Te evamāhaṁsu: ‘<span class="var" title="paṇḍukarogino (mr)" id="note547">bandhukarogo no</span>, mahārājā’ti. Idha panāhaṁ, bhante, bhikkhū passāmi haṭṭhapahaṭṭhe udaggudagge abhiratarūpe <span class="var" title="pīṇitindriyā (bj) | pīṇitindriye (pts1)" id="note548">pīṇindriye</span> appossukke pannalome paradattavutte migabhūtena cetasā viharante. Tassa mayhaṁ, bhante, etadahosi: ‘addhā ime āyasmanto tassa bhagavato sāsane uḷāraṁ pubbenāparaṁ visesaṁ jānanti; tathā hi ime āyasmanto haṭṭhapahaṭṭhā udaggudaggā abhiratarūpā pīṇindriyā appossukkā pannalomā paradattavuttā migabhūtena cetasā viharantī’ti. Ayampi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṁgho’ti.</p>
+
+<p><span class="parno">7</span>Puna caparāhaṁ, bhante, rājā khattiyo muddhāvasitto; pahomi ghātetāyaṁ vā ghātetuṁ, jāpetāyaṁ vā jāpetuṁ, pabbājetāyaṁ vā pabbājetuṁ. Tassa mayhaṁ, bhante, aḍḍakaraṇe nisinnassa antarantarā kathaṁ opātenti. Sohaṁ na labhāmi: ‘mā me bhonto aḍḍakaraṇe nisinnassa antarantarā kathaṁ <span class="var" title="opātentu (si)" id="note549">opātetha</span>, kathāpariyosānaṁ me bhonto āgamentū’ti. Tassa mayhaṁ, bhante, antarantarā kathaṁ opātenti. Idha panāhaṁ, bhante, bhikkhū passāmi; yasmiṁ samaye bhagavā anekasatāya parisāya dhammaṁ deseti, neva tasmiṁ samaye bhagavato sāvakānaṁ khipitasaddo vā hoti ukkāsitasaddo vā. Bhūtapubbaṁ, bhante, bhagavā anekasatāya parisāya dhammaṁ deseti. Tatraññataro bhagavato sāvako ukkāsi. Tamenaṁ aññataro sabrahmacārī jaṇṇukena ghaṭṭesi: ‘appasaddo āyasmā hotu, māyasmā saddamakāsi; satthā no bhagavā dhammaṁ desetī’ti. Tassa mayhaṁ, bhante, etadahosi: ‘acchariyaṁ vata bho, abbhutaṁ vata bho. Adaṇḍena vata kira, bho, asatthena evaṁ suvinītā parisā bhavissatī’ti. Na kho panāhaṁ, bhante, ito bahiddhā aññaṁ evaṁ suvinītaṁ parisaṁ samanupassāmi. Ayampi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṁgho’ti.</p>
+
+<p><span class="parno">8</span>Puna caparāhaṁ, bhante, passāmi idhekacce khattiyapaṇḍite nipuṇe kataparappavāde vālavedhirūpe. Te <span class="var" title="vobhindantā (bj)" id="note550">bhindantā</span> maññe caranti paññāgatena diṭṭhigatāni. Te suṇanti: ‘samaṇo khalu, bho, gotamo amukaṁ nāma gāmaṁ vā nigamaṁ vā osarissatī’ti. Te pañhaṁ abhisaṅkharonti: ‘imaṁ mayaṁ pañhaṁ samaṇaṁ gotamaṁ upasaṅkamitvā pucchissāma. Evañce no puṭṭho evaṁ byākarissati, evamassa mayaṁ vādaṁ āropessāma; evañcepi no puṭṭho evaṁ byākarissati, evampissa mayaṁ vādaṁ āropessāmā’ti. Te suṇanti: ‘samaṇo khalu, bho, gotamo amukaṁ nāma gāmaṁ vā nigamaṁ vā osaṭo’ti. Te yena bhagavā tenupasaṅkamanti. Te bhagavā dhammiyā kathāya sandasseti samādapeti samuttejeti sampahaṁseti. Te bhagavatā dhammiyā kathāya sandassitā samādapitā samuttejitā sampahaṁsitā na ceva bhagavantaṁ pañhaṁ pucchanti, kuto vādaṁ āropessanti? Aññadatthu bhagavato sāvakā sampajjanti. Ayampi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṁgho’ti.</p>
+
+<p><span class="parno">9</span>Puna caparāhaṁ, bhante, passāmi idhekacce brāhmaṇapaṇḍite … pe … samaṇapaṇḍite nipuṇe kataparappavāde vālavedhirūpe. Te bhindantā maññe caranti paññāgatena diṭṭhigatāni. Te suṇanti: ‘samaṇo khalu, bho, gotamo amukaṁ nāma gāmaṁ vā nigamaṁ vā osarissatī’ti. Te pañhaṁ abhisaṅkharonti: ‘imaṁ mayaṁ pañhaṁ samaṇaṁ gotamaṁ upasaṅkamitvā pucchissāma. Evañce no puṭṭho evaṁ byākarissati, evamassa mayaṁ vādaṁ āropessāma; evañcepi no puṭṭho evaṁ byākarissati, evampissa mayaṁ vādaṁ āropessāmā’ti. Te suṇanti: ‘samaṇo khalu, bho, gotamo amukaṁ nāma gāmaṁ vā nigamaṁ vā osaṭo’ti. Te yena bhagavā tenupasaṅkamanti. Te bhagavā dhammiyā kathāya sandasseti samādapeti samuttejeti sampahaṁseti. Te bhagavatā dhammiyā kathāya sandassitā samādapitā samuttejitā sampahaṁsitā na ceva bhagavantaṁ pañhaṁ pucchanti, kuto vādaṁ āropessanti? Aññadatthu bhagavantaṁyeva okāsaṁ yācanti agārasmā anagāriyaṁ pabbajjāya. Te bhagavā pabbājeti. Te tathāpabbajitā samānā ekā vūpakaṭṭhā appamattā ātāpino pahitattā viharantā nacirasseva — yassatthāya kulaputtā sammadeva agārasmā anagāriyaṁ pabbajanti, tadanuttaraṁ — brahmacariyapariyosānaṁ diṭṭheva dhamme sayaṁ abhiññā sacchikatvā upasampajja viharanti. Te evamāhaṁsu: ‘manaṁ vata, bho, anassāma; manaṁ vata, bho, panassāma’. Mayañhi pubbe assamaṇāva samānā samaṇāmhāti paṭijānimhā, abrāhmaṇāva samānā brāhmaṇāmhāti paṭijānimhā, anarahantova samānā arahantāmhāti paṭijānimhā. ‘Idāni khomha samaṇā, idāni khomha brāhmaṇā, idāni khomha arahanto’ti. Ayampi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṅgho’ti.</p>
+
+<p><span class="parno">10</span>Puna caparāhaṁ, bhante, ime isidattapurāṇā thapatayo mamabhattā mamayānā, ahaṁ nesaṁ <span class="var" title="jīvitassa (bj) | jīvikaṁ (bj-a) | jīvitaṁ (s1–3, km, pts1, mr)" id="note551">jīvikāya</span> dātā, yasassa āhattā; atha ca pana no tathā mayi nipaccakāraṁ karonti yathā bhagavati. Bhūtapubbāhaṁ, bhante, senaṁ abbhuyyāto samāno ime ca isidattapurāṇā thapatayo vīmaṁsamāno aññatarasmiṁ sambādhe āvasathe vāsaṁ upagacchiṁ. Atha kho, bhante, ime isidattapurāṇā thapatayo bahudeva rattiṁ dhammiyā <span class="var" title="assosuṁ kho bhagavantaṁ (s1–3, km, pts1)" id="note552">kathāya vītināmetvā, yato ahosi bhagavā</span> tato sīsaṁ katvā maṁ pādato karitvā nipajjiṁsu. Tassa mayhaṁ, bhante, etadahosi: ‘acchariyaṁ vata bho, abbhutaṁ vata bho. Ime isidattapurāṇā thapatayo mamabhattā mamayānā, ahaṁ nesaṁ jīvikāya dātā, yasassa āhattā; atha ca pana no tathā mayi nipaccakāraṁ karonti yathā bhagavati. Addhā ime āyasmanto tassa bhagavato sāsane uḷāraṁ pubbenāparaṁ visesaṁ jānantī’ti. Ayampi kho me, bhante, bhagavati dhammanvayo hoti: ‘sammāsambuddho bhagavā, svākkhāto bhagavatā dhammo, suppaṭipanno bhagavato sāvakasaṁgho’ti.</p>
+
+<p><span class="parno">11</span>Puna caparaṁ, bhante, bhagavāpi khattiyo, ahampi khattiyo; bhagavāpi kosalo, ahampi kosalo; bhagavāpi āsītiko, ahampi āsītiko. Yampi, bhante, bhagavāpi khattiyo ahampi khattiyo, bhagavāpi kosalo ahampi kosalo, bhagavāpi āsītiko ahampi āsītiko; <span class="var" title="imināpāhaṁ (mr)" id="note553">imināvārahāmevāhaṁ</span>, bhante, bhagavati paramanipaccakāraṁ kātuṁ, mittūpahāraṁ upadaṁsetuṁ.</p>
+
+<hr>
+
+<p>Handa ca dāni mayaṁ, bhante, gacchāma; bahukiccā mayaṁ bahukaraṇīyā"ti.</p>
+
+<p>"Yassadāni tvaṁ, mahārāja, kālaṁ maññasī"ti.</p>
+
+
+<p>Atha kho rājā pasenadi kosalo uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi.</p>
+
+<p><span class="parno">12</span>Atha kho bhagavā acirapakkantassa rañño pasenadissa kosalassa bhikkhū āmantesi: "eso, bhikkhave, rājā pasenadi kosalo dhammacetiyāni bhāsitvā uṭṭhāyāsanā pakkanto. Uggaṇhatha, bhikkhave, dhammacetiyāni; pariyāpuṇātha, bhikkhave, dhammacetiyāni; dhāretha, bhikkhave, dhammacetiyāni. Atthasaṁhitāni, bhikkhave, dhammacetiyāni ādibrahmacariyakānī"ti.</p>
+
+<p><span class="parno">13</span>Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṁ abhinandunti.</p>
+
+<p class="endsutta">Dhammacetiyasuttaṁ niṭṭhitaṁ navamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn88.html#content"></a><a id="next-sutta" href="./mn90.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN89: Dhammacetiyasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

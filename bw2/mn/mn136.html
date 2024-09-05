@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 136</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN136: Mahākammavibhaṅgasutta - The Longer Analysis of Deeds</h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn136">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was staying near Rājagaha, in the Bamboo Grove, the squirrels’ feeding ground.</p>
+
+<p>Now at that time Venerable Samiddhi was staying in a wilderness hut. Then as the wanderer Potaliputta was going for a walk he came up to Venerable Samiddhi and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side and said to him:</p>
+
+<p>“Reverend Samiddhi, I have heard and learned this in the presence of the ascetic Gotama: ‘Deeds by way of body and speech are done in vain. Only mental deeds are real.’ And: ‘There is such an attainment where the one who enters it does not feel anything at all.’”</p>
+
+<p>“Don’t say that, Reverend Potaliputta, don’t say that! Don’t misrepresent the Buddha, for misrepresentation of the Buddha is not good. And the Buddha would not say this. But, reverend, there is such an attainment where the one who enters it does not feel anything at all.”</p>
+
+<p>“Reverend Samiddhi, how long has it been since you went forth?”</p>
+
+<p>“Not long, reverend: three years.”</p>
+
+<hr>
+
+<p>“Well now, what are we to say to the senior mendicants, when even such a junior mendicant imagines their Teacher needs defending? After doing an intentional deed by way of body, speech, or mind, reverend, what does one feel?”</p>
+
+<p>“After doing an intentional deed by way of body, speech, or mind, reverend, one feels suffering.” </p>
+
+<p>Then, neither approving nor dismissing Samiddhi’s statement, Potaliputta got up from his seat and left.</p>
+
+<hr>
+
+<p id="p2"><span class="parno">2</span>Soon after he had left, Venerable Samiddhi went to Venerable Ānanda, and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side, and informed Ānanda of all they had discussed.</p>
+
+<p id="p3"><span class="parno">3</span>When he had spoken, Ānanda said to him: “Reverend Samiddhi, we should see the Buddha about this matter. Come, let’s go to the Buddha and inform him about this. As he answers, so we’ll remember it.”</p>
+
+<p>“Yes, reverend,” Samiddhi replied.</p>
+
+<hr>
+
+<p id="p4"><span class="parno">4</span>Then Ānanda and Samiddhi went up to the Buddha, bowed, sat down to one side, and told him what had happened.</p>
+
+<hr>
+
+<p>When they had spoken, the Buddha said to Ānanda: “I don’t recall even seeing the wanderer Potaliputta, Ānanda, so how could we have had such a discussion? The wanderer Potaliputta’s question should have been answered after analyzing it, but this foolish person answered with a generalization.”</p>
+
+<p>When he said this, Venerable Udāyī said to him: “But perhaps, sir, Venerable Samiddhi spoke in reference to the statement: ‘Suffering includes whatever is felt.’”</p>
+
+<hr>
+
+<p id="p5"><span class="parno">5</span>But the Buddha said to Venerable Ānanda: “See how this foolish person Udāyī comes up with an idea? I knew that he was going to come up with such an irrational idea. Right from the start Potaliputta asked about the three feelings. Suppose the foolish person Samiddhi had answered the wanderer Potaliputta’s question like this: ‘After doing an intentional deed to be experienced as pleasant by way of body, speech, or mind, one feels pleasure. After doing an intentional deed to be experienced as painful by way of body, speech, or mind, one feels pain. After doing an intentional deed to be experienced as neutral by way of body, speech, or mind, one feels neutral.’ Answering in this way, Samiddhi would have rightly answered Potaliputta.</p>
+
+<p>Still, who are those foolish and incompetent wanderers who follow other paths to understand the Realized One’s great analysis of deeds? Ānanda, if only you would all listen to the Realized One’s explanation of the great analysis of deeds.”</p>
+
+<hr>
+
+<p id="p6"><span class="parno">6</span>“Now is the time, Blessed One! Now is the time, Holy One! Let the Buddha explain the great analysis of deeds. The mendicants will listen and remember it.”</p>
+
+<p>“Well then, Ānanda, listen and pay close attention, I will speak.”</p>
+
+<p>“Yes, sir,” Ānanda replied. The Buddha said this:</p>
+
+<hr>
+
+<p id="p7"><span class="parno">7</span>“Ānanda, these four people are found in the world. What four? Some person here kills living creatures, steals, and commits sexual misconduct. They use speech that’s false, divisive, harsh, or nonsensical. And they’re covetous, malicious, and have wrong view. When their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell.</p>
+
+<p id="p8"><span class="parno">8</span>But some other person here kills living creatures, steals, and commits sexual misconduct. They use speech that’s false, divisive, harsh, or nonsensical. And they’re covetous, malicious, and have wrong view. When their body breaks up, after death, they’re reborn in a good place, a heavenly realm.</p>
+
+<p id="p9"><span class="parno">9</span>But some other person here refrains from killing living creatures, stealing, committing sexual misconduct, or using speech that’s false, divisive, harsh, or nonsensical. And they’re contented, kind-hearted, and have right view. When their body breaks up, after death, they’re reborn in a good place, a heavenly realm.</p>
+
+<p id="p10"><span class="parno">10</span>But some other person here refrains from killing living creatures, stealing, committing sexual misconduct, or using speech that’s false, divisive, harsh, or nonsensical. And they’re contented, kind-hearted, and have right view. When their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell.</p>
+
+<p id="p11"><span class="parno">11</span>Now, some ascetic or brahmin — by dint of keen, resolute, committed, and diligent effort, and right focus — experiences an immersion of the heart of such a kind that it gives rise to clairvoyance that is purified and superhuman. With that clairvoyance they see that person here who killed living creatures, stole, and committed sexual misconduct; who used speech that’s false, divisive, harsh, or nonsensical; and who was covetous, malicious, and had wrong view. And they see that, when their body breaks up, after death, that person is reborn in a place of loss, a bad place, the underworld, hell. They say: ‘It seems that there is such a thing as bad deeds, and the result of bad conduct. For I saw a person here who killed living creatures … and had wrong view. And when their body broke up, after death, they were reborn in a place of loss, a bad place, the underworld, hell.’ They say: ‘It seems that everyone who kills living creatures … and has wrong view is reborn in hell. Those who know this are right. Those who know something else are wrong.’ And so they obstinately stick to what they have known, seen, and understood for themselves, insisting that: ‘This is the only truth, other ideas are silly.’</p>
+
+<p id="p12"><span class="parno">12</span>But some other ascetic or brahmin — by dint of keen, resolute, committed, and diligent effort, and right focus — experiences an immersion of the heart of such a kind that it gives rise to clairvoyance that is purified and superhuman. With that clairvoyance they see that person here who killed living creatures … and had wrong view. And they see that that person is reborn in a heavenly realm. They say: ‘It seems that there is no such thing as bad deeds, and the result of bad conduct. For I have seen a person here who killed living creatures … and had wrong view. And I saw that that person was reborn in a heavenly realm.’ They say: ‘It seems that everyone who kills living creatures … and has wrong view is reborn in a heavenly realm. Those who know this are right. Those who know something else are wrong.’ And so they obstinately stick to what they have known, seen, and understood for themselves, insisting that: ‘This is the only truth, other ideas are silly.’</p>
+
+<p id="p13"><span class="parno">13</span>Take some ascetic or brahmin who with clairvoyance sees a person here who refrained from killing living creatures … and had right view. And they see that that person is reborn in a heavenly realm. They say: ‘It seems that there is such a thing as good deeds, and the result of good conduct. For I have seen a person here who refrained from killing living creatures … and had right view. And I saw that that person was reborn in a heavenly realm.’ They say: ‘It seems that everyone who refrains from killing living creatures … and has right view is reborn in a heavenly realm. Those who know this are right. Those who know something else are wrong.’ And so they obstinately stick to what they have known, seen, and understood for themselves, insisting that: ‘This is the only truth, other ideas are silly.’</p>
+
+<p id="p14"><span class="parno">14</span>Take some ascetic or brahmin who with clairvoyance sees a person here who refrained from killing living creatures … and had right view. And they see that that person is reborn in hell. They say: ‘It seems that there is no such thing as good deeds, and the result of good conduct. For I have seen a person here who refrained from killing living creatures … and had right view. And I saw that that person was reborn in hell.’ They say: ‘It seems that everyone who refrains from killing living creatures … and has right view is reborn in hell. Those who know this are right. Those who know something else are wrong.’ And so they obstinately stick to what they have known, seen, and understood for themselves, insisting that: ‘This is the only truth, other ideas are silly.’</p>
+
+<p id="p15"><span class="parno">15</span>In this case, when an ascetic or brahmin says this: ‘It seems that there is such a thing as bad deeds, and the result of bad conduct,’ I grant them that. And when they say: ‘I have seen a person here who killed living creatures … and had wrong view. And after death, they were reborn in hell,’ I also grant them that. But when they say: ‘It seems that everyone who kills living creatures … and has wrong view is reborn in hell,’ I don’t grant them that. And when they say: ‘Those who know this are right. Those who know something else are wrong,’ I also don’t grant them that. And when they obstinately stick to what they have known, seen, and understood for themselves, insisting that: ‘This is the only truth, other ideas are silly,’ I also don’t grant them that. Why is that? Because the Realized One’s knowledge of the great analysis of deeds is otherwise.</p>
+
+<p id="p16"><span class="parno">16</span>In this case, when an ascetic or brahmin says this: ‘It seems that there is no such thing as bad deeds, and the result of bad conduct,’ I don’t grant them that. But when they say: ‘I have seen a person here who killed living creatures … and had wrong view. And I saw that that person was reborn in a heavenly realm,’ I grant them that. But when they say: ‘It seems that everyone who kills living creatures … and has wrong view is reborn in a heavenly realm,’ I don’t grant them that. … Because the Realized One’s knowledge of the great analysis of deeds is otherwise.</p>
+
+<p id="p17"><span class="parno">17</span>In this case, when an ascetic or brahmin says this: ‘It seems that there is such a thing as good deeds, and the result of good conduct,’ I grant them that. And when they say: ‘I have seen a person here who refrained from killing living creatures … and had right view. And I saw that that person was reborn in a heavenly realm,’ I grant them that. But when they say: ‘It seems that everyone who refrains from killing living creatures … and has right view is reborn in a heavenly realm,’ I don’t grant them that. … Because the Realized One’s knowledge of the great analysis of deeds is otherwise.</p>
+
+<p id="p18"><span class="parno">18</span>In this case, when an ascetic or brahmin says this: ‘It seems that there is no such thing as good deeds, and the result of good conduct,’ I don’t grant them that. But when they say: ‘I have seen a person here who refrained from killing living creatures … and had right view. And after death, they were reborn in hell,’ I grant them that. But when they say: ‘It seems that everyone who refrains from killing living creatures … and has right view is reborn in hell,’ I don’t grant them that. But when they say: ‘Those who know this are right. Those who know something else are wrong,’ I also don’t grant them that. And when they obstinately stick to what they have known, seen, and understood for themselves, insisting that: ‘This is the only truth, other ideas are silly,’ I also don’t grant them that. Why is that? Because the Realized One’s knowledge of the great analysis of deeds is otherwise.</p>
+
+<p id="p19"><span class="parno">19</span>Now, Ānanda, take the case of the person here who killed living creatures … and had wrong view, and who, when their body breaks up, after death, is reborn in a place of loss, a bad place, the underworld, hell. They must have done a bad deed to be experienced as painful either previously or later, or else at the time of death they undertook wrong view. And that’s why, when their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell. But anyone here who kills living creatures … and has wrong view experiences the result of that in the present life, or in the next life, or in some subsequent period.</p>
+
+<p id="p20"><span class="parno">20</span>Now, Ānanda, take the case of the person here who killed living creatures … and had wrong view, and who is reborn in a heavenly realm. They must have done a good deed to be experienced as pleasant either previously or later, or else at the time of death they undertook right view. And that’s why, when their body breaks up, after death, they’re reborn in a good place, a heavenly realm. But anyone here who kills living creatures … and has wrong view experiences the result of that in the present life, or in the next life, or in some subsequent period.</p>
+
+<p id="p21"><span class="parno">21</span>Now, Ānanda, take the case of the person here who refrained from killing living creatures … and had right view, and who is reborn in a heavenly realm. They must have done a good deed to be experienced as pleasant either previously or later, or else at the time of death they undertook right view. And that’s why, when their body breaks up, after death, they’re reborn in a good place, a heavenly realm. But anyone here who refrains from killing living creatures … and has right view experiences the result of that in the present life, or in the next life, or in some subsequent period.</p>
+
+<p id="p22"><span class="parno">22</span>Now, Ānanda, take the case of the person here who refrained from killing living creatures … and had right view, and who is reborn in hell. They must have done a bad deed to be experienced as painful either previously or later, or else at the time of death they undertook wrong view. And that’s why, when their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell. But anyone here who refrains from killing living creatures … and has right view experiences the result of that in the present life, or in the next life, or in some subsequent period.</p>
+
+<p id="p23"><span class="parno">23</span>So, Ānanda, there are deeds that are ineffective and appear ineffective. There are deeds that are ineffective but appear effective. There are deeds that are effective and appear effective. And there are deeds that are effective but appear ineffective.”</p>
+
+<hr>
+
+<p id="p24"><span class="parno">24</span>That is what the Buddha said. Satisfied, Venerable Ānanda was happy with what the Buddha said.</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe.</p>
+
+<p>Tena kho pana samayena āyasmā samiddhi araññakuṭikāyaṁ viharati. Atha kho potaliputto paribbājako jaṅghāvihāraṁ anucaṅkamamāno anuvicaramāno yenāyasmā samiddhi tenupasaṅkami; upasaṅkamitvā āyasmatā samiddhinā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho potaliputto paribbājako āyasmantaṁ samiddhiṁ etadavoca:</p>
+
+<p>"sammukhā metaṁ, āvuso samiddhi, samaṇassa gotamassa sutaṁ, sammukhā paṭiggahitaṁ: ‘moghaṁ kāyakammaṁ moghaṁ vacīkammaṁ, manokammameva saccan’ti. <span class="var" title="atthi cesā (mr)" id="note425">Atthi ca sā</span> samāpatti yaṁ samāpattiṁ samāpanno na kiñci vediyatī"ti?</p>
+
+<p>"Mā hevaṁ, āvuso potaliputta, avaca;<q class="open" id="note426" title=" idaṁ vākyaṁ syā1–3, kaṁ potthakesu"> mā hevaṁ, āvuso potaliputta, avaca</q>; mā bhagavantaṁ abbhācikkhi. Na hi sādhu bhagavato abbhakkhānaṁ. Na hi bhagavā evaṁ vadeyya: ‘moghaṁ kāyakammaṁ moghaṁ vacīkammaṁ, manokammameva saccan’ti. ‘<span class="var" title="atthi ceva kho (mr)" id="note428">Atthi ca kho</span> sā, āvuso, samāpatti yaṁ samāpattiṁ samāpanno na kiñci vediyatī’"ti.</p>
+
+<p>"Kīvaciraṁ pabbajitosi, āvuso samiddhī"ti?</p>
+
+<p>"Na ciraṁ, āvuso, tīṇi vassānī"ti.</p>
+
+<hr>
+
+<p>"Ettha dāni mayaṁ there bhikkhū kiṁ vakkhāma, yatra hi <span class="var" title="nāmevaṁ navo bhikkhu (bj) | navakena bhikkhunā (mr)" id="note429">nāma evaṁnavo bhikkhu</span> satthāraṁ parirakkhitabbaṁ maññissati. Sañcetanikaṁ, āvuso samiddhi, kammaṁ katvā kāyena vācāya manasā kiṁ so vediyatī"ti?</p>
+
+<p>"Sañcetanikaṁ, āvuso potaliputta, kammaṁ katvā kāyena vācāya manasā dukkhaṁ so vediyatī"ti.</p>
+
+<p>Atha kho potaliputto paribbājako āyasmato samiddhissa bhāsitaṁ neva abhinandi nappaṭikkosi; anabhinanditvā appaṭikkositvā uṭṭhāyāsanā pakkāmi.</p>
+
+<hr>
+
+<p><span class="parno">2</span>Atha kho āyasmā samiddhi acirapakkante potaliputte paribbājake yenāyasmā ānando tenupasaṅkami; upasaṅkamitvā āyasmatā ānandena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā samiddhi yāvatako ahosi potaliputtena paribbājakena saddhiṁ kathāsallāpo taṁ sabbaṁ āyasmato ānandassa ārocesi.</p>
+
+<p><span class="parno">3</span>Evaṁ vutte, āyasmā ānando āyasmantaṁ samiddhiṁ etadavoca: "atthi kho idaṁ, āvuso samiddhi, kathāpābhataṁ bhagavantaṁ dassanāya. Āyāmāvuso samiddhi, yena bhagavā tenupasaṅkamissāma; upasaṅkamitvā etamatthaṁ bhagavato ārocessāma. Yathā no bhagavā byākarissati tathā naṁ dhāressāmā"ti. </p>
+
+<p>"Evamāvuso"ti kho āyasmā samiddhi āyasmato ānandassa paccassosi.</p>
+
+<hr>
+
+<p><span class="parno">4</span>Atha kho āyasmā ca ānando āyasmā ca samiddhi yena bhagavā tenupasaṅkamiṁsu; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdiṁsu. Ekamantaṁ nisinno kho āyasmā ānando yāvatako ahosi āyasmato samiddhissa potaliputtena paribbājakena saddhiṁ kathāsallāpo taṁ sabbaṁ bhagavato ārocesi.</p>
+
+<hr>
+
+<p>Evaṁ vutte, bhagavā āyasmantaṁ ānandaṁ etadavoca: "dassanampi kho ahaṁ, ānanda, potaliputtassa paribbājakassa nābhijānāmi, kuto panevarūpaṁ kathāsallāpaṁ? Iminā ca, ānanda, samiddhinā moghapurisena potaliputtassa paribbājakassa vibhajjabyākaraṇīyo pañho ekaṁsena byākato"ti.</p>
+
+<p>Evaṁ vutte, āyasmā udāyī bhagavantaṁ etadavoca: "<span class="var" title="Kiṁ pana (mr)" id="note430">sace pana</span>, bhante, āyasmatā samiddhinā idaṁ sandhāya bhāsitaṁ — yaṁ kiñci vedayitaṁ taṁ dukkhasmin"ti.</p>
+
+<hr>
+
+<p><span class="parno">5</span><span class="var" title="evaṁ vutte (s1–3, km)" id="note431">Atha kho</span> bhagavā āyasmantaṁ ānandaṁ āmantesi: "passasi no tvaṁ, ānanda, imassa udāyissa moghapurisassa <span class="var" title="ummaggaṁ (bj, s1–3, km, pts1) | umaṅgaṁ (mr)" id="note432">ummaṅgaṁ</span>? Aññāsiṁ kho ahaṁ, ānanda: ‘idānevāyaṁ udāyī moghapuriso ummujjamāno ayoniso ummujjissatī’ti. <span class="var" title="ādisova (pts1) | ādiyeva (mr)" id="note433">Ādiṁyeva</span>, ānanda, potaliputtena paribbājakena tisso vedanā pucchitā. Sacāyaṁ, ānanda, samiddhi moghapuriso potaliputtassa paribbājakassa evaṁ puṭṭho evaṁ byākareyya: ‘sañcetanikaṁ, āvuso potaliputta, kammaṁ katvā kāyena vācāya manasā sukhavedanīyaṁ sukhaṁ so vedayati; sañcetanikaṁ, āvuso potaliputta, kammaṁ katvā kāyena vācāya manasā dukkhavedanīyaṁ dukkhaṁ so vedayati; sañcetanikaṁ, āvuso potaliputta, kammaṁ katvā kāyena vācāya manasā adukkhamasukhavedanīyaṁ adukkhamasukhaṁ so vedayatī’ti. Evaṁ byākaramāno kho, ānanda, samiddhi moghapuriso potaliputtassa paribbājakassa sammā <span class="var" title="idaṁ padaṁ bj, s1–3, km, pts1 potthakesu" id="note434">byākaramāno</span> byākareyya. </p>
+
+<p>Api ca, ānanda, ke <span class="var" title="keci (mr)" id="note435">ca</span> aññatitthiyā paribbājakā bālā abyattā ke <span class="var" title="keci (mr)" id="note436">ca</span> tathāgatassa mahākammavibhaṅgaṁ jānissanti? Sace tumhe, ānanda, suṇeyyātha tathāgatassa mahākammavibhaṅgaṁ vibhajantassā"ti.</p>
+
+<hr>
+
+<p><span class="parno">6</span>"Etassa, bhagavā, kālo, etassa, sugata, kālo yaṁ bhagavā mahākammavibhaṅgaṁ vibhajeyya. Bhagavato sutvā bhikkhū dhāressantī"ti.</p>
+
+<p>"Tena hānanda, suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī"ti.</p>
+
+<p>"Evaṁ, bhante"ti kho āyasmā ānando bhagavato paccassosi. Bhagavā etadavoca: </p>
+
+<hr>
+
+<p><span class="parno">7</span>"Cattārome, ānanda, puggalā santo saṁvijjamānā lokasmiṁ. Katame cattāro? Idhānanda, ekacco puggalo idha pāṇātipātī hoti, adinnādāyī hoti, kāmesumicchācārī hoti, musāvādī hoti, pisuṇavāco hoti, pharusavāco hoti, samphappalāpī hoti, abhijjhālu hoti, byāpannacitto hoti, micchādiṭṭhi hoti. So kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. <span class="brnum">(1)</span></p>
+
+<p><span class="parno">8</span>Idha panānanda, ekacco puggalo idha pāṇātipātī hoti, adinnādāyī hoti, kāmesumicchācārī hoti, musāvādī hoti, pisuṇavāco hoti, pharusavāco hoti, samphappalāpī hoti, abhijjhālu hoti, byāpannacitto hoti, micchādiṭṭhi hoti. So kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">9</span>Idhānanda, ekacco puggalo idha pāṇātipātā paṭivirato hoti, adinnādānā paṭivirato hoti, kāmesumicchācārā paṭivirato hoti, musāvādā paṭivirato hoti, pisuṇāya vācāya paṭivirato hoti, pharusāya vācāya paṭivirato hoti, samphappalāpā paṭivirato hoti, anabhijjhālu hoti, abyāpannacitto hoti, sammādiṭṭhi hoti. So kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">10</span>Idha panānanda, ekacco puggalo idha pāṇātipātā paṭivirato hoti, adinnādānā paṭivirato hoti, kāmesumicchācārā paṭivirato hoti, musāvādā paṭivirato hoti, pisuṇāya vācāya paṭivirato hoti, pharusāya vācāya paṭivirato hoti, samphappalāpā paṭivirato hoti, anabhijjhālu hoti, abyāpannacitto hoti, sammādiṭṭhi hoti. So kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. <span class="brnum">(4)</span></p>
+
+<p><span class="parno">11</span>Idhānanda, ekacco samaṇo vā brāhmaṇo vā ātappamanvāya padhānamanvāya anuyogamanvāya appamādamanvāya sammāmanasikāramanvāya tathārūpaṁ cetosamādhiṁ phusati yathāsamāhite citte dibbena cakkhunā visuddhena atikkantamānusakena amuṁ puggalaṁ passati — idha pāṇātipātiṁ adinnādāyiṁ kāmesumicchācāriṁ musāvādiṁ pisuṇavācaṁ pharusavācaṁ samphappalāpiṁ abhijjhāluṁ byāpannacittaṁ micchādiṭṭhiṁ kāyassa bhedā paraṁ maraṇā passati apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannaṁ. So evamāha: ‘atthi kira, bho, pāpakāni kammāni, atthi duccaritassa vipāko. <span class="var" title="apāhaṁ (bj, pts1, mr)" id="note437">Amāhaṁ</span> puggalaṁ addasaṁ idha pāṇātipātiṁ adinnādāyiṁ … pe … micchādiṭṭhiṁ kāyassa bhedā paraṁ maraṇā passāmi apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannan’ti. So evamāha: ‘yo kira, bho, pāṇātipātī adinnādāyī … pe … micchādiṭṭhi, sabbo so kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Ye evaṁ jānanti, te sammā jānanti; ye aññathā jānanti, <span class="var" title="micchā te sañjānanti (mr)" id="note438">micchā tesaṁ ñāṇan’ti</span>. Iti so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā <span class="var" title="parāmassa (bj, pts1)" id="note439">parāmāsā</span> abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti. <span class="brnum">(1)</span></p>
+
+<p><span class="parno">12</span>Idha panānanda, ekacco samaṇo vā brāhmaṇo vā ātappamanvāya padhānamanvāya anuyogamanvāya appamādamanvāya sammāmanasikāramanvāya tathārūpaṁ cetosamādhiṁ phusati yathāsamāhite citte dibbena cakkhunā visuddhena atikkantamānusakena amuṁ puggalaṁ passati — idha pāṇātipātiṁ adinnādāyiṁ … pe … micchādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passati sugatiṁ saggaṁ lokaṁ upapannaṁ. So evamāha: ‘Natthi kira, bho, pāpakāni kammāni, natthi duccaritassa vipāko. Amāhaṁ puggalaṁ addasaṁ — idha pāṇātipātiṁ adinnādāyiṁ … pe … micchādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passāmi sugatiṁ saggaṁ lokaṁ upapannan’ti. So evamāha: ‘yo kira, bho, pāṇātipātī adinnādāyī … pe … micchādiṭṭhi, sabbo so kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. Ye evaṁ jānanti te sammā jānanti; ye aññathā jānanti, micchā tesaṁ ñāṇan’ti. Iti so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā parāmāsā abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">13</span>Idhānanda, ekacco samaṇo vā brāhmaṇo vā ātappamanvāya padhānamanvāya anuyogamanvāya appamādamanvāya sammāmanasikāramanvāya tathārūpaṁ cetosamādhiṁ phusati yathāsamāhite citte dibbena cakkhunā visuddhena atikkantamānusakena amuṁ puggalaṁ passati — idha pāṇātipātā paṭivirataṁ adinnādānā paṭivirataṁ kāmesumicchācārā paṭivirataṁ musāvādā paṭivirataṁ pisuṇāya vācāya paṭivirataṁ pharusāya vācāya paṭivirataṁ samphappalāpā paṭivirataṁ anabhijjhāluṁ abyāpannacittaṁ sammādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passati sugatiṁ saggaṁ lokaṁ upapannaṁ. So evamāha: ‘atthi kira, bho, kalyāṇāni kammāni, atthi sucaritassa vipāko. Amāhaṁ puggalaṁ addasaṁ — idha pāṇātipātā paṭivirataṁ adinnādānā paṭivirataṁ … pe … sammādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passāmi sugatiṁ saggaṁ lokaṁ upapannan’ti. So evamāha: ‘yo kira, bho, pāṇātipātā paṭivirato adinnādānā paṭivirato … pe … sammādiṭṭhi sabbo so kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. Ye evaṁ jānanti te sammā jānanti; ye aññathā jānanti, micchā tesaṁ ñāṇan’ti. Iti so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā parāmāsā abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">14</span>Idha panānanda, ekacco samaṇo vā brāhmaṇo vā ātappamanvāya padhānamanvāya anuyogamanvāya appamādamanvāya sammāmanasikāramanvāya tathārūpaṁ cetosamādhiṁ phusati yathāsamāhite citte dibbena cakkhunā visuddhena atikkantamānusakena amuṁ puggalaṁ passati — idha pāṇātipātā paṭivirataṁ … pe … sammādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passati apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannaṁ. So evamāha: ‘Natthi kira, bho, kalyāṇāni kammāni, natthi sucaritassa vipāko. Amāhaṁ puggalaṁ addasaṁ — idha pāṇātipātā paṭivirataṁ adinnādānā paṭivirataṁ … pe … sammādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passāmi apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannan’ti. So evamāha: ‘yo kira, bho, pāṇātipātā paṭivirato adinnādānā paṭivirato … pe … sammādiṭṭhi, sabbo so kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Ye evaṁ jānanti te sammā jānanti; ye aññathā jānanti, micchā tesaṁ ñāṇan’ti. Iti so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā parāmāsā abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti. <span class="brnum">(4)</span></p>
+
+<p><span class="parno">15</span>Tatrānanda, yvāyaṁ samaṇo vā brāhmaṇo vā evamāha: ‘atthi kira, bho, pāpakāni kammāni, atthi duccaritassa vipāko’ti idamassa anujānāmi; yampi so evamāha: ‘amāhaṁ puggalaṁ addasaṁ — idha pāṇātipātiṁ adinnādāyiṁ … pe … micchādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passāmi apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannan’ti idampissa anujānāmi; yañca kho so evamāha: ‘yo kira, bho, pāṇātipātī adinnādāyī … pe … micchādiṭṭhi, sabbo so kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjatī’ti idamassa nānujānāmi; yampi so evamāha: ‘ye evaṁ jānanti te sammā jānanti; ye aññathā jānanti, micchā tesaṁ ñāṇan’ti idampissa nānujānāmi; yampi so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā parāmāsā abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti idampissa nānujānāmi. Taṁ kissa hetu? Aññathā hi, ānanda, tathāgatassa mahākammavibhaṅge ñāṇaṁ hoti. <span class="brnum">(1)</span></p>
+
+<p><span class="parno">16</span>Tatrānanda, yvāyaṁ samaṇo vā brāhmaṇo vā evamāha: ‘Natthi kira, bho, pāpakāni kammāni, natthi duccaritassa vipāko’ti idamassa nānujānāmi; yañca kho so evamāha: ‘amāhaṁ puggalaṁ addasaṁ — idha pāṇātipātiṁ adinnādāyiṁ … pe … micchādiṭṭhiṁ kāyassa bhedā paraṁ maraṇā passāmi sugatiṁ saggaṁ lokaṁ upapannan’ti idamassa anujānāmi; yañca kho so evamāha: ‘yo kira, bho, pāṇātipātī adinnādāyī … pe … micchādiṭṭhi, sabbo so kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjatī’ti idamassa nānujānāmi; yampi so evamāha: ‘ye evaṁ jānanti te sammā jānanti; ye aññathā jānanti, micchā tesaṁ ñāṇan’ti idampissa nānujānāmi; yampi so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā parāmāsā abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti idampissa nānujānāmi. Taṁ kissa hetu? Aññathā hi, ānanda, tathāgatassa mahākammavibhaṅge ñāṇaṁ hoti. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">17</span>Tatrānanda, yvāyaṁ samaṇo vā brāhmaṇo vā evamāha: ‘atthi kira, bho, kalyāṇāni kammāni, atthi sucaritassa vipāko’ti idamassa anujānāmi; yampi so evamāha: ‘amāhaṁ puggalaṁ addasaṁ — idha pāṇātipātā paṭivirataṁ adinnādānā paṭivirataṁ … pe … sammādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passāmi sugatiṁ saggaṁ lokaṁ upapannan’ti idampissa anujānāmi; yañca kho so evamāha: ‘yo kira, bho, pāṇātipātā paṭivirato adinnādānā paṭivirato … pe … sammādiṭṭhi, sabbo so kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjatī’ti idamassa nānujānāmi; yampi so evamāha: ‘ye evaṁ jānanti te sammā jānanti; ye aññathā jānanti, micchā tesaṁ ñāṇan’ti idampissa nānujānāmi; yampi so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā parāmāsā abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti idampissa nānujānāmi. Taṁ kissa hetu? Aññathā hi, ānanda, tathāgatassa mahākammavibhaṅge ñāṇaṁ hoti. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">18</span>Tatrānanda, yvāyaṁ samaṇo vā brāhmaṇo vā evamāha: ‘Natthi kira, bho, kalyāṇāni kammāni, natthi sucaritassa vipāko’ti idamassa nānujānāmi; yañca kho so evamāha: ‘amāhaṁ puggalaṁ addasaṁ — idha pāṇātipātā paṭivirataṁ adinnādānā paṭivirataṁ … pe … sammādiṭṭhiṁ, kāyassa bhedā paraṁ maraṇā passāmi apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapannan’ti idamassa anujānāmi; yañca kho so evamāha: ‘yo kira, bho, pāṇātipātā paṭivirato adinnādānā paṭivirato … pe … sammādiṭṭhi, sabbo so kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjatī’ti idamassa nānujānāmi; yañca kho so evamāha: ‘ye evaṁ jānanti te sammā jānanti; ye aññathā jānanti, micchā tesaṁ ñāṇan’ti idampissa nānujānāmi; yampi so yadeva tassa sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadeva tattha thāmasā parāmāsā abhinivissa voharati: ‘idameva saccaṁ, moghamaññan’ti idampissa nānujānāmi. Taṁ kissa hetu? Aññathā hi, ānanda, tathāgatassa mahākammavibhaṅge ñāṇaṁ hoti. <span class="brnum">(4)</span></p>
+
+<p><span class="parno">19</span>Tatrānanda, yvāyaṁ puggalo idha pāṇātipātī adinnādāyī … pe … micchādiṭṭhi, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, pubbe vāssa taṁ kataṁ hoti pāpakammaṁ dukkhavedanīyaṁ, pacchā vāssa taṁ kataṁ hoti pāpakammaṁ dukkhavedanīyaṁ, maraṇakāle vāssa hoti micchādiṭṭhi samattā samādinnā. Tena so kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Yañca kho so idha pāṇātipātī hoti adinnādāyī hoti … pe … micchādiṭṭhi hoti tassa diṭṭheva dhamme vipākaṁ paṭisaṁvedeti <span class="var" title="upapajje vā (bj, s1–3, km, mr ^an6.63#1 [63. Nibbedhikasutta]; ^an10.217#1 [217. Paṭhamasañcetanikasutta]) | uppajjaṁ vā (pts1)" id="note441">upapajja vā</span> apare vā pariyāye. <span class="brnum">(1)</span></p>
+
+<p><span class="parno">20</span>Tatrānanda, yvāyaṁ puggalo idha pāṇātipātī adinnādāyī … pe … micchādiṭṭhi kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, pubbe vāssa taṁ kataṁ hoti kalyāṇakammaṁ sukhavedanīyaṁ, pacchā vāssa taṁ kataṁ hoti kalyāṇakammaṁ sukhavedanīyaṁ, maraṇakāle vāssa hoti sammādiṭṭhi samattā samādinnā. Tena so kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. Yañca kho so idha pāṇātipātī hoti adinnādāyī hoti … pe … micchādiṭṭhi hoti tassa diṭṭheva dhamme vipākaṁ paṭisaṁvedeti upapajja vā apare vā pariyāye. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">21</span>Tatrānanda, yvāyaṁ puggalo idha pāṇātipātā paṭivirato adinnādānā paṭivirato … pe … sammādiṭṭhi, kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, pubbe vāssa taṁ kataṁ hoti kalyāṇakammaṁ sukhavedanīyaṁ, pacchā vāssa taṁ kataṁ hoti kalyāṇakammaṁ sukhavedanīyaṁ, maraṇakāle vāssa hoti sammādiṭṭhi samattā samādinnā. Tena so kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. Yañca kho so idha pāṇātipātā paṭivirato hoti adinnādānā paṭivirato hoti … pe … sammādiṭṭhi hoti, tassa diṭṭheva dhamme vipākaṁ paṭisaṁvedeti upapajja vā apare vā pariyāye. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">22</span>Tatrānanda, yvāyaṁ puggalo idha pāṇātipātā paṭivirato adinnādānā paṭivirato … pe … sammādiṭṭhi, kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, pubbe vāssa taṁ kataṁ hoti pāpakammaṁ dukkhavedanīyaṁ, pacchā vāssa taṁ kataṁ hoti pāpakammaṁ dukkhavedanīyaṁ, maraṇakāle vāssa hoti micchādiṭṭhi samattā samādinnā. Tena so kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Yañca kho so idha pāṇātipātā paṭivirato hoti, adinnādānā paṭivirato hoti … pe … sammādiṭṭhi hoti, tassa diṭṭheva dhamme vipākaṁ paṭisaṁvedeti upapajja vā apare vā pariyāye. <span class="brnum">(4)</span></p>
+
+<p><span class="parno">23</span>Iti kho, ānanda, atthi kammaṁ abhabbaṁ abhabbābhāsaṁ, atthi kammaṁ abhabbaṁ bhabbābhāsaṁ, atthi kammaṁ bhabbañceva bhabbābhāsañca, atthi kammaṁ bhabbaṁ abhabbābhāsan"ti.</p>
+
+<hr>
+
+<p><span class="parno">24</span>Idamavoca bhagavā. Attamano āyasmā ānando bhagavato bhāsitaṁ abhinandīti.</p>
+
+<p class="endsutta">Mahākammavibhaṅgasuttaṁ niṭṭhitaṁ chaṭṭhaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn135.html#content"></a><a id="next-sutta" href="./mn137.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN136: Mahākammavibhaṅgasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

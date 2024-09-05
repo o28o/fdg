@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 135</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN135: Cūḷakammavibhaṅgasutta - The Shorter Analysis of Deeds</h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn135">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p id="p1"><span class="parno">1</span>So I have heard. At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery.</p>
+
+<p>Then the brahmin student Subha, Todeyya’s son, approached the Buddha, and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side and said to the Buddha:</p>
+
+<p>“What is the cause, Master Gotama, what is the reason why even among those who are human beings some are seen to be inferior and superior? For people are seen who are short-lived and long-lived, sickly and healthy, ugly and beautiful, insignificant and illustrious, poor and rich, from low and eminent families, witless and wise. What is the reason why even among those who are human beings some are seen to be inferior and superior?”</p>
+
+<p>“Student, sentient beings are the owners of their deeds and heir to their deeds. Deeds are their womb, their relative, and their refuge. It is deeds that divide beings into inferior and superior.”</p>
+
+<p>“I don’t understand the meaning of what Master Gotama has said in brief, without explaining the details. Master Gotama, please teach me this matter in detail so I can understand the meaning.”</p>
+
+<hr>
+
+<p id="p4"><span class="parno">4</span>“Well then, student, listen and pay close attention, I will speak.”</p>
+
+<p>“Yes, sir,” replied Subha. The Buddha said this:</p>
+
+<hr>
+
+<p id="p5"><span class="parno">5</span>“Take some woman or man who kills living creatures. They’re violent, bloody-handed, a hardened killer, merciless to living beings. Because of undertaking such deeds, when their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell. If they’re not reborn in a place of loss, but return to the human realm, then wherever they’re reborn they’re short-lived. For killing living creatures is the path leading to a short lifespan.</p>
+
+<p id="p6"><span class="parno">6</span>But take some woman or man who gives up killing living creatures. They renounce the rod and the sword. They’re scrupulous and kind, living full of compassion for all living beings. Because of undertaking such deeds, when their body breaks up, after death, they’re reborn in a good place, a heavenly realm. If they’re not reborn in a heavenly realm, but return to the human realm, then wherever they’re reborn they’re long-lived. For not killing living creatures is the path leading to a long lifespan.</p>
+
+<p id="p7"><span class="parno">7</span>Take some woman or man who habitually hurts living creatures with a fist, stone, rod, or sword. Because of undertaking such deeds, after death they’re reborn in a place of loss … or if they return to the human realm, they’re sickly …</p>
+
+<p id="p8"><span class="parno">8</span>But take some woman or man who does not habitually hurt living creatures with a fist, stone, rod, or sword. Because of undertaking such deeds, after death they’re reborn in a heavenly realm … or if they return to the human realm, they’re healthy …</p>
+
+<p id="p9"><span class="parno">9</span>Take some woman or man who is irritable and bad-tempered. Even when lightly criticized they lose their temper, becoming annoyed, hostile, and hard-hearted, and displaying annoyance, hate, and bitterness. Because of undertaking such deeds, after death they’re reborn in a place of loss … or if they return to the human realm, they’re ugly …</p>
+
+<p id="p10"><span class="parno">10</span>But take some woman or man who isn’t irritable and bad-tempered. Even when heavily criticized, they don’t lose their temper, become annoyed, hostile, and hard-hearted, or display annoyance, hate, and bitterness. Because of undertaking such deeds, after death they’re reborn in a heavenly realm … or if they return to the human realm, they’re lovely …</p>
+
+<p id="p11"><span class="parno">11</span>Take some woman or man who is jealous. They envy, resent, and begrudge the possessions, honor, respect, reverence, homage, and veneration given to others. Because of undertaking such deeds, after death they’re reborn in a place of loss … or if they return to the human realm, they’re insignificant …</p>
+
+<hr>
+
+<p id="p12"><span class="parno">12</span>But take some woman or man who is not jealous … Because of undertaking such deeds, after death they’re reborn in a heavenly realm … or if they return to the human realm, they’re illustrious …</p>
+
+<p id="p13"><span class="parno">13</span>Take some woman or man who doesn’t give to ascetics or brahmins such things as food, drink, clothing, vehicles; garlands, perfumes, and makeup; and bed, house, and lighting. Because of undertaking such deeds, after death they’re reborn in a place of loss … or if they return to the human realm, they’re poor …</p>
+
+<p id="p14"><span class="parno">14</span>But take some woman or man who does give to ascetics or brahmins … Because of undertaking such deeds, after death they’re reborn in a heavenly realm … or if they return to the human realm, they’re rich …</p>
+
+<hr>
+
+<p id="p15"><span class="parno">15</span>Take some woman or man who is obstinate and vain. They don’t bow to those they should bow to. They don’t rise up for them, offer them a seat, make way for them, or honor, respect, esteem, or venerate those who are worthy of such. Because of undertaking such deeds, after death they’re reborn in a place of loss … or if they return to the human realm, they’re reborn in a low class family …</p>
+
+<p id="p16"><span class="parno">16</span>But take some woman or man who is not obstinate and vain … Because of undertaking such deeds, after death they’re reborn in a heavenly realm … or if they return to the human realm, they’re reborn in an eminent family …</p>
+
+<p id="p17"><span class="parno">17</span>Take some woman or man who doesn’t approach an ascetic or brahmin to ask: ‘Sir, what is skillful and what is unskillful? What is blameworthy and what is blameless? What should be cultivated and what should not be cultivated? What kind of action will lead to my lasting harm and suffering? Or what kind of action will lead to my lasting welfare and happiness?’ Because of undertaking such deeds, after death they’re reborn in a place of loss … or if they return to the human realm, they’re witless …</p>
+
+<hr>
+
+<p id="p18"><span class="parno">18</span>But take some woman or man who does approach an ascetic or brahmin to ask: ‘Sir, what is skillful and what is unskillful? What is blameworthy and what is blameless? What should be cultivated and what should not be cultivated? What kind of action will lead to my lasting harm and suffering? Or what kind of action will lead to my lasting welfare and happiness?’ Because of undertaking such deeds, when their body breaks up, after death, they’re reborn in a good place, a heavenly realm. If they’re not reborn in a heavenly realm, but return to the human realm, then wherever they’re reborn they’re very wise. For asking questions of ascetics or brahmins is the path leading to wisdom.</p>
+
+<hr>
+
+<p id="p19"><span class="parno">19</span>So it is the way people live that makes them how they are, whether short-lived or long lived, sickly or healthy, ugly or lovely, insignificant or illustrious, poor or rich, in a low class or eminent family, or witless or wise.</p>
+
+<hr>
+
+<p>Sentient beings are the owners of their deeds and heir to their deeds. Deeds are their womb, their relative, and their refuge. It is deeds that divide beings into inferior and superior.”</p>
+
+<hr>
+
+<p id="p20"><span class="parno">20</span>When he had spoken, Subha said to him: “Excellent, Master Gotama! Excellent! As if he were righting the overturned, or revealing the hidden, or pointing out the path to the lost, or lighting a lamp in the dark so people with good eyes can see what’s there, Master Gotama has made the Teaching clear in many ways. I go for refuge to Master Gotama, to the teaching, and to the mendicant Saṅgha. From this day forth, may Master Gotama remember me as a lay follower who has gone for refuge for life.”</p>
+</div>
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane, anāthapiṇḍikassa ārāme.</p>
+
+<p>Atha kho subho māṇavo todeyyaputto yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavatā saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho subho māṇavo todeyyaputto bhagavantaṁ etadavoca:</p>
+
+<p><span class="parno">2</span>"Ko nu kho, bho gotama, hetu ko paccayo yena manussānaṁyeva sataṁ manussabhūtānaṁ dissanti hīnappaṇītatā? Dissanti hi, bho gotama, manussā appāyukā, dissanti dīghāyukā; dissanti <span class="var" title="bahvābādhā (s1–3, km, mr)" id="note418">bavhābādhā</span>, dissanti appābādhā; dissanti dubbaṇṇā, dissanti vaṇṇavanto; dissanti appesakkhā, dissanti mahesakkhā; dissanti appabhogā, dissanti mahābhogā; dissanti nīcakulīnā, dissanti uccākulīnā; dissanti duppaññā, dissanti <span class="var" title="paññāvanto (bj, pts1)" id="note419">paññavanto</span>. Ko nu kho, bho gotama, hetu ko paccayo yena manussānaṁyeva sataṁ manussabhūtānaṁ dissanti hīnappaṇītatā"ti?</p>
+
+<p><span class="parno">3</span>"Kammassakā, māṇava, sattā kammadāyādā <span class="var" title="kammayoni kammabandhu (bj)" id="note421">kammayonī kammabandhū</span> kammappaṭisaraṇā. Kammaṁ satte vibhajati yadidaṁ — hīnappaṇītatāyā"ti.</p>
+
+<p>"Na kho ahaṁ imassa bhoto gotamassa saṁkhittena bhāsitassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ ājānāmi. Sādhu me bhavaṁ gotamo tathā dhammaṁ desetu yathā ahaṁ imassa bhoto gotamassa saṁkhittena bhāsitassa vitthārena atthaṁ avibhattassa vitthārena atthaṁ ājāneyyan"ti.</p>
+
+<hr>
+
+<p><span class="parno">4</span>"Tena hi, māṇava, suṇāhi, sādhukaṁ manasi karohi; bhāsissāmī"ti.</p>
+
+<p>"Evaṁ, bho"ti kho subho māṇavo todeyyaputto bhagavato paccassosi. Bhagavā etadavoca: </p>
+
+<hr>
+
+<p><span class="parno">5</span>"Idha, māṇava, ekacco itthī vā puriso vā pāṇātipātī hoti luddo lohitapāṇi hatapahate niviṭṭho <span class="var" title="sabbapāṇabhūtesu (bj, mr)" id="note422">adayāpanno pāṇabhūtesu</span>. So tena kammena evaṁ samattena evaṁ <span class="var" title="samādiṇṇena (pts1, mr)" id="note423">samādinnena</span> kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati appāyuko hoti. Appāyukasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — pāṇātipātī hoti luddo lohitapāṇi hatapahate niviṭṭho adayāpanno pāṇabhūtesu. <span class="brnum">(1)</span></p>
+
+<p><span class="parno">6</span>Idha pana, māṇava, ekacco itthī vā puriso vā pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti nihitadaṇḍo nihitasattho, lajjī dayāpanno sabbapāṇabhūtahitānukampī viharati. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati dīghāyuko hoti. Dīghāyukasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti nihitadaṇḍo nihitasattho, lajjī dayāpanno sabbapāṇabhūtahitānukampī viharati. <span class="brnum">(1)</span></p>
+
+<p><span class="parno">7</span>Idha, māṇava, ekacco itthī vā puriso vā sattānaṁ viheṭhakajātiko hoti, pāṇinā vā leḍḍunā vā daṇḍena vā satthena vā. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati bavhābādho hoti. Bavhābādhasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — sattānaṁ viheṭhakajātiko hoti pāṇinā vā leḍḍunā vā daṇḍena vā satthena vā. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">8</span>Idha pana, māṇava, ekacco itthī vā puriso vā sattānaṁ aviheṭhakajātiko hoti pāṇinā vā leḍḍunā vā daṇḍena vā satthena vā. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati appābādho hoti. Appābādhasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — sattānaṁ aviheṭhakajātiko hoti pāṇinā vā leḍḍunā vā daṇḍena vā satthena vā. <span class="brnum">(2)</span></p>
+
+<p><span class="parno">9</span>Idha, māṇava, ekacco itthī vā puriso vā kodhano hoti upāyāsabahulo. Appampi vutto samāno abhisajjati kuppati byāpajjati patiṭṭhīyati kopañca dosañca appaccayañca pātukaroti. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati dubbaṇṇo hoti. Dubbaṇṇasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — kodhano hoti upāyāsabahulo; appampi vutto samāno abhisajjati kuppati byāpajjati patiṭṭhīyati kopañca dosañca appaccayañca pātukaroti. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">10</span>Idha pana, māṇava, ekacco itthī vā puriso vā akkodhano hoti anupāyāsabahulo; bahumpi vutto samāno nābhisajjati na kuppati na byāpajjati na patiṭṭhīyati na kopañca dosañca appaccayañca pātukaroti. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati pāsādiko hoti. Pāsādikasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — akkodhano hoti anupāyāsabahulo; bahumpi vutto samāno nābhisajjati na kuppati na byāpajjati na patiṭṭhīyati na kopañca dosañca appaccayañca pātukaroti. <span class="brnum">(3)</span></p>
+
+<p><span class="parno">11</span>Idha, māṇava, ekacco itthī vā puriso vā issāmanako hoti; paralābhasakkāragarukāramānanavandanapūjanāsu issati upadussati issaṁ bandhati. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati appesakkho hoti. Appesakkhasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — issāmanako hoti; paralābhasakkāragarukāramānanavandanapūjanāsu issati upadussati issaṁ bandhati. <span class="brnum">(4)</span></p>
+
+<hr>
+
+<p><span class="parno">12</span>Idha pana, māṇava, ekacco itthī vā puriso vā anissāmanako hoti; paralābhasakkāragarukāramānanavandanapūjanāsu na issati na upadussati na issaṁ bandhati. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati mahesakkho hoti. Mahesakkhasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — anissāmanako hoti; paralābhasakkāragarukāramānanavandanapūjanāsu na issati na upadussati na issaṁ bandhati. <span class="brnum">(4)</span></p>
+
+<p><span class="parno">13</span>Idha, māṇava, ekacco itthī vā puriso vā na dātā hoti samaṇassa vā brāhmaṇassa vā annaṁ pānaṁ vatthaṁ yānaṁ mālāgandhavilepanaṁ seyyāvasathapadīpeyyaṁ. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati appabhogo hoti. Appabhogasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — na dātā hoti samaṇassa vā brāhmaṇassa vā annaṁ pānaṁ vatthaṁ yānaṁ mālāgandhavilepanaṁ seyyāvasathapadīpeyyaṁ. <span class="brnum">(5)</span></p>
+
+<p><span class="parno">14</span>Idha pana, māṇava, ekacco itthī vā puriso vā dātā hoti samaṇassa vā brāhmaṇassa vā annaṁ pānaṁ vatthaṁ yānaṁ mālāgandhavilepanaṁ seyyāvasathapadīpeyyaṁ. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati mahābhogo hoti. Mahābhogasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — dātā hoti samaṇassa vā brāhmaṇassa vā annaṁ pānaṁ vatthaṁ yānaṁ mālāgandhavilepanaṁ seyyāvasathapadīpeyyaṁ. <span class="brnum">(5)</span></p>
+
+<hr>
+
+<p><span class="parno">15</span>Idha, māṇava, ekacco itthī vā puriso vā thaddho hoti atimānī — abhivādetabbaṁ na abhivādeti, paccuṭṭhātabbaṁ na paccuṭṭheti, āsanārahassa na āsanaṁ deti, maggārahassa na maggaṁ deti, sakkātabbaṁ na sakkaroti, garukātabbaṁ na garukaroti, mānetabbaṁ na māneti, pūjetabbaṁ na pūjeti. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati nīcakulīno hoti. Nīcakulīnasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — thaddho hoti atimānī; abhivādetabbaṁ na abhivādeti, paccuṭṭhātabbaṁ na paccuṭṭheti, āsanārahassa na āsanaṁ deti, maggārahassa na maggaṁ deti, sakkātabbaṁ na sakkaroti, garukātabbaṁ na garukaroti, mānetabbaṁ na māneti, pūjetabbaṁ na pūjeti. <span class="brnum">(6)</span></p>
+
+<p><span class="parno">16</span>Idha pana, māṇava, ekacco itthī vā puriso vā atthaddho hoti anatimānī; abhivādetabbaṁ abhivādeti, paccuṭṭhātabbaṁ paccuṭṭheti, āsanārahassa āsanaṁ deti, maggārahassa maggaṁ deti, sakkātabbaṁ sakkaroti, garukātabbaṁ garukaroti, mānetabbaṁ māneti, pūjetabbaṁ pūjeti. So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati uccākulīno hoti. Uccākulīnasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — atthaddho hoti anatimānī; abhivādetabbaṁ abhivādeti, paccuṭṭhātabbaṁ paccuṭṭheti, āsanārahassa āsanaṁ deti, maggārahassa maggaṁ deti, sakkātabbaṁ sakkaroti, garukātabbaṁ garukaroti, mānetabbaṁ māneti, pūjetabbaṁ pūjeti. <span class="brnum">(6)</span></p>
+
+<p><span class="parno">17</span>Idha, māṇava, ekacco itthī vā puriso vā samaṇaṁ vā brāhmaṇaṁ vā upasaṅkamitvā na paripucchitā hoti: ‘kiṁ, bhante, kusalaṁ, kiṁ akusalaṁ; kiṁ sāvajjaṁ, kiṁ anavajjaṁ; kiṁ sevitabbaṁ, kiṁ na sevitabbaṁ; kiṁ me karīyamānaṁ dīgharattaṁ ahitāya dukkhāya hoti, kiṁ vā pana me karīyamānaṁ dīgharattaṁ hitāya sukhāya hotī’ti? So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati duppañño hoti. Duppaññasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — samaṇaṁ vā brāhmaṇaṁ vā upasaṅkamitvā na paripucchitā hoti: ‘kiṁ, bhante, kusalaṁ, kiṁ akusalaṁ; kiṁ sāvajjaṁ, kiṁ anavajjaṁ; kiṁ sevitabbaṁ, kiṁ na sevitabbaṁ; kiṁ me karīyamānaṁ dīgharattaṁ ahitāya dukkhāya hoti, kiṁ vā pana me karīyamānaṁ dīgharattaṁ hitāya sukhāya hotī’ti? <span class="brnum">(7)</span></p>
+
+<hr>
+
+<p><span class="parno">18</span>Idha pana, māṇava, ekacco itthī vā puriso vā samaṇaṁ vā brāhmaṇaṁ vā upasaṅkamitvā paripucchitā hoti: ‘kiṁ, bhante, kusalaṁ, kiṁ akusalaṁ; kiṁ sāvajjaṁ, kiṁ anavajjaṁ; kiṁ sevitabbaṁ, kiṁ na sevitabbaṁ; kiṁ me karīyamānaṁ dīgharattaṁ ahitāya dukkhāya hoti, kiṁ vā pana me karīyamānaṁ dīgharattaṁ hitāya sukhāya hotī’ti? So tena kammena evaṁ samattena evaṁ samādinnena kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati. No ce kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjati, sace manussattaṁ āgacchati yattha yattha paccājāyati mahāpañño hoti. Mahāpaññasaṁvattanikā esā, māṇava, paṭipadā yadidaṁ — samaṇaṁ vā brāhmaṇaṁ vā upasaṅkamitvā paripucchitā hoti: ‘kiṁ, bhante, kusalaṁ, kiṁ akusalaṁ; kiṁ sāvajjaṁ, kiṁ anavajjaṁ; kiṁ sevitabbaṁ, kiṁ na sevitabbaṁ; kiṁ me karīyamānaṁ dīgharattaṁ ahitāya dukkhāya hoti, kiṁ vā pana me karīyamānaṁ dīgharattaṁ hitāya sukhāya hotī’ti? <span class="brnum">(7)</span></p>
+
+<hr>
+
+<p><span class="parno">19</span>Iti kho, māṇava, appāyukasaṁvattanikā paṭipadā appāyukattaṁ upaneti, dīghāyukasaṁvattanikā paṭipadā dīghāyukattaṁ upaneti; bavhābādhasaṁvattanikā paṭipadā bavhābādhattaṁ upaneti, appābādhasaṁvattanikā paṭipadā appābādhattaṁ upaneti; dubbaṇṇasaṁvattanikā paṭipadā dubbaṇṇattaṁ upaneti, pāsādikasaṁvattanikā paṭipadā pāsādikattaṁ upaneti; appesakkhasaṁvattanikā paṭipadā appesakkhattaṁ upaneti, mahesakkhasaṁvattanikā paṭipadā mahesakkhattaṁ upaneti; appabhogasaṁvattanikā paṭipadā appabhogattaṁ upaneti, mahābhogasaṁvattanikā paṭipadā mahābhogattaṁ upaneti; nīcakulīnasaṁvattanikā paṭipadā nīcakulīnattaṁ upaneti, uccākulīnasaṁvattanikā paṭipadā uccākulīnattaṁ upaneti; duppaññasaṁvattanikā paṭipadā duppaññattaṁ upaneti, mahāpaññasaṁvattanikā paṭipadā mahāpaññattaṁ upaneti.</p>
+
+<hr>
+
+<p>Kammassakā, māṇava, sattā kammadāyādā kammayonī kammabandhū kammappaṭisaraṇā. Kammaṁ satte vibhajati yadidaṁ — hīnappaṇītatāyā"ti.</p>
+
+<hr>
+
+<p><span class="parno">20</span>Evaṁ vutte, subho māṇavo todeyyaputto bhagavantaṁ etadavoca: "Abhikkantaṁ, bho gotama, abhikkantaṁ, bho gotama. Seyyathāpi, bho gotama, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhotā gotamena anekapariyāyena dhammo pakāsito. Esāhaṁ bhavantaṁ gotamaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Upāsakaṁ maṁ bhavaṁ gotamo dhāretu ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p>
+
+<p class="endsutta">Cūḷakammavibhaṅgasuttaṁ niṭṭhitaṁ pañcamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn134.html#content"></a><a id="next-sutta" href="./mn136.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN135: Cūḷakammavibhaṅgasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

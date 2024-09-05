@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 79</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN79: Cūḷasakuludāyisutta - The Shorter Discourse With Sakuludāyī </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn79">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Rājagaha, in the Bamboo Grove, the squirrels’ feeding ground. Now at that time the wanderer Sakuludāyī was residing together with a large assembly of wanderers in the monastery of the wanderers in the peacocks’ feeding ground.</p>
+
+<p>Then the Buddha put on his outer robe in the morning and, taking his bowl and robe, entered Rājagaha for alms. Then it occurred to him: “It’s too early to wander for alms in Rājagaha. Why don’t I visit the wanderer Sakuludāyī at the monastery of the wanderers in the peacocks’ feeding ground?” Then the Buddha went to the monastery of the wanderers.</p>
+
+<p><span class="parno">2</span>Now at that time, Sakuludāyī was sitting together with a large assembly of wanderers making an uproar, a dreadful racket. They engaged in all kinds of unworthy talk, such as talk about kings, bandits, and ministers; talk about armies, threats, and wars; talk about food, drink, clothes, and beds; talk about garlands and fragrances; talk about family, vehicles, villages, towns, cities, and countries; talk about women and heroes; street talk and well talk; talk about the departed; motley talk; tales of land and sea; and talk about being reborn in this or that state of existence.</p>
+
+<p><span class="parno">3</span>Sakuludāyī saw the Buddha coming off in the distance, and hushed his own assembly: “Be quiet, good sirs, don’t make a sound. Here comes the ascetic Gotama. The venerable likes quiet and praises quiet. Hopefully if he sees that our assembly is quiet he’ll see fit to approach.” Then those wanderers fell silent.</p>
+
+<p><span class="parno">4</span>Then the Buddha approached Sakuludāyī, who said to him: “Come, Blessed One! Welcome, Blessed One! It’s been a long time since you took the opportunity to come here. Please, sir, sit down, this seat is ready.” </p>
+
+<p>The Buddha sat on the seat spread out, while Sakuludāyī took a low seat and sat to one side. The Buddha said to him: “Udāyī, what were you sitting talking about just now? What conversation was unfinished?”</p>
+
+<p>“Sir, leave aside what we were sitting talking about just now. It won’t be hard for you to hear about that later. When I don’t come to the assembly, they sit and engage in all kinds of unworthy talk. But when I have come to the assembly, they sit gazing up at my face alone, thinking, ‘Whatever the ascetic Udāyī teaches, we shall listen to it.’ But when the Buddha has come to the assembly, both myself and the assembly sit gazing up at your face, thinking, ‘Whatever the Buddha teaches, we shall listen to it.’”</p>
+
+<p><span class="parno">5</span>“Well then, Udāyī, suggest something for me to talk about.”</p>
+
+<hr>
+
+<p>“Master Gotama, a few days ago someone was claiming to be all-knowing and all-seeing, to know and see everything without exception, thus: ‘Knowledge and vision are constantly and continually present to me, while walking, standing, sleeping, and waking.’ When I asked them a question about the past, they dodged the issue, distracted the discussion with irrelevant points, and displayed annoyance, hate, and bitterness. That reminded me of the Buddha: ‘Surely it must be the Blessed One, the Holy One who is so skilled in such matters.’”</p>
+
+<hr>
+
+<p>“But Udāyī, who was it that made such a claim and behaved in such a way?”</p>
+
+<hr>
+
+<p>“It was Nigaṇṭha Nātaputta, sir.”</p>
+
+<p><span class="parno">6</span>“Udāyī, someone who can recollect their many kinds of past lives, with features and details, might ask me a question about the past, or I might ask them a question about the past. And they might satisfy me with their answer, or I might satisfy them with my answer.</p>
+
+<p><span class="parno">7</span>Someone who, with clairvoyance that is purified and superhuman, understands how sentient beings are reborn according to their deeds might ask me a question about the future, or I might ask them a question about the future. And they might satisfy me with their answer, or I might satisfy them with my answer.</p>
+
+<hr>
+
+<p><span class="parno">8</span>Nevertheless, Udāyī, leave aside the past and the future. I shall teach you the Dhamma: ‘When this exists, that is; due to the arising of this, that arises. When this doesn’t exist, that is not; due to the cessation of this, that ceases.’”</p>
+
+<p><span class="parno">9</span>“Well sir, I can’t even recall with features and details what I’ve undergone in this incarnation. How should I possibly recollect my many kinds of past lives with features and details, like the Buddha? And I can’t now see even a mud-goblin. How should I possibly, with clairvoyance that is purified and superhuman, see sentient beings passing away and being reborn, like the Buddha? But then the Buddha told me, ‘Nevertheless, Udāyī, leave aside the past and the future. I shall teach you the Dhamma:</p>
+
+<p>“When this exists, that is; due to the arising of this, that arises. When this doesn’t exist, that is not; due to the cessation of this, that ceases.”’ But that is even more unclear to me. Perhaps I might satisfy the Buddha by answering a question about my own teacher’s doctrine.”</p>
+
+<hr>
+
+<p><span class="parno">10</span>“But Udāyī, what is your own teacher’s doctrine?”</p>
+
+<p>“Sir, it’s this: ‘This is the ultimate splendor, this is the ultimate splendor.’”</p>
+
+<p><span class="parno">11</span>“But what is that ultimate splendor?”</p>
+
+<p>“Sir, the ultimate splendor is the splendor compared to which no other splendor is finer.”</p>
+
+<hr>
+
+<p><span class="parno">12</span>“But what is that ultimate splendor compared to which no other splendor is finer?”</p>
+
+<p>“Sir, the ultimate splendor is the splendor compared to which no other splendor is finer.”</p>
+
+<hr>
+
+<p><span class="parno">13</span>“Udāyī, you could draw this out for a long time. You say, ‘The ultimate splendor is the splendor compared to which no other splendor is finer.’ But you don’t describe that splendor. Suppose a man was to say, ‘Whoever the finest lady in the land is, it is her that I want, her I desire!’ They’d say to him, ‘Mister, that finest lady in the land who you desire — do you know whether she’s an aristocrat, a brahmin, a merchant, or a worker?’ Asked this, he’d say, ‘No.’ They’d say to him, ‘Mister, that finest lady in the land who you desire — do you know her name or clan? Whether she’s tall or short or medium? Whether her skin is black, brown, or tawny? What village, town, or city she comes from?’ Asked this, he’d say, ‘No.’ They’d say to him, ‘Mister, do you desire someone who you’ve never even known or seen?’ Asked this, he’d say, ‘Yes.’</p>
+
+<p><span class="parno">14</span>What do you think, Udāyī? This being so, doesn’t that man’s statement turn out to have no demonstrable basis?”</p>
+
+<p>“Clearly that’s the case, sir.”</p>
+
+<p><span class="parno">15</span>“In the same way, you say, ‘The ultimate splendor is the splendor compared to which no other splendor is finer.’ But you don’t describe that splendor.”</p>
+
+<hr>
+
+<p><span class="parno">16</span>“Sir, suppose there was a beryl gem that was naturally beautiful, eight-faceted, well-worked. When placed on a cream rug it would shine and glow and radiate. Such is the splendor of the self that is sound after death.”</p>
+
+<hr>
+
+<p><span class="parno">17</span>“What do you think, Udāyī? Which of these two has a finer splendor: such a beryl gem, or a firefly in the dark of night?”</p>
+
+<p>“A firefly in the dark of night, sir.”</p>
+
+<hr>
+
+<p><span class="parno">18</span>“What do you think, Udāyī? Which of these two has a finer splendor: a firefly in the dark of night, or an oil lamp in the dark of night?”</p>
+
+<p>“An oil lamp in the dark of night, sir.”</p>
+
+<hr>
+
+<p><span class="parno">19</span>“What do you think, Udāyī? Which of these two has a finer splendor: an oil lamp in the dark of night, or a bonfire in the dark of night?”</p>
+
+<p>“A bonfire in the dark of night, sir.”</p>
+
+<hr>
+
+<p><span class="parno">20</span>“What do you think, Udāyī? Which of these two has a finer splendor: a bonfire in the dark of night, or the Morning Star in a clear and cloudless sky at the crack of dawn?”</p>
+
+<p>“The Morning Star in a clear and cloudless sky at the crack of dawn, sir.”</p>
+
+<hr>
+
+<p><span class="parno">21</span>“What do you think, Udāyī? Which of these two has a finer splendor: the Morning Star in a clear and cloudless sky at the crack of dawn, or the full moon at midnight in a clear and cloudless sky on the fifteenth day sabbath?”</p>
+
+<p>“The full moon at midnight in a clear and cloudless sky on the fifteenth day sabbath, sir.”</p>
+
+<hr>
+
+<p><span class="parno">22</span>“What do you think, Udāyī? Which of these two has a finer splendor: the full moon at midnight in a clear and cloudless sky on the fifteenth day sabbath, or the sun at midday in a clear and cloudless sky in the last month of the rainy season?”</p>
+
+<p>“The sun at midday in a clear and cloudless sky in the last month of the rainy season, sir.”</p>
+
+<p><span class="parno">23</span>“Beyond this, Udāyī, I know very many gods on whom the light of the sun and moon make no impression. Nevertheless, I do not say: ‘The splendor compared to which no other splendor is finer.’ But of the splendor inferior to a firefly you say, ‘This is the ultimate splendor.’ And you don’t describe that splendor.”</p>
+
+<p>“The Blessed One has cut short the discussion! The Holy One has cut short the discussion!”</p>
+
+<p><span class="parno">24</span>“But Udāyī, why do you say this?”</p>
+
+<p>“Sir, it says this in our own teacher’s doctrine: ‘This is the ultimate splendor, this is the ultimate splendor.’ But when pursued, pressed, and grilled on our own teacher’s doctrine, we turned out to be void, hollow, and mistaken.”</p>
+
+<hr>
+
+<p><span class="parno">25</span>“But Udāyī, is there a world of perfect happiness? And is there a grounded path for realizing a world of perfect happiness?”</p>
+
+<p>“Sir, it says this in our own teacher’s doctrine: ‘There is a world of perfect happiness. And there is a grounded path for realizing a world of perfect happiness.’”</p>
+
+<hr>
+
+<p><span class="parno">26</span>“Well, what is that grounded path for realizing a world of perfect happiness?”</p>
+
+<p>“Sir, it’s when someone gives up killing living creatures, stealing, sexual misconduct, and lying. And they proceed having undertaken some kind of mortification. </p>
+
+<p>This is the grounded path for realizing a world of perfect happiness.”</p>
+
+<hr>
+
+<p><span class="parno">27</span>“What do you think, Udāyī? On an occasion when someone refrains from killing living creatures, is their self perfectly happy at that time, or does it have both pleasure and pain?”</p>
+
+<p>“It has both pleasure and pain.”</p>
+
+<hr>
+
+<p><span class="parno">28-30</span>“What do you think, Udāyī? On an occasion when someone refrains from stealing … sexual misconduct … lying, is their self perfectly happy at that time, or does it have both pleasure and pain?”</p>
+
+<p>“It has both pleasure and pain.”</p>
+
+<hr>
+
+<p><span class="parno">31</span>“What do you think, Udāyī? On an occasion when someone undertakes and follows some kind of mortification, is their self perfectly happy at that time, or does it have both pleasure and pain?”</p>
+
+<p>“It has both pleasure and pain.”</p>
+
+<hr>
+
+<p><span class="parno">32</span>“What do you think, Udāyī? Is a perfectly happy world realized by relying on a practice of mixed pleasure and pain?”</p>
+
+<hr>
+
+<p>“The Blessed One has cut short the discussion! The Holy One has cut short the discussion!”</p>
+
+<p><span class="parno">33</span>“But Udāyī, why do you say this?”</p>
+
+<p>“Sir, it says this in our own teacher’s doctrine: ‘There is a world of perfect happiness. And there is a grounded path for realizing a world of perfect happiness.’ But when pursued, pressed, and grilled on our own teacher’s doctrine, we turned out to be void, hollow, and mistaken.</p>
+
+<p><span class="parno">34</span>But sir, is there a world of perfect happiness? And is there a grounded path for realizing a world of perfect happiness?”</p>
+
+<p>“There is a world of perfect happiness, Udāyī. And there is a grounded path for realizing a world of perfect happiness.”</p>
+
+<p><span class="parno">35</span>“Well sir, what is that grounded path for realizing a world of perfect happiness?”</p>
+
+<p>“It’s when a mendicant, quite secluded from sensual pleasures, secluded from unskillful qualities, enters and remains in the first absorption. As the placing of the mind and keeping it connected are stilled, they enter and remain in the second absorption. With the fading away of rapture, they enter and remain in the third absorption. This is the grounded path for realizing a world of perfect happiness.”</p>
+
+<p><span class="parno">36</span>“Sir, that’s not the grounded path for realizing a world of perfect happiness. At that point a perfectly happy world has already been realized.”</p>
+
+<p>“No, Udāyī, at that point a perfectly happy world has not been realized. This is the grounded path for realizing a world of perfect happiness.”</p>
+
+<p><span class="parno">37</span>When he said this, Sakuludāyī’s assembly made an uproar, a dreadful racket: “In that case, we’re lost, and so are our teacher’s doctrines! We’re lost, and so are our teacher’s doctrines! We know nothing higher than this!”</p>
+
+<hr>
+
+<p><span class="parno">38</span>Then Sakuludāyī, having quieted those wanderers, said to the Buddha, </p>
+
+<p>“Well sir, at what point is a perfectly happy world realized?”</p>
+
+<hr>
+
+<p>“It’s when, giving up pleasure and pain, and ending former happiness and sadness, a mendicant enters and remains in the fourth absorption. There are deities who have been reborn in a perfectly happy world. That mendicant associates with them, converses, and engages in discussion. It’s at this point that a perfectly happy world has been realized.”</p>
+
+<hr>
+
+<p><span class="parno">39</span>“Surely the mendicants must live the spiritual life under the Buddha for the sake of realizing this perfectly happy world?”</p>
+
+<p>“No, Udāyī, the mendicants don’t live the spiritual life under me for the sake of realizing this perfectly happy world. </p>
+
+<p>There are other things that are finer, for the sake of which the mendicants live the spiritual life under me.”</p>
+
+<p><span class="parno">40</span>“But what are those finer things?”</p>
+
+<hr>
+
+<p>“It’s when a Realized One arises in the world, perfected, a fully awakened Buddha, accomplished in knowledge and conduct, holy, knower of the world, supreme guide for those who wish to train, teacher of gods and humans, awakened, blessed. …</p>
+
+<p>They give up these five hindrances, corruptions of the heart that weaken wisdom. Then, quite secluded from sensual pleasures, secluded from unskillful qualities, they enter and remain in the first absorption. This is one of the finer things for the sake of which the mendicants live the spiritual life under me.</p>
+
+<p><span class="parno">41</span>Furthermore, as the placing of the mind and keeping it connected are stilled, a mendicant enters and remains in the second absorption … third absorption … fourth absorption. This too is one of the finer things.</p>
+
+<p><span class="parno">42</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it toward recollection of past lives. They recollect many kinds of past lives. That is: one, two, three, four, five, ten, twenty, thirty, forty, fifty, a hundred, a thousand, a hundred thousand rebirths; many eons of the world contracting, many eons of the world expanding, many eons of the world contracting and expanding. They recollect their many kinds of past lives, with features and details. This too is one of the finer things.</p>
+
+<p><span class="parno">43</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it toward knowledge of the death and rebirth of sentient beings. With clairvoyance that is purified and superhuman, they see sentient beings passing away and being reborn — inferior and superior, beautiful and ugly, in a good place or a bad place. They understand how sentient beings are reborn according to their deeds. This too is one of the finer things.</p>
+
+<p><span class="parno">44</span>When their mind has become immersed in samādhi like this — purified, bright, flawless, rid of corruptions, pliable, workable, steady, and imperturbable — they extend it toward knowledge of the ending of defilements. They truly understand: ‘This is suffering’ … ‘This is the origin of suffering’ … ‘This is the cessation of suffering’ … ‘This is the practice that leads to the cessation of suffering’. They truly understand: ‘These are defilements’ … ‘This is the origin of defilements’ … ‘This is the cessation of defilements’ … ‘This is the practice that leads to the cessation of defilements’.</p>
+
+<hr>
+
+<p>Knowing and seeing like this, their mind is freed from the defilements of sensuality, desire to be reborn, and ignorance. When they’re freed, they know they’re freed.</p>
+
+<p>They understand: ‘Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.’ This too is one of the finer things. These are the finer things for the sake of which the mendicants live the spiritual life under me.”</p>
+
+<hr>
+
+<p><span class="parno">45</span>When he had spoken, Sakuludāyī said to the Buddha: “Excellent, sir! Excellent! As if he were righting the overturned, or revealing the hidden, or pointing out the path to the lost, or lighting a lamp in the dark so people with good eyes can see what’s there, the Buddha has made the teaching clear in many ways. I go for refuge to the Buddha, to the teaching, and to the mendicant Saṅgha. Sir, may I receive the going forth, the ordination in the Buddha’s presence?”</p>
+
+<hr>
+
+<p><span class="parno">46</span>When he said this, Sakuludāyī’s assembly said to him: “Master Udāyī, don’t live the spiritual life under the ascetic Gotama. You have been a teacher; don’t live as a student. The consequence for you will be as if a water jar were to become a water jug. Master Udāyī, don’t live the spiritual life under the ascetic Gotama. You have been a teacher; don’t live as a student.” And that’s how the wanderer Sakuludāyī’s own assembly prevented him from living the spiritual life under the Buddha.</p>
+
+</div>
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe. Tena kho pana samayena sakuludāyī paribbājako moranivāpe paribbājakārāme paṭivasati mahatiyā paribbājakaparisāya saddhiṁ.</p>
+
+<p>Atha kho bhagavā pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya rājagahaṁ piṇḍāya pāvisi. Atha kho bhagavato etadahosi: "atippago kho tāva rājagahe piṇḍāya carituṁ. Yannūnāhaṁ yena moranivāpo paribbājakārāmo yena sakuludāyī paribbājako tenupasaṅkameyyan"ti. Atha kho bhagavā yena moranivāpo paribbājakārāmo tenupasaṅkami.</p>
+
+<p><span class="parno">2</span>Tena kho pana samayena sakuludāyī paribbājako mahatiyā paribbājakaparisāya saddhiṁ nisinno hoti unnādiniyā uccāsaddamahāsaddāya anekavihitaṁ tiracchānakathaṁ kathentiyā, seyyathidaṁ — rājakathaṁ corakathaṁ mahāmattakathaṁ senākathaṁ bhayakathaṁ yuddhakathaṁ annakathaṁ pānakathaṁ vatthakathaṁ sayanakathaṁ mālākathaṁ gandhakathaṁ ñātikathaṁ yānakathaṁ gāmakathaṁ nigamakathaṁ nagarakathaṁ janapadakathaṁ itthikathaṁ sūrakathaṁ visikhākathaṁ kumbhaṭṭhānakathaṁ pubbapetakathaṁ nānattakathaṁ lokakkhāyikaṁ samuddakkhāyikaṁ itibhavābhavakathaṁ iti vā.</p>
+
+<p><span class="parno">3</span>Addasā kho sakuludāyī paribbājako bhagavantaṁ dūratova āgacchantaṁ. Disvāna sakaṁ parisaṁ saṇṭhāpesi: "appasaddā bhonto hontu, mā bhonto saddamakattha. Ayaṁ samaṇo gotamo āgacchati; appasaddakāmo kho pana so āyasmā appasaddassa vaṇṇavādī. Appeva nāma appasaddaṁ parisaṁ viditvā upasaṅkamitabbaṁ maññeyyā"ti. Atha kho te paribbājakā tuṇhī ahesuṁ.</p>
+
+<p><span class="parno">4</span>Atha kho bhagavā yena sakuludāyī paribbājako tenupasaṅkami. Atha kho sakuludāyī paribbājako bhagavantaṁ etadavoca: "etu kho, bhante, bhagavā. Svāgataṁ, bhante, bhagavato. Cirassaṁ kho, bhante, bhagavā imaṁ pariyāyamakāsi yadidaṁ idhāgamanāya. Nisīdatu, bhante, bhagavā; idamāsanaṁ paññattan"ti.</p>
+
+<p>Nisīdi bhagavā paññatte āsane. Sakuludāyīpi kho paribbājako aññataraṁ nīcaṁ āsanaṁ gahetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho sakuludāyiṁ paribbājakaṁ bhagavā etadavoca: "kāya nuttha, udāyi, etarahi kathāya sannisinnā, kā ca pana vo antarākathā vippakatā"ti?</p>
+
+<p>"Tiṭṭhatesā, bhante, kathā yāya mayaṁ etarahi kathāya sannisinnā. Nesā, bhante, kathā bhagavato dullabhā bhavissati pacchāpi savanāya. Yadāhaṁ, bhante, imaṁ parisaṁ anupasaṅkanto homi athāyaṁ parisā anekavihitaṁ tiracchānakathaṁ kathentī nisinnā hoti; yadā ca kho ahaṁ, bhante, imaṁ parisaṁ upasaṅkanto homi athāyaṁ parisā mamaññeva mukhaṁ ullokentī nisinnā hoti: ‘Yaṁ no samaṇo udāyī dhammaṁ bhāsissati <span class="var" title="taṁ no (bj, km, pts1) | tanno (s1–3)" id="note329">taṁ</span> sossāmā’ti; yadā pana, bhante, bhagavā imaṁ parisaṁ upasaṅkanto hoti athāhañceva ayañca parisā bhagavato mukhaṁ <span class="var" title="ullokento (bj) | olokentī (s1–3, km, mr)" id="note330">ullokentā</span> nisinnā homa: ‘Yaṁ no bhagavā dhammaṁ bhāsissati <span class="var" title="taṁ no (bj, km, pts1) | tanno (s1–3)" id="note331">taṁ</span> sossāmā’"ti.</p>
+
+
+<p><span class="parno">5</span>"Tenahudāyi, taṁyevettha paṭibhātu yathā maṁ paṭibhāseyyā"ti.</p>
+
+<hr>
+
+<p>"Purimāni, bhante, divasāni purimatarāni sabbaññū sabbadassāvī aparisesaṁ ñāṇadassanaṁ paṭijānamāno ‘carato ca me tiṭṭhato ca suttassa ca jāgarassa ca satataṁ samitaṁ ñāṇadassanaṁ paccupaṭṭhitan’ti. So <span class="var" title='paccupaṭṭhitan" ti may' id="note332">mayā</span> pubbantaṁ ārabbha pañhaṁ puṭṭho samāno aññenaññaṁ paṭicari, bahiddhā kathaṁ apanāmesi, kopañca dosañca appaccayañca pātvākāsi. Tassa mayhaṁ, bhante, bhagavantaṁyeva ārabbha sati udapādi: ‘aho nūna bhagavā, aho nūna sugato. Yo imesaṁ dhammānaṁ sukusalo’"ti.</p>
+
+<hr>
+
+<p>"Ko pana so, udāyi, sabbaññū sabbadassāvī aparisesaṁ ñāṇadassanaṁ paṭijānamāno ‘carato ca me tiṭṭhato ca suttassa ca jāgarassa ca satataṁ samitaṁ ñāṇadassanaṁ paccupaṭṭhitan’ti, yo tayā pubbantaṁ ārabbha pañhaṁ puṭṭho samāno aññenaññaṁ paṭicari, bahiddhā kathaṁ apanāmesi kopañca dosañca appaccayañca pātvākāsī"ti?</p>
+
+
+<hr>
+
+<p>"Nigaṇṭho, bhante, nāṭaputto"ti.</p>
+
+<p><span class="parno">6</span>"Yo kho, udāyi, anekavihitaṁ pubbenivāsaṁ anussareyya, seyyathidaṁ — ekampi jātiṁ dvepi jātiyo … pe … iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussareyya, so vā maṁ pubbantaṁ ārabbha pañhaṁ puccheyya, taṁ vāhaṁ pubbantaṁ ārabbha pañhaṁ puccheyyaṁ; so vā me pubbantaṁ ārabbha pañhassa veyyākaraṇena cittaṁ ārādheyya, tassa vāhaṁ pubbantaṁ ārabbha pañhassa veyyākaraṇena cittaṁ ārādheyyaṁ.</p>
+
+<p><span class="parno">7</span><span class="var" title="so (si, pts1)" id="note333">Yo</span> kho, udāyi, dibbena cakkhunā visuddhena atikkantamānusakena satte passeyya cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe sugate duggate yathākammūpage satte pajāneyya, so vā maṁ aparantaṁ ārabbha pañhaṁ puccheyya, taṁ vāhaṁ aparantaṁ ārabbha pañhaṁ puccheyyaṁ; so vā me aparantaṁ ārabbha pañhassa veyyākaraṇena cittaṁ ārādheyya, tassa vāhaṁ aparantaṁ ārabbha pañhassa veyyākaraṇena cittaṁ ārādheyyaṁ.</p>
+
+<hr>
+
+<p><span class="parno">8</span>Api ca, udāyi, tiṭṭhatu pubbanto, tiṭṭhatu aparanto. Dhammaṁ te desessāmi –  imasmiṁ sati idaṁ hoti, imassuppādā idaṁ uppajjati; imasmiṁ asati idaṁ na hoti, imassa nirodhā idaṁ nirujjhatī"ti.</p>
+
+<p><span class="parno">9</span>"Ahañhi, bhante, yāvatakampi me iminā attabhāvena paccanubhūtaṁ tampi nappahomi sākāraṁ sauddesaṁ anussarituṁ, kuto panāhaṁ anekavihitaṁ pubbenivāsaṁ anussarissāmi, seyyathidaṁ — ekampi jātiṁ dvepi jātiyo … pe … iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarissāmi, seyyathāpi bhagavā? Ahañhi, bhante, etarahi paṁsupisācakampi na passāmi, kuto panāhaṁ dibbena cakkhunā visuddhena atikkantamānusakena satte passissāmi cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe sugate duggate yathākammūpage satte pajānissāmi, seyyathāpi bhagavā? Yaṁ pana maṁ, bhante, bhagavā evamāha: ‘api ca, udāyi, tiṭṭhatu pubbanto, tiṭṭhatu aparanto; dhammaṁ te desessāmi … </p>
+
+<p>… imasmiṁ sati idaṁ hoti, imassuppādā idaṁ uppajjati; imasmiṁ asati idaṁ na hoti, imassa nirodhā idaṁ nirujjhatī’ti tañca pana me bhiyyoso mattāya na pakkhāyati. Appeva nāmāhaṁ, bhante, sake ācariyake bhagavato cittaṁ ārādheyyaṁ pañhassa veyyākaraṇenā"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">10</span>"Kinti pana te, udāyi, sake ācariyake hotī"ti?</p>
+
+<p>"Amhākaṁ, bhante, sake ācariyake evaṁ hoti: ‘Ayaṁ paramo vaṇṇo, ayaṁ paramo vaṇṇo’"ti.</p>
+
+<p><span class="parno">11</span>"Yaṁ pana te etaṁ, udāyi, sake ācariyake evaṁ hoti: ‘Ayaṁ paramo vaṇṇo, ayaṁ paramo vaṇṇo’ti, katamo so paramo vaṇṇo"ti?</p>
+
+<p>"Yasmā, bhante, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo"ti.</p>
+
+<hr>
+
+<p><span class="parno">12</span>"Katamo pana so paramo vaṇṇo yasmā vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthī"ti?</p>
+
+<p>"Yasmā, bhante, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo"ti.</p>
+
+<hr>
+
+<p><span class="parno">13</span>"Dīghāpi kho te esā, udāyi, phareyya: ‘yasmā, bhante, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo’ti vadesi, tañca vaṇṇaṁ na paññapesi. Seyyathāpi, udāyi, puriso evaṁ vadeyya: ‘Ahaṁ yā imasmiṁ janapade janapadakalyāṇī taṁ icchāmi, taṁ kāmemī’ti. Tamenaṁ evaṁ vadeyyuṁ: ‘ambho purisa, yaṁ tvaṁ janapadakalyāṇiṁ icchasi kāmesi, jānāsi taṁ janapadakalyāṇiṁ –  khattiyī vā brāhmaṇī vā vessī vā suddī vā’ti? Iti puṭṭho ‘no’ti vadeyya. Tamenaṁ evaṁ vadeyyuṁ: ‘ambho purisa, yaṁ tvaṁ janapadakalyāṇiṁ icchasi kāmesi, jānāsi taṁ janapadakalyāṇiṁ — evaṁnāmā evaṅgottāti vāti … pe … dīghā vā rassā vā majjhimā vā kāḷī vā sāmā vā maṅguracchavī vāti … amukasmiṁ gāme vā nigame vā nagare vā’ti? Iti puṭṭho ‘no’ti vadeyya. Tamenaṁ evaṁ vadeyyuṁ: ‘ambho purisa, yaṁ tvaṁ na jānāsi na passasi, taṁ tvaṁ icchasi kāmesī’ti? Iti puṭṭho ‘āmā’ti vadeyya.</p>
+
+<p><span class="parno">14</span>Taṁ kiṁ maññasi, udāyi — nanu evaṁ sante, tassa purisassa appāṭihīrakataṁ bhāsitaṁ sampajjatī"ti?</p>
+
+<p>"Addhā kho, bhante, evaṁ sante tassa purisassa appāṭihīrakataṁ bhāsitaṁ sampajjatī"ti.</p>
+
+
+<p><span class="parno">15</span>"Evameva kho tvaṁ, udāyi, ‘yasmā, bhante, vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthi so paramo vaṇṇo’ti vadesi, tañca vaṇṇaṁ na paññapesī"ti.</p>
+
+<hr>
+
+<p><span class="parno">16</span>"Seyyathāpi, bhante, maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato paṇḍukambale nikkhitto bhāsate ca tapate ca virocati ca, evaṁ vaṇṇo attā hoti arogo paraṁ maraṇā"ti.</p>
+
+<hr>
+
+<p><span class="parno">17</span>"Taṁ kiṁ maññasi, udāyi, yo vā maṇi veḷuriyo subho jātimā aṭṭhaṁso suparikammakato paṇḍukambale nikkhitto bhāsate ca tapate ca virocati ca, yo vā rattandhakāratimisāya kimi khajjopanako — imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā"ti? </p>
+
+<p>"Yvāyaṁ, bhante, rattandhakāratimisāya kimi khajjopanako — ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā"ti.</p>
+
+<hr>
+
+<p><span class="parno">18</span>"Taṁ kiṁ maññasi, udāyi, yo vā rattandhakāratimisāya kimi khajjopanako, yo vā rattandhakāratimisāya telappadīpo — imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā"ti? </p>
+
+<p>"Yvāyaṁ, bhante, rattandhakāratimisāya telappadīpo — ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā"ti.</p>
+
+<hr>
+
+<p><span class="parno">19</span>"Taṁ kiṁ maññasi, udāyi, yo vā rattandhakāratimisāya telappadīpo, yo vā rattandhakāratimisāya mahāaggikkhandho — imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā"ti? </p>
+
+<p>"Yvāyaṁ, bhante, rattandhakāratimisāya mahāaggikkhandho — ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā"ti.</p>
+
+<hr>
+
+<p><span class="parno">20</span>"Taṁ kiṁ maññasi, udāyi, yo vā rattandhakāratimisāya mahāaggikkhandho, yā vā rattiyā paccūsasamayaṁ viddhe vigatavalāhake deve osadhitārakā — imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā"ti? </p>
+
+<p>"Yvāyaṁ, bhante, rattiyā paccūsasamayaṁ viddhe vigatavalāhake deve osadhitārakā — ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā"ti.</p>
+
+<hr>
+
+<p><span class="parno">21</span>"Taṁ kiṁ maññasi, udāyi, yā vā rattiyā paccūsasamayaṁ viddhe vigatavalāhake deve osadhitārakā, yo vā tadahuposathe pannarase viddhe vigatavalāhake deve <span class="var" title="abhide (si) | abhidosaṁ (mr) abhidoti abhisaddena samānatthanipātapadaṁ (^an6.62#1 [62. Purisindriyañāṇasutta] chakkaṅguttaraṭīkā mahāvagge aṭṭhamasuttavaṇṇanā)" id="note334">abhido</span> aḍḍharattasamayaṁ cando — imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā"ti? </p>
+
+<p>"Yvāyaṁ, bhante, tadahuposathe pannarase viddhe vigatavalāhake deve abhido aḍḍharattasamayaṁ cando — ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā"ti.</p>
+
+<hr>
+
+<p><span class="parno">22</span>"Taṁ kiṁ maññasi, udāyi, yo vā tadahuposathe pannarase viddhe vigatavalāhake deve abhido aḍḍharattasamayaṁ cando, yo vā vassānaṁ pacchime māse saradasamaye viddhe vigatavalāhake deve abhido majjhanhikasamayaṁ sūriyo — imesaṁ ubhinnaṁ vaṇṇānaṁ katamo vaṇṇo abhikkantataro ca paṇītataro cā"ti? </p>
+
+<p>"Yvāyaṁ, bhante, vassānaṁ pacchime māse saradasamaye viddhe vigatavalāhake deve abhido majjhanhikasamayaṁ sūriyo — ayaṁ imesaṁ ubhinnaṁ vaṇṇānaṁ abhikkantataro ca paṇītataro cā"ti.</p>
+
+<p><span class="parno">23</span>"Ato kho te, udāyi, bahū hi bahutarā devā ye imesaṁ candimasūriyānaṁ ābhā nānubhonti, tyāhaṁ pajānāmi. Atha ca panāhaṁ na vadāmi: ‘yasmā vaṇṇā añño vaṇṇo uttaritaro vā paṇītataro vā natthī’ti. Atha ca pana tvaṁ, udāyi, ‘yvāyaṁ vaṇṇo kiminā khajjopanakena <span class="var" title="hīnataro (bj, pts1)" id="note335">nihīnataro</span> ca patikiṭṭhataro ca so paramo vaṇṇo’ti vadesi, tañca vaṇṇaṁ na paññapesī"ti.</p>
+
+<p>"<span class="var" title="acchira (mr) | acchida (?)" id="note336">Acchidaṁ</span> bhagavā kathaṁ, acchidaṁ sugato kathan"ti.</p>
+
+<p><span class="parno">24</span>"Kiṁ pana tvaṁ, udāyi, evaṁ vadesi: ‘acchidaṁ bhagavā kathaṁ, acchidaṁ sugato kathan’"ti?</p>
+
+<p>"Amhākaṁ, bhante, sake ācariyake evaṁ hoti: ‘Ayaṁ paramo vaṇṇo, ayaṁ paramo vaṇṇo’ti. Te mayaṁ, bhante, bhagavatā sake ācariyake samanuyuñjīyamānā samanuggāhīyamānā samanubhāsīyamānā rittā tucchā aparaddhā"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">25</span>"Kiṁ panudāyi, atthi ekantasukho loko, atthi ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti?</p>
+
+<p>"Amhākaṁ, bhante, sake ācariyake evaṁ hoti: ‘atthi ekantasukho loko, atthi ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā’"ti.</p>
+
+<hr>
+
+<p><span class="parno">26</span>"Katamā pana sā, udāyi, ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti?</p>
+
+<p>"Idha, bhante, ekacco pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti, adinnādānaṁ pahāya adinnādānā paṭivirato hoti, kāmesumicchācāraṁ pahāya kāmesumicchācārā paṭivirato hoti, musāvādaṁ pahāya musāvādā paṭivirato hoti, aññataraṁ vā pana tapoguṇaṁ samādāya vattati.</p>
+
+<p>Ayaṁ kho sā, bhante, ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">27</span>"Taṁ kiṁ maññasi, udāyi, yasmiṁ samaye pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti, ekantasukhī vā tasmiṁ samaye attā hoti sukhadukkhī vā"ti?</p>
+
+<p>"Sukhadukkhī, bhante".</p>
+
+
+<hr>
+
+<p><span class="parno">28</span>"Taṁ kiṁ maññasi, udāyi, yasmiṁ samaye adinnādānaṁ pahāya adinnādānā paṭivirato hoti, ekantasukhī vā tasmiṁ samaye attā hoti sukhadukkhī vā"ti?</p>
+
+<p>"Sukhadukkhī, bhante".</p>
+
+<p><span class="parno">29</span>"Taṁ kiṁ maññasi, udāyi, yasmiṁ samaye kāmesumicchācāraṁ pahāya kāmesumicchācārā paṭivirato hoti, ekantasukhī vā tasmiṁ samaye attā hoti sukhadukkhī vā"ti?</p>
+
+<p>"Sukhadukkhī, bhante".</p>
+
+<p><span class="parno">30</span>"Taṁ kiṁ maññasi, udāyi, yasmiṁ samaye musāvādaṁ pahāya musāvādā paṭivirato hoti, ekantasukhī vā tasmiṁ samaye attā hoti sukhadukkhī vā"ti?</p>
+
+<p>"Sukhadukkhī, bhante".</p>
+
+<hr>
+
+<p><span class="parno">31</span>"Taṁ kiṁ maññasi, udāyi, yasmiṁ samaye aññataraṁ tapoguṇaṁ samādāya vattati, ekantasukhī vā tasmiṁ samaye attā hoti sukhadukkhī vā"ti?</p>
+
+<p>"Sukhadukkhī, bhante".</p>
+
+<hr>
+
+<p><span class="parno">32</span>"Taṁ kiṁ maññasi, udāyi, api nu kho vokiṇṇasukhadukkhaṁ paṭipadaṁ āgamma ekantasukhassa lokassa <span class="var" title="sacchikiriyāyāti (mr)" id="note337">sacchikiriyā hotī"ti</span>?</p>
+
+<hr>
+
+<p>"Acchidaṁ bhagavā kathaṁ, acchidaṁ sugato kathan"ti.</p>
+
+<p><span class="parno">33</span>"Kiṁ pana tvaṁ, udāyi, vadesi: ‘acchidaṁ bhagavā kathaṁ, acchidaṁ sugato kathan’"ti?</p>
+
+<p>"Amhākaṁ, bhante, sake ācariyake evaṁ hoti: ‘atthi ekantasukho loko, atthi ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā’ti. Te mayaṁ, bhante, bhagavatā sake ācariyake samanuyuñjiyamānā samanuggāhiyamānā samanubhāsiyamānā rittā tucchā <span class="var" title="aparaddhāpi (s1–3, km, pts1)" id="note338">aparaddhā"ti</span>.</p>
+
+<p><span class="parno">34</span>"Kiṁ pana, bhante, atthi ekantasukho loko, atthi ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti?</p>
+
+<p>"Atthi kho, udāyi, ekantasukho loko, atthi ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti.</p>
+
+<p><span class="parno">35</span>"Katamā pana sā, bhante, ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti?</p>
+
+<p>"Idhudāyi, bhikkhu vivicceva kāmehi … pe … paṭhamaṁ jhānaṁ upasampajja viharati; vitakkavicārānaṁ vūpasamā … pe … dutiyaṁ jhānaṁ upasampajja viharati; pītiyā ca virāgā … pe … tatiyaṁ jhānaṁ upasampajja viharati — ayaṁ kho sā, udāyi, ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti.</p>
+
+<p><span class="parno">36</span>"<span class="var" title="kinnu (s1–3) | kiṁ nu (km, mr)" id="note339">Na</span> kho sā, bhante, ākāravatī paṭipadā ekantasukhassa lokassa sacchikiriyāya, sacchikato hissa, bhante, ettāvatā ekantasukho loko hotī"ti.</p>
+
+<p>"Na khvāssa, udāyi, ettāvatā ekantasukho loko sacchikato hoti; ākāravatī tveva sā paṭipadā ekantasukhassa lokassa sacchikiriyāyā"ti.</p>
+
+
+<p><span class="parno">37</span>Evaṁ vutte, sakuludāyissa paribbājakassa parisā unnādinī uccāsaddamahāsaddā ahosi: "ettha mayaṁ anassāma sācariyakā, ettha mayaṁ <span class="var" title="panassāma (bj)" id="note340">anassāma</span> sācariyakā. Na mayaṁ ito bhiyyo uttaritaraṁ pajānāmā"ti.</p>
+
+<hr>
+
+<p><span class="parno">38</span>Atha kho sakuludāyī paribbājako te paribbājake appasadde katvā bhagavantaṁ etadavoca:</p>
+
+
+<p>"kittāvatā panāssa, bhante, ekantasukho loko sacchikato hotī"ti?</p>
+
+<hr>
+
+<p>"Idhudāyi, bhikkhu sukhassa ca pahānā … pe … catutthaṁ jhānaṁ … upasampajja viharati. Yā tā devatā ekantasukhaṁ lokaṁ upapannā tāhi devatāhi saddhiṁ santiṭṭhati sallapati sākacchaṁ samāpajjati. Ettāvatā khvāssa, udāyi, ekantasukho loko sacchikato hotī"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">39</span>"Etassa nūna, bhante, ekantasukhassa lokassa sacchikiriyāhetu bhikkhū bhagavati brahmacariyaṁ carantī"ti?</p>
+
+<p>"Na kho, udāyi, ekantasukhassa lokassa sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ caranti. </p>
+
+<p>Atthi kho, udāyi, aññeva dhammā uttaritarā ca paṇītatarā ca, yesaṁ sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ carantī"ti.</p>
+
+
+<p><span class="parno">40</span>"Katame pana te, bhante, dhammā uttaritarā ca paṇītatarā ca yesaṁ sacchikiriyāhetu bhikkhū bhagavati brahmacariyaṁ carantī"ti?</p>
+
+<hr>
+
+<p>"Idhudāyi, tathāgato loke uppajjati arahaṁ sammāsambuddho vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi satthā devamanussānaṁ buddho bhagavā … pe … </p>
+
+<p>… so ime pañca nīvaraṇe pahāya cetaso upakkilese paññāya dubbalīkaraṇe vivicceva kāmehi … pe … paṭhamaṁ jhānaṁ upasampajja viharati. Ayampi kho, udāyi, dhammo uttaritaro ca paṇītataro ca yassa sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ caranti.</p>
+
+<p><span class="parno">41</span>Puna caparaṁ, udāyi, bhikkhu vitakkavicārānaṁ vūpasamā … dutiyaṁ jhānaṁ … tatiyaṁ jhānaṁ … catutthaṁ jhānaṁ upasampajja viharati. Ayampi kho, udāyi, dhammo uttaritaro ca paṇītataro ca yassa sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ caranti.</p>
+
+<p><span class="parno">42</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte pubbenivāsānussatiñāṇāya cittaṁ abhininnāmeti. So anekavihitaṁ pubbenivāsaṁ anussarati, seyyathidaṁ — ekampi jātiṁ dvepi jātiyo … pe … iti sākāraṁ sauddesaṁ anekavihitaṁ pubbenivāsaṁ anussarati. Ayampi kho, udāyi, dhammo uttaritaro ca paṇītataro ca yassa sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ caranti.</p>
+
+<p><span class="parno">43</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte sattānaṁ cutūpapātañāṇāya cittaṁ abhininnāmeti. So dibbena cakkhunā visuddhena atikkantamānusakena satte passati cavamāne upapajjamāne hīne paṇīte suvaṇṇe dubbaṇṇe sugate duggate … pe … yathākammūpage satte pajānāti. Ayampi kho, udāyi, dhammo uttaritaro ca paṇītataro ca yassa sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ caranti.</p>
+
+<p><span class="parno">44</span>So evaṁ samāhite citte parisuddhe pariyodāte anaṅgaṇe vigatūpakkilese mudubhūte kammaniye ṭhite āneñjappatte āsavānaṁ khayañāṇāya cittaṁ abhininnāmeti. So ‘idaṁ dukkhan’ti yathābhūtaṁ pajānāti, ‘Ayaṁ dukkhasamudayo’ti … pe … ‘Ayaṁ dukkhanirodho’ti … ‘Ayaṁ dukkhanirodhagāminī paṭipadā’ti yathābhūtaṁ pajānāti, ‘ime āsavā’ti yathābhūtaṁ pajānāti, ‘Ayaṁ āsavasamudayo’ti … ‘Ayaṁ āsavanirodho’ti … ‘Ayaṁ āsavanirodhagāminī paṭipadā’ti yathābhūtaṁ pajānāti.</p>
+
+<hr>
+
+<p>Tassa evaṁ jānato evaṁ passato kāmāsavāpi cittaṁ vimuccati, bhavāsavāpi cittaṁ vimuccati, avijjāsavāpi cittaṁ vimuccati. Vimuttasmiṁ vimuttamiti ñāṇaṁ hoti. ‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti. Ayampi kho, udāyi, dhammo uttaritaro ca paṇītataro ca yassa sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ caranti.</p>
+
+
+<p>Ime kho, udāyi, dhammā uttaritarā ca paṇītatarā ca yesaṁ sacchikiriyāhetu bhikkhū mayi brahmacariyaṁ carantī"ti.</p>
+
+<hr>
+
+<p><span class="parno">45</span>Evaṁ vutte, sakuludāyī paribbājako bhagavantaṁ etadavoca: "Abhikkantaṁ, bhante, abhikkantaṁ, bhante. Seyyathāpi, bhante, nikkujjitaṁ vā ukkujjeyya, paṭicchannaṁ vā vivareyya, mūḷhassa vā maggaṁ ācikkheyya, andhakāre vā telapajjotaṁ dhāreyya: ‘cakkhumanto rūpāni dakkhantī’ti; evamevaṁ bhagavatā anekapariyāyena dhammo pakāsito. Esāhaṁ, bhante, bhagavantaṁ saraṇaṁ gacchāmi dhammañca bhikkhusaṅghañca. Labheyyāhaṁ, bhante, bhagavato santike pabbajjaṁ, labheyyaṁ upasampadan"ti.</p>
+
+<hr>
+
+<p><span class="parno">46</span>Evaṁ vutte, sakuludāyissa paribbājakassa parisā sakuludāyiṁ paribbājakaṁ etadavocuṁ: "mā bhavaṁ, udāyi, samaṇe gotame brahmacariyaṁ cari; mā bhavaṁ, udāyi, ācariyo hutvā antevāsīvāsaṁ vasi. Seyyathāpi nāma <span class="var" title="maṇiko (pts1, mr)" id="note341">udakamaṇiko</span> hutvā <span class="var" title="uddekaniko (s1–3, km, pts1)" id="note342">udañcaniko</span> assa, <span class="var" title="evaṁ sampadametaṁ (pts1)" id="note343">evaṁ sampadamidaṁ</span> bhoto udāyissa bhavissati. Mā bhavaṁ, udāyi, samaṇe gotame brahmacariyaṁ cari; mā bhavaṁ, udāyi, ācariyo hutvā antevāsīvāsaṁ vasī"ti.</p>
+
+<p>Iti hidaṁ sakuludāyissa paribbājakassa parisā sakuludāyiṁ paribbājakaṁ antarāyamakāsi bhagavati brahmacariyeti.</p>
+
+<p class="endsutta">Cūḷasakuludāyisuttaṁ niṭṭhitaṁ navamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn78.html#content"></a><a id="next-sutta" href="./mn80.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN79: Cūḷasakuludāyisutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

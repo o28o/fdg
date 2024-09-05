@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 43</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN43: Mahāvedallasutta - The Great Classification </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn43">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Sāvatthī in Jeta’s Grove, Anāthapiṇḍika’s monastery.</p>
+<p>Then in the late afternoon, Venerable Mahākoṭṭhita came out of retreat, went to Venerable Sāriputta, and exchanged greetings with him. When the greetings and polite conversation were over, he sat down to one side and said to Sāriputta:</p>
+
+<hr>
+
+<p><span class="parno">2</span>“Reverend, they speak of ‘a witless person’. How is a witless person defined?”</p>
+
+<p><span class="parno">3</span>“Reverend, they’re called witless because they don’t understand. And what don’t they understand? They don’t understand: ‘This is suffering’ … ‘This is the origin of suffering’ … ‘This is the cessation of suffering’ … ‘This is the practice that leads to the cessation of suffering.’ They’re called witless because they don’t understand.”</p>
+
+<p><span class="parno">4</span>Saying “Good, reverend,” Mahākoṭṭhita approved and agreed with what Sāriputta said. Then he asked another question:</p>
+
+<p><span class="parno">5</span>“They speak of ‘a wise person’. How is a wise person defined?”</p>
+
+<p><span class="parno">6</span>“They’re called wise because they understand. And what do they understand? They understand: ‘This is suffering’ … ‘This is the origin of suffering’ … ‘This is the cessation of suffering’ … ‘This is the practice that leads to the cessation of suffering.’ They’re called wise because they understand.”</p>
+
+<hr>
+
+<p><span class="parno">7</span>“They speak of ‘consciousness’. How is consciousness defined?”</p>
+
+<p><span class="parno">8</span>“It’s called consciousness because it cognizes. And what does it cognize? It cognizes ‘pleasure’ and ‘pain’ and ‘neutral’. It’s called consciousness because it cognizes.”</p>
+
+<p><span class="parno">9</span>“Wisdom and consciousness — are these things mixed or separate? And can we completely dissect them so as to describe the difference between them?”</p>
+
+<p>“Wisdom and consciousness — these things are mixed, not separate. And you can never completely dissect them so as to describe the difference between them. For you understand what you cognize, and you cognize what you understand. That’s why these things are mixed, not separate. And you can never completely dissect them so as to describe the difference between them.”</p>
+
+<p><span class="parno">10</span>“Wisdom and consciousness — what is the difference between these things that are mixed, not separate?”</p>
+
+<p>“The difference between these things is that wisdom should be developed, while consciousness should be completely understood.”</p>
+
+<p><span class="parno">11</span>“They speak of this thing called ‘feeling’. How is feeling defined?”</p>
+
+<p><span class="parno">12</span>“It’s called feeling because it feels. And what does it feel? It feels pleasure, pain, and neutral. It’s called feeling because it feels.”</p>
+
+<p><span class="parno">13</span>“They speak of this thing called ‘perception’. How is perception defined?”</p>
+
+<p><span class="parno">14</span>“It’s called perception because it perceives. And what does it perceive? It perceives blue, yellow, red, and white. It’s called perception because it perceives.”</p>
+
+<p>“Feeling, perception, and consciousness — are these things mixed or separate? And can we completely dissect them so as to describe the difference between them?”</p>
+
+<p><span class="parno">15</span>“Feeling, perception, and consciousness — these things are mixed, not separate. And you can never completely dissect them so as to describe the difference between them. For you perceive what you feel, and you cognize what you perceive. That’s why these things are mixed, not separate. And you can never completely dissect them so as to describe the difference between them.”</p>
+
+<p><span class="parno">16</span>“What can be known by purified mind consciousness released from the five senses?”</p>
+
+<hr>
+
+<p><span class="parno">17</span>“Aware that ‘space is infinite’ it can know the dimension of infinite space. Aware that ‘consciousness is infinite’ it can know the dimension of infinite consciousness. Aware that ‘there is nothing at all’ it can know the dimension of nothingness.”</p>
+
+<p><span class="parno">18</span>“How do you understand something that can be known?”</p>
+
+<p><span class="parno">19</span>“You understand something that can be known with the eye of wisdom.”</p>
+
+<hr>
+
+<p><span class="parno">20</span>“What is the purpose of wisdom?”</p>
+
+<p><span class="parno">21</span>“The purpose of wisdom is direct knowledge, complete understanding, and giving up.”</p>
+
+<p><span class="parno">22</span>“How many conditions are there for the arising of right view?”</p>
+
+<p><span class="parno">23</span>“There are two conditions for the arising of right view: the words of another and proper attention. These are the two conditions for the arising of right view.”</p>
+
+<p><span class="parno">24</span>“When right view is supported by how many factors does it have freedom of heart and freedom by wisdom as its fruit and benefit?”</p>
+
+<hr>
+
+<p><span class="parno">25</span>“When right view is supported by five factors it has freedom of heart and freedom by wisdom as its fruit and benefit. It’s when right view is supported by ethics, learning, discussion, serenity, and discernment. When right view is supported by these five factors it has freedom of heart and freedom by wisdom as its fruit and benefit.”</p>
+
+<hr>
+
+<p><span class="parno">26</span>“How many states of existence are there?”</p>
+
+<p><span class="parno">27</span>“Reverend, there are these three states of existence. Existence in the sensual realm, the realm of luminous form, and the formless realm.”</p>
+
+<p><span class="parno">28</span>“But how is there rebirth into a new state of existence in the future?”</p>
+
+<hr>
+
+<p><span class="parno">29</span>“It’s because of sentient beings — hindered by ignorance and fettered by craving — taking pleasure in various different realms. That’s how there is rebirth into a new state of existence in the future.”</p>
+
+<hr>
+
+<p><span class="parno">30</span>“But how is there no rebirth into a new state of existence in the future?”</p>
+
+<p><span class="parno">31</span>“It’s when ignorance fades away, knowledge arises, and craving ceases. That’s how there is no rebirth into a new state of existence in the future.”</p>
+
+<p><span class="parno">32</span>“But what, reverend, is the first absorption?”</p>
+
+<p><span class="parno">33</span>“Reverend, it’s when a mendicant, quite secluded from sensual pleasures, secluded from unskillful qualities, enters and remains in the first absorption, which has the rapture and bliss born of seclusion, while placing the mind and keeping it connected. This is called the first absorption.”</p>
+
+<p><span class="parno">34</span>“But how many factors does the first absorption have?”</p>
+
+<hr>
+
+<p><span class="parno">35</span>“The first absorption has five factors. When a mendicant has entered the first absorption, placing the mind, keeping it connected, rapture, bliss, and unification of mind are present. That’s how the first absorption has five factors.”</p>
+
+<hr>
+
+<p><span class="parno">36</span>“But how many factors has the first absorption given up and how many does it possess?”</p>
+
+<p><span class="parno">37</span>“The first absorption has given up five factors and possesses five factors. When a mendicant has entered the first absorption, sensual desire, ill will, dullness and drowsiness, restlessness and remorse, and doubt are given up. Placing the mind, keeping it connected, rapture, bliss, and unification of mind are present. That’s how the first absorption has given up five factors and possesses five factors.”</p>
+
+<hr>
+
+<p><span class="parno">38</span>“Reverend, these five faculties have different scopes and different ranges, and don’t experience each others’ scope and raṅge. That is, the faculties of the eye, ear, nose, tongue, and body. What do these five faculties, with their different scopes and ranges, have recourse to? What experiences their scopes and ranges?”</p>
+
+<p><span class="parno">39</span>“These five faculties, with their different scopes and ranges, have recourse to the mind. And the mind experiences their scopes and ranges.”</p>
+<p><span class="parno">40</span>“These five faculties depend on what to continue?”</p>
+
+
+<hr>
+
+<p><span class="parno">41</span>“These five faculties depend on life to continue.”</p>
+
+<hr>
+
+<p><span class="parno">42</span>“But what does life depend on to continue?”</p>
+
+<p><span class="parno">43</span>“Life depends on warmth to continue.”</p>
+
+<p><span class="parno">44</span>“But what does warmth depend on to continue?”</p>
+
+<p><span class="parno">45</span>“Warmth depends on life to continue.”</p>
+
+<hr>
+
+<p><span class="parno">46</span>“Just now I understood you to say: ‘Life depends on warmth to continue.’ But I also understood you to say: ‘Warmth depends on life to continue.’ How then should we see the meaning of this statement?”</p>
+
+<hr>
+
+<p><span class="parno">47</span>“Well then, reverend, I shall give you a simile. For by means of a simile some sensible people understand the meaning of what is said. Suppose there was an oil lamp burning. The light appears dependent on the flame, and the flame appears dependent on the light. In the same way, life depends on warmth to continue, and warmth depends on life to continue.”</p>
+
+<p><span class="parno">48</span>“Are the life forces the same things as the phenomena that are felt? Or are they different things?”</p>
+
+<p><span class="parno">49</span>“The life forces are not the same things as the phenomena that are felt. For if the life forces and the phenomena that are felt were the same things, a mendicant who had attained the cessation of perception and feeling would not emerge from it. But because the life forces and the phenomena that are felt are different things, a mendicant who has attained the cessation of perception and feeling can emerge from it.”</p>
+
+<hr>
+
+<p><span class="parno">50</span>“How many things must this body lose before it lies forsaken, tossed aside like an insentient log?”</p>
+
+<p><span class="parno">51</span>“This body must lose three things before it lies forsaken, tossed aside like an insentient log: vitality, warmth, and consciousness.”</p>
+
+<p><span class="parno">52</span>“What’s the difference between someone who has passed away and a mendicant who has attained the cessation of perception and feeling?”</p>
+
+<p><span class="parno">53</span>“When someone dies, their physical, verbal, and mental processes have ceased and stilled; their vitality is spent; their warmth is dissipated; and their faculties have disintegrated. When a mendicant has attained the cessation of perception and feeling, their physical, verbal, and mental processes have ceased and stilled. But their vitality is not spent; their warmth is not dissipated; and their faculties are very clear. That’s the difference between someone who has passed away and a mendicant who has attained the cessation of perception and feeling.”</p>
+
+<p><span class="parno">54</span>“How many conditions are necessary to attain the neutral release of the heart?”</p>
+
+<hr>
+
+<p><span class="parno">55</span>“Four conditions are necessary to attain the neutral release of the heart. Giving up pleasure and pain, and ending former happiness and sadness, a mendicant enters and remains in the fourth absorption, without pleasure or pain, with pure equanimity and mindfulness. These four conditions are necessary to attain the neutral release of the heart.”</p>
+
+<p><span class="parno">56</span>“How many conditions are necessary to attain the signless release of the heart?”</p>
+
+<p><span class="parno">57</span>“Two conditions are necessary to attain the signless release of the heart: not focusing on any signs, and focusing on the signless. These two conditions are necessary to attain the signless release of the heart.”</p>
+
+<p><span class="parno">58</span>“How many conditions are necessary to remain in the signless release of the heart?”</p>
+
+<p><span class="parno">59</span>“Three conditions are necessary to remain in the signless release of the heart: not focusing on any signs, focusing on the signless, and a previous determination. These three conditions are necessary to remain in the signless release of the heart.”</p>
+
+<p><span class="parno">60</span>“How many conditions are necessary to emerge from the signless release of the heart?”</p>
+
+<hr>
+
+<p><span class="parno">61</span>“Two conditions are necessary to emerge from the signless release of the heart: focusing on all signs, and not focusing on the signless. These two conditions are necessary to emerge from the signless release of the heart.”</p>
+
+<p><span class="parno">62</span>“The limitless heart’s release, and the heart’s release through nothingness, and the heart’s release through emptiness, and the signless heart’s release: do these things differ in both meaning and phrasing? Or do they mean the same thing, and differ only in the phrasing?”</p>
+
+<p><span class="parno">63</span>“There is a way in which these things differ in both meaning and phrasing. But there’s also a way in which they mean the same thing, and differ only in the phrasing.</p>
+
+<p><span class="parno">64</span>And what’s the way in which these things differ in both meaning and phrasing?</p>
+
+<hr>
+
+<p><span class="parno">65</span>Firstly, a mendicant meditates spreading a heart full of love to one direction, and to the second, and to the third, and to the fourth. In the same way above, below, across, everywhere, all around, they spread a heart full of love to the whole world — abundant, expansive, limitless, free of enmity and ill will. They meditate spreading a heart full of compassion … They meditate spreading a heart full of rejoicing … They meditate spreading a heart full of equanimity to one direction, and to the second, and to the third, and to the fourth. In the same way above, below, across, everywhere, all around, they spread a heart full of equanimity to the whole world — abundant, expansive, limitless, free of enmity and ill will. This is called the limitless heart’s release.</p>
+
+<hr>
+
+<p><span class="parno">66</span>And what is the heart’s release through nothingness? </p>
+
+<p><span class="parno">67</span>It’s when a mendicant, going totally beyond the dimension of infinite consciousness, aware that ‘there is nothing at all’, enters and remains in the dimension of nothingness. This is called the heart’s release through nothingness.</p>
+
+<p><span class="parno">68</span>And what is the heart’s release through emptiness? </p>
+
+<p><span class="parno">69</span>It’s when a mendicant has gone to a wilderness, or to the root of a tree, or to an empty hut, and reflects like this: ‘This is empty of a self or what belongs to a self.’ This is called the heart’s release through emptiness.</p>
+
+<hr>
+
+<p><span class="parno">70</span>And what is the signless heart’s release? </p>
+
+<p><span class="parno">71</span>It’s when a mendicant, not focusing on any signs, enters and remains in the signless immersion of the heart. This is called the signless heart’s release.</p>
+
+<p>This is the way in which these things differ in both meaning and phrasing.</p>
+
+<hr>
+
+<p><span class="parno">72</span>And what’s the way in which they mean the same thing, and differ only in the phrasing?</p>
+
+<p><span class="parno">73</span>Greed, hate, and delusion are makers of limits. A mendicant who has ended the defilements has given these up, cut them off at the root, made them like a palm stump, and obliterated them, so they are unable to arise in the future. The unshakable heart’s release is said to be the best kind of limitless heart’s release. That unshakable heart’s release is empty of greed, hate, and delusion.</p>
+
+<p>Greed is something, hate is something, and delusion is something. A mendicant who has ended the defilements has given these up, cut them off at the root, made them like a palm stump, and obliterated them, so they are unable to arise in the future. The unshakable heart’s release is said to be the best kind of heart’s release through nothingness. That unshakable heart’s release is empty of greed, hate, and delusion.</p>
+
+<p>Greed, hate, and delusion are makers of signs. A mendicant who has ended the defilements has given these up, cut them off at the root, made them like a palm stump, and obliterated them, so they are unable to arise in the future. The unshakable heart’s release is said to be the best kind of signless heart’s release. That unshakable heart’s release is empty of greed, hate, and delusion.</p>
+
+<p>This is the way in which they mean the same thing, and differ only in the phrasing.”</p>
+
+<hr>
+
+<p><span class="parno">74</span>This is what Venerable Sāriputta said. Satisfied, Venerable Mahākoṭṭhita was happy with what Sāriputta said.</p>
+
+</div>
+
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati jetavane anāthapiṇḍikassa ārāme.</p>
+
+<p>Atha kho āyasmā mahākoṭṭhiko sāyanhasamayaṁ paṭisallānā vuṭṭhito yenāyasmā sāriputto tenupasaṅkami; upasaṅkamitvā āyasmatā sāriputtena saddhiṁ sammodi. Sammodanīyaṁ kathaṁ sāraṇīyaṁ vītisāretvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā mahākoṭṭhiko āyasmantaṁ sāriputtaṁ etadavoca: </p>
+
+<hr>
+
+<p><span class="parno">2</span>"‘Duppañño duppañño’ti, āvuso, vuccati. Kittāvatā nu kho, āvuso, duppaññoti vuccatī"ti?</p>
+
+<p><span class="parno">3</span>"‘Nappajānāti nappajānātī’ti kho, āvuso, tasmā duppaññoti vuccati. Kiñca nappajānāti? ‘Idaṁ dukkhan’ti nappajānāti, ‘Ayaṁ dukkhasamudayo’ti nappajānāti, ‘Ayaṁ dukkhanirodho’ti nappajānāti, ‘Ayaṁ dukkhanirodhagāminī paṭipadā’ti nappajānāti. ‘Nappajānāti nappajānātī’ti kho, āvuso, tasmā duppaññoti vuccatī"ti.</p>
+
+<p><span class="parno">4</span>"Sādhāvuso"ti kho āyasmā mahākoṭṭhiko āyasmato sāriputtassa bhāsitaṁ abhinanditvā anumoditvā āyasmantaṁ sāriputtaṁ uttariṁ pañhaṁ apucchi: </p>
+
+
+<p><span class="parno">5</span>"‘Paññavā paññavā’ti, āvuso, vuccati. Kittāvatā nu kho, āvuso, paññavāti vuccatī"ti?</p>
+
+<p><span class="parno">6</span>"‘Pajānāti pajānātī’ti kho, āvuso, tasmā paññavāti vuccati. Kiñca pajānāti? ‘Idaṁ dukkhan’ti pajānāti, ‘Ayaṁ dukkhasamudayo’ti pajānāti, ‘Ayaṁ dukkhanirodho’ti pajānāti, ‘Ayaṁ dukkhanirodhagāminī paṭipadā’ti pajānāti. ‘Pajānāti pajānātī’ti kho, āvuso, tasmā paññavāti vuccatī"ti.</p>
+
+<hr>
+
+<p><span class="parno">7</span>"‘Viññāṇaṁ viññāṇan’ti, āvuso, vuccati. Kittāvatā nu kho, āvuso, viññāṇanti vuccatī"ti?</p>
+
+<p><span class="parno">8</span>"‘Vijānāti vijānātī’ti kho, āvuso, tasmā viññāṇanti vuccati. Kiñca vijānāti? Sukhantipi vijānāti, dukkhantipi vijānāti, adukkhamasukhantipi vijānāti. ‘Vijānāti vijānātī’ti kho, āvuso, tasmā viññāṇanti vuccatī"ti.</p>
+
+<p><span class="parno">9</span>"Yā cāvuso, paññā yañca viññāṇaṁ — ime dhammā saṁsaṭṭhā udāhu visaṁsaṭṭhā? Labbhā ca panimesaṁ dhammānaṁ <span class="var" title="vinibbhujjitvā vinibbhujjitvā (mr)" id="note470">vinibbhujitvā vinibbhujitvā</span> nānākaraṇaṁ paññāpetun"ti?</p>
+
+<p>"Yā cāvuso, paññā yañca viññāṇaṁ — ime dhammā saṁsaṭṭhā, no visaṁsaṭṭhā. Na ca labbhā imesaṁ dhammānaṁ vinibbhujitvā vinibbhujitvā nānākaraṇaṁ paññāpetuṁ. <span class="var" title="yañcāvuso (bj, mr) | yañca āvuso (s1–3, km)" id="note471">Yaṁ hāvuso</span>, pajānāti taṁ vijānāti, yaṁ vijānāti taṁ pajānāti. Tasmā ime dhammā saṁsaṭṭhā, no visaṁsaṭṭhā. Na ca labbhā imesaṁ dhammānaṁ vinibbhujitvā vinibbhujitvā nānākaraṇaṁ paññāpetun"ti.</p>
+
+<p><span class="parno">10</span>"Yā cāvuso, paññā yañca viññāṇaṁ — imesaṁ dhammānaṁ saṁsaṭṭhānaṁ no visaṁsaṭṭhānaṁ kiṁ nānākaraṇan"ti?</p>
+
+<p>"Yā cāvuso, paññā yañca viññāṇaṁ — imesaṁ dhammānaṁ saṁsaṭṭhānaṁ no visaṁsaṭṭhānaṁ paññā bhāvetabbā, viññāṇaṁ pariññeyyaṁ. Idaṁ nesaṁ nānākaraṇan"ti.</p>
+
+<p><span class="parno">11</span>"‘Vedanā vedanā’ti, āvuso, vuccati. Kittāvatā nu kho, āvuso, vedanāti vuccatī"ti?</p>
+
+<p><span class="parno">12</span>"‘Vedeti vedetī’ti kho, āvuso, tasmā vedanāti vuccati. Kiñca vedeti? Sukhampi vedeti, dukkhampi vedeti, adukkhamasukhampi vedeti. ‘Vedeti vedetī’ti kho, āvuso, tasmā vedanāti vuccatī"ti.</p>
+
+<p><span class="parno">13</span>"‘Saññā saññā’ti, āvuso, vuccati. Kittāvatā nu kho, āvuso, saññāti vuccatī"ti?</p>
+
+<p><span class="parno">14</span>"‘Sañjānāti sañjānātī’ti kho, āvuso, tasmā saññāti vuccati. Kiñca sañjānāti? Nīlakampi sañjānāti, pītakampi sañjānāti, lohitakampi sañjānāti, odātampi sañjānāti. ‘Sañjānāti sañjānātī’ti kho, āvuso, tasmā saññāti vuccatī"ti.</p>
+
+<p>"Yā cāvuso, vedanā yā ca saññā yañca viññāṇaṁ — ime dhammā saṁsaṭṭhā udāhu visaṁsaṭṭhā? Labbhā ca panimesaṁ dhammānaṁ vinibbhujitvā vinibbhujitvā nānākaraṇaṁ paññāpetun"ti?</p>
+
+<p><span class="parno">15</span>"Yā cāvuso, vedanā yā ca saññā yañca viññāṇaṁ — ime dhammā saṁsaṭṭhā, no visaṁsaṭṭhā. Na ca labbhā imesaṁ dhammānaṁ vinibbhujitvā vinibbhujitvā nānākaraṇaṁ paññāpetuṁ. <span class="var" title="yaṁ cāvuso (s1–3, km) | yañcāvuso (mr)" id="note472">Yaṁ hāvuso</span>, vedeti taṁ sañjānāti, yaṁ sañjānāti taṁ vijānāti. Tasmā ime dhammā saṁsaṭṭhā no visaṁsaṭṭhā. Na ca labbhā imesaṁ dhammānaṁ vinibbhujitvā vinibbhujitvā nānākaraṇaṁ paññāpetun"ti.</p>
+
+<p><span class="parno">16</span>"<span class="var" title="nissaṭṭhena panāvuso (?)" id="note473">Nissaṭṭhena hāvuso</span>, pañcahi indriyehi parisuddhena manoviññāṇena kiṁ neyyan"ti?</p>
+
+<hr>
+
+<p><span class="parno">17</span>"Nissaṭṭhena, āvuso, pañcahi indriyehi parisuddhena manoviññāṇena ‘ananto ākāso’ti ākāsānañcāyatanaṁ neyyaṁ, ‘anantaṁ viññāṇan’ti viññāṇañcāyatanaṁ neyyaṁ, ‘Natthi kiñcī’ti ākiñcaññāyatanaṁ neyyan"ti.</p>
+
+<p><span class="parno">18</span>"Neyyaṁ panāvuso, dhammaṁ kena pajānātī"ti?</p>
+
+<p><span class="parno">19</span>"Neyyaṁ kho, āvuso, dhammaṁ paññācakkhunā pajānātī"ti.</p>
+
+<hr>
+
+<p><span class="parno">20</span>"Paññā panāvuso, kimatthiyā"ti?</p>
+
+<p><span class="parno">21</span>"Paññā kho, āvuso, abhiññatthā pariññatthā pahānatthā"ti.</p>
+
+<p><span class="parno">22</span>"Kati panāvuso, paccayā sammādiṭṭhiyā uppādāyā"ti?</p>
+
+<p><span class="parno">23</span>"Dve kho, āvuso, paccayā sammādiṭṭhiyā uppādāya — parato ca ghoso, yoniso ca manasikāro. Ime kho, āvuso, dve paccayā sammādiṭṭhiyā uppādāyā"ti.</p>
+
+<p><span class="parno">24</span>"Katihi panāvuso, aṅgehi anuggahitā sammādiṭṭhi cetovimuttiphalā ca hoti cetovimuttiphalānisaṁsā ca, paññāvimuttiphalā ca hoti paññāvimuttiphalānisaṁsā cā"ti?</p>
+
+<hr>
+
+<p><span class="parno">25</span>"Pañcahi kho, āvuso, aṅgehi anuggahitā sammādiṭṭhi cetovimuttiphalā ca hoti cetovimuttiphalānisaṁsā ca, paññāvimuttiphalā ca hoti paññāvimuttiphalānisaṁsā ca. Idhāvuso, sammādiṭṭhi sīlānuggahitā ca hoti, sutānuggahitā ca hoti, sākacchānuggahitā ca hoti, samathānuggahitā ca hoti, vipassanānuggahitā ca hoti. Imehi kho, āvuso, pañcahaṅgehi anuggahitā sammādiṭṭhi cetovimuttiphalā ca hoti cetovimuttiphalānisaṁsā ca, paññāvimuttiphalā ca hoti paññāvimuttiphalānisaṁsā cā"ti.</p>
+
+<hr>
+
+<p><span class="parno">26</span>"Kati panāvuso, bhavā"ti?</p>
+
+<p><span class="parno">27</span>"Tayome, āvuso, bhavā — kāmabhavo, rūpabhavo, arūpabhavo"ti.</p>
+
+<p><span class="parno">28</span>"Kathaṁ panāvuso, āyatiṁ punabbhavābhinibbatti hotī"ti?</p>
+
+<hr>
+
+<p><span class="parno">29</span>"Avijjānīvaraṇānaṁ kho, āvuso, sattānaṁ taṇhāsaṁyojanānaṁ tatratatrābhinandanā — evaṁ āyatiṁ punabbhavābhinibbatti hotī"ti.</p>
+
+<hr>
+
+<p><span class="parno">30</span>"Kathaṁ panāvuso, āyatiṁ punabbhavābhinibbatti na hotī"ti?</p>
+
+<p><span class="parno">31</span>"Avijjāvirāgā kho, āvuso, vijjuppādā taṇhānirodhā — evaṁ āyatiṁ punabbhavābhinibbatti na hotī"ti.</p>
+
+<p><span class="parno">32</span>"Katamaṁ panāvuso, paṭhamaṁ jhānan"ti?</p>
+
+<p><span class="parno">33</span>"Idhāvuso, bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi savitakkaṁ savicāraṁ vivekajaṁ pītisukhaṁ paṭhamaṁ jhānaṁ upasampajja viharati — idaṁ vuccati, āvuso, paṭhamaṁ jhānan"ti.</p>
+
+
+<p><span class="parno">34</span>"Paṭhamaṁ panāvuso, jhānaṁ katiaṅgikan"ti?</p>
+
+<hr>
+
+<p><span class="parno">35</span>"Paṭhamaṁ kho, āvuso, jhānaṁ pañcaṅgikaṁ. Idhāvuso, paṭhamaṁ jhānaṁ samāpannassa bhikkhuno vitakko ca vattati, vicāro ca pīti ca sukhañca cittekaggatā ca. Paṭhamaṁ kho, āvuso, jhānaṁ evaṁ pañcaṅgikan"ti.</p>
+
+<hr>
+
+<p><span class="parno">36</span>"Paṭhamaṁ panāvuso, jhānaṁ kataṅgavippahīnaṁ kataṅgasamannāgatan"ti?</p>
+
+<p><span class="parno">37</span>"Paṭhamaṁ kho, āvuso, jhānaṁ pañcaṅgavippahīnaṁ, pañcaṅgasamannāgataṁ. Idhāvuso, paṭhamaṁ jhānaṁ samāpannassa bhikkhuno kāmacchando pahīno hoti, byāpādo pahīno hoti, thinamiddhaṁ pahīnaṁ hoti, uddhaccakukkuccaṁ pahīnaṁ hoti, vicikicchā pahīnā hoti; vitakko ca vattati, vicāro ca pīti ca sukhañca cittekaggatā ca. Paṭhamaṁ kho, āvuso, jhānaṁ evaṁ pañcaṅgavippahīnaṁ pañcaṅgasamannāgatan"ti.</p>
+
+<hr>
+
+<p><span class="parno">38</span>"Pañcimāni, āvuso, indriyāni nānāvisayāni nānāgocarāni, na aññamaññassa gocaravisayaṁ paccanubhonti, seyyathidaṁ — cakkhundriyaṁ, sotindriyaṁ, ghānindriyaṁ, jivhindriyaṁ, kāyindriyaṁ. Imesaṁ kho, āvuso, pañcannaṁ indriyānaṁ nānāvisayānaṁ nānāgocarānaṁ, na aññamaññassa gocaravisayaṁ paccanubhontānaṁ, kiṁ paṭisaraṇaṁ, ko ca nesaṁ gocaravisayaṁ paccanubhotī"ti?</p>
+
+<p><span class="parno">39</span>"Pañcimāni, āvuso, indriyāni nānāvisayāni nānāgocarāni, na aññamaññassa gocaravisayaṁ paccanubhonti, seyyathidaṁ — cakkhundriyaṁ, sotindriyaṁ, ghānindriyaṁ, jivhindriyaṁ, kāyindriyaṁ. Imesaṁ kho, āvuso, pañcannaṁ indriyānaṁ nānāvisayānaṁ nānāgocarānaṁ, na aññamaññassa gocaravisayaṁ paccanubhontānaṁ, mano paṭisaraṇaṁ, mano ca nesaṁ gocaravisayaṁ paccanubhotī"ti.</p>
+
+<p><span class="parno">40</span>"Pañcimāni, āvuso, indriyāni, seyyathidaṁ — cakkhundriyaṁ, sotindriyaṁ, ghānindriyaṁ, jivhindriyaṁ, kāyindriyaṁ. Imāni kho, āvuso, pañcindriyāni kiṁ paṭicca tiṭṭhantī"ti?</p>
+
+<hr>
+
+<p><span class="parno">41</span>"Pañcimāni, āvuso, indriyāni, seyyathidaṁ — cakkhundriyaṁ, sotindriyaṁ, ghānindriyaṁ, jivhindriyaṁ, kāyindriyaṁ. Imāni kho, āvuso, pañcindriyāni āyuṁ paṭicca tiṭṭhantī"ti.</p>
+
+<hr>
+
+<p><span class="parno">42</span>"Āyu panāvuso, kiṁ paṭicca tiṭṭhatī"ti?</p>
+
+<p><span class="parno">43</span>"Āyu usmaṁ paṭicca tiṭṭhatī"ti.</p>
+
+<p><span class="parno">44</span>"Usmā panāvuso, kiṁ paṭicca tiṭṭhatī"ti?</p>
+
+<p><span class="parno">45</span>"Usmā āyuṁ paṭicca tiṭṭhatī"ti.</p>
+
+<hr>
+
+<p><span class="parno">46</span>"Idāneva kho mayaṁ, āvuso, āyasmato sāriputtassa bhāsitaṁ evaṁ ājānāma: ‘āyu usmaṁ paṭicca tiṭṭhatī’ti. Idāneva pana mayaṁ, āvuso, āyasmato sāriputtassa bhāsitaṁ evaṁ ājānāma: ‘usmā āyuṁ paṭicca tiṭṭhatī’ti. Yathā kathaṁ panāvuso, imassa bhāsitassa attho daṭṭhabbo"ti?</p>
+
+<hr>
+
+<p><span class="parno">47</span>"Tena hāvuso, upamaṁ te karissāmi; upamāyapidhekacce viññū purisā bhāsitassa atthaṁ ājānanti. Seyyathāpi, āvuso, telappadīpassa jhāyato acciṁ paṭicca ābhā paññāyati, ābhaṁ paṭicca acci paññāyati; evameva kho, āvuso, āyu usmaṁ paṭicca tiṭṭhati, usmā āyuṁ paṭicca tiṭṭhatī"ti.</p>
+
+<p><span class="parno">48</span>"Teva nu kho, āvuso, āyusaṅkhārā, te vedaniyā dhammā udāhu aññe āyusaṅkhārā aññe vedaniyā dhammā"ti?</p>
+
+<p><span class="parno">49</span>"Na kho, āvuso, teva āyusaṅkhārā te vedaniyā dhammā. Te ca hāvuso, āyusaṅkhārā abhaviṁsu te vedaniyā dhammā, na yidaṁ saññāvedayitanirodhaṁ samāpannassa bhikkhuno vuṭṭhānaṁ paññāyetha. Yasmā ca kho, āvuso, aññe āyusaṅkhārā aññe vedaniyā dhammā, tasmā saññāvedayitanirodhaṁ samāpannassa bhikkhuno vuṭṭhānaṁ paññāyatī"ti.</p>
+
+<hr>
+
+<p><span class="parno">50</span>"Yadā nu kho, āvuso, imaṁ kāyaṁ kati dhammā jahanti; athāyaṁ kāyo ujjhito avakkhitto seti, yathā kaṭṭhaṁ acetanan"ti?</p>
+
+<p><span class="parno">51</span>"Yadā kho, āvuso, imaṁ kāyaṁ tayo dhammā jahanti — āyu usmā ca viññāṇaṁ; athāyaṁ kāyo ujjhito avakkhitto seti, yathā kaṭṭhaṁ acetanan"ti.</p>
+
+<p><span class="parno">52</span>"Yvāyaṁ, āvuso, mato kālaṅkato, yo cāyaṁ bhikkhu saññāvedayitanirodhaṁ samāpanno — imesaṁ kiṁ nānākaraṇan"ti?</p>
+
+<p><span class="parno">53</span>"Yvāyaṁ, āvuso, mato kālaṅkato tassa kāyasaṅkhārā niruddhā paṭippassaddhā, vacīsaṅkhārā niruddhā paṭippassaddhā, cittasaṅkhārā niruddhā paṭippassaddhā, āyu parikkhīṇo, usmā vūpasantā, indriyāni paribhinnāni. Yo cāyaṁ bhikkhu saññāvedayitanirodhaṁ samāpanno tassapi kāyasaṅkhārā niruddhā paṭippassaddhā, vacīsaṅkhārā niruddhā paṭippassaddhā, cittasaṅkhārā niruddhā paṭippassaddhā, āyu na parikkhīṇo, usmā avūpasantā, indriyāni vippasannāni. Yvāyaṁ, āvuso, mato kālaṅkato, yo cāyaṁ bhikkhu saññāvedayitanirodhaṁ samāpanno — idaṁ nesaṁ nānākaraṇan"ti.</p>
+
+<p><span class="parno">54</span>"Kati panāvuso, paccayā adukkhamasukhāya cetovimuttiyā samāpattiyā"ti?</p>
+
+<hr>
+
+<p><span class="parno">55</span>"Cattāro kho, āvuso, paccayā adukkhamasukhāya cetovimuttiyā samāpattiyā. Idhāvuso, bhikkhu sukhassa ca pahānā dukkhassa ca pahānā pubbeva somanassadomanassānaṁ atthaṅgamā adukkhamasukhaṁ upekkhāsatipārisuddhiṁ catutthaṁ jhānaṁ upasampajja viharati. Ime kho, āvuso, cattāro paccayā adukkhamasukhāya cetovimuttiyā samāpattiyā"ti.</p>
+
+<p><span class="parno">56</span>"Kati panāvuso, paccayā animittāya cetovimuttiyā samāpattiyā"ti?</p>
+
+<p><span class="parno">57</span>"Dve kho, āvuso, paccayā animittāya cetovimuttiyā samāpattiyā –  sabbanimittānañca amanasikāro, animittāya ca dhātuyā manasikāro. Ime kho, āvuso, dve paccayā animittāya cetovimuttiyā samāpattiyā"ti.</p>
+
+<p><span class="parno">58</span>"Kati panāvuso, paccayā animittāya cetovimuttiyā ṭhitiyā"ti?</p>
+
+<p><span class="parno">59</span>"Tayo kho, āvuso, paccayā animittāya cetovimuttiyā ṭhitiyā — sabbanimittānañca amanasikāro, animittāya ca dhātuyā manasikāro, pubbe ca abhisaṅkhāro. Ime kho, āvuso, tayo paccayā animittāya cetovimuttiyā ṭhitiyā"ti.</p>
+
+<p><span class="parno">60</span>"Kati panāvuso, paccayā animittāya cetovimuttiyā vuṭṭhānāyā"ti?</p>
+
+<hr>
+
+<p><span class="parno">61</span>"Dve kho, āvuso, paccayā animittāya cetovimuttiyā vuṭṭhānāya –  sabbanimittānañca manasikāro, animittāya ca dhātuyā amanasikāro. Ime kho, āvuso, dve paccayā animittāya cetovimuttiyā vuṭṭhānāyā"ti.</p>
+
+<p><span class="parno">62</span>"Yā cāyaṁ, āvuso, appamāṇā cetovimutti, yā ca ākiñcaññā cetovimutti, yā ca suññatā cetovimutti, yā ca animittā cetovimutti — ime dhammā nānātthā ceva nānābyañjanā ca udāhu ekatthā byañjanameva nānan"ti?</p>
+
+<p><span class="parno">63</span>"Yā cāyaṁ, āvuso, appamāṇā cetovimutti, yā ca ākiñcaññā cetovimutti, yā ca suññatā cetovimutti, yā ca animittā cetovimutti — atthi kho, āvuso, pariyāyo yaṁ pariyāyaṁ āgamma ime dhammā nānātthā ceva nānābyañjanā ca; atthi ca kho, āvuso, pariyāyo yaṁ pariyāyaṁ āgamma ime dhammā ekatthā, byañjanameva nānaṁ.</p>
+
+<p><span class="parno">64</span>Katamo cāvuso, pariyāyo yaṁ pariyāyaṁ āgamma ime dhammā nānātthā ceva nānābyañjanā ca?</p>
+
+
+<hr>
+
+<p><span class="parno">65</span>Idhāvuso, bhikkhu mettāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā viharati. Karuṇāsahagatena cetasā … pe … muditāsahagatena cetasā … upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā viharati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ. Iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyābajjhena pharitvā viharati. Ayaṁ vuccatāvuso, appamāṇā cetovimutti.</p>
+
+
+<hr>
+
+<p><span class="parno">66</span>Katamā cāvuso, ākiñcaññā cetovimutti?</p>
+
+<p><span class="parno">67</span>Idhāvuso, bhikkhu sabbaso viññāṇañcāyatanaṁ samatikkamma natthi kiñcīti ākiñcaññāyatanaṁ upasampajja viharati. Ayaṁ vuccatāvuso, ākiñcaññā cetovimutti.</p>
+
+
+<p><span class="parno">68</span>Katamā cāvuso, suññatā cetovimutti?</p>
+
+<p><span class="parno">69</span>Idhāvuso, bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati: ‘suññamidaṁ attena vā attaniyena vā’ti. Ayaṁ vuccatāvuso, suññatā cetovimutti.</p>
+
+<hr>
+
+<p><span class="parno">70</span>Katamā cāvuso, animittā cetovimutti?</p>
+
+<p><span class="parno">71</span>Idhāvuso, bhikkhu sabbanimittānaṁ amanasikārā animittaṁ cetosamādhiṁ upasampajja viharati. Ayaṁ vuccatāvuso, animittā cetovimutti. </p>
+
+<p>Ayaṁ kho, āvuso, pariyāyo yaṁ pariyāyaṁ āgamma ime dhammā nānātthā ceva nānābyañjanā ca.</p>
+
+<hr>
+
+<p><span class="parno">72</span>Katamo cāvuso, pariyāyo yaṁ pariyāyaṁ āgamma ime dhammā ekatthā byañjanameva nānaṁ?</p>
+
+<p><span class="parno">73</span>Rāgo kho, āvuso, pamāṇakaraṇo, doso pamāṇakaraṇo, moho pamāṇakaraṇo. Te khīṇāsavassa bhikkhuno pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Yāvatā kho, āvuso, appamāṇā cetovimuttiyo, akuppā tāsaṁ cetovimutti aggamakkhāyati. Sā kho panākuppā cetovimutti suññā rāgena, suññā dosena, suññā mohena.</p>
+
+<p>Rāgo kho, āvuso, kiñcano, doso kiñcano, moho kiñcano. Te khīṇāsavassa bhikkhuno pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Yāvatā kho, āvuso, ākiñcaññā cetovimuttiyo, akuppā tāsaṁ cetovimutti aggamakkhāyati. Sā kho panākuppā cetovimutti suññā rāgena, suññā dosena, suññā mohena.</p>
+
+<p>Rāgo kho, āvuso, nimittakaraṇo, doso nimittakaraṇo, moho nimittakaraṇo. Te khīṇāsavassa bhikkhuno pahīnā ucchinnamūlā tālāvatthukatā anabhāvaṅkatā āyatiṁ anuppādadhammā. Yāvatā kho, āvuso, animittā cetovimuttiyo, akuppā tāsaṁ cetovimutti aggamakkhāyati. Sā kho panākuppā cetovimutti suññā rāgena, suññā dosena, suññā mohena. </p>
+
+<p>Ayaṁ kho, āvuso, pariyāyo yaṁ pariyāyaṁ āgamma ime dhammā ekatthā byañjanameva nānan"ti.</p>
+
+<hr>
+
+<p><span class="parno">74</span>Idamavocāyasmā sāriputto. Attamano āyasmā mahākoṭṭhiko āyasmato sāriputtassa bhāsitaṁ abhinandīti.</p>
+
+<p class="endsutta">Mahāvedallasuttaṁ niṭṭhitaṁ tatiyaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn42.html#content"></a><a id="next-sutta" href="./mn44.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN43: Mahāvedallasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

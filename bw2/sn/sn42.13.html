@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Samyutta Nika 42.13</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="pressed w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+<!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4"> 
+
+ <h2 id="SN01heading">Saṁyutta Nikāya — The Linked Discourses</h2>
+
+ 			<div class="w3-bar w3-light-grey center">  <!-- Div for SN sub-navigation -->
+ 					<a href="sn01.html#content" title="The Book of the Verses" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 1:<br>Verses<br>SN1-11</a>
+ 					<a href="sn02.html#content" title="The Book of Causation" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 2:<br>Causation<br>SN12-21</a>
+ 					<a href="sn03.html#content" title="The Book of the Aggregates" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 3:<br>Aggregates<br>SN22-34</a>
+ 					<a href="sn04.html#content" title="The Book of the Six Sense Bases" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow w3-yellow" style="width:20%">Vol 4:<br>Sense Bases<br>SN35-44</a>
+ 					<a href="sn05.html#content" title="The Great Book" class="w3-bar-item w3-button w3-border w3-mobile w3-hover-yellow" style="width:20%">Vol 5:<br>Great Book<br>SN45-56</a>
+ 				</div>  <!-- End div for SN sub-navigation -->
+
+
+<!-- SN content begins here -->
+
+<div id="content">
+
+<h2>42. Gāmaṇisaṁyutta: With Chiefs</h2>
+<h3>I. Chiefs — SN42.13: With Pāṭaliya </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+	<li><a href="/ru/sc/?q=sn42.13">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p><span class="parno">1</span>At one time the Buddha was staying in the land of the Koliyans, where they have a town called Uttara. Then Pāṭaliya the chief went up to the Buddha, bowed, sat down to one side, and said to him:</p>
+
+<p>“Sir, I have heard this: ‘The ascetic Gotama knows magic.’ </p>
+
+<p id="p2"><span class="parno">2</span>Do those who say this repeat what the Buddha has said, and not misrepresent him with an untruth? Is their explanation in line with the teaching? Are there any legitimate grounds for rebuke and criticism? For we don’t want to misrepresent the Blessed One.”</p>
+
+<p>“Chief, those who say this repeat what I have said, and don’t misrepresent me with an untruth. Their explanation is in line with the teaching, and there are no legitimate grounds for rebuke and criticism.”</p>
+
+<p>“Sir, we didn’t believe that what those ascetics and brahmins said was really true. But it seems the ascetic Gotama is a magician!”</p>
+
+<p>“Chief, does someone who says ‘I know magic’ also say ‘I am a magician’?”</p>
+
+<p>“That’s right, Blessed One! That’s right, Holy One!”</p>
+
+<p>“Well then, brahmin, I’ll ask you about this in return, and you can answer as you like.</p>
+
+<p id="p3"><span class="parno">3</span>What do you think, chief? Do you know the Koliyan officers with drooping headdresses?”</p>
+
+<hr>
+
+<p>“I know them, sir.”</p>
+
+<hr>
+
+<p>“And what’s their job?”</p>
+
+<p>“To put a stop to bandits and to deliver messages for the Koliyans.”</p>
+
+<p>“What do you think, chief? Are the Koliyan officers with drooping headdresses moral or immoral?”</p>
+
+<hr>
+
+<p>“I know that they’re immoral, of bad character, sir. They are among those in the world who are immoral and of bad character.”</p>
+
+<p>“Would it be right to say that Pāṭaliya knows the Kolyian officers with drooping headdresses who are immoral, of bad character, so he too must be immoral and of bad character.”</p>
+
+<p>“No, sir. I’m quite different from the Koliyan officers with drooping headdresses, we have quite different characters.”</p>
+
+<p>“So if you can know those officers of bad character while you are not of bad character, why can’t the Realized One know magic, without being a magician?</p>
+
+<p>I understand magic and its result. And I understand how magicians practice so that when their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell.</p>
+
+<hr>
+
+<p id="p4"><span class="parno">4</span>I understand killing living creatures and its result. And I understand how those who kill living creatures practice so that when their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell. </p>
+
+<p>I understand stealing … sexual misconduct … lying … divisive speech … harsh speech … talking nonsense … covetousness … ill will … wrong view and its result. And I understand how those who have wrong view practice so that when their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell.</p>
+
+<hr>
+
+<p id="p5"><span class="parno">5</span>There are some ascetics and brahmins who have this doctrine and view: ‘Everyone who kills living creatures experiences pain and sadness in the present life. Everyone who steals … commits sexual misconduct … lies experiences pain and sadness in the present life.’</p>
+
+<p id="p6"><span class="parno">6</span>But you can see someone, garlanded and adorned, nicely bathed and anointed, hair and beard dressed, taking his pleasure with women as if he were a king. You might ask someone: ‘Mister, what did that man do?’ And they’d reply: ‘Mister, that man attacked the king’s enemy and killed them. The king was delighted and gave him this reward. That’s why he’s garlanded and adorned, nicely bathed and anointed, hair and beard dressed, taking his pleasure with women as if he were a king.’</p>
+
+<p id="p7"><span class="parno">7</span>And you can see someone else, his arms tied tightly behind his back with a strong rope. His head is shaven and he’s marched from street to street and from square to square to the beating of a harsh drum. Then he’s taken out the south gate and there, to the south of the city, they chop off his head. You might ask someone: ‘Mister, what did that man do?’ And they’d reply: ‘Mister, that man is an enemy of the king who has murdered a man or a woman. That’s why the rulers arrested him and inflicted such punishment.’</p>
+
+<hr>
+
+<p id="p8"><span class="parno">8</span>What do you think, chief? Have you seen or heard of such a thing?”</p>
+
+<p>“Sir, we have seen it and heard of it, and we will hear of it again.”</p>
+
+<p>“Since this is so, the ascetics and brahmins whose view is that everyone who kills living creatures experiences pain and sadness in the present life: are they right or wrong?”</p>
+
+<p>“They’re wrong, sir.”</p>
+
+<hr>
+
+<p>“But those who speak hollow, false nonsense: are they moral or immoral?”</p>
+
+<p>“Immoral, sir.”</p>
+
+<p>“And are those who are immoral, of bad character practicing wrongly or rightly?”</p>
+
+<p>“They’re practicing wrongly, sir.”</p>
+
+<p>“And do those who are practicing wrongly have wrong view or right view?”</p>
+
+<p>“They have wrong view, sir.”</p>
+
+<p>“But is it appropriate to have confidence in those of wrong view?”</p>
+
+<p>“No, sir.”</p>
+
+<hr>
+
+<p id="p9"><span class="parno">9</span>“You can see someone, garlanded and adorned … ‘Mister, that man attacked the king’s enemy and took their valuables. The king was delighted and gave him this reward. …’ …</p>
+
+<hr>
+
+<p id="p10"><span class="parno">10</span>And you can see someone else, his arms tied tightly behind his back … ‘Mister, that man took something from a village or wilderness, with the intention to commit theft. That’s why the rulers arrested him and inflicted such punishment.’ </p>
+
+<hr>
+
+<p>What do you think, chief? Have you seen or heard of such a thing?”</p>
+
+<p>“Sir, we have seen it and heard of it, and we will hear of it again.”</p>
+
+<p>“Since this is so, the ascetics and brahmins whose view is that everyone who steals experiences pain and sadness in the present life: are they right or wrong? … Is it appropriate to have confidence in them?”</p>
+
+<p>“No, sir.”</p>
+
+<hr>
+
+<p id="p11"><span class="parno">11</span>“You can see someone, garlanded and adorned … ‘Mister, that man had sexual relations with the wives of an enemy king. The king was delighted and gave him this reward. …’ …</p>
+
+<hr>
+
+<p id="p12"><span class="parno">12</span>And you can see someone else, his arms tied tightly behind his back … ‘Mister, that man had sexual relations with the women and maidens of good families. That’s why the rulers arrested him and inflicted such punishment.’ </p>
+
+<hr>
+
+<p>What do you think, chief? Have you seen or heard of such a thing?”</p>
+
+<p>“Sir, we have seen it and heard of it, and we will hear of it again.”</p>
+
+<p>“Since this is so, the ascetics and brahmins whose view is that everyone who commits sexual misconduct experiences pain and sadness in the present life: are they right or wrong? … Is it appropriate to have confidence in them?”</p>
+
+<p>“No, sir.”</p>
+
+<hr>
+
+<p id="p13"><span class="parno">13</span>“And you can see someone, garlanded and adorned … ‘Mister, that man amused the king with lies. The king was delighted and gave him this reward. …’ …</p>
+
+<hr>
+
+<p id="p14"><span class="parno">14</span>And you can see someone else, his arms tied tightly behind his back … ‘Mister, that man has ruined a householder or householder’s child by lying. That’s why the rulers arrested him and inflicted such punishment.’ </p>
+
+<hr>
+
+<p>What do you think, chief? Have you seen or heard of such a thing?”</p>
+
+<p>“Sir, we have seen it and heard of it, and we will hear of it again.”</p>
+
+<p>“Since this is so, the ascetics and brahmins whose view is that everyone who lies experiences pain and sadness in the present life: are they right or wrong?”</p>
+
+<hr>
+
+<p>“They’re wrong, sir.”</p>
+
+<p>“But those who speak hollow, false nonsense: are they moral or immoral?”</p>
+
+<p>“Immoral, sir.”</p>
+
+<p>“And are those who are immoral, of bad character practicing wrongly or rightly?”</p>
+
+<p>“They’re practicing wrongly, sir.”</p>
+
+<p>“And do those who are practicing wrongly have wrong view or right view?”</p>
+
+<p>“They have wrong view, sir.”</p>
+
+<p>“But is it appropriate to have confidence in those of wrong view?”</p>
+
+<p>“No, sir.</p>
+
+<hr>
+
+<p id="p15"><span class="parno">15</span>It’s incredible, sir, it’s amazing! I have a guest house, where there are cots, seats, water pots, and oil lamps. Whenever an ascetic or brahmin comes to stay, I share what I have as best I can. Once it so happened, sir, that four teachers of different views and opinions came to stay at my guest house.</p>
+
+<p id="p16"><span class="parno">16</span>One teacher had this doctrine and view: ‘There’s no meaning in giving, sacrifice, or offerings. There’s no fruit or result of good and bad deeds. There’s no afterlife. There are no duties to mother and father. No beings are reborn spontaneously. And there’s no ascetic or brahmin who is well attained and practiced, and who describes the afterlife after realizing it with their own insight.’</p>
+
+<p id="p17"><span class="parno">17</span>One teacher had this doctrine and view: ‘There is meaning in giving, sacrifice, and offerings. There are fruits and results of good and bad deeds. There is an afterlife. There are duties to mother and father. There are beings reborn spontaneously. And there are ascetics and brahmins who are well attained and practiced, and who describe the afterlife after realizing it with their own insight.’</p>
+
+<p id="p18"><span class="parno">18</span>One teacher had this doctrine and view: ‘Nothing bad is done by the doer when they punish, mutilate, torture, aggrieve, oppress, intimidate, or when they encourage others to do the same. Nothing bad is done when they kill, steal, break into houses, plunder wealth, steal from isolated buildings, commit highway robbery, commit adultery, and lie. If you were to reduce all the living creatures of this earth to one heap and mass of flesh with a razor-edged chakram, no evil comes of that, and no outcome of evil. If you were to go along the south bank of the Ganges killing, mutilating, and torturing, and encouraging others to do the same, no evil comes of that, and no outcome of evil. If you were to go along the north bank of the Ganges giving and sacrificing and encouraging others to do the same, no merit comes of that, and no outcome of merit. In giving, self-control, restraint, and truthfulness there is no merit or outcome of merit.’</p>
+
+<p id="p19"><span class="parno">19</span>One teacher had this doctrine and view: ‘A bad deed is done by the doer when they punish, mutilate, torture, aggrieve, oppress, intimidate, or when they encourage others to do the same. A bad deed is done when they kill, steal, break into houses, plunder wealth, steal from isolated buildings, commit highway robbery, commit adultery, and lie. If you were to reduce all the living creatures of this earth to one heap and mass of flesh with a razor-edged chakram, evil comes of that, and an outcome of evil. If you were to go along the south bank of the Ganges killing, mutilating, and torturing, and encouraging others to do the same, evil comes of that, and an outcome of evil. If you were to go along the north bank of the Ganges giving and sacrificing and encouraging others to do the same, merit comes of that, and an outcome of merit. In giving, self-control, restraint, and truthfulness there is merit and outcome of merit.’</p>
+
+<p id="p20"><span class="parno">20</span>I had doubt and uncertainty about that: ‘I wonder who of these respected ascetics and brahmins speaks the truth, and who speaks falsehood?’”</p>
+
+<p id="p21"><span class="parno">21</span>“Chief, no wonder you’re doubting and uncertain. Doubt has come up in you about an uncertain matter.”</p>
+
+<p>“I am quite confident that the Buddha is capable of teaching me so that I can give up this state of uncertainty.”</p>
+
+<hr>
+
+<p id="p22"><span class="parno">22</span>“Chief, there is immersion based on understanding of principle. If you gain such mental immersion, you can give up that cause of uncertainty.</p>
+
+<p>And what is immersion based on understanding of principle? </p>
+
+<hr>
+
+<p>It’s when a noble disciple has given up killing living creatures, stealing, sexual misconduct, lying, divisive speech, harsh speech, talking nonsense, covetousness, ill will, and wrong view.</p>
+
+<hr>
+
+<p id="p23"><span class="parno">23</span>Then that noble disciple is rid of desire, rid of ill will, unconfused, aware, and mindful. They meditate spreading a heart full of love to one direction, and to the second, and to the third, and to the fourth. In the same way above, below, across, everywhere, all around, they spread a heart full of love to the whole world — abundant, expansive, limitless, free of enmity and ill will.</p>
+
+<hr>
+
+<p>They reflect thus: ‘That teacher who had this doctrine and view: “There’s no meaning in giving, sacrifice, or offerings. There’s no fruit or result of good and bad deeds. There’s no afterlife. There are no duties to mother and father. No beings are reborn spontaneously. And there’s no ascetic or brahmin who is well attained and practiced, and who describes the afterlife after realizing it with their own insight.” If what this good teacher says is true, it’s a safe bet for me to not hurt any creature firm or frail. I win on both counts, since I’m restrained in body, speech, and mind, and when my body breaks up, after death, I’ll be reborn in a good place, a heavenly realm.’</p>
+
+<p>Joy springs up in them. Being joyful, rapture springs up. When the mind is full of rapture, the body becomes tranquil. When the body is tranquil, they feel bliss. And when blissful, the mind becomes immersed in samādhi. </p>
+
+<p>This is that immersion based on understanding of principle. If you gain such mental immersion, you can give up that state of uncertainty.</p>
+
+<hr>
+
+<p id="p24"><span class="parno">24</span>Then that noble disciple is rid of desire, rid of ill will, unconfused, aware, and mindful. They meditate spreading a heart full of love to one direction, and to the second, and to the third, and to the fourth. In the same way above, below, across, everywhere, all around, they spread a heart full of love to the whole world — abundant, expansive, limitless, free of enmity and ill will.</p>
+
+<p>They reflect thus: ‘That teacher who had this doctrine and view: “There is meaning in giving, sacrifice, and offerings. There are fruits and results of good and bad deeds. There is an afterlife. There are duties to mother and father. There are beings reborn spontaneously. And there are ascetics and brahmins who are well attained and practiced, and who describe the afterlife after realizing it with their own insight.” If what this good teacher says is true, it’s a safe bet for me to not hurt any creature firm or frail. I win on both counts, since I’m restrained in body, speech, and mind, and when my body breaks up, after death, I’ll be reborn in a good place, a heavenly realm.’</p>
+
+<p>Joy springs up in them. Being joyful, rapture springs up. When the mind is full of rapture, the body becomes tranquil. When the body is tranquil, they feel bliss. And when blissful, the mind becomes immersed in samādhi. </p>
+
+<p>This is that immersion based on understanding of principle. If you gain such mental immersion, you can give up that state of uncertainty.</p>
+
+<hr>
+
+<p id="p25"><span class="parno">25</span>Then that noble disciple is rid of desire, rid of ill will, unconfused, aware, and mindful. They meditate spreading a heart full of love to one direction, and to the second, and to the third, and to the fourth. In the same way above, below, across, everywhere, all around, they spread a heart full of love to the whole world — abundant, expansive, limitless, free of enmity and ill will.</p>
+
+<p>They reflect thus: ‘That teacher who had this doctrine and view: “Nothing bad is done by the doer when they punish, mutilate, torture, aggrieve, oppress, intimidate, or when they encourage others to do the same. Nothing bad is done when they kill, steal, break into houses, plunder wealth, steal from isolated buildings, commit highway robbery, commit adultery, and lie. If you were to reduce all the living creatures of this earth to one heap and mass of flesh with a razor-edged chakram, no evil comes of that, and no outcome of evil. If you were to go along the south bank of the Ganges killing, mutilating, and torturing, and encouraging others to do the same, no evil comes of that, and no outcome of evil. If you were to go along the north bank of the Ganges giving and sacrificing and encouraging others to do the same, no merit comes of that, and no outcome of merit. In giving, self-control, restraint, and truthfulness there is no merit or outcome of merit.” If what this good teacher says is true, it’s a safe bet for me to not hurt any creature firm or frail. I win on both counts, since I’m restrained in body, speech, and mind, and when my body breaks up, after death, I’ll be reborn in a good place, a heavenly realm.’</p>
+
+<p>Joy springs up in them. Being joyful, rapture springs up. When the mind is full of rapture, the body becomes tranquil. When the body is tranquil, they feel bliss. And when blissful, the mind becomes immersed in samādhi. </p>
+
+<p>This is that immersion based on understanding of principle. If you gain such mental immersion, you can give up that state of uncertainty.</p>
+
+<hr>
+
+<p id="p26"><span class="parno">26</span>Then that noble disciple is rid of desire, rid of ill will, unconfused, aware, and mindful. They meditate spreading a heart full of love to one direction, and to the second, and to the third, and to the fourth. In the same way above, below, across, everywhere, all around, they spread a heart full of love to the whole world — abundant, expansive, limitless, free of enmity and ill will.</p>
+
+<p>They reflect thus: ‘That teacher who had this doctrine and view: “A bad deed is done by the doer when they punish, mutilate, torture, aggrieve, oppress, intimidate, or when they encourage others to do the same. A bad deed is done when they kill, steal, break into houses, plunder wealth, steal from isolated buildings, commit highway robbery, commit adultery, and lie. If you were to reduce all the living creatures of this earth to one heap and mass of flesh with a razor-edged chakram, evil comes of that, and an outcome of evil. If you were to go along the south bank of the Ganges killing, mutilating, and torturing, and encouraging others to do the same, evil comes of that, and an outcome of evil. If you were to go along the north bank of the Ganges giving and sacrificing and encouraging others to do the same, merit comes of that, and an outcome of merit. In giving, self-control, restraint, and truthfulness there is merit and outcome of merit.” If what this good teacher says is true, it’s a safe bet for me to not hurt any creature firm or frail. I win on both counts, since I’m restrained in body, speech, and mind, and when my body breaks up, after death, I’ll be reborn in a good place, a heavenly realm.’</p>
+
+<p>Joy springs up in them. Being joyful, rapture springs up. When the mind is full of rapture, the body becomes tranquil. When the body is tranquil, they feel bliss. And when blissful, the mind becomes immersed in samādhi. </p>
+
+<p>This is that immersion based on understanding of principle. If you gain such mental immersion, you can give up that state of uncertainty.</p>
+
+<hr>
+
+<p id="p27-31"><span class="parno">27-31</span>Then that noble disciple is rid of desire, rid of ill will, unconfused, aware, and mindful. They meditate spreading a heart full of compassion … rejoicing … equanimity to one direction, and to the second, and to the third, and to the fourth. In the same way above, below, across, everywhere, all around, they spread a heart full of equanimity to the whole world — abundant, expansive, limitless, free of enmity and ill will.</p>
+
+<hr>
+
+<p>They reflect thus: ‘If what this good teacher says is true, it’s a safe bet for me to not hurt any creature firm or frail. I win on both counts, since I’m restrained in body, speech, and mind, and when my body breaks up, after death, I’ll be reborn in a good place, a heavenly realm.’</p>
+
+<p>Joy springs up in them. Being joyful, rapture springs up. When the mind is full of rapture, the body becomes tranquil. When the body is tranquil, they feel bliss. And when blissful, the mind becomes immersed in samādhi. </p>
+
+<p>This is that immersion based on understanding of principle. If you gain such mental immersion, you can give up that state of uncertainty.”</p>
+
+<hr>
+
+<p id="p32"><span class="parno">32</span>When he said this, Pāṭaḷiya the chief said to the Buddha: “Excellent, sir! Excellent! … From this day forth, may Master Gotama remember me as a lay follower who has gone for refuge for life.”</p>
+
+</div> <!-- End English -->
+<div lang="pi">
+
+<p><span class="parno">1</span>Ekaṁ samayaṁ bhagavā koliyesu vihārati uttaraṁ nāma koliyānaṁ nigamo. Atha kho pāṭaliyo gāmaṇi yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho pāṭaliyo gāmaṇi bhagavantaṁ etadavoca: </p>
+
+<p>"sutaṁ metaṁ, bhante: ‘samaṇo gotamo māyaṁ jānātī’ti.</p>
+
+<p><span class="parno">2</span>Ye te, bhante, evamāhaṁsu: ‘samaṇo gotamo māyaṁ jānātī’ti, kacci te, bhante, bhagavato vuttavādino, na ca bhagavantaṁ abhūtena abbhācikkhanti, dhammassa cānudhammaṁ byākaronti, na ca koci sahadhammiko vādānuvādo gārayhaṁ ṭhānaṁ āgacchati? Anabbhācikkhitukāmā hi mayaṁ, bhante, bhagavantan"ti.</p>
+
+<p>"Ye te, gāmaṇi, evamāhaṁsu: ‘samaṇo gotamo māyaṁ jānātī’ti, vuttavādino ceva me, te na ca maṁ abhūtena abbhācikkhanti, dhammassa cānudhammaṁ byākaronti, na ca koci sahadhammiko vādānuvādo gārayhaṁ ṭhānaṁ āgacchatī"ti.</p>
+
+<p>"Saccaṁyeva kira, bho, mayaṁ tesaṁ samaṇabrāhmaṇānaṁ na saddahāma: ‘samaṇo gotamo māyaṁ jānātī’ti, samaṇo khalu bho gotamo māyāvī"ti.</p>
+
+<p>"Yo nu kho, gāmaṇi, evaṁ vadeti: ‘Ahaṁ māyaṁ jānāmī’ti, so evaṁ vadeti: ‘Ahaṁ māyāvī’"ti.</p>
+
+<p>"Tatheva taṁ bhagavā hoti, tatheva taṁ sugata hotī"ti.</p>
+
+<p>"Tena hi, gāmaṇi, taññevettha paṭipucchissāmi; yathā te khameyya, tathā taṁ byākareyyāsi – </p>
+
+<p><span class="parno">3</span>Taṁ kiṁ maññasi, gāmaṇi, jānāsi tvaṁ koliyānaṁ lambacūḷake bhaṭe"ti?</p>
+
+<hr>
+
+<p>"Jānāmahaṁ, bhante, koliyānaṁ lambacūḷake bhaṭe"ti.</p>
+
+<hr>
+
+<p>"Taṁ kiṁ maññasi, gāmaṇi, kimatthiyā koliyānaṁ lambacūḷakā bhaṭā"ti?</p>
+
+<p>"Ye ca, bhante, koliyānaṁ corā te ca paṭisedhetuṁ, yāni ca koliyānaṁ dūteyyāni tāni ca vahātuṁ, etadatthiyā, bhante, koliyānaṁ lambacūḷakā bhaṭā"ti.</p>
+
+<p>"Taṁ kiṁ maññasi, gāmaṇi, jānāsi tvaṁ koliyānaṁ lambacūḷake bhaṭe sīlavante vā te dussīle vā"ti?</p>
+
+<hr>
+
+<p>"Jānāmahaṁ, bhante, koliyānaṁ lambacūḷake bhaṭe dussīle pāpadhamme; ye ca loke dussīlā pāpadhammā koliyānaṁ lambacūḷakā bhaṭā tesaṁ aññatarā"ti.</p>
+
+<p>"Yo nu kho, gāmaṇi, evaṁ vadeyya: ‘pāṭaliyo gāmaṇi jānāti koliyānaṁ lambacūḷake bhaṭe dussīle pāpadhamme, pāṭaliyopi gāmaṇi dussīlo pāpadhammo’ti, sammā nu kho so vadamāno vadeyyā"ti?</p>
+
+<p>"No hetaṁ, bhante. Aññe, bhante, koliyānaṁ lambacūḷakā bhaṭā, aññohamasmi. Aññathādhammā koliyānaṁ lambacūḷakā bhaṭā, aññathādhammohamasmī"ti.</p>
+
+<p>"Tvañhi nāma, gāmaṇi, lacchasi: ‘pāṭaliyo gāmaṇi jānāti koliyānaṁ lambacūḷake bhaṭe dussīle pāpadhamme, na ca pāṭaliyo gāmaṇi dussīlo pāpadhammo’ti, kasmā tathāgato na lacchati: ‘tathāgato māyaṁ jānāti, na ca tathāgato māyāvī’ti? </p>
+
+<p>Māyañcāhaṁ, gāmaṇi, pajānāmi, māyāya ca vipākaṁ, yathāpaṭipanno ca māyāvī kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi.</p>
+
+<hr>
+
+<p><span class="parno">4</span>Pāṇātipātañcāhaṁ, gāmaṇi, pajānāmi, pāṇātipātassa ca vipākaṁ, yathāpaṭipanno ca pāṇātipātī kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi.</p>
+
+<p>Adinnādānañcāhaṁ, gāmaṇi, pajānāmi, adinnādānassa ca vipākaṁ, yathāpaṭipanno ca adinnādāyī kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Kāmesumicchācārañcāhaṁ, gāmaṇi, pajānāmi, kāmesumicchācārassa ca vipākaṁ, yathāpaṭipanno ca kāmesumicchācārī kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Musāvādañcāhaṁ, gāmaṇi, pajānāmi, musāvādassa ca vipākaṁ, yathāpaṭipanno ca musāvādī kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Pisuṇavācañcāhaṁ, gāmaṇi, pajānāmi, pisuṇavācāya ca vipākaṁ, yathāpaṭipanno ca pisuṇavāco kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Pharusavācañcāhaṁ, gāmaṇi, pajānāmi, pharusavācāya ca vipākaṁ, yathāpaṭipanno ca pharusavāco kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Samphappalāpañcāhaṁ, gāmaṇi, pajānāmi, samphappalāpassa ca vipākaṁ, yathāpaṭipanno ca samphappalāpī kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Abhijjhañcāhaṁ, gāmaṇi, pajānāmi, abhijjhāya ca vipākaṁ, yathāpaṭipanno ca abhijjhālu kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Byā pāda padosañcāhaṁ, gāmaṇi, pajānāmi, byā pāda padosassa ca vipākaṁ, yathāpaṭipanno ca byāpannacitto kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi. Micchādiṭṭhiñcāhaṁ, gāmaṇi, pajānāmi, micchādiṭṭhiyā ca vipākaṁ, yathāpaṭipanno ca micchādiṭṭhiko kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati tañca pajānāmi.</p>
+
+<hr>
+
+<p><span class="parno">5</span>Santi hi, gāmaṇi, eke samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yo koci pāṇamatipāteti, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayati. Yo koci adinnaṁ ādiyati, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayati. Yo koci kāmesu micchā carati, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayati. Yo koci musā bhaṇati, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayatī’ti.</p>
+
+<p><span class="parno">6</span>Dissati kho pana, gāmaṇi, idhekacco mālī kuṇḍalī sunhāto suvilitto kappitakesamassu itthikāmehi rājā maññe paricārento. Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi mālī kuṇḍalī sunhāto suvilitto kappitakesamassu itthikāmehi rājā maññe paricāretī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso rañño paccatthikaṁ pasayha jīvitā voropesi. Tassa rājā attamano abhihāramadāsi. Tenāyaṁ puriso mālī kuṇḍalī sunhāto suvilitto kappitakesamassu, itthikāmehi rājā maññe paricāretī’ti.</p>
+
+<p><span class="parno">7</span>Dissati kho, gāmaṇi, idhekacco daḷhāya rajjuyā pacchābāhaṁ gāḷhabandhanaṁ bandhitvā khuramuṇḍaṁ karitvā kharassarena paṇavena rathiyāya rathiyaṁ siṅghāṭakena siṅghāṭakaṁ parinetvā, dakkhiṇena dvārena nikkhāmetvā, dakkhiṇato nagarassa sīsaṁ chijjamāno. Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi, daḷhāya rajjuyā pacchābāhaṁ gāḷhabandhanaṁ bandhitvā khuramuṇḍaṁ karitvā kharassarena paṇavena rathiyāya rathiyaṁ siṅghāṭakena siṅghāṭakaṁ parinetvā dakkhiṇena dvārena nikkhāmetvā dakkhiṇato nagarassa sīsaṁ chindatī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso rājaverī itthiṁ vā purisaṁ vā jīvitā voropesi, tena naṁ rājāno gahetvā evarūpaṁ kammakāraṇaṁ kārentī’ti.</p>
+
+<hr>
+
+<p><span class="parno">8</span>Taṁ kiṁ maññasi, gāmaṇi, api nu te evarūpaṁ diṭṭhaṁ vā sutaṁ vā"ti?</p>
+
+<p>"Diṭṭhañca no, bhante, sutañca suyyissati cā"ti.</p>
+
+<p>"Tatra, gāmaṇi, ye te samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yo koci pāṇamatipāteti, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayatī’ti, saccaṁ vā te āhaṁsu musā vā"ti?</p>
+
+<p>"Musā, bhante".</p>
+
+<hr>
+
+<p>"Ye pana te tucchaṁ musā vilapanti, sīlavanto vā te dussīlā vā"ti?</p>
+
+<p>"Dussīlā, bhante".</p>
+
+<p>"Ye pana te dussīlā pāpadhammā micchāpaṭipannā vā te sammāpaṭipannā vā"ti?</p>
+
+<p>"Micchāpaṭipannā, bhante".</p>
+
+<p>"Ye pana te micchāpaṭipannā micchādiṭṭhikā vā te sammādiṭṭhikā vā"ti?</p>
+
+<p>"Micchādiṭṭhikā, bhante".</p>
+
+<p>"Ye pana te micchādiṭṭhikā kallaṁ nu tesu pasīditun"ti?</p>
+
+<p>"No hetaṁ, bhante". <a class="gatn" id="1"></a></p>
+
+<hr>
+
+<p><span class="parno">9</span>"Dissati kho pana, gāmaṇi, idhekacco mālī kuṇḍalī … pe … itthikāmehi rājā maññe paricārento. Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi mālī kuṇḍalī … pe … itthikāmehi rājā maññe paricāretī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso rañño paccatthikassa pasayha ratanaṁ ahāsi. Tassa rājā attamano abhihāramadāsi. Tenāyaṁ puriso mālī kuṇḍalī … pe … itthikāmehi rājā maññe paricāretī’ti.</p>
+
+<hr>
+
+<p><span class="parno">10</span>Dissati kho, gāmaṇi, idhekacco daḷhāya rajjuyā … pe … dakkhiṇato nagarassa sīsaṁ chijjamāno tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi daḷhāya rajjuyā … pe … dakkhiṇato nagarassa sīsaṁ chindatī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyi. Tena naṁ rājāno gahetvā evarūpaṁ kammakāraṇaṁ kārentī’ti.</p>
+
+<hr>
+
+<p>Taṁ kiṁ maññasi, gāmaṇi, api nu te evarūpaṁ diṭṭhaṁ vā sutaṁ vā"ti?</p>
+
+<p>"Diṭṭhañca no, bhante, sutañca suyyissati cā"ti.</p>
+
+<p>"Tatra, gāmaṇi, ye te samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yo koci adinnaṁ ādiyati, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayatī’ti, saccaṁ vā te āhaṁsu musā vāti … pe … kallaṁ nu tesu pasīditun"ti?</p>
+
+<p>"No hetaṁ, bhante". <span class="brnum">(2)</span></p>
+
+<hr>
+
+<p><span class="parno">11</span>"Dissati kho pana, gāmaṇi, idhekacco mālī kuṇḍalī … pe … itthikāmehi rājā maññe paricārento. Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi mālī kuṇḍalī … pe … itthikāmehi rājā maññe paricāretī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso rañño paccatthikassa dāresu cārittaṁ āpajji. Tassa rājā attamano abhihāramadāsi. Tenāyaṁ puriso mālī kuṇḍalī … pe … itthikāmehi rājā maññe paricāretī’ti.</p>
+
+<hr>
+
+<p><span class="parno">12</span>Dissati kho, gāmaṇi, idhekacco daḷhāya rajjuyā … pe … dakkhiṇato nagarassa sīsaṁ chijjamāno. Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi daḷhāya rajjuyā … pe … dakkhiṇato nagarassa sīsaṁ chindatī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kulitthīsu kulakumārīsu cārittaṁ āpajji, tena naṁ rājāno gahetvā evarūpaṁ kammakāraṇaṁ kārentī’ti.</p>
+
+<hr>
+
+<p>Taṁ kiṁ maññasi, gāmaṇi, api nu te evarūpaṁ diṭṭhaṁ vā sutaṁ vā"ti?</p>
+
+<p>"Diṭṭhañca no, bhante, sutañca suyyissati cā"ti.</p>
+
+<p>"Tatra, gāmaṇi, ye te samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yo koci kāmesu micchā carati, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayatī’ti, saccaṁ vā te āhaṁsu musā vāti … pe … kallaṁ nu tesu pasīditun"ti?</p>
+
+<p>"No hetaṁ, bhante". <span class="brnum">(3)</span></p>
+
+<hr>
+
+<p><span class="parno">13</span>"Dissati kho pana, gāmaṇi, idhekacco mālī kuṇḍalī sunhāto suvilitto kappitakesamassu itthikāmehi rājā maññe paricārento. Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi mālī kuṇḍalī sunhāto suvilitto kappitakesamassu itthikāmehi rājā maññe paricāretī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso rājānaṁ musāvādena hāsesi. Tassa rājā attamano abhihāramadāsi. Tenāyaṁ puriso mālī kuṇḍalī sunhāto suvilitto kappitakesamassu itthikāmehi rājā maññe paricāretī’ti.</p>
+
+<hr>
+
+<p><span class="parno">14</span>Dissati kho, gāmaṇi, idhekacco daḷhāya rajjuyā pacchābāhaṁ gāḷhabandhanaṁ bandhitvā khuramuṇḍaṁ karitvā kharassarena paṇavena rathiyāya rathiyaṁ siṅghāṭakena siṅghāṭakaṁ parinetvā dakkhiṇena dvārena nikkhāmetvā dakkhiṇato nagarassa sīsaṁ chijjamāno. Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso kiṁ akāsi daḷhāya rajjuyā pacchābāhaṁ gāḷhabandhanaṁ bandhitvā khuramuṇḍaṁ karitvā kharassarena paṇavena rathiyāya rathiyaṁ siṅghāṭakena siṅghāṭakaṁ parinetvā, dakkhiṇena dvārena nikkhāmetvā, dakkhiṇato nagarassa sīsaṁ chindatī’ti? Tamenaṁ evamāhaṁsu: ‘ambho, ayaṁ puriso gahapatissa vā gahapatiputtassa vā musāvādena atthaṁ bhañji, tena naṁ rājāno gahetvā evarūpaṁ kammakāraṇaṁ kārentī’ti.</p>
+
+<hr>
+
+<p>Taṁ kiṁ maññasi, gāmaṇi, api nu te evarūpaṁ diṭṭhaṁ vā sutaṁ vā"ti?</p>
+
+<p>"Diṭṭhañca no, bhante, sutañca suyyissati cā"ti.</p>
+
+<p>"Tatra, gāmaṇi, ye te samaṇabrāhmaṇā evaṁvādino evaṁdiṭṭhino: ‘yo koci musā bhaṇati, sabbo so diṭṭheva dhamme dukkhaṁ domanassaṁ paṭisaṁvedayatī’ti, saccaṁ vā te āhaṁsu musā vā"ti? </p>
+
+<hr>
+
+<p>"Musā, bhante". </p>
+
+<p>"Ye pana te tucchaṁ musā vilapanti sīlavanto vā te dussīlā vā"ti? </p>
+
+<p>"Dussīlā, bhante". </p>
+
+<p>"Ye pana te dussīlā pāpadhammā micchāpaṭipannā vā te sammāpaṭipannā vā"ti? </p>
+
+<p>"Micchāpaṭipannā, bhante". </p>
+
+<p>"Ye pana te micchāpaṭipannā micchādiṭṭhikā vā te sammādiṭṭhikā vā"ti? </p>
+
+<p>"Micchādiṭṭhikā, bhante". </p>
+
+<p>"Ye pana te micchādiṭṭhikā kallaṁ nu tesu pasīditun"ti?</p>
+
+<p>"No hetaṁ, bhante". <span class="brnum">(4)</span></p>
+
+<hr>
+
+<p><span class="parno">15</span>"Acchariyaṁ, bhante, abbhutaṁ, bhante. Atthi me, bhante, āvasathāgāraṁ. Tattha atthi mañcakāni, atthi āsanāni, atthi udakamaṇiko, atthi telappadīpo. Tattha yo samaṇo vā brāhmaṇo vā vāsaṁ upeti, tenāhaṁ yathāsatti yathābalaṁ saṁvibhajāmi. Bhūtapubbaṁ, bhante, cattāro satthāro nānādiṭṭhikā nānākhantikā nānārucikā, tasmiṁ āvasathāgāre vāsaṁ upagacchuṁ.</p>
+
+<p><span class="parno">16</span>Eko satthā evaṁvādī evaṁdiṭṭhi: ‘Natthi dinnaṁ, natthi yiṭṭhaṁ, natthi hutaṁ, natthi sukatadukkaṭānaṁ kammānaṁ phalaṁ vipāko. Natthi ayaṁ loko, natthi paro loko, natthi mātā, natthi pitā, natthi sattā opapātikā, natthi loke samaṇabrāhmaṇā sammaggatā sammāpaṭipannā ye imañca lokaṁ parañca lokaṁ sayaṁ abhiññā sacchikatvā pavedentī’ti.</p>
+
+<p><span class="parno">17</span>Eko satthā evaṁvādī evaṁdiṭṭhi: ‘atthi dinnaṁ, atthi yiṭṭhaṁ, atthi hutaṁ, atthi sukatadukkaṭānaṁ kammānaṁ phalaṁ vipāko, atthi ayaṁ loko, atthi paro loko, atthi mātā, atthi pitā, atthi sattā opapātikā, atthi loke samaṇabrāhmaṇā sammaggatā sammāpaṭipannā, ye imañca lokaṁ parañca lokaṁ sayaṁ abhiññā sacchikatvā pavedentī’ti.</p>
+
+<p><span class="parno">18</span>Eko satthā evaṁvādī evaṁdiṭṭhi: ‘karoto kārayato, chindato chedāpayato, pacato pācāpayato, socayato socāpayato, kilamato kilamāpayato, phandato phandāpayato, pāṇamatipātayato, adinnaṁ ādiyato, sandhiṁ chindato, nillopaṁ harato, ekāgārikaṁ karoto, paripanthe tiṭṭhato, paradāraṁ gacchato, musā bhaṇato, karoto na karīyati pāpaṁ. Khurapariyantena cepi cakkena yo imissā pathaviyā pāṇe ekaṁ maṁsakhalaṁ ekaṁ maṁsapuñjaṁ kareyya, natthi tatonidānaṁ pāpaṁ, natthi pāpassa āgamo. Dakkhiṇañcepi gaṅgāya tīraṁ gaccheyya hananto ghātento chindanto chedāpento pacanto pācāpento, natthi tatonidānaṁ pāpaṁ, natthi pāpassa āgamo. Uttarāñcepi gaṅgāya tīraṁ gaccheyya dadanto dāpento yajanto yajāpento, natthi tatonidānaṁ puññaṁ, natthi puññassa āgamo. Dānena damena saṁyamena saccavajjena natthi puññaṁ, natthi puññassa āgamo’ti.</p>
+
+<p><span class="parno">19</span>Eko satthā evaṁvādī evaṁdiṭṭhi: ‘karoto kārayato, chindato chedāpayato, pacato pācāpayato, socayato socāpayato, kilamato kilamāpayato, phandato phandāpayato, pāṇamatipātayato, adinnaṁ ādiyato, sandhiṁ chindato, nillopaṁ harato, ekāgārikaṁ karoto, paripanthe tiṭṭhato, paradāraṁ gacchato, musā bhaṇato, karoto karīyati pāpaṁ. Khurapariyantena cepi cakkena yo imissā pathaviyā pāṇe ekaṁ maṁsakhalaṁ ekaṁ maṁsapuñjaṁ kareyya, atthi tatonidānaṁ pāpaṁ, atthi pāpassa āgamo. Dakkhiṇañcepi gaṅgāya tīraṁ gaccheyya hananto ghātento chindanto chedāpento pacanto pācāpento, atthi tatonidānaṁ pāpaṁ, atthi pāpassa āgamo. Uttarāñcepi gaṅgāya tīraṁ gaccheyya dadanto dāpento, yajanto yajāpento, atthi tatonidānaṁ puññaṁ, atthi puññassa āgamo. Dānena damena saṁyamena saccavajjena atthi puññaṁ, atthi puññassa āgamo’ti.</p>
+
+<p><span class="parno">20</span>Tassa mayhaṁ, bhante, ahudeva kaṅkhā, ahu vicikicchā: ‘kosu nāma imesaṁ bhavataṁ samaṇabrāhmaṇānaṁ saccaṁ āha, ko musā’"ti?</p>
+
+<p><span class="parno">21</span>"Alañhi te, gāmaṇi, kaṅkhītuṁ, alaṁ vicikicchituṁ. Kaṅkhanīye ca pana te ṭhāne vicikicchā uppannā"ti.</p>
+
+<p>"Evaṁ pasannohaṁ, bhante, bhagavati. Pahoti me bhagavā tathā dhammaṁ desetuṁ yathāhaṁ imaṁ kaṅkhādhammaṁ pajaheyyan"ti.</p>
+
+<hr>
+
+<p><span class="parno">22</span>"Atthi, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi. Evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi. </p>
+
+<p>Katamo ca, gāmaṇi, dhammasamādhi?</p>
+
+<hr>
+
+<p>Idha, gāmaṇi, ariyasāvako pāṇātipātaṁ pahāya pāṇātipātā paṭivirato hoti, adinnādānaṁ pahāya adinnādānā paṭivirato hoti, kāmesumicchācāraṁ pahāya kāmesumicchācārā paṭivirato hoti, musāvādaṁ pahāya musāvādā paṭivirato hoti, pisuṇaṁ vācaṁ pahāya pisuṇāya vācāya paṭivirato hoti, pharusaṁ vācaṁ pahāya pharusāya vācāya paṭivirato hoti, samphappalāpaṁ pahāya samphappalāpā paṭivirato hoti, abhijjhaṁ pahāya anabhijjhālu hoti, byā pāda padosaṁ pahāya abyāpannacitto hoti, micchādiṭṭhiṁ pahāya sammādiṭṭhiko hoti.</p>
+
+<hr>
+
+<p><span class="parno">23</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato mettāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati.</p>
+
+<hr>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "natthi dinnaṁ, natthi yiṭṭhaṁ, natthi hutaṁ, natthi sukatadukkaṭānaṁ kammānaṁ phalaṁ vipāko, natthi ayaṁ loko, natthi paro loko, natthi mātā, natthi pitā, natthi sattā opapātikā, natthi loke samaṇabrāhmaṇā, sammaggatā sammāpaṭipannā ye imañca lokaṁ parañca lokaṁ sayaṁ abhiññā sacchikatvā pavedentī"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. </p>
+
+<p>Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi.</p>
+
+<hr>
+
+<p><span class="parno">24</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato mettāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati.</p>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "atthi dinnaṁ, atthi yiṭṭhaṁ, atthi hutaṁ, atthi sukatadukkaṭānaṁ kammānaṁ phalaṁ vipāko, atthi ayaṁ loko, atthi paro loko, atthi mātā, atthi pitā, atthi sattā opapātikā, atthi loke samaṇabrāhmaṇā, sammaggatā sammāpaṭipannā ye imañca lokaṁ parañca lokaṁ sayaṁ abhiññā sacchikatvā pavedentī"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. </p>
+
+<p>Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi.</p>
+
+<hr>
+
+<p><span class="parno">25</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato mettāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati.</p>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "karoto kārayato, chindato chedāpayato, pacato pācāpayato, socayato socāpayato, kilamato kilamāpayato, phandato phandāpayato, pāṇamatipātayato, adinnaṁ ādiyato, sandhiṁ chindato, nillopaṁ harato, ekāgārikaṁ karoto, paripanthe tiṭṭhato, paradāraṁ gacchato, musā bhaṇato, karoto na karīyati pāpaṁ. Khurapariyantena cepi cakkena yo imissā pathaviyā pāṇe ekaṁ maṁsakhalaṁ ekaṁ maṁsapuñjaṁ kareyya, natthi tatonidānaṁ pāpaṁ, natthi pāpassa āgamo. Dakkhiṇañcepi gaṅgāya tīraṁ gaccheyya hananto ghātento chindanto chedāpento pacanto pācāpento, natthi tatonidānaṁ pāpaṁ, natthi pāpassa āgamo. Uttarāñcepi gaṅgāya tīraṁ gaccheyya dadanto dāpento, yajanto yajāpento, natthi tatonidānaṁ puññaṁ, natthi puññassa āgamo. Dānena damena saṁyamena saccavajjena natthi puññaṁ, natthi puññassa āgamo"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. </p>
+
+<p>Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi.</p>
+
+<hr>
+
+<p><span class="parno">26</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato mettāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati.</p>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "karoto kārayato, chindato chedāpayato, pacato pācāpayato, socayato socāpayato, kilamato kilamāpayato, phandato phandāpayato, pāṇamatipātayato, adinnaṁ ādiyato, sandhiṁ chindato, nillopaṁ harato, ekāgārikaṁ karoto, paripanthe tiṭṭhato, paradāraṁ gacchato, musā bhaṇato, karoto karīyati pāpaṁ. Khurapariyantena cepi cakkena yo imissā pathaviyā pāṇe ekaṁ maṁsakhalaṁ ekaṁ maṁsapuñjaṁ kareyya, atthi tatonidānaṁ pāpaṁ, atthi pāpassa āgamo. Dakkhiṇañcepi gaṅgāya tīraṁ gaccheyya hananto ghātento chindanto chedāpento pacanto pācāpento, atthi tatonidānaṁ pāpaṁ, atthi pāpassa āgamo. Uttarāñcepi gaṅgāya tīraṁ gaccheyya dadanto dāpento, yajanto yajāpento, atthi tatonidānaṁ puññaṁ, atthi puññassa āgamo. Dānena damena saṁyamena saccavajjena atthi puññaṁ atthi puññassa āgamo"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. </p>
+
+<p>Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi.</p>
+
+<hr>
+
+<p><span class="parno">27</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato karuṇāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati … pe … muditāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati … pe … .</p>
+
+<p><span class="parno">28</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati.</p>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "natthi dinnaṁ, natthi yiṭṭhaṁ, natthi hutaṁ natthi sukatadukkaṭānaṁ kammānaṁ phalaṁ vipāko, natthi ayaṁ loko natthi paro loko, natthi mātā natthi pitā natthi sattā opapātikā, natthi loke samaṇabrāhmaṇā sammaggatā sammāpaṭipannā ye imañca lokaṁ parañca lokaṁ sayaṁ abhiññā sacchikatvā pavedentī"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. </p>
+
+<p>Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi.</p>
+
+<p><span class="parno">29</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati. </p>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "atthi dinnaṁ, atthi yiṭṭhaṁ, atthi hutaṁ, atthi sukatadukkaṭānaṁ kammānaṁ phalaṁ vipāko, atthi ayaṁ loko atthi paro loko, atthi mātā atthi pitā atthi sattā opapātikā, atthi loke samaṇabrāhmaṇā sammaggatā sammāpaṭipannā ye imañca lokaṁ parañca lokaṁ sayaṁ abhiññā sacchikatvā pavedentī"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi.</p>
+
+<p><span class="parno">30</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati.</p>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "karoto kārayato, chedato chedāpayato, pacato pācāpayato, socayato socāpayato, kilamato kilamāpayato, phandato phandāpayato, pāṇamatipātayato, adinnaṁ ādiyato, sandhiṁ chindato, nillopaṁ harato, ekāgārikaṁ karoto, paripanthe tiṭṭhato, paradāraṁ gacchato, musā bhaṇato, karoto na karīyati pāpaṁ. Khurapariyantena cepi cakkena yo imissā pathaviyā pāṇe ekaṁ maṁsakhalaṁ ekaṁ maṁsapuñjaṁ kareyya, natthi tatonidānaṁ pāpaṁ, natthi pāpassa āgamo. Dakkhiṇañcepi gaṅgāya tīraṁ gaccheyya hananto ghātento chindanto chedāpento pacanto pācāpento, natthi tatonidānaṁ pāpaṁ, natthi pāpassa āgamo. Uttarāñcepi gaṅgāya tīraṁ gaccheyya dadanto dāpento, yajanto yajāpento, natthi tatonidānaṁ puññaṁ, natthi puññassa āgamo. Dānena damena saṁyamena saccavajjena natthi puññaṁ, natthi puññassa āgamo"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsi.</p>
+
+<p><span class="parno">31</span>Sa kho so, gāmaṇi, ariyasāvako evaṁ vigatābhijjho vigatabyāpādo asammūḷho sampajāno paṭissato upekkhāsahagatena cetasā ekaṁ disaṁ pharitvā vihārati, tathā dutiyaṁ, tathā tatiyaṁ, tathā catutthaṁ, iti uddhamadho tiriyaṁ sabbadhi sabbattatāya sabbāvantaṁ lokaṁ upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjena pharitvā vihārati.</p>
+
+<hr>
+
+<p>So iti paṭisañcikkhati: ‘yvāyaṁ satthā evaṁvādī evaṁdiṭṭhi: "karoto kārayato, chindato chedāpayato, pacato pācāpayato, socayato socāpayato, kilamato kilamāpayato, phandato phandāpayato, pāṇamatipātayato, adinnaṁ ādiyato, sandhiṁ chindato, nillopaṁ harato, ekāgārikaṁ karoto, paripanthe tiṭṭhato, paradāraṁ gacchato, musā bhaṇato, karoto karīyati pāpaṁ. Khurapariyantena cepi cakkena yo imissā pathaviyā pāṇe ekaṁ maṁsakhalaṁ ekaṁ maṁsapuñjaṁ kareyya, atthi tatonidānaṁ pāpaṁ, atthi pāpassa āgamo. Dakkhiṇañcepi gaṅgāya tīraṁ gaccheyya hananto ghātento chindanto chedāpento pacanto pācāpento, atthi tatonidānaṁ pāpaṁ, atthi pāpassa āgamo. Uttarāñcepi gaṅgāya tīraṁ gaccheyya dadanto dāpento, yajanto yajāpento, atthi tatonidānaṁ puññaṁ, atthi puññassa āgamo. Dānena damena saṁyamena saccavajjena atthi puññaṁ, atthi puññassa āgamo"ti. Sace tassa bhoto satthuno saccaṁ vacanaṁ, apaṇṇakatāya mayhaṁ, yvāhaṁ na kiñci byābādhemi tasaṁ vā thāvaraṁ vā? Ubhayamettha kaṭaggāho, yaṁ camhi kāyena saṁvuto vācāya saṁvuto manasā saṁvuto, yañca kāyassa bhedā paraṁ maraṇā sugatiṁ saggaṁ lokaṁ upapajjissāmī’ti. Tassa pāmojjaṁ jāyati. Pamuditassa pīti jāyati. Pītimanassa kāyo passambhati. Passaddhakāyo sukhaṁ vedayati. Sukhino cittaṁ samādhiyati.</p>
+
+<p>Ayaṁ kho, gāmaṇi, dhammasamādhi. Tatra ce tvaṁ cittasamādhiṁ paṭilabheyyāsi, evaṁ tvaṁ imaṁ kaṅkhādhammaṁ pajaheyyāsī"ti.</p>
+
+<hr>
+
+<p><span class="parno">32</span>Evaṁ vutte, pāṭaliyo gāmaṇi bhagavantaṁ etadavoca: "Abhikkantaṁ, bhante, abhikkantaṁ, bhante … pe … ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p>
+
+<p class="endsection">Terasamaṁ.
+<br>Gāmaṇivaggo paṭhamo.</p>
+
+<p class="verse"><span class="parno">33</span>Caṇḍo puṭo yodhājīvo,
+<br>Hatthasso asibandhako;
+<br>Desanā saṅkhakulaṁ maṇicūḷaṁ,
+<br>Bhadrarāsiyapāṭalīti.</p>
+
+<p class="endsutta">Gāmaṇisaṁyuttaṁ samattaṁ.</p>
+
+</div> <!-- end pali -->
+
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./sn42.12.html#content"></a><a id="next-sutta" href="./sn43.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="sn.html">Saṁyutta Nikāya</a><a href="sn42.html">42. Gāmaṇisaṁyutta: With Chiefs</a> SN42.13: With Pāṭaliya </div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

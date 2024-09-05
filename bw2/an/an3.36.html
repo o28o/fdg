@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Aṅguttara Nikāya 3.36</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="an.html" class="pressed w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="an3.html" class="w3-hide-small pressed">The Threes</a></li>
+ 						<li><a href="an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+ 
+ 
+ 
+   <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+ 
+<h2>Aṅguttara Nikāya - The Numerical Discourses</h2>
+  
+ <!--      AN content begins here      -->
+  
+ <div id="content">
+
+ 
+ <h2>3: The Book of the Threes</h2>
+<h3>IV. Messengers of the Gods — AN 3.36: Messengers of the Gods </h3>
+
+<div id="metaarea">
+<ul class="translator">
+<li><a href="/ru/sc/?q=an3.36">fdg</a> &copy;&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+</li>
+</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+
+<p><span class="parno">1</span>“There are, mendicants, these three messengers of the gods. What three?</p>
+
+<p>Firstly, someone does bad things by way of body, speech, and mind. When their body breaks up, after death, they’re reborn in a place of loss, a bad place, the underworld, hell. Then the wardens of hell take them by the arms and present them to King Yama, saying: ‘Your Majesty, this person did not pay due respect to their mother and father, ascetics and brahmins, or honor the elders in the family. May Your Majesty punish them!’</p>
+
+<p>Then King Yama pursues, presses, and grills them about the first messenger of the gods: ‘Mister, did you not see the first messenger of the gods that appeared among human beings?’</p>
+
+<p>They say, ‘I saw nothing, sir.’</p>
+
+<hr>
+
+<p id="p3"><span class="parno">3</span>Then King Yama says, ‘Mister, did you not see among human beings an elderly woman or a man — eighty, ninety, or a hundred years old — bent double, crooked, leaning on a staff, trembling as they walk, ailing, past their prime, with teeth broken, hair grey and scanty or bald, skin wrinkled, and limbs blotchy?’</p>
+
+<p>They say, ‘I saw that, sir.’</p>
+
+<hr>
+
+<p id="p4"><span class="parno">4</span>Then King Yama says, ‘Mister, did it not occur to you — being sensible and mature — “I, too, am liable to grow old. I’m not exempt from old age. I’d better do good by way of body, speech, and mind”?’</p>
+
+<p>They say, ‘I couldn’t, sir. I was negligent.’</p>
+
+<p id="p5"><span class="parno">5</span>Then King Yama says, ‘Mister, because you were negligent, you didn’t do good by way of body, speech, and mind. Indeed, they’ll definitely punish you to fit your negligence. That bad deed wasn’t done by your mother, father, brother, or sister. It wasn’t done by friends and colleagues, by relatives and kin, by the deities, or by ascetics and brahmins. That bad deed was done by you alone, and you alone will experience the result.’</p>
+
+<p id="p6"><span class="parno">6</span>Then King Yama grills them about the second messenger of the gods: ‘Mister, did you not see the second messenger of the gods that appeared among human beings?’</p>
+
+<p>They say, ‘I saw nothing, sir.’ </p>
+
+<hr>
+
+<p>Then King Yama says, ‘Mister, did you not see among human beings a woman or a man, sick, suffering, gravely ill, collapsed in their own urine and feces, being picked up by some and put down by others?’</p>
+
+<p>They say, ‘I saw that, sir.’</p>
+
+<hr>
+
+<p id="p7"><span class="parno">7</span>Then King Yama says, ‘Mister, did it not occur to you — being sensible and mature — “I, too, am liable to become sick. I’m not exempt from sickness. I’d better do good by way of body, speech, and mind”?’</p>
+
+<p>They say, ‘I couldn’t, sir. I was negligent.’</p>
+
+<hr>
+
+<p id="p8"><span class="parno">8</span>Then King Yama says, ‘Mister, because you were negligent, you didn’t do good by way of body, speech, and mind. Well, they’ll definitely punish you to fit your negligence. That bad deed wasn’t done by your mother, father, brother, or sister. It wasn’t done by friends and colleagues, by relatives and kin, by the deities, or by ascetics and brahmins. That bad deed was done by you alone, and you alone will experience the result.’</p>
+
+<hr>
+
+<p id="p9"><span class="parno">9</span>Then King Yama grills them about the third messenger of the gods: ‘Mister, did you not see the third messenger of the gods that appeared among human beings?’</p>
+
+<p>They say, ‘I saw nothing, sir.’</p>
+
+<hr>
+
+<p id="p10"><span class="parno">10</span>Then King Yama says, ‘Mister, did you not see among human beings a woman or a man, dead for one, two, or three days, bloated, livid, and festering?’</p>
+
+<p>They say, ‘I saw that, sir.’</p>
+
+<hr>
+
+<p id="p11"><span class="parno">11</span>Then King Yama says, ‘Mister, did it not occur to you — being sensible and mature — “I, too, am liable to die. I’m not exempt from death. I’d better do good by way of body, speech, and mind”?’</p>
+
+<p>They say, ‘I couldn’t, sir. I was negligent.’</p>
+
+<hr>
+
+<p id="p12"><span class="parno">12</span>Then King Yama says, ‘Mister, because you were negligent, you didn’t do good by way of body, speech, and mind. Well, they’ll definitely punish you to fit your negligence. That bad deed wasn’t done by your mother, father, brother, or sister. It wasn’t done by friends and colleagues, by relatives and kin, by the deities, or by ascetics and brahmins. That bad deed was done by you alone, and you alone will experience the result.’</p>
+
+<p id="p13"><span class="parno">13</span>Then, after grilling them about the third messenger of the gods, King Yama falls silent. Then the wardens of hell punish them with the five-fold crucifixion. They drive red-hot stakes through the hands and feet, and another in the middle of the chest. And there they feel painful, sharp, severe, acute feelings — but they don’t die until that bad deed is eliminated.</p>
+
+<p id="p14"><span class="parno">14</span>Then the wardens of hell thrown them down and hack them with axes. …</p>
+
+<hr>
+
+<p id="p15"><span class="parno">15</span>They hang them upside-down and hack them with hatchets. …</p>
+
+<p>They harness them to a chariot, and drive them back and forth across burning ground, blazing and glowing. …</p>
+
+<p>They make them climb up and down a huge mountain of burning coals, blazing and glowing. …</p>
+
+<p>Then the wardens of hell turn them upside down and throw them in a red-hot copper pot, burning, blazing, and glowing. There they’re seared in boiling scum, and they’re swept up and down and round and round. And there they feel painful, sharp, severe, acute feelings — but they don’t die until that bad deed is eliminated. Then the wardens of hell toss them into the Great Hell.</p>
+
+<hr>
+
+<p>Now, about that Great Hell: </p>
+
+<p class="verse" id="p16"><span class="parno">16</span>‘Four are its corners, four its doors,
+<br>divided into measured parts.
+<br>Surrounded by an iron wall,
+<br>of iron is its roof.</p>
+
+<p class="verse" id="p17"><span class="parno">17</span>The ground is even made of iron,
+<br>it burns with fierce fire.
+<br>The heat forever radiates
+<br>a hundred leagues around.’</p>
+
+<hr>
+
+<p id="p18"><span class="parno">18</span>Once upon a time, King Yama thought, ‘Those who do such bad deeds in the world receive these many different punishments. Oh, I hope I may be reborn as a human being! And that a Realized One — a perfected one, a fully awakened Buddha — arises in the world! And that I may pay homage to the Buddha! Then the Buddha can teach me Dhamma, so that I may understand his teaching.’</p>
+
+<p>Now, I don’t say this because I’ve heard it from some other ascetic or brahmin. I only say it because I’ve known, seen, and realized it for myself.</p>
+
+<hr>
+
+<p class="verse" id="p19"><span class="parno">19</span>Those people who are negligent,
+<br>when warned by the gods’ messengers:
+<br>a long time they sorrow,
+<br>when they go to that wretched place.</p>
+
+<p class="verse" id="p20"><span class="parno">20</span>But those good and peaceful people,
+<br>when warned by the god’s messengers,
+<br>never neglect
+<br>the teaching of the noble ones.</p>
+
+<p class="verse" id="p21"><span class="parno">21</span>Seeing the peril in grasping,
+<br>the origin of birth and death,
+<br>they’re freed by not grasping,
+<br>with the ending of birth and death.</p>
+
+<p class="verse" id="p22"><span class="parno">22</span>Happy, they’ve come to a safe place,
+<br>extinguished in this very life.
+<br>They’ve gone beyond all threats and perils,
+<br>and risen above all suffering.”</p>
+
+</div> <!-- End English -->
+<div lang="pi">
+
+<p><a id="p_15A3_209" class="ms"></a><a class="msdiv" id="msdiv_36"></a><span class="parno">1</span>"Tīṇimāni, bhikkhave, devadūtāni. Katamāni tīṇi?</p>
+
+<p>Idha, bhikkhave, ekacco kāyena duccaritaṁ carati, vācāya duccaritaṁ carati, manasā duccaritaṁ carati. So kāyena duccaritaṁ caritvā, vācāya duccaritaṁ caritvā, manasā duccaritaṁ caritvā kāyassa bhedā paraṁ maraṇā apāyaṁ duggatiṁ vinipātaṁ nirayaṁ upapajjati. Tamenaṁ, bhikkhave, nirayapālā nānābāhāsu gahetvā yamassa rañño dassenti:  ‘ayaṁ, deva, puriso amatteyyo apetteyyo asāmañño abrahmañño, na kule jeṭṭhāpacāyī. Imassa devo daṇḍaṁ paṇetū’ti.</p>
+
+<p><a id="p_15A3_210" class="ms"></a><span class="parno">2</span>Tamenaṁ, bhikkhave, yamo rājā paṭhamaṁ devadūtaṁ samanuyuñjati samanugāhati samanubhāsati:  ‘ambho, purisa, na tvaṁ addasa manussesu paṭhamaṁ devadūtaṁ pātubhūtan’ti? </p>
+
+<p>So evamāha:  ‘nāddasaṁ, bhante’ti.</p>
+
+<hr>
+<p><a id="p_15A3_211" class="ms"></a><span class="parno">3</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho purisa, na tvaṁ addasa manussesu itthiṁ vā purisaṁ vā āsītikaṁ vā nāvutikaṁ vā vassasatikaṁ vā jātiyā jiṇṇaṁ gopānasivaṅkaṁ bhoggaṁ daṇḍaparāyaṇaṁ pavedhamānaṁ gacchantaṁ āturaṁ gatayobbanaṁ khaṇḍadantaṁ palitakesaṁ vilūnaṁ khallitasiraṁ valitaṁ tilakāhatagattan’ti? </p>
+
+<p>So evamāha:  ‘addasaṁ, bhante’ti.</p>
+
+<hr>
+
+<p><a id="p_15A3_212" class="ms"></a><span class="parno">4</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho, purisa, tassa te viññussa sato mahallakassa na etadahosi – ahampi khomhi jarādhammo jaraṁ anatīto, handāhaṁ kalyāṇaṁ karomi, kāyena vācāya manasā’ti? </p>
+
+<p>So evamāha:  ‘nāsakkhissaṁ, bhante. Pamādassaṁ, bhante’ti.</p>
+
+<p><a id="p_15A3_213" class="ms"></a><span class="parno">5</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho, purisa, pamādatāya na kalyāṇamakāsi kāyena vācāya manasā. Taggha tvaṁ, ambho purisa, tathā karissanti yathā taṁ pamattaṁ. Taṁ kho pana te etaṁ pāpakammaṁ neva mātarā kataṁ, na pitarā kataṁ, na bhātarā kataṁ, na bhaginiyā kataṁ, na mittāmaccehi kataṁ, na ñātisālohitehi kataṁ, na devatāhi kataṁ, na samaṇabrāhmaṇehi kataṁ; atha kho tayāvetaṁ pāpakammaṁ kataṁ, tvaññevetassa vipākaṁ paṭisaṁvedissasī’ti. <span class="brnum">(1)</span></p>
+
+<p><a id="p_15A3_214" class="ms"></a><span class="parno">6</span>Tamenaṁ, bhikkhave, yamo rājā paṭhamaṁ devadūtaṁ samanuyuñjitvā samanugāhitvā samanubhāsitvā, dutiyaṁ devadūtaṁ samanuyuñjati samanugāhati samanubhāsati:  ‘ambho purisa, na tvaṁ addasa manussesu dutiyaṁ devadūtaṁ pātubhūtan’ti? </p>
+
+<p>So evamāha:  ‘nāddasaṁ, bhante’ti.</p>
+
+<hr>
+
+<p>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho purisa, na tvaṁ addasa manussesu itthiṁ vā purisaṁ vā ābādhikaṁ dukkhitaṁ bāḷhagilānaṁ, sake muttakarīse palipannaṁ semānaṁ, aññehi vuṭṭhāpiyamānaṁ, aññehi saṁvesiyamānan’ti? </p>
+
+<p>So evamāha:  ‘addasaṁ, bhante’ti.</p>
+
+<hr>
+
+<p><a id="p_15A3_215" class="ms"></a><span class="parno">7</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho purisa, tassa te viññussa sato mahallakassa na etadahosi:  "ahampi khomhi byādhidhammo byādhiṁ anatīto, handāhaṁ kalyāṇaṁ karomi kāyena vācāya manasā"’ti? So evamāha:  ‘nāsakkhissaṁ, bhante. </p>
+
+<p>Pamādassaṁ, bhante’ti.</p>
+
+<hr>
+
+<p><a id="p_15A3_216" class="ms"></a><span class="parno">8</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho purisa, pamādatāya na kalyāṇamakāsi kāyena vācāya manasā. Taggha tvaṁ, ambho purisa, tathā karissanti yathā taṁ pamattaṁ. Taṁ kho pana te etaṁ pāpakammaṁ neva mātarā kataṁ, na pitarā kataṁ, na bhātarā kataṁ, na bhaginiyā kataṁ, na mittāmaccehi kataṁ, na ñātisālohitehi kataṁ, na devatāhi kataṁ, na samaṇabrāhmaṇehi kataṁ; atha kho tayāvetaṁ pāpakammaṁ kataṁ. Tvaññevetassa vipākaṁ paṭisaṁvedissasī’ti. <span class="brnum">(2)</span></p>
+
+<hr>
+
+<p><a id="p_15A3_217" class="ms"></a><span class="parno">9</span>Tamenaṁ, bhikkhave, yamo rājā dutiyaṁ devadūtaṁ samanuyuñjitvā samanugāhitvā samanubhāsitvā, tatiyaṁ devadūtaṁ samanuyuñjati samanugāhati samanubhāsati:  ‘ambho purisa, na tvaṁ addasa manussesu tatiyaṁ devadūtaṁ pātubhūtan’ti? </p>
+
+<p>So evamāha:  ‘nāddasaṁ, bhante’ti.</p>
+
+<hr>
+
+<p><a id="p_15A3_218" class="ms"></a><span class="parno">10</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho purisa, na tvaṁ addasa manussesu itthiṁ vā purisaṁ vā ekāhamataṁ vā dvīhamataṁ vā tīhamataṁ vā uddhumātakaṁ vinīlakaṁ vipubbakajātan’ti? </p>
+
+<p>So evamāha:  ‘addasaṁ, bhante’ti.</p>
+
+<hr>
+
+<p><a id="p_15A3_219" class="ms"></a><span class="parno">11</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho purisa, tassa te viññussa sato mahallakassa na etadahosi – ahampi khomhi maraṇadhammo maraṇaṁ anatīto, handāhaṁ kalyāṇaṁ karomi kāyena vācāya manasā’ti? </p>
+
+<p>So evamāha:  ‘nāsakkhissaṁ, bhante. Pamādassaṁ, bhante’ti.</p>
+
+<hr>
+
+<p><a id="p_15A3_220" class="ms"></a><span class="parno">12</span>Tamenaṁ, bhikkhave, yamo rājā evamāha:  ‘ambho purisa, pamādatāya na kalyāṇamakāsi kāyena vācāya manasā. Taggha tvaṁ, ambho purisa, tathā karissanti yathā taṁ pamattaṁ. Taṁ kho pana te etaṁ pāpakammaṁ neva mātarā kataṁ, na pitarā kataṁ, na bhātarā kataṁ, na bhaginiyā kataṁ, na mittāmaccehi kataṁ, na ñātisālohitehi kataṁ, na devatāhi kataṁ, na samaṇabrāhmaṇehi kataṁ; atha kho tayāvetaṁ pāpakammaṁ kataṁ. Tvaññevetassa vipākaṁ paṭisaṁvedissasī’"ti. <span class="brnum">(3)</span></p>
+
+<p><a id="p_15A3_221" class="ms"></a><span class="parno">13</span>Tamenaṁ, bhikkhave, yamo rājā tatiyaṁ devadūtaṁ samanuyuñjitvā samanugāhitvā samanubhāsitvā tuṇhī hoti. Tamenaṁ, bhikkhave, nirayapālā pañcavidhabandhanaṁ nāma kāraṇaṁ karonti. Tattaṁ ayokhilaṁ hatthe gamenti. Tattaṁ ayokhilaṁ dutiyasmiṁ hatthe gamenti. Tattaṁ ayokhilaṁ pāde gamenti. Tattaṁ ayokhilaṁ dutiyasmiṁ pāde gamenti. Tattaṁ ayokhilaṁ majjhe urasmiṁ gamenti. So tattha dukkhā tibbā kharā kaṭukā vedanā vediyati, na ca tāva kālaṁ karoti yāva na taṁ pāpakammaṁ byantīhoti.</p>
+
+<p><a id="p_15A3_222" class="ms"></a><span class="parno">14</span>Tamenaṁ, bhikkhave, nirayapālā saṁvesetvā kudhārīhi tacchanti. So tattha dukkhā tibbā kharā kaṭukā vedanā vediyati, na ca tāva kālaṁ karoti yāva na taṁ pāpakammaṁ byantīhoti.</p>
+
+<hr>
+
+<p><a id="p_15A3_223" class="ms"></a><span class="parno">15</span>Tamenaṁ, bhikkhave, nirayapālā uddhampādaṁ adhosiraṁ gahetvā vāsīhi tacchanti … pe … tamenaṁ, bhikkhave, nirayapālā rathe yojetvā ādittāya bhūmiyā sampajjalitāya sajotibhūtāya sārentipi paccāsārentipi … pe … tamenaṁ, bhikkhave, nirayapālā mahantaṁ aṅgārapabbataṁ ādittaṁ sampajjalitaṁ sajotibhūtaṁ āropentipi oropentipi … pe … tamenaṁ, bhikkhave, nirayapālā uddhampādaṁ adhosiraṁ gahetvā tattāya lohakumbhiyā pakkhipanti, ādittāya sampajjalitāya sajotibhūtāya. So tattha pheṇuddehakaṁ paccamāno sakimpi uddhaṁ gacchati, sakimpi adho gacchati, sakimpi tiriyaṁ gacchati. So tattha dukkhā tibbā kharā kaṭukā vedanā vediyati, na ca tāva kālaṁ karoti yāva na taṁ pāpakammaṁ byantīhoti. Tamenaṁ, bhikkhave, nirayapālā mahāniraye pakkhipanti. </p>
+
+<hr>
+
+<p>So kho pana, bhikkhave, mahānirayo – </p>
+
+<p class="verse"><a id="p_15A3_224" class="ms"></a><span class="parno">16</span>Catukkaṇṇo catudvāro,<br> vibhatto bhāgaso mito;
+<br>Ayopākārapariyanto,
+<br>ayasā paṭikujjito.</p>
+
+<p class="verse"><a id="p_15A3_225" class="ms"></a><span class="parno">17</span>Tassa ayomayā bhūmi,<br> Jalitā tejasā yutā;
+<br>Samantā yojanasataṁ,
+<br>Pharitvā tiṭṭhati sabbadāti.</p>
+
+<hr>
+<p><a id="p_15A3_226" class="ms"></a><span class="parno">18</span>Bhūtapubbaṁ, bhikkhave, yamassa rañño etadahosi:  ‘ye kira, bho, loke pāpakāni kammāni karonti te evarūpā vividhā kammakāraṇā karīyanti. Aho vatāhaṁ manussattaṁ labheyyaṁ, tathāgato ca loke uppajjeyya arahaṁ sammāsambuddho, tañcāhaṁ bhagavantaṁ payirupāseyyaṁ. So ca me bhagavā dhammaṁ deseyya, tassa cāhaṁ bhagavato dhammaṁ ājāneyyan’ti.</p>
+
+<p>Taṁ kho panāhaṁ, bhikkhave, na aññassa samaṇassa vā brāhmaṇassa vā sutvā evaṁ vadāmi, api ca kho, bhikkhave, yadeva me sāmaṁ ñātaṁ sāmaṁ diṭṭhaṁ sāmaṁ viditaṁ tadevāhaṁ vadāmīti.</p>
+
+
+<hr>
+
+<p class="verse"><a id="p_15A3_227" class="ms"></a><span class="parno">19</span>Coditā devadūtehi,<br> ye pamajjanti māṇavā;
+<br>	Te dīgharattaṁ socanti,
+<br>	hīnakāyūpagā narā.
+	</p>
+	
+<p class="verse"><a id="p_15A3_228" class="ms"></a><span class="parno">20</span>Ye ca kho devadūtehi,<br> santo sappurisā idha;
+<br>	Coditā nappamajjanti,
+<br>	ariyadhamme kudācanaṁ.
+	</p>
+	
+<p class="verse"><a id="p_15A3_229" class="ms"></a><span class="parno">21</span>Upādāne bhayaṁ disvā,<br> jātimaraṇasambhave;
+<br>	Anupādā vimuccanti,
+<br>	jātimaraṇasaṅkhaye.
+	</p>
+	
+<p class="verse"><a id="p_15A3_230" class="ms"></a><span class="parno">22</span>Te appamattā sukhino,<br> diṭṭhadhammābhinibbutā;
+<br>	Sabbaverabhayātītā,
+<br>	sabbadukkhaṁ upaccagun"ti.
+	</p>
+
+
+<p class="endsection">Chaṭṭhaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./an3.35.html#content"></a><a id="next-sutta" href="./an3.37.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="an.html">Aṅguttara Nikāya</a><a href="an3.html">The Threes</a>36. Messengers</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

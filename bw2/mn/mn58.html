@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 58</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN58: Abhayarājakumārasutta - With Prince Abhaya </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn58">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Rājagaha, in the Bamboo Grove, the squirrels’ feeding ground.</p>
+
+<hr>
+
+<p>Then Prince Abhaya went up to Nigaṇṭha Nātaputta, bowed, and sat down to one side. Nigaṇṭha Nātaputta said to him: </p>
+
+<p>“Come, prince, refute the ascetic Gotama’s doctrine. Then you will get a good reputation: ‘Prince Abhaya refuted the doctrine of the ascetic Gotama, so mighty and powerful!’”</p>
+
+<p>“But sir, how am I to do this?”</p>
+
+<hr>
+
+<p>“Here, prince, go to the ascetic Gotama and say to him: ‘Sir, might the Realized One utter speech that is disliked by others?’ When he’s asked this, if he answers: ‘He might, prince,’ say this to him, ‘Then, sir, what exactly is the difference between you and an ordinary person? For even an ordinary person might utter speech that is disliked by others.’ But if he answers, ‘He would not, prince,’ say this to him: ‘Then, sir, why exactly did you declare of Devadatta: “Devadatta is going to a place of loss, to hell, there to remain for an eon, irredeemable”? Devadatta was angry and upset with what you said.’</p>
+
+<p>When you put this dilemma to him, the Buddha won’t be able to either spit it out or swallow it down. He’ll be like a man with an iron cross stuck in his throat, unable to either spit it out or swallow it down.”</p>
+
+<hr>
+
+<p>“Yes, sir,” replied Abhaya. He got up from his seat, bowed, and respectfully circled Nigaṇṭha Nāṭaputta, keeping him on his right. Then he went to the Buddha, bowed, and sat down to one side.</p>
+
+<hr>
+
+<p><span class="parno">2</span>Then he looked up at the sun and thought: “It’s too late to refute the Buddha’s doctrine today. I shall refute his doctrine in my own home tomorrow.” He said to the Buddha: “Sir, may the Buddha please accept tomorrow’s meal from me, together with three other monks.” The Buddha consented in silence.</p>
+
+<p>Then, knowing that the Buddha had consented, Abhaya got up from his seat, bowed, and respectfully circled the Buddha, keeping him on his right, before leaving.</p>
+
+<p>Then when the night had passed, the Buddha put on his outer robe in the morning and, taking his bowl and robe, went to Abhaya’s home, and sat down on the seat spread out. Then Abhaya served and satisfied the Buddha with his own hands with a variety of delicious foods.</p>
+
+<p><span class="parno">3</span>When the Buddha had eaten and washed his hand and bowl, Abhaya took a low seat, sat to one side, and said to him: “Sir, might the Realized One utter speech that is disliked by others?”</p>
+
+<hr>
+
+<p>“This is no simple matter, prince.”</p>
+
+<p>“Then the Jains have lost in this, sir.”</p>
+
+<p>“But prince, why do you say that the Jains have lost in this?”</p>
+
+<hr>
+
+<p>Then Abhaya told the Buddha all that had happened.</p>
+
+<hr>
+
+<p><span class="parno">4</span>Now at that time a little baby boy was sitting in Prince Abhaya’s lap. Then the Buddha said to Abhaya: “What do you think, prince? If — because of your negligence or his nurse’s negligence — your boy was to put a stick or stone in his mouth, what would you do to him?”</p>
+
+<p>“I’d try to take it out, sir. If that didn’t work, I’d hold his head with my left hand, and take it out using a hooked finger of my right hand, even if it drew blood. Why is that? Because I have compassion for the boy, sir.”</p>
+
+<p>“In the same way, prince, the Realized One does not utter speech that he knows to be untrue, false, and harmful, and which is disliked by others. The Realized One does not utter speech that he knows to be true and substantive, but which is harmful and disliked by others. The Realized One knows the right time to speak so as to explain what he knows to be true, substantive, and beneficial, but which is disliked by others. The Realized One does not utter speech that he knows to be untrue, false, and harmful, but which is liked by others. The Realized One does not utter speech that he knows to be true and substantive, but which is harmful, even if it is liked by others. The Realized One knows the right time to speak so as to explain what he knows to be true, substantive, and beneficial, and which is liked by others. Why is that? Because the Realized One has compassion for sentient beings.”</p>
+
+<p><span class="parno">5</span>“Sir, there are clever aristocrats, brahmins, householders, or ascetics who come to see you with a question already planned. Do you think beforehand that if they ask you like this, you’ll answer like that, or does the answer just appear to you on the spot?”</p>
+
+<p><span class="parno">6</span>“Well then, prince, I’ll ask you about this in return, and you can answer as you like. What do you think, prince? Are you skilled in the various parts of a chariot?”</p>
+
+<p><span class="parno">7</span>“I am, sir.”</p>
+
+<p><span class="parno">8</span>“What do you think, prince? When they come to you and ask: ‘What’s the name of this chariot part?’ Do you think beforehand that if they ask you like this, you’ll answer like that, or does the answer appear to you on the spot?”</p>
+
+<p><span class="parno">9</span>“Sir, I’m well-known as a charioteer skilled in a chariot’s parts. All the parts are well-known to me. The answer just appears to me on the spot.”</p>
+
+<p><span class="parno">10</span>“In the same way, when clever aristocrats, brahmins, householders, or ascetics come to see me with a question already planned, the answer just appears to me on the spot. Why is that? Because the Realized One has clearly comprehended the principle of the teachings, so that the answer just appears to him on the spot.”</p>
+
+<hr>
+
+<p><span class="parno">11</span>When he had spoken, Prince Abhaya said to the Buddha: “Excellent, sir! Excellent! … From this day forth, may Master Gotama remember me as a lay follower who has gone for refuge for life.”</p>
+
+</div>
+
+
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā rājagahe viharati veḷuvane kalandakanivāpe.</p>
+
+<hr>
+
+<p>Atha kho abhayo rājakumāro yena nigaṇṭho nāṭaputto tenupasaṅkami; upasaṅkamitvā nigaṇṭhaṁ nāṭaputtaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinnaṁ kho abhayaṁ rājakumāraṁ nigaṇṭho nāṭaputto etadavoca:</p>
+
+<p>"ehi tvaṁ, rājakumāra, samaṇassa gotamassa vādaṁ āropehi. Evaṁ te kalyāṇo kittisaddo abbhuggacchissati: ‘abhayena rājakumārena samaṇassa gotamassa evaṁ mahiddhikassa evaṁ mahānubhāvassa vādo āropito’"ti.</p>
+
+<p>"Yathā kathaṁ panāhaṁ, bhante, samaṇassa gotamassa evaṁ mahiddhikassa evaṁ mahānubhāvassa vādaṁ āropessāmī"ti?</p>
+
+<hr>
+
+<p>"Ehi tvaṁ, rājakumāra, yena samaṇo gotamo tenupasaṅkama; upasaṅkamitvā samaṇaṁ gotamaṁ evaṁ vadehi: ‘bhāseyya nu kho, bhante, tathāgato taṁ vācaṁ yā sā vācā paresaṁ appiyā amanāpā’ti? Sace te samaṇo gotamo evaṁ puṭṭho evaṁ byākaroti: ‘bhāseyya, rājakumāra, tathāgato taṁ vācaṁ yā sā vācā paresaṁ appiyā amanāpā’ti, tamenaṁ tvaṁ evaṁ vadeyyāsi: ‘atha kiñcarahi te, bhante, puthujjanena nānākaraṇaṁ? Puthujjanopi hi taṁ vācaṁ bhāseyya yā sā vācā paresaṁ appiyā amanāpā’ti. Sace pana te samaṇo gotamo evaṁ puṭṭho evaṁ byākaroti: ‘na, rājakumāra, tathāgato taṁ vācaṁ bhāseyya yā sā vācā paresaṁ appiyā amanāpā’ti, tamenaṁ tvaṁ evaṁ vadeyyāsi: ‘atha kiñcarahi te, bhante, devadatto byākato: "āpāyiko devadatto, nerayiko devadatto, kappaṭṭho devadatto, atekiccho devadatto"ti? Tāya ca pana te vācāya devadatto kupito ahosi anattamano’ti. </p>
+
+<p>Imaṁ kho te, rājakumāra, samaṇo gotamo ubhatokoṭikaṁ pañhaṁ puṭṭho samāno neva sakkhiti uggilituṁ na sakkhiti ogilituṁ. Seyyathāpi nāma purisassa ayosiṅghāṭakaṁ kaṇṭhe vilaggaṁ, so neva sakkuṇeyya uggilituṁ na sakkuṇeyya ogilituṁ; evameva kho te, rājakumāra, samaṇo gotamo imaṁ ubhatokoṭikaṁ pañhaṁ puṭṭho samāno neva sakkhiti uggilituṁ na sakkhiti ogilitun"ti.</p>
+
+<hr>
+
+<p>"Evaṁ, bhante"ti kho abhayo rājakumāro nigaṇṭhassa nāṭaputtassa paṭissutvā uṭṭhāyāsanā nigaṇṭhaṁ nāṭaputtaṁ abhivādetvā padakkhiṇaṁ katvā yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi.</p>
+
+
+<hr>
+
+<p><span class="parno">2</span>Ekamantaṁ nisinnassa kho abhayassa rājakumārassa <span class="var" title="suriyaṁ oloketvā (bj, s1–3, km, pts1)" id="note104">sūriyaṁ ulloketvā</span> etadahosi: "akālo kho ajja bhagavato vādaṁ āropetuṁ. Sve dānāhaṁ sake nivesane bhagavato vādaṁ āropessāmī"ti bhagavantaṁ etadavoca: "adhivāsetu me, bhante, bhagavā svātanāya attacatuttho bhattan"ti. Adhivāsesi bhagavā tuṇhībhāvena.</p>
+
+<p>Atha kho abhayo rājakumāro bhagavato adhivāsanaṁ viditvā uṭṭhāyāsanā bhagavantaṁ abhivādetvā padakkhiṇaṁ katvā pakkāmi. </p>
+
+<p>Atha kho bhagavā tassā rattiyā accayena pubbaṇhasamayaṁ nivāsetvā pattacīvaramādāya yena abhayassa rājakumārassa nivesanaṁ tenupasaṅkami; upasaṅkamitvā paññatte āsane nisīdi. Atha kho abhayo rājakumāro bhagavantaṁ paṇītena khādanīyena bhojanīyena sahatthā santappesi sampavāresi. Atha kho abhayo rājakumāro bhagavantaṁ bhuttāviṁ onītapattapāṇiṁ aññataraṁ nīcaṁ āsanaṁ gahetvā ekamantaṁ nisīdi.</p>
+
+
+<p><span class="parno">3</span>Ekamantaṁ nisinno kho abhayo rājakumāro bhagavantaṁ etadavoca: "bhāseyya nu kho, bhante, tathāgato taṁ vācaṁ yā sā vācā paresaṁ appiyā amanāpā"ti?</p>
+
+
+<hr>
+
+<p>"Na khvettha, rājakumāra, ekaṁsenā"ti.</p>
+
+
+<p>"Ettha, bhante, anassuṁ nigaṇṭhā"ti.</p>
+
+
+<p>"Kiṁ pana tvaṁ, rājakumāra, evaṁ vadesi: ‘ettha, bhante, anassuṁ nigaṇṭhā’"ti?</p>
+
+<hr>
+
+<p>"Idhāhaṁ, bhante, yena nigaṇṭho nāṭaputto tenupasaṅkami; upasaṅkamitvā nigaṇṭhaṁ nāṭaputtaṁ abhivādetvā ekamantaṁ nisīdiṁ. Ekamantaṁ nisinnaṁ kho maṁ, bhante, nigaṇṭho nāṭaputto etadavoca: ‘ehi tvaṁ, rājakumāra, samaṇassa gotamassa vādaṁ āropehi. Evaṁ te kalyāṇo kittisaddo abbhuggacchissati –  abhayena rājakumārena samaṇassa gotamassa evaṁ mahiddhikassa evaṁ mahānubhāvassa vādo āropito’ti. Evaṁ vutte, ahaṁ, bhante, nigaṇṭhaṁ nāṭaputtaṁ etadavocaṁ: ‘yathā kathaṁ panāhaṁ, bhante, samaṇassa gotamassa evaṁ mahiddhikassa evaṁ mahānubhāvassa vādaṁ āropessāmī’ti? ‘Ehi tvaṁ, rājakumāra, yena samaṇo gotamo tenupasaṅkama; upasaṅkamitvā samaṇaṁ gotamaṁ evaṁ vadehi: "bhāseyya nu kho, bhante, tathāgato taṁ vācaṁ yā sā vācā paresaṁ appiyā amanāpā"ti? Sace te samaṇo gotamo evaṁ puṭṭho evaṁ byākaroti: "bhāseyya, rājakumāra, tathāgato taṁ vācaṁ yā sā vācā paresaṁ appiyā amanāpā"ti, tamenaṁ tvaṁ evaṁ vadeyyāsi: "atha kiñcarahi te, bhante, puthujjanena nānākaraṇaṁ? Puthujjanopi hi taṁ vācaṁ bhāseyya yā sā vācā paresaṁ appiyā amanāpā"ti. Sace pana te samaṇo gotamo evaṁ puṭṭho evaṁ byākaroti: "na, rājakumāra, tathāgato taṁ vācaṁ bhāseyya yā sā vācā paresaṁ appiyā amanāpā"ti, tamenaṁ tvaṁ evaṁ vadeyyāsi — atha kiñcarahi te, bhante, devadatto byākato: "āpāyiko devadatto, nerayiko devadatto, kappaṭṭho devadatto, atekiccho devadatto"ti? Tāya ca pana te vācāya devadatto kupito ahosi anattamano’ti. Imaṁ kho te, rājakumāra, samaṇo gotamo ubhatokoṭikaṁ pañhaṁ puṭṭho samāno neva sakkhiti uggilituṁ na sakkhiti ogilituṁ. Seyyathāpi nāma purisassa ayosiṅghāṭakaṁ kaṇṭhe vilaggaṁ, so neva sakkuṇeyya uggilituṁ na sakkuṇeyya ogilituṁ; evameva kho te, rājakumāra, samaṇo gotamo imaṁ ubhatokoṭikaṁ pañhaṁ puṭṭho samāno neva sakkhiti uggilituṁ na sakkhiti ogilitun"ti.</p>
+
+
+<hr>
+
+<p><span class="parno">4</span>Tena kho pana samayena daharo kumāro mando uttānaseyyako abhayassa rājakumārassa aṅke nisinno hoti. Atha kho bhagavā abhayaṁ rājakumāraṁ etadavoca: "taṁ kiṁ maññasi, rājakumāra, sacāyaṁ kumāro tuyhaṁ vā pamādamanvāya dhātiyā vā pamādamanvāya kaṭṭhaṁ vā <span class="var" title="kathalaṁ (mr)" id="note105">kaṭhalaṁ</span> vā mukhe āhareyya, kinti naṁ kareyyāsī"ti?</p>
+
+<p>"Āhareyyassāhaṁ, bhante. Sace, bhante, na sakkuṇeyyaṁ ādikeneva <span class="var" title="āharituṁ (s1–3, km)" id="note106">āhattuṁ</span>, vāmena hatthena sīsaṁ <span class="var" title="paggahetvā (bj)" id="note107">pariggahetvā</span> dakkhiṇena hatthena vaṅkaṅguliṁ karitvā salohitampi āhareyyaṁ. Taṁ kissa hetu? Atthi me, bhante, kumāre anukampā"ti.</p>
+
+<p>"Evameva kho, rājakumāra, yaṁ tathāgato vācaṁ jānāti abhūtaṁ atacchaṁ anatthasaṁhitaṁ sā ca paresaṁ appiyā amanāpā, na taṁ tathāgato vācaṁ bhāsati. Yampi tathāgato vācaṁ jānāti bhūtaṁ tacchaṁ anatthasaṁhitaṁ sā ca paresaṁ appiyā amanāpā, tampi tathāgato vācaṁ na bhāsati. Yañca kho tathāgato vācaṁ jānāti bhūtaṁ tacchaṁ atthasaṁhitaṁ sā ca paresaṁ appiyā amanāpā, tatra kālaññū tathāgato hoti tassā vācāya veyyākaraṇāya. Yaṁ tathāgato vācaṁ jānāti abhūtaṁ atacchaṁ anatthasaṁhitaṁ sā ca paresaṁ piyā manāpā, na taṁ tathāgato vācaṁ bhāsati. Yampi tathāgato vācaṁ jānāti bhūtaṁ tacchaṁ anatthasaṁhitaṁ sā ca paresaṁ piyā manāpā tampi tathāgato vācaṁ na bhāsati. Yañca tathāgato vācaṁ jānāti bhūtaṁ tacchaṁ atthasaṁhitaṁ sā ca paresaṁ piyā manāpā, tatra kālaññū tathāgato hoti tassā vācāya veyyākaraṇāya. Taṁ kissa hetu? Atthi, rājakumāra, tathāgatassa sattesu anukampā"ti.</p>
+
+<p><span class="parno">5</span>"Yeme, bhante, khattiyapaṇḍitāpi brāhmaṇapaṇḍitāpi gahapatipaṇḍitāpi samaṇapaṇḍitāpi pañhaṁ abhisaṅkharitvā tathāgataṁ upasaṅkamitvā pucchanti, pubbeva nu kho, etaṁ, bhante, bhagavato cetaso parivitakkitaṁ hoti ‘ye maṁ upasaṅkamitvā evaṁ pucchissanti tesāhaṁ evaṁ puṭṭho evaṁ byākarissāmī’ti, udāhu ṭhānasovetaṁ tathāgataṁ paṭibhātī"ti?</p>
+
+<p><span class="parno">6</span>"Tena hi, rājakumāra, taññevettha paṭipucchissāmi, yathā te khameyya tathā naṁ byākareyyāsi. Taṁ kiṁ maññasi, rājakumāra, kusalo tvaṁ rathassa aṅgapaccaṅgānan"ti?</p>
+
+
+<p><span class="parno">7</span>"Evaṁ, bhante, kusalo ahaṁ rathassa aṅgapaccaṅgānan"ti.</p>
+
+<p><span class="parno">8</span>"Taṁ kiṁ maññasi, rājakumāra, ye taṁ upasaṅkamitvā evaṁ puccheyyuṁ: ‘kiṁ nāmidaṁ rathassa aṅgapaccaṅgan’ti? Pubbeva nu kho te etaṁ cetaso parivitakkitaṁ assa ‘ye maṁ upasaṅkamitvā evaṁ pucchissanti tesāhaṁ evaṁ puṭṭho evaṁ byākarissāmī’ti, udāhu ṭhānasovetaṁ paṭibhāseyyā"ti?</p>
+
+<p><span class="parno">9</span>"Ahañhi, bhante, rathiko saññāto kusalo rathassa aṅgapaccaṅgānaṁ. Sabbāni me rathassa aṅgapaccaṅgāni suviditāni. Ṭhānasovetaṁ maṁ paṭibhāseyyā"ti.</p>
+
+<p><span class="parno">10</span>"Evameva kho, rājakumāra, ye te khattiyapaṇḍitāpi brāhmaṇapaṇḍitāpi gahapatipaṇḍitāpi samaṇapaṇḍitāpi pañhaṁ abhisaṅkharitvā tathāgataṁ upasaṅkamitvā pucchanti, ṭhānasovetaṁ tathāgataṁ paṭibhāti. Taṁ kissa hetu? Sā hi, rājakumāra, tathāgatassa dhammadhātu suppaṭividdhā yassā dhammadhātuyā suppaṭividdhattā ṭhānasovetaṁ tathāgataṁ paṭibhātī"ti.</p>
+
+<hr>
+
+<p><span class="parno">11</span>Evaṁ vutte, abhayo rājakumāro bhagavantaṁ etadavoca: "Abhikkantaṁ, bhante, abhikkantaṁ, bhante … pe … ajjatagge pāṇupetaṁ saraṇaṁ gatan"ti.</p>
+
+<p class="endsutta">Abhayarājakumārasuttaṁ niṭṭhitaṁ aṭṭhamaṁ.</p>
+
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn57.html#content"></a><a id="next-sutta" href="./mn59.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN58: Abhayarājakumārasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

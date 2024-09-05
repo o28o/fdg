@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+ 	<title>Majjhima Nikāya 121</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Loading manifest -->
+	<link rel="manifest" href="../manifest.json">
+ 	<!-- Loading third party fonts -->
+ 	<link href="../fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Loading main and menu stylesheets -->
+ 	<link rel="stylesheet" href="../css/w3.css">
+ 	<link rel="stylesheet" href="../css/css.css">
+ 	<link rel="stylesheet" href="../css/menu.css">
+ 	<script src="../js/jquery-1.10.2.min.js"></script>
+ 	<script src="../js/controlpanel.js"></script>
+ 	<script src="../js/mousetrap.min.js"></script>
+ </head>
+ <body class="container">
+ <div class="header-background">
+ <!-- Header -->
+ <div class="w3-header w3-content w3-padding w3-left-align bwcontainer">
+ 	<div class="centered">
+ 		<button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+ 			<span></span>
+ 			<span></span>
+ 		</button>
+ 		<span class="box-lbl">Light/Dark</span>
+ 	</div> <!-- Centered -->
+ 		<a href="../home/index.html" id="bwlogo"><img src="../images/headerlogo.png" alt="The Buddha's Words logo" class="w3-image"></a>
+ 		<div class="w3-bar bwcontainer">
+ 			<div id="searchlinks">
+ 			<a href="../home/engsearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search English</span></a>
+ 			<a href="../home/palisearch.html"><span class="w3-bar-item"><i class="fa fa-search"></i>&nbsp;Search Pali</span></a>
+ 			</div><!-- End Searchlinks div -->
+ 			<div class="help"><span><a href="../home/help.html"><img src="../images/help_icon.png" title="Help" alt="Help"></a></span></div>
+ 		</div> <!-- End w3-bar bwcontainer --> 	</div> <!-- End w3-header w3-content w3-padding w3-left-align bwcontainer -->
+ </div> <!-- End header-background -->
+ <!-- Top menu -->
+
+ <div class="w3-main w3-white bwcontainer2">
+ 	<div class="w3-button w3-padding-8 w3-left w3-hide-large" onclick="w3_open()">☰</div>
+ 		<div id="navbar" class="w3-hide-small w3-hide-medium bwcontainer3">
+ 			<ul id="css3menu0">
+ 				<li class="topfirst" id="home"><a href="../home/index.html" class="w3-hide-small">Home</a></li>
+ 			<li class="topmenu" id="dn"><a href="../dn/dn.html" class="w3-hide-small">Dīgha Nikāya</a></li>
+ 				<li class="topmenu" id="mn"><a href="../mn/mn.html" class="pressed w3-hide-small">Majjhima Nikāya</a></li>
+ 				<li class="topmenu" id="sn"><a href="../sn/sn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Saṁyutta Nikāya</a>
+ 					<ul>
+ 						<li><a href="../sn/sn01.html" class="w3-hide-small">Vol. 1 ‒ The Book with Verses</a></li>
+ 						<li><a href="../sn/sn02.html" class="w3-hide-small">Vol. 2 ‒ The Book of Causation</a></li>
+ 						<li><a href="../sn/sn03.html" class="w3-hide-small">Vol. 3 ‒ The Book of the Aggregates</a></li>
+ 						<li><a href="../sn/sn04.html" class="w3-hide-small">Vol. 4 ‒ The Book of the Six Sense Bases</a></li>
+ 						<li><a href="../sn/sn05.html" class="w3-hide-small">Vol. 5 ‒ The Great Book</a></li>
+ 					</ul>
+ 				<li class="topmenu" id="an"><a href="../an/an.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Aṅguttara Nikāya</a>
+ 					<ul>
+ 						<li><a href="../an/an1.html" class="w3-hide-small">The Ones</a></li>
+ 						<li><a href="../an/an2.html" class="w3-hide-small">The Twos</a></li>
+ 						<li><a href="../an/an3.html" class="w3-hide-small">The Threes</a></li>
+ 						<li><a href="../an/an4.html" class="w3-hide-small">The Fours</a></li>
+ 						<li><a href="../an/an5.html" class="w3-hide-small">The Fives</a></li>
+ 						<li><a href="../an/an6.html" class="w3-hide-small">The Sixes</a></li>
+ 						<li><a href="../an/an7.html" class="w3-hide-small">The Sevens</a></li>
+ 						<li><a href="../an/an8.html" class="w3-hide-small">The Eights</a></li>
+ 						<li><a href="../an/an9.html" class="w3-hide-small">The Nines</a></li>
+ 						<li><a href="../an/an10.html" class="w3-hide-small">The Tens</a></li>
+ 						<li><a href="../an/an11.html" class="w3-hide-small">The Elevens</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="topmenu" id="kn"><a href="../kn/kn.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Khuddaka Nikāya</a>
+ 					<ul>
+ 						<li><a href="../kp/kp.html" class="w3-hide-small">The Khuddakapatha</a></li>
+ 						<li><a href="../dhp/dhp.html" class="w3-hide-small">The Dhammapada</a></li>
+ 						<li><a href="../snp/snp.html" class="w3-hide-small">Sutta Nipata</a></li>
+ 						<li><a href="../ud/ud.html" class="w3-hide-small">Udana</a></li>
+ 						<li><a href="../it/it.html" class="w3-hide-small">Itivuttaka</a></li>
+ 						<li><a href="../tha/tha.html" class="w3-hide-small">The Theragatha</a></li>
+ 						<li><a href="../thi/thi.html" class="w3-hide-small">The Therigatha</a></li>
+ 					</ul>
+ 				</li>
+ 				<li class="toplast" id="vi"><a href="../vi/vi.html" class="w3-hide-small"><i class="fa fa-caret-down"></i>&nbsp;Vinaya Piṭaka</a>
+ 					<ul>
+ 						<li><a href="../vi/kd.html" class="w3-hide-small">Khandhaka</a></li>
+ 						<li><a href="../vi/bu-vb.html" class="w3-hide-small">Bhikkhu Vibhaṅga</a></li>
+ 						<li><a href="../vi/bu-pt.html" class="w3-hide-small">Bhikkhu Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-pt.html" class="w3-hide-small">Bhikkhunī Pātimokkha</a></li>
+ 						<li><a href="../vi/bi-vb.html" class="w3-hide-small">Bhikkhunī Vibhaṅga</a></li>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			</div>
+ 		</div> <!--navbar-->
+
+<!-- Sidebar (hidden by default) -->
+ <nav class="w3-sidebar w3-bar-block w3-card w3-border w3-top w3-animate-left w3-hide-large" id="mySidebar">
+ 	<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-times fa-2x red-color"></i>&nbsp;&nbsp;&nbsp;Close</a><!-- Hides the sidebar when clicked -->
+ 		<div class="w3-bar-block w3-white">
+ 			<a href="../home/index.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;&nbsp;Home</a>
+ 			<a href="../guide/guide.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Guide</a>
+ 			<a href="../dn/dn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Dīgha Nikāya</a>
+ 			<a href="../mn/mn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Majjhima Nikāya</a>
+ 			<a href="../sn/sn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Saṁyutta Nikāya</a>
+ 			<a href="../an/an.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Aṅguttara Nikāya</a>
+ 			<a href="../kn/kn.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Khuddaka Nikāya</a>
+ 			<a href="../vi/vi.html#content" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><i class="fa fa-book"></i>&nbsp;&nbsp;Vinaya Piṭaka</a>
+ 		</div>
+ </nav>
+
+ <!-- !PAGE CONTENT! --> 
+<div class="w3-main w3-content w3-padding w3-left-align bwcontainer4">
+
+<h2>Majjhima Nikāya</h2>
+
+<div id="content">
+
+<h3>MN121: Cūḷasuññatasutta - The Shorter Discourse on Emptiness </h3>
+
+<div id="metaarea">
+	<ul class="translator">
+		<li><a href="/ru/sc/?q=mn121">fdg</a> ©&nbsp;Translated from the Pali by Bhante Sujato.&nbsp;<a href="../home/copyright.html#sc">(More copyright information)</a>
+	</ul>
+</div>
+
+<section class="raw_sutta">
+<div lang="en">
+<p><span class="parno">1</span><span>So I have heard. </span>At one time the Buddha was staying near Sāvatthī in the Eastern Monastery, the stilt longhouse of Migāra’s mother.</p>
+
+<p>Then in the late afternoon, Venerable Ānanda came out of retreat and went to the Buddha. He bowed, sat down to one side, and said to him:</p>
+
+<p><span class="parno">2</span>“Sir, this one time the Buddha was staying in the land of the Sakyans where they have a town named Nagaraka. There I heard and learned this in the presence of the Buddha: ‘Ānanda, these days I usually practice the meditation on emptiness.’ I trust I properly heard, learned, attended, and remembered that from the Buddha?”</p>
+
+<p><span class="parno">3</span>“Indeed, Ānanda, you properly heard, learned, attended, and remembered that. Now, as before, I usually practice the meditation on emptiness.</p>
+
+<p>Consider this stilt longhouse of Migāra’s mother. It’s empty of elephants, cows, horses, and mares; of gold and money; and of gatherings of men and women. There is only this that is not emptiness, namely, the oneness dependent on the mendicant Saṅgha. In the same way, a mendicant — ignoring the perception of the village and the perception of people — focuses on the oneness dependent on the perception of wilderness. Their mind becomes eager, confident, settled, and decided in that perception of wilderness. They understand: ‘Here there is no stress due to the perception of village or the perception of people. There is only this modicum of stress, namely the oneness dependent on the perception of wilderness.’ They understand: ‘This field of perception is empty of the perception of the village. It is empty of the perception of people. There is only this that is not emptiness, namely the oneness dependent on the perception of wilderness.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">4</span>Furthermore, a mendicant — ignoring the perception of people and the perception of wilderness — focuses on the oneness dependent on the perception of earth. Their mind becomes eager, confident, settled, and decided in that perception of earth. As a bull’s hide is rid of folds when fully stretched out by a hundred pegs, so too, ignoring the hilly terrain, inaccessible riverlands, stumps and thorns, and rugged mountains, they focus on the oneness dependent on the perception of earth. Their mind becomes eager, confident, settled, and decided in that perception of earth. They understand: ‘Here there is no stress due to the perception of people or the perception of wilderness. There is only this modicum of stress, namely the oneness dependent on the perception of earth.’ They understand: ‘This field of perception is empty of the perception of people. It is empty of the perception of wilderness. There is only this that is not emptiness, namely the oneness dependent on the perception of earth.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">5</span>Furthermore, a mendicant — ignoring the perception of wilderness and the perception of earth — focuses on the oneness dependent on the perception of the dimension of infinite space. Their mind becomes eager, confident, settled, and decided in that perception of the dimension of infinite space. They understand: ‘Here there is no stress due to the perception of wilderness or the perception of earth. There is only this modicum of stress, namely the oneness dependent on the perception of the dimension of infinite space.’ They understand: ‘This field of perception is empty of the perception of wilderness. It is empty of the perception of earth. There is only this that is not emptiness, namely the oneness dependent on the perception of the dimension of infinite space.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">6</span>Furthermore, a mendicant — ignoring the perception of earth and the perception of the dimension of infinite space — focuses on the oneness dependent on the perception of the dimension of infinite consciousness. Their mind becomes eager, confident, settled, and decided in that perception of the dimension of infinite consciousness. They understand: ‘Here there is no stress due to the perception of earth or the perception of the dimension of infinite space. There is only this modicum of stress, namely the oneness dependent on the perception of the dimension of infinite consciousness.’ They understand: ‘This field of perception is empty of the perception of earth. It is empty of the perception of the dimension of infinite space. There is only this modicum of stress, namely the oneness dependent on the perception of the dimension of infinite consciousness.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">7</span>Furthermore, a mendicant — ignoring the perception of the dimension of infinite space and the perception of the dimension of infinite consciousness — focuses on the oneness dependent on the perception of the dimension of nothingness. Their mind becomes eager, confident, settled, and decided in that perception of the dimension of nothingness. They understand: ‘Here there is no stress due to the perception of the dimension of infinite space or the perception of the dimension of infinite consciousness. There is only this modicum of stress, namely the oneness dependent on the perception of the dimension of nothingness.’ They understand: ‘This field of perception is empty of the perception of the dimension of infinite space. It is empty of the perception of the dimension of infinite consciousness. There is only this that is not emptiness, namely the oneness dependent on the perception of the dimension of nothingness.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">8</span>Furthermore, a mendicant — ignoring the perception of the dimension of infinite consciousness and the perception of the dimension of nothingness — focuses on the oneness dependent on the perception of the dimension of neither perception nor non-perception. Their mind becomes eager, confident, settled, and decided in that perception of the dimension of neither perception nor non-perception. They understand: ‘Here there is no stress due to the perception of the dimension of infinite consciousness or the perception of the dimension of nothingness. There is only this modicum of stress, namely the oneness dependent on the perception of the dimension of neither perception nor non-perception.’ They understand: ‘This field of perception is empty of the perception of the dimension of infinite consciousness. It is empty of the perception of the dimension of nothingness. There is only this that is not emptiness, namely the oneness dependent on the perception of the dimension of neither perception nor non-perception.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">9</span>Furthermore, a mendicant — ignoring the perception of the dimension of nothingness and the perception of the dimension of neither perception nor non-perception — focuses on the oneness dependent on the signless immersion of the heart. Their mind becomes eager, confident, settled, and decided in that signless immersion of the heart. They understand: ‘Here there is no stress due to the perception of the dimension of nothingness or the perception of the dimension of neither perception nor non-perception. There is only this modicum of stress, namely that associated with the six sense fields dependent on this body and conditioned by life.’ They understand: ‘This field of perception is empty of the perception of the dimension of nothingness. It is empty of the perception of the dimension of neither perception nor non-perception. There is only this that is not emptiness, namely that associated with the six sense fields dependent on this body and conditioned by life.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">10</span>Furthermore, a mendicant — ignoring the perception of the dimension of nothingness and the perception of the dimension of neither perception nor non-perception — focuses on the oneness dependent on the signless immersion of the heart. Their mind becomes eager, confident, settled, and decided in that signless immersion of the heart. They understand: ‘Even this signless immersion of the heart is produced by choices and intentions.’ They understand: ‘But whatever is produced by choices and intentions is impermanent and liable to cessation.’ Knowing and seeing like this, their mind is freed from the defilements of sensuality, desire to be reborn, and ignorance. When they’re freed, they know they’re freed.</p>
+
+<p>They understand: ‘Rebirth is ended, the spiritual journey has been completed, what had to be done has been done, there is no return to any state of existence.’</p>
+
+<hr>
+
+<p>They understand: ‘Here there is no stress due to the defilements of sensuality, desire to be reborn, or ignorance. There is only this modicum of stress, namely that associated with the six sense fields dependent on this body and conditioned by life.’ They understand: ‘This field of perception is empty of the perception of the defilements of sensuality, desire to be reborn, and ignorance. There is only this that is not emptiness, namely that associated with the six sense fields dependent on this body and conditioned by life.’ And so they regard it as empty of what is not there, but as to what remains they understand that it is present. That’s how emptiness is born in them — genuine, undistorted, and pure.</p>
+
+<p><span class="parno">11</span>Whatever ascetics and brahmins enter and remain in the pure, ultimate, supreme emptiness — whether in the past, future, or present — all of them enter and remain in this same pure, ultimate, supreme emptiness. So, Ānanda, you should train like this: ‘We will enter and remain in the pure, ultimate, supreme emptiness.’ That’s how you should train.”</p>
+
+<hr>
+
+<p><span class="parno">12</span>That is what the Buddha said. Satisfied, Venerable Ānanda was happy with what the Buddha said.</p>
+
+</div>
+<div lang="pi">
+
+<p><span class="parno">1</span>Evaṁ me sutaṁ — ​ ekaṁ samayaṁ bhagavā sāvatthiyaṁ viharati pubbārāme migāramātupāsāde.</p>
+
+<p>Atha kho āyasmā ānando sāyanhasamayaṁ paṭisallānā vuṭṭhito yena bhagavā tenupasaṅkami; upasaṅkamitvā bhagavantaṁ abhivādetvā ekamantaṁ nisīdi. Ekamantaṁ nisinno kho āyasmā ānando bhagavantaṁ etadavoca: </p>
+
+<p><span class="parno">2</span>"Ekamidaṁ, bhante, samayaṁ bhagavā sakkesu viharati nagarakaṁ nāma sakyānaṁ nigamo. Tattha me, bhante, bhagavato sammukhā sutaṁ, sammukhā paṭiggahitaṁ: ‘suññatāvihārenāhaṁ, ānanda, etarahi bahulaṁ viharāmī’ti. Kacci metaṁ, bhante, sussutaṁ suggahitaṁ sumanasikataṁ sūpadhāritan"ti?</p>
+
+<p><span class="parno">3</span>"Taggha te etaṁ, ānanda, sussutaṁ suggahitaṁ sumanasikataṁ sūpadhāritaṁ. <span class="var" title="pubbecāhaṁ (s1–3, km, pts1)" id="note246">Pubbepāhaṁ</span>, ānanda, <span class="var" title="Etarahi ca (s1–3, km, pts1)" id="note247">etarahipi</span> suññatāvihārena bahulaṁ viharāmi.</p>
+
+<p>Seyyathāpi, ānanda, ayaṁ migāramātupāsādo suñño hatthigavassavaḷavena, suñño jātarūparajatena, suñño itthipurisasannipātena atthi cevidaṁ asuññataṁ yadidaṁ — bhikkhusaṁghaṁ paṭicca ekattaṁ; evameva kho, ānanda, bhikkhu amanasikaritvā gāmasaññaṁ, amanasikaritvā manussasaññaṁ, araññasaññaṁ paṭicca manasi karoti ekattaṁ. Tassa araññasaññāya cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ye assu darathā gāmasaññaṁ paṭicca tedha na santi, ye assu darathā manussasaññaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — araññasaññaṁ paṭicca ekattan’ti. So ‘suññamidaṁ saññāgataṁ gāmasaññāyā’ti pajānāti, ‘suññamidaṁ saññāgataṁ manussasaññāyā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — araññasaññaṁ paṭicca ekattan’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">4</span>Puna caparaṁ, ānanda, bhikkhu amanasikaritvā manussasaññaṁ, amanasikaritvā araññasaññaṁ, pathavīsaññaṁ paṭicca manasi karoti ekattaṁ. Tassa pathavīsaññāya cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. Seyyathāpi, ānanda, āsabhacammaṁ saṅkusatena suvihataṁ vigatavalikaṁ; evameva kho, ānanda, bhikkhu yaṁ imissā pathaviyā ukkūlavikkūlaṁ nadīviduggaṁ khāṇukaṇṭakaṭṭhānaṁ <span class="var" title="pabbatavisamaṁ sabbaṁ (mr)" id="note248">pabbatavisamaṁ taṁ sabbaṁ</span> amanasikaritvā pathavīsaññaṁ paṭicca manasi karoti ekattaṁ. Tassa pathavīsaññāya cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ye assu darathā manussasaññaṁ paṭicca tedha na santi, ye assu darathā araññasaññaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — pathavīsaññaṁ paṭicca ekattan’ti. So ‘suññamidaṁ saññāgataṁ manussasaññāyā’ti pajānāti, ‘suññamidaṁ saññāgataṁ araññasaññāyā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — pathavīsaññaṁ paṭicca ekattan’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">5</span>Puna caparaṁ, ānanda, bhikkhu amanasikaritvā araññasaññaṁ, amanasikaritvā pathavīsaññaṁ, ākāsānañcāyatanasaññaṁ paṭicca manasi karoti ekattaṁ. Tassa ākāsānañcāyatanasaññāya cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ye assu darathā araññasaññaṁ paṭicca tedha na santi, ye assu darathā pathavīsaññaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — ākāsānañcāyatanasaññaṁ paṭicca ekattan’ti. So ‘suññamidaṁ saññāgataṁ araññasaññāyā’ti pajānāti, ‘suññamidaṁ saññāgataṁ pathavīsaññāyā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — ākāsānañcāyatanasaññaṁ paṭicca ekattan’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">6</span>Puna caparaṁ, ānanda, bhikkhu amanasikaritvā pathavīsaññaṁ, amanasikaritvā ākāsānañcāyatanasaññaṁ, viññāṇañcāyatanasaññaṁ paṭicca manasi karoti ekattaṁ. Tassa viññāṇañcāyatanasaññāya cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ye assu darathā pathavīsaññaṁ paṭicca tedha na santi, ye assu darathā ākāsānañcāyatanasaññaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — viññāṇañcāyatanasaññaṁ paṭicca ekattan’ti. So ‘suññamidaṁ saññāgataṁ pathavīsaññāyā’ti pajānāti, ‘suññamidaṁ saññāgataṁ ākāsānañcāyatanasaññāyā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — viññāṇañcāyatanasaññaṁ paṭicca ekattan’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">7</span>Puna caparaṁ, ānanda, bhikkhu amanasikaritvā ākāsānañcāyatanasaññaṁ, amanasikaritvā viññāṇañcāyatanasaññaṁ, ākiñcaññāyatanasaññaṁ paṭicca manasi karoti ekattaṁ. Tassa ākiñcaññāyatanasaññāya cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ye assu darathā ākāsānañcāyatanasaññaṁ paṭicca tedha na santi, ye assu darathā viññāṇañcāyatanasaññaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — ākiñcaññāyatanasaññaṁ paṭicca ekattan’ti. So ‘suññamidaṁ saññāgataṁ ākāsānañcāyatanasaññāyā’ti pajānāti, ‘suññamidaṁ saññāgataṁ viññāṇañcāyatanasaññāyā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — ākiñcaññāyatanasaññaṁ paṭicca ekattan’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">8</span>Puna caparaṁ, ānanda bhikkhu amanasikaritvā viññāṇañcāyatanasaññaṁ, amanasikaritvā ākiñcaññāyatanasaññaṁ, nevasaññānāsaññāyatanasaññaṁ paṭicca manasi karoti ekattaṁ. Tassa nevasaññānāsaññāyatanasaññāya cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ye assu darathā viññāṇañcāyatanasaññaṁ paṭicca tedha na santi, ye assu darathā ākiñcaññāyatanasaññaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — nevasaññānāsaññāyatanasaññaṁ paṭicca ekattan’ti. So ‘suññamidaṁ saññāgataṁ viññāṇañcāyatanasaññāyā’ti pajānāti, ‘suññamidaṁ saññāgataṁ ākiñcaññāyatanasaññāyā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — nevasaññānāsaññāyatanasaññaṁ paṭicca ekattan’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">9</span>Puna caparaṁ, ānanda, bhikkhu amanasikaritvā ākiñcaññāyatanasaññaṁ, amanasikaritvā nevasaññānāsaññāyatanasaññaṁ, animittaṁ cetosamādhiṁ paṭicca manasi karoti ekattaṁ. Tassa animitte cetosamādhimhi cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ye assu darathā ākiñcaññāyatanasaññaṁ paṭicca tedha na santi, ye assu darathā nevasaññānāsaññāyatanasaññaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — imameva kāyaṁ paṭicca saḷāyatanikaṁ jīvitapaccayā’ti. So ‘suññamidaṁ saññāgataṁ ākiñcaññāyatanasaññāyā’ti pajānāti, ‘suññamidaṁ saññāgataṁ nevasaññānāsaññāyatanasaññāyā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — imameva kāyaṁ paṭicca saḷāyatanikaṁ jīvitapaccayā’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">10</span>Puna caparaṁ, ānanda, bhikkhu amanasikaritvā ākiñcaññāyatanasaññaṁ, amanasikaritvā nevasaññānāsaññāyatanasaññaṁ, animittaṁ cetosamādhiṁ paṭicca manasi karoti ekattaṁ. Tassa animitte cetosamādhimhi cittaṁ pakkhandati pasīdati santiṭṭhati adhimuccati. So evaṁ pajānāti: ‘ayampi kho animitto cetosamādhi abhisaṅkhato abhisañcetayito’. ‘Yaṁ kho pana kiñci abhisaṅkhataṁ abhisañcetayitaṁ tadaniccaṁ nirodhadhamman’ti pajānāti. Tassa evaṁ jānato evaṁ passato kāmāsavāpi cittaṁ vimuccati, bhavāsavāpi cittaṁ vimuccati, avijjāsavāpi cittaṁ vimuccati. Vimuttasmiṁ vimuttamiti ñāṇaṁ hoti. </p>
+
+<p>‘Khīṇā jāti, vusitaṁ brahmacariyaṁ, kataṁ karaṇīyaṁ, nāparaṁ itthattāyā’ti pajānāti.</p>
+
+<hr>
+
+<p>So evaṁ pajānāti: ‘ye assu darathā kāmāsavaṁ paṭicca tedha na santi, ye assu darathā bhavāsavaṁ paṭicca tedha na santi, ye assu darathā avijjāsavaṁ paṭicca tedha na santi, atthi cevāyaṁ darathamattā yadidaṁ — imameva kāyaṁ paṭicca saḷāyatanikaṁ jīvitapaccayā’ti. So ‘suññamidaṁ saññāgataṁ kāmāsavenā’ti pajānāti, ‘suññamidaṁ saññāgataṁ bhavāsavenā’ti pajānāti, ‘suññamidaṁ saññāgataṁ avijjāsavenā’ti pajānāti, ‘atthi cevidaṁ asuññataṁ yadidaṁ — imameva kāyaṁ paṭicca saḷāyatanikaṁ jīvitapaccayā’ti. Iti yañhi kho tattha na hoti tena taṁ suññaṁ samanupassati, yaṁ pana tattha avasiṭṭhaṁ hoti taṁ ‘santamidaṁ atthī’ti pajānāti. Evampissa esā, ānanda, yathābhuccā avipallatthā parisuddhā paramānuttarā suññatāvakkanti bhavati.</p>
+
+<p><span class="parno">11</span>Yepi hi keci, ānanda, atītamaddhānaṁ samaṇā vā brāhmaṇā vā parisuddhaṁ paramānuttaraṁ suññataṁ upasampajja vihariṁsu, sabbe te imaṁyeva parisuddhaṁ paramānuttaraṁ suññataṁ upasampajja vihariṁsu. Yepi hi keci, ānanda, anāgatamaddhānaṁ samaṇā vā brāhmaṇā vā parisuddhaṁ paramānuttaraṁ suññataṁ upasampajja viharissanti, sabbe te imaṁyeva parisuddhaṁ paramānuttaraṁ suññataṁ upasampajja viharissanti. Yepi hi keci, ānanda, etarahi samaṇā vā brāhmaṇā vā parisuddhaṁ paramānuttaraṁ suññataṁ upasampajja viharanti, sabbe te imaṁyeva parisuddhaṁ paramānuttaraṁ suññataṁ upasampajja viharanti. Tasmātiha, ānanda, ‘Parisuddhaṁ paramānuttaraṁ suññataṁ upasampajja <span class="var" title="viharissāmīti (pts1, mr)" id="note249">viharissāmā’ti</span> — evañhi <span class="var" title="te (mr)" id="note250">vo</span>, ānanda, sikkhitabban"ti.</p>
+
+<hr>
+
+<p><span class="parno">12</span>Idamavoca bhagavā. Attamano āyasmā ānando bhagavato bhāsitaṁ abhinandīti.</p>
+
+<p class="endsutta">Cūḷasuññatasuttaṁ niṭṭhitaṁ paṭhamaṁ.</p>
+</div>
+</section>  <!-- End English and Pali -->
+<div id="nextprev"><a id="previous-sutta" href="./mn120.html#content"></a><a id="next-sutta" href="./mn122.html#content"></a></div>
+</div>  <!--End Content -->
+</div>  <!-- End Page -->
+<div class="w3-white bwcontainer2"> <!-- Footer div -->
+<!-- Footer -->
+		<footer>
+			<div id="breadcrumbs"><a href="../home/index.html">Home</a><a href="../mn/mn.html">Majjhima Nikāya</a>MN121: Cūḷasuññatasutta</div>
+					<div class="bottomlinks">
+ 	<a href="../guide/guide.html"><span class="w3-bar-item"><i class="fa fa-compass"></i>&nbsp;Guide</span></a>
+ 	 	<a href="../home/help.html"><span class="w3-bar-item"><i class="fa fa-info"></i>&nbsp;Help</span></a>
+ 	<a href="../home/crossreference.html"><span class="w3-bar-item"><i class="fa fa-exchange"></i>&nbsp;Links&nbsp;Cross&nbsp;Reference</span></a>
+ 	<a href="../home/copyright.html"><span class="w3-bar-item">&copy;&nbsp;Copyright</span></a>
+ 	<a href="../home/contact.html"><span class="w3-bar-item"><i class="fa fa-envelope"></i>&nbsp;Contact</span></a>
+ </div>  <!-- End bottom links -->
+</footer>
+ </div>
+ 
+ <!-- Scripts -->
+
+<script>
+ // Script to turn Pali Lookup on and off
+ function togPaliLookup() {
+ 		var checkBox = document.getElementById("myCheck");
+ 		var text = document.getElementById("text");
+ 		if (checkBox.checked == true){
+ 				text.style.display = "block";
+ 					} else {
+ 							text.style.display = "none";
+ 		}
+ }
+ </script>
+
+ <script>
+ // Script to open and close sidebar
+ 	function w3_open() {
+ 	document.getElementById("mySidebar").style.display = "block";
+ 	}
+ 		function w3_close() {
+ 		document.getElementById("mySidebar").style.display = "none";
+ 	}
+ </script>
+ <script>
+ 		var app = document.getElementsByTagName("BODY")[0];
+ 		if (localStorage.lightMode == "dark") {
+ 			app.setAttribute("light-mode", "dark");
+ 	}
+ </script>
+ 
+ <script>
+ 		function toggle_light_mode() {
+ 			var app = document.getElementsByTagName("BODY")[0];
+ 				if (localStorage.lightMode == "dark") {
+ 			localStorage.lightMode = "light";
+ 			app.setAttribute("light-mode", "light");
+ 		} else {
+ 					localStorage.lightMode = "dark";
+ 					app.setAttribute("light-mode", "dark");
+ 	}
+ 		}
+ 
+ 		window.addEventListener("storage", function () {
+ 			if (localStorage.lightMode == "dark") {
+ 				app.setAttribute("light-mode", "dark");
+ 				} else {
+ 				app.setAttribute("light-mode", "light");
+ 		}
+ 		}, false);
+ 
+ </script>
+ <script src="../js/footer.js"></script><script src="../js/dpd_deconstructor.js"></script><script src="../js/dpd_ebts.js"></script><script src="../js/dpd_i2h.js"></script>
+ <script src="/sw.js"></script>
+ </body>
+ </html>

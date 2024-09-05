@@ -41,7 +41,7 @@ html {
 }
 
 body {
-	font: normal normal 1.15em/1.3em Helvetica, serif;
+	font: normal normal 1.15em/1.3em "URWPalladioITU", serif;
 	margin-left: 5px;
 	z-index:1;
  max-width: 1640px;
@@ -671,7 +671,7 @@ font-weight: bold;
 
 #controlpanel {
 	position: fixed;
- bottom: 15px; /* 70px; */
+ top: 15px; /* 70px; */
 	float:right;
 	right: 25px;
 	z-index: 9000;
@@ -1230,7 +1230,7 @@ font-weight: bold;
  bottom: 2.2em;
  margin-left: 40px;
  margin-right: auto;
- z-index: 1001;
+ z-index: 2002;
  border: 1px solid darkorchid;
  background: #fff3d6;
  border-radius: 5px;

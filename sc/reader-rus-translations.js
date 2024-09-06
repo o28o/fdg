@@ -119,7 +119,7 @@ if (slug.includes("mn"))  {
   var trnpath = rustrnpath; 
   console.log(trnpath);
  // scLink += ifRus; 
-} else if (snranges.indexOf(slug) !== -1) { 
+}  else if (snranges.indexOf(slug) !== -1 || /^sn([1-4]|6|13|1[5-6]|2[0-1])\./.test(slug)) {
   var trnpath = rustrnpath; 
   console.log(trnpath);
 //  scLink += ifRus; 

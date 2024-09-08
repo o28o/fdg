@@ -126,10 +126,16 @@ table td {
     Автопереносы
   </label>
 </div>
-  <button class="btn btn-primary mt-1 input-group-append " onclick="loadText()">Обновить</button>
-  <button class="btn btn-secondary mt-1" onclick="clearInputs()">Очистить Перевод</button>
-    <button class="btn btn-primary mt-1" onclick="downloadJson()">Скачать JSON</button>
-      <button class="btn btn-primary mt-1" id="linkButton">Текст на Fdg</button>
+<div class="d-flex justify-content-between mt-1">
+  <div>
+    <button class="btn btn-primary" onclick="loadText()">Обновить</button>
+    <button class="btn btn-primary" onclick="downloadJson()">Скачать JSON</button>
+    <button class="btn btn-primary" id="linkButton">Текст на Fdg</button>
+  </div>
+  <div>
+    <button class="btn btn-secondary" onclick="clearInputs()">Очистить Перевод</button>
+  </div>
+</div>
  
   <div id="translationJsonOutput"></div>
 <div class="table-container mt-2 mb-5">

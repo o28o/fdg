@@ -329,14 +329,17 @@ translationInput.addEventListener('input', saveInputs);
 lineBreakCheckbox.addEventListener('input', saveInputs);
  
 function clearInputs() {
-  // Очищаем значения инпутов
-  document.getElementById('translationInput').value = '';
-  
-  // Очищаем сохраненные значения в localStorage
-  localStorage.removeItem('translationValue');
-  localStorage.removeItem('lineBreakCheckboxState');
+  // Показать предупреждение
+  if (confirm('Вы действительно хотите очистить перевод?')) {
+    // Если пользователь подтвердил, очищаем значения инпутов
+    document.getElementById('translationInput').value = '';
 
+    // Очищаем сохраненные значения в localStorage
+    localStorage.removeItem('translationValue');
+    localStorage.removeItem('lineBreakCheckboxState');
+  }
 }
+
 </script>
     <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
   

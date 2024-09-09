@@ -169,7 +169,7 @@ $slides = [
            [
         'title' => 'Упадок и Не-упадок в Учении Татхагаты',
         'desc' => 'Пример: Остановится на полпути - это упадок',
-        'link' => '/assets/example/parihaanameta.m_suttanta_pali-ru_6-86.html',
+        'link' => '/ru/?q=Parihānametaṁ',
     ],        
     
                     [
@@ -190,7 +190,7 @@ $slides = [
     [
         'title' => 'Благородный Глоссарий',
         'desc' => 'Различные понятия в очищении благородного (Ariyassa vinaye)',
-        'link' => '/ru/?q=Ariyassa vinaye',
+        'link' => '$mainpage/?q=Ariyassa vinaye',
     ],
     [
         'title' => 'Пища для размышлений',
@@ -649,7 +649,7 @@ $slides = [
            [
         'title' => 'Decline and Non-decline in Tathagatas Teaching',
         'desc' => 'E.g. stopping half-way is a case of decline',
-        'link' => '/assets/example/parihaanameta.m_suttanta_pali_6-86.html',
+        'link' => '/?q=Parihānametaṁ',
     ],    
                         [
         'title' => 'Noble "Vehicles"',

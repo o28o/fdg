@@ -498,7 +498,7 @@ include 'assets/common/horizontalMenuEn.php';
 
 
 <?php
-
+shuffle($slides);
 foreach ($slides as $index => $slide) {
     $title = $slide['title'];
     $desc = $slide['desc'];

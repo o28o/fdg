@@ -175,12 +175,12 @@ $slides = [
                     [
         'title' => 'Благородные "Средства Передвижения"',
         'desc' => 'Когда ... сделано средством передвижения',
-        'link' => '/assets/example/yaaniikat_suttanta_pali-ru_17-62.html',
+        'link' => '/?q=Yānīkat',
     ],
       [
         'title' => 'До моего пробуждения',
         'desc' => 'Будда делится размышлениями и практиками, которые привели его к Пробуждению',
-        'link' => '/assets/example/pubb.sambodh_suttanta_pali-ru_25-50.html',
+        'link' => '/?q=Pubb.*sambodh',
     ],
                 [
         'title' => 'Джатаки из Сутт',
@@ -190,7 +190,7 @@ $slides = [
     [
         'title' => 'Благородный Глоссарий',
         'desc' => 'Различные понятия в очищении благородного (Ariyassa vinaye)',
-        'link' => '$mainpage/?q=Ariyassa vinaye',
+        'link' => '/ru/?q=Ariyassa vinaye',
     ],
     [
         'title' => 'Пища для размышлений',
@@ -205,7 +205,7 @@ $slides = [
     [
         'title' => 'Бывает такой период...',
         'desc' => 'Различные события, которые периодически происходят',
-        'link' => '/assets/example/hoti-kho-so.samayo_suttanta_pali-ru_8-32.html',
+        'link' => '/ru/?q=Hoti kho so.*samayo',
     ],
     [
         'title' => 'Я не отрицаю это...',
@@ -654,12 +654,12 @@ $slides = [
                         [
         'title' => 'Noble "Vehicles"',
         'desc' => 'When ... made a vehicle',
-        'link' => '/assets/example/yaaniikat_suttanta_pali_17-62.html',
+        'link' => '/?q=Yānīkat',
     ],
           [
         'title' => 'Before my Awakening',
         'desc' => 'Thoughts and practices that led the unawakened Bodhisatta to Buddhahood',
-        'link' => '/assets/example/pubb.sambodh_suttanta_pali_25-50.html',
+        'link' => '/?q=Pubb.*sambodh',
     ],
     
                 [
@@ -685,7 +685,7 @@ $slides = [
     [
         'title' => 'There comes a time...',
         'desc' => 'Various recurring events described in Suttas',
-        'link' => '/assets/example/hoti-kho-so.samayo_suttanta_pali_8-32.html',
+        'link' => '/?q=Hoti kho so.*samayo',
     ],
     [
         'title' => 'I don’t deny it.',

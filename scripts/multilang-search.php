@@ -52,8 +52,8 @@ else {
 }
 
 /* single search no radiobuttons */
-if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" )) {
-$p = "-ru";
+if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" ) || ( $p == "-tru" )) {
+//$p = "-ru";
 
 $output = shell_exec("bash $fdgscript $outputlang $la $extra $cb $p $string"); 
 //$fdgscript
@@ -70,6 +70,7 @@ $check = ru2lat( $output );
 
 		if ((( $p == "-ru" ) && ( preg_match('/(-not-in-|-net-v-)/', $check)  )) || ( ( $p != "-vin" ) && ( preg_match('/(-not-in-|-net-v-)/', $check)  )))	{
 
+$fdgscript = "./scripts/finddhamma.sh";
 	 $output = shell_exec("bash $fdgscript $outputlang $la $extra $cb -tru $string");
 	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 	// echo                                                	"<p>$output</p>";

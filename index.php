@@ -162,6 +162,7 @@ if (isset($_GET['q'])) {
        <option value="-all -vin" <?php if (isset($extra) && $p == "-all -vin") echo "selected";?> ><?php echo "$radiovinall";?></option>
         <option value="-b" <?php if (isset($p) && $p == "-b") echo "selected";?> ><?php echo $radiotbw;?></option>
         <option value="-en" <?php if (isset($p) && $p == "-en") echo "selected";?> ><?php echo $radioen;?></option>
+        <option value="-tru" <?php if (isset($p) && $p == "-tru") echo "selected";?> ><?php echo $radiotru;?></option>        
     </select>
        <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
 

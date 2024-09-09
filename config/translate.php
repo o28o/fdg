@@ -189,8 +189,8 @@ $slides = [
     ],
     [
         'title' => 'Благородный Глоссарий',
-        'desc' => 'Отличия между обычными и понятиями в очищении благородного',
-        'link' => '/assets/example/ariyassa-vinaye_suttanta_pali-ru_34-106.html',
+        'desc' => 'Различные понятия в очищении благородного (Ariyassa vinaye)',
+        'link' => '/ru/?q=Ariyassa vinaye',
     ],
     [
         'title' => 'Пища для размышлений',
@@ -669,8 +669,8 @@ $slides = [
     ],
     [
         'title' => 'Noble Glossary',
-        'desc' => 'Differences between ordinary concepts and in the purification of the noble one',
-        'link' => '/assets/example/ariyassa-vinaye_suttanta_pali_34-106.html',
+        'desc' => 'Specified Terms in the purification of the noble one (Ariyassa vinaye)',
+        'link' => '/?q=Ariyassa vinaye',
     ],
     [
         'title' => 'What do you think?',

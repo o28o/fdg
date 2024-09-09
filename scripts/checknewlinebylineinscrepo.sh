@@ -29,7 +29,7 @@ else
 echo $root/$asset/$nee;
 fi)
 
-upd=$(if [ "$new" -gt "$asset" ]; then echo 'Updated!'; $TrnDir/$i 2>/dev/null ; cp $TrnNewDir/$i/* $TrnDir/$i/ ; fi)
+upd=$(if [ "$new" -gt "$asset" ]; then echo 'Updated!'; $TrnDir/$i 2>/dev/null ; mkdir -p $TrnDir/$i 2>/dev/null ; cp $TrnNewDir/$i/* $TrnDir/$i/ ; fi)
 
 echo "$i $(if [ "$percentdone" -eq 100 ]; then 
 echo done $check 

@@ -283,7 +283,7 @@ $examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+K
 
 <li>Все сутты где, упоминается об <a href="/ru/?q=океан">океане</a> на Русском</li>
 
-<li>Все сутты с <a href=./assets/example/seyyathaapi_suttanta_pali-ru_597-1861.html>метафорами с seyyathāpi</a> со ссылками на Русские переводы. Для всех сравнениий на Пали используйте запрос с кавычками: "(seyyathāpi|adhivacan|ūpama|opama)" </li> ';
+<li>Все сутты с <a href=./assets/example/seyyathaapi_suttanta_pali-ru_597-1861.html>метафорами с seyyathāpi</a> со ссылками на Русские переводы. Для всех сравнениий на Пали используйте запрос с кавычками: <a href=/ru/?q="(seyyathāpi|adhivacan|ūpama|opama)">"(seyyathāpi|adhivacan|ūpama|opama)"</a> </li> ';
 
 $howtoheader = 'Как Искать?';
 

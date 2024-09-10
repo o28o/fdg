@@ -343,14 +343,15 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 }
 
 function loadNext() {
-     const texttype = 'sutta';
+    
+	 const texttype = 'sutta';
     const indexValue = document.getElementById('indexInput').value.trim();
-	
-	const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
+
+const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-	
+    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
     console.log("Next URL: ", url);
     fetch(url)
         .then(response => response.text()) // Работаем с текстом, а не с JSON

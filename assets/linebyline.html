@@ -328,7 +328,7 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
     const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     console.log("Prev URL: ", url);
     fetch(url)
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
             // Handle the data from the prev fetch request here
             console.log("Prev Data: ", data);
@@ -348,7 +348,7 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
     const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     console.log("Next URL: ", url);
     fetch(url)
-        .then(response => response.json())
+        .then(response => response.text())
         .then(data => {
             // Handle the data from the next fetch request here
             console.log("Next Data: ", data);

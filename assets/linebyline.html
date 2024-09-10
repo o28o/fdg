@@ -381,6 +381,17 @@ function extractIndexValue(data) {
 
 
 <script>
+
+
+// Добавляем обработчик события keydown для поля indexInput
+document.getElementById('indexInput').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Отменяем стандартное поведение Enter, если необходимо
+        loadText(); // Запускаем функцию обновления текста
+    }
+});
+
+
 // Функция для сохранения значений
 function saveInputs() {
   localStorage.setItem('indexValue', indexInput.value);

@@ -323,7 +323,7 @@ console.log(url);
 function loadPrev() {
       
 	 const texttype = 'sutta';
-    const indexValue = document.getElementById('indexInput').value.trim();
+  const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
 
 const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
@@ -361,7 +361,8 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 function loadNext() {
    
 	 const texttype = 'sutta';
-    const indexValue = document.getElementById('indexInput').value.trim();
+	  const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
+
 
 const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв

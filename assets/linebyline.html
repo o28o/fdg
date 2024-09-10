@@ -105,12 +105,18 @@ table td {
     </select>
   </div>
   
-<div class="input-group-append ms-1">
-    <button class="btn btn-primary mt-1 input-group-append" onclick="loadPrev()">prev</button>
+  
+<div class="input-group">
+    <label class="input-group-text">Пред/След.:</label>
+    <div class="input-group-append ms-1">
+        <button class="btn btn-primary" onclick="loadPrev()">&lt;</button>
+    </div>
+    <div class="input-group-append ms-1">
+        <button class="btn btn-primary" onclick="loadNext()">&gt;</button>
+    </div>
 </div>
-<div class="input-group-append ms-1">
-    <button class="btn btn-primary mt-1 input-group-append" onclick="loadNext()">next</button>
-</div>
+  
+
 
 
     
@@ -407,13 +413,18 @@ function extractIndexValue(data) {
 <script>
 
 
-// Добавляем обработчик события keydown для поля indexInput
-document.getElementById('indexInput').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault(); // Отменяем стандартное поведение Enter, если необходимо
+// Общий обработчик для элементов с id "indexInput" и "languageSelect"
+document.addEventListener('keydown', function(event) {
+    const target = event.target;
+    
+    // Проверяем, если фокус находится на поле indexInput или languageSelect
+    if ((target.id === 'indexInput' || target.id === 'languageSelect') && event.key === 'Enter') {
+        event.preventDefault(); // Отменяем стандартное поведение Enter
         loadText(); // Запускаем функцию обновления текста
     }
 });
+
+
 
 
 // Функция для сохранения значений

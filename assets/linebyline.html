@@ -104,6 +104,16 @@ table td {
       <option value="en">Английский</option>
     </select>
   </div>
+  
+<div class="input-group-append ms-1">
+    <button class="btn btn-primary mt-1 input-group-append" onclick="loadPrev()">prev</button>
+</div>
+<div class="input-group-append ms-1">
+    <button class="btn btn-primary mt-1 input-group-append" onclick="loadNext()">next</button>
+</div>
+
+
+    
   </div>
 <div>
   
@@ -303,6 +313,41 @@ console.log(url);
     .catch(error => console.error('Error fetching data:', error.message));
 }
 </script>
+
+
+<script>
+
+function loadPrev() {
+    const texttype = 'sutta';
+    const indexValue = document.getElementById('indexInput').value.trim();
+    const url = "/sc/api.php?fromjs=" + texttype + "/" + indexValue + "&type=B";
+    console.log("Prev URL: ", url);
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the data from the prev fetch request here
+            console.log("Prev Data: ", data);
+        })
+        .catch(error => console.error('Error fetching prev data:', error));
+}
+
+function loadNext() {
+    const texttype = 'sutta';
+    const indexValue = document.getElementById('indexInput').value.trim();
+    const url = "/sc/api.php?fromjs=" + texttype + "/" + indexValue + "&type=A";
+    console.log("Next URL: ", url);
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the data from the next fetch request here
+            console.log("Next Data: ", data);
+        })
+        .catch(error => console.error('Error fetching next data:', error));
+}
+
+</script>
+
+
 
 <script>
 // Функция для сохранения значений

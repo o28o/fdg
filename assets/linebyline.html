@@ -317,8 +317,9 @@ console.log(url);
 
 <script>
 
+
 function loadPrev() {
-    const texttype = 'sutta';
+   const texttype = 'sutta';
     const indexValue = document.getElementById('indexInput').value.trim();
 
 const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
@@ -328,16 +329,21 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
     const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     console.log("Prev URL: ", url);
     fetch(url)
-        .then(response => response.text())
+        .then(response => response.text()) // Работаем с текстом, а не с JSON
         .then(data => {
-            // Handle the data from the prev fetch request here
             console.log("Prev Data: ", data);
+            
+            // Обновляем поле indexInput полученным значением
+            document.getElementById('indexInput').value = extractIndexValue(data);
+
+            // Вызываем loadText() для обновления данных
+            loadText();
         })
         .catch(error => console.error('Error fetching prev data:', error));
 }
 
 function loadNext() {
-    const texttype = 'sutta';
+     const texttype = 'sutta';
     const indexValue = document.getElementById('indexInput').value.trim();
 	
 	const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
@@ -345,16 +351,29 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
 	
-    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     console.log("Next URL: ", url);
     fetch(url)
-        .then(response => response.text())
+        .then(response => response.text()) // Работаем с текстом, а не с JSON
         .then(data => {
-            // Handle the data from the next fetch request here
             console.log("Next Data: ", data);
+            
+            // Обновляем поле indexInput полученным значением
+            document.getElementById('indexInput').value = extractIndexValue(data);
+
+            // Вызываем loadText() для обновления данных
+            loadText();
         })
         .catch(error => console.error('Error fetching next data:', error));
 }
+
+// Функция для извлечения нового значения для поля "indexInput" из данных API
+function extractIndexValue(data) {
+    // Здесь нужно реализовать логику для извлечения номера текста из строки "sn17.2 Baḷisasutta"
+    // Например, если это всегда строка перед первым пробелом:
+    return data.split(' ')[0]; // Вернёт "sn17.2"
+}
+
+
 
 </script>
 

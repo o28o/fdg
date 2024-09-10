@@ -317,33 +317,46 @@ console.log(url);
 
 <script>
 
-
 function loadPrev() {
-   const texttype = 'sutta';
+      
+	 const texttype = 'sutta';
     const indexValue = document.getElementById('indexInput').value.trim();
 
 const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
+    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=В";
+    
+    // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
+    const originalValue = indexValue;
+
     console.log("Prev URL: ", url);
     fetch(url)
         .then(response => response.text()) // Работаем с текстом, а не с JSON
         .then(data => {
             console.log("Prev Data: ", data);
             
+            const newIndexValue = extractIndexValue(data);
+
             // Обновляем поле indexInput полученным значением
-            document.getElementById('indexInput').value = extractIndexValue(data);
+            if (newIndexValue) {
+                document.getElementById('indexInput').value = newIndexValue;
+            }
 
             // Вызываем loadText() для обновления данных
             loadText();
         })
-        .catch(error => console.error('Error fetching prev data:', error));
+        .catch(error => {
+            console.error('Error fetching prev data:', error);
+
+            // В случае ошибки, возвращаем оригинальное значение поля
+            document.getElementById('indexInput').value = originalValue;
+        });
 }
 
 function loadNext() {
-    
+   
 	 const texttype = 'sutta';
     const indexValue = document.getElementById('indexInput').value.trim();
 
@@ -352,19 +365,32 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
     const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
+    
+    // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
+    const originalValue = indexValue;
+
     console.log("Next URL: ", url);
     fetch(url)
         .then(response => response.text()) // Работаем с текстом, а не с JSON
         .then(data => {
             console.log("Next Data: ", data);
             
+            const newIndexValue = extractIndexValue(data);
+
             // Обновляем поле indexInput полученным значением
-            document.getElementById('indexInput').value = extractIndexValue(data);
+            if (newIndexValue) {
+                document.getElementById('indexInput').value = newIndexValue;
+            }
 
             // Вызываем loadText() для обновления данных
             loadText();
         })
-        .catch(error => console.error('Error fetching next data:', error));
+        .catch(error => {
+            console.error('Error fetching next data:', error);
+
+            // В случае ошибки, возвращаем оригинальное значение поля
+            document.getElementById('indexInput').value = originalValue;
+        });
 }
 
 // Функция для извлечения нового значения для поля "indexInput" из данных API
@@ -373,8 +399,6 @@ function extractIndexValue(data) {
     // Например, если это всегда строка перед первым пробелом:
     return data.split(' ')[0]; // Вернёт "sn17.2"
 }
-
-
 
 </script>
 

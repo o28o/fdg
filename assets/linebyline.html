@@ -326,7 +326,7 @@ const textPart = indexValue.split('.')[0]; // Разделяем по точке
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=В";
+    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
     const originalValue = indexValue;

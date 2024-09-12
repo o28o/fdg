@@ -28,4 +28,4 @@ error in $i"; echo; fi ; done
 # json_pp -t null
 
 touch $state_file
-chown apache:apache lastupdate_state_file
+#chown apache:apache lastupdate_state_file

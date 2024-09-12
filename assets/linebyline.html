@@ -264,7 +264,7 @@ if (indexValue.includes("sn")) {
     }
 } else if (indexValue.includes("an")) {
     if (!cleanedTranslation.startsWith("Восходящие Наставления")) {
-        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
         cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;

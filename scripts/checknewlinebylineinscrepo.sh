@@ -63,8 +63,8 @@ TrnNewDir="$TrnNew/sv/sutta/sn"
 ShowDiff
 
 #echo any key to run latest-rus.php or ctrl-c to cancel
-#cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/sc
-#php ./latest-rus.php
+cd $apachesitepath/sc
+php ./latest-rus.php
 #echo cp if have new sv files
 #read x
 #cp suttacentral.net/sc-data/sc_bilara_data/translation/ru/sv/sutta/sn/sn2/* assets/texts/sutta/sn/sn2/

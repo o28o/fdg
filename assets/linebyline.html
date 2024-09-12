@@ -162,6 +162,32 @@ table td {
       
   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>
    <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
+   
+     <button id="processButton" class="btn btn-primary mt-2">Загрузить JSON</button>
+<script>
+  document.getElementById('processButton').addEventListener('click', function() {
+    // Получаем значение из textarea
+    const inputText = document.getElementById('translationInput').value;
+
+    try {
+      // Преобразуем текст в объект JSON
+      const jsonObject = JSON.parse(inputText);
+
+      // Извлекаем все значения из JSON объекта
+      const values = Object.values(jsonObject);
+
+      // Объединяем значения в одну строку, разделенную переносами строки
+      const result = values.join('\n');
+
+      // Устанавливаем результат в textarea
+      document.getElementById('translationInput').value = result;
+    } catch (error) {
+      alert('Ошибка при обработке JSON. Убедитесь, что введён корректный JSON.');
+    }
+  });
+</script>
+
+
 </div>
 
 <script>

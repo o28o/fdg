@@ -36,6 +36,21 @@
     <ul id="dnRanges"></ul>
 
     <script>
+	
+fetch('/sc/latest-rus.php')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Ошибка при выполнении PHP-скрипта');
+        }
+        return response.text(); // Получаем текстовый ответ
+    })
+    .then(data => {
+        console.log('Ответ от PHP-скрипта:', data); // Выводим текст в консоль
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+    });
+		
         // Загрузка файла и обработка его содержимого
         fetch('/sc/reader-rus-translations.js')
             .then(response => response.text())

@@ -49,7 +49,7 @@ fetch('/sc/latest-rus.php')
     })
     .then(data => {
         // Вставляем текст в элемент с id="output"
-        document.getElementById('outputFromLatestPhp').innerText = data;
+        document.getElementById('outputFromLatestPhp').innerHTML = data;
     })
     .catch(error => {
         console.error('Ошибка:', error);

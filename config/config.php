@@ -9,7 +9,7 @@ if ( preg_match('/Android/', $uname)  ) {
 //$mode = 'online';
 
 $basedir = "/data/data/com.termux/files/usr/share/apache2/default-site/htdocs";
-$fontawesomejs = '<script src="/assets/js/fontawesome.6.1.all.js" defer></script>';
+$fontawesomejs = '<script src="/assets/js/fontawesome.6.6.all.js" defer></script>';
 
 
 //converter.php

@@ -175,7 +175,7 @@ $slides = [
                     [
         'title' => 'Благородные "Средства Передвижения"',
         'desc' => 'Когда ... сделано средством передвижения',
-        'link' => '/?q=Yānīkat',
+        'link' => '/ru/?q=Yānīkat',
     ],
       [
         'title' => 'До моего пробуждения',
@@ -200,7 +200,7 @@ $slides = [
     [
         'title' => 'Я научу вас благородному ...',
         'desc' => 'Что такое благородное мытьё, слабительное, рвотное, путь и самадхи',
-        'link' => '/assets/example/bariy.desessaa_suttanta_pali-ru_13-13.html',
+        'link' => '/ru/?q=\bariy.*desessā',
     ],
     [
         'title' => 'Бывает такой период...',
@@ -210,7 +210,7 @@ $slides = [
     [
         'title' => 'Я не отрицаю это...',
         'desc' => 'Интересные уточнения и нюансы с этой фразой',
-        'link' => '/assets/example/nes.natth.vadaami_suttanta_pali-ru_5-17.html',
+        'link' => '/ru/?q=Nes.*natth.*vadāmi',
     ],
 ];
 
@@ -680,7 +680,7 @@ $slides = [
     [
         'title' => 'I will teach a noble...',
         'desc' => 'What is noble cleansing, purgative, emetic, the path, and samadhi',
-        'link' => '/assets/example/bariy.desessaa_suttanta_pali_13-13.html',
+       'link' => '/?q=\bariy.*desessā',
     ],
     [
         'title' => 'There comes a time...',
@@ -690,7 +690,7 @@ $slides = [
     [
         'title' => 'I don’t deny it.',
         'desc' => 'Curious clarifications and details containing this phrase.',
-        'link' => '/assets/example/nes.natth.vadaami_suttanta_pali_5-17.html',
+        'link' => '/?q=Nes.*natth.*vadāmi',
     ],
 ];
 

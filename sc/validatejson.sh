@@ -1,7 +1,7 @@
 source ../config/script_config.sh --source-only
 cd $apachesitepath/assets/texts/sutta
 
-for i in `find . -type f -name "*.json" `; do
+for i in `find . -type f -mmin -120 -name "*.json" `; do
 cat $i | jq 1>/dev/null
 if [[ $? != 0 ]]; then
 echo;
@@ -10,7 +10,7 @@ error in $i"; echo; fi ; done
 
 cd $apachesitepath/assets/texts/vinaya
 
-for i in `find . -type f -name "*.json" `; do
+for i in `find . -type f -mmin -121 -name "*.json" `; do
 cat $i | jq 1>/dev/null
 if [[ $? != 0 ]]; then
 echo;

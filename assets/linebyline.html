@@ -70,6 +70,30 @@ table td {
   padding: 8px;
   text-align: left;
 }
+
+
+<style>
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.translation-input {
+    width: 100%;
+    box-sizing: border-box;
+}
+</style>
 </style>
 </head>
 <body>
@@ -146,18 +170,57 @@ table td {
  
   <div id="translationJsonOutput"></div>
 <div class="table-container mt-2 mb-5">
+    <table>
+        <thead>
+            <tr>
+                <th>Текст</th>
+                <th>Индексы</th>
+                <th>Перевод</th>
+            </tr>
+        </thead>
+        <tbody id="translationTableBody">
+            <!-- Здесь будут динамически добавляться строки таблицы -->
+        </tbody>
+    </table>
+</div>
 
-  <table class=" table-hover">
-    <thead>
-      <tr>
-        <th>Текст</th>
-        <th>Индексы</th>
-        <th>Перевод</th>
-      </tr>
-    </thead>
-    <tbody id="outputTableBody"></tbody>
-  </table>
-  </div>
+<script>
+function updateTranslationTable() {
+    const mainTranslation = document.getElementById('mainTranslationInput').value;
+    const lines = mainTranslation.split('\n');
+    const tableBody = document.getElementById('translationTableBody');
+    tableBody.innerHTML = '';
+
+    lines.forEach((line, index) => {
+        const row = document.createElement('tr');
+        
+        const textCell = document.createElement('td');
+        textCell.textContent = `Текст ${index + 1}`;
+        
+        const indexCell = document.createElement('td');
+        indexCell.textContent = index + 1;
+        
+        const translationCell = document.createElement('td');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'translation-input';
+        input.value = line;
+        translationCell.appendChild(input);
+        
+        row.appendChild(textCell);
+        row.appendChild(indexCell);
+        row.appendChild(translationCell);
+        
+        tableBody.appendChild(row);
+    });
+}
+
+// Вызовите эту функцию при загрузке страницы и при изменении основного поля ввода
+document.addEventListener('DOMContentLoaded', updateTranslationTable);
+document.getElementById('mainTranslationInput').addEventListener('input', updateTranslationTable);
+</script>
+
+
 <div  class="my-3">
       
   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>

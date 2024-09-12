@@ -5,7 +5,8 @@ fi
 
 source ../config/script_config.sh --source-only
 cd $apachesitepath/assets/texts/sutta
-for i in `find $apachesitepath/assets/texts/sutta -type f -name "*.json" `; do
+for i in `find $apachesitepath/assets/texts/sutta -type f -name "*.json" | xargs grep -El "(\.\.\.|,[\.:;])"`; do
+
 if grep -q '\.\.\.' $i
 then
 echo -n "fixing ellipsis in $i"
@@ -14,7 +15,6 @@ sed -i 's@……@… …@g' $i
 sed -i 's@  …@ …@g' $i
 echo " done <br>"
 fi
-
 
 if grep -q $'\r' $i
 then
@@ -32,6 +32,14 @@ fi
 
 done
 exit 
+
+if grep -q '\\\t' $i
+then
+echo -n "fixing tabs in $i"
+sed -i 's/\\t//g' $i
+echo " done <br>"
+fi
+
 
 for i in `find . -type f -name "*.json" `; do
 echo -n "fixing windows newlines in $i"

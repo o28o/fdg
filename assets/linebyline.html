@@ -253,6 +253,7 @@ if (document.getElementById('lineBreakCheckbox').checked) {
   });
 }
   
+cleanedTranslation = cleanedTranslation.replace(/(?<!\n)то точно также/g, '\nто точно также');
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {

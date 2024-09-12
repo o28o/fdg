@@ -64,7 +64,7 @@ ShowDiff
 
 #echo any key to run latest-rus.php or ctrl-c to cancel
 cd $apachesitepath/sc
-php ./latest-rus.php | sed 's/<[^>]*>//g' 
+php ./latest-rus.php | sed 's/<[^>]*>//g' | grep -v ^$ | grep -v complete
 #echo cp if have new sv files
 #read x
 #cp suttacentral.net/sc-data/sc_bilara_data/translation/ru/sv/sutta/sn/sn2/* assets/texts/sutta/sn/sn2/

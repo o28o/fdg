@@ -185,7 +185,17 @@ th {
 </div>
 
 <script>
+// Функция для проверки наличия элемента
+function elementExists(id) {
+    return document.getElementById(id) !== null;
+}
+
 function updateTranslationTable() {
+    if (!elementExists('mainTranslationInput') || !elementExists('translationTableBody')) {
+        console.error('Required elements not found. Check your HTML structure.');
+        return;
+    }
+
     const mainTranslation = document.getElementById('mainTranslationInput').value;
     const lines = mainTranslation.split('\n');
     const tableBody = document.getElementById('translationTableBody');
@@ -213,6 +223,30 @@ function updateTranslationTable() {
         
         tableBody.appendChild(row);
     });
+}
+
+// Дождемся полной загрузки DOM перед выполнением скрипта
+document.addEventListener('DOMContentLoaded', function() {
+    if (elementExists('mainTranslationInput')) {
+        document.getElementById('mainTranslationInput').addEventListener('input', updateTranslationTable);
+    }
+    updateTranslationTable();
+});
+
+// Функция для загрузки текста
+async function loadText() {
+    if (!elementExists('translationTableBody')) {
+        console.error('Translation table body not found. Check your HTML structure.');
+        return;
+    }
+
+    try {
+        const response = await fetch('/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/sn/sn23/sn23.1_root-pli-ms.json');
+        const data = await response.json();
+        // Обработка полученных данных...
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
 }
 
 // Вызовите эту функцию при загрузке страницы и при изменении основного поля ввода

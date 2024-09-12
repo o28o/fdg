@@ -1,7 +1,16 @@
 source ../config/script_config.sh --source-only
+
+state_file=$apachesitepath/assets/texts/lastupdate_state_file
+
 cd $apachesitepath/assets/texts/sutta
 
-for i in `find . -type f -mmin -120 -name "*.json" `; do
+if [ -e "$state_file" ]; then
+  allOrNewerOnly="-newer $state_file"
+else
+  allOrNewerOnly=""
+fi
+
+for i in `find . -type f $allOrNewerOnly -name "*.json" `; do
 cat $i | jq 1>/dev/null
 if [[ $? != 0 ]]; then
 echo;
@@ -10,7 +19,7 @@ error in $i"; echo; fi ; done
 
 cd $apachesitepath/assets/texts/vinaya
 
-for i in `find . -type f -mmin -121 -name "*.json" `; do
+for i in `find . -type f $allOrNewerOnly -name "*.json" `; do
 cat $i | jq 1>/dev/null
 if [[ $? != 0 ]]; then
 echo;
@@ -18,3 +27,4 @@ echo "</br>
 error in $i"; echo; fi ; done
 # json_pp -t null
 
+touch $state_file

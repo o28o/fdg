@@ -164,7 +164,7 @@ $slides = [
                [
         'title' => 'Виды личностей в Учении Татхагаты',
         'desc' => 'Начиная от 3 видов и до 10',
-        'link' => '/assets/example/pugg.sa.mvijjam.lokasmi.m_suttanta_pali-ru_74-98.html',
+        'link' => '/ru/?q=Pugg.*saṁvijjam.*lokasmiṁ',
     ],        
            [
         'title' => 'Упадок и Не-упадок в Учении Татхагаты',
@@ -644,7 +644,7 @@ $slides = [
                    [
         'title' => 'Types of individuals in Tathagatas Teaching',
         'desc' => 'Starting from 3 types up to 10',
-        'link' => '/assets/example/pugg.sa.mvijjam.lokasmi.m_suttanta_pali_74-98.html',
+        'link' => '/?q=Pugg.*saṁvijjam.*lokasmiṁ',
     ],        
            [
         'title' => 'Decline and Non-decline in Tathagatas Teaching',

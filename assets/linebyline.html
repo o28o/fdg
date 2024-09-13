@@ -283,6 +283,8 @@ cleanedTranslation = cleanedTranslation.replace(/(?<!\n)то точно такж
 cleanedTranslation = cleanedTranslation.replace(/(?<!\n)то точно также/g, '\nто точно также');
 
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал\]:.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
+
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {

@@ -70,6 +70,16 @@ table td {
   padding: 8px;
   text-align: left;
 }
+
+ .dropzone {
+  
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .dropzone.dragover {
+    background-color: #e9ecef;
+  }
 </style>
 </head>
 <body>
@@ -120,6 +130,8 @@ table td {
 
 <div>
   
+<div id="dropzone" class="dropzone">
+
   <label class="mt-2" for="translationInput">Текст перевода:</label>
   <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
 2. Вставьте русский перевод сюда
@@ -130,6 +142,7 @@ table td {
 Можно будет поправить переноcы вручную. 
 
 Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
+</div>
 </div>
 
 
@@ -145,7 +158,7 @@ table td {
   <button class="btn btn-secondary mt-1" onclick="clearInputs()">Очистить Перевод</button>
  
   <div id="translationJsonOutput"></div>
-<div class="table-container mt-2 mb-5">
+<div class="table-container mt-2 mb-3">
 
   <table class=" table-hover">
     <thead>
@@ -162,6 +175,32 @@ table td {
       
   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>
    <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
+   
+     <button id="processButton" class="btn btn-primary mt-2">Очистить JSON</button>
+<script>
+  document.getElementById('processButton').addEventListener('click', function() {
+    // Получаем значение из textarea
+    const inputText = document.getElementById('translationInput').value;
+
+    try {
+      // Преобразуем текст в объект JSON
+      const jsonObject = JSON.parse(inputText);
+
+      // Извлекаем все значения из JSON объекта
+      const values = Object.values(jsonObject);
+
+      // Объединяем значения в одну строку, разделенную переносами строки
+      const result = values.join('\n');
+
+      // Устанавливаем результат в textarea
+      document.getElementById('translationInput').value = result;
+    } catch (error) {
+      alert('Ошибка при обработке JSON. Убедитесь, что введён корректный JSON.');
+    }
+  });
+</script>
+
+
 </div>
 
 <script>
@@ -253,17 +292,18 @@ if (document.getElementById('lineBreakCheckbox').checked) {
   });
 }
   
+cleanedTranslation = cleanedTranslation.replace(/(?<!\n)то точно также/g, '\nто точно также');
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {
-        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Связанные Наставления")) {
         cleanedTranslation = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
 } else if (indexValue.includes("an")) {
     if (!cleanedTranslation.startsWith("Восходящие Наставления")) {
-        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава\nНазвание\n`;
+        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
         cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
@@ -473,5 +513,55 @@ function clearInputs() {
         window.open(url, '_blank');
     });
 </script>  
+
+<script>
+  document.getElementById('dropzone').addEventListener('dragover', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.classList.add('dragover');
+  });
+
+  document.getElementById('dropzone').addEventListener('dragleave', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.classList.remove('dragover');
+  });
+
+  document.getElementById('dropzone').addEventListener('drop', function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.classList.remove('dragover');
+
+    const files = event.dataTransfer.files;
+    if (files.length > 0) {
+      const file = files[0];
+      if (file.type === 'application/json' || file.type === 'text/plain') {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const text = e.target.result;
+          document.getElementById('translationInput').value = text;
+        };
+        reader.readAsText(file);
+      } else {
+        alert('Пожалуйста, загрузите файл JSON или текстовый файл.');
+      }
+    }
+  });
+
+  document.getElementById('processButton').addEventListener('click', function() {
+    const inputText = document.getElementById('translationInput').value;
+    try {
+      const jsonObject = JSON.parse(inputText);
+      const values = Object.values(jsonObject);
+      const result = values.join('\n');
+      document.getElementById('translationInput').value = result;
+    } catch (error) {
+      alert('Ошибка при обработке JSON. Убедитесь, что введён корректный JSON.');
+    }
+  });
+</script>
+
+
+
 </body>
 </html>

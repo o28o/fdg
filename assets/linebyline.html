@@ -142,7 +142,12 @@ table td {
   <button class="btn btn-primary mt-1 input-group-append " onclick="loadText()">Обновить</button>
   <button class="btn btn-primary mt-1" id="linkButton">Текст на Fdg</button>
   <button class="btn btn-primary mt-1" onclick="downloadJson()">Скачать JSON</button>
+  <button id="processButton" class="btn btn-primary mt-1">Загрузить JSON</button>
   <button class="btn btn-secondary mt-1" onclick="clearInputs()">Очистить Перевод</button>
+   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">?</a>
+   <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
+
+
  
   <div id="translationJsonOutput"></div>
 <div class="table-container mt-2 mb-3">
@@ -160,15 +165,38 @@ table td {
   </div>
 <div  class="my-3">
       
-  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" class="btn btn-primary mt-1" target="_blank">Видео-Инструкция</a>
-   <a href="/assets/readylinebyline.html" class="btn btn-primary mt-1" target="_blank">Список Готовых</a>   
-   
-     <button id="processButton" class="btn btn-primary mt-2">Очистить JSON</button>
+    
+<input type="file" id="fileInput" style="display:none" accept=".json" />
 <script>
   document.getElementById('processButton').addEventListener('click', function() {
     // Получаем значение из textarea
     const inputText = document.getElementById('translationInput').value;
 
+    if (inputText.trim() === '') {
+      // Если textarea пустая, открываем диалог для загрузки файла
+      document.getElementById('fileInput').click();
+    } else {
+      // Если есть текст, продолжаем обработку JSON
+      processJson(inputText);
+    }
+  });
+
+  // Обработчик загрузки файла
+  document.getElementById('fileInput').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const fileContent = e.target.result;
+        processJson(fileContent);
+      };
+      reader.readAsText(file);
+    }
+  });
+
+  // Функция обработки JSON (из textarea или файла)
+  function processJson(inputText) {
     try {
       // Преобразуем текст в объект JSON
       const jsonObject = JSON.parse(inputText);
@@ -182,9 +210,21 @@ table td {
       // Устанавливаем результат в textarea
       document.getElementById('translationInput').value = result;
     } catch (error) {
-      alert('Ошибка при обработке JSON. Убедитесь, что введён корректный JSON.');
-    }
-  });
+    //  alert('Ошибка при обработке JSON. Убедитесь, что введён корректный JSON.');
+    
+	// Выводим диалог для загрузки файла
+  const proceed = confirm('Хотите загрузить файл для замены данных?');
+
+  if (proceed) {
+    // Если пользователь согласился, открываем диалог загрузки файла
+    document.getElementById('fileInput').click();
+  }
+	}
+	
+  }
+  
+  
+  
 </script>
 
 
@@ -268,6 +308,18 @@ function loadText() {
   let translation = document.getElementById('translationInput').value.trim();
 
 let cleanedTranslation = translation;
+
+  // Проверяем, является ли ввод валидным JSON
+  try {
+    const jsonObject = JSON.parse(translation);
+    // Если это JSON, очищаем его с помощью processJson
+    processJson(translation);
+    return;  // Прекращаем дальнейшую обработку, так как JSON уже очищен
+  } catch (error) {
+    // Если это не JSON, продолжаем обычную обработку текста
+  }
+
+
 
 if (document.getElementById('lineBreakCheckbox').checked) {
   cleanedTranslation = translation.replace(/[\.…:?!] /g, match => {

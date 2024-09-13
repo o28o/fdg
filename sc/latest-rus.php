@@ -41,7 +41,7 @@ $pathsn = 'assets/texts/sutta/sn/';
 $check = shell_exec("
 snrangeInFile=`grep 'let snranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-snstring=`find $basedir/$pathsn -name \"*translation-ru*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed \"s/ /', '/g\" | sed \"s/^/'/g\" | sed \"s/$/'/g\"`
+snstring=`find $basedir/$pathsn -name \"*translation-ru*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed 's/ /\", \"'/g\' | sed 's/^/\"/g\' | sed 's/$/\"/g'`
 
 sndir=\"[\${snstring%,}]\"
 

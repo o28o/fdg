@@ -41,7 +41,7 @@ $pathsn = 'assets/texts/sutta/sn/';
 $check = shell_exec("
 snrangeInFile=`grep 'let snranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
 
-snstring=`find $basedir/$pathsn -name \"*translation-ru*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed 's/ /\", \"'/g\' | sed 's/^/\"/g\' | sed 's/$/\"/g'`
+snstring=`find $basedir/$pathsn -name \"*translation-ru*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed 's/ /\", \"/g' | sed 's/^/\"/g' | sed 's/$/\"/g'`
 
 sndir=\"[\${snstring%,}]\"
 
@@ -49,7 +49,8 @@ if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then
 echo SN no updates
 else
 echo SN updated to \$sndir
-sed -i \"s@let snranges =.*@let snranges = \$sndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
+sed -i 's@let snranges =.*@let snranges = '\"\$sndir\"';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
+
 fi
 ");
 echo "<h2 style='text-align: center;'>

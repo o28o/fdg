@@ -6,6 +6,11 @@
     <link href="/assets/css/styles.css" rel="stylesheet" />
     <link href="/assets/css/extrastyles.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+	
+	<link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+	
 <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,8 +98,8 @@ table td {
 
 <div class="input-group mt-2">
 <div >
-      <label for="indexInput">Номер Текста:</label>
-    <input type="search" class="form-control" id="indexInput" placeholder="Номер текста (sn23.1, an3.70 и т.п.">
+      <label class="" for="indexInput" >Номер Текста:</label>	  
+    <input  style="width: 150px;" type="search" class="form-control" id="indexInput" placeholder="Пример sn23.1 и т.п.">
 </div>
 
 <div class="input-group-append ms-1">
@@ -109,8 +114,14 @@ table td {
 <div class="input-group-append ms-1">
     <label>Пред / След</label>
     <div class=" ms-1">
-        <button class="input-group-append btn btn-primary" onclick="loadPrev()">&lt;</button>
-        <button class="input-group-append btn btn-primary" onclick="loadNext()">&gt;</button>
+        <button class="input-group-append btn btn-primary" onclick="loadPrev()">
+		<i class="fa-solid fa-chevron-left"></i>
+<!-- 		&lt;
+ -->		</button>
+        <button class="input-group-append btn btn-primary" onclick="loadNext()">
+		<i class="fa-solid fa-chevron-right"></i>
+<!-- 		&gt;
+ -->		</button>
     </div>
 </div>
   
@@ -139,31 +150,15 @@ table td {
     Автопереносы
   </label>
 </div>
-  <button class="btn btn-primary mt-1 input-group-append " title="Обновить перевод или удалить JSON метаданные" onclick="loadText()">Обновить</button>
+  <button class="btn btn-primary mt-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
   <button class="btn btn-primary mt-1" title="Открыть текст на find.dhamma.gift" id="linkButton">Текст на Fdg</button>
-  <button class="btn btn-primary mt-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить</button>
-  <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1">Загрузить</button>
+  <button class="btn btn-primary mt-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
+  <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
   <button class="btn btn-secondary mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()">Очистить Текст</button>
-   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" title="Видео Инструкция" class="btn btn-primary mt-1" target="_blank">?</a>
+   <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" title="Видео Инструкция" class="btn btn-primary mt-1" target="_blank"><i class="fa-solid fa-question"></i></a>
    <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class="btn btn-primary mt-1" target="_blank">
-   
-   	<svg fill="#fff" height="15px" width="15px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 487.3 487.3" xml:space="preserve">
-<g>
-	<g>
-		<path d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
-			C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
-			c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
-			s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
-			c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
-			 M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
-			C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
-			C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
-			C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"/>
-	</g>
-</g>
-</svg>	
-   
+<i class="fa-solid fa-list"></i>
+
    </a>   
 
 
@@ -583,5 +578,131 @@ function clearInputs() {
         window.open(url, '_blank');
     });
 </script>  
+
+
+<script>
+$.ajax({
+  url: "/assets/texts/sutta_words.txt",
+  dataType: "text",
+  success: function(data) {
+
+    var accentMap = {
+      "ā": "a",
+      "ī": "i",
+      "ū": "u",
+      "ḍ": "d",
+      "ḷ": "l",
+      "ṃ": "ṁ",
+      "ṁ": "n",
+      "ṁ": "m",
+      "ṅ": "n",
+      "ṇ": "n",
+      "ṭ": "t",
+      "ñ": "n",
+      "ññ": "n",
+      "ss": "s",
+      "aa": "a",
+      "ii": "i",
+      "uu": "u",
+      "dd": "d",
+      "kk": "k",
+      "ḍḍ": "d",
+      "ḷḷ": "l",
+      "ṇṇ": "n",
+      "ṭṭ": "t",
+      "cc": "c",
+      "pp": "p",
+	  "cch": "c",
+      "ch": "c",
+      "kh": "k",
+      "ph": "p",
+      "th": "t",
+      "ṭh": "t"
+    };
+
+    var normalize = function(term) {
+      var ret = "";
+      for (var i = 0; i < term.length; i++) {
+          ret += accentMap[term.charAt(i)] || term.charAt(i);
+      }
+      return ret;
+    };
+
+    var allWords = data.split('\n');
+
+    $("#indexInput").autocomplete({
+      position: {
+        my: "left bottom",
+        at: "left top",
+        collision: "flip"
+      },
+      minLength: 0,
+      multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке
+      source: function(request, response) {
+        var terms = request.term.split(/[\|\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке или |
+        var lastTerm = terms.pop().trim();
+        var otherMinLength = 3;
+
+        if (lastTerm.length < otherMinLength) {
+          response([]);
+          return;
+        }
+
+        var re = $.ui.autocomplete.escapeRegex(lastTerm);
+        var matchbeginonly = new RegExp("^" + re, "i");
+        var matchall = new RegExp(re.replace(/([a-z])\1/gi, "$1$1"), "i");
+
+        var listBeginOnly = $.grep(allWords, function(value) {
+          value = value.label || value.value || value;
+          var results = matchbeginonly.test(value) || matchbeginonly.test(normalize(value));
+          return results;
+        });
+
+        var listAll = $.grep(allWords, function(value) {
+          value = value.label || value.value || value;
+          var results = matchall.test(value) || matchall.test(normalize(value));
+          return results;
+        });
+
+        listAll = listAll.filter(function(el) {
+          return !listBeginOnly.includes(el);
+        });
+
+        // Ограничение количества подсказок до 10
+        var maxRecord = 1000;
+        var resultList = listBeginOnly.concat(listAll).slice(0, maxRecord);
+
+        response(resultList);
+      },
+      focus: function(event, ui) {
+        // Удаляем автоматическое введение при наведении мыши
+        return false;
+      },
+      select: function(event, ui) {
+  var terms = this.value.split(/([\|\s\*])/);
+  terms.pop();
+  terms.push(ui.item.value);
+  
+  for (var i = 1; i < terms.length; i += 2) {
+    if (terms[i] === "*") {
+      terms[i] = "*";
+    } else if (terms[i] === "|") {
+      terms[i] = "|";
+    } else {
+      terms[i] = " ";
+    }
+  }
+
+  this.value = terms.join("");
+  return false;
+}
+
+    }).autocomplete("widget").addClass("fixed-height");
+  }
+});
+</script>
+
+
+<script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>
 </html>

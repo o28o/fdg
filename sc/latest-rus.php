@@ -47,6 +47,8 @@ sndir=\"[\${snstring%,}]\"
 
   
 if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then
+
+
 echo SN no updates
 else
 echo SN updated to \$sndir
@@ -87,11 +89,10 @@ anstring=`find $basedir/$pathan -type f  -name \"*translation-ru*.json\" | awk -
 
 andir=\"['\${anstring%,}']\"
 
-
-echo jq -n '{in_arr2_not_in_arr1: (\$anrangeInFile - \$andir)}' | jq -r '.[]'
-  
   
 if [[ \"\$andir\" == \"\$anrangeInFile\" ]] ; then
+
+
 echo AN no updates
 else
 echo AN updated to \$andir

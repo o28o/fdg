@@ -45,8 +45,6 @@ snstring=`find $basedir/$pathsn -name \"*translation-ru*.json\" | awk -F'_' '{pr
 
 sndir=\"[\${snstring%,}]\"
 
-echo jq --argjson arr1 \"\$snstring\" --argjson arr2 \"\$sndir\" -n '{NewTexts: (\$arr2 - \$arr1)}'
-  
   
 if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then
 echo SN no updates
@@ -89,6 +87,10 @@ anstring=`find $basedir/$pathan -type f  -name \"*translation-ru*.json\" | awk -
 
 andir=\"['\${anstring%,}']\"
 
+
+echo jq -n '{in_arr2_not_in_arr1: (\$anrangeInFile - \$andir)}' | jq -r '.[]'
+  
+  
 if [[ \"\$andir\" == \"\$anrangeInFile\" ]] ; then
 echo AN no updates
 else

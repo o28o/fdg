@@ -53,6 +53,10 @@ diff=`jq --argjson arr1 \"\$snstring\" --argjson arr2 \"\$sndir\" -n '
   {
     NewTexts: (\$arr2 - \$arr1)
   }'`
+
+echo THIS IS snrange \$snrangeInFile
+echo 
+echo THIS IS sndir \$sndir
 echo SN updated to \$sndir
 
 

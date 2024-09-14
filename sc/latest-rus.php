@@ -49,16 +49,12 @@ if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then
 echo SN no updates
 else
 
-diff=`jq --argjson arr1 \"\$snstring\" --argjson arr2 \"\$sndir\" -n '
+jq --argjson arr1 \"\$snstring\" --argjson arr2 \"\$sndir\" -n '
   {
     NewTexts: (\$arr2 - \$arr1)
-  }'`
+  }'
 
-echo THIS IS snrange \$snrangeInFile
-echo 
-echo THIS IS sndir \$sndir
 echo SN updated to \$sndir
-
 
 sed -i 's@let snranges =.*@let snranges = '\"\$sndir\"';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
 

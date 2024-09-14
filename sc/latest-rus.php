@@ -45,10 +45,8 @@ snstring=`find $basedir/$pathsn -name \"*translation-ru*.json\" | awk -F'_' '{pr
 
 sndir=\"[\${snstring%,}]\"
 
-echo jq --argjson arr1 \"\$snstring\" --argjson arr2 \"\$sndir\" -n '
-  {
-    NewTexts: (\$arr2 - \$arr1)
-  }'
+echo jq --argjson arr1 \"\$snstring\" --argjson arr2 \"\$sndir\" -n '{NewTexts: (\$arr2 - \$arr1)}'
+  
   
 if [[ \"\$sndir\" == \"\$snrangeInFile\" ]] ; then
 echo SN no updates

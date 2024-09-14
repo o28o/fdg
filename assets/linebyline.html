@@ -75,6 +75,28 @@ table td {
   padding: 8px;
   text-align: left;
 }
+
+
+
+    /* Простое стилизованное модальное окно */
+    #searchModal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    #searchModalContent {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 400px;
+    }
 </style>
 </head>
 <body>
@@ -141,6 +163,24 @@ table td {
 Можно будет поправить переноcы вручную. 
 
 Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
+
+   <!-- Модальное окно для поиска и замены -->
+  <div id="searchModal">
+    <div id="searchModalContent">
+      <h3>Поиск и замена</h3>
+      <label for="searchText">Найти:</label>
+      <input type="text" id="searchText">
+      <br>
+      <label for="replaceText">Заменить на:</label>
+      <input type="text" id="replaceText">
+      <br><br>
+      <button id="findBtn">Найти</button>
+      <button id="replaceOneBtn">Заменить</button>
+      <button id="replaceAllBtn">Заменить все</button>
+      <button id="closeBtn">Закрыть</button>
+    </div>
+  </div>
+
 </div>
 
 
@@ -705,7 +745,112 @@ $.ajax({
 });
 </script>
 
+  <script>
+    const translationInput = document.getElementById('translationInput');
+    const searchModal = document.getElementById('searchModal');
+    const searchText = document.getElementById('searchText');
+    const replaceText = document.getElementById('replaceText');
+    const findBtn = document.getElementById('findBtn');
+    const replaceOneBtn = document.getElementById('replaceOneBtn');
+    const replaceAllBtn = document.getElementById('replaceAllBtn');
+    const closeBtn = document.getElementById('closeBtn');
 
+    let lastIndex = 0;
+
+    // Открытие модального окна с логированием
+    function openSearchModal() {
+      console.log('Opening search modal');
+      lastIndex = 0; // Сбрасываем индекс при каждом открытии
+      searchModal.style.display = 'block';
+      searchText.focus();
+    }
+
+    // Закрытие модального окна с логированием
+    function closeSearchModal() {
+      console.log('Closing search modal');
+      searchModal.style.display = 'none';
+      setTimeout(() => {
+        translationInput.focus(); // Возвращаем фокус на textarea
+      }, 0);
+    }
+
+    // Поиск текста
+    findBtn.addEventListener('click', function () {
+      const searchValue = searchText.value;
+      if (searchValue) {
+        const content = translationInput.value;
+        lastIndex = content.indexOf(searchValue, lastIndex + 1);
+
+        if (lastIndex !== -1) {
+          console.log(`Text found at index ${lastIndex}`);
+          translationInput.focus();
+          translationInput.setSelectionRange(lastIndex, lastIndex + searchValue.length);
+        } else {
+          alert('Совпадений больше нет');
+          console.log('No more matches found');
+          lastIndex = 0; // Сброс для нового поиска
+        }
+      }
+    });
+
+    // Замена одного совпадения
+    replaceOneBtn.addEventListener('click', function () {
+      const searchValue = searchText.value;
+      const replaceValue = replaceText.value;
+      if (searchValue) {
+        const content = translationInput.value;
+        lastIndex = content.indexOf(searchValue, lastIndex);
+
+        if (lastIndex !== -1) {
+          translationInput.value = 
+            content.slice(0, lastIndex) + replaceValue + content.slice(lastIndex + searchValue.length);
+          console.log(`Replaced text at index ${lastIndex}`);
+          lastIndex += replaceValue.length;
+          translationInput.focus();
+          translationInput.setSelectionRange(lastIndex, lastIndex);
+        } else {
+          alert('Совпадений больше нет');
+          console.log('No more matches found for replacement');
+          lastIndex = 0;
+        }
+      }
+    });
+
+    // Замена всех совпадений
+    replaceAllBtn.addEventListener('click', function () {
+      const searchValue = searchText.value;
+      const replaceValue = replaceText.value;
+      if (searchValue) {
+        const regex = new RegExp(searchValue, 'g');
+        translationInput.value = translationInput.value.replace(regex, replaceValue);
+        console.log('Replaced all occurrences');
+      }
+    });
+
+    // Закрытие окна при нажатии "Закрыть"
+    closeBtn.addEventListener('click', function() {
+      console.log('Close button clicked');
+      closeSearchModal();
+    });
+
+    // Глобальный обработчик нажатия клавиш Ctrl + Shift + F или Ctrl + Shift + H
+   document.addEventListener('keydown', function (e) {
+  if (e.ctrlKey && e.shiftKey && (e.code === 'KeyF' || e.code === 'KeyH')) {
+    console.log('Key combination pressed: ', e.code);
+    e.preventDefault();
+    openSearchModal();
+  }
+});
+
+    // Закрытие окна при клике вне его
+    window.addEventListener('click', function (e) {
+      if (e.target == searchModal) {
+        console.log('Clicked outside the modal');
+        closeSearchModal();
+      }
+    });
+
+  </script>
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>
 </html>

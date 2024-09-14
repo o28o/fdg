@@ -353,6 +353,8 @@ cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
 
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
+
 
 if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');

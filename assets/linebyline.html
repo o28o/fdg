@@ -76,27 +76,53 @@ table td {
   text-align: left;
 }
 
+ 
+	.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(0, 0, 0, 0.4);  Полупрозрачный черный фон */
+}
+
+.modal-content {
+  position: absolute;
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  right: 5%;
+  top: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени */
+}
 
 
-    /* Простое стилизованное модальное окно */
-    #searchModal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
 
-    #searchModalContent {
-      background-color: white;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 400px;
-    }
+.modal-header {
+  cursor: move; /* Показываем, что этот элемент можно перемещать */
+}
+
+.close {
+  position: absolute;
+  top: 25px; /* Отступ сверху */
+  right: 35px; /* Отступ справа */
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+	
 </style>
 </head>
 <body>
@@ -171,22 +197,29 @@ table td {
 
 Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
 
-   <!-- Модальное окно для поиска и замены -->
-  <div id="searchModal">
-    <div id="searchModalContent">
+
+<div id="searchModal" class="modal">
+  <div class="modal-content">
+    <div id="modalHeader" class="modal-header">
+      <span class="close">&times;</span>
       <h3>Поиск и замена</h3>
-      <label for="searchText">Найти:</label>
+    </div>
+    <div class="modal-body">
+      <!-- Ваше содержимое модального окна -->
+           <label for="searchText">Найти:</label>
       <input type="text" id="searchText">
       <br>
       <label for="replaceText">Заменить на:</label>
       <input type="text" id="replaceText">
-      <br><br>
-      <button id="findBtn">Найти</button>
-      <button id="replaceOneBtn">Заменить</button>
-      <button id="replaceAllBtn">Заменить все</button>
-      <button id="closeBtn">Закрыть</button>
+           <br><br>
+      <button class="mb-1 btn btn-primary" id="findBtn">Найти</button>
+      <button  class="mb-1 btn btn-primary" id="replaceOneBtn">Заменить</button>
+      <button class="mb-1 btn btn-primary" id="replaceAllBtn">Заменить все</button>
+      <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
     </div>
   </div>
+</div>
+
 
 </div>
 
@@ -853,6 +886,61 @@ $.ajax({
         closeSearchModal();
       }
     });
+
+
+// Логика для перемещения модального окна
+const modal = document.getElementById("searchModal");
+const modalHeader = document.getElementById("modalHeader");
+let isDragging = false;
+let offsetX = 0, offsetY = 0;
+
+modalHeader.addEventListener('mousedown', function (e) {
+  isDragging = true;
+  offsetX = e.clientX - modal.offsetLeft;
+  offsetY = e.clientY - modal.offsetTop;
+  document.body.style.cursor = "move"; // Меняем курсор на перетаскивание
+});
+
+document.addEventListener('mousemove', function (e) {
+  if (isDragging) {
+    modal.style.left = (e.clientX - offsetX) + "px";
+    modal.style.top = (e.clientY - offsetY) + "px";
+  }
+});
+
+document.addEventListener('mouseup', function () {
+  isDragging = false;
+  document.body.style.cursor = "default"; // Возвращаем курсор обратно
+});
+
+// Открытие и закрытие модального окна по нажатию клавиш
+document.addEventListener('keydown', function (e) {
+  if (e.ctrlKey && e.shiftKey && (e.code === 'KeyF' || e.code === 'KeyH')) {
+    console.log('Key combination pressed: ', e.code);
+    e.preventDefault();
+    openSearchModal();
+  }
+});
+
+function openSearchModal() {
+  console.log("Opening search modal");
+  modal.style.display = "block";
+}
+
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', function() {
+  console.log("Close button clicked");
+  modal.style.display = "none";
+});
+
+// Закрытие модального окна при клике вне его
+window.addEventListener('click', function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+
 
   </script>
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>

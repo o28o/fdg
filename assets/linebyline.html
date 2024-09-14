@@ -93,7 +93,8 @@ table td {
   background-color: white;
   padding: 20px;
   border: 1px solid #888;
-  width: 30%; /* Ширина модального окна */
+  width: 80%; /* Ширина для десктопов и планшетов */
+  max-width: 600px; /* Максимальная ширина */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
   
   /* Центрирование по горизонтали и вертикали */
@@ -102,7 +103,13 @@ table td {
   transform: translate(-50%, -50%);
 }
 
-
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%; /* Ширина для мобильных устройств */
+    max-width: none; /* Убираем максимальную ширину для мобильных устройств */
+    padding: 10px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
 
 .modal-header {
   cursor: move; /* Показываем, что этот элемент можно перемещать */

@@ -52,8 +52,8 @@ else {
 }
 
 /* single search no radiobuttons */
-if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" ) || ( $p == "-tru" )) {
-//$p = "-ru";
+if (preg_match('/[А-Яа-яЁё]/u', $string) || ( $p == "-ru" ) ) {
+//$p = "-ru"; в условии было || ( $p == "-tru" )
 
 $output = shell_exec("bash $fdgscript $outputlang $la $extra $cb $p $string"); 
 //$fdgscript

@@ -53,7 +53,8 @@ else {
 
 /* single search no radiobuttons */
 if (preg_match('/[А-Яа-яЁё]/u', $string) ) {
-//$p = "-ru"; || ( $p == "-ru" ) || ( $p == "-tru" )
+$p = "-ru"; 
+//|| ( $p == "-ru" ) || ( $p == "-tru" )
 
 $output = shell_exec("bash $fdgscript $outputlang $la $extra $cb $p $string"); 
 //$fdgscript

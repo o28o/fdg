@@ -466,10 +466,14 @@ if (document.getElementById('lineBreakCheckbox').checked) {
     }
     return match;
   });
+  cleanedTranslation = cleanedTranslation.replace(/,то точно также/g, ', точно также');
+cleanedTranslation = cleanedTranslation.replace(/, точно также/g, ',\nточно также');
+cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
+cleanedTranslation = cleanedTranslation.replace(/Как вы думаете, /g, 'Как вы думаете,\n');
+
+  
 }
   
-
-cleanedTranslation = cleanedTranslation.replace(/(?<!\n)то точно также/g, '\nто точно также');
 cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
 
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал\]:.*$/gm, '');
@@ -479,11 +483,9 @@ cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
 
 if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»])\d+\b/g, '$1');
+cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…])\d+\b/g, '$1');
 
 }
-
-
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {

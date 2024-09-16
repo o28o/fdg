@@ -469,7 +469,8 @@ if (document.getElementById('lineBreakCheckbox').checked) {
 }
   
 
-cleanedTranslation = cleanedTranslation.replace(/(?<!\n)то точно также/g, '\nто точно также');
+cleanedTranslation = cleanedTranslation.replace(/(?<!\n)то точно также/g, '\nточно также');
+cleanedTranslation = cleanedTranslation.replace(/(?<!\n)точно также/g, '\nточно также');
 cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
 
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал\]:.*$/gm, '');

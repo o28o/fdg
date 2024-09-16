@@ -479,11 +479,9 @@ cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
 
 if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»])\d+\b/g, '$1');
+cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…])\d+\b/g, '$1');
 
 }
-
-
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {

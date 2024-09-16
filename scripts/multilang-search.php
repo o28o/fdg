@@ -52,7 +52,17 @@ else {
 }
 
 /* single search no radiobuttons */
-if (preg_match('/[А-Яа-яЁё]/u', $string) ) {
+if (preg_match('/-tru/', $p) || preg_match('/-tru/', $q) || preg_match('/-tru/', $extra)) {
+$p = "-tru"; 
+$fdgscript = "./scripts/finddhamma.sh";
+
+$output = shell_exec("bash $fdgscript $outputlang $la $extra $cb $p $string"); 
+
+$output = trim(preg_replace('/\s\s+/', ' ', $output));	
+$outforjs = $output . "<br>";
+	
+}
+elseif (preg_match('/[А-Яа-яЁё]/u', $string) ) {
 
 $p = "-ru"; 
 
@@ -80,15 +90,6 @@ $fdgscript = "./scripts/finddhamma.sh";
 	 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 	 $outforjs .= $output;
 			}	
-} elseif (preg_match('/-tru/', $p) || preg_match('/-tru/', $q) || preg_match('/-tru/', $extra)) {
-$p = "-tru"; 
-$fdgscript = "./scripts/finddhamma.sh";
-
-$output = shell_exec("bash $fdgscript $outputlang $la $extra $cb $p $string"); 
-
-$output = trim(preg_replace('/\s\s+/', ' ', $output));	
-$outforjs = $output . "<br>";
-	
 
 #thai
 } else if (preg_match('/\p{Thai}/u', $string) || ( $p == "-th" )) {

@@ -257,15 +257,18 @@ table td {
       <button  class="mb-1 btn btn-primary" id="replaceOneBtn">Заменить</button>
       <button class="mb-1 btn btn-primary" id="replaceAllBtn">Заменить все</button>
       <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
-
+<br>
 <div class="form-check input-group-append ">
 <input class="form-check-input" type="checkbox" id="customTranslatorName">
   <label class="form-check-label" for="customTranslatorName">
     добавить +edited+o
   </label>
 </div>	   
-
-	   
+  
+  <button class="mb-1 btn btn-primary btn-sm" id="template1" data-template="Это – боль», и «Это – скапливание боли», и «Это – истечение боли», и «Это – к истечению боли ведущая практика».">4би</button>
+<button class="mb-1 btn btn-primary btn-sm" id="template2" data-template="Это другой шаблон текста.">Шаблон 2</button>
+<button class="mb-1 btn btn-primary btn-sm" id="template3" data-template="Это третий шаблон текста.">Шаблон 3</button>
+  
     </div>
   </div>
 </div>
@@ -1027,6 +1030,33 @@ window.addEventListener('click', function(event) {
 
 
   </script>
+  
+
+
+<script>
+document.querySelectorAll('button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        var translationInput = document.getElementById('translationInput');
+        var textToInsert = button.getAttribute('data-template');
+        
+        // Для поддержания позиции курсора
+        var startPos = translationInput.selectionStart;
+        var endPos = translationInput.selectionEnd;
+
+        // Вставляем текст на позицию курсора
+        var beforeCursor = translationInput.value.substring(0, startPos);
+        var afterCursor = translationInput.value.substring(endPos, translationInput.value.length);
+        translationInput.value = beforeCursor + textToInsert + afterCursor;
+
+        // Устанавливаем курсор после вставленного текста
+        translationInput.selectionStart = translationInput.selectionEnd = startPos + textToInsert.length;
+
+        // Опционально фокусируем input
+        translationInput.focus();
+    });
+});
+</script>  
+  
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>
 </html>

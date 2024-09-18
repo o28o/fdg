@@ -257,6 +257,15 @@ table td {
       <button  class="mb-1 btn btn-primary" id="replaceOneBtn">Заменить</button>
       <button class="mb-1 btn btn-primary" id="replaceAllBtn">Заменить все</button>
       <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
+
+<div class="form-check input-group-append ">
+<input class="form-check-input" type="checkbox" id="customTranslatorName">
+  <label class="form-check-label" for="customTranslatorName">
+    добавить +edited+o
+  </label>
+</div>	   
+
+	   
     </div>
   </div>
 </div>
@@ -441,7 +450,15 @@ console.log(url);
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = indexValue + '_translation-ru-sv.json';
+	  
+	  if (document.getElementById('customTranslatorName').checked) {
+	  const translatorName = 'sv+edited+o';
+} else {
+	  const translatorName = 'sv';
+}
+	  
+	  
+      a.download = indexValue + '_translation-ru-' + translatorName + '.json';
 
       // Append link to the body and click it programmatically
       document.body.appendChild(a);

@@ -1037,8 +1037,21 @@ window.addEventListener('click', function(event) {
 document.querySelectorAll('button').forEach(function(button) {
     button.addEventListener('click', function() {
         var translationInput = document.getElementById('translationInput');
+
+        // Проверяем, найден ли элемент и не является ли он null
+        if (!translationInput) {
+            console.error("Element with id 'translationInput' not found");
+            return;
+        }
+
         var textToInsert = button.getAttribute('data-template');
-        
+
+        // Проверяем, чтобы текст для вставки не был null или undefined
+        if (textToInsert === null || textToInsert === undefined) {
+            console.error("No text found in data-template attribute");
+            return;
+        }
+
         // Для поддержания позиции курсора
         var startPos = translationInput.selectionStart;
         var endPos = translationInput.selectionEnd;
@@ -1055,8 +1068,7 @@ document.querySelectorAll('button').forEach(function(button) {
         translationInput.focus();
     });
 });
-</script>  
-  
+</script>
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>
 </html>

@@ -451,11 +451,12 @@ console.log(url);
       const a = document.createElement('a');
       a.href = url;
 	  
+	  
+	  
+	  const translatorName = 'sv';
 	  if (document.getElementById('customTranslatorName').checked) {
 	  const translatorName = 'sv+edited+o';
-} else {
-	  const translatorName = 'sv';
-}
+} 
 	  
 	  
       a.download = indexValue + '_translation-ru-' + translatorName + '.json';

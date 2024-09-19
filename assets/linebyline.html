@@ -518,6 +518,7 @@ cleanedTranslation = cleanedTranslation.replace(/или как вы считае
 cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
 
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал\]:.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');

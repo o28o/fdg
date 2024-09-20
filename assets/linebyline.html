@@ -646,25 +646,25 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
-
-// Функция для сдвига ячеек вниз
+// Функция для сдвига ячеек вниз начиная с текущей строки
 function shiftCellsDown(startRow) {
     let rowToMove = startRow;
-    while (rowToMove.previousElementSibling) {
-        const prevRow = rowToMove.previousElementSibling;
-        rowToMove.cells[2].textContent = prevRow.cells[2].textContent;
-        rowToMove = prevRow;
+    while (rowToMove.nextElementSibling) {
+        const nextRow = rowToMove.nextElementSibling;
+        rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
+        rowToMove = nextRow;
     }
-    // Очищаем первую ячейку
+    // Очищаем последнюю ячейку
     rowToMove.cells[2].textContent = '';
-    
+
     // Обновляем все затронутые строки
     let rowToUpdate = startRow;
     while (rowToUpdate) {
         updateSingleTranslationRow(rowToUpdate.cells[2]);
-        rowToUpdate = rowToUpdate.previousElementSibling;
+        rowToUpdate = rowToUpdate.nextElementSibling;
     }
 }
+
 
 
 

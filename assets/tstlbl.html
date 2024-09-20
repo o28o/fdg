@@ -594,24 +594,6 @@ console.log(url);
 	  
   
 // новый код 	  
-
-
-<style>
-    /* Устанавливаем фиксированную ширину для ячейки таблицы */
-    #outputTableBody td {
-        width: 300px; /* Установите нужную ширину для ячейки */
-        overflow: hidden; /* Скрываем переполнение */
-        white-space: nowrap; /* Запрещаем перенос текста */
-        text-overflow: ellipsis; /* Добавляем многоточие при переполнении */
-    }
-
-    .table-textarea {
-        box-sizing: border-box; /* Учитываем внутренние отступы */
-        resize: none; /* Запрещаем изменять размер textarea */
-    }
-</style>
-
-<script>
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
     // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
@@ -632,8 +614,8 @@ function makeCellEditable(cell) {
     textarea.value = originalText;
     textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
-    // Устанавливаем фиксированную ширину и высоту textarea в соответствии с размерами ячейки
-    textarea.style.width = '100%'; // Устанавливаем ширину 100% от родительской ячейки
+    // Устанавливаем размеры textarea в соответствии с размерами ячейки
+    textarea.style.width = `${cell.clientWidth}px`;
     textarea.style.height = `${cell.clientHeight}px`;
     
     // Сохраняем оригинальный текст как data-атрибут
@@ -715,7 +697,7 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
-</script>
+
 
 // новый код 	  
 
@@ -1211,7 +1193,6 @@ document.addEventListener('DOMContentLoaded', function() {
         loadText();
     });
 </script>
-
 
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>

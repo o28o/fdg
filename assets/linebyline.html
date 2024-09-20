@@ -587,10 +587,10 @@ console.log(url);
 	  
   
 // новый код 	  
+// Новый код
 
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
-    // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
     const target = event.target;
     if (target.tagName === 'TD' && target.cellIndex === 2) {
         makeCellEditable(target);
@@ -622,14 +622,37 @@ function makeCellEditable(cell) {
         // Синхронизируем с текстовым полем translationInput
         updateTranslationTextarea();
 
-        // Снимаем фокус с input и убираем его
-        cell.removeChild(input);
+        // Убираем input, если он все еще в ячейке
+        if (cell.contains(input)) {
+            cell.removeChild(input);
+        }
     });
 
-    // Обрабатываем нажатие Enter для завершения редактирования
+    // Обрабатываем нажатие Enter для завершения редактирования или переноса текста
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            input.blur(); // Снимаем фокус, чтобы завершить редактирование
+            event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
+            const cursorPos = input.selectionStart; // Позиция курсора
+            const textBeforeCursor = input.value.slice(0, cursorPos); // Текст перед курсором
+            const textAfterCursor = input.value.slice(cursorPos); // Текст после курсора
+
+            // Обновляем текущую ячейку
+            cell.innerText = textBeforeCursor;
+
+            // Находим следующую ячейку
+            const nextCell = cell.nextElementSibling;
+
+            if (nextCell) {
+                // Устанавливаем текст в следующую ячейку
+                nextCell.innerText = textAfterCursor;
+
+                // Активируем редактирование следующей ячейки
+                makeCellEditable(nextCell);
+            } else {
+                // Если нет следующей ячейки, просто убираем input
+                cell.removeChild(input);
+            }
         }
     });
 }
@@ -646,6 +669,8 @@ function updateTranslationTextarea() {
 
     document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
+
+// Новый код конец
 
 
 // новый код конец  

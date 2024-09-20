@@ -664,7 +664,30 @@ function shiftCellsDown(startRow) {
  // Обрабатываем нажатие клавиш
 
 textarea.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
+   
+        if (event.ctrlKey && event.key === 'Enter') {
+            // Обработка Ctrl + Enter для переноса текста
+            event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
+            // Завершаем редактирование текущей ячейки
+            finishEditing();
+
+            // Обновляем следующую ячейку, если она существует
+            const currentRow = cell.parentElement;
+            const nextRow = currentRow.nextElementSibling;
+            if (nextRow) {
+                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                if (nextCell) {
+                    // Устанавливаем текст до курсора в текущую ячейку
+                    cell.textContent = textBeforeCursor;
+
+                    // Перемещаем текст после курсора в следующую ячейку
+                    nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
+                    makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+                }
+            }
+        } 
+		else if (event.key === 'Enter') {
         event.preventDefault(); // Предотвращаем стандартное поведение Enter
         
         const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
@@ -687,7 +710,17 @@ textarea.addEventListener('keydown', function(event) {
         
         // Завершаем редактирование
         finishEditing();
-    }
+		
+		 // Переходим к следующей ячейке, если она существует
+                const currentRow = cell.parentElement;
+                const nextRow = currentRow.nextElementSibling;
+                if (nextRow) {
+                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                    if (nextCell) {
+                        makeCellEditable(nextCell);
+                    }
+                }
+    }  
 		
 		
 		

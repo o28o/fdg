@@ -594,6 +594,7 @@ console.log(url);
 	  
   
 // новый код 	  
+
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
     // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
@@ -614,10 +615,11 @@ function makeCellEditable(cell) {
     textarea.value = originalText;
     textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
-    // Устанавливаем размеры textarea в соответствии с размерами ячейки
+    // Устанавливаем фиксированную ширину и высоту textarea в соответствии с размерами ячейки
     textarea.style.width = `${cell.clientWidth}px`;
     textarea.style.height = `${cell.clientHeight}px`;
-    
+    textarea.style.boxSizing = 'border-box'; // Учитываем внутренние отступы
+
     // Сохраняем оригинальный текст как data-атрибут
     cell.dataset.originalText = originalText;
     
@@ -697,7 +699,6 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
-
 
 // новый код 	  
 

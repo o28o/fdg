@@ -516,9 +516,6 @@ if (document.getElementById('lineBreakCheckbox').checked) {
     }
     return match;
   });
- 
-cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
-
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
 cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
 cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
@@ -690,7 +687,7 @@ textarea.addEventListener('keydown', function(event) {
         
         // Завершаем редактирование
         finishEditing();
-    } 
+    }
 		
 		
 		

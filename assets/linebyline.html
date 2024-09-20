@@ -705,7 +705,7 @@ if (event.key === 'Backspace') {
             const currentCell = currentRow.cells[2];
             const currentText = textarea.value.trim();
             
-            if (currentText === '') {
+        
                 // Если текущая ячейка пуста, сдвигаем все нижестоящие ячейки вверх
                 let rowToMove = currentRow;
                 while (rowToMove.nextElementSibling) {
@@ -722,13 +722,13 @@ if (event.key === 'Backspace') {
                     updateSingleTranslationRow(rowToUpdate.cells[2]);
                     rowToUpdate = rowToUpdate.nextElementSibling;
                 }
-            } else {
+            
                 // Если текущая ячейка не пуста, объединяем с предыдущей
                 const previousText = previousCell.textContent.trim();
                 previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
                 currentCell.textContent = '';
                 updateSingleTranslationRow(currentCell);
-            }
+            
             
             // Обновляем translationInput
             updateTranslationInput();

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Функция для проверки позиции прокрутки и показа кнопки при необходимости
   function checkScrollPosition() {
-    if (window.scrollY > 500) { // Измените это значение на нужное вам
+    if (window.scrollY > 600) { // Измените это значение на нужное вам
       scrollToTopBtn.style.display = 'block';
     } else {
       scrollToTopBtn.style.display = 'none';

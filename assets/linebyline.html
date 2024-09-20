@@ -602,6 +602,7 @@ console.log(url);
 	  
   
 // новый код 	  
+
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
     // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
@@ -686,6 +687,31 @@ function makeCellEditable(cell) {
                     if (nextCell) {
                         makeCellEditable(nextCell);
                     }
+                }
+            }
+        }
+
+        // Обработка нажатия клавиши Backspace
+        if (event.key === 'Backspace') {
+            const cursorPosition = textarea.selectionStart;
+
+            // Если курсор в начале строки
+            if (cursorPosition === 0) {
+                event.preventDefault(); // Предотвращаем удаление символа
+
+                const currentRow = cell.parentElement;
+                const previousRow = currentRow.previousElementSibling;
+
+                if (previousRow) {
+                    const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
+                    const previousText = previousCell.textContent.trim();
+                    const currentText = textarea.value.trim();
+
+                    // Объединяем текст предыдущей и текущей строки
+                    previousCell.textContent = previousText + ' ' + currentText;
+                    currentRow.remove(); // Удаляем текущую строку
+
+                    makeCellEditable(previousCell); // Переводим фокус на предыдущую ячейку
                 }
             }
         }

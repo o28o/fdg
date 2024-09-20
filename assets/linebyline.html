@@ -595,8 +595,6 @@ console.log(url);
   
 // новый код 	  
 
-// Новый код конец
-
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
     // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
@@ -608,37 +606,40 @@ document.getElementById('outputTableBody').addEventListener('click', function(ev
 
 // Функция для превращения ячейки в input для редактирования
 function makeCellEditable(cell) {
-    const originalText = cell.innerText; // Сохраняем оригинальный текст ячейки
+    if (cell.querySelector('input')) return; // Если input уже есть, ничего не делаем
 
+    const originalText = cell.textContent.trim(); // Используем textContent вместо innerText
+    
     // Создаем input для редактирования
     const input = document.createElement('input');
     input.type = 'text';
     input.value = originalText;
     input.classList.add('table-input'); // Опционально добавляем класс для стилей
-
-    // Очищаем содержимое ячейки и вставляем input
-    cell.innerText = '';
+    
+    // Сохраняем оригинальный текст как data-атрибут
+    cell.dataset.originalText = originalText;
+    
+    // Заменяем содержимое ячейки на input
+    cell.textContent = '';
     cell.appendChild(input);
     input.focus();
 
-    // Обрабатываем выход из режима редактирования
-    input.addEventListener('blur', function() {
-        const newText = input.value;
-
-        // Обновляем текст ячейки
-        cell.innerText = newText;
-
-        // Синхронизируем с текстовым полем translationInput
+    // Функция для завершения редактирования
+    function finishEditing() {
+        const newText = input.value.trim();
+        cell.textContent = newText || cell.dataset.originalText; // Используем оригинальный текст, если новый пустой
+        delete cell.dataset.originalText; // Удаляем временный data-атрибут
         updateTranslationTextarea();
+    }
 
-        // Снимаем фокус с input и убираем его
-        cell.removeChild(input);
-    });
+    // Обрабатываем выход из режима редактирования
+    input.addEventListener('blur', finishEditing);
 
     // Обрабатываем нажатие Enter для завершения редактирования
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            input.blur(); // Снимаем фокус, чтобы завершить редактирование
+            finishEditing();
+            event.preventDefault(); // Предотвращаем стандартное поведение Enter
         }
     });
 }
@@ -647,19 +648,18 @@ function makeCellEditable(cell) {
 function updateTranslationTextarea() {
     const tableRows = document.querySelectorAll('#outputTableBody tr');
     let updatedTranslation = '';
-
     tableRows.forEach(row => {
         const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
-        updatedTranslation += translationCell.innerText + '\n'; // Добавляем перевод с переносом строки
+        updatedTranslation += translationCell.textContent.trim() + '\n'; // Используем textContent и удаляем лишние пробелы
     });
-
     document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
 
+// Инициализация: заполняем translationInput при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
+
 
 // новый код конец  
-	  
-	  
 	  
 	  
 	  

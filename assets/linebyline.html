@@ -704,7 +704,14 @@ const nextRow = currentRow.nextElementSibling; // Следующая строк�
             }
 	
 else	{
-       event.preventDefault(); // Предотвращаем стандартное поведение Enter
+      event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
+const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+
+const currentRow = cell.parentElement; // Текущая строка
+const nextRow = currentRow.nextElementSibling; // Следующая строка
 
 // Логи перед изменениями
 console.log("Позиция курсора:", cursorPosition);
@@ -713,12 +720,11 @@ console.log("Текст после курсора:", `"${textAfterCursor}"`);
 console.log("Текущая строка до изменений:", currentRow.innerHTML);
 if (nextRow) {
     console.log("Следующая строка до изменений:", nextRow.innerHTML);
-} else {
-    console.log("Следующей строки нет.");
 }
 
 // Оставляем текст до курсора в текущей ячейке
-cell.textContent = textBeforeCursor.length === 0 ? '' : textBeforeCursor;
+cell.textContent = ''; // Очищаем текущую ячейку
+cell.textContent = textBeforeCursor.length === 0 ? '' : textBeforeCursor; // Присваиваем новый текст
 
 // Сдвигаем строки вниз
 shiftCellsDown(currentRow);

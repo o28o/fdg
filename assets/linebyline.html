@@ -585,10 +585,12 @@ console.log(url);
         });
       });
 	
-// Новый код
+//Новый код 	
+
 
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
+    // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
     const target = event.target;
     if (target.tagName === 'TD' && target.cellIndex === 2) {
         makeCellEditable(target);
@@ -603,7 +605,7 @@ function makeCellEditable(cell) {
     const input = document.createElement('input');
     input.type = 'text';
     input.value = originalText;
-    input.classList.add('table-input');
+    input.classList.add('table-input'); // Опционально добавляем класс для стилей
 
     // Очищаем содержимое ячейки и вставляем input
     cell.innerText = '';
@@ -624,31 +626,10 @@ function makeCellEditable(cell) {
         cell.removeChild(input);
     });
 
-    // Обрабатываем нажатие Enter для завершения редактирования или переноса текста
+    // Обрабатываем нажатие Enter для завершения редактирования
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            event.preventDefault(); // Предотвращаем создание новой строки в input
-
-            const cursorPos = input.selectionStart; // Позиция курсора
-            const textBeforeCursor = input.value.slice(0, cursorPos); // Текст перед курсором
-            const textAfterCursor = input.value.slice(cursorPos); // Текст после курсора
-
-            // Обновляем ячейку
-            cell.innerText = textBeforeCursor;
-
-            // Находим следующую ячейку
-            const nextCell = cell.nextElementSibling;
-
-            if (nextCell) {
-                // Устанавливаем текст в следующую ячейку
-                nextCell.innerText = textAfterCursor;
-
-                // Активируем редактирование следующей ячейки
-                makeCellEditable(nextCell);
-            }
-
-            // Если нет следующей ячейки, просто убираем input
-            cell.removeChild(input);
+            input.blur(); // Снимаем фокус, чтобы завершить редактирование
         }
     });
 }
@@ -659,14 +640,15 @@ function updateTranslationTextarea() {
     let updatedTranslation = '';
 
     tableRows.forEach(row => {
-        const translationCell = row.cells[2];
-        updatedTranslation += translationCell.innerText + '\n';
+        const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
+        updatedTranslation += translationCell.innerText + '\n'; // Добавляем перевод с переносом строки
     });
 
-    document.getElementById('translationInput').value = updatedTranslation.trim();
+    document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
-
-// Новый код конец
+  
+	  
+	//Новый код конец
   	  
     })
     .catch(error => console.error('Error fetching data:', error.message));

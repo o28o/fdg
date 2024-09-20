@@ -692,7 +692,7 @@ function makeCellEditable(cell) {
         }
 
   
-  // Обработка нажатия клавиши Backspace
+// Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
     // Если курсор в начале строки
@@ -705,30 +705,18 @@ if (event.key === 'Backspace') {
             const currentCell = currentRow.cells[2];
             const currentText = textarea.value.trim();
             
-        
-                // Если текущая ячейка пуста, сдвигаем все нижестоящие ячейки вверх
-                let rowToMove = currentRow;
-                while (rowToMove.nextElementSibling) {
-                    const nextRow = rowToMove.nextElementSibling;
-                    rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
-                    rowToMove = nextRow;
-                }
-                // Очищаем последнюю ячейку
-                rowToMove.cells[2].textContent = '';
-                
-                // Обновляем все затронутые строки
-                let rowToUpdate = currentRow;
-                while (rowToUpdate) {
-                    updateSingleTranslationRow(rowToUpdate.cells[2]);
-                    rowToUpdate = rowToUpdate.nextElementSibling;
-                }
-            
+            if (currentText === '') {
+                shiftCellsUp(currentRow);
+            } else {
                 // Если текущая ячейка не пуста, объединяем с предыдущей
                 const previousText = previousCell.textContent.trim();
                 previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
                 currentCell.textContent = '';
                 updateSingleTranslationRow(currentCell);
-            
+                
+                // После очистки текущей ячейки, сдвигаем все нижестоящие ячейки вверх
+                shiftCellsUp(currentRow);
+            }
             
             // Обновляем translationInput
             updateTranslationInput();
@@ -736,6 +724,25 @@ if (event.key === 'Backspace') {
             // Устанавливаем фокус на предыдущую ячейку
             makeCellEditable(previousCell);
         }
+    }
+}
+
+// Функция для сдвига ячеек вверх
+function shiftCellsUp(startRow) {
+    let rowToMove = startRow;
+    while (rowToMove.nextElementSibling) {
+        const nextRow = rowToMove.nextElementSibling;
+        rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
+        rowToMove = nextRow;
+    }
+    // Очищаем последнюю ячейку
+    rowToMove.cells[2].textContent = '';
+    
+    // Обновляем все затронутые строки
+    let rowToUpdate = startRow;
+    while (rowToUpdate) {
+        updateSingleTranslationRow(rowToUpdate.cells[2]);
+        rowToUpdate = rowToUpdate.nextElementSibling;
     }
 }
 

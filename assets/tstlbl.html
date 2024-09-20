@@ -641,7 +641,7 @@ function makeCellEditable(cell) {
     textarea.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (event.ctrlKey) {
-                // Обработка Ctrl + Enter для переноса текста
+                // Обработка Ctrl + Enter для добавления пустой строки
                 event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
                 const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
@@ -651,18 +651,40 @@ function makeCellEditable(cell) {
                 // Завершаем редактирование текущей ячейки
                 finishEditing();
 
-                // Обновляем следующую ячейку, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
-                if (nextRow) {
-                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                    if (nextCell) {
-                        // Устанавливаем текст до курсора в текущую ячейку
-                        cell.textContent = textBeforeCursor;
+                // Проверяем, если курсор в конце строки
+                if (cursorPosition === textarea.value.length) {
+                    // Получаем текущую строку и следующую
+                    const currentRow = cell.parentElement;
+                    const nextRow = currentRow.nextElementSibling;
 
-                        // Перемещаем текст после курсора в следующую ячейку
-                        nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
-                        makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+                    // Создаем пустую строку
+                    const emptyCell = document.createElement('td');
+                    emptyCell.textContent = ''; // Делаем ячейку пустой
+                    if (nextRow) {
+                        nextRow.insertAdjacentElement('beforebegin', document.createElement('tr')).appendChild(emptyCell); // Вставляем пустую строку
+                    }
+
+                    // Сдвигаем текст вниз
+                    const allRows = Array.from(document.querySelectorAll('#outputTableBody tr'));
+                    const currentIndex = allRows.indexOf(currentRow);
+                    for (let i = currentIndex + 1; i < allRows.length; i++) {
+                        const nextCell = allRows[i].cells[2];
+                        nextCell.textContent = nextCell.textContent; // Сдвигаем текст в следующую ячейку
+                    }
+                } else {
+                    // Обновляем следующую ячейку, если она существует
+                    const currentRow = cell.parentElement;
+                    const nextRow = currentRow.nextElementSibling;
+                    if (nextRow) {
+                        const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                        if (nextCell) {
+                            // Устанавливаем текст до курсора в текущую ячейку
+                            cell.textContent = textBeforeCursor;
+
+                            // Перемещаем текст после курсора в следующую ячейку
+                            nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
+                            makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+                        }
                     }
                 }
             } else {
@@ -697,7 +719,6 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
-
 
 // новый код 	  
 

@@ -692,17 +692,15 @@ function makeCellEditable(cell) {
         }
 
 
-      // Обработка нажатия клавиш Backspace или Delete в пустой ячейке
+        // Обработка нажатия клавиш Backspace или Delete в пустой ячейке
         if ((event.key === 'Backspace' || event.key === 'Delete') && textarea.value.trim() === '') {
             event.preventDefault(); // Предотвращаем удаление символа
 
             // Удаляем строку как из таблицы, так и из translationInput
             removeRowAndUpdateTranslation(currentRow);
         }
-    });
-}
-
-// Функция для удаления строки и обновления translationInput
+		
+		// Функция для удаления строки и обновления translationInput
 function removeRowAndUpdateTranslation(row) {
     const rowIndex = Array.prototype.indexOf.call(row.parentElement.children, row); // Определяем индекс строки
 
@@ -722,6 +720,7 @@ function removeRowAndUpdateTranslation(row) {
     translationInput.value = rows.join('\n');
     updateTranslationTextarea();
 }
+
 
 
         // Обработка нажатия клавиши Backspace

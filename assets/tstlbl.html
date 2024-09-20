@@ -317,7 +317,8 @@ table td {
   <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
   <button class="btn btn-secondary mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
 
-<button class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlButton">Зажать Ctrl</button>
+
+<button class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlEnterButton">Ctrl + Enter</button>
   
 
  
@@ -1198,39 +1199,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-    const ctrlButton = document.getElementById('ctrlButton');
-    let ctrlPressed = false;
+    const textInput = document.getElementById('textInput');
+    const ctrlEnterButton = document.getElementById('ctrlEnterButton');
 
-    // Эмулируем нажатие клавиши Ctrl
-    ctrlButton.addEventListener('mousedown', () => {
-        ctrlPressed = true;
+    // Нажатие на кнопку "Ctrl + Enter"
+    ctrlEnterButton.addEventListener('click', () => {
+        // Сохраняем текущее положение курсора
+        const cursorPosition = textInput.selectionStart;
+        
+        // Эмулируем поведение "Ctrl + Enter" — выполняем действие или разделяем строки
+        const textBeforeCursor = textInput.value.slice(0, cursorPosition).trim();
+        const textAfterCursor = textInput.value.slice(cursorPosition).trim();
+
+        // Изменяем содержимое в соответствии с поведением Ctrl + Enter
+        textInput.value = textBeforeCursor + "\n" + textAfterCursor;
+
+        // Возвращаем фокус в текстовое поле
+        textInput.focus();
+        textInput.setSelectionRange(cursorPosition, cursorPosition); // Возвращаем курсор на прежнее место
     });
 
-    ctrlButton.addEventListener('mouseup', () => {
-        ctrlPressed = false;
-    });
-
-    // Обрабатываем нажатие клавиш на всей странице
+    // Для привычного поведения — обработка "Ctrl + Enter" на клавиатуре
     document.addEventListener('keydown', (event) => {
-        if (ctrlPressed) {
-            if (event.code === 'Enter') {
-                // Ваш код для Ctrl + Enter
-                console.log('Ctrl + Enter нажата');
-                event.preventDefault();
-            } else if (event.code === 'KeyA') {
-                // Ваш код для Ctrl + A
-                console.log('Ctrl + A нажата');
-                event.preventDefault();
-                // Если нужно выделить текст в textarea, можно добавить
-                textInput.select();
-            } else if (event.code === 'KeyV') {
-                // Ваш код для Ctrl + V
-                console.log('Ctrl + V нажата');
-                event.preventDefault();
-                navigator.clipboard.readText().then(text => {
-                    textInput.value += text; // Вставляем текст в textarea
-                });
-            }
+        if (event.ctrlKey && event.code === 'Enter') {
+            event.preventDefault();
+            ctrlEnterButton.click(); // Вызов действия кнопки "Ctrl + Enter"
         }
     });
 </script>

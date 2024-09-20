@@ -700,31 +700,29 @@ textarea.addEventListener('keydown', function(event) {
 	
 	
 else	{
-   event.preventDefault(); // Предотвращаем стандартное поведение Enter
+        event.preventDefault(); // Предотвращаем стандартное поведение Enter
+        
+        const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+        const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+        const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
-
-const currentRow = cell.parentElement; // Текущая строка
-const nextRow = currentRow.nextElementSibling; // Следующая строка
-
-// Если текст до курсора пустой, не изменяем содержимое текущей ячейки
-if (textBeforeCursor.length > 0) {
-    cell.textContent = textBeforeCursor; // Оставляем текст до курсора в текущей ячейке
-}
-
-// Сдвигаем строки вниз
-shiftCellsDown(currentRow);
-
-// Помещаем текст после курсора в следующую строку, в третью ячейку
-if (nextRow && textAfterCursor.length > 0) {
-    nextRow.cells[2].textContent = textAfterCursor;
-}
-
-// Завершаем редактирование
-finishEditing();
-
+        const currentRow = cell.parentElement; // Текущая строка
+        const nextRow = currentRow.nextElementSibling; // Следующая строка
+        
+        // Оставляем текст до курсора в текущей ячейке
+        cell.textContent = textBeforeCursor.length === 0 ? '' : textBeforeCursor;
+        
+        // Сдвигаем строки вниз
+        shiftCellsDown(currentRow);
+        
+        // Помещаем текст после курсора в следующую строку, в третью ячейку
+        if (nextRow) {
+            nextRow.cells[2].textContent = textAfterCursor;
+        }
+        
+        // Завершаем редактирование
+        finishEditing();
+		
 		                // Переходим к следующей ячейке, если она существует
 
     } 

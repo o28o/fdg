@@ -318,7 +318,7 @@ table td {
   <button class="btn btn-secondary mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
 
 
-<button class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlEnterButton">Ctrl + Enter</button>
+<button style="display: none;" class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlEnterButton">Ctrl + Enter</button>
   
 
  
@@ -1198,35 +1198,6 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 
-<script>
-    const textInput = document.getElementById('textInput');
-    const ctrlEnterButton = document.getElementById('ctrlEnterButton');
-
-    // Нажатие на кнопку "Ctrl + Enter"
-    ctrlEnterButton.addEventListener('click', () => {
-        // Сохраняем текущее положение курсора
-        const cursorPosition = textInput.selectionStart;
-        
-        // Эмулируем поведение "Ctrl + Enter" — выполняем действие или разделяем строки
-        const textBeforeCursor = textInput.value.slice(0, cursorPosition).trim();
-        const textAfterCursor = textInput.value.slice(cursorPosition).trim();
-
-        // Изменяем содержимое в соответствии с поведением Ctrl + Enter
-        textInput.value = textBeforeCursor + "\n" + textAfterCursor;
-
-        // Возвращаем фокус в текстовое поле
-        textInput.focus();
-        textInput.setSelectionRange(cursorPosition, cursorPosition); // Возвращаем курсор на прежнее место
-    });
-
-    // Для привычного поведения — обработка "Ctrl + Enter" на клавиатуре
-    document.addEventListener('keydown', (event) => {
-        if (event.ctrlKey && event.code === 'Enter') {
-            event.preventDefault();
-            ctrlEnterButton.click(); // Вызов действия кнопки "Ctrl + Enter"
-        }
-    });
-</script>
 
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>

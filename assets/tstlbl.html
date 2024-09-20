@@ -647,7 +647,8 @@ function makeCellEditable(cell) {
             const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
             const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-            finishEditing(); // Завершаем редактирование текущей ячейки
+            // Завершаем редактирование текущей ячейки
+            finishEditing();
 
             // Обновляем следующую ячейку, если она существует
             const currentRow = cell.parentElement;
@@ -655,8 +656,11 @@ function makeCellEditable(cell) {
             if (nextRow) {
                 const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
                 if (nextCell) {
+                    // Устанавливаем текст до курсора в текущую ячейку
+                    cell.textContent = textBeforeCursor;
+
                     // Перемещаем текст после курсора в следующую ячейку
-                    nextCell.textContent = textAfterCursor + ' ' + nextCell.textContent.trim();
+                    nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
                     makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
                 }
             }

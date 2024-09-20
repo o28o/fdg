@@ -706,6 +706,8 @@ const nextRow = currentRow.nextElementSibling; // Следующая строк�
 else	{
       event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
+event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
 const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
 const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
 const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
@@ -726,6 +728,9 @@ if (nextRow) {
 cell.textContent = ''; // Очищаем текущую ячейку
 cell.textContent = textBeforeCursor.length === 0 ? '' : textBeforeCursor; // Присваиваем новый текст
 
+// Обновляем data-original-text в textarea
+textarea.setAttribute('data-original-text', textBeforeCursor.length === 0 ? '' : textBeforeCursor);
+
 // Сдвигаем строки вниз
 shiftCellsDown(currentRow);
 
@@ -742,7 +747,6 @@ if (nextRow) {
 
 // Завершаем редактирование
 finishEditing();
-
 		                // Переходим к следующей ячейке, если она существует
 
     } 

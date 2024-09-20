@@ -709,7 +709,7 @@ function makeCellEditable(cell) {
 
                     // Объединяем текст предыдущей и текущей строки
                     previousCell.textContent = previousText + ' ' + currentText;
-                    currentRow.remove(); // Удаляем текущую строку
+					currentRow.cells[2].textContent = ''; // Очищаем только третью ячейку
 
                     makeCellEditable(previousCell); // Переводим фокус на предыдущую ячейку
 					loadText();

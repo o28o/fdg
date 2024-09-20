@@ -646,24 +646,20 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
-// Функция для сдвига ячеек вниз начиная с текущей строки
+// Функция для сдвига значений ячеек в третьем столбце вниз
 function shiftCellsDown(startRow) {
     let rowToMove = startRow;
-    while (rowToMove.nextElementSibling) {
-        const nextRow = rowToMove.nextElementSibling;
-        rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
-        rowToMove = nextRow;
-    }
-    // Очищаем последнюю ячейку
-    rowToMove.cells[2].textContent = '';
-
-    // Обновляем все затронутые строки
-    let rowToUpdate = startRow;
-    while (rowToUpdate) {
-        updateSingleTranslationRow(rowToUpdate.cells[2]);
-        rowToUpdate = rowToUpdate.nextElementSibling;
+    let previousContent = ''; // временная переменная для хранения данных
+    
+    // Сдвигаем значения вниз начиная с текущей строки
+    while (rowToMove) {
+        const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
+        rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
+        previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
+        rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
     }
 }
+
 
 
 

@@ -184,23 +184,19 @@ table td {
 				  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" title="Видео Инструкция" class="ms-1 text-muted
 
 " target="_blank"><i class="fa-solid fa-question"></i></a>
-   <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class="ms-2 text-muted" target="_blank">
+   
+   <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class="ms-2 me-2 text-muted" target="_blank">
 <i class="fa-solid fa-list"></i>
-
-   </a>   
-            </div>
-        </div>
-    </div>
-
-<div class="input-group mt-2">
-<div >
-      <label class="" for="indexInput" >Номер Текста:</label>	  
-    <input  style="width: 150px;" type="search" class="form-control" id="indexInput" placeholder="Пример sn23.1 и т.п.">
+   </a>  
+   
+   <div >
+      <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
+    <input  style="width: 150px;" type="search" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
 </div>
 
 <div class="input-group-append ms-1">
-    <label for="languageSelect">Язык:</label>
-    <select class="form-select" id="languageSelect">
+<!--     <label for="languageSelect">Язык:</label>
+ -->    <select title="Язык исходного файла" class="form-select input-sm" id="languageSelect">
       <option value="pli">Пали</option>
       <option value="en">Английский</option>
     </select>
@@ -208,19 +204,27 @@ table td {
   
   
 <div class="input-group-append ms-1">
-    <label>Пред / След</label>
+    <!-- <label>Пред / След</label> -->
     <div class=" ms-1">
-        <button class="input-group-append btn btn-primary" onclick="loadPrev()">
+        <button title="Предыдущий текст" class="input-group-append btn btn-primary btn-sm" onclick="loadPrev()">
 		<i class="fa-solid fa-chevron-left"></i>
 <!-- 		&lt;
  -->		</button>
-        <button class="input-group-append btn btn-primary" onclick="loadNext()">
+        <button title="Следующий текст" class="input-group-append btn btn-primary btn-sm" onclick="loadNext()">
 		<i class="fa-solid fa-chevron-right"></i>
 <!-- 		&gt;
  -->		</button>
     </div>
 </div>
   
+            </div>
+			
+			
+        </div>
+    </div>
+
+<div class="input-group mt-2">
+
    
   </div>
   

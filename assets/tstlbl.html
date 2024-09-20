@@ -163,21 +163,6 @@ table td {
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
-    /* Устанавливаем фиксированную ширину для ячейки таблицы */
-    #outputTableBody td {
-        width: 50%; /* Установите нужную ширину для ячейки */
-        overflow: hidden; /* Скрываем переполнение */
-        white-space: nowrap; /* Запрещаем перенос текста */
-        text-overflow: ellipsis; /* Добавляем многоточие при переполнении */
-    }
-
-    .table-textarea {
-        box-sizing: border-box; /* Учитываем внутренние отступы */
-         /* resize: none; Запрещаем изменять размер textarea */
-    }
 	
 </style>
 </head>
@@ -610,6 +595,23 @@ console.log(url);
   
 // новый код 	  
 
+
+<style>
+    /* Устанавливаем фиксированную ширину для ячейки таблицы */
+    #outputTableBody td {
+        width: 300px; /* Установите нужную ширину для ячейки */
+        overflow: hidden; /* Скрываем переполнение */
+        white-space: nowrap; /* Запрещаем перенос текста */
+        text-overflow: ellipsis; /* Добавляем многоточие при переполнении */
+    }
+
+    .table-textarea {
+        box-sizing: border-box; /* Учитываем внутренние отступы */
+        resize: none; /* Запрещаем изменять размер textarea */
+    }
+</style>
+
+<script>
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
     // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
@@ -713,6 +715,7 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
+</script>
 
 // новый код 	  
 

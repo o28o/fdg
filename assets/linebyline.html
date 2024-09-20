@@ -711,6 +711,10 @@ function makeCellEditable(cell) {
                     previousCell.textContent = previousText + ' ' + currentText;
 					currentRow.cells[2].textContent = ''; // Очищаем только третью ячейку
 
+// Обновляем textarea напрямую, без вызова loadText()
+updateSingleTranslationRow(currentRow.cells[2]);
+
+
                     makeCellEditable(previousCell); // Переводим фокус на предыдущую ячейку
 					loadText();
                 }
@@ -732,6 +736,22 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
+
+
+// Функция для обновления translationInput только для одной строки
+function updateSingleTranslationRow(cell) {
+    const currentText = document.getElementById('translationInput').value;
+    const rows = currentText.split('\n');
+
+    // Определяем индекс строки, который нужно обновить
+    const rowIndex = Array.prototype.indexOf.call(cell.parentElement.parentElement.children, cell.parentElement);
+
+    // Обновляем текст только для этой строки
+    rows[rowIndex] = cell.textContent.trim();
+
+    // Обновляем содержимое translationInput
+    document.getElementById('translationInput').value = rows.join('\n');
+}
 
 
 // новый код 	  

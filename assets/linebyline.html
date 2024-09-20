@@ -516,6 +516,9 @@ if (document.getElementById('lineBreakCheckbox').checked) {
     }
     return match;
   });
+ 
+cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
+
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
 cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
 cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
@@ -665,6 +668,33 @@ function shiftCellsDown(startRow) {
 
 textarea.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
+		 if (event.ctrlKey) {
+                // Обработка Ctrl + Enter для переноса текста
+                event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
+                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+
+                // Завершаем редактирование текущей ячейки
+                finishEditing();
+
+                // Обновляем следующую ячейку, если она существует
+                const currentRow = cell.parentElement;
+                const nextRow = currentRow.nextElementSibling;
+                if (nextRow) {
+                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                    if (nextCell) {
+                        // Устанавливаем текст до курсора в текущую ячейку
+                        cell.textContent = textBeforeCursor;
+
+                        // Перемещаем текст после курсора в следующую ячейку
+                        nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
+                        makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+                    }
+                }
+            } else {
+		
         event.preventDefault(); // Предотвращаем стандартное поведение Enter
         
         const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
@@ -687,7 +717,7 @@ textarea.addEventListener('keydown', function(event) {
         
         // Завершаем редактирование
         finishEditing();
-    }
+    } 
 		
 		
 		

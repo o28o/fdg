@@ -1189,7 +1189,7 @@ window.addEventListener('click', function(event) {
 
 
 <script>
-document.querySelectorAll('button').forEach(function(button) {
+document.querySelectorAll('button[data-template]').forEach(function(button) {
     button.addEventListener('click', function() {
         var translationInput = document.getElementById('translationInput');
 

@@ -677,6 +677,9 @@ function makeCellEditable(cell) {
             } else {
                 // Обработка просто Enter для завершения редактирования
                 event.preventDefault(); // Предотвращаем стандартное поведение Enter
+ 
+  shiftCellsDown(startRow)              
+       
                 finishEditing(); // Завершаем редактирование
 
                 // Переходим к следующей ячейке, если она существует
@@ -727,6 +730,25 @@ if (event.key === 'Backspace') {
     }
 }
 
+// Функция для сдвига ячеек вниз
+function shiftCellsDown(startRow) {
+    let rowToMove = startRow;
+    while (rowToMove.previousElementSibling) {
+        const prevRow = rowToMove.previousElementSibling;
+        rowToMove.cells[2].textContent = prevRow.cells[2].textContent;
+        rowToMove = prevRow;
+    }
+    // Очищаем первую ячейку
+    rowToMove.cells[2].textContent = '';
+    
+    // Обновляем все затронутые строки
+    let rowToUpdate = startRow;
+    while (rowToUpdate) {
+        updateSingleTranslationRow(rowToUpdate.cells[2]);
+        rowToUpdate = rowToUpdate.previousElementSibling;
+    }
+}
+
 // Функция для сдвига ячеек вверх
 function shiftCellsUp(startRow) {
     let rowToMove = startRow;
@@ -745,6 +767,8 @@ function shiftCellsUp(startRow) {
         rowToUpdate = rowToUpdate.nextElementSibling;
     }
 }
+
+
 
 // Функция для обновления translationInput
 function updateTranslationInput() {

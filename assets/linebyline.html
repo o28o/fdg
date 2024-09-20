@@ -722,12 +722,28 @@ function makeCellEditable(cell) {
 // Функция для синхронизации изменений в таблице с полем textarea
 function updateTranslationTextarea() {
     const tableRows = document.querySelectorAll('#outputTableBody tr');
+    const textarea = document.getElementById('translationInput');
+    
+    // Разбиваем текст в textarea на строки
+    let existingTextLines = textarea.value.split('\n');
+    
+    // Определяем, сколько строк перевода у нас есть в таблице
     let updatedTranslation = '';
-    tableRows.forEach(row => {
+    tableRows.forEach((row, index) => {
         const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
-        updatedTranslation += translationCell.textContent.trim() + '\n'; // Используем textContent и удаляем лишние пробелы
+        const currentText = translationCell.textContent.trim();
+        
+        // Если это строка, которая уже есть в textarea, обновляем её
+        if (existingTextLines[index]) {
+            existingTextLines[index] = currentText;
+        } else {
+            // Если строки ещё нет в textarea, добавляем её в конец
+            existingTextLines.push(currentText);
+        }
     });
-    document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
+    
+    // Собираем обновлённый текст из массива строк
+    textarea.value = existingTextLines.join('\n').trim();
 }
 
 // Инициализация: заполняем translationInput при загрузке страницы

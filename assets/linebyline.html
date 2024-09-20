@@ -509,7 +509,6 @@ let cleanedTranslation = translation;
 
 
 if (document.getElementById('lineBreakCheckbox').checked) {
-
   cleanedTranslation = translation.replace(/[\.…:?!] /g, match => {
     let index = translation.indexOf(match);
     if (translation.charAt(index + match.length) !== '\n') {
@@ -517,7 +516,7 @@ if (document.getElementById('lineBreakCheckbox').checked) {
     }
     return match;
   });
-
+ 
 cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
 
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
@@ -650,27 +649,17 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
+// Функция для сдвига значений ячеек в третьем столбце вниз
 function shiftCellsDown(startRow) {
     let rowToMove = startRow;
     let previousContent = ''; // временная переменная для хранения данных
     
-    // Сначала очищаем текущую строку, чтобы избежать дубликатов
-    if (rowToMove.cells[2]) {
-        previousContent = rowToMove.cells[2].textContent; // Сохраняем текущее значение для последующего перемещения
-        rowToMove.cells[2].textContent = ''; // Очищаем текущую ячейку
-    }
-    
     // Сдвигаем значения вниз начиная с текущей строки
-    while (rowToMove.nextElementSibling) {
-        const currentContent = rowToMove.nextElementSibling.cells[2].textContent; // текущее значение в третьей колонке следующей строки
+    while (rowToMove) {
+        const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
         rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
         previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
         rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
-    }
-    
-    // Очищаем последнюю ячейку
-    if (rowToMove.cells[2]) {
-        rowToMove.cells[2].textContent = '';
     }
 }
 
@@ -678,38 +667,7 @@ function shiftCellsDown(startRow) {
  // Обрабатываем нажатие клавиш
 
 textarea.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') 
-	
-            if (event.ctrlKey) {
-                // Обработка Ctrl + Enter для переноса текста
-                event.preventDefault(); // Предотвращаем стандартное поведение Enter
-
-                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
-
-                // Завершаем редактирование текущей ячейки
-                finishEditing();
-
-                // Обновляем следующую ячейку, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
-                if (nextRow) {
-                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                    if (nextCell) {
-                        // Устанавливаем текст до курсора в текущую ячейку
-                        cell.textContent = textBeforeCursor;
-
-                        // Перемещаем текст после курсора в следующую ячейку
-                        nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
-                        makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
-                    }
-                }
-            }
-
-	
-	
-else	{
+    if (event.key === 'Enter') {
         event.preventDefault(); // Предотвращаем стандартное поведение Enter
         
         const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
@@ -720,9 +678,8 @@ else	{
         const nextRow = currentRow.nextElementSibling; // Следующая строка
         
         // Оставляем текст до курсора в текущей ячейке
+        cell.textContent = textBeforeCursor;
         
-        cell.textContent = textBeforeCursor.length === 0 ? '' : textBeforeCursor;
-
         // Сдвигаем строки вниз
         shiftCellsDown(currentRow);
         
@@ -733,9 +690,6 @@ else	{
         
         // Завершаем редактирование
         finishEditing();
-		
-		                // Переходим к следующей ячейке, если она существует
-
     } 
 		
 		

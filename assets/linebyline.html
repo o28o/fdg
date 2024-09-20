@@ -607,11 +607,6 @@ function makeCellEditable(cell) {
     input.value = originalText;
     input.classList.add('table-input'); // Опционально добавляем класс для стилей
 
-    // Применяем размеры ячейки к input
-    input.style.width = `${cell.offsetWidth}px`; // Ширина ячейки
-    input.style.height = `${cell.offsetHeight}px`; // Высота ячейки
-    input.style.boxSizing = 'border-box'; // Учитываем границы и отступы
-
     // Очищаем содержимое ячейки и вставляем input
     cell.innerText = '';
     cell.appendChild(input);

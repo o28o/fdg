@@ -712,7 +712,7 @@ function makeCellEditable(cell) {
                     currentRow.remove(); // Удаляем текущую строку
 
                     makeCellEditable(previousCell); // Переводим фокус на предыдущую ячейку
-
+					loadText();
                 }
             }
         }
@@ -722,28 +722,12 @@ function makeCellEditable(cell) {
 // Функция для синхронизации изменений в таблице с полем textarea
 function updateTranslationTextarea() {
     const tableRows = document.querySelectorAll('#outputTableBody tr');
-    const textarea = document.getElementById('translationInput');
-    
-    // Разбиваем текст в textarea на строки
-    let existingTextLines = textarea.value.split('\n');
-    
-    // Определяем, сколько строк перевода у нас есть в таблице
     let updatedTranslation = '';
-    tableRows.forEach((row, index) => {
+    tableRows.forEach(row => {
         const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
-        const currentText = translationCell.textContent.trim();
-        
-        // Если это строка, которая уже есть в textarea, обновляем её
-        if (existingTextLines[index]) {
-            existingTextLines[index] = currentText;
-        } else {
-            // Если строки ещё нет в textarea, добавляем её в конец
-            existingTextLines.push(currentText);
-        }
+        updatedTranslation += translationCell.textContent.trim() + '\n'; // Используем textContent и удаляем лишние пробелы
     });
-    
-    // Собираем обновлённый текст из массива строк
-    textarea.value = existingTextLines.join('\n').trim();
+    document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
 
 // Инициализация: заполняем translationInput при загрузке страницы

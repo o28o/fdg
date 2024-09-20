@@ -594,7 +594,6 @@ console.log(url);
 	  
   
 // новый код 	  
-
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
     // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
@@ -627,7 +626,7 @@ function makeCellEditable(cell) {
     // Функция для завершения редактирования
     function finishEditing() {
         const newText = input.value.trim();
-        cell.textContent = newText || cell.dataset.originalText; // Используем оригинальный текст, если новый пустой
+        cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
         delete cell.dataset.originalText; // Удаляем временный data-атрибут
         updateTranslationTextarea();
     }
@@ -667,9 +666,8 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
-// новый код конец  
-	  
-	  
+
+//новый код
 	  
 	  
     })

@@ -646,50 +646,98 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
-    // Обрабатываем нажатие клавиш
-    textarea.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            if (event.ctrlKey) {
-                // Обработка Ctrl + Enter для переноса текста
-                event.preventDefault(); // Предотвращаем стандартное поведение Enter
+  // Обрабатываем нажатие клавиш
+textarea.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Предотвращаем стандартное поведение Enter
+        const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+        const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+        const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+        if (event.ctrlKey) {
+            // Обработка Ctrl + Enter для переноса текста
+            handleCtrlEnter(textBeforeCursor, textAfterCursor);
+        } else {
+            // Обработка просто Enter
+            handleEnter(textBeforeCursor, textAfterCursor);
+        }
+    }
+});
 
-                // Завершаем редактирование текущей ячейки
-                finishEditing();
+function handleCtrlEnter(textBeforeCursor, textAfterCursor) {
+    // Завершаем редактирование текущей ячейки
+    finishEditing();
+    // Обновляем следующую ячейку, если она существует
+    const currentRow = cell.parentElement;
+    const nextRow = currentRow.nextElementSibling;
+    if (nextRow) {
+        const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+        if (nextCell) {
+            // Устанавливаем текст до курсора в текущую ячейку
+            cell.textContent = textBeforeCursor;
+            // Перемещаем текст после курсора в следующую ячейку
+            nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
+            makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+        }
+    }
+}
 
-                // Обновляем следующую ячейку, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
-                if (nextRow) {
-                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                    if (nextCell) {
-                        // Устанавливаем текст до курсора в текущую ячейку
-                        cell.textContent = textBeforeCursor;
+function handleEnter(textBeforeCursor, textAfterCursor) {
+    const currentRow = cell.parentElement;
 
-                        // Перемещаем текст после курсора в следующую ячейку
-                        nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
-                        makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
-                    }
-                }
+    // Устанавливаем текст до курсора в текущую ячейку
+    cell.textContent = textBeforeCursor;
+
+    if (textAfterCursor) {
+        // Если есть текст после курсора, создаем новую строку и вставляем ее
+        const newRow = currentRow.cloneNode(true);
+        newRow.cells[2].textContent = textAfterCursor;
+        currentRow.parentNode.insertBefore(newRow, currentRow.nextSibling);
+
+        // Сдвигаем все последующие ячейки вниз
+        let rowToMove = newRow.nextElementSibling;
+        while (rowToMove) {
+            const nextRow = rowToMove.nextElementSibling;
+            if (nextRow) {
+                rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
             } else {
-                // Обработка просто Enter для завершения редактирования
-                event.preventDefault(); // Предотвращаем стандартное поведение Enter
-                finishEditing(); // Завершаем редактирование
+                rowToMove.cells[2].textContent = '';
+            }
+            rowToMove = nextRow;
+        }
 
-                // Переходим к следующей ячейке, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
-                if (nextRow) {
-                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                    if (nextCell) {
-                        makeCellEditable(nextCell);
-                    }
-                }
+        // Начинаем редактирование новой ячейки
+        makeCellEditable(newRow.cells[2]);
+    } else {
+        // Если текста после курсора нет, просто переходим к следующей ячейке
+        const nextRow = currentRow.nextElementSibling;
+        if (nextRow) {
+            const nextCell = nextRow.cells[2];
+            if (nextCell) {
+                makeCellEditable(nextCell);
             }
         }
+    }
+
+    // Обновляем все затронутые строки
+    updateAllTranslationRows();
+
+    // Обновляем translationInput
+    updateTranslationInput();
+}
+
+// Функция для обновления всех строк перевода
+function updateAllTranslationRows() {
+    const rows = document.querySelectorAll('tr');
+    rows.forEach(row => updateSingleTranslationRow(row.cells[2]));
+}
+
+// Функция для обновления translationInput
+function updateTranslationInput() {
+    const rows = document.querySelectorAll('tr');
+    const translations = Array.from(rows).map(row => row.cells[2].textContent.trim());
+    translationInput.value = translations.join('\n');
+}
 
   
 // Обработка нажатия клавиши Backspace

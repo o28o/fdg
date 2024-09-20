@@ -1111,14 +1111,21 @@ window.addEventListener('click', function(event) {
 
   </script>
   
+
+
 <script>
+let lastActiveElement = null;
+
+// Сохраняем активный элемент при открытии модального окна
+document.getElementById('openModalButton').addEventListener('click', function() {
+    lastActiveElement = document.activeElement;
+});
+
+// Добавляем обработчики для кнопок с шаблонами
 document.querySelectorAll('button[data-template]').forEach(function(button) {
     button.addEventListener('click', function() {
-        // Находим активный элемент (input или textarea)
-        var activeElement = document.activeElement;
-
-        // Проверяем, что активный элемент — это input или textarea
-        if (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA') {
+        // Используем последний активный элемент
+        if (lastActiveElement && (lastActiveElement.tagName === 'INPUT' || lastActiveElement.tagName === 'TEXTAREA')) {
             var textToInsert = button.getAttribute('data-template');
 
             // Проверяем, чтобы текст для вставки не был null или undefined
@@ -1128,28 +1135,25 @@ document.querySelectorAll('button[data-template]').forEach(function(button) {
             }
 
             // Для поддержания позиции курсора
-            var startPos = activeElement.selectionStart;
-            var endPos = activeElement.selectionEnd;
+            var startPos = lastActiveElement.selectionStart;
+            var endPos = lastActiveElement.selectionEnd;
 
             // Вставляем текст на позицию курсора
-            var beforeCursor = activeElement.value.substring(0, startPos);
-            var afterCursor = activeElement.value.substring(endPos, activeElement.value.length);
-            activeElement.value = beforeCursor + textToInsert + afterCursor;
+            var beforeCursor = lastActiveElement.value.substring(0, startPos);
+            var afterCursor = lastActiveElement.value.substring(endPos, lastActiveElement.value.length);
+            lastActiveElement.value = beforeCursor + textToInsert + afterCursor;
 
             // Устанавливаем курсор после вставленного текста
-            activeElement.selectionStart = activeElement.selectionEnd = startPos + textToInsert.length;
+            lastActiveElement.selectionStart = lastActiveElement.selectionEnd = startPos + textToInsert.length;
 
             // Опционально фокусируем input
-            activeElement.focus();
+            lastActiveElement.focus();
         } else {
-            console.error("Active element is not an input or textarea");
+            console.error("Last active element is not an input or textarea");
         }
     });
 });
 </script>
-
-
-
 
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>

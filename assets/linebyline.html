@@ -646,16 +646,40 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
+
+// Функция для сдвига ячеек вниз
+function shiftCellsDown(startRow) {
+    let rowToMove = startRow;
+    while (rowToMove.previousElementSibling) {
+        const prevRow = rowToMove.previousElementSibling;
+        rowToMove.cells[2].textContent = prevRow.cells[2].textContent;
+        rowToMove = prevRow;
+    }
+    // Очищаем первую ячейку
+    rowToMove.cells[2].textContent = '';
+    
+    // Обновляем все затронутые строки
+    let rowToUpdate = startRow;
+    while (rowToUpdate) {
+        updateSingleTranslationRow(rowToUpdate.cells[2]);
+        rowToUpdate = rowToUpdate.previousElementSibling;
+    }
+}
+
+
+
+
     // Обрабатываем нажатие клавиш
     textarea.addEventListener('keydown', function(event) {
+		
+		 const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+         const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+         const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора	
         if (event.key === 'Enter') {
             if (event.ctrlKey) {
                 // Обработка Ctrl + Enter для переноса текста
                 event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
-                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
                 // Завершаем редактирование текущей ячейки
                 finishEditing();
@@ -678,19 +702,20 @@ function makeCellEditable(cell) {
                 // Обработка просто Enter для завершения редактирования
                 event.preventDefault(); // Предотвращаем стандартное поведение Enter
  
-  shiftCellsDown(startRow)              
+                 const currentRow = cell.parentElement;
+
+  shiftCellsDown(currentRow);              
        
                 finishEditing(); // Завершаем редактирование
 
                 // Переходим к следующей ячейке, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
+             /*   const nextRow = currentRow.nextElementSibling;
                 if (nextRow) {
                     const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
                     if (nextCell) {
                         makeCellEditable(nextCell);
                     }
-                }
+                } */
             }
         }
 
@@ -730,24 +755,7 @@ if (event.key === 'Backspace') {
     }
 }
 
-// Функция для сдвига ячеек вниз
-function shiftCellsDown(startRow) {
-    let rowToMove = startRow;
-    while (rowToMove.previousElementSibling) {
-        const prevRow = rowToMove.previousElementSibling;
-        rowToMove.cells[2].textContent = prevRow.cells[2].textContent;
-        rowToMove = prevRow;
-    }
-    // Очищаем первую ячейку
-    rowToMove.cells[2].textContent = '';
-    
-    // Обновляем все затронутые строки
-    let rowToUpdate = startRow;
-    while (rowToUpdate) {
-        updateSingleTranslationRow(rowToUpdate.cells[2]);
-        rowToUpdate = rowToUpdate.previousElementSibling;
-    }
-}
+
 
 // Функция для сдвига ячеек вверх
 function shiftCellsUp(startRow) {

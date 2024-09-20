@@ -258,14 +258,8 @@ table td {
       <button class="mb-1 btn btn-primary" id="replaceAllBtn">Заменить все</button>
       <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
 <br>
-<div class="form-check input-group-append ">
-<input class="form-check-input" type="checkbox" id="customTranslatorName">
-  <label class="form-check-label" for="customTranslatorName">
-    добавить +edited+o
-  </label>
-</div>	   
   
-  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», и «Это – скапливание боли», и «Это – истечение боли», и «Это – к истечению боли ведущая практика».">4би</button>
+  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», «Это – скапливание боли», «Это – истечение боли», «Это – к истечению боли ведущая практика».">4би</button>
   <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль»… «Это – к истечению боли ведущая практика». ">4би short</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд, правильное намерение-заготовка, правильная речь, правильные действия, правильные быт, правильное старание, правильное памятование, правильное объединение опыта. ">б8п</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд… правильное объединение опыта. ">б8п short</button>
@@ -295,12 +289,25 @@ table td {
 </div>
 
 
-<div class="form-check input-group-append ">
-  <input class="form-check-input" type="checkbox" id="lineBreakCheckbox">
-  <label class="form-check-label" for="lineBreakCheckbox">
-    Автопереносы
-  </label>
+<div class="d-flex align-items-center">
+  <div class="form-check me-2">
+    <input class="form-check-input"  title="Отформатировать текст"  type="checkbox" id="lineBreakCheckbox">
+    <label class="form-check-label" for="lineBreakCheckbox">
+      Автопереносы
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" title="Добавить +edited+o в название файла"  type="checkbox" id="customTranslatorName">
+    <label class="form-check-label" for="customTranslatorName">
+      +edited+o
+    </label>
+  </div>
 </div>
+
+
+
+
   <button class="btn btn-primary mt-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
   <button class="btn btn-primary mt-1" title="Открыть текст на find.dhamma.gift" id="linkButton">Текст на Fdg</button>
   <button class="btn btn-primary mt-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
@@ -628,11 +635,21 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     input.addEventListener('blur', finishEditing);
 
-    // Обрабатываем нажатие Enter для завершения редактирования
+    // Обрабатываем нажатие Enter для завершения редактирования и перехода к следующей ячейке
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            finishEditing();
             event.preventDefault(); // Предотвращаем стандартное поведение Enter
+            finishEditing();
+            
+            // Находим следующую ячейку для редактирования
+            const currentRow = cell.parentElement;
+            const nextRow = currentRow.nextElementSibling;
+            if (nextRow) {
+                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                if (nextCell) {
+                    makeCellEditable(nextCell);
+                }
+            }
         }
     });
 }
@@ -650,9 +667,9 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
-
-
 // новый код конец  
+	  
+	  
 	  
 	  
     })

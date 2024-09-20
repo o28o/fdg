@@ -691,35 +691,65 @@ function makeCellEditable(cell) {
             }
         }
 
-        // Обработка нажатия клавиши Backspace
-        if (event.key === 'Backspace') {
-            const cursorPosition = textarea.selectionStart;
-
-            // Если курсор в начале строки
-            if (cursorPosition === 0) {
-                event.preventDefault(); // Предотвращаем удаление символа
-
-                const currentRow = cell.parentElement;
-                const previousRow = currentRow.previousElementSibling;
-
-                if (previousRow) {
-                    const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
-                    const previousText = previousCell.textContent.trim();
-                    const currentText = textarea.value.trim();
-
-                    // Объединяем текст предыдущей и текущей строки
-                    previousCell.textContent = previousText + ' ' + currentText;
-					currentRow.cells[2].textContent = ''; // Очищаем только третью ячейку
-
-// Обновляем textarea напрямую, без вызова loadText()
-updateSingleTranslationRow(currentRow.cells[2]);
-
-
-                    makeCellEditable(previousCell); // Переводим фокус на предыдущую ячейку
-
+  
+  // Обработка нажатия клавиши Backspace
+if (event.key === 'Backspace') {
+    const cursorPosition = textarea.selectionStart;
+    // Если курсор в начале строки
+    if (cursorPosition === 0) {
+        event.preventDefault(); // Предотвращаем удаление символа
+        const currentRow = cell.parentElement;
+        const previousRow = currentRow.previousElementSibling;
+        if (previousRow) {
+            const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
+            const currentCell = currentRow.cells[2];
+            
+            if (currentCell.textContent.trim() === '') {
+                // Если текущая ячейка пуста, сдвигаем все нижестоящие ячейки вверх
+                let rowToMove = currentRow;
+                while (rowToMove.nextElementSibling) {
+                    const nextRow = rowToMove.nextElementSibling;
+                    rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
+                    rowToMove = nextRow;
                 }
+                // Очищаем последнюю ячейку
+                rowToMove.cells[2].textContent = '';
+                
+                // Обновляем все затронутые строки
+                let rowToUpdate = currentRow;
+                while (rowToUpdate) {
+                    updateSingleTranslationRow(rowToUpdate.cells[2]);
+                    rowToUpdate = rowToUpdate.nextElementSibling;
+                }
+                
+                // Обновляем translationInput
+                updateTranslationInput();
+                
+                // Устанавливаем фокус на предыдущую ячейку
+                makeCellEditable(previousCell);
+            } else {
+                // Существующая логика для непустой ячейки
+                const previousText = previousCell.textContent.trim();
+                const currentText = textarea.value.trim();
+                // Объединяем текст предыдущей и текущей строки
+                previousCell.textContent = previousText + ' ' + currentText;
+                currentRow.cells[2].textContent = '';
+                // Обновляем textarea напрямую, без вызова loadText()
+                updateSingleTranslationRow(currentRow.cells[2]);
+                makeCellEditable(previousCell); // Переводим фокус на предыдущую ячейку
             }
         }
+    }
+}
+
+// Функция для обновления translationInput
+function updateTranslationInput() {
+    const rows = document.querySelectorAll('tr');
+    const translations = Array.from(rows).map(row => row.cells[2].textContent.trim());
+    translationInput.value = translations.join('\n');
+}
+  
+  
     });
 }
 

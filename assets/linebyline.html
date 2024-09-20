@@ -698,11 +698,24 @@ function shiftCellsDown(startRow) {
                 // Обработка просто Enter для завершения редактирования
                 event.preventDefault(); // Предотвращаем стандартное поведение Enter
  
-                 const currentRow = cell.parentElement;
 
-  shiftCellsDown(currentRow);              
-       
-                finishEditing(); // Завершаем редактирование
+    const currentRow = cell.parentElement; // Текущая строка
+
+   const currentRow = cell.parentElement;    
+    // Оставляем текст до курсора в текущей ячейке
+    cell.textContent = textBeforeCursor;
+    
+    // Сдвигаем строки вниз и помещаем текст после курсора в следующую строку
+    shiftCellsDown(currentRow);
+    
+    // Помещаем текст после курсора в следующую строку, в третью ячейку
+    if (currentRow.nextElementSibling) {
+        currentRow.nextElementSibling.cells[2].textContent = textAfterCursor;
+    }
+
+    finishEditing(); // Завершаем редактирование
+
+
 
                 // Переходим к следующей ячейке, если она существует
              /*   const nextRow = currentRow.nextElementSibling;

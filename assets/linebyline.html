@@ -646,7 +646,15 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
-  // Обрабатываем нажатие клавиш
+   
+   
+   
+   
+   
+   
+   
+   
+   // Обрабатываем нажатие клавиш
 textarea.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault(); // Предотвращаем стандартное поведение Enter
@@ -738,7 +746,15 @@ function updateTranslationInput() {
     const translations = Array.from(rows).map(row => row.cells[2].textContent.trim());
     translationInput.value = translations.join('\n');
 }
-
+   
+   
+   
+   
+   
+   
+   
+   
+   
   
 // Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {

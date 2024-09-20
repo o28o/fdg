@@ -703,8 +703,9 @@ if (event.key === 'Backspace') {
         if (previousRow) {
             const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
             const currentCell = currentRow.cells[2];
+            const currentText = textarea.value.trim();
             
-            if (currentCell.textContent.trim() === '') {
+            if (currentText === '') {
                 // Если текущая ячейка пуста, сдвигаем все нижестоящие ячейки вверх
                 let rowToMove = currentRow;
                 while (rowToMove.nextElementSibling) {
@@ -721,23 +722,19 @@ if (event.key === 'Backspace') {
                     updateSingleTranslationRow(rowToUpdate.cells[2]);
                     rowToUpdate = rowToUpdate.nextElementSibling;
                 }
-                
-                // Обновляем translationInput
-                updateTranslationInput();
-                
-                // Устанавливаем фокус на предыдущую ячейку
-                makeCellEditable(previousCell);
             } else {
-                // Существующая логика для непустой ячейки
+                // Если текущая ячейка не пуста, объединяем с предыдущей
                 const previousText = previousCell.textContent.trim();
-                const currentText = textarea.value.trim();
-                // Объединяем текст предыдущей и текущей строки
-                previousCell.textContent = previousText + ' ' + currentText;
-                currentRow.cells[2].textContent = '';
-                // Обновляем textarea напрямую, без вызова loadText()
-                updateSingleTranslationRow(currentRow.cells[2]);
-                makeCellEditable(previousCell); // Переводим фокус на предыдущую ячейку
+                previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
+                currentCell.textContent = '';
+                updateSingleTranslationRow(currentCell);
             }
+            
+            // Обновляем translationInput
+            updateTranslationInput();
+            
+            // Устанавливаем фокус на предыдущую ячейку
+            makeCellEditable(previousCell);
         }
     }
 }

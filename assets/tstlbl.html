@@ -599,7 +599,9 @@ document.getElementById('outputTableBody').addEventListener('click', function(ev
 
 // Функция для превращения ячейки в input для редактирования
 function makeCellEditable(cell) {
-    const originalText = cell.innerText; // Сохраняем оригинальный текст ячейки
+    if (cell.querySelector('input')) return; // Если input уже есть, ничего не делаем
+
+    const originalText = cell.textContent.trim(); // Используем textContent вместо innerText
     
     // Создаем input для редактирования
     const input = document.createElement('input');
@@ -607,15 +609,19 @@ function makeCellEditable(cell) {
     input.value = originalText;
     input.classList.add('table-input'); // Опционально добавляем класс для стилей
     
+    // Сохраняем оригинальный текст как data-атрибут
+    cell.dataset.originalText = originalText;
+    
     // Заменяем содержимое ячейки на input
-    cell.innerHTML = '';
+    cell.textContent = '';
     cell.appendChild(input);
     input.focus();
 
     // Функция для завершения редактирования
     function finishEditing() {
-        const newText = input.value;
-        cell.innerHTML = newText; // Используем innerHTML вместо innerText
+        const newText = input.value.trim();
+        cell.textContent = newText || cell.dataset.originalText; // Используем оригинальный текст, если новый пустой
+        delete cell.dataset.originalText; // Удаляем временный data-атрибут
         updateTranslationTextarea();
     }
 
@@ -637,10 +643,15 @@ function updateTranslationTextarea() {
     let updatedTranslation = '';
     tableRows.forEach(row => {
         const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
-        updatedTranslation += translationCell.innerText + '\n'; // Добавляем перевод с переносом строки
+        updatedTranslation += translationCell.textContent.trim() + '\n'; // Используем textContent и удаляем лишние пробелы
     });
     document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
+
+// Инициализация: заполняем translationInput при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
+
+
 // новый код конец  
 	  
 	  

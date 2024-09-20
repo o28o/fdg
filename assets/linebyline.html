@@ -259,7 +259,7 @@ table td {
       <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
 <br>
   
-  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», и «Это – скапливание боли», и «Это – истечение боли», и «Это – к истечению боли ведущая практика».">4би</button>
+  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», «Это – скапливание боли», «Это – истечение боли», «Это – к истечению боли ведущая практика».">4би</button>
   <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль»… «Это – к истечению боли ведущая практика». ">4би short</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд, правильное намерение-заготовка, правильная речь, правильные действия, правильные быт, правильное старание, правильное памятование, правильное объединение опыта. ">б8п</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд… правильное объединение опыта. ">б8п short</button>
@@ -1114,47 +1114,41 @@ window.addEventListener('click', function(event) {
 
 
 <script>
-let lastActiveElement = null;
-
-// Сохраняем активный элемент при открытии модального окна
-document.getElementById('openModalButton').addEventListener('click', function() {
-    lastActiveElement = document.activeElement;
-});
-
-// Добавляем обработчики для кнопок с шаблонами
 document.querySelectorAll('button[data-template]').forEach(function(button) {
     button.addEventListener('click', function() {
-        // Используем последний активный элемент
-        if (lastActiveElement && (lastActiveElement.tagName === 'INPUT' || lastActiveElement.tagName === 'TEXTAREA')) {
-            var textToInsert = button.getAttribute('data-template');
+        var translationInput = document.getElementById('translationInput');
 
-            // Проверяем, чтобы текст для вставки не был null или undefined
-            if (textToInsert === null || textToInsert === undefined) {
-                console.error("No text found in data-template attribute");
-                return;
-            }
-
-            // Для поддержания позиции курсора
-            var startPos = lastActiveElement.selectionStart;
-            var endPos = lastActiveElement.selectionEnd;
-
-            // Вставляем текст на позицию курсора
-            var beforeCursor = lastActiveElement.value.substring(0, startPos);
-            var afterCursor = lastActiveElement.value.substring(endPos, lastActiveElement.value.length);
-            lastActiveElement.value = beforeCursor + textToInsert + afterCursor;
-
-            // Устанавливаем курсор после вставленного текста
-            lastActiveElement.selectionStart = lastActiveElement.selectionEnd = startPos + textToInsert.length;
-
-            // Опционально фокусируем input
-            lastActiveElement.focus();
-        } else {
-            console.error("Last active element is not an input or textarea");
+        // Проверяем, найден ли элемент и не является ли он null
+        if (!translationInput) {
+            console.error("Element with id 'translationInput' not found");
+            return;
         }
+
+        var textToInsert = button.getAttribute('data-template');
+
+        // Проверяем, чтобы текст для вставки не был null или undefined
+        if (textToInsert === null || textToInsert === undefined) {
+            console.error("No text found in data-template attribute");
+            return;
+        }
+
+        // Для поддержания позиции курсора
+        var startPos = translationInput.selectionStart;
+        var endPos = translationInput.selectionEnd;
+
+        // Вставляем текст на позицию курсора
+        var beforeCursor = translationInput.value.substring(0, startPos);
+        var afterCursor = translationInput.value.substring(endPos, translationInput.value.length);
+        translationInput.value = beforeCursor + textToInsert + afterCursor;
+
+        // Устанавливаем курсор после вставленного текста
+        translationInput.selectionStart = translationInput.selectionEnd = startPos + textToInsert.length;
+
+        // Опционально фокусируем input
+        translationInput.focus();
     });
 });
 </script>
-
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>
 </html>

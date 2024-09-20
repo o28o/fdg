@@ -672,6 +672,65 @@ function updateTranslationTextarea() {
 
 // Новый код конец
 
+// Добавляем обработчик клика на таблицу
+document.getElementById('outputTableBody').addEventListener('click', function(event) {
+    // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
+    const target = event.target;
+    if (target.tagName === 'TD' && target.cellIndex === 2) {
+        makeCellEditable(target);
+    }
+});
+
+// Функция для превращения ячейки в input для редактирования
+function makeCellEditable(cell) {
+    const originalText = cell.innerText; // Сохраняем оригинальный текст ячейки
+
+    // Создаем input для редактирования
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = originalText;
+    input.classList.add('table-input'); // Опционально добавляем класс для стилей
+
+    // Очищаем содержимое ячейки и вставляем input
+    cell.innerText = '';
+    cell.appendChild(input);
+    input.focus();
+
+    // Обрабатываем выход из режима редактирования
+    input.addEventListener('blur', function() {
+        const newText = input.value;
+
+        // Обновляем текст ячейки
+        cell.innerText = newText;
+
+        // Синхронизируем с текстовым полем translationInput
+        updateTranslationTextarea();
+
+        // Снимаем фокус с input и убираем его
+        cell.removeChild(input);
+    });
+
+    // Обрабатываем нажатие Enter для завершения редактирования
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            input.blur(); // Снимаем фокус, чтобы завершить редактирование
+        }
+    });
+}
+
+// Функция для синхронизации изменений в таблице с полем textarea
+function updateTranslationTextarea() {
+    const tableRows = document.querySelectorAll('#outputTableBody tr');
+    let updatedTranslation = '';
+
+    tableRows.forEach(row => {
+        const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
+        updatedTranslation += translationCell.innerText + '\n'; // Добавляем перевод с переносом строки
+    });
+
+    document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
+}
+
 
 // новый код конец  
 	  

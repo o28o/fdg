@@ -694,49 +694,72 @@ function makeCellEditable(cell) {
   
   // Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
+    // ... (предыдущий код для Backspace остается без изменений)
+}
+
+// Функция для добавления пустой строки и переноса текста
+function addBlankLineAndMoveText(cell) {
+    const textarea = cell.querySelector('textarea');
     const cursorPosition = textarea.selectionStart;
-    // Если курсор в начале строки
-    if (cursorPosition === 0) {
-        event.preventDefault(); // Предотвращаем удаление символа
-        const currentRow = cell.parentElement;
-        const previousRow = currentRow.previousElementSibling;
-        if (previousRow) {
-            const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
-            const currentCell = currentRow.cells[2];
-            const currentText = textarea.value.trim();
-            
-            if (currentText === '') {
-                // Если текущая ячейка пуста, сдвигаем все нижестоящие ячейки вверх
-                let rowToMove = currentRow;
-                while (rowToMove.nextElementSibling) {
-                    const nextRow = rowToMove.nextElementSibling;
-                    rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
-                    rowToMove = nextRow;
-                }
-                // Очищаем последнюю ячейку
-                rowToMove.cells[2].textContent = '';
-                
-                // Обновляем все затронутые строки
-                let rowToUpdate = currentRow;
-                while (rowToUpdate) {
-                    updateSingleTranslationRow(rowToUpdate.cells[2]);
-                    rowToUpdate = rowToUpdate.nextElementSibling;
-                }
-            } else {
-                // Если текущая ячейка не пуста, объединяем с предыдущей
-                const previousText = previousCell.textContent.trim();
-                previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
-                currentCell.textContent = '';
-                updateSingleTranslationRow(currentCell);
-            }
-            
-            // Обновляем translationInput
-            updateTranslationInput();
-            
-            // Устанавливаем фокус на предыдущую ячейку
-            makeCellEditable(previousCell);
+    const currentText = textarea.value;
+    const textBeforeCursor = currentText.slice(0, cursorPosition);
+    const textAfterCursor = currentText.slice(cursorPosition);
+
+    // Обновляем текущую ячейку, оставляя только текст до курсора
+    cell.textContent = textBeforeCursor;
+    updateSingleTranslationRow(cell);
+
+    // Находим текущую строку и вставляем новую строку после нее
+    const currentRow = cell.parentElement;
+    const newRow = currentRow.cloneNode(true);
+    newRow.cells[2].textContent = textAfterCursor;
+    currentRow.parentNode.insertBefore(newRow, currentRow.nextSibling);
+
+    // Сдвигаем все последующие строки вниз
+    let rowToMove = newRow.nextElementSibling;
+    while (rowToMove) {
+        const nextRow = rowToMove.nextElementSibling;
+        if (nextRow) {
+            rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
+        } else {
+            rowToMove.cells[2].textContent = '';
+        }
+        rowToMove = nextRow;
+    }
+
+    // Обновляем все затронутые строки
+    updateAllTranslationRows();
+
+    // Обновляем translationInput
+    updateTranslationInput();
+
+    // Устанавливаем фокус на новую ячейку
+    makeCellEditable(newRow.cells[2]);
+}
+
+// Обработчик события для HTML кнопки
+document.querySelector('#addBlankLineButton').addEventListener('click', function() {
+    const activeCell = document.activeElement.closest('td');
+    if (activeCell) {
+        addBlankLineAndMoveText(activeCell);
+    }
+});
+
+// Обработчик события для комбинации клавиш Shift+Enter
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' && event.shiftKey) {
+        event.preventDefault();
+        const activeCell = document.activeElement.closest('td');
+        if (activeCell) {
+            addBlankLineAndMoveText(activeCell);
         }
     }
+});
+
+// Функция для обновления всех строк перевода
+function updateAllTranslationRows() {
+    const rows = document.querySelectorAll('tr');
+    rows.forEach(row => updateSingleTranslationRow(row.cells[2]));
 }
 
 // Функция для обновления translationInput

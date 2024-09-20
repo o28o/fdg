@@ -689,8 +689,7 @@ textarea.addEventListener('keydown', function(event) {
         finishEditing();
 		
 		                // Переходим к следующей ячейке, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
+ 
                 if (nextRow) {
                     const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
                     if (nextCell) {

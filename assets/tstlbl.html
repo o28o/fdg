@@ -603,40 +603,43 @@ document.getElementById('outputTableBody').addEventListener('click', function(ev
     }
 });
 
-// Функция для превращения ячейки в input для редактирования
+// Функция для превращения ячейки в textarea для редактирования
 function makeCellEditable(cell) {
-    if (cell.querySelector('input')) return; // Если input уже есть, ничего не делаем
+    if (cell.querySelector('textarea')) return; // Если textarea уже есть, ничего не делаем
 
     const originalText = cell.textContent.trim(); // Используем textContent вместо innerText
     
-    // Создаем input для редактирования
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.value = originalText;
-    input.classList.add('table-input'); // Опционально добавляем класс для стилей
+    // Создаем textarea для редактирования
+    const textarea = document.createElement('textarea');
+    textarea.value = originalText;
+    textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
+
+    // Устанавливаем размеры textarea в соответствии с размерами ячейки
+    textarea.style.width = `${cell.clientWidth}px`;
+    textarea.style.height = `${cell.clientHeight}px`;
     
     // Сохраняем оригинальный текст как data-атрибут
     cell.dataset.originalText = originalText;
     
-    // Заменяем содержимое ячейки на input
+    // Заменяем содержимое ячейки на textarea
     cell.textContent = '';
-    cell.appendChild(input);
-    input.focus();
+    cell.appendChild(textarea);
+    textarea.focus();
 
     // Функция для завершения редактирования
     function finishEditing() {
-        const newText = input.value.trim();
+        const newText = textarea.value.trim();
         cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
         delete cell.dataset.originalText; // Удаляем временный data-атрибут
         updateTranslationTextarea();
     }
 
     // Обрабатываем выход из режима редактирования
-    input.addEventListener('blur', finishEditing);
+    textarea.addEventListener('blur', finishEditing);
 
     // Обрабатываем нажатие Enter для завершения редактирования и перехода к следующей ячейке
-    input.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
+    textarea.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter' && !event.shiftKey) { // Позволяем перенос строки с Shift + Enter
             event.preventDefault(); // Предотвращаем стандартное поведение Enter
             finishEditing();
             
@@ -667,8 +670,10 @@ function updateTranslationTextarea() {
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
 
-//новый код
-	  
+
+// новый код 	  
+
+  
 	  
     })
     .catch(error => console.error('Error fetching data:', error.message));

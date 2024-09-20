@@ -668,22 +668,28 @@ function shiftCellsDown(startRow) {
  // Обрабатываем нажатие клавиш
 
 textarea.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') 
+
+
+const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+ 
+ 
+const currentRow = cell.parentElement; // Текущая строка
+const nextRow = currentRow.nextElementSibling; // Следующая строка
+
+
+ if (event.key === 'Enter') 
 	
             if (event.ctrlKey) {
                 // Обработка Ctrl + Enter для переноса текста
                 event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
-                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
-
+        
                 // Завершаем редактирование текущей ячейки
                 finishEditing();
 
                 // Обновляем следующую ячейку, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
                 if (nextRow) {
                     const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
                     if (nextCell) {
@@ -696,38 +702,42 @@ textarea.addEventListener('keydown', function(event) {
                     }
                 }
             }
-
-	
 	
 else	{
-     event.preventDefault(); // Предотвращаем стандартное поведение Enter
+       event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
-const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-const textBeforeCursor = textarea.value.slice(0, cursorPosition); // Текст до курсора (без trim для корректного переноса пробелов)
-const textAfterCursor = textarea.value.slice(cursorPosition); // Текст после курсора
-
-const currentRow = cell.parentElement; // Текущая строка
-const nextRow = currentRow.nextElementSibling; // Следующая строка
-
-// Оставляем текст до курсора в текущей ячейке, если он существует
-if (textBeforeCursor.length > 0) {
-    cell.textContent = textBeforeCursor;
+// Логи перед изменениями
+console.log("Позиция курсора:", cursorPosition);
+console.log("Текст до курсора:", `"${textBeforeCursor}"`);
+console.log("Текст после курсора:", `"${textAfterCursor}"`);
+console.log("Текущая строка до изменений:", currentRow.innerHTML);
+if (nextRow) {
+    console.log("Следующая строка до изменений:", nextRow.innerHTML);
 } else {
-    cell.textContent = ''; // Очищаем ячейку, если текст пуст
+    console.log("Следующей строки нет.");
 }
+
+// Оставляем текст до курсора в текущей ячейке
+cell.textContent = textBeforeCursor.length === 0 ? '' : textBeforeCursor;
 
 // Сдвигаем строки вниз
 shiftCellsDown(currentRow);
 
 // Помещаем текст после курсора в следующую строку, в третью ячейку
-if (nextRow && textAfterCursor.length > 0) {
-    nextRow.cells[2].textContent = textAfterCursor; // Перемещаем текст
-} else if (nextRow) {
-    nextRow.cells[2].textContent = ''; // Очищаем следующую ячейку, если текста после курсора нет
+if (nextRow) {
+    nextRow.cells[2].textContent = textAfterCursor;
+}
+
+// Логи после изменений
+console.log("Текущая строка после изменений:", currentRow.innerHTML);
+if (nextRow) {
+    console.log("Следующая строка после изменений:", nextRow.innerHTML);
 }
 
 // Завершаем редактирование
 finishEditing();
+
+		                // Переходим к следующей ячейке, если она существует
 
     } 
 		

@@ -1111,44 +1111,46 @@ window.addEventListener('click', function(event) {
 
   </script>
   
-
-
 <script>
 document.querySelectorAll('button[data-template]').forEach(function(button) {
     button.addEventListener('click', function() {
-        var translationInput = document.getElementById('translationInput');
+        // Находим активный элемент (input или textarea)
+        var activeElement = document.activeElement;
 
-        // Проверяем, найден ли элемент и не является ли он null
-        if (!translationInput) {
-            console.error("Element with id 'translationInput' not found");
-            return;
+        // Проверяем, что активный элемент — это input или textarea
+        if (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA') {
+            var textToInsert = button.getAttribute('data-template');
+
+            // Проверяем, чтобы текст для вставки не был null или undefined
+            if (textToInsert === null || textToInsert === undefined) {
+                console.error("No text found in data-template attribute");
+                return;
+            }
+
+            // Для поддержания позиции курсора
+            var startPos = activeElement.selectionStart;
+            var endPos = activeElement.selectionEnd;
+
+            // Вставляем текст на позицию курсора
+            var beforeCursor = activeElement.value.substring(0, startPos);
+            var afterCursor = activeElement.value.substring(endPos, activeElement.value.length);
+            activeElement.value = beforeCursor + textToInsert + afterCursor;
+
+            // Устанавливаем курсор после вставленного текста
+            activeElement.selectionStart = activeElement.selectionEnd = startPos + textToInsert.length;
+
+            // Опционально фокусируем input
+            activeElement.focus();
+        } else {
+            console.error("Active element is not an input or textarea");
         }
-
-        var textToInsert = button.getAttribute('data-template');
-
-        // Проверяем, чтобы текст для вставки не был null или undefined
-        if (textToInsert === null || textToInsert === undefined) {
-            console.error("No text found in data-template attribute");
-            return;
-        }
-
-        // Для поддержания позиции курсора
-        var startPos = translationInput.selectionStart;
-        var endPos = translationInput.selectionEnd;
-
-        // Вставляем текст на позицию курсора
-        var beforeCursor = translationInput.value.substring(0, startPos);
-        var afterCursor = translationInput.value.substring(endPos, translationInput.value.length);
-        translationInput.value = beforeCursor + textToInsert + afterCursor;
-
-        // Устанавливаем курсор после вставленного текста
-        translationInput.selectionStart = translationInput.selectionEnd = startPos + textToInsert.length;
-
-        // Опционально фокусируем input
-        translationInput.focus();
     });
 });
 </script>
+
+
+
+
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 </body>
 </html>

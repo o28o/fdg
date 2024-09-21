@@ -532,11 +532,11 @@ cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?
 cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta  Nikaya.*$/gm, '');
 
 cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, function(match, p1, p2) {
-  return p1 + p2.toUpperCase();
+  return p1 + ' ' + p2.toUpperCase();
 });
 
 // Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
-if (/^\d/.test(cleanedTranslation) && !cleanedTranslation.endsWith(' ')) {
+if (/(\([0-9]\)|[0-9]\))/.test(cleanedTranslation) && !cleanedTranslation.endsWith(' ')) {
   cleanedTranslation += ' ';
 }
 

@@ -716,7 +716,7 @@ textarea.addEventListener('keydown', function(event) {
         const nextRow = currentRow.nextElementSibling; // Следующая строка
         
         // Оставляем текст до курсора в текущей ячейке
-        cell.textContent = textBeforeCursor;
+        cell.textContent = '';
         
         // Сдвигаем строки вниз
         shiftCellsDown(currentRow);

@@ -536,8 +536,8 @@ cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, functi
 });
 
 // Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
-cleanedTranslation = cleanedTranslation.replace(/(\([0-9]\)\s*)([а-яА-Я]+)/g, function(match, p1, p2) {
-  return p1 + p2 + (p2.endsWith(' ') ? '' : ' ');
+cleanedTranslation = cleanedTranslation.replace(/(\([0-9]\).+?)([^\s])$/gm, function(match, p1, p2) {
+  return p1 + p2 + ' ';
 });
 
 

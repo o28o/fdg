@@ -56,6 +56,15 @@ th, td {
   border: 1px solid black; /* Границы ячеек */
   padding: 8px; /* Внутренний отступ ячеек */
 }
+
+
+th:nth-child(2),
+td:nth-child(2) {
+  display: none;
+}
+
+
+
 label {
   font-weight: bold;
   margin-right: 10px;
@@ -181,13 +190,26 @@ table td {
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-				  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" title="Видео Инструкция" class="ms-1 text-muted
-
-" target="_blank"><i class="fa-solid fa-question"></i></a>
+				  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" title="Видео Инструкция" class="ms-1 text-muted" target="_blank"><i class="fa-solid fa-question"></i></a>
    
-   <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class="ms-2 me-2 text-muted" target="_blank">
+   <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class=" ms-2 me-2 text-muted" target="_blank">
 <i class="fa-solid fa-list"></i>
    </a>  
+   
+   
+   <div class="input-group-append ms-1 me-3 mb-2">
+    <!-- <label>Пред / След</label> -->
+    <div class=" ms-1">
+        <button title="Предыдущий текст" class="input-group-append btn btn-primary" onclick="loadPrev()">
+		<i class="fa-solid fa-chevron-left"></i>
+<!-- 		&lt;
+ -->		</button>
+        <button title="Следующий текст" class="input-group-append btn btn-primary" onclick="loadNext()">
+		<i class="fa-solid fa-chevron-right"></i>
+<!-- 		&gt;
+ -->		</button>
+    </div>
+</div>
    
    <div >
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
@@ -203,19 +225,7 @@ table td {
   </div>
   
   
-<div class="input-group-append ms-1">
-    <!-- <label>Пред / След</label> -->
-    <div class=" ms-1">
-        <button title="Предыдущий текст" class="input-group-append btn btn-primary btn-sm" onclick="loadPrev()">
-		<i class="fa-solid fa-chevron-left"></i>
-<!-- 		&lt;
- -->		</button>
-        <button title="Следующий текст" class="input-group-append btn btn-primary btn-sm" onclick="loadNext()">
-		<i class="fa-solid fa-chevron-right"></i>
-<!-- 		&gt;
- -->		</button>
-    </div>
-</div>
+
   
             </div>
 			
@@ -407,6 +417,7 @@ table td {
 
 </div>
 
+
 <script>
 function downloadJson() {
   const language = document.getElementById('languageSelect').value;
@@ -515,6 +526,9 @@ if (document.getElementById('lineBreakCheckbox').checked) {
     }
     return match;
   });
+ 
+cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
+
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
 cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
 cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
@@ -531,6 +545,7 @@ cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
 }
   
 cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
 
 
 
@@ -601,6 +616,7 @@ console.log(url);
 	  
   
 // новый код 	  
+
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
     // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
@@ -644,50 +660,118 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
-    // Обрабатываем нажатие клавиш
-    textarea.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            if (event.ctrlKey) {
-                // Обработка Ctrl + Enter для переноса текста
-                event.preventDefault(); // Предотвращаем стандартное поведение Enter
+// Функция для сдвига значений ячеек в третьем столбце вниз
+function shiftCellsDown(startRow) {
+    let rowToMove = startRow;
+    let previousContent = ''; // временная переменная для хранения данных
+    
+    // Сдвигаем значения вниз начиная с текущей строки
+    while (rowToMove) {
+        const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
+        rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
+        previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
+        rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
+    }
+}
 
-                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-                // Завершаем редактирование текущей ячейки
-                finishEditing();
+ // Обрабатываем нажатие клавиш
 
-                // Обновляем следующую ячейку, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
-                if (nextRow) {
-                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                    if (nextCell) {
-                        // Устанавливаем текст до курсора в текущую ячейку
-                        cell.textContent = textBeforeCursor;
+  textarea.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Предотвращаем стандартное поведение Enter
+        
+        const cursorPosition = textarea.selectionStart; // Позиция курсора
+        const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+        const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-                        // Перемещаем текст после курсора в следующую ячейку
-                        nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
-                        makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
-                    }
-                }
-            } else {
-                // Обработка просто Enter для завершения редактирования
-                event.preventDefault(); // Предотвращаем стандартное поведение Enter
-                finishEditing(); // Завершаем редактирование
-
-                // Переходим к следующей ячейке, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
-                if (nextRow) {
-                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                    if (nextCell) {
-                        makeCellEditable(nextCell);
-                    }
-                }
-            }
+        const currentRow = cell.parentElement; // Текущая строка
+        const nextRow = currentRow.nextElementSibling; // Следующая строка
+        
+        // Оставляем текст до курсора в текущей ячейке
+        cell.textContent = textBeforeCursor;
+        
+        // Сдвигаем строки вниз
+        shiftCellsDown(currentRow);
+        
+        // Помещаем текст после курсора в следующую строку
+        if (nextRow) {
+            nextRow.cells[2].textContent = textAfterCursor;
         }
+
+        finishEditing(); // Завершаем редактирование
+    } 
+});
+ 
+	
+		
+		
+// Обработка нажатия клавиши Backspace
+if (event.key === 'Backspace') {
+    const cursorPosition = textarea.selectionStart;
+    // Если курсор в начале строки
+    if (cursorPosition === 0) {
+        event.preventDefault(); // Предотвращаем удаление символа
+        const currentRow = cell.parentElement;
+        const previousRow = currentRow.previousElementSibling;
+        if (previousRow) {
+            const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
+            const currentCell = currentRow.cells[2];
+            const currentText = textarea.value.trim();
+            
+            if (currentText === '') {
+                shiftCellsUp(currentRow);
+            } else {
+                // Если текущая ячейка не пуста, объединяем с предыдущей
+                const previousText = previousCell.textContent.trim();
+                previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
+                currentCell.textContent = '';
+                updateSingleTranslationRow(currentCell);
+                
+                // После очистки текущей ячейки, сдвигаем все нижестоящие ячейки вверх
+                shiftCellsUp(currentRow);
+            }
+            
+            // Обновляем translationInput
+            updateTranslationInput();
+            
+            // Устанавливаем фокус на предыдущую ячейку
+            makeCellEditable(previousCell);
+        }
+    }
+}
+
+
+
+// Функция для сдвига ячеек вверх
+function shiftCellsUp(startRow) {
+    let rowToMove = startRow;
+    while (rowToMove.nextElementSibling) {
+        const nextRow = rowToMove.nextElementSibling;
+        rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
+        rowToMove = nextRow;
+    }
+    // Очищаем последнюю ячейку
+    rowToMove.cells[2].textContent = '';
+    
+    // Обновляем все затронутые строки
+    let rowToUpdate = startRow;
+    while (rowToUpdate) {
+        updateSingleTranslationRow(rowToUpdate.cells[2]);
+        rowToUpdate = rowToUpdate.nextElementSibling;
+    }
+}
+
+
+
+// Функция для обновления translationInput
+function updateTranslationInput() {
+    const rows = document.querySelectorAll('tr');
+    const translations = Array.from(rows).map(row => row.cells[2].textContent.trim());
+    translationInput.value = translations.join('\n');
+}
+  
+  
     });
 }
 
@@ -704,6 +788,22 @@ function updateTranslationTextarea() {
 
 // Инициализация: заполняем translationInput при загрузке страницы
 document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
+
+
+// Функция для обновления translationInput только для одной строки
+function updateSingleTranslationRow(cell) {
+    const currentText = document.getElementById('translationInput').value;
+    const rows = currentText.split('\n');
+
+    // Определяем индекс строки, который нужно обновить
+    const rowIndex = Array.prototype.indexOf.call(cell.parentElement.parentElement.children, cell.parentElement);
+
+    // Обновляем текст только для этой строки
+    rows[rowIndex] = cell.textContent.trim();
+
+    // Обновляем содержимое translationInput
+    document.getElementById('translationInput').value = rows.join('\n');
+}
 
 
 // новый код 	  
@@ -1204,5 +1304,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
+ <script src="/assets/js/smoothScroll.js" defer></script>
+	
 </body>
 </html>

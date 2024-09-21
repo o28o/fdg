@@ -531,21 +531,14 @@ if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta  Nikaya.*$/gm, '');
 
-cleanedTranslation = cleanedTranslation.replace(/\(1\) ([а-я])/g, function(match, p1) {
+cleanedTranslation = cleanedTranslation.replace(/(?:\(1\)|1\)) ([а-я])/g, function(match, p1) {
   return p1.toUpperCase();
-  
-  // Добавляем пробел в конце строки, если его нет
-if (!cleanedTranslation.endsWith(' ')) {
-  cleanedTranslation += ' ';
 });
 
-cleanedTranslation = cleanedTranslation.replace(/1\) ([а-я])/g, function(match, p1) {
-  return p1.toUpperCase();
-  
-  // Добавляем пробел в конце строки, если его нет
-if (!cleanedTranslation.endsWith(' ')) {
+// Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
+if (/^\d/.test(cleanedTranslation) && !cleanedTranslation.endsWith(' ')) {
   cleanedTranslation += ' ';
-});
+}
 
 // добавить логику, чтобы собирал в одно предложение, короткие списки???
 

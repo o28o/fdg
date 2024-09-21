@@ -277,6 +277,7 @@ table td {
   <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль»… «Это – к истечению боли ведущая практика». ">4би short</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд, правильное намерение-заготовка, правильная речь, правильные действия, правильные быт, правильное старание, правильное памятование, правильное объединение опыта. ">б8п</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд… правильное объединение опыта. ">б8п short</button>
+<button class="mb-1 btn btn-primary btn-sm" data-template="—">—</button>
   
     </div>
   </div>
@@ -530,6 +531,24 @@ if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta  Nikaya.*$/gm, '');
 
+cleanedTranslation = cleanedTranslation.replace(/\(1\) ([а-я])/g, function(match, p1) {
+  return p1.toUpperCase();
+  
+  // Добавляем пробел в конце строки, если его нет
+if (!cleanedTranslation.endsWith(' ')) {
+  cleanedTranslation += ' ';
+});
+
+cleanedTranslation = cleanedTranslation.replace(/1\) ([а-я])/g, function(match, p1) {
+  return p1.toUpperCase();
+  
+  // Добавляем пробел в конце строки, если его нет
+if (!cleanedTranslation.endsWith(' ')) {
+  cleanedTranslation += ' ';
+});
+
+// добавить логику, чтобы собирал в одно предложение, короткие списки???
+
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
 cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
 cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
@@ -541,6 +560,9 @@ cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенны
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\(I)\/g, 'Первая');
+cleanedTranslation = cleanedTranslation.replace(/\(II)\/g, 'Вторая');
+cleanedTranslation = cleanedTranslation.replace(/\(III)\/g, 'Третья');
 
   
 }

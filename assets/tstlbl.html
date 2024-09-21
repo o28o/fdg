@@ -679,9 +679,36 @@ function shiftCellsDown(startRow) {
 
 textarea.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
+		 if (event.ctrlKey) {
+                // Обработка Ctrl + Enter для переноса текста
+                event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
+                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+
+                // Завершаем редактирование текущей ячейки
+                finishEditing();
+
+                // Обновляем следующую ячейку, если она существует
+                const currentRow = cell.parentElement;
+                const nextRow = currentRow.nextElementSibling;
+                if (nextRow) {
+                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                    if (nextCell) {
+                        // Устанавливаем текст до курсора в текущую ячейку
+                        cell.textContent = textBeforeCursor;
+
+                        // Перемещаем текст после курсора в следующую ячейку
+                        nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
+                        makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+                    }
+                }
+            } else {
+		
         event.preventDefault(); // Предотвращаем стандартное поведение Enter
         
-        const cursorPosition = textarea.selectionStart; // Позиция курсора
+        const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
         const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
         const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
@@ -690,15 +717,19 @@ textarea.addEventListener('keydown', function(event) {
         
         // Оставляем текст до курсора в текущей ячейке
         cell.textContent = textBeforeCursor;
-
-        // Убираем текст после курсора из текущей строки и переносим его в следующую строку
+        
+        // Сдвигаем строки вниз
+        shiftCellsDown(currentRow);
+        
+        // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (nextRow) {
-            nextRow.cells[2].textContent = textAfterCursor; // Помещаем текст после курсора в следующую строку
+            nextRow.cells[2].textContent = textAfterCursor;
         }
-
-        finishEditing(); // Завершаем редактирование
-    }
-
+        
+        // Завершаем редактирование
+        finishEditing();
+    } 
+	}	
 		
 		
 // Обработка нажатия клавиши Backspace

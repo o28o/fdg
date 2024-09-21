@@ -419,18 +419,6 @@ table td {
 
 
 <script>
-
-  // Обработчик события для textarea
-  document.getElementById("translationInput").addEventListener("keypress", function(event) {
-    // Проверяем нажатие клавиши Enter
-    if (event.key === "Enter") {
-      // Вызов функции loadtext()
-      loadtext();
-    }
-  });
-</script>
-
-<script>
 function downloadJson() {
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();

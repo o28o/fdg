@@ -712,6 +712,9 @@ textarea.addEventListener('keydown', function(event) {
         const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
         const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
+   
+        finishEditing();
+		
         const currentRow = cell.parentElement; // Текущая строка
         const nextRow = currentRow.nextElementSibling; // Следующая строка
         
@@ -726,8 +729,7 @@ textarea.addEventListener('keydown', function(event) {
             nextRow.cells[2].textContent = textAfterCursor;
         }
         
-        // Завершаем редактирование
-        finishEditing();
+    
     } 
 	}	
 		

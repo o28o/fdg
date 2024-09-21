@@ -679,8 +679,11 @@ function shiftCellsDown(startRow) {
 
 textarea.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-		
-		        const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+		 if (event.ctrlKey) {
+                // Обработка Ctrl + Enter для переноса текста
+                event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
+                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
                 const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
                 const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
@@ -690,14 +693,6 @@ textarea.addEventListener('keydown', function(event) {
                 // Обновляем следующую ячейку, если она существует
                 const currentRow = cell.parentElement;
                 const nextRow = currentRow.nextElementSibling;
-		
-			   console.log('1st RowcurrentRow content:', currentRow);
-
-
-		 if (event.ctrlKey) {
-                // Обработка Ctrl + Enter для переноса текста
-                event.preventDefault(); // Предотвращаем стандартное поведение Enter
-
                 if (nextRow) {
                     const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
                     if (nextCell) {
@@ -713,23 +708,26 @@ textarea.addEventListener('keydown', function(event) {
 		
         event.preventDefault(); // Предотвращаем стандартное поведение Enter
         
+        const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+        const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+        const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+
+        const currentRow = cell.parentElement; // Текущая строка
+        const nextRow = currentRow.nextElementSibling; // Следующая строка
+        
         // Оставляем текст до курсора в текущей ячейке
         cell.textContent = textBeforeCursor;
-        console.log('After textBeforeCursor, cell content:', cell.textContent);
-
-
-   const currentRow2 = cell.parentElement; // Текущая строка
-		   console.log('2nd RowcurrentRow content:', currentRow2);
-
-  
+        
         // Сдвигаем строки вниз
-  //    shiftCellsDown(currentRow);
+        shiftCellsDown(currentRow);
         
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (nextRow) {
             nextRow.cells[2].textContent = textAfterCursor;
         }
         
+        // Завершаем редактирование
+        finishEditing();
     } 
 	}	
 		

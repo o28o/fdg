@@ -650,19 +650,12 @@ function makeCellEditable(cell) {
     textarea.focus();
 
     // Функция для завершения редактирования
-function finishEditing() {
-    // Логируем содержимое ячейки перед завершением редактирования
-    console.log('Before finishEditing, cell content:', cell.textContent);
-
-    // Обычные действия по завершению редактирования (если есть):
-    const newText = textarea.value.trim();
-    cell.textContent = newText;
-
-    console.log('After finishEditing, cell content:', cell.textContent);
-
-    // Любая другая логика завершения редактирования
-}
-
+    function finishEditing() {
+        const newText = textarea.value.trim();
+        cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
+        delete cell.dataset.originalText; // Удаляем временный data-атрибут
+        updateTranslationTextarea();
+    }
 
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
@@ -672,28 +665,13 @@ function shiftCellsDown(startRow) {
     let rowToMove = startRow;
     let previousContent = ''; // временная переменная для хранения данных
     
-console.log('Shifting cells down, starting from row:', rowToMove);
-
     // Сдвигаем значения вниз начиная с текущей строки
     while (rowToMove) {
         const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
-        console.log('Current Row:', rowToMove, 'Current Content:', currentContent);
-
         rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
-        console.log('Moved previous content to current row:', previousContent);
-
         previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
         rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
-
-        if (rowToMove) {
-            console.log('Moving to next row:', rowToMove);
-        } else {
-            console.log('No more rows to move');
-        }
     }
-
-    console.log('Completed shifting cells down');	
-	
 }
 
 
@@ -730,41 +708,26 @@ textarea.addEventListener('keydown', function(event) {
 		
         event.preventDefault(); // Предотвращаем стандартное поведение Enter
         
-    const cursorPosition = textarea.selectionStart; // Позиция курсора
-        console.log('Cursor Position:', cursorPosition);
-
+        const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
         const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-        console.log('Text Before Cursor:', textBeforeCursor);
-
         const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
-        console.log('Text After Cursor:', textAfterCursor);
-
-        // Завершаем редактирование
-        finishEditing();
-        console.log('Finished editing');
 
         const currentRow = cell.parentElement; // Текущая строка
-        console.log('Current Row:', currentRow);
-
         const nextRow = currentRow.nextElementSibling; // Следующая строка
-        console.log('Next Row:', nextRow ? nextRow : 'No next row');
-
+        
         // Оставляем текст до курсора в текущей ячейке
-        console.log('Setting cell text content to textBeforeCursor:', textBeforeCursor);
         cell.textContent = textBeforeCursor;
-
+        
         // Сдвигаем строки вниз
         shiftCellsDown(currentRow);
-        console.log('Shifting cells down from currentRow');
-
+        
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (nextRow) {
-            console.log('Setting nextRow cell text content to textAfterCursor:', textAfterCursor);
             nextRow.cells[2].textContent = textAfterCursor;
         }
-
-        console.log('End of Enter key handling');    
-       
+        
+        // Завершаем редактирование
+        finishEditing();
     } 
 	}	
 		

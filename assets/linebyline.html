@@ -639,7 +639,7 @@ function makeCellEditable(cell) {
     textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
     // Устанавливаем размеры textarea в соответствии с размерами ячейки
-    textarea.style.width = `${cell.clientWidth}px`;
+	textarea.style.width = `${cell.clientWidth - 10}px`;
     textarea.style.height = `${cell.clientHeight}px`;
     
     // Сохраняем оригинальный текст как data-атрибут

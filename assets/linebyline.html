@@ -724,8 +724,10 @@ textarea.addEventListener('keydown', function(event) {
    const currentRow2 = cell.parentElement; // Текущая строка
 		   console.log('2nd RowcurrentRow content:', currentRow2);
 
+  finishEditing();
+  
         // Сдвигаем строки вниз
-      shiftCellsDown(currentRow);
+  //    shiftCellsDown(currentRow);
         
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (nextRow) {

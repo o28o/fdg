@@ -536,9 +536,10 @@ cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, functi
 });
 
 // Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
-if (/[0-9]\)/.test(cleanedTranslation) && !cleanedTranslation.endsWith(' ')) {
-  cleanedTranslation += ' ';
-}
+cleanedTranslation = cleanedTranslation.replace(/(\([0-9]\)\s*)([а-яА-Я]+)/g, function(match, p1, p2) {
+  return p1 + p2 + (p2.endsWith(' ') ? '' : ' ');
+});
+
 
 // добавить логику, чтобы собирал в одно предложение, короткие списки???
 

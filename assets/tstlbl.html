@@ -277,6 +277,7 @@ table td {
   <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль»… «Это – к истечению боли ведущая практика». ">4би short</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд, правильное намерение-заготовка, правильная речь, правильные действия, правильные быт, правильное старание, правильное памятование, правильное объединение опыта. ">б8п</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд… правильное объединение опыта. ">б8п short</button>
+<button class="mb-1 btn btn-primary btn-sm" data-template="—">—</button>
   
     </div>
   </div>
@@ -528,6 +529,19 @@ if (document.getElementById('lineBreakCheckbox').checked) {
   });
  
 cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta  Nikaya.*$/gm, '');
+
+cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, function(match, p1, p2) {
+  return p1 + ' ' + p2.toUpperCase();
+});
+
+// Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
+//cleanedTranslation = cleanedTranslation.replace(/(\([0-9]\).+?)([^\s])$/gm, function(match, p1, p2) {
+//  return p1 + p2 + ' ';
+//});
+
+
+// добавить логику, чтобы собирал в одно предложение, короткие списки???
 
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
 cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
@@ -540,6 +554,9 @@ cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенны
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
+cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
+cleanedTranslation = cleanedTranslation.replace(/\(III\)/g, 'Третья');
 
   
 }
@@ -554,6 +571,8 @@ cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…])\d+\b/g, '$1');
 
 }
+
+cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {
@@ -584,7 +603,7 @@ if (indexValue.includes("sn")) {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
   //    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
-console.log(url);
+//console.log(url);
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -597,7 +616,7 @@ console.log(url);
       tableBody.innerHTML = '';
 
       const dataArray = Object.entries(data);
-
+	  let rowCounter = 0; // Счётчик для строк
       dataArray.forEach(([key, value], index) => {
         const translationLine = translationLines[index] || '';
         const texts = translationLine.split('\n');
@@ -605,16 +624,20 @@ console.log(url);
         texts.forEach((text, textIndex) => {
           const currentText = texts[textIndex] || '';
 
+      rowCounter++;
           const row = `<tr>
-                        <td>${value}</td>
+		      <td data-linenumber="${rowCounter}">
+                      <a href="#" onclick="moveCursorToLine(${rowCounter}); return false;">${value}</a>
+                    </td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;
           tableBody.innerHTML += row;
         });
       });
+
+
 	  
-  
 // новый код 	  
 
 // Добавляем обработчик клика на таблицу
@@ -638,7 +661,7 @@ function makeCellEditable(cell) {
     textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
     // Устанавливаем размеры textarea в соответствии с размерами ячейки
-    textarea.style.width = `${cell.clientWidth}px`;
+	textarea.style.width = `${cell.clientWidth}px`;
     textarea.style.height = `${cell.clientHeight}px`;
     
     // Сохраняем оригинальный текст как data-атрибут
@@ -843,6 +866,32 @@ function updateSingleTranslationRow(cell) {
 
 
 <script>
+
+
+ // Функция для перемещения курсора в нужную строку textarea
+  function moveCursorToLine(lineNumber) {
+    const translationInput = document.getElementById('translationinput'); // textarea
+
+    // Проверка на существование элемента
+    if (!translationInput) {
+      console.error('Element with ID "translationinput" not found.');
+      return;
+    }
+
+    const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
+    let position = 0;
+
+    // Вычисляем позицию начала строки
+    for (let i = 0; i < lineNumber - 1; i++) {
+      position += lines[i].length + 1; // Учитываем перенос строки (\n)
+    }
+
+    // Устанавливаем фокус и курсор на нужную строку
+    translationInput.focus();
+    translationInput.setSelectionRange(position, position);
+  }
+
+
 
 function loadPrev() {
       

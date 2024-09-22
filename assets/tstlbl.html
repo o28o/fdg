@@ -173,6 +173,37 @@ table td {
   cursor: pointer;
 }
 	
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между таблицей и textarea */
+  }
+
+  .table-container {
+    flex: 1;
+    max-width: 60%; /* Задайте ширину таблицы */
+  }
+
+  .textarea-container {
+    flex: 1;
+    max-width: 40%; /* Задайте ширину textarea */
+  }
+
+  @media (max-width: 768px) {
+    /* Для мобильных устройств */
+    .content-container {
+      flex-direction: column;
+    }
+
+    .table-container,
+    .textarea-container {
+      max-width: 100%;
+    }
+  }
+	
+	
+	
 </style>
 </head>
 <body>
@@ -200,11 +231,11 @@ table td {
    <div class="input-group-append ms-1 me-3 mb-2">
     <!-- <label>Пред / След</label> -->
     <div class=" ms-1">
-        <button title="Предыдущий текст" class="input-group-append btn btn-primary" onclick="loadPrev()">
+        <button title="Предыдущий текст" class="input-group-append btn btn-primary" onclick="loadPrev(); loadAndCheckRanges()">
 		<i class="fa-solid fa-chevron-left"></i>
 <!-- 		&lt;
  -->		</button>
-        <button title="Следующий текст" class="input-group-append btn btn-primary" onclick="loadNext()">
+        <button title="Следующий текст" class="input-group-append btn btn-primary" onclick="loadNext(); loadAndCheckRanges()">
 		<i class="fa-solid fa-chevron-right"></i>
 <!-- 		&gt;
  -->		</button>
@@ -318,25 +349,12 @@ table td {
     </div>
 
 <div class="input-group mt-2">
-
-   
+ 
   </div>
   
 
 <div>
-  
-  <label class="mt-2" for="translationInput">Текст перевода:</label>
-  <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
-2. Вставьте русский перевод сюда
-3. Нажмите 'Обновить'
-
-Инструмент добавит заголовок и переносы строк.
-
-Можно будет поправить переноcы вручную. 
-
-Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
-
-
+ 
 <div id="searchModal" class="modal">
   <div class="modal-content">
     <div id="modalHeader" class="modal-header">
@@ -421,20 +439,37 @@ table td {
   
 
  
-  <div id="translationJsonOutput"></div>
-<div class="table-container mt-2 mb-3">
+<div id="translationJsonOutput"></div>
 
-  <table class=" table-hover">
-    <thead>
-      <tr>
-        <th>Текст</th>
-        <th>Индексы</th>
-        <th>Перевод</th>
-      </tr>
-    </thead>
-    <tbody id="outputTableBody"></tbody>
-  </table>
+<div class="content-container">
+  <div class="table-container mt-2 mb-3">
+    <table class="table-hover">
+      <thead>
+        <tr>
+          <th>Текст</th>
+          <th>Индексы</th>
+          <th>Перевод</th>
+        </tr>
+      </thead>
+      <tbody id="outputTableBody"></tbody>
+    </table>
   </div>
+
+  <div class="textarea-container my-3">
+    <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
+2. Вставьте русский перевод сюда
+3. Нажмите 'Обновить'
+
+Инструмент добавит заголовок и переносы строк.
+
+Можно будет поправить переноcы вручную.
+
+Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе."
+              class="form-control custom-textarea" rows="15"></textarea>
+  </div>
+</div>
+  
+  
 <div  class="my-3">
       
     
@@ -975,11 +1010,14 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-                document.getElementById('indexInput').value = newIndexValue;
-            }
+            const inputField = document.getElementById('indexInput');
+			inputField.value = newIndexValue; // Замените это на логику для следующего 
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+	 		}
 
             // Вызываем loadText() для обновления данных
             loadText();
+					        
         })
         .catch(error => {
             console.error('Error fetching prev data:', error);
@@ -987,6 +1025,7 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
         });
+
 }
 
 function loadNext() {
@@ -1014,18 +1053,25 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-                document.getElementById('indexInput').value = newIndexValue;
+		    const inputField = document.getElementById('indexInput');
+			inputField.value = newIndexValue; // Замените это на логику для следующего 
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
             }
 
             // Вызываем loadText() для обновления данных
             loadText();
+
         })
         .catch(error => {
             console.error('Error fetching next data:', error);
 
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+            
         });
+		
+
 }
 
 // Функция для извлечения нового значения для поля "indexInput" из данных API

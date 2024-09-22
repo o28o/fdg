@@ -874,16 +874,14 @@ textarea.addEventListener('keydown', function(event) {
         cell.textContent = textBeforeCursor;
         
         // Сдвигаем строки вниз
-    		previousRow.cells[2].textContent = textBeforeCursor;
+    		currentRow.cells[2].textContent = textBeforeCursor;
 
 		
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (currentRow) {
             currentRow.cells[2].textContent = textAfterCursor;
         }
-		
-		currentRow.cells[2].textContent = textBeforeCursor;
-		
+				
 		
 		      currentRow = cell.parentElement; // Текущая строка
          nextRow = currentRow.nextElementSibling; // Следующая строка

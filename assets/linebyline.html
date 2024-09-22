@@ -987,6 +987,8 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
         });
+		        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+
 }
 
 function loadNext() {
@@ -1026,6 +1028,9 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
         });
+		
+		        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+
 }
 
 // Функция для извлечения нового значения для поля "indexInput" из данных API

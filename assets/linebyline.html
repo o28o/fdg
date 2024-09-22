@@ -500,8 +500,6 @@ console.log(url);
 </script>
 
 <script>
- document.addEventListener('DOMContentLoaded', function() {
-	 
 function loadText() {
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
@@ -864,7 +862,6 @@ function updateSingleTranslationRow(cell) {
     })
     .catch(error => console.error('Error fetching data:', error.message));
 }
-  });
 </script>
 
 

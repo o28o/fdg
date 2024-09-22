@@ -24,7 +24,7 @@ body {
     resize: both; /* Позволяет растягивать в любом направлении */
     overflow: auto; /* Добавляет полосы прокрутки при необходимости */
     min-height: 100px; /* Минимальная высота текстового поля */
-    max-height: 300px; /* Максимальная высота текстового поля */
+    max-height: 500px; /* Максимальная высота текстового поля */
   }
 
 .table-container {
@@ -173,8 +173,41 @@ table td {
   cursor: pointer;
 }
 	
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между таблицей и textarea */
+  }
+
+  .table-container {
+    flex: 1;
+    max-width: 60%; /* Задайте ширину таблицы */
+  }
+
+  .textarea-container {
+    flex: 1;
+    max-width: 40%; /* Задайте ширину textarea */
+  }
+  
+#translationInput {
+    line-height: 1.5; /* Увеличьте значение для большего межстрочного расстояния */
+    /* Другие стили для textarea можно добавить здесь */
+}  
+
+  @media (max-width: 768px) {
+    /* Для мобильных устройств */
+    .content-container {
+      flex-direction: column;
+    }
+
+    .table-container,
+    .textarea-container {
+      max-width: 100%;
+    }
+  }
 	
-	.resizable {
+.resizable {
   resize: horizontal; /* Позволяет изменять ширину */
   overflow: auto; /* Показывает скроллбар, если нужно */
   min-width: 100px; /* Минимальная ширина ячейки */
@@ -191,7 +224,9 @@ table {
 
 .table-hover th {
   text-align: left; /* Выравнивание текста по левому краю */
-}
+}	
+	
+
 </style>
 </head>
 <body>
@@ -257,7 +292,8 @@ table {
                 console.log('Извлеченные переменные:', variables);
 
                 // Обработка ввода пользователя
-                document.getElementById('indexInput').addEventListener('input', function () {
+                const inputField = document.getElementById('indexInput');
+                inputField.addEventListener('input', function () {
                     const inputValue = this.value.trim().toLowerCase();
                     console.log('Введенное значение:', inputValue);
 
@@ -268,7 +304,6 @@ table {
                         // Проверка в anranges
                         if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
                             console.log('Найден в anranges:', inputValue);
-                            
                         } else {
                             console.log('Не найден в anranges:', inputValue);
                             resultMessage = '';
@@ -277,7 +312,6 @@ table {
                         // Проверка в snranges
                         if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
                             console.log('Найден в snranges:', inputValue);
-                            
                         } else {
                             console.log('Не найден в snranges:', inputValue);
                             resultMessage = '';
@@ -286,7 +320,6 @@ table {
                         // Проверка в mnranges
                         if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
                             console.log('Найден в mnranges:', inputValue);
-                           
                         } else {
                             console.log('Не найден в mnranges:', inputValue);
                             resultMessage = '';
@@ -295,7 +328,6 @@ table {
                         // Проверка в dnranges
                         if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
                             console.log('Найден в dnranges:', inputValue);
-                          
                         } else {
                             console.log('Не найден в dnranges:', inputValue);
                             resultMessage = '';
@@ -307,6 +339,9 @@ table {
                     // Отображение результата
                     document.getElementById('checkResult').innerHTML = resultMessage;
                 });
+
+                // Проверка значения в поле ввода при загрузке страницы
+                inputField.dispatchEvent(new Event('input'));
             })
             .catch(error => {
                 console.error('Ошибка при загрузке файла:', error);
@@ -316,6 +351,7 @@ table {
     // Вызов функции для загрузки и проверки данных
     loadAndCheckRanges();
 </script>
+
 
 
 
@@ -336,25 +372,47 @@ table {
         </div>
     </div>
 
+
+<div id="translationJsonOutput"></div>
+
+<div class="content-container">
+  <div class="table-container mt-2 mb-3">
+    <table class="table-hover">
+      <thead>
+        <tr>
+          <th  class="resizable">Текст</th>
+          <th  class="resizable">Индексы</th>
+          <th  class="resizable">Перевод</th>
+        </tr>
+      </thead>
+      <tbody id="outputTableBody"></tbody>
+    </table>
+  </div>
+
+  <div class="textarea-container my-3">
+     <label for="translationInput">Редактор:</label>
+	<textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
+2. Вставьте русский перевод сюда
+3. Нажмите 'Обновить'
+
+Инструмент добавит заголовок и переносы строк.
+
+Можно будет поправить переноcы вручную.
+
+Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе."
+              class="form-control custom-textarea" rows="15"></textarea>
+  </div>
+</div>
+  
+
+
 <div class="input-group mt-2">
  
   </div>
   
 
 <div>
-  
-  <label class="mt-2" for="translationInput">Текст перевода:</label>
-  <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
-2. Вставьте русский перевод сюда
-3. Нажмите 'Обновить'
-
-Инструмент добавит заголовок и переносы строк.
-
-Можно будет поправить переноcы вручную. 
-
-Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
-
-
+ 
 <div id="searchModal" class="modal">
   <div class="modal-content">
     <div id="modalHeader" class="modal-header">
@@ -439,20 +497,8 @@ table {
   
 
  
-  <div id="translationJsonOutput"></div>
-<div class="table-container mt-2 mb-3">
 
-  <table class=" table-hover">
-    <thead>
-      <tr>
-        <th class="resizable">Текст</th>
-        <th class="resizable">Индексы</th>
-        <th class="resizable">Перевод</th>
-      </tr>
-    </thead>
-    <tbody id="outputTableBody"></tbody>
-  </table>
-  </div>
+  
 <div  class="my-3">
       
     
@@ -783,21 +829,6 @@ function makeCellEditable(cell) {
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
 
-// Функция для сдвига значений ячеек в третьем столбце вниз
-function shiftCellsDown(startRow) {
-    let rowToMove = startRow;
-    let previousContent = ''; // временная переменная для хранения данных
-    
-    // Сдвигаем значения вниз начиная с текущей строки
-    while (rowToMove) {
-        const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
-        rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
-        previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
-        rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
-    }
-}
-
-
  // Обрабатываем нажатие клавиш
 
 textarea.addEventListener('keydown', function(event) {
@@ -835,19 +866,44 @@ textarea.addEventListener('keydown', function(event) {
         const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
         const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-        const currentRow = cell.parentElement; // Текущая строка
-        const nextRow = currentRow.nextElementSibling; // Следующая строка
-        
+        let currentRow = cell.parentElement; // Текущая строка
+        let nextRow = currentRow.nextElementSibling; // Следующая строка
+
         // Оставляем текст до курсора в текущей ячейке
         cell.textContent = textBeforeCursor;
         
+	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
+
+		
         // Сдвигаем строки вниз
-        shiftCellsDown(currentRow);
-        
+    		currentRow.cells[2].textContent = '1';
+console.log('nextrow');
+		
         // Помещаем текст после курсора в следующую строку, в третью ячейку
-        if (nextRow) {
-            nextRow.cells[2].textContent = textAfterCursor;
+        if (currentRow) {
+            currentRow.cells[2].textContent = '3';
         }
+		 previousRow = currentRow.previousElementSibling; // Предыдущая строка
+		 
+				currentRow.cells[2].textContent = textAfterCursor;
+		
+		      currentRow = cell.parentElement; // Текущая строка
+         nextRow = currentRow.nextElementSibling; // Следующая строка
+
+		    
+        
+		    let rowToMove = currentRow;
+    let previousContent = ''; // временная переменная для хранения данных
+    
+    // Сдвигаем значения вниз начиная с текущей строки
+    while (rowToMove) {
+        const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
+        rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
+        previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
+        rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
+    }
+		
+		
         
         // Завершаем редактирование
         finishEditing();
@@ -1460,6 +1516,7 @@ document.querySelectorAll('button[data-template]').forEach(function(button) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
         loadText();
+		loadAndCheckRanges();
     });
 </script>
 

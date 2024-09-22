@@ -868,7 +868,6 @@ textarea.addEventListener('keydown', function(event) {
 
         let currentRow = cell.parentElement; // Текущая строка
         let nextRow = currentRow.nextElementSibling; // Следующая строка
-        let previousRow = currentRow.previousElementSibling; // Предыдущая строка
 
         // Оставляем текст до курсора в текущей ячейке
         cell.textContent = textBeforeCursor;
@@ -881,7 +880,9 @@ console.log('nextrow');
         if (currentRow) {
             currentRow.cells[2].textContent = textAfterCursor;
         }
-				currentRow.cells[2].textContent += 'cmon';
+		 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
+		 
+				previousRow.cells[2].textContent = textBeforeCursor;
 		
 		      currentRow = cell.parentElement; // Текущая строка
          nextRow = currentRow.nextElementSibling; // Следующая строка

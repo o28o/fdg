@@ -500,6 +500,8 @@ console.log(url);
 </script>
 
 <script>
+ document.addEventListener('DOMContentLoaded', function() {
+	 
 function loadText() {
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
@@ -603,7 +605,7 @@ if (indexValue.includes("sn")) {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
   //    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
-console.log(url);
+//console.log(url);
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -862,6 +864,7 @@ function updateSingleTranslationRow(cell) {
     })
     .catch(error => console.error('Error fetching data:', error.message));
 }
+  });
 </script>
 
 
@@ -869,8 +872,6 @@ function updateSingleTranslationRow(cell) {
 
 
  // Функция для перемещения курсора в нужную строку textarea
-document.addEventListener('DOMContentLoaded', function() {
-  // Ваш код, который зависит от загрузки DOM
   function moveCursorToLine(lineNumber) {
     const translationInput = document.getElementById('translationinput'); // textarea
 
@@ -892,7 +893,6 @@ document.addEventListener('DOMContentLoaded', function() {
     translationInput.focus();
     translationInput.setSelectionRange(position, position);
   }
-});
 
 
 

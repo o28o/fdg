@@ -572,6 +572,8 @@ cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…])\d+\b/g, '$1
 
 }
 
+cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
+
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {
         const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
@@ -614,7 +616,7 @@ console.log(url);
       tableBody.innerHTML = '';
 
       const dataArray = Object.entries(data);
-
+	  let rowCounter = 0; // Счётчик для строк
       dataArray.forEach(([key, value], index) => {
         const translationLine = translationLines[index] || '';
         const texts = translationLine.split('\n');
@@ -622,14 +624,39 @@ console.log(url);
         texts.forEach((text, textIndex) => {
           const currentText = texts[textIndex] || '';
 
+      rowCounter++;
           const row = `<tr>
-                        <td>${value}</td>
+                        <td data-linenumber="${rowCounter}">${value}</td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;
           tableBody.innerHTML += row;
         });
       });
+
+
+ // Обработчик клика для перемещения курсора при нажатии на строку с пали текстом
+  tableBody.addEventListener('click', function(event) {
+    const target = event.target;
+
+    // Проверяем, что клик произошел по ячейке с data-linenumber
+    if (target.tagName === 'TD' && target.hasAttribute('data-linenumber')) {
+      const lineNumber = parseInt(target.getAttribute('data-linenumber')); // Получаем номер строки
+      const translationInput = document.getElementById('translationinput'); // textarea
+      const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
+      let position = 0;
+
+      // Вычисляем позицию начала строки
+      for (let i = 0; i < lineNumber - 1; i++) {
+        position += lines[i].length + 1; // Учитываем перенос строки (\n)
+      }
+
+      // Устанавливаем фокус и курсор на нужную строку
+      translationInput.focus();
+      translationInput.setSelectionRange(position, position);
+    }
+  });
+
 	  
   
 // новый код 	  

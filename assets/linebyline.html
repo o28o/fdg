@@ -869,28 +869,30 @@ function updateSingleTranslationRow(cell) {
 
 
  // Функция для перемещения курсора в нужную строку textarea
-function moveCursorToLine(lineNumber) {
-  const translationInput = document.getElementById('translationinput'); // textarea
+document.addEventListener('DOMContentLoaded', function() {
+  // Ваш код, который зависит от загрузки DOM
+  function moveCursorToLine(lineNumber) {
+    const translationInput = document.getElementById('translationinput'); // textarea
 
-  // Проверка на существование элемента
-  if (!translationInput) {
-    console.error('Element with ID "translationinput" not found.');
-    return;
+    // Проверка на существование элемента
+    if (!translationInput) {
+      console.error('Element with ID "translationinput" not found.');
+      return;
+    }
+
+    const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
+    let position = 0;
+
+    // Вычисляем позицию начала строки
+    for (let i = 0; i < lineNumber - 1; i++) {
+      position += lines[i].length + 1; // Учитываем перенос строки (\n)
+    }
+
+    // Устанавливаем фокус и курсор на нужную строку
+    translationInput.focus();
+    translationInput.setSelectionRange(position, position);
   }
-
-  const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
-  let position = 0;
-
-  // Вычисляем позицию начала строки
-  for (let i = 0; i < lineNumber - 1; i++) {
-    position += lines[i].length + 1; // Учитываем перенос строки (\n)
-  }
-
-  // Устанавливаем фокус и курсор на нужную строку
-  translationInput.focus();
-  translationInput.setSelectionRange(position, position);
-}
- 
+});
 
 
 

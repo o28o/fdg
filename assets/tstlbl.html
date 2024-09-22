@@ -881,7 +881,7 @@ textarea.addEventListener('keydown', function(event) {
             currentRow.cells[2].textContent = textAfterCursor;
         }
 		
-		cell.textContent = textBeforeCursor;
+		previousRow.cells[2].textContent = textBeforeCursor;
         
 		      currentRow = cell.parentElement; // Текущая строка
          nextRow = currentRow.nextElementSibling; // Следующая строка

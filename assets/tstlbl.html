@@ -866,31 +866,14 @@ textarea.addEventListener('keydown', function(event) {
         const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
         const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-        let currentRow = cell.parentElement; // Текущая строка
-        let nextRow = currentRow.nextElementSibling; // Следующая строка
-
+        const currentRow = cell.parentElement; // Текущая строка
+        const nextRow = currentRow.nextElementSibling; // Следующая строка
+        
         // Оставляем текст до курсора в текущей ячейке
         cell.textContent = textBeforeCursor;
         
-	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
-
-		
         // Сдвигаем строки вниз
-    		currentRow.cells[2].textContent = '1';
-console.log('nextrow');
-		
-        // Помещаем текст после курсора в следующую строку, в третью ячейку
-        if (currentRow) {
-            currentRow.cells[2].textContent = '3';
-        }
-		 previousRow = currentRow.previousElementSibling; // Предыдущая строка
-		 
-				currentRow.cells[2].textContent = textAfterCursor;
-		
-		      currentRow = cell.parentElement; // Текущая строка
-         nextRow = currentRow.nextElementSibling; // Следующая строка
-
-		    
+        
         
 		    let rowToMove = currentRow;
     let previousContent = ''; // временная переменная для хранения данных
@@ -904,6 +887,10 @@ console.log('nextrow');
     }
 		
 		
+        // Помещаем текст после курсора в следующую строку, в третью ячейку
+        if (nextRow) {
+            nextRow.cells[2].textContent = textAfterCursor;
+        }
         
         // Завершаем редактирование
         finishEditing();

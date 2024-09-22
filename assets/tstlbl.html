@@ -862,31 +862,29 @@ textarea.addEventListener('keydown', function(event) {
     event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
     const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-    const textBeforeCursor = textarea.value.slice(0, cursorPosition); // Текст до курсора (без trim)
-    const textAfterCursor = textarea.value.slice(cursorPosition); // Текст после курсора (без trim)
+    const textBeforeCursor = textarea.value.slice(0, cursorPosition); // Текст до курсора
+    const textAfterCursor = textarea.value.slice(cursorPosition); // Текст после курсора
 
     const currentRow = cell.parentElement; // Текущая строка
     const nextRow = currentRow.nextElementSibling; // Следующая строка
     
-    // Оставляем текст до курсора в текущей ячейке
-    cell.textContent = textBeforeCursor;
-
-    // Сдвигаем строки вниз
-    let rowToMove = currentRow;
-    let previousContent = textAfterCursor; // Начальное значение — текст после курсора
+    // Обновляем текст в текущей ячейке до курсора
+    cell.textContent = textBeforeCursor.trim(); // Текст до курсора в текущей строке
     
-    // Цикл для сдвига ячеек вниз
-    while (rowToMove) {
-        // Сохраняем текущее значение в следующую строку
-        const currentContent = rowToMove.cells[2]?.textContent || ''; // текст из третьей ячейки
-        rowToMove.cells[2].textContent = previousContent; // присваиваем сохранённый текст
-        previousContent = currentContent; // обновляем предыдущий текст для следующей строки
-        rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
+    // Если есть следующая строка, перемещаем текст после курсора в следующую строку
+    if (nextRow) {
+        nextRow.cells[2].textContent = textAfterCursor.trim(); // Текст после курсора в следующей строке
+    } else {
+        // Если следующей строки нет, можно добавить новую строку (опционально)
+        const newRow = table.insertRow(); // Добавляем новую строку
+        const newCell = newRow.insertCell(2); // Вставляем ячейку в третью колонку
+        newCell.textContent = textAfterCursor.trim(); // Вставляем текст после курсора в новую строку
     }
     
     // Завершаем редактирование
     finishEditing();
-} 
+}
+
 	}	
 		
 		

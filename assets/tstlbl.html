@@ -957,37 +957,6 @@ function extractIndexValue(data) {
 
 
 <script>
-
-  
-  // Функция для перемещения курсора в нужную строку textarea
-  function moveCursorToLine(lineIndex) {
-    const translationInput = document.getElementById('translationinput'); // textarea
-
-    // Проверка на существование элемента
-    if (!translationInput) {
-      console.error('Element with ID "translationinput" not found.');
-      return;
-    }
-
-    const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
-
-    // Проверяем, что индекс в пределах массива строк
-    if (lineIndex < 0 || lineIndex >= lines.length) {
-      console.error('Line index is out of range.');
-      return;
-    }
-
-    const position = lines.slice(0, lineIndex).join('\n').length + lineIndex; // Позиция перед началом строки
-
-    // Устанавливаем фокус и курсор на нужную строку
-    translationInput.focus();
-    translationInput.setSelectionRange(position, position);
-  }
-
-  // Заполнение textarea тестовыми данными
-  const testTranslation = `Восходящие Наставления 4.21
-Глава
-Сутта`;
   
 
 // Общий обработчик для элементов с id "indexInput" и "languageSelect"
@@ -1014,7 +983,7 @@ function saveInputs() {
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {
-  indexInput.value = localStorage.getItem('indexValue') || '';
+  indexInput.value = localStorage.getItem('indexValue') || 'an4.121';
   translationInput.value = localStorage.getItem('translationValue') || '';
   // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
   lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
@@ -1391,5 +1360,34 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
  <script src="/assets/js/smoothScroll.js" defer></script>
 	
+	
+<script>	
+  
+  // Функция для перемещения курсора в нужную строку textarea
+  function moveCursorToLine(lineIndex) {
+    const translationInput = document.getElementById('translationinput'); // textarea
+
+    // Проверка на существование элемента
+    if (!translationInput) {
+      console.error('Element with ID "translationinput" not found.');
+      return;
+    }
+
+    const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
+
+    // Проверяем, что индекс в пределах массива строк
+    if (lineIndex < 0 || lineIndex >= lines.length) {
+      console.error('Line index is out of range.');
+      return;
+    }
+
+    const position = lines.slice(0, lineIndex).join('\n').length + lineIndex; // Позиция перед началом строки
+
+    // Устанавливаем фокус и курсор на нужную строку
+    translationInput.focus();
+    translationInput.setSelectionRange(position, position);
+  }
+	
+</script>	
 </body>
 </html>

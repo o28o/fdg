@@ -173,6 +173,25 @@ table td {
   cursor: pointer;
 }
 	
+	
+	.resizable {
+  resize: horizontal; /* Позволяет изменять ширину */
+  overflow: auto; /* Показывает скроллбар, если нужно */
+  min-width: 100px; /* Минимальная ширина ячейки */
+}
+
+th {
+  white-space: nowrap; /* Запрещает перенос текста */
+  padding: 5px;
+}
+
+table {
+  width: 100%; /* Таблица занимает всю доступную ширину */
+}
+
+.table-hover th {
+  text-align: left; /* Выравнивание текста по левому краю */
+}
 </style>
 </head>
 <body>
@@ -426,9 +445,9 @@ table td {
   <table class=" table-hover">
     <thead>
       <tr>
-        <th>Текст</th>
-        <th>Индексы</th>
-        <th>Перевод</th>
+        <th class="resizable">Текст</th>
+        <th class="resizable">Индексы</th>
+        <th class="resizable">Перевод</th>
       </tr>
     </thead>
     <tbody id="outputTableBody"></tbody>

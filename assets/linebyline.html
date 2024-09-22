@@ -868,10 +868,16 @@ function updateSingleTranslationRow(cell) {
 <script>
 
 
- // Обработчик клика для перемещения курсора при нажатии на строку с пали текстом
-// Функция для перемещения курсора в нужную строку textarea
+ // Функция для перемещения курсора в нужную строку textarea
 function moveCursorToLine(lineNumber) {
   const translationInput = document.getElementById('translationinput'); // textarea
+
+  // Проверка на существование элемента
+  if (!translationInput) {
+    console.error('Element with ID "translationinput" not found.');
+    return;
+  }
+
   const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
   let position = 0;
 
@@ -884,7 +890,7 @@ function moveCursorToLine(lineNumber) {
   translationInput.focus();
   translationInput.setSelectionRange(position, position);
 }
-	  
+ 
 
 
 

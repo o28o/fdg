@@ -872,21 +872,19 @@ textarea.addEventListener('keydown', function(event) {
         // Оставляем текст до курсора в текущей ячейке
         cell.textContent = textBeforeCursor;
         
-	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
 
 		
         // Сдвигаем строки вниз
-    		currentRow.cells[2].textContent = '1';
-console.log('nextrow');
-		
+   
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (currentRow) {
-            currentRow.cells[2].textContent = '3';
-        }
-		 previousRow = currentRow.previousElementSibling; // Предыдущая строка
-		 
 				currentRow.cells[2].textContent = textAfterCursor;
-		
+        }
+		         finishEditing();
+	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
+
+						previousRow.cells[2].textContent = '222';
+
 		      currentRow = cell.parentElement; // Текущая строка
          nextRow = currentRow.nextElementSibling; // Следующая строка
 
@@ -906,7 +904,6 @@ console.log('nextrow');
 		
         
         // Завершаем редактирование
-        finishEditing();
     } 
 	}	
 		

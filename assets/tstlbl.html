@@ -958,10 +958,6 @@ function extractIndexValue(data) {
 
 <script>
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log(document.getElementById('translationinput')); // Проверка, что элемент найден
-
-  });
   
   // Функция для перемещения курсора в нужную строку textarea
   function moveCursorToLine(lineIndex) {
@@ -993,14 +989,6 @@ document.addEventListener('DOMContentLoaded', function() {
 Глава
 Сутта`;
   
-document.getElementById('translationinput').value = testTranslation;
-</script>
-
-
-
-
-<script>
-
 
 // Общий обработчик для элементов с id "indexInput" и "languageSelect"
 document.addEventListener('keydown', function(event) {
@@ -1391,6 +1379,10 @@ document.querySelectorAll('button[data-template]').forEach(function(button) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
         loadText();
+		
+    console.log(document.getElementById('translationinput')); // Проверка, что элемент найден
+    console.log('after translationInput'); 
+
     });
 </script>
 

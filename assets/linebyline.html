@@ -213,10 +213,12 @@ table td {
    
    <div >
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
-    <input  style="width: 150px;" type="search" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
+    <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
    
         <div id="checkResult" style="margin-top: 10px;"></div>
 </div>
+
+
 
 <script>
     // Функция для загрузки данных и проверки индекса
@@ -275,7 +277,7 @@ table td {
     }
 
     // Вызов функции для загрузки и проверки данных
-    loadAndCheckRanges();
+  
 </script>
 
 <div class="input-group-append ms-1">

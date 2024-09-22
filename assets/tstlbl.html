@@ -214,7 +214,69 @@ table td {
    <div >
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
     <input  style="width: 150px;" type="search" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
+   
+        <div id="checkResult" style="margin-top: 10px;"></div>
 </div>
+
+<script>
+    // Функция для загрузки данных и проверки индекса
+    function loadAndCheckRanges() {
+        fetch('/sc/reader-rus-translations.js')
+            .then(response => response.text())
+            .then(data => {
+                // Извлечение переменных из текста файла
+                const regex = /let (\w+) = \[([\s\S]+?)\];/g;
+                let match;
+                let variables = {};
+
+                while ((match = regex.exec(data)) !== null) {
+                    let varName = match[1];
+                    let varValues = match[2].replace(/\s+/g, '').split(',');
+                    variables[varName] = varValues;
+                }
+
+                // Обработка ввода пользователя
+                document.getElementById('indexInput').addEventListener('input', function () {
+                    const inputValue = this.value.trim().toLowerCase();
+                    let resultMessage = '';
+
+                    // Проверка наличия индекса в каждом из диапазонов
+                    if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
+                        resultMessage += 'AN: ✅<br>';
+                    } else {
+                        resultMessage += 'AN: ❌<br>';
+                    }
+
+                    if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
+                        resultMessage += 'SN: ✅<br>';
+                    } else {
+                        resultMessage += 'SN: ❌<br>';
+                    }
+
+                    if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
+                        resultMessage += 'MN: ✅<br>';
+                    } else {
+                        resultMessage += 'MN: ❌<br>';
+                    }
+
+                    if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
+                        resultMessage += 'DN: ✅<br>';
+                    } else {
+                        resultMessage += 'DN: ❌<br>';
+                    }
+
+                    // Отображение результата
+                    document.getElementById('checkResult').innerHTML = resultMessage;
+                });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке файла:', error);
+            });
+    }
+
+    // Вызов функции для загрузки и проверки данных
+    loadAndCheckRanges();
+</script>
 
 <div class="input-group-append ms-1">
 <!--     <label for="languageSelect">Язык:</label>
@@ -616,7 +678,7 @@ if (indexValue.includes("sn")) {
       tableBody.innerHTML = '';
 
       const dataArray = Object.entries(data);
-	  let rowCounter = 0; // Счётчик для строк
+	 let rowCounter = 0; // Счётчик для строк
       dataArray.forEach(([key, value], index) => {
         const translationLine = translationLines[index] || '';
         const texts = translationLine.split('\n');
@@ -626,9 +688,7 @@ if (indexValue.includes("sn")) {
 
       rowCounter++;
           const row = `<tr>
-		      <td data-linenumber="${rowCounter}">
-                      <a href="#" onclick="moveCursorToLine(${rowCounter}); return false;">${value}</a>
-                    </td>
+						<td data-linenumber="${rowCounter}">${value}</a></td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;
@@ -868,6 +928,7 @@ function updateSingleTranslationRow(cell) {
 <script>
 
 
+
 function loadPrev() {
       
 	 const texttype = 'sutta';
@@ -957,7 +1018,7 @@ function extractIndexValue(data) {
 
 
 <script>
-  
+
 
 // Общий обработчик для элементов с id "indexInput" и "languageSelect"
 document.addEventListener('keydown', function(event) {
@@ -1348,46 +1409,11 @@ document.querySelectorAll('button[data-template]').forEach(function(button) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
         loadText();
-		
-    console.log(document.getElementById('translationinput')); // Проверка, что элемент найден
-    console.log('after translationInput'); 
-
     });
 </script>
-
-
 
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
  <script src="/assets/js/smoothScroll.js" defer></script>
 	
-	
-<script>	
-  
-  // Функция для перемещения курсора в нужную строку textarea
-  function moveCursorToLine(lineIndex) {
-    const translationInput = document.getElementById('translationinput'); // textarea
-
-    // Проверка на существование элемента
-    if (!translationInput) {
-      console.error('Element with ID "translationinput" not found.');
-      return;
-    }
-
-    const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
-
-    // Проверяем, что индекс в пределах массива строк
-    if (lineIndex < 0 || lineIndex >= lines.length) {
-      console.error('Line index is out of range.');
-      return;
-    }
-
-    const position = lines.slice(0, lineIndex).join('\n').length + lineIndex; // Позиция перед началом строки
-
-    // Устанавливаем фокус и курсор на нужную строку
-    translationInput.focus();
-    translationInput.setSelectionRange(position, position);
-  }
-	
-</script>	
 </body>
 </html>

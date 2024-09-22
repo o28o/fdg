@@ -214,7 +214,66 @@ table td {
    <div >
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
     <input  style="width: 150px;" type="search" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
+   
+        <div id="checkResult" style="margin-top: 10px;"></div>
 </div>
+
+
+<script>
+    // Загрузка файла и обработка его содержимого
+    fetch('/sc/reader-rus-translations.js')
+        .then(response => response.text())
+        .then(data => {
+            // Извлечение переменных из текста файла
+            const regex = /let (\w+) = ([\s\S]+?);/g;
+            let match;
+            let variables = {};
+
+            while ((match = regex.exec(data)) !== null) {
+                let varName = match[1];
+                let varValues = match[2].replace(/\s+/g, '').split(',');
+                variables[varName] = varValues;
+            }
+
+            // Обработка ввода пользователя
+            document.getElementById('indexInput').addEventListener('input', function () {
+                const inputValue = this.value.trim().toLowerCase();
+                let resultMessage = '';
+
+                // Проверка наличия индекса в каждом из диапазонов
+                if (variables['anranges'].includes(inputValue)) {
+                    resultMessage += 'AN: ✅<br>';
+                } else {
+                    resultMessage += 'AN: ❌<br>';
+                }
+
+                if (variables['snranges'].includes(inputValue)) {
+                    resultMessage += 'SN: ✅<br>';
+                } else {
+                    resultMessage += 'SN: ❌<br>';
+                }
+
+                if (variables['mnranges'].includes(inputValue)) {
+                    resultMessage += 'MN: ✅<br>';
+                } else {
+                    resultMessage += 'MN: ❌<br>';
+                }
+
+                if (variables['dnranges'].includes(inputValue)) {
+                    resultMessage += 'DN: ✅<br>';
+                } else {
+                    resultMessage += 'DN: ❌<br>';
+                }
+
+                // Отображение результата
+                document.getElementById('checkResult').innerHTML = resultMessage;
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching file:', error);
+        });
+</script>
+
 
 <div class="input-group-append ms-1">
 <!--     <label for="languageSelect">Язык:</label>
@@ -982,7 +1041,7 @@ function saveInputs() {
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {
-  indexInput.value = localStorage.getItem('indexValue') || '';
+  indexInput.value = localStorage.getItem('indexValue') || 'an4.121';
   translationInput.value = localStorage.getItem('translationValue') || '';
   // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
   lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
@@ -1350,7 +1409,62 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 </script>
 
+<script>
+        // Загрузка файла и обработка его содержимого
+        fetch('/sc/reader-rus-translations.js')
+            .then(response => response.text())
+            .then(data => {
+                // Извлечение переменных из текста файла
+                const regex = /let (\w+) = \[([\s\S]+?)\];/g;
+                let match;
+                let variables = {};
 
+                while ((match = regex.exec(data)) !== null) {
+                    let varName = match[1];
+                    let varValues = match[2].replace(/\s+/g, '').split(',');
+                    variables[varName] = varValues;
+                }
+
+                // Вывод переменных anranges и snranges как списки
+                const anList = document.getElementById('anRanges');
+                const snList = document.getElementById('snRanges');
+
+                variables['anranges'].forEach(range => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = range;
+                    anList.appendChild(listItem);
+                });
+
+                variables['snranges'].forEach(range => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = range;
+                    snList.appendChild(listItem);
+                });
+
+                // Вывод переменных mnranges и dnranges как списки
+                const mnList = document.getElementById('mnRanges');
+                const dnList = document.getElementById('dnRanges');
+
+                variables['mnranges'].forEach(range => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = range;
+                    mnList.appendChild(listItem);
+                });
+
+                variables['dnranges'].forEach(range => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = range;
+                    dnList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching file:', error);
+            });
+    </script>  
+  
+  
+  
+</script>
 
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
  <script src="/assets/js/smoothScroll.js" defer></script>

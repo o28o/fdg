@@ -869,6 +869,9 @@ textarea.addEventListener('keydown', function(event) {
         let currentRow = cell.parentElement; // Текущая строка
         let nextRow = currentRow.nextElementSibling; // Следующая строка
 
+        currentRow = cell.parentElement; // Текущая строка
+				currentRow.cells[2].textContent = textBeforeCursor;
+
       
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (nextRow) {
@@ -876,8 +879,6 @@ textarea.addEventListener('keydown', function(event) {
         }
 		         finishEditing();
         currentRow = cell.parentElement; // Текущая строка
-
-				currentRow.cells[2].textContent = textBeforeCursor;
 
    
 		    let rowToMove = currentRow;

@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список готовых Сутт</title>
     <style>
-        ul {
+         ul {
             list-style-type: none; /* Убираем стандартную маркерную точку */
             padding-left: 0; /* Убираем отступ слева у списка */
+   
         }
 
         li::before {
             content: ""; /* Убираем содержание маркера */
         }
+		
+		  ul li {
+        display: inline; /* Делает элементы списка горизонтальными */
+        margin-right: 10px; /* Добавляет отступ между элементами */
+    }
     </style>
 </head>
 <body>

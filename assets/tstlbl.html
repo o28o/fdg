@@ -881,14 +881,17 @@ textarea.addEventListener('keydown', function(event) {
 				currentRow.cells[2].textContent = textAfterCursor;
         }
 		         finishEditing();
+        currentRow = cell.parentElement; // Текущая строка
+	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
 
-						currentRow.cells[2].textContent = '222';
+				previousRow.cells[2].textContent = '22222';
+
 
 		      currentRow = cell.parentElement; // Текущая строка
          nextRow = currentRow.nextElementSibling; // Следующая строка
 
 		    
-        
+   /*     
 		    let rowToMove = currentRow;
     let previousContent = ''; // временная переменная для хранения данных
     
@@ -900,7 +903,7 @@ textarea.addEventListener('keydown', function(event) {
         rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
     }
 		
-		
+	*/	
         
         // Завершаем редактирование
     } 

@@ -637,24 +637,7 @@ console.log(url);
       });
 
 
- // Обработчик клика для перемещения курсора при нажатии на строку с пали текстом
-// Функция для перемещения курсора в нужную строку textarea
-function moveCursorToLine(lineNumber) {
-  const translationInput = document.getElementById('translationinput'); // textarea
-  const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
-  let position = 0;
-
-  // Вычисляем позицию начала строки
-  for (let i = 0; i < lineNumber - 1; i++) {
-    position += lines[i].length + 1; // Учитываем перенос строки (\n)
-  }
-
-  // Устанавливаем фокус и курсор на нужную строку
-  translationInput.focus();
-  translationInput.setSelectionRange(position, position);
-}
 	  
-  
 // новый код 	  
 
 // Добавляем обработчик клика на таблицу
@@ -883,6 +866,27 @@ function updateSingleTranslationRow(cell) {
 
 
 <script>
+
+
+ // Обработчик клика для перемещения курсора при нажатии на строку с пали текстом
+// Функция для перемещения курсора в нужную строку textarea
+function moveCursorToLine(lineNumber) {
+  const translationInput = document.getElementById('translationinput'); // textarea
+  const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
+  let position = 0;
+
+  // Вычисляем позицию начала строки
+  for (let i = 0; i < lineNumber - 1; i++) {
+    position += lines[i].length + 1; // Учитываем перенос строки (\n)
+  }
+
+  // Устанавливаем фокус и курсор на нужную строку
+  translationInput.focus();
+  translationInput.setSelectionRange(position, position);
+}
+	  
+
+
 
 function loadPrev() {
       

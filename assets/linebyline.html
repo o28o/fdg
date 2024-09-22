@@ -975,11 +975,10 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-                	        const inputField = document.getElementById('indexInput');
-				  inputField.value = newIndexValue; // Замените это на логику для следующего 
+            const inputField = document.getElementById('indexInput');
+			inputField.value = newIndexValue; // Замените это на логику для следующего 
 			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
-	  
-			}
+	 		}
 
             // Вызываем loadText() для обновления данных
             loadText();
@@ -1019,11 +1018,11 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-				        const inputField = document.getElementById('indexInput');
-				  inputField.value = newIndexValue; // Замените это на логику для следующего текста
+		    const inputField = document.getElementById('indexInput');
+			inputField.value = newIndexValue; // Замените это на логику для следующего 
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
             }
 
-			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
             // Вызываем loadText() для обновления данных
             loadText();
 

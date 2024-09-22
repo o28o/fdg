@@ -878,13 +878,13 @@ currentRow.cells[2].textContent = 'beforeCurs';
    
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (nextRow) {
-				nextRow.cells[2].textContent = '3333';
+				nextRow.cells[2].textContent = textAfterCursor;
         }
 		         finishEditing();
         currentRow = cell.parentElement; // Текущая строка
 	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
 
-				currentRow.cells[2].textContent = '22222';
+				currentRow.cells[2].textContent = textBeforeCursor;
 
 
 		      currentRow = cell.parentElement; // Текущая строка

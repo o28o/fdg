@@ -219,13 +219,15 @@ table td {
 </div>
 
 
-
 <script>
     // Функция для загрузки данных и проверки индекса
     function loadAndCheckRanges() {
         fetch('/sc/reader-rus-translations.js')
             .then(response => response.text())
             .then(data => {
+                // Лог данных из файла
+                console.log('Загруженные данные:', data);
+
                 // Извлечение переменных из текста файла
                 const regex = /let (\w+) = \[([\s\S]+?)\];/g;
                 let match;
@@ -237,33 +239,46 @@ table td {
                     variables[varName] = varValues;
                 }
 
+                // Лог переменных после извлечения
+                console.log('Извлеченные переменные:', variables);
+
                 // Обработка ввода пользователя
                 document.getElementById('indexInput').addEventListener('input', function () {
                     const inputValue = this.value.trim().toLowerCase();
+                    console.log('Введенное значение:', inputValue);  // Лог введенного значения
+
                     let resultMessage = '';
 
                     // Проверка наличия индекса в каждом из диапазонов
                     if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
+                        console.log('Найден в anranges:', inputValue);  // Лог при нахождении в anranges
                         resultMessage += 'AN: ✅<br>';
                     } else {
+                        console.log('Не найден в anranges:', inputValue);  // Лог при отсутствии в anranges
                         resultMessage += 'AN: ❌<br>';
                     }
 
                     if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
+                        console.log('Найден в snranges:', inputValue);  // Лог при нахождении в snranges
                         resultMessage += 'SN: ✅<br>';
                     } else {
+                        console.log('Не найден в snranges:', inputValue);  // Лог при отсутствии в snranges
                         resultMessage += 'SN: ❌<br>';
                     }
 
                     if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
+                        console.log('Найден в mnranges:', inputValue);  // Лог при нахождении в mnranges
                         resultMessage += 'MN: ✅<br>';
                     } else {
+                        console.log('Не найден в mnranges:', inputValue);  // Лог при отсутствии в mnranges
                         resultMessage += 'MN: ❌<br>';
                     }
 
                     if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
+                        console.log('Найден в dnranges:', inputValue);  // Лог при нахождении в dnranges
                         resultMessage += 'DN: ✅<br>';
                     } else {
+                        console.log('Не найден в dnranges:', inputValue);  // Лог при отсутствии в dnranges
                         resultMessage += 'DN: ❌<br>';
                     }
 
@@ -277,7 +292,7 @@ table td {
     }
 
     // Вызов функции для загрузки и проверки данных
-  
+    loadAndCheckRanges();
 </script>
 
 <div class="input-group-append ms-1">

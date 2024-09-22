@@ -860,36 +860,26 @@ textarea.addEventListener('keydown', function(event) {
                 }
             } else {
 		
-        event.preventDefault(); // Предотвращаем стандартное поведение Enter
+ event.preventDefault(); // Предотвращаем стандартное поведение Enter
         
         const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
         const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
         const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-        let currentRow = cell.parentElement; // Текущая строка
-        let nextRow = currentRow.nextElementSibling; // Следующая строка
-
-        // Оставляем текст до курсора в текущей ячейке
+        const currentRow = cell.parentElement; // Текущая строка
+        const nextRow = currentRow.nextElementSibling; // Следующая строка
         
-	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
-        previousRow.cells[2].textContent = textBeforeCursor;
-
-		
+        // Оставляем текст до курсора в текущей ячейке
+        cell.textContent = textBeforeCursor;
+        
         // Сдвигаем строки вниз
-console.log('nextRow');
-		
+        shiftCellsDown(currentRow);
+        
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (nextRow) {
-            nextRow.cells[2].textContent = '3';
+            nextRow.cells[2].textContent = textAfterCursor;
         }
-		 previousRow = currentRow.previousElementSibling; // Предыдущая строка
-		 
-				//currentRow.cells[2].textContent = textAfterCursor;
-		
-		      currentRow = cell.parentElement; // Текущая строка
-         nextRow = currentRow.nextElementSibling; // Следующая строка
-
-		    
+        	    
         
 		    let rowToMove = currentRow;
     let previousContent = ''; // временная переменная для хранения данных

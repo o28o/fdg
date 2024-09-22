@@ -873,16 +873,16 @@ textarea.addEventListener('keydown', function(event) {
         cell.textContent = textBeforeCursor;
         
         // Сдвигаем строки вниз
-    		nextRow.cells[2].textContent = textBeforeCursor;
+    		nextRow.cells[2].textContent = '1';
 console.log('nextrow');
 		
         // Помещаем текст после курсора в следующую строку, в третью ячейку
         if (currentRow) {
-            currentRow.cells[2].textContent = textAfterCursor;
+            currentRow.cells[2].textContent = '3';
         }
 		 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
 		 
-				previousRow.cells[2].textContent = textBeforeCursor;
+				previousRow.cells[2].textContent = '2';
 		
 		      currentRow = cell.parentElement; // Текущая строка
          nextRow = currentRow.nextElementSibling; // Следующая строка

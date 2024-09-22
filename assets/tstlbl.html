@@ -870,9 +870,9 @@ textarea.addEventListener('keydown', function(event) {
         let nextRow = currentRow.nextElementSibling; // Следующая строка
 
         // Оставляем текст до курсора в текущей ячейке
-        currentRow.cells[2].textContent = textBeforeCursor;
         
 	 let previousRow = currentRow.previousElementSibling; // Предыдущая строка
+        previousRow.cells[2].textContent = textBeforeCursor;
 
 		
         // Сдвигаем строки вниз

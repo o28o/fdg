@@ -626,7 +626,9 @@ console.log(url);
 
       rowCounter++;
           const row = `<tr>
-                        <td data-linenumber="${rowCounter}">${value}</td>
+		      <td data-linenumber="${rowCounter}">
+                      <a href="#" onclick="moveCursorToLine(${rowCounter}); return false;">${value}</a>
+                    </td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;
@@ -636,27 +638,21 @@ console.log(url);
 
 
  // Обработчик клика для перемещения курсора при нажатии на строку с пали текстом
-  tableBody.addEventListener('click', function(event) {
-    const target = event.target;
+// Функция для перемещения курсора в нужную строку textarea
+function moveCursorToLine(lineNumber) {
+  const translationInput = document.getElementById('translationinput'); // textarea
+  const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
+  let position = 0;
 
-    // Проверяем, что клик произошел по ячейке с data-linenumber
-    if (target.tagName === 'TD' && target.hasAttribute('data-linenumber')) {
-      const lineNumber = parseInt(target.getAttribute('data-linenumber')); // Получаем номер строки
-      const translationInput = document.getElementById('translationinput'); // textarea
-      const lines = translationInput.value.split('\n'); // Разбиваем текст по строкам
-      let position = 0;
+  // Вычисляем позицию начала строки
+  for (let i = 0; i < lineNumber - 1; i++) {
+    position += lines[i].length + 1; // Учитываем перенос строки (\n)
+  }
 
-      // Вычисляем позицию начала строки
-      for (let i = 0; i < lineNumber - 1; i++) {
-        position += lines[i].length + 1; // Учитываем перенос строки (\n)
-      }
-
-      // Устанавливаем фокус и курсор на нужную строку
-      translationInput.focus();
-      translationInput.setSelectionRange(position, position);
-    }
-  });
-
+  // Устанавливаем фокус и курсор на нужную строку
+  translationInput.focus();
+  translationInput.setSelectionRange(position, position);
+}
 	  
   
 // новый код 	  

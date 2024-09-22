@@ -975,13 +975,15 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-                document.getElementById('indexInput').value = newIndexValue;
-            }
+                	        const inputField = document.getElementById('indexInput');
+				  inputField.value = newIndexValue; // Замените это на логику для следующего 
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+	  
+			}
 
             // Вызываем loadText() для обновления данных
             loadText();
-					        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
-
+					        
         })
         .catch(error => {
             console.error('Error fetching prev data:', error);
@@ -1017,10 +1019,11 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-                document.getElementById('indexInput').value = newIndexValue;
+				        const inputField = document.getElementById('indexInput');
+				  inputField.value = newIndexValue; // Замените это на логику для следующего текста
             }
 
-					        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
             // Вызываем loadText() для обновления данных
             loadText();
 
@@ -1030,6 +1033,8 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+            
         });
 		
 

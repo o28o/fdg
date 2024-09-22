@@ -215,8 +215,90 @@ table td {
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
     <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
    
-        <div id="checkResult" style="margin-top: 10px;"></div>
 </div>
+
+<script>
+    // Функция для загрузки данных и проверки индекса
+    function loadAndCheckRanges() {
+        fetch('/sc/reader-rus-translations.js')
+            .then(response => response.text())
+            .then(data => {
+                // Извлечение переменных из текста файла
+                const regex = /let (\w+) = \[([\s\S]+?)\];/g;
+                let match;
+                let variables = {};
+
+                while ((match = regex.exec(data)) !== null) {
+                    let varName = match[1];
+                    let varValues = match[2].replace(/\s+/g, '').split(',').map(val => val.replace(/['"]/g, ''));
+                    variables[varName] = varValues;
+                }
+
+                // Лог извлеченных переменных
+                console.log('Извлеченные переменные:', variables);
+
+                // Обработка ввода пользователя
+                document.getElementById('indexInput').addEventListener('input', function () {
+                    const inputValue = this.value.trim().toLowerCase();
+                    console.log('Введенное значение:', inputValue);
+
+                    let resultMessage = '<i class="fa-solid fa-triangle-exclamation"></i>✅Уже есть!';
+
+                    // Проверка, какой тип текста введен (по префиксу)
+                    if (inputValue.startsWith('an')) {
+                        // Проверка в anranges
+                        if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
+                            console.log('Найден в anranges:', inputValue);
+                            
+                        } else {
+                            console.log('Не найден в anranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('sn')) {
+                        // Проверка в snranges
+                        if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
+                            console.log('Найден в snranges:', inputValue);
+                            
+                        } else {
+                            console.log('Не найден в snranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('mn')) {
+                        // Проверка в mnranges
+                        if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
+                            console.log('Найден в mnranges:', inputValue);
+                           
+                        } else {
+                            console.log('Не найден в mnranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('dn')) {
+                        // Проверка в dnranges
+                        if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
+                            console.log('Найден в dnranges:', inputValue);
+                          
+                        } else {
+                            console.log('Не найден в dnranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else {
+                        resultMessage = 'Неизвестный префикс.';
+                    }
+
+                    // Отображение результата
+                    document.getElementById('checkResult').innerHTML = resultMessage;
+                });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке файла:', error);
+            });
+    }
+
+    // Вызов функции для загрузки и проверки данных
+    loadAndCheckRanges();
+</script>
+
+
 
 <div class="input-group-append ms-1">
 <!--     <label for="languageSelect">Язык:</label>
@@ -226,7 +308,7 @@ table td {
     </select>
   </div>
   
-  
+     <div class="input-group-append ms-1" id="checkResult" style="margin-top: 10px;"></div>
 
   
             </div>

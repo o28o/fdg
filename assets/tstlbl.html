@@ -215,9 +215,7 @@ table td {
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
     <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
    
-        <div id="checkResult" style="margin-top: 10px;"></div>
 </div>
-
 
 <script>
     // Функция для загрузки данных и проверки индекса
@@ -225,9 +223,6 @@ table td {
         fetch('/sc/reader-rus-translations.js')
             .then(response => response.text())
             .then(data => {
-                // Лог данных из файла
-                console.log('Загруженные данные:', data);
-
                 // Извлечение переменных из текста файла
                 const regex = /let (\w+) = \[([\s\S]+?)\];/g;
                 let match;
@@ -235,51 +230,59 @@ table td {
 
                 while ((match = regex.exec(data)) !== null) {
                     let varName = match[1];
-                    let varValues = match[2].replace(/\s+/g, '').split(',');
+                    let varValues = match[2].replace(/\s+/g, '').split(',').map(val => val.replace(/['"]/g, ''));
                     variables[varName] = varValues;
                 }
 
-                // Лог переменных после извлечения
+                // Лог извлеченных переменных
                 console.log('Извлеченные переменные:', variables);
 
                 // Обработка ввода пользователя
                 document.getElementById('indexInput').addEventListener('input', function () {
                     const inputValue = this.value.trim().toLowerCase();
-                    console.log('Введенное значение:', inputValue);  // Лог введенного значения
+                    console.log('Введенное значение:', inputValue);
 
-                    let resultMessage = '';
+                    let resultMessage = '<i class="fa-solid fa-triangle-exclamation"></i>✅Уже есть!';
 
-                    // Проверка наличия индекса в каждом из диапазонов
-                    if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
-                        console.log('Найден в anranges:', inputValue);  // Лог при нахождении в anranges
-                        resultMessage += 'AN: ✅<br>';
+                    // Проверка, какой тип текста введен (по префиксу)
+                    if (inputValue.startsWith('an')) {
+                        // Проверка в anranges
+                        if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
+                            console.log('Найден в anranges:', inputValue);
+                            
+                        } else {
+                            console.log('Не найден в anranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('sn')) {
+                        // Проверка в snranges
+                        if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
+                            console.log('Найден в snranges:', inputValue);
+                            
+                        } else {
+                            console.log('Не найден в snranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('mn')) {
+                        // Проверка в mnranges
+                        if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
+                            console.log('Найден в mnranges:', inputValue);
+                           
+                        } else {
+                            console.log('Не найден в mnranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('dn')) {
+                        // Проверка в dnranges
+                        if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
+                            console.log('Найден в dnranges:', inputValue);
+                          
+                        } else {
+                            console.log('Не найден в dnranges:', inputValue);
+                            resultMessage = '';
+                        }
                     } else {
-                        console.log('Не найден в anranges:', inputValue);  // Лог при отсутствии в anranges
-                        resultMessage += 'AN: ❌<br>';
-                    }
-
-                    if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
-                        console.log('Найден в snranges:', inputValue);  // Лог при нахождении в snranges
-                        resultMessage += 'SN: ✅<br>';
-                    } else {
-                        console.log('Не найден в snranges:', inputValue);  // Лог при отсутствии в snranges
-                        resultMessage += 'SN: ❌<br>';
-                    }
-
-                    if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
-                        console.log('Найден в mnranges:', inputValue);  // Лог при нахождении в mnranges
-                        resultMessage += 'MN: ✅<br>';
-                    } else {
-                        console.log('Не найден в mnranges:', inputValue);  // Лог при отсутствии в mnranges
-                        resultMessage += 'MN: ❌<br>';
-                    }
-
-                    if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
-                        console.log('Найден в dnranges:', inputValue);  // Лог при нахождении в dnranges
-                        resultMessage += 'DN: ✅<br>';
-                    } else {
-                        console.log('Не найден в dnranges:', inputValue);  // Лог при отсутствии в dnranges
-                        resultMessage += 'DN: ❌<br>';
+                        resultMessage = 'Неизвестный префикс.';
                     }
 
                     // Отображение результата
@@ -295,6 +298,8 @@ table td {
     loadAndCheckRanges();
 </script>
 
+
+
 <div class="input-group-append ms-1">
 <!--     <label for="languageSelect">Язык:</label>
  -->    <select title="Язык исходного файла" class="form-select input-sm" id="languageSelect">
@@ -303,7 +308,7 @@ table td {
     </select>
   </div>
   
-  
+     <div class="input-group-append ms-1" id="checkResult" style="margin-top: 10px;"></div>
 
   
             </div>

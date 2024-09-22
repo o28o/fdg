@@ -876,7 +876,6 @@ textarea.addEventListener('keydown', function(event) {
 
 		
         // Сдвигаем строки вниз
-    		currentRow.cells[2].textContent = '1';
 console.log('nextrow');
 		
         // Помещаем текст после курсора в следующую строку, в третью ячейку
@@ -885,7 +884,7 @@ console.log('nextrow');
         }
 		 previousRow = currentRow.previousElementSibling; // Предыдущая строка
 		 
-				currentRow.cells[2].textContent = textAfterCursor;
+				//currentRow.cells[2].textContent = textAfterCursor;
 		
 		      currentRow = cell.parentElement; // Текущая строка
          nextRow = currentRow.nextElementSibling; // Следующая строка

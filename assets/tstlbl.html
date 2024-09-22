@@ -867,15 +867,15 @@ textarea.addEventListener('keydown', function(event) {
 
     const currentRow = cell.parentElement; // Текущая строка
     const nextRow = currentRow.nextElementSibling; // Следующая строка
-    
+
     // Обновляем текст в текущей ячейке до курсора
-    cell.textContent = textBeforeCursor.trim(); // Текст до курсора в текущей строке
+    cell.textContent = textBeforeCursor.trim(); // Оставляем текст до курсора в текущей ячейке
     
-    // Если есть следующая строка, перемещаем текст после курсора в следующую строку
+    // Если есть следующая строка, перемещаем текст после курсора туда
     if (nextRow) {
-        nextRow.cells[2].textContent = textAfterCursor.trim(); // Текст после курсора в следующей строке
+        nextRow.cells[2].textContent = textAfterCursor.trim(); // Текст после курсора в следующую строку
     } else {
-        // Если следующей строки нет, можно добавить новую строку (опционально)
+        // Если следующей строки нет, можно добавить новую строку
         const newRow = table.insertRow(); // Добавляем новую строку
         const newCell = newRow.insertCell(2); // Вставляем ячейку в третью колонку
         newCell.textContent = textAfterCursor.trim(); // Вставляем текст после курсора в новую строку

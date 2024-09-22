@@ -957,6 +957,12 @@ function extractIndexValue(data) {
 
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log(document.getElementById('translationinput')); // Проверка, что элемент найден
+
+  });
+  
   // Функция для перемещения курсора в нужную строку textarea
   function moveCursorToLine(lineIndex) {
     const translationInput = document.getElementById('translationinput'); // textarea

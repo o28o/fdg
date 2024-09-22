@@ -980,6 +980,8 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Вызываем loadText() для обновления данных
             loadText();
+					        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+
         })
         .catch(error => {
             console.error('Error fetching prev data:', error);
@@ -987,7 +989,6 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
         });
-		        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
 
 }
 
@@ -1019,8 +1020,10 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
                 document.getElementById('indexInput').value = newIndexValue;
             }
 
+					        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
             // Вызываем loadText() для обновления данных
             loadText();
+
         })
         .catch(error => {
             console.error('Error fetching next data:', error);
@@ -1029,7 +1032,6 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
             document.getElementById('indexInput').value = originalValue;
         });
 		
-		        inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
 
 }
 

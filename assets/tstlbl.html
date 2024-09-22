@@ -877,8 +877,8 @@ currentRow.cells[2].textContent = 'beforeCurs';
         // Сдвигаем строки вниз
    
         // Помещаем текст после курсора в следующую строку, в третью ячейку
-        if (currentRow) {
-				currentRow.cells[2].textContent = textAfterCursor;
+        if (nextRow) {
+				nextRow.cells[2].textContent = '3333';
         }
 		         finishEditing();
         currentRow = cell.parentElement; // Текущая строка

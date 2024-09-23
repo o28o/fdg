@@ -422,6 +422,28 @@ table {
   </div>
 </div>
   
+ 
+
+<button onclick="gotoLine(10)">Перейти к строке 10</button>
+
+<script>
+  function gotoLine(lineNumber) {
+    const textarea = document.getElementById('translationInput');
+    const lines = textarea.value.split('\n');
+    
+    let charCount = 0;
+
+    // Подсчитываем количество символов до нужной строки
+    for (let i = 0; i < lineNumber - 1 && i < lines.length; i++) {
+      charCount += lines[i].length + 1; // Учитываем символ новой строки
+    }
+
+    // Устанавливаем курсор на нужную позицию
+    textarea.focus();
+    textarea.setSelectionRange(charCount, charCount);
+  }
+</script>
+ 
 
 
 <div class="input-group mt-2">

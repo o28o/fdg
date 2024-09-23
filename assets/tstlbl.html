@@ -389,6 +389,8 @@ table {
 			
         </div>
     </div>
+<button class="btn btn-sm" onclick="gotoLine(15)">Перейти к </button>
+
 
 
 <div id="translationJsonOutput"></div>
@@ -406,8 +408,6 @@ table {
       <tbody id="outputTableBody"></tbody>
     </table>
   </div>
-
-<button onclick="gotoLine(10)">Перейти к строке 10</button>
 
 
   <div class="textarea-container my-3">
@@ -844,7 +844,7 @@ if (indexValue.includes("sn")) {
 
       rowCounter++;
           const row = `<tr>
-						<td>${value}<a href=# class="text-decoration-none" onclick="gotoLine($rowCounter)">&nbsp;</a></td>
+						<td>${value}<a href=# onclick="gotoLine($rowCounter)">&nbsp;</a></td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;

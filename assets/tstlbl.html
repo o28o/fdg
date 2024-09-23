@@ -265,7 +265,20 @@ table {
 <i class="fa-solid fa-list"></i>
    </a>  
    
-  
+   
+   <div class="input-group-append ms-1 me-3 mb-2">
+    <!-- <label>Пред / След</label> -->
+    <div class=" ms-1">
+        <button title="Предыдущий текст" class="input-group-append btn btn-primary" onclick="loadPrev(); loadAndCheckRanges()">
+		<i class="fa-solid fa-chevron-left"></i>
+<!-- 		&lt;
+ -->		</button>
+        <button title="Следующий текст" class="input-group-append btn btn-primary" onclick="loadNext(); loadAndCheckRanges()">
+		<i class="fa-solid fa-chevron-right"></i>
+<!-- 		&gt;
+ -->		</button>
+    </div>
+</div>
    
    <div >
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
@@ -363,19 +376,6 @@ table {
     </select>
   </div>
 
-   <div class="input-group-append ms-1 me-1 mb-2">
-    <!-- <label>Пред / След</label> -->
-    <div class=" ms-1">
-        <button title="Предыдущий текст" class="input-group-append btn btn-primary" onclick="loadPrev(); loadAndCheckRanges()">
-		<i class="fa-solid fa-chevron-left"></i>
-<!-- 		&lt;
- -->		</button>
-        <button title="Следующий текст" class="input-group-append btn btn-primary" onclick="loadNext(); loadAndCheckRanges()">
-		<i class="fa-solid fa-chevron-right"></i>
-<!-- 		&gt;
- -->		</button>
-    </div>
-</div>
 <div class="input-group-append ms-1">
   <button class="btn btn-primary mb-1" title="Открыть текст на find.dhamma.gift" id="linkButton">Текст на Fdg</button>
 

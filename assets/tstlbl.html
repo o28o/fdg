@@ -831,74 +831,74 @@ function makeCellEditable(cell) {
 
  // Обрабатываем нажатие клавиш
 
+// Обрабатываем нажатие клавиш
 textarea.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-		 if (event.ctrlKey) {
-                // Обработка Ctrl + Enter для переноса текста
-                event.preventDefault(); // Предотвращаем стандартное поведение Enter
+        if (event.ctrlKey) {
+            // Обработка Ctrl + Enter для переноса текста
+            event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
-                const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-                const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-                const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+            const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+            const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+            const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-                // Завершаем редактирование текущей ячейки
-                finishEditing();
+            // Завершаем редактирование текущей ячейки
+            finishEditing();
 
-                // Обновляем следующую ячейку, если она существует
-                const currentRow = cell.parentElement;
-                const nextRow = currentRow.nextElementSibling;
-                if (nextRow) {
-                    const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                    if (nextCell) {
-                        // Устанавливаем текст до курсора в текущую ячейку
-                        cell.textContent = textBeforeCursor;
+            // Обновляем следующую ячейку, если она существует
+            const currentRow = cell.parentElement;
+            const nextRow = currentRow.nextElementSibling;
+            if (nextRow) {
+                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                if (nextCell) {
+                    // Устанавливаем текст до курсора в текущую ячейку
+                    cell.textContent = textBeforeCursor;
 
-                        // Перемещаем текст после курсора в следующую ячейку
-                        nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
-                        makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
-                    }
+                    // Перемещаем текст после курсора в следующую ячейку
+                    nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
+                    makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
                 }
-            } else {
-		
-        event.preventDefault(); // Предотвращаем стандартное поведение Enter
-        
-        const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
-        const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
-        const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+            }
+        } else {
+            // Обработка обычного нажатия Enter
+            event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
-        const currentRow = cell.parentElement; // Текущая строка
-        const nextRow = currentRow.nextElementSibling; // Следующая строка
-        
-        // Оставляем текст до курсора в текущей ячейке
-        cell.textContent = textBeforeCursor;
-        
-        // Сдвигаем строки вниз
-        
-        
-		    let rowToMove = currentRow;
-    let previousContent = ''; // временная переменная для хранения данных
-    
-    // Сдвигаем значения вниз начиная с текущей строки
-    while (rowToMove) {
-        const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
-        rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
-        previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
-        rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
-    }
-		
-		
-		currentRow.cells[2].textContent = textBeforeCursor;
+            const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+            const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+            const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-		
-        // Помещаем текст после курсора в следующую строку, в третью ячейку
-        if (nextRow) {
-            nextRow.cells[2].textContent = textAfterCursor;
+            // Завершаем редактирование текущей ячейки
+            finishEditing();
+
+            // Получаем текущую строку и следующую строку
+            const currentRow = cell.parentElement;
+            let nextRow = currentRow.nextElementSibling;
+
+            // Перемещаем текст до курсора в текущую ячейку
+            cell.textContent = textBeforeCursor;
+
+            // Сдвигаем все строки вниз
+            while (nextRow) {
+                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                if (nextCell) {
+                    const nextText = nextCell.textContent.trim(); // Сохраняем текст из следующей ячейки
+                    nextCell.textContent = textAfterCursor; // Записываем текст после курсора в следующую ячейку
+                    textAfterCursor = nextText; // Переносим старый текст следующей ячейки на следующую итерацию
+                }
+                nextRow = nextRow.nextElementSibling; // Переходим к следующей строке
+            }
+
+            // Если в последней строке был текст, создаем новую строку
+            if (textAfterCursor) {
+                const newRow = currentRow.cloneNode(true); // Клонируем текущую строку
+                newRow.cells[2].textContent = textAfterCursor; // Устанавливаем текст в третью ячейку новой строки
+                currentRow.parentElement.appendChild(newRow); // Добавляем новую строку в таблицу
+            }
+
+            makeCellEditable(currentRow.cells[2]); // Возвращаем фокус в текущую ячейку
         }
-        
-        // Завершаем редактирование
-        finishEditing();
-    } 
-	}	
+    }
+
 		
 		
 // Обработка нажатия клавиши Backspace

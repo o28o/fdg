@@ -424,13 +424,16 @@ table {
   
  
 
-<button onclick="gotoLine(10)">Перейти к строке 10</button>
-
 <script>
   function gotoLine(lineNumber) {
     const textarea = document.getElementById('translationInput');
     const lines = textarea.value.split('\n');
     
+    if (lineNumber > lines.length) {
+      console.log("Номер строки превышает количество строк в тексте.");
+      return;
+    }
+
     let charCount = 0;
 
     // Подсчитываем количество символов до нужной строки
@@ -438,12 +441,37 @@ table {
       charCount += lines[i].length + 1; // Учитываем символ новой строки
     }
 
-    // Устанавливаем курсор на нужную позицию
+    // Перемещаем курсор в конец строки
+    const lineEnd = charCount + lines[lineNumber - 1].length;
+    
     textarea.focus();
-    textarea.setSelectionRange(charCount, charCount);
+    textarea.setSelectionRange(lineEnd, lineEnd);
+
+    // Подсветка строки
+    highlightLine(textarea, charCount, lineEnd);
+  }
+
+  function highlightLine(textarea, start, end) {
+    // Получаем текущий текст из textarea
+    const originalText = textarea.value;
+    
+    // Добавляем стили для выделения строки
+    const highlightedText = originalText.slice(0, start) + 
+                            '[START_HIGHLIGHT]' + 
+                            originalText.slice(start, end) + 
+                            '[END_HIGHLIGHT]' + 
+                            originalText.slice(end);
+
+    // Заменяем текст, временно показывая выделение
+    textarea.value = highlightedText;
+
+    // Возвращаем текст в исходное состояние после паузы
+    setTimeout(() => {
+      textarea.value = originalText;
+      textarea.setSelectionRange(end, end); // Сохраняем позицию курсора
+    }, 1000); // 1 секунда подсветки
   }
 </script>
- 
 
 
 <div class="input-group mt-2">
@@ -813,7 +841,7 @@ if (indexValue.includes("sn")) {
 
       rowCounter++;
           const row = `<tr>
-						<td data-linenumber="${rowCounter}">${value}</a></td>
+						<td>${value}<a href=# onclick="gotoLine(10)"> </a></td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;

@@ -869,7 +869,11 @@ textarea.addEventListener('keydown', function(event) {
                 currentRow.parentElement.appendChild(newRow); // Добавляем новую строку в таблицу
             }
 
-            makeCellEditable(currentRow.cells[2]); // Возвращаем фокус в текущую ячейку
+            // Переходим к редактированию следующей строки
+            const nextCell = currentRow.nextElementSibling.cells[2]; // Получаем ячейку третьей колонки следующей строки
+            if (nextCell) {
+                makeCellEditable(nextCell); // Устанавливаем редактирование на следующую ячейку
+            }
         } else {
             // Обработка Ctrl + Enter для переноса текста
             event.preventDefault(); // Предотвращаем стандартное поведение Enter
@@ -897,7 +901,7 @@ textarea.addEventListener('keydown', function(event) {
             }
         }
     }
-
+	
 
 		
 // Обработка нажатия клавиши Backspace

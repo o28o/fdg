@@ -257,7 +257,8 @@ table {
                 console.log('Извлеченные переменные:', variables);
 
                 // Обработка ввода пользователя
-                document.getElementById('indexInput').addEventListener('input', function () {
+                const inputField = document.getElementById('indexInput');
+                inputField.addEventListener('input', function () {
                     const inputValue = this.value.trim().toLowerCase();
                     console.log('Введенное значение:', inputValue);
 
@@ -268,7 +269,6 @@ table {
                         // Проверка в anranges
                         if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
                             console.log('Найден в anranges:', inputValue);
-                            
                         } else {
                             console.log('Не найден в anranges:', inputValue);
                             resultMessage = '';
@@ -277,7 +277,6 @@ table {
                         // Проверка в snranges
                         if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
                             console.log('Найден в snranges:', inputValue);
-                            
                         } else {
                             console.log('Не найден в snranges:', inputValue);
                             resultMessage = '';
@@ -286,7 +285,6 @@ table {
                         // Проверка в mnranges
                         if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
                             console.log('Найден в mnranges:', inputValue);
-                           
                         } else {
                             console.log('Не найден в mnranges:', inputValue);
                             resultMessage = '';
@@ -295,7 +293,6 @@ table {
                         // Проверка в dnranges
                         if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
                             console.log('Найден в dnranges:', inputValue);
-                          
                         } else {
                             console.log('Не найден в dnranges:', inputValue);
                             resultMessage = '';
@@ -307,6 +304,9 @@ table {
                     // Отображение результата
                     document.getElementById('checkResult').innerHTML = resultMessage;
                 });
+
+                // Проверка значения в поле ввода при загрузке страницы
+                inputField.dispatchEvent(new Event('input'));
             })
             .catch(error => {
                 console.error('Ошибка при загрузке файла:', error);

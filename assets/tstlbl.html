@@ -19,19 +19,49 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+    height: 100vh; /* Высота на всю страницу */
+
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Высота на всю страницу */
+}
+
+
   .custom-textarea {
     resize: both; /* Позволяет растягивать в любом направлении */
     overflow: auto; /* Добавляет полосы прокрутки при необходимости */
     min-height: 100px; /* Минимальная высота текстового поля */
-    max-height: 90%; /* Максимальная высота текстового поля */
-  /*  max-height: 500px;  Максимальная высота текстового поля */
+    max-height: 500px; /* Максимальная высота текстового поля */
+  }
+  
+  
+   .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между таблицей и textarea */
   }
 
-.table-container {
-  overflow-y: auto; /* Включает вертикальную прокрутку */
-  max-height: 90%; /* Максимальная высота по умолчанию для десктопов */
+
+    .table-container {
+  flex: 1;
+      max-width: 60%; /* Задайте ширину таблицы */
+
+  max-height: calc(100% - 150px); /* Учитываем высоту кнопок */
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
 }
+
+
+.textarea-container {
+  flex: 1;
+      max-width: 40%; /* Задайте ширину textarea */
+  max-height: calc(100% - 150px); /* Учитываем высоту кнопок */
+  overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
 
 /* Настройки для планшетов */
 @media (max-width: 1024px) {
@@ -174,22 +204,7 @@ table td {
   cursor: pointer;
 }
 	
-  .content-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px; /* Расстояние между таблицей и textarea */
-  }
 
-  .table-container {
-    flex: 1;
-    max-width: 60%; /* Задайте ширину таблицы */
-  }
-
-  .textarea-container {
-    flex: 1;
-    max-width: 40%; /* Задайте ширину textarea */
-  }
   
 #translationInput {
     line-height: 1.5; /* Увеличьте значение для большего межстрочного расстояния */

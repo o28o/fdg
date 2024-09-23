@@ -389,8 +389,6 @@ table {
 			
         </div>
     </div>
-<button class="btn btn-sm" onclick="gotoLine(15)">Перейти к </button>
-
 
 
 <div id="translationJsonOutput"></div>
@@ -410,24 +408,30 @@ table {
   </div>
 
 
-  <div class="textarea-container my-3">
-     <label for="translationInput">Редактор:</label>
-	<textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
-2. Вставьте русский перевод сюда
-3. Нажмите 'Обновить'
 
-Инструмент добавит заголовок и переносы строк.
 
-Можно будет поправить переноcы вручную.
+<div class="textarea-container my-3" style="position: relative;">
+  <label for="translationInput">Редактор:</label>
+  <div id="highlightContainer" class="highlight-container"></div>
+  <textarea id="translationInput" 
+            class="form-control custom-textarea" 
+            rows="15" 
+            style="white-space: pre-wrap; position: absolute; top: 0; left: 0; background: transparent; color: black; z-index: 1; width: 100%; height: 100%;"></textarea>
+</div>
 
-Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе."
-              class="form-control custom-textarea" rows="15"></textarea>
-  </div>
 </div>
   
- 
+  <button onclick="gotoLine(13)">Перейти к строке</button>
 
 <script>
+  function syncTextareaHighlight() {
+    const textarea = document.getElementById('translationInput');
+    const highlightContainer = document.getElementById('highlightContainer');
+    
+    // Обновляем текст в скрытом контейнере
+    highlightContainer.innerHTML = textarea.value.replace(/\n/g, '<br>');
+  }
+
   function gotoLine(lineNumber) {
     const textarea = document.getElementById('translationInput');
     const lines = textarea.value.split('\n');
@@ -446,35 +450,33 @@ table {
 
     // Перемещаем курсор в конец строки
     const lineEnd = charCount + lines[lineNumber - 1].length;
-    
     textarea.focus();
     textarea.setSelectionRange(lineEnd, lineEnd);
 
-    // Подсветка строки
-    highlightLine(textarea, charCount, lineEnd);
+    // Обновляем подсветку
+    highlightLine(charCount, lineEnd);
   }
 
-  function highlightLine(textarea, start, end) {
-    // Получаем текущий текст из textarea
-    const originalText = textarea.value;
+  function highlightLine(start, end) {
+    const textarea = document.getElementById('translationInput');
+    const highlightContainer = document.getElementById('highlightContainer');
+    const text = textarea.value;
     
-    // Добавляем стили для выделения строки
-    const highlightedText = originalText.slice(0, start) + 
-                            '[START_HIGHLIGHT]' + 
-                            originalText.slice(start, end) + 
-                            '[END_HIGHLIGHT]' + 
-                            originalText.slice(end);
-
-    // Заменяем текст, временно показывая выделение
-    textarea.value = highlightedText;
-
-    // Возвращаем текст в исходное состояние после паузы
-    setTimeout(() => {
-      textarea.value = originalText;
-      textarea.setSelectionRange(end, end); // Сохраняем позицию курсора
-    }, 1000); // 1 секунда подсветки
+    // Вставляем текст с подсветкой
+    const beforeHighlight = text.slice(0, start).replace(/\n/g, '<br>');
+    const highlightedText = `<span class="highlighted">${text.slice(start, end).replace(/\n/g, '<br>')}</span>`;
+    const afterHighlight = text.slice(end).replace(/\n/g, '<br>');
+    
+    highlightContainer.innerHTML = beforeHighlight + highlightedText + afterHighlight;
   }
+
+  // Синхронизация при изменении текста
+  document.getElementById('translationInput').addEventListener('input', syncTextareaHighlight);
+
+  // Синхронизация при загрузке
+  window.onload = syncTextareaHighlight;
 </script>
+
 
 
 <div class="input-group mt-2">

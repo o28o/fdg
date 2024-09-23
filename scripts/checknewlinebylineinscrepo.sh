@@ -42,13 +42,7 @@ fi)"
 done
 }
 echo 'name % root assets newFiles'
-echo AN
 # Задаем директории для перевода и палийских текстов
-PaliDir="$Pali/an"
-TrnDir="$Trn/an"
-TrnNewDir="$TrnNew/sv/sutta/an"
-ShowDiff
-
 echo KN
 PaliDir="$Pali/kn"
 TrnDir="$Trn/kn"
@@ -60,6 +54,14 @@ echo SN
 PaliDir="$Pali/sn"
 TrnDir="$Trn/sn"
 TrnNewDir="$TrnNew/sv/sutta/sn"
+ShowDiff
+
+
+echo AN
+# Задаем директории для перевода и палийских текстов
+PaliDir="$Pali/an"
+TrnDir="$Trn/an"
+TrnNewDir="$TrnNew/sv/sutta/an"
 ShowDiff
 
 #echo any key to run latest-rus.php or ctrl-c to cancel

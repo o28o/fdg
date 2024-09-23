@@ -407,6 +407,9 @@ table {
     </table>
   </div>
 
+<button onclick="gotoLine(10)">Перейти к строке 10</button>
+
+
   <div class="textarea-container my-3">
      <label for="translationInput">Редактор:</label>
 	<textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
@@ -841,7 +844,7 @@ if (indexValue.includes("sn")) {
 
       rowCounter++;
           const row = `<tr>
-						<td>${value}<a href=# onclick="gotoLine(10)"> </a></td>
+						<td>${value}<a href=# onclick="gotoLine(10)">&nbsp;</a></td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;

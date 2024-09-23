@@ -22,6 +22,7 @@
   --textarea-default-height: 600px; /* Высота по умолчанию */
   --textarea-max-height: 800px; /* Максимальная высота */
 }
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -30,9 +31,8 @@ body {
     resize: both; /* Позволяет растягивать в любом направлении */
     overflow: auto; /* Добавляет полосы прокрутки при необходимости */
     min-height: 100px; /* Минимальная высота текстового поля */
-	  height: 600px; /* Высота по умолчанию */
-
-    max-height: 800px; /* Максимальная высота текстового поля */
+	  height: var(--textarea-default-height); /* Высота по умолчанию */
+    max-height: var(--textarea-max-height); /* Максимальная высота текстового поля */
   }
 
 .table-container {
@@ -41,9 +41,8 @@ body {
 
     max-width: 60%; /* Задайте ширину таблицы */
   overflow-y: auto; /* Включает вертикальную прокрутку */
-  	  height: 600px; /* Высота по умолчанию */
-
-  max-height: 800px; /* Максимальная высота по умолчанию для десктопов */
+  	  height: var(--textarea-default-height); /* Высота по умолчанию */
+  max-height: var(--textarea-max-height); /* Максимальная высота по умолчанию для десктопов */
 }
 
 

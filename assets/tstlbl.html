@@ -844,7 +844,7 @@ if (indexValue.includes("sn")) {
 
       rowCounter++;
           const row = `<tr>
-						<td>${value}<a href=# onclick="gotoLine(10)">&nbsp;</a></td>
+						<td>${value}<a href=# class="text-decoration-none" onclick="gotoLine($rowCounter)">&nbsp;</a></td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;

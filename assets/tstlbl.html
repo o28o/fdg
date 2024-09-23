@@ -424,7 +424,6 @@ table {
 </div>
   
  
-
 <script>
   function gotoLine(lineNumber) {
     const textarea = document.getElementById('translationInput');
@@ -442,35 +441,15 @@ table {
       charCount += lines[i].length + 1; // Учитываем символ новой строки
     }
 
-    // Перемещаем курсор в конец строки
+    // Определяем конец строки
     const lineEnd = charCount + lines[lineNumber - 1].length;
-    
+
+    // Перемещаем фокус и выделяем строку
     textarea.focus();
-    textarea.setSelectionRange(lineEnd, lineEnd);
+    textarea.setSelectionRange(charCount, lineEnd);
 
-    // Подсветка строки
-    highlightLine(textarea, charCount, lineEnd);
-  }
-
-  function highlightLine(textarea, start, end) {
-    // Получаем текущий текст из textarea
-    const originalText = textarea.value;
-    
-    // Добавляем стили для выделения строки
-    const highlightedText = originalText.slice(0, start) + 
-                            '***' + 
-                            originalText.slice(start, end) + 
-                            '***' + 
-                            originalText.slice(end);
-
-    // Заменяем текст, временно показывая выделение
-    textarea.value = highlightedText;
-
-    // Возвращаем текст в исходное состояние после паузы
-    setTimeout(() => {
-      textarea.value = originalText;
-      textarea.setSelectionRange(end, end); // Сохраняем позицию курсора
-    }, 1000); // 1 секунда подсветки
+    // Прокручиваем textarea, чтобы выделенная строка была видима
+    textarea.scrollTop = textarea.scrollHeight * (charCount / textarea.value.length);
   }
 </script>
 

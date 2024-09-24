@@ -1565,43 +1565,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-function init() {
-  const textarea = document.getElementById('translationInput');
-  if (!textarea) {
-    console.error('Textarea not found!');
-    return;
-  }
 
-  function handleKeyPress(event) {
-    const key = event.key || event.keyCode;
+  // Функция для добавления обработчиков событий
+  function init() {
+    const textarea = document.getElementById('translationInput');
+    if (!textarea) {
+      console.error('Textarea not found!');
+      return;  // Если textarea не найден, прерываем выполнение
+    }
 
-    // Проверяем, что клавиша не Enter, когда курсор находится на последней строке
-    if (key === 'Enter') {
-      const text = textarea.value;
-      const cursorPosition = textarea.selectionStart;
-      const isAtEnd = cursorPosition === text.length;
+    function handleKeyPress(event) {
+      const key = event.key || event.keyCode;
+      //console.log(`Нажата клавиша: ${key} (${event.keyCode})`);
 
-      // Если курсор находится в конце текста, не вызываем loadText
-      if (isAtEnd) {
-        return;
+      // Проверяем нажатие клавиш Enter, Backspace, Delete или пробела
+      if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || event.keyCode === 13 || event.keyCode === 8 || event.keyCode === 46 || event.keyCode === 32 || event.keyCode === 229) {
+        loadText();  // Вызов функции
       }
     }
 
-    // Проверяем нажатие клавиш Backspace, Delete или пробела
-    if (key === 'Backspace' || key === 'Delete' || event.keyCode === 8 || event.keyCode === 46 || event.keyCode === 32 || event.keyCode === 229) {
-      loadText();
-    }
+    // Добавляем обработчики событий
+    textarea.addEventListener('keyup', handleKeyPress);
+    textarea.addEventListener('input', function() {
+      console.log('Изменение текста в textarea');
+      loadText();  // Вызываем функцию при любом изменении текста
+    });
   }
 
-  textarea.addEventListener('keydown', handleKeyPress);
-  textarea.addEventListener('input', function() {
-    console.log('Изменение текста в textarea');
-    loadText();
-  });
-}
-
-// Убедимся, что код выполняется после загрузки DOM
-document.addEventListener('DOMContentLoaded', init);
+  // Убедимся, что код выполняется после загрузки DOM
+  document.addEventListener('DOMContentLoaded', init);
 </script>
 
 	

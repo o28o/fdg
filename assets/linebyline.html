@@ -762,28 +762,47 @@ if (indexValue.includes("sn")) {
       return response.json();
     })
     .then(data => {
-      const tableBody = document.getElementById('outputTableBody');
-      tableBody.innerHTML = '';
+  const tableBody = document.getElementById('outputTableBody');
+  tableBody.innerHTML = '';
 
-      const dataArray = Object.entries(data);
-	 let rowCounter = 0; // Счётчик для строк
-      dataArray.forEach(([key, value], index) => {
-        const translationLine = translationLines[index] || '';
-        const texts = translationLine.split('\n');
+  const dataArray = Object.entries(data);
+  let rowCounter = 0; // Счётчик для строк
 
-        texts.forEach((text, textIndex) => {
-          const currentText = texts[textIndex] || '';
+  // Объект для замены слов на переводы
+  const translations = {
+    "Paṭhamaṁ.": "Первая.",
+    "Dutiyaṁ.": "Вторая.",
+    "Tatiyaṁ.": "Третья.",
+    "Catutthaṁ.": "Четвёртая.",
+    "Pañcamaṁ.": "Пятая.",
+    "Chaṭṭhaṁ.": "Шестая.",
+    "Sattamaṁ.": "Седьмая.",
+    "Aṭṭhamaṁ.": "Восьмая.",
+    "Navamaṁ.": "Девятая.",
+    "Dasamaṁ.": "Десятая.",
+    "Tiṁsatimaṁ.": "Тринадцатая.",
+    "Tassuddānaṁ": "Оглавление"
+  };
+
+  dataArray.forEach(([key, value], index) => {
+    const translationLine = translationLines[index] || '';
+    const texts = translationLine.split('\n');
+
+    texts.forEach((text, textIndex) => {
+      const currentText = texts[textIndex] || '';
+
+      // Проверяем, есть ли значение value в объекте translations
+      const translatedValue = translations[value.trim()] || value.trimEnd();
 
       rowCounter++;
-          const row = `<tr>
-		<td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})">&nbsp;</a></td>
-                        <td>${key}</td>
-                        <td>${currentText}</td>
-                      </tr>`;
-          tableBody.innerHTML += row;
-        });
-      });
-
+      const row = `<tr>
+        <td>${translatedValue}<a href="#" onclick="gotoLine(${rowCounter})">&nbsp;</a></td>
+        <td>${key}</td>
+        <td>${currentText}</td>
+      </tr>`;
+      tableBody.innerHTML += row;
+    });
+  });
 
 	  
 // новый код 	  

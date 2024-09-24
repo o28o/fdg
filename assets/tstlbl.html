@@ -29,43 +29,31 @@ body {
   margin: 20px;
 }
 
-/* Контейнер для всего содержимого */
 .content-container {
-  display: flex;          /* Flexbox для горизонтального размещения */
-  width: 100%;            /* Ширина контейнера 100% */
-  height: var(--textarea-default-height); /* Высота по умолчанию */
-  max-height: var(--textarea-max-height); /* Максимальная высота для десктопов */
-  overflow: hidden;       /* Отключаем прокрутку за пределы контейнера */
+  display: flex;
+  width: 100%;
+  height: var(--textarea-default-height);
+  max-height: var(--textarea-max-height);
+  overflow: hidden;
 }
 
-/* Табличный контейнер */
 .table-container {
-  flex: 1;                /* Контейнер растягивается, занимая 1 часть доступного пространства */
-  overflow-y: auto;       /* Включаем вертикальную прокрутку */
-  min-width: 150px;       /* Минимальная ширина для таблицы */
-  transition: width 0.2s; /* Плавная анимация изменения ширины */
+  flex-grow: 1; /* Позволяет изменять размер */
+  overflow-y: auto;
+  min-width: 150px;
 }
 
-/* Контейнер для textarea */
 .textarea-container {
-  flex: 1;                /* Контейнер растягивается, занимая оставшуюся часть пространства */
-  overflow: hidden;       /* Отключаем прокрутку */
-  min-width: 150px;       /* Минимальная ширина для textarea */
-  transition: width 0.2s; /* Плавная анимация изменения ширины */
+  flex-grow: 1; /* Позволяет изменять размер */
+  overflow: hidden;
+  min-width: 150px;
 }
 
-.textarea-container textarea {
-  width: 100%;            /* Текстовое поле заполняет весь контейнер */
-  height: 100%;           /* Высота textarea по всему контейнеру */
-  resize: none;           /* Отключаем встроенное изменение размеров */
-}
-
-/* Стиль для разделителя (ручки) */
 .resizer {
-  width: 5px;                /* Ширина разделителя */
-  cursor: ew-resize;         /* Указатель для изменения ширины */
+  width: 5px;               /* Ширина разделителя */
+  cursor: ew-resize;         /* Курсор для изменения размера */
   background-color: #ccc;    /* Цвет разделителя */
-  height: 100%;              /* Высота разделителя на всю высоту контейнера */
+  height: 100%;              /* Высота разделителя */
 }
 
 
@@ -436,22 +424,28 @@ let isResizing = false;
 
 resizer.addEventListener('mousedown', function(e) {
   isResizing = true;
+  document.body.style.cursor = 'ew-resize'; // Меняем курсор на время перетаскивания
 });
 
 document.addEventListener('mousemove', function(e) {
   if (!isResizing) return;
 
-  // Получаем новые размеры для левой и правой стороны
-  let newLeftWidth = e.clientX - leftSide.getBoundingClientRect().left;
-  let newRightWidth = rightSide.getBoundingClientRect().right - e.clientX;
+  // Получаем ширину контейнера контента
+  const containerWidth = document.querySelector('.content-container').getBoundingClientRect().width;
 
-  // Устанавливаем новые размеры
-  leftSide.style.width = newLeftWidth + 'px';
-  rightSide.style.width = newRightWidth + 'px';
+  // Вычисляем новую ширину левого контейнера
+  let newLeftWidth = e.clientX / containerWidth * 100; // В процентах от общего размера
+
+  // Устанавливаем новую ширину для таблицы и textarea
+  leftSide.style.flexGrow = newLeftWidth;
+  rightSide.style.flexGrow = 100 - newLeftWidth;
+
+  console.log(`Left Width: ${newLeftWidth}%`);
 });
 
 document.addEventListener('mouseup', function() {
   isResizing = false;
+  document.body.style.cursor = ''; // Возвращаем курсор
 });
 
 </script>

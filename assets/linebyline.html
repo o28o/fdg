@@ -1532,11 +1532,11 @@ document.addEventListener('DOMContentLoaded', function() {
  <script src="/assets/js/smoothScroll.js" defer></script>
 
 
-
 <script>
+
   // Функция для добавления обработчиков событий
   function init() {
-    const textarea = document.getElementById('translationInput');  // Используем правильный ID
+    const textarea = document.getElementById('translationInput');
     if (!textarea) {
       console.error('Textarea not found!');
       return;  // Если textarea не найден, прерываем выполнение
@@ -1544,17 +1544,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleKeyPress(event) {
       const key = event.key || event.keyCode;
-      console.log(`Нажата клавиша: ${key} (${event.keyCode})`);  // Логируем нажатую клавишу
+      console.log(`Нажата клавиша: ${key} (${event.keyCode})`);
 
-      // Клавиши для Enter, Backspace и Delete
-      if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || key === '13' || key === '8' || key === '46') {
+      // Проверяем нажатие клавиш Enter, Backspace, Delete или пробела
+      if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || key === ' ' || event.keyCode === 13 || event.keyCode === 8 || event.keyCode === 46 || event.keyCode === 32 || event.keyCode === 229) {
         loadText();  // Вызов функции
       }
     }
 
-    // Добавляем обработчики событий для textarea
+    // Добавляем обработчики событий
     textarea.addEventListener('keyup', handleKeyPress);
-    textarea.addEventListener('input', handleKeyPress);  // Отслеживает любые изменения текста
+    textarea.addEventListener('input', function() {
+      console.log('Изменение текста в textarea');
+      loadText();  // Вызываем функцию при любом изменении текста
+    });
   }
 
   // Убедимся, что код выполняется после загрузки DOM

@@ -1536,7 +1536,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
   // Функция для добавления обработчиков событий
   function init() {
-    const textarea = document.getElementById('translationInput');
+    const textarea = document.getElementById('translationInput');  // Используем правильный ID
     if (!textarea) {
       console.error('Textarea not found!');
       return;  // Если textarea не найден, прерываем выполнение
@@ -1544,8 +1544,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function handleKeyPress(event) {
       const key = event.key || event.keyCode;
+      console.log(`Нажата клавиша: ${key} (${event.keyCode})`);  // Логируем нажатую клавишу
+
       // Клавиши для Enter, Backspace и Delete
-      if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || key === 13 || key === 8 || key === 46) {
+      if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || key === '13' || key === '8' || key === '46') {
         loadText();  // Вызов функции
       }
     }

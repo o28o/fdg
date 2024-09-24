@@ -618,18 +618,19 @@ function downloadJson() {
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
   const translation = document.getElementById('translationInput').value.trim();
 
-  // Split the translation text into lines
+  // Разделяем текст перевода на строки
   const translationLines = translation.split('\n');
 
-  // Object to hold the JSON data
+  // Объект для хранения данных JSON
   const jsonData = {};
 
-  // Extracting only letters from indexValue
+  // Извлечение только букв из indexValue
   const lettersOnly = indexValue.match(/[a-z]+/)[0];
 
-  // Extracting all characters before the dot
+  // Извлечение всех символов до точки
   const beforeDot = indexValue.split('.')[0];
 
+  // Определение URL для запроса данных
   let url;
   if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
@@ -637,8 +638,23 @@ function downloadJson() {
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
-   //   url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
-console.log(url);
+
+  // Словарь для автоматических переводов
+  const translations = {
+    "Paṭhamaṁ.": "Первая.",
+    "Dutiyaṁ.": "Вторая.",
+    "Tatiyaṁ.": "Третья.",
+    "Catutthaṁ.": "Четвёртая.",
+    "Pañcamaṁ.": "Пятая.",
+    "Chaṭṭhaṁ.": "Шестая.",
+    "Sattamaṁ.": "Седьмая.",
+    "Aṭṭhamaṁ.": "Восьмая.",
+    "Navamaṁ.": "Девятая.",
+    "Dasamaṁ.": "Десятая.",
+    "Tiṁsatimaṁ.": "Тринадцатая.",
+    "Tassuddānaṁ": "Оглавление"
+  };
+
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -647,44 +663,45 @@ console.log(url);
       return response.json();
     })
     .then(data => {
-      // Convert data object to array of [key, value] pairs
+      // Преобразуем объект данных в массив пар [ключ, значение]
       const dataArray = Object.entries(data);
 
-      // Iterate through each key in the data object
+      // Итерация по каждому элементу данных
       dataArray.forEach(([key, value], index) => {
-        // Get the corresponding line from the translation text
-        const translationLine = translationLines[index] || ''; // Use index from iteration
+        let translationLine = translationLines[index] || ''; // Используем индекс итерации
 
-        // Create key-value pair in JSON object
+        // Если значение соответствует ключу перевода, то подставляем перевод
+        if (translations[value.trim()]) {
+          translationLine = translations[value.trim()];
+        }
+
+        // Создаем пару ключ-значение в JSON объекте
         jsonData[key] = translationLine;
       });
 
-      // Convert JSON object to string
+      // Преобразуем JSON объект в строку
       const jsonString = JSON.stringify(jsonData, null, 2);
 
-      // Create Blob object with JSON string
+      // Создаем Blob с JSON строкой
       const blob = new Blob([jsonString], { type: 'application/json' });
 
-      // Create download link
+      // Создаем ссылку для скачивания
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
 	  
-	  
-	  
-	  let translatorName = 'sv';
-	  if (document.getElementById('customTranslatorName').checked) {
-	  translatorName = 'sv+edited+o';
-} 
-	  
+      let translatorName = 'sv';
+      if (document.getElementById('customTranslatorName').checked) {
+        translatorName = 'sv+edited+o';
+      }
 	  
       a.download = indexValue + '_translation-ru-' + translatorName + '.json';
 
-      // Append link to the body and click it programmatically
+      // Программно добавляем и кликаем по ссылке
       document.body.appendChild(a);
       a.click();
 
-      // Cleanup
+      // Убираем временный URL
       URL.revokeObjectURL(url);
       document.body.removeChild(a);
     })
@@ -804,50 +821,29 @@ if (indexValue.includes("sn")) {
       }
       return response.json();
     })
-  .then(data => {
-  const tableBody = document.getElementById('outputTableBody');
-  tableBody.innerHTML = '';
+    .then(data => {
+      const tableBody = document.getElementById('outputTableBody');
+      tableBody.innerHTML = '';
 
-  const dataArray = Object.entries(data);
-  let rowCounter = 0; // Счётчик для строк
+      const dataArray = Object.entries(data);
+	 let rowCounter = 0; // Счётчик для строк
+      dataArray.forEach(([key, value], index) => {
+        const translationLine = translationLines[index] || '';
+        const texts = translationLine.split('\n');
 
-  // Объект для замены слов на переводы
-  const translations = {
-    "Paṭhamaṁ.": "Первая.",
-    "Dutiyaṁ.": "Вторая.",
-    "Tatiyaṁ.": "Третья.",
-    "Catutthaṁ.": "Четвёртая.",
-    "Pañcamaṁ.": "Пятая.",
-    "Chaṭṭhaṁ.": "Шестая.",
-    "Sattamaṁ.": "Седьмая.",
-    "Aṭṭhamaṁ.": "Восьмая.",
-    "Navamaṁ.": "Девятая.",
-    "Dasamaṁ.": "Десятая.",
-    "Tiṁsatimaṁ.": "Тринадцатая.",
-    "Tassuddānaṁ": "Оглавление"
-  };
-
-  dataArray.forEach(([key, value], index) => {
-    const translationLine = translationLines[index] || '';
-    const texts = translationLine.split('\n');
-
-    texts.forEach((text, textIndex) => {
-      let currentText = texts[textIndex] || '';
-
-      // Если value совпадает с ключом в объекте translations, используем перевод
-      if (translations[value.trim()]) {
-        currentText = translations[value.trim()];
-      }
+        texts.forEach((text, textIndex) => {
+          const currentText = texts[textIndex] || '';
 
       rowCounter++;
-      const row = `<tr>
-        <td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})">&nbsp;</a></td>
-        <td>${key}</td>
-        <td>${currentText}</td>
-      </tr>`;
-      tableBody.innerHTML += row;
-    });
-  });
+          const row = `<tr>
+						<td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})">&nbsp;</a></td>
+                        <td>${key}</td>
+                        <td>${currentText}</td>
+                      </tr>`;
+          tableBody.innerHTML += row;
+        });
+      });
+
 
 	  
 // новый код 	  

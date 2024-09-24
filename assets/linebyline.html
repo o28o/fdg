@@ -726,14 +726,14 @@ cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {
-        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\n`;
+        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Связанные Наставления")) {
         cleanedTranslation = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
 } else if (indexValue.includes("an")) {
     if (!cleanedTranslation.startsWith("Восходящие Наставления")) {
-        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\n`;
+        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
         cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
@@ -761,50 +761,29 @@ if (indexValue.includes("sn")) {
       }
       return response.json();
     })
-   .then(data => {
-  const tableBody = document.getElementById('outputTableBody');
-  tableBody.innerHTML = '';
+    .then(data => {
+      const tableBody = document.getElementById('outputTableBody');
+      tableBody.innerHTML = '';
 
-  const dataArray = Object.entries(data);
-  let rowCounter = 0; // Счётчик для строк
+      const dataArray = Object.entries(data);
+	 let rowCounter = 0; // Счётчик для строк
+      dataArray.forEach(([key, value], index) => {
+        const translationLine = translationLines[index] || '';
+        const texts = translationLine.split('\n');
 
-  // Объект для замены слов на переводы
-  const translations = {
-    "Paṭhamaṁ.": "Первая.",
-    "Dutiyaṁ.": "Вторая.",
-    "Tatiyaṁ.": "Третья.",
-    "Catutthaṁ.": "Четвёртая.",
-    "Pañcamaṁ.": "Пятая.",
-    "Chaṭṭhaṁ.": "Шестая.",
-    "Sattamaṁ.": "Седьмая.",
-    "Aṭṭhamaṁ.": "Восьмая.",
-    "Navamaṁ.": "Девятая.",
-    "Dasamaṁ.": "Десятая.",
-    "Tiṁsatimaṁ.": "Тринадцатая.",
-    "Tassuddānaṁ": "Оглавление"
-  };
-
-  dataArray.forEach(([key, value], index) => {
-    const translationLine = translationLines[index] || '';
-    const texts = translationLine.split('\n');
-
-    texts.forEach((text, textIndex) => {
-      let currentText = texts[textIndex] || '';
-
-      // Если value совпадает с ключом в объекте translations, используем перевод
-      if (translations[value.trim()]) {
-        currentText = translations[value.trim()];
-      }
+        texts.forEach((text, textIndex) => {
+          const currentText = texts[textIndex] || '';
 
       rowCounter++;
-      const row = `<tr>
-        <td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})">&nbsp;</a></td>
-        <td>${key}</td>
-        <td>${currentText}</td>
-      </tr>`;
-      tableBody.innerHTML += row;
-    });
-  });
+          const row = `<tr>
+		<td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})">&nbsp;</a></td>
+                        <td>${key}</td>
+                        <td>${currentText}</td>
+                      </tr>`;
+          tableBody.innerHTML += row;
+        });
+      });
+
 
 	  
 // новый код 	  

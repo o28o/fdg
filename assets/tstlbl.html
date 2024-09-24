@@ -29,15 +29,12 @@ body {
   margin: 20px;
 }
 
-
 /* Контейнер для всего содержимого */
 .content-container {
   display: flex;          /* Flexbox для горизонтального размещения */
   width: 100%;            /* Ширина контейнера 100% */
-   	  height: var(--textarea-default-height); /* Высота по умолчанию */
-  max-height: var(--textarea-max-height); /* Максимальная высота по умолчанию для десктопов */
-  
-  resize: both;     /* Позволяет изменять ширину между контейнерами */
+  height: var(--textarea-default-height); /* Высота по умолчанию */
+  max-height: var(--textarea-max-height); /* Максимальная высота для десктопов */
   overflow: hidden;       /* Отключаем прокрутку за пределы контейнера */
 }
 
@@ -46,7 +43,7 @@ body {
   flex: 1;                /* Контейнер растягивается, занимая 1 часть доступного пространства */
   overflow-y: auto;       /* Включаем вертикальную прокрутку */
   min-width: 150px;       /* Минимальная ширина для таблицы */
-  resize: both;     /* Позволяет изменять ширину горизонтально */
+  transition: width 0.2s; /* Плавная анимация изменения ширины */
 }
 
 /* Контейнер для textarea */
@@ -54,7 +51,7 @@ body {
   flex: 1;                /* Контейнер растягивается, занимая оставшуюся часть пространства */
   overflow: hidden;       /* Отключаем прокрутку */
   min-width: 150px;       /* Минимальная ширина для textarea */
-  resize: both;     /* Позволяет изменять ширину горизонтально */
+  transition: width 0.2s; /* Плавная анимация изменения ширины */
 }
 
 .textarea-container textarea {
@@ -63,6 +60,13 @@ body {
   resize: none;           /* Отключаем встроенное изменение размеров */
 }
 
+/* Стиль для разделителя (ручки) */
+.resizer {
+  width: 5px;                /* Ширина разделителя */
+  cursor: ew-resize;         /* Указатель для изменения ширины */
+  background-color: #ccc;    /* Цвет разделителя */
+  height: 100%;              /* Высота разделителя на всю высоту контейнера */
+}
 
 
 /* Настройки для планшетов */
@@ -389,10 +393,6 @@ th {
         </div>
     </div>
 
-
-
-
-
 <div id="translationJsonOutput"></div>
 
 <div class="content-container">
@@ -409,6 +409,8 @@ th {
     </table>
   </div>
 
+  <!-- Разделитель между таблицей и textarea -->
+  <div class="resizer"></div>
 
   <div class="textarea-container my-3">
      <label for="translationInput">Редактор:</label>
@@ -424,7 +426,36 @@ th {
               class="form-control custom-textarea" rows="15"></textarea>
   </div>
 </div>
-  
+
+<script>
+const resizer = document.querySelector('.resizer');
+const leftSide = document.querySelector('.table-container');
+const rightSide = document.querySelector('.textarea-container');
+
+let isResizing = false;
+
+resizer.addEventListener('mousedown', function(e) {
+  isResizing = true;
+});
+
+document.addEventListener('mousemove', function(e) {
+  if (!isResizing) return;
+
+  // Получаем новые размеры для левой и правой стороны
+  let newLeftWidth = e.clientX - leftSide.getBoundingClientRect().left;
+  let newRightWidth = rightSide.getBoundingClientRect().right - e.clientX;
+
+  // Устанавливаем новые размеры
+  leftSide.style.width = newLeftWidth + 'px';
+  rightSide.style.width = newRightWidth + 'px';
+});
+
+document.addEventListener('mouseup', function() {
+  isResizing = false;
+});
+
+</script>
+ 
  
 <script>
   function gotoLine(lineNumber) {

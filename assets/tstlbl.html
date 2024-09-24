@@ -1565,35 +1565,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-
-  // Функция для добавления обработчиков событий
-  function init() {
-    const textarea = document.getElementById('translationInput');
-    if (!textarea) {
-      console.error('Textarea not found!');
-      return;  // Если textarea не найден, прерываем выполнение
-    }
-
-    function handleKeyPress(event) {
-      const key = event.key || event.keyCode;
-      //console.log(`Нажата клавиша: ${key} (${event.keyCode})`);
-
-      // Проверяем нажатие клавиш Enter, Backspace, Delete или пробела
-      if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || event.keyCode === 13 || event.keyCode === 8 || event.keyCode === 46 || event.keyCode === 32 || event.keyCode === 229) {
-        loadText();  // Вызов функции
-      }
-    }
-
-    // Добавляем обработчики событий
-    textarea.addEventListener('keyup', handleKeyPress);
-    textarea.addEventListener('input', function() {
-      console.log('Изменение текста в textarea');
-      loadText();  // Вызываем функцию при любом изменении текста
-    });
+// Функция для добавления обработчиков событий
+function init() {
+  const textarea = document.getElementById('translationInput');
+  if (!textarea) {
+    console.error('Textarea not found!');
+    return;  // Если textarea не найден, прерываем выполнение
   }
 
-  // Убедимся, что код выполняется после загрузки DOM
-  document.addEventListener('DOMContentLoaded', init);
+  let typingTimer; // Таймер для отслеживания времени после нажатия клавиш
+  const typingInterval = 500; // Время задержки перед вызовом функции (500 мс)
+
+  function handleKeyPress(event) {
+    const key = event.key || event.keyCode;
+
+    // Проверяем нажатие клавиш Enter, Backspace, Delete или пробела
+    if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || event.keyCode === 13 || event.keyCode === 8 || event.keyCode === 46 || event.keyCode === 32 || event.keyCode === 229) {
+      clearTimeout(typingTimer); // Сбрасываем таймер при нажатии клавиши
+      typingTimer = setTimeout(loadText, typingInterval); // Запускаем таймер для вызова функции
+    }
+  }
+
+  // Добавляем обработчики событий
+  textarea.addEventListener('keyup', handleKeyPress);
+
+  textarea.addEventListener('input', function() {
+    clearTimeout(typingTimer); // Сбрасываем таймер при любом изменении текста
+    typingTimer = setTimeout(loadText, typingInterval); // Запускаем таймер для вызова функции после изменения
+  });
+}
+
+// Убедимся, что код выполняется после загрузки DOM
+document.addEventListener('DOMContentLoaded', init);
+
 </script>
 
 	

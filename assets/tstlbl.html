@@ -19,7 +19,6 @@
 
 
 :root {
-  --textarea-min-height: 300px; /* Максимальная высота */
   --textarea-default-height: 600px; /* Высота по умолчанию */
   --textarea-max-height: 800px; /* Максимальная высота */
 }
@@ -28,42 +27,36 @@ body {
   font-family: Arial, sans-serif;
   margin: 20px;
 }
+  .custom-textarea {
+    resize: both; /* Позволяет растягивать в любом направлении */
+    overflow: auto; /* Добавляет полосы прокрутки при необходимости */
+    min-height: 100px; /* Минимальная высота текстового поля */
+	  height: var(--textarea-default-height); /* Высота по умолчанию */
+    max-height: var(--textarea-max-height); /* Максимальная высота текстового поля */
+  }
 
-
-/* Контейнер для всего содержимого */
-.content-container {
-  display: flex;          /* Flexbox для горизонтального размещения */
-  width: 100%;            /* Ширина контейнера 100% */
-   	  height: var(--textarea-default-height); /* Высота по умолчанию */
-  max-height: var(--textarea-max-height); /* Максимальная высота по умолчанию для десктопов */
-  
-  resize: both;     /* Позволяет изменять ширину между контейнерами */
-  overflow: hidden;       /* Отключаем прокрутку за пределы контейнера */
-}
-
-/* Табличный контейнер */
 .table-container {
-  flex: 1;                /* Контейнер растягивается, занимая 1 часть доступного пространства */
-  width: 70%;
-  overflow-y: auto;       /* Включаем вертикальную прокрутку */
-  min-width: 150px;       /* Минимальная ширина для таблицы */
-  resize: both;     /* Позволяет изменять ширину горизонтально */
+   flex: 1;
+       resize: both; /* Позволяет растягивать в любом направлении */
+
+    max-width: 70%; /* Задайте ширину таблицы */
+  overflow-y: auto; /* Включает вертикальную прокрутку */
+  	  height: var(--textarea-default-height); /* Высота по умолчанию */
+  max-height: var(--textarea-max-height); /* Максимальная высота по умолчанию для десктопов */
 }
 
-/* Контейнер для textarea */
-.textarea-container {
-  flex: 1;                /* Контейнер растягивается, занимая оставшуюся часть пространства */
-  width: 30%;  
-  overflow: hidden;       /* Отключаем прокрутку */
-  min-width: 150px;       /* Минимальная ширина для textarea */
-  resize: both;     /* Позволяет изменять ширину горизонтально */
-}
 
-.textarea-container textarea {
-  width: 100%;            /* Текстовое поле заполняет весь контейнер */
-  height: 100%;           /* Высота textarea по всему контейнеру */
-  resize: none;           /* Отключаем встроенное изменение размеров */
-}
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между таблицей и textarea */
+  }
+
+  .textarea-container {
+    flex: 1;
+    max-width: 30%; /* Задайте ширину textarea */
+  }
 
 
 
@@ -81,13 +74,11 @@ body {
   }
 }
 
+
 table {
-  width: 100%;
-      resize: both; /* Позволяет растягивать в любом направлении */
-
-  border-collapse: collapse;
+  width: 100%; /* Занимает всю доступную ширину */
+  border-collapse: collapse; /* Объединяет границы ячеек */
 }
-
 
 th, td {
   border: 1px solid black; /* Границы ячеек */
@@ -125,7 +116,12 @@ button:hover {
   background-color: #0056b3;
 }
 
+table {
+  width: 100%;
+      resize: both; /* Позволяет растягивать в любом направлении */
 
+  border-collapse: collapse;
+}
 
 table th,
 table td {
@@ -237,6 +233,9 @@ th {
   padding: 5px;
 }
 
+table {
+  width: 100%; /* Таблица занимает всю доступную ширину */
+}
 
 .table-hover th {
   text-align: left; /* Выравнивание текста по левому краю */
@@ -390,9 +389,6 @@ th {
 			
         </div>
     </div>
-
-
-
 
 
 <div id="translationJsonOutput"></div>

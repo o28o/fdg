@@ -971,7 +971,7 @@ if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
     // Если курсор в начале строки
     if (cursorPosition === 0) {
-        
+        event.preventDefault(); // Предотвращаем удаление символа
         const currentRow = cell.parentElement;
         const previousRow = currentRow.previousElementSibling;
         if (previousRow) {
@@ -1023,29 +1023,29 @@ function shiftCellsUp(startRow) {
 }
 
 
-
 // Функция для обновления translationInput
 function updateTranslationInput() {
     const rows = document.querySelectorAll('tr');
-    const translationLines = translationInput.value.split('\n'); // Текущий текст в translationInput, разделённый на строки
-    const translations = Array.from(rows).map((row, index) => {
+    const translationLines = translationInput.value.split('\n'); // Разбиваем существующий текст в translationInput на строки
+    const translations = [];
+
+    // Проходим по каждой строке таблицы и либо берём существующий перевод, либо обновляем его из таблицы
+    Array.from(rows).forEach((row, index) => {
         const rowText = row.cells[2].textContent.trim();
-        
-        // Если есть существующая строка перевода, сохраняем её, иначе берём текст из таблицы
-        return translationLines[index] ? translationLines[index] : rowText;
+
+        // Если строка уже существует в translationInput, используем её, иначе берём текст из таблицы
+        translations[index] = translationLines[index] || rowText;
     });
 
-    // Если в translationInput больше строк, чем в таблице, сохраняем их
+    // Если в translationInput больше строк, чем в таблице, добавляем их в конец массива translations
     if (translationLines.length > rows.length) {
         translations.push(...translationLines.slice(rows.length));
     }
 
-    // Обновляем translationInput, объединив строки
+    // Обновляем translationInput, собрав все строки обратно
     translationInput.value = translations.join('\n');
 }
-
-  
-  
+ 
     });
 }
 

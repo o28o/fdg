@@ -202,6 +202,11 @@ $slides = [
         'desc' => 'Что такое благородное мытьё, слабительное, рвотное, путь и самадхи',
         'link' => '/ru/?q=\bariy.*desessā',
     ],
+	    [
+        'title' => 'Комментарии Дхаммы',
+        'desc' => 'Примеры комментариев из Сутт.',
+        'link' => '/ru/?q=-la10 vuttamidaṁ',
+    ],
     [
         'title' => 'Бывает такой период...',
         'desc' => 'Различные события, которые периодически происходят',
@@ -681,6 +686,11 @@ $slides = [
         'title' => 'I will teach a noble...',
         'desc' => 'What is noble cleansing, purgative, emetic, the path, and samadhi',
        'link' => '/?q=\bariy.*desessā',
+    ],
+		    [
+        'title' => 'Dhamma Commentaries',
+        'desc' => 'Examples, of the proper commentaries: which lead to the goal.',
+        'link' => '/?q=-la10 vuttamidaṁ',
     ],
     [
         'title' => 'There comes a time...',

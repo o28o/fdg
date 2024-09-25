@@ -241,6 +241,29 @@ table {
   text-align: left; /* Выравнивание текста по левому краю */
 }	
 	
+	
+	
+	
+	
+	
+	
+.scroll-to-top {
+  position: absolute; /* Позиционируем относительно контейнера таблицы */
+  bottom: 10px; /* Расстояние от нижней границы контейнера */
+  right: 10px; /* Расстояние от правой границы контейнера */
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  display: none; /* Скрываем кнопку по умолчанию */
+  z-index: 1000; /* Чтобы кнопка была поверх других элементов */
+}
+.scroll-to-top:hover {
+  background: #0056b3;
+}
+	
 
 </style>
 </head>
@@ -428,13 +451,42 @@ table {
         </tr>
       </thead>
       <tbody id="outputTableBody"></tbody>
+
     </table>
+	            <div class="scroll-to-top" style="display: none;">↑</div> <!-- Кнопка здесь -->
   </div>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollToTopBtn = document.querySelector('.scroll-to-top');
+  const tableContainer = document.querySelector('.table-responsive');
+
+  // Показывать кнопку, когда прокрутка контейнера таблицы превышает 100 пикселей
+  tableContainer.addEventListener('scroll', () => {
+    if (tableContainer.scrollTop > 100) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  // Прокрутка к верху таблицы при нажатии на кнопку
+  scrollToTopBtn.addEventListener('click', () => {
+    tableContainer.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+
+</script>
+
+
+
   <div class="textarea-container my-3">
-     <label for="translationInput">Редактор:</label>
-	<textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
+<!--      <label for="translationInput">Редактор:</label> -->	
+<textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
 2. Вставьте русский перевод сюда
 3. Нажмите 'Обновить'
 

@@ -768,6 +768,7 @@ cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенны
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?-[1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
 cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
@@ -783,7 +784,7 @@ cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
 
 if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…])\d+\b/g, '$1');
+cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…\]])\d+\b/g, '$1');
 
 }
 

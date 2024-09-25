@@ -800,7 +800,7 @@ if (indexValue.includes("sn")) {
 
       rowCounter++;
           const row = `<tr>
-		<td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+		<td><a href="#" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a>${value.trimEnd()}</td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;

@@ -85,12 +85,12 @@ th, td {
   padding: 8px; /* Внутренний отступ ячеек */
 }
 
-/*
+
 th:nth-child(2),
 td:nth-child(2) {
   display: none;
 }
-*/
+
 
 
 label {
@@ -423,8 +423,9 @@ table {
       <thead>
         <tr>
           <th  class="resizable">Текст</th>
-          <th  class="resizable"><i class="fa-solid fa-link"></i></th>
+          <th  class="resizable">Ключ</i></th>
           <th  class="resizable">Перевод</th>
+          <th  class="resizable"><i class="fa-solid fa-link"></i></th>
         </tr>
       </thead>
       <tbody id="outputTableBody"></tbody>
@@ -843,8 +844,9 @@ if (indexValue.includes("sn")) {
       rowCounter++;
           const row = `<tr>
 						<td>${value.trimEnd()}</td>
-                        <td><a href="#" title="${key}" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+                        <td>${key}</td>
                         <td>${currentText}</td>
+                        <td><a href="#" title="${key}" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
                       </tr>`;
           tableBody.innerHTML += row;
         });

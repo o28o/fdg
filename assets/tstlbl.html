@@ -1027,26 +1027,10 @@ function shiftCellsUp(startRow) {
 // Функция для обновления translationInput
 function updateTranslationInput() {
     const rows = document.querySelectorAll('tr');
-    const translationLines = translationInput.value.split('\n'); // Разбиваем существующий текст в translationInput на строки
-    const translations = [];
-
-    // Проходим по каждой строке таблицы и либо берём существующий перевод, либо обновляем его из таблицы
-    Array.from(rows).forEach((row, index) => {
-        const rowText = row.cells[2].textContent.trim();
-
-        // Если строка уже существует в translationInput, используем её, иначе берём текст из таблицы
-        translations[index] = translationLines[index] || rowText;
-    });
-
-    // Если в translationInput больше строк, чем в таблице, добавляем их в конец массива translations
-    if (translationLines.length > rows.length) {
-        translations.push(...translationLines.slice(rows.length));
-    }
-
-    // Обновляем translationInput, собрав все строки обратно
+    const translations = Array.from(rows).map(row => row.cells[2].textContent.trim());
     translationInput.value = translations.join('\n');
 }
-
+  
   
     });
 }
@@ -1054,25 +1038,19 @@ function updateTranslationInput() {
 // Функция для синхронизации изменений в таблице с полем textarea
 function updateTranslationTextarea() {
     const tableRows = document.querySelectorAll('#outputTableBody tr');
-    const translationLines = translationInput.value.split('\n'); // Существующий текст в textarea
     let updatedTranslation = '';
-
-    tableRows.forEach((row, index) => {
-        const translationCell = row.cells[2].textContent.trim();
-
-        // Если в textarea больше строк, чем в таблице, сохраняем лишние строки
-        updatedTranslation += (translationLines[index] || translationCell) + '\n';
+    tableRows.forEach(row => {
+        const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
+        updatedTranslation += translationCell.textContent.trim() + '\n'; // Используем textContent и удаляем лишние пробелы
     });
-
-    // Если в translationInput больше строк, чем в таблице, добавляем их в конец
-    if (translationLines.length > tableRows.length) {
-        updatedTranslation += translationLines.slice(tableRows.length).join('\n');
-    }
-
     document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
 
-// Функция для обновления одной строки в translationInput
+// Инициализация: заполняем translationInput при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
+
+
+// Функция для обновления translationInput только для одной строки
 function updateSingleTranslationRow(cell) {
     const currentText = document.getElementById('translationInput').value;
     const rows = currentText.split('\n');
@@ -1086,9 +1064,6 @@ function updateSingleTranslationRow(cell) {
     // Обновляем содержимое translationInput
     document.getElementById('translationInput').value = rows.join('\n');
 }
-
-// Инициализация: заполняем translationInput при загрузке страницы
-document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
 
 
 // новый код 	  

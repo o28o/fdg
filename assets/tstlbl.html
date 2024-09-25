@@ -1023,6 +1023,7 @@ function shiftCellsUp(startRow) {
 }
 
 
+
 // Функция для обновления translationInput
 function updateTranslationInput() {
     const rows = document.querySelectorAll('tr');
@@ -1045,26 +1046,33 @@ function updateTranslationInput() {
     // Обновляем translationInput, собрав все строки обратно
     translationInput.value = translations.join('\n');
 }
- 
+
+  
     });
 }
 
 // Функция для синхронизации изменений в таблице с полем textarea
 function updateTranslationTextarea() {
     const tableRows = document.querySelectorAll('#outputTableBody tr');
+    const translationLines = translationInput.value.split('\n'); // Существующий текст в textarea
     let updatedTranslation = '';
-    tableRows.forEach(row => {
-        const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
-        updatedTranslation += translationCell.textContent.trim() + '\n'; // Используем textContent и удаляем лишние пробелы
+
+    tableRows.forEach((row, index) => {
+        const translationCell = row.cells[2].textContent.trim();
+
+        // Если в textarea больше строк, чем в таблице, сохраняем лишние строки
+        updatedTranslation += (translationLines[index] || translationCell) + '\n';
     });
+
+    // Если в translationInput больше строк, чем в таблице, добавляем их в конец
+    if (translationLines.length > tableRows.length) {
+        updatedTranslation += translationLines.slice(tableRows.length).join('\n');
+    }
+
     document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
 
-// Инициализация: заполняем translationInput при загрузке страницы
-document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
-
-
-// Функция для обновления translationInput только для одной строки
+// Функция для обновления одной строки в translationInput
 function updateSingleTranslationRow(cell) {
     const currentText = document.getElementById('translationInput').value;
     const rows = currentText.split('\n');
@@ -1078,6 +1086,9 @@ function updateSingleTranslationRow(cell) {
     // Обновляем содержимое translationInput
     document.getElementById('translationInput').value = rows.join('\n');
 }
+
+// Инициализация: заполняем translationInput при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
 
 
 // новый код 	  

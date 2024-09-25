@@ -971,7 +971,7 @@ if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
     // Если курсор в начале строки
     if (cursorPosition === 0) {
-        event.preventDefault(); // Предотвращаем удаление символа
+        
         const currentRow = cell.parentElement;
         const previousRow = currentRow.previousElementSibling;
         if (previousRow) {

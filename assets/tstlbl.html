@@ -418,11 +418,23 @@ table {
 <div id="translationJsonOutput"></div>
 
 <div class="content-container">
-  <div class="row">
-    <div class="col-12 col-lg-12 order-md-2 mb-3">
-      <div class="textarea-container my-3">
-        <label for="translationInput">Редактор:</label>
-        <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
+  <div class="table-container mt-2 mb-3">
+    <table class="table-hover">
+      <thead>
+        <tr>
+          <th  class="resizable">Текст</th>
+          <th  class="resizable">Перевод</th>
+          <th  class="resizable"><i class="fa-solid fa-link"></i></th>
+        </tr>
+      </thead>
+      <tbody id="outputTableBody"></tbody>
+    </table>
+  </div>
+
+
+  <div class="textarea-container my-3">
+     <label for="translationInput">Редактор:</label>
+	<textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
 2. Вставьте русский перевод сюда
 3. Нажмите 'Обновить'
 
@@ -431,27 +443,9 @@ table {
 Можно будет поправить переноcы вручную.
 
 Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе."
-                  class="form-control custom-textarea" rows="15"></textarea>
-      </div>
-    </div>
-
-    <div class="col-12 col-lg-12 order-md-1">
-      <div class="table-container mt-2 mb-3">
-        <table class="table-hover">
-          <thead>
-            <tr>
-              <th class="resizable">Текст</th>
-              <th class="resizable">Перевод</th>
-              <th class="resizable"><i class="fa-solid fa-link"></i></th>
-            </tr>
-          </thead>
-          <tbody id="outputTableBody"></tbody>
-        </table>
-      </div>
-    </div>
+              class="form-control custom-textarea" rows="15"></textarea>
   </div>
 </div>
-
   
  
 <script>

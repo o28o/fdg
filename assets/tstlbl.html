@@ -830,27 +830,47 @@ if (indexValue.includes("sn")) {
     })
     .then(data => {
       const tableBody = document.getElementById('outputTableBody');
-      tableBody.innerHTML = '';
+const translationInput = document.getElementById('translationInput'); // Ваше textarea
+tableBody.innerHTML = '';
 
-      const dataArray = Object.entries(data);
-	 let rowCounter = 0; // Счётчик для строк
-      dataArray.forEach(([key, value], index) => {
-        const translationLine = translationLines[index] || '';
-        const texts = translationLine.split('\n');
+const dataArray = Object.entries(data);
+const translationLines = translationInput.value.split('\n'); // Разбиваем строки translationInput
+let rowCounter = 0; // Счётчик для строк
 
-        texts.forEach((text, textIndex) => {
-          const currentText = texts[textIndex] || '';
+// Основной цикл по данным
+dataArray.forEach(([key, value], index) => {
+  const translationLine = translationLines[index] || ''; // Берём соответствующую строку из translationInput
+  const texts = translationLine.split('\n'); // Разбиваем её на подстроки
 
-      rowCounter++;
-          const row = `<tr>
-						<td>${value.trimEnd()}</td>
-                        <td>${key}</td>
-                        <td>${currentText}</td>
-                        <td><a href="#" title="${key}" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
-                      </tr>`;
-          tableBody.innerHTML += row;
-        });
-      });
+  texts.forEach((text, textIndex) => {
+    const currentText = texts[textIndex] || ''; // Текущая строка для вывода
+
+    rowCounter++;
+    const row = `<tr>
+                  <td>${value.trimEnd()}</td>
+                  <td>${key}</td>
+                  <td>${currentText}</td>
+                  <td><a href="#" title="${key}" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+                </tr>`;
+    tableBody.innerHTML += row;
+  });
+});
+
+// Проверяем, если translationInput содержит больше строк, чем dataArray
+if (translationLines.length > dataArray.length) {
+  for (let i = dataArray.length; i < translationLines.length; i++) {
+    rowCounter++;
+    const extraText = translationLines[i] || ''; // Дополнительные строки
+
+    const extraRow = `<tr>
+                      <td></td> <!-- Пустая ячейка для первых двух колонок -->
+                      <td></td>
+                      <td>${extraText}</td>
+                      <td><a href="#" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+                    </tr>`;
+    tableBody.innerHTML += extraRow;
+  }
+}
 
 
 	  
@@ -877,8 +897,8 @@ function makeCellEditable(cell) {
     textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
     // Устанавливаем размеры textarea в соответствии с размерами ячейки
-	textarea.style.width = `${cell.clientWidth}px`;
-    textarea.style.height = `${cell.clientHeight}px`;
+	textarea.style.width = `${cell.clientWidth - 5}px`;
+    textarea.style.height = `${cell.clientHeight - 10}px`;
     
     // Сохраняем оригинальный текст как data-атрибут
     cell.dataset.originalText = originalText;

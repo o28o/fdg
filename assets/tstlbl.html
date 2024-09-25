@@ -1027,9 +1027,23 @@ function shiftCellsUp(startRow) {
 // Функция для обновления translationInput
 function updateTranslationInput() {
     const rows = document.querySelectorAll('tr');
-    const translations = Array.from(rows).map(row => row.cells[2].textContent.trim());
+    const translationLines = translationInput.value.split('\n'); // Текущий текст в translationInput, разделённый на строки
+    const translations = Array.from(rows).map((row, index) => {
+        const rowText = row.cells[2].textContent.trim();
+        
+        // Если есть существующая строка перевода, сохраняем её, иначе берём текст из таблицы
+        return translationLines[index] ? translationLines[index] : rowText;
+    });
+
+    // Если в translationInput больше строк, чем в таблице, сохраняем их
+    if (translationLines.length > rows.length) {
+        translations.push(...translationLines.slice(rows.length));
+    }
+
+    // Обновляем translationInput, объединив строки
     translationInput.value = translations.join('\n');
 }
+
   
   
     });

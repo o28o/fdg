@@ -726,6 +726,7 @@ cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенны
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?-[1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
 cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
@@ -741,7 +742,7 @@ cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
 
 if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…])\d+\b/g, '$1');
+cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…\]])\d+\b/g, '$1');
 
 }
 
@@ -799,7 +800,7 @@ if (indexValue.includes("sn")) {
 
       rowCounter++;
           const row = `<tr>
-		<td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})">&nbsp;</a></td>
+		<td>${value.trimEnd()}<a href="#" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
                         <td>${key}</td>
                         <td>${currentText}</td>
                       </tr>`;

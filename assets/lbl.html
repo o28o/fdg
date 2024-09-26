@@ -12,6 +12,8 @@
 <script src="/assets/js/jquery-ui.min.js"></script>
 	
 <script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script src="/assets/js/lbl.js"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Построчные Переводы</title>
@@ -1287,15 +1289,16 @@ function clearInputs() {
       <script src="/assets/js/linksru.js"></script>
 
 <script>
-   
+
     document.getElementById('linkButton').addEventListener('click', function() {
         var indexValue = document.getElementById('indexInput').value;
         var found = false;
 
         for (var i = 0; i < thruLinksData.length; i++) {
             if (thruLinksData[i][0] === indexValue) {
-                // Если значение найдено, открыть соответствующий URL
-                window.open('/theravada.ru/Teaching/Canon/Suttanta/Texts/' + indexValue, '_blank');
+                // Если значение найдено, взять путь из массива
+                var path = thruLinksData[i][1];
+                window.open('/theravada.ru/Teaching/Canon/Suttanta/Texts/' + path, '_blank');
                 found = true;
                 break;
             }
@@ -1308,6 +1311,7 @@ function clearInputs() {
         }
     });
 </script>
+
  
 
 

@@ -187,6 +187,14 @@ for i in `find . -name  "*htm*" -type f | sort -V`; do
 apa
 diff -qr theravada.ruold theravada.ru | grep -i suttanta
 
+#fix links 
+
+cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/theravada.ru/Teaching/Canon/Suttanta/Texts 
+
+sed -i 's@href="../AN/anguttara-@href="/theravada.ru/Teaching/Canon/Suttanta/AN/anguttara-@g' *
+sed -i 's@href="../SN/samyutta-@href="/theravada.ru/Teaching/Canon/Suttanta/SN/samyutta-@g' *
+
+
 #доделать $textindex
 for i in `grep -lri ';">.</' theravada.ru/Teaching/Canon/`
 do 

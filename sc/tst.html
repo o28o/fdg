@@ -50,10 +50,14 @@
   .column-view .pli-lang {
     padding-right: 10px;
    /* border-right: 1px solid black;  Вертикальная граница */
+    max-width: 48%; /* Ограничение по ширине для левой колонки */
+    word-wrap: break-word; /* Перенос длинных слов */
+    box-sizing: border-box; /* Учитываем внутренние отступы и границы */
   }
 
   .column-view .rus-lang {
     padding-left: 10px;
+    box-sizing: border-box; /* Учитываем внутренние отступы и границы */
   }
 </style>
 
@@ -95,7 +99,12 @@
   // Функция для обновления текста кнопки в зависимости от режима
   function updateButtonText(isColumnView) {
     const button = document.getElementById('toggle-mode');
-    button.textContent = isColumnView ? 'Чередующиеся строки' : 'Пали / Перевод';
+   // button.textContent = isColumnView ? 'Чередующиеся строки' : 'Пали / Перевод';
+   button.innerHTML = isColumnView 
+  ? '<img src="/assets/svg/align-left.svg" class="common-size-icon3 gray-icon"></img>' 
+  : '<img src="/assets/svg/align-right.svg" class="common-size-icon3 gray-icon"></img>';
+
+   
   }
 
   // Функция для переключения режима

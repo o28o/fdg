@@ -288,6 +288,16 @@ table {
    
 </div>
 
+   <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const qParam = urlParams.get('q');
+            if (qParam) {
+                document.getElementById('indexInput').value = qParam;
+            }
+        };
+    </script>
+
 <script>
     // Функция для загрузки данных и проверки индекса
     function loadAndCheckRanges() {

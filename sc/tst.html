@@ -90,22 +90,21 @@
  
 <!-- Переключатель режимов -->
 <div id="mode-switcher">
-  <button id="toggle-mode">
-  <img src="/assets/svg/align-left.svg" class="common-size-icon3 gray-icon"></img>
-  </button> <!-- Кнопка для переключения режима -->
+<a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
+  <img src="/assets/svg/swap-vertical.svg" class="common-size-icon3"></img>
+</a>
+
 </div>
 
 <script>
   // Функция для обновления текста кнопки в зависимости от режима
-  function updateButtonText(isColumnView) {
-    const button = document.getElementById('toggle-mode');
-   // button.textContent = isColumnView ? 'Чередующиеся строки' : 'Пали / Перевод';
-   button.innerHTML = isColumnView 
-  ? '<img src="/assets/svg/align-left.svg" class="common-size-icon3 gray-icon"></img>' 
-  : '<img src="/assets/svg/align-right.svg" class="common-size-icon3 gray-icon"></img>';
+function updateButtonText(isColumnView) {
+  const toggleLink = document.getElementById('toggle-mode');
+  toggleLink.innerHTML = isColumnView 
+    ? '<img src="/assets/svg/align-left.svg" class="common-size-icon3 gray-icon"></img>' 
+    : '<img src="/assets/svg/swap-vertical.svg" class="common-size-icon3 gray-icon"></img>';
+}
 
-   
-  }
 
   // Функция для переключения режима
   function toggleViewMode() {

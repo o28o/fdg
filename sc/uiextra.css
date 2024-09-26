@@ -104,14 +104,14 @@ margin-left: 6px;
   width: 22px;
 }
 
-  
+
 /* Стили по умолчанию для чередующегося отображения */
-.pli-lang, .rus-lang, .eng-lang {
+.pli-lang, .rus-lang, .eng-lang { /* Добавлено eng-lang */
   display: inline;
 }
 
 /* Стили для колонок (скрыты по умолчанию) */
-.column-view .pli-lang, .column-view .rus-lang, .column-view .eng-lang {
+.column-view .pli-lang, .column-view .rus-lang, .column-view .eng-lang { /* Добавлено eng-lang */
   display: inline-block;
   width: 48%;
   vertical-align: top;
@@ -127,15 +127,7 @@ margin-left: 6px;
   box-sizing: border-box; /* Учитываем внутренние отступы и границы */
 }
 
-/* Русский и английский будут отображаться в одном месте, но не оба одновременно */
-.column-view .rus-lang, .column-view .eng-lang {
+.column-view .rus-lang, .column-view .eng-lang { /* Добавлено eng-lang */
   padding-left: 10px;
   box-sizing: border-box; /* Учитываем внутренние отступы и границы */
 }
-
-  
-  
-  
-
-
-

@@ -252,7 +252,7 @@ table {
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
     <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
    
-        <div class="ms-1" id="checkResult" style="margin-top: 10px;">вамвам</div>
+        <div class="ms-1" id="checkResult" style="margin-top: 10px;"></div>
 
 </div>
 
@@ -1252,17 +1252,30 @@ function clearInputs() {
 </script>
     <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
   
-  
-  
+    <script src="/assets/js/linksru.js"></script>
 
 <script>
+   
     document.getElementById('linkButton').addEventListener('click', function() {
         var indexValue = document.getElementById('indexInput').value;
-        var url = '/ru/sc?q=' + indexValue;
-        window.open(url, '_blank');
-    });
-</script>  
+        var found = false;
 
+        for (var i = 0; i < thruLinksData.length; i++) {
+            if (thruLinksData[i][0] === indexValue) {
+                // Если значение найдено, открыть соответствующий URL
+                window.open('/theravada.ru/Teaching/Canon/Suttanta/Texts/' + indexValue, '_blank');
+                found = true;
+                break;
+            }
+        }
+
+        // Если значение не найдено, открыть URL по умолчанию
+        if (!found) {
+            var url = '/ru/sc?q=' + indexValue;
+            window.open(url, '_blank');
+        }
+    });
+</script>
 
 <script>
 $.ajax({

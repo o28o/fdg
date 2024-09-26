@@ -734,7 +734,7 @@ if (document.getElementById('lineBreakCheckbox').checked) {
   });
  
 cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta  Nikaya.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta Nikaya.*$/gm, '');
 
 cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, function(match, p1, p2) {
   return p1 + ' ' + p2.toUpperCase();

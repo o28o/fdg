@@ -137,20 +137,20 @@ document.addEventListener("DOMContentLoaded", function() {
  <a href="/ru/history.php" title="Search Histpry" rel="noreferrer"
             ><img width="20px" alt="History icon" src="/assets/svg/clock-rotate-left.svg"></a>           
 
-    <script>
-        window.onload = function() {
-            const currentUrlParams = window.location.search;  // Получаем все параметры (query string)
-            const currentHash = window.location.hash;         // Получаем хеш из URL
+  <script>
+    window.onload = function() {
+        const currentUrlParams = window.location.search;  // Получаем все параметры (query string)
+        const currentHash = window.location.hash;         // Получаем хеш из URL
 
-            // Ищем элемент по классу 'dynamic-link'
-            const link = document.querySelector('.dynamic-link');
-            
-            // Добавляем параметры и хеш к ссылке
-            if (currentUrlParams || currentHash) {
-                link.href = link.href + currentUrlParams + currentHash;
-            }
-        };
-    </script>
+        // Ищем элемент по классу 'dynamic-link'
+        const link = document.querySelector('.dynamic-link');
+
+        // Добавляем параметры и хеш к ссылке
+        if (currentUrlParams || currentHash) {
+            link.href = link.href + (currentUrlParams ? (link.href.includes('?') ? '&' : '?') + currentUrlParams.slice(1) : '') + (currentHash ? '#' + currentHash.slice(1) : '');
+        }
+    };
+</script>
 
 <a href="/assets/linebyline.html" class="dynamic-link" title="Create Pali-Russ translation files" rel="noreferrer">
         <img width="20px" alt="JSON Formatter icon" src="/assets/svg/table-columns.svg">

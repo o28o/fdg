@@ -22,13 +22,15 @@ fi
 
 for sanyutta in $snrange
 do
-echo $sanyutta
+
 #делаем список переводов
 find ./assets/texts/sutta/$nikaya/$sanyutta/ -type f | sed 's@_.*@_@g' | awk -F'/' '{print $NF}' | sort -V | uniq > trnList
 
 cat ./assets/texts/allRootTextWithLineCount | grep -E "$sanyutta\." | grep -v -f trnList  > missing
-cat missing | sed 's/_//g' | sort $sortMe
-wc -l missing
+
+echo $sanyutta `wc -l missing | awk '{print $2, $1}'`
+cat missing | sed 's/_//g' | sort $sortMe | tac
+echo $sanyutta `wc -l missing | awk '{print $2, $1}'`
 
 rm missing trnList
 done 

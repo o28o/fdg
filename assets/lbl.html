@@ -794,6 +794,7 @@ cleanedTranslation = cleanedTranslation.replace(/\(III\)/g, 'Третья');
 cleanedTranslation = cleanedTranslation.replace(/\(IV\)/g, 'Четвёртая');
 
 cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/^–\s+/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
   
 }
@@ -804,10 +805,10 @@ cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
 if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…\]])\d+\b/g, '$1');
+cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
 
 }
 
-cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
 
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {

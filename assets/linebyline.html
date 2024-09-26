@@ -753,6 +753,7 @@ cleanedTranslation = cleanedTranslation.replace(/\(IV\)/g, 'Четвёртая')
 }
   
 cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/^–\s+/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
 
 

@@ -1,5 +1,4 @@
-
-    // Функция для транслитерации пали в русские символы
+  // Функция для транслитерации пали в русские символы
     function transliteratePali(title) {
         const translitMap = {
             "a": "а", "ā": "а", "i": "и", "ī": "и", "u": "у", "ū": "у",
@@ -22,6 +21,9 @@
         return titles.map(title => {
             // Удаляем номер и пробел
             let cleanedTitle = title.replace(/^\d+\.\s*/, '').trim();
+            
+            // Удаляем суффиксы "vagga" и "vaggo" (чувствительно к регистру)
+            cleanedTitle = cleanedTitle.replace(/(vagga|vaggo)$/i, '').trim();
 
             // Транслитерируем название
             let transliteratedTitle = transliteratePali(cleanedTitle);
@@ -43,6 +45,3 @@
     const processedTitles = processTitles(titles);
     
     console.log(processedTitles); // Вывод обработанных названий
-
-
-

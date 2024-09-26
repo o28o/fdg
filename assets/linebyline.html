@@ -362,7 +362,9 @@ table {
   
 <div class="input-group-append ms-1 me-3">
 
-   <button class="input-group-append btn btn-primary mb-1 ms-2 " title="Открыть текст на find.dhamma.gift" id="linkButton">Fdg</button>
+   <button class="input-group-append btn btn-primary mb-1 ms-2 " title="Открыть текст на find.dhamma.gift" id="linkButton2">Th.ru</button>
+   
+     <button class="btn btn-primary mb-1" title="Открыть текст на find.dhamma.gift" id="linkButton1">Fdg</button>
             </div>
             </div>
 			
@@ -1256,9 +1258,18 @@ function clearInputs() {
     <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
   
     <script src="/assets/js/linksru.js"></script>
+	
+	<script>
+    document.getElementById('linkButton1').addEventListener('click', function() {
+        var indexValue = document.getElementById('indexInput').value;
+        var url = '/ru/sc?q=' + indexValue;
+        window.open(url, '_blank');
+    });
+</script> 
+	
 <script>
   
-    document.getElementById('linkButton').addEventListener('click', function() {
+    document.getElementById('linkButton2').addEventListener('click', function() {
         var indexValue = document.getElementById('indexInput').value;
         var found = false;
 

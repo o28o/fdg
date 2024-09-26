@@ -49,7 +49,7 @@
   /* Разделительная линия между колонками */
   .column-view .pli-lang {
     padding-right: 10px;
-    border-right: 1px solid black; /* Вертикальная граница */
+   /* border-right: 1px solid black;  Вертикальная граница */
   }
 
   .column-view .rus-lang {
@@ -86,21 +86,44 @@
  
 <!-- Переключатель режимов -->
 <div id="mode-switcher">
-  <button id="switch-to-columns">Пали / Перевод</button>
-  <button id="switch-to-alternate">Чередующиеся строки</button>
+  <button id="toggle-mode">
+  <img src="/assets/svg/align-left.svg" class="common-size-icon3 gray-icon"></img>
+  </button> <!-- Кнопка для переключения режима -->
 </div>
 
 <script>
-  // Функция для переключения в режим колонок
-  document.getElementById('switch-to-columns').addEventListener('click', function() {
-    document.getElementById('sutta').classList.add('column-view');
-  });
+  // Функция для обновления текста кнопки в зависимости от режима
+  function updateButtonText(isColumnView) {
+    const button = document.getElementById('toggle-mode');
+    button.textContent = isColumnView ? 'Чередующиеся строки' : 'Пали / Перевод';
+  }
 
-  // Функция для переключения в чередующийся режим
-  document.getElementById('switch-to-alternate').addEventListener('click', function() {
-    document.getElementById('sutta').classList.remove('column-view');
-  });
+  // Функция для переключения режима
+  function toggleViewMode() {
+    const suttaElement = document.getElementById('sutta');
+    const isColumnView = suttaElement.classList.toggle('column-view'); // Переключаем класс 'column-view'
+    localStorage.setItem('viewMode', isColumnView ? 'columns' : 'alternate'); // Сохраняем режим в localStorage
+    updateButtonText(isColumnView); // Обновляем текст кнопки
+  }
+
+  // Проверяем сохранённый режим при загрузке страницы
+  window.onload = function() {
+    const savedMode = localStorage.getItem('viewMode') || 'alternate'; // Получаем сохранённое значение или 'alternate' по умолчанию
+    const suttaElement = document.getElementById('sutta');
+    const isColumnView = (savedMode === 'columns');
+    
+    // Применяем сохранённый режим
+    if (isColumnView) {
+      suttaElement.classList.add('column-view');
+    }
+
+    updateButtonText(isColumnView); // Устанавливаем правильный текст кнопки
+  };
+
+  // Назначаем обработчик события для кнопки переключения
+  document.getElementById('toggle-mode').addEventListener('click', toggleViewMode);
 </script>
+
  <div id="form-div"> 
  </div>
     </form>

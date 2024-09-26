@@ -131,3 +131,8 @@ margin-left: 6px;
   padding-left: 10px;
   box-sizing: border-box; /* Учитываем внутренние отступы и границы */
 }
+
+/* Стили для двух колонок */
+#sutta.column-view {
+  max-width: 105rem;
+}

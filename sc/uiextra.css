@@ -96,3 +96,10 @@ textarea {
   color: #DA420E;
       font-weight: bold;
 }  
+
+.common-size-icon4 {
+  margin-top: -4px; 
+margin-left: 6px;	
+  height: 25px; 
+  width: 22px;
+}

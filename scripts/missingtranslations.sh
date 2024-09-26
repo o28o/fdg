@@ -8,20 +8,20 @@ snrange=$@
 nikaya=$(echo $snrange | sed 's/[0-9]//g' | sed 's/\s-n\s//g' )
 fi
 
-if [[ "$@" = *"-n"* ]]; then
-    sortMe="-k2,2n -k1,1V"  # по строкам
-else
+if [[ "$@" = *"-o"* ]]; then
     sortMe="-k1,1V -k2,2n"  # по текстовому индексу
+else
+    sortMe="-k2,2n -k1,1V"  # по строкам
 fi
 
 for sanyutta in $snrange
 do
 echo $sanyutta
 #делаем список переводов
-find assets/texts/sutta/$nikaya/$sanyutta/ -type f | sed 's@_.*@_@g' | awk -F'/' '{print $NF}' | sort -V | uniq > trnList
+find ../assets/texts/sutta/$nikaya/$sanyutta/ -type f | sed 's@_.*@_@g' | awk -F'/' '{print $NF}' | sort -V | uniq > trnList
 
-cat allRootTextWithLineCount | grep -E "$sanyutta\." | grep -v -f trnList  > missing
-cat missing | sort $sortMe
+cat ../assets/texts/allRootTextWithLineCount | grep -E "$sanyutta\." | grep -v -f trnList  > missing
+cat missing | sed 's/_//g' | sort $sortMe
 wc -l missing
 
 rm missing trnList

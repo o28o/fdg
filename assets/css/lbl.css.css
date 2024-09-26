@@ -1,0 +1,199 @@
+
+:root {
+  --textarea-default-height: 600px; /* Высота по умолчанию */
+  --textarea-max-height: 800px; /* Максимальная высота */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+
+  .custom-textarea {
+    resize: both; /* Позволяет растягивать в любом направлении */
+    overflow: auto; /* Добавляет полосы прокрутки при необходимости */
+    min-height: 100px; /* Минимальная высота текстового поля */
+	  height: 350px;  /* var(--textarea-default-height); Высота по умолчанию */
+    max-height: var(--textarea-max-height); /* Максимальная высота текстового поля */
+  }  
+  
+  
+
+.table-container {
+    resize: both; /* Позволяет растягивать в любом направлении */
+
+  overflow-y: auto; /* Включает вертикальную прокрутку */
+  max-height: 400px; /* Максимальная высота по умолчанию для десктопов */
+}
+
+/* Настройки для планшетов */
+@media (max-width: 1024px) {
+  .table-container {
+    max-height: 600px;  /* Убираем ограничение высоты для планшетов */
+  }
+}
+
+/* Настройки для мобильных устройств */
+@media (max-width: 600px) {
+  .table-container {
+    max-height: 600px; /* Убираем ограничение высоты для мобильных устройств */
+  }
+}
+
+
+table {
+      resize: both; /* Позволяет растягивать в любом направлении */
+
+  width: 100%; /* Занимает всю доступную ширину */
+  border-collapse: collapse; /* Объединяет границы ячеек */
+}
+
+th, td {
+  border: 1px solid black; /* Границы ячеек */
+  padding: 8px; /* Внутренний отступ ячеек */
+}
+
+
+th:nth-child(2),
+td:nth-child(2) {
+  display: none;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: auto;        /* Ширина автоматически подстраивается под содержимое */
+  max-width: 10px;    /* Ограничиваем максимальную ширину до 10 пикселей */
+  padding: 0;         /* Убираем внутренние отступы */
+  text-align: center; /* Центрируем содержимое */
+  overflow: hidden;   /* Скрываем содержимое, если оно выходит за пределы */
+}
+
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+ 
+	.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(0, 0, 0, 0.4);  Полупрозрачный черный фон */
+}
+
+.modal-content {
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Ширина по умолчанию для десктопов */
+  max-width: 400px; /* Максимальная ширина для больших экранов */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+  
+  /* Центрирование по горизонтали и вертикали */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Настройки для планшетов */
+@media (max-width: 1024px) {
+  .modal-content {
+    width: 70%; /* Ширина для планшетов */
+  }
+}
+
+/* Настройки для мобильных устройств */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%; /* Ширина для мобильных устройств */
+    max-width: none; /* Убираем максимальную ширину для мобильных устройств */
+    padding: 10px; /* Уменьшаем отступы для мобильных устройств */
+  }
+}
+
+/* Настройки для десктопов */
+@media (min-width: 1025px) {
+  .modal-content {
+    width: 60%; /* Ширина для десктопов */
+    max-width: 400px; /* Максимальная ширина для десктопов */
+  }
+}
+
+
+.modal-header {
+  cursor: move; /* Показываем, что этот элемент можно перемещать */
+}
+
+.close {
+  position: absolute;
+  top: 25px; /* Отступ сверху */
+  right: 35px; /* Отступ справа */
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+	
+	
+	.resizable {
+  resize: horizontal; /* Позволяет изменять ширину */
+  overflow: auto; /* Показывает скроллбар, если нужно */
+  min-width: 100px; /* Минимальная ширина ячейки */
+}
+
+th {
+ /* white-space: nowrap;  Запрещает перенос текста */
+  padding: 5px;
+}
+
+table {
+  width: 100%; /* Таблица занимает всю доступную ширину */
+}
+
+.table-hover th {
+  text-align: left; /* Выравнивание текста по левому краю */
+}

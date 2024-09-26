@@ -81,6 +81,14 @@ td:nth-child(2) {
   display: none;
 }
 
+th:nth-child(4),
+td:nth-child(4) {
+  width: auto;        /* Ширина автоматически подстраивается под содержимое */
+  max-width: 10px;    /* Ограничиваем максимальную ширину до 10 пикселей */
+  padding: 0;         /* Убираем внутренние отступы */
+  text-align: center; /* Центрируем содержимое */
+  overflow: hidden;   /* Скрываем содержимое, если оно выходит за пределы */
+}
 
 
 label {
@@ -199,7 +207,7 @@ table td {
 }
 
 th {
-  white-space: nowrap; /* Запрещает перенос текста */
+ /* white-space: nowrap;  Запрещает перенос текста */
   padding: 5px;
 }
 
@@ -517,6 +525,8 @@ table {
         <th class="resizable">Текст</th>
         <th class="resizable">Индексы</th>
         <th class="resizable">Перевод</th>
+       <th  class="resizable"><i class="fa-solid fa-link"></i></th>
+
       </tr>
     </thead>
     <tbody id="outputTableBody"></tbody>

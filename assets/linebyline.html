@@ -261,6 +261,8 @@ table {
             if (qParam) {
                 document.getElementById('indexInput').value = qParam;
 				loadText();
+				window.history.replaceState(null, '', window.location.origin + window.location.pathname);
+
             }
         };
     </script>

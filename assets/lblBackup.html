@@ -16,6 +16,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Построчные Переводы</title>
 <style>
+
+
+:root {
+  --textarea-default-height: 600px; /* Высота по умолчанию */
+  --textarea-max-height: 800px; /* Максимальная высота */
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -24,13 +31,34 @@ body {
     resize: both; /* Позволяет растягивать в любом направлении */
     overflow: auto; /* Добавляет полосы прокрутки при необходимости */
     min-height: 100px; /* Минимальная высота текстового поля */
-    max-height: 300px; /* Максимальная высота текстового поля */
+	  height: var(--textarea-default-height); /* Высота по умолчанию */
+    max-height: var(--textarea-max-height); /* Максимальная высота текстового поля */
   }
 
 .table-container {
+   flex: 1;
+       resize: both; /* Позволяет растягивать в любом направлении */
+
+    max-width: 60%; /* Задайте ширину таблицы */
   overflow-y: auto; /* Включает вертикальную прокрутку */
-  max-height: 400px; /* Максимальная высота по умолчанию для десктопов */
+  	  height: var(--textarea-default-height); /* Высота по умолчанию */
+  max-height: var(--textarea-max-height); /* Максимальная высота по умолчанию для десктопов */
 }
+
+
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px; /* Расстояние между таблицей и textarea */
+  }
+
+  .textarea-container {
+    flex: 1;
+    max-width: 40%; /* Задайте ширину textarea */
+  }
+
+
 
 /* Настройки для планшетов */
 @media (max-width: 1024px) {
@@ -56,6 +84,15 @@ th, td {
   border: 1px solid black; /* Границы ячеек */
   padding: 8px; /* Внутренний отступ ячеек */
 }
+
+
+th:nth-child(2),
+td:nth-child(2) {
+  display: none;
+}
+
+
+
 label {
   font-weight: bold;
   margin-right: 10px;
@@ -81,6 +118,8 @@ button:hover {
 
 table {
   width: 100%;
+      resize: both; /* Позволяет растягивать в любом направлении */
+
   border-collapse: collapse;
 }
 
@@ -164,6 +203,45 @@ table td {
   cursor: pointer;
 }
 	
+
+  
+#translationInput {
+    line-height: 1.5; /* Увеличьте значение для большего межстрочного расстояния */
+    /* Другие стили для textarea можно добавить здесь */
+}  
+
+  @media (max-width: 768px) {
+    /* Для мобильных устройств */
+    .content-container {
+      flex-direction: column;
+    }
+
+    .table-container,
+    .textarea-container {
+      max-width: 100%;
+    }
+  }
+	
+.resizable {
+  resize: horizontal; /* Позволяет изменять ширину */
+  overflow: auto; /* Показывает скроллбар, если нужно */
+  min-width: 10px; /* Минимальная ширина ячейки */
+}
+
+th {
+  white-space: nowrap; /* Запрещает перенос текста */
+  padding: 5px;
+}
+
+table {
+  width: 100%; /* Таблица занимает всю доступную ширину */
+}
+
+.table-hover th {
+  text-align: left; /* Выравнивание текста по левому краю */
+}	
+	
+
 </style>
 </head>
 <body>
@@ -181,64 +259,247 @@ table td {
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-				  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" title="Видео Инструкция" class="ms-1 text-muted
-
-" target="_blank"><i class="fa-solid fa-question"></i></a>
-   <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class="ms-2 text-muted" target="_blank">
+				  <a href="./linebyline.html" title="для Мобильных" class="ms-1 text-muted" target=""><i class="fa-solid fa-mobile-screen"></i></a>
+				  
+				  <a href="https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y" title="Видео Инструкция" class="ms-1 text-muted" target="_blank"><i class="fa-solid fa-question"></i></a>
+   
+   <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class=" ms-2 me-2 text-muted" target="_blank">
 <i class="fa-solid fa-list"></i>
-
-   </a>   
-            </div>
-        </div>
-    </div>
-
-<div class="input-group mt-2">
-<div >
-      <label class="" for="indexInput" >Номер Текста:</label>	  
-    <input  style="width: 150px;" type="search" class="form-control" id="indexInput" placeholder="Пример sn23.1 и т.п.">
-</div>
-
-<div class="input-group-append ms-1">
-    <label for="languageSelect">Язык:</label>
-    <select class="form-select" id="languageSelect">
-      <option value="pli">Пали</option>
-      <option value="en">Английский</option>
-    </select>
-  </div>
-  
-  
-<div class="input-group-append ms-1">
-    <label>Пред / След</label>
+   </a>  
+   
+   
+   <div class="input-group-append ms-1 me-3 mb-2">
+    <!-- <label>Пред / След</label> -->
     <div class=" ms-1">
-        <button class="input-group-append btn btn-primary" onclick="loadPrev()">
+        <button title="Предыдущий текст" class="input-group-append btn btn-primary" onclick="loadPrev(); loadAndCheckRanges()">
 		<i class="fa-solid fa-chevron-left"></i>
 <!-- 		&lt;
  -->		</button>
-        <button class="input-group-append btn btn-primary" onclick="loadNext()">
+        <button title="Следующий текст" class="input-group-append btn btn-primary" onclick="loadNext(); loadAndCheckRanges()">
 		<i class="fa-solid fa-chevron-right"></i>
 <!-- 		&gt;
  -->		</button>
     </div>
 </div>
-  
    
+   <div >
+      <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
+    <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">
+   
+</div>
+
+   <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const qParam = urlParams.get('q');
+            if (qParam) {
+                document.getElementById('indexInput').value = qParam;
+								loadText();
+
+            }
+        };
+    </script>
+
+<script>
+    // Функция для загрузки данных и проверки индекса
+    function loadAndCheckRanges() {
+        fetch('/sc/reader-rus-translations.js')
+            .then(response => response.text())
+            .then(data => {
+                // Извлечение переменных из текста файла
+                const regex = /let (\w+) = \[([\s\S]+?)\];/g;
+                let match;
+                let variables = {};
+
+                while ((match = regex.exec(data)) !== null) {
+                    let varName = match[1];
+                    let varValues = match[2].replace(/\s+/g, '').split(',').map(val => val.replace(/['"]/g, ''));
+                    variables[varName] = varValues;
+                }
+
+                // Лог извлеченных переменных
+                console.log('Извлеченные переменные:', variables);
+
+                // Обработка ввода пользователя
+                const inputField = document.getElementById('indexInput');
+                inputField.addEventListener('input', function () {
+                    const inputValue = this.value.trim().toLowerCase();
+                    console.log('Введенное значение:', inputValue);
+
+                    let resultMessage = '<i class="fa-solid fa-triangle-exclamation"></i>✅Уже есть!';
+
+                    // Проверка, какой тип текста введен (по префиксу)
+                    if (inputValue.startsWith('an')) {
+                        // Проверка в anranges
+                        if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
+                            console.log('Найден в anranges:', inputValue);
+                        } else {
+                            console.log('Не найден в anranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('sn')) {
+                        // Проверка в snranges
+                        if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
+                            console.log('Найден в snranges:', inputValue);
+                        } else {
+                            console.log('Не найден в snranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('mn')) {
+                        // Проверка в mnranges
+                        if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
+                            console.log('Найден в mnranges:', inputValue);
+                        } else {
+                            console.log('Не найден в mnranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else if (inputValue.startsWith('dn')) {
+                        // Проверка в dnranges
+                        if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
+                            console.log('Найден в dnranges:', inputValue);
+                        } else {
+                            console.log('Не найден в dnranges:', inputValue);
+                            resultMessage = '';
+                        }
+                    } else {
+                        resultMessage = 'Неизвестный префикс.';
+                    }
+
+                    // Отображение результата
+                    document.getElementById('checkResult').innerHTML = resultMessage;
+                });
+
+                // Проверка значения в поле ввода при загрузке страницы
+                inputField.dispatchEvent(new Event('input'));
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке файла:', error);
+            });
+    }
+
+    // Вызов функции для загрузки и проверки данных
+    loadAndCheckRanges();
+</script>
+
+
+<div class="input-group-append ms-1">
+<!--     <label for="languageSelect">Язык:</label>
+ -->    <select title="Язык исходного файла" class="form-select input-sm" id="languageSelect">
+      <option value="pli">Пали</option>
+      <option value="en">Англ</option>
+    </select>
+  </div>
+
+<div class="input-group-append ms-1 me-3">
+  <button class="btn btn-primary mb-1" title="Открыть текст на find.dhamma.gift" id="linkButton">Fdg</button>
+  
+ <button class="btn btn-primary ms-2 me-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
+  <button class="btn btn-primary me-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
+  
+  <button class="btn btn-primary me-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
+  
+  <button id="processButton" title="Загрузить JSON" class="btn btn-secondary me-1"><i class="fa-solid fa-upload"></i></button>
+  <button class="btn btn-secondary me-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
+  
+<div class="d-flex align-items-center">
+  <div class="form-check me-2">
+    <input class="form-check-input"  title="Отформатировать текст"  type="checkbox" id="lineBreakCheckbox">
+    <label class="form-check-label" for="lineBreakCheckbox">
+      Формат
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" title="Добавить +edited+o в название файла"  type="checkbox" id="customTranslatorName">
+    <label class="form-check-label" for="customTranslatorName">
+      +edited+o
+    </label>
+  </div>
+</div>  
+
   </div>
   
+     <div class="input-group-append ms-1" id="checkResult" style="margin-top: 10px;"></div>
 
-<div>
   
-  <label class="mt-2" for="translationInput">Текст перевода:</label>
-  <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
+            </div>
+			
+			
+        </div>
+    </div>
+
+
+<div id="translationJsonOutput"></div>
+
+<div class="content-container">
+  <div class="table-container mt-2 mb-3">
+    <table class="table-hover">
+      <thead>
+        <tr>
+          <th  class="resizable">Текст</th>
+          <th  class="resizable">Ключ</i></th>
+          <th  class="resizable">Перевод</th>
+          <th  class="resizable"><i class="fa-solid fa-link"></i></th>
+        </tr>
+      </thead>
+      <tbody id="outputTableBody"></tbody>
+    </table>
+  </div>
+
+
+  <div class="textarea-container my-3">
+<!--      <label for="translationInput">Редактор:</label> -->	
+<textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
 2. Вставьте русский перевод сюда
 3. Нажмите 'Обновить'
 
 Инструмент добавит заголовок и переносы строк.
 
-Можно будет поправить переноcы вручную. 
+Можно будет поправить переноcы вручную.
 
-Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
+Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе."
+              class="form-control custom-textarea" rows="15"></textarea>
+  </div>
+</div>
+  
+ 
+<script>
+  function gotoLine(lineNumber) {
+    const textarea = document.getElementById('translationInput');
+    const lines = textarea.value.split('\n');
+    
+    if (lineNumber > lines.length) {
+      console.log("Номер строки превышает количество строк в тексте.");
+      return;
+    }
+
+    let charCount = 0;
+
+    // Подсчитываем количество символов до нужной строки
+    for (let i = 0; i < lineNumber - 1 && i < lines.length; i++) {
+      charCount += lines[i].length + 1; // Учитываем символ новой строки
+    }
+
+    // Определяем конец строки
+    const lineEnd = charCount + lines[lineNumber - 1].length;
+
+    // Перемещаем фокус и выделяем строку
+    textarea.focus();
+    textarea.setSelectionRange(charCount, lineEnd);
+
+    // Прокручиваем textarea, чтобы выделенная строка была видима
+    textarea.scrollTop = textarea.scrollHeight * (charCount / textarea.value.length);
+  }
+</script>
 
 
+<div class="input-group mt-2">
+ 
+  </div>
+  
+
+<div>
+ 
 <div id="searchModal" class="modal">
   <div class="modal-content">
     <div id="modalHeader" class="modal-header">
@@ -258,17 +519,12 @@ table td {
       <button class="mb-1 btn btn-primary" id="replaceAllBtn">Заменить все</button>
       <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
 <br>
-<div class="form-check input-group-append ">
-<input class="form-check-input" type="checkbox" id="customTranslatorName">
-  <label class="form-check-label" for="customTranslatorName">
-    добавить +edited+o
-  </label>
-</div>	   
   
-  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», и «Это – скапливание боли», и «Это – истечение боли», и «Это – к истечению боли ведущая практика».">4би</button>
+  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», «Это – скапливание боли», «Это – истечение боли», «Это – к истечению боли ведущая практика».">4би</button>
   <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль»… «Это – к истечению боли ведущая практика». ">4би short</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд, правильное намерение-заготовка, правильная речь, правильные действия, правильные быт, правильное старание, правильное памятование, правильное объединение опыта. ">б8п</button>
 <button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд… правильное объединение опыта. ">б8п short</button>
+<button class="mb-1 btn btn-primary btn-sm" data-template="—">—</button>
   
     </div>
   </div>
@@ -295,37 +551,14 @@ table td {
 </div>
 
 
-<div class="form-check input-group-append ">
-  <input class="form-check-input" type="checkbox" id="lineBreakCheckbox">
-  <label class="form-check-label" for="lineBreakCheckbox">
-    Автопереносы
-  </label>
-</div>
-  <button class="btn btn-primary mt-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
-  <button class="btn btn-primary mt-1" title="Открыть текст на find.dhamma.gift" id="linkButton">Текст на Fdg</button>
-  <button class="btn btn-primary mt-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
-  
-  <button class="btn btn-primary mt-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
-  
-  <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
-  <button class="btn btn-secondary mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
+ 
+
+<button style="display: none;" class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlEnterButton">Ctrl + Enter</button>
   
 
  
-  <div id="translationJsonOutput"></div>
-<div class="table-container mt-2 mb-3">
 
-  <table class=" table-hover">
-    <thead>
-      <tr>
-        <th>Текст</th>
-        <th>Индексы</th>
-        <th>Перевод</th>
-      </tr>
-    </thead>
-    <tbody id="outputTableBody"></tbody>
-  </table>
-  </div>
+  
 <div  class="my-3">
       
     
@@ -393,24 +626,26 @@ table td {
 
 </div>
 
+
 <script>
 function downloadJson() {
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
   const translation = document.getElementById('translationInput').value.trim();
 
-  // Split the translation text into lines
+  // Разделяем текст перевода на строки
   const translationLines = translation.split('\n');
 
-  // Object to hold the JSON data
+  // Объект для хранения данных JSON
   const jsonData = {};
 
-  // Extracting only letters from indexValue
+  // Извлечение только букв из indexValue
   const lettersOnly = indexValue.match(/[a-z]+/)[0];
 
-  // Extracting all characters before the dot
+  // Извлечение всех символов до точки
   const beforeDot = indexValue.split('.')[0];
 
+  // Определение URL для запроса данных
   let url;
   if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
@@ -418,8 +653,29 @@ function downloadJson() {
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
-   //   url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
-console.log(url);
+
+  // Словарь для автоматических переводов
+  const translations = {
+    "Paṭhamaṁ.": "Первая.",
+    "Dutiyaṁ.": "Вторая.",
+    "Tatiyaṁ.": "Третья.",
+    "Catutthaṁ.": "Четвёртая.",
+    "Pañcamaṁ.": "Пятая.",
+    "Chaṭṭhaṁ.": "Шестая.",
+    "Sattamaṁ.": "Седьмая.",
+    "Aṭṭhamaṁ.": "Восьмая.",
+    "Navamaṁ.": "Девятая.",
+    "Dasamaṁ.": "Десятая.",
+	"Ekādasamaṁ.": "Одниннадцатая.",
+    "Dvādasamaṁ.": "Двенадцатая.",
+    "Tiṁsatimaṁ.": "Тринадцатая.",
+    "Cuddasamaṁ.": "Четырнадцатая.",
+    "Pannarasamaṁ.": "Пятнадцатая.",
+    "Soḷasamaṁ.": "Шестнадцатая.",
+    "Sattarasamaṁ.": "Семнадцатая.",
+    "Tassuddānaṁ": "Оглавление"
+  };
+
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -428,44 +684,45 @@ console.log(url);
       return response.json();
     })
     .then(data => {
-      // Convert data object to array of [key, value] pairs
+      // Преобразуем объект данных в массив пар [ключ, значение]
       const dataArray = Object.entries(data);
 
-      // Iterate through each key in the data object
+      // Итерация по каждому элементу данных
       dataArray.forEach(([key, value], index) => {
-        // Get the corresponding line from the translation text
-        const translationLine = translationLines[index] || ''; // Use index from iteration
+        let translationLine = translationLines[index] || ''; // Используем индекс итерации
 
-        // Create key-value pair in JSON object
+        // Если значение соответствует ключу перевода, то подставляем перевод
+        if (translations[value.trim()]) {
+          translationLine = translations[value.trim()];
+        }
+
+        // Создаем пару ключ-значение в JSON объекте
         jsonData[key] = translationLine;
       });
 
-      // Convert JSON object to string
+      // Преобразуем JSON объект в строку
       const jsonString = JSON.stringify(jsonData, null, 2);
 
-      // Create Blob object with JSON string
+      // Создаем Blob с JSON строкой
       const blob = new Blob([jsonString], { type: 'application/json' });
 
-      // Create download link
+      // Создаем ссылку для скачивания
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
 	  
-	  
-	  
-	  let translatorName = 'sv';
-	  if (document.getElementById('customTranslatorName').checked) {
-	  translatorName = 'sv+edited+o';
-} 
-	  
+      let translatorName = 'sv';
+      if (document.getElementById('customTranslatorName').checked) {
+        translatorName = 'sv+edited+o';
+      }
 	  
       a.download = indexValue + '_translation-ru-' + translatorName + '.json';
 
-      // Append link to the body and click it programmatically
+      // Программно добавляем и кликаем по ссылке
       document.body.appendChild(a);
       a.click();
 
-      // Cleanup
+      // Убираем временный URL
       URL.revokeObjectURL(url);
       document.body.removeChild(a);
     })
@@ -501,6 +758,22 @@ if (document.getElementById('lineBreakCheckbox').checked) {
     }
     return match;
   });
+ 
+cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta  Nikaya.*$/gm, '');
+
+cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, function(match, p1, p2) {
+  return p1 + ' ' + p2.toUpperCase();
+});
+
+// Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
+//cleanedTranslation = cleanedTranslation.replace(/(\([0-9]\).+?)([^\s])$/gm, function(match, p1, p2) {
+//  return p1 + p2 + ' ';
+//});
+
+
+// добавить логику, чтобы собирал в одно предложение, короткие списки???
+
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
 cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
 cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
@@ -511,31 +784,38 @@ cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенны
 cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?-[1-9][0-9]?\) /g, '');
 cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
+cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
+cleanedTranslation = cleanedTranslation.replace(/\(III\)/g, 'Третья');
 
+cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
   
 }
   
-cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
 
 
 
 if (document.getElementById('lineBreakCheckbox').checked) {
 cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…])\d+\b/g, '$1');
+cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…\]])\d+\b/g, '$1');
 
 }
 
+cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
+
 if (indexValue.includes("sn")) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {
-        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
+        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\n`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Связанные Наставления")) {
         cleanedTranslation = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
 } else if (indexValue.includes("an")) {
     if (!cleanedTranslation.startsWith("Восходящие Наставления")) {
-        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\nНомерТекста.`;
+        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\n`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
         cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
@@ -555,7 +835,7 @@ if (indexValue.includes("sn")) {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
   //    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
-console.log(url);
+//console.log(url);
   fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -565,30 +845,51 @@ console.log(url);
     })
     .then(data => {
       const tableBody = document.getElementById('outputTableBody');
-      tableBody.innerHTML = '';
+const translationInput = document.getElementById('translationInput'); // Ваше textarea
+tableBody.innerHTML = '';
 
-      const dataArray = Object.entries(data);
+const dataArray = Object.entries(data);
+const translationLines = translationInput.value.split('\n'); // Разбиваем строки translationInput
+let rowCounter = 0; // Счётчик для строк
 
-      dataArray.forEach(([key, value], index) => {
-        const translationLine = translationLines[index] || '';
-        const texts = translationLine.split('\n');
+// Основной цикл по данным
+dataArray.forEach(([key, value], index) => {
+  const translationLine = translationLines[index] || ''; // Берём соответствующую строку из translationInput
+  const texts = translationLine.split('\n'); // Разбиваем её на подстроки
 
-        texts.forEach((text, textIndex) => {
-          const currentText = texts[textIndex] || '';
+  texts.forEach((text, textIndex) => {
+    const currentText = texts[textIndex] || ''; // Текущая строка для вывода
 
-          const row = `<tr>
-                        <td>${value}</td>
-                        <td>${key}</td>
-                        <td>${currentText}</td>
-                      </tr>`;
-          tableBody.innerHTML += row;
-        });
-      });
+    rowCounter++;
+    const row = `<tr>
+                  <td>${value.trimEnd()}</td>
+                  <td>${key}</td>
+                  <td>${currentText}</td>
+                  <td><a href="#" title="${key}" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+                </tr>`;
+    tableBody.innerHTML += row;
+  });
+});
+
+// Проверяем, если translationInput содержит больше строк, чем dataArray
+if (translationLines.length > dataArray.length) {
+  for (let i = dataArray.length; i < translationLines.length; i++) {
+    rowCounter++;
+    const extraText = translationLines[i] || ''; // Дополнительные строки
+
+    const extraRow = `<tr>
+                      <td></td> <!-- Пустая ячейка для первых двух колонок -->
+                      <td></td>
+                      <td>${extraText}</td>
+                      <td><a href="#" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+                    </tr>`;
+    tableBody.innerHTML += extraRow;
+  }
+}
+
+
 	  
-  
 // новый код 	  
-
-// Новый код конец
 
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
@@ -599,40 +900,181 @@ document.getElementById('outputTableBody').addEventListener('click', function(ev
     }
 });
 
-// Функция для превращения ячейки в input для редактирования
+// Функция для превращения ячейки в textarea для редактирования
 function makeCellEditable(cell) {
-    const originalText = cell.innerText; // Сохраняем оригинальный текст ячейки
+    if (cell.querySelector('textarea')) return; // Если textarea уже есть, ничего не делаем
 
-    // Создаем input для редактирования
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.value = originalText;
-    input.classList.add('table-input'); // Опционально добавляем класс для стилей
+    const originalText = cell.textContent.trim(); // Используем textContent вместо innerText
+    
+    // Создаем textarea для редактирования
+    const textarea = document.createElement('textarea');
+    textarea.value = originalText;
+    textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
-    // Очищаем содержимое ячейки и вставляем input
-    cell.innerText = '';
-    cell.appendChild(input);
-    input.focus();
+    // Устанавливаем размеры textarea в соответствии с размерами ячейки
+	textarea.style.width = `${cell.clientWidth - 5}px`;
+    textarea.style.height = `${cell.clientHeight - 10}px`;
+    
+    // Сохраняем оригинальный текст как data-атрибут
+    cell.dataset.originalText = originalText;
+    
+    // Заменяем содержимое ячейки на textarea
+    cell.textContent = '';
+    cell.appendChild(textarea);
+    textarea.focus();
+
+    // Функция для завершения редактирования
+    function finishEditing() {
+        const newText = textarea.value.trim();
+        cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
+        delete cell.dataset.originalText; // Удаляем временный data-атрибут
+        updateTranslationTextarea();
+    }
 
     // Обрабатываем выход из режима редактирования
-    input.addEventListener('blur', function() {
-        const newText = input.value;
+    textarea.addEventListener('blur', finishEditing);
 
-        // Обновляем текст ячейки
-        cell.innerText = newText;
 
-        // Синхронизируем с текстовым полем translationInput
-        updateTranslationTextarea();
+// Обрабатываем нажатие клавиш
+textarea.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        if (!event.ctrlKey) {
+            event.preventDefault(); // Предотвращаем стандартное поведение Enter
 
-        // Снимаем фокус с input и убираем его
-        cell.removeChild(input);
-    });
+            const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+            const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+            const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
 
-    // Обрабатываем нажатие Enter для завершения редактирования
-    input.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            input.blur(); // Снимаем фокус, чтобы завершить редактирование
+            // Завершаем редактирование текущей ячейки
+            finishEditing();
+
+            // Получаем текущую строку и следующую строку
+            const currentRow = cell.parentElement;
+            let nextRow = currentRow.nextElementSibling;
+
+            // Перемещаем текст до курсора в текущую ячейку
+            cell.textContent = textBeforeCursor;
+
+            // Начинаем сдвигать строки вниз, начиная с текущей
+            let currentTextAfterCursor = textAfterCursor; // Текст, который нужно переместить вниз
+            while (nextRow) {
+                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                if (nextCell) {
+                    const tempText = nextCell.textContent.trim(); // Сохраняем текущий текст ячейки
+                    nextCell.textContent = currentTextAfterCursor; // Перемещаем текст в следующую ячейку
+                    currentTextAfterCursor = tempText; // Обновляем текст для перемещения на следующую строку
+                }
+                nextRow = nextRow.nextElementSibling; // Переходим к следующей строке
+            }
+
+            // Если остался текст, который нужно переместить, добавляем новую строку
+            if (currentTextAfterCursor) {
+                const newRow = currentRow.cloneNode(true); // Клонируем текущую строку
+                newRow.cells[2].textContent = currentTextAfterCursor; // Устанавливаем текст в третью ячейку новой строки
+                currentRow.parentElement.appendChild(newRow); // Добавляем новую строку в таблицу
+            }
+
+            // Переходим к редактированию следующей строки
+            const nextCell = currentRow.nextElementSibling.cells[2]; // Получаем ячейку третьей колонки следующей строки
+            if (nextCell) {
+                makeCellEditable(nextCell); // Устанавливаем редактирование на следующую ячейку
+            }
+        } else {
+            // Обработка Ctrl + Enter для переноса текста
+            event.preventDefault(); // Предотвращаем стандартное поведение Enter
+
+            const cursorPosition = textarea.selectionStart; // Получаем позицию курсора
+            const textBeforeCursor = textarea.value.slice(0, cursorPosition).trim(); // Текст до курсора
+            const textAfterCursor = textarea.value.slice(cursorPosition).trim(); // Текст после курсора
+
+            // Завершаем редактирование текущей ячейки
+            finishEditing();
+
+            // Обновляем следующую ячейку, если она существует
+            const currentRow = cell.parentElement;
+            const nextRow = currentRow.nextElementSibling;
+            if (nextRow) {
+                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                if (nextCell) {
+                    // Устанавливаем текст до курсора в текущую ячейку
+                    cell.textContent = textBeforeCursor;
+
+                    // Перемещаем текст после курсора в следующую ячейку
+                    nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
+                    makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+                }
+            }
         }
+    }
+	
+
+		
+// Обработка нажатия клавиши Backspace
+if (event.key === 'Backspace') {
+    const cursorPosition = textarea.selectionStart;
+    // Если курсор в начале строки
+    if (cursorPosition === 0) {
+        event.preventDefault(); // Предотвращаем удаление символа
+        const currentRow = cell.parentElement;
+        const previousRow = currentRow.previousElementSibling;
+        if (previousRow) {
+            const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
+            const currentCell = currentRow.cells[2];
+            const currentText = textarea.value.trim();
+            
+            if (currentText === '') {
+                shiftCellsUp(currentRow);
+            } else {
+                // Если текущая ячейка не пуста, объединяем с предыдущей
+                const previousText = previousCell.textContent.trim();
+                previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
+                currentCell.textContent = '';
+                updateSingleTranslationRow(currentCell);
+                
+                // После очистки текущей ячейки, сдвигаем все нижестоящие ячейки вверх
+                shiftCellsUp(currentRow);
+            }
+            
+            // Обновляем translationInput
+            updateTranslationInput();
+            
+            // Устанавливаем фокус на предыдущую ячейку
+            makeCellEditable(previousCell);
+        }
+    }
+}
+
+
+
+// Функция для сдвига ячеек вверх
+function shiftCellsUp(startRow) {
+    let rowToMove = startRow;
+    while (rowToMove.nextElementSibling) {
+        const nextRow = rowToMove.nextElementSibling;
+        rowToMove.cells[2].textContent = nextRow.cells[2].textContent;
+        rowToMove = nextRow;
+    }
+    // Очищаем последнюю ячейку
+    rowToMove.cells[2].textContent = '';
+    
+    // Обновляем все затронутые строки
+    let rowToUpdate = startRow;
+    while (rowToUpdate) {
+        updateSingleTranslationRow(rowToUpdate.cells[2]);
+        rowToUpdate = rowToUpdate.nextElementSibling;
+    }
+}
+
+
+
+// Функция для обновления translationInput
+function updateTranslationInput() {
+    const rows = document.querySelectorAll('tr');
+    const translations = Array.from(rows).map(row => row.cells[2].textContent.trim());
+    translationInput.value = translations.join('\n');
+}
+  
+  
     });
 }
 
@@ -640,22 +1082,36 @@ function makeCellEditable(cell) {
 function updateTranslationTextarea() {
     const tableRows = document.querySelectorAll('#outputTableBody tr');
     let updatedTranslation = '';
-
     tableRows.forEach(row => {
         const translationCell = row.cells[2]; // Ячейка с переводом (3-я ячейка в строке)
-        updatedTranslation += translationCell.innerText + '\n'; // Добавляем перевод с переносом строки
+        updatedTranslation += translationCell.textContent.trim() + '\n'; // Используем textContent и удаляем лишние пробелы
     });
-
     document.getElementById('translationInput').value = updatedTranslation.trim(); // Обновляем textarea
 }
 
+// Инициализация: заполняем translationInput при загрузке страницы
+document.addEventListener('DOMContentLoaded', updateTranslationTextarea);
 
-// новый код конец  
-	  
-	  
-	  
-	  
-	  
+
+// Функция для обновления translationInput только для одной строки
+function updateSingleTranslationRow(cell) {
+    const currentText = document.getElementById('translationInput').value;
+    const rows = currentText.split('\n');
+
+    // Определяем индекс строки, который нужно обновить
+    const rowIndex = Array.prototype.indexOf.call(cell.parentElement.parentElement.children, cell.parentElement);
+
+    // Обновляем текст только для этой строки
+    rows[rowIndex] = cell.textContent.trim();
+
+    // Обновляем содержимое translationInput
+    document.getElementById('translationInput').value = rows.join('\n');
+}
+
+
+// новый код 	  
+
+  
 	  
     })
     .catch(error => console.error('Error fetching data:', error.message));
@@ -664,6 +1120,8 @@ function updateTranslationTextarea() {
 
 
 <script>
+
+
 
 function loadPrev() {
       
@@ -689,11 +1147,14 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-                document.getElementById('indexInput').value = newIndexValue;
-            }
+            const inputField = document.getElementById('indexInput');
+			inputField.value = newIndexValue; // Замените это на логику для следующего 
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+	 		}
 
             // Вызываем loadText() для обновления данных
             loadText();
+					        
         })
         .catch(error => {
             console.error('Error fetching prev data:', error);
@@ -701,6 +1162,7 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
         });
+
 }
 
 function loadNext() {
@@ -728,18 +1190,25 @@ const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все си
 
             // Обновляем поле indexInput полученным значением
             if (newIndexValue) {
-                document.getElementById('indexInput').value = newIndexValue;
+		    const inputField = document.getElementById('indexInput');
+			inputField.value = newIndexValue; // Замените это на логику для следующего 
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
             }
 
             // Вызываем loadText() для обновления данных
             loadText();
+
         })
         .catch(error => {
             console.error('Error fetching next data:', error);
 
             // В случае ошибки, возвращаем оригинальное значение поля
             document.getElementById('indexInput').value = originalValue;
+			inputField.dispatchEvent(new Event('input')); // Явно вызываем событие input
+            
         });
+		
+
 }
 
 // Функция для извлечения нового значения для поля "indexInput" из данных API
@@ -780,7 +1249,7 @@ function saveInputs() {
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {
-  indexInput.value = localStorage.getItem('indexValue') || '';
+  indexInput.value = localStorage.getItem('indexValue') || 'an4.170';
   translationInput.value = localStorage.getItem('translationValue') || '';
   // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
   lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
@@ -1142,6 +1611,54 @@ document.querySelectorAll('button[data-template]').forEach(function(button) {
     });
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        loadText();
+		loadAndCheckRanges();
+    });
+</script>
+
 <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
+ <script src="/assets/js/smoothScroll.js" defer></script>
+
+
+<script>
+
+// Функция для добавления обработчиков событий
+function init() {
+  const textarea = document.getElementById('translationInput');
+  if (!textarea) {
+    console.error('Textarea not found!');
+    return;  // Если textarea не найден, прерываем выполнение
+  }
+
+  let typingTimer; // Таймер для отслеживания времени после нажатия клавиш
+  const typingInterval = 700; // Время задержки перед вызовом функции (500 мс)
+
+  function handleKeyPress(event) {
+    const key = event.key || event.keyCode;
+
+    // Проверяем нажатие клавиш Enter, Backspace, Delete или пробела
+    if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || event.keyCode === 13 || event.keyCode === 8 || event.keyCode === 46 || event.keyCode === 32 || event.keyCode === 229) {
+      clearTimeout(typingTimer); // Сбрасываем таймер при нажатии клавиши
+      typingTimer = setTimeout(loadText, typingInterval); // Запускаем таймер для вызова функции
+    }
+  }
+
+  // Добавляем обработчики событий
+  textarea.addEventListener('keyup', handleKeyPress);
+
+  textarea.addEventListener('input', function() {
+    clearTimeout(typingTimer); // Сбрасываем таймер при любом изменении текста
+    typingTimer = setTimeout(loadText, typingInterval); // Запускаем таймер для вызова функции после изменения
+  });
+}
+
+// Убедимся, что код выполняется после загрузки DOM
+document.addEventListener('DOMContentLoaded', init);
+
+</script>
+
+	
 </body>
 </html>

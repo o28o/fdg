@@ -43,18 +43,20 @@
     display: inline-block;
     width: 48%;
     vertical-align: top;
+    text-align: left; /* Оба текста выравниваются по левому краю */
   }
-  
-  /* Выравнивание текста */
+
+  /* Разделительная линия между колонками */
   .column-view .pli-lang {
-    text-align: left;
     padding-right: 10px;
+    border-right: 1px solid black; /* Вертикальная граница */
   }
-  
+
   .column-view .rus-lang {
-    text-align: right;
+    padding-left: 10px;
   }
 </style>
+
 
 <script src="/assets/js/audioLazyLoad.js"></script>
 </head>
@@ -82,12 +84,13 @@
 <img src="/assets/svg/circle-half-stroke.svg" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img>
  </div> 
  
- <div id="mode-switcher">
+<!-- Переключатель режимов -->
+<div id="mode-switcher">
   <button id="switch-to-columns">Пали / Перевод</button>
   <button id="switch-to-alternate">Чередующиеся строки</button>
 </div>
- 
- <script>
+
+<script>
   // Функция для переключения в режим колонок
   document.getElementById('switch-to-columns').addEventListener('click', function() {
     document.getElementById('sutta').classList.add('column-view');

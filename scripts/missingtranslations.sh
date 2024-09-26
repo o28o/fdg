@@ -1,11 +1,17 @@
 
-if [[ "$@" == "" ]]  || [[ "$@" == "-n" ]] 
+if [[ "$@" == "" ]]  || [[ "$@" == "-o" ]] 
+then
+snrange=$(eval echo an{1..11})
+nikaya=an
+elif [[ "$@" == *"sn" ]]  
 then
 snrange=$(eval echo sn{1..56})
 nikaya=sn
 else
-snrange=$@
-nikaya=$(echo $snrange | sed 's/[0-9]//g' | sed 's/\s-n\s//g' )
+snrange=$(echo $@ |  sed 's/[[:space:]]*-o[[:space:]]*//g' )
+nikaya=$(echo "$snrange" | sed 's/[0-9]//g; s/[[:space:]]*-o[[:space:]]*//g')
+
+#nikaya=$(echo $snrange | sed 's/[0-9]//g' | sed 's/\s-o\s//g' )
 fi
 
 if [[ "$@" = *"-o"* ]]; then
@@ -18,9 +24,9 @@ for sanyutta in $snrange
 do
 echo $sanyutta
 #делаем список переводов
-find ../assets/texts/sutta/$nikaya/$sanyutta/ -type f | sed 's@_.*@_@g' | awk -F'/' '{print $NF}' | sort -V | uniq > trnList
+find ./assets/texts/sutta/$nikaya/$sanyutta/ -type f | sed 's@_.*@_@g' | awk -F'/' '{print $NF}' | sort -V | uniq > trnList
 
-cat ../assets/texts/allRootTextWithLineCount | grep -E "$sanyutta\." | grep -v -f trnList  > missing
+cat ./assets/texts/allRootTextWithLineCount | grep -E "$sanyutta\." | grep -v -f trnList  > missing
 cat missing | sed 's/_//g' | sort $sortMe
 wc -l missing
 

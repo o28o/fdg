@@ -104,31 +104,38 @@ margin-left: 6px;
   width: 22px;
 }
 
+  
+/* Стили по умолчанию для чередующегося отображения */
+.pli-lang, .rus-lang, .eng-lang {
+  display: inline;
+}
+
+/* Стили для колонок (скрыты по умолчанию) */
+.column-view .pli-lang, .column-view .rus-lang, .column-view .eng-lang {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  text-align: left; /* Оба текста выравниваются по левому краю */
+}
+
+/* Разделительная линия между колонками */
+.column-view .pli-lang {
+  padding-right: 10px;
+  /* border-right: 1px solid black;  Вертикальная граница */
+  max-width: 48%; /* Ограничение по ширине для левой колонки */
+  word-wrap: break-word; /* Перенос длинных слов */
+  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
+}
+
+/* Русский и английский будут отображаться в одном месте, но не оба одновременно */
+.column-view .rus-lang, .column-view .eng-lang {
+  padding-left: 10px;
+  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
+}
+
+  
+  
+  
 
 
-  /* Стили по умолчанию для чередующегося отображения */
-  .pli-lang, .rus-lang {
-    display: inline;
-  }
 
-  /* Стили для колонок (скрыты по умолчанию) */
-  .column-view .pli-lang, .column-view .rus-lang {
-    display: inline-block;
-    width: 48%;
-    vertical-align: top;
-    text-align: left; /* Оба текста выравниваются по левому краю */
-  }
-
-  /* Разделительная линия между колонками */
-  .column-view .pli-lang {
-    padding-right: 10px;
-   /* border-right: 1px solid black;  Вертикальная граница */
-    max-width: 48%; /* Ограничение по ширине для левой колонки */
-    word-wrap: break-word; /* Перенос длинных слов */
-    box-sizing: border-box; /* Учитываем внутренние отступы и границы */
-  }
-
-  .column-view .rus-lang {
-    padding-left: 10px;
-    box-sizing: border-box; /* Учитываем внутренние отступы и границы */
-  }

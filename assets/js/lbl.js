@@ -46,6 +46,7 @@
     const titles = [
         "7. Devatāvagga",
         "10. Loṇakapallavagga",
+        "3. Paṭipadāvagga",
         "3. Suttavagga",
         "5. Anussativaggo"
     ];

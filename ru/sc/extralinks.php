@@ -1,1 +1,1 @@
-../scripts/extralinks.php
+../../sc/extralinks.php

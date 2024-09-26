@@ -33,32 +33,38 @@
 <script src="/assets/js/citationac.js"></script>
 -->
 <style>
-  /* Стили по умолчанию для чередующегося отображения */
-  .pli-lang, .rus-lang {
-    display: inline;
-  }
+/* Стили по умолчанию для чередующегося отображения */
+.pli-lang, .rus-lang, .eng-lang {
+  display: inline;
+}
 
-  /* Стили для колонок (скрыты по умолчанию) */
-  .column-view .pli-lang, .column-view .rus-lang {
-    display: inline-block;
-    width: 48%;
-    vertical-align: top;
-    text-align: left; /* Оба текста выравниваются по левому краю */
-  }
+/* Стили для колонок (скрыты по умолчанию) */
+.column-view {
+  display: flex; /* Используем flexbox для колонок */
+}
 
-  /* Разделительная линия между колонками */
-  .column-view .pli-lang {
-    padding-right: 10px;
-   /* border-right: 1px solid black;  Вертикальная граница */
-    max-width: 48%; /* Ограничение по ширине для левой колонки */
-    word-wrap: break-word; /* Перенос длинных слов */
-    box-sizing: border-box; /* Учитываем внутренние отступы и границы */
-  }
+/* Первая колонка — Пали */
+.column-view .pli-lang {
+  flex: 1; /* Занимает доступное пространство */
+  max-width: 50%; /* Максимальная ширина колонки */
+  padding-right: 10px; /* Отступ справа для разделительной линии */
+  word-wrap: break-word; /* Перенос длинных слов */
+  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
+}
 
-  .column-view .rus-lang {
-    padding-left: 10px;
-    box-sizing: border-box; /* Учитываем внутренние отступы и границы */
-  }
+/* Вторая колонка — Русский и английский текст */
+.column-view .rus-lang, .column-view .eng-lang {
+  display: block; /* Отображение в блоке для вертикального выравнивания */
+  padding-left: 10px; /* Отступ слева для удобного чтения */
+  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
+  word-wrap: break-word; /* Перенос длинных слов */
+}
+
+/* Объединяем русский и английский текст в одну колонку */
+.column-view .rus-lang, .column-view .eng-lang {
+  flex: 1; /* Занимает оставшееся пространство */
+}
+
 </style>
 
 
@@ -93,7 +99,6 @@
 <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
   <img src="/assets/svg/align-left.svg" class="common-size-icon4"></img>
 </a>
-
 </div>
 
 <script>

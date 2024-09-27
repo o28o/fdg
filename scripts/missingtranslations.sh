@@ -20,21 +20,22 @@ else
     sortMe="-k2,2n -k1,1V"  # по строкам
 fi
 
-
-git pull 
-
-
-
 for sanyutta in $snrange
 do
 
 #делаем список переводов
-find ./assets/texts/sutta/$nikaya/$sanyutta/ -type f | sed 's@_.*@_@g' | awk -F'/' '{print $NF}' | sort -V | uniq > trnList
+find ./assets/texts/sutta/$nikaya/$sanyutta/ -type f | sed 's@_.*@_@g' | awk -F'/' '{print $NF}' | uniq > trnList
 
 cat ./assets/texts/allRootTextWithLineCount | grep -E "$sanyutta\." | grep -v -f trnList  > missing
 
-echo $sanyutta `wc -l missing | awk '{print $2, $1}'`
-cat missing | sed 's/_//g' | sort $sortMe | tac
+#echo $sanyutta `wc -l missing | awk '{print $2, $1}'`
+
+if [[ "$@" = *"-o"* ]]; then
+	cat missing | sed 's/_//g' | tac # по текстовому индексу
+else
+	cat missing | sed 's/_//g' | awk '{print $2, $1}' | sort -n | awk '{print $2, $1}' | tac
+fi
+
 echo $sanyutta `wc -l missing | awk '{print $2, $1}'`
 
 rm missing trnList

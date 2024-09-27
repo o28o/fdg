@@ -669,10 +669,8 @@ if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includ
 
 // Проверка, содержит ли строка 'snp' или 'ud'
 if (indexValue.includes('snp') || indexValue.includes('ud')) {
-  beforeDot = '/vagga' + firstNumberOnly;
+  beforeDot = 'vagga' + firstNumberOnly;
 }
-
-//console.log(indexValue + ' ' + lettersOnly + ' ' + beforeDot + ' ' + url );
 
 
   // Определение URL для запроса данных
@@ -683,7 +681,6 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
-
 
 // Вывод в консоль
 console.log('beforeDot:', beforeDot);
@@ -868,8 +865,25 @@ if (indexValue.includes("sn")) {
 
 
   const translationLines = cleanedTranslation.split('\n');
-  const lettersOnly = indexValue.match(/[a-z]+/)[0];
-  const beforeDot = indexValue.split('.')[0];
+  let lettersOnly = indexValue.match(/[a-z]+/)[0];
+  
+// Извлечение всех символов до точки
+let beforeDot = indexValue.split('.')[0];
+let firstNumberOnly = beforeDot.match(/[0-9]+/)[0];
+//let lettersOnly = beforeDot.replace(/[0-9]/g, '');  // Удаление всех цифр, если требуется
+
+// Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
+if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp')) {
+  lettersOnly = 'kn/' + lettersOnly;
+}
+
+// Проверка, содержит ли строка 'snp' или 'ud'
+if (indexValue.includes('snp') || indexValue.includes('ud')) {
+  beforeDot = 'vagga' + firstNumberOnly;
+}
+  
+  
+  
   let url;
 
   if (language === 'pli') {

@@ -761,6 +761,46 @@ document.addEventListener('DOMContentLoaded', function() {
  <script src="/assets/js/smoothScroll.js" defer></script>
 
 <script src="/assets/js/lbl.js"></script>
-	
+
+<script>
+
+// Функция для сохранения значений
+function saveInputs() {
+  localStorage.setItem('indexValue', indexInput.value);
+  localStorage.setItem('translationValue', translationInput.value);
+  localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
+ // Сохраняем состояние чекбокса как булево значение
+}
+
+// Функция для загрузки сохраненных значений
+function loadInputs() {
+  indexInput.value = localStorage.getItem('indexValue') || 'an4.170';
+  translationInput.value = localStorage.getItem('translationValue') || '';
+  // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
+  lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
+}
+
+// Вызываем функцию загрузки сохраненных значений при загрузке страницы
+loadInputs();
+// Сохраняем значения при изменении инпутов
+indexInput.addEventListener('input', saveInputs);
+translationInput.addEventListener('input', saveInputs);
+lineBreakCheckbox.addEventListener('input', saveInputs);
+ 
+function clearInputs() {
+  // Показать предупреждение
+  if (confirm('Вы действительно хотите очистить перевод?')) {
+    // Если пользователь подтвердил, очищаем значения инпутов
+    document.getElementById('translationInput').value = '';
+
+    // Очищаем сохраненные значения в localStorage
+    localStorage.removeItem('translationValue');
+    localStorage.removeItem('lineBreakCheckboxState');
+  }
+}
+//конец
+ 
+</script>
+
 </body>
 </html>

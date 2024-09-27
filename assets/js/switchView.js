@@ -5,7 +5,7 @@ function updateButtonText(isColumnView) {
     ? '<img src="/assets/svg/align-left.svg" class="common-size-icon4"></img>'
     : '<img src="/assets/svg/align-right.svg" class="common-size-icon4"></img>';
 }
-
+ 
 // Функция для переключения режима
 function toggleViewMode() {
   const suttaElement = document.getElementById('sutta');

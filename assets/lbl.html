@@ -840,6 +840,9 @@ if (indexValue.includes("sn")) {
 } 
 
   document.getElementById('translationInput').value = cleanedTranslation;
+  
+      document.getElementById('lineBreakCheckbox').checked = false;
+
 
   const translationLines = cleanedTranslation.split('\n');
   const lettersOnly = indexValue.match(/[a-z]+/)[0];

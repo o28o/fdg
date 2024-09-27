@@ -662,12 +662,13 @@ let beforeDot = indexValue.split('.')[0];
 let firstNumberOnly = beforeDot.match(/[0-9]+/)[0];
 //let lettersOnly = beforeDot.replace(/[0-9]/g, '');  // Удаление всех цифр, если требуется
 
-// Проверка для 'snp', 'ud' или 'dhp'
-if (indexValue === 'snp' || indexValue === 'ud' || indexValue === 'dhp') {
+// Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
+if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp')) {
   lettersOnly = 'kn/' + lettersOnly;
 }
 
-if (indexValue === 'snp' || indexValue === 'ud') {
+// Проверка, содержит ли строка 'snp' или 'ud'
+if (indexValue.includes('snp') || indexValue.includes('ud')) {
   beforeDot = '/vagga' + firstNumberOnly;
 }
 

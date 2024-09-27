@@ -1257,7 +1257,7 @@ document.addEventListener('keydown', function(event) {
 function saveInputs() {
   localStorage.setItem('indexValue', indexInput.value);
   localStorage.setItem('translationValue', translationInput.value);
-  localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
+ // localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
  // Сохраняем состояние чекбокса как булево значение
 }
 
@@ -1266,7 +1266,7 @@ function loadInputs() {
   indexInput.value = localStorage.getItem('indexValue') || 'an4.170';
   translationInput.value = localStorage.getItem('translationValue') || '';
   // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
-  lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
+ // lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
 }
 
 // Вызываем функцию загрузки сохраненных значений при загрузке страницы
@@ -1274,7 +1274,7 @@ loadInputs();
 // Сохраняем значения при изменении инпутов
 indexInput.addEventListener('input', saveInputs);
 translationInput.addEventListener('input', saveInputs);
-lineBreakCheckbox.addEventListener('input', saveInputs);
+//lineBreakCheckbox.addEventListener('input', saveInputs);
  
 function clearInputs() {
   // Показать предупреждение

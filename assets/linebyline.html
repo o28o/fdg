@@ -610,11 +610,24 @@ function downloadJson() {
   const jsonData = {};
 
   // Извлечение только букв из indexValue
-  const lettersOnly = indexValue.match(/[a-z]+/)[0];
+  let lettersOnly = indexValue.match(/[a-z]+/)[0];
 
   // Извлечение всех символов до точки
-  const beforeDot = indexValue.split('.')[0];
+  let beforeDot = indexValue.split('.')[0];
+  
+let firstNumberOnly = beforeDot.match(/[0-9]+/)[0];
+//let lettersOnly = beforeDot.replace(/[0-9]/g, '');  // Удаление всех цифр, если требуется
 
+// Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
+if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp')) {
+  lettersOnly = 'kn/' + lettersOnly;
+}
+
+// Проверка, содержит ли строка 'snp' или 'ud'
+if (indexValue.includes('snp') || indexValue.includes('ud')) {
+  beforeDot = 'vagga' + firstNumberOnly;
+}
+  
   // Определение URL для запроса данных
   let url;
   if (language === 'pli') {
@@ -800,8 +813,26 @@ if (indexValue.includes("sn")) {
     document.getElementById('lineBreakCheckbox').checked = false;
 
   const translationLines = cleanedTranslation.split('\n');
-  const lettersOnly = indexValue.match(/[a-z]+/)[0];
-  const beforeDot = indexValue.split('.')[0];
+  
+    let lettersOnly = indexValue.match(/[a-z]+/)[0];
+
+  // Извлечение всех символов до точки
+  let beforeDot = indexValue.split('.')[0];
+  
+let firstNumberOnly = beforeDot.match(/[0-9]+/)[0];
+//let lettersOnly = beforeDot.replace(/[0-9]/g, '');  // Удаление всех цифр, если требуется
+
+// Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
+if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp')) {
+  lettersOnly = 'kn/' + lettersOnly;
+}
+
+// Проверка, содержит ли строка 'snp' или 'ud'
+if (indexValue.includes('snp') || indexValue.includes('ud')) {
+  beforeDot = 'vagga' + firstNumberOnly;
+}
+   
+  
   let url;
 
   if (language === 'pli') {

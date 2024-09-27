@@ -830,8 +830,9 @@ if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includ
 // Проверка, содержит ли строка 'snp' или 'ud'
 if (indexValue.includes('snp') || indexValue.includes('ud')) {
   beforeDot = 'vagga' + firstNumberOnly;
-}
-   
+} else if (indexValue.includes('dhp')) {
+  beforeDot = '';
+}  
   
   let url;
 

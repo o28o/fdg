@@ -199,8 +199,6 @@ table {
 }
 
 
-
-
 /* Для input, textarea и select в темном режиме */
 [data-theme="dark"] input,
 [data-theme="dark"] textarea,
@@ -210,25 +208,21 @@ table {
     border-color: #5a6a67; /* Цвет границы */
 }
 
+/* Стили для активного и фокусного состояния */
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] input:active,
+[data-theme="dark"] textarea:active,
+[data-theme="dark"] select:active {
+    background-color: #1e1e1e; /* Более темный фон при фокусе и активации */
+    color: #ffffff; /* Светлый текст */
+    border-color: #136857; /* Цвет границы при фокусе */
+    outline: none; /* Убирает стандартную обводку при фокусе */
+}
+
 /* Для placeholder в input и textarea */
 [data-theme="dark"] input::placeholder,
 [data-theme="dark"] textarea::placeholder {
     color: #aaaaaa; /* Светлый текст для placeholder */
-}
-
-/* Для кнопок input типа "submit", "button" или "reset" */
-[data-theme="dark"] input[type="submit"],
-[data-theme="dark"] input[type="button"],
-[data-theme="dark"] input[type="reset"] {
-    background-color: #025242; /* Темный фон кнопок */
-    border-color: #5a6a67;
-    color: #ffffff; /* Белый текст */
-}
-
-/* Для состояния фокус для input, textarea и select */
-[data-theme="dark"] input:focus,
-[data-theme="dark"] textarea:focus,
-[data-theme="dark"] select:focus {
-    border-color: #136857; /* Цвет границы при фокусе */
-    outline: none; /* Убирает стандартную обводку при фокусе */
 }

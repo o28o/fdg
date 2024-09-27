@@ -216,25 +216,11 @@ table {
 }
 
 
-/* Стили для анимации перехода */
+/* Стили для анимации перехода 
 .table-textarea {
-    transition: all 1s ease; /* Плавный переход всех свойств */
-    resize: none; /* Запрещаем изменение размеров вручную */
-    padding: 5px; /* Добавляем немного отступов для лучшего вида */
-}
-
-/* Основные стили таблицы */
-.table-hover {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table-hover th, .table-hover td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-    transition: width 1s ease, height 1s ease; /* Анимация изменений ширины и высоты */
-}
-
+    transition: all 1s ease; 
+    resize: none; 
+    padding: 5px; /* Добавляем немного отступов для лучшего вида 
+}*/
 
 

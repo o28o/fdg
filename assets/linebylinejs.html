@@ -527,55 +527,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 
- //обработчики загрузки и сохранения состояний инпутов и чекбоксов 
- 
-// Общий обработчик для элементов с id "indexInput" и "languageSelect"
-document.addEventListener('keydown', function(event) {
-    const target = event.target;
-    
-    // Проверяем, если фокус находится на поле indexInput или languageSelect
-    if ((target.id === 'indexInput' || target.id === 'languageSelect') && event.key === 'Enter') {
-        event.preventDefault(); // Отменяем стандартное поведение Enter
-        loadText(); // Запускаем функцию обновления текста
-    }
-});
-
-// Функция для сохранения значений
-function saveInputs() {
-  localStorage.setItem('indexValue', indexInput.value);
-  localStorage.setItem('translationValue', translationInput.value);
-  localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
- // Сохраняем состояние чекбокса как булево значение
-}
-
-// Функция для загрузки сохраненных значений
-function loadInputs() {
-  indexInput.value = localStorage.getItem('indexValue') || 'an4.170';
-  translationInput.value = localStorage.getItem('translationValue') || '';
-  // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
-  lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
-}
-
-// Вызываем функцию загрузки сохраненных значений при загрузке страницы
-loadInputs();
-// Сохраняем значения при изменении инпутов
-indexInput.addEventListener('input', saveInputs);
-translationInput.addEventListener('input', saveInputs);
-lineBreakCheckbox.addEventListener('input', saveInputs);
- 
-function clearInputs() {
-  // Показать предупреждение
-  if (confirm('Вы действительно хотите очистить перевод?')) {
-    // Если пользователь подтвердил, очищаем значения инпутов
-    document.getElementById('translationInput').value = '';
-
-    // Очищаем сохраненные значения в localStorage
-    localStorage.removeItem('translationValue');
-    localStorage.removeItem('lineBreakCheckboxState');
-  }
-}
-//конец
-
 </script>
 
 </body>

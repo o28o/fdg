@@ -862,13 +862,7 @@ if (translationLines.length > dataArray.length) {
   }
 }
 
-	  
-    })
-    .catch(error => console.error('Error fetching data:', error.message));
-}
-</script>
 
-<script>
 	  
 // новый код 	  
 
@@ -893,8 +887,8 @@ function makeCellEditable(cell) {
     textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
     // Устанавливаем размеры textarea в соответствии с размерами ячейки
-	textarea.style.width = `${cell.clientWidth - 5}px`;
-    textarea.style.height = `${cell.clientHeight - 10}px`;
+	textarea.style.width = `${cell.clientWidth}px`;
+    textarea.style.height = `${cell.clientHeight}px`;
     
     // Сохраняем оригинальный текст как data-атрибут
     cell.dataset.originalText = originalText;
@@ -914,6 +908,20 @@ function makeCellEditable(cell) {
 
     // Обрабатываем выход из режима редактирования
     textarea.addEventListener('blur', finishEditing);
+
+// Функция для сдвига значений ячеек в третьем столбце вниз
+function shiftCellsDown(startRow) {
+    let rowToMove = startRow;
+    let previousContent = ''; // временная переменная для хранения данных
+    
+    // Сдвигаем значения вниз начиная с текущей строки
+    while (rowToMove) {
+        const currentContent = rowToMove.cells[2].textContent; // текущее значение в третьей колонке
+        rowToMove.cells[2].textContent = previousContent; // перемещаем предыдущее значение в текущую ячейку
+        previousContent = currentContent; // сохраняем текущее значение как предыдущее для следующей итерации
+        rowToMove = rowToMove.nextElementSibling; // переходим к следующей строке
+    }
+}
 
 
 // Обрабатываем нажатие клавиш
@@ -987,15 +995,15 @@ textarea.addEventListener('keydown', function(event) {
             }
         }
     }
-	
 
+	
 		
 // Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
     // Если курсор в начале строки
     if (cursorPosition === 0) {
-        event.preventDefault(); // Предотвращаем удаление символа
+         event.preventDefault(); // Предотвращаем удаление символа
         const currentRow = cell.parentElement;
         const previousRow = currentRow.previousElementSibling;
         if (previousRow) {
@@ -1092,8 +1100,12 @@ function updateSingleTranslationRow(cell) {
 
 // новый код 	  
 
+  
+	  
+    })
+    .catch(error => console.error('Error fetching data:', error.message));
+}
 </script>
-
 
 
 <script>

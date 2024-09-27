@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+	    <link href="/assets/css/lbl.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+	
+	<link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+	
+<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Построчные Переводы</title>
+<style>
+
+</style>
+</head>
+<body>
+        <div class="mt-3">
+        <div class="align-items-center align-items-center toggle-switch input-group-append">
+            <div id="" class="input-group">
+                <a href="/ru/read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+                    <svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+                </a>
+
+                <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                </a>
+
+                <div class="ms-1 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="darkSwitch">
+                </div>
+				<a href="./lbl.html" title="для ПК" class="ms-1 text-muted" target=""><i class="fa-solid fa-desktop"></i></a>
+				
+				  <a href="https://youtu.be/JkJNgMhmv64 " title="Видео Инструкция" class="ms-2 text-muted" target="_blank"><i class="fa-solid fa-question"></i></a>
+   
+   <!-- https://youtu.be/G6QcaHTa990?si=Ub7KGLLH_pfc1P9Y -->
+   
+   <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class=" ms-2 me-2 text-muted" target="_blank">
+<i class="fa-solid fa-list"></i>
+   </a>  
+   
+   
+   <div class="input-group-append ms-1 me-3 mb-2">
+    <!-- <label>Пред / След</label> -->
+    <div class=" ms-1">
+        <button title="Предыдущий текст" class="input-group-append btn btn-primary" onclick="loadPrev(); loadAndCheckRanges()">
+		<i class="fa-solid fa-chevron-left"></i>
+<!-- 		&lt;
+ -->		</button>
+        <button title="Следующий текст" class="input-group-append btn btn-primary" onclick="loadNext(); loadAndCheckRanges()">
+		<i class="fa-solid fa-chevron-right"></i>
+<!-- 		&gt;
+ -->		</button>
+    </div>
+</div>
+   
+   <div >
+      <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
+    <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">   
+
+</div>
+        <div class="ms-1" id="checkResult" style="margin-top: 10px;"></div>
+
+
+
+<div class="input-group-append ms-1">
+<!--     <label for="languageSelect">Язык:</label>
+ -->    <select title="Язык исходного файла" class="form-select input-sm" id="languageSelect">
+      <option value="pli">Пали</option>
+      <option value="en">Англ</option>
+    </select>
+  </div>
+  
+<div class="input-group-append ms-1 me-3">
+
+   <button class="input-group-append btn btn-primary mb-1 ms-2 " title="Открыть текст на find.dhamma.gift" id="linkButton2">Th.ru</button>
+   
+     <button class="btn btn-primary mb-1" title="Открыть текст на find.dhamma.gift" id="linkButton1">Fdg</button>
+            </div>
+            </div>
+			
+		   
+  
+
+        </div>
+    </div>
+
+<div class="input-group mt-2">
+ 
+  </div>
+  
+
+<div>
+  
+  <label class="mt-2" for="translationInput">Текст перевода:</label>
+  <textarea id="translationInput" placeholder="1. Введите номер текста в 'Номер Текста'
+2. Вставьте русский перевод сюда
+3. Нажмите 'Обновить'
+
+Инструмент добавит заголовок и переносы строк.
+
+Можно будет поправить переноcы вручную. 
+
+Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе." class="form-control custom-textarea" rows="15"></textarea>
+
+
+<div id="searchModal" class="modal">
+  <div class="modal-content">
+    <div id="modalHeader" class="modal-header">
+      <span class="close">&times;</span>
+      <h3>Поиск и замена</h3>
+    </div>
+    <div class="modal-body">
+      <!-- Ваше содержимое модального окна -->
+           <label for="searchText">Найти:</label>
+      <input type="text" id="searchText">
+      <br>
+      <label for="replaceText">Заменить на:</label>
+      <input type="text" id="replaceText">
+           <br><br>
+      <button class="mb-1 btn btn-primary" id="findBtn">Найти</button>
+      <button  class="mb-1 btn btn-primary" id="replaceOneBtn">Заменить</button>
+      <button class="mb-1 btn btn-primary" id="replaceAllBtn">Заменить все</button>
+      <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
+<br>
+  
+  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», «Это – скапливание боли», «Это – истечение боли», «Это – к истечению боли ведущая практика».">4би</button>
+  <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль»… «Это – к истечению боли ведущая практика». ">4би short</button>
+<button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд, правильное намерение-заготовка, правильная речь, правильные действия, правильные быт, правильное старание, правильное памятование, правильное объединение опыта. ">б8п</button>
+<button class="mb-1 btn btn-primary btn-sm" data-template="Правильный взгляд… правильное объединение опыта. ">б8п short</button>
+<button class="mb-1 btn btn-primary btn-sm" data-template="Так сказал Благословенный. Довольные монахи обрадовались речи Благословенного. ">Так сказал…</button>
+
+<button class="mb-1 btn btn-primary btn-sm" data-template="—">—</button>
+  
+    </div>
+  </div>
+</div>
+
+<div id="settings" class="modal">
+  <div class="modal-content">
+    <div id="modalHeader" class="modal-header">
+      <span class="close">&times;</span>
+      <h3>Настройки</h3>
+    </div>
+    <div class="modal-body">
+      <!-- Ваше содержимое модального окна -->
+           <label for="translator">Переводчик:</label>
+      <input type="text" id="translator">
+    
+           <br><br>
+      <button class="mb-1 btn btn-primary" id="saveSettings">Сохранить</button>
+      <button  class="mb-1 btn btn-primary" id="resetSettings">Сбросить</button>
+      <button class="mb-1 btn btn-primary" id="closeBtn">Отмена</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="d-flex align-items-center">
+  <div class="form-check me-2">
+    <input class="form-check-input"  title="Отформатировать текст"  type="checkbox" id="lineBreakCheckbox">
+    <label class="form-check-label" for="lineBreakCheckbox">
+      Формат
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" title="Добавить +edited+o в название файла"  type="checkbox" id="customTranslatorName">
+    <label class="form-check-label" for="customTranslatorName">
+      +edited+o
+    </label>
+  </div>
+</div>
+
+
+
+
+  <button class="btn btn-primary mt-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
+
+  <button class="btn btn-primary mt-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
+  
+  <button class="btn btn-primary mt-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
+  
+  <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
+  <button class="btn btn-secondary mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
+
+
+<button style="display: none;" class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlEnterButton">Ctrl + Enter</button>
+  
+
+ 
+  <div id="translationJsonOutput"></div>
+<div class="table-container mt-2 mb-3">
+
+  <table class=" table-hover">
+    <thead>
+      <tr>
+        <th class="resizable">Текст</th>
+        <th class="resizable">Индексы</th>
+        <th class="resizable">Перевод</th>
+       <th  class="resizable"><i class="fa-solid fa-link"></i></th>
+
+      </tr>
+    </thead>
+    <tbody id="outputTableBody"></tbody>
+  </table>
+  </div>
+<div  class="my-3">
+   
+<input type="file" id="fileInput" style="display:none" accept=".json" />
+
+</div>
+
+
+<script>
+function loadText() {
+  const language = document.getElementById('languageSelect').value;
+  const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
+  let translation = document.getElementById('translationInput').value.trim();
+
+let cleanedTranslation = translation;
+
+  // Проверяем, является ли ввод валидным JSON
+  try {
+    const jsonObject = JSON.parse(translation);
+    // Если это JSON, очищаем его с помощью processJson
+    processJson(translation);
+    return;  // Прекращаем дальнейшую обработку, так как JSON уже очищен
+  } catch (error) {
+    // Если это не JSON, продолжаем обычную обработку текста
+  }
+
+
+
+if (document.getElementById('lineBreakCheckbox').checked) {
+  cleanedTranslation = translation.replace(/[\.…:?!] /g, match => {
+    let index = translation.indexOf(match);
+    if (translation.charAt(index + match.length) !== '\n') {
+      return `${match}\n`;
+    }
+    return match;
+  });
+ 
+cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta Nikaya.*$/gm, '');
+
+cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, function(match, p1, p2) {
+  return p1 + ' ' + p2.toUpperCase();
+});
+
+// Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
+//cleanedTranslation = cleanedTranslation.replace(/(\([0-9]\).+?)([^\s])$/gm, function(match, p1, p2) {
+//  return p1 + p2 + ' ';
+//});
+
+
+// добавить логику, чтобы собирал в одно предложение, короткие списки???
+
+cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
+cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
+cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
+cleanedTranslation = cleanedTranslation.replace(/Как вы думаете, /g, 'Как вы думаете,\n');
+cleanedTranslation = cleanedTranslation.replace(/или как ты считаешь/g, '\nили как ты считаешь');
+cleanedTranslation = cleanedTranslation.replace(/или как вы считаете/g, '\nили как вы считаете');
+cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал\]:.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/^.*\[Благословенный сказал:.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?-[1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
+cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
+cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
+cleanedTranslation = cleanedTranslation.replace(/\(III\)/g, 'Третья');
+cleanedTranslation = cleanedTranslation.replace(/\(IV\)/g, 'Четвёртая');
+
+  
+}
+  
+cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/^–\s+/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
+
+
+
+if (document.getElementById('lineBreakCheckbox').checked) {
+cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…\]])\d+\b/g, '$1');
+
+}
+
+cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
+
+if (indexValue.includes("sn")) {
+    if (!cleanedTranslation.startsWith("Связанные Наставления")) {
+        const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Связанные Наставления")) {
+        cleanedTranslation = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }
+} else if (indexValue.includes("an")) {
+    if (!cleanedTranslation.startsWith("Восходящие Наставления")) {
+        const additionalLines = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
+        cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }
+} 
+
+  document.getElementById('translationInput').value = cleanedTranslation;
+
+    document.getElementById('lineBreakCheckbox').checked = false;
+
+  const translationLines = cleanedTranslation.split('\n');
+  const lettersOnly = indexValue.match(/[a-z]+/)[0];
+  const beforeDot = indexValue.split('.')[0];
+  let url;
+
+  if (language === 'pli') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
+  } else if (language === 'en') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
+  }
+  //    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
+//console.log(url);
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+            const tableBody = document.getElementById('outputTableBody');
+const translationInput = document.getElementById('translationInput'); // Ваше textarea
+tableBody.innerHTML = '';
+
+const dataArray = Object.entries(data);
+const translationLines = translationInput.value.split('\n'); // Разбиваем строки translationInput
+let rowCounter = 0; // Счётчик для строк
+
+// Основной цикл по данным
+dataArray.forEach(([key, value], index) => {
+  const translationLine = translationLines[index] || ''; // Берём соответствующую строку из translationInput
+  const texts = translationLine.split('\n'); // Разбиваем её на подстроки
+
+  texts.forEach((text, textIndex) => {
+    const currentText = texts[textIndex] || ''; // Текущая строка для вывода
+
+    rowCounter++;
+    const row = `<tr>
+                  <td>${value.trimEnd()}</td>
+                  <td>${key}</td>
+                  <td>${currentText}</td>
+                  <td><a href="#" title="${key}" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+                </tr>`;
+    tableBody.innerHTML += row;
+  });
+});
+
+// Проверяем, если translationInput содержит больше строк, чем dataArray
+if (translationLines.length > dataArray.length) {
+  for (let i = dataArray.length; i < translationLines.length; i++) {
+    rowCounter++;
+    const extraText = translationLines[i] || ''; // Дополнительные строки
+
+    const extraRow = `<tr>
+                      <td></td> <!-- Пустая ячейка для первых двух колонок -->
+                      <td></td>
+                      <td>${extraText}</td>
+                      <td><a href="#" onclick="gotoLine(${rowCounter})"><i class="fa-solid fa-link"></i></a></td>
+                    </tr>`;
+    tableBody.innerHTML += extraRow;
+  }
+}
+
+  
+    })
+    .catch(error => console.error('Error fetching data:', error.message));
+}
+</script>
+
+<script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+<script src="/assets/js/linksru.js"></script>
+
+<script>
+$.ajax({
+  url: "/assets/texts/sutta_words.txt",
+  dataType: "text",
+  success: function(data) {
+
+    var accentMap = {
+      "ā": "a",
+      "ī": "i",
+      "ū": "u",
+      "ḍ": "d",
+      "ḷ": "l",
+      "ṃ": "ṁ",
+      "ṁ": "n",
+      "ṁ": "m",
+      "ṅ": "n",
+      "ṇ": "n",
+      "ṭ": "t",
+      "ñ": "n",
+      "ññ": "n",
+      "ss": "s",
+      "aa": "a",
+      "ii": "i",
+      "uu": "u",
+      "dd": "d",
+      "kk": "k",
+      "ḍḍ": "d",
+      "ḷḷ": "l",
+      "ṇṇ": "n",
+      "ṭṭ": "t",
+      "cc": "c",
+      "pp": "p",
+	  "cch": "c",
+      "ch": "c",
+      "kh": "k",
+      "ph": "p",
+      "th": "t",
+      "ṭh": "t"
+    };
+
+    var normalize = function(term) {
+      var ret = "";
+      for (var i = 0; i < term.length; i++) {
+          ret += accentMap[term.charAt(i)] || term.charAt(i);
+      }
+      return ret;
+    };
+
+    var allWords = data.split('\n');
+
+    $("#indexInput").autocomplete({
+      position: {
+        my: "left bottom",
+        at: "left top",
+        collision: "flip"
+      },
+      minLength: 0,
+      multiple: /[\s\*]/, // изменение регулярного выражения для разделения по пробелу или звездочке
+      source: function(request, response) {
+        var terms = request.term.split(/[\|\s\*]/); // изменение регулярного выражения для разделения по пробелу или звездочке или |
+        var lastTerm = terms.pop().trim();
+        var otherMinLength = 3;
+
+        if (lastTerm.length < otherMinLength) {
+          response([]);
+          return;
+        }
+
+        var re = $.ui.autocomplete.escapeRegex(lastTerm);
+        var matchbeginonly = new RegExp("^" + re, "i");
+        var matchall = new RegExp(re.replace(/([a-z])\1/gi, "$1$1"), "i");
+
+        var listBeginOnly = $.grep(allWords, function(value) {
+          value = value.label || value.value || value;
+          var results = matchbeginonly.test(value) || matchbeginonly.test(normalize(value));
+          return results;
+        });
+
+        var listAll = $.grep(allWords, function(value) {
+          value = value.label || value.value || value;
+          var results = matchall.test(value) || matchall.test(normalize(value));
+          return results;
+        });
+
+        listAll = listAll.filter(function(el) {
+          return !listBeginOnly.includes(el);
+        });
+
+        // Ограничение количества подсказок до 10
+        var maxRecord = 1000;
+        var resultList = listBeginOnly.concat(listAll).slice(0, maxRecord);
+
+        response(resultList);
+      },
+      focus: function(event, ui) {
+        // Удаляем автоматическое введение при наведении мыши
+        return false;
+      },
+      select: function(event, ui) {
+  var terms = this.value.split(/([\|\s\*])/);
+  terms.pop();
+  terms.push(ui.item.value);
+  
+  for (var i = 1; i < terms.length; i += 2) {
+    if (terms[i] === "*") {
+      terms[i] = "*";
+    } else if (terms[i] === "|") {
+      terms[i] = "|";
+    } else {
+      terms[i] = " ";
+    }
+  }
+
+  this.value = terms.join("");
+  return false;
+}
+
+    }).autocomplete("widget").addClass("fixed-height");
+  }
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+        loadText();
+    });
+</script>
+
+<script src="/assets/js/fontawesome.6.6.all.js" defer></script>
+ <script src="/assets/js/smoothScroll.js" defer></script>
+
+<script src="/assets/js/lbl.js"></script>
+
+<script>
+
+ //обработчики загрузки и сохранения состояний инпутов и чекбоксов 
+ 
+// Общий обработчик для элементов с id "indexInput" и "languageSelect"
+document.addEventListener('keydown', function(event) {
+    const target = event.target;
+    
+    // Проверяем, если фокус находится на поле indexInput или languageSelect
+    if ((target.id === 'indexInput' || target.id === 'languageSelect') && event.key === 'Enter') {
+        event.preventDefault(); // Отменяем стандартное поведение Enter
+        loadText(); // Запускаем функцию обновления текста
+    }
+});
+
+// Функция для сохранения значений
+function saveInputs() {
+  localStorage.setItem('indexValue', indexInput.value);
+  localStorage.setItem('translationValue', translationInput.value);
+  localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
+ // Сохраняем состояние чекбокса как булево значение
+}
+
+// Функция для загрузки сохраненных значений
+function loadInputs() {
+  indexInput.value = localStorage.getItem('indexValue') || 'an4.170';
+  translationInput.value = localStorage.getItem('translationValue') || '';
+  // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
+  lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
+}
+
+// Вызываем функцию загрузки сохраненных значений при загрузке страницы
+loadInputs();
+// Сохраняем значения при изменении инпутов
+indexInput.addEventListener('input', saveInputs);
+translationInput.addEventListener('input', saveInputs);
+lineBreakCheckbox.addEventListener('input', saveInputs);
+ 
+function clearInputs() {
+  // Показать предупреждение
+  if (confirm('Вы действительно хотите очистить перевод?')) {
+    // Если пользователь подтвердил, очищаем значения инпутов
+    document.getElementById('translationInput').value = '';
+
+    // Очищаем сохраненные значения в localStorage
+    localStorage.removeItem('translationValue');
+    localStorage.removeItem('lineBreakCheckboxState');
+  }
+}
+//конец
+
+</script>
+
+</body>
+</html>

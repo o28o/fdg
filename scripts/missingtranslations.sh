@@ -20,6 +20,11 @@ else
     sortMe="-k2,2n -k1,1V"  # по строкам
 fi
 
+
+git pull 
+
+
+
 for sanyutta in $snrange
 do
 

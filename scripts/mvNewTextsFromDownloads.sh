@@ -1,3 +1,6 @@
+source ../config/script_config.sh --source-only
+
+
 downloaddir=/media/c/Users/o28o/Downloads
 trndir=/media/c/soft/fdg/assets/texts/sutta/
 

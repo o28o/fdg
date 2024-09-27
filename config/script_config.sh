@@ -34,6 +34,10 @@ urllinken='/sc/?q='
 urllinkenend='&lang=pli-eng'
 urllinkbw=/bw/
 
+downloaddir=/storage/emulated/0/Download
+trndir=$apachesitepath/assets/texts/sutta/
+
+
 wbefore=1
 wafter=3
 linesafter=0
@@ -174,6 +178,10 @@ multiplier=2
 minmatchesforonline=15
 skiprounds=5
 
+
+elif [[ "`uname -a`" == *"Cygwin"* ]]; then
+downloaddir=/media/c/Users/o28o/Downloads
+trndir=/media/c/soft/fdg/assets/texts/sutta/
 fi
 
 #common vars

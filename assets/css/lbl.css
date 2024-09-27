@@ -197,3 +197,38 @@ table {
 .table-hover th {
   text-align: left; /* Выравнивание текста по левому краю */
 }
+
+
+
+
+/* Для input, textarea и select в темном режиме */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+    background-color: #2b2b2b; /* Темный фон */
+    color: #ffffff; /* Светлый текст */
+    border-color: #5a6a67; /* Цвет границы */
+}
+
+/* Для placeholder в input и textarea */
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+    color: #aaaaaa; /* Светлый текст для placeholder */
+}
+
+/* Для кнопок input типа "submit", "button" или "reset" */
+[data-theme="dark"] input[type="submit"],
+[data-theme="dark"] input[type="button"],
+[data-theme="dark"] input[type="reset"] {
+    background-color: #025242; /* Темный фон кнопок */
+    border-color: #5a6a67;
+    color: #ffffff; /* Белый текст */
+}
+
+/* Для состояния фокус для input, textarea и select */
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+    border-color: #136857; /* Цвет границы при фокусе */
+    outline: none; /* Убирает стандартную обводку при фокусе */
+}

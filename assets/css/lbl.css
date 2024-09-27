@@ -185,9 +185,6 @@ table {
   width: 100%; /* Таблица занимает всю доступную ширину */
 }
 
-.table-hover th {
-  text-align: left; /* Выравнивание текста по левому краю */
-}
 
 
 /* Для input, textarea и select в темном режиме */
@@ -226,3 +223,35 @@ table {
     resize: none; /* Запрещаем изменение размеров вручную */
     padding: 5px; /* Добавляем немного отступов для лучшего вида */
 }
+
+
+
+        /* Основные стили таблицы */
+        .table-hover {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-hover th, .table-hover td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            transition: width 0.4s ease, height 0.4s ease; /* Анимация изменений ширины и высоты */
+        }
+
+        .table-hover th {
+            background-color: #f2f2f2;
+        }
+
+        /* Плавное изменение ширины и высоты при наведении на ячейку */
+        .table-hover th.resizable:hover, .table-hover td:hover {
+            width: 150%; /* Увеличиваем ширину ячейки при наведении */
+            height: 150%; /* Увеличиваем высоту ячейки при наведении */
+        }
+
+        /* Контейнер для таблицы */
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }

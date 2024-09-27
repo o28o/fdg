@@ -1,8 +1,7 @@
-source ../config/script_config.sh --source-only
+source ./config/script_config.sh --source-only
 
-
-downloaddir=/media/c/Users/o28o/Downloads
-trndir=/media/c/soft/fdg/assets/texts/sutta/
+#downloaddir=/media/c/Users/o28o/Downloads
+#trndir=/media/c/soft/fdg/assets/texts/sutta/
 
 for file in `find "$downloaddir" -maxdepth 1 -type f -name "*translation*.json"`
 do 

@@ -179,7 +179,8 @@ minmatchesforonline=15
 skiprounds=5
 
 
-elif [[ "`uname -a`" == *"Cygwin"* ]]; then
+elif uname -a | grep -iq CYGWIN; then
+#elif [[ "`uname -a`" == *"Cygwin"* ]]; then
 downloaddir=/media/c/Users/o28o/Downloads
 trndir=/media/c/soft/fdg/assets/texts/sutta/
 fi

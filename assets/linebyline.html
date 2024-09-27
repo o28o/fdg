@@ -1293,10 +1293,28 @@ function clearInputs() {
             }
         }
 
-        // Если значение не найдено, открыть URL по умолчанию
+       // Если значение не найдено, обработка для AN и SN
         if (!found) {
-            var url = '/ru/sc?q=' + indexValue;
-            window.open(url, '_blank');
+            // Регулярное выражение для извлечения AN или SN и числа
+            var match = indexValue.match(/(an|sn)(\d+)\.\d+/i);
+            if (match) {
+                // Префикс (AN или SN) в верхнем регистре
+                var prefix = match[1].toUpperCase();
+                // Номер книги
+                var bookNumber = match[2];
+
+                // Генерация ссылки для AN и SN
+                if (prefix === 'AN') {
+                    var url = '/theravada.ru/Teaching/Canon/Suttanta/AN/anguttara-' + bookNumber + '.htm';
+                } else if (prefix === 'SN') {
+                    var url = '/theravada.ru/Teaching/Canon/Suttanta/SN/samyutta-' + bookNumber + '.htm';
+                }
+                window.open(url, '_blank');
+            } else {
+                // Если формат не соответствует AN или SN, открыть URL по умолчанию
+                var url = '/ru/sc?q=' + indexValue;
+                window.open(url, '_blank');
+            }
         }
     });
 </script>

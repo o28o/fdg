@@ -1596,7 +1596,7 @@ $([[ $linksi != "" ]] && [[ "$args" == *"-conv"* ]] && echo "<a target=\"_blank\
 
 </td>" 
 #`if [ -n "$audiofile" ]; then echo "<a  href=\"$Audiofileforlink\">$svgicon</a>"; fi`  
-echo "<td><p>"
+echo "<td><p class='sutta'>"
 
 echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&nbsp;</a></span><br class=\"btwntrn\">" 
 [[ "$quote_ln" != "" ]] && 

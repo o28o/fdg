@@ -8,7 +8,7 @@ function updateButtonText(isColumnView) {
  
 // Функция для переключения режима
 function toggleViewMode() {
-  const suttaElement = document.getElementById('sutta');
+  const suttaElement = document.querySelector('#sutta, .sutta'); // Ищем по id или по классу
   const isColumnView = suttaElement.classList.toggle('column-view'); // Переключаем класс 'column-view'
   localStorage.setItem('viewMode', isColumnView ? 'columns' : 'alternate'); // Сохраняем режим в localStorage
   updateButtonText(isColumnView); // Обновляем текст кнопки
@@ -17,7 +17,7 @@ function toggleViewMode() {
 // Проверяем сохранённый режим при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
   const savedMode = localStorage.getItem('viewMode') || 'alternate'; // Получаем сохранённое значение или 'alternate' по умолчанию
-  const suttaElement = document.getElementById('sutta');
+  const suttaElement = document.querySelector('#sutta, .sutta'); // Ищем по id или по классу
   const isColumnView = (savedMode === 'columns');
 
   // Применяем сохранённый режим

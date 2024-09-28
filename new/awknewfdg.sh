@@ -37,12 +37,12 @@ name=sutta
  }
 
         if (prev_file != file_name && NR != 1) {
-        print "</p></div></td></tr>"
+        print "</p></td></tr>"
         print "\n"
     } 
 if (NR == 1 || (file_name != prev_file && textclass == 1)) {
     
-        print texttype "@" urlwithanchor "@" file_name "@" sutta "@<td><div class=sutta><p><span class=\"" htmlclass " quote\" lang=\"" language "\">" qoute, hiddenlink "</span>;;;"
+        print texttype "@" urlwithanchor "@" file_name "@" sutta "@<td><p><span class=\"" htmlclass " quote\" lang=\"" language "\">" qoute, hiddenlink "</span>;;;"
     } else {
         print "<span class=\"" htmlclass " quote\" lang=\"" language "\">" qoute, hiddenlink "</span><br class=\"styled\">;;;"
     }

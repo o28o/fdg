@@ -784,3 +784,47 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
    
    
 }
+
+
+
+
+
+.common-size-icon4 {
+  margin-top: -3px; 
+margin-left: 6px;	
+  height: 25px; 
+  width: 22px;
+}
+
+
+/* Стили по умолчанию для чередующегося отображения */
+.pli-lang, .rus-lang, .eng-lang { /* Добавлено eng-lang */
+  display: inline;
+}
+
+/* Стили для колонок (скрыты по умолчанию) */
+.column-view .pli-lang, .column-view .rus-lang, .column-view .eng-lang { /* Добавлено eng-lang */
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  text-align: left; /* Оба текста выравниваются по левому краю */
+}
+
+/* Разделительная линия между колонками */
+.column-view .pli-lang {
+  padding-right: 10px;
+  /* border-right: 1px solid black;  Вертикальная граница */
+  max-width: 48%; /* Ограничение по ширине для левой колонки */
+  word-wrap: break-word; /* Перенос длинных слов */
+  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
+}
+
+.column-view .rus-lang, .column-view .eng-lang { /* Добавлено eng-lang */
+  padding-left: 10px;
+  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
+}
+
+/* Стили для двух колонок */
+#sutta.column-view {
+  max-width: 105rem;
+}

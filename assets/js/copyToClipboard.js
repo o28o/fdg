@@ -11,8 +11,10 @@ function copyToClipboard(text = "") {
 if (text.includes('localhost') || text.includes('127.0.0.1')) {
     text = text.replace('http://localhost:8080', 'https://find.dhamma.gift');
     text = text.replace('http://127.0.0.1:8080', 'https://find.dhamma.gift');
-}
- else {
+} else if (!text.includes('https://find.dhamma.gift')) {
+      // Если нет 'https://find.dhamma.gift', то заменить соответствующую часть
+      text = 'https://find.dhamma.gift' + text.substring(text.indexOf('/', 8)); // заменяем домен
+} else {
     text = text.replace('https://find.dhamma.gift', 'http://127.0.0.1:8080');
    // text = text.replace('https://find.dhamma.gift', 'http://localhost:8080');
 } 

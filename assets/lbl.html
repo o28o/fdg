@@ -705,11 +705,12 @@ console.log('url:', url);
     "Dasamaṁ.": "Десятая.",
 	"Ekādasamaṁ.": "Одниннадцатая.",
     "Dvādasamaṁ.": "Двенадцатая.",
-    "Tiṁsatimaṁ.": "Тринадцатая.",
+    "Terasamaṁ.": "Тринадцатая.",
     "Cuddasamaṁ.": "Четырнадцатая.",
     "Pannarasamaṁ.": "Пятнадцатая.",
     "Soḷasamaṁ.": "Шестнадцатая.",
     "Sattarasamaṁ.": "Семнадцатая.",
+    "Tiṁsatimaṁ.": "Тридцатая.",
     "Tassuddānaṁ": "Оглавление"
   };
 
@@ -830,12 +831,12 @@ cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
 cleanedTranslation = cleanedTranslation.replace(/\(III\)/g, 'Третья');
 cleanedTranslation = cleanedTranslation.replace(/\(IV\)/g, 'Четвёртая');
 
-cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/^–\s+/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
   
 }
   
+cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
+cleanedTranslation = cleanedTranslation.replace(/^–\s+/gm, '');
 
 
 

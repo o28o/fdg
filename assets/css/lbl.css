@@ -73,6 +73,14 @@ td:nth-child(3) {
   width: 49%; /* Первую и третью колонки делаем по 50% */
 }
 
+th.resizable,
+td.resizable {
+  resize: horizontal; /* Позволяет изменять ширину */
+  overflow: auto; /* Показывает скроллбар, если контент не вмещается */
+  min-width: 100px; /* Минимальная ширина для ячеек */
+  max-width: 100%; /* Максимальная ширина — вся ширина контейнера */
+}
+
 label {
   font-weight: bold;
   margin-right: 10px;
@@ -170,13 +178,6 @@ button:hover {
   cursor: pointer;
 }
 	
-	
-	.resizable {
-  resize: horizontal; /* Позволяет изменять ширину */
-  overflow: auto; /* Показывает скроллбар, если нужно */
-  min-width: 100px; /* Минимальная ширина ячейки */
-}
-
 
 
 /* Для input, textarea и select в темном режиме */

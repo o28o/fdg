@@ -42,16 +42,22 @@ body {
 }
 
 
+
 table {
       resize: both; /* Позволяет растягивать в любом направлении */
+white-space: normal;
 
   width: 100%; /* Занимает всю доступную ширину */
   border-collapse: collapse; /* Объединяет границы ячеек */
 }
 
-th, td {
-  border: 1px solid black; /* Границы ячеек */
-  padding: 8px; /* Внутренний отступ ячеек */
+table th,
+table td {
+  white-space: normal;
+
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
 }
 
 
@@ -60,6 +66,12 @@ td:nth-child(2) {
   display: none;
 }
 
+th:nth-child(1),
+td:nth-child(1),
+th:nth-child(3),
+td:nth-child(3) {
+  width: 49%; /* Первую и третью колонки делаем по 50% */
+}
 
 label {
   font-weight: bold;
@@ -84,17 +96,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table th,
-table td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
-}
 
  
 	.modal {
@@ -174,15 +175,6 @@ table td {
   resize: horizontal; /* Позволяет изменять ширину */
   overflow: auto; /* Показывает скроллбар, если нужно */
   min-width: 100px; /* Минимальная ширина ячейки */
-}
-
-th {
- /* white-space: nowrap;  Запрещает перенос текста */
-  padding: 5px;
-}
-
-table {
-  width: 100%; /* Таблица занимает всю доступную ширину */
 }
 
 

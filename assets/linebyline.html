@@ -255,7 +255,7 @@ table {
    
    <div >
       <!-- <label class="" for="indexInput" >Номер Текста:</label>	   -->
-    <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">   
+    <input  style="width: 150px;" type="search" onclick="loadAndCheckRanges()" class="form-control input-sm mb-2" id="indexInput" title="Индекс Текста пример sn56.11, an3.70, sn23.1 и т.п. " placeholder= "Номер Сутты ">   
 
 </div>
         <div class="ms-1" id="checkResult" style="margin-top: 10px;"></div>
@@ -794,7 +794,7 @@ cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…\]])\d+\b/g, '
 
 cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
 
-if (indexValue.includes("sn")) {
+if (/sn[0-9]/.test(indexValue)) {
     if (!cleanedTranslation.startsWith("Связанные Наставления")) {
         const additionalLines = `Связанные Наставления ${indexValue.replace(/[a-z]/g, '')}\nГлава \nСутта \n\n\n`;
         cleanedTranslation = additionalLines + cleanedTranslation;

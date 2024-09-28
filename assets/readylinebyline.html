@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список готовых Сутт</title>
     <style>
-         ul {
-            list-style-type: none; /* Убираем стандартную маркерную точку */
-            padding-left: 0; /* Убираем отступ слева у списка */
-   
-        }
+	.wrapper {
+    display: block; /* Контейнер будет занимать всю ширину */
+    width: 100%;
+}
 
-        li::before {
-            content: ""; /* Убираем содержание маркера */
-        }
-		
-		  ul li {
-        display: inline; /* Делает элементы списка горизонтальными */
-		  white-space: normal; /* Перенос текста внутри ul */
+ul {
+    list-style-type: none; /* Убираем стандартную маркерную точку */
+    white-space: normal; /* Перенос текста внутри ul */
+    word-wrap: break-word; /* Перенос длинных слов */
+    padding: 0;
+    margin: 0;
+}
 
-        margin-right: 10px; /* Добавляет отступ между элементами */
-    }
-	
+ul li {
+    display: block; /* Каждый элемент списка будет на новой строке */
+    width: 100%; /* Каждая строка занимает всю ширину контейнера */
+    margin-right: 10px; /* Добавляет отступ между элементами */
+}
 
     </style>
 </head>
@@ -37,7 +38,7 @@
  </p>
   
   <div id="outputFromLatestPhp"></div>
- 
+ <div class="wrapper">
  <h2>an</h2>
     <ul id="anRanges"></ul>
 	
@@ -53,7 +54,7 @@
     <!-- Заголовок и список для переменных dnranges -->
     <h2>dn Полностью</h2>
     <ul id="dnRanges"></ul>
-
+</div>
     <script>
 	
 fetch('/sc/latest-rus.php')

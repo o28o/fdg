@@ -928,20 +928,6 @@ document.getElementById('outputTableBody').addEventListener('click', function(ev
 
 let activeCell = null; // Для отслеживания текущей активной ячейки
 
-// Функция для завершения редактирования
-function finishEditing(cell) {
-    const textarea = cell.querySelector('textarea');
-    if (!textarea) return; // Если textarea нет, выходим
-
-    const newText = textarea.value.trim();
-    cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
-    delete cell.dataset.originalText; // Удаляем временный data-атрибут
-    activeCell = null; // Сбрасываем активную ячейку
-    updateTranslationTextarea(); // Обновляем перевод в другом textarea
-}
-
-
-
 
 // Функция для превращения ячейки в textarea для редактирования
 function makeCellEditable(cell) {
@@ -975,6 +961,17 @@ function makeCellEditable(cell) {
         finishEditing(cell);
     });
 
+// Функция для завершения редактирования
+function finishEditing(cell) {
+    const textarea = cell.querySelector('textarea');
+    if (!textarea) return; // Если textarea нет, выходим
+
+    const newText = textarea.value.trim();
+    cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
+    delete cell.dataset.originalText; // Удаляем временный data-атрибут
+    activeCell = null; // Сбрасываем активную ячейку
+    updateTranslationTextarea(); // Обновляем перевод в другом textarea
+}
 
 
 // Обрабатываем нажатие клавиш

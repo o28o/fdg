@@ -16,6 +16,16 @@ sed -i 's@  …@ …@g' $i
 echo " done <br>"
 fi
 
+if grep -q '  ' $i
+then
+echo -n "fixing double spaces in $i"
+sed -i 's@  @ @g' $i
+sed -i 's@   @ @g' $i
+sed -i 's@    @ @g' $i
+echo " done <br>"
+fi
+
+
 if grep -q $'\r' $i
 then
 echo -n "fixing windows newlines in $i"

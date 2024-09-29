@@ -197,8 +197,11 @@ sed -i 's@href="../SN/samyutta-@href="/theravada.ru/Teaching/Canon/Suttanta/SN/s
 #fix favico and img
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/theravada.ru/
 find . -type f -name "*.htm"| xargs sed -i 's@href="/favicon.ico"@href="/theravada.ru/favicon.ico"@g'
-find . -type f -name "*.htm"| xargs sed -i 's@../../../../Index/Navigate/nav12b.gif@/theravada.ru/Index/Navigate/nav12b.gif@g'
 
+find . -type f -name "*.htm"| xargs sed -i 's@../../../../Index/Navigate/nav12a.gif@/theravada.ru/Index/Navigate/nav12b.gif@g; s@../../../../Index/Navigate/nav1a.gif@/theravada.ru/Index/Navigate/nav1b.gif@g; s@../../../../Index/Navigate/nav12b.gif@/theravada.ru/Index/Navigate/nav12b.gif@g'
+
+find . -type f -name "*.htm"| xargs sed -E -i 's@(../)*Index/head_left_[0-9]*.gif@/assets/img/headerlogo.png@g; s@(../)*Index/Razdel_img/head_right[0-9]*.jpg@/assets/img/headerlogo.png@g;
+s@(../)*Index/menu_background_fade.jpg@/assets/img/headerlogo.png@g'
 
 #доделать $textindex
 for i in `grep -lri ';">.</' theravada.ru/Teaching/Canon/`

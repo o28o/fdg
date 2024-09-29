@@ -915,16 +915,39 @@ if (translationLines.length > dataArray.length) {
 
 // Добавляем обработчик клика на таблицу
 document.getElementById('outputTableBody').addEventListener('click', function(event) {
-    // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
     const target = event.target;
+
+    // Проверяем, был ли клик по ячейке с переводом (по столбцу с индексом 2)
     if (target.tagName === 'TD' && target.cellIndex === 2) {
-        makeCellEditable(target);
+        // Проверяем, не является ли эта ячейка уже редактируемой
+        if (!target.querySelector('textarea')) {
+            makeCellEditable(target);
+        }
     }
 });
 
+let activeCell = null; // Для отслеживания текущей активной ячейки
+
+// Функция для завершения редактирования
+function finishEditing(cell) {
+    const textarea = cell.querySelector('textarea');
+    if (!textarea) return; // Если textarea нет, выходим
+
+    const newText = textarea.value.trim();
+    cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
+    delete cell.dataset.originalText; // Удаляем временный data-атрибут
+    activeCell = null; // Сбрасываем активную ячейку
+    updateTranslationTextarea(); // Обновляем перевод в другом textarea
+}
+
+
+
+
 // Функция для превращения ячейки в textarea для редактирования
 function makeCellEditable(cell) {
-    if (cell.querySelector('textarea')) return; // Если textarea уже есть, ничего не делаем
+    if (activeCell) {
+        finishEditing(activeCell); // Завершаем редактирование предыдущей ячейки перед началом новой
+    }
 
     const originalText = cell.textContent.trim(); // Используем textContent вместо innerText
     
@@ -934,7 +957,7 @@ function makeCellEditable(cell) {
     textarea.classList.add('table-textarea'); // Опционально добавляем класс для стилей
 
     // Устанавливаем размеры textarea в соответствии с размерами ячейки
-	textarea.style.width = `${cell.clientWidth - 5}px`;
+    textarea.style.width = `${cell.clientWidth - 5}px`;
     textarea.style.height = `${cell.clientHeight - 10}px`;
     
     // Сохраняем оригинальный текст как data-атрибут
@@ -945,16 +968,13 @@ function makeCellEditable(cell) {
     cell.appendChild(textarea);
     textarea.focus();
 
-    // Функция для завершения редактирования
-    function finishEditing() {
-        const newText = textarea.value.trim();
-        cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
-        delete cell.dataset.originalText; // Удаляем временный data-атрибут
-        updateTranslationTextarea();
-    }
+    activeCell = cell; // Запоминаем текущую активную ячейку
 
     // Обрабатываем выход из режима редактирования
-    textarea.addEventListener('blur', finishEditing);
+    textarea.addEventListener('blur', function() {
+        finishEditing(cell);
+    });
+
 
 
 // Обрабатываем нажатие клавиш

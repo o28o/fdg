@@ -121,13 +121,12 @@ margin-left: 6px;
 /* Разделительная линия между колонками */
 .column-view .pli-lang {
   padding-right: 10px;
-  /* border-right: 1px solid black;  Вертикальная граница */
   max-width: 48%; /* Ограничение по ширине для левой колонки */
   word-wrap: break-word; /* Перенос длинных слов */
   box-sizing: border-box; /* Учитываем внутренние отступы и границы */
 }
 
-.column-view .rus-lang, .column-view .eng-lang { /* Добавлено eng-lang */
+.column-view .rus-lang, .column-view .eng-lang { 
   padding-left: 10px;
   box-sizing: border-box; /* Учитываем внутренние отступы и границы */
 }

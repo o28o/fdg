@@ -194,6 +194,11 @@ cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/theravada.r
 sed -i 's@href="../AN/anguttara-@href="/theravada.ru/Teaching/Canon/Suttanta/AN/anguttara-@g' *
 sed -i 's@href="../SN/samyutta-@href="/theravada.ru/Teaching/Canon/Suttanta/SN/samyutta-@g' *
 
+#fix favico and img
+cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/theravada.ru/
+find . -type f -name "*.htm"| xargs sed -i 's@href="/favicon.ico"@href="/theravada.ru/favicon.ico"@g'
+find . -type f -name "*.htm"| xargs sed -i 's@src="../../../../Index/Navigate/nav12a.gif"@src="/theravada.ru/Index/Navigate/nav12a.gif""@g'
+
 
 #доделать $textindex
 for i in `grep -lri ';">.</' theravada.ru/Teaching/Canon/`

@@ -859,7 +859,6 @@ const thruLinksData = [
 ["an5.70", "an5_70-asavakkhaya-sutta-sv.htm"],
 ["an5.71", "an5_71-pathama-cetovimuttiphala-sutta-sv.htm"],
 ["an5.72", "an5_72-dutiya-cetovimuttiphala-sutta-sv.htm"],
-["an5.73", "an5_73-dhamma-viharin-sutta-sv.htm"],
 ["an5.73", "an5_73-pathama-dhammavihari-sutta-sv.htm"],
 ["an5.74", "an5_74-dutiya-dhammavihari-sutta-sv.htm"],
 ["an5.75", "an5_75-yodhajiva-sutta-sv.htm"],

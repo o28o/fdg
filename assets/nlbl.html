@@ -1120,6 +1120,62 @@ if (event.key === 'Backspace') {
 }
 
 
+// Обработка нажатия клавиш стрелок курсоров
+textarea.addEventListener('keydown', function(event) {
+    // Проверка нажатия клавиш "вниз" и "вправо"
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+        const cursorPosition = textarea.selectionStart;
+        const lineText = textarea.value.split('\n')[textarea.value.substr(0, cursorPosition).split('\n').length - 1];
+
+        // Проверка, находится ли курсор в конце строки
+        if (cursorPosition === textarea.value.lastIndexOf(lineText) + lineText.length) {
+            event.preventDefault(); // Предотвращаем стандартное поведение
+
+            const currentRow = cell.parentElement;
+            const nextRow = currentRow.nextElementSibling;
+
+            if (nextRow) {
+                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
+                if (nextCell) {
+                    makeCellEditable(nextCell, 0); // Устанавливаем редактирование на следующую ячейку
+                }
+            }
+        }
+    }
+});
+
+
+// Обработка нажатия клавиш стрелок курсоров
+textarea.addEventListener('keydown', function(event) {
+    // Проверка нажатия клавиш "вверх" и "влево"
+    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+        const cursorPosition = textarea.selectionStart;
+        const lineText = textarea.value.split('\n')[textarea.value.substr(0, cursorPosition).split('\n').length - 1];
+
+        // Проверка, находится ли курсор в начале строки
+        if (cursorPosition === 0) {
+            event.preventDefault(); // Предотвращаем стандартное поведение
+
+            const currentRow = cell.parentElement;
+            const previousRow = currentRow.previousElementSibling;
+
+            if (previousRow) {
+                const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
+                if (previousCell) {
+                    makeCellEditable(previousCell); // Устанавливаем редактирование на предыдущую ячейку
+                    
+                    // Устанавливаем курсор в конец текста предыдущей ячейки
+                    const previousTextarea = previousCell.querySelector('textarea');
+                    if (previousTextarea) {
+                        previousTextarea.focus();
+                        previousTextarea.setSelectionRange(previousTextarea.value.length, previousTextarea.value.length); // Устанавливаем курсор в конец
+                    }
+                }
+            }
+        }
+    }
+});
+
 
 // Функция для сдвига ячеек вверх
 function shiftCellsUp(startRow) {

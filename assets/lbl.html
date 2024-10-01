@@ -1812,6 +1812,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 </script>
 
+
 <script>
 document.addEventListener("keydown", function(event) {
     // Проверяем нажатие сочетания клавиш Ctrl + M
@@ -1837,14 +1838,14 @@ function formatSelectedText() {
         // Форматируем строки: добавляем пробел в конце, если его нет
         const formattedLines = lines.map(line => {
             line = line.trimEnd(); // Убираем пробелы в конце
-            if (line && !line.endsWith(";")) { // Проверяем наличие ; в конце строки
-                line += ";"; // Добавляем ; если его не было
+            if (line && !line.endsWith(" ")) { // Проверяем наличие ; в конце строки
+                line += " "; // Добавляем ; если его не было
             }
             return line;
         });
 
         // Объединяем строки без переносов
-        const formattedText = formattedLines.join(" ");
+        const formattedText = formattedLines.join("");
 
         // Заменяем выделенный текст отформатированным
         const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEnd);
@@ -1856,7 +1857,5 @@ function formatSelectedText() {
 }
 
 </script>
-
-	
 </body>
 </html>

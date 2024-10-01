@@ -928,7 +928,14 @@ document.getElementById('outputTableBody').addEventListener('click', function(ev
 });
 
 // Функция для превращения ячейки в textarea для редактирования
-function makeCellEditable(cell) {
+// makeCellEditable(cell); //  По умолчанию, курсор в конец строки
+// makeCellEditable(cell, 'start'); // Курсор в начало строки
+// makeCellEditable(cell, 'end'); // Курсор в конец строки
+// makeCellEditable(cell, 5); // Курсор на 5-м символе от начала
+// makeCellEditable(cell, -3); // Курсор на 3-м символе от конца
+
+
+function makeCellEditable(cell, cursorPosition = null) {
     if (cell.querySelector('textarea')) return; // Если textarea уже есть, ничего не делаем
 
     const originalText = cell.textContent.trim(); // Используем textContent вместо innerText
@@ -949,6 +956,28 @@ function makeCellEditable(cell) {
     cell.textContent = '';
     cell.appendChild(textarea);
     textarea.focus();
+
+    // Обрабатываем курсорную позицию, если передана
+    if (cursorPosition !== null) {
+        let position;
+        const textLength = textarea.value.length;
+
+        if (cursorPosition === 'start') {
+            position = 0;
+        } else if (cursorPosition === 'end') {
+            position = textLength;
+        } else if (typeof cursorPosition === 'number') {
+            if (cursorPosition >= 0) {
+                position = Math.min(cursorPosition, textLength); // Если положительное значение
+            } else {
+                position = Math.max(textLength + cursorPosition, 0); // Если отрицательное значение
+            }
+        }
+
+        textarea.setSelectionRange(position, position); // Устанавливаем курсор на нужную позицию
+    } else {
+        textarea.setSelectionRange(textarea.value.length, textarea.value.length); // Если позиция не указана, курсор ставится в конец текста
+    }
 
     // Функция для завершения редактирования
     function finishEditing() {
@@ -1004,7 +1033,7 @@ textarea.addEventListener('keydown', function(event) {
             // Переходим к редактированию следующей строки
             const nextCell = currentRow.nextElementSibling.cells[2]; // Получаем ячейку третьей колонки следующей строки
             if (nextCell) {
-                makeCellEditable(nextCell); // Устанавливаем редактирование на следующую ячейку
+                makeCellEditable(nextCell, 0); // Устанавливаем редактирование на следующую ячейку
             }
         } else {
             // Обработка Ctrl + Enter для переноса текста
@@ -1028,18 +1057,17 @@ textarea.addEventListener('keydown', function(event) {
 
                     // Перемещаем текст после курсора в следующую ячейку
                     nextCell.textContent = textAfterCursor + (nextCell.textContent.trim() ? ' ' : '') + nextCell.textContent.trim();
-                    makeCellEditable(nextCell); // Начинаем редактирование следующей ячейки
+                    makeCellEditable(nextCell, 0); // Начинаем редактирование следующей ячейки
                 }
             }
         }
     }
 	
-
-		// Обработка нажатия клавиши Backspace
+// Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
     const selectionEnd = textarea.selectionEnd;
-    
+
     // Если есть выделенный текст, позволяем его удалить стандартным поведением
     if (cursorPosition !== selectionEnd) {
         return; // Прерываем выполнение, чтобы сработало стандартное поведение удаления выделенного текста
@@ -1047,7 +1075,7 @@ if (event.key === 'Backspace') {
 
     // Если курсор в начале строки и нет выделенного текста
     if (cursorPosition === 0) {
-				 event.preventDefault(); 
+        event.preventDefault(); // Предотвращаем стандартное поведение удаления символа
 
         const currentRow = cell.parentElement;
         const previousRow = currentRow.previousElementSibling;
@@ -1057,24 +1085,36 @@ if (event.key === 'Backspace') {
             const currentText = textarea.value.trim();
 
             if (currentText === '') {
+                // Если текущая ячейка пустая, просто сдвигаем строки вверх и переносим фокус на предыдущую ячейку
                 shiftCellsUp(currentRow);
+                makeCellEditable(previousCell);
             } else {
-			 event.preventDefault(); 
-                // Если текущая ячейка не пуста, объединяем с предыдущей
+                // Сохраняем текст предыдущей ячейки до объединения
                 const previousText = previousCell.textContent.trim();
+
+                // Определяем нужно ли добавлять пробел
+                const newCursorPosition = previousText.length; // Без +1, если предыдущая ячейка пустая
+
+                // Объединяем текст предыдущей ячейки с текущим текстом
                 previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
-                currentCell.textContent = '';
+                currentCell.textContent = ''; // Очищаем текущую ячейку
                 updateSingleTranslationRow(currentCell);
 
                 // После очистки текущей ячейки, сдвигаем все нижестоящие ячейки вверх
                 shiftCellsUp(currentRow);
+
+                // Устанавливаем фокус на предыдущую ячейку
+                makeCellEditable(previousCell);
+
+                // Устанавливаем курсор на новое место
+                const textarea = previousCell.querySelector('textarea'); // Найдем textarea внутри предыдущей ячейки
+                if (textarea) {
+                    textarea.setSelectionRange(newCursorPosition, newCursorPosition);
+                }
             }
 
             // Обновляем translationInput
             updateTranslationInput();
-
-            // Устанавливаем фокус на предыдущую ячейку
-            makeCellEditable(previousCell);
         }
     }
 }

@@ -1151,6 +1151,64 @@ textarea.addEventListener('keydown', function(event) {
 });
 
 
+// Обработка нажатия клавиши Delete
+if (event.key === 'Delete') {
+    const cursorPosition = textarea.selectionStart;
+    const selectionEnd = textarea.selectionEnd;
+    const currentText = textarea.value.trim();
+
+    // Если есть выделенный текст, позволяем его удалить стандартным поведением
+    if (cursorPosition !== selectionEnd) {
+        return; // Прерываем выполнение, чтобы сработало стандартное поведение удаления выделенного текста
+    }
+
+    // Если курсор в конце строки или строка пустая
+    if (cursorPosition === textarea.value.length || currentText === '') {
+        event.preventDefault(); // Предотвращаем стандартное поведение удаления символа
+
+        const currentRow = cell.parentElement;
+        const nextRow = currentRow.nextElementSibling;
+        if (nextRow) {
+            const currentCell = currentRow.cells[2]; // Текущая ячейка
+            const nextCell = nextRow.cells[2]; // Следующая ячейка
+
+            // Если строка пустая, просто сдвигаем строки вверх
+            if (currentText === '') {
+                shiftCellsUp(currentRow);
+                makeCellEditable(currentCell);
+            } else {
+                // Сохраняем текст следующей ячейки до объединения
+                const nextText = nextCell.textContent.trim();
+
+                // Определяем нужно ли добавлять пробел
+                const newCursorPosition = currentText.length;
+
+                // Объединяем текст текущей ячейки со следующим текстом
+                currentCell.textContent = currentText + (nextText ? ' ' : '') + nextText;
+                nextCell.textContent = ''; // Очищаем следующую ячейку
+                updateSingleTranslationRow(nextCell);
+
+                // После очистки следующей ячейки, сдвигаем все нижестоящие ячейки вверх
+                shiftCellsUp(nextRow);
+
+                // Устанавливаем фокус на текущую ячейку
+                makeCellEditable(currentCell);
+
+                // Устанавливаем курсор на новое место
+                const textarea = currentCell.querySelector('textarea'); // Найдем textarea внутри текущей ячейки
+                if (textarea) {
+                    textarea.setSelectionRange(newCursorPosition, newCursorPosition);
+                }
+            }
+
+            // Обновляем translationInput
+            updateTranslationInput();
+        }
+    }
+}
+
+
+
 // Функция для сдвига ячеек вверх
 function shiftCellsUp(startRow) {
     let rowToMove = startRow;

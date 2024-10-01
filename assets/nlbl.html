@@ -1145,7 +1145,7 @@ textarea.addEventListener('keydown', function(event) {
         if (previousRow) {
             event.preventDefault();  // Предотвращаем стандартное поведение
             const previousCell = previousRow.cells[2];  // Предполагаем, что целевая ячейка - третья
-            makeCellEditable(previousCell, -1);  // Перемещаем курсор в конец предыдущей ячейки
+            makeCellEditable(previousCell, 'end');  // Перемещаем курсор в конец предыдущей ячейки
         }
     }
 });

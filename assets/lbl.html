@@ -1047,6 +1047,8 @@ if (event.key === 'Backspace') {
 
     // Если курсор в начале строки и нет выделенного текста
     if (cursorPosition === 0) {
+				 event.preventDefault(); 
+
         const currentRow = cell.parentElement;
         const previousRow = currentRow.previousElementSibling;
         if (previousRow) {

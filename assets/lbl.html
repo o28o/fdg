@@ -1035,20 +1035,25 @@ textarea.addEventListener('keydown', function(event) {
     }
 	
 
-		
-// Обработка нажатия клавиши Backspace
+		// Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
-    // Если курсор в начале строки
+    const selectionEnd = textarea.selectionEnd;
+    
+    // Если есть выделенный текст, позволяем его удалить стандартным поведением
+    if (cursorPosition !== selectionEnd) {
+        return; // Прерываем выполнение, чтобы сработало стандартное поведение удаления выделенного текста
+    }
+
+    // Если курсор в начале строки и нет выделенного текста
     if (cursorPosition === 0) {
-       // event.preventDefault();  Предотвращаем удаление символа
         const currentRow = cell.parentElement;
         const previousRow = currentRow.previousElementSibling;
         if (previousRow) {
             const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
             const currentCell = currentRow.cells[2];
             const currentText = textarea.value.trim();
-            
+
             if (currentText === '') {
                 shiftCellsUp(currentRow);
             } else {
@@ -1057,14 +1062,14 @@ if (event.key === 'Backspace') {
                 previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
                 currentCell.textContent = '';
                 updateSingleTranslationRow(currentCell);
-                
+
                 // После очистки текущей ячейки, сдвигаем все нижестоящие ячейки вверх
                 shiftCellsUp(currentRow);
             }
-            
+
             // Обновляем translationInput
             updateTranslationInput();
-            
+
             // Устанавливаем фокус на предыдущую ячейку
             makeCellEditable(previousCell);
         }

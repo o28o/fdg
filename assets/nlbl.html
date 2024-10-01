@@ -222,7 +222,8 @@ button:hover {
                 </div>
 				  <a href="./linebyline.html" title="для Мобильных" class="ms-1 text-muted" target=""><i class="fa-solid fa-mobile-screen"></i></a>
 				  
-				  <a href="https://youtu.be/JkJNgMhmv64" title="Видео Инструкция" class="ms-2 text-muted" target="_blank"><i class="fa-solid fa-question"></i></a>
+				  <a href="#" onclick="openHelpModal();" title="Инструкция" class="ms-2 text-muted" target=""><i class="fa-solid fa-question"></i></a>
+
    
    <a href="/assets/readylinebyline.html" title="Обновить Список Готовых" class=" ms-2 me-2 text-muted" target="_blank">
 <i class="fa-solid fa-list"></i>
@@ -489,7 +490,7 @@ button:hover {
       <button class="mb-1 btn btn-primary" id="findBtn">Найти</button>
       <button  class="mb-1 btn btn-primary" id="replaceOneBtn">Заменить</button>
       <button class="mb-1 btn btn-primary" id="replaceAllBtn">Заменить все</button>
-      <button class="mb-1 btn btn-secondary" id="closeBtn">Закрыть</button>
+      <button class="mb-1 btn btn-secondary closeBtn" id="">Закрыть</button>
 <br>
   
   <button class="mb-1 btn btn-primary btn-sm" data-template="«Это – боль», «Это – скапливание боли», «Это – истечение боли», «Это – к истечению боли ведущая практика».">4би</button>
@@ -503,6 +504,71 @@ button:hover {
     </div>
   </div>
 </div>
+
+
+<div id="helpModal" class="modal">
+  <div class="modal-content">
+    <div id="modalHeader" class="modal-header">
+	<button class="mb-1 btn btn-link text-decoration-none close closeBtn" id="">&times;</button>
+
+      <h3>Помощь</h3>
+    </div>
+    <div class="modal-body">
+      <!-- Ваше содержимое модального окна -->
+   <p>
+   <h3>  <a href="https://youtu.be/JkJNgMhmv64 " title="Видео Инструкция" class="ms-2" target="_blank"><i class="fa-brands fa-youtube"></i> Видео-инструкция</i></a>
+</h3
+   				
+<br>
+<br>
+<h3>В Таблице</h3>
+<br>
+   Клик по ячейке с русским текстом - редактировать. 
+  <br> 
+  <br> 
+  Клик по <i class="fa-solid fa-link"></i> - перейти в эту строку в быстром редактировании.
+  <br> 
+  <br> 
+  Когда ячейка таблицы активна: 
+  <br> 
+
+  <br> 
+  <strong><i class="fa-solid fa-arrow-up"></i> или <i class="fa-solid fa-arrow-left"></i></strong> - переход между ячейками вверх
+  <br> 
+  <br> 
+  <strong><i class="fa-solid fa-arrow-down"></i> или <i class="fa-solid fa-arrow-right"></i></strong>  - переход между ячейками вниз
+  <br> 
+  <br> 
+  <strong>enter</strong> - добавить пустую строку или перенести текст в новую строку
+  <br> 
+  <br> 
+  <strong>ctrl+enter</strong> - перенести текст в начало следующей строки
+  <br>
+  <br>
+ <br> 
+  <strong>backspace</strong> вначале строки переместит текст на строку выше.
+    <br> 
+    <br> 
+  <strong>delete</strong> вконце строки переместит текст на текущую строку.  
+  <br> 
+  <br> 
+  <h3>В Окне Ввода Текста</h3>
+  <br> 
+  <strong>ctrl+Q</strong> - выделить вертикальный список и нажать комбинаци. Это переделает вертикальный список в строку.
+  <br> 
+  <br> 
+  <strong>ctrl+F или ctrl+H</strong> - замена текста. () или [] нужно экранировать так: \(\) и \[\]
+ 
+  <br> 
+  <br> 
+  
+   </p>
+           <br><br>
+      <button class="mb-1 btn btn-primary closeBtn" id="">Закрыть</button>
+    </div>
+  </div>
+</div>
+
 
 <div id="settings" class="modal">
   <div class="modal-content">
@@ -1120,37 +1186,6 @@ if (event.key === 'Backspace') {
 }
 
 
-textarea.addEventListener('keydown', function(event) {
-    const cursorPosition = textarea.selectionStart;
-    const selectionEnd = textarea.selectionEnd;
-    const textLength = textarea.value.length;
-
-    // Если курсор в конце строки и нажата стрелка вниз или вправо
-    if ((event.key === 'ArrowRight' || event.key === 'ArrowDown') && cursorPosition === textLength) {
-        const currentRow = cell.parentElement;
-        const nextRow = currentRow.nextElementSibling;
-
-        if (nextRow) {
-            event.preventDefault();  // Предотвращаем стандартное поведение
-            const nextCell = nextRow.cells[2];  // Предполагаем, что целевая ячейка - третья
-            makeCellEditable(nextCell, 0);  // Перемещаем курсор в начало следующей ячейки
-        }
-    }
-
-    // Если курсор в начале строки и нажата стрелка влево или вверх
-    if ((event.key === 'ArrowLeft' || event.key === 'ArrowUp') && cursorPosition === 0) {
-        const currentRow = cell.parentElement;
-        const previousRow = currentRow.previousElementSibling;
-
-        if (previousRow) {
-            event.preventDefault();  // Предотвращаем стандартное поведение
-            const previousCell = previousRow.cells[2];  // Предполагаем, что целевая ячейка - третья
-            makeCellEditable(previousCell, 'end');  // Перемещаем курсор в конец предыдущей ячейки
-        }
-    }
-});
-
-
 // Обработка нажатия клавиши Delete
 if (event.key === 'Delete') {
     const cursorPosition = textarea.selectionStart;
@@ -1207,6 +1242,35 @@ if (event.key === 'Delete') {
     }
 }
 
+textarea.addEventListener('keydown', function(event) {
+    const cursorPosition = textarea.selectionStart;
+    const selectionEnd = textarea.selectionEnd;
+    const textLength = textarea.value.length;
+
+    // Если курсор в конце строки и нажата стрелка вниз или вправо
+    if ((event.key === 'ArrowRight' || event.key === 'ArrowDown') && cursorPosition === textLength) {
+        const currentRow = cell.parentElement;
+        const nextRow = currentRow.nextElementSibling;
+
+        if (nextRow) {
+            event.preventDefault();  // Предотвращаем стандартное поведение
+            const nextCell = nextRow.cells[2];  // Предполагаем, что целевая ячейка - третья
+            makeCellEditable(nextCell, 0);  // Перемещаем курсор в начало следующей ячейки
+        }
+    }
+
+    // Если курсор в начале строки и нажата стрелка влево или вверх
+    if ((event.key === 'ArrowLeft' || event.key === 'ArrowUp') && cursorPosition === 0) {
+        const currentRow = cell.parentElement;
+        const previousRow = currentRow.previousElementSibling;
+
+        if (previousRow) {
+            event.preventDefault();  // Предотвращаем стандартное поведение
+            const previousCell = previousRow.cells[2];  // Предполагаем, что целевая ячейка - третья
+            makeCellEditable(previousCell, 'end');  // Перемещаем курсор в конец предыдущей ячейки
+        }
+    }
+});
 
 
 // Функция для сдвига ячеек вверх
@@ -1630,7 +1694,6 @@ $.ajax({
     const findBtn = document.getElementById('findBtn');
     const replaceOneBtn = document.getElementById('replaceOneBtn');
     const replaceAllBtn = document.getElementById('replaceAllBtn');
-    const closeBtn = document.getElementById('closeBtn');
 
     let lastIndex = 0;
 
@@ -1642,14 +1705,35 @@ $.ajax({
       searchText.focus();
     }
 
-    // Закрытие модального окна с логированием
-    function closeSearchModal() {
-      console.log('Closing search modal');
-      searchModal.style.display = 'none';
-      setTimeout(() => {
-        translationInput.focus(); // Возвращаем фокус на textarea
-      }, 0);
+    const helpModal = document.getElementById('helpModal');
+
+    function openHelpModal() {
+      console.log('Opening help modal');
+      lastIndex = 0; // Сбрасываем индекс при каждом открытии
+      helpModal.style.display = 'block';
+      
     }
+
+// Универсальная функция закрытия модальных окон с логированием
+function closeModal(modal) {
+  console.log(`Closing ${modal.id}`);
+  modal.style.display = 'none';
+  setTimeout(() => {
+    translationInput.focus(); // Возвращаем фокус на textarea
+  }, 0);
+}
+
+// Назначаем обработчик для всех кнопок закрытия
+const closeBtns = document.querySelectorAll('.closeBtn');
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Определяем, какое модальное окно нужно закрыть
+    const modal = btn.closest('.modal'); // Находим родительский элемент с классом .modal
+    if (modal) {
+      closeModal(modal); // Закрываем это модальное окно
+    }
+  });
+});
 
     // Поиск текста
     findBtn.addEventListener('click', function () {
@@ -1908,14 +1992,13 @@ function formatSelectedText() {
         // Заменяем выделенный текст отформатированным
         const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEnd);
         textarea.value = newText;
-		loadText();
 
         // Восстанавливаем выделение
+		loadText();
         textarea.setSelectionRange(selectionStart, selectionStart + formattedText.length);
     }
 }
 
 </script>
-	
 </body>
 </html>

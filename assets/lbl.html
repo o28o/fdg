@@ -1037,6 +1037,7 @@ textarea.addEventListener('keydown', function(event) {
 
 		// Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
+ event.preventDefault(); 
     const cursorPosition = textarea.selectionStart;
     const selectionEnd = textarea.selectionEnd;
     

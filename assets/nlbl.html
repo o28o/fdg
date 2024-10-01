@@ -1034,7 +1034,6 @@ textarea.addEventListener('keydown', function(event) {
         }
     }
 	
-
 // Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
@@ -1057,7 +1056,9 @@ if (event.key === 'Backspace') {
             const currentText = textarea.value.trim();
 
             if (currentText === '') {
-                shiftCellsUp(currentRow); // Сдвигаем строки вверх, если текущая пустая
+                // Если текущая ячейка пустая, просто сдвигаем строки вверх и переносим фокус на предыдущую ячейку
+                shiftCellsUp(currentRow);
+                makeCellEditable(previousCell);
             } else {
                 // Сохраняем текст предыдущей ячейки до объединения
                 const previousText = previousCell.textContent.trim();

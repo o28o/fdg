@@ -1037,7 +1037,6 @@ textarea.addEventListener('keydown', function(event) {
 
 		// Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
- event.preventDefault(); 
     const cursorPosition = textarea.selectionStart;
     const selectionEnd = textarea.selectionEnd;
     
@@ -1058,6 +1057,7 @@ if (event.key === 'Backspace') {
             if (currentText === '') {
                 shiftCellsUp(currentRow);
             } else {
+			 event.preventDefault(); 
                 // Если текущая ячейка не пуста, объединяем с предыдущей
                 const previousText = previousCell.textContent.trim();
                 previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;

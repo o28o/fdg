@@ -996,39 +996,58 @@ textarea.addEventListener('keydown', function(event) {
         }
     }
 
-	
-		
-// Обработка нажатия клавиши Backspace
+	// Обработка нажатия клавиши Backspace
 if (event.key === 'Backspace') {
     const cursorPosition = textarea.selectionStart;
-    // Если курсор в начале строки
+    const selectionEnd = textarea.selectionEnd;
+
+    // Если есть выделенный текст, позволяем его удалить стандартным поведением
+    if (cursorPosition !== selectionEnd) {
+        return; // Прерываем выполнение, чтобы сработало стандартное поведение удаления выделенного текста
+    }
+
+    // Если курсор в начале строки и нет выделенного текста
     if (cursorPosition === 0) {
-         event.preventDefault(); // Предотвращаем удаление символа
+        event.preventDefault(); // Предотвращаем стандартное поведение удаления символа
+
         const currentRow = cell.parentElement;
         const previousRow = currentRow.previousElementSibling;
         if (previousRow) {
             const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
             const currentCell = currentRow.cells[2];
             const currentText = textarea.value.trim();
-            
+
             if (currentText === '') {
+                // Если текущая ячейка пустая, просто сдвигаем строки вверх и переносим фокус на предыдущую ячейку
                 shiftCellsUp(currentRow);
+                makeCellEditable(previousCell);
             } else {
-                // Если текущая ячейка не пуста, объединяем с предыдущей
+                // Сохраняем текст предыдущей ячейки до объединения
                 const previousText = previousCell.textContent.trim();
+
+                // Вычисляем новое положение курсора после объединения строк
+                const newCursorPosition = previousText.length + 1; // +1 для пробела между строками
+
+                // Объединяем текст предыдущей ячейки с текущим текстом
                 previousCell.textContent = previousText + (previousText ? ' ' : '') + currentText;
-                currentCell.textContent = '';
+                currentCell.textContent = ''; // Очищаем текущую ячейку
                 updateSingleTranslationRow(currentCell);
-                
+
                 // После очистки текущей ячейки, сдвигаем все нижестоящие ячейки вверх
                 shiftCellsUp(currentRow);
+
+                // Устанавливаем фокус на предыдущую ячейку
+                makeCellEditable(previousCell);
+
+                // Устанавливаем курсор на новое место
+                const textarea = previousCell.querySelector('textarea'); // Найдем textarea внутри предыдущей ячейки
+                if (textarea) {
+                    textarea.setSelectionRange(newCursorPosition, newCursorPosition);
+                }
             }
-            
+
             // Обновляем translationInput
             updateTranslationInput();
-            
-            // Устанавливаем фокус на предыдущую ячейку
-            makeCellEditable(previousCell);
         }
     }
 }

@@ -1789,6 +1789,8 @@ function formatSelectedText() {
         const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEnd);
         textarea.value = newText;
 
+		loadText();
+
         // Восстанавливаем выделение
         textarea.setSelectionRange(selectionStart, selectionStart + formattedText.length);
     }

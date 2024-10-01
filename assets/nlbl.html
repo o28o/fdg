@@ -1120,58 +1120,32 @@ if (event.key === 'Backspace') {
 }
 
 
-// Обработка нажатия клавиш стрелок курсоров
 textarea.addEventListener('keydown', function(event) {
-    // Проверка нажатия клавиш "вниз" и "вправо"
-    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
-        const cursorPosition = textarea.selectionStart;
-        const lineText = textarea.value.split('\n')[textarea.value.substr(0, cursorPosition).split('\n').length - 1];
+    const cursorPosition = textarea.selectionStart;
+    const selectionEnd = textarea.selectionEnd;
+    const textLength = textarea.value.length;
 
-        // Проверка, находится ли курсор в конце строки
-        if (cursorPosition === textarea.value.lastIndexOf(lineText) + lineText.length) {
-            event.preventDefault(); // Предотвращаем стандартное поведение
+    // Если курсор в конце строки и нажата стрелка вниз или вправо
+    if ((event.key === 'ArrowRight' || event.key === 'ArrowDown') && cursorPosition === textLength) {
+        const currentRow = cell.parentElement;
+        const nextRow = currentRow.nextElementSibling;
 
-            const currentRow = cell.parentElement;
-            const nextRow = currentRow.nextElementSibling;
-
-            if (nextRow) {
-                const nextCell = nextRow.cells[2]; // Получаем третью ячейку следующей строки
-                if (nextCell) {
-                    makeCellEditable(nextCell, 0); // Устанавливаем редактирование на следующую ячейку
-                }
-            }
+        if (nextRow) {
+            event.preventDefault();  // Предотвращаем стандартное поведение
+            const nextCell = nextRow.cells[2];  // Предполагаем, что целевая ячейка - третья
+            makeCellEditable(nextCell, 0);  // Перемещаем курсор в начало следующей ячейки
         }
     }
-});
 
+    // Если курсор в начале строки и нажата стрелка влево или вверх
+    if ((event.key === 'ArrowLeft' || event.key === 'ArrowUp') && cursorPosition === 0) {
+        const currentRow = cell.parentElement;
+        const previousRow = currentRow.previousElementSibling;
 
-// Обработка нажатия клавиш стрелок курсоров
-textarea.addEventListener('keydown', function(event) {
-    // Проверка нажатия клавиш "вверх" и "влево"
-    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-        const cursorPosition = textarea.selectionStart;
-        const lineText = textarea.value.split('\n')[textarea.value.substr(0, cursorPosition).split('\n').length - 1];
-
-        // Проверка, находится ли курсор в начале строки
-        if (cursorPosition === 0) {
-            event.preventDefault(); // Предотвращаем стандартное поведение
-
-            const currentRow = cell.parentElement;
-            const previousRow = currentRow.previousElementSibling;
-
-            if (previousRow) {
-                const previousCell = previousRow.cells[2]; // Получаем третью ячейку предыдущей строки
-                if (previousCell) {
-                    makeCellEditable(previousCell); // Устанавливаем редактирование на предыдущую ячейку
-                    
-                    // Устанавливаем курсор в конец текста предыдущей ячейки
-                    const previousTextarea = previousCell.querySelector('textarea');
-                    if (previousTextarea) {
-                        previousTextarea.focus();
-                        previousTextarea.setSelectionRange(previousTextarea.value.length, previousTextarea.value.length); // Устанавливаем курсор в конец
-                    }
-                }
-            }
+        if (previousRow) {
+            event.preventDefault();  // Предотвращаем стандартное поведение
+            const previousCell = previousRow.cells[2];  // Предполагаем, что целевая ячейка - третья
+            makeCellEditable(previousCell, -1);  // Перемещаем курсор в конец предыдущей ячейки
         }
     }
 });

@@ -1120,6 +1120,36 @@ if (event.key === 'Backspace') {
 }
 
 
+textarea.addEventListener('keydown', function(event) {
+    const cursorPosition = textarea.selectionStart;
+    const selectionEnd = textarea.selectionEnd;
+    const textLength = textarea.value.length;
+
+    // Если курсор в конце строки и нажата стрелка вниз или вправо
+    if ((event.key === 'ArrowRight' || event.key === 'ArrowDown') && cursorPosition === textLength) {
+        const currentRow = cell.parentElement;
+        const nextRow = currentRow.nextElementSibling;
+
+        if (nextRow) {
+            event.preventDefault();  // Предотвращаем стандартное поведение
+            const nextCell = nextRow.cells[2];  // Предполагаем, что целевая ячейка - третья
+            makeCellEditable(nextCell, 0);  // Перемещаем курсор в начало следующей ячейки
+        }
+    }
+
+    // Если курсор в начале строки и нажата стрелка влево или вверх
+    if ((event.key === 'ArrowLeft' || event.key === 'ArrowUp') && cursorPosition === 0) {
+        const currentRow = cell.parentElement;
+        const previousRow = currentRow.previousElementSibling;
+
+        if (previousRow) {
+            event.preventDefault();  // Предотвращаем стандартное поведение
+            const previousCell = previousRow.cells[2];  // Предполагаем, что целевая ячейка - третья
+            makeCellEditable(previousCell, 'end');  // Перемещаем курсор в конец предыдущей ячейки
+        }
+    }
+});
+
 
 // Функция для сдвига ячеек вверх
 function shiftCellsUp(startRow) {
@@ -1779,6 +1809,51 @@ function init() {
 
 // Убедимся, что код выполняется после загрузки DOM
 document.addEventListener('DOMContentLoaded', init);
+
+</script>
+
+<script>
+document.addEventListener("keydown", function(event) {
+    // Проверяем нажатие сочетания клавиш Ctrl + M
+    if (event.ctrlKey && event.code === 'KeyQ') {
+                event.preventDefault(); // Предотвращаем стандартное действие
+
+                    formatSelectedText();
+    }
+});
+
+function formatSelectedText() {
+    const textarea = document.getElementById("translationInput");
+    const selectionStart = textarea.selectionStart;
+    const selectionEnd = textarea.selectionEnd;
+
+    if (selectionStart !== selectionEnd) {
+        // Получаем выделенный текст
+        const selectedText = textarea.value.substring(selectionStart, selectionEnd);
+
+        // Разделяем текст на строки
+        const lines = selectedText.split("\n");
+
+        // Форматируем строки: добавляем пробел в конце, если его нет
+        const formattedLines = lines.map(line => {
+            line = line.trimEnd(); // Убираем пробелы в конце
+            if (line && !line.endsWith(";")) { // Проверяем наличие ; в конце строки
+                line += ";"; // Добавляем ; если его не было
+            }
+            return line;
+        });
+
+        // Объединяем строки без переносов
+        const formattedText = formattedLines.join(" ");
+
+        // Заменяем выделенный текст отформатированным
+        const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEnd);
+        textarea.value = newText;
+
+        // Восстанавливаем выделение
+        textarea.setSelectionRange(selectionStart, selectionStart + formattedText.length);
+    }
+}
 
 </script>
 

@@ -1852,6 +1852,7 @@ function formatSelectedText() {
         textarea.value = newText;
 
         // Восстанавливаем выделение
+		loadText();
         textarea.setSelectionRange(selectionStart, selectionStart + formattedText.length);
     }
 }

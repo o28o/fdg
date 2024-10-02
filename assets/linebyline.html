@@ -526,8 +526,6 @@ button:hover {
   
   <button class="btn btn-primary mt-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
   
-    <button class="btn btn-primary mt-1 " id="listToLineButton" title="Преобразовать Список в Строку"><i class="fa-solid fa-text-width"></i></button>
-	
   <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
   <button class="btn btn-secondary mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
 
@@ -1890,22 +1888,17 @@ document.addEventListener('DOMContentLoaded', init);
 </script>
 
 
-
 <script>
-
-document.getElementById("listToLineButton").addEventListener("click", listToLineSelectedText);
-
-
 document.addEventListener("keydown", function(event) {
     // Проверяем нажатие сочетания клавиш Ctrl + M
     if (event.ctrlKey && event.code === 'KeyQ') {
                 event.preventDefault(); // Предотвращаем стандартное действие
 
-                    listToLineSelectedText();
+                    formatSelectedText();
     }
 });
 
-function listToLineSelectedText() {
+function formatSelectedText() {
     const textarea = document.getElementById("translationInput");
     const selectionStart = textarea.selectionStart;
     const selectionEnd = textarea.selectionEnd;
@@ -1930,8 +1923,10 @@ function listToLineSelectedText() {
         const formattedText = formattedLines.join("");
 
         // Заменяем выделенный текст отформатированным
-        const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEn     d);
+        const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEnd);
         textarea.value = newText;
+
+		loadText();
 
         // Восстанавливаем выделение
         textarea.setSelectionRange(selectionStart, selectionStart + formattedText.length);

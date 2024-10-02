@@ -370,7 +370,8 @@ button:hover {
   
   <button class="btn btn-primary me-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
   
-    <button class="btn btn-primary mt-1 " id="listToLineButton" title="Преобразовать Список в Строку"><i class="fa-solid fa-text-width"></i></button>
+  
+  <button class="btn btn-primary me-1" title="Найти и Заменить" id="listToLineButton"><i class="fa-solid fa-text-width"></i></button>
   
 
   
@@ -1921,22 +1922,57 @@ document.addEventListener('DOMContentLoaded', function() {
  <script src="/assets/js/smoothScroll.js" defer></script>
 
 
-
 <script>
 
-document.getElementById("listToLineButton").addEventListener("click", listToLineSelectedText);
+// Функция для добавления обработчиков событий
+function init() {
+  const textarea = document.getElementById('translationInput');
+  if (!textarea) {
+    console.error('Textarea not found!');
+    return;  // Если textarea не найден, прерываем выполнение
+  }
 
+  let typingTimer; // Таймер для отслеживания времени после нажатия клавиш
+  const typingInterval = 700; // Время задержки перед вызовом функции (500 мс)
+
+  function handleKeyPress(event) {
+    const key = event.key || event.keyCode;
+
+    // Проверяем нажатие клавиш Enter, Backspace, Delete или пробела
+    if (key === 'Enter' || key === 'Backspace' || key === 'Delete' || event.keyCode === 13 || event.keyCode === 8 || event.keyCode === 46 || event.keyCode === 32 || event.keyCode === 229) {
+      clearTimeout(typingTimer); // Сбрасываем таймер при нажатии клавиши
+      typingTimer = setTimeout(loadText, typingInterval); // Запускаем таймер для вызова функции
+    }
+  }
+
+  // Добавляем обработчики событий
+  textarea.addEventListener('keyup', handleKeyPress);
+
+  textarea.addEventListener('input', function() {
+    clearTimeout(typingTimer); // Сбрасываем таймер при любом изменении текста
+    typingTimer = setTimeout(loadText, typingInterval); // Запускаем таймер для вызова функции после изменения
+  });
+}
+
+// Убедимся, что код выполняется после загрузки DOM
+document.addEventListener('DOMContentLoaded', init);
+
+</script>
+
+
+<script>
+document.getElementById("formatButton").addEventListener("click", formatSelectedText);
 
 document.addEventListener("keydown", function(event) {
     // Проверяем нажатие сочетания клавиш Ctrl + M
     if (event.ctrlKey && event.code === 'KeyQ') {
                 event.preventDefault(); // Предотвращаем стандартное действие
 
-                    listToLineSelectedText();
+                    formatSelectedText();
     }
 });
 
-function listToLineSelectedText() {
+function formatSelectedText() {
     const textarea = document.getElementById("translationInput");
     const selectionStart = textarea.selectionStart;
     const selectionEnd = textarea.selectionEnd;
@@ -1961,10 +1997,11 @@ function listToLineSelectedText() {
         const formattedText = formattedLines.join("");
 
         // Заменяем выделенный текст отформатированным
-        const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEn     d);
+        const newText = textarea.value.substring(0, selectionStart) + formattedText + textarea.value.substring(selectionEnd);
         textarea.value = newText;
 
         // Восстанавливаем выделение
+		loadText();
         textarea.setSelectionRange(selectionStart, selectionStart + formattedText.length);
     }
 }

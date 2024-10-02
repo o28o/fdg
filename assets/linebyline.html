@@ -526,9 +526,15 @@ button:hover {
   
   <button class="btn btn-primary mt-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
   
+    
+  <button class="btn btn-primary me-1" title="Найти и Заменить" id="formatButton"><i class="fa-solid fa-text-width"></i></button>
+
+
+
+
+  
   <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
   <button class="btn btn-secondary mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
-
 
 <button style="display: none;" class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlEnterButton">Ctrl + Enter</button>
   
@@ -1889,6 +1895,8 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 <script>
+document.getElementById("formatButton").addEventListener("click", formatSelectedText);
+
 document.addEventListener("keydown", function(event) {
     // Проверяем нажатие сочетания клавиш Ctrl + M
     if (event.ctrlKey && event.code === 'KeyQ') {

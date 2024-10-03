@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+//конец
 
 // Функция для транслитерации пали в русские символы
     function transliteratePali(title) {

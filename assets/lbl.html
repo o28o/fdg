@@ -366,17 +366,19 @@ button:hover {
 <div class="input-group-append ms-1 me-3">
   
  <button class="btn btn-primary ms-2 me-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
-  <button class="btn btn-primary me-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
   
   <button class="btn btn-primary me-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
   
   
   <button class="btn btn-primary me-1" title="Найти и Заменить" id="formatButton"><i class="fa-solid fa-text-width"></i></button>
   
+  <button class="btn btn-secondary me-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
 
   
   <button id="processButton" title="Загрузить JSON" class="btn btn-secondary me-1"><i class="fa-solid fa-upload"></i></button>
-  <button class="btn btn-secondary me-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
+
+  <button class="btn btn-primary me-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
+	
   
 <div class="d-flex align-items-center">
   <div class="form-check me-2">

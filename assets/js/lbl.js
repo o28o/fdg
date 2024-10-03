@@ -1,4 +1,24 @@
 
+//вывод номера текста в название вкладки document.title
+document.addEventListener("DOMContentLoaded", function() {
+    let timeoutId;
+    
+    const indexInput = document.getElementById("indexInput");
+
+    indexInput.addEventListener("input", function() {
+        clearTimeout(timeoutId); // Очищаем предыдущий таймер
+        timeoutId = setTimeout(function() {
+            const textIndex = indexInput.value;
+            if (textIndex) {
+                document.title = textIndex;
+            }
+        }, 1000); // Задержка 1 секунда
+    });
+});
+
+
+
+
 // Функция для транслитерации пали в русские символы
     function transliteratePali(title) {
         const translitMap = {

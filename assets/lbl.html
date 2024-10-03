@@ -860,6 +860,7 @@ cleanedTranslation = cleanedTranslation.replace(/\[Благословенный 
 cleanedTranslation = cleanedTranslation.replace(/\[Благословенный сказал:/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/Там Благословенный обратился к монахам:/g, '\nТам Благословенный обратился к монахам:\n');
+cleanedTranslation = cleanedTranslation.replace(/Так сказал Благословенный./g, '\nТак сказал Благословенный.\n');
 
 cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
 cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');

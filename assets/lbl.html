@@ -2007,10 +2007,13 @@ function formatSelectedText() {
 }
 
 
-const textIndex = document.getElementById("textIndex").value;
-if (textIndex) {
-    document.title = textIndex;
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const textIndex = document.getElementById("textIndex").value;
+
+    if (textIndex) {
+        document.title = textIndex;
+    }
+});
 
 
 </script>

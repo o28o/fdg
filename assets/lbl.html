@@ -293,13 +293,14 @@ button:hover {
                     const inputValue = this.value.trim().toLowerCase();
                     console.log('Введенное значение:', inputValue);
 
-                    let resultMessage = '❌✅Уже есть!';
+                    let resultMessage = '<i class="fa-solid fa-triangle-exclamation"></i>❌✅Уже есть!';
 
                     // Проверка, какой тип текста введен (по префиксу)
                     if (inputValue.startsWith('an')) {
                         // Проверка в anranges
                         if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
                             console.log('Найден в anranges:', inputValue);
+                            document.title = inputValue;  // Установка заголовка
                         } else {
                             console.log('Не найден в anranges:', inputValue);
                             resultMessage = '';
@@ -308,6 +309,8 @@ button:hover {
                         // Проверка в snranges
                         if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
                             console.log('Найден в snranges:', inputValue);
+							document.title = inputValue;  // Установка заголовка
+
                         } else {
                             console.log('Не найден в snranges:', inputValue);
                             resultMessage = '';
@@ -316,6 +319,8 @@ button:hover {
                         // Проверка в mnranges
                         if (variables['mnranges'] && variables['mnranges'].includes(inputValue)) {
                             console.log('Найден в mnranges:', inputValue);
+							document.title = inputValue;  // Установка заголовка
+
                         } else {
                             console.log('Не найден в mnranges:', inputValue);
                             resultMessage = '';
@@ -324,12 +329,14 @@ button:hover {
                         // Проверка в dnranges
                         if (variables['dnranges'] && variables['dnranges'].includes(inputValue)) {
                             console.log('Найден в dnranges:', inputValue);
+							document.title = inputValue;  // Установка заголовка
+
                         } else {
                             console.log('Не найден в dnranges:', inputValue);
                             resultMessage = '';
                         }
                     } else {
-                        resultMessage = 'Неизвестный префикс';
+                        resultMessage = 'Неизвестный префикс.';
                     }
 
                     // Отображение результата

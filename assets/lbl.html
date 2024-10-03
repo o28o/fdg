@@ -2007,13 +2007,23 @@ function formatSelectedText() {
 }
 
 
+//вывод номера текста в название вкладки document.title
 document.addEventListener("DOMContentLoaded", function() {
-    const textIndex = document.getElementById("indexInput").value;
+    let timeoutId;
+    
+    const indexInput = document.getElementById("indexInput");
 
-    if (textIndex) {
-        document.title = textIndex;
-    }
+    indexInput.addEventListener("input", function() {
+        clearTimeout(timeoutId); // Очищаем предыдущий таймер
+        timeoutId = setTimeout(function() {
+            const textIndex = indexInput.value;
+            if (textIndex) {
+                document.title = textIndex;
+            }
+        }, 1000); // Задержка 1 секунда
+    });
 });
+
 
 
 </script>

@@ -859,6 +859,8 @@ cleanedTranslation = cleanedTranslation.replace(/В каких/g, '\nВ каки
 cleanedTranslation = cleanedTranslation.replace(/\[Благословенный сказал\]:/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/\[Благословенный сказал:/gm, '');
 cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
+cleanedTranslation = cleanedTranslation.replace(/Там Благословенный обратился к монахам:/g, '\nТам Благословенный обратился к монахам:\n');
+
 cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
 cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
 cleanedTranslation = cleanedTranslation.replace(/\(III\)/g, 'Третья');

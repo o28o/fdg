@@ -1491,6 +1491,11 @@ translationInput.addEventListener('input', function() {
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {
+
+if localStorage.getItem('indexValue') {
+	      indexInput.value = localStorage.getItem('indexValue');
+} else {
+
   // Выполняем fetch для получения содержимого файла
   fetch('/assets/texts/miss_longest')
     .then(response => {
@@ -1518,6 +1523,7 @@ function loadInputs() {
   // Загружаем другие значения из localStorage
   translationInput.value = localStorage.getItem('translationValue') || '';
   // lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
+  }
 }
 
 

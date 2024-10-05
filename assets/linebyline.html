@@ -1420,14 +1420,20 @@ document.addEventListener('keydown', function(event) {
 
 
 
-
 // Функция для сохранения значений
 function saveInputs() {
   localStorage.setItem('indexValue', indexInput.value);
   localStorage.setItem('translationValue', translationInput.value);
-  localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
+ // localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
  // Сохраняем состояние чекбокса как булево значение
 }
+// Слушатель для сохранения при каждом изменении translationInput
+translationInput.addEventListener('input', function() {
+  localStorage.setItem('translationValue', translationInput.value);
+});
+
+
+
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {

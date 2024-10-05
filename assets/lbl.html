@@ -1483,6 +1483,10 @@ function saveInputs() {
  // localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
  // Сохраняем состояние чекбокса как булево значение
 }
+// Слушатель для сохранения при каждом изменении translationInput
+translationInput.addEventListener('input', function() {
+  localStorage.setItem('translationValue', translationInput.value);
+});
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {

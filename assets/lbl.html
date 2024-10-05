@@ -1491,9 +1491,12 @@ translationInput.addEventListener('input', function() {
 
 // Функция для загрузки сохраненных значений
 function loadInputs() {
+   indexInput.value = localStorage.getItem('indexValue') || 'sn37.30';
+   translationInput.value = localStorage.getItem('translationValue') || '';
 
+/*
 if localStorage.getItem('indexValue') {
-	      indexInput.value = localStorage.getItem('indexValue');
+	      
 } else {
 
   // Выполняем fetch для получения содержимого файла
@@ -1523,9 +1526,7 @@ if localStorage.getItem('indexValue') {
   // Загружаем другие значения из localStorage
   // lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
   }
-  
-   translationInput.value = localStorage.getItem('translationValue') || '';
- 
+   */
 }
 
 

@@ -1437,44 +1437,42 @@ translationInput.addEventListener('input', function() {
 
 
 
-
 // Функция для загрузки сохраненных значений
 function loadInputs() {
 
-if localStorage.getItem('indexValue') {
-	      indexInput.value = localStorage.getItem('indexValue');
-} else {
+  if (localStorage.getItem('indexValue')) { // Исправлено условие
+    indexInput.value = localStorage.getItem('indexValue');
+  } else {
 
-  // Выполняем fetch для получения содержимого файла
-  fetch('/assets/texts/miss_longest')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.text();
-    })
-    .then(data => {
-      // Разделяем содержимое файла на строки и берем первую строку
-      const firstLine = data.split('\n')[0];
-      
-      // Получаем первую часть первой строки (до пробела)
-      const firstPart = firstLine.split(' ')[0];
-      
-      // Устанавливаем значение в indexInput, если его нет в localStorage
-      indexInput.value = localStorage.getItem('indexValue') || firstPart;
-    })
-    .catch(error => {
-      console.error('Ошибка при получении файла:', error);
-      // В случае ошибки использовать значение по умолчанию
-      indexInput.value = localStorage.getItem('indexValue') || 'sn37.30';
-    });
+    // Выполняем fetch для получения содержимого файла
+    fetch('/assets/texts/miss_longest')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        // Разделяем содержимое файла на строки и берем первую строку
+        const firstLine = data.split('\n')[0];
+        
+        // Получаем первую часть первой строки (до пробела)
+        const firstPart = firstLine.split(' ')[0];
+        
+        // Устанавливаем значение в indexInput, если его нет в localStorage
+        indexInput.value = firstPart;
+      })
+      .catch(error => {
+        console.error('Ошибка при получении файла:', error);
+        // В случае ошибки использовать значение по умолчанию
+        indexInput.value = 'sn37.30';
+      });
+
+  }
 
   // Загружаем другие значения из localStorage
-  // lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
-  }
   translationInput.value = localStorage.getItem('translationValue') || '';
 }
-
 
 // Вызываем функцию загрузки сохраненных значений при загрузке страницы
 loadInputs();

@@ -1061,6 +1061,7 @@ function makeCellEditable(cell, cursorPosition = null) {
         cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
         delete cell.dataset.originalText; // Удаляем временный data-атрибут
         updateTranslationTextarea();
+		saveInputs();
     }
 
     // Обрабатываем выход из режима редактирования

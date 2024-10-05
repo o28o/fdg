@@ -1521,9 +1521,11 @@ if localStorage.getItem('indexValue') {
     });
 
   // Загружаем другие значения из localStorage
-  translationInput.value = localStorage.getItem('translationValue') || '';
   // lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
   }
+  
+   translationInput.value = localStorage.getItem('translationValue') || '';
+ 
 }
 
 

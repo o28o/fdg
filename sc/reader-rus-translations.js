@@ -222,9 +222,12 @@ if (translator === "sv") {
   translatorforuser = 'А.Я. Сыркин';
 } else if (translator === "syrkin+o" ) {
   translatorforuser = 'А.Я. Сыркин, ред. о';
+} else if (translator === "sv+edited+o" ) {
+  translatorforuser = 'SV theravada.ru, ред. о';
+} else if (translator === "o+in+progress" ) {
+  translatorforuser = 'о, в процессе';
 } else {
 	translatorforuser = translator ;
-	
 }
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);

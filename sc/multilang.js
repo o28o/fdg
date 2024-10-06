@@ -225,10 +225,15 @@ if (engTransData[segment] === undefined) {
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment]) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="rus-lang" lang="ru">${transData[segment]}</span>
-      <span class="eng-lang" lang="en">${engTransData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+	  </span>
+      <span class="rus-lang" lang="ru">${transData[segment]}<br>
+	  ${engTransData[segment]}</span>
       </span>${closeHtml}\n\n`;
+	  
+	  //	  </span>
+//      <span class="eng-lang" lang="en">
+
     } else {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>

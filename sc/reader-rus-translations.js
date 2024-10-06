@@ -171,7 +171,7 @@ if (slug.includes("mn"))  {
  
   Promise.all([rootResponse, varResponse, translationResponse, htmlResponse]).then(responses => {
     const [paliData, varData, transData, htmlData] = responses;
-	 console.log('Variants:', varData); // varData может быть null
+	 console.log('varData:', varData); // varData может быть null
 
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
@@ -212,7 +212,13 @@ if (finder && finder.trim() !== "") {
 }
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined) {
-html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span></span>${closeHtml}\n\n`;
+html += `${openHtml}
+<span id="${anchor}">
+<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+<span class="variants" lang="pi">${varData[segment]}</span>
+<span class="rus-lang" lang="ru">${transData[segment]}</span>
+</span>
+${closeHtml}\n\n`;
 
 } else if (paliData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';

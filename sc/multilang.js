@@ -228,7 +228,8 @@ if (engTransData[segment] === undefined) {
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
       <span class="rus-lang" lang="ru">${transData[segment]}<br>
-	  	  <div style="color: #616161;">${engTransData[segment]}</div>
+	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
+		  <div style="color: #616161;">${engTransData[segment]}</div>
 		  </span>
       </span>${closeHtml}\n\n`;
 	  

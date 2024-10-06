@@ -164,6 +164,8 @@ const varResponse = fetch(varpath)
   .catch(() => null);  const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
+  console.log('Variants:', varData); // varData может быть null
+
   Promise.all([rootResponse, varResponse, translationResponse, htmlResponse]).then(responses => {
     const [paliData, varData, transData, htmlData] = responses;
     Object.keys(htmlData).forEach(segment => {

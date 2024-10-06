@@ -229,7 +229,6 @@ if (engTransData[segment] === undefined) {
 	  </span>
       <span class="rus-lang" lang="ru">${transData[segment]}<br>
 	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
-		  <div style="color: #616161;">${engTransData[segment]}</div>
 		  </span>
       </span>${closeHtml}\n\n`;
 	  

@@ -211,11 +211,20 @@ if (finder && finder.trim() !== "") {
     
 }
 
-if (paliData[segment] !== undefined && transData[segment] !== undefined) {
+
+if (paliData[segment] !== undefined && varData[segment] !== undefined && transData[segment] !== undefined) {
+html += `${openHtml}
+<span id="${anchor}">
+<span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>${varData[segment].trim()}</span>
+<span class="rus-lang" lang="ru">${transData[segment]}</span>
+</span>
+${closeHtml}\n\n`;
+	
+}
+else if (paliData[segment] !== undefined && varData[segment] === undefined && transData[segment] !== undefined) {
 html += `${openHtml}
 <span id="${anchor}">
 <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-<span class="variants" lang="pi">${varData[segment]}</span>
 <span class="rus-lang" lang="ru">${transData[segment]}</span>
 </span>
 ${closeHtml}\n\n`;

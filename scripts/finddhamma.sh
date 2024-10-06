@@ -1214,7 +1214,7 @@ indexForAnchor=` echo $i`
     quote_var=`nice -$nicevalue grep -iE -m1 "${i}(:|[^0-9]|$)" $variant | removeindex | clearsed | awk '{print substr($0, index($0, $2))}'  | highlightpattern | sed '$!G; $!G' | sed '/^$/s/$/<br>\n/' | grep -viE "(^}$|^{$})" | sed 's/[[:space:]]*$//' `
 fi
 
-echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\">&#8202;</a></span><br class=\"btwntrn\">" 
+echo "<span class=\"pli-lang inputscript-ISOPali\" lang=\"pi\">$quote_pi<a target=_blank class=\"text-white text-decoration-none\" href=\"$linkgeneral#$anchor\"><img style="margin-top: -2px; height: 15px; " src="/assets/svg/link-solid.svg"></a></span><br class=\"btwntrn\">" 
 [[ "$quote_ln" != "" ]] && 
 echo "<span class=\"eng-lang text-muted font-weight-light\" lang=\"en\">$quote_ln</span>" 
 [[ "$quote_var" != "" ]] && 

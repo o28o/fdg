@@ -296,8 +296,6 @@ h5 .pli-lang {
   color: var(--off-white) ;
 }
 
-
-div .eng-lang,
 p .eng-lang,
 dt .eng-lang,
 li .eng-lang,
@@ -310,7 +308,6 @@ h5 .eng-lang {
   color: var(--dark-gray2);
 }
 
-.dark div .eng-lang,
 .dark p .eng-lang,
 .dark dt .eng-lang,
 .dark li .eng-lang,

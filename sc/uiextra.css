@@ -106,12 +106,12 @@ margin-left: 6px;
 
 
 /* Стили по умолчанию для чередующегося отображения */
-.pli-lang, .rus-lang, .eng-lang { /* Добавлено eng-lang */
+.pli-lang, .rus-lang,  { /* .eng-lang Добавлено eng-lang */
   display: inline;
 }
 
 /* Стили для колонок (скрыты по умолчанию) */
-.column-view .pli-lang, .column-view .rus-lang, .column-view .eng-lang { /* Добавлено eng-lang */
+.column-view .pli-lang, .column-view .rus-lang { /* , .column-view .eng-langДобавлено eng-lang */
   display: inline-block;
   width: 48%;
   vertical-align: top;
@@ -126,9 +126,9 @@ margin-left: 6px;
   box-sizing: border-box; /* Учитываем внутренние отступы и границы */
 }
 
-.column-view .rus-lang, .column-view .eng-lang { 
+.column-view .rus-lang { 
   padding-left: 10px;
-  box-sizing: border-box; /* Учитываем внутренние отступы и границы */
+  box-sizing: border-box; /* Учитываем внутренние отступы и границы , .column-view .eng-lang*/
 }
 
 /* Стили для двух колонок */
@@ -136,7 +136,7 @@ margin-left: 6px;
   max-width: 105rem;
 }
 
-/* Если один из языков справа скрыт */
-.column-view .rus-lang:empty, .column-view .eng-lang:empty {
+/* Если один из языков справа скрыт .eng-lang:empty*/
+.column-view .rus-lang:empty, .column-view  {
   display: none;
 }	

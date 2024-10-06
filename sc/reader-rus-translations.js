@@ -98,6 +98,7 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
 
 var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`;
 
+
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
 const ruUrl  = window.location.href;
@@ -159,15 +160,19 @@ if (slug.includes("mn"))  {
 } 
 
   const rootResponse = fetch(rootpath).then(response => response.json());
-const varResponse = fetch(varpath)
+	const varResponse = fetch(varpath)
   .then(response => response.json())
-  .catch(() => null);  const translationResponse = fetch(trnpath).then(response => response.json());
+  .catch(() => null);  
+  	 console.log('varResponse:', varResponse); 
+
+  const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
-  console.log('Variants:', varData); // varData может быть null
-
+ 
   Promise.all([rootResponse, varResponse, translationResponse, htmlResponse]).then(responses => {
     const [paliData, varData, transData, htmlData] = responses;
+	 console.log('Variants:', varData); // varData может быть null
+
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
         transData[segment] = "";

@@ -658,6 +658,8 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
   
   // Определение URL для запроса данных
   let url;
+  // /suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-${buOrbi}-vb/pli-tv-${buOrbi}-vb-${lawType}
+  // /suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-${buOrbi}-vb/pli-tv-${buOrbi}-vb-${lawType}
   if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
 

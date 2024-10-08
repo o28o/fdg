@@ -749,7 +749,7 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
 function loadText() {
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
-  let translation = document.getElementById('translationInput').value.trim();
+  let translation = document.getElementById('translationInput').value;
 
 let cleanedTranslation = translation;
 

@@ -39,14 +39,13 @@ ul li {
   
   <div id="outputFromLatestPhp"></div>
  <div class="wrapper">
- <h2>an</h2>
+    <!--  <h2>an</h2>
     <ul id="anRanges"></ul>
-	
-    <!-- Заголовок и список для переменных snranges -->
+	Заголовок и список для переменных snranges -->
     <h2>sn</h2>
     <ul id="snRanges"></ul>
 	
-
+    <h2>an Полностью</h2>
     <!-- Заголовок и список для переменных mnranges -->
     <h2>mn Полностью</h2>
     <ul id="mnRanges"></ul>
@@ -89,14 +88,14 @@ fetch('/sc/latest-rus.php')
                 }
 
                 // Вывод переменных anranges и snranges как списки
-                const anList = document.getElementById('anRanges');
+             //   const anList = document.getElementById('anRanges');
                 const snList = document.getElementById('snRanges');
 
-                variables['anranges'].forEach(range => {
+         /*       variables['anranges'].forEach(range => {
                     const listItem = document.createElement('li');
                     listItem.textContent = range;
                     anList.appendChild(listItem);
-                });
+                }); */
 
                 variables['snranges'].forEach(range => {
                     const listItem = document.createElement('li');

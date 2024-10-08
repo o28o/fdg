@@ -298,12 +298,8 @@ button:hover {
                     // Проверка, какой тип текста введен (по префиксу)
                     if (inputValue.startsWith('an')) {
                         // Проверка в anranges
-                        if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
-                            console.log('Найден в anranges:', inputValue);
-                        } else {
-                            console.log('Не найден в anranges:', inputValue);
-                            resultMessage = '';
-                        }
+                     resultMessage = '❌✅Уже есть!';
+
                     } else if (inputValue.startsWith('sn')) {
                         // Проверка в snranges
                         if (variables['snranges'] && variables['snranges'].includes(inputValue)) {

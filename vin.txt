@@ -1,0 +1,17 @@
+if (indexValue.includes('bu-') || indexValue.includes('bi-')) {
+  
+  let buOrbi = indexValue.split('-')[0]; 
+  let lawIndex = indexValue.split('-')[1]; 
+  let lawType = lawIndex.match(/[a-z]+/)[0];
+  
+  
+  let fileNameBlock = 'pli-tv-' + ${buOrbi} + '-vb-' + ${lawType} + '/pli-tv-' + ${buOrbi} + '-vb-' + ${lawIndex};
+  
+if (language === 'pli') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_root-pli-ms.json`;    
+}
+else if (language === 'en') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_translation-en-brahmali.json`;
+  }
+  
+} else

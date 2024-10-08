@@ -79,7 +79,7 @@ fi
 ");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
-*/
+
 //an
 $pathan = 'assets/texts/sutta/an/';
 $check = shell_exec("
@@ -98,7 +98,7 @@ else
 echo AN updated to \$andir
 sed -i \"s@let anranges =.*@let anranges = \$andir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
 fi
-");
+");  */
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 //   sed -i 's@latestrusmn=.*@latestrusmn='$max_mn'@g' $basedir/config/script_config.sh ;
@@ -123,6 +123,8 @@ fi
 ");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
+echo "<h2 style='text-align: center;'>
+AN complete</h2>";
 echo "<h2 style='text-align: center;'>
 DN complete</h2>";
 echo "<h2 style='text-align: center;'>

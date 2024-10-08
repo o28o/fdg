@@ -656,13 +656,38 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
   let url;
   // /suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-${buOrbi}-vb/pli-tv-${buOrbi}-vb-${lawType}
   // /suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-${buOrbi}-vb/pli-tv-${buOrbi}-vb-${lawType}
-  if (language === 'pli') {
+if (indexValue.includes('bu-') || indexValue.includes('bi-')) {
+  
+  let buOrbi = indexValue.split('-')[0]; 
+  let lawIndex = indexValue.split('-')[1]; 
+  let lawType = lawIndex.match(/[a-z]+/)[0];
+  
+  
+  let fileNameBlock = 'pli-tv-' + buOrbi + '-vb-' + lawType + '/pli-tv-' + buOrbi + '-vb-' + lawIndex;
+  
+  
+    //for other laws or patimolkha
+ if (indexValue.includes('-pm')) {
+  fileNameBlock = 'pli-tv-' + buOrbi + '-pm';
+ } 
+  
+console.log('fileNameBlock ' + fileNameBlock) ;
+  
+if (language === 'pli') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_root-pli-ms.json`;    
+}
+else if (language === 'en') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_translation-en-brahmali.json`;
+  }
+  
+} else if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
 
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
 
+console.log('url ' + url) ;
   // Словарь для автоматических переводов
   const translations = {
     "Paṭhamaṁ.": "Первая.",
@@ -875,12 +900,40 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
 }  
   
   let url;
-
-  if (language === 'pli') {
+  let fileNameBlock;
+  
+ if (indexValue.includes('bu-') || indexValue.includes('bi-')) {
+  
+  let buOrbi = indexValue.split('-')[0]; 
+  let lawIndex = indexValue.split('-')[1]; 
+  let lawType = lawIndex.match(/[a-z]+/)[0];
+  
+     fileNameBlock = 'pli-tv-' + buOrbi + '-vb-' + lawType + '/pli-tv-' + buOrbi + '-vb-' + lawIndex;
+   
+    //for other laws or patimolkha
+ if (indexValue.includes('-pm')) {
+  fileNameBlock = 'pli-tv-' + buOrbi + '-pm';
+ } else {
+   fileNameBlock = 'pli-tv-' + buOrbi + '-vb-' + lawType + '/pli-tv-' + buOrbi + '-vb-' + lawIndex;
+ }
+  
+console.log('fileNameBlock ' + fileNameBlock) ;
+  
+if (language === 'pli') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_root-pli-ms.json`;    
+}
+else if (language === 'en') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_translation-en-brahmali.json`;
+  }
+  
+} else if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
+
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
+
+console.log('url ' + url) ;
   //    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
 //console.log(url);
   fetch(url)

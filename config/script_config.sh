@@ -181,6 +181,7 @@ skiprounds=5
 
 elif uname -a | grep -iq CYGWIN; then
 #elif [[ "`uname -a`" == *"Cygwin"* ]]; then
+suttapath=/media/c/soft/suttacentral.net/
 downloaddir=/media/c/Users/o28o/Downloads
 trndir=/media/c/soft/fdg/assets/texts/sutta/
 fi

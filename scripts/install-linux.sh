@@ -9,11 +9,15 @@ git clone https://github.com/o28o/fdg.git ./
 mkdir result
 cd ru && ln -s ../result ./ && cd ..
 cd ..
+
 chown -R apache:apache /var/www/html 
+chown -R www-data:www-data /var/www/html 
+
 mkdir suttacentral.net && cd suttacentral.net
 git clone https://github.com/suttacentral/sc-data.git 
 
 chown -R apache:apache /var/www/suttacentral.net
+chown -R www-data:www-data /var/www/suttacentral.net
 
 sudo systemctl restart apache2
 

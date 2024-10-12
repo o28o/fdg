@@ -359,7 +359,7 @@ const rvfr = "<a class='text-decoration-none' target='' href='" + rvorigUrl + "'
 const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&nbsp;</a>";
 
 // Добавляем ссылку в вашу строку предупреждения
-const warning = "<p class='warning'>Внимание!" + rvfr + "<br>Переводы, словари и комментарии сделаны не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях." + scrollLink + "</p>";
+const warning = "<p class='warning'>Внимание!" + rvfr + "<br>Переводы, словари и комментарии <br>сделаны не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях." + scrollLink + "</p>";
 
 //const warning = "<p class='warning'>Внимание!<br>Переводы выполнены не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + "'>&nbsp;</a></p>";
 

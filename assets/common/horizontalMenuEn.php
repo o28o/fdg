@@ -264,8 +264,7 @@ Memorizer</a></li>
        </div>
          </li>    
 
-<li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
-      
+   
               <li>
          <div class="dropdown-item ">PTS Converter
          <a class="text-black" target=""  href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">#1</a>
@@ -273,7 +272,9 @@ Memorizer</a></li>
        </div>
          </li>   
 
-   <li><a class="dropdown-item" href="/assets/linebyline.html">Line-by-line Formatter</a></li>
+   <li><a class="dropdown-item" href="/assets/linebyline.html">Line-by-line Translation Tool</a></li>   
+<li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
+      
 
 <li><a class="dropdown-item" href="/assets/makelist.html">
   <i class="' . $iconimportant . '"></i>

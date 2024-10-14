@@ -516,7 +516,7 @@ button:hover {
     <div class="form-check">
     <input class="form-check-input" title="Добавить +edited+o в название файла"  type="checkbox" id="customTranslatorName">
       <label>
-        <input type="checkbox" id="loadFromServer"> Загрузить перевод с сервера
+        <input type="checkbox" id="loadFromServer">beta
     </label>
   </div>
  
@@ -1061,9 +1061,10 @@ if (document.getElementById('loadFromServer').checked) {
         if (selectedUrl) {
             loadFileContent(selectedUrl);  // Загружаем содержимое выбранного файла
         }
-        // Снимаем отметку с чекбокса после завершения
-        document.getElementById('loadFromServer').checked = false;
+
     });
+         // Снимаем отметку с чекбокса после завершения
+        document.getElementById('loadFromServer').checked = false;   
 }
 
 // Проверяем, если translationInput содержит больше строк, чем dataArray

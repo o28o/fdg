@@ -346,7 +346,8 @@ button:hover {
 Можно будет поправить переноcы вручную. 
 Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе.
 
-Также вместо 'Загрузить JSON' в это окно можно вставить скопированный текст JSON файла напрямую." class="form-control custom-textarea" rows="15"></textarea>
+Также вместо 'Загрузить JSON' в это окно можно вставить скопированный текст JSON файла напрямую.
+" class="form-control custom-textarea" rows="15"></textarea>
 
 
 <script>
@@ -511,10 +512,15 @@ button:hover {
       +edited+o
     </label>
   </div>
+  
+    <div class="form-check">
+    <input class="form-check-input" title="Добавить +edited+o в название файла"  type="checkbox" id="customTranslatorName">
+      <label>
+        <input type="checkbox" id="loadFromServer"> Загрузить перевод с сервера
+    </label>
+  </div>
+ 
 </div>
-
-
-
 
   <button class="btn btn-primary mt-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
 
@@ -529,7 +535,7 @@ button:hover {
   <button class="btn btn-danger mt-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
 
  
-  <button id="processButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
+  <button id="uploadButton" title="Загрузить JSON" class="btn btn-secondary mt-1"><i class="fa-solid fa-upload"></i></button>
 
 <button style="display: none;" class="btn btn-primary" title="Эмулировать клавишу Ctrl" id="ctrlEnterButton">Ctrl + Enter</button>
   
@@ -556,7 +562,7 @@ button:hover {
     
 <input type="file" id="fileInput" style="display:none" accept=".json" />
 <script>
-  document.getElementById('processButton').addEventListener('click', function() {
+  document.getElementById('uploadButton').addEventListener('click', function() {
     // Получаем значение из textarea
     const inputText = document.getElementById('translationInput').value;
 
@@ -946,6 +952,10 @@ console.log('url ' + url) ;
     .then(data => {
             const tableBody = document.getElementById('outputTableBody');
 const translationInput = document.getElementById('translationInput'); // Ваше textarea
+
+
+
+
 tableBody.innerHTML = '';
 
 const dataArray = Object.entries(data);
@@ -970,6 +980,91 @@ dataArray.forEach(([key, value], index) => {
     tableBody.innerHTML += row;
   });
 });
+
+    async function checkFileExists(url) {
+        try {
+            const response = await fetch(url, { method: 'HEAD' });
+            return response.ok;  // Проверяем, существует ли файл
+        } catch (error) {
+            console.error(`Error fetching ${url}`, error);
+            return false;
+        }
+    }
+
+    function generateUrls(originalUrl) {
+        // Найдём часть URL от sutta или vinaya до подчеркивания
+        const trimmedUrl = originalUrl.match(/\/(sutta|vinaya)\/.*/)[0];
+        const baseUrl = `/assets/texts${trimmedUrl.split('_')[0]}`;  // Обрезаем от подчеркивания и формируем новый URL
+
+        // Генерируем возможные варианты файлов
+        return [
+            `${baseUrl}_translation-ru-o.json`,
+            `${baseUrl}_translation-ru-o+in+progress.json`,
+            `${baseUrl}_translation-ru-sv+edited+o.json`,
+            `${baseUrl}_translation-ru-sv.json`
+        ];
+    }
+
+    async function findAvailableTranslations(originalUrl) {
+        const urls = generateUrls(originalUrl);  // Генерируем URL на основе исходного
+        const availableUrls = [];
+
+        // Проверяем доступность каждого URL
+        for (const url of urls) {
+            const exists = await checkFileExists(url);
+            if (exists) {
+                availableUrls.push(url);  // Добавляем доступные URL в список
+            }
+        }
+
+        // Если есть доступные файлы, предлагаем пользователю выбрать один
+        if (availableUrls.length > 0) {
+            let selectionMessage = 'Выберите перевод:\n';
+            availableUrls.forEach((url, index) => {
+                selectionMessage += `${index + 1}: ${url}\n`;  // Создаём сообщение с выбором
+            });
+
+            const userChoice = prompt(selectionMessage);  // Предлагаем пользователю выбрать один из вариантов
+            const selectedUrl = availableUrls[userChoice - 1];  // Индексация массива начинается с 0
+
+            if (selectedUrl) {
+                return selectedUrl;
+            } else {
+                alert("Неверный выбор.");
+                return null;
+            }
+        } else {
+            alert("Нет доступных переводов.");
+            return null;
+        }
+    }
+
+    async function loadFileContent(url) {
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const content = await response.text();  // Получаем текст файла
+                document.getElementById('translationInput').value = content;  // Вставляем текст в textarea
+            } else {
+                alert('Не удалось загрузить файл.');
+            }
+        } catch (error) {
+            console.error('Ошибка загрузки файла:', error);
+            alert('Произошла ошибка при загрузке файла.');
+        }
+    }
+
+    // Пример использования, назначаем выполнение на кнопку
+
+if (document.getElementById('loadFromServer').checked) {     
+    findAvailableTranslations(url).then((selectedUrl) => {
+        if (selectedUrl) {
+            loadFileContent(selectedUrl);  // Загружаем содержимое выбранного файла
+        }
+        // Снимаем отметку с чекбокса после завершения
+        document.getElementById('loadFromServer').checked = false;
+    });
+}
 
 // Проверяем, если translationInput содержит больше строк, чем dataArray
 if (translationLines.length > dataArray.length) {

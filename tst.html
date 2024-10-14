@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Translations</title>
+</head>
+<body>
+
+    <!-- Кнопка для загрузки -->
+    <button id="loadFromServer">Загрузить перевод с сервера</button>
+
+    <!-- Поле для отображения контента -->
+    <textarea id="translationInput" rows="20" cols="80"></textarea>
+
+    <script>
+    async function checkFileExists(url) {
+        try {
+            const response = await fetch(url, { method: 'HEAD' });
+            return response.ok;  // Проверяем, существует ли файл
+        } catch (error) {
+            console.error(`Error fetching ${url}`, error);
+            return false;
+        }
+    }
+
+    function generateUrls(originalUrl) {
+        // Найдём часть URL от sutta или vinaya до подчеркивания
+        const trimmedUrl = originalUrl.match(/\/(sutta|vinaya)\/.*/)[0];
+        const baseUrl = `/assets/texts${trimmedUrl.split('_')[0]}`;  // Обрезаем от подчеркивания и формируем новый URL
+
+        // Генерируем возможные варианты файлов
+        return [
+            `${baseUrl}_translation-ru-o.json`,
+            `${baseUrl}_translation-ru-o+in+progress.json`,
+            `${baseUrl}_translation-ru-sv+edited+o.json`,
+            `${baseUrl}_translation-ru-sv.json`
+        ];
+    }
+
+    async function findAvailableTranslations(originalUrl) {
+        const urls = generateUrls(originalUrl);  // Генерируем URL на основе исходного
+        const availableUrls = [];
+
+        // Проверяем доступность каждого URL
+        for (const url of urls) {
+            const exists = await checkFileExists(url);
+            if (exists) {
+                availableUrls.push(url);  // Добавляем доступные URL в список
+            }
+        }
+
+        // Если есть доступные файлы, предлагаем пользователю выбрать один
+        if (availableUrls.length > 0) {
+            let selectionMessage = 'Выберите перевод:\n';
+            availableUrls.forEach((url, index) => {
+                selectionMessage += `${index + 1}: ${url}\n`;  // Создаём сообщение с выбором
+            });
+
+            const userChoice = prompt(selectionMessage);  // Предлагаем пользователю выбрать один из вариантов
+            const selectedUrl = availableUrls[userChoice - 1];  // Индексация массива начинается с 0
+
+            if (selectedUrl) {
+                alert(`Вы выбрали перевод: ${selectedUrl}`);
+                return selectedUrl;
+            } else {
+                alert("Неверный выбор.");
+                return null;
+            }
+        } else {
+            alert("Нет доступных переводов.");
+            return null;
+        }
+    }
+
+    async function loadFileContent(url) {
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const content = await response.text();  // Получаем текст файла
+                document.getElementById('translationInput').value = content;  // Вставляем текст в textarea
+            } else {
+                alert('Не удалось загрузить файл.');
+            }
+        } catch (error) {
+            console.error('Ошибка загрузки файла:', error);
+            alert('Произошла ошибка при загрузке файла.');
+        }
+    }
+
+    // Пример использования, назначаем выполнение на кнопку
+    document.getElementById('loadFromServer').addEventListener('click', () => {
+        const originalUrl = 'https://suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/sn/sn22/sn22.11_translation-en-sujato.json';
+        
+        findAvailableTranslations(originalUrl).then((selectedUrl) => {
+            if (selectedUrl) {
+                loadFileContent(selectedUrl);  // Загружаем содержимое выбранного файла
+            }
+        });
+    });
+
+    </script>
+
+</body>
+</html>
+

@@ -342,7 +342,7 @@ window.location.href='{$base}read.php#{$stringForOpen}Collapse';
 }
 
 #open sutta in sc light interface
-if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$stringForOpen) || preg_match("/^(sn|an|ud|snp|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$stringForOpen) || preg_match("/^(sn|an|ud|snp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)){
+if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}$/i",$stringForOpen)){
 $stringForOpen = str_replace (" ", ".", $stringForOpen);
 $check = shell_exec("grep -m1 -i \"{$stringForOpen}_\" $indexesfile | awk '{print \$0}'");
 //if this empty then find range
@@ -362,7 +362,7 @@ echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";
   exit();
 }
 // &$defaultlang
-if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(sn|an|ud|snp|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(sn|an|ud|snp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
+if(preg_match("/^(mn|dn|dhp|iti)[0-9]{1,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|thig|thag)[0-9]{0,2}( |\.)[0-9]{0,3}b$/i",$stringForOpen) || preg_match("/^(snp|sn|an|ud|dhp)[0-9]{0,2}( |\.)[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)|| preg_match("/^dhp[0-9]{0,3}-[0-9]{0,3}b$/i",$stringForOpen)){
   $stringForOpen = str_replace (" ", ".", $stringForOpen);
   $forbwlink = strtolower(preg_replace("/b$/i","","$stringForOpen"));
   $bwprefix = strtolower(substr($forbwlink,0,2));

@@ -111,7 +111,7 @@ $stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
 $stringForOpen = preg_replace('/(\d+)\s*\.\s*(\d+)/', '$1.$2', $stringForOpen);
 //for patimokkha and vinaya vibhanga
 
-if (preg_match("/snp/i", $stringForOpen)) {
+if (preg_match("/(snp|iti|thig|thag|dhp)/i", $stringForOpen)) {
   
   echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	
   exit();

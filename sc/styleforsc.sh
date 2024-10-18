@@ -5,7 +5,20 @@ fi
 
 source ../config/script_config.sh --source-only
 cd $apachesitepath/assets/texts/sutta
+
+for i in `find $apachesitepath/assets/texts/sutta -type f -name "*.json" | xargs grep -El "(«|»)"`; do
+
+
+sed -i 's/«/“/g' $i
+sed -i 's/»/”/g' $i
+
+done
+
+
+
+
 for i in `find $apachesitepath/assets/texts/sutta -type f -name "*.json" | xargs grep -El "(\.\.\.|,[\.:;])"`; do
+
 
 if grep -q '\.\.\.' $i
 then
@@ -56,7 +69,6 @@ echo -n "fixing windows newlines in $i"
 sed -i 's/\r//g' $i
 echo " done <br>"
 done
-
 
 
 

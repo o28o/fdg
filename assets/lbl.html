@@ -898,6 +898,13 @@ if (/sn[0-9]/.test(indexValue)) {
     } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
         cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
+} else if (indexValue.includes("snp")) {
+    if (!cleanedTranslation.startsWith("Сутта Нипата")) {
+        const additionalLines = `Сутта Нипата ${indexValue.replace(/[a-z]/g, '')}\nНазвание\n\n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Сутта Нипата")) {
+        cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }
 } 
 
   document.getElementById('translationInput').value = cleanedTranslation;

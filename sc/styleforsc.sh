@@ -15,8 +15,6 @@ sed -i 's/»/”/g' $i
 done
 
 
-
-
 for i in `find $apachesitepath/assets/texts/sutta -type f -name "*.json" | xargs grep -El "(\.\.\.|,[\.:;])"`; do
 
 

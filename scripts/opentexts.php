@@ -110,13 +110,18 @@ $stringForOpen = strtolower($string);
 $stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
 $stringForOpen = preg_replace('/(\d+)\s*\.\s*(\d+)/', '$1.$2', $stringForOpen);
 //for patimokkha and vinaya vibhanga
-if (preg_match("/pli-tv-/i", $stringForOpen)) {
+
+if (preg_match("/snp/i", $stringForOpen)) {
   
   echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	
   exit();
 	  
-}
-else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
+} else if (preg_match("/pli-tv-/i", $stringForOpen)) {
+  
+  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	
+  exit();
+	  
+} else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {
 //echo "<script>alert('case 1');</script>";	
 	echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
 	  exit(); 

@@ -709,7 +709,7 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
   } else if (book === "thag" || book === "thig") {
     return `kn/${book}/${slug}`;
   } else if (book === "ja") {
-    return `kn/${book}/${slug}`;
+    return `kn/ja/${slug}`;
   }
 }
 

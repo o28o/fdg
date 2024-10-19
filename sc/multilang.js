@@ -137,7 +137,7 @@ if (slug.includes("mn"))  {
   let slugNumber = parseInt(slug.replace(/\D/g, ''), 10); // Извлекаем число из slug
 
   if (slugNumber >= 1 && slugNumber <= 70) {
-    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/${translator}/${texttype}/${slugReady}_translation-en-sujato.json`;
+    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/sutta/${slugReady}_translation-en-sujato.json`;
   } else if (slugNumber > 70) {
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
   }

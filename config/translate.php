@@ -185,7 +185,7 @@ $slides = [
                 [
         'title' => 'Джатаки из Сутт',
         'desc' => 'Будда и некотооые ученики, о своих прошлых жизнях',
-        'link' => '/assets/example/(bhuutapubbaaha.ahos-aha.m-tena-samayena.ahos)_suttanta_pali-ru_13-13.html',
+        'link' => '/ru/?q=(bhūtapubbāha.*ahos|ahaṁ tena samayena.*ahos)',
     ],
     [
         'title' => 'Благородный Глоссарий',
@@ -670,7 +670,7 @@ $slides = [
                 [
         'title' => 'Jatakas from Suttas',
         'desc' => 'Buddha and his followers, on their past lifes',
-        'link' => '/assets/example/(bhuutapubbaaha.ahos-aha.m-tena-samayena.ahos)_suttanta_pali_13-13.html',
+        'link' => '/?q=(bhūtapubbāha.*ahos|ahaṁ tena samayena.*ahos)',
     ],
     [
         'title' => 'Noble Glossary',

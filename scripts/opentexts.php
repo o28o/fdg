@@ -109,13 +109,13 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 $stringForOpen = strtolower($string);
 $stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
 $stringForOpen = preg_replace('/(\d+)\s*\.\s*(\d+)/', '$1.$2', $stringForOpen);
-//for patimokkha and vinaya vibhanga
 
 if (preg_match("/(ja|snp|iti|thig|thag|dhp)/i", $stringForOpen)) {
   
   echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	
   exit();
 	  
+//for patimokkha and vinaya vibhanga
 } else if (preg_match("/pli-tv-/i", $stringForOpen)) {
   
   echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	

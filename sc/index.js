@@ -78,7 +78,7 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
    
     if (slug.match(/ja/)) {
   let language = "pli";
-    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+  var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
     console.log('ja case ', rootpath, trnpath, htmlpath);
 } else if (slug.match(/bu-pm|bi-pm/)) {
     //let translator = "thanissaro+o";

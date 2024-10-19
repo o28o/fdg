@@ -143,14 +143,13 @@ else if (snranges.indexOf(slug) !== -1 || /^sn([1-4]|6|13|1[5-6]|2[0-1])\./.test
   let language = "pli";
   let slugNumber = parseInt(slug.replace(/\D/g, ''), 10); // Извлекаем число из slug
 
-  if (slugNumber >= 1 && slugNumber <= 70) {
+  if (slugNumber >= 1 && slugNumber <= 75) {
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/sutta/${slugReady}_translation-en-sujato.json`;
   } else if (slugNumber > 70) {
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
   }
   // console.log('ja case ', rootpath, trnpath, htmlpath);
-}
- else if ( texttype === "sutta" ) {
+} else if ( texttype === "sutta" ) {
   let translator = "sujato";
   const pathLang = "en";
   // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);

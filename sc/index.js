@@ -76,10 +76,16 @@ console.log('texttype ' + texttype + ' translator ' + translator);
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`
    var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
    
-    if (slug.match(/ja/)) {
+  else if (slug.match(/ja/)) {
   let language = "pli";
-  var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-    console.log('ja case ', rootpath, trnpath, htmlpath);
+  let slugNumber = parseInt(slug.replace(/\D/g, ''), 10); // Извлекаем число из slug
+
+  if (slugNumber >= 1 && slugNumber <= 70) {
+    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/${translator}/${texttype}/${slugReady}_translation-en-sujato.json`;
+  } else if (slugNumber > 70) {
+    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+  }
+  // console.log('ja case ', rootpath, trnpath, htmlpath);
 } else if (slug.match(/bu-pm|bi-pm/)) {
     //let translator = "thanissaro+o";
     let translator = "thanissaro";

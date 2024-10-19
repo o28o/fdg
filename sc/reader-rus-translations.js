@@ -135,11 +135,6 @@ else if (snranges.indexOf(slug) !== -1 || /^sn([1-4]|6|13|1[5-6]|2[0-1])\./.test
   var trnpath = rustrnpath; 
   console.log(trnpath);
 //  scLink += ifRus; 
-} else if (vinayaranges.indexOf(slug) !== -1) { 
-  var trnpath = rustrnpath; 
- // scLink += ifRus; 
-  console.log('vinaya case');
-  console.log(trnpath);
 } else if (knranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
  // scLink += ifRus; 
@@ -161,12 +156,20 @@ else if (snranges.indexOf(slug) !== -1 || /^sn([1-4]|6|13|1[5-6]|2[0-1])\./.test
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);
 } else if ( texttype === "vinaya" ) {
+	
+if (vinayaranges.indexOf(slug) !== -1) { 
+  var trnpath = rustrnpath; 
+ // scLink += ifRus; 
+} else {
   let translator = "brahmali";
-  
+
   const pathLang = "en";
-  console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-} 
+}
+  console.log('vinaya case');
+  console.log(trnpath);
+
+}  
 
   const rootResponse = fetch(rootpath).then(response => response.json());
  const translationResponse = fetch(trnpath).then(response => response.json());

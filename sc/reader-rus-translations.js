@@ -138,6 +138,7 @@ else if (snranges.indexOf(slug) !== -1 || /^sn([1-4]|6|13|1[5-6]|2[0-1])\./.test
 } else if (vinayaranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 
  // scLink += ifRus; 
+  console.log('vinaya case');
   console.log(trnpath);
 } else if (knranges.indexOf(slug) !== -1) { 
   var trnpath = rustrnpath; 

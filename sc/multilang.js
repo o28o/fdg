@@ -134,6 +134,7 @@ if (slug.includes("mn"))  {
   console.log(trnpath);
 } else if (slug.match(/ja/)) {
   let language = "pli";
+  pathLang = "en";
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
     //console.log('ja case ', rootpath, trnpath, htmlpath);
 } else if ( texttype === "sutta" ) {

@@ -513,12 +513,18 @@ button:hover {
     </label>
   </div>
   
-    <div class="form-check">
-    <input class="form-check-input" title="Добавить +edited+o в название файла"  type="checkbox" id="customTranslatorName">
+ <!--    <div class="form-check">
+    <input class="form-check-input" title="Загрузить перевод с сервера"  type="checkbox" id="customTranslatorName">
       <label>
         <input type="checkbox" id="loadFromServer">beta
     </label>
   </div>
+   -->
+  <div class="form-check">
+    <button id="loadFromServerButton" class="btn btn-primary" title="Загрузить перевод с сервера">Загрузить с сервера</button>
+</div>
+
+  
  
 </div>
 
@@ -1063,7 +1069,7 @@ dataArray.forEach(([key, value], index) => {
 
     // Пример использования, назначаем выполнение на кнопку
 
-if (document.getElementById('loadFromServer').checked) {     
+/* if (document.getElementById('loadFromServer').checked) {     
     findAvailableTranslations(url).then((selectedUrl) => {
         if (selectedUrl) {
             loadFileContent(selectedUrl);  // Загружаем содержимое выбранного файла
@@ -1072,7 +1078,18 @@ if (document.getElementById('loadFromServer').checked) {
     });
          // Снимаем отметку с чекбокса после завершения
         document.getElementById('loadFromServer').checked = false;   
-}
+} */
+
+
+document.getElementById('loadFromServerButton').addEventListener('click', function() {
+    findAvailableTranslations(url).then((selectedUrl) => {
+        if (selectedUrl) {
+            loadFileContent(selectedUrl);  // Загружаем содержимое выбранного файла
+        }
+    });
+});
+
+
 
 // Проверяем, если translationInput содержит больше строк, чем dataArray
 if (translationLines.length > dataArray.length) {

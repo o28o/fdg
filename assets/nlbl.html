@@ -945,6 +945,7 @@ else if (language === 'en') {
       return response.json();
     })
     .then(data => {
+	console.log(data);
       const tableBody = document.getElementById('outputTableBody');
 const translationInput = document.getElementById('translationInput'); // Ваше textarea
 tableBody.innerHTML = '';
@@ -952,6 +953,7 @@ tableBody.innerHTML = '';
 const dataArray = Object.entries(data);
 const translationLines = translationInput.value.split('\n'); // Разбиваем строки translationInput
 let rowCounter = 0; // Счётчик для строк
+
 
 // Основной цикл по данным
 dataArray.forEach(([key, value], index) => {

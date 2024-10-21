@@ -298,12 +298,8 @@ button:hover {
                     // Проверка, какой тип текста введен (по префиксу)
                     if (inputValue.startsWith('an')) {
                         // Проверка в anranges
-                        if (variables['anranges'] && variables['anranges'].includes(inputValue)) {
-                            console.log('Найден в anranges:', inputValue);
-                        } else {
-                            console.log('Не найден в anranges:', inputValue);
-                            resultMessage = '';
-                        }
+                     resultMessage = '❌✅Уже есть!';
+
                     } else if (inputValue.startsWith('sn')) {
                         // Проверка в snranges
                         if (variables['snranges'] && variables['snranges'].includes(inputValue)) {
@@ -366,12 +362,19 @@ button:hover {
 <div class="input-group-append ms-1 me-3">
   
  <button class="btn btn-primary ms-2 me-1 input-group-append " title="Обновить перевод" onclick="loadText()">Обновить <i class="fa-solid fa-arrow-rotate-right"></i></button>
-  <button class="btn btn-primary me-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
   
   <button class="btn btn-primary me-1" title="Найти и Заменить" onclick="    openSearchModal();"><i class="fas fa-search"></i></button>
   
+  
+  <button class="btn btn-primary me-1" title="Найти и Заменить" id="formatButton"><i class="fa-solid fa-text-width"></i></button>
+  
+  <button class="btn btn-danger me-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
+
+  
   <button id="processButton" title="Загрузить JSON" class="btn btn-secondary me-1"><i class="fa-solid fa-upload"></i></button>
-  <button class="btn btn-secondary me-1"  title="Очистить окно ввода текста" onclick="clearInputs()"><i class="fa-solid fa-eraser"></i></button>
+
+  <button class="btn btn-primary me-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
+	
   
 <div class="d-flex align-items-center">
   <div class="form-check me-2">
@@ -427,10 +430,10 @@ button:hover {
 3. Нажмите 'Обновить'
 
 Инструмент добавит заголовок и переносы строк.
-
 Можно будет поправить переноcы вручную.
+Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе.
 
-Если перенос строки где-то не нужен, то нужно объеденить предложения в переводе."
+Также вместо 'Загрузить JSON' в это окно можно вставить скопированный текст JSON файла напрямую."
               class="form-control custom-textarea" rows="15"></textarea>
   </div>
 </div>
@@ -702,7 +705,32 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
 
   // Определение URL для запроса данных
   let url;
-  if (language === 'pli') {
+  
+if (indexValue.includes('bu-') || indexValue.includes('bi-')) {
+  
+  let buOrbi = indexValue.split('-')[0]; 
+  let lawIndex = indexValue.split('-')[1]; 
+  let lawType = lawIndex.match(/[a-z]+/)[0];
+  
+  
+  let fileNameBlock = 'pli-tv-' + buOrbi + '-vb-' + lawType + '/pli-tv-' + buOrbi + '-vb-' + lawIndex;
+  
+  
+    //for other laws or patimolkha
+ if (indexValue.includes('-pm')) {
+  fileNameBlock = 'pli-tv-' + buOrbi + '-pm';
+ } 
+  
+console.log('fileNameBlock ' + fileNameBlock) ;
+  
+if (language === 'pli') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_root-pli-ms.json`;    
+}
+else if (language === 'en') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_translation-en-brahmali.json`;
+  }
+  
+} else if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
 
   } else if (language === 'en') {
@@ -797,7 +825,7 @@ console.log('url:', url);
 function loadText() {
   const language = document.getElementById('languageSelect').value;
   const indexValue = document.getElementById('indexInput').value.trim().toLowerCase();
-  let translation = document.getElementById('translationInput').value.trim();
+  let translation = document.getElementById('translationInput').value;
 
 let cleanedTranslation = translation;
 
@@ -811,9 +839,6 @@ let cleanedTranslation = translation;
     // Если это не JSON, продолжаем обычную обработку текста
   }
 
-cleanedTranslation = cleanedTranslation.replace(/\([А-Я]* [0-9]*\.[0-9]*\)/g, '');
-cleanedTranslation = cleanedTranslation.replace(/ {2,}/g, ' ');
-  
 
 
 if (document.getElementById('lineBreakCheckbox').checked) {
@@ -825,57 +850,9 @@ if (document.getElementById('lineBreakCheckbox').checked) {
     return match;
   });
  
-cleanedTranslation = cleanedTranslation.replace(/АН\s[0-9]+\.[0-9]+\s+[\s\S]*?Anguttara Nikaya.*$/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/СН\s[0-9]+\.[0-9]+\s+[\s\S]*?Samyutta Nikaya.*$/gm, '');
-
-cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, function(match, p1, p2) {
-  return p1 + ' ' + p2.toUpperCase();
-});
-
-// Если строка начинается с цифры и не оканчивается пробелом, добавляем пробел
-//cleanedTranslation = cleanedTranslation.replace(/(\([0-9]\).+?)([^\s])$/gm, function(match, p1, p2) {
-//  return p1 + p2 + ' ';
-//});
-
-
-// добавить логику, чтобы собирал в одно предложение, короткие списки???
-
-cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
-cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
-cleanedTranslation = cleanedTranslation.replace(/И тогда /g, '\nИ тогда ');
-cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');
-cleanedTranslation = cleanedTranslation.replace(/Как вы думаете, /g, 'Как вы думаете,\n');
-cleanedTranslation = cleanedTranslation.replace(/или как ты считаешь/g, '\nили как ты считаешь');
-cleanedTranslation = cleanedTranslation.replace(/или как вы считаете/g, '\nили как вы считаете');
-cleanedTranslation = cleanedTranslation.replace(/Каки/g, '\nКаки');
-cleanedTranslation = cleanedTranslation.replace(/В каких/g, '\nВ каких');
-cleanedTranslation = cleanedTranslation.replace(/\[Благословенный сказал\]:/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/\[Благословенный сказал:/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/^.*\[И далее он добавил\]:.*$/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/\(I\)/g, 'Первая');
-cleanedTranslation = cleanedTranslation.replace(/\(II\)/g, 'Вторая');
-cleanedTranslation = cleanedTranslation.replace(/\(III\)/g, 'Третья');
-cleanedTranslation = cleanedTranslation.replace(/\(IV\)/g, 'Четвёртая');
-
   
 }
 
-cleanedTranslation = cleanedTranslation.replace(/^\*\s+/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/[0-9]*"/g, '');
-cleanedTranslation = cleanedTranslation.replace(/^–\s+/gm, '');
-
-if (document.getElementById('lineBreakCheckbox').checked) {
-
-cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?\) /g, '');
-cleanedTranslation = cleanedTranslation.replace(/\([1-9][0-9]?-[1-9][0-9]?\) /g, '');
-cleanedTranslation = cleanedTranslation.replace(/[1-9][0-9]?\) /g, '');
-
-
-cleanedTranslation = cleanedTranslation.replace(/^\s*[\r\n]/gm, '');
-cleanedTranslation = cleanedTranslation.replace(/([А-Яа-я»…\]])\d+\b/g, '$1');
-cleanedTranslation = cleanedTranslation.replace(/([^\s])$/gm, '$1 ');
-
-}
 
 
 if (/sn[0-9]/.test(indexValue)) {
@@ -891,6 +868,13 @@ if (/sn[0-9]/.test(indexValue)) {
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Восходящие Наставления")) {
         cleanedTranslation = `Восходящие Наставления ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }
+} else if (indexValue.includes("snp")) {
+    if (!cleanedTranslation.startsWith("Сутта Нипата")) {
+        const additionalLines = `Сутта Нипата ${indexValue.replace(/[a-z]/g, '')}\nНазвание\n\n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Сутта Нипата")) {
+        cleanedTranslation = `Сутта Нипата ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
 } 
 
@@ -922,7 +906,31 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
   
   let url;
 
-  if (language === 'pli') {
+if (indexValue.includes('bu-') || indexValue.includes('bi-')) {
+  
+  let buOrbi = indexValue.split('-')[0]; 
+  let lawIndex = indexValue.split('-')[1]; 
+  let lawType = lawIndex.match(/[a-z]+/)[0];
+  
+  
+  let fileNameBlock = 'pli-tv-' + buOrbi + '-vb-' + lawType + '/pli-tv-' + buOrbi + '-vb-' + lawIndex;
+  
+  
+    //for other laws or patimolkha
+ if (indexValue.includes('-pm')) {
+  fileNameBlock = 'pli-tv-' + buOrbi + '-pm';
+ } 
+  
+console.log('fileNameBlock ' + fileNameBlock) ;
+  
+if (language === 'pli') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_root-pli-ms.json`;    
+}
+else if (language === 'en') {
+  url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-${buOrbi}-vb/${fileNameBlock}_translation-en-brahmali.json`;
+  }
+  
+} else if (language === 'pli') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${beforeDot}/${indexValue}_root-pli-ms.json`;
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
@@ -1051,6 +1059,7 @@ function makeCellEditable(cell, cursorPosition = null) {
         cell.textContent = newText; // Устанавливаем новое значение (может быть пустым)
         delete cell.dataset.originalText; // Удаляем временный data-атрибут
         updateTranslationTextarea();
+		saveInputs();
     }
 
     // Обрабатываем выход из режима редактирования
@@ -1473,13 +1482,47 @@ function saveInputs() {
  // localStorage.setItem('lineBreakCheckboxState', lineBreakCheckbox.checked);
  // Сохраняем состояние чекбокса как булево значение
 }
+// Слушатель для сохранения при каждом изменении translationInput
+translationInput.addEventListener('input', function() {
+  localStorage.setItem('translationValue', translationInput.value);
+});
 
 // Функция для загрузки сохраненных значений
+// Функция для загрузки сохраненных значений
 function loadInputs() {
-  indexInput.value = localStorage.getItem('indexValue') || 'an4.170';
+
+  if (localStorage.getItem('indexValue')) { // Исправлено условие
+    indexInput.value = localStorage.getItem('indexValue');
+  } else {
+
+    // Выполняем fetch для получения содержимого файла
+    fetch('/assets/texts/miss_longest')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        // Разделяем содержимое файла на строки и берем первую строку
+        const firstLine = data.split('\n')[0];
+        
+        // Получаем первую часть первой строки (до пробела)
+        const firstPart = firstLine.split(' ')[0];
+        
+        // Устанавливаем значение в indexInput, если его нет в localStorage
+        indexInput.value = firstPart;
+      })
+      .catch(error => {
+        console.error('Ошибка при получении файла:', error);
+        // В случае ошибки использовать значение по умолчанию
+        indexInput.value = 'sn37.30';
+      });
+
+  }
+
+  // Загружаем другие значения из localStorage
   translationInput.value = localStorage.getItem('translationValue') || '';
-  // Если значение чекбокса в localStorage отсутствует или false, устанавливаем его в true по умолчанию
- // lineBreakCheckbox.checked = localStorage.getItem('lineBreakCheckboxState') === 'true';
 }
 
 // Вызываем функцию загрузки сохраненных значений при загрузке страницы
@@ -1956,6 +1999,8 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 <script>
+document.getElementById("formatButton").addEventListener("click", formatSelectedText);
+
 document.addEventListener("keydown", function(event) {
     // Проверяем нажатие сочетания клавиш Ctrl + M
     if (event.ctrlKey && event.code === 'KeyQ') {
@@ -1999,6 +2044,25 @@ function formatSelectedText() {
     }
 }
 
+//вывод номера текста в название вкладки document.title
+document.addEventListener("DOMContentLoaded", function() {
+    let timeoutId;
+    
+    const indexInput = document.getElementById("indexInput");
+
+    indexInput.addEventListener("input", function() {
+        clearTimeout(timeoutId); // Очищаем предыдущий таймер
+        timeoutId = setTimeout(function() {
+            const textIndex = indexInput.value;
+            if (textIndex) {
+                document.title = textIndex;
+            }
+        }, 1000); // Задержка 1 секунда
+    });
+});
+
+
+//конец
 </script>
 </body>
 </html>

@@ -241,7 +241,7 @@ if (translator === "sv") {
   translatorforuser = 'Bhikkhu Brahmali';
 } else if (translator === "syrkin" ) {
   translatorforuser = 'А.Я. Сыркин';
-} else if (translator === "syrkin+o" ) {
+} else if (translator === "syrkin+edited+o" ) {
   translatorforuser = 'А.Я. Сыркин, ред. о';
 } else if (translator === "sv+edited+o" ) {
   translatorforuser = 'SV theravada.ru, ред. о';

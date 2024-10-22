@@ -36,6 +36,7 @@ echo "<h2 style='text-align: center;'>
 $check</h2>";
 */
 
+
 //sn
 $pathsn = 'assets/texts/sutta/sn/';
 $check = shell_exec("
@@ -121,6 +122,7 @@ echo KN updated to \$kndir
 sed -i \"s@let knranges =.*@let knranges = \$kndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js 
 fi
 ");
+
 echo "<h2 style='text-align: center;'>
 $check</h2>";
 echo "<h2 style='text-align: center;'>
@@ -129,4 +131,31 @@ echo "<h2 style='text-align: center;'>
 DN complete</h2>";
 echo "<h2 style='text-align: center;'>
 MN complete</h2>";
+
+//vinaya
+$pathvinaya = 'assets/texts/vinaya/pli-tv-b[ui]-vb/';
+$check = shell_exec("
+vinayarangeInFile=`grep 'let vinayaranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
+
+vinayastring=`find $basedir/$pathvinaya -name \"*translation-ru*.json\" | awk -F'_' '{print $1}'  | awk -F'/' '{print \$NF}' | sort -V | xargs | sed 's/ /\", \"/g' | sed 's/^/\"/g' | sed 's/$/\"/g'`
+
+vinayadir=\"[\${vinayastring%,}]\"
+
+  
+if [[ \"\$vinayadir\" == \"\$vinayarangeInFile\" ]] ; then
+
+
+echo Vinaya no updates
+else
+echo Vinaya updated to \$vinayadir
+
+sed -i 's@let vinayaranges =.*@let vinayaranges = '\"\$vinayadir\"';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
+
+fi
+");
+echo "<h2 style='text-align: center;'>
+$check</h2>";
+
+
+
 ?>

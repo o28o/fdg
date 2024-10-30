@@ -165,7 +165,11 @@ echo '<!--
          ' . $anameconj . '</a></li>
       <li><a class="dropdown-item" href="' . $linktextbook . '">
         <i class="' . $iconimportant . '"></i>
-        ' . $anametextbook . '</a></li>
+        J.W. Gair – Pali Course</a></li>
+   <li><a class="dropdown-item" href="/assets/materials/warder_intr_pali.pdf">
+     <i class="' . $iconimportant . '"></i>
+    A.K. Warder – Introduction to Pali</a></li>    
+
 
                   <li>
          <div class="dropdown-item ">Materials

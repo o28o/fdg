@@ -166,7 +166,7 @@ echo '<!--
       <li><a class="dropdown-item" href="' . $linktextbook . '">
         <i class="' . $iconimportant . '"></i>
         J.W. Gair – Pali Course</a></li>
-   <li><a class="dropdown-item" href="/assets/materials/warder_intr_pali.pdf">
+   <li><a class="dropdown-item" href="' . $linkwarder . '">
      <i class="' . $iconimportant . '"></i>
     A.K. Warder – Introduction to Pali</a></li>    
 

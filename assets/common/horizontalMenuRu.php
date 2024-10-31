@@ -281,7 +281,8 @@ echo '<!--
 
        </div>
          </li>   
-      
+  
+   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Словари на Gandhari.org</a></li>     
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
   
       <li>

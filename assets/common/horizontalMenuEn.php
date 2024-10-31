@@ -258,7 +258,7 @@ Memorizer</a></li>
        </div>
          </li>   
    
-   
+   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Gandhari.org dictionaries</a></li>       
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Eng-Pali Dictionary</a></li>
 
       <li>

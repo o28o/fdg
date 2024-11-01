@@ -303,7 +303,7 @@ fi
 function initialGrep {
   #use with "file" flag for output file and no flag for word/id mode list 
 [[ "$1" == *"file"* ]] && grepArg="l"
-grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | sort -V | uniq
+grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$"  | grep '": "' | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | sort -V | uniq
 }
 
 function initialCmnd {
@@ -764,7 +764,7 @@ fi
 
 function initialGrep {
 #[[ "$1" == *"file"* ]] && grepArg="l"
-grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | grep -B${linesbefore} -A${linesafter} -viE$grepArg "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'
+grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$"  | grep '": "'| sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | grep -B${linesbefore} -A${linesafter} -viE$grepArg "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'
 #grep -B${linesbefore} -A${linesafter} -rviE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | grep -iE "$keyword" | sed 's/<[^>]*>//g'
 }
 

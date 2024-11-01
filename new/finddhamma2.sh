@@ -722,8 +722,8 @@ if [ -s "$tmpdir/${prefix}initrun-var" ]; then
 cat $tmpdir/${prefix}initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFromVar
 bash $tmpdir/${prefix}cmndFromVar | sed 's/<[^>]*>//g'> $tmpdir/${prefix}initrun-pi
 fi
-grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-pi
-
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g' | grep '": "'| sed 's/json./json:/g' |  grep -v "^--$" >> $tmpdir/${prefix}initrun-pi
+cp $tmpdir/${prefix}initrun-pi $tmpdir/pli
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
 cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sort -V  | uniq | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/${prefix}cmnd
@@ -734,7 +734,7 @@ cat $tmpdir/${prefix}initrun-pi $tmpdir/${prefix}initrun-en $tmpdir/${prefix}ini
 elif [[ "$language" == "English" ]]; then
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grep -riE "$pattern" $searchIn >> $tmpdir/${prefix}initrun-en
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | grep '": "'| sed 's/json./json:/g' |  grep -v "^--$"  >> $tmpdir/${prefix}initrun-en
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 cat $tmpdir/${prefix}initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFromEn

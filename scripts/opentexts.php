@@ -136,7 +136,7 @@ if (preg_match("/^(ja|snp|iti|thig|thag|dhp)/i", $stringForOpen)) {
 //	echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
 	echo "<script>window.location.href='/assets/texts/bipm.php';</script>";	
 } else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $stringForOpen)) {
-	  exit(); 
+
   //open read.php Bu
   $stringForOpen = str_replace (" ", "", $stringForOpen);
 $stringForOpen = strtolower($stringForOpen);
@@ -149,10 +149,6 @@ echo "<script>window.location.href='{$base}read.php#{$stringForOpen}CollapseBu';
 $stringForOpen = strtolower($stringForOpen);
 echo "<script>window.location.href='{$base}read.php#{$stringForOpen}CollapseBi';</script>";
   exit();
-} else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)[1-9]{1,3}$/i", $stringForOpen)) {
-  $stringForOpen = "bu-" . $stringForOpen;
-  echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
-	  exit(); 
 } else if (preg_match("/(bu|bi)-([a-z][a-z])[0-9]*/i", $stringForOpen)) {
  // echo "<script>alert('case 2');</script>";	
 if (strpos($stringForOpen, 'vb-') === false) {
@@ -186,8 +182,32 @@ echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";
 } else if (preg_match("/(pj|ss|ay|np|pc|pd|sk|as)([0-9]{1,3}|[0-9]-[0-9])/i", $stringForOpen)) {
  // echo "<script>alert('case 5');</script>";	
   $stringForOpen = "bu-" . $stringForOpen;
-echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
+
+if (strpos($stringForOpen, 'vb-') === false) {
+    $stringForOpen = str_replace('bi-', 'bi-vb-', $stringForOpen);
+    $stringForOpen = str_replace('bu-', 'bu-vb-', $stringForOpen);
+}
+
+  $check = shell_exec("grep -m1 -i \"{$stringForOpen}_\" $indexesfile | awk '{print \$0}'");
+//if this empty then find range
+if (empty($check)) {
+  //echo "<script>alert('case 3');</script>";	
+  $command = escapeshellcmd("bash $scriptfile $stringForOpen");
+  $stringForOpen = trim(shell_exec($command));
+  $stringForOpen = str_replace(PHP_EOL, '', $stringForOpen);
+}	  
+if (empty($stringForOpen)) {
+  //echo "<script>alert('case 31');</script>";	
+  echo "<script>window.location.href='$readerlang';</script>";	
+  exit();
+}	  
+
+  $stringForOpen = str_replace('bi-vb-', 'bi-', $stringForOpen);
+    $stringForOpen = str_replace('bu-vb-', 'bu-', $stringForOpen);
+  echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
 	  exit(); 
+
+
 }
 /* ru with arg */ 
 /* for th.su dn */

@@ -183,11 +183,9 @@ echo '<!--
      <i class="' . $iconimportant . '"></i>
     Дж. Гейр. – Курс по Пали. Рус</a></li>
    <li><a class="dropdown-item" href="' . $linkwarder . '">
-     <i class="' . $iconimportant . '"></i>
     Вардер – Введение в Пали. Англ</a></li>    
     
    <li><a class="dropdown-item" href="' . $linkmagadhabhasa . '">
-     <i class="' . $iconimportant . '"></i>
     Тхануттамо Бх – Пали. Англ</a></li>    
     
    <!-- https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=sharing -->

@@ -97,7 +97,7 @@ $linkati = '/accesstoinsight.org/tipitaka/vin/sv/index.html';
 $linktextbook = '/assets/materials/pali_textbook_eng.pdf';
 $linkconj = '/assets/materials/pali_conjugations_eng.pdf';
 $linkwarder = '/assets/materials/warder_intr_pali.pdf';
-
+$linkmagadhabhasa = '/assets/materials/magadhabhasa_3rd.pdf';
 $linkcases = '/assets/materials/declensions_and_conjugations_eng.xlsx';
 $linkcasesru = '/assets/materials/pali_cases_rus.pdf';
 $linktextbookru = '/assets/materials/pali_textbook_rus.pdf';
@@ -130,7 +130,7 @@ $linkati = 'https://www.accesstoinsight.org/tipitaka/vin/sv/index.html';
 $linktextbook = 'https://drive.google.com/file/d/1HYI0psEjzl5SHDTSI1arAVJMiJdO862G/view?usp=drivesdk';
 $linktextbookru = 'https://drive.google.com/file/d/1H_mhKNgrBYevOOnax-FUBgxkfSuwHItu/view?usp=share_link';
 $linkwarder = 'https://drive.google.com/file/d/1b0sTtKF5wuGcDtr_u5sSSWGY5_QzBF-h/view?usp=drivesdk';
-
+$linkmagadhabhasa = 'https://drive.google.com/file/d/1jeXT4tkuudnN2EB1ABp4eHLGXbw-_EBk/view?usp=drivesdk';
 
 $linkconj = 'https://drive.google.com/file/d/1HzPCYsVBEkWErAk6TqSWRYKseM1hqMCb/view?usp=sharing';
 $linkcases = 'https://docs.google.com/spreadsheets/d/1wo8YEXX72DEV7L2jH5FUBdmeQPdiyAIN/edit?usp=drivesdk&ouid=110812668327988798342&rtpof=true&sd=true';

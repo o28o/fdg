@@ -169,7 +169,11 @@ echo '<!--
    <li><a class="dropdown-item" href="' . $linkwarder . '">
      <i class="' . $iconimportant . '"></i>
     A.K. Warder – Introduction to Pali</a></li>    
-
+ 
+ 
+    <li><a class="dropdown-item" href="' . $linkmagadhabhasa . '">
+     <i class="' . $iconimportant . '"></i>
+    Thauttamo Bh – Pali 3 ed.</a></li>       
 
                   <li>
          <div class="dropdown-item ">Materials

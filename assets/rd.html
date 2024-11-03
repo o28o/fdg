@@ -30,14 +30,14 @@
         <h1 class="mb-5">Случайный Падеж</h1>
     </div>
     <div class="container mt-2">
-     <div class="form-check">
+     <div style="display: ;" class="form-check">
             <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
             <label class="form-check-label" for="numberOnlyCheckbox">
-                Скрыть русское название
+                Только номер падежа
             </label>
         </div>
 
-        <div class="form-check">
+        <div style="display: none;" class="form-check">
             <input class="form-check-input" type="checkbox" id="hideRuleNameCheckbox">
             <label class="form-check-label" for="hideRuleNameCheckbox">
                 Скрыть только название
@@ -49,15 +49,15 @@
         </button>
         <div id="rangeList" class="collapse mt-3">
                         <ul class="list-group">
-                <li class="list-group-item">Nom Именительный</li>
-                <li class="list-group-item">Acc    ss</li>
-                <li class="list-group-item">Instr   an</li>
-                <li class="list-group-item">Gen   np</li>
-                <li class="list-group-item">Abl  pc</li>
-                <li class="list-group-item">Dat pd</li>
-                <li class="list-group-item">Loc sk</li>
-                <li class="list-group-item">Voc as</li>
-                <li class="list-group-item">Comp as</li>            </ul>
+                <li class="list-group-item">Nom Имен</li>
+                <li class="list-group-item">Acc Вин</li>
+                <li class="list-group-item">Instr Твор</li>
+                     <li class="list-group-item">Dat Дат</li>           
+                <li class="list-group-item">Abl Отл</li>
+                <li class="list-group-item">Gen Род</li>
+                <li class="list-group-item">Loc Местн</li>
+                <li class="list-group-item">Voc Зват</li>
+                <li class="list-group-item">Comp Состав</li>            </ul>
         </div>
         <h3 id="randomRecord" class="mt-3 text-center"></h3>
     </div>
@@ -66,15 +66,15 @@
        // Ваш список записей echo "" | awk '{print "$0",}' 
 	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
 const records = [
-"Nom",
-	"Acc",
-	"Instr",
-	"Dat",
-	"Abl",
-	"Gen",
-	"Loc",
-	"Voc",
-	"Comp"
+"1 Nom Имен",
+	"2 Acc Вин",
+	"3 Instr Инстн",
+	"4 Dat Дат",
+	"5 Abl Отл",
+	"6 Gen Род",
+	"7 Loc Местн",
+	"8 Voc Зват",
+	"Comp Сост"
 ];
 
 	
@@ -93,8 +93,8 @@ const records = [
 
         // Функция для скрытия названия правила
         function hideRuleName(record) {
-            const parts = record.split('\t');
-            if (parts.length >= 4) {
+            const parts = record.split(' ');
+            if (parts.length >= 2) {
                 return `${parts[0]}\t${parts[1]}\t${parts[2]}\t`;
             }
             return "Ошибка в формате записи";
@@ -103,7 +103,7 @@ const records = [
         // Функция для отображения только номера записи
         function showNumberOnly(index) {
             const randomRecord = records[index];
-            const parts = randomRecord.split('\t');
+            const parts = randomRecord.split(' ');
             if (parts.length > 0) {
                 document.getElementById("randomRecord").textContent = parts[0];
             } else {

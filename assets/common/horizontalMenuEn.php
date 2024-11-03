@@ -195,6 +195,7 @@ Memorizer</a></li>
                   <li>
          <div class="dropdown-item ">Random
          <a class="text-black" target=""  href="/ru/assets/rd.html">declention</a>
+         <a class="text-black" target=""  href="/ru/assets/rw.html">word</a>                 
                    <a class="text-black" target="" href="/ru/assets/rr.html">rule</a>
        </div>
          </li>     

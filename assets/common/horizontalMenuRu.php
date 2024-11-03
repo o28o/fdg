@@ -207,9 +207,11 @@ echo '<!--
        Мнемотехника</a></li>  
        
                   <li>
-         <div class="dropdown-item ">Случайный
+         <div class="dropdown-item ">Случайные
          <a class="text-black" target=""  href="/ru/assets/rd.html">падеж</a>
+         <a class="text-black" target=""  href="/ru/assets/rw.html">слово</a>         
                    <a class="text-black" target="" href="/ru/assets/rr.html">правило</a>
+                   
        </div>
          </li>     
       

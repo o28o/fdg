@@ -27,13 +27,13 @@
             </div>
         </div>
 
-        <h1 class="mb-5">Случайный Падеж</h1>
+        <h1 class="mb-5">Просклонять</h1>
     </div>
     <div class="container mt-2">
      <div style="display: ;" class="form-check">
             <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
             <label class="form-check-label" for="numberOnlyCheckbox">
-                Только номер падежа
+               Скрыть ответ
             </label>
         </div>
 
@@ -43,10 +43,12 @@
                 Скрыть только название
             </label>
         </div>
-        <button class="btn btn-primary" id="randomButton">Показать</button>
+        <button class="btn btn-primary" id="randomButton">Новое</button>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
             Падежи
         </button>
+<a href="/assets/dd.html" class="btn btn-primary">Определять Падеж</a> 
+        
         <div id="rangeList" class="collapse mt-3">
                         <ul class="list-group">
                 <li class="list-group-item">1 Nom Имен</li>
@@ -62,20 +64,13 @@
         <h3 id="randomRecord" class="mt-3 text-center"></h3>
     </div>
 
+
+    <script src="/assets/js/wordsForRw.js"></script>
+
     <script>
        // Ваш список записей echo "" | awk '{print "$0",}' 
 	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
-const records = [
-"1 Nom Имен",
-	"2 Acc Вин",
-	"3 Instr Инстн",
-	"4 Dat Дат",
-	"5 Abl Отл",
-	"6 Gen Род",
-	"7 Loc Местн",
-	"8 Voc Зват",
-	"Comp Сост"
-];
+
 
 	
         let currentIndex; // Индекс текущей записи
@@ -93,7 +88,7 @@ const records = [
 
         // Функция для скрытия названия правила
         function hideRuleName(record) {
-            const parts = record.split(' ');
+            const parts = record.split('-');
             if (parts.length >= 2) {
                 return `${parts[0]}\t${parts[1]}\t${parts[2]}\t`;
             }
@@ -103,7 +98,7 @@ const records = [
         // Функция для отображения только номера записи
         function showNumberOnly(index) {
             const randomRecord = records[index];
-            const parts = randomRecord.split(' ');
+            const parts = randomRecord.split('-');
             if (parts.length > 0) {
                 document.getElementById("randomRecord").textContent = parts[0];
             } else {

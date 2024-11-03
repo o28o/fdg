@@ -32,5 +32,44 @@ const records = [
 "abl    pl      bhikkhu        -       bhikkhūhi",
 "gen    pl      bhikkhu        -       bhikkhunaṃ bhikkhūnaṃ",
 "loc    pl      bhikkhu        -       bhikkhusu bhikkhūsu",
-"voc    pl      bhikkhu        -       bhikkhave bhikkhavo bhikkhū"
+"voc    pl      bhikkhu        -       bhikkhave bhikkhavo bhikkhū",
+
+"nom    sg      bhikkhunī       -       bhikkhunī",
+"acc    sg      bhikkhunī       -       bhikkhuniṃ",
+"instr  sg      bhikkhunī       -       bhikkhuniyā",
+"dat    sg      bhikkhunī       -       bhikkhuniyā",
+"abl    sg      bhikkhunī       -       bhikkhunito bhikkhuniyā bhikkhunīto",
+"gen    sg      bhikkhunī       -       bhikkhuniyā",
+"loc    sg      bhikkhunī       -       bhikkhuniyaṃ bhikkhuniyā",
+"voc    sg      bhikkhunī       -       bhikkhuni bhikkhunī",
+"in comps               bhikkhunī       -       bhikkhuni bhikkhunī",
+
+"nom    pl      bhikkhunī      -         bhikkhuniyo bhikkhunī",
+"acc    pl      bhikkhunī      -         bhikkhuniyo bhikkhunī",
+"instr  pl      bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
+"dat    pl      bhikkhunī      -         bhikkhunīnaṃ",
+"abl    pl      bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
+"gen    pl      bhikkhunī      -         bhikkhunīnaṃ",
+"loc    pl      bhikkhunī      -         bhikkhunīsu",
+"voc    pl      bhikkhunī      -         bhikkhuniyo bhikkhunī",
+
+"nom    sg      ayyā    -       ayyā",
+"acc    sg      ayyā    -       ayyaṃ",
+"instr  sg      ayyā    -       ayyā ayyāya",
+"dat    sg      ayyā    -       ayyāya",
+"abl    sg      ayyā    -       ayyāya",
+"gen    sg      ayyā    -       ayyāya",
+"loc    sg      ayyā    -       ayyāya",
+"voc    sg      ayyā    -       ayya ayye",
+"in comps               ayyā    -       ayya ayyā",
+
+"nom    pl      ayyā     -       ayyā ayyāyo",
+"acc    pl      ayyā     -       ayyā ayyāyo",
+"instr  pl      ayyā     -       ayyāhi",
+"dat    pl      ayyā     -       ayyānaṃ",
+"abl    pl      ayyā     -       ayyāhi",
+"gen    pl      ayyā     -       ayyānaṃ",
+"loc    pl      ayyā     -       ayyāsu",
+"voc    pl      ayyā     -       ayyā ayyāyo"
+
 ];

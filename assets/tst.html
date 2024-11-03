@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Случайные Записи</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #randomRecord {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Случайные Записи</h1>
+        <div id="checkboxContainer" class="mb-4"></div>
+        <button id="randomButton" class="btn btn-primary">Показать случайную запись</button>
+        <div id="randomRecord"></div>
+    </div>
+
+    <script>
+        let records = []; // Массив для хранения записей
+        let modifiedRecords = []; // Массив для хранения отфильтрованных записей
+        const uniqueWords = new Set();
+
+        // Функция для загрузки записей из файла
+        async function loadRecords() {
+            try {
+                const response = await fetch('records.txt'); // Имя вашего файла
+                const text = await response.text();
+                records = text.split('\n').map(record => record.trim()).filter(record => record); // Разделяем по строкам и очищаем
+                populateUniqueWords();
+                createCheckboxes();
+            } catch (error) {
+                console.error('Ошибка загрузки записей:', error);
+            }
+        }
+
+        // Извлечение уникальных слов
+        function populateUniqueWords() {
+            records.forEach(record => {
+                const word = record.split('-')[0].trim().split(' ').pop(); // Получаем слово перед '-'
+                uniqueWords.add(word); // Добавляем в Set для уникальности
+            });
+        }
+
+        const checkboxContainer = document.getElementById('checkboxContainer');
+
+        // Создание чекбоксов
+        function createCheckboxes() {
+            uniqueWords.forEach(word => {
+                const checkboxDiv = document.createElement('div');
+                checkboxDiv.className = 'form-check';
+                const checkbox = document.createElement('input');
+                checkbox.className = 'form-check-input';
+                checkbox.type = 'checkbox';
+                checkbox.id = word;
+                checkbox.checked = true; // Установить по умолчанию в включенное состояние
+
+                const label = document.createElement('label');
+                label.className = 'form-check-label';
+                label.htmlFor = word;
+                label.innerText = word;
+
+                checkboxDiv.appendChild(checkbox);
+                checkboxDiv.appendChild(label);
+                checkboxContainer.appendChild(checkboxDiv);
+
+                // Добавление обработчика события на чекбокс
+                checkbox.addEventListener('change', () => {
+                    updateRecords(); // Обновляем записи при изменении состояния чекбоксов
+                });
+            });
+        }
+
+        // Функция для обновления modifiedRecords в зависимости от состояния чекбоксов
+        function updateRecords() {
+            const selectedWords = Array.from(uniqueWords).filter(word => {
+                const checkbox = document.getElementById(word);
+                return checkbox.checked; // Проверяем, активен ли чекбокс
+            });
+
+            // Фильтруем records по выбранным словам
+            modifiedRecords = records.filter(record => {
+                const word = record.split('-')[0].trim().split(' ').pop();
+                return selectedWords.includes(word);
+            });
+
+            // Обновляем отображение записей
+            if (modifiedRecords.length === 0) {
+                document.getElementById("randomRecord").textContent = "Нет записей для отображения.";
+            } else {
+                document.getElementById("randomRecord").textContent = ""; // Очищаем текст
+            }
+        }
+
+        // Отображение случайной записи
+        document.getElementById('randomButton').addEventListener('click', () => {
+            if (modifiedRecords.length > 0) {
+                const randomIndex = Math.floor(Math.random() * modifiedRecords.length);
+                document.getElementById("randomRecord").textContent = modifiedRecords[randomIndex];
+            } else {
+                document.getElementById("randomRecord").textContent = "Сначала выберите слова.";
+            }
+        });
+
+        // Загружаем записи при инициализации
+        loadRecords();
+    </script>
+</body>
+</html>

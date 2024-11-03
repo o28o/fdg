@@ -27,10 +27,10 @@
             </div>
         </div>
 
-        <h1 class="mb-5">Определить Падеж</h1>
+        <h1 class="mb-5"><a href="/assets/rw.html" class="">Просклонять</a> или Определять Падеж</h1>
     </div>
     <div class="container mt-2">
-     <div style="display: ;" class="form-check">
+     <div style="display: none ;" class="form-check">
             <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
             <label class="form-check-label" for="numberOnlyCheckbox">
                Скрыть ответ
@@ -43,61 +43,45 @@
                 Скрыть только название
             </label>
         </div>
-        <button class="btn btn-primary" id="randomButton">Новое</button>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
-            Падежи
+        <button class="btn btn-primary mb-2" id="randomButton">Следующее</button>
+     
+     
+    <button id="showAnswerButton" class="btn btn-primary mb-2">
+        Показать ответ
+    </button>
+
+     
+        <button class="btn btn-secondary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
+            Выбрать Слова
         </button>
-<a href="/assets/rw.html" class="btn btn-primary">Просклонять</a>
 
         
         <div id="rangeList" class="collapse mt-3">
-                        <ul class="list-group">
+          
+                  <div id="checkboxContainer"></div>
+          
+            <!--            <ul class="list-group">
                 <li class="list-group-item">1 Nom Имен</li>
                 <li class="list-group-item">2 Acc Вин</li>
                 <li class="list-group-item">3 Instr Твор</li>
-                <li class="list-group-item">4 Dat Дат</li>          
+                     <li class="list-group-item">4 Dat Дат</li>           
                 <li class="list-group-item">5 Abl Отл</li>
                 <li class="list-group-item">6 Gen Род</li>
                 <li class="list-group-item">7 Loc Местн</li>
                 <li class="list-group-item">8 Voc Зват</li>
-                <li class="list-group-item">Comp Состав</li>            </ul>
+                <li class="list-group-item">Comp Состав</li>            </ul> -->
         </div>
         <h3 id="randomRecord" class="mt-3 text-center"></h3>
     </div>
 
 
-    <script src="/assets/js/wordsForRw.js"></script>
+    <script src="/assets/js/wordsForRw.js">
+    </script>
 
     <script>
+     
        // Ваш список записей echo "" | awk '{print "$0",}' 
 	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
-
-
-	
-        let currentIndex; // Индекс текущей записи
-
-        // Функция для генерации случайного числа
-        function getRandomIndex(max) {
-            return Math.floor(Math.random() * max);
-        }
-
-        // Функция для отображения записи
-        function showRecord(index) {
-            const randomRecord = records[index];
-            document.getElementById("randomRecord").textContent = randomRecord;
-        }
-
-       // Функция для отображения только второй части записи
-function showNumberOnly(index) {
-    const randomRecord = records[index];
-    const parts = randomRecord.split('-');
-    if (parts.length > 1) {
-        document.getElementById("randomRecord").textContent = parts[1].trim();
-    } else {
-        document.getElementById("randomRecord").textContent = "Ошибка в формате записи";
-    }
-}
-
 // Функция для скрытия первой части и отображения только второй части
 function hideRuleName(record) {
     const parts = record.split('-');
@@ -106,16 +90,23 @@ function hideRuleName(record) {
     }
     return "Ошибка в формате записи";
 } 
-        
-        
-        
+
+function showNumberOnly(index) {
+    const randomRecord = modifiedRecords[index];
+    const parts = randomRecord.split('-');
+    if (parts.length > 1) {
+        document.getElementById("randomRecord").textContent = parts[1].trim();
+    } else {
+        document.getElementById("randomRecord").textContent = "Ошибка в формате записи";
+    }
+}
 
         // Функция для обновления отображения в зависимости от состояния чекбоксов
         function updateDisplay() {
             if (document.getElementById("numberOnlyCheckbox").checked) {
                 showNumberOnly(currentIndex);
             } else {
-                const record = records[currentIndex];
+                const record = modifiedRecords[currentIndex];
                 if (document.getElementById("hideRuleNameCheckbox").checked) {
                     const hiddenRecord = hideRuleName(record);
                     document.getElementById("randomRecord").textContent = hiddenRecord;
@@ -130,7 +121,7 @@ function hideRuleName(record) {
 
         // Обработчик нажатия кнопки
         document.getElementById("randomButton").addEventListener("click", () => {
-            currentIndex = getRandomIndex(records.length);
+            currentIndex = getRandomIndex(modifiedRecords.length);
             updateDisplay();
         });
 
@@ -147,7 +138,7 @@ function hideRuleName(record) {
         if (savedCheckboxState2 === 'true') {
             document.getElementById("hideRuleNameCheckbox").checked = true;
         }
-        currentIndex = getRandomIndex(records.length);
+        currentIndex = getRandomIndex(modifiedRecords.length);
         updateDisplay();
     </script>
 

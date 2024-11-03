@@ -1,40 +1,23 @@
-nom	sg	bhikkhunī	-	bhikkhunī
-acc	sg	bhikkhunī	-	bhikkhuniṃ
-instr	sg	bhikkhunī	-	bhikkhuniyā
-dat	sg	bhikkhunī	-	bhikkhuniyā
-abl	sg	bhikkhunī	-	bhikkhunito bhikkhuniyā bhikkhunīto
-gen	sg	bhikkhunī	-	bhikkhuniyā
-loc	sg	bhikkhunī	-	bhikkhuniyaṃ bhikkhuniyā
-voc	sg	bhikkhunī	-	bhikkhuni bhikkhunī
-in comps		bhikkhunī	-	bhikkhuni bhikkhunī
+nom	sg	nt	dukkha	-	"dukkhaṃ
+dukkhe"
+acc	sg	nt	dukkha	-	dukkhaṃ
+instr	sg	nt	dukkha	-	dukkhena
+dat	sg	nt	dukkha	-	dukkhassa dukkhāya
+abl	sg	nt	dukkha	-	dukkhato dukkhamhā dukkhasmā dukkhā
+gen	sg	nt	dukkha	-	dukkhassa
+loc	sg	nt	dukkha	-	dukkhamhi dukkhasmiṃ dukkhe
+voc	sg	nt	dukkha	-	dukkha dukkhaṃ dukkhā dukkhe
+in comps			dukkha	-	dukkha
 
 
-nom	pl	bhikkhunī		bhikkhuniyo bhikkhunī
-acc	pl	bhikkhunī		bhikkhuniyo bhikkhunī
-instr	pl	bhikkhunī		bhikkhunībhi bhikkhunīhi
-dat	pl	bhikkhunī		bhikkhunīnaṃ
-abl	pl	bhikkhunī		bhikkhunībhi bhikkhunīhi
-gen	pl	bhikkhunī		bhikkhunīnaṃ
-loc	pl	bhikkhunī		bhikkhunīsu
-voc	pl	bhikkhunī		bhikkhuniyo bhikkhunī
-nom	sg	ayyā	-	ayyā
-acc	sg	ayyā	-	ayyaṃ
-instr	sg	ayyā	-	ayyā ayyāya
-dat	sg	ayyā	-	ayyāya
-abl	sg	ayyā	-	ayyāya
-gen	sg	ayyā	-	ayyāya
-loc	sg	ayyā	-	ayyāya
-voc	sg	ayyā	-	ayya ayye
-in comps		ayyā	-	ayya ayyā
+nom	pl	nt	dukkha	-	dukkhā dukkhāni
+acc	pl	nt	dukkha	-	dukkhāni dukkhe
+instr	pl	nt	dukkha	-	dukkhebhi dukkhehi
+dat	pl	nt	dukkha	-	dukkhānaṃ
+abl	pl	nt	dukkha	-	dukkhebhi dukkhehi
+gen	pl	nt	dukkha	-	dukkhānaṃ
+loc	pl	nt	dukkha	-	dukkhesu
+voc	pl	nt	dukkha	-	dukkhā dukkhāni
 
-
-nom	pl	ayyā		ayyā ayyāyo
-acc	pl	ayyā		ayyā ayyāyo
-instr	pl	ayyā		ayyāhi
-dat	pl	ayyā		ayyānaṃ
-abl	pl	ayyā		ayyāhi
-gen	pl	ayyā		ayyānaṃ
-loc	pl	ayyā		ayyāsu
-voc	pl	ayyā		ayyā ayyāyo
 
 

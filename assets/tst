@@ -1,17 +1,35 @@
-nom	sg	m	yogo	-	yogo
-acc	sg	m	yogo	-	yogaṃ
-instr	sg	m	yogo	-	yogā yogena
-dat	sg	m	yogo	-	yogassa yogāya
-abl	sg	m	yogo	-	yogato yogamhā yogasmā yogā
-gen	sg	m	yogo	-	yogassa
-loc	sg	m	yogo	-	yogamhi yogasmiṃ yoge
-voc	sg	m	yogo	-	yoga yogā
-in comps			yogo	-	yoga
-nom	pl	m	yogo	-	yogā yogāse
-acc	pl	m	yogo	-	yoge
-instr	pl	m	yogo	-	yogebhi yogehi
-dat	pl	m	yogo	-	yogānaṃ
-abl	pl	m	yogo	-	yogato yogebhi yogehi
-gen	pl	m	yogo	-	yogāna yogānaṃ
-loc	pl	m	yogo	-	yogesu
-voc	pl	m	yogo	-	yogā
+nom	sg	f	mātar	-	mātā
+acc	sg	f	mātar	-	mātaraṃ
+instr	sg	f	mātar	-	matyā mātarā mātu mātuyā
+dat	sg	f	mātar	-	matyā mātu mātuyā
+abl	sg	f	mātar	-	matyā mātarā mātuyā
+gen	sg	f	mātar	-	matyā mātāya mātu mātuyā
+loc	sg	f	mātar	-	matyaṃ matyā mātari mātuyaṃ mātuyā
+voc	sg	f	mātar	-	māta mātā māte
+in comps		f	mātar	-	mātā mātu
+nom	pl	f	mātar	-	mātaro
+acc	pl	f	mātar	-	mātare mātaro
+instr	pl	f	mātar	-	mātarehi mātūhi
+dat	pl	f	mātar	-	mātarānaṃ mātānaṃ mātūnaṃ
+abl	pl	f	mātar	-	mātarehi mātūhi
+gen	pl	f	mātar	-	mātarānaṃ mātānaṃ mātūnaṃ
+loc	pl	f	mātar	-	mātaresu mātusu mātūsu
+voc	pl	f	mātar	-	mātaro mātā
+
+nom	sg	m	pitar	-	pitā
+acc	sg	m	pitar	-	pitaraṃ
+instr	sg	m	pitar	-	pitarā pitunā
+dat	sg	m	pitar	-	pitu pituno pitussa
+abl	sg	m	pitar	-	pitarā
+gen	sg	m	pitar	-	pitu pituno pitussa
+loc	sg	m	pitar	-	pitari
+voc	sg	m	pitar	-	pita pitā
+in comps		m	pitar	-	pitā pitu
+nom	pl	m	pitar	-	pitaro
+acc	pl	m	pitar	-	pitare pitaro
+instr	pl	m	pitar	-	pitūhi
+dat	pl	m	pitar	-	pitunnaṃ pitūnaṃ
+abl	pl	m	pitar	-	pitūhi
+gen	pl	m	pitar	-	pitunnaṃ pitūnaṃ
+loc	pl	m	pitar	-	pitaresu pitusu pitū pitūsu
+voc	pl	m	pitar	-	pitaro

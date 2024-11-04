@@ -71,6 +71,8 @@
             Выбрать Слова
         </button>
         
+
+        
         <div id="rangeList" class="collapse mt-3">
           
                   <div id="checkboxContainer"></div>
@@ -86,18 +88,20 @@
                 <li class="list-group-item">8 Voc Зват</li>
                 <li class="list-group-item">Comp Состав</li>            </ul> -->
         </div>
-        
- <!--  <button class="btn btn-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#decList">
-            Показать Склонения
-        </button>
-        <div id="decList" class="collapse mt-3">
-                 <div id="declentionContainer"></div> 
-        </div>   -->     
-        
+   
+       <button class="btn btn-secondary mb-2"  onclick="showAllDeclensions()">Показать склонения</button>     
+    
 
             <p class="mt-3 text-center">Просклоняйте</p>
         <h3 id="randomRecord" class="mt-3 text-center"></h3>
+        
+   <!-- Новый div для отображения склонений -->
+<div id="declensionsContainer" style="margin-top: 20px;">
+    <pre id="declensionsOutput"></pre>
+</div>           
+        
     </div>
+
 
 
     <script src="/assets/js/wordsForRw.js">

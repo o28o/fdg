@@ -1,5 +1,5 @@
 const records = [
-"nom    sg      n      dukkha  -       dukkhaṃ, dukkhe",
+"nom    sg      n      dukkha  -       dukkhaṃ dukkhe",
 "acc    sg      n      dukkha  -       dukkhaṃ",
 "instr  sg      n      dukkha  -       dukkhena",
 "dat    sg      n      dukkha  -       dukkhassa dukkhāya",
@@ -7,7 +7,7 @@ const records = [
 "gen    sg      n      dukkha  -       dukkhassa",
 "loc    sg      n      dukkha  -       dukkhamhi dukkhasmiṃ dukkhe",
 "voc    sg      n      dukkha  -       dukkha dukkhaṃ dukkhā dukkhe",
-"in comps                       dukkha  -       dukkha",
+"in comps       n                dukkha  -       dukkha",
 
 "nom    pl      n      dukkha  -       dukkhā dukkhāni",
 "acc    pl      n      dukkha  -       dukkhāni dukkhe",
@@ -26,7 +26,7 @@ const records = [
 "gen    sg      n       sacca   -       saccassa",
 "loc    sg      n       sacca   -       saccamhi saccasmiṃ sacce",
 "voc    sg      n       sacca   -       sacca saccaṃ saccā",
-"in comps                       sacca   -       sacca",
+"in comps      n                 sacca   -       sacca",
 "nom    pl      n       sacca   -       saccā saccāni",
 "acc    pl      n       sacca   -       saccāni sacce",
 "instr  pl      n       sacca   -       saccebhi saccehi",
@@ -44,7 +44,7 @@ const records = [
 "gen    sg      f       jāti    -       jaccā jātiyā",
 "loc    sg      f       jāti    -       jātiyaṃ jātiyā",
 "voc    sg      f       jāti    -       jāti",
-"in comps                       jāti    -       jāti",
+"in comps       f                jāti    -       jāti",
 
 "nom    pl      f       jāti    -       jātiyo",
 "acc    pl      f       jāti    -       jātiyo",
@@ -62,7 +62,7 @@ const records = [
 "gen    sg      m       byādhi  -       byādhino byādhissa",
 "loc    sg      m       byādhi  -       byādhimhi byādhismiṃ",
 "voc    sg      m       byādhi  -       byādhi",
-"in comps                       byādhi  -       byādhi byādhī",
+"in comps        m               byādhi  -       byādhi byādhī",
 "nom    pl      m       byādhi  -       byādhayo byādhī",
 "acc    pl      m       byādhi  -       byādhayo byādhī",
 "instr  pl      m       byādhi  -       byādhibhi byādhībhi byādhīhi",
@@ -80,7 +80,7 @@ const records = [
 "gen    sg      m       yogo    -       yogassa",
 "loc    sg      m       yogo    -       yogamhi yogasmiṃ yoge",
 "voc    sg      m       yogo    -       yoga yogā",
-"in comps                       yogo    -       yoga",      
+"in comps        m               yogo    -       yoga",      
 "nom    pl      m       yogo    -       yogā yogāse",
 "acc    pl      m       yogo    -       yoge",
 "instr  pl      m       yogo    -       yogebhi yogehi",
@@ -98,7 +98,7 @@ const records = [
 "gen    sg      f       taṇhā   -       taṇhāya",
 "loc    sg      f       taṇhā   -       taṇhāya taṇhāyaṃ",
 "voc    sg      f       taṇhā   -       taṇha taṇhe",
-"in comps                       taṇhā   -       taṇha taṇhā",
+"in comps       f                taṇhā   -       taṇha taṇhā",
 
 "nom    pl      f       taṇhā   -       taṇhā taṇhāyo",
 "acc    pl      f       taṇhā   -       taṇhā taṇhāyo",
@@ -117,7 +117,7 @@ const records = [
 "gen    sg      n       cakkhu  -       cakkhuno cakkhussa",
 "loc    sg      n       cakkhu  -       cakkhumhi cakkhusmiṃ",
 "voc    sg      n       cakkhu  -       cakkhu",
-"in comps                       cakkhu  -       cakkhu",
+"in comps        n               cakkhu  -       cakkhu",
 
 "nom    pl      n       cakkhu  -       cakkhū cakkhūni",
 "acc    pl      n       cakkhu  -       cakkhū cakkhūni",
@@ -137,7 +137,7 @@ const records = [
 "gen    sg      m       dhamma  -       dhammassa",
 "loc    sg      m       dhamma  -       dhammamhi dhammasmiṃ dhamme",
 "voc    sg      m       dhamma  -       dhamma dhammā",
-"in comps                       dhamma  -       dhamma",
+"in comps       m                dhamma  -       dhamma",
 
 "nom    pl      m       dhamma  -       dhammā dhammāse",
 "acc    pl      m       dhamma  -       dhamme",
@@ -156,7 +156,7 @@ const records = [
 "gen    sg      f       dhātu   -       dhātuyā",
 "loc    sg      f       dhātu   -       dhātuyaṃdhātuyā",
 "voc    sg      f       dhātu   -       dhātu",
-"in comps                       dhātu   -       dhātu",
+"in comps       f                dhātu   -       dhātu",
 "nom    pl      f       dhātu   -       dhātuyo dhātū",
 "acc    pl      f       dhātu   -       dhātuyo dhātū",
 "instr  pl      f       dhātu   -       dhātūhi",
@@ -174,7 +174,7 @@ const records = [
 "gen    sg   m   āyasmant        -       āyasmato",
 "loc    sg   m   āyasmant        -       āyasmati āyasmante",
 "voc    sg   m   āyasmant        -       āyasma āyasmā",
-"in comps āyasmant        -       āyasma āyasmanta",
+"in comps m āyasmant        -       āyasma āyasmanta",
 "nom    pl  m    āyasmant        -       āyasmantā āyasmanto āyasmā",
 "acc    pl  m    āyasmant        -       āyasmanto āyasmante",
 "instr  pl  m    āyasmant        -       āyasmantehi",
@@ -192,7 +192,7 @@ const records = [
 "gen    sg   m   bhikkhu -       bhikkhuno bhikkhussa",
 "loc    sg   m   bhikkhu -       bhikkhumhi bhikkhusmiṃ",
 "voc    sg   m   bhikkhu -       bhikkhu",
-"in comps               bhikkhu -       bhikkhu",
+"in comps   m            bhikkhu -       bhikkhu",
 "nom    pl   m   bhikkhu        -       bhikkhavo bhikkhū",
 "acc    pl   m   bhikkhu        -       bhikkhavo bhikkhū",
 "instr  pl   m   bhikkhu        -       bhikkhūhi",
@@ -210,7 +210,7 @@ const records = [
 "gen    sg   f   bhikkhunī       -       bhikkhuniyā",
 "loc    sg   f   bhikkhunī       -       bhikkhuniyaṃ bhikkhuniyā",
 "voc    sg   f   bhikkhunī       -       bhikkhuni bhikkhunī",
-"in comps               bhikkhunī       -       bhikkhuni bhikkhunī",
+"in comps   f            bhikkhunī       -       bhikkhuni bhikkhunī",
 
 "nom    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
 "acc    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
@@ -229,7 +229,7 @@ const records = [
 "gen    sg  f   ayyā    -       ayyāya",
 "loc    sg  f   ayyā    -       ayyāya",
 "voc    sg  f   ayyā    -       ayya ayye",
-"in comps       ayyā    -       ayya ayyā",
+"in comps   f    ayyā    -       ayya ayyā",
 
 "nom    pl  f    ayyā     -       ayyā ayyāyo",
 "acc    pl  f    ayyā     -       ayyā ayyāyo",
@@ -366,11 +366,80 @@ document.getElementById("randomButton").addEventListener("click", () => {
 updateRecords(); // Начинаем с фильтрации и отображения записей
 
 document.getElementById("showAnswerButton").addEventListener("click", () => {
-  
         document.getElementById('numberOnlyCheckbox').checked = false; // Установить в unchecked
         updateDisplay();
-
 });
 
+function showAllDeclensions() {
+    const currentRecord = document.getElementById("randomRecord").textContent;
 
+    console.log("Текущая запись:", currentRecord);
+
+    if (currentRecord && currentRecord !== "Нет доступных записей.") {
+        const parts = currentRecord.split(/\s+/);
+        console.log("Части записи:", parts);
+
+        const partOfSpeech = parts[2]; // Часть речи
+        const word = parts[3]; // Слово после пробелов
+        console.log("Часть речи:", partOfSpeech);
+        console.log("Слово:", word);
+
+        // Ищем общее слово (до знака '-') из записей records
+        const matchingRecords = records.filter(record => {
+            const recordParts = record.split(/\s+/);
+            const recordKeyWord = recordParts[3]; // Слово до знака '-'
+
+            // Ищем только если запись содержит '-' и если слово до него совпадает
+            return recordKeyWord === word && partOfSpeech === recordParts[2];
+        });
+
+        console.log("Совпадающие записи:", matchingRecords);
+
+        // Создаем заголовок и таблицу
+        const declensionsOutput = document.getElementById("declensionsOutput");
+        declensionsOutput.innerHTML = ''; // Очищаем предыдущее содержимое
+
+        if (matchingRecords.length > 0) {
+            // Заголовок
+            const header = document.createElement("h4");
+            header.textContent = `${word} (${partOfSpeech})`;
+            declensionsOutput.appendChild(header);
+            
+            // Таблица
+            const table = document.createElement("table");
+            const tbody = document.createElement("tbody");
+
+            matchingRecords.forEach(record => {
+                const recordParts = record.split(/\s+/);
+                const row = document.createElement("tr");
+
+                // Добавляем падеж и число
+                const caseCell = document.createElement("td");
+                caseCell.textContent = recordParts[0]; // Падеж
+                row.appendChild(caseCell);
+
+                const numberCell = document.createElement("td");
+                numberCell.textContent = recordParts[1]; // Число
+                row.appendChild(numberCell);
+
+                // Добавляем слово (начиная с 6 позиции, т.е. index 5)
+                const wordCell = document.createElement("td");
+                wordCell.textContent = recordParts.slice(5).join(" "); // Слово начиная с 6 позиции
+                row.appendChild(wordCell);
+
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+            declensionsOutput.appendChild(table);
+        } else {
+            declensionsOutput.textContent = "Склонения не найдены.";
+        }
+
+        // Переключаем видимость контейнера
+        const declensionsContainer = document.getElementById("declensionsContainer");
+        declensionsContainer.style.display = (declensionsContainer.style.display === "none") ? "block" : "none";
+    }
+    updateDisplay();
+}
             

@@ -69,7 +69,6 @@
             Выбрать Слова
         </button>
 
-        
         <div id="rangeList" class="collapse mt-3">
           
                   <div id="checkboxContainer"></div>
@@ -85,8 +84,19 @@
                 <li class="list-group-item">8 Voc Зват</li>
                 <li class="list-group-item">Comp Состав</li>            </ul> -->
         </div>
+        
+          <button class="btn btn-secondary mb-2"  onclick="showAllDeclensions()">Показать склонения</button> 
+          
+       
+        
                     <p class="mt-3 text-center">Определите падеж, число</p>
         <h3 id="randomRecord" class="mt-3 text-center"></h3>
+        
+      <!-- Новый div для отображения склонений -->
+<div id="declensionsContainer" style="margin-top: 20px;">
+    <pre id="declensionsOutput"></pre>
+</div>                   
+        
     </div>
 
 
@@ -109,10 +119,17 @@ function hideRuleName(record) {
 function showNumberOnly(index) {
     const randomRecord = modifiedRecords[index];
     const parts = randomRecord.split('-');
+
+    const randomRecordElement = document.getElementById("randomRecord");
+    
     if (parts.length > 1) {
-        document.getElementById("randomRecord").textContent = parts[1].trim();
+        // Храним полное значение в data-атрибуте
+        randomRecordElement.setAttribute('data-full', randomRecord);
+        
+        // Устанавливаем текст после знака '-'
+        randomRecordElement.textContent = parts[1].trim(); // Отображаем только часть после '-'
     } else {
-        document.getElementById("randomRecord").textContent = "Ошибка в формате записи";
+        randomRecordElement.textContent = "Ошибка в формате записи";
     }
 }
 

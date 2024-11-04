@@ -1,35 +1,17 @@
-nom	sg	f	mātar	-	mātā
-acc	sg	f	mātar	-	mātaraṃ
-instr	sg	f	mātar	-	matyā mātarā mātu mātuyā
-dat	sg	f	mātar	-	matyā mātu mātuyā
-abl	sg	f	mātar	-	matyā mātarā mātuyā
-gen	sg	f	mātar	-	matyā mātāya mātu mātuyā
-loc	sg	f	mātar	-	matyaṃ matyā mātari mātuyaṃ mātuyā
-voc	sg	f	mātar	-	māta mātā māte
-in comps		f	mātar	-	mātā mātu
-nom	pl	f	mātar	-	mātaro
-acc	pl	f	mātar	-	mātare mātaro
-instr	pl	f	mātar	-	mātarehi mātūhi
-dat	pl	f	mātar	-	mātarānaṃ mātānaṃ mātūnaṃ
-abl	pl	f	mātar	-	mātarehi mātūhi
-gen	pl	f	mātar	-	mātarānaṃ mātānaṃ mātūnaṃ
-loc	pl	f	mātar	-	mātaresu mātusu mātūsu
-voc	pl	f	mātar	-	mātaro mātā
-
-nom	sg	m	pitar	-	pitā
-acc	sg	m	pitar	-	pitaraṃ
-instr	sg	m	pitar	-	pitarā pitunā
-dat	sg	m	pitar	-	pitu pituno pitussa
-abl	sg	m	pitar	-	pitarā
-gen	sg	m	pitar	-	pitu pituno pitussa
-loc	sg	m	pitar	-	pitari
-voc	sg	m	pitar	-	pita pitā
-in comps		m	pitar	-	pitā pitu
-nom	pl	m	pitar	-	pitaro
-acc	pl	m	pitar	-	pitare pitaro
-instr	pl	m	pitar	-	pitūhi
-dat	pl	m	pitar	-	pitunnaṃ pitūnaṃ
-abl	pl	m	pitar	-	pitūhi
-gen	pl	m	pitar	-	pitunnaṃ pitūnaṃ
-loc	pl	m	pitar	-	pitaresu pitusu pitū pitūsu
-voc	pl	m	pitar	-	pitaro
+nom	sg	m	viññū	-	viññū
+acc	sg	m	viññū	-	viññunaṃ viññuṃ
+instr	sg	m	viññū	-	viññunā
+dat	sg	m	viññū	-	viññuno
+abl	sg	m	viññū	-	viññunā
+gen	sg	m	viññū	-	viññuno viññussa
+loc	sg	m	viññū	-	viññumhi viññusmiṃ
+voc	sg	m	viññū	-	viññū
+in comps		m	viññū	-	viññu viññū
+nom	pl	m	viññū	-	viññuno viññū viññūno
+acc	pl	m	viññū	-	viññuno viññū viññūno
+instr	pl	m	viññū	-	viññūhi
+dat	pl	m	viññū	-	viññūna viññūnaṃ
+abl	pl	m	viññū	-	viññūhi
+gen	pl	m	viññū	-	viññunnaṃ viññūna viññūnaṃ
+loc	pl	m	viññū	-	viññūsu
+voc	pl	m	viññū	-	viññuno viññū

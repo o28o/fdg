@@ -1,23 +1,17 @@
-nom	sg	nt	dukkha	-	"dukkhaṃ
-dukkhe"
-acc	sg	nt	dukkha	-	dukkhaṃ
-instr	sg	nt	dukkha	-	dukkhena
-dat	sg	nt	dukkha	-	dukkhassa dukkhāya
-abl	sg	nt	dukkha	-	dukkhato dukkhamhā dukkhasmā dukkhā
-gen	sg	nt	dukkha	-	dukkhassa
-loc	sg	nt	dukkha	-	dukkhamhi dukkhasmiṃ dukkhe
-voc	sg	nt	dukkha	-	dukkha dukkhaṃ dukkhā dukkhe
-in comps			dukkha	-	dukkha
-
-
-nom	pl	nt	dukkha	-	dukkhā dukkhāni
-acc	pl	nt	dukkha	-	dukkhāni dukkhe
-instr	pl	nt	dukkha	-	dukkhebhi dukkhehi
-dat	pl	nt	dukkha	-	dukkhānaṃ
-abl	pl	nt	dukkha	-	dukkhebhi dukkhehi
-gen	pl	nt	dukkha	-	dukkhānaṃ
-loc	pl	nt	dukkha	-	dukkhesu
-voc	pl	nt	dukkha	-	dukkhā dukkhāni
-
-
-
+nom	sg	m	yogo	-	yogo
+acc	sg	m	yogo	-	yogaṃ
+instr	sg	m	yogo	-	yogā yogena
+dat	sg	m	yogo	-	yogassa yogāya
+abl	sg	m	yogo	-	yogato yogamhā yogasmā yogā
+gen	sg	m	yogo	-	yogassa
+loc	sg	m	yogo	-	yogamhi yogasmiṃ yoge
+voc	sg	m	yogo	-	yoga yogā
+in comps			yogo	-	yoga
+nom	pl	m	yogo	-	yogā yogāse
+acc	pl	m	yogo	-	yoge
+instr	pl	m	yogo	-	yogebhi yogehi
+dat	pl	m	yogo	-	yogānaṃ
+abl	pl	m	yogo	-	yogato yogebhi yogehi
+gen	pl	m	yogo	-	yogāna yogānaṃ
+loc	pl	m	yogo	-	yogesu
+voc	pl	m	yogo	-	yogā

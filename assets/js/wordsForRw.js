@@ -1,22 +1,170 @@
 const records = [
-"nom    sg      nt      dukkha  -       dukkhaṃ, dukkhe",
-"acc    sg      nt      dukkha  -       dukkhaṃ",
-"instr  sg      nt      dukkha  -       dukkhena",
-"dat    sg      nt      dukkha  -       dukkhassa dukkhāya",
-"abl    sg      nt      dukkha  -       dukkhato dukkhamhā dukkhasmā dukkhā",
-"gen    sg      nt      dukkha  -       dukkhassa",
-"loc    sg      nt      dukkha  -       dukkhamhi dukkhasmiṃ dukkhe",
-"voc    sg      nt      dukkha  -       dukkha dukkhaṃ dukkhā dukkhe",
+"nom    sg      n      dukkha  -       dukkhaṃ, dukkhe",
+"acc    sg      n      dukkha  -       dukkhaṃ",
+"instr  sg      n      dukkha  -       dukkhena",
+"dat    sg      n      dukkha  -       dukkhassa dukkhāya",
+"abl    sg      n      dukkha  -       dukkhato dukkhamhā dukkhasmā dukkhā",
+"gen    sg      n      dukkha  -       dukkhassa",
+"loc    sg      n      dukkha  -       dukkhamhi dukkhasmiṃ dukkhe",
+"voc    sg      n      dukkha  -       dukkha dukkhaṃ dukkhā dukkhe",
 "in comps                       dukkha  -       dukkha",
 
-"nom    pl      nt      dukkha  -       dukkhā dukkhāni",
-"acc    pl      nt      dukkha  -       dukkhāni dukkhe",
-"instr  pl      nt      dukkha  -       dukkhebhi dukkhehi",
-"dat    pl      nt      dukkha  -       dukkhānaṃ",
-"abl    pl      nt      dukkha  -       dukkhebhi dukkhehi",
-"gen    pl      nt      dukkha  -       dukkhānaṃ",
-"loc    pl      nt      dukkha  -       dukkhesu",
-"voc    pl      nt      dukkha  -       dukkhā dukkhāni",  
+"nom    pl      n      dukkha  -       dukkhā dukkhāni",
+"acc    pl      n      dukkha  -       dukkhāni dukkhe",
+"instr  pl      n      dukkha  -       dukkhebhi dukkhehi",
+"dat    pl      n      dukkha  -       dukkhānaṃ",
+"abl    pl      n      dukkha  -       dukkhebhi dukkhehi",
+"gen    pl      n      dukkha  -       dukkhānaṃ",
+"loc    pl      n      dukkha  -       dukkhesu",
+"voc    pl      n      dukkha  -       dukkhā dukkhāni",  
+
+"nom    sg      n       sacca   -       saccaṃ",
+"acc    sg      n       sacca   -       saccaṃ",
+"instr  sg      n       sacca   -       saccā saccena",
+"dat    sg      n       sacca   -       saccassa saccāya",
+"abl    sg      n       sacca   -       saccato saccamhā saccasmā saccā",
+"gen    sg      n       sacca   -       saccassa",
+"loc    sg      n       sacca   -       saccamhi saccasmiṃ sacce",
+"voc    sg      n       sacca   -       sacca saccaṃ saccā",
+"in comps                       sacca   -       sacca",
+"nom    pl      n       sacca   -       saccā saccāni",
+"acc    pl      n       sacca   -       saccāni sacce",
+"instr  pl      n       sacca   -       saccebhi saccehi",
+"dat    pl      n       sacca   -       saccānaṃ",
+"abl    pl      n       sacca   -       saccebhi saccehi",
+"gen    pl      n       sacca   -       saccāna saccānaṃ",
+"loc    pl      n       sacca   -       saccesu",
+"voc    pl      n       sacca   -       saccā saccāni",
+
+"nom    sg      f       jāti    -       jāti",
+"acc    sg      f       jāti    -       jātiṃ",
+"instr  sg      f       jāti    -       jaccā jātiyā",
+"dat    sg      f       jāti    -       jaccā jātiyā",
+"abl    sg      f       jāti    -       jaccā jātito jātiyā",
+"gen    sg      f       jāti    -       jaccā jātiyā",
+"loc    sg      f       jāti    -       jātiyaṃ jātiyā",
+"voc    sg      f       jāti    -       jāti",
+"in comps                       jāti    -       jāti",
+
+"nom    pl      f       jāti    -       jātiyo",
+"acc    pl      f       jāti    -       jātiyo",
+"instr  pl      f       jāti    -       jātīhi",
+"dat    pl      f       jāti    -       jātīnaṃ",
+"abl    pl      f       jāti    -       jātīhi",
+"gen    pl      f       jāti    -       jātīnaṃ",
+"loc    pl      f       jāti    -       jātisu jātīsu",
+"voc    pl      f       jāti    -       jātiyo jātī",
+
+"nom    sg      m       byādhi  -       byādhi",             "acc    sg      m       byādhi  -       byādhiṃ",
+"instr  sg      m       byādhi  -       byādhinā",
+"dat    sg      m       byādhi  -       byādhino byādhissa",
+"abl    sg      m       byādhi  -       byādhito byādhinā byādhimhā byādhismā",
+"gen    sg      m       byādhi  -       byādhino byādhissa",
+"loc    sg      m       byādhi  -       byādhimhi byādhismiṃ",
+"voc    sg      m       byādhi  -       byādhi",
+"in comps                       byādhi  -       byādhi byādhī",
+"nom    pl      m       byādhi  -       byādhayo byādhī",
+"acc    pl      m       byādhi  -       byādhayo byādhī",
+"instr  pl      m       byādhi  -       byādhibhi byādhībhi byādhīhi",
+"dat    pl      m       byādhi  -       byādhinaṃ byādhīnaṃ",
+"abl    pl      m       byādhi  -       byādhibhi byādhībhi byādhīhi",
+"gen    pl      m       byādhi  -       byādhinaṃ byādhīnaṃ",
+"loc    pl      m       byādhi  -       byādhisu byādhīsu",
+"voc    pl      m       byādhi  -       byādhayo byādhī",
+
+"nom    sg      m       yogo    -       yogo",
+"acc    sg      m       yogo    -       yogaṃ",
+"instr  sg      m       yogo    -       yogā yogena",
+"dat    sg      m       yogo    -       yogassa yogāya",
+"abl    sg      m       yogo    -       yogato yogamhā yogasmā yogā",
+"gen    sg      m       yogo    -       yogassa",
+"loc    sg      m       yogo    -       yogamhi yogasmiṃ yoge",
+"voc    sg      m       yogo    -       yoga yogā",
+"in comps                       yogo    -       yoga",      
+"nom    pl      m       yogo    -       yogā yogāse",
+"acc    pl      m       yogo    -       yoge",
+"instr  pl      m       yogo    -       yogebhi yogehi",
+"dat    pl      m       yogo    -       yogānaṃ",
+"abl    pl      m       yogo    -       yogato yogebhi yogehi",
+"gen    pl      m       yogo    -       yogāna yogānaṃ",
+"loc    pl      m       yogo    -       yogesu",             
+"voc    pl      m       yogo    -       yogā",
+
+"nom    sg      f       taṇhā   -       taṇhā",
+"acc    sg      f       taṇhā   -       taṇhaṃ",
+"instr  sg      f       taṇhā   -       taṇhā taṇhāya",
+"dat    sg      f       taṇhā   -       taṇhāya",
+"abl    sg      f       taṇhā   -       taṇhato taṇhāto taṇhāya",
+"gen    sg      f       taṇhā   -       taṇhāya",
+"loc    sg      f       taṇhā   -       taṇhāya taṇhāyaṃ",
+"voc    sg      f       taṇhā   -       taṇha taṇhe",
+"in comps                       taṇhā   -       taṇha taṇhā",
+
+"nom    pl      f       taṇhā   -       taṇhā taṇhāyo",
+"acc    pl      f       taṇhā   -       taṇhā taṇhāyo",
+"instr  pl      f       taṇhā   -       taṇhābhi taṇhāhi",
+"dat    pl      f       taṇhā   -       taṇhānaṃ",
+"abl    pl      f       taṇhā   -       taṇhābhi taṇhāhi",
+"gen    pl      f       taṇhā   -       taṇhānaṃ",
+"loc    pl      f       taṇhā   -       taṇhāsu",
+"voc    pl      f       taṇhā   -       taṇhā taṇhāyo",
+
+"nom    sg      n       cakkhu  -       cakkhu cakkhuṃ",
+"acc    sg      n       cakkhu  -       cakkhuṃ",
+"instr  sg      n       cakkhu  -       cakkhunā cakkhusā",
+"dat    sg      n       cakkhu  -       cakkhuno cakkhussa",
+"abl    sg      n       cakkhu  -       cakkhuto cakkhunā cakkhumhā cakkhusmā",
+"gen    sg      n       cakkhu  -       cakkhuno cakkhussa",
+"loc    sg      n       cakkhu  -       cakkhumhi cakkhusmiṃ",
+"voc    sg      n       cakkhu  -       cakkhu",
+"in comps                       cakkhu  -       cakkhu",
+
+"nom    pl      n       cakkhu  -       cakkhū cakkhūni",
+"acc    pl      n       cakkhu  -       cakkhū cakkhūni",
+"instr  pl      n       cakkhu  -       cakkhūhi",
+"dat    pl      n       cakkhu  -       cakkhūnaṃ",
+"abl    pl      n       cakkhu  -       cakkhūhi",
+"gen    pl      n       cakkhu  -       cakkhūnaṃ",
+"loc    pl      n       cakkhu  -       cakkhūsu",
+"voc    pl      n       cakkhu  -       cakkhū cakkhūni",
+
+
+"nom    sg      m       dhamma  -       dhammo",
+"acc    sg      m       dhamma  -       dhammaṃ",
+"instr  sg      m       dhamma  -       dhammā dhammena",
+"dat    sg      m       dhamma  -       dhammassa dhammāya",
+"abl    sg      m       dhamma  -       dhammato dhammamhā dhammasmā dhammā",
+"gen    sg      m       dhamma  -       dhammassa",
+"loc    sg      m       dhamma  -       dhammamhi dhammasmiṃ dhamme",
+"voc    sg      m       dhamma  -       dhamma dhammā",
+"in comps                       dhamma  -       dhamma",
+
+"nom    pl      m       dhamma  -       dhammā dhammāse",
+"acc    pl      m       dhamma  -       dhamme",
+"instr  pl      m       dhamma  -       dhammebhi dhammehi",
+"dat    pl      m       dhamma  -       dhammānaṃ",
+"abl    pl      m       dhamma  -       dhammato dhammebhi dhammehi",
+"gen    pl      m       dhamma  -       dhammāna dhammānaṃ",
+"loc    pl      m       dhamma  -       dhammesu",
+"voc    pl      m       dhamma  -       dhammā",
+
+"nom    sg      f       dhātu   -       dhātu",
+"acc    sg      f       dhātu   -       dhātuṃ",
+"instr  sg      f       dhātu   -       dhātuyā",
+"dat    sg      f       dhātu   -       dhātuyā",
+"abl    sg      f       dhātu   -       dhātuto dhātuyā",
+"gen    sg      f       dhātu   -       dhātuyā",
+"loc    sg      f       dhātu   -       dhātuyaṃdhātuyā",
+"voc    sg      f       dhātu   -       dhātu",
+"in comps                       dhātu   -       dhātu",
+"nom    pl      f       dhātu   -       dhātuyo dhātū",
+"acc    pl      f       dhātu   -       dhātuyo dhātū",
+"instr  pl      f       dhātu   -       dhātūhi",
+"dat    pl      f       dhātu   -       dhātūnaṃ",
+"abl    pl      f       dhātu   -       dhātūhi",
+"gen    pl      f       dhātu   -       dhātūnaṃ",
+"loc    pl      f       dhātu   -       dhātusu dhātūsu",
+"voc    pl      f       dhātu   -       dhātuyo dhātū",
 
 "nom    sg   m   āyasmant        -       āyasmanto āyasmā",
 "acc    sg   m   āyasmant        -       āyasmantaṃ",
@@ -36,61 +184,61 @@ const records = [
 "loc    pl  m    āyasmant        -       āyasmantesu",
 "voc    pl  m    āyasmant        -       āyasmantā āyasmanto",
 
-"nom    sg      bhikkhu -       bhikkhu",
-"acc    sg      bhikkhu -       bhikkhuṃ",
-"instr  sg      bhikkhu -       bhikkhunā",
-"dat    sg      bhikkhu -       bhikkhuno bhikkhussa",
-"abl    sg      bhikkhu -       bhikkhunā bhikkhumhā bhikkhusmā",
-"gen    sg      bhikkhu -       bhikkhuno bhikkhussa",
-"loc    sg      bhikkhu -       bhikkhumhi bhikkhusmiṃ",
-"voc    sg      bhikkhu -       bhikkhu",
+"nom    sg   m   bhikkhu -       bhikkhu",
+"acc    sg   m   bhikkhu -       bhikkhuṃ",
+"instr  sg   m   bhikkhu -       bhikkhunā",
+"dat    sg   m   bhikkhu -       bhikkhuno bhikkhussa",
+"abl    sg   m   bhikkhu -       bhikkhunā bhikkhumhā bhikkhusmā",
+"gen    sg   m   bhikkhu -       bhikkhuno bhikkhussa",
+"loc    sg   m   bhikkhu -       bhikkhumhi bhikkhusmiṃ",
+"voc    sg   m   bhikkhu -       bhikkhu",
 "in comps               bhikkhu -       bhikkhu",
-"nom    pl      bhikkhu        -       bhikkhavo bhikkhū",
-"acc    pl      bhikkhu        -       bhikkhavo bhikkhū",
-"instr  pl      bhikkhu        -       bhikkhūhi",
-"dat    pl      bhikkhu        -       bhikkhunaṃ bhikkhūnaṃ",
-"abl    pl      bhikkhu        -       bhikkhūhi",
-"gen    pl      bhikkhu        -       bhikkhunaṃ bhikkhūnaṃ",
-"loc    pl      bhikkhu        -       bhikkhusu bhikkhūsu",
-"voc    pl      bhikkhu        -       bhikkhave bhikkhavo bhikkhū",
+"nom    pl   m   bhikkhu        -       bhikkhavo bhikkhū",
+"acc    pl   m   bhikkhu        -       bhikkhavo bhikkhū",
+"instr  pl   m   bhikkhu        -       bhikkhūhi",
+"dat    pl   m   bhikkhu        -       bhikkhunaṃ bhikkhūnaṃ",
+"abl    pl   m   bhikkhu        -       bhikkhūhi",
+"gen    pl   m   bhikkhu        -       bhikkhunaṃ bhikkhūnaṃ",
+"loc    pl   m   bhikkhu        -       bhikkhusu bhikkhūsu",
+"voc    pl   m   bhikkhu        -       bhikkhave bhikkhavo bhikkhū",
 
-"nom    sg      bhikkhunī       -       bhikkhunī",
-"acc    sg      bhikkhunī       -       bhikkhuniṃ",
-"instr  sg      bhikkhunī       -       bhikkhuniyā",
-"dat    sg      bhikkhunī       -       bhikkhuniyā",
-"abl    sg      bhikkhunī       -       bhikkhunito bhikkhuniyā bhikkhunīto",
-"gen    sg      bhikkhunī       -       bhikkhuniyā",
-"loc    sg      bhikkhunī       -       bhikkhuniyaṃ bhikkhuniyā",
-"voc    sg      bhikkhunī       -       bhikkhuni bhikkhunī",
+"nom    sg   f   bhikkhunī       -       bhikkhunī",
+"acc    sg   f   bhikkhunī       -       bhikkhuniṃ",
+"instr  sg   f   bhikkhunī       -       bhikkhuniyā",
+"dat    sg   f   bhikkhunī       -       bhikkhuniyā",
+"abl    sg   f   bhikkhunī       -       bhikkhunito bhikkhuniyā bhikkhunīto",
+"gen    sg   f   bhikkhunī       -       bhikkhuniyā",
+"loc    sg   f   bhikkhunī       -       bhikkhuniyaṃ bhikkhuniyā",
+"voc    sg   f   bhikkhunī       -       bhikkhuni bhikkhunī",
 "in comps               bhikkhunī       -       bhikkhuni bhikkhunī",
 
-"nom    pl      bhikkhunī      -         bhikkhuniyo bhikkhunī",
-"acc    pl      bhikkhunī      -         bhikkhuniyo bhikkhunī",
-"instr  pl      bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
-"dat    pl      bhikkhunī      -         bhikkhunīnaṃ",
-"abl    pl      bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
-"gen    pl      bhikkhunī      -         bhikkhunīnaṃ",
-"loc    pl      bhikkhunī      -         bhikkhunīsu",
-"voc    pl      bhikkhunī      -         bhikkhuniyo bhikkhunī",
+"nom    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
+"acc    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
+"instr  pl  f    bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
+"dat    pl  f    bhikkhunī      -         bhikkhunīnaṃ",
+"abl    pl  f    bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
+"gen    pl  f    bhikkhunī      -         bhikkhunīnaṃ",
+"loc    pl  f    bhikkhunī      -         bhikkhunīsu",
+"voc    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
 
-"nom    sg  f    ayyā    -       ayyā",
+"nom    sg  f   ayyā    -       ayyā",
 "acc    sg  f   ayyā    -       ayyaṃ",
 "instr  sg  f   ayyā    -       ayyā ayyāya",
-"dat    sg  f    ayyā    -       ayyāya",
-"abl    sg  f    ayyā    -       ayyāya",
+"dat    sg  f   ayyā    -       ayyāya",
+"abl    sg  f   ayyā    -       ayyāya",
 "gen    sg  f   ayyā    -       ayyāya",
-"loc    sg  f    ayyā    -       ayyāya",
-"voc    sg  f    ayyā    -       ayya ayye",
-"in comps      ayyā    -       ayya ayyā",
+"loc    sg  f   ayyā    -       ayyāya",
+"voc    sg  f   ayyā    -       ayya ayye",
+"in comps       ayyā    -       ayya ayyā",
 
 "nom    pl  f    ayyā     -       ayyā ayyāyo",
 "acc    pl  f    ayyā     -       ayyā ayyāyo",
 "instr  pl  f    ayyā     -       ayyāhi",
 "dat    pl  f    ayyā     -       ayyānaṃ",
 "abl    pl  f    ayyā     -       ayyāhi",
-"gen    pl   f   ayyā     -       ayyānaṃ",
-"loc    pl   f   ayyā     -       ayyāsu",
-"voc    pl   f   ayyā     -       ayyā ayyāyo"
+"gen    pl  f    ayyā     -       ayyānaṃ",
+"loc    pl  f    ayyā     -       ayyāsu",
+"voc    pl  f    ayyā     -       ayyā ayyāyo"
 
 ];
 
@@ -103,17 +251,48 @@ let currentIndex; // Индекс текущей записи
 const uniqueWords = new Set();
 
 // Извлечение уникальных слов перед символом '-'
+const displaySet = new Set();
+
 records.forEach(record => {
-    const word = record.split('-')[0].trim().split(' ').pop(); // Получаем слово перед '-'
-    uniqueWords.add(word); // Добавляем в Set для уникальности
+    // Проверяем, содержит ли строка 'comps' и пропускаем её, если содержит
+    if (record.includes('comps')) return;
+
+    const words = record.split('-')[0].trim().split(/\s+/); // Разбиваем до '-'
+    
+    if (words.length >= 2) {
+        const name = words[words.length - 1]; // Последнее слово перед '-'
+        const category = words[words.length - 2]; // Предпоследнее слово перед '-'
+        
+        // Добавляем в displaySet для отображения
+        displaySet.add(`${name} (${category})`);
+        
+        // Оригинальное значение добавляем в исходный Set
+        uniqueWords.add(name);
+    } else {
+        console.warn("Не удалось извлечь слова перед '-':", record);
+    }
 });
 
+// Выводим только displaySet для пользователя
+console.log([...displaySet]); // Выводим преобразованные строки без 'comps'
+
 const checkboxContainer = document.getElementById('checkboxContainer');
+
+const displayMap = {}; // Объект для сопоставления оригинальных значений и отображаемых названий
+
+// Создаем `displayMap` на основе `displaySet` и `uniqueWords`
+const uniqueArray = Array.from(uniqueWords);
+const displayArray = Array.from(displaySet);
+
+uniqueArray.forEach((word, index) => {
+    displayMap[word] = displayArray[index]; // Сопоставляем оригинальное значение с форматированным
+});
 
 // Создание чекбоксов
 uniqueWords.forEach(word => {
     const checkboxDiv = document.createElement('div');
     checkboxDiv.className = 'form-check';
+
     const checkbox = document.createElement('input');
     checkbox.className = 'form-check-input';
     checkbox.type = 'checkbox';
@@ -126,7 +305,9 @@ uniqueWords.forEach(word => {
     const label = document.createElement('label');
     label.className = 'form-check-label';
     label.htmlFor = word;
-    label.innerText = word;
+
+    // Используем отображаемое название из `displayMap`
+    label.innerText = displayMap[word] || word;
 
     checkboxDiv.appendChild(checkbox);
     checkboxDiv.appendChild(label);

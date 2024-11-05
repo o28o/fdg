@@ -1150,7 +1150,7 @@ $(function () {
 
 <script>
 $.ajax({
-  url: "/assets/texts/sutta_words.txt",
+  url: "/assets/texts/tipitakaWordsAndVars.txt",
   dataType: "text",
   success: function(data) {
 

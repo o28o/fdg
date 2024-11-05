@@ -254,14 +254,14 @@ const records = [
 
 "nom    sg      m       bhagavant       -       bhagavanto bhagavā",
 "acc    sg      m       bhagavant       -       bhagavantaṃ",
-"instr  sg      m       bhagavant       -       bhagavatā bhagavantena",
-"dat    sg      m       bhagavant       -       bhagavato bhagavantassa",
-"abl    sg      m       bhagavant       -       bhagavatā bhagavato bhagavantamhā bhagavantasmā bhagavantā",
-"gen    sg      m       bhagavant       -       bhagavato bhagavantassa",
-"loc    sg      m       bhagavant       -       bhagavati bhagavantamhi bhagavantasmiṃ bhagavante",
-"voc    sg      m       bhagavant       -       bhagava bhagavaṃ bhagavā",
+"instr  sg      m       bhagavant       -       bhagavatā",
+"dat    sg      m       bhagavant       -       bhagavato",
+"abl    sg      m       bhagavant       -       bhagavatā bhagavato",
+"gen    sg      m       bhagavant       -       bhagavato",
+"loc    sg      m       bhagavant       -       bhagavati",
+"voc    sg      m       bhagavant       -       bhagavā",
 "in comps               m       bhagavant       -       bhagava bhagavanta bhagavam bhagavaṃ",
-"nom    pl      m       bhagavant       -       bhagavantā bhagavanto bhagavā",
+"nom    pl      m       bhagavant       -       bhagavanto bhagavā",
 "acc    pl      m       bhagavant       -       bhagavante",
 "instr  pl      m       bhagavant       -       bhagavantehi",
 "dat    pl      m       bhagavant       -       bhagavataṃ bhagavantānaṃ",
@@ -365,15 +365,15 @@ const records = [
 "dat    sg   m   āyasmant        -       āyasmato",
 "abl    sg   m   āyasmant        -       āyasmatā āyasmantā",
 "gen    sg   m   āyasmant        -       āyasmato",
-"loc    sg   m   āyasmant        -       āyasmati āyasmante",
+"loc    sg   m   āyasmant        -       āyasmati (nm) āyasmante",
 "voc    sg   m   āyasmant        -       āyasma āyasmā",
 "in comps m āyasmant        -       āyasma āyasmanta",
 "nom    pl  m    āyasmant        -       āyasmantā āyasmanto āyasmā",
 "acc    pl  m    āyasmant        -       āyasmanto āyasmante",
 "instr  pl  m    āyasmant        -       āyasmantehi",
-"dat    pl  m    āyasmant        -       āyasmataṃ āyasmantānaṃ",
+"dat    pl  m    āyasmant        -       āyasmataṃ (nm) āyasmantānaṃ",
 "abl    pl  m   āyasmant        -       āyasmantehi",
-"gen    pl  m    āyasmant        -       āyasmataṃ āyasmantānaṃ",
+"gen    pl  m    āyasmant        -       āyasmataṃ (nm) āyasmantānaṃ",
 "loc    pl  m    āyasmant        -       āyasmantesu",
 "voc    pl  m    āyasmant        -       āyasmantā āyasmanto",
 
@@ -399,9 +399,9 @@ const records = [
 "acc    sg   f   bhikkhunī       -       bhikkhuniṃ",
 "instr  sg   f   bhikkhunī       -       bhikkhuniyā",
 "dat    sg   f   bhikkhunī       -       bhikkhuniyā",
-"abl    sg   f   bhikkhunī       -       bhikkhunito bhikkhuniyā bhikkhunīto",
+"abl    sg   f   bhikkhunī       -      bhikkhuniyā",
 "gen    sg   f   bhikkhunī       -       bhikkhuniyā",
-"loc    sg   f   bhikkhunī       -       bhikkhuniyaṃ bhikkhuniyā",
+"loc    sg   f   bhikkhunī       -       bhikkhuniyā",
 "voc    sg   f   bhikkhunī       -       bhikkhuni bhikkhunī",
 "in comps   f            bhikkhunī       -       bhikkhuni bhikkhunī",
 
@@ -432,7 +432,6 @@ const records = [
 "gen    pl  f    ayyā     -       ayyānaṃ",
 "loc    pl  f    ayyā     -       ayyāsu",
 "voc    pl  f    ayyā     -       ayyā ayyāyo"
-
 ];
 
 
@@ -487,7 +486,7 @@ uniqueWords.forEach(word => {
     checkboxDiv.className = 'form-check';
 
     const checkbox = document.createElement('input');
-    checkbox.className = 'form-check-input';
+    checkbox.className = 'form-check-input wordCheckbox';
     checkbox.type = 'checkbox';
     checkbox.id = word;
 
@@ -625,6 +624,13 @@ function showAllDeclensions() {
 
             table.appendChild(tbody);
             declensionsOutput.appendChild(table);
+
+    //описание 
+    const noteNm = document.createElement("p");
+            noteNm.textContent = `\n(nm) - после слова означает, что такой формы нет\nв коренных текстах всех редакций канона.`;
+            noteNm.className = 'text-muted';
+            declensionsOutput.appendChild(noteNm);
+
         } else {
             declensionsOutput.textContent = "Склонения не найдены.";
         }

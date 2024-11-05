@@ -438,24 +438,6 @@ const records = [
 "loc    pl      m       viññū   -       viññūsu",
 "voc    pl      m       viññū   -       viññuno* viññū",
 
-"nom    sg   m   āyasmant        -       āyasmanto āyasmā",
-"acc    sg   m   āyasmant        -       āyasmantaṃ",
-"instr  sg   m   āyasmant        -       āyasmatā",
-"dat    sg   m   āyasmant        -       āyasmato",
-"abl    sg   m   āyasmant        -       āyasmatā āyasmantā",
-"gen    sg   m   āyasmant        -       āyasmato",
-"loc    sg   m   āyasmant        -       āyasmante",
-"voc    sg   m   āyasmant        -       āyasma āyasmā",
-"in comps m āyasmant        -       āyasma āyasmanta",
-"nom    pl  m    āyasmant        -       āyasmantā āyasmanto āyasmā",
-"acc    pl  m    āyasmant        -       āyasmanto āyasmante",
-"instr  pl  m    āyasmant        -       āyasmantehi",
-"dat    pl  m    āyasmant        -       āyasmantānaṃ",
-"abl    pl  m   āyasmant        -       āyasmantehi",
-"gen    pl  m    āyasmant        -       āyasmantānaṃ",
-"loc    pl  m    āyasmant        -       āyasmantesu",
-"voc    pl  m    āyasmant        -       āyasmantā āyasmanto",
-
 "nom    sg   m   sīlavant        -       sīlavanto sīlavā",
 "acc    sg   m   sīlavant        -       sīlavantaṃ sīlavaṃ",
 "instr  sg   m   sīlavant        -       sīlavatā sīlavantena",
@@ -473,6 +455,24 @@ const records = [
 "gen    pl  m    sīlavant        -       sīlavataṃ sīlavantānaṃ",
 "loc    pl  m    sīlavant        -       sīlavantesu",
 "voc    pl  m    sīlavant        -        sīlavanto sīlavantā",
+
+"nom    sg   m   āyasmant        -       āyasmanto āyasmā",
+"acc    sg   m   āyasmant        -       āyasmantaṃ",
+"instr  sg   m   āyasmant        -       āyasmatā",
+"dat    sg   m   āyasmant        -       āyasmato",
+"abl    sg   m   āyasmant        -       āyasmatā āyasmantā",
+"gen    sg   m   āyasmant        -       āyasmato",
+"loc    sg   m   āyasmant        -       āyasmante",
+"voc    sg   m   āyasmant        -       āyasma āyasmā",
+"in comps m āyasmant        -       āyasma āyasmanta",
+"nom    pl  m    āyasmant        -       āyasmantā āyasmanto āyasmā",
+"acc    pl  m    āyasmant        -       āyasmanto āyasmante",
+"instr  pl  m    āyasmant        -       āyasmantehi",
+"dat    pl  m    āyasmant        -       āyasmantānaṃ",
+"abl    pl  m   āyasmant        -       āyasmantehi",
+"gen    pl  m    āyasmant        -       āyasmantānaṃ",
+"loc    pl  m    āyasmant        -       āyasmantesu",
+"voc    pl  m    āyasmant        -       āyasmantā āyasmanto",
 
 "nom    sg   m   bhikkhu -       bhikkhu",
 "acc    sg   m   bhikkhu -       bhikkhuṃ",
@@ -675,7 +675,7 @@ function getRandomIndex(max) {
 // Функция для отображения записи
 function showRecord(index) {
     const randomRecord = modifiedRecords[index];
-    document.getElementById("randomRecord").textContent = randomRecord || "Не выбрано ни одного слова";
+    document.getElementById("randomRecord").textContent = randomRecord.replace(/\*/g, '') || "Не выбрано ни одного слова";
 }
 
 // Обработчик нажатия кнопки для отображения случайной записи

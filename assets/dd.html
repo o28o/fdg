@@ -113,7 +113,7 @@
 function hideRuleName(record) {
     const parts = record.split('-');
     if (parts.length > 1) {
-        return parts[1].trim();
+        return parts[1].trim().replace(/\*/g, '');;
     }
     return "Ошибка в формате записи";
 } 
@@ -122,14 +122,15 @@ function showNumberOnly(index) {
     const randomRecord = modifiedRecords[index];
     const parts = randomRecord.split('-');
 
+
     const randomRecordElement = document.getElementById("randomRecord");
     
     if (parts.length > 1) {
         // Храним полное значение в data-атрибуте
         randomRecordElement.setAttribute('data-full', randomRecord);
-        
+ 
         // Устанавливаем текст после знака '-'
-        randomRecordElement.textContent = parts[1].trim(); // Отображаем только часть после '-'
+        randomRecordElement.textContent = parts[1].trim().replace(/\*/g, ''); // Отображаем только часть после '-'
     } else {
         randomRecordElement.textContent = "Ошибка в формате записи";
     }

@@ -5,15 +5,15 @@ const records = [
 "dat    sg      n      dukkha  -       dukkhassa dukkhāya",
 "abl    sg      n      dukkha  -       dukkhato dukkhamhā dukkhasmā dukkhā",
 "gen    sg      n      dukkha  -       dukkhassa",
-"loc    sg      n      dukkha  -       dukkhamhi dukkhasmiṃ dukkhe",
+"loc    sg      n      dukkha  -       dukkhamhi (nm) dukkhasmiṃ dukkhe",
 "voc    sg      n      dukkha  -       dukkha dukkhaṃ dukkhā dukkhe",
 "in comps       n                dukkha  -       dukkha",
 
 "nom    pl      n      dukkha  -       dukkhā dukkhāni",
 "acc    pl      n      dukkha  -       dukkhāni dukkhe",
-"instr  pl      n      dukkha  -       dukkhebhi dukkhehi",
+"instr  pl      n      dukkha  -      dukkhehi",
 "dat    pl      n      dukkha  -       dukkhānaṃ",
-"abl    pl      n      dukkha  -       dukkhebhi dukkhehi",
+"abl    pl      n      dukkha  -      dukkhehi",
 "gen    pl      n      dukkha  -       dukkhānaṃ",
 "loc    pl      n      dukkha  -       dukkhesu",
 "voc    pl      n      dukkha  -       dukkhā dukkhāni",  
@@ -262,13 +262,13 @@ const records = [
 "voc    sg      m       bhagavant       -       bhagavā",
 "in comps               m       bhagavant       -       bhagava bhagavanta bhagavam bhagavaṃ",
 "nom    pl      m       bhagavant       -       bhagavanto bhagavā",
-"acc    pl      m       bhagavant       -       bhagavante",
-"instr  pl      m       bhagavant       -       bhagavantehi",
-"dat    pl      m       bhagavant       -       bhagavataṃ bhagavantānaṃ",
-"abl    pl      m       bhagavant       -       bhagavantehi",
-"gen    pl      m       bhagavant       -       bhagavataṃ bhagavantānaṃ",
-"loc    pl      m       bhagavant       -       bhagavantesu",
-"voc    pl      m       bhagavant       -       bhagavantā bhagavanto",
+"acc    pl      m       bhagavant       -       bhagavante (nm)",
+"instr  pl      m       bhagavant       -       bhagavantehi (nm)",
+"dat    pl      m       bhagavant       -       bhagavataṃ (nm) bhagavantānaṃ",
+"abl    pl      m       bhagavant       -       bhagavantehi (nm)",
+"gen    pl      m       bhagavant       -       bhagavataṃ (nm) bhagavantānaṃ",
+"loc    pl      m       bhagavant       -       bhagavantesu (nm)",
+"voc    pl      m       bhagavant       -       bhagavantā (nm) bhagavanto",
 
 "nom    sg      m       sukhin  -       sukhī",
 "acc    sg      m       sukhin  -       sukhinaṃ sukhiṃ",
@@ -381,7 +381,7 @@ const records = [
 "acc    sg   m   bhikkhu -       bhikkhuṃ",
 "instr  sg   m   bhikkhu -       bhikkhunā",
 "dat    sg   m   bhikkhu -       bhikkhuno bhikkhussa",
-"abl    sg   m   bhikkhu -       bhikkhunā bhikkhumhā bhikkhusmā",
+"abl    sg   m   bhikkhu -       bhikkhunā bhikkhumhā (nm) bhikkhusmā (nm)",
 "gen    sg   m   bhikkhu -       bhikkhuno bhikkhussa",
 "loc    sg   m   bhikkhu -       bhikkhumhi bhikkhusmiṃ",
 "voc    sg   m   bhikkhu -       bhikkhu",
@@ -430,7 +430,7 @@ const records = [
 "dat    pl  f    ayyā     -       ayyānaṃ",
 "abl    pl  f    ayyā     -       ayyāhi",
 "gen    pl  f    ayyā     -       ayyānaṃ",
-"loc    pl  f    ayyā     -       ayyāsu",
+"loc    pl  f    ayyā     -       ayyāsu (nm)",
 "voc    pl  f    ayyā     -       ayyā ayyāyo"
 ];
 
@@ -480,7 +480,45 @@ uniqueArray.forEach((word, index) => {
     displayMap[word] = displayArray[index]; // Сопоставляем оригинальное значение с форматированным
 });
 
-// Создание чекбоксов
+// Создание контейнера для ссылок
+const actionsDiv = document.createElement('div');
+actionsDiv.className = 'checkbox-actions mb-2';
+
+// Создание ссылки "Очистить все"
+const clearAllLink = document.createElement('a');
+clearAllLink.href = '#';
+clearAllLink.className = 'btn-sm btn-secondary text-decoration-none';
+clearAllLink.innerText = 'Очистить все';
+clearAllLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.querySelectorAll('.wordCheckbox').forEach(checkbox => {
+        checkbox.checked = false;
+        localStorage.setItem(checkbox.id, false); // Обновление localStorage
+    });
+    updateRecords(); // Обновление записей
+});
+
+// Создание ссылки "Выбрать все"
+const selectAllLink = document.createElement('a');
+selectAllLink.href = '#';
+selectAllLink.innerText = 'Выбрать все';
+selectAllLink.className = 'btn-sm btn-primary text-decoration-none ms-1';
+//selectAllLink.style.marginLeft = '10px';
+selectAllLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.querySelectorAll('.wordCheckbox').forEach(checkbox => {
+        checkbox.checked = true;
+        localStorage.setItem(checkbox.id, true); // Обновление localStorage
+    });
+    updateRecords(); // Обновление записей
+});
+
+// Добавление ссылок в контейнер
+actionsDiv.appendChild(clearAllLink);
+actionsDiv.appendChild(selectAllLink);
+checkboxContainer.appendChild(actionsDiv); // Добавление контейнера с ссылками в `checkboxContainer`
+
+// Генерация чекбоксов
 uniqueWords.forEach(word => {
     const checkboxDiv = document.createElement('div');
     checkboxDiv.className = 'form-check';
@@ -527,7 +565,7 @@ function updateRecords() {
 
     // Обновляем отображение записей
     if (modifiedRecords.length === 0) {
-        document.getElementById("randomRecord").textContent = "Нет доступных записей.";
+        document.getElementById("randomRecord").textContent = "Не выбрано ни одного слова.";
     } else {
         currentIndex = getRandomIndex(modifiedRecords.length); // Генерируем индекс из отфильтрованных записей
         showRecord(currentIndex); // Отображаем новую запись
@@ -542,7 +580,7 @@ function getRandomIndex(max) {
 // Функция для отображения записи
 function showRecord(index) {
     const randomRecord = modifiedRecords[index];
-    document.getElementById("randomRecord").textContent = randomRecord || "Нет доступных записей.";
+    document.getElementById("randomRecord").textContent = randomRecord || "Не выбрано ни одного слова.";
 }
 
 // Обработчик нажатия кнопки для отображения случайной записи
@@ -567,7 +605,7 @@ function showAllDeclensions() {
 
     console.log("Текущая запись:", currentRecord);
 
-    if (currentRecord && currentRecord !== "Нет доступных записей.") {
+    if (currentRecord && currentRecord !== "Не выбрано ни одного слова.") {
         const parts = currentRecord.split(/\s+/);
         console.log("Части записи:", parts);
 
@@ -627,7 +665,7 @@ function showAllDeclensions() {
 
     //описание 
     const noteNm = document.createElement("p");
-            noteNm.textContent = `\n(nm) - после слова означает, что такой формы нет\nв коренных текстах всех редакций канона.`;
+            noteNm.textContent = `\n(nm) - после слова означает, что такой формы нет\nв коренных текстах главных редакций канона.`;
             noteNm.className = 'text-muted';
             declensionsOutput.appendChild(noteNm);
 

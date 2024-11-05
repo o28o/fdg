@@ -1,6 +1,8 @@
 cat tst | sed "s/in[ \t]comps/inComps/g"  | tr '\t' '\n' | tr ' ' '\n' | grep -v "^sg$" | grep -v "^pl$" | while read line ; do 
 echo -n "$line "
-line=$(echo $line | sed 's/ṃ/ṁ/g')
+line=$(echo $line | sed 's/ṃ$/[ṁṃn]/g')
+#line=$(echo $line | sed 's/i$/[iī]/g')
+#line=$(echo $line | sed 's/a$/[aā]/g')
 if [[ $line == "nom" ]] || [[ $line == "acc" ]] || [[ $line == "instr" ]] || [[ $line == "dat" ]] ||  [[ $line == "abl" ]] || [[ $line == "gen" ]] || [[ $line == "loc" ]] || [[ $line == "voc" ]] || [[ $line == "inComps" ]]
 then 
 echo 

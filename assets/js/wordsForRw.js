@@ -570,7 +570,7 @@ function updateRecords() {
 
     // Обновляем отображение записей
     if (modifiedRecords.length === 0) {
-        document.getElementById("randomRecord").textContent = "Не выбрано ни одного слова.";
+        document.getElementById("randomRecord").textContent = "Не выбрано ни одного слова";
     } else {
         currentIndex = getRandomIndex(modifiedRecords.length); // Генерируем индекс из отфильтрованных записей
         showRecord(currentIndex); // Отображаем новую запись
@@ -585,7 +585,7 @@ function getRandomIndex(max) {
 // Функция для отображения записи
 function showRecord(index) {
     const randomRecord = modifiedRecords[index];
-    document.getElementById("randomRecord").textContent = randomRecord || "Не выбрано ни одного слова.";
+    document.getElementById("randomRecord").textContent = randomRecord || "Не выбрано ни одного слова";
 }
 
 // Обработчик нажатия кнопки для отображения случайной записи
@@ -610,7 +610,7 @@ function showAllDeclensions() {
 
     console.log("Текущая запись:", currentRecord);
 
-    if (currentRecord && currentRecord !== "Не выбрано ни одного слова.") {
+    if (currentRecord && currentRecord !== "Не выбрано ни одного слова") {
         const parts = currentRecord.split(/\s+/);
         console.log("Части записи:", parts);
 

@@ -413,7 +413,7 @@ setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-  <p>For navigation texts should conatin text numbers. E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> or <span class="abbr">bi-pj1</span>.<br>
+  <p>Use text indexes for navigation.<br>E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> or <span class="abbr">bu-pj1</span>.<br>
   Dn, mn, sn, an, some kn books, both patimokkhas and vinaya vibhanga are available. </p>
   <div class="lists">
 

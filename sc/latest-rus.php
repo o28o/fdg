@@ -54,7 +54,7 @@ echo SN no updates
 else
 echo SN updated to \$sndir
 
-sed -i 's@let snranges =.*@let snranges = '\"\$sndir\"';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
+sed -i 's@let snranges =.*@let snranges = '\"\$sndir\"';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js $basedir/sc/memorize.js 
 
 fi
 ");
@@ -119,7 +119,7 @@ if [[ \"\$kndir\" == \"\$knrangeInFile\" ]] ; then
 echo KN no updates
 else
 echo KN updated to \$kndir
-sed -i \"s@let knranges =.*@let knranges = \$kndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js 
+sed -i \"s@let knranges =.*@let knranges = \$kndir;@g\" $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js  $basedir/sc/memorize.js 
 fi
 ");
 
@@ -149,7 +149,7 @@ echo Vinaya no updates
 else
 echo Vinaya updated to \$vinayadir
 
-sed -i 's@let vinayaranges =.*@let vinayaranges = '\"\$vinayadir\"';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js
+sed -i 's@let vinayaranges =.*@let vinayaranges = '\"\$vinayadir\"';@g' $basedir/sc/reader-rus-translations.js $basedir/sc/multilang.js $basedir/sc/multilangrev.js $basedir/sc/multilangfullrev.js $basedir/sc/memorize.js 
 
 fi
 ");

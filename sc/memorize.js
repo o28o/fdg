@@ -98,16 +98,14 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
-const enUrl = mlUrl.replace("/sc/ml.html", "/sc/");
+const ruUrl = mlUrl.replace("/sc/memorize.html", "/ru/sc/");
+const enUrl = mlUrl.replace("/sc/memorize.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
-
-
 
 
 if (slug.includes("mn"))  {
@@ -189,7 +187,6 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
-
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
 
@@ -222,8 +219,37 @@ replaceTextInData(engTransData, segment, regex);
     
 }
 
+function преобразоватьТекст() {
+    let входнойТекст = paliData[segment];
 
+    // Разбиваем текст на строки
+    let строкиСКавычками = входнойТекст.split('\n');
 
+const строки = строкиСКавычками.map(строка => {
+    return строка.replace(/[—"'“]/g, '');
+});
+
+    let результат = строки.map(строка => {
+        // Разбиваем каждую строку на слова
+        let слова = строка.split(/\s+/);
+        
+        // Преобразуем каждое слово в первую букву или пустую строку
+let преобразованныеСлова = слова.map(word => {
+    let перваяБуква = word.match(/^\p{L}/u); // Используйте \p{L} для букв из разных языков
+    if (перваяБуква) {
+        return перваяБуква[0];
+    } else {
+        let диакритическиеСимволы = word.match(/^[\p{M}\p{N}\p{S}\p{P}]/u);
+        return диакритическиеСимволы ? диакритическиеСимволы[0] : '';
+    }
+});
+
+        // Объединяем преобразованные слова снова в строку
+        return преобразованныеСлова.join(' ');
+    }).join('\n'); // Объединяем строки с переносами
+
+    return результат;
+}
 if (paliData[segment] === undefined) {
   paliData[segment] = "";
 }
@@ -235,12 +261,11 @@ if (engTransData[segment] === undefined) {
 }
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
-    if (engTransData[segment] !== transData[segment]) {
+    if (paliData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
-      <span class="rus-lang" lang="ru">${transData[segment]}<br>
-	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
+      <span class="rus-lang" lang="ru">${paliData[segment]}<br>
 		  </span>
       </span>${closeHtml}\n\n`;
 	  
@@ -249,8 +274,8 @@ if (engTransData[segment] === undefined) {
 
     } else {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="rus-lang" lang="en">${paliData[segment]}</span>
       </span>${closeHtml}\n\n`;
     }
 
@@ -368,10 +393,10 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
-rvUrl = rvUrl.replace("ml.html", "");
+rvUrl = rvUrl.replace("memorize.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 
-const warning = "<p class='warning'>Внимание!<br>Переводы, словари и комментарии<br>сделаны не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+const warning = "<p style='color: green;' class='warning'>Bahussuto hoti sutadharo sutasannicayo...<br>sātthaṁ sabyañjanaṁ... tathārūpāssa dhammā bahussutā honti<br>dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
 //var lineBreak = "\n\n",
 //revhtml = html.split(lineBreak).reverse().join(lineBreak)
@@ -525,40 +550,38 @@ setLanguage(language);
   }
 } else {
   suttaArea.innerHTML = `<div class="instructions">
-<p>Для перехода тексты должны быть указаны с номерами. Пример: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> или <span class="abbr">bu-pj1</span>.<br>
- Доступны dn, mn, sn, an, некоторые книги kn, обе патимоккхи и виная вибханги.<br>
-  </p>
+  <p>Use text indexes for navigation.<br>E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> or <span class="abbr">bu-pj1</span>.<br>
+  Dn, mn, sn, an, some kn books, both patimokkhas and vinaya vibhanga are available. </p>
   <div class="lists">
 
   <div class="suttas">
-  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> 
+  <h2>Main Suttas</h2>
   <ul>
-     <li><span class="abbr">dn</span> <a href="/ru/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
-     <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>
-      <li><span class="abbr">sn</span> <a href="/ru/assets/texts/sn.php"> Saṁyutta-nikāya</a></li>
-      <li><span class="abbr">an</span> <a href="/ru/assets/texts/an.php"> Aṅguttara-nikāya</a></li>
-      <li><span class="abbr">snp</span> Sutta-nipāta</li>
+      <li><span class="abbr">dn</span> Dīgha-nikāya</li>
+      <li><span class="abbr">mn</span> Majjhima-nikāya</li>
+      <li><span class="abbr">sn</span> Saṁyutta-nikāya</li>
+      <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
   </ul>
   </div><div>
- <!-- <h2>Виная</h2> -->
+  <!-- <h2>Vinaya</h2> -->
   <div class="vinaya">
   <div>
-  <h3>Бхиккху Виная</h3>
+  <h3>Bhikkhu Vinaya</h3>
 <ul>
-<li><span class="abbr">bu-pm</span> <a href="/ru/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
-<li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#8.0"> Pārājikā</a></li></li>
-<li><span class="abbr">bu-ss</span> <a href="/ru/sc/?q=bu-pm#14.0"> Saṅghādisesā</a></li></li>
-<li><span class="abbr">bu-ay</span> <a href="/ru/sc/?q=bu-pm#29.0"> Aniyatā</a></li>
-<li><span class="abbr">bu-np</span> <a href="/ru/sc/?q=bu-pm#33.0"> Nissaggiyā-pācittiyā</a></li>
-<li><span class="abbr">bu-pc</span> <a href="/ru/sc/?q=bu-pm#65.0"> Pācittiyā</a></li>
-<li><span class="abbr">bu-pd</span> <a href="/ru/sc/?q=bu-pm#159.0"> Pāṭidesanīyā</a></li></li>
-<li><span class="abbr">bu-sk</span> <a href="/ru/sc/?q=bu-pm#165.0"> Sekhiyā</a></li></li>
-<li><span class="abbr">bu-as</span> <a href="/ru/sc/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
+<li><span class="abbr">bu-pm</span> <a href="/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
+<li><span class="abbr">bu-pj</span> Pārājikā</li>
+<li><span class="abbr">bu-ss</span> Saṅghādisesā</li>
+<li><span class="abbr">bu-ay</span> Aniyatā</li>
+<li><span class="abbr">bu-np</span> Nissaggiyā-pācittiyā</li>
+<li><span class="abbr">bu-pc</span> Pācittiyā</li>
+<li><span class="abbr">bu-pd</span> Pāṭidesanīyā</li>
+<li><span class="abbr">bu-sk</span> Sekhiyā</li>
+<li><span class="abbr">bu-as</span> Adhikarana-samatha</li>
 </ul>
 </div><div>
-<h3>Бхиккхуни Виная</h3>
+<h3>Bhikkhuni Vinaya</h3>
 <ul>
-<li><span class="abbr">bi-pm</span> <a href="/ru/assets/texts/bipm.php"> Bhikkhunīpātimokkha</a></li>
+<li><span class="abbr">bi-pm</span> <a href="/assets/texts/bipm.php"> Bhikkhunīpātimokkha</a></li>
 <li><span class="abbr">bi-pj</span> Pārājikā</li>
 <li><span class="abbr">bi-ss</span> Saṅghādisesā</li>
 <li><span class="abbr">bi-np</span> Nissaggiyā-pācittiyā</li>
@@ -574,7 +597,7 @@ setLanguage(language);
 </ul>
 </div>
   </div></div>
-  <h2>Другие тексты</h2>
+  <h2>Other Texts</h2>
   <ul>
       <li><span class="abbr">ud</span> Udāna</li>
       <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
@@ -587,9 +610,6 @@ setLanguage(language);
   </div><div>
 </div>
 `;
-
-
-
 }
 
   

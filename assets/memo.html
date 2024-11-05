@@ -146,13 +146,16 @@ window.addEventListener('load', function () {
 
 function очистить() {
     // Очищаем поле ввода и результат
+      if (confirm('This will erase the text. Sure?')) {
     document.getElementById("inputText").value = "";
     document.getElementById("результат").innerText = "";
 
     // Очищаем данные в Local Storage
     localStorage.removeItem("входнойТекст");
     localStorage.removeItem("результат");
+      }
 }
+
 
 function копироватьРезультат() {
     const результат = document.getElementById("результат").innerText;

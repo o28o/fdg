@@ -403,7 +403,7 @@ const warning = "<p style='color: green;' class='warning'>Bahussuto hoti sutadha
 // console.log(revhtml)
 // console.log(html)
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
+suttaArea.innerHTML =  scLink + warning + html + warning + scLink ;  
 
  
  const pageTitleElement = document.querySelector("h1");

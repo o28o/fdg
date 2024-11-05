@@ -354,7 +354,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
 rvUrl = rvUrl.replace("ml.html", "");
-rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
+rvUrl = rvUrl.replace("/sc/", "/sc/memorize.html");
 
 const warning = "<p class='warning'>Внимание!<br>Переводы, словари и комментарии<br>сделаны не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 

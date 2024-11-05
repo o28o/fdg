@@ -685,3 +685,41 @@ function showAllDeclensions() {
     updateDisplay();
 }
             
+        function updateDisplay() {
+            if (document.getElementById("numberOnlyCheckbox").checked) {
+                showNumberOnly(currentIndex);
+            } else {
+                const record = modifiedRecords[currentIndex];
+                if (document.getElementById("hideRuleNameCheckbox").checked) {
+                    const hiddenRecord = hideRuleName(record);
+                    document.getElementById("randomRecord").textContent = hiddenRecord;
+                } else {
+                    showRecord(currentIndex);
+                }
+            }
+            // Сохраняем состояния чекбоксов в localStorage
+            localStorage.setItem('rdtick', document.getElementById("numberOnlyCheckbox").checked);
+            localStorage.setItem('rdtick2', document.getElementById("hideRuleNameCheckbox").checked);
+        }            
+            
+        // Обработчик нажатия кнопки
+        document.getElementById("randomButton").addEventListener("click", () => {
+            currentIndex = getRandomIndex(modifiedRecords.length);
+            updateDisplay();
+        });
+            
+        // Обработчик изменения состояния чекбоксов
+        document.getElementById("numberOnlyCheckbox").addEventListener("change", updateDisplay);
+        document.getElementById("hideRuleNameCheckbox").addEventListener("change", updateDisplay);
+
+        // Проверяем состояния чекбоксов в localStorage и применяем их при загрузке страницы
+        const savedCheckboxState = localStorage.getItem('rdtick');
+        if (savedCheckboxState === 'true') {
+            document.getElementById("numberOnlyCheckbox").checked = true;
+        }
+        const savedCheckboxState2 = localStorage.getItem('rdtick2');
+        if (savedCheckboxState2 === 'true') {
+            document.getElementById("hideRuleNameCheckbox").checked = true;
+        }
+        currentIndex = getRandomIndex(modifiedRecords.length);
+        updateDisplay();            

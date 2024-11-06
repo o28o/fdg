@@ -1,10 +1,9 @@
-sg	pl
-nom	bhikkhunī	bhikkhuniyo bhikkhunī
-acc	bhikkhuniṃ	bhikkhuniyo bhikkhunī
-instr	bhikkhuniyā	bhikkhunībhi bhikkhunīhi
-dat	bhikkhuniyā	bhikkhunīnaṃ
-abl	bhikkhuniyā	bhikkhunībhi bhikkhunīhi
-gen	bhikkhuniyā	bhikkhunīnaṃ
-loc	bhikkhuniyā bhikkhuniyaṃ	bhikkhunīsu
-voc	bhikkhuni bhikkhunī	bhikkhuniyo bhikkhunī
-in comps	bhikkhuni bhikkhunī
+nom	dhātu	dhātuyo dhātū
+acc	dhātuṃ	dhātuyo dhātū
+instr	dhātuyā	dhātūhi
+dat	dhātuyā	dhātūnaṃ
+abl	dhātuyā	dhātūhi
+gen	dhātuyā	dhātūnaṃ
+loc	dhātuyaṃ dhātuyā	dhātūsu
+voc	dhātu	dhātuyo dhātū
+in comps	dhātu

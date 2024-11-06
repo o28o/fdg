@@ -174,7 +174,7 @@ const records = [
 "dat    sg      f       dhātu   -       dhātuyā",
 "abl    sg      f       dhātu   -       dhātuyā",
 "gen    sg      f       dhātu   -       dhātuyā",
-"loc    sg      f       dhātu   -       dhātuyaṃ dhātuyā",
+"loc    sg      f       dhātu   -       dhātuyā dhātuyaṃ*",
 "voc    sg      f       dhātu   -       dhātu",
 "in comps       f                dhātu   -       dhātu",
 "nom    pl      f       dhātu   -       dhātuyo dhātū",
@@ -504,9 +504,9 @@ const records = [
 
 "nom    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
 "acc    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
-"instr  pl  f    bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
+"instr  pl  f    bhikkhunī      -         bhikkhunīhi bhikkhunībhi*",
 "dat    pl  f    bhikkhunī      -         bhikkhunīnaṃ",
-"abl    pl  f    bhikkhunī      -         bhikkhunībhi bhikkhunīhi",
+"abl    pl  f    bhikkhunī      -         bhikkhunīhi bhikkhunībhi*",
 "gen    pl  f    bhikkhunī      -         bhikkhunīnaṃ",
 "loc    pl  f    bhikkhunī      -         bhikkhunīsu",
 "voc    pl  f    bhikkhunī      -         bhikkhuniyo bhikkhunī",
@@ -831,7 +831,7 @@ function showAllDeclensions() {
 
             // Примечание
             let noteNm = document.createElement("p");
-            noteNm.textContent = `\n* - интересно знать: такая форма именно этого слова\nне встречается в коренных текстах главных редакций канона.`;
+            noteNm.textContent = `\n* - интересно знать: такая форма именно этого слова\nне встречается в рангих коренных текстах главных редакций канона.`;
             noteNm.className = 'text-muted';
             declensionsOutput.appendChild(noteNm);
 

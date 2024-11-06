@@ -772,7 +772,7 @@ for (const cell of cells) {
 }
     //описание 
     const noteNm = document.createElement("p");
-            noteNm.textContent = `\n* - интересно, знать: что такая форма именно этого слова\nне встречается в коренных текстах главных редакций канона.`;
+            noteNm.textContent = `\n* - интересно знать: такая форма именно этого слова\nне встречается в коренных текстах главных редакций канона.`;
             noteNm.className = 'text-muted';
             declensionsOutput.appendChild(noteNm);
 

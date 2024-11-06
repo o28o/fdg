@@ -498,7 +498,7 @@ const records = [
 "dat    sg   f   bhikkhunī       -       bhikkhuniyā",
 "abl    sg   f   bhikkhunī       -      bhikkhuniyā",
 "gen    sg   f   bhikkhunī       -       bhikkhuniyā",
-"loc    sg   f   bhikkhunī       -       bhikkhuniyā bhikkhuniyaṃ",
+"loc    sg   f   bhikkhunī       -       bhikkhuniyā bhikkhuniyaṃ*",
 "voc    sg   f   bhikkhunī       -       bhikkhuni bhikkhunī",
 "in comps   f            bhikkhunī       -       bhikkhuni bhikkhunī",
 
@@ -773,12 +773,15 @@ function showAllDeclensions() {
 
             // Создаем таблицу
             const table = document.createElement("table");
+//table.classList.add("table", "table-bordered"); // Добавляем классы Bootstrap            
             const tbody = document.createElement("tbody");
+
+
 
             // Заголовок таблицы (падежи)
             const headerRow = document.createElement("tr");
             const caseHeader = document.createElement("th");
-            caseHeader.textContent = "Падеж";
+            caseHeader.textContent = "";
             headerRow.appendChild(caseHeader);
 
             const sgHeader = document.createElement("th");
@@ -890,9 +893,9 @@ function highlightDeclensions() {
 
     // Массив цветов для подсветки
 const colors = [
-    '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#6c757d', 
-    '#28a745', '#17a2b8', '#6610f2', '#e83e8c', '#343a40',
-    '#f8d7da', '#c3e6cb', '#f1e7e1', '#f7b1ab', '#d1ecf1'
+    '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#28a745', 
+    '#17a2b8', '#6610f2', '#e83e8c', '#f7b1ab', '#d1ecf1',
+    '#c3e6cb', '#f1e7e1', '#343a40','#f8d7da','#6c757d'
 ];
 
     // Контейнер для результатов

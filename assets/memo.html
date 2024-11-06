@@ -114,7 +114,7 @@ function преобразоватьТекст() {
     const строкиСКавычками = входнойТекст.split('\n');
 
 const строки = строкиСКавычками.map(строка => {
-    return строка.replace(/["'“]/g, '').replace(/—/g, ' ');
+    return строка.replace(/"/g, ' " ').replace(/—/g, ' — ').replace(/“/g, ' “ ').replace(/‘/g, " ‘ " ).replace(/\?/g, " ? " ).replace(/,/g, " , " ).replace(/\./g, " . " ).replace(/:/g, " : " ).replace(/;/g, " ; " );
     
 });
 
@@ -135,7 +135,7 @@ const преобразованныеСлова = слова.map(word => {
 
 
         // Объединяем преобразованные слова снова в строку
-        return преобразованныеСлова.join(' ');
+        return преобразованныеСлова.join(' ').replace(/ \?/g, "?" ).replace(/“ /g, '').replace(/ ,/g, ", " ).replace(/ \. /g, ". " ).replace(/ : /g, ": " ).replace(/ ; /g, "; " ).replace(/ ‘ /g, " " );
     }).join('\n'); // Объединяем строки с переносами
 
     document.getElementById("результат").innerText = результат;

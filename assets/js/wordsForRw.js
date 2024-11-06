@@ -562,7 +562,6 @@ records.forEach(record => {
 
 // Выводим только displaySet для пользователя
 console.log([...displaySet]); // Выводим преобразованные строки без 'comps'
-
 const checkboxContainer = document.getElementById('checkboxContainer');
 
 const displayMap = {}; // Объект для сопоставления оригинальных значений и отображаемых названий
@@ -578,6 +577,7 @@ uniqueArray.forEach((word, index) => {
 // Создание контейнера для ссылок
 const actionsDiv = document.createElement('div');
 actionsDiv.className = 'checkbox-actions mb-2';
+let sortCriteria = 0; // 0 для первой части, 1 для второй части
 
 // Создание ссылки "Очистить все"
 const clearAllLink = document.createElement('a');
@@ -598,7 +598,6 @@ const selectAllLink = document.createElement('a');
 selectAllLink.href = '#';
 selectAllLink.innerText = 'Выбрать все';
 selectAllLink.className = 'btn-sm btn-primary text-decoration-none ms-1';
-//selectAllLink.style.marginLeft = '10px';
 selectAllLink.addEventListener('click', (event) => {
     event.preventDefault();
     document.querySelectorAll('.wordCheckbox').forEach(checkbox => {
@@ -608,10 +607,51 @@ selectAllLink.addEventListener('click', (event) => {
     updateRecords(); // Обновление записей
 });
 
-// Добавление ссылок в контейнер
+// Создание ссылки "Сортировать"
+const sortLink = document.createElement('a');
+sortLink.href = '#';
+sortLink.innerText = 'Сортировать';
+sortLink.className = 'btn-sm btn-secondary text-decoration-none ms-1';
+sortLink.addEventListener('click', (event) => {
+    event.preventDefault();
+    sortCheckboxes(); // Вызов функции сортировки
+});
+
+// Добавление ссылок в контейнер действий
 actionsDiv.appendChild(clearAllLink);
 actionsDiv.appendChild(selectAllLink);
+actionsDiv.appendChild(sortLink);
 checkboxContainer.appendChild(actionsDiv); // Добавление контейнера с ссылками в `checkboxContainer`
+
+// Функция сортировки чекбоксов
+function sortCheckboxes() {
+    const checkboxes = Array.from(checkboxContainer.querySelectorAll('.form-check'));
+
+    // Сортировка на основе текущего значения sortCriteria
+    checkboxes.sort((a, b) => {
+        const textA = a.querySelector('label').innerText;
+        const textB = b.querySelector('label').innerText;
+
+        // Извлекаем первую и вторую части названия
+        const [wordA, genderA] = textA.split(" ");
+        const [wordB, genderB] = textB.split(" ");
+
+        if (sortCriteria === 0) {
+            // Сортировка по первой части названия
+            return wordA.localeCompare(wordB);
+        } else {
+            // Сортировка по второй части (признак рода)
+            return genderA.localeCompare(genderB);
+        }
+    });
+
+    // Удаляем и вставляем отсортированные чекбоксы
+    checkboxes.forEach(checkbox => checkbox.remove());
+    checkboxes.forEach(checkbox => checkboxContainer.appendChild(checkbox));
+
+    // Переключаем sortCriteria для следующего клика
+    sortCriteria = (sortCriteria + 1) % 2; // Чередование между 0 и 1
+}
 
 // Генерация чекбоксов
 uniqueWords.forEach(word => {
@@ -644,7 +684,6 @@ uniqueWords.forEach(word => {
         updateRecords(); // Обновляем записи при изменении состояния чекбоксов
     });
 });
-
 // Функция для обновления modifiedRecords в зависимости от состояния чекбоксов
 function updateRecords() {
     const selectedWords = Array.from(uniqueWords).filter(word => {

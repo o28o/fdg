@@ -705,7 +705,7 @@ function showAllDeclensions() {
         console.log("Части записи:", parts);
 
         const partOfSpeech = parts[2]; // Часть речи
-        const word = parts[3]; // Слово после пробелов
+        const word = parts[3]; // Слово после пробела
         console.log("Часть речи:", partOfSpeech);
         console.log("Слово:", word);
 
@@ -726,31 +726,89 @@ function showAllDeclensions() {
 
         if (matchingRecords.length > 0) {
             // Заголовок
+            const button = document.createElement("a");
+            button.href = "#";
+            button.className = "highlightMatches text-decoration-none btn-sm btn-primary mb-3";
+            button.textContent = "Выделить";
+            button.onclick = function() {
+                declensionsOutput.classList.toggle("highlighted");
+                highlightDeclensions(); // Перезапуск функции с переключением подсветки
+            };
+            declensionsOutput.insertBefore(button, declensionsOutput.firstChild);
+
             const header = document.createElement("h4");
+            header.className = "mt-3";
             header.textContent = `${word} (${partOfSpeech})`;
             declensionsOutput.appendChild(header);
             
-            // Таблица
-            const table = document.createElement("table");
-            const tbody = document.createElement("tbody");
+            // Создаем объект для хранения склонений по падежам
+            const declensionsByCase = {};
 
             matchingRecords.forEach(record => {
                 const recordParts = record.split(/\s+/);
+                const caseName = recordParts[0]; // Падеж
+                const number = recordParts[1]; // Число
+                const declensionForms = recordParts.slice(5).join(" "); // Слово начиная с 6 позиции
+
+                // Если встречаем "in comps", помещаем его как отдельный падеж
+                if (caseName === "in" && number === "comps") {
+                    if (!declensionsByCase["in comps"]) {
+                        declensionsByCase["in comps"] = { sg: "", pl: "" };
+                    }
+                    declensionsByCase["in comps"].sg += declensionForms + " ";
+                } else {
+                    // Инициализируем объект для падежа, если его нет
+                    if (!declensionsByCase[caseName]) {
+                        declensionsByCase[caseName] = { sg: "", pl: "" };
+                    }
+
+                    // Добавляем форму склонения для соответствующего числа (sg или pl)
+                    if (number === "sg") {
+                        declensionsByCase[caseName].sg += declensionForms + " ";
+                    } else if (number === "pl") {
+                        declensionsByCase[caseName].pl += declensionForms + " ";
+                    }
+                }
+            });
+
+            // Создаем таблицу
+            const table = document.createElement("table");
+            const tbody = document.createElement("tbody");
+
+            // Заголовок таблицы (падежи)
+            const headerRow = document.createElement("tr");
+            const caseHeader = document.createElement("th");
+            caseHeader.textContent = "Падеж";
+            headerRow.appendChild(caseHeader);
+
+            const sgHeader = document.createElement("th");
+            sgHeader.textContent = "sg";
+            headerRow.appendChild(sgHeader);
+
+            const plHeader = document.createElement("th");
+            plHeader.textContent = "pl";
+            headerRow.appendChild(plHeader);
+
+            tbody.appendChild(headerRow);
+
+            // Добавляем строки для каждого падежа
+            Object.keys(declensionsByCase).forEach(caseName => {
                 const row = document.createElement("tr");
 
-                // Добавляем падеж и число
+                // Падеж
                 const caseCell = document.createElement("td");
-                caseCell.textContent = recordParts[0]; // Падеж
+                caseCell.textContent = caseName;
                 row.appendChild(caseCell);
 
-                const numberCell = document.createElement("td");
-                numberCell.textContent = recordParts[1]; // Число
-                row.appendChild(numberCell);
+                // Число sg
+                const sgCell = document.createElement("td");
+                sgCell.textContent = declensionsByCase[caseName].sg.trim();
+                row.appendChild(sgCell);
 
-                // Добавляем слово (начиная с 6 позиции, т.е. index 5)
-                const wordCell = document.createElement("td");
-                wordCell.textContent = recordParts.slice(5).join(" "); // Слово начиная с 6 позиции
-                row.appendChild(wordCell);
+                // Число pl
+                const plCell = document.createElement("td");
+                plCell.textContent = declensionsByCase[caseName].pl.trim();
+                row.appendChild(plCell);
 
                 tbody.appendChild(row);
             });
@@ -758,22 +816,18 @@ function showAllDeclensions() {
             table.appendChild(tbody);
             declensionsOutput.appendChild(table);
 
-// Предположим, что `table` — это ваша таблица
-declensionsOutput.appendChild(table); 
+            // Обрабатываем ячейки таблицы
+            const cells = table.getElementsByTagName("td");
+            for (const cell of cells) {
+                // Проверяем, содержит ли ячейка символ "*"
+                if (cell.textContent.includes("*")) {
+                    // Заменяем "*" на обернутый вариант с классом "text-muted"
+                    cell.innerHTML = cell.innerHTML.replace(/\*/g, '<span class="text-muted">*</span>');
+                }
+            }
 
-// Обходим все ячейки таблицы
-const cells = table.getElementsByTagName("td"); // выбираем все ячейки <td> в таблице
-for (const cell of cells) {
-    // Проверяем, содержит ли ячейка символ "*"
-    if (cell.textContent.includes("*")) {
-        // Заменяем "*" на обернутый вариант с классом "text-muted"
-        cell.innerHTML = cell.innerHTML.replace(/\*/g, '<span class="text-muted">*</span>');
-    }
-}
-    //описание 
-    
-    //<a href="#" class="tableView btn-sm btn-primary ">Вид</a> <a href="#" class="highlightMatches btn-sm btn-primary">Выделить</a>
-    let noteNm = document.createElement("p");
+            // Примечание
+            let noteNm = document.createElement("p");
             noteNm.textContent = `\n* - интересно знать: такая форма именно этого слова\nне встречается в коренных текстах главных редакций канона.`;
             noteNm.className = 'text-muted';
             declensionsOutput.appendChild(noteNm);
@@ -788,7 +842,118 @@ for (const cell of cells) {
     }
     updateDisplay();
 }
-            
+
+let isHighlighted = false; // Переменная для отслеживания состояния подсветки
+
+function highlightDeclensions() {
+    const table = document.getElementById("declensionsOutput").getElementsByTagName("table")[0];
+    const rows = table.getElementsByTagName("tr");
+
+    const wordCount = {}; // Объект для хранения количества повторений каждого слова
+
+    // Собираем количество повторений слов
+    for (const row of rows) {
+        const cells = row.getElementsByTagName("td");
+
+        if (cells.length > 2) {
+            // Сначала обрабатываем вторую колонку (индекс 1)
+            const wordsInSecondColumn = cells[1].textContent.split(/\s+/);
+            wordsInSecondColumn.forEach(word => {
+                if (word) {
+                    const cleanedWord = word.replace(/\*/g, '').trim();
+
+                    if (cleanedWord) {
+                        wordCount[cleanedWord] = (wordCount[cleanedWord] || 0) + 1;
+                    }
+                }
+            });
+
+            // Обрабатываем третью колонку (индекс 2)
+            const wordsInThirdColumn = cells[2].textContent.split(/\s+/);
+            wordsInThirdColumn.forEach(word => {
+                if (word) {
+                    const cleanedWord = word.replace(/\*/g, '').trim();
+
+                    if (cleanedWord) {
+                        wordCount[cleanedWord] = (wordCount[cleanedWord] || 0) + 1;
+                    }
+                }
+            });
+        }
+    }
+
+    // Фильтруем слова, оставляем только те, которые повторяются больше одного раза
+    const filteredWords = Object.entries(wordCount).filter(([word, count]) => count > 1);
+
+    // Сортируем по количеству повторений
+    const sortedWords = filteredWords.sort((a, b) => b[1] - a[1]);
+
+    // Массив цветов для подсветки
+    const colors = [
+        '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#6c757d', 
+        '#28a745', '#17a2b8', '#6610f2', '#e83e8c', '#343a40'
+    ];
+
+    // Контейнер для результатов
+    const resultContainer = document.getElementById("declensionsOutput");
+    const resultList = document.createElement("ul");
+    resultList.className = 'list-unstyled';
+
+    sortedWords.forEach(([word, count], index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${word} - ${count} раз(а)`;
+        listItem.style.color = colors[index % colors.length]; // Назначаем цвет по кругу
+        resultList.appendChild(listItem);
+    });
+
+    // Добавляем или удаляем список из контейнера
+    if (!isHighlighted) {
+        resultContainer.appendChild(resultList);
+    } else {
+        const existingList = resultContainer.querySelector('ul');
+        if (existingList) {
+            resultContainer.removeChild(existingList);
+        }
+    }
+
+    // Обновление подсветки в таблице
+    const tableCells = table.getElementsByTagName("td");
+    Array.from(tableCells).forEach(cell => {
+        let cellText = cell.textContent;
+        const wordsInCell = cellText.split(/\s+/);
+
+        wordsInCell.forEach((word) => {
+            const cleanedWord = word.replace(/\*/g, '').trim();
+            const matchingWord = sortedWords.find(([w]) => w === cleanedWord);
+
+            if (matchingWord && !isHighlighted) {
+                const span = document.createElement("span");
+                span.textContent = word;
+                span.style.color = colors[sortedWords.indexOf(matchingWord) % colors.length];
+
+                // Заменяем слово в ячейке на окрашенное
+                cellText = cellText.replace(word, span.outerHTML);
+            } else if (matchingWord && isHighlighted) {
+                // Убираем цвет (удаляем только цвет, а не другие стили)
+                const span = document.createElement("span");
+                span.textContent = word;
+
+                // Убираем стиль цвета, но сохраняем другие стили
+                span.style.color = ''; // Убираем цвет из инлайн-стиля
+
+                // Заменяем слово в ячейке на стандартное
+                cellText = cellText.replace(word, span.outerHTML);
+            }
+        });
+
+        // Обновляем содержимое ячейки
+        cell.innerHTML = cellText;
+    });
+
+    // Переключаем состояние подсветки
+    isHighlighted = !isHighlighted;
+}  
+
         function updateDisplay() {
             if (document.getElementById("numberOnlyCheckbox").checked) {
                 showNumberOnly(currentIndex);

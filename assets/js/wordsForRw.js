@@ -771,7 +771,9 @@ for (const cell of cells) {
     }
 }
     //описание 
-    const noteNm = document.createElement("p");
+    
+    //<a href="#" class="tableView btn-sm btn-primary ">Вид</a> <a href="#" class="highlightMatches btn-sm btn-primary">Выделить</a>
+    let noteNm = document.createElement("p");
             noteNm.textContent = `\n* - интересно знать: такая форма именно этого слова\nне встречается в коренных текстах главных редакций канона.`;
             noteNm.className = 'text-muted';
             declensionsOutput.appendChild(noteNm);

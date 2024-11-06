@@ -88,11 +88,12 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
   // console.log('ja case ', rootpath, trnpath, htmlpath);
 } else if (slug.match(/bu-pm|bi-pm/)) {
     //let translator = "thanissaro+o";
-    let translator = "thanissaro";
+   // let translator = "thanissaro";
+    let translator = "brahmali";
     texttype === "vinaya";
       let language = "pli";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
-    var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-thanissaro.json`;
+    var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);
 } else {

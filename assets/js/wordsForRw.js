@@ -889,10 +889,11 @@ function highlightDeclensions() {
     const sortedWords = filteredWords.sort((a, b) => b[1] - a[1]);
 
     // Массив цветов для подсветки
-    const colors = [
-        '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#6c757d', 
-        '#28a745', '#17a2b8', '#6610f2', '#e83e8c', '#343a40'
-    ];
+const colors = [
+    '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#6c757d', 
+    '#28a745', '#17a2b8', '#6610f2', '#e83e8c', '#343a40',
+    '#f8d7da', '#c3e6cb', '#f1e7e1', '#f7b1ab', '#d1ecf1'
+];
 
     // Контейнер для результатов
     const resultContainer = document.getElementById("declensionsOutput");

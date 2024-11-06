@@ -5,7 +5,7 @@ const records = [
 "dat    sg      n      dukkha  -       dukkhassa dukkhāya",
 "abl    sg      n      dukkha  -       dukkhamhā dukkhasmā dukkhā",
 "gen    sg      n      dukkha  -       dukkhassa",
-"loc    sg      n      dukkha  -       dukkhamhi* dukkhasmiṃ dukkhe",
+"loc    sg      n      dukkha  -       dukkhasmiṃ dukkhe dukkhamhi*",
 "voc    sg      n      dukkha  -       dukkha dukkhaṃ",
 "in comps       n                dukkha  -       dukkha",
 
@@ -22,7 +22,7 @@ const records = [
 "acc    sg      n       sacca   -       saccaṃ",
 "instr  sg      n       sacca   -       saccena",
 "dat    sg      n       sacca   -       saccassa saccāya*",
-"abl    sg      n       sacca   -       saccamhā* saccasmā* saccā",
+"abl    sg      n       sacca   -       saccā saccamhā* saccasmā*",
 "gen    sg      n       sacca   -       saccassa",
 "loc    sg      n       sacca   -       saccamhi saccasmiṃ sacce",
 "voc    sg      n       sacca   -       sacca saccaṃ",
@@ -85,9 +85,9 @@ const records = [
 "in comps        m               byādhi  -       byādhi",
 "nom    pl      m       byādhi  -       byādhayo byādhī",
 "acc    pl      m       byādhi  -       byādhayo byādhī",
-"instr  pl      m       byādhi  -       byādhibhi* byādhībhi* byādhīhi",
+"instr  pl      m       byādhi  -       byādhīhi byādhibhi* byādhībhi*",
 "dat    pl      m       byādhi  -       byādhinaṃ* byādhīnaṃ*",
-"abl    pl      m       byādhi  -       byādhibhi* byādhībhi* byādhīhi",
+"abl    pl      m       byādhi  -       byādhīhi byādhibhi* byādhībhi*",
 "gen    pl      m       byādhi  -       byādhinaṃ* byādhīnaṃ*",
 "loc    pl      m       byādhi  -       byādhisu* byādhīsu*",
 "voc    pl      m       byādhi  -       byādhayo byādhī",
@@ -98,7 +98,7 @@ const records = [
 "dat    sg      m       yoga    -       yogassa yogāya",
 "abl    sg      m       yoga    -       yogamhā yogasmā* yogā",
 "gen    sg      m       yoga    -       yogassa",
-"loc    sg      m       yoga    -       yogamhi* yogasmiṃ yoge",
+"loc    sg      m       yoga    -       yoge yogasmiṃ yogamhi*",
 "voc    sg      m       yoga    -       yoga",
 "in comps        m               yoga    -       yoga",      
 "nom    pl      m       yoga    -       yogā",
@@ -153,17 +153,17 @@ const records = [
 "acc    sg      m       dhamma  -       dhammaṃ",
 "instr  sg      m       dhamma  -       dhammena",
 "dat    sg      m       dhamma  -       dhammassa dhammāya",
-"abl    sg      m       dhamma  -       dhammamhā* dhammasmā* dhammā",
+"abl    sg      m       dhamma  -       dhammā dhammamhā* dhammasmā*",
 "gen    sg      m       dhamma  -       dhammassa",
-"loc    sg      m       dhamma  -       dhammamhi* dhammasmiṃ dhamme",
+"loc    sg      m       dhamma  -       dhamme dhammasmiṃ dhammamhi*",
 "voc    sg      m       dhamma  -       dhamma",
 "in comps       m                dhamma  -       dhamma",
 
 "nom    pl      m       dhamma  -       dhammā",
 "acc    pl      m       dhamma  -       dhamme",
-"instr  pl      m       dhamma  -       dhammebhi* dhammehi",
+"instr  pl      m       dhamma  -       dhammehi dhammebhi*",
 "dat    pl      m       dhamma  -       dhammānaṃ",
-"abl    pl      m       dhamma  -       dhammebhi* dhammehi",
+"abl    pl      m       dhamma  -       dhammehi dhammebhi*",
 "gen    pl      m       dhamma  -       dhammānaṃ",
 "loc    pl      m       dhamma  -       dhammesu",
 "voc    pl      m       dhamma  -       dhammā",
@@ -233,10 +233,10 @@ const records = [
 "in comps               m       aggi    -       aggi aggī",
 "nom    pl      m       aggi    -       aggayo aggī",
 "acc    pl      m       aggi    -       aggayo aggī",
-"instr  pl      m       aggi    -       aggībhi* aggīhi",
-"dat    pl      m       aggi    -       agginaṃ* aggīnaṃ",
-"abl    pl      m       aggi    -       aggībhi* aggīhi",
-"gen    pl      m       aggi    -       agginaṃ* aggīnaṃ",
+"instr  pl      m       aggi    -       aggīhi aggībhi*",
+"dat    pl      m       aggi    -       aggīnaṃ agginaṃ*",
+"abl    pl      m       aggi    -       aggīhi aggībhi*",
+"gen    pl      m       aggi    -       aggīnaṃ agginaṃ*",
 "loc    pl      m       aggi    -       aggisu* aggīsu*",
 "voc    pl      m       aggi    -       aggayo aggī",
                                                          
@@ -305,9 +305,9 @@ const records = [
 "in comps               n       aṭṭhi   -       aṭṭhi",      
 "nom    pl      n       aṭṭhi   -       aṭṭhī aṭṭhīni",
 "acc    pl      n       aṭṭhi   -       aṭṭhī aṭṭhīni",      
-"instr  pl      n       aṭṭhi   -       aṭṭhibhi* aṭṭhīhi",
+"instr  pl      n       aṭṭhi   -       aṭṭhīhi aṭṭhibhi*",
 "dat    pl      n       aṭṭhi   -       aṭṭhīnaṃ",           
-"abl    pl      n       aṭṭhi   -       aṭṭhibhi* aṭṭhīhi",
+"abl    pl      n       aṭṭhi   -       aṭṭhīhi aṭṭhibhi*",
 "gen    pl      n       aṭṭhi   -       aṭṭhīnaṃ",           
 "loc    pl      n       aṭṭhi   -       aṭṭhisu* aṭṭhīsu*",
 "voc    pl      n       aṭṭhi   -       aṭṭhī aṭṭhīni",
@@ -324,11 +324,11 @@ const records = [
 "nom    pl      m       bhagavant       -       bhagavanto",
 "acc    pl      m       bhagavant       -       bhagavanto bhagavante*",
 "instr  pl      m       bhagavant       -       bhagavantehi*",
-"dat    pl      m       bhagavant       -       bhagavataṃ* bhagavantānaṃ",
+"dat    pl      m       bhagavant       -       bhagavantānaṃ bhagavataṃ*",
 "abl    pl      m       bhagavant       -       bhagavantehi*",
-"gen    pl      m       bhagavant       -       bhagavataṃ* bhagavantānaṃ",
+"gen    pl      m       bhagavant       -       bhagavantānaṃ bhagavataṃ*",
 "loc    pl      m       bhagavant       -       bhagavantesu*",
-"voc    pl      m       bhagavant       -       bhagavantā* bhagavanto",
+"voc    pl      m       bhagavant       -       bhagavanto bhagavantā*",
 
 "nom    sg      m       bhavant       -       bhavaṃ",
 "acc    sg      m       bhavant       -       bhavantaṃ",
@@ -344,15 +344,15 @@ const records = [
 "instr  pl      m       bhavant       -       bhavantehi",
 "dat    pl      m       bhavant       -       bhavataṃ bhavantānaṃ",
 "abl    pl      m       bhavant       -      *",
-"gen    pl      m       bhavant       -       bhagavataṃ* bhagavantānaṃ",
+"gen    pl      m       bhavant       -       bhagavantānaṃ bhagavataṃ*",
 "loc    pl      m       bhavant       -      *",
 "voc    pl      m       bhavant       -       bhonto",
 
 "nom    sg      m       sukhin  -       sukhī",
-"acc    sg      m       sukhin  -       sukhinaṃ* sukhiṃ",
+"acc    sg      m       sukhin  -       sukhiṃ sukhinaṃ*",
 "instr  sg      m       sukhin  -       sukhinā",
 "dat    sg      m       sukhin  -       sukhino sukhissa*",   
-"abl    sg      m       sukhin  -       sukhinā* sukhimhā* sukhismā",
+"abl    sg      m       sukhin  -       sukhismā sukhinā* sukhimhā*",
 "gen    sg      m       sukhin  -       sukhino sukhissa*",
 "loc    sg      m       sukhin  -       sukhini* sukhimhi* sukhismiṃ*",
 "voc    sg      m       sukhin  -       sukhi",
@@ -361,7 +361,7 @@ const records = [
 "acc    pl      m       sukhin  -       sukhino sukhī",
 "instr  pl      m       sukhin  -       sukhīhi",
 "dat    pl      m       sukhin  -       sukhīnaṃ*",
-"abl    pl      m       sukhin  -       sukhibhi* sukhīhi",
+"abl    pl      m       sukhin  -       sukhīhi sukhibhi*",
 "gen    pl      m       sukhin  -       sukhīnaṃ*",
 "loc    pl      m       sukhin  -       sukhīsu*",
 "voc    pl      m       sukhin  -       sukhino sukhī",
@@ -381,7 +381,7 @@ const records = [
 "dat    pl      m       satthar -       satthānaṃ satthārānaṃ satthūnaṃ",
 "abl    pl      m       satthar -       satthārehi* satthubhi*",
 "gen    pl      m       satthar -       satthānaṃ satthārānaṃ satthūnaṃ",
-"loc    pl      m       satthar -       satthāresu* satthūsu",
+"loc    pl      m       satthar -       satthūsu satthāresu*",
 "voc    pl      m       satthar -       satthāro",
 
 "nom    sg      m       gacchant        -       gacchanto gacchaṃ",
@@ -406,7 +406,7 @@ const records = [
 "acc    sg      mn       manas   -       mano manaṃ",
 "instr  sg      mn       manas   -       manasā manena",
 "dat    sg      mn       manas   -       manaso manassa",
-"abl    sg      mn       manas   -       manasā manamhā*  manasmā",
+"abl    sg      mn       manas   -       manasā manamhā* manasmā",
 "gen    sg      mn       manas   -       manaso manassa",
 "loc    sg      mn       manas   -       manasi manamhi manasmiṃ mane",
 "voc    sg      mn       manas   -       mano manaṃ",
@@ -425,18 +425,18 @@ const records = [
 "instr  sg      m       viññū   -       viññunā",
 "dat    sg      m       viññū   -       viññuno*",
 "abl    sg      m       viññū   -       viññunā",
-"gen    sg      m       viññū   -       viññuno* viññussa",
+"gen    sg      m       viññū   -       viññussa viññuno*",
 "loc    sg      m       viññū   -       viññumhi* viññusmiṃ*",
 "voc    sg      m       viññū   -       viññū",
 "in comps               m       viññū   -       viññu viññū",
-"nom    pl      m       viññū   -       viññuno* viññū viññūno*",
-"acc    pl      m       viññū   -       viññuno* viññū viññūno*",
+"nom    pl      m       viññū   -       viññū viññuno* viññūno*",
+"acc    pl      m       viññū   -       viññū viññuno* viññūno*",
 "instr  pl      m       viññū   -       viññūhi",
 "dat    pl      m       viññū   -       viññūnaṃ",
 "abl    pl      m       viññū   -       viññūhi",
 "gen    pl      m       viññū   -       viññūnaṃ",
 "loc    pl      m       viññū   -       viññūsu",
-"voc    pl      m       viññū   -       viññuno* viññū",
+"voc    pl      m       viññū   -       viññū viññuno*",
 
 "nom    sg   m   sīlavant        -       sīlavanto sīlavā",
 "acc    sg   m   sīlavant        -       sīlavantaṃ sīlavaṃ",
@@ -465,7 +465,7 @@ const records = [
 "loc    sg   m   āyasmant        -       āyasmante",
 "voc    sg   m   āyasmant        -       āyasma āyasmā",
 "in comps m āyasmant        -       āyasma āyasmanta",
-"nom    pl  m    āyasmant        -       āyasmanto āyasmantā āyasmā",
+"nom    pl  m    āyasmant        -       āyasmanto āyasmā āyasmantā",
 "acc    pl  m    āyasmant        -       āyasmanto āyasmante",
 "instr  pl  m    āyasmant        -       āyasmantehi",
 "dat    pl  m    āyasmant        -       āyasmantānaṃ",
@@ -714,6 +714,10 @@ function getRandomIndex(max) {
 // Функция для отображения записи
 function showRecord(index) {
     const randomRecord = modifiedRecords[index];
+ //сделать как в словаре   
+ //  const parts = randomRecord.split('-');
+//   let firstPart = parts.split(' ');
+//   let secondPart = parts[1].trim().replace(/\*/g, ''); 
     document.getElementById("randomRecord").textContent = randomRecord.replace(/\*/g, '') || "Не выбрано ни одного слова";
 }
 
@@ -870,7 +874,7 @@ function showAllDeclensions() {
 
             // Примечание
             let noteNm = document.createElement("p");
-            noteNm.textContent = `\n* - интересно знать: такая форма именно этого слова\nне встречается в рангих коренных текстах главных редакций канона.`;
+            noteNm.textContent = `\n* - интересно знать: такая форма именно этого слова\nне встречается в ранних коренных текстах главных редакций канона.`;
             noteNm.className = 'text-muted';
             declensionsOutput.appendChild(noteNm);
 

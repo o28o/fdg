@@ -207,10 +207,9 @@ echo '<!--
        Мнемотехника</a></li>  
        
                   <li>
-         <div class="dropdown-item ">Случайные
-         <a class="text-black" target=""  href="/ru/assets/rd.html">падеж</a>
-         <a class="text-black" target=""  href="/ru/assets/rw.html">слово</a>         
-                   <a class="text-black" target="" href="/ru/assets/rr.html">правило</a>
+         <div class="dropdown-item ">Тренажёр для
+         <a class="text-black" target=""  href="/ru/assets/rw.html">Падежей</a>, для        
+                   <a class="text-black" target="" href="/ru/assets/rr.html">Патимоккхи</a>
                    
        </div>
          </li>     

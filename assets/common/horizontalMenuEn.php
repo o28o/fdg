@@ -193,10 +193,9 @@ echo '<!--
 Memorizer</a></li>    
 
                   <li>
-         <div class="dropdown-item ">Random
-         <a class="text-black" target=""  href="/ru/assets/rd.html">declention</a>
-         <a class="text-black" target=""  href="/ru/assets/rw.html">word</a>                 
-                   <a class="text-black" target="" href="/ru/assets/rr.html">rule</a>
+         <div class="dropdown-item ">Trainer for
+         <a class="text-black" target=""  href="/ru/assets/rw.html">Declentions</a>, for              
+                   <a class="text-black" target="" href="/assets/rr.html">Patimokkha</a>
        </div>
          </li>     
     

@@ -1,9 +1,9 @@
-cat tst | sed "s/in[ \t]comps/inComps/g"  | tr '\t' '\n' | tr ' ' '\n' | grep -v "^sg$" | grep -v "^pl$" | while read line ; do 
+cat tst | sed "s/\*//g" | sed "s/in[ \t]comps/inComps/g"  | sed "s/в[ \t]составе/inComps/g"  |  tr '\t' '\n' | tr ' ' '\n' | grep -v "^sg$" | grep -v "^pl$" | while read line ; do 
 echo -n "$line "
 line=$(echo $line | sed 's/ṃ$/[ṁṃn]/g')
 #line=$(echo $line | sed 's/i$/[iī]/g')
 #line=$(echo $line | sed 's/a$/[aā]/g')
-if [[ $line == "nom" ]] || [[ $line == "acc" ]] || [[ $line == "instr" ]] || [[ $line == "dat" ]] ||  [[ $line == "abl" ]] || [[ $line == "gen" ]] || [[ $line == "loc" ]] || [[ $line == "voc" ]] || [[ $line == "inComps" ]]
+if [[ $line == "nom" ]] || [[ $line == "acc" ]] || [[ $line == "instr" ]] || [[ $line == "dat" ]] ||  [[ $line == "abl" ]] || [[ $line == "gen" ]] || [[ $line == "loc" ]] || [[ $line == "voc" ]] || [[ $line == "inComps" ]] ||  [[ $line == "имен" ]] || [[ $line == "вин" ]] || [[ $line == "твор" ]] || [[ $line == "дат" ]] ||  [[ $line == "отл" ]] || [[ $line == "род" ]] || [[ $line == "мест" ]] || [[ $line == "зват" ]] || [[ $line == "inComps" ]]
 then 
 echo 
 elif grep -qE "$line\b" /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/tipitakaWords* 

@@ -186,11 +186,16 @@ echo '<!--
                    
          <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
          
-         <li><a class="dropdown-item" href="/ru/assets/memo.html">
 
-  <i class="' . $iconimportant . '"></i>
+                      <li>
+<div class="dropdown-item ">
+         <i class="' . $iconimportant . '"></i><a class="text-black" href="/assets/memo.html"> Memorizer</a>
+         <a class="text-black" target=""  href="/sc/memorize.html?q=sn56.11">sn56.11</a> 
+         <a class="text-black" target=""  href="/sc/memorize.html?q=dn22">dn22</a> 
+         <a class="text-black" target=""  href="/sc/memorize.html?q=sn12.2">sn12.2</a>
+       </div>
+         </li>     
 
-Memorizer</a></li>    
 
                   <li>
          <div class="dropdown-item ">Trainer for

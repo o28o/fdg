@@ -201,16 +201,22 @@ echo '<!--
                          
               <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li> 
         
-
-                 <li><a class="dropdown-item" href="/ru/assets/memo.html">
-        <i class="' . $iconimportant . '"></i> 
-       Мнемотехника</a></li>  
+       
+                      <li>
+<div class="dropdown-item ">
+         <i class="' . $iconimportant . '"></i><a class="text-black" href="/ru/assets/memo.html"> Мнемотехника</a>
+         <a class="text-black" target=""  href="/sc/memorize.html?q=sn56.11">sn56.11</a> 
+         <a class="text-black" target=""  href="/sc/memorize.html?q=dn22">dn22</a> 
+         <a class="text-black" target=""  href="/sc/memorize.html?q=sn12.2">sn12.2</a>
+       </div>
+         </li>     
+         
+       
        
                   <li>
-         <div class="dropdown-item ">Тренажёр для
-         <a class="text-black" target=""  href="/ru/assets/grammar/nouns.html">Падежей</a>, для        
-                   <a class="text-black" target="" href="/ru/assets/rr.html">Патимоккхи</a>
-                   
+         <div class="dropdown-item ">Тренажёры: 
+         <a class="text-black" target=""  href="/ru/assets/grammar/nouns.html">Грамматика</a>,         
+                   <a class="text-black" target="" href="/ru/assets/rr.html">Патимоккха</a>
        </div>
          </li>     
       

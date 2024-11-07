@@ -344,7 +344,7 @@ const records = [
 "instr  pl      m       bhavant       -       bhavantehi",
 "dat    pl      m       bhavant       -       bhavataṃ bhavantānaṃ",
 "abl    pl      m       bhavant       -      *",
-"gen    pl      m       bhavant       -       bhagavantānaṃ bhagavataṃ*",
+"gen    pl      m       bhavant       -       bhavataṃ bhavantānaṃ",
 "loc    pl      m       bhavant       -      *",
 "voc    pl      m       bhavant       -       bhonto",
 

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+
+<title>Просклонять заданное слово</title>
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Просклонять заданное слово" />
+<meta property="og:description" content="Трепажер для запоминания падежных окончаний в языке Пали." />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:title" content="Просклонять заданное слово" />
+<meta name="twitter:description" content="Трепажер для запоминания падежных окончаний в языке Пали." />
+
+<!-- Additional Meta Tags -->
+<meta name="description" content="Трепажер для запоминания падежных окончаний в языке Пали." />
+    
+    
+    
+    <!-- Подключение Bootstrap 5 CSS -->
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+    <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="align-items-center align-items-center toggle-switch input-group-append">
+            <div id="" class="input-group">
+                <a href="../../read.php" title="Sutta and Vinaya reading" rel="noreferrer" class="me-1">
+                    <svg fill="#979797" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="26px" viewBox="0 0 547.596 547.596" xml:space="preserve" stroke="#979797"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.285576"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M540.76,254.788L294.506,38.216c-11.475-10.098-30.064-10.098-41.386,0L6.943,254.788 c-11.475,10.098-8.415,18.284,6.885,18.284h75.964v221.773c0,12.087,9.945,22.108,22.108,22.108h92.947V371.067 c0-12.087,9.945-22.108,22.109-22.108h93.865c12.239,0,22.108,9.792,22.108,22.108v145.886h92.947 c12.24,0,22.108-9.945,22.108-22.108v-221.85h75.965C549.021,272.995,552.081,264.886,540.76,254.788z"></path> </g> </g></svg>
+                </a>
+
+                <a href="../../" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
+                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                </a>
+
+                <div class="ms-1 form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="darkSwitch">
+                </div>
+
+                 <a href="/assets/grammar/declentions.html" title="Sutta and Vinaya search" rel="noreferrer" class="me-1 text-decoration-none text-muted">
+         <img width="24px" src="/assets/svg/dice.svg"></img>
+                </a>
+                
+<div class='mt-1 show ms-3' role='alert'><div id='countdown'>05:00</div> 
+<a class='text-muted ms-2' id='playPause'><i class='fa-solid fa-pause'></i></a>
+<a class='text-muted ms-1' id='reset'><i class='fa-solid fa-arrow-rotate-right'></i></a>               
+            </div>
+            
+            
+        </div>
+
+        <h1 class="mt-5 mb-5">Проспрягать или <a href="/assets/grammar/verbs2.html" class="">Определить Спряжение</a> </h1>
+    </div>
+    <div class="container mt-2">
+     <div style="display: none ;" class="form-check">
+            <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
+            <label class="form-check-label" for="numberOnlyCheckbox">
+               Скрыть ответ
+            </label>
+        </div>
+
+        <div style="display: none;" class="form-check">
+            <input class="form-check-input" type="checkbox" id="hideRuleNameCheckbox">
+            <label class="form-check-label" for="hideRuleNameCheckbox">
+                Скрыть только название
+            </label>
+        </div>
+        <button class="btn btn-primary mb-2" id="randomButton">Следующее</button>
+     
+     
+    <button id="showAnswerButton" class="btn btn-primary mb-2">
+        Показать ответ
+    </button>
+
+     
+        <button class="btn btn-secondary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#rangeList">
+            Выбрать Слова
+        </button>
+        
+
+        
+        <div id="rangeList" class="collapse mt-3 mb-2">
+          
+                  <div id="checkboxContainer"></div>
+          
+            <!--            <ul class="list-group">
+                <li class="list-group-item">1 Nom Имен</li>
+                <li class="list-group-item">2 Acc Вин</li>
+                <li class="list-group-item">3 Instr Твор</li>
+                     <li class="list-group-item">4 Dat Дат</li>           
+                <li class="list-group-item">5 Abl Отл</li>
+                <li class="list-group-item">6 Gen Род</li>
+                <li class="list-group-item">7 Loc Местн</li>
+                <li class="list-group-item">8 Voc Зват</li>
+                <li class="list-group-item">Comp Состав</li>            </ul> -->
+        </div>
+   
+       <button class="btn btn-secondary mb-2"  onclick="showAllDeclensions()">Показать спряжения</button>     
+    
+
+            <p class="mt-3 text-center">Проспрягайте</p>
+        <h3 id="randomRecord" class="mt-3 text-center"></h3>
+        
+   <!-- Новый div для отображения склонений -->
+<div id="declensionsContainer" style="margin-top: 20px;">
+
+    <pre id="declensionsOutput"></pre>
+
+</div>           
+        
+    </div>
+
+
+    <script src="/assets/js/wordsForConjugations.js"></script>
+    <script src="/assets/js/memorizeVerbs.js"></script>
+    
+
+
+<script>
+
+</script>
+</script>
+
+    <script>
+  
+     
+     
+       // Ваш список записей echo "" | awk '{print "$0",}' 
+	   // cat tst | awk '{print "\""$1"\t"$2"\t"$3"\t"$4" "$5" "$6"\","}'
+    // Функция для скрытия названия правила
+        function hideRuleName(record) {
+            const parts = record.split('-');
+            if (parts.length >= 2) {
+                return `${parts[0]}\t${parts[1]}\t${parts[2]}\t`;
+            }
+            return "Ошибка в формате записи";
+        }
+
+        // Функция для отображения только номера записи
+        function showNumberOnly(index) {
+            const randomRecord = modifiedRecords[index];
+            const parts = randomRecord.split('-');
+            if (parts.length > 0) {
+                document.getElementById("randomRecord").textContent = parts[0].replace(/\*/g, '');
+            } else {
+                document.getElementById("randomRecord").textContent = "Ошибка в формате записи";
+            }
+        }
+
+        // Функция для обновления отображения в зависимости от состояния чекбоксов
+
+
+
+    </script>
+
+    <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
+    <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+    <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
+        <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
+      <script src="/assets/js/timerW.js"></script>    
+</body>
+</html>

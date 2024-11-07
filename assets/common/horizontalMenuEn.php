@@ -194,7 +194,7 @@ Memorizer</a></li>
 
                   <li>
          <div class="dropdown-item ">Trainer for
-         <a class="text-black" target=""  href="/ru/assets/rw.html">Declentions</a>, for              
+         <a class="text-black" target=""  href="/ru/assets/grammar/nouns.html">Declentions</a>, for              
                    <a class="text-black" target="" href="/assets/rr.html">Patimokkha</a>
        </div>
          </li>     

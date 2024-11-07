@@ -208,7 +208,7 @@ echo '<!--
        
                   <li>
          <div class="dropdown-item ">Тренажёр для
-         <a class="text-black" target=""  href="/ru/assets/rw.html">Падежей</a>, для        
+         <a class="text-black" target=""  href="/ru/assets/grammar/nouns.html">Падежей</a>, для        
                    <a class="text-black" target="" href="/ru/assets/rr.html">Патимоккхи</a>
                    
        </div>

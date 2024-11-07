@@ -1,4 +1,4 @@
-var time_in_seconds = 60;
+var time_in_seconds = 300;
 var countdown = time_in_seconds;
 
 var countdownElement = document.getElementById("countdown");
@@ -21,6 +21,7 @@ var interval = setInterval(function() {
 
 document.getElementById('pause').onclick = pause_clock;
 document.getElementById('resume').onclick = resume_clock;
+document.getElementById('reset').onclick = reset_clock;
 
 function pause_clock() {
     clearInterval(interval);

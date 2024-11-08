@@ -181,15 +181,14 @@ var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slu
   const rootResponse = fetch(rootpath).then(response => response.json());
  const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
-
   const varResponse = fetch(varpath).then(response => response.json())    .
   catch(error => {
  console.log('note:no var found');   
-// console.log(varpath);   
+// console.log(varpath); 
+return {};
   } 
     );
-
-  Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
+Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
     const [paliData, transData, htmlData, varData] = responses;
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
@@ -464,11 +463,16 @@ prevName = prevName.replace(/[0-9.]/g, '');
 
     }
     );
-     
     })
 .catch(error => {
   console.log('error:not found');
-
+  console.log('error:not found');
+  console.log('rootpath', rootpath);
+  console.log('trnpath', trnpath);
+  console.log('rustrnpath', rustrnpath);
+  console.log('htmlpath', htmlpath);
+  console.log('varpath', varpath);
+  
   // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
@@ -480,8 +484,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-
-        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+     window.location.href = "/ru/?q=" + encodeURIComponent(slug);
 
       } else {
         // Обработка ошибки

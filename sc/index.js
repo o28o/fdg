@@ -109,6 +109,7 @@ var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slu
   catch(error => {
  console.log('note:no var found');   
 // console.log(varpath);   
+return {};
   } 
     );
   Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {

@@ -191,6 +191,7 @@ var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slu
   catch(error => {
  console.log('note:no var found');   
 // console.log(varpath);   
+return {};
   } 
     );
     
@@ -519,8 +520,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-              //  window.location.reload(true);
-        window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+     window.location.href = "/ru/?q=" + encodeURIComponent(slug);
 
       } else {
         // Обработка ошибки

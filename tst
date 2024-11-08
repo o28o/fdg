@@ -1,24 +1,24 @@
-pr 3rd	sg	v	karoti	-	karoti
-pr 2nd	sg	v	karoti	-	karosi
-pr 1st	sg	v	karoti	-	karomi
-imp 3rd	sg	v	karoti	-	karotu
-imp 2nd	sg	v	karoti	-	karohi
-imp 1st	sg	v	karoti	-	karomi
-opt 3rd	sg	v	karoti	-	kare kareyya
-opt 2nd	sg	v	karoti	-	kareyyāsi
-opt 1st	sg	v	karoti	-	kareyyāmi
-fut 3rd	sg	v	karoti	-	karissati
-fut 2nd	sg	v	karoti	-	karissasi
-fut 1st	sg	v	karoti	-	karissāmi
-pr 3rd	pl	v	karoti	-	karonti
-pr 2nd	pl	v	karoti	-	karotha
-pr 1st	pl	v	karoti	-	karoma
-imp 3rd	pl	v	karoti	-	karontu
-imp 2nd	pl	v	karoti	-	karotha
-imp 1st	pl	v	karoti	-	karoma
-opt 3rd	pl	v	karoti	-	kareyyuṃ
-opt 2nd	pl	v	karoti	-	kareyyātha
-opt 1st	pl	v	karoti	-	kareyyāma
-fut 3rd	pl	v	karoti	-	karissanti
-fut 2nd	pl	v	karoti	-	karissatha
-fut 1st	pl	v	karoti	-	karissāma
+наст 3	saṅkharoti	saṅkharonti		
+наст 2	saṅkharosi	saṅkharotha		
+наст 1	saṅkharomi	saṅkharoma		
+повелит 3	saṅkharotu	saṅkharontu		
+повелит 2	saṅkhara
+saṅkharohi	saṅkharotha		
+повелит 1	saṅkharomi	saṅkharoma		
+желат 3	saṅkhare
+saṅkhareyya	saṅkhareyyuṃ	saṅkharetha	saṅkhareraṃ
+желат 2	saṅkhare
+saṅkhareyyāsi	saṅkharetha
+saṅkhareyyātha	saṅkharetho
+saṅkhareyyātho	saṅkhareyyavho
+saṅkhareyyāvho
+желат 1	saṅkhare
+saṅkhareyyaṃ
+saṅkhareyyāmi	saṅkharema
+saṅkharemu
+saṅkhareyyāma	saṅkhareyyaṃ	saṅkhareyyāmhe
+буд 3	saṅkharissati	saṅkharissanti	saṅkharissate	saṅkharissante
+saṅkharissare
+буд 2	saṅkharissasi	saṅkharissatha	saṅkharissase	saṅkharissavhe
+буд 1	saṅkharissāmi	saṅkharissāma	saṅkharissaṃ	saṅkharissāmhe
+Формы

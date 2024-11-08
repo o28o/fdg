@@ -194,7 +194,7 @@ const records = [
 "gen    sg      f       mātar   -       mātuyā mātu",
 "loc    sg      f       mātar   -       mātuyā mātari mātuyaṃ*",
 "voc    sg      f       mātar   -       mātā māta",
-"in comps               f       mātar   -       mātu",
+"in comps               f       mātar   -       mātā mātu",
 "nom    pl      f       mātar   -       mātaro",
 "acc    pl      f       mātar   -       mātaro",
 "instr  pl      f       mātar   -       mātūhi*",

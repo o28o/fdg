@@ -7,7 +7,7 @@ const records = [
 "imp 1st        sg      v       karoti  -       karomi",
 "opt 3rd        sg      v       karoti  -       kare kareyya",
 "opt 2nd        sg      v       karoti  -       kareyyāsi",
-"opt 1st        sg      v       karoti  -       kareyyāmi",
+"opt 1st        sg      v       karoti  -       kareyyāmi*",
 "fut 3rd        sg      v       karoti  -       karissati",
 "fut 2nd        sg      v       karoti  -       karissasi",
 "fut 1st        sg      v       karoti  -       karissāmi",
@@ -24,4 +24,3 @@ const records = [
 "fut 2nd        pl      v       karoti  -       karissatha",
 "fut 1st        pl      v       karoti  -       karissāma",
 ];
-

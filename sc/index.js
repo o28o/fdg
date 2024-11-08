@@ -18,8 +18,6 @@ homeButton.addEventListener("click", () => {
   document.location.search = "";
 });
 
-
-
 // pressing enter will "submit" the citation and load
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -100,13 +98,21 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 }
 
+var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
+
   const rootResponse = fetch(rootpath)
     .then(response => response.json());
    
   const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
-  Promise.all([rootResponse, translationResponse, htmlResponse]).then(responses => {
-    const [paliData, transData, htmlData] = responses;
+  const varResponse = fetch(varpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no var found');   
+// console.log(varpath);   
+  } 
+    );
+  Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
+    const [paliData, transData, htmlData, varData] = responses;
 
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
@@ -133,26 +139,37 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 let params = new URLSearchParams(document.location.search);
   let finder = params.get("s");
   //finder = finder.replace(/\\b/g, '');
-  console.log("finder ", finder);
+ // console.log("finder ", finder);
 if (finder && finder.trim() !== "") {
     let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
     paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    
+  if (varData[segment] !== undefined) {  
+   varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+  }    
 }
 
-if (paliData[segment] !== undefined && transData[segment] !== undefined) {
+if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
+${varData[segment].trim()}   
+</span>      
+      </span>
+      <span class="rus-lang" lang="ru">${transData[segment]}
+</span>
+      </span>${closeHtml}\n\n`;
+} else if (paliData[segment] !== undefined && transData[segment] !== undefined ) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="rus-lang" lang="ru">${transData[segment]}</span>
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
 } else if (transData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="rus-lang" lang="ru">' + transData[segment] + '</span></span>' + closeHtml + '\n\n';
 }
-
-
-    });
+});
 
 
 console.log('texttype ' + texttype + ' translator ' + translator);
@@ -361,7 +378,6 @@ prevName = prevName.replace(/[0-9.]/g, '');
     }
     );
     })
-    
     .catch(error => {
   console.log('error:not found');
 
@@ -376,7 +392,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
         // Обработка успешного ответа
         console.log(xhr.responseText);
                 window.location.reload(true);
-        window.location.href = "/?q=" + encodeURIComponent(slug);
+       window.location.href = "/?q=" + encodeURIComponent(slug);
 
       } else {
         // Обработка ошибки

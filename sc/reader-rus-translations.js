@@ -174,15 +174,23 @@ if (vinayaranges.indexOf(slug) !== -1) {
 }
   console.log('vinaya case');
   console.log(trnpath);
-
 }  
+
+var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
 
   const rootResponse = fetch(rootpath).then(response => response.json());
  const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
-  Promise.all([rootResponse, translationResponse, htmlResponse]).then(responses => {
-    const [paliData, transData, htmlData] = responses;
+  const varResponse = fetch(varpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no var found');   
+// console.log(varpath);   
+  } 
+    );
+
+  Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
+    const [paliData, transData, htmlData, varData] = responses;
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
         transData[segment] = "";
@@ -218,12 +226,23 @@ if (finder && finder.trim() !== "") {
     let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
     paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
     transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    
+  if (varData[segment] !== undefined) {  
+   varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+  }        
 }
 
-if (paliData[segment] !== undefined && transData[segment] !== undefined) {
+if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
+${varData[segment].trim()}   
+</span>      
+      </span>
+      <span class="rus-lang" lang="ru">${transData[segment]}
+</span>
+      </span>${closeHtml}\n\n`;
+} else if (paliData[segment] !== undefined && transData[segment] !== undefined) {
 html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span></span>${closeHtml}\n\n`;
-
 } else if (paliData[segment] !== undefined) {
   html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
 } else if (transData[segment] !== undefined) {

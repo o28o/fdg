@@ -140,3 +140,11 @@ margin-left: 6px;
 .column-view .rus-lang:empty  {
   display: none;
 }	
+
+.variant {
+  color: #413123; !important;
+}
+
+.dark .variant {
+  color: #83676a; !important;
+}

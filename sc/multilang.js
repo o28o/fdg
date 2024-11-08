@@ -180,13 +180,22 @@ if (vinayaranges.indexOf(slug) !== -1) {
 
 }  
 
+var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
+
   const rootResponse = fetch(rootpath).then(response => response.json());
  const translationResponse = fetch(trnpath).then(response => response.json());
   const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
-  Promise.all([rootResponse, translationResponse, engtranslationResponse, htmlResponse]).then(responses => {
-    const [paliData, transData, engTransData, htmlData] = responses;
+  const varResponse = fetch(varpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no var found');   
+// console.log(varpath);   
+  } 
+    );
+    
+  Promise.all([rootResponse, translationResponse, engtranslationResponse, htmlResponse, varResponse]).then(responses => {
+    const [paliData, transData, engTransData, htmlData, varData] = responses;
 
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
@@ -210,31 +219,6 @@ anchor = segment;
 }
 
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
-let params = new URLSearchParams(document.location.search);
-  let finder = params.get("s");
- // finder = finder.replace(/\\b/g, '');
-if (finder && finder.trim() !== "") {
-    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-    paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-
-function replaceTextInData(data, segment, regex) {
-    if (typeof data[segment] === 'string') {
-        data[segment] = data[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    } else if (data[segment] === undefined) {
-        console.error(`${segment} is undefined in the data. No replacement performed.`);
-    } else {
-        console.error(`${segment} is not a string in the data. Type: ${typeof data[segment]}`);
-    }
-}
-
-replaceTextInData(transData, segment, regex);
-replaceTextInData(engTransData, segment, regex);
-
-   // engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    
-}
-
-
 
 if (paliData[segment] === undefined) {
   paliData[segment] = "";
@@ -245,9 +229,42 @@ if (transData[segment] === undefined) {
 if (engTransData[segment] === undefined) {
   engTransData[segment] = "";
 }
+
+let params = new URLSearchParams(document.location.search);
+  let finder = params.get("s");
+ //  finder = finder.replace(/\\b/g, '');
+//  finder = finder.replace(/%08/g, '\\b');
+ // console.log(finder);
+   // let finder = decodeURIComponent(params.get("s"));
+
+if (finder && finder.trim() !== "") {
+    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+    paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+  if (varData[segment] !== undefined) {  
+   varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+  }        
+}
+
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
-    if (engTransData[segment] !== transData[segment]) {
+    if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+	  </span>
+<span class="variant pli-lang inputscript-ISOPali" lang="pi">
+${varData[segment].trim()}   
+</span>      
+      <span class="rus-lang" lang="ru">${transData[segment]}<br>
+	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
+		  </span>
+      </span>${closeHtml}\n\n`;
+	  
+	  //	  </span>   --dark-gray2: #9E9E9E;  --light-gray2: #616161;
+//      <span class="eng-lang" lang="en">
+
+    } else if (engTransData[segment] !== transData[segment]) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
@@ -259,7 +276,15 @@ if (engTransData[segment] === undefined) {
 	  //	  </span>   --dark-gray2: #9E9E9E;  --light-gray2: #616161;
 //      <span class="eng-lang" lang="en">
 
-    } else {
+    } else if (varData[segment] !== undefined) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+<span class="variant pli-lang inputscript-ISOPali" lang="pi">
+${varData[segment].trim()}   
+</span>      
+      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      </span>${closeHtml}\n\n`;
+    }  else {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
       <span class="rus-lang" lang="en">${engTransData[segment]}</span>

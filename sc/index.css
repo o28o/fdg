@@ -359,9 +359,9 @@ dt {
   display: none !important;
 }
 
-#sutta.hide-pali p span.eng-lang {
+/* #sutta.hide-pali p span.eng-lang {
   display: inline !important;
-}
+} */
 
 #sutta.hide-pali p {
   margin: 0px 0px 0.8rem 0rem;

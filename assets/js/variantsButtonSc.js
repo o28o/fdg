@@ -2,21 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("DOMContentLoaded: Страница загружена.");
 
   const toggleButton = document.getElementById("toggle-variants");
+  const iconElement = document.querySelector("#toggle-variants i");
 
-  if (!toggleButton) {
-    console.error("Кнопка toggle-variants не найдена на странице.");
+  if (!toggleButton || !iconElement) {
+    console.error("Кнопка или иконка toggle-variants не найдены на странице.");
     return;
   }
 
-  // Сохраненное состояние видимости из localStorage
-  const storedState = localStorage.getItem("variantVisibility");
+  // Получаем сохраненное состояние видимости из localStorage
+  let storedState = localStorage.getItem("variantVisibility") || "visible";
   console.log(`Сохраненное состояние visibility: ${storedState}`);
 
-  // Функция для применения видимости на элементы с классом 'variant'
+  // Функция для установки начального состояния видимости элементов с классом 'variant'
   function applyVisibility() {
     const variantElements = document.querySelectorAll(".variant");
-    console.log(`Применение видимости: Найдено ${variantElements.length} элементов с классом 'variant'`);
+    console.log(`Найдено ${variantElements.length} элементов с классом 'variant'`);
 
+    // Устанавливаем видимость элементов на основе storedState
     variantElements.forEach((el) => {
       if (storedState === "hidden") {
         el.classList.add("hidden-variant");
@@ -26,48 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Элемент видим:", el);
       }
     });
+
+    // Устанавливаем начальную иконку
+    iconElement.classList.remove("fa-eye", "fa-eye-slash");  // Очищаем классы иконки
+    iconElement.classList.add(storedState === "hidden" ? "fa-eye-slash" : "fa-eye");  // Устанавливаем нужный класс
+    console.log("Начальная иконка установлена:", iconElement.className);
   }
 
-  // Вызываем applyVisibility сразу для начальной загрузки
+  // Вызываем applyVisibility сразу после загрузки страницы
   applyVisibility();
 
-  // Настраиваем MutationObserver для отслеживания добавления новых элементов
-  const observer = new MutationObserver((mutations) => {
-    mutations.forEach((mutation) => {
-      mutation.addedNodes.forEach((node) => {
-        if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains("variant")) {
-          console.log("MutationObserver: Найден новый элемент 'variant'", node);
-
-          // Применяем видимость к новому элементу 'variant'
-          if (storedState === "hidden") {
-            node.classList.add("hidden-variant");
-            console.log("Новый элемент скрыт:", node);
-          } else {
-            node.classList.remove("hidden-variant");
-            console.log("Новый элемент видим:", node);
-          }
-        }
-      });
-    });
-  });
-
-  // Наблюдаем за изменениями в дочерних элементах body
-  observer.observe(document.body, { childList: true, subtree: true });
-  console.log("MutationObserver запущен для наблюдения за изменениями в DOM.");
-
-  // Обработчик для кнопки переключения видимости
+  // Обработчик клика для переключения состояния видимости
   toggleButton.addEventListener("click", function () {
     const variantElements = document.querySelectorAll(".variant");
-    if (variantElements.length === 0) {
-      console.warn("Внимание: На момент клика элементов 'variant' не найдено.");
-    } else {
-      const isHidden = variantElements[0].classList.contains("hidden-variant");
-      variantElements.forEach((el) => el.classList.toggle("hidden-variant"));
-      localStorage.setItem("variantVisibility", isHidden ? "visible" : "hidden");
-      console.log(`Состояние видимости переключено. Сейчас: ${isHidden ? "visible" : "hidden"}`);
+    const isCurrentlyHidden = storedState === "hidden";
+    
+    // Переключаем видимость элементов
+    variantElements.forEach((el) => el.classList.toggle("hidden-variant"));
+    
+    // Обновляем storedState и записываем его в localStorage
+    storedState = isCurrentlyHidden ? "visible" : "hidden";
+    localStorage.setItem("variantVisibility", storedState);
+    console.log(`Состояние видимости переключено. Сейчас: ${storedState}`);
 
-    }
+    // Немедленно переключаем иконку
+    iconElement.classList.toggle("fa-eye");
+    iconElement.classList.toggle("fa-eye-slash");
+    console.log("Иконка переключена на:", iconElement.className);
   });
-        document.execCommand('copy');
-              $('#copyPopup').modal('show');
 });

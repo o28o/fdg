@@ -216,16 +216,17 @@ function showAllDeclensions() {
         console.log("Части записи:", parts);
 
         const partOfSpeech = parts[2]; // Часть речи
-        const word = parts[3]; // Слово после пробела
+        const word = parts[3]; // Слово
         console.log("Часть речи:", partOfSpeech);
         console.log("Слово:", word);
 
         // Фильтруем записи для совпадения по части речи и слову
         const matchingRecords = records.filter(record => {
             const recordParts = record.split(/\s+/);
-            const recordKeyWord = recordParts[3];
+            const recordPartOfSpeech = recordParts[2]; // Часть речи
+            const recordKeyWord = recordParts[3]; // Слово
 
-            return recordKeyWord === word && partOfSpeech === recordParts[2];
+            return recordKeyWord === word && partOfSpeech === recordPartOfSpeech;
         });
 
         console.log("Совпадающие записи:", matchingRecords);
@@ -251,14 +252,14 @@ function showAllDeclensions() {
             header.textContent = `${word} (${partOfSpeech})`;
             declensionsOutput.appendChild(header);
 
-            // Группируем по временам и лицам
+            // Группируем по времени и лицам
             const declensionsByTenseAndPerson = {};
 
             matchingRecords.forEach(record => {
                 const recordParts = record.split(/\s+/);
                 const tensePerson = `${recordParts[0]} ${recordParts[1]}`; // Например, "fut 3rd"
-                const number = recordParts[2]; // Число
-                const declensionForms = recordParts.slice(5).join(" ");
+                const number = recordParts[2]; // Число (sg/pl)
+                const declensionForms = recordParts.slice(5).filter(form => form !== "-").join(" "); // Исключаем `-`
 
                 if (!declensionsByTenseAndPerson[tensePerson]) {
                     declensionsByTenseAndPerson[tensePerson] = { sg: "", pl: "" };

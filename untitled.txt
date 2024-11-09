@@ -32,3 +32,47 @@ fut 1st		- karissāma
 мн число наоборот должно.
 
 
+raga raja
+Seyyathāpi nāma suddhaṁ vatthaṁ apagatakāḷakaṁ sammadeva rajanaṁ paṭiggaṇheyya; 
+
+“Yasmiṁ kho, brāhmaṇa, samaye kāmarāgapariyuṭṭhitena cetasā viharati kāmarāgaparetena, uppannassa ca kāmarāgassa nissaraṇaṁ yathābhūtaṁ nappajānāti, attatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, paratthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati, ubhayatthampi tasmiṁ samaye yathābhūtaṁ na jānāti na passati; dīgharattaṁ sajjhāyakatāpi mantā nappaṭibhanti, pageva asajjhāyakatā. 
+
+Seyyathāpi, brāhmaṇa, udapatto saṁsaṭṭho lākhāya vā haliddiyā vā nīliyā vā mañjiṭṭhāya vā. 
+Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ na jāneyya na passeyya. 
+
+
+Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne āyasmato koṇḍaññassa virajaṁ vītamalaṁ dhammacakkhuṁ udapādi: 
+
+
+переключат
+
+почемк то в таком случае раюотает
+
+<header><ul><li class="division"><span id="0.1"><span class="pli-lang inputscript-ISOPali" lang="pi">Saṁyutta Nikāya 55.46<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=sn55.46#0.1')">&nbsp;</a></span><span class="rus-lang" lang="ru">Linked Discourses 55.46 </span></span></li>
+
+<li><span id="0.2"><span class="pli-lang inputscript-ISOPali" lang="pi">5. Sagāthakapuññābhisandavagga<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=sn55.46#0.2')">&nbsp;</a></span><span class="rus-lang" lang="ru">5. Overflowing Merit, With Verses </span></span></li></ul>
+
+<h1 class="sutta-title"><span id="0.3">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">Suddhakasutta<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=sn55.46#0.3')">&nbsp;</a>
+      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
+Suddhakasutta → bhikkhū or suddhaka (pts1ed)   
+</span>      
+      </span>
+      <span class="rus-lang" lang="ru">Plain Version 
+</span>
+      </span></h1></header>
+      
+      
+      а в таком - нет
+      
+<span id="1.1.6">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">Itiha te ubho ācariyantevāsī aññamaññassa ujuvipaccanīkavādā bhagavantaṁ piṭṭhito piṭṭhito anubandhā honti bhikkhusaṅghañca.<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=Dn1#1.1.6')">&nbsp;</a>
+      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
+anubandhā → anubaddhā (bj, pts1ed)   
+</span>      
+      </span>
+      <span class="rus-lang" lang="ru">Так оба они, учитель и ученик, говоря друг другу прямо противоположное, шаг за шагом следовали за Благостным и толпой монахов. 
+</span>
+      </span>
+      
+      

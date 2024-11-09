@@ -1,0 +1,34 @@
+так выглядит ориг таблица для сущ
+
+bhikkhunī (f)
+sg	pl
+nom	bhikkhunī	bhikkhuniyo bhikkhunī
+acc	bhikkhuniṃ	bhikkhuniyo bhikkhunī
+instr	bhikkhuniyā	bhikkhunīhi bhikkhunībhi*
+dat	bhikkhuniyā	bhikkhunīnaṃ
+abl	bhikkhuniyā	bhikkhunīhi bhikkhunībhi*
+gen	bhikkhuniyā	bhikkhunīnaṃ
+loc	bhikkhuniyā bhikkhuniyaṃ*	bhikkhunīsu
+voc	bhikkhuni bhikkhunī	bhikkhuniyo bhikkhunī
+in comps	bhikkhuni bhikkhunī	
+
+
+а так для глагола которя сделана па основе кода для существительного
+
+pr 3rd		- karonti
+pr 2nd		- karotha
+pr 1st		- karoma
+imp 3rd		- karontu
+imp 2nd		- karotha
+imp 1st		- karoma
+opt 3rd		- kareyyuṃ
+opt 2nd		- kareyyātha
+opt 1st		- kareyyāma
+fut 3rd		- karissanti
+fut 2nd		- karissatha
+fut 1st		- karissāma
+
+там чтото сбито, - не должно попажать в данные, а 
+мн число наоборот должно.
+
+

@@ -220,80 +220,67 @@ function showAllDeclensions() {
         console.log("Часть речи:", partOfSpeech);
         console.log("Слово:", word);
 
-        // Ищем общее слово (до знака '-') из записей records
+        // Фильтруем записи для совпадения по части речи и слову
         const matchingRecords = records.filter(record => {
             const recordParts = record.split(/\s+/);
-            const recordKeyWord = recordParts[3]; // Слово до знака '-'
+            const recordKeyWord = recordParts[3];
 
-            // Ищем только если запись содержит '-' и если слово до него совпадает
             return recordKeyWord === word && partOfSpeech === recordParts[2];
         });
 
         console.log("Совпадающие записи:", matchingRecords);
 
-        // Создаем заголовок и таблицу
         const declensionsOutput = document.getElementById("declensionsOutput");
         declensionsOutput.innerHTML = ''; // Очищаем предыдущее содержимое
 
         if (matchingRecords.length > 0) {
-            // Заголовок
+            // Кнопка для выделения
             const button = document.createElement("a");
             button.href = "#";
             button.className = "highlightMatches text-decoration-none btn-sm btn-primary mb-3";
             button.textContent = "Выделить";
             button.onclick = function() {
                 declensionsOutput.classList.toggle("highlighted");
-                highlightDeclensions(); // Перезапуск функции с переключением подсветки
+                highlightDeclensions();
             };
             declensionsOutput.insertBefore(button, declensionsOutput.firstChild);
 
+            // Заголовок
             const header = document.createElement("h4");
             header.className = "mt-3";
             header.textContent = `${word} (${partOfSpeech})`;
             declensionsOutput.appendChild(header);
-            
-            // Создаем объект для хранения склонений по падежам
-            const declensionsByCase = {};
+
+            // Группируем по временам и лицам
+            const declensionsByTenseAndPerson = {};
 
             matchingRecords.forEach(record => {
                 const recordParts = record.split(/\s+/);
-                const caseName = recordParts[0]; // Падеж
-                const number = recordParts[1]; // Число
-                const declensionForms = recordParts.slice(5).join(" "); // Слово начиная с 6 позиции
+                const tensePerson = `${recordParts[0]} ${recordParts[1]}`; // Например, "fut 3rd"
+                const number = recordParts[2]; // Число
+                const declensionForms = recordParts.slice(5).join(" ");
 
-                // Если встречаем "in comps", помещаем его как отдельный падеж
-                if (caseName === "in" && number === "comps") {
-                    if (!declensionsByCase["in comps"]) {
-                        declensionsByCase["in comps"] = { sg: "", pl: "" };
-                    }
-                    declensionsByCase["in comps"].sg += declensionForms + " ";
-                } else {
-                    // Инициализируем объект для падежа, если его нет
-                    if (!declensionsByCase[caseName]) {
-                        declensionsByCase[caseName] = { sg: "", pl: "" };
-                    }
+                if (!declensionsByTenseAndPerson[tensePerson]) {
+                    declensionsByTenseAndPerson[tensePerson] = { sg: "", pl: "" };
+                }
 
-                    // Добавляем форму склонения для соответствующего числа (sg или pl)
-                    if (number === "sg") {
-                        declensionsByCase[caseName].sg += declensionForms + " ";
-                    } else if (number === "pl") {
-                        declensionsByCase[caseName].pl += declensionForms + " ";
-                    }
+                // Добавляем форму склонения для соответствующего числа
+                if (number === "sg") {
+                    declensionsByTenseAndPerson[tensePerson].sg += declensionForms + " ";
+                } else if (number === "pl") {
+                    declensionsByTenseAndPerson[tensePerson].pl += declensionForms + " ";
                 }
             });
 
-            // Создаем таблицу
+            // Создаём таблицу
             const table = document.createElement("table");
-//table.classList.add("table", "table-bordered"); // Добавляем классы Bootstrap            
             const tbody = document.createElement("tbody");
 
-
-
-            // Заголовок таблицы (падежи)
+            // Заголовок таблицы (лица и времена)
             const headerRow = document.createElement("tr");
-            const caseHeader = document.createElement("th");
-            caseHeader.textContent = "";
-            headerRow.appendChild(caseHeader);
+            const tensePersonHeader = document.createElement("th");
+            tensePersonHeader.textContent = "";
+            headerRow.appendChild(tensePersonHeader);
 
             const sgHeader = document.createElement("th");
             sgHeader.textContent = "sg";
@@ -305,23 +292,23 @@ function showAllDeclensions() {
 
             tbody.appendChild(headerRow);
 
-            // Добавляем строки для каждого падежа
-            Object.keys(declensionsByCase).forEach(caseName => {
+            // Добавляем строки для каждого времени и лица
+            Object.keys(declensionsByTenseAndPerson).forEach(tensePerson => {
                 const row = document.createElement("tr");
 
-                // Падеж
-                const caseCell = document.createElement("td");
-                caseCell.textContent = caseName;
-                row.appendChild(caseCell);
+                // Время и лицо
+                const tensePersonCell = document.createElement("td");
+                tensePersonCell.textContent = tensePerson;
+                row.appendChild(tensePersonCell);
 
-                // Число sg
+                // Единственное число (sg)
                 const sgCell = document.createElement("td");
-                sgCell.textContent = declensionsByCase[caseName].sg.trim();
+                sgCell.textContent = declensionsByTenseAndPerson[tensePerson].sg.trim();
                 row.appendChild(sgCell);
 
-                // Число pl
+                // Множественное число (pl)
                 const plCell = document.createElement("td");
-                plCell.textContent = declensionsByCase[caseName].pl.trim();
+                plCell.textContent = declensionsByTenseAndPerson[tensePerson].pl.trim();
                 row.appendChild(plCell);
 
                 tbody.appendChild(row);
@@ -330,12 +317,10 @@ function showAllDeclensions() {
             table.appendChild(tbody);
             declensionsOutput.appendChild(table);
 
-            // Обрабатываем ячейки таблицы
+            // Обрабатываем ячейки таблицы для символов "*"
             const cells = table.getElementsByTagName("td");
             for (const cell of cells) {
-                // Проверяем, содержит ли ячейка символ "*"
                 if (cell.textContent.includes("*")) {
-                    // Заменяем "*" на обернутый вариант с классом "text-muted"
                     cell.innerHTML = cell.innerHTML.replace(/\*/g, '<span class="text-muted">*</span>');
                 }
             }

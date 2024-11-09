@@ -748,3 +748,23 @@ abbreviations.forEach(book => {
   });
 });
 
+function handleVariantVisibility() {
+  const toggleButton = document.getElementById("toggle-variants");
+  const variantElements = document.querySelectorAll(".variant");
+
+  if (!toggleButton || variantElements.length === 0) return;
+
+  const storedState = localStorage.getItem("variantVisibility");
+
+  // Применяем сохраненное состояние при загрузке
+  if (storedState === "hidden") {
+    variantElements.forEach((el) => el.classList.add("hidden-variant"));
+  }
+
+  // Добавляем обработчик клика для переключения видимости
+  toggleButton.addEventListener("click", function () {
+    const isHidden = variantElements[0].classList.contains("hidden-variant");
+    variantElements.forEach((el) => el.classList.toggle("hidden-variant"));
+    localStorage.setItem("variantVisibility", isHidden ? "visible" : "hidden");
+  });
+}

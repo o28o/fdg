@@ -26,75 +26,9 @@
     <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
-            <a class="navbar-brand mobile-center" href="/ru"> <div class="container">
-              
-              
-    <!--    <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/gray-white.png"  style="width:50px;"></a>
-   
-   -->
-   <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
-
-            
-                <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-Меню
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                
-       <span class="navbar-text mt-2">
-      <br>  
-      <a class="nav-link" href="../../read.php">Чтение</a><br>
-      <a class="nav-link" href="../../">Поиск</a><br>
-      <a class="nav-link" href="/sc/memorize.html">Запоминание</a><br><br>      
-      Существительные
-      </span>                 
-                    <ul class="list-unstyled text-decoration-none">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/assets/grammar/declentions.html">Склонения</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/assets/grammar/nouns.html">Склонять</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/assets/grammar/nouns2.html">Определять склонение</a>
-                    </li>
-
-                </ul>
-       <span class="navbar-text mt-2">
-        Глаголы
-      </span>                 
-                    <ul class="list-unstyled text-decoration-none">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/assets/grammar/verbs.html">Спрягать</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/assets/grammar/verbs2.html">Определять спряжение</a>
-                    </li>
-                </ul>     
- <span class="navbar-text mt-2">Местоимения</span>
-<ul class="list-unstyled text-decoration-none">
-    <li class="nav-item">
-        <a class="nav-link" href="/assets/grammar/pronouns.html">Определение и примеры</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/assets/grammar/pronouns_declension.html">Склонения местоимений</a>
-    </li>
-</ul>               
-                
- <span class="navbar-text mt-2">Числительные</span>
-<ul class="list-unstyled text-decoration-none">
-    <li class="nav-item">
-        <a class="nav-link" href="/assets/grammar/numerals.html">Типы числительных</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="/assets/grammar/numerals_declension.html">Склонения числительных</a>
-    </li>
-</ul>               
-                </div>
-            </div>
-        </nav>  
+    <!-- Контейнер для меню -->
+    <div id="menu-container"></div>
+    
     <div class="container mt-5">
         <div class="align-items-center align-items-center toggle-switch input-group-append">
             <div id="" class="input-group">
@@ -124,6 +58,8 @@
 
         <h1 class="mt-5 mb-5">Проспрягать или <a href="/assets/grammar/verbs2.html" class="">Определить Спряжение</a> </h1>
     </div>
+    </div>
+        <div class="container">
     <div class="container mt-2">
      <div style="display: none ;" class="form-check">
             <input class="form-check-input" type="checkbox" id="numberOnlyCheckbox">
@@ -184,8 +120,8 @@
     </div>
 
 </div>
-    <script src="/assets/js/wordsForConjugations.js"></script>
-    <script src="/assets/js/memorizeVerbs.js"></script>
+    <script src="/assets/js/grammar/wordsForConjugations.js"></script>
+    <script src="/assets/js/grammar/memorizeVerbs.js"></script>
     
 
 
@@ -225,11 +161,12 @@
 
 
     </script>
-
+    <!-- Подключаем скрипт меню -->
+    <script src="/assets/js/grammar/menu.js"></script>
     <!-- Подключение Bootstrap 5 JS (необходим для работы кнопки и collapse) -->
     <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
     <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
         <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
-      <script src="/assets/js/timerW.js"></script>    
+      <script src="/assets/js/grammar/timerW.js"></script>    
 </body>
 </html>

@@ -142,9 +142,13 @@ margin-left: 6px;
 }	
 
 .variant {
-  color: #413123; !important;
+  color: #95796b !important;
 }
 
 .dark .variant {
-  color: #83676a; !important;
+  color: #83676a !important;
+}
+
+.hidden-variant {
+  display: none !important;
 }

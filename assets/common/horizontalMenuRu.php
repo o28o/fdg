@@ -138,12 +138,6 @@ echo '<!--
 </a>
 
 <!--
-<a class="text-decoration-none mx-1" href="/ru/dpd">
-<figure class="figure">
-<i class="menu-icon icon-item fa-solid fa-spell-check"></i>
-<figcaption class="horiz-menu-item figure-caption text-center">Словарь</figcaption>   
-</figure>	  
-</a>
 
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
@@ -292,7 +286,10 @@ echo '<!--
        </div>
          </li>   
   
-   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Словари на Gandhari.org</a></li>     
+   <li><a class="dropdown-item" target="_blank" href="https://gandhari.org/dop">Словари на Gandhari.org</a></li>    
+   <li><a class="dropdown-item" target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/">Словарь "Rhys Davids" PTS</a></li>       
+
+
   <li><a class="dropdown-item" target="_blank" href="http://dictionary.tamilcube.com/pali-dictionary.aspx">Англ-Пали Словарь</a></li>
   
       <li>

@@ -152,3 +152,11 @@ margin-left: 6px;
 .hidden-variant {
   display: none !important;
 }
+
+#language-button-dummy {
+  border-radius: 32px !important;
+  /*position: absolute;
+  right: 10px;
+  top: 20px;*/
+  padding: 5px; 
+}

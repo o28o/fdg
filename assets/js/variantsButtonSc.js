@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOMContentLoaded: Страница загружена.");
+ // console.log("DOMContentLoaded: Страница загружена.");
 
   const toggleButton = document.getElementById("toggle-variants");
   const iconImage = toggleButton.querySelector("img");
@@ -18,18 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Функция для установки начального состояния видимости элементов с классом 'variant'
   function applyVisibility() {
     const variantElements = document.querySelectorAll(".variant");
-    console.log(`Найдено ${variantElements.length} элементов с классом 'variant'`);
+  //  console.log(`Найдено ${variantElements.length} элементов с классом 'variant'`);
 
     // Устанавливаем видимость элементов на основе storedState
     variantElements.forEach((el) => {
       if (storedState === "hidden") {
         el.classList.add("hidden-variant");
            iconImage.setAttribute("src", eyeSlashIcon); 
-        console.log("Элемент скрыт:", el);
+     //   console.log("Элемент скрыт:", el);
       } else {
         el.classList.remove("hidden-variant");
       iconImage.setAttribute("src", eyeIcon);
-        console.log("Элемент видим:", el);
+     //   console.log("Элемент видим:", el);
       }
     });
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (iconImage) {
       iconImage.classList.remove("fa-eye", "fa-eye-slash");  // Сбрасываем старые классы
       iconImage.classList.add(storedState === "hidden" ? "fa-eye-slash" : "fa-eye");  // Устанавливаем нужный класс иконки
-      console.log("Начальная иконка установлена:", iconImage.className);
+  //    console.log("Начальная иконка установлена:", iconImage.className);
     }
   }
 
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Переключаем состояние storedState и сохраняем его в localStorage
       storedState = storedState === "hidden" ? "visible" : "hidden";
       localStorage.setItem("variantVisibility", storedState);
-      console.log(`Состояние видимости переключено. Теперь: ${storedState}`);
+   //   console.log(`Состояние видимости переключено. Теперь: ${storedState}`);
 
 
   // Устанавливаем начальное состояние иконки на основе storedState
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Добавляем MutationObserver для отслеживания изменений в DOM (добавление новых элементов)
   const observer = new MutationObserver(function () {
     const variantElements = document.querySelectorAll(".variant");
-    console.log(`Найдено ${variantElements.length} элементов с классом 'variant'`);
+ //   console.log(`Найдено ${variantElements.length} элементов с классом 'variant'`);
 
     // Применяем видимость сразу после изменения DOM
     applyVisibility();

@@ -30,7 +30,7 @@ const menuTemplate = `
                         <a class="nav-link" href="/assets/grammar/nouns.html">Склонять</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/assets/grammar/nouns2.html">Определять склонение</a>
+                        <a class="nav-link" href="/assets/grammar/nouns2.html">Определить склонение</a>
                     </li>
 
                 </ul>
@@ -42,16 +42,16 @@ const menuTemplate = `
                         <a class="nav-link" href="/assets/grammar/verbs.html">Спрягать</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/assets/grammar/verbs2.html">Определять спряжение</a>
+                        <a class="nav-link" href="/assets/grammar/verbs2.html">Определить спряжение</a>
                     </li>
                 </ul>     
  <span class="navbar-text mt-2">Местоимения</span>
 <ul class="list-unstyled text-decoration-none">
     <li class="nav-item">
-        <a class="nav-link" href="/assets/grammar/pronouns.html">Определение и примеры</a>
+        <a class="nav-link" href="/assets/grammar/pronouns.html">Склонять</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/assets/grammar/pronouns_declension.html">Склонения местоимений</a>
+        <a class="nav-link" href="/assets/grammar/pronouns2.html">Определить склонение</a>
     </li>
 </ul>               
                 

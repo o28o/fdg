@@ -50,7 +50,7 @@ else
 booknumber=$(echo $suttaname | sed -E 's/\..*//')
     nikaya=$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
 fi
-newfn=$(echo $file | sed 's/_.*/_puriso_pali.mp3/g')
+newfn=$(echo $file | sed 's/_.*/_pi_puriso.mp3/g')
 mv "$file" $(echo $file | sed 's/_.*/_puriso_pali.mp3/g') >/dev/null 2>&1
 
 mv $newfn $audioDestdir/$nikaya/$booknumber/

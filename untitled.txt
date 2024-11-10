@@ -44,35 +44,135 @@ Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ
 Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne āyasmato koṇḍaññassa virajaṁ vītamalaṁ dhammacakkhuṁ udapādi: 
 
 
-переключат
+for i in `find . -name "*puriso_pali*"`
+do 
+newfn=$(echo $i | sed 's/_.*/_pi_puriso.mp3/g')
+echo mv  $i $newfn
+done
+      
 
-почемк то в таком случае раюотает
+        if (matchingRecords.length > 0) {
+            // Заголовок
+            const button = document.createElement("a");
+            button.href = "#";
+            button.className = "highlightMatches text-decoration-none btn-sm btn-primary mb-3";
+            button.textContent = "Выделить";
+            button.onclick = function() {
+                declensionsOutput.classList.toggle("highlighted");
+                highlightDeclensions(); // Перезапуск функции с переключением подсветки
+            };
+            declensionsOutput.insertBefore(button, declensionsOutput.firstChild);
+            
+function highlightDeclensions() {
+    const table = document.getElementById("declensionsOutput").getElementsByTagName("table")[0];
+    const rows = table.getElementsByTagName("tr");
 
-<header><ul><li class="division"><span id="0.1"><span class="pli-lang inputscript-ISOPali" lang="pi">Saṁyutta Nikāya 55.46<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=sn55.46#0.1')">&nbsp;</a></span><span class="rus-lang" lang="ru">Linked Discourses 55.46 </span></span></li>
+    console.log("highlightDeclensions: Начало выполнения");
+    
+    const wordCount = {}; // Объект для хранения количества повторений каждого слова
 
-<li><span id="0.2"><span class="pli-lang inputscript-ISOPali" lang="pi">5. Sagāthakapuññābhisandavagga<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=sn55.46#0.2')">&nbsp;</a></span><span class="rus-lang" lang="ru">5. Overflowing Merit, With Verses </span></span></li></ul>
+    // Собираем количество повторений слов
+    for (const row of rows) {
+        const cells = row.getElementsByTagName("td");
 
-<h1 class="sutta-title"><span id="0.3">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">Suddhakasutta<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=sn55.46#0.3')">&nbsp;</a>
-      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-Suddhakasutta → bhikkhū or suddhaka (pts1ed)   
-</span>      
-      </span>
-      <span class="rus-lang" lang="ru">Plain Version 
-</span>
-      </span></h1></header>
-      
-      
-      а в таком - нет
-      
-<span id="1.1.6">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">Itiha te ubho ācariyantevāsī aññamaññassa ujuvipaccanīkavādā bhagavantaṁ piṭṭhito piṭṭhito anubandhā honti bhikkhusaṅghañca.<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('http://127.0.0.1:8080/ru/sc/?q=Dn1#1.1.6')">&nbsp;</a>
-      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
-anubandhā → anubaddhā (bj, pts1ed)   
-</span>      
-      </span>
-      <span class="rus-lang" lang="ru">Так оба они, учитель и ученик, говоря друг другу прямо противоположное, шаг за шагом следовали за Благостным и толпой монахов. 
-</span>
-      </span>
-      
-      
+        if (cells.length > 2) {
+            // Обработка второй колонки (индекс 1)
+            const wordsInSecondColumn = cells[1].textContent.split(/\s+/);
+            wordsInSecondColumn.forEach(word => {
+                if (word) {
+                    const cleanedWord = word.replace(/\*/g, '').trim();
+                    if (cleanedWord) {
+                        wordCount[cleanedWord] = (wordCount[cleanedWord] || 0) + 1;
+                    }
+                }
+            });
+
+            // Обработка третьей колонки (индекс 2)
+            const wordsInThirdColumn = cells[2].textContent.split(/\s+/);
+            wordsInThirdColumn.forEach(word => {
+                if (word) {
+                    const cleanedWord = word.replace(/\*/g, '').trim();
+                    if (cleanedWord) {
+                        wordCount[cleanedWord] = (wordCount[cleanedWord] || 0) + 1;
+                    }
+                }
+            });
+        }
+    }
+
+    console.log("highlightDeclensions: Счёт слов", wordCount);
+
+    // Фильтруем слова, оставляем только те, которые повторяются больше одного раза
+    const filteredWords = Object.entries(wordCount).filter(([word, count]) => count > 1);
+    console.log("highlightDeclensions: Фильтрованные слова", filteredWords);
+
+    // Сортируем по количеству повторений
+    const sortedWords = filteredWords.sort((a, b) => b[1] - a[1]);
+    console.log("highlightDeclensions: Отсортированные слова", sortedWords);
+
+    // Массив цветов для подсветки
+    const colors = [
+        '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#28a745', 
+        '#17a2b8', '#6610f2', '#e83e8c', '#f7b1ab', '#d1ecf1',
+        '#c3e6cb', '#f1e7e1', '#343a40','#f8d7da','#6c757d'
+    ];
+
+    // Контейнер для результатов
+    const resultContainer = document.getElementById("declensionsOutput");
+    const resultList = document.createElement("ul");
+    resultList.className = 'list-unstyled';
+
+    sortedWords.forEach(([word, count], index) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${word} - ${count} раз(а)`;
+        listItem.style.color = colors[index % colors.length];
+        resultList.appendChild(listItem);
+    });
+
+    // Добавляем или удаляем список из контейнера
+    if (!resultContainer.classList.contains("highlighted")) {
+        resultContainer.appendChild(resultList);
+        console.log("highlightDeclensions: Добавлен список повторяющихся слов");
+    } else {
+        const existingList = resultContainer.querySelector('ul');
+        if (existingList) {
+            resultContainer.removeChild(existingList);
+            console.log("highlightDeclensions: Удалён список повторяющихся слов");
+        }
+    }
+
+    // Обновление подсветки в таблице
+    const tableCells = table.getElementsByTagName("td");
+    Array.from(tableCells).forEach(cell => {
+        let cellText = cell.textContent;
+        const wordsInCell = cellText.split(/\s+/);
+
+        wordsInCell.forEach((word) => {
+            const cleanedWord = word.replace(/\*/g, '').trim();
+            const matchingWord = sortedWords.find(([w]) => w === cleanedWord);
+
+            if (matchingWord && !resultContainer.classList.contains("highlighted")) {
+                const span = document.createElement("span");
+                span.textContent = word;
+                span.style.color = colors[sortedWords.indexOf(matchingWord) % colors.length];
+                cellText = cellText.replace(word, span.outerHTML);
+            } else if (matchingWord && resultContainer.classList.contains("highlighted")) {
+                const span = document.createElement("span");
+                span.textContent = word;
+                span.style.color = ''; 
+                cellText = cellText.replace(word, span.outerHTML);
+            }
+        });
+
+        cell.innerHTML = cellText;
+    });
+
+    // Переключаем состояние подсветки
+    resultContainer.classList.toggle("highlighted");
+    const isHighlighted = resultContainer.classList.contains("highlighted");
+    console.log("highlightDeclensions: Состояние подсветки", isHighlighted);
+
+    // Сохраняем состояние в localStorage
+    localStorage.setItem("isHighlighted", isHighlighted ? "true" : "false");
+    console.log("highlightDeclensions: Состояние подсветки сохранено в localStorage", isHighlighted);
+}

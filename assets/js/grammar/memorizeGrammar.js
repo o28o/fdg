@@ -208,6 +208,14 @@ document.getElementById("showAnswerButton").addEventListener("click", () => {
 
 function showAllDeclensions() {
     const currentRecord = document.getElementById("randomRecord").textContent;
+    
+    const isHighlightedStored = localStorage.getItem("isHighlighted") === "true";
+         // Устанавливаем начальное состояние подсветки
+    if (isHighlightedStored) {
+        declensionsOutput.classList.add("highlighted");
+        highlightDeclensions();    
+}    
+    
 
     console.log("Текущая запись:", currentRecord);
 
@@ -354,15 +362,20 @@ function showAllDeclensions() {
         const declensionsContainer = document.getElementById("declensionsContainer");
         declensionsContainer.style.display = (declensionsContainer.style.display === "none") ? "block" : "none";
     }
+
     updateDisplay();
+
 }
 
-let isHighlighted = false; // Переменная для отслеживания состояния подсветки
+let isHighlighted = localStorage.getItem("isHighlighted") === "true";
+//let isHighlighted = false; // Переменная для отслеживания состояния подсветки
 
 function highlightDeclensions() {
     const table = document.getElementById("declensionsOutput").getElementsByTagName("table")[0];
     const rows = table.getElementsByTagName("tr");
 
+    console.log("highlightDeclensions: Начало выполнения");
+    
     const wordCount = {}; // Объект для хранения количества повторений каждого слова
 
     // Собираем количество повторений слов
@@ -370,24 +383,22 @@ function highlightDeclensions() {
         const cells = row.getElementsByTagName("td");
 
         if (cells.length > 2) {
-            // Сначала обрабатываем вторую колонку (индекс 1)
+            // Обработка второй колонки (индекс 1)
             const wordsInSecondColumn = cells[1].textContent.split(/\s+/);
             wordsInSecondColumn.forEach(word => {
                 if (word) {
                     const cleanedWord = word.replace(/\*/g, '').trim();
-
                     if (cleanedWord) {
                         wordCount[cleanedWord] = (wordCount[cleanedWord] || 0) + 1;
                     }
                 }
             });
 
-            // Обрабатываем третью колонку (индекс 2)
+            // Обработка третьей колонки (индекс 2)
             const wordsInThirdColumn = cells[2].textContent.split(/\s+/);
             wordsInThirdColumn.forEach(word => {
                 if (word) {
                     const cleanedWord = word.replace(/\*/g, '').trim();
-
                     if (cleanedWord) {
                         wordCount[cleanedWord] = (wordCount[cleanedWord] || 0) + 1;
                     }
@@ -396,18 +407,22 @@ function highlightDeclensions() {
         }
     }
 
+    console.log("highlightDeclensions: Счёт слов", wordCount);
+
     // Фильтруем слова, оставляем только те, которые повторяются больше одного раза
     const filteredWords = Object.entries(wordCount).filter(([word, count]) => count > 1);
+    console.log("highlightDeclensions: Фильтрованные слова", filteredWords);
 
     // Сортируем по количеству повторений
     const sortedWords = filteredWords.sort((a, b) => b[1] - a[1]);
+    console.log("highlightDeclensions: Отсортированные слова", sortedWords);
 
     // Массив цветов для подсветки
-const colors = [
-    '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#28a745', 
-    '#17a2b8', '#6610f2', '#e83e8c', '#f7b1ab', '#d1ecf1',
-    '#c3e6cb', '#f1e7e1', '#343a40','#f8d7da','#6c757d'
-];
+    const colors = [
+        '#007bff', '#ffc107', '#dc3545', '#fd7e14', '#28a745', 
+        '#17a2b8', '#6610f2', '#e83e8c', '#f7b1ab', '#d1ecf1',
+        '#c3e6cb', '#f1e7e1', '#343a40','#f8d7da','#6c757d'
+    ];
 
     // Контейнер для результатов
     const resultContainer = document.getElementById("declensionsOutput");
@@ -417,17 +432,19 @@ const colors = [
     sortedWords.forEach(([word, count], index) => {
         const listItem = document.createElement("li");
         listItem.textContent = `${word} - ${count} раз(а)`;
-        listItem.style.color = colors[index % colors.length]; // Назначаем цвет по кругу
+        listItem.style.color = colors[index % colors.length];
         resultList.appendChild(listItem);
     });
 
     // Добавляем или удаляем список из контейнера
-    if (!isHighlighted) {
+    if (!resultContainer.classList.contains("highlighted")) {
         resultContainer.appendChild(resultList);
+        console.log("highlightDeclensions: Добавлен список повторяющихся слов");
     } else {
         const existingList = resultContainer.querySelector('ul');
         if (existingList) {
             resultContainer.removeChild(existingList);
+            console.log("highlightDeclensions: Удалён список повторяющихся слов");
         }
     }
 
@@ -441,33 +458,31 @@ const colors = [
             const cleanedWord = word.replace(/\*/g, '').trim();
             const matchingWord = sortedWords.find(([w]) => w === cleanedWord);
 
-            if (matchingWord && !isHighlighted) {
+            if (matchingWord && !resultContainer.classList.contains("highlighted")) {
                 const span = document.createElement("span");
                 span.textContent = word;
                 span.style.color = colors[sortedWords.indexOf(matchingWord) % colors.length];
-
-                // Заменяем слово в ячейке на окрашенное
                 cellText = cellText.replace(word, span.outerHTML);
-            } else if (matchingWord && isHighlighted) {
-                // Убираем цвет (удаляем только цвет, а не другие стили)
+            } else if (matchingWord && resultContainer.classList.contains("highlighted")) {
                 const span = document.createElement("span");
                 span.textContent = word;
-
-                // Убираем стиль цвета, но сохраняем другие стили
-                span.style.color = ''; // Убираем цвет из инлайн-стиля
-
-                // Заменяем слово в ячейке на стандартное
+                span.style.color = ''; 
                 cellText = cellText.replace(word, span.outerHTML);
             }
         });
 
-        // Обновляем содержимое ячейки
         cell.innerHTML = cellText;
     });
 
     // Переключаем состояние подсветки
-    isHighlighted = !isHighlighted;
-}  
+    resultContainer.classList.toggle("highlighted");
+    const isHighlighted = resultContainer.classList.contains("highlighted");
+    console.log("highlightDeclensions: Состояние подсветки", isHighlighted);
+
+    // Сохраняем состояние в localStorage
+    localStorage.setItem("isHighlighted", isHighlighted ? "true" : "false");
+    console.log("highlightDeclensions: Состояние подсветки сохранено в localStorage", isHighlighted);
+}
 
         function updateDisplay() {
             if (document.getElementById("numberOnlyCheckbox").checked) {

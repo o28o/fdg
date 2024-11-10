@@ -1,4 +1,7 @@
 const records = [
+  "aor 3  sg      v       zaroti  -       akāsi",
+"fut 3rd        sg      rv       aroti  -       karissati",  
+"aor 3  sg      av       paroti  -       akāsi",
 "aor 3  sg      v       karoti  -       akāsi",
 "aor 2  sg      v       karoti  -       akāsi",
 "aor 1  sg      v       karoti  -       akāsiṃ",

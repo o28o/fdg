@@ -215,16 +215,16 @@ function showAllDeclensions() {
         const parts = currentRecord.split(/\s+/);
         console.log("Части записи:", parts);
 
-        const partOfSpeech = parts[2]; // Часть речи
-        const word = parts[3]; // Слово
+        const partOfSpeech = parts[3]; // Часть речи
+        const word = parts[4]; // Слово
         console.log("Часть речи:", partOfSpeech);
         console.log("Слово:", word);
 
         // Фильтруем записи для совпадения по части речи и слову
         const matchingRecords = records.filter(record => {
             const recordParts = record.split(/\s+/);
-            const recordPartOfSpeech = recordParts[2]; // Часть речи
-            const recordKeyWord = recordParts[3]; // Слово
+            const recordPartOfSpeech = recordParts[3]; // Часть речи
+            const recordKeyWord = recordParts[4]; // Слово
 
             return recordKeyWord === word && partOfSpeech === recordPartOfSpeech;
         });
@@ -333,7 +333,7 @@ function showAllDeclensions() {
             declensionsOutput.appendChild(noteNm);
 
         } else {
-            declensionsOutput.textContent = "Склонения не найдены.";
+            declensionsOutput.textContent = "Спряжения не найдены.";
         }
 
         // Переключаем видимость контейнера

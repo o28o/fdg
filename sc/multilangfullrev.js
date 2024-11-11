@@ -18,8 +18,6 @@ homeButton.addEventListener("click", () => {
   document.location.search = "";
 });
 
-
-
 // pressing enter will "submit" the citation and load
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -46,7 +44,7 @@ function buildSutta(slug) {
     translator = "brahmali";
     texttype = "vinaya";
     slug = slug.replace(/bu([psan])/, "bu-$1");
-    slug = slug.replace(/bi([psn])/, "bi-$1");
+    slug = slug.replace(/bi([psan])/, "bi-$1");
     if (!slug.match("pli-tv-")) {
       slug = "pli-tv-" + slug;
     }
@@ -89,27 +87,31 @@ let snranges = ["sn1.1", "sn1.2", "sn1.3", "sn1.4", "sn1.5", "sn1.6", "sn1.7", "
 let vinayaranges = ["pli-tv-bu-vb-as1-7", "pli-tv-bu-vb-ay1", "pli-tv-bu-vb-ay2", "pli-tv-bu-vb-pc1", "pli-tv-bu-vb-pc2", "pli-tv-bu-vb-pd1", "pli-tv-bu-vb-pd2", "pli-tv-bu-vb-pd3", "pli-tv-bu-vb-pd4", "pli-tv-bu-vb-pj1", "pli-tv-bu-vb-pj2", "pli-tv-bu-vb-pj3", "pli-tv-bu-vb-pj4", "pli-tv-bu-vb-sk1", "pli-tv-bu-vb-sk2", "pli-tv-bu-vb-sk3", "pli-tv-bu-vb-sk4", "pli-tv-bu-vb-sk5", "pli-tv-bu-vb-sk7", "pli-tv-bu-vb-sk8", "pli-tv-bu-vb-ss1", "pli-tv-bu-vb-ss2", "pli-tv-bu-vb-ss3", "pli-tv-bu-vb-ss4", "pli-tv-bu-vb-ss5", "pli-tv-bu-vb-ss6", "pli-tv-bu-vb-ss7", "pli-tv-bu-vb-ss8", "pli-tv-bu-vb-ss9", "pli-tv-bu-vb-ss10", "pli-tv-bu-vb-ss11", "pli-tv-bu-vb-ss12", "pli-tv-bu-vb-ss13"];
 
 let knranges = ['snp1.5', 'snp1.12', 'snp3.2', 'snp3.8', 'snp3.8', 'snp5.1', 'snp5.2', 'snp5.3', 'snp5.4', 'snp5.5', 'snp5.6', 'snp5.7', 'snp5.8', 'snp5.9', 'snp5.10', 'snp5.11', 'snp5.12', 'snp5.13', 'snp5.14', 'snp5.15', 'snp5.16', 'snp5.17', 'thag1.1', 'thag1.2', 'thag1.3', 'thag1.4', 'thag1.5', 'thag1.6', 'thag1.7', 'thag1.8', 'thag1.9', 'thag1.10', 'thag1.11', 'thag1.12', 'thag1.13', 'thag1.14', 'thag1.15', 'thag1.16', 'thag1.17', 'thag1.18', 'thag1.19', 'thag1.20', 'thag1.21', 'thag1.22', 'thag1.23', 'thag1.24', 'thag1.25', 'thag1.26', 'thag1.27', 'thag1.28', 'thag1.29', 'thag1.30', 'thag1.31', 'thag1.32', 'thag1.33', 'thag1.34', 'thag1.35', 'thag1.36', 'thag1.37', 'thag1.38', 'thag1.39', 'thag1.40', 'thag1.41', 'thag1.42', 'thag1.43', 'thag1.44', 'thag1.45', 'thag1.46', 'thag1.47', 'thag1.48', 'thag1.49', 'thag1.50', 'thag1.51', 'thag1.52', 'thag1.53', 'thag1.54', 'thag1.55', 'thag1.56', 'thag1.57', 'thag1.58', 'thag1.59', 'thag1.60', 'thag1.61', 'thag1.62', 'thag1.63', 'thag1.64', 'thag1.65', 'thag1.66', 'thag1.67', 'thag1.68', 'thag1.69', 'thag1.70', 'thag1.71', 'thag1.72', 'thag1.73', 'thag1.74', 'thag1.75', 'thag1.76', 'thag1.77', 'thag1.78', 'thag1.79', 'thag1.80', 'thag1.81', 'thag1.82', 'thag1.83', 'thag1.84', 'thag1.85', 'thag1.86', 'thag1.87', 'thag1.88', 'thag1.89', 'thag1.90', 'thag1.91', 'thag1.92', 'thag1.93', 'thag1.94', 'thag1.95', 'thag1.96', 'thag1.97', 'thag1.98', 'thag1.99', 'thag1.100', 'thag1.101', 'thag1.102', 'thag1.103', 'thag1.104', 'thag1.105', 'thag1.106', 'thag1.107', 'thag1.108', 'thag1.109', 'thag1.110', 'thag1.111', 'thag1.112', 'thag1.113', 'thag1.114', 'thag1.115', 'thag1.116', 'thag1.117', 'thag1.118', 'thag1.119', 'thag1.120', 'thag2.1', 'thag2.2', 'thag2.3', 'thag2.4', 'thag2.5', 'thag2.6', 'thag2.7', 'thag2.8', 'thag2.9', 'thag2.10', 'thag2.11', 'thag2.12', 'thag2.13', 'thag2.14', 'thag2.15', 'thag2.16', 'thag2.17', 'thag2.18', 'thag2.19', 'thag2.20', 'thag2.21', 'thag2.22', 'thag2.23', 'thag2.24', 'thag2.25', 'thag2.26', 'thag2.27', 'thag2.28', 'thag2.29', 'thag2.30', 'thag2.31', 'thag2.32', 'thag2.33', 'thag2.34', 'thag2.35', 'thag2.36', 'thag2.37', 'thag2.38', 'thag2.39', 'thag2.40', 'thag2.41', 'thag2.42', 'thag2.43', 'thag2.44', 'thag2.45', 'thag2.46', 'thag2.47', 'thag2.48', 'thag2.49', 'thag3.1', 'thag3.2', 'thag3.3', 'thag3.4', 'thag3.5', 'thag3.6', 'thag3.7', 'thag3.8', 'thag3.9', 'thag3.10', 'thag3.11', 'thag3.12', 'thag3.13', 'thag3.14', 'thag3.15', 'thag3.16', 'thag4.1', 'thag4.2', 'thag4.3', 'thag4.4', 'thag4.5', 'thag4.6', 'thag4.7', 'thag4.8', 'thag4.9', 'thag4.10', 'thag4.11', 'thag4.12', 'thag5.1', 'thag5.2', 'thag5.3', 'thag5.4', 'thag5.5', 'thag5.6', 'thag5.7', 'thag5.8', 'thag5.9', 'thag5.10', 'thag5.11', 'thag5.12', 'thag6.1', 'thag6.2', 'thag6.3', 'thag6.4', 'thag6.5', 'thag6.6', 'thag6.7', 'thag6.8', 'thag6.9', 'thag6.10', 'thag6.11', 'thag6.12', 'thag6.13', 'thag6.14', 'thag7.1', 'thag7.2', 'thag7.3', 'thag7.4', 'thag7.5', 'thag8.1', 'thag8.2', 'thag8.3', 'thag9.1', 'thag10.1', 'thag10.2', 'thag10.3', 'thag10.4', 'thag10.5', 'thag10.6', 'thag10.7', 'thig1.1', 'thig1.2', 'thig1.3', 'thig1.4', 'thig1.5', 'thig1.6', 'thig1.7', 'thig1.8', 'thig1.9', 'thig1.10', 'thig1.11', 'thig1.12', 'thig1.13', 'thig1.14', 'thig1.15', 'thig1.16', 'thig1.17', 'thig1.18', 'ud1.5', 'ud3.2', 'ud3.6', 'ud4.4'];
-var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-
-var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+
+var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+
+
+
+if ( texttype === "vinaya")
+{
+  var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/${slugReady}_translation-en-brahmali.json`;
+} else {
+//var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+  var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/${texttype}/${slugReady}_translation-en-sujato.json`;
+}
+console.log('engtrnpath line108', engtrnpath);
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/fr.html", "/ru/sc/");
-const enUrl = mlUrl.replace("/sc/fr.html", "/sc/");
+const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
+const enUrl = mlUrl.replace("/sc/ml.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
-const mlorigUrl = ruUrl.replace("/sc/rv.html", "/sc/ml.html");
- let scLink = `<p class="sc-link"><a target="" href="${mlorigUrl}">R+E</a>&nbsp;`;
-
- scLink += `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
-
-const scrollLink = "<a class='text-decoration-none' target='' href='javascript:void(0);' onclick='window.scrollTo(0, document.body.scrollHeight)'>&nbsp;</a>";
-
+let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
@@ -117,7 +119,7 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 
 
 
-if (slug.includes("mn")) {
+if (slug.includes("mn"))  {
  var trnpath = rustrnpath; 
  let language = "pli-rus";
 // scLink += ifRus; 
@@ -157,6 +159,8 @@ if (slug.includes("mn")) {
   let translator = "o";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
+    var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
+
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);
 } else if ( texttype === "vinaya" ) {
@@ -172,16 +176,27 @@ if (vinayaranges.indexOf(slug) !== -1) {
 }
   console.log('vinaya case');
   console.log(trnpath);
+  console.log(engtrnpath);
 
 }  
 
+var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
+
   const rootResponse = fetch(rootpath).then(response => response.json());
  const translationResponse = fetch(trnpath).then(response => response.json());
-  const engtranslationResponse = fetch(`${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/${texttype}/${slugReady}_translation-en-sujato.json`).then(response => response.json());
+  const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 
-  Promise.all([rootResponse, translationResponse, engtranslationResponse, htmlResponse]).then(responses => {
-    const [paliData, transData, engTransData, htmlData] = responses;
+  const varResponse = fetch(varpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no var found');   
+// console.log(varpath);   
+return {};
+  } 
+    );
+    
+  Promise.all([rootResponse, translationResponse, engtranslationResponse, htmlResponse, varResponse]).then(responses => {
+    const [paliData, transData, engTransData, htmlData, varData] = responses;
 
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
@@ -196,15 +211,7 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
-//paliData[segment] = paliData[segment].split(' ').reverse().join(' ');
-//transData[segment] = transData[segment].split(' ').reverse().join(' ');
 
-paliData[segment] = paliData[segment].split('').reverse().join('');
-transData[segment] = transData[segment].split('').reverse().join('');
-
-//engTransData[segment] = engTransData[segment].split(' ').reverse().join(' ');
-
-    
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
 
@@ -213,6 +220,21 @@ anchor = segment;
 }
 
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
+
+if (paliData[segment] === undefined) {
+  paliData[segment] = "";
+}
+if (transData[segment] === undefined) {
+  transData[segment] = "";
+}
+if (engTransData[segment] === undefined) {
+  engTransData[segment] = "";
+}
+
+paliData[segment] = paliData[segment].split('').reverse().join('');
+transData[segment] = transData[segment].split('').reverse().join('');
+engTransData[segment] = engTransData[segment].split('').reverse().join('');
+
 let params = new URLSearchParams(document.location.search);
   let finder = params.get("s");
  // finder = finder.replace(/\\b/g, '');
@@ -225,16 +247,6 @@ if (finder && finder.trim() !== "") {
 }
 
 
-
-if (paliData[segment] === undefined) {
-  paliData[segment] = "";
-}
-if (transData[segment] === undefined) {
-  transData[segment] = "";
-}
-if (engTransData[segment] === undefined) {
-  engTransData[segment] = "";
-}
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment]) {
@@ -661,7 +673,9 @@ function toggleThePali() {
       language = "rus";
       localStorage.paliToggleML = "rus"; */
     }
+
   });
+      console.log('button pressed', paliToggleML);
 }
 
 function parseSlug(slug) {

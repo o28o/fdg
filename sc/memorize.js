@@ -345,13 +345,8 @@ if (translator === "sv") {
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
-    const translatorByline = `<div class="byline">
-     <p>
-    <span class="rus-lang" lang="ru">
-     Перевод: ${translatorforuser}
-    </span>
-     </p>
-     </div>`;
+    const translatorByline = "";
+    
      
       const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC.net</a>`;
       
@@ -448,7 +443,7 @@ const warning = "<p class='warning' style='color:green;'>Bahussuto hoti sutadhar
 // console.log(revhtml)
 // console.log(html)
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
+suttaArea.innerHTML =  scLink + warning + html + warning + scLink ;  
 
  
  const pageTitleElement = document.querySelector("h1");
@@ -591,8 +586,8 @@ if (document.location.search) {
     language = lang;
     console.log("in the initializing " + lang);
     setLanguage(lang);
-  } else if  (localStorage.paliToggleML) {
-    	language = localStorage.paliToggleML; 
+  } else if  (localStorage.paliToggleSpecial) {
+    	language = localStorage.paliToggleSpecial; 
 		  console.log('read from ls ' + language);
 setLanguage(language);
   }
@@ -707,7 +702,7 @@ function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
 // initial state
- if (!localStorage.paliToggleML) {
+ if (!localStorage.paliToggleSpecial) {
     localStorage.paliToggleRu = "pli-rus";
   }   
 
@@ -715,16 +710,16 @@ function toggleThePali() {
     if (language === "pli") {
       showPaliAll();
       language = "pli-rus";    
-      localStorage.paliToggleML = "pli-rus";
+      localStorage.paliToggleSpecial = "pli-rus";
     } else if (language === "pli-rus") {
      showPali();
            language = "pli";
-      localStorage.paliToggleML = "pli";
+      localStorage.paliToggleSpecial = "pli";
 
  /*   } else if (language === "rus") {
      showPaliRussian();
       language = "rus";
-      localStorage.paliToggleML = "rus"; */
+      localStorage.paliToggleSpecial = "rus"; */
     }
   });
 }

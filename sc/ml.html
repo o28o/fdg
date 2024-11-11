@@ -22,7 +22,9 @@
 
 
 
-     
+<link href="/assets/css/styles.css" rel="stylesheet" />
+
+
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
     <link rel="stylesheet" href="rus-multi.css">
@@ -64,6 +66,11 @@
   <img src="/assets/svg/eye.svg" class="common-size-icon4"></img>
   </a>
 </div>  
+<div id="">
+  <a alt="Помощь" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+  <img src="/assets/svg/question.svg" class="common-size-icon4"></img>
+  </a>
+</div>  
     </div>
     </form>
     <br>
@@ -71,6 +78,47 @@
         <div id="previous"></div>
         <div id="next"></div>
     </div>
+    <br>
+    <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
+ <div class="mb-2"><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></img> Главная для чтения, <img width="26px" alt="main page for search" src="/assets/img/gray-white.png"> поиск,  <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img> темы, <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> текст в одну-две колонки, <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть варианты из других редакций Канона,
+ <button id="language-button-dummy" class="hide-button rounded ">Pāḷi Рус</button>
+  переключать языки Пали/Рус.</div>
+<strong>Рекомендованный "Всплывающий" Словарь</strong> Digital Pali Dictionary. Инструкции по установке  Пали-Русс <a class="alert-link" href="https://digitalpalidictionary.github.io/rus/">здесь</a> и Пали-Англ <a class="alert-link" href="https://digitalpalidictionary.github.io/">здесь</a>. Онлайн версия <a class="alert-link" href="https://dpdict.net/">здесь</a>. Это сторонее приложение и набор словарей.
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  
+  if (document.getElementById("paliLookupInfo"))  { 
+    var paliLookupInfo = document.getElementById("paliLookupInfo");
+}
+
+ if (document.getElementById("helpMessage"))  { 
+var helpButton = document.getElementById("helpMessage");
+}
+    // Проверяем, есть ли запись в localStorage
+    if (!localStorage.getItem("paliLookupInfoClosed")) {
+        paliLookupInfo.style.display = "block"; // Если нет, показываем его
+    }
+    
+     // Добавляем обработчик события для кнопки закрытия
+    helpButton.addEventListener("click", function() {
+        // Скрываем окно при нажатии на кнопку закрытия
+        paliLookupInfo.style.display = "block";
+    });   
+
+    // Добавляем обработчик события для кнопки закрытия
+    paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
+        // Сохраняем в localStorage информацию о закрытии окна
+        localStorage.setItem("paliLookupInfoClosed", "true");
+        // Скрываем окно при нажатии на кнопку закрытия
+        paliLookupInfo.style.display = "none";
+    });
+}); 
+  
+</script>    
+    
+    
     <br>
     <div class="" id="sutta"> 
     <!-- class=" flip-horizontal reverse-order" -->

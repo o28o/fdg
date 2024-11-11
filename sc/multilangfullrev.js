@@ -107,8 +107,8 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
-const enUrl = mlUrl.replace("/sc/ml.html", "/sc/");
+const ruUrl = mlUrl.replace("/sc/fr.html", "/ru/sc/");
+const enUrl = mlUrl.replace("/sc/fr.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
@@ -379,7 +379,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
-rvUrl = rvUrl.replace("ml.html", "");
+rvUrl = rvUrl.replace("fr.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/fr.html");
 
 rvorigUrl = origUrl.replace("fr.html", "rv.html");
@@ -538,8 +538,8 @@ if (document.location.search) {
     language = lang;
     console.log("in the initializing " + lang);
     setLanguage(lang);
-  } else if  (localStorage.paliToggleML) {
-    	language = localStorage.paliToggleML; 
+  } else if  (localStorage.paliToggleSpecial) {
+    	language = localStorage.paliToggleSpecial; 
 		  console.log('read from ls ' + language);
 setLanguage(language);
   }
@@ -654,7 +654,7 @@ function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
 // initial state
- if (!localStorage.paliToggleML) {
+ if (!localStorage.paliToggleSpecial) {
     localStorage.paliToggleRu = "pli-rus";
   }   
 
@@ -662,20 +662,20 @@ function toggleThePali() {
     if (language === "pli") {
       showPaliAll();
       language = "pli-rus";    
-      localStorage.paliToggleML = "pli-rus";
+      localStorage.paliToggleSpecial = "pli-rus";
     } else if (language === "pli-rus") {
      showPali();
            language = "pli";
-      localStorage.paliToggleML = "pli";
+      localStorage.paliToggleSpecial = "pli";
 
  /*   } else if (language === "rus") {
      showPaliRussian();
       language = "rus";
-      localStorage.paliToggleML = "rus"; */
+      localStorage.paliToggleSpecial = "rus"; */
     }
 
   });
-      console.log('button pressed', paliToggleML);
+      console.log('button pressed', paliToggleSpecial);
 }
 
 function parseSlug(slug) {

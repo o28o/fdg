@@ -1,35 +1,10 @@
-так выглядит ориг таблица для сущ
+сравнить сутты 
+an8.19 an8.20 и ud5.5
 
-bhikkhunī (f)
-sg	pl
-nom	bhikkhunī	bhikkhuniyo bhikkhunī
-acc	bhikkhuniṃ	bhikkhuniyo bhikkhunī
-instr	bhikkhuniyā	bhikkhunīhi bhikkhunībhi*
-dat	bhikkhuniyā	bhikkhunīnaṃ
-abl	bhikkhuniyā	bhikkhunīhi bhikkhunībhi*
-gen	bhikkhuniyā	bhikkhunīnaṃ
-loc	bhikkhuniyā bhikkhuniyaṃ*	bhikkhunīsu
-voc	bhikkhuni bhikkhunī	bhikkhuniyo bhikkhunī
-in comps	bhikkhuni bhikkhunī	
+купить беруши
+скачать dpr
 
-
-а так для глагола которя сделана па основе кода для существительного
-
-pr 3rd		- karonti
-pr 2nd		- karotha
-pr 1st		- karoma
-imp 3rd		- karontu
-imp 2nd		- karotha
-imp 1st		- karoma
-opt 3rd		- kareyyuṃ
-opt 2nd		- kareyyātha
-opt 1st		- kareyyāma
-fut 3rd		- karissanti
-fut 2nd		- karissatha
-fut 1st		- karissāma
-
-там чтото сбито, - не должно попажать в данные, а 
-мн число наоборот должно.
+http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
 
 
 raga raja

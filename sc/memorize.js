@@ -288,7 +288,7 @@ let преобразованныеСлова = слова.map(word => {
 	  </span>
 
       <span class="rus-lang" lang="ru">${paliData[segment]}
-		  </span>
+		  </span><br>
 		  <span class="variant rus-lang inputscript-ISOPali" lang="ru">
 ${varData[segment].trim()}   
 </span>      
@@ -312,7 +312,7 @@ ${varData[segment].trim()}
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
 
-      <span class="rus-lang" lang="en">${paliData[segment]}</span>
+      <span class="rus-lang" lang="en">${paliData[segment]}</span><br>
       <span class="variant rus-lang inputscript-ISOPali" lang="ru">
 ${varData[segment].trim()}   
 </span>      

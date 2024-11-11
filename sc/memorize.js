@@ -543,7 +543,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
 
 // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
+  xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
   xhr.send();
 
   // Обработка ответа
@@ -552,11 +552,11 @@ prevName = prevName.replace(/[0-9.]/g, '');
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-     window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+     window.location.href = "/?q=" + encodeURIComponent(slug);
 
       } else {
         // Обработка ошибки
-        console.log('Error sending request to /ru/?q=');
+        console.log('Error sending request to /?q=');
       }
     }
   };

@@ -140,6 +140,30 @@ $linkhowtovideo = 'https://youtu.be/XXa-K2fQ0Is?si=DDkT-2ZJo6B9bOAA';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
 
 $fntmessage = '<p class="font-italic text-center ">
+“Evamevaṁ kho, devānaminda, yaṁ kiñci subhāsitaṁ sabbaṁ taṁ tassa bhagavato vacanaṁ arahato sammāsambuddhassa...<br><br>
+“Точно также, царь богов, что-либо хорошо сказанное – всё это слово Благословенного, Араханта, Правильно Пробуждённого...
+<p class="text-end">
+an8.8
+</p>
+</p>';
+$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано, а что плохо, иначе:';
+$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
+
+<h4>Ananuvicca apariyogāhetvā avaṇṇārahassa vaṇṇaṁ bhāsati, </h4>
+</br>
+Без изучения и тщательного рассмотрения он хвалит того, кто заслуживает порицания.</br>
+</br>
+<h4>ananuvicca apariyogāhetvā vaṇṇārahassa avaṇṇaṁ bhāsati.  </h4>
+</br>
+Без изучения и тщательного рассмотрения он порицает того, кто заслуживает похвалы.</br>
+</br>
+<h4>Imehi kho, bhikkhave, dvīhi dhammehi samannāgato bālo abyatto asappuriso khataṁ upahataṁ attānaṁ pariharati, sāvajjo ca hoti sānuvajjo ca viññūnaṁ, bahuñca apuññaṁ pasavatīti.  </h4>
+</br>
+Обладая этими двумя качествами, глупый, несведущий, плохой человек держит себя в изувеченном и искалеченном состоянии. Он достоин порицания и упрёков со стороны мудрых, и он порождает множество неблага.</br>
+</br>
+';
+
+/*$fntmessage = '<p class="font-italic text-center ">
 Katamañca, bhikkhave, dukkhaṁ?<br>
 Что такое, монахи, боль?
 <p class="text-end">
@@ -147,10 +171,30 @@ dn22 mn141
 </p>
 </p>';
 
+$mainscrollmodalheader = 'Определение Dukkha в Суттах';
+$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22&s=dukkha&lang=pli-rus#18.18>dn22</a> <a href=/ru/sc/?q=mn141&s=dukkha&lang=pli-rus#16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+Что такое, монахи, боль?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Любая, монахи, <strong>телесная / осязаемая</strong> боль, <strong>телесный / осязаемый</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости осязанием,</br>
+</br>
+idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
+это называется болью.</br>
+</br>
+<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
+А что такое "страдание" / стресс / тягота / недовольство?</br>
+</br>
+Yaṁ kho, bhikkhave, <strong>cetasikaṁ</strong> dukkhaṁ <strong>cetasikaṁ</strong> asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
+Любая, монахи, <strong>ментальная</strong>  боль, <strong>ментальный</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости мышлением,
+</br>
+</br>
+idaṁ vuccati, bhikkhave, domanassaṁ.</br>
+– вот что называется "страданием".</br></p>
+<p class="text-end"></p>'; */
+
 $carouseltitle = 'Интересные Запросы';
 
 $slides = [
-
           [
         'title' => 'Крайние сроки на Пробуждение для монахов и мирян от Будды',
         'desc' => 'Максимум 7 и 10 лет, соответственно',
@@ -220,28 +264,6 @@ $slides = [
 ];
 
 $read = 'читать';
-
-$mainscrollmodalheader = 'Определение Dukkha в Суттах';
-$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?q=dn22&s=dukkha&lang=pli-rus#18.18>dn22</a> <a href=/ru/sc/?q=mn141&s=dukkha&lang=pli-rus#16.1>mn141</a></br><h4>Katamañca, bhikkhave, dukkhaṁ?</h4></br>
-Что такое, монахи, боль?</br>
-</br>
-Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-
-Любая, монахи, <strong>телесная / осязаемая</strong> боль, <strong>телесный / осязаемый</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости осязанием,</br>
-</br>
-idaṁ vuccati, bhikkhave, dukkhaṁ.</br>
-это называется болью.</br>
-</br>
-<h4>Katamañca, bhikkhave, domanassaṁ?</h4></br>
-А что такое "страдание" / стресс / тягота / недовольство?</br>
-</br>
-Yaṁ kho, bhikkhave, <strong>cetasikaṁ</strong> dukkhaṁ <strong>cetasikaṁ</strong> asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</br>
-Любая, монахи, <strong>ментальная</strong>  боль, <strong>ментальный</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости мышлением,
-</br>
-</br>
-idaṁ vuccati, bhikkhave, domanassaṁ.</br>
-– вот что называется "страданием".</br></p>
-<p class="text-end"></p>';
 
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Пожалуйста, Помните!</b><br><br> Переводы, словари и комментарии сделаны не Буддой! Они часто содержат фундаментальные ошибки главных положений его Учения и противоречия. Их нужно изучать внимательно и критически. 
  <br><br>

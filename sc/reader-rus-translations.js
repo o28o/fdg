@@ -466,7 +466,6 @@ prevName = prevName.replace(/[0-9.]/g, '');
     })
 .catch(error => {
   console.log('error:not found');
-  console.log('error:not found');
   console.log('rootpath', rootpath);
   console.log('trnpath', trnpath);
   console.log('rustrnpath', rustrnpath);

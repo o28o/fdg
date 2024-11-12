@@ -1,7 +1,7 @@
 сравнить сутты 
 an8.19 an8.20 и ud5.5
 
-купить беруши
+купить беруши побольше 
 скачать dpr
 
 http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
@@ -18,33 +18,17 @@ Tattha cakkhumā puriso sakaṁ mukhanimittaṁ paccavekkhamāno yathābhūtaṁ
 
 Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne āyasmato koṇḍaññassa virajaṁ vītamalaṁ dhammacakkhuṁ udapādi: 
 
+против: 
 
-for i in `find . -name "*puriso_pali*"`
-do 
-newfn=$(echo $i | sed 's/_.*/_pi_puriso.mp3/g')
-echo mv  $i $newfn
-done
-      
+vipariṇāmavirāganirodhaṁ - випаринама 
+то уже выцветание и спад
+
+на странице есть такие теги с аудио. с разными именами и в разных частяъ страницы их нужно все сорбрать по мере появления на странице и 
+
+нужна кнопка play/pause, чтобы проигрывать все файлы, как плейлист. 
 
 
-
-            
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
-  xhr.send();
-
-  // Обработка ответа
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        // Обработка успешного ответа
-        console.log(xhr.responseText);
-                window.location.reload(true);
-       window.location.href = "/?q=" + encodeURIComponent(slug);
-
-      } else {
-        // Обработка ошибки
-        console.log('Error sending request to /?q=');
-      }
-    }
-  };
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/dn/dn2.9/dn2.9-3i.m4a' type='audio/mp4'>Browser is not supported.</audio>
+  
+<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/dn/dn2.9/dn2.9-2a.m4a' type='audio/mp4'>Browser is not supported.</audio>
+  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/dn/dn2.9/dn2.9-3i.m4a' type='audio/mp4'>Browser is not supported.</audio>

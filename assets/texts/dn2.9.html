@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/playerStyle.css">
+
+<script src="/assets/js/fontawesome.6.6.all.js" defer></script>
 <!-- Favicon-->
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
@@ -30,6 +35,29 @@
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
+                
+<div class="level1 d-flex align-items-center ">
+  <span class="toggle-button btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#playerCollapse">player</span>
+</div>
+      <div class="collapse show " id="playerCollapse">
+       <!-- Start DEMO HTML (Use the following code into your project)-->
+ <div class="simple-audio-player" id="simp" data-config='{"shide_top":false,"shide_btm":false,"auto_load":false}'>
+  <div class="simp-playlist">
+    <ul>
+      <li><span class="simp-source" data-src="/assets/audio/dn/dn2.9/dn2.9-1u.m4a">1</span><span class="simp-desc">dn2.9 Mahasatipatthanasutta</span></li>
+      <li><span class="simp-source" data-src="/assets/audio/dn/dn2.9/dn2.9-2a.m4a">2</span><span class="simp-desc">dn2.9 Mahasatipatthanasutta</span></li>
+      <li><span class="simp-source" data-src="/assets/audio/dn/dn2.9/dn2.9-3i.m4a">3</span><span class="simp-desc">dn2.9 Mahasatipatthanasutta</span></li>
+
+
+    </ul>
+  </div>
+  <div class="simp-footer">Made by <a href="https://bit.ly/sekedus" target="_blank" title="Sekedus">Sekedus</a></div>
+</div>    
+     <!-- END EDMO HTML (Happy Coding!)-->              
+              </div>	  
+      
+              
             </div>
         </div>
     </div>
@@ -1548,6 +1576,8 @@ $(document).ready(function () {
 
   });
 </script>
+<!-- Audio Player JS -->
+<script  src="/assets/js/jsPlayer.js"></script>  
 
 </body>
 

@@ -1,4 +1,4 @@
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('/assets/css/fontawesome4.7.min.css');
 
 *,*:before,*:after{outline:0;-webkit-box-sizing:border-box;box-sizing:border-box;}
 input,button{outline:none;}

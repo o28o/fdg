@@ -308,7 +308,7 @@ if (document.querySelector('#simp')) {
   var simp_config = ap_simp.dataset.config ? JSON.parse(ap_simp.dataset.config) : {
     shide_top: false, //show/hide album
     shide_btm: false, //show/hide playlist
-    auto_load: false //auto load audio file
+    auto_load: true //auto load audio file
   };
   
   var simp_elem = '';

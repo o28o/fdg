@@ -55,6 +55,15 @@ include 'scripts/opentexts.php';
 <?php echo $fontawesomejs;?> 
 
 </head>
+<script>
+  function updateURL(params) {
+    console.log("Before update:", location.href);
+    // код, изменяющий URL
+    history.replaceState(null, "", `?q=${params.q}&s=${params.s}`);
+    console.log("After update:", location.href);
+}
+</script>
+
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
         <!-- Navigation-->

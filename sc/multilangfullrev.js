@@ -239,11 +239,27 @@ let params = new URLSearchParams(document.location.search);
   let finder = params.get("s");
  // finder = finder.replace(/\\b/g, '');
 if (finder && finder.trim() !== "") {
-    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-    paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-   // engTransData[segment] = engTransData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    
+  let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+
+  try {
+    paliData[segment] = paliData[segment]?.replace(regex, match => `<b class='match finder'>${match}</b>`);
+  } catch (error) {
+    console.error("Ошибка при выделении совпадений в paliData:", error);
+  }
+
+  try {
+    transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
+  } catch (error) {
+    console.error("Ошибка при выделении совпадений в transData:", error);
+  }
+
+  if (varData[segment] !== undefined) {  
+    try {
+      varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    } catch (error) {
+      console.error("Ошибка при выделении совпадений в varData:", error);
+    }
+  }
 }
 
 

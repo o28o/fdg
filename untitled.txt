@@ -9,6 +9,8 @@ http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
 как очистать .git в assets/audio
 
 
+head -n4 * | grep -v "==" | grep pli | grep -v "Theravāda" | sort -V | sed 's@:0.*":@ @g' | sed 's@^  "@@g' | awk '{print "<li><span class=abbr>"$1"</span> <a href=/ru/sc/?q=" $1">"$3"</a></li>"}' | grep -vE "vagga" | sed 's/"//g' | grep -v ">,<" | sed 's@>pli-tv-@>@g'
+
 raga raja
 Seyyathāpi nāma suddhaṁ vatthaṁ apagatakāḷakaṁ sammadeva rajanaṁ paṭiggaṇheyya; 
 
@@ -74,24 +76,3 @@ http://127.0.0.1:8080/ru/sc/?q=pli-tv-kd8&s=
       }
     }
   };
-  
-  
-  
-  есть странный глюк с файлами или частью названия файл или не знаю,
-  
-  if (finder && finder.trim() !== "") {
-    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-
-    if (!slug.match("pli-tv-[kb]")) {   
-     paliData[segment] = paliData[segment].replace(regex, match => `<b class='match finder'>${match}</b>` ); 
- } 
-    //console.log('paliData[segment] ', paliData[segment] );
-transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-if (varData[segment] !== undefined) {  
-   varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-  }
-} но почемуто 
-этот код вызывает ошибку в случаях когда гназвание файла содержит pli tv b или k 
-это мой workaround но сейчас выделение соврадения в этих файлах нет.
-
-как рахобраться или как еще можно выделять совпадение, чтобы попробовать изюежать ошибку?

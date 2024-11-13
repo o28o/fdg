@@ -34,9 +34,10 @@ exit 0
 fi
 
 audioSrcdir=/storage/emulated/0/Music/VoiceChangerWithEffects
+audioSrcdir2='/storage/emulated/0/Recordings/Voice Recorder'
 audioDestdir=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/audio
 
-find "$audioSrcdir" -maxdepth 1 -type f -name "*_*" | while IFS= read -r file 
+find "$audioSrcdir" "$audioSrcdir2" -maxdepth 1 -type f -name "*_*" | while IFS= read -r file 
 do
 suttaname=$(echo "$file" | sed -E 's/_.*//' | awk -F'/' '{print $NF}')
 
@@ -50,10 +51,14 @@ else
 booknumber=$(echo $suttaname | sed -E 's/\..*//')
     nikaya=$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
 fi
-newfn=$(echo "$file" | sed 's/_.*/_pi_puriso.mp3/g')
-mv "$file" "$newfn" >/dev/null 2>&1
 
-mv $newfn $audioDestdir/$nikaya/$booknumber/
+if [[ "$file" =~ "Recorder" ]]; then
+newfn=$(echo "$file" | sed 's/_.*/_pi_puriso_jiv.m4a/g')
+else
+newfn=$(echo "$file" | sed 's/_.*/_pi_puriso.mp3/g')
+fi 
+mv "$file" "$newfn" >/dev/null 2>&1
+mv "$newfn" $audioDestdir/$nikaya/$booknumber/
 echo "moved $suttaname to audio/$nikaya/$booknumber" 
 done
 

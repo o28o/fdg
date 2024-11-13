@@ -240,7 +240,6 @@ let params = new URLSearchParams(document.location.search);
  // console.log(finder);
    // let finder = decodeURIComponent(params.get("s"));
 
-
 if (finder && finder.trim() !== "") {
   let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
 
@@ -264,6 +263,7 @@ if (finder && finder.trim() !== "") {
     }
   }
 }
+
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
@@ -587,7 +587,7 @@ setLanguage(language);
   <div class="lists">
 
   <div class="suttas">
-  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> 
+  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> <br>
   <ul>
      <li><span class="abbr">dn</span> <a href="/ru/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
      <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>
@@ -595,11 +595,26 @@ setLanguage(language);
       <li><span class="abbr">an</span> <a href="/ru/assets/texts/an.php"> Aṅguttara-nikāya</a></li>
       <li><span class="abbr">snp</span> Sutta-nipāta</li>
   </ul>
-  </div><div>
+  </div>
+
+  <div>
+  <h2>Часть KN</h2><br>
+  <ul>
+      <li><span class="abbr">ud</span> Udāna</li>
+      <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
+      <li><span class="abbr">dhp</span> Dhammapada</li>
+      <li><span class="abbr">thag</span> Theragāthā</li>
+      <li><span class="abbr">thig</span> Therīgāthā</li>
+   <!--	     <li><span class="abbr">snp</span> Sutta-nipāta</li>
+ <li><span class="abbr">kp</span> Khuddakapāṭha</li>-->
+  </ul>
+  </div>  
+  
+  <div>
  <!-- <h2>Виная</h2> -->
   <div class="vinaya">
   <div>
-  <h3>Бхиккху Виная</h3>
+  <h3>Бхиккху Виная</h3><br>
 <ul>
 <li><span class="abbr">bu-pm</span> <a href="/ru/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
 <li><span class="abbr">bu-pj</span> <a href="/ru/sc/?q=bu-pm#8.0"> Pārājikā</a></li></li>
@@ -612,7 +627,7 @@ setLanguage(language);
 <li><span class="abbr">bu-as</span> <a href="/ru/sc/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
 </ul>
 </div><div>
-<h3>Бхиккхуни Виная</h3>
+<h3>Бхиккхуни Виная</h3><br>
 <ul>
 <li><span class="abbr">bi-pm</span> <a href="/ru/assets/texts/bipm.php"> Bhikkhunīpātimokkha</a></li>
 <li><span class="abbr">bi-pj</span> Pārājikā</li>
@@ -624,24 +639,43 @@ setLanguage(language);
 <li><span class="abbr">bi-as</span> Adhikarana-samatha</li>
 </ul>
 </div>
+<div>
+<h3>Khandhaka</h3>
+<h3>Mahāvagga</h3><br>
 <ul>
-<li><span class="abbr">kd</span> Khandhakas</li>
+<li><span class=abbr>kd1</span> <a href=/ru/sc/?q=pli-tv-kd1>Mahākhandhaka</a></li>
+<li><span class=abbr>kd2</span> <a href=/ru/sc/?q=pli-tv-kd2>Uposathakkhandhaka</a></li>                                 
+<li><span class=abbr>kd3</span> <a href=/ru/sc/?q=pli-tv-kd3>Vassūpanāyikakkhandhaka</a></li>
+<li><span class=abbr>kd4</span> <a href=/ru/sc/?q=pli-tv-kd4>Pavāraṇākkhandhaka</a></li>
+<li><span class=abbr>kd5</span> <a href=/ru/sc/?q=pli-tv-kd5>Cammakkhandhaka</a></li>
+<li><span class=abbr>kd6</span> <a href=/ru/sc/?q=pli-tv-kd6>Bhesajjakkhandhaka</a></li>
+<li><span class=abbr>kd7</span> <a href=/ru/sc/?q=pli-tv-kd7>Kathinakkhandhaka</a></li>
+<li><span class=abbr>kd8</span> <a href=/ru/sc/?q=pli-tv-kd8>Cīvarakkhandhaka</a></li>                                    
+<li><span class=abbr>kd9</span> <a href=/ru/sc/?q=pli-tv-kd9>Campeyyakkhandhaka</a></li>
+<li><span class=abbr>kd10</span> <a href=/ru/sc/?q=pli-tv-kd10>Kosambakakkhandhaka</a></li>
+</ul>
+<h3>Cūḷavagga</h3><br>
+<ul>
+<li><span class=abbr>kd11</span> <a href=/ru/sc/?q=pli-tv-kd11>Kammakkhandhaka</a></li>
+<li><span class=abbr>kd12</span> <a href=/ru/sc/?q=pli-tv-kd12>Pārivāsikakkhandhaka</a></li>
+<li><span class=abbr>kd13</span> <a href=/ru/sc/?q=pli-tv-kd13>Samuccayakkhandhaka</a></li>
+<li><span class=abbr>kd14</span> <a href=/ru/sc/?q=pli-tv-kd14>Samathakkhandhaka</a></li>
+<li><span class=abbr>kd15</span> <a href=/ru/sc/?q=pli-tv-kd15>Khuddakavatthukkhandhaka</a></li>
+<li><span class=abbr>kd16</span> <a href=/ru/sc/?q=pli-tv-kd16>Senāsanakkhandhaka</a></li>
+<li><span class=abbr>kd17</span> <a href=/ru/sc/?q=pli-tv-kd17>Saṅghabhedakakkhandhaka</a></li>
+<li><span class=abbr>kd18</span> <a href=/ru/sc/?q=pli-tv-kd18>Vattakkhandhaka</a></li>
+<li><span class=abbr>kd19</span> <a href=/ru/sc/?q=pli-tv-kd19>Pātimokkhaṭṭhapanakkhandhaka</a></li>
+<li><span class=abbr>kd20</span> <a href=/ru/sc/?q=pli-tv-kd20>Bhikkhunikkhandhaka</a></li>
+<li><span class=abbr>kd21</span> <a href=/ru/sc/?q=pli-tv-kd21>Pañcasatikakkhandhaka</a></li>
+<li><span class=abbr>kd22</span> <a href=/ru/sc/?q=pli-tv-kd22>Sattasatikakkhandhaka</a></li>
+</ul>
+</div>
+<div>
+<ul>
 <li><span class="abbr">pvr</span> Parivāra</li>
 </ul>
 </div>
   </div></div>
-  <h2>Другие тексты</h2>
-  <ul>
-      <li><span class="abbr">ud</span> Udāna</li>
-      <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
-      <li><span class="abbr">dhp</span> Dhammapada</li>
-      <li><span class="abbr">snp</span> Sutta-nipāta</li>
-      <li><span class="abbr">thag</span> Theragāthā</li>
-      <li><span class="abbr">thig</span> Therīgāthā</li>
-	  <li><span class="abbr">kp</span> Khuddakapāṭha</li>
-  </ul>
-  </div><div>
-</div>
 `;
 }
 

@@ -57,22 +57,3 @@ http://127.0.0.1:8080/ru/sc/?q=pli-tv-kd8&s=
 
 
 
-  // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/ru/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + encodeURIComponent(anchorURL) , true);
-  xhr.send();
-
-  // Обработка ответа
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      if (xhr.status == 200) {
-        // Обработка успешного ответа
-        console.log(xhr.responseText);
-     window.location.href = "/ru/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + anchorURL;
-
-      } else {
-        // Обработка ошибки
-        console.log('Error sending request to /ru/?q=');
-      }
-    }
-  };

@@ -173,21 +173,40 @@ if (vinayaranges.indexOf(slug) !== -1) {
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 }
   console.log('vinaya case');
-  console.log(trnpath);
 }  
 
 var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
 
-  const rootResponse = fetch(rootpath).then(response => response.json());
- const translationResponse = fetch(trnpath).then(response => response.json());
-  const htmlResponse = fetch(htmlpath).then(response => response.json());
-  const varResponse = fetch(varpath).then(response => response.json())    .
+  const rootResponse = fetch(rootpath).then(response => response.json())    .
   catch(error => {
- console.log('note:no var found');   
+ console.log('note:no root found');   
 // console.log(varpath); 
 return {};
   } 
     );
+ const translationResponse = fetch(trnpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no translation found');   
+// console.log(varpath); 
+return {};
+  } 
+    );
+  const htmlResponse = fetch(htmlpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no html found');   
+// console.log(varpath); 
+return {};
+  } 
+    );
+  const varResponse = fetch(varpath).then(response => response.json())    .
+  catch(error => {
+// console.log(varpath); 
+ console.log('note:no var found');   
+return {};
+  } 
+    );
+      console.log(trnpath);
+  console.log(rustrnpath);
 Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
     const [paliData, transData, htmlData, varData] = responses;
     Object.keys(htmlData).forEach(segment => {
@@ -221,15 +240,30 @@ let params = new URLSearchParams(document.location.search);
  // console.log(finder);
    // let finder = decodeURIComponent(params.get("s"));
 
-if (finder && finder.trim() !== "") {
-    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-    paliData[segment] = paliData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-  if (varData[segment] !== undefined) {  
-   varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-  }        
-}
 
+if (finder && finder.trim() !== "") {
+  let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+
+  try {
+    paliData[segment] = paliData[segment]?.replace(regex, match => `<b class='match finder'>${match}</b>`);
+  } catch (error) {
+    console.error("Ошибка при выделении совпадений в paliData:", error);
+  }
+
+  try {
+    transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
+  } catch (error) {
+    console.error("Ошибка при выделении совпадений в transData:", error);
+  }
+
+  if (varData[segment] !== undefined) {  
+    try {
+      varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    } catch (error) {
+      console.error("Ошибка при выделении совпадений в varData:", error);
+    }
+  }
+}
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
@@ -466,15 +500,28 @@ prevName = prevName.replace(/[0-9.]/g, '');
     })
 .catch(error => {
   console.log('error:not found');
+  
+  console.log('rootResponse', translationResponse);
   console.log('rootpath', rootpath);
   console.log('trnpath', trnpath);
   console.log('rustrnpath', rustrnpath);
   console.log('htmlpath', htmlpath);
   console.log('varpath', varpath);
   
+  const currentURL = window.location.href;
+const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
+console.log('anchorURL', anchorURL);
+
+
+  let params = new URLSearchParams(document.location.search);
+  let sGetparam = params.get("s");
+  
+console.log('sGetparam', sGetparam);  
+console.log('slug', slug);  
+
   // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
+  xhr.open("GET", "/ru/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + encodeURIComponent(anchorURL) , true);
   xhr.send();
 
   // Обработка ответа
@@ -483,7 +530,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-     window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+     window.location.href = "/ru/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + anchorURL;
 
       } else {
         // Обработка ошибки
@@ -491,7 +538,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
       }
     }
   };
-
+  
   // Обновление сообщения об ошибке на странице
   
   suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>

@@ -115,11 +115,12 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 $s = urlencode($_GET['s']);  // Кодируем параметр s
   } 
   	}
-  
+// echo 's is ' . $s . '<br>'; 
 // Получаем текущие параметры
 
 $anchor = isset(parse_url($_SERVER['REQUEST_URI'])['fragment']) ? parse_url($_SERVER['REQUEST_URI'])['fragment'] : '';
 
+// echo 'anchor is' . $anchor . '<br>'; 
 	
 		$string = str_replace("`", "", $q);
 $stringForOpen = strtolower($string);
@@ -135,7 +136,9 @@ if (preg_match("/^(ja|snp|iti|thig|thag)/i", $stringForOpen)) {
 } else if (preg_match("/pli-tv-/i", $stringForOpen)) {
   
 //  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";
-  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s#$anchor';</script>";
+
+// echo "<script>window.location.href='$readerlang?s=$s&q=$stringForOpen#$anchor';</script>";
+  echo "<script>window.location.href='$readerlang?q=$stringForOpen';</script>";
   exit();
 	  
 } else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {

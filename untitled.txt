@@ -55,3 +55,43 @@ http://127.0.0.1:8080/ru/sc/?q=pli-tv-kd8&s=
 
 
 
+  // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/ru/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + encodeURIComponent(anchorURL) , true);
+  xhr.send();
+
+  // Обработка ответа
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        // Обработка успешного ответа
+        console.log(xhr.responseText);
+     window.location.href = "/ru/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + anchorURL;
+
+      } else {
+        // Обработка ошибки
+        console.log('Error sending request to /ru/?q=');
+      }
+    }
+  };
+  
+  
+  
+  есть странный глюк с файлами или частью названия файл или не знаю,
+  
+  if (finder && finder.trim() !== "") {
+    let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+
+    if (!slug.match("pli-tv-[kb]")) {   
+     paliData[segment] = paliData[segment].replace(regex, match => `<b class='match finder'>${match}</b>` ); 
+ } 
+    //console.log('paliData[segment] ', paliData[segment] );
+transData[segment] = transData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+if (varData[segment] !== undefined) {  
+   varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+  }
+} но почемуто 
+этот код вызывает ошибку в случаях когда гназвание файла содержит pli tv b или k 
+это мой workaround но сейчас выделение соврадения в этих файлах нет.
+
+как рахобраться или как еще можно выделять совпадение, чтобы попробовать изюежать ошибку?

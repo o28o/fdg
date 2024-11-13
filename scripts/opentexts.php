@@ -81,6 +81,9 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
  */		}
  
  
+ 
+ 
+ 
    	  	if ($_SERVER["REQUEST_METHOD"] == "GET") {
    	  	$q = test_input($_GET["q"]);
 /* 	  	$pitaka = test_input($_GET["pitaka"]);
@@ -104,6 +107,19 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
   } else {
     $la = test_input($_GET["la"]);
   }
+  
+     	  	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+       if (empty($_GET["s"])) {
+    $s = "";
+  } else {
+$s = urlencode($_GET['s']);  // Кодируем параметр s
+  } 
+  	}
+  
+// Получаем текущие параметры
+
+$anchor = isset(parse_url($_SERVER['REQUEST_URI'])['fragment']) ? parse_url($_SERVER['REQUEST_URI'])['fragment'] : '';
+
 	
 		$string = str_replace("`", "", $q);
 $stringForOpen = strtolower($string);
@@ -118,7 +134,8 @@ if (preg_match("/^(ja|snp|iti|thig|thag)/i", $stringForOpen)) {
 //for patimokkha and vinaya vibhanga
 } else if (preg_match("/pli-tv-/i", $stringForOpen)) {
   
-  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	
+//  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";
+  echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s#$anchor';</script>";
   exit();
 	  
 } else if (preg_match("/^(bu|bi)-pm$/i", $stringForOpen)) {

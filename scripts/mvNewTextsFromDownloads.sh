@@ -55,7 +55,7 @@ fi
 if [[ "$file" =~ "Recorder" ]]; then
 newfn=$(echo "$file" | sed 's/_.*/_pi_puriso_jiv.m4a/g')
 else
-newfn=$(echo "$file" | sed 's/_.*/_pi_puriso.mp3/g')
+newfn=$(echo "$file" | sed 's/_.*/_pi_puriso_mod.mp3/g')
 fi 
 mv "$file" "$newfn" >/dev/null 2>&1
 mv "$newfn" $audioDestdir/$nikaya/$booknumber/

@@ -54,6 +54,7 @@ if [[ "$args" == *"-en"* ]]; then
 #echo eng case
 searchlang=en
 mainpagebase="/"
+mainpagebasehistory=""
 searchlangForUser=English
 langtwo=pi
 #echo engFirst
@@ -66,6 +67,7 @@ searchlang=ru
 langtwo=pi
 searchlangForUser=Russian
 mainpagebase="/ru"
+mainpagebasehistory=$mainpagebase
 #echo rusFirst
 initrun=RuLangFirst
 steptwo=""
@@ -81,9 +83,11 @@ searchlang=pi
 if [[ "$args" == *"-oru"* ]]; then
 langtwo=ru
 mainpagebase="/ru"
+mainpagebasehistory=$mainpagebase
 else
 langtwo=en
 mainpagebase="/"
+mainpagebasehistory=""
 fi
 searchlangForUser=Pali
 #pali

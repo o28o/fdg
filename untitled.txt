@@ -1,9 +1,6 @@
 сравнить сутты 
 an8.19 an8.20 и ud5.5
 
-найти сутту где Бужда шоворит, что он кальянамитта
-скачать dpr
-
 http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
 
 как очистать .git в assets/audio
@@ -27,33 +24,9 @@ Imasmiñca pana veyyākaraṇasmiṁ bhaññamāne āyasmato koṇḍaññassa v
 vipariṇāmavirāganirodhaṁ - випаринама 
 то уже выцветание и спад
 
-на странице есть такие теги с аудио. с разными именами и в разных частяъ страницы их нужно все сорбрать по мере появления на странице и 
-
-нужна кнопка play/pause, чтобы проигрывать все файлы, как плейлист. 
-
-
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/dn/dn2.9/dn2.9-3i.m4a' type='audio/mp4'>Browser is not supported.</audio>
-  
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/dn/dn2.9/dn2.9-2a.m4a' type='audio/mp4'>Browser is not supported.</audio>
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/dn/dn2.9/dn2.9-3i.m4a' type='audio/mp4'>Browser is not supported.</audio>
   
   
-  http://127.0.0.1:8080/ru/sc/?s=chinnak&q=pli-tv-bu-vb-np7#2.3.4
-  
-  http://127.0.0.1:8080/ru/sc/?s=das%C4%81nisa%E1%B9%81s&q=pli-tv-kd8#15.10.4
-  
-  http://127.0.0.1:8080/ru/sc/?s=das%C4%81nisa%E1%B9%81s&q=pli-tv-pvr7#135.22
+      
+grep audio vinaya/bipm.php | sed -e "s/.*src='//g" -e "s/' type.*//g" | grep  "^/" | awk -v count=$count '{ print "<li><span class=simp-source data-src="$1">"count"</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>"; count=count+1}' ; count=$(( $count + 1 ))          
   
   
-  почему url 
-http://127.0.0.1:8080/ru/sc/?s=das%C4%81nisa%E1%B9%81s&q=pli-tv-kd8#15.10.4  
-
-превращается в 
-http://127.0.0.1:8080/ru/sc/?q=pli-tv-kd8&s=
-
-
-
-а такой http://127.0.0.1:8080/ru/sc/?s=das%C4%81nisa%E1%B9%81s&q=pli-tv-pvr7#135.22 остается нетронутым.
-
-
-

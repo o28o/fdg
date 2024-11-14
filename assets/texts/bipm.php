@@ -15,7 +15,9 @@ include '../../scripts/opentexts.php';
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <!-- Favicon-->
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
-
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/playerStyle.css">
+<link rel="stylesheet" href="/assets/css/font-awesome-4.7.0/css/font-awesome.css">
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
 
@@ -38,6 +40,27 @@ include '../../scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
+             <div class="level1 d-flex align-items-center ">
+  <span class="toggle-button btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#playerCollapse">player</span>
+</div>
+      <div class="collapse show " id="playerCollapse">
+       <!-- Start DEMO HTML (Use the following code into your project)-->
+ <div class="simple-audio-player" id="simp" data-config='{"shide_top":true,"shide_btm":false,"auto_load":false,"simp-plext":true}'>
+  <div class="simp-playlist">
+    <ul>
+  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pj.m4a>1</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                       <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-ss.m4a>2</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                       <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-np1vag.m4a>3</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                   <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-np2vag.m4a>4</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                   <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-np3vag.m4a>5</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                   <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc1vag.m4a>6</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                   <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc2vag.m4a>7</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                   <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc3vag.m4a>8</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                   <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc4vag.m4a>9</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                   <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc5vag.m4a>10</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc6vag.m4a>11</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc7vag.m4a>12</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc8vag.m4a>13</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc10vag.m4a>14</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                 <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc10vag.m4a>15</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                 <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc11vag.m4a>16</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                 <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc12vag.m4a>17</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                 <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc13vag.m4a>18</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                 <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc14vag.m4a>19</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                 <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc15vag.m4a>20</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                 <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pc16vag.m4a>21</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>
+<li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-pd.m4a>22</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>
+<li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-sk1vag.m4a>23</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-sk2vag.m4a>24</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-sk3vag.m4a>25</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-sk4vag.m4a>26</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-sk5vag.m4a>27</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-sk6vag.m4a>28</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-sk7vag.m4a>29</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>                                                  <li><span class=simp-source data-src=/assets/audio/bi-pm/Bi-as.m4a>30</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>    
+      
+    </ul>
+  </div>
+  <div class="simp-footer">Made by <a href="https://bit.ly/sekedus" target="_blank" title="Sekedus">Sekedus</a></div>
+</div>    
+   
+              </div>	  
+   
+                
             </div>
         </div>
     </div>
@@ -115,6 +138,8 @@ $(document).ready(function () {
 
   });
 </script>
+<!-- Audio Player JS -->
+<script  src="/assets/js/jsPlayer.js"></script>  
 </body>
 
 </html>

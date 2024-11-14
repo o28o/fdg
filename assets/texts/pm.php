@@ -16,6 +16,10 @@ include '../../scripts/opentexts.php';
 <!-- Favicon-->
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/playerStyle.css">
+<link rel="stylesheet" href="/assets/css/font-awesome-4.7.0/css/font-awesome.css">
+
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
 
@@ -38,6 +42,63 @@ include '../../scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
+<div class="level1 d-flex align-items-center ">
+  <span class="toggle-button btn-sm form-check-inline btn-fixed-width btn-rotate"
+    data-bs-toggle="collapse" data-bs-target="#playerCollapse">player</span>
+</div>
+      <div class="collapse show " id="playerCollapse">
+       <!-- Start DEMO HTML (Use the following code into your project)-->
+ <div class="simple-audio-player" id="simp" data-config='{"shide_top":true,"shide_btm":false,"auto_load":false,"simp-plext":true}'>
+  <div class="simp-playlist">
+    <ul>
+  <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pj.m4a>1</span><span class=simp-desc>Bhikkhupātimokkha</span></li>
+<li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-ss.m4a>2</span><span class=simp-desc>Bhikkhupātimokkha</span></li>
+<li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-ay.m4a>3</span><span class=simp-desc>Bhikkhupātimokkha</span></li>
+<li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-np1vag.m4a>4</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                     <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-np2vag.m4a>5</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                     <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-np3vag.m4a>6</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                     <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc1vag.m4a>7</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                     <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc2vag.m4a>8</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                     <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc3vag.m4a>9</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                     <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc4vag.m4a>10</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc5vag.m4a>11</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc6vag.m4a>12</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc7vag.m4a>13</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc8vag.m4a>14</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pc9vag.m4a>15</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-pd.m4a>16</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                        <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-sk1vag.m4a>17</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-sk2vag.m4a>18</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-sk3vag.m4a>19</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-sk4vag.m4a>20</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-sk5vag.m4a>21</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-sk6vag.m4a>22</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-sk7vag.m4a>23</span><span class=simp-desc>Bhikkhupātimokkha</span></li>                                                    <li><span class=simp-source data-src=/assets/audio/bu-pm/Bu-as.m4a>24</span><span class=simp-desc>Bhikkhupātimokkha</span></li>    
+      
+    </ul>
+  </div>
+  <div class="simp-footer">Made by <a href="https://bit.ly/sekedus" target="_blank" title="Sekedus">Sekedus</a></div>
+</div>    
+     <!-- END EDMO HTML (Happy Coding!)  <script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Найти заголовок страницы и извлечь его текст
+    const pageTitle = document.querySelector("title")?.innerText || "Untitled";
+
+    // Найти div для плейлиста
+    const playlistDiv = document.querySelector(".simp-playlist ul");
+    if (!playlistDiv) return;
+
+    // Найти все аудиотеги на странице
+    const audioTags = document.querySelectorAll("audio.lazy-audio source");
+    audioTags.forEach((source, index) => {
+        const src = source.getAttribute("src");
+        if (src) {
+            // Создаем элементы li с вложенными span
+            const li = document.createElement("li");
+
+            const spanSource = document.createElement("span");
+            spanSource.classList.add("simp-source");
+            spanSource.setAttribute("data-src", src);
+            spanSource.textContent = index + 1;
+
+            const spanDesc = document.createElement("span");
+            spanDesc.classList.add("simp-desc");
+            spanDesc.textContent = pageTitle;
+
+            // Добавляем span-элементы в li и добавляем li в ul
+            li.appendChild(spanSource);
+            li.appendChild(spanDesc);
+            playlistDiv.appendChild(li);
+        }
+    });
+      simp_startScript();
+});  
+  
+</script>     -->              
+              </div>	  
+                
+                
             </div>
         </div>
     </div>
@@ -115,7 +176,8 @@ $(document).ready(function () {
 
   });
 </script>
-
+<!-- Audio Player JS -->
+<script  src="/assets/js/jsPlayer.js"></script>  
 </body>
 
 </html>

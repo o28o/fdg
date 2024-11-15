@@ -3,6 +3,9 @@ an8.19 an8.20 и ud5.5
 
 http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
 
+
+cittato??? добавить в список слов?
+
 как очистать .git в assets/audio
 hīna 1 не низший а низкий
 

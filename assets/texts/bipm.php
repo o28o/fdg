@@ -17,7 +17,7 @@ include '../../scripts/opentexts.php';
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
     <!-- Style CSS -->
     <link rel="stylesheet" href="/assets/css/playerStyle.css">
-<link rel="stylesheet" href="/assets/css/font-awesome-4.7.0/css/font-awesome.css">
+
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
 

@@ -1,8 +1,8 @@
-@import url('/assets/css/fontawesome4.7.min.css');
+@import url('/assets/css/font-awesome-4.7.0/css/font-awesome.css');
 
 *,*:before,*:after{outline:0;-webkit-box-sizing:border-box;box-sizing:border-box;}
-input,button{outline:none;}
-a,a:hover,a:visited{color:#ddd;text-decoration:none;}
+#simp input, #simp button{outline:none;}
+#simp a, #simp a:hover, #simp a:visited{color:#ddd;text-decoration:none;}
 .flex{display:-webkit-flex;display:flex;}
 .flex-wrap{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;}
 .flex-align{-webkit-align-items:center;align-items:center;}

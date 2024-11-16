@@ -36,4 +36,13 @@ vipariṇāmavirāganirodhaṁ - випаринама
       
 grep audio vinaya/bipm.php | sed -e "s/.*src='//g" -e "s/' type.*//g" | grep  "^/" | awk -v count=$count '{ print "<li><span class=simp-source data-src="$1">"count"</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>"; count=count+1}' ; count=$(( $count + 1 ))          
   
-  
+
+sed -i 's/осознанности/памятования/g' *
+sed -i 's/осознанный/памятующий/g' *
+sed -i 's/Достопочтенный/почтенный/g' *
+sed -i 's/созерцан/наблюден/g' *
+sed -i 's/друг/товарищ/g' *
+sed -i 's/друзья/товарищи/g' *
+sed -i 's/осознанны/памятующи/g' *
+sed -i 's/бдитель/сознатель/g' *
+

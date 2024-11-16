@@ -46,3 +46,16 @@ sed -i 's/друзья/товарищи/g' *
 sed -i 's/осознанны/памятующи/g' *
 sed -i 's/бдитель/сознатель/g' *
 
+
+
+
+an6.63
+Api ca kho, bhikkhave, nete kāmā kāmaguṇā nāmete ariyassa vinaye vuccanti—
+
+Saṅkapparāgo purisassa kāmo, 
+Nete kāmā yāni citrāni loke; 
+Saṅkapparāgo purisassa kāmo, 
+Tiṭṭhanti citrāni tatheva loke; 
+Athettha dhīrā vinayanti chandanti. 
+...
+Añño, bhikkhave, kāmo rūpesu, añño kāmo saddesu, añño kāmo gandhesu, añño kāmo rasesu, añño kāmo phoṭṭhabbesu. 

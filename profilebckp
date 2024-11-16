@@ -5,6 +5,7 @@ alias grep="grep --color"
 alias scr="cd /storage/emulated/0/Dhamma/scripts"
 alias fdg="cd /data/data/com.termux/files/home/fdg"
 alias apa="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs"
+alias cdsutta="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/sutta/sn/sn47"
 alias roottxt="cd /storage/emulated/0/Dhamma/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta"
 alias trntxt="cd /storage/emulated/0/Dhamma/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta"
 alias out="cd /storage/emulated/0/Dhamma/output"
@@ -404,14 +405,14 @@ cat $1 | jq -r '.[]'
 apachectl start
 
 function replacer() {
-sed -i 's/осознанности/памятования/g' *
-sed -i 's/осознанный/памятующий/g' *
-sed -i 's/Достопочтенный/почтенный/g' *
-sed -i 's/созерцан/наблюден/g' *
-sed -i 's/друг/товарищ/g' *
-sed -i 's/друзья/товарищи/g' *
-sed -i 's/осознанны/памятующи/g' *
-sed -i 's/бдитель/сознатель/g' *
+sed -i 's/памятования/памятования/g' *
+sed -i 's/памятующий/памятующий/g' *
+sed -i 's/почтенный/почтенный/g' *
+sed -i 's/наблюден/наблюден/g' *
+sed -i 's/товарищ/товарищ/g' *
+sed -i 's/товарищи/товарищи/g' *
+sed -i 's/памятующи/памятующи/g' *
+sed -i 's/сознатель/сознатель/g' *
 }
 
 function checker() {

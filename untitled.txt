@@ -3,6 +3,7 @@ an8.19 an8.20 и ud5.5
 
 http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
 
+sn47 19 охраняя товартщ товарища
 
 cittato??? добавить в список слов?
 
@@ -59,3 +60,5 @@ Tiṭṭhanti citrāni tatheva loke;
 Athettha dhīrā vinayanti chandanti. 
 ...
 Añño, bhikkhave, kāmo rūpesu, añño kāmo saddesu, añño kāmo gandhesu, añño kāmo rasesu, añño kāmo phoṭṭhabbesu. 
+
+Yaṁ kho, bhikkhave, kāmayamāno tajjaṁ tajjaṁ attabhāvaṁ abhinibbatteti puññabhāgiyaṁ vā apuññabhāgiyaṁ vā, ayaṁ vuccati, bhikkhave, kāmānaṁ vipāko. 

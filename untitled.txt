@@ -62,3 +62,11 @@ Athettha dhīrā vinayanti chandanti.
 Añño, bhikkhave, kāmo rūpesu, añño kāmo saddesu, añño kāmo gandhesu, añño kāmo rasesu, añño kāmo phoṭṭhabbesu. 
 
 Yaṁ kho, bhikkhave, kāmayamāno tajjaṁ tajjaṁ attabhāvaṁ abhinibbatteti puññabhāgiyaṁ vā apuññabhāgiyaṁ vā, ayaṁ vuccati, bhikkhave, kāmānaṁ vipāko. 
+
+
+
+
+sed -i "s/основы/установления/g" *
+sed -i "s/основах/установлениях/g" *
+sed -i "s/основами/установлениями/g" *
+sed -i "s/основ\b/установлений/g" *

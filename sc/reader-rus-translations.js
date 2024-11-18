@@ -176,6 +176,7 @@ if (vinayaranges.indexOf(slug) !== -1) {
 }  
 
 var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
+var varpathLocal = `/assets/texts/variant/${texttype}/${slugReady}_variant-pli-ms.json`
 
   const rootResponse = fetch(rootpath).then(response => response.json())    .
   catch(error => {
@@ -198,14 +199,26 @@ return {};
 return {};
   } 
     );
-  const varResponse = fetch(varpath).then(response => response.json())    .
+  const varResponseRepo = fetch(varpath).then(response => response.json())    .
   catch(error => {
 // console.log(varpath); 
  console.log('note:no var found');   
 return {};
   } 
     );
-      console.log(trnpath);
+ 
+const varResponseLocal = fetch(varpathLocal).then(response => response.json())    .
+  catch(error => {
+// console.log(varpath); 
+ console.log('note:no local var found');   
+return {};
+  } 
+    );
+
+var varResponse = varResponseRepo;
+//varResponse = varResponseLocal;
+    
+  console.log(trnpath);
   console.log(rustrnpath);
 Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
     const [paliData, transData, htmlData, varData] = responses;

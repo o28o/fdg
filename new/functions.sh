@@ -476,12 +476,17 @@ bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
+cd $apachesitepath/assets/texts/variant/
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-var
+#grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g' | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-var
 }
 
 function varFirst {
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 initialGrep > $tmpdir/${prefix}initrun-var
+cd $apachesitepath/assets/texts/variant/
+initialGrep >> $tmpdir/${prefix}initrun-var
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
@@ -502,6 +507,8 @@ initialGrep > $tmpdir/${prefix}initrun-pi
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 initialGrep > $tmpdir/${prefix}initrun-var
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+initialGrep >> $tmpdir/${prefix}initrun-var
 
 if [ -s "$tmpdir/${prefix}initrun-var" ]; then
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
@@ -539,6 +546,8 @@ cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 grepForWords > $tmpdir/${prefix}words
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
+grepForWords >> $tmpdir/${prefix}words
+cd $apachesitepath/assets/texts/variant/
 grepForWords >> $tmpdir/${prefix}words
 
 elif  [[ "$searchlang" == *"en"* ]]; then
@@ -618,6 +627,9 @@ grep -B2 -ERi "Eva[mnṇṅṃṁ].*${modkeyword}" $searchIn | grep -A1 -i Seyya
 if [ -s "$tmpdir/${prefix}initrun-pi" ]; then
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFromPi
+cd $apachesitepath/assets/texts/variant/
+cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' >> $tmpdir/${prefix}cmndFromPi
+cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
 bash $tmpdir/${prefix}cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
 fi
 

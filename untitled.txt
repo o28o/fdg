@@ -4,11 +4,9 @@ an8.19 an8.20 и ud5.5
 http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
 почмотреть про ишру вики гитлен за 8 статей
 
-
 cittato??? добавить в список слов?
 
 как очистать .git в assets/audio
-hīna 1 не низший а низкий
 
 head -n4 * | grep -v "==" | grep pli | grep -v "Theravāda" | sort -V | sed 's@:0.*":@ @g' | sed 's@^  "@@g' | awk '{print "<li><span class=abbr>"$1"</span> <a href=/ru/sc/?q=" $1">"$3"</a></li>"}' | grep -vE "vagga" | sed 's/"//g' | grep -v ">,<" | sed 's@>pli-tv-@>@g'
 
@@ -33,21 +31,9 @@ vipariṇāmavirāganirodhaṁ - випаринама
 то уже выцветание и спад
 
   
-  
+  #make playlist
       
 grep audio vinaya/bipm.php | sed -e "s/.*src='//g" -e "s/' type.*//g" | grep  "^/" | awk -v count=$count '{ print "<li><span class=simp-source data-src="$1">"count"</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>"; count=count+1}' ; count=$(( $count + 1 ))          
-  
-
-sed -i 's/осознанности/памятования/g' *
-sed -i 's/осознанный/памятующий/g' *
-sed -i 's/Достопочтенный/почтенный/g' *
-sed -i 's/созерцан/наблюден/g' *
-sed -i 's/друг/товарищ/g' *
-sed -i 's/друзья/товарищи/g' *
-sed -i 's/осознанны/памятующи/g' *
-sed -i 's/бдитель/сознатель/g' *
-
-
 
 
 an6.63
@@ -85,6 +71,3 @@ sed -i "s/неправильн/ошибочн/g" *
 
 
 sed -i 's/товарищого/другого/g' *     
-
-sn47.48 проверить друзей
-товарищ товарища

@@ -88,3 +88,38 @@ sed -i 's/товарищого/другого/g' *
 
 sn47.48 проверить друзей
 товарищ товарища
+
+
+В текстах Палийского Канона даётся определение понятия дуккха, как "kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ / телесная боль, телесный дискомфорт". [1]
+
+Katamañca, bhikkhave, dukkhaṁ? ↵↵И что такое, монахи, боль? ↵↵Yaṁ kho, bhikkhave, kāyikaṁ dukkhaṁ kāyikaṁ asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ, ↵↵Любая, монахи, телесная боль, телесный дискомфорт, боль и дискомфорт чувствуемый от телесного соприкосновения, ↵↵idaṁ vuccati, bhikkhave, dukkhaṁ. ↵↵это называется, монахи, боль.↵↵Dn22 Mn141
+
+
+sn45/sn45.170_variant-pli-ms.json  
+{"sn45.170:2.0": "Tasināsutta → Taṇhāsutta (sya-all) ",
+"sn45.170:2.1": "tasinā → taṇhā (sya-all) ",
+"sn45.170:2.3": "Kāmatasinā, bhavatasinā, vibhavatasinā → ...pe... (sya-all) ",
+"sn45.170:2.4": "tasinānaṁ → taṇhānaṃ (sya-all) ",
+"sn45.170:2.8": "tasinānaṁ → taṇhānaṃ (sya-all) ",
+"sn45.170:2.15": "dve taṇhā tasināya cāti. → duvena taṇhāyena cāti (sya-all) "}
+
+sn46/sn46.111-120_variant-pli-ms.json  
+{"sn46.111-120:2.4": "Vedanā taṇhā tasināya cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn46/sn46.165-174_variant-pli-ms.json  
+{"sn46.165-174:2.4": "Vedanātaṇhā tasināya cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn47/sn47.85-94_variant-pli-ms.json  
+{"sn47.85-94:2.4": "Vedanā taṇhā tasināya cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn48/sn48.105-114_variant-pli-ms.json  
+{"sn48.105-114:2.4": "Vedanā taṇhā tasinā cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn49/sn49.35-44_variant-pli-ms.json  
+{"sn49.35-44:2.4": "Vedanā taṇhā tasinā cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn50/sn50.35-44_variant-pli-ms.json 
+{"sn50.35-44:2.4": "Vedanā taṇhā tasinā cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn50/sn50.89-98_variant-pli-ms.json  
+{"sn50.89-98:2.4": "Vedanā taṇhā tasinā cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn51/sn51.67-76_variant-pli-ms.json  
+{"sn51.67-76:2.4": "Vedanā taṇhā tasinā cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "}
+sn53/sn53.35-44_variant-pli-ms.json  
+{
+  "sn53.35-44:2.4": "Vedanā taṇhā tasinā cāti. → vedanā duvena taṇhāyena cāti. (sya-all) "
+}

@@ -453,7 +453,7 @@ grepgenparam=E
 lookup=$suttapath/sc-data/sc_bilara_data
 
 function clearsed {
-sed 's/<p>/\n/g; s/<[^>]*>//g'  | sed  's/": "/ /g' | sed  's/"//1' | sed 's/",$//g' 
+sed 's/<p>/\n/g; s/<[^>]*>//g'  | sed  's/": "/ /g' | sed  's/"//1' | sed 's/",$//g' | sed 's/{//g' | sed 's/}//g'
 }
 
 
@@ -716,7 +716,9 @@ keyword="$pattern"
 if [[ "$language" == *"Pali"* ]]; then
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$pattern" $searchIn | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
+grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g' | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
+cd $apachesitepath/assets/texts/variant/
+grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g' | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-var
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 

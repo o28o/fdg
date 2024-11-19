@@ -32,8 +32,10 @@ vipariṇāmavirāganirodhaṁ - випаринама
 
   
   #make playlist
-      
-grep audio vinaya/bipm.php | sed -e "s/.*src='//g" -e "s/' type.*//g" | grep  "^/" | awk -v count=$count '{ print "<li><span class=simp-source data-src="$1">"count"</span><span class=simp-desc>Bhikkhunīpātimokkha</span></li>"; count=count+1}' ; count=$(( $count + 1 ))          
+file=dn2.9.html
+count=1
+title=$(grep "<title>" $file | sed -E 's/<title>([^ ]+) (.+)<\/title>/\2 \1/' | sed 's/^ *//g')
+grep audio $file | sed -e "s/.*src='//g" -e "s/' type.*//g" | grep  "^/" | awk -v count=$count '{ print "<li><span class=simp-source data-src="$1">"count"</span><span class=simp-desc>'"$title"'</span></li>"; count=count+1}' ; count=$(( $count + 1 ))          
 
 
 an6.63

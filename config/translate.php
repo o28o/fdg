@@ -139,6 +139,7 @@ $titlehowtovideo = 'Как пользоваться?';
 $linkhowtovideo = 'https://youtu.be/XXa-K2fQ0Is?si=DDkT-2ZJo6B9bOAA';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
 
+
 $fntmessage = '<p class="font-italic text-center ">
 “Evamevaṁ kho, devānaminda, yaṁ kiñci subhāsitaṁ sabbaṁ taṁ tassa bhagavato vacanaṁ arahato sammāsambuddhassa...<br><br>
 “Точно также, царь богов, что-либо хорошо сказанное – всё это слово Благословенного, Араханта, Правильно Пробуждённого...
@@ -146,7 +147,7 @@ $fntmessage = '<p class="font-italic text-center ">
 an8.8
 </p>
 </p>';
-$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано, а что плохо, иначе:';
+$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано, а что — плохо, иначе:';
 $mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
 
 <h4>Ananuvicca apariyogāhetvā avaṇṇārahassa vaṇṇaṁ bhāsati, </h4>

@@ -7,7 +7,7 @@ an8.19 an8.20 и ud5.5
 частности—заря
 было 22,11 сутт 51
 23.11 стало 21
-24.11 0 и sn56 104 
+24.11 0 и sn56 104 стало 79 
 
 
 сделать рандомайзер
@@ -94,8 +94,8 @@ title=$(grep "<title>" $file | sed -E 's/<title>([^ ]+) (.+)<\/title>/\2 \1/' | 
 grep audio $file | sed -e "s/.*src='//g" -e "s/' type.*//g" | grep  "^/" | awk -v count=$count '{ print "<li><span class=simp-source data-src="$1">"count"</span><span class=simp-desc>'"$title"'</span></li>"; count=count+1}' ; count=$(( $count + 1 ))          
 
 file=dn2.9.html
-count=1
 title=$(grep "<title>" $file | sed -E 's/<title>([^ ]+) (.+)<\/title>/\2 \1/' | sed 's/^ *//g')
+count=1
 grep audio $file | sed -e "s/.*src='//g" -e "s/' type.*//g" | grep  "^/" | while read line 
 do
 trackname=$(echo $line | awk -F/ '{print $NF}' | sed 's/.m4a//g' )

@@ -8,6 +8,7 @@ an8.19 an8.20 и ud5.5
 было 22,11 сутт 51
 23.11 стало 21
 24.11 0 и sn56 104 стало 79 
+26.11 было 32
 
 Dūteyya???
 
@@ -63,9 +64,10 @@ cittato??? добавить в список слов?
 
 как очистать .git в assets/audio
 
-#mv sv to o
+#mv sv to o rename
+cd /storage/emulated/0/Download/
 find -name "*sv*json*" | while read file; do mv $file $(echo $file | sed 's/-sv/-o/g'); done
-
+cd -
 
 #make toc for kd pvr etc
 head -n4 * | grep -v "==" | grep pli | grep -v "Theravāda" | sort -V | sed 's@:0.*":@ @g' | sed 's@^  "@@g' | awk '{print "<li><span class=abbr>"$1"</span> <a href=/ru/sc/?q=" $1">"$3"</a></li>"}' | grep -vE "vagga" | sed 's/"//g' | grep -v ">,<" | sed 's@>pli-tv-@>@g'

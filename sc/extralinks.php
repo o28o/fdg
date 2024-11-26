@@ -115,7 +115,7 @@ if ($mode == "offline") {
   ruslinkdn=`cd $locationrudn ; ls -R . | grep -m1 \"{$fromjs}.html\" ` ;
   
  echo -n \"{$voicelink}{$final}\"
-    [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>Bw</a>\"
+    [ ! -z $bwlink ] && echo -n \"&nbsp;<a target='' href=$linktbw/$bwlink>TBW</a>\"
     [ ! -z \$ruslink ] && echo -n \"&nbsp;<a target='' href=$linkforthru/\$ruslink>Th.ru</a>\"
     [ ! -z \$ruslinkdn ] && echo -n \"&nbsp;<a target='' href=/tipitaka.theravada.su/dn/\$ruslinkdn>Th.su</a>\";
 
@@ -180,7 +180,7 @@ $output = shell_exec("ruslink=`cd $locationru ; ls . | grep -m1 \"{$forthru}-\" 
 
 echo -n \"{$voicelink}{$final}\";
  
-[[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href='$linktbw/$bwlink'>Bw</a>\"; 
+[[ $bwlink != \"\" ]] && echo -n \"&nbsp;<a target='' href='$linktbw/$bwlink'>TBW</a>\"; 
     
 [[ \$ruslink != \"\" ]] && echo -n \"&nbsp;<a target='' href='https://theravada.ru/Teaching/Canon/Suttanta/Texts/\$ruslink'>Th.ru</a>\"; 
       

@@ -90,39 +90,25 @@
 <strong>Recommended "Popup" Dictionary</strong> Digital Pali Dictionary. Setup manual for <a href="https://digitalpalidictionary.github.io/">Pali-Eng version</a>. <a class="alert-link" href="https://dpdict.net/">Online version</a>. This is a 3rd party app and set of dictionaries.
 <br>
 <br>
-Abbreviations for the variants e.g.: <strong>ms, pts1ed, sya-all, mr</strong> etc. Can be found at SC.net, in the section <a href=https://suttacentral.net/abbreviations?lang=en>"Edition Abbreviations"</a>.
+More help: 
+  <a alt="Помощь" id="helpLinksMessage" href="javascript:void(0);" class="toggle-icon">external links
+  </a>
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+
+<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupLinksInfo">
+ <div class="mb-2">
+  Abbreviations: <strong>ms, pts1ed, sya-all, mr</strong> etc. In <a href=https://suttacentral.net/abbreviations?lang=ru>"Edition Abbreviations"</a>.
+   
+ </div>
+<strong>Links menu:</strong><br>
+ <a href=#>R+E</a> - read in Pali, Rus, Eng. available in Russian version <br>
+ <a href=#>En / Ru</a> - Pali, Eng or Ru<br>
+ <a href=#>DPR</a> - read on DigitalPaliReader.online<br>
+ <a href=#>SC.net and Voice.SC</a> - SuttaCentral.net and Voice SC.net<br>
+ <a href=#>TBW</a> - TheBuddhasWords.net<br>
+ <a href=#>Th.ru / Th.su</a> - Theravada.ru, and if available — Theravada.su<br><br>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
-<script >
-  document.addEventListener("DOMContentLoaded", function() {
-  
-  if (document.getElementById("paliLookupInfo"))  { 
-    var paliLookupInfo = document.getElementById("paliLookupInfo");
-}
-
- if (document.getElementById("helpMessage"))  { 
-var helpButton = document.getElementById("helpMessage");
-}
-    // Проверяем, есть ли запись в localStorage
-    if (!localStorage.getItem("paliLookupInfoClosed")) {
-        paliLookupInfo.style.display = "block"; // Если нет, показываем его
-    }
-    
-     // Добавляем обработчик события для кнопки закрытия
-    helpButton.addEventListener("click", function() {
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "block";
-    });   
-
-    // Добавляем обработчик события для кнопки закрытия
-    paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
-        // Сохраняем в localStorage информацию о закрытии окна
-        localStorage.setItem("paliLookupInfoClosed", "true");
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "none";
-    });
-});
-</script>
 
     <br>
     <div id="sutta">
@@ -187,6 +173,7 @@ var helpButton = document.getElementById("helpMessage");
     </div>
     <script src="/assets/js/linksdpr.js"></script>
     <script src="/assets/js/switchView.js"></script>
+    <script src="/assets/js/showHideHelp.js"></script>
 
                 <script src="/assets/js/linksru.js"></script>
         <script src="/assets/js/openRu.js"></script>

@@ -91,42 +91,10 @@
 <strong>Рекомендованный "Всплывающий" Словарь</strong> Digital Pali Dictionary. Инструкции <a  href="https://digitalpalidictionary.github.io/rus/">Пали-Русс</a> и <a href="https://digitalpalidictionary.github.io/">Пали-Англ</a>. Онлайн версия <a  href="https://dpdict.net/">здесь</a>. Это сторонее приложение и набор словарей.
 <br>
 <br>
-Дополнительно: 
+Ещё помощь: 
   <a alt="Помощь" id="helpLinksMessage" href="javascript:void(0);" class="toggle-icon">внешние ссылки
   </a>
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
-
-<script>
- document.addEventListener("DOMContentLoaded", function() {
-  
-  if (document.getElementById("paliLookupInfo"))  { 
-    var paliLookupInfo = document.getElementById("paliLookupInfo");
-}
-
- if (document.getElementById("helpMessage"))  { 
-var helpButton = document.getElementById("helpMessage");
-}
-    // Проверяем, есть ли запись в localStorage
-    if (!localStorage.getItem("paliLookupInfoClosed")) {
-        paliLookupInfo.style.display = "block"; // Если нет, показываем его
-    }
-    
-     // Добавляем обработчик события для кнопки закрытия
-    helpButton.addEventListener("click", function() {
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "block";
-    });   
-
-    // Добавляем обработчик события для кнопки закрытия
-    paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
-        // Сохраняем в localStorage информацию о закрытии окна
-        localStorage.setItem("paliLookupInfoClosed", "true");
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "none";
-    });
-}); 
-  
-</script>
 
 <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupLinksInfo">
  <div class="mb-2">
@@ -134,46 +102,16 @@ var helpButton = document.getElementById("helpMessage");
    
  </div>
 <strong>Меню ссылок:</strong><br>
-R+E - Пали+Рус+Англ<br>
-Ru / En  - Пали+Рус / Англ<br>
-DPR - DigitalPaliReader.online<br>
-SC.net - SuttaCentral.net и Voice.SC - Voice SC.net<br>
-Bw - TheBuddhasWords.net<br>
-Th.ru / Th.su - Theravada.ru и/или Theravada.su<br><br>
+ <a href=#>R+E</a> - читать Пали, Рус, Англ<br>
+ <a href=#>Ru / En</a> - Пали Рус или Англ<br>
+ <a href=#>DPR</a> - читать на DigitalPaliReader.online<br>
+ <a href=#>SC.net и Voice.SC</a> - SuttaCentral.net и Voice SC.net<br>
+ <a href=#>TBW</a> - TheBuddhasWords.net<br>
+ <a href=#>Th.ru / Th.su</a> - Theravada.ru, когда доступно — Theravada.su<br><br>
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
 
-<script>
- document.addEventListener("DOMContentLoaded", function() {
-  
-  if (document.getElementById("paliLookupLinksInfo"))  { 
-    var paliLookupInfo = document.getElementById("paliLookupLinksInfo");
-}
 
- if (document.getElementById("helpLinksMessage"))  { 
-var helpButton = document.getElementById("helpLinksMessage");
-}
-    // Проверяем, есть ли запись в localStorage
-    if (!localStorage.getItem("paliLookupLinksInfoClosed")) {
-        paliLookupInfo.style.display = "none"; // Если нет, показываем его
-    }
-    
-     // Добавляем обработчик события для кнопки закрытия
-    helpButton.addEventListener("click", function() {
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "block";
-    });   
-
-    // Добавляем обработчик события для кнопки закрытия
-    paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
-        // Сохраняем в localStorage информацию о закрытии окна
-        localStorage.setItem("paliLookupLinksInfoClosed", "true");
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "none";
-    });
-}); 
-  
-</script>
 
 
     <br>
@@ -242,6 +180,7 @@ var helpButton = document.getElementById("helpLinksMessage");
     </div>
     <script src="/assets/js/linksdpr.js"></script>
     <script src="/assets/js/switchView.js"></script>
+    <script src="/assets/js/showHideHelp.js"></script>
 
                 <script src="/assets/js/linksru.js"></script>
         <script src="/assets/js/openRu.js"></script>

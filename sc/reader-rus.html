@@ -86,15 +86,16 @@
     <br>
     
 <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
- <div class="mb-2"><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></img> Главная для чтения, <img width="26px" alt="main page for search" src="/assets/img/gray-white.png"> поиск,  <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img> темы, <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> текст в одну-две колонки, <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть различия между ms и другими редакциями Канона.
- <button id="language-button-dummy" class="hide-button rounded ">Pāḷi Рус</button>
+ <div class="mb-2"><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></img> Чтение, <img width="26px" alt="main page for search" src="/assets/img/gray-white.png"> поиск,  <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img> темы, <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> текст в одну-две колонки, <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть разницу между ms и вариантами Канона.  <button id="language-button-dummy" class="hide-button rounded ">Pāḷi Рус</button>
   переключать языки Пали/Рус.</div><br>
-<strong>Рекомендованный "Всплывающий" Словарь</strong> Digital Pali Dictionary. Инструкции по установке  <a  href="https://digitalpalidictionary.github.io/rus/">Пали-Русс</a> и <a href="https://digitalpalidictionary.github.io/">Пали-Англ</a>. Онлайн версия <a  href="https://dpdict.net/">здесь</a>. Это сторонее приложение и набор словарей.
+<strong>Рекомендованный "Всплывающий" Словарь</strong> Digital Pali Dictionary. Инструкции <a  href="https://digitalpalidictionary.github.io/rus/">Пали-Русс</a> и <a href="https://digitalpalidictionary.github.io/">Пали-Англ</a>. Онлайн версия <a  href="https://dpdict.net/">здесь</a>. Это сторонее приложение и набор словарей.
 <br>
 <br>
-Аббревиатуры вариантов: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. можно найти на SC.net, в разделе <a href=https://suttacentral.net/abbreviations?lang=ru>"Edition Abbreviations"</a>.
-
+Дополнительно: 
+  <a alt="Помощь" id="helpLinksMessage" href="javascript:void(0);" class="toggle-icon">внешние ссылки
+  </a>
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+
 <script>
  document.addEventListener("DOMContentLoaded", function() {
   
@@ -126,6 +127,54 @@ var helpButton = document.getElementById("helpMessage");
 }); 
   
 </script>
+
+<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupLinksInfo">
+ <div class="mb-2">
+  Аббревиатуры: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. в <a href=https://suttacentral.net/abbreviations?lang=ru>"Edition Abbreviations"</a>.
+   
+ </div>
+<strong>Меню ссылок:</strong><br>
+R+E - Пали+Рус+Англ<br>
+Ru / En  - Пали+Рус / Англ<br>
+DPR - DigitalPaliReader.online<br>
+SC.net - SuttaCentral.net и Voice.SC - Voice SC.net<br>
+Bw - TheBuddhasWords.net<br>
+Th.ru / Th.su - Theravada.ru и/или Theravada.su<br><br>
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  
+  if (document.getElementById("paliLookupLinksInfo"))  { 
+    var paliLookupInfo = document.getElementById("paliLookupLinksInfo");
+}
+
+ if (document.getElementById("helpLinksMessage"))  { 
+var helpButton = document.getElementById("helpLinksMessage");
+}
+    // Проверяем, есть ли запись в localStorage
+    if (!localStorage.getItem("paliLookupLinksInfoClosed")) {
+        paliLookupInfo.style.display = "none"; // Если нет, показываем его
+    }
+    
+     // Добавляем обработчик события для кнопки закрытия
+    helpButton.addEventListener("click", function() {
+        // Скрываем окно при нажатии на кнопку закрытия
+        paliLookupInfo.style.display = "block";
+    });   
+
+    // Добавляем обработчик события для кнопки закрытия
+    paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
+        // Сохраняем в localStorage информацию о закрытии окна
+        localStorage.setItem("paliLookupLinksInfoClosed", "true");
+        // Скрываем окно при нажатии на кнопку закрытия
+        paliLookupInfo.style.display = "none";
+    });
+}); 
+  
+</script>
+
 
     <br>
     

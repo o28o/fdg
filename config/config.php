@@ -75,6 +75,7 @@ $adapterscriptlocation = '/home/a0902785/domains/find.dhamma.gift/aksharamukha/b
 if ( preg_match('/offline/', $mode)  ) {
   //offline specific
 $linklearnpali = '/lp/';
+
 $linktbw = '/bw';
 $linktbwOnMain = '/bw/home/index.html';
 

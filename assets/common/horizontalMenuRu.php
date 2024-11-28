@@ -205,7 +205,8 @@ echo '<!--
        </div>
          </li>     
          
-       
+<li><a class="dropdown-item" target="_blank" href="' . $linkmemorizepaliru . '">Советы "Как легче запоминать текст?" </a></li> 
+           
        
                   <li>
          <div class="dropdown-item ">Тренажёры: 

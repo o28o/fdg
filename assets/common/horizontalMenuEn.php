@@ -196,7 +196,7 @@ echo '<!--
        </div>
          </li>     
 
-
+<li><a class="dropdown-item" target="_blank" href="' . $linkmemorizepali . '">Memorisation Tips & Tricks</a></li> 
                   <li>
          <div class="dropdown-item ">Trainer for
          <a class="text-black" target=""  href="/ru/assets/grammar/nouns.html">Declentions</a>, for              

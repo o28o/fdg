@@ -3,14 +3,19 @@ an8.19 an8.20 и ud5.5
 
 спросиьь про запоминание и показать свои наработки
 
-что такое пойма
+пойма - место разлива реки и  устьре стечение рек
 
+poṅkhānupoṅkhaṁ оперение за оперением??? 
 
 Sukhā, bhikkhave, vedanā dukkhato daṭṭhabbā, dukkhā vedanā sallato daṭṭhabbā, adukkhamasukhā vedanā aniccato daṭṭhabbā. 
 
 узнать почему отд падеж
 
 (Amatogadhadvādasakī tatiyakī.)
+
+Micchāpaṭipanno tvamasi, ahamasmi sammāpaṭipanno. Sahitaṁ me, asahitaṁ te. Purevacanīyaṁ pacchā avaca, pacchāvacanīyaṁ pure avaca. 
+скажите пожалуйста, Sahitaṁ me, asahitaṁ te что это дословно? если это последователен, то почему не aham , а me?
+
 
 частности—заря
 было 22,11 сутт 51
@@ -200,3 +205,30 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
 
 afsm begging
 leg too much walking problem
+
+
+
+524  cat > tst
+  525  cat > tst2
+  526  cat > tst3
+  527  grep "masc    nom     pl" tst*
+  528  grep "masc.*nom.*pl" tst*
+  529  grep "fem.*nom.*sg" tst*
+  530  cat tst
+  531  cat tst*
+  532  cat tst* | awk '{print $1,$2,$3}'
+  533  cat tst* | awk '{print $2,$3,$4}'
+  534  cat tst* | awk '{print $2,$3,$4}' | sort | uniq
+  535  cat tst* | awk '{print $2,$3,$4}' | sort | uniq| sed -e 's/ /.*/g'
+  536  cat tst* | awk '{print $2,$3,$4}' | sort | uniq| sed -e 's/ /.*/g' > ga
+  537  grep -f ga tst*
+  538  cat ga | while read lune; do grep "$lune" tst*; done
+  539  mv tst tst1
+  540  cat ga | while read lune; do grep "$lune" tst*; done
+  541  cat ga | while read lune; do grep "$lune" tst* | xargs; done
+  542  cat ga | while read lune; do grep "$lune" tst* | xargs; done | grep "1.*2.*3"
+  543  cat ga | while read lune; do echo -n $lune; grep "$lune" tst* | xargs; done | grep "1.*2.*3"
+  544  cat ga | while read lune; do grep "$lune" tst* | xargs; done | grep "1.*2.*3" | grep -v voc
+  545  cat ga | while read lune; do grep "$lune" tst* | xargs; done | grep "1.*2.*3" | grep -v voc | grep -v pl
+  546  ll
+  547  history

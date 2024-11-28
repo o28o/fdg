@@ -382,6 +382,8 @@ button:hover {
   
   <button id="processButton" title="Загрузить JSON" class="btn btn-secondary me-1"><i class="fa-solid fa-upload"></i></button>
 
+    <button id="loadFromServerButton" class="btn btn-secondary me-1" title="Загрузить перевод с сервера (beta)"><i class="fa-regular fa-folder-open"></i></button>
+
   <button class="btn btn-primary me-1" title="Сохранить JSON" onclick="downloadJson()">Сохранить <i class="fa-solid fa-download"></i></button>
 	
   
@@ -519,7 +521,7 @@ button:hover {
 </div>
 
 
-<div id="helpModal" class="modal">
+<div id="helpModal" style="z-index:100;"  class="modal">
   <div class="modal-content">
     <div id="modalHeader" class="modal-header">
 	<button class="mb-1 btn btn-link text-decoration-none close closeBtn" id="">&times;</button>
@@ -574,7 +576,8 @@ button:hover {
  
   <br> 
   <br> 
-  
+    <h3>  <a href="https://youtu.be/JkJNgMhmv64 " title="Видео Инструкция" class="ms-2" target="_blank"><i class="fa-brands fa-youtube"></i> Видео-инструкция</i></a>
+</h3 > 
    </p>
            <br><br>
       <button class="mb-1 btn btn-primary closeBtn" id="">Закрыть</button>
@@ -1036,6 +1039,96 @@ dataArray.forEach(([key, value], index) => {
     tableBody.innerHTML += row;
   });
 });
+
+    async function checkFileExists(url) {
+        try {
+            const response = await fetch(url, { method: 'HEAD' });
+            return response.ok;  // Проверяем, существует ли файл
+        } catch (error) {
+            console.error(`Error fetching ${url}`, error);
+            return false;
+        }
+    }
+
+    function generateUrls(originalUrl) {
+        // Найдём часть URL от sutta или vinaya до подчеркивания
+        const trimmedUrl = originalUrl.match(/\/(sutta|vinaya)\/.*/)[0];
+        const baseUrl = `/assets/texts${trimmedUrl.split('_')[0]}`;  // Обрезаем от подчеркивания и формируем новый URL
+
+        // Генерируем возможные варианты файлов
+        return [
+            `${baseUrl}_translation-ru-o.json`,
+            `${baseUrl}_translation-ru-o+in+progress.json`,
+            `${baseUrl}_translation-ru-sv+edited+o.json`,
+            `${baseUrl}_translation-ru-sv.json`,
+            `${baseUrl}_translation-ru-khemanando+edited+o.json`,
+            `${baseUrl}_translation-ru-kheminda+edited+o.json`,
+            `${baseUrl}_translation-ru-microsoftTranslator+edited+o.json`,
+            `${baseUrl}_translation-ru-tel+edited+o.json`
+        ];
+    }
+
+    async function findAvailableTranslations(originalUrl) {
+        const urls = generateUrls(originalUrl);  // Генерируем URL на основе исходного
+        const availableUrls = [];
+
+        // Проверяем доступность каждого URL
+        for (const url of urls) {
+            const exists = await checkFileExists(url);
+            if (exists) {
+                availableUrls.push(url);  // Добавляем доступные URL в список
+            }
+        }
+
+        // Если есть доступные файлы, предлагаем пользователю выбрать один
+        if (availableUrls.length > 0) {
+            let selectionMessage = 'Выберите перевод:\n';
+            availableUrls.forEach((url, index) => {
+                selectionMessage += `${index + 1}: ${url}\n`;  // Создаём сообщение с выбором
+            });
+
+            const userChoice = prompt(selectionMessage);  // Предлагаем пользователю выбрать один из вариантов
+            const selectedUrl = availableUrls[userChoice - 1];  // Индексация массива начинается с 0
+
+            if (selectedUrl) {
+                return selectedUrl;
+            } else {
+                alert("Неверный выбор.");
+                return null;
+            }
+        } else {
+            alert("Нет доступных переводов.");
+            return null;
+        }
+    }
+
+    async function loadFileContent(url) {
+        try {
+            const response = await fetch(url);
+            if (response.ok) {
+                const content = await response.text();  // Получаем текст файла
+                document.getElementById('translationInput').value = content;  // Вставляем текст в textarea
+            } else {
+                alert('Не удалось загрузить файл.');
+            }
+        } catch (error) {
+            console.error('Ошибка загрузки файла:', error);
+            alert('Произошла ошибка при загрузке файла.');
+        }
+    }
+
+
+document.getElementById('loadFromServerButton').addEventListener('click', function() {
+    findAvailableTranslations(url).then((selectedUrl) => {
+        if (selectedUrl) {
+            loadFileContent(selectedUrl);  // Загружаем содержимое выбранного файла
+        }
+    });
+});
+
+
+
+
 
 // Проверяем, если translationInput содержит больше строк, чем dataArray
 if (translationLines.length > dataArray.length) {

@@ -139,7 +139,9 @@ $titlehowtovideo = 'Как пользоваться?';
 $linkhowtovideo = 'https://youtu.be/XXa-K2fQ0Is?si=DDkT-2ZJo6B9bOAA';
 $titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
 
-
+$randomNumber = rand(1, 2); // Генерируем случайное число, например, 1 или 2
+// Логика выбора пары
+if ($randomNumber % 2 == 1) {
 $fntmessage = '<p class="font-italic text-center ">
 “Evamevaṁ kho, devānaminda, yaṁ kiñci subhāsitaṁ sabbaṁ taṁ tassa bhagavato vacanaṁ arahato sammāsambuddhassa...<br><br>
 “Точно также, царь богов, что-либо хорошо сказанное – всё это слово Благословенного, Араханта, Правильно Пробуждённого...
@@ -163,8 +165,9 @@ $mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=a
 Обладая этими двумя качествами, глупый, несведущий, плохой человек держит себя в изувеченном и искалеченном состоянии. Он достоин порицания и упрёков со стороны мудрых, и он порождает множество неблага.</br>
 </br>
 ';
-
-/*$fntmessage = '<p class="font-italic text-center ">
+} else {
+  
+$fntmessage = '<p class="font-italic text-center ">
 Katamañca, bhikkhave, dukkhaṁ?<br>
 Что такое, монахи, боль?
 <p class="text-end">
@@ -191,8 +194,8 @@ Yaṁ kho, bhikkhave, <strong>cetasikaṁ</strong> dukkhaṁ <strong>cetasikaṁ
 </br>
 idaṁ vuccati, bhikkhave, domanassaṁ.</br>
 – вот что называется "страданием".</br></p>
-<p class="text-end"></p>'; */
-
+<p class="text-end"></p>'; 
+}
 $carouseltitle = 'Интересные Запросы';
 
 $slides = [

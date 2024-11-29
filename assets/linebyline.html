@@ -426,62 +426,53 @@ button:hover {
 <div id="helpModal" style="z-index:100;" class="modal">
   <div class="modal-content">
     <div id="modalHeader" class="modal-header">
-	<button class="mb-1 btn btn-link text-decoration-none close closeBtn" id="">&times;</button>
-
+      <button class="mb-1 btn btn-link text-decoration-none close closeBtn" id="">&times;</button>
       <h3>Помощь</h3>
     </div>
     <div class="modal-body">
-      <!-- Ваше содержимое модального окна -->
-   <p>
-   <h3>  <a href="https://youtu.be/JkJNgMhmv64 " title="Видео Инструкция" class="ms-2" target="_blank"><i class="fa-brands fa-youtube"></i> Видео-инструкция</i></a>
-</h3 >
-   				
-<br>
-<br>
-<h3>В Таблице</h3>
-<br>
-   Клик по ячейке с русским текстом - редактировать. 
-  <br> 
-  <br> 
-  Клик по <i class="fa-solid fa-link"></i> - перейти в эту строку в быстром редактировании.
-  <br> 
-  <br> 
-  Когда ячейка таблицы активна: 
-  <br> 
 
-  <br> 
-  <strong><i class="fa-solid fa-arrow-up"></i> или <i class="fa-solid fa-arrow-left"></i></strong> - переход между ячейками вверх
-  <br> 
-  <br> 
-  <strong><i class="fa-solid fa-arrow-down"></i> или <i class="fa-solid fa-arrow-right"></i></strong>  - переход между ячейками вниз
-  <br> 
-  <br> 
-  <strong>enter</strong> - добавить пустую строку или перенести текст в новую строку
-  <br> 
-  <br> 
-  <strong>ctrl+enter</strong> - перенести текст в начало следующей строки
-  <br>
-  <br>
- <br> 
-  <strong>backspace</strong> вначале строки переместит текст на строку выше.
-    <br> 
-    <br> 
-  <strong>delete</strong> вконце строки переместит текст на текущую строку.  
-  <br> 
-  <br> 
-  <h3>В Окне Ввода Текста</h3>
-  <br> 
-  <strong>ctrl+Q</strong> - выделить вертикальный список и нажать комбинаци. Это переделает вертикальный список в строку.
-  <br> 
-  <br> 
-  <strong>ctrl+F или ctrl+H</strong> - замена текста. () или [] нужно экранировать так: \(\) и \[\]
- 
-  <br> 
-  <br> 
-   <h3>  <a href="https://youtu.be/JkJNgMhmv64 " title="Видео Инструкция" class="ms-2" target="_blank"><i class="fa-brands fa-youtube"></i> Видео-инструкция</i></a>
-</h3 >  
-   </p>
-           <br><br>
+      
+        <button class="btn btn-link text-decoration-none" data-bs-toggle="collapse" data-bs-target="#tableHelp" aria-expanded="false" aria-controls="tableHelp">
+              <h3>  В Режиме Таблицы     </h3><p>показать / скрыть</p>
+        </button>
+
+      <div class="collapse" id="tableHelp">
+        <p>
+          Клик по ячейке с русским текстом - редактировать.<br><br>
+          Клик по <i class="fa-solid fa-link"></i> - перейти в эту строку в быстром редактировании.<br><br>
+          Когда ячейка таблицы активна:<br><br>
+          <strong><i class="fa-solid fa-arrow-up"></i> или <i class="fa-solid fa-arrow-left"></i></strong> - переход между ячейками вверх<br><br>
+          <strong><i class="fa-solid fa-arrow-down"></i> или <i class="fa-solid fa-arrow-right"></i></strong> - переход между ячейками вниз<br><br>
+          <strong>enter</strong> - добавить пустую строку или перенести текст в новую строку<br><br>
+          <strong>ctrl+enter</strong> - перенести текст в начало следующей строки<br><br>
+          <strong>backspace</strong> в начале строки переместит текст на строку выше.<br><br>
+          <strong>delete</strong> в конце строки переместит текст на текущую строку.
+        </p>
+      </div>
+      
+      <br><br>
+      
+      <h3>
+        <button class="btn btn-link text-decoration-none" data-bs-toggle="collapse" data-bs-target="#textInputHelp" aria-expanded="false" aria-controls="textInputHelp">
+                    <h3>  В Режиме Окна Ввода </h3><p>показать / скрыть</p>    
+        </button>
+      </h3>
+      <div class="collapse" id="textInputHelp">
+        <p>
+          <strong>ctrl+Q</strong> - выделить вертикальный список и нажать комбинацию. Это переделает вертикальный список в строку.<br><br>
+          <strong>ctrl+F или ctrl+H</strong> - замена текста. () или [] нужно экранировать так:  и .
+        </p>
+      </div>
+      
+      <br><br>
+      
+      <h3>
+        <a href="https://youtu.be/JkJNgMhmv64" title="Видео Инструкция" class="ms-2" target="_blank">
+          <i class="fa-brands fa-youtube"></i> Видео-инструкция
+        </a>
+      </h3>
+      
+      <br><br>
       <button class="mb-1 btn btn-primary closeBtn" id="">Закрыть</button>
     </div>
   </div>

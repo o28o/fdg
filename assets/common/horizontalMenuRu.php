@@ -205,7 +205,7 @@ echo '<!--
        </div>
          </li>     
          
-<li><a class="dropdown-item" target="_blank" href="https://docs.google.com/document/d/1JWHEFqcaNhYwYneWBnTp9rkgWecDB4IIHX1l3AxSiWM/edit?usp=drivesdk">Советы "Как легче запоминать текст" </a></li> 
+<li><a class="dropdown-item" target="_blank" href="https://docs.google.com/document/d/12A4jNFrSQywZubM7bL2pgQK0fOtr6LEBJMjGb7nTNlw/edit?usp=drivesdk">Советы-Секреты "Как запоминать легче" </a></li> 
            
        
                   <li>

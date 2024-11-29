@@ -4,7 +4,6 @@ an8.19 an8.20 и ud5.5
 что едят в лотосе? что за корень что за стебель.
 
 
-
 спросиьь про запоминание и показать свои наработки
 
 пойма - место разлива реки и  устьре стечение рек
@@ -43,39 +42,12 @@ an8.8
 $mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано, а что — плохо, иначе:';
 $mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
 
-а иногда второе значеие
-$fntmessage = '2';
-$mainscrollmodalheader = '2';
-?> 
 
-<?php
-// Рандомное число
-$randomNumber = rand(1, 2); // Генерируем случайное число, например, 1 или 2
+Это как если, монахи, легкий пучок хлопка или пучок каппасы поднятый ветром на ровный участок земли приземлившийся.
+sn56.39
 
-// Логика выбора пары
-if ($randomNumber % 2 == 1) {
-    $fntmessage = '<p class="font-italic text-center">
-    “Evamevaṁ kho, devānaminda, yaṁ kiñci subhāsitaṁ sabbaṁ taṁ tassa bhagavato vacanaṁ arahato sammāsambuddhassa...<br><br>
-    “Точно также, царь богов, что-либо хорошо сказанное – всё это слово Благословенного, Араханта, Правильно Пробуждённого...
-    <p class="text-end">
-    an8.8
-    </p>
-    </p>';
-    $mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано, а что — плохо, иначе:';
-} else {
-    $fntmessage = '<p class="font-italic text-center">
-    “Только умение различать доброе и недоброе слово ведет к мудрости...<br><br>
-    <p class="text-end">
-    an4.23
-    </p>
-    </p>';
-    $mainscrollmodalheader = 'Без различения добра и зла нет пути к мудрости:';
-}
+Seyyathāpi, bhikkhave, tūlapicu vā kappāsapicu vā lahuko vātūpādāno same bhūmibhāge nikkhitto.
 
-// Вывод
-echo $fntmessage;
-echo $mainscrollmodalheader;
-?>
 
 http://127.0.0.1:8080/ru/result/bsatib_suttanta_pali-ru_201-914.html
 
@@ -207,11 +179,6 @@ tena kho pana samayena bhikkhū sarabhaññe kukkuccāyanti. bhagavato etamattha
 https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.4.4.0.0.0.0.a&para=130-140
 
 sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavattagalitavattādīni dvattiṃsa vattāni atthi. tesu yaṃ icchati, taṃ kātuṃ labhati. sabbesaṃ padabyañjanaṃ avināsetvā vikāraṃ akatvā samaṇasāruppena caturassena nayena pavattanaṃyeva lakkhaṇaṃ.
-
-
-afsm begging
-leg too much walking problem
-
 
 
 524  cat > tst

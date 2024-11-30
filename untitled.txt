@@ -3,7 +3,6 @@ an8.19 an8.20 и ud5.5
 
 что едят в лотосе? что за корень что за стебель.
 
-
 спросиьь про запоминание и показать свои наработки
 
 пойма - место разлива реки и  устьре стечение рек
@@ -38,18 +37,6 @@ it might be an invitation for one who's looking to see is there Dhamma as well o
 29.11 sn48 было 77? стало 66 58
 
 Dūteyya???
-
-сделать рандомайзер
-<?php
-$fntmessage = '<p class="font-italic text-center ">
-“Evamevaṁ kho, devānaminda, yaṁ kiñci subhāsitaṁ sabbaṁ taṁ tassa bhagavato vacanaṁ arahato sammāsambuddhassa...<br><br>
-“Точно также, царь богов, что-либо хорошо сказанное – всё это слово Благословенного, Араханта, Правильно Пробуждённого...
-<p class="text-end">
-an8.8
-</p>
-</p>';
-$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано, а что — плохо, иначе:';
-$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
 
 
 Это как если, монахи, легкий пучок хлопка или пучок каппасы поднятый ветром на ровный участок земли приземлившийся.

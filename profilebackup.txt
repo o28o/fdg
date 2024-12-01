@@ -399,7 +399,7 @@ git pull
 cd - 2>&1>/dev/null
 }
 
-function catjq() {
+function cj() {
 cat $1 | jq -r '.[]'
 }
 
@@ -424,3 +424,6 @@ sed -i "s/неправильн/ошибочн/g" *
 function checker() {
 apa; bash scripts/checknewlinebylineinscrepo.sh | grep -v done ; cd - >/dev/null
 }
+
+cp ~/.profile profilebackup
+

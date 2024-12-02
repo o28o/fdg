@@ -217,3 +217,7 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
   545  cat ga | while read lune; do grep "$lune" tst* | xargs; done | grep "1.*2.*3" | grep -v voc | grep -v pl
   546  ll
   547  history
+  
+  
+  
+  find -name "*sv.json*" | while read file; do mv $file $(echo $file | sed 's/-sv/-sv+edited+o/g'); done

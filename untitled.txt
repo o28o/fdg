@@ -1,6 +1,7 @@
 saṁsandanti samenti
 
 уточнить на счет стропил или балок в крые в частности остроконечной
+
 слова учителя и ученика
 существа на основе дхату
 реки
@@ -47,7 +48,14 @@ it might be an invitation for one who's looking to see is there Dhamma as well o
 28.11 осталась 0
 29.11 sn48 было 77? стало 66 58 
 30.11 39
+<<<<<<< HEAD
+1.12 25 15
+1.12 
+
+
+=======
 1.12 25
+>>>>>>> a2b7049680699cead0a9dc50ab8f5ca91c153f65
 Dūteyya???
 
 

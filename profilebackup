@@ -400,7 +400,8 @@ cd - 2>&1>/dev/null
 }
 
 function cj() {
-cat $1 | jq -r '.[]'
+file=$( echo $1 | sed 's/://g' )
+cat $file | jq -r '.[]'
 }
 
 apachectl start

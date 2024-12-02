@@ -425,9 +425,5 @@ function checker() {
 apa; bash scripts/checknewlinebylineinscrepo.sh | grep -v done ; cd - >/dev/null
 }
 
-<<<<<<< HEAD
 cp ~/.profile profilebackup
-=======
-cp ~/.profile profilebackup.txt
->>>>>>> a2b7049680699cead0a9dc50ab8f5ca91c153f65
 

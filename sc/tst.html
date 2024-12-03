@@ -94,6 +94,9 @@
 </head>
 
 <body class="dark">
+  
+
+  
     <form id="form" class="ui-widget">
 		<label class="sr-only dropup rounded-pill mb-2" for="paliauto"></label>
 			
@@ -136,9 +139,11 @@
       <div id="form-div">   </div>
     </form>
     <br>
+    <div class="pli-lang-container">  
     <div id="navigation" class="navigation">
         <div id="previous"></div>
         <div id="next"></div>
+    </div>
     </div>
     <br>
     
@@ -197,7 +202,8 @@ More help:
       <span class="rus-lang" lang="ru">‘Today the cows grazed in this spot and that.</span>
     </span>
   </div>
-  <script>
+
+   <script>
     const popup = document.querySelector('.popup');
     const overlay = document.querySelector('.overlay');
     const iframe = popup.querySelector('iframe');
@@ -214,22 +220,17 @@ More help:
       toggleBtn.textContent = 'Включить отображение словаря';
     }
 
-    // Находим все элементы с классом pli-lang
-    const pliLangElements = document.querySelectorAll('.pli-lang');
-
-    pliLangElements.forEach(element => {
-      // Разбиваем текст элемента на отдельные слова
+    // Функция обработки pli-lang элемента
+    function processPliLangElement(element) {
       const words = element.textContent.split(/\s+/);
       element.innerHTML = ''; // Очищаем текущий текст
 
       words.forEach(word => {
-        // Убираем лишние символы в начале и конце слова
-        const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”]+$/g, ''); 
+        const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”]+$/g, '');
         const span = document.createElement('span');
-        span.textContent = word; // Отображаем слово в оригинальном виде
+        span.textContent = word;
         span.style.marginRight = '5px';
 
-        // Добавляем обработчик клика
         span.addEventListener('click', () => {
           if (dictionaryVisible) {
             const url = `https://dpdict.net/search_html?q=${encodeURIComponent(cleanWord)}`;
@@ -241,7 +242,24 @@ More help:
 
         element.appendChild(span);
       });
+    }
+
+    // Изначально обрабатываем существующие элементы
+    document.querySelectorAll('.pli-lang').forEach(processPliLangElement);
+
+    // Инициализируем MutationObserver
+    const observer = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('pli-lang')) {
+            processPliLangElement(node);
+          }
+        });
+      });
     });
+
+    // Наблюдаем за изменениями в body
+    observer.observe(document.body, { childList: true, subtree: true });
 
     // Закрытие Popup
     closeBtn.addEventListener('click', () => {
@@ -270,8 +288,7 @@ More help:
         toggleBtn.textContent = 'Включить отображение словаря';
       }
     });
-  </script>
-
+  </script> 
 
 
 

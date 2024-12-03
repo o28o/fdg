@@ -33,8 +33,8 @@
   <style>
     /* Стили для обычного текста */
     .pli-lang {
-      cursor: text;  /* Убираем курсор для ссылок, делаем его обычным текстом */
-      color: inherit; /* Цвет текста унаследован от родителя, не меняем на синий */
+      cursor: text; 
+      color: inherit; 
     }
 
     /* Стили для popup */
@@ -80,8 +80,8 @@
       display: none;
     }
 
-    /* Кнопка для включения/выключения отображения словаря */
-    .toggle-btn {
+    /* Кнопка для включения/выключения отображения словаря
+    .toggle-dict-btn {
       margin-top: 20px;
       padding: 10px 20px;
       background-color: #007bff;
@@ -89,7 +89,7 @@
       border: none;
       cursor: pointer;
       border-radius: 5px;
-    }
+    } */
   </style>
 </head>
 
@@ -129,6 +129,9 @@
   <img src="/assets/svg/eye.svg" class="common-size-icon4"></img>
   </a>
 </div>  
+
+  <a class="toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="common-size-icon4"></img></a>
+  
 <div id="">
   <a alt="Show Help Message" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
   <img src="/assets/svg/question.svg" class="common-size-icon4"></img>
@@ -139,12 +142,12 @@
       <div id="form-div">   </div>
     </form>
     <br>
-    <div class="pli-lang-container">  
+
     <div id="navigation" class="navigation">
         <div id="previous"></div>
         <div id="next"></div>
     </div>
-    </div>
+  
     <br>
     
 <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
@@ -189,8 +192,8 @@ More help:
     <iframe src=""></iframe>
   </div>
 
-  <!-- Кнопка для включения/выключения отображения словаря -->
-  <button class="toggle-btn">Включить отображение словаря</button>
+  <!-- Кнопка для включения/выключения отображения словаря
+  <button class="toggle-dict-btn">Включить отображение словаря</button> -->
   <div>
     <!-- Пример с абзацами -->
     <span id="2.4">
@@ -203,94 +206,7 @@ More help:
     </span>
   </div>
 
-   <script>
-    const popup = document.querySelector('.popup');
-    const overlay = document.querySelector('.overlay');
-    const iframe = popup.querySelector('iframe');
-    const closeBtn = popup.querySelector('.close-btn');
-    const toggleBtn = document.querySelector('.toggle-btn');
-
-    // Проверяем состояние в localStorage при загрузке страницы
-    let dictionaryVisible = localStorage.getItem('dictionaryVisible') === 'true';
-
-    // Устанавливаем правильный текст на кнопке
-    if (dictionaryVisible) {
-      toggleBtn.textContent = 'Выключить отображение словаря';
-    } else {
-      toggleBtn.textContent = 'Включить отображение словаря';
-    }
-
-    // Функция обработки pli-lang элемента
-    function processPliLangElement(element) {
-      const words = element.textContent.split(/\s+/);
-      element.innerHTML = ''; // Очищаем текущий текст
-
-      words.forEach(word => {
-        const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”]+$/g, '');
-        const span = document.createElement('span');
-        span.textContent = word;
-        span.style.marginRight = '5px';
-
-        span.addEventListener('click', () => {
-          if (dictionaryVisible) {
-            const url = `https://dpdict.net/search_html?q=${encodeURIComponent(cleanWord)}`;
-            iframe.src = url;
-            popup.style.display = 'block';
-            overlay.style.display = 'block';
-          }
-        });
-
-        element.appendChild(span);
-      });
-    }
-
-    // Изначально обрабатываем существующие элементы
-    document.querySelectorAll('.pli-lang').forEach(processPliLangElement);
-
-    // Инициализируем MutationObserver
-    const observer = new MutationObserver(mutations => {
-      mutations.forEach(mutation => {
-        mutation.addedNodes.forEach(node => {
-          if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('pli-lang')) {
-            processPliLangElement(node);
-          }
-        });
-      });
-    });
-
-    // Наблюдаем за изменениями в body
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    // Закрытие Popup
-    closeBtn.addEventListener('click', () => {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-      iframe.src = '';
-    });
-
-    overlay.addEventListener('click', () => {
-      popup.style.display = 'none';
-      overlay.style.display = 'none';
-      iframe.src = '';
-    });
-
-    // Обработчик кнопки для включения/выключения отображения словаря
-    toggleBtn.addEventListener('click', () => {
-      dictionaryVisible = !dictionaryVisible;
-      
-      // Сохраняем состояние в localStorage
-      localStorage.setItem('dictionaryVisible', dictionaryVisible);
-
-      // Меняем текст кнопки
-      if (dictionaryVisible) {
-        toggleBtn.textContent = 'Выключить отображение словаря';
-      } else {
-        toggleBtn.textContent = 'Включить отображение словаря';
-      }
-    });
-  </script> 
-
-
+<script src="/assets/js/paliLookup.js"></script>
 
     <div class="links-area" style="text-align: center;">
         <a href="../" title="Sutta and Vinaya search" rel="noreferrer"

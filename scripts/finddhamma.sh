@@ -1649,7 +1649,6 @@ echo "<meta charset='utf-8'>
 window.location.href=\"$pagelang/result/${table}\";
 </script>" > $tmphtml
 echo "<script>
-history.pushState({ previousPage: window.location.href }, '');
 window.location.href=\"$pagelang/result/${table}\";
 </script>"
 

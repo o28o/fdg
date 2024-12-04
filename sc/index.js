@@ -137,34 +137,6 @@ anchor = segment;
 
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
-let params = new URLSearchParams(document.location.search);
-  let finder = params.get("s");
-  //finder = finder.replace(/\\b/g, '');
- // console.log("finder ", finder);
-if (finder && finder.trim() !== "") {
-  let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-
-  try {
-    paliData[segment] = paliData[segment]?.replace(regex, match => `<b class='match finder'>${match}</b>`);
-  } catch (error) {
-    console.error("Ошибка при выделении совпадений в paliData:", error);
-  }
-
-  try {
-    transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
-  } catch (error) {
-    console.error("Ошибка при выделении совпадений в transData:", error);
-  }
-
-  if (varData[segment] !== undefined) {  
-    try {
-      varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    } catch (error) {
-      console.error("Ошибка при выделении совпадений в varData:", error);
-    }
-  }
-}
-
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>

@@ -1,5 +1,7 @@
 saṁsandanti samenti
 
+проверить s= со вкл и выкл словарем
+
 уточнить на счет стропил или балок в крые в частности остроконечной
 слова учителя и ученика
 существа на основе дхату
@@ -221,40 +223,12 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
   
   
   find -name "*sv.json*" | while read file; do mv $file $(echo $file | sed 's/-sv/-sv+edited+o/g'); done
+
+  
+  ekāra 1.1
   
   
-+ 12 vagga6/ud6.3_root-pli-ms.json
-+   12 vagga7/ud7.7_root-pli-ms.json
-+   12 vagga8/ud8.3_root-pli-ms.json
-  + 13 vagga6/ud6.7_root-pli-ms.json
-+   13 vagga7/ud7.2_root-pli-ms.json
-+   13 vagga8/ud8.1_root-pli-ms.json
-+   13 vagga8/ud8.2_root-pli-ms.json
- +  14 vagga6/ud6.9_root-pli-ms.json
- +  14 vagga7/ud7.1_root-pli-ms.json
-   15 vagga7/ud7.6_root-pli-ms.json
-   15 vagga7/ud7.8_root-pli-ms.json
-   16 vagga7/ud7.3_root-pli-ms.json
-   16 vagga7/ud7.4_root-pli-ms.json
-   16 vagga8/ud8.4_root-pli-ms.json
-   18 vagga7/ud7.5_root-pli-ms.json
-   19 vagga8/ud8.9_root-pli-ms.json
-   
-   
-   
- +  23 vagga6/ud6.8_root-pli-ms.json
-   27 vagga7/ud7.10_root-pli-ms.json
-+   29 vagga6/ud6.10_root-pli-ms.json
-   31 vagga8/ud8.7_root-pli-ms.json
-   33 vagga7/ud7.9_root-pli-ms.json
-   35 vagga6/ud6.2_root-pli-ms.json
-   42 vagga8/ud8.10_root-pli-ms.json
-   58 vagga8/ud8.8_root-pli-ms.json
-   61 vagga6/ud6.5_root-pli-ms.json
-   62 vagga6/ud6.1_root-pli-ms.json
-   68 vagga6/ud6.6_root-pli-ms.json
-  101 vagga8/ud8.5_root-pli-ms.json
-  107 vagga6/ud6.4_root-pli-ms.json
-  108 vagga8/ud8.6_root-pli-ms.json  
-  
-  
+   31 ud8.7_root-pli-ms.json
+   42 ud8.10_root-pli-ms.json
+   58 ud8.8_root-pli-ms.json
+  108 ud8.6_root-pli-ms.json

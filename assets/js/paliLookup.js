@@ -71,30 +71,43 @@ function createPopup() {
   let isDragging = false;
   let startX, startY, initialLeft, initialTop;
 
-  header.addEventListener('mousedown', (e) => {
+  // Обработчик нажатия для мыши (десктоп)
+  function startDrag(e) {
     isDragging = true;
-    startX = e.clientX;
-    startY = e.clientY;
+    startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
+    startY = e.clientY || e.touches[0].clientY;
     initialLeft = parseInt(popup.style.left || 0, 10);
     initialTop = parseInt(popup.style.top || 0, 10);
     e.preventDefault();
-  });
+  }
 
-  document.addEventListener('mousemove', (e) => {
+  // Обработчик перемещения для мыши (десктоп)
+  function moveDrag(e) {
     if (isDragging) {
-      const deltaX = e.clientX - startX;
-      const deltaY = e.clientY - startY;
+      const deltaX = (e.clientX || e.touches[0].clientX) - startX;
+      const deltaY = (e.clientY || e.touches[0].clientY) - startY;
       popup.style.left = `${initialLeft + deltaX}px`;
       popup.style.top = `${initialTop + deltaY}px`;
     }
-  });
+  }
 
-  document.addEventListener('mouseup', () => {
+  // Обработчик окончания перетаскивания для мыши (десктоп)
+  function stopDrag() {
     if (isDragging) {
       isDragging = false;
       savePopupState();
     }
-  });
+  }
+
+  // Обработчики для перетаскивания на десктопе
+  header.addEventListener('mousedown', startDrag);
+  document.addEventListener('mousemove', moveDrag);
+  document.addEventListener('mouseup', stopDrag);
+
+  // Обработчики для перетаскивания на мобильных устройствах
+  header.addEventListener('touchstart', startDrag);
+  document.addEventListener('touchmove', moveDrag);
+  document.addEventListener('touchend', stopDrag);
 
   // Изменение размеров окна
   popup.style.resize = 'both';

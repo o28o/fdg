@@ -1565,7 +1565,6 @@ echo "<meta charset='utf-8'>
 window.location.href=\"$pagelang/result/${table}\";
 </script>" > $tmphtml
 echo "<script>
-history.pushState({ previousPage: window.location.href }, '');
 window.location.href=\"$pagelang/result/${table}\";
 </script>"
 cleanupTempFiles
@@ -1576,6 +1575,7 @@ find . -type f -name 'search-*.html' -mmin +60 -exec rm {} \;
 exit 0
 
 
+#history.pushState({ previousPage: window.location.href }, '');
 
 #<a target=\"_blank\" href="$linken">En</a> 
 echo "<tr>

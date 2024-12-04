@@ -620,6 +620,32 @@ button:hover {
     
 <input type="file" id="fileInput" style="display:none" accept=".json" />
 <script>
+  
+  function findItiVagga(suttaNumber) {
+  if (suttaNumber >= 1 && suttaNumber <= 10) {
+    return "1";
+  } else if (suttaNumber >= 11 && suttaNumber <= 20) {
+    return "2";
+  } else if (suttaNumber >= 21 && suttaNumber <= 27) {
+    return "3";
+  } else if (suttaNumber >= 28 && suttaNumber <= 37) {
+    return "4";
+  } else if (suttaNumber >= 38 && suttaNumber <= 49) {
+    return "5";
+  } else if (suttaNumber >= 50 && suttaNumber <= 59) {
+    return "6";
+  } else if (suttaNumber >= 60 && suttaNumber <= 69) {
+    return "7";
+  } else if (suttaNumber >= 70 && suttaNumber <= 79) {
+    return "8";
+  } else if (suttaNumber >= 80 && suttaNumber <= 89) {
+    return "9";
+  } else if (suttaNumber >= 90 && suttaNumber <= 99) {
+    return "10";
+  } else if (suttaNumber >= 100 && suttaNumber <= 112) {
+    return "11";
+  }
+} 
   document.getElementById('processButton').addEventListener('click', function() {
     // Получаем значение из textarea
     const inputText = document.getElementById('translationInput').value;
@@ -703,8 +729,10 @@ let beforeDot = indexValue.split('.')[0];
 let firstNumberOnly = beforeDot.match(/[0-9]+/)[0];
 //let lettersOnly = beforeDot.replace(/[0-9]/g, '');  // Удаление всех цифр, если требуется
 
+
+
 // Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
-if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp')) {
+if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp') || indexValue.includes('iti')) {
   lettersOnly = 'kn/' + lettersOnly;
 }
 
@@ -715,6 +743,9 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
   beforeDot = '';
 }  
   
+if ( indexValue.includes('iti')) {
+  beforeDot = 'vagga' + findItiVagga(firstNumberOnly);
+} 
 
   // Определение URL для запроса данных
   let url;
@@ -951,7 +982,13 @@ if (/sn[0-9]/.test(indexValue)) {
     } else if (cleanedTranslation.startsWith("Удана")) {
         cleanedTranslation = `Удана ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
-} 
+} /*else if (indexValue.includes("iti")) {
+    if (!cleanedTranslation.startsWith("Это Сказано")) {
+        const additionalLines = `Это Сказано ${indexValue.replace(/[a-z]/g, '')}\nСобрание \nГлава \nСутта \n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Это Сказано")) {
+        cleanedTranslation = `Это Сказано ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }*/
 
   document.getElementById('translationInput').value = cleanedTranslation;
   
@@ -967,7 +1004,7 @@ let firstNumberOnly = beforeDot.match(/[0-9]+/)[0];
 //let lettersOnly = beforeDot.replace(/[0-9]/g, '');  // Удаление всех цифр, если требуется
 
 // Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
-if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp')) {
+if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp') || indexValue.includes('iti')) {
   lettersOnly = 'kn/' + lettersOnly;
 }
 
@@ -977,6 +1014,10 @@ if (indexValue.includes('snp') || indexValue.includes('ud')) {
 } else if (indexValue.includes('dhp')) {
   beforeDot = '';
 }  
+  
+if ( indexValue.includes('iti')) {
+  beforeDot = 'vagga' + findItiVagga(firstNumberOnly);
+} 
   
   
   let url;

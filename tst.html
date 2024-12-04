@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Dictionary with Iframe</title>
+    <style>
+        .iframe-popup {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: none;
+            background: #fff;
+        }
+
+        .pli-lang span {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="2.4">
+            <span class="pli-lang inputscript-ISOPali" lang="pi">
+                Kathañca, visākhe, gopālakuposatho hoti?
+            </span>
+            <span class="rus-lang" lang="ru">And what is the sabbath of the cowherds?</span>
+        </span>
+        <span id="2.5">
+            <span class="pli-lang inputscript-ISOPali" lang="pi">
+                ‘ajja kho gāvo amukasmiñca amukasmiñca padese cariṁsu.
+            </span>
+            <span class="rus-lang" lang="ru">‘Today the cows grazed in this spot and that.</span>
+        </span>
+    </div>
+
+    <iframe id="iframe-popup" class="iframe-popup"></iframe>
+
+    <script>
+        const dpdLangUrl = 'https://dpdict.net/search_html?q='; // URL для запросов
+        const iframePopup = document.getElementById('iframe-popup');
+
+        // Разбить слова в pli-lang на span для кликов
+        document.querySelectorAll('.pli-lang').forEach((element) => {
+            const text = element.textContent.trim();
+            const words = text.split(/\s+/); // Разделение текста на слова
+            element.innerHTML = words.map(word => `<span>${word}</span>`).join(' ');
+        });
+
+        // Обработчик клика на слово
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.pli-lang span')) {
+                const word = e.target.textContent.trim(); // Получаем кликнутое слово
+                const url = `${dpdLangUrl}${encodeURIComponent(word)}`;
+
+                // Позиционирование iframe
+                const rect = e.target.getBoundingClientRect();
+                iframePopup.style.top = `${rect.bottom + window.scrollY}px`;
+                iframePopup.style.left = `${rect.left + window.scrollX}px`;
+
+                // Загрузка URL в iframe
+                iframePopup.src = url;
+                iframePopup.style.display = 'block';
+            } else {
+                // Скрыть iframe, если клик вне слова
+                iframePopup.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

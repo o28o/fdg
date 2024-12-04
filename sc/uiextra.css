@@ -188,16 +188,18 @@ margin-left: 6px;
       border: none;
     }
 
-    .popup .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: red;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #CE0520;
+  color: #e1dede;
+  border: none;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 100%; /* делает кнопку круглой */
+}
 
     .overlay {
       position: fixed;

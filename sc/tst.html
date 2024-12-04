@@ -214,49 +214,60 @@ More help:
   const closeBtn = popup.querySelector('.close-btn');
   const toggleBtn = document.querySelector('.toggle-dict-btn');
 
-var dpdlang = 'https://dpdict.net/search_html';
-//var dpdlang = 'https://dpdict.net/ru/search_html';
+  var dpdlang = 'https://dpdict.net/search_html';
+  // var dpdlang = 'https://dpdict.net/ru/search_html';
 
   // Проверяем состояние в localStorage при загрузке страницы
   let dictionaryVisible = localStorage.getItem('dictionaryVisible') === 'true';
 
   if (dictionaryVisible) {
-    //off
+    // off
     toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg" class="common-size-icon4"></img>';
   } else {
-    //on
+    // on
     toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg" class="common-size-icon4"></img>';
   }
-  
 
-  // Находим все элементы с классом pli-lang
-  const pliLangElements = document.querySelectorAll('.pli-lang');
+  function processPliLangElements(container = document) {
+    const pliLangElements = container.querySelectorAll('.pli-lang');
 
-  pliLangElements.forEach(element => {
-    // Разбиваем текст элемента на отдельные слова
-    const words = element.textContent.split(/\s+/);
-    element.innerHTML = ''; // Очищаем текущий текст
+    pliLangElements.forEach(element => {
+      Array.from(element.childNodes).forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          const newContent = document.createDocumentFragment();
 
-    words.forEach(word => {
-      // Убираем лишние символы в начале и конце слова
-      const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”]+$/g, ''); 
-      const span = document.createElement('span');
-      span.textContent = word; // Отображаем слово в оригинальном виде
-      span.style.marginRight = '5px';
+          const nodeWords = node.textContent.trim().split(/\s+/).filter(w => w); // Убираем лишние пробелы
+          nodeWords.forEach((word, index) => {
+            const span = document.createElement('span');
+            span.textContent = word;
+            span.style.cursor = 'pointer';
+            //span.style.marginRight = '5px'; // Регулируем отступы
 
-      // Добавляем обработчик клика
-      span.addEventListener('click', () => {
-        if (dictionaryVisible) {
-          const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
-          iframe.src = url;
-          popup.style.display = 'block';
-          overlay.style.display = 'block';
+            // Добавляем обработчик клика
+            span.addEventListener('click', () => {
+              if (dictionaryVisible) {
+                const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”]+$/g, '');
+                const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
+                iframe.src = url;
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+              }
+            });
+
+            newContent.appendChild(span);
+            if (index < nodeWords.length - 1) {
+              newContent.appendChild(document.createTextNode(' ')); // Добавляем ровно один пробел
+            }
+          });
+
+          node.replaceWith(newContent);
         }
       });
-
-      element.appendChild(span);
     });
-  });
+  }
+
+  // Инициализируем обработку существующих элементов
+  processPliLangElements();
 
   // Закрытие Popup
   closeBtn.addEventListener('click', () => {
@@ -274,33 +285,32 @@ var dpdlang = 'https://dpdict.net/search_html';
   // Обработчик кнопки для включения/выключения отображения словаря
   toggleBtn.addEventListener('click', () => {
     dictionaryVisible = !dictionaryVisible;
-    
+
     // Сохраняем состояние в localStorage
     localStorage.setItem('dictionaryVisible', dictionaryVisible);
 
-  if (dictionaryVisible) {
-    //off
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg" class="common-size-icon4"></img>';
-  } else {
-    //on
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg" class="common-size-icon4"></img>';
-  }
-  });
-
-  // Глобальный обработчик для динамически добавляемых элементов
-  document.body.addEventListener('click', event => {
-    if (event.target.tagName === 'SPAN' && event.target.closest('.pli-lang')) {
-      const word = event.target.textContent.trim();
-      const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”]+$/g, '');
-      if (dictionaryVisible) {
-        const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
-        iframe.src = url;
-        popup.style.display = 'block';
-        overlay.style.display = 'block';
-      }
+    if (dictionaryVisible) {
+      // off
+      toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg" class="common-size-icon4"></img>';
+    } else {
+      // on
+      toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg" class="common-size-icon4"></img>';
     }
   });
-  
+
+  // Глобальный обработчик для добавления новых элементов
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      mutation.addedNodes.forEach(node => {
+        if (node.nodeType === Node.ELEMENT_NODE) {
+          processPliLangElements(node);
+        }
+      });
+    });
+  });
+
+  // Настраиваем наблюдателя на всё тело документа
+  observer.observe(document.body, { childList: true, subtree: true });
 </script>
 
     <div class="links-area" style="text-align: center;">

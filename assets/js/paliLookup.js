@@ -164,7 +164,7 @@ function processPliLangElements(container = document) {
         nodeWords.forEach((word, index) => {
           const span = document.createElement('span');
           span.textContent = word;
-          span.style.cursor = 'pointer';
+          span.style.cursor = 'default';
 
           // Добавляем обработчик клика
           span.addEventListener('click', () => {

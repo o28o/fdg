@@ -163,7 +163,7 @@ margin-left: 6px;
 
     /* Стили для обычного текста */
     .pli-lang {
-      cursor: text; 
+      cursor: default; 
       color: inherit; 
     }
 

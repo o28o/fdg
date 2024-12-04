@@ -944,6 +944,13 @@ if (/sn[0-9]/.test(indexValue)) {
     } else if (cleanedTranslation.startsWith("Сутта Нипата")) {
         cleanedTranslation = `Сутта Нипата ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
+} else if (indexValue.includes("ud")) {
+    if (!cleanedTranslation.startsWith("Удана")) {
+        const additionalLines = `Удана ${indexValue.replace(/[a-z]/g, '')}\nСутта \n\n`;
+        cleanedTranslation = additionalLines + cleanedTranslation;
+    } else if (cleanedTranslation.startsWith("Удана")) {
+        cleanedTranslation = `Удана ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
+    }
 } 
 
   document.getElementById('translationInput').value = cleanedTranslation;

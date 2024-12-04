@@ -38,7 +38,7 @@ function createPopup() {
   const iframe = document.createElement('iframe');
   iframe.src = '';
   iframe.style.width = '100%';
-  iframe.style.height = 'calc(100% - 40px)'; // Оставляем место для заголовка
+  iframe.style.height = 'calc(100% - 10px)'; // Оставляем место для заголовка
 
   // Добавляем заголовок для перетаскивания
   const header = document.createElement('div');

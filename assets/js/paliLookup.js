@@ -152,6 +152,20 @@ if (dictionaryVisible) {
 function processPliLangElements(container = document) {
   const pliLangElements = container.querySelectorAll('.pli-lang');
 
+  // Получаем значение finder из URL
+  const params = new URLSearchParams(document.location.search);
+  let finder = params.get("s");
+  let regex = null;
+
+  if (finder && finder.trim() !== "") {
+    try {
+      finder = finder.replace(/\\b/g, '').replace(/%08/g, '\\b'); // Обрабатываем \b
+      regex = new RegExp(finder, 'gi'); // Регулярное выражение для выделения совпадений
+    } catch (error) {
+      console.error("Ошибка при обработке finder:", error);
+    }
+  }
+
   pliLangElements.forEach((element) => {
     Array.from(element.childNodes).forEach((node) => {
       if (node.nodeType === Node.TEXT_NODE) {
@@ -161,10 +175,20 @@ function processPliLangElements(container = document) {
           .trim()
           .split(/\s+/)
           .filter((w) => w); // Убираем лишние пробелы
+
         nodeWords.forEach((word, index) => {
           const span = document.createElement('span');
-          span.textContent = word;
-          span.style.cursor = 'default';
+          let displayedWord = word;
+
+          // Если finder установлен и совпадает с текущим словом, выделяем его
+          if (regex && regex.test(word)) {
+            displayedWord = word.replace(regex, match => `<b class='match finder'>${match}</b>`);
+            span.innerHTML = displayedWord; // Используем innerHTML для выделения
+          } else {
+            span.textContent = word; // Обычный текст без выделения
+          }
+
+          span.style.cursor = 'text';
 
           // Добавляем обработчик клика
           span.addEventListener('click', () => {
@@ -172,7 +196,7 @@ function processPliLangElements(container = document) {
               const cleanWord = word.replace(
                 /^[‘“"(«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”–—]+$/g,
                 ''
-              ).toLowerCase(); 
+              ).toLowerCase();
               const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
               iframe.src = url;
               popup.style.display = 'block';
@@ -187,10 +211,14 @@ function processPliLangElements(container = document) {
         });
 
         node.replaceWith(newContent);
+      } else if (node.nodeType === Node.ELEMENT_NODE && node.nodeName !== 'SPAN') {
+        // Для всех элементов (включая span), обрабатываем их дочерние узлы рекурсивно
+        processPliLangElements(node);
       }
     });
   });
 }
+
 
 // Инициализируем обработку существующих элементов
 processPliLangElements();

@@ -2,6 +2,9 @@ saṁsandanti samenti
 
 проверить s= со вкл и выкл словарем
 
+Подобно лебедю, отделяющему молоко от воды». ??? ud8.7
+
+
 уточнить на счет стропил или балок в крые в частности остроконечной
 слова учителя и ученика
 существа на основе дхату
@@ -52,7 +55,8 @@ it might be an invitation for one who's looking to see is there Dhamma as well o
 1.12 25 15
 2.12 sn46 87 68??? 49
 3.12 44 26 0 sn???
-
+4.12 ud 
+5.12 4
 
 Dūteyya???
 
@@ -228,7 +232,6 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
   ekāra 1.1
   
   
-   31 ud8.7_root-pli-ms.json
+
    42 ud8.10_root-pli-ms.json
    58 ud8.8_root-pli-ms.json
-  108 ud8.6_root-pli-ms.json

@@ -9,7 +9,7 @@
 const siteLanguage = localStorage.getItem('siteLanguage');
 
 // Устанавливаем правильный URL для словаря в зависимости от языка
-let   dpdlang; 
+let dpdlang; 
 
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
@@ -99,7 +99,7 @@ console.log('lookup dict', siteLanguage, dpdlang);
             // Добавляем обработчик клика
             span.addEventListener('click', () => {
               if (dictionaryVisible) {
-                const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”]+$/g, '');
+                const cleanWord = word.replace(/^[‘“"«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”–—]+$/g, '');
                 const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
                 iframe.src = url;
                 popup.style.display = 'block';

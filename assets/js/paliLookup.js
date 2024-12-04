@@ -44,12 +44,12 @@ function createPopup() {
   const header = document.createElement('div');
   header.classList.add('popup-header');
   header.style.cursor = 'move';
-  header.style.height = '40px';
+  header.style.height = '10px';
   header.style.background = '#f1f1f1';
   header.style.display = 'flex';
   header.style.alignItems = 'center';
   header.style.padding = '0 10px';
-  header.textContent = 'Dictionary Popup';
+  header.textContent = '';
 
   popup.appendChild(header);
   popup.appendChild(closeBtn);

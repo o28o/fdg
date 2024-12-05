@@ -203,20 +203,19 @@ if (searchValue !== "") {
 
           span.style.cursor = 'text';
 
-// Добавляем обработчик клика
+          // Добавляем обработчик клика
           span.addEventListener('click', () => {
             if (dictionaryVisible) {
               const cleanWord = word.replace(
-                /^[‘“"(«»–—‘…’'„”]+|[.,!?;:()‘“"«»‘’'„”…–—]+$/g,
+                /^[‘“"(«»…–—‘’'„”]+|[.,!?;:()‘“"«»‘’'„”…–—]+$/g,
                 ''
               ).toLowerCase();
-              const url = ${dpdlang}?q=${encodeURIComponent(cleanWord)};
+              const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
               iframe.src = url;
               popup.style.display = 'block';
               overlay.style.display = 'block';
             }
-          }); 
-          
+          });
 
           newContent.appendChild(span);
           if (index < nodeWords.length - 1) {

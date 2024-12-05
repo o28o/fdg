@@ -186,7 +186,6 @@ if (searchValue !== "") {
         const nodeWords = node.textContent
           .trim()
           .split(/\s+/)
-          .split(/—/))
           .filter((w) => w); // Убираем лишние пробелы
 
         nodeWords.forEach((word, index) => {

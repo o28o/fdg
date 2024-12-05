@@ -203,28 +203,19 @@ if (searchValue !== "") {
 
           span.style.cursor = 'text';
 
-          // Добавляем обработчик клика
-span.addEventListener('click', () => {
-  if (dictionaryVisible) {
-    // Убираем лишние символы и разбиваем на слова
-    const cleanWords = word
-      .replace(/^[‘“"(«»–—…‘’'„”]+|[.,!?;:()‘“"«»‘…’'„”–—]+$/g, '') // Убираем лишние символы с краев
-      .split(/[—–]/) // Разделяем по длинному и короткому дефису
-      .map(part => part.trim().toLowerCase()) // Очищаем пробелы и приводим к нижнему регистру
-      .filter(Boolean); // Убираем пустые элементы
-
-    // Для каждого слова из массива создаем запрос в словарь
-    cleanWords.forEach(cleanWord => {
-      const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
-      iframe.src = url;
-
-      // Показать попап для текущего слова
-      popup.style.display = 'block';
-      overlay.style.display = 'block';
-    });
-  }
-});
-
+// Добавляем обработчик клика
+          span.addEventListener('click', () => {
+            if (dictionaryVisible) {
+              const cleanWord = word.replace(
+                /^[‘“"(«»–—‘…’'„”]+|[.,!?;:()‘“"«»‘’'„”…–—]+$/g,
+                ''
+              ).toLowerCase();
+              const url = ${dpdlang}?q=${encodeURIComponent(cleanWord)};
+              iframe.src = url;
+              popup.style.display = 'block';
+              overlay.style.display = 'block';
+            }
+          }); 
           
 
           newContent.appendChild(span);

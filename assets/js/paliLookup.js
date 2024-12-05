@@ -137,16 +137,16 @@ overlay.addEventListener('click', () => {
   iframe.src = ''; // Очищаем iframe
 });
 
-console.log('lookup dict', siteLanguage, dpdlang);
+console.log('lookup dict ', dpdlang, ' siteLanguage ', siteLanguage);
 
 // Проверяем состояние в localStorage при загрузке страницы
 let dictionaryVisible = localStorage.getItem('dictionaryVisible') === 'true';
 
 const toggleBtn = document.querySelector('.toggle-dict-btn');
 if (dictionaryVisible) {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg" class="common-size-icon4"></img>';
+  toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment.svg"></img>';
 } else {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg" class="common-size-icon4"></img>';
+  toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment-slash.svg"></img>';
 }
 
 function processPliLangElements(container = document) {
@@ -156,11 +156,23 @@ function processPliLangElements(container = document) {
   const params = new URLSearchParams(document.location.search);
   let finder = params.get("s");
   let regex = null;
+  
+  let keyword;
 
-  if (finder && finder.trim() !== "") {
+// Проверяем наличие элемента с классом "keyword"
+let keywordElement = document.querySelector('.keyword');
+if (keywordElement) {
+    keyword = keywordElement.textContent.trim();
+} else {
+    keyword = ""; // Значение по умолчанию, если элемент не найден
+}
+let searchValue = finder && finder.trim() !== "" ? finder.replace(/\\b/g, '') : keyword.replace(/\\b/g, '');  
+//console.log('keyword', keyword);
+//console.log('finder', finder);
+if (searchValue !== "") {
     try {
-      finder = finder.replace(/\\b/g, '').replace(/%08/g, '\\b'); // Обрабатываем \b
-      regex = new RegExp(finder, 'gi'); // Регулярное выражение для выделения совпадений
+      searchValue = searchValue.replace(/\\b/g, '').replace(/%08/g, '\\b'); // Обрабатываем \b
+      regex = new RegExp(searchValue, 'gi'); // Регулярное выражение для выделения совпадений
     } catch (error) {
       console.error("Ошибка при обработке finder:", error);
     }
@@ -184,6 +196,7 @@ function processPliLangElements(container = document) {
           if (regex && regex.test(word)) {
             displayedWord = word.replace(regex, match => `<b class='match finder'>${match}</b>`);
             span.innerHTML = displayedWord; // Используем innerHTML для выделения
+            span.innerHTML += ' ';
           } else {
             span.textContent = word; // Обычный текст без выделения
           }
@@ -231,9 +244,9 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('dictionaryVisible', dictionaryVisible);
 
   if (dictionaryVisible) {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg" class="common-size-icon4"></img>';
+    toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment.svg"></img>';
   } else {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg" class="common-size-icon4"></img>';
+    toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment-slash.svg"></img>';
   }
 });
 

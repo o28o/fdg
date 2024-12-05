@@ -109,7 +109,7 @@ cat $tmpdir/${prefix}threetables | awk -v keyword="$keyword" -v filename="$filen
     }
 
     # Вывод форматированной строки
-    print "<tr><td>" word "</td><td><a href=\"/" filename "?f=" word "\">" counttexts "</a></td><td><div style=\"display:none;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:none;\">" wordTabThree " </div>" linksHTML "</td></tr>"
+    print "<tr><td class=pli-lang>" word "</td><td><a href=\"/" filename "?f=" word "\">" counttexts "</a></td><td><div style=\"display:none;\">" wordTabTwo " </div>" countmatches "</td><td><div style=\"display:none;\">" wordTabThree " </div>" linksHTML "</td></tr>"
 }' > $tmpdir/${prefix}wordsfinalhtml
 else
 cat $tmpdir/${prefix}threetables | awk -v keyword="$htmlkeyword" -v source="$source" 'BEGIN { 
@@ -131,7 +131,7 @@ cat $tmpdir/${prefix}threetables | awk -v keyword="$htmlkeyword" -v source="$sou
     }
 
     # Вывод форматированной строки
-    print "<tr><td>" word "</td><td><a href=/s.php?s=\\b" word "\\b&d=" source " >" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
+    print "<tr><td class=pli-lang>" word "</td><td><a href=/s.php?s=\\b" word "\\b&d=" source " >" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
 }' > $tmpdir/${prefix}wordsfinalhtml
 #    print "<tr><td>" word "</td><td><a href=/s.php?s=" keyword "&f=" word ">" counttexts "</a></td><td>" countmatches "</td><td>" linksHTML "</td></tr>"
 fi 

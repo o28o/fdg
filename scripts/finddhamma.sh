@@ -1344,7 +1344,7 @@ echo "<tr>
 <td><a target=\"_blank\" href="$linkgeneral">$suttanumber</a></td>
 <td><input type='checkbox'></td>
 <td><strong class=\"pli-lang inputscript-ISOPali\">`echo $roottitle | highlightpattern`</strong>`echo "${suttatitle}" | highlightpattern ` </td>
-<td>$word</td>
+<td class=\"pli-lang inputscript-ISOPali\">$word</td>
 <td>$count</td>   
 <td>$metaphorcount</td>
 <td><a target=\"_blank\" href="$linken">Eng</a>&nbsp;

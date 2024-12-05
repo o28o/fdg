@@ -207,7 +207,7 @@ if (searchValue !== "") {
           span.addEventListener('click', () => {
             if (dictionaryVisible) {
               const cleanWord = word.replace(
-                /^[‘“"(«»‘’'„”]+|[.,!?;:()‘“"«»‘’'„”–—]+$/g,
+                /^[‘“"(«»-–—‘’'„”]+|[.,!?;:()‘“"«»‘’'„”-–—]+$/g,
                 ''
               ).toLowerCase();
               const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;

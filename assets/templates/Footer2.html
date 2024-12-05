@@ -23,12 +23,12 @@
 <script>
     // Находим все кнопки с классом "toggle-dict-btn" и отключаем их
     document.querySelectorAll('.toggle-dict-btn').forEach(button => {
-        button.setAttribute('disabled', true);
+        button.setAttribute('', true);
     });
 </script>
 
 
-        <script src="/assets/js/xpaliLookup.js"></script>
+        <script src="/assets/js/paliLookup.js"></script>
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
    $(document).ready(function() {
@@ -206,7 +206,7 @@ $('#pali').find('tbody').find('tr').each(function() {
         history.replaceState({}, '', currentUrl);
 }
   // s param и div keyword
-   
+ /*  
 let params = new URLSearchParams(document.location.search);
 let finder = params.get("s");
 let keyword;
@@ -250,7 +250,7 @@ if (searchValue !== "") {
     table.draw(false);
 }
 
-
+*/
 
 //конец s и keyword            
         },

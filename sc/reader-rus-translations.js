@@ -25,7 +25,7 @@ form.addEventListener("submit", e => {
   e.preventDefault();
   if (citation.value) {
     buildSutta(citation.value.replace(/\s+/g, " "));
-    history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
+  //  history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
   }
 });
 

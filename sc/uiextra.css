@@ -211,3 +211,7 @@ margin-left: 6px;
       z-index: 999;
       display: none;
     }
+.dict-icon {
+  height: 25px; 
+  width: 22px;
+}

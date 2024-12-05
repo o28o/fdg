@@ -204,18 +204,23 @@ if (searchValue !== "") {
           span.style.cursor = 'text';
 
           // Добавляем обработчик клика
-          span.addEventListener('click', () => {
-            if (dictionaryVisible) {
-              const cleanWord = word.replace(
-                /^[‘“"(«»–—‘’'„”]+|[.,!?;:()‘“"«»‘’'„”–—]+$/g,
-                ''
-              ).toLowerCase();
-              const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
-              iframe.src = url;
-              popup.style.display = 'block';
-              overlay.style.display = 'block';
-            }
-          });
+span.addEventListener('click', () => {
+  if (dictionaryVisible) {
+    // Убираем лишние символы и разделяем по дефису
+    const cleanWord = word
+      .replace(/^[‘“"(«»–—‘’'„”]+|[.,!?;:()‘“"«»‘’'„”–—]+$/g, '') // Удаляем лишние символы
+      .split('—') // Разделяем по длинному дефису
+      .map(part => part.trim().toLowerCase()) // Очищаем пробелы и приводим к нижнему регистру
+      .join(' '); // Склеиваем обратно с пробелами для обработки скриптом
+
+    const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
+    iframe.src = url;
+
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+});
+        
 
           newContent.appendChild(span);
           if (index < nodeWords.length - 1) {

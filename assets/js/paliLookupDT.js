@@ -144,9 +144,9 @@ let dictionaryVisible = localStorage.getItem('dictionaryVisible') === 'true';
 
 const toggleBtn = document.querySelector('.toggle-dict-btn');
 if (dictionaryVisible) {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg" class="common-size-icon4"></img>';
+  toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment.svg"></img>';
 } else {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg" class="common-size-icon4"></img>';
+  toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment-slash.svg"></img>';
 }
 
 function processPliLangElements(container = document) {
@@ -231,9 +231,9 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('dictionaryVisible', dictionaryVisible);
 
   if (dictionaryVisible) {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg" class="common-size-icon4"></img>';
+    toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment.svg"></img>';
   } else {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg" class="common-size-icon4"></img>';
+    toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment-slash.svg"></img>';
   }
 });
 

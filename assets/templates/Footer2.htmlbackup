@@ -19,7 +19,6 @@
 
         </div>
 
-        <script src="/assets/js/paliLookup.js"></script>
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
    $(document).ready(function() {

@@ -130,7 +130,7 @@
   </a>
 </div>  
 
-  <a class="toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="common-size-icon4"></img></a>
+  <a class="toggle-dict-btn common-size-icon4">  <img src="/assets/svg/comment.svg" class="dictIcon"></img></a>
   
 <div id="">
   <a alt="Show Help Message" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
@@ -387,10 +387,14 @@ toggleBtn.addEventListener('click', () => {
             // Убираем кавычки или апострофы в начале слова
             const cleanedWord = cleanWord(clickedWord);
             console.log('Клик по слову:', cleanedWord);
-    const url = `${dpdlang}?q=${encodeURIComponent(cleanedWord)}`;
-              iframe.src = url;
-              popup.style.display = 'block';
-              overlay.style.display = 'block';
+ 
+ if (dictionaryVisible) {
+  const url = `${dpdlang}?q=${encodeURIComponent(cleanedWord)}`;
+  iframe.src = url;
+  popup.style.display = 'block';
+  overlay.style.display = 'block';
+}
+
         }
     }
 });

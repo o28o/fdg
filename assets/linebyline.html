@@ -248,7 +248,7 @@ button:hover {
                 }
 
                 // Лог извлеченных переменных
-                console.log('Извлеченные переменные:', variables);
+             //   console.log('Извлеченные переменные:', variables);
 
                 // Обработка ввода пользователя
                 const inputField = document.getElementById('indexInput');
@@ -924,13 +924,14 @@ if (/sn[0-9]/.test(indexValue)) {
     } else if (cleanedTranslation.startsWith("Удана")) {
         cleanedTranslation = `Удана ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
     }
-} /*else if (indexValue.includes("iti")) {
+} else if (indexValue.includes("iti")) {
     if (!cleanedTranslation.startsWith("Это Сказано")) {
         const additionalLines = `Это Сказано ${indexValue.replace(/[a-z]/g, '')}\nСобрание \nГлава \nСутта \n`;
         cleanedTranslation = additionalLines + cleanedTranslation;
     } else if (cleanedTranslation.startsWith("Это Сказано")) {
         cleanedTranslation = `Это Сказано ${indexValue.replace(/[a-z]/g, '')}${cleanedTranslation.substring(cleanedTranslation.indexOf("\n"))}`;
-    }*/
+    }
+}
 
   document.getElementById('translationInput').value = cleanedTranslation;
 

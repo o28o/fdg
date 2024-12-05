@@ -57,7 +57,7 @@ it might be an invitation for one who's looking to see is there Dhamma as well o
 2.12 sn46 87 68??? 49
 3.12 44 26 0 sn???
 4.12 ud 
-5.12 4
+5.12 0 iti 112 -15
 
 Dūteyya???
 
@@ -231,35 +231,16 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
 
   
 
-  16 ./vagga1/iti7_root-pli-ms.json
     16 ./vagga10/iti94_root-pli-ms.json
-    17 ./vagga3/iti25_root-pli-ms.json
     17 ./vagga8/iti77_root-pli-ms.json
-    18 ./vagga1/iti9_root-pli-ms.json
-    18 ./vagga2/iti11_root-pli-ms.json
-    18 ./vagga2/iti12_root-pli-ms.json
-    18 ./vagga2/iti13_root-pli-ms.json
-    18 ./vagga2/iti16_root-pli-ms.json
-    18 ./vagga2/iti17_root-pli-ms.json
     18 ./vagga6/iti50_root-pli-ms.json
     18 ./vagga7/iti66_root-pli-ms.json
     18 ./vagga7/iti67_root-pli-ms.json
-    20 ./vagga1/iti8_root-pli-ms.json
-    20 ./vagga2/iti14_root-pli-ms.json
-    20 ./vagga2/iti15_root-pli-ms.json
     20 ./vagga4/iti32_root-pli-ms.json
     20 ./vagga4/iti33_root-pli-ms.json
     20 ./vagga6/iti57_root-pli-ms.json
     20 ./vagga7/iti68_root-pli-ms.json
     20 ./vagga9/iti86_root-pli-ms.json
-    21 ./vagga1/iti1_root-pli-ms.json
-    21 ./vagga1/iti2_root-pli-ms.json
-    21 ./vagga1/iti3_root-pli-ms.json
-    21 ./vagga1/iti4_root-pli-ms.json
-    21 ./vagga1/iti5_root-pli-ms.json
-    21 ./vagga1/iti6_root-pli-ms.json
-    21 ./vagga2/iti18_root-pli-ms.json
-    21 ./vagga2/iti19_root-pli-ms.json
     21 ./vagga5/iti45_root-pli-ms.json
     21 ./vagga5/iti46_root-pli-ms.json
     22 ./vagga11/iti108_root-pli-ms.json
@@ -276,8 +257,6 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
     22 ./vagga9/iti80_root-pli-ms.json
     23 ./vagga4/iti30_root-pli-ms.json
     23 ./vagga4/iti31_root-pli-ms.json
-    24 ./vagga1/iti10_root-pli-ms.json
-    24 ./vagga3/iti23_root-pli-ms.json
     24 ./vagga5/iti42_root-pli-ms.json
     24 ./vagga6/iti51_root-pli-ms.json
     24 ./vagga6/iti55_root-pli-ms.json
@@ -301,7 +280,7 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
     26 ./vagga8/iti71_root-pli-ms.json
     26 ./vagga9/iti81_root-pli-ms.json
     27 ./vagga10/iti98_root-pli-ms.json
-    27 ./vagga3/iti21_root-pli-ms.json
+
     28 ./vagga11/iti100_root-pli-ms.json
     28 ./vagga11/iti101_root-pli-ms.json
     28 ./vagga4/iti28_root-pli-ms.json
@@ -311,14 +290,10 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
     28 ./vagga7/iti69_root-pli-ms.json
     28 ./vagga9/iti87_root-pli-ms.json
     29 ./vagga11/iti107_root-pli-ms.json
-    29 ./vagga3/iti24_root-pli-ms.json
-    29 ./vagga3/iti26_root-pli-ms.json
     31 ./vagga11/iti104_root-pli-ms.json
     31 ./vagga11/iti109_root-pli-ms.json
     32 ./vagga10/iti91_root-pli-ms.json
     32 ./vagga10/iti95_root-pli-ms.json
-    33 ./vagga2/iti20_root-pli-ms.json
-    33 ./vagga3/iti22_root-pli-ms.json
     33 ./vagga5/iti44_root-pli-ms.json
     34 ./vagga10/iti99_root-pli-ms.json
     34 ./vagga11/iti103_root-pli-ms.json
@@ -337,7 +312,6 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
     46 ./vagga8/iti76_root-pli-ms.json
     47 ./vagga8/iti75_root-pli-ms.json
     48 ./vagga11/iti110_root-pli-ms.json
-    48 ./vagga3/iti27_root-pli-ms.json
     48 ./vagga8/iti74_root-pli-ms.json
     50 ./vagga9/iti89_root-pli-ms.json
     52 ./vagga9/iti88_root-pli-ms.json

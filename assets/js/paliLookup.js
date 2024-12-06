@@ -206,10 +206,14 @@ if (searchValue !== "") {
           // Добавляем обработчик клика
           span.addEventListener('click', () => {
             if (dictionaryVisible) {
-              const cleanWord = word.replace(
+              let cleanWord = word.replace(
                 /^[‘“"(«»…–—‘’'„”]+|[.,!?;:()‘“"«»‘’'„”…–—]+$/g,
                 ''
               ).toLowerCase();
+               cleanWord = cleanWord.replace(
+                /[‘“"»‘’'„”]+/g, "'"
+              );
+              console.log('cleanWord', cleanWord);
               const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
               iframe.src = url;
               popup.style.display = 'block';

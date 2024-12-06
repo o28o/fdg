@@ -452,7 +452,14 @@ function getTextNodes(element) {
     let node;
     while (node = walk.nextNode()) {
         textNodes.push(node);
+        console.log("Получен текстовый узел:", {
+            textContent: node.textContent,    // Текст узла
+            nodeValue: node.nodeValue,        // Текстовое значение узла
+            parentNode: node.parentNode,      // Родительский узел
+            nodeName: node.nodeName           // Имя узла
+        });
     }
+    console.log("Все текстовые узлы:", textNodes.map(node => node.textContent));
     return textNodes;
 }
 

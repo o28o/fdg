@@ -167,12 +167,20 @@ echo '<!--
 </figure>	  
 </a>
   <ul class="dropdown-menu" aria-labelledby="Materials">
-      <li><a class="dropdown-item" href="' . $linkcasesru . '">
-        <i class="' . $iconimportant . '"></i>
-        Падежи</a></li>
-      <li><a class="dropdown-item" href="' . $linkconj . '">
-        <i class="' . $iconimportant . '"></i>
-        Спряжения</a></li>
+   
+                         <li>
+<div class="dropdown-item ">
+         <i class="' . $iconimportant . '"></i>Падежи <a class="text-black" href="' . $linkcasesru . '"> таблица</a>
+         <a class="text-black" target=""  href="/assets/materials/pali_declensions_ru.pdf">примеры</a> 
+       </div>
+         </li>     
+                         <li>
+<div class="dropdown-item ">
+         <i class="' . $iconimportant . '"></i>Спряжения          <a class="text-black" target=""  href="/assets/materials/pali_conjugations_ru.pdf"> рус</a> 
+         <a class="text-black" href="' . $linkconj . '"> англ</a>
+       </div>
+         </li>        
+  
    <li><a class="dropdown-item" href="' . $linktextbookru . '">
      <i class="' . $iconimportant . '"></i>
     Дж. Гейр. – Курс по Пали. Рус</a></li>

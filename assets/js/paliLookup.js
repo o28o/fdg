@@ -6,9 +6,9 @@ let dpdlang;
 
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
-  dpdlang = 'https://dpdict.net/ru/search_html';
+  dpdlang = 'https://dpdict.net/ru/';
 } else {
-  dpdlang = 'https://dpdict.net/search_html';
+  dpdlang = 'https://dpdict.net/';
 }
 
 // Создание элементов для Popup с возможностью изменения размера и перемещения
@@ -218,12 +218,14 @@ if (searchValue !== "") {
               );
               console.log('cleanWord', cleanWord);
             if (dictionaryVisible) {
-              const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
+              const url = `${dpdlang}search_html?q=${encodeURIComponent(cleanWord)}`;
               iframe.src = url;
               popup.style.display = 'block';
               overlay.style.display = 'block';
             }
           });
+          
+          //gd?search=
 
           newContent.appendChild(span);
           if (index < nodeWords.length - 1) {

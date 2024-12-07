@@ -184,7 +184,8 @@ if (searchValue !== "") {
         const newContent = document.createDocumentFragment();
 
         const nodeWords = node.textContent
-          .trim().replace(/—/g,' — ')
+          .trim()
+          .replace(/—/g,' — ')
           .split(/[\s]+/)
           .filter((w) => w); // Убираем лишние пробелы
 

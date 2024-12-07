@@ -184,8 +184,8 @@ if (searchValue !== "") {
         const newContent = document.createDocumentFragment();
 
         const nodeWords = node.textContent
-          .trim()
-          .split(/\s+/)
+          .trim().replace(/—/g,' — ')
+          .split(/[\s]+/)
           .filter((w) => w); // Убираем лишние пробелы
 
         nodeWords.forEach((word, index) => {
@@ -199,13 +199,15 @@ if (searchValue !== "") {
             span.innerHTML += ' ';
           } else {
             span.textContent = word; // Обычный текст без выделения
+            span.textContent += ' '; // Обычный текст без выделения
           }
 
           span.style.cursor = 'text';
 
           // Добавляем обработчик клика
+          
+          
           span.addEventListener('click', () => {
-            if (dictionaryVisible) {
               let cleanWord = word.replace(
                 /^[‘“"(«»…–—‘’'„”]+|[.,!?;:()‘“"«»‘’'„”…–—]+$/g,
                 ''
@@ -214,6 +216,7 @@ if (searchValue !== "") {
                 /[‘“"»‘’'„”]+/g, "'"
               );
               console.log('cleanWord', cleanWord);
+            if (dictionaryVisible) {
               const url = `${dpdlang}?q=${encodeURIComponent(cleanWord)}`;
               iframe.src = url;
               popup.style.display = 'block';

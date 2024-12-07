@@ -414,7 +414,7 @@ function getClickedWord(element, x, y) {
             const text = textNode.textContent;
             
             // Разбиваем текст на слова с учетом пробела и знаков препинания
-            const words = text.split(/([ \t\n\r.,!?;—]+)/).filter(Boolean); // Разделители пробел, знаки препинания
+            const words = text.split(/([ \t\n\r.,!?;–—]+)/).filter(Boolean); // Разделители пробел, знаки препинания
 
             // Находим, по какому слову был клик
             let charIndex = 0;

@@ -76,8 +76,11 @@ function createPopup() {
     isDragging = true;
     startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
     startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
+
+    // Убедимся, что координаты установлены корректно
+    initialLeft = parseInt(popup.style.left || popup.offsetLeft, 10);
+    initialTop = parseInt(popup.style.top || popup.offsetTop, 10);
+
     e.preventDefault();
   }
 

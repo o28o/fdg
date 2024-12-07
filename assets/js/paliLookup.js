@@ -10,8 +10,7 @@ if (window.location.href.includes('/ru/') || window.location.href.includes('ml.h
 } else {
   dpdlang = 'https://dpdict.net/';
 }
-
-// Создание элементов для Popup с возможностью изменения размера и перемещения
+// Функция для создания и отображения Popup
 function createPopup() {
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
@@ -21,15 +20,15 @@ function createPopup() {
   popup.style.position = 'fixed';
 
   // Устанавливаем сохранённые размеры и позицию, если они есть
-  const savedWidth = localStorage.getItem('popupWidth');
-  const savedHeight = localStorage.getItem('popupHeight');
-  const savedTop = localStorage.getItem('popupTop');
-  const savedLeft = localStorage.getItem('popupLeft');
+  const savedWidth = parseInt(localStorage.getItem('popupWidth'), 10) || 300; // Задать значение по умолчанию
+  const savedHeight = parseInt(localStorage.getItem('popupHeight'), 10) || 200; // Задать значение по умолчанию
+  const savedTop = parseInt(localStorage.getItem('popupTop'), 10) || 100; // Задать значение по умолчанию
+  const savedLeft = parseInt(localStorage.getItem('popupLeft'), 10) || 100; // Задать значение по умолчанию
 
-  if (savedWidth) popup.style.width = savedWidth;
-  if (savedHeight) popup.style.height = savedHeight;
-  if (savedTop) popup.style.top = savedTop;
-  if (savedLeft) popup.style.left = savedLeft;
+  popup.style.width = `${savedWidth}px`;
+  popup.style.height = `${savedHeight}px`;
+  popup.style.top = `${savedTop}px`;
+  popup.style.left = `${savedLeft}px`;
 
   const closeBtn = document.createElement('button');
   closeBtn.classList.add('close-btn');
@@ -76,8 +75,8 @@ function createPopup() {
     isDragging = true;
     startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
     startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
+    initialLeft = parseInt(popup.style.left, 10);
+    initialTop = parseInt(popup.style.top, 10);
     e.preventDefault();
   }
 
@@ -86,8 +85,20 @@ function createPopup() {
     if (isDragging) {
       const deltaX = (e.clientX || e.touches[0].clientX) - startX;
       const deltaY = (e.clientY || e.touches[0].clientY) - startY;
-      popup.style.left = `${initialLeft + deltaX}px`;
-      popup.style.top = `${initialTop + deltaY}px`;
+      let newLeft = initialLeft + deltaX;
+      let newTop = initialTop + deltaY;
+
+      // Ограничение перемещения окна в пределах экрана
+      const maxLeft = window.innerWidth - popup.offsetWidth; // Максимальная позиция по горизонтали
+      const maxTop = window.innerHeight - popup.offsetHeight; // Максимальная позиция по вертикали
+
+      // Ограничение для верхнего левого угла
+      newLeft = Math.max(0, Math.min(newLeft, maxLeft));
+      newTop = Math.max(0, Math.min(newTop, maxTop));
+
+      // Обновляем позицию окна
+      popup.style.left = `${newLeft}px`;
+      popup.style.top = `${newTop}px`;
     }
   }
 

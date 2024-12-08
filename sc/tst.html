@@ -222,8 +222,6 @@ if (window.location.href.includes('/ru/') || window.location.href.includes('ml.h
 }
 
 // Создание элементов для Popup с возможностью изменения размера и перемещения
-
-// Создание элементов для Popup с возможностью изменения размера и перемещения
 function createPopup() {
   const overlay = document.createElement('div');
   overlay.classList.add('overlay');
@@ -288,11 +286,8 @@ function createPopup() {
     isDragging = true;
     startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
     startY = e.clientY || e.touches[0].clientY;
-
-    // Убедимся, что координаты установлены корректно
-    initialLeft = parseInt(popup.style.left || popup.offsetLeft, 10);
-    initialTop = parseInt(popup.style.top || popup.offsetTop, 10);
-
+    initialLeft = parseInt(popup.style.left || 0, 10);
+    initialTop = parseInt(popup.style.top || 0, 10);
     e.preventDefault();
   }
 
@@ -379,105 +374,133 @@ toggleBtn.addEventListener('click', () => {
 });
 
 
-//перехватчик кликов по слову
-  document.addEventListener('click', function(event) {
+// Перехватчик кликов по слову
+document.addEventListener('click', function(event) {
     // Проверяем, что клик был по элементу с классом "pli-lang"
-    if (event.target.classList.contains('pli-lang')) {
-        const text = event.target.textContent.trim();
+    if (event.target.closest('.pli-lang')) { // Учитываем вложенные элементы
+        const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
 
-        // Получаем координаты клика
-        const clickedWord = getClickedWord(event.target, event.clientX, event.clientY);
-        
         if (clickedWord) {
             // Убираем кавычки или апострофы в начале слова
             const cleanedWord = cleanWord(clickedWord);
             console.log('Клик по слову:', cleanedWord);
- 
- if (dictionaryVisible) {
-  const url = `${dpdlang}?q=${encodeURIComponent(cleanedWord)}`;
-  iframe.src = url;
-  popup.style.display = 'block';
-  overlay.style.display = 'block';
-}
 
+            if (dictionaryVisible) {
+                const url = `${dpdlang}?q=${encodeURIComponent(cleanedWord)}`;
+                iframe.src = url;
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            }
         }
     }
 });
 
-// Функция для определения, какое слово было кликнуто
-function getClickedWord(element, x, y) {
-    const range = document.createRange();
-    const textNodes = getTextNodes(element);
-    
-    for (let i = 0; i < textNodes.length; i++) {
-        const textNode = textNodes[i];
-        range.selectNodeContents(textNode);
+// Функция для определения, какое слово было кликнуто с учетом HTML
+function getClickedWordWithHTML(element, x, y) {
+    // Получаем диапазон по координатам
+    const selection = window.getSelection();
+    const range = document.caretRangeFromPoint(x, y);
 
-        const rect = range.getBoundingClientRect();
-        
-        if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
-            const text = textNode.textContent;
-            
-            // Разбиваем текст на слова с учетом пробела и знаков препинания
-            const words = text.split(/([ \t\n\r.,!?;–—]+)/).filter(Boolean); // Разделители пробел, знаки препинания
+    if (!range) return null;
 
-            // Находим, по какому слову был клик
-            let charIndex = 0;
-            for (const word of words) {
-                const wordLength = word.length;
-                const wordRect = getWordRect(textNode, charIndex, wordLength);
+    // Собираем полный текст элемента, включая вложенные узлы
+    const fullText = getFullTextFromElement(element);
+    console.log('Полный текст элемента:', fullText);
 
-                if (x >= wordRect.left && x <= wordRect.right && y >= wordRect.top && y <= wordRect.bottom) {
-                    return word; // Возвращаем найденное слово
-                }
+    // Вычисляем смещение клика в этом полном тексте
+    const offset = getOffsetInFullText(element, range.startContainer, range.startOffset);
+    console.log('Смещение в полном тексте:', offset);
 
-                charIndex += wordLength;
-            }
+    if (offset === -1) {
+        console.error('Не удалось вычислить смещение.');
+        return null;
+    }
+
+    // Регулярное выражение для поиска всех слов
+    const wordRegex = /[\p{L}\p{M}'’]+/gu; // Для поиска слов с диакритическими знаками
+
+    let match;
+    while ((match = wordRegex.exec(fullText)) !== null) {
+        const start = match.index;
+        const end = start + match[0].length;
+
+        console.log('Проверка слова:', match[0], 'Старт:', start, 'Конец:', end);
+
+        // Если смещение попадает в это слово, возвращаем его
+        if (offset >= start && offset <= end) {
+            console.log('Найдено слово:', match[0]);
+            return match[0];
         }
     }
 
+    console.warn('Слово не найдено.');
     return null;
 }
 
-// Функция для очистки слова от кавычек или апострофов в начале
-function cleanWord(word) {
-    // Убираем кавычки или апострофы в начале слова
-    word = word.replace(/^['‘…"“”]+/, '');
-    word = word.replace(/['‘"“…:;”]$/, '');
-    word = word.replace(/[…]/, '');
-word = word.replace(/['‘"“””’]+/g, "'");
-
-    return word.toLowerCase(); // Возвращаем слово с маленькой буквы
-}
-
-// Функция для получения всех текстовых узлов в элементе
-function getTextNodes(element) {
+// Функция для получения полного текста элемента с учетом всех вложенных узлов
+function getFullTextFromElement(element) {
     const textNodes = [];
-    const walk = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+
     let node;
-    while (node = walk.nextNode()) {
-        textNodes.push(node);
-        console.log("Получен текстовый узел:", {
-            textContent: node.textContent,    // Текст узла
-            nodeValue: node.nodeValue,        // Текстовое значение узла
-            parentNode: node.parentNode,      // Родительский узел
-            nodeName: node.nodeName           // Имя узла
-        });
+    while ((node = walker.nextNode())) {
+        textNodes.push(node.textContent); // Собираем текстовые узлы
     }
-    console.log("Все текстовые узлы:", textNodes.map(node => node.textContent));
-    return textNodes;
+
+    console.log('Собранные текстовые узлы:', textNodes);
+    return textNodes.join(''); // Объединяем все текстовые узлы в одну строку
 }
 
-// Функция для получения координат слова в тексте
-function getWordRect(textNode, startIdx, length) {
-    const range = document.createRange();
-    range.setStart(textNode, startIdx);
-    range.setEnd(textNode, startIdx + length);
+// Функция для вычисления смещения клика в полном тексте
+function getOffsetInFullText(element, targetNode, targetOffset) {
+    const textNodes = [];
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
 
-    const rect = range.getBoundingClientRect();
-    return rect;
+    let node;
+    let offset = 0;
+
+    while ((node = walker.nextNode())) {
+        if (node === targetNode) {
+            console.log('Целевой узел найден:', node, 'Смещение в узле:', targetOffset);
+            return offset + targetOffset;
+        }
+        offset += node.textContent.length;
+    }
+
+    console.error('Целевой узел не найден.');
+    return -1;
 }
-  
+
+// Слушатель клика
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('pli-lang')) {
+        const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
+
+        if (clickedWord) {
+            console.log('Клик по слову (очищено):', clickedWord);
+
+            if (dictionaryVisible) {
+                const cleanedWord = cleanWord(clickedWord);
+                const url = `${dpdlang}?q=${encodeURIComponent(cleanedWord)}`;
+                iframe.src = url;
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            }
+        }
+    }
+});
+
+
+// Функция для очистки слова от лишних символов
+function cleanWord(word) {
+    return word
+        .replace(/^['‘…"“”]+/, '') // Убираем символы в начале
+        .replace(/['‘"“…:;”]+$/, '') // Убираем символы в конце
+        .toLowerCase();
+}
+
+
+
 </script>
 
     <div class="links-area" style="text-align: center;">

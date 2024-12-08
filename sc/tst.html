@@ -197,7 +197,7 @@ More help:
   <div>
     <!-- Пример с абзацами -->
     <span id="2.4">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">Kathañca, visākhe, gopā<b class="match finder">lakupo</b>satho <b class="match finder">hoti</b> hoti?</span>
+      <span class="pli-lang inputscript-ISOPali" lang="pi">Kathañca, visākhe, gopā<b class="match finder">lakupo</b>satho <b class="match finder">cariṁsu</b> hoti?</span>
       <span class="rus-lang" lang="ru">And what is the sabbath of the cowherds?</span>
     </span>
     <span id="2.5">
@@ -395,74 +395,67 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Функция для определения, какое слово было кликнуто с учетом HTML
+// Функция для определения, какое слово было кликнуто
+// Функция для определения слова, по которому кликнули, с учетом вложенного HTML
 function getClickedWordWithHTML(element, x, y) {
     // Получаем диапазон по координатам
-    const selection = window.getSelection();
     const range = document.caretRangeFromPoint(x, y);
-
     if (!range) return null;
 
-    // Собираем полный текст элемента, включая вложенные узлы
-    const fullText = getFullTextFromElement(element);
-    console.log('Полный текст элемента:', fullText);
-
-    // Вычисляем смещение клика в этом полном тексте
-    const offset = getOffsetInFullText(element, range.startContainer, range.startOffset);
-    console.log('Смещение в полном тексте:', offset);
-
-    if (offset === -1) {
-        console.error('Не удалось вычислить смещение.');
+    // Находим родительский элемент с полным текстом
+    const parentElement = element.closest('.pli-lang'); // Убедимся, что это верхний элемент
+    if (!parentElement) {
+        console.error('Родительский элемент с классом pli-lang не найден.');
         return null;
     }
 
-    // Регулярное выражение для поиска всех слов
-    const wordRegex = /[\p{L}\p{M}'’]+/gu; // Для поиска слов с диакритическими знаками
+    // Собираем полный текст всего родительского элемента
+    const fullText = getFullTextFromElement(parentElement);
+    console.log('ВСЯ СТРОКА элемента:', fullText);
 
-    let match;
-    while ((match = wordRegex.exec(fullText)) !== null) {
-        const start = match.index;
-        const end = start + match[0].length;
-
-        console.log('Проверка слова:', match[0], 'Старт:', start, 'Конец:', end);
-
-        // Если смещение попадает в это слово, возвращаем его
-        if (offset >= start && offset <= end) {
-            console.log('Найдено слово:', match[0]);
-            return match[0];
-        }
+    // Определяем глобальное смещение в полном тексте
+    const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
+    if (globalOffset === -1) {
+        console.error('Не удалось вычислить глобальное смещение.');
+        return null;
     }
 
-    console.warn('Слово не найдено.');
-    return null;
+    console.log('Смещение в полном тексте:', globalOffset);
+
+    // Находим границы слова от пробела до пробела
+    const start = fullText.lastIndexOf(' ', globalOffset - 1) + 1; // После последнего пробела
+    const end = fullText.indexOf(' ', globalOffset);
+    const word = fullText.slice(start, end === -1 ? undefined : end);
+
+    console.log('Найденное слово:', word);
+    return word;
 }
 
-// Функция для получения полного текста элемента с учетом всех вложенных узлов
+// Функция для получения полного текста элемента (всей строки)
 function getFullTextFromElement(element) {
     const textNodes = [];
     const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
 
     let node;
     while ((node = walker.nextNode())) {
-        textNodes.push(node.textContent); // Собираем текстовые узлы
+        textNodes.push(node.textContent); // Собираем текст всех текстовых узлов
     }
 
-    console.log('Собранные текстовые узлы:', textNodes);
-    return textNodes.join(''); // Объединяем все текстовые узлы в одну строку
+    const combinedText = textNodes.join(''); // Склеиваем в единую строку
+    console.log('Склеенный текст всех узлов:', combinedText);
+    return combinedText;
 }
 
-// Функция для вычисления смещения клика в полном тексте
-function getOffsetInFullText(element, targetNode, targetOffset) {
-    const textNodes = [];
-    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-
-    let node;
+// Функция для расчёта глобального смещения
+function calculateOffsetWithHTML(element, targetNode, targetOffset) {
     let offset = 0;
+
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+    let node;
 
     while ((node = walker.nextNode())) {
         if (node === targetNode) {
-            console.log('Целевой узел найден:', node, 'Смещение в узле:', targetOffset);
-            return offset + targetOffset;
+            return offset + targetOffset; // Возвращаем глобальное смещение
         }
         offset += node.textContent.length;
     }
@@ -471,31 +464,12 @@ function getOffsetInFullText(element, targetNode, targetOffset) {
     return -1;
 }
 
-// Слушатель клика
-document.addEventListener('click', function (event) {
-    if (event.target.classList.contains('pli-lang')) {
-        const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
-
-        if (clickedWord) {
-            console.log('Клик по слову (очищено):', clickedWord);
-
-            if (dictionaryVisible) {
-                const cleanedWord = cleanWord(clickedWord);
-                const url = `${dpdlang}?q=${encodeURIComponent(cleanedWord)}`;
-                iframe.src = url;
-                popup.style.display = 'block';
-                overlay.style.display = 'block';
-            }
-        }
-    }
-});
-
 
 // Функция для очистки слова от лишних символов
 function cleanWord(word) {
     return word
-        .replace(/^['‘…"“”]+/, '') // Убираем символы в начале
-        .replace(/['‘"“…:;”]+$/, '') // Убираем символы в конце
+        .replace(/^[\s'‘—–…"“”]+/, '') // Убираем символы в начале, включая пробелы и тире
+        .replace(/[\s'‘,——–"“…:;”]+$/, '') // Убираем символы в конце, включая пробелы и тире
         .toLowerCase();
 }
 

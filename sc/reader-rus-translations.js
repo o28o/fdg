@@ -253,7 +253,7 @@ let params = new URLSearchParams(document.location.search);
 //  finder = finder.replace(/%08/g, '\\b');
  // console.log(finder);
    // let finder = decodeURIComponent(params.get("s"));
-/*
+
 if (finder && finder.trim() !== "") {
   let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
 
@@ -262,6 +262,8 @@ if (finder && finder.trim() !== "") {
   } catch (error) {
     console.error("Ошибка при выделении совпадений в paliData:", error);
   }
+
+paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 
   try {
     transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
@@ -277,7 +279,8 @@ if (finder && finder.trim() !== "") {
     }
   }
 }
-*/
+
+paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">

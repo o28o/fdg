@@ -80,7 +80,7 @@
 });
   </script>
   
-  <!--  <script>
+  <script>
 $(document).ready(function() {
     // Получаем параметр поиска из URL
 let params = new URLSearchParams(document.location.search);
@@ -133,7 +133,7 @@ var regex = new RegExp(searchValue + '(?![^<]*>)', 'gi');
         table.draw();
     }
 });
-  </script> -->
+  </script>
   <script src="/assets/js/themeswitch.js"></script>
         <script src="/assets/js/openFdg.js"></script>
 	  <script src="/assets/js/smoothScroll.js"defer></script>

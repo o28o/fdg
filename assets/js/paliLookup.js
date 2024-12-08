@@ -7,9 +7,9 @@ let dpdlang;
 
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
-  dpdlang = 'https://dpdict.net/ru/search_html';
+  dpdlang = 'https://dpdict.net/ru/';
 } else {
-  dpdlang = 'https://dpdict.net/search_html';
+  dpdlang = 'https://dpdict.net/';
 }
 
 // Создание элементов для Popup с возможностью изменения размера и перемещения
@@ -177,7 +177,7 @@ document.addEventListener('click', function(event) {
             console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
-                const url = `${dpdlang}?q=${encodeURIComponent(cleanedWord)}`;
+                const url = `${dpdlang}search_html?q=${encodeURIComponent(cleanedWord)}`;
                 iframe.src = url;
                 popup.style.display = 'block';
                 overlay.style.display = 'block';
@@ -186,7 +186,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Функция для определения, какое слово было кликнуто
 // Функция для определения слова, по которому кликнули, с учетом вложенного HTML
 function getClickedWordWithHTML(element, x, y) {
     // Получаем диапазон по координатам
@@ -196,13 +195,12 @@ function getClickedWordWithHTML(element, x, y) {
     // Находим родительский элемент с полным текстом
     const parentElement = element.closest('.pli-lang'); // Убедимся, что это верхний элемент
     if (!parentElement) {
-        console.error('Родительский элемент с классом pli-lang не найден.');
+        console.log('Родительский элемент с классом pli-lang не найден.');
         return null;
     }
 
     // Собираем полный текст всего родительского элемента
     const fullText = getFullTextFromElement(parentElement);
-    console.log('ВСЯ СТРОКА элемента:', fullText);
 
     // Определяем глобальное смещение в полном тексте
     const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
@@ -233,7 +231,7 @@ function getFullTextFromElement(element) {
     }
 
     const combinedText = textNodes.join(''); // Склеиваем в единую строку
-    console.log('Склеенный текст всех узлов:', combinedText);
+    console.log('текст всех узлов:', combinedText);
     return combinedText;
 }
 
@@ -251,7 +249,7 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
         offset += node.textContent.length;
     }
 
-    console.error('Целевой узел не найден.');
+    console.log('Целевой узел не найден.');
     return -1;
 }
 
@@ -259,8 +257,8 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
 // Функция для очистки слова от лишних символов
 function cleanWord(word) {
     return word
-        .replace(/^[\s'‘—–…"“”]+/, '') // Убираем символы в начале, включая пробелы и тире
-        .replace(/[\s'‘,——–"“…:;”]+$/, '') // Убираем символы в конце, включая пробелы и тире
+        .replace(/^[\s'‘—.–…"“”]+/, '') // Убираем символы в начале, включая пробелы и тире
+        .replace(/[\s'‘,—.—–"“…:;”]+$/, '') // Убираем символы в конце, включая пробелы и тире
         .toLowerCase();
 }
 

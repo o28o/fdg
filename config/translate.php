@@ -101,7 +101,7 @@ $randomKey = array_rand($monktype);
 $randomValue = $monktype[$randomKey];
 
 $howtosearchquotetooltip = '';
-$howtosearchquote = '<p class="pli-lang">Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.</p><br><br>
+$howtosearchquote = '<p class="pli-lang">Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.</p>
 <p>Если при поиске в Суттах и сверке с Винаей они (учения, практики, методы, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем ' . $randomKey . '". Таким образом, монахи, вам следует это отвергнуть. 
 </p>
 <p class="text-end"><a target=_blank href=/ru/sc/?q=dn16&s=Tāni&lang=pli-eng#4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180&s=Tāni&lang=pli-eng#2.7>an4.180</a></p>';
@@ -145,7 +145,7 @@ $randomNumber = rand(1, 2); // Генерируем случайное числ�
 // Логика выбора пары
 if ($randomNumber % 2 == 1) {
 $fntmessage = '<p class="font-italic text-center pli-lang">
-“Evamevaṁ kho, devānaminda, yaṁ kiñci subhāsitaṁ sabbaṁ taṁ tassa bhagavato vacanaṁ arahato sammāsambuddhassa...</p><br><br>
+“Evamevaṁ kho, devānaminda, yaṁ kiñci subhāsitaṁ sabbaṁ taṁ tassa bhagavato vacanaṁ arahato sammāsambuddhassa...</p>
 <p>“Точно также, царь богов, что-либо хорошо сказанное – всё это слово Благословенного, Араханта, Правильно Пробуждённого...
 <p class="text-end">
 an8.8
@@ -170,7 +170,7 @@ $mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=a
 } else {
   
 $fntmessage = '<p class="font-italic text-center pli-lang ">
-Katamañca, bhikkhave, dukkhaṁ?</p><br>
+Katamañca, bhikkhave, dukkhaṁ?</p>
 <p>Что такое, монахи, боль?
 <p class="text-end">
 dn22 mn141
@@ -182,7 +182,7 @@ $mainscrollmodal = '<p >Из <a href=/ru/sc/?q=dn22&s=dukkha&lang=pli-rus#18.18>
 Что такое, монахи, боль?</br>
 </br>
 <p class="pli-lang">Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p></br>
-Любая, монахи, <strong>телесная / осязаемая</strong> боль, <strong>телесный / осязаемый</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости осязанием,</br>
+<p>Любая, монахи, <strong>телесная / осязаемая</strong> боль, <strong>телесный / осязаемый</strong> дискомфорт, боль и дискомфорт чувствуемый от затронутости осязанием,</br>
 </br>
 <p class="pli-lang">idaṁ vuccati, bhikkhave, dukkhaṁ.</p></br>
 это называется болью.</br>
@@ -621,7 +621,7 @@ $randomKey = array_rand($monktype);
 $randomValue = $monktype[$randomKey];
 
 $howtosearchquotetooltip = '';
-$howtosearchquote = '<p class="pli-lang">Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.</p><br><br>
+$howtosearchquote = '<p class="pli-lang">Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.</p>
 <p>If they (teachings, practices, methods, quotes, stories, anything associated with the Buddha) are not found in the Suttas and are not exhibited in the Vinaya, you should draw the conclusion: ‘Clearly this is not the word of the Blessed One. It has been wrongly understood by that ' . $randomKey . '.’ And so, monks, you should reject it.
 </p>
 <p class="text-end"><a target=_blank href=/sc/?q=dn16&s=Tāni&lang=pli-rus#4.8.6>dn16</a> <a target=_blank href=/sc/?q=an4.180&s=Tāni&lang=pli-rus#2.7>an4.180</a></p>';
@@ -743,19 +743,18 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
 $mainscrollmodalheader = 'Definition of Dukkha in Suttas';
 
 $mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22&s=dukkha&lang=pli-eng#18.18">dn22</a> <a href="/sc/?q=mn141&s=dukkha&lang=pli-eng#16.1">mn141</a></br>
-<h4 class="pli-lang">Katamañca, bhikkhave, dukkhaṁ?</h4></br>And what is pain?</br></br><p class="pli-lang">Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p></br><p>Whatever is experienced as  <strong>bodily</strong> pain, <strong>bodily</strong> discomfort, pain or discomfort born of bodily contact, </p></br>
+<h4 class="pli-lang">Katamañca, bhikkhave, dukkhaṁ?</h4>And what is pain?</br></br><p class="pli-lang">Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p><p>Whatever is experienced as  <strong>bodily</strong> pain, <strong>bodily</strong> discomfort, pain or discomfort born of bodily contact, </p></br>
+<p class="pli-lang">idaṁ vuccati, bhikkhave, dukkhaṁ.</p>
+<p>that is called pain.</p>
 </br>
-<p class="pli-lang">idaṁ vuccati, bhikkhave, dukkhaṁ.</p></br>
-that is called pain.</br>
+<h4 class="pli-lang">Katamañca, bhikkhave, domanassaṁ?</h4>
+<p>And what is stress / "suffering"?</p></br>
+
+<p class="pli-lang">Yaṁ kho, bhikkhave, <strong>cetasikaṁ</strong> dukkhaṁ <strong>cetasikaṁ</strong> asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p>
+<p>Whatever is experienced as <strong>mental</strong> pain, <strong>mental</strong> discomfort, pain or discomfort born of mental contact, that is called distress,</p>
 </br>
-<h4 class="pli-lang">Katamañca, bhikkhave, domanassaṁ?</h4></br>
-And what is stress / "suffering"?</br>
-</br>
-<p class="pli-lang">Yaṁ kho, bhikkhave, <strong>cetasikaṁ</strong> dukkhaṁ <strong>cetasikaṁ</strong> asātaṁ manosamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p></br>
-Whatever is experienced as <strong>mental</strong> pain, <strong>mental</strong> discomfort, pain or discomfort born of mental contact, that is called distress,</br>
-</br>
-<p class="pli-lang">idaṁ vuccati, bhikkhave, domanassaṁ.</p></br>
-that is called stress.</p>';
+<p class="pli-lang">idaṁ vuccati, bhikkhave, domanassaṁ.</p>
+<p>that is called stress.</p>';
 
         
 $transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Please remember!</b><br><br> Translations, dictionaries and commentaries were not made by the Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   

@@ -462,11 +462,12 @@ setLanguage(language);
       <li><span class="abbr">mn</span> Majjhima-nikāya</li>
       <li><span class="abbr">sn</span> Saṁyutta-nikāya</li>
       <li><span class="abbr">an</span> Aṅguttara-nikāya</li>
-      <li><span class="abbr">snp</span> Sutta-nipāta</li>
+
   </ul>
   </div>
     <h2>Other Texts</h2><br>
   <ul>
+      <li><span class="abbr">snp</span> Sutta-nipāta</li>  
       <li><span class="abbr">ud</span> Udāna</li>
       <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
       <li><span class="abbr">dhp</span> Dhammapada</li>

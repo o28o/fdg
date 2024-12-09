@@ -26,6 +26,15 @@ if ( preg_match('/\/ru/', $actual_link)) {
 if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {
     // Действие при выполнении условия
     $stringForWord = urlencode($stringForWord); 
+    
+    if ( preg_match('/\/ru/', $actual_link)) {
+  $outputlang = "-oru";
+  $langinurl = "/ru";
+} else {
+    $outputlang = "";
+  $langinurl = "";
+    }
+    
 echo "<script>
 window.location.href='$langinurl/w.php?s=$stringForWord';
 </script>";

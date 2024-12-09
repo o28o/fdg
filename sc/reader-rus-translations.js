@@ -611,13 +611,14 @@ setLanguage(language);
      <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>
       <li><span class="abbr">sn</span> <a href="/ru/assets/texts/sn.php"> Saṁyutta-nikāya</a></li>
       <li><span class="abbr">an</span> <a href="/ru/assets/texts/an.php"> Aṅguttara-nikāya</a></li>
-      <li><span class="abbr">snp</span> Sutta-nipāta</li>
+
   </ul>
   </div>
 
   <div>
   <h2>Часть KN</h2><br>
   <ul>
+       <li><span class="abbr">snp</span> Sutta-nipāta</li> 
       <li><span class="abbr">ud</span> Udāna</li>
       <li><span class="abbr">iti</span> Itivuttaka (1–112)</li>
       <li><span class="abbr">dhp</span> Dhammapada</li>

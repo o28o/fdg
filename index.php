@@ -45,6 +45,8 @@ include 'scripts/opentexts.php';
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/paliLookup.css" rel="stylesheet" />
+
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
@@ -1286,6 +1288,7 @@ $.ajax({
 </script>
 
 <!-- <script type="module" src="/assets/js/autopali.js"></script> -->
+<script src="/assets/js/paliLookup.js"></script>
 	  
 <script src="/assets/js/randPlaceholder.js">
 </script>

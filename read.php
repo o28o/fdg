@@ -526,7 +526,7 @@ clearBtn.style.display = 'block';
 
 <div style="max-width: 450px;" class="container-lg my-4">
 
-<div class="container text-start input-group-append " >
+<div class="container text-start input-group-append pli-lang" >
 
  <div class="level1 d-flex align-items-center">
   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"

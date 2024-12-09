@@ -170,6 +170,11 @@ document.addEventListener('click', function(event) {
     // Проверяем, что клик был по элементу с классом "pli-lang"
     if (event.target.closest('.pli-lang')) { // Учитываем вложенные элементы
         const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
+        
+                // Если клик был по ссылке <a>, ничего не делаем
+        if (event.target.closest('a')) {
+            return;
+        }
 
         if (clickedWord) {
             // Убираем кавычки или апострофы в начале слова

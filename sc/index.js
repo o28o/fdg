@@ -23,7 +23,7 @@ form.addEventListener("submit", e => {
   e.preventDefault();
   if (citation.value) {
     buildSutta(citation.value.replace(/\s+/g, " "));
-  //  history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
+   history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
   }
 });
 
@@ -168,9 +168,9 @@ if (finder && finder.trim() !== "") {
   }
 }
 
-paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
+paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">

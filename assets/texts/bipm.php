@@ -17,6 +17,7 @@ include '../../scripts/opentexts.php';
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
     <!-- Style CSS -->
     <link rel="stylesheet" href="/assets/css/playerStyle.css">
+    <link rel="stylesheet" href="/assets/css/paliLookup.css">
 
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
@@ -36,6 +37,7 @@ include '../../scripts/opentexts.php';
                 <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
                     <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
                 </a>
+  <a class="ms-1 toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="dictIcon-sitePages"></img></a>
 
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
@@ -150,6 +152,8 @@ $(document).ready(function () {
 
   });
 </script>
+<script src="/assets/js/paliLookup.js"></script>
+
 <!-- Audio Player JS -->
 <script  src="/assets/js/jsPlayer.js"></script>  
 </body>

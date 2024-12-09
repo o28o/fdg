@@ -178,6 +178,7 @@ $defaults = '<br>
 <input class="form-check-input mt-2" name="ml" type="checkbox" id="mlCheckbox">
 <a href="/sc/ml.html?q=sn56.11">ml</a> or <input class="form-check-input mt-2" name="rv" type="checkbox" id="rvCheckbox">
 <a href="/sc/rv.html?q=sn56.11">rv</a> as Default Reader
+  <a class="dictIcon toggle-dict-btn">  <img src="/assets/svg/comment.svg" class=""></img></a>
 
 <script>
 // Получаем элементы чекбоксов

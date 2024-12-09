@@ -145,9 +145,9 @@ let dictionaryVisible = localStorage.getItem('dictionaryVisible') === 'true';
 
 const toggleBtn = document.querySelector('.toggle-dict-btn');
 if (dictionaryVisible) {
-  toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment.svg"></img>';
+  toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg"></img>';
 } else {
-  toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment-slash.svg"></img>';
+  toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg"></img>';
 }
 
 // Обработчик кнопки для включения/выключения отображения словаря
@@ -158,9 +158,9 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('dictionaryVisible', dictionaryVisible);
 
   if (dictionaryVisible) {
-    toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment.svg"></img>';
+    toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg"></img>';
   } else {
-    toggleBtn.innerHTML = '<img class="dictIcon" src="/assets/svg/comment-slash.svg"></img>';
+    toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg"></img>';
   }
 });
 

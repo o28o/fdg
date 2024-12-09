@@ -60,3 +60,44 @@
 height:15px; 
 width:15px;
 }
+
+.dictIcon-sitePages {
+height: 35px; 
+width: 35px;
+}
+
+
+/* Базовый стиль для иконки */
+.toggle-dict-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Для конкретного контейнера */
+.container-fluid .toggle-dict-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Использование атрибута */
+img[data-size="small"] {
+  width: 16px;
+  height: 16px;
+}
+
+img[data-size="large"] {
+  width: 48px;
+  height: 48px;
+}
+
+
+/*$
+<button class="btn btn-light mb-1 toggle-dict-btn" type="button">
+  <img src="/assets/svg/comment.svg" data-size="small">
+</button>
+
+<button class="btn btn-light mb-1 toggle-dict-btn" type="button">
+  <img src="/assets/svg/comment.svg" data-size="large">
+</button>
+
+*/

@@ -53,6 +53,7 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/paliLookup.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
@@ -253,6 +254,7 @@ $(document).ready(function() {
 
   <?php echo $regexlink;?> 
     <?php echo $defaults;?> 
+    
  </p>
 
 <script>
@@ -19031,6 +19033,7 @@ $.ajax({
   console.log(window.location.href);
 
 </script>
+<script src="/assets/js/paliLookup.js"></script>
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/openFdg.js"></script>
 </body>

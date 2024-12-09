@@ -13,6 +13,8 @@ include '../../scripts/opentexts.php';
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/assets/css/styles.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/paliLookup.css">
+
 <!-- Favicon-->
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 
@@ -32,6 +34,8 @@ include '../../scripts/opentexts.php';
                 <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
                     <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
                 </a>
+                
+                  <a class="ms-1 toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="dictIcon-sitePages"></img></a>
 
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
@@ -39,7 +43,7 @@ include '../../scripts/opentexts.php';
             </div>
         </div>
     </div>
-<div class="container right-text reverse-order">
+<div class="container right-text pli-lang reverse-order">
  <div class="my-3">
  <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
  </div>
@@ -17829,5 +17833,7 @@ include '../../scripts/opentexts.php';
 <script src="/assets/js/tocjs.js"></script>
 <script src="/assets/js/dark-mode-switch/dark-mode-switch.js"></script>
 <script src="/assets/js/openFdg.js"></script>
+<script src="/assets/js/paliLookup.js"></script>
+
 </body>
 </html>

@@ -247,9 +247,9 @@ echo '<!--
          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
                   <a class="text-black" target="" href="' . $mainscpage . '"> индекс</a>   
-            <a class="text-black" target="" href="/assets/texts/sutta.php">sutta</a>        
-      <a class="text-black" target="" href="/assets/texts/pm.php">bupm</a>        
-      <a class="text-black" target="" href="/assets/texts/bipm.php">bipm</a> 
+            <a class="text-black" target="" href="/ru/assets/texts/sutta.php">sutta</a>        
+      <a class="text-black" target="" href="/ru/assets/texts/pm.php">bupm</a>        
+      <a class="text-black" target="" href="/ru/assets/texts/bipm.php">bipm</a> 
 
          </div>
          </li>
@@ -308,8 +308,8 @@ echo '<!--
        </div>
          </li>    
   
-   <li><a class="dropdown-item" href="/assets/linebyline.html">Создание Построчных Файлов</a></li>
-   <li><a class="dropdown-item" href="/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
+   <li><a class="dropdown-item" href="/ru/assets/linebyline.html">Создание Построчных Файлов</a></li>
+   <li><a class="dropdown-item" href="/ru/assets/diff/?lang=pl">' . $anamesdiff . '</a></li>
  <li><a class="dropdown-item" href="/ru/assets/makelist.html">
    <i class="' . $iconimportant . '"></i>
  ' . $head5makelist . '</a></li>   

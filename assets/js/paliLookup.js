@@ -46,7 +46,6 @@ function createPopup() {
   header.classList.add('popup-header');
   header.style.cursor = 'move';
   header.style.height = '10px';
-  header.style.background = '#f1f1f1';
   header.style.display = 'flex';
   header.style.alignItems = 'center';
   header.style.padding = '0 10px';
@@ -264,6 +263,8 @@ function cleanWord(word) {
     return word
         .replace(/^[\s'‘—.–…"“”]+/, '') // Убираем символы в начале, включая пробелы и тире
         .replace(/[\s'‘,—.—–"“…:;”]+$/, '') // Убираем символы в конце, включая пробелы и тире
+        .replace(/[‘"“””]+/, "'") // заменяем в середине
+        
         .toLowerCase();
 }
 

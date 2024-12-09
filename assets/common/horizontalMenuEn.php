@@ -260,10 +260,10 @@ echo '<!--
 
                <li>
          <div class="dropdown-item ">
-                      <i class="' . $iconimportant . '"></i> Digital Pāḷi Dict
+                      <i class="' . $iconimportant . '"></i>        <a class="text-black" target="" href="https://dpdict.net/">Digital Pāḷi Dict</a> 
          <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Eng</a>
           <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Rus</a>  
-       <a class="text-black" target="" href="https://dpdict.net/">Online</a> 
+       <a class="text-black" target="" href="https://find.dhamma.gift/assets/dpdPlugin/index.html?s=pi$">Site-plugin</a> 
        </div>
          </li>   
    

@@ -14,12 +14,23 @@
       transform: translate(-50%, -50%);
       width: 80%;
       height: 80%;
-      background: white;
-      border: 2px solid #ccc;
+background: white; 
+      border: 2px solid #666;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       z-index: 100000;
       display: none;
     }
+
+/* Темный режим для popup */
+.popup.dark {
+  background: black; /* Черный фон для темного режима */
+  color: white;      /* Белый текст */
+  border-color: #666; /* Более темная рамка */
+}
+
+[data-theme="dark"] .popup iframe {
+  background: black;
+}
 
     .popup iframe {
       width: 100%;
@@ -27,6 +38,22 @@
       border: none;
             z-index: 10000;
     }
+
+    .popup.dark  {
+background: black;
+    }
+
+.popup-header {
+  background = '#f1f1f1';
+}
+  
+[data-theme="dark"] .popup-header {
+  background: black;
+}
+
+.popup-header.dark {
+  background = black;
+}
 
 .popup .close-btn {
   position: absolute;

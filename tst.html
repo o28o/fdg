@@ -3,74 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popup Dictionary with Iframe</title>
+    <title>Dark Mode Transition</title>
     <style>
-        .iframe-popup {
-            position: absolute;
-            width: 400px;
-            height: 300px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            display: none;
-            background: #fff;
+        :root {
+            --background-light: rgb(226, 235, 237);
+            --foreground-light: rgb(7, 2, 28);
+            --background-dark: rgb(7, 2, 28);
+            --foreground-dark: rgb(226, 235, 237);
+            --colour1: #00A4CC;
+            --colour2: #65DBFF;
         }
 
-        .pli-lang span {
-            cursor: pointer;
-            color: blue;
-            text-decoration: underline;
+        body {
+            background-color: var(--background-light);
+            color: var(--foreground-light);
+            font-family: "sans";
+            font-size: 1em;
+            transition: 1s;
+        }
+
+        .dark-mode {
+            background-color: var(--background-dark);
+            color: var(--foreground-dark);
+        }
+
+        body.no-transition {
+            transition: none !important;
+        }
+
+        body.no-transition * {
+            transition: none !important;
         }
     </style>
 </head>
 <body>
-    <div>
-        <span id="2.4">
-            <span class="pli-lang inputscript-ISOPali" lang="pi">
-                Kathañca, visākhe, gopālakuposatho hoti?
-            </span>
-            <span class="rus-lang" lang="ru">And what is the sabbath of the cowherds?</span>
-        </span>
-        <span id="2.5">
-            <span class="pli-lang inputscript-ISOPali" lang="pi">
-                ‘ajja kho gāvo amukasmiñca amukasmiñca padese cariṁsu.
-            </span>
-            <span class="rus-lang" lang="ru">‘Today the cows grazed in this spot and that.</span>
-        </span>
-    </div>
-
-    <iframe id="iframe-popup" class="iframe-popup"></iframe>
+    <h1>Dark Mode Transition Example</h1>
+    <p>Switch between light and dark modes. If loaded in an iframe, transitions will be disabled.</p>
+    <button id="toggleDarkMode">Toggle Dark Mode</button>
 
     <script>
-        const dpdLangUrl = 'https://dpdict.net/search_html?q='; // URL для запросов
-        const iframePopup = document.getElementById('iframe-popup');
+        // Проверяем, находится ли страница в iframe
+        if (window.self !== window.top) {
+            document.body.classList.add('no-transition');
+        }
 
-        // Разбить слова в pli-lang на span для кликов
-        document.querySelectorAll('.pli-lang').forEach((element) => {
-            const text = element.textContent.trim();
-            const words = text.split(/\s+/); // Разделение текста на слова
-            element.innerHTML = words.map(word => `<span>${word}</span>`).join(' ');
-        });
+        // Функция для переключения темного режима
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+        };
 
-        // Обработчик клика на слово
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.pli-lang span')) {
-                const word = e.target.textContent.trim(); // Получаем кликнутое слово
-                const url = `${dpdLangUrl}${encodeURIComponent(word)}`;
-
-                // Позиционирование iframe
-                const rect = e.target.getBoundingClientRect();
-                iframePopup.style.top = `${rect.bottom + window.scrollY}px`;
-                iframePopup.style.left = `${rect.left + window.scrollX}px`;
-
-                // Загрузка URL в iframe
-                iframePopup.src = url;
-                iframePopup.style.display = 'block';
-            } else {
-                // Скрыть iframe, если клик вне слова
-                iframePopup.style.display = 'none';
-            }
-        });
+        // Привязываем событие к кнопке
+        document.getElementById('toggleDarkMode').addEventListener('click', toggleDarkMode);
     </script>
 </body>
 </html>

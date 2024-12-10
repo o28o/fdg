@@ -15,7 +15,7 @@ cd - 2>&1 >/dev/null
 
 #find "$downloaddir" -maxdepth 1 -type f -size 0 -name "*translation*.json" | xargs rm
 
-for file in `find "$downloaddir" -maxdepth 1 -type f -size +0 -name "*translation*.json"`
+for file in `find "$downloaddir" "$downloaddir/Telegram" -maxdepth 1 -type f -size +0 -name "*translation*.json"`
 do 
 suttaname=$(echo $file | sed -E 's/_translation.*//' | awk -F'/' '{print $NF}')
 

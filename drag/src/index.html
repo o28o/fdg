@@ -1,0 +1,237 @@
+<div class="window draggable resizable">
+  <div class="inner">  
+    <iframe src="https://worosom.github.io/boii"></iframe>
+  </div>
+</div>
+<div class="window draggable resizable" style="transform: translate3d(100px, 100px, 0)">
+  <div class="inner">  
+    <iframe src="https://www.youtube.com/embed/bVD08DaYObU"></iframe>
+  </div>
+</div>
+<div class="window draggable resizable" style="transform: translate3d(200px, 200px, 0)">
+  <div class="inner">  
+    <iframe src="https://bopp-kogn.africa"></iframe>
+  </div>
+</div>
+<div class="window draggable resizable" style="transform: translate3d(300px, 300px, 0)">
+  <div class="inner">  
+    <iframe src="https://stimmig-lautsprechersysteme.de"></iframe>
+  </div>
+</div>
+<style>body {
+  background: #af0a0a;
+  overflow: hidden;
+}
+.draggable {
+  box-shadow: 0 0 4px 0 #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 50px;
+  width: 50vw;
+  min-height: 50px;
+  height: 50vh;
+  background: #FFF;
+  //border-top: 43px solid #FFF;
+  padding-top: 43px;
+}
+
+.ui-resizable-se {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent #AAA transparent;
+  background: none;
+  transition : border 200ms ease-out;
+}
+
+.ui-resizable-se:hover {
+  border-color: transparent transparent #FF00FF transparent;
+}
+
+// when window is being dragged, create a pseudoelement to keep content from capturing the mouse
+.ui-resizable-resizing::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  height: 200%;
+  width: 200%;
+  margin: -50% -50%;
+}
+
+.winTitle {
+  span {
+    display: block;
+    position: absolute;
+    width: calc(100% - 28px);
+    height: calc(100% - 8px);
+    overflow: hidden;
+    font-family: "Source Sans Pro";
+    font-size: 14px;
+  }
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-top: 1px solid black;
+}
+
+@import "compass/css3";
+
+@mixin center ($position:absolute){
+	position: $position;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+/*CROSS CSS*/
+
+/*Cross variables for easy adaptation*/
+$crossSize : 16px;
+$barsWidth : 2px;
+$crossColor : black;
+
+.maximize {
+  background: transparent;
+  border: none;
+}
+
+.maximize:hover {
+  background: #FF00FF;
+}
+
+.cross {
+	width:$crossSize;
+	height:$crossSize;
+  margin: 0 auto;
+	position:relative;
+	@include transition(background .2s ease-out);
+}
+.cross:hover{
+  background: #FF00FF;
+	cursor:pointer;
+}
+
+.cross:before, .cross:after{
+  content:"";
+  display:block;
+  background: $crossColor;
+  @include border-radius($barsWidth/2);
+  @include center; /* absolute centering */
+}
+.cross:before{
+  width: $barsWidth;
+  height: 100%;
+}
+.cross:after{
+  height: $barsWidth;
+  width: 100%;
+  }</style>
+<script >$(document).ready(function() {
+  $('.window').each(function () {
+    createWindow(this);
+  });
+  init();
+});
+
+function init() {
+  // the ui-resizable-handles are added here
+  $('.resizable').resizable();
+  // makes GSAP Draggable avoid clicks on the resize handles
+   $('.ui-resizable-handle').attr('data-clickable', true);
+   $('.maximize').attr('data-clickable', true);
+  // make the element draggable
+  Draggable.create('.draggable', {
+    onPress: function () {
+      $(this.target).addClass('ui-resizable-resizing');
+    },
+    onRelease: function() {
+      $(this.target).removeClass('ui-resizable-resizing');
+      }
+  });
+  $('.resizable').dblclick(function () {
+    var win = $(this);
+    toggleSize(win);
+  });
+  // attach callback to maximize-button
+  $('.maximize').click(function () {
+    var win = $(this).parent().parent();
+    toggleSize(win);
+  });
+}
+
+function createWindow(container) {
+  var titleBar = createTitleBar();
+  var maxBtn = createMaxBtn();
+  titleBar.append(maxBtn);
+  // create title-text
+  var $this = $(container);
+  var $inner = $this.children('.inner');
+  var title = $inner.children('iframe')[0].src;
+  var titlespan = document.createElement('span');
+  titlespan.appendChild(document.createTextNode(title));
+  titleBar.append(titlespan);
+  $inner.before(titleBar);
+}
+
+function createTitleBar() {
+  // create titlebar
+  let titleBar = document.createElement('div');
+  titleBar.className = 'winTitle';
+  $(titleBar).css({
+    position: 'absolute',
+    top: '0px',
+    width: '100%', height: '43px',
+    padding: '4px',
+    boxSizing: 'border-box'
+  });
+  return titleBar;
+}
+
+function createMaxBtn() {
+  // create button to maximize window
+  var maxBtn = document.createElement('button');
+  maxBtn.className = 'maximize cross';
+  $(maxBtn).data({maximized: false,
+                  pWidth: window.innerWidth, 
+                  pHeight: window.innerHeight,
+                  pTransform: 'translate3d(0,0,0)'});
+  $(maxBtn).css({position: 'absolute', right: '4px'});
+  return maxBtn;
+}
+
+function toggleSize(win) {
+  var newTransform, newWidth, newHeight;
+    if(!$(win).data('maximized')) {
+      $(win).data({maximized: true,
+                  pWidth: win.width(), 
+                  pHeight: win.height(),
+                  pTransform: win.css('transform')});
+      newTransform = 'translate3d(0, 0, 0)';
+      newWidth = '100vw'; newHeight = '100vh';
+    } else {
+      var data = $(win).data();
+      newTransform = data.pTransform;
+      newWidth = data.pWidth; newHeight = data.pHeight;
+      $(win).data('maximized', false);
+    }
+    $(win).css({
+      transform: newTransform,
+      width: newWidth, height: newHeight
+    });
+}</script>

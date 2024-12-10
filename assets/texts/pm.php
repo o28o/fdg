@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <h2><a href="#" data-bs-toggle="collapse" data-bs-target="#bupmCollapse">Bhikkhupātimokkha</a></h2>
 </div>
 
-      <div class="collapse show " id="bupmCollapse">
+      <div class="collapse " id="bupmCollapse">
         
 <?php
 include $basedir . "/assets/texts/vinaya/bupm.php";

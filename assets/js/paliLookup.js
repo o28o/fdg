@@ -112,7 +112,7 @@ function createPopup() {
 
   // Изменение размеров окна
   popup.style.resize = 'both';
-  popup.style.overflow = 'hidden';
+  popup.style.overflow = 'auto';
 
   const resizeObserver = new ResizeObserver(() => {
     savePopupState();
@@ -187,6 +187,7 @@ document.addEventListener('click', function(event) {
                 iframe.src = url;
                 popup.style.display = 'block';
                 overlay.style.display = 'block';
+                savePopupState();
             }
         }
     }

@@ -4,6 +4,7 @@ $lang = "ru";
 
 $htmllang = "ru";
 $mainpage = '/ru';
+$mainpagenoslash = '/ru';
 $mainscpage = $mainpage . '/sc';
 $mainreadlink = '/ru/read.php';
 $searchcaption = 'Поиск';
@@ -523,6 +524,7 @@ else {
 $lang = "en";
 $htmllang = "en";
 $mainpage = '/';
+$mainpagenoslash = '';
 $mainscpage = '/sc';
 $mainreadlink = '/read.php';
 $searchcaption = 'Search';

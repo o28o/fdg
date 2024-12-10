@@ -39,12 +39,13 @@ function createPopup() {
   const iframe = document.createElement('iframe');
   iframe.src = '';
   iframe.style.width = '100%';
-  iframe.style.height = 'calc(100% - 10px)'; // Оставляем место для заголовка
+  iframe.style.height = 'calc(100%)'; // Оставляем место для заголовка
 
   // Добавляем заголовок для перетаскивания
   const header = document.createElement('div');
   header.classList.add('popup-header');
   header.style.cursor = 'move';
+//  header.style.position = 'absolute';
   header.style.height = '10px';
   header.style.display = 'flex';
   header.style.alignItems = 'center';
@@ -111,7 +112,7 @@ function createPopup() {
 
   // Изменение размеров окна
   popup.style.resize = 'both';
-  popup.style.overflow = 'auto';
+  popup.style.overflow = 'hidden';
 
   const resizeObserver = new ResizeObserver(() => {
     savePopupState();
@@ -181,7 +182,8 @@ document.addEventListener('click', function(event) {
             console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
-                const url = `${dpdlang}search_html?q=${encodeURIComponent(cleanedWord)}`;
+           //     const url = `${dpdlang}gd?search=${encodeURIComponent(cleanedWord)}`;
+               const url = `${dpdlang}search_html?q=${encodeURIComponent(cleanedWord)}`;
                 iframe.src = url;
                 popup.style.display = 'block';
                 overlay.style.display = 'block';
@@ -190,23 +192,18 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Функция для определения слова, по которому кликнули, с учетом вложенного HTML
+// Основная функция для определения слова, по которому был клик, с учетом вложенного HTML
 function getClickedWordWithHTML(element, x, y) {
-    // Получаем диапазон по координатам
     const range = document.caretRangeFromPoint(x, y);
     if (!range) return null;
 
-    // Находим родительский элемент с полным текстом
-    const parentElement = element.closest('.pli-lang'); // Убедимся, что это верхний элемент
+    const parentElement = element.closest('.pli-lang');
     if (!parentElement) {
         console.log('Родительский элемент с классом pli-lang не найден.');
         return null;
     }
 
-    // Собираем полный текст всего родительского элемента
     const fullText = getFullTextFromElement(parentElement);
-
-    // Определяем глобальное смещение в полном тексте
     const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
     if (globalOffset === -1) {
         console.error('Не удалось вычислить глобальное смещение.');
@@ -215,40 +212,45 @@ function getClickedWordWithHTML(element, x, y) {
 
     console.log('Смещение в полном тексте:', globalOffset);
 
-    // Находим границы слова от пробела до пробела
-    const start = fullText.lastIndexOf(' ', globalOffset - 1) + 1; // После последнего пробела
-    const end = fullText.indexOf(' ', globalOffset);
-    const word = fullText.slice(start, end === -1 ? undefined : end);
+    // Используем обновленное регулярное выражение для поиска слова
+    const regex = /[^\s,;.!?()]+/g; // Регулярное выражение, игнорирующее пробелы и знаки препинания
+    let match;
+    while ((match = regex.exec(fullText)) !== null) {
+        if (match.index <= globalOffset && regex.lastIndex >= globalOffset) {
+            console.log('Найденное слово:', match[0]);
+            return match[0];
+        }
+    }
 
-    console.log('Найденное слово:', word);
-    return word;
+    console.log('Слово не найдено');
+    return null;
 }
 
-// Функция для получения полного текста элемента (всей строки)
+// Функция для получения полного текста из элемента, включая все текстовые узлы
 function getFullTextFromElement(element) {
     const textNodes = [];
     const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
 
     let node;
     while ((node = walker.nextNode())) {
-        textNodes.push(node.textContent); // Собираем текст всех текстовых узлов
+        // Удаляем знаки препинания при необходимости
+        textNodes.push(node.textContent.replace(/[.,;!?()]/g, '')); 
     }
 
-    const combinedText = textNodes.join(''); // Склеиваем в единую строку
+    const combinedText = textNodes.join('');
     console.log('текст всех узлов:', combinedText);
     return combinedText;
 }
 
-// Функция для расчёта глобального смещения
+// Функция для вычисления глобального смещения клика в полном тексте
 function calculateOffsetWithHTML(element, targetNode, targetOffset) {
     let offset = 0;
-
     const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-    let node;
 
+    let node;
     while ((node = walker.nextNode())) {
         if (node === targetNode) {
-            return offset + targetOffset; // Возвращаем глобальное смещение
+            return offset + targetOffset;
         }
         offset += node.textContent.length;
     }
@@ -257,14 +259,23 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
     return -1;
 }
 
+// Пример обработки клика на элемент
+document.addEventListener('click', (event) => {
+    const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
+    if (clickedWord) {
+        console.log('Слово по клику:', clickedWord);
+    } else {
+        console.log('Слово не определено');
+    }
+});
 
 // Функция для очистки слова от лишних символов
 function cleanWord(word) {
     return word
-        .replace(/^[\s'‘—.–…"“”]+/, '') // Убираем символы в начале, включая пробелы и тире
-        .replace(/[\s'‘,—.—–"“…:;”]+$/, '') // Убираем символы в конце, включая пробелы и тире
-        .replace(/[‘"“””]+/, "'") // заменяем в середине
-        
+        .replace(/^[\s'‘—.–…"“”]+/, ' ') // Убираем символы в начале, включая пробелы и тире
+        .replace(/[\s'‘,—.—–"“…:;”]+$/, ' ') // Убираем символы в конце, включая пробелы и тире
+        .replace(/[‘"“””]+/g, "'") // заменяем в середине
+        .trim()
         .toLowerCase();
 }
 

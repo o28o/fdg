@@ -43,11 +43,10 @@ include '../../scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-<div class="level1 d-flex align-items-center ">
-  <span class="toggle-button btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#playerCollapse">player</span>
-</div>
-      <div class="collapse show " id="playerCollapse">
+    <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/assets/texts/bipm.php" >bi-pm</a>
+    
+    <a class="ms-1 text-decoration-none text-muted " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
+      <div class="collapse " id="playerCollapse">
        <!-- Start DEMO HTML (Use the following code into your project)-->
  <div class="simple-audio-player" id="simp" data-config='{"shide_top":true,"shide_btm":false,"auto_load":false,"simp-plext":true}'>
   <div class="simp-playlist">
@@ -123,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <h2><a href="#" data-bs-toggle="collapse" data-bs-target="#bupmCollapse">Bhikkhupātimokkha</a></h2>
 </div>
 
-      <div class="collapse show " id="bupmCollapse">
+      <div class="collapse " id="bupmCollapse">
         
 <?php
 include $basedir . "/assets/texts/vinaya/bupm.php";

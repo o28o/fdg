@@ -44,7 +44,7 @@ background: black;
     }
 
 .popup-header {
-  background = '#f1f1f1';
+  background = 'white';
 }
   
 [data-theme="dark"] .popup-header {
@@ -129,3 +129,5 @@ img[data-size="large"] {
 </button>
 
 */
+
+

@@ -401,7 +401,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
     })
     .catch(error => {
   console.log('error:not found');
-
+console.log(rootpath, trnpath, htmlpath, varpath);
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "/?q=" + encodeURIComponent(slug), true);
   xhr.send();

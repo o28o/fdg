@@ -127,7 +127,7 @@ $stringForOpen = strtolower($string);
 $stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
 $stringForOpen = preg_replace('/(\d+)\s*\.\s*(\d+)/', '$1.$2', $stringForOpen);
 
-if (preg_match("/^(ja|snp|iti|thig|thag)/i", $stringForOpen)) {
+if (preg_match("/^(ja|snp|iti|thig|thag)[0-9].*/i", $stringForOpen)) {
   
   echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	
   exit();

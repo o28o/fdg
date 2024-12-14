@@ -44,6 +44,8 @@ include '../../scripts/opentexts.php';
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
     <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/assets/texts/bipm.php" >bi-pm</a>
+ 
+    <a class="ms-1 text-decoration-none text-muted " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
     
     <a class="ms-1 text-decoration-none text-muted " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
       <div class="collapse " id="playerCollapse">

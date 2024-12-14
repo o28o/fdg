@@ -5014,7 +5014,24 @@ let digitalPaliReader = {
   },
 
   // VINAYA
-  bupj: {
+  bu-pm: {
+    complete: true,
+    format: ["sutta"],
+    links: {
+      all: "",
+      main_page: "https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.0.0.0.0.t",
+    },
+    available: [
+      [1, "v.6.0.0.0.0.0.t"],
+      [2, "v.6.0.3.0.0.0.t"],
+      [3, "v.6.0.0.0.0.0.t"],
+      [4, "v.6.0.0.0.0.0.t"],
+    ],
+  },
+
+
+  // VINAYA
+  bu-pj: {
     complete: true,
     format: ["sutta"],
     links: {
@@ -5029,7 +5046,7 @@ let digitalPaliReader = {
     ],
   },
 
-  buss: {
+  bu-ss: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5053,7 +5070,7 @@ let digitalPaliReader = {
       [13, "v.0.0.0.2.12.0.m"],
     ],
   },
-  buay: {
+  bu-ay: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5066,7 +5083,7 @@ let digitalPaliReader = {
       [2, "v.0.0.0.3.1.0.m"],
     ],
   },
-  bunp: {
+  bu-np: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5107,7 +5124,7 @@ let digitalPaliReader = {
       [30, "v.0.0.0.4.2.9.m"],
     ],
   },
-  bupc: {
+  bu-pc: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5210,7 +5227,7 @@ let digitalPaliReader = {
       [92, "v.1.0.0.0.8.9.m"],
     ],
   },
-  bupd: {
+  bu-pd: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5225,7 +5242,7 @@ let digitalPaliReader = {
       [4, "v.1.0.0.1.3.0.m"],
     ],
   },
-  busk: {
+  bu-sk: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5243,7 +5260,7 @@ let digitalPaliReader = {
       [61, 75, "v.1.0.0.2.6.0.m"],
     ],
   },
-  buas: {
+  bu-as: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5263,7 +5280,7 @@ let digitalPaliReader = {
   },
 
   //-------------------- BHIKKHUNĪ
-  bipj: {
+  bi-pj: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5279,7 +5296,7 @@ let digitalPaliReader = {
     ],
   },
 
-  biss: {
+  bi-ss: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5296,7 +5313,7 @@ let digitalPaliReader = {
     ],
   },
 
-  binp: {
+  bi-np: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5319,7 +5336,7 @@ let digitalPaliReader = {
       [12, "v.2.0.0.2.0.11.m"],
     ],
   },
-  bipc: {
+  bi-pc: {
     format: ["sutta"],
     links: {
       card: "",
@@ -5426,7 +5443,7 @@ let digitalPaliReader = {
       [96, "v.2.0.0.3.8.12.m"],
     ],
   },
-  bipd: {
+  bi-pd: {
     format: ["sutta"],
     links: {
       card: "",

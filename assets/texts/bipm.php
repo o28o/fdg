@@ -42,7 +42,10 @@ include '../../scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-  <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/assets/texts/pm.php" >bu-pm</a>                
+  <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/assets/texts/pm.php" >bu-pm</a>               
+  
+     <a class="ms-1 text-decoration-none text-muted " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.1.4.0.0.0.t" >dpr</a>
+     
     <a class="ms-1 text-decoration-none text-muted " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
       <div class="collapse " id="playerCollapse">
        <!-- Start DEMO HTML (Use the following code into your project)-->

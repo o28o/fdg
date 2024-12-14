@@ -194,23 +194,26 @@ ${varData[segment].trim()}
 
 
 console.log('texttype ' + texttype + ' translator ' + translator);
-if (translator === "sv") {
+if (translator === "o") {
+  translatorforuser = '<a href=/assets/texts/o.html>o</a>';
+} else if (translator === "sv") {
   translatorforuser = 'SV theravada.ru';
 } else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
   translatorforuser = 'Bhikkhu Sujato';
 } else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
   translatorforuser = 'Bhikkhu Brahmali';
 } else if (translator === "syrkin" ) {
-  translatorforuser = 'А.Я. Сыркин';
-} else if (translator === "syrkin+o" ) {
-  translatorforuser = 'А.Я. Сыркин, ред. о';
+  translatorforuser = 'A.Y. Syrkin';
+} else if (translator === "syrkin+edited+o" ) {
+  translatorforuser = 'A.Y. Syrkin, edited by <a href=/assets/texts/o.html>o</a>';
 } else if (translator === "sv+edited+o" ) {
-  translatorforuser = 'SV theravada.ru, ред. о';
+  translatorforuser = 'SV theravada.ru, ed. <a href=/assets/texts/o.html>o</a>';
 } else if (translator === "o+in+progress" ) {
-  translatorforuser = 'о, в процессе';
+  translatorforuser = '<a href=/assets/texts/o.html>o</a>, in progress';
 } else {
 	translatorforuser = translator ;
 }
+
 console.log('texttype ' + texttype + ' translator ' + translator);
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);

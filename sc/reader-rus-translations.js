@@ -301,7 +301,9 @@ html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPa
 
 //console.log('before ' + translator) ;
 
-if (translator === "sv") {
+if (translator === "o") {
+  translatorforuser = '<a href=/assets/texts/o.html>o</a>';
+} else if (translator === "sv") {
   translatorforuser = 'SV theravada.ru';
 } else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
   translatorforuser = 'Bhikkhu Sujato';
@@ -310,11 +312,11 @@ if (translator === "sv") {
 } else if (translator === "syrkin" ) {
   translatorforuser = 'А.Я. Сыркин';
 } else if (translator === "syrkin+edited+o" ) {
-  translatorforuser = 'А.Я. Сыркин, ред. о';
+  translatorforuser = 'А.Я. Сыркин, ред. <a href=/assets/texts/o.html>o</a>';
 } else if (translator === "sv+edited+o" ) {
-  translatorforuser = 'SV theravada.ru, ред. о';
+  translatorforuser = 'SV theravada.ru, ред. <a href=/assets/texts/o.html>o</a>';
 } else if (translator === "o+in+progress" ) {
-  translatorforuser = 'о, в процессе';
+  translatorforuser = '<a href=/assets/texts/o.html>o</a>, в процессе';
 } else {
 	translatorforuser = translator ;
 }

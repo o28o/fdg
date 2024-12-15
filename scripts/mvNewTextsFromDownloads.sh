@@ -22,6 +22,11 @@ suttaname=$(echo $file | sed -E 's/_translation.*//' | awk -F'/' '{print $NF}')
 if [[ $suttaname =~ snp|iti|thig|thag|ud ]]; then
 nikaya=kn/$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
 booknumber=vagga$(echo $suttaname | sed -E 's/\..*//' | sed 's/[a-z]*//g')
+elif [[ $suttaname =~ dhp ]]; 
+then
+nikaya=kn/$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
+booknumber=''
+
 else
 booknumber=$(echo $suttaname | sed -E 's/\..*//')
     nikaya=$(echo "$suttaname" | sed -E 's/[0-9]+.*//')

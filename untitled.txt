@@ -229,4 +229,24 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
   
   find -name "*sv.json*" | while read file; do mv $file $(echo $file | sed 's/-sv/-sv+edited+o/g'); done
 
-  
+#count nikaya stats
+ find -type f | grep -v sn36 | grep -v sn55 | grep -v "sn[1-9]\." |grep -v sn10 |grep -v sn11 | sort -V | while read file; do cat $file | jq -r '.[]'; done > me 
+ 
+ 
+ 
+for i in thig  snp  thag  iti  ud dhp
+do
+echo "$i "
+find $i -type f | grep -v sn36 | grep -v sn55 | grep -v "sn[1-9]\." |grep -v sn10 |grep -v sn11 | sort -V | while read file; do cat $file | jq -r '.[]'; done > ${i}.txt 
+wc -l ${i}.txt 
+du -h ${i}.txt
+rm ${i}.txt 
+done
+
+for i in thig  snp  thag  iti  ud dhp
+do
+echo -n "$i "
+find $i -name "*.json" | wc -l
+done
+
+

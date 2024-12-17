@@ -11,7 +11,7 @@ sed 's/.*.json://g' | sed 's/:.*": "/ /g'| sed 's/ ",//g' | sed 's/"pli-tv-//g'
 
 separator=';'
 
-cat tst | while read word; 
+cat tst | grep -v "^$" | while read word; 
 do  
 echo -n $word 
 echo -n "$separator"

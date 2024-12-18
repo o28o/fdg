@@ -1,4 +1,9 @@
-taruṇapasannamahāmattavatthu
-belaṭṭhakaccānavatthu
-pāṭaligāmavatthu
-sunidhavassakāravatthu
+meṇḍakagahapativatthu
+meṇḍakagahapativattha
+keṇiyajaṭilavatthu
+rojamallavatthu
+vuḍḍhapabbajitavatthu
+chavatthu
+kassapagottabhikkhuvatthu
+paccakkhātantimavatthū
+saṅghavavatthānaṃ

@@ -1,9 +1,6 @@
-meṇḍakagahapativatthu
-meṇḍakagahapativattha
-keṇiyajaṭilavatthu
-rojamallavatthu
-vuḍḍhapabbajitavatthu
-chavatthu
-kassapagottabhikkhuvatthu
-paccakkhātantimavatthū
-saṅghavavatthānaṃ
+dīghāvuvatthu
+aṭṭhārasavatthukathā
+vatthusu
+disaṅgamikādivatthu
+bhikkhunidūsakavatthu
+āpattiyāadassaneukkhittakavatthu

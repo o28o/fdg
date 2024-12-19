@@ -1,6 +1,0 @@
-dīghāvuvatthu
-aṭṭhārasavatthukathā
-vatthusu
-disaṅgamikādivatthu
-bhikkhunidūsakavatthu
-āpattiyāadassaneukkhittakavatthu

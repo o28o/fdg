@@ -1,8 +1,9 @@
 
 #srcfolder=/home/mobaxterm/MyDocuments/soft/sc-data-main/sc-data-main/sc_bilara_data/root/pli/ms/vinaya/pli-tv-kd/
-srcfolder=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/pli-tv-kd/
-#trnfiolder=/home/mobaxterm/MyDocuments/soft/sc-data-main/sc-data-main/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-kd/
-trnfiolder=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/pli-tv-kd/
+basedir=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/
+
+srcfolder=$basedir/root/pli/ms/vinaya/pli-tv-kd/
+trnfiolder=$basedir/translation/en/brahmali/vinaya/pli-tv-kd/
 
 
 function clearSearch() {

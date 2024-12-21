@@ -388,7 +388,7 @@ export PATH=$PATH:/data/data/com.termux/files/usr/share/apache2/default-site/htd
 function miss() {
 if [[ "$@" == "" ]]
 then
-args="sn55 -o"
+args="sn36 -o"
 else
 args="$@"
 fi

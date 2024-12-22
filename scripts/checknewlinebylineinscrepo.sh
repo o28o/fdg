@@ -58,12 +58,12 @@ TrnDir="$Trn/kn"
 TrnNewDir="$TrnNew/narinyanievmenenko/sutta/kn"
 ShowDiff
 
-echo SN
+# echo SN
 # Задаем директории для перевода и палийских текстов
 PaliDir="$Pali/sn"
 TrnDir="$Trn/sn"
 TrnNewDir="$TrnNew/sv/sutta/sn"
-ShowDiff
+#ShowDiff
 
 
 #echo any key to run latest-rus.php or ctrl-c to cancel

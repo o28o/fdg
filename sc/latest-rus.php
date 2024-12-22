@@ -38,6 +38,7 @@ $check</h2>";
 
 
 //sn
+/*
 $pathsn = 'assets/texts/sutta/sn/';
 $check = shell_exec("
 snrangeInFile=`grep 'let snranges = ' $basedir/sc/reader-rus-translations.js | sed 's@;@@g' | sed 's@.*\[@\[@g'`
@@ -60,7 +61,7 @@ fi
 ");
 echo "<h2 style='text-align: center;'>
 $check</h2>";
-
+*/
 //dn
 /*
 $pathdn = 'assets/texts/sutta/dn/';

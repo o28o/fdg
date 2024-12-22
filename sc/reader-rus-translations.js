@@ -115,16 +115,9 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 if (slug.includes("mn"))  {
  var trnpath = rustrnpath; 
  let language = "pli-rus";
-  console.log(trnpath);
 // scLink += ifRus; 
-} 
-/*else if (anranges.indexOf(slug) !== -1) { 
-  let language = "pli-rus";
-  var trnpath = rustrnpath; 
   console.log(trnpath);
- // scLink += ifRus; 
-} */ 
-else if (snranges.indexOf(slug) !== -1 || /^sn([1-4]|6|13|1[5-6]|2[0-1])\./.test(slug)) {
+} else if (slug.includes("sn")) { 
   var trnpath = rustrnpath; 
   console.log(trnpath);
 //  scLink += ifRus; 

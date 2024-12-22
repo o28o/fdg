@@ -125,6 +125,10 @@ if (slug.includes("mn"))  {
  let language = "pli-rus";
 // scLink += ifRus; 
   console.log(trnpath);
+} else if (slug.includes("sn")) { 
+  var trnpath = rustrnpath; 
+  console.log(trnpath);
+//  scLink += ifRus; 
 } else if (slug.includes("an")) { 
   var trnpath = rustrnpath; 
   console.log(trnpath);

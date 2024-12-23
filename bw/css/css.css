@@ -1449,6 +1449,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 /* The following rules are for assisting in the editing process by accentuating <hr> and heading elements. *\
 /* For Publishing ... The end comment needs to be at the bottom of this page.
 /* For Editing ... Move the end comment at the end of this page to the end of this line.   
+
  
 
  h1,h2,h3,h4,h5,h6, .pairs h1, .pairs h3, .pairs h4, .pairs h5, .pairs h6 {

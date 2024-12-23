@@ -21,6 +21,30 @@ function createPopup() {
   popup.classList.add('popup');
   popup.style.position = 'fixed';
 
+  // Проверка параметров окна браузера
+  const currentWindowWidth = window.innerWidth;
+  const currentWindowHeight = window.innerHeight;
+
+  const savedWindowWidth = localStorage.getItem('windowWidth');
+  const savedWindowHeight = localStorage.getItem('windowHeight');
+
+  // Если размеры окна изменились, очищаем сохраненные данные popup
+  if (
+    savedWindowWidth &&
+    savedWindowHeight &&
+    (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
+      parseInt(savedWindowHeight, 10) !== currentWindowHeight)
+  ) {
+    localStorage.removeItem('popupWidth');
+    localStorage.removeItem('popupHeight');
+    localStorage.removeItem('popupTop');
+    localStorage.removeItem('popupLeft');
+  }
+
+  // Сохраняем текущие размеры окна
+  localStorage.setItem('windowWidth', currentWindowWidth);
+  localStorage.setItem('windowHeight', currentWindowHeight);
+
   // Устанавливаем сохранённые размеры и позицию, если они есть
   const savedWidth = localStorage.getItem('popupWidth');
   const savedHeight = localStorage.getItem('popupHeight');
@@ -45,7 +69,6 @@ function createPopup() {
   const header = document.createElement('div');
   header.classList.add('popup-header');
   header.style.cursor = 'move';
-//  header.style.position = 'absolute';
   header.style.height = '10px';
   header.style.display = 'flex';
   header.style.alignItems = 'center';
@@ -182,7 +205,9 @@ document.addEventListener('click', function(event) {
             console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
-           //     const url = `${dpdlang}gd?search=${encodeURIComponent(cleanedWord)}`;
+//   use  /gd?search= for xompact mode
+//     const url = `${dpdlang}gd?search=${encodeURIComponent(cleanedWord)}`;
+
                const url = `${dpdlang}search_html?q=${encodeURIComponent(cleanedWord)}`;
                 iframe.src = url;
                 popup.style.display = 'block';

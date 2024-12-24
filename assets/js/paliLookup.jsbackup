@@ -96,14 +96,34 @@ function createPopup() {
   let startX, startY, initialLeft, initialTop;
 
   // Обработчик нажатия для мыши (десктоп)
-  function startDrag(e) {
+function startDrag(e) {
     isDragging = true;
     startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
     startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
+
+    // Если стили left и top не заданы, инициализируем их
+    if (!popup.style.left || !popup.style.top) {
+        const rect = popup.getBoundingClientRect();
+        popup.style.left = `${rect.left + window.scrollX}px`;
+        popup.style.top = `${rect.top + window.scrollY}px`;
+    }
+
+    // Устанавливаем начальные координаты из стилей
+    initialLeft = parseInt(popup.style.left, 10);
+    initialTop = parseInt(popup.style.top, 10);
+
+    console.log({
+        isDragging,
+        startX,
+        startY,
+        initialLeft,
+        initialTop,
+        eventType: e.type,
+        target: e.target
+    });
+
     e.preventDefault();
-  }
+}
 
   // Обработчик перемещения для мыши (десктоп)
   function moveDrag(e) {
@@ -205,7 +225,9 @@ document.addEventListener('click', function(event) {
             console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
-           //     const url = `${dpdlang}gd?search=${encodeURIComponent(cleanedWord)}`;
+//   use  /gd?search= for xompact mode
+//     const url = `${dpdlang}gd?search=${encodeURIComponent(cleanedWord)}`;
+
                const url = `${dpdlang}search_html?q=${encodeURIComponent(cleanedWord)}`;
                 iframe.src = url;
                 popup.style.display = 'block';

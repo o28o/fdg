@@ -12,12 +12,14 @@ TrnNew="$suttapath/sc-data/sc_bilara_data/translation/ru"
 
 #manual updare hotfix for existing folders of snp iti
 echo -n "updating snp & iti "
-cp $TrnNew/sv/sutta/kn/snp/vagga1/* $Trn/kn/snp/vagga1/ 2>/dev/null
-cp $TrnNew/sv/sutta/kn/snp/vagga3/* $Trn/kn/snp/vagga3/ 2>/dev/null
-cp $TrnNew/sv/sutta/kn/snp/vagga5/* $Trn/kn/snp/vagga5/ 2>/dev/null
-cp $TrnNew/sv/sutta/kn/iti/vagga4/* $Trn/kn/iti/vagga4/ 2>/dev/null
+for i in snp/vagga1 snp/vagga3 snp/vagga5 iti/vagga4
+do 
+#echo $i
+cp $TrnNew/sv/sutta/kn/$i/* $Trn/kn/$i/ 2>/dev/null
+done 
 echo "done"
-
+echo
+#cp $TrnNew/sv/sutta/kn/iti/vagga4/* $Trn/kn/iti/vagga4/ 2>/dev/null
 
 function ShowDiff() {
 cd $TrnDir 2>/dev/null

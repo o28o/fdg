@@ -10,6 +10,15 @@ Pali="$suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta"
 Trn="$apachesitepath/assets/texts/sutta"
 TrnNew="$suttapath/sc-data/sc_bilara_data/translation/ru"
 
+#manual updare hotfix for existing folders of snp iti
+echo -n "updating snp & iti "
+cp $TrnNew/sv/sutta/kn/snp/vagga1/* $Trn/kn/snp/vagga1/ 2>/dev/null
+cp $TrnNew/sv/sutta/kn/snp/vagga3/* $Trn/kn/snp/vagga3/ 2>/dev/null
+cp $TrnNew/sv/sutta/kn/snp/vagga5/* $Trn/kn/snp/vagga5/ 2>/dev/null
+cp $TrnNew/sv/sutta/kn/iti/vagga4/* $Trn/kn/iti/vagga4/ 2>/dev/null
+echo "done"
+
+
 function ShowDiff() {
 cd $TrnDir 2>/dev/null
 TrnFolders=$(find . -type d | sort -V)
@@ -17,6 +26,7 @@ TrnFolders=$(find . -type d | sort -V)
 cd $TrnNewDir 2>/dev/null
 TrnFolders=$(printf "%s\n%s" "$TrnFolders" "$(find . -type d)" | sort -u -V)
 #echo $TrnFolders
+
 TrnFolders=${TrnFolders//./}
 
 for i in $TrnFolders ; do 
@@ -26,8 +36,9 @@ new=$(ls $TrnNewDir/$i 2>/dev/null | wc -l)
 percentdone=$(awk "BEGIN {printf \"%.0f\", ($asset/$root)*100}")
 check=$(if [ "$root" -eq "$asset" ]; then echo $asset;
 else
-echo $root/$asset/$nee;
+echo $root/$asset/$new;
 fi)
+
 
 upd=$(if [ "$new" -gt "$asset" ]; then echo 'Updated!'; $TrnDir/$i 2>/dev/null ; mkdir -p $TrnDir/$i 2>/dev/null ; cp $TrnNewDir/$i/* $TrnDir/$i/ ; fi)
 
@@ -44,9 +55,10 @@ done
 echo 'name % root assets newFiles'
 # Задаем директории для перевода и палийских текстов
 
-echo AN done
-echo MN done
 echo DN done
+echo MN done
+echo AN done
+echo SN done
 
 # Задаем директории для перевода и палийских текстов
 #PaliDir="$Pali/an"                          TrnDir="$Trn/an"                            TrnNewDir="$TrnNew/sv/sutta/an"             ShowDiff

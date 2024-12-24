@@ -10,7 +10,7 @@ Pali="$suttapath/sc-data/sc_bilara_data/root/pli/ms/sutta"
 Trn="$apachesitepath/assets/texts/sutta"
 TrnNew="$suttapath/sc-data/sc_bilara_data/translation/ru"
 
-#manual updare hotfix for existing folders of snp iti
+#manual update for existing folders of snp iti
 echo -n "updating snp & iti "
 for i in snp/vagga1 snp/vagga3 snp/vagga5 iti/vagga4
 do 

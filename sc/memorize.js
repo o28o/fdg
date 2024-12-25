@@ -288,10 +288,13 @@ let преобразованныеСлова = слова.map(word => {
     return результат;
 }
 
+if (paliData[segment] !== undefined) {
+paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
+}
+
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
     if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
-      paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>

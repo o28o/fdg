@@ -1,0 +1,159 @@
+:root {
+    --primary: #b00101;
+    --off-black: #1a0000;
+    --off-black-lighter: #4f0000;
+    --off-white: #ddd5d5;
+}
+
+body {
+
+    background-color: var(--off-black);
+    color: var(--off-white);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-height: 100vh
+}
+
+.main-area {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+    margin-top: 0rem;
+}
+
+details {
+    margin-bottom: .5rem;
+}
+
+summary:hover {
+    color: var(--primary)
+}
+
+a {
+    color: var(--primary)
+}
+
+.checkboxes-area {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+}
+
+.selection-buttons {
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+    margin-top: .5rem;
+
+}
+
+.selection-buttons button {
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-button-area {
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+    margin-top: .5rem
+}
+
+.table-area {
+    overflow-y: scroll;
+    height: 85vh
+}
+
+.table-area thead {
+    position: sticky;
+    top: 0px
+}
+
+.table-area table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.table-area table td,
+.table-area table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-area table tr:nth-child(even) {
+    background-color: var(--off-black-lighter);
+}
+
+
+.table-area table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: white;
+}
+
+.no-blurb {
+    color: var(--primary);
+}
+
+
+@media only screen and (max-width: 775px) {
+    body {
+
+        flex-direction: column;
+    }
+}
+
+.links-area a {
+    position: relative;
+    top: 0;
+    transition: all ease 0.5s;
+    filter: grayscale(50%);
+}
+
+.links-area a:hover {
+    top: -3px;
+}
+
+.links-area {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Custom Checkboxes */
+input[type="checkbox"] {
+    display: none;
+}
+
+.check-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("./images/checkbox--unchecked.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+}
+
+input[type="checkbox"]:checked+.check-icon {
+    background-image: url("./images/checkbox--checked.svg");
+}
+
+img.checkbox {
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+/* END Custom Checkboxes */

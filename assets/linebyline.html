@@ -288,6 +288,18 @@ button:hover {
                             console.log('Не найден в dnranges:', inputValue);
                             resultMessage = '';
                         }
+                    } else if (
+  inputValue.startsWith('iti') ||
+  inputValue.startsWith('snp') ||
+  inputValue.startsWith('dhp')
+) {
+                        // Проверка в knranges
+                        if (variables['knranges'] && variables['knranges'].includes(inputValue)) {
+                            console.log('Найден в knranges:', inputValue);
+                        } else {
+                            console.log('Не найден в knranges:', inputValue);
+                            resultMessage = '';
+                        }
                     } else if (inputValue.startsWith('bu-')) {
                         // Проверка в dnranges
                         if (variables['vinayaranges'] && variables['vinayaranges'].includes(inputValue)) {

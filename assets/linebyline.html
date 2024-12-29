@@ -1540,6 +1540,21 @@ function updateSingleTranslationRow(cell) {
 
 <script>
 
+// Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
+if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp') || indexValue.includes('iti')) {
+  lettersOnly = 'kn/' + lettersOnly;
+}
+
+// Проверка, содержит ли строка 'snp' или 'ud'
+if (indexValue.includes('snp') || indexValue.includes('ud')) {
+  beforeDot = 'vagga' + firstNumberOnly;
+} else if (indexValue.includes('dhp')) {
+  beforeDot = '';
+}  
+  
+if ( indexValue.includes('iti')) {
+  beforeDot = 'vagga' + findItiVagga(firstNumberOnly);
+} 
 
 
 function loadPrev() {

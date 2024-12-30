@@ -1540,21 +1540,28 @@ function updateSingleTranslationRow(cell) {
 
 <script>
 
-// Проверка, содержит ли строка 'snp', 'ud' или 'dhp'
-if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp') || indexValue.includes('iti')) {
-  lettersOnly = 'kn/' + lettersOnly;
+function ifKn(indexValue) {
+ 
+  let beforeDot = "";
+  let lettersOnly = "";
+
+  // Проверка, содержит ли строка 'snp', 'ud', 'dhp', или 'iti'
+  if (indexValue.includes('snp') || indexValue.includes('ud') || indexValue.includes('dhp') || indexValue.includes('iti')) {
+    lettersOnly = 'kn/' + lettersOnly;
+
+    if (indexValue.includes('snp') || indexValue.includes('ud')) {
+      beforeDot = 'vagga' + firstNumberOnly;
+    } else if (indexValue.includes('dhp')) {
+      beforeDot = '';
+    } else if (indexValue.includes('iti')) {
+      beforeDot = 'vagga' + findItiVagga(firstNumberOnly);
+    }
+  }
+
+  let valueForApi = lettersOnly + "/" + beforeDot + "/" + indexValue;
+  return valueForApi;
 }
 
-// Проверка, содержит ли строка 'snp' или 'ud'
-if (indexValue.includes('snp') || indexValue.includes('ud')) {
-  beforeDot = 'vagga' + firstNumberOnly;
-} else if (indexValue.includes('dhp')) {
-  beforeDot = '';
-}  
-  
-if ( indexValue.includes('iti')) {
-  beforeDot = 'vagga' + findItiVagga(firstNumberOnly);
-} 
 
 
 function loadPrev() {
@@ -1565,7 +1572,9 @@ function loadPrev() {
 const textPart = indexValue.split('.')[0]; // Разделяем по точке и берем первую часть
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
-	const valueForApi = book + "/" + textPart + "/" + indexValue;
+let  valueForApi = book + "/" + textPart + "/" + indexValue;
+
+	
     const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки

@@ -259,13 +259,10 @@ function getFullTextFromElement(element) {
 
     let node;
     while ((node = walker.nextNode())) {
-        // Удаляем знаки препинания при необходимости
-        textNodes.push(node.textContent.replace(/[.,;!?()]/g, '')); 
+        textNodes.push(node.textContent);
     }
 
-    const combinedText = textNodes.join('');
-    console.log('текст всех узлов:', combinedText);
-    return combinedText;
+    return textNodes.join(' ').replace(/\s+/g, ' ').trim(); // Удаляем лишние пробелы
 }
 
 // Функция для вычисления глобального смещения клика в полном тексте
@@ -282,7 +279,7 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
     }
 
     console.log('Целевой узел не найден.');
-    return -1;
+    return -1; // Возвращаем ошибку, если узел не найден
 }
 
 // Пример обработки клика на элемент

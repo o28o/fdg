@@ -10,6 +10,15 @@ stringforrange=`echo $string |sed 's@\.@\\\.@g'`
 partforrange=`echo $stringforrange| sed 's@\..*@\\.@g'`
 #echo $partforrange
 textnameforrange=`echo $partforrange| sed 's@[0-9].*@@g'`
+
+if [[ $string == *"dhp"* ]]; then
+partforrange=`echo $stringforrange| sed 's@[0-9]*@@g'`
+
+    textnameforrange=`echo $partforrange | sed 's@[0-9]*@@g'`
+    
+fi
+
+
 #echo $textnameforrange
 if [[ $string =~ [0-9]\.[0-9] ]]
 then
@@ -33,8 +42,9 @@ textnameforrange=`echo $textnameforrange | sed 's@pli-tv-@@'`
 check=`echo $textnameforrange | sed 's@vb-@@g'`
 ranges=`grep -iE "[0-9]-[0-9]" $indexesfile | grep -i "$partforrange" | awk -F'/' '{print $NF}' | awk -F'[._]' '{print $1}' | sed 's/[^0-9]*\([0-9].*\)/\1/' `
 #echo $ranges
-elif  [[ $textnameforrange != *"\."* ]]
-then
+else
+#elif  [[ $textnameforrange != *"\."* ]]
+#then
 #echo 2
 textnumforrange=`echo $stringforrange| sed 's@[A-Za-z]@@g'`
 #echo $textforrange

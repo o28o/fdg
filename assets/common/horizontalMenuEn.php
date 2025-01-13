@@ -263,7 +263,7 @@ echo '<!--
                       <i class="' . $iconimportant . '"></i>        <a class="text-black" target="" href="https://dpdict.net/">Digital Pāḷi Dict</a> 
          <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Eng</a>
           <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Rus</a>  
-       <a class="text-black" target="" href="https://find.dhamma.gift/assets/dpdPlugin/index.html?s=pi$">Site-plugin</a> 
+       <a class="text-black" target="" href="https://o28o.github.io/plugin/index.html?s=pi$">Site-plugin</a> 
        </div>
          </li>   
    

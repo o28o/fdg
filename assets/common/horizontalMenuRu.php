@@ -290,7 +290,7 @@ echo '<!--
                       <i class="' . $iconimportant . '"></i>        <a class="text-black" target="" href="https://dpdict.net/">Digital Pāḷi Dict</a>
          <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Англ</a>
      <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Рус</a>  
-       <a class="text-black" target="" href="https://find.dhamma.gift/assets/dpdPlugin/demo-ru-ml.html?s=dukkh">Веб-модуль</a>     
+       <a class="text-black" target="" href="https://o28o.github.io/plugin/demo-ru-ml.html?s=dukkh">Веб-модуль</a>     
        </div>
          </li>   
   

@@ -10,13 +10,8 @@
 
   <!-- Загрузка иконки для iOS -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
-
-
-  <title>Table of Contents</title>
-
-
+  <title>Khuddaka Nikaya</title>
 </head>
-
 <body>
 <div class="container">
     <div class="my-3">
@@ -28,13 +23,14 @@
           data-bs-target="#knCollapse">Khuddaka Nikāya</a></h2>
       </div>
 	  <div class="collapse show showkeep" id="knCollapse">
-
+<div class="level2">
+	  
 	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#udCollapse">Udana</a></h3>
 	  </div> 
 	  <div class="collapse" id="udCollapse">  
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5></h5>
+		   <h5>1. Bodhivagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud1.1">ud1.1</a>  Paṭhamabodhisutta</span>
@@ -75,7 +71,12 @@
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud1.10">ud1.10</a>  Bāhiyasutta</span>
 </div>
-  
+ </div>  <!-- close vagga div -->
+  <div class="my-3">
+<div class="level4 my-3">
+		   <h5>2. Mucalindavagga </h5>
+                  </div> 
+                  
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud2.1">ud2.1</a>  Mucalindasutta</span>
 </div>
@@ -115,6 +116,12 @@
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud2.10">ud2.10</a>  Bhaddiyasutta</span>
 </div>
+
+</div>  <!-- close vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>3. Nandavagga </h5>
+                  </div>
   
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud3.1">ud3.1</a>  Kammavipākajasutta</span>
@@ -155,7 +162,12 @@
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud3.10">ud3.10</a>  Lokasutta</span>
 </div>
-  
+
+</div>  <!-- close vagga div -->
+ <div class="my-3">
+<div class="level4 my-3">
+		   <h5>4. Meghiyavagga </h5>
+                  </div> 
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud4.1">ud4.1</a>  Meghiyasutta</span>
 </div>
@@ -195,7 +207,12 @@
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud4.10">ud4.10</a>  Sāriputtaupasamasutta</span>
 </div>
-  
+
+</div>  <!-- close vagga div -->
+  <div class="my-3">
+<div class="level4 my-3">
+		   <h5>5. Soṇavagga </h5>
+                  </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud5.1">ud5.1</a>  Piyatarasutta</span>
 </div>
@@ -216,19 +233,10 @@
 <span class="level5"><a href="/ru/sc/?q=ud5.5">ud5.5</a>  Uposathasutta</span>
 </div>
   
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Atha kho</h5>
-                  </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud5.6">ud5.6</a>  Soṇasutta</span>
 </div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5></h5>
-                  </div>
+
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud5.7">ud5.7</a>  Kaṅkhārevatasutta</span>
 </div>
@@ -244,7 +252,11 @@
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud5.10">ud5.10</a>  Cūḷapanthakasutta</span>
 </div>
-  
+</div>  <!-- close vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>6. Jaccandhavagga </h5>
+                  </div>  
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud6.1">ud6.1</a>  Āyusaṅkhārossajjanasutta</span>
 </div>
@@ -284,7 +296,11 @@
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud6.10">ud6.10</a>  Uppajjantisutta</span>
 </div>
-  
+  </div>  <!-- close vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>7. Cūḷavagga </h5>
+                  </div>  
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud7.1">ud7.1</a>  Paṭhamalakuṇḍakabhaddiyasutta</span>
 </div>
@@ -324,6 +340,12 @@
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud7.10">ud7.10</a>  Utenasutta</span>
 </div>
+  
+  </div>  <!-- close vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>8. Pāṭaligāmiyavagga </h5>
+                  </div>  
   
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=ud8.1">ud8.1</a>  Paṭhamanibbānapaṭisaṁyuttasutta</span>
@@ -366,16 +388,21 @@
 </div>
 
 </div> <!-- close prev vagga div -->
-</div> <!-- close prev vagga div -->
-</div> <!-- close ud div -->
 
+</div> <!-- close ud div -->
+<div class="level2">
 	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#itiCollapse">Itivuttaka</a></h3>
 	  </div> 
 	  <div class="collapse" id="itiCollapse">
 
+<div class="level3">
+	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#iti1Collapse">1. Ekakanipāta</a></h3>
+	  </div> 
+	  <div class="collapse" id="iti1Collapse">
+
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Paṭhamavagga </h5>
+		   <h5>1. Paṭhamavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti1">iti1</a>  Lobhasutta</span>
@@ -427,7 +454,7 @@
 </div>close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Dutiyavagga </h5>
+		   <h5>2. Dutiyavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti11">iti11</a>  Mohapariññāsutta</span>
@@ -472,7 +499,7 @@
 </div> <!-- close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Tatiyavagga </h5>
+		   <h5>3. Tatiyavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti21">iti21</a>  Pasannacittasutta</span>
@@ -503,9 +530,17 @@
 </div>
   
 </div> <!-- close prev vagga div -->
+</div> <!-- close prev vagga div -->
+
+<div class="level3">
+	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#iti2Collapse">2. Dukanipāta</a></h3>
+	  </div> 
+	  <div class="collapse" id="iti2Collapse">
+
+
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Paṭhamavagga </h5>
+		   <h5>1. Paṭhamavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti28">iti28</a>  Dukkhavihārasutta</span>
@@ -550,7 +585,7 @@
 </div> <!-- close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Dutiyavagga </h5>
+		   <h5>2. Dutiyavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti38">iti38</a>  Vitakkasutta</span>
@@ -601,9 +636,16 @@
 </div>
   
 </div> <!-- close prev vagga div -->
+</div> <!-- close prev vagga div -->
+
+<div class="level3">
+	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#iti3Collapse">3. Tikanipāta</a></h3>
+	  </div> 
+	  <div class="collapse" id="iti3Collapse">
+
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Paṭhamavagga </h5>
+		   <h5>1. Paṭhamavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti50">iti50</a>  Mūlasutta</span>
@@ -648,7 +690,7 @@
 </div> <!-- close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Dutiyavagga </h5>
+		   <h5>2. Dutiyavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti60">iti60</a>  Puññakiriyavatthusutta</span>
@@ -686,11 +728,6 @@
 <span class="level5"><a href="/ru/sc/?q=iti68">iti68</a>  Paṭhamarāgasutta</span>
 </div>
   
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Dutiyavagga Puna vaggamāhu</h5>
-                  </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti69">iti69</a>  Dutiyarāgasutta</span>
 </div>
@@ -698,7 +735,7 @@
 </div> <!-- close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Tatiyavagga </h5>
+		   <h5>3. Tatiyavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti70">iti70</a>  Micchādiṭṭhikasutta</span>
@@ -743,7 +780,7 @@
 </div> <!-- close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Catutthavagga </h5>
+		   <h5>4. Catutthavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti80">iti80</a>  Vitakkasutta</span>
@@ -788,7 +825,7 @@
 </div> <!-- close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Pañcamavagga </h5>
+		   <h5>5. Pañcamavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti90">iti90</a>  Aggappasādasutta</span>
@@ -833,7 +870,7 @@
 </div> <!-- close prev vagga div -->
 <div class="my-3">
 <div class="level4 my-3">
-		   <h5>Brāhmaṇadhammayāgavagga </h5>
+		   <h5>6. Brāhmaṇadhammayāgavagga </h5>
                   </div>
 <div class="mt-3">
 <span class="level5"><a href="/ru/sc/?q=iti100">iti100</a>  Brāhmaṇadhammayāgasutta</span>
@@ -889,251 +926,11 @@
   
 </div> <!-- close prev vagga div -->
 
+
+</div>  <!-- close iti div -->
 </div>  <!-- close iti div -->
 
-
-	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#dhpCollapse">Dhammapada</a></h3>
-	  </div> 
-	  <div class="collapse" id="dhpCollapse">
-
-
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Yamakavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp1-20">dhp1-20</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Appamādavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp21-32">dhp21-32</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Cittavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp33-43">dhp33-43</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Pupphavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp44-59">dhp44-59</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Bālavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp60-75">dhp60-75</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Paṇḍitavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp76-89">dhp76-89</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Arahantavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp90-99">dhp90-99</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Sahassavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp100-115">dhp100-115</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Pāpavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp116-128">dhp116-128</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Daṇḍavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp129-145">dhp129-145</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Jarāvagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp146-156">dhp146-156</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Attavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp157-166">dhp157-166</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Lokavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp167-178">dhp167-178</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Buddhavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp179-196">dhp179-196</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Sukhavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp197-208">dhp197-208</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Piyavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp209-220">dhp209-220</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Kodhavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp221-234">dhp221-234</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Malavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp235-255">dhp235-255</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Dhammaṭṭhavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp256-272">dhp256-272</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Maggavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp273-289">dhp273-289</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Pakiṇṇakavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp290-305">dhp290-305</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Nirayavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp306-319">dhp306-319</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Nāgavagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp320-333">dhp320-333</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Taṇhāvagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp334-359">dhp334-359</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Bhikkhuvagga </h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp360-382">dhp360-382</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-<div class="my-3">
-<div class="level4 my-3">
-		   <h5>Brāhmaṇavagga pupphavaggamhi soḷasa. Terasa pāpavaggamhi, attavaggamhi tā Dvādasa lokavaggamhi, buddhavaggamhi ṭhārasa; Cuddasa kodhavaggamhi, Chabbīsa taṇhāvaggamhi, brāhmaṇe vaggamuttame;</h5>
-                  </div>
-<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q=dhp383-423">dhp383-423</a> </span>
-</div>
-  
-</div> <!-- close prev vagga div -->
-	  </div>  <!-- close dhp div -->
-
-
+<div class="level2">
 	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#snpCollapse">Sutta Nipāta</a></h3>
 	  </div> 
 	  <div class="collapse" id="snpCollapse">
@@ -1471,6 +1268,250 @@
 </div>  <!-- close snp div -->
 </div>  <!-- close snp div -->
 </div>  <!-- close snp div -->
+<div class="level2">
+	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#dhpCollapse">Dhammapada</a></h3>
+	  </div> 
+	  <div class="collapse" id="dhpCollapse">
+
+
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Yamakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp1-20">dhp1-20</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Appamādavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp21-32">dhp21-32</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Cittavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp33-43">dhp33-43</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pupphavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp44-59">dhp44-59</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bālavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp60-75">dhp60-75</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṇḍitavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp76-89">dhp76-89</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Arahantavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp90-99">dhp90-99</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sahassavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp100-115">dhp100-115</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pāpavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp116-128">dhp116-128</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Daṇḍavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp129-145">dhp129-145</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Jarāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp146-156">dhp146-156</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Attavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp157-166">dhp157-166</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Lokavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp167-178">dhp167-178</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Buddhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp179-196">dhp179-196</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sukhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp197-208">dhp197-208</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Piyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp209-220">dhp209-220</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kodhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp221-234">dhp221-234</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Malavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp235-255">dhp235-255</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dhammaṭṭhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp256-272">dhp256-272</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Maggavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp273-289">dhp273-289</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pakiṇṇakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp290-305">dhp290-305</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nirayavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp306-319">dhp306-319</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nāgavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp320-333">dhp320-333</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Taṇhāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp334-359">dhp334-359</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bhikkhuvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp360-382">dhp360-382</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Brāhmaṇavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp383-423">dhp383-423</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+	  </div>  <!-- close dhp div -->
+
+
+<div class="level2">
 
 	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#thagCollapse">Theragāthā</a></h3>
 	  </div> 
@@ -2648,10 +2689,9 @@
   
 </div> <!-- close prev vagga div -->
 
-</div> <!-- close prev vagga div -->
-</div> <!-- close prev vagga div -->
+</div> <!-- close prev thag div -->
 
-
+<div class="level2">
 	  <h3><a href=# data-bs-toggle="collapse" data-bs-target="#thigCollapse">Therīgāthā</a></h3>
 	  </div> 
 	  <div class="collapse" id="thigCollapse">

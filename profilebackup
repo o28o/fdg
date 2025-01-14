@@ -361,11 +361,11 @@ echo audio
 echo
 cd assets/audio
 git pull
-echo dpdPlugin
-echo
-cd ../../
-cd assets/dpdPlugin
-git pull
+#echo dpdPlugin
+#echo
+#cd ../../
+#cd assets/dpdPlugin
+#git pull
 
 "
 }

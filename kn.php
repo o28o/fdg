@@ -1,0 +1,10853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/assets/css/styles.css" rel="stylesheet" />
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<!-- Favicon-->
+<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
+
+  <!-- Загрузка иконки для iOS -->
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
+
+
+  <title>Table of Contents</title>
+
+
+</head>
+
+<body>
+<div class="container">
+    <div class="my-3">
+      <button class="btn btn-primary btn-sm btn-fixed-width toggle-button" type="button" id="collapseAll">+</button>
+    </div>
+<div class="my-3">
+      <div class="level1">
+        <h2><a href=# data-bs-toggle="collapse"
+          data-bs-target="#knCollapse">Khuddaka Nikāya</a></h2>
+      </div>
+	  <div class="collapse show showkeep" id="knCollapse">
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv1">bv1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv2">bv2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv3">bv3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv4">bv4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv5">bv5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv6">bv6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv7">bv7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv8">bv8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv9">bv9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv10">bv10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv11">bv11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv12">bv12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv13">bv13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv14">bv14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv15">bv15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv16">bv16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv17">bv17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv18">bv18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv19">bv19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv20">bv20</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv21">bv21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv22">bv22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv23">bv23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv24">bv24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv25">bv25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv26">bv26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv27">bv27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv28">bv28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=bv29">bv29</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pārāyanavaggagāthā </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd1">cnd1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd2">cnd2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd3">cnd3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd4">cnd4</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pārāyanavagganiddesa </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd5">cnd5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd6">cnd6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd7">cnd7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd8">cnd8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd9">cnd9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd10">cnd10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd11">cnd11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd12">cnd12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd13">cnd13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd14">cnd14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd15">cnd15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd16">cnd16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd17">cnd17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd18">cnd18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd19">cnd19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd20">cnd20</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd21">cnd21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd22">cnd22</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>1. Paṭhamavagga 2. Dutiyavagga 3. Tatiyavagga 4. Catutthavagga</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cnd23">cnd23</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Akittivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp1">cp1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp2">cp2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp3">cp3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp4">cp4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp5">cp5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp6">cp6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp7">cp7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp8">cp8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp9">cp9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp10">cp10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Hatthināgavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp11">cp11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp12">cp12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp13">cp13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp14">cp14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp15">cp15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp16">cp16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp17">cp17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp18">cp18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp19">cp19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp20">cp20</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Yudhañjayavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp21">cp21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp22">cp22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp23">cp23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp24">cp24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp25">cp25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp26">cp26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp27">cp27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp28">cp28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp29">cp29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp30">cp30</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp31">cp31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp32">cp32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp33">cp33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp34">cp34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=cp35">cp35</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Yamakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp1-20">dhp1-20</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Appamādavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp21-32">dhp21-32</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Cittavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp33-43">dhp33-43</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pupphavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp44-59">dhp44-59</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bālavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp60-75">dhp60-75</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṇḍitavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp76-89">dhp76-89</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Arahantavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp90-99">dhp90-99</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sahassavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp100-115">dhp100-115</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pāpavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp116-128">dhp116-128</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Daṇḍavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp129-145">dhp129-145</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Jarāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp146-156">dhp146-156</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Attavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp157-166">dhp157-166</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Lokavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp167-178">dhp167-178</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Buddhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp179-196">dhp179-196</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sukhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp197-208">dhp197-208</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Piyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp209-220">dhp209-220</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kodhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp221-234">dhp221-234</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Malavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp235-255">dhp235-255</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dhammaṭṭhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp256-272">dhp256-272</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Maggavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp273-289">dhp273-289</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pakiṇṇakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp290-305">dhp290-305</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nirayavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp306-319">dhp306-319</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nāgavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp320-333">dhp320-333</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Taṇhāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp334-359">dhp334-359</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bhikkhuvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp360-382">dhp360-382</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Brāhmaṇavagga pupphavaggamhi soḷasa. Terasa pāpavaggamhi, attavaggamhi tā Dvādasa lokavaggamhi, buddhavaggamhi ṭhārasa; Cuddasa kodhavaggamhi, Chabbīsa taṇhāvaggamhi, brāhmaṇe vaggamuttame;</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=dhp383-423">dhp383-423</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti1">iti1</a>  Lobhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti2">iti2</a>  Dosasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti3">iti3</a>  Mohasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti4">iti4</a>  Kodhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti5">iti5</a>  Makkhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti6">iti6</a>  Mānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti7">iti7</a>  Sabbapariññāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti8">iti8</a>  Mānapariññāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti9">iti9</a>  Lobhapariññāsutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga Pakāsitā vaggamāhu</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti10">iti10</a>  Dosapariññāsutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dutiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti11">iti11</a>  Mohapariññāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti12">iti12</a>  Kodhapariññāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti13">iti13</a>  Makkhapariññāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti14">iti14</a>  Avijjānīvaraṇasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti15">iti15</a>  Taṇhāsaṁyojanasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti16">iti16</a>  Paṭhamasekhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti17">iti17</a>  Dutiyasekhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti18">iti18</a>  Saṅghabhedasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti19">iti19</a>  Saṅghasāmaggīsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti20">iti20</a>  Paduṭṭhacittasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tatiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti21">iti21</a>  Pasannacittasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti22">iti22</a>  Mettasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti23">iti23</a>  Ubhayatthasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti24">iti24</a>  Aṭṭhipuñjasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti25">iti25</a>  Musāvādasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti26">iti26</a>  Dānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti27">iti27</a>  Mettābhāvanāsutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti28">iti28</a>  Dukkhavihārasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti29">iti29</a>  Sukhavihārasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti30">iti30</a>  Tapanīyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti31">iti31</a>  Atapanīyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti32">iti32</a>  Paṭhamasīlasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti33">iti33</a>  Dutiyasīlasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti34">iti34</a>  Ātāpīsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti35">iti35</a>  Paṭhamajananakuhanasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti36">iti36</a>  Dutiyajananakuhanasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti37">iti37</a>  Somanassasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dutiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti38">iti38</a>  Vitakkasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti39">iti39</a>  Desanāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti40">iti40</a>  Vijjāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti41">iti41</a>  Paññāparihīnasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti42">iti42</a>  Sukkadhammasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti43">iti43</a>  Ajātasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti44">iti44</a>  Nibbānadhātusutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti45">iti45</a>  Paṭisallānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti46">iti46</a>  Sikkhānisaṁsasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti47">iti47</a>  Jāgariyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti48">iti48</a>  Āpāyikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti49">iti49</a>  Diṭṭhigatasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti50">iti50</a>  Mūlasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti51">iti51</a>  Dhātusutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti52">iti52</a>  Paṭhamavedanāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti53">iti53</a>  Dutiyavedanāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti54">iti54</a>  Paṭhamaesanāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti55">iti55</a>  Dutiyaesanāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti56">iti56</a>  Paṭhamaāsavasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti57">iti57</a>  Dutiyaāsavasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti58">iti58</a>  Taṇhāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti59">iti59</a>  Māradheyyasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dutiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti60">iti60</a>  Puññakiriyavatthusutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti61">iti61</a>  Cakkhusutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti62">iti62</a>  Indriyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti63">iti63</a>  Addhāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti64">iti64</a>  Duccaritasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti65">iti65</a>  Sucaritasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti66">iti66</a>  Soceyyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti67">iti67</a>  Moneyyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti68">iti68</a>  Paṭhamarāgasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dutiyavagga Puna vaggamāhu</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti69">iti69</a>  Dutiyarāgasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tatiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti70">iti70</a>  Micchādiṭṭhikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti71">iti71</a>  Sammādiṭṭhikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti72">iti72</a>  Nissaraṇiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti73">iti73</a>  Santatarasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti74">iti74</a>  Puttasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti75">iti75</a>  Avuṭṭhikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti76">iti76</a>  Sukhapatthanāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti77">iti77</a>  Bhidurasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti78">iti78</a>  Dhātusosaṁsandanasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti79">iti79</a>  Parihānasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Catutthavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti80">iti80</a>  Vitakkasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti81">iti81</a>  Sakkārasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti82">iti82</a>  Devasaddasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti83">iti83</a>  Pañcapubbanimittasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti84">iti84</a>  Bahujanahitasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti85">iti85</a>  Asubhānupassīsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti86">iti86</a>  Dhammānudhammapaṭipannasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti87">iti87</a>  Andhakaraṇasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti88">iti88</a>  Antarāmalasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti89">iti89</a>  Devadattasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pañcamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti90">iti90</a>  Aggappasādasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti91">iti91</a>  Jīvikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti92">iti92</a>  Saṅghāṭikaṇṇasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti93">iti93</a>  Aggisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti94">iti94</a>  Upaparikkhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti95">iti95</a>  Kāmūpapattisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti96">iti96</a>  Kāmayogasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti97">iti97</a>  Kalyāṇasīlasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti98">iti98</a>  Dānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti99">iti99</a>  Tevijjasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Brāhmaṇadhammayāgavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti100">iti100</a>  Brāhmaṇadhammayāgasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti101">iti101</a>  Sulabhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti102">iti102</a>  Āsavakkhayasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti103">iti103</a>  Samaṇabrāhmaṇasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti104">iti104</a>  Sīlasampannasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti105">iti105</a>  Taṇhuppādasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti106">iti106</a>  Sabrahmakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti107">iti107</a>  Bahukārasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti108">iti108</a>  Kuhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti109">iti109</a>  Nadīsotasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti110">iti110</a>  Carasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti111">iti111</a>  Sampannasīlasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=iti112">iti112</a>  Lokasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Apaṇṇakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja1">ja1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja2">ja2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja3">ja3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja4">ja4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja5">ja5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja6">ja6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja7">ja7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja8">ja8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja9">ja9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja10">ja10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sīlavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja11">ja11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja12">ja12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja13">ja13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja14">ja14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja15">ja15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja16">ja16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja17">ja17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja18">ja18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja19">ja19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja20">ja20</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kuruṅgavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja21">ja21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja22">ja22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja23">ja23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja24">ja24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja25">ja25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja26">ja26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja27">ja27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja28">ja28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja29">ja29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja30">ja30</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kulāvakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja31">ja31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja32">ja32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja33">ja33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja34">ja34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja35">ja35</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja36">ja36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja37">ja37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja38">ja38</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja39">ja39</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja40">ja40</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Atthakāmavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja41">ja41</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja42">ja42</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja43">ja43</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja44">ja44</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja45">ja45</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja46">ja46</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja47">ja47</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja48">ja48</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja49">ja49</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja50">ja50</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Āsīsavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja51">ja51</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja52">ja52</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja53">ja53</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja54">ja54</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja55">ja55</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja56">ja56</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja57">ja57</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja58">ja58</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja59">ja59</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja60">ja60</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Itthivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja61">ja61</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja62">ja62</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja63">ja63</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja64">ja64</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja65">ja65</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja66">ja66</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja67">ja67</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja68">ja68</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja69">ja69</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja70">ja70</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Varuṇavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja71">ja71</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja72">ja72</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja73">ja73</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja74">ja74</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja75">ja75</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja76">ja76</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja77">ja77</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja78">ja78</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja79">ja79</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja80">ja80</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Apāyimhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja81">ja81</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja82">ja82</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja83">ja83</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja84">ja84</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja85">ja85</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja86">ja86</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja87">ja87</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja88">ja88</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja89">ja89</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja90">ja90</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Littavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja91">ja91</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja92">ja92</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja93">ja93</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja94">ja94</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja95">ja95</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja96">ja96</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja97">ja97</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja98">ja98</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja99">ja99</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja100">ja100</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Parosatavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja101">ja101</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja102">ja102</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja103">ja103</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja104">ja104</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja105">ja105</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja106">ja106</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja107">ja107</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja108">ja108</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja109">ja109</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja110">ja110</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Haṁcivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja111">ja111</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja112">ja112</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja113">ja113</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja114">ja114</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja115">ja115</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja116">ja116</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja117">ja117</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja118">ja118</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja119">ja119</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja120">ja120</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kusanāḷivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja121">ja121</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja122">ja122</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja123">ja123</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja124">ja124</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja125">ja125</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja126">ja126</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja127">ja127</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja128">ja128</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja129">ja129</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja130">ja130</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Asampadānavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja131">ja131</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja132">ja132</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja133">ja133</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja134">ja134</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja135">ja135</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja136">ja136</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja137">ja137</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja138">ja138</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja139">ja139</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja140">ja140</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kakaṇṭakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja141">ja141</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja142">ja142</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja143">ja143</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja144">ja144</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja145">ja145</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja146">ja146</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja147">ja147</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja148">ja148</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja149">ja149</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kakaṇṭakavagga Apaṇṇakaṁ sīlavaggakuruṅga,</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja150">ja150</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Daḷhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja151">ja151</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja152">ja152</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja153">ja153</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja154">ja154</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja155">ja155</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja156">ja156</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja157">ja157</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja158">ja158</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja159">ja159</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja160">ja160</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Santhavavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja161">ja161</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja162">ja162</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja163">ja163</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja164">ja164</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja165">ja165</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja166">ja166</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja167">ja167</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja168">ja168</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja169">ja169</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja170">ja170</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kalyāṇavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja171">ja171</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja172">ja172</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja173">ja173</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja174">ja174</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja175">ja175</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja176">ja176</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja177">ja177</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja178">ja178</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja179">ja179</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja180">ja180</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Asadisavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja181">ja181</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja182">ja182</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja183">ja183</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja184">ja184</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja185">ja185</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja186">ja186</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja187">ja187</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja188">ja188</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja189">ja189</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja190">ja190</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ruhakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja191">ja191</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja192">ja192</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja193">ja193</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja194">ja194</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja195">ja195</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja196">ja196</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja197">ja197</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja198">ja198</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja199">ja199</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja200">ja200</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nataṁdaḷhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja201">ja201</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja202">ja202</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja203">ja203</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja204">ja204</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja205">ja205</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja206">ja206</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja207">ja207</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja208">ja208</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja209">ja209</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja210">ja210</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bīraṇathambhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja211">ja211</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja212">ja212</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja213">ja213</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja214">ja214</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja215">ja215</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja216">ja216</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja217">ja217</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja218">ja218</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja219">ja219</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja220">ja220</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kāsāvavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja221">ja221</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja222">ja222</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja223">ja223</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja224">ja224</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja225">ja225</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja226">ja226</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja227">ja227</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja228">ja228</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja229">ja229</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja230">ja230</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Upāhanavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja231">ja231</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja232">ja232</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja233">ja233</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja234">ja234</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja235">ja235</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja236">ja236</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja237">ja237</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja238">ja238</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja239">ja239</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja240">ja240</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Siṅgālavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja241">ja241</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja242">ja242</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja243">ja243</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja244">ja244</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja245">ja245</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja246">ja246</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja247">ja247</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja248">ja248</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja249">ja249</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Siṅgālavagga Daḷhañca vaggaṁ</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja250">ja250</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Saṅkappavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja251">ja251</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja252">ja252</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja253">ja253</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja254">ja254</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja255">ja255</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja256">ja256</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja257">ja257</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja258">ja258</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja259">ja259</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja260">ja260</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Padumavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja261">ja261</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja262">ja262</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja263">ja263</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja264">ja264</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja265">ja265</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja266">ja266</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja267">ja267</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja268">ja268</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja269">ja269</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja270">ja270</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Udapānavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja271">ja271</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja272">ja272</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja273">ja273</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja274">ja274</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja275">ja275</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja276">ja276</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja277">ja277</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja278">ja278</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja279">ja279</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja280">ja280</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Abbhantaravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja281">ja281</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja282">ja282</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja283">ja283</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja284">ja284</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja285">ja285</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja286">ja286</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja287">ja287</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja288">ja288</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja289">ja289</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja290">ja290</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kumbhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja291">ja291</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja292">ja292</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja293">ja293</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja294">ja294</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja295">ja295</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja296">ja296</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja297">ja297</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja298">ja298</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja299">ja299</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja300">ja300</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kāliṅgavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja301">ja301</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja302">ja302</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja303">ja303</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja304">ja304</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja305">ja305</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja306">ja306</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja307">ja307</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja308">ja308</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja309">ja309</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja310">ja310</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pucimandavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja311">ja311</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja312">ja312</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja313">ja313</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja314">ja314</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja315">ja315</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja316">ja316</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja317">ja317</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja318">ja318</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja319">ja319</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja320">ja320</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kuṭidūsakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja321">ja321</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja322">ja322</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja323">ja323</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja324">ja324</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja325">ja325</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja326">ja326</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja327">ja327</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja328">ja328</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja329">ja329</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja330">ja330</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kokilavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja331">ja331</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja332">ja332</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja333">ja333</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja334">ja334</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja335">ja335</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja336">ja336</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja337">ja337</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja338">ja338</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja339">ja339</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja340">ja340</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Cūḷakuṇālavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja341">ja341</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja342">ja342</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja343">ja343</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja344">ja344</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja345">ja345</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja346">ja346</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja347">ja347</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja348">ja348</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja349">ja349</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja350">ja350</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Maṇikuṇḍalavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja351">ja351</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja352">ja352</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja353">ja353</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja354">ja354</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja355">ja355</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja356">ja356</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja357">ja357</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja358">ja358</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja359">ja359</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja360">ja360</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Vaṇṇārohavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja361">ja361</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja362">ja362</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja363">ja363</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja364">ja364</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja365">ja365</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja366">ja366</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja367">ja367</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja368">ja368</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja369">ja369</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja370">ja370</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aḍḍhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja371">ja371</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja372">ja372</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja373">ja373</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja374">ja374</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja375">ja375</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Avāriyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja376">ja376</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja377">ja377</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja378">ja378</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja379">ja379</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja380">ja380</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja381">ja381</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja382">ja382</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja383">ja383</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja384">ja384</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja385">ja385</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kharaputtavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja386">ja386</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja387">ja387</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja388">ja388</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja389">ja389</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja390">ja390</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja391">ja391</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja392">ja392</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja393">ja393</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja394">ja394</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kharaputtavagga Atha vaggaṁ</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja395">ja395</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kukkuvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja396">ja396</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja397">ja397</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja398">ja398</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja399">ja399</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja400">ja400</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja401">ja401</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja402">ja402</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja403">ja403</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja404">ja404</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja405">ja405</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Gandhāravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja406">ja406</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja407">ja407</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja408">ja408</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja409">ja409</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja410">ja410</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja411">ja411</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja412">ja412</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja413">ja413</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja414">ja414</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja415">ja415</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Gandhāravagga vaggaṁ me</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja416">ja416</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kaccānivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja417">ja417</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja418">ja418</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja419">ja419</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja420">ja420</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja421">ja421</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja422">ja422</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja423">ja423</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja424">ja424</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja425">ja425</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja426">ja426</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Gijjhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja427">ja427</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja428">ja428</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja429">ja429</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja430">ja430</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja431">ja431</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja432">ja432</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja433">ja433</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja434">ja434</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja435">ja435</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja436">ja436</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja437">ja437</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja438">ja438</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Catudvāravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja439">ja439</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja440">ja440</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja441">ja441</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja442">ja442</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja443">ja443</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja444">ja444</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja445">ja445</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja446">ja446</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja447">ja447</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja448">ja448</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja449">ja449</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja450">ja450</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja451">ja451</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja452">ja452</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja453">ja453</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja454">ja454</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mātuposakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja455">ja455</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja456">ja456</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja457">ja457</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja458">ja458</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja459">ja459</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja460">ja460</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja461">ja461</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja462">ja462</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja463">ja463</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Cūḷakuṇālavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja464">ja464</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja465">ja465</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja466">ja466</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja467">ja467</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja468">ja468</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja469">ja469</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja470">ja470</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja471">ja471</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja472">ja472</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja473">ja473</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ambavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja474">ja474</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja475">ja475</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja476">ja476</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja477">ja477</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja478">ja478</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja479">ja479</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja480">ja480</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja481">ja481</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja482">ja482</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja483">ja483</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sālikedāravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja484">ja484</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja485">ja485</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja486">ja486</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja487">ja487</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja488">ja488</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja489">ja489</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja490">ja490</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja491">ja491</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja492">ja492</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja493">ja493</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja494">ja494</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja495">ja495</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja496">ja496</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mātaṅgavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja497">ja497</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja498">ja498</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja499">ja499</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja500">ja500</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja501">ja501</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja502">ja502</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja503">ja503</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja504">ja504</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja505">ja505</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja506">ja506</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja507">ja507</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja508">ja508</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja509">ja509</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja510">ja510</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kiṁchandavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja511">ja511</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja512">ja512</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja513">ja513</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja514">ja514</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja515">ja515</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja516">ja516</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja517">ja517</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja518">ja518</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja519">ja519</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja520">ja520</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tesakuṇavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja521">ja521</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja522">ja522</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja523">ja523</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja524">ja524</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja525">ja525</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Niḷinikāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja526">ja526</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja527">ja527</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja528">ja528</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Soṇakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja529">ja529</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja530">ja530</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kusavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja531">ja531</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja532">ja532</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Cūḷahaṁsavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja533">ja533</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja534">ja534</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja535">ja535</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja536">ja536</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja537">ja537</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mūgapakkhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja538">ja538</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja539">ja539</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja540">ja540</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja541">ja541</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja542">ja542</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja543">ja543</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja544">ja544</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja545">ja545</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja546">ja546</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mūgapakkhavagga vaggamānāva kampare;</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ja547">ja547</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp1">kp1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp2">kp2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp3">kp3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp4">kp4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp5">kp5</a>  Maṅgalasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp6">kp6</a>  Ratanasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp7">kp7</a>  Tirokuṭṭasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp8">kp8</a>  Nidhikaṇḍasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=kp9">kp9</a>  Mettasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil1">mil1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil2">mil2</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mahāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.1">mil3.1.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.2">mil3.1.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.3">mil3.1.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.4">mil3.1.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.5">mil3.1.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.6">mil3.1.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.7">mil3.1.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.8">mil3.1.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.9">mil3.1.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.10">mil3.1.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.11">mil3.1.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.12">mil3.1.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.13">mil3.1.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.14">mil3.1.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.15">mil3.1.15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.1.16">mil3.1.16</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Addhānavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.1">mil3.2.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.2">mil3.2.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.3">mil3.2.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.4">mil3.2.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.5">mil3.2.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.6">mil3.2.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.7">mil3.2.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.8">mil3.2.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.2.9">mil3.2.9</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Vicāravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.1">mil3.3.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.2">mil3.3.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.3">mil3.3.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.4">mil3.3.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.5">mil3.3.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.6">mil3.3.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.7">mil3.3.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.8">mil3.3.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.9">mil3.3.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.10">mil3.3.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.11">mil3.3.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.12">mil3.3.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.13">mil3.3.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.3.14">mil3.3.14</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nibbānavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.1">mil3.4.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.2">mil3.4.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.3">mil3.4.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.4">mil3.4.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.5">mil3.4.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.6">mil3.4.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.7">mil3.4.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.8">mil3.4.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.9">mil3.4.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.4.10">mil3.4.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Buddhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.1">mil3.5.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.2">mil3.5.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.3">mil3.5.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.4">mil3.5.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.5">mil3.5.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.6">mil3.5.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.7">mil3.5.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.8">mil3.5.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.9">mil3.5.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.5.10">mil3.5.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sativagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.1">mil3.6.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.2">mil3.6.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.3">mil3.6.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.4">mil3.6.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.5">mil3.6.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.6">mil3.6.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.7">mil3.6.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.8">mil3.6.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.9">mil3.6.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.10">mil3.6.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.6.11">mil3.6.11</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Arūpadhammavavatthānavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.1">mil3.7.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.2">mil3.7.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.3">mil3.7.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.4">mil3.7.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.5">mil3.7.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.6">mil3.7.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.7">mil3.7.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.8">mil3.7.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.9">mil3.7.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.10">mil3.7.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.11">mil3.7.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.12">mil3.7.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.13">mil3.7.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.14">mil3.7.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.15">mil3.7.15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.7.16">mil3.7.16</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil3.8">mil3.8</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Upāsakaguṇavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil4.1">mil4.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil4.2">mil4.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil4.3">mil4.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil4.4">mil4.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil4.5">mil4.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil4.6">mil4.6</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Iddhibalavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.1">mil5.1.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.2">mil5.1.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.3">mil5.1.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.4">mil5.1.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.5">mil5.1.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.6">mil5.1.6</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Iddhibalavagga “Evameva kho,</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.7">mil5.1.7</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Iddhibalavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.8">mil5.1.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.9">mil5.1.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.1.10">mil5.1.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Abhejjavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.1">mil5.2.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.2">mil5.2.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.3">mil5.2.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.4">mil5.2.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.5">mil5.2.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.6">mil5.2.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.7">mil5.2.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.2.8">mil5.2.8</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṇāmitavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.1">mil5.3.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.2">mil5.3.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.3">mil5.3.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.4">mil5.3.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.5">mil5.3.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.6">mil5.3.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.7">mil5.3.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.8">mil5.3.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.9">mil5.3.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.10">mil5.3.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.11">mil5.3.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.3.12">mil5.3.12</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sabbaññutañāṇavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.1">mil5.4.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.2">mil5.4.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.3">mil5.4.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.4">mil5.4.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.5">mil5.4.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.6">mil5.4.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.7">mil5.4.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.8">mil5.4.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.9">mil5.4.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.4.10">mil5.4.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Santhavavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.1">mil5.5.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.2">mil5.5.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.3">mil5.5.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.4">mil5.5.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.5">mil5.5.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.6">mil5.5.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.7">mil5.5.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.8">mil5.5.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.9">mil5.5.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.10">mil5.5.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil5.5.11">mil5.5.11</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Buddhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.1">mil6.1.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.2">mil6.1.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.3">mil6.1.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.4">mil6.1.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.5">mil6.1.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.6">mil6.1.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.7">mil6.1.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.8">mil6.1.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.1.9">mil6.1.9</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nippapañcavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.1">mil6.2.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.2">mil6.2.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.3">mil6.2.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.4">mil6.2.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.5">mil6.2.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.6">mil6.2.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.7">mil6.2.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.8">mil6.2.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.9">mil6.2.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.2.10">mil6.2.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Vessantaravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.1">mil6.3.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.2">mil6.3.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.3">mil6.3.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.4">mil6.3.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.5">mil6.3.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.6">mil6.3.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.7">mil6.3.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.8">mil6.3.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.9">mil6.3.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.10">mil6.3.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.11">mil6.3.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.3.12">mil6.3.12</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Anumānavagga Sīlaratanena kho,</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.4.1">mil6.4.1</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Anumānavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil6.4.2">mil6.4.2</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.1">mil7.1</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Gadrabhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.1">mil7.2.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.2">mil7.2.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.3">mil7.2.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.4">mil7.2.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.5">mil7.2.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.6">mil7.2.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.7">mil7.2.7</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Gadrabhavagga “Yathā, mahārāja,</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.8">mil7.2.8</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Gadrabhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.9">mil7.2.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.2.10">mil7.2.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Samuddavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.1">mil7.3.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.2">mil7.3.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.3">mil7.3.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.4">mil7.3.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.5">mil7.3.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.6">mil7.3.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.7">mil7.3.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.8">mil7.3.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.9">mil7.3.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.3.10">mil7.3.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pathavīvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.1">mil7.4.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.2">mil7.4.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.3">mil7.4.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.4">mil7.4.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.5">mil7.4.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.6">mil7.4.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.7">mil7.4.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.8">mil7.4.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.9">mil7.4.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.4.10">mil7.4.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Upacikāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.1">mil7.5.1</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Upacikāvagga bhavaggaṁ kiṁ</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.2">mil7.5.2</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Upacikāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.3">mil7.5.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.4">mil7.5.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.5">mil7.5.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.6">mil7.5.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.7">mil7.5.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.8">mil7.5.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.9">mil7.5.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.5.10">mil7.5.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sīhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.1">mil7.6.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.2">mil7.6.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.3">mil7.6.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.4">mil7.6.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.5">mil7.6.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.6">mil7.6.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.7">mil7.6.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.8">mil7.6.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.9">mil7.6.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.6.10">mil7.6.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Makkaṭakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.1">mil7.7.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.2">mil7.7.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.3">mil7.7.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.4">mil7.7.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.5">mil7.7.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.6">mil7.7.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.7">mil7.7.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.8">mil7.7.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.9">mil7.7.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.7.10">mil7.7.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kumbhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.8.1">mil7.8.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.8.2">mil7.8.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.8.3">mil7.8.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.8.4">mil7.8.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.8.5">mil7.8.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.8.6">mil7.8.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil7.8.7">mil7.8.7</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Iti chasu</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mil8">mil8</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd1">mnd1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd2">mnd2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd3">mnd3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd4">mnd4</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga <b>Sa ve <b>Sa ve sa ve Sa ve</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd5">mnd5</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd6">mnd6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd7">mnd7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd8">mnd8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd9">mnd9</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga Iti samaggānaṁ</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd10">mnd10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga Iti samaggānaṁ Iti samaggānaṁ</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd11">mnd11</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd12">mnd12</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga <b>Vivādajātesu na <b>Vivādajātesu na vivādajātesu na Vivādajātesu na</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd13">mnd13</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga Iti samaggānaṁ</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd14">mnd14</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd15">mnd15</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhakavagga Aṭṭhakavaggamhi soḷasa</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=mnd16">mnd16</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne1">ne1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne2">ne2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne3">ne3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne4">ne4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne5">ne5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne6">ne6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne7">ne7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne8">ne8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne9">ne9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne10">ne10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne11">ne11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne12">ne12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne13">ne13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne14">ne14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne15">ne15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne16">ne16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne17">ne17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne18">ne18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne19">ne19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne20">ne20</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne21">ne21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne22">ne22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne23">ne23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne24">ne24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne25">ne25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne26">ne26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne27">ne27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne28">ne28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne29">ne29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne30">ne30</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne31">ne31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne32">ne32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne33">ne33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne34">ne34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne35">ne35</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne36">ne36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ne37">ne37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe1">pe1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe2">pe2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe3">pe3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe4">pe4</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Evameva bhavaggaparamāpi</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe5">pe5</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe6">pe6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe7">pe7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe8">pe8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pe9">pe9</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>1 Mahāvagga</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.0">ps1.0</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.1">ps1.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.2">ps1.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.3">ps1.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.4">ps1.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.5">ps1.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.6">ps1.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.7">ps1.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.8">ps1.8</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>1Mahāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.9">ps1.9</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>1 Mahāvagga</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps1.10">ps1.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>2 Yuganaddhavagga</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.1">ps2.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.2">ps2.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.3">ps2.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.4">ps2.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.5">ps2.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.6">ps2.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.7">ps2.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.8">ps2.8</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Yuganaddhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.9">ps2.9</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>2 Yuganaddhavagga</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps2.10">ps2.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>3 Paññāvagga</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.1">ps3.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.2">ps3.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.3">ps3.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.4">ps3.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.5">ps3.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.6">ps3.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.7">ps3.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.8">ps3.8</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paññāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.9">ps3.9</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>3 Paññāvagga Tatiye paññāvaggamhi,</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ps3.10">ps3.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Uragavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv1">pv1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv2">pv2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv3">pv3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv4">pv4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv5">pv5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv6">pv6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv7">pv7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv8">pv8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv9">pv9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv10">pv10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv11">pv11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv12">pv12</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ubbarivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv13">pv13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv14">pv14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv15">pv15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv16">pv16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv17">pv17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv18">pv18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv19">pv19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv20">pv20</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv21">pv21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv22">pv22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv23">pv23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv24">pv24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv25">pv25</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Cūḷavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv26">pv26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv27">pv27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv28">pv28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv29">pv29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv30">pv30</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv31">pv31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv32">pv32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv33">pv33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv34">pv34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv35">pv35</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mahāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv36">pv36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv37">pv37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv38">pv38</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv39">pv39</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv40">pv40</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv41">pv41</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv42">pv42</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv43">pv43</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv44">pv44</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv45">pv45</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv46">pv46</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv47">pv47</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv48">pv48</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv49">pv49</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv50">pv50</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=pv51">pv51</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.1">snp1.1</a>  Uragasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.2">snp1.2</a>  Dhaniyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.3">snp1.3</a>  Khaggavisāṇasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.4">snp1.4</a>  Kasibhāradvājasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.5">snp1.5</a>  Cundasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.6">snp1.6</a>  Parābhavasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.7">snp1.7</a>  Vasalasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.8">snp1.8</a>  Mettasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.9">snp1.9</a>  Hemavatasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.10">snp1.10</a>  Āḷavakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.11">snp1.11</a>  Vijayasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp1.12">snp1.12</a>  Munisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.1">snp2.1</a>  Ratanasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.2">snp2.2</a>  Āmagandhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.3">snp2.3</a>  Hirisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.4">snp2.4</a>  Maṅgalasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.5">snp2.5</a>  Sūcilomasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.6">snp2.6</a>  Kapilasutta (dhammacariyasutta)</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.7">snp2.7</a>  Brāhmaṇadhammikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.8">snp2.8</a>  Dhamma (nāvā) sutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.9">snp2.9</a>  Kiṁsīlasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.10">snp2.10</a>  Uṭṭhānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.11">snp2.11</a>  Rāhulasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.12">snp2.12</a>  Nigrodhakappa (vaṅgīsa) sutta</span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Vaggagatesu na</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.13">snp2.13</a>  Sammāparibbājanīyasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>cūḷavagganti cuddasāti.</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp2.14">snp2.14</a>  Dhammikasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.1">snp3.1</a>  Pabbajjāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.2">snp3.2</a>  Padhānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.3">snp3.3</a>  Subhāsitasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.4">snp3.4</a>  Pūraḷāsa (sundarikabhāradvāja) sutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.5">snp3.5</a>  Māghasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.6">snp3.6</a>  Sabhiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.7">snp3.7</a>  Selasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.8">snp3.8</a>  Sallasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.9">snp3.9</a>  Vāseṭṭhasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.10">snp3.10</a>  Kokālikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.11">snp3.11</a>  Nālakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp3.12">snp3.12</a>  Dvayatānupassanāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.1">snp4.1</a>  Kāmasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.2">snp4.2</a>  Guhaṭṭhakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.3">snp4.3</a>  Duṭṭhaṭṭhakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.4">snp4.4</a>  Suddhaṭṭhakasutta</span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sa ve</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.5">snp4.5</a>  Paramaṭṭhakasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.6">snp4.6</a>  Jarāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.7">snp4.7</a>  Tissametteyyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.8">snp4.8</a>  Pasūrasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.9">snp4.9</a>  Māgaṇḍiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.10">snp4.10</a>  Purābhedasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.11">snp4.11</a>  Kalahavivādasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.12">snp4.12</a>  Cūḷabyūhasutta</span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Vivādajātesu na</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.13">snp4.13</a>  Mahābyūhasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.14">snp4.14</a>  Tuvaṭakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.15">snp4.15</a>  Attadaṇḍasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp4.16">snp4.16</a>  Sāriputtasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.1">snp5.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.2">snp5.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.3">snp5.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.4">snp5.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.5">snp5.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.6">snp5.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.7">snp5.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.8">snp5.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.9">snp5.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.10">snp5.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.11">snp5.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.12">snp5.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.13">snp5.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.14">snp5.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.15">snp5.15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.16">snp5.16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.17">snp5.17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.18">snp5.18</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Suyyati vaggavaro Cūḷakavaggavaroti tamāhu. Suyyati vaggavaro Aṭṭhakavaggavaroti tamāhu.</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=snp5.19">snp5.19</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.1">thag1.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.2">thag1.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.3">thag1.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.4">thag1.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.5">thag1.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.6">thag1.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.7">thag1.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.8">thag1.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.9">thag1.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.10">thag1.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dutiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.11">thag1.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.12">thag1.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.13">thag1.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.14">thag1.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.15">thag1.15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.16">thag1.16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.17">thag1.17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.18">thag1.18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.19">thag1.19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.20">thag1.20</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tatiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.21">thag1.21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.22">thag1.22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.23">thag1.23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.24">thag1.24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.25">thag1.25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.26">thag1.26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.27">thag1.27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.28">thag1.28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.29">thag1.29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.30">thag1.30</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Catutthavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.31">thag1.31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.32">thag1.32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.33">thag1.33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.34">thag1.34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.35">thag1.35</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.36">thag1.36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.37">thag1.37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.38">thag1.38</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.39">thag1.39</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.40">thag1.40</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pañcamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.41">thag1.41</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.42">thag1.42</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.43">thag1.43</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.44">thag1.44</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.45">thag1.45</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.46">thag1.46</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.47">thag1.47</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.48">thag1.48</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.49">thag1.49</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.50">thag1.50</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Chaṭṭhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.51">thag1.51</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.52">thag1.52</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.53">thag1.53</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.54">thag1.54</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.55">thag1.55</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.56">thag1.56</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.57">thag1.57</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.58">thag1.58</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.59">thag1.59</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.60">thag1.60</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sattamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.61">thag1.61</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.62">thag1.62</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.63">thag1.63</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.64">thag1.64</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.65">thag1.65</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.66">thag1.66</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.67">thag1.67</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.68">thag1.68</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.69">thag1.69</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.70">thag1.70</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Aṭṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.71">thag1.71</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.72">thag1.72</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.73">thag1.73</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.74">thag1.74</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.75">thag1.75</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.76">thag1.76</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.77">thag1.77</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.78">thag1.78</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.79">thag1.79</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.80">thag1.80</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Navamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.81">thag1.81</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.82">thag1.82</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.83">thag1.83</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.84">thag1.84</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.85">thag1.85</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.86">thag1.86</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.87">thag1.87</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.88">thag1.88</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.89">thag1.89</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.90">thag1.90</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dasamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.91">thag1.91</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.92">thag1.92</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.93">thag1.93</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.94">thag1.94</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.95">thag1.95</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.96">thag1.96</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.97">thag1.97</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.98">thag1.98</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.99">thag1.99</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.100">thag1.100</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ekādasamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.101">thag1.101</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.102">thag1.102</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.103">thag1.103</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.104">thag1.104</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.105">thag1.105</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.106">thag1.106</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.107">thag1.107</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.108">thag1.108</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.109">thag1.109</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.110">thag1.110</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dvādasamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.111">thag1.111</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.112">thag1.112</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.113">thag1.113</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.114">thag1.114</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.115">thag1.115</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.116">thag1.116</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.117">thag1.117</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.118">thag1.118</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.119">thag1.119</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag1.120">thag1.120</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.1">thag2.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.2">thag2.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.3">thag2.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.4">thag2.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.5">thag2.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.6">thag2.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.7">thag2.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.8">thag2.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.9">thag2.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.10">thag2.10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Dutiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.11">thag2.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.12">thag2.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.13">thag2.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.14">thag2.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.15">thag2.15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.16">thag2.16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.17">thag2.17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.18">thag2.18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.19">thag2.19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.20">thag2.20</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tatiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.21">thag2.21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.22">thag2.22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.23">thag2.23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.24">thag2.24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.25">thag2.25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.26">thag2.26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.27">thag2.27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.28">thag2.28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.29">thag2.29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.30">thag2.30</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Catutthavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.31">thag2.31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.32">thag2.32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.33">thag2.33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.34">thag2.34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.35">thag2.35</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.36">thag2.36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.37">thag2.37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.38">thag2.38</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.39">thag2.39</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.40">thag2.40</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pañcamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.41">thag2.41</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.42">thag2.42</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.43">thag2.43</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.44">thag2.44</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.45">thag2.45</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.46">thag2.46</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.47">thag2.47</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.48">thag2.48</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag2.49">thag2.49</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.1">thag3.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.2">thag3.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.3">thag3.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.4">thag3.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.5">thag3.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.6">thag3.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.7">thag3.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.8">thag3.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.9">thag3.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.10">thag3.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.11">thag3.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.12">thag3.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.13">thag3.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.14">thag3.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.15">thag3.15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag3.16">thag3.16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.1">thag4.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.2">thag4.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.3">thag4.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.4">thag4.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.5">thag4.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.6">thag4.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.7">thag4.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.8">thag4.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.9">thag4.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.10">thag4.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.11">thag4.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag4.12">thag4.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.1">thag5.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.2">thag5.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.3">thag5.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.4">thag5.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.5">thag5.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.6">thag5.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.7">thag5.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.8">thag5.8</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga Navaggahamaṅkusaggaho; </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.9">thag5.9</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.10">thag5.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.11">thag5.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag5.12">thag5.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.1">thag6.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.2">thag6.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.3">thag6.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.4">thag6.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.5">thag6.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.6">thag6.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.7">thag6.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.8">thag6.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.9">thag6.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.10">thag6.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.11">thag6.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.12">thag6.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.13">thag6.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag6.14">thag6.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag7.1">thag7.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag7.2">thag7.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag7.3">thag7.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag7.4">thag7.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag7.5">thag7.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag8.1">thag8.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag8.2">thag8.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag8.3">thag8.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag9.1">thag9.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag10.1">thag10.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag10.2">thag10.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag10.3">thag10.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag10.4">thag10.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag10.5">thag10.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag10.6">thag10.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag10.7">thag10.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag11.1">thag11.1</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga Sīlaṁ sambalamevaggaṁ,</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag12.1">thag12.1</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag12.2">thag12.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag13.1">thag13.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag14.1">thag14.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag14.2">thag14.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag15.1">thag15.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag15.2">thag15.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.1">thag16.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.2">thag16.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.3">thag16.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.4">thag16.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.5">thag16.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.6">thag16.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.7">thag16.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.8">thag16.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.9">thag16.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag16.10">thag16.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag17.1">thag17.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag17.2">thag17.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag17.3">thag17.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag18.1">thag18.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag19.1">thag19.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag20.1">thag20.1</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṭhamavagga Na ca</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thag21.1">thag21.1</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Buddhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap1">tha-ap1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap2">tha-ap2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap3">tha-ap3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap4">tha-ap4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap5">tha-ap5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap6">tha-ap6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap7">tha-ap7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap8">tha-ap8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap9">tha-ap9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap10">tha-ap10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap11">tha-ap11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap12">tha-ap12</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sīhāsaniyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap13">tha-ap13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap14">tha-ap14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap15">tha-ap15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap16">tha-ap16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap17">tha-ap17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap18">tha-ap18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap19">tha-ap19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap20">tha-ap20</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap21">tha-ap21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap22">tha-ap22</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Subhūtivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap23">tha-ap23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap24">tha-ap24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap25">tha-ap25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap26">tha-ap26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap27">tha-ap27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap28">tha-ap28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap29">tha-ap29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap30">tha-ap30</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap31">tha-ap31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap32">tha-ap32</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kuṇḍadhānavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap33">tha-ap33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap34">tha-ap34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap35">tha-ap35</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap36">tha-ap36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap37">tha-ap37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap38">tha-ap38</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap39">tha-ap39</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap40">tha-ap40</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap41">tha-ap41</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap42">tha-ap42</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Upālivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap43">tha-ap43</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap44">tha-ap44</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap45">tha-ap45</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap46">tha-ap46</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap47">tha-ap47</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap48">tha-ap48</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap49">tha-ap49</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap50">tha-ap50</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap51">tha-ap51</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap52">tha-ap52</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bījanivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap53">tha-ap53</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap54">tha-ap54</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap55">tha-ap55</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap56">tha-ap56</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap57">tha-ap57</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap58">tha-ap58</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap59">tha-ap59</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap60">tha-ap60</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap61">tha-ap61</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap62">tha-ap62</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sakacintaniyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap63">tha-ap63</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap64">tha-ap64</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap65">tha-ap65</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap66">tha-ap66</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap67">tha-ap67</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap68">tha-ap68</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap69">tha-ap69</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap70">tha-ap70</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap71">tha-ap71</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap72">tha-ap72</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nāgasamālavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap73">tha-ap73</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap74">tha-ap74</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap75">tha-ap75</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap76">tha-ap76</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap77">tha-ap77</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap78">tha-ap78</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap79">tha-ap79</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap80">tha-ap80</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap81">tha-ap81</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap82">tha-ap82</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Timiravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap83">tha-ap83</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap84">tha-ap84</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap85">tha-ap85</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap86">tha-ap86</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap87">tha-ap87</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap88">tha-ap88</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap89">tha-ap89</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap90">tha-ap90</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap91">tha-ap91</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap92">tha-ap92</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sudhāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap93">tha-ap93</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap94">tha-ap94</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap95">tha-ap95</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap96">tha-ap96</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap97">tha-ap97</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap98">tha-ap98</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap99">tha-ap99</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap100">tha-ap100</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap101">tha-ap101</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sudhāvagga Buddhavaggadasakaṁ. </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap102">tha-ap102</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bhikkhadāyivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap103">tha-ap103</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap104">tha-ap104</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap105">tha-ap105</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap106">tha-ap106</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap107">tha-ap107</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap108">tha-ap108</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap109">tha-ap109</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap110">tha-ap110</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap111">tha-ap111</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap112">tha-ap112</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mahāparivāravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap113">tha-ap113</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap114">tha-ap114</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap115">tha-ap115</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap116">tha-ap116</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap117">tha-ap117</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap118">tha-ap118</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap119">tha-ap119</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap120">tha-ap120</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap121">tha-ap121</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap122">tha-ap122</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sereyyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap123">tha-ap123</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap124">tha-ap124</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap125">tha-ap125</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap126">tha-ap126</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap127">tha-ap127</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap128">tha-ap128</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap129">tha-ap129</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap130">tha-ap130</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap131">tha-ap131</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap132">tha-ap132</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sobhitavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap133">tha-ap133</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap134">tha-ap134</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap135">tha-ap135</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap136">tha-ap136</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap137">tha-ap137</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap138">tha-ap138</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap139">tha-ap139</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap140">tha-ap140</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap141">tha-ap141</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap142">tha-ap142</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Chattavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap143">tha-ap143</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap144">tha-ap144</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap145">tha-ap145</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap146">tha-ap146</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap147">tha-ap147</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap148">tha-ap148</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap149">tha-ap149</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap150">tha-ap150</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap151">tha-ap151</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap152">tha-ap152</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bandhujīvakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap153">tha-ap153</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap154">tha-ap154</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap155">tha-ap155</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap156">tha-ap156</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap157">tha-ap157</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap158">tha-ap158</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap159">tha-ap159</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap160">tha-ap160</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap161">tha-ap161</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap162">tha-ap162</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Supāricariyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap163">tha-ap163</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap164">tha-ap164</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap165">tha-ap165</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap166">tha-ap166</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap167">tha-ap167</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap168">tha-ap168</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap169">tha-ap169</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap170">tha-ap170</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap171">tha-ap171</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap172">tha-ap172</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kumudavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap173">tha-ap173</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap174">tha-ap174</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap175">tha-ap175</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap176">tha-ap176</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap177">tha-ap177</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap178">tha-ap178</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap179">tha-ap179</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap180">tha-ap180</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap181">tha-ap181</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap182">tha-ap182</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kuṭajapupphiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap183">tha-ap183</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap184">tha-ap184</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap185">tha-ap185</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap186">tha-ap186</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap187">tha-ap187</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap188">tha-ap188</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap189">tha-ap189</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap190">tha-ap190</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap191">tha-ap191</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap192">tha-ap192</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tamālapupphiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap193">tha-ap193</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap194">tha-ap194</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap195">tha-ap195</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap196">tha-ap196</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap197">tha-ap197</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap198">tha-ap198</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap199">tha-ap199</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap200">tha-ap200</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap201">tha-ap201</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tamālapupphiyavagga Bhikkhāvaggadasakaṁ. </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap202">tha-ap202</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kaṇikārapupphiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap203">tha-ap203</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap204">tha-ap204</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap205">tha-ap205</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap206">tha-ap206</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap207">tha-ap207</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap208">tha-ap208</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap209">tha-ap209</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap210">tha-ap210</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap211">tha-ap211</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap212">tha-ap212</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Hatthivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap213">tha-ap213</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap214">tha-ap214</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap215">tha-ap215</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap216">tha-ap216</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap217">tha-ap217</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap218">tha-ap218</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap219">tha-ap219</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap220">tha-ap220</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap221">tha-ap221</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap222">tha-ap222</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ālambaṇadāyakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap223">tha-ap223</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap224">tha-ap224</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap225">tha-ap225</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap226">tha-ap226</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap227">tha-ap227</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap228">tha-ap228</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap229">tha-ap229</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap230">tha-ap230</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap231">tha-ap231</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap232">tha-ap232</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Udakāsanavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap233">tha-ap233</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap234">tha-ap234</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap235">tha-ap235</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap236">tha-ap236</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap237">tha-ap237</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap238">tha-ap238</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap239">tha-ap239</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap240">tha-ap240</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap241">tha-ap241</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap242">tha-ap242</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tuvaradāyakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap243">tha-ap243</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap244">tha-ap244</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap245">tha-ap245</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap246">tha-ap246</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap247">tha-ap247</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap248">tha-ap248</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap249">tha-ap249</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap250">tha-ap250</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap251">tha-ap251</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap252">tha-ap252</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Thomakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap253">tha-ap253</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap254">tha-ap254</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap255">tha-ap255</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap256">tha-ap256</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap257">tha-ap257</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap258">tha-ap258</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap259">tha-ap259</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap260">tha-ap260</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap261">tha-ap261</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap262">tha-ap262</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Padumukkhipavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap263">tha-ap263</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap264">tha-ap264</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap265">tha-ap265</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap266">tha-ap266</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap267">tha-ap267</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap268">tha-ap268</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap269">tha-ap269</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap270">tha-ap270</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap271">tha-ap271</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap272">tha-ap272</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Suvaṇṇabibbohanavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap273">tha-ap273</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap274">tha-ap274</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap275">tha-ap275</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap276">tha-ap276</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap277">tha-ap277</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap278">tha-ap278</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap279">tha-ap279</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap280">tha-ap280</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap281">tha-ap281</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap282">tha-ap282</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṇṇadāyakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap283">tha-ap283</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap284">tha-ap284</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap285">tha-ap285</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap286">tha-ap286</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap287">tha-ap287</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap288">tha-ap288</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap289">tha-ap289</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap290">tha-ap290</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap291">tha-ap291</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap292">tha-ap292</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Citakapūjakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap293">tha-ap293</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap294">tha-ap294</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap295">tha-ap295</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap296">tha-ap296</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap297">tha-ap297</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap298">tha-ap298</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap299">tha-ap299</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap300">tha-ap300</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap301">tha-ap301</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Citakapūjakavagga Kaṇikāravaggadasakaṁ. </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap302">tha-ap302</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Padumakesaravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap303">tha-ap303</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap304">tha-ap304</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap305">tha-ap305</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap306">tha-ap306</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap307">tha-ap307</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap308">tha-ap308</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap309">tha-ap309</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap310">tha-ap310</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap311">tha-ap311</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap312">tha-ap312</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ārakkhadāyakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap313">tha-ap313</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap314">tha-ap314</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap315">tha-ap315</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap316">tha-ap316</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap317">tha-ap317</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap318">tha-ap318</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap319">tha-ap319</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap320">tha-ap320</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap321">tha-ap321</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap322">tha-ap322</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Umāpupphiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap323">tha-ap323</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap324">tha-ap324</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap325">tha-ap325</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap326">tha-ap326</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap327">tha-ap327</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap328">tha-ap328</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap329">tha-ap329</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap330">tha-ap330</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap331">tha-ap331</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap332">tha-ap332</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Gandhodakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap333">tha-ap333</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap334">tha-ap334</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap335">tha-ap335</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap336">tha-ap336</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap337">tha-ap337</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap338">tha-ap338</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap339">tha-ap339</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap340">tha-ap340</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap341">tha-ap341</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap342">tha-ap342</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ekapadumiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap343">tha-ap343</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap344">tha-ap344</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap345">tha-ap345</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap346">tha-ap346</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap347">tha-ap347</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap348">tha-ap348</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap349">tha-ap349</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap350">tha-ap350</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap351">tha-ap351</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap352">tha-ap352</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Saddasaññakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap353">tha-ap353</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap354">tha-ap354</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap355">tha-ap355</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap356">tha-ap356</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap357">tha-ap357</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap358">tha-ap358</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap359">tha-ap359</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap360">tha-ap360</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap361">tha-ap361</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap362">tha-ap362</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mandāravapupphiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap363">tha-ap363</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap364">tha-ap364</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap365">tha-ap365</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap366">tha-ap366</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap367">tha-ap367</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap368">tha-ap368</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap369">tha-ap369</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap370">tha-ap370</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap371">tha-ap371</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap372">tha-ap372</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bodhivandanavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap373">tha-ap373</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap374">tha-ap374</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap375">tha-ap375</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap376">tha-ap376</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap377">tha-ap377</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap378">tha-ap378</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap379">tha-ap379</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap380">tha-ap380</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap381">tha-ap381</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap382">tha-ap382</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Avaṭaphalavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap383">tha-ap383</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap384">tha-ap384</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap385">tha-ap385</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap386">tha-ap386</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap387">tha-ap387</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap388">tha-ap388</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap389">tha-ap389</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap390">tha-ap390</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap391">tha-ap391</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap392">tha-ap392</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pilindavacchavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap393">tha-ap393</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap394">tha-ap394</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap395">tha-ap395</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap396">tha-ap396</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap397">tha-ap397</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap398">tha-ap398</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap399">tha-ap399</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap400">tha-ap400</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap401">tha-ap401</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pilindavacchavagga Padumavaggadasakaṁ. </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap402">tha-ap402</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Metteyyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap403">tha-ap403</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap404">tha-ap404</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap405">tha-ap405</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap406">tha-ap406</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap407">tha-ap407</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap408">tha-ap408</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap409">tha-ap409</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap410">tha-ap410</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap411">tha-ap411</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap412">tha-ap412</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bhaddālivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap413">tha-ap413</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap414">tha-ap414</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap415">tha-ap415</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap416">tha-ap416</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap417">tha-ap417</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap418">tha-ap418</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap419">tha-ap419</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap420">tha-ap420</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap421">tha-ap421</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap422">tha-ap422</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sakiṁsammajjakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap423">tha-ap423</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap424">tha-ap424</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap425">tha-ap425</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap426">tha-ap426</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap427">tha-ap427</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap428">tha-ap428</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap429">tha-ap429</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sakiṁsammajjakavagga navaggarasabhojanaṁ; </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap430">tha-ap430</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sakiṁsammajjakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap431">tha-ap431</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap432">tha-ap432</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ekavihārivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap433">tha-ap433</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap434">tha-ap434</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap435">tha-ap435</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap436">tha-ap436</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap437">tha-ap437</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap438">tha-ap438</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap439">tha-ap439</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap440">tha-ap440</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap441">tha-ap441</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap442">tha-ap442</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Vibhītakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap443">tha-ap443</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap444">tha-ap444</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap445">tha-ap445</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap446">tha-ap446</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap447">tha-ap447</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap448">tha-ap448</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap449">tha-ap449</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap450">tha-ap450</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap451">tha-ap451</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap452">tha-ap452</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Jagatidāyakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap453">tha-ap453</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap454">tha-ap454</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap455">tha-ap455</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap456">tha-ap456</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap457">tha-ap457</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap458">tha-ap458</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap459">tha-ap459</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap460">tha-ap460</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap461">tha-ap461</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap462">tha-ap462</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sālakusumiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap463">tha-ap463</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap464">tha-ap464</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap465">tha-ap465</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap466">tha-ap466</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap467">tha-ap467</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap468">tha-ap468</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap469">tha-ap469</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap470">tha-ap470</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap471">tha-ap471</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap472">tha-ap472</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Naḷamālivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap473">tha-ap473</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap474">tha-ap474</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap475">tha-ap475</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap476">tha-ap476</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap477">tha-ap477</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap478">tha-ap478</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap479">tha-ap479</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap480">tha-ap480</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap481">tha-ap481</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap482">tha-ap482</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Paṁsukūlavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap483">tha-ap483</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap484">tha-ap484</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap485">tha-ap485</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap486">tha-ap486</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap487">tha-ap487</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap488">tha-ap488</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap489">tha-ap489</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap490">tha-ap490</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap491">tha-ap491</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap492">tha-ap492</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kiṅkaṇipupphavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap493">tha-ap493</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap494">tha-ap494</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap495">tha-ap495</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap496">tha-ap496</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap497">tha-ap497</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap498">tha-ap498</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap499">tha-ap499</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap500">tha-ap500</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap501">tha-ap501</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kiṅkaṇipupphavagga Metteyyavaggadasakaṁ. </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap502">tha-ap502</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kaṇikāravagga navaggarasabhojanaṁ; </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap503">tha-ap503</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kaṇikāravagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap504">tha-ap504</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap505">tha-ap505</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap506">tha-ap506</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap507">tha-ap507</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap508">tha-ap508</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap509">tha-ap509</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap510">tha-ap510</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap511">tha-ap511</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap512">tha-ap512</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Phaladāyakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap513">tha-ap513</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap514">tha-ap514</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap515">tha-ap515</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap516">tha-ap516</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap517">tha-ap517</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap518">tha-ap518</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap519">tha-ap519</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap520">tha-ap520</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap521">tha-ap521</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap522">tha-ap522</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Tiṇadāyakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap523">tha-ap523</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap524">tha-ap524</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap525">tha-ap525</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap526">tha-ap526</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap527">tha-ap527</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap528">tha-ap528</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap529">tha-ap529</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap530">tha-ap530</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap531">tha-ap531</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap532">tha-ap532</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kaccāyanavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap533">tha-ap533</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap534">tha-ap534</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap535">tha-ap535</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap536">tha-ap536</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap537">tha-ap537</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap538">tha-ap538</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap539">tha-ap539</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap540">tha-ap540</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap541">tha-ap541</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap542">tha-ap542</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Bhaddiyavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap543">tha-ap543</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap544">tha-ap544</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap545">tha-ap545</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap546">tha-ap546</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap547">tha-ap547</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap548">tha-ap548</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap549">tha-ap549</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap550">tha-ap550</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap551">tha-ap551</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap552">tha-ap552</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Yasavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap553">tha-ap553</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap554">tha-ap554</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap555">tha-ap555</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap556">tha-ap556</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap557">tha-ap557</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Yasavagga navaggarasabhojanaṁ; </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap558">tha-ap558</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Yasavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap559">tha-ap559</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap560">tha-ap560</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap561">tha-ap561</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap562">tha-ap562</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=tha-ap563">tha-ap563</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.1">thig1.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.2">thig1.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.3">thig1.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.4">thig1.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.5">thig1.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.6">thig1.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.7">thig1.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.8">thig1.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.9">thig1.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.10">thig1.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.11">thig1.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.12">thig1.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.13">thig1.13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.14">thig1.14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.15">thig1.15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.16">thig1.16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.17">thig1.17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig1.18">thig1.18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.1">thig2.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.2">thig2.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.3">thig2.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.4">thig2.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.5">thig2.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.6">thig2.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.7">thig2.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.8">thig2.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.9">thig2.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig2.10">thig2.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.1">thig3.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.2">thig3.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.3">thig3.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.4">thig3.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.5">thig3.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.6">thig3.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.7">thig3.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig3.8">thig3.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig4.1">thig4.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.1">thig5.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.2">thig5.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.3">thig5.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.4">thig5.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.5">thig5.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.6">thig5.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.7">thig5.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.8">thig5.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.9">thig5.9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.10">thig5.10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.11">thig5.11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig5.12">thig5.12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.1">thig6.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.2">thig6.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.3">thig6.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.4">thig6.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.5">thig6.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.6">thig6.6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.7">thig6.7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig6.8">thig6.8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig7.1">thig7.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig7.2">thig7.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig7.3">thig7.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig8.1">thig8.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig9.1">thig9.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig10.1">thig10.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig11.1">thig11.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig12.1">thig12.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig13.1">thig13.1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig13.2">thig13.2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig13.3">thig13.3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig13.4">thig13.4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig13.5">thig13.5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig14.1">thig14.1</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sabbañca ñātigaṇavaggaṁ;</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig15.1">thig15.1</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thig16.1">thig16.1</a> </span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sumedhāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap1">thi-ap1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap2">thi-ap2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap3">thi-ap3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap4">thi-ap4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap5">thi-ap5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap6">thi-ap6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap7">thi-ap7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap8">thi-ap8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap9">thi-ap9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap10">thi-ap10</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Ekūposathikavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap11">thi-ap11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap12">thi-ap12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap13">thi-ap13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap14">thi-ap14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap15">thi-ap15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap16">thi-ap16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap17">thi-ap17</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap18">thi-ap18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap19">thi-ap19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap20">thi-ap20</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Kuṇḍalakesīvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap21">thi-ap21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap22">thi-ap22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap23">thi-ap23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap24">thi-ap24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap25">thi-ap25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap26">thi-ap26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap27">thi-ap27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap28">thi-ap28</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap29">thi-ap29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap30">thi-ap30</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Khattiyāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap31">thi-ap31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap32">thi-ap32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap33">thi-ap33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap34">thi-ap34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap35">thi-ap35</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap36">thi-ap36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap37">thi-ap37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap38">thi-ap38</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap39">thi-ap39</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=thi-ap40">thi-ap40</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.1">ud1.1</a>  Paṭhamabodhisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.2">ud1.2</a>  Dutiyabodhisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.3">ud1.3</a>  Tatiyabodhisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.4">ud1.4</a>  Huṁhuṅkasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.5">ud1.5</a>  Brāhmaṇasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.6">ud1.6</a>  Mahākassapasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.7">ud1.7</a>  Ajakalāpakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.8">ud1.8</a>  Saṅgāmajisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.9">ud1.9</a>  Jaṭilasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud1.10">ud1.10</a>  Bāhiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.1">ud2.1</a>  Mucalindasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.2">ud2.2</a>  Rājasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.3">ud2.3</a>  Daṇḍasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.4">ud2.4</a>  Sakkārasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.5">ud2.5</a>  Upāsakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.6">ud2.6</a>  Gabbhinīsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.7">ud2.7</a>  Ekaputtakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.8">ud2.8</a>  Suppavāsāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.9">ud2.9</a>  Visākhāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud2.10">ud2.10</a>  Bhaddiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.1">ud3.1</a>  Kammavipākajasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.2">ud3.2</a>  Nandasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.3">ud3.3</a>  Yasojasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.4">ud3.4</a>  Sāriputtasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.5">ud3.5</a>  Mahāmoggallānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.6">ud3.6</a>  Pilindavacchasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.7">ud3.7</a>  Sakkudānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.8">ud3.8</a>  Piṇḍapātikasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.9">ud3.9</a>  Sippasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud3.10">ud3.10</a>  Lokasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.1">ud4.1</a>  Meghiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.2">ud4.2</a>  Uddhatasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.3">ud4.3</a>  Gopālakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.4">ud4.4</a>  Yakkhapahārasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.5">ud4.5</a>  Nāgasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.6">ud4.6</a>  Piṇḍolasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.7">ud4.7</a>  Sāriputtasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.8">ud4.8</a>  Sundarīsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.9">ud4.9</a>  Upasenasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud4.10">ud4.10</a>  Sāriputtaupasamasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.1">ud5.1</a>  Piyatarasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.2">ud5.2</a>  Appāyukasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.3">ud5.3</a>  Suppabuddhakuṭṭhisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.4">ud5.4</a>  Kumārakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.5">ud5.5</a>  Uposathasutta</span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Atha kho</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.6">ud5.6</a>  Soṇasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5></h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.7">ud5.7</a>  Kaṅkhārevatasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.8">ud5.8</a>  Saṅghabhedasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.9">ud5.9</a>  Sadhāyamānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud5.10">ud5.10</a>  Cūḷapanthakasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.1">ud6.1</a>  Āyusaṅkhārossajjanasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.2">ud6.2</a>  Sattajaṭilasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.3">ud6.3</a>  Paccavekkhaṇasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.4">ud6.4</a>  Paṭhamanānātitthiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.5">ud6.5</a>  Dutiyanānātitthiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.6">ud6.6</a>  Tatiyanānātitthiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.7">ud6.7</a>  Subhūtisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.8">ud6.8</a>  Gaṇikāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.9">ud6.9</a>  Upātidhāvantisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud6.10">ud6.10</a>  Uppajjantisutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.1">ud7.1</a>  Paṭhamalakuṇḍakabhaddiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.2">ud7.2</a>  Dutiyalakuṇḍakabhaddiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.3">ud7.3</a>  Paṭhamasattasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.4">ud7.4</a>  Dutiyasattasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.5">ud7.5</a>  Aparalakuṇḍakabhaddiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.6">ud7.6</a>  Taṇhāsaṅkhayasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.7">ud7.7</a>  Papañcakhayasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.8">ud7.8</a>  Kaccānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.9">ud7.9</a>  Udapānasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud7.10">ud7.10</a>  Utenasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.1">ud8.1</a>  Paṭhamanibbānapaṭisaṁyuttasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.2">ud8.2</a>  Dutiyanibbānapaṭisaṁyuttasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.3">ud8.3</a>  Tatiyanibbānapaṭisaṁyuttasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.4">ud8.4</a>  Catutthanibbānapaṭisaṁyuttasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.5">ud8.5</a>  Cundasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.6">ud8.6</a>  Pāṭaligāmiyasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.7">ud8.7</a>  Dvidhāpathasutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.8">ud8.8</a>  Visākhāsutta</span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.9">ud8.9</a>  Paṭhamadabbasutta</span>
+</div>
+  
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Nandakavaggavaro tatiyo Meghiyavaggavaro ca Pañcamavaggavarantidha soṇo, Chaṭṭhamavaggavaranti jaccandho; Sattamavaggavaranti ca</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=ud8.10">ud8.10</a>  Dutiyadabbasutta</span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pīṭhavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv1">vv1</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv2">vv2</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv3">vv3</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv4">vv4</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv5">vv5</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv6">vv6</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv7">vv7</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv8">vv8</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv9">vv9</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv10">vv10</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv11">vv11</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv12">vv12</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv13">vv13</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv14">vv14</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv15">vv15</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv16">vv16</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv17">vv17</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Cittalatāvagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv18">vv18</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv19">vv19</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv20">vv20</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv21">vv21</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv22">vv22</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv23">vv23</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv24">vv24</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv25">vv25</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv26">vv26</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv27">vv27</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv28">vv28</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pāricchattakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv29">vv29</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv30">vv30</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv31">vv31</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv32">vv32</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv33">vv33</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv34">vv34</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv35">vv35</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv36">vv36</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv37">vv37</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv38">vv38</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mañjiṭṭhakavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv39">vv39</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv40">vv40</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv41">vv41</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv42">vv42</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv43">vv43</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv44">vv44</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv45">vv45</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv46">vv46</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv47">vv47</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv48">vv48</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv49">vv49</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv50">vv50</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mahārathavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv51">vv51</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv52">vv52</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv53">vv53</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv54">vv54</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv55">vv55</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv56">vv56</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv57">vv57</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv58">vv58</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv59">vv59</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv60">vv60</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv61">vv61</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv62">vv62</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv63">vv63</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Mahārathavagga Dhunanti vagganti</h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv64">vv64</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Pāyāsivagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv65">vv65</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv66">vv66</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv67">vv67</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv68">vv68</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv69">vv69</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv70">vv70</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv71">vv71</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv72">vv72</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv73">vv73</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv74">vv74</a> </span>
+</div>
+  
+</div> <!-- close prev vagga div -->
+<div class="my-3">
+<div class="level4 my-3">
+		   <h5>Sunikkhittavagga </h5>
+                  </div>
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv75">vv75</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv76">vv76</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv77">vv77</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv78">vv78</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv79">vv79</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv80">vv80</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv81">vv81</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv82">vv82</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv83">vv83</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv84">vv84</a> </span>
+</div>
+  
+<div class="mt-3">
+<span class="level5"><a href="/ru/sc/?q=vv85">vv85</a> </span>
+</div>
+  
+</div> <!-- Nikaya collapse -->
+</div> <!-- Nikaya title + Nikaya collapse inside -->
+</div> <!-- Container -->
+	  <script src="/assets/js/smoothScroll.js"defer></script>
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script src="/assets/js/tocjs.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 source ./config/script_config.sh --source-only
 
 
-tmp=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/tmp/tmp
+tmp=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/tmp
 #apachesitepath=/drives/c/soft/fdg/
 assetdir=$apachesitepath/assets/templates
 
@@ -33,17 +33,17 @@ prev_nikaya=""
 prev_knbook=""
 
 # Поиск всех JSON файлов в указанном каталоге и его подкаталогах
-find "$suttapath" -type f -name "*.json" | sort -V | while read -r file; do
+find "$suttapath" -type f -name "*.json" | grep -E "/(thag|snp|thig)/" | sort -V | while read -r file; do
     # Извлечение данных из файла с помощью grep -E
 
-        jq -r 'to_entries[] | "\(.key) \(.value)"' "$file" | grep -E ":0\..*Nikāya|vagga|sutta" > $tmp
+        jq -r 'to_entries[] | "\(.key) \(.value)"' "$file" | grep -E ":0\..*Nikāya|vagga|sutta|nipāta|gāthā|pucchā" > $tmp
 
     nikaya=$(cat $tmp | grep Nikāya | awk '{print $2}')
 	
     knbook=$(cat $tmp | grep Nikāya | awk '{print $NF}' | awk -F'.' '{print $1}')
     vagga=$(cat $tmp | grep vagga | awk '{print $2, $3}')
     suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}') 
- suttaname=$(cat $tmp | grep -E "sutta\\b " | awk '{$1=""; print $0}')
+ suttaname=$(cat $tmp | grep -E "(sutta|gāthā|pucchā)\\b " | grep -vE "(Theragāthā|Therīgāthā)" | awk '{$1=""; print $0}')
  
     link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/sc/?q="$1}')
 

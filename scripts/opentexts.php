@@ -126,7 +126,8 @@ $anchor = isset(parse_url($_SERVER['REQUEST_URI'])['fragment']) ? parse_url($_SE
 $stringForOpen = strtolower($string);
 $stringForOpen = preg_replace('/([a-zA-Z])\s+(\d)/', '$1$2', $stringForOpen);
 $stringForOpen = preg_replace('/(\d+)\s*\.\s*(\d+)/', '$1.$2', $stringForOpen);
-
+$stringForOpen = preg_replace('/([0-9]) ([0-9])/', '$1.$2', $stringForOpen);
+$stringForOpen = preg_replace('/([0-9])\. ([0-9])/', '$1.$2', $stringForOpen);
 if (preg_match("/^(ja|snp|iti|thig|thag)[0-9].*/i", $stringForOpen)) {
   
   echo "<script>window.location.href='$readerlang?q=$stringForOpen&s=$s';</script>";	
@@ -374,7 +375,7 @@ echo '<script>window.open("' . $link . '", "_self");</script>';
 }
 
 #open text list onthe read.php page
-if(preg_match("/^(mn|dn|sn|an)$/i",$stringForOpen) || preg_match("/^(sn|an)[0-9]{0,2}$/i",$stringForOpen)){
+if(preg_match("/^(mn|dn|sn|an|kn|snp|ud|iti|thag|thig|dhp)$/i",$stringForOpen) || preg_match("/^(sn|an)[0-9]{0,2}$/i",$stringForOpen)){
 $stringForOpen = str_replace (" ", "", $stringForOpen);
 $numberblock = preg_replace("/[a-z]*/i","","$stringForOpen");
 $letterblock = preg_replace("/[0-9]*/i","","$stringForOpen");

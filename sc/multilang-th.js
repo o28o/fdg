@@ -1,9 +1,7 @@
-
 const Sccopy = "/suttacentral.net";
 const suttaArea = document.getElementById("sutta");
 const homeButton = document.getElementById("home-button");
 const fdgButton = document.getElementById("fdg-button");
-
 const bodyTag = document.querySelector("body");
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
@@ -25,12 +23,11 @@ form.addEventListener("submit", e => {
   e.preventDefault();
   if (citation.value) {
     buildSutta(citation.value.replace(/\s+/g, " "));
-history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
+  history.pushState({ page: citation.value.replace(/\s+/g, " ") }, "", `?q=${citation.value.replace(/\s+/g, " ")}`);
   }
 });
 
 function buildSutta(slug) {
-  
   let translator = "";
   let texttype = "sutta";
   let slugArray = slug.split("&");
@@ -47,7 +44,7 @@ function buildSutta(slug) {
     translator = "brahmali";
     texttype = "vinaya";
     slug = slug.replace(/bu([psan])/, "bu-$1");
-    slug = slug.replace(/bi([psn])/, "bi-$1");
+    slug = slug.replace(/bi([psan])/, "bi-$1");
     if (!slug.match("pli-tv-")) {
       slug = "pli-tv-" + slug;
     }
@@ -62,7 +59,7 @@ function buildSutta(slug) {
   if (slug.match(/bu-pm|bi-pm/)) {
     texttype = "vinaya";
     slug = slug.replace(/bu([psan])/, "bu-$1");
-    slug = slug.replace(/bi([psan])/, "bi-$1");
+    slug = slug.replace(/bi([psn])/, "bi-$1");
     if (!slug.match("pli-tv-")) {
       slug = "pli-tv-" + slug;
     }
@@ -75,7 +72,7 @@ function buildSutta(slug) {
 
 
 $.ajax({
-       url: "/sc/translator-lookup-th.php?fromjs=" +texttype +"/" +slugReady
+       url: "/sc/translator-lookup.php?fromjs=" +texttype +"/" +slugReady
     }).done(function(data) {
       const trnsResp = data.split(" ");
      // let translator = trnsResp[0];
@@ -88,26 +85,38 @@ const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
 let snranges = ['sn56.11'];
 
-var thtrnpath = `/assets/texts/th/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+
+var thtrnpath = `/assets/texts/${pathLang}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+
+
+if ( texttype === "vinaya")
+{
+  var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/${slugReady}_translation-en-brahmali.json`;
+} else {
+//var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+  var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/sujato/${texttype}/${slugReady}_translation-en-sujato.json`;
+}
+console.log('engtrnpath line108', engtrnpath);
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
-const ruUrl  = window.location.href;
+const mlUrl  = window.location.href;
 
-const rusUrl = ruUrl.replace("/sc/th.html", "/ru/sc/");
-const mlUrl = ruUrl.replace("/sc/th.html", "/sc/ml.html");
-const mlthUrl = ruUrl.replace("/sc/th.html", "/sc/mlth.html");
- let scLink = `<p class="sc-link"><a target="" href="${rusUrl}">Ru</a>&nbsp;<a target="" href="${mlUrl}">R+E</a>&nbsp;<a target="" href="${mlthUrl}">T+E</a>&nbsp;`;
- //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
+const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
+const thUrl = mlUrl.replace("/sc/mlth.html", "/sc/th.html");
+const enUrl = mlUrl.replace("/sc/mlth.html", "/sc/");
+//let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+
+let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${thUrl}">Th</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 
 
-// let ifRus = `<a target="" href="${mlUrl}">R+E</a>&nbsp;`;
- 
-/* if (slug.includes("mn"))  {
+
+
+/*if (slug.includes("mn"))  {
  var trnpath = thtrnpath; 
  let language = "pli-rus";
 // scLink += ifRus; 
@@ -122,11 +131,13 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 //  scLink += ifRus; 
 } else if (slug.includes("dn")) { 
   var trnpath = thtrnpath; 
+ // scLink += ifRus; 
   console.log(trnpath);
-//  scLink += ifRus; 
-} */
-if (snranges.indexOf(slug) !== -1) { 
+}*/
+
+ if (snranges.indexOf(slug) !== -1) { 
   var trnpath = thtrnpath; 
+ // scLink += ifRus; 
   console.log(trnpath);
 } else if (slug.match(/ja/)) {
   let language = "pli";
@@ -144,10 +155,11 @@ if (snranges.indexOf(slug) !== -1) {
   // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
-    //let translator = "thanissaro+o";
-    let translator = "siamrath";
+  let translator = "siamrath";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
     var trnpath = `/assets/texts/th/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
+    var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
+
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);
 } else if ( texttype === "vinaya" ) {
@@ -162,55 +174,29 @@ if (vinayaranges.indexOf(slug) !== -1) {
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 }
   console.log('vinaya case');
+  console.log(trnpath);
+  console.log(engtrnpath);
+
 }  
 
 var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
-var varpathLocal = `/assets/texts/variant/${texttype}/${slugReady}_variant-pli-ms.json`
 
-  const rootResponse = fetch(rootpath).then(response => response.json())    .
+  const rootResponse = fetch(rootpath).then(response => response.json());
+ const translationResponse = fetch(trnpath).then(response => response.json());
+  const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
+  const htmlResponse = fetch(htmlpath).then(response => response.json());
+
+  const varResponse = fetch(varpath).then(response => response.json())    .
   catch(error => {
- console.log('note:no root found');   
-// console.log(varpath); 
-return {};
-  } 
-    );
- const translationResponse = fetch(trnpath).then(response => response.json())    .
-  catch(error => {
- console.log('note:no translation found');   
-// console.log(varpath); 
-return {};
-  } 
-    );
-  const htmlResponse = fetch(htmlpath).then(response => response.json())    .
-  catch(error => {
- console.log('note:no html found');   
-// console.log(varpath); 
-return {};
-  } 
-    );
-  const varResponseRepo = fetch(varpath).then(response => response.json())    .
-  catch(error => {
-// console.log(varpath); 
  console.log('note:no var found');   
+// console.log(varpath);   
 return {};
   } 
     );
- 
-const varResponseLocal = fetch(varpathLocal).then(response => response.json())    .
-  catch(error => {
-// console.log(varpath); 
- console.log('note:no local var found');   
-return {};
-  } 
-    );
-
-var varResponse = varResponseRepo;
-//varResponse = varResponseLocal;
     
-  console.log(trnpath);
-  console.log(thtrnpath);
-Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
-    const [paliData, transData, htmlData, varData] = responses;
+  Promise.all([rootResponse, translationResponse, engtranslationResponse, htmlResponse, varResponse]).then(responses => {
+    const [paliData, transData, engTransData, htmlData, varData] = responses;
+
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
         transData[segment] = "";
@@ -224,14 +210,13 @@ Roman (ISO 15919)      	ISO
 Roman (ISO 15919: Pāḷi)	ISOPali */
 // ISOPali ISO IASTPali IAST
 
+
 let startIndex = segment.indexOf(':') + 1;
 let anchor = segment.substring(startIndex);
 
 if (slug.includes('-') && (slug.includes('an') || slug.includes('sn') || slug.includes('dhp'))) {
 anchor = segment;
 }
-
-// Получите полный URL с якорем
 
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
@@ -266,29 +251,64 @@ if (finder && finder.trim() !== "") {
   }
 }
 
+if (paliData[segment] === undefined) {
+  paliData[segment] = "";
+}
+if (transData[segment] === undefined) {
+  transData[segment] = "";
+}
+if (engTransData[segment] === undefined) {
+  engTransData[segment] = "";
+}
+
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }
-if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
+//   console.log(`transData[${segment}]: ${transData[segment]}`);
+  //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);
+    if (engTransData[segment] !== transData[segment] && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
-      <span class="variant pli-lang inputscript-ISOPali" lang="pi">
+	  </span>
+<span class="variant pli-lang inputscript-ISOPali" lang="pi">
 ${varData[segment].trim()}   
 </span>      
-      </span>
-      <span class="rus-lang" lang="ru">${transData[segment]}
-</span>
+      <span class="rus-lang" lang="ru">${transData[segment]}<br>
+	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
+		  </span>
       </span>${closeHtml}\n\n`;
-} else if (paliData[segment] !== undefined && transData[segment] !== undefined) {
-html += `${openHtml}<span id="${anchor}"><span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a style="cursor: pointer;" class="text-decoration-none" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span><span class="rus-lang" lang="ru">${transData[segment]}</span></span>${closeHtml}\n\n`;
-} else if (paliData[segment] !== undefined) {
-  html += openHtml + '<span id="' + anchor + '"><span class="pli-lang inputscript-ISOPali" lang="pi">' + paliData[segment] + '</span></span>' + closeHtml + '\n\n';
-} else if (transData[segment] !== undefined) {
-  html += openHtml + '<span id="' + anchor + '"><span class="rus-lang" lang="ru">' + transData[segment] + '</span></span>' + closeHtml + '\n\n';
-}
-    });
+	  
+	  //	  </span>   --dark-gray2: #9E9E9E;  --light-gray2: #616161;
+//      <span class="eng-lang" lang="en">
 
-//console.log('before ' + translator) ;
+    } else if (engTransData[segment] !== transData[segment]) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+	  </span>
+      <span class="rus-lang" lang="ru">${transData[segment]}<br>
+	  	  <font class="eng-lang">${engTransData[segment]}</font><br>
+		  </span>
+      </span>${closeHtml}\n\n`;
+	  
+	  //	  </span>   --dark-gray2: #9E9E9E;  --light-gray2: #616161;
+//      <span class="eng-lang" lang="en">
+
+    } else if (varData[segment] !== undefined) {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+<span class="variant pli-lang inputscript-ISOPali" lang="pi">
+${varData[segment].trim()}   
+</span>      
+      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      </span>${closeHtml}\n\n`;
+    }  else {
+        html += `${openHtml}<span id="${anchor}">
+      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="rus-lang" lang="en">${engTransData[segment]}</span>
+      </span>${closeHtml}\n\n`;
+    }
+
+    });
 
 if (translator === "o") {
   translatorforuser = '<a href=/assets/texts/o.html>o</a> с Пали';
@@ -310,23 +330,24 @@ if (translator === "o") {
 	translatorforuser = translator ;
 }
 
+
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
-     const translatorByline = `<div class="byline">
+    const translatorByline = `<div class="byline">
      <p>
     <span class="rus-lang" lang="ru">
      Translator: ${translatorforuser}
     </span>
      </p>
      </div>`;
-  
-  const ruUrl  = window.location.href;
+     
+      const scButton = `<a href="https://suttacentral.net/${slug}/en/${translator}">Читать на SC.net</a>`;
+      
+      $.ajax({
+      url: "/sc/extralinks.php?fromjs=" +slug
+    }).done(function(data) {
+      const linksArray = data.split(",");
 
-const enUrl = ruUrl.replace("/sc/th.html", "/sc/");
-
-scLink += `<a href="${enUrl}">En</a>&nbsp;`;
- 
-  
 //dpr
 if (texttype !== "vinaya") {
 function getTextUrl(slug) {
@@ -386,21 +407,15 @@ console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
 }
-
 }
 //dpr end
+
 if ((translator === 'sujato') || (translator === 'brahmali')) {
   scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
 } else {
   scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`;
 }
-
-      $.ajax({
-      url: "/sc/extralinks.php?fromjs=" +slug
-    }).done(function(data) {
-      const linksArray = data.split(",");
-  
-   //   scLink += `<a target="" href="https://suttacentral.net/${slug}">SC.net</a>&nbsp;`; 
+ //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
 
 //<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
@@ -409,25 +424,30 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
       } 
       scLink += "</p>"; 
 
-
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/sc/th.html", "/sc/");
-rvUrl = rvUrl.replace("ml.html", "");
+rvUrl = rvUrl.replace("mlth.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/memorize.html");
 
 const warning = "<p class='warning' >Warning!<br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;
+//var lineBreak = "\n\n",
+//revhtml = html.split(lineBreak).reverse().join(lineBreak)
+// console.log(revhtml)
+// console.log(html)
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
 
-const pageTitleElement = document.querySelector("h1");
+ 
+ const pageTitleElement = document.querySelector("h1");
 let pageTitleText = pageTitleElement.textContent;
 pageTitle = pageTitleText.replace(/[0-9.]/g, '');
 
 slug = slug.replace(/pli-tv-|vb-/g, '');
 document.title = `${slug} ${pageTitle}`;
     
+
+
 var metaDescription = document.createElement('meta');
 metaDescription.name = 'description';
 metaDescription.content = document.title;
@@ -448,7 +468,6 @@ document.head.appendChild(ogDescriptionMeta);
       let nextSlug = nextArray[0];
 let nextSlugPrint = nextSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
 
-   //   let nextName = nextArray[1];
 let nextName = nextArray.slice(1).join(" ");
 nextName = nextName.replace(/[0-9.]/g, '');
 
@@ -456,8 +475,7 @@ nextName = nextName.replace(/[0-9.]/g, '');
       var nextPrint = nextSlugPrint;
       } else {
      var nextPrint = nextSlugPrint +' ' +nextName;
-     }
-     console.log(nextPrint);
+     }     
          next.innerHTML = nextSlug
         ? `<a href="?q=${nextSlug}">${nextPrint}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="15" height="11">
 
@@ -478,8 +496,6 @@ nextName = nextName.replace(/[0-9.]/g, '');
       const prevArray = data.split(" ");
       let prevSlug = prevArray[0];
       let prevSlugPrint = prevSlug.replace(/pli-tv-|b[ui]-vb-/g, "");
-
-//      let prevName = prevArray[1];
 let prevName = prevArray.slice(1).join(" ");
 prevName = prevName.replace(/[0-9.]/g, '');
 
@@ -504,31 +520,18 @@ prevName = prevName.replace(/[0-9.]/g, '');
 
     }
     );
+     
     })
 .catch(error => {
   console.log('error:not found');
-  
-  console.log('rootResponse', translationResponse);
-  console.log('rootpath', rootpath);
-  console.log('trnpath', trnpath);
-  console.log('thtrnpath', thtrnpath);
-  console.log('htmlpath', htmlpath);
-  console.log('varpath', varpath);
-  
-  const currentURL = window.location.href;
-const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
-console.log('anchorURL', anchorURL);
+  console.log(rootpath);
+  console.log('eng ', engtrnpath);
+  console.log('rus', thtrnpath);
+  console.log(htmlpath);
 
-
-  let params = new URLSearchParams(document.location.search);
-  let sGetparam = params.get("s");
-  
-console.log('sGetparam', sGetparam);  
-console.log('slug', slug);  
-
-  // Отправка запроса по адресу http://localhost:8080/?q= с использованием значения slug
+// Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + encodeURIComponent(anchorURL) , true);
+  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
   xhr.send();
 
   // Обработка ответа
@@ -537,33 +540,29 @@ console.log('slug', slug);
       if (xhr.status == 200) {
         // Обработка успешного ответа
         console.log(xhr.responseText);
-     window.location.href = "/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + anchorURL;
+     window.location.href = "/ru/?q=" + encodeURIComponent(slug);
 
       } else {
         // Обработка ошибки
-        console.log('Error sending request to /?q=');
+        console.log('Error sending request to /ru/?q=');
       }
     }
   };
-  
+
   // Обновление сообщения об ошибке на странице
   
   suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>
-    
-                  <div class="spinner-border" role="status">
+  
+                      <div class="spinner-border" role="status">
                 <span class="visually-hidden">Загрузка...</span>
                   </div>
-  <p>  Подсказка: <br>
+<p>    Подсказка: <br>
     С главной страницы доступно больше настроек поиска.
 <br></p>`;
-return false;
 });
-
     }
 
     );
-	
-// в конец функции можно добавить скролл
 
 }
 
@@ -572,20 +571,19 @@ if (document.location.search) {
   let params = new URLSearchParams(document.location.search);
   let slug = params.get("q");
   let lang = params.get("lang");
-
   citation.value = slug;
-
   buildSutta(slug);
-  
-  if (lang) {
+
+
+ if (lang) {
     language = lang;
     console.log("in the initializing " + lang);
     setLanguage(lang);
-  } else if  (localStorage.paliToggleRu) {
-    	language = localStorage.paliToggleRu; 
+  } else if  (localStorage.paliToggleML) {
+    	language = localStorage.paliToggleML; 
 		  console.log('read from ls ' + language);
 setLanguage(language);
-  } 
+  }
 } else {
 suttaArea.innerHTML = `<div class="instructions">
   <p>Use text indexes for navigation.<br>E.g.: <span class="abbr">sn35.28</span> <span class="abbr">an1.1-10</span> <span class="abbr">bu-as1-7</span> or <span class="abbr">bu-pj1</span>.<br>
@@ -681,32 +679,42 @@ suttaArea.innerHTML = `<div class="instructions">
 </div>
   </div></div>
 `;
+
 }
 
+  
 function setLanguage(language) {
   if (language === "pli-rus") {
     showPaliEnglish();
-  } else if (language === "pli") {
-    showPali();
   } else if (language === "rus") {
     showEnglish();
+  } else if (language === "pli") {
+    showPali();
   }
 }
 
-function showPaliEnglish() {
-  console.log("showing pali eng");
+function showPaliAll() {
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.remove("hide-english");
   suttaArea.classList.remove("hide-russian");
 }
+function showPaliRussian() {
+  suttaArea.classList.remove("hide-pali");
+  suttaArea.classList.add("hide-english");
+  suttaArea.classList.remove("hide-russian");
+}
 function showEnglish() {
-  console.log("showing eng");
   suttaArea.classList.add("hide-pali");
+  suttaArea.classList.add("hide-russian");
   suttaArea.classList.remove("hide-english");
+}
+function showRussian() {
+  suttaArea.classList.add("hide-pali");
+  suttaArea.classList.add("hide-english");
   suttaArea.classList.remove("hide-russian");
 }
 function showPali() {
-  console.log("showing pali");
+  console.log("showing pali ");
   suttaArea.classList.remove("hide-pali");
   suttaArea.classList.add("hide-english");
   suttaArea.classList.add("hide-russian");
@@ -715,25 +723,25 @@ function showPali() {
 function toggleThePali() {
   const languageButton = document.getElementById("language-button");
 
- 
-	 // initial state
- if (!localStorage.paliToggleRu) {
+// initial state
+ if (!localStorage.paliToggleML) {
     localStorage.paliToggleRu = "pli-rus";
   }   
 
   languageButton.addEventListener("click", () => {
-    if (language === "pli-rus") {
-     showPali();
-      language = "pli";
-      localStorage.paliToggleRu = "pli";
-    } else if (language === "rus") {
-      showPaliEnglish();
+    if (language === "pli") {
+      showPaliAll();
       language = "pli-rus";    
-      localStorage.paliToggleRu = "pli-rus";
-    } else if (language === "pli") {
-	  showEnglish();
+      localStorage.paliToggleML = "pli-rus";
+    } else if (language === "pli-rus") {
+     showPali();
+           language = "pli";
+      localStorage.paliToggleML = "pli";
+
+ /*   } else if (language === "rus") {
+     showPaliRussian();
       language = "rus";
-      localStorage.paliToggleRu = "rus";  
+      localStorage.paliToggleML = "rus"; */
     }
   });
 }
@@ -832,23 +840,3 @@ abbreviations.forEach(book => {
   });
 });
 
-function handleVariantVisibility() {
-  const toggleButton = document.getElementById("toggle-variants");
-  const variantElements = document.querySelectorAll(".variant");
-
-  if (!toggleButton || variantElements.length === 0) return;
-
-  const storedState = localStorage.getItem("variantVisibility");
-
-  // Применяем сохраненное состояние при загрузке
-  if (storedState === "hidden") {
-    variantElements.forEach((el) => el.classList.add("hidden-variant"));
-  }
-
-  // Добавляем обработчик клика для переключения видимости
-  toggleButton.addEventListener("click", function () {
-    const isHidden = variantElements[0].classList.contains("hidden-variant");
-    variantElements.forEach((el) => el.classList.toggle("hidden-variant"));
-    localStorage.setItem("variantVisibility", isHidden ? "visible" : "hidden");
-  });
-}

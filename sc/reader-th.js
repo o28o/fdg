@@ -67,7 +67,7 @@ function buildSutta(slug) {
       slug = "pli-tv-" + slug;
     }
   }
-  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Рус</button></div>`;
+  let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi ไทย</button></div>`;
   
   const slugReady = parseSlug(slug);
   console.log("slugReady is " + slugReady + " slug is " + slug); 

@@ -1,0 +1,1 @@
+../../sc/citation-autocomplete.js

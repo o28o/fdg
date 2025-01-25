@@ -76,7 +76,12 @@ $.ajax({
     }).done(function(data) {
       const trnsResp = data.split(" ");
      // let translator = trnsResp[0];
-      let translator = "siamrath";
+ if ( texttype === "sutta" ) {
+      let translator = "Siam Rath";
+ }
+ else if (slug.match(/bu-pm|bi-pm/)) {
+   let translator = "Jayasaro";
+ } 
       console.log('inside', translator);
 
 //if (slug.match(/^mn([1-9]|1[0-9]|2[0-1])$/)) {
@@ -155,9 +160,10 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
   // console.log(`${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`);
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
-  let translator = "siamrath";
+  
+      let translator = "jayasaro";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
-    var trnpath = `/assets/texts/th/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
+    var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
 
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
@@ -316,8 +322,9 @@ if (translator === "o") {
   translatorforuser = 'SV theravada.ru с Англ';
 } else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
   translatorforuser = 'Bhikkhu Sujato';
-} else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
-  translatorforuser = 'Bhikkhu Brahmali';
+}
+else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
+  translatorforuser = 'Bhikkhu Brahmali or Jayasaro';
 } else if (translator === "syrkin" ) {
   translatorforuser = 'А.Я. Сыркин с Пали';
 } else if (translator === "syrkin+edited+o" ) {

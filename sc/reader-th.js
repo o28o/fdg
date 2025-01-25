@@ -90,7 +90,8 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let snranges = ['sn56.11'];
+let snranges = ['sn56.11', 'sn12.2'];
+let dnranges = ['dn22'];
 
 var thtrnpath = `/assets/texts/th/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
@@ -135,7 +136,11 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 if (snranges.indexOf(slug) !== -1) { 
   var trnpath = thtrnpath; 
   console.log(trnpath);
-} else if (slug.match(/ja/)) {
+} else if (dnranges.indexOf(slug) !== -1) { 
+  var trnpath = thtrnpath; 
+  console.log(trnpath);
+}
+else if (slug.match(/ja/)) {
   let language = "pli";
   let slugNumber = parseInt(slug.replace(/\D/g, ''), 10); // Извлекаем число из slug
 

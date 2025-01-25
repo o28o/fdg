@@ -421,7 +421,7 @@ const warning = "<p class='warning'>Внимание!<br>Переводы, сл�
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
+//suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
 
 const pageTitleElement = document.querySelector("h1");
 let pageTitleText = pageTitleElement.textContent;

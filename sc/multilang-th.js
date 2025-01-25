@@ -76,11 +76,9 @@ $.ajax({
     }).done(function(data) {
       const trnsResp = data.split(" ");
      // let translator = trnsResp[0];
- if ( texttype === "sutta" ) {
-      let translator = "Siam Rath";
- }
- else if (slug.match(/bu-pm|bi-pm/)) {
-   let translator = "Jayasaro";
+      let translator = "siamrath";
+  if (slug.match(/bu-pm|bi-pm/)) {
+   translator = "jayasaro";
  } 
       console.log('inside', translator);
 
@@ -108,8 +106,8 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/ml.html", "/ru/sc/");
-const thUrl = mlUrl.replace("/sc/mlth.html", "/sc/th.html");
+const ruUrl = mlUrl.replace("/sc/mlth.html", "/ru/sc/");
+const thUrl = mlUrl.replace("/sc/mlth.html", "/th/sc/");
 const enUrl = mlUrl.replace("/sc/mlth.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
@@ -320,8 +318,16 @@ if (translator === "o") {
   translatorforuser = '<a href=/assets/texts/o.html>o</a> с Пали';
 } else if (translator === "sv") {
   translatorforuser = 'SV theravada.ru с Англ';
-} else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
-  translatorforuser = 'Bhikkhu Sujato';
+}
+else if  (translator === "jayasaro" ) {
+  translatorforuser = 'Bhikkhu Brahmali or Jayasaro';
+} 
+else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
+  translatorforuser = 'Bhikkhu Sujato or Siam Rath';
+}
+
+else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
+  translatorforuser = 'Bhikkhu Sujato or Siam Rath';
 }
 else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
   translatorforuser = 'Bhikkhu Brahmali or Jayasaro';
@@ -433,6 +439,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/sc/th.html", "/sc/");
+rvUrl = origUrl.replace("/th/sc/", "/sc/");
 rvUrl = rvUrl.replace("mlth.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/memorize.html");
 

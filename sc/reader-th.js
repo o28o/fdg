@@ -78,12 +78,10 @@ $.ajax({
        url: "/sc/translator-lookup-th.php?fromjs=" +texttype +"/" +slugReady
     }).done(function(data) {
       const trnsResp = data.split(" ");
-     // let translator = trnsResp[0];
- if ( texttype === "sutta" ) {
-      let translator = "Siam Rath";
- }
- else if (slug.match(/bu-pm|bi-pm/)) {
-   let translator = "Jayasaro";
+    // let translator = trnsResp[0];
+      let translator = "siamrath";
+ if (slug.match(/bu-pm|bi-pm/)) {
+    translator = "jayasaro";
  } 
  
       console.log('inside', translator);
@@ -100,11 +98,14 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
 
 var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
 
-const ruUrl  = window.location.href;
+let ruUrl  = window.location.href;
 
-const rusUrl = ruUrl.replace("/sc/th.html", "/ru/sc/");
-const mlUrl = ruUrl.replace("/sc/th.html", "/sc/ml.html");
-const mlthUrl = ruUrl.replace("/sc/th.html", "/sc/mlth.html");
+let rusUrl = ruUrl.replace("/sc/th.html", "/ru/sc/");
+rusUrl = ruUrl.replace("/th/sc/", "/ru/sc/");
+let mlUrl = ruUrl.replace("/sc/th.html", "/sc/ml.html");
+mlUrl = ruUrl.replace("/th/sc/", "/sc/ml.html");
+let mlthUrl = ruUrl.replace("/sc/th.html", "/sc/mlth.html");
+mlthUrl = ruUrl.replace("/th/sc/", "/sc/mlth.html");
  let scLink = `<p class="sc-link"><a target="" href="${rusUrl}">Ru</a>&nbsp;<a target="" href="${mlUrl}">R+E</a>&nbsp;<a target="" href="${mlthUrl}">T+E</a>&nbsp;`;
  //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
 const currentURL = window.location.href;
@@ -300,8 +301,13 @@ if (translator === "o") {
   translatorforuser = '<a href=/assets/texts/o.html>o</a> с Пали';
 } else if (translator === "sv") {
   translatorforuser = 'SV theravada.ru с Англ';
-} else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
-  translatorforuser = 'Bhikkhu Sujato';
+} else if  (translator === "siamrath" ) {
+  translatorforuser = 'Bhikkhu Sujato or Siam Rath';
+}  else if  (translator === "jayasaro" ) {
+  translatorforuser = 'Bhikkhu Brahmali or Jayasaro';
+} 
+else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
+  translatorforuser = 'Bhikkhu Sujato or Siam Rath';
 } else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
   translatorforuser = 'Bhikkhu Brahmali or Jayasaro';
 } else if (translator === "syrkin" ) {
@@ -328,7 +334,8 @@ if (translator === "o") {
   
   const ruUrl  = window.location.href;
 
-const enUrl = ruUrl.replace("/sc/th.html", "/sc/");
+let enUrl = ruUrl.replace("/sc/th.html", "/sc/");
+enUrl = ruUrl.replace("/th/sc/", "/sc/");
 
 scLink += `<a href="${enUrl}">En</a>&nbsp;`;
  
@@ -416,8 +423,9 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
       scLink += "</p>"; 
 
 
-const origUrl = window.location.href;
+let origUrl = window.location.href;
 let rvUrl = origUrl.replace("/sc/th.html", "/sc/");
+rvUrl = rvUrl.replace("/th/sc/", "/sc/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/memorize.html");
 
@@ -425,7 +433,7 @@ const warning = "<p class='warning' >Warning!<br>Translations, dictionaries and 
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;
 
-suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
+//suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
 
 const pageTitleElement = document.querySelector("h1");
 let pageTitleText = pageTitleElement.textContent;

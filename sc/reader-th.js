@@ -92,6 +92,7 @@ const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
 let snranges = ['sn56.11', 'sn12.2'];
 let dnranges = ['dn22'];
+let anranges = ['an10.46'];
 
 var thtrnpath = `/assets/texts/th/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
@@ -134,6 +135,9 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 //  scLink += ifRus; 
 } */
 if (snranges.indexOf(slug) !== -1) { 
+  var trnpath = thtrnpath; 
+  console.log(trnpath);
+} else if (anranges.indexOf(slug) !== -1) { 
   var trnpath = thtrnpath; 
   console.log(trnpath);
 } else if (dnranges.indexOf(slug) !== -1) { 

@@ -88,6 +88,7 @@ const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
 let snranges = ['sn56.11', 'sn12.2'];
 let dnranges = ['dn22'];
+let anranges = ['an10.46'];
 
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 
@@ -140,6 +141,9 @@ const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
 }*/
 
  if (snranges.indexOf(slug) !== -1) { 
+  var trnpath = thtrnpath; 
+  console.log(trnpath);
+} else if (anranges.indexOf(slug) !== -1) { 
   var trnpath = thtrnpath; 
   console.log(trnpath);
 } else if (dnranges.indexOf(slug) !== -1) { 

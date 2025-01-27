@@ -178,15 +178,10 @@ else if (slug.match(/ja/)) {
     console.log(rootpath, trnpath, htmlpath);
 } else if ( texttype === "vinaya" ) {
 	
-if (vinayaranges.indexOf(slug) !== -1) { 
-  var trnpath = thtrnpath; 
- // scLink += ifRus; 
-} else {
   let translator = "brahmali";
 
   const pathLang = "en";
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-}
   console.log('vinaya case');
   console.log(trnpath);
   console.log(engtrnpath);

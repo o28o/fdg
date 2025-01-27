@@ -265,17 +265,3 @@ cd -
 
 suttaid=sn12.2
 paste <(awk '{print $1}' < $(find /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/ -name "${suttaid}_*")) <(awk -F': ' '{print $2}' < $(find /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms -name "${suttaid}_*") ) > /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms/sn/sn12/${suttaid}_rootth-pli-ms.json
-
-
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/dn/
-find . -name "*.json" |sort -V | while read filename 
-do
-echo $filename
-curl --get "http://aksharamukha-plugin.appspot.com/api/public" --data-urlencode "source=ISOPali" --data-urlencode "target=Thai" --data-urlencode "text=$(< $filename)"
-sleep 10
-done
-cd - 
-
-
-suttaid=sn12.2
-paste <(awk '{print $1}' < $(find /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/ -name "${suttaid}_*")) <(awk -F': ' '{print $2}' < $(find /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms -name "${suttaid}_*") ) > /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms/sn/sn12/${suttaid}_rootth-pli-ms.json

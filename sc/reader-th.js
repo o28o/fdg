@@ -96,7 +96,7 @@ let anranges = ['an10.46'];
 
 var thtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
-var rootpath = `/assets/texts/${pathLang}/root/pli/vri/${texttype}/${slugReady}_root${pathLang}-pli-vri.json`;
+var rootpath = `/assets/texts/${pathLang}/root/pli/ms/${texttype}/${slugReady}_root${pathLang}-pli-ms.json`;
 console.log('thai rootpath ' + rootpath);
 //rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 

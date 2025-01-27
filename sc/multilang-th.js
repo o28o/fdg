@@ -90,7 +90,7 @@ let snranges = ['sn56.11', 'sn12.2'];
 let dnranges = ['dn22'];
 let anranges = ['an10.46'];
 
-var rootpath = `/assets/texts/${pathLang}/root/pli/vri/${texttype}/${slugReady}_root${pathLang}-pli-vri.json`;
+var rootpath = `/assets/texts/${pathLang}/root/pli/ms/${texttype}/${slugReady}_root${pathLang}-pli-ms.json`;
 //var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 
 var thtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;

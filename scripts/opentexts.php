@@ -22,7 +22,19 @@ if ( preg_match('/\/ru/', $actual_link)) {
   function afterAkhsaramukhaResponse($convertedStr) {
     echo "На латинице вы искали $convertedStr<br><br>";
   }
-} else {
+}
+else if ( preg_match('/\/th/', $actual_link)) {
+  $defaultlang = 'lang=pli-eng';
+  $outputlang = "";
+  $base = "/th/";
+  $readerlang = $base . "sc/";
+  $aksharatext = "You search ";
+  function afterAkhsaramukhaResponse($convertedStr) {
+    echo "in Latin script $convertedStr<br><br>";
+  }
+}
+
+else {
     $defaultlang = 'lang=pli-eng';
     $outputlang = "";
     $base = "/";
@@ -38,6 +50,12 @@ if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";
   $base = "/";
   $readerlang = $base . "sc/ml.html";
+
+} 	if ( preg_match('/mlth.html/', $actual_link)) {
+  $defaultlang = 'lang=pli-rus';
+  $outputlang = "";
+  $base = "/";
+  $readerlang = $base . "sc/mlth.html";
 
 }
 

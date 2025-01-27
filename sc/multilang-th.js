@@ -90,9 +90,10 @@ let snranges = ['sn56.11', 'sn12.2'];
 let dnranges = ['dn22'];
 let anranges = ['an10.46'];
 
-var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+var rootpath = `/assets/texts/${pathLang}/root/pli/vri/${texttype}/${slugReady}_root${pathLang}-pli-vri.json`;
+//var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
 
-var thtrnpath = `/assets/texts/${pathLang}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
+var thtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
 
 if ( texttype === "vinaya")
@@ -193,7 +194,37 @@ if (vinayaranges.indexOf(slug) !== -1) {
 
 var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
 
-  const rootResponse = fetch(rootpath).then(response => response.json());
+
+const rootResponse = fetch(rootpath)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Root file not found');
+    }
+    return response.json();
+  })
+  .catch(error => {
+    console.log('note: no root found, trying alternative path');
+    // Переключаем на второй путь
+    rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+    // Делаем новый запрос по второму пути
+    return fetch(rootpath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Alternative root file not found');
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.log('note: no alternative root found either');
+        return {}; // Возвращаем пустой объект, если оба пути недоступны
+      });
+  });
+
+/*rootResponse.then(data => {
+  console.log('Final data:', data);
+  console.log('Used rootpath:', rootpath); 
+});*/
+
  const translationResponse = fetch(trnpath).then(response => response.json());
   const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());

@@ -24,6 +24,7 @@ cat $outputFile | jq 1>/dev/null
 done
 
 exit 0
+~/aksharamukha/bin/python scripts/aksharamukha-adapter.py อฏฺฐมํฯ
 
 
 

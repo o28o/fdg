@@ -313,7 +313,7 @@ sox /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/aud
                  
                  
 #termux-setup-storage
-
+#backup
 #tar -zcf /storage/emulated/0/Download/termux-backup.tar.gz -C /data/data/com.termux/files ./home ./usr
-
+#restore
 #tar -zxf /storage/emulated/0/Download/termux-backup.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions                

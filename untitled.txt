@@ -206,7 +206,6 @@ sarabhaññanti sarena bhaṇanaṃ. sarabhaññe kira taraṅgavattadhotakavatt
   527  grep "masc    nom     pl" tst*
   528  grep "masc.*nom.*pl" tst*
   529  grep "fem.*nom.*sg" tst*
-  530  cat tst
   531  cat tst*
   532  cat tst* | awk '{print $1,$2,$3}'
   533  cat tst* | awk '{print $2,$3,$4}'
@@ -251,6 +250,40 @@ done
 
 
 ###thai translit
+
+scroot=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/
+thairoot=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms
+
+
+/sn/sn12/${suttaid}_rootth-pli-ms.json
+
+cd $scroot
+find . -name "*.json" |sort -V | while read filename 
+do
+echo $filename
+curl --get "http://aksharamukha-plugin.appspot.com/api/public" --data-urlencode "source=ISOPali" --data-urlencode "target=Thai" --data-urlencode "text=$(< $filename)"
+sleep 10
+done
+cd - 
+
+
+suttaid=sn56.11
+filename=$(find $scroot -name "${suttaid}_*")
+curl --get "http://aksharamukha-plugin.appspot.com/api/public" --data-urlencode "source=ISOPali" --data-urlencode "target=Thai" --data-urlencode "text=$(< $filename)"
+
+paste <(awk '{print $1}' < $(find $scroot -name "${suttaid}_*")) <(awk -F': ' '{print $2}' < $(find $thairoot -name "${suttaid}_*") ) > $thairoot/sutta/sn/sn12/${suttaid}_rootth-pli-ms.json
+
+
+
+
+curl "http://aksharamukha-plugin.appspot.com/api/public?source=ISOPali&target=Thai" --data-urlencode "text=$(< /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an10/an10.46_root-pli-ms.json )" > an10.46_root-pli-mstmp.json 
+
+paste <(awk -F' ' '{print $1}' /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/an/an10/an10.46_root-pli-ms.json) <(awk -F'": ' '{print $2}' /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms/sutta/an/an10/an10.46_root-pli-mstmp.json ) > an10.46_rootth-pli-ms.json
+
+
+
+
+
 
 
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/dn/

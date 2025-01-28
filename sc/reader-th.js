@@ -93,7 +93,7 @@ const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 //
 //'sn22.59', 'sn22.79', 'sn22.95', 'sn35.28', 'sn35.228', 'sn35.229', 'sn35.236', 'sn35.237', 'sn35.238'
 
-let snranges = ['sn12.2', 'sn35.28', 'sn56.11'];
+let snranges = ['sn12.2', 'sn22.59', 'sn35.28', 'sn56.11'];
 let dnranges = ['dn22'];
 let anranges = ['an3.107', 'an10.46'];
 
@@ -360,7 +360,7 @@ else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato
      const translatorByline = `<div class="byline">
      <p>
     <span class="rus-lang" lang="ru">
-     Translator: ${translatorforuser}
+     ผู้แปล: ${translatorforuser}
     </span>
      </p>
      </div>`;

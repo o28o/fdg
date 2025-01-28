@@ -90,9 +90,12 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let snranges = ['sn56.11', 'sn12.2'];
+//
+//'sn22.59', 'sn22.79', 'sn22.95', 'sn35.28', 'sn35.228', 'sn35.229', 'sn35.236', 'sn35.237', 'sn35.238'
+
+let snranges = ['sn12.2', 'sn35.28', 'sn56.11'];
 let dnranges = ['dn22'];
-let anranges = ['an10.46'];
+let anranges = ['an3.107', 'an10.46'];
 
 var thtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 

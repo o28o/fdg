@@ -86,9 +86,9 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let snranges = ['sn56.11', 'sn12.2'];
+let snranges = ['sn12.2', 'sn35.28', 'sn56.11'];
 let dnranges = ['dn22'];
-let anranges = ['an10.46'];
+let anranges = ['an3.107', 'an10.46'];
 
 var rootpath = `/assets/texts/${pathLang}/root/pli/ms/${texttype}/${slugReady}_root${pathLang}-pli-ms.json`;
 console.log('thai rootpath ' + rootpath);

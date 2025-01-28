@@ -1,6 +1,4 @@
 ###thai translit
-
-
 apachepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 scroot=$apachepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms
 thairoot=$apachepath/assets/texts/th/root/pli/ms
@@ -10,16 +8,23 @@ outputFileNameAddition=rootth-pli-ms.json
 find $tmproot -name "*_"  |sort -V | while read suttaid 
 do
 suttaid=$(echo $suttaid | awk -F/ '{print $NF}')
+outputFile=$thairoot/sutta/${suttaid}${outputFileNameAddition}
 echo $suttaid
-paste <(awk '{print $1}' < $(find $scroot -name "${suttaid}*")) <(awk -F': ' '{print $2}' < $tmproot/${suttaid} ) > $thairoot/sutta/${suttaid}${outputFileNameAddition}
+paste <(awk '{print $1}' < $(find $scroot -name "${suttaid}*")) <(awk -F': ' '{print $2}' < $tmproot/${suttaid} ) > $outputFile
 
-cat -tnv $thairoot/sutta/${suttaid}${outputFileNameAddition}
-
-cat $thairoot/sutta/${suttaid}${outputFileNameAddition} | jq 
-sleep 5
+#cat -n $outputFile
+sed -i '1!{            # Пропускаем первую строку
+    $!{                # Пропускаем последние две строки
+        s/[[:space:]]*$//;  # Убираем пробелы в конце строки
+        /",$/!s/$/\",/; # Если строка не заканчивается на ",", добавляем
+    }
+}' $outputFile
+sed -i 's@"",@"@' $outputFile
+cat $outputFile | jq 1>/dev/null
 done
 
 exit 0
+
 
 
 #check 

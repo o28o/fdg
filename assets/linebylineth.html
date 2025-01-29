@@ -1070,10 +1070,12 @@ dataArray.forEach(([key, value], index) => {
     function generateUrls(originalUrl) {
         // Найдём часть URL от sutta или vinaya до подчеркивания
         const trimmedUrl = originalUrl.match(/\/(sutta|vinaya)\/.*/)[0];
-        const baseUrl = `/assets/texts${trimmedUrl.split('_')[0]}`;  // Обрезаем от подчеркивания и формируем новый URL
-
+        const baseUrl = `/assets/texts/th/${trimmedUrl.split('_')[0]}`;  // Обрезаем от подчеркивания и формируем новый URL
+console.log(baseUrl);
         // Генерируем возможные варианты файлов
         return [
+            `${baseUrl}_translation-th-siamrath.json`,
+            `${baseUrl}_translation-th-siamrath+edited+o.json`,
             `${baseUrl}_translation-ru-o.json`,
             `${baseUrl}_translation-ru-o+in+progress.json`,
             `${baseUrl}_translation-ru-sv+edited+o.json`,

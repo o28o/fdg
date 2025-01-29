@@ -2,6 +2,7 @@ source ./config/script_config.sh --source-only
 
 #downloaddir=/media/c/Users/o28o/Downloads
 #trndir=/media/c/soft/fdg/assets/texts/sutta/
+thtrndir=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/translation/sutta/
 
 cd $downloaddir
 for file in `find .  -maxdepth 1 -type f -size +0 -name "*root-pli-ms.json"`
@@ -15,7 +16,8 @@ cd - 2>&1 >/dev/null
 
 #find "$downloaddir" -maxdepth 1 -type f -size 0 -name "*translation*.json" | xargs rm
 
-for file in `find "$downloaddir" "$downloaddir/Telegram" -maxdepth 1 -type f -size +0 -name "*translation*.json"`
+#ru trn 
+for file in `find "$downloaddir" "$downloaddir/Telegram" -maxdepth 1 -type f -size +0 -name "*translation-ru-*.json"`
 do 
 suttaname=$(echo $file | sed -E 's/_translation.*//' | awk -F'/' '{print $NF}')
 
@@ -35,6 +37,30 @@ fi
 mv $file $trndir/$nikaya/$booknumber/
 echo "moved $suttaname to ./$nikaya/$booknumber" 
 done
+
+#thai trn
+for file in `find "$downloaddir" "$downloaddir/Telegram" -maxdepth 1 -type f -size +0 -name "*translation-th-*.json"`
+do 
+suttaname=$(echo $file | sed -E 's/_translation.*//' | awk -F'/' '{print $NF}')
+
+if [[ $suttaname =~ snp|iti|thig|thag|ud ]]; then
+nikaya=kn/$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
+booknumber=vagga$(echo $suttaname | sed -E 's/\..*//' | sed 's/[a-z]*//g')
+elif [[ $suttaname =~ dhp ]]; 
+then
+nikaya=kn/$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
+booknumber=''
+
+else
+booknumber=$(echo $suttaname | sed -E 's/\..*//')
+    nikaya=$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
+fi
+mkdir $thtrndir/$nikaya/$booknumber/ 2>/dev/null
+mv $file $thtrndir/$nikaya/$booknumber/
+echo "moved $suttaname to thai ./$nikaya/$booknumber" 
+done
+
+
 
 if [[ "`uname -a`" != *"Android"* ]]; then 
 exit 0

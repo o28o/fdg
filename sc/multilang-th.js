@@ -86,7 +86,7 @@ $.ajax({
  
 const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 
-let snranges = ['sn12.2', 'sn22.59', 'sn35.28', 'sn56.11'];
+let snranges = ['sn12.2', 'sn15.3', 'sn22.59', 'sn35.28', 'sn56.11'];
 let dnranges = ['dn22'];
 let anranges = ['an3.107', 'an10.46'];
 

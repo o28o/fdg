@@ -93,7 +93,7 @@ const onlynumber = slug.replace(/[a-zA-Z]/g, '');
 //
 //'sn22.59', 'sn22.79', 'sn22.95', 'sn35.28', 'sn35.228', 'sn35.229', 'sn35.236', 'sn35.237', 'sn35.238'
 
-let snranges = ['sn12.2', 'sn22.59', 'sn35.28', 'sn56.11'];
+let snranges = ['sn12.2', 'sn15.3', 'sn22.59', 'sn35.28', 'sn56.11'];
 let dnranges = ['dn22'];
 let anranges = ['an3.107', 'an10.46'];
 
@@ -212,7 +212,7 @@ const rootResponse = fetch(rootpath)
 /*rootResponse.then(data => {
   console.log('Final data:', data);
   console.log('Used rootpath:', rootpath);
-});*/
+});
 
  const translationResponse = fetch(trnpath).then(response => response.json())    .
   catch(error => {
@@ -221,6 +221,35 @@ const rootResponse = fetch(rootpath)
 return {};
   } 
     );
+*/    
+const translationResponse = fetch(trnpath)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('note:no translation found');
+    }
+    return response.json();
+  })
+  .catch(error => {
+    console.log('note: no translation found, trying alternative path');
+    // Переключаем на второй путь
+    rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
+    // Делаем новый запрос по второму пути
+    return fetch(rootpath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Alternative translation file not found');
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.log('note: no alternative translation found either');
+        return {}; // Возвращаем пустой объект, если оба пути недоступны
+      });
+  });
+    
+    
+    
+    
   const htmlResponse = fetch(htmlpath).then(response => response.json())    .
   catch(error => {
  console.log('note:no html found');   

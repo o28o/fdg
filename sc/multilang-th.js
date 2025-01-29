@@ -221,7 +221,31 @@ const rootResponse = fetch(rootpath)
   console.log('Used rootpath:', rootpath); 
 });*/
 
- const translationResponse = fetch(trnpath).then(response => response.json());
+const translationResponse = fetch(thtrnpath)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('note:no translation found');
+    }
+    return response.json();
+  })
+  .catch(error => {
+    console.log('note: no translation found, trying alternative path');
+    // Переключаем на второй путь
+    // Делаем новый запрос по второму пути
+    return fetch(trnpath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Alternative translation file not found');
+        }
+        return response.json();
+      })
+      .catch(error => {
+        console.log('note: no alternative translation found either');
+        return {}; // Возвращаем пустой объект, если оба пути недоступны
+      });
+  });
+
+
   const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 

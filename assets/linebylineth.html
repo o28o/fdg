@@ -868,6 +868,8 @@ cleanedTranslation = cleanedTranslation.replace(/(\(1\)|1\)) ([а-я])/g, functi
 
 // добавить логику, чтобы собирал в одно предложение, короткие списки???
 
+
+cleanedTranslation = cleanedTranslation.replace(/ดูกร/g, '\nดูกร');
 cleanedTranslation = cleanedTranslation.replace(/(?<![а-яА-Я])то точно также/g, 'точно также');
 cleanedTranslation = cleanedTranslation.replace(/точно также/g, '\nточно также');
 cleanedTranslation = cleanedTranslation.replace(/Как ты думаешь, /g, 'Как ты думаешь,\n');

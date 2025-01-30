@@ -5,7 +5,7 @@ thairoot=$apachepath/assets/texts/th/root/pli/ms
 tmproot=$apachepath/tmp
 outputFileNameAddition=rootth-pli-ms.json
 
-find $tmproot -name "sn21.3_"  |sort -V | while read suttaid 
+find $tmproot -name "*_"  |sort -V | while read suttaid 
 do
 suttaid=$(echo $suttaid | awk -F/ '{print $NF}')
 outputFile=$thairoot/sutta/${suttaid}${outputFileNameAddition}

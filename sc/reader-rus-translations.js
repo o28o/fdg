@@ -409,15 +409,17 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
         scLink += linksArray[0];
             console.log("extralinks " + linksArray[0]);
       } 
+      scLink = scLink;
+      
       scLink += "</p>"; 
-
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
+thUrl = origUrl.replace("/ru/sc/", "/th/sc/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/memorize.html");
 
-const warning = "<p class='warning'>Внимание!<br>Переводы, словари и комментарии<br>сделаны не Благословенным.<br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+const warning = "<p class='warning'>Внимание!<br>Переводы, словари и комментарии<br>сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a><br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink;
 

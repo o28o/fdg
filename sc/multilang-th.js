@@ -96,7 +96,7 @@ console.log('thai rootpath ' + rootpath);
 
 var thtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
-
+var theditedtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}+edited+o.json`;
 if ( texttype === "vinaya")
 {
   var engtrnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/en/brahmali/vinaya/${slugReady}_translation-en-brahmali.json`;
@@ -219,7 +219,7 @@ const rootResponse = fetch(rootpath)
 /*rootResponse.then(data => {
   console.log('Final data:', data);
   console.log('Used rootpath:', rootpath); 
-});*/
+});
 
 const translationResponse = fetch(thtrnpath)
   .then(response => {
@@ -244,6 +244,29 @@ const translationResponse = fetch(thtrnpath)
         return {}; // Возвращаем пустой объект, если оба пути недоступны
       });
   });
+*/
+async function fetchTranslation() {
+  const paths = [theditedtrnpath, thtrnpath, trnpath];
+
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return await response.json();
+      }
+      console.log(`note: no translation found at ${path}`);
+    } catch (error) {
+      console.log(`note: error fetching ${path}`);
+    }
+  }
+
+  console.log('note: no translation found in any path');
+  return {}; // Если все пути недоступны
+}
+
+const translationResponse = fetchTranslation();
+
+
 
 
   const engtranslationResponse = fetch(engtrnpath).then(response => response.json());

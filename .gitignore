@@ -1,7 +1,4 @@
 .htaccess
 assets/audio
-assets/dpdPlugin
-assets/maudio
 nohup.out
 result
-input

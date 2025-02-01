@@ -99,6 +99,8 @@ let anranges = ['an3.107', 'an10.46'];
 
 var thtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 
+var theditedtrnpath = `/assets/texts/${pathLang}/translation/${texttype}/${slugReady}_translation-${pathLang}-${translator}+edited+o.json`;
+
 var rootpath = `/assets/texts/${pathLang}/root/pli/ms/${texttype}/${slugReady}_root${pathLang}-pli-ms.json`;
 console.log('thai rootpath ' + rootpath);
 //rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
@@ -222,30 +224,26 @@ return {};
   } 
     );
 */    
-const translationResponse = fetch(thtrnpath)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('note:no translation found');
+async function fetchTranslation() {
+  const paths = [theditedtrnpath, thtrnpath, trnpath];
+
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return await response.json();
+      }
+      console.log(`note: no translation found at ${path}`);
+    } catch (error) {
+      console.log(`note: error fetching ${path}`);
     }
-    return response.json();
-  })
-  .catch(error => {
-    console.log('note: no translation found, trying alternative path');
-    // Переключаем на второй путь
-    // Делаем новый запрос по второму пути
-    return fetch(trnpath)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Alternative translation file not found');
-        }
-        return response.json();
-      })
-      .catch(error => {
-        console.log('note: no alternative translation found either');
-        return {}; // Возвращаем пустой объект, если оба пути недоступны
-      });
-  });
-    
+  }
+
+  console.log('note: no translation found in any path');
+  return {}; // Если все пути недоступны
+}
+
+const translationResponse = fetchTranslation();
   const htmlResponse = fetch(htmlpath).then(response => response.json())    .
   catch(error => {
  console.log('note:no html found');   

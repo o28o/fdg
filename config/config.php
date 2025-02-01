@@ -145,6 +145,7 @@ $linkcasesru = 'https://drive.google.com/file/d/1HVRK6yTMT59uHCCvTdQukRy7fmHNntO
 $linebylinerulocation = $basedir. '/assets/texts/';
 //translator-lookup.php
 $translatorlocation = $basedir. '/assets/texts/';
+$thtranslatorlocation = $basedir. '/assets/texts/th/translation/';
 
 $linksc = 'https://suttacentral.net/';
 $anamesc = 'SuttaCentral.net';

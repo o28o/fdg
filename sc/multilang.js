@@ -426,7 +426,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
-thUrl = origUrl.replace("/ru/sc/", "/th/sc/");
+thUrl = origUrl.replace("/ml.html", "/mlth.html");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/memorize.html");
 

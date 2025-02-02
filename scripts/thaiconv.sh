@@ -24,6 +24,26 @@ cat $outputFile | jq 1>/dev/null
 done
 
 exit 0
+
+###thai translit
+apachepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
+scroot=$apachepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/mn
+thairoot=$apachepath/assets/texts/th/root/pli/ms
+tmproot=$apachepath/tmp
+outputFileNameAddition=_
+alias aks='~/aksharamukha/bin/python scripts/paliThaiConv.py '
+
+find $scroot -name "*_*" |sort -V | while read file 
+do
+suttaid=$(echo $file | awk -F/ '{print $NF}' | awk -F_ '{print $1}')
+outputFile=$tmproot/${suttaid}${outputFileNameAddition}
+echo $suttaid
+aks $file > $outputFile
+done
+
+
+
+
 ~/aksharamukha/bin/python scripts/aksharamukha-adapter.py อฏฺฐมํฯ
 
 

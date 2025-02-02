@@ -244,7 +244,7 @@ const translationResponse = fetch(thtrnpath)
         return {}; // Возвращаем пустой объект, если оба пути недоступны
       });
   });
-*/
+
 async function fetchTranslation() {
   const paths = [theditedtrnpath, thtrnpath, trnpath];
 
@@ -265,8 +265,22 @@ async function fetchTranslation() {
 }
 
 const translationResponse = fetchTranslation();
+*/
+const attemptFetch = (path) => 
+  fetch(path)
+    .then(response => 
+      response.ok 
+        ? response.json() 
+        : Promise.reject('HTTP error')
+    );
 
-
+const translationResponse = [thtrnpath, theditedtrnpath, trnpath]
+  .reduce((chain, path) => chain.catch(() => attemptFetch(path)), 
+    Promise.reject())
+  .catch(() => {
+    console.log('All translation paths failed');
+    return {};
+  });
 
 
   const engtranslationResponse = fetch(engtrnpath).then(response => response.json());

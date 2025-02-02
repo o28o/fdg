@@ -41,8 +41,13 @@ echo $suttaid
 aks $file > $outputFile
 done
 
+exit 0
 
-
+find -type f | while read i; do
+  if ! jq . "$i" >/dev/null 2>&1; then
+    echo "$i"
+  fi
+done
 
 ~/aksharamukha/bin/python scripts/aksharamukha-adapter.py อฏฺฐมํฯ
 

@@ -27,7 +27,7 @@ exit 0
 
 ###thai translit
 apachepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
-scroot=$apachepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/mn
+scroot=$apachepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/
 thairoot=$apachepath/assets/texts/th/root/pli/ms
 tmproot=$apachepath/tmp
 outputFileNameAddition=_

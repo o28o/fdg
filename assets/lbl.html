@@ -798,6 +798,14 @@ else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
 
+if (indexValue.match(/dn|mn/)) {
+  if (language === 'pli') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${indexValue}_root-pli-ms.json`;
+  } else if (language === 'en') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${indexValue}_translation-en-sujato.json`;
+  }
+}
+
 // Вывод в консоль
 console.log('beforeDot:', beforeDot);
 console.log('firstNumberOnly:', firstNumberOnly);
@@ -1069,6 +1077,15 @@ else if (language === 'en') {
   } else if (language === 'en') {
     url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${beforeDot}/${indexValue}_translation-en-sujato.json`;
   }
+  
+if (indexValue.match(/dn|mn/)) {
+  if (language === 'pli') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/${lettersOnly}/${indexValue}_root-pli-ms.json`;
+  } else if (language === 'en') {
+    url = `/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta/${lettersOnly}/${indexValue}_translation-en-sujato.json`;
+  }
+}  
+  
   //    url = `/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/kn/snp/vagga3/snp3.2_root-pli-ms.json`;
 //console.log(url);
   fetch(url)

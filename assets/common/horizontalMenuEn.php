@@ -222,8 +222,9 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="tools">
    
          <li>
-         <div class="dropdown-item ">Fdg 
-         <a class="text-black" target=""  href="/old.php">old</a> 
+         <div class="dropdown-item ">
+          <a class="text-black" target="" href="/th/?q=">Fdg</a> 
+          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
                   <a class="text-black" target="" href="' . $mainscpage . '">index</a>  
 <a class="text-black" target="" href="/assets/texts/sutta.php">sutta</a>                       

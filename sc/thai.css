@@ -186,7 +186,7 @@ ol,
 ul,
 li {
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .instructions ul li {
@@ -217,7 +217,7 @@ li {
   display: flex;
   flex-direction: row;
   column-gap: 0rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   /* font-size: 95%; */
 }
 

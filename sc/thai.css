@@ -3,3 +3,31 @@
   src: url("NotoSansThai-Regular.woff");
 }
 
+body {
+  font-family: "Noto Sans Thai", serif;
+}
+
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  font-family: "Noto Sans Thai";
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+
+p,
+dt,
+li,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: sans-serif;
+  color: var(--dark-gray) ;
+}

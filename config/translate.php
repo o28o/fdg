@@ -50,9 +50,9 @@ $radiosml = 'Пдб';
 
 $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), Саньютта Никаи (SN), Маджжхима Никаи (MN), Дигха Никаи (DN). В коренных текстах (Мула). <br><br>
 <strong>Виная</strong> - Поиск в Патимоккхах и Вибхангах Винаи на Пали и Английском. <br><br>
-<strong>+KN</strong> - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
-<strong>Поздние</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
-<strong>+Kd, Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
+<strong>+ KN*</strong> - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
+<strong>+ вся КН</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
+<strong>+ Kd, Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
 <strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
 <strong>SC.net</strong> - поиск в англ переводах 4 никай SuttaCentral.net
 <br><br>
@@ -74,15 +74,15 @@ $listsml = "Сравнения";
 $liststd = "Все совпадения";
 $tooltipvin = 'Поиск в Винае на Пали';
 $radiovin = 'Виная';
-$tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, dhp, iti, snp, thag, thig. Удана, Дхаммапада, Итивутака, Суттанипата, Тхерагатха, Тхеригатха';
-$radiokn = '+КН';
+$tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, iti, snp, dhp, thag, thig. Удана, Итивутака, Суттанипата, Дхаммапада, Тхерагатха, Тхеригатха';
+$radiokn = '+ КН*';
 $tooltiponl = 'X Y ... могут быть на любом расстоянии в рамках одного текста. Без этой опции (по умолчанию) поиск идёт только по рядомстоящим словам. ';
 $checkboxonl = 'Любое расстояние';
 $tooltipnonl = 'С этой опцией будут собраны тексты, которые содержат только рядомстоящие X и Y (в одной строке). По умолчанию, без этой опции поиск будет производиться на любом расстоянии в пределах одного текста.';
 $checkboxnonl = 'А Б';
-$tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи, включая поздние";
-$radioltr = "+Позд";
-$radiovinall = "+Kd, Pvr";
+$tooltipltr= "+ поиск на Пали во всех книгах Кхуддака Никаи";
+$radioltr = "+ вся КН";
+$radiovinall = "+ Kd, Pvr";
 $tooltipen = 'Поиск по англ. переводам АН, СН, МН, ДН с SuttaCentral.net дост. Суджато. Без этой опции сначала поиск будет произведен в Пали, затем в переводах sc.net и затем в переводах thebuddhaswords.net ';
 $radioen = 'SC.net';
 $radiotru = 'Theravada.ru';
@@ -572,9 +572,9 @@ $radiosml = 'Sml';
 $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN). Search in Root texts (Mula)
 <br><br>
 <strong>Vinaya</strong> - Search in Patimokkhas and Vibhangas of Vinaya in Pali and English. <br><br>
-<strong>+KN</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
-<strong>Later</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
-<strong>+Kd & Pvr</strong> - Vinaya + Khandhaka & Parivara<br><br>
+<strong>+ KN*</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
+<strong>+ all KN</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
+<strong>+ Kd & Pvr</strong> - Vinaya + Khandhaka & Parivara<br><br>
 <strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>
 <strong>SC.net</strong> - search in SuttaCentral.net english translations
  <br><br>
@@ -598,7 +598,7 @@ $liststd = "All matches";
 $tooltipvin = 'Search in Pali Vinaya';
 $radiovin = 'Vinaya';
 $tooltipkn = '+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig';
-$radiokn = '+KN';
+$radiokn = '+ KN*';
 $tooltiponl = 'X Y ... Finds texts containing only both and more matches for X, Y ... Without this option only texts where X Y are standing next to each other will be found';
 $checkboxonl = 'Any distance';
 $tooltipnonl = 'Search for X Y ... on any distance within one text. By default only texts containing X Y ... next to each other will be found.';
@@ -607,8 +607,8 @@ $tooltipen = 'Search in an, sn, mn, dn in English line by line translations by B
 $radioen = 'SC.net';
 $radiotru = 'Theravada.ru';
 $tooltipltr= "+ search in Pali in all books of kn including later texts";
-$radioltr = "+Later";
-$radiovinall = "+Kd & Pvr";
+$radioltr = "+ all KN ";
+$radiovinall = "+ Kd & Pvr";
 $tooltipth = "(optional) Search in an, sn, mn, dn in Thai Suttacentral.net translations. Without this option default search will start with Pali texts, then with sc.net Thai translations";
 $radioth = "ไทย";
 $tooltipru = "(optional) Search in an, sn, mn, dn in Russain Suttacentral.net translations";

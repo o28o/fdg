@@ -113,9 +113,9 @@ const mlUrl  = window.location.href;
 const ruUrl = mlUrl.replace("/sc/mlth.html", "/ru/sc/");
 const thUrl = mlUrl.replace("/sc/mlth.html", "/th/sc/");
 const enUrl = mlUrl.replace("/sc/mlth.html", "/sc/");
-//let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+//let ifRus = `<a target="" href="${ruUrl}">Ru</a> <a target="" href="${enUrl}">En</a> `;
 
-let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${thUrl}">Th</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
+let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a> <a target="" href="${thUrl}">Th</a> <a target="" href="${enUrl}">En</a> `;
 
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
@@ -514,19 +514,19 @@ function findTextUrl(nikaya, subdivision, textnum) {
 let textUrl = getTextUrl(slug);
 console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+scLink += `<a target="" href="${textUrl}">DPR</a> `;
 }
 }
 //dpr end
 
 if ((translator === 'sujato') || (translator === 'brahmali')) {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a> `;  
 } else {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/th/siam_rath">SC.net</a>&nbsp;`;
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/th/siam_rath">SC.net</a> `;
 }
- //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`; 
+ //     scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a> `; 
 
-//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>&nbsp; <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
+//<a href="/legacy.suttacentral.net/sc/pi/${slug}.html">legacy.SC</a>  <a target="" href="https://voice.suttacentral.net/scv/index.html?#/sutta?search=${slug}">Voice.SC</a>
       if (linksArray[0].length >= 4) {
         scLink += linksArray[0];
             console.log("extralinks " + linksArray[0]);

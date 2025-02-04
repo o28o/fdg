@@ -19,6 +19,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Noto Sans Thai";
+    src: url("NotoSansThai-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: bold;
+}
+
 :root {
   --off-white: rgb(221, 221, 221);
   --light-off-white: rgb(253, 253, 253);
@@ -388,6 +395,12 @@ dt {
   display: none !important;
 }
 
+
+h1 {
+    font-family: "Noto Sans Thai", sans-serif;
+    font-weight: 900;
+    font-size: 2.8rem;
+}
 #sutta.hide-pali p span.eng-lang {
   display: inline !important;
 }

@@ -1,24 +1,30 @@
 @font-face {
     font-family: "Noto Sans Thai";
-    src: url("NotoSansThai-Regular.woff") format("woff");
+    src: url("thaiFont/NotoSansThai-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Noto Sans Thai";
-    src: url("NotoSansThai-Light.woff") format("woff");
+    src: url("thaiFont/NotoSansThai-Light.woff") format("woff");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Noto Sans Thai";
-    src: url("NotoSansThai-Medium.woff") format("woff");
+    src: url("thaiFont/NotoSansThai-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Noto Sans Thai";
+    src: url("thaiFont/NotoSansThai-Bold.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
 :root {
   --off-white: rgb(221, 221, 221);
   --light-off-white: rgb(253, 253, 253);
@@ -375,6 +381,12 @@ dt {
   display: none !important;
 }
 
+
+h1 {
+    font-family: "Noto Sans Thai", sans-serif;
+    font-weight: 900;
+        font-size: 2.8rem;
+}
 /* #sutta.hide-pali p span.eng-lang {
   display: inline !important;
 } */

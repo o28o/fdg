@@ -115,7 +115,7 @@ let mlUrl = ruUrl.replace("/sc/th.html", "/sc/ml.html");
 mlUrl = ruUrl.replace("/th/sc/", "/sc/ml.html");
 let mlthUrl = ruUrl.replace("/sc/th.html", "/sc/mlth.html");
 mlthUrl = ruUrl.replace("/th/sc/", "/sc/mlth.html");
- let scLink = `<p class="sc-link"><a target="" href="${rusUrl}">Ru</a>&nbsp;<a target="" href="${mlUrl}">R+E</a>&nbsp;<a target="" href="${mlthUrl}">T+E</a>&nbsp;`;
+ let scLink = `<p class="sc-link"><a target="" href="${rusUrl}">Ru</a> <a target="" href="${mlUrl}">R+E</a> <a target="" href="${mlthUrl}">T+E</a> `;
  //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
 const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"
@@ -393,7 +393,7 @@ else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato
 let enUrl = ruUrl.replace("/sc/th.html", "/sc/");
 enUrl = ruUrl.replace("/th/sc/", "/sc/");
 
-scLink += `<a href="${enUrl}">En</a>&nbsp;`;
+scLink += `<a href="${enUrl}">En</a> `;
  
   
 //dpr
@@ -453,15 +453,15 @@ function findTextUrl(nikaya, subdivision, textnum) {
 let textUrl = getTextUrl(slug);
 console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
-scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
+scLink += `<a target="" href="${textUrl}">DPR</a> `;
 }
 
 }
 //dpr end
 if ((translator === 'sujato') || (translator === 'brahmali')) {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a>&nbsp;`;  
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}">SC.net</a> `;  
 } else {
-  scLink += `<a target="" href="https://suttacentral.net/${slug}/th/siam_rath">SC.net</a>&nbsp;`;
+  scLink += `<a target="" href="https://suttacentral.net/${slug}/th/siam_rath">SC.net</a> `;
 }
 
       $.ajax({

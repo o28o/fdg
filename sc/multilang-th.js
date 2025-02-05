@@ -170,7 +170,7 @@ else if (slug.match(/ja/)) {
 } else if (slug.match(/bu-pm|bi-pm/)) {
   
       let translator = "jayasaro";
-    var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
+    var rootpath = `/assets/texts/${pathLang}/root/pli/ms/${texttype}/${slug}_rootth-pli-ms.json`;
     var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
 
@@ -874,6 +874,9 @@ if (
   const firstNum = slugParts[6];
   
   return `${bookWithoutNumberAndRule}/${bookWithoutNumber}1-7`;
+} else if (
+  slug.match(/bu-pm|bi-pm/)) {
+  return `${slug}`;
 } else if ( slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)) {
     const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
   const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');

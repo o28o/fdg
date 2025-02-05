@@ -10,7 +10,7 @@ do
 suttaid=$(echo $suttaid | awk -F/ '{print $NF}')
 outputFile=$thairoot/sutta/${suttaid}${outputFileNameAddition}
 echo $suttaid
-paste <(awk '{print $1}' < $(find $scroot -name "${suttaid}*")) <(awk -F': ' '{print $2}' < $tmproot/${suttaid} ) > $outputFile
+paste <(awk '{print $1}' < $(find $scroot -name "${suttaid}*")) <(awk -F'": ' '{print $2}' < $tmproot/${suttaid} ) > $outputFile
 
 #cat -n $outputFile
 sed -i '1!{            # Пропускаем первую строку

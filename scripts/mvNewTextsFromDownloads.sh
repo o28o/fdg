@@ -51,6 +51,11 @@ then
 nikaya=kn/$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
 booknumber=''
 
+elif [[ $suttaname =~ mn|dn ]]; 
+then
+booknumber=
+    nikaya=$(echo "$suttaname" | sed -E 's/[0-9]+.*//')
+
 else
 booknumber=$(echo $suttaname | sed -E 's/\..*//')
     nikaya=$(echo "$suttaname" | sed -E 's/[0-9]+.*//')

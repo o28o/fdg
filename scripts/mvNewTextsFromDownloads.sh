@@ -72,10 +72,23 @@ exit 0
 fi
 
 audioSrcdir=/storage/emulated/0/Music/VoiceChangerWithEffects
-audioSrcdir2='/storage/emulated/0/Recordings/Voice Recorder'
+audioSrcdir2='/storage/emulated/0/Recordings/Voice\ Recorder'
 audioDestdir=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/audio
 
-find "$audioSrcdir" "$audioSrcdir2" -maxdepth 1 -size +0 -type f -name "*_*" | while IFS= read -r file 
+
+# Проверяем существование папок и присваиваем переменные
+[ -d "$audioSrcdir" ] || audioSrcdir=""
+[ -d "$audioSrcdir2" ] || audioSrcdir2=""
+
+# Если обе переменные пусты, выходим
+if [[ -z "$audioSrcdir" && -z "$audioSrcdir2" ]]; then
+   # echo "Обе папки отсутствуют. Выход."
+    exit 1
+fi
+
+
+dirs="$audioSrcdir $audioSrcdir2"
+find "$dirs" -maxdepth 1 -size +0 -type f -name "*_*" | while IFS= read -r file 
 do
 suttaname=$(echo "$file" | sed -E 's/_.*//' | awk -F'/' '{print $NF}')
 

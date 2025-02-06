@@ -215,8 +215,12 @@ Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then
     const [paliData, transData, htmlData, varData] = responses;
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
-        transData[segment] = "";
+        transData[segment] = "&nbsp;";
       }
+      if (transData[segment] === "") {
+        transData[segment] = "&nbsp;";
+      }      
+      
       let [openHtml, closeHtml] = htmlData[segment].split(/{}/);
       /* openHtml = openHtml.replace(/^<span class='verse-line'>/, "<br><span class='verse-line'>"); inputscript-IASTPali 
       Roman (IAST)     	IAST

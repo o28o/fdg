@@ -117,8 +117,11 @@ return {};
 
     Object.keys(htmlData).forEach(segment => {
       if (transData[segment] === undefined) {
-        transData[segment] = "";
+        transData[segment] = "&nbsp;";
       }
+      if (transData[segment] === "") {
+        transData[segment] = "&nbsp;";
+      }    
       let [openHtml, closeHtml] = htmlData[segment].split(/{}/);
       /* openHtml = openHtml.replace(/^<span class='verse-line'>/, "<br><span class='verse-line'>"); inputscript-IASTPali 
       Roman (IAST)     	IAST
@@ -170,10 +173,10 @@ if (finder && finder.trim() !== "") {
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }
-
+// inputscript-ISOPali add for aksharamukha
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
+      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">
 ${varData[segment].trim()}   
 </span>      
@@ -183,7 +186,7 @@ ${varData[segment].trim()}
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined && transData[segment] !== undefined ) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {

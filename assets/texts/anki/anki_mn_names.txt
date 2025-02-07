@@ -1,5 +1,5 @@
 #separator:tab
-#html:true
+#html:false
 mn1.1.1		"Mūlapariyāyasutta		Mūlapaṇṇāsaka	Mulaparyayavaggo"
 mn1.1.2		"Sabbāsavasutta		Mūlapaṇṇāsaka	Mulaparyayavaggo"
 mn1.1.3		"Dhammadāyādasutta		Mūlapaṇṇāsaka	Mulaparyayavaggo"

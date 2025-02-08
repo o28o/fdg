@@ -22,7 +22,7 @@ alias sutta="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdoc
 alias asset="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/sutta/"
 alias aks="~/aksharamukha/bin/python scripts/paliThaiConv.py "
 alias waks="~/aksharamukha/bin/python scripts/paliThaiConvW.py "
-alias dpr="apa; cd ../dpr/ ;  /data/data/com.termux/files/usr/bin/live-server --port=8085 --quiet "
+alias dpr="/data/data/com.termux/files/usr/bin/live-server --port=8085 --quiet ~/dpr/ "
 
 function md5checkwrite {
 

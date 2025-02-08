@@ -307,14 +307,14 @@ fi
 function initialGrep {
   #use with "file" flag for output file and no flag for word/id mode list 
 [[ "$1" == *"file"* ]] && grepArg="l"
-grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$"  | grep '": "' | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | sort -V | uniq
+grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$"  | grep '": "' | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  | sort -V | uniq
 }
 
 function initialCmnd {
 #file to process to function $1 source file e.g initfile eng var pli $2 dest filr e.g. pli 
 if [ -s "$1" ]; then
 cat "$1" | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$3"' \n@' > $tmpdir/${prefix}cmndFor-$2
-bash $tmpdir/${prefix}cmndFor-$2 2>/dev/null | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-$2
+bash $tmpdir/${prefix}cmndFor-$2 2>/dev/null | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  > $tmpdir/${prefix}initrun-$2
 fi
 }
 
@@ -325,14 +325,14 @@ function grepForWords {
 cat "$tmpdir/${prefix}initfilelist" | xargs grep -ioHE "\w*${keywordforgreping}[^ ]*" | awk -F: '$2 > 0 {print $0}' | cleanupwords
 
 else   
-  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords
+  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  | awk -F: '$2 > 0 {print $0}' | cleanupwords
  fi  
   
 }
 
 function RuLangFirst {
 cd $suttapath/sc-data/html_text/ru/pli/
-grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g' | grep -v "^--$" | sort -V | uniq > $tmpdir/${prefix}initrun-ru
+grep -riE -B${linesbefore} -A${linesafter} "$keyword" $searchIn | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'   | sed 's@/ему/@ему@g' | grep -v "^--$" | sort -V | uniq > $tmpdir/${prefix}initrun-ru
 #cd - > /dev/null
 
 checkForInitSearch $tmpdir/${prefix}initrun-ru
@@ -361,14 +361,14 @@ sed -i 's/":/@/g'  $tmpdir/${prefix}$basefile
 sed -i -e 's@.*sutta/kn@khudakka\@/@g' -e 's@.*sutta/@dhamma\@/@g' -e 's@.*vinaya/@vinaya\@/@g' $tmpdir/${prefix}$basefile
 sed -i -e 's@.*/sutta/kn@khudakka\@/@g' -e 's@.*/sutta/@dhamma\@/@g' -e 's@.*/vinaya/@vinaya\@/@g' $tmpdir/${prefix}$basefile
    
-cat $tmpdir/${prefix}$basefile | sed 's/<[^>]*>//g' | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
+cat $tmpdir/${prefix}$basefile | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  | sed 's/@ *"/@/g' | sed 's/",$//g' | sed 's/ "$//g' | sed 's@/.*/@@g'| awk -F@ '{OFS = "@"} {print $1, $2, $3, $2, $4}' | sort -t'@' -k2V,2 -k4V,4 -k2n,3 | uniq > $tmpdir/${prefix}readyforawk
 
 
 # |  для доп колонки |  awk -F/ '{print $NF}' | sed 's@\@/.*/@\@@g' |
 ########## count keywords in texts
 
 cd $suttapath/$pali_or_lang
-grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' > $tmpdir/${prefix}words
+grep -rioE "\w*$keyword[^ ]*" $searchIn | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  | awk -F: '$2 > 0 {print $0}' > $tmpdir/${prefix}words
 
 
 
@@ -472,12 +472,12 @@ function getPliFromLangFirst {
  # initialCmnd $tmpdir/${prefix}initrun-en pi 
   cat $tmpdir/${prefix}initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)" '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFor-pi
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
-bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-pi
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  > $tmpdir/${prefix}initrun-pi
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  > $tmpdir/${prefix}initrun-var
 cd $apachesitepath/assets/texts/variant/
-bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-var
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  >> $tmpdir/${prefix}initrun-var
 #grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g' | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-var
 }
 
@@ -492,7 +492,7 @@ cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
 if [ -s "$tmpdir/${prefix}initrun-var" ]; then
 cat $tmpdir/${prefix}initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFor-pi
-bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-pi
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  > $tmpdir/${prefix}initrun-pi
 fi
 initialGrep >> $tmpdir/${prefix}initrun-pi
 
@@ -513,7 +513,7 @@ initialGrep >> $tmpdir/${prefix}initrun-var
 if [ -s "$tmpdir/${prefix}initrun-var" ]; then
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 cat $tmpdir/${prefix}initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFor-pi
-bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-pi
+bash $tmpdir/${prefix}cmndFor-pi | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  >> $tmpdir/${prefix}initrun-pi
 fi
 
 checkForInitSearch $tmpdir/${prefix}initrun-var $tmpdir/${prefix}initrun-pi
@@ -573,7 +573,7 @@ cd $apachesitepath >/dev/null
 }
 
 function cleanupwords {
-sed 's/[[:punct:]]*$//' | sed 's/…$//'| awk '{print tolower($0)}' | sed  -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'    
+sed 's/[[:punct:]]*$//' | sed 's/…$//'| awk '{print tolower($0)}' | sed  -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  
 }
 #-e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g'
 function cleanupTempFiles {
@@ -630,7 +630,7 @@ cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'B
 cd $apachesitepath/assets/texts/variant/
 cat $tmpdir/${prefix}initrun-pi | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' >> $tmpdir/${prefix}cmndFromPi
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-bash $tmpdir/${prefix}cmndFromPi | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
+bash $tmpdir/${prefix}cmndFromPi | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' > $tmpdir/${prefix}initrun-var
 fi
 
 }
@@ -780,12 +780,12 @@ fi
 
 function initialGrep {
 #[[ "$1" == *"file"* ]] && grepArg="l"
-grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$"  | grep '": "'| sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | grep -B${linesbefore} -A${linesafter} -viE$grepArg "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'
+grep -B${linesbefore} -A${linesafter} -riE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$"  | grep '": "'| sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | grep -B${linesbefore} -A${linesafter} -viE$grepArg "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' 
 #grep -B${linesbefore} -A${linesafter} -rviE$grepArg "$keyword" $searchIn 2>/dev/null | grep -v "^--$" | grep -iE "$keyword" | sed 's/<[^>]*>//g'
 }
 
 function grepForWords {
-  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | grep -viE "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g' | awk -F: '$2 > 0 {print $0}' | cleanupwords
+  grep -rioE "\w*$keyword[^ ]*" $searchIn 2>/dev/null | grep -viE "$keywordforexclude" | grep -v "^--$" | sed 's/json-/json:/g' | sed 's/html-/html:/g' | sed 's/htm-/htm:/g' | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'  | awk -F: '$2 > 0 {print $0}' | cleanupwords
 }
 fi
 }

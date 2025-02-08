@@ -796,7 +796,7 @@ elif [[ "$@" == *"-tru"* ]]; then
     
          function grepbasefile {
 cd $apachesitepath/theravada.ru/Teaching/Canon/Suttanta/
-grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' 
 cd - > /dev/null
 }   
     
@@ -813,7 +813,7 @@ elif [[ "$@" == *"-ru"* ]]; then
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
       function grepbasefile {
 cd $suttapath/$pali_or_lang
-grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  | sed 's@/ему/@ему@g'
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'   | sed 's@/ему/@ему@g'
 cd - > /dev/null
 }  
 

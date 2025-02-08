@@ -6,26 +6,29 @@
     <title>Тест PWA</title>
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/icon-192x192.png">
-    <script>
-        let deferredPrompt;
-        window.addEventListener("beforeinstallprompt", (event) => {
-            event.preventDefault();
-            deferredPrompt = event;
-            document.getElementById("installPWA").style.display = "block";
-        });
 
-        function installPWA() {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === "accepted") {
-                        console.log("PWA установлено");
-                    }
-                    deferredPrompt = null;
-                });
-            }
+<script>
+    let deferredPrompt;
+    
+    window.addEventListener("beforeinstallprompt", (event) => {
+        console.log("beforeinstallprompt сработал!");
+        event.preventDefault();
+        deferredPrompt = event;
+        document.getElementById("installPWA").style.display = "block";
+    });
+
+    function installPWA() {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                console.log("Результат установки:", choiceResult.outcome);
+                deferredPrompt = null;
+                document.getElementById("installPWA").style.display = "none";
+            });
         }
-    </script>
+    }
+</script>
+
 </head>
 <body>
     <h1>Тест PWA</h1>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
 error_reporting(E_ERROR | E_PARSE);
-include_once('../../config/config.php');
-include_once('../../config/translate.php');
-include '../../scripts/opentexts.php';
+include_once('./config/config.php');
+include_once('./config/translate.php');
+include './scripts/opentexts.php';
 //echo $mainscpage;
 ?>
 
@@ -43,7 +43,7 @@ include '../../scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-    <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/assets/texts/bipm.php" >bi-pm</a>
+    <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/bipm.php" >bi-pm</a>
  
     <a class="ms-1 text-decoration-none text-muted " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
     
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="collapse " id="bupmCollapse">
         
 <?php
-include $basedir . "/assets/texts/vinaya/bupm.php";
+include $basedir . "/assets/texts/bupm.php";
 ?>
 
   </div>

@@ -249,8 +249,8 @@ echo '<!--
          <a class="text-black" target="" href="/new/">new</a> 
                   <a class="text-black" target="" href="' . $mainscpage . '"> индекс</a>   
             <a class="text-black" target="" href="/ru/assets/texts/sutta.php">sutta</a>        
-      <a class="text-black" target="" href="/ru/assets/texts/pm.php">bupm</a>        
-      <a class="text-black" target="" href="/ru/assets/texts/bipm.php">bipm</a> 
+      <a class="text-black" target="" href="/ru/pm.php">bupm</a>        
+      <a class="text-black" target="" href="/ru/bipm.php">bipm</a> 
 
          </div>
          </li>

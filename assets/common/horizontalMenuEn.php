@@ -228,8 +228,8 @@ echo '<!--
          <a class="text-black" target="" href="/new/">new</a> 
                   <a class="text-black" target="" href="' . $mainscpage . '">index</a>  
 <a class="text-black" target="" href="/assets/texts/sutta.php">sutta</a>                       
-      <a class="text-black" target="" href="/assets/texts/pm.php">bupm</a>        
-      <a class="text-black" target="" href="/assets/texts/bipm.php">bipm</a> 
+      <a class="text-black" target="" href="/pm.php">bupm</a>        
+      <a class="text-black" target="" href="/bipm.php">bipm</a> 
 
          </div>
          </li>

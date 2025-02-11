@@ -167,13 +167,13 @@ if (preg_match("/^(ja|snp|iti|thig|thag)[0-9].*/i", $stringForOpen)) {
 }  else if (preg_match("/^(bu|pm|bpm|bupm)$/i", $stringForOpen)) {
   
 	//echo "<script>window.location.href='$readerlang?q=bu-{$stringForOpen}';</script>";	
-	echo "<script>window.location.href='/assets/texts/pm.php';</script>";	
+	echo "<script>window.location.href='/pm.php';</script>";	
 	  exit(); 
 } else if (preg_match("/^(bi|bipm)$/i", $stringForOpen)) {
 
 //echo "<script>alert('case 1');</script>";	
 //	echo "<script>window.location.href='$readerlang?q={$stringForOpen}';</script>";	
-	echo "<script>window.location.href='/assets/texts/bipm.php';</script>";	
+	echo "<script>window.location.href='/bipm.php';</script>";	
 } else if  (preg_match("/^(pj|ss|ay|np|pc|pd|sk|as)$/i", $stringForOpen)) {
 
   //open read.php Bu

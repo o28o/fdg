@@ -298,12 +298,11 @@ paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
-
       <span class="rus-lang" lang="ru">${paliData[segment]}
-		  </span><br>
+<br>
 		  <span class="variant rus-lang inputscript-ISOPali" lang="ru">
 ${varData[segment].trim()}   
-</span>      
+</span>		  </span>      
       </span>${closeHtml}\n\n`;
 	  
 	  //	  </span>   --dark-gray2: #9E9E9E;  --light-gray2: #616161;

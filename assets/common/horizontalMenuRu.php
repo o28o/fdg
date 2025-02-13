@@ -80,8 +80,8 @@ echo '<!--
                 <li>
          <div class="dropdown-item ">
          <a class="text-black" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
-                <a class="text-black" target="" href="https://suttacentral.net/pitaka/vinaya/pli-tv-vi">Виная</a>
-         <a class="text-black" target="" href="https://voice.suttacentral.net">Voice</a>
+                <a class="text-black" target="" href="https://suttacentral.net/pitaka/vinaya?lang=ru">Виная</a>
+         <a class="text-black" target="" href="https://www.sc-voice.net/">Voice</a>
         <a class="text-black" target="" href="' . $linksclegacy . '">Legacy</a>
          </div>
          </li>

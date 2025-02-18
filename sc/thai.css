@@ -192,7 +192,7 @@ ol,
 ul,
 li {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .instructions ul li {
@@ -206,14 +206,14 @@ li {
 }
 
 .instructions h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-top: 0rem;
   margin-bottom: 0.1rem;
   margin-left: 0rem;
 }
 
 .instructions h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-top: 0rem;
   margin-bottom: 0.1rem;
   margin-left: 0rem;
@@ -230,7 +230,7 @@ li {
   display: flex;
   flex-direction: row;
   column-gap: 0rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   /* font-size: 95%; */
 }
 
@@ -392,21 +392,21 @@ dt {
 h1 {
     font-family: "Noto Sans Thai", sans-serif;
     font-weight: 900;
-        font-size: 2.8rem;
+        font-size: 2.2rem;
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   font-weight: 800;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 font-weight: 500;
 }
 

@@ -189,7 +189,7 @@ ol,
 ul,
 li {
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .instructions ul li {
@@ -215,24 +215,28 @@ li {
   margin-bottom: 0.1rem;
   margin-left: 0rem;
 }
-
+h1 {
+    font-family: "Noto Sans Thai", sans-serif;
+    font-weight: 900;
+    font-size: 2.4rem;
+}
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   margin-top: 0rem;
   margin-bottom: 0.1rem;
   margin-left: 0rem;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-top: 0rem;
   margin-bottom: 0.1rem;
   margin-left: 0rem;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 0rem;
   margin-bottom: 0.1rem;
   margin-left: 0rem;
@@ -243,7 +247,7 @@ h4 {
   display: flex;
   flex-direction: row;
   column-gap: 0rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   /* font-size: 95%; */
 }
 
@@ -419,11 +423,7 @@ dt {
 }
 
 
-h1 {
-    font-family: "Noto Sans Thai", sans-serif;
-    font-weight: 900;
-    font-size: 2.8rem;
-}
+
 #sutta.hide-pali p span.eng-lang {
   display: inline !important;
 }

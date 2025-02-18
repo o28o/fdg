@@ -361,14 +361,14 @@ if (translator === "o") {
 } else if (translator === "sv") {
   translatorforuser = 'SV theravada.ru с Англ';
 } else if  (translator === "siamrath" ) {
-  translatorforuser = 'Bhikkhu Sujato or Siam Rath';
+  translatorforuser = 'ไทย: Siam Rath, eng: Bhikkhu Sujato';
 }  else if  (translator === "jayasaro" ) {
-  translatorforuser = 'Bhikkhu Brahmali or Jayasaro';
+    translatorforuser = 'All by Bh Brahmali, patimokkha by A Jayasaro';
 } 
 else if ((translator === "" && texttype === "sutta" ) || (translator === "sujato" )) {
-  translatorforuser = 'Bhikkhu Sujato or Siam Rath';
+  translatorforuser = 'ไทย: Siam Rath, eng: Bhikkhu Sujato';
 } else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
-  translatorforuser = 'Bhikkhu Brahmali or Jayasaro';
+  translatorforuser = 'All by Bh Brahmali, patimokkha by A Jayasaro';
 } else if (translator === "syrkin" ) {
   translatorforuser = 'А.Я. Сыркин с Пали';
 } else if (translator === "syrkin+edited+o" ) {

@@ -153,7 +153,7 @@ $fntmessage = '<p class="font-italic text-center pli-lang">
 an8.8
 </p>
 </p>';
-$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано, а что — плохо, иначе:';
+$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано <a href=/ru/sc/?s=Evameva%E1%B9%81&q=an8.8#6.7>an8.8</a>, а что — плохо, иначе:';
 $mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
 
 <h4 class="pli-lang">Ananuvicca apariyogāhetvā avaṇṇārahassa vaṇṇaṁ bhāsati, </h4>

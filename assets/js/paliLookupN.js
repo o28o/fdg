@@ -35,9 +35,9 @@ function createPopup() {
     (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
       parseInt(savedWindowHeight, 10) !== currentWindowHeight)
   ) {
-    const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight'];
+    const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft'];
     keys.forEach(key => localStorage.removeItem(key));
-    
+ //  windowWidth', 'windowHeight' 
   }
 
   // Сохраняем текущие размеры окна
@@ -54,6 +54,26 @@ function createPopup() {
   if (savedHeight) popup.style.height = savedHeight;
   if (savedTop) popup.style.top = savedTop;
   if (savedLeft) popup.style.left = savedLeft;
+  
+  function restorePopupState() {
+  const savedLeft = localStorage.getItem('popupLeft');
+  const savedTop = localStorage.getItem('popupTop');
+  const savedWidth = localStorage.getItem('popupWidth');
+  const savedHeight = localStorage.getItem('popupHeight');
+
+  if (savedLeft && savedTop) {
+    popup.style.left = savedLeft;
+    popup.style.top = savedTop;
+  }
+  if (savedWidth) popup.style.width = savedWidth;
+  if (savedHeight) popup.style.height = savedHeight;
+}
+
+// Вызов функции восстановления при загрузке страницы
+window.addEventListener('load', () => {
+  restorePopupState();
+});
+  
 
   const closeBtn = document.createElement('button');
   closeBtn.classList.add('close-btn');
@@ -90,17 +110,31 @@ function createPopup() {
     localStorage.setItem('popupLeft', popup.style.left);
   }
 
-  // Перетаскивание окна
-  let isDragging = false;
-  let startX, startY, initialLeft, initialTop;
 
-  // Обработчик нажатия для мыши (десктоп)
+
+
+
+  // Перетаскивание окна
+let isDragging = false;
+  let startX, startY, initialLeft, initialTop;
+  let isFirstDrag = true;  // новая переменная для отслеживания первого перемещения
+
   function startDrag(e) {
     isDragging = true;
-    startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
-    startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
+    
+    // Добавить этот блок для первого перемещения
+    if (isFirstDrag) {
+      const rect = popup.getBoundingClientRect();
+      popup.style.transform = 'none';  // убираем transform, который центрирует окно
+      popup.style.top = rect.top + 'px';
+      popup.style.left = rect.left + 'px';
+      isFirstDrag = false;
+    }
+
+    startX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    startY = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+    initialLeft = parseInt(popup.style.left, 10);
+    initialTop = parseInt(popup.style.top, 10);
     e.preventDefault();
   }
 

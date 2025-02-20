@@ -218,7 +218,7 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Основная функция для определения слова, по которому был клик, с учетом вложенного HTML
+
 function getClickedWordWithHTML(element, x, y) {
     const range = document.caretRangeFromPoint(x, y);
     if (!range) return null;
@@ -229,7 +229,10 @@ function getClickedWordWithHTML(element, x, y) {
         return null;
     }
 
-    const fullText = getFullTextFromElement(parentElement);
+    // Получаем текст без HTML-тегов
+    const fullText = parentElement.textContent;
+
+    // Вычисляем смещение в тексте без учета HTML-тегов
     const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
     if (globalOffset === -1) {
         console.error('Не удалось вычислить глобальное смещение.');
@@ -252,19 +255,6 @@ function getClickedWordWithHTML(element, x, y) {
     return null;
 }
 
-// Функция для получения полного текста из элемента, включая все текстовые узлы
-function getFullTextFromElement(element) {
-    const textNodes = [];
-    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-
-    let node;
-    while ((node = walker.nextNode())) {
-        textNodes.push(node.textContent);
-    }
-
-    return textNodes.join(' ').replace(/\s+/g, ' ').trim(); // Удаляем лишние пробелы
-}
-
 // Функция для вычисления глобального смещения клика в полном тексте
 function calculateOffsetWithHTML(element, targetNode, targetOffset) {
     let offset = 0;
@@ -280,6 +270,19 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
 
     console.log('Целевой узел не найден.');
     return -1; // Возвращаем ошибку, если узел не найден
+}
+
+// Функция для получения полного текста из элемента, включая все текстовые узлы
+function getFullTextFromElement(element) {
+    const textNodes = [];
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+
+    let node;
+    while ((node = walker.nextNode())) {
+        textNodes.push(node.textContent);
+    }
+
+    return textNodes.join(' ').replace(/\s+/g, ' ').trim(); // Удаляем лишние пробелы
 }
 
 // Пример обработки клика на элемент

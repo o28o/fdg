@@ -35,10 +35,9 @@ function createPopup() {
     (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
       parseInt(savedWindowHeight, 10) !== currentWindowHeight)
   ) {
-    localStorage.removeItem('popupWidth');
-    localStorage.removeItem('popupHeight');
-    localStorage.removeItem('popupTop');
-    localStorage.removeItem('popupLeft');
+    const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft'];
+    keys.forEach(key => localStorage.removeItem(key));
+ //  windowWidth', 'windowHeight' 
   }
 
   // Сохраняем текущие размеры окна
@@ -92,21 +91,31 @@ function createPopup() {
   }
 
   // Перетаскивание окна
-  let isDragging = false;
+let isDragging = false;
   let startX, startY, initialLeft, initialTop;
+  let isFirstDrag = true;  // новая переменная для отслеживания первого перемещения
 
-  // Обработчик нажатия для мыши (десктоп)
   function startDrag(e) {
     isDragging = true;
-    startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
-    startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
+    
+    // Добавить этот блок для первого перемещения
+    if (isFirstDrag) {
+      const rect = popup.getBoundingClientRect();
+      popup.style.transform = 'none';  // убираем transform, который центрирует окно
+      popup.style.top = rect.top + 'px';
+      popup.style.left = rect.left + 'px';
+      isFirstDrag = false;
+    }
+
+    startX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    startY = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+    initialLeft = parseInt(popup.style.left, 10);
+    initialTop = parseInt(popup.style.top, 10);
     e.preventDefault();
   }
 
   // Обработчик перемещения для мыши (десктоп)
-  function moveDrag(e) {
+function moveDrag(e) {
     if (isDragging) {
       const deltaX = (e.clientX || e.touches[0].clientX) - startX;
       const deltaY = (e.clientY || e.touches[0].clientY) - startY;
@@ -153,6 +162,7 @@ closeBtn.addEventListener('click', () => {
   popup.style.display = 'none';
   overlay.style.display = 'none';
   iframe.src = ''; // Очищаем iframe
+  resizeObserver.disconnect();
 });
 
 overlay.addEventListener('click', () => {
@@ -217,7 +227,6 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-
 
 function getClickedWordWithHTML(element, x, y) {
     const range = document.caretRangeFromPoint(x, y);

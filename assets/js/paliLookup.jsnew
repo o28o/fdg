@@ -35,10 +35,9 @@ function createPopup() {
     (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
       parseInt(savedWindowHeight, 10) !== currentWindowHeight)
   ) {
-    localStorage.removeItem('popupWidth');
-    localStorage.removeItem('popupHeight');
-    localStorage.removeItem('popupTop');
-    localStorage.removeItem('popupLeft');
+    const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft'];
+    keys.forEach(key => localStorage.removeItem(key));
+ //  windowWidth', 'windowHeight' 
   }
 
   // Сохраняем текущие размеры окна
@@ -92,21 +91,31 @@ function createPopup() {
   }
 
   // Перетаскивание окна
-  let isDragging = false;
+let isDragging = false;
   let startX, startY, initialLeft, initialTop;
+  let isFirstDrag = true;  // новая переменная для отслеживания первого перемещения
 
-  // Обработчик нажатия для мыши (десктоп)
   function startDrag(e) {
     isDragging = true;
-    startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
-    startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
+    
+    // Добавить этот блок для первого перемещения
+    if (isFirstDrag) {
+      const rect = popup.getBoundingClientRect();
+      popup.style.transform = 'none';  // убираем transform, который центрирует окно
+      popup.style.top = rect.top + 'px';
+      popup.style.left = rect.left + 'px';
+      isFirstDrag = false;
+    }
+
+    startX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    startY = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+    initialLeft = parseInt(popup.style.left, 10);
+    initialTop = parseInt(popup.style.top, 10);
     e.preventDefault();
   }
 
   // Обработчик перемещения для мыши (десктоп)
-  function moveDrag(e) {
+function moveDrag(e) {
     if (isDragging) {
       const deltaX = (e.clientX || e.touches[0].clientX) - startX;
       const deltaY = (e.clientY || e.touches[0].clientY) - startY;
@@ -153,6 +162,7 @@ closeBtn.addEventListener('click', () => {
   popup.style.display = 'none';
   overlay.style.display = 'none';
   iframe.src = ''; // Очищаем iframe
+  resizeObserver.disconnect();
 });
 
 overlay.addEventListener('click', () => {
@@ -218,7 +228,6 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Основная функция для определения слова, по которому был клик, с учетом вложенного HTML
 function getClickedWordWithHTML(element, x, y) {
     const range = document.caretRangeFromPoint(x, y);
     if (!range) return null;
@@ -229,7 +238,10 @@ function getClickedWordWithHTML(element, x, y) {
         return null;
     }
 
-    const fullText = getFullTextFromElement(parentElement);
+    // Получаем текст без HTML-тегов
+    const fullText = parentElement.textContent;
+
+    // Вычисляем смещение в тексте без учета HTML-тегов
     const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
     if (globalOffset === -1) {
         console.error('Не удалось вычислить глобальное смещение.');
@@ -252,19 +264,6 @@ function getClickedWordWithHTML(element, x, y) {
     return null;
 }
 
-// Функция для получения полного текста из элемента, включая все текстовые узлы
-function getFullTextFromElement(element) {
-    const textNodes = [];
-    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
-
-    let node;
-    while ((node = walker.nextNode())) {
-        textNodes.push(node.textContent);
-    }
-
-    return textNodes.join(' ').replace(/\s+/g, ' ').trim(); // Удаляем лишние пробелы
-}
-
 // Функция для вычисления глобального смещения клика в полном тексте
 function calculateOffsetWithHTML(element, targetNode, targetOffset) {
     let offset = 0;
@@ -280,6 +279,19 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
 
     console.log('Целевой узел не найден.');
     return -1; // Возвращаем ошибку, если узел не найден
+}
+
+// Функция для получения полного текста из элемента, включая все текстовые узлы
+function getFullTextFromElement(element) {
+    const textNodes = [];
+    const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+
+    let node;
+    while ((node = walker.nextNode())) {
+        textNodes.push(node.textContent);
+    }
+
+    return textNodes.join(' ').replace(/\s+/g, ' ').trim(); // Удаляем лишние пробелы
 }
 
 // Пример обработки клика на элемент

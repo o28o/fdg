@@ -35,9 +35,9 @@ function createPopup() {
     (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
       parseInt(savedWindowHeight, 10) !== currentWindowHeight)
   ) {
-    const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft'];
+    const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight'];
     keys.forEach(key => localStorage.removeItem(key));
- //  windowWidth', 'windowHeight' 
+    
   }
 
   // Сохраняем текущие размеры окна
@@ -91,26 +91,16 @@ function createPopup() {
   }
 
   // Перетаскивание окна
-let isDragging = false;
+  let isDragging = false;
   let startX, startY, initialLeft, initialTop;
-  let isFirstDrag = true;  // новая переменная для отслеживания первого перемещения
 
+  // Обработчик нажатия для мыши (десктоп)
   function startDrag(e) {
     isDragging = true;
-    
-    // Добавить этот блок для первого перемещения
-    if (isFirstDrag) {
-      const rect = popup.getBoundingClientRect();
-      popup.style.transform = 'none';  // убираем transform, который центрирует окно
-      popup.style.top = rect.top + 'px';
-      popup.style.left = rect.left + 'px';
-      isFirstDrag = false;
-    }
-
-    startX = e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
-    startY = e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
-    initialLeft = parseInt(popup.style.left, 10);
-    initialTop = parseInt(popup.style.top, 10);
+    startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
+    startY = e.clientY || e.touches[0].clientY;
+    initialLeft = parseInt(popup.style.left || 0, 10);
+    initialTop = parseInt(popup.style.top || 0, 10);
     e.preventDefault();
   }
 

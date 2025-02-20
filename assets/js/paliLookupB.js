@@ -20,6 +20,7 @@ function createPopup() {
   const popup = document.createElement('div');
   popup.classList.add('popup');
   popup.style.position = 'fixed';
+  
 
   // Проверка параметров окна браузера
   const currentWindowWidth = window.innerWidth;
@@ -45,17 +46,25 @@ function createPopup() {
   localStorage.setItem('windowHeight', currentWindowHeight);
 
   // Устанавливаем сохранённые размеры и позицию, если они есть
+  
+
+  
   const savedWidth = localStorage.getItem('popupWidth');
   const savedHeight = localStorage.getItem('popupHeight');
   const savedTop = localStorage.getItem('popupTop');
   const savedLeft = localStorage.getItem('popupLeft');
+ 
+  
 console.log('loaded: ' + savedTop +  'and ' + savedLeft);
 
   if (savedWidth) popup.style.width = savedWidth;
   if (savedHeight) popup.style.height = savedHeight;
   if (savedTop) popup.style.top = savedTop;
-  if (savedLeft) popup.style.left = savedLeft;
-
+  if (savedLeft) 
+  {
+    popup.style.left = savedLeft;
+  } 
+  
   const closeBtn = document.createElement('button');
   closeBtn.classList.add('close-btn');
   closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
@@ -95,14 +104,22 @@ console.log('loaded: ' + savedTop +  'and ' + savedLeft);
   // Перетаскивание окна
   let isDragging = false;
   let startX, startY, initialLeft, initialTop;
-//let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true;
+let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true;
+
+    if (isFirstDrag) {
+      popup.style.top = '50%';
+  popup.style.left = '50%';
+  popup.style.width = '80%';
+  popup.style.height = '80%';
+  popup.style.transform = 'translate(-50%, -50%)';
+}
 
   // Обработчик нажатия для мыши (десктоп)
   function startDrag(e) {
     isDragging = true;
     
       // Добавить этот блок для первого перемещения
-  /*  if (isFirstDrag) {
+    if (isFirstDrag) {
       const rect = popup.getBoundingClientRect();
       popup.style.transform = 'none';  // убираем transform, который центрирует окно
       popup.style.top = rect.top + 'px';
@@ -111,7 +128,7 @@ console.log('loaded: ' + savedTop +  'and ' + savedLeft);
     // Сохраняем состояние isFirstDrag в sessionStorage
     localStorage.setItem('isFirstDrag', isFirstDrag);
     }  
-   */ 
+   
     
     startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
     startY = e.clientY || e.touches[0].clientY;

@@ -46,9 +46,7 @@ function createPopup() {
   localStorage.setItem('windowHeight', currentWindowHeight);
 
   // Устанавливаем сохранённые размеры и позицию, если они есть
-  
 
-  
   const savedWidth = localStorage.getItem('popupWidth');
   const savedHeight = localStorage.getItem('popupHeight');
   const savedTop = localStorage.getItem('popupTop');
@@ -91,15 +89,6 @@ console.log('loaded: ' + savedTop +  'and ' + savedLeft);
   // Добавляем popup и overlay на страницу
   document.body.appendChild(overlay);
   document.body.appendChild(popup);
-
-  // Функция для сохранения позиции и размеров
-  function savePopupState() {
-    localStorage.setItem('popupWidth', popup.style.width);
-    localStorage.setItem('popupHeight', popup.style.height);
-    localStorage.setItem('popupTop', popup.style.top);
-    localStorage.setItem('popupLeft', popup.style.left);
-    console.log('savedstates');
-  }
 
   // Перетаскивание окна
   let isDragging = false;
@@ -169,10 +158,11 @@ function moveDrag(e) {
   popup.style.resize = 'both';
   popup.style.overflow = 'auto';
 
-  const resizeObserver = new ResizeObserver(() => {
+const resizeObserver = new ResizeObserver(() => {
     savePopupState();
   });
-  resizeObserver.observe(popup);
+   resizeObserver.observe(popup);
+  
 
   return { overlay, popup, closeBtn, iframe };
 }
@@ -180,12 +170,21 @@ function moveDrag(e) {
 // Вставка popup на страницу
 const { overlay, popup, closeBtn, iframe } = createPopup();
 
+  // Функция для сохранения позиции и размеров
+  function savePopupState() {
+    localStorage.setItem('popupWidth', popup.style.width);
+    localStorage.setItem('popupHeight', popup.style.height);
+    localStorage.setItem('popupTop', popup.style.top);
+    localStorage.setItem('popupLeft', popup.style.left);
+  console.log('savedstates was called');
+  }
+
 // Закрытие popup при нажатии на кнопку или на overlay
 closeBtn.addEventListener('click', () => {
   popup.style.display = 'none';
   overlay.style.display = 'none';
   iframe.src = ''; // Очищаем iframe
-  resizeObserver.disconnect();
+ // resizeObserver.disconnect();
 });
 
 overlay.addEventListener('click', () => {
@@ -245,7 +244,7 @@ document.addEventListener('click', function(event) {
                 iframe.src = url;
                 popup.style.display = 'block';
                 overlay.style.display = 'block';
-                savePopupState();
+              savePopupState();
             }
         }
     }
@@ -257,7 +256,7 @@ function getClickedWordWithHTML(element, x, y) {
 
     const parentElement = element.closest('.pli-lang');
     if (!parentElement) {
-        console.log('Родительский элемент с классом pli-lang не найден.');
+      //  console.log('Родительский элемент с классом pli-lang не найден.');
         return null;
     }
 
@@ -267,18 +266,18 @@ function getClickedWordWithHTML(element, x, y) {
     // Вычисляем смещение в тексте без учета HTML-тегов
     const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
     if (globalOffset === -1) {
-        console.error('Не удалось вычислить глобальное смещение.');
+       // console.error('Не удалось вычислить глобальное смещение.');
         return null;
     }
 
-    console.log('Смещение в полном тексте:', globalOffset);
+   // console.log('Смещение в полном тексте:', globalOffset);
 
     // Используем обновленное регулярное выражение для поиска слова
     const regex = /[^\s,;.!?()]+/g; // Регулярное выражение, игнорирующее пробелы и знаки препинания
     let match;
     while ((match = regex.exec(fullText)) !== null) {
         if (match.index <= globalOffset && regex.lastIndex >= globalOffset) {
-            console.log('Найденное слово:', match[0]);
+           // console.log('Найденное слово:', match[0]);
             return match[0];
         }
     }
@@ -300,7 +299,7 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
         offset += node.textContent.length;
     }
 
-    console.log('Целевой узел не найден.');
+ //   console.log('Целевой узел не найден.');
     return -1; // Возвращаем ошибку, если узел не найден
 }
 
@@ -323,7 +322,7 @@ document.addEventListener('click', (event) => {
     if (clickedWord) {
         console.log('Слово по клику:', clickedWord);
     } else {
-        console.log('Слово не определено');
+ //       console.log('Слово не определено');
     }
 });
 

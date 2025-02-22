@@ -1,4 +1,3 @@
-/* css gathered into sections 20180313 */
 
 /* font converted using font-converter.net. thank you! */
 @font-face {
@@ -46,7 +45,7 @@ body {
 	z-index:1;
  max-width: 1640px;
  max-height: auto;
- margin: 10px 10px 10px 10px;
+ margin: 2px 2px 2px 2px;
  border-top-style: 1px solid #fff;
  border-right-style: 1px solid #fff;
  border-bottom-style: none;
@@ -283,20 +282,7 @@ p, .p {
 		font-weight: bold;
 	}
 }
-/* ================= used only in bmc ================= */
 
-ul, ol { margin-bottom: 0.5em; margin-top:0; }
-li { padding: 0; margin: 0 0 .5em 0 }
-li.single { margin:0; }
-ul.dec, ol.dec { list-style-type:decimal; }
-ul.alph, ol.alph { list-style-type: lower-alpha; }
-ul.dot { list-style-type: disc; }
-ul.circ { list-style-type: circle; }
-ul.circ li { margin-bottom:0; }
-ul.none { list-style-type:none;}
-blockquote { margin: 0 2em .5em 2em}
-
-/* ================= end of bmc stuff ================= */
 /* unvisited link */
 a:link {
   color: blue;

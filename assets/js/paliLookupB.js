@@ -278,7 +278,7 @@ function getClickedWordWithHTML(element, x, y) {
     console.log('Смещение в полном тексте:', globalOffset);
 
     // Используем обновленное регулярное выражение для поиска слова
-    const regex = /[^\s,;.!?()]+/g; // Регулярное выражение, игнорирующее пробелы и знаки препинания
+    const regex = /[^\s,;.–—!?()]+/g; // Регулярное выражение, игнорирующее пробелы и знаки препинания
     let match;
     while ((match = regex.exec(fullText)) !== null) {
         if (match.index <= globalOffset && regex.lastIndex >= globalOffset) {

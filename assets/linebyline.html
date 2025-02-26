@@ -1110,26 +1110,30 @@ dataArray.forEach(([key, value], index) => {
             }
         }
 
-        // Если есть доступные файлы, предлагаем пользователю выбрать один
-        if (availableUrls.length > 0) {
-            let selectionMessage = 'Выберите перевод:\n';
-            availableUrls.forEach((url, index) => {
-                selectionMessage += `${index + 1}: ${url}\n`;  // Создаём сообщение с выбором
-            });
+if (availableUrls.length > 0) {
+    if (availableUrls.length === 1) {
+        return availableUrls[0]; // Если только один вариант, сразу выбираем его
+    }
 
-            const userChoice = prompt(selectionMessage);  // Предлагаем пользователю выбрать один из вариантов
-            const selectedUrl = availableUrls[userChoice - 1];  // Индексация массива начинается с 0
+    // Если вариантов больше одного, показываем выбор
+    let selectionMessage = 'Выберите перевод:\n';
+    availableUrls.forEach((url, index) => {
+        selectionMessage += `${index + 1}: ${url}\n`;
+    });
 
-            if (selectedUrl) {
-                return selectedUrl;
-            } else {
-                alert("Неверный выбор.");
-                return null;
-            }
-        } else {
-            alert("Нет доступных переводов.");
-            return null;
-        }
+    const userChoice = prompt(selectionMessage);
+    const selectedUrl = availableUrls[userChoice - 1];
+
+    if (selectedUrl) {
+        return selectedUrl;
+    } else {
+        alert("Неверный выбор.");
+        return null;
+    }
+} else {
+    alert("Нет доступных переводов.");
+    return null;
+}
     }
 
     async function loadFileContent(url) {

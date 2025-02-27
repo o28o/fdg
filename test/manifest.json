@@ -1,0 +1,20 @@
+{
+    "short_name": "PWA Test",
+    "name": "Тестовая PWA",
+    "icons": [
+        {
+            "src": "/test/icon-192x192.png",  <!-- Обновленный путь -->
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/test/icon-512x512.png",  <!-- Обновленный путь -->
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/test/",  <!-- Обновленный путь -->
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+}

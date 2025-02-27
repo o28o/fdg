@@ -975,4 +975,18 @@ $dpdpart = '<h3>Download DPD</h3>
 ';
 
 }
+
+if (strpos($_SERVER['REQUEST_URI'], "/th") !== false){
+$lang = "th";
+
+$htmllang = "th";
+$mainpage = '/th';
+$mainpagenoslash = '/th';
+$mainscpage = $mainpage . '/sc';
+$mainreadlink = '/th/read.php';
+
+}
+
+
+
 ?>

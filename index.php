@@ -20,6 +20,17 @@ include 'scripts/opentexts.php';
 <meta property="og:title" content="find.Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 
+<?php
+if ( $lang == "ru" ) {
+echo '<link rel="manifest" href="/assets/manifest-ru.json">'; 
+}
+else {
+echo  '<link rel="manifest" href="/assets/manifest.json">'; 
+} 
+?>
+
+
+
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
@@ -65,6 +76,7 @@ include 'scripts/opentexts.php';
     console.log("After update:", location.href);
 }
 </script>
+
 
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
@@ -1000,6 +1012,43 @@ foreach ($slides as $index => $slide) {
 <p class="lead mt-4">
 <?php echo $poweredby; ?>
  <a class="text-white text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippoweredby;?>"> *</a></p>
+ 
+    <button class="btn btn-primary text-center" id="installButton" style="display:none;"><?php echo $iqnstallpwa;?></button>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/assets/sw.js')
+                .then(function(registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                })
+                .catch(function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+        }
+
+        let deferredPrompt;
+        const installButton = document.getElementById('installButton');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installButton.style.display = 'block';
+        });
+
+        installButton.addEventListener('click', () => {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('Пользователь принял предложение установки');
+                } else {
+                    console.log('Пользователь отклонил предложение установки');
+                }
+                deferredPrompt = null;
+            });
+        });
+    </script>
+ 
+ 
                     </div>
                 </div>
             </div>

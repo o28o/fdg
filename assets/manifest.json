@@ -1,0 +1,20 @@
+{
+    "short_name": "FDG",
+    "name": "Find.dhamma.gift",
+    "icons": [
+        {
+            "src": "/assets/img/icon-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/img/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+}

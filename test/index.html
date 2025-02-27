@@ -3,28 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовая PWA</title>
-    <link rel="manifest" href="/test/manifest.json"> <!-- Обновленный путь -->
+    <title>Find.dhamma.gift</title>
+    <link rel="manifest" href="/assets/manifest.json">
+<script async id="weppstore-install-script" src="https://cdn.jsdelivr.net/gh/ryxxn/pwa-install-prompt@main/index.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
+        /* Стили для всплывающего окна */
+        #installPopup {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        #installPopup button {
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Добро пожаловать на тестовую PWA!</h1>
+    <h1>Добро пожаловать на Find.dhamma.gift!</h1>
     <p>Это пример страницы для установки PWA.</p>
+
+    <!-- Всплывающее окно для установки PWA -->
+    <div id="installPopup">
+        <p>Хотите установить это приложение на устройство?</p>
+        <button id="installConfirm">Установить</button>
+        <button id="installCancel">Отмена</button>
+    </div>
+
+    <!-- Кнопка для ручной установки -->
     <button id="installButton" style="display:none;">Установить PWA</button>
 
     <script>
+        let deferredPrompt;
+
+        // Показываем всплывающее окно при срабатывании события beforeinstallprompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+
+            // Показываем всплывающее окно
+            const installPopup = document.getElementById('installPopup');
+            installPopup.style.display = 'block';
+
+            // Обработка нажатия "Установить"
+            document.getElementById('installConfirm').addEventListener('click', () => {
+                // Запускаем стандартное окно установки
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('Пользователь принял предложение установки');
+                    } else {
+                        console.log('Пользователь отклонил предложение установки');
+                    }
+                    deferredPrompt = null;
+                    installPopup.style.display = 'none'; // Скрываем окно
+                });
+            });
+
+            // Обработка нажатия "Отмена"
+            document.getElementById('installCancel').addEventListener('click', () => {
+                installPopup.style.display = 'none'; // Скрываем окно
+            });
+        });
+
+        // Регистрируем Service Worker
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/test/sw.js') // Обновленный путь
+            navigator.serviceWorker.register('/assets/sw.js')
                 .then(function(registration) {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 })
@@ -33,25 +87,20 @@
                 });
         }
 
-        let deferredPrompt;
+        // Логика для кнопки установки PWA (ручная установка)
         const installButton = document.getElementById('installButton');
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            installButton.style.display = 'block';
-        });
-
         installButton.addEventListener('click', () => {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('Пользователь принял предложение установки');
-                } else {
-                    console.log('Пользователь отклонил предложение установки');
-                }
-                deferredPrompt = null;
-            });
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('Пользователь принял предложение установки');
+                    } else {
+                        console.log('Пользователь отклонил предложение установки');
+                    }
+                    deferredPrompt = null;
+                });
+            }
         });
     </script>
 </body>

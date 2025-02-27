@@ -1,7 +1,7 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
-
+$iqnstallpwa = "Установить PWA";
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainpagenoslash = '/ru';
@@ -523,6 +523,7 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 }
 else {
 $lang = "en";
+$iqnstallpwa = "Install PWA";
 $htmllang = "en";
 $mainpage = '/';
 $mainpagenoslash = '';

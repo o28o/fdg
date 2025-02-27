@@ -1,9 +1,11 @@
-const CACHE_NAME = 'pwa-test-v1';
+const CACHE_NAME = 'pwa-fdg-v1';
 const urlsToCache = [
-    '/test/',  // Обновленный путь
-    '/test/index.html',  // Обновленный путь
-    '/test/icon-192x192.png',  // Обновленный путь
-    '/test/icon-512x512.png'  // Обновленный путь
+    '/',
+    '/ru/',
+    '/ru/index.php',
+    '/index.php',
+    '/assets/img/icon-192x192.png',
+    '/assets/img/icon-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {

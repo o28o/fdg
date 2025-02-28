@@ -415,23 +415,27 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
-<!-- /* <?php
+ <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-<strong>Отличная новость!</strong> 
-
-Поиск по "Всем совпадениям" на Пали, Англ и Русском стал намного быстрее. "Определения", "Сравнения" и др. работают, но как прежде медленно. Отчет по словам "Words" доступен в тестовом режиме только для Пали. Опция "исключить" пока недоступна. Если обнаружите ошибки, пожалуйста, <a class="alert-link" href="#contacts"> сообщите через контакты <i class="fa-regular fa-comment"></i></a>
+Добавить <strong>Find.dhamma.gift</strong> на Домашний Экран?
+    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
+   <br>
+   <strong>Android</strong> Chrome<br>
+   Настройки -> добавить на Главную<br>
+   <strong>iOS</strong> Safari<br>  
+   Поделиться -> добавить на Главную. 
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } else {
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-<strong>Great news!</strong> 
-
-"All matches" search in Pali, English and Russian has become much faster. "Definitions", "Similes" etc are working but slowly as before. 
-
-"Words" report available for Pali in text mode. "Exclude" option is not available yet. 
-
-If you encounter any errors, please use <a class="alert-link" href="#contacts">contacts to report <i class="fa-regular fa-comment"></i></a>
+Add <strong>Find.dhamma.gift</strong> to your Home Screen?
+    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
+   <br>
+   <strong>Android</strong> Chrome<br>
+   Settings -> Add to Home Screen<br>
+   <strong>iOS</strong> Safari<br>
+  Share -> Add to Home Screen.
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 }
@@ -455,7 +459,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-</script> */ -->
+</script>
 
 <div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
   <div id="response"></div>
@@ -1012,54 +1016,58 @@ foreach ($slides as $index => $slide) {
 <p class="lead mt-4">
 <?php echo $poweredby; ?>
  <a class="text-white text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippoweredby;?>"> *</a></p>
- 
-    <button class="btn btn-primary text-center" id="installButton" style="display:none;"><?php echo $iqnstallpwa;?></button>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/assets/sw.js')
-                .then(function(registration) {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                })
-                .catch(function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-        }
-
-        let deferredPrompt;
-        const installButton = document.getElementById('installButton');
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            installButton.style.display = 'block';
-        });
-
-        installButton.addEventListener('click', () => {
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('Пользователь принял предложение установки');
-                } else {
-                    console.log('Пользователь отклонил предложение установки');
-                }
-                deferredPrompt = null;
-            });
-        });
-    </script>
- 
- 
                     </div>
                 </div>
             </div>
         </footer>
         <!-- Copyright Section-->
-<div class="copyright py-4 text-center text-white">
-<div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/assets/readylinebyline.html">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
+<div class="copyright py-4 text-center text-white " >
+<div class="container">    <button class="btn btn-secondary text-center installButton" id="" style="display:none;"><?php echo $installpwa;?></button> <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/assets/readylinebyline.html">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
 <a class="text-white text-decoration-none" href="/assets/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small></div>
         </div>
         <!-- Portfolio Modals-->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/assets/sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      })
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  }
 
+  let deferredPrompt;
+  const installButtons = document.querySelectorAll('.installButton');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // Показываем все кнопки с классом installButton
+    installButtons.forEach(button => {
+      button.style.display = 'inline-block';
+    });
+  });
+
+  // Добавляем обработчик события click для каждой кнопки
+  installButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Пользователь принял предложение установки');
+          } else {
+            console.log('Пользователь отклонил предложение установки');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+  });
+</script>
 
 <!-- Portfolio Modal 3-->
 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">

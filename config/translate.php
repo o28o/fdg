@@ -1,7 +1,8 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
-$iqnstallpwa = "Установить PWA";
+$installpwa = "Установить FDG";
+$installpwalong = "Установить FDG на главный экран";
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainpagenoslash = '/ru';
@@ -523,7 +524,8 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 }
 else {
 $lang = "en";
-$iqnstallpwa = "Install PWA";
+$installpwa = "Install FDG";
+$installpwalong = "Install FDG on the main screen";
 $htmllang = "en";
 $mainpage = '/';
 $mainpagenoslash = '';

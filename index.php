@@ -445,9 +445,22 @@ Add <strong>Find.dhamma.gift</strong> to your Home Screen?
 document.addEventListener("DOMContentLoaded", function() {
     var infoUpdate = document.getElementById("infoUpdate");
 
-    // Проверяем, есть ли запись в localStorage
-    if (!localStorage.getItem("infoUpdateClosed")) {
-        infoUpdate.style.display = "block"; // Если нет, показываем его
+    // Целевое посещение (можно изменить на нужное число)
+    var targetVisit = 5;
+
+    // Получаем текущее количество посещений из localStorage
+    var visitCount = localStorage.getItem("visitCount") || 0;
+    visitCount = parseInt(visitCount);
+
+    // Увеличиваем счетчик посещений на 1, только если не достигнуто целевое значение
+    if (visitCount < targetVisit) {
+        visitCount += 1;
+        localStorage.setItem("visitCount", visitCount);
+    }
+
+    // Проверяем, если это целевое посещение и окно не было закрыто ранее
+    if (visitCount === targetVisit && !localStorage.getItem("infoUpdateClosed")) {
+        infoUpdate.style.display = "block"; // Показываем окно
     }
 
     // Добавляем обработчик события для кнопки закрытия
@@ -458,7 +471,6 @@ document.addEventListener("DOMContentLoaded", function() {
         infoUpdate.style.display = "none";
     });
 });
-
 </script>
 
 <div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>

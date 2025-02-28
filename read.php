@@ -21392,7 +21392,7 @@ echo '
 	
       <div class="collapse " id="bupmCollapse">
       ';
-include $basedir . "/assets/texts/vinaya/bupm.php";
+include $basedir . "/assets/texts/bupm.php";
 
 ?>
 <!-- bi-pm -->
@@ -21404,7 +21404,7 @@ echo '
 	
       <div class="collapse " id="bipmCollapse">
       ';
-include $basedir . "/assets/texts/vinaya/bipm.php";
+include $basedir . "/assets/texts/bipm.php";
 
 ?>
   </div>

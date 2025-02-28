@@ -31,6 +31,8 @@ const currentPath = window.location.pathname;
 // Перенаправляем на соответствующий язык, только если пользователь не на целевой странице
 if (siteLanguage === 'ru' && currentPath !== '/ru/') {
     window.location.href = '/ru/';
+} else if (siteLanguage === 'th' && currentPath !== '/th/') {
+    window.location.href = '/th/';
 }
 </script>
 

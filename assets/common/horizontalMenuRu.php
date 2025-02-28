@@ -244,7 +244,7 @@ echo '<!--
   
          <li>
          <div class="dropdown-item ">
-          <a class="text-black" target="" href="/th/?q=">Fdg</a> 
+          <a class="text-black" target="" onclick="localStorage.setItem(\'siteLanguage\', \'th\');" href="/th/?q=">Fdg</a> 
          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
                   <a class="text-black" target="" href="' . $mainscpage . '"> индекс</a>   

@@ -19,17 +19,20 @@ include 'scripts/opentexts.php';
 <meta property="og:type" content="website" />
 <meta property="og:title" content="find.Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
+<link rel="manifest" href="/assets/manifest.json">
 
-<?php
-if ( $lang == "ru" ) {
-echo '<link rel="manifest" href="/assets/manifest-ru.json">'; 
+<script>
+// Проверяем значение siteLanguage в localStorage
+const siteLanguage = localStorage.getItem('siteLanguage');
+
+// Получаем текущий путь
+const currentPath = window.location.pathname;
+
+// Перенаправляем на соответствующий язык, только если пользователь не на целевой странице
+if (siteLanguage === 'ru' && currentPath !== '/ru/') {
+    window.location.href = '/ru/';
 }
-else {
-echo  '<link rel="manifest" href="/assets/manifest.json">'; 
-} 
-?>
-
-
+</script>
 
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="find.Dhamma.gift" />

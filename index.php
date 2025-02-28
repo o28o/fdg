@@ -33,6 +33,8 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
     window.location.href = '/ru/';
 } else if (siteLanguage === 'th' && currentPath !== '/th/') {
     window.location.href = '/th/';
+} else if (siteLanguage === 'en' && currentPath !== '/') {
+    window.location.href = '/';
 }
 </script>
 

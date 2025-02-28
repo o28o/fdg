@@ -58,7 +58,7 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), 
 <strong>SC.net</strong> - поиск в англ переводах 4 никай SuttaCentral.net
 <br><br>
 <strong>Theravada.ru</strong> - поиск в русских переводах сайта theravada.ru';
-$tooltipknread = 'Основная часть KN';
+$tooltipknread = 'Часть KN';
 $tooltipsearchtype = '<strong>По умолчанию</strong> - все совпадения сгруппированные по текстам<br><br>
 <strong>Слова</strong> - результаты сгруппированы по словам (работает только для Пали и 4 Никай)<br><br>
     <strong>Определения</strong> - Поиск нескольких главных определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Работает только для определений данных стандартными фразами. <br><br>
@@ -582,7 +582,7 @@ $tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Ni
 <strong>SC.net</strong> - search in SuttaCentral.net english translations
  <br><br>
 <strong>Theravada.ru</strong> - search on theravada.ru in Russian translations';
-$tooltipknread = 'Main part of KN';
+$tooltipknread = 'Part of KN';
 $tooltipsearchtype = '<strong>Default</strong> - all matches grouped by texts<br><br>
 <strong>Words</strong> - search results grouped by words (works only for Pali in 4 Nikayas)<br><br>
 <strong>Definitions</strong> - Search for several main definitions in 4 main Nikayas in Pali. What is it, how many and what types, metaphors. Works only if definition was given in standard phrases. <br><br>

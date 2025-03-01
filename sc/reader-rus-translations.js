@@ -193,24 +193,31 @@ return {};
     
 async function fetchVariant() {
   const paths = [varpath, varpathLocal];
+  let combinedData = {}; // Объект для объединения данных
 
   for (const path of paths) {
     try {
       const response = await fetch(path);
       if (response.ok) {
-        return await response.json();
+        const data = await response.json();
+        combinedData = { ...combinedData, ...data }; // Объединяем данные
+      } else {
+        console.log(`note: no var found at ${path}`);
       }
-      console.log(`note: no var found at ${path}`);
     } catch (error) {
       console.log(`note: error fetching var ${path}`);
     }
   }
 
-  console.log('note: no var found in any path');
-  return {}; // Если все пути недоступны
+  if (Object.keys(combinedData).length === 0) {
+    console.log('note: no var found in any path');
+  }
+
+  return combinedData; // Возвращаем объединенные данные
 }
 
-const varResponse = fetchVariant();    
+// Использование
+const varResponse = fetchVariant();
     
   console.log(trnpath);
   console.log(rustrnpath);

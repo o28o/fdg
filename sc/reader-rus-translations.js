@@ -190,24 +190,27 @@ return {};
 return {};
   } 
     );
-  const varResponseRepo = fetch(varpath).then(response => response.json())    .
-  catch(error => {
-// console.log(varpath); 
- console.log('note:no var found');   
-return {};
-  } 
-    );
- 
-const varResponseLocal = fetch(varpathLocal).then(response => response.json())    .
-  catch(error => {
-// console.log(varpath); 
- console.log('note:no local var found');   
-return {};
-  } 
-    );
+    
+async function fetchVariant() {
+  const paths = [varpath, varpathLocal];
 
-var varResponse = varResponseRepo;
-//varResponse = varResponseLocal;
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return await response.json();
+      }
+      console.log(`note: no var found at ${path}`);
+    } catch (error) {
+      console.log(`note: error fetching var ${path}`);
+    }
+  }
+
+  console.log('note: no var found in any path');
+  return {}; // Если все пути недоступны
+}
+
+const varResponse = fetchVariant();    
     
   console.log(trnpath);
   console.log(rustrnpath);
@@ -522,6 +525,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
   console.log('rustrnpath', rustrnpath);
   console.log('htmlpath', htmlpath);
   console.log('varpath', varpath);
+  console.log('varpathLocal', varpath);
   
   const currentURL = window.location.href;
 const anchorURL = new URL(currentURL).hash; // Убираем символ "#"

@@ -99,19 +99,34 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
 }
 
 var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
-
+var varpathLocal = `/assets/texts/variant/${texttype}/${slugReady}_variant-pli-ms.json`
   const rootResponse = fetch(rootpath)
     .then(response => response.json());
    
   const translationResponse = fetch(trnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
-  const varResponse = fetch(varpath).then(response => response.json())    .
-  catch(error => {
- console.log('note:no var found');   
-// console.log(varpath);   
-return {};
-  } 
-    );
+async function fetchVariant() {
+  const paths = [varpath, varpathLocal];
+
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return await response.json();
+      }
+      console.log(`note: no var found at ${path}`);
+    } catch (error) {
+      console.log(`note: error fetching var ${path}`);
+    }
+  }
+
+  console.log('note: no var found in any path');
+  return {}; // Если все пути недоступны
+}
+
+const varResponse = fetchVariant();    
+
+
   Promise.all([rootResponse, translationResponse, htmlResponse, varResponse]).then(responses => {
     const [paliData, transData, htmlData, varData] = responses;
 

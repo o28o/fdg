@@ -1,0 +1,1717 @@
+  • Sanskrittexte aus den Turfanfunden 11
+
+sārvāstivāda prātimokṣasūtra
+
+Preliminary
+
+siddham
+
+niṣkrāntā anupasaṁpannāḥ samagraḥ saṁghaḥ saṁnipatitaḥ kiṁ saṁghasya
+karaṇīyam anāgatānām āyuṣmantaś chandaṁ pariśuddhiṁ cārocayata ārocite ca
+pravedayataḥ
+
+nirgatam āyuṣmanto grīṣmād ekarātrono māsaḥ saikarātrās trayo māsā
+avaśiṣṭāḥ |
+
+ākramate jarāmaraṇaṁ pralujyati śāstuḥ śāsanam vilupyate jīvitendriyaṁ |
+nirgacchati saddharmaḥ sīdati pratip...ir jāyate śaithilyaṁ | vivṛyante
+apāyadvārā | pithīyante amṛtadvārā cchidyate dharmasetur bhidyate dharmapotaḥ
+saṁsīdati dharmaplavo | niśāmyate dharmolkā |
+
+utpāṭyate dharmavṛkṣaḥ prapatati dharmadhvajaḥ ucchrapyate māradhvajaḥ
+śuṣyate dharmasamudro vikīryate jñānasumerur astaṁgacchaṁti vādiśārdūlā + +
+karṇādhārāḥ satpathopadeśakāḥ
+
+acirād dhi manuṣyāṇāṁ mṛgasaṁjñā bh. .i + + + ti tasmāt sarvair
+āyuṣmadbhir udvignaiḥ saṁvegam āpannaiḥ
+tasyānuttaradaśabaladharadharmarājacakravartinaḥ
+paurāṇasucaritakarmavipākanirjātasya
+mṛṣāvādapaiśunyapāruṣyābaddhapralāpavivarjitasya satyānuvartivacana + + +
+māsāvavādānuśāsanaṁ śrotavyam
+
+apramādenāyuṣmadbhir yogaḥ karaṇīyaḥ apramādādhigatā hi tathāgatānām
+arhatāṁ samyaksaṁbuddhānāṁ bodhir ye cāpy anye kuśalā dharmā bodhapakṣyāḥ ||
+
+Introductory verses
+
+    śāsayatīti hi śāstraṁ proktaṁ samyak ca śāsayaty eṣaḥ
+    mokṣāya prātimokṣas tasmāc chāstraṁ pravaram etat Verse 1 |
+
+    kāryākāryam avācyaṁ vācyaṁ yac caiva bhikṣuṇā yuktam
+    tad iha nikhilena muninā prakāśitaṁ prātimokṣe ’smiṁ Verse 2 |
+
+    duścaritād vārayati trividhāt trividhe śubhe niyojayati |
+    bṛṁhayati kuśalapakṣaṁ kṣapayati doṣāṁ guṇasapatnāṁ Verse 3 |
+
+    mithyājīvam anāryaṁ vināśayati durgatipraṇetāram
+    svargāpavargamārgaṁ viśodhayati cānupūrveṇa Verse 4 |
+
+    yāvat sthāsyaty eṣaḥ prakāśitas tena lokanāthena |
+    tāvat sthāsyati dharmo loke ’smiṁ śākyasiṁhasya Verse 5 |
+
+    tasmād ātmahitārthaṁ sthityarthaṁ śāsanasya caiva ciram |
+    śṛṇuta muhūrtam avahitā vakṣyāmi prātimokṣam aham Verse 6 | ||
+
+nidānam
+
+śṛṇotu bhadantaḥ saṁghaḥ adya saṁghasya poṣathaḥ pāṁcadaśikaḥ sacet
+saṁghasya prāptakālaḥ kṣamate ājñā ca saṁghasya yat samagraḥ saṁgho ’dya
+poṣathaṁ kuryāt prātimokṣasūtram uddiśed eṣā jñaptiḥ poṣathaṁ vayam āyuṣmaṁtaḥ
+kariṣyāmaḥ prātimokṣasūtram uddekṣyāmas tat sarve saṁtaḥ śṛṇuta sādhu ca suṣṭhu
+ca manasikuruta yasya vaḥ syāt saty āpattiḥ sāviṣkartavyā asatyām āpattau
+tūṣṇīṁ bhavitavyaṁ tūṣṇīṁbhāvena vayam āyuṣmantaḥ pariśuddhā iti vedayiṣyāmo
+yathā ca pratyekapṛṣṭasya bhikṣor vyākaraṇaṁ bhavaty evam evaivaṁrūpāyāṁ
+bhikṣupariṣadi yāvat trir apy anuśrāvaṇā bhavati | yaḥ punar bhikṣur
+evaṁrūpāyāṁ bhikṣupariṣadi yāvat trir apy anuśrāvyamāṇe smaraṁ satīm āpattiṁ
+nāviṣkaroti saṁprajānamṛṣāvādo ’sya bhavati saṁprajānamṛṣāvādas tv āyuṣmanta
+antarāyiko dharma ity uktaṁ bhagavatā tasmād āpannena bhikṣuṇā viśuddhiprekṣiṇā
+smaratā satī āpattir āviṣkartavyā | āviṣkṛtvāsya phāṣaṁ bhavati nānāviṣkṛtvā ||
+
+uddiṣṭaṁ mayāyuṣmantaḥ prātimokṣasūtroddeśasya nidānaṁ | tatrāham
+āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit
+sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam evāhaṁ dhārayāmi
+||
+
+4 pārājikā rules
+
+ime punar āyuṣmantaś catvāraḥ pārājikā dharmā anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchanti |
+
+pārājika 1
+
+yaḥ punar bhikṣur bhikṣubhiḥ sārdhaṁ śikṣāsāmīcisamāpannaḥ śikṣām
+apratyākhyāya śikṣādaurbalyaṁ vānāviṣkṛtvā maithunaṁ dharmaṁ pratiṣeveta
+antatas tīryagyonigatayāpi sārdham ayaṁ bhikṣuḥ pārājiko bhavaty asaṁvāsyaḥ 1
+
+pārājika 2
+
+yaḥ punar bhikṣur adattaṁ steyasaṁkhyātam ādadyād yathārūpeṇādattādānena
+rājā hy enaṁ gṛhītvā hanyād vā badhnīyād vā pravāsayed vā evaṁ cainaṁ vadec
+coro ’si bālo ’si mūḍho ’si steyo ’sīty evaṁrūpaṁ bhikṣur adattam ādadānaḥ
+pārājiko bhavaty asaṁvāsyaḥ 2
+
+pārājika 3
+
+yaḥ punar bhikṣur manuṣyaṁ svahastena saṁcintya jīvitād vyaparopayec
+chastraṁ vainam ādhārayec chastrādhārakaṁ vāsya paryeṣayed evaṁ vainaṁ vaded
+dhambhoḥ puruṣa kiṁ tavānena pāpakena durjīvitena mṛtaṁ te jīvitād varam iti
+cittānumataṁ cittasaṁkalpitam anekaparyāyeṇa maraṇāya samādāpayen maraṇavarṇaṁ
+vāsyānusaṁvarṇayet sa ca tenopakrameṇa kālaṁ kuryād ayam api bhikṣuḥ pārājiko
+bhavaty asaṁvāsyaḥ 3
+
+pārājika 4
+
+yaḥ punar bhikṣur anabhijānann aparijānann uttarimanuṣyadharmam
+alamāryaviśeṣādhigamaṁ jñānaṁ vā darśanaṁ vā pratijānīyāj jānāmīti paśyāmīti so
+’pareṇa samayena samanuyujyamāno vā asamanuyujyamāno vā evaṁ vaded ajānamāno
+’ham avocaṁ jānāmīty apaśyann avocaṁ paśyāmīti tucchaṁ mṛṣā vilapitam
+anyatrābhimānād ayam api bhikṣuḥ pārājiko bhavaty asaṁvāsyaḥ 4 ||
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uddiṣṭā mayāyuṣmantaś catvāraḥ pārājikā dharmā yeṣāṁ bhikṣur
+anyatamānyatamaṁ dharmam āpanno na labhate bhikṣubhiḥ sārdhaṁ saṁvāsaṁ vā
+saṁbhogaṁ vā yathā pūrvaṁ tathā paścāt pārājiko bhavaty asaṁvāsyaḥ tatrāham
+āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit
+sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam evāhaṁ dhārayāmi
+||
+
+2. saṁghāvaśeṣā
+
+ime punar āyuṣmantas trayodaśa saṁghāvaśeṣā dharmā anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchanti |
+
+saṁghāvaśeṣa 1
+
+saṁcintya śukravisargo ’nyatra svapnāntarāt saṁghāvaśeṣaḥ 1
+
+saṁghāvaśeṣa 2
+
+yaḥ punar bhikṣur udīrṇavipariṇatena cittena mātṛgrāmeṇa sārdhaṁ
+kāyasaṁsargaṁ samāpadyeta hastagrahaṇaṁ vā veṇīgrahaṇaṁ vā anyatamānyatamasya
+vāṅgajātasyāmarśanaṁ parāmarśanaṁ vā saṁghāvaśeṣaḥ 2
+
+saṁghāvaśeṣa 3
+
+yaḥ punar bhikṣur udīrṇavipariṇatena cittena mātṛgrāmaṁ duṣṭhulayā vācā
+ābhāṣeta pāpikayā asabhyayā maithunopasaṁhitayā yathāpi tad yuvā yuvatīm iti
+saṁghāvaśeṣaḥ 3
+
+saṁghāvaśeṣa 4
+
+yaḥ punar bhikṣur udīrṇavipariṇatena cittena mātṛgrāmasyāntike ātmanaḥ
+kāyaparicaryāyā varṇaṁ bhāṣeta eṣāgryā bhagini paricaryāṇāṁ yan mādṛśaṁ bhikṣuṁ
+śīlavantaṁ kalyāṇadharmāṇaṁ brahmacāriṇam anena dharmeṇa paricared yaduta
+maithunopasaṁhitena saṁghāvaśeṣaḥ 4
+
+saṁghāvaśeṣa 5
+
+yaḥ punar bhikṣuḥ saṁcāritraṁ samāpadyeta striyā vā puruṣamatena
+puruṣasya vā strīmatena jāyātvena vā jāritvena vā antatas tatkṣaṇam api
+saṁghāvaśeṣaḥ 5
+
+saṁghāvaśeṣa 6
+
+svayācitāṁ bhikṣuṇā kuṭiṁ kārayatā asvāmikām ātmoddeśikāṁ prāmāṇikā kuṭiḥ
+kārayitavyā tatredaṁ kuṭipramāṇaṁ dīrghato dvādaśa vitastayaḥ sugatavitastyā
+tīryak saptāntaratas tena bhikṣuṇā bhikṣavo ’bhinetavyā vāstu deśayitum
+abhinītair bhikṣubhir vāstu deśayitavyam anārambhaṁ saparākramaṁ sārambhe ced
+bhikṣur vāstuny aparākrame svayācitāṁ kuṭiṁ kārayamāṇa asvāmikām ātmoddeśikāṁ
+bhikṣūn nābhinayed vāstu deśayituṁ pramāṇaṁ vātikramet saṁghāvaśeṣaḥ 6
+
+saṁghāvaśeṣa 7
+
+mahallakaṁ bhikṣuṇā vihāraṁ kārayatā sasvāmikam ātmoddeśikaṁ tena
+bhikṣuṇā bhikṣavo ’bhinetavyā vāstu deśayitum abhinītair bhikṣubhir vāstu
+deśayitavyam anāraṁbhaṁ saparākramaṁ sāraṁbhe ced bhikṣur vāstuny aparākrame
+mahallakaṁ vihāraṁ kārayamāṇaḥ sasvāmikam ātmoddeśikaṁ bhikṣūn nābhinayed
+vāstudeśanāyai saṁghāvaśeṣaḥ 7
+
+saṁghāvaśeṣa 8
+
+yaḥ punar bhikṣur duṣṭo doṣād apratītaḥ śuddhaṁ bhikṣum anāpannam
+amūlakena pārājikena dharmeṇānudhvaṁsayed apy evainaṁ brahmacaryāc cyāvayeyam
+iti tasya sādhu ca suṣṭhu ca samanuyujyamānasya samanugāhyamānasya amūlaṁ caiva
+tad adhikaraṇaṁ bhaved bhikṣuś cānudhvaṁsayitā doṣe pratitiṣṭhed doṣeṇāvocam
+iti saṁghāvaśeṣaḥ 8
+
+saṁghāvaśeṣa 9
+
+yaḥ punar bhikṣur duṣṭo doṣād apratītaḥ anyathābhāgīyasyādhikaraṇasya
+kaṁcid eva leśamātraṁ dharmam upādāya apārājikaṁ bhikṣuṁ pārājikena
+dharmeṇānudhvaṁsayed apy evainaṁ brahmacaryāc cyāvayeyam iti tasya sādhu ca
+suṣṭhu ca samanuyujyamānasya samanugāhyamānasya anyathābhāgi tad adhikaraṇaṁ
+bhaved anyathābhāgīnaś cādhikaraṇāt kaścid eva leśamātro dharma upādatto bhaved
+bhikṣuś cānudhvaṁsayitā doṣe pratitiṣṭhed doṣeṇāvocam iti saṁghavaśeṣaḥ 9
+
+saṁghāvaśeṣa 10
+
+yaḥ punar bhikṣuḥ samagrasya saṁghasya bhedāya parākramed
+bhedasaṁvartanīyaṁ vādhikaraṇaṁ samādāya vigṛhya tiṣṭhet sa bhikṣur bhikṣubhir
+evaṁ syād vacanīyo mā tvam āyuṣmaṁ samagrasya saṁghasya bhedāya parākrama mā
+bhedasaṁvartanīyam adhikaraṇaṁ samādāya vigṛhya sthāḥ sametv āyuṣmaṁ sārdhaṁ
+saṁghena samagro hi saṁghaḥ sahitaḥ saṁmodamāna avivadamāna ekāgra ekoddeśa
+ekakṣīrodakībhūtaḥ sukhaṁ phāṣaṁ viharati niḥsṛja tvam āyuṣmaṁ saṁghabhedakaraṁ
+vastu | evaṁ cet sa bhikṣur bhikṣubhir ucyamānas tad eva vastu samādāya vigṛhya
+tiṣṭhen na pratiniḥsṛjet sa bhikṣur bhikṣubhir yāvat trir api samanuśāsitavyas
+tasya vastunaḥ pratiniḥsargāya sa yāvat trir api samanuśiṣyamāṇas tad vastu
+pratiniḥsṛjed ity evaṁ kuśalaṁ no cet pratiniḥsṛjet saṁghāvaśeṣaḥ 10
+
+saṁghāvaśeṣa 11
+
+tasya ced bhikṣor bhikṣavaḥ syur anuvartino vyagravādina eko vā dvau vā
+saṁbahulā vā te tāṁ bhikṣūn evaṁ vadeyur mā yūyam āyuṣmaṁta itthaṁnāmānaṁ
+bhikṣum atra vastuniḥ kiṁcid vadantu tat kasmād dhetor dharmavādī caiṣa bhikṣur
+vinayavādī ca asmākaṁ caiṣa cchandaṁ ca ruciṁ cādāyānuvyāharati | jānaṁ caiṣa
+bhikṣur bhāṣate nājānaṁ yac cāsya bhikṣo rocate ca kṣamate ca asmākam api tad
+rocate ca kṣamate ca | te bhikṣavo bhikṣubhir evaṁ syur vacanīyāḥ naiṣa bhikṣur
+dharmavādī na vinayavādī adharmaṁ caiṣo ’vinayaṁ cādāya vigṛhyānuvyāharati niḥ
+sṛjaṁtv āyuṣmantaḥ saṁghabhedānuvartitāṁ vyagravāditāṁ samagro hi saṁghaḥ
+sahitaḥ saṁmodamāna avivadamāna ekāgra ekoddeśa ekakṣīrodakībhūtaḥ sukhaṁ
+phāṣaṁ viharati evaṁ cet te bhikṣavo bhikṣubhir ucyamānās tad eva vastu
+samādāya vigṛhya tiṣṭheyur na pratiniḥsṛjeyus te bhikṣavo bhikṣubhir yāvat trir
+api samanuśāsitavyās tasya vastunaḥ pratiniḥsargāya te yāvat trir api
+samanuśiṣyamāṇās tad vastu pratiniḥsṛjeyur ity evaṁ kuśalaṁ no cet prati
+niḥsṛjeyuḥ saṁghāvaśeṣaḥ 11
+
+saṁghāvaśeṣa 12
+
+bhikṣuḥ punar anyatamaṁ grāmaṁ vā nigamaṁ vopaniḥśritya viharet sa ca
+syāt kuladūṣakaḥ pāpasamācāraḥ tasya kulāni duṣṭāni dṛśyeran vā śrūyeran vā
+prajñāyeran vā pāpakāś ca tasya samācārā dṛśyeran vā śrūyeran vā prajñāyeran vā
+kuladūṣakaś ca syāt pāpasamācāraḥ sa bhikṣur bhikṣubhir evaṁ syād vacanīyaḥ
+āyuṣmāṁ kuladūṣakaḥ pāpasamācāras tasya te kulāni duṣṭāni dṛśyante ’pi śrūyante
+’pi prajñāyante ’pi pāpakāś ca te samācārā dṛśyante ’pi śrūyante ’pi
+prajñāyante ’pi kuladūṣakaś cāyuṣmāṁ pāpasamācāraḥ prakramatv āyuṣmāṁ asmād
+āvāsād alaṁ tavehoṣitena evaṁ cet sa bhikṣur bhikṣubhir ucyamānas tān bhikṣūn
+evaṁ vadec chandagāmina āyuṣmanto bhikṣavo dveṣagāmino bhayagāmino mohagāmino
+yatra hi nāma tādṛśīm evāpattim āpannān ekatyāṁ bhikṣūṁ pravāsayanty ekatyāṁ
+bhikṣūn na pravāsayanti sa bhikṣur bhikṣubhir evaṁ syād vacanīyaḥ neme
+bhikṣavaś chandagāmino na dveṣagāmino na bhayagāmino na mohagāmina api tv
+āyuṣmān eva kuladūṣakaḥ pāpasamācāraḥ tasya te kulāni duṣṭāni dṛśyante ’pi
+śrūyante ’pi prajñāyante ’pi pāpakāś ca te samācārā dṛśyante ’pi śrūyante ’pi
+prajñāyante ’pi kuladūṣakaś cāyuṣmān pāpasamācāraḥ niḥsṛjatv āyuṣmāṁś
+chandagāmi vacanaṁ dveṣagāmi bhayagāmi mohagāmi vacanaṁ evaṁ cet sa bhikṣur
+bhikṣubhir ucyamānas tad eva vastu samādāya vigṛhya tiṣṭhen na pratiniḥsṛjet sa
+bhikṣur bhikṣubhir yāvat trir api samanuśāsitavyas tasya vastunaḥ
+pratiniḥsargāya sa yāvat trir api samanuśiṣyamāṇas tad vastu pratiniḥsṛjed ity
+evaṁ kuśalaṁ no cet pratiniḥsṛjet saṁghāvaśeṣaḥ 12
+
+saṁghāvaśeṣa 13
+
+bhikṣuḥ punar ihaikatyo durvacajātīyaḥ syāt sa uddeśaparyāpannaiḥ
+śikṣāpadair bhikṣubhiḥ saha dharmeṇa saha vinayenocyamāna ātmānam avacanīyaṁ
+kuryān mā mām āyuṣmantaḥ kiṁcid vadantu kalyāṇaṁ vā pāpakaṁ vā aham apy
+āyuṣmato na kiṁcid vakṣyāmi kalyāṇaṁ vā pāpakaṁ vā viramantv āyuṣmanto
+madvacanād alaṁ vo m. + + ktena sa bhikṣur bhikṣubhir evaṁ syād vacanīyo mā
+tvam āyuṣmann uddeśaparyāpannaiḥ śikṣāpadair bhikṣubhiḥ saha dharmeṇa saha
+vinayenocyamāna ātmānam avacanīyaṁ kārṣīr vacanīyam evāyuṣmān ātmānaṁ karotu
+āyuṣmantam api bhikṣavo vakṣyanti saha dharmeṇa saha vinayena āyuṣmān api
+bhikṣūṁ vadatu saha dharmeṇa saha vinayena evaṁ saṁvṛddhā tasya bhagavataḥ
+pariṣad yadutānyonyavacanīyād anyonyāvavādād anyonyānuśāsanād
+anyonyāpattivyutthāpanān niḥsṛjatv āyuṣmān ātmana avacanīyakarmāntatāṁ evaṁ cet
+sa bhikṣur bhikṣubhir ucyamānas tad eva vastu samādāya vigṛhya tiṣṭhen na
+pratiniḥsṛjet sa bhikṣur bhikṣubhir yāvat trir api samanuśāsitavyas tasya
+vastunaḥ pratiniḥsargāya sa yāvat trir api samanuśiṣyamāṇas tad vastu
+pratiniḥsṛjed ity evaṁ kuśalaṁ no cet pratiniḥsṛjet saṁghāvaśeṣaḥ 13 ||
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uddiṣṭā mayāyuṣmantas trayodaśa saṁghāvaśeṣā dharmā nava prathamāpattayaś
+catvāro yāvattṛtīyakā yeṣāṁ bhikṣur anyatamānyatamaṁ dharmam āpanno yāvatkālaṁ
+jānaṁ praticchādayati tāvatkālam akāmaṁ parivastavyaṁ bhavati |
+paryuṣitaparivāsitena bhikṣuṇā uttaraṁ saṁghe ṣaḍrātraṁ mānāpyaṁ cartavyaṁ
+bhavati cīrṇamānāpyo bhikṣur ābṛhaṇāt pratibaddhaḥ kṛtānudharmo yatra syād
+viṁśatigaṇo bhikṣusaṁghas tatra sa bhikṣur ābṛhitavya ekenāpy ūno viṁśatigaṇo
+bhikṣusaṁghas taṁ bhikṣum ābṛhyāt sa ca bhikṣur anābṛhitas te ca bhikṣavo
+garhyā iyaṁ tatra sāmīciḥ tatrāham āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā
+dvir api trir api pṛcchāmi kaccit sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto
+yasmāt tūṣṇīm evam etad dhārayāmi || ||
+
+2 aniyata rules
+
+imau punar āyuṣmanto dvāv aniyatau dharmāv anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchataḥ ||
+
+aniyata 1
+
+yaḥ punar bhikṣur mātṛgrāmeṇa sārdham ekaikena rahasi praticchanne āsane
+niṣadyāṁ kalpayed alaṁ gamanīyena taṁ ca śrāddheyavacanopāsikā trayāṇāṁ
+dharmāṇām anyatamānyatamena dharmeṇa vadet pārājikena vā saṁghāvaśeṣeṇa vā
+pātayantikena vā niṣadyāṁ bhikṣuḥ pratijānamānas trayāṇāṁ dharmāṇām
+anyatamānyatamena dharmeṇa kārayitavyaḥ pārājikena vā saṁghāvaśeṣeṇa vā
+pātayantikena vā yena yena dharmeṇa vā śrāddheyavacanopāsikā taṁ bhikṣuṁ vadet
+tena tena sa bhikṣuḥ kārayitavyaḥ ayaṁ dharmo ’niyataḥ 1
+
+aniyata 2
+
+na ca rahasi praticchanne āsane niṣadyāṁ kalpayen nālaṁ gamanīyena api tu
+taṁ mātṛgrāmaṁ duṣṭhulayā vācā ābhāṣeta pāpikayā asabhyayā maithunopasaṁhitayā
+taṁ ca śrāddheyavacanopāsikā dvayor dharmayor anyatamānyatamena dharmeṇa vadet
+saṁghāvaśeṣeṇa vā pātayantikena vā niṣadyāṁ bhikṣuḥ pratijānamāno dvayor
+dharmayor anyatamānyatamena dharmeṇa kārayitavyaḥ saṁghāvaśeṣeṇa vā pāt
+ayantikena vā yena yena dharmeṇa vā śrāddheyavacanopāsikā taṁ bhikṣuṁ vadet
+tena tena sa bhikṣuḥ kārayitavyaḥ ayam api dharmo ’niyataḥ 2 |
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uddiṣṭau mayāyuṣmanto dvāv aniyatau dharmau tatrāham āyuṣmataḥ pṛcchāmi
+kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra pariśuddhāḥ
+pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi || ||
+
+30 niḥsargikāḥ pātayantikā rules
+
+ime punar āyuṣmantas triṁśan niḥsargikāḥ pātayantikā dharmā anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchanti ||
+
+niḥsargikā pātayantikā 1
+
+niṣṭhitacīvareṇa bhikṣuṇā uddhṛte kaṭhine daśāhaparamam atiriktaṁ cīvaraṁ
+dhārayitavyaṁ tata uttaraṁ dhārayen niḥsargikā pātayantikā 1
+
+niḥsargikā pātayantikā 2
+
+niṣṭhitacīvaro bhikṣur uddhṛte kaṭhine ekarātram api trayāṇāṁ cīvarāṇām
+anyatamānyatamasmāc cīvarād vipravased anyatra saṁghasaṁmatyā niḥsargikā
+pātayantikā 2
+
+niḥsargikā pātayantikā 3
+
+niṣṭhitacīvarasya bhikṣor uddhṛte kaṭhine utpadyetākālacīvaram ākā
+ṁkṣamāṇena tena bhikṣuṇā pratigṛhītavyaṁ pratigṛhya sacet paripūryeta kṣipram
+eva kṛtvā dhārayitavyaṁ no cet paripūryeta māsaparamaṁ tena bhikṣuṇā tac
+cīvaram upanikṣiptavyaṁ satyāṁ cīvarapratyāśāyām ūnasya vā paripūryārthaṁ tata
+uttaram upanikṣipen niḥsargikā pātayantikā 3
+
+niḥsargikā pātayantikā 4
+
+yaḥ punar bhikṣur ajñātyā bhikṣuṇyā purāṇacīvaraṁ dhāvayed vā rañjayed vā
+ākoṭayed vā niḥsargikā pātayantikā 4
+
+niḥsargikā pātayantikā 5
+
+yaḥ punar bhikṣur ajñātyā bhikṣuṇyāḥ santikāc cīvaraṁ pratigṛhṇīyād
+anyatra parivartakena niḥsargikā pātayantikā 5
+
+niḥsargikā pātayantikā 6
+
+yaḥ punar bhikṣur ajñātiṁ gṛhapatiṁ gṛhapatipatnīṁ vā cīvaraṁ vijñāpayed
+anyatra samayād abhiniṣpanne cīvare niḥsargikā pātayantikā 6 tatrāyaṁ samaya
+ācchinnacīvaro bhikṣuḥ syān naṣṭacīvaro vā dagdhacīvaro vā ūḍhacīvaro vā ayaṁ
+tatra samayaḥ 6
+
+niḥsargikā pātayantikā 7
+
+ācchinnacīvareṇa bhikṣuṇā naṣṭacīvareṇa vā dagdhacīvareṇa vā ūḍhacīvareṇa
+vā ajñātiṁ gṛhapatiṁ gṛhapatipatnīṁ vā cīvaraṁ vijñā... taṁ ced bhikṣuṁ śrāddho
+gṛhapatir gṛhapatipatnī vā saṁbahulaiś cīvaraiḥ pravārayed ākāṁkṣamāṇena tena
+bhikṣuṇā sāntarottaraparamaṁ tataś cīvaraṁ pratigṛhītavyaṁ tata uttaraṁ prati
+gṛhṇīyān niḥsargikā pātayantikā 7
+
+niḥsargikā pātayantikā 8
+
+bhikṣuṁ punar uddiśya ajñātinā gṛhapatinā gṛhapatipatnyā vā
+cīvaracetanakāny upaskṛtāni syur ebhir ahaṁ cīvaracetanakair evaṁrūpam evaṁ
+rūpaṁ cīvaraṁ cetayitvā evaṁnāmānaṁ bhikṣum ācchādayiṣyāmīti tatra cet sa
+bhikṣuḥ pūrvam apravāritaḥ samānaḥ upasaṁkramya ajñātiṁ gṛhapatiṁ
+gṛhapatipatnīṁ vā kaṁcid eva vikalpam āpadyann evaṁ vaded yāni tāny āyuṣmatā
+mām uddiśya cīvaracetanakāny upaskṛtāny ebhiś cīvaracetanakair evaṁrūpam evaṁrū
+paṁ cīvaraṁ cetayitvā evaṁnāmānaṁ bhikṣum ācchādayiṣyāmīti sādhv āyuṣmaṁs taiś
+cīvaracetanakair evaṁrūpam evaṁrūpaṁ cīvaraṁ cetayitvā cīvareṇa mām ācchādayeti
+kalyāṇakāmatām upādāya abhiniṣpanne cīvare niḥsargikā pātayantikā 8
+
+niḥsargikā pātayantikā 9
+
+bhikṣuṁ punar uddiśya dvābhyām ajñātibhyāṁ gṛhapatibhyāṁ gṛhapati
+patnībhyāṁ vā pratyekacīvaracetanakāny upaskṛtāni syur ebhir āvāṁ
+cīvaracetanakair evaṁrūpaṁ evaṁrūpaṁ pratyekacīvaraṁ cetayitvā evaṁnāmānaṁ
+bhikṣum ācchādayiṣyāvaḥ pratyekacīvarābhyām iti | tatra cet sa bhikṣuḥ pūrvam
+apravāritaḥ samāna upasaṁkramya tau dvāv ajñātī gṛhapatī gṛhapatipatnyau vā
+kaṁcid eva vikalpam āpadyann evaṁ vaded yāni tāny āyuṣmadbhyāṁ mām uddiśya
+cīvaracetanakāny upaskṛtāny ebhir āvāṁ cīvaracetanakair evaṁrūpam evaṁrūpaṁ
+pratyekacīvaraṁ cetayitvā evaṁnāmānaṁ bhikṣum ācchādayiṣyāvaḥ sādhv āyuṣmantau
+taiś cīvaracetanakair evaṁrūpam evaṁrūpaṁ pratyekacīvaraṁ cetayitvācchādayataṁ
+māṁ cīvareṇa ubhau bhūtvaikeneti kalyāṇakāmatām upādāyābhiniṣpanne cīvare
+niḥsargikā pātayantikā 9
+
+niḥsargikā pātayantikā 10
+
+bhikṣuṁ punar uddiśya rājñā vā rājamahāmātreṇa vā brāhmaṇena vā
+gṛhapatinā vā dūtasya haste cīvaracetanakāni preṣitāni syuḥ sa dūtas taṁ
+bhikṣum upasaṁkramyaivaṁ vaded imāni te āyuṣmaṁ rājñā vā rājamahāmātreṇa vā
+brāhmaṇena vā gṛhapatinā vā cīvaracetanakāni preṣitāni pratigṛhṇātv āyuṣmāṁ
+cīvaracetanakāny anukampām upādāya | sa bhikṣus taṁ dūtam evaṁ vaden nāyuṣman
+dūta kalpante bhikṣūṇāṁ cīvaracetanakāni pratigṛhītuṁ cīvaraṁ tu vayaṁ labdhvā
+kālena kalpikaṁ svahastaṁ pratigṛhya kṣipram eva kṛtvā dhārayāmaḥ sa dūtas taṁ
+bhikṣum evaṁ vaded asty āyuṣmatāṁ kaścid vaiyyāpatyakaro yo bhikṣūṇāṁ
+vaiyyāpatyaṁ karoti | cīvarārthikena bhikṣuṇā vaiyyāpatyakaro vyapadeṣṭavya
+ārāmiko vā upāsako vā eṣa bhikṣūṇāṁ vaiyyāpatyaṁ karoti | sa dūtas taṁ
+vaiyyāpatyakaram upasaṁkramyaivaṁ vaded imāny āyuṣmaṁ vaiyyāpatyakara
+cīvaracetanakāni rājñā vā rājamahāmātreṇa vā brāhmaṇena vā gṛhapatinā vā
+evaṁnāmānaṁ bhikṣum uddiśya preṣitāni sādhv āyuṣmaṁ vaiyyāpatyakara tvam ebhiś
+cīvaracetanakair evaṁrūpam evaṁrūpaṁ cīvaraṁ cetayitvā | sa bhikṣus tvām
+upasaṁkramiṣyati kālena taṁ tvam ācchādaya cīvareṇa kalpikeneti | evaṁ sa dūtas
+taṁ vaiyyāpatyakaraṁ sādhu ca suṣṭhu ca samanuśiṣya taṁ bhikṣum
+upasaṁkramyaivaṁ vaded yo sāv āyuṣmatā vaiyyāpatyakaro vyapadiṣṭaḥ samanuśiṣṭaḥ
+sa mayā | taṁ tvam upasaṁkrama kālena ācchādayiṣyati tvāṁ cīvareṇa kalpikeneti
+| cīvarārthikena bhikṣuṇā vaiyyāpatyakaram upasaṁkramya dvis triś codayitavyaḥ
+smārayitavyaḥ artho me vaiyyāpatyakara cīvareṇa dvis triś codayataḥ smārayataḥ
+saced abhiniṣpadyeta cīvaram ity evaṁ kuśalaṁ no ced abhiniṣpadyeta
+catuṣpañcaṣaṭkṛtvāparamaṁ tūṣṇīm uddeśe sthātavyaṁ tūṣṇīm uddeśe sthitasya
+saced abhiniṣpadyeta cīvaram ity evaṁ kuśalaṁ no ced abhiniṣpadyeta tata
+uttaraṁ vyāyameta cīvarasyābhiniṣpattaye abhiniṣpanne cīvare niḥsargikā
+pātayantikā | no ced abhiniṣpadyeta tena bhikṣuṇā yatas tāni cīvaracetanakāny
+ānītāni tatra svayaṁ vā gantavyaṁ dūto vā preṣitavyo yāni tāny āyuṣmatā mām
+uddiśya cīvaracetanakāni preṣitāni na tāny asmākaṁ kaṁcid arthaṁ prakurvanti
+prajānātv āyuṣmāṁ svam arthaṁ mā te praṇaśyed iyaṁ tatra sāmīciḥ 10 ||
+
+niḥsargikā pātayantikā 11
+
+yaḥ punar bhikṣur navaṁ kauśeyaṁ saṁstaraṁ kārayen niḥsargikā pātayantikā
+11
+
+niḥsargikā pātayantikā 12
+
+yaḥ punar bhikṣuḥ śuddhakāḍānām eḍakalomnāṁ navaṁ saṁstaraṁ kārayen
+niḥsargikā pātayantikā 12
+
+niḥsargikā pātayantikā 13
+
+navaṁ punar bhikṣuṇā saṁstaraṁ kārayatā dvau bhāgau śuddhakāḍānām
+eḍakalomnām ādātavyau tṛtīyo ’vadātānāṁ caturtho gocarikānām anādāya ced
+bhikṣur dvau bhāgau śuddhakāḍānām eḍakalomnām tṛtīyam avadātānāṁ caturthaṁ
+gocarikānāṁ navaṁ saṁstaraṁ kārayet kalyāṇakāmatām upādāya niḥsargikā
+pātayantikā 13
+
+niḥsargikā pātayantikā 14
+
+navaṁ punar bhikṣuṇā saṁstaraṁ kārayitvā akāmaṁ ṣaḍ varṣāṇi dhārayitavyaṁ
+arvāk ced bhikṣuḥ ṣaḍbhyo varṣebhyaḥ purāṇasaṁstaraṁ niḥsṛjya vā aniḥsṛjya vā
+anyaṁ navaṁ saṁstaraṁ kārayed anyatra saṁghasaṁmatyā kalyāṇakāmatām upādāya
+niḥsargikā pātayantikā 14
+
+niḥsargikā pātayantikā 15
+
+navaṁ bhikṣuṇā niṣīdanasaṁstaraṁ kārayatā
+purāṇaniṣīdanasaṁstarasāmantakāt sugatavitastir ādātavyā navasya
+durvarṇīkaraṇāya anādāya ced bhikṣuḥ purāṇaniṣīdanasaṁstarasāmantakāt
+sugatavitastiṁ navasya durvarṇīkaraṇāya navaṁ niṣīdanasaṁstaraṁ kārayet
+kalyāṇakāmatām upādāya niḥsargikā pātayantikā 15
+
+niḥsargikā pātayantikā 16
+
+bhikṣoś ced adhvānamārgapratipannasyotpadyerann eḍakalomāni ākāṅkṣatā
+tena bhikṣuṇā pratigṛhītavyāni pratigṛhya yāvat triyojanaparamaṁ svayaṁ
+hartavyāny asati hartari tata uttaraṁ haren niḥsargikā pātayantikā 16
+
+niḥsargikā pātayantikā 17
+
+yaḥ punar bhikṣur ajñātyā bhikṣuṇyā eḍakalomāni dhāvayed vā rañjayed vā
+vijaṭayed vā niḥsargikā pātayantikā 17
+
+niḥsargikā pātayantikā 18
+
+yaḥ punar bhikṣuḥ svahastaṁ rūpyam udgṛhṇīyād vā udgrāhayed vā niḥsargikā
+pātayantikā 18
+
+niḥsargikā pātayantikā 19
+
+yaḥ punar bhikṣur nānāprakāraṁ rūpyavyavahāraṁ samāpadyeta niḥsargikā
+pātayantikā 19
+
+niḥsargikā pātayantikā 20
+
+yaḥ punar bhikṣur nānāprakāraṁ krayavikrayaṁ samāpadyeta niḥsargikā
+pātayantikā 20 ||
+
+niḥsargikā pātayantikā 21
+
+daśāhaparamaṁ bhikṣuṇā atiriktaṁ pātraṁ dhārayitavyaṁ tata uttaraṁ
+dhārayen niḥsargikā pātayantikā 21
+
+niḥsargikā pātayantikā 22
+
+yaḥ punar bhikṣuḥ sati pāribhogīye pātre ūnapañcabandhane anyaṁ navaṁ
+pātraṁ vijñāpayet kalyāṇakāmatām upādāya niḥsargikā pātayantikā | tena bhikṣuṇā
+tat pātraṁ bhikṣupariṣadi niḥsṛṣṭavyaṁ yas tasyāṁ bhikṣupariṣadi pātraparyantaḥ
+sa tasyānupradātavyaḥ idaṁ te bhikṣo pātraṁ na visarjayitavyaṁ na
+vikalpayitavyaṁ yāvad bhedād dhārayitavyaṁ iyaṁ tatra sāmīciḥ 22
+
+niḥsargikā pātayantikā 23
+
+yaḥ punar bhikṣuḥ svayācitaṁ sūtraṁ vijñapya ajñātinā tantravāyena
+cīvaraṁ vāyayen niḥsargikā pātayantikā 23
+
+niḥsargikā pātayantikā 24
+
+bhikṣuṁ ced uddiśya ajñātir gṛhapatir gṛhapatipatnī vā tantravāyena
+cīvaraṁ vāyayet tatra cet sa bhikṣuḥ pūrvam apravāritaḥ samāna upasaṁkramya taṁ
+tantravāyaṁ kaṁcid eva vikalpam āpadyann evaṁ vaded yad āyuṣmaṁ tantravāya
+jānāsi idaṁ cīvaraṁ mām uddiśya ūyate sādhv āyuṣmān etac cīvaraṁ sūtaṁ ca
+karotu sulikhitaṁ ca suvistṛtaṁ ca sutakṣitaṁ ca apy eva vayam āyuṣmataḥ kiṁcid
+eva mātram upasaṁhariṣyāmaḥ piṇḍapātaṁ vā piṇḍapātamātraṁ vā piṇḍapātasaṁvaraṁ
+vā evaṁ cet sa bhikṣus taṁ tantravāyaṁ saṁjñapya vā saṁjñāpya vā tataḥ paścāt k
+iṁcid eva mātram upasaṁhared piṇḍapātaṁ vā piṇḍapātamātraṁ vā piṇḍapātasaṁvaraṁ
+vā cīvarasyābhiniṣpattaye abhiniṣpanne cīvare niḥsargikā pātayantikā 24
+
+niḥsargikā pātayantikā 25
+
+yaḥ punar bhikṣur bhikṣoḥ pātraṁ vā cīvaraṁ vā dattvā tataḥ paścād
+abhiṣaktaḥ kupitaś caṇḍīkṛto ’nāptamanā ācchindyād ācchedayed vā ānaya bhikṣo
+cīvaraṁ na te bhūyo dadāmīti tena bhikṣuṇā sa vastuśeṣo niḥsṛṣṭavyo bhavati
+cāsya niḥsargikā pātayantikā 25
+
+niḥsargikā pātayantikā 26
+
+māsaśeṣe grīṣme bhikṣuṇā varṣāśāṭīcīvaraṁ paryeṣitavyaṁ yāvad
+ardhamāsakṛtāsu varṣāsu dhārayitavyaṁ | arvāk ced bhikṣur māsaśeṣād grīṣmād
+varṣāśāṭīcīvaraṁ paryeṣeta ūrdhvaṁ cārdhamāsakṛtāsu varṣāsu dhārayen niḥsargikā
+pātayantikā 26
+
+niḥsargikā pātayantikā 27
+
+daśāhānāgatāyāṁ pravāraṇāyāṁ bhikṣor utpadyetākālacīvaram ākāṁkṣatā tena
+bhikṣuṇā pratigṛhītavyaṁ pratigṛhya yāvac cīvarakālasamayān nikṣiptavyaṁ tata
+uttaram upanikṣipen niḥsargikā pātayantikā 27
+
+niḥsargikā pātayantikā 28
+
+trayomāsānāgate kārttike pūrṇamāse ūnavarṣāraṇyako bhikṣur āraṇyakeṣu
+śayyāsaneṣūpagataḥ syāt sāśaṅkasaṁmateṣu sabhayasaṁmateṣu
+sapratibhayabhairavasaṁmateṣu ākāṁkṣatāraṇyakena bhikṣuṇā trayāṇāṁ cīvarāṇām
+anyatamānyatamaṁ cīvaram antargṛhe upanikṣiptavyaṁ syād āraṇyakasya bhikṣos
+tathārūpapratyayo bahiḥsīmaṁ gantuṁ ṣaḍrātraparamam āraṇyakena bhikṣuṇā tataś
+cīvarād vipravastavyaṁ tata uttaraṁ vipravasen niḥsargikā pātayantikā 28
+
+niḥsargikā pātayantikā 29
+
+yaḥ punar bhikṣur jānaṁ sāṁghikaṁ lābhaṁ pariṇatam ātmanaḥ pariṇāmayen
+niḥsargikā pātayantikā 29
+
+niḥsargikā pātayantikā 30
+
+yāni tāni bhagavatā glānānāṁ bhikṣūṇāṁ sāṁpreyāṇi pratiṣevanīyāni
+bhaiṣajyāny anujñātāni tadyathā sarpis tailaṁ madhu phāṇitaṁ saptāhaparamaṁ
+tāni glānena bhikṣuṇā saṁnidhikāraparibhogena paribhoktavyāni tata uttaraṁ
+paribhuñjīta niḥsargikā pātayantikā 30 ||
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uddiṣṭā mayāyuṣmantas triṁśan niḥsargikāḥ pātayantikā dharmās tatrāham
+āyuṣmataḥ pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit
+sthātra pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi |
+| ||
+
+90 pātayantikā rules
+
+ime punar āyuṣmanto navati pātayantikā dharmā anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchanti |
+
+pātayantikā 1
+
+saṁprajānamṛṣāvādāt pātayantikā 1
+
+pātayantikā 2
+
+apakarṣavādāt pātayantikā 2
+
+pātayantikā 3
+
+bhikṣupaiśunyāt pātayantikā 3
+
+pātayantikā 4
+
+yaḥ punar bhikṣur jānaṁ saṁghena yathādharmaṁ nikṣiptam adhikaraṇaṁ punaḥ
+karmaṇy utkoṭayet pātayantikā 4
+
+pātayantikā 5
+
+yaḥ punar bhikṣur mātṛgrāmasyottaraṁṣaṭpañcikayā vācā dharmaṁ deśayed
+anyatra vijñapuruṣāt pātayantikā 5
+
+pātayantikā 6
+
+yaḥ punar bhikṣur anupasaṁpannena pudgalena sārdhaṁ padaśo dharmaṁ
+vācayet pātayantikā 6
+
+pātayantikā 7
+
+yaḥ punar bhikṣur anupasaṁpannasya pudgalasyottaraṁmanuṣyadharmam
+ārocayed bhūtaṁ pātayantikā 7
+
+pātayantikā 8
+
+yaḥ punar bhikṣur bhikṣor jānaṁ duṣṭhūlām āpattim anupasaṁpannasya
+pudgalasyāntike ārocayed anyatra saṁghasaṁmatyā pātayantikā 8
+
+pātayantikā 9
+
+yaḥ punar bhikṣuḥ pūrvaṁ samanujñako bhūtvā tataḥ paścād evaṁ vaded yathā
+saṁstutānām ime bhikṣavaḥ sāṁghikaṁ lābhaṁ pariṇāmayantīti pātayantikā 9
+
+pātayantikā 10
+
+yaḥ punar bhikṣuḥ prātimokṣasūtroddiśyamāne evaṁ vadet kiṁ punar ebhiḥ
+kṣudrānukṣudraiḥ śikṣāpadair uddiṣṭair yāni bhikṣūṇāṁ kaukṛtyāya vilekhāya
+viheṭhāya saṁvartantīti śikṣāvidaṇḍanāt pātayantikā 10 ||
+
+pātayantikā 11
+
+bījagrāmabhūtagrāmapātanāt pātayantikā 11
+
+pātayantikā 12
+
+avadhyānakṣipaṇāt pātayantikā 12
+
+pātayantikā 13
+
+anyavādaviheṭhanāt pātayantikā 13
+
+pātayantikā 14
+
+yaḥ punar bhikṣuḥ sāṁghikaṁ śayyāsanaṁ pīṭhaṁ vā mañcaṁ vā brisiṁ vā
+kurcaṁ vā abhyavakāśe prajñapya tataḥ prakramen noddharen noddhārayed vā
+pātayantikā 14
+
+pātayantikā 15
+
+yaḥ punar bhikṣuḥ sāṁghike vihāre śayyāṁ saṁstīrya vā saṁstārayed vā
+tataḥ prakramen noddharen noddhārayed vā pātayantikā 15
+
+pātayantikā 16
+
+yaḥ punar bhikṣur abhiṣaktaḥ kupitaś caṇḍīkṛto ’nāptamanāḥ sāṁghikād
+vihārād bhikṣuṁ niṣkarṣen niṣkarṣayed vā cara pareṇa mohapuruṣa naśya tvaṁ na
+tvayeha vastavyam idam eva pratyayaṁ kṛtvā nānyathāt pātayantikā 16
+
+pātayantikā 17
+
+yaḥ punar bhikṣuḥ sāṁghike vihāre jānaṁ pūrvopagatāṁ bhikṣūṁ paścād
+āgatyānupraskadya śayyāṁ kalpayed yasya saṁbādhaṁ bhaviṣyati sa prakramiṣyatīti
+idam eva pratyayaṁ kṛtvā nānyathāt pātayantikā 17
+
+pātayantikā 18
+
+yaḥ punar bhikṣuḥ sāṁghike vihāre uparivihāyasikuṭikāyām ahāryapādake
+pīṭhe vā mañce vā balena niṣīded vā nipadyed vā pātayantikā
+
+pātayantikā 19
+
+yaḥ punar bhikṣuḥ saprāṇakenodakena tṛṇaṁ vā mṛttikaṁ vā siṁcet secayed
+vā pātayantikā
+
+pātayantikā 20
+
+mahallakaṁ bhikṣuṇā vihāraṁ kārayatā yāvad dvārakośārgaḍasthāpana
+ālokasaṁdhibhūmiparikarm|||...|||nā dvau trayo vācchādanapathāḥ saṁcaro|||...||
+|vyādhiṣṭhātavyā tata uttaram adhitiṣṭhet pātayantikā ||
+
+pātayantikā 21
+
+yaḥ punar bhikṣur asaṁmataḥ saṁghena bhikṣuṇīr avavadet pātayantikā 21
+
+pātayantikā 22
+
+saṁmato ’trāpi bhikṣur yāvat sūryāstaṁgamanakālasamayād bhikṣuṇīr avav
+adet pātayantikā 22
+
+pātayantikā 23
+
+yaḥ punar bhikṣur evaṁ vaded āmiṣahetor bhikṣavo bhikṣuṇīr avavadantīti
+pātayantikā 23
+
+pātayantikā 24
+
+yaḥ punar bhikṣur bhikṣuṇyā sārdhaṁ saṁvidhāya samānamārgaṁ
+pratipadyetāntato grāmāntaram api anyatra samayāt pātayantikā tatrāyaṁ samayaḥ
+sārthagamanīyo mārgo bhavati sāśaṅkasaṁmataḥ sabhayasaṁmataḥ
+sapratibhayabhairavasaṁmato ’yaṁ tatra samayaḥ 24
+
+pātayantikā 25
+
+yaḥ punar bhikṣur bhikṣuṇyā sārdhaṁ saṁvidhāyaikanāvam abhiruhed ūrdhvag
+āminīṁ vādhogāminīṁ vānyatra tīryakpārasaṁtaraṇāt pātayantikā 25
+
+pātayantikā 26
+
+yaḥ punar bhikṣur ajñātyā bhikṣuṇyāś cīvaraṁ kuryāt pātayantikā 26
+
+pātayantikā 27
+
+yaḥ punar bhikṣur ajñātyā bhikṣuṇyāś cīvaraṁ dadyāt pātayantikā 27
+
+pātayantikā 28
+
+yaḥ punar bhikṣur bhikṣuṇyā sārdham ekākī rahasi praticchanne niṣadyāṁ
+kalpayet pātayantikā 28
+
+pātayantikā 29
+
+yaḥ punar bhikṣur ekākī mātṛgrāmeṇa sārdham abhyavakāśe niṣadyāṁ kalpayet
+pātayantikā 29
+
+pātayantikā 30
+
+yaḥ punar bhikṣur bhikṣuṇīparipācitaṁ piṇḍapātaṁ paribhuṁjītānyatra prāgg
+ṛhisamārambhāt pātayantikā 30 ||
+
+pātayantikā 31
+
+paraṁparabhojanam anyatra samayāt pātayantikā tatrāyaṁ samayo
+glānasamayaś cīvaradānakālasamayo ’yaṁ tatra samayaḥ 31
+
+pātayantikā 32
+
+ekāvasathoṣitena bhikṣuṇā aglānenaikaḥ piṇḍapātaḥ paribhoktavyas tata
+uttaraṁ paribhuṁjīta pātayantikā 32
+
+pātayantikā 33
+
+bhikṣavaḥ punaḥ saṁbahulāḥ kulāny upasaṁkrameyus tāṁś cec chrāddhā br
+āhmaṇagṛhapatayo yāvadarthaṁ pravārayeyuḥ pūpair vā manthair vā ākāṁkṣamāṇais
+tair bhikṣubhir dvau trayo vā pātrapūrāḥ pratigṛhītavyās tata uttaraṁ
+pratigṛhṇīyuḥ pātayantikā | dvau trīṁ vā pātrapūrāṁ pratigṛhya bahir ārāmaṁ n
+iṣkramya santo bhikṣavaḥ saṁvedayitavyā iyaṁ tatra sāmīciḥ 33
+
+pātayantikā 34
+
+yaḥ punar bhikṣur bhuktavāṁ pravāritaḥ akṛtātiriktaṁ khādanīyabhojanīyaṁ
+khāded vā bhuṁjīta vā pātayantikā 34
+
+pātayantikā 35
+
+yaḥ punar bhikṣur jānaṁ bhikṣuṁ bhuktavantaṁ pravāritam akṛtātiriktena
+khādanīyabhojanīyena yāvadarthaṁ pravārayed idam āyuṣmaṁ khādeti bhuṁkṣvety
+āsādanaprekṣī kaccid eṣa bhikṣur muhūrtam apy āsāditaḥ syād idam eva pratyayaṁ
+kṛtvā nānyathā pātayantikā 35
+
+pātayantikā 36
+
+gaṇabhojanam anyatra samayāt pātayantikā tatrāyaṁ samayo glānasamayaś
+cīvaradānakālasamayaḥ adhvānamārgasamayaḥ nāvādhirohaṇaṁ
+mahāsamājaśramaṇabhaktasamayo ’yaṁ tatra samayaḥ 36
+
+pātayantikā 37
+
+yaḥ punar bhikṣur akāle khādanīyabhojanīyaṁ khāded vā bhuṁjīta vā pātaya
+ntikā 37
+
+pātayantikā 38
+
+yaḥ punar bhikṣuḥ saṁnihitaṁ khādanīyabhojanīyaṁ khāded vā bhuṁjīta vā
+pātayantikā 38
+
+pātayantikā 39
+
+yaḥ punar bhikṣur aparigṛhītam āhāraṁ mukhadvāreṇāhared
+anyatrodakadantakāṣṭhābhyāṁ pātayantikā 39
+
+pātayantikā 40
+
+yāni punas tāni kuleṣu praṇītabhojanāny anujñātāni tadyathā kṣīraṁ dadhi
+navanītaṁ sarpis tailaṁ matsyo māṁsavallūrā yaḥ punar bhikṣur evaṁrūpāṇi
+praṇītabhojanāny ātmārtham aglāno vijñapayet pātayantikā 40 ||
+
+pātayantikā 41
+
+yaḥ punar bhikṣur jānaṁ saprāṇakam udakaṁ paribhuṁjīta pātayantikā 41
+
+pātayantikā 42
+
+yaḥ punar bhikṣuḥ sabhojane kule anupraskadya āsane niṣadyāṁ kalpayet
+pātayantikā 42
+
+pātayantikā 43
+
+yaḥ punar bhikṣuḥ sabhojane kule ekākī ekayā rahasi praticchanne
+niṣadyāṁ kalpayet pātayantikā 43
+
+pātayantikā 44
+
+yaḥ punar bhikṣur acelakasya parivrājakasya vā parivrājikāyā vā
+svahastaṁ khādanīyabhojanīyaṁ dadyāt pātayantikā 44
+
+pātayantikā 45
+
+yaḥ punar bhikṣur udyuktāṁ senāṁ darśanāyopasaṁkramed anyatras
+tathārūpapratyayāt pātayantikā 45
+
+pātayantikā 46
+
+syād bhikṣos tathārūpapratyayo yenodyuktāṁ senāṁ gacched dvirātraparamaṁ
+tena bhikṣuṇā tatra senāyāṁ vastavyaṁ tata uttaraṁ vaset pātayantikā 46
+
+pātayantikā 47
+
+dvirātraparamaṁ ced bhikṣuḥ senāyāṁ vasaty udyūthikāṁ senāṁ
+darśanāyopasaṁkramed dhvajāgraṁ vā balāgraṁ vā senāvyūhaṁ vā anīkadarśanaṁ vā
+pātayantikā 47
+
+pātayantikā 48
+
+yaḥ punar bhikṣur abhiṣaktaḥ kupitaś caṇḍībhūto ’nāptamanā bhikṣoḥ
+prahāraṁ dadyāt pātayantikā 48
+
+pātayantikā 49
+
+yaḥ punar bhikṣur abhiṣaktaḥ kupitaś caṇḍībhūto ’nāptamanā bhikṣos
+talaśaktikayā prahāram avaguret pātayantikā 49
+
+pātayantikā 50
+
+yaḥ punar bhikṣur bhikṣor jānaṁ duṣṭhūlāpattiṁ praticchādayed antata
+ekarātram api pātayantikā 50
+
+pātayantikā 51
+
+yaḥ punar bhikṣur bhikṣum evaṁ vaded ehy āyuṣmaṁ kulāny
+upasaṁkramiṣyāvas tatra te dāpayiṣyāmi praṇītaṁ khādanīyabhojanīyaṁ sa tasya
+bhikṣor adāpayitvā tataḥ paścād evaṁ vaded gaccha tvam āyuṣman na me tvayā
+sārdhaṁ phāṣaṁ kathā vā niṣadyā vā ekākino me phāṣaṁ kathā vā niṣadyā vā
+udyojanaprekṣī kaccid eṣa bhikṣur muhūrtam apy udyojitaḥ syād etad eva
+pratyayaṁ kṛtvā nānyathā pātayantikā 51
+
+pātayantikā 52
+
+yaḥ punar bhikṣur aglāno vitapanaprekṣī abhyavakāśe jyotiḥ samindhyāt
+samedhayed vānyatra pratyayāt pātayantikā 52
+
+pātayantikā 53
+
+yaḥ punar bhikṣur anupasaṁpannena pudgalena sārdham uttaraṁdvirātraṁ
+sahāgāraśayyāṁ kalpayet pātayantikā 53
+
+pātayantikā 54
+
+yaḥ punar bhikṣur dhārmike saṁghakaraṇīye cchandaṁ dattvā tataḥ paścāt
+kṣepadharmam āpadyeta pātayantikā 54
+
+pātayantikā 55
+
+yaḥ punar bhikṣur evaṁ vadet tathāhaṁ bhagavato dharmaṁ deśitam ājānāmi
+ye antarāyikā dharmās tāṁ pratiṣevato nālam antarāyāyeti sa bhikṣur bhikṣubhir
+evaṁ syād vacanīyo mā tvam āyuṣmann evaṁ vada tathāhaṁ bhagavato dharmaṁ
+deśitam ājānāmi ye antarāyikā dharmās tāṁ pratiṣevato nālam antarāyāyeti mā
+bhagavantaṁ vivada mā bhagavantam abhyākhyāhi na sādhu bhagavato ’bhyākhyānaṁ
+bhavati na ca punar bhagavān evaṁ vaded anekaparyāyeṇa bhagavatā antarāyikā
+dharmāḥ samānā antarāyikā dharmā ity uktās tāṁś ca pratiṣevato ’lam
+antarāyāyeti niḥsṛja tvam āyuṣmann idam evaṁrūpaṁ pāpakaṁ dṛṣṭigatam evaṁ cet
+sa bhikṣur bhikṣubhir ucyamānas tad vastu pratiniḥsṛjed ity evaṁ kuśalaṁ na cet
+pratiniḥsṛjed dvir api trir api samanuśāsitavyas tasya vastunaḥ pratiniḥsargāya
+dvir api trir api samanuśiṣyamāṇas tad vastu pratiniḥsṛjed ity evaṁ kuśalaṁ no
+cet pratiniḥsṛjet pātayantikā 55
+
+pātayantikā 56
+
+yaḥ punar bhikṣur jānaṁs tathāvādinaṁ pudgalam akṛtānudharmāṇam
+apratiniḥsṛṣṭena pāpakena dṛṣṭigatena saṁbhuṁjīta vā saṁvased vā tena vā
+sārdhaṁ sahāgāraśayyāṁ kalpayet pātayantikā 56
+
+pātayantikā 57
+
+śramaṇoddeśaś ced evaṁ vadet tathāhaṁ bhagavato dharmaṁ deśitam ājānāmi
+yat kāmāṁ pratiṣevato nālam antarāyāyeti | sa śramaṇoddeśo bhikṣubhir evaṁ syād
+vacanīyo mā tvam āyuṣmaṁ śramaṇoddeśa evaṁ vada tathāhaṁ bhagavato dharmaṁ
+deśitam ājānāmi yat kāmāṁ pratiṣevato nālam antarāyāyeti mā bhagavantaṁ vivada
+mā bhagavantam abhyākhyāhi na sādhu bhagavato ’bhyākhyānaṁ bhavati na ca punar
+bhagavān evaṁ vaded anekaparyāyeṇa bhagavatā antarāyikāḥ kāmāḥ samānā
+antarāyikā ity uktās tāṁś ca pratiṣevato ’lam antarāyāyeti niḥsṛja tvaṁ
+śramaṇoddeśa idam evaṁrūpaṁ pāpakaṁ dṛṣṭigatam evaṁ cet sa śramaṇoddeśo
+bhikṣubhir ucyamānas tat pāpakaṁ dṛṣṭigataṁ pratiniḥsṛjed ity evaṁ kuśalaṁ no
+cet pratiniḥsṛjed dvir api trir api samanuśāsitavyas tasya vastunaḥ
+pratiniḥsargāya sa yāvad dvir api trir api samanuśiṣyamāṇaḥ sacet pratiniḥsṛjed
+ity evaṁ kuśalaṁ no cet pratiniḥsṛjet sa śramaṇoddeśo bhikṣubhir evaṁ syād
+vacanīyaḥ
+
+adyāgreṇa te śramaṇoddeśa na sa bhagavāṁ śāstā vyapadeṣṭavyo nāpy anye
+bhikṣavaḥ samanubandhitavyā yām apy anye śramaṇoddeśā labhante bhikṣubhiḥ
+sārdhaṁ dvirātraṁ sahāgāraśayyāṁ sāpi te adyāgreṇa nāsti cara pareṇa mohapuruṣa
+naśya tvaṁ na tvayeha vastavyam iti |
+
+yaḥ punar bhikṣur jānaṁs tathānāśitaṁ śramaṇoddeśam upasthāpayed vā
+upalāḍayed vā tena vā sārdhaṁ sahāgāraśayyāṁ kalpayet pātayantikā 57
+
+pātayantikā 58
+
+yaḥ punar bhikṣu ratnaṁ vā ratnasaṁmataṁ vā svahastam udgṛhṇīyād
+udgrāhayed vā anyatrādhyārāmagatād vā adhyāvāsagatād vā pātayantikā
+adhyārāmagataṁ adhyāvāsagataṁ ratnaṁ vā ratnasaṁmataṁ vā evaṁcittenodgṛhītavyam
+udgrāhayitavyaṁ vā yasya bhaviṣyati sa enaṁ hariṣyati iyaṁ tatra sāmīciḥ 58
+
+pātayantikā 59
+
+navacīvarapratilābhād bhikṣuṇā trayāṇāṁ durvarṇīkaraṇānām
+anyatamānyatamam ādātavyaṁ navasya durvarṇīkaraṇāya nīlaṁ vā kardamo vā
+kāḍiśāmo vā anādāya ced bhikṣus trayāṇāṁ durvarṇīkaraṇānām anyatamānyatamaṁ
+durvarṇīkaraṇaṁ navaṁ cīvaraṁ paribhuṁjīta pātayantikā 59
+
+pātayantikā 60
+
+ardhamāsikaṁ snātram anyatra samayāt tadatikrāmataḥ pātayantikā tatrāyaṁ
+samayaḥ sārdho māsaḥ śeṣo grīṣmasya pūrvo māso varṣāṇām etau sārdhau dvau māsau
+paridāghasamayaḥ avaśiṣṭaṁ glānasamayaḥ karmasamayo vātasamayo vṛṣṭisamayo
+’dhvānamārgasamayo ’yaṁ tatra samayaḥ 60 ||
+
+pātayantikā 61
+
+yaḥ punar bhikṣuḥ saṁcintya tīryagyonigataṁ prāṇinaṁ jīvitād
+vyaparopayet pātayantikā 61
+
+pātayantikā 62
+
+yaḥ punar bhikṣur bhikṣoḥ saṁcintya kaukṛtyam upasaṁhared
+viheṭhanāprekṣī kaccid asya bhikṣor muhūrtam api tāvad aphāṣaṁ bhaved idam eva
+pratyayaṁ kṛtvā nānyathā pātayantikā 62
+
+pātayantikā 63
+
+aṅgulipratodanāt pātayantikā 63
+
+pātayantikā 64
+
+udakaharṣaṇāt pātayantikā 64
+
+pātayantikā 65
+
+yaḥ punar bhikṣur mātṛgrāmeṇa sārdhaṁ sahāgāraśayyāṁ kalpayet
+pātayantikā 65
+
+pātayantikā 66
+
+yaḥ punar bhikṣur bhikṣuṁ bhīṣayed bhīṣāpayed vā antato hāsyaprekṣyam
+api pātayantikā 66
+
+pātayantikā 67
+
+yaḥ punar bhikṣur bhikṣoḥ pātraṁ vā cīvaraṁ vā kuñcikaṁ vā upānahaṁ vā
+sūcīgharakaṁ vā anyatamānyatamaṁ vā śrāmaṇakaṁ pariṣkāram upanidadhyād
+upanidhāpayed vā antato hāsyaprekṣyam api pātayantikā 67
+
+pātayantikā 68
+
+yaḥ punar bhikṣur bhikṣoḥ pātraṁ vā cīvaram vā dattvā tataḥ paścād
+apratyuddhārya paribhuṁjīta pātayantikā 68
+
+pātayantikā 69
+
+yaḥ punar bhikṣur bhikṣum amūlakena saṁghāvaśeṣeṇa dharmeṇānudhvaṁsayet
+pātayantikā 69
+
+pātayantikā 70
+
+yaḥ punar bhikṣur mātṛgrāmeṇa sārdhaṁ saṁvidhāya samānamārgaṁ
+pratipadyeta antato grāmāntaram api pātayantikā 70 ||
+
+pātayantikā 71
+
+yaḥ punar bhikṣuḥ steyasārthena sārdhaṁ saṁvidhāya samānamārgaṁ
+pratipadyeta antato grāmāntaram api pātayantikā 71
+
+pātayantikā 72
+
+yaḥ punar bhikṣur ūnaviṁśativarṣaṁ pudgalaṁ bhikṣubhāvenopasaṁpādayet
+pātayantikā sa ca pudgalo ’nupasaṁpannas te ca bhikṣavo garhyā iyaṁ tatra
+sāmīciḥ 72
+
+pātayantikā 73
+
+yaḥ punar bhikṣuḥ pṛthivīṁ khanyāt khānayed vā pātayantikā 73
+
+pātayantikā 74
+
+caturmāsikā bhikṣuṇā pravāraṇā sādhayitavyā anyatra nityapravāraṇāyā
+anyatra punaḥpunaḥpravāraṇāyā anyatra pratyekapravāraṇāyā tata uttaraṁ sādhayet
+pātayantikā 74
+
+pātayantikā 75
+
+yaḥ punar bhikṣur bhikṣubhir ucyamāna iha te śikṣāyāṁ śikṣitavyam ity
+evaṁ vaden nāhaṁ yuṣmākaṁ bālānāṁ mūḍhānāṁ duṣprajñānāṁ vacanenātra śikṣāyāṁ
+śikṣiṣyāmi anyān ahaṁ bhikṣūṁ prakṣyāmi sūtradharān vinayadharān mātṛkādharān
+iti pātayantikā | ājñātukāmena bhikṣuṇā tatra śikṣāyāṁ śikṣitavyaṁ bhikṣavaś ca
+praṣṭavyāḥ sūtradharā vinayadharā mātṛkādharāḥ | iyaṁ tatra sāmīciḥ 75
+
+pātayantikā 76
+
+yaḥ punar bhikṣur bhikṣūṇāṁ kalahajātānāṁ bhaṇḍanajātānāṁ vigṛhītānāṁ
+vivādam āpannānāṁ tūṣṇīm upaśrutikas tiṣṭhed yad ete bhikṣavo vakṣyanti tad
+ahaṁ śrutvā tathānuvyāhariṣyāmīti pātayantikā 76
+
+pātayantikā 77
+
+yaḥ punar bhikṣuḥ saṁghasya niścitāyāṁ kathāyāṁ vartamānāyāṁ tūṣṇīm
+utthāya prakramet saṁtaṁ bhikṣum anavalokya pātayantikā 77
+
+pātayantikā 78
+
+anādareyakāt pātayantikā 78
+
+pātayantikā 79
+
+surāmaireyamadyapānāt pātayantikā 79
+
+pātayantikā 80
+
+yaḥ punar bhikṣur akāle grāmaṁ praviśet santaṁ bhikṣum anavalokyānyatra
+tathārūpapratyayāt pātayantikā 80 ||
+
+pātayantikā 81
+
+yaḥ punar bhikṣuḥ sabhaktaṁ kuleṣūpanimantritaḥ pūrvabhaktaṁ
+paścādbhaktaṁ kuleṣu cāritram āpadyeta pātayantikā 81
+
+pātayantikā 82
+
+yaḥ punar bhikṣu rājñaḥ kṣatriyasya mūrdhābhiṣiktasya aniṣkrānte rājñi
+anirgṛhīteṣu ratneṣu indrakīlaṁ vā indrakīlabhūmiṁ vā samatikramed anyatra
+tathārūpapratyayāt pātayantikā 82
+
+pātayantikā 83
+
+yaḥ punar bhikṣuḥ prātimokṣasūtroddiśyamāne evaṁ vaded idānīm ahaṁ
+jānāmi yad ayaṁ dharmaḥ sūtragataḥ sūtraparyāpanna iti taṁ ca bhikṣavo jānīyuḥ
+saṁniṣaṇṇapūrvo ’yam āyuṣmāṁ dvis triḥ prātimokṣasūtroddeśe kaḥ punar vādo
+bhūya iti tasya punar bhikṣor nāsty ajñānān mokṣo yāṁ cāpattim āpannaḥ syāt tāṁ
+yathādharmaṁ kārayitavya uttarañ ca saṁvejayitavyas tasya te āyuṣmann alābho na
+lābhaḥ durlabdho na sulabdhaḥ yo hi nāma tvam anvardhamāsaṁ
+prātimokṣasūtroddiśyamāne na satkṛtyārthīkṛtvā na gurukṛtvā na manasīkṛtvā
+naikāgracitto nāvahitaśrotro na sarvacetasā samanvāhṛtya śṛṇoṣi iyaṁ tasya
+saṁvejanāt pātayantikā 83
+
+pātayantikā 84
+
+yaḥ punar bhikṣur asthimayaṁ dantamayaṁ viṣāṇamayaṁ vā sūcīgharakaṁ
+kārayet pātayantikā 84
+
+pātayantikā 85
+
+pīṭhaṁ vā bhikṣuṇā mañcaṁ vā kārayatā sugatāṣṭāṅgulipramāṇāḥ pādāḥ
+kārayitavyā anyatrāraṇyās tata uttaraṁ kārayet pātayantikā 85
+
+pātayantikā 86
+
+yaḥ punar bhikṣus tūlasaṁstṛtāṁ śayyām avanahed avanāhayed vā
+pātayantikā 86
+
+pātayantikā 87
+
+varṣāśāṭīcīvaraṁ bhikṣuṇā kārayatā prāmāṇikaṁ kārayitavyaṁ tatredaṁ
+pramāṇaṁ dīrghataḥ ṣaḍ vitastayaḥ sugatavitastyā tīryak sārdhe dve tata uttaraṁ
+kārayet pātayantikā 87
+
+pātayantikā 88
+
+kaṇḍupraticchādanaṁ bhikṣuṇā kārayatā prāmāṇikaṁ kārayitavyaṁ tatredaṁ
+pramāṇaṁ dīrghataś catasro vitastayaḥ sugatavitastyā tīryag dve tata uttaraṁ
+kārayet pātayantikā 88
+
+pātayantikā 89
+
+niṣīdanaṁ bhikṣuṇā kārayatā prāmāṇikaṁ kārayitavyaṁ tatredaṁ pramāṇaṁ
+dīrghato vitastī dve sugatavitastyā tīryak sārdhavitastir daśānāṁ ca vitastis
+tata uttaraṁ kārayet pātayantikā 89
+
+pātayantikā 90
+
+yaḥ punar bhikṣuḥ sugatacīvarapramāṇena cīvaraṁ kārayed uttaraṁ vā
+sugatacīvarāt pātayantikā | tatredaṁ sugatacīvarapramāṇaṁ dīrghato nava
+vitastayaḥ sugatavitastyā tīryak ṣaḍ idaṁ tatra sugatacīvarapramāṇaṁ 90 ||
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uddiṣṭā mayāyuṣmanto navati pātayantikā dharmās tatrāham āyuṣmataḥ
+pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra
+pariśuddhā pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi ||
+
+4 pratideśanīyā rules
+
+ime punar āyuṣmantaś catvāraḥ pratideśanīyā dharmā anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchanti ||
+
+pratideśanīya 1
+
+yaḥ punar bhikṣur aglāno ’ntargṛhaṁ piṇḍāya carantyā ajñātyā bhikṣuṇyāḥ
+santikāt svahastaṁ khādanīyabhojanīyaṁ pratigṛhṇīyāt tena bhikṣuṇā bhikṣūṇām
+antike pratideśayitavyaṁ garhaṇīyam āyuṣmantaḥ sthānam āpanno ’smi asāṁpreyaṁ
+pratideśanīyaṁ taṁ dharmaṁ pratideśayāmi ayaṁ dharmaḥ pratideśanīyaḥ 1
+
+pratideśanīya 2
+
+bhikṣavaḥ punaḥ saṁbahulāḥ kuleṣūpanimantritā bhuṁjīraṁs tatra ced
+bhikṣuṇī vyapadiśamānā sthitā syād ihaudanaṁ dehi iha sūpaṁ dehi iha bhūyo
+dehīti sā bhikṣuṇī bhikṣubhir evaṁ syād vacanīyā āgamaya tāvat tvaṁ bhaginī
+yāvad ime bhikṣavo bhuṁjantām ity ekabhikṣor api cen na pratibhāyāt tāṁ
+bhikṣuṇīm evaṁ vaktum āgamaya tāvat tvaṁ bhaginī yāvad ime bhikṣavo bhuṁjantām
+iti sarvais tair bhikṣubhir bhikṣūṇām antike pratideśayitavyaṁ garhaṇīyam
+āyuṣmantaḥ sthānam āpannāḥ sma asāṁpreyaṁ pratideśanīyaṁ taṁ dharmaṁ pratideśay
+āma ayaṁ dharmaḥ pratideśanīyaḥ 2
+
+pratideśanīya 3
+
+yāni punas tāni saṁghasya śaikṣasaṁmatāni kulāni bhavanti
+śaikṣasaṁvṛtisaṁmatāni yaḥ punar bhikṣus tathārūpebhyaḥ kulebhyaḥ śaikṣasaṁvṛti
+saṁmatebhyaḥ pūrvam animantritaḥ samānaḥ khādanīyabhojanīyaṁ pratigṛhṇīyāt tena
+bhikṣuṇā bhikṣūṇām antike pratideśayitavyaṁ garhaṇīyam āyuṣmantaḥ sthānam
+āpanno ’smi asāṁpreyaṁ pratideśanīyaṁ taṁ dharmaṁ pratideśayāmi ayaṁ dharmaḥ
+pratideśanīyaḥ 3
+
+pratideśanīya 4
+
+yāni punas tāni saṁghasyāraṇyakāni śayyāsanāni bhavanti sāśaṁkasaṁmatāni
+sabhayasaṁmatāni sapratibhayabhairavasaṁmatāni | yaḥ punar bhikṣus tathārūpeṣu
+saṁghasyāraṇyakeṣu śayyāsaneṣu pūrvapratisaṁvedakaḥ asaṁmataḥ saṁghena bahir
+ārāmasya svahastaṁ khādanīyabhojanīyaṁ apratigṛhya antar ārāme pratigṛhṇīyāt
+tena bhikṣuṇā bhikṣūṇām antike pratideśayitavyaṁ garhaṇīyam āyuṣmantaḥ sthānam
+āpanno ’smi asāṁpreyaṁ pratideśanīyaṁ taṁ dharmaṁ pratideśayāmi ayam api
+dharmaḥ pratideśanīyaḥ 4 ||
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uddiṣṭā mayāyuṣmantaś catvāraḥ pratideśanīyā dharmās tatrāham āyuṣmataḥ
+pṛcchāmi kaccid sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra
+pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi ||
+
+113 śaikṣā rules
+
+ime punar āyuṣmantaḥ saṁbahulāḥ śaikṣā dharmā anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchanti ||
+
+Chapter 1
+
+śaikṣa 1
+
+nātyutkṛṣṭaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.1
+
+śaikṣa 2
+
+nātyavakṛṣṭaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.2
+
+śaikṣa 3
+
+na vikīrṇaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.3
+
+śaikṣa 4
+
+na vāsijhaḍakaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.4
+
+śaikṣa 5
+
+na tālapatraṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.5
+
+śaikṣa 6
+
+na hastiśuṇḍaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.6
+
+śaikṣa 7
+
+na kunmāṁsapiṇḍaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.7
+
+śaikṣa 8
+
+na kalāpakaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.8
+
+śaikṣa 9
+
+na dundumaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.9
+
+śaikṣa 10
+
+na milimaṁ cīvaraṁ nivasayiṣyāma iti śikṣā karaṇīyā 1.10
+
+śaikṣa 11
+
+na cūrṇasūtraṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.11
+
+śaikṣa 12
+
+parimaṇḍalaṁ cīvaraṁ nivāsayiṣyāma iti śikṣā karaṇīyā 1.12
+
+śaikṣa 13
+
+nātyutkṛṣṭaṁ cīvaraṁ prāvariṣyāma iti śikṣā karaṇīyā 1.13
+
+śaikṣa 14
+
+nātyavakṛṣṭaṁ cīvaraṁ prāvariṣyāma iti śikṣā karaṇīyā 1.14
+
+śaikṣa 15
+
+na vikīrṇaṁ cīvaraṁ prāvariṣyāma iti śikṣā karaṇīyā 1.15
+
+śaikṣa 16
+
+parimaṇḍalaṁ cīvaraṁ prāvariṣyāma iti śikṣā karaṇīyā 1.16 ||
+
+Chapter 2
+
+śaikṣa 17
+
+susaṁvṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.1
+
+śaikṣa 18
+
+susaṁvṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.2
+
+śaikṣa 19
+
+supraticchannā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.3
+
+śaikṣa 20
+
+supraticchannā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.4
+
+śaikṣa 21
+
+notkṣiptacakṣuṣo ’ntargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.5
+
+śaikṣa 22
+
+notkṣiptacakṣuṣo ’ntargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.6
+
+śaikṣa 23
+
+alpaśabdā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.7
+
+śaikṣa 24
+
+alpaśabdā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.8
+
+śaikṣa 25
+
+noccagghikayā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.9
+
+śaikṣa 26
+
+noccagghikayā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.10
+
+śaikṣa 27
+
+notkuṭukā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.11
+
+śaikṣa 28
+
+notkuṭukā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.12
+
+śaikṣa 29
+
+na veṣṭitaśiraso ’ntargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.13
+
+śaikṣa 30
+
+na veṣṭitaśiraso ’ntargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.14
+
+śaikṣa 31
+
+nāvaguṇḍikākṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.15
+
+śaikṣa 32
+
+nāvaguṇḍikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.16
+
+śaikṣa 33
+
+na kambhākṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.17
+
+śaikṣa 34
+
+na kambhākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.18
+
+śaikṣa 35
+
+notkṛṣṭikākṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.19
+
+śaikṣa 36
+
+notkṛṣṭikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.20
+
+śaikṣa 37
+
+nātyastikākṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.21
+
+śaikṣa 38
+
+nātyastikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.22
+
+śaikṣa 39
+
+na vinyastikākṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.23
+
+śaikṣa 40
+
+na vinyastikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.24
+
+śaikṣa 41
+
+na vikṣiptikākṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.25
+
+śaikṣa 42
+
+na vikṣiptikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.26
+
+śaikṣa 43
+
+na pallatthikākṛtā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.27
+
+śaikṣa 44
+
+na pallatthikākṛtā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.28
+
+śaikṣa 45
+
+na bāhupracālakā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.29
+
+śaikṣa 46
+
+na bāhupracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.30
+
+śaikṣa 47
+
+na cāṁsapracālakā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.31
+
+śaikṣa 48
+
+na cāṁsapracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.32
+
+śaikṣa 49
+
+na śīrṣapracālakā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.33
+
+śaikṣa 50
+
+na śīrṣapracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.34
+
+śaikṣa 51
+
+na kāyapracālakā antargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.35
+
+śaikṣa 52
+
+na kāyapracālakā antargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.36
+
+śaikṣa 53
+
+na hastasaṁlagnikayāntargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.37
+
+śaikṣa 54
+
+na hastasaṁlagnikayāntargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.38
+
+śaikṣa 55
+
+na viḍaṅgikayāntargṛhaṁ pravekṣyāma iti śikṣā karaṇīyā 2.39
+
+śaikṣa 56
+
+na viḍaṅgikayāntargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.40
+
+śaikṣa 57
+
+na pāde pādam ādhāyāntargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.41
+
+śaikṣa 58
+
+na sakthni sakthy āropyāntargṛhe niṣatsyāma iti śikṣā karaṇīyā 2.42
+
+śaikṣa 59
+
+na pāṇau hanum upādāyāntargṛhe niṣatsyāmo gṛhiṇo hāsyaprekṣiṇa iti śikṣā
+karaṇīyā 2.43 ||
+
+Chapter 3
+
+śaikṣa 60
+
+satkṛtyaudanaṁ pratigṛhīṣyāma iti śikṣā karaṇīyā 3.1
+
+śaikṣa 61
+
+satkṛtya sūpaṁ pratigṛhīṣyāma iti śikṣā karaṇīyā 3.2
+
+śaikṣa 62
+
+na stūpākāraṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.3
+
+śaikṣa 63
+
+samatittikaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.4
+
+śaikṣa 64
+
+samasūpikaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.5
+
+śaikṣa 65
+
+na stūpyavaguṇṭhīkṛtaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.6
+
+śaikṣa 66
+
+na vyutkaṇṭhaśaḥ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.7
+
+śaikṣa 67
+
+nātimahāntam ālopaṁ kariṣyāma iti śikṣā karaṇīyā 3.8
+
+śaikṣa 68
+
+parimaṇḍalam ālopaṁ kariṣyāma iti śikṣā karaṇīyā 3.9
+
+śaikṣa 69
+
+nānāgate ālope mukhadvāraṁ vivariṣyāma iti śikṣā karaṇīyā 3.10
+
+śaikṣa 70
+
+na sālopena mukhadvāreṇa vyāhariṣyāma iti śikṣā karaṇīyā 3.11
+
+śaikṣa 71
+
+na kabaḍacchedakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.12
+
+śaikṣa 72
+
+na śuśukkārakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.13
+
+śaikṣa 73
+
+na cucukkārakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.14
+
+śaikṣa 74
+
+na phuphukkārakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇī yā 3.15
+
+śaikṣa 75
+
+na gṛṣmakārakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.16
+
+śaikṣa 76
+
+nojjighrantaḥ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.17
+
+śaikṣa 77
+
+na jihvāniścārakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.18
+
+śaikṣa 78
+
+na hastāvalehakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.19
+
+śaikṣa 79
+
+na pātrāvalehakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.20
+
+śaikṣa 80
+
+na hastāvadhūnakaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.21
+
+śaikṣa 81
+
+na śistavikiraṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.22
+
+śaikṣa 82
+
+na sāmiṣeṇa pāṇinā pānīyasthālakaṁ pratigṛhīṣyāma iti śikṣā karaṇīyā 
+3.23
+
+śaikṣa 83
+
+nātmārtham aglānā odanaṁ vā sūpaṁ vā vijñāpayiṣyāma iti śikṣā karaṇīyā 
+3.24
+
+śaikṣa 84
+
+naudanena sūpaṁ praticchādayiṣyāmo bhūyaskāmatām upādāya iti śikṣā
+karaṇīyā 3.25
+
+śaikṣa 85
+
+nāvadhyānaprekṣiṇa anantarikasya pātraṁ vyavalokayiṣyāma iti śikṣā karaṇ
+īyā 3.26
+
+śaikṣa 86
+
+pātrasaṁjñinaḥ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.27
+
+śaikṣa 87
+
+sāvadānaṁ piṇḍapātaṁ paribhokṣyāma iti śikṣā karaṇīyā 3.28
+
+śaikṣa 88
+
+na sāmiṣaṁ pātrodakam antargṛhe chorayiṣyāmo gṛhiṇam anavalokyeti śikṣā
+karaṇīyā 3.29 ||
+
+Chapter 4
+
+śaikṣa 89
+
+na yānādhirūḍhasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.1
+
+śaikṣa 90
+
+na purato gacchataḥ pṛṣṭhato ’nugacchanta aglānasya dharmaṁ deśayiṣyāma
+iti śikṣā karaṇīyā 4.2
+
+śaikṣa 91
+
+na mārgaṁ gacchato hy amārgaṁ gacchanta aglānasya dharmaṁ deśayiṣyāma
+iti śikṣā karaṇīyā 4.3
+
+śaikṣa 92
+
+na sthitā niṣaṇṇasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.4
+
+śaikṣa 93
+
+na nīcāsane niṣaṇṇā uccāsane niṣaṇṇasyāglānasya dharmaṁ deśayiṣyāma iti
+śikṣā karaṇīyā 4.5
+
+śaikṣa 94
+
+na niṣaṇṇā nipannasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.6
+
+śaikṣa 95
+
+na veṣṭitaśirasa aglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.7
+
+śaikṣa 96
+
+nāvaguṇḍikākṛtasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.8
+
+śaikṣa 97
+
+na kaṁbhākṛtasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.9
+
+śaikṣa 98
+
+notkṛṣṭikākṛtasyāglānasya dharmaṁ deśayiṣyāma iti śikṣa karaṇīyā 4.10
+
+śaikṣa 99
+
+nātyastikākṛtasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.11
+
+śaikṣa 100
+
+na vinyastikākṛtasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.12
+
+śaikṣa 101
+
+na vikṣiptikākṛtasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.13
+
+śaikṣa 102
+
+na pallatthikākṛtasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 
+4.14
+
+śaikṣa 103
+
+na sopānahakasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.15
+
+śaikṣa 104
+
+na sapādukasyāglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.16
+
+śaikṣa 105
+
+na daṇḍapāṇer aglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.17
+
+śaikṣa 106
+
+na cchatrapāṇer aglānasya dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.18
+
+śaikṣa 107
+
+na śastrapāṇeḥ sarvathā dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.19
+
+śaikṣa 108
+
+na khaḍgapāṇeḥ sarvathā dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.20
+
+śaikṣa 109
+
+nāyudhapāṇeḥ sarvathā dharmaṁ deśayiṣyāma iti śikṣā karaṇīyā 4.21
+
+śaikṣa 110
+
+na harita uccāraprasrāvaṁ kheṭaṁ śiṅghāṇakaṁ kariṣyāma iti śikṣā
+karaṇīyā 4.22
+
+śaikṣa 111
+
+na kalpika udake pāribhogīye uccāraprasrāvaṁ kheṭaṁ śiṅghāṇakaṁ
+kariṣyāma iti śikṣā karaṇīyā 4.23
+
+śaikṣa 112
+
+na sthitā aglānā uccāraprasrāvaṁ kariṣyāma iti śikṣā karaṇīyā 4.24
+
+śaikṣa 113
+
+na sādhikapauruṣaṁ vṛkṣam ārokṣyāmo ’nyatra pratyayād iti śikṣā karaṇīyā
+4.25 | |
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+uddiṣṭā mayāyuṣmantaḥ saṁbahulāḥ śaikṣā dharmās tatrāham āyuṣmataḥ
+pṛcchāmi kaccit sthātra pariśuddā dvir api trir api pṛcchāmi kaccit sthātra
+pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam etad dhārayāmi ||
+
+7 adhikaraṇaśamathā
+
+ime punar āyuṣmantaḥ saptādhikaraṇaśamathā dharmā anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchanti |
+
+adhikaraṇaśamatha 1
+
+saṁmukhavinayārhasya saṁmukhavinayaṁ dāsyāmaḥ 1
+
+adhikaraṇaśamatha 2
+
+smṛtivinayārhasya smṛtivinayaṁ dāsyāmaḥ 2
+
+adhikaraṇaśamatha 3
+
+amūḍhavinayārhasya amūḍhavinayaṁ dāsyāmaḥ 3
+
+adhikaraṇaśamatha 4
+
+pratijñāvinayārhasya pratijñāṁ kārayiṣyāmaḥ 4
+
+adhikaraṇaśamatha 5
+
+tatsvabhāvaiṣikārhasya tatsvabhāvaiṣikāṁ dāsyāmaḥ 5
+
+adhikaraṇaśamatha 6
+
+yadbhūyeṣikārhasya yadbhūyeṣikaṁ dāsyāmaḥ 6
+
+adhikaraṇaśamatha 7
+
+utpannotpannāny adhikaraṇāni tṛṇaprastārakena vyupaśamayiṣyāmo dharmeṇa 
+.i... 7 ||
+
+uddiṣṭā mayāyuṣmantaḥ saptādhikaraṇaśamathā dharmās tatrāham āyuṣmataḥ
+pṛcchāmi kaccit sthātra pariśuddhā dvir api trir api pṛcchāmi kaccit sthātra 
+pariśuddhāḥ pariśuddhā atrāyuṣmanto yasmāt tūṣṇīm evam evāhaṁ dhārayāmi ||
+
+Conclusion
+
+uddiṣṭaṁ mayāyuṣmantaḥ prātimokṣasūtrasya | | nidānaṁ uddiṣṭāś catvāraḥ
+pārājikā dharmā uddiṣṭās trayodaśa saṁghāvaśeṣā dharmā uddiṣṭau dvāv aniyatau
+dharmau uddiṣṭās triṁśan niḥsargikāḥ pātayantikā dharmā uddiṣṭā navati
+pātayantikā dharmā uddiṣṭāś catvāraḥ pratideśanīyā dharmā uddiṣṭāḥ saṁbahulāḥ
+śaikṣā dharmā uddiṣṭāḥ saptādhikaraṇaśamathā dharmāḥ |
+
+etāvat tasya bhagavataḥ sūtragataṁ sūtraparyāpannam anvardhamāsaṁ
+prātimokṣasūtroddeśam āgacchati iti yo vā punar anyo ’py āgacched
+dharmasyānudharmas tatra vaḥ sahitaiḥ samagraiḥ saṁmodamānair avivadamānair
+ekāgrair ekoddeśair ekakṣīrodakībhūtaiḥ sukhaṁ phāṣaṁ vihartavyam iti śikṣā
+karaṇīyā ||
+
+Concluding verses
+
+    kṣāntiḥ paramaṁ tapas titīkṣā
+    nirvāṇaṁ paramaṁ vadanti buddhāḥ
+    na hi pravrajitaḥ paropatāpī
+    śramaṇo bhavati parān viheṭhayānaḥ Verse 1
+
+    cakṣuṣmān viṣamānīva vidyamāne parākrame
+    paṇḍito jīvaloke ’smin pāpāni parivarjayet Verse 2
+
+    nopavādī nopaghātī prātimokṣe ca saṁvaraḥ
+    mātrajñatā ca bhakteṣu prāntaṁ ca śayanāsanam
+    adhicitte samāyoga etad buddhasya śāsanam Verse 3
+
+    yathāpi bhramaraḥ puṣpād varṇagandhāv aheṭhayan
+    paraiti rasam ādāya tathā grāmāṁ muniś caret Verse 4
+
+    na pareṣāṁ vilomāni na pareṣāṁ kṛtākṛtam
+    ātmanas tu samīkṣeta samāni viṣamāni ca Verse 5
+
+    adhicetasi mā pramadyata pratataṁ maunapadeṣu śikṣata
+    śokā na bhavanti tāyino hy upaśāntasya sadā smṛtātmanaḥ Verse 6
+
+    sarvapāpasyākaraṇaṁ kuśalasyopasaṁpadaḥ
+    svacittaparyavadanam etad buddhasya śāsanaṁ Verse 7
+
+    kāyena saṁvaraḥ sādhu sādhu vācā ca saṁvaraḥ
+    manasā saṁvaraḥ sādhu sādhu sarvatra saṁvaraḥ
+    sarvatra saṁvṛto bhikṣuḥ sarvaduḥkhāt pramucyate Verse 8
+
+    vācānurakṣī manasā susaṁvṛtaḥ
+    kāyena caivākuśalaṁ na kuryāt
+    etāṁ śubhāṁ karmapathāṁ viśodhayann
+    ārādhayen mārgam ṛṣipraveditam Verse 9
+
+    kṣiptaḥ kṣipen naiva hato na hanyād
+    vairaprasaṁgeṣu bhaved avairaḥ
+    duṣṭeṣu ca syāt satataṁ prasannaḥ
+    svayaṁ na kuryāt paragarhitaṁ yat Verse 10
+
+    saptabhir lokanāyakair buddhavīrair mahātmabhiḥ
+    prātimokṣaḥ samuddiṣṭo nirdiṣṭaś ca maharṣiṇā Verse 11
+
+    atra sagauravā buddhā buddhānāṁ śrāvakāś ca ye
+    atra sagauravā bhūtvā tathānyonyasagauravā
+    hrīravatrāpyasaṁpannāḥ prāpnuvanti hy asaṁskṛtam Verse 12
+
+    ārabhadhvaṁ niṣkramadhvaṁ yujyadhvaṁ buddhaśāsane |
+    dhunadhvaṁ mṛtyunaḥ sainyaṁ naḍāgāram iva kuñjaraḥ Verse 13
+
+    yo hy asmiṁ dharmavinaye apramatto bhaviṣyati
+    prahāya jātisaṁsāraṁ duḥkhasyāntaṁ sa yāsyati Verse 14
+
+    yasyārthe sūtram uddiṣṭaṁ yasyārthe poṣathaḥ kṛtaḥ
+    tac chīlam anurakṣadhvaṁ vālāgraṁ camaro yathā Verse 15
+
+uddiṣṭaḥ prātimokṣaḥ kṛtaḥ samagreṇa saṁghena poṣatha iti ||
+
+prātimokṣasūtraṁ samāptam ||
+
+Based on the edition by Georg von Simson, Pratimoksasutra der Sarvastivadins,
+Teil 1, Göttingen 1986 (Sanskrittexte aus den Turfanfunden, 11); Teil 2,
+Göttingen 2000.
+
+Input by Georg von Simson for GRETIL.
+
+Prepared for SuttaCentral by Bhikkhu Sujato.
+

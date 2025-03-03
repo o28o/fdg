@@ -116,6 +116,10 @@
     text-align: left;
 }
 
+
+.ref {
+display: none;  
+}
 .common-size-icon {
   margin-top: 3px; 
   height: 24px;

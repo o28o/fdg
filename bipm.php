@@ -44,6 +44,13 @@ include './scripts/opentexts.php';
                 </div>
   <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/pm.php" >bu-pm</a>               
   
+      <a class="ms-1 text-decoration-none text-muted " href="/san/sarv.php" >sarv</a>
+    <a class="ms-1 text-decoration-none text-muted " href="/san/mg.php" >mg</a>
+    <a class="ms-1 text-decoration-none text-muted " href="/san/lo.php" >lo</a>
+    <a class="ms-1 text-decoration-none text-muted " href="/san/mu2.php" >mu2</a>
+    <a class="ms-1 text-decoration-none text-muted " href="/san/mu3.php" >mu3</a>
+ 
+  
      <a class="ms-1 text-decoration-none text-muted " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.1.4.0.0.0.t" >dpr</a>
      
     <a class="ms-1 text-decoration-none text-muted " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>

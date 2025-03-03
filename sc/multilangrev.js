@@ -298,9 +298,9 @@ if (translator === "o") {
 } else if ((translator === "" && texttype === "vinaya") || (translator === "brahmali" ))  {
   translatorforuser = 'Bhikkhu Brahmali';
 } else if (translator === "syrkin" ) {
-  translatorforuser = 'А.Я. Сыркин с Пали';
+  translatorforuser = '<a href=/assets/texts/syrkin.html>А.Я. Сыркин</a> с Пали';
 } else if (translator === "syrkin+edited+o" ) {
-  translatorforuser = 'А.Я. Сыркин с Пали, ред. <a href=/assets/texts/o.html>o</a>';
+  translatorforuser = '<a href=/assets/texts/syrkin.html>А.Я. Сыркин</a> с Пали, ред. <a href=/assets/texts/o.html>o</a>';
 } else if (translator === "sv+edited+o" ) {
   translatorforuser = 'SV theravada.ru с Англ, ред. <a href=/assets/texts/o.html>o</a>';
 } else if (translator === "o+in+progress" ) {

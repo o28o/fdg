@@ -1,6 +1,7 @@
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 
 basedir="/data/data/com.termux/files/usr/share/apache2/default-site/htdocs"
+dwnl="/storage/emulated/0/Download/"
 
 alias ll="ls -ahtr"
 alias lls="ll | sort -V"

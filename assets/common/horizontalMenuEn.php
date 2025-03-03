@@ -234,7 +234,18 @@ echo '<!--
          </div>
          </li>
          
-     
+              <li>
+         <div class="dropdown-item ">
+        Prātimokṣa San
+    <a class="text-black" href="/san/sarv.php" >sarv</a>
+    <a class="text-black" href="/san/mg.php" >mg</a>
+    <a class="text-black" href="/san/lo.php" >lo</a>
+    <a class="text-black" href="/san/mu2.php" >mu2</a>
+    <a class="text-black" href="/san/mu3.php" >mu3</a>
+         </div>
+         </li>
+
+
               <li>
          <div class="dropdown-item "> 
          <a class="text-black" target=""  href="https://readingfaithfully.org/">ReadingFaithfully.org</a>

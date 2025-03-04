@@ -1,4 +1,7 @@
-RewriteEngine on
+RewriteEngine On
+#RewriteRule ^(.*)$ https://find.dhamma.gift/$1 [L,R=301]
+
+
 Redirect 301 /ru.php /ru/
 
 # GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
@@ -24,8 +27,10 @@ AddOutputFilterByType DEFLATE text/html
 AddOutputFilterByType DEFLATE text/javascript
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/xml
-</IfModule>
- 
+AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/xml
+</IfModule> 
 
 RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
 RewriteRule ^/$ /ru/ [L,R=302]
@@ -43,3 +48,11 @@ RewriteCond %{HTTP_USER_AGENT} (bingbot|AhrefsBot|SemrushBot|PetalBot|DataForSeo
 RewriteRule .* - [F]
 ErrorDocument 404 /assets/404.php
 
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+</IfModule>

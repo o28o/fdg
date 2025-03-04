@@ -51,13 +51,13 @@ echo '<!--
 -->
 
 
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="EnglishMaterials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup d-md-inline-block">
     <i class="menu-icon icon-item fa-solid fa-book"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Английские</figcaption>   
 </figure>	  
 </a>
-  <ul class="dropdown-menu" aria-labelledby="EnglishMaterials">
+  <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
 
     <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
@@ -160,7 +160,7 @@ echo '<!--
 </a> 
   
     -->
-<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="Materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="materials" data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure d-md-inline-block">
   <i class="menu-icon icon-item fa-solid fa-graduation-cap"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Обучение</figcaption>   

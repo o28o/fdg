@@ -465,9 +465,21 @@ $smtbw = 'Пали-Англ словарь встроен';
 $psc = 'Самая полная коллекция построчных переводов Типитаки Пали-Англ';
 $smsc = 'Пали-Англ словарь можно включить в настройках';
 
-$psclight = 'Открывайте тексты suttacentral.net в разы быстрее';
-$smsclight = 'Пали-Англ построчно с удобным переключением';
-$ptamilcube = 'Простой Англо-Пали словарь';
+$mainpageextrasourceslink = 'MenuRussian'; 
+$mainpageextrasourcestitle = 'Полный список сайтов '; 
+$mainpageextrasourcesdesc = 'в подменю "Английские" и "Русские" под строкой поиска'; 
+
+$mainpageextrasearchlink = 'tools'; 
+$mainpageextrasearchtitle = 'Полный список ресурсов'; 
+$mainpageextrasearchdesc = 'в подменю "Инструменты" под строкой поиска'; 
+
+$mainpageextrastudylink = 'materials'; 
+$mainpageextrastudytitle = 'Полный список материалов'; 
+$mainpageextrastudydesc = 'в подменю "Обучение" под строкой поиска'; 
+
+$psclight = 'Основная часть текстов в Пали-Русском построчном сопоставлении';
+$smsclight = '4 никаи полностью АН, ДН, МН, СН';
+$ptamilcube = 'Из КН: ud, iti, snp, dhp, thag, thig';
 
 $head5words = 'Все Пали слова из Суттанты (кроме КН) и Винаи';
 $pwords = 'По алфавиту с указанием количества';
@@ -475,12 +487,8 @@ $pwords = 'По алфавиту с указанием количества';
 $pwids = 'Прекрасная онлайн коллекция словарей. Помимо Пали -  многие духовные традиции Индии';
 $smwisd = 'Очень полезно для сложных понятий';
 
-$pdpd = 'Объёмный и самый удобный Пали-Англ словарь и грамматика Пали';
-$smdpd = 'Доступно для ПК, Linux, Mac, Android, IOS';
-
-$head5dpdru = 'DPD Русская Версия';
-$pdpdru = 'Пали-Русский словарь основанный на Digital Pali Dictionary';
-$smdpdru = 'Альтернатива DPD, для тех кто не владеет английским';
+$pdpd = 'Объёмный и удобный Пали-Англ словарь и грамматика Пали';
+$smdpd = 'Доступны версии: Онлайн, ПК, Linux, Mac, Android, IOS';
 
 $head5pts = 'Словарь Pali Text Society';
 $ppts = 'Один из самых известных Пали-Англ словарей';
@@ -923,9 +931,23 @@ $smtbw = 'Pali-English on hover dictionary built-in';
 $psc = 'The most complete line-by-line Pali-English collection';
 $smsc = 'Pali-English dictionary can be turned on in settings';
 
-$psclight = 'Suttacentral.net texts with quicker lightweight interface';
+
+$mainpageextrasourceslink = 'MenuEnglish'; 
+$mainpageextrasourcestitle = 'Full list'; 
+$mainpageextrasourcesdesc = 'in the "External" submenu, under the search bar'; 
+
+$mainpageextrasearchlink = 'tools'; 
+$mainpageextrasearchtitle = 'Full list'; 
+$mainpageextrasearchdesc = 'in the "Tools" submenu, under the search bar'; 
+
+$mainpageextrastudylink = 'materials'; 
+$mainpageextrastudytitle = 'Full list'; 
+$mainpageextrastudydesc = 'in the "Study" submenu, under the search bar'; 
+
+
+$psclight = 'All Sutta and Vinaya texts in quick lightweight reading interface';
 $smsclight = 'Pali-English Line-by-line';
-$ptamilcube = 'Simple Online English-Pali Dictionary';
+$ptamilcube = 'On-click fullscale Pali Lookup';
 $head5words = 'All Pali words from Suttanta (except KN) & Vinaya';
 $pwords = 'In alphabetical order with count number';
 $pwids = 'Big online collection of dictionaries. Not only Pali, but multiple spiritual traditions of India';

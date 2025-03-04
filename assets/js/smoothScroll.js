@@ -103,3 +103,49 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Conditions not met: 's' parameter empty or missing, 'q' parameter empty or missing, or anchor found in URL");
     }
 });
+
+
+function highlightElement(event, elementId) {
+    // Отменяем стандартное поведение браузера
+    event.preventDefault();
+
+    // Находим элемент по ID
+    var element = document.getElementById(elementId);
+
+    if (element) {
+        // Прокручиваем к элементу
+        element.scrollIntoView({ behavior: 'smooth' });
+
+        // Начальные стили
+        element.style.borderRadius = '10px'; // Скругление углов
+        element.style.transition = 'box-shadow 0.3s ease-in-out'; // Плавный переход
+        let isWide = false; // Флаг для отслеживания состояния окантовки
+
+        // Функция для мигания
+        const blinkInterval = setInterval(function() {
+            if (isWide) {
+                // Обычная окантовка
+                element.style.boxShadow = '0 0 0 2px grey';
+            } else {
+                // Более широкая окантовка
+                element.style.boxShadow = '0 0 0 4px grey';
+            }
+            isWide = !isWide; // Меняем состояние
+        }, 500); // Интервал мигания (500 мс)
+
+        // Убираем выделение через 3 секунды
+        setTimeout(function() {
+            // Останавливаем мигание
+            clearInterval(blinkInterval);
+
+            // Плавно убираем окантовку
+            element.style.boxShadow = '0 0 0 0 grey';
+
+            // Убираем стили после завершения
+            setTimeout(function() {
+                element.style.transition = '';
+                element.style.borderRadius = '';
+            }, 300); // Ждем завершения анимации
+        }, 3000); // 3 секунды
+    }
+}

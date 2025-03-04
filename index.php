@@ -1348,6 +1348,7 @@ $.ajax({
 
 </script>
 <script defer src="/assets/js/themeswitch.js"></script>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=X8U4dR8x"></script>
 </body>
 
 <?php

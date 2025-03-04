@@ -21521,6 +21521,7 @@ include $basedir . "/assets/texts/bipm.php";
     <small class="text-muted"></small>
   </a>';
       } else {
+
       echo '
   <a href="https://github.com/o28o/fdg" target=_blank style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
@@ -21545,7 +21546,7 @@ include $basedir . "/assets/texts/bipm.php";
     <small class="text-muted"><?php echo $smcse;?></small>
   </a>
   
-        <a target="_blank" href="https://digitalpalidictionary.github.io/" class="list-group-item list-group-item-action">
+        <a target="_blank" href="https://dpdict.net/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Digital Pali Dictionary</h5>
       <small class="text-muted"><?php echo $detailapp;?></small>
@@ -21554,15 +21555,14 @@ include $basedir . "/assets/texts/bipm.php";
     <small class="text-muted"><?php echo $smdpd;?></small>
   </a>
 
-        <a target="_blank" href="https://devamitta.github.io/pali/" class="list-group-item list-group-item-action">
+  <a href="read.php#<?php echo $mainpageextrasearchlink; ?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1"><?php echo $head5dpdru;?></h5>
-      <small class="text-muted"><?php echo $detailapp;?></small>
+      <h5 class="mb-1"><?php echo $mainpageextrasearchtitle; ?></h5>
+      <small class="text-muted"><?php echo $detailonandoffline; ?></small>
     </div>
-    <p class="mb-1"><?php echo $pdpdru;?></p>
-    <small class="text-muted"><?php echo $smdpdru;?></small>
+    <p class="mb-1"><?php echo $mainpageextrasearchdesc;?></p>
+    <small class="text-muted"></small>
   </a>
-
 <!-- <a target="_blank" href="https://play.google.com/store/apps/details?id=klye.plugin.pi1" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $head5plikeyboard;?></h5>
@@ -21570,7 +21570,7 @@ include $basedir . "/assets/texts/bipm.php";
     </div>
     <p class="mb-1"><?php echo $pplikeyboard;?></p>
     <small class="text-muted"><?php echo $smplikeyboard;?></small>
-  </a>
+  </a> 
 
     <a target="_blank" href="https://dsal.uchicago.edu/dictionaries/pali/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
@@ -21598,7 +21598,7 @@ include $basedir . "/assets/texts/bipm.php";
     </div>
     <p class="mb-1"><?php echo $ptamilcube;?></p>
     <small class="text-muted"></small>
-  </a> -->
+  </a> 
 
     <a target="_blank"  href="
   https://drive.google.com/drive/folders/1bdkm-g_ReZi5QEior_gNTok8r4flAfa3?usp=sharing" class="list-group-item list-group-item-action">
@@ -21609,6 +21609,7 @@ include $basedir . "/assets/texts/bipm.php";
     <p class="mb-1"><?php echo $pwords;?></p>
     <small class="text-muted"></small>
   </a>
+  --> 
 
 
 </div>  
@@ -21620,7 +21621,7 @@ include $basedir . "/assets/texts/bipm.php";
                        
 
  <div class="list-group">
-  <a target="" href="<?php echo $mainscpage; ?>" class="list-group-item list-group-item-action active" aria-current="true">
+  <a target="" href="<?php echo $mainreadlink; ?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">sc.dhamma.gift</h5>
       <small><?php echo $detailonandoffline;?></small>
@@ -21629,14 +21630,7 @@ include $basedir . "/assets/texts/bipm.php";
     <small><?php echo $smsclight; ?></small>
   </a>
 
-  <a target="_blank" href="https://Suttacentral.net" class="list-group-item list-group-item-action" aria-current="true">
-    <div class="d-flex w-100 justify-content-between text-left">
-      <h5 class="mb-1">Suttacentral.net</h5>
-      <small><?php echo $detailonandoffline;?></small>
-    </div>
-    <p class="mb-1 text-left"><?php echo $psc; ?></p>
-    <small><?php echo $smsc; ?></small>
-  </a>
+
   
     <a target="_blank" href="https://thebuddhaswords.net/home/index.html" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
@@ -21647,6 +21641,7 @@ include $basedir . "/assets/texts/bipm.php";
     <small><?php echo $smtbw; ?></small>
   </a>
   
+  
     <a target="_blank"   href="https://www.digitalpalireader.online/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Digital Pali Reader</h5>
@@ -21656,25 +21651,18 @@ include $basedir . "/assets/texts/bipm.php";
     <small class="text-muted"><?php echo $smdpr; ?></small>
   </a>
   
-  <a target="_blank"  href="<?php echo $mainpagethsulink; ?>" class="list-group-item list-group-item-action">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Tipitaka.Theravada.su</h5>
-      <small class="text-muted"><?php echo $detailonline;?></small>
-    </div>
-    <p class="mb-1"><?php echo $pthsu;?></p>
-    <small class="text-muted"><?php echo $smthsu;?></small>
-  </a>
   
-  <a href="<?php echo $mainpagethrulink; ?>" target="_blank"   class="list-group-item list-group-item-action">
+
+  <a href="read.php#<?php echo $mainpageextrasourceslink; ?>" class="list-group-item list-group-item-action" >
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">Theravada.ru</h5>
-      <small class="text-muted"><?php echo $detailonline;?></small>
+      <h5 class="mb-1"><?php echo $mainpageextrasourcestitle; ?></h5>
+      <small class="text-muted"><?php echo $detailonandoffline; ?></small>
     </div>
-    <p class="mb-1"><?php echo $pthru;?></p>
+    <p class="mb-1"><?php echo $mainpageextrasourcesdesc;?></p>
     <small class="text-muted"></small>
   </a>
   
-<!--   <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank"   class="list-group-item list-group-item-action">
+ <!--  <a href="https://play.google.com/store/apps/details?id=hesoft.T2S" target="_blank"   class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">T2S Android</h5>
       <small class="text-muted"><?php echo $detailapp;?></small>
@@ -21721,6 +21709,7 @@ include $basedir . "/assets/texts/bipm.php";
     <small class="text-muted"><?php echo $smcheckpali;?></small>
   </a>
 
+ 
   <a target="_blank" href="<?php echo $linkconj; ?>" class="list-group-item list-group-item-action" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1"><?php echo $anameconj; ?> </h5>
@@ -21740,7 +21729,16 @@ include $basedir . "/assets/texts/bipm.php";
     <small class="text-muted"></small>
   </a>
  
-<!--  <a target="_blank"  href="/assets/diff/" class="list-group-item list-group-item-action">
+ 
+  <a href="read.php#<?php echo $mainpageextrastudylink; ?>"  class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"><?php echo $mainpageextrastudytitle; ?></h5>
+      <small class="text-muted"><?php echo $detailonandoffline; ?></small>
+    </div>
+    <p class="mb-1"><?php echo $mainpageextrastudydesc;?></p>
+    <small class="text-muted"></small>
+  </a>
+ <!-- <a target="_blank"  href="/assets/diff/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $head5suttadiff;?></h5>
       <small class="text-muted"><?php echo $detailonline;?></small>
@@ -21780,11 +21778,12 @@ include $basedir . "/assets/texts/bipm.php";
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="https://github.com/o28o/fdg#readme"><i class="fa-brands fa-github"></i></a>
 <a  target="_blank"  class="btn btn-outline-light btn-social mx-1" href="mailto:agiftofdhamma@gmail.com"><i class="fa-solid fa-at"></i></a>
 <a href="https://m.youtube.com/channel/UCoyL5T0wMubqrj4OnKVOlMw" class="btn btn-outline-light btn-social mx-1" title="YouTube" target="_blank" rel="nofollow"><i class="fa-brands fa-youtube"></i></a>
-<a href="https://t.me/dhamma_gift" class="btn btn-outline-light btn-social mx-1" title="Telegram" target="_blank" rel="nofollow"><i class="fa-brands fa-telegram"></i></a> 
- 
- <p class="lead mt-4">
+<a href="https://t.me/dhamma_gift" class="btn btn-outline-light btn-social mx-1" title="Telegram" target="_blank" rel="nofollow"><i class="fa-brands fa-telegram"></i></a>
+
+<p class="lead mt-4">
 <?php echo $poweredby; ?>
  <a class="text-white text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltippoweredby;?>"> *</a></p>
+
                     </div>
                 </div>
             </div>

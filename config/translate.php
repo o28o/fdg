@@ -469,7 +469,7 @@ $mainpageextrasourceslink = 'MenuRead,MenuEnglish,MenuRussian';
 $mainpageextrasourcestitle = 'Полный список сайтов '; 
 $mainpageextrasourcesdesc = 'в подменю "Английские" и "Русские" под строкой поиска'; 
 
-$mainpageextrasearchlink = 'tools'; 
+$mainpageextrasearchlink = 'MenuEnglish,tools'; 
 $mainpageextrasearchtitle = 'Полный список ресурсов'; 
 $mainpageextrasearchdesc = 'в подменю "Инструменты" под строкой поиска'; 
 
@@ -938,7 +938,7 @@ $mainpageextrasourceslink = 'MenuRead,MenuEnglish';
 $mainpageextrasourcestitle = 'Full list'; 
 $mainpageextrasourcesdesc = 'in the "External" submenu, under the search bar'; 
 
-$mainpageextrasearchlink = 'tools'; 
+$mainpageextrasearchlink = 'MenuEnglish,tools'; 
 $mainpageextrasearchtitle = 'Full list'; 
 $mainpageextrasearchdesc = 'in the "Tools" submenu, under the search bar'; 
 

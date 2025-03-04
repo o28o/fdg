@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var infoUpdate = document.getElementById("infoUpdate");
 
     // Целевое посещение (можно изменить на нужное число)
-    var targetVisit = 5;
-    var targetVisitForGear = 3;
+    var targetVisit = 6;
+    var targetVisitForGear = 2;
+    var targetVisitForRead = 4;
 
     // Получаем текущее количество посещений из localStorage
     var visitCount = localStorage.getItem("visitCount") || 0;
@@ -22,13 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Проверяем, если это пятое посещение и хэш #gear был добавлен ранее
-    if (visitCount === targetVisit && localStorage.getItem("gearAdded") === "true") {
-        window.location.hash = ''; // Убираем хэш #gear из URL
+    if (visitCount === targetVisitForRead && localStorage.getItem("gearAdded") === "true") {
+        window.location.hash = 'MenuRead'; // Убираем хэш #gear из URL
         localStorage.removeItem("gearAdded"); // Удаляем состояние хэша
     }
 
     // Проверяем, если это целевое посещение и окно не было закрыто ранее
     if (visitCount === targetVisit && !localStorage.getItem("infoUpdateClosed")) {
+      window.location.hash = ''
         infoUpdate.style.display = "block"; // Показываем окно
     }
 

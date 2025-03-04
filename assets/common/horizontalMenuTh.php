@@ -19,7 +19,7 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
 </a>';
 } 
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
-echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
+echo ' <a class="text-decoration-none mx-1" id="MenuRead" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon fa-solid fa-book-bookmark"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Read Pāḷi</figcaption>
@@ -115,7 +115,7 @@ echo '<!--
  
   </ul>
 
-<a class="text-decoration-none mx-1" href="/history.php">
+<a class="text-decoration-none mx-1" id="history" href="/history.php">
 <figure class="figure">
   <i class="menu-icon fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   

@@ -465,7 +465,7 @@ $smtbw = 'Пали-Англ словарь встроен';
 $psc = 'Самая полная коллекция построчных переводов Типитаки Пали-Англ';
 $smsc = 'Пали-Англ словарь можно включить в настройках';
 
-$mainpageextrasourceslink = 'MenuRussian'; 
+$mainpageextrasourceslink = 'MenuRead,MenuEnglish,MenuRussian'; 
 $mainpageextrasourcestitle = 'Полный список сайтов '; 
 $mainpageextrasourcesdesc = 'в подменю "Английские" и "Русские" под строкой поиска'; 
 
@@ -934,7 +934,7 @@ $psc = 'The most complete line-by-line Pali-English collection';
 $smsc = 'Pali-English dictionary can be turned on in settings';
 
 
-$mainpageextrasourceslink = 'MenuEnglish'; 
+$mainpageextrasourceslink = 'MenuRead,MenuEnglish'; 
 $mainpageextrasourcestitle = 'Full list'; 
 $mainpageextrasourcesdesc = 'in the "External" submenu, under the search bar'; 
 
@@ -1013,7 +1013,7 @@ $mainscpage = $mainpage . '/sc';
 $mainreadlink = '/th/read.php';
 
 }
-
+$menuuseful = 'MenuRead,MenuEnglish,MenuRussian,tools,materials';
 
 
 ?>

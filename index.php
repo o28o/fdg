@@ -108,10 +108,10 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
       <!-- <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Main</a></li> -->
             
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="<?php echo $mainreadlink;?>"><?php echo $menuread;?></a></li>
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="/history.php"><?php echo $menuhist;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="<?php echo $mainpagenoslash;?>/history.php"><?php echo $menuhist;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#help"><?php echo $menuhowto;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#project"><?php echo $menuabout;?></a></li>             
-<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#links"><?php echo $menulinks;?></a></li>
+<li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#<?php echo $menuuseful;?>"><?php echo $menulinks;?></a></li>
 <li class="nav-item mb-3 mx-lg-2"><a class="nav-link py-3 px-0 px-lg-0 rounded" href="#contacts"><?php echo $menucontact;?></a></li>
 <li class="nav-item mb-0 mx-lg-2"><p><a class="py-1 text-decoration-none px-0 px-lg-1 rounded link-light" href="/" onclick="localStorage.siteLanguage = 'en';">En</a> 
 <a class="link-light text-decoration-none py-1 px-0 px-lg-1 rounded" href="/ru/" onclick="localStorage.siteLanguage = 'ru';">Ru</a>
@@ -211,7 +211,7 @@ if (isset($_GET['q'])) {
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
-  <div class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+  <div id="gear" class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
   <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
   <span class="visually-hidden"><?php echo $searchcaption;?></span>
   </div>
@@ -448,38 +448,7 @@ Add <strong>Find.dhamma.gift</strong> to your Home Screen?
 }
 ?>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var infoUpdate = document.getElementById("infoUpdate");
-
-    // Целевое посещение (можно изменить на нужное число)
-    var targetVisit = 5;
-
-    // Получаем текущее количество посещений из localStorage
-    var visitCount = localStorage.getItem("visitCount") || 0;
-    visitCount = parseInt(visitCount);
-
-    // Увеличиваем счетчик посещений на 1, только если не достигнуто целевое значение
-    if (visitCount < targetVisit) {
-        visitCount += 1;
-        localStorage.setItem("visitCount", visitCount);
-    }
-
-    // Проверяем, если это целевое посещение и окно не было закрыто ранее
-    if (visitCount === targetVisit && !localStorage.getItem("infoUpdateClosed")) {
-        infoUpdate.style.display = "block"; // Показываем окно
-    }
-
-    // Добавляем обработчик события для кнопки закрытия
-    infoUpdate.querySelector(".btn-close").addEventListener("click", function() {
-        // Сохраняем в localStorage информацию о закрытии окна
-        localStorage.setItem("infoUpdateClosed", "true");
-        // Скрываем окно при нажатии на кнопку закрытия
-        infoUpdate.style.display = "none";
-    });
-});
-</script>
-
+<script src="/assets/js/uihelp.js"></script>
 <div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
   <div id="response"></div>
   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
@@ -804,7 +773,7 @@ foreach ($slides as $index => $slide) {
     <small class="text-muted"><?php echo $smdpd;?></small>
   </a>
 
-  <a href="" class="list-group-item list-group-item-action" onclick="highlightElement(event, 'tools')">
+  <a href="#<?php echo $mainpageextrasearchlink; ?>" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $mainpageextrasearchtitle; ?></h5>
       <small class="text-muted"><?php echo $detailonandoffline; ?></small>
@@ -902,7 +871,7 @@ foreach ($slides as $index => $slide) {
   
   
 
-  <a href=""  class="list-group-item list-group-item-action" onclick="highlightElement(event, 'MenuEnglish')">
+  <a href="#<?php echo $mainpageextrasourceslink; ?>" class="list-group-item list-group-item-action" >
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $mainpageextrasourcestitle; ?></h5>
       <small class="text-muted"><?php echo $detailonandoffline; ?></small>
@@ -979,7 +948,7 @@ foreach ($slides as $index => $slide) {
   </a>
  
  
-  <a href=""  class="list-group-item list-group-item-action" onclick="highlightElement(event, 'materials')">
+  <a href="#<?php echo $mainpageextrastudylink; ?>"  class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><?php echo $mainpageextrastudytitle; ?></h5>
       <small class="text-muted"><?php echo $detailonandoffline; ?></small>
@@ -1038,8 +1007,8 @@ foreach ($slides as $index => $slide) {
             </div>
         </footer>
         <!-- Copyright Section-->
-<div id="copyrightnote" class="copyright py-4 text-center text-white " >
-<div class="container"> <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/assets/readylinebyline.html">&copy;</a> Dhamma.gift <?php echo $mode; ?>. <a class="text-white text-decoration-none" href="/assets/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small>  <small>
+<div id="copyright" class="copyright py-4 text-center text-white " >
+<div class="container"> <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/assets/readylinebyline.html">&copy;</a> Dhamma.gift <?php echo $mode; ?>. <a class="text-white text-decoration-none" href="/assets/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small>  <small id="copyrightnote">
   <?php echo $copyrightnote; ?>
 
 </small> <button class="btn btn-secondary text-center installButton" id="" style="display:none;"><?php echo $installpwa;?></button></div>

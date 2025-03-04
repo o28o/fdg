@@ -21,7 +21,9 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
 } 
 
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
-echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
+echo '
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead"  href="' . $mainreadlink . '">
+
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-book-bookmark"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Читать Pāḷi</figcaption>
@@ -37,7 +39,7 @@ echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 } */ 
 
 echo '<!--
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropup text-decoration-none mx-1 d-md-inline-block"  data-bs-toggle="dropdown" aria-expanded="false" href="#">
 
 <figure class="figure dropup">
   <i class="menu-icon icon-item fa-solid fa-book-bookmark"></i>
@@ -130,7 +132,8 @@ echo '<!--
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrfvinayalink . '">Тхеравада.рф Патимоккха</a></li>
   </ul>
 <!-- </div> -->
-<a class="text-decoration-none mx-1" href="/ru/history.php">
+
+<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="history" href="/ru/history.php">
 <figure class="figure">
   <i class="menu-icon icon-item fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   

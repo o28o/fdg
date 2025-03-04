@@ -11,7 +11,7 @@ echo '<a class="text-decoration-none mx-1" href="/ru/new">
 
  if (preg_match('/(read\.php|new)(\?.*)?$/', basename($_SERVER['REQUEST_URI']))) {
     
-echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
+echo '<a class="text-decoration-none mx-1"  href="' . $mainpage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">' . $searchcaption . '</figcaption>
@@ -19,7 +19,8 @@ echo '<a class="text-decoration-none mx-1" href="' . $mainpage . '">
 </a>';
 } 
 if (strpos($_SERVER['REQUEST_URI'], "read.php") === false) {
-echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
+echo ' 
+<a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuRead" href="' . $mainreadlink . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon fa-solid fa-book-bookmark"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Read Pāḷi</figcaption>
@@ -35,7 +36,7 @@ echo ' <a class="text-decoration-none mx-1" href="' . $mainreadlink . '">
 } */
 
 echo '<!--
-<a class="dropup text-decoration-none mx-1 d-md-inline-block" id="MenuRead" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+<a class="dropup text-decoration-none mx-1 d-md-inline-block"  data-bs-toggle="dropdown" aria-expanded="false" href="#">
 <figure class="figure dropup">
   <i class="menu-icon fa-solid fa-book-bookmark"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Texts</figcaption>   
@@ -115,7 +116,7 @@ echo '<!--
  
   </ul>
 
-<a class="text-decoration-none mx-1" href="/history.php">
+<a class="text-decoration-none mx-1" id="history" href="/history.php">
 <figure class="figure">
   <i class="menu-icon fa-solid fa-clock-rotate-left"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">' . $anamehist . '</figcaption>   

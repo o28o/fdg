@@ -104,14 +104,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
-function highlightElement(event, elementId) {
-    // Отменяем стандартное поведение браузера
-    event.preventDefault();
-
-    // Находим элемент по ID
-    var element = document.getElementById(elementId);
-
+// Функция для выделения элемента
+function highlightElement(element) {
     if (element) {
         // Прокручиваем к элементу
         element.scrollIntoView({ behavior: 'smooth' });
@@ -122,7 +116,7 @@ function highlightElement(event, elementId) {
         let isWide = false; // Флаг для отслеживания состояния окантовки
 
         // Функция для мигания
-        const blinkInterval = setInterval(function() {
+        const blinkInterval = setInterval(function () {
             if (isWide) {
                 // Обычная окантовка
                 element.style.boxShadow = '0 0 0 2px grey';
@@ -134,7 +128,7 @@ function highlightElement(event, elementId) {
         }, 500); // Интервал мигания (500 мс)
 
         // Убираем выделение через 3 секунды
-        setTimeout(function() {
+        setTimeout(function () {
             // Останавливаем мигание
             clearInterval(blinkInterval);
 
@@ -142,10 +136,36 @@ function highlightElement(event, elementId) {
             element.style.boxShadow = '0 0 0 0 grey';
 
             // Убираем стили после завершения
-            setTimeout(function() {
+            setTimeout(function () {
                 element.style.transition = '';
                 element.style.borderRadius = '';
             }, 300); // Ждем завершения анимации
         }, 3000); // 3 секунды
     }
 }
+
+// Функция для проверки хэша и запуска выделения
+function checkHashAndHighlight() {
+    // Получаем хэш из URL (например, "#tools" или "#tools,materials")
+    const hash = window.location.hash;
+
+    // Если хэш присутствует
+    if (hash) {
+        // Убираем символ "#" из хэша и разбиваем на массив ID
+        const elementIds = hash.substring(1).split(',');
+
+        // Для каждого ID находим элемент и выделяем его
+        elementIds.forEach((elementId) => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                highlightElement(element);
+            }
+        });
+    }
+}
+
+// Вызываем функцию при загрузке страницы
+window.onload = checkHashAndHighlight;
+
+// Также вызываем функцию при изменении хэша
+window.addEventListener('hashchange', checkHashAndHighlight);

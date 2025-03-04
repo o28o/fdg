@@ -35,7 +35,7 @@ $menuhowto = 'Помощь';
 $menuabout = 'О Проекте';
 $menulinks = 'Полезное';
 $menucontact = 'Контакты';
-$copyrightnote = "Материалы сайта распространяются по модели CC BY-NC-SA 4.0, но работы А. Я. Сыркина и TheBuddhasWords.net подчиняются другим условиям. Для их использования уточняйте условия у правообладателей.   ";
+$copyrightnote = 'Материалы сайта распространяются по модели <a class="text-white text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA 4.0</a>, но работы А. Я. Сыркина и TheBuddhasWords.net подчиняются другим условиям. Для их использования уточняйте условия у правообладателей.';
 $poweredby = 'Powered by NI';
 $tooltippoweredby = 'Natural Intelligence, Естественный Интеллект, Dhamma Интеллект';
 
@@ -544,7 +544,7 @@ $clearaption = 'Clear';
 
 $btnsave = 'Set Defaults';
 $btnreset = 'Reset';
-$copyrightnote = "The materials on this website are distributed under the CC BY-NC-SA 4.0 license, but the works of A. Y. Syrkin and TheBuddhasWords.net are subject to different terms. Please check with the copyright holders for their usage conditions.";
+$copyrightnote = 'The materials on this website are distributed under the <a class="text-white text-decoration-none me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="Attribution-NonCommercial-ShareAlike 4.0 International">CC BY-NC-SA 4.0</a> license, but the works of A. Y. Syrkin and TheBuddhasWords.net are subject to different terms. Please check with the copyright holders for their usage conditions.';
 
 
 $gearbutton = 'extra settings';

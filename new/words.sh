@@ -161,7 +161,7 @@ cat $tmpdir/${prefix}wordsfinalhtml >> $output/${prefix}w.html
 echo " </tbody>
     </table>" >> $output/${prefix}w.html
     if [ -s "$tmpdir/${prefix}variantsReport" ]; then
-echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3 '>Variants for ${keyword^}<div class='form-check-inline text-muted fs-4 input-group-append' data-bs-html='true'data-bs-toggle='tooltip' data-bs-placement='bottom' title='<strong>Variants</strong> with searched word<br><br>that are found across different editions of Pali Canon. <br><br>Abbreviation keys can be found in Edition Abbreviations section of <a target=_blank href=https://suttacentral.net/abbreviations?lang=en>this list</a>'> *</div></h3>" >> $output/${prefix}w.html
+echo " </div><div class='mt-3 ms-4 variants'><h3 id='variants' class='text-center my-3 '>Variants for ${keyword^}<div class='form-check-inline text-muted fs-4 input-group-append' data-bs-html='true'data-bs-toggle='tooltip' data-bs-placement='bottom' title='<strong>Variants</strong> with searched word<br><br>that are found across different editions of Pali Canon. <br><br>Abbreviation keys can be found in Edition Abbreviations section of <a href=/assets/texts/abbr.html>this page</a> or <a target=_blank href=https://suttacentral.net/abbreviations?lang=en>this</a>'> *</div></h3>" >> $output/${prefix}w.html
 echo "<div class=pli-lang>" >> $output/${prefix}w.html
 cat $tmpdir/${prefix}variantsReport | sed -E 's@'"$keyword"'@<b>&</b>@gI'>> $output/${prefix}w.html
 #cat $tmpdir/${prefix}variantsReport >> $output/${prefix}w.html

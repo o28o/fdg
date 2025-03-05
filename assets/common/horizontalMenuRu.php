@@ -126,9 +126,9 @@ echo '<!--
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
 
-  <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/canon/dn/digha.htm">Dhamma.ru Дигха Никая</a></li>
+  <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/index-sutta.html">Dhamma.ru Сутты</a></li>
     <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>
-    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrflink . '">Тхеравада.рф Дигха Никая</a></li>
+    <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrflink . '">Тхеравада.рф Сутты</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrfvinayalink . '">Тхеравада.рф Патимоккха</a></li>
   </ul>
 <!-- </div> -->

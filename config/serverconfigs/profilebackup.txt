@@ -1,38 +1,65 @@
-cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs
+dwnl="/storage/emulated/0/Download"
 
+#uncomment for server
+#basedir="/var/www/html"
+
+#comment out for server
 basedir="/data/data/com.termux/files/usr/share/apache2/default-site/htdocs"
-dwnl="/storage/emulated/0/Download/"
 
+export PATH=$PATH:$basedir/scripts
+
+cd $basedir
+
+#comment out for server
+cp ~/.profile $basedir/config/serverconfigs/profilebackup.txt
+#uncomment for server
+#cp ~/.bash_profile $basedir/config/serverconfigs/bash_profilebackup.txt
+
+
+
+#bash related
 alias ll="ls -ahtr"
 alias lls="ll | sort -V"
 alias grep="grep --color"
-alias scr="cd /storage/emulated/0/Dhamma/scripts"
-alias fdg="cd /data/data/com.termux/files/home/fdg"
-alias apa="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs"
+alias apa="cd $basedir"
+
+#SC relate
+alias roottxt="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms"
+alias trntxt="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta"
+alias sutta="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta"
+
+#FDG related
+alias asset="cd $basedir/assets/texts/sutta/"
 alias thsutta="cd $basedir/assets/texts/th"  
-alias roottxt="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms"
-alias trntxt="cd /storage/emulated/0/Dhamma/suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/sutta"
-alias out="cd /storage/emulated/0/Dhamma/output"
-alias res="cd /storage/emulated/0/Dhamma/fdg/result"
-alias all="cd /storage/emulated/0/Dhamma/output/allwords"
+alias res="cd $basedir/fdg/result"
+alias all="cd $basedir/assets/texts/words"
+alias dwnl="echo $dwnl"
+
+#SSH related
 alias ssssh="ssh -tt a0902785@141.8.192.193"
 alias asssh="ssh -i /data/data/com.termux/files/home/.ssh/Fdg2.pem  root@13.213.46.216"
 alias rsssh="ssh -tt -p1000 root@94.126.201.8"
 alias ksssh="ssh -tt -p1000 o561122122@94.126.201.8"
-alias aksa="~/aksharamukha/bin/python scripts/aksharamukha-adapter.py"
-alias dwnl="echo /storage/emulated/0/Download/"
-alias sutta="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta"
-alias asset="cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/sutta/"
-alias thaif="~/aksharamukha/bin/python scripts/paliThaiConv.py "
-alias pdevf="~/aksharamukha/bin/python scripts/paliDev.py "
-alias sanf="~/aksharamukha/bin/python scripts/sanDev.py "
-alias san="~/aksharamukha/bin/python scripts/sanDevConvW.py "
-alias pdev="~/aksharamukha/bin/python scripts/paliDevConvW.py "
-alias thai="~/aksharamukha/bin/python scripts/paliThaiConvW.py "
+alias nsssh="ssh -tt -p1001 pavel@94.126.201.8"
+
+alias comsshpull="commit_and_push && sshpull"
+alias sclpull="sshcommit && git pull"
+
+#Text convertion related
+alias aksa="~/aksharamukha/bin/python $basedir/scripts/aksharamukha-adapter.py"
+alias thaif="~/aksharamukha/bin/python $basedir/scripts/paliThaiConv.py "
+alias pdevf="~/aksharamukha/bin/python $basedir/scripts/paliDev.py "
+alias sanf="~/aksharamukha/bin/python $basedir/scripts/sanDev.py "
+alias san="~/aksharamukha/bin/python $basedir/scripts/sanDevConvW.py "
+alias pdev="~/aksharamukha/bin/python $basedir/scripts/paliDevConvW.py "
+alias thai="~/aksharamukha/bin/python $basedir/scripts/paliThaiConvW.py "
+
 alias dpr="/data/data/com.termux/files/usr/bin/live-server --port=8085 --quiet ~/dpr/ "
+alias gitall="git pull ; yes '' | commit_and_push ; sshpull ; ssh -p1000 root@94.126.201.8 'cd /var/www/html ; bash scripts/checknewlinebylineinscrepo.sh' ; yes '' | sshcommit ; git pull"
+#alias miss='apa 2>&1 >/dev/null ; bash  scripts/mvNewTextsFromDownloads.sh; bash ./scripts/missingtranslations.sh an5; git pull; cd - 2>&1 >/dev/null'
+
 
 function md5checkwrite {
-
 var="$(cat)"
 functionname=`echo $var | awk '{print $1}'`
 functionfile=~/.shortcuts/${functionname}.sh 
@@ -45,14 +72,14 @@ md5_file=$(md5sum ${functionfile} | cut -d" " -f1)
 
 functionname=grepallwords                 
 finddhamma-nohup () {
-cd /storage/emulated/0/Dhamma/fdg/result
-nohup bash /storage/emulated/0/Dhamma/fdg/scripts/finddhamma.sh "$@" &
+cd $basedir/result
+nohup bash $basedir/scripts/finddhamma.sh "$@" &
 };
 
 echo "${functionname}
 #!/data/data/com.termux/files/usr/bin/bash
-#cd /storage/emulated/0/Dhamma/fdg/result
-#bash /storage/emulated/0/Dhamma/fdg/scripts/finddhamma.sh \"\$@\"
+#cd $basedir/result
+#bash $basedir/scripts/finddhamma.sh \"\$@\"
 #" | md5checkwrite
 
 functionname=apaswitch 
@@ -94,8 +121,6 @@ fi
 termux-open-url http://localhost:8080/ru
 sleep 2
 " | md5checkwrite
-
-
 
 #
 functionname=findallSuttas-th
@@ -185,9 +210,6 @@ ssh a0092061@f.dhamma.gift \"(cd /home/a0092061/scripts/ ; bash ./find_in_all_Su
 
 " | md5checkwrite 
 
-
-
-
 function sshpsls {
 ssh a0092061@f.dhamma.gift " cd /home/a0092061/output; ls -atr |tail -n15 ; echo ; ps -ef| grep '.sh'  "
 }
@@ -234,7 +256,6 @@ source /storage/emulated/0/Dhamma/scripts/script_config-termux.sh
 #outputs
 rsync -azP    --exclude="nohup.out" \$user@\$host:\$serveroutputdir \$outputdir 
 " | md5checkwrite
-
 
 
 functionname=wordfind
@@ -381,19 +402,11 @@ cd assets/audio
 git pull
 " | md5checkwrite
 
-alias comsshpull="commit_and_push && sshpull"
-alias sclpull="sshcommit && git pull"
 function awkit {
 echo awk -F'/' '{print $'$1' }' \| sed 's@_@@g'
 }
 
 
-alias gitall="git pull ; yes '' | commit_and_push ; sshpull ; ssh -p1000 root@94.126.201.8 'cd /var/www/html ; bash scripts/checknewlinebylineinscrepo.sh' ; yes '' | sshcommit ; git pull"
-
-export PATH=$PATH:/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts
-
-
-#alias miss='apa 2>&1 >/dev/null ; bash  scripts/mvNewTextsFromDownloads.sh; bash ./scripts/missingtranslations.sh an5; git pull; cd - 2>&1 >/dev/null'
 
 function miss() {
 if [[ "$@" == "" ]]
@@ -404,7 +417,7 @@ args="$@"
 fi
 apa 2>&1>/dev/null
 bash  scripts/mvNewTextsFromDownloads.sh
-bash ./scripts/missingtranslations.sh $args
+#bash ./scripts/missingtranslations.sh $args
 git pull
 cd - 2>&1>/dev/null
 }
@@ -413,7 +426,6 @@ function cj() {
 cat $1 | jq -r '.[]'
 }
 
-apachectl start
 
 function replacer() {
 sed -i 's/осознанности/памятования/g' *
@@ -435,5 +447,4 @@ function checker() {
 apa; bash scripts/checknewlinebylineinscrepo.sh | grep -v done ; cd - >/dev/null
 }
 
-cp ~/.profile profilebackup.txt
-
+apachectl start

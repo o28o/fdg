@@ -2,9 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var infoUpdate = document.getElementById("infoUpdate");
 
     // Целевое посещение (можно изменить на нужное число)
-    var targetVisit = 6;
-    var targetVisitForGear = 2;
-    var targetVisitForRead = 4;
+    var targetVisit = 23;
+    var targetVisitForPWA = 5;
+    var targetVisitForGear = 10;
+    var targetVisitForRead = 15;
+    var extraTimes = 1;
 
     // Получаем текущее количество посещений из localStorage
     var visitCount = localStorage.getItem("visitCount") || 0;
@@ -19,18 +21,29 @@ document.addEventListener("DOMContentLoaded", function () {
     // Проверяем, если это целевое посещение для добавления #gear
     if (visitCount === targetVisitForGear) {
         window.location.hash = 'gear'; // Добавляем хэш #gear в URL
-        localStorage.setItem("gearAdded", "true"); // Сохраняем состояние хэша
-    }
+      //  localStorage.setItem("gearAdded", "true"); // Сохраняем состояние хэша
+    } else if (visitCount > targetVisitForGear + extraTimes ) {
+      if (window.location.hash.includes('gear')) {
+  let newHash = window.location.hash.replace('#gear', '').replace('##', '#');  
+  window.location.hash = newHash || ''; // Обновляем хэш
+}
+ 
+    } 
 
-    // Проверяем, если это пятое посещение и хэш #gear был добавлен ранее
-    if (visitCount === targetVisitForRead && localStorage.getItem("gearAdded") === "true") {
-        window.location.hash = 'MenuRead'; // Убираем хэш #gear из URL
-        localStorage.removeItem("gearAdded"); // Удаляем состояние хэша
+    // Проверяем, если это N посещение и хэш #gear был добавлен ранее
+    if (visitCount === targetVisitForRead ) {
+        window.location.hash = 'MenuRead,MenuEnglish,MenuRussian,tools,materials'; // Убираем хэш #gear из URL
+      //  localStorage.removeItem("gearAdded"); // Удаляем состояние хэша
+    } else if (visitCount > targetVisitForRead + extraTimes ) {
+     if (window.location.hash.includes('MenuRead,MenuEnglish,MenuRussian,tools,materials')) {
+  let newHash = window.location.hash.replace('#MenuRead,MenuEnglish,MenuRussian,tools,materials', '').replace('##', '#');  
+  window.location.hash = newHash || ''; // Обновляем хэш
+}
     }
 
     // Проверяем, если это целевое посещение и окно не было закрыто ранее
-    if (visitCount === targetVisit && !localStorage.getItem("infoUpdateClosed")) {
-      window.location.hash = ''
+    if (visitCount === targetVisitForPWA && !localStorage.getItem("infoUpdateClosed")) {
+     // window.location.hash = ''
         infoUpdate.style.display = "block"; // Показываем окно
     }
 

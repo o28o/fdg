@@ -30,7 +30,7 @@ $fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crosso
 $basedir = "/var/www/html/";
 
 //converter.php
-$adapterscriptlocation = '/data/data/com.termux/files/home/aksharamukha/bin/python3 /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/scripts/aksharamukha-adapter.py';
+$adapterscriptlocation = '/home/aksharamukha/aksharamukha/bin/python3 /var/www/html/scripts/aksharamukha-adapter.py';
 
       } 
       

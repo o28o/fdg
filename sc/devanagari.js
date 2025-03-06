@@ -106,8 +106,8 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/memorize.html", "/ru/sc/");
-const enUrl = mlUrl.replace("/sc/memorize.html", "/sc/");
+const ruUrl = mlUrl.replace("/sc/devanagari.html", "/ru/sc/");
+const enUrl = mlUrl.replace("/sc/devanagari.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
@@ -464,6 +464,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
 rvUrl = rvUrl.replace("memorize.html", "");
+rvUrl = rvUrl.replace("devanagari.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 
 const warning = "<p class='warning' style='color:green;'>Bahussuto hoti sutadharo sutasannicayo...<br>sātthaṁ sabyañjanaṁ... tathārūpāssa dhammā bahussutā honti<br>dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā. <a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";

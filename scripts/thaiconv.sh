@@ -1,9 +1,9 @@
 ###thai translit
 apachepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 scroot=$apachepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms
-thairoot=$apachepath/assets/texts/th/root/pli/ms
+thairoot=$apachepath/assets/texts/devanagari/root/pli/ms
 tmproot=$apachepath/tmp
-outputFileNameAddition=rootth-pli-ms.json
+outputFileNameAddition=rootd-pli-ms.json
 
 find $tmproot -name "*_"  |sort -V | while read suttaid 
 do
@@ -28,17 +28,17 @@ exit 0
 ###thai translit
 apachepath=/data/data/com.termux/files/usr/share/apache2/default-site/htdocs
 scroot=$apachepath/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/
-thairoot=$apachepath/assets/texts/th/root/pli/ms
+thairoot=$apachepath/assets/texts/devanagari/root/pli/ms
 tmproot=$apachepath/tmp
 outputFileNameAddition=_
-alias aks='~/aksharamukha/bin/python scripts/paliThaiConv.py '
+alias aks1='~/aksharamukha/bin/python scripts/paliDev.py '
 
 find $scroot -name "*_*" |sort -V | while read file 
 do
 suttaid=$(echo $file | awk -F/ '{print $NF}' | awk -F_ '{print $1}')
 outputFile=$tmproot/${suttaid}${outputFileNameAddition}
 echo $suttaid
-aks $file > $outputFile
+aks1 $file > $outputFile
 done
 
 exit 0
@@ -106,3 +106,11 @@ cd -
 suttaid=sn12.2
 paste <(awk '{print $1}' < $(find /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/ -name "${suttaid}_*")) <(awk -F': ' '{print $2}' < $(find /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms -name "${suttaid}_*") ) > /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/th/root/pli/ms/sn/sn12/${suttaid}_rootth-pli-ms.json
 
+
+
+mkdir an{1..11}
+mkdir sn{1..56}
+
+
+for i in an{1..11} ; do  mv ${i}.* $i; done
+for i in sn{1..56} ; do  mv ${i}.* $i; done

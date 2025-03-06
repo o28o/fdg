@@ -3,7 +3,7 @@ start=`date +%s`
 #set -x 
 #set +x
 #trap read debug
-
+#sutta ; grep -ril "<" | xargs | sed -i -e  "s@<b>@@g" -e  "s@</b>@@g"
 #export LC_ALL=en_US
 ##############################
 # ‘Why don’t I gather grass, 
@@ -526,14 +526,14 @@ fileprefix=${fileprefix}-all
 fortitle="${fortitle} +All"
 elif [[ "$@" == *"-tru"* ]]; then
 function grepbasefile {
-nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} 
+nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} | cleanuphtml
 }
 fileprefix=${fileprefix}
 fortitle="${fortitle}"
 elif [[ "$@" == *"-b"* ]]; then
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $bwlocation
- --exclude-dir={$sutta,$abhi,home,js,css,image,fonts} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,pli-tv-kd,pli-tv-pvr,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"
+ --exclude-dir={$sutta,$abhi,home,js,css,image,fonts} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,pli-tv-kd,pli-tv-pvr,thi-ap,vv} | grep -vE "(ud|sn|an)[0-9]{0,3}.html|/bw/home"  | cleanuphtml
 }
 fileprefix=${fileprefix}-bw
 fortitle="${fortitle}"
@@ -566,7 +566,7 @@ searchIn="$vin"
 vindefpart="${modpattern}.{0,3}—|${modpattern}.{0,3}ti|${modpattern}.*nāma|"
 linesafter=1
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp}  | cleanuphtml > $tmpdef
 
 nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "${vindefpart}\bKata.{0,20} \b${modpattern}.{0,5}\?|${modpattern}.{0,20}Kat.{0,20} \bho.*\?|\bKatha.{0,20} \b${modpattern}.{0,5}\?|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}" $tmpdef
 }
@@ -574,7 +574,7 @@ else
 # definitions in Suttanta 
 
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpdef
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp}  | cleanuphtml > $tmpdef
 
 nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\bKata.{0,40} ${modpattern}.{0,9}[\?,]|\bKo .{0,40}${modpattern}|\bayaṁ .{0,40}${modpattern}|\bKatha.{0,40} \b${modpattern}.{0,5}[\?,]|${modpattern}.{0,15}, ${modpattern}.{0,25} vucca|${modpattern}.{0,25} vucca|Kiñ.*${modpattern}.{0,9} va|${modpattern}.*ariyassa vinaye|ariyassa vinaye.*${modpattern}${customtexts}" $tmpdef
 }
@@ -583,12 +583,12 @@ fi
 
 function grepbasefileExtended1 {
   fortitle="Definition Extended 1 ${fortitle}"
-cat $tmpdef | nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\b${modpattern}[^\s]{0,3}sutta|${modpattern}.*vacanīy"
+cat $tmpdef | nice -$nicevalue grep -Ei -B${linesbefore} -A${linesafter} "\b${modpattern}[^\s]{0,3}sutta|${modpattern}.*vacanīy"  | cleanuphtml
 }
 
 function grepbasefileExtended2 {
   fortitle="Definition Extended 2 ${fortitle}"
-nice -$nicevalue grep  -B${linesbefore} -A${linesafter} -Ei "\bKata.* \b${modpattern}.*[\?,]|\bKatha.* \b${modpattern}.*[,\?]|\bKas.{0,60}${modpattern}.{0,9}[\?,]|${modpattern}[^\s]{0,3}sutta|${modpattern}[^\s]{0,3}vagg[ao]|(dn3[34]|mn4[34]).*(Dv|Ti|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${modpattern}|\bKata.{0,20}${modpattern}.{0,9}[\?,]|${modpattern}.*adhivacan|${modpattern}.{0,15}, ${modpattern}.*vucca|${modpattern}.{0,9} vacan|Seyyathāpi.*${modpattern}|Katth.*${modpattern}.*daṭṭhabb|Kiñ.*${modpattern}.{0,9} vadeth|vucca.{2,5} ${modpattern}{0,7}|Yadapi.*${modpattern}.*tadapi.*${modpattern}|an1\..*yadidaṁ ${modpattern}|an1\..*${modpattern}.*yadidaṁ|An2.*Dv.*${modpattern}|An3.*(Tis|Tay|Tī).{0,50}${modpattern}|An4.*(Cattā|Cata).{0,50}${modpattern}|An5.*Pañc.{0,50}${modpattern}|An6.*cha.*${modpattern}|An7.*Satta.*${modpattern}|An8.*Aṭṭh.*${modpattern}|An9.*Nav.*${modpattern}|an1[10].*das.{0,50}${modpattern}|(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${modpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${modpattern}" $tmpdef
+nice -$nicevalue grep  -B${linesbefore} -A${linesafter} -Ei "\bKata.* \b${modpattern}.*[\?,]|\bKatha.* \b${modpattern}.*[,\?]|\bKas.{0,60}${modpattern}.{0,9}[\?,]|${modpattern}[^\s]{0,3}sutta|${modpattern}[^\s]{0,3}vagg[ao]|(dn3[34]|mn4[34]).*(Dv|Ti|Tay|Tī|Cattā|Cata|Pañc|cha|Satta|Aṭṭh|Nav|das).{0,20}${modpattern}|\bKata.{0,20}${modpattern}.{0,9}[\?,]|${modpattern}.*adhivacan|${modpattern}.{0,15}, ${modpattern}.*vucca|${modpattern}.{0,9} vacan|Seyyathāpi.*${modpattern}|Katth.*${modpattern}.*daṭṭhabb|Kiñ.*${modpattern}.{0,9} vadeth|vucca.{2,5} ${modpattern}{0,7}|Yadapi.*${modpattern}.*tadapi.*${modpattern}|an1\..*yadidaṁ ${modpattern}|an1\..*${modpattern}.*yadidaṁ|An2.*Dv.*${modpattern}|An3.*(Tis|Tay|Tī).{0,50}${modpattern}|An4.*(Cattā|Cata).{0,50}${modpattern}|An5.*Pañc.{0,50}${modpattern}|An6.*cha.*${modpattern}|An7.*Satta.*${modpattern}|An8.*Aṭṭh.*${modpattern}|An9.*Nav.*${modpattern}|an1[10].*das.{0,50}${modpattern}|(an3.34|an3.111|an3.112|an6.39|an10.174|dn15|sn12.60|sn14.12).*${modpattern}|(mn135|mn136|mn137|mn138|mn139|mn140|mn141|mn142|sn12.2:|sn45.8|sn47.40|sn48.9:|sn48.10|sn48.36|sn48.37|sn48.38|sn51.20).*${modpattern}" $tmpdef  | cleanuphtml
 }
 #|an1\..*${modpattern}
 #sml 
@@ -615,7 +615,7 @@ if [[ "$@" == *"-vin"* ]]
 fi  
 
 function grepbasefile {
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp} > $tmpsml
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,pli-tv-kd,pli-tv-pvr,thag,thig,dhp}  | cleanuphtml > $tmpsml
 
 #for i in `grep -iE "Evamev.*${modpattern}" $tmpsml | awk -F':' '{print $1}' | sort -V | uniq`; do grep -EHi -B1 "Evamev.*${modpattern}" $i | sed 's@json-@json:@g' | grep -vi "Evamev.*${modpattern}" | sort -V | uniq | sed '/--/d'  ; done > tmpsml
 
@@ -652,7 +652,7 @@ for pattern in $patternforfind
 do 
 echo nice -$nicevalue grep -Eril -m1 "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv} >> outgrepcomloop
 echo >> outgrepcomloop
-nice -$nicevalue grep -Eril -m1 "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv}  > iter$iterationnum.$rand
+nice -$nicevalue grep -Eril -m1 "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv}  | cleanuphtml > iter$iterationnum.$rand
  iterationnum=$((iterationnum + 1))
 done
 #echo "$patternforfind dddd $patternforgrep" >> outgrepcomloop
@@ -716,9 +716,9 @@ keyword="$pattern"
 if [[ "$language" == *"Pali"* ]]; then
 
 cd $suttapath/sc-data/sc_bilara_data/variant/pli/ms/
-grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g' | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-var
+grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g' | cleanuphtml > $tmpdir/${prefix}initrun-var
 cd $apachesitepath/assets/texts/variant/
-grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g' | sed 's/<[^>]*>//g' >> $tmpdir/${prefix}initrun-var
+grep -riE "$pattern" $searchIn | sed 's/{//g' | sed 's/}//g'  | cleanuphtml >> $tmpdir/${prefix}initrun-var
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 
@@ -726,7 +726,7 @@ if [ -s "$tmpdir/${prefix}initrun-var" ]; then
 cat $tmpdir/${prefix}initrun-var | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFromVar
 bash $tmpdir/${prefix}cmndFromVar | sed 's/<[^>]*>//g'> $tmpdir/${prefix}initrun-pi
 fi
-grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g' | grep '": "'| sed 's/json./json:/g' |  grep -v "^--$" >> $tmpdir/${prefix}initrun-pi
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn  | cleanuphtml | grep '": "'| sed 's/json./json:/g' |  grep -v "^--$" >> $tmpdir/${prefix}initrun-pi
 cp $tmpdir/${prefix}initrun-pi $tmpdir/pli
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
@@ -738,7 +738,7 @@ cat $tmpdir/${prefix}initrun-pi $tmpdir/${prefix}initrun-en $tmpdir/${prefix}ini
 elif [[ "$language" == "English" ]]; then
 
 cd $suttapath/sc-data/sc_bilara_data/translation/en/$translator
-grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | grep '": "'| sed 's/json./json:/g' |  grep -v "^--$"  >> $tmpdir/${prefix}initrun-en
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | grep '": "'| sed 's/json./json:/g'  | cleanuphtml|  grep -v "^--$"  >> $tmpdir/${prefix}initrun-en
 
 cd $suttapath/sc-data/sc_bilara_data/root/pli/ms/
 cat $tmpdir/${prefix}initrun-en | awk '{ print $2 }' | sed 's@\"@\\"@g' | awk 'BEGIN {OFS=""; printf "grep -Eir \"("} { printf $1"|"}' |  sed '$ s@|$@)"  '"$searchIn"' \n@' > $tmpdir/${prefix}cmndFromEn
@@ -750,8 +750,8 @@ bash $tmpdir/${prefix}cmndFromEn > $tmpdir/${prefix}initrun-var
 
 cat $tmpdir/${prefix}initrun-pi $tmpdir/${prefix}initrun-en $tmpdir/${prefix}initrun-var > $tmpgb
 else
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr} > $tmpgb
-nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv,thag,thig,dhp} >> $tmpgb
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam}  -B${linesbefore} -A${linesafter}  "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,vv,thag,thig,dhp,pli-tv-kd,pli-tv-pvr}  | cleanuphtml > $tmpgb
+nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} "$pattern" $suttapath/sc-data/sc_bilara_data/variant/pli/ms/sutta --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv,thag,thig,dhp}  | cleanuphtml >> $tmpgb
 
 fi 
 
@@ -796,7 +796,7 @@ elif [[ "$@" == *"-tru"* ]]; then
     
          function grepbasefile {
 cd $apachesitepath/theravada.ru/Teaching/Canon/Suttanta/
-grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' 
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | cleanuphtml
 cd - > /dev/null
 }   
     
@@ -813,7 +813,7 @@ elif [[ "$@" == *"-ru"* ]]; then
     definitionkeys="что такое.*${pattern}.{0,4}\\?|${pattern}.*говорят|${pattern}.*обозначение|${pattern}.{0,4}, ${pattern}.*говорят"
       function grepbasefile {
 cd $suttapath/$pali_or_lang
-grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g'   | sed 's@/ему/@ему@g'
+grep -riE -B${linesbefore} -A${linesafter} "$pattern" $searchIn | cleanuphtml | sed 's@/ему/@ему@g'
 cd - > /dev/null
 }  
 
@@ -1044,7 +1044,7 @@ keyword="$pattern"
 
 if [[ "$args" == *"-oru"* ]] ; then
 cd $apachesitepath/assets/texts/
-bash $tmpdir/${prefix}cmnd | sed 's/<[^>]*>//g' > $tmpdir/${prefix}initrun-ru
+bash $tmpdir/${prefix}cmnd  | cleanuphtml > $tmpdir/${prefix}initrun-ru
 cat $tmpdir/${prefix}initrun-ru >> $tmpdir/$basefile
 fi   
     

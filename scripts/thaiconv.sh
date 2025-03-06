@@ -114,3 +114,9 @@ mkdir sn{1..56}
 
 for i in an{1..11} ; do  mv ${i}.* $i; done
 for i in sn{1..56} ; do  mv ${i}.* $i; done
+
+
+
+#search for error in json files 
+
+find . -type f | while read i ; do  echo $i ; cat $i | cj 1>/dev/null ; done 2>&1 | grep -B1 error

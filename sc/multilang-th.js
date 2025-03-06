@@ -566,10 +566,12 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/sc/th.html", "/sc/");
 rvUrl = origUrl.replace("/th/sc/", "/sc/");
+dUrl = origUrl.replace("/sc/", "/sc/d.html");
 rvUrl = rvUrl.replace("mlth.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/memorize.html");
 
-const warning = "<p class='warning' >Warning!<br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+
+const warning = "<p class='warning' >Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
 //var lineBreak = "\n\n",
 //revhtml = html.split(lineBreak).reverse().join(lineBreak)

@@ -106,8 +106,10 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/sc/devanagari.html", "/ru/sc/");
-const enUrl = mlUrl.replace("/sc/devanagari.html", "/sc/");
+var ruUrl = mlUrl.replace("/sc/devanagari.html", "/ru/sc/");
+ruUrl = mlUrl.replace("/sc/d.html", "/ru/sc/");
+var enUrl = mlUrl.replace("/sc/devanagari.html", "/sc/");
+enUrl = mlUrl.replace("/sc/d.html", "/sc/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
@@ -157,6 +159,9 @@ if (slug.includes("mn"))  {
 } else if (slug.match(/bu-pm|bi-pm/)) {
   let translator = "o";
     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
+      var rootDevanagaripath
+ = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slug}_rootd-pli-ms.json`;
+
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
 
@@ -465,6 +470,7 @@ const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
 rvUrl = rvUrl.replace("memorize.html", "");
 rvUrl = rvUrl.replace("devanagari.html", "");
+rvUrl = rvUrl.replace("d.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 
 const warning = "<p class='warning' style='color:green;'>Bahussuto hoti sutadharo sutasannicayo...<br>sātthaṁ sabyañjanaṁ... tathārūpāssa dhammā bahussutā honti<br>dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā. <a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
@@ -574,7 +580,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
   xhr.send();
 
   // Обработка ответа
- xhr.onreadystatechange = function() {
+/* xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
         // Обработка успешного ответа
@@ -588,6 +594,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
     }
   };
 
+*/
   // Обновление сообщения об ошибке на странице
   
   suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>

@@ -337,8 +337,9 @@ let rvUrl = origUrl.replace("/ru/sc/", "/sc/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/sc/", "/sc/rv.html");
 thUrl = origUrl.replace("/sc/", "/th/sc/");
+dUrl = origUrl.replace("/sc/", "/sc/d.html");
 
-const warning = "<p class='warning' >Warning!<br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
+const warning = "<p class='warning' >Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
  

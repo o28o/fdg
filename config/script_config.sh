@@ -254,9 +254,9 @@ sed -E "s@$patternForHighlight@<b>&</b>@gI"
 }
 
 function cleanupwords {
-sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' | sed 's@<j>@@g' 
+sed 's/[[:punct:]]*$//' | awk '{print tolower($0)}' | sed -e 's/”ti$/’ti/g' -e 's/”’ti$/’ti/g' -e 's/[[:punct:]]*$//' | sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' | sed 's@<b>@@g' | sed 's@</b>@@g' | sed 's@</j>@@g' | sed 's@<j>@@g' 
 }
 
 function cleanuphtml {
-sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' | sed 's@<b>@@g'  | sed 's@</b>@@g'
+sed 's/<[^>]*>//g'  | sed 's@<em>@@g'  | sed 's@</em>@@g' | sed 's@<b>@@g' | sed 's@</b>@@g' | sed 's@</j>@@g' | sed 's@<j>@@g' 
 }

@@ -574,7 +574,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
   xhr.send();
 
   // Обработка ответа
- /* xhr.onreadystatechange = function() {
+ xhr.onreadystatechange = function() {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
         // Обработка успешного ответа
@@ -587,7 +587,7 @@ prevName = prevName.replace(/[0-9.]/g, '');
       }
     }
   };
-*/
+
   // Обновление сообщения об ошибке на странице
   
   suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>

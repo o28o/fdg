@@ -701,6 +701,14 @@ function toggleThePali() {
       localStorage.paliToggleSpecial = "rus"; */
     }
   });
+  
+      // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyS") {
+      // Имитируем клик по кнопке
+      languageButton.click();
+    }
+  });
 }
 
 function parseSlug(slug) {

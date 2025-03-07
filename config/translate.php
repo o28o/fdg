@@ -912,7 +912,7 @@ Please, create an issue on github or send an email, if you\'ll find other criter
 
 $defaults = '<br><div class="text-start">
 <h5>Reading Interface</h5>
-<input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Standard</strong> - Two languages - Pali, Russian 
+<input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Standard</strong> - Two languages - Pali, English 
 <a href="/ru/sc/?q=sn56.11">demo</a>
 <br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Multilang</strong> - Three languages - Pali, Russian, English <a href="/sc/ml.html?q=sn56.11">demo</a><br>

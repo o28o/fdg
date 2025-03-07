@@ -86,6 +86,7 @@ var settingsButton = document.getElementById("settingsButton");
       // Проверяем, есть ли запись в localStorage
     if (!localStorage.getItem("firstVisitShowSettingsClosed")) {
         settingsWindow.style.display = "block"; // Если нет, показываем его
+                        localStorage.setItem("firstVisitShowSettingsClosed", "true");
     }
 
 

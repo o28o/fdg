@@ -62,7 +62,12 @@
   <img src="/assets/svg/align-left.svg" alt="Текст в одно или две колонки" class="common-size-icon4"></img>
 </a>
 </div>
-
+       <!-- Переключатель вариантов -->
+    <div class="" id="variants-switcher">
+  <a alt="Показать или скрыть варианты из разных версий Канона" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
+  <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> </a></div>   
+  <!-- Словарь Onlick Popup -->
+  <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">  <img src="/assets/svg/comment.svg" class="dictIcon"></img></a> 
  <a alt="Настройки"  id="settingsButton" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
   <img id="gear" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
   </a>  
@@ -85,25 +90,11 @@
     
     
 
-<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-secondary alert-dismissible fade show mt-3" role="alert" id="settings">
+<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="settings">
   <div class="mb-2">
     <h2 style="text-align: center;">Настройки</h2>
-       <!-- Переключатель вариантов -->
-  
-    <div class="" id="variants-switcher">
-  <a alt="Показать или скрыть варианты из разных версий Канона" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
-  <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть различия ms и др вариантов Канона
-  </a> <strong>Alt+V</strong><br>
-  <a style="text-decoration:none;" href="/assets/texts/abbr.html">Список редакций Канона</a>
-</div>   
-<br>
-  <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="dictIcon"></img></a>
-
- вкл-выкл словарь. Клик по слову <strong>Alt+A</strong> (<a href="https://dpdict.net/ru">DPD</a>). 
-    <br>
-    <br>
-    <!-- Дропдаун для выбора системы письма -->
-    <label for="script-select">Система письма:</label><br>
+  <!-- Дропдаун для выбора системы письма -->
+    <label for="script-select"><h5 style="text-align: left;">Выбрать систему письма:</h5></label><br>
 	<select class="dropdown droponmain rounded-pill text-muted border-2 border-secondary text-center input-group-append" id="script-select">
       <option value="ISOPali">ISOPali</option>
       <option value="Devanagari">Devanagari</option>
@@ -114,9 +105,17 @@
 	<button type="button" class="btn btn-sm btn-secondary rounded-pill" id="apply-button" >Применить</button>
     <br>
     <br>
-        <h5 style="text-align: left;">Другие Горячие Клавиши</h5>
-    Переключить язык - <strong>Alt+S</strong><br>
-    Переключить режим в две колонки - <strong>Alt+C</strong><br><br>
+        <h5 style="text-align: left;">"Горячие Клавиши"</h5>
+          <strong>Alt+S</strong> Переключить язык<br>  
+  <strong>Alt+C</strong> Текст в одну-две колонки  <br>
+
+    <strong>Alt+V</strong> Показать-скрыть варианты <br>Между MS и другими <a style="text-decoration:none;" href="/assets/texts/abbr.html">Редакциями Канона</a>
+<br>
+<strong>Alt+A</strong> Вкл-выкл словарь 
+<br> 
+  Клик по слову для активации. <a href="https://dpdict.net/ru">DPD</a>. 
+    <br>
+    <br>    
 
     
     Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
@@ -128,7 +127,7 @@
   </div>
 </div>    
 
-<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
+<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
  <div class="mb-2">
       <h2 style="text-align: center;">Помощь</h2>
    <img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></img> Чтение, <img width="26px" alt="main page for search" src="/assets/img/gray-white.png"> поиск,  <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img> темы, <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> текст в одну-две колонки, <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть различия ms и др вариантов Канона<a style="text-decoration:none;" href="/assets/texts/abbr.html">.</a> <button id="language-button-dummy" class="hide-button rounded ">Pāḷi Рус</button> переключить языки Пали/Рус.</div> <img src="/assets/svg/comment.svg" class="common-size-icon4"></img> вкл-выкл всплывающий по клику словарь (<a  href="https://dpdict.net/ru">DPD</a>). <br>

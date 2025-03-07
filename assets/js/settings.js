@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('selectedScript', selectedScript);
     }
 
+                localStorage.setItem("firstVisitShowSettingsClosed", "true");
+
     // Применение выбранного значения
     applySavedScript(selectedScript);
   });

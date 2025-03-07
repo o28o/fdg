@@ -18,10 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('selectedScript', selectedScript);
     }
 
-                localStorage.setItem("firstVisitShowSettingsClosed", "true");
+localStorage.setItem("firstVisitShowSettingsClosed", "true");
 
     // Применение выбранного значения
     applySavedScript(selectedScript);
+checkAndUpdateUrl()  
+    
   });
 
   // Функция для применения сохраненного значения
@@ -65,8 +67,8 @@ function clearParams() {
   window.location.href = url.toString();
 });
   
-  
-});
+
+
 
 //Default readers
 
@@ -88,3 +90,67 @@ var savedReader = localStorage.getItem("defaultReader");
 if (savedReader) {
     document.querySelector('input[name="reader"][value="' + savedReader + '"]').checked = true;
 }
+
+// Сохраняем текущие значения параметров
+const initialBaseUrl = getBaseUrl();
+const initialDefaultReader = localStorage.defaultReader;
+
+// Функция для получения текущего baseUrl
+function getBaseUrl() {
+    let baseUrl;
+    if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
+        baseUrl = window.location.origin + "/ru/sc/";
+    } else {
+        baseUrl = window.location.origin + "/sc/";
+    }
+
+    if (localStorage.defaultReader === 'ml') {
+        baseUrl = window.location.origin + "/sc/ml.html";
+    } else if (localStorage.defaultReader === 'rv') {
+        baseUrl = window.location.origin + "/sc/rv.html";
+    } else if (localStorage.defaultReader === 'd') {
+        baseUrl = window.location.origin + "/sc/d.html";
+    } else if (localStorage.defaultReader === 'mem') {
+        baseUrl = window.location.origin + "/sc/memorize.html";
+    } else if (localStorage.defaultReader === 'fr') {
+        baseUrl = window.location.origin + "/sc/fr.html";
+    }
+
+    return baseUrl;
+}
+
+// Функция для обновления URL
+function updateUrl() {
+    const currentBaseUrl = getBaseUrl();
+    const url = new URL(window.location.href);
+
+    // Извлекаем путь из currentBaseUrl
+    const newPath = new URL(currentBaseUrl).pathname;
+
+    // Обновляем путь в текущем URL
+    url.pathname = newPath;
+
+    // Сохраняем новый URL
+    window.location.href = url.toString();
+}
+
+// Функция для проверки изменений и обновления URL
+function checkAndUpdateUrl() {
+    const currentBaseUrl = getBaseUrl();
+    const currentDefaultReader = localStorage.defaultReader;
+
+    // Если параметры изменились, обновляем URL
+    if (currentBaseUrl !== initialBaseUrl || currentDefaultReader !== initialDefaultReader) {
+        updateUrl();
+    }
+}
+
+// end of default reader part
+
+
+
+
+
+  
+});
+

@@ -6,10 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Загрузка сохраненного значения из localStorage
   const savedScript = localStorage.getItem('selectedScript');
-  if (savedScript) {
-    scriptSelect.value = savedScript; // Устанавливаем значение в select
-    applySavedScript(savedScript); // Применяем сохраненное значение
-  }
 
   // Обработка нажатия на кнопку "Применить"
   applyButton.addEventListener('click', function() {

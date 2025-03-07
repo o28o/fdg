@@ -38,9 +38,9 @@ alias dwnl="echo $dwnl"
 #SSH related
 alias ssssh="ssh -tt a0902785@141.8.192.193"
 alias asssh="ssh -i /data/data/com.termux/files/home/.ssh/Fdg2.pem  root@13.213.46.216"
-alias rsssh="ssh -tt -p1000 root@94.126.201.8"
+alias rsssh="ssh -tt -p1001 root@94.126.201.8"
+alias oldsssh="ssh -tt -p1000 root@94.126.201.8"
 alias ksssh="ssh -tt -p1000 o561122122@94.126.201.8"
-alias nsssh="ssh -tt -p1001 pavel@94.126.201.8"
 
 alias comsshpull="commit_and_push && sshpull"
 alias sclpull="sshcommit && git pull"
@@ -383,7 +383,7 @@ read\"
 functionname=sshpull
 function sshpull {
 echo "server kz"
-ssh -p1000 root@94.126.201.8 "cd /var/www/html 
+ssh -p1001 root@94.126.201.8 "cd /var/www/html 
 git pull 
 echo
 echo audio

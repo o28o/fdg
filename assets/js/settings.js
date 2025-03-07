@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
   resetButton.addEventListener('click', function() {
   // Удаляем значение из localStorage
   localStorage.removeItem('selectedScript');
+      localStorage.removeItem("defaultReader");
+
   localStorage.removeItem('viewMode');
 localStorage.setItem("variantVisibility", "hidden");
 
@@ -65,3 +67,24 @@ function clearParams() {
   
   
 });
+
+//Default readers
+
+// Получаем все радиокнопки
+var readerRadios = document.querySelectorAll('input[name="reader"]');
+
+// Устанавливаем обработчики событий при изменении состояния радиокнопок
+readerRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+        if (this.checked) {
+            // Устанавливаем значение в localStorage
+            localStorage.setItem("defaultReader", this.value);
+        }
+    });
+});
+
+// Проверяем значение в localStorage при загрузке страницы и устанавливаем состояние радиокнопок
+var savedReader = localStorage.getItem("defaultReader");
+if (savedReader) {
+    document.querySelector('input[name="reader"][value="' + savedReader + '"]').checked = true;
+}

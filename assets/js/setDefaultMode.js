@@ -26,6 +26,7 @@
   // Функция для сброса настроек и очистки локального хранилища
   function resetPreferences() {
     localStorage.removeItem("userPreferences");
+    localStorage.removeItem("defaultReader");
     resetForm();
      $('#copyPopup').modal('show');
     // Дополнительные действия по сбросу, если необходимо

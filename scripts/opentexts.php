@@ -65,15 +65,39 @@ $nameErr = $languageErr  = "";
 $cb = $q = $extra = $la = $p = $arg = $string = $sutta = $ml = "";
 		// Checking for a GET request
 		
-// Получить значение из GET параметра
-if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
-        $base = "/";
-  $readerlang = $base . "sc/ml.html";
-} else if (isset($_GET['rv']) && $_GET['rv'] === 'on') {
-        $base = "/";
-  $readerlang = $base . "sc/rv.html";
-} 
+if (isset($_GET['reader'])) {
+    $reader = $_GET['reader']; // Получаем значение выбранной радиокнопки
 
+    switch ($reader) {
+        case 'ml':
+          $base = "/";
+            $readerlang = $base . "sc/ml.html";
+            break;
+        case 'rv':
+          $base = "/";
+            $readerlang = $base . "sc/rv.html";
+            break;
+        case 'd':
+          $base = "/";
+            $readerlang = $base . "sc/d.html";
+            break;
+        case 'mem':
+                    $base = "/";
+            $readerlang = $base . "sc/memorize.html";
+            break;
+        case 'fr':
+                    $base = "/";
+            $readerlang = $base . "sc/fr.html";
+            break;
+        default:
+            // Значение по умолчанию, если ни один вариант не подошел
+            $readerlang = $base . "sc/";
+            break;
+    }
+} else {
+    // Если параметр 'reader' не передан, используем значение по умолчанию
+    $readerlang = $base . "sc/";
+}
 		
 		
 		if ($_SERVER["REQUEST_METHOD"] == "GET") {

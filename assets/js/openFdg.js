@@ -31,7 +31,16 @@ document.addEventListener("DOMContentLoaded", function() {
         baseUrl = window.location.origin + "/sc/ml.html";
     } else if (localStorage.defaultReader === 'rv') {
         baseUrl = window.location.origin + "/sc/rv.html";
+    } else if (localStorage.defaultReader === 'd') {
+        baseUrl = window.location.origin + "/sc/d.html";
+    } else if (localStorage.defaultReader === 'mem') {
+        baseUrl = window.location.origin + "/sc/memorize.html";
+    } else if (localStorage.defaultReader === 'fr') {
+        baseUrl = window.location.origin + "/sc/fr.html";
     } 
+
+
+
 
 
     const fdgLinks = document.querySelectorAll('.fdgLink');

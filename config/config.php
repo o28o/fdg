@@ -175,54 +175,25 @@ $iconimportant = 'fa-solid fa-triangle-exclamation';
 $iconimportant = 'fa-solid fa-star';
 
 
-$defaults = '<br>
-<input class="form-check-input mt-2" name="ml" type="checkbox" id="mlCheckbox">
-<a href="/sc/ml.html?q=sn56.11">ml</a> or <input class="form-check-input mt-2" name="rv" type="checkbox" id="rvCheckbox">
-<a href="/sc/rv.html?q=sn56.11">rv</a> as Default Reader
-  <a class="dictIcon toggle-dict-btn">  <img src="/assets/svg/comment.svg" class=""></img></a>
 
-<script>
-// Получаем элементы чекбоксов
-var mlCheckbox = document.getElementById("mlCheckbox");
-var rvCheckbox = document.getElementById("rvCheckbox");
+$defaultsJS = '<script>
+// Получаем все радиокнопки
+var readerRadios = document.querySelectorAll(\'input[name="reader"]\');
 
-// Устанавливаем обработчики событий при изменении состояния чекбоксов
-mlCheckbox.addEventListener("change", function() {
-    if (this.checked) {
-        // Если чекбокс "ml" отмечен, устанавливаем значение в localStorage
-        localStorage.setItem("defaultReader", "ml");
-        // Убеждаемся, что чекбокс "rv" не отмечен
-        rvCheckbox.checked = false;
-    } else {
-        // Если чекбокс "ml" не отмечен, удаляем значение из localStorage
-        localStorage.removeItem("defaultReader");
-    }
+// Устанавливаем обработчики событий при изменении состояния радиокнопок
+readerRadios.forEach(function(radio) {
+    radio.addEventListener(\'change\', function() {
+        if (this.checked) {
+            // Устанавливаем значение в localStorage
+            localStorage.setItem("defaultReader", this.value);
+        }
+    });
 });
 
-rvCheckbox.addEventListener("change", function() {
-    if (this.checked) {
-        // Если чекбокс "rv" отмечен, устанавливаем значение в localStorage
-        localStorage.setItem("defaultReader", "rv");
-        // Убеждаемся, что чекбокс "ml" не отмечен
-        mlCheckbox.checked = false;
-    } else {
-        // Если чекбокс "rv" не отмечен, удаляем значение из localStorage
-        localStorage.removeItem("defaultReader");
-    }
-});
-
-// Проверяем значение в localStorage при загрузке страницы и устанавливаем состояние чекбоксов
-if (localStorage.getItem("defaultReader") === "ml") {
-    mlCheckbox.checked = true;
-} else if (localStorage.getItem("defaultReader") === "rv") {
-    rvCheckbox.checked = true;
-}
-
-// Проверяем, если оба чекбокса отключены, удаляем значение из localStorage
-if (!mlCheckbox.checked && !rvCheckbox.checked) {
-    localStorage.removeItem("defaultReader");
+// Проверяем значение в localStorage при загрузке страницы и устанавливаем состояние радиокнопок
+var savedReader = localStorage.getItem("defaultReader");
+if (savedReader) {
+    document.querySelector(\'input[name="reader"][value="\' + savedReader + \'"]\').checked = true;
 }
 </script>';
- 
- 
 ?>

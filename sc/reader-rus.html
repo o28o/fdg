@@ -104,31 +104,20 @@
 
 	<button type="button" class="btn btn-sm btn-secondary rounded-pill" id="apply-button" >Применить</button>
     <br>
-    <br>
-        <h5 style="text-align: left;">"Горячие Клавиши"</h5>
-          <strong>Alt+S</strong> Переключить язык<br>  
-  <strong>Alt+C</strong> Текст в одну-две колонки  <br>
 
-    <strong>Alt+V</strong> Показать-скрыть варианты <br>Между MS и другими <a style="text-decoration:none;" href="/assets/texts/abbr.html">Редакциями Канона</a>
-<br>
-<strong>Alt+A</strong> Вкл-выкл словарь 
-<br> 
-  Клик по слову для активации. <a href="https://dpdict.net/ru">DPD</a>. 
-    <br>
-    <br>    
 <br>
 <h5 style="text-align: left;">Интерфейс для Чтения</h5>
-<input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс 
-<!--<a href="/ru/sc/?q=sn56.11">демо</a>-->
+при переходе с главной и из результатов поиска<br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс <a href="/ru/sc/?q=sn56.11">демо</a>
 <br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/sc/ml.html?q=sn56.11">демо</a><br>
- <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/sc/d.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Тренажёр для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/sc/memorize.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх справа налево (слова не изменены) <a href="/sc/rv.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/sc/fr.html?q=sn56.11">демо</a><br>  
+<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мульти</strong> - Три языка - пали, русс, англ <a href="/sc/ml.html?q=dn22">демо</a><br>
+ <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и пали латиницей <a href="/sc/d.html?q=sn12.2">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/sc/memorize.html?q=an10.46">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх справа налево (слова не изменены) <a href="/sc/rv.html?q=sn35.236">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/sc/fr.html?q=sn22.59">демо</a><br>  
 
 <br>
-Он будет открываться по умолчанию при переходе с главной и из результатов поиска<br>
+<br>
   
     Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
     <br>
@@ -140,27 +129,33 @@
 </div>    
 
 <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
- <div class="mb-2">
       <h2 style="text-align: center;">Помощь</h2>
-   <img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></img> Чтение, <img width="26px" alt="main page for search" src="/assets/img/gray-white.png"> поиск,  <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img> темы, <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> текст в одну-две колонки, <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть различия ms и др вариантов Канона<a style="text-decoration:none;" href="/assets/texts/abbr.html">.</a> <button id="language-button-dummy" class="hide-button rounded ">Pāḷi Рус</button> переключить языки Пали/Рус.</div> <img src="/assets/svg/comment.svg" class="common-size-icon4"></img> вкл-выкл всплывающий по клику словарь (<a  href="https://dpdict.net/ru">DPD</a>). <br>
+<div class="mb-1">
+ <img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></img> Чтение <img width="26px" alt="main page for search" src="/assets/img/gray-white.png"> Поиск  <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img> Тема</div>
+        <h5 style="text-align: left;">"Горячие Клавиши"</h5>
+<div class="mb-2">
+          <button id="language-button-dummy" class="hide-button rounded ">Pāḷi Рус</button> <strong>Alt+S</strong> Переключить язык<br>  
+   <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> <strong>Alt+C</strong> Текст в одну-две колонки  <br>
+
+    <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> <strong>Alt+V</strong> Показать-скрыть варианты <br>мsежду MS и другими <a style="text-decoration:none;" href="/assets/texts/abbr.html">Редакциями Канона</a>
 <br>
-   <img src="/assets/svg/question.svg" class="common-size-icon4"></img> показать это сообщение <br><br>
+ <img src="/assets/svg/comment.svg" class="common-size-icon4"></img> <strong>Alt+A</strong> Вкл-выкл словарь 
+<br> 
+  Клик по слову для активации. <a href="https://dpdict.net/ru">DPD</a>. 
+   </div> 
+  <img src="/assets/svg/question.svg" class="common-size-icon4"></img> показать это сообщение <br><br>
  Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
 <br>
-<br>
-Ещё: 
-  <a alt="Помощь" id="helpLinksMessage" href="javascript:void(0);" class="toggle-icon">внешние ссылки
+  <a alt="Помощь" id="helpLinksMessage" href="javascript:void(0);" class="toggle-icon">Ещё помощь 
+
   </a>
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
 
 <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-secondary alert-dismissible fade show mt-3" role="alert" id="paliLookupLinksInfo">
  <div class="mb-2">
          <h2 style="text-align: center;">Дополнительно</h2>
-
-  Аббревиатуры: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. в <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> или <a href=https://suttacentral.net/abbreviations?lang=ru>здесь</a>.
-   
- </div>
-<strong>Меню ссылок:</strong><br>
+             <h5 style="text-align: left;">Меню ссылок</h5>
+    
  <a href=#>R+E</a> - читать на Пали, Рус, Англ<br>
  <a href=#>Ru / En</a> - на Пали Рус или Англ<br>
  <a href=#>DPR</a> - открыть на DigitalPaliReader.online<br>
@@ -168,6 +163,9 @@
  <a href=#>TBW</a> - на TheBuddhasWords.net<br>
  <a href=#>Th.ru / Th.su</a> - на Theravada.ru, когда доступно — Theravada.su<br><br>
 
+ </div>
+  Аббревиатуры: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. в <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> или <a href=https://suttacentral.net/abbreviations?lang=ru>здесь</a>.
+   
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
 
     <br>

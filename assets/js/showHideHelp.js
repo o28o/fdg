@@ -10,9 +10,11 @@
 var helpButton = document.getElementById("helpMessage");
 }
     // Проверяем, есть ли запись в localStorage
-//    if (!localStorage.getItem("paliLookupInfoClosed")) {
-//        paliLookupInfo.style.display = "block"; // Если нет, показываем его
-//    }
+  if (!localStorage.getItem("paliLookupInfoClosed")) {
+      paliLookupInfo.style.display = "block"; // Если нет, показываем его
+         localStorage.setItem("paliLookupInfoClosed", "true");
+  
+ }
     
      // Добавляем обработчик события для кнопки закрытия
     helpButton.addEventListener("click", function() {
@@ -23,7 +25,7 @@ var helpButton = document.getElementById("helpMessage");
     // Добавляем обработчик события для кнопки закрытия
     paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
         // Сохраняем в localStorage информацию о закрытии окна
-   //     localStorage.setItem("paliLookupInfoClosed", "true");
+     localStorage.setItem("paliLookupInfoClosed", "true");
         // Скрываем окно при нажатии на кнопку закрытия
         paliLookupInfo.style.display = "none";
     });
@@ -84,10 +86,10 @@ var settingsButton = document.getElementById("settingsButton");
 
   
       // Проверяем, есть ли запись в localStorage
-    if (!localStorage.getItem("firstVisitShowSettingsClosed")) {
-        settingsWindow.style.display = "block"; // Если нет, показываем его
-                        localStorage.setItem("firstVisitShowSettingsClosed", "true");
-    }
+//    if (!localStorage.getItem("firstVisitShowSettingsClosed")) {
+ //       settingsWindow.style.display = "block"; // Если нет, показываем его
+  //                      localStorage.setItem("firstVisitShowSettingsClosed", "true");
+//    }
 
 
 

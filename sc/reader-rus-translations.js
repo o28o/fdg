@@ -803,7 +803,16 @@ function toggleThePali() {
       localStorage.paliToggleRu = "rus";  
     }
   });
+  
+    // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyS") {
+      // Имитируем клик по кнопке
+      languageButton.click();
+    }
+  });
 }
+
 
 function parseSlug(slug) {
 if (
@@ -918,4 +927,6 @@ function handleVariantVisibility() {
     variantElements.forEach((el) => el.classList.toggle("hidden-variant"));
     localStorage.setItem("variantVisibility", isHidden ? "visible" : "hidden");
   });
+
+  
 }

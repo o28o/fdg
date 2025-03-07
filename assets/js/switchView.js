@@ -29,4 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Назначаем обработчик события для кнопки переключения
   document.getElementById('toggle-mode').addEventListener('click', toggleViewMode);
+
+// Добавляем обработчик сочетания клавиш Alt + M
+document.addEventListener('keydown', (event) => {
+  if (event.altKey && event.code === 'KeyC') {
+    // Вызываем функцию toggleViewMode
+    toggleViewMode();
+  }
+});  
 });

@@ -19,15 +19,14 @@
 <meta property="og:url" content="/sc" />
 <link rel="icon" type="image/png" sizes="32x32" href="https://find.dhamma.gift/assets/img/favico_black.png">     
 
+<link href="/assets/css/styles.css" rel="stylesheet" />
 
-
-
-     
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
     <link rel="stylesheet" href="thai.css">
-     <link rel="stylesheet" href="uiextra.css">
-     <link href="/assets/css/paliLookup.css" rel="stylesheet" />
+<link rel="stylesheet" href="uiextra.css">
+<link href="/assets/css/paliLookup.css" rel="stylesheet" />
+
 
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
@@ -55,19 +54,21 @@
         <div id="theme-button" class="icon-button">
 <img src="/assets/svg/circle-half-stroke.svg" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img>
  </div>
- <!-- Переключатель режимов -->
-<div id="mode-switcher">
+<!-- Переключатель режимов 1 2 колонки -->
+<div id="mode-switcher" class="">
 <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
-  <img src="/assets/svg/align-left.svg" class="common-size-icon4"></img>
+  <img src="/assets/svg/align-left.svg" alt="Текст в одно или две колонки" class="common-size-icon4"></img>
 </a>
 </div>
- <!-- Переключатель вариантов -->
-<div id="variants-switcher">
-  <a alt="Показать или скрыть варианты из разных версий Канона" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
-  <img src="/assets/svg/eye.svg" class="common-size-icon4"></img>
+
+ <a alt="Настройки"  id="settingsButton" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+  <img id="gear" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+  </a>  
+<div class="" >
+  <a alt="Помощь"  id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+  <img id="MenuRead"  src="/assets/svg/question.svg" class="common-size-icon4"></img>
   </a>
-</div> 
-  <a id="gear" alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="dictIcon"></img></a>
+</div>
     </div>
     </form>
     <br>
@@ -76,6 +77,48 @@
         <div id="next"></div>
     </div>
     <br>
+    
+    <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-secondary alert-dismissible fade show mt-3" role="alert" id="settings">
+  <div class="mb-2">
+    <h2 style="text-align: center;">Настройки</h2>
+    
+   <!-- Переключатель вариантов -->
+  
+    <div class="" id="variants-switcher">
+  <a alt="Показать или скрыть варианты из разных версий Канона" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
+  <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть различия ms и др вариантов Канона
+  </a><a style="text-decoration:none;" href="/assets/texts/abbr.html">Список редакций Канона</a> 
+</div>  
+<br>
+  <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="dictIcon"></img></a>
+
+ вкл-выкл словарь. Клик по слову (<a href="https://dpdict.net/ru">DPD</a>). 
+    <br>
+    <br>
+    <!-- Дропдаун для выбора системы письма -->
+    <label for="script-select">Система письма:</label><br>
+	<select class="dropdown droponmain rounded-pill text-muted border-2 border-secondary text-center input-group-append" id="script-select">
+      <option value="ISOPali">ISOPali</option>
+      <option value="Devanagari">Devanagari</option>
+      <option value="Thai">Thai</option>
+    </select>
+	    <!-- Кнопка "Применить" -->
+
+	<button type="button" class="btn btn-sm btn-secondary rounded-pill" id="apply-button" >Применить</button>
+    <br>
+
+<br>
+    
+    Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
+    <br>
+    <br>
+    <button type="button" class="btn btn-sm btn-secondary rounded-pill" id="reset-button" >Сбросить</button>
+
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>    
+
+    
     <div class="" id="sutta"> 
     <!-- class=" flip-horizontal reverse-order" -->
     </div>
@@ -452,4 +495,7 @@ window.addEventListener("load", function() {
 });
 </script>
 <script src="/assets/js/variantsButtonSc.js"></script>
+    <script src="/assets/js/showHideHelp.js"></script>
+
+<script src="/assets/js/settings.js"></script>
 </html>

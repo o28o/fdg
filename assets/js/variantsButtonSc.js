@@ -65,6 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
     iconImage.setAttribute("src", eyeIcon);
   }
     });
+    
+        // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyV") {
+      // Имитируем клик по кнопке
+      toggleButton.click();
+    }
+  });  
   }
 
   // Добавляем MutationObserver для отслеживания изменений в DOM (добавление новых элементов)

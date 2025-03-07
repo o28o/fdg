@@ -224,6 +224,13 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
+    // Добавляем обработчик сочетания клавиш Alt + A (физическая клавиша)
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyA") {
+      // Имитируем клик по кнопке
+      toggleBtn.click();
+    }
+  });  
 
 // Перехватчик кликов по слову
 document.addEventListener('click', function(event) {

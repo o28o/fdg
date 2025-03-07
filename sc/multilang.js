@@ -219,9 +219,23 @@ const rootResponse = fetch(rootpath)
       });
   });
 
- const translationResponse = fetch(trnpath).then(response => response.json());
-  const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
-  const htmlResponse = fetch(htmlpath).then(response => response.json());
+ const translationResponse = fetch(trnpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no translation found');   
+// console.log(varpath); 
+return {};
+  } 
+    );
+
+ const engtranslationResponse = fetch(engtrnpath).then(response => response.json())    .
+  catch(error => {
+ console.log('note:no english translation found');   
+// console.log(varpath); 
+return {};
+  } 
+    );
+    
+    const htmlResponse = fetch(htmlpath).then(response => response.json());
 
 async function fetchVariant() {
   const paths = [varpath, varpathLocal];

@@ -1,331 +1,255 @@
-abhibhāyatanasutta 1
-abhibhāyatanañhetaṁ 2
-abhibhāyatanaṁ 48
-abhibhāyatanānaṁ 1
-abhibhāyatanāni 10
-abhibhāyatanānī”ti 2
-ajjhattikāyatanaparijānanasutta 1
-ajjhattikāyatanaparijānanasutta 1 var
-ajjhattikāyatanasutta 1
-ajjhattikāyatanasutta 1 var
-ajjhattāyatanaanattasutta 1
-ajjhattāyatanaaniccasutta 1
-ajjhattāyatanaaniccasutta 1 var
-ajjhattāyatanadukkhasutta 1
-anāyatanaso 1
-apuññāyatanaṁ 1
-araññāyatanaisisutta 1
-araññāyatanaisisutta 1 var
-araññāyatanaṁ 2
-araññāyatane 1
-araññāyatane 12
-araññāyatanāni 13
-ariyāyatane 1
-asaññasattāyatanaṁ 2
-aṭṭhaabhibhāyatana 1
-bāhirāyatanaanattasutta 1
-bāhirāyatanaaniccasutta 1
-bāhirāyatanaaniccasutta 1 var
-bāhirāyatanadukkhasutta 1
-bāhirāyatanaparijānanasutta 1
-bāhirāyatanaparijānanasutta 1 var
-cakkhusamphassaviññāṇāyatanaṁ 3
-cakkhusamphassāyatanaṁ 1
-cakkhāyatanaṁ 8
-canekāyatanappavutto 1
-chaphassāyatanasutta 1
-chaphassāyatanasutta 1 var
-chaphassāyatane 1
-chaphassāyataniko 1
-chaphassāyatanikā 1 var
-chaphassāyatanikā 3
-chaphassāyatanī 1
-dasāyatanāni 1
-dhammānupassanāāyatanapabba 2
-dhammāviññāṇañcāyatanasaññā 1
-dhammāyatanaṁ 3
-dhammāākiñcaññāyatanasaññā 1
-dhammāākāsānañcāyatanasaññā 1
-dhātuāyatanāni 1
-dutiyachaphassāyatanasutta 1
-gandhāyatanaṁ 4
-ghānasamphassaviññāṇāyatanaṁ 2
-ghānasamphassāyatanaṁ 1
-ghānāyatanaṁ 7
-jivhāsamphassaviññāṇāyatanaṁ 1
-jivhāsamphassāyatanaṁ 1
-jivhāyatanaṁ 7
-kasiṇāyatanānaṁ 1
-kasiṇāyatanāni 6
-kasiṇāyatanānī”ti 1
-khandhadhātuāyatanaṁ 2
-khandhadhātuāyatanā 1
-khandhāyatanadhātuyo 1 var
-khandhāyatanadhātuyo 4
-kāyasamphassaviññāṇāyatanaṁ 1
-kāyasamphassāyatanaṁ 1
-kāyāyatanaṁ 7
-mahākammasaḷāyatanavibhaṅgā 1
-mahāsaḷāyatanikasutta 1
-mahāsaḷāyatanikasuttaṁ 1
-mahāsaḷāyatanikaṁ 1
-manosamphassaviññāṇāyatanaṁ 3
-manosamphassāyatanaṁ 1
-manāyatanaṁ 7
-nevasaññānāsaññāyatanadhātu 3
-nevasaññānāsaññāyatanadhātuayaṁ 2
-nevasaññānāsaññāyatanameva 1
-nevasaññānāsaññāyatanampi 1
-nevasaññānāsaññāyatanampāhaṁ 1
-nevasaññānāsaññāyatananissitaṁ 1
-nevasaññānāsaññāyatananissitā 1
-nevasaññānāsaññāyatananti 1
-nevasaññānāsaññāyatanan”ti 3
-nevasaññānāsaññāyatanapañhāsutta 1
-nevasaññānāsaññāyatanapaṭisaṁyuttāya 1
-nevasaññānāsaññāyatanasamāpatti 1
-nevasaññānāsaññāyatanasamāpattiyā 6
-nevasaññānāsaññāyatanasamāpattiyāpi 1
-nevasaññānāsaññāyatanasappāyā 2
-nevasaññānāsaññāyatanasaññaṁ 9
-nevasaññānāsaññāyatanasaññā 6
-nevasaññānāsaññāyatanasaññāya 1
-nevasaññānāsaññāyatanasaññāyā”ti 1
-nevasaññānāsaññāyatanasaññī 15
-nevasaññānāsaññāyatanasaṁyojane 1
-nevasaññānāsaññāyatanasaṁyojanena 1
-nevasaññānāsaññāyatanasmiṁ 1
-nevasaññānāsaññāyatanassapi 1
-nevasaññānāsaññāyatanasutta 1
-nevasaññānāsaññāyatanasutta 1 var
-nevasaññānāsaññāyatanato 3
-nevasaññānāsaññāyatanaṁ 130
-nevasaññānāsaññāyatane 30
-nevasaññānāsaññāyatanā 2
-nevasaññānāsaññāyatanādhimuttassa 2
-nevasaññānāsaññāyatanādhimutto 2
-nevasaññānāsaññāyatanūpagaṁ 1
-nevasaññānāsaññāyatanūpago 1
-nevasaññānāsaññāyatanūpagā 6
-nevasaññānāsaññāyatanūpagānaṁ 7
-nevasaññānāsaññāyatanūpapattiyā”ti 4
-palāyatan”ti 1
-pañcāyatanāni 1
-paṭhamachaphassāyatanasutta 1
-paṭhamachaphassāyatanasutta 1 var
-phassāyatanaṁ 15
-phassāyatanehi 1
-phassāyatanesu 16
-phassāyatano 3
-phassāyatanā 4
-phassāyatanānaṁ 53
-phassāyatanāni 2
-phassāyatanānīti 3
-phoṭṭhabbāyatanaṁ 4
-puthusippāyatanāni 11
-rajassāyatanaṁ 1
-rasāyatanaṁ 4
-rājāyatanakathā 2
-rājāyatanamūle 2
-rājāyatanamūlā 1
-rājāyatanañca 1
-rājāyatanaṁ 1
-rūpāyatanaṁ 4
-sabbāyatanehi 1
-saddāyatanaṁ 4
-satiāyatane 16
-satiāyatane”ti 3
-saḷevāyatanāni 1 var
-saḷevāyatanāni 2
-saḷāyatanajātiko 4
-saḷāyatananidāno 4
-saḷāyatananirodhagāminiṁ 2
-saḷāyatananirodhagāminī 2
-saḷāyatananirodhañca 1
-saḷāyatananirodhaṁ 2
-saḷāyatananirodho 1
-saḷāyatananirodho 17
-saḷāyatananirodhoti 3
-saḷāyatananirodho”ti 5
-saḷāyatananirodhā 1
-saḷāyatananirodhā 20
-saḷāyatananti 5
-saḷāyatanan”ti 5
-saḷāyatanan”tissa 1
-saḷāyatanapabhavo 3
-saḷāyatanapaccayā 1
-saḷāyatanapaccayā 27
-saḷāyatanappabhavo”ti 1
-saḷāyatanasamudayañca 1
-saḷāyatanasamudayaṁ 1
-saḷāyatanasamudayo 6
-saḷāyatanasamudayā 1
-saḷāyatanasaṁyuttaṁ 1
-saḷāyatanassa 2
-saḷāyatanavaggasaṁyuttapāḷi 1
-saḷāyatanavagge 4
-saḷāyatanavaggo 2
-saḷāyatanavedanā 1
-saḷāyatanavibhaṅgassa 1
-saḷāyatanavibhaṅgasutta 1
-saḷāyatanavibhaṅgasuttaṁ 1
-saḷāyatanavibhaṅgaṁ 1
-saḷāyatanañca 1
-saḷāyatanañcidaṁ 3
-saḷāyatanaṁ 1
-saḷāyatanaṁ 76
-saḷāyatane 8
-saḷāyatanikaṁ 5
-saḷāyatanoti 1
-saḷāyatanāni 1 var
-saḷāyatanūpaniso 2
-sotasamphassaviññāṇāyatanaṁ 2
-sotasamphassāyatanaṁ 1
-sotāyatanaṁ 7
-tadāyatanaṁ 17
-tatiyachaphassāyatanasutta 1
-tañcāyatanaṁ 10
-titthāyatanasutta 1
-titthāyatanaṁ 2
-titthāyatanaṁ 6
-titthāyatanā 4
-titthāyatanāni 2
-upavāyatan”ti 1
-upavāyatan”ti 1 var
-vimuttāyatanasutta 1
-vimuttāyatanaṁ 12
-vimuttāyatanāni 4
-viññāṇañcāyatanadhātu 4
-viññāṇañcāyatanadhātuayaṁ 1
-viññāṇañcāyatanampi 1
-viññāṇañcāyatanampāhaṁ 2
-viññāṇañcāyatananissitā 1
-viññāṇañcāyatananti 1
-viññāṇañcāyatanan”ti 2
-viññāṇañcāyatanaparamāhaṁ 1
-viññāṇañcāyatanapañhāsutta 1
-viññāṇañcāyatanasahagatā 5
-viññāṇañcāyatanasamāpatti 1
-viññāṇañcāyatanasamāpattiyā 6
-viññāṇañcāyatanasamāpattiyāpi 1
-viññāṇañcāyatanasaññaṁ 10
-viññāṇañcāyatanasaññā 10
-viññāṇañcāyatanasaññāya 1
-viññāṇañcāyatanasaññāyā”ti 2
-viññāṇañcāyatanasaññī 14
-viññāṇañcāyatanasmiṁ 1
-viññāṇañcāyatanasukhumasaccasaññā 2
-viññāṇañcāyatanasukhumasaccasaññīyeva 1
-viññāṇañcāyatanasutta 1
-viññāṇañcāyatanasutta 1 var
-viññāṇañcāyatanato 3
-viññāṇañcāyatanaṁ 145
-viññāṇañcāyatane 30
-viññāṇañcāyatanā 2
-viññāṇañcāyatanūpago 1
-viññāṇañcāyatanūpagā 8
-viññāṇañcāyatanūpagānaṁ 5
-ākiñcaññāyatanadhātu 3
-ākiñcaññāyatanadhātuayaṁ 1
-ākiñcaññāyatanadhātuimā 1
-ākiñcaññāyatanameke 1
-ākiñcaññāyatanameko 2
-ākiñcaññāyatanampi 1
-ākiñcaññāyatanampāhaṁ 3
-ākiñcaññāyatananissitā 1
-ākiñcaññāyatananti 1
-ākiñcaññāyatanan”ti 3
-ākiñcaññāyatanaparamāhaṁ 1
-ākiñcaññāyatanapañhāsutta 1
-ākiñcaññāyatanapaṭisaṁyuttāya 1
-ākiñcaññāyatanasahagatā 5
-ākiñcaññāyatanasamāpatti 2
-ākiñcaññāyatanasamāpattiyā 6
-ākiñcaññāyatanasamāpattiyāpi 1
-ākiñcaññāyatanasappāyā 4
-ākiñcaññāyatanasaññaṁ 11
-ākiñcaññāyatanasaññā 12
-ākiñcaññāyatanasaññāya 1
-ākiñcaññāyatanasaññāyā”ti 2
-ākiñcaññāyatanasaññī 15
-ākiñcaññāyatanasaṁyojane 1
-ākiñcaññāyatanasaṁyojanena 1
-ākiñcaññāyatanasmiṁ 1
-ākiñcaññāyatanasukhumasaccasaññā 1
-ākiñcaññāyatanasukhumasaccasaññīyeva 1
-ākiñcaññāyatanasutta 1
-ākiñcaññāyatanasutta 1 var
-ākiñcaññāyatanato 3
-ākiñcaññāyatanaṁ 142
-ākiñcaññāyatane 31
-ākiñcaññāyatanā 2
-ākiñcaññāyatanādhimuttassa 2
-ākiñcaññāyatanādhimutto 2
-ākiñcaññāyatanūpagaṁ 3
-ākiñcaññāyatanūpago 1
-ākiñcaññāyatanūpagā 9
-ākiñcaññāyatanūpagānaṁ 4
-ākiñcaññāyatanūpapattiyā”ti 4
-ākāsānañcāyatanadhātu 4
-ākāsānañcāyatanadhātuayaṁ 1
-ākāsānañcāyatanampi 1
-ākāsānañcāyatanampāhaṁ 3
-ākāsānañcāyatananissitaṁ 1
-ākāsānañcāyatananissitā 1
-ākāsānañcāyatananti 1
-ākāsānañcāyatanan”ti 2
-ākāsānañcāyatanaparamāhaṁ 1
-ākāsānañcāyatanapañhāsutta 1
-ākāsānañcāyatanapañhāsutta 1 var
-ākāsānañcāyatanasahagatā 5
-ākāsānañcāyatanasamāpatti 2
-ākāsānañcāyatanasamāpattiyā 6
-ākāsānañcāyatanasamāpattiyāpi 1
-ākāsānañcāyatanasaññaṁ 10
-ākāsānañcāyatanasaññā 10
-ākāsānañcāyatanasaññāya 1
-ākāsānañcāyatanasaññāyā”ti 2
-ākāsānañcāyatanasaññī 14
-ākāsānañcāyatanasmiṁ 1
-ākāsānañcāyatanasukhumasaccasaññā 2
-ākāsānañcāyatanasukhumasaccasaññīyeva 1
-ākāsānañcāyatanasutta 1
-ākāsānañcāyatanasutta 1 var
-ākāsānañcāyatanato 3
-ākāsānañcāyatanaṁ 145
-ākāsānañcāyatane 30
-ākāsānañcāyatanā 2
-ākāsānañcāyatanūpago 1
-ākāsānañcāyatanūpagā 8
-ākāsānañcāyatanūpagānaṁ 5
-āyatana 3 var
-āyatanakusalatā 1
-āyatanakusalo 3
-āyatanamakkhāyati 1
-āyatanamakkhāyati 1 var
-āyatanapabbaṁ 2
-āyatanapaṇṇattidesanā 1
-āyatanapaṇṇattīsu 3
-āyatanaso 6
-āyatanassa 2
-āyatanasuttaṁ 3 var
-āyatanaṁ 1
-āyatanaṁ 10
-āyatanaṁ” 2
-āyatane 74
-āyatanena 1
-āyatanesu 10
-āyataneva 1
-āyatane”ti 5
-āyatanuppādaṁ 1
-āyatanuppādaṁ 2
-āyatanā 2 var
-āyatanā 9
-āyatanānaṁ 26
-āyatanāni 1 var
-āyatanāni 26
-āyatanānī”tissa 1
-”nevasaññānāsaññāyatanaṁ 1
-”viññāṇañcāyatanaṁ 1
-”ākiñcaññāyatanaṁ 1
-”ākāsānañcāyatanaṁ 1
+arūpataṇhā 2
+atittataṇhā 1 var
+avigatataṇhassa 7
+avigatataṇho 13
+avigatataṇhā 1
+avītataṇhā 1 var
+avītataṇhā 2
+avītataṇhāse 2
+bhavataṇhampāhaṁ 1
+bhavataṇhampāhaṁ 1 var
+bhavataṇhaṁ 2
+bhavataṇhā 2
+bhavataṇhā 34
+bhavataṇhāmpāhaṁ 1 var
+bhavataṇhāya 5
+bhavataṇhā”ti 1
+bhogataṇhāya 1
+cūḷataṇhāsaṅkhayasutta 1
+cūḷataṇhāsaṅkhayasuttaṁ 1
+dhammataṇhā 10
+dhammataṇhāya 4
+dhammataṇhāyapi 1
+dhammataṇhāya… 1
+diṭṭhitaṇhā 2
+gandhataṇhā 10
+gandhataṇhāya 2
+gandhataṇhāyapi 1
+gandhataṇhāya… 1
+gedhataṇhaṁ 1 var
+hetutaṇhā 1
+kāmataṇhaṁ 6
+kāmataṇhā 1
+kāmataṇhā 21
+kāmataṇhāhi 6
+mahātaṇho 1
+mahātaṇhājālataṇhāsaṅghāṭappaṭimukkan”ti 1
+mahātaṇhāsaṅkhayasutta 1
+mahātaṇhāsaṅkhayasuttaṁ 1
+nirodhataṇhā 1
+nittaṇhaṁ 1
+nittaṇhā 1 var
+phoṭṭhabbataṇhaṁ 1
+phoṭṭhabbataṇhā 10
+phoṭṭhabbataṇhāya 2
+phoṭṭhabbataṇhāyapi 1
+phoṭṭhabbataṇhāya… 1
+rasataṇhā 10
+rasataṇhāya 7
+rasataṇhāyapi 1
+rasataṇhāya… 1
+rodhataṇhaṁ 1 var
+rūpataṇhaṁ 1
+rūpataṇhā 12
+rūpataṇhāsutta 1
+rūpataṇhāsutta 1 var
+rūpataṇhāya 4
+rūpataṇhāyapi 1
+rūpataṇhāya… 1
+saddataṇhā 10
+saddataṇhāya 2
+saddataṇhāyapi 1
+saddataṇhāya… 1
+sataṇhassa 1
+sataṇhassā”ti 1
+sataṇhā 1
+sataṇhātaṇhesu 1
+seyyathidaṁkāmataṇhā 2
+taṇhacchida 1 var
+taṇhacchidassa 1
+taṇhacchidaṁ 1
+taṇhacchido 1
+taṇhacchido 2 var
+taṇhagataṁ 1
+taṇhakkhaya 1 var
+taṇhakkhayamanītikaṁ 3
+taṇhakkhayarato 1
+taṇhakkhayasukhassete 1
+taṇhakkhayasutta 1
+taṇhakkhayasutta 1 var
+taṇhakkhayasuttaṁ 1 var
+taṇhakkhayavimuttino 2
+taṇhakkhayavimuttiyo 1
+taṇhakkhayaṁ 2
+taṇhakkhaye 2
+taṇhakkhaye 3
+taṇhakkhayo 4
+taṇhakkhayo 5
+taṇhakkhayā 1
+taṇhakkhayādhimuttassa 1
+taṇhakkhayādhimutto 4
+taṇhakkhayāya 1 var
+taṇhakkhayāya 3
+taṇhamabbhuyha 1 var
+taṇhamabbuyha 1 var
+taṇhamabbuyha 9
+taṇhampāhaṁ 1
+taṇhamudacchidā 1
+taṇhan”ti 1
+taṇhañca 2
+taṇhaṁ 6 var
+taṇhaṁ 85
+taṇhaṁ 88
+taṇhuppādasutta 1 var
+taṇhuppādasutta 2
+taṇhuppādā 7
+taṇhupādinnassa 4
+taṇhā 3
+taṇhā 361
+taṇhā 366
+taṇhā 5 var
+taṇhābhavaparikkhīṇaṁ 2
+taṇhābhavaparikkhīṇaṁ 4
+taṇhāchadanachāditā 1
+taṇhāchādanachāditā 1
+taṇhādhanusamuṭṭhānaṁ 1
+taṇhādhipanne 1
+taṇhādhipannā 2
+taṇhādhipateyyena 2
+taṇhādutiyo 3
+taṇhādāso”ti 5
+taṇhādāsā 1
+taṇhāgatametaṁ 1
+taṇhāgatānaṁ 13
+taṇhājālinīsuttaṁ 1 var
+taṇhājālo 1
+taṇhājātiko 1
+taṇhājātikā 3
+taṇhākkhayagāmiñca 1
+taṇhākkhayasalaḷāgāraṁ 1
+taṇhākkhayasutta 1
+taṇhākkhayasutta 1 var
+taṇhākkhayavimuttino 1
+taṇhākkhayavimuttiyo 1
+taṇhākkhayañca 1
+taṇhākkhayaṁ 1
+taṇhākkhaye 1
+taṇhākkhaye 5
+taṇhākkhayo 3
+taṇhākkhayo 32
+taṇhākkhayādhimuttassa 1
+taṇhākkhayādhimutto 4
+taṇhākkhayāya 1 var
+taṇhākkhayāya 3
+taṇhākkhayāya 9
+taṇhākāyā 7
+taṇhālataṁ 1
+taṇhāmūlakasutta 1
+taṇhāmūlake 1
+taṇhāmūlakā 1
+taṇhāmūlakā 3
+taṇhāmūlavisosano 1
+taṇhāmūlenānugato 1
+taṇhānaṁ 11
+taṇhānaṁ 12
+taṇhānidāno 1
+taṇhānidānā 3
+taṇhānigghātanaṁ 1
+taṇhānirodhagāminiyā 1
+taṇhānirodhagāminiṁ 2
+taṇhānirodhagāminī 2
+taṇhānirodhasutta 1
+taṇhānirodhasutta 1 var
+taṇhānirodhañca 1
+taṇhānirodhaṁ 3
+taṇhānirodhe 1
+taṇhānirodho 1
+taṇhānirodho 1 var
+taṇhānirodho 15
+taṇhānirodhoti 3
+taṇhānirodho”ti 5
+taṇhānirodhā 1
+taṇhānirodhā 1 var
+taṇhānirodhā 36
+taṇhānirodhāya 4
+taṇhānusaye 1
+taṇhāpabhavo 1
+taṇhāpabhavā 3
+taṇhāpaccayā 1
+taṇhāpaccayā 46
+taṇhāpaccayāti 1
+taṇhāpañhāsutta 1
+taṇhāratacchadanatāṇalatāpamokkhaṁ 1
+taṇhāratacchadanatāṇalatāpamokkhaṁ 1 var
+taṇhāratassa 2
+taṇhārāmassa 2
+taṇhāsallassa 3
+taṇhāsallaṁ 4
+taṇhāsalle 3
+taṇhāsallena 2
+taṇhāsambhūto 3
+taṇhāsammuditassa 2
+taṇhāsamudayañca 1
+taṇhāsamudayaṁ 1
+taṇhāsamudaye 1
+taṇhāsamudayo 3
+taṇhāsamudayā 5
+taṇhāsamā 1
+taṇhāsaṁyojanabandhā 1 var
+taṇhāsaṁyojanasutta 1
+taṇhāsaṁyojanaṁ 1
+taṇhāsaṁyojanaṁ 1 var
+taṇhāsaṁyojanena 1
+taṇhāsaṁyojanena 1 var
+taṇhāsaṁyojanā 1 var
+taṇhāsaṁyojanā 2
+taṇhāsaṁyojanānaṁ 27
+taṇhāsaṅkhayasutta 1
+taṇhāsaṅkhayavimuttassa 1
+taṇhāsaṅkhayavimuttiṁ 8
+taṇhāsaṅkhayavimutto 8
+taṇhāsaṅkhayavimuttā 3
+taṇhāsu 2
+taṇhāsutta 1 var
+taṇhāsutta 9
+taṇhāsuttaṁ 2 var
+taṇhātalaratacchedanatāṇapamokkhaṁ 1 var
+taṇhāti 5
+taṇhāto 1
+taṇhāto 2 var
+taṇhāvagga 1
+taṇhāvaggamhi 1
+taṇhāvagge 1
+taṇhāvaggo 1
+taṇhāvicaritaṁ 1
+taṇhāvicaritāni 12
+taṇhāya 1
+taṇhāya 1 var
+taṇhāya 64
+taṇhāya 68
+taṇhāyekā 1
+taṇhāyetaṁ 4
+taṇhāyogena 2
+taṇhā”ti 15
+taṇhā”tissa 1
+taṇhīyatīti 1 var
+taṇhūpanisaṁ 2
+taṇhūpādānaṁ 1
+ucchinnabhavataṇhassa 2
+vedanātaṇhā 1
+vibhavataṇhā 1
+vibhavataṇhā 18
+vigatataṇhassa 6
+vigatataṇho 7
+vigatataṇhā 1
+vītataṇhassāvuso 1
+vītataṇhassā”ti 1
+vītataṇhaṁ 4
+vītataṇho 11
+vītataṇho 9
+vītataṇhā 1 var
+vītataṇhā 3
+yodhataṇhaṁ 1
+ādānataṇhaṁ 1
+”taṇhā 1
+”taṇhāpaccayā 1

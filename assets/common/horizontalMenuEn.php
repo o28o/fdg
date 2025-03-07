@@ -187,6 +187,10 @@ echo '<!--
                    
          <li><a class="dropdown-item" target="_blank" href="' . $linklearnpali . '">' . $anamemlearnpali . '</a></li>  
          
+<li><a class="dropdown-item" target="_blank" href="https://www.thebuddhistsociety.org/page/sanskrit-and-pali-study-resources-guide-by-james-whelan">' . $anamelearnsanskrit . '</a></li>  
+
+
+
 
                       <li>
 <div class="dropdown-item ">

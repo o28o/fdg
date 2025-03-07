@@ -277,8 +277,10 @@ $read = 'читать';
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Пожалуйста, Помните!</b><br><br> Переводы, словари и комментарии сделаны не Буддой! Они часто содержат фундаментальные ошибки главных положений его Учения и противоречия. Их нужно изучать внимательно и критически. 
  <br><br>
   Самое важное в Учении Будды лучше начать изучать <strong> самостоятельно по Суттам</strong> на Пали. Это как минимум, что такое Серединная Практика и Четыре Благородные Истины. К примеру, это могут быть несколько абзацев из <strong>sn56.11</strong>.';
-  
+
 $anamemlearnpali = 'Learn Pali Переводы';
+$anamelearnsanskrit = 'Санскрит с Джеймсом Веланом';
+
 $anamemolds = 'Переводы Майкла Олдса'; 
 $anameasc = 'Благородный Аскетизм';
 $anameati = 'Accesstoinsight.org Патимоккха';
@@ -791,6 +793,7 @@ $transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Please Rem
 
 
 $anamemlearnpali = 'Learn Pali Guides';
+$anamelearnsanskrit = 'Study Sanskrit with James Whelan';
 
 $anamemolds = 'Translations by M. Olds';
 $anameasc = 'Asceticism in Dhamma';

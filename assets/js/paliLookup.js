@@ -229,7 +229,6 @@ toggleBtn.addEventListener('click', () => {
     if (event.altKey && event.code === "KeyA") {
       // Имитируем клик по кнопке
       toggleBtn.click();
-           $('#copyPopup').modal('show');
     }
   });  
 

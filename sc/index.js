@@ -71,7 +71,19 @@ console.log('texttype ' + texttype + ' translator ' + translator);
   const slugReady = parseSlug(slug);
   console.log("slugReady is " + slugReady + " slug is " + slug); 
 
+let params = new URLSearchParams(document.location.search);
+ let script = params.get("script");
+ 
+ if ( script === "devanagari" ) {
+var rootpath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slugReady}_rootd-pli-ms.json`
+ } 
+ else  if ( script === "thai" ) {
+var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slugReady}_rootth-pli-ms.json`
+ } 
+else {
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`
+ }
+
    var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugReady}_html.json`;
    
   if (slug.match(/ja/)) {
@@ -155,7 +167,6 @@ anchor = segment;
 
 var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
 
-let params = new URLSearchParams(document.location.search);
   let finder = params.get("s");
  //  finder = finder.replace(/\\b/g, '');
 //  finder = finder.replace(/%08/g, '\\b');

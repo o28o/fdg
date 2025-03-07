@@ -1,6 +1,7 @@
 
  document.addEventListener("DOMContentLoaded", function() {
   
+//help 
   if (document.getElementById("paliLookupInfo"))  { 
     var paliLookupInfo = document.getElementById("paliLookupInfo");
 }
@@ -26,14 +27,13 @@ var helpButton = document.getElementById("helpMessage");
         // Скрываем окно при нажатии на кнопку закрытия
         paliLookupInfo.style.display = "none";
     });
+    
+    
+    
+    
 }); 
-  
-  
-  
-  
-  
-  
-  
+
+//extrahelp
  document.addEventListener("DOMContentLoaded", function() {
   
   if (document.getElementById("paliLookupLinksInfo"))  { 
@@ -61,5 +61,42 @@ var helpButton = document.getElementById("helpLinksMessage");
         // Скрываем окно при нажатии на кнопку закрытия
         paliLookupInfo.style.display = "none";
     });
+    
+  
+}); 
+  
+  
+  
+  
+       //settings
+  
+ document.addEventListener("DOMContentLoaded", function() {
+  
+  
+  if (document.getElementById("settings"))  { 
+    var settingsWindow = document.getElementById("settings");
+}
+
+ if (document.getElementById("settingsButton"))  { 
+var settingsButton = document.getElementById("settingsButton");
+}
+
+
+     // Добавляем обработчик события для кнопки закрытия
+    settingsButton.addEventListener("click", function() {
+        // Скрываем окно при нажатии на кнопку закрытия
+        console.log('click');
+        settingsWindow.style.display = "block";
+    });   
+
+    // Добавляем обработчик события для кнопки закрытия
+    settingsWindow.querySelector(".btn-close").addEventListener("click", function() {
+        // Скрываем окно при нажатии на кнопку закрытия
+        settingsWindow.style.display = "none";
+    });
+    
+
+ 
+    
 }); 
   

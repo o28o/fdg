@@ -124,68 +124,25 @@
 
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
 
+
 <div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-secondary alert-dismissible fade show mt-3" role="alert" id="settings">
-  <div class="mb-2">
-    <h2 style="text-align: center;">Настройки</h2>
-    <img src="/assets/svg/align-left.svg" alt="toggle one/two column view" class="common-size-icon4"></img> текст в одну-две колонки<br> 
-    <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть различия ms и др вариантов Канона<a style="text-decoration:none;" href="/assets/texts/abbr.html">.</a> <br>
-    <img src="/assets/svg/comment.svg" class="common-size-icon4"></img> вкл-выкл всплывающий по клику словарь (<a href="https://dpdict.net/ru">DPD</a>). <br>
-    
-    <!-- Дропдаун для выбора системы письма -->
-    <label for="script-select">Система письма:</label><br>
-	<select class="dropdown droponmain rounded-pill text-muted border-2 border-secondary text-center input-group-append" id="script-select">
-      <option value="ISOPali">ISOPali</option>
-      <option value="Devanagari">Devanagari</option>
-      <option value="Thai">Thai</option>
-    </select>
-	    <!-- Кнопка "Применить" -->
-
-	<button type="button" class="btn btn-sm btn-secondary rounded-pill" id="apply-button"">Применить</button>
-    <br>
-    
-
-    Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
-    <br>
-    <br>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
+ <div class="mb-2">
+   <h2 style="text-align: center;">Настройки</h2>
+ <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> текст в одну-две колонки<br> 
+ <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> показать-скрыть различия ms и др вариантов Канона<a style="text-decoration:none;" href="/assets/texts/abbr.html">.</a> <br>
+ <img src="/assets/svg/comment.svg" class="common-size-icon4"></img> вкл-выкл всплывающий по клику словарь (<a  href="https://dpdict.net/ru">DPD</a>). <br>
+ 
+ Добавить сюда дропдаун с системами письма
+<br>
+ Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
+<br>
+<br>
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const scriptSelect = document.getElementById('script-select');
-  const applyButton = document.getElementById('apply-button');
+</div>
 
-  // Загрузка сохраненного значения из localStorage
-  const savedScript = localStorage.getItem('selectedScript');
-  if (savedScript) {
-    scriptSelect.value = savedScript;
-  }
 
-  // Обработка нажатия на кнопку "Применить"
-  applyButton.addEventListener('click', function() {
-    const selectedScript = scriptSelect.value;
 
-    // Сохранение выбранного значения в localStorage
-    if (selectedScript === 'ISOPali') {
-      localStorage.removeItem('selectedScript');
-    } else {
-      localStorage.setItem('selectedScript', selectedScript);
-    }
-
-    // Обновление URL и перезагрузка страницы
-    const url = new URL(window.location.href);
-
-    if (selectedScript === 'ISOPali') {
-      url.searchParams.delete('script');
-    } else {
-      url.searchParams.set('script', selectedScript.toLowerCase());
-    }
-
-    // Перезагрузка страницы с новым URL
-    window.location.href = url.toString();
-  });
-});
-</script>
     <br>
     
     <div id="sutta">
@@ -511,4 +468,3 @@ window.addEventListener("load", function() {
 </script>
 <script src="/assets/js/variantsButtonSc.js"></script>
 </html>
-

@@ -7,6 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Загрузка сохраненного значения из localStorage
   const savedScript = localStorage.getItem('selectedScript');
 
+    // Установка сохраненного значения в select при загрузке страницы
+if (savedScript) {
+  scriptSelect.value = savedScript;
+} else {
+  scriptSelect.value = 'ISOPali'; // Значение по умолчанию, если ничего не сохранено
+}
+
+
   // Обработка нажатия на кнопку "Применить"
   applyButton.addEventListener('click', function() {
     const selectedScript = scriptSelect.value;

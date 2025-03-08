@@ -110,6 +110,14 @@ function toggleThemeManually() {
         localStorage.theme = newTheme;
 
       });
+      
+            // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyT") {
+      // Имитируем клик по кнопке
+      themeButton.click();
+    }
+  });
     }
   });
 
@@ -125,6 +133,9 @@ function toggleThemeManually() {
       localStorage.theme = "auto";
     }
   }
+  
+
+  
 }
 
 toggleThemeManually();

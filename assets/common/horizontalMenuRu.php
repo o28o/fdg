@@ -125,6 +125,7 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="MenuRussian">
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethrulink . '">Theravada.ru</a></li>
     <li><a class="dropdown-item" target="_blank" href="' . $mainpagethsulink . '">Theravada.su</a></li>
+<li><a class="dropdown-item" target="_blank" href="/assets/audio/documents/dn_Syrkin_2020_ed_2025.pdf">ДН пер. А.Я. Сыркина ("2025")</a></li>
 
   <li><a class="dropdown-item" target="_blank" href="/dhamma.ru/index-sutta.html">Dhamma.ru Сутты</a></li>
     <li><a class="dropdown-item" target="_blank" href="assets/materials/prat.html">Dhamma.ru Патимоккха</a></li>

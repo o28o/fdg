@@ -1,0 +1,318 @@
+Not to be confused with False friend.
+
+False cognates are pairs of words that seem to be cognates because of similar
+sounds and meaning, but have different etymologies; they can be within the same
+language or from different languages, even within the same family.^[1] For
+example, the English word dog and the Mbabaram word dog have exactly the same
+meaning and very similar pronunciations, but by complete coincidence. Likewise,
+English much and Spanish mucho came by their similar meanings via completely
+different Proto-Indo-European roots, and same for English have and Spanish
+haber. This is different from false friends, which are similar-sounding words
+with different meanings, and may or may not be cognates.
+
+Even though false cognates lack a common root, there may still be an indirect
+connection between them (for example by phono-semantic matching or folk
+etymology).
+
+[ ]
+
+Contents
+
+  • 1 Phenomenon
+  • 2 "Mama and papa" type
+  • 3 Examples
+      □ 3.1 Within English
+      □ 3.2 Between English and other languages
+      □ 3.3 Between other languages
+  • 4 False cognates used in the coinage of new words
+  • 5 See also
+  • 6 References
+  • 7 Works cited
+  • 8 Further reading
+  • 9 External links
+
+Phenomenon
+
+edit
+
+The term "false cognate" is sometimes misused to refer to false friends, but
+the two phenomena are distinct.^[1]^[2] False friends occur when two words in
+different languages or dialects look similar, but have different meanings.
+While some false friends are also false cognates, many are genuine cognates
+(see False friends § Causes).^[2] For example, English pretend and French
+prétendre are false friends, but not false cognates, as they have the same
+origin.^[3]
+
+"Mama and papa" type
+
+edit
+
+The basic kinship terms mama and papa comprise a special case of false
+cognates; many languages share words of similar form and meaning for these
+kinship terms, but due to common processes of language acquisition rather than
+relatedness of the languages.^[4]^[5]^[6]^[7]
+
+Examples
+
+edit
+
+Note: Some etymologies may be simplified to avoid overly long descriptions.
+
+Within English
+
+edit
+
+  Term 1            Etymology 1           Term 2          Etymology 2
+           Old English dæġ                       Latin diārium << dies ("day")
+day        << Proto-Germanic *dagaz       diary  << Proto-Italic *djēm
+           << Proto-Indo-European *dʰeǵʰ-        << PIE *dyḗws ("heaven") ^[9]^
+           ^[8]                                  [10]
+           Middle English iland                  Middle English ile
+island     << Old English īeġland         isle   << Old French i(s)le
+           << Proto-Germanic *awjōlandą          << Latin insula
+           Middle English policie                French police
+policy^[11 << Old French policie          police << Italian polizza
+]          << Late Latin politia                 << Medieval Latin apodissa
+           << Ancient Greek politeía             << Ancient Greek apódeixis
+
+Between English and other languages
+
+edit
+
+English          English etymology           Foreign term   Foreign etymology
+  term
+         Possibly from OE bæddel            Persian بد,    Middle Iranian *vat
+bad      ("hermaphrodite, effeminate man")  bad ^[12]^[10] << PIE *wed(h)-
+         << PGmc *bad- ("defile")
+                                            Persian بهتر,
+better   OE betera                          behtar and
+                                            Hindustani
+                                            descendants
+         OE sinder                                         Latin cinerem
+cinder   << PGmc *sendra- "slag"            French cendre  << PIE *ken- ("to
+         << PIE *sendhro- "coagulating      ("ash")        arise, begin")
+         fluid"
+dog      OE docga or dogga                  Mbabaram dog   Proto-Pama-Nyungan *
+                                            ("dog") ^[10]  gudaga
+         OE dæġ                             Latin dies     Proto-Italic *djēm
+day      << PGmc *dagaz                     ("day") and    << PIE *dyḗws
+         << PIE *dʰeǵʰ-^[8]                 descendants ^[ ("heaven") ^[9]^[10]
+                                            9]^[10]
+                                            Japanese 絵文  絵 (e) ("picture") +
+emoticon emotion + icon                     字 (emoji)  ^[ 文字 (moji)
+                                            13]            ("character") ^[13]
+hollow   OE holh                            Lake Miwok
+         << PGmc *holhwo-                   hóllu ^[12]
+         OE myċel                                          Latin multus (many)
+much     << PGmc *mikilaz                   Spanish mucho  << PIE *ml̥tos
+         << PIE *meǵa- ("big, stout,        ("much") ^[10] ("crumbled")
+         great")
+                                            Ancient
+                                            Egyptian
+         Latin dēserō ("to abandon")        Deshret
+desert   << ultimately PIE **seh₁- ("to     (refers to the from dšr (red)
+         sow")                              land not
+                                            flooded by the
+                                            Nile) 
+         Latin sanctus                      Sanskrit sant
+saint    << PIE *seh₂k- ("to sanctify") via and            sat ("truth,
+         French                             descendants ^[ reality, essence")
+                                            14]
+         Middle English shark from          Chinese 鲨     Named as its crude
+shark    uncertain origin                   (shā)          skin similar to sand
+                                                           (沙 (shā))
+         Middle English haven << OE habban                 Latin habēre,
+         (“to have”) << Proto-West                         present active
+         Germanic *habbjan                                 infinitive of habeō
+have     << Proto-Germanic *habjaną (“to    Corsican avè   << Proto-Italic
+         have”), durative of *habjaną (“to  (“to have”)    *habēō << PIE
+         lift, take up”) << PIE *kh₂pyéti                  *gʰeh₁bʰ- (“to
+         present tense of *keh₂p- (“to                     grab”).
+         take, seize, catch”). 
+
+Between other languages
+
+edit
+
+    Term 1              Etymology 1               Term 2         Etymology 2
+                                                               PGmc *fōr ~
+French feu      Latin focus                  German Feuer      *fun-^[8]^[15]^[
+("fire")                                     ("fire")          10]
+                                                               << PIE *péh₂wr̥
+French nuque    Latin nucha, from Arabic     Hungarian nyak    Proto-Uralic
+('nape')        نُخَاع nukhāʻ 'spinal marrow'  ('neck')^[16]     *ńᴕkkɜ 'neck'
+German haben    PG *habjaną                  Latin habere ("to PIE *gʰeh₁bʰ-
+('to have')     << PIE *keh₂p- ("to grasp")  have") and        ("to grab, to
+                                             descendants^[17]  take")
+Swedish göl     PG *guljō                    Salar göl         Proto-Turkic *
+("pool")                                     ("pool")          kȫl ("lake")
+German Erdbeere Erd ('earth') + Beere        Hungarian eper
+('strawberry')  ('berry')                    ('strawberry')^[
+                                             16]
+German Haus                                  Hungarian ház
+('house')                                    ('house')^[16]
+Hawaiian kahuna                              Hebrew כוהן (
+('priest')                                   kohen) ('priest')
+                                             ^[18]
+Hungarian nő                                 Mandarin Chinese
+('woman')                                    女 (nǚ) ('woman')
+                                             ^[16]
+                                                               Old Turkic
+Inuktitut ᖃᔭᖅ (                              Turkish kayık     kayguk
+kayak)          Proto-Eskimo *qyaq           ('small boat')^[  << Proto-Turkic
+                                             19]               kay- ("to slide,
+                                                               to turn")
+Mayaimi Mayaimi                              Hebrew מים mayim
+(Big water)                                  ("water")
+                Clipping of 有難う御座います
+                "arigatō gozaimasu" ("(I) am
+                thankful")                                     Literally
+Japanese ありが << 有難く "arigataku"        Portuguese        "obliged"
+とう arigatō    << 有難い "arigatai"         obrigado ("thank  << Latin
+("thank you")   ("thankful, appreciated")    you")^[20]        obligātus
+                << Old Japanese 有難斯
+                "arigatasi" ("difficult to
+                be") ^[citation needed]
+Hindustani अम्मा  Prakrit 𑀅𑀁𑀫𑀸 (aṃmā), from    Tamil அம்மா (ammā,  Proto-Dravidian
+/ اما (ammā,    Sanskrit अम्बा (ambā, "mother, "mother")         *amma ("mother")
+"mother")       feminine honorific")
+Indonesian                                   Aleut tanax̂       Proto-Eskimo
+tanah           Proto-Austronesian *tanaq    ("ground")        *luna ("earth")
+("ground")
+Tagalog bagay   Proto-Malayo-Polynesian *    Haitian Creole    Saint Dominican
+("thing")       bagay                        bagay ("thing")   Creole French
+                                                               bagage
+Dusun do ("of") Austronesian o               Portuguese do     Latin de
+                                             ("of")
+
+False cognates used in the coinage of new words
+
+edit
+
+The coincidental similarity between false cognates can sometimes be used in the
+creation of new words (neologization). For example, the Hebrew word דַּל dal
+("poor") (which is a false cognate of the phono-semantically similar English
+word dull) is used in the new Israeli Hebrew expression אין רגע דל en rega dal
+(literally "There is no poor moment") as a phono-semantic matching for the
+English expression Never a dull moment.^[21]
+
+Similarly, the Hebrew word דיבוב dibúv ("speech, inducing someone to speak"),
+which is a false cognate of (and thus etymologically unrelated to) the
+phono-semantically similar English word dubbing, is then used in the Israeli
+phono-semantic matching for dubbing. The result is that in Modern Hebrew, דיבוב
+dibúv means "dubbing".^[22]
+
+See also
+
+edit
+
+  • Areal feature
+  • Convergent evolution
+  • Equivalence
+  • Etymological fallacy
+  • False etymology
+  • False friend
+  • Linguistic interference (language transfer)
+  • Pseudoscientific language comparison
+  • Semantic change
+  • Sprachbund
+
+References
+
+edit
+
+ 1. ^ ^a ^b Moss (1992), p. ?.
+ 2. ^ ^a ^b Chamizo-Domínguez (2008), p. 166.
+ 3. ^ Harper, Douglas. "Pretend". The Online Etymological Dictionary. Retrieved
+    2015-09-14.
+ 4. ^ Jakobson, R. (1962) "Why 'mama' and 'papa'?" In Jakobson, R. Selected
+    Writings, Vol. I: Phonological Studies, pp. 538–545. The Hague: Mouton.
+ 5. ^ Nichols, J. (1999) "Why 'me' and 'thee'?" Historical Linguistics 1999:
+    Selected Papers from the 14th International Conference on Historical
+    Linguistics, Vancouver, 9–13 August 1999, ed. Laurel J. Brinton, John
+    Benjamins Publishing, 2001, pages 253-276.
+ 6. ^ Bancel, P.J. and A.M. de l'Etang. (2008) "The Age of Mama and Papa"
+    Bengtson J. D. In Hot Pursuit of Language in Prehistory: Essays in the four
+    fields of anthropology. (John Benjamins Publishing, Dec 3, 2008), pages
+    417-438.
+ 7. ^ Bancel, P.J. and A.M. de l'Etang. (2013) "Brave new words" In New
+    Perspectives on the Origins of Language, ed. C. Lefebvre, B. Comrie, H.
+    Cohen (John Benjamins Publishing, Nov 15, 2013), pages 333-377.
+ 8. ^ ^a ^b ^c Kroonen, Guus (2013) Etymological Dictionary of Proto-Germanic
+    (Leiden Indo-European Etymological Dictionary Series; 11), Leiden, Boston:
+    Brill
+ 9. ^ ^a ^b ^c Oxford English Dictionary, Second edition.
+10. ^ ^a ^b ^c ^d ^e ^f ^g Campbell, Lyle; Mixco, Mauricio J. (2007). A
+    Glossary of Historical Linguistics. Edinburgh University Press. p. 29. ISBN
+     978-0-7486-2378-5.
+11. ^ "policy". Online Etymology Dictionary.
+12. ^ ^a ^b Lyle Campbell, Historical Linguistics: An Introduction, 3rd
+    edition, p. 350
+13. ^ ^a ^b Taggart, Caroline (5 November 2015). New Words for Old: Recycling
+    Our Language for the Modern World. Michael O'Mara Books. ISBN 9781782434733
+    – via Google Books. “Emoji is made up of the Japanese for picture (e) and
+    character (moji) so its resemblance to emotion and emoticon is a
+    particularly happy coincidence.”
+14. ^ Schomer, Karine; McLeod, W. H. (1987). The Sants: Studies in a Devotional
+    Tradition of India. Delhi: Motilal Banarsidass. p. 3. ISBN 
+    978-81-208-0277-3. OCLC 879218858. Retrieved 7 November 2018. “Thus
+    conceptually as well as etymologically, it differs considerably from the
+    false cognate 'saint' which is often used to translate it. Like 'saint',
+    'sant' has also taken on the more general ethical meaning of the 'good
+    person' whose life is a spiritual and moral exemplar, and is therefore
+    attached to a wide variety of gurus, 'holy men', and other religious
+    teachers.”
+15. ^ Lyle Campbell, Historical Linguistics: An Introduction, 3rd edition, p.
+    355
+16. ^ ^a ^b ^c ^d Bárczi, Géza (1958). A magyar szókincs eredete. Budapest:
+    Tankönyvkiadó. p. 8.
+17. ^ "have - Search Online Etymology Dictionary". www.etymonline.com.
+18. ^ Hevesi, Francis. "Kahuna and kohen: A study in comparative religion".
+    Social Process in Hawaii. 16: 30–33.
+19. ^ de la Fuente, José Andrés Alonso (2010). "Urban legends: Turkish kayık
+    'boat' | "Eskimo" Qayaq 'Kayak'" (PDF). Studia Linguistica Universitatis
+    Iagellonicae Cracoviensis. Retrieved 2015-03-06.
+20. ^ "'Arigato in Japanese and Obrigado in Portuguese', Semantic Enigmas". The
+    Guardian. Retrieved June 24, 2021.
+21. ^ Page 91 of Zuckermann, Ghil'ad (2003). Language Contact and Lexical
+    Enrichment in Israeli Hebrew. Palgrave Macmillan. ISBN 9781403917232.
+22. ^ Page 96 of Zuckermann, Ghil'ad (2020). Revivalistics: From the Genesis of
+    Israeli to Language Reclamation in Australia and Beyond. New York: Oxford
+    University Press. ISBN 9780199812790.
+
+Works cited
+
+edit
+
+  • Chamizo-Domínguez, Pedro J. (2008), Semantics and Pragmatics of False
+    Friends, New York/Oxon: Routledge
+  • Moss, Gillian (1992), "Cognate recognition: Its importance in the teaching
+    of ESP reading courses to Spanish speakers", English for Specific Purposes,
+    11 (2): 141–158, doi:10.1016/s0889-4906(05)80005-5
+
+Further reading
+
+edit
+
+  • Rubén Morán (2011), 'Cognate Linguistics', Kindle Edition, Amazon.
+  • Geoff Parkes and Alan Cornell (1992), 'NTC's Dictionary of German False
+    Cognates', National Textbook Company, NTC Publishing Group.
+  • Jakobson, Roman (1962), "Why 'mama' and 'papa'?", Selected Writings,
+    vol. I: Phonological Studies, The Hague: Mouton, pp. 538–545
+  • Trask, R. Larry (2004), Where do mama/papa words come from?, University of
+    Sussex Working Papers in Linguistics and English Language LxWP 10/04,
+    Brighton, UK: Department of Linguistics and English Language, University of
+    Sussex
+
+External links
+
+edit
+
+  • Cognates.org Archived 2016-12-16 at the Wayback Machine
+  • Carey, Stan (2 January 2012). "The mamas & the papas in babies' babbling".
+    Sentence first.
+
+*
+Retrieved from "https://en.wikipedia.org/w/index.php?title=False_cognate&oldid=
+1276007187"
+Last edited on 16 February 2025, at 10:23

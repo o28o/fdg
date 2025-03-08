@@ -40,7 +40,10 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <link href="/assets/img/gray.png" rel="icon" media="(prefers-color-scheme: light)">
 <link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)">-->
 
-<link rel="icon" type="image/png" href="/assets/img/favico-noglass.png">
+<link rel="icon" type="image/png" sizes="56x56" href="/assets/img/favicon-56x56.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+
   <!-- Загрузка иконки для iOS  -->
   <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favico-noglass.png">
 

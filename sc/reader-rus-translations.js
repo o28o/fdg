@@ -13,6 +13,8 @@ const form = document.getElementById("form");
 const citation = document.getElementById("paliauto");
 const pathLang = "ru";
 
+
+
 citation.focus();
 let language = "pli-rus";
 
@@ -804,13 +806,8 @@ function toggleThePali() {
     }
   });
   
-    // Добавляем обработчик сочетания клавиш Alt + Space (физическая клавиша)
-  document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "Space") {
-      // Имитируем клик по кнопке
-      languageButton.click();
-    }
-  });
+  
+  
 }
 
 

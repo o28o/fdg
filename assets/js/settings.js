@@ -1,12 +1,52 @@
 //sett8ngs management
 document.addEventListener('DOMContentLoaded', function() {
+
   const scriptSelect = document.getElementById('script-select');
   const applyButton = document.getElementById('apply-button');
   const resetButton = document.getElementById('reset-button');
   const settingsButton = document.getElementById('settingsButton');
   const helpButton = document.getElementById('helpMessage');
   const goButton = document.querySelector('.go-button'); // Кнопка "Go"
-  
+
+    // Добавляем обработчик сочетания клавиш Alt + Space (физическая клавиша)
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "Space") {
+        const languageButton = document.getElementById("language-button");
+      if (languageButton) {
+       // Имитируем клик по кнопке
+      languageButton.click();
+      }
+    }
+  });
+
+
+document.addEventListener("keydown", (event) => {
+  if (event.ctrlKey && event.code === "ArrowRight") {
+    const nextDiv = document.getElementById("next");
+    if (nextDiv) {
+      const link = nextDiv.querySelector("a");
+      if (link) {
+        history.pushState(null, "", link.href); // Добавляем запись в историю
+        location.href = link.href; // Принудительно переходим
+      }
+    }
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.ctrlKey && event.code === "ArrowLeft") {
+    const prevDiv = document.getElementById("previous");
+    if (prevDiv) {
+      const link = prevDiv.querySelector("a");
+      if (link) {
+        history.pushState(null, "", link.href); // Добавляем запись в историю
+        location.href = link.href; // Принудительно переходим
+      }
+    }
+  }
+});
+
+
 document.addEventListener("keydown", (event) => {
   if (event.altKey && event.code === "KeyZ") {
     // Имитируем клик по кнопке
@@ -327,23 +367,12 @@ document.addEventListener("keydown", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.altKey && event.code === "KeyB") {
+  if (event.altKey && event.code === "KeyP") {
     event.preventDefault();
     alert("Четыре Благородные Истины!");
   }
 });
 
-
-
-  const languageButton = document.getElementById("language-button");
-
-    // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
-  document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "KeyS") {
-      // Имитируем клик по кнопке
-      languageButton.click();
-    }
-  });
 
 //end of the initial function
 });

@@ -326,7 +326,25 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.altKey && event.code === "KeyB") {
+    event.preventDefault();
+    alert("Четыре Благородные Истины!");
+  }
+});
 
 
+
+  const languageButton = document.getElementById("language-button");
+
+    // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyS") {
+      // Имитируем клик по кнопке
+      languageButton.click();
+    }
+  });
+
+//end of the initial function
 });
 

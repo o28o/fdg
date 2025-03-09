@@ -336,12 +336,27 @@ checkboxes.forEach(function(checkbox) {
         <script src="/assets/js/openRu.js"></script>
         <script src="/assets/js/linksbw.js"></script>
                 <script src="/assets/js/openBw.js"></script>
+
 </body>
       <script defer>
            //to enable bootstrap tooltip    
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
     });
+    
+    
+const ShowHideSearchResults = document.getElementById('btn-show-all-children');
+
+if (ShowHideSearchResults) {
+  console.log("Элемент с ID 'btn-show-all-children' найден.");
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "Space") {
+      event.preventDefault();
+      ShowHideSearchResults.click();
+    }
+  });
+} 
+
 </script>    
 
 </html>

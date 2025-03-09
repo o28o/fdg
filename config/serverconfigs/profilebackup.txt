@@ -221,7 +221,7 @@ functionname=z_commit_and_push
 function commit_and_push {
   # Показываем статус репозитория
   git status
-  echo "Нажмите Enter, чтобы продолжить..."
+  #echo "Нажмите Enter, чтобы продолжить..."
   read
 
   # Определяем сообщение коммита

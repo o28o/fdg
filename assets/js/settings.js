@@ -48,13 +48,13 @@ document.addEventListener("keydown", (event) => {
 
 
 document.addEventListener("keydown", (event) => {
-  if (event.altKey && event.code === "KeyZ") {
+  if (event.altKey && event.code === "KeyH") {
     // Имитируем клик по кнопке
     helpButton.click();
   }
 });
     document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "KeyX") {
+    if (event.altKey && event.code === "KeyS") {
       // Имитируем клик по кнопке
       settingsButton.click();
     }

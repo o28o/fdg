@@ -94,7 +94,7 @@
 
 
 <!-- Модальное окно "Помощь" -->
-<div class="modal fade" id="paliLookupInfo" tabindex="-1" aria-labelledby="paliLookupInfoLabel" aria-hidden="true">
+<div class="modal fade" id="paliLookupInfo" tabindex="-1" aria-labelledby="paliLookupInfoLabel" aria-hidden="true"  data-bs-focus="false">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -116,13 +116,6 @@
         <div class="col">Переключить язык</div>
     </div>
     
-    <div class="row align-items-center mb-2">
-        <div class="col-auto mb-1">
-          <img class="common-size-icon4 " src="/assets/img/favico_black.png">
-        </div>
-        <div class="col-auto"><strong>Alt+1 до 6</strong></div>
-        <div class="col">Переход по Режимам Чтения</div>
-    </div>     
     <div class="row align-items-center mb-2">
         <div class="col-auto">
             <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
@@ -156,7 +149,7 @@
         <div class="col-auto">
             <img id="" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
         </div>
-        <div class="col-auto"><strong>Alt+X</strong></div>
+        <div class="col-auto"><strong>Alt+S</strong></div>
         <div class="col">Показать-скрыть "Настройки"</div>
     </div>
    
@@ -164,9 +157,18 @@
         <div class="col-auto">
             <img src="/assets/svg/question.svg" class="common-size-icon4">
         </div>
-        <div class="col-auto"><strong>Alt+Z</strong></div>
+        <div class="col-auto"><strong>Alt+H</strong></div>
         <div class="col">Показать-скрыть это окно "Помощь"</div>
     </div>
+    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt+1 до 6</strong></div>
+        <div class="col">Переход по Режимам Чтения</div>
+    </div>    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Ctrl + ← → </strong></div>
+        <div class="col">Пред-След Текст </div>
+    </div>      
 </div>       
 
                 <!-- Кнопка "Показать ещё" -->
@@ -248,7 +250,7 @@
 
 
 <!-- Модальное окно "Настройки" -->
-<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true">
+<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -285,7 +287,7 @@
     <!-- Стандартный -->
     <div class="row align-items-center mb-2">
         <div class="col-auto">
-          <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+          <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
    <a id="stDemo" href="/ru/sc/?q=sn56.11"><strong>Стандартный</strong></a>
        
         </div>
@@ -297,7 +299,7 @@
     <!-- Мульти -->
     <div class="row align-items-center mb-2">
         <div class="col-auto">
-          <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+          <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
          <a id="mlDemo" href="/sc/ml.html?q=dn22"> <strong>Мульти</strong></a>
 
         </div>
@@ -309,7 +311,7 @@
     <!-- Деванагари -->
     <div class="row align-items-center mb-2">
         <div class="col-auto">
-          <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> 
+          <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d"> 
           &nbsp;
     <a id="dDemo" href="/sc/d.html?q=sn12.2"><strong>"Деванагари"</strong></a>
       
@@ -324,7 +326,7 @@
     <div id="collapseInterfaces" class="collapse">
         <div class="row align-items-center mb-2">
             <div class="col-auto">
-              <input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem">
+              <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem">
               &nbsp;
               <a id="memDemo" href="/sc/memorize.html?q=an10.46">              <strong>Для запоминания</strong>
 </a>
@@ -336,7 +338,7 @@
 
         <div class="row align-items-center mb-2">
             <div class="col-auto">
-              <input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv">
+              <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv">
             &nbsp;
 <a id="rvDemo" href="/sc/rv.html?q=sn35.236"><strong>Реверс</strong></a>
 
@@ -348,7 +350,7 @@
 
         <div class="row align-items-center mb-2">
             <div class="col-auto">
-              <input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr">
+              <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr">
               &nbsp;
               <a id="frDemo" href="/sc/fr.html?q=sn22.59"><strong>Полный Реверс</strong>
 </a>   

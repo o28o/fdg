@@ -248,5 +248,51 @@ function checkAndUpdateUrl() {
 // end of default reader part
 
 
+// open current url in demo mode
+
+  // Функция для извлечения параметров из URL
+  function getQueryParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const pairs = queryString.split('&');
+    pairs.forEach(pair => {
+      const [key, value] = pair.split('=');
+      if (key && value) {
+        params[key] = value;
+      }
+    });
+    return params;
+  }
+
+  // Функция для обновления ссылок
+  function updateDemoLinks() {
+    const params = getQueryParams();
+    const queryString = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
+    const hash = window.location.hash;
+
+    // Обновляем каждую ссылку
+    const demoLinks = {
+      stDemo: '/ru/sc/',
+      mlDemo: '/sc/ml.html',
+      dDemo: '/sc/d.html',
+      memDemo: '/sc/memorize.html',
+      rvDemo: '/sc/rv.html',
+      frDemo: '/sc/fr.html'
+    };
+
+    Object.keys(demoLinks).forEach(id => {
+      const linkElement = document.getElementById(id);
+      if (linkElement) {
+        const baseUrl = demoLinks[id];
+        linkElement.href = `${baseUrl}?${queryString}${hash}`;
+      }
+    });
+  }
+
+  // Вызываем функцию обновления ссылок при загрузке страницы
+  window.onload = updateDemoLinks;
+  
+  //end 
+
 });
 

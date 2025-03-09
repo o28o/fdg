@@ -7,10 +7,6 @@
     var onlCheckbox = document.getElementById("onlCheckbox");
     var laCheckbox = document.getElementById("laCheckbox");
 
-
-
-
-
     var preferences = {
       p: pOptions.value,
       extra: extraOptions.value,

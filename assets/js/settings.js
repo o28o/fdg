@@ -57,10 +57,9 @@ checkAndUpdateUrl();
   // Удаляем значение из localStorage
   localStorage.removeItem('selectedScript');
       localStorage.removeItem("defaultReader");
-
+  localStorage.removeItem('paliToggleRu');
   localStorage.removeItem('viewMode');
 localStorage.setItem("variantVisibility", "hidden");
-
 /*
 function clearParams() {
     const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight', 'isFirstDrag'];

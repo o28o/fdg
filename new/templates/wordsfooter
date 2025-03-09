@@ -141,18 +141,7 @@ var regex = new RegExp(searchValue + '(?![^<]*>)', 'gi');
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
     });
-    
-    const ShowHideSearchResults = document.getElementById('btn-show-all-children');
-
-if (ShowHideSearchResults) {
-  console.log("Элемент с ID 'btn-show-all-children' найден.");
-  document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "KeyS") {
-      event.preventDefault();
-      ShowHideSearchResults.click();
-    }
-  });
-} 
+  
 
 </script>
 </body>

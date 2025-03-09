@@ -80,3 +80,15 @@ localStorage.paliToggleRu = "pli-rus";
       toggleThePali();
       
 
+  
+    const ShowHideSearchResults = document.getElementById('btn-show-all-children');
+
+if (ShowHideSearchResults) {
+  console.log("Элемент с ID 'btn-show-all-children' найден.");
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyS") {
+      event.preventDefault();
+      ShowHideSearchResults.click();
+    }
+  });
+} 

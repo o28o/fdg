@@ -216,11 +216,19 @@ ssh a0092061@f.dhamma.gift " cd /home/a0092061/output; ls -atr |tail -n15 ; echo
 
 #git commit and push
 functionname=z_commit_and_push 
+
+# Git commit and push function
 function commit_and_push {
-#cd /storage/emulated/0/Dhamma/scripts
-git status 
-read
-git add . && git commit -a -m updates && git push
+  # Показываем статус репозитория
+  git status
+  echo "Нажмите Enter, чтобы продолжить..."
+  read
+
+  # Определяем сообщение коммита
+  local commit_message="${@:-updates}"
+
+  # Выполняем коммит и пуш
+  git add . && git commit -a -m "$commit_message" && git push
 }
 
 echo "${functionname}

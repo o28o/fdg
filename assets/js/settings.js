@@ -5,7 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const scriptSelect = document.getElementById('script-select');
   const applyButton = document.getElementById('apply-button');
   const resetButton = document.getElementById('reset-button');
+  const settingsButton = document.getElementById('settingsButton');
+  const helpButton = document.getElementById('helpMessage');
   const goButton = document.querySelector('.go-button'); // Кнопка "Go"
+  
+document.addEventListener("keydown", (event) => {
+  if (event.altKey && event.code === "KeyZ") {
+    // Имитируем клик по кнопке
+    helpButton.click();
+  }
+});
+    document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.code === "KeyX") {
+      // Имитируем клик по кнопке
+      settingsButton.click();
+    }
+  });
   
   // Загрузка сохраненного значения из localStorage
   const savedScript = localStorage.getItem('selectedScript');
@@ -81,7 +96,7 @@ function clearParams() {
 
 
 //Default readers
-
+/* dropdown variant
 // Получаем выпадающий список
 var readerSelect = document.getElementById('reader-select');
 
@@ -152,10 +167,10 @@ function checkAndUpdateUrl() {
         updateUrl();
     }
 }
-
+*/
 // end of default reader part
 
-/* radio button varians
+// radio button varians
 
 // Получаем все радиокнопки
 var readerRadios = document.querySelectorAll('input[name="reader"]');
@@ -232,10 +247,6 @@ function checkAndUpdateUrl() {
 
 // end of default reader part
 
-*/
 
-
-
-  
 });
 

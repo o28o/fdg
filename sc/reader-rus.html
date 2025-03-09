@@ -143,12 +143,21 @@
         <div class="col-auto"><strong>Alt+A</strong></div>
         <div class="col">Вкл-выкл словарь. Клик по слову для активации. <a href="https://dpdict.net/ru">DPD</a></div>
     </div>
+    
+        <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img id="" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+        </div>
+        <div class="col-auto"><strong>Alt+X</strong></div>
+        <div class="col">Показать-скрыть "Настройки"</div>
+    </div>
+    
     <div class="row align-items-center">
         <div class="col-auto">
             <img src="/assets/svg/question.svg" class="common-size-icon4">
         </div>
-        <div class="col-auto"></div>
-        <div class="col">Показать это сообщение</div>
+        <div class="col-auto">Alt+Z</div>
+        <div class="col">Показать-скрыть это окно "Помощь"</div>
     </div>
 </div>       
   <br>                
@@ -249,7 +258,7 @@
                     </select>
                 </div>
 
-                <div class="mb-2">
+        <!--        <div class="mb-2">
                     <label for="reader-select"><h5 style="text-align: left;">Интерфейс:</h5></label>
                     <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="reader-select">
                         <option value="st">Стандартный</option>
@@ -259,20 +268,20 @@
                         <option value="rv">Реверс</option>
                         <option value="fr">Полный Реверс</option>
                     </select>
-                </div>
-    <p class="mb-2">
-Выберите интерфейс по умолчанию. Он будет открываться при переходе с главной и из результатов поиска      
-    </p>
-                <h3 style="text-align: left;">Описание Интерфейсов</h3>
+                </div> -->
+
+                <h5 style="text-align: left;">Интерфейс по умолчанию:</h5>
 <div class="container">
+
 
     <!-- Стандартный -->
     <div class="row align-items-center mb-2">
         <div class="col-auto">
-            <strong>Стандартный</strong>
+          <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+          <strong>Стандартный</strong>
         </div>
         <div class="col text-end">
-            Два языка - пали, русс
+            Два языка: пали, русс
         </div>
         <div class="col-auto">
             <a href="/ru/sc/?q=sn56.11">пример</a>
@@ -282,10 +291,11 @@
     <!-- Мульти -->
     <div class="row align-items-center mb-2">
         <div class="col-auto">
-            <strong>Мульти</strong>
+          <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+          <strong>Мульти</strong>
         </div>
         <div class="col text-end">
-            Три языка - пали, русс, англ
+            Три языка: пали, русс, англ
         </div>
         <div class="col-auto">
             <a href="/sc/ml.html?q=dn22">пример</a>
@@ -295,10 +305,12 @@
     <!-- Деванагари -->
     <div class="row align-items-center mb-2">
         <div class="col-auto">
-            <strong>"Деванагари"</strong>
+          <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> 
+          &nbsp;
+          <strong>"Деванагари"</strong>
         </div>
         <div class="col text-end">
-            Деванагари или тайский скрипт и пали латиницей
+            Деванагари или тайский скрипт + пали латиницей
         </div>
         <div class="col-auto">
             <a href="/sc/d.html?q=sn12.2">пример</a>
@@ -309,7 +321,9 @@
     <div id="collapseInterfaces" class="collapse">
         <div class="row align-items-center mb-2">
             <div class="col-auto">
-                <strong>Для запоминания</strong>
+              <input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem">
+              &nbsp;
+              <strong>Для запоминания</strong>
             </div>
             <div class="col text-end">
                 Текст сокращен до первых букв каждого слова
@@ -320,8 +334,9 @@
         </div>
 
         <div class="row align-items-center mb-2">
-            <div class="col-auto">
-                <strong>Реверс</strong>
+            <div class="col-auto"><input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv">
+            &nbsp;
+            <strong>Реверс</strong>
             </div>
             <div class="col text-end">
                 Текст снизу вверх справа налево (слова не изменены)
@@ -333,7 +348,9 @@
 
         <div class="row align-items-center mb-2">
             <div class="col-auto">
-                <strong>Полный Реверс</strong>
+              <input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr">
+              &nbsp;
+              <strong>Полный Реверс</strong>
             </div>
             <div class="col text-end">
                 Как предыдущий (слова слева направо)
@@ -350,7 +367,9 @@
             Другие
         </button>
     </div>
-
+    <p class="mb-2">
+Он будет открываться при переходе с главной и из результатов поиска      
+    </p>
     Увидели ошибку? <a href="/ru/#contacts">Написать</a>
 </div>
                 <!-- Кнопки "Применить" и "Сбросить" -->

@@ -68,13 +68,17 @@
   <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> </a></div>   
   <!-- Словарь Onlick Popup -->
   <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">  <img src="/assets/svg/comment.svg" class="dictIcon"></img></a> 
- <a alt="Настройки"  id="settingsButton" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
-  <img id="gear" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+ <a alt="Настройки"  id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+  <img id="gearsc" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
   </a>  
+
 <div class="" >
-  <a alt="Помощь"  id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
-  <img id="MenuRead"  src="/assets/svg/question.svg" class="common-size-icon4"></img>
+  <a alt="Помощь" data-bs-toggle="modal" data-bs-target="#paliLookupInfo" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+  <img id="helpsc"  src="/assets/svg/question.svg" class="common-size-icon4"></img>
   </a>
+
+  
+  
 </div>  
  
 <script src="/assets/js/uihelp.js"> </script>
@@ -86,84 +90,282 @@
         <div id="previous"></div>
         <div id="next"></div>
     </div>
-  
-    
 
-<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-warning alert-dismissible fade show mt-3" role="alert" id="settings">
-  <div class="mb-2">
-    <h2 style="text-align: center;">Настройки</h2>
-  <!-- Дропдаун для выбора системы письма -->
-  <div class="mb-2">
-    <label for="script-select"><h5 style="text-align: left;">Выбрать систему письма:</h5></label>
-	<select class="dropdown droponmain rounded-pill text-muted border-2 border-secondary text-center input-group-append" id="script-select">
-      <option value="ISOPali">ISOPali</option>
-      <option value="Devanagari">Devanagari</option>
-      <option value="Thai">Thai</option>
-    </select>
+
+
+<!-- Модальное окно "Помощь" -->
+<div class="modal fade" id="paliLookupInfo" tabindex="-1" aria-labelledby="paliLookupInfoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="paliLookupInfoLabel">Помощь</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <a href=/ru/read.php><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></a>
+                    Чтение <a href=/ru><img width="26px" alt="main page for search" src="/assets/img/gray-white.png"></a> Поиск
+                </div>
+         <h3 class="text-start">Горячие Клавиши</h3>
+<div class="container">
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button>
+        </div>
+        <div class="col-auto"><strong>Alt+S</strong></div>
+        <div class="col">Переключить язык</div>
+    </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
+        </div>
+        <div class="col-auto"><strong>Alt+T</strong></div>
+        <div class="col">Тёмная/Светлая/Авто Темы</div>
+    </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/align-left.svg" alt="toggle one/two column view" class="common-size-icon4">
+        </div>
+        <div class="col-auto"><strong>Alt+C</strong></div>
+        <div class="col">Текст в одну-две колонки</div>
+    </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/eye.svg" class="common-size-icon4">
+        </div>
+        <div class="col-auto"><strong>Alt+V</strong></div>
+        <div class="col">Показать-скрыть варианты между MS и другими <a href="/assets/texts/abbr.html">Редакциями Канона</a></div>
+    </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/comment.svg" class="common-size-icon4">
+        </div>
+        <div class="col-auto"><strong>Alt+A</strong></div>
+        <div class="col">Вкл-выкл словарь. Клик по слову для активации. <a href="https://dpdict.net/ru">DPD</a></div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-auto">
+            <img src="/assets/svg/question.svg" class="common-size-icon4">
+        </div>
+        <div class="col-auto"></div>
+        <div class="col">Показать это сообщение</div>
+    </div>
+</div>       
+  <br>                
+  Увидели ошибку? <a href="/ru/#contacts">Написать</a><br>
+
+                <!-- Кнопка "Показать ещё" -->
+                <div class="text-end">
+                    <button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+                        Еще помощь
+                    </button>
+                </div>
+
+                <!-- Скрытая часть -->
+                <div id="collapseInterfaces" class="collapse">
+    <h3 style="text-align: left;">Меню ссылок</h3>
+<div class="mb-2">
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <strong><a href="#">R+E</a></strong>
+        </div>
+        <div class="col-9">
+            - читать на Пали, Рус, Англ
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <strong><a href="#">Ru / En</a></strong>
+        </div>
+        <div class="col-9">
+            - на Пали Рус или Англ
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <strong><a href="#">DPR</a></strong>
+        </div>
+        <div class="col-9">
+            - открыть на DigitalPaliReader.online
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <strong><a href="#">SC.net и Voice.SC</a></strong>
+        </div>
+        <div class="col-9">
+            - на SuttaCentral.net и Voice SC.net
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <strong><a href="#">TBW</a></strong>
+        </div>
+        <div class="col-9">
+            - на TheBuddhasWords.net
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <strong><a href="#">Th.ru / Th.su</a></strong>
+        </div>
+        <div class="col-9">
+            - на Theravada.ru, когда доступно — Theravada.su
+        </div>
+    </div>
+</div>
+                    Аббревиатуры вариантов: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. в <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> или <a href="https://suttacentral.net/abbreviations?lang=ru">здесь</a>.
+                </div>
+            </div>
+     <!--       <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div> -->
+        </div>
+    </div>
 </div>
 
-<h5 style="text-align: left;">Интерфейс для Чтения</h5>
-при переходе с главной и из результатов поиска<br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс <a href="/ru/sc/?q=sn56.11">демо</a>
-<br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мульти</strong> - Три языка - пали, русс, англ <a href="/sc/ml.html?q=dn22">демо</a><br>
- <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и пали латиницей <a href="/sc/d.html?q=sn12.2">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/sc/memorize.html?q=an10.46">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх справа налево (слова не изменены) <a href="/sc/rv.html?q=sn35.236">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/sc/fr.html?q=sn22.59">демо</a><br>  
 
-<br>
-    Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
-    <br>
-    <br>
-  	    <!-- Кнопка "Применить" -->
+<!-- Модальное окно "Настройки" -->
+<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="settingsLabel">Настройки</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <!-- Дропдаун для выбора системы письма -->
+                    <label for="script-select"><h5 style="text-align: left;">Система письма:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
+                        <option value="ISOPali">ISOPali</option>
+                        <option value="Devanagari">Devanagari</option>
+                        <option value="Thai">Thai</option>
+                    </select>
+                </div>
 
-	<button type="button" class="btn btn-sm btn-secondary rounded-pill" id="apply-button" >Применить</button> <button type="button" class="btn btn-sm btn-light rounded-pill border-secondary" id="reset-button" >Сбросить</button>
+                <div class="mb-2">
+                    <label for="reader-select"><h5 style="text-align: left;">Интерфейс:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="reader-select">
+                        <option value="st">Стандартный</option>
+                        <option value="ml">Мульти</option>
+                        <option value="d">"Деванагари"</option>
+                        <option value="mem">Для запоминания</option>
+                        <option value="rv">Реверс</option>
+                        <option value="fr">Полный Реверс</option>
+                    </select>
+                </div>
+    <p class="mb-2">
+Выберите интерфейс по умолчанию. Он будет открываться при переходе с главной и из результатов поиска      
+    </p>
+                <h3 style="text-align: left;">Описание Интерфейсов</h3>
+<div class="container">
 
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-</div>    
+    <!-- Стандартный -->
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <strong>Стандартный</strong>
+        </div>
+        <div class="col text-end">
+            Два языка - пали, русс
+        </div>
+        <div class="col-auto">
+            <a href="/ru/sc/?q=sn56.11">пример</a>
+        </div>
+    </div>
 
-<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="paliLookupInfo">
-      <h2 style="text-align: center;">Помощь</h2>
-<div class="mb-1">
- <img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></img> Чтение <img width="26px" alt="main page for search" src="/assets/img/gray-white.png"> Поиск  </div>
-        <h5 style="text-align: left;">"Горячие Клавиши"</h5>
-<div class="mb-2">
-          <button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button> <strong>Alt+S</strong> Переключить язык<br>  
-            <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon mb-1 changesvg gray-icon"></img> <strong>Alt+T</strong> Тёмная/Светлая/Авто Темы<br>
-   <img src="/assets/svg/align-left.svg" alt="toggle one/two column view"class="common-size-icon4"></img> <strong>Alt+C</strong> Текст в одну-две колонки  <br>
+    <!-- Мульти -->
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <strong>Мульти</strong>
+        </div>
+        <div class="col text-end">
+            Три языка - пали, русс, англ
+        </div>
+        <div class="col-auto">
+            <a href="/sc/ml.html?q=dn22">пример</a>
+        </div>
+    </div>
 
-    <img src="/assets/svg/eye.svg" class="common-size-icon4"></img> <strong>Alt+V</strong> Показать-скрыть варианты <br>мsежду MS и другими <a style="text-decoration:none;" href="/assets/texts/abbr.html">Редакциями Канона</a>
-<br>
- <img src="/assets/svg/comment.svg" class="common-size-icon4"></img> <strong>Alt+A</strong> Вкл-выкл словарь 
-<br> 
-  Клик по слову для активации. <a href="https://dpdict.net/ru">DPD</a>. 
-   </div> 
-  <img src="/assets/svg/question.svg" class="common-size-icon4"></img> показать это сообщение <br><br>
- Увидели ошибку? <a href="/ru/#contacts">Написать</a> 
-<br>
-  <a alt="Помощь" id="helpLinksMessage" href="javascript:void(0);" class="toggle-icon">Ещё помощь 
+    <!-- Деванагари -->
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <strong>"Деванагари"</strong>
+        </div>
+        <div class="col text-end">
+            Деванагари или тайский скрипт и пали латиницей
+        </div>
+        <div class="col-auto">
+            <a href="/sc/d.html?q=sn12.2">пример</a>
+        </div>
+    </div>
 
-  </a>
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+    <!-- Скрытая часть -->
+    <div id="collapseInterfaces" class="collapse">
+        <div class="row align-items-center mb-2">
+            <div class="col-auto">
+                <strong>Для запоминания</strong>
+            </div>
+            <div class="col text-end">
+                Текст сокращен до первых букв каждого слова
+            </div>
+            <div class="col-auto">
+                <a href="/sc/memorize.html?q=an10.46">пример</a>
+            </div>
+        </div>
 
-<div style="max-width: 450px; display: none; margin: 0 auto;" class="alert alert-secondary alert-dismissible fade show mt-3" role="alert" id="paliLookupLinksInfo">
- <div class="mb-2">
-         <h2 style="text-align: center;">Дополнительно</h2>
-             <h5 style="text-align: left;">Меню ссылок</h5>
-    
- <a href=#>R+E</a> - читать на Пали, Рус, Англ<br>
- <a href=#>Ru / En</a> - на Пали Рус или Англ<br>
- <a href=#>DPR</a> - открыть на DigitalPaliReader.online<br>
- <a href=#>SC.net и Voice.SC</a> - на SuttaCentral.net и Voice SC.net<br>
- <a href=#>TBW</a> - на TheBuddhasWords.net<br>
- <a href=#>Th.ru / Th.su</a> - на Theravada.ru, когда доступно — Theravada.su<br><br>
+        <div class="row align-items-center mb-2">
+            <div class="col-auto">
+                <strong>Реверс</strong>
+            </div>
+            <div class="col text-end">
+                Текст снизу вверх справа налево (слова не изменены)
+            </div>
+            <div class="col-auto">
+                <a href="/sc/rv.html?q=sn35.236">пример</a>
+            </div>
+        </div>
 
- </div>
-  Аббревиатуры: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. в <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> или <a href=https://suttacentral.net/abbreviations?lang=ru>здесь</a>.
-   
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>
+        <div class="row align-items-center mb-2">
+            <div class="col-auto">
+                <strong>Полный Реверс</strong>
+            </div>
+            <div class="col text-end">
+                Как предыдущий (слова слева направо)
+            </div>
+            <div class="col-auto">
+                <a href="/sc/fr.html?q=sn22.59">пример</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка "Показать ещё" -->
+    <div class="text-end mb-2">
+        <button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+            Другие
+        </button>
+    </div>
+
+    Увидели ошибку? <a href="/ru/#contacts">Написать</a>
+</div>
+                <!-- Кнопки "Применить" и "Сбросить" -->
+                <div class="text-end">
+                    <button type="button" class="btn btn-sm btn-secondary rounded-pill" id="apply-button">Применить</button>
+                    <button type="button" class="btn btn-sm btn-light rounded-pill border-secondary" id="reset-button">Сбросить</button>
+                </div>
+            </div>
+     <!--       <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div> -->
+        </div>
+    </div>
+</div>
 
     <div id="sutta">
     </div>
@@ -243,7 +445,6 @@
     
     <script src="/assets/js/linksdpr.js"></script>
     <script src="/assets/js/switchView.js"></script>
-    <script src="/assets/js/showHideHelp.js"></script>
 
                 <script src="/assets/js/linksru.js"></script>
         <script src="/assets/js/openRu.js"></script>
@@ -257,7 +458,6 @@
       var theLanguage = $('html').attr("lang");
       randPlaceholder(theLanguage);
     </script>  
-
 <script>
 
 // Event listener to submit the form when Enter key is pressed
@@ -412,7 +612,8 @@ $(document).ready(function() {
   });
 });
 </script>
-<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>  -->
+  -->
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/copyToClipboard.js"></script>
  <!-- <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
@@ -488,5 +689,7 @@ window.addEventListener("load", function() {
 </script>
 <script src="/assets/js/variantsButtonSc.js"></script>
 <script src="/assets/js/settings.js"></script>
+    <!-- <script src="/assets/js/showHideHelp.js"></script>
+-->
 </html>
 

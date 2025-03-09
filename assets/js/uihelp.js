@@ -1,48 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
     var infoUpdate = document.getElementById("infoUpdate");
 
-    // Целевое посещение (можно изменить на нужное число)
-    var targetVisit = 23;
-    var targetVisitForPWA = 5;
-    var targetVisitForGear = 10;
-    var targetVisitForRead = 15;
-    var extraTimes = 1;
+    // Целевые посещения
+    var targetVisit = 10;
+    var targetVisitForPWA = 3;
+    var targetVisitForGear = 7;
+    var targetVisitForRead = 5;
+    var extraTimes = 0;
 
     // Получаем текущее количество посещений из localStorage
-    var visitCount = localStorage.getItem("visitCount") || 0;
-    visitCount = parseInt(visitCount);
+    var visitCount = parseInt(localStorage.getItem("visitCount") || "0", 10);
 
-    // Увеличиваем счетчик посещений на 1, только если не достигнуто целевое значение
+    // Увеличиваем счетчик посещений, если не достигнуто целевое значение
     if (visitCount < targetVisit) {
         visitCount += 1;
         localStorage.setItem("visitCount", visitCount);
     }
 
-    // Проверяем, если это целевое посещение для добавления #gear
-    if (visitCount === targetVisitForGear) {
-        window.location.hash = 'gear'; // Добавляем хэш #gear в URL
-      //  localStorage.setItem("gearAdded", "true"); // Сохраняем состояние хэша
-    } else if (visitCount > targetVisitForGear + extraTimes ) {
-      if (window.location.hash.includes('gear')) {
-  let newHash = window.location.hash.replace('#gear', '').replace('##', '#');  
-  window.location.hash = newHash || ''; // Обновляем хэш
-}
- 
-    } 
-
-    // Проверяем, если это N посещение и хэш #gear был добавлен ранее
-    if (visitCount === targetVisitForRead ) {
-        window.location.hash = 'MenuRead,MenuEnglish,MenuRussian,tools,materials'; // Убираем хэш #gear из URL
-      //  localStorage.removeItem("gearAdded"); // Удаляем состояние хэша
-    } else if (visitCount > targetVisitForRead + extraTimes ) {
-     if (window.location.hash.includes('MenuRead,MenuEnglish,MenuRussian,tools,materials')) {
-  let newHash = window.location.hash.replace('#MenuRead,MenuEnglish,MenuRussian,tools,materials', '').replace('##', '#');  
-  window.location.hash = newHash || ''; // Обновляем хэш
-}
+    // Проверяем, если это первое посещение страницы с /sc/
+    if (window.location.pathname.includes('/sc/') && !localStorage.getItem('visited_sc')) {
+        highlightMultipleById(['gearsc', 'helpsc']);
+        localStorage.setItem('visited_sc', 'true'); // Запоминаем, что пользователь уже заходил
     }
 
+    // Проверяем, если это целевое посещение для подсветки gear
+    if (visitCount === targetVisitForGear) {
+        highlightById('gear'); // Подсвечиваем элемент gear
+    } else if (visitCount > targetVisitForGear + extraTimes) {
+        // Убираем стили, если превышено количество посещений
+        let gearElement = document.getElementById('gear');
+        if (gearElement) {
+            gearElement.style.boxShadow = ''; // Убираем подсветку
+        }
+    }
+    
+
+// Проверяем, если это N посещение и нужно подсветить элементы
+if (visitCount === targetVisitForRead) {
+    ['MenuRead', 'MenuEnglish', 'MenuRussian', 'tools', 'materials'].forEach(id => {
+        highlightById(id); // Подсвечиваем каждый элемент
+    });
+} else if (visitCount > targetVisitForRead + extraTimes) {
+    // Убираем подсветку, если превышено количество посещений
+    ['MenuRead', 'MenuEnglish', 'MenuRussian', 'tools', 'materials'].forEach(id => {
+        let element = document.getElementById(id);
+        if (element) {
+            element.style.boxShadow = ''; // Убираем подсветку
+        }
+    });
+}
+
     // Проверяем, если это целевое посещение и окно не было закрыто ранее
-    if (visitCount === targetVisitForPWA && !localStorage.getItem("infoUpdateClosed")) {
+    if (visitCount === targetVisitForPWA && !localStorage.getItem("PWAinstallMessage")) {
      // window.location.hash = ''
         infoUpdate.style.display = "block"; // Показываем окно
     }
@@ -50,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Добавляем обработчик события для кнопки закрытия
     infoUpdate.querySelector(".btn-close").addEventListener("click", function () {
         // Сохраняем в localStorage информацию о закрытии окна
-        localStorage.setItem("infoUpdateClosed", "true");
+        localStorage.setItem("PWAinstallMessage", "true");
         // Скрываем окно при нажатии на кнопку закрытия
         infoUpdate.style.display = "none";
     });

@@ -29,47 +29,10 @@ var helpButton = document.getElementById("helpMessage");
         // Скрываем окно при нажатии на кнопку закрытия
         paliLookupInfo.style.display = "none";
     });
-    
-    
-    
+  
     
 }); 
 
-//extrahelp
- document.addEventListener("DOMContentLoaded", function() {
-  
-  if (document.getElementById("paliLookupLinksInfo"))  { 
-    var paliLookupInfo = document.getElementById("paliLookupLinksInfo");
-}
-
- if (document.getElementById("helpLinksMessage"))  { 
-var helpButton = document.getElementById("helpLinksMessage");
-}
-    // Проверяем, есть ли запись в localStorage
-    if (!localStorage.getItem("paliLookupLinksInfoClosed")) {
-        paliLookupInfo.style.display = "none"; // Если нет, показываем его
-    }
-    
-     // Добавляем обработчик события для кнопки закрытия
-    helpButton.addEventListener("click", function() {
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "block";
-    });   
-
-    // Добавляем обработчик события для кнопки закрытия
-    paliLookupInfo.querySelector(".btn-close").addEventListener("click", function() {
-        // Сохраняем в localStorage информацию о закрытии окна
-        localStorage.setItem("paliLookupLinksInfoClosed", "true");
-        // Скрываем окно при нажатии на кнопку закрытия
-        paliLookupInfo.style.display = "none";
-    });
-    
-  
-}); 
-  
-  
-  
-  
        //settings
   
  document.addEventListener("DOMContentLoaded", function() {

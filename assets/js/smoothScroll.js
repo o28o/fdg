@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+//scroll by s params
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOMContentLoaded event fired");
     let params = new URLSearchParams(document.location.search);
@@ -103,6 +105,49 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Conditions not met: 's' parameter empty or missing, 'q' parameter empty or missing, or anchor found in URL");
     }
 });
+
+// Функция для выделения элемента по ID
+function highlightById(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        // Прокручиваем к элементу
+      //  element.scrollIntoView({ behavior: 'smooth' });
+
+        // Начальные стили
+        element.style.borderRadius = '10px';
+        element.style.transition = 'box-shadow 0.3s ease-in-out';
+        let isWide = false;
+
+        // Функция для мигания
+        const blinkInterval = setInterval(function () {
+            element.style.boxShadow = isWide ? '0 0 0 2px grey' : '0 0 0 4px grey';
+            isWide = !isWide;
+        }, 500);
+
+        // Убираем выделение через 3 секунды
+        setTimeout(function () {
+            clearInterval(blinkInterval);
+            element.style.boxShadow = '0 0 0 0 grey';
+
+            setTimeout(function () {
+                element.style.transition = '';
+                element.style.borderRadius = '';
+            }, 300);
+        }, 3000);
+    }
+}
+
+// Функция для выделения нескольких элементов по массиву ID
+function highlightMultipleById(ids) {
+    ids.forEach(highlightById);
+}
+
+// Пример использования:
+// highlightById('tools');
+// highlightMultipleById(['tools', 'materials']);
+
+
+
 
 // Функция для выделения элемента
 function highlightElement(element) {
@@ -165,7 +210,9 @@ function checkHashAndHighlight() {
 }
 
 // Вызываем функцию при загрузке страницы
-window.onload = checkHashAndHighlight;
+
 
 // Также вызываем функцию при изменении хэша
 window.addEventListener('hashchange', checkHashAndHighlight);
+
+

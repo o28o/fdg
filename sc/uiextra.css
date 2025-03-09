@@ -149,6 +149,12 @@ margin-left: 6px;
   color: #83676a !important;
 }
 
+.dark .btn-close {
+  color: #989898 !important;
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+
 .hidden-variant {
   display: none !important;
 }

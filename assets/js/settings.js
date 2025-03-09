@@ -1,5 +1,21 @@
+
+function loadModal(modalId, modalFile) {
+    fetch(modalFile)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("modalContainer").innerHTML = html;
+            let modal = new bootstrap.Modal(document.getElementById(modalId));
+           //modal.show();
+        })
+        .catch(error => console.error("Ошибка загрузки модального окна:", error));
+}
+
+//loadModal("paliLookupInfo", "/assets/common/modalsSC.html");
+
 //sett8ngs management
 document.addEventListener('DOMContentLoaded', function() {
+  
+  
 
   const scriptSelect = document.getElementById('script-select');
   const applyButton = document.getElementById('apply-button');
@@ -308,21 +324,33 @@ function updateDemoLinks() {
   const queryString = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
   const hash = window.location.hash;
 
+  // Определяем базовый URL в зависимости от языка
+  let baseUrl;
+  if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
+    baseUrl = window.location.origin + "/ru/sc/"; // Для русского языка
+  } else if (window.location.href.includes('/th') || (localStorage.siteLanguage && localStorage.siteLanguage === 'th')) {
+    baseUrl = window.location.origin + "/th/sc/"; // Для русского языка
+  } else {
+    baseUrl = window.location.origin + "/sc/"; // Для других языков
+  }
+
+  // Ссылки для демо-режимов
   const demoLinks = {
-    stDemo: '/ru/sc/',
-    mlDemo: '/sc/ml.html',
-    dDemo: '/sc/d.html',
-    memDemo: '/sc/memorize.html',
-    rvDemo: '/sc/rv.html',
-    frDemo: '/sc/fr.html'
+    stDemo: baseUrl, // Используем baseUrl для stDemo
+    mlDemo: window.location.origin + "/sc/ml.html",
+    dDemo: window.location.origin + "/sc/d.html",
+    memDemo: window.location.origin + "/sc/memorize.html",
+    rvDemo: window.location.origin + "/sc/rv.html",
+    frDemo: window.location.origin + "/sc/fr.html"
   };
 
+  // Обновляем ссылки
   Object.keys(demoLinks).forEach(id => {
     const linkElement = document.getElementById(id);
     if (linkElement) {
       const baseUrl = demoLinks[id];
       const newUrl = `${baseUrl}?${queryString}${hash}`;
-      linkElement.href = newUrl; // Просто обновляем атрибут href
+      linkElement.href = newUrl; // Обновляем атрибут href
     }
   });
 }
@@ -373,6 +401,45 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+document.addEventListener("keydown", (event) => {
+  if (event.altKey && event.code === "Digit7") { // Проверяем, что нажаты Alt и 7
+    let currentUrl = window.location.href; // Получаем текущий URL
+
+    // Шаг 1: Удаляем всё после первого / (оставляем базовую часть)
+    let base = currentUrl.split('/')[0] + '//' + currentUrl.split('/')[2];
+
+    // Шаг 2: Удаляем всё перед ? (оставляем параметры, если они есть)
+    let params = currentUrl.split('?')[1] || '';
+
+    // Шаг 3: Собираем новый URL
+    let newUrl = `${base}/th/sc/${params ? `?${params}` : ''}`;
+
+    if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
+      history.pushState(null, "", newUrl); // Добавляем запись в историю
+      location.href = newUrl; // Принудительно переходим по новому URL
+    }
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.altKey && event.code === "Digit8") { // Проверяем, что нажаты Alt и 7
+    let currentUrl = window.location.href; // Получаем текущий URL
+
+    // Шаг 1: Удаляем всё после первого / (оставляем базовую часть)
+    let base = currentUrl.split('/')[0] + '//' + currentUrl.split('/')[2];
+
+    // Шаг 2: Удаляем всё перед ? (оставляем параметры, если они есть)
+    let params = currentUrl.split('?')[1] || '';
+
+    // Шаг 3: Собираем новый URL
+    let newUrl = `${base}/sc/mlth.html${params ? `?${params}` : ''}`;
+
+    if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
+      history.pushState(null, "", newUrl); // Добавляем запись в историю
+      location.href = newUrl; // Принудительно переходим по новому URL
+    }
+  }
+});
 
 //end of the initial function
 });

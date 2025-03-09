@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function() {
 $.ajax({
   url: "/assets/texts/sutta_words.txt",
   dataType: "text",
@@ -10,6 +10,7 @@ $.ajax({
       "ū": "u",
       "ḍ": "d",
       "ḷ": "l",
+      "ṃ": "ṁ",
       "ṁ": "n",
       "ṁ": "m",
       "ṅ": "n",
@@ -116,4 +117,7 @@ $.ajax({
 
     }).autocomplete("widget").addClass("fixed-height");
   }
+});
+
+//end of the initial function
 });

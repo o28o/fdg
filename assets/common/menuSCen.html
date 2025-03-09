@@ -1,0 +1,55 @@
+<form id="form" class="ui-widget mb-2">
+    <label class="sr-only dropup rounded-pill mb-2" for="paliauto"></label>
+    <input class="mb-2" id="paliauto" type="search" placeholder="Try sn56.11"><input class="go-button mb-2" type="submit" value="Go">
+    <div id="form-div" class="">
+        <!-- Home Button -->
+        <div id="home-button" class="icon-button">
+            <a href="/read.php" title="Read Suttas and Vinaya" rel="noreferrer">
+                <img class="common-size-icon" alt="page for reading" src="/assets/svg/home-icon.svg"></img>
+            </a>
+        </div>
+
+        <!-- Search Button -->
+        <div id="fdg-button" class="icon-button">
+            <a href="/" title="Search in Suttas and Vinaya" rel="noreferrer">
+                <img width="26px" alt="main page for search" src="/assets/img/gray-white.png">
+            </a>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <div id="theme-button" class="icon-button">
+            <img src="/assets/svg/circle-half-stroke.svg" alt="Switch theme" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img>
+        </div>
+
+        <!-- Column Mode Switcher -->
+        <div id="mode-switcher" class="">
+            <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
+                <img src="/assets/svg/align-left.svg" alt="Text in one or two columns" class="common-size-icon4"></img>
+            </a>
+        </div>
+
+        <!-- Variants Toggle Button -->
+        <div class="" id="variants-switcher">
+            <a alt="Show or hide variants from different Canon versions" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
+                <img src="/assets/svg/eye.svg" class="common-size-icon4"></img>
+            </a>
+        </div>
+
+        <!-- Dictionary OnClick Popup -->
+        <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">
+            <img src="/assets/svg/comment.svg" class="dictIcon"></img>
+        </a>
+
+        <!-- Settings Button -->
+        <a alt="Settings" id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+            <img id="gearsc" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+        </a>
+
+        <!-- Help Button -->
+        <div class="">
+            <a alt="Help" data-bs-toggle="modal" data-bs-target="#paliLookupInfo" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+                <img id="helpsc" src="/assets/svg/question.svg" class="common-size-icon4"></img>
+            </a>
+        </div>
+    </div>
+</form>

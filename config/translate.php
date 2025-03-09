@@ -537,7 +537,7 @@ $defaults = '<br><div class="text-start">
 <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/sc/ml.html?q=sn56.11">демо</a><br>
  <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/sc/d.html?q=sn56.11">демо</a><br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/sc/memorize.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх справа налево (слова не изменены) <a href="/sc/rv.html?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх (слова не изменены) <a href="/sc/rv.html?q=sn56.11">демо</a><br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/sc/fr.html?q=sn56.11">демо</a><br>  
 </div>';
  

@@ -115,6 +115,14 @@
         <div class="col-auto"><strong>Alt+S</strong></div>
         <div class="col">Переключить язык</div>
     </div>
+    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto mb-1">
+          <img class="common-size-icon4 " src="/assets/img/favico_black.png">
+        </div>
+        <div class="col-auto"><strong>Alt+1 до 6</strong></div>
+        <div class="col">Переход по Режимам Чтения</div>
+    </div>     
     <div class="row align-items-center mb-2">
         <div class="col-auto">
             <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
@@ -151,8 +159,8 @@
         <div class="col-auto"><strong>Alt+X</strong></div>
         <div class="col">Показать-скрыть "Настройки"</div>
     </div>
-    
-    <div class="row align-items-center">
+   
+    <div class="row align-items-center mb-4">
         <div class="col-auto">
             <img src="/assets/svg/question.svg" class="common-size-icon4">
         </div>
@@ -160,8 +168,6 @@
         <div class="col">Показать-скрыть это окно "Помощь"</div>
     </div>
 </div>       
-  <br>                
-  Увидели ошибку? <a href="/ru/#contacts">Написать</a><br>
 
                 <!-- Кнопка "Показать ещё" -->
                 <div class="text-end">
@@ -230,6 +236,8 @@
 </div>
                     Аббревиатуры вариантов: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. в <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> или <a href="https://suttacentral.net/abbreviations?lang=ru">здесь</a>.
                 </div>
+             
+  Увидели ошибку? <a href="/ru/#contacts">Написать</a><br>
             </div>
      <!--       <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -270,7 +278,7 @@
                     </select>
                 </div> -->
 
-                <h5 style="text-align: left;">Интерфейс по умолчанию:</h5>
+                <h5 style="text-align: left;">Выберите Режим Чтения:</h5>
 <div class="container">
 
 
@@ -278,13 +286,11 @@
     <div class="row align-items-center mb-2">
         <div class="col-auto">
           <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
-          <strong>Стандартный</strong>
+   <a id="stDemo" href="/ru/sc/?q=sn56.11"><strong>Стандартный</strong></a>
+       
         </div>
         <div class="col text-end">
             Два языка: пали, русс
-        </div>
-        <div class="col-auto">
-<a id="stDemo" href="/ru/sc/?q=sn56.11">перейти</a>
         </div>
     </div>
 
@@ -292,13 +298,11 @@
     <div class="row align-items-center mb-2">
         <div class="col-auto">
           <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
-          <strong>Мульти</strong>
+         <a id="mlDemo" href="/sc/ml.html?q=dn22"> <strong>Мульти</strong></a>
+
         </div>
         <div class="col text-end">
             Три языка: пали, русс, англ
-        </div>
-        <div class="col-auto">
-<a id="mlDemo" href="/sc/ml.html?q=dn22">перейти</a>
         </div>
     </div>
 
@@ -307,14 +311,13 @@
         <div class="col-auto">
           <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> 
           &nbsp;
-          <strong>"Деванагари"</strong>
+    <a id="dDemo" href="/sc/d.html?q=sn12.2"><strong>"Деванагари"</strong></a>
+      
         </div>
         <div class="col text-end">
             Деванагари или тайский скрипт + пали латиницей
         </div>
-        <div class="col-auto">
-<a id="dDemo" href="/sc/d.html?q=sn12.2">перейти</a>
-        </div>
+
     </div>
 
     <!-- Скрытая часть -->
@@ -323,26 +326,23 @@
             <div class="col-auto">
               <input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem">
               &nbsp;
-              <strong>Для запоминания</strong>
+              <a id="memDemo" href="/sc/memorize.html?q=an10.46">              <strong>Для запоминания</strong>
+</a>
             </div>
             <div class="col text-end">
                 Текст сокращен до первых букв каждого слова
             </div>
-            <div class="col-auto">
-<a id="memDemo" href="/sc/memorize.html?q=an10.46">перейти</a>
-            </div>
         </div>
 
         <div class="row align-items-center mb-2">
-            <div class="col-auto"><input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv">
+            <div class="col-auto">
+              <input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv">
             &nbsp;
-            <strong>Реверс</strong>
+<a id="rvDemo" href="/sc/rv.html?q=sn35.236"><strong>Реверс</strong></a>
+
             </div>
             <div class="col text-end">
-                Текст снизу вверх справа налево (слова не изменены)
-            </div>
-            <div class="col-auto">
-<a id="rvDemo" href="/sc/rv.html?q=sn35.236">перейти</a>
+                Текст снизу вверх
             </div>
         </div>
 
@@ -350,13 +350,12 @@
             <div class="col-auto">
               <input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr">
               &nbsp;
-              <strong>Полный Реверс</strong>
+              <a id="frDemo" href="/sc/fr.html?q=sn22.59"><strong>Полный Реверс</strong>
+</a>   
             </div>
             <div class="col text-end">
-                Как предыдущий (слова слева направо)
+                Как предыдущий + слова слева направо
             </div>
-            <div class="col-auto">
-<a id="frDemo" href="/sc/fr.html?q=sn22.59">перейти</a>            </div>
         </div>
     </div>
 
@@ -367,14 +366,16 @@
         </button>
     </div>
     <p class="mb-2">
-Он будет открываться при переходе с главной и из результатов поиска      
+Клик <strong>по названию</strong> - перейти один раз. <br>
+Клик <strong>по радио кнопке</strong> - сделать по умолчанию<br> 
+при переходе с главной и из результатов поиска      
     </p>
     Увидели ошибку? <a href="/ru/#contacts">Написать</a>
 </div>
                 <!-- Кнопки "Применить" и "Сбросить" -->
                 <div class="text-end">
-                    <button type="button" class="btn btn-sm btn-secondary rounded-pill" id="apply-button">Применить</button>
-                    <button type="button" class="btn btn-sm btn-light rounded-pill border-secondary" id="reset-button">Сбросить</button>
+<button type="button" class="btn btn-sm  rounded-pill btn-secondary " id="reset-button" >Сбросить</button>
+   <button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Применить</button>
                 </div>
             </div>
      <!--       <div class="modal-footer">

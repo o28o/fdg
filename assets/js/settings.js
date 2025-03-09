@@ -1,5 +1,3 @@
-
-
 //sett8ngs management
 document.addEventListener('DOMContentLoaded', function() {
   const scriptSelect = document.getElementById('script-select');
@@ -250,49 +248,85 @@ function checkAndUpdateUrl() {
 
 // open current url in demo mode
 
-  // Функция для извлечения параметров из URL
-  function getQueryParams() {
-    const params = {};
-    const queryString = window.location.search.substring(1);
-    const pairs = queryString.split('&');
-    pairs.forEach(pair => {
-      const [key, value] = pair.split('=');
-      if (key && value) {
-        params[key] = value;
-      }
-    });
-    return params;
-  }
+// Функция для извлечения параметров из URL
+function getQueryParams() {
+  const params = {};
+  const queryString = window.location.search.substring(1);
+  const pairs = queryString.split('&');
+  pairs.forEach(pair => {
+    const [key, value] = pair.split('=');
+    if (key && value) {
+      params[key] = value;
+    }
+  });
+  return params;
+}
 
-  // Функция для обновления ссылок
-  function updateDemoLinks() {
-    const params = getQueryParams();
-    const queryString = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
-    const hash = window.location.hash;
+// Функция для обновления ссылок
+function updateDemoLinks() {
+  const params = getQueryParams();
+  const queryString = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
+  const hash = window.location.hash;
 
-    // Обновляем каждую ссылку
-    const demoLinks = {
-      stDemo: '/ru/sc/',
-      mlDemo: '/sc/ml.html',
-      dDemo: '/sc/d.html',
-      memDemo: '/sc/memorize.html',
-      rvDemo: '/sc/rv.html',
-      frDemo: '/sc/fr.html'
-    };
+  const demoLinks = {
+    stDemo: '/ru/sc/',
+    mlDemo: '/sc/ml.html',
+    dDemo: '/sc/d.html',
+    memDemo: '/sc/memorize.html',
+    rvDemo: '/sc/rv.html',
+    frDemo: '/sc/fr.html'
+  };
 
-    Object.keys(demoLinks).forEach(id => {
-      const linkElement = document.getElementById(id);
-      if (linkElement) {
-        const baseUrl = demoLinks[id];
-        linkElement.href = `${baseUrl}?${queryString}${hash}`;
-      }
-    });
-  }
+  Object.keys(demoLinks).forEach(id => {
+    const linkElement = document.getElementById(id);
+    if (linkElement) {
+      const baseUrl = demoLinks[id];
+      const newUrl = `${baseUrl}?${queryString}${hash}`;
+      linkElement.href = newUrl; // Просто обновляем атрибут href
+    }
+  });
+}
 
-  // Вызываем функцию обновления ссылок при загрузке страницы
-  window.onload = updateDemoLinks;
-  
+// Вызываем функцию обновления ссылок при загрузке страницы
+window.onload = updateDemoLinks;
   //end 
+
+// Объект, связывающий цифры от 1 до 6 с id ссылок
+const demoLinks = {
+  1: "stDemo", // Alt + 1
+  2: "mlDemo", // Alt + 2
+  3: "dDemo",  // Alt + 3
+  4: "memDemo", // Alt + 4
+  5: "rvDemo", // Alt + 5
+  6: "frDemo"  // Alt + 6
+};
+
+// Обработчик события нажатия клавиш
+document.addEventListener("keydown", (event) => {
+  // Проверяем, что нажата клавиша Alt и одна из цифр от 1 до 6
+  if (event.altKey && event.code.startsWith("Digit")) {
+    // Извлекаем цифру из event.code (например, "Digit1" -> 1)
+    const digit = parseInt(event.code.replace("Digit", ""), 10);
+
+    // Проверяем, что цифра находится в диапазоне от 1 до 6
+    if (digit >= 1 && digit <= 6) {
+      // Получаем id ссылки из объекта demoLinks
+      const linkId = demoLinks[digit];
+
+      // Находим ссылку по id
+      const linkElement = document.getElementById(linkId);
+
+      // Если ссылка найдена, имитируем клик
+      if (linkElement) {
+        linkElement.click(); // Программный клик по ссылке
+      } else {
+        console.error(`Ссылка с id "${linkId}" не найдена!`);
+      }
+    }
+  }
+});
+
+
 
 });
 

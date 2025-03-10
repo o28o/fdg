@@ -20,7 +20,7 @@ include 'scripts/opentexts.php';
 <meta property="og:title" content="find.Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 <link rel="manifest" href="/assets/manifest.json">
-
+<link rel="canonical" href="<?php echo $canonicalPage;?>">
 <script>
 // Проверяем значение siteLanguage в localStorage
 const siteLanguage = localStorage.getItem('siteLanguage');

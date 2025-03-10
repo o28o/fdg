@@ -23,6 +23,7 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta name="keywords" content="<?php echo $metakeywords;?>">
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
+<link rel="canonical" href="<?php echo $canonicalPage;?>read.php">
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="article" />

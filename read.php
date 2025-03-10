@@ -26,7 +26,7 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <link rel="canonical" href="<?php echo $canonicalPage;?>read.php">
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
-<meta property="og:type" content="article" />
+<meta property="og:type" content="website" />
 <meta property="og:title" content="find.Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 

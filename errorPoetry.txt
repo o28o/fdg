@@ -1,0 +1,213 @@
+poetry@dhammagift:/var/www/dpd-db$ poetry run uvicorn exporter.webapp.main:app --host 0.0.0.0 --port 8080
+
+Traceback (most recent call last):
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+
+    self.dialect.do_execute(
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+
+    cursor.execute(statement, parameters)
+
+sqlite3.OperationalError: no such column: dpd_headwords.inflections_api_ca_eva_iti
+
+
+
+The above exception was the direct cause of the following exception:
+
+
+
+Traceback (most recent call last):
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/bin/uvicorn", line 8, in <module>
+
+    sys.exit(main())
+
+             ^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
+
+    return self.main(*args, **kwargs)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/click/core.py", line 1082, in main
+
+    rv = self.invoke(ctx)
+
+         ^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
+
+    return ctx.invoke(self.callback, **ctx.params)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/click/core.py", line 788, in invoke
+
+    return __callback(*args, **kwargs)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/uvicorn/main.py", line 412, in main
+
+    run(
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/uvicorn/main.py", line 579, in run
+
+    server.run()
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
+
+    return asyncio.run(self.serve(sockets=sockets))
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+
+    return runner.run(main)
+
+           ^^^^^^^^^^^^^^^^
+
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+
+    return self._loop.run_until_complete(task)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+
+    return future.result()
+
+           ^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
+
+    await self._serve(sockets)
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
+
+    config.load()
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
+
+    self.loaded_app = import_from_string(self.app)
+
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
+
+    module = importlib.import_module(module_str)
+
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+
+    return _bootstrap._gcd_import(name[level:], package, level)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+
+  File "/var/www/dpd-db/exporter/webapp/main.py", line 31, in <module>
+
+    roots_count_dict = make_roots_count_dict(db_session)
+
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/var/www/dpd-db/exporter/goldendict/helpers.py", line 17, in make_roots_count_dict
+
+    roots_db = db_session.query(DpdHeadword).all()
+
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+
+    return self._iter().all()  # type: ignore
+
+           ^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+
+    return self._execute_internal(
+
+           ^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+
+    result = conn.execute(
+
+             ^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+
+    return meth(
+
+           ^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 516, in _execute_on_connection
+
+    return connection._execute_clauseelement(
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+
+    ret = self._execute_context(
+
+          ^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+
+    return self._exec_single_context(
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+
+    self._handle_dbapi_exception(
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+
+    self.dialect.do_execute(
+
+  File "/home/poetry/.cache/pypoetry/virtualenvs/dpd-db-py9cGlyM-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+
+    cursor.execute(statement, parameters)
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: dpd_headwords.inflections_api_ca_eva_iti
+
+[SQL: SELECT dpd_headwords.id AS dpd_headwords_id, dpd_headwords.lemma_1 AS dpd_headwords_lemma_1, dpd_headwords.lemma_2 AS dpd_headwords_lemma_2, dpd_headwords.pos AS dpd_headwords_pos, dpd_headwords.grammar AS dpd_headwords_grammar, dpd_headwords.derived_from AS dpd_headwords_derived_from, dpd_headwords.neg AS dpd_headwords_neg, dpd_headwords.verb AS dpd_headwords_verb, dpd_headwords.trans AS dpd_headwords_trans, dpd_headwords.plus_case AS dpd_headwords_plus_case, dpd_headwords.meaning_1 AS dpd_headwords_meaning_1, dpd_headwords.meaning_lit AS dpd_headwords_meaning_lit, dpd_headwords.meaning_2 AS dpd_headwords_meaning_2, dpd_headwords.non_ia AS dpd_headwords_non_ia, dpd_headwords.sanskrit AS dpd_headwords_sanskrit, dpd_headwords.root_key AS dpd_headwords_root_key, dpd_headwords.root_sign AS dpd_headwords_root_sign, dpd_headwords.root_base AS dpd_headwords_root_base, dpd_headwords.family_root AS dpd_headwords_family_root, dpd_headwords.family_word AS dpd_headwords_family_word, dpd_headwords.family_compound AS dpd_headwords_family_compound, dpd_headwords.family_idioms AS dpd_headwords_family_idioms, dpd_headwords.family_set AS dpd_headwords_family_set, dpd_headwords.construction AS dpd_headwords_construction, dpd_headwords.derivative AS dpd_headwords_derivative, dpd_headwords.suffix AS dpd_headwords_suffix, dpd_headwords.phonetic AS dpd_headwords_phonetic, dpd_headwords.compound_type AS dpd_headwords_compound_type, dpd_headwords.compound_construction AS dpd_headwords_compound_construction, dpd_headwords.non_root_in_comps AS dpd_headwords_non_root_in_comps, dpd_headwords.source_1 AS dpd_headwords_source_1, dpd_headwords.sutta_1 AS dpd_headwords_sutta_1, dpd_headwords.example_1 AS dpd_headwords_example_1, dpd_headwords.source_2 AS dpd_headwords_source_2, dpd_headwords.sutta_2 AS dpd_headwords_sutta_2, dpd_headwords.example_2 AS dpd_headwords_example_2, dpd_headwords.antonym AS dpd_headwords_antonym, dpd_headwords.synonym AS dpd_headwords_synonym, dpd_headwords.variant AS dpd_headwords_variant, dpd_headwords.var_phonetic AS dpd_headwords_var_phonetic, dpd_headwords.var_text AS dpd_headwords_var_text, dpd_headwords.commentary AS dpd_headwords_commentary, dpd_headwords.notes AS dpd_headwords_notes, dpd_headwords.cognate AS dpd_headwords_cognate, dpd_headwords.link AS dpd_headwords_link, dpd_headwords.origin AS dpd_headwords_origin, dpd_headwords.stem AS dpd_headwords_stem, dpd_headwords.pattern AS dpd_headwords_pattern, dpd_headwords.created_at AS dpd_headwords_created_at, dpd_headwords.updated_at AS dpd_headwords_updated_at, dpd_headwords.inflections AS dpd_headwords_inflections, dpd_headwords.inflections_api_ca_eva_iti AS dpd_headwords_inflections_api_ca_eva_iti, dpd_headwords.inflections_sinhala AS dpd_headwords_inflections_sinhala, dpd_headwords.inflections_devanagari AS dpd_headwords_inflections_devanagari, dpd_headwords.inflections_thai AS dpd_headwords_inflections_thai, dpd_headwords.inflections_html AS dpd_headwords_inflections_html, dpd_headwords.freq_data AS dpd_headwords_freq_data, dpd_headwords.freq_html AS dpd_headwords_freq_html, dpd_headwords.ebt_count AS dpd_headwords_ebt_count
+
+FROM dpd_headwords]
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+
+poetry@dhammagift:/var/www/dpd-db$ 

@@ -373,9 +373,9 @@ const demoLinks = {
 document.addEventListener("keydown", (event) => {
   // Проверяем, что нажата клавиша Alt и одна из цифр от 1 до 6
   if (event.altKey && event.code.startsWith("Digit")) {
+              event.preventDefault();
     // Извлекаем цифру из event.code (например, "Digit1" -> 1)
     const digit = parseInt(event.code.replace("Digit", ""), 10);
-
     // Проверяем, что цифра находится в диапазоне от 1 до 6
     if (digit >= 1 && digit <= 6) {
       // Получаем id ссылки из объекта demoLinks
@@ -403,6 +403,7 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.altKey && event.code === "Digit7") { // Проверяем, что нажаты Alt и 7
+          event.preventDefault();
     let currentUrl = window.location.href; // Получаем текущий URL
 
     // Шаг 1: Удаляем всё после первого / (оставляем базовую часть)
@@ -423,6 +424,7 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.altKey && event.code === "Digit8") { // Проверяем, что нажаты Alt и 7
+            event.preventDefault();
     let currentUrl = window.location.href; // Получаем текущий URL
 
     // Шаг 1: Удаляем всё после первого / (оставляем базовую часть)

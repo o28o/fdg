@@ -376,7 +376,7 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 									<strong>Совет #9</strong><br>
 Если запрос завершается ошибкой из-за таймаута, попробуйте более длинный поисковый запрос или более специфичное слово.  <br><br>
 	<strong>Совет #10 Быстрые переходы</strong><br>
-   Также как на <a href="https://sc.dhamma.gift">sc.Dhamma.gift</a> или <a href="https://find.dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
+   Также как на <a href="https://find.dhamma.gift/sc/ru/">Dhamma.gift Read</a> или <a href="https://find.dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
    Через строку поиска можно перейти в сутты dn, mn, sn, an, ud из kn и тексты Винаи. <br><br>
 <!--								  <strong>Совет #11</strong><br>
                                    !!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  -->
@@ -510,7 +510,7 @@ $head5makelist = 'Создать CSV список';
 $pmakelist = 'Создавайте списки феноменов, учений, переводов и т.п.'; 
 
 $pt2s = 'Преобразование Русс и Англ текстов в речь';
-$smt2s = 'для прослушивания текстов sc.dhamma.gift, theravada.ru и др.';
+$smt2s = 'для прослушивания текстов Dhamma.gift Read, theravada.ru и др.';
 
 $pscvoice = 'Преобразование Пали и Англ текстов в речь';
 $smscvoice = 'для прослушивания текстов suttacentral.net';
@@ -1010,7 +1010,7 @@ $pmakelist = 'Create Lists of phenomena, teachings, translations etc';
 
 
 $pt2s = 'Text-to-Speech generator for English and Russian';
-$smt2s = 'Listen to sc.dhamma.gift, theravada.ru & other';
+$smt2s = 'Listen to Dhamma.gift Read, theravada.ru & other';
 $pscvoice = 'Generates Pali & English text-to-speech';
 $smscvoice = 'for suttacentral.net texts';
 

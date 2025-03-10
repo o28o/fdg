@@ -843,7 +843,7 @@ foreach ($slides as $index => $slide) {
  <div class="list-group">
   <a target="" href="<?php echo $mainreadlink; ?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
-      <h5 class="mb-1">sc.dhamma.gift</h5>
+      <h5 class="mb-1">Dhamma.gift Read</h5>
       <small><?php echo $detailonandoffline;?></small>
     </div>
     <p class="mb-1 text-left"><?php echo $psclight; ?></p>
@@ -1228,7 +1228,6 @@ $(function () {
 
 </script>
 <script defer src="/assets/js/themeswitch.js"></script>
-<script src="https://code.responsivevoice.org/responsivevoice.js?key=X8U4dR8x"></script>
 </body>
 
 <?php

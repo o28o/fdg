@@ -22,7 +22,7 @@ $siteAnnounce = '<div style="max-width: 450px; " class="alert alert-primary aler
 
 
 $maintitle = 'Точный поиск. Будда Дхамма в Пали Суттах и Винае';
-$metadesc = 'Точный поиск в Учении Будды, в Пали Суттах и Винае. Поисковый Сайт Освобождения.';
+$metadesc = 'Точный поиск в Учении Будды, в Пали Суттах и Винае. Поисковый Сайт Освобождения. Полезные Дхамма Ресурсы. Материалы для изучения Сутт, Дхаммы, Пали, Санскрита';
 $metakeywords = 'Будда, Buddha, Дхамма, Дхарма, Виная, поиск, Сутта, Сутты, Суттапитака, Винаяпитака, suttapitaka, vinayapitaka Пали, Палийский канон, буддизм, dhamma, sutta, Buddhism, pali Canon, патимоккха, пратимокша, patimokkha, pratimoksasutra, ';
 $titletwit = 'Точный поиск в Учении Будды, в Пали Суттах и Винае. ';
 $ogdesc = 'Поисковая Система Освобождения. Учение Будды. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
@@ -565,7 +565,7 @@ $copyrightnote = 'The materials on this website are distributed under the <a cla
 $gearbutton = 'extra settings';
 
 $maintitle = 'Precise Search in Buddha Dhamma in Pali Suttas and Vinaya';
-$metadesc = 'Precise Search in Buddhas Teaching in Pali Suttas and Vinaya. Liberation Search Engine. Search in Pali Suttanta and Vinaya';
+$metadesc = 'Precise Search in Buddhas Teaching in Pali Suttas and Vinaya. Liberation Search Engine. All-Round Perspective on Dhamma of the Noble One Search in Pali Suttanta and Vinaya. Find Different Translations. ';
 $metakeywords = 'Buddha, dhamma, pitaka, sutta, suttas, vinaya, patimokkha, pratimoksa, Buddhism, pali Canon, dharma';
 $titletwit = 'Precise Search in Buddha Dhamma, in Pali Suttas and Vinaya. ';
 $ogdesc = 'Liberation Search Engine. Search in Buddha Dhamma, Suttas and Vinaya in Pali, English, Russian and Thai';

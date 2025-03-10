@@ -1571,6 +1571,7 @@ cleanupTempFiles
 end=`date +%s`
 runtime=$((end-start))
 echo total execution time $runtime >> new_time_output.txt
+rm *.tmp tmpgrepbase.* tmp*
 find . -type f -name 'search-*.html' -mmin +60 -exec rm {} \;
 exit 0
 

@@ -359,9 +359,46 @@ function updateDemoLinks() {
 window.onload = updateDemoLinks;
   //end 
 
+//Горячие кнопки от 1 до Х
+
+document.addEventListener("keydown", (event) => {
+  if (event.altKey && event.code === "Digit1") { // Проверяем, что нажаты Alt и 7
+    event.preventDefault();
+
+    let currentUrl = window.location.href; // Получаем текущий URL
+    let urlWithoutParams = currentUrl.split('?')[0]; // Удаляем всё после ?
+
+    let newUrl;
+
+    // Проверяем, содержит ли URL /ru/sc/
+    if (urlWithoutParams.endsWith("/ru/sc/")) {
+      newUrl = urlWithoutParams.replace("/ru/sc/", "/sc/"); // Меняем на /sc/
+    } else if (urlWithoutParams.endsWith("/sc/")) {
+      newUrl = urlWithoutParams.replace("/sc/", "/ru/sc/"); // Меняем на /ru/sc/
+    } else {
+      // Если URL не содержит ни /ru/sc/, ни /sc/, выбираем начальный вариант
+      if (localStorage.siteLanguage && localStorage.siteLanguage === 'ru') {
+        newUrl = window.location.origin + "/ru/sc/";
+      } else {
+        newUrl = window.location.origin + "/sc/";
+      }
+    }
+
+    // Добавляем параметры обратно, если они были
+    let params = currentUrl.split('?')[1] || '';
+    newUrl = params ? `${newUrl}?${params}` : newUrl;
+
+    if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
+      history.pushState(null, "", newUrl); // Добавляем запись в историю
+      location.href = newUrl; // Принудительно переходим по новому URL
+    }
+  }
+});
+
+
 // Объект, связывающий цифры от 1 до 6 с id ссылок
 const demoLinks = {
-  1: "stDemo", // Alt + 1
+ // 1: "stDemo", // Alt + 1
   2: "mlDemo", // Alt + 2
   3: "dDemo",  // Alt + 3
   4: "memDemo", // Alt + 4
@@ -377,7 +414,7 @@ document.addEventListener("keydown", (event) => {
     // Извлекаем цифру из event.code (например, "Digit1" -> 1)
     const digit = parseInt(event.code.replace("Digit", ""), 10);
     // Проверяем, что цифра находится в диапазоне от 1 до 6
-    if (digit >= 1 && digit <= 6) {
+    if (digit >= 2 && digit <= 6) {
       // Получаем id ссылки из объекта demoLinks
       const linkId = demoLinks[digit];
 

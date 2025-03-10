@@ -9,8 +9,11 @@
       
 <img src="/assets/svg/circle-half-stroke.svg" onclick="switchIcon(this)" class="changesvg table-theme-icon gray-icon"></img>
 </button>	  
-  <!--  <button id="btn-hide-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo</button>    -->
+  <!--  <button id="btn-hide-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo</button>  
+    
+-->
 <button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo / Vivaṭṭo</button>
+
 <button class="btn btn-light forshellscript mb-1" type="button"><a class="text-decoration-none" href="quotesLinkToReplace">Quotes</a></button> 
         
 <button class="btn btn-light mb-1 toggle-dict-btn" type="button" ><img class="dictIcon" src="/assets/svg/comment.svg"></img></button>

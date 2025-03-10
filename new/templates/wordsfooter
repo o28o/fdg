@@ -144,5 +144,7 @@ $(function () {
   
 
 </script>
+  <script src="/assets/js/langswitch.js"></script>     
+
 </body>
 </html>

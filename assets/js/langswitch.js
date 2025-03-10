@@ -2,11 +2,24 @@ const Sccopy = "/suttacentral.net";
 const suttaArea = document.getElementById("sutta");
 //const themeButton = document.getElementById("theme-button");
 const bodyTag = document.querySelector("body");
-
 let language = "pli-eng";
 
 
-      
+  document.addEventListener("keydown", (event) => {
+    if ((event.altKey && event.code === "KeyS") || (event.shiftKey && event.code === "Space")) {
+    const ShowHideSearchResults = document.getElementById('btn-show-all-children');
+//  console.log("Элемент с ID 'btn-show-all-children' найден.");
+     event.preventDefault();
+      if (ShowHideSearchResults) {
+      ShowHideSearchResults.click();
+    }
+    }
+  });
+
+
+  const languageButton = document.getElementById("language-button");
+
+if (languageButton) {
 function setLanguage(language) {
   if (language === "pli-eng") {
     showPaliEnglish();
@@ -16,7 +29,6 @@ function setLanguage(language) {
     showPali();
   }
 }
-
 function showPaliEnglish() {
   console.log("showing Pali eng");
   suttaArea.classList.remove("hide-pali");
@@ -33,8 +45,9 @@ function showPali() {
   suttaArea.classList.add("hide-english");
 }
 
+
+
 function toggleThePali() {
-  const languageButton = document.getElementById("language-button");
 
   if (localStorage.paliToggle) {
     if (localStorage.paliToggle === "pli-eng") {
@@ -66,8 +79,10 @@ localStorage.paliToggle = "pli-eng";
 localStorage.paliToggleRu = "pli-rus";
     }
   });
-  
-  
+
+}
+      toggleThePali();
+
       // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
   document.addEventListener("keydown", (event) => {
     if (event.altKey && event.code === "Space") {
@@ -75,20 +90,5 @@ localStorage.paliToggleRu = "pli-rus";
       languageButton.click();
     }
   });
+
 }
-
-      toggleThePali();
-      
-
-  
-    const ShowHideSearchResults = document.getElementById('btn-show-all-children');
-
-if (ShowHideSearchResults) {
-  console.log("Элемент с ID 'btn-show-all-children' найден.");
-  document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "KeyS") {
-      event.preventDefault();
-      ShowHideSearchResults.click();
-    }
-  });
-} 

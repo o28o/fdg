@@ -134,8 +134,7 @@ $metaphorssmlletter = 'искать все сравнения, метафоры 
 $searchfewwords = 'искать несколько отдельных слов одновременно';
 $inallnikaya = 'искать X во всей Мадджхимма Никае';
 $inonesutta = 'искать Y в одной Сутте ДН22';
-$regexlink = 'ИИ может сгенерировать регулярное выражение для grep -Ei, к примеру <a class="text-white" href="https://chat.openai.com/" target=_blank>ChatGPT</a> или <a class="text-white" href=" https://claude.ai/" target=_blank>Claude AI</a> или <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>Codepal.ai</a>
-
+$regexlink = 'ИИ может сгенерировать регулярное выражение для grep -Ei, к примеру <a class="text-white" href="https://chat.openai.com/" target=_blank>ChatGPT</a>, <a class="text-white" href="https://chat.deepseek.com/" target=_blank>DeepSeek</a>, <a class="text-white" href=" https://claude.ai/" target=_blank>Claude AI</a>, <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>Codepal.ai</a>
 <br>';
 
 $regexMemo = '<p style="text-align: left;">
@@ -681,7 +680,7 @@ $metaphorssmlletter = 'search for all metaphors in Samyutta 56';
 $searchfewwords = 'search for few different patterns at the same time';
 $inallnikaya = 'find X in all Majjhimma Nikaya';
 $inonesutta = 'find Y in DN22 only';
-$regexlink = 'AI can generate RegEx for grep -Ei, e.g. <a class="text-white" href="https://chat.openai.com/" target=_blank>ChatGPT</a> or <a class="text-white" href=" https://claude.ai/" target=_blank>Claude AI</a> or <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>Codepal.ai</a><br>';
+$regexlink = 'AI can generate RegEx for grep -Ei, e.g. <a class="text-white" href="https://chat.openai.com/" target=_blank>ChatGPT</a>, <a class="text-white" href="https://chat.deepseek.com/" target=_blank>DeepSeek</a>, <a class="text-white" href=" https://claude.ai/" target=_blank>Claude AI</a>, <a class="text-white" href="https://codepal.ai/regex-generator" target=_blank>Codepal.ai</a><br>';
 
 $regexMemo = '
           <p style="text-align: left;">

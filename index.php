@@ -176,7 +176,7 @@ if (isset($_GET['q'])) {
 </div>
 
 <div class="input-group-append">
-<button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 rounded-pill ">
+<button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 mt-0 rounded-pill ">
 <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $searchcaption;?></span>
 </button>
@@ -212,7 +212,7 @@ if (isset($_GET['q'])) {
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
-  <div id="gear" class="text-white form-check-inline" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+  <div id="gear" class="text-white form-check-inline mt-2" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
   <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
   <span class="visually-hidden"><?php echo $searchcaption;?></span>
   </div>

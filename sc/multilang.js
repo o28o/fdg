@@ -757,7 +757,7 @@ setLanguage(language);
   
 function setLanguage(language) {
   if (language === "pli-rus") {
-    showPaliEnglish();
+    showPaliRussian();
   } else if (language === "rus") {
     showEnglish();
   } else if (language === "pli") {
@@ -836,13 +836,6 @@ function toggleThePali() {
     }
   });
   
-      // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
-  document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "Space") {
-      // Имитируем клик по кнопке
-      languageButton.click();
-    }
-  });
 }
 
 function parseSlug(slug) {

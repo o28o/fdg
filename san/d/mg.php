@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <?php
 error_reporting(E_ERROR | E_PARSE);
-include_once('../config/config.php');
-include_once('../config/translate.php');
-include '../scripts/opentexts.php';
+include_once('../../config/config.php');
+include_once('../../config/translate.php');
+include '../../scripts/opentexts.php';
 //echo $mainscpage;
 ?>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -43,11 +42,18 @@ include '../scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-    <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/bipm.php" >bi-pm</a>
+      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/pm.php" >bu-pm</a>
+      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/bipm.php" >bi-pm</a>
  
-    <a class="ms-1 text-decoration-none text-muted " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/sarv.php" >sarv</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/mg.php" >mg</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/lo.php" >lo</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/mu2.php" >mu2</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/mu3.php" >mu3</a>
+ 
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
     
-    <a class="ms-1 text-decoration-none text-muted " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
       <div class="collapse " id="playerCollapse">
        <!-- Start DEMO HTML (Use the following code into your project)-->
  <div class="simple-audio-player" id="simp" data-config='{"shide_top":true,"shide_btm":false,"auto_load":false,"simp-plext":true}'>
@@ -112,14 +118,16 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
     </div>
- <div class="container">
+ <br><div class="container">
    <!-- <div class="mt-3">
       <button class="btn btn-primary btn-sm" type="button" id="collapseAll">+</button>
-    </div> -->
+    </div> 
+    
+    Here's the place-->
 
    
 <?php
-include $basedir . "/san/san-lo-bu-pm.html";
+include $basedir . "/san/d/san-mg-bu-pm.html";
 ?>
 
 <div class="mb-5"></div>

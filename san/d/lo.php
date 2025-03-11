@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <?php
 error_reporting(E_ERROR | E_PARSE);
-include_once('../config/config.php');
-include_once('../config/translate.php');
-include '../scripts/opentexts.php';
+include_once('../../config/config.php');
+include_once('../../config/translate.php');
+include '../../scripts/opentexts.php';
 //echo $mainscpage;
 ?>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -46,11 +45,11 @@ include '../scripts/opentexts.php';
       <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/pm.php" >bu-pm</a>
       <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/bipm.php" >bi-pm</a>
  
-    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/sarv.php" >sarv</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/sarv.php" >sarv</a>
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/mg.php" >mg</a>
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/lo.php" >lo</a>
-    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/mu2.php" >mu2</a>
-    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/mu3.php" >mu3</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/mu2.php" >mu2</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/mu3.php" >mu3</a>
  
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
     
@@ -126,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
 <?php
-include $basedir . "/san/san-mg-bu-pm.html";
+include $basedir . "/san/d/san-lo-bu-pm.html";
 ?>
 
 <div class="mb-5"></div>

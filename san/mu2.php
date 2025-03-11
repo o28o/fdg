@@ -43,18 +43,18 @@ include '../scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-      <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/pm.php" >bu-pm</a>
-      <a class="ms-1 text-decoration-none text-muted " href="<?php echo "$mainpagenoslash"; ?>/bipm.php" >bi-pm</a>
+      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/pm.php" >bu-pm</a>
+      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/bipm.php" >bi-pm</a>
  
-    <a class="ms-1 text-decoration-none text-muted " href="/san/sarv.php" >sarv</a>
-    <a class="ms-1 text-decoration-none text-muted " href="/san/mg.php" >mg</a>
-    <a class="ms-1 text-decoration-none text-muted " href="/san/lo.php" >lo</a>
-    <a class="ms-1 text-decoration-none text-muted " href="/san/mu2.php" >mu2</a>
-    <a class="ms-1 text-decoration-none text-muted " href="/san/mu3.php" >mu3</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/sarv.php" >sarv</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/mg.php" >mg</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/lo.php" >lo</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/d/mu2.php" >mu2</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/mu3.php" >mu3</a>
  
-    <a class="ms-1 text-decoration-none text-muted " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
     
-    <a class="ms-1 text-decoration-none text-muted " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
       <div class="collapse " id="playerCollapse">
        <!-- Start DEMO HTML (Use the following code into your project)-->
  <div class="simple-audio-player" id="simp" data-config='{"shide_top":true,"shide_btm":false,"auto_load":false,"simp-plext":true}'>
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>
     </div>
- <div class="container">
+ <br><div class="container">
    <!-- <div class="mt-3">
       <button class="btn btn-primary btn-sm" type="button" id="collapseAll">+</button>
     </div> -->

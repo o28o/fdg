@@ -261,8 +261,8 @@ echo '<!--
          </li>
 
          <li>
-         <div class="dropdown-item ">
-        Prātimokṣa San
+         <div class="dropdown-item ">    
+  <a class="text-black" href="/san/d/mg.php" >Prātimokṣa</a>
     <a class="text-black" href="/san/sarv.php" >sarv</a>
     <a class="text-black" href="/san/mg.php" >mg</a>
     <a class="text-black" href="/san/lo.php" >lo</a>

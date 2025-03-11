@@ -237,8 +237,8 @@ echo '<!--
          
              <li>
          <div class="dropdown-item ">
-        Prātimokṣa San
-    <a class="text-black" href="/san/sarv.php" >sarv</a>
+  <a class="text-black" href="/san/d/mg.php" >Prātimokṣa</a>
+  <a class="text-black" href="/san/sarv.php" >sarv</a>
     <a class="text-black" href="/san/mg.php" >mg</a>
     <a class="text-black" href="/san/lo.php" >lo</a>
     <a class="text-black" href="/san/mu2.php" >mu2</a>

@@ -369,15 +369,27 @@ document.addEventListener("keydown", (event) => {
     let urlWithoutParams = currentUrl.split('?')[0]; // Удаляем всё после ?
 
     let newUrl;
+    let defaultLanguage = localStorage.getItem('siteLanguage') || "en"; // Получаем язык из localStorage или используем "en" по умолчанию
+
+	let defaultLanguageLinkPart;
+		if (defaultLanguage === "ru") {
+		  defaultLanguageLinkPart = "/ru/sc/";
+		} else if (defaultLanguage === "th") {
+		  defaultLanguageLinkPart = "/th/sc/";
+		} else {
+		  defaultLanguageLinkPart = "/sc/";
+		}
+
 
     // Проверяем, содержит ли URL /ru/sc/
     if (urlWithoutParams.endsWith("/ru/sc/")) {
       newUrl = urlWithoutParams.replace("/ru/sc/", "/sc/"); // Меняем на /sc/
-    } else if (urlWithoutParams.endsWith("/th/sc/")) {
-      newUrl = urlWithoutParams.replace("/th/sc/", "/sc/"); // Меняем на /sc/
-	} else if (urlWithoutParams.endsWith("/sc/")) {
+    } else if (urlWithoutParams.endsWith("/sc/")) {
       newUrl = urlWithoutParams.replace("/sc/", "/ru/sc/"); // Меняем на /ru/sc/
-    } 	else {
+    } else if (urlWithoutParams.endsWith("/th/sc/")) {
+      newUrl = urlWithoutParams.replace("/th/sc/", defaultLanguageLinkPart); // Меняем на /sc/
+    }
+	else {
       // Если URL не содержит ни /ru/sc/, ни /sc/, выбираем начальный вариант
       if (localStorage.siteLanguage && localStorage.siteLanguage === 'ru') {
         newUrl = window.location.origin + "/ru/sc/";

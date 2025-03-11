@@ -1,0 +1,118 @@
+INFO:     127.0.0.1:54486 - "GET /static/dpd.js HTTP/1.1" 200 OK
+
+INFO:     127.0.0.1:41636 - "GET /search_json?q=adhivacanasamphasso HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: russian_1.ru_cognate
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 406, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 70, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/middleware/gzip.py", line 24, in __call__
+    await responder(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/middleware/gzip.py", line 44, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/starlette/concurrency.py", line 42, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 2461, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 962, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/exporter/webapp/main.py", line 139, in db_search_json
+    dpd_html, summary_html = make_dpd_html(
+                             ^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/exporter/webapp/tools.py", line 202, in make_dpd_html
+    .all()
+     ^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2699, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2853, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1843, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2352, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/var/www/dpd-db/myenv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 942, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: russian_1.ru_cognate
+[SQL: SELECT dpd_headwords.id AS dpd_headwords_id, dpd_headwords.lemma_1 AS dpd_headwords_lemma_1, dpd_headwords.lemma_2 AS dpd_headwords_lemma_2, dpd_headwords.pos AS dpd_headwords_pos, dpd_headwords.grammar AS dpd_headwords_grammar, dpd_headwords.derived_from AS dpd_headwords_derived_from, dpd_headwords.neg AS dpd_headwords_neg, dpd_headwords.verb AS dpd_headwords_verb, dpd_headwords.trans AS dpd_headwords_trans, dpd_headwords.plus_case AS dpd_headwords_plus_case, dpd_headwords.meaning_1 AS dpd_headwords_meaning_1, dpd_headwords.meaning_lit AS dpd_headwords_meaning_lit, dpd_headwords.meaning_2 AS dpd_headwords_meaning_2, dpd_headwords.non_ia AS dpd_headwords_non_ia, dpd_headwords.sanskrit AS dpd_headwords_sanskrit, dpd_headwords.root_key AS dpd_headwords_root_key, dpd_headwords.root_sign AS dpd_headwords_root_sign, dpd_headwords.root_base AS dpd_headwords_root_base, dpd_headwords.family_root AS dpd_headwords_family_root, dpd_headwords.family_word AS dpd_headwords_family_word, dpd_headwords.family_compound AS dpd_headwords_family_compound, dpd_headwords.family_idioms AS dpd_headwords_family_idioms, dpd_headwords.family_set AS dpd_headwords_family_set, dpd_headwords.construction AS dpd_headwords_construction, dpd_headwords.derivative AS dpd_headwords_derivative, dpd_headwords.suffix AS dpd_headwords_suffix, dpd_headwords.phonetic AS dpd_headwords_phonetic, dpd_headwords.compound_type AS dpd_headwords_compound_type, dpd_headwords.compound_construction AS dpd_headwords_compound_construction, dpd_headwords.non_root_in_comps AS dpd_headwords_non_root_in_comps, dpd_headwords.source_1 AS dpd_headwords_source_1, dpd_headwords.sutta_1 AS dpd_headwords_sutta_1, dpd_headwords.example_1 AS dpd_headwords_example_1, dpd_headwords.source_2 AS dpd_headwords_source_2, dpd_headwords.sutta_2 AS dpd_headwords_sutta_2, dpd_headwords.example_2 AS dpd_headwords_example_2, dpd_headwords.antonym AS dpd_headwords_antonym, dpd_headwords.synonym AS dpd_headwords_synonym, dpd_headwords.variant AS dpd_headwords_variant, dpd_headwords.var_phonetic AS dpd_headwords_var_phonetic, dpd_headwords.var_text AS dpd_headwords_var_text, dpd_headwords.commentary AS dpd_headwords_commentary, dpd_headwords.notes AS dpd_headwords_notes, dpd_headwords.cognate AS dpd_headwords_cognate, dpd_headwords.link AS dpd_headwords_link, dpd_headwords.origin AS dpd_headwords_origin, dpd_headwords.stem AS dpd_headwords_stem, dpd_headwords.pattern AS dpd_headwords_pattern, dpd_headwords.created_at AS dpd_headwords_created_at, dpd_headwords.updated_at AS dpd_headwords_updated_at, dpd_headwords.inflections AS dpd_headwords_inflections, dpd_headwords.inflections_api_ca_eva_iti AS dpd_headwords_inflections_api_ca_eva_iti, dpd_headwords.inflections_sinhala AS dpd_headwords_inflections_sinhala, dpd_headwords.inflections_devanagari AS dpd_headwords_inflections_devanagari, dpd_headwords.inflections_thai AS dpd_headwords_inflections_thai, dpd_headwords.inflections_html AS dpd_headwords_inflections_html, dpd_headwords.freq_data AS dpd_headwords_freq_data, dpd_headwords.freq_html AS dpd_headwords_freq_html, dpd_headwords.ebt_count AS dpd_headwords_ebt_count, russian_1.id AS russian_1_id, russian_1.ru_meaning AS russian_1_ru_meaning, russian_1.ru_meaning_raw AS russian_1_ru_meaning_raw, russian_1.ru_meaning_lit AS russian_1_ru_meaning_lit, russian_1.ru_notes AS russian_1_ru_notes, russian_1.ru_cognate AS russian_1_ru_cognate
+FROM dpd_headwords LEFT OUTER JOIN russian AS russian_1 ON dpd_headwords.id = russian_1.id
+WHERE dpd_headwords.id IN (?)]
+[parameters: (3352,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

@@ -384,11 +384,11 @@ document.addEventListener("keydown", (event) => {
     // Проверяем, содержит ли URL /ru/sc/
     if (urlWithoutParams.endsWith("/ru/sc/")) {
       newUrl = urlWithoutParams.replace("/ru/sc/", "/sc/"); // Меняем на /sc/
-    } else if (urlWithoutParams.endsWith("/sc/")) {
-      newUrl = urlWithoutParams.replace("/sc/", "/ru/sc/"); // Меняем на /ru/sc/
     } else if (urlWithoutParams.endsWith("/th/sc/")) {
       newUrl = urlWithoutParams.replace("/th/sc/", defaultLanguageLinkPart); // Меняем на /sc/
-    }
+    } else if (urlWithoutParams.endsWith("/sc/")) {
+      newUrl = urlWithoutParams.replace("/sc/", "/ru/sc/"); // Меняем на /ru/sc/
+    } 
 	else {
       // Если URL не содержит ни /ru/sc/, ни /sc/, выбираем начальный вариант
       if (localStorage.siteLanguage && localStorage.siteLanguage === 'ru') {

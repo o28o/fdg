@@ -102,7 +102,20 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
     let translator = "brahmali";
     texttype === "vinaya";
       let language = "pli";
-    var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
+	  
+
+ if ( script === "devanagari" ) {
+//	     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
+var rootpath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slug}_rootd-pli-ms.json`
+ } 
+ else  if ( script === "thai" ) {
+var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slug}_rootth-pli-ms.json`
+ } 
+else {
+var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}_root-pli-ms.json`
+ }
+ 
+
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);

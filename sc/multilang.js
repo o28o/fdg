@@ -168,7 +168,18 @@ if (slug.includes("mn"))  {
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 } else if (slug.match(/bu-pm|bi-pm/)) {
   let translator = "o";
-    var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
+
+ if ( script === "devanagari" ) {
+//	     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
+var rootpath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slug}_rootd-pli-ms.json`
+ } 
+ else  if ( script === "thai" ) {
+var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slug}_rootth-pli-ms.json`
+ } 
+else {
+var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}_root-pli-ms.json`
+ }
+   
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-${pathLang}-${translator}.json`;
     var engtrnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
 

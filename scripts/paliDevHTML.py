@@ -23,12 +23,12 @@ soup = BeautifulSoup(html_content, "html.parser")
 # Функция для обработки текстовых узлов
 def transliterate_text(tag):
     if tag.string and tag.string.strip():  # Проверяем, не пустой ли текст
-        transliterated = transliterate.process('ISO', 'Devanagari', tag.string.strip())
+        transliterated = transliterate.process('ISOPali', 'Devanagari', tag.string.strip())
         tag.string.replace_with(transliterated)
 
 # Проходим по текстовым узлам, игнорируя <script>, <style> и <a>
 for tag in soup.find_all(string=True):
-    if tag.parent.name not in ["script", "style", "a"]:  # Исключаем ссылки
+    if tag.parent.name not in ["script", "style", ]:  # Исключаем ссылки "a"
         transliterate_text(tag)
 
 # Выводим результат

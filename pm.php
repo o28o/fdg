@@ -43,8 +43,8 @@ include './scripts/opentexts.php';
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-       <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/pm.php" >bu-pm</a>
-      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="<?php echo "$mainpagenoslash"; ?>/bipm.php" >bi-pm</a>
+       <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/assets/texts/bupm-devanagari.php" >bu-pm</a>
+      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/assets/texts/bipm-devanagari.php" >bi-pm</a>
  
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/sarv.php" >sarv</a>
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/mg.php" >mg</a>

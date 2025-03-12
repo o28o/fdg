@@ -28,11 +28,8 @@ def transliterate_text(tag):
 
 # Проходим по текстовым узлам, игнорируя <script>, <style> и <a>
 for tag in soup.find_all(string=True):
-    if tag.parent.name not in ["script", "style", ]:  # Исключаем ссылки "a"
+    if tag.parent.name not in ["script", "style"]:  # Исключаем ссылки 
         transliterate_text(tag)
 
 # Выводим результат
 print(soup.prettify())
-
-
-

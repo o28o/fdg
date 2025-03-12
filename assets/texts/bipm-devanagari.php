@@ -1,2519 +1,4033 @@
-
-        <div class="mt-3">
-          <div class="level2 right-text  reverse-order">
-
-<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pkCollapseBi">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pkCollapseBi" href=""><h3>Pubbakaraṇaṁ</h3></a>
-			
-			<!-- /sc/?q=bi-pm#1.0-->
-</div>
-					  <div class="collapse" id="pkCollapseBi"> 
-            <div class="my-3">
-   
-<div class="level4 my-3">
- <span class="level5 pli-lang"><strong>Pubbakaraṇaṁ</strong></br>
-Sammajjanī padīpo ca, udakaṁ āsanena ca;
-Uposathassa etāni, “pubbakaraṇa”nti vuccati.
-</span>
-</div>     
-
-<div class="level4 my-3">
- <span class="level5 pli-lang"><strong>Pubbakiccaṁ</strong></br>
-Chanda, pārisuddhi, utukkhānaṁ, bhikkhunigaṇanā ca ovādo;
-Uposathassa etāni, “pubbakicca”nti vuccati.
-</span>
-</div>
-
-<div class="level4 my-3">
- <span class="level5 pli-lang"><strong>Pattakallaaṅgā</strong></br>
-Uposatho, yāvatikā ca bhikkhunī kammappattā;
-Sabhāgāpattiyo ca na vijjanti;
-Vajjanīyā ca puggalā tasmiṁ na honti, “pattakalla”nti vuccati.
-</span>
-</div>
-
-<div class="level4 my-3">
- <span class="level5 pli-lang">Pubbakaraṇapubbakiccāni samāpetvā desitāpattikassa samaggassa bhikkhunisaṅghassa anumatiyā pātimokkhaṁ uddisituṁ ārādhanaṁ karoma. </span>
-</div>
-             
-           </div> <!-- mt div -->
-         </div> <!-- collapsediv -->
-<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#ndCollapseBi">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#ndCollapseBi" href=""><h3>Nidānuddeso</h3></a>
-			
-			<!-- /sc/?q=bi-pm#5.0 -->
-</div>
-			
-					  <div class="collapse" id="ndCollapseBi"> 
-            <div class="mt-3">
-   
-<div class="level4 my-3">
- <span class="level5 pli-lang">Suṇātu me ayye saṅgho.
-Ajjuposatho pannaraso,
-yadi saṅghassa pattakallaṁ, saṅgho uposathaṁ kareyya, pātimokkhaṁ uddiseyya.</span>
-</div>              
-              
-<div class="level4 my-3">
- <span class="level5 pli-lang">Kiṁ saṅghassa pubbakiccaṁ?
-Pārisuddhiṁ ayyāyo ārocetha,
-pātimokkhaṁ uddisissāmi,
-taṁ sabbāva santā sādhukaṁ suṇoma manasi karoma.
-Yassā siyā āpatti, sā āvikareyya,
-asantiyā āpattiyā tuṇhī bhavitabbaṁ,
-tuṇhībhāvena kho panāyyāyo, “parisuddhā”ti vedissāmi.
-Yathā kho pana paccekapuṭṭhassā veyyākaraṇaṁ hoti, evamevaṁ evarūpāya parisāya yāvatatiyaṁ anusāvitaṁ hoti.
-Yā pana bhikkhunī yāvatatiyaṁ anusāviyamāne saramānā santiṁ āpattiṁ nāvikareyya, sampajānamusāvādassā hoti.
-Sampajānamusāvādo kho panāyyāyo, antarāyiko dhammo vutto bhagavatā,
-tasmā saramānāya bhikkhuniyā āpannāya visuddhāpekkhāya santī āpatti āvikātabbā,
-āvikatā hissā phāsu hoti. </span>
-</div> 
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhaṁ kho, ayyāyo, nidānaṁ.
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Nidānaṁ niṭṭhitaṁ.</span>
-</div> 
-</div> <!-- mt div -->
-</div> <!-- collapsediv -->    		
-			
-						<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pjCollapseBi">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pjCollapseBi" href=""><h3>Pārājikuddeso</h3></a>
-						<!-- /sc/?q=bi-pm#8.0 -->
-</div>
-				  <div class="collapse" id="pjCollapseBi"> 
-            <div class="mt-3">
-   
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Tatrime aṭṭha pārājikā dhammā uddesaṁ āgacchanti. </span>
-    </br> </br><audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pj.m4a' type='audio/mp4'>Browser is not supported.</audio>
-</div>              
-
-
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj1-4#">Pārājika 1. Methunadhammasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#9.0">pm</a> Yā pana bhikkhunī chandaso methunaṁ dhammaṁ paṭiseveyya, antamaso tiracchānagatenapi, pārājikā hoti asaṁvāsā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj1-4#">Pārājika 2. Adinnādānasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#10.0">pm</a> Yā pana bhikkhunī gāmā vā araññā vā adinnaṁ theyyasaṅkhātaṁ ādiyeyya, yathārūpe adinnādāne rājāno coraṁ gahetvā haneyyuṁ vā bandheyyuṁ vā pabbājeyyuṁ vā corāsi bālāsi mūḷhāsi thenāsīti, tathārūpaṁ bhikkhunī adinnaṁ ādiyamānā ayampi pārājikā hoti asaṁvāsā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj1-4#">Pārājika 3. Manussaviggahasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#11.0">pm</a> Yā pana bhikkhunī sañcicca manussaviggahaṁ jīvitā voropeyya, satthahārakaṁ vāssa pariyeseyya, maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, “ambho purisa, kiṁ tuyhiminā pāpakena dujjīvitena, mataṁ te jīvitā seyyo”ti, iti cittamanā cittasaṅkappā anekapariyāyena maraṇavaṇṇaṁ vā saṁvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājikā hoti asaṁvāsā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj1-4#">Pārājika 4. Uttarimanussadhammasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#12.0">pm</a> Yā pana bhikkhunī anabhijānaṁ uttarimanussadhammaṁ attupanāyikaṁ alamariyañāṇadassanaṁ samudācareyya, “iti jānāmi, iti passāmī”ti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā āpannā visuddhāpekkhā evaṁ vadeyya, “ajānamevaṁ, ayye, avacaṁ jānāmi, apassaṁ passāmi, tucchaṁ musā vilapi”nti, aññatra adhimānā, ayampi pārājikā hoti asaṁvāsā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj5#1.54.0">Pārājika 5. Ubbhajāṇumaṇḍalikāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#13.0">pm</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa, adhakkhakaṁ ubbhajāṇumaṇḍalaṁ āmasanaṁ vā parāmasanaṁ vā gahaṇaṁ vā chupanaṁ vā paṭipīḷanaṁ vā sādiyeyya, ayampi pārājikā hoti asaṁvāsā ubbhajāṇumaṇḍalikā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj6#1.23.0">Pārājika 6. Vajjappaṭicchādikāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#14.0">pm</a> Yā pana bhikkhunī jānaṁ pārājikaṁ dhammaṁ ajjhāpannaṁ bhikkhuniṁ nevattanā paṭicodeyya, na gaṇassa āroceyya, yadā ca sā ṭhitā vā assa cutā vā nāsitā vā avassaṭā vā, sā pacchā evaṁ vadeyya: “pubbevāhaṁ, ayye, aññāsiṁ etaṁ bhikkhuniṁ ‘evarūpā ca evarūpā ca sā bhaginī’ti, no ca kho attanā paṭicodessaṁ, na gaṇassa ārocessa”nti, ayampi pārājikā hoti asaṁvāsā vajjappaṭicchādikā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj7#1.11.0">Pārājika 7. Ukkhittānuvattikāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#15.0">pm</a> Yā pana bhikkhunī samaggena saṅghena ukkhittaṁ bhikkhuṁ dhammena vinayena satthusāsanena anādaraṁ appaṭikāraṁ akatasahāyaṁ tamanuvatteyya, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “eso kho, ayye, bhikkhu samaggena saṅghena ukkhitto, dhammena vinayena satthusāsanena anādaro appaṭikāro akatasahāyo, māyye, etaṁ bhikkhuṁ anuvattī”ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyaṁ ce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi pārājikā hoti asaṁvāsā ukkhittānuvattikā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pj8#1.11.0">Pārājika 8. Aṭṭhavatthukāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#16.0">pm</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa hatthaggahaṇaṁ vā sādiyeyya, saṅghāṭikaṇṇaggahaṇaṁ vā sādiyeyya, santiṭṭheyya vā, sallapeyya vā, saṅketaṁ vā gaccheyya, purisassa vā abbhāgamanaṁ sādiyeyya, channaṁ vā anupaviseyya, kāyaṁ vā tadatthāya upasaṁhareyya etassa asaddhammassa paṭisevanatthāya, ayampi pārājikā hoti asaṁvāsā aṭṭhavatthukā.
-</span>
-</div>
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhā kho, ayyāyo, aṭṭha pārājikā dhammā.
-Yesaṁ bhikkhunī aññataraṁ vā aññataraṁ vā āpajjitvā na labhati bhikkhunīhi saddhiṁ saṁvāsaṁ
-yathā pure, tathā pacchā, pārājikā hoti asaṁvāsā.
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Pārājikaṁ niṭṭhitaṁ. </span>
-</div> 
-             
-           </div> <!-- mt div -->
-         </div> <!-- collapsediv -->     
-
-
-			<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#ssCollapseBi">+</span> <a data-bs-toggle="collapse" data-bs-target="#ssCollapseBi" href=""><h3>Saṅghādisesuddeso</h3></a>
-	
-	<!-- /sc/?q=bi-pm#18.0 -->
-</div>
-				  <div class="collapse" id="ssCollapseBi"> 
-            <div class="mt-3">
- <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-ss.m4a' type='audio/mp4'>Browser is not supported.</audio>             
-               <div class="level4 my-3">
- <span class="level5 pli-lang">Ime kho panāyyāyo sattarasa saṅghādisesā dhammā uddesaṁ āgacchanti. </span>
-</div>           
-  
- <div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss1#1.56.0">Saṅghādisesa 1. Ussayavādikāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#19.0">pm</a> Yā pana bhikkhunī ussayavādikā vihareyya gahapatinā vā gahapatiputtena vā dāsena vā kammakārena vā antamaso samaṇaparibbājakenāpi, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss2#1.40.0">Saṅghādisesa 2. Corīvuṭṭhāpikāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#20.0">pm</a> Yā pana bhikkhunī jānaṁ coriṁ vajjhaṁ viditaṁ anapaloketvā rājānaṁ vā saṅghaṁ vā gaṇaṁ vā pūgaṁ vā seṇiṁ vā, aññatra kappā vuṭṭhāpeyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss3#4.14.0">Saṅghādisesa 3. Ekagāmantaragamanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#21.0">pm</a> Yā pana bhikkhunī ekā vā gāmantaraṁ gaccheyya, ekā vā nadīpāraṁ gaccheyya, ekā vā rattiṁ vippavaseyya, ekā vā gaṇamhā ohiyeyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss4#1.27.0">Saṅghādisesa 4. Ukkhittakaosāraṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#22.0">pm</a> Yā pana bhikkhunī samaggena saṅghena ukkhittaṁ bhikkhuniṁ dhammena vinayena satthusāsanena anapaloketvā kārakasaṅghaṁ, anaññāya gaṇassa chandaṁ osāreyya, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss5#1.14.0">Saṅghādisesa 5. Bhojanapaṭiggahaṇapaṭhamasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#23.0">pm</a> Yā pana bhikkhunī avassutā avassutassa purisapuggalassa hatthato khādanīyaṁ vā, bhojanīyaṁ vā sahatthā paṭiggahetvā khādeyya vā bhuñjeyya vā, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss6#1.26.0">Saṅghādisesa 6. Bhojanapaṭiggahaṇadutiyasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#24.0">pm</a> Yā pana bhikkhunī evaṁ vadeyya: “kiṁ te, ayye, eso purisapuggalo karissati avassuto vā anavassuto vā, yato tvaṁ anavassutā, iṅgha, ayye, yaṁ te eso purisapuggalo deti khādanīyaṁ vā bhojanīyaṁ vā, taṁ tvaṁ sahatthā paṭiggahetvā khāda vā bhuñja vā”ti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#25.0">Saṅghādisesa 7. Sañcarittasikkhāpadaṁ</a> Yā pana bhikkhunī sañcarittaṁ samāpajjeyya itthiyā vā purisamatiṁ, purisassa vā itthimatiṁ, jāyattane vā jārattane vā antamaso taṅkhaṇikāyapi, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#26.0">Saṅghādisesa 8. Duṭṭhadosasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ duṭṭhā dosā appatītā amūlakena pārājikena dhammena anuddhaṁseyya: “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamānā vā asa manuggāhīyamānā vā amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhunī ca dosaṁ patiṭṭhāti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#27.0">Saṅghādisesa 9. Aññabhāgiyasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ duṭṭhā dosā appatītā aññabhāgiyassa adhikaraṇassa kiñcidesaṁ lesamattaṁ upādāya pārājikena dhammena anuddhaṁseyya, “appeva nāma naṁ imamhā brahmacariyā cāveyya”nti, tato aparena samayena samanuggāhīyamānā vā asamanuggāhīyamānā vā aññabhāgiyañceva taṁ adhikaraṇaṁ hoti. Kocideso lesamatto upādinno, bhikkhunī ca dosaṁ patiṭṭhāti, ayampi bhikkhunī paṭhamāpattikaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss10#1.19.0">Saṅghādisesa 10. Sikkhaṁpaccācikkhaṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#28.0">pm</a> Yā pana bhikkhunī kupitā anattamanā evaṁ vadeyya: “buddhaṁ paccācikkhāmi dhammaṁ paccācikkhāmi, saṅghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi, kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī”ti. Sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye kupitā anattamanā evaṁ avaca ‘buddhaṁ paccācikkhāmi, dhammaṁ paccācikkhāmi, saṅghaṁ paccācikkhāmi, sikkhaṁ paccācikkhāmi, kinnumāva samaṇiyo yā samaṇiyo sakyadhītaro, santaññāpi samaṇiyo lajjiniyo kukkuccikā sikkhākāmā, tāsāhaṁ santike brahmacariyaṁ carissāmī’ti, abhiramāyye, svākkhāto dhammo, cara brahmacariyaṁ sammā dukkhassa antakiriyāyā”ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss11#1.15.0">Saṅghādisesa 11. Adhikaraṇakupitasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#29.0">pm</a> Yā pana bhikkhunī kismiñcideva adhikaraṇe paccākatā kupitā anattamanā evaṁ vadeyya: “chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, kismiñcideva adhikaraṇe paccākatā kupitā anattamanā evaṁ avaca ‘chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo’ti, ayyā kho chandāpi gaccheyya, dosāpi gaccheyya, mohāpi gaccheyya, bhayāpi gaccheyyā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss12#1.11.0">Saṅghādisesa 12. Pāpasamācārapaṭhamasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#30.0">pm</a> Bhikkhuniyo paneva saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā bhikkhuniyo bhikkhunīhi evamassu vacanīyā: “bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”ti, evañca tā bhikkhuniyo bhikkhunīhi vuccamānā tatheva paggaṇheyyuṁ, tā bhikkhuniyo bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ, iccetaṁ kusalaṁ, no ce paṭinissajjeyyuṁ, imāpi bhikkhuniyo yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-ss13#1.23.0">Saṅghādisesa 13. Pāpasamācāradutiyasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#31.0">pm</a> Yā pana bhikkhunī evaṁ vadeyya: “saṁsaṭṭhāva, ayye, tumhe viharatha, mā tumhe nānā viharittha, santi saṅghe aññāpi bhikkhuniyo evācārā evaṁsaddā evaṁsilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā saṅgho na kiñci āha tumhaññeva saṅgho uññāya paribhavena akkhantiyā vebhassiyā dubbalyā evamāha: ‘bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”’ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, evaṁ avaca, saṁsaṭṭhāva ayye tumhe viharatha, mā tumhe nānā viharittha, santi saṅghe aññāpi bhikkhuniyo evācārā evaṁsaddā evaṁsilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, tā saṅgho na kiñci āha, tumhaññeva saṅgho uññāya paribhavena akkhantiyā vebhassiyā dubbalyā evamāha: ‘bhaginiyo kho saṁsaṭṭhā viharanti pāpācārā pāpasaddā pāpasilokā bhikkhunisaṅghassa vihesikā aññamaññissā vajjappaṭicchādikā, viviccathāyye, vivekaññeva bhaginīnaṁ saṅgho vaṇṇetī”’ti, evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ, no ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#32.0">Saṅghādisesa 14. Saṅghabhedakasikkhāpadaṁ</a> Yā pana bhikkhunī samaggassa saṅghassa bhedāya parakkameyya, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha tiṭṭheyya, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, samaggassa saṅghassa bhedāya parakkami, bhedanasaṁvattanikaṁ vā adhikaraṇaṁ samādāya paggayha aṭṭhāsi, sametāyyā, saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#33.0">Saṅghādisesa 15. Bhedānuvattakasikkhāpadaṁ</a> Tassāyeva kho pana bhikkhuniyā bhikkhuniyo honti anuvattikā vaggavādikā ekā vā dve vā tisso vā, tā evaṁ vadeyyuṁ: “māyyāyo, etaṁ bhikkhuniṁ kiñci avacuttha dhammavādinī cesā bhikkhunī, vinayavādinī cesā bhikkhunī, amhākañcesā bhikkhunī chandañca ruciñca ādāya voharati, jānāti, no bhāsati, amhākampetaṁ khamatī”ti, tā bhikkhuniyo bhikkhunīhi evamassu vacanīyā: “māyyāyo, evaṁ avacuttha, na cesā bhikkhunī dhammavādinī, na cesā bhikkhunī vinayavādinī, māyyānampi saṅghabhedo ruccittha, sametāyyānaṁ saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī”ti, evañca tā bhikkhuniyo bhikkhunīhi vuccamānā tatheva paggaṇheyyuṁ, tā bhikkhuniyo bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyyuṁ. Iccetaṁ kusalaṁ. No ce paṭinissajjeyyuṁ, imāpi bhikkhuniyo yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#34.0">Saṅghādisesa 16. Dubbacasikkhāpadaṁ</a> Bhikkhunī paneva dubbacajātikā hoti uddesapariyāpannesu sikkhāpadesu bhikkhunīhi sahadhammikaṁ vuccamānā attānaṁ avacanīyaṁ karoti: “mā maṁ ayyāyo kiñci avacuttha kalyāṇaṁ vā pāpakaṁ vā, ahampāyyāyo, na kiñci vakkhāmi kalyāṇaṁ vā pāpakaṁ vā, viramathāyyāyo, mama vacanāyā”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, attānaṁ avacanīyaṁ akāsi, vacanīyameva, ayyā, attānaṁ karotu, ayyāpi bhikkhuniyo vadatu sahadhammena, bhikkhuniyopi ayyaṁ vakkhanti sahadhammena, evaṁ saṁvaddhā hi tassa bhagavato parisā yadidaṁ aññamaññavacanena aññamaññavuṭṭhāpanenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#35.0">Saṅghādisesa 17. Kuladūsakasikkhāpadaṁ</a> Bhikkhunī paneva aññataraṁ gāmaṁ vā nigamaṁ vā upanissāya viharati kuladūsikā pāpasamācārā, tassā kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tāya duṭṭhāni dissanti ceva suyyanti ca, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “ayyā, kho kuladūsikā pāpasamācārā, ayyāya kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyyāya, duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyyā imamhā āvāsā, alaṁ te idha vāsenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tā bhikkhuniyo evaṁ vadeyya: “chandagāminiyo ca bhikkhuniyo, dosagāminiyo ca bhikkhuniyo, mohagāminiyo ca bhikkhuniyo, bhayagāminiyo ca bhikkhuniyo, tādisikāya āpattiyā ekaccaṁ pabbājenti ekaccaṁ na pabbājentī”ti, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyyā, evaṁ avaca, na ca bhikkhuniyo chandagāminiyo, na ca bhikkhuniyo dosagāminiyo , na ca bhikkhuniyo mohagāminiyo, na ca bhikkhuniyo bhayagāminiyo, ayyā kho kuladūsikā pāpasamācārā, ayyāya kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyyāya duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyyā, imamhā āvāsā alaṁ te idha vāsenā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, ayampi bhikkhunī yāvatatiyakaṁ dhammaṁ āpannā nissāraṇīyaṁ saṅghādisesaṁ.
-</span>
-</div> 
-  
-  
-              
-
-                <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhā kho ayyāyo sattarasa saṅghādisesā dhammā nava paṭhamāpattikā, aṭṭha yāvatatiyakā, 
-yesaṁ bhikkhunī aññataraṁ vā aññataraṁ vā āpajjati, tāya bhikkhuniyā ubhatosaṅghe pakkhamānattaṁ caritabbaṁ. 
-Ciṇṇamānattā bhikkhunī yattha siyā vīsatigaṇo bhikkhunisaṅgho, tattha sā bhikkhunī abbhetabbā. 
-Ekāyapi ce ūno vīsatigaṇo bhikkhunisaṅgho taṁ bhikkhuniṁ abbheyya, sā ca bhikkhunī anabbhitā, tā ca bhikkhuniyo gārayhā, ayaṁ tattha sāmīci. 
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā, 
-dutiyampi pucchāmi, kaccittha parisuddhā, 
-tatiyampi pucchāmi, kaccittha parisuddhā, 
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. 
-</span>
-</div> 
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Saṅghādiseso niṭṭhito </span>
-</div> 
-       
-              
-           </div> <!-- mt div -->
-         </div> <!-- collapsediv -->     
-
-						<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#npCollapseBi">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#npCollapseBi" href=""><h3>Nissaggiyapācittiyā</h3></a>
-			
-			<!-- /sc/?q=bi-pm#33.0 -->
-</div>
-				  <div class="collapse" id="npCollapseBi"> 
-            <div class="mt-3">
-   
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Ime kho panāyyāyo tiṁsa nissaggiyā pācittiyā dhammā uddesaṁ āgacchanti. </span>
-</div>              
-              
-     <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#np1CollapseBi">+</span>
-			
-	<a data-bs-toggle="collapse" data-bs-target="#np1CollapseBi" href=""><h4>1. Pattavaggo  </h4></a>
-			
-			<!-- 	<a href="/sc/?q=bi-pm#38.0.1"><h4>1. Pattavaggo </h4></a>
--->
-			
-</div>
-              </div>
-              <div class="collapse" id="np1CollapseBi">
-                <div class="my-3">
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-np1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np1#1.14.0">Nissaggiya pācittiya 1. Pattasannicayasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#38.0.2">pm</a> Yā pana bhikkhunī pattasannicayaṁ kareyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np2#1.25.0">Nissaggiya pācittiya 2. Akālacīvarabhājanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#39.0">pm</a> Yā pana bhikkhunī akālacīvaraṁ “kālacīvara”nti adhiṭṭhahitvā bhājāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np3#1.20.0">Nissaggiya pācittiya 3. Cīvaraparivattanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#40.0">pm</a> Yā pana bhikkhunī bhikkhuniyā saddhiṁ cīvaraṁ parivattetvā sā pacchā evaṁ vadeyya: “handāyye, tuyhaṁ cīvaraṁ, āhara metaṁ cīvaraṁ, yaṁ tuyhaṁ tuyhamevetaṁ, yaṁ mayhaṁ mayhamevetaṁ, āhara metaṁ cīvaraṁ, sakaṁ paccāharā”ti acchindeyya vā acchindāpeyya vā, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np4#1.27.0">Nissaggiya pācittiya 4. Aññaviññāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#41.0">pm</a> Yā pana bhikkhunī aññaṁ viññāpetvā aññaṁ viññāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np5#1.28.0">Nissaggiya pācittiya 5. Aññacetāpana sikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#42.0">pm</a> Yā pana bhikkhunī aññaṁ cetāpetvā aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np6#1.16.0">Nissaggiya pācittiya 6. Paṭhamasaṅghikacetāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#43.0">pm</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena saṅghikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np7#1.13.0">Nissaggiya pācittiya 7. Dutiyasaṅghikacetāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#44.0">pm</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena saṅghikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np8#1.14.0">Nissaggiya pācittiya 8. Paṭhamagaṇikacetāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#45.0">pm</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena mahājanikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np9#1.15.0">Nissaggiya pācittiya 9. Dutiyagaṇikacetāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#46.0">pm</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena mahājanikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np10#1.18.0">Nissaggiya pācittiya 10. Puggalikacetāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#47.0">pm</a> Yā pana bhikkhunī aññadatthikena parikkhārena aññuddisikena puggalikena saññācikena aññaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ. 
-</span>
-</div>
-           
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Pattavaggo paṭhamo. </span>
-</div> 
-
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-        <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#np2CollapseBi">+</span>
-	
-	<a data-bs-toggle="collapse" data-bs-target="#np2CollapseBi" href=""><h4>2. Cīvaravaggo </h4></a>
-			
-	<!-- <a href="/sc/?q=bi-pm#48.0.1"><h4>2. Cīvaravaggo </h4></a>
--->
-		
-</div>
-              </div>
-              <div class="collapse" id="np2CollapseBi">
-                <div class="my-3">
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-np2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np11#1.21.0">Nissaggiya pācittiya 11. Garupāvuraṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#48.0.2">pm</a> Garupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā catukkaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-np12#1.21.0">Nissaggiya pācittiya 12. Lahupāvuraṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#49.0">pm</a> Lahupāvuraṇaṁ pana bhikkhuniyā cetāpentiyā aḍḍhateyyakaṁsaparamaṁ cetāpetabbaṁ. Tato ce uttari cetāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#50.0">Nissaggiya pācittiya 13. Kathinasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine dasāhaparamaṁ atirekacīvaraṁ dhāretabbaṁ. Taṁ atikkāmentiyā, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#51.0">Nissaggiya pācittiya 14. Udositasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine ekarattampi ce bhikkhunī ticīvarena vippavaseyya, aññatra bhikkhunisammutiyā nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#52.0">Nissaggiya pācittiya 15. Akālacīvarasikkhāpadaṁ</a> Niṭṭhitacīvarasmiṁ bhikkhuniyā ubbhatasmiṁ kathine bhikkhuniyā paneva akālacīvaraṁ uppajjeyya, ākaṅkhamānāya bhikkhuniyā paṭiggahetabbaṁ, paṭiggahetvā khippameva kāretabbaṁ, no cassa pāripūri, māsaparamaṁ tāya bhikkhuniyā taṁ cīvaraṁ nikkhipitabbaṁ ūnassa pāripūriyā satiyā paccāsāya. Tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#53.0">Nissaggiya pācittiya 16. Aññātakaviññattisikkhāpadaṁ</a> Yā pana bhikkhunī aññātakaṁ gahapatiṁ vā gahapatāniṁ vā cīvaraṁ viññāpeyya aññatra samayā, nissaggiyaṁ pācittiyaṁ. Tatthāyaṁ samayo acchinnacīvarā vā hoti bhikkhunī, naṭṭhacīvarā vā, ayaṁ tattha samayo.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#54.0">Nissaggiya pācittiya 17. Tatuttarisikkhāpadaṁ</a> Tañce aññātako gahapati vā gahapatānī vā bahūhi cīvarehi abhihaṭṭhuṁ pavāreyya, santaruttaraparamaṁ tāya bhikkhuniyā tato cīvaraṁ sāditabbaṁ. Tato ce uttari sādiyeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#55.0">Nissaggiya pācittiya 18. Paṭhamaupakkhaṭasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa aññātakassa gahapatissa vā gahapatāniyā vā cīvaracetāpannaṁ upakkhaṭaṁ hoti: “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarena acchādessāmī”ti. Tatra cesā bhikkhunī pubbe appavāritā upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “sādhu vata, maṁ āyasmā iminā cīvaracetāpannena evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādehī”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#56.0">Nissaggiya pācittiya 19. Dutiyaupakkhaṭasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa ubhinnaṁ aññātakānaṁ gahapatīnaṁ vā gahapatānīnaṁ vā paccekacīvaracetāpannāni upakkhaṭāni honti: “imehi mayaṁ paccekacīvaracetāpannehi paccekacīvarāni cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarehi acchādessāmā”ti. Tatra cesā bhikkhūnī pubbe appavāritā upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “sādhu vata maṁ āyasmanto imehi paccekacīvaracetāpannehi evarūpaṁ vā evarūpaṁ vā cīvaraṁ cetāpetvā acchādetha ubhova santā ekenā”ti kalyāṇakamyataṁ upādāya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#57.0">Nissaggiya pācittiya 20. Rājasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa rājā vā rājabhoggo vā brāhmaṇo vā gahapatiko vā dūtena cīvaracetāpannaṁ pahiṇeyya: “iminā cīvaracetāpannena cīvaraṁ cetāpetvā itthannāmaṁ bhikkhuniṁ cīvarena acchādehī”ti. So ce dūto taṁ bhikkhuniṁ upasaṅkamitvā evaṁ vadeyya: “idaṁ kho, ayye, ayyaṁ uddissa cīvaracetāpannaṁ ābhataṁ, paṭiggaṇhātāyyā cīvaracetāpanna”nti. Tāya bhikkhuniyā so dūto evamassa vacanīyo: “na kho mayaṁ, āvuso, cīvaracetāpannaṁ paṭiggaṇhāma, cīvarañca kho mayaṁ paṭiggaṇhāma kālena kappiya”nti. So ce dūto taṁ bhikkhuniṁ evaṁ vadeyya: “atthi panāyyāya, koci veyyāvaccakaro”ti, cīvaratthikāya, bhikkhave, bhikkhuniyā veyyāvaccakaro niddisitabbo ārāmiko vā upāsako vā: “eso kho, āvuso, bhikkhunīnaṁ veyyāvaccakaro”ti. So ce dūto taṁ veyyāvaccakaraṁ saññāpetvā taṁ bhikkhuniṁ upasaṅkamitvā evaṁ vadeyya: “yaṁ kho, ayye, ayyā veyyāvaccakaraṁ niddisi, saññatto so mayā, upasaṅkamatāyyā kālena, cīvarena taṁ acchādessatī”ti. Cīvaratthikāya, bhikkhave, bhikkhuniyā veyyāvaccakaro upasaṅkamitvā dvattikkhattuṁ codetabbo sāretabbo: “attho me, āvuso, cīvarenā”ti, dvattikkhattuṁ codayamānā sārayamānā taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ, no ce abhinipphādeyya, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtāya uddissa ṭhātabbaṁ, catukkhattuṁ pañcakkhattuṁ chakkhattuparamaṁ tuṇhībhūtā uddissa tiṭṭhamānā taṁ cīvaraṁ abhinipphādeyya, iccetaṁ kusalaṁ. Tato ce uttari vāyamamānā taṁ cīvaraṁ abhinipphādeyya, nissaggiyaṁ pācittiyaṁ. No ce abhinipphādeyya, yatassā cīvaracetāpannaṁ ābhataṁ, tattha sāmaṁ vā gantabbaṁ, dūto vā pāhetabbo: “yaṁ kho tumhe āyasmanto bhikkhuniṁ uddissa cīvaracetāpannaṁ pahiṇittha, na taṁ tassā bhikkhuniyā kiñci atthaṁ anubhoti, yuñjantāyasmanto sakaṁ, mā vo sakaṁ vinassā”ti, ayaṁ tattha sāmīci. 
-</span>
-</div>
-                   
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Cīvaravaggo dutiyo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-  <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#np3CollapseBi">+</span>
-	
-		<a data-bs-toggle="collapse" data-bs-target="#np3CollapseBi" href=""><h4>3. Pattavaggo </h4></a>
-			
-	<!--<a href="/sc/?q=bi-pm#58.0.1"><h4>3. Pattavaggo </h4></a>
--->
-			
-</div>
-              </div>
-              <div class="collapse" id="np3CollapseBi">
-                <div class="my-3">
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-np3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#58.0.2">Nissaggiya pācittiya 21. Rūpiyasikkhāpadaṁ</a> Yā pana bhikkhunī jātarūparajataṁ uggaṇheyya vā uggaṇhāpeyya vā upanikkhittaṁ vā sādiyeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#59.0">Nissaggiya pācittiya 22. Rūpiyasaṁvohārasikkhāpadaṁ</a> Yā pana bhikkhunī nānappakārakaṁ rūpiyasaṁvohāraṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#60.0">Nissaggiya pācittiya 23. Kayavikkayasikkhāpadaṁ</a> Yā pana bhikkhunī nānappakārakaṁ kayavikkayaṁ samāpajjeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#61.0">Nissaggiya pācittiya 24. Ūnapañcabandhanasikkhāpadaṁ</a> Yā pana bhikkhunī ūnapañcabandhanena pattena aññaṁ navaṁ pattaṁ cetāpeyya, nissaggiyaṁ pācittiyaṁ. Tāya bhikkhuniyā so patto bhikkhuniparisāya nissajjitabbo, yo ca tassā bhikkhuniparisāya pattapariyanto, so tassā bhikkhuniyā padātabbo: “ayaṁ te bhikkhuni patto yāvabhedanāya dhāretabbo”ti, ayaṁ tattha sāmīci.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#62.0">Nissaggiya pācittiya 25. Bhesajjasikkhāpadaṁ</a> Yāni kho pana tāni gilānānaṁ bhikkhunīnaṁ paṭisāyanīyāni bhesajjāni, seyyathidaṁ: sappi navanītaṁ telaṁ madhu phāṇitaṁ, tāni paṭiggahetvā sattāhaparamaṁ sannidhikārakaṁ paribhuñjitabbāni. Taṁ atikkāmentiyā, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#63.0">Nissaggiya pācittiya 26. Cīvaraacchindanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā sāmaṁ cīvaraṁ datvā kupitā anattamanā acchindeyya vā acchindāpeyya vā, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#64.0">Nissaggiya pācittiya 27. Suttaviññattisikkhāpadaṁ</a> Yā pana bhikkhunī sāmaṁ suttaṁ viññāpetvā tantavāyehi cīvaraṁ vāyāpeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#65.0">Nissaggiya pācittiya 28. Mahāpesakārasikkhāpadaṁ</a> Bhikkhuniṁ paneva uddissa aññātako gahapati vā gahapatānī vā tantavāyehi cīvaraṁ vāyāpeyya, tatra cesā bhikkhunī pubbe appavāritā tantavāye upasaṅkamitvā cīvare vikappaṁ āpajjeyya: “idaṁ kho āvuso cīvaraṁ maṁ uddissa viyyati, āyatañca karotha, vitthatañca appitañca suvītañca suppavāyitañca suvilekhitañca suvitacchitañca karotha, appeva nāma mayampi āyasmantānaṁ kiñcimattaṁ anupadajjeyyāmā”ti, evañca sā bhikkhunī vatvā kiñcimattaṁ anupadajjeyya antamaso piṇḍapātamattampi, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#66.0">Nissaggiya pācittiya 29. Accekacīvarasikkhāpadaṁ</a> Dasāhānāgataṁ kattikatemāsikapuṇṇamaṁ bhikkhuniyā paneva accekacīvaraṁ uppajjeyya, accekaṁ maññamānāya bhikkhuniyā paṭiggahetabbaṁ, paṭiggahetvā yāva cīvarakālasamayaṁ nikkhipitabbaṁ. Tato ce uttari nikkhipeyya, nissaggiyaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#67.0">Nissaggiya pācittiya 30. Pariṇatasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ attano pariṇāmeyya, nissaggiyaṁ pācittiyaṁ. 
-</span>
-</div>
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Pattavaggo tatiyo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhā kho, ayyāyo, tiṁsa nissaggiyā pācittiyā dhammā.
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
-
-</span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Nissaggiyapācittiyā niṭṭhitā. </span>
-</div> 
-             
-           </div> <!-- mt div -->
-         </div> <!-- collapsediv -->     
-
-						<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pcCollapseBi">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pcCollapseBi" href=""><h3>Suddhapācittiyā</h3></a>
-			
-			<!-- /sc/?q=bi-pm#65.0 -->
-</div>
-				  <div class="collapse" id="pcCollapseBi"> 
-            <div class="mt-3">
-   
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Ime kho panāyyāyo, chasaṭṭhisatā pācittiyā dhammā uddesaṁ āgacchanti. </span>
-</div>              
-   
-  <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc1CollapseBi">+</span>
-
-	
-	<a data-bs-toggle="collapse" data-bs-target="#pc1CollapseBi" href=""><h4>1. Lasuṇavaggo </h4></a>
-	
-	  
-			
-	<!-- <a href="/sc/?q=bi-pm#70.0.1"><h4>1. Lasuṇavaggo </h4></a>
--->
-</div>
-              </div>
-              <div class="collapse" id="pc1CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc1#1.41.0">Pācittiya 1. Lasuṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#70.0.2">pm</a> Yā pana bhikkhunī lasuṇaṁ khādeyya pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc2#1.14.0">Pācittiya 2. Sambādhalomasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#71.0">pm</a> Yā pana bhikkhunī sambādhe lomaṁ saṁharāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc3#1.14.0">Pācittiya 3. Talaghātakasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#72.0">pm</a> Talaghātake pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc4#1.21.0">Pācittiya 4. Jatumaṭṭhakasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#73.0">pm</a> Jatumaṭṭhake pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc5#1.2.12.0">Pācittiya 5. Udakasuddhikasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#74.0">pm</a> Udakasuddhikaṁ pana bhikkhuniyā ādiyamānāya dvaṅgulapabbaparamaṁ ādātabbaṁ. Taṁ atikkāmentiyā pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc6#1.19.0">Pācittiya 6. Upatiṭṭhanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#75.0">pm</a> Yā pana bhikkhunī bhikkhussa bhuñjantassa pānīyena vā vidhūpanena vā upatiṭṭheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc7#1.14.0">Pācittiya 7. Āmakadhaññasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#76.0">pm</a> Yā pana bhikkhunī āmakadhaññaṁ viññatvā vā viññāpetvā vā bhajjitvā vā bhajjāpetvā vā koṭṭetvā vā koṭṭāpetvā vā pacitvā vā pacāpetvā vā bhuñjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc8#1.26.0">Pācittiya 8. Paṭhamauccārachaḍḍanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#77.0">pm</a> Yā pana bhikkhunī uccāraṁ vā passāvaṁ vā saṅkāraṁ vā vighāsaṁ vā tirokuṭṭe vā tiropākāre vā chaḍḍeyya vā chaḍḍāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc9#1.15.0">Pācittiya 9. Dutiyauccārachaḍḍanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#78.0">pm</a> Yā pana bhikkhunī uccāraṁ vā passāvaṁ vā saṅkāraṁ vā vighāsaṁ vā harite chaḍḍeyya vā chaḍḍāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc10#1.15.0">Pācittiya 10. Naccagītasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#79.0">pm</a> Yā pana bhikkhunī naccaṁ vā gītaṁ vā vāditaṁ vā dassanāya gaccheyya, pācittiyaṁ. 
-</span>
-</div>
-            
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Lasuṇavaggo paṭhamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-  
-   <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc2CollapseBi">+</span>
-		<a data-bs-toggle="collapse" data-bs-target="#pc2CollapseBi" href=""><h4>2. Rattandhakāravaggo </h4></a>
-			
-	<!-- <a href="/sc/?q=bi-pm#80.0.1"><h4>2. Rattandhakāravaggo </h4></a>
-
--->
-</div>
-              </div>
-              <div class="collapse" id="pc2CollapseBi">
-                <div class="my-3">
-                  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc11#1.12.0">Pācittiya 11. Rattandhakārasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#80.0.2">pm</a> Yā pana bhikkhunī rattandhakāre appadīpe purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc12#1.13.0">Pācittiya 12. Paṭicchannokāsasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#81.0">pm</a> Yā pana bhikkhunī paṭicchanne okāse purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc13#1.13.0">Pācittiya 13. Ajjhokāsasallapanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#82.0">pm</a> Yā pana bhikkhunī ajjhokāse purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc14#1.11.0">Pācittiya 14. Dutiyikauyyojanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#83.0">pm</a> Yā pana bhikkhunī rathikāya vā byūhe vā siṅghāṭake vā purisena saddhiṁ ekenekā santiṭṭheyya vā sallapeyya vā nikaṇṇikaṁ vā jappeyya dutiyikaṁ vā bhikkhuniṁ uyyojeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc15#1.19.0">Pācittiya 15. Anāpucchāpakkamanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#84.0">pm</a> Yā pana bhikkhunī purebhattaṁ kulāni upasaṅkamitvā āsane nisīditvā sāmike anāpucchā pakkameyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc16#1.15.0">Pācittiya 16. Anāpucchāabhinisīdanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#85.0">pm</a> Yā pana bhikkhunī pacchābhattaṁ kulāni upasaṅkamitvā sāmike anāpucchā āsane abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc17#1.20.0">Pācittiya 17. Anāpucchāsantharaṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#86.0">pm</a> Yā pana bhikkhunī vikāle kulāni upasaṅkamitvā sāmike anāpucchā seyyaṁ santharitvā vā santharāpetvā vā abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc18#1.15.0">Pācittiya 18. Paraujjhāpanakasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#87.0">pm</a> Yā pana bhikkhunī duggahitena dūpadhāritena paraṁ ujjhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc19#1.17.0">Pācittiya 19. Paraabhisapanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#88.0">pm</a> Yā pana bhikkhunī attānaṁ vā paraṁ vā nirayena vā brahmacariyena vā abhisapeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc20#1.11.0">Pācittiya 20. Rodanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#89.0">pm</a> Yā pana bhikkhunī attānaṁ vadhitvā vadhitvā rodeyya, pācittiyaṁ. 
-</span>
-</div>
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Rattandhakāravaggo dutiyo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-  
-  <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc3CollapseBi">+</span>
-	
-	<a data-bs-toggle="collapse" data-bs-target="#pc3CollapseBi" href=""><h4>3. Naggavaggo </h4></a>
-			
-	<!--<a href="/sc/?q=bi-pm#90.0.1"><h4>3. Naggavaggo </h4></a>
--->
-			
-</div>
-              </div>
-              <div class="collapse" id="pc3CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc21#1.16.0">Pācittiya 21. Naggasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#90.0.2">pm</a> Yā pana bhikkhunī naggā nahāyeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc22#1.14.0">Pācittiya 22. Udakasāṭikasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#91.0">pm</a> Udakasāṭikaṁ pana bhikkhuniyā kārayamānāya pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso catasso vidatthiyo sugatavidatthiyā, tiriyaṁ dve vidatthiyo. Taṁ atikkāmentiyā chedanakaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc23#1.20.0">Pācittiya 23. Cīvarasibbanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#92.0">pm</a> Yā pana bhikkhunī bhikkhuniyā cīvaraṁ visibbetvā vā visibbāpetvā vā sā pacchā anantarāyikinī neva sibbeyya, na sibbāpanāya ussukkaṁ kareyya aññatra catūhapañcāhā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc24#1.16.0">Pācittiya 24. Saṅghāṭicārasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#93.0">pm</a> Yā pana bhikkhunī pañcāhikaṁ saṅghāṭicāraṁ atikkāmeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc25#1.18.0">Pācittiya 25. Cīvarasaṅkamanīyasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#94.0">pm</a> Yā pana bhikkhunī cīvarasaṅkamanīyaṁ dhāreyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc26#1.19.0">Pācittiya 26. Gaṇacīvarasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#95.0">pm</a> Yā pana bhikkhunī gaṇassa cīvaralābhaṁ antarāyaṁ kareyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc27#1.18.0">Pācittiya 27. Paṭibāhanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#96.0">pm</a> Yā pana bhikkhunī dhammikaṁ cīvaravibhaṅgaṁ paṭibāheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc28#1.15.0">Pācittiya 28. Cīvaradānasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#97.0">pm</a> Yā pana bhikkhunī agārikassa vā paribbājakassa vā paribbājikāya vā samaṇacīvaraṁ dadeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc29#1.21.0">Pācittiya 29. Kālaatikkamanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#98.0">pm</a> Yā pana bhikkhunī dubbalacīvarapaccāsāya cīvarakālasamayaṁ atikkāmeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc30#1.2.15.0">Pācittiya 30. Kathinuddhārasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#99.0">pm</a> Yā pana bhikkhunī dhammikaṁ kathinuddhāraṁ paṭibāheyya, pācittiyaṁ. 
-</span>
-</div>
-
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Naggavaggo tatiyo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-   
-   
-    <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc4CollapseBi">+</span>
-		<a data-bs-toggle="collapse" data-bs-target="#pc4CollapseBi" href=""><h4>4. Tuvaṭṭavaggo </h4></a>
-			
-	<!-- <a href="/sc/?q=bi-pm#100.0.1"><h4>4. Tuvaṭṭavaggo </h4></a>
--->
-			
-</div>
-              </div>
-              <div class="collapse" id="pc4CollapseBi">
-                <div class="my-3">
-            <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc31#1.14.0">Pācittiya 31. Ekamañcatuvaṭṭanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#100.0.2">pm</a> Yā pana bhikkhuniyo dve ekamañce tuvaṭṭeyyuṁ, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc32#1.14.0">Pācittiya 32. Ekattharaṇatuvaṭṭanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#101.0">pm</a> Yā pana bhikkhuniyo dve ekattharaṇapāvuraṇā tuvaṭṭeyyuṁ, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc33#1.16.0">Pācittiya 33. Aphāsukaraṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#102.0">pm</a> Yā pana bhikkhunī bhikkhuniyā sañcicca aphāsuṁ kareyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc34#1.11.0">Pācittiya 34. Naupaṭṭhāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#103.0">pm</a> Yā pana bhikkhunī dukkhitaṁ sahajīviniṁ neva upaṭṭhaheyya, na upaṭṭhāpanāya ussukkaṁ kareyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc35#1.23.0">Pācittiya 35. Nikkaḍḍhanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#104.0">pm</a> Yā pana bhikkhunī bhikkhuniyā upassayaṁ datvā kupitā anattamanā nikkaḍḍheyya vā nikkaḍḍhāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc36#1.11.0">Pācittiya 36. Saṁsaṭṭhasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#105.0">pm</a> Yā pana bhikkhunī saṁsaṭṭhā vihareyya gahapatinā vā gahapatiputtena vā, sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye, saṁsaṭṭhā vihari gahapatināpi gahapatiputtenāpi, viviccāyye, vivekaññeva bhaginiyā saṅgho vaṇṇetī”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc37#1.12.0">Pācittiya 37. Antoraṭṭhasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#106.0">pm</a> Yā pana bhikkhunī antoraṭṭhe sāsaṅkasammate sappaṭibhaye asatthikā cārikaṁ careyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc38#1.12.0">Pācittiya 38. Tiroraṭṭhasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#107.0">pm</a> Yā pana bhikkhunī tiroraṭṭhe sāsaṅkasammate sappaṭibhaye asatthikā cārikaṁ careyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc39#1.14.0">Pācittiya 39. Antovassasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#108.0">pm</a> Yā pana bhikkhunī antovassaṁ cārikaṁ careyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc40#1.13.0">Pācittiya 40. Cārikanapakkamanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#109.0">pm</a> Yā pana bhikkhunī vassaṁvuṭṭhā cārikaṁ na pakkameyya antamaso chappañcayojanānipi, pācittiyaṁ. 
-</span>
-</div>
-
-
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Tuvaṭṭavaggo catuttho. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-    <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc5CollapseBi">+</span>
-
-	<a data-bs-toggle="collapse" data-bs-target="#pc5CollapseBi" href=""><h4>5. Cittāgāravaggo </h4></a>
-
-	<!-- <a href="/sc/?q=bi-pm#110.0.1"><h4>5. Cittāgāravaggo</h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc5CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc41#1.16.0">Pācittiya 41. Rājāgārasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#110.0.2">pm</a> Yā pana bhikkhunī rājāgāraṁ vā cittāgāraṁ vā ārāmaṁ vā uyyānaṁ vā pokkharaṇiṁ vā dassanāya gaccheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc42#1.14.0">Pācittiya 42. Āsandiparibhuñjanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#111.0">pm</a> Yā pana bhikkhunī āsandiṁ vā pallaṅkaṁ vā paribhuñjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc43#1.14.0">Pācittiya 43. Suttakantanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#112.0">pm</a> Yā pana bhikkhunī suttaṁ kanteyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc44#1.11.0">Pācittiya 44. Gihiveyyāvaccasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#113.0">pm</a> Yā pana bhikkhunī gihiveyyāvaccaṁ kareyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc45#1.21.0">Pācittiya 45. Adhikaraṇasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#114.0">pm</a> Yā pana bhikkhunī bhikkhuniyā: “ehāyye, imaṁ adhikaraṇaṁ vūpasamehī”ti vuccamānā: “sādhū”ti paṭissuṇitvā sā pacchā anantarāyikinī neva vūpasameyya, na vūpasamāya ussukkaṁ kareyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc46#1.15.0">Pācittiya 46. Bhojanadānasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#115.0">pm</a> Yā pana bhikkhunī agārikassa vā paribbājakassa vā paribbājikāya vā sahatthā khādanīyaṁ vā bhojanīyaṁ vā dadeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc47#1.12.0">Pācittiya 47. Āvasathacīvarasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#116.0">pm</a> Yā pana bhikkhunī āvasathacīvaraṁ anissajjetvā paribhuñjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc48#1.22.0">Pācittiya 48. Āvasathavihārasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#117.0">pm</a> Yā pana bhikkhunī āvasathaṁ anissajjitvā cārikaṁ pakkameyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc49#1.14.0">Pācittiya 49. Tiracchānavijjāpariyāpuṇanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#118.0">pm</a> Yā pana bhikkhunī tiracchānavijjaṁ pariyāpuṇeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc50#1.14.0">Pācittiya 50. Tiracchānavijjāvācanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#119.0">pm</a> Yā pana bhikkhunī tiracchānavijjaṁ vāceyya, pācittiyaṁ. 
-</span>
-</div>
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Cittāgāravaggo pañcamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-  <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc6CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#pc6CollapseBi" href=""><h4>6. Ārāmavaggo </h4></a> 
-	
-	<!-- <a href="/sc/?q=bi-pm#120.0.1"><h4>6. Ārāmavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc6CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc51#3.9.0">Pācittiya 51. Ārāmapavisanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#120.0.2">pm</a> Yā pana bhikkhunī jānaṁ sabhikkhukaṁ ārāmaṁ anāpucchā paviseyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc52#1.29.0">Pācittiya 52. Bhikkhuakkosanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#121.0">pm</a> Yā pana bhikkhunī bhikkhuṁ akkoseyya vā paribhāseyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc53#1.27.0">Pācittiya 53. Gaṇaparibhāsanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#122.0">pm</a> Yā pana bhikkhunī caṇḍīkatā gaṇaṁ paribhāseyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc54#1.20.0">Pācittiya 54. Pavāritasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#123.0">pm</a> Yā pana bhikkhunī nimantitā vā pavāritā vā khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc55#1.21.0">Pācittiya 55. Kulamaccharinīsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#124.0">pm</a> Yā pana bhikkhunī kulamaccharinī assa, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc56#1.16.0">Pācittiya 56. Abhikkhukāvāsasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#125.0">pm</a> Yā pana bhikkhunī abhikkhuke āvāse vassaṁ vaseyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc57#1.15.0">Pācittiya 57. Apavāraṇāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#126.0">pm</a> Yā pana bhikkhunī vassaṁvuṭṭhā ubhatosaṅghe tīhi ṭhānehi na pavāreyya diṭṭhena vā sutena vā parisaṅkāya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc58#1.14.0">Pācittiya 58. Ovādasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#127.0">pm</a> Yā pana bhikkhunī ovādāya vā saṁvāsāya vā na gaccheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc59#1.11.0">Pācittiya 59. Ovādūpasaṅkamanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#128.0">pm</a> Anvaddhamāsaṁ bhikkhuniyā bhikkhusaṅghato dve dhammā paccāsīsitabbā uposathapucchakañca ovādūpasaṅkamanañca. Taṁ atikkāmentiyā pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc60#1.16.0">Pācittiya 60. Pasākhejātasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#129.0">pm</a> Yā pana bhikkhunī pasākhe jātaṁ gaṇḍaṁ vā rudhitaṁ vā anapaloketvā saṅghaṁ vā gaṇaṁ vā purisena saddhiṁ ekenekā bhedāpeyya vā phālāpeyya vā dhovāpeyya vā ālimpāpeyya vā bandhāpeyya vā mocāpeyya vā, pācittiyaṁ. 
-</span>
-</div>
-
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Ārāmavaggo chaṭṭho. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-    <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc7CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#pc7CollapseBi" href=""><h4>7. Gabbhinivaggo </h4></a> 
-	
-<!-- <a href="/sc/?q=bi-pm#130.0.1"><h4>7. Gabbhinivaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc7CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc61#1.17.0">Pācittiya 61. Gabbhinīsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#130.0.2">pm</a> Yā pana bhikkhunī gabbhiniṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc62#1.17.0">Pācittiya 62. Pāyantīsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#131.0">pm</a> Yā pana bhikkhunī pāyantiṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc63#1.41.0">Pācittiya 63. Paṭhamasikkhamānasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#132.0">pm</a> Yā pana bhikkhunī dve vassāni chasu dhammesu asikkhitasikkhaṁ sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc64#1.36.0">Pācittiya 64. Dutiyasikkhamānasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#133.0">pm</a> Yā pana bhikkhunī dve vassāni chasu dhammesu sikkhitasikkhaṁ sikkhamānaṁ saṅghena asammataṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc65#1.17.0">Pācittiya 65. Paṭhamagihigatasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#134.0">pm</a> Yā pana bhikkhunī ūnadvādasavassaṁ gihigataṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc66#1.35.0">Pācittiya 66. Dutiyagihigatasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#135.0">pm</a> Yā pana bhikkhunī paripuṇṇadvādasavassaṁ gihigataṁ dve vassāni chasu dhammesu asikkhitasikkhaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc67#1.36.0">Pācittiya 67. Tatiyagihigatasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#136.0">pm</a> Yā pana bhikkhunī paripuṇṇadvādasavassaṁ gihigataṁ dve vassāni chasu dhammesu sikkhitasikkhaṁ saṅghena asammataṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc68#1.13.0">Pācittiya 68. Paṭhamasahajīvinīsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#137.0">pm</a> Yā pana bhikkhunī sahajīviniṁ vuṭṭhāpetvā dve vassāni neva anuggaṇheyya na anuggaṇhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc69#1.13.0">Pācittiya 69. Pavattinīnānubandhanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#138.0">pm</a> Yā pana bhikkhunī vuṭṭhāpitaṁ pavattiniṁ dve vassāni nānubandheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc70#1.13.0">Pācittiya 70. Dutiyasahajīvinīsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#139.0">pm</a> Yā pana bhikkhunī sahajīviniṁ vuṭṭhāpetvā neva vūpakāseyya na vūpakāsāpeyya antamaso chappañcayojanānipi, pācittiyaṁ. 
-</span>
-</div>
-      
-
- <div class="level4 my-3">
- <span class="level5 pli-lang">Gabbhinivaggo sattamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-   <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc8CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#pc8CollapseBi" href=""><h4>8. Kumāribhūtavaggo </h4></a> 
-<!-- <a href="/sc/?q=bi-pm#140.0.1"><h4>8. Kumāribhūtavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc8CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc8vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc71#1.17.0">Pācittiya 71. Paṭhamakumāribhūtasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#140.0.2">pm</a> Yā pana bhikkhunī ūnavīsativassaṁ kumāribhūtaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc72#1.37.0">Pācittiya 72. Dutiyakumāribhūtasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#141.0">pm</a> Yā pana bhikkhunī paripuṇṇavīsativassaṁ kumāribhūtaṁ dve vassāni chasu dhammesu asikkhitasikkhaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc73#1.36.0">Pācittiya 73. Tatiyakumāribhūtasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#142.0">pm</a> Yā pana bhikkhunī paripuṇṇavīsativassaṁ kumāribhūtaṁ dve vassāni chasu dhammesu sikkhitasikkhaṁ saṅghena asammataṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc74#1.14.0">Pācittiya 74. Ūnadvādasavassasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#143.0">pm</a> Yā pana bhikkhunī ūnadvādasavassā vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc75#1.42.0">Pācittiya 75. Paripuṇṇadvādasavassasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#144.0">pm</a> Yā pana bhikkhunī paripuṇṇadvādasavassā saṅghena asammatā vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc76#1.20.0">Pācittiya 76. Khiyyanadhammasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#145.0">pm</a> Yā pana bhikkhunī, “alaṁ tāva te, ayye, vuṭṭhāpitenā”ti vuccamānā, “sādhū”ti paṭissuṇitvā sā pacchā khiyyanadhammaṁ āpajjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc77#1.17.0">Pācittiya 77. Paṭhamasikkhamānanavuṭṭhāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#146.0">pm</a> Yā pana bhikkhunī sikkhamānaṁ, “sace me tvaṁ, ayye, cīvaraṁ dassasi, evāhaṁ taṁ vuṭṭhāpessāmī”ti vatvā sā pacchā anantarāyikinī neva vuṭṭhāpeyya, na vuṭṭhāpanāya ussukkaṁ kareyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc78#1.16.0">Pācittiya 78. Dutiyasikkhamānanavuṭṭhāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#147.0">pm</a> Yā pana bhikkhunī sikkhamānaṁ, “sace maṁ tvaṁ, ayye, dve vassāni anubandhissasi, evāhaṁ taṁ vuṭṭhāpessāmī”ti vatvā sā pacchā anantarāyikinī neva vuṭṭhāpeyya, na vuṭṭhāpanāya ussukkaṁ kareyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc79#1.11.0">Pācittiya 79. Sokāvāsasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#148.0">pm</a> Yā pana bhikkhunī purisasaṁsaṭṭhaṁ kumārakasaṁsaṭṭhaṁ caṇḍiṁ sokāvāsaṁ sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc80#1.14.0">Pācittiya 80. Ananuññātasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#149.0">pm</a> Yā pana bhikkhunī mātāpitūhi vā sāmikena vā ananuññātaṁ sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc81#1.13.0">Pācittiya 81. Pārivāsikasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#150.0">pm</a> Yā pana bhikkhunī pārivāsikachandadānena sikkhamānaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc82#1.14.0">Pācittiya 82. Anuvassasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#151.0">pm</a> Yā pana bhikkhunī anuvassaṁ vuṭṭhāpeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc83#1.16.0">Pācittiya 83. Ekavassasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#152.0">pm</a> Yā pana bhikkhunī ekaṁ vassaṁ dve vuṭṭhāpeyya, pācittiyaṁ. 
-</span>
-</div>
-         
-       
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Kumāribhūtavaggo aṭṭhamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->
-   
-   <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc9CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#pc9CollapseBi" href=""><h4>9. Chattupāhanavaggo </h4></a> 
-
-<!-- <a href="/sc/?q=bi-pm#153.0.1"><h4>9. Chattupāhanavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc9CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc10vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc84#1.2.6.0">Pācittiya 84. Chattupāhanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#153.0.2">pm</a> Yā pana bhikkhunī agilānā chattupāhanaṁ dhāreyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc85#1.2.5.0">Pācittiya 85. Yānasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#154.0">pm</a> Yā pana bhikkhunī agilānā yānena yāyeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc86#1.19.0">Pācittiya 86. Saṅghāṇisikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#155.0">pm</a> Yā pana bhikkhunī saṅghāṇiṁ dhāreyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc87#1.14.0">Pācittiya 87. Itthālaṅkārasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#156.0">pm</a> Yā pana bhikkhunī itthālaṅkāraṁ dhāreyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc88#1.14.0">Pācittiya 88. Gandhavaṇṇakasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#157.0">pm</a> Yā pana bhikkhunī gandhavaṇṇakena nahāyeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc89#1.14.0">Pācittiya 89. Vāsitakasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#158.0">pm</a> Yā pana bhikkhunī vāsitakena piññākena nahāyeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc90#1.14.0">Pācittiya 90. Bhikkhuniummaddāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#159.0">pm</a> Yā pana bhikkhunī bhikkhuniyā ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc91-93#1.13.0">Pācittiya 91. Sikkhamānaummaddāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#160.0">pm</a> Yā pana bhikkhunī sikkhamānāya ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc91-93#1.13.0">Pācittiya 92. Sāmaṇerīummaddāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#161.0">pm</a> Yā pana bhikkhunī sāmaṇeriyā ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc91-93#1.13.0">Pācittiya 93. Gihiniummaddāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#162.0">pm</a> Yā pana bhikkhunī gihiniyā ummaddāpeyya vā parimaddāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc94#1.11.0">Pācittiya 94. Anāpucchāsikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#163.0">pm</a> Yā pana bhikkhunī bhikkhussa purato anāpucchā āsane nisīdeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc95#1.11.0">Pācittiya 95. Pañhāpucchanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#164.0">pm</a> Yā pana bhikkhunī anokāsakataṁ bhikkhuṁ pañhaṁ puccheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pc96#1.16.0">Pācittiya 96. Asaṅkaccikasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#165.0">pm</a> Yā pana bhikkhunī asaṅkaccikā gāmaṁ paviseyya, pācittiyaṁ. 
-</span>
-</div>
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Chattupāhanavaggo navamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->   
-   
- 
-    <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc10CollapseBi">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pc10CollapseBi" href=""><h4>10. Musāvādavaggo </h4></a> 
-			
-			<!-- <a href="/sc/?q=bi-pm#166.0.1"><h4>10. Musāvādavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc10CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc10vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#166.0.2">Pācittiya 97. Musāvādasikkhāpadaṁ</a> Sampajānamusāvāde pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#167.0">Pācittiya 98. Omasavādasikkhāpadaṁ</a> Omasavāde pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#168.0">Pācittiya 99. Pesuññasikkhāpadaṁ</a> Bhikkhunipesuññe pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#169.0">Pācittiya 100. Padasodhammasikkhāpadaṁ</a> Yā pana bhikkhunī anupasampannaṁ padaso dhammaṁ vāceyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#170.0">Pācittiya 101. Paṭhamasahaseyyasikkhāpadaṁ</a> Yā pana bhikkhunī anupasampannāya uttaridirattatirattaṁ sahaseyyaṁ kappeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#171.0">Pācittiya 102. Dutiyasahaseyyasikkhāpadaṁ</a> Yā pana bhikkhunī purisena sahaseyyaṁ kappeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#172.0">Pācittiya 103. Dhammadesanāsikkhāpadaṁ</a> Yā pana bhikkhunī purisassa uttarichappañcavācāhi dhammaṁ deseyya aññatra viññunā itthiviggahena, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#173.0">Pācittiya 104. Bhūtārocanasikkhāpadaṁ</a> Yā pana bhikkhunī anupasampannāya uttarimanussadhammaṁ āroceyya, bhūtasmiṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#174.0">Pācittiya 105. Duṭṭhullārocanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā duṭṭhullaṁ āpattiṁ anupasampannāya āroceyya aññatra bhikkhunisammutiyā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#175.0">Pācittiya 106. Pathavīkhaṇanasikkhāpadaṁ</a> Yā pana bhikkhunī pathaviṁ khaṇeyya vā khaṇāpeyya vā, pācittiyaṁ. 
-</span>
-</div>
-
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Musāvādavaggo dasamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->   
-   
-       <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc11CollapseBi">+</span>
-	
-	<a data-bs-toggle="collapse" data-bs-target="#pc11CollapseBi" href=""><h4>11. Bhūtagāmavaggo </h4></a>
-	
-			<!-- <a href="/sc/?q=bi-pm#176.0.1"><h4>11. Bhūtagāmavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc11CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc11vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#176.0.2">Pācittiya 107. Bhūtagāmasikkhāpadaṁ</a> Bhūtagāmapātabyatāya pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#177.0">Pācittiya 108. Aññavādakasikkhāpadaṁ</a> Aññavādake, vihesake pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#178.0">Pācittiya 109. Ujjhāpanakasikkhāpadaṁ</a> Ujjhāpanake, khiyyanake pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#179.0">Pācittiya 110. Paṭhamasenāsanasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghikaṁ mañcaṁ vā pīṭhaṁ vā bhisiṁ vā kocchaṁ vā ajjhokāse santharitvā vā santharāpetvā vā taṁ pakkamantī neva uddhareyya, na uddharāpeyya, anāpucchaṁ vā gaccheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#180.0">Pācittiya 111. Dutiyasenāsanasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghike vihāre seyyaṁ santharitvā vā santharāpetvā vā taṁ pakkamantī neva uddhareyya, na uddharāpeyya, anāpucchaṁ vā gaccheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#181.0">Pācittiya 112. Anupakhajjasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghike vihāre jānaṁ pubbupagataṁ bhikkhuniṁ anupakhajja seyyaṁ kappeyya, “yassā sambādho bhavissati, sā pakkamissatī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#182.0">Pācittiya 113. Nikkaḍḍhanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ kupitā anattamanā saṅghikā vihārā nikkaḍḍheyya vā nikkaḍḍhāpeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#183.0">Pācittiya 114. Vehāsakuṭisikkhāpadaṁ</a> Yā pana bhikkhunī saṅghike vihāre uparivehāsakuṭiyā āhaccapādakaṁ mañcaṁ vā pīṭhaṁ vā abhinisīdeyya vā abhinipajjeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#184.0">Pācittiya 115. Mahallakavihārasikkhāpadaṁ</a> Mahallakaṁ pana bhikkhuniyā vihāraṁ kārayamānāya yāva dvārakosā aggaḷaṭṭhapanāya, ālokasandhiparikammāya dvatticchadanassa pariyāyaṁ appaharite ṭhitāya adhiṭṭhātabbaṁ. Tato ce uttari appaharitepi ṭhitā adhiṭṭhaheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#185.0">Pācittiya 116. Sappāṇakasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ sappāṇakaṁ udakaṁ tiṇaṁ vā mattikaṁ vā siñceyya vā siñcāpeyya vā, pācittiyaṁ. 
-</span>
-</div>
-         
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Bhūtagāmavaggo ekādasamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->   
-   
-      <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc12CollapseBi">+</span>
-			
-			<a data-bs-toggle="collapse" data-bs-target="#pc12CollapseBi" href=""><h4>12. Bhojanavaggo </h4></a>
-			
-			<!-- <a href="/sc/?q=bi-pm#186.0.1"><h4>12. Bhojanavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc12CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc12vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#186.0.2">Pācittiya 117. Āvasathapiṇḍasikkhāpadaṁ</a> Agilānāya bhikkhuniyā eko āvasathapiṇḍo bhuñjitabbo. Tato ce uttari bhuñjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#187.0">Pācittiya 118. Gaṇabhojanasikkhāpadaṁ</a> Gaṇabhojane aññatra samayā pācittiyaṁ. Tatthāyaṁ samayo, gilānasamayo, cīvaradānasamayo , cīvarakārasamayo, addhānagamanasamayo, nāvābhiruhanasamayo, mahāsamayo, samaṇabhattasamayo, ayaṁ tattha samayo.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#188.0">Pācittiya 119. Kāṇamātusikkhāpadaṁ</a> Bhikkhuniṁ paneva kulaṁ upagataṁ pūvehi vā manthehi vā abhihaṭṭhuṁ pavāreyya, ākaṅkhamānāya bhikkhuniyā dvattipattapūrā paṭiggahetabbā. Tato ce uttari paṭiggaṇheyya, pācittiyaṁ. Dvattipattapūre paṭiggahetvā tato nīharitvā bhikkhunīhi saddhiṁ saṁvibhajitabbaṁ, ayaṁ tattha sāmīci.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#189.0">Pācittiya 120. Vikālabhojanasikkhāpadaṁ</a> Yā pana bhikkhunī vikāle khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#190.0">Pācittiya 121. Sannidhikārakasikkhāpadaṁ</a> Yā pana bhikkhunī sannidhikārakaṁ khādanīyaṁ vā bhojanīyaṁ vā khādeyya vā bhuñjeyya vā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#191.0">Pācittiya 122. Dantaponasikkhāpadaṁ</a> Yā pana bhikkhunī adinnaṁ mukhadvāraṁ āhāraṁ āhareyya aññatra udakadantaponā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#192.0">Pācittiya 123. Uyyojanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ, “ehāyye, gāmaṁ vā nigamaṁ vā piṇḍāya pavisissāmā”ti tassā dāpetvā vā adāpetvā vā uyyojeyya, “gacchāyye, na me tayā saddhiṁ kathā vā nisajjā vā phāsu hoti, ekikāya me kathā vā nisajjā vā phāsu hotī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#193.0">Pācittiya 124. Sabhojanasikkhāpadaṁ</a> Yā pana bhikkhunī sabhojane kule anupakhajja nisajjaṁ kappeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#194.0">Pācittiya 125. Rahopaṭicchannasikkhāpadaṁ</a> Yā pana bhikkhunī purisena saddhiṁ raho paṭicchanne āsane nisajjaṁ kappeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#195.0">Pācittiya 126. Rahonisajjasikkhāpadaṁ</a> Yā pana bhikkhunī purisena saddhiṁ ekenekā raho nisajjaṁ kappeyya, pācittiyaṁ. 
-</span>
-</div>
-                                
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Bhojanavaggo dvādasamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->   
-   
-      <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc13CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#pc13CollapseBi" href=""><h4>13. Cārittavaggo </h4></a>
-
-			<!-- <a href="/sc/?q=bi-pm#196.0.1"><h4>13. Cārittavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc13CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc13vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#196.0.2">Pācittiya 127. Cārittasikkhāpadaṁ</a> Yā pana bhikkhunī nimantitā sabhattā samānā santiṁ bhikkhuniṁ anāpucchā purebhattaṁ vā pacchābhattaṁ vā kulesu cārittaṁ āpajjeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo, cīvaradānasamayo, cīvarakārasamayo, ayaṁ tattha samayo.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#197.0">Pācittiya 128. Mahānāmasikkhāpadaṁ</a> Agilānāya bhikkhuniyā catumāsappaccayapavāraṇā sāditabbā aññatra punapavāraṇāya, aññatra niccapavāraṇāya. Tato ce uttari sādiyeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#198.0">Pācittiya 129. Uyyuttasenāsikkhāpadaṁ</a> Yā pana bhikkhunī uyyuttaṁ senaṁ dassanāya gaccheyya aññatra tathārūpappaccayā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#199.0">Pācittiya 130. Senāvāsasikkhāpadaṁ</a> Siyā ca tassā bhikkhuniyā kocideva paccayo senaṁ gamanāya, dirattatirattaṁ tāya bhikkhuniyā senāya vasitabbaṁ. Tato ce uttari vaseyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#200.0">Pācittiya 131. Uyyodhikasikkhāpadaṁ</a> Dirattatirattaṁ ce bhikkhunī senāya vasamānā uyyodhikaṁ vā balaggaṁ vā senābyūhaṁ vā anīkadassanaṁ vā gaccheyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#201.0">Pācittiya 132. Surāpānasikkhāpadaṁ</a> Surāmerayapāne pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#202.0">Pācittiya 133. Aṅgulipatodakasikkhāpadaṁ</a> Aṅgulipatodake pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#203.0">Pācittiya 134. Hasadhammasikkhāpadaṁ</a> Udake hasadhamme pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#204.0">Pācittiya 135. Anādariyasikkhāpadaṁ</a> Anādariye pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#205.0">Pācittiya 136. Bhiṁsāpanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ bhiṁsāpeyya, pācittiyaṁ. 
-</span>
-</div>
-                  
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Cārittavaggo terasamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->   
-   
-   
-         <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc14CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#pc14CollapseBi" href=""><h4>14. Jotivaggo </h4></a>
-	
-			<!-- <a href="/sc/?q=bi-pm#206.0.1"><h4>14. Jotivaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc14CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc14vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#206.0.2">Pācittiya 137. Jotisikkhāpadaṁ</a> Yā pana bhikkhunī agilānā visibbanāpekkhā jotiṁ samādaheyya vā samādahāpeyya vā aññatra tathārūpappaccayā, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#207.0">Pācittiya 138. Nahānasikkhāpadaṁ</a> Yā pana bhikkhunī orenaddhamāsaṁ nahāyeyya aññatra samayā, pācittiyaṁ. Tatthāyaṁ samayo “diyaḍḍho māso seso gimhāna”nti “vassānassa paṭhamo māso” iccete aḍḍhateyyamāsā uṇhasamayo, pariḷāhasamayo, gilānasamayo, kammasamayo, addhānagamanasamayo, vātavuṭṭhisamayo, ayaṁ tattha samayo.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#208.0">Pācittiya 139. Dubbaṇṇakaraṇasikkhāpadaṁ</a> Navaṁ pana bhikkhuniyā cīvaralābhāya tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ ādātabbaṁ nīlaṁ vā kaddamaṁ vā kāḷasāmaṁ vā. Anādā ce bhikkhunī tiṇṇaṁ dubbaṇṇakaraṇānaṁ aññataraṁ dubbaṇṇakaraṇaṁ navaṁ cīvaraṁ paribhuñjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#209.0">Pācittiya 140. Vikappanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhussa vā bhikkhuniyā vā sikkhamānāya vā sāmaṇerassa vā sāmaṇeriyā vā sāmaṁ cīvaraṁ vikappetvā apaccuddhāraṇaṁ paribhuñjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#210.0">Pācittiya 141. Apanidhāpanasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā pattaṁ vā cīvaraṁ vā nisīdanaṁ vā sūcigharaṁ vā kāyabandhanaṁ vā apanidheyya vā apanidhāpeyya vā antamaso hasāpekkhāpi, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#211.0">Pācittiya 142. Sañciccasikkhāpadaṁ</a> Yā pana bhikkhunī sañcicca pāṇaṁ jīvitā voropeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#212.0">Pācittiya 143. Sappāṇakasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ sappāṇakaṁ udakaṁ paribhuñjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#213.0">Pācittiya 144. Ukkoṭanasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ yathādhammaṁ nihatādhikaraṇaṁ punakammāya ukkoṭeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#214.0">Pācittiya 145. Theyyasatthasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ theyyasatthena saddhiṁ saṁvidhāya ekaddhānamaggaṁ paṭipajjeyya antamaso gāmantarampi, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#215.0">Pācittiya 146. Ariṭṭhasikkhāpadaṁ</a> Yā pana bhikkhunī evaṁ vadeyya: “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti. Sā bhikkhunī bhikkhunīhi evamassa vacanīyā: “māyye evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāyye antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti. Evañca sā bhikkhunī bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā bhikkhunī bhikkhunīhi yāvatatiyaṁ samanubhāsitabbā tassa paṭinissaggāya. Yāvatatiyañce samanubhāsiyamānā taṁ paṭinissajjeyya, iccetaṁ kusalaṁ. No ce paṭinissajjeyya, pācittiyaṁ. 
-</span>
-</div>
-                                                   
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Jotivaggo cuddasamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->  
-   
-   
-         <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc15CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#pc15CollapseBi" href=""><h4>15. Diṭṭhivaggo </h4></a>
-			<!-- <a href="/sc/?q=bi-pm#216.0.1"><h4>15. Diṭṭhivaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc15CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc15vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#216.0.2">Pācittiya 147. Ukkhittasambhogasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ tathāvādiniyā bhikkhuniyā akaṭānudhammāya taṁ diṭṭhiṁ appaṭinissaṭṭhāya saddhiṁ sambhuñjeyya vā, saṁvaseyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#217.0">Pācittiya 148. Kaṇṭakasikkhāpadaṁ</a> Samaṇuddesāpi ce evaṁ vadeyya: “tathāhaṁ bhagavatā dhammaṁ desitaṁ ājānāmi, yathā yeme antarāyikā dhammā vuttā bhagavatā, te paṭisevato nālaṁ antarāyāyā”ti. Sā samaṇuddesā bhikkhunīhi evamassa vacanīyā: “māyye, samaṇuddese evaṁ avaca, mā bhagavantaṁ abbhācikkhi, na hi sādhu bhagavato abbhakkhānaṁ, na hi bhagavā evaṁ vadeyya, anekapariyāyenāyye, samaṇuddese antarāyikā dhammā antarāyikā vuttā bhagavatā, alañca pana te paṭisevato antarāyāyā”ti. Evañca sā samaṇuddesā bhikkhunīhi vuccamānā tatheva paggaṇheyya, sā samaṇuddesā bhikkhunīhi evamassa vacanīyā: “ajjatagge te, ayye, samaṇuddese na ceva so bhagavā satthā apadisitabbo, yampi caññā samaṇuddesā labhanti bhikkhunīhi saddhiṁ dirattatirattaṁ sahaseyyaṁ, sāpi te natthi, cara pire, vinassā”ti. Yā pana bhikkhunī jānaṁ tathānāsitaṁ samaṇuddesaṁ upalāpeyya vā, upaṭṭhāpeyya vā, sambhuñjeyya vā, saha vā seyyaṁ kappeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#218.0">Pācittiya 149. Sahadhammikasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhunīhi sahadhammikaṁ vuccamānā evaṁ vadeyya: “na tāvāhaṁ, ayye, etasmiṁ sikkhāpade sikkhissāmi, yāva na aññaṁ bhikkhuniṁ byattaṁ vinayadharaṁ paripucchāmī”ti, pācittiyaṁ. Sikkhamānāya, bhikkhave, bhikkhuniyā aññātabbaṁ paripucchitabbaṁ paripañhitabbaṁ, ayaṁ tattha sāmīci.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#219.0">Pācittiya 150. Vilekhanasikkhāpadaṁ</a> Yā pana bhikkhunī pātimokkhe uddissamāne evaṁ vadeyya: “kiṁ panimehi khuddānukhuddakehi sikkhāpadehi uddiṭṭhehi, yāvadeva kukkuccāya vihesāya vilekhāya saṁvattantī”ti, sikkhāpadavivaṇṇake pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#220.0">Pācittiya 151. Mohanasikkhāpadaṁ</a> Yā pana bhikkhunī anvaddhamāsaṁ pātimokkhe uddissamāne evaṁ vadeyya: “idāneva kho ahaṁ, ayye, jānāmi ayampi kira dhammo suttāgato suttapariyāpanno anvaddhamāsaṁ uddesaṁ āgacchatī”ti, tañce bhikkhuniṁ aññā bhikkhuniyo jāneyyuṁ nisinnapubbaṁ imāya bhikkhuniyā dvattikkhattuṁ pātimokkhe uddissamāne, ko pana vādo bhiyyo, na ca tassā bhikkhuniyā aññāṇakena mutti atthi, yañca tattha āpattiṁ āpannā, tañca yathādhammo kāretabbo, uttari cassā moho āropetabbo: “tassā te, ayye, alābhā, tassā te dulladdhaṁ, yaṁ tvaṁ pātimokkhe uddissamāne na sādhukaṁ aṭṭhiṁ katvā manasi karosī”ti, idaṁ tasmiṁ mohanake pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#221.0">Pācittiya 152. Pahārasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā kupitā anattamanā pahāraṁ dadeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#222.0">Pācittiya 153. Talasattikasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā kupitā anattamanā talasattikaṁ uggireyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#223.0">Pācittiya 154. Amūlakasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniṁ amūlakena saṅghādisesena anuddhaṁseyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#224.0">Pācittiya 155. Sañciccasikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhuniyā sañcicca kukkuccaṁ upadaheyya, “itissā muhuttampi aphāsu bhavissatī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#225.0">Pācittiya 156. Upassuti sikkhāpadaṁ</a> Yā pana bhikkhunī bhikkhunīnaṁ bhaṇḍanajātānaṁ kalahajātānaṁ vivādāpannānaṁ upassutiṁ tiṭṭheyya, “yaṁ imā bhaṇissanti, taṁ sossāmī”ti etadeva paccayaṁ karitvā anaññaṁ, pācittiyaṁ. 
-</span>
-</div>
-                                                         
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Diṭṭhivaggo pannarasamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->  
-   
-           <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pc16CollapseBi">+</span>
-<a data-bs-toggle="collapse" data-bs-target="#pc16CollapseBi" href=""><h4>16. Dhammikavaggo </h4></a>
-
-			<!-- <a href="/sc/?q=bi-pm#226.0.1"><h4>16. Dhammikavaggo</h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="pc16CollapseBi">
-                <div class="my-3">
-<audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pc16vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#226.0.2">Pācittiya 157. Kammappaṭibāhanasikkhāpadaṁ</a> Yā pana bhikkhunī dhammikānaṁ kammānaṁ chandaṁ datvā pacchā khīyanadhammaṁ āpajjeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#227.0">Pācittiya 158. Chandaṁadatvāgamanasikkhāpadaṁ</a> Yā pana bhikkhunī saṅghe vinicchayakathāya vattamānāya chandaṁ adatvā uṭṭhāyāsanā pakkameyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#228.0">Pācittiya 159. Dubbalasikkhāpadaṁ</a> Yā pana bhikkhunī samaggena saṅghena cīvaraṁ datvā pacchā khīyanadhammaṁ āpajjeyya, “yathāsanthutaṁ bhikkhuniyo saṅghikaṁ lābhaṁ pariṇāmentī”ti, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#229.0">Pācittiya 160. Pariṇāmanasikkhāpadaṁ</a> Yā pana bhikkhunī jānaṁ saṅghikaṁ lābhaṁ pariṇataṁ puggalassa pariṇāmeyya, pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#230.0">Pācittiya 161. Ratanasikkhāpadaṁ</a> Yā pana bhikkhunī ratanaṁ vā ratanasammataṁ vā aññatra ajjhārāmā vā ajjhāvasathā vā uggaṇheyya vā uggaṇhāpeyya vā, pācittiyaṁ. Ratanaṁ vā pana bhikkhuniyā ratanasammataṁ vā ajjhārāme vā ajjhāvasathe vā uggahetvā vā uggahāpetvā vā nikkhipitabbaṁ, “yassa bhavissati, so harissatī”ti, ayaṁ tattha sāmīci.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#231.0">Pācittiya 162. Sūcigharasikkhāpadaṁ</a> Yā pana bhikkhunī aṭṭhimayaṁ vā dantamayaṁ vā visāṇamayaṁ vā sūcigharaṁ kārāpeyya, bhedanakaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#232.0">Pācittiya 163. Mañcapīṭhasikkhāpadaṁ</a> Navaṁ pana bhikkhuniyā mañcaṁ vā pīṭhaṁ vā kārayamānāya aṭṭhaṅgulapādakaṁ kāretabbaṁ sugataṅgulena aññatra heṭṭhimāya aṭaniyā. Taṁ atikkāmentiyā chedanakaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#233.0">Pācittiya 164. Tūlonaddhasikkhāpadaṁ</a> Yā pana bhikkhunī mañcaṁ vā pīṭhaṁ vā tūlonaddhaṁ kārāpeyya, uddālanakaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#234.0">Pācittiya 165. Kaṇḍuppaṭicchādisikkhāpadaṁ</a> Kaṇḍuppaṭicchādiṁ pana bhikkhuniyā kārayamānāya pamāṇikā kāretabbā, tatridaṁ pamāṇaṁ, dīghaso catasso vidatthiyo sugatavidatthiyā, tiriyaṁ dve vidatthiyo. Taṁ atikkāmentiyā chedanakaṁ pācittiyaṁ.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#235.0">Pācittiya 166. Nandasikkhāpadaṁ</a> Yā pana bhikkhunī sugatacīvarappamāṇaṁ cīvaraṁ kārāpeyya, atirekaṁ vā, chedanakaṁ pācittiyaṁ. Tatridaṁ sugatassa sugatacīvarappamāṇaṁ, dīghaso nava vidatthiyo sugatavidatthiyā, tiriyaṁ cha vidatthiyo, idaṁ sugatassa sugatacīvarappamāṇanti. 
-</span>
-</div>
-                                                      
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Dhammikavaggo soḷasamo. </span>
-</div> 
-
-</div> 
-         </div>
-   <!-- vagga end -->   
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhā kho, ayyāyo, chasaṭṭhisatā pācittiyā dhammā.
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
-
-</span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Pācittiyā niṭṭhitā. </span>
-</div> 
-             
-           </div> <!-- mt div -->
-         </div> <!-- collapsediv -->     
-
-
-						<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#pdCollapseBi">+</span>
-			<a data-bs-toggle="collapse" data-bs-target="#pdCollapseBi" href=""><h3>Pāṭidesanīya</h3></a>
-			
-			<!-- /sc/?q=bi-pm#159.0 -->
-</div>
-				  <div class="collapse" id="pdCollapseBi"> 
-            <div class="mt-3">
-   <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-pd.m4a' type='audio/mp4'>Browser is not supported.</audio>
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Ime kho panāyyāyo aṭṭha pāṭidesanīyā dhammā uddesaṁ āgacchanti. </span>
-</div>              
-              
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pd1#1.2.9.0">Pāṭidesanīya 1. Sappiviññāpanasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#238.0">pm</a> Yā pana bhikkhunī agilānā sappiṁ viññāpetvā bhuñjeyya, paṭidesetabbaṁ tāya bhikkhuniyā: “gārayhaṁ, ayye, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#239.0">Pāṭidesanīya 2. Telaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā telaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#240.0">Pāṭidesanīya 3. Madhuviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā madhuṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#241.0">Pāṭidesanīya 4. Phāṇitaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā phāṇitaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#242.0">Pāṭidesanīya 5. Macchaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā macchaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#243.0">Pāṭidesanīya 6. Maṁsaviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā maṁsaṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#244.0">Pāṭidesanīya 7. Khīraviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā khīraṁ viññāpetvā bhuñjeyya …pe… taṁ paṭidesemīti.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#245.0">Pāṭidesanīya 8. Dadhiviññāpanasikkhāpadaṁ</a> Yā pana bhikkhunī agilānā dadhiṁ viññāpetvā bhuñjeyya, paṭidesetabbaṁ tāya bhikkhuniyā: “gārayhaṁ, ayye, dhammaṁ āpajjiṁ asappāyaṁ pāṭidesanīyaṁ, taṁ paṭidesemī”ti.
-</span>
-</div>
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhā kho, ayyāyo, aṭṭha pāṭidesanīyā dhammā. 
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā, 
-dutiyampi pucchāmi, kaccittha parisuddhā, 
-tatiyampi pucchāmi, kaccittha parisuddhā, 
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. 
-</span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Pāṭidesanīyā niṭṭhitā. </span>
-</div> 
-             
-           </div> <!-- mt div -->
-         </div> <!-- collapsediv -->     
-  
-			<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#skCollapseBi">+</span>
-			<a  data-bs-toggle="collapse" data-bs-target="#skCollapseBi" href=""><h3>Sekhiyā</h3></a>
-			
-			<!--/sc/?q=bi-pm#165.0 -->
-</div>
-				  <div class="collapse" id="skCollapseBi"> 
-            <div class="mt-3">
-  
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Ime kho panāyyāyo, sekhiyā dhammā uddesaṁ āgacchanti. </span>
-</div> 
-     <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk1CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#sk1CollapseBi" href=""><h4>1. Parimaṇḍalavaggo </h4></a>
-
-			<!-- <a href="/sc/?q=bi-pm#248.0.1"><h4>1. Parimaṇḍalavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="sk1CollapseBi">
-                <div class="my-3">
-                  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk1vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-sk1#1.14.0">Sekhiya 1. Parimaṇḍalasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#248.0.2">pm</a> Parimaṇḍalaṁ nivāsessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#249.0">Sekhiya 2. Dutiyaparimaṇḍalasikkhāpadaṁ</a> Parimaṇḍalaṁ pārupissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#250.0">Sekhiya 3. Suppaṭicchannasikkhāpadaṁ</a> Suppaṭicchannā antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#251.0">Sekhiya 4. Dutiyasuppaṭicchannasikkhāpadaṁ</a> Suppaṭicchannā antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#252.0">Sekhiya 5. Susaṁvutasikkhāpadaṁ</a> Susaṁvutā antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#253.0">Sekhiya 6. Dutiyasusaṁvutasikkhāpadaṁ</a> Susaṁvutā antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#254.0">Sekhiya 7. Okkhittacakkhusikkhāpadaṁ</a> Okkhittacakkhunī antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#255.0">Sekhiya 8. Dutiya-okkhittacakkhusikkhāpadaṁ</a> Okkhittacakkhunī antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#256.0">Sekhiya 9. Ukkhittakasikkhāpadaṁ</a> Na ukkhittakāya antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#257.0">Sekhiya 10. Dutiya-ukkhittakasikkhāpadaṁ</a> Na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Parimaṇḍalavaggo paṭhamo  </span>
-</div> 
-
-
-</div> 
-         </div>
-              </div>
-              
-           <!-- vagga end -->
-  
-
-   <!-- vagga begin -->     
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk2CollapseBi">+</span>
-	
-	<a data-bs-toggle="collapse" data-bs-target="#sk2CollapseBi" href=""><h4>2. Ujjagghikavaggo </h4></a>
-	
-			<!-- <a href="/sc/?q=bi-pm#258.0.1"><h4>2. Ujjagghikavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="sk2CollapseBi">
-                <div class="my-3">
-                    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk2vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#258.0.2">Sekhiya 11. Ujjagghikasikkhāpadaṁ</a> Na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#259.0">Sekhiya 12. Dutiya-ujjagghikasikkhāpadaṁ</a> Na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#260.0">Sekhiya 13. Uccasaddasikkhāpadaṁ</a> Appasaddā antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#261.0">Sekhiya 14. Dutiya-uccasaddasikkhāpadaṁ</a> Appasaddā antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#262.0">Sekhiya 15. Kāyappacālakasikkhāpadaṁ</a> Na kāyappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#263.0">Sekhiya 16. Dutiyakāyappacālakasikkhāpadaṁ</a> Na kāyappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#264.0">Sekhiya 17. Bāhuppacālakasikkhāpadaṁ</a> Na bāhuppacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#265.0">Sekhiya 18. Dutiyabāhuppacālakasikkhāpadaṁ</a> Na bāhuppacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#266.0">Sekhiya 19. Sīsappacālakasikkhāpadaṁ</a> Na sīsappacālakaṁ antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#267.0">Sekhiya 20. Dutiyasīsappacālakasikkhāpadaṁ</a> Na sīsappacālakaṁ antaraghare nisīdissāmīti sikkhā karaṇīyā. 
-</span>
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Ujjagghikavaggo dutiyo. </span>
-</div> 
-
-</div> 
-         </div>
-              </div>
-              
-           <!-- vagga end -->
-
-
-     <!-- vagga -->
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk3CollapseBi">+</span>
-	
-<a data-bs-toggle="collapse" data-bs-target="#sk3CollapseBi" href=""><h4>3. Khambhakatavaggo </h4></a>
-	
-		<!-- <a href="/sc/?q=bi-pm#268.0.1"><h4>3. Khambhakatavaggo </h4></a> -->
-</div>
-              </div>
-              <div class="collapse" id="sk3CollapseBi">
-                <div class="my-3">
-                    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk3vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#268.0.2">Sekhiya 21. Khambhakatasikkhāpadaṁ</a> Na khambhakatā antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#269.0">Sekhiya 22. Dutiyakhambhakatasikkhāpadaṁ</a> Na khambhakatā antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#270.0">Sekhiya 23. Oguṇṭhitasikkhāpadaṁ</a> Na oguṇṭhitā antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#271.0">Sekhiya 24. Dutiya-oguṇṭhitasikkhāpadaṁ</a> Na oguṇṭhitā antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#272.0">Sekhiya 25. Ukkuṭikasikkhāpadaṁ</a> Na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#273.0">Sekhiya 26. Pallatthikasikkhāpadaṁ</a> Na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#274.0">Sekhiya 27. Sakkaccapaṭiggahaṇasikkhāpadaṁ</a> Sakkaccaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#275.0">Sekhiya 28. Pattasaññinīpaṭiggahaṇasikkhāpadaṁ</a> Pattasaññinī piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#276.0">Sekhiya 29. Samasūpakapaṭiggahaṇasikkhāpadaṁ</a> Samasūpakaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#277.0">Sekhiya 30. Samatittikasikkhāpadaṁ</a> Samatittikaṁ piṇḍapātaṁ paṭiggahessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-                   
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Khambhakatavaggo tatiyo. </span>
-</div> 
-         </div>
-              </div>
-              
-           <!-- vagga end -->
-           
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk4CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#sk4CollapseBi" href=""><h4>4. Sakkaccavaggo </h4></a>
-			<!-- <a href="/sc/?q=bi-pm#278.0.1"><h4>4. Sakkaccavaggo  </h4></a> -->
-</div>
-</div>
-              <div class="collapse" id="sk4CollapseBi">
-                <div class="my-3 ">
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk4vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#278.0.2">Sekhiya 31. Sakkaccabhuñjanasikkhāpadaṁ</a> Sakkaccaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#279.0">Sekhiya 32. Pattasaññinībhuñjanasikkhāpadaṁ</a> Pattasaññinī piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#280.0">Sekhiya 33. Sapadānasikkhāpadaṁ</a> Sapadānaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#281.0">Sekhiya 34. Samasūpakasikkhāpadaṁ</a> Samasūpakaṁ piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#282.0">Sekhiya 35. Na thūpakatasikkhāpadaṁ</a> Na thūpakato omadditvā piṇḍapātaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#283.0">Sekhiya 36. Odanappaṭicchādanasikkhāpadaṁ</a> Na sūpaṁ vā byañjanaṁ vā odanena paṭicchādessāmi bhiyyokamyataṁ upādāyāti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#284.0">Sekhiya 37. Sūpodanaviññattisikkhāpadaṁ</a> Na sūpaṁ vā odanaṁ vā agilānā attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#285.0">Sekhiya 38. Ujjhānasaññinīsikkhāpadaṁ</a> Na ujjhānasaññinī paresaṁ pattaṁ olokessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#286.0">Sekhiya 39. Kabaḷasikkhāpadaṁ</a> Nātimahantaṁ kabaḷaṁ karissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#287.0">Sekhiya 40. Ālopasikkhāpadaṁ</a> Parimaṇḍalaṁ ālopaṁ karissāmīti sikkhā karaṇīyā. 
-</span>
-</div>
-                      
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Sakkaccavaggo catuttho. </span>
-</div>    
-                </div>	  		
-              </div>	  
-     <!-- vagga -->
-              <div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk5CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#sk5CollapseBi" href=""><h4>5. Kabaḷavaggo </h4></a>
-
-<!-- <a href="/sc/?q=bi-pm#288.0.1"><h4>5. Kabaḷavaggo </h4></a> -->
-</div>
-</div>
-              <div class="collapse" id="sk5CollapseBi">
-                <div class="my-3">
-                    <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk5vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#288.0.2">Sekhiya 41. Anāhaṭasikkhāpadaṁ</a> Na anāhaṭe kabaḷe mukhadvāraṁ vivarissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#289.0">Sekhiya 42. Bhuñjamānasikkhāpadaṁ</a> Na bhuñjamānā sabbahatthaṁ mukhe pakkhipissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#290.0">Sekhiya 43. Sakabaḷasikkhāpadaṁ</a> Na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#291.0">Sekhiya 44. Piṇḍukkhepakasikkhāpadaṁ</a> Na piṇḍukkhepakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#292.0">Sekhiya 45. Kabaḷāvacchedakasikkhāpadaṁ</a> Na kabaḷāvacchedakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#293.0">Sekhiya 46. Avagaṇḍakārakasikkhāpadaṁ</a> Na avagaṇḍakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#294.0">Sekhiya 47. Hatthaniddhunakasikkhāpadaṁ</a> Na hatthaniddhunakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#295.0">Sekhiya 48. Sitthāvakārakasikkhāpadaṁ</a> Na sitthāvakārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#296.0">Sekhiya 49. Jivhānicchārakasikkhāpadaṁ</a> Na jivhānicchārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#297.0">Sekhiya 50. Capucapukārakasikkhāpadaṁ</a> Na capucapukārakaṁ bhuñjissāmīti sikkhā karaṇīyā. 
-</span>
-</div>
-          
-
-<div class="level4 my-3">
- <span class="level5 pli-lang">Kabaḷavaggo pañcamo. </span>
-</div> 
- </div>
-</div>
-           <!-- vagga -->
-        <!-- vagga -->
-<div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk6CollapseBi">+</span>
-	<a data-bs-toggle="collapse" data-bs-target="#sk6CollapseBi" href=""><h4>6. Surusuruvaggo </h4></a>
-
-			<!-- <a href="/sc/?q=bi-pm#298.0.1"><h4>6. Surusuruvaggo </h4></a> -->
-</div>
-</div>
-              <div class="collapse" id="sk6CollapseBi">
-                <div class="my-3">
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk6vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#298.0.2">Sekhiya 51. Surusurukārakasikkhāpadaṁ</a> Na surusurukārakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#299.0">Sekhiya 52. Hatthanillehakasikkhāpadaṁ</a> Na hatthanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#300.0">Sekhiya 53. Pattanillehakasikkhāpadaṁ</a> Na pattanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#301.0">Sekhiya 54. Oṭṭhanillehakasikkhāpadaṁ</a> Na oṭṭhanillehakaṁ bhuñjissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#302.0">Sekhiya 55. Sāmisasikkhāpadaṁ</a> Na sāmisena hatthena pānīyathālakaṁ paṭiggahessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#303.0">Sekhiya 56. Sasitthakasikkhāpadaṁ</a> Na sasitthakaṁ pattadhovanaṁ antaraghare chaḍḍessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#304.0">Sekhiya 57. Chattapāṇisikkhāpadaṁ</a> Na chattapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#305.0">Sekhiya 58. Daṇḍapāṇisikkhāpadaṁ</a> Na daṇḍapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#306.0">Sekhiya 59. Satthapāṇisikkhāpadaṁ</a> Na satthapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#307.0">Sekhiya 60. Āvudhapāṇisikkhāpadaṁ</a> Na āvudhapāṇissa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā. 
-</span>
-</div>
-
-
-
-<div class="level4 my-3">
- <span class="level5 pli-lang">Surusuruvaggo chaṭṭho. </span>
-</div> 
-                </div>
-              </div>
-              
-           <!-- vagga -->
-              <!-- vagga -->
-<div class="level3">
-			<div class="level3 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#sk7CollapseBi">+</span>
-	
-	<a data-bs-toggle="collapse" data-bs-target="#sk7CollapseBi" href=""><h4>7. Pādukavaggo </h4></a>
-	
-			<!-- <a href="/sc/?q=bi-pm#308.0.1"><h4>7. Pādukavaggo </h4></a> -->
-</div>
-</div>
-<div class="collapse" id="sk7CollapseBi">
-                <div class="my-3">
-  <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-sk7vag.m4a' type='audio/mp4'>Browser is not supported.</audio>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#308.0.2">Sekhiya 61. Pādukasikkhāpadaṁ</a> Na pādukāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#309.0">Sekhiya 62. Upāhanasikkhāpadaṁ</a> Na upāhanāruḷhassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#310.0">Sekhiya 63. Yānasikkhāpadaṁ</a> Na yānagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#311.0">Sekhiya 64. Sayanasikkhāpadaṁ</a> Na sayanagatassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#312.0">Sekhiya 65. Pallatthikasikkhāpadaṁ</a> Na pallatthikāya nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#313.0">Sekhiya 66. Veṭhitasikkhāpadaṁ</a> Na veṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#314.0">Sekhiya 67. Oguṇṭhitasikkhāpadaṁ</a> Na oguṇṭhitasīsassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#315.0">Sekhiya 68. Chamāsikkhāpadaṁ</a> Na chamāyaṁ nisīditvā āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#316.0">Sekhiya 69. Nīcāsanasikkhāpadaṁ</a> Na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#317.0">Sekhiya 70. Ṭhitāsikkhāpadaṁ</a> Na ṭhitā nisinnassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#318.0">Sekhiya 71. Pacchatogacchantīsikkhāpadaṁ</a> Na pacchato gacchantī purato gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#319.0">Sekhiya 72. Uppathenagacchantīsikkhāpadaṁ</a> Na uppathena gacchantī pathena gacchantassa agilānassa dhammaṁ desessāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#320.0">Sekhiya 73. Ṭhitāuccārasikkhāpadaṁ</a> Na ṭhitā agilānā uccāraṁ vā passāvaṁ vā karissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-pm#321.0">Sekhiya 74. Hariteuccārasikkhāpadaṁ</a> Na harite agilānā uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bi-sk75#2.5.0">Sekhiya 75. Udakeuccārasikkhāpadaṁ</a> <a href="/sc/?q=bi-pm#322.0">pm</a> Na udake agilānā uccāraṁ vā passāvaṁ vā kheḷaṁ vā karissāmīti sikkhā karaṇīyā. 
-</span>
-</div>
-
-
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Pādukavaggo sattamo. </span>
-</div> 
-
-                </div>
-              </div>
-
-           <!-- vagga -->   
-           
-                     <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhā kho, ayyāyo, sekhiyā dhammā. 
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā, 
-dutiyampi pucchāmi, kaccittha parisuddhā, 
-tatiyampi pucchāmi, kaccittha parisuddhā, 
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti. </span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5 pli-lang">
-Sekhiyā niṭṭhitā </span>
-</div>           
-      
-            </div> <!-- mt div -->
-    
-    
-  						<div class="level2 d-flex align-items-center">
-  <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate"
-    data-bs-toggle="collapse" data-bs-target="#asCollapseBi">+</span>
-  			<a data-bs-toggle="collapse" data-bs-target="#asCollapseBi" href=""><h3>Adhikaraṇasamathā</h3></a>
-			
-			<!-- /sc/?q=bi-pm#245.0 -->
-</div>
-				  <div class="collapse" id="asCollapseBi"> 
-            <div class="mt-3">
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Ime kho panāyyāyo, satta adhikaraṇasamathā dhammā uddesaṁ āgacchanti.
-</span>
-       </br>            </br>     
- <audio controls class="lazy-audio" preload="none"><source src='/assets/audio/bi-pm/Bi-as.m4a' type='audio/mp4'>Browser is not supported.</audio>
-      
-</div>                                
-
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bu-as1-7#2.2">Adhikaraṇasamatha 1.</a> <a href="/sc/?q=bi-pm#247.0">pm</a> Sammukhāvinayo dātabbo.
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bu-as1-7#1.1">Adhikaraṇasamatha 2.</a> <a href="/sc/?q=bi-pm#248.0">pm</a> Sativinayo dātabbo. 
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bu-as1-7#1.1">Adhikaraṇasamatha 3.</a> <a href="/sc/?q=bi-pm#249.0">pm</a> Amūḷhavinayo dātabbo.  
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bu-as1-7#1.1">Adhikaraṇasamatha 4.</a> <a href="/sc/?q=bi-pm#250.0">pm</a> Paṭiññāya kāretabbaṁ.  
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bu-as1-7#1.1">Adhikaraṇasamatha 5.</a> <a href="/sc/?q=bi-pm#251.0">pm</a> Yebhuyyasikā. 
-</span>
-</div>
-<div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bu-as1-7#1.1">Adhikaraṇasamatha 6.</a> <a href="/sc/?q=bi-pm#252.0">pm</a> Tassapāpiyasikā. 
-</span>
-</div>
- <div class="level4">
-<span class="level5 pli-lang">
-<a href="/sc/?q=bu-as1-7#1.1">Adhikaraṇasamatha 7.</a> <a href="/sc/?q=bi-pm#253.0">pm</a> Tiṇavatthārakoti. 
-</span>
-</div>
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhā kho ayyāyo satta adhikaraṇasamathā dhammā.
-Tatthāyyāyo pucchāmi, kaccittha parisuddhā,
-dutiyampi pucchāmi, kaccittha parisuddhā,
-tatiyampi pucchāmi, kaccittha parisuddhā,
-parisuddhetthāyyāyo, tasmā tuṇhī, evametaṁ dhārayāmīti.
-</span>
-</div> 
-           <div class="level4 my-3">
- <span class="level5 pli-lang">Adhikaraṇasamathā niṭṭhitā. </span>
-</div> 
-             
-           </div> <!-- mt div -->
-           
-            <div class="level4 my-3">
- <span class="level5 pli-lang">Uddiṭṭhaṁ kho ayyāyo nidānaṁ
-uddiṭṭhā aṭṭha pārājikā dhammā,
-uddiṭṭhā sattarasa saṅghādisesā dhammā,
-uddiṭṭhā tiṁsa nissaggiyā pācittiyā dhammā,
-uddiṭṭhā chasaṭṭhi satā pācittiyā dhammā,
-uddiṭṭhā aṭṭha pāṭidesanīyā dhammā,
-uddiṭṭhā sekhiyā dhammā,
-uddiṭṭhā satta adhikaraṇasamathā dhammā.
-Ettakaṁ tassa bhagavato suttāgataṁ suttapariyāpannaṁ anvaddhamāsaṁ uddesaṁ āgacchati.
-Tattha sabbāheva samaggāhi sammodamānāhi avivadamānāhi sikkhitabbanti.
-</span>
-</div> 
-                    
-<div class="level4 my-3">
- <span class="level5 pli-lang">Vitthāruddeso catuttho. </span>
-</div> 
-<div class="level4 my-3">
- <span class="level5 pli-lang">Bhikkhunipātimokkhaṁ niṭṭhitaṁ.
- </span>
-</div> 
-<div class="level4 my-3">
- <span class="level5 pli-lang">Namo tassa bhagavato arahato sammāsambuddhassa   
- </span>
-</div> 
-   
-         </div> <!-- collapsediv -->     
-  
-
-           </div> <!-- collapsediv -->
-          </div>
-
-
+<div class="mt-3">
+ <div class="level2 right-text reverse-order">
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pkCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#pkCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     पुब्बकरणं
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#१।०
+  </div>
+  <div class="collapse" id="pkCollapseBi">
+   <div class="my-3">
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      <strong>
+       पुब्बकरणं
+      </strong>
+      सम्मज्जनी पदीपो च, उदकं आसनेन च;
+उपोसथस्स एतानि, “पुब्बकरण”न्ति वुच्चति।
+     </span>
     </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      <strong>
+       पुब्बकिच्चं
+      </strong>
+      छन्द, पारिसुद्धि, उतुक्खानं, भिक्खुनिगणना च ओवादो;
+उपोसथस्स एतानि, “पुब्बकिच्च”न्ति वुच्चति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      <strong>
+       पत्तकल्लअङ्गा
+      </strong>
+      उपोसथो, यावतिका च भिक्खुनी कम्मप्पत्ता;
+सभागापत्तियो च न विज्जन्ति;
+वज्जनीया च पुग्गला तस्मिं न होन्ति, “पत्तकल्ल”न्ति वुच्चति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      पुब्बकरणपुब्बकिच्चानि समापेत्वा देसितापत्तिकस्स समग्गस्स भिक्खुनिसङ्घस्स अनुमतिया पातिमोक्खं उद्दिसितुं आराधनं करोम।
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+  </div>
+  चोल्लप्सेदिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#ndCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#ndCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     निदानुद्देसो
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#५।०
+  </div>
+  <div class="collapse" id="ndCollapseBi">
+   <div class="mt-3">
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      सुणातु मे अय्ये सङ्घो।
+अज्जुपोसथो पन्नरसो,
+यदि सङ्घस्स पत्तकल्लं, सङ्घो उपोसथं करेय्य, पातिमोक्खं उद्दिसेय्य।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      किं सङ्घस्स पुब्बकिच्चं?
+पारिसुद्धिं अय्यायो आरोचेथ,
+पातिमोक्खं उद्दिसिस्सामि,
+तं सब्बाव सन्ता साधुकं सुणोम मनसि करोम।
+यस्सा सिया आपत्ति, सा आविकरेय्य,
+असन्तिया आपत्तिया तुण्ही भवितब्बं,
+तुण्हीभावेन खो पनाय्यायो, “परिसुद्धा”ति वेदिस्सामि।
+यथा खो पन पच्चेकपुट्ठस्सा वेय्याकरणं होति, एवमेवं एवरूपाय परिसाय यावततियं अनुसावितं होति।
+या पन भिक्खुनी यावततियं अनुसावियमाने सरमाना सन्तिं आपत्तिं नाविकरेय्य, सम्पजानमुसावादस्सा होति।
+सम्पजानमुसावादो खो पनाय्यायो, अन्तरायिको धम्मो वुत्तो भगवता,
+तस्मा सरमानाय भिक्खुनिया आपन्नाय विसुद्धापेक्खाय सन्ती आपत्ति आविकातब्बा,
+आविकता हिस्सा फासु होति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      उद्दिट्ठं खो, अय्यायो, निदानं।
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा,
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      निदानं निट्ठितं।
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+  </div>
+  चोल्लप्सेदिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pjCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#pjCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     पाराजिकुद्देसो
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#८।०
+  </div>
+  <div class="collapse" id="pjCollapseBi">
+   <div class="mt-3">
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      तत्रिमे अट्ठ पाराजिका धम्मा उद्देसं आगच्छन्ति।
+     </span>
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-pj.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj1-4#">
+       पाराजिक १। मेथुनधम्मसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#9.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी छन्दसो मेथुनं धम्मं पटिसेवेय्य, अन्तमसो तिरच्छानगतेनपि, पाराजिका होति असंवासा।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj1-4#">
+       पाराजिक २। अदिन्नादानसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#10.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी गामा वा अरञ्ञा वा अदिन्नं थेय्यसङ्खातं आदियेय्य, यथारूपे अदिन्नादाने राजानो चोरं गहेत्वा हनेय्युं वा बन्धेय्युं वा पब्बाजेय्युं वा चोरासि बालासि मूळ्हासि थेनासीति, तथारूपं भिक्खुनी अदिन्नं आदियमाना अयम्पि पाराजिका होति असंवासा।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj1-4#">
+       पाराजिक ३। मनुस्सविग्गहसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#11.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी सञ्चिच्च मनुस्सविग्गहं जीविता वोरोपेय्य, सत्थहारकं वास्स परियेसेय्य, मरणवण्णं वा संवण्णेय्य, मरणाय वा समादपेय्य, “अम्भो पुरिस, किं तुय्हिमिना पापकेन दुज्जीवितेन, मतं ते जीविता सेय्यो”ति, इति चित्तमना चित्तसङ्कप्पा अनेकपरियायेन मरणवण्णं वा संवण्णेय्य, मरणाय वा समादपेय्य, अयम्पि पाराजिका होति असंवासा।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj1-4#">
+       पाराजिक ४। उत्तरिमनुस्सधम्मसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#12.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी अनभिजानं उत्तरिमनुस्सधम्मं अत्तुपनायिकं अलमरियञाणदस्सनं समुदाचरेय्य, “इति जानामि, इति पस्सामी”ति, ततो अपरेन समयेन समनुग्गाहीयमाना वा असमनुग्गाहीयमाना वा आपन्ना विसुद्धापेक्खा एवं वदेय्य, “अजानमेवं, अय्ये, अवचं जानामि, अपस्सं पस्सामि, तुच्छं मुसा विलपि”न्ति, अञ्ञत्र अधिमाना, अयम्पि पाराजिका होति असंवासा।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj5#1.54.0">
+       पाराजिक ५। उब्भजाणुमण्डलिकासिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#13.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी अवस्सुता अवस्सुतस्स पुरिसपुग्गलस्स, अधक्खकं उब्भजाणुमण्डलं आमसनं वा परामसनं वा गहणं वा छुपनं वा पटिपीळनं वा सादियेय्य, अयम्पि पाराजिका होति असंवासा उब्भजाणुमण्डलिका।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj6#1.23.0">
+       पाराजिक ६। वज्जप्पटिच्छादिकासिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#14.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी जानं पाराजिकं धम्मं अज्झापन्नं भिक्खुनिं नेवत्तना पटिचोदेय्य, न गणस्स आरोचेय्य, यदा च सा ठिता वा अस्स चुता वा नासिता वा अवस्सटा वा, सा पच्छा एवं वदेय्य: “पुब्बेवाहं, अय्ये, अञ्ञासिं एतं भिक्खुनिं ‘एवरूपा च एवरूपा च सा भगिनी’ति, नो च खो अत्तना पटिचोदेस्सं, न गणस्स आरोचेस्स”न्ति, अयम्पि पाराजिका होति असंवासा वज्जप्पटिच्छादिका।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj7#1.11.0">
+       पाराजिक ७। उक्खित्तानुवत्तिकासिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#15.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी समग्गेन सङ्घेन उक्खित्तं भिक्खुं धम्मेन विनयेन सत्थुसासनेन अनादरं अप्पटिकारं अकतसहायं तमनुवत्तेय्य, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “एसो खो, अय्ये, भिक्खु समग्गेन सङ्घेन उक्खित्तो, धम्मेन विनयेन सत्थुसासनेन अनादरो अप्पटिकारो अकतसहायो, माय्ये, एतं भिक्खुं अनुवत्ती”ति, एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियं चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं, नो चे पटिनिस्सज्जेय्य, अयम्पि पाराजिका होति असंवासा उक्खित्तानुवत्तिका।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pj8#1.11.0">
+       पाराजिक ८। अट्ठवत्थुकासिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#16.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी अवस्सुता अवस्सुतस्स पुरिसपुग्गलस्स हत्थग्गहणं वा सादियेय्य, सङ्घाटिकण्णग्गहणं वा सादियेय्य, सन्तिट्ठेय्य वा, सल्लपेय्य वा, सङ्केतं वा गच्छेय्य, पुरिसस्स वा अब्भागमनं सादियेय्य, छन्नं वा अनुपविसेय्य, कायं वा तदत्थाय उपसंहरेय्य एतस्स असद्धम्मस्स पटिसेवनत्थाय, अयम्पि पाराजिका होति असंवासा अट्ठवत्थुका।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      उद्दिट्ठा खो, अय्यायो, अट्ठ पाराजिका धम्मा।
+येसं भिक्खुनी अञ्ञतरं वा अञ्ञतरं वा आपज्जित्वा न लभति भिक्खुनीहि सद्धिं संवासं
+यथा पुरे, तथा पच्छा, पाराजिका होति असंवासा।
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा,
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      पाराजिकं निट्ठितं।
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+  </div>
+  चोल्लप्सेदिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#ssCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#ssCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     सङ्घादिसेसुद्देसो
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#१८।०
+  </div>
+  <div class="collapse" id="ssCollapseBi">
+   <div class="mt-3">
+    <audio class="lazy-audio" controls="" preload="none">
+     <source src="/assets/audio/bi-pm/Bi-ss.m4a" type="audio/mp4"/>
+     ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+    </audio>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      इमे खो पनाय्यायो सत्तरस सङ्घादिसेसा धम्मा उद्देसं आगच्छन्ति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss1#1.56.0">
+       सङ्घादिसेस १। उस्सयवादिकासिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#19.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी उस्सयवादिका विहरेय्य गहपतिना वा गहपतिपुत्तेन वा दासेन वा कम्मकारेन वा अन्तमसो समणपरिब्बाजकेनापि, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss2#1.40.0">
+       सङ्घादिसेस २। चोरीवुट्ठापिकासिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#20.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी जानं चोरिं वज्झं विदितं अनपलोकेत्वा राजानं वा सङ्घं वा गणं वा पूगं वा सेणिं वा, अञ्ञत्र कप्पा वुट्ठापेय्य, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss3#4.14.0">
+       सङ्घादिसेस ३। एकगामन्तरगमनसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#21.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी एका वा गामन्तरं गच्छेय्य, एका वा नदीपारं गच्छेय्य, एका वा रत्तिं विप्पवसेय्य, एका वा गणम्हा ओहियेय्य, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss4#1.27.0">
+       सङ्घादिसेस ४। उक्खित्तकओसारणसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#22.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी समग्गेन सङ्घेन उक्खित्तं भिक्खुनिं धम्मेन विनयेन सत्थुसासनेन अनपलोकेत्वा कारकसङ्घं, अनञ्ञाय गणस्स छन्दं ओसारेय्य, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss5#1.14.0">
+       सङ्घादिसेस ५। भोजनपटिग्गहणपठमसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#23.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी अवस्सुता अवस्सुतस्स पुरिसपुग्गलस्स हत्थतो खादनीयं वा, भोजनीयं वा सहत्था पटिग्गहेत्वा खादेय्य वा भुञ्जेय्य वा, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss6#1.26.0">
+       सङ्घादिसेस ६। भोजनपटिग्गहणदुतियसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#24.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी एवं वदेय्य: “किं ते, अय्ये, एसो पुरिसपुग्गलो करिस्सति अवस्सुतो वा अनवस्सुतो वा, यतो त्वं अनवस्सुता, इङ्घ, अय्ये, यं ते एसो पुरिसपुग्गलो देति खादनीयं वा भोजनीयं वा, तं त्वं सहत्था पटिग्गहेत्वा खाद वा भुञ्ज वा”ति, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#25.0">
+       सङ्घादिसेस ७। सञ्चरित्तसिक्खापदं
+      </a>
+      या पन भिक्खुनी सञ्चरित्तं समापज्जेय्य इत्थिया वा पुरिसमतिं, पुरिसस्स वा इत्थिमतिं, जायत्तने वा जारत्तने वा अन्तमसो तङ्खणिकायपि, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#26.0">
+       सङ्घादिसेस ८। दुट्ठदोससिक्खापदं
+      </a>
+      या पन भिक्खुनी भिक्खुनिं दुट्ठा दोसा अप्पतीता अमूलकेन पाराजिकेन धम्मेन अनुद्धंसेय्य: “अप्पेव नाम नं इमम्हा ब्रह्मचरिया चावेय्य”न्ति, ततो अपरेन समयेन समनुग्गाहीयमाना वा अस मनुग्गाहीयमाना वा अमूलकञ्चेव तं अधिकरणं होति, भिक्खुनी च दोसं पतिट्ठाति, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#27.0">
+       सङ्घादिसेस ९। अञ्ञभागियसिक्खापदं
+      </a>
+      या पन भिक्खुनी भिक्खुनिं दुट्ठा दोसा अप्पतीता अञ्ञभागियस्स अधिकरणस्स किञ्चिदेसं लेसमत्तं उपादाय पाराजिकेन धम्मेन अनुद्धंसेय्य, “अप्पेव नाम नं इमम्हा ब्रह्मचरिया चावेय्य”न्ति, ततो अपरेन समयेन समनुग्गाहीयमाना वा असमनुग्गाहीयमाना वा अञ्ञभागियञ्चेव तं अधिकरणं होति। कोचिदेसो लेसमत्तो उपादिन्नो, भिक्खुनी च दोसं पतिट्ठाति, अयम्पि भिक्खुनी पठमापत्तिकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss10#1.19.0">
+       सङ्घादिसेस १०। सिक्खंपच्चाचिक्खणसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#28.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी कुपिता अनत्तमना एवं वदेय्य: “बुद्धं पच्चाचिक्खामि धम्मं पच्चाचिक्खामि, सङ्घं पच्चाचिक्खामि, सिक्खं पच्चाचिक्खामि, किन्नुमाव समणियो या समणियो सक्यधीतरो, सन्तञ्ञापि समणियो लज्जिनियो कुक्कुच्चिका सिक्खाकामा, तासाहं सन्तिके ब्रह्मचरियं चरिस्सामी”ति। सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्ये कुपिता अनत्तमना एवं अवच ‘बुद्धं पच्चाचिक्खामि, धम्मं पच्चाचिक्खामि, सङ्घं पच्चाचिक्खामि, सिक्खं पच्चाचिक्खामि, किन्नुमाव समणियो या समणियो सक्यधीतरो, सन्तञ्ञापि समणियो लज्जिनियो कुक्कुच्चिका सिक्खाकामा, तासाहं सन्तिके ब्रह्मचरियं चरिस्सामी’ति, अभिरमाय्ये, स्वाक्खातो धम्मो, चर ब्रह्मचरियं सम्मा दुक्खस्स अन्तकिरियाया”ति, एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं, नो चे पटिनिस्सज्जेय्य, अयम्पि भिक्खुनी यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss11#1.15.0">
+       सङ्घादिसेस ११। अधिकरणकुपितसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#29.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी किस्मिञ्चिदेव अधिकरणे पच्चाकता कुपिता अनत्तमना एवं वदेय्य: “छन्दगामिनियो च भिक्खुनियो, दोसगामिनियो च भिक्खुनियो, मोहगामिनियो च भिक्खुनियो, भयगामिनियो च भिक्खुनियो”ति, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्ये, किस्मिञ्चिदेव अधिकरणे पच्चाकता कुपिता अनत्तमना एवं अवच ‘छन्दगामिनियो च भिक्खुनियो, दोसगामिनियो च भिक्खुनियो, मोहगामिनियो च भिक्खुनियो, भयगामिनियो च भिक्खुनियो’ति, अय्या खो छन्दापि गच्छेय्य, दोसापि गच्छेय्य, मोहापि गच्छेय्य, भयापि गच्छेय्या”ति। एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं, नो चे पटिनिस्सज्जेय्य, अयम्पि भिक्खुनी यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss12#1.11.0">
+       सङ्घादिसेस १२। पापसमाचारपठमसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#30.0">
+       प्म्
+      </a>
+      भिक्खुनियो पनेव संसट्ठा विहरन्ति पापाचारा पापसद्दा पापसिलोका भिक्खुनिसङ्घस्स विहेसिका अञ्ञमञ्ञिस्सा वज्जप्पटिच्छादिका, ता भिक्खुनियो भिक्खुनीहि एवमस्सु वचनीया: “भगिनियो खो संसट्ठा विहरन्ति पापाचारा पापसद्दा पापसिलोका भिक्खुनिसङ्घस्स विहेसिका अञ्ञमञ्ञिस्सा वज्जप्पटिच्छादिका, विविच्चथाय्ये, विवेकञ्ञेव भगिनीनं सङ्घो वण्णेती”ति, एवञ्च ता भिक्खुनियो भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्युं, ता भिक्खुनियो भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्युं, इच्चेतं कुसलं, नो चे पटिनिस्सज्जेय्युं, इमापि भिक्खुनियो यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-ss13#1.23.0">
+       सङ्घादिसेस १३। पापसमाचारदुतियसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#31.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी एवं वदेय्य: “संसट्ठाव, अय्ये, तुम्हे विहरथ, मा तुम्हे नाना विहरित्थ, सन्ति सङ्घे अञ्ञापि भिक्खुनियो एवाचारा एवंसद्दा एवंसिलोका भिक्खुनिसङ्घस्स विहेसिका अञ्ञमञ्ञिस्सा वज्जप्पटिच्छादिका, ता सङ्घो न किञ्चि आह तुम्हञ्ञेव सङ्घो उञ्ञाय परिभवेन अक्खन्तिया वेभस्सिया दुब्बल्या एवमाह: ‘भगिनियो खो संसट्ठा विहरन्ति पापाचारा पापसद्दा पापसिलोका भिक्खुनिसङ्घस्स विहेसिका अञ्ञमञ्ञिस्सा वज्जप्पटिच्छादिका, विविच्चथाय्ये, विवेकञ्ञेव भगिनीनं सङ्घो वण्णेती”’ति, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्ये, एवं अवच, संसट्ठाव अय्ये तुम्हे विहरथ, मा तुम्हे नाना विहरित्थ, सन्ति सङ्घे अञ्ञापि भिक्खुनियो एवाचारा एवंसद्दा एवंसिलोका भिक्खुनिसङ्घस्स विहेसिका अञ्ञमञ्ञिस्सा वज्जप्पटिच्छादिका, ता सङ्घो न किञ्चि आह, तुम्हञ्ञेव सङ्घो उञ्ञाय परिभवेन अक्खन्तिया वेभस्सिया दुब्बल्या एवमाह: ‘भगिनियो खो संसट्ठा विहरन्ति पापाचारा पापसद्दा पापसिलोका भिक्खुनिसङ्घस्स विहेसिका अञ्ञमञ्ञिस्सा वज्जप्पटिच्छादिका, विविच्चथाय्ये, विवेकञ्ञेव भगिनीनं सङ्घो वण्णेती”’ति, एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं, नो चे पटिनिस्सज्जेय्य, अयम्पि भिक्खुनी यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#32.0">
+       सङ्घादिसेस १४। सङ्घभेदकसिक्खापदं
+      </a>
+      या पन भिक्खुनी समग्गस्स सङ्घस्स भेदाय परक्कमेय्य, भेदनसंवत्तनिकं वा अधिकरणं समादाय पग्गय्ह तिट्ठेय्य, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्या, समग्गस्स सङ्घस्स भेदाय परक्कमि, भेदनसंवत्तनिकं वा अधिकरणं समादाय पग्गय्ह अट्ठासि, समेताय्या, सङ्घेन, समग्गो हि सङ्घो सम्मोदमानो अविवदमानो एकुद्देसो फासु विहरती”ति। एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं। नो चे पटिनिस्सज्जेय्य, अयम्पि भिक्खुनी यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#33.0">
+       सङ्घादिसेस १५। भेदानुवत्तकसिक्खापदं
+      </a>
+      तस्सायेव खो पन भिक्खुनिया भिक्खुनियो होन्ति अनुवत्तिका वग्गवादिका एका वा द्वे वा तिस्सो वा, ता एवं वदेय्युं: “माय्यायो, एतं भिक्खुनिं किञ्चि अवचुत्थ धम्मवादिनी चेसा भिक्खुनी, विनयवादिनी चेसा भिक्खुनी, अम्हाकञ्चेसा भिक्खुनी छन्दञ्च रुचिञ्च आदाय वोहरति, जानाति, नो भासति, अम्हाकम्पेतं खमती”ति, ता भिक्खुनियो भिक्खुनीहि एवमस्सु वचनीया: “माय्यायो, एवं अवचुत्थ, न चेसा भिक्खुनी धम्मवादिनी, न चेसा भिक्खुनी विनयवादिनी, माय्यानम्पि सङ्घभेदो रुच्चित्थ, समेताय्यानं सङ्घेन, समग्गो हि सङ्घो सम्मोदमानो अविवदमानो एकुद्देसो फासु विहरती”ति, एवञ्च ता भिक्खुनियो भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्युं, ता भिक्खुनियो भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्युं। इच्चेतं कुसलं। नो चे पटिनिस्सज्जेय्युं, इमापि भिक्खुनियो यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#34.0">
+       सङ्घादिसेस १६। दुब्बचसिक्खापदं
+      </a>
+      भिक्खुनी पनेव दुब्बचजातिका होति उद्देसपरियापन्नेसु सिक्खापदेसु भिक्खुनीहि सहधम्मिकं वुच्चमाना अत्तानं अवचनीयं करोति: “मा मं अय्यायो किञ्चि अवचुत्थ कल्याणं वा पापकं वा, अहम्पाय्यायो, न किञ्चि वक्खामि कल्याणं वा पापकं वा, विरमथाय्यायो, मम वचनाया”ति, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्या, अत्तानं अवचनीयं अकासि, वचनीयमेव, अय्या, अत्तानं करोतु, अय्यापि भिक्खुनियो वदतु सहधम्मेन, भिक्खुनियोपि अय्यं वक्खन्ति सहधम्मेन, एवं संवद्धा हि तस्स भगवतो परिसा यदिदं अञ्ञमञ्ञवचनेन अञ्ञमञ्ञवुट्ठापनेना”ति। एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं। नो चे पटिनिस्सज्जेय्य, अयम्पि भिक्खुनी यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#35.0">
+       सङ्घादिसेस १७। कुलदूसकसिक्खापदं
+      </a>
+      भिक्खुनी पनेव अञ्ञतरं गामं वा निगमं वा उपनिस्साय विहरति कुलदूसिका पापसमाचारा, तस्सा खो पापका समाचारा दिस्सन्ति चेव सुय्यन्ति च, कुलानि च ताय दुट्ठानि दिस्सन्ति चेव सुय्यन्ति च, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “अय्या, खो कुलदूसिका पापसमाचारा, अय्याय खो पापका समाचारा दिस्सन्ति चेव सुय्यन्ति च, कुलानि चाय्याय, दुट्ठानि दिस्सन्ति चेव सुय्यन्ति च, पक्कमताय्या इमम्हा आवासा, अलं ते इध वासेना”ति। एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना ता भिक्खुनियो एवं वदेय्य: “छन्दगामिनियो च भिक्खुनियो, दोसगामिनियो च भिक्खुनियो, मोहगामिनियो च भिक्खुनियो, भयगामिनियो च भिक्खुनियो, तादिसिकाय आपत्तिया एकच्चं पब्बाजेन्ति एकच्चं न पब्बाजेन्ती”ति, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्या, एवं अवच, न च भिक्खुनियो छन्दगामिनियो, न च भिक्खुनियो दोसगामिनियो , न च भिक्खुनियो मोहगामिनियो, न च भिक्खुनियो भयगामिनियो, अय्या खो कुलदूसिका पापसमाचारा, अय्याय खो पापका समाचारा दिस्सन्ति चेव सुय्यन्ति च, कुलानि चाय्याय दुट्ठानि दिस्सन्ति चेव सुय्यन्ति च, पक्कमताय्या, इमम्हा आवासा अलं ते इध वासेना”ति। एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं। नो चे पटिनिस्सज्जेय्य, अयम्पि भिक्खुनी यावततियकं धम्मं आपन्ना निस्सारणीयं सङ्घादिसेसं।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      उद्दिट्ठा खो अय्यायो सत्तरस सङ्घादिसेसा धम्मा नव पठमापत्तिका, अट्ठ यावततियका, 
+येसं भिक्खुनी अञ्ञतरं वा अञ्ञतरं वा आपज्जति, ताय भिक्खुनिया उभतोसङ्घे पक्खमानत्तं चरितब्बं। 
+चिण्णमानत्ता भिक्खुनी यत्थ सिया वीसतिगणो भिक्खुनिसङ्घो, तत्थ सा भिक्खुनी अब्भेतब्बा। 
+एकायपि चे ऊनो वीसतिगणो भिक्खुनिसङ्घो तं भिक्खुनिं अब्भेय्य, सा च भिक्खुनी अनब्भिता, ता च भिक्खुनियो गारय्हा, अयं तत्थ सामीचि। 
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा, 
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा, 
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा, 
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      सङ्घादिसेसो निट्ठितो
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+  </div>
+  चोल्लप्सेदिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#npCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#npCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     निस्सग्गियपाचित्तिया
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#३३।०
+  </div>
+  <div class="collapse" id="npCollapseBi">
+   <div class="mt-3">
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      इमे खो पनाय्यायो तिंस निस्सग्गिया पाचित्तिया धम्मा उद्देसं आगच्छन्ति।
+     </span>
+    </div>
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#np1CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#np1CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १। पत्तवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#३८।०।१"&gt;&lt;ह्४&gt;१। पत्तवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="np1CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-np1vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np1#1.14.0">
+         निस्सग्गिय पाचित्तिय १। पत्तसन्निचयसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#38.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी पत्तसन्निचयं करेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np2#1.25.0">
+         निस्सग्गिय पाचित्तिय २। अकालचीवरभाजनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#39.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अकालचीवरं “कालचीवर”न्ति अधिट्ठहित्वा भाजापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np3#1.20.0">
+         निस्सग्गिय पाचित्तिय ३। चीवरपरिवत्तनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#40.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुनिया सद्धिं चीवरं परिवत्तेत्वा सा पच्छा एवं वदेय्य: “हन्दाय्ये, तुय्हं चीवरं, आहर मेतं चीवरं, यं तुय्हं तुय्हमेवेतं, यं मय्हं मय्हमेवेतं, आहर मेतं चीवरं, सकं पच्चाहरा”ति अच्छिन्देय्य वा अच्छिन्दापेय्य वा, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np4#1.27.0">
+         निस्सग्गिय पाचित्तिय ४। अञ्ञविञ्ञापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#41.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अञ्ञं विञ्ञापेत्वा अञ्ञं विञ्ञापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np5#1.28.0">
+         निस्सग्गिय पाचित्तिय ५। अञ्ञचेतापन सिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#42.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अञ्ञं चेतापेत्वा अञ्ञं चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np6#1.16.0">
+         निस्सग्गिय पाचित्तिय ६। पठमसङ्घिकचेतापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#43.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अञ्ञदत्थिकेन परिक्खारेन अञ्ञुद्दिसिकेन सङ्घिकेन अञ्ञं चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np7#1.13.0">
+         निस्सग्गिय पाचित्तिय ७। दुतियसङ्घिकचेतापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#44.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अञ्ञदत्थिकेन परिक्खारेन अञ्ञुद्दिसिकेन सङ्घिकेन सञ्ञाचिकेन अञ्ञं चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np8#1.14.0">
+         निस्सग्गिय पाचित्तिय ८। पठमगणिकचेतापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#45.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अञ्ञदत्थिकेन परिक्खारेन अञ्ञुद्दिसिकेन महाजनिकेन अञ्ञं चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np9#1.15.0">
+         निस्सग्गिय पाचित्तिय ९। दुतियगणिकचेतापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#46.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अञ्ञदत्थिकेन परिक्खारेन अञ्ञुद्दिसिकेन महाजनिकेन सञ्ञाचिकेन अञ्ञं चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np10#1.18.0">
+         निस्सग्गिय पाचित्तिय १०। पुग्गलिकचेतापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#47.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अञ्ञदत्थिकेन परिक्खारेन अञ्ञुद्दिसिकेन पुग्गलिकेन सञ्ञाचिकेन अञ्ञं चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        पत्तवग्गो पठमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#np2CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#np2CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        २। चीवरवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#४८।०।१"&gt;&lt;ह्४&gt;२। चीवरवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="np2CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-np2vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np11#1.21.0">
+         निस्सग्गिय पाचित्तिय ११। गरुपावुरणसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#48.0.2">
+         प्म्
+        </a>
+        गरुपावुरणं पन भिक्खुनिया चेतापेन्तिया चतुक्कंसपरमं चेतापेतब्बं। ततो चे उत्तरि चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-np12#1.21.0">
+         निस्सग्गिय पाचित्तिय १२। लहुपावुरणसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#49.0">
+         प्म्
+        </a>
+        लहुपावुरणं पन भिक्खुनिया चेतापेन्तिया अड्ढतेय्यकंसपरमं चेतापेतब्बं। ततो चे उत्तरि चेतापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#50.0">
+         निस्सग्गिय पाचित्तिय १३। कथिनसिक्खापदं
+        </a>
+        निट्ठितचीवरस्मिं भिक्खुनिया उब्भतस्मिं कथिने दसाहपरमं अतिरेकचीवरं धारेतब्बं। तं अतिक्कामेन्तिया, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#51.0">
+         निस्सग्गिय पाचित्तिय १४। उदोसितसिक्खापदं
+        </a>
+        निट्ठितचीवरस्मिं भिक्खुनिया उब्भतस्मिं कथिने एकरत्तम्पि चे भिक्खुनी तिचीवरेन विप्पवसेय्य, अञ्ञत्र भिक्खुनिसम्मुतिया निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#52.0">
+         निस्सग्गिय पाचित्तिय १५। अकालचीवरसिक्खापदं
+        </a>
+        निट्ठितचीवरस्मिं भिक्खुनिया उब्भतस्मिं कथिने भिक्खुनिया पनेव अकालचीवरं उप्पज्जेय्य, आकङ्खमानाय भिक्खुनिया पटिग्गहेतब्बं, पटिग्गहेत्वा खिप्पमेव कारेतब्बं, नो चस्स पारिपूरि, मासपरमं ताय भिक्खुनिया तं चीवरं निक्खिपितब्बं ऊनस्स पारिपूरिया सतिया पच्चासाय। ततो चे उत्तरि निक्खिपेय्य सतियापि पच्चासाय, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#53.0">
+         निस्सग्गिय पाचित्तिय १६। अञ्ञातकविञ्ञत्तिसिक्खापदं
+        </a>
+        या पन भिक्खुनी अञ्ञातकं गहपतिं वा गहपतानिं वा चीवरं विञ्ञापेय्य अञ्ञत्र समया, निस्सग्गियं पाचित्तियं। तत्थायं समयो अच्छिन्नचीवरा वा होति भिक्खुनी, नट्ठचीवरा वा, अयं तत्थ समयो।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#54.0">
+         निस्सग्गिय पाचित्तिय १७। ततुत्तरिसिक्खापदं
+        </a>
+        तञ्चे अञ्ञातको गहपति वा गहपतानी वा बहूहि चीवरेहि अभिहट्ठुं पवारेय्य, सन्तरुत्तरपरमं ताय भिक्खुनिया ततो चीवरं सादितब्बं। ततो चे उत्तरि सादियेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#55.0">
+         निस्सग्गिय पाचित्तिय १८। पठमौपक्खटसिक्खापदं
+        </a>
+        भिक्खुनिं पनेव उद्दिस्स अञ्ञातकस्स गहपतिस्स वा गहपतानिया वा चीवरचेतापन्नं उपक्खटं होति: “इमिना चीवरचेतापन्नेन चीवरं चेतापेत्वा इत्थन्नामं भिक्खुनिं चीवरेन अच्छादेस्सामी”ति। तत्र चेसा भिक्खुनी पुब्बे अप्पवारिता उपसङ्कमित्वा चीवरे विकप्पं आपज्जेय्य: “साधु वत, मं आयस्मा इमिना चीवरचेतापन्नेन एवरूपं वा एवरूपं वा चीवरं चेतापेत्वा अच्छादेही”ति कल्याणकम्यतं उपादाय, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#56.0">
+         निस्सग्गिय पाचित्तिय १९। दुतियौपक्खटसिक्खापदं
+        </a>
+        भिक्खुनिं पनेव उद्दिस्स उभिन्नं अञ्ञातकानं गहपतीनं वा गहपतानीनं वा पच्चेकचीवरचेतापन्नानि उपक्खटानि होन्ति: “इमेहि मयं पच्चेकचीवरचेतापन्नेहि पच्चेकचीवरानि चेतापेत्वा इत्थन्नामं भिक्खुनिं चीवरेहि अच्छादेस्सामा”ति। तत्र चेसा भिक्खूनी पुब्बे अप्पवारिता उपसङ्कमित्वा चीवरे विकप्पं आपज्जेय्य: “साधु वत मं आयस्मन्तो इमेहि पच्चेकचीवरचेतापन्नेहि एवरूपं वा एवरूपं वा चीवरं चेतापेत्वा अच्छादेथ उभोव सन्ता एकेना”ति कल्याणकम्यतं उपादाय, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#57.0">
+         निस्सग्गिय पाचित्तिय २०। राजसिक्खापदं
+        </a>
+        भिक्खुनिं पनेव उद्दिस्स राजा वा राजभोग्गो वा ब्राह्मणो वा गहपतिको वा दूतेन चीवरचेतापन्नं पहिणेय्य: “इमिना चीवरचेतापन्नेन चीवरं चेतापेत्वा इत्थन्नामं भिक्खुनिं चीवरेन अच्छादेही”ति। सो चे दूतो तं भिक्खुनिं उपसङ्कमित्वा एवं वदेय्य: “इदं खो, अय्ये, अय्यं उद्दिस्स चीवरचेतापन्नं आभतं, पटिग्गण्हाताय्या चीवरचेतापन्न”न्ति। ताय भिक्खुनिया सो दूतो एवमस्स वचनीयो: “न खो मयं, आवुसो, चीवरचेतापन्नं पटिग्गण्हाम, चीवरञ्च खो मयं पटिग्गण्हाम कालेन कप्पिय”न्ति। सो चे दूतो तं भिक्खुनिं एवं वदेय्य: “अत्थि पनाय्याय, कोचि वेय्यावच्चकरो”ति, चीवरत्थिकाय, भिक्खवे, भिक्खुनिया वेय्यावच्चकरो निद्दिसितब्बो आरामिको वा उपासको वा: “एसो खो, आवुसो, भिक्खुनीनं वेय्यावच्चकरो”ति। सो चे दूतो तं वेय्यावच्चकरं सञ्ञापेत्वा तं भिक्खुनिं उपसङ्कमित्वा एवं वदेय्य: “यं खो, अय्ये, अय्या वेय्यावच्चकरं निद्दिसि, सञ्ञत्तो सो मया, उपसङ्कमताय्या कालेन, चीवरेन तं अच्छादेस्सती”ति। चीवरत्थिकाय, भिक्खवे, भिक्खुनिया वेय्यावच्चकरो उपसङ्कमित्वा द्वत्तिक्खत्तुं चोदेतब्बो सारेतब्बो: “अत्थो मे, आवुसो, चीवरेना”ति, द्वत्तिक्खत्तुं चोदयमाना सारयमाना तं चीवरं अभिनिप्फादेय्य, इच्चेतं कुसलं, नो चे अभिनिप्फादेय्य, चतुक्खत्तुं पञ्चक्खत्तुं छक्खत्तुपरमं तुण्हीभूताय उद्दिस्स ठातब्बं, चतुक्खत्तुं पञ्चक्खत्तुं छक्खत्तुपरमं तुण्हीभूता उद्दिस्स तिट्ठमाना तं चीवरं अभिनिप्फादेय्य, इच्चेतं कुसलं। ततो चे उत्तरि वायममाना तं चीवरं अभिनिप्फादेय्य, निस्सग्गियं पाचित्तियं। नो चे अभिनिप्फादेय्य, यतस्सा चीवरचेतापन्नं आभतं, तत्थ सामं वा गन्तब्बं, दूतो वा पाहेतब्बो: “यं खो तुम्हे आयस्मन्तो भिक्खुनिं उद्दिस्स चीवरचेतापन्नं पहिणित्थ, न तं तस्सा भिक्खुनिया किञ्चि अत्थं अनुभोति, युञ्जन्तायस्मन्तो सकं, मा वो सकं विनस्सा”ति, अयं तत्थ सामीचि।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        चीवरवग्गो दुतियो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#np3CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#np3CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ३। पत्तवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#५८।०।१"&gt;&lt;ह्४&gt;३। पत्तवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="np3CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-np3vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#58.0.2">
+         निस्सग्गिय पाचित्तिय २१। रूपियसिक्खापदं
+        </a>
+        या पन भिक्खुनी जातरूपरजतं उग्गण्हेय्य वा उग्गण्हापेय्य वा उपनिक्खित्तं वा सादियेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#59.0">
+         निस्सग्गिय पाचित्तिय २२। रूपियसंवोहारसिक्खापदं
+        </a>
+        या पन भिक्खुनी नानप्पकारकं रूपियसंवोहारं समापज्जेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#60.0">
+         निस्सग्गिय पाचित्तिय २३। कयविक्कयसिक्खापदं
+        </a>
+        या पन भिक्खुनी नानप्पकारकं कयविक्कयं समापज्जेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#61.0">
+         निस्सग्गिय पाचित्तिय २४। ऊनपञ्चबन्धनसिक्खापदं
+        </a>
+        या पन भिक्खुनी ऊनपञ्चबन्धनेन पत्तेन अञ्ञं नवं पत्तं चेतापेय्य, निस्सग्गियं पाचित्तियं। ताय भिक्खुनिया सो पत्तो भिक्खुनिपरिसाय निस्सज्जितब्बो, यो च तस्सा भिक्खुनिपरिसाय पत्तपरियन्तो, सो तस्सा भिक्खुनिया पदातब्बो: “अयं ते भिक्खुनि पत्तो यावभेदनाय धारेतब्बो”ति, अयं तत्थ सामीचि।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#62.0">
+         निस्सग्गिय पाचित्तिय २५। भेसज्जसिक्खापदं
+        </a>
+        यानि खो पन तानि गिलानानं भिक्खुनीनं पटिसायनीयानि भेसज्जानि, सेय्यथिदं: सप्पि नवनीतं तेलं मधु फाणितं, तानि पटिग्गहेत्वा सत्ताहपरमं सन्निधिकारकं परिभुञ्जितब्बानि। तं अतिक्कामेन्तिया, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#63.0">
+         निस्सग्गिय पाचित्तिय २६। चीवरअच्छिन्दनसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिया सामं चीवरं दत्वा कुपिता अनत्तमना अच्छिन्देय्य वा अच्छिन्दापेय्य वा, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#64.0">
+         निस्सग्गिय पाचित्तिय २७। सुत्तविञ्ञत्तिसिक्खापदं
+        </a>
+        या पन भिक्खुनी सामं सुत्तं विञ्ञापेत्वा तन्तवायेहि चीवरं वायापेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#65.0">
+         निस्सग्गिय पाचित्तिय २८। महापेसकारसिक्खापदं
+        </a>
+        भिक्खुनिं पनेव उद्दिस्स अञ्ञातको गहपति वा गहपतानी वा तन्तवायेहि चीवरं वायापेय्य, तत्र चेसा भिक्खुनी पुब्बे अप्पवारिता तन्तवाये उपसङ्कमित्वा चीवरे विकप्पं आपज्जेय्य: “इदं खो आवुसो चीवरं मं उद्दिस्स विय्यति, आयतञ्च करोथ, वित्थतञ्च अप्पितञ्च सुवीतञ्च सुप्पवायितञ्च सुविलेखितञ्च सुवितच्छितञ्च करोथ, अप्पेव नाम मयम्पि आयस्मन्तानं किञ्चिमत्तं अनुपदज्जेय्यामा”ति, एवञ्च सा भिक्खुनी वत्वा किञ्चिमत्तं अनुपदज्जेय्य अन्तमसो पिण्डपातमत्तम्पि, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#66.0">
+         निस्सग्गिय पाचित्तिय २९। अच्चेकचीवरसिक्खापदं
+        </a>
+        दसाहानागतं कत्तिकतेमासिकपुण्णमं भिक्खुनिया पनेव अच्चेकचीवरं उप्पज्जेय्य, अच्चेकं मञ्ञमानाय भिक्खुनिया पटिग्गहेतब्बं, पटिग्गहेत्वा याव चीवरकालसमयं निक्खिपितब्बं। ततो चे उत्तरि निक्खिपेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#67.0">
+         निस्सग्गिय पाचित्तिय ३०। परिणतसिक्खापदं
+        </a>
+        या पन भिक्खुनी जानं सङ्घिकं लाभं परिणतं अत्तनो परिणामेय्य, निस्सग्गियं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        पत्तवग्गो ततियो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      उद्दिट्ठा खो, अय्यायो, तिंस निस्सग्गिया पाचित्तिया धम्मा।
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा,
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      निस्सग्गियपाचित्तिया निट्ठिता।
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+  </div>
+  चोल्लप्सेदिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pcCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#pcCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     सुद्धपाचित्तिया
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#६५।०
+  </div>
+  <div class="collapse" id="pcCollapseBi">
+   <div class="mt-3">
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      इमे खो पनाय्यायो, छसट्ठिसता पाचित्तिया धम्मा उद्देसं आगच्छन्ति।
+     </span>
+    </div>
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc1CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc1CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १। लसुणवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#७०।०।१"&gt;&lt;ह्४&gt;१। लसुणवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc1CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc1vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc1#1.41.0">
+         पाचित्तिय १। लसुणसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#70.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी लसुणं खादेय्य पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc2#1.14.0">
+         पाचित्तिय २। सम्बाधलोमसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#71.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सम्बाधे लोमं संहरापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc3#1.14.0">
+         पाचित्तिय ३। तलघातकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#72.0">
+         प्म्
+        </a>
+        तलघातके पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc4#1.21.0">
+         पाचित्तिय ४। जतुमट्ठकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#73.0">
+         प्म्
+        </a>
+        जतुमट्ठके पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc5#1.2.12.0">
+         पाचित्तिय ५। उदकसुद्धिकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#74.0">
+         प्म्
+        </a>
+        उदकसुद्धिकं पन भिक्खुनिया आदियमानाय द्वङ्गुलपब्बपरमं आदातब्बं। तं अतिक्कामेन्तिया पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc6#1.19.0">
+         पाचित्तिय ६। उपतिट्ठनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#75.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुस्स भुञ्जन्तस्स पानीयेन वा विधूपनेन वा उपतिट्ठेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc7#1.14.0">
+         पाचित्तिय ७। आमकधञ्ञसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#76.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी आमकधञ्ञं विञ्ञत्वा वा विञ्ञापेत्वा वा भज्जित्वा वा भज्जापेत्वा वा कोट्टेत्वा वा कोट्टापेत्वा वा पचित्वा वा पचापेत्वा वा भुञ्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc8#1.26.0">
+         पाचित्तिय ८। पठमौच्चारछड्डनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#77.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी उच्चारं वा पस्सावं वा सङ्कारं वा विघासं वा तिरोकुट्टे वा तिरोपाकारे वा छड्डेय्य वा छड्डापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc9#1.15.0">
+         पाचित्तिय ९। दुतियौच्चारछड्डनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#78.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी उच्चारं वा पस्सावं वा सङ्कारं वा विघासं वा हरिते छड्डेय्य वा छड्डापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc10#1.15.0">
+         पाचित्तिय १०। नच्चगीतसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#79.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी नच्चं वा गीतं वा वादितं वा दस्सनाय गच्छेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        लसुणवग्गो पठमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc2CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc2CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        २। रत्तन्धकारवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#८०।०।१"&gt;&lt;ह्४&gt;२। रत्तन्धकारवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc2CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc2vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc11#1.12.0">
+         पाचित्तिय ११। रत्तन्धकारसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#80.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी रत्तन्धकारे अप्पदीपे पुरिसेन सद्धिं एकेनेका सन्तिट्ठेय्य वा सल्लपेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc12#1.13.0">
+         पाचित्तिय १२। पटिच्छन्नोकाससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#81.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पटिच्छन्ने ओकासे पुरिसेन सद्धिं एकेनेका सन्तिट्ठेय्य वा सल्लपेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc13#1.13.0">
+         पाचित्तिय १३। अज्झोकाससल्लपनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#82.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अज्झोकासे पुरिसेन सद्धिं एकेनेका सन्तिट्ठेय्य वा सल्लपेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc14#1.11.0">
+         पाचित्तिय १४। दुतियिकौय्योजनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#83.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी रथिकाय वा ब्यूहे वा सिङ्घाटके वा पुरिसेन सद्धिं एकेनेका सन्तिट्ठेय्य वा सल्लपेय्य वा निकण्णिकं वा जप्पेय्य दुतियिकं वा भिक्खुनिं उय्योजेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc15#1.19.0">
+         पाचित्तिय १५। अनापुच्छापक्कमनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#84.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पुरेभत्तं कुलानि उपसङ्कमित्वा आसने निसीदित्वा सामिके अनापुच्छा पक्कमेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc16#1.15.0">
+         पाचित्तिय १६। अनापुच्छाअभिनिसीदनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#85.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पच्छाभत्तं कुलानि उपसङ्कमित्वा सामिके अनापुच्छा आसने अभिनिसीदेय्य वा अभिनिपज्जेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc17#1.20.0">
+         पाचित्तिय १७। अनापुच्छासन्थरणसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#86.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी विकाले कुलानि उपसङ्कमित्वा सामिके अनापुच्छा सेय्यं सन्थरित्वा वा सन्थरापेत्वा वा अभिनिसीदेय्य वा अभिनिपज्जेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc18#1.15.0">
+         पाचित्तिय १८। परौज्झापनकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#87.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी दुग्गहितेन दूपधारितेन परं उज्झापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc19#1.17.0">
+         पाचित्तिय १९। परअभिसपनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#88.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अत्तानं वा परं वा निरयेन वा ब्रह्मचरियेन वा अभिसपेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc20#1.11.0">
+         पाचित्तिय २०। रोदनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#89.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अत्तानं वधित्वा वधित्वा रोदेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        रत्तन्धकारवग्गो दुतियो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc3CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc3CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ३। नग्गवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#९०।०।१"&gt;&lt;ह्४&gt;३। नग्गवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc3CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc3vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc21#1.16.0">
+         पाचित्तिय २१। नग्गसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#90.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी नग्गा नहायेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc22#1.14.0">
+         पाचित्तिय २२। उदकसाटिकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#91.0">
+         प्म्
+        </a>
+        उदकसाटिकं पन भिक्खुनिया कारयमानाय पमाणिका कारेतब्बा, तत्रिदं पमाणं, दीघसो चतस्सो विदत्थियो सुगतविदत्थिया, तिरियं द्वे विदत्थियो। तं अतिक्कामेन्तिया छेदनकं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc23#1.20.0">
+         पाचित्तिय २३। चीवरसिब्बनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#92.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुनिया चीवरं विसिब्बेत्वा वा विसिब्बापेत्वा वा सा पच्छा अनन्तरायिकिनी नेव सिब्बेय्य, न सिब्बापनाय उस्सुक्कं करेय्य अञ्ञत्र चतूहपञ्चाहा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc24#1.16.0">
+         पाचित्तिय २४। सङ्घाटिचारसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#93.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पञ्चाहिकं सङ्घाटिचारं अतिक्कामेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc25#1.18.0">
+         पाचित्तिय २५। चीवरसङ्कमनीयसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#94.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी चीवरसङ्कमनीयं धारेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc26#1.19.0">
+         पाचित्तिय २६। गणचीवरसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#95.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी गणस्स चीवरलाभं अन्तरायं करेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc27#1.18.0">
+         पाचित्तिय २७। पटिबाहनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#96.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी धम्मिकं चीवरविभङ्गं पटिबाहेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc28#1.15.0">
+         पाचित्तिय २८। चीवरदानसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#97.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अगारिकस्स वा परिब्बाजकस्स वा परिब्बाजिकाय वा समणचीवरं ददेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc29#1.21.0">
+         पाचित्तिय २९। कालअतिक्कमनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#98.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी दुब्बलचीवरपच्चासाय चीवरकालसमयं अतिक्कामेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc30#1.2.15.0">
+         पाचित्तिय ३०। कथिनुद्धारसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#99.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी धम्मिकं कथिनुद्धारं पटिबाहेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        नग्गवग्गो ततियो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc4CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc4CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ४। तुवट्टवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१००।०।१"&gt;&lt;ह्४&gt;४। तुवट्टवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc4CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc4vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc31#1.14.0">
+         पाचित्तिय ३१। एकमञ्चतुवट्टनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#100.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनियो द्वे एकमञ्चे तुवट्टेय्युं, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc32#1.14.0">
+         पाचित्तिय ३२। एकत्थरणतुवट्टनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#101.0">
+         प्म्
+        </a>
+        या पन भिक्खुनियो द्वे एकत्थरणपावुरणा तुवट्टेय्युं, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc33#1.16.0">
+         पाचित्तिय ३३। अफासुकरणसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#102.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुनिया सञ्चिच्च अफासुं करेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc34#1.11.0">
+         पाचित्तिय ३४। नौपट्ठापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#103.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी दुक्खितं सहजीविनिं नेव उपट्ठहेय्य, न उपट्ठापनाय उस्सुक्कं करेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc35#1.23.0">
+         पाचित्तिय ३५। निक्कड्ढनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#104.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुनिया उपस्सयं दत्वा कुपिता अनत्तमना निक्कड्ढेय्य वा निक्कड्ढापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc36#1.11.0">
+         पाचित्तिय ३६। संसट्ठसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#105.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी संसट्ठा विहरेय्य गहपतिना वा गहपतिपुत्तेन वा, सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्ये, संसट्ठा विहरि गहपतिनापि गहपतिपुत्तेनापि, विविच्चाय्ये, विवेकञ्ञेव भगिनिया सङ्घो वण्णेती”ति। एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय, यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं। नो चे पटिनिस्सज्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc37#1.12.0">
+         पाचित्तिय ३७। अन्तोरट्ठसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#106.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अन्तोरट्ठे सासङ्कसम्मते सप्पटिभये असत्थिका चारिकं चरेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc38#1.12.0">
+         पाचित्तिय ३८। तिरोरट्ठसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#107.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी तिरोरट्ठे सासङ्कसम्मते सप्पटिभये असत्थिका चारिकं चरेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc39#1.14.0">
+         पाचित्तिय ३९। अन्तोवस्ससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#108.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अन्तोवस्सं चारिकं चरेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc40#1.13.0">
+         पाचित्तिय ४०। चारिकनपक्कमनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#109.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी वस्संवुट्ठा चारिकं न पक्कमेय्य अन्तमसो छप्पञ्चयोजनानिपि, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        तुवट्टवग्गो चतुत्थो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc5CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc5CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ५। चित्तागारवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#११०।०।१"&gt;&lt;ह्४&gt;५। चित्तागारवग्गो&lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc5CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc5vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc41#1.16.0">
+         पाचित्तिय ४१। राजागारसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#110.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी राजागारं वा चित्तागारं वा आरामं वा उय्यानं वा पोक्खरणिं वा दस्सनाय गच्छेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc42#1.14.0">
+         पाचित्तिय ४२। आसन्दिपरिभुञ्जनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#111.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी आसन्दिं वा पल्लङ्कं वा परिभुञ्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc43#1.14.0">
+         पाचित्तिय ४३। सुत्तकन्तनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#112.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सुत्तं कन्तेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc44#1.11.0">
+         पाचित्तिय ४४। गिहिवेय्यावच्चसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#113.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी गिहिवेय्यावच्चं करेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc45#1.21.0">
+         पाचित्तिय ४५। अधिकरणसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#114.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुनिया: “एहाय्ये, इमं अधिकरणं वूपसमेही”ति वुच्चमाना: “साधू”ति पटिस्सुणित्वा सा पच्छा अनन्तरायिकिनी नेव वूपसमेय्य, न वूपसमाय उस्सुक्कं करेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc46#1.15.0">
+         पाचित्तिय ४६। भोजनदानसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#115.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अगारिकस्स वा परिब्बाजकस्स वा परिब्बाजिकाय वा सहत्था खादनीयं वा भोजनीयं वा ददेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc47#1.12.0">
+         पाचित्तिय ४७। आवसथचीवरसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#116.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी आवसथचीवरं अनिस्सज्जेत्वा परिभुञ्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc48#1.22.0">
+         पाचित्तिय ४८। आवसथविहारसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#117.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी आवसथं अनिस्सज्जित्वा चारिकं पक्कमेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc49#1.14.0">
+         पाचित्तिय ४९। तिरच्छानविज्जापरियापुणनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#118.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी तिरच्छानविज्जं परियापुणेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc50#1.14.0">
+         पाचित्तिय ५०। तिरच्छानविज्जावाचनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#119.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी तिरच्छानविज्जं वाचेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        चित्तागारवग्गो पञ्चमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc6CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc6CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ६। आरामवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१२०।०।१"&gt;&lt;ह्४&gt;६। आरामवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc6CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc6vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc51#3.9.0">
+         पाचित्तिय ५१। आरामपविसनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#120.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी जानं सभिक्खुकं आरामं अनापुच्छा पविसेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc52#1.29.0">
+         पाचित्तिय ५२। भिक्खुअक्कोसनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#121.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुं अक्कोसेय्य वा परिभासेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc53#1.27.0">
+         पाचित्तिय ५३। गणपरिभासनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#122.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी चण्डीकता गणं परिभासेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc54#1.20.0">
+         पाचित्तिय ५४। पवारितसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#123.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी निमन्तिता वा पवारिता वा खादनीयं वा भोजनीयं वा खादेय्य वा भुञ्जेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc55#1.21.0">
+         पाचित्तिय ५५। कुलमच्छरिनीसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#124.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी कुलमच्छरिनी अस्स, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc56#1.16.0">
+         पाचित्तिय ५६। अभिक्खुकावाससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#125.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अभिक्खुके आवासे वस्सं वसेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc57#1.15.0">
+         पाचित्तिय ५७। अपवारणासिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#126.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी वस्संवुट्ठा उभतोसङ्घे तीहि ठानेहि न पवारेय्य दिट्ठेन वा सुतेन वा परिसङ्काय वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc58#1.14.0">
+         पाचित्तिय ५८। ओवादसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#127.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी ओवादाय वा संवासाय वा न गच्छेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc59#1.11.0">
+         पाचित्तिय ५९। ओवादूपसङ्कमनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#128.0">
+         प्म्
+        </a>
+        अन्वद्धमासं भिक्खुनिया भिक्खुसङ्घतो द्वे धम्मा पच्चासीसितब्बा उपोसथपुच्छकञ्च ओवादूपसङ्कमनञ्च। तं अतिक्कामेन्तिया पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc60#1.16.0">
+         पाचित्तिय ६०। पसाखेजातसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#129.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पसाखे जातं गण्डं वा रुधितं वा अनपलोकेत्वा सङ्घं वा गणं वा पुरिसेन सद्धिं एकेनेका भेदापेय्य वा फालापेय्य वा धोवापेय्य वा आलिम्पापेय्य वा बन्धापेय्य वा मोचापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        आरामवग्गो छट्ठो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc7CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc7CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ७। गब्भिनिवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१३०।०।१"&gt;&lt;ह्४&gt;७। गब्भिनिवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc7CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc7vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc61#1.17.0">
+         पाचित्तिय ६१। गब्भिनीसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#130.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी गब्भिनिं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc62#1.17.0">
+         पाचित्तिय ६२। पायन्तीसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#131.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पायन्तिं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc63#1.41.0">
+         पाचित्तिय ६३। पठमसिक्खमानसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#132.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी द्वे वस्सानि छसु धम्मेसु असिक्खितसिक्खं सिक्खमानं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc64#1.36.0">
+         पाचित्तिय ६४। दुतियसिक्खमानसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#133.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी द्वे वस्सानि छसु धम्मेसु सिक्खितसिक्खं सिक्खमानं सङ्घेन असम्मतं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc65#1.17.0">
+         पाचित्तिय ६५। पठमगिहिगतसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#134.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी ऊनद्वादसवस्सं गिहिगतं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc66#1.35.0">
+         पाचित्तिय ६६। दुतियगिहिगतसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#135.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी परिपुण्णद्वादसवस्सं गिहिगतं द्वे वस्सानि छसु धम्मेसु असिक्खितसिक्खं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc67#1.36.0">
+         पाचित्तिय ६७। ततियगिहिगतसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#136.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी परिपुण्णद्वादसवस्सं गिहिगतं द्वे वस्सानि छसु धम्मेसु सिक्खितसिक्खं सङ्घेन असम्मतं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc68#1.13.0">
+         पाचित्तिय ६८। पठमसहजीविनीसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#137.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सहजीविनिं वुट्ठापेत्वा द्वे वस्सानि नेव अनुग्गण्हेय्य न अनुग्गण्हापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc69#1.13.0">
+         पाचित्तिय ६९। पवत्तिनीनानुबन्धनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#138.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी वुट्ठापितं पवत्तिनिं द्वे वस्सानि नानुबन्धेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc70#1.13.0">
+         पाचित्तिय ७०। दुतियसहजीविनीसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#139.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सहजीविनिं वुट्ठापेत्वा नेव वूपकासेय्य न वूपकासापेय्य अन्तमसो छप्पञ्चयोजनानिपि, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        गब्भिनिवग्गो सत्तमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc8CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc8CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ८। कुमारिभूतवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१४०।०।१"&gt;&lt;ह्४&gt;८। कुमारिभूतवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc8CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc8vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc71#1.17.0">
+         पाचित्तिय ७१। पठमकुमारिभूतसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#140.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी ऊनवीसतिवस्सं कुमारिभूतं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc72#1.37.0">
+         पाचित्तिय ७२। दुतियकुमारिभूतसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#141.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी परिपुण्णवीसतिवस्सं कुमारिभूतं द्वे वस्सानि छसु धम्मेसु असिक्खितसिक्खं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc73#1.36.0">
+         पाचित्तिय ७३। ततियकुमारिभूतसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#142.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी परिपुण्णवीसतिवस्सं कुमारिभूतं द्वे वस्सानि छसु धम्मेसु सिक्खितसिक्खं सङ्घेन असम्मतं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc74#1.14.0">
+         पाचित्तिय ७४। ऊनद्वादसवस्ससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#143.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी ऊनद्वादसवस्सा वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc75#1.42.0">
+         पाचित्तिय ७५। परिपुण्णद्वादसवस्ससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#144.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी परिपुण्णद्वादसवस्सा सङ्घेन असम्मता वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc76#1.20.0">
+         पाचित्तिय ७६। खिय्यनधम्मसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#145.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी, “अलं ताव ते, अय्ये, वुट्ठापितेना”ति वुच्चमाना, “साधू”ति पटिस्सुणित्वा सा पच्छा खिय्यनधम्मं आपज्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc77#1.17.0">
+         पाचित्तिय ७७। पठमसिक्खमाननवुट्ठापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#146.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सिक्खमानं, “सचे मे त्वं, अय्ये, चीवरं दस्ससि, एवाहं तं वुट्ठापेस्सामी”ति वत्वा सा पच्छा अनन्तरायिकिनी नेव वुट्ठापेय्य, न वुट्ठापनाय उस्सुक्कं करेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc78#1.16.0">
+         पाचित्तिय ७८। दुतियसिक्खमाननवुट्ठापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#147.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सिक्खमानं, “सचे मं त्वं, अय्ये, द्वे वस्सानि अनुबन्धिस्ससि, एवाहं तं वुट्ठापेस्सामी”ति वत्वा सा पच्छा अनन्तरायिकिनी नेव वुट्ठापेय्य, न वुट्ठापनाय उस्सुक्कं करेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc79#1.11.0">
+         पाचित्तिय ७९। सोकावाससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#148.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पुरिससंसट्ठं कुमारकसंसट्ठं चण्डिं सोकावासं सिक्खमानं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc80#1.14.0">
+         पाचित्तिय ८०। अननुञ्ञातसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#149.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी मातापितूहि वा सामिकेन वा अननुञ्ञातं सिक्खमानं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc81#1.13.0">
+         पाचित्तिय ८१। पारिवासिकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#150.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी पारिवासिकछन्ददानेन सिक्खमानं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc82#1.14.0">
+         पाचित्तिय ८२। अनुवस्ससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#151.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अनुवस्सं वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc83#1.16.0">
+         पाचित्तिय ८३। एकवस्ससिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#152.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी एकं वस्सं द्वे वुट्ठापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        कुमारिभूतवग्गो अट्ठमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc9CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc9CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ९। छत्तुपाहनवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१५३।०।१"&gt;&lt;ह्४&gt;९। छत्तुपाहनवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc9CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc10vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc84#1.2.6.0">
+         पाचित्तिय ८४। छत्तुपाहनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#153.0.2">
+         प्म्
+        </a>
+        या पन भिक्खुनी अगिलाना छत्तुपाहनं धारेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc85#1.2.5.0">
+         पाचित्तिय ८५। यानसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#154.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अगिलाना यानेन यायेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc86#1.19.0">
+         पाचित्तिय ८६। सङ्घाणिसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#155.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सङ्घाणिं धारेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc87#1.14.0">
+         पाचित्तिय ८७। इत्थालङ्कारसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#156.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी इत्थालङ्कारं धारेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc88#1.14.0">
+         पाचित्तिय ८८। गन्धवण्णकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#157.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी गन्धवण्णकेन नहायेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc89#1.14.0">
+         पाचित्तिय ८९। वासितकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#158.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी वासितकेन पिञ्ञाकेन नहायेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc90#1.14.0">
+         पाचित्तिय ९०। भिक्खुनिउम्मद्दापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#159.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुनिया उम्मद्दापेय्य वा परिमद्दापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc91-93#1.13.0">
+         पाचित्तिय ९१। सिक्खमानौम्मद्दापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#160.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सिक्खमानाय उम्मद्दापेय्य वा परिमद्दापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc91-93#1.13.0">
+         पाचित्तिय ९२। सामणेरीउम्मद्दापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#161.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी सामणेरिया उम्मद्दापेय्य वा परिमद्दापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc91-93#1.13.0">
+         पाचित्तिय ९३। गिहिनिउम्मद्दापनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#162.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी गिहिनिया उम्मद्दापेय्य वा परिमद्दापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc94#1.11.0">
+         पाचित्तिय ९४। अनापुच्छासिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#163.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी भिक्खुस्स पुरतो अनापुच्छा आसने निसीदेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc95#1.11.0">
+         पाचित्तिय ९५। पञ्हापुच्छनसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#164.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी अनोकासकतं भिक्खुं पञ्हं पुच्छेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pc96#1.16.0">
+         पाचित्तिय ९६। असङ्कच्चिकसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#165.0">
+         प्म्
+        </a>
+        या पन भिक्खुनी असङ्कच्चिका गामं पविसेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        छत्तुपाहनवग्गो नवमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc10CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc10CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १०। मुसावादवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१६६।०।१"&gt;&lt;ह्४&gt;१०। मुसावादवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc10CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc10vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#166.0.2">
+         पाचित्तिय ९७। मुसावादसिक्खापदं
+        </a>
+        सम्पजानमुसावादे पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#167.0">
+         पाचित्तिय ९८। ओमसवादसिक्खापदं
+        </a>
+        ओमसवादे पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#168.0">
+         पाचित्तिय ९९। पेसुञ्ञसिक्खापदं
+        </a>
+        भिक्खुनिपेसुञ्ञे पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#169.0">
+         पाचित्तिय १००। पदसोधम्मसिक्खापदं
+        </a>
+        या पन भिक्खुनी अनुपसम्पन्नं पदसो धम्मं वाचेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#170.0">
+         पाचित्तिय १०१। पठमसहसेय्यसिक्खापदं
+        </a>
+        या पन भिक्खुनी अनुपसम्पन्नाय उत्तरिदिरत्ततिरत्तं सहसेय्यं कप्पेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#171.0">
+         पाचित्तिय १०२। दुतियसहसेय्यसिक्खापदं
+        </a>
+        या पन भिक्खुनी पुरिसेन सहसेय्यं कप्पेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#172.0">
+         पाचित्तिय १०३। धम्मदेसनासिक्खापदं
+        </a>
+        या पन भिक्खुनी पुरिसस्स उत्तरिछप्पञ्चवाचाहि धम्मं देसेय्य अञ्ञत्र विञ्ञुना इत्थिविग्गहेन, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#173.0">
+         पाचित्तिय १०४। भूतारोचनसिक्खापदं
+        </a>
+        या पन भिक्खुनी अनुपसम्पन्नाय उत्तरिमनुस्सधम्मं आरोचेय्य, भूतस्मिं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#174.0">
+         पाचित्तिय १०५। दुट्ठुल्लारोचनसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिया दुट्ठुल्लं आपत्तिं अनुपसम्पन्नाय आरोचेय्य अञ्ञत्र भिक्खुनिसम्मुतिया, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#175.0">
+         पाचित्तिय १०६। पथवीखणनसिक्खापदं
+        </a>
+        या पन भिक्खुनी पथविं खणेय्य वा खणापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        मुसावादवग्गो दसमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc11CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc11CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        ११। भूतगामवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१७६।०।१"&gt;&lt;ह्४&gt;११। भूतगामवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc11CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc11vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#176.0.2">
+         पाचित्तिय १०७। भूतगामसिक्खापदं
+        </a>
+        भूतगामपातब्यताय पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#177.0">
+         पाचित्तिय १०८। अञ्ञवादकसिक्खापदं
+        </a>
+        अञ्ञवादके, विहेसके पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#178.0">
+         पाचित्तिय १०९। उज्झापनकसिक्खापदं
+        </a>
+        उज्झापनके, खिय्यनके पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#179.0">
+         पाचित्तिय ११०। पठमसेनासनसिक्खापदं
+        </a>
+        या पन भिक्खुनी सङ्घिकं मञ्चं वा पीठं वा भिसिं वा कोच्छं वा अज्झोकासे सन्थरित्वा वा सन्थरापेत्वा वा तं पक्कमन्ती नेव उद्धरेय्य, न उद्धरापेय्य, अनापुच्छं वा गच्छेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#180.0">
+         पाचित्तिय १११। दुतियसेनासनसिक्खापदं
+        </a>
+        या पन भिक्खुनी सङ्घिके विहारे सेय्यं सन्थरित्वा वा सन्थरापेत्वा वा तं पक्कमन्ती नेव उद्धरेय्य, न उद्धरापेय्य, अनापुच्छं वा गच्छेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#181.0">
+         पाचित्तिय ११२। अनुपखज्जसिक्खापदं
+        </a>
+        या पन भिक्खुनी सङ्घिके विहारे जानं पुब्बुपगतं भिक्खुनिं अनुपखज्ज सेय्यं कप्पेय्य, “यस्सा सम्बाधो भविस्सति, सा पक्कमिस्सती”ति एतदेव पच्चयं करित्वा अनञ्ञं, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#182.0">
+         पाचित्तिय ११३। निक्कड्ढनसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिं कुपिता अनत्तमना सङ्घिका विहारा निक्कड्ढेय्य वा निक्कड्ढापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#183.0">
+         पाचित्तिय ११४। वेहासकुटिसिक्खापदं
+        </a>
+        या पन भिक्खुनी सङ्घिके विहारे उपरिवेहासकुटिया आहच्चपादकं मञ्चं वा पीठं वा अभिनिसीदेय्य वा अभिनिपज्जेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#184.0">
+         पाचित्तिय ११५। महल्लकविहारसिक्खापदं
+        </a>
+        महल्लकं पन भिक्खुनिया विहारं कारयमानाय याव द्वारकोसा अग्गळट्ठपनाय, आलोकसन्धिपरिकम्माय द्वत्तिच्छदनस्स परियायं अप्पहरिते ठिताय अधिट्ठातब्बं। ततो चे उत्तरि अप्पहरितेपि ठिता अधिट्ठहेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#185.0">
+         पाचित्तिय ११६। सप्पाणकसिक्खापदं
+        </a>
+        या पन भिक्खुनी जानं सप्पाणकं उदकं तिणं वा मत्तिकं वा सिञ्चेय्य वा सिञ्चापेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        भूतगामवग्गो एकादसमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc12CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc12CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १२। भोजनवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१८६।०।१"&gt;&lt;ह्४&gt;१२। भोजनवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc12CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc12vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#186.0.2">
+         पाचित्तिय ११७। आवसथपिण्डसिक्खापदं
+        </a>
+        अगिलानाय भिक्खुनिया एको आवसथपिण्डो भुञ्जितब्बो। ततो चे उत्तरि भुञ्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#187.0">
+         पाचित्तिय ११८। गणभोजनसिक्खापदं
+        </a>
+        गणभोजने अञ्ञत्र समया पाचित्तियं। तत्थायं समयो, गिलानसमयो, चीवरदानसमयो , चीवरकारसमयो, अद्धानगमनसमयो, नावाभिरुहनसमयो, महासमयो, समणभत्तसमयो, अयं तत्थ समयो।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#188.0">
+         पाचित्तिय ११९। काणमातुसिक्खापदं
+        </a>
+        भिक्खुनिं पनेव कुलं उपगतं पूवेहि वा मन्थेहि वा अभिहट्ठुं पवारेय्य, आकङ्खमानाय भिक्खुनिया द्वत्तिपत्तपूरा पटिग्गहेतब्बा। ततो चे उत्तरि पटिग्गण्हेय्य, पाचित्तियं। द्वत्तिपत्तपूरे पटिग्गहेत्वा ततो नीहरित्वा भिक्खुनीहि सद्धिं संविभजितब्बं, अयं तत्थ सामीचि।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#189.0">
+         पाचित्तिय १२०। विकालभोजनसिक्खापदं
+        </a>
+        या पन भिक्खुनी विकाले खादनीयं वा भोजनीयं वा खादेय्य वा भुञ्जेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#190.0">
+         पाचित्तिय १२१। सन्निधिकारकसिक्खापदं
+        </a>
+        या पन भिक्खुनी सन्निधिकारकं खादनीयं वा भोजनीयं वा खादेय्य वा भुञ्जेय्य वा, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#191.0">
+         पाचित्तिय १२२। दन्तपोनसिक्खापदं
+        </a>
+        या पन भिक्खुनी अदिन्नं मुखद्वारं आहारं आहरेय्य अञ्ञत्र उदकदन्तपोना, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#192.0">
+         पाचित्तिय १२३। उय्योजनसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिं, “एहाय्ये, गामं वा निगमं वा पिण्डाय पविसिस्सामा”ति तस्सा दापेत्वा वा अदापेत्वा वा उय्योजेय्य, “गच्छाय्ये, न मे तया सद्धिं कथा वा निसज्जा वा फासु होति, एकिकाय मे कथा वा निसज्जा वा फासु होती”ति एतदेव पच्चयं करित्वा अनञ्ञं, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#193.0">
+         पाचित्तिय १२४। सभोजनसिक्खापदं
+        </a>
+        या पन भिक्खुनी सभोजने कुले अनुपखज्ज निसज्जं कप्पेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#194.0">
+         पाचित्तिय १२५। रहोपटिच्छन्नसिक्खापदं
+        </a>
+        या पन भिक्खुनी पुरिसेन सद्धिं रहो पटिच्छन्ने आसने निसज्जं कप्पेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#195.0">
+         पाचित्तिय १२६। रहोनिसज्जसिक्खापदं
+        </a>
+        या पन भिक्खुनी पुरिसेन सद्धिं एकेनेका रहो निसज्जं कप्पेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        भोजनवग्गो द्वादसमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc13CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc13CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १३। चारित्तवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#१९६।०।१"&gt;&lt;ह्४&gt;१३। चारित्तवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc13CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc13vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#196.0.2">
+         पाचित्तिय १२७। चारित्तसिक्खापदं
+        </a>
+        या पन भिक्खुनी निमन्तिता सभत्ता समाना सन्तिं भिक्खुनिं अनापुच्छा पुरेभत्तं वा पच्छाभत्तं वा कुलेसु चारित्तं आपज्जेय्य अञ्ञत्र समया, पाचित्तियं। तत्थायं समयो, चीवरदानसमयो, चीवरकारसमयो, अयं तत्थ समयो।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#197.0">
+         पाचित्तिय १२८। महानामसिक्खापदं
+        </a>
+        अगिलानाय भिक्खुनिया चतुमासप्पच्चयपवारणा सादितब्बा अञ्ञत्र पुनपवारणाय, अञ्ञत्र निच्चपवारणाय। ततो चे उत्तरि सादियेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#198.0">
+         पाचित्तिय १२९। उय्युत्तसेनासिक्खापदं
+        </a>
+        या पन भिक्खुनी उय्युत्तं सेनं दस्सनाय गच्छेय्य अञ्ञत्र तथारूपप्पच्चया, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#199.0">
+         पाचित्तिय १३०। सेनावाससिक्खापदं
+        </a>
+        सिया च तस्सा भिक्खुनिया कोचिदेव पच्चयो सेनं गमनाय, दिरत्ततिरत्तं ताय भिक्खुनिया सेनाय वसितब्बं। ततो चे उत्तरि वसेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#200.0">
+         पाचित्तिय १३१। उय्योधिकसिक्खापदं
+        </a>
+        दिरत्ततिरत्तं चे भिक्खुनी सेनाय वसमाना उय्योधिकं वा बलग्गं वा सेनाब्यूहं वा अनीकदस्सनं वा गच्छेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#201.0">
+         पाचित्तिय १३२। सुरापानसिक्खापदं
+        </a>
+        सुरामेरयपाने पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#202.0">
+         पाचित्तिय १३३। अङ्गुलिपतोदकसिक्खापदं
+        </a>
+        अङ्गुलिपतोदके पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#203.0">
+         पाचित्तिय १३४। हसधम्मसिक्खापदं
+        </a>
+        उदके हसधम्मे पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#204.0">
+         पाचित्तिय १३५। अनादरियसिक्खापदं
+        </a>
+        अनादरिये पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#205.0">
+         पाचित्तिय १३६। भिंसापनसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिं भिंसापेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        चारित्तवग्गो तेरसमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc14CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc14CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १४। जोतिवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२०६।०।१"&gt;&lt;ह्४&gt;१४। जोतिवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc14CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc14vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#206.0.2">
+         पाचित्तिय १३७। जोतिसिक्खापदं
+        </a>
+        या पन भिक्खुनी अगिलाना विसिब्बनापेक्खा जोतिं समादहेय्य वा समादहापेय्य वा अञ्ञत्र तथारूपप्पच्चया, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#207.0">
+         पाचित्तिय १३८। नहानसिक्खापदं
+        </a>
+        या पन भिक्खुनी ओरेनद्धमासं नहायेय्य अञ्ञत्र समया, पाचित्तियं। तत्थायं समयो “दियड्ढो मासो सेसो गिम्हान”न्ति “वस्सानस्स पठमो मासो” इच्चेते अड्ढतेय्यमासा उण्हसमयो, परिळाहसमयो, गिलानसमयो, कम्मसमयो, अद्धानगमनसमयो, वातवुट्ठिसमयो, अयं तत्थ समयो।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#208.0">
+         पाचित्तिय १३९। दुब्बण्णकरणसिक्खापदं
+        </a>
+        नवं पन भिक्खुनिया चीवरलाभाय तिण्णं दुब्बण्णकरणानं अञ्ञतरं दुब्बण्णकरणं आदातब्बं नीलं वा कद्दमं वा काळसामं वा। अनादा चे भिक्खुनी तिण्णं दुब्बण्णकरणानं अञ्ञतरं दुब्बण्णकरणं नवं चीवरं परिभुञ्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#209.0">
+         पाचित्तिय १४०। विकप्पनसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुस्स वा भिक्खुनिया वा सिक्खमानाय वा सामणेरस्स वा सामणेरिया वा सामं चीवरं विकप्पेत्वा अपच्चुद्धारणं परिभुञ्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#210.0">
+         पाचित्तिय १४१। अपनिधापनसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिया पत्तं वा चीवरं वा निसीदनं वा सूचिघरं वा कायबन्धनं वा अपनिधेय्य वा अपनिधापेय्य वा अन्तमसो हसापेक्खापि, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#211.0">
+         पाचित्तिय १४२। सञ्चिच्चसिक्खापदं
+        </a>
+        या पन भिक्खुनी सञ्चिच्च पाणं जीविता वोरोपेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#212.0">
+         पाचित्तिय १४३। सप्पाणकसिक्खापदं
+        </a>
+        या पन भिक्खुनी जानं सप्पाणकं उदकं परिभुञ्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#213.0">
+         पाचित्तिय १४४। उक्कोटनसिक्खापदं
+        </a>
+        या पन भिक्खुनी जानं यथाधम्मं निहताधिकरणं पुनकम्माय उक्कोटेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#214.0">
+         पाचित्तिय १४५। थेय्यसत्थसिक्खापदं
+        </a>
+        या पन भिक्खुनी जानं थेय्यसत्थेन सद्धिं संविधाय एकद्धानमग्गं पटिपज्जेय्य अन्तमसो गामन्तरम्पि, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#215.0">
+         पाचित्तिय १४६। अरिट्ठसिक्खापदं
+        </a>
+        या पन भिक्खुनी एवं वदेय्य: “तथाहं भगवता धम्मं देसितं आजानामि, यथा येमे अन्तरायिका धम्मा वुत्ता भगवता, ते पटिसेवतो नालं अन्तरायाया”ति। सा भिक्खुनी भिक्खुनीहि एवमस्स वचनीया: “माय्ये एवं अवच, मा भगवन्तं अब्भाचिक्खि, न हि साधु भगवतो अब्भक्खानं, न हि भगवा एवं वदेय्य, अनेकपरियायेनाय्ये अन्तरायिका धम्मा अन्तरायिका वुत्ता भगवता, अलञ्च पन ते पटिसेवतो अन्तरायाया”ति। एवञ्च सा भिक्खुनी भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा भिक्खुनी भिक्खुनीहि यावततियं समनुभासितब्बा तस्स पटिनिस्सग्गाय। यावततियञ्चे समनुभासियमाना तं पटिनिस्सज्जेय्य, इच्चेतं कुसलं। नो चे पटिनिस्सज्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        जोतिवग्गो चुद्दसमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc15CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc15CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १५। दिट्ठिवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२१६।०।१"&gt;&lt;ह्४&gt;१५। दिट्ठिवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc15CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc15vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#216.0.2">
+         पाचित्तिय १४७। उक्खित्तसम्भोगसिक्खापदं
+        </a>
+        या पन भिक्खुनी जानं तथावादिनिया भिक्खुनिया अकटानुधम्माय तं दिट्ठिं अप्पटिनिस्सट्ठाय सद्धिं सम्भुञ्जेय्य वा, संवसेय्य वा, सह वा सेय्यं कप्पेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#217.0">
+         पाचित्तिय १४८। कण्टकसिक्खापदं
+        </a>
+        समणुद्देसापि चे एवं वदेय्य: “तथाहं भगवता धम्मं देसितं आजानामि, यथा येमे अन्तरायिका धम्मा वुत्ता भगवता, ते पटिसेवतो नालं अन्तरायाया”ति। सा समणुद्देसा भिक्खुनीहि एवमस्स वचनीया: “माय्ये, समणुद्देसे एवं अवच, मा भगवन्तं अब्भाचिक्खि, न हि साधु भगवतो अब्भक्खानं, न हि भगवा एवं वदेय्य, अनेकपरियायेनाय्ये, समणुद्देसे अन्तरायिका धम्मा अन्तरायिका वुत्ता भगवता, अलञ्च पन ते पटिसेवतो अन्तरायाया”ति। एवञ्च सा समणुद्देसा भिक्खुनीहि वुच्चमाना तथेव पग्गण्हेय्य, सा समणुद्देसा भिक्खुनीहि एवमस्स वचनीया: “अज्जतग्गे ते, अय्ये, समणुद्देसे न चेव सो भगवा सत्था अपदिसितब्बो, यम्पि चञ्ञा समणुद्देसा लभन्ति भिक्खुनीहि सद्धिं दिरत्ततिरत्तं सहसेय्यं, सापि ते नत्थि, चर पिरे, विनस्सा”ति। या पन भिक्खुनी जानं तथानासितं समणुद्देसं उपलापेय्य वा, उपट्ठापेय्य वा, सम्भुञ्जेय्य वा, सह वा सेय्यं कप्पेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#218.0">
+         पाचित्तिय १४९। सहधम्मिकसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनीहि सहधम्मिकं वुच्चमाना एवं वदेय्य: “न तावाहं, अय्ये, एतस्मिं सिक्खापदे सिक्खिस्सामि, याव न अञ्ञं भिक्खुनिं ब्यत्तं विनयधरं परिपुच्छामी”ति, पाचित्तियं। सिक्खमानाय, भिक्खवे, भिक्खुनिया अञ्ञातब्बं परिपुच्छितब्बं परिपञ्हितब्बं, अयं तत्थ सामीचि।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#219.0">
+         पाचित्तिय १५०। विलेखनसिक्खापदं
+        </a>
+        या पन भिक्खुनी पातिमोक्खे उद्दिस्समाने एवं वदेय्य: “किं पनिमेहि खुद्दानुखुद्दकेहि सिक्खापदेहि उद्दिट्ठेहि, यावदेव कुक्कुच्चाय विहेसाय विलेखाय संवत्तन्ती”ति, सिक्खापदविवण्णके पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#220.0">
+         पाचित्तिय १५१। मोहनसिक्खापदं
+        </a>
+        या पन भिक्खुनी अन्वद्धमासं पातिमोक्खे उद्दिस्समाने एवं वदेय्य: “इदानेव खो अहं, अय्ये, जानामि अयम्पि किर धम्मो सुत्तागतो सुत्तपरियापन्नो अन्वद्धमासं उद्देसं आगच्छती”ति, तञ्चे भिक्खुनिं अञ्ञा भिक्खुनियो जानेय्युं निसिन्नपुब्बं इमाय भिक्खुनिया द्वत्तिक्खत्तुं पातिमोक्खे उद्दिस्समाने, को पन वादो भिय्यो, न च तस्सा भिक्खुनिया अञ्ञाणकेन मुत्ति अत्थि, यञ्च तत्थ आपत्तिं आपन्ना, तञ्च यथाधम्मो कारेतब्बो, उत्तरि चस्सा मोहो आरोपेतब्बो: “तस्सा ते, अय्ये, अलाभा, तस्सा ते दुल्लद्धं, यं त्वं पातिमोक्खे उद्दिस्समाने न साधुकं अट्ठिं कत्वा मनसि करोसी”ति, इदं तस्मिं मोहनके पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#221.0">
+         पाचित्तिय १५२। पहारसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिया कुपिता अनत्तमना पहारं ददेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#222.0">
+         पाचित्तिय १५३। तलसत्तिकसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिया कुपिता अनत्तमना तलसत्तिकं उग्गिरेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#223.0">
+         पाचित्तिय १५४। अमूलकसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिं अमूलकेन सङ्घादिसेसेन अनुद्धंसेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#224.0">
+         पाचित्तिय १५५। सञ्चिच्चसिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनिया सञ्चिच्च कुक्कुच्चं उपदहेय्य, “इतिस्सा मुहुत्तम्पि अफासु भविस्सती”ति एतदेव पच्चयं करित्वा अनञ्ञं, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#225.0">
+         पाचित्तिय १५६। उपस्सुति सिक्खापदं
+        </a>
+        या पन भिक्खुनी भिक्खुनीनं भण्डनजातानं कलहजातानं विवादापन्नानं उपस्सुतिं तिट्ठेय्य, “यं इमा भणिस्सन्ति, तं सोस्सामी”ति एतदेव पच्चयं करित्वा अनञ्ञं, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        दिट्ठिवग्गो पन्नरसमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pc16CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#pc16CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १६। धम्मिकवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२२६।०।१"&gt;&lt;ह्४&gt;१६। धम्मिकवग्गो&lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="pc16CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-pc16vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#226.0.2">
+         पाचित्तिय १५७। कम्मप्पटिबाहनसिक्खापदं
+        </a>
+        या पन भिक्खुनी धम्मिकानं कम्मानं छन्दं दत्वा पच्छा खीयनधम्मं आपज्जेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#227.0">
+         पाचित्तिय १५८। छन्दंअदत्वागमनसिक्खापदं
+        </a>
+        या पन भिक्खुनी सङ्घे विनिच्छयकथाय वत्तमानाय छन्दं अदत्वा उट्ठायासना पक्कमेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#228.0">
+         पाचित्तिय १५९। दुब्बलसिक्खापदं
+        </a>
+        या पन भिक्खुनी समग्गेन सङ्घेन चीवरं दत्वा पच्छा खीयनधम्मं आपज्जेय्य, “यथासन्थुतं भिक्खुनियो सङ्घिकं लाभं परिणामेन्ती”ति, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#229.0">
+         पाचित्तिय १६०। परिणामनसिक्खापदं
+        </a>
+        या पन भिक्खुनी जानं सङ्घिकं लाभं परिणतं पुग्गलस्स परिणामेय्य, पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#230.0">
+         पाचित्तिय १६१। रतनसिक्खापदं
+        </a>
+        या पन भिक्खुनी रतनं वा रतनसम्मतं वा अञ्ञत्र अज्झारामा वा अज्झावसथा वा उग्गण्हेय्य वा उग्गण्हापेय्य वा, पाचित्तियं। रतनं वा पन भिक्खुनिया रतनसम्मतं वा अज्झारामे वा अज्झावसथे वा उग्गहेत्वा वा उग्गहापेत्वा वा निक्खिपितब्बं, “यस्स भविस्सति, सो हरिस्सती”ति, अयं तत्थ सामीचि।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#231.0">
+         पाचित्तिय १६२। सूचिघरसिक्खापदं
+        </a>
+        या पन भिक्खुनी अट्ठिमयं वा दन्तमयं वा विसाणमयं वा सूचिघरं कारापेय्य, भेदनकं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#232.0">
+         पाचित्तिय १६३। मञ्चपीठसिक्खापदं
+        </a>
+        नवं पन भिक्खुनिया मञ्चं वा पीठं वा कारयमानाय अट्ठङ्गुलपादकं कारेतब्बं सुगतङ्गुलेन अञ्ञत्र हेट्ठिमाय अटनिया। तं अतिक्कामेन्तिया छेदनकं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#233.0">
+         पाचित्तिय १६४। तूलोनद्धसिक्खापदं
+        </a>
+        या पन भिक्खुनी मञ्चं वा पीठं वा तूलोनद्धं कारापेय्य, उद्दालनकं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#234.0">
+         पाचित्तिय १६५। कण्डुप्पटिच्छादिसिक्खापदं
+        </a>
+        कण्डुप्पटिच्छादिं पन भिक्खुनिया कारयमानाय पमाणिका कारेतब्बा, तत्रिदं पमाणं, दीघसो चतस्सो विदत्थियो सुगतविदत्थिया, तिरियं द्वे विदत्थियो। तं अतिक्कामेन्तिया छेदनकं पाचित्तियं।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#235.0">
+         पाचित्तिय १६६। नन्दसिक्खापदं
+        </a>
+        या पन भिक्खुनी सुगतचीवरप्पमाणं चीवरं कारापेय्य, अतिरेकं वा, छेदनकं पाचित्तियं। तत्रिदं सुगतस्स सुगतचीवरप्पमाणं, दीघसो नव विदत्थियो सुगतविदत्थिया, तिरियं छ विदत्थियो, इदं सुगतस्स सुगतचीवरप्पमाणन्ति।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        धम्मिकवग्गो सोळसमो।
+       </span>
+      </div>
+     </div>
+    </div>
+    वग्ग एन्द्
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      उद्दिट्ठा खो, अय्यायो, छसट्ठिसता पाचित्तिया धम्मा।
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा,
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      पाचित्तिया निट्ठिता।
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+  </div>
+  चोल्लप्सेदिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#pdCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#pdCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     पाटिदेसनीय
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#१५९।०
+  </div>
+  <div class="collapse" id="pdCollapseBi">
+   <div class="mt-3">
+    <audio class="lazy-audio" controls="" preload="none">
+     <source src="/assets/audio/bi-pm/Bi-pd.m4a" type="audio/mp4"/>
+     ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+    </audio>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      इमे खो पनाय्यायो अट्ठ पाटिदेसनीया धम्मा उद्देसं आगच्छन्ति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pd1#1.2.9.0">
+       पाटिदेसनीय १। सप्पिविञ्ञापनसिक्खापदं
+      </a>
+      <a href="/sc/?q=bi-pm#238.0">
+       प्म्
+      </a>
+      या पन भिक्खुनी अगिलाना सप्पिं विञ्ञापेत्वा भुञ्जेय्य, पटिदेसेतब्बं ताय भिक्खुनिया: “गारय्हं, अय्ये, धम्मं आपज्जिं असप्पायं पाटिदेसनीयं, तं पटिदेसेमी”ति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#239.0">
+       पाटिदेसनीय २। तेलविञ्ञापनसिक्खापदं
+      </a>
+      या पन भिक्खुनी अगिलाना तेलं विञ्ञापेत्वा भुञ्जेय्य …पे… तं पटिदेसेमीति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#240.0">
+       पाटिदेसनीय ३। मधुविञ्ञापनसिक्खापदं
+      </a>
+      या पन भिक्खुनी अगिलाना मधुं विञ्ञापेत्वा भुञ्जेय्य …पे… तं पटिदेसेमीति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#241.0">
+       पाटिदेसनीय ४। फाणितविञ्ञापनसिक्खापदं
+      </a>
+      या पन भिक्खुनी अगिलाना फाणितं विञ्ञापेत्वा भुञ्जेय्य …पे… तं पटिदेसेमीति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#242.0">
+       पाटिदेसनीय ५। मच्छविञ्ञापनसिक्खापदं
+      </a>
+      या पन भिक्खुनी अगिलाना मच्छं विञ्ञापेत्वा भुञ्जेय्य …पे… तं पटिदेसेमीति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#243.0">
+       पाटिदेसनीय ६। मंसविञ्ञापनसिक्खापदं
+      </a>
+      या पन भिक्खुनी अगिलाना मंसं विञ्ञापेत्वा भुञ्जेय्य …पे… तं पटिदेसेमीति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#244.0">
+       पाटिदेसनीय ७। खीरविञ्ञापनसिक्खापदं
+      </a>
+      या पन भिक्खुनी अगिलाना खीरं विञ्ञापेत्वा भुञ्जेय्य …पे… तं पटिदेसेमीति।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bi-pm#245.0">
+       पाटिदेसनीय ८। दधिविञ्ञापनसिक्खापदं
+      </a>
+      या पन भिक्खुनी अगिलाना दधिं विञ्ञापेत्वा भुञ्जेय्य, पटिदेसेतब्बं ताय भिक्खुनिया: “गारय्हं, अय्ये, धम्मं आपज्जिं असप्पायं पाटिदेसनीयं, तं पटिदेसेमी”ति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      उद्दिट्ठा खो, अय्यायो, अट्ठ पाटिदेसनीया धम्मा। 
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा, 
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा, 
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा, 
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      पाटिदेसनीया निट्ठिता।
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+  </div>
+  चोल्लप्सेदिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#skCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#skCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     सेखिया
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#१६५।०
+  </div>
+  <div class="collapse" id="skCollapseBi">
+   <div class="mt-3">
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      इमे खो पनाय्यायो, सेखिया धम्मा उद्देसं आगच्छन्ति।
+     </span>
+    </div>
+    वग्ग बेगिन्
+    <div class="level3">
+     <div class="level3 d-flex align-items-center">
+      <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#sk1CollapseBi" data-bs-toggle="collapse">
+       +
+      </span>
+      <a data-bs-target="#sk1CollapseBi" data-bs-toggle="collapse" href="">
+       <h4>
+        १। परिमण्डलवग्गो
+       </h4>
+      </a>
+      &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२४८।०।१"&gt;&lt;ह्४&gt;१। परिमण्डलवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+     </div>
+    </div>
+    <div class="collapse" id="sk1CollapseBi">
+     <div class="my-3">
+      <audio class="lazy-audio" controls="" preload="none">
+       <source src="/assets/audio/bi-pm/Bi-sk1vag.m4a" type="audio/mp4"/>
+       ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+      </audio>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-sk1#1.14.0">
+         सेखिय १। परिमण्डलसिक्खापदं
+        </a>
+        <a href="/sc/?q=bi-pm#248.0.2">
+         प्म्
+        </a>
+        परिमण्डलं निवासेस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#249.0">
+         सेखिय २। दुतियपरिमण्डलसिक्खापदं
+        </a>
+        परिमण्डलं पारुपिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#250.0">
+         सेखिय ३। सुप्पटिच्छन्नसिक्खापदं
+        </a>
+        सुप्पटिच्छन्ना अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#251.0">
+         सेखिय ४। दुतियसुप्पटिच्छन्नसिक्खापदं
+        </a>
+        सुप्पटिच्छन्ना अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#252.0">
+         सेखिय ५। सुसंवुतसिक्खापदं
+        </a>
+        सुसंवुता अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#253.0">
+         सेखिय ६। दुतियसुसंवुतसिक्खापदं
+        </a>
+        सुसंवुता अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#254.0">
+         सेखिय ७। ओक्खित्तचक्खुसिक्खापदं
+        </a>
+        ओक्खित्तचक्खुनी अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#255.0">
+         सेखिय ८। दुतिय-ओक्खित्तचक्खुसिक्खापदं
+        </a>
+        ओक्खित्तचक्खुनी अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#256.0">
+         सेखिय ९। उक्खित्तकसिक्खापदं
+        </a>
+        न उक्खित्तकाय अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4">
+       <span class="level5 pli-lang">
+        <a href="/sc/?q=bi-pm#257.0">
+         सेखिय १०। दुतिय-उक्खित्तकसिक्खापदं
+        </a>
+        न उक्खित्तकाय अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+       </span>
+      </div>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        परिमण्डलवग्गो पठमो
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   वग्ग एन्द्
+   वग्ग बेगिन्
+   <div class="level3">
+    <div class="level3 d-flex align-items-center">
+     <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#sk2CollapseBi" data-bs-toggle="collapse">
+      +
+     </span>
+     <a data-bs-target="#sk2CollapseBi" data-bs-toggle="collapse" href="">
+      <h4>
+       २। उज्जग्घिकवग्गो
+      </h4>
+     </a>
+     &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२५८।०।१"&gt;&lt;ह्४&gt;२। उज्जग्घिकवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+    </div>
+   </div>
+   <div class="collapse" id="sk2CollapseBi">
+    <div class="my-3">
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-sk2vag.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#258.0.2">
+        सेखिय ११। उज्जग्घिकसिक्खापदं
+       </a>
+       न उज्जग्घिकाय अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#259.0">
+        सेखिय १२। दुतिय-उज्जग्घिकसिक्खापदं
+       </a>
+       न उज्जग्घिकाय अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#260.0">
+        सेखिय १३। उच्चसद्दसिक्खापदं
+       </a>
+       अप्पसद्दा अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#261.0">
+        सेखिय १४। दुतिय-उच्चसद्दसिक्खापदं
+       </a>
+       अप्पसद्दा अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#262.0">
+        सेखिय १५। कायप्पचालकसिक्खापदं
+       </a>
+       न कायप्पचालकं अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#263.0">
+        सेखिय १६। दुतियकायप्पचालकसिक्खापदं
+       </a>
+       न कायप्पचालकं अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#264.0">
+        सेखिय १७। बाहुप्पचालकसिक्खापदं
+       </a>
+       न बाहुप्पचालकं अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#265.0">
+        सेखिय १८। दुतियबाहुप्पचालकसिक्खापदं
+       </a>
+       न बाहुप्पचालकं अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#266.0">
+        सेखिय १९। सीसप्पचालकसिक्खापदं
+       </a>
+       न सीसप्पचालकं अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#267.0">
+        सेखिय २०। दुतियसीसप्पचालकसिक्खापदं
+       </a>
+       न सीसप्पचालकं अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+      <div class="level4 my-3">
+       <span class="level5 pli-lang">
+        उज्जग्घिकवग्गो दुतियो।
+       </span>
+      </div>
+     </div>
+    </div>
+   </div>
+   वग्ग एन्द्
+   वग्ग
+   <div class="level3">
+    <div class="level3 d-flex align-items-center">
+     <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#sk3CollapseBi" data-bs-toggle="collapse">
+      +
+     </span>
+     <a data-bs-target="#sk3CollapseBi" data-bs-toggle="collapse" href="">
+      <h4>
+       ३। खम्भकतवग्गो
+      </h4>
+     </a>
+     &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२६८।०।१"&gt;&lt;ह्४&gt;३। खम्भकतवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+    </div>
+   </div>
+   <div class="collapse" id="sk3CollapseBi">
+    <div class="my-3">
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-sk3vag.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#268.0.2">
+        सेखिय २१। खम्भकतसिक्खापदं
+       </a>
+       न खम्भकता अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#269.0">
+        सेखिय २२। दुतियखम्भकतसिक्खापदं
+       </a>
+       न खम्भकता अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#270.0">
+        सेखिय २३। ओगुण्ठितसिक्खापदं
+       </a>
+       न ओगुण्ठिता अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#271.0">
+        सेखिय २४। दुतिय-ओगुण्ठितसिक्खापदं
+       </a>
+       न ओगुण्ठिता अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#272.0">
+        सेखिय २५। उक्कुटिकसिक्खापदं
+       </a>
+       न उक्कुटिकाय अन्तरघरे गमिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#273.0">
+        सेखिय २६। पल्लत्थिकसिक्खापदं
+       </a>
+       न पल्लत्थिकाय अन्तरघरे निसीदिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#274.0">
+        सेखिय २७। सक्कच्चपटिग्गहणसिक्खापदं
+       </a>
+       सक्कच्चं पिण्डपातं पटिग्गहेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#275.0">
+        सेखिय २८। पत्तसञ्ञिनीपटिग्गहणसिक्खापदं
+       </a>
+       पत्तसञ्ञिनी पिण्डपातं पटिग्गहेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#276.0">
+        सेखिय २९। समसूपकपटिग्गहणसिक्खापदं
+       </a>
+       समसूपकं पिण्डपातं पटिग्गहेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#277.0">
+        सेखिय ३०। समतित्तिकसिक्खापदं
+       </a>
+       समतित्तिकं पिण्डपातं पटिग्गहेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4 my-3">
+      <span class="level5 pli-lang">
+       खम्भकतवग्गो ततियो।
+      </span>
+     </div>
+    </div>
+   </div>
+   वग्ग एन्द्
+   <div class="level3">
+    <div class="level3 d-flex align-items-center">
+     <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#sk4CollapseBi" data-bs-toggle="collapse">
+      +
+     </span>
+     <a data-bs-target="#sk4CollapseBi" data-bs-toggle="collapse" href="">
+      <h4>
+       ४। सक्कच्चवग्गो
+      </h4>
+     </a>
+     &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२७८।०।१"&gt;&lt;ह्४&gt;४। सक्कच्चवग्गो  &lt;/ह्४&gt;&lt;/अ&gt;
+    </div>
+   </div>
+   <div class="collapse" id="sk4CollapseBi">
+    <div class="my-3">
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-sk4vag.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#278.0.2">
+        सेखिय ३१। सक्कच्चभुञ्जनसिक्खापदं
+       </a>
+       सक्कच्चं पिण्डपातं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#279.0">
+        सेखिय ३२। पत्तसञ्ञिनीभुञ्जनसिक्खापदं
+       </a>
+       पत्तसञ्ञिनी पिण्डपातं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#280.0">
+        सेखिय ३३। सपदानसिक्खापदं
+       </a>
+       सपदानं पिण्डपातं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#281.0">
+        सेखिय ३४। समसूपकसिक्खापदं
+       </a>
+       समसूपकं पिण्डपातं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#282.0">
+        सेखिय ३५। न थूपकतसिक्खापदं
+       </a>
+       न थूपकतो ओमद्दित्वा पिण्डपातं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#283.0">
+        सेखिय ३६। ओदनप्पटिच्छादनसिक्खापदं
+       </a>
+       न सूपं वा ब्यञ्जनं वा ओदनेन पटिच्छादेस्सामि भिय्योकम्यतं उपादायाति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#284.0">
+        सेखिय ३७। सूपोदनविञ्ञत्तिसिक्खापदं
+       </a>
+       न सूपं वा ओदनं वा अगिलाना अत्तनो अत्थाय विञ्ञापेत्वा भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#285.0">
+        सेखिय ३८। उज्झानसञ्ञिनीसिक्खापदं
+       </a>
+       न उज्झानसञ्ञिनी परेसं पत्तं ओलोकेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#286.0">
+        सेखिय ३९। कबळसिक्खापदं
+       </a>
+       नातिमहन्तं कबळं करिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#287.0">
+        सेखिय ४०। आलोपसिक्खापदं
+       </a>
+       परिमण्डलं आलोपं करिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4 my-3">
+      <span class="level5 pli-lang">
+       सक्कच्चवग्गो चतुत्थो।
+      </span>
+     </div>
+    </div>
+   </div>
+   वग्ग
+   <div class="level3">
+    <div class="level3 d-flex align-items-center">
+     <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#sk5CollapseBi" data-bs-toggle="collapse">
+      +
+     </span>
+     <a data-bs-target="#sk5CollapseBi" data-bs-toggle="collapse" href="">
+      <h4>
+       ५। कबळवग्गो
+      </h4>
+     </a>
+     &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२८८।०।१"&gt;&lt;ह्४&gt;५। कबळवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+    </div>
+   </div>
+   <div class="collapse" id="sk5CollapseBi">
+    <div class="my-3">
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-sk5vag.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#288.0.2">
+        सेखिय ४१। अनाहटसिक्खापदं
+       </a>
+       न अनाहटे कबळे मुखद्वारं विवरिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#289.0">
+        सेखिय ४२। भुञ्जमानसिक्खापदं
+       </a>
+       न भुञ्जमाना सब्बहत्थं मुखे पक्खिपिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#290.0">
+        सेखिय ४३। सकबळसिक्खापदं
+       </a>
+       न सकबळेन मुखेन ब्याहरिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#291.0">
+        सेखिय ४४। पिण्डुक्खेपकसिक्खापदं
+       </a>
+       न पिण्डुक्खेपकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#292.0">
+        सेखिय ४५। कबळावच्छेदकसिक्खापदं
+       </a>
+       न कबळावच्छेदकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#293.0">
+        सेखिय ४६। अवगण्डकारकसिक्खापदं
+       </a>
+       न अवगण्डकारकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#294.0">
+        सेखिय ४७। हत्थनिद्धुनकसिक्खापदं
+       </a>
+       न हत्थनिद्धुनकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#295.0">
+        सेखिय ४८। सित्थावकारकसिक्खापदं
+       </a>
+       न सित्थावकारकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#296.0">
+        सेखिय ४९। जिव्हानिच्छारकसिक्खापदं
+       </a>
+       न जिव्हानिच्छारकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#297.0">
+        सेखिय ५०। चपुचपुकारकसिक्खापदं
+       </a>
+       न चपुचपुकारकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4 my-3">
+      <span class="level5 pli-lang">
+       कबळवग्गो पञ्चमो।
+      </span>
+     </div>
+    </div>
+   </div>
+   वग्ग
+   वग्ग
+   <div class="level3">
+    <div class="level3 d-flex align-items-center">
+     <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#sk6CollapseBi" data-bs-toggle="collapse">
+      +
+     </span>
+     <a data-bs-target="#sk6CollapseBi" data-bs-toggle="collapse" href="">
+      <h4>
+       ६। सुरुसुरुवग्गो
+      </h4>
+     </a>
+     &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#२९८।०।१"&gt;&lt;ह्४&gt;६। सुरुसुरुवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+    </div>
+   </div>
+   <div class="collapse" id="sk6CollapseBi">
+    <div class="my-3">
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-sk6vag.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#298.0.2">
+        सेखिय ५१। सुरुसुरुकारकसिक्खापदं
+       </a>
+       न सुरुसुरुकारकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#299.0">
+        सेखिय ५२। हत्थनिल्लेहकसिक्खापदं
+       </a>
+       न हत्थनिल्लेहकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#300.0">
+        सेखिय ५३। पत्तनिल्लेहकसिक्खापदं
+       </a>
+       न पत्तनिल्लेहकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#301.0">
+        सेखिय ५४। ओट्ठनिल्लेहकसिक्खापदं
+       </a>
+       न ओट्ठनिल्लेहकं भुञ्जिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#302.0">
+        सेखिय ५५। सामिससिक्खापदं
+       </a>
+       न सामिसेन हत्थेन पानीयथालकं पटिग्गहेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#303.0">
+        सेखिय ५६। ससित्थकसिक्खापदं
+       </a>
+       न ससित्थकं पत्तधोवनं अन्तरघरे छड्डेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#304.0">
+        सेखिय ५७। छत्तपाणिसिक्खापदं
+       </a>
+       न छत्तपाणिस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#305.0">
+        सेखिय ५८। दण्डपाणिसिक्खापदं
+       </a>
+       न दण्डपाणिस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#306.0">
+        सेखिय ५९। सत्थपाणिसिक्खापदं
+       </a>
+       न सत्थपाणिस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#307.0">
+        सेखिय ६०। आवुधपाणिसिक्खापदं
+       </a>
+       न आवुधपाणिस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4 my-3">
+      <span class="level5 pli-lang">
+       सुरुसुरुवग्गो छट्ठो।
+      </span>
+     </div>
+    </div>
+   </div>
+   वग्ग
+   वग्ग
+   <div class="level3">
+    <div class="level3 d-flex align-items-center">
+     <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#sk7CollapseBi" data-bs-toggle="collapse">
+      +
+     </span>
+     <a data-bs-target="#sk7CollapseBi" data-bs-toggle="collapse" href="">
+      <h4>
+       ७। पादुकवग्गो
+      </h4>
+     </a>
+     &lt;अ ह्रेफ़्="/स्च्/?क़्=बि-प्म्#३०८।०।१"&gt;&lt;ह्४&gt;७। पादुकवग्गो &lt;/ह्४&gt;&lt;/अ&gt;
+    </div>
+   </div>
+   <div class="collapse" id="sk7CollapseBi">
+    <div class="my-3">
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-sk7vag.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#308.0.2">
+        सेखिय ६१। पादुकसिक्खापदं
+       </a>
+       न पादुकारुळ्हस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#309.0">
+        सेखिय ६२। उपाहनसिक्खापदं
+       </a>
+       न उपाहनारुळ्हस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#310.0">
+        सेखिय ६३। यानसिक्खापदं
+       </a>
+       न यानगतस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#311.0">
+        सेखिय ६४। सयनसिक्खापदं
+       </a>
+       न सयनगतस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#312.0">
+        सेखिय ६५। पल्लत्थिकसिक्खापदं
+       </a>
+       न पल्लत्थिकाय निसिन्नस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#313.0">
+        सेखिय ६६। वेठितसिक्खापदं
+       </a>
+       न वेठितसीसस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#314.0">
+        सेखिय ६७। ओगुण्ठितसिक्खापदं
+       </a>
+       न ओगुण्ठितसीसस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#315.0">
+        सेखिय ६८। छमासिक्खापदं
+       </a>
+       न छमायं निसीदित्वा आसने निसिन्नस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#316.0">
+        सेखिय ६९। नीचासनसिक्खापदं
+       </a>
+       न नीचे आसने निसीदित्वा उच्चे आसने निसिन्नस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#317.0">
+        सेखिय ७०। ठितासिक्खापदं
+       </a>
+       न ठिता निसिन्नस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#318.0">
+        सेखिय ७१। पच्छतोगच्छन्तीसिक्खापदं
+       </a>
+       न पच्छतो गच्छन्ती पुरतो गच्छन्तस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#319.0">
+        सेखिय ७२। उप्पथेनगच्छन्तीसिक्खापदं
+       </a>
+       न उप्पथेन गच्छन्ती पथेन गच्छन्तस्स अगिलानस्स धम्मं देसेस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#320.0">
+        सेखिय ७३। ठिताउच्चारसिक्खापदं
+       </a>
+       न ठिता अगिलाना उच्चारं वा पस्सावं वा करिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-pm#321.0">
+        सेखिय ७४। हरितेउच्चारसिक्खापदं
+       </a>
+       न हरिते अगिलाना उच्चारं वा पस्सावं वा खेळं वा करिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4">
+      <span class="level5 pli-lang">
+       <a href="/sc/?q=bi-sk75#2.5.0">
+        सेखिय ७५। उदकेउच्चारसिक्खापदं
+       </a>
+       <a href="/sc/?q=bi-pm#322.0">
+        प्म्
+       </a>
+       न उदके अगिलाना उच्चारं वा पस्सावं वा खेळं वा करिस्सामीति सिक्खा करणीया।
+      </span>
+     </div>
+     <div class="level4 my-3">
+      <span class="level5 pli-lang">
+       पादुकवग्गो सत्तमो।
+      </span>
+     </div>
+    </div>
+   </div>
+   वग्ग
+   <div class="level4 my-3">
+    <span class="level5 pli-lang">
+     उद्दिट्ठा खो, अय्यायो, सेखिया धम्मा। 
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा, 
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा, 
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा, 
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+    </span>
+   </div>
+   <div class="level4 my-3">
+    <span class="level5 pli-lang">
+     सेखिया निट्ठिता
+    </span>
+   </div>
+  </div>
+  म्त् दिव्
+  <div class="level2 d-flex align-items-center">
+   <span class="toggle-button btn btn-primary btn-sm form-check-inline btn-fixed-width btn-rotate" data-bs-target="#asCollapseBi" data-bs-toggle="collapse">
+    +
+   </span>
+   <a data-bs-target="#asCollapseBi" data-bs-toggle="collapse" href="">
+    <h3>
+     अधिकरणसमथा
+    </h3>
+   </a>
+   /स्च्/?क़्=बि-प्म्#२४५।०
+  </div>
+  <div class="collapse" id="asCollapseBi">
+   <div class="mt-3">
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      इमे खो पनाय्यायो, सत्त अधिकरणसमथा धम्मा उद्देसं आगच्छन्ति।
+     </span>
+     <audio class="lazy-audio" controls="" preload="none">
+      <source src="/assets/audio/bi-pm/Bi-as.m4a" type="audio/mp4"/>
+      ब्रोwसेर् इस् नोत् सुप्पोर्तेद्।
+     </audio>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bu-as1-7#2.2">
+       अधिकरणसमथ १।
+      </a>
+      <a href="/sc/?q=bi-pm#247.0">
+       प्म्
+      </a>
+      सम्मुखाविनयो दातब्बो।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bu-as1-7#1.1">
+       अधिकरणसमथ २।
+      </a>
+      <a href="/sc/?q=bi-pm#248.0">
+       प्म्
+      </a>
+      सतिविनयो दातब्बो।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bu-as1-7#1.1">
+       अधिकरणसमथ ३।
+      </a>
+      <a href="/sc/?q=bi-pm#249.0">
+       प्म्
+      </a>
+      अमूळ्हविनयो दातब्बो।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bu-as1-7#1.1">
+       अधिकरणसमथ ४।
+      </a>
+      <a href="/sc/?q=bi-pm#250.0">
+       प्म्
+      </a>
+      पटिञ्ञाय कारेतब्बं।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bu-as1-7#1.1">
+       अधिकरणसमथ ५।
+      </a>
+      <a href="/sc/?q=bi-pm#251.0">
+       प्म्
+      </a>
+      येभुय्यसिका।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bu-as1-7#1.1">
+       अधिकरणसमथ ६।
+      </a>
+      <a href="/sc/?q=bi-pm#252.0">
+       प्म्
+      </a>
+      तस्सपापियसिका।
+     </span>
+    </div>
+    <div class="level4">
+     <span class="level5 pli-lang">
+      <a href="/sc/?q=bu-as1-7#1.1">
+       अधिकरणसमथ ७।
+      </a>
+      <a href="/sc/?q=bi-pm#253.0">
+       प्म्
+      </a>
+      तिणवत्थारकोति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      उद्दिट्ठा खो अय्यायो सत्त अधिकरणसमथा धम्मा।
+तत्थाय्यायो पुच्छामि, कच्चित्थ परिसुद्धा,
+दुतियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+ततियम्पि पुच्छामि, कच्चित्थ परिसुद्धा,
+परिसुद्धेत्थाय्यायो, तस्मा तुण्ही, एवमेतं धारयामीति।
+     </span>
+    </div>
+    <div class="level4 my-3">
+     <span class="level5 pli-lang">
+      अधिकरणसमथा निट्ठिता।
+     </span>
+    </div>
+   </div>
+   म्त् दिव्
+   <div class="level4 my-3">
+    <span class="level5 pli-lang">
+     उद्दिट्ठं खो अय्यायो निदानं
+उद्दिट्ठा अट्ठ पाराजिका धम्मा,
+उद्दिट्ठा सत्तरस सङ्घादिसेसा धम्मा,
+उद्दिट्ठा तिंस निस्सग्गिया पाचित्तिया धम्मा,
+उद्दिट्ठा छसट्ठि सता पाचित्तिया धम्मा,
+उद्दिट्ठा अट्ठ पाटिदेसनीया धम्मा,
+उद्दिट्ठा सेखिया धम्मा,
+उद्दिट्ठा सत्त अधिकरणसमथा धम्मा।
+एत्तकं तस्स भगवतो सुत्तागतं सुत्तपरियापन्नं अन्वद्धमासं उद्देसं आगच्छति।
+तत्थ सब्बाहेव समग्गाहि सम्मोदमानाहि अविवदमानाहि सिक्खितब्बन्ति।
+    </span>
+   </div>
+   <div class="level4 my-3">
+    <span class="level5 pli-lang">
+     वित्थारुद्देसो चतुत्थो।
+    </span>
+   </div>
+   <div class="level4 my-3">
+    <span class="level5 pli-lang">
+     भिक्खुनिपातिमोक्खं निट्ठितं।
+    </span>
+   </div>
+   <div class="level4 my-3">
+    <span class="level5 pli-lang">
+     नमो तस्स भगवतो अरहतो सम्मासम्बुद्धस्स
+    </span>
+   </div>
+  </div>
+  चोल्लप्सेदिव्
+ </div>
+ चोल्लप्सेदिव्
+</div>
+

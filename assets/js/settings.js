@@ -407,6 +407,8 @@ document.addEventListener("keydown", (event) => {
       location.href = newUrl; // Принудительно переходим по новому URL
     }
   }
+  
+  location.reload();
 });
 
 

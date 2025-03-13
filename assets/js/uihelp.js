@@ -29,6 +29,14 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('visited_result', 'true'); // Запоминаем, что пользователь уже заходил
     }
 
+        // Проверяем, если это первое посещение страницы с /result/
+    if (window.location.pathname.includes('/w.php/') && !localStorage.getItem('visited_words')) {
+        highlightMultipleById(['gearResult', 'helpResult']);
+        localStorage.setItem('visited_words', 'true'); // Запоминаем, что пользователь уже заходил
+    }
+
+
+
     // Проверяем, если это целевое посещение для подсветки gear
     if (visitCount === targetVisitForGear) {
         highlightById('gear'); // Подсвечиваем элемент gear

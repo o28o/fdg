@@ -15,8 +15,6 @@ function loadModal(modalId, modalFile) {
 //sett8ngs management
 document.addEventListener('DOMContentLoaded', function() {
   
-  
-
   const scriptSelect = document.getElementById('script-select');
   const applyButton = document.getElementById('apply-button');
   const resetButton = document.getElementById('reset-button');

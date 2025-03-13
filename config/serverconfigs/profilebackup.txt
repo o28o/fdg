@@ -392,7 +392,7 @@ read\"
 functionname=sshpull
 function sshpull {
 echo "server kz"
-ssh -p1001 root@94.126.201.8 "cd /var/www/html 
+ssh -p1000 root@94.126.201.8 "cd /var/www/html 
 git pull 
 echo
 echo audio

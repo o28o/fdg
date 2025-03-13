@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
         highlightMultipleById(['gearsc', 'helpsc']);
         localStorage.setItem('visited_sc', 'true'); // Запоминаем, что пользователь уже заходил
     }
+    
+        // Проверяем, если это первое посещение страницы с /result/
+    if (window.location.pathname.includes('/result/') && !localStorage.getItem('visited_result')) {
+        highlightMultipleById(['gearResult', 'helpResult']);
+        localStorage.setItem('visited_result', 'true'); // Запоминаем, что пользователь уже заходил
+    }
 
     // Проверяем, если это целевое посещение для подсветки gear
     if (visitCount === targetVisitForGear) {

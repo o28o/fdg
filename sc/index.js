@@ -238,7 +238,7 @@ paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 // inputscript-ISOPali add for aksharamukha
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
+      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>
       <span class="variant pli-lang inputscript-ISOPali" lang="pi">
 ${varData[segment].trim()}   
 </span>      
@@ -248,7 +248,7 @@ ${varData[segment].trim()}
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined && transData[segment] !== undefined ) {
         html += `${openHtml}<span id="${anchor}">
-      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
+      <span class="pli-lang " lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
       <span class="rus-lang" lang="ru">${transData[segment]}</span>
       </span>${closeHtml}\n\n`;
 } else if (paliData[segment] !== undefined) {

@@ -405,10 +405,11 @@ document.addEventListener("keydown", (event) => {
     if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
       history.pushState(null, "", newUrl); // Добавляем запись в историю
       location.href = newUrl; // Принудительно переходим по новому URL
+      location.reload();
     }
   }
   
-  location.reload();
+
 });
 
 

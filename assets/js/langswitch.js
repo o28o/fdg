@@ -6,11 +6,11 @@ let language = "pli-eng";
 
 
   document.addEventListener("keydown", (event) => {
-    if ((event.altKey && event.code === "KeyS") || (event.shiftKey && event.code === "Space")) {
+    if ((event.altKey && event.code === "KeyX") || (event.shiftKey && event.code === "Space")) {
     const ShowHideSearchResults = document.getElementById('btn-show-all-children');
 //  console.log("Элемент с ID 'btn-show-all-children' найден.");
-     event.preventDefault();
       if (ShowHideSearchResults) {
+     event.preventDefault();
       ShowHideSearchResults.click();
     }
     }
@@ -85,8 +85,9 @@ localStorage.paliToggleRu = "pli-rus";
 
       // Добавляем обработчик сочетания клавиш Alt + S (физическая клавиша)
   document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "Space") {
+    if ((event.altKey && event.code === "Space") || (event.altKey && event.code === "KeyZ")) {
       // Имитируем клик по кнопке
+      event.preventDefault();
       languageButton.click();
     }
   });

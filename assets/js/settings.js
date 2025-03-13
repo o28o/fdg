@@ -26,11 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Добавляем обработчик сочетания клавиш Alt + Space (физическая клавиша)
   document.addEventListener("keydown", (event) => {
-    if (event.altKey && event.code === "Space") {
+    if ((event.altKey && event.code === "Space") || (event.altKey && event.code === "KeyZ")) {
         const languageButton = document.getElementById("language-button");
       if (languageButton) {
        event.preventDefault();
-
        // Имитируем клик по кнопке
       languageButton.click();
       }

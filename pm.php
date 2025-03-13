@@ -54,8 +54,7 @@ include './scripts/opentexts.php';
  
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="https://www.digitalpalireader.online/_dprhtml/index.html?loc=v.6.0.4.0.0.0.t" >dpr</a>
     
-    
-    <a class="ms-1 text-decoration-none text-muted " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
+    <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " data-bs-toggle="collapse" data-bs-target="#playerCollapse" href="#" >player</a>
       <div class="collapse " id="playerCollapse">
        <!-- Start DEMO HTML (Use the following code into your project)-->
  <div class="simple-audio-player" id="simp" data-config='{"shide_top":true,"shide_btm":false,"auto_load":false,"simp-plext":true}'>

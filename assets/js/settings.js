@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (event.altKey && event.code === "Space") {
         const languageButton = document.getElementById("language-button");
       if (languageButton) {
+       event.preventDefault();
+
        // Имитируем клик по кнопке
       languageButton.click();
       }

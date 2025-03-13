@@ -19,7 +19,10 @@
      $('#copyPopup').modal('show');
   }
 
+
+
   // Функция для сброса настроек и очистки локального хранилища
+  /* 
   function resetPreferences() {
     localStorage.removeItem("userPreferences");
     localStorage.removeItem("defaultReader");
@@ -27,6 +30,31 @@
      $('#copyPopup').modal('show');
     // Дополнительные действия по сбросу, если необходимо
   }
+  */
+
+function resetPreferences() {
+    localStorage.removeItem("userPreferences");
+    localStorage.removeItem("defaultReader");
+
+    // Сброс всех селектов
+    document.querySelectorAll("select").forEach(select => {
+        select.selectedIndex = 0; // Возвращает в дефолтное состояние
+    });
+
+    // Сброс всех радиокнопок
+    document.querySelectorAll("input[type='radio']").forEach(radio => {
+        radio.checked = radio.defaultChecked;
+    });
+
+    // Сброс чекбоксов
+    document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+        checkbox.checked = checkbox.defaultChecked;
+    });
+
+    // Дополнительные сбросы
+    resetForm(); // Если есть функция для сброса формы
+    $('#copyPopup').modal('show'); // Показываем модальное окно
+}
 
   // Функция для загрузки настроек из локального хранилища
   function loadPreferences() {

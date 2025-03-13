@@ -267,10 +267,9 @@ $(document).ready(function() {
 </div>
 
 <div class="mt-3">
-  <script src="/assets/js/setDefaultMode.js"></script>
 <button type="button" class="btn btn-sm btn-primary rounded-pill" onclick="savePreferences()"><?php echo $btnsave;?></button>
 <button type="button" class="btn btn-sm btn-secondary rounded-pill" onclick="resetPreferences()"><?php echo $btnreset;?></button>
-  
+
      <div class="modal fade" id="copyPopup" tabindex="-1" role="dialog" aria-labelledby="copyPopupLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -309,6 +308,7 @@ $(document).ready(function() {
   <?php echo $regexlink;?> 
   <?php echo $defaults;?> 
   <?php echo $defaultsJS;?> 
+    <script src="/assets/js/setDefaultMode.js"></script>
 
  </p>
  

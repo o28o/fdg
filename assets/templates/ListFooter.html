@@ -68,6 +68,8 @@ $(document).ready(function (){
  "stateSaveParams": function (settings, data) {
     data.order = []; // Очистить информацию о сортировке
   }, */
+  
+
 			 'columnDefs': [
 				{                
 				targets: [1], // Индекс столбца с чекбоксами
@@ -78,6 +80,12 @@ $(document).ready(function (){
             target: 1,
             visible: true
         } */
+            {
+      "targets": [9],  // Индекс колонки "Links" (в данном случае это 10-я колонка, индекс 9)
+      "visible": false // Скрыть колонку
+    }
+
+        
 					], 
 	  'responsive': true,
 	  'colReorder': true,

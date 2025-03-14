@@ -21,6 +21,53 @@ if ( preg_match('/\/ru/', $actual_link)) {
 //echo "$p $q $extra $cb";
 //echo "<script>document.getElementById( 'spinner' ).style.display = 'block';</script>";
 
+// Получаем текущий URL (путь и параметры запроса)
+$currentUrl = $_SERVER['REQUEST_URI'] ?? '';
+
+// Разбираем URL на компоненты
+$parsedUrl = parse_url($currentUrl);
+
+// Извлекаем путь (без параметров)
+$path = $parsedUrl['path'] ?? '';
+
+// Извлекаем параметры запроса
+$query = $parsedUrl['query'] ?? '';
+
+// Очищаем параметры
+if (!empty($query)) {
+    parse_str($query, $params); // Преобразуем строку параметров в массив
+
+    // Удаляем пустые параметры или параметры, содержащие только пробелы
+    foreach ($params as $key => $value) {
+        if (trim($value) === '') {
+            unset($params[$key]); // Удаляем параметр, если он пустой или содержит только пробелы
+        }
+    }
+
+    // Собираем параметры обратно в строку
+    $query = http_build_query($params);
+}
+
+// Собираем очищенный URL
+$cleanedUrl = $path;
+if (!empty($query)) {
+    $cleanedUrl .= '?' . $query;
+}
+
+// Формируем путь к файлу
+$filePath = $basedir . '/result/params.txt';
+
+// Убедимся, что директория существует
+if (!is_dir($basedir . '/result')) {
+    mkdir($basedir . '/result', 0755, true);
+}
+
+// Записываем очищенный URL в файл
+if (file_put_contents($filePath, $cleanedUrl . PHP_EOL) === false) {
+    error_log("Не удалось записать URL в файл: $filePath");
+} else {
+    echo "Очищенный URL успешно записан: $cleanedUrl";
+}
 
 // Проверка условий
 if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {

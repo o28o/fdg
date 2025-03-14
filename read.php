@@ -69,6 +69,32 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 </head>
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
+    <script>
+  
+  const url = new URL(window.location);
+const params = new URLSearchParams(url.search);
+
+// Удаляем параметры, которые пустые или содержат только пробелы
+for (let key of [...params.keys()]) {
+    if (!params.get(key).trim()) { // Проверяем, если пусто или пробелы
+        params.delete(key);
+    }
+}
+
+// Обновляем URL без перезагрузки, если есть изменения
+const newUrl = url.pathname + (params.toString() ? "?" + params.toString() : "");
+if (newUrl !== window.location.href) {
+    history.replaceState(null, "", newUrl);
+}
+
+  function updateURL(params) {
+    console.log("Before update:", location.href);
+    // код, изменяющий URL
+    history.replaceState(null, "", `?q=${params.q}&s=${params.s}`);
+    console.log("After update:", location.href);
+}
+</script>
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
             <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>

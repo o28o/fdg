@@ -23,8 +23,10 @@ include 'scripts/opentexts.php';
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
 <script>
 // Проверяем значение siteLanguage в localStorage
-const siteLanguage = localStorage.getItem('siteLanguage');
 
+if (!siteLanguage) {
+    siteLanguage = localStorage.getItem('siteLanguage'); // Без let/const
+}
 // Получаем текущий путь
 const currentPath = window.location.pathname;
 
@@ -76,7 +78,28 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 <?php echo $fontawesomejs;?> 
 
 </head>
-<script>
+
+
+<!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
+    <body id="page-top"> 
+    <script>
+  
+  const url = new URL(window.location);
+const params = new URLSearchParams(url.search);
+
+// Удаляем параметры, которые пустые или содержат только пробелы
+for (let key of [...params.keys()]) {
+    if (!params.get(key).trim()) { // Проверяем, если пусто или пробелы
+        params.delete(key);
+    }
+}
+
+// Обновляем URL без перезагрузки, если есть изменения
+const newUrl = url.pathname + (params.toString() ? "?" + params.toString() : "");
+if (newUrl !== window.location.href) {
+    history.replaceState(null, "", newUrl);
+}
+
   function updateURL(params) {
     console.log("Before update:", location.href);
     // код, изменяющий URL
@@ -85,9 +108,6 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 }
 </script>
 
-
-<!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
-    <body id="page-top"> 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
             <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container">
@@ -233,6 +253,8 @@ $(document).ready(function() {
           $('#navbarResponsive').collapse('hide');
   });
 });
+
+
 </script>
 
 <div class="collapse" id="collapseSettings">

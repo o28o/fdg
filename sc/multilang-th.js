@@ -386,7 +386,13 @@ if (transData[segment] === undefined) {
 if (engTransData[segment] === undefined) {
   engTransData[segment] = "&nbsp;";
 }
-
+if (localStorage.getItem("removePunct") === "true") {
+    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
+    paliData[segment] = paliData[segment].replace(/[:;“”‘’,?!"']/g, '');  
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    
+    //।   ॥  
+}
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }

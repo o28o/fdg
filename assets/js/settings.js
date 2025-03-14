@@ -289,14 +289,17 @@ function updateUrl() {
     // Сохраняем новый URL
     window.location.href = url.toString();
 }
-
+const initialRemovePunct = localStorage.getItem("removePunct");
 // Функция для проверки изменений и обновления URL
 function checkAndUpdateUrl() {
     const currentBaseUrl = getBaseUrl();
     const currentDefaultReader = localStorage.defaultReader;
+    const currentRemovePunct = localStorage.getItem("removePunct"); // Новая проверка
 
     // Если параметры изменились, обновляем URL
-    if (currentBaseUrl !== initialBaseUrl || currentDefaultReader !== initialDefaultReader) {
+    if (currentBaseUrl !== initialBaseUrl || 
+        currentDefaultReader !== initialDefaultReader || 
+        currentRemovePunct !== initialRemovePunct) { // Добавлено
         updateUrl();
     }
 }
@@ -508,7 +511,6 @@ document.addEventListener("keydown", (event) => {
 
         checkbox.addEventListener("change", () => {
             localStorage.setItem(key, checkbox.checked);
-            location.reload(true);
         });
     });
 

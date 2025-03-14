@@ -336,9 +336,9 @@ let преобразованныеСлова = слова.map(word => {
     return результат;
 }
 if (localStorage.getItem("removePunct") === "true") {
-    paliDevanagariData[segment] = paliDevanagariData[segment].replace(/[-—–]/g, ' ');  
-    paliDevanagariData[segment] = paliDevanagariData[segment].replace(/[:;“”‘’,?!"']/g, '');  
-  //  paliDevanagariData[segment] = paliDevanagariData[segment].replace(/[.?!]/g, ''); 
+    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
+    paliData[segment] = paliData[segment].replace(/[:;“”‘’,?!"']/g, '');  
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
     
     //।   ॥  
 }

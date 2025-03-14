@@ -47,27 +47,46 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                    <a href=/ru/><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></a>
-                    Главная "Поиск" 
-                </div>
-         <h3 class="text-start">Горячие Клавиши</h3>
+                
 <div class="container">
-    <div class="row align-items-center mb-2">
+          <div class="row align-items-center mb-2">
         <div class="col-auto">
-<button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button>
-        </div>
-        <div class="col-auto"><strong>Alt+Space или Alt+Z</strong></div>
-        <div class="col">Показать-скрыть Пали или другие языки в результатах поиска </div>
+  <a href=/ru/><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></a>
+                </div>
+        <div class="col">Главная "Поиск" 
+         </div>
     </div>
-    
-    <div class="row align-items-center mb-2">
+        <div class="row align-items-center mb-2">
         <div class="col-auto">
             <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
         </div>
         <div class="col-auto"><strong>Alt+T</strong></div>
         <div class="col">Тёмная/Светлая/Авто Темы</div>
     </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="btn-show-all-children-dummy" class="btn btn-light mb-1" >Saṁvaṭṭo...</button>
+        </div>
+
+        <div class="col-auto"><strong>Shift+Пробел</strong></div>
+        <div class="col">Свернуть-развернуть результаты поиска </div>
+    </div>    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="btn-show-all-children-dummy" class="btn btn-light mb-1" >Words</button>
+        </div>
+        <div class="col">Показать результаты агрегированные по словам </div>
+    </div>    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="language-button-dummy" class="btn btn-light mb-1 mt-1">Pāḷi / Рус</button>
+        </div>
+        <div class="col-auto"><strong>Alt+Space <br>или Alt+Z</strong></div>
+        <div class="col">Показать-скрыть Пали или другие языки в результатах поиска </div>
+    </div>
+
+    
+
    <!-- <div class="row align-items-center mb-2">
         <div class="col-auto">
             <img src="/assets/svg/align-left.svg" alt="toggle one/two column view" class="common-size-icon4">
@@ -113,15 +132,15 @@
         <div class="col-auto"><strong>Alt+H</strong></div>
         <div class="col">Показать-скрыть это окно "Помощь"</div>
     </div>
-        <div class="row align-items-center mb-2">
+    <!--    <div class="row align-items-center mb-2">
         <div class="col-auto"><strong>Shift+Пробел </strong></div>
         <div class="col">Свернуть-развернуть результаты поиска </div>
-    </div>  
+    </div>  -->
 </div>       
 <br>
 <div>
   <div class="mt-2 mb-2">
-<strong>Words</strong> – показать реузльтаты агрегированные по словам. 
+
 </div>
 <div class="mb-2">
   Чтобы <strong>Перейти</strong> в текст на конкретную строку, кликните в конце нужной строки с Пали, где курсор меняется со стрелки на палец.
@@ -226,15 +245,31 @@
                     <a href=/><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></a>
                     Main Search 
                 </div>
-                <h3 class="text-start">Hotkeys</h3>
+                <h3 class="text-start">Controls</h3>
                 <div class="container">
+                
                     <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="btn-show-all-children-dummy" class="btn btn-light mb-1" >Saṁvaṭṭo...</button>
+        </div>
+
+        <div class="col-auto"><strong>Shift+Space</strong></div>
+        <div class="col">Collapse-expand search results </div>
+    </div>    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="btn-show-all-children-dummy" class="btn btn-light mb-1" >Words</button>
+        </div>
+        <div class="col">Show results aggregated by words </div>
+    </div>
+        <div class="row align-items-center mb-2">
                         <div class="col-auto">
-                            <button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button>
+                            <button id="language-button-dummy" class="btn btn-light mb-1 mt-1">Pāḷi / Eng</button>
                         </div>
-                        <div class="col-auto"><strong>Alt+Space or Alt+Z</strong></div>
+                        <div class="col-auto"><strong>Alt+Space <br>or Alt+Z</strong></div>
                         <div class="col">Show-hide languages in search results</div>
                     </div>
+                    
                     <div class="row align-items-center mb-2">
                         <div class="col-auto">
                             <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
@@ -295,9 +330,6 @@
                 </div>
 <br>
 <div>
-    <div class="mt-2 mb-2">
-<strong>Words</strong> show results aggregated by words. 
-</div>
 <div class="mb-2">
   To <strong>open</strong> text from the specific line, click at the end of the desired Pali line where the cursor changes from an arrow to a finger.
 </div>

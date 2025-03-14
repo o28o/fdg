@@ -328,9 +328,20 @@ if (finder && finder.trim() !== "") {
   }
 }
 
+
+
+if (localStorage.getItem("removePunct") === "true") {
+    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
+    paliData[segment] = paliData[segment].replace(/[:;“”‘’,?!"']/g, '');  
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    
+    //।   ॥  
+}
+
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }
+
 if (paliData[segment] !== undefined && transData[segment] !== undefined && varData[segment] !== undefined) {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${paliData[segment].trim()}<a class="text-decoration-none copyLink" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a><br>

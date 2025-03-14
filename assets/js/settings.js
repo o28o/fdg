@@ -102,7 +102,7 @@ localStorage.setItem("firstVisitShowSettingsClosed", "true");
     // Применение выбранного значения
     applySavedScript(selectedScript);
 checkAndUpdateUrl();
-    
+//location.reload(true);    
   });
 
   // Функция для применения сохраненного значения
@@ -122,20 +122,25 @@ checkAndUpdateUrl();
   }
   
   resetButton.addEventListener('click', function() {
-  // Удаляем значение из localStorage
+  // Удаляем значения из localStorage для всех чекбоксов
+  document.querySelectorAll(".setting-checkbox").forEach(checkbox => {
+    const key = checkbox.dataset.key; // Берём ключ из data-key
+    localStorage.removeItem(key); // Удаляем сохранённое состояние чекбокса
+  });
+
+  // Дополнительные параметры, которые нужно очистить
   localStorage.removeItem('selectedScript');
-      localStorage.removeItem("defaultReader");
+  localStorage.removeItem("defaultReader");
   localStorage.removeItem('paliToggleRu');
   localStorage.removeItem('viewMode');
-localStorage.setItem("variantVisibility", "hidden");
-/*
-function clearParams() {
+  localStorage.setItem("variantVisibility", "hidden");
+
+  // Функция для очистки дополнительных параметров
+  function clearParams() {
     const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight', 'isFirstDrag'];
     keys.forEach(key => localStorage.removeItem(key));
-}
-*/ 
+  }
   clearParams();
-
 
   // Очищаем параметр 'script' из URL
   const url = new URL(window.location.href);
@@ -144,8 +149,6 @@ function clearParams() {
   // Перезагружаем страницу с обновленным URL
   window.location.href = url.toString();
 });
-  
-
 
 
 //Default readers
@@ -495,6 +498,19 @@ document.addEventListener("keydown", (event) => {
     }
   }
 });
+
+
+
+//remove punctuation checkbox
+    document.querySelectorAll(".setting-checkbox").forEach(checkbox => {
+        const key = checkbox.dataset.key; // Берём ключ из data-key
+        checkbox.checked = localStorage.getItem(key) === "true";
+
+        checkbox.addEventListener("change", () => {
+            localStorage.setItem(key, checkbox.checked);
+            location.reload(true);
+        });
+    });
 
 //end of the initial function
 });

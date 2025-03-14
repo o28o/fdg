@@ -209,6 +209,14 @@ var fullUrlWithAnchor = window.location.href.split('#')[0] + '#' + anchor;
  // console.log(finder);
    // let finder = decodeURIComponent(params.get("s"));
 
+
+if (localStorage.getItem("removePunct") === "true") {
+    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
+    paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    
+    //।   ॥  
+}
 if (finder && finder.trim() !== "") {
   let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
 
@@ -233,13 +241,6 @@ if (finder && finder.trim() !== "") {
   }
 }
 
-if (localStorage.getItem("removePunct") === "true") {
-    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
-    paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
-    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
-    
-    //।   ॥  
-}
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }

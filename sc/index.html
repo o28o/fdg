@@ -96,7 +96,6 @@
         <div id="previous"></div>
         <div id="next"></div>
     </div>
-
 <!-- Модальное окно "Помощь" -->
 <div class="modal fade" id="paliLookupInfo" tabindex="-1" aria-labelledby="paliLookupInfoLabel" aria-hidden="true" data-bs-focus="false">
     <div class="modal-dialog modal-dialog-centered">
@@ -116,7 +115,7 @@
                         <div class="col-auto">
                             <button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button>
                         </div>
-                        <div class="col-auto"><strong>Alt+Space</strong></div>
+                        <div class="col-auto"><strong>Alt+Space or Alt+Z</strong></div>
                         <div class="col">Switch language</div>
                     </div>
                     <div class="row align-items-center mb-2">
@@ -325,26 +324,6 @@
                                 Like the previous one + words from left to right
                             </div>
                         </div>
-                        
-    <!--    <div class="row align-items-center mb-2">
-                            <div class="col-auto">
-                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="thRadio" value="fr"> &nbsp;
-                                <a id="frDemo" href="/sc/th?q=mn44"><strong>Thai</strong></a>
-                            </div>
-                            <div class="col text-end">
-                                Two languages: Pali, Thai
-                            </div>
-                        </div>
-                          <div class="row align-items-center mb-2">
-                        <div class="col-auto">
-                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="mlth"> &nbsp;
-                            <a id="mlDemo" href="/sc/mlth.html?q=sn44.1"><strong>Thai Multi</strong></a>
-                        </div>
-                        <div class="col text-end">
-                            Three languages: Pali, Thai, English
-                        </div>
-                    </div>  
-                    -->           
                     </div>
 
                     <!-- "Show More" Button -->
@@ -372,7 +351,6 @@
         </div>
     </div>
 </div>
-
     <div id="sutta">
     </div>
     <hr>
@@ -380,11 +358,7 @@
         <div id="previous2"></div>
         <div id="next2"></div>
     </div>
-    
-
-<script src="/assets/js/paliLookup.js"></script>
-
-
+  
     <div class="links-area" style="text-align: center;">
         <a href="../" title="Sutta and Vinaya search" rel="noreferrer"
             ><img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray.png"></a>
@@ -448,7 +422,6 @@
 </script>       
     <script src="/assets/js/linksdpr.js"></script>
     <script src="/assets/js/switchView.js"></script>
-    <script src="/assets/js/showHideHelp.js"></script>
 
                 <script src="/assets/js/linksru.js"></script>
         <script src="/assets/js/openRu.js"></script>
@@ -635,6 +608,8 @@ window.addEventListener("load", function() {
     }, 1000); // 1.5 секунды таймаута
 });
 </script>
+<script src="/assets/js/paliLookup.js"></script>
+
 <script src="/assets/js/uihelp.js"> </script>
 <script src="/assets/js/variantsButtonSc.js"></script>
 <script src="/assets/js/settings.js"></script>

@@ -103,15 +103,7 @@ else {
 var rootDevanagaripath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slugReady}_rootd-pli-ms.json`;
  }
 
-
-
-
-
-
-
 var rustrnpath = `/assets/texts/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
-
-
 
 if ( texttype === "vinaya")
 {

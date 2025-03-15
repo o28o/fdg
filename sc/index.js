@@ -74,10 +74,12 @@ console.log('texttype ' + texttype + ' translator ' + translator);
 let params = new URLSearchParams(document.location.search);
  let script = params.get("script");
  
- if ( script === "devanagari" ) {
+   const savedScript = localStorage.getItem('selectedScript');
+
+ if (( script === "devanagari" ) || ( savedScript === "Devanagari" ) ) {
 var rootpath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slugReady}_rootd-pli-ms.json`
  } 
- else  if ( script === "thai" ) {
+ else if (( script === "thai" ) || ( savedScript === "Thai" ) ) {
 var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slugReady}_rootth-pli-ms.json`
  } 
 else {
@@ -103,7 +105,6 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugR
     texttype === "vinaya";
       let language = "pli";
 	  
-
  if ( script === "devanagari" ) {
 //	     var rootpath = `/assets/texts/${texttype}/${slug}_root-pli-ms.json`;
 var rootpath = `/assets/texts/devanagari/root/pli/ms/${texttype}/${slug}_rootd-pli-ms.json`
@@ -114,8 +115,8 @@ var rootpath = `/assets/texts/th/root/pli/ms/${texttype}/${slug}_rootth-pli-ms.j
 else {
 var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}_root-pli-ms.json`
  }
- 
 
+  
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
     console.log(rootpath, trnpath, htmlpath);

@@ -514,6 +514,41 @@ document.addEventListener("keydown", (event) => {
         });
     });
 
+
+
+document.addEventListener('keydown', (event) => {
+  if (event.altKey && event.key.toLowerCase() === 'l') {
+    event.preventDefault(); // Предотвращаем стандартное поведение
+
+    const scriptOptions = ['ISOPali', 'devanagari', 'thai']; // Доступные скрипты
+    const url = new URL(window.location.href);
+    let currentScript = url.searchParams.get('script') || 'ISOPali';
+
+    // Получаем следующий скрипт в списке
+    let nextIndex = (scriptOptions.indexOf(currentScript) + 1) % scriptOptions.length;
+    let nextScript = scriptOptions[nextIndex];
+
+    // Обновляем URL
+    if (nextScript === 'ISOPali') {
+      url.searchParams.delete('script'); // Удаляем параметр для ISOPali
+    } else {
+      url.searchParams.set('script', nextScript);
+    }
+
+    window.location.href = url.toString(); // Перезагружаем страницу
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.altKey && (event.code === 'Period' || event.code === 'KeyЮ')) {
+    event.preventDefault(); // Предотвращаем стандартное поведение
+
+    const currentValue = localStorage.getItem("removePunct") === "true";
+    localStorage.setItem("removePunct", currentValue ? "false" : "true");
+
+    location.reload(); // Перезагружаем страницу
+  }
+});
 //end of the initial function
 });
 

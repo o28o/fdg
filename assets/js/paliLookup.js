@@ -7,9 +7,13 @@ let dpdlang;
 
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
-  dpdlang = 'https://dpdict.net/ru/';
+  //dpdlang = 'http://localhost:8080/ru/';
+  dpdlang = 'https://dict.dhamma.gift/ru/';
+  //dpdlang = 'https://dpdict.net/ru/';
 } else {
-  dpdlang = 'https://dpdict.net/';
+  //dpdlang = 'http://localhost:8080/';
+  dpdlang = 'https://dict.dhamma.gift/';
+//  dpdlang = 'https://dpdict.net/';
 }
 
 function clearParams() {

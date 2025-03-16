@@ -83,8 +83,8 @@ if (savedScript) {
   scriptSelect.value = savedScript;
 } else {
   scriptSelect.value = 'ISOPali'; // Значение по умолчанию, если ничего не сохранено
+localStorage.setItem('selectedScript', 'ISOPali');
 }
-
 
   // Обработка нажатия на кнопку "Применить"
   applyButton.addEventListener('click', function() {
@@ -92,7 +92,8 @@ if (savedScript) {
 
     // Сохранение выбранного значения в localStorage
     if (selectedScript === 'ISOPali') {
-      localStorage.removeItem('selectedScript');
+      //localStorage.removeItem('selectedScript');
+      localStorage.setItem('selectedScript', 'ISOPali');
     } else {
       localStorage.setItem('selectedScript', selectedScript);
     }
@@ -110,6 +111,7 @@ checkAndUpdateUrl();
     const url = new URL(window.location.href);
 
     if (script === 'ISOPali') {
+      localStorage.setItem('selectedScript', 'ISOPali');
       url.searchParams.delete('script');
     } else {
       url.searchParams.set('script', script.toLowerCase());

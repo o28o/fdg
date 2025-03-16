@@ -243,34 +243,10 @@ if (engTransData[segment] === undefined) {
 }
 
 let params = new URLSearchParams(document.location.search);
-  let finder = params.get("s");
-
-if (finder && finder.trim() !== "") {
-  let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
-
-  try {
-    paliData[segment] = paliData[segment]?.replace(regex, match => `<b class='match finder'>${match}</b>`);
-  } catch (error) {
-    console.error("Ошибка при выделении совпадений в paliData:", error);
-  }
-
-  try {
-    transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
-  } catch (error) {
-    console.error("Ошибка при выделении совпадений в transData:", error);
-  }
-
-  if (varData[segment] !== undefined) {  
-    try {
-      varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
-    } catch (error) {
-      console.error("Ошибка при выделении совпадений в varData:", error);
-    }
-  }
-}
+let paliModDataSegment = paliData[segment].slice();  // Копия одного элемента массива
 
 function преобразоватьТекст() {
-    let входнойТекст = paliData[segment];
+    let входнойТекст = paliModDataSegment;  // Теперь работаете с копией, а не с оригиналом
 
     // Разбиваем текст на строки
     let строкиСКавычками = входнойТекст.split('\n');
@@ -302,7 +278,7 @@ let преобразованныеСлова = слова.map(word => {
 }
 if (localStorage.getItem("removePunct") === "true") {
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
-    paliData[segment] = paliData[segment].replace(/[:;“”‘’,?!"']/g, '');  
+    paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
     paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
     
     //।   ॥  
@@ -310,6 +286,36 @@ if (localStorage.getItem("removePunct") === "true") {
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }
+
+
+
+  let finder = params.get("s");
+
+if (finder && finder.trim() !== "") {
+  let regex = new RegExp(finder, 'gi'); // 'gi' - игнорировать регистр
+
+  try {
+    paliData[segment] = paliData[segment]?.replace(regex, match => `<b class='match finder'>${match}</b>`);
+  } catch (error) {
+    console.error("Ошибка при выделении совпадений в paliData:", error);
+  }
+
+  try {
+    transData[segment] = transData[segment]?.replace(regex, match => `<b class="match finder">${match}</b>`);
+  } catch (error) {
+    console.error("Ошибка при выделении совпадений в transData:", error);
+  }
+
+  if (varData[segment] !== undefined) {  
+    try {
+      varData[segment] = varData[segment].replace(regex, match => `<b class="match finder">${match}</b>`);
+    } catch (error) {
+      console.error("Ошибка при выделении совпадений в varData:", error);
+    }
+  }
+}
+
+
 
 //   console.log(`transData[${segment}]: ${transData[segment]}`);
   //  console.log(`engTransData[${segment}]: ${engTransData[segment]}`);

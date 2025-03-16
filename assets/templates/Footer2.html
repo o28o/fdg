@@ -340,6 +340,31 @@ checkboxes.forEach(function(checkbox) {
                 <script src="/assets/js/settings.js"></script>
                 <script src="/assets/js/uihelp.js"></script>
 
+
+<script>
+window.addEventListener("load", () => {
+    // Получаем URL предыдущей страницы
+    const oldUrl = document.referrer;
+
+    // Проверяем, есть ли элемент с классом "params"
+    const paramsElement = document.querySelector(".params");
+
+    // Проверяем, содержит ли URL "history.php" и есть ли paramsElement
+    if (paramsElement) {
+        const newUrl = paramsElement.textContent.trim(); // Берем текст из элемента
+        if (newUrl) {
+            history.replaceState(null, "", newUrl); // Меняем URL
+        }
+    } else if (oldUrl) {
+        history.replaceState(null, "", oldUrl); // Меняем URL на реферер
+    } else {
+        console.log("Реферер отсутствует. Возможно, страница открыта напрямую.");
+    }
+});
+  
+</script>
+
+
 </body>
       <script defer>
            //to enable bootstrap tooltip    

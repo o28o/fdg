@@ -202,6 +202,25 @@ checkboxes.forEach(function(checkbox) {
   });
 });
 
+
+document.addEventListener("click", function(event) {
+    const link = event.target.closest(".outlink");
+    if (!link) return; // Если клик был не по ссылке, ничего не делаем
+
+    const localPath = link.getAttribute("data-local");
+
+    // Проверяем, существует ли локальный файл
+    fetch(localPath, { method: "HEAD" }).then(response => {
+        if (response.ok) {
+            event.preventDefault(); // Отменяем переход по стандартной ссылке
+            window.location.href = localPath; // Переходим на локальный файл
+        }
+    }).catch(() => {
+        // Если файла нет, ничего не меняем, переход остаётся на `href`
+    });
+});
+
+
 </script>
 
 <script defer src="/assets/js/themeswitch.js"></script>

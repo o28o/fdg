@@ -100,8 +100,10 @@ skiprounds=5
 
 elif [[ "`uname -a`" == *"Ubuntu"* ]] || [[ "`uname -a`" == *"microsoft-standard"* ]] ; then 
 #export LC_ALL=C.utf8
-export LANG=C
-export LC_ALL=C
+#export LANG=C
+#export LC_ALL=C
+export LC_ALL=en_US.UTF-8  # Или ru_RU.UTF-8, если это подходит
+
 sitename=http://localhost
 nicevalue=1
 mode=offline

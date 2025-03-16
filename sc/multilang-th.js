@@ -420,7 +420,7 @@ if (engTransData[segment] === undefined) {
 }
 if (localStorage.getItem("removePunct") === "true") {
     paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
-    paliData[segment] = paliData[segment].replace(/[:;“”‘’,?!"']/g, '');  
+    paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
     paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
     
     //।   ॥  

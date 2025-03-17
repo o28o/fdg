@@ -65,9 +65,8 @@ if (!is_dir($basedir . '/result')) {
 // Записываем очищенный URL в файл
 if (file_put_contents($filePath, $cleanedUrl . PHP_EOL) === false) {
     error_log("Не удалось записать URL в файл: $filePath");
-} else {
-    echo "Очищенный URL успешно записан: $cleanedUrl";
-}
+} 
+//else { echo "Очищенный URL успешно записан: $cleanedUrl"; }
 
 // Проверка условий
 if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {

@@ -16,6 +16,17 @@ if (window.location.href.includes('/ru/') || window.location.href.includes('ml.h
 //  dpdlang = 'https://dpdict.net/';
 }
 
+console.log("dpdlang:", dpdlang);
+
+fetch(dpdlang)
+  .then(response => {
+    console.log("Status:", response.status);
+    return response.text();
+  })
+  .then(text => console.log("Response:", text.substring(0, 500))) // Ограничим до 500 символов
+  .catch(error => console.error("Fetch error:", error));
+
+
 function clearParams() {
     const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight', 'isFirstDrag'];
     keys.forEach(key => localStorage.removeItem(key));

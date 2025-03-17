@@ -7,25 +7,14 @@ let dpdlang;
 
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
-  dpdlang = '/dict/ru';
- // dpdlang = 'https://dict.dhamma.gift/ru/';
+  //dpdlang = 'http://localhost:8080/ru/';
+  dpdlang = 'https://dict.dhamma.gift/ru/';
   //dpdlang = 'https://dpdict.net/ru/';
 } else {
-  dpdlang = '/dict/';
- // dpdlang = 'https://dict.dhamma.gift/';
+  //dpdlang = 'http://localhost:8080/';
+  dpdlang = 'https://dict.dhamma.gift/';
 //  dpdlang = 'https://dpdict.net/';
 }
-
-console.log("dpdlang:", dpdlang);
-
-fetch(dpdlang)
-  .then(response => {
-    console.log("Status:", response.status);
-    return response.text();
-  })
-  .then(text => console.log("Response:", text.substring(0, 500))) // Ограничим до 500 символов
-  .catch(error => console.error("Fetch error:", error));
-
 
 function clearParams() {
     const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight', 'isFirstDrag'];

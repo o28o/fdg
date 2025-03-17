@@ -27,7 +27,7 @@ $metakeywords = 'Будда, Buddha, Дхамма, Дхарма, Виная, п�
 $titletwit = 'Точный поиск в Учении Будды, в Пали Суттах и Винае. ';
 $ogdesc = 'Поисковая Система Освобождения. Учение Будды. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
 $oglocale = 'ru_RU';
-$ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift_rus.jpg';
+$ogshare = 'https://dhamma.gift/assets/img/social_sharing_gift_rus.jpg';
 $menu = 'Меню';
 $menumain = 'Главная';
 $menuread = 'Читать';
@@ -376,7 +376,7 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 									<strong>Совет #9</strong><br>
 Если запрос завершается ошибкой из-за таймаута, попробуйте более длинный поисковый запрос или более специфичное слово.  <br><br>
 	<strong>Совет #10 Быстрые переходы</strong><br>
-   Также как на <a href="https://find.dhamma.gift/sc/ru/">Dhamma.gift Read</a> или <a href="https://find.dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
+   Также как на <a href="https://dhamma.gift/sc/ru/">Dhamma.gift Read</a> или <a href="https://dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
    Через строку поиска можно перейти в сутты dn, mn, sn, an, ud из kn и тексты Винаи. <br><br>
 <!--								  <strong>Совет #11</strong><br>
                                    !!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  -->
@@ -441,7 +441,7 @@ $detailapp = 'приложение';
 $detailtable = 'таблица';
 $detailtextbook = 'учебник';
 
-$header5fdgoffline = 'find.dhamma.gift Оффлайн Версия';
+$header5fdgoffline = 'dhamma.gift Оффлайн Версия';
 
 $pfdg = 'Точный поиск по Суттам и Винае';
 $pfdgoffline = 'Оффлайн версия и инструкция по установке. Android, Linux, Windows';
@@ -569,7 +569,7 @@ $metakeywords = 'Buddha, dhamma, pitaka, sutta, suttas, vinaya, patimokkha, prat
 $titletwit = 'Precise Search in Buddha Dhamma, in Pali Suttas and Vinaya. ';
 $ogdesc = 'Liberation Search Engine. Search in Buddha Dhamma, Suttas and Vinaya in Pali, English, Russian and Thai';
 $oglocale = 'en_US';
-$ogshare = 'https://find.dhamma.gift/assets/img/social_sharing_gift.jpg';
+$ogshare = 'https://dhamma.gift/assets/img/social_sharing_gift.jpg';
 
 $linksothermat = 'https://drive.google.com/drive/folders/1nrNtb_4s27nJGq61tpigf_b2sO_KOnVG';
 
@@ -936,7 +936,7 @@ $detailapp = 'app';
 $detailtable = 'table';
 $detailtextbook = 'textbook';
 
-$header5fdgoffline = 'find.dhamma.gift Offline Edition';
+$header5fdgoffline = 'dhamma.gift Offline Edition';
 $pfdg = 'All encompassing search within all Suttas and Vinaya';
 $pfdgoffline = 'Offline version & setup instruction. Android, Linux, Windows';
 

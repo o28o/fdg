@@ -31,11 +31,11 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="find.Dhamma.gift" />
+<meta property="og:title" content="Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 
 <meta property="og:url" content="/" />
-<meta property="og:site_name" content="find.Dhamma.gift" />
+<meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">
@@ -102,7 +102,7 @@ if (newUrl !== window.location.href) {
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
             <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
-                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">find.dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">find.Dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>
@@ -21546,9 +21546,9 @@ include $basedir . "/assets/texts/bipm.php";
       <?php
       if ( $mode == "offline" ) {
         
-      echo '  <a href="https://find.dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
+      echo '  <a href="https://Dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">find.dhamma.gift</h5>
+      <h5 class="mb-1">Dhamma.gift</h5>
       <small class="text-muted">' . $detailonline . '</small>
     </div>
     <p class="mb-1">' . $pfdg . '</p>
@@ -21960,9 +21960,9 @@ include $basedir . "/assets/texts/bipm.php";
 <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
 <!-- Portfolio Modal - Text-->
 <div class="embed-container mb-3">
-<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" loading="lazy" ></a></div>
+<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with Dhamma.gift" loading="lazy" ></a></div>
 
-<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with Dhamma.gift" frameborder="0" allowfullscreen></iframe>
 </div>-->
 
 <button class="btn btn-primary" data-bs-dismiss="modal">

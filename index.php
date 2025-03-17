@@ -24,7 +24,7 @@ include 'scripts/opentexts.php';
 <meta name="keywords" content="<?php echo $metakeywords;?>">
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="find.Dhamma.gift" />
+<meta property="og:title" content="Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 <link rel="manifest" href="/assets/manifest.json">
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
@@ -48,7 +48,7 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 </script>
 
 <meta property="og:url" content="/" />
-<meta property="og:site_name" content="find.Dhamma.gift" />
+<meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">
@@ -126,7 +126,7 @@ if (newUrl !== window.location.href) {
    <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
 
             
-                <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="/">find.Dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>
@@ -456,7 +456,7 @@ input.setSelectionRange(input.value.length, input.value.length);
  <?php
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-Добавить <strong>Find.dhamma.gift</strong> на Домашний Экран?
+Добавить <strong>Dhamma.gift</strong> на Домашний Экран?
     <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
    <br>
    <strong>Android</strong> Chrome<br>
@@ -467,7 +467,7 @@ echo '<div style="max-width: 450px; display: none;" class="alert alert-primary a
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
 } else {
 echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-Add <strong>Find.dhamma.gift</strong> to your Home Screen?
+Add <strong>Dhamma.gift</strong> to your Home Screen?
     <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
    <br>
    <strong>Android</strong> Chrome<br>
@@ -761,9 +761,9 @@ foreach ($slides as $index => $slide) {
       <?php
       if ( $mode == "offline" ) {
         
-      echo '  <a href="https://find.dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
+      echo '  <a href="https://Dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">find.dhamma.gift</h5>
+      <h5 class="mb-1">Dhamma.gift</h5>
       <small class="text-muted">' . $detailonline . '</small>
     </div>
     <p class="mb-1">' . $pfdg . '</p>
@@ -1216,9 +1216,9 @@ foreach ($slides as $index => $slide) {
 <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
 <!-- Portfolio Modal - Text-->
 <div class="embed-container mb-3">
-<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" loading="lazy" ></a></div>
+<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with Dhamma.gift" loading="lazy" ></a></div>
 
-<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with Dhamma.gift" frameborder="0" allowfullscreen></iframe>
 </div>-->
 
 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -1226,7 +1226,7 @@ foreach ($slides as $index => $slide) {
                                         <?php echo "$closemodal"; ?>
                                     </button>
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>

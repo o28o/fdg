@@ -1,9 +1,4 @@
 <?php
-// Включаем вывод всех ошибок для отладки
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Устанавливаем заголовки кэширования
 header("Cache-Control: public, max-age=3600"); // Кэшировать на 1 час
 header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
 ?>
@@ -78,7 +73,7 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 </head>
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
-    <script>
+<!--    <script>
   
   const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
@@ -102,7 +97,7 @@ if (newUrl !== window.location.href) {
     history.replaceState(null, "", `?q=${params.q}&s=${params.s}`);
     console.log("After update:", location.href);
 }
-</script>
+</script> -->
 
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">

@@ -395,9 +395,13 @@ echo "server kz"
 ssh -p1000 root@94.126.201.8 "cd /var/www/html 
 git pull 
 echo
+echo dpd-db
+cd /var/www/dpd-db
+git pull
+echo 
 echo audio
 echo
-cd assets/audio
+cd /var/www/html/assets/audio
 git pull"
 }
 

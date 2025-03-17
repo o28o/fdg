@@ -8,7 +8,7 @@ sed -i '/id="summary-toggle"/ s/ checked//' ru_templates/home.html templates/hom
 exit 0
 
 cd /var/www/
-git clone https://github.com/digitalpalidictionary/dpd-db
+git clone https://github.com/o28o/dpd-db
 cd dpd-db
 wget latest dpd.db.tar.bz  from https://github.com/digitalpalidictionary/dpd-db/releases
 tar -xvjf dpd.db.tar.bz2
@@ -19,3 +19,7 @@ git tag --sort=-v:refname  # Выводим список тегов, отсор�
 latest_tag=$(git tag --sort=-v:refname | head -n 1)  # Получаем последний тег
 git checkout "$latest_tag"  # Переключаемся на него
 
+
+git remote add upstream https://github.com/digitalpalidictionary/dpd-db.git
+git fetch upstream --tags
+git push origin --tags

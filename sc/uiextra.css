@@ -136,6 +136,11 @@ margin-left: 6px;
   max-width: 105rem;
 }
 
+#sutta .p {
+  word-break: break-word;
+        overflow-wrap: break-word;
+}
+
 /* Если один из языков справа скрыт , .column-view .eng-lang:empty*/
 .column-view .rus-lang:empty  {
   display: none;

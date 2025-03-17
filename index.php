@@ -1248,7 +1248,7 @@ $(function () {
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
 
-<script src="/assets/js/autopali.js"></script>
+<script src="/assets/js/autopali.js" defer></script>
 <script src="/assets/js/paliLookup.js"></script>
 	  
 <script src="/assets/js/randPlaceholder.js">

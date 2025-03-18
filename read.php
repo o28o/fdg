@@ -21580,7 +21580,7 @@ include $basedir . "/assets/texts/bipm.php";
     <small class="text-muted"><?php echo $smcse;?></small>
   </a>
   
-        <a target="_blank" href="https://dpdict.net/" class="list-group-item list-group-item-action">
+        <a target="_blank" href="https://dict.dhamma.gift/" class="list-group-item list-group-item-action">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">Digital Pali Dictionary</h5>
       <small class="text-muted"><?php echo $detailapp;?></small>

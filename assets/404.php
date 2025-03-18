@@ -19,11 +19,11 @@ include '../scripts/opentexts.php';
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="404 find.Dhamma.gift" />
+<meta property="og:title" content="404 Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 
-<meta property="og:url" content="https://find.dhamma.gift/" />
-<meta property="og:site_name" content="find.Dhamma.gift" />
+<meta property="og:url" content="https://dhamma.gift/" />
+<meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">

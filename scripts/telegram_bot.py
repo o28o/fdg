@@ -5,7 +5,6 @@ import requests
 TOKEN = "5702477766:AAH1wguJBwUNpy6nYkad9OiikBN6lb7HgPQ"
 
 async def start(update: Update, context: CallbackContext):
-    # Сообщение при вводе /start
     await update.message.reply_text(
         "Добро пожаловать! Вот доступные команды:\n"
         "/find - Поиск на dhamma.gift\n"
@@ -20,11 +19,12 @@ async def find(update: Update, context: CallbackContext):
     if not context.args:
         await update.message.reply_text("Использование: /find слово, фраза или номер текста, как sn56.11")
         return
-    
+
     query = "+".join(context.args)
     url = f"https://dhamma.gift/ru/?q={query}"
-    
-    await update.message.reply_text(f"Ищем: {query}\n[Результаты]({url})", parse_mode="Markdown")
+
+    # Прямой ответ с ссылкой
+    await update.message.reply_text(f"Ищем: {query}\nПерейдите по следующей ссылке для просмотра результатов:\n{url}")
 
 async def dict_search(update: Update, context: CallbackContext):
     if not context.args:
@@ -33,8 +33,9 @@ async def dict_search(update: Update, context: CallbackContext):
     
     query = "+".join(context.args)
     url = f"https://dict.dhamma.gift/ru?q={query}"
-    
-    await update.message.reply_text(f"Словарь: {query}\n[Результаты]({url})", parse_mode="Markdown")
+
+    # Прямой ответ с ссылкой
+    await update.message.reply_text(f"Словарь: {query}\nПерейдите по следующей ссылке для просмотра результатов:\n{url}")
 
 app = Application.builder().token(TOKEN).build()
 

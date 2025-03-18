@@ -11,9 +11,9 @@ async def start(update: Update, context: CallbackContext):
         "/find - Поиск на dhamma.gift\n"
         "/read - Для чтения материалов\n"
         "/dict - Поиск в словаре на dict.dhamma.gift\n\n"
-        "Мини-апп поиска http://t.me/dhammagift_bot/find\n"
-"Навигатор по Суттам http://t.me/dhammagift_bot/read\n"
-"Словарь http://t.me/dhammagift_bot/dict"
+        "Мини-апп поиска: [dhammagift_bot/find](http://t.me/dhammagift_bot/find)\n"
+        "Навигатор по Суттам: [dhammagift_bot/read](http://t.me/dhammagift_bot/read)\n"
+        "Словарь: [dhammagift_bot/dict](http://t.me/dhammagift_bot/dict)"
     )
 
 async def find(update: Update, context: CallbackContext):

@@ -323,9 +323,9 @@ if (finder && finder.trim() !== "") {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
-      <span class="rus-lang" lang="ru">${paliData[segment]}
+      <span class="greyedout pli-lang" lang="ru">${paliData[segment]}
 <br>
-		  <span class="variant rus-lang inputscript-ISOPali" lang="ru">
+		  <span class="variant pli-lang inputscript-ISOPali" lang="ru">
 ${varData[segment].trim()}   
 </span>		  </span>      
       </span>${closeHtml}\n\n`;
@@ -337,7 +337,7 @@ ${varData[segment].trim()}
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;" onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a>
 	  </span>
-      <span class="rus-lang" lang="ru">${paliData[segment]}
+      <span class="greyedout pli-lang" lang="ru">${paliData[segment]}
 		  </span>
       </span>${closeHtml}\n\n`;
 	  
@@ -348,15 +348,15 @@ ${varData[segment].trim()}
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
 
-      <span class="rus-lang" lang="en">${paliData[segment]}</span><br>
-      <span class="variant rus-lang inputscript-ISOPali" lang="ru">
+      <span class="greyedout pli-lang" lang="en">${paliData[segment]}</span><br>
+      <span class="variant pli-lang inputscript-ISOPali" lang="ru">
 ${varData[segment].trim()}   
 </span>      
       </span>${closeHtml}\n\n`;
     }  else {
         html += `${openHtml}<span id="${anchor}">
       <span class="pli-lang inputscript-ISOPali" lang="pi">${преобразоватьТекст().trim()}<a class="text-decoration-none" style="cursor: pointer;"  onclick="copyToClipboard('${fullUrlWithAnchor}')">&nbsp;</a></span>
-      <span class="rus-lang" lang="ru">${paliData[segment]}</span>
+      <span class="greyedout pli-lang" lang="ru">${paliData[segment]}</span>
       </span>${closeHtml}\n\n`;
     }
 

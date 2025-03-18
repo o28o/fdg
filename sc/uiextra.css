@@ -146,6 +146,15 @@ margin-left: 6px;
   display: none;
 }	
 
+.greyedout {
+  color: #5a5a5a !important;
+}
+
+.dark .greyedout {
+  color: #8f8f8f !important;
+}
+
+
 .variant {
   color: #95796b !important;
 }

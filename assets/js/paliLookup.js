@@ -261,13 +261,17 @@ const { overlay, popup, closeBtn, iframe } = createPopup();
 
 // Закрытие popup при нажатии на кнопку или на overlay
 closeBtn.addEventListener('click', () => {
+      event.stopPropagation(); // Останавливаем всплытие события
+
   popup.style.display = 'none';
   overlay.style.display = 'none';
   iframe.src = ''; // Очищаем iframe
-  resizeObserver.disconnect();
+//  resizeObserver.disconnect();
 });
 
 overlay.addEventListener('click', () => {
+      event.stopPropagation(); // Останавливаем всплытие события
+
   popup.style.display = 'none';
   overlay.style.display = 'none';
   iframe.src = ''; // Очищаем iframe
@@ -312,7 +316,8 @@ toggleBtn.addEventListener('click', () => {
 document.addEventListener('click', function(event) {
     // Проверяем, что клик был по элементу с классом "pli-lang"
 
-if (event.target.closest('.pli-lang, .rus-lang, .eng-lang')) {  // Учитываем вложенные элементы
+
+if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]')) {  // Учитываем вложенные элементы
         const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
         
                 // Если клик был по ссылке <a>, ничего не делаем
@@ -343,23 +348,10 @@ openBtn.addEventListener('click', (e) => {
    const iframeSrc = iframe.src;
 
     // Извлекаем поисковый запрос (слово) из URL iframe
-    const searchQuery = new URL(iframeSrc).searchParams.get('q');
-
-    if (searchQuery) {
-        // Формируем новый URL для dhamma.gift
-        const newUrl = `${dhammaGift}${encodeURIComponent(searchQuery)}${dgParams}`;
-        window.open(newUrl, '_blank'); // Открываем URL в новой вкладке
-    } else {
               const newUrl = `${dhammaGift}${encodeURIComponent(cleanedWord)}${dgParams}`;
         window.open(newUrl, '_blank'); // Открываем URL в новой вкладке
-        console.log('Поисковый запрос не найден в URL iframe, используем cleanedWord.');
-    }
 });
 
-
-  
-  
-  
     popup.style.display = 'block';
     overlay.style.display = 'block';
   //  savePopupState();
@@ -378,7 +370,7 @@ function getClickedWordWithHTML(element, x, y) {
     const range = document.caretRangeFromPoint(x, y);
     if (!range) return null;
 
-    const parentElement = element.closest('.pli-lang, .rus-lang, .eng-lang');
+    const parentElement = element.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]');
     if (!parentElement) {
         console.log('Родительский элемент с классом pli-lang не найден.');
         return null;

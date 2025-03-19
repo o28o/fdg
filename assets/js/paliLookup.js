@@ -125,9 +125,9 @@ const openBtn = document.createElement('a');
 openBtn.classList.add('open-btn');
 openBtn.style.position = 'absolute';
 openBtn.style.top = '10px';
-openBtn.style.right = '50px'; // Располагаем справа от кнопки закрытия
+openBtn.style.right = '45px'; // Располагаем справа от кнопки закрытия
 openBtn.style.border = 'none';
-openBtn.style.background = '#244B26';
+openBtn.style.background = '#2D3E50';
 openBtn.style.color = 'white';
 openBtn.style.cursor = 'pointer';
 openBtn.style.width = '30px';
@@ -335,23 +335,15 @@ if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="e
 //     const url = `${dictUrl}gd?search=${encodeURIComponent(cleanedWord)}`;
 
                const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
-               
-    iframe.src = url;
+                   iframe.src = url;
+
+// Обновляем ссылку в кнопке openBtn
+const openBtn = document.querySelector('.open-btn');
+const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
+openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
 
 if (!dictUrl.includes('dicttango')) {
   
-const openBtn = document.querySelector('.open-btn');  // Добавляем обработчик клика для кнопки
-openBtn.addEventListener('click', (e) => {
-    e.preventDefault(); // Предотвращаем стандартное поведение ссылки
-
-    // Получаем текущий URL из iframe
-   const iframeSrc = iframe.src;
-
-    // Извлекаем поисковый запрос (слово) из URL iframe
-              const newUrl = `${dhammaGift}${encodeURIComponent(cleanedWord)}${dgParams}`;
-        window.open(newUrl, '_blank'); // Открываем URL в новой вкладке
-});
-
     popup.style.display = 'block';
     overlay.style.display = 'block';
   //  savePopupState();

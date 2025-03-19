@@ -13,15 +13,21 @@ dgParams = '&p=-kn';
 
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
- dhammaGift = 'https://dhamma.gift/ru/';
+ //dhammaGift = 'https://dhamma.gift/ru/';
+ dhammaGift = '/ru/';
   //dpdlang = 'http://localhost:8080/ru/';
-  dpdlang = 'https://dict.dhamma.gift/ru/';
-  //dpdlang = 'https://dpdict.net/ru/';
+ dpdlang = 'https://dict.dhamma.gift/ru/search_html?q=';
+  //dpdlang = 'https://dpdict.net/ru/search_html?q=';
 } else {
-   dhammaGift = 'https://dhamma.gift/';
+//   dhammaGift = 'https://dhamma.gift/';
+   dhammaGift = '/';
   //dpdlang = 'http://localhost:8080/';
-  dpdlang = 'https://dict.dhamma.gift/';
-//  dpdlang = 'https://dpdict.net/';
+  dpdlang = 'https://dict.dhamma.gift/search_html?q=';
+//  dpdlang = 'https://dpdict.net/search_html?q=';
+}
+
+if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
+  dpdlang = 'dttp://app.dicttango/WordLookup?word=';
 }
 
 function clearParams() {
@@ -294,7 +300,8 @@ toggleBtn.addEventListener('click', () => {
 // Перехватчик кликов по слову
 document.addEventListener('click', function(event) {
     // Проверяем, что клик был по элементу с классом "pli-lang"
-    if (event.target.closest('.pli-lang')) { // Учитываем вложенные элементы
+
+if (event.target.closest('.pli-lang, .rus-lang, .eng-lang')) {  // Учитываем вложенные элементы
         const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
         
                 // Если клик был по ссылке <a>, ничего не делаем
@@ -311,12 +318,21 @@ document.addEventListener('click', function(event) {
 //   use  /gd?search= for xompact mode
 //     const url = `${dpdlang}gd?search=${encodeURIComponent(cleanedWord)}`;
 
-               const url = `${dpdlang}search_html?q=${encodeURIComponent(cleanedWord)}`;
-                iframe.src = url;
-                popup.style.display = 'block';
-                overlay.style.display = 'block';
-                savePopupState();
+               const url = `${dpdlang}${encodeURIComponent(cleanedWord)}`;
+               
+    iframe.src = url;
+
+if (!dpdlang.includes('dicttango')) {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+    savePopupState();
+} else {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+}
+              
             }
+            
         }
     }
 });
@@ -325,7 +341,7 @@ function getClickedWordWithHTML(element, x, y) {
     const range = document.caretRangeFromPoint(x, y);
     if (!range) return null;
 
-    const parentElement = element.closest('.pli-lang');
+    const parentElement = element.closest('.pli-lang, .rus-lang, .eng-lang');
     if (!parentElement) {
         console.log('Родительский элемент с классом pli-lang не найден.');
         return null;

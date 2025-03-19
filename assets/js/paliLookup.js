@@ -1,34 +1,64 @@
 
 // Проверяем язык в localStorage
 const siteLanguage = localStorage.getItem('siteLanguage');
-
+const savedDict = (localStorage.getItem('selectedDict') || "dpdFull").toLowerCase();
   // Устанавливаем правильный URL для словаря в зависимости от языка
 let dhammaGift;
 let dgParams;
-let dpdlang;
+let dictUrl;
 
 
-//добавить сюда логику для загрузки предпочтений поиска сохраненных на главной.
-dgParams = '&p=-kn';
-
+/*
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
  //dhammaGift = 'https://dhamma.gift/ru/';
  dhammaGift = '/ru/';
-  //dpdlang = 'http://localhost:8080/ru/';
- dpdlang = 'https://dict.dhamma.gift/ru/search_html?q=';
-  //dpdlang = 'https://dpdict.net/ru/search_html?q=';
+  //dictUrl = 'http://localhost:8080/ru/';
+ dictUrl = 'https://dict.dhamma.gift/ru/search_html?q=';
+  //dictUrl = 'https://dpdict.net/ru/search_html?q=';
 } else {
 //   dhammaGift = 'https://dhamma.gift/';
    dhammaGift = '/';
-  //dpdlang = 'http://localhost:8080/';
-  dpdlang = 'https://dict.dhamma.gift/search_html?q=';
-//  dpdlang = 'https://dpdict.net/search_html?q=';
+  //dictUrl = 'http://localhost:8080/';
+  dictUrl = 'https://dict.dhamma.gift/search_html?q=';
+//  dictUrl = 'https://dpdict.net/search_html?q=';
 }
 
 if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
-  dpdlang = 'dttp://app.dicttango/WordLookup?word=';
+  dictUrl = 'dttp://app.dicttango/WordLookup?word=';
 }
+*/
+
+if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
+    dhammaGift = '';
+} else {
+    dhammaGift = 'https://dhamma.gift';
+}
+
+  if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
+   dhammaGift += '/ru';
+}
+ dhammaGift += '/?q=';
+
+//добавить сюда логику для загрузки предпочтений поиска сохраненных на главной.
+dgParams = '&p=-kn';
+
+
+if (savedDict.includes("dpd")) {
+  dictUrl = "https://dict.dhamma.gift";
+  if (savedDict.includes("ru")) {
+    dictUrl += "/ru";
+  }
+  
+  if (savedDict.includes("full")) {
+    dictUrl += "/search_html?q=";
+  } else if (savedDict.includes("compact")) {
+    dictUrl += "/gd?search=";
+  }
+} else if (savedDict === "dicttango") {
+  dictUrl = "dttp://app.dicttango/WordLookup?word=";
+}
+
 
 function clearParams() {
     const keys = ['popupWidth', 'popupHeight', 'popupTop', 'popupLeft', 'windowWidth', 'windowHeight', 'isFirstDrag'];
@@ -115,25 +145,6 @@ openBtn.innerHTML = `
         <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
     </svg>
 `;
-
-// Добавляем обработчик клика для кнопки
-openBtn.addEventListener('click', (e) => {
-    e.preventDefault(); // Предотвращаем стандартное поведение ссылки
-
-    // Получаем текущий URL из iframe
-    const iframeSrc = iframe.src;
-
-    // Извлекаем поисковый запрос (слово) из URL iframe
-    const searchQuery = new URL(iframeSrc).searchParams.get('q');
-
-    if (searchQuery) {
-        // Формируем новый URL для dhamma.gift
-        const newUrl = `${dhammaGift}?q=${encodeURIComponent(searchQuery)}${dgParams}`;
-        window.open(newUrl, '_blank'); // Открываем URL в новой вкладке
-    } else {
-        console.log('Поисковый запрос не найден в URL iframe.');
-    }
-});
 
 
   const iframe = document.createElement('iframe');
@@ -262,7 +273,7 @@ overlay.addEventListener('click', () => {
   iframe.src = ''; // Очищаем iframe
 });
 
-console.log('lookup dict ', dpdlang, ' siteLanguage ', siteLanguage);
+console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
 
 // Проверяем состояние в localStorage при загрузке страницы
 let dictionaryVisible = localStorage.getItem('dictionaryVisible') === 'true';
@@ -316,16 +327,42 @@ if (event.target.closest('.pli-lang, .rus-lang, .eng-lang')) {  // Учитыв�
 
             if (dictionaryVisible) {
 //   use  /gd?search= for xompact mode
-//     const url = `${dpdlang}gd?search=${encodeURIComponent(cleanedWord)}`;
+//     const url = `${dictUrl}gd?search=${encodeURIComponent(cleanedWord)}`;
 
-               const url = `${dpdlang}${encodeURIComponent(cleanedWord)}`;
+               const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
                
     iframe.src = url;
 
-if (!dpdlang.includes('dicttango')) {
+if (!dictUrl.includes('dicttango')) {
+  
+const openBtn = document.querySelector('.open-btn');  // Добавляем обработчик клика для кнопки
+openBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+    // Получаем текущий URL из iframe
+   const iframeSrc = iframe.src;
+
+    // Извлекаем поисковый запрос (слово) из URL iframe
+    const searchQuery = new URL(iframeSrc).searchParams.get('q');
+
+    if (searchQuery) {
+        // Формируем новый URL для dhamma.gift
+        const newUrl = `${dhammaGift}${encodeURIComponent(searchQuery)}${dgParams}`;
+        window.open(newUrl, '_blank'); // Открываем URL в новой вкладке
+    } else {
+              const newUrl = `${dhammaGift}${encodeURIComponent(cleanedWord)}${dgParams}`;
+        window.open(newUrl, '_blank'); // Открываем URL в новой вкладке
+        console.log('Поисковый запрос не найден в URL iframe, используем cleanedWord.');
+    }
+});
+
+
+  
+  
+  
     popup.style.display = 'block';
     overlay.style.display = 'block';
-    savePopupState();
+  //  savePopupState();
 } else {
     popup.style.display = 'none';
     overlay.style.display = 'none';

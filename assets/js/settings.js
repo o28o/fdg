@@ -16,6 +16,8 @@ function loadModal(modalId, modalFile) {
 document.addEventListener('DOMContentLoaded', function() {
   
   const scriptSelect = document.getElementById('script-select');
+  const dictSelect = document.getElementById('dict-select');
+
   const applyButton = document.getElementById('apply-button');
   const resetButton = document.getElementById('reset-button');
   const settingsButton = document.getElementById('settingsButton');
@@ -75,7 +77,26 @@ document.addEventListener("keydown", (event) => {
     }
   });
   
-  // Загрузка сохраненного значения из localStorage
+  //setup dictionary 
+  
+// Загрузка сохраненного значения из localStorage
+const savedDict = localStorage.getItem('selectedDict');
+
+if (savedDict && [...dictSelect.options].some(opt => opt.value === savedDict)) {
+  dictSelect.value = savedDict; // Устанавливаем только если значение есть в списке
+} else {
+  
+if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
+dictSelect.value = 'dpdFullRu'; // Значение по умолчанию
+  localStorage.setItem('selectedDict', 'dpdFullRu');
+} else {
+  dictSelect.value = 'dpdFull'; // Значение по умолчанию
+  localStorage.setItem('selectedDict', 'dpdFull');
+}
+}
+
+  
+    // Загрузка сохраненного значения из localStorage
   const savedScript = localStorage.getItem('selectedScript');
 
     // Установка сохраненного значения в select при загрузке страницы
@@ -86,9 +107,13 @@ if (savedScript) {
 localStorage.setItem('selectedScript', 'ISOPali');
 }
 
+
+
+
   // Обработка нажатия на кнопку "Применить"
   applyButton.addEventListener('click', function() {
     const selectedScript = scriptSelect.value;
+    const selectedDict = dictSelect.value;
 
     // Сохранение выбранного значения в localStorage
     if (selectedScript === 'ISOPali') {
@@ -102,9 +127,18 @@ localStorage.setItem("firstVisitShowSettingsClosed", "true");
 
     // Применение выбранного значения
     applySavedScript(selectedScript);
+applySavedDict(selectedDict);
 checkAndUpdateUrl();
 //location.reload(true);    
   });
+
+
+  // Функция для применения сохраненного значения
+function applySavedDict(dict) {
+  localStorage.setItem('selectedDict', dict);
+    localStorage.setItem('dictionaryVisible', 'true');
+      location.reload();  // Перезагрузка, если изменился словарь
+}
 
   // Функция для применения сохраненного значения
   function applySavedScript(script) {
@@ -132,6 +166,7 @@ checkAndUpdateUrl();
 
   // Дополнительные параметры, которые нужно очистить
   localStorage.removeItem('selectedScript');
+  localStorage.removeItem('selectedDict');
   localStorage.removeItem("defaultReader");
   localStorage.removeItem('paliToggleRu');
   localStorage.removeItem('viewMode');

@@ -3,14 +3,22 @@
 const siteLanguage = localStorage.getItem('siteLanguage');
 
   // Устанавливаем правильный URL для словаря в зависимости от языка
+let dhammaGift;
+let dgParams;
 let dpdlang;
+
+
+//добавить сюда логику для загрузки предпочтений поиска сохраненных на главной.
+dgParams = '&p=-kn';
 
 // Условие для проверки языка сайта и URL
 if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
+ dhammaGift = 'https://dhamma.gift/ru/';
   //dpdlang = 'http://localhost:8080/ru/';
   dpdlang = 'https://dict.dhamma.gift/ru/';
   //dpdlang = 'https://dpdict.net/ru/';
 } else {
+   dhammaGift = 'https://dhamma.gift/';
   //dpdlang = 'http://localhost:8080/';
   dpdlang = 'https://dict.dhamma.gift/';
 //  dpdlang = 'https://dpdict.net/';
@@ -76,6 +84,52 @@ console.log('loaded: ' + savedTop +  'and ' + savedLeft);
   closeBtn.classList.add('close-btn');
   closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
 
+// Создаем кнопку "Search with dhamma.gift"
+const openBtn = document.createElement('a');
+openBtn.classList.add('open-btn');
+openBtn.style.position = 'absolute';
+openBtn.style.top = '10px';
+openBtn.style.right = '50px'; // Располагаем справа от кнопки закрытия
+openBtn.style.border = 'none';
+openBtn.style.background = '#244B26';
+openBtn.style.color = 'white';
+openBtn.style.cursor = 'pointer';
+openBtn.style.width = '30px';
+openBtn.style.height = '30px';
+openBtn.style.borderRadius = '50%';
+openBtn.style.display = 'flex';
+openBtn.style.alignItems = 'center';
+openBtn.style.justifyContent = 'center';
+openBtn.style.textDecoration = 'none';
+openBtn.target = '_blank'; // Открывать ссылку в новой вкладке
+
+// Иконка лупы (аналогичная иконке закрытия)
+openBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="white" style="transform: scaleX(-1);">
+        <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
+    </svg>
+`;
+
+// Добавляем обработчик клика для кнопки
+openBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+    // Получаем текущий URL из iframe
+    const iframeSrc = iframe.src;
+
+    // Извлекаем поисковый запрос (слово) из URL iframe
+    const searchQuery = new URL(iframeSrc).searchParams.get('q');
+
+    if (searchQuery) {
+        // Формируем новый URL для dhamma.gift
+        const newUrl = `${dhammaGift}?q=${encodeURIComponent(searchQuery)}${dgParams}`;
+        window.open(newUrl, '_blank'); // Открываем URL в новой вкладке
+    } else {
+        console.log('Поисковый запрос не найден в URL iframe.');
+    }
+});
+
+
   const iframe = document.createElement('iframe');
   iframe.src = '';
   iframe.style.width = '100%';
@@ -92,6 +146,7 @@ console.log('loaded: ' + savedTop +  'and ' + savedLeft);
   header.textContent = '';
 
   popup.appendChild(header);
+  popup.appendChild(openBtn);
   popup.appendChild(closeBtn);
   popup.appendChild(iframe);
 

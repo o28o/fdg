@@ -278,9 +278,8 @@ echo '<!--
                <li>
          <div class="dropdown-item ">
                       <i class="' . $iconimportant . '"></i>        <a class="text-black" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a> 
-         <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Eng</a>
-          <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Rus</a>  
-       <a class="text-black" target="" href="https://o28o.github.io/plugin/index.html?s=pi$">Site-plugin</a> 
+         <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Eng/Rus</a>
+<a class="text-black" target="" href="https://o28o.github.io/plugin/index.html?s=pi$">Site-plugin</a> 
        </div>
          </li>   
    

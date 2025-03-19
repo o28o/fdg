@@ -306,8 +306,7 @@ echo '<!--
                <li>
          <div class="dropdown-item ">
                       <i class="' . $iconimportant . '"></i>        <a class="text-black" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a>
-         <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/">Англ</a>
-     <a class="text-black" target="" href="https://digitalpalidictionary.github.io/rus/">Рус</a>  
+         <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/rus/">Рус/Англ</a>
        <a class="text-black" target="" href="https://o28o.github.io/plugin/demo-ru-ml.html?s=dukkh">Веб-модуль</a>     
        </div>
          </li>   

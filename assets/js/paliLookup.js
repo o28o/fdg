@@ -73,6 +73,8 @@ function createPopup() {
   const popup = document.createElement('div');
   popup.classList.add('popup');
   popup.style.position = 'fixed';
+  popup.style.maxWidth = '600px';
+
   
 
   // Проверка параметров окна браузера
@@ -189,6 +191,7 @@ let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true
       popup.style.top = '50%';
   popup.style.left = '50%';
   popup.style.width = '80%';
+  popup.style.maxWidth = '600px';
   popup.style.height = '80%';
   popup.style.transform = 'translate(-50%, -50%)';
 }

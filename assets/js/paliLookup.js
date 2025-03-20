@@ -57,7 +57,10 @@ if (savedDict.includes("dpd")) {
   }
 } else if (savedDict === "dicttango") {
   dictUrl = "dttp://app.dicttango/WordLookup?word=";
+} else {
+   dictUrl = "searchonly";
 }
+
 
 
 function clearParams() {
@@ -337,6 +340,61 @@ if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="e
 //   use  /gd?search= for xompact mode
 //     const url = `${dictUrl}gd?search=${encodeURIComponent(cleanedWord)}`;
 
+function showSearchButton() {
+      
+// Создаем кнопку "Search with dhamma.gift"
+const searchBtn = document.createElement('a');
+searchBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
+
+searchBtn.classList.add('open-btn');
+searchBtn.style.position = 'fixed';
+searchBtn.style.border = 'none';
+searchBtn.style.background = '#2D3E50';
+searchBtn.style.color = 'white';
+searchBtn.style.cursor = 'pointer';
+searchBtn.style.width = '30px';
+searchBtn.style.height = '30px';
+searchBtn.style.borderRadius = '50%';
+searchBtn.style.display = 'flex';
+searchBtn.style.alignItems = 'center';
+searchBtn.style.justifyContent = 'center';
+searchBtn.style.textDecoration = 'none';
+searchBtn.target = '_blank'; // Открывать ссылку в новой вкладке
+searchBtn.style.top = `${event.clientY - 10}px`; // Позиция по Y минус 10 пикселей
+searchBtn.style.left = `${event.clientX}px`; // Позиция по X
+searchBtn.style.zIndex = '10000'; // Убедимся, что кнопка поверх других элементов
+    
+
+// Иконка лупы (аналогичная иконке закрытия)
+searchBtn.innerHTML = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="white" style="transform: scaleX(-1);">
+        <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
+    </svg>
+`;
+
+    // Добавляем кнопку в DOM
+    document.body.appendChild(searchBtn);
+
+searchBtn.addEventListener('click', () => {
+    searchBtn.remove(); // Удаляем кнопку после клика
+});
+    // Удаляем кнопку через несколько секунд (опционально)
+    setTimeout(() => {
+        searchBtn.remove();
+    }, 1500); // Удалить через 5 секунд
+
+   // Обработчик любого клика на документе
+    const handleAnyClick = () => {
+        newOpenBtn.remove(); // Удаляем кнопку при любом клике
+        document.removeEventListener('click', handleAnyClick); // Удаляем обработчик
+    };
+
+    // Добавляем обработчик клика на весь документ
+    document.addEventListener('click', handleAnyClick);
+}
+
+
+
                const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
                    iframe.src = url;
 
@@ -345,14 +403,18 @@ const openBtn = document.querySelector('.open-btn');
 const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
 openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
 
-if (!dictUrl.includes('dicttango')) {
-  
+if (dictUrl.includes('dicttango')) {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+    showSearchButton();
+    } else if (dictUrl.includes('searchonly')) {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+    showSearchButton();
+  }  else {
     popup.style.display = 'block';
     overlay.style.display = 'block';
   //  savePopupState();
-} else {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
 }
               
             }

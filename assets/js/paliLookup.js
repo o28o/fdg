@@ -503,6 +503,7 @@ document.addEventListener('click', (event) => {
 function cleanWord(word) {
     return word
         .replace(/^[\s'‘—.–।|…"“”]+/, ' ') // Убираем символы в начале, включая пробелы и тире
+        .replace(/^[0-9]+/, ' ') // 
         .replace(/[\s'‘,—.—–।|"“…:;”]+$/, ' ') // Убираем символы в конце, включая пробелы и тире
         .replace(/[‘'’‘"“””]+/g, "'") // заменяем в середине
         .trim()

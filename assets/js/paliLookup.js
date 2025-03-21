@@ -361,7 +361,7 @@ searchBtn.style.justifyContent = 'center';
 searchBtn.style.textDecoration = 'none';
 searchBtn.target = '_blank'; // Открывать ссылку в новой вкладке
 searchBtn.style.top = `${event.clientY - 10}px`; // Позиция по Y минус 10 пикселей
-searchBtn.style.left = `${event.clientX}px`; // Позиция по X
+searchBtn.style.left = `${event.clientX - 10}px`; // Позиция по X
 searchBtn.style.zIndex = '10000'; // Убедимся, что кнопка поверх других элементов
     
 

@@ -1,4 +1,31 @@
+function uniCoder(textInput) {
+    if (!textInput || textInput === "") return textInput;
+    return textInput
+        .replace(/aa/g, "ā")
+        .replace(/ii/g, "ī")
+        .replace(/uu/g, "ū")
+        .replace(/\"n/g, "ṅ")
+        .replace(/\~n/g, "ñ")
+        .replace(/\.t/g, "ṭ")
+        .replace(/\.d/g, "ḍ")
+        .replace(/\.n/g, "ṇ")
+        .replace(/\.m/g, "ṃ")
+        .replace(/\.l/g, "ḷ")
+        .replace(/\.h/g, "ḥ");
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
+   let paliauto = document.getElementById("paliauto");
+
+    if (paliauto) {
+        paliauto.addEventListener("input", function () {
+            let textInput = paliauto.value;
+            let convertedText = uniCoder(textInput);
+            paliauto.value = convertedText;
+        });
+    }
+ 
   $.ajax({
     url: "/assets/texts/sutta_words.txt",
     dataType: "text",

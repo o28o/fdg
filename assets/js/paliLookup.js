@@ -327,9 +327,9 @@ if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="e
         const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
         
                 // Если клик был по ссылке <a>, ничего не делаем
-        if (event.target.closest('a')) {
-            return;
-        }
+if (event.target.closest('a, button, input, textarea, select')) {
+    return;
+}
 
         if (clickedWord) {
             // Убираем кавычки или апострофы в начале слова

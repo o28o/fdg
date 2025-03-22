@@ -286,7 +286,7 @@ overlay.addEventListener('click', () => {
 console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
 
 // Проверяем состояние в localStorage при загрузке страницы
-let dictionaryVisible = localStorage.getItem('dictionaryVisible') === 'true';
+let dictionaryVisible = localStorage.getItem('dictionaryVisible') === null ? true : localStorage.getItem('dictionaryVisible') === 'true';
 
 const toggleBtn = document.querySelector('.toggle-dict-btn');
 if (dictionaryVisible) {

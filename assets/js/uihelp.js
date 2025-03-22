@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Проверяем, если это первое посещение страницы с /sc/
     if (window.location.pathname.includes('/sc/') && !localStorage.getItem('visited_sc')) {
         highlightMultipleById(['gearsc', 'helpsc']);
+		    localStorage.setItem('dictionaryVisible', 'true');
+
         localStorage.setItem('visited_sc', 'true'); // Запоминаем, что пользователь уже заходил
     }
     

@@ -1,15 +1,23 @@
 RewriteEngine On
 #RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
 
-
 # Правило для запросов без /ru/
 RewriteCond %{REQUEST_URI} !^/ru/
-RewriteRule ^(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /sc/?q=$1 [R=301,L,QSA]
+#for read.php
+#RewriteRule ^(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag)$ /read.php\#$1Collapse [R=301,L,QSA]
+#RewriteRule ^(an\d+\|sn\d+\|ud\d+\|snp\d+\|thig\d+\|thag\d+\)$ /read.php\#$1Collapse [R=301,L,QSA]
 
 # Правило для запросов с /ru/
 RewriteCond %{REQUEST_URI} ^/ru/
-RewriteRule ^ru/(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
-
+RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
+#for /ru/read.php
+#RewriteRule ^(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag)$ /ru/read.php\#$1Collapse [R=301,L,QSA]
+#RewriteRule ^(an\d+\|sn\d+\|ud\d+\|snp\d+\|thig\d+\|thag\d+\)$ /ru/read.php\#$1Collapse [R=301,L,QSA]
 
 
 Redirect 301 /ru.php /ru/

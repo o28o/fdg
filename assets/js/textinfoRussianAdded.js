@@ -1300,11 +1300,11 @@
 "an11.20": {"pi":"Tatiyasamādhisutta ","en":"Immersion (3rd) ","mtph": ""},
 "an11.21": {"pi":"Catutthasamādhisutta ","en":"Immersion (4th) ","mtph": ""},
 
-"mn1": {"pi":"Mūlapariyāyasutta ","en":"The Root of All Things ","mtph": "", "ru":  "Коренное объяснение"},
+"mn1": {"pi":"Mūlapariyāyasutta ","en":"The Root of All Things ","mtph": "", "ru":  "Корень всех вещей"},
 "mn2": {"pi":"Sabbāsavasutta ","en":"All the Defilements ","mtph": "", "ru":  "Все пятна загрязнений ума"},
 "mn3": {"pi":"Dhammadāyādasutta ","en":"Heirs in the Teaching ","mtph": "", "ru":  "Наследники в Дхамме"},
 "mn4": {"pi":"Bhayabheravasutta ","en":"Fear and Dread ","mtph":1, "ru":  "Страх и ужас"},
-"mn5": {"pi":"Anaṅgaṇasutta ","en":"Unblemished ","mtph":10, "ru":  "Без изъянов"},
+"mn5": {"pi":"Anaṅgaṇasutta ","en":"Unblemished ","mtph":10, "ru":  "Анангана-сутта
 "mn6": {"pi":"Ākaṅkheyyasutta ","en":"One Might Wish ","mtph":1, "ru":  "Если монах желает"},
 "mn7": {"pi":"Vatthasutta ","en":"The Simile of the Cloth ","mtph":4, "ru":  "Пример с тканью "},
 "mn8": {"pi":"Sallekhasutta ","en":"Self-Effacement ","mtph":2, "ru":  "Стирание"},

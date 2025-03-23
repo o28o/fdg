@@ -51,14 +51,23 @@ $(document).ready(function() {
             // Заполнение данных в таблице
 $('#pali').find('tbody').find('tr').each(function() {
     var linkText = $(this).find('td').eq(0).find('a').text();
+    
     if (TextInfo[linkText]) {
-        var titlePali = TextInfo[linkText]['pi'] || ''; // Если нет значения, присваиваем пустую строку
-        var titleEnglish = TextInfo[linkText]['en'] || ''; // Если нет значения, присваиваем пустую строку
-        var metaphorCount = TextInfo[linkText]['mtph'] || ''; // Если нет значения, присваиваем пустую строку
-        $(this).find('td').eq(1).html('<strong class="pli-lang inputscript-ISOPali">' + titlePali + '</strong> ' + titleEnglish);
+        var titlePali = TextInfo[linkText]['pi'] || ''; // Пали
+        var titleEnglish = TextInfo[linkText]['en'] || ''; // Английский
+        var titleRussian = TextInfo[linkText]['ru'] || ''; // Русский
+        var metaphorCount = TextInfo[linkText]['mtph'] || ''; // Количество метафор
+
+        // Проверяем localStorage и URL
+        var siteLanguage = localStorage.getItem('siteLanguage');
+        var useRussian = (siteLanguage === 'ru') || window.location.pathname.includes('/ru/');
+
+        var titleText = useRussian && titleRussian ? titleRussian : titleEnglish; // Если русский есть, берем его, иначе английский
+
+        $(this).find('td').eq(1).html('<strong class="pli-lang inputscript-ISOPali">' + titlePali + '</strong> ' + titleText);
         $(this).find('td').eq(4).text(metaphorCount);
     } else {
-        // Если данных для linkText нет, можно установить пустые значения или другое поведение по умолчанию
+        // Если данных нет, заполняем пустыми значениями
         $(this).find('td').eq(1).html('');
         $(this).find('td').eq(4).text('');
     }

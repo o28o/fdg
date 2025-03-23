@@ -1,13 +1,14 @@
 RewriteEngine On
 #RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
 
+
 # Правило для запросов без /ru/
 RewriteCond %{REQUEST_URI} !^/ru/
-RewriteRule ^(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /sc/?q=$1 [L,QSA]
+RewriteRule ^(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /sc/?q=$1 [R=301,L,QSA]
 
 # Правило для запросов с /ru/
 RewriteCond %{REQUEST_URI} ^/ru/
-RewriteRule ^ru/(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /ru/sc/?q=$1 [L,QSA]
+RewriteRule ^ru/(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
 
 
 

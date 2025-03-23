@@ -6,18 +6,17 @@ RewriteCond %{REQUEST_URI} !^/ru/
 RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /sc/?q=$1 [R=301,L,QSA]
 RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /sc/?q=$1 [R=301,L,QSA]
 RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /sc/?q=$1 [R=301,L,QSA]
-#for read.php
+
+
+#for read.php не работает потому что серверу не передается # это можно сделать с помщью js 
 #RewriteRule ^(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag)$ /read.php\#$1Collapse [R=301,L,QSA]
 #RewriteRule ^(an\d+\|sn\d+\|ud\d+\|snp\d+\|thig\d+\|thag\d+\)$ /read.php\#$1Collapse [R=301,L,QSA]
 
-# Правило для запросов с /ru/
+# Обрабатываем запросы с /ru/
 RewriteCond %{REQUEST_URI} ^/ru/
-RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
-RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
-RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
-#for /ru/read.php
-#RewriteRule ^(mn|dn|sn|an|dhp|iti|ud|snp|thig|thag)$ /ru/read.php\#$1Collapse [R=301,L,QSA]
-#RewriteRule ^(an\d+\|sn\d+\|ud\d+\|snp\d+\|thig\d+\|thag\d+\)$ /ru/read.php\#$1Collapse [R=301,L,QSA]
+RewriteRule ^ru/(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
 
 
 Redirect 301 /ru.php /ru/

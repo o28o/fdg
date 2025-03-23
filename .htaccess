@@ -1,0 +1,91 @@
+RewriteEngine On
+#RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
+
+# Правило для запросов без /ru/
+RewriteCond %{REQUEST_URI} !^/ru/
+RewriteRule ^(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /sc/?q=$1 [L,QSA]
+
+# Правило для запросов с /ru/
+RewriteCond %{REQUEST_URI} ^/ru/
+RewriteRule ^ru/(mn\d+|an\d+\.\d+-\d+|dhp\d+-\d+)$ /ru/sc/?q=$1 [L,QSA]
+
+
+
+Redirect 301 /ru.php /ru/
+
+# GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE font/opentype
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/xml
+</IfModule>
+
+RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
+RewriteRule ^/$ /ru/ [L,R=302]
+
+# language starts with FR
+RewriteCond %{HTTP:Accept-Language} ^ru [NC]
+RewriteRule ^/$ /ru/ [L,R=302]
+
+# else redirect to the English version
+RewriteRule ^/$ / [L,R=302]
+
+
+RewriteCond %{HTTP_USER_AGENT} (bingbot|AhrefsBot|SemrushBot|PetalBot|DataForSeoBot|MegaIndex.ru|Barkrowler|SeekportBot|SemrushBot|Barkrowler) [NC]
+RewriteRule .* - [F]
+
+
+<IfModule mod_headers.c>
+       # Кэшировать статические файлы на 1 год
+       <FilesMatch "\.(html|css|js|jpg|jpeg|png|gif|webp|svg|ttf|woff|woff2)$">
+           Header set Cache-Control "public, max-age=31536000, immutable"
+       </FilesMatch>
+   </IfModule>
+
+
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+
+    # Кэширование HTML
+    ExpiresByType text/html "access plus 1 hour"
+
+    # Кэширование CSS и JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # Кэширование изображений
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+
+    # Кэширование шрифтов
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

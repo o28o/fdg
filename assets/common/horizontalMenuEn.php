@@ -265,7 +265,7 @@ echo '<!--
 
       <li>
          <div class="dropdown-item ">
-      <a class="text-black" target="_blank" href="https://norbu-ai.org/ebt/">Norbu AI</a>
+      <a class="text-black" target="_blank" href="https://norbu-ai.org/en/ebt/">Norbu AI</a>
 
          <a class="text-black" target="_blank" href="https://chatgpt.com">ChatGPT</a>
   

@@ -20,7 +20,7 @@ except Exception as e:
     exit(1)
 
 # Путь к папке с текстами (рекурсивный поиск будет происходить здесь)
-base_dir = '/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/sutta/an'
+base_dir = '/data/data/com.termux/files/usr/share/apache2/default-site/htdocs/assets/texts/sutta/kn'
 
 # Функция для поиска файлов и дополнения данных
 def update_data_with_titles(data, base_dir):

@@ -1,3 +1,20 @@
+find e -mindepth 1 -maxdepth 1 -exec ln -s "$(realpath {})" r/ \;
+
+
+git checkout -b switchSc
+
+#удалить ноывй бранч
+git branch -D switchSc  # Локально
+git push origin --delete switchSc  # Если запушил
+
+#откат до коммита
+git reset --hard $(git merge-base switchSc main)
+git push --force  # Если уже пушил изменения
+
+
+
+
+
 saṁsandanti samenti
 
 проверить s= со вкл и выкл словарем

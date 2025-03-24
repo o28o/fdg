@@ -31,8 +31,10 @@ if (window.location.href.includes('localhost') || window.location.href.includes(
 
 if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
     dhammaGift = '';
+    dictUrl = "http://localhost:8880";
 } else {
     dhammaGift = 'https://dhamma.gift';
+dictUrl = "https://dict.dhamma.gift";
 }
 
   if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
@@ -45,7 +47,6 @@ dgParams = '&p=-kn';
 
 
 if (savedDict.includes("dpd")) {
-  dictUrl = "https://dict.dhamma.gift";
   if (savedDict.includes("ru")) {
     dictUrl += "/ru";
   }

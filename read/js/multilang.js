@@ -680,7 +680,7 @@ setLanguage(language);
   <div class="lists">
 
   <div class="suttas">
-  <a href="/r.php"> <h2>Основные Сутты</h2></a> <br>
+  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> <br>
   <ul>
      <li><span class="abbr">dn</span> <a href="/ru/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
      <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>

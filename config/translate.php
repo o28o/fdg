@@ -8,7 +8,7 @@ $htmllang = "ru";
 $mainpage = '/ru';
 $mainpagenoslash = '/ru';
 $mainscpage = $mainpage . '/read';
-$mainreadlink = '/r.php';
+$mainreadlink = '/ru/read.php';
 $searchcaption = 'Поиск';
 $clearaption = 'Очистить';
 $btnsave = 'Сохр. по умолч.';
@@ -304,7 +304,8 @@ $aboutheader = 'О Проекте';
 $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Dhamma.gift это поисковая система Освобождения. Точный Поиск в текстах Дхаммы и Винаи Палийского Канона с результатами в удобных таблицах с построчными переводами И ссылками на другие сайты. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
 <div class="col-lg-4 me-auto"><p class="lead">Проект не нуждается, в материальной помощи, но если вы хотите поучаствовать в оплате за доменное имя, пожалуйста, свяжитесь через Telegram, по почте или через Github - ссылки внизу страницы, блок "Контакты". </p></div>';
 $prongh = ' Проект на GitHub';
-$premail = ' Написать';
+$premail = ' Особенности Dhamma.gift';
+$prekeyfeatures = 'keyFeaturesRu.html';
 
 $headerexamples = 'Примеры';
 $examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">dukkha</a> на Пали и Русском. Запрос: <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">-la1 Kata.*, dukkhaṁ[,\\\\?]</a>
@@ -821,7 +822,8 @@ $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Dhamma.gift is a Libe
 The project does not require financial support, but if you would like to contribute toward domain name expenses, feel free to reach out using any of the contacts listed in the "Contacts" section below.
 </p></div>';
 $prongh = ' Project on GitHub';
-$premail = ' Send email';
+$premail = ' Dhamma.gift key features';
+$prekeyfeatures = 'keyFeatures.html';
 
 $headerexamples = 'Examples';
 $examplelist = '<li>Definition of the <a href="/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">dukkha</a> in Pali with quotes in English. Query is: <a href="/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">-la1 Kata.*, dukkhaṁ[,\\\\?]</a>

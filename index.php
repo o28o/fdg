@@ -737,9 +737,9 @@ foreach ($slides as $index => $slide) {
                     </a>
                 </div> -->
                                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="mailto:agiftofdhamma@gmail.com">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="/assets/common/<?php echo $prekeyfeatures; ?>">
     
-                   <i class="fa-solid fa-at"></i><?php echo $premail; ?>
+                   <i class="fa-solid fa-star"></i><?php echo $premail; ?>
                     </a>
                 </div>
             </div>

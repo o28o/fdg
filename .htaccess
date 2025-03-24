@@ -2,6 +2,8 @@ RewriteEngine On
 #RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
 
 # Переадресация с /sc/ на /read/
+
+#RewriteCond %{REQUEST_URI} !^/ru/read.php
 RewriteRule ^sc/(.*)$ /read/$1 [R=301,L,QSA]
 RewriteRule ^ru/sc/(.*)$ /r/$1 [R=301,L,QSA]
 RewriteRule ^ru/read/(.*)$ /r/$1 [R=301,L,QSA]

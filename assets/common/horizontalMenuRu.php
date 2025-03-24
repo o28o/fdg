@@ -110,7 +110,7 @@ echo '<!--
 
          
 
-        <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Благородный Аскетизм</a></li>
+        <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Статьи на Dhammadana.org</a></li>
       <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">Переводы Майкла Олдса</a></li>
 
   </ul>
@@ -174,13 +174,13 @@ echo '<!--
    
                          <li>
 <div class="dropdown-item ">
-         <i class="' . $iconimportant . '"></i>Падежи <a class="text-black" href="' . $linkcasesru . '"> таблица</a>
+         <i class="' . $iconimportant . '"></i> Падежи <a class="text-black" href="' . $linkcasesru . '"> таблица</a>
          <a class="text-black" target=""  href="/assets/materials/pali_declensions_ru.pdf">примеры</a> 
        </div>
          </li>     
                          <li>
 <div class="dropdown-item ">
-         <i class="' . $iconimportant . '"></i>Спряжения          <a class="text-black" target=""  href="/assets/materials/pali_conjugations_ru.pdf"> рус</a> 
+         <i class="' . $iconimportant . '"></i> Спряжения          <a class="text-black" target=""  href="/assets/materials/pali_conjugations_ru.pdf"> рус</a> 
          <a class="text-black" href="' . $linkconj . '"> англ</a>
        </div>
          </li>        

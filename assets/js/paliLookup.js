@@ -436,7 +436,7 @@ document.addEventListener('click', function(event) {
                         </body>
                         </html>
                     `;
-                    popup.style.height = '300px';
+                    popup.style.height = '200px';
                     popup.style.display = 'block';
                     overlay.style.display = 'block';
                 }

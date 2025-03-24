@@ -282,7 +282,7 @@ $anamemlearnpali = 'Learn Pali Переводы';
 $anamelearnsanskrit = 'Санскрит с Джеймсом Веланом';
 
 $anamemolds = 'Переводы Майкла Олдса'; 
-$anameasc = 'Благородный Аскетизм';
+$anameasc = 'Статьи на Dhammadana.org';
 $anameati = 'Accesstoinsight.org Патимоккха';
 $anamehist = 'История';
 $anameuseful = 'Полезное';
@@ -506,7 +506,7 @@ $head5suttadiff = 'Сравнить Две Сутты';
 $psuttadiff = 'Показывает разницу между двумя текстами. Пали или Англ.';
 $head5listdiff = 'Сравнить Два Списка Сутт'; 
 $plistdiff = 'Показывает разницу между двумя списками текстов в формате sn56.22 dn22 sn12.2'; 
-$head5makelist = 'Создать CSV список';
+$head5makelist = 'Сделать список из  строки';
 $pmakelist = 'Создавайте списки феноменов, учений, переводов и т.п.'; 
 
 $pt2s = 'Преобразование Русс и Англ текстов в речь';
@@ -797,7 +797,7 @@ $anamemlearnpali = 'Learn Pali Guides';
 $anamelearnsanskrit = 'Study Sanskrit with James Whelan';
 
 $anamemolds = 'Translations by M. Olds';
-$anameasc = 'Asceticism in Dhamma';
+$anameasc = 'Articles at Dhammadana.org';
 $anameati = 'Accesstoinsight.org patimokkha';
 $anamehist = 'History';
 $anameuseful = 'Useful Links';
@@ -811,7 +811,7 @@ $anamecases = 'Cases';
 $anameconj = 'Conjugations';
 $anametextbook = 'Pali Textbook';
 $anameothermat = 'Other Materials';
-$anamesdiff = 'Sutta Diff';
+$anamesdiff = 'Sutta Difference';
 $anametools = 'Tools';
 
 $aboutheader = 'About Project';
@@ -1008,7 +1008,7 @@ $head5suttadiff = 'Compare Two Suttas';
 $psuttadiff = 'Finds difference between two texts.';
 $head5listdiff = 'Compare Two Lists of Suttas'; 
 $plistdiff = 'Finds difference between two lists of suttas in this format: sn56.22 dn22 sn12.2'; 
-$head5makelist = 'Create CSV List';
+$head5makelist = 'Line to List';
 $pmakelist = 'Create Lists of phenomena, teachings, translations etc'; 
 
 

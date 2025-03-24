@@ -3,6 +3,8 @@ RewriteEngine On
 
 # Переадресация с /sc/ на /read/
 RewriteRule ^sc/(.*)$ /read/$1 [R=301,L,QSA]
+RewriteRule ^ru/sc/(.*)$ /ru/read/$1 [R=301,L,QSA]
+RewriteRule ^th/sc/(.*)$ /th/read/$1 [R=301,L,QSA]
 
 # Правило для запросов без /ru/
 RewriteCond %{REQUEST_URI} !^/ru/

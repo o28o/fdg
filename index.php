@@ -527,10 +527,6 @@ window.addEventListener('pageshow', function(event) {
 if ( $lang == "ru" ) {
 include 'assets/common/horizontalMenuRu.php'; 
 }
-else if ( $lang == "th" ) {
-include 'assets/common/horizontalMenuTh.php'; 
-}
-
 else {
 include 'assets/common/horizontalMenuEn.php'; 
 } 

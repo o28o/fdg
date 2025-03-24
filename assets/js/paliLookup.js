@@ -9,8 +9,8 @@ let dictUrl;
 
 if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
     dhammaGift = '';
-//    dictUrl = "http://localhost:8880";
-    dictUrl = "https://dict.dhamma.gift";
+   dictUrl = "http://localhost:8880";
+   // dictUrl = "https://dict.dhamma.gift";
 
 } else {
     dhammaGift = 'https://dhamma.gift';

@@ -1,50 +1,29 @@
-
 // Проверяем язык в localStorage
 const siteLanguage = localStorage.getItem('siteLanguage');
-const savedDict = (localStorage.getItem('selectedDict') || "dpdFull").toLowerCase();
-  // Устанавливаем правильный URL для словаря в зависимости от языка
+const savedDict = (localStorage.getItem('selectedDict') || "standalonebw").toLowerCase();
+
+// Устанавливаем правильный URL для словаря в зависимости от языка
 let dhammaGift;
 let dgParams;
 let dictUrl;
 
-
-/*
-// Условие для проверки языка сайта и URL
-if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
- //dhammaGift = 'https://dhamma.gift/ru/';
- dhammaGift = '/ru/';
-  //dictUrl = 'http://localhost:8080/ru/';
- dictUrl = 'https://dict.dhamma.gift/ru/search_html?q=';
-  //dictUrl = 'https://dpdict.net/ru/search_html?q=';
-} else {
-//   dhammaGift = 'https://dhamma.gift/';
-   dhammaGift = '/';
-  //dictUrl = 'http://localhost:8080/';
-  dictUrl = 'https://dict.dhamma.gift/search_html?q=';
-//  dictUrl = 'https://dpdict.net/search_html?q=';
-}
-
-if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
-  dictUrl = 'dttp://app.dicttango/WordLookup?word=';
-}
-*/
-
 if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
     dhammaGift = '';
-    dictUrl = "http://localhost:8880";
+//    dictUrl = "http://localhost:8880";
+    dictUrl = "https://dict.dhamma.gift";
+
 } else {
     dhammaGift = 'https://dhamma.gift';
-dictUrl = "https://dict.dhamma.gift";
+    dictUrl = "https://dict.dhamma.gift";
 }
 
-  if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
+if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
    dhammaGift += '/ru';
 }
- dhammaGift += '/?q=';
+dhammaGift += '/?q=';
 
-//добавить сюда логику для загрузки предпочтений поиска сохраненных на главной.
+// Добавляем сюда логику для загрузки предпочтений поиска, сохраненных на главной.
 dgParams = '&p=-kn';
-
 
 if (savedDict.includes("dpd")) {
   if (savedDict.includes("ru")) {
@@ -58,10 +37,87 @@ if (savedDict.includes("dpd")) {
   }
 } else if (savedDict === "dicttango") {
   dictUrl = "dttp://app.dicttango/WordLookup?word=";
+} else if (savedDict === "standalonebw") {
+  dictUrl = "standalonebw"; // Используем standalone-словарь
 } else {
    dictUrl = "searchonly";
 }
 
+// Функция для загрузки скриптов standalone-словаря
+function loadStandaloneScripts() {
+    return new Promise((resolve, reject) => {
+        const scripts = [
+            '/assets/js/standalone-dpd/dpd_deconstructor.js',
+            '/assets/js/standalone-dpd/dpd_ebts.js',
+            '/assets/js/standalone-dpd/dpd_i2h.js'
+        ];
+
+        let loadedCount = 0;
+
+        scripts.forEach(src => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.defer = true;
+            script.onload = () => {
+                loadedCount++;
+                if (loadedCount === scripts.length) {
+                    resolve();
+                }
+            };
+            script.onerror = () => {
+                reject(new Error(`Failed to load script: ${src}`));
+            };
+            document.head.appendChild(script);
+        });
+    });
+}
+
+// Включаем Pali Lookup после загрузки страницы
+document.addEventListener('DOMContentLoaded', function() {
+    if (savedDict === "standalonebw") {
+        // Загружаем скрипты standalone-словаря только если выбран standalonebw
+        loadStandaloneScripts()
+            .then(() => {
+                console.log('Standalone scripts loaded');
+                enablePaliLookup();
+            })
+            .catch(error => {
+                console.error('Error loading standalone scripts:', error);
+            });
+    } else {
+        // Включаем Pali Lookup без загрузки standalone-скриптов
+        enablePaliLookup();
+    }
+});
+
+
+
+function lookupWordInStandaloneDict(word) {
+    let out = "";
+    console.log("---");
+    console.log("before: ", word);
+    word = word.replace(/[’”'"]/g, "").replace(/ṁ/g, "ṃ");
+    console.log("after: ", word);
+
+    if (word in dpd_i2h) {
+        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
+        for (const headword of dpd_i2h[word]) {
+            if (headword in dpd_ebts) {
+                out += '<li>' + headword + '. ' + dpd_ebts[headword] + '</li>';
+            }
+        }
+        out += "</ul>";
+    }
+
+    if (word in dpd_deconstructor) {
+        out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
+        out += "<li>" + dpd_deconstructor[word] + "</li>";
+    }
+
+    out += "</ul>";
+
+    return out.replace(/ṃ/g, "ṁ");
+}
 
 
 function clearParams() {
@@ -321,28 +377,73 @@ toggleBtn.addEventListener('click', () => {
 
 // Перехватчик кликов по слову
 document.addEventListener('click', function(event) {
-    // Проверяем, что клик был по элементу с классом "pli-lang"
-
-
-if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]')) {  // Учитываем вложенные элементы
+    if (event.target.closest('.pli-lang, [lang="pi"]')) {
+   // if (event.target.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]')) {
         const clickedWord = getClickedWordWithHTML(event.target, event.clientX, event.clientY);
-        
-                // Если клик был по ссылке <a>, ничего не делаем
-if (event.target.closest('a, button, input, textarea, select')) {
-    return;
-}
+
+        if (event.target.closest('a, button, input, textarea, select')) {
+            return;
+        }
 
         if (clickedWord) {
-            // Убираем кавычки или апострофы в начале слова
             const cleanedWord = cleanWord(clickedWord);
             console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
-//   use  /gd?search= for xompact mode
-//     const url = `${dictUrl}gd?search=${encodeURIComponent(cleanedWord)}`;
+                let translation = "";
+
+                // Если выбран standalone-словарь
+                if (dictUrl === "standalonebw") {
+                    translation = lookupWordInStandaloneDict(cleanedWord);
+                } else {
+                    // Иначе используем текущую логику с dictUrl
+                    const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
+                    iframe.src = url;
+                }
+
+                // Если перевод найден, отображаем его в iframe
+                if (translation) {
+                    iframe.srcdoc = `
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <style>
+                                body {
+                                    font-family: Arial, sans-serif;
+                                    padding: 10px;
+                                    background: #fff3d6;
+                                    color: #000;
+                                }
+                                strong {
+                                    font-size: 1.2em;
+                                }
+                                ul {
+                                    list-style-type: none;
+                                    padding-left: 0;
+                                }
+                                li {
+                                    margin-bottom: 10px;
+                                }
+                            </style>
+                        </head>
+                        <body>
+                            ${translation}
+                        </body>
+                        </html>
+                    `;
+                    popup.style.display = 'block';
+                    overlay.style.display = 'block';
+                }
+
+                // Обновляем ссылку в кнопке openBtn
+                const openBtn = document.querySelector('.open-btn');
+                const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
+                openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
+
 
 function showSearchButton() {
-      
+      const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
 // Создаем кнопку "Search with dhamma.gift"
 const searchBtn = document.createElement('a');
 searchBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
@@ -394,36 +495,22 @@ searchBtn.addEventListener('click', () => {
     document.addEventListener('click', handleAnyClick);
 }
 
-
-
-               const url = `${dictUrl}${encodeURIComponent(cleanedWord)}`;
-                   iframe.src = url;
-
-// Обновляем ссылку в кнопке openBtn
-const openBtn = document.querySelector('.open-btn');
-const wordForSearch = cleanedWord.replace(/'ti/, ''); // Исправил на replace
-openBtn.href = `${dhammaGift}${encodeURIComponent(wordForSearch)}${dgParams}`;
-
-if (dictUrl.includes('dicttango')) {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-    showSearchButton();
-    } else if (dictUrl.includes('searchonly')) {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-    showSearchButton();
-  }  else {
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-  //  savePopupState();
-}
-              
+                if (dictUrl.includes('dicttango')) {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                    showSearchButton();
+                } else if (dictUrl.includes('searchonly')) {
+                    popup.style.display = 'none';
+                    overlay.style.display = 'none';
+                    showSearchButton();
+                } else {
+                    popup.style.display = 'block';
+                    overlay.style.display = 'block';
+                }
             }
-            
         }
     }
 });
-
 function getClickedWordWithHTML(element, x, y) {
     const range = document.caretRangeFromPoint(x, y);
     if (!range) return null;

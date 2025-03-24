@@ -278,11 +278,12 @@
                     <!-- Дропдаун для выбора системы письма -->
                     <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
                     <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
-                        <option value="dpdFull">DPD full </option>
-                        <option value="dpdCompact">DPD compact </option>
-              <option value="dpdFullRu">DPD full Rus</option>
-                            <option value="searchonly">Search Only</option>
-                        <option value="dpdCompactRu">DPD compact Rus</option>
+                        <option value="standalonebw">DPD Offline</option>
+                        <option value="dpdFull">DPD Online </option>
+                        <option value="dpdCompact">DPD Onilne mini </option>
+              <option value="dpdFullRu">DPD Online Rus</option>
+                        <option value="dpdCompactRu">DPD Online mini Rus</option>
+                        <option value="searchonly">Search Only</option>
                         <option value="dictTango">DictTango Android</option>
                     </select>
                 </div>   
@@ -654,4 +655,10 @@ window.addEventListener("load", function() {
 <script src="/assets/js/uihelp.js"> </script>
 <script src="/assets/js/variantsButtonSc.js"></script>
 <script src="/assets/js/settings.js"></script>
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            enablePaliLookup();
+        });
+    </script>
 </html>

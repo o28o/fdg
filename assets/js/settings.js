@@ -86,12 +86,12 @@ if (savedDict && [...dictSelect.options].some(opt => opt.value === savedDict)) {
   dictSelect.value = savedDict; // Устанавливаем только если значение есть в списке
 } else {
   
-if (window.location.href.includes('/ru/') || window.location.href.includes('ml.html')) {
+if (window.location.href.includes('/r/') || window.location.href.includes('/ml/')) {
 dictSelect.value = 'dpdFullRu'; // Значение по умолчанию
   localStorage.setItem('selectedDict', 'dpdFullRu');
 } else {
-  dictSelect.value = 'dpdFull'; // Значение по умолчанию
-  localStorage.setItem('selectedDict', 'dpdFull');
+  dictSelect.value = 'standalonebw'; // Значение по умолчанию
+  localStorage.setItem('selectedDict', 'standalonebw');
 }
 }
 

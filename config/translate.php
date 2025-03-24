@@ -818,7 +818,7 @@ $aboutheader = 'About Project';
 $aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Dhamma.gift is a Liberation Search Engine for Dhamma and Vinaya, core of the Pali Canon. </br></br>Search results in informative tables with line by line translations from SuttaCentral.net, TheBuddhasWords.net, DPR+ATI, Theravada.ru, and Theravada.su. </p></div>
 <div class="col-lg-4 me-auto"><p class="lead">You can search in Pali, English, Russian, Thai for meanings, definitions, metaphors, explanations, people, places, and more as described in the Suttas and Vinaya.
 <br><br>
-The project does not require financial support, but if you would like to contribute toward domain name expenses, feel free to reach out using any of the contacts listed in the "Contacts" block below.
+The project does not require financial support, but if you would like to contribute toward domain name expenses, feel free to reach out using any of the contacts listed in the "Contacts" section below.
 </p></div>';
 $prongh = ' Project on GitHub';
 $premail = ' Send email';

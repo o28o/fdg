@@ -129,10 +129,10 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 let ruUrl  = window.location.href;
 
-let rusUrl = ruUrl.replace("/read/th.html", "/ru/read/");
-rusUrl = ruUrl.replace("/th/read/", "/ru/read/");
-let mlUrl = ruUrl.replace("/read/th.html", "/read/ml.html");
-mlUrl = ruUrl.replace("/th/read/", "/read/ml.html");
+let rusUrl = ruUrl.replace("/read/th.html", "/r/");
+rusUrl = ruUrl.replace("/th/read/", "/r/");
+let mlUrl = ruUrl.replace("/read/th.html", "/ml/");
+mlUrl = ruUrl.replace("/th/read/", "/ml/");
 let mlthUrl = ruUrl.replace("/read/th.html", "/read/mlth.html");
 mlthUrl = ruUrl.replace("/th/read/", "/read/mlth.html");
  let scLink = `<p class="sc-link"><a target="" href="${rusUrl}">Ru</a> <a target="" href="${mlUrl}">R+E</a> <a target="" href="${mlthUrl}">T+E</a> `;
@@ -533,7 +533,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 let origUrl = window.location.href;
 let rvUrl = origUrl.replace("/read/th.html", "/read/");
 rvUrl = rvUrl.replace("/th/read/", "/read/");
-dUrl = rvUrl.replace("/read/", "/read/d.html");
+dUrl = rvUrl.replace("/read/", "/d");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/read/", "/read/memorize.html");
 

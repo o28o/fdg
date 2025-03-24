@@ -33,55 +33,55 @@
 		 <h5>Sīlakkhandhavagga</h5>
  </div>
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn1">dn1</a> Brahmajālasutta</span>
+<span class="level5"><a href="/r/?q=dn1">dn1</a> Brahmajālasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn2">dn2</a> Sāmaññaphalasutta</span>
+<span class="level5"><a href="/r/?q=dn2">dn2</a> Sāmaññaphalasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn3">dn3</a> Ambaṭṭhasutta</span>
+<span class="level5"><a href="/r/?q=dn3">dn3</a> Ambaṭṭhasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn4">dn4</a> Soṇadaṇḍasutta</span>
+<span class="level5"><a href="/r/?q=dn4">dn4</a> Soṇadaṇḍasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn5">dn5</a> Kūṭadantasutta</span>
+<span class="level5"><a href="/r/?q=dn5">dn5</a> Kūṭadantasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn6">dn6</a> Mahālisutta</span>
+<span class="level5"><a href="/r/?q=dn6">dn6</a> Mahālisutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn7">dn7</a> Jāliyasutta</span>
+<span class="level5"><a href="/r/?q=dn7">dn7</a> Jāliyasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn8">dn8</a> Mahāsīhanādasutta</span>
+<span class="level5"><a href="/r/?q=dn8">dn8</a> Mahāsīhanādasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn9">dn9</a> Poṭṭhapādasutta</span>
+<span class="level5"><a href="/r/?q=dn9">dn9</a> Poṭṭhapādasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn10">dn10</a> Subhasutta</span>
+<span class="level5"><a href="/r/?q=dn10">dn10</a> Subhasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn11">dn11</a> Kevaṭṭasutta</span>
+<span class="level5"><a href="/r/?q=dn11">dn11</a> Kevaṭṭasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn12">dn12</a> Lohiccasutta</span>
+<span class="level5"><a href="/r/?q=dn12">dn12</a> Lohiccasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn13">dn13</a> Tevijjasutta</span>
+<span class="level5"><a href="/r/?q=dn13">dn13</a> Tevijjasutta</span>
 </div>
  
 </div> <!-- close prev vagga div -->
@@ -90,43 +90,43 @@
 		 <h5>Mahāvagga</h5>
  </div>
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn14">dn14</a> Mahāpadānasutta</span>
+<span class="level5"><a href="/r/?q=dn14">dn14</a> Mahāpadānasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn15">dn15</a> Mahānidānasutta</span>
+<span class="level5"><a href="/r/?q=dn15">dn15</a> Mahānidānasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn16">dn16</a> Mahāparinibbānasutta</span>
+<span class="level5"><a href="/r/?q=dn16">dn16</a> Mahāparinibbānasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn17">dn17</a> Mahāsudassanasutta</span>
+<span class="level5"><a href="/r/?q=dn17">dn17</a> Mahāsudassanasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn18">dn18</a> Janavasabhasutta</span>
+<span class="level5"><a href="/r/?q=dn18">dn18</a> Janavasabhasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn19">dn19</a> Mahāgovindasutta</span>
+<span class="level5"><a href="/r/?q=dn19">dn19</a> Mahāgovindasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn20">dn20</a> Mahāsamayasutta</span>
+<span class="level5"><a href="/r/?q=dn20">dn20</a> Mahāsamayasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn21">dn21</a> Sakkapañhasutta</span>
+<span class="level5"><a href="/r/?q=dn21">dn21</a> Sakkapañhasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn22">dn22</a> Mahāsatipaṭṭhānasutta</span>
+<span class="level5"><a href="/r/?q=dn22">dn22</a> Mahāsatipaṭṭhānasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn23">dn23</a> Pāyāsisutta</span>
+<span class="level5"><a href="/r/?q=dn23">dn23</a> Pāyāsisutta</span>
 </div>
  
 </div> <!-- close prev vagga div -->
@@ -135,47 +135,47 @@
 		 <h5>Pāthikavagga</h5>
  </div>
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn24">dn24</a> Pāthikasutta</span>
+<span class="level5"><a href="/r/?q=dn24">dn24</a> Pāthikasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn25">dn25</a> Udumbarikasutta</span>
+<span class="level5"><a href="/r/?q=dn25">dn25</a> Udumbarikasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn26">dn26</a> Cakkavattisutta</span>
+<span class="level5"><a href="/r/?q=dn26">dn26</a> Cakkavattisutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn27">dn27</a> Aggaññasutta</span>
+<span class="level5"><a href="/r/?q=dn27">dn27</a> Aggaññasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn28">dn28</a> Sampasādanīyasutta</span>
+<span class="level5"><a href="/r/?q=dn28">dn28</a> Sampasādanīyasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn29">dn29</a> Pāsādikasutta</span>
+<span class="level5"><a href="/r/?q=dn29">dn29</a> Pāsādikasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn30">dn30</a> Lakkhaṇasutta</span>
+<span class="level5"><a href="/r/?q=dn30">dn30</a> Lakkhaṇasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn31">dn31</a> Siṅgālasutta</span>
+<span class="level5"><a href="/r/?q=dn31">dn31</a> Siṅgālasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn32">dn32</a> Āṭānāṭiyasutta</span>
+<span class="level5"><a href="/r/?q=dn32">dn32</a> Āṭānāṭiyasutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn33">dn33</a> Saṅgītisutta</span>
+<span class="level5"><a href="/r/?q=dn33">dn33</a> Saṅgītisutta</span>
 </div>
  
 <div class="mt-3">
-<span class="level5"><a href="/ru/read/?q=dn34">dn34</a> Dasuttarasutta</span>
+<span class="level5"><a href="/r/?q=dn34">dn34</a> Dasuttarasutta</span>
 </div>
  
 </div> <!-- Nikaya collapse -->

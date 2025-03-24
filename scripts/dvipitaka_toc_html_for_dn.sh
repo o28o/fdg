@@ -44,7 +44,7 @@ find "$suttapath" -type f -name "*.json" | sort -V | while read -r file; do
     suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}') 
     suttanumwoletters=`echo $suttanum | sed 's/[^0-9]//g'`
  suttaname=$(cat /tmp/tmp | grep -E "sutta\\b " | awk '{print $2}')
-    link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/read/?q="$1}')
+    link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/r/?q="$1}')
 
 if [[ "$suttanumwoletters" -le 13 ]]
 then
@@ -78,7 +78,7 @@ fi
     
 	#suttalink div
 	echo '<div class="mt-3">
-<span class="level5"><a href="/ru/read/?q='$suttanum'">'$suttanum'</a> '"$suttaname"'</span>
+<span class="level5"><a href="/r/?q='$suttanum'">'$suttanum'</a> '"$suttaname"'</span>
 </div>'
 	echo "  "
     

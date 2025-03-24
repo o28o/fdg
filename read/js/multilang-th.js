@@ -110,7 +110,7 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/read/mlth.html", "/ru/read/");
+const ruUrl = mlUrl.replace("/read/mlth.html", "/r/");
 const thUrl = mlUrl.replace("/read/mlth.html", "/th/read/");
 const enUrl = mlUrl.replace("/read/mlth.html", "/read/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a> <a target="" href="${enUrl}">En</a> `;
@@ -604,7 +604,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/read/th.html", "/read/");
 rvUrl = origUrl.replace("/th/read/", "/read/");
-dUrl = origUrl.replace("/read/", "/read/d.html");
+dUrl = origUrl.replace("/read/", "/d");
 rvUrl = rvUrl.replace("mlth.html", "");
 rvUrl = rvUrl.replace("/read/", "/read/memorize.html");
 

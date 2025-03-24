@@ -8,7 +8,7 @@ $htmllang = "ru";
 $mainpage = '/ru';
 $mainpagenoslash = '/ru';
 $mainscpage = $mainpage . '/read';
-$mainreadlink = '/ru/read.php';
+$mainreadlink = '/r.php';
 $searchcaption = 'Поиск';
 $clearaption = 'Очистить';
 $btnsave = 'Сохр. по умолч.';
@@ -108,7 +108,7 @@ $howtosearchquotetooltip = '';
 $howtosearchquote = '<p class="pli-lang">Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.</p>
 <p>Если при поиске в Суттах и сверке с Винаей они (учения, практики, методы, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем ' . $randomKey . '". Таким образом, монахи, вам следует это отвергнуть. 
 </p>
-<p class="text-end"><a target=_blank href=/ru/read/?q=dn16&s=Tāni&lang=pli-eng#4.8.6>dn16</a> <a target=_blank href=/ru/read/?q=an4.180&s=Tāni&lang=pli-eng#2.7>an4.180</a></p>';
+<p class="text-end"><a target=_blank href=/r/?q=dn16&s=Tāni&lang=pli-eng#4.8.6>dn16</a> <a target=_blank href=/r/?q=an4.180&s=Tāni&lang=pli-eng#2.7>an4.180</a></p>';
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "ОпрВ";
 
@@ -154,8 +154,8 @@ $fntmessage = '<p class="font-italic text-center pli-lang">
 an8.8
 </p>
 </p>';
-$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано <a href=/ru/read/?s=Evameva%E1%B9%81&q=an8.8#6.7>an8.8</a>, а что — плохо, иначе:';
-$mainscrollmodal = '<p class="">Из <a href=/ru/read/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
+$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано <a href=/r/?s=Evameva%E1%B9%81&q=an8.8#6.7>an8.8</a>, а что — плохо, иначе:';
+$mainscrollmodal = '<p class="">Из <a href=/r/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
 
 <h4 class="pli-lang">Ananuvicca apariyogāhetvā avaṇṇārahassa vaṇṇaṁ bhāsati, </h4>
 </br>
@@ -181,7 +181,7 @@ dn22 mn141
 </p>';
 
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
-$mainscrollmodal = '<p >Из <a href=/ru/read/?q=dn22&s=dukkha&lang=pli-rus#18.18>dn22</a> <a href=/ru/read/?q=mn141&s=dukkha&lang=pli-rus#16.1>mn141</a></br><h4 class="pli-lang">Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+$mainscrollmodal = '<p >Из <a href=/r/?q=dn22&s=dukkha&lang=pli-rus#18.18>dn22</a> <a href=/r/?q=mn141&s=dukkha&lang=pli-rus#16.1>mn141</a></br><h4 class="pli-lang">Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 Что такое, монахи, боль?</br>
 </br>
 <p class="pli-lang">Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p></br>
@@ -330,8 +330,8 @@ $howtoheader = 'Как Искать?';
 $contactheader = 'Контакты';
 $contaccalltoaction = 'Всесторонний взгляд на Четыре Благородные Истины<br>
 		в Палийских Суттах и Винае.<br> 
-    Поймите наст<a target="_blank" class="text-white text-decoration-none" href=/ru/read/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
-   и п<a target="_blank" class="text-white text-decoration-none" href=/ru/read/?q=bu-pm>о</a>л<a class="text-white text-decoration-none" target=_blank href=/ru/read/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-white text-decoration-none" href=/ru/read/?q=mn77&lang=pli>о</a>нец б<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
+    Поймите наст<a target="_blank" class="text-white text-decoration-none" href=/r/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
+   и п<a target="_blank" class="text-white text-decoration-none" href=/r/?q=bu-pm>о</a>л<a class="text-white text-decoration-none" target=_blank href=/r/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-white text-decoration-none" href=/r/?q=mn77&lang=pli>о</a>нец б<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
                                							
 $demovideo = 'Обучающие Видео';	
 $demovideolink = 'https://youtube.com/playlist?list=PLFJDP30qrYJ2rknY6fEVR3jQxpZd1S6lX&si=7O06E2lcmPxaEVX2';
@@ -376,7 +376,7 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 									<strong>Совет #9</strong><br>
 Если запрос завершается ошибкой из-за таймаута, попробуйте более длинный поисковый запрос или более специфичное слово.  <br><br>
 	<strong>Совет #10 Быстрые переходы</strong><br>
-   Также как на <a href="https://dhamma.gift/ru/read/">Dhamma.gift Read</a> или <a href="https://dhamma.gift/read">dhamma.gift/read</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
+   Также как на <a href="https://dhamma.gift/r/">Dhamma.gift Read</a> или <a href="https://dhamma.gift/read">dhamma.gift/read</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
    Через строку поиска можно перейти в сутты dn, mn, sn, an, ud из kn и тексты Винаи. <br><br>
 <!--								  <strong>Совет #11</strong><br>
                                    !!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  -->
@@ -517,7 +517,7 @@ $smscvoice = 'для прослушивания текстов suttacentral.net'
 
 $title404 = 'Ошибка 404';
 $p404 = ' Страница не найдена. Но';
-$link404 = '/ru/read/?q=sn38.4';
+$link404 = '/r/?q=sn38.4';
 $hreftext404 = 'На Главную';
 
 $dpddesc = 'Digital Pali Dictionary Онлайн';
@@ -532,7 +532,7 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 $defaults = '<br><div class="text-start">
 <h5 >Интерфейс для Чтения</h5>
 <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс 
-<a href="/ru/read/?q=sn56.11">демо</a>
+<a href="/r/?q=sn56.11">демо</a>
 <br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/read/ml.html?q=sn56.11">демо</a><br>
  <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/read/d.html?q=sn56.11">демо</a><br>
@@ -917,7 +917,7 @@ Please, create an issue on github or send an email, if you\'ll find other criter
 $defaults = '<br><div class="text-start">
 <h5>Reading Interface</h5>
 <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Standard</strong> - Two languages - Pali, English 
-<a href="/ru/read/?q=sn56.11">demo</a>
+<a href="/r/?q=sn56.11">demo</a>
 <br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Multilang</strong> - Three languages - Pali, Russian, English <a href="/read/ml.html?q=sn56.11">demo</a><br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Devanagari"</strong> - Devanagari or Thai script and Romanized Pali <a href="/read/d.html?q=sn56.11">demo</a><br>

@@ -78,12 +78,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://dhamma.gift/ru/read/?q=dn16</loc>
+  <loc>https://dhamma.gift/r/?q=dn16</loc>
   <lastmod>2023-08-11T23:13:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://dhamma.gift/ru/read/?q=an4.180</loc>
+  <loc>https://dhamma.gift/r/?q=an4.180</loc>
   <lastmod>2023-08-11T23:13:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -113,7 +113,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://dhamma.gift/ru/read.php</loc>
+  <loc>https://dhamma.gift/r.php</loc>
   <lastmod>2023-08-24T03:03:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>

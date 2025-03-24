@@ -314,7 +314,7 @@ console.log('texttype ' + texttype + ' translator ' + translator);
 
 const enUrl = window.location.href;
 
-const ruUrl = enUrl.replace("/read/", "/ru/read/");
+const ruUrl = enUrl.replace("/read/", "/r/");
 
 let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;`;
  
@@ -390,11 +390,11 @@ scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}"
       scLink += "</p>"; 
 
 const origUrl = window.location.href;
-let rvUrl = origUrl.replace("/ru/read/", "/read/");
+let rvUrl = origUrl.replace("/r/", "/read/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/read/", "/read/rv.html");
 thUrl = origUrl.replace("/read/", "/th/read/");
-dUrl = origUrl.replace("/read/", "/read/d.html");
+dUrl = origUrl.replace("/read/", "/d");
 
 const warning = "<p class='warning' >Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";
 

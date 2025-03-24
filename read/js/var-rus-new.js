@@ -103,7 +103,7 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const ruUrl  = window.location.href;
 
-const mlUrl = ruUrl.replace("/ru/read/", "/read/ml.html");
+const mlUrl = ruUrl.replace("/r/", "/ml/");
  let scLink = `<p class="sc-link"><a target="" href="${mlUrl}">R+E</a>&nbsp;`;
  //<a class='ruLink' href='' onclick=openRu('${slug}') data-slug='${slug}'>tst</a>&nbsp;
 const currentURL = window.location.href;
@@ -263,7 +263,7 @@ if (translator === "sv") {
   
   const ruUrl  = window.location.href;
 
-const enUrl = ruUrl.replace("/ru/read/", "/read/");
+const enUrl = ruUrl.replace("/r/", "/read/");
 
 scLink += `<a href="${enUrl}">En</a>&nbsp;`;
  
@@ -352,7 +352,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 
 const origUrl = window.location.href;
-let rvUrl = origUrl.replace("/ru/read/", "/read/");
+let rvUrl = origUrl.replace("/r/", "/read/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/read/", "/read/rv.html");
 
@@ -519,7 +519,7 @@ setLanguage(language);
   <div class="lists">
 
   <div class="suttas">
-  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> 
+  <a href="/r.php"> <h2>Основные Сутты</h2></a> 
   <ul>
      <li><span class="abbr">dn</span> <a href="/ru/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
      <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>
@@ -534,14 +534,14 @@ setLanguage(language);
   <h3>Бхиккху Виная</h3>
 <ul>
 <li><span class="abbr">bu-pm</span> <a href="/ru/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
-<li><span class="abbr">bu-pj</span> <a href="/ru/read/?q=bu-pm#8.0"> Pārājikā</a></li></li>
-<li><span class="abbr">bu-ss</span> <a href="/ru/read/?q=bu-pm#14.0"> Saṅghādisesā</a></li></li>
-<li><span class="abbr">bu-ay</span> <a href="/ru/read/?q=bu-pm#29.0"> Aniyatā</a></li>
-<li><span class="abbr">bu-np</span> <a href="/ru/read/?q=bu-pm#33.0"> Nissaggiyā-pācittiyā</a></li>
-<li><span class="abbr">bu-pc</span> <a href="/ru/read/?q=bu-pm#65.0"> Pācittiyā</a></li>
-<li><span class="abbr">bu-pd</span> <a href="/ru/read/?q=bu-pm#159.0"> Pāṭidesanīyā</a></li></li>
-<li><span class="abbr">bu-sk</span> <a href="/ru/read/?q=bu-pm#165.0"> Sekhiyā</a></li></li>
-<li><span class="abbr">bu-as</span> <a href="/ru/read/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
+<li><span class="abbr">bu-pj</span> <a href="/r/?q=bu-pm#8.0"> Pārājikā</a></li></li>
+<li><span class="abbr">bu-ss</span> <a href="/r/?q=bu-pm#14.0"> Saṅghādisesā</a></li></li>
+<li><span class="abbr">bu-ay</span> <a href="/r/?q=bu-pm#29.0"> Aniyatā</a></li>
+<li><span class="abbr">bu-np</span> <a href="/r/?q=bu-pm#33.0"> Nissaggiyā-pācittiyā</a></li>
+<li><span class="abbr">bu-pc</span> <a href="/r/?q=bu-pm#65.0"> Pācittiyā</a></li>
+<li><span class="abbr">bu-pd</span> <a href="/r/?q=bu-pm#159.0"> Pāṭidesanīyā</a></li></li>
+<li><span class="abbr">bu-sk</span> <a href="/r/?q=bu-pm#165.0"> Sekhiyā</a></li></li>
+<li><span class="abbr">bu-as</span> <a href="/r/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
 </ul>
 </div><div>
 <h3>Бхиккхуни Виная</h3>

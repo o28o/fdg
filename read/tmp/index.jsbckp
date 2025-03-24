@@ -257,7 +257,7 @@ console.log('texttype ' + texttype + ' translator ' + translator);
 
 const enUrl = window.location.href;
 
-const ruUrl = enUrl.replace("/read/", "/ru/read/");
+const ruUrl = enUrl.replace("/read/", "/r/");
 
 let scLink = `<p class="sc-link"><a href="${ruUrl}">Ru</a>&nbsp;`;
  
@@ -333,7 +333,7 @@ scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}"
       scLink += "</p>"; 
 
 const origUrl = window.location.href;
-let rvUrl = origUrl.replace("/ru/read/", "/read/");
+let rvUrl = origUrl.replace("/r/", "/read/");
 rvUrl = rvUrl.replace("ml.html", "");
 rvUrl = rvUrl.replace("/read/", "/read/rv.html");
 thUrl = origUrl.replace("/read/", "/th/read/");

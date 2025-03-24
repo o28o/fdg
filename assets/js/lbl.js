@@ -664,7 +664,7 @@ window.addEventListener('click', function(event) {
 
     document.getElementById('linkButton1').addEventListener('click', function() {
         var indexValue = document.getElementById('indexInput').value;
-        var url = '/ru/read?q=' + indexValue;
+        var url = '/r?q=' + indexValue;
         window.open(url, '_blank');
     });
 
@@ -705,7 +705,7 @@ window.addEventListener('click', function(event) {
                 window.open(url, '_blank');
             } else {
                 // Если формат не соответствует AN или SN, открыть URL по умолчанию
-                var url = '/ru/read?q=' + indexValue;
+                var url = '/r?q=' + indexValue;
                 window.open(url, '_blank');
             }
         }

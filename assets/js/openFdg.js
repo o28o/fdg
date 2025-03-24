@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получаем базовый URL в зависимости от наличия подстроки "/ru" в текущем URL или в значении localStorage.siteLanguage
     let baseUrl;
     if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-        baseUrl = window.location.origin + "/ru/read/";
+        baseUrl = window.location.origin + "/r/";
     } else if (window.location.href.includes('/th') || (localStorage.siteLanguage && localStorage.siteLanguage === 'th')) {
         baseUrl = window.location.origin + "/th/read/";
     } else {
@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (localStorage.defaultReader === 'ml') {
-        baseUrl = window.location.origin + "/read/ml.html";
+        baseUrl = window.location.origin + "/ml/";
     } else if (localStorage.defaultReader === 'rv') {
         baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/read/d.html";
+        baseUrl = window.location.origin + "/d";
     } else if (localStorage.defaultReader === 'mem') {
         baseUrl = window.location.origin + "/read/memorize.html";
     } else if (localStorage.defaultReader === 'fr') {

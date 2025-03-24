@@ -118,8 +118,8 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/read/ml.html", "/ru/read/");
-const enUrl = mlUrl.replace("/read/ml.html", "/read/");
+const ruUrl = mlUrl.replace("/ml/", "/r/");
+const enUrl = mlUrl.replace("/ml/", "/read/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
@@ -511,7 +511,7 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
       scLink += "</p>"; 
 
 const origUrl = window.location.href;
-let rvUrl = origUrl.replace("/ru/read/", "/read/");
+let rvUrl = origUrl.replace("/r/", "/read/");
 thUrl = origUrl.replace("/ml.html", "/mlth.html");
 dUrl = origUrl.replace("/ml.html", "/d.html");
 rvUrl = rvUrl.replace("ml.html", "");
@@ -680,7 +680,7 @@ setLanguage(language);
   <div class="lists">
 
   <div class="suttas">
-  <a href="/ru/read.php"> <h2>Основные Сутты</h2></a> <br>
+  <a href="/r.php"> <h2>Основные Сутты</h2></a> <br>
   <ul>
      <li><span class="abbr">dn</span> <a href="/ru/assets/texts/dn.php"> Dīgha-nikāya</a></li></li>
      <li><span class="abbr">mn</span> <a href="/ru/assets/texts/mn.php"> Majjhima-nikāya</a></li></li>
@@ -711,14 +711,14 @@ setLanguage(language);
   <h3>Бхиккху Виная</h3><br>
 <ul>
 <li><span class="abbr">bu-pm</span> <a href="/ru/assets/texts/pm.php"> Bhikkhupātimokkha</a></li>
-<li><span class="abbr">bu-pj</span> <a href="/ru/read/?q=bu-pm#8.0"> Pārājikā</a></li></li>
-<li><span class="abbr">bu-ss</span> <a href="/ru/read/?q=bu-pm#14.0"> Saṅghādisesā</a></li></li>
-<li><span class="abbr">bu-ay</span> <a href="/ru/read/?q=bu-pm#29.0"> Aniyatā</a></li>
-<li><span class="abbr">bu-np</span> <a href="/ru/read/?q=bu-pm#33.0"> Nissaggiyā-pācittiyā</a></li>
-<li><span class="abbr">bu-pc</span> <a href="/ru/read/?q=bu-pm#65.0"> Pācittiyā</a></li>
-<li><span class="abbr">bu-pd</span> <a href="/ru/read/?q=bu-pm#159.0"> Pāṭidesanīyā</a></li></li>
-<li><span class="abbr">bu-sk</span> <a href="/ru/read/?q=bu-pm#165.0"> Sekhiyā</a></li></li>
-<li><span class="abbr">bu-as</span> <a href="/ru/read/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
+<li><span class="abbr">bu-pj</span> <a href="/r/?q=bu-pm#8.0"> Pārājikā</a></li></li>
+<li><span class="abbr">bu-ss</span> <a href="/r/?q=bu-pm#14.0"> Saṅghādisesā</a></li></li>
+<li><span class="abbr">bu-ay</span> <a href="/r/?q=bu-pm#29.0"> Aniyatā</a></li>
+<li><span class="abbr">bu-np</span> <a href="/r/?q=bu-pm#33.0"> Nissaggiyā-pācittiyā</a></li>
+<li><span class="abbr">bu-pc</span> <a href="/r/?q=bu-pm#65.0"> Pācittiyā</a></li>
+<li><span class="abbr">bu-pd</span> <a href="/r/?q=bu-pm#159.0"> Pāṭidesanīyā</a></li></li>
+<li><span class="abbr">bu-sk</span> <a href="/r/?q=bu-pm#165.0"> Sekhiyā</a></li></li>
+<li><span class="abbr">bu-as</span> <a href="/r/?q=bu-pm#245.0"> Adhikarana-samatha</a></li></li>
 </ul>
 </div><div>
 <h3>Бхиккхуни Виная</h3><br>
@@ -737,31 +737,31 @@ setLanguage(language);
 <h3>Khandhaka</h3>
 <h3>Mahāvagga</h3><br>
 <ul>
-<li><span class=abbr>kd1</span> <a href=/ru/read/?q=pli-tv-kd1>Mahākhandhaka</a></li>
-<li><span class=abbr>kd2</span> <a href=/ru/read/?q=pli-tv-kd2>Uposathakkhandhaka</a></li>                                 
-<li><span class=abbr>kd3</span> <a href=/ru/read/?q=pli-tv-kd3>Vassūpanāyikakkhandhaka</a></li>
-<li><span class=abbr>kd4</span> <a href=/ru/read/?q=pli-tv-kd4>Pavāraṇākkhandhaka</a></li>
-<li><span class=abbr>kd5</span> <a href=/ru/read/?q=pli-tv-kd5>Cammakkhandhaka</a></li>
-<li><span class=abbr>kd6</span> <a href=/ru/read/?q=pli-tv-kd6>Bhesajjakkhandhaka</a></li>
-<li><span class=abbr>kd7</span> <a href=/ru/read/?q=pli-tv-kd7>Kathinakkhandhaka</a></li>
-<li><span class=abbr>kd8</span> <a href=/ru/read/?q=pli-tv-kd8>Cīvarakkhandhaka</a></li>                                    
-<li><span class=abbr>kd9</span> <a href=/ru/read/?q=pli-tv-kd9>Campeyyakkhandhaka</a></li>
-<li><span class=abbr>kd10</span> <a href=/ru/read/?q=pli-tv-kd10>Kosambakakkhandhaka</a></li>
+<li><span class=abbr>kd1</span> <a href=/r/?q=pli-tv-kd1>Mahākhandhaka</a></li>
+<li><span class=abbr>kd2</span> <a href=/r/?q=pli-tv-kd2>Uposathakkhandhaka</a></li>                                 
+<li><span class=abbr>kd3</span> <a href=/r/?q=pli-tv-kd3>Vassūpanāyikakkhandhaka</a></li>
+<li><span class=abbr>kd4</span> <a href=/r/?q=pli-tv-kd4>Pavāraṇākkhandhaka</a></li>
+<li><span class=abbr>kd5</span> <a href=/r/?q=pli-tv-kd5>Cammakkhandhaka</a></li>
+<li><span class=abbr>kd6</span> <a href=/r/?q=pli-tv-kd6>Bhesajjakkhandhaka</a></li>
+<li><span class=abbr>kd7</span> <a href=/r/?q=pli-tv-kd7>Kathinakkhandhaka</a></li>
+<li><span class=abbr>kd8</span> <a href=/r/?q=pli-tv-kd8>Cīvarakkhandhaka</a></li>                                    
+<li><span class=abbr>kd9</span> <a href=/r/?q=pli-tv-kd9>Campeyyakkhandhaka</a></li>
+<li><span class=abbr>kd10</span> <a href=/r/?q=pli-tv-kd10>Kosambakakkhandhaka</a></li>
 </ul>
 <h3>Cūḷavagga</h3><br>
 <ul>
-<li><span class=abbr>kd11</span> <a href=/ru/read/?q=pli-tv-kd11>Kammakkhandhaka</a></li>
-<li><span class=abbr>kd12</span> <a href=/ru/read/?q=pli-tv-kd12>Pārivāsikakkhandhaka</a></li>
-<li><span class=abbr>kd13</span> <a href=/ru/read/?q=pli-tv-kd13>Samuccayakkhandhaka</a></li>
-<li><span class=abbr>kd14</span> <a href=/ru/read/?q=pli-tv-kd14>Samathakkhandhaka</a></li>
-<li><span class=abbr>kd15</span> <a href=/ru/read/?q=pli-tv-kd15>Khuddakavatthukkhandhaka</a></li>
-<li><span class=abbr>kd16</span> <a href=/ru/read/?q=pli-tv-kd16>Senāsanakkhandhaka</a></li>
-<li><span class=abbr>kd17</span> <a href=/ru/read/?q=pli-tv-kd17>Saṅghabhedakakkhandhaka</a></li>
-<li><span class=abbr>kd18</span> <a href=/ru/read/?q=pli-tv-kd18>Vattakkhandhaka</a></li>
-<li><span class=abbr>kd19</span> <a href=/ru/read/?q=pli-tv-kd19>Pātimokkhaṭṭhapanakkhandhaka</a></li>
-<li><span class=abbr>kd20</span> <a href=/ru/read/?q=pli-tv-kd20>Bhikkhunikkhandhaka</a></li>
-<li><span class=abbr>kd21</span> <a href=/ru/read/?q=pli-tv-kd21>Pañcasatikakkhandhaka</a></li>
-<li><span class=abbr>kd22</span> <a href=/ru/read/?q=pli-tv-kd22>Sattasatikakkhandhaka</a></li>
+<li><span class=abbr>kd11</span> <a href=/r/?q=pli-tv-kd11>Kammakkhandhaka</a></li>
+<li><span class=abbr>kd12</span> <a href=/r/?q=pli-tv-kd12>Pārivāsikakkhandhaka</a></li>
+<li><span class=abbr>kd13</span> <a href=/r/?q=pli-tv-kd13>Samuccayakkhandhaka</a></li>
+<li><span class=abbr>kd14</span> <a href=/r/?q=pli-tv-kd14>Samathakkhandhaka</a></li>
+<li><span class=abbr>kd15</span> <a href=/r/?q=pli-tv-kd15>Khuddakavatthukkhandhaka</a></li>
+<li><span class=abbr>kd16</span> <a href=/r/?q=pli-tv-kd16>Senāsanakkhandhaka</a></li>
+<li><span class=abbr>kd17</span> <a href=/r/?q=pli-tv-kd17>Saṅghabhedakakkhandhaka</a></li>
+<li><span class=abbr>kd18</span> <a href=/r/?q=pli-tv-kd18>Vattakkhandhaka</a></li>
+<li><span class=abbr>kd19</span> <a href=/r/?q=pli-tv-kd19>Pātimokkhaṭṭhapanakkhandhaka</a></li>
+<li><span class=abbr>kd20</span> <a href=/r/?q=pli-tv-kd20>Bhikkhunikkhandhaka</a></li>
+<li><span class=abbr>kd21</span> <a href=/r/?q=pli-tv-kd21>Pañcasatikakkhandhaka</a></li>
+<li><span class=abbr>kd22</span> <a href=/r/?q=pli-tv-kd22>Sattasatikakkhandhaka</a></li>
 </ul>
 </div>
 <div>

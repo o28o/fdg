@@ -140,9 +140,9 @@ $totalinyears years total
     <?php echo $passedinyears ?>
 </td>
 <td>
-<a target="_blank" href=/ru/read/?q=sn51.20>sn51.20</a> 
-<a target=_blank href=/ru/read/?q=dn22>dn22</a> 
-<a target=_blank href=/ru/read/?q=mn77>mn77</a> 
+<a target="_blank" href=/r/?q=sn51.20>sn51.20</a> 
+<a target=_blank href=/r/?q=dn22>dn22</a> 
+<a target=_blank href=/r/?q=mn77>mn77</a> 
 <a target=_blank href=http://scholar.google.com>Scholar Google</a> 
 <a target=_blank href=https://sci-hub.se/>Sci Hub</a> 
  
@@ -172,10 +172,10 @@ $totalinyears years total
     <?php echo $leftinyears ?>
 </td>
 <td>
-<a target="_blank" href=/ru/read/?q=bu-pm>bu-pm</a> 
-<a target="_blank" href=/ru/read/?q=bi-pm>bi-pm</a> 
-<a target=_blank href=/ru/read/?q=sn56.11>sn56.11</a> 
-<a target=_blank href=/ru/read/?q=dn15>dn15</a> 
+<a target="_blank" href=/r/?q=bu-pm>bu-pm</a> 
+<a target="_blank" href=/r/?q=bi-pm>bi-pm</a> 
+<a target=_blank href=/r/?q=sn56.11>sn56.11</a> 
+<a target=_blank href=/r/?q=dn15>dn15</a> 
  
 </td>
 </tr>
@@ -203,10 +203,10 @@ $totalinyears years total
     <?php echo $totalinyears ?>
 </td>
 <td>
-<a target="_blank" href=/ru/read/?q=sn22.95>sn22.95</a>  
-<a target=_blank href=/ru/read/?q=sn22.102>sn22.102</a>  
-<a target=_blank href=/ru/read/?q=sn35.70>sn35.70</a>  
-<a target=_blank href=/ru/read/?q=an3.101>an3.101</a>  
+<a target="_blank" href=/r/?q=sn22.95>sn22.95</a>  
+<a target=_blank href=/r/?q=sn22.102>sn22.102</a>  
+<a target=_blank href=/r/?q=sn35.70>sn35.70</a>  
+<a target=_blank href=/r/?q=an3.101>an3.101</a>  
 <a target=_blank href=/assets/audio/documents/dn_Syrkin.pdf>ДН пер. Сыркин А.Я.</a>  
 <a target=_blank href=http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/lankavat/lanka.htm>TITUS</a>  
 <a target=_blank href=http://spiritual.su/>spiritual.su</a> 

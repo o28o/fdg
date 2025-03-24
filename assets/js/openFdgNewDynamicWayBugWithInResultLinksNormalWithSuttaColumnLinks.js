@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let baseUrl;
             if (window.location.href.includes('/ru') || localStorage.siteLanguage === 'ru') {
-                baseUrl = window.location.origin + "/ru/read/";
+                baseUrl = window.location.origin + "/r/";
             } else if (window.location.href.includes('/th') || localStorage.siteLanguage === 'th') {
                 baseUrl = window.location.origin + "/th/read/";
             } else {

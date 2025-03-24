@@ -242,7 +242,7 @@ curl http://localhost/read/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
 curl http://localhost/read/api.php?fromjs=sutta/dn/dn22&type=A
 curl http://localhost/read/extralinks.php?fromjs=dn22
 
-http://localhost:8080/ru/read/index.js
+http://localhost:8080/r/index.js
 
 git rm -r --cached .
 

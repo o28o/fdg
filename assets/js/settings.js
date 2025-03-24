@@ -215,17 +215,17 @@ const initialDefaultReader = localStorage.defaultReader;
 function getBaseUrl() {
     let baseUrl;
     if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-        baseUrl = window.location.origin + "/ru/read/";
+        baseUrl = window.location.origin + "/r/";
     } else {
         baseUrl = window.location.origin + "/read/";
     }
 
     if (localStorage.defaultReader === 'ml') {
-        baseUrl = window.location.origin + "/read/ml.html";
+        baseUrl = window.location.origin + "/ml/";
     } else if (localStorage.defaultReader === 'rv') {
         baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/read/d.html";
+        baseUrl = window.location.origin + "/d";
     } else if (localStorage.defaultReader === 'mem') {
         baseUrl = window.location.origin + "/read/memorize.html";
     } else if (localStorage.defaultReader === 'fr') {
@@ -292,17 +292,17 @@ const initialDefaultReader = localStorage.defaultReader;
 function getBaseUrl() {
     let baseUrl;
     if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-        baseUrl = window.location.origin + "/ru/read/";
+        baseUrl = window.location.origin + "/r/";
     } else {
         baseUrl = window.location.origin + "/read/";
     }
 
     if (localStorage.defaultReader === 'ml') {
-        baseUrl = window.location.origin + "/read/ml.html";
+        baseUrl = window.location.origin + "/ml/";
     } else if (localStorage.defaultReader === 'rv') {
         baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/read/d.html";
+        baseUrl = window.location.origin + "/d";
     } else if (localStorage.defaultReader === 'mem') {
         baseUrl = window.location.origin + "/read/memorize.html";
     } else if (localStorage.defaultReader === 'fr') {
@@ -369,7 +369,7 @@ function updateDemoLinks() {
   // Определяем базовый URL в зависимости от языка
   let baseUrl;
   if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-    baseUrl = window.location.origin + "/ru/read/"; // Для русского языка
+    baseUrl = window.location.origin + "/r/"; // Для русского языка
   } else if (window.location.href.includes('/th') || (localStorage.siteLanguage && localStorage.siteLanguage === 'th')) {
     baseUrl = window.location.origin + "/th/read/"; // Для русского языка
   } else {
@@ -379,8 +379,8 @@ function updateDemoLinks() {
   // Ссылки для демо-режимов
   const demoLinks = {
     stDemo: baseUrl, // Используем baseUrl для stDemo
-    mlDemo: window.location.origin + "/read/ml.html",
-    dDemo: window.location.origin + "/read/d.html",
+    mlDemo: window.location.origin + "/ml/",
+    dDemo: window.location.origin + "/d",
     memDemo: window.location.origin + "/read/memorize.html",
     rvDemo: window.location.origin + "/read/rv.html",
     frDemo: window.location.origin + "/read/fr.html"
@@ -415,7 +415,7 @@ document.addEventListener("keydown", (event) => {
 
 	let defaultLanguageLinkPart;
 		if (defaultLanguage === "ru") {
-		  defaultLanguageLinkPart = "/ru/read/";
+		  defaultLanguageLinkPart = "/r/";
 		} else if (defaultLanguage === "th") {
 		  defaultLanguageLinkPart = "/th/read/";
 		} else {
@@ -423,18 +423,18 @@ document.addEventListener("keydown", (event) => {
 		}
 
 
-    // Проверяем, содержит ли URL /ru/read/
-    if (urlWithoutParams.endsWith("/ru/read/")) {
-      newUrl = urlWithoutParams.replace("/ru/read/", "/read/"); // Меняем на /read/
+    // Проверяем, содержит ли URL /r/
+    if (urlWithoutParams.endsWith("/r/")) {
+      newUrl = urlWithoutParams.replace("/r/", "/read/"); // Меняем на /read/
     } else if (urlWithoutParams.endsWith("/th/read/")) {
       newUrl = urlWithoutParams.replace("/th/read/", defaultLanguageLinkPart); // Меняем на /read/
     } else if (urlWithoutParams.endsWith("/read/")) {
-      newUrl = urlWithoutParams.replace("/read/", "/ru/read/"); // Меняем на /ru/read/
+      newUrl = urlWithoutParams.replace("/read/", "/r/"); // Меняем на /r/
     } 
 	else {
-      // Если URL не содержит ни /ru/read/, ни /read/, выбираем начальный вариант
+      // Если URL не содержит ни /r/, ни /read/, выбираем начальный вариант
       if (localStorage.siteLanguage && localStorage.siteLanguage === 'ru') {
-        newUrl = window.location.origin + "/ru/read/";
+        newUrl = window.location.origin + "/r/";
       } else {
         newUrl = window.location.origin + "/read/";
       }

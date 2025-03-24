@@ -21521,10 +21521,10 @@ include $basedir . "/assets/texts/bipm.php";
 <?php echo $aboutprp; ?>
                 </div>
                 <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
-                
-                   <i class="fa-brands fa-github"></i><?php echo $prongh; ?>
+                                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="/assets/common/<?php echo $prekeyfeatures; ?>">
+    
+                   <i class="fa-solid fa-star"></i><?php echo $premail; ?>
                     </a>
                 </div>
             </div>

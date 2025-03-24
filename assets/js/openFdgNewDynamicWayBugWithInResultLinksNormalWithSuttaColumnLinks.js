@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let baseUrl;
             if (window.location.href.includes('/ru') || localStorage.siteLanguage === 'ru') {
-                baseUrl = window.location.origin + "/ru/sc/";
+                baseUrl = window.location.origin + "/ru/read/";
             } else if (window.location.href.includes('/th') || localStorage.siteLanguage === 'th') {
-                baseUrl = window.location.origin + "/th/sc/";
+                baseUrl = window.location.origin + "/th/read/";
             } else {
-                baseUrl = window.location.origin + "/sc/";
+                baseUrl = window.location.origin + "/read/";
             }
 
             if (localStorage.defaultReader) {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     fr: "fr.html"
                 };
                 if (readers[localStorage.defaultReader]) {
-                    baseUrl = window.location.origin + "/sc/" + readers[localStorage.defaultReader];
+                    baseUrl = window.location.origin + "/read/" + readers[localStorage.defaultReader];
                 }
             }
 

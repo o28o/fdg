@@ -1,6 +1,6 @@
 #!/bin/bash
 echo script started `date`
-cd /home/a0092061/domains/find.dhamma.gift/public_html/input
+cd /home/a0092061/domains/dhamma.gift/public_html/input
 pscheck=`ps -ef | grep bgmode.sh | grep -v grep | wc -l`
 inputfile=./input.txt
 echo pscheck $pscheck 

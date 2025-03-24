@@ -23,14 +23,14 @@ suttapath=$apachesitepath/suttacentral.net/
 
 linkforthsu=/tipitaka.theravada.su
 linkforthru=/theravada.ru
-linkforthai=/legacy.suttacentral.net/sc/th/
+linkforthai=/legacy.suttacentral.net/read/th/
 linkforthaiext='.html'
 linkforsi=https://suttacentral.net/
 linkforsiext=/si/zoysa
-linkforru=/legacy.suttacentral.net/sc/ru/
+linkforru=/legacy.suttacentral.net/read/ru/
 linkforruext='.html'
 urllinkpli=
-urllinken='/sc/?q='
+urllinken='/read/?q='
 urllinkenend='&lang=pli-eng'
 urllinkbw=/bw/
 
@@ -81,7 +81,7 @@ linkforruext=
 urllinkpli=http://Dhamma.gift/
 urllinkenmid=
 #urllinkbwend=.html
-urllinken='/sc/?q='
+urllinken='/read/?q='
 urllinkenend='&lang=pli-eng'
 urllinkbw=/bw/
 
@@ -114,14 +114,14 @@ suttapath=$apachesitepath/suttacentral.net/
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
 linkforthsu=/tipitaka.theravada.su
 linkforthru=/theravada.ru
-linkforthai=/legacy.suttacentral.net/sc/th/
+linkforthai=/legacy.suttacentral.net/read/th/
 linkforthaiext='.html'
 linkforsi=https://suttacentral.net/
 linkforsiext=/si/zoysa
-linkforru=/legacy.suttacentral.net/sc/ru/
+linkforru=/legacy.suttacentral.net/read/ru/
 linkforruext='.html'
 urllinkpli=
-urllinken='/sc/?q='
+urllinken='/read/?q='
 urllinkenend='&lang=pli-eng'
 urllinkbw=/bw/
 
@@ -143,9 +143,9 @@ sitename=http://f2.dhamma.gift
 mode=online
 nicevalue=19
 fontawesomejs='src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous"'
-apachesitepath=/home/a0902785/domains/find.dhamma.gift/public_html/
+apachesitepath=/home/a0902785/domains/dhamma.gift/public_html/
 tmpdir=/tmp
-suttapath=/home/a0902785/domains/find.dhamma.gift/suttacentral.net/
+suttapath=/home/a0902785/domains/dhamma.gift/suttacentral.net/
 
 linkforthsu=https://tipitaka.theravada.su
 linkforthru=https://theravada.ru

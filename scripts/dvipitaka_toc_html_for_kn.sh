@@ -45,7 +45,7 @@ find "$suttapath" -type f -name "*.json" | grep -E "/(thag|snp|thig)/" | sort -V
     suttanum=$(echo $file | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}') 
  suttaname=$(cat $tmp | grep -E "(sutta|gāthā|pucchā)\\b " | grep -vE "(Theragāthā|Therīgāthā)" | awk '{$1=""; print $0}')
  
-    link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/sc/?q="$1}')
+    link=$(echo "$file" | awk -F'/' '{print $NF}' | awk -F'_' '{print "/ru/read/?q="$1}')
 
     # Вывод извлеченных данных
 
@@ -87,7 +87,7 @@ fi
     
 	#suttalink div
 	echo '<div class="mt-3">
-<span class="level5"><a href="/ru/sc/?q='$suttanum'">'$suttanum'</a> '"$suttaname"'</span>
+<span class="level5"><a href="/ru/read/?q='$suttanum'">'$suttanum'</a> '"$suttaname"'</span>
 </div>'
 	echo "  "
     

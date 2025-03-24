@@ -926,7 +926,7 @@ then
 continue 
 fi 
 
-linkswwords=`grep -i "\b$uniqword\b" $basefile | awk '{print $1, $2}' | sort -Vf | awk -F'/' '{print $NF}' | sed 's@_.*json@@g' | sed 's@ @@g' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{if ($2 ~ /-/) print "<a target=_blank href=\"'${pagelang}'/sc/?s='${uniqword}'&q="$1"#"$2":"$3"\">"$2"</a>"; else print "<a target=_blank href=\"'${pagelang}'/sc/?s='${uniqword}'&q="$1"#"$3"\">"$2"</a>"}' | xargs`
+linkswwords=`grep -i "\b$uniqword\b" $basefile | awk '{print $1, $2}' | sort -Vf | awk -F'/' '{print $NF}' | sed 's@_.*json@@g' | sed 's@ @@g' | sort -Vf | awk -F':' '!a[$1]++ {print}' | awk -F':' '{if ($2 ~ /-/) print "<a target=_blank href=\"'${pagelang}'/read/?s='${uniqword}'&q="$1"#"$2":"$3"\">"$2"</a>"; else print "<a target=_blank href=\"'${pagelang}'/read/?s='${uniqword}'&q="$1"#"$3"\">"$2"</a>"}' | xargs`
 
 #&lang=pli
 echo "<tr>
@@ -1119,9 +1119,9 @@ link=`echo $filenameblock |  awk -v lkru="$linkforru" -v ext="$linkforruext" '{p
 
 htmlpattern=$(echo "$pattern" | sed 's/\\.//g' | sed 's/ /%20/g')
 
-linkgeneral=`echo $filenameblock | awk '{print "'${pagelang}'/sc/?s='${htmlpattern}'&q="$0}' ` 
+linkgeneral=`echo $filenameblock | awk '{print "'${pagelang}'/read/?s='${htmlpattern}'&q="$0}' ` 
 else
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0}' ` 
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/read/?q="$0}' ` 
 fi
 
 
@@ -1129,7 +1129,7 @@ fi
 
 #"&'$defaultlang'
 
-linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/sc/?q="$0}' `
+linkpli=`echo $filenameblock |  awk '{print "'$urllinkpli${pagelang}'/read/?q="$0}' `
 #"&'$defaultlang'"
 #echo "root=$roottext trn=$translation" 
 
@@ -1272,7 +1272,7 @@ tr=$file
 
     suttanumber="$filenameblock"
 
-linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/sc/?q="$0}' `
+linkgeneral=`echo $filenameblock |  awk '{print "'${pagelang}'/read/?q="$0}' `
 #"&'$defaultlang'"
 linklang="$linkgeneral"
 
@@ -1624,7 +1624,7 @@ else
   if (( $textsqnty <= 40 ))
   then
  # cat $basefile > checkitout
-echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/read/?q="$1">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
 #&lang=pli
   else 
   echo -n "<br>" >> $history

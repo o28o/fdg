@@ -3,9 +3,9 @@ RewriteEngine On
 
 # Правило для запросов без /ru/
 RewriteCond %{REQUEST_URI} !^/ru/
-RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /sc/?q=$1 [R=301,L,QSA]
-RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /sc/?q=$1 [R=301,L,QSA]
-RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /read/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /read/?q=$1 [R=301,L,QSA]
+RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /read/?q=$1 [R=301,L,QSA]
 
 
 #for read.php не работает потому что серверу не передается # это можно сделать с помщью js 
@@ -14,9 +14,9 @@ RewriteRule ^(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /sc/?q=$1 [R=301,L
 
 # Обрабатываем запросы с /ru/
 RewriteCond %{REQUEST_URI} ^/ru/
-RewriteRule ^ru/(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
-RewriteRule ^ru/(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
-RewriteRule ^ru/(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /ru/sc/?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /ru/read/?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an\d+\.\d+|sn\d+\.\d+|ud\d+\.\d+|snp\d+\.\d+|thig\d+\.\d+|thag\d+\.\d+)$ /ru/read/?q=$1 [R=301,L,QSA]
+RewriteRule ^ru/(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /ru/read/?q=$1 [R=301,L,QSA]
 
 
 Redirect 301 /ru.php /ru/

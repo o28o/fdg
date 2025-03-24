@@ -215,21 +215,21 @@ const initialDefaultReader = localStorage.defaultReader;
 function getBaseUrl() {
     let baseUrl;
     if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-        baseUrl = window.location.origin + "/ru/sc/";
+        baseUrl = window.location.origin + "/ru/read/";
     } else {
-        baseUrl = window.location.origin + "/sc/";
+        baseUrl = window.location.origin + "/read/";
     }
 
     if (localStorage.defaultReader === 'ml') {
-        baseUrl = window.location.origin + "/sc/ml.html";
+        baseUrl = window.location.origin + "/read/ml.html";
     } else if (localStorage.defaultReader === 'rv') {
-        baseUrl = window.location.origin + "/sc/rv.html";
+        baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/sc/d.html";
+        baseUrl = window.location.origin + "/read/d.html";
     } else if (localStorage.defaultReader === 'mem') {
-        baseUrl = window.location.origin + "/sc/memorize.html";
+        baseUrl = window.location.origin + "/read/memorize.html";
     } else if (localStorage.defaultReader === 'fr') {
-        baseUrl = window.location.origin + "/sc/fr.html";
+        baseUrl = window.location.origin + "/read/fr.html";
     }
 
     return baseUrl;
@@ -292,21 +292,21 @@ const initialDefaultReader = localStorage.defaultReader;
 function getBaseUrl() {
     let baseUrl;
     if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-        baseUrl = window.location.origin + "/ru/sc/";
+        baseUrl = window.location.origin + "/ru/read/";
     } else {
-        baseUrl = window.location.origin + "/sc/";
+        baseUrl = window.location.origin + "/read/";
     }
 
     if (localStorage.defaultReader === 'ml') {
-        baseUrl = window.location.origin + "/sc/ml.html";
+        baseUrl = window.location.origin + "/read/ml.html";
     } else if (localStorage.defaultReader === 'rv') {
-        baseUrl = window.location.origin + "/sc/rv.html";
+        baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/sc/d.html";
+        baseUrl = window.location.origin + "/read/d.html";
     } else if (localStorage.defaultReader === 'mem') {
-        baseUrl = window.location.origin + "/sc/memorize.html";
+        baseUrl = window.location.origin + "/read/memorize.html";
     } else if (localStorage.defaultReader === 'fr') {
-        baseUrl = window.location.origin + "/sc/fr.html";
+        baseUrl = window.location.origin + "/read/fr.html";
     }
 
     return baseUrl;
@@ -369,21 +369,21 @@ function updateDemoLinks() {
   // Определяем базовый URL в зависимости от языка
   let baseUrl;
   if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-    baseUrl = window.location.origin + "/ru/sc/"; // Для русского языка
+    baseUrl = window.location.origin + "/ru/read/"; // Для русского языка
   } else if (window.location.href.includes('/th') || (localStorage.siteLanguage && localStorage.siteLanguage === 'th')) {
-    baseUrl = window.location.origin + "/th/sc/"; // Для русского языка
+    baseUrl = window.location.origin + "/th/read/"; // Для русского языка
   } else {
-    baseUrl = window.location.origin + "/sc/"; // Для других языков
+    baseUrl = window.location.origin + "/read/"; // Для других языков
   }
 
   // Ссылки для демо-режимов
   const demoLinks = {
     stDemo: baseUrl, // Используем baseUrl для stDemo
-    mlDemo: window.location.origin + "/sc/ml.html",
-    dDemo: window.location.origin + "/sc/d.html",
-    memDemo: window.location.origin + "/sc/memorize.html",
-    rvDemo: window.location.origin + "/sc/rv.html",
-    frDemo: window.location.origin + "/sc/fr.html"
+    mlDemo: window.location.origin + "/read/ml.html",
+    dDemo: window.location.origin + "/read/d.html",
+    memDemo: window.location.origin + "/read/memorize.html",
+    rvDemo: window.location.origin + "/read/rv.html",
+    frDemo: window.location.origin + "/read/fr.html"
   };
 
   // Обновляем ссылки
@@ -415,28 +415,28 @@ document.addEventListener("keydown", (event) => {
 
 	let defaultLanguageLinkPart;
 		if (defaultLanguage === "ru") {
-		  defaultLanguageLinkPart = "/ru/sc/";
+		  defaultLanguageLinkPart = "/ru/read/";
 		} else if (defaultLanguage === "th") {
-		  defaultLanguageLinkPart = "/th/sc/";
+		  defaultLanguageLinkPart = "/th/read/";
 		} else {
-		  defaultLanguageLinkPart = "/sc/";
+		  defaultLanguageLinkPart = "/read/";
 		}
 
 
-    // Проверяем, содержит ли URL /ru/sc/
-    if (urlWithoutParams.endsWith("/ru/sc/")) {
-      newUrl = urlWithoutParams.replace("/ru/sc/", "/sc/"); // Меняем на /sc/
-    } else if (urlWithoutParams.endsWith("/th/sc/")) {
-      newUrl = urlWithoutParams.replace("/th/sc/", defaultLanguageLinkPart); // Меняем на /sc/
-    } else if (urlWithoutParams.endsWith("/sc/")) {
-      newUrl = urlWithoutParams.replace("/sc/", "/ru/sc/"); // Меняем на /ru/sc/
+    // Проверяем, содержит ли URL /ru/read/
+    if (urlWithoutParams.endsWith("/ru/read/")) {
+      newUrl = urlWithoutParams.replace("/ru/read/", "/read/"); // Меняем на /read/
+    } else if (urlWithoutParams.endsWith("/th/read/")) {
+      newUrl = urlWithoutParams.replace("/th/read/", defaultLanguageLinkPart); // Меняем на /read/
+    } else if (urlWithoutParams.endsWith("/read/")) {
+      newUrl = urlWithoutParams.replace("/read/", "/ru/read/"); // Меняем на /ru/read/
     } 
 	else {
-      // Если URL не содержит ни /ru/sc/, ни /sc/, выбираем начальный вариант
+      // Если URL не содержит ни /ru/read/, ни /read/, выбираем начальный вариант
       if (localStorage.siteLanguage && localStorage.siteLanguage === 'ru') {
-        newUrl = window.location.origin + "/ru/sc/";
+        newUrl = window.location.origin + "/ru/read/";
       } else {
-        newUrl = window.location.origin + "/sc/";
+        newUrl = window.location.origin + "/read/";
       }
     }
 
@@ -509,7 +509,7 @@ document.addEventListener("keydown", (event) => {
     let params = currentUrl.split('?')[1] || '';
 
     // Шаг 3: Собираем новый URL
-    let newUrl = `${base}/th/sc/${params ? `?${params}` : ''}`;
+    let newUrl = `${base}/th/read/${params ? `?${params}` : ''}`;
 
     if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
       history.pushState(null, "", newUrl); // Добавляем запись в историю
@@ -530,7 +530,7 @@ document.addEventListener("keydown", (event) => {
     let params = currentUrl.split('?')[1] || '';
 
     // Шаг 3: Собираем новый URL
-    let newUrl = `${base}/sc/mlth.html${params ? `?${params}` : ''}`;
+    let newUrl = `${base}/read/mlth.html${params ? `?${params}` : ''}`;
 
     if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
       history.pushState(null, "", newUrl); // Добавляем запись в историю

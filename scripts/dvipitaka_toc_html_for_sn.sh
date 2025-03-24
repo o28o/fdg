@@ -74,7 +74,7 @@ grep -ri vaggasaṁyutta sn* | awk '{print $2, $3}' | sed 's/\..*: "/ /g' | sort
           echo "
 		  
 		  <div class=\"mt-3\">
-                    <span class=\"level5\"><a href=\"/ru/sc/?q=${suttanumber}\">$suttanumber</a> $suttaname</span>
+                    <span class=\"level5\"><a href=\"/ru/read/?q=${suttanumber}\">$suttanumber</a> $suttaname</span>
                   </div>"
 
           prev_vagganame="$vagganame"

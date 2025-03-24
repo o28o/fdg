@@ -58,7 +58,7 @@ else if ( preg_match('/.from.sh/', $uname) ) {
   //preg_match('/rym.from.sh/', $uname) 
   $mode = 'online';
 
-$basedir = '/home/a0902785/domains/find.dhamma.gift/public_html/';
+$basedir = '/home/a0902785/domains/dhamma.gift/public_html/';
 $fontawesomejs = '<script src="https://kit.fontawesome.com/a2bd6cd99e.js" crossorigin="anonymous" ></script>';
 
 $linkforthru = 'https://theravada.ru/Teaching/Canon/Suttanta/Texts/';
@@ -67,7 +67,7 @@ $linkforthaiend = '/th/siam_rath';
 
 //converter.php
 //not used currently. php curl for offline
-$adapterscriptlocation = '/home/a0902785/domains/find.dhamma.gift/aksharamukha/bin/python3 /home/a0902785/domains/find.dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
+$adapterscriptlocation = '/home/a0902785/domains/dhamma.gift/aksharamukha/bin/python3 /home/a0902785/domains/dhamma.gift/public_html/scripts/aksharamukha-adapter.py';
 
 // include_once('../config/config.php');
       } 
@@ -87,7 +87,7 @@ $mainpagethsulink = '/tipitaka.theravada.su/dn_toc_thsu.html' ;
 
 $linkforthsu = '/tipitaka.theravada.su/dn/';
 $linkforthru = '/theravada.ru/Teaching/Canon/Suttanta/Texts/';
-$linkforthai = "/legacy.suttacentral.net/sc/th/"; 
+$linkforthai = "/legacy.suttacentral.net/read/th/"; 
 $linkforthaiend = '.html';
 //extralinks.php
 
@@ -150,7 +150,7 @@ $thtranslatorlocation = $basedir. '/assets/texts/th/translation/';
 
 $linksc = 'https://suttacentral.net/';
 $anamesc = 'SuttaCentral.net';
-$linksclegacy = '/legacy.suttacentral.net/sc/su.html';
+$linksclegacy = '/legacy.suttacentral.net/read/su.html';
 $anamesclegacy = 'SC.net Legacy';
 //api-emulator
 $scroottextlocation = $basedir . "/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";

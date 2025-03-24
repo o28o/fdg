@@ -57,7 +57,7 @@ esac
 echo
 done
 done 
-#echo ";\=https://find.dhamma.gift/?p=-all+-vin&q=$word"
+#echo ";\=https://dhamma.gift/?p=-all+-vin&q=$word"
 echo 
 done 
 

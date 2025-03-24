@@ -13,7 +13,7 @@ include '../scripts/opentexts.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Find.dhamma.gift</title>
+    <title>New Dhamma.gift</title>
     <!-- Bootstrap CSS -->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />

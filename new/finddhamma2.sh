@@ -1547,7 +1547,7 @@ else
   if (( $textsqnty <= 40 ))
   then
  # cat $basefile > checkitout
-echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/read/?q="$1">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
 #&lang=pli
   else 
   echo -n "<br>" >> $history

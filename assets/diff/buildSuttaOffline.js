@@ -49,7 +49,7 @@ export function buildSutta(slug, suttaArea, language) {
         html += `${openHtml}${root ? root_text[segment] : translation_text[segment]}${closeHtml}<br>\n`;
       });
 
-      const scLink = `<p class="sc-link"><a href="/sc/?q=${slug}" title="SC Light"><img width="20px" alt="SC light" src="/sc/images/favicon-sc-mn.png"></a> <a href="https://suttacentral.net/${slug}"><img height="20px" src="/assets/img/favicon-sc.png"></img></a></p>`;
+      const scLink = `<p class="sc-link"><a href="/read/?q=${slug}" title="SC Light"><img width="20px" alt="SC light" src="/read/images/favicon-sc-mn.png"></a> <a href="https://suttacentral.net/${slug}"><img height="20px" src="/assets/img/favicon-sc.png"></img></a></p>`;
       
 
       const translatorByline =

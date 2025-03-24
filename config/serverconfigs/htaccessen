@@ -1,5 +1,5 @@
 RewriteEngine On
-#RewriteRule ^(.*)$ https://find.dhamma.gift/$1 [L,R=301]
+#RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
 
 
 Redirect 301 /ru.php /ru/

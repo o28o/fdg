@@ -34,7 +34,7 @@ anchorpart = $4
     gsub(".*:", "", anchorpart)
 }
  textAndAnchor = file_name "#" anchorpart
- urlwithanchor = "/sc/?s=" keyword "&q=" textAndAnchor 
+ urlwithanchor = "/read/?s=" keyword "&q=" textAndAnchor 
 sutta=$4
  gsub(":.*", "", sutta)
  

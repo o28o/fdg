@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>BG Find the Dhamma</title>
-<link rel="icon" type="image/png" href="https://find.dhamma.gift/assets/img/favico-fdg.png" />
+<link rel="icon" type="image/png" href="https://dhamma.gift/assets/img/favico-fdg.png" />
  
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">

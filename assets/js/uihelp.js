@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("visitCount", visitCount);
     }
 
-    // Проверяем, если это первое посещение страницы с /sc/
-    if (window.location.pathname.includes('/sc/') && !localStorage.getItem('visited_sc')) {
+    // Проверяем, если это первое посещение страницы с /read/
+    if (window.location.pathname.includes('/read/') && !localStorage.getItem('visited_sc')) {
         highlightMultipleById(['gearsc', 'helpsc']);
 		    localStorage.setItem('dictionaryVisible', 'true');
 

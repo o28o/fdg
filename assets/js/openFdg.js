@@ -22,23 +22,23 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получаем базовый URL в зависимости от наличия подстроки "/ru" в текущем URL или в значении localStorage.siteLanguage
     let baseUrl;
     if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
-        baseUrl = window.location.origin + "/ru/sc/";
+        baseUrl = window.location.origin + "/ru/read/";
     } else if (window.location.href.includes('/th') || (localStorage.siteLanguage && localStorage.siteLanguage === 'th')) {
-        baseUrl = window.location.origin + "/th/sc/";
+        baseUrl = window.location.origin + "/th/read/";
     } else {
-        baseUrl = window.location.origin + "/sc/";
+        baseUrl = window.location.origin + "/read/";
     }
 
     if (localStorage.defaultReader === 'ml') {
-        baseUrl = window.location.origin + "/sc/ml.html";
+        baseUrl = window.location.origin + "/read/ml.html";
     } else if (localStorage.defaultReader === 'rv') {
-        baseUrl = window.location.origin + "/sc/rv.html";
+        baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/sc/d.html";
+        baseUrl = window.location.origin + "/read/d.html";
     } else if (localStorage.defaultReader === 'mem') {
-        baseUrl = window.location.origin + "/sc/memorize.html";
+        baseUrl = window.location.origin + "/read/memorize.html";
     } else if (localStorage.defaultReader === 'fr') {
-        baseUrl = window.location.origin + "/sc/fr.html";
+        baseUrl = window.location.origin + "/read/fr.html";
     } 
 
 

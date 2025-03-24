@@ -30,7 +30,7 @@ ul li {
     <!-- Заголовок и список для переменных anranges -->
         <h1>Списки Готовых Сутт</h1>
         <p>Сутты из списков ниже уже есть в Пали-Рус формате
- <a class="text-white text-decoration-none" href="/sc/latest-rus.php">Обновить <img style="height: 15px;" src="/assets/svg/arrow-rotate-right.svg"></a> 
+ <a class="text-white text-decoration-none" href="/read/latest-rus.php">Обновить <img style="height: 15px;" src="/assets/svg/arrow-rotate-right.svg"></a> 
  
  <br> 
  <a class="text-white text-decoration-none" href="/assets/linebyline.html">lbl</a> 
@@ -56,7 +56,7 @@ ul li {
 </div>
     <script>
 	
-fetch('/sc/latest-rus.php')
+fetch('/read/latest-rus.php')
     .then(response => {
         if (!response.ok) {
             throw new Error('Ошибка при выполнении PHP-скрипта');
@@ -73,7 +73,7 @@ fetch('/sc/latest-rus.php')
 
 		
         // Загрузка файла и обработка его содержимого
-        fetch('/sc/reader-rus-translations.js')
+        fetch('/read/reader-rus-translations.js')
             .then(response => response.text())
             .then(data => {
                 // Извлечение переменных из текста файла

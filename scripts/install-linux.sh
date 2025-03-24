@@ -25,7 +25,7 @@ sudo systemctl restart apache2
 #check this or similar article for "how to check apache and php installation"
 # https://www.vultr.com/docs/install-linux-apache-mysql-and-php-lamp-on-ubuntu-20-04-lts/
 
-#vmtouch -vfldt ./suttacentral.net/sc-data/html_text/ru ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/ ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/ ./suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/ ./suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/ ./theravada.ru/Teaching/Canon/Suttanta/ ./tipitaka.theravada.su/ ./assets/js/ ./assets/css/ ./assets/texts/ ./assets/example ./assets/templates ./index.php ./read.php ./sc/ ./scripts/ ./db/fdg-db.db
+#vmtouch -vfldt ./suttacentral.net/sc-data/html_text/ru ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/sutta/ ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/ ./suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/ ./suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/ ./theravada.ru/Teaching/Canon/Suttanta/ ./tipitaka.theravada.su/ ./assets/js/ ./assets/css/ ./assets/texts/ ./assets/example ./assets/templates ./index.php ./read.php ./read/ ./scripts/ ./db/fdg-db.db
 
 #/var/www/html/ ./result
 
@@ -37,4 +37,4 @@ cp -par ./suttacentral.net/sc-data/sc_bilara_data/translation/en/sujato/ /tmp/su
 
 ./suttacentral.net/sc-data/sc_bilara_data/root/pli/ms/vinaya/
 ./suttacentral.net/sc-data/sc_bilara_data/translation/en/brahmali/
- ./theravada.ru/Teaching/Canon/Suttanta/ ./tipitaka.theravada.su/ ./assets/js/ ./assets/css/ ./assets/texts/ ./assets/example ./assets/templates ./index.php ./read.php ./sc/ ./scripts/ ./db/fdg-db.db
+ ./theravada.ru/Teaching/Canon/Suttanta/ ./tipitaka.theravada.su/ ./assets/js/ ./assets/css/ ./assets/texts/ ./assets/example ./assets/templates ./index.php ./read.php ./read/ ./scripts/ ./db/fdg-db.db

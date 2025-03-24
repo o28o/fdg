@@ -80,7 +80,7 @@ find -name "*sv*json*" | while read file; do mv $file $(echo $file | sed 's/-sv/
 cd -
 
 #make toc for kd pvr etc
-head -n4 * | grep -v "==" | grep pli | grep -v "Theravāda" | sort -V | sed 's@:0.*":@ @g' | sed 's@^  "@@g' | awk '{print "<li><span class=abbr>"$1"</span> <a href=/ru/sc/?q=" $1">"$3"</a></li>"}' | grep -vE "vagga" | sed 's/"//g' | grep -v ">,<" | sed 's@>pli-tv-@>@g'
+head -n4 * | grep -v "==" | grep pli | grep -v "Theravāda" | sort -V | sed 's@:0.*":@ @g' | sed 's@^  "@@g' | awk '{print "<li><span class=abbr>"$1"</span> <a href=/ru/read/?q=" $1">"$3"</a></li>"}' | grep -vE "vagga" | sed 's/"//g' | grep -v ">,<" | sed 's@>pli-tv-@>@g'
 
 sn45.14 ??? Ime kho, bhikkhave, aṭṭha dhammā bhāvitā bahulīkatā anuppannā uppajjanti, nāññatra tathāgatassa pātubhāvā arahato sammāsambuddhassā”ti.
 

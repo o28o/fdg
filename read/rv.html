@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dhamma.gift Read Reverse Mode</title>
+<link rel="canonical" href="https://dhamma.gift/read/">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+ <!--   <script>  var link = document.createElement('meta');  link.setAttribute('property', 'og:title');  link.content = document.title;  document.getElementsByTagName('head')[0].appendChild(link);</script> -->   
+  <meta property="og:title" content="read.Dhamma.gift" />
+ <meta property="og:description" content="Read texts in Pali, with various translations." />
+    <meta property="og:site_name" content="read.Dhamma.gift" />
+    <meta property="og:image" itemprop="image"
+        content="/favicon.png" />
+        
+<meta property="og:url" content="/sc" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favico_black.png">     
+
+<link href="/assets/css/styles.css" rel="stylesheet" />
+
+<link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/rus-multi.css">
+     <link rel="stylesheet" href="./css/uiextra.css">
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+<script src="/assets/js/audioLazyLoad.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=pli-lang"></script>-->
+
+</head>
+
+<body class="dark">
+<form id="form" class="ui-widget mb-2">
+    <label class="sr-only dropup rounded-pill mb-2" for="paliauto"></label>
+    <input class="mb-2" id="paliauto" type="search" placeholder="Try sn56.11"><input class="go-button mb-2" type="submit" value="Go">
+    <div id="form-div" class="">
+        <!-- Home Button -->
+        <div id="home-button" class="icon-button">
+            <a href="/read.php" title="Read Suttas and Vinaya" rel="noreferrer">
+                <img class="common-size-icon" alt="page for reading" src="/assets/svg/home-icon.svg"></img>
+            </a>
+        </div>
+
+        <!-- Search Button -->
+        <div id="fdg-button" class="icon-button">
+            <a href="/" title="Search in Suttas and Vinaya" rel="noreferrer">
+                <img width="26px" alt="main page for search" src="/assets/img/gray-white.png">
+            </a>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <div id="theme-button" class="icon-button">
+            <img src="/assets/svg/circle-half-stroke.svg" alt="Switch theme" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img>
+        </div>
+
+        <!-- Column Mode Switcher -->
+        <div id="mode-switcher" class="">
+            <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
+                <img src="/assets/svg/align-left.svg" alt="Text in one or two columns" class="common-size-icon4"></img>
+            </a>
+        </div>
+
+        <!-- Variants Toggle Button -->
+        <div class="" id="variants-switcher">
+            <a alt="Show or hide variants from different Canon versions" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
+                <img src="/assets/svg/eye.svg" class="common-size-icon4"></img>
+            </a>
+        </div>
+
+        <!-- Dictionary OnClick Popup -->
+        <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">
+            <img src="/assets/svg/comment.svg" class="dictIcon"></img>
+        </a>
+
+        <!-- Settings Button -->
+        <a alt="Settings" id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+            <img id="gearsc" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+        </a>
+
+        <!-- Help Button -->
+        <div class="">
+            <a alt="Help" data-bs-toggle="modal" data-bs-target="#paliLookupInfo" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+                <img id="helpsc" src="/assets/svg/question.svg" class="common-size-icon4"></img>
+            </a>
+        </div>
+    </div>
+</form>    <br>
+    <div id="navigation" class="navigation">
+        <div id="previous"></div>
+        <div id="next"></div>
+    </div>
+
+<!-- Модальное окно "Помощь" -->
+<div class="modal fade" id="paliLookupInfo" tabindex="-1" aria-labelledby="paliLookupInfoLabel" aria-hidden="true" data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="paliLookupInfoLabel">Help</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <a href=/read.php><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></a>
+                    Reading <a href="/"><img width="26px" alt="main page for search" src="/assets/img/gray-white.png"></a> Search
+                </div>
+                <h3 class="text-start">Hotkeys</h3>
+                <div class="container">
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button>
+                        </div>
+                        <div class="col-auto"><strong>Alt+Space or Alt+Z</strong></div>
+                        <div class="col">Switch language</div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
+                        </div>
+                        <div class="col-auto"><strong>Alt+T</strong></div>
+                        <div class="col">Dark/Light/Auto Themes</div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/align-left.svg" alt="toggle one/two column view" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+C</strong></div>
+                        <div class="col">Text in one/two columns</div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/eye.svg" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+V</strong></div>
+                        <div class="col">Show/hide variants between MS and other <a href="/assets/texts/abbr.html">Canon Editions</a></div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/comment.svg" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+A</strong></div>
+                        <div class="col">Enable/disable dictionary. Click on a word to activate. <a href="https://dict.dhamma.gift/">DPD</a></div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img id="" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+                        </div>
+                        <div class="col-auto"><strong>Alt+S</strong></div>
+                        <div class="col">Show/hide "Settings"</div>
+                    </div>
+                    <div class="row align-items-center mb-4">
+                        <div class="col-auto">
+                            <img src="/assets/svg/question.svg" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+H</strong></div>
+                        <div class="col">Show/hide this "Help" window</div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto"><strong>Alt+1 to 6</strong></div>
+                        <div class="col">Switch Reading Modes. "1" is a Toggle</div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto"><strong>Ctrl + ← →</strong></div>
+                        <div class="col">Previous/Next Text</div>
+                    </div>
+                                            <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt + L </strong></div>
+        <div class="col">Switch Pali script</div>
+    </div>      
+
+    <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt + . </strong></div>
+        <div class="col">Disable-enable punctuation in Pali </div>
+    </div>      
+
+                </div>
+
+                <!-- Hidden Section -->
+                <div id="collapseInterfaces" class="collapse">
+                    <h3 style="text-align: left;" class="mt-2">Links Menu</h3>
+                    <div class="mb-2">
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">R+E</a>
+                            </div>
+                            <div class="col-9">
+                                read in Pali, Russian, English
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">Ru / En</a>
+                            </div>
+                            <div class="col-9">
+                                in Pali English or Russian
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">DPR</a>
+                            </div>
+                            <div class="col-9">
+                                open on DigitalPaliReader.online
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">SC.net and Voice.SC</a>
+                            </div>
+                            <div class="col-9">
+                                on SuttaCentral.net and Voice SC.net
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">TBW</a>
+                            </div>
+                            <div class="col-9">
+                                on TheBuddhasWords.net
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">Th.ru / Th.su</a>
+                            </div>
+                            <div class="col-9">
+                                on Theravada.ru, when available — Theravada.su
+                            </div>
+                        </div>
+                    </div>
+                    Variant abbreviations: <strong>ms, pts1ed, sya-all, mr</strong> etc. in <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> or <a href="https://suttacentral.net/abbreviations?lang=ru">here</a>.
+                </div>
+
+                Need help? <a href="/#contacts">Write to us</a><br>
+            </div>
+            <div class="modal-footer">
+                <!-- "Show More" Button -->
+                <div class="text-end">
+                    <button class="btn btn-sm btn-light border-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+                        More help
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-sm rounded-pill" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно "Настройки" -->
+<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="settingsLabel">Settings</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <!-- Dropdown for script selection -->
+                    <label for="script-select"><h5 style="text-align: left;">Script System:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
+                        <option value="ISOPali">ISOPali</option>
+                        <option value="Devanagari">Devanagari</option>
+                        <option value="Thai">Thai</option>
+                    </select>
+                </div>
+                
+                                       <div class="mb-2">
+                    <!-- Дропдаун для выбора системы письма -->
+                    <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
+                        <option value="dpdFull">DPD full </option>
+                        <option value="dpdCompact">DPD compact </option>
+              <option value="dpdFullRu">DPD full Rus</option>
+                        <option value="dpdCompactRu">DPD compact Rus</option>
+              <option value="searchonly">Search Only</option>
+                        <option value="dictTango">DictTango Android</option>
+                    </select>
+                </div>   
+                
+                <div class="mb-2">
+<div class="d-flex">
+  <label class="form-check-label me-2" for="removePunctCheckbox">
+    <h5 class="mb-0">Remove punctuation from Pali</h5>
+  </label>
+  <input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">
+</div>
+
+                </div>
+                <h5 style="text-align: left;">Select Reading Mode:</h5>
+                <div class="container">
+                    <!-- Standard -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+                            <a id="stDemo" href="/read/?q=sn56.11"><strong>Standard</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Two languages: Pali, English
+                        </div>
+                    </div>
+
+                    <!-- Multi -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+                            <a id="mlDemo" href="/read/ml.html?q=dn22"><strong>Multi</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Three languages: Pali, Russian, English
+                        </div>
+                    </div>
+
+                    <!-- Devanagari -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d"> &nbsp;
+                            <a id="dDemo" href="/read/d.html?q=sn12.2"><strong>"Devanagari"</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Devanagari or Thai script + Pali in Latin
+                        </div>
+                    </div>
+
+                    <!-- Hidden Section -->
+                    <div id="collapseInterfaces" class="collapse">
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem"> &nbsp;
+                                <a id="memDemo" href="/read/memorize.html?q=an10.46"><strong>For Memorization</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Text shortened to the first letters of each word
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv"> &nbsp;
+                                <a id="rvDemo" href="/read/rv.html?q=sn35.236"><strong>Reverse</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Text from bottom to top
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr"> &nbsp;
+                                <a id="frDemo" href="/read/fr.html?q=sn22.59"><strong>Full Reverse</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Like the previous one + words from left to right
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- "Show More" Button -->
+                    <div class="text-end mb-2">
+                        <button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+                            Others
+                        </button>
+                    </div>
+                    <p class="mb-2">
+                        Click <strong>on the title</strong> to go once. <br>
+                        Click <strong>on the radio button</strong> to set as default<br>
+                        when navigating from the main page and search results.
+                    </p>
+                    Found an error? <a href="/#contacts">Write to us</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- "Apply" and "Reset" Buttons -->
+                <div class="text-end">
+                    <button type="button" class="btn btn-sm rounded-pill btn-secondary" id="reset-button">Reset</button>
+                    <button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Apply</button>
+                    <button type="button" class="btn-sm btn-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="right-text" id="sutta"> 
+    <!-- class=" flip-horizontal reverse-order" -->
+    </div>
+    <hr>
+    <div id="navigation" class="navigation">
+        <div id="previous2"></div>
+        <div id="next2"></div>
+    </div>
+
+    <div class="links-area" style="text-align: center;">
+        <a href="../" title="Sutta and Vinaya search" rel="noreferrer"
+            ><img width="20px" alt="Dhamma.gift icon" src="/assets/img/gray.png"></a>
+      
+<a href="/assets/makelist.html" title="Create Lists" rel="noreferrer">
+	<svg fill="#383838" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 487.3 487.3" xml:space="preserve">
+<g>
+	<g>
+		<path d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
+			C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
+			c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
+			s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
+			c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
+			 M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
+			C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
+			C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
+			C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"/>
+	</g>
+</g>
+</svg>		
+			</a>
+<a href="/assets/diff" title="Compare two suttas" rel="noreferrer"
+            ><img width="20px" alt="Diff icon" src="/read/images/favicon-black.png"></a>
+
+
+ <a href="/ru/history.php" title="Search Histpry" rel="noreferrer"
+            ><img width="20px" alt="History icon" src="/assets/svg/clock-rotate-left.svg"></a>           
+
+    
+<a href="/ru/assets/linebyline.html" class="dynamic-link" title="Create Pali-Russ translation files" rel="noreferrer">
+        <img width="20px" alt="JSON Formatter icon" src="/assets/svg/table-columns.svg">
+    </a>
+ 	  <script src="./js/urlForLbl.js"defer></script>
+ 
+ 
+        <a id="shareOnline" onclick="copyToClipboard()" title="Copy fdg url Suttas" rel="noreferrer" target=""><img
+                height="20px" alt="" src="/assets/svg/copy.svg"></a>
+      
+        <!--        <a id="shareT2SElement" onclick="copyToClipboard(127)" title="Copy t2s url" rel="noreferrer" target=""><img
+                height="20px" alt="" src="/assets/svg/solid-copy.svg"></a>     -->   
+                
+        <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer" target="_blank"><img
+                width="20px" src="./images/favicon-citaton-helper-black.png" alt="Citation Lookup tool icon"></a>
+        <a href="https://index.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/favicon-name-black.png" alt="Sutta Name Search icon"></a>
+        <a href="https://ped.readingfaithfully.org" title="A lightweight interface for the PED" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/favicon-ped-black.png"
+                alt="SuttaCentral.org Lightweight interface icon"></a>
+        <a href="https://dppn.readingfaithfully.org" title="A lightweight interface the Dictionary of Pali Proper Names"
+            rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-dppn-black.png"
+                alt="DPPN search icon"></a>
+        <a href="https://github.com/o28o/fdg#readme" title="The source code for this site" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/GitHub-Mark-64px-black.png" alt="GitHub icon"></a>
+    </div>
+    <script src="/assets/js/linksdpr.js"></script>
+
+                <script src="/assets/js/linksru.js"></script>
+        <script src="/assets/js/openRu.js"></script>
+        <script src="/assets/js/linksbw.js"></script>
+                <script src="/assets/js/openBw.js"></script>
+    <script src="./js/multilangrev.js"></script>
+
+	  <script src="/assets/js/smoothScroll.js"defer></script>
+    
+    <script src="/assets/js/randPlaceholder.js"></script>
+    <script>
+    var theLanguage = $('html').attr("lang");
+      randPlaceholder("en");
+ </script>
+ 
+ <script>     
+document.addEventListener("DOMContentLoaded", function() {
+    // Функция для скроллинга страницы
+    function scrollToBottom() {
+        const isLocalhost = window.location.hostname.match(/localhost|127\.0\.0\.1/);
+        const timeout = isLocalhost ? 500 : 2500; 
+
+        console.log("Параметры в URL:", window.location.search);
+        console.log("Якорь:", window.location.hash);
+        console.log("Прокручиваем вниз через", timeout, "миллисекунд");
+
+        // Прокручиваем страницу на 500 пикселей вниз с задержкой
+        setTimeout(function() {
+            window.scrollBy({
+                top: document.body.scrollHeight,
+                behavior: 'smooth' // Добавляем плавный скроллинг
+            });
+        }, timeout);
+    }
+
+    // Вызываем функцию при загрузке страницы
+    scrollToBottom();
+
+    // Находим кнопку с классом "go-button"
+ //   const goButton = document.querySelector('.go-button');
+
+    // Если кнопка существует, привязываем к ней событие click для вызова функции
+   /*  if (goButton) {
+        goButton.addEventListener('click', function() {
+            scrollToBottom();
+        });
+    }*/
+});
+    </script>  
+</body>
+<!-- <script>
+
+  // Function to reset all form elements
+function resetForm() {
+  document.getElementById("paliauto").value = "";
+  document.getElementById("pOptions").selectedIndex = 0;
+  document.getElementById("extraOptions").selectedIndex = 0;
+  document.getElementById("onlCheckbox").checked = false;
+  document.getElementById("laCheckbox").checked = false;
+  // Reset other checkboxes and dropdowns as needed
+  checkInput(); // Check input after resetting form
+}
+
+// Event listener for the clear button
+document.getElementById("clearbtn").addEventListener("click", function() {
+  resetForm();
+});
+
+// Event listener to submit the form when Enter key is pressed
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
+  }
+});
+
+// Получаем кнопки для вставки букв
+var buttons = document.querySelectorAll('.insert-letter');
+
+// Добавляем обработчики событий для каждой кнопки
+buttons.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    event.preventDefault();
+    var letterValue = this.getAttribute('data-letter');
+    var currentValue = input.value;
+    var selectionStart = input.selectionStart;
+    var selectionEnd = input.selectionEnd;
+    var newValue = currentValue.substring(0, selectionStart) + letterValue + currentValue.substring(selectionEnd);
+    input.value = newValue;
+
+    // Перемещаем курсор после вставленных символов
+    var newCursorPosition = selectionStart + letterValue.length;
+    input.setSelectionRange(newCursorPosition, newCursorPosition);
+
+    // Имитируем событие ввода, чтобы обновить состояние автозаполнения
+    var inputEvent = new Event('input', { bubbles: true });
+    input.dispatchEvent(inputEvent);
+
+    // Перемещаем фокус на поле ввода
+    input.focus();
+  });
+});
+
+// Получаем чекбоксы и выпадающие списки
+var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+var selects = document.querySelectorAll('select');
+
+// Добавляем обработчики событий для чекбоксов
+checkboxes.forEach(function(checkbox) {
+  checkbox.addEventListener('change', checkInput);
+});
+
+// Добавляем обработчики событий для выпадающих списков
+selects.forEach(function(select) {
+  select.addEventListener('change', checkInput);
+});
+
+var clearButton = document.getElementById('clearbtn');
+
+// Проверяем поле при загрузке страницы
+checkInput();
+
+// Добавляем обработчик события input
+input.addEventListener('input', checkInput);
+
+// Очистка поля и скрытие кнопки при клике на кнопку очистки
+clearButton.addEventListener('click', function() {
+  input.value = '';
+  checkInput();
+});
+
+function checkInput() {
+  if (
+    input.value.trim().length > 0 ||
+    Array.from(checkboxes).some(function(checkbox) {
+      return checkbox.checked;
+    }) ||
+    Array.from(selects).some(function(select) {
+      return select.value !== "";
+    })
+  ) {
+    clearButton.style.display = 'block'; // Показываем кнопку, если есть текст или выбраны чекбоксы/списки
+  } else {
+    clearButton.style.display = 'none'; // Скрываем кнопку, если нет текста и не выбраны чекбоксы/списки
+  }
+}
+
+// Поместить курсор в конец строки в поле ввода
+input.focus();
+input.setSelectionRange(input.value.length, input.value.length);
+</script> -->
+<script src="/assets/js/autopali.js"></script>
+
+<!-- <script>
+$(document).ready(function() {
+  // Обработчик для нажатия клавиши Enter
+  $(document).on('keydown', function(event) {
+    if (event.key === 'Enter') {
+      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+     $('#navbarResponsive').collapse('hide');
+    }
+  });
+
+  // Обработчик для отправки формы
+  $('#searchbtn').on('click', function() {
+    $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+          $('#navbarResponsive').collapse('hide');
+  });
+});
+</script> -->
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script> 
+<script defer src="/assets/js/themeswitch.js"></script>
+<script src="/assets/js/copyToClipboard.js"></script>
+<script>
+window.addEventListener("load", function() {
+    console.log("Document loaded");
+
+    setTimeout(function() {
+        console.log("Timeout fired after 1.5 seconds");
+
+        let params = new URLSearchParams(document.location.search);
+        let finder = params.get("s");
+        //finder = finder.replace(/\\b/g, '');
+        let query = params.get("q");
+        let url = document.location.href;
+
+        if (finder && finder.trim() !== "" && query && url.indexOf("#") === -1) {
+            console.log("Parameters 's', 'q', and no anchor found in URL");
+
+            let regex = new RegExp(finder, 'gi');
+            let textNodes = document.evaluate(
+                "//text()[normalize-space(parent::*) != '']", 
+                document.body, 
+                null, 
+                XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, 
+                null
+            );
+
+            for (let i = 0; i < textNodes.snapshotLength; i++) {
+                let currentNode = textNodes.snapshotItem(i);
+                if (regex.test(currentNode.nodeValue)) {
+                    console.log("Found match in text node:", currentNode.nodeValue);
+
+                    let parentNode = currentNode.parentNode;
+                    parentNode.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                    break; // Прекратить поиск после первого совпадения
+                }
+            }
+        } else {
+            console.log("Conditions not met: 's' parameter empty or missing, 'q' parameter empty or missing, or anchor found in URL");
+        }
+    }, 1000); // 1.5 секунды таймаута
+});
+</script>
+
+<script src="/assets/js/uihelp.js"> </script>
+<script src="/assets/js/variantsButtonSc.js"></script>
+<script src="/assets/js/settings.js"></script>
+</html>

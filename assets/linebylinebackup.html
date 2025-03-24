@@ -219,7 +219,7 @@ table {
                 </a>
 
                 <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
-                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                    <img width="24px" alt="dhamma.gift icon" src="/assets/img/gray-white.png">
                 </a>
 
                 <div class="ms-1 form-check form-switch">
@@ -268,7 +268,7 @@ table {
 <script>
     // Функция для загрузки данных и проверки индекса
     function loadAndCheckRanges() {
-        fetch('/sc/reader-rus-translations.js')
+        fetch('/read/reader-rus-translations.js')
             .then(response => response.text())
             .then(data => {
                 // Извлечение переменных из текста файла
@@ -355,7 +355,7 @@ table {
     </select>
   </div>
   
-    <button class="btn btn-primary mb-1 ms-2 " title="Открыть текст на find.dhamma.gift" id="linkButton">Fdg</button>
+    <button class="btn btn-primary mb-1 ms-2 " title="Открыть текст на dhamma.gift" id="linkButton">Fdg</button>
   
      <div class="input-group-append ms-1" id="checkResult" style="margin-top: 10px;"></div>
 
@@ -1102,7 +1102,7 @@ const textPart = indexValue.split('.')[0]; // Разделяем по точке
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
+    const url = "/read/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
     const originalValue = indexValue;
@@ -1145,7 +1145,7 @@ const textPart = indexValue.split('.')[0]; // Разделяем по точке
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
+    const url = "/read/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
     const originalValue = indexValue;

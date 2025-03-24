@@ -13,8 +13,8 @@ include 'scripts/opentexts.php';
 // Получить значение из GET параметра
 if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
     // Чекбокс активен
-    $readerlang = "/sc/ml.html";
-    $mainscpage = "/sc/ml.html";
+    $readerlang = "/read/ml.html";
+    $mainscpage = "/read/ml.html";
 } 
 ?>
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
@@ -102,7 +102,7 @@ if (newUrl !== window.location.href) {
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
             <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
-                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">find.Dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">Dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>

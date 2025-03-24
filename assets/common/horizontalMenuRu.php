@@ -212,9 +212,9 @@ echo '<!--
                       <li>
 <div class="dropdown-item ">
          <i class="' . $iconimportant . '"></i><a class="text-black" href="/ru/assets/memo.html"> Мнемотехника</a>
-         <a class="text-black" target=""  href="/sc/memorize.html?q=sn56.11">sn56.11</a> 
-         <a class="text-black" target=""  href="/sc/memorize.html?q=dn22">dn22</a> 
-         <a class="text-black" target=""  href="/sc/memorize.html?q=sn12.2">sn12.2</a>
+         <a class="text-black" target=""  href="/read/memorize.html?q=sn56.11">sn56.11</a> 
+         <a class="text-black" target=""  href="/read/memorize.html?q=dn22">dn22</a> 
+         <a class="text-black" target=""  href="/read/memorize.html?q=sn12.2">sn12.2</a>
        </div>
          </li>     
          

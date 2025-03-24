@@ -1,6 +1,9 @@
 RewriteEngine On
 #RewriteRule ^(.*)$ https://dhamma.gift/$1 [L,R=301]
 
+# Переадресация с /sc/ на /read/
+RewriteRule ^sc/(.*)$ /read/$1 [R=301,L,QSA]
+
 # Правило для запросов без /ru/
 RewriteCond %{REQUEST_URI} !^/ru/
 RewriteRule ^(mn\d+|dn\d+|dhp\d+|iti\d+|ja\d+)$ /read/?q=$1 [R=301,L,QSA]

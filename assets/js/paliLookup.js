@@ -1,7 +1,11 @@
 // Проверяем язык в localStorage
 const siteLanguage = localStorage.getItem('siteLanguage');
-const savedDict = (localStorage.getItem('selectedDict') || "standalonebw").toLowerCase();
-
+const savedDict = localStorage.getItem('selectedDict') 
+    ? localStorage.getItem('selectedDict').toLowerCase() 
+    : (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/')) 
+        ? "dpdfullru" 
+        : "standalonebw";
+        
 // Устанавливаем правильный URL для словаря в зависимости от языка
 let dhammaGift;
 let dgParams;
@@ -17,7 +21,7 @@ if (window.location.href.includes('localhost') || window.location.href.includes(
     dictUrl = "https://dict.dhamma.gift";
 }
 
-if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
+if (window.location.href.includes('/r/') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
    dhammaGift += '/ru';
 }
 dhammaGift += '/?q=';
@@ -432,6 +436,7 @@ document.addEventListener('click', function(event) {
                         </body>
                         </html>
                     `;
+                    popup.style.height = '300px';
                     popup.style.display = 'block';
                     overlay.style.display = 'block';
                 }

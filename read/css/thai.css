@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Noto Sans Thai";
-    src: url("./css/thaiFont/NotoSansThai-Regular.woff") format("woff");
+    src: url("./thaiFont/NotoSansThai-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }

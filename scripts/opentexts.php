@@ -45,11 +45,11 @@ else {
   }
     }
 	
-	if ( preg_match('/ml.html/', $actual_link)) {
+	if ( preg_match('/\/ml\//', $actual_link)) {
   $defaultlang = 'lang=pli-rus';
   $outputlang = "-oru";
   $base = "/";
-  $readerlang = $base . "read/ml.html";
+  $readerlang = $base . "/ml/";
 
 } 	if ( preg_match('/mlth.html/', $actual_link)) {
   $defaultlang = 'lang=pli-rus';
@@ -71,7 +71,7 @@ if (isset($_GET['reader'])) {
     switch ($reader) {
         case 'ml':
           $base = "/";
-            $readerlang = $base . "read/ml.html";
+            $readerlang = $base . "/ml/";
             break;
         case 'rv':
           $base = "/";

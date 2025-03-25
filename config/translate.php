@@ -535,7 +535,7 @@ $defaults = '<br><div class="text-start">
 <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс 
 <a href="/r/?q=sn56.11">демо</a>
 <br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/read/ml.html?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/ml/?q=sn56.11">демо</a><br>
  <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/read/d.html?q=sn56.11">демо</a><br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/read/memorize.html?q=sn56.11">демо</a><br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх (слова не изменены) <a href="/read/rv.html?q=sn56.11">демо</a><br>

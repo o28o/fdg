@@ -13,8 +13,8 @@ include 'scripts/opentexts.php';
 // Получить значение из GET параметра
 if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
     // Чекбокс активен
-    $readerlang = "/read/ml.html";
-    $mainscpage = "/read/ml.html";
+    $readerlang = "/ml/";
+    $mainscpage = "/ml/";
 } 
 ?>
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
@@ -36,7 +36,7 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta property="og:title" content="Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 
-<meta property="og:url" content="/" />
+<meta property="og:url" content="https://Dhamma.gift" />
 <meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
 

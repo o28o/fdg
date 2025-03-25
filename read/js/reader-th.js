@@ -534,7 +534,7 @@ let origUrl = window.location.href;
 let rvUrl = origUrl.replace("/read/th.html", "/read/");
 rvUrl = rvUrl.replace("/th/read/", "/read/");
 dUrl = rvUrl.replace("/read/", "/d");
-rvUrl = rvUrl.replace("ml.html", "");
+rvUrl = rvUrl.replace("/ml/", "");
 rvUrl = rvUrl.replace("/read/", "/read/memorize.html");
 
 const warning = "<p class='warning' >Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";

@@ -512,9 +512,9 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/r/", "/read/");
-thUrl = origUrl.replace("/ml.html", "/mlth.html");
-dUrl = origUrl.replace("/ml.html", "/d.html");
-rvUrl = rvUrl.replace("ml.html", "");
+thUrl = origUrl.replace("/ml/", "/mlth.html");
+dUrl = origUrl.replace("/ml/", "/d.html");
+rvUrl = rvUrl.replace("/ml/", "");
 rvUrl = rvUrl.replace("/read/", "/read/memorize.html");
 
 const warning = "<p class='warning'>Внимание!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Переводы, словари и комментарии<br>сделаны не Благословенным.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + thUrl + "'>&nbsp;</a><br>Сверяйтесь с Пали в 4 основных никаях.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";

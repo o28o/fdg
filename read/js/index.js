@@ -391,7 +391,7 @@ scLink += `<a target="" href="https://suttacentral.net/${slug}/en/${translator}"
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/r/", "/read/");
-rvUrl = rvUrl.replace("ml.html", "");
+rvUrl = rvUrl.replace("/ml/", "");
 rvUrl = rvUrl.replace("/read/", "/read/rv.html");
 thUrl = origUrl.replace("/read/", "/th/read/");
 dUrl = origUrl.replace("/read/", "/d");

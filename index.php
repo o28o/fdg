@@ -59,7 +59,7 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
     window.location.href = '/' + currentHash;
 }
 </script>
-<meta property="og:url" content="/" />
+<meta property="og:url" content="https://1Dhamma.gift" />
 <meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
 

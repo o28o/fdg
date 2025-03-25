@@ -30,26 +30,24 @@ include 'scripts/opentexts.php';
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
 <script>
 // Проверяем значение siteLanguage в localStorage
-let siteLanguage;
-if (!siteLanguage) {
-    siteLanguage = localStorage.getItem('siteLanguage'); // Без let/const
-}
+let siteLanguage = localStorage.getItem('siteLanguage');
 
 // Если siteLanguage не задан, проверяем URL
 if (!siteLanguage) {
     const currentPath = window.location.pathname;
     if (currentPath.includes('/ru/')) {
         siteLanguage = 'ru';
+    } else if (currentPath.includes('/th/')) {
+        siteLanguage = 'th';
     } else {
         siteLanguage = 'en';
     }
 }
 
-// Получаем текущий путь и якорь
+// Если siteLanguage установлен и текущий путь не соответствует языковому, перенаправляем
 const currentPath = window.location.pathname;
 const currentHash = window.location.hash;
 
-// Перенаправляем на соответствующий язык, только если пользователь не на целевой странице
 if (siteLanguage === 'ru' && currentPath !== '/ru/') {
     window.location.href = '/ru/' + currentHash;
 } else if (siteLanguage === 'th' && currentPath !== '/th/') {

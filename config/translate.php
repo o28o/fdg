@@ -43,7 +43,7 @@ $tooltippoweredby = 'Natural Intelligence, Естественный Интелл
 $tooltiptitle = 'На Pāḷi, Русском, ไทย, සිංහල и Английском';
 $title = 'Найдите Истину';
 $tooltippli = 'Поиск на Пали по-умолчанию. По Суттам an, sn, dn, mn. Ангутара Никаи, Саньютта Никаи, Маджжхима Никаи, Дигха Никаи';
-$radiopli = 'Pāḷi';
+$radiopli = 'Pāḷi*';
 $tooltipdef = 'Поиск определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Если в Суттах не будет результатов, то поиск автоматически проведется в определениях из Винаи. Работает только для определений данных стандартными фразами. См. в "для Продвинутых"';
 $radiodef = 'Опр';
 
@@ -590,7 +590,7 @@ $tooltippoweredby = 'Natural Intelligence, Dhamma Intelligence';
 $tooltiptitle = 'In Pāḷi, English, Russian, සිංහල & ไทย';
 $title = 'Search for Truth';
 $tooltippli = 'Default search. In Suttas of AN, SN, MN, DN + partially KN. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya + partially Khudakka Nikaya';
-$radiopli = 'Pāḷi';
+$radiopli = 'Pāḷi*';
 $tooltipdef = 'Search for definitions in the 4 main Pali Nikayas. Find meanings, quantities, types, and metaphors associated with the term. Requires standard phrasing for definitions. If no results are found in Suttas, Vinaya texts are automatically searched. Study related Suttas for a comprehensive view. See "Advanced" for more details.';
 $radiodef = 'Def';
 

@@ -30,23 +30,34 @@ include 'scripts/opentexts.php';
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
 <script>
 // Проверяем значение siteLanguage в localStorage
-
+let siteLanguage;
 if (!siteLanguage) {
     siteLanguage = localStorage.getItem('siteLanguage'); // Без let/const
 }
-// Получаем текущий путь
+
+// Если siteLanguage не задан, проверяем URL
+if (!siteLanguage) {
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('/ru/')) {
+        siteLanguage = 'ru';
+    } else {
+        siteLanguage = 'en';
+    }
+}
+
+// Получаем текущий путь и якорь
 const currentPath = window.location.pathname;
+const currentHash = window.location.hash;
 
 // Перенаправляем на соответствующий язык, только если пользователь не на целевой странице
 if (siteLanguage === 'ru' && currentPath !== '/ru/') {
-    window.location.href = '/ru/';
+    window.location.href = '/ru/' + currentHash;
 } else if (siteLanguage === 'th' && currentPath !== '/th/') {
-    window.location.href = '/th/';
+    window.location.href = '/th/' + currentHash;
 } else if (siteLanguage === 'en' && currentPath !== '/') {
-    window.location.href = '/';
+    window.location.href = '/' + currentHash;
 }
 </script>
-
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
@@ -70,10 +81,12 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 -->
 
-<!--  Core theme CSS (includes Bootstrap)-->
+<!--  Core theme CSS (includes Bootstrap)
+<link href="/assets/css/paliLookup.css" rel="stylesheet" />
+
+-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
-<link href="/assets/css/paliLookup.css" rel="stylesheet" />
 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
@@ -89,9 +102,8 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
-    <script>
-  
-  const url = new URL(window.location);
+  <script>
+const url = new URL(window.location);
 const params = new URLSearchParams(url.search);
 
 // Удаляем параметры, которые пустые или содержат только пробелы
@@ -101,16 +113,20 @@ for (let key of [...params.keys()]) {
     }
 }
 
-// Обновляем URL без перезагрузки, если есть изменения
-const newUrl = url.pathname + (params.toString() ? "?" + params.toString() : "");
+// Получаем текущий якорь
+//const currentHash = window.location.hash;
+
+// Обновляем URL без перезагрузки, если есть изменения, и сохраняем якорь
+const newUrl = url.pathname + (params.toString() ? "?" + params.toString() : "") + currentHash;
 if (newUrl !== window.location.href) {
     history.replaceState(null, "", newUrl);
 }
 
-  function updateURL(params) {
+function updateURL(params) {
     console.log("Before update:", location.href);
-    // код, изменяющий URL
-    history.replaceState(null, "", `?q=${params.q}&s=${params.s}`);
+    // Добавляем якорь к обновляемому URL
+    const currentHash = window.location.hash;
+    history.replaceState(null, "", `?q=${params.q}&s=${params.s}${currentHash}`);
     console.log("After update:", location.href);
 }
 </script>
@@ -516,7 +532,7 @@ window.addEventListener('pageshow', function(event) {
   <br>
   </p>
   </div>
-<script>
+
 </script>
 </header>
 
@@ -1236,6 +1252,8 @@ foreach ($slides as $index => $slide) {
                 <!-- Bootstrap core JS-->
 				
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script defer src="/assets/js/themeswitch.js"></script>
+
 <script defer>
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
@@ -1245,7 +1263,6 @@ $(function () {
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
 
 <script src="/assets/js/autopali.js" defer></script>
-<script src="/assets/js/paliLookup.js"></script>
 	  
 <script src="/assets/js/randPlaceholder.js">
 </script>
@@ -1255,7 +1272,18 @@ $(function () {
   console.log(window.location.href);
 
 </script>
-<script defer src="/assets/js/themeswitch.js"></script>
+
+<!-- 
+<script src="/assets/js/paliLookup.js"></script>
+
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            enablePaliLookup();
+        });
+    </script>
+-->
+
 </body>
 
 <?php

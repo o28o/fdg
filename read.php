@@ -22009,6 +22009,14 @@ $(function () {
 <script src="/assets/js/paliLookup.js"></script>
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/openFdg.js"></script>
+<script src="/assets/js/paliLookup.js"></script>
+
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            enablePaliLookup();
+        });
+    </script>
 </body>
 <?php
 include 'scripts/multilang-search.php';

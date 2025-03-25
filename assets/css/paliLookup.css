@@ -26,36 +26,59 @@ background: white;
 /* Темный режим для popup */
 .popup.dark {
   background: black; /* Черный фон для темного режима */
-  color: white;      /* Белый текст */
+  color: #fff3d6;      /* Белый текст */
   border-color: #666; /* Более темная рамка */
+}
+
+.popup iframe {
+  background: #fff3d6;
+  color: #000;
 }
 
 [data-theme="dark"] .popup iframe {
   background: black;
+  color: #fff3d6;
 }
 
-    .popup iframe {
+.popup.dark iframe {
+  background: black;
+  color: #fff3d6;
+}
+
+.popup iframe {
       width: 100%;
       height: 100%;
       border: none;
             z-index: 10000;
     }
 
-    .popup.dark  {
-background: black;
-    }
-
 .popup-header {
   background = 'white';
 }
+  
+.popup-header.dark {
+  background = black;
+}  
   
 [data-theme="dark"] .popup-header {
   background: black;
 }
 
-.popup-header.dark {
-  background = black;
+.popupSandalone {
+  background: #fff3d6;
+color: #000;
 }
+
+[data-theme="dark"] .popupSandalone {
+  background: black;
+  color: #fff3d6;
+}
+
+.popupSandalone.dark {
+  background: black;
+  color: #fff3d6;
+}
+
 
 .popup .close-btn {
   position: absolute;
@@ -70,7 +93,7 @@ background: black;
   border-radius: 100%; /* делает кнопку круглой */
 }
 
-    .overlay {
+.overlay {
       position: fixed;
       top: 0;
       left: 0;

@@ -446,18 +446,18 @@ vin=vinaya
 abhi=abhidhamma
 sutta=mutta
 metaphorcountfile=$textinfofolder/metphrcount_sutta.txt
-fortitle=Suttanta
+fortitle="4 Nikayas"
 dirlocation=sutta
 translator=sujato
-fileprefix=_suttanta
+fileprefix=_4nikayas
 hwithtitle='<h1>'
 if [[ "$@" == *"-vin"* ]]; then
     vin=dummy
     sutta=sutta
-	fortitle=Vinaya
+	fortitle="Vinaya Vibhanga and Patimokkhas"
 	dirlocation=vinaya
 	translator=brahmali
-    fileprefix=_vinaya
+    fileprefix=_vinayavbpm
     metaphorcountfile=$textinfofolder/metphrcount_vinaya.txt
 fi
 if [[ "$@" == *"-abhi"* ]]; then
@@ -485,7 +485,7 @@ function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site,patton} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,tha-ap,thi-ap,pli-tv-kd,pli-tv-pvr,vv} 
 }
 fileprefix=${fileprefix}-kn
-fortitle="${fortitle} +KN"
+fortitle="${fortitle} + 6 KN books"
 elif [[ "$@" == *"-def"* ]]
 then
 fileprefix=${fileprefix}-definition
@@ -578,8 +578,14 @@ elif [[ "$@" == *"-all"* ]]; then
 function grepbasefile {
 nice -$nicevalue grep -E -Ri${grepvar}${grepgenparam} -B${linesbefore} -A${linesafter} "$pattern" $suttapath/$pali_or_lang --exclude-dir={$sutta,$abhi,$vin,xplayground,name,site}
 }
-fileprefix=${fileprefix}-all
-fortitle="${fortitle} +All"
+fileprefix=_suttanta
+fortitle="Suttanta"
+if [[ "$@" == *"-vin"* ]]; then
+fileprefix=_vinaya
+fortitle="Vinaya"
+fi
+
+
 elif [[ "$@" == *"-tru"* ]]; then
 function grepbasefile {
 nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} 
@@ -1111,7 +1117,7 @@ trntitle=`nice -$nicevalue grep -E -m3 ':0\.[3-5].*rule' $translation | clearsed
         fi 
 translatorsname=`echo $translation | awk -F'/en/' '{print $2}' | awk -F'/' '{print $1}'`
 
-if [[ "$fortitle" == *"Suttanta"* ]]
+if [[ "$fortitle" == *"4 Nikayas"* ]]
 then
 linkthai=`echo $filenameblock |  awk -v lkth="$linkforthai" -v ext="$linkforthaiext" '{print lkth$0''ext}' `
 linksi=`echo $filenameblock |  awk -v lksi="$linkforsi" -v ext="$linkforsiext" '{print lksi$0''ext}' `
@@ -1149,7 +1155,7 @@ fi
 
 firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1 | awk -F':' '{print $2}'  )
 
-if [[ $filenameblock == *"-"* ]] && [[ $fortitle == *"Suttanta"* ]]
+if [[ $filenameblock == *"-"* ]] && [[ $fortitle == *"4 Nikayas"* ]]
 then
 firstIndex=$(echo $indexlist | tr ' ' '\n' | head -n1  )
 fi
@@ -1174,7 +1180,7 @@ echo "<tr>
 <td>$count</td>   
 <td>$metaphorcount</td>
 <td>
-`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
+`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"4 Nikayas"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
 
 <a class='bwLink' href='' data-slug='$suttanumber'>En</a>
 <a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>
@@ -1195,7 +1201,7 @@ do
 indexForAnchor=` echo $i` 
  fileForAnchor=`echo $roottext | awk -F'/' '{print $NF}' | awk -F'_' '{print $1}'` 
  
- if [[ "$fileForAnchor" == *"-"* ]] && [[ $fortitle == *"Suttanta"* ]]
+ if [[ "$fileForAnchor" == *"-"* ]] && [[ $fortitle == *"4 Nikayas"* ]]
  then
  anchor="$indexForAnchor"
  else 
@@ -1612,7 +1618,7 @@ if [[ "$type" == json ]]; then
   else 
   echo -n "<br>" >> $history
   fi
-elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"Suttanta"* ]]
+elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"4 Nikayas"* ]]
 then
   if (( $textsqnty <= 40 ))
   then

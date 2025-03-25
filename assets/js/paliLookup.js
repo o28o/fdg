@@ -138,7 +138,7 @@ function createPopup() {
   popup.classList.add('popup');
   popup.style.position = 'fixed';
   popup.style.maxWidth = '600px';
-
+  popup.style.maxHeight = '600px';
   
 
   // Проверка параметров окна браузера
@@ -406,40 +406,46 @@ document.addEventListener('click', function(event) {
                 }
 
                 // Если перевод найден, отображаем его в iframe
-                if (translation) {
-                    iframe.srcdoc = `
-                        <!DOCTYPE html>
-                        <html lang="en">
-                        <head>
-                            <meta charset="UTF-8">
-                            <style>
-                                body {
-                                    font-family: Arial, sans-serif;
-                                    padding: 10px;
-                                    background: #fff3d6;
-                                    color: #000;
-                                }
-                                strong {
-                                    font-size: 1.2em;
-                                }
-                                ul {
-                                    list-style-type: none;
-                                    padding-left: 0;
-                                }
-                                li {
-                                    margin-bottom: 10px;
-                                }
-                            </style>
-                        </head>
-                        <body>
-                            ${translation}
-                        </body>
-                        </html>
-                    `;
-                    popup.style.height = '200px';
-                    popup.style.display = 'block';
-                    overlay.style.display = 'block';
-                }
+// Если перевод найден, отображаем его в iframe  
+if (translation) {
+    const isDarkMode = document.body.classList.contains('dark') || document.documentElement.getAttribute('data-theme') === 'dark';
+    const themeClass = isDarkMode ? 'dark' : '';
+    
+    iframe.srcdoc = `  
+        <!DOCTYPE html>  
+        <html lang="en" class="${themeClass}">  
+        <head>  
+            <meta charset="UTF-8">  
+            <style>  
+                body {  
+                    font-family: Arial, sans-serif;  
+                    padding: 10px;  
+                }  
+                body.dark {  
+                    background: #07021D !important;  
+                    color: #E1EAED !important;  
+                }  
+                strong {  
+                    font-size: 1.2em;  
+                }  
+                ul {  
+                    list-style-type: none;  
+                    padding-left: 0;  
+                }  
+                li {  
+                    margin-bottom: 10px;  
+                }  
+            </style>  
+        </head>  
+        <body class="${themeClass}">  
+            ${translation}  
+        </body>  
+        </html>  
+    `;  
+    popup.style.height = '200px';  
+    popup.style.display = 'block';  
+    overlay.style.display = 'block';  
+}
 
                 // Обновляем ссылку в кнопке openBtn
                 const openBtn = document.querySelector('.open-btn');

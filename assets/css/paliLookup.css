@@ -1,84 +1,69 @@
+/* Стили для обычного текста */
+.pli-lang {
+  cursor: text; 
+  color: inherit; 
+}
 
-
-    /* Стили для обычного текста */
-    .pli-lang {
-      cursor: text; 
-      color: inherit; 
-    }
-
-    /* Стили для popup */
-    .popup {
-   /*    
-   position: fixed;
-top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      height: 80%;
-      */
-background: white; 
-      border: 2px solid #666;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      z-index: 100000;
-      display: none;
-    }
+/* Стили для popup */
+.popup {
+  background: #E1EBED; /* Светлый фон */
+  border: 2px solid #666;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  display: none;
+  color: #05031B; /* Текст на светлом фоне */
+}
 
 /* Темный режим для popup */
-.popup.dark {
-  background: black; /* Черный фон для темного режима */
-  color: #fff3d6;      /* Белый текст */
-  border-color: #666; /* Более темная рамка */
+.popup.dark,
+[data-theme="dark"] .popup {
+  background: #07021D; /* Тёмный фон */
+  color: #E1EAED; /* Текст на тёмном фоне */
+  border-color: #666;
 }
 
+/* Для iframe */
 .popup iframe {
-  background: #fff3d6;
-  color: #000;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 10000;
+  background: #E1EBED; /* Светлый фон */
+  color: #05031B; /* Текст на светлом фоне */
 }
 
-[data-theme="dark"] .popup iframe {
-  background: black;
-  color: #fff3d6;
-}
-
+[data-theme="dark"] .popup iframe,
 .popup.dark iframe {
-  background: black;
-  color: #fff3d6;
+  background: #07021D; /* Тёмный фон */
+  color: #E1EAED; /* Текст на тёмном фоне */
 }
 
-.popup iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-            z-index: 10000;
-    }
+/* Для содержимого popup */
+.popup * {
+  color: inherit;
+}
 
 .popup-header {
-  background = 'white';
+  background: #E1EBED; /* Светлый фон */
+  color: #05031B; /* Текст на светлом фоне */
 }
-  
-.popup-header.dark {
-  background = black;
-}  
-  
+
+.popup-header.dark,
 [data-theme="dark"] .popup-header {
-  background: black;
+  background: #07021D; /* Тёмный фон */
+  color: #E1EAED; /* Текст на тёмном фоне */
 }
 
 .popupSandalone {
-  background: #fff3d6;
-color: #000;
+  background: #E1EBED; /* Светлый фон */
+  color: #05031B; /* Текст на светлом фоне */
 }
 
-[data-theme="dark"] .popupSandalone {
-  background: black;
-  color: #fff3d6;
-}
-
+[data-theme="dark"] .popupSandalone,
 .popupSandalone.dark {
-  background: black;
-  color: #fff3d6;
+  background: #07021D; /* Тёмный фон */
+  color: #E1EAED; /* Текст на тёмном фоне */
 }
-
 
 .popup .close-btn {
   position: absolute;
@@ -90,49 +75,46 @@ color: #000;
   height: 30px;
   width: 30px;
   cursor: pointer;
-  border-radius: 100%; /* делает кнопку круглой */
+  border-radius: 100%;
 }
 
 .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      display: none;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
 
+/* Остальные стили остаются без изменений */
 .common-size-icon4 {
   height: 25px; 
   width: 22px;
 }
 
 .dictIcon {
-height:15px; 
-width:15px;
+  height:15px; 
+  width:15px;
 }
 
 .dictIcon-sitePages {
-height: 35px; 
-width: 35px;
+  height: 35px; 
+  width: 35px;
 }
 
-
-/* Базовый стиль для иконки */
 .toggle-dict-btn img {
   width: 24px;
   height: 24px;
 }
 
-/* Для конкретного контейнера */
 .container-fluid .toggle-dict-btn img {
   width: 20px;
   height: 20px;
 }
 
-/* Использование атрибута */
 img[data-size="small"] {
   width: 16px;
   height: 16px;
@@ -142,17 +124,3 @@ img[data-size="large"] {
   width: 48px;
   height: 48px;
 }
-
-
-/*$
-<button class="btn btn-light mb-1 toggle-dict-btn" type="button">
-  <img src="/assets/svg/comment.svg" data-size="small">
-</button>
-
-<button class="btn btn-light mb-1 toggle-dict-btn" type="button">
-  <img src="/assets/svg/comment.svg" data-size="large">
-</button>
-
-*/
-
-

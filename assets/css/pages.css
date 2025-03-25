@@ -4,11 +4,22 @@
             margin: 20px;
             background-color: #f4f4f9;
             color: #333;
-        }
+        
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2, h3, h4, h5, p, ul {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+        
         h1 {
             color: #555;
         }
-        ol {
+       ul, ol {
             padding-left: 20px;
         }
         li {

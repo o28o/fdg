@@ -13,41 +13,8 @@ let dictUrl;
 
 if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
     dhammaGift = '';
-   dictUrl = "http://localhost:8880";
-   // dictUrl = "https://dict.dhamma.gift";
-
-// Современная проверка с fetch + AbortController
-async function isServerReachable(url, timeout = 800) {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-  try {
-    const response = await fetch(url, { 
-      method: 'HEAD',
-      mode: 'no-cors',
-      signal: controller.signal
-    });
-    clearTimeout(timeoutId);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-// Использование
-(async () => {
-  let dictUrl = "http://localhost:8880";
-  const backupUrl = "https://dict.dhamma.gift";
-
-  if (!await isServerReachable(dictUrl)) {
-    console.log("Локальный сервер недоступен → переключаемся на резервный");
-    dictUrl = backupUrl;
-  }
-
-  console.log("Используем URL:", dictUrl);
-})();
-
-
+ //  dictUrl = "http://localhost:8880";
+   dictUrl = "https://dict.dhamma.gift";
 
 } else {
     dhammaGift = 'https://dhamma.gift';

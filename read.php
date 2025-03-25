@@ -28,6 +28,8 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
 <link rel="canonical" href="<?php echo $canonicalPage;?>read.php">
+<link rel="alternate" href="https://dhamma.gift/ru/read.php" hreflang="ru">
+<link rel="alternate" href="https://dhamma.gift/read.php" hreflang="en">
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="website" />

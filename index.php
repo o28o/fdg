@@ -28,6 +28,9 @@ include 'scripts/opentexts.php';
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 <link rel="manifest" href="/assets/manifest.json">
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
+<link rel="alternate" href="https://dhamma.gift/ru/" hreflang="ru">
+<link rel="alternate" href="https://dhamma.gift/" hreflang="en">
+
 <script>
 // Проверяем значение siteLanguage в localStorage
 let siteLanguage = localStorage.getItem('siteLanguage');

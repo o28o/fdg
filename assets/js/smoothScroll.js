@@ -138,6 +138,7 @@ function highlightById(elementId) {
 }
 
 // Функция для выделения нескольких элементов по массиву ID
+
 function highlightMultipleById(ids) {
     ids.forEach(highlightById);
 }
@@ -214,5 +215,9 @@ function checkHashAndHighlight() {
 
 // Также вызываем функцию при изменении хэша
 window.addEventListener('hashchange', checkHashAndHighlight);
+
+document.addEventListener("DOMContentLoaded", function () {
+    checkHashAndHighlight(); // Вызываем функцию при загрузке страницы
+});
 
 

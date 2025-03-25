@@ -516,8 +516,21 @@ searchBtn.addEventListener('click', () => {
         }
     }
 });
+
 function getClickedWordWithHTML(element, x, y) {
-    const range = document.caretRangeFromPoint(x, y);
+    let range;
+    
+    if (document.caretRangeFromPoint) {
+        range = document.caretRangeFromPoint(x, y); // Для Chrome, Edge
+    } else if (document.caretPositionFromPoint) {
+        const position = document.caretPositionFromPoint(x, y); // Для Firefox
+        if (position && position.offsetNode) {
+            range = document.createRange();
+            range.setStart(position.offsetNode, position.offset);
+            range.setEnd(position.offsetNode, position.offset); // Добавляем setEnd
+        }
+    }
+
     if (!range) return null;
 
     const parentElement = element.closest('.pli-lang, .rus-lang, .eng-lang, [lang="pi"], [lang="en"], [lang="ru"]');

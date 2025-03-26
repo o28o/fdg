@@ -81,7 +81,7 @@ TrnNewDir="$TrnNew/sv/sutta/sn"
 
 
 #echo any key to run latest-rus.php or ctrl-c to cancel
-cd $apachesitepath/sc
+cd $apachesitepath/read/php
 php ./latest-rus.php | sed 's/<[^>]*>//g' | grep -v ^$ | grep -v complete | grep -vi "updated to" 
 #echo cp if have new sv files
 #read x

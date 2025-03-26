@@ -98,10 +98,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function lookupWordInStandaloneDict(word) {
     let out = "";
-    console.log("---");
-    console.log("before: ", word);
+   // console.log("---");
+ //   console.log("before: ", word);
     word = word.replace(/[’”'"]/g, "").replace(/ṁ/g, "ṃ");
-    console.log("after: ", word);
+   // console.log("after: ", word);
 
     if (word in dpd_i2h) {
         out += "<strong>" + word + '</strong><br><ul style="line-height: 1em; padding-left: 15px;">';
@@ -216,8 +216,8 @@ openBtn.innerHTML = `
   const iframe = document.createElement('iframe');
   iframe.src = '';
   iframe.style.width = '100%';
-  iframe.style.height = 'calc(100%)'; // Оставляем место для заголовка
-
+  iframe.style.height = 'calc(100% - 16px)';
+ // iframe.style.overflow = 'hidden';  // Отключаем
   // Добавляем заголовок для перетаскивания
   const header = document.createElement('div');
   header.classList.add('popup-header');
@@ -390,11 +390,28 @@ document.addEventListener('click', function(event) {
         }
 
         if (clickedWord) {
-            const cleanedWord = cleanWord(clickedWord);
+            let cleanedWord = cleanWord(clickedWord);
             console.log('Клик по слову:', cleanedWord);
 
             if (dictionaryVisible) {
                 let translation = "";
+                
+                
+        // Если есть необходимость в транслитерации, вызываем функцию
+        transliterateWord(cleanedWord)
+            .then(transliteratedText => {
+                // Вставляем транслитерированное слово в перевод
+                translation = transliteratedText;
+
+                // Далее, можно обновить отображение перевода или выполнить другие действия
+                console.log('Транслитерированное слово:', translation);
+                // Например, обновить элемент на странице с переводом:
+                // document.getElementById("translation-element").innerText = translation;
+            })
+            .catch(error => {
+                console.error('Ошибка при транслитерации:', error);
+            });
+    
 
                 // Если выбран standalone-словарь
                 if (dictUrl === "standalonebw") {
@@ -551,7 +568,7 @@ function getClickedWordWithHTML(element, x, y) {
     // Вычисляем смещение в тексте без учета HTML-тегов
     const globalOffset = calculateOffsetWithHTML(parentElement, range.startContainer, range.startOffset);
     if (globalOffset === -1) {
-        console.error('Не удалось вычислить глобальное смещение.');
+      //  console.error('Не удалось вычислить глобальное смещение.');
         return null;
     }
 
@@ -584,7 +601,7 @@ function calculateOffsetWithHTML(element, targetNode, targetOffset) {
         offset += node.textContent.length;
     }
 
-    console.log('Целевой узел не найден.');
+  //  console.log('Целевой узел не найден.');
     return -1; // Возвращаем ошибку, если узел не найден
 }
 
@@ -607,7 +624,7 @@ document.addEventListener('click', (event) => {
     if (clickedWord) {
         console.log('Слово по клику:', clickedWord);
     } else {
-        console.log('Слово не определено');
+     //   console.log('Слово не определено');
     }
 });
 
@@ -622,3 +639,25 @@ function cleanWord(word) {
         .toLowerCase();
 }
 
+// Функция для транслитерации слова
+function transliterateWord(word) {
+    return new Promise((resolve, reject) => {
+        // Подготавливаем текст для передачи в URL (инкодируем пробелы и спецсимволы)
+        const encodedText = encodeURIComponent(word);
+
+        // Формируем URL для вызова PHP-скрипта
+        const url = `/scripts/api/transliterate.php?text=${encodedText}&source=autodetect&target=ISOPali`;
+
+        // Отправляем GET-запрос на сервер
+        fetch(url)
+            .then(response => response.json())  // Ожидаем, что сервер вернёт JSON
+            .then(data => {
+                // Извлекаем значение из поля 'converted' и возвращаем его
+                const transliteratedText = data.converted;
+                resolve(transliteratedText);
+            })
+            .catch(error => {
+                reject(error);
+            });
+    });
+}

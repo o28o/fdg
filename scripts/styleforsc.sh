@@ -3,7 +3,8 @@ if [[ `pwd` != *"/sc "* ]]; then
 cd sc 2>/dev/null
 fi
 
-source ../config/script_config.sh --source-only
+source ../../config/script_config.sh --source-only
+source ../../config/script_config.sh --source-only
 cd $apachesitepath/assets/texts/sutta
 
 for i in `find $apachesitepath/assets/texts/sutta -type f -name "*.json" | xargs grep -El "(«|»)"`; do

@@ -124,3 +124,25 @@ img[data-size="large"] {
   width: 48px;
   height: 48px;
 }
+
+
+        ::-webkit-scrollbar {
+        background: #E1EBED; /* Светлый фон */
+        }
+
+        ::-webkit-scrollbar-thumb {
+       background: #E1EBED; /* Светлый фон */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: #E1EBED; /* Более тёмный скроллбар при наведении */
+        }
+
+        /* Темная тема */
+        [data-theme="dark"] ::-webkit-scrollbar {
+          background: #07021D; /* Темный фон скроллбара */
+        }
+
+        [data-theme="dark"] ::-webkit-scrollbar-thumb {
+          background: #07021D; /* Светлый скроллбар для темной темы */
+        }

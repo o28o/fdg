@@ -1,4 +1,4 @@
-source ../config/script_config.sh --source-only
+source ../../config/script_config.sh --source-only
 
 state_file=$apachesitepath/assets/texts/lastupdate_state_file
 error_found=0  # Флаг для отслеживания ошибок

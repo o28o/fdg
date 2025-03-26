@@ -4,7 +4,7 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
 ?>
 <!DOCTYPE html>
 <?php
-// Включаем вывод всех ошибок для отладки
+// Включаем вывод всех ошиок для отладки
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 error_reporting(E_ERROR | E_PARSE);
@@ -317,12 +317,14 @@ Add <strong>Dhamma.gift</strong> to your Home Screen?
 
  <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-anyd ") echo "checked";?>  value="-anyd">
-  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
+  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?><span class="text-muted">*</span></div>
   </div>
+
+  
   
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
-  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></div>
+  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?><span class="text-muted">*</span></div>
   </div>
   
          <div style="max-width: 300px;" class="my-2"> 

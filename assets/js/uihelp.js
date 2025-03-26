@@ -73,10 +73,12 @@ if (visitCount === targetVisitForRead) {
     }
 
     // Добавляем обработчик события для кнопки закрытия
+  if (infoUpdate) {
     infoUpdate.querySelector(".btn-close").addEventListener("click", function () {
         // Сохраняем в localStorage информацию о закрытии окна
         localStorage.setItem("PWAinstallMessage", "true");
         // Скрываем окно при нажатии на кнопку закрытия
         infoUpdate.style.display = "none";
     });
+  }
 });

@@ -153,7 +153,7 @@ if (isset($_GET['q'])) {
 ?>
 
 <div class="searchinputdiv">
-  <input name="q" type="text" style="width:230px;" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
+  <input name="q" type="text" style="min-width:230px;" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
   <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>
@@ -193,6 +193,11 @@ $(document).ready(function() {
 });
 </script>
 
+      	<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 mb-1 text-start' role='alert' id='successAlert'>
+  <div id="response"></div>
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>		  
+  
 
 <div class="collapse" id="collapseSettings">
   <div class="float-start">
@@ -272,12 +277,12 @@ $(document).ready(function() {
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc Y(ti|nti)</strong></button> - <?php echo $excfew;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>\bX</strong></button> - <?php echo $begin;?>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>Y\b</strong></button> <?php echo $end;?><br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - <?php echo $anynumber;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - <?php echo $fewsymbols;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - <?php echo $nextwords;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\\S*\\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\S*\s'><strong>X\S*\sY</strong></button> - <?php echo $nextwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\S*\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>a[ṁ]?</strong></button> - <?php echo $optionalletter;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='tatt($|[^h])'><strong>tatt($|[^h])</strong></button> - <?php echo $variantsexc;?> <br>
@@ -467,14 +472,8 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>    
 </div>
 </div>
-        	<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 mb-1 text-start' role='alert' id='successAlert'>
-  <div id="response"></div>
-  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-</div>		  
   </div>
-      </div>	
-      
-
+    
             <div id="spinner" class="justify-content-center">
               <div class="spinner-border mb-3" role="status">
                 <span class="visually-hidden">Loading...</span>

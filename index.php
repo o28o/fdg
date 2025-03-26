@@ -281,6 +281,36 @@ $(document).ready(function() {
 
 </script>
 
+ <?php
+if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+Добавить <strong>Dhamma.gift</strong> на Домашний Экран?
+    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
+   <br>
+   <strong>Android</strong> Chrome<br>
+   Настройки -> добавить на Главную<br>
+   <strong>iOS</strong> Safari<br>  
+   Поделиться -> добавить на Главную. 
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+} else {
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+Add <strong>Dhamma.gift</strong> to your Home Screen?
+    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
+   <br>
+   <strong>Android</strong> Chrome<br>
+   Settings -> Add to Home Screen<br>
+   <strong>iOS</strong> Safari<br>
+  Share -> Add to Home Screen.
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+}
+?>
+<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
+  <div id="response"></div>
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>
+
 <div class="collapse" id="collapseSettings">
   
   <div class="float-start mt-2">
@@ -336,12 +366,12 @@ $(document).ready(function() {
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc Y(ti|nti)</strong></button> - <?php echo $excfew;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>\bX</strong></button> - <?php echo $begin;?>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>Y\b</strong></button> <?php echo $end;?><br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - <?php echo $anynumber;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - <?php echo $fewsymbols;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - <?php echo $nextwords;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\\S*\\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\S*\s'><strong>X\S*\sY</strong></button> - <?php echo $nextwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\S*\s){0,3}'><strong>X(\S*\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>a[ṁ]?</strong></button> - <?php echo $optionalletter;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='tatt($|[^h])'><strong>tatt($|[^h])</strong></button> - <?php echo $variantsexc;?> <br>
@@ -470,42 +500,11 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
- <?php
-if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-Добавить <strong>Dhamma.gift</strong> на Домашний Экран?
-    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
-   <br>
-   <strong>Android</strong> Chrome<br>
-   Настройки -> добавить на Главную<br>
-   <strong>iOS</strong> Safari<br>  
-   Поделиться -> добавить на Главную. 
-
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-} else {
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-Add <strong>Dhamma.gift</strong> to your Home Screen?
-    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
-   <br>
-   <strong>Android</strong> Chrome<br>
-   Settings -> Add to Home Screen<br>
-   <strong>iOS</strong> Safari<br>
-  Share -> Add to Home Screen.
-
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-}
-?>
 
 <script src="/assets/js/uihelp.js"></script>
-<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
-  <div id="response"></div>
-  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-</div>
 
   </div>
   
-      </div>	
-      
             <div id="spinner" class="justify-content-center">
               <div class="spinner-border mt-3" role="status">
                 <span class="visually-hidden">Loading...</span>

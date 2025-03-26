@@ -454,7 +454,7 @@ hwithtitle='<h1>'
 if [[ "$@" == *"-vin"* ]]; then
     vin=dummy
     sutta=sutta
-	fortitle="Vinaya Vibhanga and Patimokkhas"
+	fortitle="Vinaya Vibhanga and Patimokkha"
 	dirlocation=vinaya
 	translator=brahmali
     fileprefix=_vinayavbpm

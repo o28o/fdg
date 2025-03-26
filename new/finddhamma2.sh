@@ -471,7 +471,7 @@ source="an,sn,mn,dn"
 if [[ "$@" == *"-vin"* ]]; then
     vin=dummy
     sutta=sutta
-	fortitle="Vinaya Vibhanga and Patimokkhas"
+	fortitle="Vinaya Vibhanga and Patimokkha"
 	dirlocation=vinaya
 	translator=brahmali
 	vin="./vinaya/pli-tv-b*"

@@ -2,9 +2,13 @@
     window.addEventListener('DOMContentLoaded', function() {
       var hash = window.location.hash;
   const isLocalhost = window.location.hostname.match(/localhost|127\.0\.0\.1/);
-const timeout = isLocalhost ? 500 : 3500; 
+const timeout = isLocalhost ? 500 : 1500; 
   
-console.log(timeout);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+//console.log(timeout);
       if (hash) {
         setTimeout(function() {
           var element = document.getElementById(hash.substring(1));
@@ -15,7 +19,6 @@ console.log(timeout);
       }
     });
 
-document.addEventListener('DOMContentLoaded', function() {
   // Создаем элемент кнопки  <img src="/assets/img/arrow-up.png" alt="To top"> <!--  <img src="/assets/svg/arrow-up.svg" alt="To top"> -->  <i class="fa-solid fa-arrow-up"></i>
   var scrollToTopBtn = document.createElement('button');
   scrollToTopBtn.id = 'scrollToTopBtn';

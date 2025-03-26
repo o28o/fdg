@@ -1,4 +1,5 @@
 assets/audio
 nohup.out
 result
-scripts/api/__pycache__
+scripts/api/__pycache_
+helpdocs

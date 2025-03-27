@@ -135,197 +135,254 @@ function clearParams() {
 
 // Создание элементов для Popup с возможностью изменения размера и перемещения
 function createPopup() {
-  const overlay = document.createElement('div');
-  overlay.classList.add('overlay');
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
 
-  const popup = document.createElement('div');
-  popup.classList.add('popup');
-  popup.style.position = 'fixed';
-  popup.style.maxWidth = '600px';
-  popup.style.maxHeight = '600px';
-  
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+    popup.style.position = 'fixed';
+    popup.style.maxWidth = '600px';
+    popup.style.maxHeight = '600px';
+    popup.style.overflow = 'hidden'; // Важно для корректного ресайза
 
-  // Проверка параметров окна браузера
-  const currentWindowWidth = window.innerWidth;
-  const currentWindowHeight = window.innerHeight;
+    // Проверка параметров окна браузера
+    const currentWindowWidth = window.innerWidth;
+    const currentWindowHeight = window.innerHeight;
 
-  const savedWindowWidth = localStorage.getItem('windowWidth');
-  const savedWindowHeight = localStorage.getItem('windowHeight');
+    const savedWindowWidth = localStorage.getItem('windowWidth');
+    const savedWindowHeight = localStorage.getItem('windowHeight');
 
-  // Если размеры окна изменились, очищаем сохраненные данные popup
-  if (
-    savedWindowWidth &&
-    savedWindowHeight &&
-    (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
-      parseInt(savedWindowHeight, 10) !== currentWindowHeight)
-  ) {
-clearParams();
-  }
+    // Если размеры окна изменились, очищаем сохраненные данные popup
+    if (
+        savedWindowWidth &&
+        savedWindowHeight &&
+        (parseInt(savedWindowWidth, 10) !== currentWindowWidth ||
+            parseInt(savedWindowHeight, 10) !== currentWindowHeight)
+    ) {
+        clearParams();
+    }
 
-  // Сохраняем текущие размеры окна
-  localStorage.setItem('windowWidth', currentWindowWidth);
-  localStorage.setItem('windowHeight', currentWindowHeight);
+    // Сохраняем текущие размеры окна
+    localStorage.setItem('windowWidth', currentWindowWidth);
+    localStorage.setItem('windowHeight', currentWindowHeight);
 
-  // Устанавливаем сохранённые размеры и позицию, если они есть
-  
+    // Устанавливаем сохранённые размеры и позицию, если они есть
+    const savedWidth = localStorage.getItem('popupWidth');
+    const savedHeight = localStorage.getItem('popupHeight');
+    const savedTop = localStorage.getItem('popupTop');
+    const savedLeft = localStorage.getItem('popupLeft');
 
-  
-  const savedWidth = localStorage.getItem('popupWidth');
-  const savedHeight = localStorage.getItem('popupHeight');
-  const savedTop = localStorage.getItem('popupTop');
-  const savedLeft = localStorage.getItem('popupLeft');
- 
-  
-console.log('loaded: ' + savedTop +  'and ' + savedLeft);
+    if (savedWidth) popup.style.width = savedWidth;
+    if (savedHeight) popup.style.height = savedHeight;
+    if (savedTop) popup.style.top = savedTop;
+    if (savedLeft) {
+        popup.style.left = savedLeft;
+    }
 
-  if (savedWidth) popup.style.width = savedWidth;
-  if (savedHeight) popup.style.height = savedHeight;
-  if (savedTop) popup.style.top = savedTop;
-  if (savedLeft) 
-  {
-    popup.style.left = savedLeft;
-  } 
-  
-  const closeBtn = document.createElement('button');
-  closeBtn.classList.add('close-btn');
-  closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
+    const closeBtn = document.createElement('button');
+    closeBtn.classList.add('close-btn');
+    closeBtn.innerHTML = '<img src="/assets/svg/xmark.svg" class=""></img>';
 
-// Создаем кнопку "Search with dhamma.gift"
-const openBtn = document.createElement('a');
-openBtn.classList.add('open-btn');
-openBtn.style.position = 'absolute';
-openBtn.style.top = '10px';
-openBtn.style.right = '45px'; // Располагаем справа от кнопки закрытия
-openBtn.style.border = 'none';
-openBtn.style.background = '#2D3E50';
-openBtn.style.color = 'white';
-openBtn.style.cursor = 'pointer';
-openBtn.style.width = '30px';
-openBtn.style.height = '30px';
-openBtn.style.borderRadius = '50%';
-openBtn.style.display = 'flex';
-openBtn.style.alignItems = 'center';
-openBtn.style.justifyContent = 'center';
-openBtn.style.textDecoration = 'none';
-openBtn.target = '_blank'; // Открывать ссылку в новой вкладке
+    // Создаем кнопку "Search with dhamma.gift"
+    const openBtn = document.createElement('a');
+    openBtn.classList.add('open-btn');
+    openBtn.style.position = 'absolute';
+    openBtn.style.top = '10px';
+    openBtn.style.right = '45px';
+    openBtn.style.border = 'none';
+    openBtn.style.background = '#2D3E50';
+    openBtn.style.color = 'white';
+    openBtn.style.cursor = 'pointer';
+    openBtn.style.width = '30px';
+    openBtn.style.height = '30px';
+    openBtn.style.borderRadius = '50%';
+    openBtn.style.display = 'flex';
+    openBtn.style.alignItems = 'center';
+    openBtn.style.justifyContent = 'center';
+    openBtn.style.textDecoration = 'none';
+    openBtn.target = '_blank';
 
-// Иконка лупы (аналогичная иконке закрытия)
-openBtn.innerHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="white" style="transform: scaleX(-1);">
-        <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
-    </svg>
-`;
+    // Иконка лупы
+    openBtn.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16" height="16" fill="white" style="transform: scaleX(-1);">
+            <path d="M505 442.7l-99.7-99.7c28.4-35.3 45.7-79.8 45.7-128C451 98.8 352.2 0 224 0S-3 98.8-3 224s98.8 224 224 224c48.2 0 92.7-17.3 128-45.7l99.7 99.7c6.2 6.2 14.4 9.4 22.6 9.4s16.4-3.1 22.6-9.4c12.5-12.5 12.5-32.8 0-45.3zM224 384c-88.4 0-160-71.6-160-160S135.6 64 224 64s160 71.6 160 160-71.6 160-160 160z"/>
+        </svg>
+    `;
 
+    const iframe = document.createElement('iframe');
+    iframe.src = '';
+    iframe.style.width = '100%';
+    iframe.style.height = 'calc(100% - 16px)';
+    iframe.style.overflow = 'hidden';
 
-  const iframe = document.createElement('iframe');
-  iframe.src = '';
-  iframe.style.width = '100%';
-  iframe.style.height = 'calc(100% - 16px)';
- iframe.style.overflow = 'hidden';  // Отключаем
-  // Добавляем заголовок для перетаскивания
-  const header = document.createElement('div');
-  header.classList.add('popup-header');
-  header.style.cursor = 'move';
-  header.style.height = '10px';
-  header.style.display = 'flex';
-  header.style.alignItems = 'center';
-  header.style.padding = '0 10px';
-  header.textContent = '';
+    // Добавляем заголовок для перетаскивания
+    const header = document.createElement('div');
+    header.classList.add('popup-header');
+    header.style.cursor = 'move';
+    header.style.height = '10px';
+    header.style.display = 'flex';
+    header.style.alignItems = 'center';
+    header.style.padding = '0 10px';
+    header.textContent = '';
 
-  popup.appendChild(header);
-  popup.appendChild(openBtn);
-  popup.appendChild(closeBtn);
-  popup.appendChild(iframe);
+    // Создаем треугольник для ресайза
+    const resizeHandle = document.createElement('div');
+    resizeHandle.classList.add('resize-handle');
+    resizeHandle.style.position = 'absolute';
+    resizeHandle.style.right = '0';
+    resizeHandle.style.bottom = '0';
+    resizeHandle.style.width = '20px';
+    resizeHandle.style.height = '20px';
+    resizeHandle.style.cursor = 'nwse-resize';
+    resizeHandle.style.zIndex = '10';
+    
+    // Создаем треугольник с помощью CSS
+    resizeHandle.innerHTML = `
+        <style>
+            .resize-handle::after {
+                content: "";
+                position: absolute;
+                right: 3px;
+                bottom: 3px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 12px 12px;
+                border-color: transparent transparent #666 transparent;
+            }
+        </style>
+    `;
 
-  // Добавляем popup и overlay на страницу
-  document.body.appendChild(overlay);
-  document.body.appendChild(popup);
+    popup.appendChild(header);
+    popup.appendChild(openBtn);
+    popup.appendChild(closeBtn);
+    popup.appendChild(iframe);
+    popup.appendChild(resizeHandle);
 
-  // Функция для сохранения позиции и размеров
-  function savePopupState() {
-    localStorage.setItem('popupWidth', popup.style.width);
-    localStorage.setItem('popupHeight', popup.style.height);
-    localStorage.setItem('popupTop', popup.style.top);
-    localStorage.setItem('popupLeft', popup.style.left);
-    console.log('savedstates');
-  }
+    // Добавляем popup и overlay на страницу
+    document.body.appendChild(overlay);
+    document.body.appendChild(popup);
 
-  // Перетаскивание окна
-  let isDragging = false;
-  let startX, startY, initialLeft, initialTop;
-let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true;
+    // Функция для сохранения позиции и размеров
+    function savePopupState() {
+        localStorage.setItem('popupWidth', popup.style.width);
+        localStorage.setItem('popupHeight', popup.style.height);
+        localStorage.setItem('popupTop', popup.style.top);
+        localStorage.setItem('popupLeft', popup.style.left);
+        console.log('savedstates');
+    }
+
+    // Перетаскивание окна
+    let isDragging = false;
+    let startX, startY, initialLeft, initialTop;
+    let isFirstDrag = localStorage.getItem('isFirstDrag') === 'false' ? false : true;
 
     if (isFirstDrag) {
-      popup.style.top = '50%';
-  popup.style.left = '50%';
-  popup.style.width = '80%';
-  popup.style.maxWidth = '600px';
-  popup.style.height = '80%';
-  popup.style.transform = 'translate(-50%, -50%)';
-}
-
-  // Обработчик нажатия для мыши (десктоп)
-  function startDrag(e) {
-    isDragging = true;
-    
-      // Добавить этот блок для первого перемещения
-    if (isFirstDrag) {
-      const rect = popup.getBoundingClientRect();
-      popup.style.transform = 'none';  // убираем transform, который центрирует окно
-      popup.style.top = rect.top + 'px';
-      popup.style.left = rect.left + 'px';
-      isFirstDrag = false;
-    // Сохраняем состояние isFirstDrag в sessionStorage
-    localStorage.setItem('isFirstDrag', isFirstDrag);
-    }  
-   
-    
-    startX = e.clientX || e.touches[0].clientX; // Поддержка сенсорных устройств
-    startY = e.clientY || e.touches[0].clientY;
-    initialLeft = parseInt(popup.style.left || 0, 10);
-    initialTop = parseInt(popup.style.top || 0, 10);
-    e.preventDefault();
-  }
-
-  // Обработчик перемещения для мыши (десктоп)
-function moveDrag(e) {
-    if (isDragging) {
-      const deltaX = (e.clientX || e.touches[0].clientX) - startX;
-      const deltaY = (e.clientY || e.touches[0].clientY) - startY;
-      popup.style.left = `${initialLeft + deltaX}px`;
-      popup.style.top = `${initialTop + deltaY}px`;
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.width = '80%';
+        popup.style.maxWidth = '600px';
+        popup.style.height = '80%';
+        popup.style.transform = 'translate(-50%, -50%)';
     }
-  }
 
-  // Обработчик окончания перетаскивания для мыши (десктоп)
-  function stopDrag() {
-    if (isDragging) {
-      isDragging = false;
-      savePopupState();
+    // Обработчик нажатия для мыши (десктоп)
+    function startDrag(e) {
+        isDragging = true;
+        
+        // Добавить этот блок для первого перемещения
+        if (isFirstDrag) {
+            const rect = popup.getBoundingClientRect();
+            popup.style.transform = 'none';  // убираем transform, который центрирует окно
+            popup.style.top = rect.top + 'px';
+            popup.style.left = rect.left + 'px';
+            isFirstDrag = false;
+            // Сохраняем состояние isFirstDrag в sessionStorage
+            localStorage.setItem('isFirstDrag', isFirstDrag);
+        }  
+        
+        startX = e.clientX || e.touches[0].clientX;
+        startY = e.clientY || e.touches[0].clientY;
+        initialLeft = parseInt(popup.style.left || 0, 10);
+        initialTop = parseInt(popup.style.top || 0, 10);
+        e.preventDefault();
     }
-  }
 
-  // Обработчики для перетаскивания на десктопе
-  header.addEventListener('mousedown', startDrag);
-  document.addEventListener('mousemove', moveDrag);
-  document.addEventListener('mouseup', stopDrag);
+    function moveDrag(e) {
+        if (isDragging) {
+            const deltaX = (e.clientX || e.touches[0].clientX) - startX;
+            const deltaY = (e.clientY || e.touches[0].clientY) - startY;
+            popup.style.left = `${initialLeft + deltaX}px`;
+            popup.style.top = `${initialTop + deltaY}px`;
+        }
+    }
 
-  // Обработчики для перетаскивания на мобильных устройствах
-  header.addEventListener('touchstart', startDrag);
-  document.addEventListener('touchmove', moveDrag);
-  document.addEventListener('touchend', stopDrag);
+    function stopDrag() {
+        if (isDragging) {
+            isDragging = false;
+            savePopupState();
+        }
+    }
 
-  // Изменение размеров окна
-  popup.style.resize = 'both';
-  popup.style.overflow = 'auto';
-//  popup.style.overflow = 'hidden';
+    // Обработчики для перетаскивания
+    header.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', moveDrag);
+    document.addEventListener('mouseup', stopDrag);
+    header.addEventListener('touchstart', startDrag);
+    document.addEventListener('touchmove', moveDrag);
+    document.addEventListener('touchend', stopDrag);
 
-  const resizeObserver = new ResizeObserver(() => {
-    savePopupState();
-  });
-  resizeObserver.observe(popup);
+    // Реализация ресайза с помощью треугольника
+    let isResizing = false;
+    let startWidth, startHeight, startResizeX, startResizeY;
 
-  return { overlay, popup, closeBtn, iframe };
+    resizeHandle.addEventListener('mousedown', startResize);
+    resizeHandle.addEventListener('touchstart', startResize);
+
+    function startResize(e) {
+        isResizing = true;
+        startWidth = parseInt(document.defaultView.getComputedStyle(popup).width, 10);
+        startHeight = parseInt(document.defaultView.getComputedStyle(popup).height, 10);
+        startResizeX = e.clientX || e.touches[0].clientX;
+        startResizeY = e.clientY || e.touches[0].clientY;
+        
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function doResize(e) {
+        if (!isResizing) return;
+        
+        const currentX = e.clientX || e.touches[0].clientX;
+        const currentY = e.clientY || e.touches[0].clientY;
+        
+        const newWidth = startWidth + (currentX - startResizeX);
+        const newHeight = startHeight + (currentY - startResizeY);
+        
+        // Ограничения по минимальному и максимальному размеру
+        const minWidth = 200;
+        const minHeight = 150;
+        const maxWidth = window.innerWidth * 0.9;
+        const maxHeight = window.innerHeight * 0.9;
+        
+        popup.style.width = Math.max(minWidth, Math.min(newWidth, maxWidth)) + 'px';
+        popup.style.height = Math.max(minHeight, Math.min(newHeight, maxHeight)) + 'px';
+        
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    function stopResize() {
+        isResizing = false;
+        savePopupState();
+    }
+
+    document.addEventListener('mousemove', doResize);
+    document.addEventListener('touchmove', doResize);
+    document.addEventListener('mouseup', stopResize);
+    document.addEventListener('touchend', stopResize);
+
+    return { overlay, popup, closeBtn, iframe };
 }
 
 // Вставка popup на страницу

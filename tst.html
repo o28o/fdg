@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Resizable Iframe Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .popup-container {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            min-width: 300px;
+            min-height: 200px;
+        }
+        
+        .popup-header {
+            padding: 12px 16px;
+            background: #f0f0f0;
+            cursor: move;
+            user-select: none;
+        }
+        
+        .popup-content {
+            width: 100%;
+            height: calc(100% - 40px);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .resize-handle {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            cursor: nwse-resize;
+            z-index: 10;
+        }
+        
+        .resize-handle::after {
+            content: "";
+            position: absolute;
+            right: 3px;
+            bottom: 3px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 12px 12px;
+            border-color: transparent transparent #666 transparent;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            border: none;
+            background: #ff5a5a;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body>
+    <button id="openPopup">Open Popup</button>
+    
+    <div class="popup-overlay" id="popupOverlay" style="display: none;">
+        <div class="popup-container" id="popupContainer">
+            <div class="popup-header">Drag me</div>
+            <button class="close-btn" id="closePopup">×</button>
+            <div class="popup-content">
+                <iframe src="https://example.com" id="popupIframe"></iframe>
+            </div>
+            <div class="resize-handle" id="resizeHandle"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const popupOverlay = document.getElementById('popupOverlay');
+            const popupContainer = document.getElementById('popupContainer');
+            const resizeHandle = document.getElementById('resizeHandle');
+            const closePopup = document.getElementById('closePopup');
+            const openPopup = document.getElementById('openPopup');
+            const popupHeader = document.querySelector('.popup-header');
+            
+            // Open popup
+            openPopup.addEventListener('click', function() {
+                popupOverlay.style.display = 'flex';
+            });
+            
+            // Close popup
+            closePopup.addEventListener('click', function() {
+                popupOverlay.style.display = 'none';
+            });
+            
+            // Dragging functionality
+            let isDragging = false;
+            let offsetX, offsetY;
+            
+            popupHeader.addEventListener('mousedown', startDrag);
+            popupHeader.addEventListener('touchstart', startDrag);
+            
+            function startDrag(e) {
+                isDragging = true;
+                
+                if (e.type === 'mousedown') {
+                    offsetX = e.clientX - popupContainer.getBoundingClientRect().left;
+                    offsetY = e.clientY - popupContainer.getBoundingClientRect().top;
+                } else if (e.type === 'touchstart') {
+                    const touch = e.touches[0];
+                    offsetX = touch.clientX - popupContainer.getBoundingClientRect().left;
+                    offsetY = touch.clientY - popupContainer.getBoundingClientRect().top;
+                }
+                
+                e.preventDefault();
+            }
+            
+            document.addEventListener('mousemove', drag);
+            document.addEventListener('touchmove', drag);
+            
+            function drag(e) {
+                if (!isDragging) return;
+                
+                let clientX, clientY;
+                
+                if (e.type === 'mousemove') {
+                    clientX = e.clientX;
+                    clientY = e.clientY;
+                } else if (e.type === 'touchmove') {
+                    const touch = e.touches[0];
+                    clientX = touch.clientX;
+                    clientY = touch.clientY;
+                }
+                
+                const maxX = window.innerWidth - popupContainer.offsetWidth;
+                const maxY = window.innerHeight - popupContainer.offsetHeight;
+                
+                let left = clientX - offsetX;
+                let top = clientY - offsetY;
+                
+                // Boundary checks
+                left = Math.max(0, Math.min(left, maxX));
+                top = Math.max(0, Math.min(top, maxY));
+                
+                popupContainer.style.left = left + 'px';
+                popupContainer.style.top = top + 'px';
+                
+                e.preventDefault();
+            }
+            
+            document.addEventListener('mouseup', stopDrag);
+            document.addEventListener('touchend', stopDrag);
+            
+            function stopDrag() {
+                isDragging = false;
+            }
+            
+            // Resizing functionality
+            let isResizing = false;
+            let startX, startY, startWidth, startHeight;
+            
+            resizeHandle.addEventListener('mousedown', startResize);
+            resizeHandle.addEventListener('touchstart', startResize);
+            
+            function startResize(e) {
+                isResizing = true;
+                
+                if (e.type === 'mousedown') {
+                    startX = e.clientX;
+                    startY = e.clientY;
+                } else if (e.type === 'touchstart') {
+                    const touch = e.touches[0];
+                    startX = touch.clientX;
+                    startY = touch.clientY;
+                }
+                
+                startWidth = parseInt(document.defaultView.getComputedStyle(popupContainer).width, 10);
+                startHeight = parseInt(document.defaultView.getComputedStyle(popupContainer).height, 10);
+                
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            document.addEventListener('mousemove', resize);
+            document.addEventListener('touchmove', resize);
+            
+            function resize(e) {
+                if (!isResizing) return;
+                
+                let clientX, clientY;
+                
+                if (e.type === 'mousemove') {
+                    clientX = e.clientX;
+                    clientY = e.clientY;
+                } else if (e.type === 'touchmove') {
+                    const touch = e.touches[0];
+                    clientX = touch.clientX;
+                    clientY = touch.clientY;
+                }
+                
+                const newWidth = startWidth + (clientX - startX);
+                const newHeight = startHeight + (clientY - startY);
+                
+                // Minimum size constraints
+                const minWidth = 300;
+                const minHeight = 200;
+                
+                // Maximum size constraints (90% of viewport)
+                const maxWidth = window.innerWidth * 0.9;
+                const maxHeight = window.innerHeight * 0.9;
+                
+                // Apply constraints
+                const constrainedWidth = Math.max(minWidth, Math.min(newWidth, maxWidth));
+                const constrainedHeight = Math.max(minHeight, Math.min(newHeight, maxHeight));
+                
+                popupContainer.style.width = constrainedWidth + 'px';
+                popupContainer.style.height = constrainedHeight + 'px';
+                
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            
+            document.addEventListener('mouseup', stopResize);
+            document.addEventListener('touchend', stopResize);
+            
+            function stopResize() {
+                isResizing = false;
+            }
+            
+            // Initial positioning
+            function centerPopup() {
+                const left = (window.innerWidth - popupContainer.offsetWidth) / 2;
+                const top = (window.innerHeight - popupContainer.offsetHeight) / 2;
+                
+                popupContainer.style.position = 'absolute';
+                popupContainer.style.left = left + 'px';
+                popupContainer.style.top = top + 'px';
+            }
+            
+            centerPopup();
+            window.addEventListener('resize', centerPopup);
+        });
+    </script>
+</body>
+</html>

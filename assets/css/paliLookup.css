@@ -146,3 +146,27 @@ img[data-size="large"] {
         [data-theme="dark"] ::-webkit-scrollbar-thumb {
           background: #07021D; /* Светлый скроллбар для темной темы */
         }
+        
+        
+                .resize-handle {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            cursor: nwse-resize;
+            z-index: 10;
+        }
+        
+        .resize-handle::after {
+            content: "";
+            position: absolute;
+            right: 3px;
+            bottom: 3px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 12px 12px;
+            border-color: transparent transparent #666 transparent;
+        }
+        

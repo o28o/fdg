@@ -33,11 +33,11 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Dhamma.gift" />
+<meta property="og:title" content="Dhamma.gift Read" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 
-<meta property="og:url" content="https://Dhamma.gift" />
-<meta property="og:site_name" content="Dhamma.gift" />
+<meta property="og:url" content="https://Dhamma.gift/read.php" />
+<meta property="og:site_name" content="Dhamma.gift Read" />
 <meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">
@@ -104,7 +104,7 @@ if (newUrl !== window.location.href) {
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
             <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
-                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">Dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">Dhamma.gift Read</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>

@@ -119,9 +119,9 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 const mlUrl  = window.location.href;
 
 var ruUrl = mlUrl.replace("/read/devanagari.html", "/r/");
-ruUrl = mlUrl.replace("/d", "/r/");
+ruUrl = mlUrl.replace("/d/", "/r/");
 var enUrl = mlUrl.replace("/read/devanagari.html", "/read/");
-enUrl = mlUrl.replace("/d", "/read/");
+enUrl = mlUrl.replace("/d/", "/read/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;

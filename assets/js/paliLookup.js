@@ -317,7 +317,8 @@ function moveDrag(e) {
 
   // Изменение размеров окна
   popup.style.resize = 'both';
-  popup.style.overflow = 'auto';
+//  popup.style.overflow = 'auto';
+  popup.style.overflow = 'hidden';
 
   const resizeObserver = new ResizeObserver(() => {
     savePopupState();

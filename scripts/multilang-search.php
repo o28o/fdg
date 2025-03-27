@@ -84,13 +84,15 @@ $dictType = 'https://dict.dhamma.gift';
   $langinurl = "";
     }
 
-  //  $dictUrl = "${dictType}${langinurl}/search_html?q=";  
+  
   //    const dictUrl = "https://dict.dhamma.gift/html_search?q=";
         // const dictUrl = "dttp://app.dicttango/WordLookup?word=";
  $server_name = $_SERVER['SERVER_NAME']; // Получаем имя сервера (домен или IP)
 // Проверяем, является ли сервер локальным
 if ($server_name === 'localhost' || $server_name === '127.0.0.1') {
    $dictUrl = "dttp://app.dicttango/WordLookup?word=";
+} else {
+  $dictUrl = "${dictType}${langinurl}/search_html?q=";  
 }
  
     

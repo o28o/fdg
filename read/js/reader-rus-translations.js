@@ -603,6 +603,7 @@ console.log('anchorURL', anchorURL);
 console.log('sGetparam', sGetparam);  
 console.log('slug', slug);  
 
+/*
   // Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "/ru/?s=" + encodeURIComponent(sGetparam) + "&q=" + encodeURIComponent(slug) + "#" + encodeURIComponent(anchorURL) , true);
@@ -624,6 +625,29 @@ console.log('slug', slug);
   };
   
   // Обновление сообщения об ошибке на странице
+  */
+  
+// Отправка запроса по адресу http://localhost:8080/ru/?q= с использованием значения slug
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/ru/?q=" + encodeURIComponent(slug), true);
+  xhr.send();
+
+  // Обработка ответа
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        // Обработка успешного ответа
+        console.log(xhr.responseText);
+     window.location.href = "/ru/?q=" + encodeURIComponent(slug);
+
+      } else {
+        // Обработка ошибки
+        console.log('Error sending request to /ru/?q=');
+      }
+    }
+  };
+
+  // Обновление сообщения об ошибке на странице  
   
   suttaArea.innerHTML = `<p>Идёт Поиск "${decodeURIComponent(slug)}". Пожалуйста, Ожидайте.</p>
     

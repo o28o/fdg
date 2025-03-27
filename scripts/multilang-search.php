@@ -68,6 +68,39 @@ if (file_put_contents($filePath, $cleanedUrl . PHP_EOL) === false) {
 } 
 //else { echo "Очищенный URL успешно записан: $cleanedUrl"; }
 
+// Режим Словаря 
+if (preg_match('/dictLookup/', $p) || preg_match('/dictLookup/', $extra)) {
+    // Действие при выполнении условия
+
+
+    $stringForWord = urlencode($stringForWord); 
+$dictType = 'https://dict.dhamma.gift';
+    
+    if ( preg_match('/\/ru/', $actual_link)) {
+  $outputlang = "-oru";
+  $langinurl = "/ru";
+} else {
+    $outputlang = "";
+  $langinurl = "";
+    }
+
+  //  $dictUrl = "${dictType}${langinurl}/search_html?q=";  
+  //    const dictUrl = "https://dict.dhamma.gift/html_search?q=";
+        // const dictUrl = "dttp://app.dicttango/WordLookup?word=";
+ $server_name = $_SERVER['SERVER_NAME']; // Получаем имя сервера (домен или IP)
+// Проверяем, является ли сервер локальным
+if ($server_name === 'localhost' || $server_name === '127.0.0.1') {
+   $dictUrl = "dttp://app.dicttango/WordLookup?word=";
+}
+ 
+    
+echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+echo "<script>
+window.open(`${dictUrl}${stringForWord}`, '_blank');
+</script>";
+exit();
+}
+
 // Проверка условий
 if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {
     // Действие при выполнении условия

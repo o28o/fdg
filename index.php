@@ -199,7 +199,7 @@ function updateURL(params) {
                 </div>
 </div>
 
-<form method="GET" action="" class="justify-content-center">
+<form method="GET" id="searchForm" action="" class="justify-content-center">
 <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 <label class="sr-only dropup rounded-pill" for="paliauto"></label>
 
@@ -244,6 +244,7 @@ if (isset($_GET['q'])) {
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
 
         <option value="" <?php if (isset($extra)) echo "selected";?> ><?php echo "$liststd";?></option>
+        <option value="dictLookup" <?php if (isset($extra) && $extra == "dictLookup") echo "selected";?> ><?php echo "$dictLookup";?></option>
          <option value="wordRep" <?php if (isset($extra) && $extra == "wordRep") echo "selected";?> ><?php echo "$listwords";?></option>
         <option value="-def" <?php if (isset($extra) && $extra == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $extra == "-sml") echo "selected";?> ><?php echo "$listsml";?></option>

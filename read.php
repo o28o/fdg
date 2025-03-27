@@ -62,10 +62,10 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
 <link href="/assets/css/styles.css" rel="stylesheet" />
-<link href="/assets/css/paliLookup.css" rel="stylesheet" />
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
+<link href="/assets/css/paliLookup.css" rel="stylesheet" />
 <style>
 </style>
 
@@ -295,6 +295,7 @@ $(document).ready(function() {
   <?php echo $regexlink;?> 
     <?php echo $defaults;?> 
     <?php echo $defaultsJS;?> 
+    <script src="/assets/js/setDefaultMode.js"></script>
     
  </p>
 
@@ -354,6 +355,9 @@ $(document).ready(function() {
     });
   });
 </script>
+
+
+<script src="/assets/js/uihelp.js"></script>
 
 	  <script src="/assets/js/smoothScroll.js" defer></script>
 
@@ -22007,11 +22011,9 @@ $(function () {
   console.log(window.location.href);
 
 </script>
-<script src="/assets/js/paliLookup.js"></script>
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/openFdg.js"></script>
 <script src="/assets/js/paliLookup.js"></script>
-
 <script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

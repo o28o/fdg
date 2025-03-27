@@ -1,4 +1,5 @@
 
+
   // default settings 
   // Функция для сохранения настроек в локальном хранилище
   function savePreferences() {

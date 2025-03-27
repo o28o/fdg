@@ -203,7 +203,13 @@ $(document).ready(function () {
   });
 </script>
 <script src="/assets/js/paliLookup.js"></script>
-
+<script src="/assets/js/settings.js"></script>
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            enablePaliLookup();
+        });
+    </script>
 <!-- Audio Player JS -->
 <script  src="/assets/js/jsPlayer.js"></script>  
 </body>

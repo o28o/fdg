@@ -221,7 +221,7 @@ openBtn.innerHTML = `
   iframe.src = '';
   iframe.style.width = '100%';
   iframe.style.height = 'calc(100% - 16px)';
- // iframe.style.overflow = 'hidden';  // Отключаем
+ iframe.style.overflow = 'hidden';  // Отключаем
   // Добавляем заголовок для перетаскивания
   const header = document.createElement('div');
   header.classList.add('popup-header');
@@ -317,8 +317,8 @@ function moveDrag(e) {
 
   // Изменение размеров окна
   popup.style.resize = 'both';
-//  popup.style.overflow = 'auto';
-  popup.style.overflow = 'hidden';
+  popup.style.overflow = 'auto';
+//  popup.style.overflow = 'hidden';
 
   const resizeObserver = new ResizeObserver(() => {
     savePopupState();

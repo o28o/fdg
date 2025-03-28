@@ -243,6 +243,15 @@ if (engTransData[segment] === undefined) {
 }
 
 let params = new URLSearchParams(document.location.search);
+
+if (localStorage.getItem("removePunct") === "true") {
+    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
+    paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
+    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
+    
+    //।   ॥  
+}
+
 let paliModDataSegment = paliData[segment].slice();  // Копия одного элемента массива
 
 function преобразоватьТекст() {
@@ -276,13 +285,7 @@ let преобразованныеСлова = слова.map(word => {
 
     return результат;
 }
-if (localStorage.getItem("removePunct") === "true") {
-    paliData[segment] = paliData[segment].replace(/[-—–]/g, ' ');  
-    paliData[segment] = paliData[segment].replace(/[:;“”‘’,"']/g, '');  
-    paliData[segment] = paliData[segment].replace(/[.?!]/g, ' |'); 
-    
-    //।   ॥  
-}
+
 if (paliData[segment] !== undefined) {
 paliData[segment] = paliData[segment].replace(/[—–—]/, ' — ');
 }

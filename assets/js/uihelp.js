@@ -124,7 +124,8 @@ function showHint(settings) {
             zIndex: '10000',
             boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
             animation: 'fadeInUp 0.5s ease-out',
-            maxWidth: '90%',
+            maxWidth: '600px',
+            minWidth: '200px',
             textAlign: 'center',
             border: '1px solid rgba(255,255,255,0.1)'
         });

@@ -53,25 +53,33 @@ if (savedDict.includes("dpd")) {
 
 // Функция для загрузки скриптов standalone-словаря
 function loadStandaloneScripts() {
-    const scripts = [
-        { src: '/js/dpd_deconstructor.js', defer: true },
-        { src: '/js/dpd_ebts.js', defer: true },
-        { src: '/js/dpd_i2h.js', defer: true }
-    ];
+    return new Promise((resolve, reject) => {
+        const scripts = [
+            '/assets/js/standalone-dpd/dpd_deconstructor.js',
+            '/assets/js/standalone-dpd/dpd_ebts.js',
+            '/assets/js/standalone-dpd/dpd_i2h.js'
+        ];
 
-    return Promise.all(
-        scripts.map(({ src, defer }) => {
-            return new Promise((resolve, reject) => {
-                const script = document.createElement('script');
-                script.src = src;
-                script.defer = defer; // или async, если зависимости не критичны
-                script.onload = resolve;
-                script.onerror = () => reject(new Error(`Failed to load: ${src}`));
-                document.head.appendChild(script);
-            });
-        })
-    );
+        let loadedCount = 0;
+
+        scripts.forEach(src => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.defer = true;
+            script.onload = () => {
+                loadedCount++;
+                if (loadedCount === scripts.length) {
+                    resolve();
+                }
+            };
+            script.onerror = () => {
+                reject(new Error(`Failed to load script: ${src}`));
+            };
+            document.head.appendChild(script);
+        });
+    });
 }
+
 // Включаем Pali Lookup после загрузки страницы
 document.addEventListener('DOMContentLoaded', function() {
     if (savedDict === "standalonebw") {

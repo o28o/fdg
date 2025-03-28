@@ -656,15 +656,25 @@ window.addEventListener("load", function() {
     }, 1000); // 1.5 секунды таймаута
 });
 </script>
-<script src="/assets/js/paliLookup.js"></script>
 
 <script src="/assets/js/uihelp.js"> </script>
 <script src="/assets/js/variantsButtonSc.js"></script>
 <script src="/assets/js/settings.js"></script>
-<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            enablePaliLookup();
-        });
-    </script>
+<script>
+  function loadScript(src, callback) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.onload = callback;
+    document.head.appendChild(script);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Загружаем первый скрипт, затем второй, затем вызываем функцию
+    loadScript('/assets/js/paliLookup.js', function() {
+      loadScript('/assets/js/standalone-dpd/pali-lookup-standalone.js', function() {
+        enablePaliLookup();
+      });
+    });
+  });
+</script>
 </html>

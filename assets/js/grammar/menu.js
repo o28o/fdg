@@ -19,7 +19,7 @@ const menuTemplate = `
       <br>  
       <a class="nav-link" href="../../read.php">Чтение</a><br>
       <a class="nav-link" href="../../">Поиск</a><br>
-      <a class="nav-link" href="/read/memorize.html">Запоминание</a><br><br>      
+      <a class="nav-link" href="/memorize/">Запоминание</a><br><br>      
       Существительные
       </span>                 
                     <ul class="list-unstyled text-decoration-none">

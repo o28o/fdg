@@ -606,7 +606,7 @@ let rvUrl = origUrl.replace("/read/th.html", "/read/");
 rvUrl = origUrl.replace("/th/read/", "/read/");
 dUrl = origUrl.replace("/read/", "/d");
 rvUrl = rvUrl.replace("mlth.html", "");
-rvUrl = rvUrl.replace("/read/", "/read/memorize.html");
+rvUrl = rvUrl.replace("/read/", "/memorize/");
 
 
 const warning = "<p class='warning' >Warning!<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Translations, dictionaries and commentaries <br>were not made by the Blessed One.<a style='cursor: pointer;' class='text-decoration-none' target='' href='" + dUrl + "'>&nbsp;</a><br>Cross-check with Pali in 4 main nikayas.<a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";

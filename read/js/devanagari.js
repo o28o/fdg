@@ -504,9 +504,8 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/r/", "/read/");
-rvUrl = rvUrl.replace("memorize.html", "");
-rvUrl = rvUrl.replace("devanagari.html", "");
-rvUrl = rvUrl.replace("d.html", "");
+rvUrl = rvUrl.replace("/memorize/", "");
+rvUrl = rvUrl.replace("/d/", "");
 rvUrl = rvUrl.replace("/read/", "/read/rv.html");
 
 const warning = "<p class='warning' style='color:green;'>Bahussuto hoti sutadharo sutasannicayo...<br>sātthaṁ sabyañjanaṁ... tathārūpāssa dhammā bahussutā honti<br>dhātā vacasā paricitā manasānupekkhitā, diṭṭhiyā suppaṭividdhā. <a class='text-decoration-none' target='' href='" + rvUrl + "'>&nbsp;</a></p>";

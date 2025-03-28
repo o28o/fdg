@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (localStorage.defaultReader === 'rv') {
         baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/d";
+        baseUrl = window.location.origin + "/d/";
     } else if (localStorage.defaultReader === 'mem') {
-        baseUrl = window.location.origin + "/read/memorize.html";
+        baseUrl = window.location.origin + "/memorize/";
     } else if (localStorage.defaultReader === 'fr') {
         baseUrl = window.location.origin + "/read/fr.html";
     } 

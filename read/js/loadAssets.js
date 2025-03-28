@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "d": { js: "./js/devanagari.js", css: "./css/thai.css" },
         "memorize": { js: "./js/memorize.js", css: "./css/rus-multi.css" },
         "ml": { js: "./js/multilang.js", css: "./css/rus-multi.css" },      
+        "rev": { js: "./js/multilangrev.js", css: "./css/rus-multi.css" },      
+        "frev": { js: "./js/multilangfullrev.js", css: "./css/rus-multi.css" },      
         "mlth": { js: "./js/multilang-th.js", css: "./css/thai-multi.css" },
         "r": { js: "./js/reader-rus-translations.js", css: "./css/index.css" },
         "th": { js: "./js/reader-th.js", css: "./css/thai.css" },

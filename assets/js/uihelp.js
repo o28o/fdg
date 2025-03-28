@@ -183,7 +183,7 @@ const hintSettings = {
             title: 'Подсказка:',
             message: 'Чтобы открыть текст с нужного места, кликните в конце строки с пали — там есть невидимая ссылка (курсор изменится на палец).'
         },
-        '/read/': {
+        '/result/': {
             title: 'Hint:',
             message: 'To open the text from a specific location, click at the end of the Pali line — there’s an invisible link there (the cursor will change to a hand pointer).'
         },
@@ -191,7 +191,7 @@ const hintSettings = {
             title: 'Подсказка:',
             message: 'Чтобы скопировать ссылку на нужное место, кликните в конце строки с пали — там есть невидимая ссылка (курсор изменится на палец).'
         },
-        '/result/': {
+        '/read/': {
             title: 'Hint:',
             message: 'To copy a link to a specific location, click at the end of the Pali line — there’s an invisible link there (the cursor will change to a hand pointer).'
         }

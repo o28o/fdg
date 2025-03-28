@@ -389,6 +389,21 @@ read\"
 " | md5checkwrite
 
 
+
+
+function sshtest {
+echo "server kz test vhost"
+ssh -p1000 root@94.126.201.8 "cd /var/www/test
+git pull
+"  
+}
+
+
+
+
+
+
+
 functionname=sshpull
 function sshpull {
 echo "server kz"
@@ -404,6 +419,8 @@ echo
 cd /var/www/html/assets/audio
 git pull"
 }
+
+
 
 echo "${functionname}
 echo 'server kz'

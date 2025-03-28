@@ -190,8 +190,10 @@ function createPopup() {
     openBtn.style.top = '10px';
     openBtn.style.right = '45px';
     openBtn.style.border = 'none';
-    openBtn.style.background = '#2D3E50';
-    openBtn.style.color = 'white';
+  //  openBtn.style.background = '#2D3E50';
+ //   openBtn.style.color = 'white';
+ openBtn.style.background = 'rgba(45, 62, 80, 0.6)'; // Прозрачность 80%
+openBtn.style.color = 'rgba(255, 255, 255, 0.8)'; // Белый с небольшим затемнением
     openBtn.style.cursor = 'pointer';
     openBtn.style.width = '30px';
     openBtn.style.height = '30px';

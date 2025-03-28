@@ -225,9 +225,9 @@ function getBaseUrl() {
     } else if (localStorage.defaultReader === 'rv') {
         baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/d";
+        baseUrl = window.location.origin + "/d/";
     } else if (localStorage.defaultReader === 'mem') {
-        baseUrl = window.location.origin + "/read/memorize.html";
+        baseUrl = window.location.origin + "/memorize/";
     } else if (localStorage.defaultReader === 'fr') {
         baseUrl = window.location.origin + "/read/fr.html";
     }
@@ -302,9 +302,9 @@ function getBaseUrl() {
     } else if (localStorage.defaultReader === 'rv') {
         baseUrl = window.location.origin + "/read/rv.html";
     } else if (localStorage.defaultReader === 'd') {
-        baseUrl = window.location.origin + "/d";
+        baseUrl = window.location.origin + "/d/";
     } else if (localStorage.defaultReader === 'mem') {
-        baseUrl = window.location.origin + "/read/memorize.html";
+        baseUrl = window.location.origin + "/memorize/";
     } else if (localStorage.defaultReader === 'fr') {
         baseUrl = window.location.origin + "/read/fr.html";
     }
@@ -380,8 +380,8 @@ function updateDemoLinks() {
   const demoLinks = {
     stDemo: baseUrl, // Используем baseUrl для stDemo
     mlDemo: window.location.origin + "/ml/",
-    dDemo: window.location.origin + "/d",
-    memDemo: window.location.origin + "/read/memorize.html",
+    dDemo: window.location.origin + "/d/",
+    memDemo: window.location.origin + "/memorize/",
     rvDemo: window.location.origin + "/read/rv.html",
     frDemo: window.location.origin + "/read/fr.html"
   };
@@ -530,7 +530,7 @@ document.addEventListener("keydown", (event) => {
     let params = currentUrl.split('?')[1] || '';
 
     // Шаг 3: Собираем новый URL
-    let newUrl = `${base}/read/mlth.html${params ? `?${params}` : ''}`;
+    let newUrl = `${base}/mlth/${params ? `?${params}` : ''}`;
 
     if (newUrl !== currentUrl) { // Проверяем, изменился ли URL
       history.pushState(null, "", newUrl); // Добавляем запись в историю

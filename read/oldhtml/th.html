@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-control" content="public">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dhamma.gift Read Devanagari Mode</title>
+    <title>Dhamma.gift Read</title>
 <link rel="canonical" href="https://dhamma.gift/read/">
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
@@ -18,16 +18,15 @@
         content="/favicon.png" />
         
 <meta property="og:url" content="/sc" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favico_black.png">     
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favico_black.png"> 
 
 <link href="/assets/css/styles.css" rel="stylesheet" />
 
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/thai.css">
-<link rel="stylesheet" href="./css/uiextra.css">
+            <link rel="stylesheet" href="./css/index.css">
+            <link rel="stylesheet" href="./css/uiextra.css">
 <link href="/assets/css/paliLookup.css" rel="stylesheet" />
-
 
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
@@ -37,7 +36,7 @@
 </head>
 
 <body class="dark">
- <form id="form" class="ui-widget mb-2">
+<form id="form" class="ui-widget mb-2">
     <label class="sr-only dropup rounded-pill mb-2" for="paliauto"></label>
     <input class="mb-2" id="paliauto" type="search" placeholder="Try sn56.11"><input class="go-button mb-2" type="submit" value="Go">
     <div id="form-div" class="">
@@ -97,6 +96,7 @@
         <div id="previous"></div>
         <div id="next"></div>
     </div>
+
 <!-- Модальное окно "Помощь" -->
 <div class="modal fade" id="paliLookupInfo" tabindex="-1" aria-labelledby="paliLookupInfoLabel" aria-hidden="true" data-bs-focus="false">
     <div class="modal-dialog modal-dialog-centered">
@@ -169,7 +169,7 @@
                         <div class="col-auto"><strong>Ctrl + ← →</strong></div>
                         <div class="col">Previous/Next Text</div>
                     </div>
-   <div class="row align-items-center mb-2">
+                                            <div class="row align-items-center mb-2">
         <div class="col-auto"><strong>Alt + L </strong></div>
         <div class="col">Switch Pali script</div>
     </div>      
@@ -272,7 +272,7 @@
                 </div>
                 
                                        <div class="mb-2">
-                    <!-- Дропдаун для ыбора системы письма -->
+                    <!-- Дропдаун для выбора системы письма -->
                     <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
                     <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
                         <option value="standalonebw">DPD Built-in</option>
@@ -284,12 +284,16 @@
                         <option value="dictTango">DictTango Android</option>
                     </select> <a href="/assets/common/dictHelp.html">?</a>   
                 </div>   
+                
+                <div class="mb-2">
 <div class="d-flex">
   <label class="form-check-label me-2" for="removePunctCheckbox">
-    <h5 class="mb-0">Remove Punctuation from Pali</h5>
+    <h5 class="mb-0">Remove punctuation from Pali</h5>
   </label>
   <input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">
 </div>
+
+                </div>
                 <h5 style="text-align: left;">Select Reading Mode:</h5>
                 <div class="container">
                     <!-- Standard -->
@@ -381,18 +385,22 @@
         </div>
     </div>
 </div>
-    <div class="" id="sutta"> 
-    <!-- class=" flip-horizontal reverse-order" -->
+
+    <div id="sutta">
     </div>
     <hr>
     <div id="navigation" class="navigation">
         <div id="previous2"></div>
         <div id="next2"></div>
     </div>
+    
+
+<script src="/assets/js/paliLookup.js"></script>
+
 
     <div class="links-area" style="text-align: center;">
         <a href="../" title="Sutta and Vinaya search" rel="noreferrer"
-            ><img width="20px" alt="Dhamma.gift icon" src="/assets/img/gray.png"></a>
+            ><img width="24px" alt="Dhamma.gift icon" src="/assets/img/gray.png"></a>
       
 <a href="/assets/makelist.html" title="Create Lists" rel="noreferrer">
 	<svg fill="#383838" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -413,21 +421,22 @@
 </svg>		
 			</a>
 <a href="/assets/diff" title="Compare two suttas" rel="noreferrer"
-            ><img width="20px" alt="Diff icon" src="/read/images/favicon-black.png"></a>
- <a href="/ru/history.php" title="Search Histpry" rel="noreferrer"
+            ><img width="20px" alt="Diff icon" src="/assets/img/read/favicon-black.png"></a>
+            
+ <a href="/history.php" title="Search Histpry" rel="noreferrer"
             ><img width="20px" alt="History icon" src="/assets/svg/clock-rotate-left.svg"></a>           
 
-<a href="/ru/assets/linebyline.html" class="dynamic-link" title="Create Pali-Russ translation files" rel="noreferrer">
+
+<a href="/assets/linebylineth.html" class="dynamic-link" title="Create Pali-Thai translation files" rel="noreferrer">
         <img width="20px" alt="JSON Formatter icon" src="/assets/svg/table-columns.svg">
     </a>
-  	  <script src="./js/urlForLbl.js"defer></script>
-  	  <script src="/assets/js/paliLookup.js"defer></script>
+ 	  <script src="./js/urlForLbl.js"defer></script>
+
         <a id="shareOnline" onclick="copyToClipboard()" title="Copy fdg url Suttas" rel="noreferrer" target=""><img
                 height="20px" alt="" src="/assets/svg/copy.svg"></a>
-      
+                
         <!--        <a id="shareT2SElement" onclick="copyToClipboard(127)" title="Copy t2s url" rel="noreferrer" target=""><img
                 height="20px" alt="" src="/assets/svg/solid-copy.svg"></a>     -->   
-                
         <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer" target="_blank"><img
                 width="20px" src="./images/favicon-citaton-helper-black.png" alt="Citation Lookup tool icon"></a>
         <a href="https://index.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer"
@@ -441,9 +450,8 @@
         <a href="https://github.com/o28o/fdg#readme" title="The source code for this site" rel="noreferrer"
             target="_blank"><img width="20px" src="./images/GitHub-Mark-64px-black.png" alt="GitHub icon"></a>
     </div>
-    
-        <div style="text-align: center;" id="copyrightnote">
-<div class="container"> <small><a target="_blank" rel="license" href="/#copyrightnote">Copyright Info</a> &copy; Dhamma.gift 2022</a>-<span id="date"></span></small> <button class="btn btn-secondary text-center installButton" id="" style="display:none;"><?php echo $installpwa;?></button></div>
+  <div style="text-align: center;" class="text-muted" id="copyrightnote">
+<div class="container"> <small><a target="_blank" rel="license" href="/#copyrightnote" >Copyright Info</a> &copy; Dhamma.gift 2022</a>-<span id="date"></span></small> <button class="btn btn-secondary text-center installButton" id="" style="display:none;"><?php echo $installpwa;?></button></div>
         </div>    
         <script>
   const now = new Date();
@@ -451,26 +459,25 @@
   document.getElementById("date").textContent = formattedDate;
 </script>       
     <script src="/assets/js/linksdpr.js"></script>
-<!--   -->   <script src="/assets/js/switchView.js"></script>
+    <script src="/assets/js/switchView.js"></script>
 
                 <script src="/assets/js/linksru.js"></script>
         <script src="/assets/js/openRu.js"></script>
         <script src="/assets/js/linksbw.js"></script>
                 <script src="/assets/js/openBw.js"></script>
-    <script src="./js/devanagari.js"></script>
-
+                
+    <script src="./js/reader-th.js"></script>
+	
 	  <script src="/assets/js/smoothScroll.js"defer></script>
-    
     <script src="/assets/js/randPlaceholder.js"></script>
     <script>
     var theLanguage = $('html').attr("lang");
       randPlaceholder("en");
-    </script>  
-<!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=X8U4dR8x"></script>
- -->
+    </script>
+ 
 </body>
-<!-- <script>
-
+ <!--   <script>
+   <script src="https://code.responsivevoice.org/responsivevoice.js?key=X8U4dR8x"></script>
   // Function to reset all form elements
 function resetForm() {
   document.getElementById("paliauto").value = "";
@@ -573,24 +580,9 @@ input.setSelectionRange(input.value.length, input.value.length);
 </script> -->
 <script src="/assets/js/autopali.js"></script>
 
-<!-- <script>
-$(document).ready(function() {
-  // Обработчик для нажатия клавиши Enter
-  $(document).on('keydown', function(event) {
-    if (event.key === 'Enter') {
-      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
-     $('#navbarResponsive').collapse('hide');
-    }
-  });
 
-  // Обработчик для отправки формы
-  $('#searchbtn').on('click', function() {
-    $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
-          $('#navbarResponsive').collapse('hide');
-  });
-});
-</script> -->
-<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+
+ <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script> 
 <script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/copyToClipboard.js"></script>
 <script>
@@ -602,7 +594,7 @@ window.addEventListener("load", function() {
 
         let params = new URLSearchParams(document.location.search);
         let finder = params.get("s");
-        //finder = finder.replace(/\\b/g, '');
+       // finder = finder.replace(/\\b/g, '');
         let query = params.get("q");
         let url = document.location.href;
 

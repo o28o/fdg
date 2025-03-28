@@ -84,15 +84,24 @@ if (visitCount === targetVisitForRead) {
   
   
 function showHint(settings) {
-    // Получаем текст для текущей страницы
     const hintText = getHintTextForCurrentPage(settings);
-    
-    // Если подсказка для текущей страницы не найдена - ничего не делаем
     if (!hintText) return;
     
-    // Создаем уникальный ключ для текущего пути
-    const hintKey = `hintShown_${window.location.pathname}`;
+    // Определяем ключ
+    let hintKey;
+    const path = window.location.pathname;
     
+    if (path.includes('/read/') || path.includes('/r/')) {
+        hintKey = 'hintShown_read_mode';
+    } 
+    else if (path.includes('/result/')) {
+        hintKey = 'hintShown_result_mode';
+    }
+    else {
+        return; // Не показываем для других путей
+    }
+  
+
     if (!localStorage.getItem(hintKey)) {
         // Создаем уведомление
         const notification = document.createElement('div');

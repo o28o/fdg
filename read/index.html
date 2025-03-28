@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Cache-control" content="public">
@@ -18,14 +19,26 @@
 <link rel="canonical" href="https://dhamma.gift/read/">
     <meta property="og:site_name" content="Dhamma.gift/read/" />
         
-<meta property="og:url" content="/sc" />
+
+<meta property="og:url" content="Dhamma.gift/read" />
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favico_black.png"> 
+
+<style>
+    body {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    }
+</style>
+<script src="/read/js/loadAssets.js"></script>
+
+
 
 <link href="/assets/css/styles.css" rel="stylesheet" />
 
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
-            <link rel="stylesheet" href="./css/index.css">
+          <!--  <link rel="stylesheet" href="./css/index.css"> -->
          <link rel="stylesheet" href="./css/uiextra.css">
 <link href="/assets/css/paliLookup.css" rel="stylesheet" />
 
@@ -416,7 +429,7 @@
 </svg>		
 			</a>
 <a href="/assets/diff" title="Compare two suttas" rel="noreferrer"
-            ><img width="20px" alt="Diff icon" src="/read/images/favicon-black.png"></a>
+            ><img width="20px" alt="Diff icon" src="/assets/img/read/favicon-black.png"></a>
             
  <a href="/history.php" title="Search Histpry" rel="noreferrer"
             ><img width="20px" alt="History icon" src="/assets/svg/clock-rotate-left.svg"></a>           
@@ -462,7 +475,7 @@
         <script src="/assets/js/linksbw.js"></script>
                 <script src="/assets/js/openBw.js"></script>
                 
-    <script src="./js/index.js"></script>
+  <!--  <script src="./js/index.js"></script> -->
 	
 	  <script src="/assets/js/smoothScroll.js" ></script>
    <!--  <script src="/assets/js/randPlaceholder.js" defer></script>

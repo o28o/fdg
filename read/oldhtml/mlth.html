@@ -6,9 +6,8 @@
     <meta http-equiv="Cache-control" content="public">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dhamma.gift Read Memorize</title>
+    <title>Dhamma.gift Read Multilang Thai</title>
 <link rel="canonical" href="https://dhamma.gift/read/">
-
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
  <!--   <script>  var link = document.createElement('meta');  link.setAttribute('property', 'og:title');  link.content = document.title;  document.getElementsByTagName('head')[0].appendChild(link);</script> -->   
@@ -18,14 +17,18 @@
     <meta property="og:image" itemprop="image"
         content="/favicon.png" />
         
-<meta property="og:url" content="/read/" />
+<meta property="og:url" content="/sc" />
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favico_black.png">     
 
+
+
+
 <link href="/assets/css/styles.css" rel="stylesheet" />
-     
+
+
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/rus-multi.css">
+    <link rel="stylesheet" href="./css/thai-multi.css">
      <link rel="stylesheet" href="./css/uiextra.css">
      <link href="/assets/css/paliLookup.css" rel="stylesheet" />
 
@@ -91,8 +94,7 @@
             </a>
         </div>
     </div>
-</form>
-<br>
+</form><br>
     <div id="navigation" class="navigation">
         <div id="previous"></div>
         <div id="next"></div>
@@ -117,7 +119,7 @@
                         <div class="col-auto">
                             <button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button>
                         </div>
-                        <div class="col-auto"><strong>Alt+Space</strong></div>
+                        <div class="col-auto"><strong>Alt+Space or Alt+Z</strong></div>
                         <div class="col">Switch language</div>
                     </div>
                     <div class="row align-items-center mb-2">
@@ -170,6 +172,16 @@
                         <div class="col-auto"><strong>Ctrl + ← →</strong></div>
                         <div class="col">Previous/Next Text</div>
                     </div>
+                                            <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt + L </strong></div>
+        <div class="col">Switch Pali script</div>
+    </div>      
+
+    <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt + . </strong></div>
+        <div class="col">Disable-enable punctuation in Pali </div>
+    </div>      
+
                 </div>
 
                 <!-- Hidden Section -->
@@ -261,7 +273,8 @@
                         <option value="Thai">Thai</option>
                     </select>
                 </div>
-               <div class="mb-2">
+                
+                                       <div class="mb-2">
                     <!-- Дропдаун для выбора системы письма -->
                     <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
                     <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
@@ -273,20 +286,6 @@
                         <option value="searchonly">Search Only</option>
                         <option value="dictTango">DictTango Android</option>
                     </select> <a href="/assets/common/dictHelp.html">?</a>   
-                </div>   
-
-                
-                                       <div class="mb-2">
-                    <!-- Дропдаун для выбора системы письма -->
-                    <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
-                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
-                        <option value="dpdFull">DPD full </option>
-                        <option value="dpdCompact">DPD compact </option>
-            
-              <option value="dpdFullRu">DPD full Rus</option>
-                        <option value="dpdCompactRu">DPD compact Rus</option>
-                        <option value="dictTango">DictTango Android</option>
-                    </select>
                 </div>   
                 
                 <div class="mb-2">
@@ -389,7 +388,7 @@
         </div>
     </div>
 </div>
-    
+
     <div class="" id="sutta"> 
     <!-- class=" flip-horizontal reverse-order" -->
     </div>
@@ -398,6 +397,11 @@
         <div id="previous2"></div>
         <div id="next2"></div>
     </div>
+
+
+<script src="/assets/js/paliLookup.js"></script>
+
+
 
     <div class="links-area" style="text-align: center;">
         <a href="../" title="Sutta and Vinaya search" rel="noreferrer"
@@ -422,15 +426,15 @@
 </svg>		
 			</a>
 <a href="/assets/diff" title="Compare two suttas" rel="noreferrer"
-            ><img width="20px" alt="Diff icon" src="/read/images/favicon-black.png"></a>
+            ><img width="20px" alt="Diff icon" src="/assets/img/read/favicon-black.png"></a>
  <a href="/ru/history.php" title="Search Histpry" rel="noreferrer"
             ><img width="20px" alt="History icon" src="/assets/svg/clock-rotate-left.svg"></a>           
 
-<a href="/ru/assets/linebyline.html" class="dynamic-link" title="Create Pali-Russ translation files" rel="noreferrer">
+<a href="/ru/assets/linebylineth.html" class="dynamic-link" title="Create Pali-Russ translation files" rel="noreferrer">
         <img width="20px" alt="JSON Formatter icon" src="/assets/svg/table-columns.svg">
     </a>
   	  <script src="./js/urlForLbl.js"defer></script>
-  	  <script src="/assets/js/xpaliLookup.js"defer></script>
+
         <a id="shareOnline" onclick="copyToClipboard()" title="Copy fdg url Suttas" rel="noreferrer" target=""><img
                 height="20px" alt="" src="/assets/svg/copy.svg"></a>
       
@@ -461,16 +465,17 @@
 </script>       
     <script src="/assets/js/linksdpr.js"></script>
 <!--   -->   <script src="/assets/js/switchView.js"></script>
-
+<!--  <script src="/assets/js/showHideHelp.js"></script>
+ -->   
                 <script src="/assets/js/linksru.js"></script>
         <script src="/assets/js/openRu.js"></script>
         <script src="/assets/js/linksbw.js"></script>
                 <script src="/assets/js/openBw.js"></script>
-    <script src="./js/memorize.js"></script>
+    <script src="./js/multilang-th.js"></script>
 
 	  <script src="/assets/js/smoothScroll.js"defer></script>
     
-    <script src="/assets/jsrandPlaceholder.js"></script>
+    <script src="/assets/js/randPlaceholder.js"></script>
     <script>
     var theLanguage = $('html').attr("lang");
       randPlaceholder("en");

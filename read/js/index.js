@@ -64,12 +64,12 @@ function buildSutta(slug) {
     }
   }
 
-console.log('texttype ' + texttype + ' translator ' + translator);
+// console.log('texttype ' + texttype + ' translator ' + translator);
 
   let html = `<div class="button-area"><button id="language-button" class="hide-button">Pāḷi Eng</button></div>`;
   
   const slugReady = parseSlug(slug);
-  console.log("slugReady is " + slugReady + " slug is " + slug); 
+  // console.log("slugReady is " + slugReady + " slug is " + slug); 
 
 let params = new URLSearchParams(document.location.search);
  let script = params.get("script");
@@ -119,7 +119,7 @@ var rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slug}
   
     var trnpath = `/assets/texts/${texttype}/${slug}_translation-en-brahmali.json`;
     var htmlpath = `/assets/texts/${texttype}/${slug}_html.json`;
-    console.log(rootpath, trnpath, htmlpath);
+  //  console.log(rootpath, trnpath, htmlpath);
 } else {
   var trnpath = `${Sccopy}/sc-data/sc_bilara_data/translation/${pathLang}/${translator}/${texttype}/${slugReady}_translation-${pathLang}-${translator}.json`;
 }
@@ -135,7 +135,7 @@ const rootResponse = fetch(rootpath)
     return response.json();
   })
   .catch(error => {
-    console.log('note: no root found, trying alternative path');
+  console.log('note: no root found, trying alternative path');
     // Переключаем на второй путь
     rootpath = `${Sccopy}/sc-data/sc_bilara_data/root/pli/ms/${texttype}/${slugReady}_root-pli-ms.json`;
     // Делаем новый запрос по второму пути
@@ -147,7 +147,7 @@ const rootResponse = fetch(rootpath)
         return response.json();
       })
       .catch(error => {
-        console.log('note: no alternative root found either');
+       console.log('note: no alternative root found either');
         return {}; // Возвращаем пустой объект, если оба пути недоступны
       });
   });
@@ -269,7 +269,7 @@ ${varData[segment].trim()}
 });
 
 
-console.log('texttype ' + texttype + ' translator ' + translator);
+//console.log('texttype ' + texttype + ' translator ' + translator);
 if (translator === "o") {
   translatorforuser = '<a href=/assets/texts/o.html>o</a> from Pali';
 } else if (translator === "sv") {
@@ -290,7 +290,7 @@ if (translator === "o") {
 	translatorforuser = translator ;
 }
 
-console.log('texttype ' + texttype + ' translator ' + translator);
+//console.log('texttype ' + texttype + ' translator ' + translator);
 
 //const translatorCapitalized = translator.charAt(0).toUpperCase() + translator.slice(1);
 
@@ -373,7 +373,7 @@ function findTextUrl(nikaya, subdivision, textnum) {
 }
 
 let textUrl = getTextUrl(slug);
-console.log("Ссылка на", slug + ":", textUrl);
+// console.log("Ссылка на", slug + ":", textUrl);
 if (textUrl) {
 scLink += `<a target="" href="${textUrl}">DPR</a>&nbsp;`;
 }
@@ -526,7 +526,7 @@ if (lang) {
     setLanguage(lang);
   } else if  (localStorage.paliToggle) {
     	language = localStorage.paliToggle; 
-		  console.log('read from ls ' + language);
+		//  console.log('read from ls ' + language);
 setLanguage(language);
   }
 } else {
@@ -701,7 +701,7 @@ if (
   slug === 'pli-tv-bi-vb-as1-7'
 ) {
   const slugParts = slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/);
-  console.log('as case');
+//  console.log('as case');
   const fixforbivb = slug.replace(/(\d+)-(\d+)/g, '');
   const bookWithoutNumber = fixforbivb.replace(/(\d+)/g, '');
   const fixforbivb2 = slug.replace(/-([a-z]+)\d+/g, '');
@@ -726,7 +726,7 @@ else if  (slug.match(/^([a-z]+)-([a-z]+)-([a-z]+)*(\d*)/)){
   const slugParts = slug.match(/^([a-z]+)(\d*)\.*(\d*)/);
   const book = slugParts[1];
   const firstNum = slugParts[2];
-console.log(book,firstNum );
+// console.log(book,firstNum );
   if (book === "dn" || book === "mn") {
     return `${book}/${slug}`;
   } else if (book === "sn" || book === "an") {

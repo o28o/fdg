@@ -73,9 +73,9 @@ if (div) {
         const isLocalhost = window.location.hostname.match(/localhost|127\.0\.0\.1/);
         const timeout = isLocalhost ? 500 : 2500; 
 
-        console.log("Параметры в URL:", window.location.search);
-        console.log("Якорь:", window.location.hash);
-        console.log("Прокручиваем вниз через", timeout, "миллисекунд");
+   //     console.log("Параметры в URL:", window.location.search);
+    //    console.log("Якорь:", window.location.hash);
+   //     console.log("Прокручиваем вниз через", timeout, "миллисекунд");
 
         // Прокручиваем страницу на 500 пикселей вниз с задержкой
         setTimeout(function() {

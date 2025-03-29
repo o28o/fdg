@@ -98,11 +98,6 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 </style>
 
 <?php echo $fontawesomejs;?> 
-
-
-     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_deconstructor.js" as="script">
-     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_ebts.js" as="script">
-     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_i2h.js" as="script">
    </head>
 
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->

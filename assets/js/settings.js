@@ -109,7 +109,7 @@ localStorage.setItem('selectedScript', 'ISOPali');
 
 
 
-
+if (applyButton) {
   // Обработка нажатия на кнопку "Применить"
   applyButton.addEventListener('click', function() {
     const selectedScript = scriptSelect.value;
@@ -131,7 +131,7 @@ applySavedDict(selectedDict);
 checkAndUpdateUrl();
 //location.reload(true);    
   });
-
+}
 
   // Функция для применения сохраненного значения
 function applySavedDict(dict) {
@@ -156,7 +156,8 @@ function applySavedDict(dict) {
       window.location.href = url.toString();
     }
   }
-  
+ 
+ if (resetButton) { 
   resetButton.addEventListener('click', function() {
   // Удаляем значения из localStorage для всех чекбоксов
   document.querySelectorAll(".setting-checkbox").forEach(checkbox => {
@@ -186,7 +187,7 @@ function applySavedDict(dict) {
   // Перезагружаем страницу с обновленным URL
   window.location.href = url.toString();
 });
-
+}
 
 //Default readers
 /* dropdown variant

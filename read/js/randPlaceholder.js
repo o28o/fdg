@@ -2,9 +2,27 @@ function randPlaceholder(theLanguage) {
 
           if ( theLanguage === "en") {
 
-            tasks = ["Start with Sn56.11", "Read sn22.79", "Think about mn28", "Practice in dn22", "Dukkha defined in dn22", "Saṅkhārā in mn44", "For example sn12.2", "Practices in an4.162", "Practices in an4.163", "\"The all\" is in sn35.23"]; 
+            tasks = ["Start with Sn56.11", 
+            "Read sn22.79", 
+            "Ponder on mn28", 
+            "Practice is in dn22", 
+            "Dukkha defined in dn22", 
+            "Saṅkhārā are in mn44", 
+            "For example sn12.2", 
+            "Practices are in an4.162", 
+            "Practices are in an4.163", 
+            "\"The all\" is in sn35.23"]; 
           } else if  ( theLanguage === "ru") {
-            tasks = ["Начните с Sn56.11", "Прочтите sn22.79", "Подумайте над mn28", "Практика в dn22", "Dukkha в dn22", "Saṅkhārā в mn44", "К примеру sn12.2", "Практики в an4.162", "Практики в an4.163", "\"Всё\" в sn35.23"];
+            tasks = ["Начните с Sn56.11", 
+            "Прочтите sn22.79", 
+            "Подумайте над mn28", 
+            "Практика в dn22", 
+            "Dukkha в dn22", 
+            "Saṅkhārā в mn44", 
+            "К примеру sn12.2", 
+            "Практики в an4.162", 
+            "Практики в an4.163", 
+            "\"Всё\" в sn35.23"];
           }
 
 const random = Math.floor(Math.random() * tasks.length);

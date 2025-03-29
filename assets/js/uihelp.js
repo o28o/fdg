@@ -66,6 +66,8 @@ if (visitCount === targetVisitForRead) {
     });
 }
 
+
+  if (infoUpdate) {
     // Проверяем, если это целевое посещение и окно не было закрыто ранее
     if (visitCount === targetVisitForPWA && !localStorage.getItem("PWAinstallMessage")) {
      // window.location.hash = ''
@@ -73,7 +75,7 @@ if (visitCount === targetVisitForRead) {
     }
 
     // Добавляем обработчик события для кнопки закрытия
-  if (infoUpdate) {
+
     infoUpdate.querySelector(".btn-close").addEventListener("click", function () {
         // Сохраняем в localStorage информацию о закрытии окна
         localStorage.setItem("PWAinstallMessage", "true");

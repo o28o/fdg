@@ -22,6 +22,7 @@ alias ll="ls -ahtr"
 alias lls="ll | sort -V"
 alias grep="grep --color"
 alias apa="cd $basedir"
+alias tst="cd /var/www/test"
 
 #SC relate
 alias roottxt="cd $basedir/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms"

@@ -2,7 +2,7 @@
     window.addEventListener('DOMContentLoaded', function() {
       var hash = window.location.hash;
   const isLocalhost = window.location.hostname.match(/localhost|127\.0\.0\.1/);
-const timeout = isLocalhost ? 500 : 3500; 
+const timeout = isLocalhost ? 500 : 2500; 
 //console.log(timeout);
       if (hash) {
         setTimeout(function() {

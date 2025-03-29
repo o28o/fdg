@@ -532,15 +532,15 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 ';
 
 $defaults = '<br><div class="text-start">
-<h5 >Интерфейс для Чтения</h5>
+<h5 >Выбрать режим Чтения по-умолчанию</h5>
 <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс 
 <a href="/r/?q=sn56.11">демо</a>
 <br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/ml/?q=sn56.11">демо</a><br>
- <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/read/d.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/read/memorize.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх (слова не изменены) <a href="/read/rv.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/read/fr.html?q=sn56.11">демо</a><br>  
+ <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/d/?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/memorize/?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх (слова не изменены) <a href="/rev/?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/frev/?q=sn56.11">демо</a><br>  
 </div>';
  
 
@@ -924,15 +924,15 @@ Please, create an issue on github or send an email, if you\'ll find other criter
 
 
 $defaults = '<br><div class="text-start">
-<h5>Reading Interface</h5>
+<h5>Choose defauld Reading Mode</h5>
 <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Standard</strong> - Two languages - Pali, English 
 <a href="/r/?q=sn56.11">demo</a>
 <br>
 <input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Multilang</strong> - Three languages - Pali, Russian, English <a href="/read/ml.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Devanagari"</strong> - Devanagari or Thai script and Romanized Pali <a href="/read/d.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Memorization Trainer</strong> - Text reduced to the first letters of each word <a href="/read/memorize.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Reverse</strong> - Text from bottom to top, right to left (words unchanged) <a href="/read/rv.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Full Reverse</strong> - Same as above (words left to right) <a href="/read/fr.html?q=sn56.11">demo</a><br>  
+<input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Devanagari"</strong> - Devanagari or Thai script and Romanized Pali <a href="/d/?q=sn56.11">demo</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Memorization Trainer</strong> - Text reduced to the first letters of each word <a href="/memorize/?q=sn56.11">demo</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Reverse</strong> - Text from bottom to top, right to left (words unchanged) <a href="/rev/?q=sn56.11">demo</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Full Reverse</strong> - Same as above (words left to right) <a href="/frev/?q=sn56.11">demo</a><br>  
 </div>';
 
 $closemodal = 'Close Window';

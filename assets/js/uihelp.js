@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var infoUpdate = document.getElementById("infoUpdate");
 
     // Целевые посещения
-    var targetVisit = 10;
-    var targetVisitForPWA = 4;
-    var targetVisitForGear = 7;
-    var targetVisitForRead = 5;
+    var targetVisit = 15;
+    var targetVisitForPWA = 7;
+    var targetVisitForGear = 13;
+    var targetVisitForRead = 10;
     var extraTimes = 0;
 
     // Получаем текущее количество посещений из localStorage

@@ -29,6 +29,21 @@ RewriteRule ^ru/(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /r/?q=$1 [R=301
 
 Redirect 301 /ru.php /ru/
 
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|woff2?)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    <FilesMatch "\.(html|json)$">
+        Header set Cache-Control "public, max-age=84000"
+    </FilesMatch>
+</IfModule>
+
+
+
+
+
 # GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
 
 <IfModule mod_deflate.c>

@@ -94,9 +94,9 @@ function showHint(settings) {
     if (path.includes('/read/') || path.includes('/r/')) {
         hintKey = 'hintShown_read_mode';
     } 
-    else if (path.includes('/result/')) {
-        hintKey = 'hintShown_result_mode';
-    }
+else if (path.includes('/result/') || searchParams.get('q')?.trim()) {
+    hintKey = 'hintShown_result_mode';
+}
     else {
         return; // Не показываем для других путей
     }

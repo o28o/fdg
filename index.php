@@ -87,12 +87,12 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 <link href="/assets/css/paliLookup.css" rel="stylesheet" />
 
 -->
-<link rel="stylesheet" href="/assets/css/jquery-ui.min.css" media="print" onload="this.onload=null;this.media='all';">
+<link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
 <link href="/assets/css/styles.css" rel="stylesheet" />
 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
-<script src="/assets/js/jquery-ui.min.js" defer></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
 
 <style>
 </style>

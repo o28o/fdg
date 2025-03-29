@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
   
-
-
     function getModeFromPath() {
         const path = window.location.pathname.split('/').filter(Boolean);
         return path[0] || "read";

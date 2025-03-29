@@ -99,14 +99,17 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 
 <?php echo $fontawesomejs;?> 
 
-</head>
 
+     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_deconstructor.js" as="script">
+     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_ebts.js" as="script">
+     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_i2h.js" as="script">
+   </head>
 
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
   <script>
 const url = new URL(window.location);
-const s = new URLSearchs(url.search);
+const s = new URLSearchParams(url.search);
 
 // Удаляем параметры, которые пустые или содержат только пробелы
 for (let key of [...s.keys()]) {
@@ -116,7 +119,7 @@ for (let key of [...s.keys()]) {
 }
 
 // Получаем текущий якорь
-//const currentHash = window.location.hash;
+const currentHash = window.location.hash;
 
 // Обновляем URL без перезагрузки, если есть изменения, и сохраняем якорь
 const newUrl = url.pathname + (s.toString() ? "?" + s.toString() : "") + currentHash;

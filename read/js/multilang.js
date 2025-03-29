@@ -527,13 +527,14 @@ const warning = "<p class='warning'>Внимание!<a style='cursor: pointer;'
 suttaArea.innerHTML =  scLink + warning + translatorByline + html + translatorByline + warning + scLink ;  
 
  
- const pageTitleElement = document.querySelector("h1");
+const pageTitleElement = document.querySelector("h1");
+if (pageTitleElement) {
 let pageTitleText = pageTitleElement.textContent;
 pageTitle = pageTitleText.replace(/[0-9.]/g, '');
 
 slug = slug.replace(/pli-tv-|vb-/g, '');
 document.title = `${slug} ${pageTitle}`;
-    
+}
 
 
 var metaDescription = document.createElement('meta');

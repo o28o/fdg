@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.defaultReader === 'ml') {
         baseUrl = window.location.origin + "/ml/";
     } else if (localStorage.defaultReader === 'rv') {
-        baseUrl = window.location.origin + "/read/rv.html";
+        baseUrl = window.location.origin + "/rv/";
     } else if (localStorage.defaultReader === 'd') {
         baseUrl = window.location.origin + "/d/";
     } else if (localStorage.defaultReader === 'mem') {
         baseUrl = window.location.origin + "/memorize/";
     } else if (localStorage.defaultReader === 'fr') {
-        baseUrl = window.location.origin + "/read/fr.html";
+        baseUrl = window.location.origin + "/frev/";
     } 
 
 

@@ -118,8 +118,8 @@ var htmlpath = `${Sccopy}/sc-data/sc_bilara_data/html/pli/ms/${texttype}/${slugR
 
 const mlUrl  = window.location.href;
 
-const ruUrl = mlUrl.replace("/read/rv.html", "/r/");
-const enUrl = mlUrl.replace("/read/rv.html", "/read/");
+const ruUrl = mlUrl.replace("/rev/", "/r/");
+const enUrl = mlUrl.replace("/rev/", "/read/");
 //let ifRus = `<a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
 
 let scLink = `<p class="sc-link"><a target="" href="${ruUrl}">Ru</a>&nbsp;<a target="" href="${enUrl}">En</a>&nbsp;`;
@@ -436,15 +436,15 @@ if ((translator === 'sujato') || (translator === 'brahmali')) {
 
 const origUrl = window.location.href;
 let rvUrl = origUrl.replace("/r/", "/read/");
-rvUrl = rvUrl.replace("rv.html", "");
-rvUrl = rvUrl.replace("/read/", "/read/rv.html");
+rvUrl = rvUrl.replace("/rev/", "");
+rvUrl = rvUrl.replace("/read/", "/rev/");
 
-frUrl = origUrl.replace("rv.html", "fr.html");
+frUrl = origUrl.replace("/rev/", "/frev/");
 
 thUrl = origUrl.replace("/read/", "/th/read/");
-dUrl = origUrl.replace("/read/rv.html", "/d");
+dUrl = origUrl.replace("/rev/", "/d");
 
-rvorigUrl = origUrl.replace("fr.html", "rv.html");
+rvorigUrl = origUrl.replace("/frev/", "/rev/");
 
 const rvfr = "<a class='text-decoration-none' target='' href='" + frUrl + "'>&nbsp;</a>";
 
@@ -464,14 +464,15 @@ revhtml = html.split(lineBreak).reverse().join(lineBreak)
 
 suttaArea.innerHTML =  scLink + warning + translatorByline + revhtml + translatorByline + warning + scLink ;  
 
- 
- const pageTitleElement = document.querySelector("h1");
+ /*
+const pageTitleElement = document.querySelector("h1");
 let pageTitleText = pageTitleElement.textContent;
 pageTitle = pageTitleText.replace(/[0-9.]/g, '');
 
 slug = slug.replace(/pli-tv-|vb-/g, '');
 document.title = `${slug} ${pageTitle}`;
-    
+
+*/ 
 
 
 var metaDescription = document.createElement('meta');

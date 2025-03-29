@@ -223,13 +223,13 @@ function getBaseUrl() {
     if (localStorage.defaultReader === 'ml') {
         baseUrl = window.location.origin + "/ml/";
     } else if (localStorage.defaultReader === 'rv') {
-        baseUrl = window.location.origin + "/read/rv.html";
+        baseUrl = window.location.origin + "/rev/";
     } else if (localStorage.defaultReader === 'd') {
         baseUrl = window.location.origin + "/d/";
     } else if (localStorage.defaultReader === 'mem') {
         baseUrl = window.location.origin + "/memorize/";
     } else if (localStorage.defaultReader === 'fr') {
-        baseUrl = window.location.origin + "/read/fr.html";
+        baseUrl = window.location.origin + "/frev/";
     }
 
     return baseUrl;
@@ -300,13 +300,13 @@ function getBaseUrl() {
     if (localStorage.defaultReader === 'ml') {
         baseUrl = window.location.origin + "/ml/";
     } else if (localStorage.defaultReader === 'rv') {
-        baseUrl = window.location.origin + "/read/rv.html";
+        baseUrl = window.location.origin + "/rev/";
     } else if (localStorage.defaultReader === 'd') {
         baseUrl = window.location.origin + "/d/";
     } else if (localStorage.defaultReader === 'mem') {
         baseUrl = window.location.origin + "/memorize/";
     } else if (localStorage.defaultReader === 'fr') {
-        baseUrl = window.location.origin + "/read/fr.html";
+        baseUrl = window.location.origin + "/frev/";
     }
 
     return baseUrl;
@@ -382,8 +382,8 @@ function updateDemoLinks() {
     mlDemo: window.location.origin + "/ml/",
     dDemo: window.location.origin + "/d/",
     memDemo: window.location.origin + "/memorize/",
-    rvDemo: window.location.origin + "/read/rv.html",
-    frDemo: window.location.origin + "/read/fr.html"
+    rvDemo: window.location.origin + "/rev/",
+    frDemo: window.location.origin + "/frev/"
   };
 
   // Обновляем ссылки

@@ -31,6 +31,7 @@ include 'scripts/opentexts.php';
 <link rel="alternate" href="https://dhamma.gift/ru/" hreflang="ru">
 <link rel="alternate" href="https://dhamma.gift/" hreflang="en">
 
+<!-- для PWA где нет адресной строки, но нужно установить язык по умолчанию.
 <script>
 // Проверяем значение siteLanguage в localStorage
 let siteLanguage = localStorage.getItem('siteLanguage');
@@ -58,7 +59,7 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 } else if (siteLanguage === 'en' && currentPath !== '/') {
     window.location.href = '/' + currentHash;
 }
-</script>
+</script> --> 
 <meta property="og:url" content="https://1Dhamma.gift" />
 <meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
@@ -105,12 +106,12 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
     <body id="page-top"> 
   <script>
 const url = new URL(window.location);
-const params = new URLSearchParams(url.search);
+const s = new URLSearchs(url.search);
 
 // Удаляем параметры, которые пустые или содержат только пробелы
-for (let key of [...params.keys()]) {
-    if (!params.get(key).trim()) { // Проверяем, если пусто или пробелы
-        params.delete(key);
+for (let key of [...s.keys()]) {
+    if (!s.get(key).trim()) { // Проверяем, если пусто или пробелы
+        s.delete(key);
     }
 }
 
@@ -118,16 +119,16 @@ for (let key of [...params.keys()]) {
 //const currentHash = window.location.hash;
 
 // Обновляем URL без перезагрузки, если есть изменения, и сохраняем якорь
-const newUrl = url.pathname + (params.toString() ? "?" + params.toString() : "") + currentHash;
+const newUrl = url.pathname + (s.toString() ? "?" + s.toString() : "") + currentHash;
 if (newUrl !== window.location.href) {
     history.replaceState(null, "", newUrl);
 }
 
-function updateURL(params) {
+function updateURL(s) {
     console.log("Before update:", location.href);
     // Добавляем якорь к обновляемому URL
     const currentHash = window.location.hash;
-    history.replaceState(null, "", `?q=${params.q}&s=${params.s}${currentHash}`);
+    history.replaceState(null, "", `?q=${s.q}&s=${s.s}${currentHash}`);
     console.log("After update:", location.href);
 }
 </script>

@@ -98,40 +98,44 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 </style>
 
 <?php echo $fontawesomejs;?> 
-     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_deconstructor.js" as="script">
-     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_ebts.js" as="script">
-     <link rel="prefetch" href="/assets/js/standalone-dpd/dpd_i2h.js" as="script">
-   </head>
+
+</head>
+
 
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
   <script>
 const url = new URL(window.location);
-const s = new URLSearchParams(url.search);
+const searchParams = new URLSearchParams(url.search);
 
 // Удаляем параметры, которые пустые или содержат только пробелы
-for (let key of [...s.keys()]) {
-    if (!s.get(key).trim()) { // Проверяем, если пусто или пробелы
-        s.delete(key);
+for (let key of [...searchParams.keys()]) {
+    if (!searchParams.get(key).trim()) {
+        searchParams.delete(key);
     }
 }
+
 
 // Получаем текущий якорь
 const currentHash = window.location.hash;
 
 // Обновляем URL без перезагрузки, если есть изменения, и сохраняем якорь
-const newUrl = url.pathname + (s.toString() ? "?" + s.toString() : "") + currentHash;
+const newUrl = url.pathname + (searchParams.toString() ? "?" + searchParams.toString() : "") + currentHash;
 if (newUrl !== window.location.href) {
     history.replaceState(null, "", newUrl);
 }
 
-function updateURL(s) {
+function updateURL(params) {
     console.log("Before update:", location.href);
-    // Добавляем якорь к обновляемому URL
-    const currentHash = window.location.hash;
-    history.replaceState(null, "", `?q=${s.q}&s=${s.s}${currentHash}`);
+    
+    const updatedParams = new URLSearchParams();
+    if (params.q) updatedParams.set("q", params.q);
+    if (params.s) updatedParams.set("s", params.s);
+    
+    history.replaceState(null, "", `?${updatedParams.toString()}${window.location.hash}`);
     console.log("After update:", location.href);
 }
+
 </script>
 
         <!-- Navigation-->

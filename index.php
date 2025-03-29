@@ -98,7 +98,10 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 </style>
 
 <?php echo $fontawesomejs;?> 
-
+<!-- Префетчим в фоновом режиме без блокировки -->
+<link rel="prefetch" href="/assets/js/standalone-dpd/dpd_deconstructor.js" as="script">
+<link rel="prefetch" href="/assets/js/standalone-dpd/dpd_ebts.js" as="script">
+<link rel="prefetch" href="/assets/js/standalone-dpd/dpd_i2h.js" as="script">
 </head>
 
 

@@ -180,3 +180,38 @@ margin-left: 6px;
   top: 20px;*/
   padding: 5px; 
 }
+
+
+
+   .bubble-notification {
+      position: fixed;
+      bottom: 8%;
+      left: 50%;
+      background: #136857;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 24px;
+      font-size: 14px;
+      opacity: 0;
+      transform: translate(-50%, 20px);
+      transition: all 0.3s ease;
+      z-index: 10000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+      max-width: 80%;
+      text-align: center;
+      white-space: nowrap;
+    }
+    
+    .bubble-notification.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+    
+    .bubble-notification::before {
+      content: "✓";
+      font-size: 16px;
+    }

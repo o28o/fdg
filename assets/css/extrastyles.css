@@ -795,8 +795,9 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
         overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*
+1, h2, h3, h4, h5, h6 {
   word-break: break-word;
   overflow-wrap: break-word;
 }
-
+*/

@@ -92,13 +92,13 @@ $dictType = 'https://dict.dhamma.gift';
 if ($server_name === 'localhost' || $server_name === '127.0.0.1') {
    $dictUrl = "dttp://app.dicttango/WordLookup?word=";
 } else {
-  $dictUrl = "${dictType}${langinurl}/search_html?q=";  
+  $dictUrl = "{$dictType}{$langinurl}/search_html?q=";  
 }
  
     
 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 echo "<script>
-window.open(`${dictUrl}${stringForWord}`, '_blank');
+window.open(`{$dictUrl}{$stringForWord}`, '_blank');
 </script>";
 exit();
 }

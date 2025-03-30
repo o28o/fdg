@@ -11,7 +11,6 @@ error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
 include 'scripts/opentexts.php';
-include 'scripts/multilang-search.php';
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
@@ -94,6 +93,9 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
+
+<style>
+</style>
 
 <?php echo $fontawesomejs;?> 
 </head>
@@ -228,6 +230,7 @@ if (isset($_GET['q'])) {
     <span class="visually-hidden"><?php echo $searchcaption;?></span>
 </button>
 </div>
+<script defer src="/assets/js/themeswitch.js"></script>
 
 </div>
 
@@ -506,7 +509,6 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
-<script src="/assets/js/themeswitch.js"></script>
 
 <script src="/assets/js/uihelp.js"></script>
 
@@ -529,8 +531,6 @@ window.addEventListener('pageshow', function(event) {
     document.getElementById('spinner').style.display = 'none';
   }
 });
-
-    document.getElementById('spinner').style.display = 'none';
 </script>
 
   <!-- extra options end -->
@@ -1295,7 +1295,7 @@ $(function () {
 </body>
 
 <?php
-
+include 'scripts/multilang-search.php';
 ?>  
 
 </html>

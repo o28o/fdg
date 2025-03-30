@@ -212,6 +212,6 @@ margin-left: 6px;
     }
     
     .bubble-notification::before {
-      content: "✓";
+      content: "";
       font-size: 16px;
     }

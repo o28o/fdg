@@ -136,7 +136,7 @@ margin-left: 6px;
   max-width: 105rem;
 }
 
-#sutta p {
+#sutta * {
   word-break: break-word;
         overflow-wrap: break-word;
 }

@@ -22027,6 +22027,7 @@ include $basedir . "/assets/texts/bipm.php";
         </div>
 
 
+<script src="/assets/js/themeswitch.js"></script>
 
         <!-- Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
@@ -22055,7 +22056,6 @@ $(function () {
   console.log(window.location.href);
 
 </script>
-<script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/openFdg.js"></script>
 <script src="/assets/js/paliLookup.js"></script>
 <script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>

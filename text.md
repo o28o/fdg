@@ -24,11 +24,10 @@ Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Libera
 3. Click the dropdown list **"Dictionary on click"** and select the desired option.
 4. Click **"Apply"** to save the settings.
 
-![Dhamma.gift Dictionary Settings]<img src="https://dhamma.gift/assets/img/dictSettings.png" width="300">
-![Dhamma.gift Dictionary Settings](https://dhamma.gift/assets/img/dictSettings.png)  
+<img src="https://dhamma.gift/assets/img/dictSettings.png" width="300">
  
-
-# Dictionary Modes
+# Description of Dictionary Modes 
+## same instruction available [here](https://dhamma.gift/assets/common/dictHelp.html)
 - **DPD Built-in:** A lightweight yet powerful built-in version of Digital Pali Dictionary ([DPD](https://docs.dpdict.net/titlepage.html)), that provides essential features: word meanings, compound breakdowns, and basic grammar information.
 - **DPD Online:** The full version of the DPD dictionary, offering extensive grammatical details, root information, examples, and more. With text input for futher investigation, word lookup history and settings.
 - **DPD Online mini:** A compact version of the full DPD dictionary with essential details.
@@ -39,7 +38,7 @@ Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Libera
 
   extra:
   
-- **Main Page Dictionary Mode** - switch between Sutta-Vinaya search and dictionary pop-up window mode in the [main page](https://Dhamma.gift). 
+- **Main Page Dictionary Mode** - also you can switch between Sutta-Vinaya search and dictionary pop-up window mode on the [main page](https://Dhamma.gift). 
 
 
 *Online versions rely on an internet connection, so they might work slower than the built-in one, but the additional features make it worth it.*

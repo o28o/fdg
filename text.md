@@ -44,3 +44,4 @@ Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Libera
 *Online versions rely on an internet connection, so they might work slower than the built-in one, but the additional features make it worth it.*
 
 For more information and to access all features, visit [Dhamma.gift](https://dhamma.gift/).
+It's a work in progress project so if you spot some bugs or errors - your feedback will be welcomed. [Dhamma.gift contacts](https://dhamma.gift/#contacts)

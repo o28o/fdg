@@ -18,7 +18,7 @@ Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Libera
 
 ## To change the dictionary mode on Dhamma.gift:
 
-##### By default buil-id lightweight dictionary will be turned on on Search results and Reader pages. To choose Dictionary style that suits your needs:
+### By default buil-id lightweight dictionary will be turned on for Search results and Reader pages. To choose Dictionary style that suits your needs:
 1. Open [Dhamma.gift Read](https://dhamma.gift/sn2.1).
 2. Click on the **gear icon** ⚙️ (Settings).
 3. Click the dropdown list **"Dictionary on click"** and select the desired option.

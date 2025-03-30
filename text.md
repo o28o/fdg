@@ -1,4 +1,4 @@
-# Dhamma.gift Dhamma Reader
+# Dhamma.gift
 
 DPD is integrated into [Dhamma.gift](https://dhamma.gift/). This site aims to be a Liberation "Swiss Army Knife" or one stop window for Dhamma consolidating top Buddhas Teaching realated resources including Pali texts, translations, important and useful sites to study Dhamma, Pali learning materials and numerous Tools.
 

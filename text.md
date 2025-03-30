@@ -7,13 +7,13 @@ Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Libera
 # Some of the features of Dhamma.gift
 
 - Core Pāḷi Canon with line-by-line translations in Russian. For English translations SuttaCentral data is used.
+- Advanced Sutta-Vinaya search functionality with filtering, sorting and grouping 
 - Multiple dictionary lookup options such as 
   - Full scale DPD, like on dpdict.net 
   - Integrated light version same as at TBW and SC sites 
   - compact DPD, 
   - direct lookup from Android DictTango 
   - Chrome, Edge and custom script extentions for any sites
-- Advanced Sutta-Vinaya search functionality with filtering, sorting and grouping 
 - More detailed "Key features of Dhamma.gift" listed [here](https://dhamma.gift/assets/common/keyFeatures.html).
 
 ## To change the dictionary mode on Dhamma.gfit:

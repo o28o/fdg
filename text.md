@@ -24,6 +24,7 @@ Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Libera
 3. Click the dropdown list **"Dictionary on click"** and select the desired option.
 4. Click **"Apply"** to save the settings.
 
+![Dhamma.gift Dictionary Settings]<img src="https://dhamma.gift/assets/img/dictSettings.png" width="300">
 ![Dhamma.gift Dictionary Settings](https://dhamma.gift/assets/img/dictSettings.png)  
  
 

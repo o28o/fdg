@@ -1,7 +1,8 @@
 # Dhamma.gift
 
-[Dhamma.gift](https://dhamma.gift/) aims to be a Liberation "Swiss Army Knife" or one stop window for Dhamma. Consolidating top Buddhas Teaching realated resources including Pali texts, translations, important and useful sites to study Dhamma, Pali learning materials and numerous Tools. Dhamma.gift provides the most wide variety of DPD lookup options for Pali and even ability to use any other dictionaries within mobile application DictTango.
+[Dhamma.gift](https://dhamma.gift/) provides the most wide variety of DPD lookup options for Pali and even ability to use any other dictionaries within mobile application DictTango.
 
+Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Liberation. Consolidating top Buddhas Teaching realated resources including Pali texts, translations, important and useful sites to study Dhamma, Pali learning materials and numerous Tools. 
 
 # Some of the features of Dhamma.gift
 

@@ -1,24 +1,43 @@
-# Simsapa Dhamma Reader
+# Dhamma.gift Dhamma Reader
 
-DPD is integrated into the [Simsapa Dhamma Reader](https://simsapa.github.io/), a very powerful new desktop application for immersive Pāḷi study.
+DPD is integrated into [Dhamma.gift](https://dhamma.gift/). This site aims to be a one stop window for Liberation. To serve as a "Swiss Army Knife" consolidating top Dhamma resources including Pali texts, translations, important and useful sites to study Dhamma, Pali learning materials and Tools.
 
-Simsapa aims to be an all-in-one app which contains:
+# Some of the features of Dhamma.gift
 
-- CST4 Chaṭṭha Saṅgāyana Tipiṭaka  
-- Sutta Central texts and translations  
-- a full set of Pāḷi dictionaries  
-- dhammatalks.org Translations by Ajahn Ṭhānissaro  
-- numerous Dhamma ebooks  
-- Gretil Sanskrit texts  
-- Sanskrit dictionaries  
-- and more  
+- Core Pāḷi Canon with line-by-line translations in Russian. For English SuttaCentral Sutta-Vinaya Translations are used.
+- Multiple dictionary lookup options such as 
+  - Full scale DPD, like on dpdict.net 
+  - Integrated light version same as at TBW and SC sites 
+  - compact DPD, 
+  - direct lookup from Android DictTango 
+  - Chrome, Edge and custom scrip extentions for any sites
+- Advanced and Sutta-Vinaya search functionality with filtering, sorting and grouping 
+- and more. More detailed Key features of Dhamma.gift listed [here](https://dhamma.gift/assets/common/keyFeatures.html).
 
-![simsapa sutta study](../../pics/simsapa/simsapa_sutta_study.png)  
 
-*(right click and open in new tab to see the images full size)*  
 
-![simsapa links](../../pics/simsapa/simsapa_links.png)  
+![Dhamma.gift Dictionary Settings](https://dhamma.gift/assets/img/dictSettings.png)  
 
-Every time there is a new DPD release, Simsapa automatically updates itself with the latest DPD database information.
+https://dhamma.gift/assets/common/dictHelp.html
+ 
 
-For more information and how to install, visit the [Simsapa website](https://simsapa.github.io/).
+## To change the dictionary mode on Dhamma.gfit:
+##### By default buil-id lightweight dictionary will be turned on on Search results and Reader pages. To choose Dictionary style that suits your needs:
+1. Open [Dhamma.gift Read](https://dhamma.gift/sn2.1).
+2. Click on the **gear icon** ⚙️ (Settings).
+3. Click the dropdown list **"Dictionary on click"** and select the desired option.
+4. Click **"Apply"** to save the settings.
+
+Dictionary Settings
+- **DPD Built-in:** A lightweight yet powerful built-in version of Digital Pali Dictionary ([DPD](https://docs.dpdict.net/titlepage.html)), that provides essential features: word meanings, compound breakdowns, and basic grammar information.
+- **DPD Online:** The full version of the DPD dictionary, offering extensive grammatical details, root information, examples, and more. With text input for futher investigation, word lookup history and settings.
+- **DPD Online mini:** A compact version of the full DPD dictionary with essential details.
+- **DPD Online Rus:** The full DPD dictionary with Russian translations and explanations.
+- **DPD Online mini Rus:** A compact version of the Russian DPD dictionary.
+- **Search Only:** This option allows you to initiate a search for the clicked word on Dhamma.gift instantly.
+- **DictTango Android:** Directly opens the DictTango Android app, enabling instant lookup in any installed dictionaries, including DPD, without copying and pasting or using the context menu.
+
+*Online versions rely on an internet connection, so they might work slower than the built-in one, but the additional features make it worth it.*
+
+
+For more information and to access all features, visit [Dhamma.gift](https://dhamma.gift/).

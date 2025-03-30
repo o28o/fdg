@@ -60,8 +60,9 @@ $('#pali').find('tbody').find('tr').each(function() {
         var metaphorCount = TextInfo[linkText]['mtph'] || ''; // Количество метафор
 
         // Проверяем localStorage и URL
-        var siteLanguage = localStorage.getItem('siteLanguage');
-        var useRussian = (siteLanguage === 'ru') || window.location.pathname.includes('/ru/');
+       // var siteLanguage = localStorage.getItem('siteLanguage');
+     //   var useRussian = (siteLanguage === 'ru') || window.location.pathname.includes('/ru/');
+     var useRussian = window.location.pathname.includes('/ru/');
 
         var titleText = useRussian && titleRussian ? titleRussian : titleEnglish; // Если русский есть, берем его, иначе английский
 

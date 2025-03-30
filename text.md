@@ -16,7 +16,7 @@ Dhamma.gift aims to be a Dhamma "Swiss Army Knife" or one stop window for Libera
   - Chrome, Edge and custom script extentions for any sites
 - More detailed "Key features of Dhamma.gift" listed [here](https://dhamma.gift/assets/common/keyFeatures.html).
 
-## To change the dictionary mode on Dhamma.gfit:
+## To change the dictionary mode on Dhamma.gift:
 
 ##### By default buil-id lightweight dictionary will be turned on on Search results and Reader pages. To choose Dictionary style that suits your needs:
 1. Open [Dhamma.gift Read](https://dhamma.gift/sn2.1).

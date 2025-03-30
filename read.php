@@ -35,6 +35,7 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Dhamma.gift Read" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
+<link rel="manifest" href="/assets/manifest.php">
 
 <meta property="og:url" content="https://Dhamma.gift/read.php" />
 <meta property="og:site_name" content="Dhamma.gift Read" />
@@ -21840,7 +21841,47 @@ include $basedir . "/assets/texts/bipm.php";
 </small> <button class="btn btn-secondary text-center installButton" id="" style="display:none;"><?php echo $installpwa;?></button></div>
         </div>
         <!-- Portfolio Modals-->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/assets/sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      })
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  }
 
+  let deferredPrompt;
+  const installButtons = document.querySelectorAll('.installButton');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // Показываем все кнопки с классом installButton
+    installButtons.forEach(button => {
+      button.style.display = 'inline-block';
+    });
+  });
+
+  // Добавляем обработчик события click для каждой кнопки
+  installButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Пользователь принял предложение установки');
+          } else {
+            console.log('Пользователь отклонил предложение установки');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+  });
+</script>
 
 <!-- Portfolio Modal 3-->
 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">

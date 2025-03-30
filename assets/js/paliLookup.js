@@ -413,11 +413,11 @@ console.log('lookup dict ', dictUrl, ' siteLanguage ', siteLanguage);
 // Проверяем состояние в localStorage при загрузке страницы
 let dictionaryVisible = localStorage.getItem('dictionaryVisible') === null ? true : localStorage.getItem('dictionaryVisible') === 'true';
 
-const toggleBtn = document.querySelector('.toggle-dict-btn');
+const toggleBtn = document.querySelector('.toggle-dict-btn img');
 if (dictionaryVisible) {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg"></img>';
+  toggleBtn.src = "/assets/svg/comment.svg";
 } else {
-  toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg"></img>';
+  toggleBtn.src = "/assets/svg/comment-slash.svg";
   clearParams();
 }
 
@@ -429,10 +429,10 @@ toggleBtn.addEventListener('click', () => {
   localStorage.setItem('dictionaryVisible', dictionaryVisible);
 
   if (dictionaryVisible) {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment.svg"></img>';
-  } else {
-    toggleBtn.innerHTML = '<img src="/assets/svg/comment-slash.svg"></img>';
-  }
+  toggleBtn.src = "/assets/svg/comment.svg";
+} else {
+  toggleBtn.src = "/assets/svg/comment-slash.svg";
+}
 });
 
     // Добавляем обработчик сочетания клавиш Alt + A (физическая клавиша)

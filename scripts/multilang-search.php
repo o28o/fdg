@@ -358,7 +358,7 @@ $outforjs .= $output . "<br>";
 		
 		
 if ( preg_match('/(|-en)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) && ( $p != "-vin" ) && ( $p != "-def" ))  {
-  $fdgscript = "./scripts/finddhamma.sh";
+  $fdgscript = "./new/finddhamma2.sh";
 $output = shell_exec("bash $fdgscript $outputlang $la -vin $extra $cb $string");
 //                                                          		echo "<p>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	

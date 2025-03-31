@@ -26,6 +26,15 @@ include 'scripts/search-handler.php';
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
+
+<style>
+    body {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    }
+</style>
+
 <link rel="manifest" href="/assets/manifest.php">
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
 <link rel="alternate" href="https://dhamma.gift/ru/" hreflang="ru">
@@ -88,9 +97,13 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 
 -->
 <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+<!-- 
 <link href="/assets/css/styles.css" rel="stylesheet" />
+-->
 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<script src="/assets/js/loadCssJsMain.js"></script>
+
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 
@@ -1289,7 +1302,9 @@ foreach ($slides as $index => $slide) {
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
 				
+<!-- 
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+-->
 
 <script defer>
 $(function () {

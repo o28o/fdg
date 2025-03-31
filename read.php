@@ -44,6 +44,15 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
+
+<style>
+    body {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    }
+</style>
+
 <!-- Favicon favico-noglass
 <link href="/assets/img/gray.png" rel="icon" media="(prefers-color-scheme: light)">
 <link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)">-->
@@ -62,8 +71,10 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
-<link href="/assets/css/styles.css" rel="stylesheet" />
+<!-- <link href="/assets/css/styles.css" rel="stylesheet" />
+-->
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<script src="/assets/js/loadCssJsMain.js"></script>
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 <link href="/assets/css/paliLookup.css" rel="stylesheet" />
@@ -498,6 +509,8 @@ window.addEventListener('pageshow', function(event) {
     document.getElementById('spinner').style.display = 'none';
   }
 });
+
+    document.getElementById('spinner').style.display = 'none';
 </script>
 
   <!-- extra options end -->
@@ -22034,7 +22047,9 @@ include $basedir . "/assets/texts/bipm.php";
                 <!-- Bootstrap core JS-->
 		<script src="/assets/js/uihelp.js"></script>
 		
-<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<!-- <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+-->
+
 <script defer>
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();

@@ -26,14 +26,24 @@
 <link rel="icon" type="image/png" href="/assets/img/favico-noglass.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
+<style>
+    body {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    }
+</style>
 
 <link rel="stylesheet" type="text/css" href="/assets/js/datatables/datatables.min.css"/>
+<!--
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.5.3.1.min.css"/>
+-->
 <link rel="stylesheet" href="/assets/css/langswitch.css">
 <link rel="stylesheet" href="/assets/css/paliLookup.css">
 <link rel="stylesheet" href="/assets/css/extrastyles.css">
+<script src="/assets/js/loadCssJsResult.js"></script>
 
-<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<!--<script type="text/javascript" src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>-->
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script type="text/javascript" src="/assets/js/datatables/datatables.js"></script>
 <script type="text/javascript" src="/assets/js/natural.js"></script>
@@ -41,7 +51,6 @@
 <!-- <script type="text/javascript" src="/assets/js/diacritics.js"></script> -->
 
 
-<link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <link href="/assets/css/table.css" rel="stylesheet" />
 <!--<script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=verse"></script>-->
 

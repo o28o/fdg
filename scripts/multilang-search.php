@@ -398,10 +398,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const successAlert = document.getElementById('successAlert');
     const responseElement = document.getElementById('response');
     
-    if(responseElement && successAlert) {
+    if (responseElement && successAlert) {
         responseElement.innerHTML = '$outputnonl';
-        
-        // Показываем алерт только если есть содержимое
         if ('$outputnonl' !== '' && '$outputnonl' !== '<br>') {
             successAlert.style.display = 'block';
         }

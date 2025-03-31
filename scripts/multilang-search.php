@@ -395,7 +395,10 @@ $outforjs .= $output . "<br>";
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));
 
 if (strpos($outputnonl, 'script') !== false || strpos($outputnonl, 'location.href') !== false) {
-    $finaloutput = $outputnonl;
+    // Ищем все скрипты в тексте
+    preg_match_all('/<script\b[^>]*>(.*?)<\/script>/is', $outputnonl, $matches);
+    // Собираем все найденные скрипты в одну строку
+    $finaloutput = implode("\n", $matches[0]);
 } else {
     $finaloutput = "<script>
     document.addEventListener('DOMContentLoaded', function() {

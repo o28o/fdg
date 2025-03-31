@@ -102,7 +102,7 @@ window.open(`{$dictUrl}{$stringForWord}`, '_blank');
 </script>";
 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 
-exit();
+//exit();
 }
 
 // Проверка условий

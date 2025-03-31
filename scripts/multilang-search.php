@@ -102,7 +102,8 @@ window.open(`{$dictUrl}{$stringForWord}`, '_blank');
 </script>";
 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 
-exit();
+//exit();
+return;
 }
 
 // Проверка условий
@@ -400,6 +401,13 @@ if (strpos($outputnonl, 'script') !== false || strpos($outputnonl, 'location.hre
     preg_match_all('/<script\b[^>]*>(.*?)<\/script>/is', $outputnonl, $matches);
     // Собираем все найденные скрипты в одну строку
     $finaloutput = implode("\n", $matches[0]);
+
+    // Добавляем скрытие страницы перед выполнением скриптов
+    echo '<script>document.body.style.display = "none";</script>';
+
+    // Выполняем найденные скрипты
+    echo $finaloutput;
+    exit;
 } else {
     $finaloutput = "<script>
     document.addEventListener('DOMContentLoaded', function() {

@@ -13,7 +13,9 @@ include_once('config/translate.php');
 
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
-
+<?php
+include 'scripts/search-handler.php';
+?>  
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
     <head>
       <meta charset="UTF-8">
@@ -1295,8 +1297,6 @@ $(function () {
         });
     </script>
 -->
-<?php
-include 'scripts/search-handler.php';
-?>  
+
 </body>
 </html>

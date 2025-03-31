@@ -10,9 +10,12 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
-include 'scripts/opentexts.php';
+
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
+<?php
+include 'scripts/search-handler.php';
+?>  
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
     <head>
       <meta charset="UTF-8">
@@ -531,6 +534,9 @@ window.addEventListener('pageshow', function(event) {
     document.getElementById('spinner').style.display = 'none';
   }
 });
+
+    document.getElementById('spinner').style.display = 'none';
+
 </script>
 
   <!-- extra options end -->
@@ -1293,9 +1299,4 @@ $(function () {
 -->
 
 </body>
-
-<?php
-include 'scripts/multilang-search.php';
-?>  
-
 </html>

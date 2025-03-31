@@ -393,15 +393,24 @@ echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</scri
 
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
 $finaloutput = "<script>
-console.log('$outputnonl');
-const responseElement = document.querySelector('#response');
-responseElement.innerHTML = '$outputnonl';
-if (responseElement !== '') {
-    successAlert.style.display = 'block';
-  }
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('$outputnonl');
+    const successAlert = document.getElementById('successAlert');
+    const responseElement = document.getElementById('response');
+    
+    if(responseElement && successAlert) {
+        responseElement.innerHTML = '$outputnonl';
+        
+        // Показываем алерт только если есть содержимое
+        if ('$outputnonl' !== '' && '$outputnonl' !== '<br>') {
+            successAlert.style.display = 'block';
+        }
+    }
+});
 </script>";
-if ($outputnonl !== '<br>') {
-echo $finaloutput;  
+
+if ($outputnonl !== '<br>' && !empty($outputnonl)) {
+    echo $finaloutput;  
 }
 
 if (preg_match('/(-anyd)/', $extra)) {

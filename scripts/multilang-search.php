@@ -73,8 +73,9 @@ if (preg_match('/dictLookup/', $p) || preg_match('/dictLookup/', $extra)) {
     // Действие при выполнении условия
 
 
-    $stringForWord = urlencode($stringForWord); 
-$dictType = 'https://dict.dhamma.gift';
+$stringForWord = urlencode(strtolower($stringForWord));
+//$dictType = 'https://dict.dhamma.gift';
+$dictType = 'https://dpdict.net';
     
     if ( preg_match('/\/ru/', $actual_link)) {
   $outputlang = "-oru";

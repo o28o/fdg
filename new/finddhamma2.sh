@@ -1000,7 +1000,7 @@ done
 sed -i 's@[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]@'$dateforhist'@g' updatehistorytmp
 cat updatehistorytmp | tac | head -1 | awk '{print substr($0, index($0, $2))}' >> $history
 rm updatehistorytmp
-OKresponse
+#OKresponse
 echo "<script>window.location.href=\"./result/${checkfile}\";</script>"
 	exit 0
 fi 
@@ -1411,7 +1411,7 @@ titlewords="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} 
 sed -i 's/TitletoReplace/'"$title"'/g' ${table}
 sed -i 's/TitletoReplace/'"$titlewords"'/g' ${tempfilewords}
 
-OKresponse
+#OKresponse
 
 #finalize words file 
 oldname=$tempfilewords

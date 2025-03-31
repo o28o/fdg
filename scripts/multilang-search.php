@@ -96,10 +96,11 @@ if ($server_name === 'localhost' || $server_name === '127.0.0.1') {
 }
  
     
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 echo "<script>
 window.open(`{$dictUrl}{$stringForWord}`, '_blank');
 </script>";
+echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+
 exit();
 }
 
@@ -173,7 +174,7 @@ $check = ru2lat( $output );
 
 $fdgscript = "./scripts/finddhamma.sh";
 	 $output = shell_exec("bash $fdgscript $outputlang $la $extra $cb -tru $string");
-	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 	// echo                                                	"<p>$output</p>";
 	 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 	 $outforjs .= $output;
@@ -218,7 +219,7 @@ $outforjs .= $output . "<br>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
 
@@ -261,7 +262,7 @@ $outforjs .= $output . "<br>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
 #sinhala
@@ -306,7 +307,7 @@ $outforjs .= $output . "<br>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
 
@@ -389,7 +390,7 @@ $outforjs .= $output . "<br>";
 }
 }
 //echo $outforjs;
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+
 
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
 $finaloutput = "<script>
@@ -411,6 +412,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 if ($outputnonl !== '<br>' && !empty($outputnonl)) {
     echo $finaloutput;  
+    
+    echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 }
 
 if (preg_match('/(-anyd)/', $extra)) {

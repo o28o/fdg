@@ -392,20 +392,28 @@ $outforjs .= $output . "<br>";
 //echo $outforjs;
 
 
-$outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
-$finaloutput = "<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const successAlert = document.getElementById('successAlert');
-    const responseElement = document.getElementById('response');
-    
-    if (responseElement && successAlert) {
-        responseElement.innerHTML = '$outputnonl';
-        if ('$outputnonl' !== '' && '$outputnonl' !== '<br>') {
-            successAlert.style.display = 'block';
+$outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));
+
+if (strpos($outputnonl, 'script') !== false || strpos($outputnonl, 'location.href') !== false) {
+    $finaloutput = $outputnonl;
+} else {
+    $finaloutput = "<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('$outputnonl');
+        const successAlert = document.getElementById('successAlert');
+        const responseElement = document.getElementById('response');
+        
+        if(responseElement && successAlert) {
+            responseElement.innerHTML = '$outputnonl';
+            
+            // Показываем алерт только если есть содержимое
+            if ('$outputnonl' !== '' && '$outputnonl' !== '<br>') {
+                successAlert.style.display = 'block';
+            }
         }
-    }
-});
-</script>";
+    });
+    </script>";
+}
 
 if ($outputnonl !== '<br>' && !empty($outputnonl)) {
     echo $finaloutput;  

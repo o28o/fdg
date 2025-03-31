@@ -91,10 +91,12 @@ echo '<!--
  
  
             <li>
-         <div class="dropdown-item ">Tipitaka 
-         <a class="text-black" target=""  href="https://tipitaka.app">CST</a>
+         <div class="dropdown-item ">Tipitaka: 
+        CST: 
+        <a class="text-black" target=""  href="https://tipitakapali.org/">TPO</a> 
+        <a class="text-black" target=""  href="https://tipitaka.app">TP.app</a>
        <a class="text-black" target="" href="https://84000.org/">Thai</a>
-          <a class="text-black" target="" href="https://tipitaka.org/">VRI</a>  
+          <a class="text-black" target="" href="https://tipitaka.org/">VRI</a> 
        </div>
          </li>
     

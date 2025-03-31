@@ -393,22 +393,8 @@ $outforjs .= $output . "<br>";
 
 
 $outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
-$finaloutput = "<script>
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('$outputnonl');
-    const successAlert = document.getElementById('successAlert');
-    const responseElement = document.getElementById('response');
-    
-    if(responseElement && successAlert) {
-        responseElement.innerHTML = '$outputnonl';
-        
-        // Показываем алерт только если есть содержимое
-        if ('$outputnonl' !== '' && '$outputnonl' !== '<br>') {
-            successAlert.style.display = 'block';
-        }
-    }
-});
-</script>";
+echo $outputnonl;
+
 
 if ($outputnonl !== '<br>' && !empty($outputnonl)) {
     echo $finaloutput;  

@@ -10,12 +10,9 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
-
+include 'scripts/search-handler.php';
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
-<?php
-include 'scripts/search-handler.php';
-?>  
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
     <head>
       <meta charset="UTF-8">
@@ -96,9 +93,6 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
-
-<style>
-</style>
 
 <?php echo $fontawesomejs;?> 
 </head>
@@ -233,7 +227,6 @@ if (isset($_GET['q'])) {
     <span class="visually-hidden"><?php echo $searchcaption;?></span>
 </button>
 </div>
-<script defer src="/assets/js/themeswitch.js"></script>
 
 </div>
 
@@ -400,6 +393,38 @@ Add <strong>Dhamma.gift</strong> to your Home Screen?
 
  </p>
  
+ 
+ 
+ 
+ <script>
+  $(document).ready(function() {
+  // Обработчик для отправки формы
+  $('#searchForm').on('submit', function() {
+    // Закрываем выпадающий список автозаполнения
+    $('#paliauto').autocomplete('close');
+    $('#collapseSettings').collapse('hide');
+    $('#navbarResponsive').collapse('hide');
+  });
+  
+  // Обработчик для нажатия клавиши Enter
+  $(document).on('keydown', function(event) {
+    if (event.key === 'Enter') {
+      $('#paliauto').autocomplete('close');
+      $('#collapseSettings').collapse('hide');
+      $('#navbarResponsive').collapse('hide');
+    }
+  });
+  
+  // Обработчик для клика по кнопке поиска
+  $('#searchbtn').on('click', function() {
+    $('#paliauto').autocomplete('close');
+    $('#collapseSettings').collapse('hide');
+    $('#navbarResponsive').collapse('hide');
+  });
+});
+
+</script>
+
 <script>
   
 // Event listener to submit the form when Enter key is pressed
@@ -512,6 +537,7 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
+<script src="/assets/js/themeswitch.js"></script>
 
 <script src="/assets/js/uihelp.js"></script>
 
@@ -536,7 +562,6 @@ window.addEventListener('pageshow', function(event) {
 });
 
     document.getElementById('spinner').style.display = 'none';
-
 </script>
 
   <!-- extra options end -->
@@ -547,8 +572,6 @@ window.addEventListener('pageshow', function(event) {
   <br>
   </p>
   </div>
-
-</script>
 </header>
 
 <!-- Portfolio Section-->
@@ -1299,4 +1322,9 @@ $(function () {
 -->
 
 </body>
+
+<?php
+
+?>  
+
 </html>

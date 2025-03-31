@@ -109,7 +109,7 @@ else if (path.includes('/result/') || searchParams.get('q')?.trim()) {
         const notification = document.createElement('div');
         notification.innerHTML = `
             <div class="hint" style="display: flex; align-items: center; gap: 10px;">
-                <div>💡 <b>${hintText.title}</b> ${hintText.message}</div>
+                <div>💡 <strong>${hintText.title}</strong> ${hintText.message}</div>
                 <button id="closeHintBtn" style="
                     background: none;
                     border: none;

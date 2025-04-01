@@ -35,14 +35,10 @@ Redirect 301 /ru.php /ru/
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 
-    <FilesMatch "\.(html|json)$">
+    <FilesMatch "\.(html|php|json)$">
         Header set Cache-Control "public, max-age=84000"
     </FilesMatch>
 </IfModule>
-
-
-
-
 
 # GZIP compression for text files: HTML, CSS, JS, Text, XML, fonts
 
@@ -86,15 +82,6 @@ RewriteRule ^/$ / [L,R=302]
 
 RewriteCond %{HTTP_USER_AGENT} (bingbot|AhrefsBot|SemrushBot|PetalBot|DataForSeoBot|MegaIndex.ru|Barkrowler|SeekportBot|SemrushBot|Barkrowler) [NC]
 RewriteRule .* - [F]
-
-
-<IfModule mod_headers.c>
-       # Кэшировать статические файлы на 1 год
-       <FilesMatch "\.(html|css|js|jpg|jpeg|png|gif|webp|svg|ttf|woff|woff2)$">
-           Header set Cache-Control "public, max-age=31536000, immutable"
-       </FilesMatch>
-   </IfModule>
-
 
 
 <IfModule mod_expires.c>

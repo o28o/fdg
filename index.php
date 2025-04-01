@@ -30,6 +30,7 @@ include 'scripts/search-handler.php';
 <style>
     body {
         opacity: 0;
+        background: black;
         visibility: hidden;
         transition: opacity 0.3s ease-in-out; /* Плавное появление */
     }
@@ -550,7 +551,7 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
-<script src="/assets/js/themeswitch.js"></script>
+<!--<script src="/assets/js/themeswitch.js"></script>-->
 
 <script src="/assets/js/uihelp.js"></script>
 

@@ -490,6 +490,10 @@ if [[ "$@" == *"-abhi"* ]]; then
 	dirlocation=abhidhamma
 	translator=""
     fileprefix=_abhidhamma
+hwithtitle='<h1>'
+searchIn="./abhidhamma/sn"
+source="abhi"    
+    
     #echo search in abhidhamma
 fi
  

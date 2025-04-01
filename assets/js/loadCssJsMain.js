@@ -3,7 +3,7 @@
         let loadedCSS = false, loadedJS = false;
 
         function checkAndShowPage() {
-            if (loadedCSS) {
+            if (loadedCSS && loadedJS) {
                 document.body.style.visibility = "visible";
                 document.body.style.opacity = "1";
             }
@@ -18,16 +18,15 @@
             checkAndShowPage();
         };
         document.head.appendChild(css);
-/*
+
         // Загрузка JS
         const script = document.createElement("script");
-        script.src = "/assets/js/bootstrap.bundle.5.3.1.min.js"; // Укажите путь к вашему основному JS
+        script.src = "/assets/js/themeswitch.js"; // Укажите путь к вашему основному JS
         script.onload = function() { 
             loadedJS = true; 
             checkAndShowPage();
         };
         document.body.appendChild(script);
-*/
 
         checkAndShowPage(); // На случай, если что-то загрузится мгновенно
     }

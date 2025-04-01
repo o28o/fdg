@@ -125,8 +125,14 @@ window.location.href='$langinurl/w.php?s=$stringForWord';
     exit();
 }
 
+if (preg_match('/(-abhi )/', $q)) {
+  $fdgscript = "./scripts/finddhamma.sh";
+      $q = trim(preg_replace('/-abhi/', ' ', $q));	  
+$p = "-abhi"; 
+} 
+
 //-vin was here
-if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru|-si)/', $p)  || preg_match('/(-onl|-def|-sml|-nm|-b|-tru|-si|-la2|-lb2)/', $extra)) {
+if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru|-si|-abhi)/', $p)  || preg_match('/(-onl|-def|-sml|-nm|-b|-tru|-si|-la2|-lb2)/', $extra)) {
   $fdgscript = "./scripts/finddhamma.sh";
 } 
 elseif (preg_match('/(-anyd)/', $extra)) {

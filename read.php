@@ -7,7 +7,7 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
-include 'scripts/opentexts.php';
+include 'scripts/search-handler.php';
 //echo $mainscpage;
 
 // Получить значение из GET параметра
@@ -44,16 +44,16 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
-<!--
+
 <style>
     body {
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+        background: black;
+     /*   transition: opacity 0.3s ease-in-out; Плавное появление */
     }
 </style>
 
--->
 <!-- Favicon favico-noglass
 <link href="/assets/img/gray.png" rel="icon" media="(prefers-color-scheme: light)">
 <link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)">-->
@@ -72,10 +72,12 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
-<link href="/assets/css/styles.css" rel="stylesheet" />
 <!-- 
-<script src="/assets/js/loadCssJsMain.js"></script>
+<link href="/assets/css/styles.css" rel="stylesheet" />
+
 -->
+<script src="/assets/js/loadCssJsMain.js"></script>
+
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 
 
@@ -22038,10 +22040,10 @@ include $basedir . "/assets/texts/bipm.php";
             </div>
         </div>
 
-
+        <!-- 
 <script src="/assets/js/themeswitch.js"></script>
 
-        <!-- Core theme JS
+Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
 		<script src="/assets/js/uihelp.js"></script>
@@ -22082,7 +22084,6 @@ $(function () {
     </script>
 </body>
 <?php
-include 'scripts/multilang-search.php';
 ?>  
 
 </html>

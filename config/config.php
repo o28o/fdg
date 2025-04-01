@@ -150,7 +150,7 @@ $thtranslatorlocation = $basedir. '/assets/texts/th/translation/';
 
 $linksc = 'https://suttacentral.net/';
 $anamesc = 'SuttaCentral.net';
-$linksclegacy = '/legacy.suttacentral.net/read/su.html';
+$linksclegacy = '/legacy.suttacentral.net/';
 $anamesclegacy = 'SC.net Legacy';
 //api-emulator
 $scroottextlocation = $basedir . "/suttacentral.net/sc-data/sc_bilara_data/root/pli/ms";

@@ -21,7 +21,7 @@
 
         // Загрузка JS
         const script = document.createElement("script");
-        script.src = "/assets/js/bootstrap.bundle.5.3.1.min.js"; // Укажите путь к вашему основному JS
+        script.src = "/assets/js/themeswitch.js"; // Укажите путь к вашему основному JS
         script.onload = function() { 
             loadedJS = true; 
             checkAndShowPage();

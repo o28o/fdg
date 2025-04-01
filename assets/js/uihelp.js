@@ -200,11 +200,11 @@ const hintSettings = {
         },
         '/r/': {
             title: 'Подсказка:',
-            message: 'Чтобы скопировать ссылку на нужное место, кликните в конце строки с пали — там есть невидимая ссылка (курсор изменится на палец).'
+            message: 'Чтобы скопировать ссылку на нужное место, кликните в конце строки с пали — там есть невидимая ссылка.'
         },
         '/read/': {
             title: 'Hint:',
-            message: 'To copy a link to a specific location, click at the end of the Pali line — there’s an invisible link there (the cursor will change to a hand pointer).'
+            message: 'To copy a link to a specific location, click at the end of the Pali line — there’s an invisible link there.'
         }
     }
 };

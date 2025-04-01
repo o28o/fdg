@@ -18,7 +18,7 @@ gsub(/;;;/, "\n", qoute)
     } 
 gsub(/;;;/, "\n", qoute)
 while (sub(/;;;/, "\n", qoute)){}
-        print "<tr><td><a class=\"fdgLink\" href=\"\" data-slug=\"" urlwithanchor "\">" file_name "</a></td><td><strong class=\"pli-lang inputscript-ISOPali\">" name "</strong></td><td class=\"unique_words pli-lang\">" words "</td><td class=\"count\">" count "</td><td class=\"mtphr_count\">" mtphr_count "</td><td><a class=\"dprLink\"  href=\"\" data-slug=" sutta ">Pi</a>&nbsp;<a class=\"bwLink\"  href=\"\" data-slug=" sutta ">En</a>&nbsp;<a class=\"ruLink\"  href=\"\" data-slug=" sutta ">Ru</a>&nbsp;</td><td>" texttype "</td>" qoute
+        print "<tr><td><a class=\"fdgLink\" href=\"\" data-slug=\"" urlwithanchor "\">" file_name "</a></td><td><strong class=\"pli-lang inputscript-ISOPali\">" name "</strong></td><td class=\" unique_words \"><span class=\"pli-lang inputscript-ISOPali \">" words "</span></td><td class=\"count\">" count "</td><td class=\"mtphr_count\">" mtphr_count "</td><td><a class=\"dprLink\"  href=\"\" data-slug=" sutta ">Pi</a>&nbsp;<a class=\"bwLink\"  href=\"\" data-slug=" sutta ">En</a>&nbsp;<a class=\"ruLink\"  href=\"\" data-slug=" sutta ">Ru</a>&nbsp;</td><td>" texttype "</td>" qoute
 }
 END  { 
         print "</p></td></tr>"

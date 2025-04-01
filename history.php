@@ -1,4 +1,8 @@
- <!DOCTYPE html>
+<?php
+header("Cache-Control: public, max-age=1"); // Кэшировать на 1 
+header("Expires: " . gmdate("D, d M Y H:i:s", time() + 1) . " GMT");
+?>
+<!DOCTYPE html>
 <?php
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');

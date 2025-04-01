@@ -551,7 +551,10 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
-<!--<script src="/assets/js/themeswitch.js"></script>-->
+<!--
+-->
+
+<script src="/assets/js/themeswitch.js"></script>
 
 <script src="/assets/js/uihelp.js"></script>
 
@@ -1315,7 +1318,7 @@ $(function () {
 
 <script src="/assets/js/autopali.js" defer></script>
 	  
-<script src="/assets/js/randPlaceholder.js">
+<script src="/assets/js/randPlaceholder.js" defer>
 </script>
 <script defer>
   randCallToAction();
@@ -1328,11 +1331,6 @@ $(function () {
 <script src="/assets/js/paliLookup.js"></script>
 
 <script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            enablePaliLookup();
-        });
-    </script>
 -->
 <script>
   window.addEventListener('DOMContentLoaded', function() {

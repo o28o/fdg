@@ -22040,9 +22040,10 @@ include $basedir . "/assets/texts/bipm.php";
             </div>
         </div>
 
-        <!-- 
+
 <script src="/assets/js/themeswitch.js"></script>
 
+        <!-- 
 Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->

@@ -1301,10 +1301,8 @@ foreach ($slides as $index => $slide) {
         <!-- Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
-				
-<!-- 
+
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
--->
 
 <script defer>
 $(function () {

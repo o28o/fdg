@@ -1041,7 +1041,13 @@ ${top}"`
 grepvar=
 
 function linklist {
-cat $templatefolder/Header2.html $templatefolder/ResultTableHeader2.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's/$title/TitletoReplace/g' | tohtml 
+if [[ "$args" == *"-oru"* ]] ; then
+
+cat $templatefolder/Header2.html $templatefolder/ResultTableHeader2Ru.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's/$title/TitletoReplace/g' | tohtml 
+else
+cat $templatefolder/Header2.html $templatefolder/ResultTableHeader2En.html | sed 's@HOMEVAR@'$mainpagebase'@' | sed 's/$title/TitletoReplace/g' | tohtml 
+
+fi
 textlist=`nice -$nicevalue cat $basefile | pvlimit | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' |  awk -F'_' '{print $1}' | sort -Vf | uniq`
 
 keyword="$pattern"

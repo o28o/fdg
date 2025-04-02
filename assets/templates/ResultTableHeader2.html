@@ -59,8 +59,154 @@
 });
 </script>
 
+
+  <!-- Модальное окно "Настройки" англ -->
+<div class="modal fade" id="settingsEn" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="settingsLabel">Settings</h2>
+           <div class="ms-auto d-inline-flex align-items-center">
+            <span>en</span>
+<a class="btn btn-sm btn-secondary btn-language rounded-pill text-decoration-none ms-1" href="#" data-lang="ru">ru</a>
+
+     </div>           
+     
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  
+            </div>
+            <div class="modal-body">
+                <div class="mb-2 d-none">
+                    <!-- Dropdown for script selection -->
+                    <label for="script-select"><h5 style="text-align: left;">Script System:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
+                        <option value="ISOPali">ISOPali</option>
+                        <option value="Devanagari">Devanagari</option>
+                        <option value="Thai">Thai</option>
+                    </select> 
+                  &nbsp;  <strong>Alt+L</strong>
+                </div>
+                
+                          <div class="mb-2">
+                    <!-- Дропдаун для выбора системы письма -->
+                    <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
+                        <option value="standalonebw">DPD Built-in</option>
+                <option value="standalonebwru">DPD Built-in Rus</option>
+                        <option value="dpdFull">DPD Online </option>
+              <option value="dpdFullRu">DPD Online Rus</option>
+                        <option value="dpdCompact">DPD Onilne mini </option>
+                    <option value="dpdCompactRu">DPD Online mini Rus</option>
+                        <option value="searchonly">Search Only</option>
+                        <option value="dictTango">DictTango Android</option>
+                    </select> <a href="/assets/common/dictHelp.html">?</a>   
+                </div>          
+                
+                <div class="mb-2">
+<div class="d-flex d-none">
+  <label class="form-check-label me-2" for="removePunctCheckbox">
+    <h5 class="mb-0">Remove punctuation from Pali </h5>
+  </label>
+  <input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">&nbsp; <strong>Alt+.</strong>
+</div>
+
+                </div>
+                <h5 style="text-align: left;">Select Reading Mode: </h5>
+                <div class="container">
+                    <!-- Standard -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+                            <a id="stDemo" href="/read/?q=sn56.11"><strong>Standard</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Two languages: Pali, English
+                        </div>
+                    </div>
+
+                    <!-- Multi -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+                            <a id="mlDemo" href="/ml/?q=dn22"><strong>Multi</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Three languages: Pali, Russian, English
+                        </div>
+                    </div>
+
+                    <!-- Devanagari -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d"> &nbsp;
+                            <a id="dDemo" href="/d/?q=sn12.2"><strong>"Devanagari"</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Devanagari or Thai script + Pali in Latin
+                        </div>
+                    </div>
+
+                    <!-- Hidden Section -->
+                    <div id="collapseInterfaces" class="collapse">
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem"> &nbsp;
+                                <a id="memDemo" href="/memorize/?q=an10.46"><strong>For Memorization</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Text shortened to the first letters of each word
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv"> &nbsp;
+                                <a id="rvDemo" href="/rev/?q=sn35.236"><strong>Reverse</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Text from bottom to top
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr"> &nbsp;
+                                <a id="frDemo" href="/frev/?q=sn22.59"><strong>Full Reverse</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Like the previous one + words from left to right
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- "Show More" Button -->
+                    <div class="text-end mb-2">
+                        <button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+                            Others
+                        </button>
+                    </div>
+                    <p class="mb-2">
+                        Click <strong>on the title</strong> to go once. <br>
+                        Click <strong>on the radio button</strong> to set as default<br>
+                        when navigating from the main page and search results.
+                    </p>
+                    Found an error? <a href="/#contacts">Write to us</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- "Apply" and "Reset" Buttons -->
+                <div class="text-end">
+                    <button type="button" class="btn btn-sm rounded-pill btn-secondary" id="reset-button">Reset</button>
+                    <button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Apply</button>
+                    <button type="button" class="btn-sm btn-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
 <!-- Модальное окно "Настройки" Рус -->
+
 <div class="modal fade" id="settingsRu" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -253,150 +399,6 @@
         </div>
     </div>
 </div>
-
-  <!-- Модальное окно "Настройки" англ -->
-<div class="modal fade" id="settingsEn" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="settingsLabel">Settings</h2>
-           <div class="ms-auto d-inline-flex align-items-center">
-            <span>en</span>
-<a class="btn btn-sm btn-secondary btn-language rounded-pill text-decoration-none ms-1" href="#" data-lang="ru">ru</a>
-
-     </div>           
-     
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-  
-            </div>
-            <div class="modal-body">
-                <div class="mb-2 d-none">
-                    <!-- Dropdown for script selection -->
-                    <label for="script-select"><h5 style="text-align: left;">Script System:</h5></label>
-                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
-                        <option value="ISOPali">ISOPali</option>
-                        <option value="Devanagari">Devanagari</option>
-                        <option value="Thai">Thai</option>
-                    </select> 
-                  &nbsp;  <strong>Alt+L</strong>
-                </div>
-                
-                          <div class="mb-2">
-                    <!-- Дропдаун для выбора системы письма -->
-                    <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
-                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
-                        <option value="standalonebw">DPD Built-in</option>
-                <option value="standalonebwru">DPD Built-in Rus</option>
-                        <option value="dpdFull">DPD Online </option>
-              <option value="dpdFullRu">DPD Online Rus</option>
-                        <option value="dpdCompact">DPD Onilne mini </option>
-                    <option value="dpdCompactRu">DPD Online mini Rus</option>
-                        <option value="searchonly">Search Only</option>
-                        <option value="dictTango">DictTango Android</option>
-                    </select> <a href="/assets/common/dictHelp.html">?</a>   
-                </div>          
-                
-                <div class="mb-2">
-<div class="d-flex d-none">
-  <label class="form-check-label me-2" for="removePunctCheckbox">
-    <h5 class="mb-0">Remove punctuation from Pali </h5>
-  </label>
-  <input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">&nbsp; <strong>Alt+.</strong>
-</div>
-
-                </div>
-                <h5 style="text-align: left;">Select Reading Mode: </h5>
-                <div class="container">
-                    <!-- Standard -->
-                    <div class="row align-items-center mb-2">
-                        <div class="col-auto">
-                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
-                            <a id="stDemo" href="/read/?q=sn56.11"><strong>Standard</strong></a>
-                        </div>
-                        <div class="col text-end">
-                            Two languages: Pali, English
-                        </div>
-                    </div>
-
-                    <!-- Multi -->
-                    <div class="row align-items-center mb-2">
-                        <div class="col-auto">
-                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
-                            <a id="mlDemo" href="/ml/?q=dn22"><strong>Multi</strong></a>
-                        </div>
-                        <div class="col text-end">
-                            Three languages: Pali, Russian, English
-                        </div>
-                    </div>
-
-                    <!-- Devanagari -->
-                    <div class="row align-items-center mb-2">
-                        <div class="col-auto">
-                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d"> &nbsp;
-                            <a id="dDemo" href="/d/?q=sn12.2"><strong>"Devanagari"</strong></a>
-                        </div>
-                        <div class="col text-end">
-                            Devanagari or Thai script + Pali in Latin
-                        </div>
-                    </div>
-
-                    <!-- Hidden Section -->
-                    <div id="collapseInterfaces" class="collapse">
-                        <div class="row align-items-center mb-2">
-                            <div class="col-auto">
-                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem"> &nbsp;
-                                <a id="memDemo" href="/memorize/?q=an10.46"><strong>For Memorization</strong></a>
-                            </div>
-                            <div class="col text-end">
-                                Text shortened to the first letters of each word
-                            </div>
-                        </div>
-                        <div class="row align-items-center mb-2">
-                            <div class="col-auto">
-                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv"> &nbsp;
-                                <a id="rvDemo" href="/rev/?q=sn35.236"><strong>Reverse</strong></a>
-                            </div>
-                            <div class="col text-end">
-                                Text from bottom to top
-                            </div>
-                        </div>
-                        <div class="row align-items-center mb-2">
-                            <div class="col-auto">
-                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr"> &nbsp;
-                                <a id="frDemo" href="/frev/?q=sn22.59"><strong>Full Reverse</strong></a>
-                            </div>
-                            <div class="col text-end">
-                                Like the previous one + words from left to right
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- "Show More" Button -->
-                    <div class="text-end mb-2">
-                        <button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
-                            Others
-                        </button>
-                    </div>
-                    <p class="mb-2">
-                        Click <strong>on the title</strong> to go once. <br>
-                        Click <strong>on the radio button</strong> to set as default<br>
-                        when navigating from the main page and search results.
-                    </p>
-                    Found an error? <a href="/#contacts">Write to us</a>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <!-- "Apply" and "Reset" Buttons -->
-                <div class="text-end">
-                    <button type="button" class="btn btn-sm rounded-pill btn-secondary" id="reset-button">Reset</button>
-                    <button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Apply</button>
-                    <button type="button" class="btn-sm btn-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>  
-
 
 
 <!--

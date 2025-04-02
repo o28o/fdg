@@ -3,7 +3,7 @@ const siteLanguage = localStorage.getItem('siteLanguage');
 const savedDict = localStorage.getItem('selectedDict') 
     ? localStorage.getItem('selectedDict').toLowerCase() 
     : (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/') || window.location.pathname.includes('/ru/')) 
-        ? "dpdcompactru" 
+        ? "standalonebwru" 
         : "standalonebw";
         
 // Устанавливаем правильный URL для словаря в зависимости от языка
@@ -45,6 +45,8 @@ if (savedDict.includes("dpd")) {
   }
 } else if (savedDict === "dicttango") {
   dictUrl = "dttp://app.dicttango/WordLookup?word=";
+} else if (savedDict === "standalonebwru") {
+  dictUrl = "standalonebwru"; // Используем standalone-словарь
 } else if (savedDict === "standalonebw") {
   dictUrl = "standalonebw"; // Используем standalone-словарь
 } else {
@@ -52,23 +54,41 @@ if (savedDict.includes("dpd")) {
 }
 
 // Функция для загрузки скриптов standalone-словаря
-function loadStandaloneScripts() {
+function loadStandaloneScripts(lang = 'en') {
     return new Promise((resolve, reject) => {
-        const scripts = [
-            '/assets/js/standalone-dpd/dpd_deconstructor.js',
-            '/assets/js/standalone-dpd/dpd_ebts.js',
-            '/assets/js/standalone-dpd/dpd_i2h.js'
-        ];
+        // Определяем пути в зависимости от языка
+        const scripts = lang === 'ru' 
+            ? [
+                '/assets/js/standalone-dpd/ru/dpd_i2h.js',
+                '/assets/js/standalone-dpd/ru/dpd_ebts.js',
+                '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
+              ]
+            : [
+                '/assets/js/standalone-dpd/dpd_i2h.js',
+                '/assets/js/standalone-dpd/dpd_ebts.js',
+                '/assets/js/standalone-dpd/dpd_deconstructor.js'
+              ];
+
+        // Проверяем, какие скрипты уже загружены
+        const scriptsToLoad = scripts.filter(src => {
+            return !document.querySelector(`script[src="${src}"]`);
+        });
+
+        // Если все скрипты уже загружены, сразу резолвим промис
+        if (scriptsToLoad.length === 0) {
+            resolve();
+            return;
+        }
 
         let loadedCount = 0;
 
-        scripts.forEach(src => {
+        scriptsToLoad.forEach(src => {
             const script = document.createElement('script');
             script.src = src;
             script.defer = true;
             script.onload = () => {
                 loadedCount++;
-                if (loadedCount === scripts.length) {
+                if (loadedCount === scriptsToLoad.length) {
                     resolve();
                 }
             };
@@ -86,13 +106,25 @@ document.addEventListener('DOMContentLoaded', function() {
         // Загружаем скрипты standalone-словаря только если выбран standalonebw
         loadStandaloneScripts()
             .then(() => {
-                console.log('Standalone scripts loaded');
+                console.log('Standalone eng scripts loaded');
                 enablePaliLookup();
             })
             .catch(error => {
-                console.error('Error loading standalone scripts:', error);
+                console.error('Error loading eng standalone scripts:', error);
             });
-    } else {
+    } 
+  else if (savedDict === "standalonebwru") {
+        // Загружаем скрипты standalone-словаря только если выбран standalonebw
+        loadStandaloneScripts("ru")
+            .then(() => {
+                console.log('Standalone rus scripts loaded');
+                enablePaliLookup();
+            })
+            .catch(error => {
+                console.error('Error loading rus standalone scripts:', error);
+            });
+    } 
+    else {
         // Включаем Pali Lookup без загрузки standalone-скриптов
         enablePaliLookup();
     }
@@ -478,7 +510,7 @@ document.addEventListener('click', function(event) {
     
 
                 // Если выбран standalone-словарь
-                if (dictUrl === "standalonebw") {
+if (dictUrl === "standalonebw" || dictUrl === "standalonebwru") {
                     translation = lookupWordInStandaloneDict(cleanedWord);
                 } else {
                     // Иначе используем текущую логику с dictUrl

@@ -3,7 +3,7 @@ const siteLanguage = localStorage.getItem('siteLanguage');
 const savedDict = localStorage.getItem('selectedDict') 
     ? localStorage.getItem('selectedDict').toLowerCase() 
     : (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/') || window.location.pathname.includes('/ru/')) 
-        ? "standalonebwru" 
+        ? "dpdCompactRu" 
         : "standalonebw";
         
 // Устанавливаем правильный URL для словаря в зависимости от языка

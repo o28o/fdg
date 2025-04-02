@@ -87,8 +87,8 @@ if (savedDict && [...dictSelect.options].some(opt => opt.value === savedDict)) {
 } else {
   
 if (window.location.href.includes('/r/') || window.location.href.includes('/ml/') || window.location.href.includes('/ru/')) {
-dictSelect.value = 'standalonebwru'; // Значение по умолчанию
-  localStorage.setItem('selectedDict', 'standalonebwru');
+dictSelect.value = 'dpdCompactRu'; // Значение по умолчанию standalonebwru
+  localStorage.setItem('selectedDict', 'dpdCompactRu');
 } else {
   dictSelect.value = 'standalonebw'; // Значение по умолчанию
   localStorage.setItem('selectedDict', 'standalonebw');
@@ -376,7 +376,7 @@ function updateDemoLinks() {
 
   // Определяем базовый URL в зависимости от языка
   let baseUrl;
-  if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
+  if (window.location.href.includes('/ru/') || window.location.href.includes('/r/') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
     baseUrl = window.location.origin + "/r/"; // Для русского языка
   } else if (window.location.href.includes('/th') || (localStorage.siteLanguage && localStorage.siteLanguage === 'th')) {
     baseUrl = window.location.origin + "/th/read/"; // Для тайского языка

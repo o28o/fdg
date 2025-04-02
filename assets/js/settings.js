@@ -367,12 +367,20 @@ function updateDemoLinks() {
   const queryString = Object.keys(params).map(key => `${key}=${params[key]}`).join('&');
   const hash = window.location.hash;
 
+  // Проверяем, есть ли цифры в параметре q
+  const hasNumbersInQ = params.q && /\d/.test(params.q);
+  
+  // Если нет цифр в q и это не специальный режим (не /ml/, /d/ и т.д.), не обновляем ссылки
+  if (!hasNumbersInQ && !window.location.pathname.match(/\/(ml|d|memorize|rev|frev)\//)) {
+    return;
+  }
+
   // Определяем базовый URL в зависимости от языка
   let baseUrl;
   if (window.location.href.includes('/ru') || (localStorage.siteLanguage && localStorage.siteLanguage === 'ru')) {
     baseUrl = window.location.origin + "/r/"; // Для русского языка
   } else if (window.location.href.includes('/th') || (localStorage.siteLanguage && localStorage.siteLanguage === 'th')) {
-    baseUrl = window.location.origin + "/th/read/"; // Для русского языка
+    baseUrl = window.location.origin + "/th/read/"; // Для тайского языка
   } else {
     baseUrl = window.location.origin + "/read/"; // Для других языков
   }

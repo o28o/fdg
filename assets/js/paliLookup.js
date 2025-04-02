@@ -3,7 +3,7 @@ const siteLanguage = localStorage.getItem('siteLanguage');
 const savedDict = localStorage.getItem('selectedDict') 
     ? localStorage.getItem('selectedDict').toLowerCase() 
     : (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/') || window.location.pathname.includes('/ru/')) 
-        ? "dpdCompactRu" 
+        ? "dpdcompactru" 
         : "standalonebw";
         
 // Устанавливаем правильный URL для словаря в зависимости от языка
@@ -14,8 +14,8 @@ let dictUrl;
 if (window.location.href.includes('localhost') || window.location.href.includes('127.0.0.1')) {
     dhammaGift = '';
  //  dictUrl = "http://localhost:8880";
-   dictUrl = "https://dict.dhamma.gift";
-
+  dictUrl = "https://dict.dhamma.gift";
+//dictUrl = "https://dpdict.net";
 } else if (savedDict.includes("compact")) {
     dhammaGift = 'https://dhamma.gift';
     dictUrl = "https://dpdict.net";

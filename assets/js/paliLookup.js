@@ -1,10 +1,17 @@
 // Проверяем язык в localStorage
 const siteLanguage = localStorage.getItem('siteLanguage');
-const savedDict = localStorage.getItem('selectedDict') 
-    ? localStorage.getItem('selectedDict').toLowerCase() 
-    : (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/') || window.location.pathname.includes('/ru/')) 
-        ? "dpdcompactru" 
-        : "standalonebw";
+
+let savedDict = localStorage.getItem('selectedDict');
+
+if (savedDict) {
+    savedDict = savedDict.toLowerCase();
+} else if (window.location.pathname.includes('/d/')) {
+    savedDict = "dpdFull".toLowerCase();
+} else if (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/') || window.location.pathname.includes('/ru/')) {
+    savedDict = "dpdCompactRu".toLowerCase();
+} else {
+    savedDict = "standalonebw".toLowerCase();
+}
         
 // Устанавливаем правильный URL для словаря в зависимости от языка
 let dhammaGift;

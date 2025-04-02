@@ -1,0 +1,428 @@
+
+<div class="container-fluid mt-2">    
+
+    <h3 class="pl-2 resultheader ml-2">$title</h3>
+
+           <a href='HOMEVAR'>
+            <button class="btn btn-light mb-1" type="button">
+    <img class="table-home-icon" src="/assets/svg/home-icon.svg"></img>   
+      </button>  
+</a>
+    <button id="theme-button" class="btn btn-light mb-1 " type="button">
+      
+<img src="/assets/svg/circle-half-stroke.svg" onclick="switchIcon(this)" class="changesvg table-theme-icon gray-icon"></img>
+</button>		  
+<button id="btn-show-all-children" class="btn btn-light mb-1" type="button">Saṁvaṭṭo / Vivaṭṭo</button>
+
+<button class="btn btn-light forshellscript mb-1" type="button"><a class="text-decoration-none " href="$wordLinkToReplace">Words</a></button>    
+
+<button id="language-button" class="btn btn-light mb-1 " type="button">Pāḷi / Eng</button>
+
+<button class="btn btn-light mb-1  toggle-dict-btn" type="button" ><img class="" src="/assets/svg/comment.svg"></img></button>
+
+ <a title="settings"  id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="btn btn-light mb-1 toggle-icon text-decoration-none">
+  <img id="gearSettings" alt="settings" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+  </a>  
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".btn-language").forEach((btn) => {
+        btn.addEventListener("click", function (event) {
+            event.preventDefault();
+            let newLang = this.getAttribute("data-lang"); // Например, "en", "ru", "th"
+            let url = new URL(window.location.href);
+            let path = url.pathname;
+
+            // Определяем текущий язык
+            let currentLang = path.match(/^\/([a-z]{2})\//);
+            currentLang = currentLang ? currentLang[1] : "en"; // Если нет префикса, считаем "en"
+
+            // Если язык не меняется, ничего не делаем
+            if (currentLang === newLang) return;
+
+            let search = url.search;
+            let hash = url.hash;
+            
+            // Удаляем код языка, если он есть
+            let newPath = path.replace(/^\/[a-z]{2}\//, "/");
+
+            // Добавляем новый язык, если он не "en"
+            if (newLang !== "en") {
+                newPath = `/${newLang}` + newPath;
+            }
+
+            // Перенаправление с сохранением search и hash
+            window.location.href = newPath + search + hash;
+        });
+    });
+});
+</script>
+
+  <!-- Модальное окно "Настройки" англ -->
+<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="settingsLabel">Settings</h2>
+           <div class="ms-auto d-inline-flex align-items-center">
+            <span>en</span>
+<a class="btn btn-sm btn-secondary btn-language rounded-pill text-decoration-none ms-1" href="#" data-lang="ru">ru</a>
+
+     </div>           
+     
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  
+            </div>
+            <div class="modal-body">
+                <div class="mb-2 d-none">
+                    <!-- Dropdown for script selection -->
+                    <label for="script-select"><h5 style="text-align: left;">Script System:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
+                        <option value="ISOPali">ISOPali</option>
+                        <option value="Devanagari">Devanagari</option>
+                        <option value="Thai">Thai</option>
+                    </select> 
+                  &nbsp;  <strong>Alt+L</strong>
+                </div>
+                
+                          <div class="mb-2">
+                    <!-- Дропдаун для выбора системы письма -->
+                    <label for="dict-select"><h5 style="text-align: left;">On click Dictionary:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
+                        <option value="standalonebw">DPD Built-in</option>
+                <option value="standalonebwru">DPD Built-in Rus</option>
+                        <option value="dpdFull">DPD Online </option>
+              <option value="dpdFullRu">DPD Online Rus</option>
+                        <option value="dpdCompact">DPD Onilne mini </option>
+                    <option value="dpdCompactRu">DPD Online mini Rus</option>
+                        <option value="searchonly">Search Only</option>
+                        <option value="dictTango">DictTango Android</option>
+                    </select> <a href="/assets/common/dictHelp.html">?</a>   
+                </div>          
+                
+                <div class="mb-2">
+<div class="d-flex d-none">
+  <label class="form-check-label me-2" for="removePunctCheckbox">
+    <h5 class="mb-0">Remove punctuation from Pali </h5>
+  </label>
+  <input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">&nbsp; <strong>Alt+.</strong>
+</div>
+
+                </div>
+                <h5 style="text-align: left;">Select Reading Mode: </h5>
+                <div class="container">
+                    <!-- Standard -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+                            <a id="stDemo" href="/read/?q=sn56.11"><strong>Standard</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Two languages: Pali, English
+                        </div>
+                    </div>
+
+                    <!-- Multi -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+                            <a id="mlDemo" href="/ml/?q=dn22"><strong>Multi</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Three languages: Pali, Russian, English
+                        </div>
+                    </div>
+
+                    <!-- Devanagari -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d"> &nbsp;
+                            <a id="dDemo" href="/d/?q=sn12.2"><strong>"Devanagari"</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Devanagari or Thai script + Pali in Latin
+                        </div>
+                    </div>
+
+                    <!-- Hidden Section -->
+                    <div id="collapseInterfaces" class="collapse">
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem"> &nbsp;
+                                <a id="memDemo" href="/memorize/?q=an10.46"><strong>For Memorization</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Text shortened to the first letters of each word
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv"> &nbsp;
+                                <a id="rvDemo" href="/rev/?q=sn35.236"><strong>Reverse</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Text from bottom to top
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr"> &nbsp;
+                                <a id="frDemo" href="/frev/?q=sn22.59"><strong>Full Reverse</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Like the previous one + words from left to right
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- "Show More" Button -->
+                    <div class="text-end mb-2">
+                        <button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+                            Others
+                        </button>
+                    </div>
+                    <p class="mb-2">
+                        Click <strong>on the title</strong> to go once. <br>
+                        Click <strong>on the radio button</strong> to set as default<br>
+                        when navigating from the main page and search results.
+                    </p>
+                    Found an error? <a href="/#contacts">Write to us</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!-- "Apply" and "Reset" Buttons -->
+                <div class="text-end">
+                    <button type="button" class="btn btn-sm rounded-pill btn-secondary" id="reset-button">Reset</button>
+                    <button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Apply</button>
+                    <button type="button" class="btn-sm btn-secondary rounded-pill" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<!--
+Переключатель режимов 
+<div id="mode-switcher">
+  <a id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
+    <img style="height: 20px; width:20px;" src="/assets/svg/align-left.svg" class="common-size-icon4" />
+  </a>
+</div>
+    <script src="/assets/js/switchView.js"></script>
+
+
+        <div class="btn btn-light mb-1 form-check-inline mb-1" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Buttons:<br><br><strong>Home</strong> - go to main page<br><strong>Switch Theme</strong> - dark, light, auto<br><strong>Collapse / Expand</strong> - all search result enries on the page<br><strong>Words</strong> - results aggregated by words.<br><strong>Pali / Eng</strong> - switch between languages: Pali, Pali-English, English<br><strong>Pali Lookup</strong> - toggle Word Lookup On/Off<br><strong>?</strong> - this help<br><br><br>________________<br><br><strong>Searchbar</strong> - additional filtering for search results<br><br><br>________________<br>Columns:<br><strong>Sutta</strong> - text index e.g. sn56.11, dn22, an10.46<br><br><strong>Title</strong> - text name<br><br><strong>Words</strong> - word matches within the text<br><br><strong>Count</strong> - count of matches within the text<br><br><strong>Metaphor Count</strong> - number of similes, metaphors in the text in general, unrelated to the searched word. Useful to identify metaphorical texts<br><br><strong>Links</strong> - links to external resources<br><br><strong>Type</strong> - 'dhamma' for four main Nikayas, 'khudakka' - for all books of khudakka nikaya, 'vinaya' - for all vinaya related texts<br><br><strong>Quote</strong> - quote with mached word<br><br><br>________________<br><strong>Custom Search Builer</strong> - advanced filtering if basic searchbar is not enough<br>">  
+        <img class="table-home-icon" src="/assets/svg/question.svg"></img>
+        </div>     
+
+-->
+    <a class="btn btn-light mb-1 form-check-inline mb-1 toggle-icon" alt="Help" data-bs-toggle="modal" data-bs-target="#SearchResultHelp" id="helpMessage" href="javascript:void(0);">  
+        <img id="helpResult" class="table-home-icon" src="/assets/svg/question.svg"></img>
+        </a>     
+
+<!-- Модальное окно "Помощь Англ" -->
+<div class="modal fade" id="SearchResultHelp" tabindex="-1" aria-labelledby="SearchResultHelpLabel" aria-hidden="true" data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="SearchResultHelpLabel">Help</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <a href=/><img class="common-size-icon mb-1" alt="page for reading" src="/assets/svg/home-icon.svg"></a>
+                    Main Search 
+                </div>
+                <h3 class="text-start">Controls</h3>
+                <div class="container">
+                
+                    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="btn-show-all-children-dummy" class="btn btn-light mb-1" >Saṁvaṭṭo...</button>
+        </div>
+
+        <div class="col-auto"><strong>Shift+Space</strong></div>
+        <div class="col">Collapse-expand search results </div>
+    </div>    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="btn-show-all-children-dummy" class="btn btn-light mb-1" >Words</button>
+        </div>
+        <div class="col">Show results aggregated by words </div>
+    </div>
+        <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <button id="language-button-dummy" class="btn btn-light mb-1 mt-1">Pāḷi / Eng</button>
+                        </div>
+                        <div class="col-auto"><strong>Alt+Space <br>or Alt+Z</strong></div>
+                        <div class="col">Show-hide languages in search results</div>
+                    </div>
+                    
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
+                        </div>
+                        <div class="col-auto"><strong>Alt+T</strong></div>
+                        <div class="col">Dark/Light/Auto Themes</div>
+                    </div>
+                  <!-- <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/align-left.svg" alt="toggle one/two column view" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+C</strong></div>
+                        <div class="col">Text in one/two columns</div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/eye.svg" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+V</strong></div>
+                        <div class="col">Show/hide variants between MS and other <a href="/assets/texts/abbr.html">Canon Editions</a></div>
+                    </div> 
+                        <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img id="" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+                        </div>
+                        <div class="col-auto"><strong>Alt+S</strong></div>
+                        <div class="col">Show/hide "Settings"</div>
+                    </div>         
+                    
+                                        <div class="row align-items-center mb-2">
+                        <div class="col-auto"><strong>Alt+1 to 6</strong></div>
+                        <div class="col">Switch Reading Modes</div>
+                    </div>
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto"><strong>Ctrl + ← →</strong></div>
+                        <div class="col">Previous/Next Text</div>
+                    </div>
+                    -->
+                    <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <img src="/assets/svg/comment.svg" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+A</strong></div>
+                        <div class="col">Enable/disable dictionary. Click on a word to activate.  <a href="/assets/common/dictHelp.html">DPD</a></div>
+                    </div>
+        <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img id="" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+        </div>
+        <div class="col-auto"><strong>Alt+S</strong></div>
+        <div class="col">Show-hide "Settings"</div>
+    </div>
+                    <div class="row align-items-center mb-4">
+                        <div class="col-auto">
+                            <img src="/assets/svg/question.svg" class="common-size-icon4">
+                        </div>
+                        <div class="col-auto"><strong>Alt+H</strong></div>
+                        <div class="col">Show/hide this "Help" window</div>
+                    </div>
+        <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Shift+Space </strong></div>
+        <div class="col">Fold-unfold search results </div>
+    </div>  
+                </div>
+<br>
+<div>
+<div class="mb-2">
+  To <strong>open</strong> text from the specific line, click at the end of the desired Pali line where the cursor changes from an arrow to a finger.
+</div>
+<div class="mb-2">
+  Use <strong>Search</strong> field for basic filtering. And <strong>Custom Search Builder</strong> at the bottom of the page for advanced filtering. Unfortunately, basic "Search" doesn't support diactric symbol filtering.
+</div>
+</div>
+<br>
+                <!-- Hidden Section -->
+                <div id="collapseInterfaces" class="collapse">
+                    <h3 style="text-align: left;" class="mt-2">Columns and Links Description</h3>
+            <h4>Columns</h4>
+        
+                <ul class="list-unstyled">
+    <li><strong>Sutta</strong> – Text index (e.g., <em>sn56.11, dn22, an10.46</em>)</li>
+    <li><strong>Title</strong> – Text name</li>
+    <li><strong>Words</strong> – Word matches within the text</li>
+    <li><strong>Count</strong> – Count of matches within the text</li>
+    <li><strong>Metaphor Count</strong> – Number of similes/metaphors in the text (unrelated to the searched word). Useful for identifying metaphorical texts</li>
+    <li><strong>Links</strong> – Links to external resources</li>
+    <li><strong>Type</strong> – 
+        <em>dhamma</em> – Four main Nikayas
+          <em>khudakka</em> – All books of Khuddaka Nikaya
+          <em>vinaya</em> – All Vinaya-related texts</li>
+    <li><strong>Quote</strong> – Quote with the matched word</li>
+</ul>
+<br>    
+                    
+                 <h4>Links</h4>
+               
+                    <div class="mb-2">
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">sn56.11 and similar</a>
+                            </div>
+                            <div class="col-9">
+                                read at Dhamma.Gift Read
+                            </div>
+                        </div>
+                                                <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">Pi</a>
+                            </div>
+                            <div class="col-9">
+                                read at DigitalPaliReader.online
+                            </div>
+                        </div>
+                                                <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">En</a>
+                            </div>
+                            <div class="col-9">
+                                read at TheBuddhasWords.net
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-2">
+                            <div class="col-3">
+                                <a href="#">Ru</a>
+                            </div>
+                            <div class="col-9">
+                                on Theravada.ru or Theravada.su when available
+                            </div>
+                        </div>
+                    </div>
+                    Variant abbreviations: <strong>ms, pts1ed, sya-all, mr</strong> etc. in <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> or <a href="https://suttacentral.net/abbreviations?lang=ru">here</a>.
+                </div>
+
+                Need help? <a href="/#contacts">Write to us</a><br>
+            </div>
+            <div class="modal-footer">
+                <!-- "Show More" Button -->
+                <div class="text-end">
+                    <button class="btn btn-sm btn-light border-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+                        Columns and Links Description
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-sm rounded-pill" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div id='variants' class="variants" style='display: none;'> has <a href=$wordLinkToReplace#variants>variants</a></div>
+
+<table id="pali" class="display table table-striped table-hover responsive " cellspacing="0" width="100%">
+   <thead class="thead-light">
+        <tr>
+            <th>Sutta</th>
+
+            <th>Title</th>
+            <th>Words</th>
+            <th>Ct</th>
+            <th>Mr</th>
+            <th>Links</th>
+                        <th>Type</th>
+            <th class="none">Quote</th>
+        <!-- <th class="none">Audio</th> -->
+        </tr>
+    </thead>
+    <tbody id="sutta">

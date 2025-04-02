@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Проверяем, если это первое посещение страницы с /read/
     if (window.location.pathname.includes('/read/') && !localStorage.getItem('visited_sc')  && visitCount === 3 ) {
-        highlightMultipleById(['gearsc', 'helpsc']);
+        highlightMultipleById(['gearRead', 'helpsc']);
 		    localStorage.setItem('dictionaryVisible', 'true');
 
         localStorage.setItem('visited_sc', 'true'); // Запоминаем, что пользователь уже заходил
@@ -247,8 +247,8 @@ function checkHint(pagePath, elementsToHighlight, targetVisits) {
 }
 
 // Для /read/ - подсветить два элемента по ID на 3-й визит
-checkHint('/read/', ['gearsc', 'helpsc'], 3);
-checkHint('/r/', ['gearsc', 'helpsc'], 3);
+checkHint('/read/', ['gearRead', 'helpsc'], 3);
+checkHint('/r/', ['gearRead', 'helpsc'], 3);
 
 // Для /result/ - подсветить один класс на 2-й визит
 checkHint('/ru/', 'search-hint', 2);

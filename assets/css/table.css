@@ -69,7 +69,11 @@ color: inherit !important;  /* Или color:  */
 
 }
 
-
+tbody td:first-child,  
+tbody td:nth-child(3) {  
+  word-break: break-word;  
+  overflow-wrap: break-word;  
+}
  /*   table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before,table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
     content:'+';
     background-color:#16A085

@@ -25,8 +25,8 @@
    <thead class="thead-light">
         <tr>
             <th>Word</th>
-            <th>Texts</th>
-            <th>Matches</th>
+            <th>T</th>
+            <th>M</th>
             <th class="none"></th>
         </tr>
     </thead>

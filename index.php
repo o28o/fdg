@@ -1318,7 +1318,7 @@ $(function () {
 
 <script src="/assets/js/autopali.js" defer></script>
 	  
-<script src="/assets/js/randPlaceholder.js" defer>
+<script src="/assets/js/randPlaceholder.js">
 </script>
 <script defer>
   randCallToAction();
@@ -1335,17 +1335,20 @@ $(function () {
 <script>
   window.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
-const resources = location.pathname.startsWith('/ru/') 
-    ? [
-        '/assets/js/standalone-dpd/ru/dpd_i2h.js',
-        '/assets/js/standalone-dpd/ru/dpd_ebts.js',
-        '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
-      ]
-    : [
-        '/assets/js/standalone-dpd/dpd_i2h.js',
-        '/assets/js/standalone-dpd/dpd_ebts.js',
-        '/assets/js/standalone-dpd/dpd_deconstructor.js'
-      ];
+
+const isRuPath = /^\/(ru|r)\//.test(location.pathname);
+
+const resources = isRuPath
+  ? [
+      '/assets/js/standalone-dpd/ru/dpd_i2h.js',
+      '/assets/js/standalone-dpd/ru/dpd_ebts.js',
+      '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
+    ]
+  : [
+      '/assets/js/standalone-dpd/dpd_i2h.js',
+      '/assets/js/standalone-dpd/dpd_ebts.js',
+      '/assets/js/standalone-dpd/dpd_deconstructor.js'
+    ];
 
         resources.forEach(url => {
             // Вариант 1: Prefetch через Link header

@@ -8,2483 +8,2503 @@
 
 
 <url>
-  <loc>https://find.dhamma.gift/</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/read.php</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/common/keyFeatures.html</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://dhamma.gift/assets/common/keyFeaturesRu.html</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://dhamma.gift/assets/common/dictHelp.html</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://dhamma.gift/assets/common/dictHelpRu.html</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://dhamma.gift/read.php</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/history.php</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/history.php</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/ru/</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/ru/</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/diff/?lang=pl</loc>
-  <lastmod>2023-08-10T22:30:28+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/diff/?lang=pl</loc>
+  <lastmod>2025-03-10T22:30:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/makelist.html</loc>
-  <lastmod>2023-08-08T04:11:30+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/makelist.html</loc>
+  <lastmod>2025-03-08T04:11:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/?q=-la1+Kata.*%2C+dukkha%E1%B9%81%5C%5C%3F</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/?q=dvayag%C4%81min%C4%AB</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/?q=dvayag%C4%81min%C4%AB</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/?q=pa%E1%B9%ADiccasamupp%C4%81d</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/?q=pa%E1%B9%ADiccasamupp%C4%81d</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/example/eightfold_suttanta_en_159-344.html</loc>
-  <lastmod>2023-08-03T23:05:16+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/example/eightfold_suttanta_en_159-344.html</loc>
+  <lastmod>2025-03-03T23:05:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/example/%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%96%E0%B8%B5_suttanta_th_913-1168.html</loc>
-  <lastmod>2023-08-03T23:05:17+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/example/%E0%B8%AA%E0%B8%B2%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%96%E0%B8%B5_suttanta_th_913-1168.html</loc>
+  <lastmod>2025-03-03T23:05:17+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/example/sariputt_suttanta_ru-ru_179-1105.html</loc>
-  <lastmod>2023-08-03T23:05:16+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/example/sariputt_suttanta_ru-ru_179-1105.html</loc>
+  <lastmod>2025-03-03T23:05:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/example/ocean_suttanta_en_92-266.html</loc>
-  <lastmod>2023-08-03T23:05:16+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/example/ocean_suttanta_en_92-266.html</loc>
+  <lastmod>2025-03-03T23:05:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_647-2186.html</loc>
-  <lastmod>2023-08-03T23:05:16+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/example/(seyyathaapi-adhivacan-uupama-opama)_suttanta_pali_647-2186.html</loc>
+  <lastmod>2025-03-03T23:05:16+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/ru/sc/?q=dn16</loc>
-  <lastmod>2023-08-11T23:13:11+00:00</lastmod>
+  <loc>https://dhamma.gift/r/?q=dn16</loc>
+  <lastmod>2025-03-11T23:13:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/ru/sc/?q=an4.180</loc>
-  <lastmod>2023-08-11T23:13:11+00:00</lastmod>
+  <loc>https://dhamma.gift/r/?q=an4.180</loc>
+  <lastmod>2025-03-11T23:13:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/diff/</loc>
-  <lastmod>2023-08-10T22:30:28+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/diff/</loc>
+  <lastmod>2025-03-10T22:30:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/assets/listdiff.html</loc>
-  <lastmod>2023-08-08T04:00:56+00:00</lastmod>
+  <loc>https://dhamma.gift/assets/listdiff.html</loc>
+  <lastmod>2025-03-08T04:00:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn141</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn141</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/ru/read.php</loc>
-  <lastmod>2023-08-24T03:03:03+00:00</lastmod>
+  <loc>https://dhamma.gift/ru/read.php</loc>
+  <lastmod>2025-03-24T03:03:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn23</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn23</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn24</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn24</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn25</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn25</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn26</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn26</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn27</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn27</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn28</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn28</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn29</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn29</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn30</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn30</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn31</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn31</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn32</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn32</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn33</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn33</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=dn34</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=dn34</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn23</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn23</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn24</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn24</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn25</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn25</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn26</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn26</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn27</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn27</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn28</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn28</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn29</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn29</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn30</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn30</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn31</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn31</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn32</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn32</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn33</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn33</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn34</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn34</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn35</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn35</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn36</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn36</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn37</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn37</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn38</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn38</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn39</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn39</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn40</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn40</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn41</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn41</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn42</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn42</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn43</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn43</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn44</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn44</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn45</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn45</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn46</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn46</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn47</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn47</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn48</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn48</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn49</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn49</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn50</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn50</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn51</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn51</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn52</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn52</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn53</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn53</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn54</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn54</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn55</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn55</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn56</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn56</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn57</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn57</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn58</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn58</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn59</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn59</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn60</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn60</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn61</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn61</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn62</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn62</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn63</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn63</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn64</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn64</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn65</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn65</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn66</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn66</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn67</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn67</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn68</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn68</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn69</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn69</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn70</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn70</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn71</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn71</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn72</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn72</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn73</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn73</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn74</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn74</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn75</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn75</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn76</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn76</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn77</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn77</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn78</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn78</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn79</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn79</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn80</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn80</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn81</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn81</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn82</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn82</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn83</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn83</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn84</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn84</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn85</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn85</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn86</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn86</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn87</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn87</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn88</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn88</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn89</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn89</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn90</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn90</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn91</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn91</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn92</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn92</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn93</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn93</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn94</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn94</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn95</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn95</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn96</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn96</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn97</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn97</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn98</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn98</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn99</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn99</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn100</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn100</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn101</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn101</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn102</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn102</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn103</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn103</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn104</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn104</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn105</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn105</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn106</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn106</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn107</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn107</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn108</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn108</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn109</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn109</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn110</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn110</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn111</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn111</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn112</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn112</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn113</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn113</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn114</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn114</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn115</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn115</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn116</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn116</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn117</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn117</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn118</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn118</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn119</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn119</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn120</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn120</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn121</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn121</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn122</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn122</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn123</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn123</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn124</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn124</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn125</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn125</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn126</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn126</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn127</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn127</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn128</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn128</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn129</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn129</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn130</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn130</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn131</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn131</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn132</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn132</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn133</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn133</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn134</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn134</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn135</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn135</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn136</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn136</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn137</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn137</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn138</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn138</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn139</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn139</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn140</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn140</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn142</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn142</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn143</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn143</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn144</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn144</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn145</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn145</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn146</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn146</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn147</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn147</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn148</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn148</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn149</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn149</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn150</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn150</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn151</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn151</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=mn152</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=mn152</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.23</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.23</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.24</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.24</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.25</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.25</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.26</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.26</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.27</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.27</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.28</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.28</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.29</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.29</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.30</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.30</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.31</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.31</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.32</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.32</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.33</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.33</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.34</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.34</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.35</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.35</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.36</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.36</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.37</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.37</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.38</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.38</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.39</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.39</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.40</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.40</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.41</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.41</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.42</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.42</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.43</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.43</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.44</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.44</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.45</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.45</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.46</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.46</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.47</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.47</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.48</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.48</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.49</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.49</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.50</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.50</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.51</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.51</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.52</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.52</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.53</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.53</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.54</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.54</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.55</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.55</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.56</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.56</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.57</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.57</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.58</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.58</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.59</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.59</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.60</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.60</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.61</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.61</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.62</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.62</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.63</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.63</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.64</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.64</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.65</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.65</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.66</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.66</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.67</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.67</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.68</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.68</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.69</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.69</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.70</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.70</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.71</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.71</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.72</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.72</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.73</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.73</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.74</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.74</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.75</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.75</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.76</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.76</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.77</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.77</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.78</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.78</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.79</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.79</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.80</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.80</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn1.81</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn1.81</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.23</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.23</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.24</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.24</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.25</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.25</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.26</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.26</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.27</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.27</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.28</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.28</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.29</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.29</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn2.30</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn2.30</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.23</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.23</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.24</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.24</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn3.25</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn3.25</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.23</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.23</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.24</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.24</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn4.25</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn4.25</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn5.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn5.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn6.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn6.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn7.22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn7.22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn8.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn8.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn9.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn9.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn10.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn10.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.20</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.20</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.21</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.21</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.22</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.22</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.23</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.23</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.24</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.24</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn11.25</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn11.25</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.1</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.1</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.2</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.2</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.3</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.3</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.4</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.4</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.5</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.5</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.6</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.6</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.7</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.7</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.8</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.8</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.9</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.9</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.10</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.10</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.11</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.11</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.12</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.12</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.13</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.13</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.14</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.14</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.15</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.15</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.16</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.16</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.17</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.17</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.18</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.18</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://find.dhamma.gift/sc/?q=sn12.19</loc>
-  <lastmod>2023-08-09T14:55:45+00:00</lastmod>
+  <loc>https://dhamma.gift/read/?q=sn12.19</loc>
+  <lastmod>2025-03-09T14:55:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDG Digital Pāḷi Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="/static/home.css">
+    <link rel="stylesheet" type="text/css" href="/static/switch.css">
+    <link rel="stylesheet" type="text/css" href="/static/dpd.css">
+    <link rel="icon" type="image/png" href="/static/dpd.ico">
+    <link href="/static/jquery-ui.min.css" rel="stylesheet"/>
+<link href="/static/extrastyles.css" rel="stylesheet" />
+<script src="/static/jquery-3.7.0.min.js"></script>
+<script src="/static/jquery-ui.min.js"></script>
+
+    <style>
+    </style>
+    
+</head>
+
+
+<body>
+ <div id="tab-container"class="tab-buttons">
+        <button class="tab-link active" onclick="openTab(event, 'dpd-tab')">DPD</button>
+        <button class="tab-link" onclick="openTab(event, 'bold-def-tab')">CST Bold Definitions</button>
+    </div> 
+
+
+    <div id="dpd-tab" class="tab-content active">
+        <div class="header-pane">
+		<div class="logo-title">
+            <a href="/" class="alogo"><img src="/static/dpd.ico" alt="dpd logo" id="header-image" class="header-image"></a>
+	    <h2 class="title" id="title-clear"><a href="/" class="alogo">DPD</a></h2>
+        </div>
+<form id="search-form">
+  <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
+  <label class="sr-only dropup" for="search-box"></label>
+    <input class="search-box" type="search" name="search" id="search-box" placeholder="Search..." value="{{ search }}" autocomplete="off" inputmode="text" autocapitalize="off" autofocus>
+    <button class="search-button" id="search-button">search</button>
+                <button class="help small-button" id="search-help-button">
+                ?
+                <span class="tooltip velthuis">
+                    <b>
+                        Velthuis Typing:
+                    </b><br><br>
+                    aa - ā<br>
+                    ii - ī<br>
+                    uu - ū<br>
+                    "n - ṅ<br>
+                    ~n - ñ<br>
+                    .t - ṭ<br>
+                    .d - ḍ<br>
+                    .n - ṇ<br>
+                    .m - ṃ<br>
+                    .l - ḷ
+                </span>
+            </button>
+
+    </div>
+</form>
+        </div>
+        <div class="main-pane" id="main-pane">
+            <div class="history-pane" id="history-pane">
+                             <button class="collapse-btn" onclick="toggleHistory()">           
+    <h3>
+History <div class="history-icon"></div>   
+  </h3> 
+  </button>
+  <div id="history-content">
+            
+                      
+                <button id="clear-history-button" class="clear-history-button">x</button>
+                <div class="history-list-pane" id="history-list-pane"></div>
+            </div>
+            </div>
+
+
+<?php
+$outFile = './out.html';
+
+if (file_exists($outFile) && filesize($outFile) > 0) {
+    readfile($outFile);
+} else {
+    echo '
+        <div class="dpd-pane" id="dpd-pane">
+            <div class="summary-results" id="summary-results"></div>
+            <div class="dpd-results" id="dpd-results">
+                {{ dpd_results|safe }}
+            </div>
+        </div>
+    ';
+}
+
+/*
+if (!isset($_GET['q'])) {
+   die("Ошибка: параметр 'q' не передан.");
+}
+
+$q = escapeshellarg($_GET['q']);
+$python_script = escapeshellcmd('~/dpd-db/.venv/bin/python ~/dpd-db/dpd_cli2.py ' . $q);
+
+$output = shell_exec($python_script);
+if ($output === null) {
+echo '';
+    die("Ошибка выполнения скрипта.");
+}
+
+echo nl2br(htmlspecialchars($output));
+*/
+?>
+
+
+            <div class="settings-pane">
+                  <button class="collapse-btn" onclick="toggleSettings()">            
+    <h3>
+Settings <div class="settings-icon"></div>   
+  </h3> 
+  </button>
+  <div id="settings-content">
+
+                            <!-- Language selection dropdown -->
+            <div class="language-switcher">
+                <span class="language-icon" title="Язык">🌐 Change Language
+                    <span class="tooltip">
+                        <b>Language</b>
+                    </span>
+                </span>
+<div class="dropdown" style="display: none;">
+  <a href="javascript:void(0)" class="dropdown-item" onclick="changeLanguage('en')">English</a>
+  <a href="javascript:void(0)" class="dropdown-item" onclick="changeLanguage('ru')">Русский</a>
+</div>
+            </div>
+                <p>
+                    <button class="small-button" id="font-size-down">-</button>
+                    <button class="small-button" id="font-size-up">+</button>
+                    font size
+                    <span id="font-size-display"></span>
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle"><span class="slider round"></span>
+                    </label>
+                    light / dark mode
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="sans-serif-toggle"><span class="slider round"></span>
+                    </label>
+                    sans / serif font
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="niggahita-toggle"><span class="slider round"></span>
+                    </label>
+                    niggahīta ṃ / ṁ
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="grammar-toggle"><span class="slider round"></span>
+                    </label>
+                    grammar button closed / open
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="example-toggle"><span class="slider round"></span>
+                    </label>
+                    example button closed / open
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="one-button-toggle"><span class="slider round"></span>
+                    </label>
+                    one button at a time off / on
+                </p>
+                <!-- <p>
+                <label class="switch">
+                    <input type="checkbox" id="sbs-example-toggle"><span class="slider round"></span>
+                </label>
+                sbs example button closed / open
+            </p> -->
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="summary-toggle" ><span class="slider round"></span>
+                    </label>
+                    summary hide / show
+                </p>
+                <p>
+                    <label class="switch">
+                        <input type="checkbox" id="sandhi-toggle" checked><span class="slider round"></span>
+                    </label>
+                    sandhi ' hide / show
+                </p>
+                <p>
+    <label class="switch">
+        <input type="checkbox" id="tabs-toggle">
+        <span class="slider round"></span>
+    </label>
+    Tabs hide / show
+</p>
+
+            </div>
+        </div>
+        </div>
+        <div class="footer-pane">
+            ©
+            <a href="https://digitalpalidictionary.github.io/dpdict.html" target="_blank">DPD</a>
+        </div>
+    </div>
+
+    <div id="bold-def-tab" class="tab-content">
+        <div class="header-pane bd-header-pane">
+            <div class="logo-title">
+                <h2 class="title" id="bd-title-clear">CST Bold Definitions</h2>
+            </div>
+            <p class="centered-text">
+                Search for <b>{{ bd_count| safe }}</b> 
+                bold defined terms in the Chaṭṭha Saṅgāyana Tipiṭaka
+            </p>
+            <div class="bd-search-pane">
+                <h4>Search for definitions of the term</h4>
+                <form id="bd-search-form">
+                    <input class="search-box bd-search-box" type="text" name="bd-search-1" id="bd-search-box-1"
+                        value="{{ search }}" autocomplete="off" inputmode="text" autocapitalize="off">
+                </form>
+                <h4>which contain</h4>
+                <form id="bd-search-form">
+                    <input class="search-box bd-search-box" type="text" name="bd-search-2" id="bd-search-box-2"
+                        value="{{ search }}" autocomplete="off" inputmode="text" autocapitalize="off">
+                </form>
+                <h4>within them.</h4>
+                <button class="search-button" id="bd-search-button">search</button>
+                <button class="help small-button" id="search-help-button">
+                    ?
+                    <span class="tooltip velthuis">
+                        <b>
+                            Velthuis typing:
+                        </b><br><br>
+                        aa > ā<br>
+                        ii > ī<br>
+                        uu > ū<br>
+                        "n > ṅ<br>
+                        ~n > ñ<br>
+                        .t > ṭ<br>
+                        .d > ḍ<br>
+                        .n > ṇ<br>
+                        .m > ṃ<br>
+                        .l > ḷ
+                    </span>
+                </button>
+            </div>
+            <div class="bd-search-options">
+                <input type="radio" id="option1" name="option" value="starts_with">
+                <label for="option1">start with</label>
+                <input type="radio" id="option2" name="option" value="regex" checked>
+                <label for="option2">normal/rx</label>
+                <input type="radio" id="option3" name="option" value="fuzzy">
+                <label for="option3">fuzzy</label>
+                <button type="button" class="bd-search-option-clear">clear</button>
+            </div>
+        </div>
+        <div class="scrolling-pane" id="bd-results">
+            {{ bd_results|safe }}
+        </div>
+        <div class="footer-pane">
+             About 
+            <a href="https://digitalpalidictionary.github.io/dpdict.html" target="_blank">DPD</a>
+        </div>
+    </div>
+
+    <script src="static/home.js"></script>
+    <script src="static/tabs.js"></script>
+    <script src="static/bold_definitions.js"></script>
+    <script src="static/dpd.js"></script>
+    <script src="static/autopali.js"></script>
+            <script src="/static/extra.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>
+

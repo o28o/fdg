@@ -17,7 +17,7 @@ if ( preg_match('/\/ru/', $actual_link)) {
   $defaultlang = 'lang=pli-rus';
   $outputlang = "-oru";
   $base = "/ru/";
-  $readerlang = $base . "sc/";
+  $readerlang = $base . "read/";
   $aksharatext = "На латинице вы искали ";
   function afterAkhsaramukhaResponse($convertedStr) {
     echo "На латинице вы искали $convertedStr<br><br>";
@@ -27,7 +27,7 @@ else if ( preg_match('/\/th/', $actual_link)) {
   $defaultlang = 'lang=pli-eng';
   $outputlang = "";
   $base = "/th/";
-  $readerlang = $base . "sc/";
+  $readerlang = $base . "read/";
   $aksharatext = "You search ";
   function afterAkhsaramukhaResponse($convertedStr) {
     echo "in Latin script $convertedStr<br><br>";
@@ -38,24 +38,24 @@ else {
     $defaultlang = 'lang=pli-eng';
     $outputlang = "";
     $base = "/";
-  $readerlang = $base . "sc/";
+  $readerlang = $base . "read/";
     $aksharatext = "Romanized string is ";
     function afterAkhsaramukhaResponse($convertedStr) {
     echo "Romanized string is $convertedStr<br><br>";
   }
     }
 	
-	if ( preg_match('/ml.html/', $actual_link)) {
+	if ( preg_match('/\/ml\//', $actual_link)) {
   $defaultlang = 'lang=pli-rus';
   $outputlang = "-oru";
   $base = "/";
-  $readerlang = $base . "sc/ml.html";
+  $readerlang = $base . "/ml/";
 
 } 	if ( preg_match('/mlth.html/', $actual_link)) {
   $defaultlang = 'lang=pli-rus';
   $outputlang = "";
   $base = "/";
-  $readerlang = $base . "sc/mlth.html";
+  $readerlang = $base . "read/mlth.html";
 
 }
 
@@ -71,32 +71,32 @@ if (isset($_GET['reader'])) {
     switch ($reader) {
         case 'ml':
           $base = "/";
-            $readerlang = $base . "sc/ml.html";
+            $readerlang = $base . "/ml/";
             break;
         case 'rv':
           $base = "/";
-            $readerlang = $base . "sc/rv.html";
+            $readerlang = $base . "read/rv.html";
             break;
         case 'd':
           $base = "/";
-            $readerlang = $base . "sc/d.html";
+            $readerlang = $base . "read/d.html";
             break;
         case 'mem':
                     $base = "/";
-            $readerlang = $base . "sc/memorize.html";
+            $readerlang = $base . "read/memorize.html";
             break;
         case 'fr':
                     $base = "/";
-            $readerlang = $base . "sc/fr.html";
+            $readerlang = $base . "read/fr.html";
             break;
         default:
             // Значение по умолчанию, если ни один вариант не подошел
-            $readerlang = $base . "sc/";
+            $readerlang = $base . "read/";
             break;
     }
 } else {
     // Если параметр 'reader' не передан, используем значение по умолчанию
-    $readerlang = $base . "sc/";
+    $readerlang = $base . "read/";
 }
 		
 		

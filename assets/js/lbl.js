@@ -327,7 +327,7 @@ function downloadJson() {
 
     // Функция для загрузки данных и проверки индекса
     function loadAndCheckRanges() {
-        fetch('/sc/reader-rus-translations.js')
+        fetch('/read/reader-rus-translations.js')
             .then(response => response.text())
             .then(data => {
                 // Извлечение переменных из текста файла
@@ -664,7 +664,7 @@ window.addEventListener('click', function(event) {
 
     document.getElementById('linkButton1').addEventListener('click', function() {
         var indexValue = document.getElementById('indexInput').value;
-        var url = '/ru/sc?q=' + indexValue;
+        var url = '/r?q=' + indexValue;
         window.open(url, '_blank');
     });
 
@@ -705,7 +705,7 @@ window.addEventListener('click', function(event) {
                 window.open(url, '_blank');
             } else {
                 // Если формат не соответствует AN или SN, открыть URL по умолчанию
-                var url = '/ru/sc?q=' + indexValue;
+                var url = '/r?q=' + indexValue;
                 window.open(url, '_blank');
             }
         }
@@ -724,7 +724,7 @@ const textPart = indexValue.split('.')[0]; // Разделяем по точке
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
+    const url = "/read/php/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
     const originalValue = indexValue;
@@ -767,7 +767,7 @@ const textPart = indexValue.split('.')[0]; // Разделяем по точке
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/sc/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
+    const url = "/read/php/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
     const originalValue = indexValue;

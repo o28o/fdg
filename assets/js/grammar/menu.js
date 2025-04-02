@@ -8,7 +8,7 @@ const menuTemplate = `
    <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
 
             
-                <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="/">dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 Меню
                     <i class="fas fa-bars"></i>
@@ -19,7 +19,7 @@ const menuTemplate = `
       <br>  
       <a class="nav-link" href="../../read.php">Чтение</a><br>
       <a class="nav-link" href="../../">Поиск</a><br>
-      <a class="nav-link" href="/sc/memorize.html">Запоминание</a><br><br>      
+      <a class="nav-link" href="/memorize/">Запоминание</a><br><br>      
       Существительные
       </span>                 
                     <ul class="list-unstyled text-decoration-none">

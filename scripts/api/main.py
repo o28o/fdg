@@ -69,6 +69,9 @@ def convert_file(
     return converted_data
 
 # Запуск: uvicorn main:app --host 0.0.0.0 --port 8000
+
 # ~/aksharamukha/bin/uvicorn scripts.api.main:app --host 0.0.0.0 --port 8000
+
 # uvicorn aksharamukha fastapi 
+# http://localhost:8000/convert?text=Dukkha&target=Devanagari&source=autodetect
 

@@ -48,14 +48,14 @@ $totalinyears years total
 <html>
 <head>
 <title>Countdown</title>
-<link rel="icon" type="image/png" href="https://find.dhamma.gift/assets/img/favico-noglass.png" />
+<link rel="icon" type="image/png" href="https://dhamma.gift/assets/img/favico-noglass.png" />
  <meta http-equiv="Cache-control" content="public">
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Countdown - find.Dhamma.gift" />
-<meta property="og:description" content="Countdown - find.Dhamma.gift" />
-<meta name="description" content="Countdown - find.Dhamma.gift">
-<meta name="twitter:title" content="Countdown - find.Dhamma.gift">
-<meta name="twitter:description" content="Countdown - find.Dhamma.gift">
+<meta property="og:title" content="Countdown - Dhamma.gift" />
+<meta property="og:description" content="Countdown - Dhamma.gift" />
+<meta name="description" content="Countdown - Dhamma.gift">
+<meta name="twitter:title" content="Countdown - Dhamma.gift">
+<meta name="twitter:description" content="Countdown - Dhamma.gift">
 <meta property="og:image" itemprop="image" content="" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -140,9 +140,9 @@ $totalinyears years total
     <?php echo $passedinyears ?>
 </td>
 <td>
-<a target="_blank" href=/ru/sc/?q=sn51.20>sn51.20</a> 
-<a target=_blank href=/ru/sc/?q=dn22>dn22</a> 
-<a target=_blank href=/ru/sc/?q=mn77>mn77</a> 
+<a target="_blank" href=/r/?q=sn51.20>sn51.20</a> 
+<a target=_blank href=/r/?q=dn22>dn22</a> 
+<a target=_blank href=/r/?q=mn77>mn77</a> 
 <a target=_blank href=http://scholar.google.com>Scholar Google</a> 
 <a target=_blank href=https://sci-hub.se/>Sci Hub</a> 
  
@@ -172,10 +172,10 @@ $totalinyears years total
     <?php echo $leftinyears ?>
 </td>
 <td>
-<a target="_blank" href=/ru/sc/?q=bu-pm>bu-pm</a> 
-<a target="_blank" href=/ru/sc/?q=bi-pm>bi-pm</a> 
-<a target=_blank href=/ru/sc/?q=sn56.11>sn56.11</a> 
-<a target=_blank href=/ru/sc/?q=dn15>dn15</a> 
+<a target="_blank" href=/r/?q=bu-pm>bu-pm</a> 
+<a target="_blank" href=/r/?q=bi-pm>bi-pm</a> 
+<a target=_blank href=/r/?q=sn56.11>sn56.11</a> 
+<a target=_blank href=/r/?q=dn15>dn15</a> 
  
 </td>
 </tr>
@@ -203,10 +203,10 @@ $totalinyears years total
     <?php echo $totalinyears ?>
 </td>
 <td>
-<a target="_blank" href=/ru/sc/?q=sn22.95>sn22.95</a>  
-<a target=_blank href=/ru/sc/?q=sn22.102>sn22.102</a>  
-<a target=_blank href=/ru/sc/?q=sn35.70>sn35.70</a>  
-<a target=_blank href=/ru/sc/?q=an3.101>an3.101</a>  
+<a target="_blank" href=/r/?q=sn22.95>sn22.95</a>  
+<a target=_blank href=/r/?q=sn22.102>sn22.102</a>  
+<a target=_blank href=/r/?q=sn35.70>sn35.70</a>  
+<a target=_blank href=/r/?q=an3.101>an3.101</a>  
 <a target=_blank href=/assets/audio/documents/dn_Syrkin.pdf>ДН пер. Сыркин А.Я.</a>  
 <a target=_blank href=http://titus.uni-frankfurt.de/texte/etcs/ind/aind/bskt/lankavat/lanka.htm>TITUS</a>  
 <a target=_blank href=http://spiritual.su/>spiritual.su</a> 

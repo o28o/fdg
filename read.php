@@ -7,14 +7,14 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
-include 'scripts/opentexts.php';
+include 'scripts/search-handler.php';
 //echo $mainscpage;
 
 // Получить значение из GET параметра
 if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
     // Чекбокс активен
-    $readerlang = "/sc/ml.html";
-    $mainscpage = "/sc/ml.html";
+    $readerlang = "/ml/";
+    $mainscpage = "/ml/";
 } 
 ?>
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
@@ -28,19 +28,32 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 <meta name="description" content="<?php echo $metadesc;?>" />
 <meta name="author" content="" />
 <link rel="canonical" href="<?php echo $canonicalPage;?>read.php">
+<link rel="alternate" href="https://dhamma.gift/ru/read.php" hreflang="ru">
+<link rel="alternate" href="https://dhamma.gift/read.php" hreflang="en">
 
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Dhamma.gift" />
+<meta property="og:title" content="Dhamma.gift Read" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
+<link rel="manifest" href="/assets/manifest.php">
 
-<meta property="og:url" content="/" />
-<meta property="og:site_name" content="Dhamma.gift" />
+<meta property="og:url" content="https://Dhamma.gift/read.php" />
+<meta property="og:site_name" content="Dhamma.gift Read" />
 <meta property="og:image" itemprop="image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $titletwit;?>">
 <meta name="twitter:description" content="<?php echo $ogdesc;?>">
+
+<style>
+    body {
+        opacity: 0;
+        visibility: hidden;
+        background: black;
+     /*   transition: opacity 0.3s ease-in-out; Плавное появление */
+    }
+</style>
+
 <!-- Favicon favico-noglass
 <link href="/assets/img/gray.png" rel="icon" media="(prefers-color-scheme: light)">
 <link href="/assets/img/gray-white.png" rel="icon" media="(prefers-color-scheme: dark)">-->
@@ -59,16 +72,22 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
+<!-- 
 <link href="/assets/css/styles.css" rel="stylesheet" />
-<link href="/assets/css/paliLookup.css" rel="stylesheet" />
+
+-->
+<script src="/assets/js/loadCssJsMain.js"></script>
+
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+
+
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
+<link href="/assets/css/paliLookup.css" rel="stylesheet" />
 <style>
 </style>
 
 <?php echo $fontawesomejs;?> 
-
 
 </head>
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
@@ -102,7 +121,7 @@ if (newUrl !== window.location.href) {
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
             <a class="navbar-brand mobile-center" href="<?php echo $mainpage;?>"> <div class="container"><img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="./assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
-                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">find.Dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="<?php echo $mainpage; ?>">Dhamma.gift Read</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>
@@ -151,7 +170,7 @@ if (isset($_GET['q'])) {
 ?>
 
 <div class="searchinputdiv">
-  <input name="q" type="text" style="width:230px;" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
+  <input name="q" type="text" style="min-width:230px;" class="form-control rounded-pill searchinput" id="paliauto" placeholder="e.g. Kāyagat or sn56.11" value="<?php echo $q; ?>" multiple>
   <button type="button" id="clearbtn" class="btn btn-sm ms-1 me-1 rounded-pill">
     <i class="fas fa-times" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $clearaption;?></span>
@@ -191,6 +210,11 @@ $(document).ready(function() {
 });
 </script>
 
+      	<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 mb-1 text-start' role='alert' id='successAlert'>
+  <div id="response"></div>
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>		  
+  
 
 <div class="collapse" id="collapseSettings">
   <div class="float-start">
@@ -205,7 +229,7 @@ $(document).ready(function() {
         <option value="-b" <?php if (isset($p) && $p == "-b") echo "selected";?> ><?php echo $radiotbw;?></option>
         <option value="-en" <?php if (isset($p) && $p == "-en") echo "selected";?> ><?php echo $radioen;?></option>
     </select>
-       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
+       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltiptextype;?>">*</div>
 
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra) && $p == "") echo "selected";?> ><?php echo "$liststd";?></option>
@@ -217,7 +241,7 @@ $(document).ready(function() {
         <option value="-nm10" <?php if (isset($extra) && $extra == "-nm10") echo "selected";?> ><?php echo "$listnm10";?></option>
       <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
     </select>
-	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</div>
+	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltipsearchtype;?>">*</div>
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
@@ -225,12 +249,12 @@ $(document).ready(function() {
          <div style="max-width: 300px;" class="my-2"> 
      <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-anyd ") echo "checked";?>  value="-anyd">
-  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
+  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
   </div>
   
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
-  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></div>
+  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></div>
   </div>
   
 <div class="align-items-center form-check-inline mt-3">
@@ -249,7 +273,6 @@ $(document).ready(function() {
 </div>
 
 <div class="mt-3">
-  <script src="/assets/js/setDefaultMode.js"></script>
 <button type="button" class="btn btn-sm btn-primary rounded-pill" onclick="savePreferences()"><?php echo $btnsave;?></button>
 <button type="button" class="btn btn-sm btn-secondary rounded-pill" onclick="resetPreferences()"><?php echo $btnreset;?></button>
   
@@ -270,12 +293,12 @@ $(document).ready(function() {
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc Y(ti|nti)</strong></button> - <?php echo $excfew;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>\bX</strong></button> - <?php echo $begin;?>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>Y\b</strong></button> <?php echo $end;?><br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - <?php echo $anynumber;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - <?php echo $fewsymbols;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - <?php echo $nextwords;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\\S*\\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\S*\s'><strong>X\S*\sY</strong></button> - <?php echo $nextwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\S*\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>a[ṁ]?</strong></button> - <?php echo $optionalletter;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='tatt($|[^h])'><strong>tatt($|[^h])</strong></button> - <?php echo $variantsexc;?> <br>
@@ -288,6 +311,7 @@ $(document).ready(function() {
   <?php echo $regexlink;?> 
     <?php echo $defaults;?> 
     <?php echo $defaultsJS;?> 
+    <script src="/assets/js/setDefaultMode.js"></script>
     
  </p>
 
@@ -347,6 +371,9 @@ $(document).ready(function() {
     });
   });
 </script>
+
+
+<script src="/assets/js/uihelp.js"></script>
 
 	  <script src="/assets/js/smoothScroll.js" defer></script>
 
@@ -465,14 +492,8 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>    
 </div>
 </div>
-        	<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 mb-1 text-start' role='alert' id='successAlert'>
-  <div id="response"></div>
-  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-</div>		  
   </div>
-      </div>	
-      
-
+    
             <div id="spinner" class="justify-content-center">
               <div class="spinner-border mb-3" role="status">
                 <span class="visually-hidden">Loading...</span>
@@ -489,6 +510,8 @@ window.addEventListener('pageshow', function(event) {
     document.getElementById('spinner').style.display = 'none';
   }
 });
+
+    document.getElementById('spinner').style.display = 'none';
 </script>
 
   <!-- extra options end -->
@@ -18355,7 +18378,7 @@ clearBtn.style.display = 'block';
   <span style="font-size: 0.6em; vertical-align: middle;" 
         data-bs-html="true" 
         data-bs-toggle="tooltip" 
-        data-bs-placement="top" 
+        data-bs-placement="bottom" 
         title="<?php echo $tooltipknread;?>">*</span>
 </h2>
 
@@ -21489,7 +21512,7 @@ include $basedir . "/assets/texts/bipm.php";
 <div class="row justify-content-center">
 
 <div style="max-width: 600px;" class="container-lg">
-<div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"></div>
+<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $howtosearchquotetooltip;?>"></div>
 <?php echo $howtosearchquote;?>
 
 </div>
@@ -21521,10 +21544,10 @@ include $basedir . "/assets/texts/bipm.php";
 <?php echo $aboutprp; ?>
                 </div>
                 <!-- About Section Button-->
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="https://github.com/o28o/fdg">
-                
-                   <i class="fa-brands fa-github"></i><?php echo $prongh; ?>
+                                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="/assets/common/<?php echo $prekeyfeatures; ?>">
+    
+                   <i class="fa-solid fa-star"></i><?php echo $premail; ?>
                     </a>
                 </div>
             </div>
@@ -21832,7 +21855,47 @@ include $basedir . "/assets/texts/bipm.php";
 </small> <button class="btn btn-secondary text-center installButton" id="" style="display:none;"><?php echo $installpwa;?></button></div>
         </div>
         <!-- Portfolio Modals-->
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/assets/sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      })
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  }
 
+  let deferredPrompt;
+  const installButtons = document.querySelectorAll('.installButton');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // Показываем все кнопки с классом installButton
+    installButtons.forEach(button => {
+      button.style.display = 'inline-block';
+    });
+  });
+
+  // Добавляем обработчик события click для каждой кнопки
+  installButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Пользователь принял предложение установки');
+          } else {
+            console.log('Пользователь отклонил предложение установки');
+          }
+          deferredPrompt = null;
+        });
+      }
+    });
+  });
+</script>
 
 <!-- Portfolio Modal 3-->
 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
@@ -21978,13 +22041,19 @@ include $basedir . "/assets/texts/bipm.php";
         </div>
 
 
+<script src="/assets/js/themeswitch.js"></script>
 
-        <!-- Core theme JS
+        <!-- 
+Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
 		<script src="/assets/js/uihelp.js"></script>
 		
-<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+ <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+
+<!--
+-->
+
 <script defer>
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
@@ -22006,12 +22075,53 @@ $(function () {
   console.log(window.location.href);
 
 </script>
-<script src="/assets/js/paliLookup.js"></script>
-<script defer src="/assets/js/themeswitch.js"></script>
 <script src="/assets/js/openFdg.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      
+const isRuPath = location.pathname.startsWith('/ru/') || location.pathname.startsWith('/r/');
+
+const resources = isRuPath
+  ? [
+      '/assets/js/standalone-dpd/ru/dpd_i2h.js',
+      '/assets/js/standalone-dpd/ru/dpd_ebts.js',
+      '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
+    ]
+  : [
+      '/assets/js/standalone-dpd/dpd_i2h.js',
+      '/assets/js/standalone-dpd/dpd_ebts.js',
+      '/assets/js/standalone-dpd/dpd_deconstructor.js'
+    ];
+
+        resources.forEach(url => {
+            // Вариант 1: Prefetch через Link header
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = url;
+            link.as = 'script';
+            document.head.appendChild(link);
+
+            // Вариант 2: Фоновый fetch (для старых браузеров)
+            fetch(url, {
+                method: 'GET',
+                credentials: 'same-origin',
+                cache: 'force-cache'
+            });
+        });
+        console.log('fetching dict');
+    }, 2000);
+});
+</script>
+<script src="/assets/js/paliLookup.js"></script>
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            enablePaliLookup();
+        });
+    </script>
 </body>
 <?php
-include 'scripts/multilang-search.php';
 ?>  
 
 </html>

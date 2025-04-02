@@ -461,22 +461,22 @@ vin=vinaya
 abhi=abhidhamma
 sutta=mutta
 metaphorcountfile=$textinfofolder/metphrcount_sutta.txt
-fortitle=Suttanta
+fortitle="4 Nikayas"
 dirlocation=sutta
 translator=sujato
-fileprefix=_suttanta
+fileprefix=_4nikayas
 hwithtitle='<h1>'
 searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
 source="an,sn,mn,dn"
 if [[ "$@" == *"-vin"* ]]; then
     vin=dummy
     sutta=sutta
-	fortitle=Vinaya
+	fortitle="Vinaya Vibhanga and Patimokkha"
 	dirlocation=vinaya
 	translator=brahmali
 	vin="./vinaya/pli-tv-b*"
 	searchIn="$vin"
-    fileprefix=_vinaya
+    fileprefix=_vinayavbpm
     metaphorcountfile=$textinfofolder/metphrcount_vinaya.txt
 	source="vn"
 
@@ -490,6 +490,10 @@ if [[ "$@" == *"-abhi"* ]]; then
 	dirlocation=abhidhamma
 	translator=""
     fileprefix=_abhidhamma
+hwithtitle='<h1>'
+searchIn="./abhidhamma/sn"
+source="abhi"    
+    
     #echo search in abhidhamma
 fi
  
@@ -507,23 +511,25 @@ if [[ "$@" == *"-kn"* ]]; then
 kn="./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp"
 searchIn="$searchIn $kn"
 source="an,sn,mn,dn,kn"
-fileprefix=${fileprefix}-kn
-fortitle="${fortitle} +KN"
+fileprefix=_suttanta
+fortitle="${fortitle} + 6 KN books"
 
 elif [[ "$@" == *"-all"* ]]; then
 
 knLater="./sutta/kn"
 searchIn="$searchIn $knLater"
 source="an,sn,mn,dn,kn,lt"
+fortitle="Suttanta"
+fileprefix=_suttanta
 if [[ "$@" == *"-vin"* ]]; then
 	vin="./vinaya/pli-tv-b*"
 	vinLater="./vinaya/pli-tv-*"
 	searchIn="$vin $vinLater"
 	source="vn,kp"
+	fortitle="Vinaya"
+	fileprefix=_vinaya
 fi 
 
-fileprefix=${fileprefix}-all
-fortitle="${fortitle} +All"
 elif [[ "$@" == *"-tru"* ]]; then
 function grepbasefile {
 nice -$nicevalue grep -E -B${linesbefore} -A${linesafter} -Ri${grepvar}${grepgenparam} "$pattern" $pali_or_lang --exclude-dir={$sutta,$abhi,home,js,css,image} --exclude-dir={ab,bv,cnd,cp,ja,kp,mil,mnd,ne,pe,ps,pv,pli-tv-kd,pli-tv-pvr,tha-ap,thi-ap,vv} | cleanuphtml
@@ -998,7 +1004,7 @@ done
 sed -i 's@[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]@'$dateforhist'@g' updatehistorytmp
 cat updatehistorytmp | tac | head -1 | awk '{print substr($0, index($0, $2))}' >> $history
 rm updatehistorytmp
-OKresponse
+#OKresponse
 echo "<script>window.location.href=\"./result/${checkfile}\";</script>"
 	exit 0
 fi 
@@ -1409,7 +1415,7 @@ titlewords="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} 
 sed -i 's/TitletoReplace/'"$title"'/g' ${table}
 sed -i 's/TitletoReplace/'"$titlewords"'/g' ${tempfilewords}
 
-OKresponse
+#OKresponse
 
 #finalize words file 
 oldname=$tempfilewords
@@ -1535,7 +1541,7 @@ if [[ "$type" == json ]]; then
   else 
   echo -n "<br>" >> $history
   fi
-elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"Suttanta"* ]]
+elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"4 Nikayas"* ]]
 then
   if (( $textsqnty <= 40 ))
   then
@@ -1547,7 +1553,7 @@ else
   if (( $textsqnty <= 40 ))
   then
  # cat $basefile > checkitout
-echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/sc/?q="$1">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
+echo -n "`cat $basefile | awk -F':' '{print $1}' | awk -F'/' '{print $NF}' | sed 's/.html//g' | awk -F'_' '{print \"<a target=_blank href=/read/?q="$1">"$1"</a>\"}' | sort -u | sort -Vf | xargs`" >> $history
 #&lang=pli
   else 
   echo -n "<br>" >> $history
@@ -1609,7 +1615,7 @@ echo "<tr>
 <td>$count</td>   
 <td>$metaphorcount</td>
 <td>
-`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"Suttanta"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
+`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"4 Nikayas"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
 
 <a class='bwLink' href='' data-slug='$suttanumber'>En</a>
 <a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>

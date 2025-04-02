@@ -1,1 +1,0 @@
-../../sc/reader-th.js

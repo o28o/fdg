@@ -42,7 +42,8 @@ for i in `grep -lri "<li>.*Translated" bw/`
 do 
 echo $i
 textindex=`echo $i | awk -F'/' '{print $NF}'  | sed 's/.html//g'`
-sed -i '/<li>.*Translated/s/<li>/<li><a href="\/ru\/sc\/?q='$textindex'">fdg<\/a> <a href="https:\/\/suttacentral.net\/'$textindex'">sc<\/a> /' $i
+sed -i '/<li>.*Translated/s/<li>/<li><a href="\/ru\/read\/?q='$textindex'">DG<\/a> <a href="https:\/\/suttacentral.net\/'$textindex'">SC<\/a> /' $i
 done 
 
 diff -qr bw/ bw1/
+

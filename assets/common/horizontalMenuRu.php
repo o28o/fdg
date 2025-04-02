@@ -110,7 +110,7 @@ echo '<!--
 
          
 
-        <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Благородный Аскетизм</a></li>
+        <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">Статьи на Dhammadana.org</a></li>
       <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">Переводы Майкла Олдса</a></li>
 
   </ul>
@@ -174,13 +174,13 @@ echo '<!--
    
                          <li>
 <div class="dropdown-item ">
-         <i class="' . $iconimportant . '"></i>Падежи <a class="text-black" href="' . $linkcasesru . '"> таблица</a>
+         <i class="' . $iconimportant . '"></i> Падежи <a class="text-black" href="' . $linkcasesru . '"> таблица</a>
          <a class="text-black" target=""  href="/assets/materials/pali_declensions_ru.pdf">примеры</a> 
        </div>
          </li>     
                          <li>
 <div class="dropdown-item ">
-         <i class="' . $iconimportant . '"></i>Спряжения          <a class="text-black" target=""  href="/assets/materials/pali_conjugations_ru.pdf"> рус</a> 
+         <i class="' . $iconimportant . '"></i> Спряжения          <a class="text-black" target=""  href="/assets/materials/pali_conjugations_ru.pdf"> рус</a> 
          <a class="text-black" href="' . $linkconj . '"> англ</a>
        </div>
          </li>        
@@ -212,9 +212,9 @@ echo '<!--
                       <li>
 <div class="dropdown-item ">
          <i class="' . $iconimportant . '"></i><a class="text-black" href="/ru/assets/memo.html"> Мнемотехника</a>
-         <a class="text-black" target=""  href="/sc/memorize.html?q=sn56.11">sn56.11</a> 
-         <a class="text-black" target=""  href="/sc/memorize.html?q=dn22">dn22</a> 
-         <a class="text-black" target=""  href="/sc/memorize.html?q=sn12.2">sn12.2</a>
+         <a class="text-black" target=""  href="/memorize/?q=sn56.11">sn56.11</a> 
+         <a class="text-black" target=""  href="/memorize/?q=dn22">dn22</a> 
+         <a class="text-black" target=""  href="/memorize/?q=sn12.2">sn12.2</a>
        </div>
          </li>     
          
@@ -277,9 +277,9 @@ echo '<!--
 
       <li>
          <div class="dropdown-item ">
-      <a class="text-black" target="_blank" href="https://norbu-ai.org/en/ebt/">Norbu AI</a>
-
          <a class="text-black" target="_blank" href="https://chatgpt.com">ChatGPT</a>
+         <a class="text-black" target="_blank" href="https://deepseek.com">DeepSeek</a>
+      <a class="text-black" target="_blank" href="https://norbu-ai.org/">Norbu AI</a>
   
          </div>
          </li>

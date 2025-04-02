@@ -68,6 +68,44 @@ if (file_put_contents($filePath, $cleanedUrl . PHP_EOL) === false) {
 } 
 //else { echo "Очищенный URL успешно записан: $cleanedUrl"; }
 
+// Режим Словаря 
+if (preg_match('/dictLookup/', $p) || preg_match('/dictLookup/', $extra)) {
+    // Действие при выполнении условия
+
+
+$stringForWord = urlencode(strtolower($stringForWord));
+//$dictType = 'https://dict.dhamma.gift';
+$dictType = 'https://dpdict.net';
+    
+    if ( preg_match('/\/ru/', $actual_link)) {
+  $outputlang = "-oru";
+  $langinurl = "/ru";
+} else {
+    $outputlang = "";
+  $langinurl = "";
+    }
+
+  
+  //    const dictUrl = "https://dict.dhamma.gift/html_search?q=";
+        // const dictUrl = "dttp://app.dicttango/WordLookup?word=";
+ $server_name = $_SERVER['SERVER_NAME']; // Получаем имя сервера (домен или IP)
+// Проверяем, является ли сервер локальным
+if ($server_name === 'localhost' || $server_name === '127.0.0.1') {
+   $dictUrl = "dttp://app.dicttango/WordLookup?word=";
+} else {
+  $dictUrl = "{$dictType}{$langinurl}/search_html?q=";  
+}
+ 
+    
+echo "<script>
+window.open(`{$dictUrl}{$stringForWord}`, '_blank');
+</script>";
+echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+
+//exit();
+return;
+}
+
 // Проверка условий
 if (preg_match('/wordRep/', $p) || preg_match('/wordRep/', $extra)) {
     // Действие при выполнении условия
@@ -87,8 +125,14 @@ window.location.href='$langinurl/w.php?s=$stringForWord';
     exit();
 }
 
+if (preg_match('/(-abhi )/', $q)) {
+  $fdgscript = "./scripts/finddhamma.sh";
+      $q = trim(preg_replace('/-abhi/', ' ', $q));	  
+$p = "-abhi"; 
+} 
+
 //-vin was here
-if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru|-si)/', $p)  || preg_match('/(-onl|-def|-sml|-nm|-b|-tru|-si|-la2|-lb2)/', $extra)) {
+if (preg_match('/(-def|-sml|-nm|-b|-onl|-tru|-si|-abhi)/', $p)  || preg_match('/(-onl|-def|-sml|-nm|-b|-tru|-si|-la2|-lb2)/', $extra)) {
   $fdgscript = "./scripts/finddhamma.sh";
 } 
 elseif (preg_match('/(-anyd)/', $extra)) {
@@ -138,7 +182,7 @@ $check = ru2lat( $output );
 
 $fdgscript = "./scripts/finddhamma.sh";
 	 $output = shell_exec("bash $fdgscript $outputlang $la $extra $cb -tru $string");
-	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//	 echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 	// echo                                                	"<p>$output</p>";
 	 $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 	 $outforjs .= $output;
@@ -183,7 +227,7 @@ $outforjs .= $output . "<br>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
 
@@ -226,7 +270,7 @@ $outforjs .= $output . "<br>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
 #sinhala
@@ -271,7 +315,7 @@ $outforjs .= $output . "<br>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
 $outforjs .= $output . "<br>"; 
 
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
+//echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 			
 } 
 
@@ -323,7 +367,7 @@ $outforjs .= $output . "<br>";
 		
 		
 if ( preg_match('/(|-en)/', $p ) && ( preg_match('/(-not-in-|-net-v-)/', $check) ) && ( $p != "-vin" ) && ( $p != "-def" ))  {
-  $fdgscript = "./scripts/finddhamma.sh";
+  $fdgscript = "./new/finddhamma2.sh";
 $output = shell_exec("bash $fdgscript $outputlang $la -vin $extra $cb $string");
 //                                                          		echo "<p>$output</p>";
       $output = trim(preg_replace('/\s\s+/', ' ', $output));	
@@ -354,19 +398,45 @@ $outforjs .= $output . "<br>";
 }
 }
 //echo $outforjs;
-echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 
-$outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));	
-$finaloutput = "<script>
-console.log('$outputnonl');
-const responseElement = document.querySelector('#response');
-responseElement.innerHTML = '$outputnonl';
-if (responseElement !== '') {
-    successAlert.style.display = 'block';
-  }
-</script>";
-if ($outputnonl !== '<br>') {
-echo $finaloutput;  
+
+$outputnonl = trim(preg_replace('/\s\s+/', ' ', $outforjs));
+
+if (strpos($outputnonl, 'script') !== false || strpos($outputnonl, 'location.href') !== false) {
+    // Ищем все скрипты в тексте
+    preg_match_all('/<script\b[^>]*>(.*?)<\/script>/is', $outputnonl, $matches);
+    // Собираем все найденные скрипты в одну строку
+    $finaloutput = implode("\n", $matches[0]);
+
+    // Добавляем скрытие страницы перед выполнением скриптов
+    echo '<script>document.body.style.display = "none";</script>';
+
+    // Выполняем найденные скрипты
+    echo $finaloutput;
+    exit;
+} else {
+    $finaloutput = "<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('$outputnonl');
+        const successAlert = document.getElementById('successAlert');
+        const responseElement = document.getElementById('response');
+        
+        if(responseElement && successAlert) {
+            responseElement.innerHTML = '$outputnonl';
+            
+            // Показываем алерт только если есть содержимое
+            if ('$outputnonl' !== '' && '$outputnonl' !== '<br>') {
+                successAlert.style.display = 'block';
+            }
+        }
+    });
+    </script>";
+}
+
+if ($outputnonl !== '<br>' && !empty($outputnonl)) {
+    echo $finaloutput;  
+    
+    echo "<script>document.getElementById( 'spinner' ).style.display = 'none';</script>";
 }
 
 if (preg_match('/(-anyd)/', $extra)) {

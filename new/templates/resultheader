@@ -2,7 +2,7 @@
 
 
 
-    <h3 class="pl-2 ml-2">$title</h3>
+    <h3 class="pl-2 resultheader ml-2">$title</h3>
 
                       <a href='HOMEVAR'>
             <button class="btn btn-light mb-1" type="button">

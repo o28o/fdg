@@ -1,1 +1,0 @@
-../../sc/extralinks.php

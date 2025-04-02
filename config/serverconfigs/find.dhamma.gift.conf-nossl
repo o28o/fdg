@@ -1,7 +1,7 @@
 <VirtualHost *:80> 
 
-ServerName find.dhamma.gift
-ServerAlias www.find.dhamma.gift
+ServerName dhamma.gift
+ServerAlias www.dhamma.gift
 ServerAlias f.dhamma.gift
 ServerAlias www.f.dhamma.gift
 

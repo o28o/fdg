@@ -44,7 +44,7 @@ include '../../scripts/opentexts.php';
                 </a>
 
                 <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
-                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                    <img width="24px" alt="dhamma.gift icon" src="/assets/img/gray-white.png">
                 </a>
   <a class="ms-1 toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="dictIcon-sitePages"></img></a>
 

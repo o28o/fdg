@@ -57,8 +57,6 @@ echo '<!--
   <ul class="dropdown-menu" aria-labelledby="MenuEnglish">
 
      
-         <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
-        
                   
         <li><a class="dropdown-item" target="_blank" href="https://www.digitalpalireader.online/_dprhtml/index.html">Digital Pali Reader</a></li>
 
@@ -113,7 +111,9 @@ echo '<!--
           <li><a class="dropdown-item" target="_blank" href="' . $linkmolds . '">' . $anamemolds . '</a></li>   
 <!-- <li><a class="dropdown-item" href="https://github.com/digitalpalidictionary/digitalpalidictionary/releases">' . $anamedpd . '</a></li>  -->
 
- 
+          <li><a class="dropdown-item" target="_blank" href="' . $linknoblasc . '">' . $anameasc . '</a></li>
+
+        
   </ul>
 
 <a class="text-decoration-none mx-1" id="history" href="/history.php">
@@ -195,9 +195,9 @@ echo '<!--
                       <li>
 <div class="dropdown-item ">
          <i class="' . $iconimportant . '"></i><a class="text-black" href="/assets/memo.html"> Memorizer</a>
-         <a class="text-black" target=""  href="/sc/memorize.html?q=sn56.11">sn56.11</a> 
-         <a class="text-black" target=""  href="/sc/memorize.html?q=dn22">dn22</a> 
-         <a class="text-black" target=""  href="/sc/memorize.html?q=sn12.2">sn12.2</a>
+         <a class="text-black" target=""  href="/memorize/?q=sn56.11">sn56.11</a> 
+         <a class="text-black" target=""  href="/memorize/?q=dn22">dn22</a> 
+         <a class="text-black" target=""  href="/memorize/?q=sn12.2">sn12.2</a>
        </div>
          </li>     
 
@@ -265,11 +265,10 @@ echo '<!--
 
       <li>
          <div class="dropdown-item ">
-      <a class="text-black" target="_blank" href="https://norbu-ai.org/en/ebt/">Norbu AI</a>
-
          <a class="text-black" target="_blank" href="https://chatgpt.com">ChatGPT</a>
-  
-         </div>
+         <a class="text-black" target="_blank" href="https://deepseek.com">DeepSeek</a>
+      <a class="text-black" target="_blank" href="https://norbu-ai.org/">Norbu AI</a>
+           </div>
          </li>
          <li><a class="dropdown-item" target="_blank" href="https://dharmamitra.org/">Mitra Translator</a></li>
 

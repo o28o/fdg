@@ -1,3 +1,7 @@
+
+/var/www/html/assets/texts/vinaya/nohup.out
 assets/audio
 nohup.out
 result
+scripts/api/__pycache__
+helpdocs

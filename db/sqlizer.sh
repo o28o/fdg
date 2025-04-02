@@ -172,9 +172,9 @@ dn15|dn15:20.2|Если бы те качества, черты, признаки
     </div> </td>   
     
     
-SELECT '<tr><td><a href="/sc/?q=' || REPLACE(line_id, ':', '#') || '">' || file_name || '<a></td>' ||
-       '<td> <div> <p class="pali">' || line_text || '<a href="/sc/?q=' || REPLACE(line_id, ':', '#') || '">link<a></p>' ||
-       '<p class="russ">' || line_text || '<a href="/sc/?q=' || REPLACE(line_id, ':', '#') || '">link<a></p>' ||
+SELECT '<tr><td><a href="/read/?q=' || REPLACE(line_id, ':', '#') || '">' || file_name || '<a></td>' ||
+       '<td> <div> <p class="pali">' || line_text || '<a href="/read/?q=' || REPLACE(line_id, ':', '#') || '">link<a></p>' ||
+       '<p class="russ">' || line_text || '<a href="/read/?q=' || REPLACE(line_id, ':', '#') || '">link<a></p>' ||
        '</div> </td></tr>'
 FROM (
     SELECT file_name, line_id, line_text FROM sutta_pi WHERE line_id IN ('dn15:20.2', 'dn15:20.6')

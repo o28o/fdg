@@ -17,11 +17,11 @@ include 'scripts/opentexts.php';
 <meta name="keywords" content="<?php echo $metakeywords;?>">
 <meta property="og:locale" content="<?php echo $oglocale;?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="find.Dhamma.gift" />
+<meta property="og:title" content="Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
 
 <meta property="og:url" content="/" />
-<meta property="og:site_name" content="find.Dhamma.gift" />
+<meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
 
 <meta name="twitter:card" content="summary_large_image">
@@ -68,7 +68,7 @@ include 'scripts/opentexts.php';
    <img loading="lazy" alt="Precise search in Pali Suttas and Vinaya" src="/assets/img/dhammafindlogo.webp"  style="width:100px;"></a>
 
             
-                <a class="navbar-brand mobile-none" href="/">find.dhamma.gift</a>
+                <a class="navbar-brand mobile-none" href="/">dhamma.gift</a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                    <?php echo $menu;?>
                     <i class="fas fa-bars"></i>
@@ -704,9 +704,9 @@ foreach ($slides as $index => $slide) {
       <?php
       if ( $mode == "offline" ) {
         
-      echo '  <a href="https://find.dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
+      echo '  <a href="https://dhamma.gift/" style="z-index:1" class="list-group-item list-group-item-action active">
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1">find.dhamma.gift</h5>
+      <h5 class="mb-1">dhamma.gift</h5>
       <small class="text-muted">' . $detailonline . '</small>
     </div>
     <p class="mb-1">' . $pfdg . '</p>
@@ -984,7 +984,7 @@ foreach ($slides as $index => $slide) {
         </footer>
         <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
-<div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/sc/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
+<div class="container"><a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Лицензия Creative Commons" style="border-width:0" src="/assets/img/88x31.png" loading="lazy" /></a> <small>Copyright <a class="text-white text-decoration-none" href="/read/latest-rus.php">&copy;</a> Dhamma.gift <?php echo $mode; ?> 
 <a class="text-white text-decoration-none" href="/assets/countdowntable.php">2022</a>-<?php echo date("Y"); ?></small></div>
         </div>
         <!-- Portfolio Modals-->
@@ -1116,9 +1116,9 @@ foreach ($slides as $index => $slide) {
 <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." /> -->
 <!-- Portfolio Modal - Text-->
 <div class="embed-container mb-3">
-<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" loading="lazy" ></a></div>
+<a href="<?php echo $demovideolink;?>" target="_blank" ><img  class="imgonmain" src="<?php echo $demovideoimg;?>" title="How to search in Pali Suttas and Vinaya with dhamma.gift" loading="lazy" ></a></div>
 
-<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with find.dhamma.gift" frameborder="0" allowfullscreen></iframe>
+<!-- <div class="embed-container"> <iframe src="<?php echo $demovideolink;?> " title="How to search in Pali Suttas and Vinaya with dhamma.gift" frameborder="0" allowfullscreen></iframe>
 </div>-->
 
 <button class="btn btn-primary" data-bs-dismiss="modal">

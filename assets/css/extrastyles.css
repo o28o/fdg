@@ -790,8 +790,12 @@ video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px;
 }
 
 
-#pali p span{
+#pali p span {
   word-break: break-word;
         overflow-wrap: break-word;
 }
 
+.resultheader {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

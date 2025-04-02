@@ -31,7 +31,7 @@ include 'scripts/opentexts.php';
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="/">find.dhamma.gift</a>
+                <a class="navbar-brand" href="/">dhamma.gift</a>
               <a href="/assets/qr/vcard_Pavel_K.vcf" class="font-weight-bold bg-primary text-white rounded btn btn-primary text-decoration-none" href="/assets/qr/vcard_Pavel_K.vcf" role="button">vCard <i class="fa-regular fa-address-card"></i></a>
 
             </div>

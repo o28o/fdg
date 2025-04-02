@@ -108,7 +108,7 @@ echo
 echo "press anykey to start apache and open fdg offline
 
 if you will use termux only for dhamma.gift you may want trun this command.
-it will open find.dhamma.gift offline automatically
+it will open dhamma.gift offline automatically
 
 echo 'termux-open-url http://localhost:8080/' >> ~/.profile
 
@@ -136,7 +136,7 @@ git rm -r --cached .
 
 
 alias apa='cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs'
-alias apa='cd /home/a0092061/domains/find.dhamma.gift/public_html'
+alias apa='cd /home/a0092061/domains/dhamma.gift/public_html'
 
 initsize=`du -hs suttacentral.net/`
 echo $initsize
@@ -187,6 +187,17 @@ for i in `find . -name  "*htm*" -type f | sort -V`; do
 apa
 diff -qr theravada.ruold theravada.ru | grep -i suttanta
 
+for i in `find . -type f | sort -V | grep -lri "&#1645;</span>" theravada.ru/Teaching/Canon/Suttanta/Texts/`
+do 
+#echo $i
+textindex=`echo $i | awk -F'/' '{print $NF}' | awk -F'-' '{print $1}'  | sed 's/.htm.*//g' | sed 's@_@.@g' | sed 's@dhm@dhp@g' | sed 's@\.volovsky@@g' | sed 's@\.sv@@g'`
+
+echo $textindex
+sed -i '/&#1645;<\/span>/s/<\/span>/<\/span> <a href="\/?q='$textindex'">DG<\/a> <a href="https:\/\/suttacentral.net\/'$textindex'">SC<\/a> /' $i
+done 
+
+
+
 #fix links 
 
 cd /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/theravada.ru/Teaching/Canon/Suttanta/Texts 
@@ -230,19 +241,19 @@ ln -s ../scripts ./scripts
 ln -s ../result ./result
 
 #tests
-curl http://localhost:8080/sc/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
-curl http://localhost:8080/sc/api.php?fromjs=sutta/dn/an1.1-10&type=A
-curl http://localhost:8080/sc/extralinks.php?fromjs=dn22
+curl http://localhost:8080/read/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
+curl http://localhost:8080/read/api.php?fromjs=sutta/dn/an1.1-10&type=A
+curl http://localhost:8080/read/extralinks.php?fromjs=dn22
 
-curl https://find.dhamma.gift/sc/translator-lookup.php?fromjs=sutta/mn/mn1
-curl https://find.dhamma.gift/sc/api.php?fromjs=sutta/dn/dn22&type=A
-curl https://find.dhamma.gift/sc/extralinks.php?fromjs=dn22
+curl https://dhamma.gift/read/translator-lookup.php?fromjs=sutta/mn/mn1
+curl https://dhamma.gift/read/api.php?fromjs=sutta/dn/dn22&type=A
+curl https://dhamma.gift/read/extralinks.php?fromjs=dn22
 
-curl http://localhost/sc/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
-curl http://localhost/sc/api.php?fromjs=sutta/dn/dn22&type=A
-curl http://localhost/sc/extralinks.php?fromjs=dn22
+curl http://localhost/read/translator-lookup.php?fromjs=sutta/sn/sn56/sn56.11
+curl http://localhost/read/api.php?fromjs=sutta/dn/dn22&type=A
+curl http://localhost/read/extralinks.php?fromjs=dn22
 
-http://localhost:8080/ru/sc/index.js
+http://localhost:8080/r/index.js
 
 git rm -r --cached .
 

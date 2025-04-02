@@ -1,4 +1,4 @@
-Sitemap: https://find.dhamma.gift/sitemap.xml
+Sitemap: https://dhamma.gift/sitemap.xml
 User-agent: *
 Allow: /
 Disallow: /result/
@@ -58,6 +58,6 @@ Disallow: /metta.lk/
 Disallow: /buddhadust.net/
 Disallow: /theravada.ru/
 Disallow: /tipitaka.theravada.su/
-Host: find.dhamma.gift
+Host: dhamma.gift
 
 

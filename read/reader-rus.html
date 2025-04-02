@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <title>Dhamma.gift Read - Учение Будды. Дхамма, Сутты, Виная</title>
+    
+<meta name="keywords" content="Будда, Buddha, Дхамма, Дхарма, Виная, поиск, Сутта, Сутты, Суттапитака, Винаяпитака, suttapitaka, vinayapitaka Пали, Палийский канон, буддизм, dhamma, sutta, Buddhism, pali Canon, патимоккха, пратимокша, patimokkha, pratimoksasutra, ">
+<meta name="description" content="Точный поиск в Учении Будды, в Пали Суттах и Винае. Поисковый Сайт Освобождения." />
+<meta name="author" content="" />
+<link rel="canonical" href="https://dhamma.gift/r/">
+<link rel="alternate" hreflang="en" href="https://dhamma.gift/read/" />
+<link rel="alternate" hreflang="ru" href="https://dhamma.gift/r/" />
+<link rel="alternate" hreflang="x-default" href="https://dhamma.gift/read/" />
+<!--
+<link rel="manifest" href="/assets/manifest.json">
+-->
+
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Dhamma.gift Read" />
+<meta property="og:description" content="Поисковая Система Освобождения. Учение Будды. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском" />    
+
+ <!--   <script>  var link = document.createElement('meta');  link.setAttribute('property', 'og:title');  link.content = document.title;  document.getElementsByTagName('head')[0].appendChild(link);</script> 
+ />-->   
+   <meta property="og:description" content="Читайте Учение Будды. Сутты и Виная на Пали. Канон с разными вариантами переводов">
+  <meta property="og:title" content="Dhamma.gift Read" />
+
+    <meta property="og:site_name" content="Dhamma.gift Read" />
+    <meta property="og:image" itemprop="image"
+        content="https://dhamma.gift/assets/img/favico_black.png" />
+        
+<meta property="og:url" content="/sc" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favico_black.png"> 
+
+<style>
+    body {
+        opacity: 0;
+        visibility: hidden;
+        background: black;
+        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    }
+</style>
+<script src="/read/js/loadAssets.js"></script>
+
+
+<link href="/assets/css/styles.css" rel="stylesheet" />
+
+<link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/> 
+<link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<!-- <link rel="stylesheet" href="./css/index.css"> -->
+<link rel="stylesheet" href="./css/uiextra.css">
+<link href="/assets/css/paliLookup.css" rel="stylesheet" />
+
+<script src="/assets/js/jquery-3.7.0.min.js"></script>
+<script src="/assets/js/jquery-ui.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/virtualvinodh/aksharamukha/aksharamukha-web-plugin/aksharamukha-v3.js?class=pli-lang"></script>
+<script src="/assets/js/citationac.js"></script>
+-->
+<script src="/assets/js/audioLazyLoad.js"></script>
+</head>
+
+<body class="dark">
+            <form id="form" class="ui-widget mb-2">
+		<label class="sr-only dropup rounded-pill mb-2" for="paliauto"></label>
+        <input class="mb-2" id="paliauto" type="search" placeholder="Try sn56.11"><input class="go-button mb-2" type="submit" value="Go">
+    <div id="form-div" class=""> 
+        <div id="home-button" class="icon-button ">
+       <a href="/ru/read.php" title="Читать Сутты и Винаю" rel="noreferrer">
+    <img class="common-size-icon" alt="Главная для чтения" src="/assets/svg/home-icon.svg"></img>   
+         </a>
+         </div>
+  
+       <div id="fdg-button" class="icon-button ">
+           <a  href="/ru" title="Искать в Суттах и Винае" rel="noreferrer"
+            ><img width="26px" alt="Главная для поиска" src="/assets/img/gray-white.png"></a>
+      </div>
+        <div id="theme-button" class="icon-button ">
+<img src="/assets/svg/circle-half-stroke.svg" alt="Переключить тему" onclick="switchIcon(this)" class="common-size-icon3 changesvg gray-icon"></img>
+ </div> 
+ <!-- Переключатель режимов 1 2 колонки -->
+<div id="mode-switcher" class="">
+<a aria-label="Текст в одну или две колонки" title="Текст в одну или две колонки" id="toggle-mode" href="javascript:void(0);" class="toggle-icon">
+  <img src="/assets/svg/align-left.svg" alt="Текст в одну или две колонки" class="common-size-icon4">
+</a>
+</div>
+       <!-- Переключатель вариантов -->
+    <div class="" id="variants-switcher">
+  <a title="Показать или скрыть варианты из разных версий Канона" id="toggle-variants" href="javascript:void(0);" class="toggle-icon text-decoration-none text-black">
+  <img alt="Показать или скрыть варианты из разных версий Канона" src="/assets/svg/eye.svg" class="common-size-icon4"></img> </a></div>   
+  <!-- Словарь Onlick Popup -->
+  <a title="Всплывающий по клику словарь" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">  <img src="/assets/svg/comment.svg" alt="Всплывающий по клику словарь" class="dictIcon"></img></a> 
+ <a title="Настройки"  id="settingsButton" data-bs-toggle="modal" data-bs-target="#settings" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+  <img id="gearsc" alt="Настройки" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+  </a>  
+
+<div class="" >
+  <a title="Помощь" data-bs-toggle="modal" data-bs-target="#paliLookupInfo" id="helpMessage" href="javascript:void(0);" class="toggle-icon text-decoration-none text-muted">
+  <img id="helpsc" alt="Помощь"  src="/assets/svg/question.svg" class="common-size-icon4"></img>
+  </a>
+
+  
+  
+</div>  
+ 
+
+ </div>
+    </form>
+    <br>
+    <div id="navigation" class="navigation">
+        <div id="previous"></div>
+        <div id="next"></div>
+    </div>
+
+    <!-- <div id="modalContainer"></div> -->
+    
+<!-- Модальное окно "Помощь" -->
+<div class="modal fade" id="paliLookupInfo" tabindex="-1" aria-labelledby="paliLookupInfoLabel" aria-hidden="true"  data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="paliLookupInfoLabel">Помощь</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <a href=/ru/read.php><img class="common-size-icon mb-1" alt="Главная для чтения" src="/assets/svg/home-icon.svg"></a>
+                    Чтение <a href=/ru><img width="26px" alt="Главная для поиска" src="/assets/img/gray-white.png"></a> Поиск
+                </div>
+         <h3 class="text-start">Горячие Клавиши</h3>
+<div class="container">
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+<button id="language-button-dummy" class="hide-button rounded mb-1 mt-1">Pāḷi Рус</button>
+        </div>
+        <div class="col-auto"><strong>Alt+Пробел или Alt+Z</strong></div>
+        <div class="col">Переключить язык</div>
+    </div>
+    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/circle-half-stroke.svg" alt="switch themes" onclick="switchIcon(this)" class="common-size-icon changesvg gray-icon">
+        </div>
+        <div class="col-auto"><strong>Alt+T</strong></div>
+        <div class="col">Тёмная/Светлая/Авто Темы</div>
+    </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/align-left.svg" alt="toggle one/two column view" class="common-size-icon4">
+        </div>
+        <div class="col-auto"><strong>Alt+C</strong></div>
+        <div class="col">Текст в одну-две колонки</div>
+    </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/eye.svg" class="common-size-icon4">
+        </div>
+        <div class="col-auto"><strong>Alt+V</strong></div>
+        <div class="col">Показать-скрыть варианты между MS и другими <a href="/assets/texts/abbr.html">Редакциями Канона</a></div>
+    </div>
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img src="/assets/svg/comment.svg" class="common-size-icon4">
+        </div>
+        <div class="col-auto"><strong>Alt+A</strong></div>
+        <div class="col">Вкл-выкл словарь. Клик по слову для активации. <a href="/assets/common/dictHelpRu.html">DPD</a></div>
+    </div>
+    
+        <div class="row align-items-center mb-2">
+        <div class="col-auto">
+            <img id="" src="/assets/svg/gear.svg" class="common-size-icon4"></img>
+        </div>
+        <div class="col-auto"><strong>Alt+S</strong></div>
+        <div class="col">Показать-скрыть "Настройки"</div>
+    </div>
+   
+    <div class="row align-items-center mb-4">
+        <div class="col-auto">
+            <img src="/assets/svg/question.svg" class="common-size-icon4">
+        </div>
+        <div class="col-auto"><strong>Alt+H</strong></div>
+        <div class="col">Показать-скрыть это окно "Помощь"</div>
+    </div>
+    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt+1 до 6</strong></div>
+        <div class="col">Переход по Режимам Чтения. "1" Рус/Англ</div>
+    </div>    
+    <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Ctrl + ← → </strong></div>
+        <div class="col">Пред-След Текст </div>
+    </div>      
+        <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt + L </strong></div>
+        <div class="col">Переключить систему записи Пали</div>
+    </div>      
+
+    <div class="row align-items-center mb-2">
+        <div class="col-auto"><strong>Alt + . </strong></div>
+        <div class="col">Выкл-вкл пунктуацию в Пали </div>
+    </div>      
+
+</div>   
+<br>
+<div class="mt-2 mb-2">
+  Чтобы <strong>скопировать</strong> ссылку на конкретную строку, кликните в конце нужной строки с Пали, где курсор меняется со стрелки на палец.
+</div>
+<br>
+
+                <!-- Скрытая часть -->
+                <div id="collapseInterfaces" class="collapse">
+    <h3 style="text-align: left;" class="mt-2">Меню ссылок</h3>
+<div class="mb-2">
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <a href="#">R+E</a>
+        </div>
+        <div class="col-9">
+            читать на Пали, Рус, Англ
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <a href="#">Ru / En</a>
+        </div>
+        <div class="col-9">
+            на Пали Рус или Англ
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <a href="#">DPR</a>
+        </div>
+        <div class="col-9">
+            открыть на DigitalPaliReader.online
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <a href="#">SC.net и Voice.SC</a>
+        </div>
+        <div class="col-9">
+            на SuttaCentral.net и Voice SC.net
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+            <a href="#">TBW</a>
+        </div>
+        <div class="col-9">
+            на TheBuddhasWords.net
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-2">
+        <div class="col-3">
+          <a href="#">Th.ru / Th.su</a>        </div>
+        <div class="col-9">
+            на Theravada.ru, когда доступно — Theravada.su
+        </div>
+    </div>
+</div>
+                    Аббревиатуры вариантов: <strong>ms, pts1ed, sya-all, mr</strong> и т.д. в <a href="/assets/texts/abbr.html">"Edition Abbreviations"</a> или <a href="https://suttacentral.net/abbreviations?lang=ru">здесь</a>.
+                </div>
+             
+  Нужна помощь? <a href="/ru/#contacts">Написать</a><br>
+            </div>
+   <div class="modal-footer">
+                     <!-- Кнопка "Показать ещё" -->
+                <div class="text-end">
+                    <button class="btn btn-sm btn-light border-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+                        Еще помощь
+                    </button>
+                     <button type="button" class="btn btn-secondary btn-sm rounded-pill" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+               
+            </div> 
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно "Настройки" -->
+<div class="modal fade" id="settings" tabindex="-1" aria-labelledby="settingsLabel" aria-hidden="true" data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="settingsLabel">Настройки</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-2">
+                    <!-- Дропдаун для выбора системы письма -->
+                    <label for="script-select"><h5 style="text-align: left;">Система письма:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="script-select">
+                        <option value="ISOPali">ISOPali</option>
+                        <option value="Devanagari">Devanagari</option>
+                        <option value="Thai">Thai</option>
+                    </select>
+&nbsp;<strong>Alt+L</strong>
+
+                </div>
+                 <div class="mb-2">
+                    <!-- Дропдаун для выбора системы письма -->
+                    <label for="dict-select"><h5 style="text-align: left;">Словарь по клику:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="dict-select">
+                         <option value="standalonebwru">DPD Встроенный</option>
+                                    <option value="standalonebw">DPD Встроенный Англ</option>
+                        <option value="dpdFullRu">DPD Онлайн</option>
+              <option value="dpdFull">DPD Онлайн Англ</option>
+                        <option value="dpdCompactRu">DPD Онлайн мини</option>
+                        <option value="dpdCompact">DPD Онлайн мини Англ</option>
+                                    <option value="searchonly">Только Поиск</option>
+                        <option value="dictTango">DictTango Android</option>
+                    </select> <a href="/assets/common/dictHelpRu.html">?</a>   
+                </div>               
+                
+                
+                <div class="mb-2">
+<div class="d-flex">
+  <label class="form-check-label me-2" for="removePunctCheckbox">
+    <h5 class="mb-0">Убрать Пунктуацию из Пали</h5>
+  </label>
+  <input class="form-check-input setting-checkbox" type="checkbox" id="removePunctCheckbox" data-key="removePunct">
+                  &nbsp;  <strong>Alt+.</strong>
+
+</div>
+
+                </div>
+        <!--        <div class="mb-2">
+                    <label for="reader-select"><h5 style="text-align: left;">Интерфейс:</h5></label>
+                    <select class="dropdown droponmain rounded-pill text-black border-2 border-secondary text-center input-group-append" id="reader-select">
+                        <option value="st">Стандартный</option>
+                        <option value="ml">Мульти</option>
+                        <option value="d">"Деванагари"</option>
+                        <option value="mem">Для запоминания</option>
+                        <option value="rv">Реверс</option>
+                        <option value="fr">Полный Реверс</option>
+                    </select>
+                </div> -->
+
+                <h5 style="text-align: left;">Выберите Режим Чтения:</h5>
+<div class="container">
+
+
+    <!-- Стандартный -->
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+          <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="stRadio" value="st"> &nbsp;
+   <a id="stDemo" href="/r/?q=sn56.11"><strong>Стандартный</strong></a>
+       
+        </div>
+        <div class="col text-end">
+            Два языка: пали, русс
+        </div>
+    </div>
+
+    <!-- Мульти -->
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+          <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="ml"> &nbsp;
+         <a id="mlDemo" href="/ml/?q=dn22"> <strong>Мульти</strong></a>
+
+        </div>
+        <div class="col text-end">
+            Три языка: пали, русс, англ
+        </div>
+    </div>
+
+    <!-- Деванагари -->
+    <div class="row align-items-center mb-2">
+        <div class="col-auto">
+          <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="dRadio" value="d"> 
+          &nbsp;
+    <a id="dDemo" href="/d/?q=sn12.2"><strong>"Деванагари"</strong></a>
+      
+        </div>
+        <div class="col text-end">
+            Деванагари или тайский скрипт + пали латиницей
+        </div>
+
+    </div>
+
+    <!-- Скрытая часть -->
+    <div id="collapseInterfaces" class="collapse">
+        <div class="row align-items-center mb-2">
+            <div class="col-auto">
+              <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="memRadio" value="mem">
+              &nbsp;
+              <a id="memDemo" href="/memorize/?q=an10.46">              <strong>Для запоминания</strong>
+</a>
+            </div>
+            <div class="col text-end">
+                Текст сокращен до первых букв каждого слова
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-2">
+            <div class="col-auto">
+              <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="rvRadio" value="rv">
+            &nbsp;
+<a id="rvDemo" href="/rev/?q=sn35.236"><strong>Реверс</strong></a>
+
+            </div>
+            <div class="col text-end">
+                Текст снизу вверх
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-2">
+            <div class="col-auto">
+              <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="frRadio" value="fr">
+              &nbsp;
+              <a id="frDemo" href="/frev/?q=sn22.59"><strong>Полный Реверс</strong>
+</a>   
+            </div>
+            <div class="col text-end">
+                Как предыдущий + слова слева направо
+            </div>
+        </div>
+        
+           <!--    <div class="row align-items-center mb-2">
+                            <div class="col-auto">
+                                <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="thRadio" value="fr"> &nbsp;
+                                <a id="frDemo" href="/read/th?q=mn44"><strong>Thai</strong></a>
+                            </div>
+                            <div class="col text-end">
+                                Two languages: Pali, Thai
+                            </div>
+                        </div>
+                          <div class="row align-items-center mb-2">
+                        <div class="col-auto">
+                            <input class="form-check-input mt-2 border-secondary" name="reader" type="radio" id="mlRadio" value="mlth"> &nbsp;
+                            <a id="mlDemo" href="/read/mlth.html?q=sn44.1"><strong>Thai Multi</strong></a>
+                        </div>
+                        <div class="col text-end">
+                            Three languages: Pali, Thai, English
+                        </div>
+                    </div>  
+                    -->           
+        
+    </div>
+
+    <!-- Кнопка "Показать ещё" -->
+    <div class="text-end mb-2">
+        <button class="btn btn-sm btn-secondary rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInterfaces" aria-expanded="false" aria-controls="collapseInterfaces">
+            Другие
+        </button>
+    </div>
+    <p class="mb-2">
+Клик <strong>по названию</strong> - перейти один раз. <br>
+Клик <strong>по радио кнопке</strong> - сделать по умолчанию<br> 
+при переходе с главной и из результатов поиска      
+    </p>
+    Увидели ошибку? <a href="/ru/#contacts">Написать</a>
+</div>
+
+            </div>
+       <div class="modal-footer">
+         
+                         <!-- Кнопки "Применить" и "Сбросить" -->
+                <div class="text-end">
+<button type="button" class="btn btn-sm  rounded-pill btn-secondary " id="reset-button" >Сбросить</button>
+   <button type="button" class="btn btn-sm btn-light border-secondary rounded-pill" id="apply-button">Применить</button>
+                   <button type="button" class="btn-sm  btn-secondary rounded-pill" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+</div>
+
+    
+    <div id="sutta">
+    </div>
+    <hr>
+    
+    <div id="navigation" class="navigation">
+        <div id="previous2"></div>
+        <div id="next2"></div>
+    </div>
+
+<script src="/assets/js/paliLookup.js"></script>
+
+    <div class="links-area" style="text-align: center;">
+        <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer"
+            ><img width="22px" alt="Dhamma.gift icon" src="/assets/img/gray.png"></a>
+      
+<a href="/assets/makelist.html" title="Create Lists" rel="noreferrer">
+	<svg fill="#383838" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 487.3 487.3" xml:space="preserve">
+<g>
+	<g>
+		<path d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
+			C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
+			c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
+			s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
+			c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
+			 M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
+			C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
+			C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
+			C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"/>
+	</g>
+</g>
+</svg>		
+			</a>
+<a href="/assets/diff" title="Compare two suttas" rel="noreferrer"
+            ><img width="20px" alt="Diff icon" src="/r/images/favicon-black.png"></a>
+            
+ <a href="/ru/history.php" title="Search Histpry" rel="noreferrer"
+            ><img width="20px" alt="History icon" src="/assets/svg/clock-rotate-left.svg"></a>           
+
+
+<a href="/ru/assets/linebyline.html" class="dynamic-link" title="Create Pali-Russ translation files" rel="noreferrer">
+        <img width="20px" alt="JSON Formatter icon" src="/assets/svg/table-columns.svg">
+    </a>
+ 
+	  <script src="./js/urlForLbl.js"defer></script>
+
+        <a id="shareOnline" onclick="copyToClipboard()" title="Copy fdg url Suttas" rel="noreferrer" target=""><img
+                height="20px" alt="" src="/assets/svg/copy.svg"></a>
+                
+        <!--    <a id="shareT2SElement" onclick="copyToClipboard(127)" title="Copy t2s url" rel="noreferrer" target=""><img
+                height="20px" alt="" src="/assets/svg/solid-copy.svg"></a>     -->
+        <a href="https://sutta.readingfaithfully.org" title="Citation Lookup Tool" rel="noreferrer" target="_blank"><img
+                width="20px" src="./images/favicon-citaton-helper-black.png" alt="Citation Lookup tool icon"></a>
+        <a href="https://index.readingfaithfully.org" title="Search for suttas by name" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/favicon-name-black.png" alt="Sutta Name Search icon"></a>
+        <a href="https://ped.readingfaithfully.org" title="A lightweight interface for the PED" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/favicon-ped-black.png"
+                alt="SuttaCentral.org Lightweight interface icon"></a>
+        <a href="https://dppn.readingfaithfully.org" title="A lightweight interface the Dictionary of Pali Proper Names"
+            rel="noreferrer" target="_blank"><img width="20px" src="./images/favicon-dppn-black.png"
+                alt="DPPN search icon"></a>
+        <a href="https://github.com/o28o/fdg#readme" title="The source code for this site" rel="noreferrer"
+            target="_blank"><img width="20px" src="./images/GitHub-Mark-64px-black.png" alt="GitHub icon"></a>
+    </div>
+        <!-- Copyright Section-->
+
+        
+        <div style="text-align: center;" class="text-muted" id="copyrightnote">
+<div class="container"> <small><a target="_blank" rel="license" href="/ru/#copyrightnote">Информация о Правах</a> &copy; Dhamma.gift 2022</a>-<span id="date"></span></small> <button class="btn btn-secondary text-center installButton" id="" style="display:none;"><?php echo $installpwa;?></button></div>
+        </div>    
+        <script>
+  const now = new Date();
+  const formattedDate = now.getFullYear();
+  document.getElementById("date").textContent = formattedDate;
+</script>        
+    
+    <script src="/assets/js/linksdpr.js"></script>
+    <script src="/assets/js/switchView.js"></script>
+
+                <script src="/assets/js/linksru.js"></script>
+        <script src="/assets/js/openRu.js"></script>
+        <script src="/assets/js/linksbw.js"></script>
+                <script src="/assets/js/openBw.js"></script>
+               <!--     <script src="./js/reader-rus-translations.js" defer></script> -->
+	  <script src="/assets/js/smoothScroll.js" ></script>
+	
+  <!--  <script src="/assets/js/randPlaceholder.js" defer></script> -->
+    <script>
+//      var theLanguage = $('html').attr("lang");
+//      randPlaceholder('ru');
+    </script>  
+<script>
+
+// Event listener to submit the form when Enter key is pressed
+/*
+var input = document.getElementById("paliauto");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("searchbtn").click();
+  }
+});
+*/
+
+// Поместить курсор в конец строки в поле ввода
+//input.focus();
+//input.setSelectionRange(input.value.length, input.value.length);
+</script>
+<script src="/assets/js/autopali.js"></script>
+
+<!-- <script>
+$(document).ready(function() {
+  // Обработчик для нажатия клавиши Enter
+  $(document).on('keydown', function(event) {
+    if (event.key === 'Enter') {
+      $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+     $('#navbarResponsive').collapse('hide');
+    }
+  });
+
+  // Обработчик для отправки формы
+  $('#searchbtn').on('click', function() {
+    $('#collapseSettings').collapse('hide'); // Здесь меняем 'toggle' на 'hide'
+          $('#navbarResponsive').collapse('hide');
+  });
+});
+</script>
+  -->
+<script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+<script defer src="/assets/js/themeswitch.js"></script>
+<script src="/assets/js/copyToClipboard.js"></script>
+ <!-- <script src="/assets/js/fontawesome.6.6.all.js" defer></script>
+
+<script>
+    // Получаем текущий хостнейм
+    var hostname = window.location.hostname;
+
+    // Создаем элемент скрипта
+    var scriptElement = document.createElement('script');
+
+    // Устанавливаем атрибуты скрипта в зависимости от хостнейма
+    if (hostname === "localhost") {
+      scriptElement.src = "/assets/js/fontawesome.6.1.all.js";
+      scriptElement.defer = true;
+    } else {
+      scriptElement.src = "https://kit.fontawesome.com/a2bd6cd99e.js";
+      scriptElement.crossOrigin = "anonymous";
+      scriptElement.defer = true;
+    }
+
+    // Вставляем созданный скрипт в тег head
+    document.head.appendChild(scriptElement);
+  </script>-->
+<!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=X8U4dR8x"></script>
+ -->
+
+</body>
+ <script>
+//scroll to fortpst match
+window.addEventListener("load", function() {
+    console.log("Document loaded");
+
+    setTimeout(function() {
+        console.log("Timeout fired after 1.5 seconds");
+
+        let params = new URLSearchParams(document.location.search);
+        let finder = params.get("s");
+     //   finder = finder.replace(/\\b/g, '');
+        let query = params.get("q");
+        let url = document.location.href;
+
+        if (finder && finder.trim() !== "" && query && url.indexOf("#") === -1) {
+            console.log("Parameters 's', 'q', and no anchor found in URL");
+
+            let regex = new RegExp(finder, 'gi');
+            let textNodes = document.evaluate(
+                "//text()[normalize-space(parent::*) != '']", 
+                document.body, 
+                null, 
+                XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, 
+                null
+            );
+
+            for (let i = 0; i < textNodes.snapshotLength; i++) {
+                let currentNode = textNodes.snapshotItem(i);
+                if (regex.test(currentNode.nodeValue)) {
+                    console.log("Found match in text node:", currentNode.nodeValue);
+
+                    let parentNode = currentNode.parentNode;
+                    parentNode.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                    break; // Прекратить поиск после первого совпадения
+                }
+            }
+        } else {
+            console.log("Conditions not met: 's' parameter empty or missing, 'q' parameter empty or missing, or anchor found in URL");
+        }
+    }, 1000); // 1.5 секунды таймаута
+});
+</script>
+<script src="/assets/js/uihelp.js"> </script>
+<script src="/assets/js/variantsButtonSc.js"></script>
+<script src="/assets/js/settings.js"></script>
+    <!-- <script src="/assets/js/showHideHelp.js"></script>
+-->
+
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            enablePaliLookup();
+        });
+    </script>
+</html>
+

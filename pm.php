@@ -45,15 +45,15 @@ include './scripts/opentexts.php';
                 </a>
 
                 <a href="/ru" title="Sutta and Vinaya search" rel="noreferrer" class="me-1">
-                    <img width="24px" alt="find.dhamma.gift icon" src="/assets/img/gray-white.png">
+                    <img width="24px" alt="dhamma.gift icon" src="/assets/img/gray-white.png">
                 </a>
   <a class="ms-1 toggle-dict-btn">  <img src="/assets/svg/comment.svg" class="dictIcon-sitePages"></img></a>
 
                 <div class="ms-1 form-check form-switch">
                     <input type="checkbox" class="form-check-input" id="darkSwitch">
                 </div>
-       <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/sc/d.html?q=bu-pm&script=devanagari" >bu-pm</a>
-      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/sc/d.html?q=bu-pm&script=devanagari" >bi-pm</a>
+       <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/d/?q=bu-pm&script=devanagari" >bu-pm</a>
+      <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/d/?q=bu-pm&script=devanagari" >bi-pm</a>
  
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/sarv.php" >sarv</a>
     <a class="ms-1 btn-sm btn-secondary rounded-pill text-decoration-none " href="/san/mg.php" >mg</a>
@@ -203,7 +203,13 @@ $(document).ready(function () {
   });
 </script>
 <script src="/assets/js/paliLookup.js"></script>
-
+<script src="/assets/js/settings.js"></script>
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            enablePaliLookup();
+        });
+    </script>
 <!-- Audio Player JS -->
 <script  src="/assets/js/jsPlayer.js"></script>  
 </body>

@@ -2,9 +2,8 @@
     window.addEventListener('DOMContentLoaded', function() {
       var hash = window.location.hash;
   const isLocalhost = window.location.hostname.match(/localhost|127\.0\.0\.1/);
-const timeout = isLocalhost ? 500 : 2500; 
-  
-console.log(timeout);
+const timeout = isLocalhost ? 1000 : 2500; 
+//console.log(timeout);
       if (hash) {
         setTimeout(function() {
           var element = document.getElementById(hash.substring(1));
@@ -13,9 +12,13 @@ console.log(timeout);
           }
         }, timeout);
       }
-    });
+    });  
+
 
 document.addEventListener('DOMContentLoaded', function() {
+
+
+
   // Создаем элемент кнопки  <img src="/assets/img/arrow-up.png" alt="To top"> <!--  <img src="/assets/svg/arrow-up.svg" alt="To top"> -->  <i class="fa-solid fa-arrow-up"></i>
   var scrollToTopBtn = document.createElement('button');
   scrollToTopBtn.id = 'scrollToTopBtn';
@@ -138,6 +141,7 @@ function highlightById(elementId) {
 }
 
 // Функция для выделения нескольких элементов по массиву ID
+
 function highlightMultipleById(ids) {
     ids.forEach(highlightById);
 }
@@ -149,45 +153,79 @@ function highlightMultipleById(ids) {
 
 
 
-// Функция для выделения элемента
-function highlightElement(element) {
-    if (element) {
-        // Прокручиваем к элементу
-        element.scrollIntoView({ behavior: 'smooth' });
-
-        // Начальные стили
-        element.style.borderRadius = '10px'; // Скругление углов
-        element.style.transition = 'box-shadow 0.3s ease-in-out'; // Плавный переход
-        let isWide = false; // Флаг для отслеживания состояния окантовки
-
-        // Функция для мигания
-        const blinkInterval = setInterval(function () {
-            if (isWide) {
-                // Обычная окантовка
-                element.style.boxShadow = '0 0 0 2px grey';
-            } else {
-                // Более широкая окантовка
-                element.style.boxShadow = '0 0 0 4px grey';
+// Функция для наблюдения за появлением элементов с указанными классами
+function observeAndHighlightElements(classNames) {
+    // Преобразуем строку с классами в массив (если передана строка)
+    const classes = Array.isArray(classNames) ? classNames : [classNames];
+    
+    // Настройки для IntersectionObserver
+    const observerOptions = {
+        root: null, // наблюдать относительно viewport
+        rootMargin: '0px',
+        threshold: 0.1 // срабатывает когда 10% элемента видно
+    };
+    
+    // Создаем наблюдатель
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Если элемент стал видимым
+                highlightElement(entry.target);
+                // Прекращаем наблюдение после первого срабатывания
+                observer.unobserve(entry.target);
             }
-            isWide = !isWide; // Меняем состояние
-        }, 500); // Интервал мигания (500 мс)
-
-        // Убираем выделение через 3 секунды
-        setTimeout(function () {
-            // Останавливаем мигание
-            clearInterval(blinkInterval);
-
-            // Плавно убираем окантовку
-            element.style.boxShadow = '0 0 0 0 grey';
-
-            // Убираем стили после завершения
-            setTimeout(function () {
-                element.style.transition = '';
-                element.style.borderRadius = '';
-            }, 300); // Ждем завершения анимации
-        }, 3000); // 3 секунды
-    }
+        });
+    }, observerOptions);
+    
+    // Находим все элементы с указанными классами и начинаем наблюдение
+    classes.forEach(className => {
+        document.querySelectorAll(`.${className}`).forEach(element => {
+            observer.observe(element);
+        });
+    });
 }
+
+// Оригинальная функция highlightElement с небольшими улучшениями
+function highlightElement(element) {
+    if (!element) return;
+    
+    // Прокручиваем к элементу
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    
+    // Сохраняем оригинальные стили для восстановления
+    const originalTransition = element.style.transition;
+    const originalBorderRadius = element.style.borderRadius;
+    const originalBoxShadow = element.style.boxShadow;
+    
+    // Начальные стили
+    element.style.borderRadius = '10px';
+    element.style.transition = 'box-shadow 0.3s ease-in-out';
+    let isWide = false;
+    
+    // Функция для мигания
+    const blinkInterval = setInterval(() => {
+        element.style.boxShadow = isWide ? '0 0 0 2px grey' : '0 0 0 4px grey';
+        isWide = !isWide;
+    }, 500);
+    
+    // Убираем выделение через 3 секунды
+    setTimeout(() => {
+        clearInterval(blinkInterval);
+        element.style.boxShadow = '0 0 0 0 grey';
+        
+        // Восстанавливаем оригинальные стили
+        setTimeout(() => {
+            element.style.transition = originalTransition;
+            element.style.borderRadius = originalBorderRadius;
+            element.style.boxShadow = originalBoxShadow;
+        }, 300);
+    }, 3000);
+}
+
+// Использование:
+// observeAndHighlightElements('my-class'); // для одного класса
+// observeAndHighlightElements(['class1', 'class2']); // для нескольких классов
+ 
 
 // Функция для проверки хэша и запуска выделения
 function checkHashAndHighlight() {
@@ -214,5 +252,9 @@ function checkHashAndHighlight() {
 
 // Также вызываем функцию при изменении хэша
 window.addEventListener('hashchange', checkHashAndHighlight);
+
+document.addEventListener("DOMContentLoaded", function () {
+    checkHashAndHighlight(); // Вызываем функцию при загрузке страницы
+});
 
 

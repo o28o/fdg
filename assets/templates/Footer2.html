@@ -19,16 +19,18 @@
 
         </div>
 
-
+<!--
 <script>
     // Находим все кнопки с классом "toggle-dict-btn" и отключаем их
     document.querySelectorAll('.toggle-dict-btn').forEach(button => {
         button.setAttribute('', true);
     });
 </script>
-
+-->
+<script src="/assets/js/themeswitch.js" defer></script>
 
         <script src="/assets/js/paliLookup.js"></script>
+
 <script type="text/javascript" src="/assets/js/typeahead/bootstrap3-typeahead.min.js"></script>
     <script type='text/javascript'>
    $(document).ready(function() {
@@ -59,8 +61,9 @@ $('#pali').find('tbody').find('tr').each(function() {
         var metaphorCount = TextInfo[linkText]['mtph'] || ''; // Количество метафор
 
         // Проверяем localStorage и URL
-        var siteLanguage = localStorage.getItem('siteLanguage');
-        var useRussian = (siteLanguage === 'ru') || window.location.pathname.includes('/ru/');
+       // var siteLanguage = localStorage.getItem('siteLanguage');
+     //   var useRussian = (siteLanguage === 'ru') || window.location.pathname.includes('/ru/');
+     var useRussian = window.location.pathname.includes('/ru/');
 
         var titleText = useRussian && titleRussian ? titleRussian : titleEnglish; // Если русский есть, берем его, иначе английский
 
@@ -337,8 +340,7 @@ checkboxes.forEach(function(checkbox) {
 
 </script>
         <script src="/assets/js/openFdg.js"></script>
-<script src="/assets/js/themeswitch.js"></script>
-	  <script src="/assets/js/smoothScroll.js"defer></script>
+	  <script src="/assets/js/smoothScroll.js" defer></script>
     <script defer type="module" src="/assets/js/langswitch.js"></script>     
     <script src="/assets/js/linksdpr.js"></script>
         <script src="/assets/js/openDpr.js"></script>
@@ -382,7 +384,8 @@ $(function () {
     });
 
 </script>    
-
+  <script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" ></script>
+  
 </html>
 
 

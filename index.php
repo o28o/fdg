@@ -4,13 +4,13 @@ header("Expires: " . gmdate("D, d M Y H:i:s", time() + 3600) . " GMT");
 ?>
 <!DOCTYPE html>
 <?php
-// Включаем вывод всех ошибок для отладки
+// Включаем вывод всех ошиок для отладки
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 error_reporting(E_ERROR | E_PARSE);
 include_once('config/config.php');
 include_once('config/translate.php');
-include 'scripts/opentexts.php';
+include 'scripts/search-handler.php';
 //echo basename($_SERVER['REQUEST_URI']);
 ?>
 <html lang="<?php echo $htmllang;?>" data-bs-theme="dark">
@@ -26,28 +26,51 @@ include 'scripts/opentexts.php';
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Dhamma.gift" />
 <meta property="og:description" content="<?php echo $ogdesc;?>" />
-<link rel="manifest" href="/assets/manifest.json">
+
+<style>
+    body {
+        opacity: 0;
+        background: black;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out; /* Плавное появление */
+    }
+</style>
+
+<link rel="manifest" href="/assets/manifest.php">
 <link rel="canonical" href="<?php echo $canonicalPage;?>">
+<link rel="alternate" href="https://dhamma.gift/ru/" hreflang="ru">
+<link rel="alternate" href="https://dhamma.gift/" hreflang="en">
+
+<!-- для PWA где нет адресной строки, но нужно установить язык по умолчанию.
 <script>
 // Проверяем значение siteLanguage в localStorage
+let siteLanguage = localStorage.getItem('siteLanguage');
 
+// Если siteLanguage не задан, проверяем URL
 if (!siteLanguage) {
-    siteLanguage = localStorage.getItem('siteLanguage'); // Без let/const
+    const currentPath = window.location.pathname;
+    if (currentPath.includes('/ru/')) {
+        siteLanguage = 'ru';
+    } else if (currentPath.includes('/th/')) {
+        siteLanguage = 'th';
+    } else {
+        siteLanguage = 'en';
+    }
 }
-// Получаем текущий путь
+
+// Если siteLanguage установлен и текущий путь не соответствует языковому, перенаправляем
 const currentPath = window.location.pathname;
+const currentHash = window.location.hash;
 
-// Перенаправляем на соответствующий язык, только если пользователь не на целевой странице
 if (siteLanguage === 'ru' && currentPath !== '/ru/') {
-    window.location.href = '/ru/';
+    window.location.href = '/ru/' + currentHash;
 } else if (siteLanguage === 'th' && currentPath !== '/th/') {
-    window.location.href = '/th/';
+    window.location.href = '/th/' + currentHash;
 } else if (siteLanguage === 'en' && currentPath !== '/') {
-    window.location.href = '/';
+    window.location.href = '/' + currentHash;
 }
-</script>
-
-<meta property="og:url" content="/" />
+</script> --> 
+<meta property="og:url" content="https://1Dhamma.gift" />
 <meta property="og:site_name" content="Dhamma.gift" />
 <meta property="og:image" content="<?php echo $ogshare;?>" />
 
@@ -70,49 +93,59 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 -->
 
-<!--  Core theme CSS (includes Bootstrap)-->
-<link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
-<link href="/assets/css/styles.css" rel="stylesheet" />
+<!--  Core theme CSS (includes Bootstrap)
 <link href="/assets/css/paliLookup.css" rel="stylesheet" />
 
+-->
+<link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+<!-- 
+<link href="/assets/css/styles.css" rel="stylesheet" />
+-->
+
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
+<script src="/assets/js/loadCssJsMain.js"></script>
+
 <script src="/assets/js/jquery-3.7.0.min.js"></script>
 <script src="/assets/js/jquery-ui.min.js"></script>
 
-<style>
-</style>
-
 <?php echo $fontawesomejs;?> 
-
 </head>
 
 
 <!-- <script>window.location.href="https://f.dhamma.gift";</script> -->
     <body id="page-top"> 
-    <script>
-  
-  const url = new URL(window.location);
-const params = new URLSearchParams(url.search);
+  <script>
+const url = new URL(window.location);
+const searchParams = new URLSearchParams(url.search);
 
 // Удаляем параметры, которые пустые или содержат только пробелы
-for (let key of [...params.keys()]) {
-    if (!params.get(key).trim()) { // Проверяем, если пусто или пробелы
-        params.delete(key);
+for (let key of [...searchParams.keys()]) {
+    if (!searchParams.get(key).trim()) {
+        searchParams.delete(key);
     }
 }
 
-// Обновляем URL без перезагрузки, если есть изменения
-const newUrl = url.pathname + (params.toString() ? "?" + params.toString() : "");
+
+// Получаем текущий якорь
+const currentHash = window.location.hash;
+
+// Обновляем URL без перезагрузки, если есть изменения, и сохраняем якорь
+const newUrl = url.pathname + (searchParams.toString() ? "?" + searchParams.toString() : "") + currentHash;
 if (newUrl !== window.location.href) {
     history.replaceState(null, "", newUrl);
 }
 
-  function updateURL(params) {
+function updateURL(params) {
     console.log("Before update:", location.href);
-    // код, изменяющий URL
-    history.replaceState(null, "", `?q=${params.q}&s=${params.s}`);
+    
+    const updatedParams = new URLSearchParams();
+    if (params.q) updatedParams.set("q", params.q);
+    if (params.s) updatedParams.set("s", params.s);
+    
+    history.replaceState(null, "", `?${updatedParams.toString()}${window.location.hash}`);
     console.log("After update:", location.href);
 }
+
 </script>
 
         <!-- Navigation-->
@@ -166,7 +199,7 @@ if (newUrl !== window.location.href) {
                 <!-- Masthead Heading-->
 <div class="hideOnMobile">
 <h1 class="masthead-heading">
-    <div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptitle;?>">
+    <div data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltiptitle;?>">
         <?php echo $title;?>
     </div>
 </h1>
@@ -182,7 +215,7 @@ if (newUrl !== window.location.href) {
                 </div>
 </div>
 
-<form method="GET" action="" class="justify-content-center">
+<form method="GET" id="searchForm" action="" class="justify-content-center">
 <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
 <label class="sr-only dropup rounded-pill" for="paliauto"></label>
 
@@ -222,11 +255,12 @@ if (isset($_GET['q'])) {
         <option value="-en" <?php if (isset($p) && $p == "-en") echo "selected";?> ><?php echo $radioen;?></option>
         <option value="-tru" <?php if (isset($p) && $p == "-tru") echo "selected";?> ><?php echo $radiotru;?></option>        
     </select>
-       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltiptextype;?>">*</div>
+       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltiptextype;?>">*</div>
 
     <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
 
         <option value="" <?php if (isset($extra)) echo "selected";?> ><?php echo "$liststd";?></option>
+        <option value="dictLookup" <?php if (isset($extra) && $extra == "dictLookup") echo "selected";?> ><?php echo "$dictLookup";?></option>
          <option value="wordRep" <?php if (isset($extra) && $extra == "wordRep") echo "selected";?> ><?php echo "$listwords";?></option>
         <option value="-def" <?php if (isset($extra) && $extra == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $extra == "-sml") echo "selected";?> ><?php echo "$listsml";?></option>
@@ -235,7 +269,7 @@ if (isset($_GET['q'])) {
      <option value="-nm10" <?php if (isset($extra) && $extra == "-nm10") echo "selected";?> ><?php echo "$listnm10";?></option>
       <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
     </select>
-	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $tooltipsearchtype;?>">*</div>
+	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltipsearchtype;?>">*</div>
 </div>
   <!--  <label for="pOptions"></label> -->
   <!-- extra options -->
@@ -264,18 +298,50 @@ $(document).ready(function() {
 
 </script>
 
+ <?php
+if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+Добавить <strong>Dhamma.gift</strong> на Домашний Экран?
+    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
+   <br>
+   <strong>Android</strong> Chrome<br>
+   Настройки -> добавить на Главную<br>
+   <strong>iOS</strong> Safari<br>  
+   Поделиться -> добавить на Главную. 
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+} else {
+echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
+Add <strong>Dhamma.gift</strong> to your Home Screen?
+    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
+   <br>
+   <strong>Android</strong> Chrome<br>
+   Settings -> Add to Home Screen<br>
+   <strong>iOS</strong> Safari<br>
+  Share -> Add to Home Screen.
+
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+}
+?>
+<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
+  <div id="response"></div>
+  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+</div>
+
 <div class="collapse" id="collapseSettings">
   
   <div class="float-start mt-2">
 
  <div class="form-check form-check-inline">
         <input class="form-check-input" type="checkbox" id="onlCheckbox" name="extra" <?php if (isset($extra) && $extra=="-anyd ") echo "checked";?>  value="-anyd">
-  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?></div>
+  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltiponl;?>'><?php echo $checkboxonl;?><span class="text-muted">*</span></div>
   </div>
+
+  
   
 <div class="form-check form-check-inline">
   <input class="form-check-input" type="checkbox" id="laCheckbox" name="la" <?php if (isset($extra) && $extra=="-la$defaultla ") echo "checked";?>  value='<?php echo "-la$defaultla"?>'>
-  <div data-bs-toggle="tooltip" data-bs-placement="top" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?></div>
+  <div data-bs-toggle="tooltip" data-bs-placement="bottom" title='<?php echo $tooltipla;?>'><?php echo $checkboxla;?><span class="text-muted">*</span></div>
   </div>
   
          <div style="max-width: 300px;" class="my-2"> 
@@ -319,12 +385,12 @@ $(document).ready(function() {
   <button class="btn rounded-pill btn-primary btn-sm rounded-pill insert-letter" data-letter=" -la<?php echo $defaultla;?> "><strong>-la<?php echo $defaultla;?> X</strong></button> - <?php echo $lax;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=" -lb<?php echo $defaultla;?> "><strong>-lb<?php echo $defaultla;?> X</strong></button> - <?php echo $lbx;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter=' -exc "Y(ti|nti)"'><strong>X -exc Y(ti|nti)</strong></button> - <?php echo $excfew;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>\\bX</strong></button> - <?php echo $begin;?>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\b'><strong>Y\\b</strong></button> <?php echo $end;?><br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>\bX</strong></button> - <?php echo $begin;?>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\b'><strong>Y\b</strong></button> <?php echo $end;?><br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.*'><strong>X.*Y</strong></button> - <?php echo $anynumber;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='.{0,10}'><strong>X.{0,10}Y</strong></button> - <?php echo $fewsymbols;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\\S*\\s'><strong>X\\S*\\sY</strong></button> - <?php echo $nextwords;?> <br>
-  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\\S*\\s){0,3}'><strong>X(\\S*\\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='\S*\s'><strong>X\S*\sY</strong></button> - <?php echo $nextwords;?> <br>
+  <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='(\S*\s){0,3}'><strong>X(\S*\s){0,3}Y</strong></button> - <?php echo $fewwords;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>a[ṁ]?</strong></button> - <?php echo $optionalletter;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='[aā]'><strong>[aā]</strong></button> - <?php echo $variants;?> <br>
   <button class="btn btn-primary btn-sm rounded-pill insert-letter" data-letter='tatt($|[^h])'><strong>tatt($|[^h])</strong></button> - <?php echo $variantsexc;?> <br>
@@ -341,6 +407,38 @@ $(document).ready(function() {
 
  </p>
  
+ 
+ 
+ 
+ <script>
+  $(document).ready(function() {
+  // Обработчик для отправки формы
+  $('#searchForm').on('submit', function() {
+    // Закрываем выпадающий список автозаполнения
+    $('#paliauto').autocomplete('close');
+    $('#collapseSettings').collapse('hide');
+    $('#navbarResponsive').collapse('hide');
+  });
+  
+  // Обработчик для нажатия клавиши Enter
+  $(document).on('keydown', function(event) {
+    if (event.key === 'Enter') {
+      $('#paliauto').autocomplete('close');
+      $('#collapseSettings').collapse('hide');
+      $('#navbarResponsive').collapse('hide');
+    }
+  });
+  
+  // Обработчик для клика по кнопке поиска
+  $('#searchbtn').on('click', function() {
+    $('#paliauto').autocomplete('close');
+    $('#collapseSettings').collapse('hide');
+    $('#navbarResponsive').collapse('hide');
+  });
+});
+
+</script>
+
 <script>
   
 // Event listener to submit the form when Enter key is pressed
@@ -453,42 +551,15 @@ input.setSelectionRange(input.value.length, input.value.length);
 </div>
 </div>
 
- <?php
-if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-Добавить <strong>Dhamma.gift</strong> на Домашний Экран?
-    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
-   <br>
-   <strong>Android</strong> Chrome<br>
-   Настройки -> добавить на Главную<br>
-   <strong>iOS</strong> Safari<br>  
-   Поделиться -> добавить на Главную. 
+<!--
+-->
 
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-} else {
-echo '<div style="max-width: 450px; display: none;" class="alert alert-primary alert-dismissible fade show mt-3" role="alert" id="infoUpdate">
-Add <strong>Dhamma.gift</strong> to your Home Screen?
-    <a class="btn btn-secondary installButton" id="" style="display:none;">' . $installpwalong . '</a>
-   <br>
-   <strong>Android</strong> Chrome<br>
-   Settings -> Add to Home Screen<br>
-   <strong>iOS</strong> Safari<br>
-  Share -> Add to Home Screen.
-
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-}
-?>
+<script src="/assets/js/themeswitch.js"></script>
 
 <script src="/assets/js/uihelp.js"></script>
-<div style="max-width: 450px; display: none;" class='alert alert-warning alert-dismissible fade show container-lg mt-3 text-start' role='alert' id='successAlert'>
-  <div id="response"></div>
-  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-</div>
 
   </div>
   
-      </div>	
-      
             <div id="spinner" class="justify-content-center">
               <div class="spinner-border mt-3" role="status">
                 <span class="visually-hidden">Loading...</span>
@@ -506,6 +577,8 @@ window.addEventListener('pageshow', function(event) {
     document.getElementById('spinner').style.display = 'none';
   }
 });
+
+    document.getElementById('spinner').style.display = 'none';
 </script>
 
   <!-- extra options end -->
@@ -516,8 +589,6 @@ window.addEventListener('pageshow', function(event) {
   <br>
   </p>
   </div>
-<script>
-</script>
 </header>
 
 <!-- Portfolio Section-->
@@ -527,10 +598,6 @@ window.addEventListener('pageshow', function(event) {
 if ( $lang == "ru" ) {
 include 'assets/common/horizontalMenuRu.php'; 
 }
-else if ( $lang == "th" ) {
-include 'assets/common/horizontalMenuTh.php'; 
-}
-
 else {
 include 'assets/common/horizontalMenuEn.php'; 
 } 
@@ -640,7 +707,7 @@ foreach ($slides as $index => $slide) {
 <div class="row justify-content-center">
 
 <div style="max-width: 600px;" class="container-lg">
-<div data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $howtosearchquotetooltip;?>"></div>
+<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $howtosearchquotetooltip;?>"></div>
 <?php echo $howtosearchquote;?>
 
 </div>
@@ -737,9 +804,9 @@ foreach ($slides as $index => $slide) {
                     </a>
                 </div> -->
                                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" target="_blank" href="mailto:agiftofdhamma@gmail.com">
+                    <a class="btn btn-xl btn-outline-light" target="_blank" href="/assets/common/<?php echo $prekeyfeatures; ?>">
     
-                   <i class="fa-solid fa-at"></i><?php echo $premail; ?>
+                   <i class="fa-solid fa-star"></i><?php echo $premail; ?>
                     </a>
                 </div>
             </div>
@@ -1238,8 +1305,9 @@ foreach ($slides as $index => $slide) {
         <!-- Core theme JS
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
                 <!-- Bootstrap core JS-->
-				
+
 <script src="/assets/js/bootstrap.bundle.5.3.1.min.js"></script>
+
 <script defer>
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
@@ -1249,7 +1317,6 @@ $(function () {
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->
 
 <script src="/assets/js/autopali.js" defer></script>
-<script src="/assets/js/paliLookup.js"></script>
 	  
 <script src="/assets/js/randPlaceholder.js">
 </script>
@@ -1259,11 +1326,53 @@ $(function () {
   console.log(window.location.href);
 
 </script>
-<script defer src="/assets/js/themeswitch.js"></script>
+
+<!-- 
+<script src="/assets/js/paliLookup.js"></script>
+
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
+-->
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+
+const isRuPath = /^\/(ru|r)\//.test(location.pathname);
+
+const resources = isRuPath
+  ? [
+      '/assets/js/standalone-dpd/ru/dpd_i2h.js',
+      '/assets/js/standalone-dpd/ru/dpd_ebts.js',
+      '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
+    ]
+  : [
+      '/assets/js/standalone-dpd/dpd_i2h.js',
+      '/assets/js/standalone-dpd/dpd_ebts.js',
+      '/assets/js/standalone-dpd/dpd_deconstructor.js'
+    ];
+
+        resources.forEach(url => {
+            // Вариант 1: Prefetch через Link header
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = url;
+            link.as = 'script';
+            document.head.appendChild(link);
+
+            // Вариант 2: Фоновый fetch (для старых браузеров)
+            fetch(url, {
+                method: 'GET',
+                credentials: 'same-origin',
+                cache: 'force-cache'
+            });
+        });
+        console.log('fetching dict');
+    }, 2000);
+});
+</script>
 </body>
 
 <?php
-include 'scripts/multilang-search.php';
+
 ?>  
 
 </html>

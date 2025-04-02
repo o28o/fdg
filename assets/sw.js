@@ -5,7 +5,9 @@ const urlsToCache = [
     '/ru/index.php',
     '/index.php',
     '/assets/img/icon-192x192.png',
-    '/assets/img/icon-512x512.png'
+    '/assets/img/icon-512x512.png',
+        '/read/index.html',
+            '/r/index.html'
 ];
 
 self.addEventListener('install', (event) => {

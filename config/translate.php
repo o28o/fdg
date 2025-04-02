@@ -7,7 +7,7 @@ $installpwalong = "Установить FDG";
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainpagenoslash = '/ru';
-$mainscpage = $mainpage . '/sc';
+$mainscpage = $mainpage . '/read';
 $mainreadlink = '/ru/read.php';
 $searchcaption = 'Поиск';
 $clearaption = 'Очистить';
@@ -25,7 +25,7 @@ $maintitle = 'Точный поиск. Будда Дхамма в Пали Су�
 $metadesc = 'Точный поиск в Учении Будды, в Пали Суттах и Винае. Поисковый Сайт Освобождения. Полезные Дхамма Ресурсы. Материалы для изучения Сутт, Дхаммы, Пали, Санскрита';
 $metakeywords = 'Будда, Buddha, Дхамма, Дхарма, Виная, поиск, Сутта, Сутты, Суттапитака, Винаяпитака, suttapitaka, vinayapitaka Пали, Палийский канон, буддизм, dhamma, sutta, Buddhism, pali Canon, патимоккха, пратимокша, patimokkha, pratimoksasutra, ';
 $titletwit = 'Точный поиск в Учении Будды, в Пали Суттах и Винае. ';
-$ogdesc = 'Поисковая Система Освобождения. Учение Будды. Находите определения и информацию в Суттах и Винае на Пали, Русском, Английском и Тайском';
+$ogdesc = 'Поисковая Система Освобождения. Учение Будды. Поиск в Суттах и Винае на Пали, Русском, Английском и Тайском. Дхамма Будды.';
 $oglocale = 'ru_RU';
 $ogshare = 'https://dhamma.gift/assets/img/social_sharing_gift_rus.jpg';
 $menu = 'Меню';
@@ -43,17 +43,17 @@ $tooltippoweredby = 'Natural Intelligence, Естественный Интелл
 $tooltiptitle = 'На Pāḷi, Русском, ไทย, සිංහල и Английском';
 $title = 'Найдите Истину';
 $tooltippli = 'Поиск на Пали по-умолчанию. По Суттам an, sn, dn, mn. Ангутара Никаи, Саньютта Никаи, Маджжхима Никаи, Дигха Никаи';
-$radiopli = 'Pāḷi';
+$radiopli = 'Pāḷi*';
 $tooltipdef = 'Поиск определений понятия на Пали в 4 Никаях. Что это, какие виды бывают, какими метафорами описывается. Если в Суттах не будет результатов, то поиск автоматически проведется в определениях из Винаи. Работает только для определений данных стандартными фразами. См. в "для Продвинутых"';
 $radiodef = 'Опр';
 
 $tooltipsml = 'Поиск сравнений, метафор, символов понятия на Пали в 4 Никаях. Работает только для определений данных стандартными фразами.';
 $radiosml = 'Пдб';
 
-$tooltiptextype = '<strong>Pāḷi</strong> - Ангутара Никаи (AN), Саньютта Никаи (SN), Маджжхима Никаи (MN), Дигха Никаи (DN). В коренных текстах (Мула). <br><br>
-<strong>Виная</strong> - Поиск в Патимоккхах и Вибхангах Винаи на Пали и Английском. <br><br>
-<strong>+ KN*</strong> - 4 Никаи + Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
-<strong>+ вся КН</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи, включая поздние<br><br>
+$tooltiptextype = '<strong>Pāḷi*</strong> - 4 Основные Никаи: Ангутара Никаи (АН), Саньютта Никаи (СН), Маджжхима Никаи (МН), Дигха Никаи (ДН). В коренных текстах (Мула). <br><br>
+<strong>Виная*</strong> - Поиск в Вибхангах Винаи и Патимоккхах на Пали и Английском. <br><br>
+<strong>+ 6 книг КН</strong> - 4 Никаи + 6 книг КН Удана (Ud), Дхаммапада (Dhp), Итивутака (Iti), Суттанипата (Snp), Тхерагатха (Thag), Тхеригатха (Thig)<br><br>
+<strong>+ вся КН</strong> - 4 Никаи + поиск на Пали во всех книгах Кхуддака Никаи.<br><br>
 <strong>+ Kd, Pvr</strong> - Виная + Кхандхаки и Паривара<br><br>
 <strong>TBW</strong> - поиск в материалах theBuddhasWords.net<br><br>
 <strong>SC.net</strong> - поиск в англ переводах 4 никай SuttaCentral.net
@@ -72,12 +72,13 @@ $listnm10 = "Топ-10";
 $listnm = "Топ-5";
 $listdef = "Определения";
 $listwords = "Слова";
+$dictLookup = "Словарь";
 $listsml = "Сравнения";
 $liststd = "Все совпадения";
 $tooltipvin = 'Поиск в Винае на Пали';
-$radiovin = 'Виная';
+$radiovin = 'Виная*';
 $tooltipkn = 'Поиск на Пали в 4 никаях + поиск в 6 книгах Кхуддака Никаи: ud, iti, snp, dhp, thag, thig. Удана, Итивутака, Суттанипата, Дхаммапада, Тхерагатха, Тхеригатха';
-$radiokn = '+ КН*';
+$radiokn = '+ 6 книг КН';
 $tooltiponl = 'X Y ... могут быть на любом расстоянии в рамках одного текста. Без этой опции (по умолчанию) поиск идёт только по рядомстоящим словам. ';
 $checkboxonl = 'Любое расстояние';
 $tooltipnonl = 'С этой опцией будут собраны тексты, которые содержат только рядомстоящие X и Y (в одной строке). По умолчанию, без этой опции поиск будет производиться на любом расстоянии в пределах одного текста.';
@@ -108,7 +109,7 @@ $howtosearchquotetooltip = '';
 $howtosearchquote = '<p class="pli-lang">Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.</p>
 <p>Если при поиске в Суттах и сверке с Винаей они (учения, практики, методы, цитаты, истории, что-либо приписываемое Будде) не находятся в Суттах и не проходят сверку с Винаей, следует сделать заключение: "Определенно, это не слово Благословенного, оно ошибочно понято тем ' . $randomKey . '". Таким образом, монахи, вам следует это отвергнуть. 
 </p>
-<p class="text-end"><a target=_blank href=/ru/sc/?q=dn16&s=Tāni&lang=pli-eng#4.8.6>dn16</a> <a target=_blank href=/ru/sc/?q=an4.180&s=Tāni&lang=pli-eng#2.7>an4.180</a></p>';
+<p class="text-end"><a target=_blank href=/r/?q=dn16&s=Tāni&lang=pli-eng#4.8.6>dn16</a> <a target=_blank href=/r/?q=an4.180&s=Tāni&lang=pli-eng#2.7>an4.180</a></p>';
 $tooltipvindef = 'Поиск определений понятия на Пали в Винае. Работает только для определений данных стандартными фразами. См в разделе для Продвинутых';
 $radiovindef = "ОпрВ";
 
@@ -142,7 +143,7 @@ $regexMemo = '<p style="text-align: left;">
         </p>     ';
 $titlehowtovideo = 'Как пользоваться?';  
 $linkhowtovideo = 'https://youtu.be/XXa-K2fQ0Is?si=DDkT-2ZJo6B9bOAA';
-$titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift'; 
+$titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with dhamma.gift'; 
 
 $randomNumber = rand(1, 2); // Генерируем случайное число, например, 1 или 2
 // Логика выбора пары
@@ -154,8 +155,8 @@ $fntmessage = '<p class="font-italic text-center pli-lang">
 an8.8
 </p>
 </p>';
-$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано <a href=/ru/sc/?s=Evameva%E1%B9%81&q=an8.8#6.7>an8.8</a>, а что — плохо, иначе:';
-$mainscrollmodal = '<p class="">Из <a href=/ru/sc/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
+$mainscrollmodalheader = 'Нужно научиться разбираться, что хорошо сказано <a href=/r/?s=Evameva%E1%B9%81&q=an8.8#6.7>an8.8</a>, а что — плохо, иначе:';
+$mainscrollmodal = '<p class="">Из <a href=/r/?s=va%E1%B9%87%E1%B9%87a&q=an2.130-140#an2.134:1.3>an2.13</a> </br>
 
 <h4 class="pli-lang">Ananuvicca apariyogāhetvā avaṇṇārahassa vaṇṇaṁ bhāsati, </h4>
 </br>
@@ -181,7 +182,7 @@ dn22 mn141
 </p>';
 
 $mainscrollmodalheader = 'Определение Dukkha в Суттах';
-$mainscrollmodal = '<p >Из <a href=/ru/sc/?q=dn22&s=dukkha&lang=pli-rus#18.18>dn22</a> <a href=/ru/sc/?q=mn141&s=dukkha&lang=pli-rus#16.1>mn141</a></br><h4 class="pli-lang">Katamañca, bhikkhave, dukkhaṁ?</h4></br>
+$mainscrollmodal = '<p >Из <a href=/r/?q=dn22&s=dukkha&lang=pli-rus#18.18>dn22</a> <a href=/r/?q=mn141&s=dukkha&lang=pli-rus#16.1>mn141</a></br><h4 class="pli-lang">Katamañca, bhikkhave, dukkhaṁ?</h4></br>
 Что такое, монахи, боль?</br>
 </br>
 <p class="pli-lang">Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p></br>
@@ -276,13 +277,13 @@ $read = 'читать';
 
 $transwarning = ' <i class="fa-solid fa-triangle-exclamation "></i> <b>Пожалуйста, Помните!</b><br><br> Переводы, словари и комментарии сделаны не Буддой! Они часто содержат фундаментальные ошибки главных положений его Учения и противоречия. Их нужно изучать внимательно и критически. 
  <br><br>
-  Самое важное в Учении Будды лучше начать изучать <strong> самостоятельно по Суттам</strong> на Пали. Это как минимум, что такое Серединная Практика и Четыре Благородные Истины. К примеру, это могут быть несколько абзацев из <strong>sn56.11</strong>.';
+ Самое важное в Учении Будды лучше изучить <strong>самостоятельно по Суттам на Пали</strong>. Хорошей отправной точной будет Серединная Практика и Четыре Благородные Истины. Например, несколько абзацев из <strong>sn56.11</strong>.';
 
 $anamemlearnpali = 'Learn Pali Переводы';
 $anamelearnsanskrit = 'Санскрит с Джеймсом Веланом';
 
 $anamemolds = 'Переводы Майкла Олдса'; 
-$anameasc = 'Благородный Аскетизм';
+$anameasc = 'Статьи на Dhammadana.org';
 $anameati = 'Accesstoinsight.org Патимоккха';
 $anamehist = 'История';
 $anameuseful = 'Полезное';
@@ -301,10 +302,11 @@ $anamesdiff = 'Сравнить Две Сутты';
 $anametools = 'Инстр.';
 
 $aboutheader = 'О Проекте';
-$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift это поисковая система Освобождения. Точный Поиск в текстах Дхаммы и Винаи Палийского Канона с результатами в удобных таблицах с построчными переводами SuttaCentral.net, TheBuddhasWords.net, Theravada.ru и Tipitaka.theravada.su. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
-<div class="col-lg-4 me-auto"><p class="lead">Дхамма энтузиасты горячо приветствуются. Вы можете помочь в подготовке построчных текстов на пали и русском, для этого не нужно знать пали. Если вы хотите помочь, пожалуйста, свяжитесь через Telegram, по почте или через Github - ссылки внизу страницы. </p></div>';
+$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Dhamma.gift это поисковая система Освобождения. Точный Поиск в текстах Дхаммы и Винаи Палийского Канона с результатами в удобных таблицах с построчными переводами И ссылками на другие сайты. Вы можете искать понятия, определения, метафоры, объяснения, людей, места и другое описанное в Суттах и Винае на Пали, Русском, Тайском и Английском.</p></div>
+<div class="col-lg-4 me-auto"><p class="lead">Если вы разработчик или просто хотите помочь с развитием сайта - будем вам крайне рады.<br><br>Проект не нуждается, в материальной помощи, но если вы хотите поучаствовать в оплате за доменное имя, пожалуйста, свяжитесь через Telegram, по почте или через Github - ссылки внизу страницы, блок "Контакты". </p></div>';
 $prongh = ' Проект на GitHub';
-$premail = ' Написать';
+$premail = ' Особенности Dhamma.gift';
+$prekeyfeatures = 'keyFeaturesRu.html';
 
 $headerexamples = 'Примеры';
 $examplelist = '<li>Определение понятия <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">dukkha</a> на Пали и Русском. Запрос: <a href="/ru/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">-la1 Kata.*, dukkhaṁ[,\\\\?]</a>
@@ -330,8 +332,8 @@ $howtoheader = 'Как Искать?';
 $contactheader = 'Контакты';
 $contaccalltoaction = 'Всесторонний взгляд на Четыре Благородные Истины<br>
 		в Палийских Суттах и Винае.<br> 
-    Поймите наст<a target="_blank" class="text-white text-decoration-none" href=/ru/sc/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
-   и п<a target="_blank" class="text-white text-decoration-none" href=/ru/sc/?q=bu-pm>о</a>л<a class="text-white text-decoration-none" target=_blank href=/ru/sc/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-white text-decoration-none" href=/ru/sc/?q=mn77&lang=pli>о</a>нец б<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
+    Поймите наст<a target="_blank" class="text-white text-decoration-none" href=/r/?q=sn51.20&lang=pli>о</a>ящие Четыре Благородные Истины<br> 
+   и п<a target="_blank" class="text-white text-decoration-none" href=/r/?q=bu-pm>о</a>л<a class="text-white text-decoration-none" target=_blank href=/r/?q=sn35.70&lang=pli>о</a>жите к<a target=_blank class="text-white text-decoration-none" href=/r/?q=mn77&lang=pli>о</a>нец б<a class="text-white text-decoration-none" href="/scripts/countdowntable.php">о</a>ли.';
                                							
 $demovideo = 'Обучающие Видео';	
 $demovideolink = 'https://youtube.com/playlist?list=PLFJDP30qrYJ2rknY6fEVR3jQxpZd1S6lX&si=7O06E2lcmPxaEVX2';
@@ -376,7 +378,7 @@ $basicscontent = '<p class="mb-4"><strong>Совет #0</strong><br>
 									<strong>Совет #9</strong><br>
 Если запрос завершается ошибкой из-за таймаута, попробуйте более длинный поисковый запрос или более специфичное слово.  <br><br>
 	<strong>Совет #10 Быстрые переходы</strong><br>
-   Также как на <a href="https://dhamma.gift/sc/ru/">Dhamma.gift Read</a> или <a href="https://dhamma.gift/sc">find.dhamma.gift/sc</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
+   Также как на <a href="https://dhamma.gift/r/">Dhamma.gift Read</a> или <a href="https://dhamma.gift/read">dhamma.gift/read</a> вы можете вводить идентификаторы сутт так как они используются на suttacentral.net и вместо поиска вы перейдете в Палийский текст сутты, с возможностью быстрого переключения на построчный Английский перевод.<br>
    Через строку поиска можно перейти в сутты dn, mn, sn, an, ud из kn и тексты Винаи. <br><br>
 <!--								  <strong>Совет #11</strong><br>
                                    !!!Временно отключён!!! Если запрос завершается ошибкой из-за таймаута и вы не можете использовать  более длинный поисковый запрос, попробуйте <a href="./bg.php">Фоновый Режим</a>. Он может помочь.<br><br>  -->
@@ -506,7 +508,7 @@ $head5suttadiff = 'Сравнить Две Сутты';
 $psuttadiff = 'Показывает разницу между двумя текстами. Пали или Англ.';
 $head5listdiff = 'Сравнить Два Списка Сутт'; 
 $plistdiff = 'Показывает разницу между двумя списками текстов в формате sn56.22 dn22 sn12.2'; 
-$head5makelist = 'Создать CSV список';
+$head5makelist = 'Сделать список из  строки';
 $pmakelist = 'Создавайте списки феноменов, учений, переводов и т.п.'; 
 
 $pt2s = 'Преобразование Русс и Англ текстов в речь';
@@ -517,7 +519,7 @@ $smscvoice = 'для прослушивания текстов suttacentral.net'
 
 $title404 = 'Ошибка 404';
 $p404 = ' Страница не найдена. Но';
-$link404 = '/ru/sc/?q=sn38.4';
+$link404 = '/r/?q=sn38.4';
 $hreftext404 = 'На Главную';
 
 $dpddesc = 'Digital Pali Dictionary Онлайн';
@@ -530,15 +532,15 @@ $dpdpart = '<h3>Скачать Словарь "DPD"</h3>
 ';
 
 $defaults = '<br><div class="text-start">
-<h5 >Интерфейс для Чтения</h5>
+<h5 >Выбрать режим Чтения по-умолчанию</h5>
 <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Стандартный</strong> - Два языка - пали, русс 
-<a href="/ru/sc/?q=sn56.11">демо</a>
+<a href="/r/?q=sn56.11">демо</a>
 <br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/sc/ml.html?q=sn56.11">демо</a><br>
- <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/sc/d.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/sc/memorize.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх (слова не изменены) <a href="/sc/rv.html?q=sn56.11">демо</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/sc/fr.html?q=sn56.11">демо</a><br>  
+<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Мультиланг</strong> - Три языка - пали, русс, англ <a href="/ml/?q=sn56.11">демо</a><br>
+ <input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Деванагари"</strong> - деванагари или тайский скрипт и латинизированный пали <a href="/d/?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Для запоминания</strong> - текст сокращен до первых букв каждого слова <a href="/memorize/?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Реверс</strong> - текст снизу вверх (слова не изменены) <a href="/rev/?q=sn56.11">демо</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Полный Реверс</strong> - как предыдущий (слова слева направо) <a href="/frev/?q=sn56.11">демо</a><br>  
 </div>';
  
 
@@ -551,7 +553,7 @@ $installpwalong = "Install FDG";
 $htmllang = "en";
 $mainpage = '/';
 $mainpagenoslash = '';
-$mainscpage = '/sc';
+$mainscpage = '/read';
 $mainreadlink = '/read.php';
 $searchcaption = 'Search';
 $clearaption = 'Clear';
@@ -589,18 +591,18 @@ $tooltippoweredby = 'Natural Intelligence, Dhamma Intelligence';
 $tooltiptitle = 'In Pāḷi, English, Russian, සිංහල & ไทย';
 $title = 'Search for Truth';
 $tooltippli = 'Default search. In Suttas of AN, SN, MN, DN + partially KN. Anguttara Nikaya, Samyutta Nikaya, Majjhimma Nikaya, Digha Nikaya + partially Khudakka Nikaya';
-$radiopli = 'Pāḷi';
+$radiopli = 'Pāḷi*';
 $tooltipdef = 'Search for definitions in the 4 main Pali Nikayas. Find meanings, quantities, types, and metaphors associated with the term. Requires standard phrasing for definitions. If no results are found in Suttas, Vinaya texts are automatically searched. Study related Suttas for a comprehensive view. See "Advanced" for more details.';
 $radiodef = 'Def';
 
 $tooltipsml = 'Search for similes, metaphors, and symbols related to the search term in four main Pali Nikayas. Requires standard phrasing for definitions.';
 $radiosml = 'Sml';
 
-$tooltiptextype = '<strong>Pāḷi</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN). Search in Root texts (Mula)
+$tooltiptextype = '<strong>Pāḷi*</strong> - Anguttara Nikaya (AN), Samyutta Nikaya (SN), Majjhimma Nikaya (MN), Digha Nikaya (DN). Search in Root texts (Mula)
 <br><br>
-<strong>Vinaya</strong> - Search in Patimokkhas and Vibhangas of Vinaya in Pali and English. <br><br>
-<strong>+ KN*</strong> - 4 Nikayas + Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
-<strong>+ all KN</strong> - 4 Nikayas + search in Pali in all books of kn including later texts<br><br>
+<strong>Vinaya*</strong> - Search in  Vinaya Vibhangas and Patimokkhas in Pali and English. <br><br>
+<strong>+ 6 KN books</strong> - 4 Nikayas + 6 KN books: Udana (Ud), Dhammapada (Dhp), Itivuttaka (Iti), Suttanipāta (Snp), Theragāthā (Thag), Therigatha (Thig)<br><br>
+<strong>+ all KN</strong> - 4 Nikayas + search in Pali in all books of KN<br><br>
 <strong>+ Kd & Pvr</strong> - Vinaya + Khandhaka & Parivara<br><br>
 <strong>TBW</strong> - search in theBuddhasWords.net materials<br><br>
 <strong>SC.net</strong> - search in SuttaCentral.net english translations
@@ -618,14 +620,15 @@ $listdefall  = "All definitions";
 $listnm10 = "Top-10";
 $listnm = "Top-5";
 $listdef = "Definitions";
+$dictLookup = "Dictionary";
 $listwords = "Words";
 $listsml = "Similes";
 $liststd = "All matches";
 
 $tooltipvin = 'Search in Pali Vinaya';
-$radiovin = 'Vinaya';
+$radiovin = 'Vinaya*';
 $tooltipkn = '+ search in Pali Khuddaka Nikaya: dhp, iti, ud, snp, thag, thig';
-$radiokn = '+ KN*';
+$radiokn = '+ 6 KN books';
 $tooltiponl = 'X Y ... Finds texts containing only both and more matches for X, Y ... Without this option only texts where X Y are standing next to each other will be found';
 $checkboxonl = 'Any distance';
 $tooltipnonl = 'Search for X Y ... on any distance within one text. By default only texts containing X Y ... next to each other will be found.';
@@ -655,7 +658,7 @@ $howtosearchquotetooltip = '';
 $howtosearchquote = '<p class="pli-lang">Tāni ce sutte osāriyamānāni vinaye sandassiyamānāni na ceva sutte osaranti, na ca vinaye sandissanti, niṭṭhamettha gantabbaṃ: "addhā, idaṃ na ceva tassa bhagavato vacanaṃ; ' . $randomValue . ' duggahita"nti. Iti hetaṁ, bhikkhave, chaḍḍeyyātha.</p>
 <p>If they (teachings, practices, methods, quotes, stories, anything associated with the Buddha) are not found in the Suttas and are not exhibited in the Vinaya, you should draw the conclusion: ‘Clearly this is not the word of the Blessed One. It has been wrongly understood by that ' . $randomKey . '.’ And so, monks, you should reject it.
 </p>
-<p class="text-end"><a target=_blank href=/sc/?q=dn16&s=Tāni&lang=pli-rus#4.8.6>dn16</a> <a target=_blank href=/sc/?q=an4.180&s=Tāni&lang=pli-rus#2.7>an4.180</a></p>';
+<p class="text-end"><a target=_blank href=/read/?q=dn16&s=Tāni&lang=pli-rus#4.8.6>dn16</a> <a target=_blank href=/read/?q=an4.180&s=Tāni&lang=pli-rus#2.7>an4.180</a></p>';
 $tooltipvindef = 'Search for definitions in Pali Vinaya. What is it, how many and what types. Works only if definition was given in standard phrases. For all-round view studing all related Rules is recommended. See Advanced for details';
 $radiovindef = "DefV";
 $tooltipla = "Add $defaultla following lines after match";
@@ -689,7 +692,7 @@ $regexMemo = '
 </p>          ';
 $titlehowtovideo = 'How-To Video';
 $linkhowtovideo = 'https://youtu.be/Jle0XDs_roc?si=-FJFTpdOwZ4lIdo3';
-$titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with find.dhamma.gift';
+$titledeschowtovideo = 'How to search in Pali Suttas and Vinaya with dhamma.gift';
 
 $carouseltitle = 'Top Interesting Queries';
 
@@ -773,7 +776,7 @@ $fntmessage = 'All-round view on Four Noble Truths<br>
 	
 $mainscrollmodalheader = 'Definition of Dukkha in Suttas';
 
-$mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22&s=dukkha&lang=pli-eng#18.18">dn22</a> <a href="/sc/?q=mn141&s=dukkha&lang=pli-eng#16.1">mn141</a></br>
+$mainscrollmodal = '<p class="">From <a href="/read/?q=dn22&s=dukkha&lang=pli-eng#18.18">dn22</a> <a href="/read/?q=mn141&s=dukkha&lang=pli-eng#16.1">mn141</a></br>
 <h4 class="pli-lang">Katamañca, bhikkhave, dukkhaṁ?</h4>And what is pain?</br></br><p class="pli-lang">Yaṁ kho, bhikkhave, <strong>kāyikaṁ</strong> dukkhaṁ <strong>kāyikaṁ</strong> asātaṁ kāyasamphassajaṁ dukkhaṁ asātaṁ vedayitaṁ,</p><p>Whatever is experienced as  <strong>bodily</strong> pain, <strong>bodily</strong> discomfort, pain or discomfort born of bodily contact, </p></br>
 <p class="pli-lang">idaṁ vuccati, bhikkhave, dukkhaṁ.</p>
 <p>that is called pain.</p>
@@ -788,7 +791,8 @@ $mainscrollmodal = '<p class="">From <a href="/sc/?q=dn22&s=dukkha&lang=pli-eng#
 <p>that is called stress.</p>';
 
         
-$transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Please remember!</b><br><br> Translations, dictionaries and commentaries were not made by the Buddha! Be scrutinizing and critical reading them.<br><br> The most important fundamentals of Buddhas Teaching are better to be learned<strong> on one\'s own from Suttas in Pali. The minimum is: Middle Practice and Four Noble Truths. E.g. few paragraphs from <strong>sn56.11</strong>.';   
+$transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Please remember!</b><br><br> Translations, dictionaries and commentaries were not made by the Buddha! Be scrutinizing and critical reading them.<br><br> 
+The most important fundamentals of the Buddha’s Teaching are best learned<strong> on one’s own from the Suttas in Pali</strong>. A solid starting point is the Middle Practice and the Four Noble Truths, such as a few paragraphs from <strong>sn56.11</strong>.';   
 
 $transwarning = '<i class="fa-solid fa-triangle-exclamation "></i> <b>Please Remember!</b><br><br> Translations, dictionaries and commentaries do not originate directly from the Buddha himself! Approach them with scrutiny and critical thinking.<br><br> To acquire the fundamental teachings of the Buddha, it is highly recommended to engage in the <strong>direct study of Suttas in Pali</strong>. At the very least, concentrate on understanding the Middle Practice and the Four Noble Truths. For instance, consider delving into a dedicated section from <strong>sn56.11</strong>.';
 
@@ -797,7 +801,7 @@ $anamemlearnpali = 'Learn Pali Guides';
 $anamelearnsanskrit = 'Study Sanskrit with James Whelan';
 
 $anamemolds = 'Translations by M. Olds';
-$anameasc = 'Asceticism in Dhamma';
+$anameasc = 'Articles at Dhammadana.org';
 $anameati = 'Accesstoinsight.org patimokkha';
 $anamehist = 'History';
 $anameuseful = 'Useful Links';
@@ -811,14 +815,19 @@ $anamecases = 'Cases';
 $anameconj = 'Conjugations';
 $anametextbook = 'Pali Textbook';
 $anameothermat = 'Other Materials';
-$anamesdiff = 'Sutta Diff';
+$anamesdiff = 'Sutta Difference';
 $anametools = 'Tools';
 
 $aboutheader = 'About Project';
-$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Find.Dhamma.Gift is a Liberation Search Engine for Dhamma and Vinaya, core of the Pali Canon. </br></br>Search results in informative tables with line by line translations from SuttaCentral.net, TheBuddhasWords.net, DPR+ATI, Theravada.ru, and Theravada.su. </p></div>
-<div class="col-lg-4 me-auto"><p class="lead">You can search in Pali, Russian, Thai, and English for meanings, definitions, metaphors, explanations, people, places, and more as described in Suttas and Vinaya.</br></br>Dhamma enthusiasts and contributors, especially developers, are warmly invited to participate.</p></div>';
+$aboutprp = '<div class="col-lg-4 ms-auto"><p class="lead">Dhamma.gift is a Liberation Search Engine for Dhamma and Vinaya, core of the Pali Canon. </br></br>Search results in informative tables with line by line translations and external links. You can search in Pali, English, Russian, Thai for meanings, definitions, metaphors, explanations, people, places, and more as described in the Suttas and Vinaya. </p></div>
+<div class="col-lg-4 me-auto"><p class="lead">
+Software developers, contributors, or anyone willing to help are warmly welcomed.
+<br><br>
+The project does not require financial support, but if you would like to contribute toward domain name expenses or contribute with your help in website development, feel free to reach out using any of the contacts listed in the "Contacts" section below.
+</p></div>';
 $prongh = ' Project on GitHub';
-$premail = ' Send email';
+$premail = ' Dhamma.gift key features';
+$prekeyfeatures = 'keyFeatures.html';
 
 $headerexamples = 'Examples';
 $examplelist = '<li>Definition of the <a href="/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">dukkha</a> in Pali with quotes in English. Query is: <a href="/?q=-la1+Kata.*,+dukkhaṁ[,\\\\?]">-la1 Kata.*, dukkhaṁ[,\\\\?]</a>
@@ -915,15 +924,15 @@ Please, create an issue on github or send an email, if you\'ll find other criter
 
 
 $defaults = '<br><div class="text-start">
-<h5>Reading Interface</h5>
+<h5>Choose defauld Reading Mode</h5>
 <input class="form-check-input mt-2" name="reader" type="radio" id="stRadio" value="st"> <strong>Standard</strong> - Two languages - Pali, English 
-<a href="/ru/sc/?q=sn56.11">demo</a>
+<a href="/r/?q=sn56.11">demo</a>
 <br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Multilang</strong> - Three languages - Pali, Russian, English <a href="/sc/ml.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Devanagari"</strong> - Devanagari or Thai script and Romanized Pali <a href="/sc/d.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Memorization Trainer</strong> - Text reduced to the first letters of each word <a href="/sc/memorize.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Reverse</strong> - Text from bottom to top, right to left (words unchanged) <a href="/sc/rv.html?q=sn56.11">demo</a><br>
-<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Full Reverse</strong> - Same as above (words left to right) <a href="/sc/fr.html?q=sn56.11">demo</a><br>  
+<input class="form-check-input mt-2" name="reader" type="radio" id="mlRadio" value="ml"> <strong>Multilang</strong> - Three languages - Pali, Russian, English <a href="/read/ml.html?q=sn56.11">demo</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="dRadio" value="d"> <strong>"Devanagari"</strong> - Devanagari or Thai script and Romanized Pali <a href="/d/?q=sn56.11">demo</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="memRadio" value="mem"> <strong>Memorization Trainer</strong> - Text reduced to the first letters of each word <a href="/memorize/?q=sn56.11">demo</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="rvRadio" value="rv"> <strong>Reverse</strong> - Text from bottom to top, right to left (words unchanged) <a href="/rev/?q=sn56.11">demo</a><br>
+<input class="form-check-input mt-2" name="reader" type="radio" id="frRadio" value="fr"> <strong>Full Reverse</strong> - Same as above (words left to right) <a href="/frev/?q=sn56.11">demo</a><br>  
 </div>';
 
 $closemodal = 'Close Window';
@@ -1005,7 +1014,7 @@ $head5suttadiff = 'Compare Two Suttas';
 $psuttadiff = 'Finds difference between two texts.';
 $head5listdiff = 'Compare Two Lists of Suttas'; 
 $plistdiff = 'Finds difference between two lists of suttas in this format: sn56.22 dn22 sn12.2'; 
-$head5makelist = 'Create CSV List';
+$head5makelist = 'Line to List';
 $pmakelist = 'Create Lists of phenomena, teachings, translations etc'; 
 
 
@@ -1016,7 +1025,7 @@ $smscvoice = 'for suttacentral.net texts';
 
 $title404 = '404 Error';
 $p404 = ' Page not found. But';
-$link404 = '/sc/?q=sn38.4';
+$link404 = '/read/?q=sn38.4';
 $hreftext404 = 'Go Home';
 
 $dpddesc = 'Digital Pali Dictionary Online';
@@ -1035,7 +1044,7 @@ $lang = "th";
 $htmllang = "th";
 $mainpage = '/th';
 $mainpagenoslash = '/th';
-$mainscpage = $mainpage . '/sc';
+$mainscpage = $mainpage . '/read';
 $mainreadlink = '/th/read.php';
 
 }

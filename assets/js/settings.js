@@ -344,7 +344,6 @@ function checkAndUpdateUrl() {
 
 // end of default reader part
 
-
 // open current url in demo mode
 
 // Функция для извлечения параметров из URL

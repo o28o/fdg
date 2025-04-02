@@ -72,6 +72,25 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Обработчик для кнопки смены темы
+const themeButton = document.getElementById("theme-button");
+if (themeButton) {
+  themeButton.addEventListener('click', function() {
+    // Ждем небольшой задержки, чтобы тема успела измениться
+    setTimeout(() => {
+      const arrowImg = document.getElementById('arrowImg');
+      if (arrowImg) {
+        // Проверяем текущую тему
+        const isDark = document.documentElement.classList.contains('dark') || 
+                       localStorage.theme === 'dark' ||
+                       (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        
+        // Меняем изображение стрелки
+        arrowImg.src = isDark ? '/assets/svg/arrow-up.svg' : '/assets/svg/arrow-up-dark.svg';
+      }
+    }, 50); // Небольшая задержка в 50мс
+  });
+}
 
 //scroll by s params
 document.addEventListener("DOMContentLoaded", function() {

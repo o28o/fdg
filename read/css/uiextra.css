@@ -187,6 +187,8 @@ margin-left: 6px;
       position: fixed;
       bottom: 8%;
       left: 50%;
+  /*  outline: 2px solid white; */
+    box-shadow: 0 0 5px black;
       background: #136857;
       color: white;
       padding: 12px 20px;

@@ -22076,6 +22076,40 @@ $(function () {
 
 </script>
 <script src="/assets/js/openFdg.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+const resources = location.pathname.startsWith('/ru/') 
+    ? [
+        '/assets/js/standalone-dpd/ru/dpd_i2h.js',
+        '/assets/js/standalone-dpd/ru/dpd_ebts.js',
+        '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
+      ]
+    : [
+        '/assets/js/standalone-dpd/dpd_i2h.js',
+        '/assets/js/standalone-dpd/dpd_ebts.js',
+        '/assets/js/standalone-dpd/dpd_deconstructor.js'
+      ];
+
+        resources.forEach(url => {
+            // Вариант 1: Prefetch через Link header
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = url;
+            link.as = 'script';
+            document.head.appendChild(link);
+
+            // Вариант 2: Фоновый fetch (для старых браузеров)
+            fetch(url, {
+                method: 'GET',
+                credentials: 'same-origin',
+                cache: 'force-cache'
+            });
+        });
+        console.log('fetching dict');
+    }, 2000);
+});
+</script>
 <script src="/assets/js/paliLookup.js"></script>
 <script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
     <script>

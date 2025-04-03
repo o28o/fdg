@@ -1,6 +1,6 @@
 import json
 from telegram import Update
-from telegram.ext import Application, CommandHandler, CallbackContext
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
 # Загружаем токен из config.json
 with open("config.json", "r") as config_file:
@@ -44,19 +44,37 @@ async def dict_search(update: Update, context: CallbackContext):
         return
 
     query = "+".join(context.args)
-    url = f"https://dict.dhamma.gift/ru/search_html?q={query}"
+    url = f"https://dpdict.net/ru/search_html?q={query}"
     
     await update.message.reply_text(f"Словарь: {query}\n[Результаты]({url})", parse_mode="Markdown")
 
+async def handle_message(update: Update, context: CallbackContext):
+    text = update.message.text.strip()
+    
+    if text.endswith('?'):
+        # Если текст заканчивается на вопросительный знак, выполняем поиск через /dict
+        query = text[:-1].strip()  # Убираем вопросительный знак
+        context.args = query.split()
+        await dict_search(update, context)
+    else:
+        # Если это просто текст, выполняем поиск через /find
+        context.args = text.split()
+        await find(update, context)
+
 app = Application.builder().token(TOKEN).build()
 
+# Добавляем обработчики команд
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("find", find))
 app.add_handler(CommandHandler("read", read))
 app.add_handler(CommandHandler("dict", dict_search))
 
+# Обработчик для всех текстовых сообщений (не команд)
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+
 print("Бот запущен...")
 app.run_polling()
+
 
 
 

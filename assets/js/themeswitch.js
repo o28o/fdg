@@ -138,7 +138,40 @@ function toggleThemeManually() {
   
 }
 
+// Функция для обновления выпадающих меню
+function updateDropdownMenus() {
+  const isDarkTheme = document.documentElement.getAttribute('data-bs-theme') === 'dark' || 
+                     document.body.classList.contains('dark');
+  
+  document.querySelectorAll('.dropdown-menu').forEach(menu => {
+    if (isDarkTheme) {
+      menu.classList.add('dropdown-menu-dark');
+    } else {
+      menu.classList.remove('dropdown-menu-dark');
+    }
+  });
+}
+
+
+updateDropdownMenus();
 toggleThemeManually();
 
 var themeValue = localStorage.theme;
 console.log("Значение theme:", themeValue);
+
+
+
+// Создаем наблюдатель за изменениями атрибута data-bs-theme
+const themeObserver = new MutationObserver((mutations) => {
+  mutations.forEach(mutation => {
+    if (mutation.attributeName === 'data-bs-theme') {
+      updateDropdownMenus();
+    }
+  });
+});
+
+// Начинаем наблюдение за <html> элементом
+themeObserver.observe(document.documentElement, {
+  attributes: true,
+  attributeFilter: ['data-bs-theme']
+});

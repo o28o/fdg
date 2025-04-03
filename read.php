@@ -308,6 +308,11 @@ $(document).ready(function() {
 </div>
 
   <?php echo $regexlink;?> 
+  
+        <!-- Dictionary OnClick Popup -->
+        <a alt="onclick popup dictionary" class="common-size-icon4 toggle-dict-btn text-decoration-none text-black">
+            <img src="/assets/svg/comment.svg" class="dictIcon"></img>
+        </a>  
     <?php echo $defaults;?> 
     <?php echo $defaultsJS;?> 
     <script src="/assets/js/setDefaultMode.js"></script>

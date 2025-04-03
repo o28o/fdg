@@ -66,9 +66,9 @@ echo '<!--
     
                 <li>
          <div class="dropdown-item ">Patimokkha 
-         <a class="text-black" target=""  href="' . $linkati . '">ATI</a>
-       <a class="text-black" target="" href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
-          <a class="text-black" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
+         <a class="text-reset" target=""  href="' . $linkati . '">ATI</a>
+       <a class="text-reset" target="" href="/assets/dhammatalks.org/vinaya/bmc/Section0000.html">BMC</a>
+          <a class="text-reset" target="" href="/assets/materials/bupm_trn_by_nanatusita.pdf">Nanatusita</a>  
        </div>
          </li>
     
@@ -81,10 +81,10 @@ echo '<!--
          
                 <li>
          <div class="dropdown-item ">
-         <a class="text-black" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
-                <a class="text-black" target="" href="https://suttacentral.net/pitaka/vinaya?lang=ru">Виная</a>
-         <a class="text-black" target="" href="https://www.sc-voice.net/">Voice</a>
-        <a class="text-black" target="" href="' . $linksclegacy . '">Legacy</a>
+         <a class="text-reset" target="" href="https://suttacentral.net/pitaka/sutta?lang=en" >SuttaCentral</a> 
+                <a class="text-reset" target="" href="https://suttacentral.net/pitaka/vinaya?lang=ru">Виная</a>
+         <a class="text-reset" target="" href="https://www.sc-voice.net/">Voice</a>
+        <a class="text-reset" target="" href="' . $linksclegacy . '">Legacy</a>
          </div>
          </li>
         <li><a class="dropdown-item" target="_blank" href="' . $linktbwOnMain . '">
@@ -95,16 +95,16 @@ echo '<!--
    
             <li>
          <div class="dropdown-item ">Tipitaka 
-         <a class="text-black" target=""  href="https://tipitaka.app">CST</a>
-       <a class="text-black" target="" href="https://84000.org/">Thai</a>
-          <a class="text-black" target="" href="https://tipitaka.org/">VRI</a>  
+         <a class="text-reset" target=""  href="https://tipitaka.app">CST</a>
+       <a class="text-reset" target="" href="https://84000.org/">Thai</a>
+          <a class="text-reset" target="" href="https://tipitaka.org/">VRI</a>  
        </div>
          </li>
 
             <li>
          <div class="dropdown-item ">Tipitaka Pali Reader 
-         <a class="text-black" target=""  href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Android</a> 
-         <a class="text-black" target="" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">IOS</a>   </div>
+         <a class="text-reset" target=""  href="https://play.google.com/store/apps/details?id=com.paauk.tipitakapalireader">Android</a> 
+         <a class="text-reset" target="" href="https://apps.apple.com/us/app/tipitaka-pali-reader/id1541426949">IOS</a>   </div>
          </li>
     
 
@@ -174,14 +174,14 @@ echo '<!--
    
                          <li>
 <div class="dropdown-item ">
-         <i class="' . $iconimportant . '"></i> Падежи <a class="text-black" href="' . $linkcasesru . '"> таблица</a>
-         <a class="text-black" target=""  href="/assets/materials/pali_declensions_ru.pdf">примеры</a> 
+         <i class="' . $iconimportant . '"></i> Падежи <a class="text-reset" href="' . $linkcasesru . '"> таблица</a>
+         <a class="text-reset" target=""  href="/assets/materials/pali_declensions_ru.pdf">примеры</a> 
        </div>
          </li>     
                          <li>
 <div class="dropdown-item ">
-         <i class="' . $iconimportant . '"></i> Спряжения          <a class="text-black" target=""  href="/assets/materials/pali_conjugations_ru.pdf"> рус</a> 
-         <a class="text-black" href="' . $linkconj . '"> англ</a>
+         <i class="' . $iconimportant . '"></i> Спряжения          <a class="text-reset" target=""  href="/assets/materials/pali_conjugations_ru.pdf"> рус</a> 
+         <a class="text-reset" href="' . $linkconj . '"> англ</a>
        </div>
          </li>        
   
@@ -198,9 +198,9 @@ echo '<!--
    
                <li>
          <div class="dropdown-item ">Материалы
-         <a class="text-black" target=""  href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Gdrive</a>
-                   <a class="text-black" target="" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net</a>
-        <a class="text-black" target="" href="https://sasanarakkha.github.io/study-tools/">SBS</a>  
+         <a class="text-reset" target=""  href="https://drive.google.com/drive/folders/1UU-y5idRNpfcVTripRUtyTVcOgdwjMGN">Gdrive</a>
+                   <a class="text-reset" target="" href="https://www.ancient-buddhist-texts.net/Textual-Studies/index.htm">ABT.net</a>
+        <a class="text-reset" target="" href="https://sasanarakkha.github.io/study-tools/">SBS</a>  
        </div>
          </li>     
   
@@ -211,10 +211,10 @@ echo '<!--
        
                       <li>
 <div class="dropdown-item ">
-         <i class="' . $iconimportant . '"></i><a class="text-black" href="/ru/assets/memo.html"> Мнемотехника</a>
-         <a class="text-black" target=""  href="/memorize/?q=sn56.11">sn56.11</a> 
-         <a class="text-black" target=""  href="/memorize/?q=dn22">dn22</a> 
-         <a class="text-black" target=""  href="/memorize/?q=sn12.2">sn12.2</a>
+         <i class="' . $iconimportant . '"></i><a class="text-reset" href="/ru/assets/memo.html"> Мнемотехника</a>
+         <a class="text-reset" target=""  href="/memorize/?q=sn56.11">sn56.11</a> 
+         <a class="text-reset" target=""  href="/memorize/?q=dn22">dn22</a> 
+         <a class="text-reset" target=""  href="/memorize/?q=sn12.2">sn12.2</a>
        </div>
          </li>     
          
@@ -223,8 +223,8 @@ echo '<!--
        
                   <li>
          <div class="dropdown-item ">Тренажёры: 
-         <a class="text-black" target=""  href="/ru/assets/grammar/nouns.html">Грамматика</a>,         
-                   <a class="text-black" target="" href="/ru/assets/rr.html">Патимоккха</a>
+         <a class="text-reset" target=""  href="/ru/assets/grammar/nouns.html">Грамматика</a>,         
+                   <a class="text-reset" target="" href="/ru/assets/rr.html">Патимоккха</a>
        </div>
          </li>     
       
@@ -249,25 +249,25 @@ echo '<!--
   
          <li>
          <div class="dropdown-item ">
-          <a class="text-black" target="" onclick="localStorage.setItem(\'siteLanguage\', \'th\');" href="/th/?q=">Fdg</a> 
-         <a class="text-black" target=""  href="/old.php">old</a> 
-         <a class="text-black" target="" href="/new/">new</a> 
-                  <a class="text-black" target="" href="' . $readerPage . '"> индекс</a>   
-            <a class="text-black" target="" href="/ru/assets/texts/sutta.php">sutta</a>        
-      <a class="text-black" target="" href="/ru/pm.php">bupm</a>        
-      <a class="text-black" target="" href="/ru/bipm.php">bipm</a> 
+          <a class="text-reset" target="" onclick="localStorage.setItem(\'siteLanguage\', \'th\');" href="/th/?q=">Fdg</a> 
+         <a class="text-reset" target=""  href="/old.php">old</a> 
+         <a class="text-reset" target="" href="/new/">new</a> 
+                  <a class="text-reset" target="" href="' . $readerPage . '"> индекс</a>   
+            <a class="text-reset" target="" href="/ru/assets/texts/sutta.php">sutta</a>        
+      <a class="text-reset" target="" href="/ru/pm.php">bupm</a>        
+      <a class="text-reset" target="" href="/ru/bipm.php">bipm</a> 
 
          </div>
          </li>
 
          <li>
          <div class="dropdown-item ">    
-  <a class="text-black" href="/san/d/mg.php" >Prātimokṣa</a>
-    <a class="text-black" href="/san/sarv.php" >sarv</a>
-    <a class="text-black" href="/san/mg.php" >mg</a>
-    <a class="text-black" href="/san/lo.php" >lo</a>
-    <a class="text-black" href="/san/mu2.php" >mu2</a>
-    <a class="text-black" href="/san/mu3.php" >mu3</a>
+  <a class="text-reset" href="/san/d/mg.php" >Prātimokṣa</a>
+    <a class="text-reset" href="/san/sarv.php" >sarv</a>
+    <a class="text-reset" href="/san/mg.php" >mg</a>
+    <a class="text-reset" href="/san/lo.php" >lo</a>
+    <a class="text-reset" href="/san/mu2.php" >mu2</a>
+    <a class="text-reset" href="/san/mu3.php" >mu3</a>
          </div>
          </li>
 
@@ -277,9 +277,9 @@ echo '<!--
 
       <li>
          <div class="dropdown-item ">
-         <a class="text-black" target="_blank" href="https://chatgpt.com">ChatGPT</a>
-         <a class="text-black" target="_blank" href="https://deepseek.com">DeepSeek</a>
-      <a class="text-black" target="_blank" href="https://norbu-ai.org/">Norbu AI</a>
+         <a class="text-reset" target="_blank" href="https://chatgpt.com">ChatGPT</a>
+         <a class="text-reset" target="_blank" href="https://deepseek.com">DeepSeek</a>
+      <a class="text-reset" target="_blank" href="https://norbu-ai.org/">Norbu AI</a>
   
          </div>
          </li>
@@ -287,17 +287,17 @@ echo '<!--
 
               <li>
          <div class="dropdown-item ">PTS Конвертер
-         <a class="text-black" target=""  href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">#1</a>
-                   <a class="text-black" target="" href="https://benmneb.github.io/pts-converter/">#2</a>  
+         <a class="text-reset" target=""  href="https://palistudies.blogspot.com/2020/02/sutta-number-to-pts-reference-converter.html">#1</a>
+                   <a class="text-reset" target="" href="https://benmneb.github.io/pts-converter/">#2</a>  
        </div>
          </li>   
      
      
               <li>
          <div class="dropdown-item "> 
-         <a class="text-black" target=""  href="https://readingfaithfully.org/">ReadingFaithfully.org</a>
-                   <a class="text-black" target="" href="/assets/br/">Кратко</a>  
-       <a class="text-black" target="" href="https://index.readingfaithfully.org/">Темы</a>
+         <a class="text-reset" target=""  href="https://readingfaithfully.org/">ReadingFaithfully.org</a>
+                   <a class="text-reset" target="" href="/assets/br/">Кратко</a>  
+       <a class="text-reset" target="" href="https://index.readingfaithfully.org/">Темы</a>
        </div>
          </li>   
      
@@ -305,9 +305,9 @@ echo '<!--
 
                <li>
          <div class="dropdown-item ">
-                      <i class="' . $iconimportant . '"></i>        <a class="text-black" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a>
-         <a class="text-black" target=""  href="https://digitalpalidictionary.github.io/rus/">Оффлайн</a>
-       <a class="text-black" target="" href="https://o28o.github.io/plugin/demo-ru-ml.html?s=dukkh">Веб-модуль</a>     
+                      <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a>
+         <a class="text-reset" target=""  href="https://digitalpalidictionary.github.io/rus/">Оффлайн</a>
+       <a class="text-reset" target="" href="https://o28o.github.io/plugin/demo-ru-ml.html?s=dukkh">Веб-модуль</a>     
        </div>
          </li>   
   
@@ -319,8 +319,8 @@ echo '<!--
   
       <li>
          <div class="dropdown-item "> Англ-Санскр Словарь
-         <a class="text-black" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
-     <a class="text-black" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
+         <a class="text-reset" target=""  href="https://sanskritdictionary.com/?iencoding=iast&q=&lang=sans&action=Search">Skrdict</a>
+     <a class="text-reset" target="" href="https://www.learnsanskrit.cc/translate?search=&dir=au">Learnskr</a>  
        </div>
          </li>    
   

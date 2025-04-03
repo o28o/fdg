@@ -9,7 +9,10 @@ with open("config.json", "r") as config_file:
 
 async def start(update: Update, context: CallbackContext):
     await update.message.reply_text(
-        "Добро пожаловать! Вот доступные команды:\n"
+        "Добро пожаловать! Вы можете писать боту напрямую:\n"
+        "Для поиска или чтения — текст или фразу или номер, как sn56.11\n"
+        "для словаря — слово? (с вопросительным знаком)\n\n"
+        "Также доступны команды:\n"
         "/find - Поиск на dhamma.gift\n"
         "/read - Для чтения материалов\n"
         "/dict - Поиск в словаре на dict.dhamma.gift\n\n"

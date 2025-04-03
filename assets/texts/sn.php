@@ -5,7 +5,7 @@ include_once('config/config.php');
 include_once('config/translate.php');
 //echo basename($_SERVER['REQUEST_URI']);
 $mainpage = '/ru';
-$readerPage = $mainpage . '/sc';
+$readerPage =  '/r';
 ?>
 <html lang="<?php echo $htmllang;?>">
 <head>

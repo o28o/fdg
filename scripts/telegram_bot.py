@@ -7,7 +7,7 @@ with open("config.json", "r") as config_file:
     config = json.load(config_file)
     TOKEN = config.get("TOKEN", "")
 
-async def start(update: Update, context: CallbackContext):
+async def start(update: Update, context: CallbackContext): 
     await update.message.reply_text(
         "Добро пожаловать! Вы можете писать боту напрямую:\n"
         "Для поиска или чтения — текст или фразу или номер, как sn56.11\n"

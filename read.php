@@ -72,10 +72,9 @@ if (isset($_GET['ml']) && $_GET['ml'] === 'on') {
 
 <!--  Core theme CSS (includes Bootstrap)-->
 <link href="/assets/css/jquery-ui.min.css" rel="stylesheet"/>
-<!-- 
+ 
 <link href="/assets/css/styles.css" rel="stylesheet" />
 
--->
 <script src="/assets/js/loadCssJsMain.js"></script>
 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />

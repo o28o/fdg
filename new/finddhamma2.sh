@@ -1409,8 +1409,12 @@ textsqnty=`echo $textlist | wc -w`
 
 pattern="`echo $pattern | sed 's/\[ёе\]/е/g'`"
 pattern=$userpattern
+if [[ "$@" == *"-oru"* ]]
+then
+title="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty текстов и $matchqnty совпадений в $fortitle $language"
+else 
 title="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty texts and $matchqnty matches in $fortitle $language"
-
+fi
 if [[ "$@" == *"-nm"* ]]; then
 title="`echo "$pattern" | sed 's/^[[:lower:]]/\U&/'`${addtotitleifexclude} $textsqnty texts and $matchqnty matches in $fortitle $language Top-$numbersmatches"
 fi

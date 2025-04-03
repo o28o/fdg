@@ -98,9 +98,10 @@ if (siteLanguage === 'ru' && currentPath !== '/ru/') {
 
 -->
 <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
-<!-- 
+<!-- -->
+
 <link href="/assets/css/styles.css" rel="stylesheet" />
--->
+
 
 <link href="/assets/css/extrastyles.css" rel="stylesheet" />
 <script src="/assets/js/loadCssJsMain.js"></script>

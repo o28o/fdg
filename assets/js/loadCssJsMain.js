@@ -12,7 +12,7 @@
         // Загрузка CSS
         const css = document.createElement("link");
         css.rel = "stylesheet";
-        css.href = "/assets/css/styles.css"; // Укажите путь к вашему основному CSS
+        css.href = "/assets/css/extrastyles.css"; // Укажите путь к вашему основному CSS
         css.onload = function() { 
             loadedCSS = true; 
             checkAndShowPage();

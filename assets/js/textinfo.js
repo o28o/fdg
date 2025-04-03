@@ -2566,7 +2566,7 @@
 "sn36.31":{"pi":"Nirāmisasutta ","en":"Not of the Flesh ","mtph":"","ru":"Не-плотское"},
 "sn37.1":{"pi":"Mātugāmasutta ","en":"A Female ","mtph":"","ru":"Женщина"},
 "sn37.2":{"pi":"Purisasutta ","en":"A Man ","mtph":"","ru":"Мужчина"},
-"sn37.3":{"pi":"Āveṇikadukkhasutta ","en":"Particular Suffering ","mtph":"","ru":"Авеникадуккха"},
+"sn37.3":{"pi":"Āveṇikadukkhasutta ","en":"Particular Suffering ","mtph":"","ru":"Эксклюзивная Боль"},
 "sn37.4":{"pi":"Tīhidhammehisutta ","en":"Three Qualities ","mtph":"","ru":"Три качества"},
 "sn37.5":{"pi":"Kodhanasutta ","en":"Irritable ","mtph":"","ru":"Раздражительна "},
 "sn37.6":{"pi":"Upanāhīsutta ","en":"Hostility ","mtph":"","ru":"Злонамеренная"},

@@ -87,7 +87,7 @@ if (savedDict && [...dictSelect.options].some(opt => opt.value === savedDict)) {
 } else {
   
 if (window.location.href.includes('/r/') || window.location.href.includes('/ml/') || window.location.href.includes('/ru/')) {
-dictSelect.value = 'dpdCompactRu'; // Значение по умолчанию standalonebwru
+dictSelect.value = 'standalonebwru'; // Значение по умолчанию standalonebwru
 //  localStorage.setItem('selectedDict', 'dpdCompactRu');
 } else if (window.location.href.includes('/d/')) {
 dictSelect.value = 'dpdFull'; // Значение по умолчанию standalonebwru

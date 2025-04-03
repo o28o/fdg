@@ -8,7 +8,7 @@ if (savedDict) {
 } else if (window.location.pathname.includes('/d/')) {
     savedDict = "dpdFull".toLowerCase();
 } else if (window.location.pathname.includes('/r/') || window.location.pathname.includes('/ml/') || window.location.pathname.includes('/ru/')) {
-    savedDict = "dpdCompactRu".toLowerCase();
+    savedDict = "standalonebwru".toLowerCase();
 } else {
     savedDict = "standalonebw".toLowerCase();
 }
@@ -64,17 +64,16 @@ if (savedDict.includes("dpd")) {
 function loadStandaloneScripts(lang = 'en') {
     return new Promise((resolve, reject) => {
         // Определяем пути в зависимости от языка
-        const scripts = lang === 'ru' 
-            ? [
-                '/assets/js/standalone-dpd/ru/dpd_i2h.js',
-                '/assets/js/standalone-dpd/ru/dpd_ebts.js',
-                '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
-              ]
-            : [
-                '/assets/js/standalone-dpd/dpd_i2h.js',
-                '/assets/js/standalone-dpd/dpd_ebts.js',
-                '/assets/js/standalone-dpd/dpd_deconstructor.js'
-              ];
+const commonScripts = [
+    '/assets/js/standalone-dpd/dpd_i2h.js',
+    '/assets/js/standalone-dpd/dpd_deconstructor.js'
+];
+
+const langSpecific = lang === 'ru' 
+    ? '/assets/js/standalone-dpd/ru/dpd_ebts.js'
+    : '/assets/js/standalone-dpd/dpd_ebts.js';
+
+const scripts = [...commonScripts, langSpecific];
 
         // Проверяем, какие скрипты уже загружены
         const scriptsToLoad = scripts.filter(src => {

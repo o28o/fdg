@@ -27,7 +27,7 @@ echo '
 </figure>
 </a>';
 } /*else {
- echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+ echo ' <a class="text-decoration-none mx-1" href="' . $readerPage . '">
 <figure class="figure text-decoration-none">
     <i class="menu-icon fa-solid fa-bolt"></i>
 <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Index</figcaption>
@@ -44,7 +44,7 @@ echo '<!--
 </a>
   <ul class="dropdown-menu" aria-labelledby="MenuRussian">
     <li><a class="dropdown-item" target="" href="' . $mainreadlink . '">Table of Content</a></li>
-    <li><a class="dropdown-item" target="" href="' . $mainscpage . '">SC Light</a></li>
+    <li><a class="dropdown-item" target="" href="' . $readerPage . '">SC Light</a></li>
   </ul>
 -->
 <a class="dropdown text-decoration-none mx-1 d-md-inline-block" id="MenuEnglish" data-bs-toggle="dropdown" aria-expanded="false" href="#">
@@ -231,7 +231,7 @@ echo '<!--
           <a class="text-black" target="" onclick="localStorage.setItem(\'siteLanguage\', \'th\');" href="/th/?q=">Fdg</a> 
           <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
-                  <a class="text-black" target="" href="' . $mainscpage . '">index</a>  
+                  <a class="text-black" target="" href="' . $readerPage . '">index</a>  
 <a class="text-black" target="" href="/assets/texts/sutta.php">sutta</a>                       
       <a class="text-black" target="" href="/pm.php">bupm</a>        
       <a class="text-black" target="" href="/bipm.php">bipm</a> 

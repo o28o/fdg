@@ -7,7 +7,7 @@ $installpwalong = "Установить FDG";
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainpagenoslash = '/ru';
-$mainscpage = '/r';
+$readerPage = '/r';
 $mainreadlink = '/ru/read.php';
 $searchcaption = 'Поиск';
 $clearaption = 'Очистить';
@@ -553,7 +553,7 @@ $installpwalong = "Install FDG";
 $htmllang = "en";
 $mainpage = '/';
 $mainpagenoslash = '';
-$mainscpage = '/read';
+$readerPage = '/read';
 $mainreadlink = '/read.php';
 $searchcaption = 'Search';
 $clearaption = 'Clear';
@@ -1044,7 +1044,7 @@ $lang = "th";
 $htmllang = "th";
 $mainpage = '/th';
 $mainpagenoslash = '/th';
-$mainscpage = $mainpage . '/read';
+$readerPage = $mainpage . '/read';
 $mainreadlink = '/th/read.php';
 
 }

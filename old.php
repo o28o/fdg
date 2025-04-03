@@ -813,7 +813,7 @@ foreach ($slides as $index => $slide) {
                        
 
  <div class="list-group">
-  <a target="" href="<?php echo $mainscpage; ?>" class="list-group-item list-group-item-action active" aria-current="true">
+  <a target="" href="<?php echo $readerPage; ?>" class="list-group-item list-group-item-action active" aria-current="true">
     <div class="d-flex w-100 justify-content-between text-left">
       <h5 class="mb-1">Dhamma.gift Read</h5>
       <small><?php echo $detailonandoffline;?></small>

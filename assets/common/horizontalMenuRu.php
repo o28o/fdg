@@ -30,7 +30,7 @@ echo '
 </figure>
 </a>';
 } /* else {
- echo ' <a class="text-decoration-none mx-1" href="' . $mainscpage . '">
+ echo ' <a class="text-decoration-none mx-1" href="' . $readerPage . '">
 <figure class="figure text-decoration-none">
   <i class="menu-icon icon-item fa-solid fa-bolt"></i>
   <figcaption class="horiz-menu-item figure-caption text-center">Pāḷi Индекс</figcaption>
@@ -48,7 +48,7 @@ echo '<!--
 </a>
   <ul class="dropdown-menu" aria-labelledby="MenuRussian">
     <li><a class="dropdown-item" target="" href="' . $mainreadlink . '">Содержание</a></li>
-    <li><a class="dropdown-item" target="" href="' . $mainscpage . '">SC Light</a></li>
+    <li><a class="dropdown-item" target="" href="' . $readerPage . '">SC Light</a></li>
   </ul>
 -->
 
@@ -252,7 +252,7 @@ echo '<!--
           <a class="text-black" target="" onclick="localStorage.setItem(\'siteLanguage\', \'th\');" href="/th/?q=">Fdg</a> 
          <a class="text-black" target=""  href="/old.php">old</a> 
          <a class="text-black" target="" href="/new/">new</a> 
-                  <a class="text-black" target="" href="' . $mainscpage . '"> индекс</a>   
+                  <a class="text-black" target="" href="' . $readerPage . '"> индекс</a>   
             <a class="text-black" target="" href="/ru/assets/texts/sutta.php">sutta</a>        
       <a class="text-black" target="" href="/ru/pm.php">bupm</a>        
       <a class="text-black" target="" href="/ru/bipm.php">bipm</a> 

@@ -13,7 +13,7 @@ error_reporting(E_ERROR | E_PARSE);
 include_once('../../config/config.php');
 include_once('../../config/translate.php');
 include '../../scripts/opentexts.php';
-//echo $mainscpage;
+//echo $readerPage;
 ?>
 <html lang="en">
 <head>

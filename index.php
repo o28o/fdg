@@ -1339,17 +1339,16 @@ $(function () {
 
 const isRuPath = /^\/(ru|r)\//.test(location.pathname);
 
-const resources = isRuPath
-  ? [
-      '/assets/js/standalone-dpd/ru/dpd_i2h.js',
-      '/assets/js/standalone-dpd/ru/dpd_ebts.js',
-      '/assets/js/standalone-dpd/ru/dpd_deconstructor.js'
-    ]
-  : [
-      '/assets/js/standalone-dpd/dpd_i2h.js',
-      '/assets/js/standalone-dpd/dpd_ebts.js',
-      '/assets/js/standalone-dpd/dpd_deconstructor.js'
-    ];
+const commonResources = [
+    '/assets/js/standalone-dpd/dpd_i2h.js',
+    '/assets/js/standalone-dpd/dpd_deconstructor.js'
+];
+
+const langSpecific = isRuPath
+    ? '/assets/js/standalone-dpd/ru/dpd_ebts.js'
+    : '/assets/js/standalone-dpd/dpd_ebts.js';
+
+const resources = [...commonResources, langSpecific];
 
         resources.forEach(url => {
             // Вариант 1: Prefetch через Link header

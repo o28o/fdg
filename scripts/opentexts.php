@@ -71,23 +71,23 @@ if (isset($_GET['reader'])) {
     switch ($reader) {
         case 'ml':
           $base = "/";
-            $readerlang = $base . "/ml/";
+            $readerlang = $base . "ml/";
             break;
         case 'rv':
           $base = "/";
-            $readerlang = $base . "read/rv.html";
+            $readerlang = $base . "rev/";
             break;
         case 'd':
           $base = "/";
-            $readerlang = $base . "read/d.html";
+            $readerlang = $base . "d/";
             break;
         case 'mem':
                     $base = "/";
-            $readerlang = $base . "read/memorize.html";
+            $readerlang = $base . "memorize/";
             break;
         case 'fr':
                     $base = "/";
-            $readerlang = $base . "read/fr.html";
+            $readerlang = $base . "frev/";
             break;
         default:
             // Значение по умолчанию, если ни один вариант не подошел

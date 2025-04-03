@@ -42,7 +42,7 @@ async def dict_search(update: Update, context: CallbackContext):
         return
     
     query = "+".join(context.args)
-    url = f"https://dict.dhamma.gift/ru?q={query}"
+    url = f"https://dict.dhamma.gift/ru/search_html?q={query}"
     
     await update.message.reply_text(f"Словарь: {query}\n[Результаты]({url})", parse_mode="Markdown")
 

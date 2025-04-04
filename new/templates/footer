@@ -312,6 +312,7 @@ checkboxes.forEach(function(checkbox) {
 
 
 </script>
+        <script src="/assets/js/paliLookup.js"></script>
                 
 </body>
 </html>

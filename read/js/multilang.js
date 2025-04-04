@@ -231,13 +231,26 @@ const rootResponse = fetch(rootpath)
       });
   });
 
- const translationResponse = fetch(trnpath).then(response => response.json())    .
-  catch(error => {
- console.log('note:no translation found');   
-// console.log(varpath); 
-return {};
-  } 
-    );
+   async function fetchTranslation() {
+  const paths = [rustrnpath, trnpath];
+
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return await response.json();
+      }
+      console.log(`note: no translation found at ${path}`);
+    } catch (error) {
+      console.log(`note: error fetching ${path}`);
+    }
+  }
+
+  console.log('note: no translation found in any path');
+  return {}; // Если все пути недоступны
+}
+
+const translationResponse = fetchTranslation(); 
 
  const engtranslationResponse = fetch(engtrnpath).then(response => response.json())    .
   catch(error => {

@@ -9,12 +9,21 @@ $base_url = "$scheme://$host$base_path";
 $start_url = $_SERVER['HTTP_REFERER'] ?? $base_url;
 $start_url = filter_var($start_url, FILTER_SANITIZE_URL);
 
+// Устанавливаем короткое имя и имя в зависимости от хоста
+if (preg_match('/^(localhost|127\.\d+\.\d+\.\d+)$/', parse_url($base_url, PHP_URL_HOST))) {
+    $short_name = "DG Offline";
+    $name = "DG Offline";
+} else {
+    $short_name = "Dhamma.Gift";
+    $name = "Dhamma.gift Search. Read. Multi-Tool. ";
+}
+
 // Устанавливаем заголовок JSON
 header('Content-Type: application/json');
 
 echo json_encode([
-    "short_name" => "Dhamma.Gift",
-    "name" => "Dhamma.gift Search and Read",
+    "short_name" => $short_name,
+    "name" => $name,
     "icons" => [
         [
             "src" => "/assets/img/icon-192x192.png",
@@ -27,8 +36,8 @@ echo json_encode([
             "sizes" => "512x512"
         ]
     ],
-    "start_url" => "/",
-    "display" => "minimal-ui",
+"start_url" => $start_url,   
+"display" => "minimal-ui",
     "background_color" => "#ffffff",
     "theme_color" => "#000000",
 

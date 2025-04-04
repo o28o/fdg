@@ -2,8 +2,8 @@
 if (strpos($_SERVER['REQUEST_URI'], "/ru") !== false){
 $lang = "ru";
 $canonicalPage = "https://dhamma.gift/ru/";
-$installpwa = "Установить FDG";
-$installpwalong = "Установить FDG";
+$installpwa = "Установить DG";
+$installpwalong = "Установить DG";
 $htmllang = "ru";
 $mainpage = '/ru';
 $mainpagenoslash = '/ru';
@@ -547,9 +547,9 @@ $defaults = '<br><div class="text-start">
 }
 else {
 $lang = "en";
-$installpwa = "Install FDG";
+$installpwa = "Install DG";
 $canonicalPage = "https://dhamma.gift/";
-$installpwalong = "Install FDG";
+$installpwalong = "Install DG";
 $htmllang = "en";
 $mainpage = '/';
 $mainpagenoslash = '';

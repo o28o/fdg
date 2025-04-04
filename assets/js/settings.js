@@ -113,26 +113,21 @@ localStorage.setItem('selectedScript', 'ISOPali');
 
 
 if (applyButton) {
-  // Обработка нажатия на кнопку "Применить"
   applyButton.addEventListener('click', function() {
-    const selectedScript = scriptSelect.value;
-    const selectedDict = dictSelect.value;
-
-    // Сохранение выбранного значения в localStorage
-    if (selectedScript === 'ISOPali') {
-      //localStorage.removeItem('selectedScript');
-      localStorage.setItem('selectedScript', 'ISOPali');
-    } else {
-      localStorage.setItem('selectedScript', selectedScript);
+    // Сохраняем все выбранные настройки
+    localStorage.setItem('selectedScript', scriptSelect.value);
+    localStorage.setItem('selectedDict', dictSelect.value);
+    
+    // Сохраняем состояние чекбокса removePunct (если он есть на странице)
+    const removePunctCheckbox = document.querySelector('.setting-checkbox[data-key="removePunct"]');
+    if (removePunctCheckbox) {
+      localStorage.setItem('removePunct', removePunctCheckbox.checked);
     }
-
-localStorage.setItem("firstVisitShowSettingsClosed", "true");
-
-    // Применение выбранного значения
-    applySavedScript(selectedScript);
-applySavedDict(selectedDict);
-checkAndUpdateUrl();
-//location.reload(true);    
+    
+    localStorage.setItem("firstVisitShowSettingsClosed", "true");
+    
+    // Перезагружаем страницу для применения всех изменений
+    location.reload();
   });
 }
 

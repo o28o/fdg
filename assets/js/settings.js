@@ -370,12 +370,11 @@ function updateDemoLinks() {
   const hash = window.location.hash;
 
   // Проверяем, есть ли цифры в параметре q
-  const hasNumbersInQ = params.q && /\d/.test(params.q);
-  
-  // Если нет цифр в q и это не специальный режим (не /ml/, /d/ и т.д.), не обновляем ссылки
-  if (!hasNumbersInQ && !window.location.pathname.match(/\/(ml|d|memorize|rev|frev)\//)) {
-    return;
-  }
+const hasNumbersInQ = params.q && (/\d/.test(params.q) || /(bupm|bu-pm|bipm|bi-pm)/.test(params.q));
+
+if (!hasNumbersInQ && !window.location.pathname.match(/\/(ml|d|memorize|rev|frev)\//)) {
+  return;
+}
 
   // Определяем базовый URL в зависимости от языка
   let baseUrl;

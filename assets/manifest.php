@@ -28,7 +28,7 @@ echo json_encode([
         ]
     ],
     "start_url" => "/",
-    "display" => "standalone",
+    "display" => "browser",
     "background_color" => "#ffffff",
     "theme_color" => "#000000",
 

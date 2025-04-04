@@ -94,8 +94,11 @@ echo '<!--
         The Buddha\'s Words</a></li>    
    
             <li>
-         <div class="dropdown-item ">Tipitaka 
-         <a class="text-reset" target=""  href="https://tipitaka.app">CST</a>
+         <div class="dropdown-item ">Tipitaka:
+         CST: 
+           <a class="text-reset" target=""  href="https://tipitakapali.org/">TPO</a>
+         <a class="text-reset" target=""  href="https://tipitaka.app">Tp.app</a>
+  
        <a class="text-reset" target="" href="https://84000.org/">Thai</a>
           <a class="text-reset" target="" href="https://tipitaka.org/">VRI</a>  
        </div>
@@ -307,7 +310,7 @@ echo '<!--
          <div class="dropdown-item ">
                       <i class="' . $iconimportant . '"></i>        <a class="text-reset" target="" href="https://dict.dhamma.gift/">Digital Pāḷi Dict</a>
          <a class="text-reset" target=""  href="https://digitalpalidictionary.github.io/rus/">Оффлайн</a>
-       <a class="text-reset" target="" href="https://o28o.github.io/plugin/demo-ru-ml.html?s=dukkh">Веб-модуль</a>     
+       <a class="text-reset" target="" href="https://github.com/o28o/dictPlugin/tree/main?tab=readme-ov-file#for-end-users-requires-installing-browser-extention-orand-setup">Расширения</a>     
        </div>
          </li>   
   

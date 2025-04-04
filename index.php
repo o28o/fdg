@@ -218,6 +218,7 @@ function updateURL(params) {
 
 <form method="GET" id="searchForm" action="" class="justify-content-center">
 <div class="mb-3 form-group input-group ui-widget dropup rounded-pill">
+
 <label class="sr-only dropup rounded-pill" for="paliauto"></label>
 
 <?php
@@ -236,8 +237,9 @@ if (isset($_GET['q'])) {
   </button>
 </div>
 
+<!-- submit button -->
 <div class="input-group-append">
-<button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-1 me-1 mt-0 rounded-pill ">
+<button onclick="document.getElementById( 'spinner' ).style.display = 'block'" type="submit" id="searchbtn" class="btn btn-primary mainbutton ms-2 mt-0 rounded-pill ">
 <i class="fas fa-search fa-flip-horizontal" aria-hidden="true"></i>
     <span class="visually-hidden"><?php echo $searchcaption;?></span>
 </button>
@@ -245,39 +247,38 @@ if (isset($_GET['q'])) {
 
 </div>
 
-<div class="align-items-center form-check-inline mx-0">
-    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="pOptions" name="p">
+<div class="d-flex align-items-center flex-nowrap">
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center flex-shrink-1" id="pOptions" name="p">
         <option value="" <?php if (isset($extra) && $p == "Pāḷi") echo "selected";?> ><?php echo $radiopli;?></option>
         <option value="-vin" <?php if (isset($extra) && $p == "-vin") echo "selected";?> ><?php echo "$radiovin";?></option>
         <option value="-kn" <?php if (isset($extra) && $p == "-kn") echo "selected";?> ><?php echo "$radiokn";?></option>
         <option value="-all" <?php if (isset($extra) && $p == "-all") echo "selected";?> ><?php echo "$radioltr";?></option>
-       <option value="-all -vin" <?php if (isset($extra) && $p == "-all -vin") echo "selected";?> ><?php echo "$radiovinall";?></option>
+        <option value="-all -vin" <?php if (isset($extra) && $p == "-all -vin") echo "selected";?> ><?php echo "$radiovinall";?></option>
         <option value="-b" <?php if (isset($p) && $p == "-b") echo "selected";?> ><?php echo $radiotbw;?></option>
         <option value="-en" <?php if (isset($p) && $p == "-en") echo "selected";?> ><?php echo $radioen;?></option>
         <option value="-tru" <?php if (isset($p) && $p == "-tru") echo "selected";?> ><?php echo $radiotru;?></option>        
     </select>
-       <div class="text-start text-muted form-check-inline me-0" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltiptextype;?>">*</div>
 
-    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center input-group-append" id="extraOptions" name="extra">
+    <div class="text-start text-muted form-check-inline me-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltiptextype;?>">*</div>
 
+    <select class="dropdown droponmain rounded-pill text-muted border-2 border-primary text-center flex-shrink-1" id="extraOptions" name="extra">
         <option value="" <?php if (isset($extra)) echo "selected";?> ><?php echo "$liststd";?></option>
         <option value="dictLookup" <?php if (isset($extra) && $extra == "dictLookup") echo "selected";?> ><?php echo "$dictLookup";?></option>
-         <option value="wordRep" <?php if (isset($extra) && $extra == "wordRep") echo "selected";?> ><?php echo "$listwords";?></option>
+        <option value="wordRep" <?php if (isset($extra) && $extra == "wordRep") echo "selected";?> ><?php echo "$listwords";?></option>
         <option value="-def" <?php if (isset($extra) && $extra == "-def") echo "selected";?> ><?php echo "$listdef";?></option>
         <option value="-sml" <?php if (isset($extra) && $extra == "-sml") echo "selected";?> ><?php echo "$listsml";?></option>
         <option value="-defall" <?php if (isset($extra) && $extra == "-defall") echo "selected";?> ><?php echo "$listdefall";?></option>
-
-     <option value="-nm10" <?php if (isset($extra) && $extra == "-nm10") echo "selected";?> ><?php echo "$listnm10";?></option>
-      <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
+        <option value="-nm10" <?php if (isset($extra) && $extra == "-nm10") echo "selected";?> ><?php echo "$listnm10";?></option>
+        <option value="-nm5" <?php if (isset($extra) && $extra == "-nm5") echo "selected";?> ><?php echo "$listnm";?></option>
     </select>
-	  <div class="text-muted text-decoration-none me-1 form-check-inline" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltipsearchtype;?>">*</div>
+
+    <div class="text-muted text-decoration-none me-0 form-check-inline" data-bs-toggle="tooltip" data-bs-placement="bottom" title="<?php echo $tooltipsearchtype;?>">*</div>
+
+    <div id="gear" class="text-white ms-1 flex-shrink-0" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
+        <i class="fa-solid fa-gear fa-lg"></i>
+        <span class="visually-hidden"><?php echo $searchcaption;?></span>
+    </div>
 </div>
-  <!--  <label for="pOptions"></label> -->
-  <!-- extra options -->
-  <div id="gear" class="text-white form-check-inline mt-2" data-bs-toggle="collapse" href="#collapseSettings" role="button" aria-expanded="false" aria-controls="collapseSettings">
-  <i class="fa-solid fa-gear fa-lg" aria-hidden="true"></i>
-  <span class="visually-hidden"><?php echo $searchcaption;?></span>
-  </div>
 
 <script>
 $(document).ready(function() {
@@ -1313,6 +1314,16 @@ foreach ($slides as $index => $slide) {
 $(function () {
         $('[data-bs-toggle="tooltip"]').tooltip();
     });
+    
+ // Инициализация всех тултипов с поддержкой HTML
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl, {
+    html: true // ← ключевая опция
+  })
+})   
+    
+    
 </script>
 
 <!-- Font Awesome icons (free version) crossorigin="anonymous"  data-mutate-approach="sync"-->

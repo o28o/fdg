@@ -69,7 +69,7 @@ if (div) {
     // Функция для скроллинга страницы
     function scrollToBottom() {
         const isLocalhost = window.location.hostname.match(/localhost|127\.0\.0\.1/);
-        const timeout = isLocalhost ? 500 : 2500; 
+        const timeout = isLocalhost ? 1000 : 2500; 
 
    //     console.log("Параметры в URL:", window.location.search);
     //    console.log("Якорь:", window.location.hash);

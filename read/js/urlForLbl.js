@@ -1,36 +1,21 @@
-    window.onload = function() {
-        const currentUrlParams = window.location.search;  // Получаем все параметры (query string)
-        const currentHash = window.location.hash;         // Получаем хеш из URL
-
-        console.log("Текущие параметры URL:", currentUrlParams);
-        console.log("Текущий хеш:", currentHash);
-
-        // Ищем элемент по классу 'dynamic-link'
-        const link = document.querySelector('.dynamic-link');
-
-        console.log("Исходная ссылка:", link.href);
-
-        // Добавляем параметры и хеш к ссылке
-        if (currentUrlParams || currentHash) {
-            let newHref = link.href;
-
-            // Обрабатываем параметры
-            if (currentUrlParams) {
-                if (newHref.includes('?')) {
-                    newHref += '&' + currentUrlParams.slice(1); // Убираем '?'
-                } else {
-                    newHref += '?' + currentUrlParams.slice(1); // Убираем '?'
-                }
-            }
-
-            // Обрабатываем хеш
-            if (currentHash) {
-                newHref += '#' + currentHash.slice(1); // Убираем '#'
-            }
-
-            link.href = newHref;
-            console.log("Обновленная ссылка:", link.href);
-        } else {
-            console.log("Нет параметров или хеша для добавления.");
-        }
-    };
+/**
+ * Добавляет параметр "q" из URL к ссылке, показывает alert и переходит.
+ * @param {string} linkHref - Исходная ссылка, к которой добавится параметр.
+ */
+function navigateWithQParam(linkHref) {
+    // 1. Получаем параметр "q" из текущего URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const qParam = urlParams.get('q');
+    
+    // 2. Если параметр есть — добавляем его к ссылке
+    let finalUrl = linkHref;
+    if (qParam) {
+        finalUrl += (linkHref.includes('?') ? '&' : '?') + 'q=' + encodeURIComponent(qParam);
+    }
+    
+    // 3. Показываем alert с итоговым URL
+  //  alert(`Переход по ссылке:\n${finalUrl}`);
+    
+    // 4. Переходим
+    window.location.href = finalUrl;
+}

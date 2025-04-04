@@ -272,7 +272,7 @@ button:hover {
 <script>
     // Функция для загрузки данных и проверки индекса
     function loadAndCheckRanges() {
-        fetch('/read/reader-rus-translations.js')
+        fetch('/read/js/reader-rus-translations.js')
             .then(response => response.text())
             .then(data => {
                 // Извлечение переменных из текста файла
@@ -1614,7 +1614,7 @@ const textPart = indexValue.split('.')[0]; // Разделяем по точке
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/read/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
+    const url = "/read/php/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=B";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
     const originalValue = indexValue;
@@ -1657,7 +1657,7 @@ const textPart = indexValue.split('.')[0]; // Разделяем по точке
 const book = indexValue.replace(/[^a-zA-Z]/g, ''); // Убираем все символы кроме букв
 
 	const valueForApi = book + "/" + textPart + "/" + indexValue;
-    const url = "/read/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
+    const url = "/read/php/api.php?fromjs=" + texttype + "/" + valueForApi + "&type=A";
     
     // Сохраняем текущее значение поля, чтобы вернуть его в случае ошибки
     const originalValue = indexValue;
@@ -2311,6 +2311,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //конец
 </script>
 <script src="/assets/js/paliLookup.js"></script>
+<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
 
 </body>
 </html>

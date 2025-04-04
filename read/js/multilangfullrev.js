@@ -181,7 +181,29 @@ if (vinayaranges.indexOf(slug) !== -1) {
 var varpath = `${Sccopy}/sc-data/sc_bilara_data/variant/pli/ms/${texttype}/${slugReady}_variant-pli-ms.json`
 var varpathLocal = `/assets/texts/variant/${texttype}/${slugReady}_variant-pli-ms.json`
   const rootResponse = fetch(rootpath).then(response => response.json());
- const translationResponse = fetch(trnpath).then(response => response.json());
+ 
+    async function fetchTranslation() {
+  const paths = [rustrnpath, trnpath];
+
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return await response.json();
+      }
+      console.log(`note: no translation found at ${path}`);
+    } catch (error) {
+      console.log(`note: error fetching ${path}`);
+    }
+  }
+
+  console.log('note: no translation found in any path');
+  return {}; // Если все пути недоступны
+}
+
+const translationResponse = fetchTranslation(); 
+ 
+ 
   const engtranslationResponse = fetch(engtrnpath).then(response => response.json());
   const htmlResponse = fetch(htmlpath).then(response => response.json());
 

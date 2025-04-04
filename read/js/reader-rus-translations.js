@@ -222,14 +222,29 @@ const rootResponse = fetch(rootpath)
       });
   });
 
+    
+   async function fetchTranslation() {
+  const paths = [rustrnpath, trnpath];
 
- const translationResponse = fetch(trnpath).then(response => response.json())    .
-  catch(error => {
- console.log('note:no translation found');   
-// console.log(varpath); 
-return {};
-  } 
-    );
+  for (const path of paths) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return await response.json();
+      }
+      console.log(`note: no translation found at ${path}`);
+    } catch (error) {
+      console.log(`note: error fetching ${path}`);
+    }
+  }
+
+  console.log('note: no translation found in any path');
+  return {}; // Если все пути недоступны
+}
+
+const translationResponse = fetchTranslation(); 
+    
+    
   const htmlResponse = fetch(htmlpath).then(response => response.json())    .
   catch(error => {
  console.log('note:no html found');   

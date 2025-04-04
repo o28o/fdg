@@ -461,10 +461,10 @@ vin=vinaya
 abhi=abhidhamma
 sutta=mutta
 metaphorcountfile=$textinfofolder/metphrcount_sutta.txt
-fortitle="4 Nikayas"
+fortitle="4 Nikaya"
 dirlocation=sutta
 translator=sujato
-fileprefix=_4nikayas
+fileprefix=_4nikaya
 hwithtitle='<h1>'
 searchIn="./sutta/sn ./sutta/mn ./sutta/an ./sutta/dn"
 source="an,sn,mn,dn"
@@ -1551,7 +1551,7 @@ if [[ "$type" == json ]]; then
   else 
   echo -n "<br>" >> $history
   fi
-elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"4 Nikayas"* ]]
+elif  [[ "$language" == Thai ]] && [[ "$fortitle" == *"4 Nikaya"* ]]
 then
   if (( $textsqnty <= 40 ))
   then
@@ -1625,7 +1625,7 @@ echo "<tr>
 <td>$count</td>   
 <td>$metaphorcount</td>
 <td>
-`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"4 Nikayas"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
+`[ "$suttanumber" != "" ] && [[ "$fortitle" == *"4 Nikaya"* ]] && echo "<a  href='' onclick=openDpr('$suttanumber') >Pi</a>"` 
 
 <a class='bwLink' href='' data-slug='$suttanumber'>En</a>
 <a class='ruLink' href='' data-slug='$suttanumber'>Ru</a>

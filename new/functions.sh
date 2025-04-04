@@ -221,7 +221,7 @@ function cleanupSrc {
     pvlimit
   }
 searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
-searchInForUser="Four Nikayas"
+searchInForUser="Four Nikaya"
 #searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
 #searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp vinaya/pli-tv-b*" 
 #searchInForUser="$searchInForUser +KN"
@@ -887,7 +887,7 @@ function cleanupSrc {
     pvlimit
   }
 #searchIn="./sutta/an ./sutta/sn ./sutta/mn ./sutta/dn"
-searchInForUser="Four Nikayas"
+searchInForUser="Four Nikaya"
 #searchIn="$searchIn ./sutta/kn/ud ./sutta/kn/iti ./sutta/kn/dhp ./sutta/kn/thig ./sutta/kn/thag ./sutta/kn/snp" 
 #searchInForUser="$searchInForUser +KN"
 source="an,sn,mn,dn,kn"

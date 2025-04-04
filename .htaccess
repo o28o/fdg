@@ -28,6 +28,15 @@ RewriteRule ^ru/(an\d+\.\d+-\d+|sn\d+\.\d+-\d+|dhp\d+\.\d+-\d+)$ /r/?q=$1 [R=301
 
 
 Redirect 301 /ru.php /ru/
+RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
+RewriteRule ^/$ /ru/ [L,R=302]
+
+# language starts with FR
+RewriteCond %{HTTP:Accept-Language} ^ru [NC]
+RewriteRule ^/$ /ru/ [L,R=302]
+
+# else redirect to the English version
+RewriteRule ^/$ / [L,R=302]
 
 
 <IfModule mod_headers.c>
@@ -69,15 +78,6 @@ AddOutputFilterByType DEFLATE application/json
 AddOutputFilterByType DEFLATE application/xml
 </IfModule>
 
-RewriteCond %{HTTP:Accept-Language} ^ru_RU [NC]
-RewriteRule ^/$ /ru/ [L,R=302]
-
-# language starts with FR
-RewriteCond %{HTTP:Accept-Language} ^ru [NC]
-RewriteRule ^/$ /ru/ [L,R=302]
-
-# else redirect to the English version
-RewriteRule ^/$ / [L,R=302]
 
 
 RewriteCond %{HTTP_USER_AGENT} (bingbot|AhrefsBot|SemrushBot|PetalBot|DataForSeoBot|MegaIndex.ru|Barkrowler|SeekportBot|SemrushBot|Barkrowler) [NC]

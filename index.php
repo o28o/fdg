@@ -1344,7 +1344,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 <script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
 -->
-<script>
+<script defer>
   window.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
 

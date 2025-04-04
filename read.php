@@ -22117,12 +22117,6 @@ const resources = [...commonResources, langSpecific];
 });
 </script>
 <script src="/assets/js/paliLookup.js"></script>
-<script src="/assets/js/standalone-dpd/pali-lookup-standalone.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            enablePaliLookup();
-        });
-    </script>
 </body>
 <?php
 ?>  
